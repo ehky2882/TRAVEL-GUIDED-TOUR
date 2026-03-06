@@ -12,13 +12,25 @@ struct TRAVEL_GUIDED_TOURApp: App {
     @State private var dataService = DataService()
     @State private var collectionStore = CollectionStore()
     @State private var locationManager = LocationManager()
+    @State private var isLoading = true
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(dataService)
-                .environment(collectionStore)
-                .environment(locationManager)
+            if isLoading {
+                SplashView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                            withAnimation {
+                                isLoading = false
+                            }
+                        }
+                    }
+            } else {
+                ContentView()
+                    .environment(dataService)
+                    .environment(collectionStore)
+                    .environment(locationManager)
+            }
         }
     }
 }
