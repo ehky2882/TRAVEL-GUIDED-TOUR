@@ -11,27 +11,29 @@ struct SettingsView: View {
                 Section {
                     VStack(spacing: AtlasSpacing.md) {
                         Text("Atlas")
-                            .font(.system(size: 32, weight: .bold, design: .serif))
-                            .foregroundStyle(AtlasColors.primaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                         Text("Curated urban art, culture & design")
-                            .font(AtlasTypography.callout)
-                            .foregroundStyle(AtlasColors.secondaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                         Text("Version 1.0")
-                            .font(.system(size: 12))
-                            .foregroundStyle(AtlasColors.tertiaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                     }
                     .frame(maxWidth: .infinity)
                     .listRowBackground(Color.clear)
                     .padding(.vertical, AtlasSpacing.lg)
                 }
 
-                Section("Location") {
+                Section {
                     HStack {
                         Label("Location Access", systemImage: "location")
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                         Spacer()
                         Text(locationStatusText)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                     }
 
                     if locationManager.authorizationStatus == .notDetermined {
@@ -39,47 +41,69 @@ struct SettingsView: View {
                             locationManager.requestPermission()
                         } label: {
                             Label("Enable Location", systemImage: "location.circle")
-                                .foregroundStyle(AtlasColors.accent)
+                                .font(AtlasTypography.standard)
+                                .foregroundStyle(.black)
                         }
                     }
+                } header: {
+                    Text("Location")
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                 }
 
-                Section("Data") {
-                    Button(role: .destructive) {
+                Section {
+                    Button {
                         URLCache.shared.removeAllCachedResponses()
                     } label: {
                         Label("Clear Cache", systemImage: "trash")
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                     }
+                } header: {
+                    Text("Data")
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                 }
 
-                Section("About") {
+                Section {
                     HStack {
                         Label("Cities", systemImage: "map")
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                         Spacer()
                         Text("3")
-                            .foregroundStyle(AtlasColors.secondaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                     }
                     HStack {
                         Label("Curated Places", systemImage: "mappin.and.ellipse")
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                         Spacer()
                         Text("45")
-                            .foregroundStyle(AtlasColors.secondaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                     }
                     Label("No account required", systemImage: "person.slash")
-                        .foregroundStyle(AtlasColors.secondaryText)
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                     Label("All data stored on device", systemImage: "iphone")
-                        .foregroundStyle(AtlasColors.secondaryText)
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
+                } header: {
+                    Text("About")
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                 }
-                .font(AtlasTypography.callout)
 
                 Section {
                     VStack(spacing: AtlasSpacing.xs) {
                         Text("If this app were a store, it would be")
-                            .font(.system(size: 12))
-                            .foregroundStyle(AtlasColors.tertiaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                         Text("a gallery bookshop, not a gift shop.")
-                            .font(.system(size: 12, weight: .medium, design: .serif))
-                            .foregroundStyle(AtlasColors.secondaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                             .italic()
                     }
                     .frame(maxWidth: .infinity)
@@ -92,7 +116,8 @@ struct SettingsView: View {
             .toolbar {
                 ToolbarItem(placement: .atlasTrailing) {
                     Button("Done") { dismiss() }
-                        .foregroundStyle(AtlasColors.accent)
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                 }
             }
         }

@@ -19,15 +19,15 @@ struct AddToCollectionSheet: View {
                             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                                 Text(collection.name)
                                     .font(AtlasTypography.headline)
-                                    .foregroundStyle(AtlasColors.primaryText)
+                                    .foregroundStyle(.black)
                                 Text("\(collection.placeIds.count) places")
                                     .font(AtlasTypography.caption)
-                                    .foregroundStyle(AtlasColors.tertiaryText)
+                                    .foregroundStyle(.black)
                             }
                             Spacer()
                             if collection.placeIds.contains(placeId) {
                                 Image(systemName: "checkmark")
-                                    .foregroundStyle(AtlasColors.accent)
+                                    .foregroundStyle(.black)
                             }
                         }
                     }
@@ -38,10 +38,10 @@ struct AddToCollectionSheet: View {
                 } label: {
                     HStack {
                         Image(systemName: "plus.circle.fill")
-                            .foregroundStyle(AtlasColors.accent)
+                            .foregroundStyle(.black)
                         Text("New Collection")
                             .font(AtlasTypography.headline)
-                            .foregroundStyle(AtlasColors.accent)
+                            .foregroundStyle(.black)
                     }
                 }
             }

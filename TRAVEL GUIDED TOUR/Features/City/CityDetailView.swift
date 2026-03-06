@@ -37,7 +37,7 @@ struct CityDetailView: View {
                     showMap.toggle()
                 } label: {
                     Image(systemName: "map")
-                        .foregroundStyle(AtlasColors.accent)
+                        .foregroundStyle(.black)
                 }
             }
         }
@@ -60,20 +60,15 @@ struct CityDetailView: View {
         ZStack(alignment: .bottomLeading) {
             HeroImageView(imageName: city.heroImageURL, height: 360)
 
-            LinearGradient(
-                colors: [.clear, .clear, .black.opacity(0.75)],
-                startPoint: .top,
-                endPoint: .bottom
-            )
 
             VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
                 Text(city.country.uppercased())
-                    .font(.system(size: 11, weight: .semibold))
-                    .foregroundStyle(.white.opacity(0.7))
+                    .font(AtlasTypography.standard)
+                    .foregroundStyle(.black)
                     .tracking(2)
                 Text(city.name)
-                    .font(.system(size: 36, weight: .bold, design: .serif))
-                    .foregroundStyle(.white)
+                    .font(AtlasTypography.standard)
+                    .foregroundStyle(.black)
             }
             .padding(AtlasSpacing.lg)
             .padding(.bottom, AtlasSpacing.sm)
@@ -83,7 +78,7 @@ struct CityDetailView: View {
     private var editorialSection: some View {
         Text(city.editorialIntro)
             .font(AtlasTypography.body)
-            .foregroundStyle(AtlasColors.secondaryText)
+            .foregroundStyle(.black)
             .lineSpacing(6)
             .padding(.horizontal, AtlasSpacing.lg)
             .padding(.top, AtlasSpacing.lg)
@@ -106,11 +101,11 @@ struct CityDetailView: View {
     private func statItem(value: String, label: String) -> some View {
         VStack(spacing: 2) {
             Text(value)
-                .font(.system(size: 20, weight: .semibold, design: .serif))
-                .foregroundStyle(AtlasColors.accent)
+                .font(AtlasTypography.standard)
+                .foregroundStyle(.black)
             Text(label.uppercased())
-                .font(.system(size: 9, weight: .medium))
-                .foregroundStyle(AtlasColors.tertiaryText)
+                .font(AtlasTypography.standard)
+                .foregroundStyle(.black)
                 .tracking(1)
         }
     }

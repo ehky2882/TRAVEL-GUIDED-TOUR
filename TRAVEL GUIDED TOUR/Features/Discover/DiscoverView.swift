@@ -5,6 +5,7 @@ struct DiscoverView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LocationManager.self) private var locationManager
     @Environment(CollectionStore.self) private var collectionStore
+    @Environment(\.dismiss) private var dismiss
     @State private var showSettings = false
 
     private var nearestCity: City? {
@@ -41,12 +42,17 @@ struct DiscoverView: View {
             .inlineNavigationBarTitle()
             .toolbar {
                 ToolbarItem(placement: .atlasTrailing) {
-                    Button {
-                        showSettings = true
-                    } label: {
-                        Image(systemName: "gearshape")
-                            .font(.system(size: 15))
-                            .foregroundStyle(AtlasColors.secondaryText)
+                    HStack(spacing: AtlasSpacing.md) {
+                        Button {
+                            showSettings = true
+                        } label: {
+                            Image(systemName: "gearshape")
+                                .font(AtlasTypography.standard)
+                                .foregroundStyle(.black)
+                        }
+                        Button("Done") { dismiss() }
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                     }
                 }
             }
@@ -59,13 +65,11 @@ struct DiscoverView: View {
     private var headerSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
             Text("Atlas")
-                .font(.system(size: 14, weight: .medium))
-                .foregroundStyle(AtlasColors.accent)
-                .tracking(2)
-                .textCase(.uppercase)
+                .font(AtlasTypography.standard)
+                .foregroundStyle(.black)
             Text("Discover")
-                .font(.system(size: 38, weight: .bold, design: .serif))
-                .foregroundStyle(AtlasColors.primaryText)
+                .font(AtlasTypography.standard)
+                .foregroundStyle(.black)
         }
         .padding(.horizontal, AtlasSpacing.lg)
         .padding(.top, AtlasSpacing.md)
@@ -85,19 +89,19 @@ struct DiscoverView: View {
                                     .frame(width: 18, height: 18)
                             }
                         Text("YOU'RE IN \(city.name.uppercased())")
-                            .font(.system(size: 11, weight: .bold))
+                            .font(AtlasTypography.standard)
                             .tracking(1.2)
-                            .foregroundStyle(AtlasColors.accent)
+                            .foregroundStyle(.black)
                     }
 
                     Text("Explore \(dataService.places(for: city).count) curated places nearby")
                         .font(AtlasTypography.callout)
-                        .foregroundStyle(AtlasColors.secondaryText)
+                        .foregroundStyle(.black)
                 }
                 Spacer()
                 Image(systemName: "arrow.right")
-                    .font(.system(size: 14, weight: .medium))
-                    .foregroundStyle(AtlasColors.accent)
+                    .font(AtlasTypography.standard)
+                    .foregroundStyle(.black)
             }
             .padding(AtlasSpacing.md + 4)
             .background(
@@ -116,8 +120,8 @@ struct DiscoverView: View {
     private var citiesSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.md) {
             Text("Cities")
-                .font(.system(size: 12, weight: .semibold))
-                .foregroundStyle(AtlasColors.secondaryText)
+                .font(AtlasTypography.standard)
+                .foregroundStyle(.black)
                 .textCase(.uppercase)
                 .tracking(1.5)
                 .padding(.horizontal, AtlasSpacing.lg)
@@ -145,8 +149,8 @@ struct DiscoverView: View {
     private var featuredSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
             Text("Featured")
-                .font(.system(size: 12, weight: .semibold))
-                .foregroundStyle(AtlasColors.secondaryText)
+                .font(AtlasTypography.standard)
+                .foregroundStyle(.black)
                 .textCase(.uppercase)
                 .tracking(1.5)
                 .padding(.horizontal, AtlasSpacing.lg)

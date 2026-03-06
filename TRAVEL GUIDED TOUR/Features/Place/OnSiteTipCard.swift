@@ -7,19 +7,19 @@ struct OnSiteTipCard: View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
             HStack(spacing: AtlasSpacing.sm) {
                 Image(systemName: "mappin.circle.fill")
-                    .font(.system(size: 18))
-                    .foregroundStyle(AtlasColors.accent)
+                    .font(AtlasTypography.standard)
+                    .foregroundStyle(.black)
 
                 Text("When You're Here")
-                    .font(.system(size: 11, weight: .bold))
-                    .foregroundStyle(AtlasColors.accent)
+                    .font(AtlasTypography.standard)
+                    .foregroundStyle(.black)
                     .textCase(.uppercase)
                     .tracking(1.2)
             }
 
             Text(tip)
                 .font(AtlasTypography.callout)
-                .foregroundStyle(AtlasColors.primaryText)
+                .foregroundStyle(.black)
                 .lineSpacing(4)
         }
         .padding(AtlasSpacing.md + 4)

@@ -36,34 +36,13 @@ struct ContentView: View {
         }
         .tint(AtlasColors.accent)
         .sheet(isPresented: $showDiscover) {
-            NavigationStack {
-                DiscoverView()
-                    .toolbar {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button("Done") { showDiscover = false }
-                        }
-                    }
-            }
+            DiscoverView()
         }
         .sheet(isPresented: $showSaved) {
-            NavigationStack {
-                CollectionsView()
-                    .toolbar {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button("Done") { showSaved = false }
-                        }
-                    }
-            }
+            CollectionsView()
         }
         .sheet(isPresented: $showSettings) {
-            NavigationStack {
-                SettingsView()
-                    .toolbar {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button("Done") { showSettings = false }
-                        }
-                    }
-            }
+            SettingsView()
         }
         .onAppear {
             locationManager.requestPermission()

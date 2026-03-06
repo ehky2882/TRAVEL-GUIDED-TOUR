@@ -14,11 +14,11 @@ struct PlaceGridItem: View {
                 )
 
                 Text(place.priceIndicator.displayText)
-                    .font(.system(size: 9, weight: .medium))
-                    .foregroundStyle(.white)
+                    .font(AtlasTypography.standard)
+                    .foregroundStyle(.black)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 3)
-                    .background(.ultraThinMaterial)
+                    .background(.white)
                     .clipShape(Capsule())
                     .padding(AtlasSpacing.sm)
             }
@@ -26,24 +26,23 @@ struct PlaceGridItem: View {
             VStack(alignment: .leading, spacing: 3) {
                 HStack(spacing: 4) {
                     Image(systemName: place.category.iconName)
-                        .font(.system(size: 8))
+                        .font(AtlasTypography.standard)
                     Text(place.category.displayName.uppercased())
-                        .font(.system(size: 9, weight: .semibold))
+                        .font(AtlasTypography.standard)
                         .tracking(0.8)
                 }
-                .foregroundStyle(AtlasColors.accent)
+                .foregroundStyle(.black)
 
                 Text(place.name)
                     .font(AtlasTypography.callout)
-                    .fontWeight(.medium)
-                    .foregroundStyle(AtlasColors.primaryText)
+                    .foregroundStyle(.black)
                     .lineLimit(2)
                     .multilineTextAlignment(.leading)
 
                 if let neighborhood = place.neighborhood {
                     Text(neighborhood)
-                        .font(.system(size: 11))
-                        .foregroundStyle(AtlasColors.tertiaryText)
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                 }
             }
         }

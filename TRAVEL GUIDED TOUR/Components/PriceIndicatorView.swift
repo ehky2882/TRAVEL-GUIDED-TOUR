@@ -6,7 +6,6 @@ struct PriceIndicatorView: View {
     var body: some View {
         Text(price.displayText)
             .font(AtlasTypography.caption)
-            .fontWeight(.medium)
-            .foregroundStyle(price == .free ? AtlasColors.accent : AtlasColors.secondaryText)
+            .foregroundStyle(.black)
     }
 }

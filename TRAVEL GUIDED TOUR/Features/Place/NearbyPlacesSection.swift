@@ -16,17 +16,16 @@ struct NearbyPlaceCard: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(place.name)
                     .font(AtlasTypography.caption)
-                    .fontWeight(.medium)
-                    .foregroundStyle(AtlasColors.primaryText)
+                    .foregroundStyle(.black)
                     .lineLimit(2)
 
                 HStack(spacing: 4) {
                     Image(systemName: place.category.iconName)
-                        .font(.system(size: 8))
+                        .font(AtlasTypography.standard)
                     Text(place.category.displayName)
-                        .font(.system(size: 10))
+                        .font(AtlasTypography.standard)
                 }
-                .foregroundStyle(AtlasColors.tertiaryText)
+                .foregroundStyle(.black)
             }
             .frame(width: 170, alignment: .leading)
         }

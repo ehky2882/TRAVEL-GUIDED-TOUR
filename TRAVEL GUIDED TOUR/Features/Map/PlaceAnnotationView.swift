@@ -10,17 +10,18 @@ struct PlaceAnnotationView: View {
                 Circle()
                     .fill(AtlasColors.accent)
                     .frame(width: isSelected ? 40 : 30, height: isSelected ? 40 : 30)
-                    .shadow(color: AtlasColors.accent.opacity(0.4), radius: isSelected ? 8 : 4, y: 2)
+                    .shadow(color: .black.opacity(0.2), radius: isSelected ? 8 : 4, y: 2)
 
                 Image(systemName: place.category.iconName)
-                    .font(.system(size: isSelected ? 18 : 13, weight: .medium))
+                    .font(AtlasTypography.standard)
                     .foregroundStyle(.white)
             }
 
             // Pin tail
             Image(systemName: "triangle.fill")
-                .font(.system(size: isSelected ? 10 : 8))
-                .foregroundStyle(AtlasColors.accent)
+                .font(AtlasTypography.standard)
+                .foregroundStyle(.black)
+
                 .rotationEffect(.degrees(180))
                 .offset(y: isSelected ? -3 : -2)
         }

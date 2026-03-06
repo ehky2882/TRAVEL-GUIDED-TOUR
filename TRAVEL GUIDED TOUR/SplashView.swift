@@ -23,7 +23,7 @@ struct SplashView: View {
                     }
 
                 Text("atlas")
-                    .font(.system(size: 18, weight: .medium, design: .default))
+                    .font(AtlasTypography.standard)
                     .foregroundStyle(.white)
                     .tracking(4)
             }

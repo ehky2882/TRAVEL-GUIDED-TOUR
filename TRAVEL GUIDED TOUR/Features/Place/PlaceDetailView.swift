@@ -25,7 +25,7 @@ struct PlaceDetailView: View {
                     }
                 } label: {
                     Image(systemName: collectionStore.isPlaceSaved(place.id) ? "bookmark.fill" : "bookmark")
-                        .foregroundStyle(AtlasColors.accent)
+                        .foregroundStyle(.black)
                         .contentTransition(.symbolEffect(.replace))
                 }
             }
@@ -43,39 +43,34 @@ struct PlaceDetailView: View {
                 category: place.category
             )
 
-            LinearGradient(
-                colors: [.clear, .clear, .black.opacity(0.8)],
-                startPoint: .top,
-                endPoint: .bottom
-            )
 
             VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
                 HStack(spacing: AtlasSpacing.sm) {
                     Image(systemName: place.category.iconName)
-                        .font(.system(size: 10))
+                        .font(AtlasTypography.standard)
                     Text(place.category.displayName.uppercased())
-                        .font(.system(size: 11, weight: .semibold))
+                        .font(AtlasTypography.standard)
                         .tracking(1.5)
                     if let neighborhood = place.neighborhood {
                         Text("·")
                         Text(neighborhood)
-                            .font(.system(size: 11))
+                            .font(AtlasTypography.standard)
                     }
                 }
-                .foregroundStyle(.white.opacity(0.75))
+                .foregroundStyle(.black)
 
                 Text(place.name)
-                    .font(.system(size: 32, weight: .bold, design: .serif))
-                    .foregroundStyle(.white)
+                    .font(AtlasTypography.standard)
+                    .foregroundStyle(.black)
 
                 if let distance = locationManager.distanceString(to: place) {
                     HStack(spacing: AtlasSpacing.xs) {
                         Image(systemName: "location.fill")
-                            .font(.system(size: 10))
+                            .font(AtlasTypography.standard)
                         Text(distance)
-                            .font(.system(size: 12, weight: .medium))
+                            .font(AtlasTypography.standard)
                     }
-                    .foregroundStyle(AtlasColors.accentLight)
+                    .foregroundStyle(.black)
                 }
             }
             .padding(AtlasSpacing.lg)
@@ -88,7 +83,7 @@ struct PlaceDetailView: View {
             // Editorial description
             Text(place.editorialDescription)
                 .font(AtlasTypography.body)
-                .foregroundStyle(AtlasColors.primaryText)
+                .foregroundStyle(.black)
                 .lineSpacing(6)
                 .padding(.horizontal, AtlasSpacing.lg)
                 .padding(.top, AtlasSpacing.lg)
@@ -114,11 +109,11 @@ struct PlaceDetailView: View {
             } label: {
                 HStack(spacing: AtlasSpacing.sm) {
                     Image(systemName: "plus")
-                        .font(.system(size: 14, weight: .semibold))
+                        .font(AtlasTypography.standard)
                     Text("Add to Collection")
-                        .font(.system(size: 15, weight: .semibold))
+                        .font(AtlasTypography.standard)
                 }
-                .foregroundStyle(.white)
+                .foregroundStyle(.black)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 16)
                 .background(AtlasColors.accent)
@@ -138,11 +133,11 @@ struct PlaceDetailView: View {
             HStack(spacing: AtlasSpacing.sm) {
                 ForEach(place.tags, id: \.self) { tag in
                     Text(tag)
-                        .font(.system(size: 12))
+                        .font(AtlasTypography.standard)
                         .padding(.horizontal, 12)
                         .padding(.vertical, 6)
                         .background(AtlasColors.secondaryBackground)
-                        .foregroundStyle(AtlasColors.secondaryText)
+                        .foregroundStyle(.black)
                         .clipShape(Capsule())
                 }
             }
@@ -166,24 +161,23 @@ struct PlaceDetailView: View {
 
                 HStack(spacing: AtlasSpacing.sm) {
                     Image(systemName: "tag")
-                        .font(.system(size: 13))
-                        .foregroundStyle(AtlasColors.tertiaryText)
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                         .frame(width: 22)
                     Text(place.priceIndicator.displayText)
                         .font(AtlasTypography.callout)
-                        .foregroundStyle(place.priceIndicator == .free ? AtlasColors.accent : AtlasColors.secondaryText)
-                        .fontWeight(place.priceIndicator == .free ? .medium : .regular)
+                        .foregroundStyle(.black)
                 }
 
                 if let website = place.websiteURL, let url = URL(string: website) {
                     HStack(spacing: AtlasSpacing.sm) {
                         Image(systemName: "globe")
-                            .font(.system(size: 13))
-                            .foregroundStyle(AtlasColors.tertiaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                             .frame(width: 22)
                         Link(url.host ?? "Website", destination: url)
                             .font(AtlasTypography.callout)
-                            .foregroundStyle(AtlasColors.accent)
+                            .foregroundStyle(.black)
                     }
                 }
             }
@@ -199,12 +193,12 @@ struct PlaceDetailView: View {
     private func infoRow(icon: String, text: String) -> some View {
         HStack(alignment: .top, spacing: AtlasSpacing.sm) {
             Image(systemName: icon)
-                .font(.system(size: 13))
-                .foregroundStyle(AtlasColors.tertiaryText)
+                .font(AtlasTypography.standard)
+                .foregroundStyle(.black)
                 .frame(width: 22)
             Text(text)
                 .font(AtlasTypography.callout)
-                .foregroundStyle(AtlasColors.secondaryText)
+                .foregroundStyle(.black)
         }
     }
 
@@ -240,8 +234,8 @@ struct PlaceDetailView: View {
             if !nearby.isEmpty {
                 VStack(alignment: .leading, spacing: AtlasSpacing.md) {
                     Text("Nearby")
-                        .font(.system(size: 12, weight: .semibold))
-                        .foregroundStyle(AtlasColors.secondaryText)
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                         .textCase(.uppercase)
                         .tracking(1.5)
                         .padding(.horizontal, AtlasSpacing.lg)

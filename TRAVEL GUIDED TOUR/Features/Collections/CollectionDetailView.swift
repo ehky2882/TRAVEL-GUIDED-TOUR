@@ -34,6 +34,7 @@ struct CollectionDetailView: View {
             }
         }
         .navigationTitle(collection.name)
+        .inlineNavigationBarTitle()
     }
 }
 
@@ -54,39 +55,39 @@ struct PlaceListRow: View {
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 HStack(spacing: 4) {
                     Image(systemName: place.category.iconName)
-                        .font(.system(size: 9))
+                        .font(AtlasTypography.standard)
                     Text(place.category.displayName.uppercased())
-                        .font(.system(size: 10, weight: .semibold))
+                        .font(AtlasTypography.standard)
                         .tracking(0.8)
                 }
-                .foregroundStyle(AtlasColors.accent)
+                .foregroundStyle(.black)
 
                 Text(place.name)
                     .font(AtlasTypography.headline)
-                    .foregroundStyle(AtlasColors.primaryText)
+                    .foregroundStyle(.black)
                     .lineLimit(2)
 
                 HStack(spacing: AtlasSpacing.sm) {
                     if let cityName {
                         Text(cityName)
-                            .font(.system(size: 12))
-                            .foregroundStyle(AtlasColors.tertiaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                     }
                     if let neighborhood = place.neighborhood {
                         if cityName != nil {
                             Text("·")
-                                .foregroundStyle(AtlasColors.tertiaryText)
+                                .foregroundStyle(.black)
                         }
                         Text(neighborhood)
-                            .font(.system(size: 12))
-                            .foregroundStyle(AtlasColors.tertiaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                     }
                 }
             }
             Spacer()
             Image(systemName: "chevron.right")
-                .font(.system(size: 12))
-                .foregroundStyle(AtlasColors.tertiaryText)
+                .font(AtlasTypography.standard)
+                .foregroundStyle(.black)
         }
         .padding(AtlasSpacing.sm)
     }

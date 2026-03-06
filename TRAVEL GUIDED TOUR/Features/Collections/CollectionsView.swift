@@ -3,6 +3,7 @@ import SwiftUI
 struct CollectionsView: View {
     @Environment(CollectionStore.self) private var collectionStore
     @Environment(DataService.self) private var dataService
+    @Environment(\.dismiss) private var dismiss
     @State private var showNewCollection = false
     @State private var newCollectionName = ""
 
@@ -32,6 +33,7 @@ struct CollectionsView: View {
                 }
             }
             .navigationTitle("Collections")
+            .inlineNavigationBarTitle()
             .navigationDestination(for: PlaceCollection.self) { collection in
                 CollectionDetailView(collection: collection)
             }
@@ -40,11 +42,16 @@ struct CollectionsView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .atlasTrailing) {
-                    Button {
-                        showNewCollection = true
-                    } label: {
-                        Image(systemName: "plus")
-                            .foregroundStyle(AtlasColors.accent)
+                    HStack(spacing: AtlasSpacing.md) {
+                        Button {
+                            showNewCollection = true
+                        } label: {
+                            Image(systemName: "plus")
+                                .foregroundStyle(.black)
+                        }
+                        Button("Done") { dismiss() }
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                     }
                 }
             }
@@ -80,11 +87,11 @@ struct CollectionRow: View {
                     .overlay {
                         VStack(spacing: AtlasSpacing.sm) {
                             Image(systemName: "bookmark")
-                                .font(.system(size: 28, weight: .light))
+                                .font(AtlasTypography.standard)
                             Text("Empty collection")
-                                .font(.system(size: 12))
+                                .font(AtlasTypography.standard)
                         }
-                        .foregroundStyle(AtlasColors.tertiaryText)
+                        .foregroundStyle(.black)
                     }
             } else if collectionPlaces.count == 1 {
                 HeroImageView(
@@ -129,15 +136,15 @@ struct CollectionRow: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(collection.name)
                         .font(AtlasTypography.headline)
-                        .foregroundStyle(AtlasColors.primaryText)
+                        .foregroundStyle(.black)
                     Text("\(collection.placeIds.count) \(collection.placeIds.count == 1 ? "place" : "places")")
-                        .font(.system(size: 12))
-                        .foregroundStyle(AtlasColors.tertiaryText)
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                 }
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .font(.system(size: 12))
-                    .foregroundStyle(AtlasColors.tertiaryText)
+                    .font(AtlasTypography.standard)
+                    .foregroundStyle(.black)
             }
         }
         .padding(.bottom, AtlasSpacing.sm)

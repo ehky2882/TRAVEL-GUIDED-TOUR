@@ -1,28 +1,20 @@
 import SwiftUI
 
 enum AtlasColors {
-    static let accent = Color(red: 184/255, green: 80/255, blue: 66/255) // #B85042 terracotta
-    static let accentLight = Color(red: 210/255, green: 140/255, blue: 130/255)
+    static let accent = Color.black
+    static let accentLight = Color.black
 
-    static let primaryText = Color.primary
-    static let secondaryText = Color.secondary
-    static let tertiaryText = Color.secondary.opacity(0.6)
+    static let primaryText = Color.black
+    static let secondaryText = Color.black
+    static let tertiaryText = Color.black
 
-    #if os(iOS) || os(visionOS)
-    static let background = Color(.systemBackground)
-    static let secondaryBackground = Color(.secondarySystemBackground)
-    static let cardBackground = Color(.tertiarySystemBackground)
-    #else
-    static let background = Color(.windowBackgroundColor)
-    static let secondaryBackground = Color(.controlBackgroundColor)
-    static let cardBackground = Color(.textBackgroundColor)
-    #endif
+    static let background = Color.white
+    static let secondaryBackground = Color.white
+    static let cardBackground = Color.white
 
-    // Placeholder colors that adapt to dark mode
-    static let placeholderWarm = Color(red: 230/255, green: 218/255, blue: 210/255)
-    static let placeholderCool = Color(red: 215/255, green: 220/255, blue: 225/255)
+    static let placeholderWarm = Color.white
+    static let placeholderCool = Color.white
 
-    // Semantic colors for specific use cases
-    static let divider = Color.secondary.opacity(0.15)
+    static let divider = Color.black
     static let cardShadow = Color.black.opacity(0.12)
 }

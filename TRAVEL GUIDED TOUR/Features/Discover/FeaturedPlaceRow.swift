@@ -14,23 +14,16 @@ struct FeaturedPlaceRow: View {
                     category: place.category
                 )
 
-                LinearGradient(
-                    colors: [.clear, .black.opacity(0.5)],
-                    startPoint: .center,
-                    endPoint: .bottom
-                )
-                .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
-
                 // Price badge
                 VStack {
                     HStack {
                         Spacer()
                         Text(place.priceIndicator.displayText)
-                            .font(.system(size: 11, weight: .medium))
-                            .foregroundStyle(.white)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                             .padding(.horizontal, 10)
                             .padding(.vertical, 4)
-                            .background(.ultraThinMaterial)
+                            .background(.white)
                             .clipShape(Capsule())
                     }
                     Spacer()
@@ -41,30 +34,30 @@ struct FeaturedPlaceRow: View {
             VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
                 HStack(spacing: AtlasSpacing.sm) {
                     Image(systemName: place.category.iconName)
-                        .font(.system(size: 10))
-                        .foregroundStyle(AtlasColors.accent)
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                     Text(place.category.displayName.uppercased())
-                        .font(.system(size: 11, weight: .semibold))
-                        .foregroundStyle(AtlasColors.accent)
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                         .tracking(1)
 
                     if !cityName.isEmpty {
                         Text("·")
-                            .foregroundStyle(AtlasColors.tertiaryText)
+                            .foregroundStyle(.black)
                         Text(cityName)
-                            .font(.system(size: 11))
-                            .foregroundStyle(AtlasColors.secondaryText)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                     }
                 }
 
                 Text(place.name)
                     .font(AtlasTypography.title3)
-                    .foregroundStyle(AtlasColors.primaryText)
+                    .foregroundStyle(.black)
                     .lineLimit(2)
 
                 Text(place.editorialDescription)
                     .font(AtlasTypography.callout)
-                    .foregroundStyle(AtlasColors.secondaryText)
+                    .foregroundStyle(.black)
                     .lineSpacing(3)
                     .lineLimit(3)
             }

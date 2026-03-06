@@ -64,10 +64,10 @@ struct MapView: View {
                         }
                     } label: {
                         Image(systemName: "location.fill")
-                            .font(.system(size: 16, weight: .semibold))
-                            .foregroundStyle(AtlasColors.accent)
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
                             .frame(width: 44, height: 44)
-                            .background(.regularMaterial)
+                            .background(.white)
                             .clipShape(Circle())
                     }
                     .padding(.trailing, AtlasSpacing.lg)
@@ -119,33 +119,33 @@ struct MapView: View {
 
                 VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                     Text(place.category.displayName.uppercased())
-                        .font(.system(size: 10, weight: .semibold))
-                        .foregroundStyle(AtlasColors.accent)
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                         .tracking(0.8)
                     Text(place.name)
                         .font(AtlasTypography.headline)
-                        .foregroundStyle(AtlasColors.primaryText)
+                        .foregroundStyle(.black)
                         .lineLimit(1)
                     HStack(spacing: AtlasSpacing.sm) {
                         if let neighborhood = place.neighborhood {
                             Text(neighborhood)
                                 .font(AtlasTypography.caption)
-                                .foregroundStyle(AtlasColors.tertiaryText)
+                                .foregroundStyle(.black)
                         }
                         if let distance = locationManager.distanceString(to: place) {
                             Text("· \(distance)")
                                 .font(AtlasTypography.caption)
-                                .foregroundStyle(AtlasColors.accent)
+                                .foregroundStyle(.black)
                         }
                     }
                 }
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .font(.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
+                    .font(AtlasTypography.standard)
+                    .foregroundStyle(.black)
             }
             .padding(AtlasSpacing.md)
-            .background(.regularMaterial)
+            .background(.white)
             .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
             .padding(.horizontal, AtlasSpacing.lg)
             .padding(.bottom, AtlasSpacing.lg)
