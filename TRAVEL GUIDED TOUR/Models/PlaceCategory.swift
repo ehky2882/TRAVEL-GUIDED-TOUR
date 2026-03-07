@@ -50,9 +50,9 @@ enum PlaceCategory: String, Codable, CaseIterable, Identifiable {
 
 enum PriceIndicator: String, Codable {
     case free
-    case low = "$"
-    case medium = "$$"
-    case high = "$$$"
+    case low
+    case medium
+    case high
 
     var displayText: String {
         switch self {
