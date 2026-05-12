@@ -38,8 +38,9 @@ furnished but the hallways aren't connected yet.
   rectangles, and a custom 5-tab bottom bar with one tab literally labeled
   `???`. It does **not** yet route to the real feature views (the proper
   rooms of the house). The first roadmap milestone replaces it with a
-  proper tab bar (3 tabs) that opens into Discover / Map / Saved. Do not
-  "polish" the placeholder in isolation — it's getting torn down.
+  proper 5-tab bar that opens into the real feature screens (tab content
+  TBD by the owner at the start of M1). Do not "polish" the placeholder
+  in isolation — it's getting torn down.
 - `Resources/SeedData.json` is a stub. JSON is just a structured text file
   holding data — like a spreadsheet written out as a list. The real 45-place
   catalog (NYC, Porto, London) is not yet authored.
@@ -133,23 +134,31 @@ TRAVEL GUIDED TOUR/
 
 ## Design System
 
+> **Important — owner direction (May 2026):** design and theming decisions
+> are **deferred**. Build for functionality first. The final color palette,
+> typography, app icon, map-pin style, and editorial tone of all copy will
+> be decided after V1 functionality lands. Until then, the rule below
+> ensures that swap is cheap when it happens.
+
 The three files in `Theme/` are the **single source of truth** for colors,
 fonts, and spacing — like the brand-guidelines PDF on a designer's wall.
+Their current *values* are placeholders, but the *structure* is locked in.
 
-- **Do not hardcode** colors or numeric padding inside individual screens.
-  Use `AtlasColors.*`, `AtlasTypography.*`, `AtlasSpacing.*`. (Hardcoding =
-  baking a specific color into one screen instead of pulling it from the
-  shared brand palette — fine for a placeholder, terrible for consistency.)
+- **Always use the tokens, never hardcode values.** New code must reach
+  for `AtlasColors.*`, `AtlasTypography.*`, `AtlasSpacing.*` instead of
+  literal `Color(red:...)`, `.font(.system(size: 24))`, or `.padding(16)`.
+  This is what makes the future design pass a 3-file change instead of a
+  60-file change. (Hardcoding = baking a specific color into one screen
+  instead of pulling it from the shared palette.)
 - The lime-green menu circle and hardcoded paddings in `ContentView.swift`
   are placeholder code — they get deleted in M1, not promoted into the
   design language.
-- Atlas accent is **terracotta `#B85042`** (a warm clay color).
-  `Assets.xcassets/AccentColor` should match it; if there's ever a
-  conflict, `Theme/AtlasColors.swift` wins.
-- Spec design principles: editorial (feels like a magazine, not a search
-  result), photography-forward (big photos breathe), near-white background,
-  near-black text, exactly one accent color. Generous whitespace. No star
-  ratings, no review counts, no ads. (This is Monocle, not Yelp.)
+- The Atlas accent is currently terracotta `#B85042` per the original
+  spec, but treat that value as a placeholder until the design pass.
+- Spec design principles (also placeholders pending the design pass):
+  editorial, photography-forward, near-white background, near-black text,
+  one accent color, generous whitespace, no star ratings, no review
+  counts, no ads.
 
 ## Data Flow
 
