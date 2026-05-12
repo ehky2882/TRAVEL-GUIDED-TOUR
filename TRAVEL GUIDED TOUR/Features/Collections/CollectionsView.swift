@@ -3,7 +3,6 @@ import SwiftUI
 struct CollectionsView: View {
     @Environment(CollectionStore.self) private var collectionStore
     @Environment(DataService.self) private var dataService
-    @Environment(\.dismiss) private var dismiss
     @State private var showNewCollection = false
     @State private var newCollectionName = ""
 
@@ -42,15 +41,10 @@ struct CollectionsView: View {
             }
             .toolbar {
                 ToolbarItem(placement: .atlasTrailing) {
-                    HStack(spacing: AtlasSpacing.md) {
-                        Button {
-                            showNewCollection = true
-                        } label: {
-                            Image(systemName: "plus")
-                                .foregroundStyle(.black)
-                        }
-                        Button("Done") { dismiss() }
-                            .font(AtlasTypography.standard)
+                    Button {
+                        showNewCollection = true
+                    } label: {
+                        Image(systemName: "plus")
                             .foregroundStyle(.black)
                     }
                 }
