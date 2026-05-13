@@ -26,33 +26,37 @@ app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 (iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
 — same app body, three different "TVs" it can play on.
 
-## Current State (V1 in progress)
+## Current State (V1 functionality largely complete)
 
-The architecture is mostly built; the integration is not. **Most feature
-views (individual screens of the app) already exist as Swift files but are
-not yet wired together** — like having every room of a house framed and
-furnished but the hallways aren't connected yet.
+The app is functional end-to-end. M1 of `ROADMAP.md` wired the 5-tab
+structure; M2 (seed data) and M3 (location privacy) turned out to be
+**already complete** in earlier commits — the original orientation
+doc incorrectly described them as gaps. What remains for V1 is mostly
+QA + the deferred design polish phase.
 
-- `ContentView.swift` is **a placeholder** — the file the app shows you
-  first. Right now it's a search bar, hardcoded filter chips, eight grey
-  rectangles, and a custom 5-tab bottom bar with one tab literally labeled
-  `???`. It does **not** yet route to the real feature views (the proper
-  rooms of the house). The first roadmap milestone replaces it with a
-  proper 5-tab bar that opens into the real feature screens (tab content
-  TBD by the owner at the start of M1). Do not "polish" the placeholder
-  in isolation — it's getting torn down.
-- `Resources/SeedData.json` is a stub. JSON is just a structured text file
-  holding data — like a spreadsheet written out as a list. The real 45-place
-  catalog (NYC, Porto, London) is not yet authored.
-- `Info.plist` lacks location privacy strings. (`Info.plist` is the app's
-  spec sheet that the iPhone reads before launch — like the nutrition label
-  on the back of a cereal box. Apple requires a sentence explaining *why*
-  the app wants your location, and that sentence is missing.)
-- `Assets.xcassets/AccentColor.colorset` is the default system color, not
-  Atlas terracotta `#B85042`. The app icon is the empty Apple template
-  (the placeholder square on your home screen).
+- `ContentView.swift` is wired — a `TabView` with 5 tabs (Home /
+  Explore / Favorites / Messages / Me) routing to `DiscoverView` /
+  `MapView` / `CollectionsView` / a "Coming soon" placeholder /
+  `SettingsView`.
+- `Resources/SeedData.json` is **populated** with 45 places across
+  NYC, Porto, and London. Editorial copy is already in the Atlas
+  voice (the originally-planned "factual placeholder copy → editorial
+  rewrite later" two-pass is collapsed because the copy was already
+  written before V1 planning started).
+- **Location permission** is configured via the
+  `INFOPLIST_KEY_NSLocationWhenInUseUsageDescription` build setting
+  in `project.pbxproj` (Debug + Release). Modern Xcode generates
+  Info.plist from build settings rather than a standalone file.
+- `Assets.xcassets/AccentColor.colorset` is set to Atlas terracotta
+  `#B85042` (light) and a lighter variant for dark mode.
+- `Assets.xcassets/AppIcon.appiconset` is the empty Apple template
+  (the placeholder square on your home screen). M9 in the polish
+  phase addresses this.
+- Theme tokens in `Theme/Atlas{Colors,Typography,Spacing}.swift` are
+  **placeholder values** (currently all-white/all-black/Helvetica 12pt)
+  pending the deferred design pass.
 
-See `ROADMAP.md` for the milestone-by-milestone plan to close these gaps.
+See `ROADMAP.md` for what's left.
 
 ## Build & Run
 
@@ -82,7 +86,7 @@ TRAVEL GUIDED TOUR/
 ├── TRAVEL_GUIDED_TOURApp.swift    The front door — when you tap the icon, this runs first.
 │                                  It also sets up the three "shared shelves" (data, collections,
 │                                  location) that every screen can reach into.
-├── ContentView.swift              ⚠ placeholder; M1 of ROADMAP replaces this with the real tab bar
+├── ContentView.swift              5-tab TabView (Home/Explore/Favorites/Messages/Me)
 ├── SplashView.swift               2-second launch splash (the loading screen)
 ├── Models/                        The "shapes" of the data — what a City is, what a Place is, etc.
 │   ├── City.swift                 A city: name, country, hero photo, intro, lat/lon, place count
@@ -94,7 +98,7 @@ TRAVEL GUIDED TOUR/
 │   ├── CollectionStore.swift      Saves the user's collections to the device so they stick around
 │   └── SeedData.swift             The translator that turns the JSON file into Swift objects
 ├── Resources/
-│   └── SeedData.json              ⚠ stub; M2 fills it with 3 cities × ~15 places
+│   └── SeedData.json              Populated — 3 cities × 15 places (NYC, Porto, London)
 ├── Features/                      One folder per feature/screen group
 │   ├── Discover/                  The home tab — feed of cities and featured places
 │   │   ├── DiscoverView.swift
@@ -129,7 +133,7 @@ TRAVEL GUIDED TOUR/
 │   ├── AtlasColors.swift          THE source of truth for color
 │   ├── AtlasTypography.swift      THE source of truth for fonts
 │   └── AtlasSpacing.swift         THE source of truth for padding/margins/corner radius
-└── Assets.xcassets/               Image catalog (app icon + accent color, both currently default)
+└── Assets.xcassets/               AccentColor set to terracotta #B85042; AppIcon still template
 ```
 
 ## Design System
@@ -150,11 +154,9 @@ Their current *values* are placeholders, but the *structure* is locked in.
   This is what makes the future design pass a 3-file change instead of a
   60-file change. (Hardcoding = baking a specific color into one screen
   instead of pulling it from the shared palette.)
-- The lime-green menu circle and hardcoded paddings in `ContentView.swift`
-  are placeholder code — they get deleted in M1, not promoted into the
-  design language.
-- The Atlas accent is currently terracotta `#B85042` per the original
-  spec, but treat that value as a placeholder until the design pass.
+- The Atlas accent in `Assets.xcassets/AccentColor.colorset` is set to
+  terracotta `#B85042` per the original spec, but treat that value as a
+  placeholder until the design pass.
 - Spec design principles (also placeholders pending the design pass):
   editorial, photography-forward, near-white background, near-black text,
   one accent color, generous whitespace, no star ratings, no review
@@ -217,9 +219,9 @@ its own copy. Don't instantiate these inside individual screens.
 - **Code Signing:** Automatic. (Code signing = Apple's tamper-proof seal
   that says "this app really is from this developer." "Automatic" means
   Xcode handles it for us.)
-- **Info.plist:** missing `NSLocationWhenInUseUsageDescription` (the
-  one-sentence explanation iOS shows the user when the app first asks for
-  location). M3 of the roadmap adds it.
+- **Info.plist:** auto-generated from `INFOPLIST_KEY_*` build settings.
+  `NSLocationWhenInUseUsageDescription` is set to the standard Atlas
+  location-permission copy in both Debug and Release configs.
 
 ## Out of Scope for V1
 

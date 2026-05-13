@@ -28,21 +28,26 @@ Two principles override everything else in this file:
 
 ## Where we are right now
 
-Think of the app as a house under construction:
+**V1 functionality is largely already in place.** The first roadmap was
+written based on a too-quick initial scan of the repo and incorrectly
+flagged the seed data and the location privacy string as "gaps." Both
+were already committed before this roadmap was authored. Net effect:
 
-- The **rooms** are framed and furnished — every individual screen
-  (Discover, City detail, Place detail, Map, Saved) exists as a Swift file
-  with working code inside it.
-- The **hallways are not connected** — the front door (`ContentView.swift`)
-  opens onto a placeholder room with grey rectangles instead of routing
-  you to the real rooms.
-- The **furniture catalogue is empty** — the file that holds the actual
-  cities and places (`SeedData.json`) is a stub.
-- The **front-door welcome card is missing** — the iPhone won't let the
-  app use GPS until we write a one-sentence note explaining why.
+| Milestone | Status |
+|---|---|
+| M1 — Wire ContentView (5-tab structure) | ✅ Done |
+| M2 — Populate SeedData.json (45 places) | ✅ Already done in commit `890b10c` |
+| M3 — Info.plist location privacy string | ✅ Already done (build setting) |
+| M4 — PlaceDetail + Collections end-to-end QA | ⏳ Needs run-in-simulator check |
+| M5 — Map view functional QA | ⏳ Needs run-in-simulator check |
+| M6 — V1 functionality sanity pass | ⏳ Needs run-in-simulator check |
+| M7–M11 — Polish phase | ⏳ Pending |
 
-Closing those *functional* gaps = shipping V1. Paint, icons, and editorial
-polish come after.
+The remaining V1 functionality work is mostly **QA** (M4 / M5 / M6) —
+running the app, walking the flows, and fixing anything broken. It
+should produce few or no code changes if the existing scaffolding is
+sound. After that comes the polish phase (theme, custom pins, app icon,
+editorial copy review, final vibe check).
 
 ---
 
@@ -50,9 +55,16 @@ polish come after.
 
 Each milestone is sized to fit in one focused work session.
 
-### M1. Wire ContentView to the real screens (the unblocker)
+### M1. Wire ContentView to the real screens (the unblocker) — ✅ Done
 
-**What:** Replace the placeholder `ContentView.swift` (the front door)
+**Status:** Shipped in PR #2 (commit `24df8b7`). 5-tab `TabView` routes
+to `DiscoverView` / `MapView` / `CollectionsView` / a "Coming soon"
+Messages placeholder / `SettingsView`. The "Messages" tab's content is
+deferred to post-V1 per owner.
+
+**Historical brief (kept for reference):**
+
+Replace the placeholder `ContentView.swift` (the front door)
 with a real 5-tab bar that routes each tab into the actual feature
 screens we already built. The current placeholder has 5 tabs labeled
 Home / Explore / Favorites / ??? / Me — keep the 5-tab structure per
@@ -91,17 +103,22 @@ each of the 5 tabs switches to a different real screen.
 
 ---
 
-### M2. Populate `SeedData.json` with the 45-place catalog
+### M2. Populate `SeedData.json` with the 45-place catalog — ✅ Already done
 
-**What:** Fill in the data file that the app reads on launch — 3 cities
+**Status:** Done in commit `890b10c` ("V1"), before this roadmap was
+written. The file contains all 45 places (NYC, Porto, London × 15 each)
+with all required fields. Editorial copy is already in the Atlas voice
+— better than the "factual placeholder" the milestone originally
+specified. The two-pass plan (factual placeholder now → editorial
+rewrite later) is collapsed into a single existing pass. If you want
+to edit specific copy later, treat that as a small targeted change.
+
+**Historical brief (kept for reference):**
+
+Fill in the data file that the app reads on launch — 3 cities
 (NYC, Porto, London) × ~15 places each. Each place gets a name,
 category, address, lat/lon (GPS coordinates), basic factual description,
 and the rest of the structured fields the data model expects.
-
-**Per owner direction: factual placeholder copy only.** Don't try to
-write the final "Atlas voice" editorial descriptions yet — that's the
-tone pass deferred to post-V1. For now, 2–3 plain factual sentences per
-place is enough to populate the UI and verify the data flow.
 
 **Why:** Right now the app has *zero* real content. The Discover feed
 will be empty until this file is filled in.
@@ -122,9 +139,20 @@ filterable by category.
 
 ---
 
-### M3. Location privacy strings + GPS flow QA
+### M3. Location privacy strings + GPS flow QA — ✅ Already done
 
-**What:** Add the one-sentence explanation iOS requires before the app
+**Status:** The `INFOPLIST_KEY_NSLocationWhenInUseUsageDescription`
+build setting is already configured in `project.pbxproj` (both Debug
+and Release) with the copy: *"Atlas uses your location to show nearby
+curated places and calculate distances when you're exploring a city."*
+Modern Xcode generates the Info.plist from this build setting rather
+than maintaining a separate file. The "QA the flow" half of this
+milestone rolls into M6 (functional sanity pass) — run the app, accept
+the prompt, confirm `LocationManager` reports a position.
+
+**Historical brief (kept for reference):**
+
+Add the one-sentence explanation iOS requires before the app
 can use GPS. Without it, Apple silently refuses to grant location
 permission.
 
