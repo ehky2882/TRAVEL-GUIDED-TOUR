@@ -5,8 +5,6 @@ struct DiscoverView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LocationManager.self) private var locationManager
     @Environment(CollectionStore.self) private var collectionStore
-    @Environment(\.dismiss) private var dismiss
-    @State private var showSettings = false
 
     private var nearestCity: City? {
         guard let location = locationManager.userLocation else { return nil }
@@ -40,25 +38,6 @@ struct DiscoverView: View {
             .refreshable {}
             .background(AtlasColors.background)
             .inlineNavigationBarTitle()
-            .toolbar {
-                ToolbarItem(placement: .atlasTrailing) {
-                    HStack(spacing: AtlasSpacing.md) {
-                        Button {
-                            showSettings = true
-                        } label: {
-                            Image(systemName: "gearshape")
-                                .font(AtlasTypography.standard)
-                                .foregroundStyle(.black)
-                        }
-                        Button("Done") { dismiss() }
-                            .font(AtlasTypography.standard)
-                            .foregroundStyle(.black)
-                    }
-                }
-            }
-            .sheet(isPresented: $showSettings) {
-                SettingsView()
-            }
         }
     }
 

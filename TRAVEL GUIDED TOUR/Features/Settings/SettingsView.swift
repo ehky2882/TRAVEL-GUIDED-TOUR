@@ -3,7 +3,6 @@ import CoreLocation
 
 struct SettingsView: View {
     @Environment(LocationManager.self) private var locationManager
-    @Environment(\.dismiss) private var dismiss
 
     var body: some View {
         NavigationStack {
@@ -113,13 +112,6 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .inlineNavigationBarTitle()
-            .toolbar {
-                ToolbarItem(placement: .atlasTrailing) {
-                    Button("Done") { dismiss() }
-                        .font(AtlasTypography.standard)
-                        .foregroundStyle(.black)
-                }
-            }
         }
     }
 
