@@ -1,264 +1,334 @@
-# Claude Code Prompt: "Atlas" — A Curated Urban Art, Culture & Design Discovery App
+# Atlas — A creator platform for audio tours
 
-## What We're Building
-
-**Atlas** is an iOS app for discovering design-forward art, culture, and architecture in cities around the world. Think of it as "Boutique Homes' curatorial eye, applied to the cultural life of cities" — or "the Monocle city guide as a native app with location awareness."
-
-The user browses beautifully presented, editorially curated places (galleries, studios, architectural landmarks, design shops, cultural institutions, street art, hidden courtyards, etc.), saves them to personal collections, and then — when physically in that city — gets location-aware prompts and richer on-site content as they explore.
-
-It is NOT a reviews app (no Yelp/TripAdvisor vibes). It is NOT a booking app. It is an editorial discovery tool with a strong design point of view. The tone is confident, spare, opinionated — more Kinfolk than Lonely Planet.
-
----
-
-## Core User Flows (V1)
-
-### Flow 1: Browse & Discover (at home or anywhere)
-- Open app → see a curated feed of featured places, organized by city
-- Tap into a city → see an editorial city overview + categorized places
-- Tap a place → see a rich detail view: hero image, short editorial description, category tags, location on map, practical info (hours, address, free/paid)
-- Save places to personal collections (e.g., "Tokyo November Trip", "Favorites")
-
-### Flow 2: Explore On-Site (in a city)
-- App detects user is in a city that has Atlas content
-- Surfaces a contextual "You're in [City]" experience
-- Map view shows nearby curated places with distance
-- Optional: gentle notification when user is within ~200m of an Atlas place ("The Noguchi Museum is a 3-minute walk from you")
-- Place detail view shows richer "on-site" content (e.g., "Don't miss the sunken sculpture garden behind the main building")
-
-### Flow 3: Collections & Lists
-- Save any place to one or more personal collections
-- Default collection: "Saved"
-- Create custom collections with name + optional cover image
-- Collections are the primary way users plan trips
+> **Pivot note (May 2026).** This spec replaces an earlier framing of
+> Atlas as a curated *editorial city guide* (think Monocle / Kinfolk).
+> That framing has been retired. The product is now a creator platform
+> for **GPS-anchored audio tours**, closer in shape to AllTrails or
+> Atlas Obscura than to a guidebook. The previous editorial-reader
+> build (`SeedData.json` with 45 city places, `CityDetailView`,
+> `PlaceDetailView`, etc.) is being reshaped to fit. See
+> `ROADMAP.md` for the migration plan.
 
 ---
 
-## Data Model
+## What we're building
 
-### City
-- `id`: UUID
-- `name`: String (e.g., "Mexico City")
-- `country`: String
-- `slug`: String (url-safe)
-- `heroImageURL`: String
-- `editorialIntro`: String (2-3 sentences, the Atlas "take" on this city)
-- `latitude` / `longitude`: Double (city center, for geo queries)
-- `placeCount`: Int
+Atlas is an iOS / iPad / Mac / visionOS audio-tour app with two sides:
 
-### Place
+- **Makers** record GPS-anchored audio tours about places they care
+  about. A tour is either a **single piece** (one location, one audio
+  clip) or a **multi-stop guided walk** (multiple locations, one clip
+  per stop, optionally GPS-triggered as the listener arrives).
+- **Consumers** browse tours near them (or anywhere they're planning
+  to be), download for offline listening, and play them while walking
+  — phone in pocket, headphones in, audio narrating the place around
+  them.
+
+Atlas earns by taking a percentage of paid-tour revenue when paid
+tours and maker payouts ship in a future phase.
+
+**V1 is consumer-side only.** The Atlas team creates the initial
+content. There is no in-app upload, no payments, no auth backend yet
+— the consumer interface is built in the *shape* of the eventual
+creator platform so that nothing has to be redesigned when those
+pieces land. See "What NOT to build in V1" below.
+
+**Compared to:**
+- AllTrails — location-anchored user-generated content
+- Atlas Obscura — curated discovery, but text-first
+- Audible / podcast apps — audio playback, but not location-tied
+
+Atlas's distinctive bet: **the audio plays *because of where you are*,
+not because you pressed play in a feed.** That's the product.
+
+---
+
+## V1 scope at a glance
+
+| Element | V1 |
+|---|---|
+| Content | 5–15 audio tours / single-location pieces, all created by the Atlas team |
+| Distribution | Static JSON manifest of tours (in app bundle or fetched at launch from a CDN) |
+| Audio hosting | CDN; consumer app downloads audio on demand and caches locally |
+| Pricing | All content free at launch |
+| Accounts | None (sign-in is a placeholder UI entry; real auth is post-V1) |
+| Maker upload | None in-app (Atlas team edits the JSON and uploads audio to the CDN by hand) |
+| Backend | None (no server-stored data, no API) |
+| Platforms | iOS 26.2+, iPadOS 26.2+, macOS 26.2+, visionOS 26.2+ |
+
+---
+
+## Core user flows (V1)
+
+### Flow 1: Discover
+
+- Open app → **Home tab = "Tours near you."** Location-aware feed
+  sorted by distance. Falls back to a global browse when the user is
+  not near any tours or has denied location permission.
+- **Explore tab = Map.** Pins represent tour stops. Tapping a pin
+  shows a tour preview card; tapping the card opens tour detail.
+- Tap any tour → tour detail screen.
+
+### Flow 2: Listen
+
+- Tour detail shows: maker, length, walking distance, stops list,
+  optional intro audio, "Start" button, "Download for offline" button.
+- Tap Start → full-screen audio player.
+- Audio plays through phone speaker / headphones / AirPods / CarPlay.
+- Lock-screen and Control Center controls work (play / pause /
+  scrub / skip).
+- Background audio supported — lock the phone and keep walking.
+- **Single-piece tours:** one continuous audio clip tied to one
+  location.
+- **Multi-stop tours:** discrete audio clip per stop. Each stop's
+  clip plays when the maker's chosen trigger fires:
+  - **Geofenced trigger** (maker default for outdoor walking tours):
+    when the user enters the stop's geofence (~30m radius, maker
+    configurable), the clip plays automatically.
+  - **Manual trigger** (maker default for indoor / quiet contexts):
+    the player UI surfaces a "tap to play stop 2" affordance.
+
+### Flow 3: Library
+
+- **Library tab** holds:
+  - **Saved tours** — bookmarked for later.
+  - **Downloaded tours** — full audio cached on device for offline
+    listening (essential for walking-tour use cases with spotty
+    signal).
+  - **Recently played** — listening progress persisted locally.
+- No cross-device sync in V1 (no accounts). Sign-in adds sync
+  post-V1.
+
+---
+
+## Data model
+
+### Tour
+
 - `id`: UUID
-- `cityId`: UUID (FK → City)
-- `name`: String
-- `category`: Enum — one of: `gallery`, `museum`, `architecture`, `designShop`, `studio`, `streetArt`, `publicSpace`, `culturalInstitution`, `cafe`, `bookshop`, `other`
+- `title`: String
+- `shortDescription`: String (one sentence — feed/card copy)
+- `longDescription`: String (multi-paragraph — tour detail page)
+- `makerId`: UUID (→ Maker)
 - `heroImageURL`: String
-- `thumbnailURL`: String
-- `editorialDescription`: String (3-5 sentences, opinionated, never generic)
-- `onSiteTip`: String? (optional — only shows when user is nearby)
-- `address`: String
+- `kind`: Enum — `.single` (one location) or `.multiStop` (≥2)
+- `stops`: [Stop] (length 1 for `.single`, ≥2 for `.multiStop`)
+- `introAudioURL`: String? (plays before stop 1 if present)
+- `totalDurationSeconds`: Int (sum of stop durations + intro)
+- `walkingDistanceMeters`: Int? (only meaningful for multi-stop)
+- `centroidLatitude` / `centroidLongitude`: Double (for "near me" sort)
+- `city`: String? (informational only, free-text; tours aren't
+  required to belong to a city)
+- `tags`: [String]
+- `priceUSD`: Decimal (V1: always 0; reserved for paid tours later)
+
+### Stop
+
+- `id`: UUID
+- `order`: Int (0-indexed within the tour)
+- `title`: String (e.g., "The Bronze Doors")
+- `caption`: String? (one-line description in the player UI)
 - `latitude` / `longitude`: Double
-- `neighborhood`: String? (e.g., "Coyoacán", "Shimokitazawa")
-- `hours`: String? (e.g., "Wed–Mon 10am–6pm, closed Tue")
-- `priceIndicator`: Enum — `free`, `$`, `$$`, `$$$`
-- `websiteURL`: String?
-- `tags`: [String] (e.g., ["brutalist", "contemporary art", "rooftop", "hidden gem"])
-- `isFeatured`: Bool
+- `audioURL`: String
+- `audioDurationSeconds`: Int
+- `triggerMode`: Enum — `.geofenced` or `.manual` (maker-set)
+- `triggerRadiusMeters`: Int (default 30; ignored if `.manual`)
+- `imageURL`: String?
+- `transcriptText`: String? (accessibility)
 
-### Collection (local, on-device for V1)
+### Maker
+
 - `id`: UUID
-- `name`: String
-- `coverImageURL`: String?
-- `placeIds`: [UUID]
-- `createdAt`: Date
+- `displayName`: String
+- `avatarURL`: String?
+- `bio`: String (1–3 sentences)
+- `websiteURL`: String?
+
+### LibraryEntry (local, on-device for V1)
+
+- `tourId`: UUID
+- `savedAt`: Date?
+- `downloadedAt`: Date?
+- `listenedSeconds`: Int (progress through the tour)
+- `completedAt`: Date?
 
 ---
 
-## Seed Content (V1)
+## Seed content (V1)
 
-For the first version, pre-populate the app with **3 cities, ~15 places each** (45 total places). Use realistic mock data — real place names from these cities where possible, with placeholder editorial copy and SF Symbols or solid-color placeholder images.
+For V1 launch, the Atlas team creates **5–15 audio tours / pieces.**
+A reasonable mix:
 
-### Seed Cities:
-1. **New York City** — Noguchi Museum, Dia Beacon, The Met Breuer building (Brutalist icon), Judd Foundation, MoMA PS1, Storefront for Art and Architecture, The High Line, Green-Wood Cemetery, McNally Jackson, Center for Architecture, Pioneer Works, etc.
-2. **Porto** — Livraria Lello, Serralves Museum & Park, Casa da Música (OMA/Koolhaas), São Bento Station tiles, Fundação de Serralves, MAAT extension, Rua Miguel Bombarda gallery district, Palácio de Cristal gardens, Clérigos Tower, Bolsa Palace Arab Room, etc.
-3. **London** — Barbican Centre, Design Museum, Serpentine Pavilion, Leighton House Museum, Whitechapel Gallery, Goldfinger's Trellick Tower, Dennis Severs' House, Wellcome Collection, Maggie's Centre (Zaha Hadid), Maltby Street Market, etc.
+- 2–3 single-location pieces (a piece of public art, a building
+  facade, a specific exhibit) — short, 2–5 minutes each.
+- 2–3 multi-stop walking tours (a neighborhood, an architecture trail,
+  a small museum) — 15–30 minutes each, 3–8 stops.
+- The rest at whatever ratio the team prefers.
 
-Generate plausible editorial descriptions for each. The tone should be: confident, concise, slightly opinionated, design-literate. Never generic tourist-guide copy. Example:
-
-> **Noguchi Museum** — "A sculptor's private universe in Long Island City. Noguchi designed every detail — the building, the garden, the way light falls on basalt. Go on a weekday afternoon when you might be the only person in the outdoor gallery. The gift shop is one of the best in the city."
-
----
-
-## UI / Design Direction
-
-### Design Principles
-- **Editorial, not utilitarian.** This should feel like opening a beautifully designed magazine, not searching a database.
-- **Photography-forward.** Large hero images. Let the visuals breathe. Minimal chrome.
-- **Restrained palette.** Near-white backgrounds, near-black text, one accent color (warm terracotta/clay, `#B85042`). Very selective use of color.
-- **Typography matters.** Use a serif for headlines (New York / system serif), sans-serif for body (SF Pro). Headlines should feel editorial, body should feel clean.
-- **No clutter.** No star ratings, no review counts, no "Sponsored" badges, no ads. This is a curated space.
-- **Generous whitespace.** Let elements breathe. Padding should feel luxurious, not cramped.
-
-### Key Screens
-
-1. **Home / Feed**
-   - Top: subtle greeting or "Featured in [City]" header
-   - Horizontally scrollable city cards (large, photo-forward)
-   - Below: "Featured Places" vertical feed — large hero images with place name, city, category tag
-   - Pull to refresh
-
-2. **City Detail**
-   - Full-bleed hero image of the city
-   - Editorial intro text (the Atlas "take")
-   - Category filter chips (horizontally scrollable): All, Galleries, Architecture, Design Shops, etc.
-   - Grid or list of places, filterable by category
-   - Map toggle — switch between list view and map view of all places in this city
-
-3. **Place Detail**
-   - Full-bleed hero image
-   - Place name (large, serif)
-   - Category tag + neighborhood tag
-   - Editorial description
-   - "On-site tip" card (if available — show this with a location pin icon, slightly different styling to hint it's for when you're there)
-   - Practical info: address, hours, price, website link
-   - Map snippet showing location
-   - "Save to Collection" button
-   - "Nearby" section: 2-3 other Atlas places within walking distance
-
-4. **Map View** (accessible from City Detail or as a tab)
-   - Apple Maps with custom-styled annotation pins (terracotta color)
-   - Tapping a pin shows a compact card (image + name + category)
-   - Tapping the card opens Place Detail
-   - User location shown when in the city
-
-5. **Collections Tab**
-   - List of user's collections
-   - Default "Saved" collection always present
-   - Each collection shows cover image, name, place count
-   - Tap into a collection → list of saved places
-   - "+" button to create new collection
-
-6. **Profile / Settings** (minimal for V1)
-   - Just a gear icon → About, clear cache, placeholder for future auth
-
-### Tab Bar (3 tabs for V1)
-1. **Discover** (home feed icon)
-2. **Map** (map icon — shows all places in nearest city or selected city)
-3. **Saved** (bookmark icon — collections)
+Recording, editing, mastering, and writing the descriptions is owner
+work, not Claude work. See `ROADMAP.md` M-launch-content for the
+hand-off shape.
 
 ---
 
-## Technical Architecture
+## UI / Design direction
 
-### Platform & Stack
-- **iOS 17+**, SwiftUI exclusively
-- **Swift 5.9+**, strict concurrency where applicable
-- **No third-party dependencies for V1.** Use only Apple frameworks:
-  - SwiftUI for all UI
-  - MapKit for maps
-  - CoreLocation for user location & geofencing
-  - SwiftData (or simple JSON + UserDefaults) for local persistence
-  - Combine or async/await for data flow
+> **Design and theming decisions remain deferred** per owner direction
+> May 2026. The placeholder values in `Theme/Atlas*.swift` stay until
+> the design pass after functionality lands. The structural intent
+> below is *what each screen contains*, not *what it looks like*.
 
-### Data Layer (V1 — Local Only)
-- All city/place data ships as a bundled JSON file in the app
-- Collections stored locally via SwiftData or UserDefaults + Codable
-- No backend, no API, no auth for V1
-- Structure the code so a backend (REST or Firebase) can be swapped in later without rewriting views
+### Key screens
 
-### Location Features
-- Request location permission on first launch (with good UX copy explaining why)
-- Use `CLLocationManager` to detect which city the user is in
-- Show distance to places when location is available
-- Optional: register `CLCircularRegion` monitors for saved places to trigger local notifications (~200m radius)
-- Graceful degradation: everything works without location, it's just enhanced with it
+1. **Home** — "Tours near you" feed (or global browse fallback).
+2. **Explore** (Map) — pins for tour stops; tap a pin → tour preview
+   → tour detail.
+3. **Library** — Saved / Downloaded / Recently played sections.
+4. **Tour detail** — hero image, title, maker (linked to maker page),
+   length + walking distance, intro audio, stops list, Start button,
+   Download button, Save button.
+5. **Maker page** — avatar, bio, list of this maker's tours.
+6. **Player** — full-screen audio player. Now-playing stop, scrub bar,
+   speed control, "next stop" / "previous stop", stop list with the
+   current stop highlighted, distance to next stop (for geofenced
+   tours), download progress indicator.
+7. **Settings** ("Me" tab) — about, location permission, "Sign in"
+   placeholder, downloaded-tour storage management, clear cache.
 
-### Project Structure
-```
-Atlas/
-├── App/
-│   ├── AtlasApp.swift          # App entry point
-│   └── ContentView.swift       # Tab bar root
-├── Models/
-│   ├── City.swift
-│   ├── Place.swift
-│   ├── PlaceCategory.swift
-│   └── Collection.swift
-├── Data/
-│   ├── SeedData.json           # Bundled city + place data
-│   ├── DataService.swift       # Loads and provides data
-│   └── CollectionStore.swift   # Local persistence for collections
-├── Features/
-│   ├── Discover/
-│   │   ├── DiscoverView.swift
-│   │   ├── CityCardView.swift
-│   │   └── FeaturedPlaceRow.swift
-│   ├── City/
-│   │   ├── CityDetailView.swift
-│   │   ├── PlaceGridItem.swift
-│   │   └── CategoryFilterBar.swift
-│   ├── Place/
-│   │   ├── PlaceDetailView.swift
-│   │   ├── NearbyPlacesSection.swift
-│   │   └── OnSiteTipCard.swift
-│   ├── Map/
-│   │   ├── MapView.swift
-│   │   └── PlaceAnnotationView.swift
-│   └── Collections/
-│       ├── CollectionsView.swift
-│       ├── CollectionDetailView.swift
-│       └── AddToCollectionSheet.swift
-├── Location/
-│   ├── LocationManager.swift
-│   └── ProximityMonitor.swift
-├── Components/
-│   ├── HeroImageView.swift     # Reusable async image with placeholder
-│   ├── TagChip.swift
-│   ├── PriceIndicator.swift
-│   └── AtlasButton.swift
-├── Theme/
-│   ├── AtlasColors.swift       # Centralized color tokens
-│   ├── AtlasTypography.swift   # Font styles
-│   └── AtlasSpacing.swift      # Spacing constants
-└── Resources/
-    ├── Assets.xcassets
-    └── SeedData.json
-```
+### Tab bar (5 tabs)
 
-### Key Implementation Notes
-- Use `@Observable` (Observation framework, iOS 17) for view models, not `ObservableObject`
-- Use `@Environment` for dependency injection of DataService, LocationManager, CollectionStore
-- Hero images: use `AsyncImage` with a solid-color placeholder (use the terracotta accent or a warm gray)
-- For V1, images can be SF Symbols or solid colored rectangles — the layout and typography should carry the design even without real photography
-- Map annotations should use a custom SwiftUI view (terracotta circle with category icon), not default pins
-- Implement smooth transitions: `NavigationStack` with custom matched geometry effects where appropriate
-- Support Dynamic Type and Dark Mode from the start
+The 5-tab skeleton from M1 survives the pivot. Contents:
+
+| Tab | Content |
+|---|---|
+| Home | Tours near you |
+| Explore | Map of tour stops |
+| Library | Saved / Downloaded / Recently played |
+| [TBD] | Placeholder — owner decision |
+| Me | Settings |
 
 ---
 
-## What NOT to Build in V1
-- No user accounts / authentication
-- No backend / API
-- No push notifications (only local notifications for proximity)
-- No social features (sharing, following)
-- No search (browse-only for now — the catalog is small enough)
-- No onboarding tutorial (the app should be self-evident)
-- No in-app purchases or subscriptions
-- No audio content (that's a future layer)
-- No creator/admin tools (future phase)
+## Technical architecture
+
+### Stack
+
+- **iOS 26.2+ / iPadOS / macOS / visionOS** (per `CLAUDE.md` build
+  config)
+- **SwiftUI only.** `@Observable`, `NavigationStack`.
+- **No third-party dependencies in V1.** Apple frameworks only:
+  - **SwiftUI** — all UI
+  - **MapKit** — the map tab
+  - **CoreLocation** — "tours near you" sorting, geofenced playback
+  - **AVFoundation** — audio playback (`AVQueuePlayer` for multi-stop
+    pre-queueing)
+  - **MediaPlayer** — `MPNowPlayingInfoCenter` and
+    `MPRemoteCommandCenter` for lock-screen / Control Center / CarPlay
+    integration
+  - **SwiftData** *or* `Codable` + `UserDefaults` — local library +
+    listening progress
+
+### Data layer (V1 — static JSON + CDN audio)
+
+- `Tours.json` ships with the app bundle (or is fetched once at launch
+  from a CDN — owner decision; either works under this architecture).
+- Audio files referenced by URL in `Tours.json`. Hosted on a CDN
+  (provider TBD — owner decision; reasonable defaults: Cloudflare R2,
+  AWS S3 + CloudFront, or Apple-hosted On-Demand Resources).
+- Downloaded audio cached in the app sandbox, indexed by tour ID.
+- Library state (saved / downloaded / progress) stored locally via
+  SwiftData or Codable + UserDefaults.
+- **Structure the code so a real backend can be swapped in later
+  without rewriting views.** The view layer talks to a `TourService`
+  protocol; V1's implementation reads the static JSON; the future
+  backend implementation makes network calls.
+
+### Audio playback
+
+- `AVQueuePlayer` wrapped in an `@Observable` `AudioPlayerService` on
+  the Environment shelf.
+- Audio session category `.playback` so audio continues with the phone
+  locked and ducks other audio appropriately.
+- `UIBackgroundModes` → `audio` in `Info.plist` build settings
+  (M-audio-foundation adds this).
+- `MPNowPlayingInfoCenter` updated whenever the playing stop changes.
+- `MPRemoteCommandCenter` wired for play / pause / skip-forward /
+  skip-backward / scrub from lock screen, headphones, AirPods, and
+  CarPlay.
+
+### Location features
+
+- `LocationManager` (already in place from M3) drives "tours near you"
+  sorting and distance display on tour detail.
+- `CLCircularRegion` monitoring via the existing `ProximityMonitor`
+  shape drives **GPS-triggered stop playback** for multi-stop tours
+  where the maker selected `.geofenced` mode. Region radius per stop's
+  `triggerRadiusMeters`.
+- **App degrades gracefully without location:** "tours near you"
+  falls back to a global browse, and geofenced tours surface a "tap to
+  play stop N" affordance instead.
+
+### Project structure
+
+The current folder shape (see `CLAUDE.md` § Architecture) survives.
+Several files are repurposed or renamed during the migration; the
+roadmap milestones spell out which.
 
 ---
 
-## Success Criteria for V1
-1. App launches and shows a beautiful, editorial home feed with 3 cities
-2. User can browse into a city, filter by category, view places on a map
-3. User can tap into a place and read a compelling editorial description
-4. User can save places to collections and create new collections
-5. If user grants location access and is in one of the 3 cities, they see distance to places and get the "You're in [City]" experience
-6. The app FEELS like a design object — someone who cares about design would screenshot it and share it
-7. The code is clean, well-structured, and ready for a backend to be plugged in
+## What NOT to build in V1
+
+- **No backend** — no server, no API, no database. All content ships
+  via a static JSON manifest and CDN-hosted audio.
+- **No user accounts or authentication.** "Sign in" is a placeholder
+  UI entry in Settings; real auth ships post-V1.
+- **No in-app maker upload.** The Atlas team uploads tours by editing
+  the JSON manifest and posting audio to the CDN by hand.
+- **No payments / IAP / paid tours / maker payouts.** All V1 content
+  is Atlas-made and free. The `Tour.priceUSD` field exists in the
+  data model so existing tours can be priced later, but no buy
+  buttons, no purchase flow, no payout infrastructure.
+- **No moderation tooling.** Atlas-made content only, so not needed
+  yet.
+- **No comments, reviews, or ratings.**
+- **No follow-a-maker, sharing, or other social features.**
+- **No push notifications.** Local notifications for geofenced stop
+  arrivals are allowed (they're how the geofence trigger surfaces when
+  the app is backgrounded).
+- **No onboarding tutorial.** The app should be self-evident.
+- **No in-app search.** The V1 catalog is small enough to browse.
+- **No analytics SDK** beyond Apple's built-in App Store Connect
+  metrics.
+
+Do not introduce any of the above without a spec update.
 
 ---
 
-## Tone Check
-If this app were a physical object, it would be a Monocle city guide, not a Fodor's guidebook.
-If it were a store, it would be a gallery bookshop, not a gift shop.
-If it were a person, it would be the friend who always knows the one gallery you haven't been to yet.
+## Success criteria for V1
+
+1. App launches → "Tours near you" feed (or a graceful fallback when
+   no tours are nearby or location is denied).
+2. User can tap a tour → tour detail with maker, length, stops, intro
+   audio, Start button.
+3. Tap Start → audio plays. Lock-screen and Control Center controls
+   work. Background play works (phone locked, audio continues).
+4. For a multi-stop geofenced tour: arriving at a stop's geofence
+   triggers the next clip while the app is foregrounded or
+   backgrounded.
+5. For a multi-stop manual tour: tapping the next stop in the player
+   plays its clip.
+6. User can download a tour for offline playback. Airplane mode →
+   downloaded tour still plays end to end.
+7. User can save tours; saves persist across relaunches.
+8. 5–15 actual recorded audio tours / pieces are loaded into the app.
+9. App works without location permission (just no "near me" sorting
+   and no geofenced playback).
+
+---
+
+## Tone (interim)
+
+The consumer-facing UI should feel **spare, confident, audio-first.**
+Less "design magazine on a phone," more "a beautiful audio app that
+respects your time and your ears." Final tone direction TBD by owner
+in the polish phase.
