@@ -118,10 +118,13 @@ TRAVEL GUIDED TOUR/
 │   ├── Tour.swift                 🆕 added in M-data-model — a tour: title, maker, stops, …
 │   ├── Stop.swift                 🆕 a stop within a tour: lat/lon, audio URL, trigger mode
 │   ├── Maker.swift                🆕 a maker: display name, avatar, bio, tours
+│   ├── TourCategory.swift         🆕 closed enum of tour categories that drive home rails
+│   ├── RecentSearch.swift         🆕 local-only record of a search query (for "Because you searched [X]" rail)
 │   └── LibraryEntry.swift         🆕 a local "saved/downloaded/progress" record per tour
 ├── Data/
 │   ├── DataService.swift          🔄 reshaped in M-data-model to load Tours.json
 │   ├── CollectionStore.swift      🔄 renamed → LibraryStore (data shape changes)
+│   ├── RecentSearchStore.swift    🆕 M-search — local persistence for search history
 │   └── SeedData.swift             🔄 renamed → ToursData (the JSON ↔ Swift translator)
 ├── Resources/
 │   ├── SeedData.json              ❌ deleted in M-data-model
@@ -133,12 +136,13 @@ TRAVEL GUIDED TOUR/
 │   ├── Discover/                  ❌ replaced by Home/ in M-home
 │   ├── City/                      ❌ deleted in M-data-model (no "city" entity in this product)
 │   ├── Place/                     ❌ replaced by Tour/ in M-tour-detail
-│   ├── Home/                      🆕 M-home — "Tours near you" feed with location fallback
+│   ├── Home/                      🆕 M-home — map-dominant home: map at top + curated rails below
+│   ├── Search/                    🆕 M-search — search bar + results screen
 │   ├── Tour/                      🆕 M-tour-detail — tour detail screen
 │   ├── Player/                    🆕 M-player — full-screen audio player
 │   ├── Maker/                     🆕 M-maker — maker bio + their tour list
 │   ├── Library/                   🆕 M-library (replaces Collections/) — saved + downloaded + recent
-│   ├── Map/                       🔄 reshaped in M-map; pins become tour stops
+│   ├── Map/                       🔄 in M-map — may be cut entirely if Home's embedded map is enough; owner decides
 │   │   ├── MapView.swift
 │   │   └── StopAnnotationView.swift   🔄 renamed from PlaceAnnotationView
 │   └── Settings/                  ✅ stays; gets a "Manage downloads" link in M-offline
