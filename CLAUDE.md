@@ -11,52 +11,70 @@ Guidance for Claude Code (claude.ai/code) when working in this repository.
 
 ## Project Overview
 
-The **product** is **Atlas** — a curated, editorial discovery app for art,
-culture, design, and architecture in cities. Think Monocle city guide as a
-native app with location awareness. The Xcode project (the folder Apple's
-tool uses to build the app) is named `TRAVEL GUIDED TOUR` for historical
-reasons; in code, copy, and conversation the product is Atlas.
+The **product** is **Atlas** — a creator platform for **GPS-anchored
+audio tours**. Makers record audio about a place (a single piece on
+one location, or a multi-stop walking tour); consumers browse tours
+near them, download for offline listening, and play them while
+walking — with audio that automatically triggers at each stop. Shape
+of the product is closer to AllTrails or Atlas Obscura than to a
+guidebook. (See `atlas_claude_code_prompt.md` for the canonical
+spec.)
 
-The canonical product spec is `atlas_claude_code_prompt.md` at repo root —
-read it before making product decisions. The execution plan is `ROADMAP.md`
-at repo root — read it before making implementation decisions.
+> **Pivot history (May 2026):** Atlas was *originally* spec'd as an
+> "editorial city guide" (Monocle-style). The product pivoted to
+> the audio-tour creator platform described above. Most of the
+> existing code (`SeedData.json`, `CityDetailView`, `PlaceDetailView`,
+> etc.) is being reshaped to fit. The Xcode project folder name —
+> `TRAVEL GUIDED TOUR` — is now more on-point than it was originally;
+> in code, copy, and conversation the product is Atlas.
+
+**V1 is consumer-side only.** Atlas team creates the launch content;
+no backend, no auth, no payments, no in-app maker upload. See
+`atlas_claude_code_prompt.md` § V1 scope.
+
+The canonical product spec is `atlas_claude_code_prompt.md` at repo
+root — read it before making product decisions. The execution plan
+is `ROADMAP.md` at repo root — read it before making implementation
+decisions.
 
 Multi-platform SwiftUI app (SwiftUI = Apple's modern toolkit for building
 app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 (iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
 — same app body, three different "TVs" it can play on.
 
-## Current State (V1 functionality largely complete)
+## Current State (mid-pivot to audio tours)
 
-The app is functional end-to-end. M1 of `ROADMAP.md` wired the 5-tab
-structure; M2 (seed data) and M3 (location privacy) turned out to be
-**already complete** in earlier commits — the original orientation
-doc incorrectly described them as gaps. What remains for V1 is mostly
-QA + the deferred design polish phase.
+The app's *structural shell* is built — 5-tab `TabView`, location
+permission configured, environment-shelf dependency injection in
+place, terracotta accent color in `Assets.xcassets`, theme tokens
+ready (with placeholder values). The *content layer and most feature
+views* are being rebuilt to fit the audio-tour spec. See `ROADMAP.md`
+§ Where we are right now for the file-by-file migration map.
 
-- `ContentView.swift` is wired — a `TabView` with 5 tabs (Home /
-  Explore / Favorites / Messages / Me) routing to `DiscoverView` /
-  `MapView` / `CollectionsView` / a "Coming soon" placeholder /
-  `SettingsView`.
-- `Resources/SeedData.json` is **populated** with 45 places across
-  NYC, Porto, and London. Editorial copy is already in the Atlas
-  voice (the originally-planned "factual placeholder copy → editorial
-  rewrite later" two-pass is collapsed because the copy was already
-  written before V1 planning started).
+What's true today:
+
+- `ContentView.swift` is a 5-tab `TabView` (Home / Explore / Favorites
+  / Messages / Me). Tab *contents* will change as new feature views
+  land; the skeleton stays.
+- `Resources/SeedData.json` still holds the old 45-place editorial
+  catalog. It gets replaced by `Resources/Tours.json` in
+  M-data-model.
 - **Location permission** is configured via the
   `INFOPLIST_KEY_NSLocationWhenInUseUsageDescription` build setting
-  in `project.pbxproj` (Debug + Release). Modern Xcode generates
-  Info.plist from build settings rather than a standalone file.
-- `Assets.xcassets/AccentColor.colorset` is set to Atlas terracotta
+  in `project.pbxproj` (Debug + Release). Copy will likely be
+  tweaked during M-home to match the audio-tour framing.
+- `Assets.xcassets/AccentColor.colorset` is set to terracotta
   `#B85042` (light) and a lighter variant for dark mode.
-- `Assets.xcassets/AppIcon.appiconset` is the empty Apple template
-  (the placeholder square on your home screen). M9 in the polish
-  phase addresses this.
+- `Assets.xcassets/AppIcon.appiconset` is the empty Apple template.
+  A polish milestone addresses this.
 - Theme tokens in `Theme/Atlas{Colors,Typography,Spacing}.swift` are
-  **placeholder values** (currently all-white/all-black/Helvetica 12pt)
-  pending the deferred design pass.
+  **placeholder values** (currently all-white/all-black/Helvetica
+  12pt) pending the deferred design pass.
+- **Audio playback infrastructure does not yet exist.** It lands in
+  M-audio-foundation, including the `UIBackgroundModes` → `audio`
+  build setting.
 
-See `ROADMAP.md` for what's left.
+See `ROADMAP.md` for the milestone-by-milestone plan.
 
 ## Build & Run
 
@@ -81,59 +99,55 @@ after every change to confirm nothing broke. We don't have any yet.)
 
 (Architecture = the floor plan of the codebase: which folder does what.)
 
+> Legend for the folder map below:
+> ✅ stays as-is across the pivot
+> 🔄 reshaped or renamed during the audio-tour migration
+> ❌ being deleted (old editorial-reader code)
+> 🆕 doesn't exist yet; lands in a future milestone
+
 ```
 TRAVEL GUIDED TOUR/
-├── TRAVEL_GUIDED_TOURApp.swift    The front door — when you tap the icon, this runs first.
-│                                  It also sets up the three "shared shelves" (data, collections,
-│                                  location) that every screen can reach into.
-├── ContentView.swift              5-tab TabView (Home/Explore/Favorites/Messages/Me)
-├── SplashView.swift               2-second launch splash (the loading screen)
-├── Models/                        The "shapes" of the data — what a City is, what a Place is, etc.
-│   ├── City.swift                 A city: name, country, hero photo, intro, lat/lon, place count
-│   ├── Place.swift                A place: name, category, photo, editorial copy, address, hours, …
-│   ├── PlaceCategory.swift        The fixed list of place types (gallery, museum, café, …)
-│   └── PlaceCollection.swift      A user's saved list ("Tokyo trip", "Favorites")
-├── Data/                          The "filing cabinet" — how data gets loaded and saved
-│   ├── DataService.swift          Loads SeedData.json on launch and lets screens search/filter
-│   ├── CollectionStore.swift      Saves the user's collections to the device so they stick around
-│   └── SeedData.swift             The translator that turns the JSON file into Swift objects
+├── TRAVEL_GUIDED_TOURApp.swift    ✅ App entry; sets up environment shelves (services)
+├── ContentView.swift              ✅ 5-tab TabView; tab contents swap as views land
+├── SplashView.swift               ✅ 2-second launch splash
+├── Models/
+│   ├── City.swift                 ❌ delete in M-data-model
+│   ├── Place.swift                ❌ delete in M-data-model
+│   ├── PlaceCategory.swift        ❌ delete in M-data-model
+│   ├── PlaceCollection.swift      ❌ delete in M-data-model
+│   ├── Tour.swift                 🆕 added in M-data-model — a tour: title, maker, stops, …
+│   ├── Stop.swift                 🆕 a stop within a tour: lat/lon, audio URL, trigger mode
+│   ├── Maker.swift                🆕 a maker: display name, avatar, bio, tours
+│   └── LibraryEntry.swift         🆕 a local "saved/downloaded/progress" record per tour
+├── Data/
+│   ├── DataService.swift          🔄 reshaped in M-data-model to load Tours.json
+│   ├── CollectionStore.swift      🔄 renamed → LibraryStore (data shape changes)
+│   └── SeedData.swift             🔄 renamed → ToursData (the JSON ↔ Swift translator)
 ├── Resources/
-│   └── SeedData.json              Populated — 3 cities × 15 places (NYC, Porto, London)
-├── Features/                      One folder per feature/screen group
-│   ├── Discover/                  The home tab — feed of cities and featured places
-│   │   ├── DiscoverView.swift
-│   │   ├── CityCardView.swift
-│   │   └── FeaturedPlaceRow.swift
-│   ├── City/                      The "drill into one city" screen
-│   │   ├── CityDetailView.swift
-│   │   ├── CategoryFilterBar.swift
-│   │   └── PlaceGridItem.swift
-│   ├── Place/                     The "drill into one place" screen
-│   │   ├── PlaceDetailView.swift
-│   │   ├── NearbyPlacesSection.swift
-│   │   └── OnSiteTipCard.swift   The little card that appears only when you're physically nearby
-│   ├── Map/                       The map tab
-│   │   ├── MapView.swift          Apple Maps with custom pins for each place
-│   │   └── PlaceAnnotationView.swift  The terracotta pin design
-│   ├── Collections/               The "Saved" tab
-│   │   ├── CollectionsView.swift
-│   │   ├── CollectionDetailView.swift
-│   │   └── AddToCollectionSheet.swift  The pop-up that asks "save to which list?"
-│   └── Settings/
-│       └── SettingsView.swift
-├── Location/                      The GPS / "where am I?" plumbing
-│   ├── LocationManager.swift      Asks the iPhone for the user's location and shares it
-│   └── ProximityMonitor.swift     Watches for the user crossing a virtual fence (within ~200m of a place)
-├── Components/                    Reusable building blocks — small parts used by many screens
-│   ├── HeroImageView.swift        The big top photo on a screen, with a placeholder while it loads
-│   ├── TagChip.swift              The little pill-shaped category tag
-│   ├── PriceIndicatorView.swift   The "$ / $$ / $$$ / free" indicator
-│   └── PlatformHelpers.swift      Code that handles iPhone-vs-Mac-vs-Vision Pro differences
-├── Theme/                         The design system — colors, fonts, spacing in one place
-│   ├── AtlasColors.swift          THE source of truth for color
-│   ├── AtlasTypography.swift      THE source of truth for fonts
-│   └── AtlasSpacing.swift         THE source of truth for padding/margins/corner radius
-└── Assets.xcassets/               AccentColor set to terracotta #B85042; AppIcon still template
+│   ├── SeedData.json              ❌ deleted in M-data-model
+│   └── Tours.json                 🆕 added in M-data-model; populated in M-launch-content
+├── Audio/                         🆕 brand new folder
+│   ├── AudioPlayerService.swift   🆕 AVQueuePlayer wrapper + lock-screen integration (M-audio-foundation)
+│   └── TourDownloader.swift       🆕 offline tour caching via URLSession (M-offline)
+├── Features/
+│   ├── Discover/                  ❌ replaced by Home/ in M-home
+│   ├── City/                      ❌ deleted in M-data-model (no "city" entity in this product)
+│   ├── Place/                     ❌ replaced by Tour/ in M-tour-detail
+│   ├── Home/                      🆕 M-home — "Tours near you" feed with location fallback
+│   ├── Tour/                      🆕 M-tour-detail — tour detail screen
+│   ├── Player/                    🆕 M-player — full-screen audio player
+│   ├── Maker/                     🆕 M-maker — maker bio + their tour list
+│   ├── Library/                   🆕 M-library (replaces Collections/) — saved + downloaded + recent
+│   ├── Map/                       🔄 reshaped in M-map; pins become tour stops
+│   │   ├── MapView.swift
+│   │   └── StopAnnotationView.swift   🔄 renamed from PlaceAnnotationView
+│   └── Settings/                  ✅ stays; gets a "Manage downloads" link in M-offline
+├── Location/
+│   ├── LocationManager.swift      ✅ stays — drives "tours near you" sort + distance
+│   └── ProximityMonitor.swift     🔄 reshaped in M-geofencing for stop geofences
+├── Components/                    ✅ all stay (HeroImageView, TagChip, PriceIndicatorView, PlatformHelpers)
+├── Theme/                         ✅ all stay (placeholder values until design pass)
+└── Assets.xcassets/               ✅ AccentColor terracotta #B85042; AppIcon still template
 ```
 
 ## Design System
@@ -157,22 +171,32 @@ Their current *values* are placeholders, but the *structure* is locked in.
 - The Atlas accent in `Assets.xcassets/AccentColor.colorset` is set to
   terracotta `#B85042` per the original spec, but treat that value as a
   placeholder until the design pass.
-- Spec design principles (also placeholders pending the design pass):
-  editorial, photography-forward, near-white background, near-black text,
-  one accent color, generous whitespace, no star ratings, no review
-  counts, no ads.
+- Interim design intent (pending the design pass): spare,
+  audio-first, photography-forward where photos exist. Final palette,
+  typography, and visual language all TBD. Some specifics from the
+  earlier editorial-reader spec — e.g., "no star ratings, no review
+  counts" — are *under review* in the audio-tour product, since a
+  creator marketplace may eventually need quality signals. Don't
+  treat the old principles as locked.
 
 ## Data Flow
 
 (Data flow = how information moves from where it's stored to the screen
 that displays it.)
 
-`TRAVEL_GUIDED_TOURApp.swift` sets up three "shared shelves" the moment the
+`TRAVEL_GUIDED_TOURApp.swift` sets up "shared shelves" the moment the
 app launches:
 
-- **DataService** — the read-only library of cities and places.
-- **CollectionStore** — read/write storage for the user's saved lists.
+- **DataService** — read-only library of tours and makers. (Currently
+  still loading the old city/place data; reshaped in M-data-model.)
+- **CollectionStore** — read/write storage for the user's saved
+  lists. (Renamed to `LibraryStore` in M-library; data shape becomes
+  `[LibraryEntry]`.)
 - **LocationManager** — the GPS reporter: "you're at lat X, lon Y."
+- **AudioPlayerService** — 🆕 added in M-audio-foundation. Wraps
+  `AVQueuePlayer`, manages the audio session, drives lock-screen /
+  Control Center / CarPlay integration. Every screen that wants to
+  play audio talks to this.
 
 These shelves are placed in the SwiftUI `Environment` (a hallway shelf
 every screen can reach into). Any screen that needs them just says "give
@@ -193,15 +217,25 @@ its own copy. Don't instantiate these inside individual screens.
   `Components/HeroImageView.swift`. Don't reach for `AsyncImage` (the raw
   Apple "download a photo on the fly" tool) directly — `HeroImageView`
   already wraps it with a placeholder color.
-- **No third-party libraries in V1.** Apple frameworks only: SwiftUI,
-  MapKit (Apple Maps as a drop-in building block), CoreLocation (GPS),
-  SwiftData (Apple's "save data on the device" toolkit) or `Codable` +
-  `UserDefaults` (the simpler "write a note in a kitchen drawer" version).
+- **No third-party libraries in V1.** Apple frameworks only:
+  - SwiftUI — all UI
+  - MapKit — Apple Maps as a drop-in building block
+  - CoreLocation — GPS + geofencing
+  - AVFoundation — audio playback (`AVQueuePlayer` wraps a queue of
+    stop-audio clips for a tour)
+  - MediaPlayer — `MPNowPlayingInfoCenter` + `MPRemoteCommandCenter`
+    for lock-screen / Control Center / CarPlay integration
+  - SwiftData *or* `Codable` + `UserDefaults` — local library +
+    listening progress
+- **Audio playback always goes through `AudioPlayerService`.** Don't
+  spin up your own `AVPlayer` in a view. The service exists so audio
+  session config, lock-screen integration, and queue management happen
+  in one place.
 - Support Dynamic Type (so users who set bigger text in iOS Settings get
   bigger text in Atlas) and Dark Mode (so the app looks right in both
   light and dark themes).
-- Map pins are custom SwiftUI views (`PlaceAnnotationView` — terracotta
-  with category icon), **not** Apple's default red pins.
+- Map pins are custom SwiftUI views (`StopAnnotationView` — terracotta
+  with category/maker icon), **not** Apple's default red pins.
 
 ## Build Configuration
 
@@ -222,22 +256,38 @@ its own copy. Don't instantiate these inside individual screens.
 - **Info.plist:** auto-generated from `INFOPLIST_KEY_*` build settings.
   `NSLocationWhenInUseUsageDescription` is set to the standard Atlas
   location-permission copy in both Debug and Release configs.
+- **Audio background mode (planned, not yet added):** M-audio-foundation
+  adds `UIBackgroundModes` → `audio` to the build settings so audio
+  continues with the phone locked. Without this, audio cuts out on
+  lock — fatal for a walking-tour app.
+- **Always-location entitlement (TBD):** M-geofencing may need
+  `NSLocationAlwaysAndWhenInUseUsageDescription` if we want geofenced
+  stop triggers to fire while the app is backgrounded. Open question;
+  the milestone covers the tradeoff.
 
 ## Out of Scope for V1
 
-Per `atlas_claude_code_prompt.md` §"What NOT to Build in V1":
+Per `atlas_claude_code_prompt.md` §"What NOT to build in V1":
 
-- No user accounts / login.
-- No backend / server / API. (Backend = a computer somewhere on the
-  internet that the app talks to. V1 has none — all data ships inside the
-  app like a printed cookbook.)
-- No push notifications. (Only *local* notifications, which the iPhone
-  itself decides to show when you walk near a place — those are allowed.)
-- No social features (sharing, following).
-- No in-app search (the catalog is small enough to just browse).
-- No onboarding tutorial (the app should be self-evident).
-- No in-app purchases or subscriptions.
-- No audio content (future layer).
-- No creator/admin tools (future phase).
+- **No backend / server / API.** All content ships via a static JSON
+  manifest + audio files hosted on a CDN.
+- **No user accounts / authentication.** "Sign in" is a placeholder UI
+  entry in Settings; real auth is post-V1.
+- **No in-app maker upload.** Atlas team edits `Tours.json` and uploads
+  audio to the CDN by hand.
+- **No payments / IAP / paid tours / maker payouts.** All V1 content is
+  Atlas-made and free. The `Tour.priceUSD` field exists in the data
+  model so tours can be priced later, but no buy buttons, no purchase
+  flow, no payouts in V1.
+- **No moderation tooling.** Atlas-made content only.
+- **No comments, reviews, or ratings.**
+- **No follow-a-maker, sharing, or other social features.**
+- **No push notifications.** Local notifications for geofenced stop
+  arrivals are allowed — they're how the geofence trigger surfaces
+  when the app is backgrounded.
+- **No onboarding tutorial.** The app should be self-evident.
+- **No in-app search.** The V1 catalog is small enough to browse.
+- **No analytics SDK** beyond Apple's built-in App Store Connect
+  metrics.
 
-Don't introduce these without a spec update.
+Don't introduce any of these without a spec update.
