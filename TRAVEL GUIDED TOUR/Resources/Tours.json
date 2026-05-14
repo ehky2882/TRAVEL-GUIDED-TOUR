@@ -1,0 +1,109 @@
+{
+  "makers": [
+    {
+      "id": "00000000-0000-0000-0000-000000000001",
+      "displayName": "Atlas Studio",
+      "avatarURL": null,
+      "bio": "Atlas Studio is the in-house team producing the audio tours that ship with Atlas at launch. Founding makers join after V1.",
+      "websiteURL": null
+    }
+  ],
+  "tours": [
+    {
+      "id": "00000000-0000-0000-0000-0000000000A1",
+      "title": "The Cooper Hewitt Facade",
+      "shortDescription": "Two minutes on Andrew Carnegie's Manhattan mansion.",
+      "longDescription": "A short audio piece standing at the corner of 91st and Fifth, looking at the facade of what was once the largest private residence in New York City and is now the Cooper Hewitt, Smithsonian Design Museum. The building tells a story about American industrialists, immigrant craftsmanship, and how a steel magnate decided what a home should look like.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/cooper-hewitt-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "00000000-0000-0000-0000-0000000000B1",
+          "order": 0,
+          "title": "The Cooper Hewitt Facade",
+          "caption": "Stand at the corner of East 91st Street and Fifth Avenue.",
+          "latitude": 40.7843,
+          "longitude": -73.9572,
+          "audioURL": "https://atlas-tours.example/audio/cooper-hewitt-1.m4a",
+          "audioDurationSeconds": 130,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7843,
+      "centroidLongitude": -73.9572,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["gilded age", "fifth avenue", "smithsonian"],
+      "priceUSD": 0
+    },
+    {
+      "id": "00000000-0000-0000-0000-0000000000A2",
+      "title": "Architects of Hidden Brooklyn",
+      "shortDescription": "Three buildings in three Brooklyn neighborhoods, twelve minutes total.",
+      "longDescription": "A short walking tour with three stops, each a building that doesn't get talked about as much as its neighbors. We start in Brooklyn Heights, move to Fort Greene, and end in Clinton Hill. Designed to be listened to with headphones on a Sunday morning when the streets are quiet.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/hidden-brooklyn-hero.jpg",
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "00000000-0000-0000-0000-0000000000B2",
+          "order": 0,
+          "title": "Plymouth Church",
+          "caption": "Orange Street, Brooklyn Heights.",
+          "latitude": 40.6993,
+          "longitude": -73.9938,
+          "audioURL": "https://atlas-tours.example/audio/hidden-brooklyn-1.m4a",
+          "audioDurationSeconds": 240,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": null
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000000B3",
+          "order": 1,
+          "title": "Brooklyn Academy of Music",
+          "caption": "Lafayette Avenue at Ashland Place.",
+          "latitude": 40.6864,
+          "longitude": -73.9783,
+          "audioURL": "https://atlas-tours.example/audio/hidden-brooklyn-2.m4a",
+          "audioDurationSeconds": 280,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": null
+        },
+        {
+          "id": "00000000-0000-0000-0000-0000000000B4",
+          "order": 2,
+          "title": "Pratt Institute Main Building",
+          "caption": "Willoughby Avenue at Hall Street.",
+          "latitude": 40.6912,
+          "longitude": -73.9637,
+          "audioURL": "https://atlas-tours.example/audio/hidden-brooklyn-3.m4a",
+          "audioDurationSeconds": 200,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": "https://atlas-tours.example/audio/hidden-brooklyn-intro.m4a",
+      "totalDurationSeconds": 760,
+      "walkingDistanceMeters": 3400,
+      "centroidLatitude": 40.6923,
+      "centroidLongitude": -73.9786,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["brooklyn", "walking tour", "20th century"],
+      "priceUSD": 0
+    }
+  ]
+}

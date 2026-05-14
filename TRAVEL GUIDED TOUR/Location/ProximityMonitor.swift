@@ -6,29 +6,29 @@ import Observation
 @Observable
 final class ProximityMonitor: NSObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
-    private var monitoredPlaces: [UUID: Place] = [:]
-    private(set) var nearbyPlace: Place?
+    private var monitoredStops: [UUID: Stop] = [:]
+    private(set) var lastEnteredStop: Stop?
 
     override init() {
         super.init()
         manager.delegate = self
     }
 
-    func startMonitoring(places: [Place]) {
+    func startMonitoring(stops: [Stop]) {
         #if os(iOS)
         stopAllMonitoring()
         requestNotificationPermission()
 
-        for place in places.prefix(20) {
+        for stop in stops.prefix(20) where stop.triggerMode == .geofenced {
             let region = CLCircularRegion(
-                center: place.coordinate,
-                radius: 200,
-                identifier: place.id.uuidString
+                center: stop.coordinate,
+                radius: CLLocationDistance(stop.triggerRadiusMeters),
+                identifier: stop.id.uuidString
             )
             region.notifyOnEntry = true
             region.notifyOnExit = false
             manager.startMonitoring(for: region)
-            monitoredPlaces[place.id] = place
+            monitoredStops[stop.id] = stop
         }
         #endif
     }
@@ -38,7 +38,7 @@ final class ProximityMonitor: NSObject, CLLocationManagerDelegate {
         for region in manager.monitoredRegions {
             manager.stopMonitoring(for: region)
         }
-        monitoredPlaces.removeAll()
+        monitoredStops.removeAll()
         #endif
     }
 
@@ -48,23 +48,25 @@ final class ProximityMonitor: NSObject, CLLocationManagerDelegate {
 
     #if os(iOS)
     nonisolated func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        guard let placeId = UUID(uuidString: region.identifier) else { return }
+        guard let stopId = UUID(uuidString: region.identifier) else { return }
         MainActor.assumeIsolated {
-            guard let place = monitoredPlaces[placeId] else { return }
-            nearbyPlace = place
-            sendNotification(for: place)
+            guard let stop = monitoredStops[stopId] else { return }
+            lastEnteredStop = stop
+            sendNotification(for: stop)
         }
     }
     #endif
 
-    private func sendNotification(for place: Place) {
+    private func sendNotification(for stop: Stop) {
         let content = UNMutableNotificationContent()
-        content.title = place.name
-        content.body = "You're nearby — \(place.onSiteTip ?? place.editorialDescription)"
+        content.title = stop.title
+        if let caption = stop.caption {
+            content.body = caption
+        }
         content.sound = .default
 
         let request = UNNotificationRequest(
-            identifier: place.id.uuidString,
+            identifier: stop.id.uuidString,
             content: content,
             trigger: nil
         )

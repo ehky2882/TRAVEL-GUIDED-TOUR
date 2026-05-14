@@ -52,9 +52,10 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
         }
     }
 
-    func distanceString(to place: Place) -> String? {
-        guard let location = userLocation else { return nil }
-        let distance = place.distance(from: location)
+    func distanceString(toLatitude latitude: Double, longitude: Double) -> String? {
+        guard let userLocation else { return nil }
+        let target = CLLocation(latitude: latitude, longitude: longitude)
+        let distance = userLocation.distance(from: target)
         if distance < 1000 {
             return "\(Int(distance))m away"
         } else {
