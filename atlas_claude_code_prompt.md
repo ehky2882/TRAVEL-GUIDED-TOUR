@@ -62,12 +62,33 @@ not because you pressed play in a feed.** That's the product.
 
 ### Flow 1: Discover
 
-- Open app → **Home tab = "Tours near you."** Location-aware feed
-  sorted by distance. Falls back to a global browse when the user is
-  not near any tours or has denied location permission.
-- **Explore tab = Map.** Pins represent tour stops. Tapping a pin
-  shows a tour preview card; tapping the card opens tour detail.
-- Tap any tour → tour detail screen.
+The Home screen is **map-dominant.** Inspired by the Airbnb map view:
+the map is the primary discovery surface, with curated horizontal-
+scroll rails below it. Pan the map and the rails re-curate to the
+area in view.
+
+- Open app → map centered on the user's last-known location (or a
+  sensible default if location is unknown). Tour-stop pins visible.
+- Below the map: horizontal-scrolling rails of curated tours. Rail
+  families:
+  - **Location-anchored** — "Near you," and when the map pans, "In
+    [city / neighborhood currently in view]."
+  - **Personalized** — "Because you searched [X]," "Continue
+    listening" (from local recently-played history), "Recently
+    viewed."
+  - **Interest / category** — "History," "Architecture," "Art,"
+    etc., based on each tour's `primaryCategory`.
+- Tap a pin → tour preview card on the map. Tap the card → tour
+  detail.
+- Tap a rail item → tour detail.
+
+The map is the user's main way to navigate; the rails are how Atlas
+surfaces editorial curation, personalization, and category-based
+discovery without forcing the user to think in lists.
+
+(Whether the map lives on the Home tab or some other tab — and what
+the second tab becomes — is **TBD** per owner. The 5-tab structure
+from M1 stays in place; tab *contents* may shuffle when this lands.)
 
 ### Flow 2: Listen
 
@@ -119,8 +140,34 @@ not because you pressed play in a feed.** That's the product.
 - `centroidLatitude` / `centroidLongitude`: Double (for "near me" sort)
 - `city`: String? (informational only, free-text; tours aren't
   required to belong to a city)
-- `tags`: [String]
+- `primaryCategory`: `TourCategory` (see enum below — drives the
+  interest-based home rails)
+- `tags`: [String] (secondary, free-text; used for finer filtering
+  and search, *not* for rail surfacing)
 - `priceUSD`: Decimal (V1: always 0; reserved for paid tours later)
+
+### TourCategory
+
+A closed set of categories makers pick from when publishing a tour.
+Closed (rather than free-text) so the home screen's category rails
+are reliable — "History" is always exactly one thing, not also
+"history" and "historical" and "Historic." Starter list (editable
+by owner before launch):
+
+- `.history`
+- `.architecture`
+- `.visualArt`
+- `.musicAndPerformance`
+- `.literature`
+- `.foodAndDrink`
+- `.natureAndParks`
+- `.hiddenGems`
+- `.culturalHeritage`
+- `.sacredSites`
+
+If a tour spans multiple categories, the maker picks the
+*primary* one (the one most representative). Secondary themes live in
+the free-text `tags` field.
 
 ### Stop
 
@@ -152,6 +199,18 @@ not because you pressed play in a feed.** That's the product.
 - `listenedSeconds`: Int (progress through the tour)
 - `completedAt`: Date?
 
+### RecentSearch (local, on-device for V1)
+
+Powers the "Because you searched [X]" home rail. Stored locally,
+never synced. Capped at a small fixed number of entries (e.g., 20);
+oldest entries fall off as new ones are added.
+
+- `query`: String
+- `searchedAt`: Date
+- `resultedInTourOpen`: Bool (was a tour opened from this search?
+  used to prioritize "successful" searches when picking what to
+  surface in the rail)
+
 ---
 
 ## Seed content (V1)
@@ -180,9 +239,19 @@ hand-off shape.
 
 ### Key screens
 
-1. **Home** — "Tours near you" feed (or global browse fallback).
-2. **Explore** (Map) — pins for tour stops; tap a pin → tour preview
-   → tour detail.
+1. **Home** — map-dominant. Search bar pinned to the top above the
+   map. Map fills the upper portion of the screen with tour-stop
+   pins. Curated horizontal rails fill the lower portion: location-
+   anchored ("Near you," "In [city in view]"), personalized
+   ("Continue listening," "Recently viewed," "Because you searched
+   [X]"), and interest-based (one rail per `TourCategory` —
+   "History," "Architecture," etc.). Panning the map re-curates the
+   location-anchored rails to the new area. Tapping a pin reveals
+   a preview card on the map; tapping the card opens tour detail.
+2. **Search results** — opens when the user taps the home search
+   bar. Minimal: matches on title, maker name, and category. Tapping
+   a result opens tour detail; the query is appended to local
+   `RecentSearch` history.
 3. **Library** — Saved / Downloaded / Recently played sections.
 4. **Tour detail** — hero image, title, maker (linked to maker page),
    length + walking distance, intro audio, stops list, Start button,
@@ -197,15 +266,18 @@ hand-off shape.
 
 ### Tab bar (5 tabs)
 
-The 5-tab skeleton from M1 survives the pivot. Contents:
+The 5-tab skeleton from M1 survives the pivot. Tab *content* is
+**partially TBD** because the map-dominant home pattern made the
+separate Explore tab redundant. Two tabs (Home + Me) are firm; the
+others are deferred:
 
-| Tab | Content |
-|---|---|
-| Home | Tours near you |
-| Explore | Map of tour stops |
-| Library | Saved / Downloaded / Recently played |
-| [TBD] | Placeholder — owner decision |
-| Me | Settings |
+| Tab | Content | Status |
+|---|---|---|
+| Home | Map + curated rails (see "Key screens" #1) | Firm |
+| [TBD] | Possibly a list view, search, or repurposed | Owner decision |
+| Library | Saved / Downloaded / Recently played | Firm |
+| [TBD] | Messages-style placeholder | Owner decision |
+| Me | Settings | Firm |
 
 ---
 
@@ -296,7 +368,9 @@ roadmap milestones spell out which.
   arrivals are allowed (they're how the geofence trigger surfaces when
   the app is backgrounded).
 - **No onboarding tutorial.** The app should be self-evident.
-- **No in-app search.** The V1 catalog is small enough to browse.
+- **No advanced search.** V1 has a minimal search bar (title /
+  maker / category — see "Key screens" below), but no filters,
+  facets, sort options, fuzzy matching, or saved-search features.
 - **No analytics SDK** beyond Apple's built-in App Store Connect
   metrics.
 
@@ -306,23 +380,29 @@ Do not introduce any of the above without a spec update.
 
 ## Success criteria for V1
 
-1. App launches → "Tours near you" feed (or a graceful fallback when
-   no tours are nearby or location is denied).
-2. User can tap a tour → tour detail with maker, length, stops, intro
-   audio, Start button.
-3. Tap Start → audio plays. Lock-screen and Control Center controls
+1. App launches → map-dominant home with tour-stop pins, search bar
+   pinned at the top, and curated rails below the map. Panning the map
+   re-curates the location-anchored rails. Map degrades gracefully when
+   location is denied (defaults to a sensible view, no crash).
+2. Search bar opens search results; results match on title, maker
+   name, and category. Tapping a result opens tour detail; the query
+   is saved to local `RecentSearch` history and surfaces in the
+   "Because you searched [X]" rail next time.
+3. User can tap a tour (from a pin, a rail card, or a search result)
+   → tour detail with maker, length, stops, intro audio, Start button.
+4. Tap Start → audio plays. Lock-screen and Control Center controls
    work. Background play works (phone locked, audio continues).
-4. For a multi-stop geofenced tour: arriving at a stop's geofence
+5. For a multi-stop geofenced tour: arriving at a stop's geofence
    triggers the next clip while the app is foregrounded or
    backgrounded.
-5. For a multi-stop manual tour: tapping the next stop in the player
+6. For a multi-stop manual tour: tapping the next stop in the player
    plays its clip.
-6. User can download a tour for offline playback. Airplane mode →
+7. User can download a tour for offline playback. Airplane mode →
    downloaded tour still plays end to end.
-7. User can save tours; saves persist across relaunches.
-8. 5–15 actual recorded audio tours / pieces are loaded into the app.
-9. App works without location permission (just no "near me" sorting
-   and no geofenced playback).
+8. User can save tours; saves persist across relaunches.
+9. 5–15 actual recorded audio tours / pieces are loaded into the app.
+10. App works without location permission (just map defaults to a
+    sensible view and geofenced playback is unavailable).
 
 ---
 

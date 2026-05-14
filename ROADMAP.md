@@ -90,7 +90,7 @@ audio-tour pivot. Brief status:
 
 ---
 
-### M-data-model. New data model — Tour, Stop, Maker, LibraryEntry
+### M-data-model. New data model — Tour, Stop, Maker, LibraryEntry, TourCategory, RecentSearch
 
 **What:** Add the new Swift model types described in
 `atlas_claude_code_prompt.md` § Data Model. Add a one- or two-tour
@@ -104,6 +104,11 @@ data model doesn't fit the audio-tour product at all.
 **Files touched:**
 - `Models/Tour.swift`, `Models/Stop.swift`, `Models/Maker.swift`,
   `Models/LibraryEntry.swift` (new)
+- `Models/TourCategory.swift` (new — closed enum of categories that
+  drive the home screen's interest-based rails; spec § TourCategory)
+- `Models/RecentSearch.swift` (new — local-only record of a search
+  query, used by the "Because you searched [X]" rail; spec §
+  RecentSearch)
 - `Resources/Tours.json` (new — shape-test content only; real content
   arrives in M-launch-content)
 - `Data/DataService.swift` (reshape)
@@ -191,31 +196,94 @@ advances correctly.
 
 ---
 
-### M-home. "Tours near you" feed + location fallback
+### M-home. Map-dominant home screen with curated rails
 
-**What:** Replace `DiscoverView` with the new home tab. Sorts tours by
-distance from the user; falls back to a global browse when the user is
-not near any tours, denied location, or has location services off.
+**What:** Build the new home screen, modeled on the Airbnb landing
+page pattern. See `atlas_claude_code_prompt.md` § Key screens #1 for
+the design contract. Major pieces:
+
+1. **Search bar pinned to the top** above the map (taps to open the
+   M-search results screen).
+2. **Map** filling the upper portion of the screen, with tour-stop
+   pins. Centered on the user's location, or a sensible default if
+   denied / unavailable. Panning the map updates the location-anchored
+   rails below.
+3. **Curated horizontal-scroll rails** filling the lower portion.
+   Three rail families:
+   - **Location-anchored:** "Near you" (uses `LocationManager`),
+     and "In [city/area in view]" that recomputes when the map pans.
+   - **Personalized:** "Continue listening" (`LibraryEntry.listenedSeconds > 0
+     && completedAt == nil`), "Recently viewed" (small local cache),
+     "Because you searched [X]" (from `RecentSearch`).
+   - **Interest-based:** one rail per `TourCategory` — "History,"
+     "Architecture," "Art," etc. Hide rails with zero matching tours.
+
 Also: tweak the location-permission copy in build settings to match
 the audio-tour framing.
 
 **Files touched:**
-- `Features/Home/HomeView.swift` (new; or rename + rewrite
-  `DiscoverView`)
+- `Features/Home/HomeView.swift` (new)
+- `Features/Home/HomeMapSection.swift` (new — map at top, with pan
+  detection that updates rail state)
+- `Features/Home/RailCarousel.swift` (new — reusable horizontal-
+  scroll rail component used by every rail family)
+- `Features/Home/HomeRailsViewModel.swift` (new — computes which
+  rails to surface, sorts tours within each rail)
 - `Features/Discover/` (delete after move)
 - `ContentView.swift` (point Home tab at the new view)
 - `project.pbxproj` (update `NSLocationWhenInUseUsageDescription` copy)
 
-**How we know it worked:** Set simulated location to NYC → home shows
-nearby tours sorted by distance. Set simulated location to nowhere →
-home shows "no tours nearby, browse all" fallback. Deny location →
-same fallback, no crash.
+**How we know it worked:** Set simulated location to NYC → map opens
+on NYC with pins → "Near you" rail shows NYC tours → category rails
+show interest-organized tours. Pan map to Lisbon → location-anchored
+rails recompute. Deny location → map opens on a sensible default
+view, location-anchored rails fall back to "Browse all" or hide.
 
 ---
 
-### M-map. Map tab — tour stops
+### M-search. Search bar + results screen
 
-**What:** Reshape the existing `MapView` so pins represent **tour
+**What:** Minimal V1 search that powers the home screen's search bar
+and the "Because you searched [X]" rail.
+
+- Search bar in the home header opens a full-screen search results
+  view.
+- Matches on `Tour.title`, `Maker.displayName`, and
+  `Tour.primaryCategory` (display name of the category).
+- No filters, facets, fuzzy matching, sorting options, or saved
+  searches — explicitly deferred per the spec's out-of-scope list.
+- Successful queries (i.e., the user opens a tour from the results)
+  are appended to local `RecentSearch` history. Cap stored at 20;
+  oldest fall off.
+
+**Files touched:**
+- `Features/Search/SearchView.swift` (new — results screen)
+- `Features/Search/SearchBar.swift` (new — the pinned bar component
+  used in `HomeView`)
+- `Data/RecentSearchStore.swift` (new — local persistence for
+  `RecentSearch` records)
+
+**How we know it worked:** Tap search bar → results screen opens.
+Type "history" → tours with `primaryCategory == .history` appear.
+Type a maker name → that maker's tours appear. Tap a result → tour
+detail opens → return to home → "Because you searched [X]" rail
+now shows the query.
+
+---
+
+### M-map. Standalone map screen (if separate tab survives)
+
+**Status:** TBD. With the map already living at the top of the
+Home screen (M-home), a *separate* map tab may be redundant. Owner
+decision at the start of this milestone:
+
+- **Cut it** — Home's embedded map is sufficient; reassign the
+  former Explore tab to something else.
+- **Keep it as a full-screen map** — Home's map is half-screen
+  with rails below; a dedicated full-screen map tab lets users
+  spatially explore without the rails competing for space.
+
+If kept: reshape the existing `MapView` so pins represent **tour
 stops** rather than editorial places. Tapping a pin shows a tour
 preview card; tapping the card opens `TourDetailView`.
 
@@ -343,17 +411,21 @@ Resources. Pick once and stay there for V1.
 **What:** End-to-end walkthrough of the running app with real content
 loaded. Functional checklist:
 
-1. App launches → home feed shows tours sorted by distance (or
-   graceful fallback).
-2. Tap a tour → tour detail → tap Start → audio plays.
-3. Lock the phone → audio continues; lock-screen controls work.
-4. Multi-stop geofenced tour → simulated walking along stops → next
+1. App launches → map-dominant home with pins, search bar, and
+   curated rails below the map (or graceful fallback if no location).
+2. Pan the map → location-anchored rails recompute for the new area.
+3. Tap the search bar → results screen works (title / maker /
+   category match). Open a tour from search → return to home →
+   "Because you searched [X]" rail now reflects the query.
+4. Tap a tour (pin, rail, or search) → tour detail → tap Start →
+   audio plays.
+5. Lock the phone → audio continues; lock-screen controls work.
+6. Multi-stop geofenced tour → simulated walking along stops → next
    stop's audio triggers on arrival.
-5. Multi-stop manual tour → tap next stop in player → its audio plays.
-6. Download a tour → airplane mode → tour plays end to end.
-7. Save a tour → force-quit + relaunch → still saved.
-8. Maker page → tour list correct → tap tour → tour detail opens.
-9. Map tab → pins show → tap → tour detail opens.
+7. Multi-stop manual tour → tap next stop in player → its audio plays.
+8. Download a tour → airplane mode → tour plays end to end.
+9. Save a tour → force-quit + relaunch → still saved.
+10. Maker page → tour list correct → tap tour → tour detail opens.
 
 **Files touched:** none expected. Bugs become small targeted fixes.
 
