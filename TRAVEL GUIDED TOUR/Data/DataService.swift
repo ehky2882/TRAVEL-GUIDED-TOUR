@@ -4,68 +4,50 @@ import CoreLocation
 
 @Observable
 final class DataService {
-    private(set) var cities: [City] = []
-    private(set) var places: [Place] = []
+    private(set) var tours: [Tour] = []
+    private(set) var makers: [Maker] = []
 
     init() {
-        loadSeedData()
+        loadTours()
     }
 
-    private func loadSeedData() {
-        guard let url = Bundle.main.url(forResource: "SeedData", withExtension: "json"),
+    private func loadTours() {
+        guard let url = Bundle.main.url(forResource: "Tours", withExtension: "json"),
               let data = try? Data(contentsOf: url) else {
             return
         }
         let decoder = JSONDecoder()
-        guard let seed = try? decoder.decode(SeedData.self, from: data) else {
+        guard let bundle = try? decoder.decode(ToursData.self, from: data) else {
             return
         }
-        cities = seed.cities
-        places = seed.places
+        tours = bundle.tours
+        makers = bundle.makers
     }
 
-    func places(for city: City) -> [Place] {
-        places.filter { $0.cityId == city.id }
+    func tour(by id: UUID) -> Tour? {
+        tours.first { $0.id == id }
     }
 
-    func places(for city: City, category: PlaceCategory) -> [Place] {
-        places.filter { $0.cityId == city.id && $0.category == category }
+    func maker(by id: UUID) -> Maker? {
+        makers.first { $0.id == id }
     }
 
-    func featuredPlaces() -> [Place] {
-        places.filter { $0.isFeatured }
+    func maker(for tour: Tour) -> Maker? {
+        maker(by: tour.makerId)
     }
 
-    func place(by id: UUID) -> Place? {
-        places.first { $0.id == id }
+    func tours(by maker: Maker) -> [Tour] {
+        tours.filter { $0.makerId == maker.id }
     }
 
-    func city(by id: UUID) -> City? {
-        cities.first { $0.id == id }
+    func tours(in category: TourCategory) -> [Tour] {
+        tours.filter { $0.primaryCategory == category }
     }
 
-    func city(for place: Place) -> City? {
-        cities.first { $0.id == place.cityId }
-    }
-
-    func nearbyPlaces(to place: Place, limit: Int = 3) -> [Place] {
-        let placeLocation = CLLocation(latitude: place.latitude, longitude: place.longitude)
-        return places
-            .filter { $0.id != place.id && $0.cityId == place.cityId }
-            .sorted { a, b in
-                let distA = CLLocation(latitude: a.latitude, longitude: a.longitude).distance(from: placeLocation)
-                let distB = CLLocation(latitude: b.latitude, longitude: b.longitude).distance(from: placeLocation)
-                return distA < distB
-            }
+    func toursNearby(_ location: CLLocation, limit: Int = 10) -> [Tour] {
+        tours
+            .sorted { $0.distance(from: location) < $1.distance(from: location) }
             .prefix(limit)
             .map { $0 }
-    }
-
-    func nearestCity(to location: CLLocation) -> City? {
-        cities.min { a, b in
-            let distA = CLLocation(latitude: a.latitude, longitude: a.longitude).distance(from: location)
-            let distB = CLLocation(latitude: b.latitude, longitude: b.longitude).distance(from: location)
-            return distA < distB
-        }
     }
 }

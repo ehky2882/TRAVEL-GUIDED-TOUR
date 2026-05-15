@@ -3,6 +3,7 @@ import CoreLocation
 
 struct SettingsView: View {
     @Environment(LocationManager.self) private var locationManager
+    @Environment(DataService.self) private var dataService
 
     var body: some View {
         NavigationStack {
@@ -12,7 +13,7 @@ struct SettingsView: View {
                         Text("Atlas")
                             .font(AtlasTypography.standard)
                             .foregroundStyle(.black)
-                        Text("Curated urban art, culture & design")
+                        Text("Audio tours, anchored to places.")
                             .font(AtlasTypography.standard)
                             .foregroundStyle(.black)
                         Text("Version 1.0")
@@ -22,6 +23,22 @@ struct SettingsView: View {
                     .frame(maxWidth: .infinity)
                     .listRowBackground(Color.clear)
                     .padding(.vertical, AtlasSpacing.lg)
+                }
+
+                Section {
+                    HStack {
+                        Label("Sign in", systemImage: "person.crop.circle")
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
+                        Spacer()
+                        Text("Coming soon")
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                    }
+                } header: {
+                    Text("Account")
+                        .font(AtlasTypography.standard)
+                        .foregroundStyle(.black)
                 }
 
                 Section {
@@ -66,26 +83,23 @@ struct SettingsView: View {
 
                 Section {
                     HStack {
-                        Label("Cities", systemImage: "map")
+                        Label("Tours", systemImage: "headphones")
                             .font(AtlasTypography.standard)
                             .foregroundStyle(.black)
                         Spacer()
-                        Text("3")
+                        Text("\(dataService.tours.count)")
                             .font(AtlasTypography.standard)
                             .foregroundStyle(.black)
                     }
                     HStack {
-                        Label("Curated Places", systemImage: "mappin.and.ellipse")
+                        Label("Makers", systemImage: "person.2")
                             .font(AtlasTypography.standard)
                             .foregroundStyle(.black)
                         Spacer()
-                        Text("45")
+                        Text("\(dataService.makers.count)")
                             .font(AtlasTypography.standard)
                             .foregroundStyle(.black)
                     }
-                    Label("No account required", systemImage: "person.slash")
-                        .font(AtlasTypography.standard)
-                        .foregroundStyle(.black)
                     Label("All data stored on device", systemImage: "iphone")
                         .font(AtlasTypography.standard)
                         .foregroundStyle(.black)
@@ -93,21 +107,6 @@ struct SettingsView: View {
                     Text("About")
                         .font(AtlasTypography.standard)
                         .foregroundStyle(.black)
-                }
-
-                Section {
-                    VStack(spacing: AtlasSpacing.xs) {
-                        Text("If this app were a store, it would be")
-                            .font(AtlasTypography.standard)
-                            .foregroundStyle(.black)
-                        Text("a gallery bookshop, not a gift shop.")
-                            .font(AtlasTypography.standard)
-                            .foregroundStyle(.black)
-                            .italic()
-                    }
-                    .frame(maxWidth: .infinity)
-                    .listRowBackground(Color.clear)
-                    .padding(.vertical, AtlasSpacing.sm)
                 }
             }
             .navigationTitle("Settings")

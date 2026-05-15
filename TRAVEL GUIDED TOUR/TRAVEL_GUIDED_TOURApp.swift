@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct TRAVEL_GUIDED_TOURApp: App {
     @State private var dataService = DataService()
-    @State private var collectionStore = CollectionStore()
+    @State private var libraryStore = LibraryStore()
     @State private var locationManager = LocationManager()
     @State private var isLoading = true
 
@@ -28,7 +28,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
             } else {
                 ContentView()
                     .environment(dataService)
-                    .environment(collectionStore)
+                    .environment(libraryStore)
                     .environment(locationManager)
             }
         }
