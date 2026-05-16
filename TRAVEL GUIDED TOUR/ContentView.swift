@@ -15,9 +15,9 @@ struct ContentView: View {
                     Label("Explore", systemImage: "map")
                 }
 
-            CollectionsView()
+            LibraryView()
                 .tabItem {
-                    Label("Favorites", systemImage: "bookmark")
+                    Label("Library", systemImage: "bookmark")
                 }
 
             MessagesPlaceholderView()
