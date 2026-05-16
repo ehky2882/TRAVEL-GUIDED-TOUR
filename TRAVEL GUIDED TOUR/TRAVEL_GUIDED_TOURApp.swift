@@ -13,6 +13,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
     @State private var libraryStore = LibraryStore()
     @State private var locationManager = LocationManager()
     @State private var audioPlayer = AudioPlayerService()
+    @State private var recentlyViewed = RecentlyViewedStore()
     @State private var isLoading = true
 
     var body: some Scene {
@@ -32,6 +33,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(libraryStore)
                     .environment(locationManager)
                     .environment(audioPlayer)
+                    .environment(recentlyViewed)
             }
         }
     }
