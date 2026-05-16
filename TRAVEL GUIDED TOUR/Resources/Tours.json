@@ -25,7 +25,7 @@
           "caption": "Stand at the corner of East 91st Street and Fifth Avenue.",
           "latitude": 40.7843,
           "longitude": -73.9572,
-          "audioURL": "https://atlas-tours.example/audio/cooper-hewitt-1.m4a",
+          "audioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
           "audioDurationSeconds": 130,
           "triggerMode": "manual",
           "triggerRadiusMeters": 30,
@@ -95,7 +95,7 @@
           "transcriptText": null
         }
       ],
-      "introAudioURL": "https://atlas-tours.example/audio/hidden-brooklyn-intro.m4a",
+      "introAudioURL": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
       "totalDurationSeconds": 760,
       "walkingDistanceMeters": 3400,
       "centroidLatitude": 40.6923,
