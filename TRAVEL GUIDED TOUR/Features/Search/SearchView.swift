@@ -63,7 +63,7 @@ struct SearchView: View {
             TextField("Search tours, makers, categories", text: $query)
                 .font(AtlasTypography.body)
                 .foregroundStyle(AtlasColors.primaryText)
-                .textInputAutocapitalization(.never)
+                .atlasNoAutocapitalization()
                 .autocorrectionDisabled()
                 .focused($queryFieldFocused)
                 .submitLabel(.search)
