@@ -28,6 +28,9 @@ struct DiscoverView: View {
                         .foregroundStyle(AtlasColors.tertiaryText)
                         .padding(.top, AtlasSpacing.md)
 
+                    tourListSection
+                        .padding(.top, AtlasSpacing.lg)
+
                     audioFoundationTestSection
                         .padding(.top, AtlasSpacing.xl)
                 }
@@ -37,6 +40,47 @@ struct DiscoverView: View {
             .background(AtlasColors.background)
             .navigationTitle("Home")
             .inlineNavigationBarTitle()
+        }
+    }
+
+    // Temporary M-tour-detail test entry: a tappable list of tours that
+    // pushes TourDetailView. Goes away in M-home when the map+rails
+    // home screen lands and provides the real navigation entry points.
+    private var tourListSection: some View {
+        VStack(spacing: AtlasSpacing.sm) {
+            Divider().padding(.horizontal, AtlasSpacing.xl)
+
+            Text("M-tour-detail test")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.tertiaryText)
+                .padding(.top, AtlasSpacing.md)
+
+            VStack(spacing: AtlasSpacing.sm) {
+                ForEach(dataService.tours) { tour in
+                    NavigationLink {
+                        TourDetailView(tour: tour)
+                    } label: {
+                        HStack {
+                            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                                Text(tour.title)
+                                    .font(AtlasTypography.body)
+                                    .foregroundStyle(AtlasColors.primaryText)
+                                Text(tour.shortDescription)
+                                    .font(AtlasTypography.caption)
+                                    .foregroundStyle(AtlasColors.secondaryText)
+                                    .multilineTextAlignment(.leading)
+                            }
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.tertiaryText)
+                        }
+                        .padding(.horizontal, AtlasSpacing.lg)
+                        .padding(.vertical, AtlasSpacing.sm)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
         }
     }
 
