@@ -23,6 +23,23 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
         #endif
     }
 
+    /// Upgrade path used by M-geofencing — Apple only shows the
+    /// Always dialog after the app has already been granted
+    /// When-In-Use, so this is gated on `authorizationStatus`.
+    /// Safe to call repeatedly: iOS shows the prompt at most once
+    /// per launch and silently no-ops afterward.
+    func requestAlwaysIfPossible() {
+        #if os(iOS) || os(visionOS)
+        if authorizationStatus == .authorizedWhenInUse {
+            manager.requestAlwaysAuthorization()
+        }
+        #endif
+    }
+
+    var hasAlwaysAuthorization: Bool {
+        authorizationStatus == .authorizedAlways
+    }
+
     func startUpdating() {
         manager.startUpdatingLocation()
     }

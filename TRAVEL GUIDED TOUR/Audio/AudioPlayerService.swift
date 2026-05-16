@@ -45,6 +45,15 @@ final class AudioPlayerService {
     /// `.waitingToPlayAtSpecifiedRate` indefinitely on a stalled host.
     private let loadingTimeoutSeconds: TimeInterval = 10
     private var loadingTimeoutTask: Task<Void, Never>?
+    /// True between `play(url:...)` and the first time AVPlayer reports
+    /// it's actually `.playing`. While this is true the periodic time
+    /// observer is suppressed — AVQueuePlayer can briefly report the
+    /// *previous* item's currentTime/duration between `removeAllItems()`
+    /// and the new item becoming current, which would clobber the 0/0
+    /// reset done in `play(url:title:artist:)`. After the first
+    /// `.playing` transition we trust the observer, so subsequent
+    /// scrubs and pause/resume don't fight it.
+    private var isAwaitingFirstPlayTransition = false
 
     init() {
         configureAudioSession()
@@ -79,6 +88,7 @@ final class AudioPlayerService {
         duration = 0
         lastError = nil
         state = .loading
+        isAwaitingFirstPlayTransition = true
 
         let item = AVPlayerItem(url: url)
 
@@ -151,11 +161,17 @@ final class AudioPlayerService {
         currentArtist = nil
         lastError = nil
         state = .idle
+        isAwaitingFirstPlayTransition = false
         updateNowPlayingInfo()
     }
 
     func seek(to time: TimeInterval) {
         let target = CMTime(seconds: time, preferredTimescale: 600)
+        // Update the published currentTime immediately so the UI
+        // snaps to the new position the moment the user releases the
+        // scrub thumb. The periodic time observer takes over from
+        // there as AVPlayer resumes reporting time.
+        currentTime = time
         player.seek(to: target)
     }
 
@@ -225,6 +241,7 @@ final class AudioPlayerService {
                 switch player.timeControlStatus {
                 case .playing:
                     self.state = .playing
+                    self.isAwaitingFirstPlayTransition = false
                     self.cancelLoadingTimeout()
                 case .paused:
                     // AVPlayer briefly reports .paused during load and after end.
@@ -287,15 +304,14 @@ final class AudioPlayerService {
         let interval = CMTime(seconds: 0.5, preferredTimescale: 600)
         timeObserverToken = player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { [weak self] time in
             guard let self else { return }
-            // Ignore observer reports during a load. AVQueuePlayer can
-            // briefly report the *previous* item's currentTime + duration
-            // between `removeAllItems()` and the new item becoming
-            // current — that would clobber the 0/0 reset done in
-            // `play(url:title:artist:)` and make the scrub bar jump
-            // back to the old stop's position. Once the new item is
-            // ready, `timeControlStatus` transitions to `.playing` and
-            // the observer takes over with valid values.
-            if self.state == .loading || self.state == .failed { return }
+            // Ignore observer reports during the *first-load* window
+            // (the gap between `removeAllItems()` and the new item
+            // becoming current) — without this the scrub bar would
+            // briefly show the previous stop's position. Once AVPlayer
+            // reports `.playing` for the first time we trust the
+            // observer for everything after (scrubs, pause/resume,
+            // etc.). Also skip when the item has failed outright.
+            if self.isAwaitingFirstPlayTransition || self.state == .failed { return }
             self.currentTime = time.seconds.isFinite ? time.seconds : 0
             if let item = self.player.currentItem {
                 let itemDuration = item.duration
