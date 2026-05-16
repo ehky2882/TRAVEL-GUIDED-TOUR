@@ -20,6 +20,7 @@ struct PlayerView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(DataService.self) private var dataService
     @Environment(AudioPlayerService.self) private var audioPlayer
+    @Environment(LibraryStore.self) private var libraryStore
 
     /// -1 means the tour's intro audio is playing (only valid when
     /// the tour has an `introAudioURL`). 0...n indexes `sortedStops`.
@@ -57,10 +58,43 @@ struct PlayerView: View {
         .background(AtlasColors.background)
         .onAppear(perform: startPlaybackIfNeeded)
         .onChange(of: audioPlayer.state, initial: false) { _, newState in
+            // Persist progress to the LibraryStore at meaningful state
+            // transitions. Writing on every periodic-time observation
+            // would be too chatty — pause/end is the natural checkpoint.
+            // V1 simplification: listenedSeconds reflects position within
+            // the *current item* (intro or stop), not aggregated progress
+            // across the whole tour. The "Recently played" rail only
+            // needs `> 0` to surface, so this is functionally enough.
+            // M-launch-content / a polish pass can tighten the math.
+            switch newState {
+            case .paused, .ended:
+                writeProgress()
+            case .playing, .loading, .idle:
+                break
+            }
+
             if newState == .ended {
                 advanceToNextStop()
             }
         }
+        .onDisappear {
+            // Also write on dismiss so closing the sheet captures the
+            // last-known position without waiting for a pause event.
+            writeProgress()
+        }
+    }
+
+    private func writeProgress() {
+        let secs = Int(audioPlayer.currentTime)
+        guard secs > 0 else { return }
+        // We mark completed=false here. A true "tour completed" flag
+        // is more naturally set when we reach the end of the *last*
+        // stop and the audio ends — leave that refinement for later.
+        libraryStore.updateProgress(
+            tour.id,
+            listenedSeconds: secs,
+            completed: false
+        )
     }
 
     // MARK: - Sections
