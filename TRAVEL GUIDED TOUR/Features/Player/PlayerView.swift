@@ -48,6 +48,9 @@ struct PlayerView: View {
 
                     titleSection
                     currentStopSection
+                    if audioPlayer.state == .failed {
+                        failureBanner
+                    }
                     scrubBar
                     transportRow
                     stopsListSection
@@ -69,7 +72,7 @@ struct PlayerView: View {
             switch newState {
             case .paused, .ended:
                 writeProgress()
-            case .playing, .loading, .idle:
+            case .playing, .loading, .idle, .failed:
                 break
             }
 
@@ -147,6 +150,30 @@ struct PlayerView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
+        .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    /// Shown when `audioPlayer.state == .failed`. The transport row's
+    /// play button (a refresh icon in this state) is the retry path.
+    private var failureBanner: some View {
+        HStack(spacing: AtlasSpacing.sm) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(AtlasTypography.body)
+                .foregroundStyle(AtlasColors.primaryText)
+            Text(audioPlayer.lastError?.localizedDescription ?? "Couldn't load audio.")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.primaryText)
+                .multilineTextAlignment(.leading)
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer()
+        }
+        .padding(AtlasSpacing.md)
+        .background(AtlasColors.secondaryBackground)
+        .overlay(
+            RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius)
+                .stroke(AtlasColors.secondaryText.opacity(0.2), lineWidth: 1)
+        )
+        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
@@ -292,11 +319,13 @@ struct PlayerView: View {
     // MARK: - Actions
 
     private func startPlaybackIfNeeded() {
-        // If this tour's audio is already playing/paused, don't restart.
-        // Just sync currentStopIndex to whatever's loaded.
-        if audioPlayer.currentTitle == tour.title && audioPlayer.state != .idle {
-            // Best-effort sync — if we can identify the current source,
-            // align our local index. Falls through to "stay where we are."
+        // If this tour's audio is already playing/paused/loading, don't
+        // restart — just sync currentStopIndex to whatever's loaded.
+        // `.failed` is treated like `.idle` so the user gets a retry
+        // on the same source.
+        if audioPlayer.currentTitle == tour.title
+            && audioPlayer.state != .idle
+            && audioPlayer.state != .failed {
             return
         }
 
@@ -341,9 +370,16 @@ struct PlayerView: View {
             audioPlayer.pause()
         case .paused, .ended:
             audioPlayer.play()
-        case .idle:
-            // No item loaded; treat as Start.
-            startPlaybackIfNeeded()
+        case .idle, .failed:
+            // No item loaded, or previous load failed → retry from the
+            // tour's start (or current stop, if mid-tour).
+            if currentStopIndex == -1 {
+                startPlaybackIfNeeded()
+            } else if sortedStops.indices.contains(currentStopIndex) {
+                playStop(at: currentStopIndex)
+            } else {
+                startPlaybackIfNeeded()
+            }
         case .loading:
             break
         }
@@ -402,6 +438,7 @@ struct PlayerView: View {
         switch audioPlayer.state {
         case .playing: return "pause.circle.fill"
         case .loading: return "hourglass.circle.fill"
+        case .failed: return "arrow.clockwise.circle.fill"
         default: return "play.circle.fill"
         }
     }
