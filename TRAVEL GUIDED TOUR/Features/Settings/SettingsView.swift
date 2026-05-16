@@ -35,6 +35,15 @@ struct SettingsView: View {
                             .font(AtlasTypography.standard)
                             .foregroundStyle(AtlasColors.secondaryText)
                     }
+                    HStack {
+                        Label("Messages", systemImage: "bubble.left.and.bubble.right")
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
+                        Spacer()
+                        Text("Coming soon")
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                    }
                 } header: {
                     Text("Account")
                         .font(AtlasTypography.standard)
