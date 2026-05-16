@@ -18,6 +18,7 @@ final class AudioPlayerService {
     private(set) var duration: TimeInterval = 0
     private(set) var currentTitle: String?
     private(set) var currentArtist: String?
+    private(set) var rate: Float = 1.0
 
     private let player = AVQueuePlayer()
     private var timeObserverToken: Any?
@@ -54,11 +55,35 @@ final class AudioPlayerService {
         player.removeAllItems()
         player.insert(item, after: nil)
         player.play()
+        // Restore the user's chosen rate. AVPlayer.play() resets rate to 1.0,
+        // so we re-apply on the next runloop tick after play() takes effect.
+        if rate != 1.0 {
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                self.player.rate = self.rate
+            }
+        }
         updateNowPlayingInfo()
     }
 
     func play() {
         player.play()
+        // Same rate-restore as play(url:title:artist:) — resume should
+        // honor the user's last speed selection.
+        if rate != 1.0 {
+            DispatchQueue.main.async { [weak self] in
+                guard let self else { return }
+                self.player.rate = self.rate
+            }
+        }
+    }
+
+    func setPlaybackRate(_ newRate: Float) {
+        rate = newRate
+        if state == .playing {
+            player.rate = newRate
+        }
+        updateNowPlayingInfo()
     }
 
     func pause() {
@@ -171,6 +196,15 @@ final class AudioPlayerService {
         let interval = CMTime(seconds: 0.5, preferredTimescale: 600)
         timeObserverToken = player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { [weak self] time in
             guard let self else { return }
+            // Ignore observer reports during a load. AVQueuePlayer can
+            // briefly report the *previous* item's currentTime + duration
+            // between `removeAllItems()` and the new item becoming
+            // current — that would clobber the 0/0 reset done in
+            // `play(url:title:artist:)` and make the scrub bar jump
+            // back to the old stop's position. Once the new item is
+            // ready, `timeControlStatus` transitions to `.playing` and
+            // the observer takes over with valid values.
+            if self.state == .loading { return }
             self.currentTime = time.seconds.isFinite ? time.seconds : 0
             if let item = self.player.currentItem {
                 let itemDuration = item.duration
@@ -202,7 +236,7 @@ final class AudioPlayerService {
         }
         info[MPMediaItemPropertyPlaybackDuration] = duration
         info[MPNowPlayingInfoPropertyElapsedPlaybackTime] = currentTime
-        info[MPNowPlayingInfoPropertyPlaybackRate] = state == .playing ? 1.0 : 0.0
+        info[MPNowPlayingInfoPropertyPlaybackRate] = state == .playing ? Double(rate) : 0.0
         MPNowPlayingInfoCenter.default().nowPlayingInfo = info
     }
 }

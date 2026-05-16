@@ -24,6 +24,8 @@ struct TourDetailView: View {
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(AudioPlayerService.self) private var audioPlayer
 
+    @State private var showingPlayer = false
+
     var body: some View {
         ZStack(alignment: .bottom) {
             ScrollView {
@@ -54,6 +56,9 @@ struct TourDetailView: View {
         }
         .navigationTitle(tour.title)
         .inlineNavigationBarTitle()
+        .sheet(isPresented: $showingPlayer) {
+            PlayerView(tour: tour)
+        }
     }
 
     // MARK: - Sections
@@ -222,29 +227,12 @@ struct TourDetailView: View {
 
     // MARK: - Actions
 
+    /// The primary button always opens the player sheet. The player itself
+    /// owns playback orchestration — starting audio on first appear, and
+    /// keeping it going when the sheet is dismissed. Re-tapping opens the
+    /// sheet back up without restarting audio.
     private func handlePrimaryAction() {
-        if isThisTourPlaying {
-            audioPlayer.pause()
-        } else if isThisTourPaused {
-            audioPlayer.play()
-        } else {
-            startTour()
-        }
-    }
-
-    private func startTour() {
-        guard let urlString = tour.introAudioURL
-                ?? tour.stops.sorted(by: { $0.order < $1.order }).first?.audioURL,
-              let url = URL(string: urlString) else {
-            return
-        }
-
-        let maker = dataService.maker(for: tour)
-        audioPlayer.play(
-            url: url,
-            title: tour.title,
-            artist: maker?.displayName
-        )
+        showingPlayer = true
     }
 
     private func toggleSaved() {
@@ -259,34 +247,25 @@ struct TourDetailView: View {
     //
     // We identify "this tour's audio" by matching the player's current
     // title against the tour title. Sufficient for V1's small seed (and
-    // we control both sides). When M-player ships, the player will
-    // own this state via a real tour-id reference on AudioPlayerService.
+    // we control both sides). M-player owns the actual playback control;
+    // this view only reads the state for label decoration.
 
     private var isThisTourActive: Bool {
         audioPlayer.currentTitle == tour.title
-    }
-
-    private var isThisTourPlaying: Bool {
-        isThisTourActive && audioPlayer.state == .playing
-    }
-
-    private var isThisTourPaused: Bool {
-        isThisTourActive && audioPlayer.state == .paused
-    }
-
-    private var isThisTourLoading: Bool {
-        isThisTourActive && audioPlayer.state == .loading
+            && audioPlayer.state != .idle
     }
 
     private var primaryButtonTitle: String {
-        if isThisTourLoading { return "Loading…" }
-        if isThisTourPlaying { return "Pause" }
-        if isThisTourPaused { return "Resume" }
-        return "Start"
+        isThisTourActive ? "Open player" : "Start"
     }
 
     private var primaryButtonIcon: String {
-        isThisTourPlaying ? "pause.fill" : "play.fill"
+        isThisTourActive ? "waveform" : "play.fill"
+    }
+
+    private var isThisTourLoading: Bool {
+        audioPlayer.currentTitle == tour.title
+            && audioPlayer.state == .loading
     }
 
     // MARK: - Formatters
