@@ -24,7 +24,7 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                SearchBarStub()
+                SearchBar()
                     .padding(.horizontal, AtlasSpacing.lg)
                     .padding(.vertical, AtlasSpacing.sm)
                     .background(AtlasColors.background)
