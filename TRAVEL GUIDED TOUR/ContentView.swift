@@ -1,5 +1,15 @@
 import SwiftUI
 
+/// Root tab bar. Per owner decision (M-map cut), the V1 shell drops
+/// from 5 tabs to 3:
+///   Home    — map-dominant discovery + curated rails
+///   Library — Saved / Downloaded / Recently played
+///   Me      — settings + post-V1 placeholders (Sign in, Messages)
+///
+/// The standalone Map / Explore tab was redundant against Home's
+/// embedded map. The Messages tab survives as a "Coming soon" row
+/// inside Settings so the entry point exists once messaging ships
+/// post-V1.
 struct ContentView: View {
     @Environment(LocationManager.self) private var locationManager
 
@@ -10,19 +20,9 @@ struct ContentView: View {
                     Label("Home", systemImage: "house")
                 }
 
-            MapView()
-                .tabItem {
-                    Label("Explore", systemImage: "map")
-                }
-
             LibraryView()
                 .tabItem {
                     Label("Library", systemImage: "bookmark")
-                }
-
-            MessagesPlaceholderView()
-                .tabItem {
-                    Label("Messages", systemImage: "bubble.left.and.bubble.right")
                 }
 
             SettingsView()
@@ -33,28 +33,6 @@ struct ContentView: View {
         .tint(AtlasColors.accent)
         .onAppear {
             locationManager.requestPermission()
-        }
-    }
-}
-
-private struct MessagesPlaceholderView: View {
-    var body: some View {
-        NavigationStack {
-            VStack(spacing: AtlasSpacing.md) {
-                Image(systemName: "bubble.left.and.bubble.right")
-                    .font(.system(size: 48))
-                    .foregroundStyle(AtlasColors.secondaryText.opacity(0.4))
-                Text("Messages")
-                    .font(AtlasTypography.headline)
-                    .foregroundStyle(AtlasColors.primaryText)
-                Text("Coming soon")
-                    .font(AtlasTypography.standard)
-                    .foregroundStyle(AtlasColors.secondaryText)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(AtlasColors.background)
-            .navigationTitle("Messages")
-            .inlineNavigationBarTitle()
         }
     }
 }
