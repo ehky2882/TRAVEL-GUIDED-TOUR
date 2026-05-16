@@ -14,6 +14,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
     @State private var locationManager = LocationManager()
     @State private var audioPlayer = AudioPlayerService()
     @State private var recentlyViewed = RecentlyViewedStore()
+    @State private var recentSearches = RecentSearchStore()
     @State private var isLoading = true
 
     var body: some Scene {
@@ -34,6 +35,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(locationManager)
                     .environment(audioPlayer)
                     .environment(recentlyViewed)
+                    .environment(recentSearches)
             }
         }
     }
