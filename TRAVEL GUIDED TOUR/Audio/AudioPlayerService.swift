@@ -11,6 +11,11 @@ final class AudioPlayerService {
         case playing
         case paused
         case ended
+        /// Audio failed to load (DNS failure, 4xx/5xx, or our own
+        /// `loadingTimeoutSeconds` watchdog firing because the asset
+        /// took too long). `lastError` carries detail. UI should
+        /// re-enable the play/start button so the user can retry.
+        case failed
     }
 
     private(set) var state: PlaybackState = .idle
@@ -19,11 +24,27 @@ final class AudioPlayerService {
     private(set) var currentTitle: String?
     private(set) var currentArtist: String?
     private(set) var rate: Float = 1.0
+    /// Populated when `state == .failed`; cleared on the next
+    /// successful `play(url:...)`. The watchdog timeout produces a
+    /// generic error; AVPlayer's reported failures preserve
+    /// `AVPlayerItem.error`.
+    private(set) var lastError: Error?
 
     private let player = AVQueuePlayer()
     private var timeObserverToken: Any?
     private var statusObserver: NSKeyValueObservation?
     private var endObserver: NSObjectProtocol?
+    /// KVO on the current `AVPlayerItem`'s `status`. Lets us catch
+    /// `.failed` for the *item* (unreachable host, bad codec, etc.) —
+    /// AVPlayer's `timeControlStatus` doesn't surface that distinctly.
+    /// Recreated every `play(url:...)` for the new item; invalidated
+    /// when superseded or in `deinit`.
+    private var itemStatusObserver: NSKeyValueObservation?
+    /// Watchdog: if `state` is still `.loading` after this many seconds,
+    /// transition to `.failed`. Without this, AVPlayer can sit in
+    /// `.waitingToPlayAtSpecifiedRate` indefinitely on a stalled host.
+    private let loadingTimeoutSeconds: TimeInterval = 10
+    private var loadingTimeoutTask: Task<Void, Never>?
 
     init() {
         configureAudioSession()
@@ -40,18 +61,43 @@ final class AudioPlayerService {
         if let endObserver {
             NotificationCenter.default.removeObserver(endObserver)
         }
+        itemStatusObserver?.invalidate()
+        loadingTimeoutTask?.cancel()
     }
 
     // MARK: - Public API
 
     func play(url: URL, title: String?, artist: String?) {
+        // Tear down anything attached to the previous item.
+        cancelLoadingTimeout()
+        itemStatusObserver?.invalidate()
+        itemStatusObserver = nil
+
         currentTitle = title
         currentArtist = artist
         currentTime = 0
         duration = 0
+        lastError = nil
         state = .loading
 
         let item = AVPlayerItem(url: url)
+
+        // Observe the new item's status so we catch AVPlayer-reported
+        // load failures (unreachable host, bad codec, etc.). The
+        // `.readyToPlay` case is handled implicitly by the player's
+        // `timeControlStatus` transitioning to `.playing`.
+        itemStatusObserver = item.observe(\.status, options: [.new]) { [weak self] observedItem, _ in
+            DispatchQueue.main.async {
+                guard let self else { return }
+                if observedItem.status == .failed {
+                    self.lastError = observedItem.error
+                    self.state = .failed
+                    self.cancelLoadingTimeout()
+                    self.updateNowPlayingInfo()
+                }
+            }
+        }
+
         player.removeAllItems()
         player.insert(item, after: nil)
         player.play()
@@ -63,6 +109,8 @@ final class AudioPlayerService {
                 self.player.rate = self.rate
             }
         }
+
+        startLoadingTimeout()
         updateNowPlayingInfo()
     }
 
@@ -91,12 +139,17 @@ final class AudioPlayerService {
     }
 
     func stop() {
+        cancelLoadingTimeout()
+        itemStatusObserver?.invalidate()
+        itemStatusObserver = nil
+
         player.pause()
         player.removeAllItems()
         currentTime = 0
         duration = 0
         currentTitle = nil
         currentArtist = nil
+        lastError = nil
         state = .idle
         updateNowPlayingInfo()
     }
@@ -172,24 +225,62 @@ final class AudioPlayerService {
                 switch player.timeControlStatus {
                 case .playing:
                     self.state = .playing
+                    self.cancelLoadingTimeout()
                 case .paused:
                     // AVPlayer briefly reports .paused during load and after end.
                     // Preserve .idle (no item), .loading (in-flight play(url:)),
-                    // and .ended (playback finished) through those transient reports.
+                    // .ended (playback finished), and .failed through those
+                    // transient reports.
                     switch self.state {
-                    case .idle, .loading, .ended:
+                    case .idle, .loading, .ended, .failed:
                         break
                     case .playing, .paused:
                         self.state = .paused
+                        self.cancelLoadingTimeout()
                     }
                 case .waitingToPlayAtSpecifiedRate:
-                    self.state = .loading
+                    // Don't override .failed: AVPlayer keeps reporting
+                    // .waitingToPlayAtSpecifiedRate even after the item
+                    // has failed to load. If we blindly set .loading
+                    // here, the UI snaps back to the hourglass moments
+                    // after the item-status KVO transitioned us to
+                    // .failed.
+                    if self.state != .failed {
+                        self.state = .loading
+                    }
                 @unknown default:
                     break
                 }
                 self.updateNowPlayingInfo()
             }
         }
+    }
+
+    private func startLoadingTimeout() {
+        loadingTimeoutTask = Task { [weak self] in
+            guard let self else { return }
+            try? await Task.sleep(for: .seconds(self.loadingTimeoutSeconds))
+            guard !Task.isCancelled else { return }
+            await MainActor.run {
+                // Only fire if we're still actually stuck loading.
+                guard self.state == .loading else { return }
+                self.lastError = NSError(
+                    domain: "AudioPlayerService",
+                    code: -1,
+                    userInfo: [
+                        NSLocalizedDescriptionKey:
+                            "Audio took longer than \(Int(self.loadingTimeoutSeconds)) seconds to load."
+                    ]
+                )
+                self.state = .failed
+                self.updateNowPlayingInfo()
+            }
+        }
+    }
+
+    private func cancelLoadingTimeout() {
+        loadingTimeoutTask?.cancel()
+        loadingTimeoutTask = nil
     }
 
     private func observePeriodicTime() {
@@ -204,7 +295,7 @@ final class AudioPlayerService {
             // back to the old stop's position. Once the new item is
             // ready, `timeControlStatus` transitions to `.playing` and
             // the observer takes over with valid values.
-            if self.state == .loading { return }
+            if self.state == .loading || self.state == .failed { return }
             self.currentTime = time.seconds.isFinite ? time.seconds : 0
             if let item = self.player.currentItem {
                 let itemDuration = item.duration

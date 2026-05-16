@@ -257,6 +257,7 @@ struct TourDetailView: View {
     private var isThisTourActive: Bool {
         audioPlayer.currentTitle == tour.title
             && audioPlayer.state != .idle
+            && audioPlayer.state != .failed
     }
 
     private var primaryButtonTitle: String {
