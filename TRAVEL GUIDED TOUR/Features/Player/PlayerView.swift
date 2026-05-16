@@ -21,6 +21,8 @@ struct PlayerView: View {
     @Environment(DataService.self) private var dataService
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(LibraryStore.self) private var libraryStore
+    @Environment(LocationManager.self) private var locationManager
+    @Environment(ProximityMonitor.self) private var proximityMonitor
 
     /// -1 means the tour's intro audio is playing (only valid when
     /// the tour has an `introAudioURL`). 0...n indexes `sortedStops`.
@@ -59,7 +61,10 @@ struct PlayerView: View {
             }
         }
         .background(AtlasColors.background)
-        .onAppear(perform: startPlaybackIfNeeded)
+        .onAppear {
+            startPlaybackIfNeeded()
+            startGeofenceMonitoringIfNeeded()
+        }
         .onChange(of: audioPlayer.state, initial: false) { _, newState in
             // Persist progress to the LibraryStore at meaningful state
             // transitions. Writing on every periodic-time observation
@@ -77,14 +82,51 @@ struct PlayerView: View {
             }
 
             if newState == .ended {
-                advanceToNextStop()
+                handlePlaybackEnded()
             }
+        }
+        .onChange(of: proximityMonitor.lastEnteredStopId, initial: false) { _, newStopId in
+            // Geofence fired for one of this tour's stops. Proximity
+            // monitor has already kicked off audio for that stop; we
+            // just sync our local currentStopIndex so transport
+            // controls (prev/next, list highlight) match the new
+            // playing source.
+            syncStopIndex(from: newStopId)
         }
         .onDisappear {
             // Also write on dismiss so closing the sheet captures the
             // last-known position without waiting for a pause event.
             writeProgress()
+            // NB: don't stop geofence monitoring here — audio may
+            // continue while the user pockets their phone. Monitoring
+            // is torn down only on a new tour's start or explicit stop.
         }
+    }
+
+    // MARK: - Geofencing
+
+    private var hasGeofencedStops: Bool {
+        tour.stops.contains { $0.triggerMode == .geofenced }
+    }
+
+    private func startGeofenceMonitoringIfNeeded() {
+        guard hasGeofencedStops else { return }
+        // Upgrade-prompt for Always location — only shown if user
+        // previously granted When-In-Use. Apple gates the dialog.
+        locationManager.requestAlwaysIfPossible()
+        proximityMonitor.startMonitoring(
+            tour: tour,
+            maker: dataService.maker(for: tour),
+            audioPlayer: audioPlayer
+        )
+    }
+
+    private func syncStopIndex(from stopId: UUID?) {
+        guard let stopId,
+              let index = sortedStops.firstIndex(where: { $0.id == stopId }) else {
+            return
+        }
+        currentStopIndex = index
     }
 
     private func writeProgress() {
@@ -403,14 +445,23 @@ struct PlayerView: View {
         }
     }
 
-    private func advanceToNextStop() {
-        // Same as nextStop() but only fires from auto-advance; if we're
-        // at the last stop, stop here (don't loop).
+    private func handlePlaybackEnded() {
+        // Auto-advance from intro -> stop 0 is always desirable: the
+        // user tapped Start so they've committed to begin the tour.
         if currentStopIndex == -1 {
             if !sortedStops.isEmpty { playStop(at: 0) }
-        } else if currentStopIndex < sortedStops.count - 1 {
-            playStop(at: currentStopIndex + 1)
+            return
         }
+
+        // Beyond intro, the *trigger mode of the next stop* governs
+        // whether we auto-advance. Geofenced stops wait for the user
+        // to walk into them; manual stops wait for a user tap (the
+        // stops-list row or the next-stop transport button). In
+        // either case we don't auto-advance here.
+        //
+        // The transport row's next-stop button stays available so
+        // users on a couch can still progress through a geofenced
+        // tour by tapping next.
     }
 
     private func cycleRate() {
