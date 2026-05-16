@@ -6,22 +6,18 @@ struct HeroImageView: View {
     var cornerRadius: CGFloat = 0
     var category: TourCategory? = nil
 
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(.white)
+    // V1 placeholder: a solid mid-grey block. The intent is to make
+    // image regions read as obvious "image goes here" shapes during
+    // layout work, before real photos arrive in M-launch-content.
+    // The category icon is intentionally omitted — solid blocks make
+    // the layout grid easier to scan. Swap to AsyncImage(url:) once
+    // CDN photos are available.
+    private let placeholderFill = Color(white: 0.78)
 
-            if let category {
-                Image(systemName: category.iconName)
-                    .font(AtlasTypography.standard)
-                    .foregroundStyle(.black)
-            } else {
-                Image(systemName: "photo")
-                    .font(AtlasTypography.standard)
-                    .foregroundStyle(.black)
-            }
-        }
-        .frame(height: height)
-        .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+    var body: some View {
+        Rectangle()
+            .fill(placeholderFill)
+            .frame(height: height)
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
     }
 }

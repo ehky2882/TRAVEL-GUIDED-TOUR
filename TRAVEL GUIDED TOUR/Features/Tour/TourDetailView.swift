@@ -23,6 +23,7 @@ struct TourDetailView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(AudioPlayerService.self) private var audioPlayer
+    @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
 
     @State private var showingPlayer = false
 
@@ -58,6 +59,9 @@ struct TourDetailView: View {
         .inlineNavigationBarTitle()
         .sheet(isPresented: $showingPlayer) {
             PlayerView(tour: tour)
+        }
+        .onAppear {
+            recentlyViewedStore.record(tour.id)
         }
     }
 
