@@ -16,6 +16,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
     @State private var recentlyViewed = RecentlyViewedStore()
     @State private var recentSearches = RecentSearchStore()
     @State private var proximityMonitor = ProximityMonitor()
+    @State private var tourDownloader = TourDownloader()
     @State private var isLoading = true
 
     var body: some Scene {
@@ -38,6 +39,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(recentlyViewed)
                     .environment(recentSearches)
                     .environment(proximityMonitor)
+                    .environment(tourDownloader)
             }
         }
     }

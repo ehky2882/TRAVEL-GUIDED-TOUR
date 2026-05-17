@@ -77,6 +77,14 @@ struct SettingsView: View {
                 }
 
                 Section {
+                    NavigationLink {
+                        ManageDownloadsView()
+                    } label: {
+                        Label("Manage downloads", systemImage: "arrow.down.circle")
+                            .font(AtlasTypography.standard)
+                            .foregroundStyle(.black)
+                    }
+
                     Button {
                         URLCache.shared.removeAllCachedResponses()
                     } label: {
