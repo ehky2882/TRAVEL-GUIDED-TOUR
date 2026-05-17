@@ -23,6 +23,7 @@ struct PlayerView: View {
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(LocationManager.self) private var locationManager
     @Environment(ProximityMonitor.self) private var proximityMonitor
+    @Environment(TourDownloader.self) private var tourDownloader
 
     /// -1 means the tour's intro audio is playing (only valid when
     /// the tour has an `introAudioURL`). 0...n indexes `sortedStops`.
@@ -380,9 +381,13 @@ struct PlayerView: View {
 
     private func playIntro() {
         guard let urlString = tour.introAudioURL,
-              let url = URL(string: urlString) else {
+              let remoteURL = URL(string: urlString) else {
             return
         }
+        // Prefer the on-disk copy if the tour is downloaded. Falls
+        // back to streaming the remote URL otherwise.
+        let url = tourDownloader.localURL(forIntroOf: tour) ?? remoteURL
+
         currentStopIndex = -1
         let maker = dataService.maker(for: tour)
         audioPlayer.play(
@@ -395,7 +400,11 @@ struct PlayerView: View {
     private func playStop(at index: Int) {
         guard sortedStops.indices.contains(index) else { return }
         let stop = sortedStops[index]
-        guard let url = URL(string: stop.audioURL) else { return }
+        guard let remoteURL = URL(string: stop.audioURL) else { return }
+
+        // Prefer the on-disk copy if the tour is downloaded. Falls
+        // back to streaming the remote URL otherwise.
+        let url = tourDownloader.localURL(forStop: stop, in: tour) ?? remoteURL
 
         currentStopIndex = index
         let maker = dataService.maker(for: tour)

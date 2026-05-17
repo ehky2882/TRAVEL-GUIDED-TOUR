@@ -24,6 +24,7 @@ struct TourDetailView: View {
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
+    @Environment(TourDownloader.self) private var tourDownloader
 
     @State private var showingPlayer = false
 
@@ -62,6 +63,25 @@ struct TourDetailView: View {
         }
         .onAppear {
             recentlyViewedStore.record(tour.id)
+        }
+        .onChange(of: tourDownloader.states[tour.id]) { _, newState in
+            // Keep LibraryStore in sync with the download lifecycle.
+            // The downloader is decoupled from LibraryStore so this is
+            // the single place that mirrors the two.
+            switch newState {
+            case .completed:
+                libraryStore.markDownloaded(tour.id)
+            case .idle, .failed, .none:
+                // .idle from a delete or a failed-and-cleaned state;
+                // .none if we never touched it. In both cases clear
+                // the LibraryStore record so Library → Downloaded is
+                // accurate.
+                if libraryStore.entry(for: tour.id)?.downloadedAt != nil {
+                    libraryStore.clearDownload(tour.id)
+                }
+            case .downloading:
+                break
+            }
         }
     }
 
@@ -205,20 +225,7 @@ struct TourDetailView: View {
             .buttonStyle(.bordered)
             .accessibilityLabel(isSaved ? "Remove from saved" : "Save tour")
 
-            VStack(spacing: 2) {
-                Button(action: {}) {
-                    Image(systemName: "arrow.down.circle")
-                        .font(AtlasTypography.body)
-                        .frame(width: 44, height: 44)
-                }
-                .buttonStyle(.bordered)
-                .disabled(true)
-                .accessibilityLabel("Download — coming in M-offline")
-
-                Text("M-offline")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-            }
+            downloadButton
         }
         .padding(.horizontal, AtlasSpacing.lg)
         .padding(.vertical, AtlasSpacing.md)
@@ -227,6 +234,97 @@ struct TourDetailView: View {
                 .shadow(color: AtlasColors.cardShadow, radius: 8, y: -2)
                 .ignoresSafeArea(edges: .bottom)
         )
+    }
+
+    // MARK: - Download button
+
+    /// State-aware download control. Four faces:
+    ///   - idle         → arrow.down icon, taps to start a download
+    ///   - downloading  → circular progress around a stop icon, taps to cancel
+    ///   - completed    → checkmark, taps to delete
+    ///   - failed       → exclamation mark, taps to retry
+    /// `tourDownloader.activeTourId` gates whether *other* tours can
+    /// also start downloading — the button is disabled when another
+    /// tour is already in flight.
+    @ViewBuilder
+    private var downloadButton: some View {
+        let state = tourDownloader.states[tour.id] ?? .idle
+        let isOtherActive = tourDownloader.activeTourId != nil
+            && tourDownloader.activeTourId != tour.id
+
+        VStack(spacing: 2) {
+            Button(action: handleDownloadTap) {
+                downloadButtonIcon(for: state)
+                    .font(AtlasTypography.body)
+                    .frame(width: 44, height: 44)
+            }
+            .buttonStyle(.bordered)
+            .disabled(isOtherActive)
+            .accessibilityLabel(downloadAccessibilityLabel(for: state))
+
+            Text(downloadCaption(for: state))
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.tertiaryText)
+                .lineLimit(1)
+        }
+    }
+
+    @ViewBuilder
+    private func downloadButtonIcon(for state: TourDownloader.DownloadState) -> some View {
+        switch state {
+        case .idle, .failed:
+            Image(systemName: state == .idle ? "arrow.down.circle" : "exclamationmark.circle")
+        case .downloading(let progress):
+            ZStack {
+                Image(systemName: "stop.circle")
+                Circle()
+                    .trim(from: 0, to: progress)
+                    .stroke(AtlasColors.primaryText, lineWidth: 2)
+                    .rotationEffect(.degrees(-90))
+                    .frame(width: 28, height: 28)
+                    .animation(.linear(duration: 0.25), value: progress)
+            }
+        case .completed:
+            // SF Symbol's multicolor variant for checkmark.circle.fill
+            // is blue, not green. Hardcoding .green here as the one
+            // exception to the theme-tokens rule — "success = green"
+            // is a strong enough convention that the placeholder
+            // theme would feel wrong without it. M-polish-theme can
+            // promote this to an AtlasColors.success token later.
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundStyle(.green)
+        }
+    }
+
+    private func downloadCaption(for state: TourDownloader.DownloadState) -> String {
+        switch state {
+        case .idle: return "Download"
+        case .downloading(let progress): return "\(Int(progress * 100))%"
+        case .completed: return "Downloaded"
+        case .failed: return "Retry"
+        }
+    }
+
+    private func downloadAccessibilityLabel(for state: TourDownloader.DownloadState) -> String {
+        switch state {
+        case .idle: return "Download tour"
+        case .downloading: return "Cancel download"
+        case .completed: return "Delete downloaded tour"
+        case .failed: return "Retry download"
+        }
+    }
+
+    private func handleDownloadTap() {
+        let state = tourDownloader.states[tour.id] ?? .idle
+        switch state {
+        case .idle, .failed:
+            tourDownloader.download(tour: tour)
+        case .downloading:
+            tourDownloader.cancel(tourId: tour.id)
+        case .completed:
+            tourDownloader.deleteDownload(tourId: tour.id)
+            libraryStore.clearDownload(tour.id)
+        }
     }
 
     // MARK: - Actions

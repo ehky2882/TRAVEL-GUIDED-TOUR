@@ -20,6 +20,7 @@ import SwiftUI
 struct LibraryView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
+    @Environment(TourDownloader.self) private var tourDownloader
 
     @State private var selectedSection: Section = .saved
 
@@ -134,6 +135,17 @@ struct LibraryView: View {
                     Text(formattedDuration(tour.totalDurationSeconds))
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.tertiaryText)
+
+                    // Small download badge so users scanning Saved /
+                    // Recently played can see which tours are already
+                    // cached for offline listening.
+                    if tourDownloader.isDownloaded(tourId: tour.id) {
+                        Image(systemName: "arrow.down.circle.fill")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                            .padding(.leading, AtlasSpacing.xs)
+                            .accessibilityLabel("Downloaded for offline")
+                    }
                 }
             }
 
