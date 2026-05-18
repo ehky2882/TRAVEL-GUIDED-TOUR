@@ -110,6 +110,38 @@ session needs one, fold the permanent content into `CLAUDE.md` /
 `ROADMAP.md` before the session ends and move the snapshot to
 `archive/` with a `YYMMDD` suffix (e.g. `archive/HANDOFF-260518.md`).
 
+## Merging PRs (working rule with the owner)
+
+**Owner pre-authorization (established 2026-05-18):** Claude may
+merge **doc-only and content-only PRs** without asking for explicit
+per-PR approval, using GitHub's squash-merge. Code PRs (anything
+touching `.swift` files inside the `TRAVEL GUIDED TOUR/` source
+folder) always wait for owner OK, since they affect the running
+app and owner wants to validate visually in the simulator.
+
+Concrete boundary, what counts as doc-only / content-only (auto-mergeable):
+- `*.md` files (docs)
+- `ROADMAP.md`, `CLAUDE.md`, `CONTRIBUTING.md`
+- `docs/`, `archive/`
+- `scripts/` (developer tooling, doesn't ship in the app)
+- `TRAVEL GUIDED TOURTests/` (test code; doesn't affect the
+  running app on phones, only the test target on CI)
+- `.github/workflows/` (CI definitions; only run on GitHub's
+  servers)
+- Lint / tooling configs (`.swiftlint.yml`, etc.)
+- `Resources/Tours.json` content additions or edits
+
+What's **not** auto-mergeable — code touching the running app:
+- Anything in `TRAVEL GUIDED TOUR/<source-folder>/*.swift`
+  (Audio, Components, Data, Features, Location, Models, Theme,
+  ContentView, SplashView, App entry)
+- The Xcode project file (`*.xcodeproj`, `*.pbxproj`) —
+  changes affect what builds
+- Asset catalogs (`Assets.xcassets/`) — affect what users see
+
+When in doubt, ask. Better to over-confirm than to merge something
+that turns out to be visible to users without their review.
+
 ## Repo-root layout
 
 Beyond this file and `ROADMAP.md`:
