@@ -503,6 +503,44 @@ loaded. Functional checklist:
 **Outcome:** V1 ready for owner review via TestFlight, or for the
 polish phase below.
 
+**Pre-QA self-audit (2026-05-18).** Before M-qa actually runs on
+device, a code self-audit (`docs/pre-qa-audit-260518.md`, landed
+via PR #21) surfaced 22 findings — bugs, fragile edges,
+accessibility gaps, polish — categorized P0 (launch blockers) →
+P3 (polish/debt). Running status; check items off as fixes land:
+
+**P0 — Launch blockers**
+- [x] P0-1. Home → Tour Detail navigation silently broken (PR #23)
+- [x] P0-2. Dark Mode catastrophically broken (PR #22)
+- [x] P0-3. Typography hierarchy collapsed (PR #22)
+- [x] P0-4. SettingsView 23 hardcoded `.foregroundStyle(.black)` (PR #22)
+- [x] P0-5. Geofenced playback fails offline for downloaded tours (PR #24)
+- [x] P0-6. Geofence notifications invisible in foreground (PR #24)
+- [/] P0-7. Developer-facing copy in user UI — HomeView + LibraryView fixed in PR #23. SettingsView debug-counts row deferred to a follow-up after PR #22.
+
+**P1 — Bugs**
+- [ ] P1-1. "Continue listening" / "Recently played" sort by wrong field
+- [ ] P1-2. Maker avatar URL is ignored (lands with P1-4)
+- [ ] P1-3. Player-tour identification by title is fragile
+- [ ] P1-4. HeroImageView doesn't load remote images (depends on CDN pick)
+- [x] P1-5. Audio session interruption (phone call) not handled (PR #24)
+- [x] P1-6. Headphone unplug doesn't pause audio (PR #24)
+- [ ] P1-7. International-dateline bug in coordinate-in-region check
+
+**P2 — Accessibility**
+- [ ] P2-1. BottomSheet has no VoiceOver affordance
+- [ ] P2-2. Map preview close button sub-44pt touch target
+- [ ] P2-3. Download button disabled state not announced
+- [ ] P2-4. No "Open Settings" deep link when location denied
+- [ ] P2-5. Localization gap — duration / distance formatters hardcoded English/metric
+
+**P3 — Polish & tech debt:** ten items; see audit doc. None block V1.
+
+**Lifecycle.** Once every P0 + P1 from the audit is closed (or
+explicitly deferred), archive `docs/pre-qa-audit-260518.md` to
+`archive/` per the doc-hygiene rule. The closed PRs are the
+record; this checklist is the live "what's left."
+
 ---
 
 ## V1 — Polish milestones (after functionality lands)
