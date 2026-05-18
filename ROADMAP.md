@@ -432,9 +432,10 @@ mode → start the tour → audio plays end to end without buffering.
 audio URLs resolve, the rest of the app should "just work" — no code
 changes required if the prior milestones held to the data contract.
 
-**Open decision for owner:** Which CDN hosts the audio? Reasonable
-defaults: Cloudflare R2, AWS S3 + CloudFront, or Apple's On-Demand
-Resources. Pick once and stay there for V1.
+**Open decision for owner:** Which CDN hosts the audio? Full
+tradeoff brief lives in `docs/cdn-decision.md` (written 2026-05-18;
+recommends Cloudflare R2). Pick once and stay there for V1, then
+update the brief's "Status" line with the picked option + date.
 
 ---
 

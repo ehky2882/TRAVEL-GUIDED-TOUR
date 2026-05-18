@@ -117,6 +117,9 @@ Beyond this file and `ROADMAP.md`:
     for authoring tour content (used in M-launch-content; doubles
     as the spec for the future maker upload form).
   - `docs/Tours.template.json` — example tours showing every field.
+  - `docs/cdn-decision.md` — owner-facing brief comparing
+    Cloudflare R2 / S3+CloudFront / Apple ODR for V1 audio hosting.
+    Owner picks; update the brief's Status line when they do.
 - `scripts/` — developer-facing tooling:
   - `scripts/validate-tours.swift` — runs against
     `TRAVEL GUIDED TOUR/Resources/Tours.json` and catches typos /
