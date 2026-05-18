@@ -37,13 +37,29 @@ final class ProximityMonitor: NSObject, CLLocationManagerDelegate {
 
     private let manager = CLLocationManager()
     private var monitoredStops: [UUID: Stop] = [:]
+    /// Retained so `handleEntry` can ask `tourDownloader` for the
+    /// active tour's local audio URL when the user is offline
+    /// (audit P0-5). Cleared in `stopMonitoring`.
+    private var activeTour: Tour?
     private var activeTourTitle: String?
     private var activeMakerName: String?
     private weak var audioPlayer: AudioPlayerService?
+    /// Lets `handleEntry` prefer the on-disk audio file over the
+    /// remote URL for downloaded tours. Weak so the environment
+    /// shelf owns the lifetime.
+    private weak var tourDownloader: TourDownloader?
 
     override init() {
         super.init()
         manager.delegate = self
+        #if os(iOS) || os(visionOS)
+        // Register self as the notification delegate so geofence
+        // entries surface a banner/sound even while Atlas is in the
+        // foreground (audit P0-6). iOS suppresses notifications in
+        // the foreground by default; a `willPresent` override is
+        // the documented opt-in.
+        UNUserNotificationCenter.current().delegate = self
+        #endif
     }
 
     // MARK: - Public API
@@ -51,10 +67,15 @@ final class ProximityMonitor: NSObject, CLLocationManagerDelegate {
     /// Begin monitoring geofenced stops for `tour`. Stops any prior
     /// monitoring first. No-op when the tour has no `.geofenced`
     /// stops (single-piece or all-manual tours).
+    ///
+    /// `tourDownloader` is consulted on geofence entry so a
+    /// downloaded tour plays from disk even when the user is
+    /// offline (airplane mode, no signal mid-walk).
     func startMonitoring(
         tour: Tour,
         maker: Maker?,
-        audioPlayer: AudioPlayerService
+        audioPlayer: AudioPlayerService,
+        tourDownloader: TourDownloader
     ) {
         #if os(iOS)
         stopMonitoring()
@@ -65,9 +86,11 @@ final class ProximityMonitor: NSObject, CLLocationManagerDelegate {
         requestNotificationPermissionIfNeeded()
 
         self.activeTourId = tour.id
+        self.activeTour = tour
         self.activeTourTitle = tour.title
         self.activeMakerName = maker?.displayName
         self.audioPlayer = audioPlayer
+        self.tourDownloader = tourDownloader
 
         for stop in geofencedStops.prefix(20) {
             let region = CLCircularRegion(
@@ -91,9 +114,11 @@ final class ProximityMonitor: NSObject, CLLocationManagerDelegate {
         #endif
         monitoredStops.removeAll()
         activeTourId = nil
+        activeTour = nil
         activeTourTitle = nil
         activeMakerName = nil
         audioPlayer = nil
+        tourDownloader = nil
         lastEnteredStopId = nil
     }
 
@@ -117,9 +142,17 @@ final class ProximityMonitor: NSObject, CLLocationManagerDelegate {
         guard let stop = monitoredStops[stopId] else { return }
         lastEnteredStopId = stopId
 
-        // Kick off audio for this stop. AudioPlayerService handles
-        // load failures, MPNowPlayingInfoCenter, etc.
-        if let url = URL(string: stop.audioURL) {
+        // Prefer the on-disk audio file when the tour is downloaded
+        // — without this, a user walking a downloaded tour offline
+        // hits the geofence and the audio fails to load (audit P0-5).
+        // Falls back to the remote URL for non-downloaded tours.
+        let localURL: URL? = {
+            guard let activeTour, let tourDownloader else { return nil }
+            return tourDownloader.localURL(forStop: stop, in: activeTour)
+        }()
+        let remoteURL = URL(string: stop.audioURL)
+
+        if let url = localURL ?? remoteURL {
             audioPlayer?.play(
                 url: url,
                 title: activeTourTitle,
@@ -155,3 +188,20 @@ final class ProximityMonitor: NSObject, CLLocationManagerDelegate {
         }
     }
 }
+
+#if os(iOS) || os(visionOS)
+extension ProximityMonitor: UNUserNotificationCenterDelegate {
+    /// Force geofence-entry notifications to show as a banner +
+    /// sound even when Atlas is in the foreground (audit P0-6).
+    /// Default iOS behavior suppresses notifications while the app
+    /// is active — wrong for a walking-tour app where the user
+    /// might be looking at the map and needs to know a stop fired.
+    nonisolated func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+    ) {
+        completionHandler([.banner, .sound])
+    }
+}
+#endif
