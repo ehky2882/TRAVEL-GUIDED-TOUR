@@ -54,12 +54,14 @@ struct MakerView: View {
         }
     }
 
-    /// Avatar placeholder is a solid grey circle for V1 — matches the
-    /// HeroImageView placeholder treatment so layout reads cleanly
-    /// before real images land in M-launch-content.
+    /// Avatar placeholder is a solid adaptive-grey circle for V1 —
+    /// matches the HeroImageView placeholder treatment so layout
+    /// reads cleanly before real images land in M-launch-content.
+    /// `maker.avatarURL` is wired up alongside the HeroImageView
+    /// AsyncImage swap-in (audit P1-2).
     private var avatar: some View {
         Circle()
-            .fill(Color(white: 0.78))
+            .fill(AtlasColors.placeholderWarm)
             .frame(width: avatarSize, height: avatarSize)
     }
 
