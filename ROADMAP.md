@@ -413,6 +413,15 @@ mode → start the tour → audio plays end to end without buffering.
 - Writes maker bios + tour descriptions
 - Authors the final `Tours.json` entries
 
+**Authoring scaffold (ready):**
+- `docs/authoring-tours.md` — UI-agnostic field-by-field guide
+  (every `Tour` / `Stop` / `Maker` field, decision tips, validation
+  checklist, quick workflow). Doubles as the spec for the future
+  in-app maker upload form.
+- `docs/Tours.template.json` — two filled-in example tours
+  (single-piece + multi-stop) showing every field. Copy from this
+  when authoring real entries.
+
 **Hand-off shape:** Once `Tours.json` is updated with real content and
 audio URLs resolve, the rest of the app should "just work" — no code
 changes required if the prior milestones held to the data contract.

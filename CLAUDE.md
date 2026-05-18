@@ -107,6 +107,18 @@ session needs one, fold the permanent content into `CLAUDE.md` /
 `ROADMAP.md` before the session ends and move the snapshot to
 `archive/` with a `YYMMDD` suffix (e.g. `archive/HANDOFF-260518.md`).
 
+## Repo-root layout
+
+Beyond this file and `ROADMAP.md`:
+
+- `atlas_claude_code_prompt.md` — canonical product spec.
+- `docs/` — reference material that isn't read at session start:
+  - `docs/authoring-tours.md` — UI-agnostic field-by-field guide
+    for authoring tour content (used in M-launch-content; doubles
+    as the spec for the future maker upload form).
+  - `docs/Tours.template.json` — example tours showing every field.
+- `archive/` — dated snapshots of retired docs (see `archive/README.md`).
+
 ## Build & Run
 
 (Build = compile the source files into a runnable app, like baking

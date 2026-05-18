@@ -1,0 +1,115 @@
+{
+  "_about": "Template for authoring Atlas tour content. See docs/authoring-tours.md for the field-by-field guide. The two tours below are FICTIONAL placeholders that exist to show shape and field coverage — generate fresh UUIDs and replace every field for real content. Do not commit this file as the live Tours.json; it's reference material only.",
+
+  "makers": [
+    {
+      "id": "00000000-0000-0000-0000-00000000E001",
+      "displayName": "Example Maker Studio",
+      "avatarURL": "https://atlas-tours.example/makers/example-studio-avatar.jpg",
+      "bio": "One to three sentences in the maker's own voice. Who they are, what they make, why their tours are worth listening to. Avoid pure résumé bullets; readers are deciding whether to spend 20 minutes with this voice in their ear.",
+      "websiteURL": "https://example-maker-studio.com"
+    }
+  ],
+
+  "tours": [
+    {
+      "_comment": "Example 1 — single-piece tour. Short audio about one location. Manual trigger because dense tourist area makes GPS unreliable. All optional fields shown filled OR set to null to demonstrate both shapes.",
+      "id": "00000000-0000-0000-0000-00000000A001",
+      "title": "The Charging Bull",
+      "shortDescription": "Three minutes on the most photographed sculpture in lower Manhattan.",
+      "longDescription": "A short audio piece standing in Bowling Green, looking at Arturo Di Modica's bronze bull. The piece covers how the sculpture got there overnight in 1989, why the city tried to remove it, and what it means that a guerrilla-installed artwork became one of the most-photographed objects in New York. Best listened to early morning before the line for selfies forms.",
+      "makerId": "00000000-0000-0000-0000-00000000E001",
+      "heroImageURL": "https://atlas-tours.example/images/charging-bull-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "00000000-0000-0000-0000-00000000B001",
+          "order": 0,
+          "title": "Charging Bull",
+          "caption": "Stand in Bowling Green park, facing the bull's left flank.",
+          "latitude": 40.7055,
+          "longitude": -74.0134,
+          "audioURL": "https://atlas-tours.example/audio/charging-bull/main.mp3",
+          "audioDurationSeconds": 195,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://atlas-tours.example/images/charging-bull-stop.jpg",
+          "transcriptText": "In the early morning hours of December 15th, 1989, a flatbed truck pulled up to the New York Stock Exchange. (… full transcript continues — supports VoiceOver users, also good for SEO once tours are shareable post-V1.)"
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 195,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7055,
+      "centroidLongitude": -74.0134,
+      "city": "New York",
+      "primaryCategory": "visualArt",
+      "tags": ["public art", "financial district", "guerrilla art"],
+      "priceUSD": 0
+    },
+
+    {
+      "_comment": "Example 2 — multi-stop walking tour. Three stops along the High Line. Geofenced triggers (outdoor, GPS works fine). Optional intro audio is filled. Shows how to chain stops with order 0,1,2.",
+      "id": "00000000-0000-0000-0000-00000000A002",
+      "title": "Walking the High Line",
+      "shortDescription": "Three stops along an elevated park built on an abandoned freight line — twenty minutes of audio, ninety minutes of slow walking.",
+      "longDescription": "The High Line is a 1.45-mile park built on top of a derelict freight rail line on Manhattan's West Side. This tour walks the southernmost third of it — Gansevoort Street to 17th Street — pausing at three places where the design choices, the surviving rail, or the surrounding architecture have a story worth hearing. Designed for a leisurely 90-minute pace. Wear comfortable shoes; the path has few benches.",
+      "makerId": "00000000-0000-0000-0000-00000000E001",
+      "heroImageURL": "https://atlas-tours.example/images/highline-hero.jpg",
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "00000000-0000-0000-0000-00000000B002",
+          "order": 0,
+          "title": "Gansevoort Street Entrance",
+          "caption": "South-end stairs and elevator. Look down at the surviving rails.",
+          "latitude": 40.7396,
+          "longitude": -74.0080,
+          "audioURL": "https://atlas-tours.example/audio/highline/stop-1-gansevoort.mp3",
+          "audioDurationSeconds": 320,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": null
+        },
+        {
+          "id": "00000000-0000-0000-0000-00000000B003",
+          "order": 1,
+          "title": "The Standard Hotel Overpass",
+          "caption": "Walking under the cantilevered hotel — the High Line passes through the building.",
+          "latitude": 40.7407,
+          "longitude": -74.0080,
+          "audioURL": "https://atlas-tours.example/audio/highline/stop-2-standard.mp3",
+          "audioDurationSeconds": 280,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 25,
+          "imageURL": null,
+          "transcriptText": null
+        },
+        {
+          "id": "00000000-0000-0000-0000-00000000B004",
+          "order": 2,
+          "title": "10th Avenue Square Cutout",
+          "caption": "Amphitheater-style seating overlooking traffic on 10th Avenue.",
+          "latitude": 40.7430,
+          "longitude": -74.0048,
+          "audioURL": "https://atlas-tours.example/audio/highline/stop-3-10th-ave.mp3",
+          "audioDurationSeconds": 400,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": "https://atlas-tours.example/audio/highline/intro.mp3",
+      "totalDurationSeconds": 1100,
+      "walkingDistanceMeters": 850,
+      "centroidLatitude": 40.7411,
+      "centroidLongitude": -74.0069,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["high line", "adaptive reuse", "walking tour", "chelsea"],
+      "priceUSD": 0
+    }
+  ]
+}
