@@ -38,40 +38,103 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
-**The product pivoted.** The previous editorial-city-guide V1 work is
-mostly being reshaped, not thrown out. What survives:
+**Status (2026-05-18):** every V1 functionality milestone is shipped
+on `main` (M1–M3, M-data-model, M-audio-foundation, M-tour-detail,
+M-player, M-home, M-search, M-maker, M-library, M-geofencing,
+M-offline; M-map was cut). A home-screen redesign landed as PR #19.
+PR #20 (this branch) lands the M-launch-content authoring scaffold
++ CONTRIBUTING.md + doc-hygiene rule.
+
+What's left for V1: **M-launch-content** (owner records audio +
+authors real `Tours.json` — full scaffold ready in `docs/` and
+`scripts/`), **M-qa** (end-to-end sanity sweep on a real device),
+plus the deferred **design / polish pass**. A parked
+`claude/alltrails-alignment` branch holds an exploratory
+AllTrails-style home redesign to revisit during the design pass —
+see "Parked work" below.
+
+**Parked work: `claude/alltrails-alignment` branch.** A second-pass
+home redesign exploring an AllTrails-style direction. Three commits
+on top of `4f6beb6` (M-offline, #18), dated 2026-05-16/17. Net
+change vs `main` after PR #20 lands: roughly +700/-400 lines across
+9 files. Polished work, not WIP despite the middle commit's name —
+uses theme tokens, doc comments, accessibility labels.
+
+What's on the branch:
+- `Components/AtlasTabBar.swift` (new) — custom tab bar replacing
+  SwiftUI's `TabView` chrome, shaped to match the home drawer's
+  width/inset/corners so they read as one "floating island."
+- `Features/Home/CategoryChipRow.swift` (new) — horizontal-scroll
+  category filter chips.
+- `Features/Home/TourListCard.swift` (new) — larger card for the
+  drawer's vertical tour list (replaces horizontal rail carousels).
+- `Theme/AtlasSpacing.swift` — adds `phoneScreenRadius` token (48pt)
+  for the floating-island shape.
+- Heavy rework of `Features/Home/HomeView.swift`,
+  `Features/Home/HomeMapSection.swift`, `Components/BottomSheet.swift`,
+  `ContentView.swift` to wire the new pieces together.
+- Recenter button on the map.
+
+Why it's parked, not merged: per the project's deferred-design
+discipline, this branch is a substantial design direction
+commitment (chips + vertical list vs. PR #19's rail carousels) that
+should be A/B-evaluated on a real device alongside the design pass,
+not merged on faith. Main currently has the simpler PR #19 home as
+the "good enough for V1" baseline.
+
+How to revive when the design pass starts:
+1. `git fetch origin claude/alltrails-alignment`
+2. `git rebase main` on the branch (drops the now-redundant copy of
+   the PR #19 home-redesign commit, since main already has it via
+   the #19 squash).
+3. Build to a real device; A/B the result against current main's
+   home.
+4. If keeping: open it as a PR. If not: extract any universally-good
+   pieces (the custom tab bar and recenter button are arguably
+   non-controversial), then delete the branch.
+
+**Pivot history.** The previous editorial-city-guide V1 work was
+mostly reshaped, not thrown out. The migration tables below are kept
+for historical reference; everything in them shipped.
+
+What survives:
 
 | Survives the pivot | Status |
 |---|---|
-| 5-tab `TabView` scaffolding (M1) | ✅ Done — tab *contents* change but the skeleton stays |
+| `TabView` scaffolding (M1) | ✅ Done — originally 5 tabs, trimmed to 3 (Home / Library / Me) in PR #15 when M-map was cut |
 | Location permission + `LocationManager` (M3) | ✅ Done — still needed for "near you" + geofencing |
-| Environment-shelf pattern (DataService, CollectionStore, LocationManager) | ✅ Done — same pattern, new services slot in |
+| Environment-shelf pattern (DataService, LibraryStore, LocationManager, AudioPlayerService, …) | ✅ Done — same pattern; new services slot in |
 | `TRAVEL_GUIDED_TOURApp.swift`, splash, project.pbxproj basics | ✅ Done |
 | `Components/HeroImageView.swift`, theme tokens, platform helpers | ✅ Done |
 
-What gets replaced or rewritten:
+What got replaced or rewritten (all ✅ shipped):
 
 | Replaced | Replaced by | In milestone |
 |---|---|---|
-| `Models/{City,Place,PlaceCategory,PlaceCollection}.swift` | `Models/{Tour,Stop,Maker,LibraryEntry}.swift` | M-data-model |
-| `Resources/SeedData.json` (45 editorial places) | `Resources/Tours.json` (5–15 audio tours; content is owner work) | M-data-model + M-launch-content |
+| `Models/{City,Place,PlaceCategory,PlaceCollection}.swift` | `Models/{Tour,Stop,Maker,LibraryEntry,TourCategory,RecentSearch}.swift` | M-data-model |
+| `Resources/SeedData.json` (45 editorial places) | `Resources/Tours.json` (seed entries; real content pending M-launch-content) | M-data-model + M-launch-content |
 | `Data/DataService.swift` | Reshaped to load tours instead of cities + places | M-data-model |
-| `Data/CollectionStore.swift` | Reshaped / renamed to `LibraryStore` | M-library |
-| `Features/Discover/` | `Features/Home/` — "Tours near you" feed | M-home |
-| `Features/City/` | Mostly cut (no "city as entity" in this product) | M-data-model |
+| `Data/CollectionStore.swift` | Renamed to `LibraryStore` (shape: `[LibraryEntry]`) | M-library |
+| `Data/SeedData.swift` | Renamed to `ToursData.swift` | M-data-model |
+| `Features/Discover/` | `Features/Home/` — map-dominant home with curated rails | M-home |
+| `Features/City/` | Cut (no "city as entity" in this product) | M-data-model |
 | `Features/Place/PlaceDetailView.swift` | `Features/Tour/TourDetailView.swift` | M-tour-detail |
-| `Features/Collections/` | `Features/Library/` (saved + downloaded + recent) | M-library |
-| `Features/Map/PlaceAnnotationView.swift` | Repurposed as `StopAnnotationView` | M-map |
+| `Features/Collections/` | `Features/Library/` (saved + downloaded + recently played) | M-library |
+| `Features/Map/` | **Cut entirely** — Home's embedded map is sufficient | M-map (cut) |
 | Existing `Location/ProximityMonitor.swift` | Reshaped to monitor stop geofences | M-geofencing |
 
-What's brand new:
+What got added net-new (all ✅ shipped):
 
 - `Audio/AudioPlayerService.swift` — `AVQueuePlayer` wrapper + lock-screen integration
-- `Audio/TourDownloader.swift` — offline audio caching
+- `Audio/TourDownloader.swift` — offline audio caching via `URLSession`
 - `Features/Player/PlayerView.swift` — full-screen audio player
 - `Features/Maker/MakerView.swift` — maker bio + their tour list
-- `UIBackgroundModes: audio` entitlement in the project's Info.plist
-  build settings
+- `Features/Search/{SearchView,SearchBar}.swift` + `Data/RecentSearchStore.swift`
+- `Data/RecentlyViewedStore.swift` — drives the "Recently viewed" home rail
+- `Features/Settings/ManageDownloadsView.swift` — storage management for downloaded tours
+- `Components/BottomSheet.swift` — persistent bottom sheet used by the home redesign
+- `UIBackgroundModes: audio` build setting (audio continues with phone locked)
+- `NSLocationAlwaysAndWhenInUseUsageDescription` build setting (geofence triggers in background)
 
 ---
 
@@ -90,7 +153,7 @@ audio-tour pivot. Brief status:
 
 ---
 
-### M-data-model. New data model — Tour, Stop, Maker, LibraryEntry, TourCategory, RecentSearch
+### M-data-model. New data model — Tour, Stop, Maker, LibraryEntry, TourCategory, RecentSearch — ✅ Done (PR #6)
 
 **What:** Add the new Swift model types described in
 `atlas_claude_code_prompt.md` § Data Model. Add a one- or two-tour
@@ -130,7 +193,7 @@ loaded.
 
 ---
 
-### M-audio-foundation. Audio playback infrastructure
+### M-audio-foundation. Audio playback infrastructure — ✅ Done (PR #7)
 
 **What:** Wire up audio playback as a foundation every later milestone
 will use.
@@ -161,7 +224,7 @@ pause from lock screen → audio pauses.
 
 ---
 
-### M-tour-detail. Tour detail screen
+### M-tour-detail. Tour detail screen — ✅ Done (PR #8)
 
 **What:** Build `TourDetailView`. Replaces `PlaceDetailView`. Shows
 hero image, title, maker (tappable, links to `MakerView`), length,
@@ -179,7 +242,7 @@ no intro).
 
 ---
 
-### M-player. Full-screen audio player
+### M-player. Full-screen audio player — ✅ Done (PR #9)
 
 **What:** The screen consumers will spend the most time on. Shows
 hero image, scrub bar, play/pause, speed control (1x / 1.25x / 1.5x /
@@ -196,7 +259,11 @@ advances correctly.
 
 ---
 
-### M-home. Map-dominant home screen with curated rails
+### M-home. Map-dominant home screen with curated rails — ✅ Done (PR #10; redesigned in PR #19)
+
+> Follow-up after PR #19's full-screen-map redesign: "Because you
+> searched [X]" rail data is captured by `RecentSearchStore` but not
+> yet surfaced in `HomeRailsViewModel`. Tracked in HANDOFF.md.
 
 **What:** Build the new home screen, modeled on the Airbnb landing
 page pattern. See `atlas_claude_code_prompt.md` § Key screens #1 for
@@ -241,7 +308,7 @@ view, location-anchored rails fall back to "Browse all" or hide.
 
 ---
 
-### M-search. Search bar + results screen
+### M-search. Search bar + results screen — ✅ Done (PR #11)
 
 **What:** Minimal V1 search that powers the home screen's search bar
 and the "Because you searched [X]" rail.
@@ -271,34 +338,17 @@ now shows the query.
 
 ---
 
-### M-map. Standalone map screen (if separate tab survives)
+### M-map. Standalone map screen — ❌ Cut (PR #15)
 
-**Status:** TBD. With the map already living at the top of the
-Home screen (M-home), a *separate* map tab may be redundant. Owner
-decision at the start of this milestone:
-
-- **Cut it** — Home's embedded map is sufficient; reassign the
-  former Explore tab to something else.
-- **Keep it as a full-screen map** — Home's map is half-screen
-  with rails below; a dedicated full-screen map tab lets users
-  spatially explore without the rails competing for space.
-
-If kept: reshape the existing `MapView` so pins represent **tour
-stops** rather than editorial places. Tapping a pin shows a tour
-preview card; tapping the card opens `TourDetailView`.
-
-**Files touched:**
-- `Features/Map/MapView.swift` (reshape)
-- `Features/Map/PlaceAnnotationView.swift` → rename to
-  `StopAnnotationView` (keep visual styling minimal for V1 — polished
-  pins are a later milestone)
-
-**How we know it worked:** Map tab shows a pin for every stop across
-every tour. Tap a pin → preview card → tap card → tour detail opens.
+Cut by owner decision. Home's embedded map (and then the full-screen
+map in the PR #19 redesign) covers the spatial-discovery need; a
+separate Map tab was redundant. The former Messages tab also got
+absorbed into Settings as a row in the same cut, dropping the shell
+from 5 tabs to 3 (Home / Library / Me). `Features/Map/` was deleted.
 
 ---
 
-### M-maker. Maker page
+### M-maker. Maker page — ✅ Done (PR #12)
 
 **What:** New `MakerView` shows avatar, bio, and the list of that
 maker's tours. Linked from `TourDetailView`'s maker attribution.
@@ -311,7 +361,7 @@ maker page renders → tap one of their tours → tour detail opens.
 
 ---
 
-### M-library. Library tab — Saved / Downloaded / Recently played
+### M-library. Library tab — Saved / Downloaded / Recently played — ✅ Done (PR #13)
 
 **What:** Replace `CollectionsView` with `LibraryView`. Three sections:
 **Saved** (bookmarked tours), **Downloaded** (audio cached on device),
@@ -333,7 +383,12 @@ Recently-played history reflects what you actually played.
 
 ---
 
-### M-geofencing. GPS-triggered stop playback
+### M-geofencing. GPS-triggered stop playback — ✅ Done (PR #17)
+
+> Always-location decision: shipped with both
+> `NSLocationWhenInUseUsageDescription` and
+> `NSLocationAlwaysAndWhenInUseUsageDescription` set, so geofences
+> can fire while the app is backgrounded / phone locked.
 
 **What:** For multi-stop tours where the maker set stops to
 `.geofenced` mode, automatically play the next stop's audio when the
@@ -362,7 +417,7 @@ stop N. Phone locked → same behavior + a local notification.
 
 ---
 
-### M-offline. Tour download for offline playback
+### M-offline. Tour download for offline playback — ✅ Done (PR #18)
 
 **What:** "Download for offline" on tour detail downloads all of the
 tour's audio files (and intro) to the app sandbox. Player prefers the
@@ -396,13 +451,29 @@ mode → start the tour → audio plays end to end without buffering.
 - Writes maker bios + tour descriptions
 - Authors the final `Tours.json` entries
 
+**Authoring scaffold (ready):**
+- `docs/authoring-tours.md` — UI-agnostic field-by-field guide
+  (every `Tour` / `Stop` / `Maker` field, decision tips, validation
+  checklist, quick workflow). Doubles as the spec for the future
+  in-app maker upload form.
+- `docs/Tours.template.json` — two filled-in example tours
+  (single-piece + multi-stop) showing every field. Copy from this
+  when authoring real entries.
+- `scripts/validate-tours.swift` — pre-commit safety net. Catches
+  typos, duplicate UUIDs, broken maker refs, kind ↔ stop count
+  mismatches, coord-range errors, audio-duration math problems
+  before they crash the app at launch. Run manually with
+  `swift scripts/validate-tours.swift` or wire into a git
+  pre-commit hook (one-liner in `docs/authoring-tours.md`).
+
 **Hand-off shape:** Once `Tours.json` is updated with real content and
 audio URLs resolve, the rest of the app should "just work" — no code
 changes required if the prior milestones held to the data contract.
 
-**Open decision for owner:** Which CDN hosts the audio? Reasonable
-defaults: Cloudflare R2, AWS S3 + CloudFront, or Apple's On-Demand
-Resources. Pick once and stay there for V1.
+**Open decision for owner:** Which CDN hosts the audio? Full
+tradeoff brief lives in `docs/cdn-decision.md` (written 2026-05-18;
+recommends Cloudflare R2). Pick once and stay there for V1, then
+update the brief's "Status" line with the picked option + date.
 
 ---
 
@@ -432,6 +503,44 @@ loaded. Functional checklist:
 **Outcome:** V1 ready for owner review via TestFlight, or for the
 polish phase below.
 
+**Pre-QA self-audit (2026-05-18).** Before M-qa actually runs on
+device, a code self-audit (`docs/pre-qa-audit-260518.md`, landed
+via PR #21) surfaced 22 findings — bugs, fragile edges,
+accessibility gaps, polish — categorized P0 (launch blockers) →
+P3 (polish/debt). Running status; check items off as fixes land:
+
+**P0 — Launch blockers**
+- [x] P0-1. Home → Tour Detail navigation silently broken (PR #23)
+- [x] P0-2. Dark Mode catastrophically broken (PR #22)
+- [x] P0-3. Typography hierarchy collapsed (PR #22)
+- [x] P0-4. SettingsView 23 hardcoded `.foregroundStyle(.black)` (PR #22)
+- [x] P0-5. Geofenced playback fails offline for downloaded tours (PR #24)
+- [x] P0-6. Geofence notifications invisible in foreground (PR #24)
+- [/] P0-7. Developer-facing copy in user UI — HomeView + LibraryView fixed in PR #23. SettingsView debug-counts row deferred to a follow-up after PR #22.
+
+**P1 — Bugs**
+- [ ] P1-1. "Continue listening" / "Recently played" sort by wrong field
+- [ ] P1-2. Maker avatar URL is ignored (lands with P1-4)
+- [ ] P1-3. Player-tour identification by title is fragile
+- [ ] P1-4. HeroImageView doesn't load remote images (depends on CDN pick)
+- [x] P1-5. Audio session interruption (phone call) not handled (PR #24)
+- [x] P1-6. Headphone unplug doesn't pause audio (PR #24)
+- [ ] P1-7. International-dateline bug in coordinate-in-region check
+
+**P2 — Accessibility**
+- [ ] P2-1. BottomSheet has no VoiceOver affordance
+- [ ] P2-2. Map preview close button sub-44pt touch target
+- [ ] P2-3. Download button disabled state not announced
+- [ ] P2-4. No "Open Settings" deep link when location denied
+- [ ] P2-5. Localization gap — duration / distance formatters hardcoded English/metric
+
+**P3 — Polish & tech debt:** ten items; see audit doc. None block V1.
+
+**Lifecycle.** Once every P0 + P1 from the audit is closed (or
+explicitly deferred), archive `docs/pre-qa-audit-260518.md` to
+`archive/` per the doc-hygiene rule. The closed PRs are the
+record; this checklist is the live "what's left."
+
 ---
 
 ## V1 — Polish milestones (after functionality lands)
@@ -444,6 +553,30 @@ polish phase below.
 | **M-polish-icon.** App icon | Replace the empty Apple template with a real Atlas icon. |
 | **M-polish-copy.** Tour descriptions + maker bios review | Editorial-tone pass over launch content. Owner / content team, not Claude. |
 | **M-polish-final.** Final V1 success-criteria pass + vibe check | Walk the 9 success criteria in `atlas_claude_code_prompt.md` with the polished app. Last gate before any V1 release. |
+
+---
+
+## Known follow-ups (V1, non-blocking)
+
+Small known gaps that aren't blocking V1 release but should get
+picked up during M-qa or the polish phase. (Lifted from
+`archive/HANDOFF-260518.md` so they live in a doc that future
+sessions actually read.)
+
+- **"Because you searched [X]" home rail.** `RecentSearchStore`
+  captures the data but `HomeRailsViewModel` doesn't surface it as
+  a rail yet. Wire it up during the post-PR-#20 home-polish pass.
+- **`AudioPlayerService` progress aggregation.** `listenedSeconds`
+  on `LibraryEntry` currently reflects position within the current
+  audio item only — it doesn't aggregate across stops in a
+  multi-stop tour. Fine for V1 ("resume listening" works at item
+  granularity), worth a real pass before any analytics or
+  completion-tracking feature.
+- **Custom `AtlasTabBar` tradeoff.** The AllTrails alignment branch
+  replaces the system `TabView`'s tab bar with a custom one. That
+  gives up system-level features (badge dots, focus animations,
+  accessibility heuristics Apple ships). Easy to revisit post-V1
+  if any of those bite.
 
 ---
 
@@ -498,6 +631,12 @@ That requires several large pieces of infrastructure, roughly:
 ## Working agreement
 
 - This file is **living**. Edit it whenever the plan changes.
+- **Doc hygiene.** Every session that ships a milestone, cuts scope,
+  or changes the "what's true today" state of the project updates
+  `ROADMAP.md` and `CLAUDE.md` *in the same commit* — never as a
+  follow-up. Stale docs poisoned a recent session (Claude reported
+  "all milestones done" without knowing about PR #19's redesign);
+  the rule prevents a repeat.
 - Functionality first; design / tone / icon / polish after.
 - New code uses theme tokens even with placeholder values.
 - Each milestone ends in a runnable, simulator-reviewable state.
@@ -506,3 +645,7 @@ That requires several large pieces of infrastructure, roughly:
   milestone rather than expanding an existing one.
 - The product spec (`atlas_claude_code_prompt.md`) stays canonical for
   *what* we build. This roadmap is *when* and *how*.
+- Temporary "session bridge" notes (like the original `HANDOFF.md`)
+  don't live at repo root — fold their permanent content into
+  `ROADMAP.md` / `CLAUDE.md` and move the snapshot to `archive/`
+  with a `YYMMDD` suffix.
