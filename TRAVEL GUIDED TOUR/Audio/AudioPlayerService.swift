@@ -34,6 +34,12 @@ final class AudioPlayerService {
     private var timeObserverToken: Any?
     private var statusObserver: NSKeyValueObservation?
     private var endObserver: NSObjectProtocol?
+    /// Observers for audio-session interruption (phone calls, Siri,
+    /// other audio apps) and route changes (headphones unplugged,
+    /// AirPods disconnected). Both are iOS/visionOS-only — macOS
+    /// doesn't expose AVAudioSession.
+    private var interruptionObserver: NSObjectProtocol?
+    private var routeChangeObserver: NSObjectProtocol?
     /// KVO on the current `AVPlayerItem`'s `status`. Lets us catch
     /// `.failed` for the *item* (unreachable host, bad codec, etc.) —
     /// AVPlayer's `timeControlStatus` doesn't surface that distinctly.
@@ -61,6 +67,7 @@ final class AudioPlayerService {
         observePlayerStatus()
         observePeriodicTime()
         observePlaybackEnd()
+        observeAudioSessionEvents()
     }
 
     deinit {
@@ -69,6 +76,12 @@ final class AudioPlayerService {
         }
         if let endObserver {
             NotificationCenter.default.removeObserver(endObserver)
+        }
+        if let interruptionObserver {
+            NotificationCenter.default.removeObserver(interruptionObserver)
+        }
+        if let routeChangeObserver {
+            NotificationCenter.default.removeObserver(routeChangeObserver)
         }
         itemStatusObserver?.invalidate()
         loadingTimeoutTask?.cancel()
@@ -332,6 +345,80 @@ final class AudioPlayerService {
             self?.updateNowPlayingInfo()
         }
     }
+
+    /// Wires interruption + route-change handling so:
+    ///   - Phone calls / Siri / other audio apps pause this player,
+    ///     and resume it on interruption end if the system indicates
+    ///     `.shouldResume` (audit P1-5).
+    ///   - Headphone unplug / AirPods disconnect pauses playback per
+    ///     Apple HIG — never blast a walking tour through the
+    ///     iPhone speaker (audit P1-6).
+    private func observeAudioSessionEvents() {
+        #if os(iOS) || os(visionOS)
+        interruptionObserver = NotificationCenter.default.addObserver(
+            forName: AVAudioSession.interruptionNotification,
+            object: AVAudioSession.sharedInstance(),
+            queue: .main
+        ) { [weak self] notification in
+            self?.handleInterruption(notification)
+        }
+        routeChangeObserver = NotificationCenter.default.addObserver(
+            forName: AVAudioSession.routeChangeNotification,
+            object: AVAudioSession.sharedInstance(),
+            queue: .main
+        ) { [weak self] notification in
+            self?.handleRouteChange(notification)
+        }
+        #endif
+    }
+
+    #if os(iOS) || os(visionOS)
+    private func handleInterruption(_ notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let typeValue = userInfo[AVAudioSessionInterruptionTypeKey] as? UInt,
+              let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
+            return
+        }
+        switch type {
+        case .began:
+            // System has already paused our audio. Sync our published
+            // state so the UI's play/pause icon matches; don't call
+            // `pause()` on the player — that's redundant.
+            if state == .playing {
+                state = .paused
+                updateNowPlayingInfo()
+            }
+        case .ended:
+            // Resume only if iOS hints we should (e.g., a short Siri
+            // interruption ends with `.shouldResume`; a phone call
+            // typically does not).
+            guard let optionsValue = userInfo[AVAudioSessionInterruptionOptionKey] as? UInt else {
+                return
+            }
+            let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
+            if options.contains(.shouldResume) {
+                play()
+            }
+        @unknown default:
+            break
+        }
+    }
+
+    private func handleRouteChange(_ notification: Notification) {
+        guard let userInfo = notification.userInfo,
+              let reasonValue = userInfo[AVAudioSessionRouteChangeReasonKey] as? UInt,
+              let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue) else {
+            return
+        }
+        // Apple HIG: pause when the audio's old route becomes
+        // unavailable (headphones unplugged, AirPods removed). Any
+        // other route-change reason is a no-op — adding a new device
+        // shouldn't change playback state.
+        if reason == .oldDeviceUnavailable {
+            pause()
+        }
+    }
+    #endif
 
     private func updateNowPlayingInfo() {
         var info: [String: Any] = [:]
