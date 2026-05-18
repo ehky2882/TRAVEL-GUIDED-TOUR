@@ -38,40 +38,58 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
-**The product pivoted.** The previous editorial-city-guide V1 work is
-mostly being reshaped, not thrown out. What survives:
+**Status (2026-05-18):** every V1 functionality milestone is shipped
+on `main` (M1–M3, M-data-model, M-audio-foundation, M-tour-detail,
+M-player, M-home, M-search, M-maker, M-library, M-geofencing,
+M-offline; M-map was cut). A home-screen redesign (PR #19) and an
+in-flight `claude/alltrails-alignment` branch sit on top of the
+functionality baseline. What's left for V1: **M-launch-content**
+(owner records audio + authors real `Tours.json`) and **M-qa**
+(end-to-end sanity sweep on a real device), plus the AllTrails
+alignment polish before PR #20.
+
+**Pivot history.** The previous editorial-city-guide V1 work was
+mostly reshaped, not thrown out. The migration tables below are kept
+for historical reference; everything in them shipped.
+
+What survives:
 
 | Survives the pivot | Status |
 |---|---|
-| 5-tab `TabView` scaffolding (M1) | ✅ Done — tab *contents* change but the skeleton stays |
+| `TabView` scaffolding (M1) | ✅ Done — originally 5 tabs, trimmed to 3 (Home / Library / Me) in PR #15 when M-map was cut |
 | Location permission + `LocationManager` (M3) | ✅ Done — still needed for "near you" + geofencing |
-| Environment-shelf pattern (DataService, CollectionStore, LocationManager) | ✅ Done — same pattern, new services slot in |
+| Environment-shelf pattern (DataService, LibraryStore, LocationManager, AudioPlayerService, …) | ✅ Done — same pattern; new services slot in |
 | `TRAVEL_GUIDED_TOURApp.swift`, splash, project.pbxproj basics | ✅ Done |
 | `Components/HeroImageView.swift`, theme tokens, platform helpers | ✅ Done |
 
-What gets replaced or rewritten:
+What got replaced or rewritten (all ✅ shipped):
 
 | Replaced | Replaced by | In milestone |
 |---|---|---|
-| `Models/{City,Place,PlaceCategory,PlaceCollection}.swift` | `Models/{Tour,Stop,Maker,LibraryEntry}.swift` | M-data-model |
-| `Resources/SeedData.json` (45 editorial places) | `Resources/Tours.json` (5–15 audio tours; content is owner work) | M-data-model + M-launch-content |
+| `Models/{City,Place,PlaceCategory,PlaceCollection}.swift` | `Models/{Tour,Stop,Maker,LibraryEntry,TourCategory,RecentSearch}.swift` | M-data-model |
+| `Resources/SeedData.json` (45 editorial places) | `Resources/Tours.json` (seed entries; real content pending M-launch-content) | M-data-model + M-launch-content |
 | `Data/DataService.swift` | Reshaped to load tours instead of cities + places | M-data-model |
-| `Data/CollectionStore.swift` | Reshaped / renamed to `LibraryStore` | M-library |
-| `Features/Discover/` | `Features/Home/` — "Tours near you" feed | M-home |
-| `Features/City/` | Mostly cut (no "city as entity" in this product) | M-data-model |
+| `Data/CollectionStore.swift` | Renamed to `LibraryStore` (shape: `[LibraryEntry]`) | M-library |
+| `Data/SeedData.swift` | Renamed to `ToursData.swift` | M-data-model |
+| `Features/Discover/` | `Features/Home/` — map-dominant home with curated rails | M-home |
+| `Features/City/` | Cut (no "city as entity" in this product) | M-data-model |
 | `Features/Place/PlaceDetailView.swift` | `Features/Tour/TourDetailView.swift` | M-tour-detail |
-| `Features/Collections/` | `Features/Library/` (saved + downloaded + recent) | M-library |
-| `Features/Map/PlaceAnnotationView.swift` | Repurposed as `StopAnnotationView` | M-map |
+| `Features/Collections/` | `Features/Library/` (saved + downloaded + recently played) | M-library |
+| `Features/Map/` | **Cut entirely** — Home's embedded map is sufficient | M-map (cut) |
 | Existing `Location/ProximityMonitor.swift` | Reshaped to monitor stop geofences | M-geofencing |
 
-What's brand new:
+What got added net-new (all ✅ shipped):
 
 - `Audio/AudioPlayerService.swift` — `AVQueuePlayer` wrapper + lock-screen integration
-- `Audio/TourDownloader.swift` — offline audio caching
+- `Audio/TourDownloader.swift` — offline audio caching via `URLSession`
 - `Features/Player/PlayerView.swift` — full-screen audio player
 - `Features/Maker/MakerView.swift` — maker bio + their tour list
-- `UIBackgroundModes: audio` entitlement in the project's Info.plist
-  build settings
+- `Features/Search/{SearchView,SearchBar}.swift` + `Data/RecentSearchStore.swift`
+- `Data/RecentlyViewedStore.swift` — drives the "Recently viewed" home rail
+- `Features/Settings/ManageDownloadsView.swift` — storage management for downloaded tours
+- `Components/BottomSheet.swift` — persistent bottom sheet used by the home redesign
+- `UIBackgroundModes: audio` build setting (audio continues with phone locked)
+- `NSLocationAlwaysAndWhenInUseUsageDescription` build setting (geofence triggers in background)
 
 ---
 
@@ -90,7 +108,7 @@ audio-tour pivot. Brief status:
 
 ---
 
-### M-data-model. New data model — Tour, Stop, Maker, LibraryEntry, TourCategory, RecentSearch
+### M-data-model. New data model — Tour, Stop, Maker, LibraryEntry, TourCategory, RecentSearch — ✅ Done (PR #6)
 
 **What:** Add the new Swift model types described in
 `atlas_claude_code_prompt.md` § Data Model. Add a one- or two-tour
@@ -130,7 +148,7 @@ loaded.
 
 ---
 
-### M-audio-foundation. Audio playback infrastructure
+### M-audio-foundation. Audio playback infrastructure — ✅ Done (PR #7)
 
 **What:** Wire up audio playback as a foundation every later milestone
 will use.
@@ -161,7 +179,7 @@ pause from lock screen → audio pauses.
 
 ---
 
-### M-tour-detail. Tour detail screen
+### M-tour-detail. Tour detail screen — ✅ Done (PR #8)
 
 **What:** Build `TourDetailView`. Replaces `PlaceDetailView`. Shows
 hero image, title, maker (tappable, links to `MakerView`), length,
@@ -179,7 +197,7 @@ no intro).
 
 ---
 
-### M-player. Full-screen audio player
+### M-player. Full-screen audio player — ✅ Done (PR #9)
 
 **What:** The screen consumers will spend the most time on. Shows
 hero image, scrub bar, play/pause, speed control (1x / 1.25x / 1.5x /
@@ -196,7 +214,11 @@ advances correctly.
 
 ---
 
-### M-home. Map-dominant home screen with curated rails
+### M-home. Map-dominant home screen with curated rails — ✅ Done (PR #10; redesigned in PR #19)
+
+> Follow-up after PR #19's full-screen-map redesign: "Because you
+> searched [X]" rail data is captured by `RecentSearchStore` but not
+> yet surfaced in `HomeRailsViewModel`. Tracked in HANDOFF.md.
 
 **What:** Build the new home screen, modeled on the Airbnb landing
 page pattern. See `atlas_claude_code_prompt.md` § Key screens #1 for
@@ -241,7 +263,7 @@ view, location-anchored rails fall back to "Browse all" or hide.
 
 ---
 
-### M-search. Search bar + results screen
+### M-search. Search bar + results screen — ✅ Done (PR #11)
 
 **What:** Minimal V1 search that powers the home screen's search bar
 and the "Because you searched [X]" rail.
@@ -271,34 +293,17 @@ now shows the query.
 
 ---
 
-### M-map. Standalone map screen (if separate tab survives)
+### M-map. Standalone map screen — ❌ Cut (PR #15)
 
-**Status:** TBD. With the map already living at the top of the
-Home screen (M-home), a *separate* map tab may be redundant. Owner
-decision at the start of this milestone:
-
-- **Cut it** — Home's embedded map is sufficient; reassign the
-  former Explore tab to something else.
-- **Keep it as a full-screen map** — Home's map is half-screen
-  with rails below; a dedicated full-screen map tab lets users
-  spatially explore without the rails competing for space.
-
-If kept: reshape the existing `MapView` so pins represent **tour
-stops** rather than editorial places. Tapping a pin shows a tour
-preview card; tapping the card opens `TourDetailView`.
-
-**Files touched:**
-- `Features/Map/MapView.swift` (reshape)
-- `Features/Map/PlaceAnnotationView.swift` → rename to
-  `StopAnnotationView` (keep visual styling minimal for V1 — polished
-  pins are a later milestone)
-
-**How we know it worked:** Map tab shows a pin for every stop across
-every tour. Tap a pin → preview card → tap card → tour detail opens.
+Cut by owner decision. Home's embedded map (and then the full-screen
+map in the PR #19 redesign) covers the spatial-discovery need; a
+separate Map tab was redundant. The former Messages tab also got
+absorbed into Settings as a row in the same cut, dropping the shell
+from 5 tabs to 3 (Home / Library / Me). `Features/Map/` was deleted.
 
 ---
 
-### M-maker. Maker page
+### M-maker. Maker page — ✅ Done (PR #12)
 
 **What:** New `MakerView` shows avatar, bio, and the list of that
 maker's tours. Linked from `TourDetailView`'s maker attribution.
@@ -311,7 +316,7 @@ maker page renders → tap one of their tours → tour detail opens.
 
 ---
 
-### M-library. Library tab — Saved / Downloaded / Recently played
+### M-library. Library tab — Saved / Downloaded / Recently played — ✅ Done (PR #13)
 
 **What:** Replace `CollectionsView` with `LibraryView`. Three sections:
 **Saved** (bookmarked tours), **Downloaded** (audio cached on device),
@@ -333,7 +338,12 @@ Recently-played history reflects what you actually played.
 
 ---
 
-### M-geofencing. GPS-triggered stop playback
+### M-geofencing. GPS-triggered stop playback — ✅ Done (PR #17)
+
+> Always-location decision: shipped with both
+> `NSLocationWhenInUseUsageDescription` and
+> `NSLocationAlwaysAndWhenInUseUsageDescription` set, so geofences
+> can fire while the app is backgrounded / phone locked.
 
 **What:** For multi-stop tours where the maker set stops to
 `.geofenced` mode, automatically play the next stop's audio when the
@@ -362,7 +372,7 @@ stop N. Phone locked → same behavior + a local notification.
 
 ---
 
-### M-offline. Tour download for offline playback
+### M-offline. Tour download for offline playback — ✅ Done (PR #18)
 
 **What:** "Download for offline" on tour detail downloads all of the
 tour's audio files (and intro) to the app sandbox. Player prefers the
