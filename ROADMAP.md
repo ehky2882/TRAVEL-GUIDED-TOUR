@@ -470,10 +470,12 @@ mode → start the tour → audio plays end to end without buffering.
 audio URLs resolve, the rest of the app should "just work" — no code
 changes required if the prior milestones held to the data contract.
 
-**Open decision for owner:** Which CDN hosts the audio? Full
-tradeoff brief lives in `docs/cdn-decision.md` (written 2026-05-18;
-recommends Cloudflare R2). Pick once and stay there for V1, then
-update the brief's "Status" line with the picked option + date.
+**Audio hosting (decided 2026-05-18):** GitHub Releases for the
+design / prototype phase; switch to Cloudflare R2 before public
+release. Full reasoning and switch-triggers in `docs/cdn-decision.md`
+§ Status. Owner manages Releases uploads; URLs slot into
+`Tours.json` like any other HTTPS URL — no code changes required
+to use either path.
 
 ---
 

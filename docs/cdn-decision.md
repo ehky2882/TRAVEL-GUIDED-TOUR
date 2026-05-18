@@ -1,8 +1,23 @@
 # CDN decision brief — where does Atlas host its audio?
 
-> **Status:** decision pending; brief written 2026-05-18.
-> When you make the decision, replace the "Status" line with the
-> picked option + date, and the brief stays as the record of *why*.
+> **Status (decided 2026-05-18):**
+> - **Now (design / prototype phase):** GitHub Releases. Zero
+>   infrastructure, fast iteration; owner uploads MP3 assets to
+>   tagged Releases on `ehky2882/travel-guided-tour` and copies the
+>   `releases/download/.../<file>.mp3` URLs into `Tours.json`.
+> - **Before public release:** switch to **Cloudflare R2** with a
+>   custom subdomain (e.g. `audio.atlas.app`). Triggers to flip the
+>   switch — whichever comes first:
+>   1. First need to update an audio file in production (Releases
+>      are immutable by convention; mutability is the strongest
+>      single argument for R2).
+>   2. Crossing ~5k monthly listeners (preempt GitHub's
+>      not-a-primary-CDN posture).
+>   3. Wanting per-download access logs / play analytics.
+> - **Switching cost when the time comes:** afternoon's work —
+>   create R2 bucket, point custom domain, `rclone copy` the MP3s
+>   from Releases to R2, search-and-replace URLs in `Tours.json`,
+>   keep Releases live for a week as fallback.
 
 ## TL;DR — my recommendation: **Cloudflare R2**
 
