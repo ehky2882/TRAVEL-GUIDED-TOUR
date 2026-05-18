@@ -52,7 +52,8 @@ What's left for V1 release: **owner-side content work**
 **end-to-end QA on a real device** (M-qa), and the deferred
 **design / polish pass**. There's also an in-flight
 `claude/alltrails-alignment` branch with further home polish; see
-`HANDOFF.md` for the current owner-facing snapshot.
+`ROADMAP.md` § Where we are right now for the branch contents and
+the rebase reminder before PR #20.
 
 What's true today:
 
@@ -79,8 +80,32 @@ What's true today:
 - Theme tokens in `Theme/Atlas{Colors,Typography,Spacing}.swift` are
   still **placeholder values** pending the deferred design pass.
 
-See `ROADMAP.md` for the milestone-by-milestone history and
-`HANDOFF.md` for the current open-work snapshot.
+See `ROADMAP.md` for milestone-by-milestone history, known
+follow-ups, and the in-flight `claude/alltrails-alignment` branch.
+
+## Keep these docs in sync
+
+**Rule:** every session that ships a milestone, cuts scope, or
+changes the "what's true today" state of the project updates
+`CLAUDE.md` (this file) and `ROADMAP.md` *in the same commit* —
+never as a follow-up.
+
+Concretely, before ending a session that touched feature code,
+check whether:
+- the **Current State** section above still describes reality
+- the **Architecture** folder map still matches the on-disk layout
+- the relevant **ROADMAP** milestone is marked ✅ Done (PR #N) and
+  any decisions / cuts / follow-ups are recorded
+
+If yes, no doc change needed. If no, fix it in the same commit as
+the code change. Stale docs poisoned a recent session (Claude
+reported "all milestones done" without knowing about PR #19's home
+redesign) — the rule prevents a repeat.
+
+Temporary session-bridge notes don't live at repo root. If a
+session needs one, fold the permanent content into `CLAUDE.md` /
+`ROADMAP.md` before the session ends and move the snapshot to
+`archive/` with a `YYMMDD` suffix (e.g. `archive/HANDOFF-260518.md`).
 
 ## Build & Run
 

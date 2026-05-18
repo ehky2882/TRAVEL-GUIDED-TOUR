@@ -48,6 +48,13 @@ functionality baseline. What's left for V1: **M-launch-content**
 (end-to-end sanity sweep on a real device), plus the AllTrails
 alignment polish before PR #20.
 
+**In-flight: `claude/alltrails-alignment` branch.** Pushed to remote,
+not yet a PR. Iterates further on the home screen toward an AllTrails-
+style layout: custom `AtlasTabBar`, integrated floating-island drawer
++ tab bar, filter chip row, vertical tour list, recenter button.
+**Needs `git rebase main`** next local session to drop the
+now-redundant PR #19 commits before opening PR #20.
+
 **Pivot history.** The previous editorial-city-guide V1 work was
 mostly reshaped, not thrown out. The migration tables below are kept
 for historical reference; everything in them shipped.
@@ -457,6 +464,30 @@ polish phase below.
 
 ---
 
+## Known follow-ups (V1, non-blocking)
+
+Small known gaps that aren't blocking V1 release but should get
+picked up during M-qa or the polish phase. (Lifted from
+`archive/HANDOFF-260518.md` so they live in a doc that future
+sessions actually read.)
+
+- **"Because you searched [X]" home rail.** `RecentSearchStore`
+  captures the data but `HomeRailsViewModel` doesn't surface it as
+  a rail yet. Wire it up during the post-PR-#20 home-polish pass.
+- **`AudioPlayerService` progress aggregation.** `listenedSeconds`
+  on `LibraryEntry` currently reflects position within the current
+  audio item only — it doesn't aggregate across stops in a
+  multi-stop tour. Fine for V1 ("resume listening" works at item
+  granularity), worth a real pass before any analytics or
+  completion-tracking feature.
+- **Custom `AtlasTabBar` tradeoff.** The AllTrails alignment branch
+  replaces the system `TabView`'s tab bar with a custom one. That
+  gives up system-level features (badge dots, focus animations,
+  accessibility heuristics Apple ships). Easy to revisit post-V1
+  if any of those bite.
+
+---
+
 ## Post-V1 — Future direction (owner takes my lead, reserves right to change)
 
 The big arc after V1 is **opening the platform to outside makers.**
@@ -508,6 +539,12 @@ That requires several large pieces of infrastructure, roughly:
 ## Working agreement
 
 - This file is **living**. Edit it whenever the plan changes.
+- **Doc hygiene.** Every session that ships a milestone, cuts scope,
+  or changes the "what's true today" state of the project updates
+  `ROADMAP.md` and `CLAUDE.md` *in the same commit* — never as a
+  follow-up. Stale docs poisoned a recent session (Claude reported
+  "all milestones done" without knowing about PR #19's redesign);
+  the rule prevents a repeat.
 - Functionality first; design / tone / icon / polish after.
 - New code uses theme tokens even with placeholder values.
 - Each milestone ends in a runnable, simulator-reviewable state.
@@ -516,3 +553,7 @@ That requires several large pieces of infrastructure, roughly:
   milestone rather than expanding an existing one.
 - The product spec (`atlas_claude_code_prompt.md`) stays canonical for
   *what* we build. This roadmap is *when* and *how*.
+- Temporary "session bridge" notes (like the original `HANDOFF.md`)
+  don't live at repo root — fold their permanent content into
+  `ROADMAP.md` / `CLAUDE.md` and move the snapshot to `archive/`
+  with a `YYMMDD` suffix.
