@@ -16,6 +16,7 @@ struct HomeMapSection: View {
     let tours: [Tour]
     let userLocation: CLLocation?
     @Binding var selectedTourId: UUID?
+    @Binding var cameraPosition: MapCameraPosition
     /// Fires after a pan settles. The parent uses this to recompute
     /// the in-view tour count and any location-anchored UI.
     let onCameraChanged: (MKCoordinateRegion) -> Void
@@ -24,13 +25,8 @@ struct HomeMapSection: View {
     /// stop-id → parent tour-id and push that up through the binding.
     @State private var selectedStopId: UUID?
 
-    /// Fallback when user location is unknown. NYC, since V1 seed
-    /// content is NYC-based.
-    private let defaultCenter = CLLocationCoordinate2D(latitude: 40.7484, longitude: -73.9857)
-    private let defaultSpan = MKCoordinateSpan(latitudeDelta: 0.18, longitudeDelta: 0.18)
-
     var body: some View {
-        Map(initialPosition: .region(initialRegion), selection: $selectedStopId) {
+        Map(position: $cameraPosition, selection: $selectedStopId) {
             ForEach(allStopMarkers, id: \.id) { marker in
                 Marker(marker.title, systemImage: marker.systemImage, coordinate: marker.coordinate)
                     .tint(AtlasColors.accent)
@@ -41,9 +37,12 @@ struct HomeMapSection: View {
                 UserAnnotation()
             }
         }
+        // Note: MapUserLocationButton intentionally NOT included
+        // here — the home screen renders a custom recenter button
+        // at the bottom-left so it sits above the drawer rather
+        // than being obscured by the search bar at the top.
         .mapControls {
             MapCompass()
-            MapUserLocationButton()
             MapScaleView()
         }
         .onMapCameraChange(frequency: .onEnd) { context in
@@ -60,11 +59,6 @@ struct HomeMapSection: View {
     }
 
     // MARK: - Derived
-
-    private var initialRegion: MKCoordinateRegion {
-        let center = userLocation?.coordinate ?? defaultCenter
-        return MKCoordinateRegion(center: center, span: defaultSpan)
-    }
 
     /// All stops across every tour, flattened into pin descriptors.
     private var allStopMarkers: [StopMarker] {

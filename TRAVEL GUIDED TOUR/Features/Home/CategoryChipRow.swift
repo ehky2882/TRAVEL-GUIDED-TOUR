@@ -29,14 +29,7 @@ struct CategoryChipRow: View {
                 .foregroundStyle(isSelected ? AtlasColors.background : AtlasColors.primaryText)
                 .padding(.horizontal, AtlasSpacing.md)
                 .padding(.vertical, AtlasSpacing.xs + 2)
-                .background(
-                    Capsule()
-                        .fill(isSelected ? AtlasColors.primaryText : Color.clear)
-                )
-                .overlay(
-                    Capsule()
-                        .stroke(AtlasColors.primaryText.opacity(isSelected ? 0 : 0.4), lineWidth: 1)
-                )
+                .background(chipBackground(isSelected: isSelected))
         }
         .buttonStyle(.plain)
     }
@@ -55,15 +48,26 @@ struct CategoryChipRow: View {
             .foregroundStyle(isSelected ? AtlasColors.background : AtlasColors.primaryText)
             .padding(.horizontal, AtlasSpacing.md)
             .padding(.vertical, AtlasSpacing.xs + 2)
-            .background(
-                Capsule()
-                    .fill(isSelected ? AtlasColors.primaryText : Color.clear)
-            )
-            .overlay(
-                Capsule()
-                    .stroke(AtlasColors.primaryText.opacity(isSelected ? 0 : 0.4), lineWidth: 1)
-            )
+            .background(chipBackground(isSelected: isSelected))
         }
         .buttonStyle(.plain)
+    }
+
+    /// Unselected chips use `.regularMaterial` so the map underneath
+    /// is softened — without this, the map shows clearly through the
+    /// chip and competes with the label text.
+    @ViewBuilder
+    private func chipBackground(isSelected: Bool) -> some View {
+        if isSelected {
+            Capsule()
+                .fill(AtlasColors.primaryText)
+        } else {
+            Capsule()
+                .fill(.regularMaterial)
+                .overlay(
+                    Capsule()
+                        .stroke(AtlasColors.primaryText.opacity(0.2), lineWidth: 1)
+                )
+        }
     }
 }
