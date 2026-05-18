@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  validate-content:
+    name: Validate Tours.json
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: "5.10"
+      - name: Run Tours.json validator
+        run: swift scripts/validate-tours.swift
+
+  build:
+    name: Build (iOS Simulator)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Show available Xcode
+        run: |
+          xcodebuild -version
+          xcrun simctl list runtimes | head -20
+      - name: Build
+        run: |
+          set -o pipefail
+          xcodebuild build \
+            -scheme "TRAVEL GUIDED TOUR" \
+            -destination "generic/platform=iOS Simulator" \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO
+
+  test:
+    name: Run unit tests
+    runs-on: macos-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Detect test scheme
+        id: check
+        run: |
+          if xcodebuild -list -project "TRAVEL GUIDED TOUR.xcodeproj" 2>/dev/null \
+              | grep -q "TRAVEL GUIDED TOURTests"; then
+            echo "has_tests=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_tests=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Test target not yet wired into the Xcode project."
+            echo "::notice::See TRAVEL GUIDED TOURTests/README.md for setup steps."
+          fi
+      - name: Pick a simulator
+        if: steps.check.outputs.has_tests == 'true'
+        id: sim
+        run: |
+          SIMULATOR=$(xcrun simctl list devices available \
+            | grep -m 1 "iPhone" \
+            | sed -E 's/.*\(([0-9A-F-]+)\).*/\1/')
+          echo "udid=$SIMULATOR" >> "$GITHUB_OUTPUT"
+          echo "Picked simulator UDID: $SIMULATOR"
+      - name: Run tests
+        if: steps.check.outputs.has_tests == 'true'
+        run: |
+          set -o pipefail
+          xcodebuild test \
+            -scheme "TRAVEL GUIDED TOUR" \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -configuration Debug \
+            CODE_SIGNING_ALLOWED=NO
