@@ -545,6 +545,14 @@ record; this checklist is the live "what's left."
 
 ---
 
+## V1 — Development infrastructure
+
+| Milestone | Scope |
+|---|---|
+| **M-tests.** XCTest unit suite + CI | Cover the data/logic layer (`LibraryStore`, `HomeRailsViewModel`, `RecentSearchStore`, `RecentlyViewedStore`, `TourCategory`, `ToursData` decoding) with XCTest. GitHub Actions workflow runs the validator + `xcodebuild build` + `xcodebuild test` on every PR. Test target needs a one-time Xcode wiring step by the owner — see `TRAVEL GUIDED TOURTests/README.md`. **Status:** test files + workflow on `claude/m-tests-260518`; pending owner adding the Unit Testing Bundle target in Xcode and pushing the resulting `.pbxproj` change. |
+
+---
+
 ## V1 — Polish milestones (after functionality lands)
 
 | Milestone | Scope |
