@@ -17,7 +17,6 @@ struct HomeMapSection: View {
 
     @State private var selectedStopId: UUID?
 
-    private let mapHeight: CGFloat = 300
     /// Fallback when user location is unknown. NYC, since V1 seed
     /// content is NYC-based. Reasonable global default could replace
     /// this in M-launch-content once content scope is final.
@@ -36,7 +35,6 @@ struct HomeMapSection: View {
                 UserAnnotation()
             }
         }
-        .frame(height: mapHeight)
         .mapControls {
             MapCompass()
             MapUserLocationButton()

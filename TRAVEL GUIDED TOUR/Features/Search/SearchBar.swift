@@ -25,12 +25,15 @@ struct SearchBar: View {
             }
             .padding(.horizontal, AtlasSpacing.md)
             .padding(.vertical, AtlasSpacing.sm + AtlasSpacing.xs)
-            .background(AtlasColors.secondaryBackground)
+            // Glass material so the bar reads cleanly over both
+            // the map underneath (HomeView) and the white background
+            // of any other parent. iOS 26's `.regularMaterial` carries
+            // the Liquid Glass look automatically.
+            .background(.regularMaterial, in: Capsule())
             .overlay(
                 Capsule()
-                    .stroke(AtlasColors.secondaryText.opacity(0.2), lineWidth: 1)
+                    .stroke(AtlasColors.secondaryText.opacity(0.15), lineWidth: 1)
             )
-            .clipShape(Capsule())
         }
         .buttonStyle(.plain)
         .sheet(isPresented: $showingSearch) {
