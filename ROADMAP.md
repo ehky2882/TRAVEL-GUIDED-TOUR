@@ -421,6 +421,12 @@ mode → start the tour → audio plays end to end without buffering.
 - `docs/Tours.template.json` — two filled-in example tours
   (single-piece + multi-stop) showing every field. Copy from this
   when authoring real entries.
+- `scripts/validate-tours.swift` — pre-commit safety net. Catches
+  typos, duplicate UUIDs, broken maker refs, kind ↔ stop count
+  mismatches, coord-range errors, audio-duration math problems
+  before they crash the app at launch. Run manually with
+  `swift scripts/validate-tours.swift` or wire into a git
+  pre-commit hook (one-liner in `docs/authoring-tours.md`).
 
 **Hand-off shape:** Once `Tours.json` is updated with real content and
 audio URLs resolve, the rest of the app should "just work" — no code

@@ -168,16 +168,65 @@ If you find yourself stretching to fit (e.g., a food + architecture walking tour
 
 ## Validating the JSON before committing
 
-Before you commit an edited `Tours.json`, sanity-check it:
+Before you commit an edited `Tours.json`, run the validator:
 
-1. **JSON syntactically valid.** Paste the file contents into [jsonlint.com](https://jsonlint.com/) or run `python3 -m json.tool Tours.json > /dev/null` in Terminal — both surface trailing commas, missing brackets, etc.
-2. **All UUIDs are unique.** Search for duplicates manually or use `grep -oE '"id": "[^"]+"' Tours.json | sort | uniq -d` — should print nothing.
-3. **Every `makerId` matches a maker in the `makers` array.** Easy to mistype.
-4. **Stop `order` values run 0,1,2,… per tour.** No gaps, no duplicates within a tour.
-5. **`totalDurationSeconds` equals the sum of stop durations + intro.**
-6. **App launches without a crash** when you build to simulator. (A `JSONDecoder` failure at startup means a field is missing or mistyped — the Xcode console will name the culprit.)
+```bash
+swift scripts/validate-tours.swift
+```
 
-A build-time validator script that automates 2–5 is a candidate follow-up — tracked in ROADMAP.md as a non-blocking polish item.
+(Run from the repo root. To validate a different file, pass its path
+as the only argument.)
+
+The validator decodes `Tours.json` against the live Swift data model
+and runs every check below. Exit code 0 means clean; 1 means
+errors; 2 means the file couldn't be parsed at all.
+
+What it catches:
+
+- **JSON syntax errors** (missing brackets, trailing commas).
+- **Missing or mistyped fields** — every required field on every
+  Maker / Tour / Stop, with a path like
+  `[tours > 1 > stops > 0 > latitude]` for fast lookup.
+- **Bad enum values** — `primaryCategory: "fakecategory"`,
+  `kind: "single-stop"`, `triggerMode: "auto"`, etc.
+- **Duplicate UUIDs** — across makers, across tours, and across
+  stops globally.
+- **Broken maker references** — a tour's `makerId` that doesn't
+  match any maker in the `makers` array.
+- **`kind` ↔ stop count mismatch** — `single` with ≠ 1 stop;
+  `multiStop` with < 2 stops.
+- **Stop `order` packing** — must be 0..<count, no gaps, no
+  duplicates within a tour.
+- **Coordinate ranges** — latitude in [-90, 90], longitude in
+  [-180, 180].
+- **Centroid sanity** — warns if the tour centroid is outside the
+  bounding box of its stops (likely a copy-paste mistake).
+- **Audio math** — `totalDurationSeconds` must cover the sum of
+  stop durations; warns if they don't match exactly on a tour
+  with no intro audio.
+- **Sanity bounds** — `audioDurationSeconds > 0`,
+  `triggerRadiusMeters > 0`, warns if radius is outside 5–500m.
+- **URL validity** — every `heroImageURL`, `audioURL`,
+  `introAudioURL`, `imageURL`, `avatarURL`, `websiteURL` is a
+  well-formed URL with a scheme + host. (Does NOT check that the
+  URL resolves — placeholder `atlas-tours.example/...` URLs pass.)
+- **Empty required text** — `title`, `bio`, `displayName`, etc.
+
+What it doesn't (yet) catch:
+
+- The validator is not wired into the Xcode build. Run it manually
+  before committing, or add a git pre-commit hook:
+  ```bash
+  echo 'exec swift scripts/validate-tours.swift' > .git/hooks/pre-commit
+  chmod +x .git/hooks/pre-commit
+  ```
+- It doesn't check that audio URLs actually resolve to playable
+  files. That's a manual QA step before launch.
+
+If you change the Swift data model (`Tour.swift`, `Stop.swift`,
+`Maker.swift`, `TourCategory.swift`), update the matching mirror
+types at the top of `scripts/validate-tours.swift` in the same
+commit. The script has a comment near the top reminding you.
 
 ---
 

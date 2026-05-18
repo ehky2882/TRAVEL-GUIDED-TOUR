@@ -117,6 +117,16 @@ Beyond this file and `ROADMAP.md`:
     for authoring tour content (used in M-launch-content; doubles
     as the spec for the future maker upload form).
   - `docs/Tours.template.json` — example tours showing every field.
+- `scripts/` — developer-facing tooling:
+  - `scripts/validate-tours.swift` — runs against
+    `TRAVEL GUIDED TOUR/Resources/Tours.json` and catches typos /
+    duplicate UUIDs / broken maker refs / kind ↔ stop count
+    mismatches / coord-range errors before the app crashes at
+    launch. Invoke: `swift scripts/validate-tours.swift`.
+    **The script mirrors the Swift data model — if you change
+    `Tour.swift` / `Stop.swift` / `Maker.swift` / `TourCategory.swift`,
+    update the mirror types at the top of the script in the same
+    commit.**
 - `archive/` — dated snapshots of retired docs (see `archive/README.md`).
 
 ## Build & Run
