@@ -104,6 +104,40 @@
       "primaryCategory": "architecture",
       "tags": ["brooklyn", "walking tour", "20th century"],
       "priceUSD": 0
+    },
+    {
+      "id": "17050c9f-27a2-45e2-9e69-3ae9528c66c9",
+      "title": "The South Facade of Grand Central",
+      "shortDescription": "Two minutes on the Tiffany clock, the Glory of Commerce sculpture, and the eagle nobody notices.",
+      "longDescription": "A short audio piece standing at 42nd Street and Park Avenue, looking up at the south face of Grand Central Terminal. Three figures carved fifty feet tall — Mercury, Hercules, Minerva — wrapped around the world's largest Tiffany glass clock. Most people walk underneath it for years without ever knowing. Two minutes here changes what you're looking at: what the figures are, what they were made to say, and where to find a stray eagle from the 1898 station the Vanderbilts tore down.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/grand-central-south-facade-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e2d949e3-4c6f-42b7-9ff2-6bd52c95f7d5",
+          "order": 0,
+          "title": "The South Facade of Grand Central",
+          "caption": "Stand at 42nd Street and Park Avenue, looking up at the clock and the three figures around it.",
+          "latitude": 40.7519,
+          "longitude": -73.9772,
+          "audioURL": "https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/releases/download/audio-test-001/GRAND.CENTRAL.SOUTH.FACADE.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Welcome to Grand Central Terminal.\n\nYou should be standing on 42nd Street, on the south side, looking up at the main facade of the building. You'll know you're in the right place if you can see three things: a massive clock at the top, three carved figures arranged around it, and an American flag flying above.\n\nTake a moment to find all three. The clock is the easiest — it's set into the center of the facade, between two enormous columns. The three figures are carved in stone, draped around the clock like they're holding it up. The one in the middle has wings on his cap…\n\nGot it? Good.\n\nNow — look at the clock first. It's thirteen feet across. The face is Tiffany — the largest example of Tiffany glass anywhere in the world. Most people walk underneath it for years without ever knowing.\n\nThe figure in the middle, with the winged cap, is Mercury. Roman god of merchants, travelers, and thieves. To his left, your right as you look up, is Hercules — strength, leaning on his club. On the other side, Minerva — wisdom, in a helmet. Together they're called the Glory of Commerce.\n\nThis isn't decoration. When the terminal opened in 1913, New York was the richest city in the richest country on earth, and the Vanderbilts who built it wanted everyone arriving here to look up and understand exactly what they were walking into. A temple to American capitalism, with Mercury at the center.\n\nThe whole sculptural group is fifty feet tall. When it was carved, it was the largest of its kind in the world…\n\nOne last thing before you go in. Look down from Mercury, just below his feet, and you'll see an eagle perched on the cornice. The original Grand Central, the one that stood here before this building, had a dozen of these eagles along its roofline. When it was torn down in 1913, the eagles were sold off, given away, scattered across the country. A few have been hunted down and brought back. There's one around the corner on Vanderbilt Avenue, if you want to find it later."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7519,
+      "centroidLongitude": -73.9772,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["beaux-arts", "history", "midtown", "1913", "transit", "tiffany", "vanderbilt"],
+      "priceUSD": 0
     }
   ]
 }
