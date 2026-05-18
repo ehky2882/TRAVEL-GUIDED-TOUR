@@ -30,30 +30,32 @@ struct HomeView: View {
     @State private var sheetDetent: BottomSheetDetent = .peek
 
     var body: some View {
-        ZStack(alignment: .top) {
-            HomeMapSection(
-                tours: dataService.tours,
-                userLocation: locationManager.userLocation,
-                onCameraChanged: { region in
-                    visibleRegion = region
+        NavigationStack {
+            ZStack(alignment: .top) {
+                HomeMapSection(
+                    tours: dataService.tours,
+                    userLocation: locationManager.userLocation,
+                    onCameraChanged: { region in
+                        visibleRegion = region
+                    }
+                )
+                .ignoresSafeArea()
+
+                SearchBar()
+                    .padding(.horizontal, AtlasSpacing.lg)
+                    .padding(.top, AtlasSpacing.sm)
+
+                // Custom bottom sheet — not `.sheet` because the standard
+                // SwiftUI sheet system presents at the window level and
+                // covers the tab bar. Living inside this ZStack keeps the
+                // sheet within the tab content's safe area, so the tab
+                // bar above remains visible at every detent.
+                BottomSheet(detent: $sheetDetent, peekHeight: peekHeight) {
+                    railsSheetContent
                 }
-            )
-            .ignoresSafeArea()
-
-            SearchBar()
-                .padding(.horizontal, AtlasSpacing.lg)
-                .padding(.top, AtlasSpacing.sm)
-
-            // Custom bottom sheet — not `.sheet` because the standard
-            // SwiftUI sheet system presents at the window level and
-            // covers the tab bar. Living inside this ZStack keeps the
-            // sheet within the tab content's safe area, so the tab
-            // bar above remains visible at every detent.
-            BottomSheet(detent: $sheetDetent, peekHeight: peekHeight) {
-                railsSheetContent
             }
+            .toolbar(.hidden, for: .navigationBar)
         }
-        .toolbar(.hidden, for: .navigationBar)
     }
 
     // MARK: - Sheet content
@@ -144,7 +146,7 @@ struct HomeView: View {
             Text("No tours yet")
                 .font(AtlasTypography.headline)
                 .foregroundStyle(AtlasColors.primaryText)
-            Text("Tours will appear here once Tours.json is populated.")
+            Text("Check back soon — Atlas is preparing its first audio tours.")
                 .font(AtlasTypography.body)
                 .foregroundStyle(AtlasColors.secondaryText)
                 .multilineTextAlignment(.center)

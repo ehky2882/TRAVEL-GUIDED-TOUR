@@ -205,7 +205,7 @@ private struct DownloadedEmptyState: View {
         EmptyStateLayout(
             icon: "arrow.down.circle",
             title: "No downloads yet",
-            message: "Downloading tours for offline listening lands in M-offline."
+            message: "Tap the download icon on any tour to listen offline — useful for walking tours where you might lose signal."
         )
     }
 }
