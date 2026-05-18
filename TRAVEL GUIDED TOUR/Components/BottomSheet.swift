@@ -34,32 +34,46 @@ struct BottomSheet<Content: View>: View {
     /// gives room for a drag handle + a single header line.
     var peekHeight: CGFloat = 100
     /// Inset from the screen edges on the left, right, AND bottom of
-    /// the drawer. Same value on all three sides so the drawer reads
-    /// as a uniformly-floating card. The iOS 26 floating tab bar sits
-    /// above the drawer at the same inset, so the two visually align
-    /// into one integrated element.
+    /// the drawer.
     var horizontalInset: CGFloat = 8
-    /// Corner radius applied to all four corners of the drawer.
-    var cornerRadius: CGFloat = 20
+    /// Drawer's top corner radius. Rounder than a typical card but
+    /// less than the phone-radius bottom — splits the difference
+    /// (~34pt) so the top reads as a generous curve without making
+    /// the drawer look like a flipped half-pill.
+    var topCornerRadius: CGFloat = 36
+    /// Drawer's bottom corner radius — matches the phone screen's
+    /// rounded corners so the drawer feels like a floating island
+    /// that "follows" the device's bottom curvature. The AtlasTabBar
+    /// uses the same bottom radius so when stacked they read as one
+    /// continuous phone-shaped pill.
+    var bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius
 
     /// Signed drag delta in points: positive when the user is dragging
     /// down (shrinking the drawer), negative when dragging up. Reset
     /// to 0 inside a `withAnimation` block on gesture end so the snap
     /// animates as a single tween instead of two separate changes.
-    @State private var dragOffset: CGFloat = 0
+    ///
+    /// Exposed as a `@Binding` so the parent can position other UI
+    /// (like the home screen's recenter button) that needs to track
+    /// the drawer's edge during the drag — not just after the snap.
+    @Binding var dragOffset: CGFloat
     @GestureState private var isDragging: Bool = false
 
     init(
         detent: Binding<BottomSheetDetent>,
+        dragOffset: Binding<CGFloat>,
         peekHeight: CGFloat = 100,
         horizontalInset: CGFloat = 8,
-        cornerRadius: CGFloat = 20,
+        topCornerRadius: CGFloat = 36,
+        bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius,
         @ViewBuilder content: () -> Content
     ) {
         self._detent = detent
+        self._dragOffset = dragOffset
         self.peekHeight = peekHeight
         self.horizontalInset = horizontalInset
-        self.cornerRadius = cornerRadius
+        self.topCornerRadius = topCornerRadius
+        self.bottomCornerRadius = bottomCornerRadius
         self.content = content()
     }
 
@@ -81,7 +95,13 @@ struct BottomSheet<Content: View>: View {
             .frame(height: dragHeight, alignment: .top)
             .background(.regularMaterial)
             .clipShape(
-                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                UnevenRoundedRectangle(
+                    topLeadingRadius: topCornerRadius,
+                    bottomLeadingRadius: bottomCornerRadius,
+                    bottomTrailingRadius: bottomCornerRadius,
+                    topTrailingRadius: topCornerRadius,
+                    style: .continuous
+                )
             )
             // Equal inset on left, right, and bottom — the drawer's
             // glass extends *past* the safe area into the tab bar's
@@ -145,7 +165,11 @@ struct BottomSheet<Content: View>: View {
         switch d {
         case .peek:   return peekHeight
         case .medium: return geo.size.height * 0.5
-        case .large:  return geo.size.height * 0.92
+        case .large:
+            // Fill the container, less an inset on top to mirror the
+            // 8pt bottom inset. Result: drawer reads as a fully-floating
+            // card whose top hides the search bar / chip row behind it.
+            return geo.size.height - (horizontalInset * 2)
         }
     }
 

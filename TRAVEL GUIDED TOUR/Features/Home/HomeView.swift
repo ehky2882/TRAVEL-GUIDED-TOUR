@@ -24,11 +24,26 @@ struct HomeView: View {
 
     @State private var visibleRegion: MKCoordinateRegion?
     @State private var sheetDetent: BottomSheetDetent = .peek
+    /// Lifted out of BottomSheet so the recenter button can read the
+    /// drawer's in-progress drag delta and stay glued to its top edge
+    /// throughout the drag (not just snap on release).
+    @State private var sheetDragOffset: CGFloat = 0
     @State private var selectedCategory: TourCategory? = nil
     @State private var selectedTourId: UUID? = nil
+    @State private var cameraPosition: MapCameraPosition = .region(
+        MKCoordinateRegion(
+            // Fallback start (NYC) — overridden on first appear if
+            // the user has granted location.
+            center: CLLocationCoordinate2D(latitude: 40.7484, longitude: -73.9857),
+            span: MKCoordinateSpan(latitudeDelta: 0.18, longitudeDelta: 0.18)
+        )
+    )
 
-    /// Tunable peek height — enough for the drag handle + header line.
-    private let peekHeight: CGFloat = 100
+    /// Peek-detent height. Sized so the AtlasTabBar (~62pt) + drag
+    /// handle (~16pt) + centered header line (~30pt) all fit — and
+    /// nothing more. Increasing this lets the first list item peek;
+    /// decreasing clips the header.
+    private let peekHeight: CGFloat = 110
 
     var body: some View {
         // NavigationStack wraps the layout so the tour list cards,
@@ -36,40 +51,108 @@ struct HomeView: View {
         // context to push onto. The nav bar itself is hidden — the
         // floating search bar + filter chips replace it visually.
         NavigationStack {
-            ZStack(alignment: .top) {
-                HomeMapSection(
-                    tours: filteredTours,
-                    userLocation: locationManager.userLocation,
-                    selectedTourId: $selectedTourId,
-                    onCameraChanged: { region in
-                        visibleRegion = region
-                    }
-                )
-                .ignoresSafeArea()
-
-                VStack(spacing: AtlasSpacing.sm) {
-                    SearchBar()
-                        .padding(.horizontal, AtlasSpacing.lg)
-
-                    CategoryChipRow(
-                        availableCategories: categoriesWithTours,
-                        selectedCategory: $selectedCategory
+            GeometryReader { geo in
+                ZStack(alignment: .top) {
+                    HomeMapSection(
+                        tours: filteredTours,
+                        userLocation: locationManager.userLocation,
+                        selectedTourId: $selectedTourId,
+                        cameraPosition: $cameraPosition,
+                        onCameraChanged: { region in
+                            visibleRegion = region
+                        }
                     )
-                }
-                .padding(.top, AtlasSpacing.sm)
+                    .ignoresSafeArea()
 
-                BottomSheet(detent: $sheetDetent, peekHeight: peekHeight) {
-                    drawerContent
+                    VStack(spacing: AtlasSpacing.sm) {
+                        SearchBar()
+                            .padding(.horizontal, AtlasSpacing.lg)
+
+                        CategoryChipRow(
+                            availableCategories: chipPlaceholderCategories,
+                            selectedCategory: $selectedCategory
+                        )
+                    }
+                    .padding(.top, AtlasSpacing.sm)
+
+                    BottomSheet(
+                        detent: $sheetDetent,
+                        dragOffset: $sheetDragOffset,
+                        peekHeight: peekHeight
+                    ) {
+                        drawerContent
+                    }
+
+                    // Floating recenter button anchored to bottom-leading,
+                    // padded up by the drawer's *current* visible height —
+                    // which includes the in-progress drag delta — so the
+                    // button stays glued to the drawer's top edge during
+                    // the drag, not just after release.
+                    recenterButton
+                        .padding(.leading, AtlasSpacing.md)
+                        .padding(.bottom, drawerVisibleHeight(in: geo) + AtlasSpacing.sm)
+                        .frame(
+                            maxWidth: .infinity,
+                            maxHeight: .infinity,
+                            alignment: .bottomLeading
+                        )
+                        // Hide at the full detent — the drawer covers
+                        // the map so a "recenter on me" affordance is
+                        // meaningless. Fades in/out with the detent.
+                        .opacity(sheetDetent == .large ? 0 : 1)
+                        .allowsHitTesting(sheetDetent != .large)
+                }
+                .toolbar(.hidden, for: .navigationBar)
+                .onChange(of: selectedTourId, initial: false) { _, _ in
+                    if selectedTourId != nil && sheetDetent == .peek {
+                        sheetDetent = .medium
+                    }
                 }
             }
-            .toolbar(.hidden, for: .navigationBar)
-            .onChange(of: selectedTourId, initial: false) { _, _ in
-                // When a pin is tapped, expand to medium so the drawer
-                // surfaces the matching card.
-                if selectedTourId != nil && sheetDetent == .peek {
-                    sheetDetent = .medium
-                }
-            }
+        }
+    }
+
+    /// Mirrors the formula BottomSheet uses internally so the
+    /// recenter button can sit exactly at the drawer's top edge —
+    /// including during the drag. `sheetDragOffset` is the in-flight
+    /// drag delta (negative = dragging up, positive = dragging down)
+    /// so the visible height grows/shrinks live with the user's
+    /// finger.
+    private func drawerVisibleHeight(in geo: GeometryProxy) -> CGFloat {
+        let baseHeight: CGFloat
+        switch sheetDetent {
+        case .peek:   baseHeight = peekHeight
+        case .medium: baseHeight = geo.size.height * 0.5
+        case .large:  baseHeight = geo.size.height - (AtlasSpacing.sm * 2)
+        }
+        return max(peekHeight, baseHeight - sheetDragOffset)
+    }
+
+    // MARK: - Recenter button
+
+    private var recenterButton: some View {
+        Button {
+            recenterOnUser()
+        } label: {
+            Image(systemName: "location.fill")
+                .font(.system(size: 16))
+                .foregroundStyle(AtlasColors.primaryText)
+                .frame(width: 44, height: 44)
+                .background(.thickMaterial)
+                .clipShape(Circle())
+        }
+        .accessibilityLabel("Recenter on my location")
+    }
+
+    private func recenterOnUser() {
+        guard let userLocation = locationManager.userLocation else { return }
+        withAnimation(.easeInOut(duration: 0.4)) {
+            cameraPosition = .region(
+                MKCoordinateRegion(
+                    center: userLocation.coordinate,
+                    span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+                )
+            )
         }
     }
 
@@ -79,15 +162,15 @@ struct HomeView: View {
         ScrollViewReader { proxy in
             VStack(alignment: .leading, spacing: 0) {
                 // Header — dynamic count for the area in view.
-                HStack {
-                    Text(headerText)
-                        .font(AtlasTypography.headline)
-                        .foregroundStyle(AtlasColors.primaryText)
-                    Spacer()
-                }
-                .padding(.horizontal, AtlasSpacing.lg)
-                .padding(.top, AtlasSpacing.sm)
-                .padding(.bottom, AtlasSpacing.sm)
+                // Centered to read cleanly at the peek detent where
+                // this is the *only* drawer content visible.
+                Text(headerText)
+                    .font(AtlasTypography.headline)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, AtlasSpacing.lg)
+                    .padding(.top, AtlasSpacing.sm)
+                    .padding(.bottom, AtlasSpacing.sm)
 
                 ScrollView {
                     LazyVStack(alignment: .leading, spacing: AtlasSpacing.md) {
@@ -198,11 +281,13 @@ struct HomeView: View {
             .first { $0.id != cont }
     }
 
-    /// Only show chips for categories that actually have tours in the
-    /// catalog. Avoids dead chips that filter to nothing.
-    private var categoriesWithTours: [TourCategory] {
-        let used = Set(dataService.tours.map { $0.primaryCategory })
-        return TourCategory.allCases.filter { used.contains($0) }
+    /// Show all `TourCategory` cases as filter-chip placeholders for
+    /// now. Owner direction: surface the chip taxonomy even before
+    /// every category has content. Categories with no tours filter
+    /// to an empty list when tapped — fine as a placeholder; will
+    /// likely refine once M-launch-content populates the catalog.
+    private var chipPlaceholderCategories: [TourCategory] {
+        TourCategory.allCases
     }
 
     private var toursInView: [Tour] {
