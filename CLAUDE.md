@@ -112,6 +112,9 @@ session needs one, fold the permanent content into `CLAUDE.md` /
 Beyond this file and `ROADMAP.md`:
 
 - `atlas_claude_code_prompt.md` — canonical product spec.
+- `CONTRIBUTING.md` — onboarding doc for new contributors:
+  toolchain setup, branching/PR workflow, code conventions
+  pointer, communication norms.
 - `docs/` — reference material that isn't read at session start:
   - `docs/authoring-tours.md` — UI-agnostic field-by-field guide
     for authoring tour content (used in M-launch-content; doubles
