@@ -138,6 +138,40 @@
       "primaryCategory": "architecture",
       "tags": ["beaux-arts", "history", "midtown", "1913", "transit", "tiffany", "vanderbilt"],
       "priceUSD": 0
+    },
+    {
+      "id": "b794fa21-1665-4f09-bf8f-ce6ce68fff9b",
+      "title": "Times Square — The View from the Red Steps",
+      "shortDescription": "Three minutes on the wishbone view of Times Square from the red steps — what you're looking at, and how it got this way.",
+      "longDescription": "A short audio piece from the top of the red glass steps above the TKTS booth — the unofficial best seat in Times Square, with the whole square opening south like a wishbone. The piece walks you through a slow rotation: south over Broadway and Seventh Avenue, west toward the hidden Theater District, north to the bronze chaplain almost nobody notices. Three minutes on what Times Square is, how it works (by zoning, not accident), and the version of itself it used to be before the 1990s cleanup.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/times-square-from-tkts-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dabcd62c-c363-4734-9b2d-82f4327cb28d",
+          "order": 0,
+          "title": "Times Square — The View from the Red Steps",
+          "caption": "Stand on or near the red TKTS steps at the north end of Times Square. Face south down Broadway and Seventh Avenue.",
+          "latitude": 40.759173368078315,
+          "longitude": -73.98493719851957,
+          "audioURL": "https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/releases/download/audio-test-002/times-square-from-tkts.mp3",
+          "audioDurationSeconds": 201,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Welcome to Times Square.\n\nYou should be standing at the north end of Times Square, on or near the red TKTS steps. Behind you, a glass staircase rises above a ticket booth. In front of you, Broadway and Seventh Avenue split apart like the legs of a wishbone, opening up the whole length of the square to the south. If you're surrounded by people taking photos in roughly every direction, you're in the right place.\n\nTake a moment. Don't try to look at any one thing yet. Just notice how much there is to look at.\n\nThat's the first thing worth knowing. Times Square is designed to overwhelm you. Every surface that can hold a screen, holds a screen. By city ordinance, buildings in this district are required to display illuminated signs — it's the only neighborhood in New York where bright commercial signage is mandatory, not just allowed. The Times Square you're looking at isn't an accident. It's zoning.\n\nOkay. Now look south, down the wishbone.\n\nThe narrow triangular building at the far end, the one with the giant screens wrapping around it, is One Times Square. That's the building. The one the square is named after. It opened in 1904 as the headquarters of the New York Times — which is where the name comes from. The Times moved out within a decade, but the name stuck.\n\nLook at the very top of it. There's a flagpole. Every New Year's Eve, a crystal ball drops down that flagpole, and a million people stand more or less where you're standing now to watch it happen. The rest of the year, almost nobody looks up at it.\n\nNow turn slowly to your right.\n\nYou're looking west, toward the Broadway theater district. Most of the actual theaters aren't on Broadway itself — they're on the side streets, 44th through 50th. The marquees you can see from here are just the ones that face the square. Hidden behind them, within a three-block radius, are forty-one theaters, all running shows tonight.\n\nKeep turning. Now you're looking north.\n\nBehind the red steps you're standing on, there's a statue. That's Father Francis Duffy — a Catholic priest who served as a chaplain in World War I and became one of the most decorated soldiers in the U.S. Army. The square around him is named for him. Most people walk past without ever reading the plaque.\n\nKeep turning. You're looking east now, then south again. You've come full circle.\n\nHere's the thing worth knowing about Times Square. For most of the twentieth century, this place was a wreck. By the 1970s and 80s, it was famous for porn theaters, drug dealing, and crime. The Disney-fied, family-tourist version you're standing in is only about thirty years old — the result of a deliberate, controversial cleanup campaign in the 1990s that pushed out the old businesses and brought in the chain stores and ticker-tape billboards."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 201,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.759173368078315,
+      "centroidLongitude": -73.98493719851957,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": ["times square", "broadway", "theater district", "father duffy", "manhattan", "zoning"],
+      "priceUSD": 0
     }
   ]
 }
