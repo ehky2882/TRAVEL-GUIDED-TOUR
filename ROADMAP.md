@@ -41,19 +41,57 @@ Principles that override everything else in this file:
 **Status (2026-05-18):** every V1 functionality milestone is shipped
 on `main` (M1–M3, M-data-model, M-audio-foundation, M-tour-detail,
 M-player, M-home, M-search, M-maker, M-library, M-geofencing,
-M-offline; M-map was cut). A home-screen redesign (PR #19) and an
-in-flight `claude/alltrails-alignment` branch sit on top of the
-functionality baseline. What's left for V1: **M-launch-content**
-(owner records audio + authors real `Tours.json`) and **M-qa**
-(end-to-end sanity sweep on a real device), plus the AllTrails
-alignment polish before PR #20.
+M-offline; M-map was cut). A home-screen redesign landed as PR #19.
+PR #20 (this branch) lands the M-launch-content authoring scaffold
++ CONTRIBUTING.md + doc-hygiene rule.
 
-**In-flight: `claude/alltrails-alignment` branch.** Pushed to remote,
-not yet a PR. Iterates further on the home screen toward an AllTrails-
-style layout: custom `AtlasTabBar`, integrated floating-island drawer
-+ tab bar, filter chip row, vertical tour list, recenter button.
-**Needs `git rebase main`** next local session to drop the
-now-redundant PR #19 commits before opening PR #20.
+What's left for V1: **M-launch-content** (owner records audio +
+authors real `Tours.json` — full scaffold ready in `docs/` and
+`scripts/`), **M-qa** (end-to-end sanity sweep on a real device),
+plus the deferred **design / polish pass**. A parked
+`claude/alltrails-alignment` branch holds an exploratory
+AllTrails-style home redesign to revisit during the design pass —
+see "Parked work" below.
+
+**Parked work: `claude/alltrails-alignment` branch.** A second-pass
+home redesign exploring an AllTrails-style direction. Three commits
+on top of `4f6beb6` (M-offline, #18), dated 2026-05-16/17. Net
+change vs `main` after PR #20 lands: roughly +700/-400 lines across
+9 files. Polished work, not WIP despite the middle commit's name —
+uses theme tokens, doc comments, accessibility labels.
+
+What's on the branch:
+- `Components/AtlasTabBar.swift` (new) — custom tab bar replacing
+  SwiftUI's `TabView` chrome, shaped to match the home drawer's
+  width/inset/corners so they read as one "floating island."
+- `Features/Home/CategoryChipRow.swift` (new) — horizontal-scroll
+  category filter chips.
+- `Features/Home/TourListCard.swift` (new) — larger card for the
+  drawer's vertical tour list (replaces horizontal rail carousels).
+- `Theme/AtlasSpacing.swift` — adds `phoneScreenRadius` token (48pt)
+  for the floating-island shape.
+- Heavy rework of `Features/Home/HomeView.swift`,
+  `Features/Home/HomeMapSection.swift`, `Components/BottomSheet.swift`,
+  `ContentView.swift` to wire the new pieces together.
+- Recenter button on the map.
+
+Why it's parked, not merged: per the project's deferred-design
+discipline, this branch is a substantial design direction
+commitment (chips + vertical list vs. PR #19's rail carousels) that
+should be A/B-evaluated on a real device alongside the design pass,
+not merged on faith. Main currently has the simpler PR #19 home as
+the "good enough for V1" baseline.
+
+How to revive when the design pass starts:
+1. `git fetch origin claude/alltrails-alignment`
+2. `git rebase main` on the branch (drops the now-redundant copy of
+   the PR #19 home-redesign commit, since main already has it via
+   the #19 squash).
+3. Build to a real device; A/B the result against current main's
+   home.
+4. If keeping: open it as a PR. If not: extract any universally-good
+   pieces (the custom tab bar and recenter button are arguably
+   non-controversial), then delete the branch.
 
 **Pivot history.** The previous editorial-city-guide V1 work was
 mostly reshaped, not thrown out. The migration tables below are kept

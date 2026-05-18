@@ -50,10 +50,13 @@ Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`
 What's left for V1 release: **owner-side content work**
 (M-launch-content — record audio + author real `Tours.json`),
 **end-to-end QA on a real device** (M-qa), and the deferred
-**design / polish pass**. There's also an in-flight
-`claude/alltrails-alignment` branch with further home polish; see
-`ROADMAP.md` § Where we are right now for the branch contents and
-the rebase reminder before PR #20.
+**design / polish pass**. A parked
+`claude/alltrails-alignment` branch holds an AllTrails-style home
+redesign explored on 2026-05-16/17 — custom tab bar, category chip
+row, vertical tour list, floating-island shape. Not merged because
+it's a design direction commitment that needs real-device A/B
+evaluation alongside the design pass. See `ROADMAP.md` § Parked
+work for what's on it and how to revive.
 
 What's true today:
 
@@ -81,7 +84,7 @@ What's true today:
   still **placeholder values** pending the deferred design pass.
 
 See `ROADMAP.md` for milestone-by-milestone history, known
-follow-ups, and the in-flight `claude/alltrails-alignment` branch.
+follow-ups, and the parked `claude/alltrails-alignment` branch.
 
 ## Keep these docs in sync
 
