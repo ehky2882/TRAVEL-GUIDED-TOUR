@@ -151,31 +151,134 @@ Xcode and ship. But there's a workflow cost: see "Watch-outs."
   Atlas at V1 is comfortably under both, but a future of 200 tours
   could approach them.
 
+### 4. Firebase Storage (Google Cloud Storage with Firebase tooling)
+
+**What it is.** Google Cloud Storage under the hood with Firebase's
+friendlier SDK and dashboard on top.
+
+**Costs (current pricing — verify):**
+- Storage: $0.026 per GB per month (close to S3).
+- Egress: $0.12 per GB after a small free tier (1GB/day free
+  download). At Atlas's 1k-listener scale (~666MB/day on average),
+  you stay in the free tier; at 10k listeners (~6.6GB/day) you
+  pay for ~5.6GB/day overage.
+- A small grab-bag of per-operation charges.
+
+**Setup work:** Create a Firebase project, enable Cloud Storage,
+configure security rules so files are publicly readable, upload via
+the web dashboard. Maybe 2–3 hours first time. Easier than AWS;
+slightly more involved than R2 (security rules are a real concept
+to learn).
+
+**Watch-outs:** Pricing follows the same curve as S3+CloudFront —
+download fees scale with success. Vendor lock-in to the Google
+ecosystem. Security-rules language is a learning curve if Atlas
+ever wants per-user access (post-V1).
+
+**No reason to pick this over R2 specifically** unless you already
+use Firebase for other things (Auth, Firestore, etc.) and want to
+keep everything in one console.
+
+### 5. Supabase Storage
+
+**What it is.** Supabase is a Postgres-backed Backend-as-a-Service
+(think open-source Firebase alternative). Their storage product
+sits alongside their database, auth, and edge functions, sharing
+one project + dashboard.
+
+**Costs (current pricing — verify):**
+- Free tier: 1GB storage + 5GB bandwidth/month. Atlas's V1 scale
+  fits comfortably.
+- Pro plan: **$25/month minimum**, includes 100GB storage + 250GB
+  bandwidth. Egress over 250GB/month is ~$0.09/GB.
+
+**Setup work:** Create a Supabase project, create a storage bucket,
+set policies, upload via the dashboard. Comparable to Firebase —
+maybe 2–3 hours first time.
+
+**Watch-outs:** Supabase's value proposition is the *bundle* —
+database + auth + edge functions + storage. If you're only using
+the storage piece, you're either paying for capabilities you don't
+need (Pro plan) or hitting free-tier limits quickly. The Pro plan
+becomes *good* value the moment Atlas adds a backend (post-V1 maker
+dashboard, user accounts). For V1 storage-only it's overspend.
+
+**Worth reconsidering when** Atlas decides it needs a real backend
+— Supabase's all-in-one positioning makes it attractive as a single
+vendor at that point.
+
+### 6. Apple CloudKit Assets
+
+**What it is.** CloudKit is Apple's developer-platform database +
+storage service. Different from iCloud Drive (consumer file
+storage, which can't serve direct MP3 URLs). CloudKit Assets are
+binary blobs attached to records in your app's CloudKit container —
+the iOS app fetches them via the CloudKit SDK.
+
+**Costs:** $0 forever — Apple absorbs the hosting cost for any app
+in the Apple Developer Program. Atlas's catalog size is many orders
+of magnitude under the free quota.
+
+**Setup work:** Medium. CloudKit Assets aren't plain HTTPS URLs —
+they're `CKAsset` references, accessed via the CloudKit SDK. Atlas's
+current player and downloader expect `URL` strings; switching to
+CloudKit would mean modifying `AudioPlayerService`, `TourDownloader`,
+and the `Tour`/`Stop` data model. A real day's work, not a paste-in.
+
+**Watch-outs:**
+- **iOS-only (and macOS / visionOS — anything in Apple's ecosystem).**
+  No web access, no Android, no shared tour links that open in a
+  browser. Same constraint as ODR, just without the App Store
+  review cadence (CloudKit content can update independently — this
+  is its key advantage over ODR).
+- **CloudKit Web Services exists** but requires server-to-server
+  auth tokens, making it impractical for public content.
+- **More code to maintain** — every additional layer is a
+  maintenance surface.
+
+**Worth reconsidering when** Atlas commits to iOS-only forever and
+you want truly zero infrastructure cost. The code overhead is the
+price.
+
 ### (Not in the running, but worth naming)
 
 - **GitHub LFS** — Git's large-file feature, served via raw URLs.
   Bandwidth-capped, slow as a download target, against GitHub's
   ToS at production scale. Don't.
+- **iCloud Drive** (consumer) — different from CloudKit Assets.
+  Shared links wrap files in HTML download pages; AVPlayer can't
+  resolve them. Not usable for app audio.
 - **Your own VPS (a rented server)** — possible but you become the
   sysadmin. A trap for solo operators.
 
 ---
 
-## Costs side-by-side at three traffic levels
+## Costs side-by-side at four traffic levels
 
 Assuming 300MB catalog, average listener downloads 20MB (one tour):
 
-| Listeners/month | Egress/month | Cloudflare R2 | S3 + CloudFront | Apple ODR |
-|---|---|---|---|---|
-| 100 (launch friends) | 2 GB  | ~$0     | ~$0.20  | $0 |
-| 1,000 (modest)       | 20 GB | ~$0     | ~$2     | $0 |
-| 10,000 (good month)  | 200 GB| ~$0     | ~$17    | $0 |
-| 100,000 (viral hit)  | 2 TB  | ~$0     | ~$170   | $0 |
+| Listeners/month | Egress | R2 | S3 + CloudFront | ODR | Firebase | Supabase | CloudKit |
+|---|---|---|---|---|---|---|---|
+| 100 (launch friends) | 2 GB | ~$0 | ~$0.20 | $0 | $0 (free tier) | $0 (free tier) | $0 |
+| 1,000 (modest)       | 20 GB | ~$0 | ~$2 | $0 | $0 (free tier) | $0 (free tier) | $0 |
+| 10,000 (good month)  | 200 GB | ~$0 | ~$17 | $0 | ~$20 | $25 (Pro plan) | $0 |
+| 100,000 (viral hit)  | 2 TB | ~$0 | ~$170 | $0 | ~$240 | $25 + ~$160 overage | $0 |
 
-R2 and ODR stay flat; S3+CF scales linearly. None of these are
-crippling at any plausible V1 scale — but the ceiling matters
-psychologically. Knowing the bill won't grow with traffic lets you
-stop checking the dashboard nervously after every social post.
+R2 and CloudKit stay flat with success. ODR is also flat but
+constrained by App Store cadence. S3+CF and Firebase scale
+linearly. Supabase has a soft floor ($25 Pro plan) once you exceed
+the small free tier.
+
+## Capabilities side-by-side
+
+| Option | Setup | Public HTTPS URLs anywhere | Update without App Store | Code changes needed | Best fit when |
+|---|---|---|---|---|---|
+| **Cloudflare R2** ⭐ | Easy (half-day) | ✅ | ✅ | None | Default for content with unknowable traffic |
+| AWS S3 + CloudFront | Hard (full day) | ✅ | ✅ | None | You already have AWS expertise |
+| Apple ODR | Easy (Xcode-only) | ❌ iOS-only | ❌ tied to App Store | None | iOS-only forever, infrequent updates |
+| Firebase Storage | Easy (~3 hrs) | ✅ | ✅ | None | You already use Firebase for other things |
+| Supabase Storage | Easy (~3 hrs) | ✅ | ✅ | None | You also need database + auth + edge functions |
+| CloudKit Assets | Medium (SDK code) | ❌ iOS-only | ✅ (advantage over ODR) | Real changes | iOS-only forever, willing to write CloudKit code |
 
 ---
 
@@ -183,10 +286,15 @@ stop checking the dashboard nervously after every social post.
 
 1. **ODR** — easiest. ~1 hour. Drag files into Xcode, configure
    tags, ship. The cost is paid later in the App Store review cycle.
-2. **R2** — medium. ~4 hours first time. Cloudflare account →
+2. **Firebase / Supabase** — easy. ~2–3 hours. Friendly web
+   dashboards, security rules to learn but manageable.
+3. **R2** — medium. ~4 hours first time. Cloudflare account →
    bucket → custom domain → upload. Familiar pattern, fairly
    friendly UI.
-3. **S3 + CloudFront** — hard. ~1 full day first time. Multiple
+4. **CloudKit Assets** — medium. Code changes are the cost — the
+   Apple-side setup is trivial, but `AudioPlayerService` and
+   `TourDownloader` need real edits to swap `URL` for `CKAsset`.
+5. **S3 + CloudFront** — hard. ~1 full day first time. Multiple
    AWS services to wire together, hostile UI, real risk of
    configuration mistakes (open buckets, billing accidents).
 
@@ -206,6 +314,14 @@ stop checking the dashboard nervously after every social post.
   "new audio = new app submission" means you can't post-launch
   iterate on the catalog at your pace — Apple's review queue sets
   the pace. That's a strategic choice, not just a cost choice.
+- **Firebase:** medium. Same egress-scales-with-success problem as
+  S3+CF. Slightly friendlier UI, fewer ways to misconfigure.
+- **Supabase:** low-medium. Pricing has a soft floor ($25 Pro)
+  but is predictable. The risk is paying for capabilities you
+  don't use.
+- **CloudKit:** low cost risk. The real risk is **product lock-in
+  to Apple's ecosystem** — any future web previews, shared links,
+  or Android port means re-hosting everything elsewhere.
 
 ---
 
@@ -223,8 +339,25 @@ Reasoning in order of weight:
    eventual Android.
 3. **Setup is solo-operator manageable.** Not as effortless as
    ODR, but nowhere near the AWS jungle.
-4. **Effective cost: $0/month at V1 scale.** No worse than ODR on
-   bill, and dramatically better on iteration speed.
+4. **Effective cost: $0/month at V1 scale.** No worse than ODR or
+   CloudKit on bill, dramatically better on iteration speed
+   (versus ODR) and platform flexibility (versus CloudKit).
+5. **No code changes.** Just `URL(string:)` like today — no
+   `CKAsset` plumbing, no SDK-specific glue.
+
+**When R2 would lose** (and what wins instead):
+
+- **Atlas commits to iOS/Apple-only forever** → CloudKit Assets
+  becomes attractive ($0 lifetime, no review cadence). The cost is
+  real code work and platform lock-in.
+- **Atlas adds a backend later** (maker dashboard, user accounts,
+  paid tours) → Supabase becomes attractive as a one-stop platform.
+  At that point, you'd be paying $25/month for the bundle anyway;
+  storage rides along.
+- **Atlas already lives on Firebase or AWS** for unrelated reasons
+  → consolidate on what your team knows.
+
+None of these apply today. Reconsider when one does.
 
 The case for ODR over R2: if you're certain your catalog will
 update at the cadence of app releases (every few months) and you
