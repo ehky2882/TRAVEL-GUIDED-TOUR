@@ -22,9 +22,10 @@ spec.)
 
 > **Pivot history (May 2026):** Atlas was *originally* spec'd as an
 > "editorial city guide" (Monocle-style). The product pivoted to
-> the audio-tour creator platform described above. Most of the
-> existing code (`SeedData.json`, `CityDetailView`, `PlaceDetailView`,
-> etc.) is being reshaped to fit. The Xcode project folder name —
+> the audio-tour creator platform described above. The reshape is
+> complete on `main` — the old `SeedData.json` / `City` / `Place`
+> code is gone; the audio-tour data model, audio engine, and
+> feature views are in. The Xcode project folder name —
 > `TRAVEL GUIDED TOUR` — is now more on-point than it was originally;
 > in code, copy, and conversation the product is Atlas.
 
@@ -42,39 +43,100 @@ app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 (iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
 — same app body, three different "TVs" it can play on.
 
-## Current State (mid-pivot to audio tours)
+## Current State (V1 functionality complete; pre-polish, pre-launch-content)
 
-The app's *structural shell* is built — 5-tab `TabView`, location
-permission configured, environment-shelf dependency injection in
-place, terracotta accent color in `Assets.xcassets`, theme tokens
-ready (with placeholder values). The *content layer and most feature
-views* are being rebuilt to fit the audio-tour spec. See `ROADMAP.md`
-§ Where we are right now for the file-by-file migration map.
+Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`
+(M1–M3 through M-offline, plus a home-screen redesign in PR #19).
+What's left for V1 release: **owner-side content work**
+(M-launch-content — record audio + author real `Tours.json`),
+**end-to-end QA on a real device** (M-qa), and the deferred
+**design / polish pass**. A parked
+`claude/alltrails-alignment` branch holds an AllTrails-style home
+redesign explored on 2026-05-16/17 — custom tab bar, category chip
+row, vertical tour list, floating-island shape. Not merged because
+it's a design direction commitment that needs real-device A/B
+evaluation alongside the design pass. See `ROADMAP.md` § Parked
+work for what's on it and how to revive.
 
 What's true today:
 
-- `ContentView.swift` is a 5-tab `TabView` (Home / Explore / Favorites
-  / Messages / Me). Tab *contents* will change as new feature views
-  land; the skeleton stays.
-- `Resources/SeedData.json` still holds the old 45-place editorial
-  catalog. It gets replaced by `Resources/Tours.json` in
-  M-data-model.
-- **Location permission** is configured via the
-  `INFOPLIST_KEY_NSLocationWhenInUseUsageDescription` build setting
-  in `project.pbxproj` (Debug + Release). Copy will likely be
-  tweaked during M-home to match the audio-tour framing.
+- `ContentView.swift` is a 3-tab `TabView` — **Home / Library / Me**.
+  (5 → 3 tab cut landed in PR #15: M-map was redundant against
+  Home's embedded map, and Messages was absorbed as a row inside
+  Settings.)
+- `Resources/Tours.json` is the live data source — seed entries only;
+  real content arrives in M-launch-content. The old
+  `Resources/SeedData.json` is gone.
+- **Audio playback** runs through `Audio/AudioPlayerService.swift`
+  (AVQueuePlayer + lock-screen integration). `UIBackgroundModes` →
+  `audio` is enabled, so audio continues with the phone locked.
+- **Offline playback** runs through `Audio/TourDownloader.swift`;
+  managed from Settings → Manage Downloads.
+- **Geofencing** ships with both
+  `NSLocationWhenInUseUsageDescription` and
+  `NSLocationAlwaysAndWhenInUseUsageDescription` set, so stop
+  geofences can fire while the app is backgrounded / phone locked.
 - `Assets.xcassets/AccentColor.colorset` is set to terracotta
   `#B85042` (light) and a lighter variant for dark mode.
-- `Assets.xcassets/AppIcon.appiconset` is the empty Apple template.
-  A polish milestone addresses this.
+- `Assets.xcassets/AppIcon.appiconset` is still the empty Apple
+  template. M-polish-icon addresses this.
 - Theme tokens in `Theme/Atlas{Colors,Typography,Spacing}.swift` are
-  **placeholder values** (currently all-white/all-black/Helvetica
-  12pt) pending the deferred design pass.
-- **Audio playback infrastructure does not yet exist.** It lands in
-  M-audio-foundation, including the `UIBackgroundModes` → `audio`
-  build setting.
+  still **placeholder values** pending the deferred design pass.
 
-See `ROADMAP.md` for the milestone-by-milestone plan.
+See `ROADMAP.md` for milestone-by-milestone history, known
+follow-ups, and the parked `claude/alltrails-alignment` branch.
+
+## Keep these docs in sync
+
+**Rule:** every session that ships a milestone, cuts scope, or
+changes the "what's true today" state of the project updates
+`CLAUDE.md` (this file) and `ROADMAP.md` *in the same commit* —
+never as a follow-up.
+
+Concretely, before ending a session that touched feature code,
+check whether:
+- the **Current State** section above still describes reality
+- the **Architecture** folder map still matches the on-disk layout
+- the relevant **ROADMAP** milestone is marked ✅ Done (PR #N) and
+  any decisions / cuts / follow-ups are recorded
+
+If yes, no doc change needed. If no, fix it in the same commit as
+the code change. Stale docs poisoned a recent session (Claude
+reported "all milestones done" without knowing about PR #19's home
+redesign) — the rule prevents a repeat.
+
+Temporary session-bridge notes don't live at repo root. If a
+session needs one, fold the permanent content into `CLAUDE.md` /
+`ROADMAP.md` before the session ends and move the snapshot to
+`archive/` with a `YYMMDD` suffix (e.g. `archive/HANDOFF-260518.md`).
+
+## Repo-root layout
+
+Beyond this file and `ROADMAP.md`:
+
+- `atlas_claude_code_prompt.md` — canonical product spec.
+- `CONTRIBUTING.md` — onboarding doc for new contributors:
+  toolchain setup, branching/PR workflow, code conventions
+  pointer, communication norms.
+- `docs/` — reference material that isn't read at session start:
+  - `docs/authoring-tours.md` — UI-agnostic field-by-field guide
+    for authoring tour content (used in M-launch-content; doubles
+    as the spec for the future maker upload form).
+  - `docs/Tours.template.json` — example tours showing every field.
+  - `docs/cdn-decision.md` — owner-facing brief comparing
+    Cloudflare R2 / S3+CloudFront / Apple ODR for V1 audio hosting.
+    Owner picks; update the brief's Status line when they do.
+- `scripts/` — developer-facing tooling:
+  - `scripts/validate-tours.swift` — runs against
+    `TRAVEL GUIDED TOUR/Resources/Tours.json` and catches typos /
+    duplicate UUIDs / broken maker refs / kind ↔ stop count
+    mismatches / coord-range errors before the app crashes at
+    launch. Invoke: `swift scripts/validate-tours.swift`.
+    **The script mirrors the Swift data model — if you change
+    `Tour.swift` / `Stop.swift` / `Maker.swift` / `TourCategory.swift`,
+    update the mirror types at the top of the script in the same
+    commit.**
+- `archive/` — dated snapshots of retired docs (see `archive/README.md`).
 
 ## Build & Run
 
@@ -99,59 +161,55 @@ after every change to confirm nothing broke. We don't have any yet.)
 
 (Architecture = the floor plan of the codebase: which folder does what.)
 
-> Legend for the folder map below:
-> ✅ stays as-is across the pivot
-> 🔄 reshaped or renamed during the audio-tour migration
-> ❌ being deleted (old editorial-reader code)
-> 🆕 doesn't exist yet; lands in a future milestone
-
 ```
 TRAVEL GUIDED TOUR/
-├── TRAVEL_GUIDED_TOURApp.swift    ✅ App entry; sets up environment shelves (services)
-├── ContentView.swift              ✅ 5-tab TabView; tab contents swap as views land
-├── SplashView.swift               ✅ 2-second launch splash
+├── TRAVEL_GUIDED_TOURApp.swift    App entry; sets up environment shelves (services)
+├── ContentView.swift              3-tab TabView (Home / Library / Me)
+├── SplashView.swift               2-second launch splash
 ├── Models/
-│   ├── City.swift                 ❌ delete in M-data-model
-│   ├── Place.swift                ❌ delete in M-data-model
-│   ├── PlaceCategory.swift        ❌ delete in M-data-model
-│   ├── PlaceCollection.swift      ❌ delete in M-data-model
-│   ├── Tour.swift                 🆕 added in M-data-model — a tour: title, maker, stops, …
-│   ├── Stop.swift                 🆕 a stop within a tour: lat/lon, audio URL, trigger mode
-│   ├── Maker.swift                🆕 a maker: display name, avatar, bio, tours
-│   ├── TourCategory.swift         🆕 closed enum of tour categories that drive home rails
-│   ├── RecentSearch.swift         🆕 local-only record of a search query (for "Because you searched [X]" rail)
-│   └── LibraryEntry.swift         🆕 a local "saved/downloaded/progress" record per tour
+│   ├── Tour.swift                 A tour: title, maker, stops, category, …
+│   ├── Stop.swift                 A stop within a tour: lat/lon, audio URL, trigger mode
+│   ├── Maker.swift                A maker: display name, avatar, bio, tours
+│   ├── TourCategory.swift         Closed enum of categories that drive home rails
+│   ├── RecentSearch.swift         Local-only record of a search query
+│   └── LibraryEntry.swift         Local "saved / downloaded / progress" record per tour
 ├── Data/
-│   ├── DataService.swift          🔄 reshaped in M-data-model to load Tours.json
-│   ├── CollectionStore.swift      🔄 renamed → LibraryStore (data shape changes)
-│   ├── RecentSearchStore.swift    🆕 M-search — local persistence for search history
-│   └── SeedData.swift             🔄 renamed → ToursData (the JSON ↔ Swift translator)
+│   ├── DataService.swift          Loads Tours.json into [Tour] at launch
+│   ├── LibraryStore.swift         Read/write store of [LibraryEntry]; persists across launches
+│   ├── RecentSearchStore.swift    Local persistence for search history (cap 20)
+│   ├── RecentlyViewedStore.swift  Backs the "Recently viewed" home rail
+│   └── ToursData.swift            JSON ↔ Swift translator
 ├── Resources/
-│   ├── SeedData.json              ❌ deleted in M-data-model
-│   └── Tours.json                 🆕 added in M-data-model; populated in M-launch-content
-├── Audio/                         🆕 brand new folder
-│   ├── AudioPlayerService.swift   🆕 AVQueuePlayer wrapper + lock-screen integration (M-audio-foundation)
-│   └── TourDownloader.swift       🆕 offline tour caching via URLSession (M-offline)
+│   └── Tours.json                 Seed entries; replaced by real content in M-launch-content
+├── Audio/
+│   ├── AudioPlayerService.swift   AVQueuePlayer wrapper + lock-screen / Now Playing integration
+│   └── TourDownloader.swift       Offline tour caching via URLSession background downloads
 ├── Features/
-│   ├── Discover/                  ❌ replaced by Home/ in M-home
-│   ├── City/                      ❌ deleted in M-data-model (no "city" entity in this product)
-│   ├── Place/                     ❌ replaced by Tour/ in M-tour-detail
-│   ├── Home/                      🆕 M-home — map-dominant home: map at top + curated rails below
-│   ├── Search/                    🆕 M-search — search bar + results screen
-│   ├── Tour/                      🆕 M-tour-detail — tour detail screen
-│   ├── Player/                    🆕 M-player — full-screen audio player
-│   ├── Maker/                     🆕 M-maker — maker bio + their tour list
-│   ├── Library/                   🆕 M-library (replaces Collections/) — saved + downloaded + recent
-│   ├── Map/                       🔄 in M-map — may be cut entirely if Home's embedded map is enough; owner decides
-│   │   ├── MapView.swift
-│   │   └── StopAnnotationView.swift   🔄 renamed from PlaceAnnotationView
-│   └── Settings/                  ✅ stays; gets a "Manage downloads" link in M-offline
+│   ├── Home/                      Map-dominant home: full-screen map + curated rails in a bottom sheet
+│   │   ├── HomeView.swift
+│   │   ├── HomeMapSection.swift
+│   │   ├── HomeRailsViewModel.swift
+│   │   └── RailCarousel.swift
+│   ├── Search/                    Search bar + results screen
+│   │   ├── SearchBar.swift
+│   │   └── SearchView.swift
+│   ├── Tour/                      Tour detail screen
+│   │   └── TourDetailView.swift
+│   ├── Player/                    Full-screen audio player (modal sheet)
+│   │   └── PlayerView.swift
+│   ├── Maker/                     Maker bio + their tour list
+│   │   └── MakerView.swift
+│   ├── Library/                   Saved / Downloaded / Recently played
+│   │   └── LibraryView.swift
+│   └── Settings/                  "Me" tab + Manage Downloads
+│       ├── SettingsView.swift
+│       └── ManageDownloadsView.swift
 ├── Location/
-│   ├── LocationManager.swift      ✅ stays — drives "tours near you" sort + distance
-│   └── ProximityMonitor.swift     🔄 reshaped in M-geofencing for stop geofences
-├── Components/                    ✅ all stay (HeroImageView, TagChip, PriceIndicatorView, PlatformHelpers)
-├── Theme/                         ✅ all stay (placeholder values until design pass)
-└── Assets.xcassets/               ✅ AccentColor terracotta #B85042; AppIcon still template
+│   ├── LocationManager.swift      GPS reporter — drives "tours near you" sort + distance
+│   └── ProximityMonitor.swift     Watches stop geofences; fires when user arrives at a stop
+├── Components/                    HeroImageView, TagChip, BottomSheet, PlatformHelpers
+├── Theme/                         AtlasColors, AtlasTypography, AtlasSpacing (placeholder values)
+└── Assets.xcassets/               AccentColor terracotta #B85042; AppIcon still empty template
 ```
 
 ## Design System
@@ -191,16 +249,20 @@ that displays it.)
 `TRAVEL_GUIDED_TOURApp.swift` sets up "shared shelves" the moment the
 app launches:
 
-- **DataService** — read-only library of tours and makers. (Currently
-  still loading the old city/place data; reshaped in M-data-model.)
-- **CollectionStore** — read/write storage for the user's saved
-  lists. (Renamed to `LibraryStore` in M-library; data shape becomes
-  `[LibraryEntry]`.)
+- **DataService** — read-only library of tours and makers, loaded
+  from `Resources/Tours.json` at launch.
+- **LibraryStore** — read/write storage for the user's saved /
+  downloaded / recently-played tours, as `[LibraryEntry]`. Persists
+  across launches.
+- **RecentSearchStore** — local search history (cap 20), feeds the
+  "Because you searched [X]" rail.
+- **RecentlyViewedStore** — backs the "Recently viewed" home rail.
 - **LocationManager** — the GPS reporter: "you're at lat X, lon Y."
-- **AudioPlayerService** — 🆕 added in M-audio-foundation. Wraps
-  `AVQueuePlayer`, manages the audio session, drives lock-screen /
-  Control Center / CarPlay integration. Every screen that wants to
-  play audio talks to this.
+- **AudioPlayerService** — wraps `AVQueuePlayer`, manages the audio
+  session, drives lock-screen / Control Center / CarPlay integration.
+  Every screen that wants to play audio talks to this.
+- **TourDownloader** — manages offline audio caching via
+  `URLSession` background downloads.
 
 These shelves are placed in the SwiftUI `Environment` (a hallway shelf
 every screen can reach into). Any screen that needs them just says "give
@@ -238,8 +300,9 @@ its own copy. Don't instantiate these inside individual screens.
 - Support Dynamic Type (so users who set bigger text in iOS Settings get
   bigger text in Atlas) and Dark Mode (so the app looks right in both
   light and dark themes).
-- Map pins are custom SwiftUI views (`StopAnnotationView` — terracotta
-  with category/maker icon), **not** Apple's default red pins.
+- Map pins currently use Apple's `Marker` with a SF Symbol — see
+  `HomeMapSection.swift`. Custom-designed terracotta pins with
+  category/maker glyphs are deferred to M-polish-pins.
 
 ## Build Configuration
 
@@ -257,17 +320,14 @@ its own copy. Don't instantiate these inside individual screens.
 - **Code Signing:** Automatic. (Code signing = Apple's tamper-proof seal
   that says "this app really is from this developer." "Automatic" means
   Xcode handles it for us.)
-- **Info.plist:** auto-generated from `INFOPLIST_KEY_*` build settings.
-  `NSLocationWhenInUseUsageDescription` is set to the standard Atlas
-  location-permission copy in both Debug and Release configs.
-- **Audio background mode (planned, not yet added):** M-audio-foundation
-  adds `UIBackgroundModes` → `audio` to the build settings so audio
-  continues with the phone locked. Without this, audio cuts out on
-  lock — fatal for a walking-tour app.
-- **Always-location entitlement (TBD):** M-geofencing may need
-  `NSLocationAlwaysAndWhenInUseUsageDescription` if we want geofenced
-  stop triggers to fire while the app is backgrounded. Open question;
-  the milestone covers the tradeoff.
+- **Info.plist:** auto-generated from `INFOPLIST_KEY_*` build
+  settings (Debug + Release):
+  - `NSLocationWhenInUseUsageDescription` — audio-tour-aware copy.
+  - `NSLocationAlwaysAndWhenInUseUsageDescription` — set so stop
+    geofences can fire while the app is backgrounded / phone locked.
+  - `UIBackgroundModes` = `audio` — audio continues playing with
+    the phone locked. Without this, audio cuts on lock — fatal for
+    a walking-tour app.
 
 ## Out of Scope for V1
 
