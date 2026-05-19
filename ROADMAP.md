@@ -570,6 +570,28 @@ sessions actually read.)
   gives up system-level features (badge dots, focus animations,
   accessibility heuristics Apple ships). Easy to revisit post-V1
   if any of those bite.
+- **Content authoring tooling at scale (M-content-tooling).** The
+  current tour-upload workflow — owner drags audio + transcript
+  into a Claude chat, answers 3 questions, Claude pushes audio +
+  writes JSON + opens a PR — works fine for ~10 tours. It doesn't
+  scale to 100, breaks at 1,000. None of this blocks V1; pre-cursor
+  work for Tier 1 #2 (maker platform), since these tools are also
+  ~50% of what outside makers will need. Streamlining wins worth
+  doing whenever batch uploads start hurting:
+  - **Single-PR batches** — one PR for N tours instead of one per.
+  - **Manifest-driven uploads** — CSV / JSON with filename, title,
+    coords, trigger, category per tour; the pipeline reads the
+    manifest and runs the upload.
+  - **Geocoding from text** — manifest can say "41st & Fifth, NYC"
+    and a geocoder produces coords.
+  - **Auto-transcription** — send just the MP3; Whisper or Apple
+    Speech generates the transcript automatically.
+  - **Description + tag drafting from transcript** — structured
+    LLM prompt produces short desc + long desc + caption + tags +
+    suggested category, owner spot-checks a batch.
+  - **A `scripts/add-tour.swift` CLI** — given audio + manifest
+    line, generates JSON entry, validates, commits, opens PR.
+    Owner can batch-upload without invoking Claude.
 
 ---
 
@@ -583,7 +605,7 @@ That requires several large pieces of infrastructure, roughly:
 | | Why first |
 |---|---|
 | **1. Backend.** Server-stored tours, audio uploads, full CRUD. Stack TBD: managed BaaS (Firebase / Supabase / AWS Amplify) vs. custom DB + REST API. | The static-JSON model doesn't scale past ~50 hand-maintained tours. Every other post-V1 feature depends on this. |
-| **2. Maker authentication + maker dashboard.** Sign-up, audio upload, tour metadata editor, per-tour analytics. Likely web-first — editing tours is a desktop task. | No outside makers can ship anything without this. |
+| **2. Maker authentication + maker dashboard.** Sign-up, audio upload, tour metadata editor, per-tour analytics. Phone for capture, web for composition; both are needed (see "Maker platform — detailed design" below). | No outside makers can ship anything without this. The keystone of Atlas-as-platform. |
 | **3. Moderation pipeline.** Report-this-tour, takedown tooling, internal review queue, content policy. | Required before opening uploads to the public — Apple App Store review will ask. |
 
 ### Tier 2 — Monetization
@@ -610,10 +632,132 @@ That requires several large pieces of infrastructure, roughly:
 | **11. Maker collaboration.** Multi-maker tours; joint payouts. | |
 | **12. Native experiences on iPad / Mac / Vision Pro.** If consumer demand materializes there. | |
 
+### Maker platform — detailed design (Tier 1 #2 deep dive)
+
+The maker dashboard is the keystone of Atlas-as-platform. Right
+now all content is curated by the Atlas team and hand-edited into
+`Tours.json`. That works for ~10–50 tours; it falls apart at
+hundreds and is unsupportable at thousands. The maker platform is
+what flips Atlas from a curated audio app into a creator
+marketplace.
+
+Three phases, escalating in scope. Each ends in a shippable
+surface.
+
+#### Phase 1 — Single-piece tour creation (phone-first)
+
+The minimum a maker needs to publish one short audio tour about
+one location. Targets the simplest tour shape so the platform can
+ship the basics before tackling multi-stop curation.
+
+- **Onboarding.** Sign in with Apple (no passwords). Maker
+  profile: display name, bio, optional avatar + website.
+- **Audio.** In-app recording (`AVAudioRecorder`) so makers can
+  record from the place itself, or import from Files / Voice
+  Memos / Dropbox.
+- **Transcription.** On-device via Apple's `SFSpeechRecognizer`
+  — free to the platform, privacy-friendly, works offline. Maker
+  reviews + edits the transcript before publishing.
+- **Location.** MapKit with two modes:
+  - "Use current location" — auto-pin where the maker is
+    standing. Right answer when recording in the field.
+  - "Drop pin" — long-press to place, drag to refine. Address
+    surfaced for confirmation.
+  - Trigger radius as a draggable circle around the pin.
+- **Images.** PHPicker for camera roll. Carousel of up to 5
+  (per the Option A model locked in 2026-05-19 — see
+  `M-rethink-categories` neighbor). In-app landscape crop.
+  First image is the card cover everywhere.
+- **Metadata.** Title, short description, long description, tags
+  (with autocomplete from existing taxonomy). Trigger mode with
+  smart defaults — geofenced for outdoor, manual for indoor.
+- **Review screen.** "Listen" button — maker walks their own
+  tour end-to-end before publishing.
+- **Submit → moderation queue** (Tier 1 #3).
+
+#### Phase 2 — Multi-stop tour creation (phone + web)
+
+Where it gets genuinely harder. Most makers will start with
+single-piece tours; the platform's distinctive product is the
+multi-stop walking tour.
+
+- **Stop creation.** Same per-stop capture UX as Phase 1, but
+  cheap to repeat. Collapsible cards in a list.
+- **Ordering.** Drag-to-reorder. Makers don't always create
+  stops in walking order — might record stop 4 first because
+  they walked by it.
+- **Route preview.** Once stops are placed, draw the connecting
+  walking path via `MKDirections`. Surface total walking distance
+  + ETA. Flag stops that are unreachably far apart (>500m gap
+  without a transit hint).
+- **Intro audio.** Optional clip before stop 1 — the "welcome,
+  here's why I picked these five blocks" opener.
+- **Per-stop trigger override.** Tour-level default, but a
+  single stop inside (e.g.) a quiet church can flip to manual.
+- **Validation.** Stops in walking order, no orphans, no
+  oversized gaps without justification, no duplicates within
+  radius.
+
+#### Phase 3 — Maker tooling depth
+
+The stuff that makes a maker stay on the platform after their
+first tour. Less foundational than Phases 1–2; more
+retention-driving.
+
+- **Maker analytics.** Per-tour: starts, completions, average
+  drop-off point, device split, top cities, peak days. One
+  dashboard per tour.
+- **Version history + revert.** Tours are living things; makers
+  re-record stops, swap photos, fix typos. Track edits with
+  rollback. Post-MVP, but design earlier phases with it in mind.
+- **Drafts + autosave.** Tour authoring is *long*. Losing 20
+  minutes of work to a phone call is unforgivable. Autosave
+  every 30s; drafts list accessible from any signed-in device.
+- **Re-edit after publishing.** Day one. Without version history
+  at first — that's Phase 3.
+- **Moderation hookup, two-way.** Makers respond to takedown
+  notices, request re-review after edits, see flag reasons.
+  Connects to Tier 1 #3.
+
+#### Cross-cutting: phone vs web
+
+Phone is right for **capture** — recording, pinning, photos.
+Phone is wrong for **composition** — long descriptions,
+transcript polish, metadata tuning, route review.
+
+- **In the field, phone:** record audio at each stop, drop pin,
+  take photos, save as draft.
+- **At home, web:** open Atlas Studio on a laptop, polish
+  transcripts, write descriptions, tune tags, preview the route,
+  publish.
+
+The earlier ROADMAP note ("Likely web-first — editing tours is a
+desktop task") is half-right. The full answer is **both surfaces,
+each optimised for the half of the workflow it does best**, with
+drafts syncing between them.
+
+#### Hard dependencies
+
+Nothing here ships without these in place first:
+
+1. **Tier 1 #1 — Backend.** Tours move from static JSON to
+   server-stored. Audio uploads to a managed bucket the maker
+   doesn't have to think about.
+2. **Tier 3 #6 — Real sign-in.** Maker identity. Sign in with
+   Apple is the right primitive.
+3. **Tier 1 #3 — Moderation.** Required before opening uploads
+   publicly. Apple App Store review will ask.
+
+Sequence: backend (the platform) → auth + moderation (the
+controls) → maker UI (the surface).
+
+---
+
 ### Open questions for the owner (answer before each tier starts)
 
 - **Tier 1 #1** — backend stack? Firebase / Supabase / custom?
-- **Tier 1 #2** — maker dashboard as standalone web app or in-iPad-app?
+- **Tier 1 #2** — phone-only MVP, web-only MVP, or both from day one?
+- **Tier 1 #2** — auto-transcription via Apple's on-device API (free, lower quality) or Whisper API (paid, higher quality)?
 - **Tier 2 #4** — paid tours per-purchase, subscription, both?
 - **Tier 2 #5** — Stripe Connect or another marketplace processor?
 - **Tier 3 #6** — Sign in with Apple only, or also email / Google?
