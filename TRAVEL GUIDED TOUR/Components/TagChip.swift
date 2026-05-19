@@ -6,12 +6,11 @@ struct TagChip: View {
 
     var body: some View {
         Text(text)
-            .font(AtlasTypography.standard)
-            .foregroundStyle(.black)
-            .padding(.horizontal, 14)
-            .padding(.vertical, 8)
+            .font(AtlasTypography.caption)
+            .foregroundStyle(isSelected ? Color.white : AtlasColors.primaryText)
+            .padding(.horizontal, AtlasSpacing.md - 2)
+            .padding(.vertical, AtlasSpacing.sm)
             .background(isSelected ? AtlasColors.accent : AtlasColors.secondaryBackground)
-            .foregroundStyle(.black)
             .clipShape(Capsule())
             .overlay(
                 Capsule()
