@@ -444,6 +444,10 @@ its own copy. Don't instantiate these inside individual screens.
   - `UIBackgroundModes` = `audio` — audio continues playing with
     the phone locked. Without this, audio cuts on lock — fatal for
     a walking-tour app.
+  - `ITSAppUsesNonExemptEncryption` = `NO` — Atlas uses only
+    standard HTTPS, no custom crypto, so it qualifies for the
+    standard export-compliance exemption. Set so Xcode doesn't
+    prompt for the answer on every archive.
 
 ## Out of Scope for V1
 
