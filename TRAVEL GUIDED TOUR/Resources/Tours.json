@@ -342,6 +342,40 @@
       "primaryCategory": "history",
       "tags": ["rockefeller center", "midtown", "art deco", "prometheus", "great depression", "1932", "30 rock"],
       "priceUSD": 0
+    },
+    {
+      "id": "b89039a0-c87d-4fc2-b8b9-5c27b72e8949",
+      "title": "Metropolitan Museum of Art, 5th Avenue Steps",
+      "shortDescription": "Three minutes on the Met's facade — Beaux-Arts ceremony, Richard Morris Hunt's last project, and the four uncarved blocks above the columns.",
+      "longDescription": "The Met was founded in 1870 — a deliberate act of American cultural ambition, an attempt to build a museum that could compete with the Louvre and the British Museum. The original 1880 building is still in there, completely surrounded by a hundred and fifty years of expansion. The facade in front of you was designed by Richard Morris Hunt — the first American to study at the École des Beaux-Arts — and finished by his son in 1902 after Hunt died in 1895. The two wings followed, by McKim, Mead, and White, between 1906 and 1926. The whole thing is a Beaux-Arts temple.\n\nLook up. Just above the four columns, you'll see four large rectangular blocks of stone, uncarved. They were supposed to become sculptures representing Ancient, Medieval, Renaissance, and Modern art. The money ran out. They've stayed uncarved for over a hundred and twenty years. The Met has, in a way, never been finished. Three minutes on what the facade is doing — and the promise it's making — before you walk up the steps.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/met-fifth-ave-steps-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5db66b58-b834-426e-aaa8-1465d205c86c",
+          "order": 0,
+          "title": "Metropolitan Museum of Art, 5th Avenue Steps",
+          "caption": "Stand at the base of the steps on Fifth Avenue, facing west toward the four columns.",
+          "latitude": 40.7793,
+          "longitude": -73.9633,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/metropolitan-museum-fifth-ave-steps.mp3",
+          "audioDurationSeconds": 174,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Before you climb the steps, look up.\n\nYou should be standing at the base of the Met's grand staircase, on Fifth Avenue, looking straight at the central pavilion of the museum. Above you, four enormous Corinthian columns support a triangular pediment, with a long classical frieze running across the front. The two wings of the building, north and south, extend on either side. The American flag flies above the central pavilion. The entrance is at the top of the steps, behind the columns.\n\nThe Met was founded in 1870 — a deliberate act of American cultural ambition, an attempt to build a museum that could compete with the Louvre, the British Museum, the great collections of Europe. The original building, opened on this spot in 1880, is still inside there, completely surrounded and hidden by a hundred and fifty years of expansion. The Met has been building itself out, decade after decade, ever since.\n\nThe facade in front of you, the central pavilion, was designed by Richard Morris Hunt — the first American architect to study at the École des Beaux-Arts in Paris. He died in 1895 before it was finished. His son took over and completed it in 1902. The two wings were added in stages between 1906 and 1926, designed by the firm McKim, Mead, and White. The whole thing is essentially a Beaux-Arts temple.\n\nNow look at the very top of the central pavilion, just above the four columns.\n\nYou'll see four large rectangular blocks of stone — uncarved, plain, looking almost like raw material. They are. Those blocks were supposed to become sculptures representing the four great epochs of art: Ancient, Medieval, Renaissance, and Modern. The plan was to commission the sculptures as soon as the building opened. The money ran out. The blocks have stayed uncarved for over a hundred and twenty years. The Met has, in a way, never been finished.\n\n[beat]\n\nWhat this facade is doing — the columns, the pediment, the grand staircase — is making you a promise. It's telling you that what's inside is worth this kind of architectural ceremony. You're not entering a building, you're entering a treasury. That was the whole point of Beaux-Arts museum design: to set up an experience of arrival, so that by the time you walked through the doors, you'd already be expecting wonder.\n\nThe Met delivers. Inside are over two million objects — an Egyptian temple reassembled stone by stone, suits of European armor, Vermeers, Rembrandts, Pollocks, Tang dynasty horses, pre-Columbian gold. Almost every civilization that ever made anything beautiful has something inside this building.\n\nSo go on up. Take your time. And the next time someone tells you the Met is finished, you'll know that's not exactly true."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 174,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7793,
+      "centroidLongitude": -73.9633,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["the met", "beaux-arts", "fifth avenue", "museum mile", "richard morris hunt", "upper east side"],
+      "priceUSD": 0
     }
   ]
 }
