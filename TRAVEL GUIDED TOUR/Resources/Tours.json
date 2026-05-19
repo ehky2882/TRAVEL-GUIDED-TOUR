@@ -240,6 +240,40 @@
       "primaryCategory": "architecture",
       "tags": ["art deco", "midtown", "skyscraper", "1931", "fifth avenue", "great depression"],
       "priceUSD": 0
+    },
+    {
+      "id": "6081f95d-2db6-437c-9aca-84df986b6145",
+      "title": "Statue of Liberty, Liberty Island",
+      "shortDescription": "Two and a half minutes on Bartholdi's failed Suez Canal lighthouse, Eiffel's iron skeleton, and the poem that gave her new meaning.",
+      "longDescription": "She was originally designed for Egypt. Frédéric Auguste Bartholdi pitched a colossal lighthouse for the entrance to the Suez Canal — a robed woman holding a torch, representing progress. Egypt rejected the proposal. Bartholdi reworked the design as a gift from France to the United States, commemorating the centennial of American independence. The engineering came from Gustave Eiffel — the same Eiffel who built the tower in Paris a few years later. Copper skin only as thick as two stacked coins, an iron skeleton beneath designed to flex in the wind. She arrived in New York in 1885 in three hundred and fifty pieces and was unveiled here in 1886.\n\nThe thing most people don't know: she had nothing to do with immigration when she was unveiled. She was a monument to friendship between two republics. The immigration meaning came in 1903, when Emma Lazarus's poem — \"Give me your tired, your poor, your huddled masses yearning to breathe free\" — was added to a plaque inside the pedestal. By the time millions of immigrants began arriving at Ellis Island just across the water and seeing her on their approach, the statue had become something her sculptor never intended: the welcome sign for a new country.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/statue-of-liberty-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "70ed6479-7a38-4b2a-aadb-432672454012",
+          "order": 0,
+          "title": "Statue of Liberty, Liberty Island",
+          "caption": "Stand on Liberty Island, on the approach in front of the statue. Look up.",
+          "latitude": 40.6889,
+          "longitude": -74.0445,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/statue-of-liberty.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The statue in front of you was originally designed for Egypt.\n\nYou should be standing on Liberty Island, on the approach in front of the statue. Look up. She rises a hundred and fifty feet from the base of the pedestal to the tip of the torch. The torch is in her right hand, raised. The tablet in her left reads \"JULY 4, 1776\" in Roman numerals. The crown has seven rays — one for each continent. The chains broken at her feet are easy to miss from down here.\n\nHer sculptor was a Frenchman named Frédéric Auguste Bartholdi. Before he designed her, he'd spent years pitching a colossal lighthouse statue for the entrance to the Suez Canal — a robed woman holding a torch, representing progress. Egypt rejected the proposal. So Bartholdi reworked the design and proposed it as a gift from France to the United States, commemorating the centennial of American independence.\n\nThe engineering came from Gustave Eiffel — yes, the same Eiffel who built the tower in Paris a few years later. The copper skin you're looking at is only as thick as two stacked coins. Underneath, an iron skeleton designed to flex in the wind without buckling. She arrived in New York in 1885, in three hundred and fifty pieces, and was unveiled here in 1886.\n\nNow — here's the thing most people don't know.\n\nWhen she was unveiled, the Statue of Liberty had nothing to do with immigration. She was a monument to the friendship between two republics, a celebration of liberty as a political idea. The immigration meaning came later. In 1903, a poem by Emma Lazarus — \"Give me your tired, your poor, your huddled masses yearning to breathe free\" — was added to a plaque inside the pedestal. The poem reframed her. By the time millions of immigrants began arriving at Ellis Island, just across the water, and seeing her on their approach, the statue had become something her sculptor never intended: the welcome sign for a new country.\n\n[beat]\n\nThe statue you're looking at hasn't really changed since 1886. The copper has oxidized to green. The torch was replaced in 1986. But the meaning has shifted underneath her the entire time. She started as a gift between governments. She became a promise to people.\n\nFor now, stay here a moment. Walk around the base if you have time. Then look out across the water, back at Manhattan. That's the view most of America's grandparents saw first."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 151,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.6889,
+      "centroidLongitude": -74.0445,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": ["liberty island", "monument", "immigration", "harbor", "1886", "bartholdi", "eiffel"],
+      "priceUSD": 0
     }
   ]
 }
