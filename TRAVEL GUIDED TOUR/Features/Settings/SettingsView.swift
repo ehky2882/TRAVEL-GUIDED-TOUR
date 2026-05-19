@@ -1,9 +1,41 @@
 import SwiftUI
 import CoreLocation
 
+/// User's choice for the app's color scheme. Stored in
+/// `UserDefaults` via `@AppStorage("colorSchemePreference")`.
+/// Default is `.system` (follow the device's setting). The app
+/// entry reads this and applies `.preferredColorScheme(...)` to
+/// the root view.
+enum ColorSchemePreference: String, CaseIterable, Identifiable {
+    case system
+    case light
+    case dark
+
+    var id: String { rawValue }
+
+    var label: String {
+        switch self {
+        case .system: return "System"
+        case .light:  return "Light"
+        case .dark:   return "Dark"
+        }
+    }
+
+    /// The SwiftUI `ColorScheme` to force, or `nil` to follow the
+    /// device's setting.
+    var colorScheme: ColorScheme? {
+        switch self {
+        case .system: return nil
+        case .light:  return .light
+        case .dark:   return .dark
+        }
+    }
+}
+
 struct SettingsView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(DataService.self) private var dataService
+    @AppStorage("colorSchemePreference") private var colorSchemePreference: ColorSchemePreference = .system
 
     var body: some View {
         NavigationStack {
@@ -37,6 +69,17 @@ struct SettingsView: View {
                         Text("Coming soon")
                             .foregroundStyle(AtlasColors.secondaryText)
                     }
+                }
+
+                Section("Appearance") {
+                    Picker(selection: $colorSchemePreference) {
+                        ForEach(ColorSchemePreference.allCases) { pref in
+                            Text(pref.label).tag(pref)
+                        }
+                    } label: {
+                        Label("Theme", systemImage: "circle.lefthalf.filled")
+                    }
+                    .pickerStyle(.menu)
                 }
 
                 Section("Location") {
