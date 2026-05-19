@@ -45,37 +45,46 @@ app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 
 ## Current State (V1 functionality complete; pre-polish, pre-launch-content)
 
-Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`
-(M1–M3 through M-offline, plus a home-screen redesign in PR #19).
-What's left for V1 release: **owner-side content work**
-(M-launch-content — record audio + author real `Tours.json`),
-**end-to-end QA on a real device** (M-qa), and the deferred
-**design / polish pass**. A parked
-`claude/alltrails-alignment` branch holds an AllTrails-style home
-redesign explored on 2026-05-16/17 — custom tab bar, category chip
-row, vertical tour list, floating-island shape. Not merged because
-it's a design direction commitment that needs real-device A/B
-evaluation alongside the design pass. See `ROADMAP.md` § Parked
-work for what's on it and how to revive.
+Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`.
+The AllTrails-style home redesign (custom tab bar, floating-island
+drawer, filter chip row, vertical tour list) landed via PR #31 on
+2026-05-18 and is now the production home; the earlier rail-carousel
+home was superseded. What's left for V1 release: **owner-side content
+work** (M-launch-content — record audio + author real `Tours.json`;
+2 of 5–15 tours recorded as of 2026-05-18, both hosted on
+`gh-pages`), **end-to-end QA on a real device** (M-qa), and the
+deferred **design / polish pass**.
 
-What's true today:
+What's true today (2026-05-18):
 
-- `ContentView.swift` is a 3-tab `TabView` — **Home / Library / Me**.
-  (5 → 3 tab cut landed in PR #15: M-map was redundant against
-  Home's embedded map, and Messages was absorbed as a row inside
-  Settings.)
-- `Resources/Tours.json` is the live data source — seed entries only;
-  real content arrives in M-launch-content. The old
-  `Resources/SeedData.json` is gone.
+- `ContentView.swift` uses a custom `AtlasTabBar` (3 tabs: **Home /
+  Library / Me**) shaped to match the home drawer's width/inset/
+  corners so they read as one "floating island."
+- `Features/Home/` is the AllTrails-style layout: full-screen map +
+  filter chip row + vertical tour list in a persistent bottom drawer
+  + recenter button on the map.
+- `Resources/Tours.json` has 2 real tours (Grand Central south facade,
+  Times Square from the TKTS red steps) plus seed entries. Audio is
+  hosted on the `gh-pages` branch (served at
+  `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
+  GitHub Releases was tried first but serves the wrong MIME type —
+  see `docs/cdn-decision.md`.
 - **Audio playback** runs through `Audio/AudioPlayerService.swift`
-  (AVQueuePlayer + lock-screen integration). `UIBackgroundModes` →
-  `audio` is enabled, so audio continues with the phone locked.
+  (AVQueuePlayer + lock-screen integration + audio session
+  interruption + headphone-unplug handling).
+  `UIBackgroundModes` → `audio` is enabled.
 - **Offline playback** runs through `Audio/TourDownloader.swift`;
   managed from Settings → Manage Downloads.
 - **Geofencing** ships with both
   `NSLocationWhenInUseUsageDescription` and
-  `NSLocationAlwaysAndWhenInUseUsageDescription` set, so stop
-  geofences can fire while the app is backgrounded / phone locked.
+  `NSLocationAlwaysAndWhenInUseUsageDescription` set; foreground
+  notifications display via a `UNUserNotificationCenterDelegate`.
+- **Appearance toggle** in Settings (System / Light / Dark) backed
+  by `@AppStorage("colorSchemePreference")`, applied app-wide via
+  `.preferredColorScheme(...)` in `TRAVEL_GUIDED_TOURApp.swift`.
+- **Unit test target** wired (PR #33) — `TRAVEL GUIDED TOURTests`
+  XCTest bundle with 6 test classes; Cmd-U runs locally, same suite
+  runs on CI per PR.
 - `Assets.xcassets/AccentColor.colorset` is set to terracotta
   `#B85042` (light) and a lighter variant for dark mode.
 - `Assets.xcassets/AppIcon.appiconset` is still the empty Apple
@@ -83,8 +92,10 @@ What's true today:
 - Theme tokens in `Theme/Atlas{Colors,Typography,Spacing}.swift` are
   still **placeholder values** pending the deferred design pass.
 
-See `ROADMAP.md` for milestone-by-milestone history, known
-follow-ups, and the parked `claude/alltrails-alignment` branch.
+See `ROADMAP.md` for milestone-by-milestone history and remaining
+work, `archive/HANDOFF-260518.md` for the most recent session
+handoff snapshot, and `docs/troubleshooting.md` for Xcode + git
+landmines documented from real incidents.
 
 ## Keep these docs in sync
 
@@ -109,6 +120,38 @@ Temporary session-bridge notes don't live at repo root. If a
 session needs one, fold the permanent content into `CLAUDE.md` /
 `ROADMAP.md` before the session ends and move the snapshot to
 `archive/` with a `YYMMDD` suffix (e.g. `archive/HANDOFF-260518.md`).
+
+## Session-start ritual
+
+Before doing anything substantive in a session — especially the
+first action that opens Xcode or runs the app — verify the local
+state. This prevents the "why doesn't my simulator show last
+night's work?" confusion (see `docs/troubleshooting.md` § 1).
+
+```bash
+cd ~/Desktop/"TRAVEL GUIDED TOUR"
+git fetch                        # see what's on origin
+git status                       # any uncommitted leftovers?
+git branch --show-current        # are you on main, or a branch?
+git log origin/main..HEAD        # any local commits not pushed?
+gh pr list --state open          # any in-flight PRs?
+```
+
+Then read the **most recent `archive/HANDOFF-*.md`** —
+`ls archive/HANDOFF-*.md | tail -1` to find it. It captures
+mid-flight state the repo's permanent docs don't: queued feedback,
+what was about to be tackled next, tribal knowledge from the prior
+session. Older HANDOFFs in `archive/` are historical — only the
+latest is part of this ritual.
+
+If `git status` shows uncommitted changes from a prior session,
+investigate before continuing — don't blindly add/commit. The
+prior session may have left them deliberately (parked, WIP) or
+accidentally (Xcode auto-save, abandoned experiment).
+
+If on a feature branch with un-pushed commits, decide whether to
+push, merge, or abandon them before starting new work — switching
+branches with un-pushed work loses the work.
 
 ## Merging PRs (working rule with the owner)
 

@@ -54,15 +54,67 @@ jobs:
             echo "::notice::Test target not yet wired into the Xcode project."
             echo "::notice::See TRAVEL GUIDED TOURTests/README.md for setup steps."
           fi
+      - name: Prepare iOS simulator
+        if: steps.check.outputs.has_tests == 'true'
+        id: sim
+        run: |
+          # GitHub Actions runner-pool variance: some macos-latest runners
+          # come with pre-created iPhone simulators ready to use, others
+          # have only Xcode + runtimes installed and no concrete devices.
+          # On the latter, `xcodebuild test -destination "name=iPhone 16"`
+          # fails with "Unable to find a device matching the provided
+          # destination specifier" after a ~60s timeout. Fix: explicitly
+          # create + boot a simulator at job start so we control the state.
+          # See docs/troubleshooting.md § "CI test job: no concrete iOS
+          # Simulator on runner."
+          set -e
+
+          # Pick the latest available iOS runtime
+          RUNTIME=$(xcrun simctl list runtimes -j | python3 -c '
+          import json, sys
+          rts = json.load(sys.stdin)["runtimes"]
+          ios = [r for r in rts if r["platform"] == "iOS" and r["isAvailable"]]
+          if not ios:
+              sys.exit("No available iOS runtimes")
+          latest = sorted(ios, key=lambda r: tuple(int(x) for x in r["version"].split(".")))[-1]
+          print(latest["identifier"])
+          ')
+          echo "iOS runtime: $RUNTIME"
+
+          # Pick the first iPhone device type that's still supported on
+          # this runtime (model availability varies by Xcode version)
+          DEVICE_TYPE=$(xcrun simctl list devicetypes -j | python3 -c '
+          import json, sys
+          dts = json.load(sys.stdin)["devicetypes"]
+          # Prefer iPhone 16, then 17, then any iPhone
+          preferred = ["iPhone 16", "iPhone 17", "iPhone 15", "iPhone 16 Pro", "iPhone 17 Pro"]
+          by_name = {d["name"]: d["identifier"] for d in dts}
+          for name in preferred:
+              if name in by_name:
+                  print(by_name[name]); sys.exit(0)
+          # Fallback: any iPhone
+          for d in dts:
+              if "iPhone" in d["name"]:
+                  print(d["identifier"]); sys.exit(0)
+          sys.exit("No iPhone device types found")
+          ')
+          echo "Device type: $DEVICE_TYPE"
+
+          # Create the simulator
+          UDID=$(xcrun simctl create "ci-test-device" "$DEVICE_TYPE" "$RUNTIME")
+          echo "Created simulator UDID: $UDID"
+          echo "udid=$UDID" >> "$GITHUB_OUTPUT"
+
+          # Boot it (xcodebuild would boot it anyway, but doing so explicitly
+          # avoids a race where the first test run times out on cold boot)
+          xcrun simctl boot "$UDID" || true
+          xcrun simctl bootstatus "$UDID" -b
       - name: Run tests
         if: steps.check.outputs.has_tests == 'true'
         run: |
           set -o pipefail
-          # Name-based destination (not a UDID) — xcodebuild matches the
-          # newest iPhone 16 simulator available on the runner. Robust
-          # across Xcode / runtime version bumps; no fragile UDID-parse.
           xcodebuild test \
             -scheme "TRAVEL GUIDED TOUR" \
-            -destination "platform=iOS Simulator,name=iPhone 16,OS=latest" \
+            -destination "id=${{ steps.sim.outputs.udid }}" \
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO
