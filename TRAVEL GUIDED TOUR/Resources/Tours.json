@@ -206,6 +206,40 @@
       "primaryCategory": "history",
       "tags": ["maritime", "lower manhattan", "east river", "tall ships", "south street seaport"],
       "priceUSD": 0
+    },
+    {
+      "id": "f71ced9c-bd9a-45da-a39c-74869ce8db65",
+      "title": "Empire State Building",
+      "shortDescription": "Two and a half minutes on the skyscraper that went up in 410 days — Art Deco audacity in the middle of the Great Depression.",
+      "longDescription": "From 41st and Fifth, the Empire State Building rises into the frame like the postcard it became. The base set back from the street, the wedding-cake terraces stepping inward, the Art Deco crown — 1,454 feet from the sidewalk. When it opened in 1931, it was the tallest building in the world; it held the title for forty years.\n\nThe audacity is in the timing. Construction started in 1930, the year after the stock market crashed. While the country slid into the Depression, three thousand four hundred workers built the tallest skyscraper in history in four hundred and ten days, using assembly-line techniques borrowed from the automobile industry. It came in under budget and ahead of schedule — then sat almost entirely empty for years. They called it the Empty State Building. Two and a half minutes on what the building is, what it was supposed to be, and why the lobby is worth slowing down for.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/empire-state-building-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "acc601aa-fc45-4b1e-a909-bfb2906dcf62",
+          "order": 0,
+          "title": "Empire State Building",
+          "caption": "Stand at 41st Street and Fifth Avenue, looking south. The Empire State Building rises into the frame ahead of you.",
+          "latitude": 40.7521,
+          "longitude": -73.9821,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/empire-state-building.mp3",
+          "audioDurationSeconds": 150,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The building in front of you went up in four hundred and ten days.\n\nYou should be standing on Fifth Avenue, anywhere with a clear view of the building. Look up. The base is limestone and granite, set back from the street. Above it, the tower climbs in setbacks — the wedding-cake terraces that step inward as the building rises — until it culminates in the Art Deco crown at the top, and the antenna above that. One thousand four hundred and fifty-four feet, top to sidewalk.\n\nWhen the building opened in 1931, it was the tallest in the world. It held that title for forty years.\n\nThe numbers are the easy part. The harder part is the context. Construction began in 1930, the year after the stock market crashed. The country was sliding into the Great Depression — banks were collapsing, breadlines were forming — and a businessman named John Raskob decided the right moment to build the tallest skyscraper in history was right now. Three thousand four hundred workers built it on a punishing schedule, using newly developed assembly-line techniques borrowed from the automobile industry.\n\nIt came in under budget and ahead of schedule. Then it sat almost entirely empty for years. They called it the Empty State Building. It didn't turn a profit until 1950.\n\nNow look at the top.\n\nThat spire isn't decorative. When the building was designed, it was supposed to be a mooring mast for airships — giant zeppelins and dirigibles would dock at the top, the idea went, and passengers would walk down a gangplank into the observation deck. Only one airship ever actually attempted it, briefly, in 1931, before the wind nearly tore it apart and the whole concept was abandoned. The mast is still up there — a piece of nineteen-thirties futurism that never came true.\n\n[beat]\n\nThe building you're looking at is one of the great Art Deco achievements of the twentieth century — not just for its scale, but for the audacity of building it at all, in the middle of the worst economic crisis the country has ever seen. It was a bet that the future would still arrive. The bet eventually paid off.\n\nIf you have a few minutes, walk up to the main entrance on Fifth Avenue and step inside. The lobby is one of the most beautiful spaces in the city — Art Deco marble, aluminum, and gold-leaf murals, including one showing the building itself as the eighth wonder of the world. Most visitors walk straight past it on their way to the observation deck. It's worth slowing down for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 150,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7521,
+      "centroidLongitude": -73.9821,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["art deco", "midtown", "skyscraper", "1931", "fifth avenue", "great depression"],
+      "priceUSD": 0
     }
   ]
 }
