@@ -118,7 +118,8 @@ struct PlayerView: View {
         proximityMonitor.startMonitoring(
             tour: tour,
             maker: dataService.maker(for: tour),
-            audioPlayer: audioPlayer
+            audioPlayer: audioPlayer,
+            tourDownloader: tourDownloader
         )
     }
 
