@@ -410,6 +410,40 @@
       "primaryCategory": "natureAndParks",
       "tags": ["high line", "chelsea", "park", "diller scofidio renfro", "elevated", "urban transformation", "west side"],
       "priceUSD": 0
+    },
+    {
+      "id": "8a216ae4-a467-48c7-9ff3-0f1cc7ac76bc",
+      "title": "9/11 Memorial, Between the Pools",
+      "shortDescription": "Two minutes on the two voids where the towers stood, the bronze parapets cut with three thousand names, and the architect's harder-than-usual job.",
+      "longDescription": "The two pools sit exactly where the Twin Towers stood. Each is roughly one acre — the actual footprint of the buildings that once rose from this ground. Water falls thirty feet into each pool, then another twenty into a smaller square void at the centre: the largest manmade waterfalls in North America. The memorial is called \"Reflecting Absence,\" designed by Michael Arad after a competition that drew over five thousand submissions. Where the towers reached upward, the pools reach downward.\n\nThe bronze parapets are cut with the names of nearly three thousand dead — those killed here on September 11, 2001, and the six killed in the 1993 World Trade Center bombing. The names are not alphabetical. Arad's team used what they called \"meaningful adjacencies\" — coworkers next to coworkers, friends next to friends, those who died together placed together. Two minutes on the design, the Survivor Tree, and the architect's harder-than-usual job: not a monument to impose meaning, but a space that holds room for whoever shows up.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/nine-eleven-memorial-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8ed2c60b-079a-4d24-a1fd-7c4961f19bd5",
+          "order": 0,
+          "title": "9/11 Memorial, Between the Pools",
+          "caption": "Stand on the plaza between the two pools, near the museum entrance. The South Tower's footprint is to your west, the North Tower's to your east.",
+          "latitude": 40.7117,
+          "longitude": -74.0125,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nine-eleven-memorial.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The two pools in front of you sit exactly where the Twin Towers stood.\n\nYou should be standing on the memorial plaza, between the two large square reflecting pools. To your west, the South Pool marks the footprint of the South Tower. To your east, the North Pool marks the footprint of the North. Each pool is roughly one acre — the actual size of the buildings that once rose from this ground. Water falls thirty feet into each pool, then another twenty feet into a smaller square void at the center. They are the largest manmade waterfalls in North America. The entrance to the museum is between the pools, just to your south.\n\nThe memorial is called \"Reflecting Absence.\" It was designed by Michael Arad, chosen from over five thousand submissions in an international competition. His concept was simple: not a monument to be looked at, but two voids where the buildings used to be. Where the towers reached upward, the pools reach downward.\n\nThe bronze parapets around each pool are cut with the names of the dead — those killed here on September 11, 2001, and the six killed in the 1993 World Trade Center bombing. Nearly three thousand names in all. They are not arranged alphabetically. Arad and his team used something they called \"meaningful adjacencies\": coworkers placed next to coworkers, friends next to friends, family members next to family members, those who died together placed together.\n\nAround the plaza, hundreds of oak trees have been planted. One of them — to the south, near the museum entrance — is different. It's a Callery pear, smaller and slightly bent. That's the Survivor Tree, pulled from the rubble in October 2001, nursed back to health in a nursery, and replanted here when the memorial opened in 2011.\n\nAbove all of it rises One World Trade Center, the tower that replaced the originals. It is the tallest building in the Western Hemisphere.\n\n[beat]\n\nThe architect's job here was harder than usual: not to create a monument that imposes meaning, but a space that holds room for whoever shows up. The museum below tells the rest of the story.\n\nFor now, sit with it. Walk the edges. Read a few of the names."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7117,
+      "centroidLongitude": -74.0125,
+      "city": "New York",
+      "primaryCategory": "culturalHeritage",
+      "tags": ["9/11 memorial", "world trade center", "lower manhattan", "michael arad", "memorial", "reflecting absence"],
+      "priceUSD": 0
     }
   ]
 }
