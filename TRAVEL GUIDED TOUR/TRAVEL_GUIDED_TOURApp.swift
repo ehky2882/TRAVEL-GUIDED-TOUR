@@ -18,6 +18,9 @@ struct TRAVEL_GUIDED_TOURApp: App {
     @State private var proximityMonitor = ProximityMonitor()
     @State private var tourDownloader = TourDownloader()
     @State private var isLoading = true
+    /// Mirrors the `@AppStorage` key used by SettingsView's Appearance
+    /// picker. Wired here so `.preferredColorScheme` applies app-wide.
+    @AppStorage("colorSchemePreference") private var colorSchemePreference: ColorSchemePreference = .system
 
     var body: some Scene {
         WindowGroup {
@@ -40,6 +43,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(recentSearches)
                     .environment(proximityMonitor)
                     .environment(tourDownloader)
+                    .preferredColorScheme(colorSchemePreference.colorScheme)
             }
         }
     }

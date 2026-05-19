@@ -1,23 +1,53 @@
 # CDN decision brief — where does Atlas host its audio?
 
-> **Status (decided 2026-05-18):**
-> - **Now (design / prototype phase):** GitHub Releases. Zero
->   infrastructure, fast iteration; owner uploads MP3 assets to
->   tagged Releases on `ehky2882/travel-guided-tour` and copies the
->   `releases/download/.../<file>.mp3` URLs into `Tours.json`.
+> **Status (updated 2026-05-18):**
+> - **Now (design / prototype phase):** **GitHub Pages** from a
+>   dedicated `gh-pages` branch on this repo. Files live at
+>   `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+>   and are referenced from `Tours.json`. Zero infrastructure.
+>   **Switched from GitHub Releases on 2026-05-18** — Releases
+>   serves assets with `Content-Type: application/octet-stream`,
+>   which `AVPlayer` rejects ("Cannot Open" failure banner). Pages
+>   serves `.mp3` files with `Content-Type: audio/mp3`, which
+>   AVPlayer plays natively. See *"Why we switched from Releases"*
+>   below.
 > - **Before public release:** switch to **Cloudflare R2** with a
 >   custom subdomain (e.g. `audio.atlas.app`). Triggers to flip the
 >   switch — whichever comes first:
->   1. First need to update an audio file in production (Releases
->      are immutable by convention; mutability is the strongest
->      single argument for R2).
+>   1. First need to update an audio file in production with cache
+>      bust faster than Pages' rebuild cycle.
 >   2. Crossing ~5k monthly listeners (preempt GitHub's
 >      not-a-primary-CDN posture).
 >   3. Wanting per-download access logs / play analytics.
 > - **Switching cost when the time comes:** afternoon's work —
 >   create R2 bucket, point custom domain, `rclone copy` the MP3s
->   from Releases to R2, search-and-replace URLs in `Tours.json`,
->   keep Releases live for a week as fallback.
+>   from gh-pages to R2, search-and-replace URLs in `Tours.json`,
+>   keep Pages live for a week as fallback.
+
+## Why we switched from Releases to Pages (2026-05-18)
+
+The first content PRs (#27, #30) uploaded MP3s to tagged GitHub
+Releases. URLs went into `Tours.json` and looked correct, but in
+the simulator the audio failed with *"Cannot Open"* before any
+playback started. AVFoundation's typical message for content-type
+rejection on remote audio.
+
+Tracing the redirect with `curl -I -L`: the Releases URL 302s to
+a signed `release-assets.githubusercontent.com` URL where the
+response carries `Content-Type: application/octet-stream`
+(forced by GitHub's `rsct=application%2Foctet-stream` query
+parameter in the signed URL). `AVPlayer` requires a recognized
+audio MIME type to start playback of remote URLs; `octet-stream`
+isn't one of them.
+
+**Pages doesn't have this problem.** It serves static files using
+extension-based MIME mapping, so `.mp3` returns
+`Content-Type: audio/mp3`. Same content, free, same trust domain
+(github.com / githubassets.com); just a different storage layer.
+
+The CDN evaluation in the rest of this doc still applies for the
+production phase — Pages is the right placeholder, R2 is the
+right destination.
 
 ## TL;DR — my recommendation: **Cloudflare R2**
 

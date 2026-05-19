@@ -33,46 +33,88 @@ struct BottomSheet<Content: View>: View {
     /// Peek detent's pixel height. Tunable per consumer; default ~100
     /// gives room for a drag handle + a single header line.
     var peekHeight: CGFloat = 100
+    /// Inset from the screen edges on the left, right, AND bottom of
+    /// the drawer.
+    var horizontalInset: CGFloat = 8
+    /// Drawer's top corner radius. Rounder than a typical card but
+    /// less than the phone-radius bottom — splits the difference
+    /// (~34pt) so the top reads as a generous curve without making
+    /// the drawer look like a flipped half-pill.
+    var topCornerRadius: CGFloat = 36
+    /// Drawer's bottom corner radius — matches the phone screen's
+    /// rounded corners so the drawer feels like a floating island
+    /// that "follows" the device's bottom curvature. The AtlasTabBar
+    /// uses the same bottom radius so when stacked they read as one
+    /// continuous phone-shaped pill.
+    var bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius
 
-    @State private var dragOffset: CGFloat = 0
+    /// Signed drag delta in points: positive when the user is dragging
+    /// down (shrinking the drawer), negative when dragging up. Reset
+    /// to 0 inside a `withAnimation` block on gesture end so the snap
+    /// animates as a single tween instead of two separate changes.
+    ///
+    /// Exposed as a `@Binding` so the parent can position other UI
+    /// (like the home screen's recenter button) that needs to track
+    /// the drawer's edge during the drag — not just after the snap.
+    @Binding var dragOffset: CGFloat
     @GestureState private var isDragging: Bool = false
 
     init(
         detent: Binding<BottomSheetDetent>,
+        dragOffset: Binding<CGFloat>,
         peekHeight: CGFloat = 100,
+        horizontalInset: CGFloat = 8,
+        topCornerRadius: CGFloat = 36,
+        bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius,
         @ViewBuilder content: () -> Content
     ) {
         self._detent = detent
+        self._dragOffset = dragOffset
         self.peekHeight = peekHeight
+        self.horizontalInset = horizontalInset
+        self.topCornerRadius = topCornerRadius
+        self.bottomCornerRadius = bottomCornerRadius
         self.content = content()
     }
 
     var body: some View {
         GeometryReader { geo in
-            let visibleHeight = heightForDetent(detent, in: geo)
+            let baseHeight = heightForDetent(detent, in: geo)
+            // Negative dragOffset = drag up = drawer grows.
+            // Positive dragOffset = drag down = drawer shrinks.
+            let dragHeight = min(
+                max(peekHeight, baseHeight - dragOffset),
+                geo.size.height - horizontalInset
+            )
 
             VStack(spacing: 0) {
                 dragHandle
                 content
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            .frame(maxWidth: .infinity)
+            .frame(height: dragHeight, alignment: .top)
             .background(.regularMaterial)
             .clipShape(
                 UnevenRoundedRectangle(
-                    topLeadingRadius: 24,
-                    bottomLeadingRadius: 0,
-                    bottomTrailingRadius: 0,
-                    topTrailingRadius: 24,
+                    topLeadingRadius: topCornerRadius,
+                    bottomLeadingRadius: bottomCornerRadius,
+                    bottomTrailingRadius: bottomCornerRadius,
+                    topTrailingRadius: topCornerRadius,
                     style: .continuous
                 )
             )
-            .offset(y: geo.size.height - visibleHeight + dragOffset)
+            // Equal inset on left, right, and bottom — the drawer's
+            // glass extends *past* the safe area into the tab bar's
+            // territory, so the tab bar visually sits on top of the
+            // drawer's bottom edge. iOS 26's tab bar uses the same
+            // glass material, so the two read as a single integrated
+            // bottom element.
+            .padding(.horizontal, horizontalInset)
+            .padding(.bottom, horizontalInset)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             .gesture(dragGesture(in: geo))
-            .animation(
-                isDragging ? nil : .spring(response: 0.4, dampingFraction: 0.85),
-                value: detent
-            )
         }
+        .ignoresSafeArea(.container, edges: .bottom)
     }
 
     // MARK: - Subviews
@@ -99,16 +141,21 @@ struct BottomSheet<Content: View>: View {
             }
             .onEnded { value in
                 let currentVisible = heightForDetent(detent, in: geo) - value.translation.height
-                // Use predicted end to honor flick velocity.
                 let predictedVisible = heightForDetent(detent, in: geo) - value.predictedEndTranslation.height
-
                 let target = nearestDetent(
                     toVisibleHeight: predictedVisible,
                     in: geo,
                     fallback: currentVisible
                 )
-                detent = target
-                dragOffset = 0
+                // Animate detent change AND dragOffset reset together
+                // in a single spring. Previously these were separate
+                // state mutations and the offset-snap-back to 0 ran
+                // implicitly without an animation, which caused the
+                // jerk between detents.
+                withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+                    detent = target
+                    dragOffset = 0
+                }
             }
     }
 
@@ -118,7 +165,11 @@ struct BottomSheet<Content: View>: View {
         switch d {
         case .peek:   return peekHeight
         case .medium: return geo.size.height * 0.5
-        case .large:  return geo.size.height * 0.92
+        case .large:
+            // Fill the container, less an inset on top to mirror the
+            // 8pt bottom inset. Result: drawer reads as a fully-floating
+            // card whose top hides the search bar / chip row behind it.
+            return geo.size.height - (horizontalInset * 2)
         }
     }
 
