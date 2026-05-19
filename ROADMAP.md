@@ -506,10 +506,11 @@ loaded. Functional checklist:
 polish phase below.
 
 **Pre-QA self-audit (2026-05-18).** Before M-qa actually runs on
-device, a code self-audit (`docs/pre-qa-audit-260518.md`, landed
-via PR #21) surfaced 22 findings — bugs, fragile edges,
-accessibility gaps, polish — categorized P0 (launch blockers) →
-P3 (polish/debt). Running status; check items off as fixes land:
+device, a code self-audit (landed via PR #21; doc archived to
+`archive/pre-qa-audit-260518.md` once most P0s closed) surfaced
+22 findings — bugs, fragile edges, accessibility gaps, polish —
+categorized P0 (launch blockers) → P3 (polish/debt). Running
+status; check items off as fixes land:
 
 **P0 — Launch blockers**
 - [x] P0-1. Home → Tour Detail navigation silently broken (PR #23)
@@ -538,10 +539,11 @@ P3 (polish/debt). Running status; check items off as fixes land:
 
 **P3 — Polish & tech debt:** ten items; see audit doc. None block V1.
 
-**Lifecycle.** Once every P0 + P1 from the audit is closed (or
-explicitly deferred), archive `docs/pre-qa-audit-260518.md` to
-`archive/` per the doc-hygiene rule. The closed PRs are the
-record; this checklist is the live "what's left."
+**Lifecycle.** The audit doc itself was archived on 2026-05-18
+after the P0 wave landed (PRs #22 / #23 / #24). The closed PRs
+are the authoritative record of fixes; this checklist is the
+live "what's left." Remaining P1s will batch into a cleanup PR
+before M-qa runs.
 
 ---
 
