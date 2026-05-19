@@ -189,6 +189,43 @@ refuses to open a stream that isn't MIME-typed as audio.
 
 ---
 
+## 7. CI test job: "Unable to find a device matching the provided destination specifier"
+
+**Symptom.** The `Run unit tests` job on GitHub Actions fails with:
+> xcodebuild: error: Unable to find a device matching the provided
+> destination specifier: { platform:iOS Simulator, OS:latest, name:iPhone 16 }
+>
+> Available destinations for the "TRAVEL GUIDED TOUR" scheme:
+>     { platform:macOS, … }
+>     { platform:iOS, id:dvtdevice-DVTiPhonePlaceholder-iphoneos:placeholder, name:Any iOS Device }
+>     { platform:iOS Simulator, id:dvtdevice-…-iphonesimulator:placeholder, name:Any iOS Simulator Device }
+
+…with no concrete iOS Simulator devices in the available list. Build
+job passes (it uses the abstract `generic/platform=iOS Simulator`,
+which works for `build` but not `test`).
+
+**Cause.** GitHub Actions runner-pool variance. Some `macos-latest`
+runners come with pre-created iPhone simulators ready to use, others
+have only Xcode + iOS runtimes installed and no concrete devices.
+On the latter, a name-based destination (`name=iPhone 16`) matches
+nothing — there's no device with that name, just the abstract
+placeholder. PR #33 / #34 ran on the lucky runners; PR #35 didn't.
+
+**Prevention.** Don't depend on pre-created simulators. The workflow
+now explicitly creates + boots a simulator at the start of the test
+job (`.github/workflows/ci.yml` → "Prepare iOS simulator" step), so
+the state is the same regardless of which runner image we get.
+
+**Recovery (if this regresses).** Re-run the failed job once — you
+might get a different runner with concrete devices. If it keeps
+failing, check that the "Prepare iOS simulator" step exists and is
+running. If iOS runtimes themselves are missing on the runner
+(unlikely but possible during Xcode major-version transitions),
+that's a separate problem — pin to a specific `macos-X` runner
+image until the latest stabilizes.
+
+---
+
 ## When to add to this doc
 
 Add a new section here when the same incident bites twice, or when
