@@ -43,31 +43,41 @@ struct TourListCard: View {
                     metaRow
                 }
                 .padding(.horizontal, AtlasSpacing.sm)
+                // Padding only on the text section's bottom — the
+                // hero image fills the top edge-to-edge so selected
+                // and unselected cards look identical (no exposed
+                // gap above the image when the selection border
+                // appears).
+                .padding(.bottom, AtlasSpacing.sm)
             }
-            .padding(.vertical, AtlasSpacing.sm)
-            .background(
-                RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius)
-                    .fill(isSelected ? AtlasColors.primaryText.opacity(0.05) : Color.clear)
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius)
-                    .stroke(
-                        isSelected ? AtlasColors.primaryText.opacity(0.4) : Color.clear,
-                        lineWidth: 1
-                    )
-            )
+            // Clip the whole card so the hero image inherits the
+            // card's outer corner radius — no separate cornerRadius
+            // arg on HeroImageView. One outline instead of two.
+            //
+            // No selection-state border or tint: the drawer's auto-
+            // scroll to the tapped pin's card is the cue. A visible
+            // selection outline reads as inconsistency against the
+            // other cards, not as a useful signal.
+            .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
         }
         .buttonStyle(.plain)
+        // Selection is conveyed to VoiceOver but not visually —
+        // sighted users see the drawer scroll as the cue.
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 
     // MARK: - Subviews
 
     private var heroSection: some View {
         ZStack(alignment: .topTrailing) {
+            // No cornerRadius — the parent card clips for us, so the
+            // image's top-left and top-right corners get the card's
+            // outer radius automatically and the bottom edge sits
+            // flush against the title section.
             HeroImageView(
                 imageName: tour.heroImageURL,
                 height: 160,
-                cornerRadius: AtlasSpacing.cardCornerRadius,
+                cornerRadius: 0,
                 category: tour.primaryCategory
             )
 
