@@ -54,21 +54,15 @@ jobs:
             echo "::notice::Test target not yet wired into the Xcode project."
             echo "::notice::See TRAVEL GUIDED TOURTests/README.md for setup steps."
           fi
-      - name: Pick a simulator
-        if: steps.check.outputs.has_tests == 'true'
-        id: sim
-        run: |
-          SIMULATOR=$(xcrun simctl list devices available \
-            | grep -m 1 "iPhone" \
-            | sed -E 's/.*\(([0-9A-F-]+)\).*/\1/')
-          echo "udid=$SIMULATOR" >> "$GITHUB_OUTPUT"
-          echo "Picked simulator UDID: $SIMULATOR"
       - name: Run tests
         if: steps.check.outputs.has_tests == 'true'
         run: |
           set -o pipefail
+          # Name-based destination (not a UDID) — xcodebuild matches the
+          # newest iPhone 16 simulator available on the runner. Robust
+          # across Xcode / runtime version bumps; no fragile UDID-parse.
           xcodebuild test \
             -scheme "TRAVEL GUIDED TOUR" \
-            -destination "id=${{ steps.sim.outputs.udid }}" \
+            -destination "platform=iOS Simulator,name=iPhone 16,OS=latest" \
             -configuration Debug \
             CODE_SIGNING_ALLOWED=NO

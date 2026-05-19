@@ -169,13 +169,10 @@ Beyond this file and `ROADMAP.md`:
     update the mirror types at the top of the script in the same
     commit.**
 - `TRAVEL GUIDED TOURTests/` — XCTest unit suite for the data /
-  logic layer. Currently *speculative* — files are on disk but the
-  Xcode project doesn't yet have a corresponding Unit Testing
-  Bundle target. See `TRAVEL GUIDED TOURTests/README.md` for the
-  one-time wiring step. CI workflow
-  (`.github/workflows/ci.yml`) detects whether the test scheme
-  exists and runs tests only when it does, so the workflow is
-  green before/after the wiring.
+  logic layer. Wired to the Xcode project as the
+  `TRAVEL GUIDED TOURTests` Unit Testing Bundle target (PR #33,
+  2026-05-18). Six test classes + `TestFixtures.swift`. Runs on
+  `Cmd-U` locally and on CI per PR.
 - `.github/workflows/` — CI definitions. `ci.yml` runs three
   jobs on every PR: Tours.json validation (Linux), `xcodebuild build`
   (macOS), and `xcodebuild test` (macOS, conditional on the test
@@ -198,8 +195,18 @@ xcodebuild -scheme "TRAVEL GUIDED TOUR" -destination "generic/platform=iOS Simul
 xcodebuild -scheme "TRAVEL GUIDED TOUR" -destination "generic/platform=visionOS Simulator" build
 ```
 
-No test targets are configured yet. (Tests = automated checks that re-run
-after every change to confirm nothing broke. We don't have any yet.)
+Run the unit test suite:
+
+```bash
+xcodebuild test \
+  -scheme "TRAVEL GUIDED TOUR" \
+  -destination "platform=iOS Simulator,name=iPhone 16,OS=latest" \
+  -configuration Debug
+```
+
+The `TRAVEL GUIDED TOURTests` Unit Testing Bundle target hosts six
+XCTest classes against the data / logic layer (no UI / view tests).
+Same suite runs on CI per PR via `.github/workflows/ci.yml`.
 
 ## Architecture
 
