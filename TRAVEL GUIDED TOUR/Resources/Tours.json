@@ -172,6 +172,40 @@
       "primaryCategory": "history",
       "tags": ["times square", "broadway", "theater district", "father duffy", "manhattan", "zoning"],
       "priceUSD": 0
+    },
+    {
+      "id": "98a1348c-467a-4572-984c-345a8be66d95",
+      "title": "South Street Seaport, Pier 16",
+      "shortDescription": "Two and a half minutes at Pier 16 — the Wavertree's masts, the old Fulton Fish Market, and the saltwater city New York used to be.",
+      "longDescription": "Pier 16 is where the foot of Fulton Street meets the East River. To your right, the masts and rigging of the historic tall ships — including the Wavertree, an 1885 iron-hulled cargo vessel that hauled jute from India and grain from Argentina, all under sail. To your left, the Tin Building, built in 1907 as the Fulton Fish Market and reopened in 2022 as a food hall. Behind both of them, the glass towers of the Financial District — the modern city that grew up around all of this, then turned its back on the water.\n\nFor most of the nineteenth century, this stretch of waterfront was one of the busiest ports in the world. Hundreds of masts crowded the river. New York's wealth wasn't built downtown by bankers — it was built right here. A short piece, best taken with the wind off the river and the rigging clinking overhead.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/south-street-seaport-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d3ceadaf-95af-4d1d-8d24-a6d4c535e7de",
+          "order": 0,
+          "title": "South Street Seaport, Pier 16",
+          "caption": "Stand at the foot of Fulton Street, on Pier 16, with the tall ships to your right and the Tin Building to your left.",
+          "latitude": 40.705889,
+          "longitude": -74.003056,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/south-street-seaport-pier-16.mp3",
+          "audioDurationSeconds": 152,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The cobblestones under your feet are older than the United States.\n\nYou're at South Street Seaport — Pier 16, where the foot of Fulton Street meets the East River. To your left, a long building of dark green and weathered metal — that's the Tin Building. To your right, the masts and rigging of old sailing ships rising above the dock. Ahead of you, the East River, with Brooklyn on the other side, and the Brooklyn Bridge to your left, soaring overhead.\n\nTake a moment to find each of them.\n\nStart with the ships. The largest, with the four masts, is the Wavertree. She's a tall ship built in 1885 — a cargo vessel that hauled jute from India and grain from Argentina, all under sail. Iron hull, square rigging, the last great age of merchant sailing. She was rotting in a mud bank in Buenos Aires when South Street Seaport Museum bought her in 1968 and brought her home, piece by piece.\n\nThis pier is where she belongs. For most of the nineteenth century, this stretch of waterfront — South Street, just behind you — was one of the busiest ports in the world. Hundreds of masts crowded the river. New York's wealth wasn't built downtown by bankers. It was built right here, by ships like the Wavertree, hauling cargo from every corner of the globe.\n\nNow look at the Tin Building to your left.\n\nThat long, dark structure was built in 1907 as the Fulton Fish Market. For nearly a century, this is where every restaurant in New York bought its fish — beginning at three in the morning, every single day. The market moved to the Bronx in 2005, and the building sat empty for years. It reopened in 2022 as a food hall, but the original tin facade was preserved. It's why it still has that name.\n\nThat's the seaport, in one frame. A nineteenth-century cargo ship, restored. A twentieth-century fish market, rebuilt. And behind both of them, the glass towers of the Financial District — the modern city that grew up around all of this, then turned its back on the water.\n\n[beat]\n\nOne last thing. Notice how quiet it is here, compared to where you came from. Two blocks inland, you're in the middle of Manhattan. Here, you can hear the water moving against the pilings, the rigging of the ships clinking in the wind. New York was a saltwater city once. This is one of the few places you can still feel it.\n\nFor now, stay a while. Watch the bridge. Listen to the ships. The river hasn't changed."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 152,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.705889,
+      "centroidLongitude": -74.003056,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": ["maritime", "lower manhattan", "east river", "tall ships", "south street seaport"],
+      "priceUSD": 0
     }
   ]
 }
