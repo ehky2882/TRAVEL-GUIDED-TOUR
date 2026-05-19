@@ -274,6 +274,40 @@
       "primaryCategory": "history",
       "tags": ["liberty island", "monument", "immigration", "harbor", "1886", "bartholdi", "eiffel"],
       "priceUSD": 0
+    },
+    {
+      "id": "6bf08919-87f8-469c-9418-1fd13396f435",
+      "title": "Brooklyn Bridge, Manhattan Side",
+      "shortDescription": "Two and a half minutes on the bridge that killed its designer, crippled his son, and was finished by his daughter-in-law.",
+      "longDescription": "John Roebling never lived to see his bridge open. While surveying the spot where one of its towers would stand, he was injured in an accident with a docking ferry and died a few weeks later. His son Washington took over, and was himself crippled by caisson sickness working under the river. For most of the next decade he supervised construction from a window in his Brooklyn townhouse, watching through a telescope while his wife Emily learned engineering and relayed his instructions to the workers on site. She effectively ran the bridge for years. When it opened in 1883, she was the first to cross — in a carriage, with a rooster on her lap.\n\nEach tower is 276 feet of Maine granite, with the deliberately monumental pointed arches Roebling wanted: not just an engineer's solution but a public work that would still mean something a century later. When this bridge opened, Manhattan and Brooklyn were separate cities — different governments, different mayors, different identities. The bridge in front of you is what folded them into one.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/brooklyn-bridge-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5b23f212-6a7c-432f-a71d-f93318109430",
+          "order": 0,
+          "title": "Brooklyn Bridge, Manhattan Side",
+          "caption": "Stand on the Manhattan-side pedestrian walkway, just past the City Hall entrance ramp. The first tower rises ahead of you.",
+          "latitude": 40.7108,
+          "longitude": -74.0038,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/brooklyn-bridge-manhattan-side.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The man who designed this bridge never lived to see it open. But his family finished it.\n\nYou should be standing on the Manhattan-side pedestrian walkway, having just climbed the gentle ramp from the entrance near City Hall. The bridge stretches out in front of you toward Brooklyn. The first of the two stone towers rises out of the East River a few minutes' walk ahead. Behind it, slightly higher and further out, the second tower stands in Brooklyn waters. The cables strung between them form the shape that's been printed on a million postcards.\n\nHis name was John Roebling. In 1869, while surveying the spot where one of these towers would eventually stand, he was injured in an accident with a docking ferry, and died from his injuries a few weeks later. His son Washington took over as chief engineer — and within a few years, he too had been injured working under the river in pressurized caissons, leaving him confined to his Brooklyn home for most of the construction. For the next decade, he supervised the project from a window in his townhouse, watching through a telescope. His wife Emily learned engineering to relay his instructions to the workers on site. She effectively ran the bridge's construction for years.\n\nWhen it finally opened in 1883, Emily was the first person to cross — riding in a carriage with a rooster on her lap, a symbol of victory.\n\nNow look at what they built.\n\nEach tower is two hundred and seventy-six feet tall, built of granite hauled from quarries in Maine. When they went up in the eighteen-seventies, they were the tallest structures in the city — taller than anything in Manhattan. The two pointed arches in each tower, the ones that look almost like cathedral doors, are deliberate. John Roebling wanted the bridge to feel monumental — not just an engineer's solution, but a public work that would still mean something a century later. He got his wish.\n\n[beat]\n\nWhen this opened, the two cities at its ends — Manhattan and Brooklyn — were separate. Different governments, different mayors, different identities. Brooklyn was the third-largest city in America. The bridge in front of you is what eventually folded them into one.\n\nFor now, stay here a moment. Look at the towers, the cables, the water moving underneath. What you're looking at is a piece of nineteenth-century engineering still doing its job a hundred and forty years later — built by a family who gave everything they had, and still standing because of it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7108,
+      "centroidLongitude": -74.0038,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": ["brooklyn bridge", "east river", "1883", "roebling", "engineering", "lower manhattan"],
+      "priceUSD": 0
     }
   ]
 }
