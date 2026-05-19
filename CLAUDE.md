@@ -201,6 +201,10 @@ Beyond this file and `ROADMAP.md`:
   - `docs/cdn-decision.md` — owner-facing brief comparing
     Cloudflare R2 / S3+CloudFront / Apple ODR for V1 audio hosting.
     Owner picks; update the brief's Status line when they do.
+  - `docs/design-tokens.md` — single-sheet reference for the
+    typographic hierarchy, color palette, spacing scale, and icon
+    vocabulary. Mirrors the values in `Theme/Atlas*.swift`; update
+    in the same commit when tokens change.
 - `scripts/` — developer-facing tooling:
   - `scripts/validate-tours.swift` — runs against
     `TRAVEL GUIDED TOUR/Resources/Tours.json` and catches typos /
