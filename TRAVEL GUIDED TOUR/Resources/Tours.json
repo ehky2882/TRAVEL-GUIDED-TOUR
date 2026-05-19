@@ -376,6 +376,40 @@
       "primaryCategory": "architecture",
       "tags": ["the met", "beaux-arts", "fifth avenue", "museum mile", "richard morris hunt", "upper east side"],
       "priceUSD": 0
+    },
+    {
+      "id": "e9964cfc-f25e-49d5-b4af-93878cb2ad1e",
+      "title": "High Line, 10th Avenue Square",
+      "shortDescription": "Three minutes on Death Avenue, the rescue, and the wooden tiers where Diller Scofidio + Renfro turned the original problem into the view.",
+      "longDescription": "10th Avenue, below this overlook, used to be called Death Avenue. Freight trains ran at street level along it through the nineteenth century, killing hundreds of people; men on horseback called West Side Cowboys rode in front of them waving red flags. In 1934 the city elevated the line to solve the problem. It worked for thirty years, then trucking took over and the last train ran in 1980. By the late 1990s the plan was to tear it down. Two Chelsea residents — Joshua David and Robert Hammond — saved it. The park opened in stages starting in 2009.\n\nThe wooden tiers you're sitting on are by Diller Scofidio + Renfro. When the city's DOT wanted eight-foot safety fences at the avenue crossing, the architects did the opposite — cut a window into the structure and built seating into it. The danger that used to be below became the view. Three minutes on the overlook, on what the architects did with it, and on the park itself — one of the great urban transformations of the last twenty-five years.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/high-line-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ed52df75-0d72-4d6c-bba2-0f8d4bb3c99a",
+          "order": 0,
+          "title": "High Line, 10th Avenue Square",
+          "caption": "Sit at the 10th Avenue Square overlook, between 17th and 18th Streets, facing the window cut into the structure.",
+          "latitude": 40.7436,
+          "longitude": -74.0051,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/high-line-10th-avenue-overlook.mp3",
+          "audioDurationSeconds": 192,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "10th Avenue, just below you, used to be called Death Avenue.\n\nYou should be sitting or standing at the 10th Avenue overlook on the High Line, between 17th and 18th Streets. Below you, through the large window cut into the structure, you can watch the traffic flowing along the avenue. The wooden tiers you're on are designed for exactly this — sitting and looking down at the city moving beneath your feet.\n\nThat nickname — Death Avenue — was real. In the nineteenth century, freight trains ran at street level along 10th Avenue, sharing the road with pedestrians, horses, and carriages. They killed hundreds of people over the years. Men on horseback, called West Side Cowboys, used to ride in front of the trains waving red flags to warn people out of the way.\n\nIn 1934, the city built this elevated rail line above the avenue to solve the problem. It worked for about thirty years. Then trucking took over, the freight industry declined, and the last train ran in 1980. For the next twenty years, the rail sat abandoned and overgrown, and the city forgot it was here. By the late 1990s, the plan was to tear it down. Two Chelsea residents — Joshua David and Robert Hammond — saved it. They met at a community board meeting in 1999, founded the Friends of the High Line within a year, and the park opened in stages starting in 2009.\n\nNow look down at the traffic.\n\nThis overlook is the work of the architects Diller Scofidio + Renfro. When the city's Department of Transportation wanted them to put up eight-foot fences at the avenue crossing for safety, they did the opposite — they cut a hole in the structure and built tiered seating into it. Elizabeth Diller, one of the partners, has described the experience of sitting here as something like watching a lava lamp: a slow, non-changing movement that gives simple visual pleasure. The cars become tail lights disappearing into the distance. The city becomes a moving image.\n\n[beat]\n\nAnd notice what that does. You're looking down at 10th Avenue — the avenue that once killed people, the reason this whole rail line was elevated in the first place. The danger that used to be below has become the view. The architects turned the original problem into the original gift.\n\nFor now, sit a while. Watch the lights move. Notice that you're sitting in something that almost didn't survive.\n\nWhen you're ready, keep walking. The High Line runs about a mile and a half — from the Meatpacking District at one end to Hudson Yards at the other. Walking it slowly takes about an hour. What you pass through is one of the great urban transformations of the last twenty-five years. A piece of dead infrastructure that became a city park, then a magnet — pulling billions of dollars of new construction into a corner of Manhattan that nobody used to talk about. Renzo Piano's Whitney Museum at the southern end, buildings by Frank Gehry, Jean Nouvel, and Zaha Hadid along the way — most of the great architects of this generation have built something visible from these tracks. The High Line didn't just survive. It rewrote the neighborhood around it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 192,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7436,
+      "centroidLongitude": -74.0051,
+      "city": "New York",
+      "primaryCategory": "natureAndParks",
+      "tags": ["high line", "chelsea", "park", "diller scofidio renfro", "elevated", "urban transformation", "west side"],
+      "priceUSD": 0
     }
   ]
 }
