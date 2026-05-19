@@ -544,6 +544,7 @@ before M-qa runs.
 | **M-polish-player.** Player UI polish | The player is the most-watched surface; deserves its own design pass after the rest of the design system is decided. |
 | **M-polish-icon.** App icon | Replace the empty Apple template with a real Atlas icon. |
 | **M-polish-copy.** Tour descriptions + maker bios review | Editorial-tone pass over launch content. Owner / content team, not Claude. |
+| **M-rethink-categories.** Categories vs. tags | Closed-enum `Tour.primaryCategory` is showing strain in V1 content authoring — many tours have 2–3 defensible category fits, and forcing a single primary felt reductive on at least four tours during M-launch-content (Rockefeller Center, Brooklyn Bridge, High Line, Times Square). Likely direction: drop `TourCategory` enum, derive home rails + filter chips from tags (`Tour.tags`), either popularity-driven or from a curated tag set. Touches `Tour.swift`, `TourCategory.swift` (delete), `HomeRailsViewModel.swift`, `CategoryChipRow.swift`, `scripts/validate-tours.swift`, tests, and the product spec. Pair with the design pass since chip-row visuals change. Owner endorsed direction on 2026-05-19; deferred so V1 content can ship first. |
 | **M-polish-final.** Final V1 success-criteria pass + vibe check | Walk the 9 success criteria in `atlas_claude_code_prompt.md` with the polished app. Last gate before any V1 release. |
 
 ---
