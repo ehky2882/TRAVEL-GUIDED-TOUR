@@ -208,6 +208,24 @@ The `TRAVEL GUIDED TOURTests` Unit Testing Bundle target hosts six
 XCTest classes against the data / logic layer (no UI / view tests).
 Same suite runs on CI per PR via `.github/workflows/ci.yml`.
 
+**When to run tests (Claude rule):** cadence is trigger-based, not
+time-based.
+
+- **Run them when** you've edited code in `Models/`, `Data/`,
+  `Audio/`, or `Location/` (the layers tests actually cover), or
+  before pushing any code PR, or after rebasing / merging `main`
+  into a feature branch, or after resolving a merge conflict in
+  code.
+- **Skip them when** the change is doc-only, CI-only,
+  Xcode-config-only, or only touches `Features/` / `Components/` /
+  `Theme/` (no UI tests exist), or only adds `Resources/Tours.json`
+  content (the validator script + decoding tests on CI cover this).
+- **Don't run them "just to check"** at session start — if no
+  covered code changed, nothing has changed.
+
+Typical session: 1–2 runs total, right before pushing each code PR.
+CI is the safety net regardless.
+
 ## Architecture
 
 (Architecture = the floor plan of the codebase: which folder does what.)
