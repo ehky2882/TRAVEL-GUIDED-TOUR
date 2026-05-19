@@ -38,60 +38,40 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
-**Status (2026-05-18):** every V1 functionality milestone is shipped
-on `main` (M1–M3, M-data-model, M-audio-foundation, M-tour-detail,
-M-player, M-home, M-search, M-maker, M-library, M-geofencing,
-M-offline; M-map was cut). A home-screen redesign landed as PR #19.
-PR #20 (this branch) lands the M-launch-content authoring scaffold
-+ CONTRIBUTING.md + doc-hygiene rule.
+**Status (2026-05-18, end-of-day):** every V1 functionality milestone
+is shipped on `main` (M1–M3, M-data-model, M-audio-foundation,
+M-tour-detail, M-player, M-home, M-search, M-maker, M-library,
+M-geofencing, M-offline; M-map was cut). The earlier rail-carousel
+home redesign (PR #19) was superseded by the AllTrails-style home
+(PR #31): custom `AtlasTabBar`, floating-island bottom drawer, filter
+chip row, vertical tour list, recenter button on the map. Pre-QA
+audit closed all P0 findings (PRs #22 / #23 / #24); audit doc
+archived to `archive/pre-qa-audit-260518.md`. Unit test target wired
+to the Xcode project (PR #33) and runs on CI per PR. Appearance
+toggle (System / Light / Dark) added in Settings.
 
-What's left for V1: **M-launch-content** (owner records audio +
-authors real `Tours.json` — full scaffold ready in `docs/` and
-`scripts/`), **M-qa** (end-to-end sanity sweep on a real device),
-plus the deferred **design / polish pass**. A parked
-`claude/alltrails-alignment` branch holds an exploratory
-AllTrails-style home redesign to revisit during the design pass —
-see "Parked work" below.
+**Audio CDN.** GitHub Pages on the `gh-pages` branch serves audio
+at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`.
+GitHub Releases was tried first but serves the wrong `Content-Type`
+for AVPlayer — see `docs/cdn-decision.md` § "Why we switched from
+Releases to Pages."
 
-**Parked work: `claude/alltrails-alignment` branch.** A second-pass
-home redesign exploring an AllTrails-style direction. Three commits
-on top of `4f6beb6` (M-offline, #18), dated 2026-05-16/17. Net
-change vs `main` after PR #20 lands: roughly +700/-400 lines across
-9 files. Polished work, not WIP despite the middle commit's name —
-uses theme tokens, doc comments, accessibility labels.
+What's left for V1:
+- **M-launch-content** — 2 of 5–15 tours recorded so far (Grand
+  Central south facade in PR #27, Times Square TKTS red steps in
+  PR #30). Owner records more.
+- **M-qa** — end-to-end sanity sweep on a real device. P0 findings
+  closed; some P1 findings (P1-1 sort key, P1-2 avatar URL, P1-3
+  player-tour ID, P1-4 HeroImageView remote loading, P1-7 dateline
+  bug) intended to batch into a cleanup PR before M-qa runs.
+- The deferred **design / polish pass** (theme tokens, app icon,
+  custom map pins, final editorial copy).
 
-What's on the branch:
-- `Components/AtlasTabBar.swift` (new) — custom tab bar replacing
-  SwiftUI's `TabView` chrome, shaped to match the home drawer's
-  width/inset/corners so they read as one "floating island."
-- `Features/Home/CategoryChipRow.swift` (new) — horizontal-scroll
-  category filter chips.
-- `Features/Home/TourListCard.swift` (new) — larger card for the
-  drawer's vertical tour list (replaces horizontal rail carousels).
-- `Theme/AtlasSpacing.swift` — adds `phoneScreenRadius` token (48pt)
-  for the floating-island shape.
-- Heavy rework of `Features/Home/HomeView.swift`,
-  `Features/Home/HomeMapSection.swift`, `Components/BottomSheet.swift`,
-  `ContentView.swift` to wire the new pieces together.
-- Recenter button on the map.
-
-Why it's parked, not merged: per the project's deferred-design
-discipline, this branch is a substantial design direction
-commitment (chips + vertical list vs. PR #19's rail carousels) that
-should be A/B-evaluated on a real device alongside the design pass,
-not merged on faith. Main currently has the simpler PR #19 home as
-the "good enough for V1" baseline.
-
-How to revive when the design pass starts:
-1. `git fetch origin claude/alltrails-alignment`
-2. `git rebase main` on the branch (drops the now-redundant copy of
-   the PR #19 home-redesign commit, since main already has it via
-   the #19 squash).
-3. Build to a real device; A/B the result against current main's
-   home.
-4. If keeping: open it as a PR. If not: extract any universally-good
-   pieces (the custom tab bar and recenter button are arguably
-   non-controversial), then delete the branch.
+**No parked branches.** As of 2026-05-18, all `claude/*` work has
+either landed or been deleted. The previous parked
+`claude/alltrails-alignment` branch landed as PR #31. Only
+`gh-pages` (audio CDN) remains as a non-main branch, and it's
+deliberately separate (orphan branch, no shared history with main).
 
 **Pivot history.** The previous editorial-city-guide V1 work was
 mostly reshaped, not thrown out. The migration tables below are kept
@@ -551,7 +531,7 @@ before M-qa runs.
 
 | Milestone | Scope |
 |---|---|
-| **M-tests.** XCTest unit suite + CI | Cover the data/logic layer (`LibraryStore`, `HomeRailsViewModel`, `RecentSearchStore`, `RecentlyViewedStore`, `TourCategory`, `ToursData` decoding) with XCTest. GitHub Actions workflow runs the validator + `xcodebuild build` + `xcodebuild test` on every PR. Test target needs a one-time Xcode wiring step by the owner — see `TRAVEL GUIDED TOURTests/README.md`. **Status:** test files + workflow on `claude/m-tests-260518`; pending owner adding the Unit Testing Bundle target in Xcode and pushing the resulting `.pbxproj` change. |
+| **M-tests.** XCTest unit suite + CI | ✅ Done. Test files shipped via PR #28 (`claude/m-tests-260518`); workflow added the same day. Xcode test target wiring + CI fix shipped via PR #33 on 2026-05-18: `TRAVEL GUIDED TOURTests` Unit Testing Bundle hosts 6 XCTest classes (`LibraryStore`, `HomeRailsViewModel`, `RecentSearchStore`, `RecentlyViewedStore`, `TourCategory`, `ToursData` decoding) plus `TestFixtures`. Runs locally via Cmd-U and on CI per PR. Cadence rule: see `CLAUDE.md` § "When to run tests." |
 
 ---
 

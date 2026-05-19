@@ -1,196 +1,192 @@
-# Atlas — Handoff Notes
+# Atlas — Handoff Notes (2026-05-18, end of day)
 
-Snapshot of where the project is right now, plus things you can work
-on from a non-local machine (no Xcode required). Read this from the
-GitHub web UI to pick up at work tomorrow.
+Snapshot of where the project is at the close of the 2026-05-18
+session. Read this from any machine — GitHub web, fresh `git clone`,
+new Claude session — to pick up the next work session with full
+context. Companion to `CLAUDE.md` (durable rules) and `ROADMAP.md`
+(milestone status).
+
+> **Note on this file's history.** Earlier today's snapshot of the
+> same name (covering 2026-05-16/17 work) lives in git history.
+> `git log -- archive/HANDOFF-260518.md` to find it. This file is
+> rewritten end-of-day rather than appended to.
 
 ---
 
-## Current state (as of last session)
+## What's in `main` right now
 
-### What's in `main`
-Every V1 functionality milestone is shipped + a clean home-screen
-redesign:
+Latest commit on `main` is `d70e2a4` ("CLAUDE.md: document when
+Claude should run unit tests, PR #34").
 
-| Milestone | Notes |
+**Tonight's session shipped:**
+
+| PR | What |
 |---|---|
-| M1–M3 | App shell, location permission, theme tokens |
-| M-data-model | Tour / Stop / Maker / LibraryEntry / etc. |
-| M-audio-foundation | `AudioPlayerService` (AVQueuePlayer + lock screen) |
-| M-tour-detail | `TourDetailView` (hero, maker, stops, action bar) |
-| M-player | `PlayerView` modal sheet (scrub, transport, speed, auto-advance) |
-| M-home | Map-dominant home + curated rails |
-| M-search | `SearchView` + `RecentSearchStore` |
-| M-maker | `MakerView` (avatar + bio + tour list) |
-| M-library | Saved / Downloaded / Recently played |
-| M-map | **CUT** (Home's embedded map covers it) |
-| M-geofencing | GPS-triggered stop audio |
-| M-offline | `TourDownloader` + Manage Downloads |
-| Home redesign (PR #19) | Full-screen map, glass search bar, persistent bottom sheet |
+| #31 | AllTrails-style home: custom tab bar + floating-island drawer + filter chips + vertical tour list + recenter button. Earlier rail-carousel home superseded. |
+| #32 | Archived pre-QA audit doc to `archive/`; ROADMAP M-qa checklist is now the live record. |
+| #33 | Wired Unit Testing Bundle target into Xcode project + `TourListCard` selection-state polish + CI test-job destination fix + test target deployment target lowered to 26.2. |
+| #34 | `CLAUDE.md`: trigger-based test cadence rule. |
 
-### What's open / WIP
-- **`claude/alltrails-alignment`** branch (not yet a PR) — has the
-  AllTrails-style iteration: custom `AtlasTabBar`, integrated
-  floating-island drawer + tab bar, filter chip row, vertical tour
-  list, recenter button, etc. Branch is pushed; **needs a `git rebase
-  main`** next local session to drop the now-redundant home-redesign
-  commits (PR #19's content) before opening PR #20.
-
-### What's left for V1
-- **M-launch-content** — your content work. Record 5–15 tours,
-  populate `Tours.json` with real audio URLs hosted on a CDN.
-- **M-qa** — end-to-end sanity sweep on a real device. Verify
-  lock-screen Now Playing widget + background geofence triggers.
-- **AllTrails alignment polish** — finish iteration on
-  `claude/alltrails-alignment`, open PR #20, merge.
-
-### Known follow-ups (not blocking V1)
-- Custom tab bar gives up system features (badges, focus animations).
-  Easy to revisit post-V1.
-- "Because you searched [X]" home rail not yet integrated into
-  `HomeRailsViewModel` (data is captured, just not surfaced).
-- `AudioPlayerService` doesn't aggregate progress across stops —
-  `listenedSeconds` reflects position within current item only.
-- Polish milestones from `ROADMAP.md` (theme, pins, player, icon,
-  copy, final).
+**Earlier today's session shipped** (for context):
+- PR #20 — M-launch-content authoring scaffold + CONTRIBUTING.md
+- PR #21 — Pre-QA self-audit doc (22 findings)
+- PRs #22–24 — All P0 audit findings closed (theme tokens, navigation, audio + geofencing hardening)
+- PRs #25–26 — CDN brief expansion + interim decision
+- PRs #27, #30 — Two real tour audio recordings (Grand Central + Times Square TKTS)
+- PR #28 — XCTest unit suite + CI workflow (test files only; wiring deferred to #33)
+- PR #29 — Working rule: Claude auto-merges doc + content PRs without per-PR approval
 
 ---
 
-## Things you can work on remotely (no Xcode needed)
+## What's pending / queued
 
-These are all editable from any browser via GitHub, or in any text
-editor on a work computer. None require running the app.
+### Pending user feedback (most urgent for next session)
 
-### A. Content planning for M-launch-content
+Tonight ended mid-iteration on AllTrails polish. After the
+`TourListCard` selection-state fix landed (PR #33), the owner said:
+> "good for now. lets switch gears slightly"
 
-The biggest unblocked piece. Spec calls for 5–15 tours. Decisions you
-can make sitting at a desk:
+…then asked about test wiring and continuity. So **AllTrails polish
+is paused but not done.** Owner said earlier: "alltrails style is
+getting there, fine for now. many more specific comments to come."
+Next session: prompt the owner for those specific comments before
+making further AllTrails changes.
 
-1. **Pick locations.** Spec suggests:
-   - 2–3 single-location pieces (a piece of public art, a building
-     facade, a specific exhibit) — short, 2–5 min each.
-   - 2–3 multi-stop walking tours (neighborhood, architecture trail,
-     small museum) — 15–30 min, 3–8 stops each.
-   - Rest at whatever ratio you want.
-2. **Map each tour to a `TourCategory`** (`Models/TourCategory.swift`).
-   Closed set: `.history`, `.architecture`, `.visualArt`,
-   `.musicAndPerformance`, `.literature`, `.foodAndDrink`,
-   `.natureAndParks`, `.hiddenGems`, `.culturalHeritage`,
-   `.sacredSites`. Revise this enum if it doesn't fit.
-3. **Write tour metadata** for each:
-   - `title` (1 line, gets you in the mood)
-   - `shortDescription` (one sentence, feed copy)
-   - `longDescription` (multi-paragraph, tour detail page)
-   - `walkingDistanceMeters` (multi-stop only)
-   - `tags` (free-text secondary themes)
-4. **Plan stops** per tour:
-   - `title` (e.g. "The Bronze Doors")
-   - `caption` (one-line description in player UI)
-   - lat/lon (Google Maps → right-click → copy coordinates)
-   - `triggerMode`: `.geofenced` (outdoor walking) or `.manual`
-     (indoor / quiet contexts)
-   - `triggerRadiusMeters` (default 30; tune for the location)
-5. **Write maker bios.** Currently the single seed maker is "Atlas
-   Studio." If you have other makers for V1, write 1–3 sentence bios
-   each.
-6. **Draft scripts** for the audio. Spec doesn't constrain length but
-   the seed tours are 2–5 min single-piece, 4–8 min per stop in
-   multi-stop. Reading speed ~150 wpm → aim for 300–750 words per
-   2–5 min clip.
+### V1 work still outstanding
 
-Anything you write here will plug into `Tours.json` when the audio's
-recorded. You can also write it directly into `Tours.json` as
-placeholder content (with `atlas-tours.example` audio URLs that
-won't resolve, like the existing seed) — that lets you preview how
-it looks in the app next time you're at your Mac.
+- **M-launch-content** — 2 of 5–15 tours recorded. Owner records the
+  rest. Authoring scaffold ready: `docs/authoring-tours.md`,
+  `docs/Tours.template.json`, `scripts/validate-tours.swift`.
+  Audio CDN is `gh-pages` branch (push `.mp3` files, update
+  `Resources/Tours.json` URLs).
+- **M-qa P1 cleanup batch** — five P1 audit findings open:
+  - P1-1. "Continue listening" / "Recently played" sort by wrong field
+  - P1-2. Maker avatar URL is ignored (lands with P1-4)
+  - P1-3. Player-tour identification by title is fragile
+  - P1-4. HeroImageView doesn't load remote images
+  - P1-7. International-dateline bug in coordinate-in-region check
+  Intended as one cleanup PR before M-qa runs.
+- **M-qa real-device pass** — 10-step functional checklist in
+  `ROADMAP.md` § M-qa. Needs a real iPhone + lock-screen + walking
+  through a geofenced tour. Last unblocked item before V1 release
+  (modulo polish / icon / pins).
+- **Deferred polish pass** — theme tokens, app icon, custom map
+  pins, final editorial copy.
 
-### B. CDN decision
-
-Spec calls out three reasonable defaults: Cloudflare R2, AWS S3 +
-CloudFront, or Apple's On-Demand Resources. Pick one for V1 audio
-hosting and write a short note in `ROADMAP.md` recording the
-decision + reasoning. Free to revisit later, but locking it in now
-unblocks M-launch-content.
-
-### C. Documentation tightening
-
-- **`ROADMAP.md`** — mark all the merged milestones as ✅ (it still
-  shows them as "to do"). The text in the "Where we are right now"
-  section is stale.
-- **`CLAUDE.md`** — the "Current State (mid-pivot to audio tours)"
-  section is stale (most of the things it says "are being rebuilt"
-  are now built). Worth a refresh so the next Claude session has
-  accurate context.
-- **`atlas_claude_code_prompt.md`** — the canonical product spec.
-  Reasonable to leave alone, but any product-direction shifts you
-  want to lock in (e.g. ratings/reviews decision, paid tours
-  thinking) belong here.
-
-### D. Post-V1 thinking (no urgency)
-
-`ROADMAP.md` § "Post-V1 — Future direction" has six open owner
-questions:
-- Backend stack — Firebase / Supabase / custom?
-- Maker dashboard — standalone web app or in-iPad?
-- Paid tours — per-purchase, subscription, both?
-- Payouts — Stripe Connect or other?
-- Sign-in — Sign in with Apple only, or email / Google too?
-- Reviews & ratings — ship at all, or never?
-
-None block V1 but worth noodling on. Could write a quick stance on
-each into ROADMAP.md.
-
-### E. Code review
-
-Once **PR #20** (AllTrails alignment) is open, you can review the
-diff on GitHub. Inline comments + approve/request-changes work in
-the browser. You don't need to check out the branch locally to
-review — only to test.
+### P2 / P3 audit items
+Live in `ROADMAP.md` § M-qa. Not blocking V1. Address opportunistically.
 
 ---
 
-## How to resume locally (tomorrow night or whenever)
+## Tribal knowledge from today's sessions
 
+(Durable form is in `docs/troubleshooting.md`. Quick recap for
+context.)
+
+- **Audio CDN MIME issue.** GitHub Releases serves binary assets as
+  `Content-Type: application/octet-stream`, which AVPlayer rejects.
+  Switched to GitHub Pages on the `gh-pages` orphan branch; Pages
+  serves `audio/mp3` correctly. See `docs/cdn-decision.md`.
+- **Phantom xcodeproj.** Xcode's workspace re-save dialog can create
+  empty `.xcodeproj/` directories at nested paths if accepted with
+  the default location. Always cancel and read the path first.
+- **Xcode + git file-handle lock.** Xcode holding file handles can
+  block `git rebase` / `git checkout` even with a clean tree.
+  `git stash --include-untracked` releases the lock; otherwise quit
+  Xcode (Cmd-Q) before non-trivial git ops.
+- **gh CLI `.git/HEAD.lock`.** Background `gh pr merge` holds
+  `HEAD.lock` while it switches the local checkout away from the
+  deleted branch. Wait for gh to fully exit before `git pull`.
+- **Test target was created with `IPHONEOS_DEPLOYMENT_TARGET = 26.5`**
+  by Xcode (latest SDK), but the main app + CI runner only support
+  26.2. Lowering to 26.2 fixed CI. If you add another target,
+  check its deployment target matches the main app.
+- **CI test destination must be name-based, not UDID.** The earlier
+  workflow extracted a UDID from `xcrun simctl list devices`; the
+  picked UDID didn't match any destination supported by the scheme
+  on the CI runner. Name-based (`platform=iOS Simulator,name=iPhone 16,OS=latest`)
+  is robust across Xcode / runtime version bumps.
+
+---
+
+## How to resume from a remote / fresh machine
+
+```bash
+# Fresh checkout (if needed)
+git clone https://github.com/ehky2882/TRAVEL-GUIDED-TOUR.git
+cd TRAVEL-GUIDED-TOUR
+
+# Get latest
+git fetch
+git checkout main
+git pull --ff-only
+
+# Sanity
+git status                              # should be clean
+git log --oneline -5                    # confirm latest matches d70e2a4 or later
+gh pr list --state open                 # should be empty unless something new
+```
+
+Then read in this order:
+1. **`CLAUDE.md`** § Current State + § Session-start ritual
+2. **`ROADMAP.md`** § Where we are right now + § M-qa checklist
+3. **This file** (`archive/HANDOFF-260518.md`) for what's queued
+4. **`docs/troubleshooting.md`** if anything weird happens with Xcode or git
+
+To resume from the same Mac after a break:
 ```bash
 cd ~/Desktop/"TRAVEL GUIDED TOUR"
 claude --resume                  # picks the last session
-# or just `claude` for a fresh one and tell me what you want to do
+# or just `claude` for fresh, and orient by reading the docs above
 ```
 
-What I'd suggest tackling first when you're back at the Mac:
+---
 
-1. **Rebase `claude/alltrails-alignment` onto main** (clean up the
-   now-redundant PR #19 commits in it).
-2. **Tweak remaining home polish** based on testing the rebased
-   branch in the simulator.
-3. **Open PR #20** for the AllTrails work.
-4. **Plug in any content** you wrote during the day (B/C above).
+## What to tackle first next session (Claude's suggestion)
+
+1. **Run the session-start ritual** (`CLAUDE.md` § "Session-start
+   ritual") and confirm state matches this handoff.
+2. **Prompt owner for the queued AllTrails comments** ("many more
+   specific comments to come"). Don't make polish changes without
+   them.
+3. **If owner shifts gears** away from AllTrails: candidates in
+   priority order are (a) the P1 cleanup batch, (b) more
+   M-launch-content tours, (c) M-qa on a real device.
+4. **End of session**: rewrite this handoff with the new state, or
+   create `archive/HANDOFF-YYMMDD.md` for the new date.
 
 ---
 
 ## File map (where things live)
 
 ```
-TRAVEL GUIDED TOUR/
-├── CLAUDE.md                   # project guidance for Claude
-├── ROADMAP.md                  # V1 plan; mark milestones ✅ here
-├── atlas_claude_code_prompt.md # canonical product spec
-├── HANDOFF.md                  # ← this file
-├── TRAVEL GUIDED TOUR/         # source root
-│   ├── Models/                 # Tour, Stop, Maker, etc.
-│   ├── Data/                   # DataService, LibraryStore, etc.
-│   ├── Audio/                  # AudioPlayerService, TourDownloader
-│   ├── Location/               # LocationManager, ProximityMonitor
-│   ├── Features/
-│   │   ├── Home/               # map + drawer + chips
-│   │   ├── Tour/               # tour detail
-│   │   ├── Player/             # full-screen player
-│   │   ├── Search/             # search bar + results
-│   │   ├── Maker/              # maker page
-│   │   ├── Library/            # saved/downloaded/recently played
-│   │   └── Settings/           # "Me" tab + Manage Downloads
-│   ├── Components/             # HeroImageView, TagChip, BottomSheet, AtlasTabBar
-│   ├── Theme/                  # AtlasColors, AtlasTypography, AtlasSpacing
-│   └── Resources/Tours.json    # ← seed content; this is what you edit for content
-└── TRAVEL GUIDED TOUR.xcodeproj
+TRAVEL GUIDED TOUR/                    # repo root
+├── CLAUDE.md                          # durable project guidance for Claude
+├── ROADMAP.md                         # V1 plan + milestone status
+├── CONTRIBUTING.md                    # onboarding for new contributors
+├── atlas_claude_code_prompt.md        # canonical product spec
+├── docs/                              # reference material (not session-start reading)
+│   ├── authoring-tours.md
+│   ├── Tours.template.json
+│   ├── cdn-decision.md
+│   └── troubleshooting.md             # ← Xcode + git landmines
+├── archive/                           # dated snapshots of retired docs
+│   ├── README.md
+│   ├── HANDOFF-260518.md              # ← THIS FILE
+│   └── pre-qa-audit-260518.md
+├── scripts/
+│   └── validate-tours.swift
+├── .github/workflows/ci.yml
+├── TRAVEL GUIDED TOURTests/           # XCTest suite + README for wiring
+└── TRAVEL GUIDED TOUR/                # source root
+    ├── Models/                        # Tour, Stop, Maker, etc.
+    ├── Data/                          # DataService, LibraryStore, etc.
+    ├── Audio/                         # AudioPlayerService, TourDownloader
+    ├── Location/                      # LocationManager, ProximityMonitor
+    ├── Features/
+    │   ├── Home/                      # AllTrails-style: map + drawer + chips
+    │   ├── Tour/, Player/, Search/, Maker/, Library/, Settings/
+    ├── Components/                    # HeroImageView, TagChip, BottomSheet, AtlasTabBar
+    ├── Theme/                         # AtlasColors/Typography/Spacing (placeholders)
+    └── Resources/Tours.json           # ← seed + 2 real tours; edit for more content
 ```
