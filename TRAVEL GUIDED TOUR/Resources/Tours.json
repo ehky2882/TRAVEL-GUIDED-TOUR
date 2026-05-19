@@ -308,6 +308,40 @@
       "primaryCategory": "history",
       "tags": ["brooklyn bridge", "east river", "1883", "roebling", "engineering", "lower manhattan"],
       "priceUSD": 0
+    },
+    {
+      "id": "b2c6204c-50be-4a99-adf6-163c39dcff15",
+      "title": "Rockefeller Center, the Plaza",
+      "shortDescription": "Three minutes on the complex that was supposed to be an opera house — built instead during the Depression, and accidentally invented the rink and the tree.",
+      "longDescription": "The whole complex was supposed to be an opera house. In 1928, John D. Rockefeller Jr. signed a long-term lease on three blocks of midtown as part of a deal to build a new home for the Metropolitan Opera. Then the stock market crashed. The Opera backed out. Rockefeller, already committed to twenty-four years of rent on land he couldn't return, decided to build something else — by himself, on his own money. What he built is what you're looking at: fourteen Art Deco buildings, completed between 1932 and 1939, with integrated public spaces, gardens, and one of the most ambitious public-art programs in the world. The largest private building project in American history at the time, spent in the middle of the Depression. It kept seventy-five thousand people in work.\n\nThree minutes on Prometheus, on the Lee Lawrie relief above him, and on the two of America's most beloved holiday traditions — the skating rink and the Christmas tree — that both started here, by accident.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/rockefeller-center-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2a64e1a4-d6ae-4675-9f77-5e52d8947077",
+          "order": 0,
+          "title": "Rockefeller Center, the Plaza",
+          "caption": "Stand at the east edge of the Lower Plaza, looking down at the rink. Prometheus is across, 30 Rock above.",
+          "latitude": 40.758582,
+          "longitude": -73.978270,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rockefeller-center-the-plaza.mp3",
+          "audioDurationSeconds": 179,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "This whole complex was supposed to be an opera house.\n\nYou should be standing at the edge of the Lower Plaza, looking down at the skating rink — or in summer, the open-air restaurant. Ahead of you, the gilded figure of Prometheus on the far wall of the plaza. Above him, the limestone tower of 30 Rockefeller Plaza, climbing seventy stories into the sky. Behind you, the Channel Gardens slope back toward Fifth Avenue.\n\nWhen the plan started in 1928, John D. Rockefeller Jr. signed a long-term lease on three blocks of midtown Manhattan as part of a deal to build a new home for the Metropolitan Opera. Then the stock market crashed. The Opera backed out. Rockefeller, already committed to twenty-four years of rent on land he couldn't return, decided to go ahead and build something else — by himself, on his own money.\n\nWhat he built is what you're looking at. Fourteen buildings, completed between 1932 and 1939, designed as a unified Art Deco complex with integrated public spaces, gardens, and one of the most ambitious public art programs in the world. At the time, it was the largest private building project in American history. He spent it during the Depression, money the country didn't have. He kept seventy-five thousand people in work.\n\nNow look at the gilded figure ahead of you.\n\nThat's Prometheus, sculpted by Paul Manship in 1934 — the most photographed statue in New York City. He's holding the stolen fire he gave to humanity, according to the Greek myth. The pedestal beneath him is engraved with a line from the playwright Aeschylus: \"Prometheus, teacher in every art, brought the fire that hath proved to mortals a means to mighty ends.\" That sentence is the mission statement of Rockefeller Center, compressed.\n\nAbove him, on the limestone facade of 30 Rock, you can see a carved relief of a bearded figure parting clouds. That's \"Wisdom,\" by Lee Lawrie. The inscription is from the Book of Isaiah: \"Wisdom and Knowledge shall be the stability of thy times.\" Commerce in service of higher ideas.\n\n[beat]\n\nThe skating rink below you was never planned. It opened in 1936 as a temporary attraction, a way to fill an empty sunken plaza that hadn't found a purpose. It was so popular it stayed. The Christmas tree tradition started even earlier — in 1931, when construction workers on the muddy job site pooled their money to put up a small tree. Two of the most beloved holiday rituals in the United States started here, both by accident.\n\nFor now, stay here a moment. Notice how the rink, the statue, the tower, and the gardens all line up — one continuous axis from Fifth Avenue to the top of 30 Rock. None of it is accidental. The whole place was designed to lift your eye, slowly, from the street to the sky."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 179,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.758582,
+      "centroidLongitude": -73.978270,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": ["rockefeller center", "midtown", "art deco", "prometheus", "great depression", "1932", "30 rock"],
+      "priceUSD": 0
     }
   ]
 }
