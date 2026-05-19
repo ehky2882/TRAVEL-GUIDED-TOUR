@@ -6,11 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		0741DB142FBC017A00EE9C95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078299C02F5926C900D5EB03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 078299C72F5926C900D5EB03;
+			remoteInfo = "TRAVEL GUIDED TOUR";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0741DB102FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TRAVEL GUIDED TOURTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		078299C82F5926C900D5EB03 /* TRAVEL GUIDED TOUR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TRAVEL GUIDED TOUR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		0741DB112FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "TRAVEL GUIDED TOURTests";
+			sourceTree = "<group>";
+		};
 		078299CA2F5926C900D5EB03 /* TRAVEL GUIDED TOUR */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "TRAVEL GUIDED TOUR";
@@ -19,6 +35,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0741DB0D2FBC017A00EE9C95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		078299C52F5926C900D5EB03 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				078299CA2F5926C900D5EB03 /* TRAVEL GUIDED TOUR */,
+				0741DB112FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests */,
 				078299C92F5926C900D5EB03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				078299C82F5926C900D5EB03 /* TRAVEL GUIDED TOUR.app */,
+				0741DB102FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +73,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0741DB0F2FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0741DB162FBC017A00EE9C95 /* Build configuration list for PBXNativeTarget "TRAVEL GUIDED TOURTests" */;
+			buildPhases = (
+				0741DB0C2FBC017A00EE9C95 /* Sources */,
+				0741DB0D2FBC017A00EE9C95 /* Frameworks */,
+				0741DB0E2FBC017A00EE9C95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0741DB152FBC017A00EE9C95 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0741DB112FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests */,
+			);
+			name = "TRAVEL GUIDED TOURTests";
+			packageProductDependencies = (
+			);
+			productName = "TRAVEL GUIDED TOURTests";
+			productReference = 0741DB102FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		078299C72F5926C900D5EB03 /* TRAVEL GUIDED TOUR */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 078299D32F5926CB00D5EB03 /* Build configuration list for PBXNativeTarget "TRAVEL GUIDED TOUR" */;
@@ -77,9 +125,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2630;
+				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 2650;
 				TargetAttributes = {
+					0741DB0F2FBC017A00EE9C95 = {
+						CreatedOnToolsVersion = 26.5;
+						TestTargetID = 078299C72F5926C900D5EB03;
+					};
 					078299C72F5926C900D5EB03 = {
 						CreatedOnToolsVersion = 26.3;
 					};
@@ -100,11 +152,19 @@
 			projectRoot = "";
 			targets = (
 				078299C72F5926C900D5EB03 /* TRAVEL GUIDED TOUR */,
+				0741DB0F2FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0741DB0E2FBC017A00EE9C95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		078299C62F5926C900D5EB03 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +175,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0741DB0C2FBC017A00EE9C95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		078299C42F5926C900D5EB03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +191,60 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0741DB152FBC017A00EE9C95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 078299C72F5926C900D5EB03 /* TRAVEL GUIDED TOUR */;
+			targetProxy = 0741DB142FBC017A00EE9C95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0741DB172FBC017A00EE9C95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ehky.TRAVEL-GUIDED-TOURTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TRAVEL GUIDED TOUR.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TRAVEL GUIDED TOUR";
+			};
+			name = Debug;
+		};
+		0741DB182FBC017A00EE9C95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ehky.TRAVEL-GUIDED-TOURTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TRAVEL GUIDED TOUR.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TRAVEL GUIDED TOUR";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		078299D12F5926CB00D5EB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -338,6 +458,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0741DB162FBC017A00EE9C95 /* Build configuration list for PBXNativeTarget "TRAVEL GUIDED TOURTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0741DB172FBC017A00EE9C95 /* Debug */,
+				0741DB182FBC017A00EE9C95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		078299C32F5926C900D5EB03 /* Build configuration list for PBXProject "TRAVEL GUIDED TOUR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
