@@ -15,6 +15,17 @@ session. Read in order at start of next session.
 
 ## What shipped today
 
+### -2. P3-4 — Download retry with backoff
+
+Commit `9fea6db`. `TourDownloader` now retries the current file on
+transient network errors (timeout / connection lost / DNS / no
+internet) with exponential backoff (1s → 2s → 4s, max 3 retries per
+file). Terminal failures (bad URL, etc.) still fail immediately;
+user cancel aborts any pending retry. Real-world payoff: a walking
+tour download that hits a momentary signal blip recovers
+transparently. `TourDownloaderRetryClassifierTests` covers the
+classifier.
+
 ### -1. P3 audit cleanup — three small correctness fixes
 
 Three remote-friendly P3 findings cleared on `claude/resume-after-error-WQGK6`
@@ -235,7 +246,7 @@ Once at a Mac with `gh` or git auth, run the delete list from
 `main`: still at `e74949e` (PR #50, "docs/testflight: add Inviting
 external testers section"). Nothing landed on `main` today.
 
-In-flight branch: `claude/resume-after-error-WQGK6`, 7+ commits
+In-flight branch: `claude/resume-after-error-WQGK6`, 9+ commits
 ahead of `main`:
 - `0ce95bd` ROADMAP: stale branches noted
 - `e0d098a` Times Square images + Option A data layer
@@ -243,8 +254,10 @@ ahead of `main`:
 - `8bd5053` P1 audit cleanup batch (5 findings)
 - `5b49bd2` Handoff refresh (P1)
 - `2429fb1` P2 audit cleanup (accessibility + i18n; 5 findings + P3-2)
-- `b1fe99a` P3 audit cleanup (P3-7, P3-8, P3-10 small fixes)
-- (plus this handoff refresh)
+- `b1fe99a` P3 audit cleanup small fixes (P3-7, P3-8, P3-10)
+- `d55d132` Handoff refresh (P2 + P3)
+- `9fea6db` P3-4 — TourDownloader retry with backoff
+- (plus this final handoff refresh)
 
 **Splitting into multiple PRs is strongly recommended** given
 the scope. Suggested split:
