@@ -196,8 +196,6 @@ struct MakerView: View {
     }
 
     private func formattedDuration(_ seconds: Int) -> String {
-        let minutes = seconds / 60
-        if minutes == 0 { return "\(seconds)s" }
-        return "\(minutes) min"
+        AtlasFormatters.duration(seconds: seconds)
     }
 }

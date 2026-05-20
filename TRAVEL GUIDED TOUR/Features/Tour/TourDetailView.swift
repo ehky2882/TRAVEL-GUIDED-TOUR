@@ -260,7 +260,16 @@ struct TourDetailView: View {
             }
             .buttonStyle(.bordered)
             .disabled(isOtherActive)
-            .accessibilityLabel(downloadAccessibilityLabel(for: state))
+            .accessibilityLabel(
+                isOtherActive
+                    ? "Download unavailable"
+                    : downloadAccessibilityLabel(for: state)
+            )
+            .accessibilityHint(
+                isOtherActive
+                    ? "Wait for the current download to finish, then try again."
+                    : ""
+            )
 
             Text(downloadCaption(for: state))
                 .font(AtlasTypography.caption)
@@ -375,23 +384,11 @@ struct TourDetailView: View {
     // MARK: - Formatters
 
     private func formattedDuration(_ seconds: Int) -> String {
-        let minutes = seconds / 60
-        let remaining = seconds % 60
-        if minutes == 0 {
-            return "\(remaining)s"
-        }
-        if remaining == 0 {
-            return "\(minutes) min"
-        }
-        return "\(minutes) min \(remaining)s"
+        AtlasFormatters.duration(seconds: seconds)
     }
 
     private func formattedWalkingDistance(_ meters: Int?) -> String {
         guard let meters else { return "—" }
-        if meters < 1000 {
-            return "\(meters) m"
-        }
-        let km = Double(meters) / 1000
-        return String(format: "%.1f km", km)
+        return AtlasFormatters.distance(meters: Double(meters))
     }
 }

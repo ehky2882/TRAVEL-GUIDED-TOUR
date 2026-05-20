@@ -306,11 +306,7 @@ struct HomeView: View {
 
     private func distanceText(for tour: Tour) -> String? {
         guard let user = locationManager.userLocation else { return nil }
-        let meters = tour.distance(from: user)
-        if meters < 1000 {
-            return "\(Int(meters)) m away"
-        }
-        return String(format: "%.1f km away", meters / 1000)
+        return AtlasFormatters.distanceAway(meters: tour.distance(from: user))
     }
 
     private var emptyState: some View {

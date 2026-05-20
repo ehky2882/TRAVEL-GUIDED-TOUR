@@ -527,13 +527,14 @@ status; check items off as fixes land:
 - [x] P1-7. International-dateline bug in coordinate-in-region check (MKCoordinateRegion.contains extension)
 
 **P2 — Accessibility**
-- [ ] P2-1. BottomSheet has no VoiceOver affordance
-- [ ] P2-2. Map preview close button sub-44pt touch target
-- [ ] P2-3. Download button disabled state not announced
-- [ ] P2-4. No "Open Settings" deep link when location denied
-- [ ] P2-5. Localization gap — duration / distance formatters hardcoded English/metric
+- [x] P2-1. BottomSheet has no VoiceOver affordance (label + accessibilityAdjustableAction)
+- [/] P2-2. Map preview close button sub-44pt touch target — obsolete; the preview-card-with-X pattern was removed in the PR #19 home redesign
+- [x] P2-3. Download button disabled state not announced (label + hint when isOtherActive)
+- [x] P2-4. No "Open Settings" deep link when location denied (button in SettingsView, iOS/visionOS)
+- [x] P2-5. Localization gap — duration / distance formatters hardcoded English/metric (new AtlasFormatters)
 
 **P3 — Polish & tech debt:** ten items; see audit doc. None block V1.
+P3-2 (duplicated `formattedDuration`) was incidentally closed by P2-5's `AtlasFormatters` extraction.
 
 **Lifecycle.** The audit doc itself was archived on 2026-05-18
 after the P0 wave landed (PRs #22 / #23 / #24). The closed PRs
