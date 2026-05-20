@@ -73,10 +73,11 @@ What's left for V1:
   uploaded build → email arrives → paste "What to Test" in App Store
   Connect → install on iPhone via TestFlight app → walk the 10-step
   checklist below. **Next session priority.**
-- **P1 audit cleanup batch** — 5 open findings: P1-1 sort key, P1-2
-  avatar URL, P1-3 player-tour ID, P1-4 HeroImageView remote loading,
-  P1-7 dateline bug. Intended as one cleanup PR before or in
-  response to M-qa.
+- ~~**P1 audit cleanup batch**~~ — all 5 findings (P1-1 sort key,
+  P1-2 avatar URL, P1-3 player-tour ID, P1-4 HeroImageView remote
+  loading, P1-7 dateline bug) shipped on
+  `claude/resume-after-error-WQGK6` 2026-05-20. Awaiting owner
+  review on Mac.
 - **M-launch-content (optional more)** — owner may decide 10 tours
   are enough for V1 launch, or add more.
 - **Deferred design / polish pass** — theme tokens, real app icon
@@ -517,22 +518,32 @@ status; check items off as fixes land:
 - [/] P0-7. Developer-facing copy in user UI — HomeView + LibraryView fixed in PR #23. SettingsView debug-counts row deferred to a follow-up after PR #22.
 
 **P1 — Bugs**
-- [ ] P1-1. "Continue listening" / "Recently played" sort by wrong field
-- [ ] P1-2. Maker avatar URL is ignored (lands with P1-4)
-- [ ] P1-3. Player-tour identification by title is fragile
-- [ ] P1-4. HeroImageView doesn't load remote images (depends on CDN pick)
+- [x] P1-1. "Continue listening" / "Recently played" sort by wrong field (lastListenedAt added)
+- [x] P1-2. Maker avatar URL is ignored (AsyncImage with circle fallback)
+- [x] P1-3. Player-tour identification by title is fragile (currentSourceId on AudioPlayerService)
+- [x] P1-4. HeroImageView doesn't load remote images (AsyncImage with placeholder fallback)
 - [x] P1-5. Audio session interruption (phone call) not handled (PR #24)
 - [x] P1-6. Headphone unplug doesn't pause audio (PR #24)
-- [ ] P1-7. International-dateline bug in coordinate-in-region check
+- [x] P1-7. International-dateline bug in coordinate-in-region check (MKCoordinateRegion.contains extension)
 
 **P2 — Accessibility**
-- [ ] P2-1. BottomSheet has no VoiceOver affordance
-- [ ] P2-2. Map preview close button sub-44pt touch target
-- [ ] P2-3. Download button disabled state not announced
-- [ ] P2-4. No "Open Settings" deep link when location denied
-- [ ] P2-5. Localization gap — duration / distance formatters hardcoded English/metric
+- [x] P2-1. BottomSheet has no VoiceOver affordance (label + accessibilityAdjustableAction)
+- [/] P2-2. Map preview close button sub-44pt touch target — obsolete; the preview-card-with-X pattern was removed in the PR #19 home redesign
+- [x] P2-3. Download button disabled state not announced (label + hint when isOtherActive)
+- [x] P2-4. No "Open Settings" deep link when location denied (button in SettingsView, iOS/visionOS)
+- [x] P2-5. Localization gap — duration / distance formatters hardcoded English/metric (new AtlasFormatters)
 
-**P3 — Polish & tech debt:** ten items; see audit doc. None block V1.
+**P3 — Polish & tech debt** (ten items; see audit doc; none block V1)
+- [ ] P3-1. Hardcoded values bypass theme-tokens — deferred with the design pass
+- [x] P3-2. `formattedDuration` duplicated — closed incidentally by P2-5's `AtlasFormatters`
+- [ ] P3-3. O(n) lookups everywhere — premature; V1 has 12 tours
+- [x] P3-4. TourDownloader no retry on transient failures (3 retries, exponential backoff 1s/2s/4s, transient errors only — terminal failures still fail immediately)
+- [ ] P3-5. No tour-completed UX
+- [ ] P3-6. Splash screen bare-bones — deferred with the polish pass
+- [x] P3-7. ContentView calls `requestPermission` on every appearance (guarded by `didRequestLocationPermission` flag)
+- [x] P3-8. Search doesn't index tags or descriptions (added tag + description buckets with rank ordering)
+- [ ] P3-9. No delete swipe in Library
+- [x] P3-10. ManageDownloadsView ordering undefined (sorted alphabetically by title)
 
 **Lifecycle.** The audit doc itself was archived on 2026-05-18
 after the P0 wave landed (PRs #22 / #23 / #24). The closed PRs
@@ -585,6 +596,29 @@ sessions actually read.)
   gives up system-level features (badge dots, focus animations,
   accessibility heuristics Apple ships). Easy to revisit post-V1
   if any of those bite.
+- **Stale remote branch cleanup** (noted 2026-05-20). 13 merged
+  `claude/*` feature branches still on `origin` from PRs #36–#47
+  and #50 — all squash-merged, content verified to be on `main`, no
+  unmerged work. Safe to delete; the remote-session container's
+  GitHub token can't delete branches (HTTP 403), so this needs to
+  run from the owner's local machine or the GitHub web UI. Branch
+  list + ready-to-paste delete commands are in the chat transcript
+  for the 2026-05-20 resume session; if that's lost, re-derive via
+  `git ls-remote origin 'refs/heads/claude/*'` and cross-check each
+  against its PR's merged status before deleting. Not touched:
+  `main`, `gh-pages`, and whatever `claude/resume-*` branch the
+  current session is on.
+- **Hero image carousel UI** (Option A, half-shipped 2026-05-20).
+  The data half of Option A is now live: `Tour.additionalImageURLs:
+  [String]?` exists, `Resources/Tours.json`'s Times Square entry
+  uses it, the validator + template + authoring guide all know
+  about it, and 3 real photos are on `gh-pages` under `images/`.
+  Remaining: the **swipe-able carousel UI in `TourDetailView`**
+  that renders the hero + extras as a paged carousel. Without it
+  the extra images are unreachable from the app. Probably ~30–40
+  min of SwiftUI — a `TabView` with `.tabViewStyle(.page)` wrapping
+  `HeroImageView` instances for `[heroImageURL] + (additionalImageURLs ?? [])`.
+  Worth doing as a focused PR so the change is simulator-reviewable.
 - **Content authoring tooling at scale (M-content-tooling).** The
   current tour-upload workflow — owner drags audio + transcript
   into a Claude chat, answers 3 questions, Claude pushes audio +

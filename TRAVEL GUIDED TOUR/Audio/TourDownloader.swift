@@ -58,6 +58,21 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
     private var currentTask: URLSessionDownloadTask?
     private var currentFileWrittenBytes: Int64 = 0
     private var currentFileExpectedBytes: Int64 = 0
+    /// Retry bookkeeping for the *current* file. Reset to 0 on each
+    /// new file start; bumped on every transient retry; the whole
+    /// download fails when this exceeds `maxRetriesPerFile` for one
+    /// file (audit P3-4).
+    private var currentFileRetryCount: Int = 0
+    /// Pending retry sleep — cancelled when the user cancels the
+    /// download or when state otherwise resets.
+    private var pendingRetryTask: Task<Void, Never>?
+
+    /// Per-file retry policy. Three retries with exponential backoff
+    /// (1s, 2s, 4s) covers most "carrier blip" / "passing under a
+    /// tunnel" cases without leaving the user hanging too long when
+    /// the failure is real.
+    static let maxRetriesPerFile = 3
+    static let retryBaseDelaySeconds: TimeInterval = 1.0
 
     override init() {
         super.init()
@@ -115,6 +130,7 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
     /// already written for that tour.
     func cancel(tourId: UUID) {
         guard activeTourId == tourId else { return }
+        pendingRetryTask?.cancel()
         currentTask?.cancel()
         cleanUpPartial(tourId: tourId)
         states[tourId] = .idle
@@ -187,8 +203,23 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
 
         currentFileExpectedBytes = 0
         currentFileWrittenBytes = 0
+        // Reset only when starting a *new* file. Retries reuse the same
+        // pendingFiles.first so the count persists across retries until
+        // the file actually completes.
+        currentFileRetryCount = 0
 
         let task = session.downloadTask(with: next.url)
+        currentTask = task
+        task.resume()
+    }
+
+    private func retryCurrentFile() {
+        guard activeTourId != nil, pendingFiles.first != nil else { return }
+        currentFileExpectedBytes = 0
+        currentFileWrittenBytes = 0
+        // Don't reset currentFileRetryCount here — caller bumped it.
+        guard let url = pendingFiles.first?.url else { return }
+        let task = session.downloadTask(with: url)
         currentTask = task
         task.resume()
     }
@@ -217,6 +248,51 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
         currentTask = nil
         currentFileWrittenBytes = 0
         currentFileExpectedBytes = 0
+        currentFileRetryCount = 0
+        pendingRetryTask?.cancel()
+        pendingRetryTask = nil
+    }
+
+    /// True when `error` is the kind of network failure that's worth
+    /// retrying — a passing carrier blip, a tunnel, a flapping
+    /// connection. HTTP 4xx/5xx don't reach this path (URLSession
+    /// reports those as a successful download with a non-2xx body);
+    /// `NSURLErrorCancelled` is filtered out by the caller. Static so
+    /// the unit test can exercise the classification without spinning
+    /// up a download.
+    static func isTransientNetworkError(_ error: NSError) -> Bool {
+        guard error.domain == NSURLErrorDomain else { return false }
+        switch error.code {
+        case NSURLErrorTimedOut,
+             NSURLErrorCannotConnectToHost,
+             NSURLErrorNetworkConnectionLost,
+             NSURLErrorNotConnectedToInternet,
+             NSURLErrorDNSLookupFailed,
+             NSURLErrorResourceUnavailable,
+             NSURLErrorInternationalRoamingOff,
+             NSURLErrorCallIsActive,
+             NSURLErrorDataNotAllowed:
+            return true
+        default:
+            return false
+        }
+    }
+
+    private func scheduleRetryForCurrentFile() {
+        let attempt = currentFileRetryCount
+        currentFileRetryCount += 1
+        let delay = Self.retryBaseDelaySeconds * pow(2.0, Double(attempt))
+
+        pendingRetryTask?.cancel()
+        pendingRetryTask = Task { @MainActor [weak self] in
+            try? await Task.sleep(for: .seconds(delay))
+            guard let self,
+                  !Task.isCancelled,
+                  self.activeTourId != nil else {
+                return
+            }
+            self.retryCurrentFile()
+        }
     }
 
     private func cleanUpPartial(tourId: UUID) {
@@ -321,7 +397,22 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
         // as NSURLErrorCancelled; treat them as a no-op since
         // `cancel(tourId:)` already cleaned up state.
         guard let error else { return }
-        if (error as NSError).code == NSURLErrorCancelled { return }
+        let nsError = error as NSError
+        if nsError.code == NSURLErrorCancelled { return }
+
+        // Transient network blips (lost connectivity, DNS hiccup,
+        // timeout under a tunnel) retry the *current file* with
+        // exponential backoff up to `maxRetriesPerFile` times. Once
+        // the budget is spent we fall through to failure. This lets
+        // a real-world walking-tour download survive the kinds of
+        // brief network dropouts iPhones hit in the wild (audit P3-4).
+        if Self.isTransientNetworkError(nsError),
+           currentFileRetryCount < Self.maxRetriesPerFile,
+           activeTourId != nil {
+            scheduleRetryForCurrentFile()
+            return
+        }
+
         failActiveDownload(message: error.localizedDescription)
     }
 }

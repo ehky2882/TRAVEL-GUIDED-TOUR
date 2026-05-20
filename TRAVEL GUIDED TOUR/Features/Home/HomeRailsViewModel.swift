@@ -72,7 +72,7 @@ enum HomeRailsViewModel {
     ) -> HomeRail? {
         let inProgressIds = libraryEntries
             .filter { $0.listenedSeconds > 0 && $0.completedAt == nil }
-            .sorted { ($0.savedAt ?? .distantPast) > ($1.savedAt ?? .distantPast) }
+            .sorted { ($0.lastListenedAt ?? .distantPast) > ($1.lastListenedAt ?? .distantPast) }
             .map { $0.tourId }
 
         let matched = inProgressIds.compactMap { id in
@@ -134,7 +134,7 @@ enum HomeRailsViewModel {
         }
 
         let matching = tours.filter { tour in
-            isInside(coordinate: tour.coordinate, region: visibleRegion)
+            visibleRegion.contains(tour.coordinate)
         }
         guard !matching.isEmpty else { return nil }
 
@@ -143,20 +143,6 @@ enum HomeRailsViewModel {
             title: "In view",
             tours: Array(matching.prefix(maxPerRail))
         )
-    }
-
-    private static func isInside(
-        coordinate: CLLocationCoordinate2D,
-        region: MKCoordinateRegion
-    ) -> Bool {
-        let minLat = region.center.latitude - region.span.latitudeDelta / 2
-        let maxLat = region.center.latitude + region.span.latitudeDelta / 2
-        let minLon = region.center.longitude - region.span.longitudeDelta / 2
-        let maxLon = region.center.longitude + region.span.longitudeDelta / 2
-        return coordinate.latitude >= minLat
-            && coordinate.latitude <= maxLat
-            && coordinate.longitude >= minLon
-            && coordinate.longitude <= maxLon
     }
 }
 

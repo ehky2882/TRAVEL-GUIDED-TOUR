@@ -62,6 +62,55 @@ final class ToursDataDecodingTests: XCTestCase {
         XCTAssertEqual(decoded.tours.first?.title, "Test Tour")
         XCTAssertEqual(decoded.tours.first?.kind, .single)
         XCTAssertEqual(decoded.tours.first?.stops.first?.triggerMode, .manual)
+        // additionalImageURLs is optional; missing field decodes as nil.
+        XCTAssertNil(decoded.tours.first?.additionalImageURLs)
+    }
+
+    func test_decodesAdditionalImageURLs_whenPresent() throws {
+        let json = Data(#"""
+        {
+          "id": "22222222-2222-2222-2222-222222222222",
+          "title": "Carousel Tour",
+          "shortDescription": "Short",
+          "longDescription": "Long",
+          "makerId": "11111111-1111-1111-1111-111111111111",
+          "heroImageURL": "https://example.test/hero.jpg",
+          "additionalImageURLs": [
+            "https://example.test/2.jpg",
+            "https://example.test/3.jpg"
+          ],
+          "kind": "single",
+          "stops": [
+            {
+              "id": "33333333-3333-3333-3333-333333333333",
+              "order": 0,
+              "title": "Stop",
+              "caption": null,
+              "latitude": 40.7,
+              "longitude": -74.0,
+              "audioURL": "https://example.test/audio.mp3",
+              "audioDurationSeconds": 120,
+              "triggerMode": "manual",
+              "triggerRadiusMeters": 30,
+              "imageURL": null,
+              "transcriptText": null
+            }
+          ],
+          "introAudioURL": null,
+          "totalDurationSeconds": 120,
+          "walkingDistanceMeters": null,
+          "centroidLatitude": 40.7,
+          "centroidLongitude": -74.0,
+          "city": null,
+          "primaryCategory": "architecture",
+          "tags": [],
+          "priceUSD": 0
+        }
+        """#.utf8)
+
+        let tour = try JSONDecoder().decode(Tour.self, from: json)
+        XCTAssertEqual(tour.additionalImageURLs?.count, 2)
+        XCTAssertEqual(tour.additionalImageURLs?.first, "https://example.test/2.jpg")
     }
 
     func test_decodesEmptyArrays() throws {

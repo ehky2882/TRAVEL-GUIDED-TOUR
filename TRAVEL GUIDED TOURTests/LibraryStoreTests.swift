@@ -118,10 +118,29 @@ final class LibraryStoreTests: XCTestCase {
 
         let played = store.recentlyPlayed.map(\.tourId)
         XCTAssertEqual(played.count, 2)
-        // Documents current behavior: sort is by listenedSeconds desc.
-        // See audit P1-1 — should be by lastListenedAt instead. When
-        // that fix lands, this test's expectations update.
-        XCTAssertEqual(played.first, id2)
+    }
+
+    func test_recentlyPlayed_sortedByMostRecentlyListened() {
+        // id1 listened first; id2 listened second. id2 should rank first
+        // even though both have the same listenedSeconds — sort is by
+        // lastListenedAt, not cumulative time (audit P1-1).
+        let store = LibraryStore()
+        let id1 = UUID()
+        let id2 = UUID()
+        store.updateProgress(id1, listenedSeconds: 100, completed: false)
+        Thread.sleep(forTimeInterval: 0.01)
+        store.updateProgress(id2, listenedSeconds: 100, completed: false)
+
+        let played = store.recentlyPlayed.map(\.tourId)
+        XCTAssertEqual(played.first, id2, "Most-recently listened should be first")
+        XCTAssertEqual(played.last, id1)
+    }
+
+    func test_updateProgress_setsLastListenedAt() {
+        let store = LibraryStore()
+        let id = UUID()
+        store.updateProgress(id, listenedSeconds: 42, completed: false)
+        XCTAssertNotNil(store.entry(for: id)?.lastListenedAt)
     }
 
     func test_recentlyPlayed_excludesEntriesWithoutProgress() {

@@ -54,15 +54,30 @@ struct MakerView: View {
         }
     }
 
-    /// Avatar placeholder is a solid adaptive-grey circle for V1 —
-    /// matches the HeroImageView placeholder treatment so layout
-    /// reads cleanly before real images land in M-launch-content.
-    /// `maker.avatarURL` is wired up alongside the HeroImageView
-    /// AsyncImage swap-in (audit P1-2).
+    /// Loads `maker.avatarURL` via AsyncImage, falling back to the
+    /// adaptive-grey circle when the URL is missing, malformed, or
+    /// the network errors. Same placeholder treatment as
+    /// HeroImageView so layout reads cleanly in every state.
     private var avatar: some View {
-        Circle()
-            .fill(AtlasColors.placeholderWarm)
-            .frame(width: avatarSize, height: avatarSize)
+        Group {
+            if let urlString = maker.avatarURL,
+               let url = URL(string: urlString) {
+                AsyncImage(url: url) { phase in
+                    switch phase {
+                    case .success(let image):
+                        image
+                            .resizable()
+                            .scaledToFill()
+                    default:
+                        Circle().fill(AtlasColors.placeholderWarm)
+                    }
+                }
+            } else {
+                Circle().fill(AtlasColors.placeholderWarm)
+            }
+        }
+        .frame(width: avatarSize, height: avatarSize)
+        .clipShape(Circle())
     }
 
     private func websiteLink(url: URL) -> some View {
@@ -181,8 +196,6 @@ struct MakerView: View {
     }
 
     private func formattedDuration(_ seconds: Int) -> String {
-        let minutes = seconds / 60
-        if minutes == 0 { return "\(seconds)s" }
-        return "\(minutes) min"
+        AtlasFormatters.duration(seconds: seconds)
     }
 }

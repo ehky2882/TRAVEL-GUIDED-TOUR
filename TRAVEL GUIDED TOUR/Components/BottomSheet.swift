@@ -127,6 +127,45 @@ struct BottomSheet<Content: View>: View {
             .padding(.bottom, 4)
             .frame(maxWidth: .infinity)
             .contentShape(Rectangle()) // make the whole handle area draggable
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Tour list")
+            .accessibilityValue(detentAccessibilityValue)
+            .accessibilityHint("Swipe up or down with one finger to change height.")
+            .accessibilityAddTraits(.isButton)
+            .accessibilityAdjustableAction { direction in
+                switch direction {
+                case .increment:
+                    detent = nextDetent(above: detent)
+                case .decrement:
+                    detent = nextDetent(below: detent)
+                @unknown default:
+                    break
+                }
+            }
+    }
+
+    private var detentAccessibilityValue: String {
+        switch detent {
+        case .peek:   return "Collapsed"
+        case .medium: return "Half open"
+        case .large:  return "Fully open"
+        }
+    }
+
+    private func nextDetent(above current: BottomSheetDetent) -> BottomSheetDetent {
+        switch current {
+        case .peek:   return .medium
+        case .medium: return .large
+        case .large:  return .large
+        }
+    }
+
+    private func nextDetent(below current: BottomSheetDetent) -> BottomSheetDetent {
+        switch current {
+        case .large:  return .medium
+        case .medium: return .peek
+        case .peek:   return .peek
+        }
     }
 
     // MARK: - Gesture

@@ -57,6 +57,7 @@ nested inside each tour.
 | `longDescription` | Yes | 2–4 paragraphs. Appears on the tour detail screen above the stop list. Cover: what the tour is, where it happens, who would enjoy it, any practical notes (good shoes, indoor/outdoor, time of day). |
 | `makerId` | Yes | The `id` of the maker (from the `makers` array) who made this tour. Foreign key. |
 | `heroImageURL` | Yes | The big image at the top of the tour detail screen. Landscape orientation, ≥ 1600px wide. Hosted on the CDN. |
+| `additionalImageURLs` | No (omit or `null` ok) | Optional array of extra landscape images for a carousel below the hero on the tour detail screen. Same size guidance as `heroImageURL`. Order matters — index 0 shows first after the hero. Leave the field out entirely if the tour has only a hero. |
 | `kind` | Yes | Either `"single"` (one location, one audio clip) or `"multiStop"` (a walking tour). Drives UI affordances — e.g., walking distance only shows for multi-stop. |
 | `stops` | Yes | Array of stops (see Stop fields below). `single` tours have exactly 1; `multiStop` tours have 2 or more. |
 | `introAudioURL` | No (`null` ok) | Optional 30–90s clip that plays before stop 1. Use for orientation: "We're going to be walking from X to Y, here's why I picked these three buildings…" |
@@ -206,10 +207,10 @@ What it catches:
   with no intro audio.
 - **Sanity bounds** — `audioDurationSeconds > 0`,
   `triggerRadiusMeters > 0`, warns if radius is outside 5–500m.
-- **URL validity** — every `heroImageURL`, `audioURL`,
-  `introAudioURL`, `imageURL`, `avatarURL`, `websiteURL` is a
-  well-formed URL with a scheme + host. (Does NOT check that the
-  URL resolves — placeholder `atlas-tours.example/...` URLs pass.)
+- **URL validity** — every `heroImageURL`, `additionalImageURLs[]`,
+  `audioURL`, `introAudioURL`, `imageURL`, `avatarURL`, `websiteURL`
+  is a well-formed URL with a scheme + host. (Does NOT check that
+  the URL resolves — placeholder `atlas-tours.example/...` URLs pass.)
 - **Empty required text** — `title`, `bio`, `displayName`, etc.
 
 What it doesn't (yet) catch:
@@ -241,6 +242,106 @@ commit. The script has a comment near the top reminding you.
 7. Once recorded and uploaded, swap the placeholder URLs for real CDN URLs.
 8. Validate (`python3 -m json.tool` or jsonlint), build, test in simulator.
 9. Commit `Tours.json`.
+
+---
+
+## Authoring with Claude (interactive workflow)
+
+This is the actual workflow used to land most of the M-launch-content
+tours. The Atlas team owner gathers audio + transcript out-of-session;
+inside a Claude Code session, Claude does the JSON authoring and asks
+the owner only the small set of decisions that need the human's
+input. If you're picking this up in a fresh session, this section is
+the contract.
+
+**What the owner provides per stop:**
+
+1. **The audio file**, committed to the `gh-pages` branch under
+   `audio/<filename>.mp3`. Owner does this by hand; Atlas serves audio
+   from `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+   (see `docs/cdn-decision.md`).
+2. **The transcript** — pasted into chat as plain text. Claude reads
+   this to draft `shortDescription`, `longDescription`, `caption`,
+   and `tags`.
+3. **The audio length** — in `mm:ss` or seconds. Claude won't guess
+   from transcript length.
+
+**What Claude prompts the owner for (and only these):**
+
+1. **Coordinates** — lat/lon of the stop. Owner can paste lat/lon
+   directly or give an address / corner ("NE corner of 34th & 5th")
+   and Claude resolves it. Single-piece tours: one coord. Multi-stop:
+   one per stop.
+2. **Trigger mode** — `onArrival` (geofence fires when user walks
+   into the radius) or `manual` (user taps Play). Default is
+   `onArrival` for walking tours; ask explicitly if there's any
+   reason to vary it.
+3. **Category** — one of `history`, `architecture`, `natureAndParks`,
+   `culturalHeritage`, `foodAndDrink`, `artAndMuseums`, `nightlife`,
+   `shoppingAndMarkets`. Drives which home rail the tour lands on.
+   Tour-level, not stop-level.
+
+(If the owner offers a trigger radius other than the 40m default, or
+a non-Atlas-Studio maker, treat those as additional inputs in the
+same pass — don't re-prompt.)
+
+**What Claude auto-fills without asking:**
+
+- **Title** — the place name as-is unless the owner asks for flavor.
+- **`shortDescription` (~80–140 chars) + `longDescription` (2–4
+  paragraphs)** — drawn from the transcript. Match the editorial
+  voice of existing tours in `Tours.json`; don't add facts the
+  transcript doesn't mention.
+- **`caption` per stop** — the standing instruction ("Stand at [the
+  corner the owner gave you], looking up at the building").
+- **`tags`** — 4–6 tags drawn from the transcript. Era, neighborhood,
+  building type, year, architect, street, material — whatever the
+  transcript actually names. Don't invent.
+- **Maker** — `Atlas Studio` (its existing UUID is already in
+  `Tours.json` under `makers[]`; reuse, don't create a new one).
+- **`heroImageURL`** — placeholder URL
+  (`https://atlas-tours.example/<slug>-hero.jpg`). The carousel /
+  real-image pass is a separate batch and is not blocking.
+- **`additionalImageURLs`** — omit entirely until the image pass.
+- **UUIDs** — fresh for the tour and each stop (`uuidgen` or a
+  Foundation `UUID()` literal).
+- **`audioURL`** — the `gh-pages` URL pattern above, computed from
+  the filename the owner committed.
+- **`introAudioURL`** — omit unless the owner gives a separate intro
+  file.
+- **Order indices** — sequential by the order the owner pastes the
+  stops.
+- **`triggerRadiusMeters`** — 40 unless the owner says otherwise.
+- **`totalDurationSeconds`** — sum of stop `audioDurationSeconds`
+  values; no separate ask.
+- **`kind`** — `single` if one stop, `multiStop` if 2+.
+
+**Validation before commit:**
+
+Always run `swift scripts/validate-tours.swift` after editing
+`Tours.json` and before committing. The script catches duplicate
+UUIDs, broken `makerId` foreign keys, kind ↔ stop-count mismatches,
+out-of-range coords, and centroid sanity (warns if the tour
+centroid is outside the bounding box of its stops). CI runs the
+same validator on every PR — failing it blocks merge.
+
+**Commit + branch:**
+
+Tour content edits to `Resources/Tours.json` are content-only and
+fall under the doc/content auto-merge boundary in `CLAUDE.md`.
+Branch naming convention used so far: `claude/<descriptive-slug>`
+or land directly to a working branch the owner already has open.
+**Always confirm the target branch with the owner before
+committing** — owner may want each tour as a separate PR for
+visual review in the simulator, or batched.
+
+**Stops without transcript:**
+
+If the owner ever sends audio without a transcript, ask for a
+transcript before drafting descriptions. Don't paraphrase from an
+imagined transcript — every descriptive line in `shortDescription`
+/ `longDescription` / `caption` must be grounded in something the
+owner actually said.
 
 ---
 

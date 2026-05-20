@@ -72,12 +72,6 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
     func distanceString(toLatitude latitude: Double, longitude: Double) -> String? {
         guard let userLocation else { return nil }
         let target = CLLocation(latitude: latitude, longitude: longitude)
-        let distance = userLocation.distance(from: target)
-        if distance < 1000 {
-            return "\(Int(distance))m away"
-        } else {
-            let km = distance / 1000.0
-            return String(format: "%.1fkm away", km)
-        }
+        return AtlasFormatters.distanceAway(meters: userLocation.distance(from: target))
     }
 }

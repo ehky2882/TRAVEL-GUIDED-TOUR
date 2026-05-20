@@ -145,7 +145,11 @@
       "shortDescription": "Three minutes on the wishbone view of Times Square from the red steps — what you're looking at, and how it got this way.",
       "longDescription": "A short audio piece from the top of the red glass steps above the TKTS booth — the unofficial best seat in Times Square, with the whole square opening south like a wishbone. The piece walks you through a slow rotation: south over Broadway and Seventh Avenue, west toward the hidden Theater District, north to the bronze chaplain almost nobody notices. Three minutes on what Times Square is, how it works (by zoning, not accident), and the version of itself it used to be before the 1990s cleanup.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://atlas-tours.example/images/times-square-from-tkts-hero.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/times-square-from-tkts-hero.jpg",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/times-square-from-tkts-2.jpg",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/times-square-from-tkts-3.jpg"
+      ],
       "kind": "single",
       "stops": [
         {

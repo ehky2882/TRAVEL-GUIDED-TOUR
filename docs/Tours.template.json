@@ -20,6 +20,10 @@
       "longDescription": "A short audio piece standing in Bowling Green, looking at Arturo Di Modica's bronze bull. The piece covers how the sculpture got there overnight in 1989, why the city tried to remove it, and what it means that a guerrilla-installed artwork became one of the most-photographed objects in New York. Best listened to early morning before the line for selfies forms.",
       "makerId": "00000000-0000-0000-0000-00000000E001",
       "heroImageURL": "https://atlas-tours.example/images/charging-bull-hero.jpg",
+      "additionalImageURLs": [
+        "https://atlas-tours.example/images/charging-bull-2.jpg",
+        "https://atlas-tours.example/images/charging-bull-3.jpg"
+      ],
       "kind": "single",
       "stops": [
         {

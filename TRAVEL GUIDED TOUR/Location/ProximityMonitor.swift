@@ -10,7 +10,7 @@ import Observation
 /// an entry, this service:
 ///   - sets `lastEnteredStopId` (observable; the player UI syncs its
 ///     currentStopIndex off this so transport controls stay in sync)
-///   - calls `audioPlayer.play(url:title:artist:)` with that stop's
+///   - calls `audioPlayer.play(url:title:artist:sourceId:)` with that stop's
 ///     audio (works while the app is foregrounded, locked, or
 ///     backgrounded — iOS wakes us on the boundary crossing)
 ///   - fires a local notification (only shown while the app is
@@ -156,7 +156,8 @@ final class ProximityMonitor: NSObject, CLLocationManagerDelegate {
             audioPlayer?.play(
                 url: url,
                 title: activeTourTitle,
-                artist: activeMakerName
+                artist: activeMakerName,
+                sourceId: activeTourId?.uuidString
             )
         }
 

@@ -1,5 +1,8 @@
 import SwiftUI
 import CoreLocation
+#if os(iOS) || os(visionOS)
+import UIKit
+#endif
 
 /// User's choice for the app's color scheme. Stored in
 /// `UserDefaults` via `@AppStorage("colorSchemePreference")`.
@@ -97,6 +100,18 @@ struct SettingsView: View {
                             Label("Enable Location", systemImage: "location.circle")
                         }
                     }
+
+                    #if os(iOS) || os(visionOS)
+                    if locationManager.authorizationStatus == .denied
+                        || locationManager.authorizationStatus == .restricted {
+                        Button {
+                            openSystemSettings()
+                        } label: {
+                            Label("Open in Settings", systemImage: "gear")
+                        }
+                        .accessibilityHint("Opens the iOS Settings app to grant Atlas location access.")
+                    }
+                    #endif
                 }
 
                 Section("Data") {
@@ -133,6 +148,16 @@ struct SettingsView: View {
             .inlineNavigationBarTitle()
         }
     }
+
+    #if os(iOS) || os(visionOS)
+    private func openSystemSettings() {
+        guard let url = URL(string: UIApplication.openSettingsURLString),
+              UIApplication.shared.canOpenURL(url) else {
+            return
+        }
+        UIApplication.shared.open(url)
+    }
+    #endif
 
     private var locationStatusText: String {
         switch locationManager.authorizationStatus {

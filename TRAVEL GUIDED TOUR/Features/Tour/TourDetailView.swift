@@ -260,7 +260,16 @@ struct TourDetailView: View {
             }
             .buttonStyle(.bordered)
             .disabled(isOtherActive)
-            .accessibilityLabel(downloadAccessibilityLabel(for: state))
+            .accessibilityLabel(
+                isOtherActive
+                    ? "Download unavailable"
+                    : downloadAccessibilityLabel(for: state)
+            )
+            .accessibilityHint(
+                isOtherActive
+                    ? "Wait for the current download to finish, then try again."
+                    : ""
+            )
 
             Text(downloadCaption(for: state))
                 .font(AtlasTypography.caption)
@@ -347,13 +356,14 @@ struct TourDetailView: View {
 
     // MARK: - Audio state derivations
     //
-    // We identify "this tour's audio" by matching the player's current
-    // title against the tour title. Sufficient for V1's small seed (and
-    // we control both sides). M-player owns the actual playback control;
-    // this view only reads the state for label decoration.
+    // We identify "this tour's audio" via the AudioPlayerService's
+    // `currentSourceId`, set by PlayerView to the tour's UUID string
+    // when it calls `play(url:title:artist:sourceId:)`. M-player owns
+    // the actual playback control; this view only reads the state for
+    // label decoration.
 
     private var isThisTourActive: Bool {
-        audioPlayer.currentTitle == tour.title
+        audioPlayer.currentSourceId == tour.id.uuidString
             && audioPlayer.state != .idle
             && audioPlayer.state != .failed
     }
@@ -367,30 +377,18 @@ struct TourDetailView: View {
     }
 
     private var isThisTourLoading: Bool {
-        audioPlayer.currentTitle == tour.title
+        audioPlayer.currentSourceId == tour.id.uuidString
             && audioPlayer.state == .loading
     }
 
     // MARK: - Formatters
 
     private func formattedDuration(_ seconds: Int) -> String {
-        let minutes = seconds / 60
-        let remaining = seconds % 60
-        if minutes == 0 {
-            return "\(remaining)s"
-        }
-        if remaining == 0 {
-            return "\(minutes) min"
-        }
-        return "\(minutes) min \(remaining)s"
+        AtlasFormatters.duration(seconds: seconds)
     }
 
     private func formattedWalkingDistance(_ meters: Int?) -> String {
         guard let meters else { return "—" }
-        if meters < 1000 {
-            return "\(meters) m"
-        }
-        let km = Double(meters) / 1000
-        return String(format: "%.1f km", km)
+        return AtlasFormatters.distance(meters: Double(meters))
     }
 }

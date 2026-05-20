@@ -66,6 +66,7 @@ struct Tour: Codable {
     let longDescription: String
     let makerId: UUID
     let heroImageURL: String
+    let additionalImageURLs: [String]?
     let kind: TourKind
     let stops: [Stop]
     let introAudioURL: String?
@@ -183,6 +184,13 @@ for (ti, t) in file.tours.enumerated() {
     if !isNonEmpty(t.shortDescription) { err(tloc, "shortDescription is empty") }
     if !isNonEmpty(t.longDescription)  { err(tloc, "longDescription is empty") }
     if !isValidURL(t.heroImageURL)     { err(tloc, "heroImageURL '\(t.heroImageURL)' is not a valid URL") }
+    if let extras = t.additionalImageURLs {
+        for (i, u) in extras.enumerated() {
+            if !isValidURL(u) {
+                err(tloc, "additionalImageURLs[\(i)] '\(u)' is not a valid URL")
+            }
+        }
+    }
     if let u = t.introAudioURL, !isValidURL(u) { err(tloc, "introAudioURL '\(u)' is not a valid URL") }
 
     if !(-90.0...90.0).contains(t.centroidLatitude) {

@@ -13,6 +13,13 @@ struct ContentView: View {
     @Environment(LocationManager.self) private var locationManager
 
     @State private var selectedTab: AtlasTab = .home
+    /// `.onAppear` fires every time the view re-attaches (tab switch,
+    /// returning from background, etc.). Request location permission
+    /// once per process so we don't repeatedly hit
+    /// `CLLocationManager.requestWhenInUseAuthorization()` — iOS no-ops
+    /// after the first call but the redundancy was conceptually wrong
+    /// (audit P3-7).
+    @State private var didRequestLocationPermission = false
 
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -22,6 +29,8 @@ struct ContentView: View {
         }
         .ignoresSafeArea(.container, edges: .bottom)
         .onAppear {
+            guard !didRequestLocationPermission else { return }
+            didRequestLocationPermission = true
             locationManager.requestPermission()
         }
     }
