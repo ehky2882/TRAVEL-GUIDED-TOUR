@@ -15,6 +15,55 @@ session. Read in order at start of next session.
 
 ## What shipped today
 
+### -1. P3 audit cleanup — three small correctness fixes
+
+Three remote-friendly P3 findings cleared on `claude/resume-after-error-WQGK6`
+(commit `b1fe99a`).
+
+- **P3-7** `ContentView.requestPermission` called on every
+  `.onAppear` — now gated by a `didRequestLocationPermission`
+  flag. iOS was already no-op-ing repeats but the redundancy was
+  conceptually wrong.
+- **P3-8** Search didn't match tags or descriptions even though
+  `docs/authoring-tours.md` promised tags fed the index. Added
+  tag + description buckets to `SearchView.filteredTours` with
+  rank order title → category → maker → tags → description.
+- **P3-10** `ManageDownloadsView` listed downloaded tours in
+  Dictionary-iteration order (i.e. random between launches).
+  Now sorted alphabetically by title via
+  `localizedCaseInsensitiveCompare`.
+
+P3 items intentionally **not** done this session (called out in
+ROADMAP): P3-1 (theme tokens, design-deferred), P3-3 (lookup
+performance, premature for 12 tours), P3-4 (download retry, larger),
+P3-5 (tour-completed UX, needs simulator review), P3-6 (splash,
+polish-pass deferred), P3-9 (delete swipe in Library, UI verify).
+
+### 0a. P2 audit cleanup — accessibility + localization
+
+Commit `2429fb1`. Closes the P2 tier:
+- **P2-1** BottomSheet drag handle gains VoiceOver label,
+  detent-aware value, hint, and `accessibilityAdjustableAction`
+  that cycles detents on swipe up/down.
+- **P2-2** marked obsolete in ROADMAP — the preview-card-with-X
+  pattern referenced in the audit was removed in PR #19.
+- **P2-3** download button now distinguishes "disabled because
+  another download is in-flight" in its label + hint.
+- **P2-4** SettingsView gains an "Open in Settings" button when
+  location authorization is `.denied`/`.restricted`, deep-linking
+  to `UIApplication.openSettingsURLString` (iOS / visionOS only).
+- **P2-5** five copies of hand-rolled `formattedDuration` plus
+  three hardcoded `m`/`km`/`min` distance literals all replaced
+  with `Components/AtlasFormatters.swift` —
+  `DateComponentsFormatter` for durations, `MeasurementFormatter`
+  (`.naturalScale`) for distances. Imperial locales now see
+  `"0.5 mi"` instead of `"1.3 km"`. Incidentally closes P3-2
+  (formattedDuration duplication).
+
+`AtlasFormattersTests` covers duration shape (sub-min, exact min,
+hour+min, zero, negative) and distance shape with
+locale-independent assertions.
+
 ### 0. P1 audit cleanup batch — closed out
 
 All 5 remaining P1 findings from `archive/pre-qa-audit-260518.md`
@@ -111,12 +160,17 @@ The 5/19 handoff's `## Tomorrow's queue` is the primary list:
 ### 2. Review and merge the in-flight branch from today
 
 Branch: `claude/resume-after-error-WQGK6`
-Commits ahead of main: 4 (+ handoff doc refresh)
+Commits ahead of main: 7+
 - `0ce95bd` — ROADMAP note about stale branches
 - `e0d098a` — Times Square images + Option A data layer
 - `d506297` — Handoff doc for 2026-05-20 (initial draft)
 - `8bd5053` — P1 audit cleanup batch (5 findings)
-- (plus the handoff doc refresh capturing the P1 work)
+- `5b49bd2` — Handoff refresh (P1)
+- `2429fb1` — P2 audit cleanup (5 findings + P3-2)
+- `b1fe99a` — P3 audit cleanup (P3-7, P3-8, P3-10)
+- (plus this handoff refresh)
+
+See the "Where we are right now" section for a suggested PR split.
 
 What to do:
 - Open it in Xcode on the Mac, verify it builds and the Times Square
@@ -181,18 +235,33 @@ Once at a Mac with `gh` or git auth, run the delete list from
 `main`: still at `e74949e` (PR #50, "docs/testflight: add Inviting
 external testers section"). Nothing landed on `main` today.
 
-In-flight branch: `claude/resume-after-error-WQGK6`, 4 commits
+In-flight branch: `claude/resume-after-error-WQGK6`, 7+ commits
 ahead of `main`:
 - `0ce95bd` ROADMAP: stale branches noted
 - `e0d098a` Times Square images + Option A data layer
-- `d506297` Handoff: 2026-05-20 (this file's earlier draft)
-- `8bd5053` P1 audit cleanup batch — close out the pre-M-qa bugs
+- `d506297` Handoff doc (initial)
+- `8bd5053` P1 audit cleanup batch (5 findings)
+- `5b49bd2` Handoff refresh (P1)
+- `2429fb1` P2 audit cleanup (accessibility + i18n; 5 findings + P3-2)
+- `b1fe99a` P3 audit cleanup (P3-7, P3-8, P3-10 small fixes)
 - (plus this handoff refresh)
 
-Ready to PR. **Reasonable to split** into a few PRs by topic if
-you'd rather have smaller review surfaces — Times Square + Option A
-data is one logical change, P1 cleanup is another, the ROADMAP +
-handoff doc updates are sprinkled across both.
+**Splitting into multiple PRs is strongly recommended** given
+the scope. Suggested split:
+1. **Times Square + carousel data** (`e0d098a` + portions of the
+   ROADMAP / handoff docs) — content + data-layer feature.
+2. **P1 audit cleanup** (`8bd5053`) — 5 bug fixes + tests.
+3. **P2 audit cleanup** (`2429fb1`) — accessibility + locale
+   formatters.
+4. **P3 small fixes** (`b1fe99a`) — three correctness
+   improvements.
+5. **Doc / housekeeping** (`0ce95bd`, `d506297`, `5b49bd2`, and
+   this refresh) — could fold into whichever code PR ships first,
+   or land separately.
+
+Or merge as one big "pre-M-qa cleanup" PR if you'd rather. Each
+commit on the branch already passes the "is this a self-contained
+change?" test, so reviewers can read commit-by-commit either way.
 
 `gh-pages`: at `0d8df6f`, now has `images/` directory with 3 Times
 Square photos plus the unchanged `audio/` directory.
