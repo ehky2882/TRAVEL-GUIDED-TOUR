@@ -43,20 +43,24 @@ app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 (iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
 — same app body, three different "TVs" it can play on.
 
-## Current State (V1 functionality complete; first TestFlight build uploaded)
+## Current State (V1 functionality + audit cleanup complete; first TestFlight build uploaded)
 
 Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`.
 The AllTrails-style home redesign landed via PR #31 on 2026-05-18 and
 is now the production home. On 2026-05-19, the first TestFlight build
-(1.0/1) was uploaded to App Store Connect at 9:38 PM. What's left for
-V1 release: **end-to-end M-qa pass on a real device via TestFlight**
-(blocked on Apple's processing of the uploaded build + owner installing
-via TestFlight app + walking the 10-step checklist), the **P1 audit
-cleanup batch** (5 remaining findings), more **M-launch-content** tours
-if desired (currently 10 of 5–15), and the deferred **design / polish
-pass**.
+(1.0/1) was uploaded to App Store Connect. On 2026-05-20, the pre-M-qa
+audit cleanup batch shipped via PR #51 — closing all remaining P1
+findings, the actionable P2 findings (accessibility + locale-aware
+formatters), three small P3 findings, and adding the Option A data
+layer for the hero image carousel (`additionalImageURLs: [String]?`).
+What's left for V1: **end-to-end M-qa pass on a real device via
+TestFlight** (owner completes TestFlight setup → installs via TestFlight
+app → walks 10-step checklist), more **M-launch-content** tours if
+desired (currently 10 of 5–15), the **hero image carousel UI** to surface
+the additional images already in the data model (~30–40 min of SwiftUI),
+and the deferred **design / polish pass**.
 
-What's true today (2026-05-19):
+What's true today (2026-05-20):
 
 - `ContentView.swift` uses a custom `AtlasTabBar` (3 tabs: **Home /
   Library / Me**) shaped to match the home drawer's width/inset/
@@ -74,6 +78,23 @@ What's true today (2026-05-19):
   `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
   GitHub Releases tried first but serves wrong MIME type — see
   `docs/cdn-decision.md`.
+- **First photographic content shipped** (2026-05-20): 3 Times Square
+  photos on `gh-pages` at `/images/`. Times Square tour now uses a
+  real `heroImageURL` and populates the new optional
+  `additionalImageURLs: [String]?` field on `Tour`. `HeroImageView`
+  loads remote images via `AsyncImage`. **Carousel UI itself not yet
+  built** — `TourDetailView` only renders `heroImageURL`; the 2 extra
+  Times Square photos are unreachable in-app pending a small SwiftUI
+  PR. See ROADMAP § Known follow-ups.
+- **Pre-M-qa audit closed** (PR #51, 2026-05-20). P0 findings closed
+  earlier; P1 batch (5 findings: sort key, avatar, player-tour ID,
+  remote image loading, antimeridian), P2 cleanup (BottomSheet
+  VoiceOver, location-denied deep link, locale-aware
+  `AtlasFormatters`), and P3 small fixes (permission gate, search
+  tag/description matching, alphabetical ManageDownloads) all
+  shipped. P3-4 download retry with exponential backoff also
+  shipped. A few P3 items intentionally deferred — see
+  `ROADMAP.md` § M-qa for the live checklist.
 - **Audio playback** runs through `Audio/AudioPlayerService.swift`
   (AVQueuePlayer + lock-screen integration + audio session
   interruption + headphone-unplug handling).
@@ -109,7 +130,9 @@ work, the latest `archive/HANDOFF-*.md` for the most recent session
 handoff snapshot, `docs/troubleshooting.md` for Xcode + git landmines
 documented from real incidents, and `docs/testflight.md` for the
 TestFlight upload runbook (per-release ~10-min flow + first-time setup
-historical reference).
+historical reference). **First session under a new Claude account?**
+Also read `archive/ACCOUNT-TRANSFER-260520.md` for cold-start
+orientation + working-style notes.
 
 ## Keep these docs in sync
 

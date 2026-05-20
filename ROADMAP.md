@@ -38,15 +38,17 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
-**Status (2026-05-19, end-of-day):** every V1 functionality milestone
-is shipped on `main` (M1–M3, M-data-model, M-audio-foundation,
-M-tour-detail, M-player, M-home, M-search, M-maker, M-library,
-M-geofencing, M-offline; M-map was cut). AllTrails-style home (PR
-#31) is the production home. Pre-QA audit closed all P0 findings
-(PRs #22 / #23 / #24). Unit test target wired (PR #33) and runs on
+**Status (2026-05-20):** every V1 functionality milestone is shipped
+on `main` (M1–M3, M-data-model, M-audio-foundation, M-tour-detail,
+M-player, M-home, M-search, M-maker, M-library, M-geofencing,
+M-offline; M-map was cut). AllTrails-style home (PR #31) is the
+production home. **Pre-M-qa audit complete** — P0 findings closed
+(PRs #22 / #23 / #24, May 2026-05-18); P1 + P2 + P3 cleanup batch
+shipped 2026-05-20 (PR #51) along with the Option A data layer for
+the hero image carousel. Unit test target wired (PR #33) and runs on
 CI per PR. **First TestFlight build (1.0/1) uploaded to App Store
-Connect on 2026-05-19 at 9:38 PM** — awaiting Apple's automated
-processing.
+Connect on 2026-05-19 at 9:38 PM** — was "Ready to Submit" last
+checked on 2026-05-20 morning.
 
 **Content (M-launch-content).** 10 real tours + 2 seed in
 `Resources/Tours.json` as of 2026-05-19. NYC landmarks: Grand Central
@@ -69,20 +71,28 @@ complete. Per-release upload flow documented in `docs/testflight.md`
 session-by-session log.
 
 What's left for V1:
-- **M-qa real-device pass via TestFlight** — Apple processes the
-  uploaded build → email arrives → paste "What to Test" in App Store
-  Connect → install on iPhone via TestFlight app → walk the 10-step
-  checklist below. **Next session priority.**
-- ~~**P1 audit cleanup batch**~~ — all 5 findings (P1-1 sort key,
-  P1-2 avatar URL, P1-3 player-tour ID, P1-4 HeroImageView remote
-  loading, P1-7 dateline bug) shipped on
-  `claude/resume-after-error-WQGK6` 2026-05-20. Awaiting owner
-  review on Mac.
+- **M-qa real-device pass via TestFlight** — owner completes
+  TestFlight setup in App Store Connect (Internal Testing group +
+  paste "What to Test") → installs Atlas via TestFlight app on
+  iPhone → walks the 10-step checklist below. **Next priority.**
+- **Hero image carousel UI** — Option A data layer is shipped
+  (`additionalImageURLs: [String]?`) and 3 Times Square photos are
+  on `gh-pages`, but `TourDetailView` only renders `heroImageURL`.
+  ~30–40 min of SwiftUI to surface the additional images via a
+  `TabView(.page)`. Until this ships, the 2 extra Times Square
+  photos are unreachable in-app. Separate focused PR. See § Known
+  follow-ups.
 - **M-launch-content (optional more)** — owner may decide 10 tours
-  are enough for V1 launch, or add more.
+  are enough for V1 launch, or add more. See `docs/authoring-tours.md`.
 - **Deferred design / polish pass** — theme tokens, real app icon
   (replace placeholder green sphere), custom map pins, final
   editorial copy.
+
+**Account transfer note (2026-05-20):** project is being handed off
+from one Claude account to another. See
+`archive/ACCOUNT-TRANSFER-260520.md` for the cold-start orientation +
+working-style notes written specifically for the new account's first
+session.
 
 **No parked branches.** All `claude/*` work has either landed or been
 deleted. Only `gh-pages` (audio CDN + privacy policy) remains as a
