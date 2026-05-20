@@ -15,6 +15,44 @@ session. Read in order at start of next session.
 
 ## What shipped today
 
+### 0. P1 audit cleanup batch — closed out
+
+All 5 remaining P1 findings from `archive/pre-qa-audit-260518.md`
+shipped on `claude/resume-after-error-WQGK6` (commit `8bd5053`).
+Intended as the "one cleanup PR before M-qa runs on device" called
+out in `HANDOFF-260519.md` § V1 work outstanding. ROADMAP § M-qa
+checklist and § Known follow-ups updated.
+
+- **P1-1** sort key — `LibraryEntry` gains `lastListenedAt`;
+  `LibraryStore.recentlyPlayed` and
+  `HomeRailsViewModel.continueListeningRail` sort by it.
+  Backwards-compatible (optional field, missing → nil).
+- **P1-2** avatar URL — `MakerView.avatar` renders
+  `maker.avatarURL` via `AsyncImage` with the grey-circle
+  fallback.
+- **P1-3** player-tour ID — `AudioPlayerService` gains
+  `currentSourceId`; callers (`PlayerView`, `ProximityMonitor`)
+  pass `tour.id.uuidString`; `TourDetailView` predicates match
+  on source ID instead of title. Fixes the two-tours-with-the-
+  same-title corner case.
+- **P1-4** `HeroImageView` swapped from placeholder-only to
+  `AsyncImage` with the placeholder as loading / failure / empty
+  fallback. **First PR where real photography is visible in the
+  simulator** — the Times Square images from earlier this session
+  will now actually render.
+- **P1-7** antimeridian bug — extracted to a single
+  `MKCoordinateRegion.contains(_:)` extension in
+  `Location/MKCoordinateRegion+Contains.swift`. Both
+  duplicated implementations (`HomeView`, `HomeRailsViewModel`)
+  collapsed to use it. Tests cover both wrap directions.
+
+Test additions: `LibraryStoreTests` gains
+`test_recentlyPlayed_sortedByMostRecentlyListened` +
+`test_updateProgress_setsLastListenedAt`; new
+`MKCoordinateRegionContainsTests` covers 6 cases including both
+wrap directions. CI's xcodebuild jobs are the safety net — no
+Swift toolchain in the remote container.
+
 ### 1. Times Square hero + 2 carousel images — partially shipped
 
 The hero image carousel work that was "Option A, locked but
@@ -73,10 +111,12 @@ The 5/19 handoff's `## Tomorrow's queue` is the primary list:
 ### 2. Review and merge the in-flight branch from today
 
 Branch: `claude/resume-after-error-WQGK6`
-Commits ahead of main: 3
+Commits ahead of main: 4 (+ handoff doc refresh)
 - `0ce95bd` — ROADMAP note about stale branches
 - `e0d098a` — Times Square images + Option A data layer
-- (plus this handoff)
+- `d506297` — Handoff doc for 2026-05-20 (initial draft)
+- `8bd5053` — P1 audit cleanup batch (5 findings)
+- (plus the handoff doc refresh capturing the P1 work)
 
 What to do:
 - Open it in Xcode on the Mac, verify it builds and the Times Square
@@ -141,8 +181,18 @@ Once at a Mac with `gh` or git auth, run the delete list from
 `main`: still at `e74949e` (PR #50, "docs/testflight: add Inviting
 external testers section"). Nothing landed on `main` today.
 
-In-flight branch: `claude/resume-after-error-WQGK6`, 3 commits
-ahead of `main`. Ready to PR.
+In-flight branch: `claude/resume-after-error-WQGK6`, 4 commits
+ahead of `main`:
+- `0ce95bd` ROADMAP: stale branches noted
+- `e0d098a` Times Square images + Option A data layer
+- `d506297` Handoff: 2026-05-20 (this file's earlier draft)
+- `8bd5053` P1 audit cleanup batch — close out the pre-M-qa bugs
+- (plus this handoff refresh)
+
+Ready to PR. **Reasonable to split** into a few PRs by topic if
+you'd rather have smaller review surfaces — Times Square + Option A
+data is one logical change, P1 cleanup is another, the ROADMAP +
+handoff doc updates are sprinkled across both.
 
 `gh-pages`: at `0d8df6f`, now has `images/` directory with 3 Times
 Square photos plus the unchanged `audio/` directory.
