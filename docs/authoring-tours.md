@@ -57,6 +57,7 @@ nested inside each tour.
 | `longDescription` | Yes | 2–4 paragraphs. Appears on the tour detail screen above the stop list. Cover: what the tour is, where it happens, who would enjoy it, any practical notes (good shoes, indoor/outdoor, time of day). |
 | `makerId` | Yes | The `id` of the maker (from the `makers` array) who made this tour. Foreign key. |
 | `heroImageURL` | Yes | The big image at the top of the tour detail screen. Landscape orientation, ≥ 1600px wide. Hosted on the CDN. |
+| `additionalImageURLs` | No (omit or `null` ok) | Optional array of extra landscape images for a carousel below the hero on the tour detail screen. Same size guidance as `heroImageURL`. Order matters — index 0 shows first after the hero. Leave the field out entirely if the tour has only a hero. |
 | `kind` | Yes | Either `"single"` (one location, one audio clip) or `"multiStop"` (a walking tour). Drives UI affordances — e.g., walking distance only shows for multi-stop. |
 | `stops` | Yes | Array of stops (see Stop fields below). `single` tours have exactly 1; `multiStop` tours have 2 or more. |
 | `introAudioURL` | No (`null` ok) | Optional 30–90s clip that plays before stop 1. Use for orientation: "We're going to be walking from X to Y, here's why I picked these three buildings…" |
@@ -206,10 +207,10 @@ What it catches:
   with no intro audio.
 - **Sanity bounds** — `audioDurationSeconds > 0`,
   `triggerRadiusMeters > 0`, warns if radius is outside 5–500m.
-- **URL validity** — every `heroImageURL`, `audioURL`,
-  `introAudioURL`, `imageURL`, `avatarURL`, `websiteURL` is a
-  well-formed URL with a scheme + host. (Does NOT check that the
-  URL resolves — placeholder `atlas-tours.example/...` URLs pass.)
+- **URL validity** — every `heroImageURL`, `additionalImageURLs[]`,
+  `audioURL`, `introAudioURL`, `imageURL`, `avatarURL`, `websiteURL`
+  is a well-formed URL with a scheme + host. (Does NOT check that
+  the URL resolves — placeholder `atlas-tours.example/...` URLs pass.)
 - **Empty required text** — `title`, `bio`, `displayName`, etc.
 
 What it doesn't (yet) catch:

@@ -597,6 +597,17 @@ sessions actually read.)
   against its PR's merged status before deleting. Not touched:
   `main`, `gh-pages`, and whatever `claude/resume-*` branch the
   current session is on.
+- **Hero image carousel UI** (Option A, half-shipped 2026-05-20).
+  The data half of Option A is now live: `Tour.additionalImageURLs:
+  [String]?` exists, `Resources/Tours.json`'s Times Square entry
+  uses it, the validator + template + authoring guide all know
+  about it, and 3 real photos are on `gh-pages` under `images/`.
+  Remaining: the **swipe-able carousel UI in `TourDetailView`**
+  that renders the hero + extras as a paged carousel. Without it
+  the extra images are unreachable from the app. Probably ~30–40
+  min of SwiftUI — a `TabView` with `.tabViewStyle(.page)` wrapping
+  `HeroImageView` instances for `[heroImageURL] + (additionalImageURLs ?? [])`.
+  Worth doing as a focused PR so the change is simulator-reviewable.
 - **Content authoring tooling at scale (M-content-tooling).** The
   current tour-upload workflow — owner drags audio + transcript
   into a Claude chat, answers 3 questions, Claude pushes audio +

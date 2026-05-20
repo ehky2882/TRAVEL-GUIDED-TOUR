@@ -13,6 +13,7 @@ struct Tour: Codable, Identifiable, Hashable {
     let longDescription: String
     let makerId: UUID
     let heroImageURL: String
+    let additionalImageURLs: [String]?
     let kind: TourKind
     let stops: [Stop]
     let introAudioURL: String?
