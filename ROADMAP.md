@@ -585,6 +585,18 @@ sessions actually read.)
   gives up system-level features (badge dots, focus animations,
   accessibility heuristics Apple ships). Easy to revisit post-V1
   if any of those bite.
+- **Stale remote branch cleanup** (noted 2026-05-20). 13 merged
+  `claude/*` feature branches still on `origin` from PRs #36–#47
+  and #50 — all squash-merged, content verified to be on `main`, no
+  unmerged work. Safe to delete; the remote-session container's
+  GitHub token can't delete branches (HTTP 403), so this needs to
+  run from the owner's local machine or the GitHub web UI. Branch
+  list + ready-to-paste delete commands are in the chat transcript
+  for the 2026-05-20 resume session; if that's lost, re-derive via
+  `git ls-remote origin 'refs/heads/claude/*'` and cross-check each
+  against its PR's merged status before deleting. Not touched:
+  `main`, `gh-pages`, and whatever `claude/resume-*` branch the
+  current session is on.
 - **Content authoring tooling at scale (M-content-tooling).** The
   current tour-upload workflow — owner drags audio + transcript
   into a Claude chat, answers 3 questions, Claude pushes audio +
