@@ -93,9 +93,11 @@ What's true today (2026-05-18):
   still **placeholder values** pending the deferred design pass.
 
 See `ROADMAP.md` for milestone-by-milestone history and remaining
-work, `archive/HANDOFF-260518.md` for the most recent session
-handoff snapshot, and `docs/troubleshooting.md` for Xcode + git
-landmines documented from real incidents.
+work, the latest `archive/HANDOFF-*.md` for the most recent session
+handoff snapshot, `docs/troubleshooting.md` for Xcode + git
+landmines documented from real incidents, and
+`docs/testflight.md` for the TestFlight upload runbook (per-release
+~10-min flow + first-time setup historical reference).
 
 ## Keep these docs in sync
 
