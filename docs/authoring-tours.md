@@ -245,6 +245,106 @@ commit. The script has a comment near the top reminding you.
 
 ---
 
+## Authoring with Claude (interactive workflow)
+
+This is the actual workflow used to land most of the M-launch-content
+tours. The Atlas team owner gathers audio + transcript out-of-session;
+inside a Claude Code session, Claude does the JSON authoring and asks
+the owner only the small set of decisions that need the human's
+input. If you're picking this up in a fresh session, this section is
+the contract.
+
+**What the owner provides per stop:**
+
+1. **The audio file**, committed to the `gh-pages` branch under
+   `audio/<filename>.mp3`. Owner does this by hand; Atlas serves audio
+   from `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+   (see `docs/cdn-decision.md`).
+2. **The transcript** — pasted into chat as plain text. Claude reads
+   this to draft `shortDescription`, `longDescription`, `caption`,
+   and `tags`.
+3. **The audio length** — in `mm:ss` or seconds. Claude won't guess
+   from transcript length.
+
+**What Claude prompts the owner for (and only these):**
+
+1. **Coordinates** — lat/lon of the stop. Owner can paste lat/lon
+   directly or give an address / corner ("NE corner of 34th & 5th")
+   and Claude resolves it. Single-piece tours: one coord. Multi-stop:
+   one per stop.
+2. **Trigger mode** — `onArrival` (geofence fires when user walks
+   into the radius) or `manual` (user taps Play). Default is
+   `onArrival` for walking tours; ask explicitly if there's any
+   reason to vary it.
+3. **Category** — one of `history`, `architecture`, `natureAndParks`,
+   `culturalHeritage`, `foodAndDrink`, `artAndMuseums`, `nightlife`,
+   `shoppingAndMarkets`. Drives which home rail the tour lands on.
+   Tour-level, not stop-level.
+
+(If the owner offers a trigger radius other than the 40m default, or
+a non-Atlas-Studio maker, treat those as additional inputs in the
+same pass — don't re-prompt.)
+
+**What Claude auto-fills without asking:**
+
+- **Title** — the place name as-is unless the owner asks for flavor.
+- **`shortDescription` (~80–140 chars) + `longDescription` (2–4
+  paragraphs)** — drawn from the transcript. Match the editorial
+  voice of existing tours in `Tours.json`; don't add facts the
+  transcript doesn't mention.
+- **`caption` per stop** — the standing instruction ("Stand at [the
+  corner the owner gave you], looking up at the building").
+- **`tags`** — 4–6 tags drawn from the transcript. Era, neighborhood,
+  building type, year, architect, street, material — whatever the
+  transcript actually names. Don't invent.
+- **Maker** — `Atlas Studio` (its existing UUID is already in
+  `Tours.json` under `makers[]`; reuse, don't create a new one).
+- **`heroImageURL`** — placeholder URL
+  (`https://atlas-tours.example/<slug>-hero.jpg`). The carousel /
+  real-image pass is a separate batch and is not blocking.
+- **`additionalImageURLs`** — omit entirely until the image pass.
+- **UUIDs** — fresh for the tour and each stop (`uuidgen` or a
+  Foundation `UUID()` literal).
+- **`audioURL`** — the `gh-pages` URL pattern above, computed from
+  the filename the owner committed.
+- **`introAudioURL`** — omit unless the owner gives a separate intro
+  file.
+- **Order indices** — sequential by the order the owner pastes the
+  stops.
+- **`triggerRadiusMeters`** — 40 unless the owner says otherwise.
+- **`totalDurationSeconds`** — sum of stop `audioDurationSeconds`
+  values; no separate ask.
+- **`kind`** — `single` if one stop, `multiStop` if 2+.
+
+**Validation before commit:**
+
+Always run `swift scripts/validate-tours.swift` after editing
+`Tours.json` and before committing. The script catches duplicate
+UUIDs, broken `makerId` foreign keys, kind ↔ stop-count mismatches,
+out-of-range coords, and centroid sanity (warns if the tour
+centroid is outside the bounding box of its stops). CI runs the
+same validator on every PR — failing it blocks merge.
+
+**Commit + branch:**
+
+Tour content edits to `Resources/Tours.json` are content-only and
+fall under the doc/content auto-merge boundary in `CLAUDE.md`.
+Branch naming convention used so far: `claude/<descriptive-slug>`
+or land directly to a working branch the owner already has open.
+**Always confirm the target branch with the owner before
+committing** — owner may want each tour as a separate PR for
+visual review in the simulator, or batched.
+
+**Stops without transcript:**
+
+If the owner ever sends audio without a transcript, ask for a
+transcript before drafting descriptions. Don't paraphrase from an
+imagined transcript — every descriptive line in `shortDescription`
+/ `longDescription` / `caption` must be grounded in something the
+owner actually said.
+
+---
+
 ## For the future in-app maker form
 
 When a maker upload screen gets built (post-V1, Tier 1 in ROADMAP.md), every field above becomes a form input:

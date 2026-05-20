@@ -292,7 +292,7 @@ git fetch
 git checkout main
 git pull --ff-only
 git checkout claude/resume-after-error-WQGK6   # review today's work
-git log main..HEAD --oneline                   # should show 3 commits
+git log main..HEAD --oneline                   # should show 10+ commits
 ```
 
 Read in this order:
@@ -302,6 +302,104 @@ Read in this order:
 3. **This file** (`archive/HANDOFF-260520.md`)
 4. `archive/HANDOFF-260519.md` for the TestFlight queue still in flight
 5. `docs/testflight.md` if doing another TestFlight upload
+6. `docs/authoring-tours.md` § "Authoring with Claude (interactive
+   workflow)" — only if picking up the tour-authoring thread
 
-You're picking up at: review the in-flight PR + resume the
-TestFlight / M-qa flow from 5/19.
+You're picking up at: review the in-flight branch + resume the
+TestFlight / M-qa flow from 5/19, plus optionally continue
+authoring tours (see below).
+
+---
+
+## Final wrap-up — state as of session end 2026-05-20
+
+### Branch `claude/resume-after-error-WQGK6` (pushed, 10 commits ahead of main)
+
+| # | SHA | What |
+|---|---|---|
+| 1 | `0ce95bd` | ROADMAP: stale branches noted |
+| 2 | `e0d098a` | Times Square images + Option A data layer |
+| 3 | `d506297` | Handoff doc (initial) |
+| 4 | `8bd5053` | P1 audit cleanup batch (5 findings) |
+| 5 | `5b49bd2` | Handoff refresh (P1) |
+| 6 | `2429fb1` | P2 audit cleanup (accessibility + i18n; 5 findings + P3-2) |
+| 7 | `b1fe99a` | P3 audit small fixes (P3-7, P3-8, P3-10) |
+| 8 | `d55d132` | Handoff refresh (P2 + P3) |
+| 9 | `9fea6db` | P3-4 — TourDownloader retry with backoff |
+| 10 | `5b120fc` | Handoff refresh (P3-4) |
+| 11 | this commit | Final wrap-up + authoring-with-Claude workflow |
+
+**All commits are pushed to origin.** Nothing to lose if the
+container is reclaimed.
+
+### Recommended PR split when you're back at the Mac
+
+The 10 commits cover ~3 logically separable units. Split into PRs so
+each gets simulator review independently:
+
+1. **Times Square images + Option A data layer** (`e0d098a`) — touches
+   `Resources/Tours.json` and image-loading code. Visual review in
+   simulator: open Times Square tour, confirm carousel.
+2. **P1 audit cleanup** (`8bd5053`) — 5 small correctness fixes.
+   No simulator-visible change but worth a quick build + Cmd-U.
+3. **P2 audit cleanup** (`2429fb1`) — accessibility + i18n. Visual
+   review with VoiceOver if possible; otherwise Cmd-U + build.
+4. **P3 small fixes + P3-4 retry** (`b1fe99a` + `9fea6db`) — can be
+   one PR or two. Retry logic depends on real URLSession, so test
+   manually by toggling Airplane Mode mid-download.
+5. **Handoff/docs commits** (`d506297`, `5b49bd2`, `d55d132`,
+   `5b120fc`, this one) — fold into whichever PR lands last, or
+   ship as a `chore(docs)` PR at the end.
+
+CI runs xcodebuild + `xcodebuild test` on every PR. No
+`project.pbxproj` changes were needed this session — Xcode 16
+file-system-synchronized project picks up new files automatically.
+
+### ROADMAP audit cleanup status
+
+- ✅ Closed: all P0, P1, P2; P3-2, P3-4, P3-7, P3-8, P3-10
+- 🟦 Deferred-by-design: P3-1 (theme tokens), P3-6 (splash)
+- 🟦 Skipped as premature: P3-3 (O(n) lookups)
+- 🟦 Saved for Mac sessions: P3-5 (tour-completed UX), P3-9 (delete
+  swipe). Both want simulator review.
+
+### Tour-authoring thread — in-flight
+
+In the final minutes of this session the owner teed up resuming the
+**M-launch-content** authoring flow. **Empire State Building** is
+the next tour. The owner already has audio + transcript ready.
+
+**To pick this up in a new session:** read
+`docs/authoring-tours.md` § "Authoring with Claude (interactive
+workflow)" — that section is the full contract (what owner
+provides, what Claude prompts for, what Claude auto-fills). It was
+written from this session's conversation so a fresh Claude can
+resume without context loss.
+
+**Specifically for Empire State Building:** the owner has the audio
++ transcript and wants to walk through it next session. Claude
+should:
+
+1. Ask the owner to paste / share the transcript and audio file
+   (and confirm the audio is committed to `gh-pages` under
+   `audio/empire-state-building.mp3` or similar).
+2. Prompt for: coords, trigger (default `onArrival`), category
+   (likely `architecture`), audio length.
+3. Auto-fill everything else per the workflow doc — owner has
+   pre-delegated title, descriptions, caption, tags (~`["art
+   deco", "midtown", "skyscraper", "1931", "fifth avenue"]` was
+   their suggestion), maker (Atlas Studio), hero image
+   placeholder.
+4. Run `swift scripts/validate-tours.swift`.
+5. **Confirm target branch with owner before committing** — they
+   may want each tour as its own PR or batched.
+
+After Empire State, owner may continue with more tours under the
+same workflow until M-launch-content feels full.
+
+### TestFlight / M-qa
+
+Still gated on Apple's processing of build 1.0 (1) uploaded
+2026-05-19 21:38, plus owner installing via TestFlight app and
+walking the 10-step checklist on a real device. No action needed
+from Claude until owner reports back.
