@@ -1,148 +1,157 @@
-# Atlas — Handoff Notes (2026-05-19, end of day)
+# Atlas — Handoff Notes (2026-05-19, end of day, consolidated)
 
-Snapshot of where the project is at the close of the 2026-05-19
-remote session. Read this from any machine — GitHub web, fresh
-`git clone`, new Claude session on a different host — to pick up
-the next work session with full context. Companion to `CLAUDE.md`
-(durable rules) and `ROADMAP.md` (milestone status).
+Snapshot of where the project is at the close of 2026-05-19. Read this
+from any machine — GitHub web, fresh `git clone`, new Claude session
+on a different host — to pick up tomorrow with full context. Companion
+to `CLAUDE.md` (durable rules), `ROADMAP.md` (milestone status), and
+`docs/testflight.md` (TestFlight upload runbook).
 
-> **Note on file history.** The previous active handoff
-> (`HANDOFF-260518.md`) has been demoted to historical; this file
-> is now the active handoff per `archive/README.md`. The 5/18
-> snapshot remains in `archive/` for reference but is no longer
-> part of the session-start ritual.
-
-> **Session context.** This whole session ran on **remote Claude
-> Code on the web** while the owner was at a work computer (no
-> Mac access). The next session is expected to run on the **local
-> Claude Code on the Mac**. This handoff is written specifically
-> to bridge that hop.
+> **Note on file history.** This file consolidates two sessions on
+> 2026-05-19:
+> 1. **Morning remote session** (work computer, no Mac): TestFlight
+>    prep code work + browser-side App Store Connect setup.
+> 2. **Evening local Mac session**: Xcode signing setup + Archive +
+>    Upload to App Store Connect.
+>
+> The morning version of this file (covering only the first session)
+> is preserved in `git log -- archive/HANDOFF-260519.md`. This file
+> is rewritten end-of-day rather than appended to.
 
 ---
 
-## What's in `main` right now
+## What shipped today (`main` is at `69444ec` or later)
 
-Latest commit on `main` is `f71913b` ("ROADMAP: expand Tier 1 #2
-(maker platform) + add M-content-tooling, PR #46").
-
-**Today's session shipped:**
+### Morning remote session (PRs #36–#47)
 
 | PR | What |
 |---|---|
-| #36 | **TestFlight prep.** App icon placeholder (1024×1024 PNG: black bg with shaded green sphere, splash-matching) wired into `Assets.xcassets/AppIcon.appiconset/`. `ITSAppUsesNonExemptEncryption = NO` set in both build configs (skips Xcode's per-archive dialog). `docs/design-tokens.md` published as a single-sheet reference for typography / colors / spacing / SF Symbols. |
-| #37 | Tour: South Street Seaport, Pier 16 (2:32, history) |
-| #38 | Tour: Empire State Building (2:30, architecture) |
-| #39 | Tour: Statue of Liberty, Liberty Island (2:31, history) |
-| #40 | Tour: Brooklyn Bridge, Manhattan Side (2:27, history) |
-| #41 | Tour: Rockefeller Center, the Plaza (2:59, history) |
-| #42 | Tour: Metropolitan Museum of Art, 5th Avenue Steps (2:54, architecture) |
-| #43 | Tour: High Line, 10th Avenue Square (3:12, natureAndParks) |
-| #44 | **ROADMAP.** Added `M-rethink-categories` polish milestone. Closed-enum `Tour.primaryCategory` is showing strain — at least four V1 tours had multiple defensible category fits. Direction (endorsed today, deferred): drop the enum, derive home rails + filter chips from `Tour.tags`. Pair with the design pass. |
-| #45 | Tour: 9/11 Memorial, Between the Pools (2:13, culturalHeritage — first in catalog) |
-| #46 | **ROADMAP.** Expanded Tier 1 #2 (maker platform) from a one-liner into a three-phase plan (single-piece capture / multi-stop curation / maker tooling depth). Phone-vs-web split spelled out. Hard dependencies on backend/auth/moderation noted. Two new open questions for the owner. Added `M-content-tooling` to Known follow-ups — near-term streamlining ideas (manifest-driven batch uploads, auto-transcription, geocoding from text, CLI tool) for whenever the chat-driven upload workflow starts hurting. |
+| #36 | TestFlight prep: app icon placeholder (1024×1024 PNG), `ITSAppUsesNonExemptEncryption = NO`, `docs/design-tokens.md` |
+| #37–43, #45 | **8 new real tours** added. Total ~26 min of audio: South Street Seaport · Empire State Building · Statue of Liberty · Brooklyn Bridge · Rockefeller Center · Met 5th Ave Steps · High Line · 9/11 Memorial |
+| #44 | ROADMAP: added `M-rethink-categories` polish milestone |
+| #46 | ROADMAP: expanded Tier 1 #2 (maker platform) three-phase plan; added `M-content-tooling` |
+| #47 | Morning handoff doc itself |
 
-Also pushed to **`gh-pages`** branch (not `main`):
-- `audio/south-street-seaport-pier-16.mp3`
-- `audio/empire-state-building.mp3`
-- `audio/statue-of-liberty.mp3`
-- `audio/brooklyn-bridge-manhattan-side.mp3`
-- `audio/rockefeller-center-the-plaza.mp3`
-- `audio/metropolitan-museum-fifth-ave-steps.mp3`
-- `audio/high-line-10th-avenue-overlook.mp3`
-- `audio/nine-eleven-memorial.mp3`
-- `privacy/index.html` — privacy policy page
+### Evening local Mac session (PR #48 + the TestFlight upload)
 
----
+| PR / Action | What |
+|---|---|
+| #48 | `docs/testflight.md` upload runbook (TL;DR + vocabulary + versioning + adding-device + 6 troubleshooting incidents from tonight) + `DEVELOPMENT_TEAM = CPC7M72JTP;` persisted in `project.pbxproj` |
+| (off-repo) | **iPhone 17 Pro registered with team** (UDID `00008150-001430EA1408401C`) |
+| (off-repo) | **Developer Mode enabled on iPhone** |
+| (off-repo) | **Apple Distribution certificate created** in Keychain (via Xcode → Settings → Accounts → Manage Certificates) |
+| (off-repo) | **Archive built and uploaded** to App Store Connect, version 1.0 build 1, today at ~9:38 PM |
 
-## Browser-side App Store Connect work (completed today, off-repo)
+### Browser-side App Store Connect work (completed today)
 
-The owner did all of this from a work computer browser. **Don't
-redo any of it on the Mac.**
+(From the morning session — preserved here so tomorrow's session
+doesn't redo it.)
 
-- **Apple Developer.** App ID registered: `com.ehky.TRAVEL-GUIDED-TOUR` (explicit bundle ID, no capabilities enabled — none of V1's features need them).
-- **App Store Connect.** App record created. Bundle ID locked to the above.
-- **App Information filled:**
-  - Subtitle: `Audio tours that follow you`
-  - Promotional text: `Walk into a place, and the audio about it starts playing. Atlas is GPS-anchored audio tours for walkers. New York launch catalog, more cities coming.`
-  - Keywords: `walking,self-guided,sightseeing,history,architecture,art,museum,city,guide,travel,NYC,explore,hike`
-  - Description: (the multi-paragraph block from this session — in chat history if needed; re-derivable from the spec)
-  - Privacy Policy URL: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/privacy/`
-  - User Privacy Choices URL: blank (correct — Atlas has nothing to opt out of)
-- **App Privacy questionnaire: Published.** Answered "No" to data collection at the top level (Atlas truly collects nothing off-device; location is used in-process only and never transmitted).
-- **TestFlight → Test Information:**
-  - Beta App Description: the multi-paragraph block from this session
-  - Feedback Email: owner's personal email
-  - Marketing URL: blank (skipped, optional)
-  - Privacy Policy URL: same as above
-  - License Agreement: blank (Apple's default beta agreement applies)
-- **Privacy policy:** hosted at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/privacy/` (served from `privacy/index.html` on the `gh-pages` branch).
+- Apple Developer: App ID `com.ehky.TRAVEL-GUIDED-TOUR` registered
+- App Store Connect: app record created
+- App Information filled (subtitle, promotional text, keywords, multi-paragraph description, privacy policy URL)
+- App Privacy questionnaire **published** ("No" to all data collection)
+- TestFlight → Test Information: beta description + feedback email filled
+- Privacy policy hosted at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/privacy/`
 
-The "What to Test" field is **drafted but not yet pasted** — that field only appears in App Store Connect after the first build is processed, so it's a Mac-session task. Text is in chat history; can also be re-derived from the M-qa 10-step checklist in `ROADMAP.md`.
+The "What to Test" field is **drafted but not yet pasted** — that
+field only appears in App Store Connect after the first build is
+processed. **Pick this up tomorrow.** Text is re-derivable from the
+M-qa 10-step checklist in `ROADMAP.md`.
 
 ---
 
-## What's pending / queued for the next session
+## Where we are right now (waiting for Apple)
 
-### Mac-side work (the whole point of the next session)
+- ⏳ Build `1.0 (1)` was uploaded to App Store Connect at 9:38 PM 2026-05-19.
+- ⏳ Apple's automated processing typically takes 15–30 minutes — may finish overnight or before tomorrow's session.
+- ✉️ Apple will send an email titled "Your build has finished processing" when ready.
+- After that, the build appears in App Store Connect → TestFlight tab and can be distributed to internal testers.
 
-In order:
-
-```bash
-cd ~/Desktop/"TRAVEL GUIDED TOUR"
-git fetch
-git checkout main
-git pull --ff-only
-git status            # should be clean
-```
-
-Then in Xcode:
-
-1. **Settings → Accounts** → sign in with the Developer Program Apple ID. Confirm team appears.
-2. Project navigator → **both targets** (`TRAVEL GUIDED TOUR` and `TRAVEL GUIDED TOURTests`) → **Signing & Capabilities** → set Team. Automatic signing should pick up the registered App ID.
-3. Confirm `Assets.xcassets/AppIcon.appiconset/` shows the placeholder icon (it's already wired in `main`).
-4. Destination → **Any iOS Device (arm64)**. Not a simulator — archive only works against device.
-5. **Product → Archive**. Takes 2–5 min.
-6. Organizer opens → **Distribute App → App Store Connect → Upload**.
-7. Wait 15–30 min for App Store Connect to process the build (email when ready).
-8. App Store Connect → TestFlight → click the build → paste the "What to Test" text.
-9. TestFlight → Internal Testing → add yourself as Internal Tester.
-10. Install TestFlight on iPhone → accept invite → install Atlas → run the M-qa 10-step checklist in `ROADMAP.md`.
-
-### V1 work still outstanding
-
-- **M-launch-content** — **10 of 5–15 tours done.** 8 real + 2 seed. Total ~26 min of audio across 4 categories (history 5, architecture 4, natureAndParks 1, culturalHeritage 1). Owner may decide to ship V1 with these, or add more. The seed tours (Cooper Hewitt, Hidden Brooklyn) use placeholder audio URLs (`soundhelix.com`) and could be removed if not wanted in launch content — kept for now to keep the catalog shape exercising multi-stop code paths.
-- **M-qa P1 cleanup batch** — five P1 audit findings still open (P1-1, P1-2, P1-3, P1-4, P1-7). Needs simulator validation; intended as one cleanup PR before M-qa runs on device.
-- **M-qa real-device pass** — 10-step functional checklist in `ROADMAP.md` § M-qa. The whole reason we're going to TestFlight.
-- **Deferred polish** — theme tokens, app icon, custom map pins, final editorial copy.
-
-### Hero image carousel (Option A, locked but not implemented)
-
-Owner agreed on **Option A** (additive `additionalImageURLs: [String]` field alongside the existing `heroImageURL`). **Deferred** until images are ready to populate — no point lighting up the carousel UI while every tour has one placeholder image. ~1 hour of code when triggered: model + decoding tests + validator update + tour-detail view rewrite to a `TabView(.page)` showing `[heroImageURL] + additionalImageURLs`. Card surfaces unchanged (still use `heroImageURL` as cover).
-
-### Decisions captured in ROADMAP (no immediate action)
-
-- **`M-rethink-categories`** (post-V1 polish milestone) — drop `TourCategory` enum, derive home rails from `Tour.tags`. Pair with design pass.
-- **`M-maker-platform`** (Tier 1 #2 deep dive) — three-phase plan for the in-app maker upload feature. Owner has identified this as a KEY post-V1 feature.
-- **`M-content-tooling`** (V1 known follow-up) — manifest-driven CSV uploads, auto-transcription, geocoding, CLI tool. Pre-cursor work for the maker platform.
+**The session ended before processing finished.** Status as of bedtime:
+unknown / probably still processing. Check email first thing tomorrow.
 
 ---
 
-## Tribal knowledge from today's session
+## Tomorrow's queue (in order)
 
-(Where reasonable, durable form is in the relevant doc; otherwise here.)
+### 1. Check Apple's processing status
 
-- **gh-pages mechanics.** Audio is pushed to the `gh-pages` orphan branch under `/audio/<filename>.mp3`, served at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<filename>.mp3`. Workflow: `git checkout gh-pages`, copy file in, commit, push, `git checkout main`. Always check out back to `main` before continuing other work.
-- **Audio filename convention** that emerged: `<location-slug>.mp3`, lowercase, dash-separated (e.g. `south-street-seaport-pier-16.mp3`, `metropolitan-museum-fifth-ave-steps.mp3`). The two earliest real tours (Grand Central, Times Square) use slightly different conventions because the convention wasn't yet settled. Don't worry about renaming retroactively.
-- **Maker UUID.** All V1 tours use the in-house "Atlas Studio" maker: `00000000-0000-0000-0000-000000000001`. Reuse this `makerId` for new V1 tours.
-- **JSON insertion approach.** `Tours.json` uses inline tag arrays (e.g. `"tags": ["a", "b", "c"]`). Python's `json.dumps(d, indent=2)` reformats these to multi-line, producing a noisy diff. Use **string-level insertion** instead: read the file, find the `"  ]\n}\n"` footer, splice in the new tour block before it. The pattern is in `/tmp/add_tour.py` from this session (not committed; regeneratable).
-- **`What to Test` is a per-build field**, not app-level. Filled in via App Store Connect → TestFlight tab → click the build → Test Information. Won't appear until a build is processed.
-- **Network policy.** This remote environment can't fetch `github.io` URLs (returns 403 `host_not_allowed`). Audio URLs work fine on phones and laptops; just couldn't verify from the container during the session. Don't be surprised by that.
-- **`ITSAppUsesNonExemptEncryption = NO`** is now set in both Debug and Release. No more per-archive yes/no dialog from Xcode.
-- **App icon caveat.** The placeholder is in the **universal iOS slot** only. Dark/tinted/macOS slots are intentionally empty in `Contents.json` — iOS falls back to universal for appearance variants, and the first build ships iOS-only. If you add platforms later, fill those slots.
+- Open email → look for "Your build has finished processing" (or rejection notice)
+- If success: proceed to step 2
+- If rejection: the email will have a specific reason (common: missing icon size, encryption declaration). See `docs/testflight.md` § Troubleshooting § "Build processing on Apple's side takes >60 min" for fixes.
+
+### 2. Complete TestFlight setup in App Store Connect
+
+In browser at https://appstoreconnect.apple.com → your app → TestFlight tab:
+
+- Click on the processed build (1.0/1)
+- **Paste "What to Test" notes.** Reasonable content for v1.0 build 1:
+  > First TestFlight build of Atlas. Please walk through the 10-tour catalog (New York landmarks). Tap a tour pin or list card → start playback → confirm audio plays. Try locking the phone — audio should continue with lock-screen controls. If you walk near a multi-stop tour, confirm GPS triggers next stop's audio. Report anything that crashes, looks wrong, or feels confusing.
+- **Internal Testing group** → add your Apple ID as an Internal Tester (if not already added during the morning setup)
+- New build auto-distributes to internal testers within a few minutes
+
+### 3. Install on iPhone via TestFlight
+
+- On iPhone: install the **TestFlight app** from the App Store (if not already)
+- Open TestFlight → there should be a notification for Atlas → tap **Accept** → tap **Install**
+- App appears on home screen as "Atlas" with the placeholder green-sphere icon
+
+### 4. Run the M-qa 10-step checklist on real device
+
+From `ROADMAP.md` § M-qa:
+
+1. App launches → map-dominant home with pins, search bar, drawer with tours
+2. Pan the map → location-anchored rails recompute
+3. Tap search bar → results screen works; opening a tour adds to "Because you searched X" rail
+4. Tap a tour → tour detail → Start → audio plays
+5. Lock phone → audio continues; lock-screen controls work
+6. Multi-stop geofenced tour → simulated walking → next stop's audio triggers
+7. Multi-stop manual tour → tap next stop in player → its audio plays
+8. Download a tour → airplane mode → tour plays end-to-end
+9. Save a tour → force-quit + relaunch → still saved
+10. Maker page → tour list correct → tap tour → tour detail opens
+
+**Goal of M-qa:** confirm V1 is shippable as-is, or surface specific
+bugs that need fixing before public release.
+
+### 5. End-of-day tomorrow
+
+- Bugs found during M-qa → file individual PRs (or batch into a cleanup PR if many)
+- If V1 is shippable: start thinking about App Store review submission (separate from TestFlight; requires App Store screenshots + final marketing)
+- Rewrite this handoff for tomorrow's date (`HANDOFF-260520.md`) capturing M-qa results + any new state
+- Update `archive/README.md` to point to the new active handoff
 
 ---
 
-## How to resume from a fresh / local Mac session
+## V1 work outstanding beyond TestFlight + M-qa
+
+- **M-launch-content** — currently 10 of 5–15 tours (8 real + 2 seed). Owner may decide to ship V1 with these, or add more. Seed tours could be dropped if not wanted in launch catalog.
+- **M-qa P1 cleanup batch** — five P1 audit findings still open (P1-1 sort key, P1-2 avatar URL, P1-3 player-tour ID, P1-4 HeroImageView remote loading, P1-7 dateline bug). Intended as one cleanup PR before M-qa runs on device. Can also be addressed reactively if M-qa surfaces them as actual blockers.
+- **Deferred polish pass** — theme tokens, app icon (replace placeholder green sphere), custom map pins, final editorial copy.
+
+### Hero image carousel (Option A, locked but deferred)
+Owner agreed on Option A (additive `additionalImageURLs: [String]` field alongside existing `heroImageURL`). Deferred until real images are ready. ~1 hour of code when triggered.
+
+### Decisions captured in ROADMAP (post-V1)
+- `M-rethink-categories` — drop `TourCategory` enum, derive home rails from `Tour.tags`. Pair with design pass.
+- `M-maker-platform` — Tier 1 #2 deep dive, three-phase plan, owner-flagged as key post-V1 feature.
+- `M-content-tooling` — manifest CSV uploads, auto-transcription, geocoding (pre-cursor to maker platform).
+
+---
+
+## Tribal knowledge from tonight's session
+
+(Durable form is in `docs/testflight.md` § Troubleshooting; quick recap here.)
+
+- **Apple's first-time signing gauntlet has many steps.** Plug in iPhone → Trust → Settings → Privacy & Security → Developer Mode → Restart → Confirm → Xcode auto-registers device → Try Again on signing → Archive works. See `docs/testflight.md` § "Adding a new physical device."
+- **Disk space matters.** Mac was at 99% capacity (192 MB free) at start of session; this caused `dyld_shared_cache_extract_dylibs failed` when connecting the iPhone. Cleaning `~/Library/Developer/Xcode/DerivedData/*` and `~/Library/Developer/Xcode/iOS DeviceSupport/*` freed 10 GB. **Keep an eye on disk space — 99% on a 460 GB SSD is APFS hiding things in snapshots/caches.** Apple menu → About This Mac → Storage → Manage shows the breakdown.
+- **`DEVELOPMENT_TEAM = CPC7M72JTP` is now in `project.pbxproj`.** Future fresh clones inherit signing config (assuming the same Apple Developer team is signed in to Xcode → Settings → Accounts on that machine).
+- **Automatic Signing tries to generate both Development AND Distribution profiles** at build time. The Development one needs ≥1 registered device on the team, even if you only care about Archive. Plugging in any device once registers it and unblocks both.
+- **Future TestFlight uploads will take ~10 minutes active time**, not 4 hours like tonight. See `docs/testflight.md` § TL;DR. No phone-plugging, no signing dance — just bump build number, Archive, Distribute, Upload.
+
+---
+
+## How to resume from a fresh / remote Mac session
 
 ```bash
 cd ~/Desktop/"TRAVEL GUIDED TOUR"
@@ -150,65 +159,74 @@ git fetch
 git checkout main
 git pull --ff-only
 git status                      # should be clean
-git log --oneline -10           # latest should be f71913b or newer
+git log --oneline -10           # latest should be 69444ec or newer
 git branch -a                   # any in-flight feature branches?
 ```
 
-Then read in this order:
+Read in this order:
 
 1. **`CLAUDE.md`** § Current State + § Session-start ritual
 2. **`ROADMAP.md`** § "Where we are right now" + § M-qa checklist
-3. **This file** (`archive/HANDOFF-260519.md`) for what's queued
-4. **`docs/troubleshooting.md`** if anything weird happens with Xcode or git
+3. **This file** (`archive/HANDOFF-260519.md`) for tomorrow's queue
+4. **`docs/testflight.md`** if you're doing another TestFlight upload
+5. **`docs/troubleshooting.md`** if anything weird happens with Xcode or git
 
-You're picking up at the Mac-side work above. The browser-side App
-Store Connect setup is already done — don't redo it.
+You're picking up at **Tomorrow's Queue step 1**: check email for Apple's processing notification.
+
+If you're on a **different Mac** from the one used tonight (e.g. a different home machine), you'll need to:
+- Sign in to your Apple Developer ID in Xcode → Settings → Accounts (one-time per Mac)
+- Confirm Team is set correctly in Signing & Capabilities (DEVELOPMENT_TEAM is in pbxproj, so it should auto-populate)
+- The Distribution certificate from tonight is in **the original Mac's Keychain only**. To Archive from a different Mac, you'd either need to export the cert from the original Mac's Keychain and import on the new one, or create a new Distribution cert via Xcode (Manage Certificates → +). For tomorrow's TestFlight tasks though, no new Archive is needed — only browser + TestFlight app work.
 
 ---
 
 ## What to tackle first next session (Claude's suggestion)
 
-1. **Run the session-start ritual** above and confirm state matches this handoff.
-2. **Open Xcode → set Team for both targets → Archive → Upload.** That's the longest pole. ~30 minutes including processing wait.
-3. **While App Store Connect processes the build:** paste the "What to Test" text once the build appears, then add yourself as Internal Tester.
-4. **Install TestFlight on iPhone → install Atlas → walk the M-qa 10-step checklist.** This is the real validation gate.
-5. **End of session:** rewrite this handoff for the new date as `archive/HANDOFF-260520.md` (or whenever) capturing the M-qa results. Update `archive/README.md` to point at it.
+1. **Run the session-start ritual** (in `CLAUDE.md`) and confirm state matches this handoff.
+2. **Check email for Apple's processing notification.**
+3. **App Store Connect → TestFlight → click the build → paste "What to Test"** (text drafted above in "Tomorrow's queue" § 2).
+4. **Install via TestFlight app on iPhone → run M-qa 10-step checklist.**
+5. **End of session**: rewrite this handoff as `archive/HANDOFF-260520.md` (or whatever date), capturing M-qa results. Update `archive/README.md` to point at it.
+
+If Apple's processing rejected the build for some reason, the failure
+mode + fix is in `docs/testflight.md` § Troubleshooting. Most likely
+candidates: missing icon size (we only have universal slot filled),
+ITMS-XXXX validation error.
 
 ---
 
 ## File map (where things live)
 
 ```
-TRAVEL GUIDED TOUR/                    # repo root
-├── CLAUDE.md                          # durable project guidance
-├── ROADMAP.md                         # V1 plan + milestone status
-├── CONTRIBUTING.md                    # onboarding for new contributors
-├── atlas_claude_code_prompt.md        # canonical product spec
+TRAVEL GUIDED TOUR/                          # repo root
+├── CLAUDE.md                                # durable project guidance
+├── ROADMAP.md                               # V1 plan + milestone status
+├── CONTRIBUTING.md
+├── atlas_claude_code_prompt.md              # canonical product spec
 ├── docs/
 │   ├── authoring-tours.md
 │   ├── Tours.template.json
 │   ├── cdn-decision.md
-│   ├── design-tokens.md               # ← new this session (PR #36)
+│   ├── design-tokens.md
+│   ├── testflight.md                        # ← TestFlight upload runbook (new tonight)
 │   └── troubleshooting.md
 ├── archive/
-│   ├── README.md                      # ← updated this session to point here
-│   ├── HANDOFF-260519.md              # ← THIS FILE (active handoff)
-│   ├── HANDOFF-260518.md              # ← previous handoff (historical)
+│   ├── README.md
+│   ├── HANDOFF-260519.md                    # ← THIS FILE (active handoff)
+│   ├── HANDOFF-260518.md                    # historical
 │   └── pre-qa-audit-260518.md
-├── scripts/
-│   └── validate-tours.swift
+├── scripts/validate-tours.swift
 ├── .github/workflows/ci.yml
 ├── TRAVEL GUIDED TOURTests/
 └── TRAVEL GUIDED TOUR/
-    ├── Models/                        # Tour, Stop, Maker, etc.
-    ├── Data/                          # DataService, LibraryStore, etc.
-    ├── Audio/                         # AudioPlayerService, TourDownloader
-    ├── Location/                      # LocationManager, ProximityMonitor
-    ├── Features/                      # Home, Tour, Player, Search, Maker, Library, Settings
-    ├── Components/                    # HeroImageView, TagChip, BottomSheet, AtlasTabBar
-    ├── Theme/                         # AtlasColors/Typography/Spacing (placeholders)
+    ├── Models/, Data/, Audio/, Location/, Features/, Components/, Theme/
     ├── Assets.xcassets/
-    │   └── AppIcon.appiconset/
-    │       └── atlas-icon-1024.png    # ← new placeholder this session
-    └── Resources/Tours.json           # 12 entries: 2 seed + 10 real
+    │   └── AppIcon.appiconset/atlas-icon-1024.png   # placeholder (universal slot only)
+    └── Resources/Tours.json                 # 12 entries: 2 seed + 10 real
 ```
+
+Off-repo state (in Apple's database):
+- App Store Connect: https://appstoreconnect.apple.com
+- Apple Developer portal: https://developer.apple.com/account
+- Privacy policy: https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/privacy/
+- Apple system status (for outages): https://developer.apple.com/system-status/
