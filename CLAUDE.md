@@ -43,19 +43,20 @@ app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 (iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
 — same app body, three different "TVs" it can play on.
 
-## Current State (V1 functionality complete; pre-polish, pre-launch-content)
+## Current State (V1 functionality complete; first TestFlight build uploaded)
 
 Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`.
-The AllTrails-style home redesign (custom tab bar, floating-island
-drawer, filter chip row, vertical tour list) landed via PR #31 on
-2026-05-18 and is now the production home; the earlier rail-carousel
-home was superseded. What's left for V1 release: **owner-side content
-work** (M-launch-content — record audio + author real `Tours.json`;
-2 of 5–15 tours recorded as of 2026-05-18, both hosted on
-`gh-pages`), **end-to-end QA on a real device** (M-qa), and the
-deferred **design / polish pass**.
+The AllTrails-style home redesign landed via PR #31 on 2026-05-18 and
+is now the production home. On 2026-05-19, the first TestFlight build
+(1.0/1) was uploaded to App Store Connect at 9:38 PM. What's left for
+V1 release: **end-to-end M-qa pass on a real device via TestFlight**
+(blocked on Apple's processing of the uploaded build + owner installing
+via TestFlight app + walking the 10-step checklist), the **P1 audit
+cleanup batch** (5 remaining findings), more **M-launch-content** tours
+if desired (currently 10 of 5–15), and the deferred **design / polish
+pass**.
 
-What's true today (2026-05-18):
+What's true today (2026-05-19):
 
 - `ContentView.swift` uses a custom `AtlasTabBar` (3 tabs: **Home /
   Library / Me**) shaped to match the home drawer's width/inset/
@@ -63,12 +64,16 @@ What's true today (2026-05-18):
 - `Features/Home/` is the AllTrails-style layout: full-screen map +
   filter chip row + vertical tour list in a persistent bottom drawer
   + recenter button on the map.
-- `Resources/Tours.json` has 2 real tours (Grand Central south facade,
-  Times Square from the TKTS red steps) plus seed entries. Audio is
-  hosted on the `gh-pages` branch (served at
+- `Resources/Tours.json` has **10 real tours** (NYC: Grand Central
+  south facade, Times Square TKTS, South Street Seaport, Empire State
+  Building, Statue of Liberty, Brooklyn Bridge, Rockefeller Center,
+  Met 5th Ave Steps, High Line, 9/11 Memorial) plus 2 seed tours.
+  ~26 min total audio. Spans 4 categories (history 5, architecture 4,
+  natureAndParks 1, culturalHeritage 1). Audio hosted on the
+  `gh-pages` branch (served at
   `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
-  GitHub Releases was tried first but serves the wrong MIME type —
-  see `docs/cdn-decision.md`.
+  GitHub Releases tried first but serves wrong MIME type — see
+  `docs/cdn-decision.md`.
 - **Audio playback** runs through `Audio/AudioPlayerService.swift`
   (AVQueuePlayer + lock-screen integration + audio session
   interruption + headphone-unplug handling).
@@ -85,19 +90,26 @@ What's true today (2026-05-18):
 - **Unit test target** wired (PR #33) — `TRAVEL GUIDED TOURTests`
   XCTest bundle with 6 test classes; Cmd-U runs locally, same suite
   runs on CI per PR.
-- `Assets.xcassets/AccentColor.colorset` is set to terracotta
-  `#B85042` (light) and a lighter variant for dark mode.
-- `Assets.xcassets/AppIcon.appiconset` is still the empty Apple
-  template. M-polish-icon addresses this.
+- **TestFlight signing wired** (2026-05-19):
+  `DEVELOPMENT_TEAM = CPC7M72JTP` in `project.pbxproj`, Apple
+  Distribution certificate in macOS Keychain, iPhone UDID registered
+  with team, App Store Connect record + privacy policy + App Privacy
+  questionnaire all complete. Per-release upload flow documented in
+  `docs/testflight.md` (~10 min active per upload).
+- `Assets.xcassets/AppIcon.appiconset/atlas-icon-1024.png` is a
+  **placeholder** (green sphere on black). Universal iOS slot only —
+  dark/tinted/macOS slots empty. M-polish-icon will replace.
+- `Assets.xcassets/AccentColor.colorset` is terracotta `#B85042`
+  (light) with a lighter dark-mode variant.
 - Theme tokens in `Theme/Atlas{Colors,Typography,Spacing}.swift` are
   still **placeholder values** pending the deferred design pass.
 
 See `ROADMAP.md` for milestone-by-milestone history and remaining
 work, the latest `archive/HANDOFF-*.md` for the most recent session
-handoff snapshot, `docs/troubleshooting.md` for Xcode + git
-landmines documented from real incidents, and
-`docs/testflight.md` for the TestFlight upload runbook (per-release
-~10-min flow + first-time setup historical reference).
+handoff snapshot, `docs/troubleshooting.md` for Xcode + git landmines
+documented from real incidents, and `docs/testflight.md` for the
+TestFlight upload runbook (per-release ~10-min flow + first-time setup
+historical reference).
 
 ## Keep these docs in sync
 

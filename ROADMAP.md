@@ -38,40 +38,55 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
-**Status (2026-05-18, end-of-day):** every V1 functionality milestone
+**Status (2026-05-19, end-of-day):** every V1 functionality milestone
 is shipped on `main` (M1–M3, M-data-model, M-audio-foundation,
 M-tour-detail, M-player, M-home, M-search, M-maker, M-library,
-M-geofencing, M-offline; M-map was cut). The earlier rail-carousel
-home redesign (PR #19) was superseded by the AllTrails-style home
-(PR #31): custom `AtlasTabBar`, floating-island bottom drawer, filter
-chip row, vertical tour list, recenter button on the map. Pre-QA
-audit closed all P0 findings (PRs #22 / #23 / #24); audit doc
-archived to `archive/pre-qa-audit-260518.md`. Unit test target wired
-to the Xcode project (PR #33) and runs on CI per PR. Appearance
-toggle (System / Light / Dark) added in Settings.
+M-geofencing, M-offline; M-map was cut). AllTrails-style home (PR
+#31) is the production home. Pre-QA audit closed all P0 findings
+(PRs #22 / #23 / #24). Unit test target wired (PR #33) and runs on
+CI per PR. **First TestFlight build (1.0/1) uploaded to App Store
+Connect on 2026-05-19 at 9:38 PM** — awaiting Apple's automated
+processing.
 
-**Audio CDN.** GitHub Pages on the `gh-pages` branch serves audio
-at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`.
-GitHub Releases was tried first but serves the wrong `Content-Type`
-for AVPlayer — see `docs/cdn-decision.md` § "Why we switched from
+**Content (M-launch-content).** 10 real tours + 2 seed in
+`Resources/Tours.json` as of 2026-05-19. NYC landmarks: Grand Central
+south facade, Times Square TKTS, South Street Seaport, Empire State
+Building, Statue of Liberty, Brooklyn Bridge, Rockefeller Center, Met
+5th Ave Steps, High Line, 9/11 Memorial. ~26 min total audio across
+4 categories. Audio hosted on `gh-pages` branch (served at
+`https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
+GitHub Releases tried first but serves wrong `Content-Type` for
+AVPlayer — see `docs/cdn-decision.md` § "Why we switched from
 Releases to Pages."
 
-What's left for V1:
-- **M-launch-content** — 2 of 5–15 tours recorded so far (Grand
-  Central south facade in PR #27, Times Square TKTS red steps in
-  PR #30). Owner records more.
-- **M-qa** — end-to-end sanity sweep on a real device. P0 findings
-  closed; some P1 findings (P1-1 sort key, P1-2 avatar URL, P1-3
-  player-tour ID, P1-4 HeroImageView remote loading, P1-7 dateline
-  bug) intended to batch into a cleanup PR before M-qa runs.
-- The deferred **design / polish pass** (theme tokens, app icon,
-  custom map pins, final editorial copy).
+**TestFlight signing wired (2026-05-19).**
+`DEVELOPMENT_TEAM = CPC7M72JTP` in `project.pbxproj`, Apple
+Distribution certificate in macOS Keychain (original Mac only), iPhone
+UDID registered with team, App Store Connect record + privacy policy
+(hosted on `gh-pages` at `/privacy/`) + App Privacy questionnaire all
+complete. Per-release upload flow documented in `docs/testflight.md`
+(~10 min active). See `archive/HANDOFF-260519.md` for the
+session-by-session log.
 
-**No parked branches.** As of 2026-05-18, all `claude/*` work has
-either landed or been deleted. The previous parked
-`claude/alltrails-alignment` branch landed as PR #31. Only
-`gh-pages` (audio CDN) remains as a non-main branch, and it's
-deliberately separate (orphan branch, no shared history with main).
+What's left for V1:
+- **M-qa real-device pass via TestFlight** — Apple processes the
+  uploaded build → email arrives → paste "What to Test" in App Store
+  Connect → install on iPhone via TestFlight app → walk the 10-step
+  checklist below. **Next session priority.**
+- **P1 audit cleanup batch** — 5 open findings: P1-1 sort key, P1-2
+  avatar URL, P1-3 player-tour ID, P1-4 HeroImageView remote loading,
+  P1-7 dateline bug. Intended as one cleanup PR before or in
+  response to M-qa.
+- **M-launch-content (optional more)** — owner may decide 10 tours
+  are enough for V1 launch, or add more.
+- **Deferred design / polish pass** — theme tokens, real app icon
+  (replace placeholder green sphere), custom map pins, final
+  editorial copy.
+
+**No parked branches.** All `claude/*` work has either landed or been
+deleted. Only `gh-pages` (audio CDN + privacy policy) remains as a
+non-main branch, deliberately separate (orphan, no shared history
+with main).
 
 **Pivot history.** The previous editorial-city-guide V1 work was
 mostly reshaped, not thrown out. The migration tables below are kept
