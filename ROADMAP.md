@@ -537,7 +537,7 @@ status; check items off as fixes land:
 - [ ] P3-1. Hardcoded values bypass theme-tokens — deferred with the design pass
 - [x] P3-2. `formattedDuration` duplicated — closed incidentally by P2-5's `AtlasFormatters`
 - [ ] P3-3. O(n) lookups everywhere — premature; V1 has 12 tours
-- [ ] P3-4. TourDownloader no retry on transient failures
+- [x] P3-4. TourDownloader no retry on transient failures (3 retries, exponential backoff 1s/2s/4s, transient errors only — terminal failures still fail immediately)
 - [ ] P3-5. No tour-completed UX
 - [ ] P3-6. Splash screen bare-bones — deferred with the polish pass
 - [x] P3-7. ContentView calls `requestPermission` on every appearance (guarded by `didRequestLocationPermission` flag)
