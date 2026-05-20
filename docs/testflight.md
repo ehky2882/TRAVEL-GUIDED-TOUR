@@ -26,7 +26,7 @@ Assumes first-time setup is done (it is, on 2026-05-19).
 6. Wait 1–3 min for the upload to finish ("Upload Successful" alert).
 7. Wait **15–30 min** for Apple to process the build. You'll get an email titled "Your build has finished processing."
 8. App Store Connect → your app → **TestFlight** tab → click the new build → optionally paste **"What to Test"** notes.
-9. New build auto-distributes to whoever is already in your Internal Testing group. On the iPhone, the **TestFlight app** shows the new version with an Install button.
+9. New build auto-distributes to whoever is already in your Internal Testing group, and to External Testing groups it's been added to (see § "Inviting external testers" if this is the first external build). On the iPhone, the **TestFlight app** shows the new version with an Install button.
 
 That's it. No phone plugging, no certificate dance, no Developer Mode
 toggling — those are all already set up.
@@ -80,6 +80,93 @@ If you ever upgrade phones or add a tester's phone, the device needs to be regis
 4. On the iPhone: **Settings → Privacy & Security → Developer Mode → On** (only appears after step 1). Restart when prompted, then confirm "Turn On" after restart.
 5. In Xcode → main app target → Signing & Capabilities → if you see "Device 'X' isn't registered in your developer account" with a **Register Device** button, click it. Wait 10 seconds. Errors clear.
 6. After registration, you can Run from Xcode to the new phone. For TestFlight specifically, just installing the TestFlight app on the new phone and adding the Apple ID as an Internal Tester is enough — no Xcode involvement.
+
+---
+
+## Inviting external testers (family, friends, beta testers)
+
+The first-time TestFlight setup used **Internal Testing** for just
+the owner. For anyone else — family, friends, anyone outside the
+Apple Developer team — use **External Testing**. The distinction
+matters: Internal testers must be added as users on the Developer
+team (which gives them access to App Store Connect, billing,
+certs); External testers just need an email address.
+
+### Setting up a group (one-time per group)
+
+For V1, one group is enough (e.g. `Family` or `Close beta`).
+Future builds just get added to the existing group.
+
+1. App Store Connect → your app → **TestFlight** tab.
+2. Left sidebar → **External Testing** → click **+** next to it.
+3. Name the group.
+4. Inside the group → **Testers** tab → **+** → enter testers'
+   email addresses. Each must match the email tied to their Apple
+   ID on their iPhone.
+5. Inside the group → **Builds** tab → **+** → pick the build to
+   share (e.g. `1.0 (1)`).
+
+### Beta App Review (one-time per major version)
+
+When you add the first build to an External Testing group, Apple
+requires a one-time Beta App Review (~24h first time, minutes-to-
+hours on subsequent builds). When prompted, fill in:
+
+- **What to Test** — same text used elsewhere. Re-derivable from
+  the M-qa 10-step checklist in `ROADMAP.md`.
+- **Beta App Review Information:**
+  - **Contact Information** — your name, email, phone. Used if
+    the reviewer needs to ask a question; not shared with testers.
+  - **Sign-in required?** — **No** (Atlas has no accounts in V1).
+  - **Notes** — 1–2 sentences for the reviewer. Example: "Atlas
+    is a GPS-anchored audio-tour app for walking around NYC. No
+    account required. Tap any tour from the home screen list or
+    map to start playback. Audio is hosted on a CDN; standard
+    HTTPS requests only."
+- **Export Compliance** — should auto-skip due to
+  `ITSAppUsesNonExemptEncryption = NO` in build settings. If it
+  asks, "uses encryption" = Yes (standard HTTPS), "exempt from
+  compliance" = Yes.
+
+Submit. Apple reviews. After approval, invitation emails go out
+to testers automatically.
+
+### What testers do
+
+1. Install the **TestFlight** app from the App Store on their
+   iPhone (if not already).
+2. Open the email invitation from Apple → tap the redemption link.
+3. TestFlight opens → tap **Install** → app appears on home screen.
+
+**Send testers a heads-up before the invite email arrives** —
+something like "You'll get an email from Apple about a beta;
+install the 'TestFlight' app from the App Store first, then tap
+the link." Family/friends with no prior beta experience tend to
+delete the invite as spam without this.
+
+### Subsequent builds in the same group
+
+After the group exists, adding new builds is fast:
+
+1. Upload the new build per the per-release TL;DR at the top.
+2. Wait for processing.
+3. App Store Connect → TestFlight → External Testing group →
+   **Builds** tab → **+** → pick the new build.
+4. Apple usually fast-tracks or skips review when beta metadata is
+   unchanged. Testers get notified automatically.
+
+### Things to know
+
+- **Build expiry — 90 days.** TestFlight builds auto-expire 90
+  days after upload. Testers get a notification before. If you're
+  not pushing builds regularly, plan a refresh before expiry.
+- **Tester limit — 10,000 per group.** Far more than V1 will need.
+- **Public link option.** Each external group can publish a
+  shareable URL that anyone can redeem. Useful later for broader
+  open beta; for family/friend invites, direct email is better.
+- **Removing a tester.** Group → Testers tab → swipe / click the
+  tester → Remove. They lose access to future builds immediately;
+  existing installs keep working until the build expires.
 
 ---
 
@@ -172,5 +259,4 @@ App Store Connect record + Apple Developer team data is **off-repo** (in Apple's
 ## Future improvements (deferred)
 
 - **Automate via Fastlane.** Once we're shipping every week, Fastlane can do Archive + Upload + version bumping from one command. Not needed at V1 cadence.
-- **TestFlight External Testers + groups.** Currently Internal Testing only (just the owner). Adding external testers requires a separate "Beta App Review" by Apple per major version. Worth setting up before the first external beta.
 - **CI-driven uploads.** GitHub Actions can run `xcodebuild archive` + `xcrun altool` to push builds without a human. Requires storing the App Store Connect API key as a secret. Pre-cursor: Fastlane.
