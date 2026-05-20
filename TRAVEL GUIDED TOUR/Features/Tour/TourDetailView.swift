@@ -347,13 +347,14 @@ struct TourDetailView: View {
 
     // MARK: - Audio state derivations
     //
-    // We identify "this tour's audio" by matching the player's current
-    // title against the tour title. Sufficient for V1's small seed (and
-    // we control both sides). M-player owns the actual playback control;
-    // this view only reads the state for label decoration.
+    // We identify "this tour's audio" via the AudioPlayerService's
+    // `currentSourceId`, set by PlayerView to the tour's UUID string
+    // when it calls `play(url:title:artist:sourceId:)`. M-player owns
+    // the actual playback control; this view only reads the state for
+    // label decoration.
 
     private var isThisTourActive: Bool {
-        audioPlayer.currentTitle == tour.title
+        audioPlayer.currentSourceId == tour.id.uuidString
             && audioPlayer.state != .idle
             && audioPlayer.state != .failed
     }
@@ -367,7 +368,7 @@ struct TourDetailView: View {
     }
 
     private var isThisTourLoading: Bool {
-        audioPlayer.currentTitle == tour.title
+        audioPlayer.currentSourceId == tour.id.uuidString
             && audioPlayer.state == .loading
     }
 

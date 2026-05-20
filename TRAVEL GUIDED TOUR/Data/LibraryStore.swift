@@ -29,7 +29,7 @@ final class LibraryStore {
     var recentlyPlayed: [LibraryEntry] {
         entries
             .filter { $0.listenedSeconds > 0 }
-            .sorted { $0.listenedSeconds > $1.listenedSeconds }
+            .sorted { ($0.lastListenedAt ?? .distantPast) > ($1.lastListenedAt ?? .distantPast) }
     }
 
     func isSaved(_ tourId: UUID) -> Bool {
@@ -53,6 +53,7 @@ final class LibraryStore {
     func updateProgress(_ tourId: UUID, listenedSeconds: Int, completed: Bool) {
         upsert(tourId) { entry in
             entry.listenedSeconds = listenedSeconds
+            entry.lastListenedAt = Date()
             if completed && entry.completedAt == nil {
                 entry.completedAt = Date()
             }

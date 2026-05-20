@@ -23,6 +23,13 @@ final class AudioPlayerService {
     private(set) var duration: TimeInterval = 0
     private(set) var currentTitle: String?
     private(set) var currentArtist: String?
+    /// Opaque identifier for the *source* of the current audio, set
+    /// by the caller of `play(url:title:artist:sourceId:)`. Tour
+    /// surfaces (TourDetailView / PlayerView) pass the tour's UUID
+    /// string so they can answer "is this player currently mine?"
+    /// without relying on title equality — which broke when two
+    /// tours shared a title (audit P1-3).
+    private(set) var currentSourceId: String?
     private(set) var rate: Float = 1.0
     /// Populated when `state == .failed`; cleared on the next
     /// successful `play(url:...)`. The watchdog timeout produces a
@@ -89,7 +96,7 @@ final class AudioPlayerService {
 
     // MARK: - Public API
 
-    func play(url: URL, title: String?, artist: String?) {
+    func play(url: URL, title: String?, artist: String?, sourceId: String? = nil) {
         // Tear down anything attached to the previous item.
         cancelLoadingTimeout()
         itemStatusObserver?.invalidate()
@@ -97,6 +104,7 @@ final class AudioPlayerService {
 
         currentTitle = title
         currentArtist = artist
+        currentSourceId = sourceId
         currentTime = 0
         duration = 0
         lastError = nil
@@ -172,6 +180,7 @@ final class AudioPlayerService {
         duration = 0
         currentTitle = nil
         currentArtist = nil
+        currentSourceId = nil
         lastError = nil
         state = .idle
         isAwaitingFirstPlayTransition = false

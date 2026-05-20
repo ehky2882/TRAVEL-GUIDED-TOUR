@@ -6,17 +6,27 @@ struct HeroImageView: View {
     var cornerRadius: CGFloat = 0
     var category: TourCategory? = nil
 
-    // V1 placeholder: a solid adaptive-grey block. The intent is
-    // to make image regions read as obvious "image goes here"
-    // shapes during layout work, before real photos arrive in
-    // M-launch-content. The category icon is intentionally
-    // omitted — solid blocks make the layout grid easier to scan.
-    // Swap to AsyncImage(url:) once CDN photos are available.
+    // Loads the remote image from `imageName` (an HTTPS URL on the
+    // CDN — gh-pages during the prototype phase, R2 post-V1; see
+    // docs/cdn-decision.md). The adaptive-grey block is the
+    // placeholder while loading, the failure fallback when the
+    // network errors, and the empty state when `imageName` isn't a
+    // valid URL.
 
     var body: some View {
-        Rectangle()
-            .fill(AtlasColors.placeholderWarm)
-            .frame(height: height)
-            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+        AsyncImage(url: URL(string: imageName)) { phase in
+            switch phase {
+            case .success(let image):
+                image
+                    .resizable()
+                    .scaledToFill()
+            default:
+                Rectangle()
+                    .fill(AtlasColors.placeholderWarm)
+            }
+        }
+        .frame(maxWidth: .infinity)
+        .frame(height: height)
+        .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
     }
 }

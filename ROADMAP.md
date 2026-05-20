@@ -73,10 +73,11 @@ What's left for V1:
   uploaded build → email arrives → paste "What to Test" in App Store
   Connect → install on iPhone via TestFlight app → walk the 10-step
   checklist below. **Next session priority.**
-- **P1 audit cleanup batch** — 5 open findings: P1-1 sort key, P1-2
-  avatar URL, P1-3 player-tour ID, P1-4 HeroImageView remote loading,
-  P1-7 dateline bug. Intended as one cleanup PR before or in
-  response to M-qa.
+- ~~**P1 audit cleanup batch**~~ — all 5 findings (P1-1 sort key,
+  P1-2 avatar URL, P1-3 player-tour ID, P1-4 HeroImageView remote
+  loading, P1-7 dateline bug) shipped on
+  `claude/resume-after-error-WQGK6` 2026-05-20. Awaiting owner
+  review on Mac.
 - **M-launch-content (optional more)** — owner may decide 10 tours
   are enough for V1 launch, or add more.
 - **Deferred design / polish pass** — theme tokens, real app icon
@@ -517,13 +518,13 @@ status; check items off as fixes land:
 - [/] P0-7. Developer-facing copy in user UI — HomeView + LibraryView fixed in PR #23. SettingsView debug-counts row deferred to a follow-up after PR #22.
 
 **P1 — Bugs**
-- [ ] P1-1. "Continue listening" / "Recently played" sort by wrong field
-- [ ] P1-2. Maker avatar URL is ignored (lands with P1-4)
-- [ ] P1-3. Player-tour identification by title is fragile
-- [ ] P1-4. HeroImageView doesn't load remote images (depends on CDN pick)
+- [x] P1-1. "Continue listening" / "Recently played" sort by wrong field (lastListenedAt added)
+- [x] P1-2. Maker avatar URL is ignored (AsyncImage with circle fallback)
+- [x] P1-3. Player-tour identification by title is fragile (currentSourceId on AudioPlayerService)
+- [x] P1-4. HeroImageView doesn't load remote images (AsyncImage with placeholder fallback)
 - [x] P1-5. Audio session interruption (phone call) not handled (PR #24)
 - [x] P1-6. Headphone unplug doesn't pause audio (PR #24)
-- [ ] P1-7. International-dateline bug in coordinate-in-region check
+- [x] P1-7. International-dateline bug in coordinate-in-region check (MKCoordinateRegion.contains extension)
 
 **P2 — Accessibility**
 - [ ] P2-1. BottomSheet has no VoiceOver affordance

@@ -367,7 +367,7 @@ struct PlayerView: View {
         // restart — just sync currentStopIndex to whatever's loaded.
         // `.failed` is treated like `.idle` so the user gets a retry
         // on the same source.
-        if audioPlayer.currentTitle == tour.title
+        if audioPlayer.currentSourceId == tour.id.uuidString
             && audioPlayer.state != .idle
             && audioPlayer.state != .failed {
             return
@@ -394,7 +394,8 @@ struct PlayerView: View {
         audioPlayer.play(
             url: url,
             title: tour.title,
-            artist: maker?.displayName
+            artist: maker?.displayName,
+            sourceId: tour.id.uuidString
         )
     }
 
@@ -412,7 +413,8 @@ struct PlayerView: View {
         audioPlayer.play(
             url: url,
             title: tour.title,
-            artist: maker?.displayName
+            artist: maker?.displayName,
+            sourceId: tour.id.uuidString
         )
     }
 

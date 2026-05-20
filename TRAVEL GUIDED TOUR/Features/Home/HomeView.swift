@@ -292,7 +292,7 @@ struct HomeView: View {
 
     private var toursInView: [Tour] {
         guard let region = visibleRegion else { return filteredTours }
-        return filteredTours.filter { isCoordinate($0.coordinate, inside: region) }
+        return filteredTours.filter { region.contains($0.coordinate) }
     }
 
     private var headerText: String {
@@ -311,20 +311,6 @@ struct HomeView: View {
             return "\(Int(meters)) m away"
         }
         return String(format: "%.1f km away", meters / 1000)
-    }
-
-    private func isCoordinate(
-        _ coordinate: CLLocationCoordinate2D,
-        inside region: MKCoordinateRegion
-    ) -> Bool {
-        let minLat = region.center.latitude - region.span.latitudeDelta / 2
-        let maxLat = region.center.latitude + region.span.latitudeDelta / 2
-        let minLon = region.center.longitude - region.span.longitudeDelta / 2
-        let maxLon = region.center.longitude + region.span.longitudeDelta / 2
-        return coordinate.latitude >= minLat
-            && coordinate.latitude <= maxLat
-            && coordinate.longitude >= minLon
-            && coordinate.longitude <= maxLon
     }
 
     private var emptyState: some View {
