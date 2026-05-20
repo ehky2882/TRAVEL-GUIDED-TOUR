@@ -533,8 +533,17 @@ status; check items off as fixes land:
 - [x] P2-4. No "Open Settings" deep link when location denied (button in SettingsView, iOS/visionOS)
 - [x] P2-5. Localization gap — duration / distance formatters hardcoded English/metric (new AtlasFormatters)
 
-**P3 — Polish & tech debt:** ten items; see audit doc. None block V1.
-P3-2 (duplicated `formattedDuration`) was incidentally closed by P2-5's `AtlasFormatters` extraction.
+**P3 — Polish & tech debt** (ten items; see audit doc; none block V1)
+- [ ] P3-1. Hardcoded values bypass theme-tokens — deferred with the design pass
+- [x] P3-2. `formattedDuration` duplicated — closed incidentally by P2-5's `AtlasFormatters`
+- [ ] P3-3. O(n) lookups everywhere — premature; V1 has 12 tours
+- [ ] P3-4. TourDownloader no retry on transient failures
+- [ ] P3-5. No tour-completed UX
+- [ ] P3-6. Splash screen bare-bones — deferred with the polish pass
+- [x] P3-7. ContentView calls `requestPermission` on every appearance (guarded by `didRequestLocationPermission` flag)
+- [x] P3-8. Search doesn't index tags or descriptions (added tag + description buckets with rank ordering)
+- [ ] P3-9. No delete swipe in Library
+- [x] P3-10. ManageDownloadsView ordering undefined (sorted alphabetically by title)
 
 **Lifecycle.** The audit doc itself was archived on 2026-05-18
 after the P0 wave landed (PRs #22 / #23 / #24). The closed PRs

@@ -75,11 +75,17 @@ struct ManageDownloadsView: View {
     /// `@Observable`) rather than `allDownloadedTourIds()` (which scans
     /// the filesystem and isn't observed). Otherwise SwiftUI doesn't
     /// re-render when a delete happens.
+    ///
+    /// Sorted alphabetically by title — `tourDownloader.states` is a
+    /// Dictionary, which has no defined iteration order, so without
+    /// this sort the list re-ordered itself between launches (audit
+    /// P3-10).
     private var downloadedTours: [Tour] {
         tourDownloader.states.compactMap { tourId, state -> Tour? in
             guard case .completed = state else { return nil }
             return dataService.tour(by: tourId)
         }
+        .sorted { $0.title.localizedCaseInsensitiveCompare($1.title) == .orderedAscending }
     }
 
     private var formattedTotalBytes: String {

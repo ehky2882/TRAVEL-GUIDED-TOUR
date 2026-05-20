@@ -259,10 +259,13 @@ struct SearchView: View {
         query.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
-    /// Substring (case-insensitive) match on title, maker name, or
-    /// category display name. Order: title hits first, then category,
-    /// then maker — small heuristic so the most "obvious" match
-    /// surfaces first when the catalog grows.
+    /// Substring (case-insensitive) match on title, category display
+    /// name, maker name, tags, or descriptions (short + long). Order
+    /// (small ranking heuristic so the most "obvious" match surfaces
+    /// first): title → category → maker → tags → description. Each
+    /// tour appears at most once, in the highest-ranked bucket it hits
+    /// (audit P3-8). docs/authoring-tours.md already promises tags
+    /// feed the search index; this implements that promise.
     private var filteredTours: [Tour] {
         let q = trimmedQuery.lowercased()
         guard !q.isEmpty else { return [] }
@@ -270,6 +273,8 @@ struct SearchView: View {
         var titleHits: [Tour] = []
         var categoryHits: [Tour] = []
         var makerHits: [Tour] = []
+        var tagHits: [Tour] = []
+        var descriptionHits: [Tour] = []
 
         for tour in dataService.tours {
             if tour.title.lowercased().contains(q) {
@@ -283,9 +288,18 @@ struct SearchView: View {
             if let maker = dataService.maker(for: tour),
                maker.displayName.lowercased().contains(q) {
                 makerHits.append(tour)
+                continue
+            }
+            if tour.tags.contains(where: { $0.lowercased().contains(q) }) {
+                tagHits.append(tour)
+                continue
+            }
+            if tour.shortDescription.lowercased().contains(q)
+                || tour.longDescription.lowercased().contains(q) {
+                descriptionHits.append(tour)
             }
         }
 
-        return titleHits + categoryHits + makerHits
+        return titleHits + categoryHits + makerHits + tagHits + descriptionHits
     }
 }
