@@ -32,11 +32,7 @@ struct TourDetailView: View {
         ZStack(alignment: .bottom) {
             ScrollView {
                 VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
-                    HeroImageView(
-                        imageName: tour.heroImageURL,
-                        height: AtlasSpacing.heroHeight,
-                        category: tour.primaryCategory
-                    )
+                    imageSection
 
                     VStack(alignment: .leading, spacing: AtlasSpacing.md) {
                         titleSection
@@ -86,6 +82,28 @@ struct TourDetailView: View {
     }
 
     // MARK: - Sections
+
+    /// Hero area: single image for tours with one photo, paging carousel
+    /// for tours that supply `additionalImageURLs`.
+    @ViewBuilder
+    private var imageSection: some View {
+        let allImages = [tour.heroImageURL] + (tour.additionalImageURLs ?? [])
+        if allImages.count > 1 {
+            TabView {
+                ForEach(allImages, id: \.self) { url in
+                    HeroImageView(imageName: url, height: AtlasSpacing.heroHeight)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .always))
+            .frame(height: AtlasSpacing.heroHeight)
+        } else {
+            HeroImageView(
+                imageName: tour.heroImageURL,
+                height: AtlasSpacing.heroHeight,
+                category: tour.primaryCategory
+            )
+        }
+    }
 
     private var titleSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {

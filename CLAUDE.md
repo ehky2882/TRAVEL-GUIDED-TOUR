@@ -60,12 +60,10 @@ explicit `Info.plist` at repo root and switching both app target configs to
 `GENERATE_INFOPLIST_FILE = NO` + `INFOPLIST_FILE = Info.plist`. Build verified,
 tests pass, PR #53 pending. A new TestFlight build (1.0/2) is needed to land
 the fix on device.
-What's left for V1: **upload build 1.0/2 to TestFlight then re-run M-qa on a
-real device** (owner completes TestFlight setup → installs via TestFlight
-app → walks 10-step checklist), more **M-launch-content** tours if
-desired (currently 10 of 5–15), the **hero image carousel UI** to surface
-the additional images already in the data model (~30–40 min of SwiftUI),
-and the deferred **design / polish pass**.
+What's left for V1: more **M-launch-content** tours if desired (currently
+10 of 5–15), and the deferred **design / polish pass**. M-qa background-audio
+step passed on build 1.0/3. Carousel, seed-tour removal, and ESB GPS fix
+all ship in this session's PR.
 
 What's true today (2026-05-20):
 
@@ -78,21 +76,21 @@ What's true today (2026-05-20):
 - `Resources/Tours.json` has **10 real tours** (NYC: Grand Central
   south facade, Times Square TKTS, South Street Seaport, Empire State
   Building, Statue of Liberty, Brooklyn Bridge, Rockefeller Center,
-  Met 5th Ave Steps, High Line, 9/11 Memorial) plus 2 seed tours.
-  ~26 min total audio. Spans 4 categories (history 5, architecture 4,
-  natureAndParks 1, culturalHeritage 1). Audio hosted on the
-  `gh-pages` branch (served at
+  Met 5th Ave Steps, High Line, 9/11 Memorial). Seed tours (Cooper
+  Hewitt, Architects of Hidden Brooklyn) removed. ~26 min total audio.
+  Spans 4 categories (history 5, architecture 4, natureAndParks 1,
+  culturalHeritage 1). Empire State Building GPS corrected to
+  40.7484, -73.9967. Audio hosted on the `gh-pages` branch (served at
   `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
   GitHub Releases tried first but serves wrong MIME type — see
   `docs/cdn-decision.md`.
-- **First photographic content shipped** (2026-05-20): 3 Times Square
-  photos on `gh-pages` at `/images/`. Times Square tour now uses a
-  real `heroImageURL` and populates the new optional
-  `additionalImageURLs: [String]?` field on `Tour`. `HeroImageView`
-  loads remote images via `AsyncImage`. **Carousel UI itself not yet
-  built** — `TourDetailView` only renders `heroImageURL`; the 2 extra
-  Times Square photos are unreachable in-app pending a small SwiftUI
-  PR. See ROADMAP § Known follow-ups.
+- **Photographic content + carousel shipped** (2026-05-20): 3 Times Square
+  photos on `gh-pages` at `/images/`. Times Square tour uses a real
+  `heroImageURL` and populates `additionalImageURLs: [String]?`. `TourDetailView`
+  renders all images as a paged `TabView(.page)` carousel when
+  `additionalImageURLs` is non-empty, otherwise falls back to the single
+  `HeroImageView`. `HeroImageView` fixed to properly constrain
+  `scaledToFill()` layout so card sizing is stable in all contexts.
 - **Pre-M-qa audit closed** (PR #51, 2026-05-20). P0 findings closed
   earlier; P1 batch (5 findings: sort key, avatar, player-tour ID,
   remote image loading, antimeridian), P2 cleanup (BottomSheet

@@ -50,16 +50,16 @@ CI per PR. **First TestFlight build (1.0/1) uploaded to App Store
 Connect on 2026-05-19 at 9:38 PM** — was "Ready to Submit" last
 checked on 2026-05-20 morning.
 
-**Content (M-launch-content).** 10 real tours + 2 seed in
-`Resources/Tours.json` as of 2026-05-19. NYC landmarks: Grand Central
-south facade, Times Square TKTS, South Street Seaport, Empire State
-Building, Statue of Liberty, Brooklyn Bridge, Rockefeller Center, Met
-5th Ave Steps, High Line, 9/11 Memorial. ~26 min total audio across
-4 categories. Audio hosted on `gh-pages` branch (served at
-`https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
-GitHub Releases tried first but serves wrong `Content-Type` for
-AVPlayer — see `docs/cdn-decision.md` § "Why we switched from
-Releases to Pages."
+**Content (M-launch-content).** 10 real tours in `Resources/Tours.json`
+(seed tours Cooper Hewitt + Architects of Hidden Brooklyn removed
+2026-05-20). NYC landmarks: Grand Central south facade, Times Square TKTS,
+South Street Seaport, Empire State Building, Statue of Liberty, Brooklyn
+Bridge, Rockefeller Center, Met 5th Ave Steps, High Line, 9/11 Memorial.
+~26 min total audio across 4 categories. Empire State Building GPS corrected
+to 40.7484, -73.9967 (was 40.7521, -73.9821). Audio hosted on `gh-pages`
+branch (served at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
+GitHub Releases tried first but serves wrong `Content-Type` for AVPlayer —
+see `docs/cdn-decision.md` § "Why we switched from Releases to Pages."
 
 **TestFlight signing wired (2026-05-19).**
 `DEVELOPMENT_TEAM = CPC7M72JTP` in `project.pbxproj`, Apple
@@ -71,19 +71,10 @@ complete. Per-release upload flow documented in `docs/testflight.md`
 session-by-session log.
 
 What's left for V1:
-- **Upload build 1.0/2 to TestFlight** — background audio bug fixed
-  in PR #53 requires a new build. Increment build number to 2,
-  Archive + upload via Xcode, wait for processing, install on iPhone.
-  See `docs/testflight.md`. **Next priority.**
-- **M-qa real-device pass via TestFlight** — after installing build
-  1.0/2, walk the 10-step checklist below.
-- **Hero image carousel UI** — Option A data layer is shipped
-  (`additionalImageURLs: [String]?`) and 3 Times Square photos are
-  on `gh-pages`, but `TourDetailView` only renders `heroImageURL`.
-  ~30–40 min of SwiftUI to surface the additional images via a
-  `TabView(.page)`. Until this ships, the 2 extra Times Square
-  photos are unreachable in-app. Separate focused PR. See § Known
-  follow-ups.
+- **Upload new TestFlight build** — carries seed-tour removal,
+  ESB GPS fix, HeroImageView layout fix, and image carousel. Increment
+  build number (currently 3), Archive + upload via Xcode, wait for
+  processing, install on iPhone. See `docs/testflight.md`.
 - **M-launch-content (optional more)** — owner may decide 10 tours
   are enough for V1 launch, or add more. See `docs/authoring-tours.md`.
 - **Deferred design / polish pass** — theme tokens, real app icon
@@ -620,17 +611,12 @@ sessions actually read.)
   against its PR's merged status before deleting. Not touched:
   `main`, `gh-pages`, and whatever `claude/resume-*` branch the
   current session is on.
-- **Hero image carousel UI** (Option A, half-shipped 2026-05-20).
-  The data half of Option A is now live: `Tour.additionalImageURLs:
-  [String]?` exists, `Resources/Tours.json`'s Times Square entry
-  uses it, the validator + template + authoring guide all know
-  about it, and 3 real photos are on `gh-pages` under `images/`.
-  Remaining: the **swipe-able carousel UI in `TourDetailView`**
-  that renders the hero + extras as a paged carousel. Without it
-  the extra images are unreachable from the app. Probably ~30–40
-  min of SwiftUI — a `TabView` with `.tabViewStyle(.page)` wrapping
-  `HeroImageView` instances for `[heroImageURL] + (additionalImageURLs ?? [])`.
-  Worth doing as a focused PR so the change is simulator-reviewable.
+- **Hero image carousel UI** ✅ Shipped 2026-05-20. `TourDetailView`
+  now renders a paged `TabView(.page(indexDisplayMode: .always))` when
+  `additionalImageURLs` is non-empty, falling back to a single
+  `HeroImageView` for tours with one photo. All 3 Times Square images
+  are reachable in-app. `HeroImageView` also fixed to constrain
+  `scaledToFill()` layout so card sizing is stable.
 - **Content authoring tooling at scale (M-content-tooling).** The
   current tour-upload workflow — owner drags audio + transcript
   into a Claude chat, answers 3 questions, Claude pushes audio +

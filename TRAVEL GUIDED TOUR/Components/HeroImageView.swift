@@ -20,6 +20,11 @@ struct HeroImageView: View {
                 image
                     .resizable()
                     .scaledToFill()
+                    // Constrain layout before clipping so scaledToFill
+                    // doesn't push the image's preferred size past the
+                    // frame height and distort the parent card.
+                    .frame(maxWidth: .infinity, maxHeight: height)
+                    .clipped()
             default:
                 Rectangle()
                     .fill(AtlasColors.placeholderWarm)
