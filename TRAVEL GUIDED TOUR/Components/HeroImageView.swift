@@ -14,20 +14,25 @@ struct HeroImageView: View {
     // valid URL.
 
     var body: some View {
-        AsyncImage(url: URL(string: imageName)) { phase in
-            switch phase {
-            case .success(let image):
-                image
-                    .resizable()
-                    .scaledToFill()
-                    // Constrain layout before clipping so scaledToFill
-                    // doesn't push the image's preferred size past the
-                    // frame height and distort the parent card.
-                    .frame(maxWidth: .infinity, maxHeight: height)
-                    .clipped()
-            default:
-                Rectangle()
-                    .fill(AtlasColors.placeholderWarm)
+        // GeometryReader reads the exact offered width so scaledToFill
+        // is clamped to (proxy.size.width × height) — not to maxWidth:
+        // .infinity, which lets AsyncImage propose an unconstrained
+        // width to the image and causes the 64 pt thumbnail in
+        // MakerView to overflow its parent.
+        GeometryReader { proxy in
+            AsyncImage(url: URL(string: imageName)) { phase in
+                switch phase {
+                case .success(let image):
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: proxy.size.width, height: height)
+                        .clipped()
+                default:
+                    Rectangle()
+                        .fill(AtlasColors.placeholderWarm)
+                        .frame(width: proxy.size.width, height: height)
+                }
             }
         }
         .frame(maxWidth: .infinity)

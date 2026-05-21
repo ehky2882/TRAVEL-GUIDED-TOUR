@@ -54,10 +54,6 @@ struct MakerView: View {
         }
     }
 
-    /// Loads `maker.avatarURL` via AsyncImage, falling back to the
-    /// adaptive-grey circle when the URL is missing, malformed, or
-    /// the network errors. Same placeholder treatment as
-    /// HeroImageView so layout reads cleanly in every state.
     private var avatar: some View {
         Group {
             if let urlString = maker.avatarURL,
@@ -65,15 +61,17 @@ struct MakerView: View {
                 AsyncImage(url: url) { phase in
                     switch phase {
                     case .success(let image):
-                        image
-                            .resizable()
-                            .scaledToFill()
+                        image.resizable().scaledToFill()
                     default:
                         Circle().fill(AtlasColors.placeholderWarm)
                     }
                 }
             } else {
-                Circle().fill(AtlasColors.placeholderWarm)
+                // No remote avatar — use the Atlas Studio app icon as
+                // the profile image (the only V1 maker is Atlas Studio).
+                Image("AtlasStudioAvatar")
+                    .resizable()
+                    .scaledToFill()
             }
         }
         .frame(width: avatarSize, height: avatarSize)
