@@ -43,7 +43,7 @@ app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 (iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
 — same app body, three different "TVs" it can play on.
 
-## Current State (V1 functionality + audit cleanup complete; first TestFlight build uploaded)
+## Current State (V1 functionality + audit cleanup complete; background audio bug fixed)
 
 Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`.
 The AllTrails-style home redesign landed via PR #31 on 2026-05-18 and
@@ -53,8 +53,15 @@ audit cleanup batch shipped via PR #51 — closing all remaining P1
 findings, the actionable P2 findings (accessibility + locale-aware
 formatters), three small P3 findings, and adding the Option A data
 layer for the hero image carousel (`additionalImageURLs: [String]?`).
-What's left for V1: **end-to-end M-qa pass on a real device via
-TestFlight** (owner completes TestFlight setup → installs via TestFlight
+On 2026-05-20 M-qa on device uncovered a critical bug: `UIBackgroundModes: audio`
+was silently dropped from the compiled Info.plist because Xcode ignores
+`INFOPLIST_KEY_UIBackgroundModes` for array-type keys. Fixed by creating an
+explicit `Info.plist` at repo root and switching both app target configs to
+`GENERATE_INFOPLIST_FILE = NO` + `INFOPLIST_FILE = Info.plist`. Build verified,
+tests pass, PR #53 pending. A new TestFlight build (1.0/2) is needed to land
+the fix on device.
+What's left for V1: **upload build 1.0/2 to TestFlight then re-run M-qa on a
+real device** (owner completes TestFlight setup → installs via TestFlight
 app → walks 10-step checklist), more **M-launch-content** tours if
 desired (currently 10 of 5–15), the **hero image carousel UI** to surface
 the additional images already in the data model (~30–40 min of SwiftUI),

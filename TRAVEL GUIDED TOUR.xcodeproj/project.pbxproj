@@ -377,7 +377,8 @@
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Atlas uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Atlas uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.";
@@ -425,7 +426,8 @@
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Atlas uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Atlas uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.";
