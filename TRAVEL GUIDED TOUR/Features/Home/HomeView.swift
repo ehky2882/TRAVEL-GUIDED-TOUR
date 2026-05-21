@@ -28,10 +28,13 @@ struct HomeView: View {
     /// peek and fades the recenter button while the user is panning,
     /// then clears when the camera settles.
     @State private var isMapMoving = false
-    /// Guards against the map firing continuous camera events during
-    /// its initial render — drawer retraction only kicks in after the
-    /// first onEnd (camera has settled at least once).
-    @State private var mapHasSettledOnce = false
+    /// Guards against the map firing camera events during initial
+    /// render. Set to true 1 s after the view appears — enough time
+    /// for the map's first tile load / settle cycle to complete so
+    /// those events don't retract the drawer before the user touches
+    /// anything. onEnd-based approach was unreliable because onEnd
+    /// fires immediately on first render, making the guard useless.
+    @State private var mapInteractionEnabled = false
     /// Lifted out of BottomSheet so the recenter button can read the
     /// drawer's in-progress drag delta and stay glued to its top edge
     /// throughout the drag (not just snap on release).
@@ -68,13 +71,12 @@ struct HomeView: View {
                         cameraPosition: $cameraPosition,
                         onCameraChanged: { region in
                             visibleRegion = region
-                            mapHasSettledOnce = true
                             withAnimation(.easeInOut(duration: 0.3)) {
                                 isMapMoving = false
                             }
                         },
                         onCameraMoving: {
-                            guard mapHasSettledOnce, !isMapMoving else { return }
+                            guard mapInteractionEnabled, !isMapMoving else { return }
                             withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
                                 isMapMoving = true
                                 if sheetDetent != .peek {
@@ -124,6 +126,10 @@ struct HomeView: View {
                         .allowsHitTesting(sheetDetent != .large && !isMapMoving)
                 }
                 .toolbar(.hidden, for: .navigationBar)
+                .task {
+                    try? await Task.sleep(for: .seconds(1))
+                    mapInteractionEnabled = true
+                }
                 .onChange(of: selectedTourId, initial: false) { _, _ in
                     if selectedTourId != nil && sheetDetent == .peek {
                         sheetDetent = .medium
