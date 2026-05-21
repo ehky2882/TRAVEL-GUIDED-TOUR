@@ -22,9 +22,6 @@ jobs:
   build:
     name: Build (iOS Simulator)
     runs-on: macos-latest
-    permissions:
-      contents: read
-      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - name: Show available Xcode
@@ -34,40 +31,18 @@ jobs:
       - name: Build
         run: |
           set -o pipefail
+          # CI deployment-target override: the project targets iOS 26.2,
+          # but GitHub's macos-latest runner ships an Xcode whose iOS SDK
+          # tops out at 18.x. A deployment target above the SDK maximum
+          # breaks Swift availability checking and produces misleading
+          # cascade errors. Compiling as iOS 18 keeps CI within the SDK's
+          # range; local + TestFlight builds still use 26.2.
           xcodebuild build \
             -scheme "TRAVEL GUIDED TOUR" \
             -destination "generic/platform=iOS Simulator" \
             -configuration Debug \
-            CODE_SIGNING_ALLOWED=NO 2>&1 | tee build.log
-      - name: Report build errors
-        if: failure() && github.event_name == 'pull_request'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          {
-            echo "### CI build-failure diagnostics (temporary)"
-            echo ""
-            echo "**error: lines (8 lines trailing context)**"
-            echo '```'
-            grep -E -A8 "error:" build.log | head -200 || echo "(none)"
-            echo '```'
-            echo ""
-            echo "**note: lines**"
-            echo '```'
-            grep -E "note:" build.log | head -80 || echo "(none)"
-            echo '```'
-            echo ""
-            echo "**SwiftCompile / Compiling lines (which files compile together)**"
-            echo '```'
-            grep -E "SwiftCompile|Compiling|CompileSwiftSources" build.log | head -40 || echo "(none)"
-            echo '```'
-            echo ""
-            echo "**Last 60 lines**"
-            echo '```'
-            tail -60 build.log
-            echo '```'
-          } > comment.md
-          gh pr comment "${{ github.event.pull_request.number }}" --body-file comment.md
+            IPHONEOS_DEPLOYMENT_TARGET=18.0 \
+            CODE_SIGNING_ALLOWED=NO
 
   test:
     name: Run unit tests
@@ -149,4 +124,5 @@ jobs:
             -scheme "TRAVEL GUIDED TOUR" \
             -destination "id=${{ steps.sim.outputs.udid }}" \
             -configuration Debug \
+            IPHONEOS_DEPLOYMENT_TARGET=18.0 \
             CODE_SIGNING_ALLOWED=NO
