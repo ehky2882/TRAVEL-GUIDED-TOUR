@@ -150,7 +150,7 @@ private struct UserLocationDot: View {
 /// toward the top. Rotated by the device heading so it points the
 /// way the user is facing.
 private struct HeadingWedge: Shape {
-    func path(in rect: CGRect) -> Path {
+    nonisolated func path(in rect: CGRect) -> Path {
         var path = Path()
         path.move(to: CGPoint(x: rect.midX, y: rect.maxY))
         path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
