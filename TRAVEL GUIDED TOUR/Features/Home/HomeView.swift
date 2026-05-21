@@ -21,6 +21,7 @@ struct HomeView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
     @Environment(TourDownloader.self) private var tourDownloader
+    @Environment(AudioPlayerService.self) private var audioPlayer
 
     @State private var visibleRegion: MKCoordinateRegion?
     @State private var sheetDetent: BottomSheetDetent = .large
@@ -51,11 +52,32 @@ struct HomeView: View {
         )
     )
 
-    /// Peek-detent height. Sized so the AtlasTabBar (~62pt) + drag
+    /// Base peek-detent height. Sized so the AtlasTabBar (~62pt) + drag
     /// handle (~16pt) + centered header line (~30pt) all fit — and
     /// nothing more. Increasing this lets the first list item peek;
     /// decreasing clips the header.
-    private let peekHeight: CGFloat = 130
+    private let basePeekHeight: CGFloat = 130
+
+    /// True while the mini-player is showing — it sits between the
+    /// drawer and the tab bar, so the drawer's peek height grows by
+    /// the bar's footprint to keep the same content visible above it.
+    private var isMiniPlayerVisible: Bool {
+        audioPlayer.state != .idle
+    }
+
+    /// Effective peek height — grows when the mini-player is on screen.
+    private var peekHeight: CGFloat {
+        isMiniPlayerVisible ? basePeekHeight + MiniPlayerBar.layoutHeight : basePeekHeight
+    }
+
+    /// Bottom padding for the drawer's scroll list so the last card
+    /// clears the floating island (tab bar + mini-player) when the
+    /// drawer is fully open.
+    private var bottomListInset: CGFloat {
+        let tabBar: CGFloat = 64
+        let miniPlayer = isMiniPlayerVisible ? MiniPlayerBar.layoutHeight : 0
+        return tabBar + miniPlayer + AtlasSpacing.md
+    }
 
     var body: some View {
         // NavigationStack wraps the layout so the tour list cards,
@@ -68,6 +90,7 @@ struct HomeView: View {
                     HomeMapSection(
                         tours: filteredTours,
                         userLocation: locationManager.userLocation,
+                        userHeading: locationManager.heading,
                         selectedTourId: $selectedTourId,
                         cameraPosition: $cameraPosition,
                         onCameraChanged: { region in
@@ -105,7 +128,7 @@ struct HomeView: View {
                         dragOffset: $sheetDragOffset,
                         peekHeight: peekHeight
                     ) {
-                        drawerContent
+                        drawerContent(in: geo)
                     }
 
                     // Floating recenter button anchored to bottom-leading,
@@ -124,7 +147,11 @@ struct HomeView: View {
                         // Hidden at full detent (drawer covers the map)
                         // and while the map is moving (clean panning UX).
                         // Button fades back when the camera settles.
+                        // Explicit gentle eases so the fade doesn't snap
+                        // with whatever spring drove the drawer/camera.
                         .opacity(sheetDetent == .large || isMapMoving ? 0 : 1)
+                        .animation(.easeInOut(duration: 0.5), value: isMapMoving)
+                        .animation(.easeInOut(duration: 0.3), value: sheetDetent)
                         .allowsHitTesting(sheetDetent != .large && !isMapMoving)
                 }
                 .toolbar(.hidden, for: .navigationBar)
@@ -134,7 +161,9 @@ struct HomeView: View {
                 }
                 .onChange(of: selectedTourId, initial: false) { _, _ in
                     if selectedTourId != nil && sheetDetent == .peek {
-                        sheetDetent = .medium
+                        withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+                            sheetDetent = .medium
+                        }
                     }
                 }
             }
@@ -177,10 +206,16 @@ struct HomeView: View {
         case .none:
             guard locationManager.userLocation != nil else { return }
             trackingMode = .follow
-            cameraPosition = .userLocation(followsHeading: false, fallback: cameraPosition)
+            // Animate the camera so it glides to the user instead of
+            // snapping there abruptly.
+            withAnimation(.easeInOut(duration: 0.45)) {
+                cameraPosition = .userLocation(followsHeading: false, fallback: cameraPosition)
+            }
         case .follow:
             trackingMode = .followWithHeading
-            cameraPosition = .userLocation(followsHeading: true, fallback: cameraPosition)
+            withAnimation(.easeInOut(duration: 0.45)) {
+                cameraPosition = .userLocation(followsHeading: true, fallback: cameraPosition)
+            }
         case .followWithHeading:
             trackingMode = .none
         }
@@ -188,8 +223,15 @@ struct HomeView: View {
 
     // MARK: - Drawer content
 
-    private var drawerContent: some View {
-        ScrollViewReader { proxy in
+    private func drawerContent(in geo: GeometryProxy) -> some View {
+        // Fade the scrollable list in as the drawer opens past peek.
+        // At the peek detent the list is hidden entirely — otherwise a
+        // sliver of the first card (often a hero image) shows above
+        // the tab bar (M-qa finding).
+        let visible = drawerVisibleHeight(in: geo)
+        let listOpacity = min(1, max(0, (visible - peekHeight) / 90))
+
+        return ScrollViewReader { proxy in
             VStack(alignment: .leading, spacing: 0) {
                 // Header — dynamic count for the area in view.
                 // Centered to read cleanly at the peek detent where
@@ -231,8 +273,11 @@ struct HomeView: View {
                             }
                         }
                     }
-                    .padding(.vertical, AtlasSpacing.sm)
+                    .padding(.top, AtlasSpacing.sm)
+                    .padding(.bottom, bottomListInset)
                 }
+                .opacity(listOpacity)
+                .allowsHitTesting(listOpacity > 0.01)
                 .onChange(of: selectedTourId, initial: false) { _, newId in
                     guard let newId else { return }
                     withAnimation(.easeInOut(duration: 0.25)) {
