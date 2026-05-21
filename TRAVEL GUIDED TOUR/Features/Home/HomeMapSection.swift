@@ -37,9 +37,19 @@ struct HomeMapSection: View {
                     .tag(marker.id)
             }
 
-            if userLocation != nil {
-                UserAnnotation()
-                    .tint(.blue)
+            if let userLocation {
+                Annotation("My location", coordinate: userLocation.coordinate, anchor: .center) {
+                    ZStack {
+                        Circle()
+                            .fill(Color.blue.opacity(0.2))
+                            .frame(width: 24, height: 24)
+                        Circle()
+                            .fill(Color.blue)
+                            .frame(width: 14, height: 14)
+                            .overlay(Circle().stroke(Color.white, lineWidth: 2.5))
+                    }
+                }
+                .annotationTitles(.hidden)
             }
         }
         .mapControls {

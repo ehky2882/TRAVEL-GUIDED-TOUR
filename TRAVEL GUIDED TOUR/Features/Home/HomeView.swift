@@ -163,11 +163,12 @@ struct HomeView: View {
         Button { cycleTrackingMode() } label: {
             Image(systemName: trackingMode.iconName)
                 .font(.system(size: 16))
-                .foregroundStyle(AtlasColors.primaryText)
+                .foregroundStyle(.white)
                 .frame(width: 44, height: 44)
-                .background(.thickMaterial)
+                .background(Color(uiColor: .systemGray3))
                 .clipShape(Circle())
         }
+        .buttonStyle(.plain)
         .accessibilityLabel("My location")
     }
 
