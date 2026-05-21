@@ -17,9 +17,6 @@ struct HomeMapSection: View {
     let userLocation: CLLocation?
     @Binding var selectedTourId: UUID?
     @Binding var cameraPosition: MapCameraPosition
-    /// Namespace shared with the parent's `MapUserLocationButton` so
-    /// MapKit knows which map the button controls.
-    let scope: Namespace.ID
     /// Fires after a pan settles. The parent uses this to recompute
     /// the in-view tour count and any location-anchored UI.
     let onCameraChanged: (MKCoordinateRegion) -> Void
@@ -33,7 +30,7 @@ struct HomeMapSection: View {
     @State private var selectedStopId: UUID?
 
     var body: some View {
-        Map(position: $cameraPosition, selection: $selectedStopId, scope: scope) {
+        Map(position: $cameraPosition, selection: $selectedStopId) {
             ForEach(allStopMarkers, id: \.id) { marker in
                 Marker(marker.title, systemImage: marker.systemImage, coordinate: marker.coordinate)
                     .tint(AtlasColors.accent)
@@ -42,6 +39,7 @@ struct HomeMapSection: View {
 
             if userLocation != nil {
                 UserAnnotation()
+                    .tint(.blue)
             }
         }
         .mapControls {

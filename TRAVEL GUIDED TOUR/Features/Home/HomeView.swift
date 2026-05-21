@@ -41,7 +41,7 @@ struct HomeView: View {
     @State private var sheetDragOffset: CGFloat = 0
     @State private var selectedCategory: TourCategory? = nil
     @State private var selectedTourId: UUID? = nil
-    @Namespace private var mapScope
+    @State private var trackingMode: LocationTrackingMode = .none
     @State private var cameraPosition: MapCameraPosition = .region(
         MKCoordinateRegion(
             // Fallback start (NYC) — overridden on first appear if
@@ -70,7 +70,6 @@ struct HomeView: View {
                         userLocation: locationManager.userLocation,
                         selectedTourId: $selectedTourId,
                         cameraPosition: $cameraPosition,
-                        scope: mapScope,
                         onCameraChanged: { region in
                             visibleRegion = region
                             withAnimation(.easeInOut(duration: 0.3)) {
@@ -81,6 +80,7 @@ struct HomeView: View {
                             guard mapInteractionEnabled, !isMapMoving else { return }
                             withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
                                 isMapMoving = true
+                                trackingMode = .none
                                 if sheetDetent != .peek {
                                     sheetDetent = .peek
                                 }
@@ -113,7 +113,7 @@ struct HomeView: View {
                     // which includes the in-progress drag delta — so the
                     // button stays glued to the drawer's top edge during
                     // the drag, not just after release.
-                    MapUserLocationButton(scope: mapScope)
+                    locationButton
                         .padding(.leading, AtlasSpacing.md)
                         .padding(.bottom, drawerVisibleHeight(in: geo) + AtlasSpacing.sm)
                         .frame(
@@ -155,6 +155,34 @@ struct HomeView: View {
         case .large:  baseHeight = geo.size.height - (AtlasSpacing.sm * 2)
         }
         return max(peekHeight, baseHeight - sheetDragOffset)
+    }
+
+    // MARK: - Location button
+
+    private var locationButton: some View {
+        Button { cycleTrackingMode() } label: {
+            Image(systemName: trackingMode.iconName)
+                .font(.system(size: 16))
+                .foregroundStyle(AtlasColors.primaryText)
+                .frame(width: 44, height: 44)
+                .background(.thickMaterial)
+                .clipShape(Circle())
+        }
+        .accessibilityLabel("My location")
+    }
+
+    private func cycleTrackingMode() {
+        switch trackingMode {
+        case .none:
+            guard locationManager.userLocation != nil else { return }
+            trackingMode = .follow
+            cameraPosition = .userLocation(followsHeading: false, fallback: cameraPosition)
+        case .follow:
+            trackingMode = .followWithHeading
+            cameraPosition = .userLocation(followsHeading: true, fallback: cameraPosition)
+        case .followWithHeading:
+            trackingMode = .none
+        }
     }
 
     // MARK: - Drawer content
@@ -328,5 +356,17 @@ struct HomeView: View {
         .frame(maxWidth: .infinity)
         .padding(.top, AtlasSpacing.xl)
         .padding(.horizontal, AtlasSpacing.lg)
+    }
+}
+
+private enum LocationTrackingMode {
+    case none, follow, followWithHeading
+
+    var iconName: String {
+        switch self {
+        case .none:              return "location"
+        case .follow:            return "location.fill"
+        case .followWithHeading: return "location.north.line.fill"
+        }
     }
 }
