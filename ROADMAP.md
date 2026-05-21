@@ -46,9 +46,12 @@ production home. **Pre-M-qa audit complete** — P0 findings closed
 (PRs #22 / #23 / #24, May 2026-05-18); P1 + P2 + P3 cleanup batch
 shipped 2026-05-20 (PR #51) along with the Option A data layer for
 the hero image carousel. Unit test target wired (PR #33) and runs on
-CI per PR. **First TestFlight build (1.0/1) uploaded to App Store
-Connect on 2026-05-19 at 9:38 PM** — was "Ready to Submit" last
-checked on 2026-05-20 morning.
+CI per PR. **TestFlight: build 1.0 (4) uploaded to App Store Connect on
+2026-05-20 evening**, carrying the full day's UX + content work;
+processing at Apple at session end. Earlier builds: 1.0 (1) was the
+first upload (2026-05-19 9:38 PM); 1.0 (3) verified the background-audio
+fix on device. M-qa 10-step checklist still needs a run on device
+against build 4.
 
 **Content (M-launch-content).** 10 real tours in `Resources/Tours.json`
 (seed tours Cooper Hewitt + Architects of Hidden Brooklyn removed
@@ -56,7 +59,7 @@ checked on 2026-05-20 morning.
 South Street Seaport, Empire State Building, Statue of Liberty, Brooklyn
 Bridge, Rockefeller Center, Met 5th Ave Steps, High Line, 9/11 Memorial.
 ~26 min total audio across 4 categories. Empire State Building GPS corrected
-to 40.7484, -73.9967 (was 40.7521, -73.9821). Audio hosted on `gh-pages`
+to 40.748434, -73.984571 (was 40.7521, -73.9821). Audio hosted on `gh-pages`
 branch (served at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
 GitHub Releases tried first but serves wrong `Content-Type` for AVPlayer —
 see `docs/cdn-decision.md` § "Why we switched from Releases to Pages."
@@ -71,10 +74,11 @@ complete. Per-release upload flow documented in `docs/testflight.md`
 session-by-session log.
 
 What's left for V1:
-- **Upload new TestFlight build** — carries seed-tour removal,
-  ESB GPS fix, HeroImageView layout fix, and image carousel. Increment
-  build number (currently 3), Archive + upload via Xcode, wait for
-  processing, install on iPhone. See `docs/testflight.md`.
+- **M-qa on device** — build 1.0 (4) is uploaded (carries seed-tour
+  removal, ESB GPS fix, HeroImageView layout fix, image carousel, the
+  home-screen UX batch, and the location-button rework). Once Apple
+  finishes processing, install via the TestFlight app and walk the
+  M-qa 10-step checklist (§ M-qa). Bugs become small targeted fixes.
 - **M-launch-content (optional more)** — owner may decide 10 tours
   are enough for V1 launch, or add more. See `docs/authoring-tours.md`.
 - **Deferred design / polish pass** — theme tokens, real app icon
@@ -612,9 +616,10 @@ sessions actually read.)
   `main`, `gh-pages`, and whatever `claude/resume-*` branch the
   current session is on.
 - **Hero image carousel UI** ✅ Shipped 2026-05-20. `TourDetailView`
-  now renders a paged `TabView(.page(indexDisplayMode: .always))` when
-  `additionalImageURLs` is non-empty, falling back to a single
-  `HeroImageView` for tours with one photo. All 3 Times Square images
+  and `PlayerView` both render a paged `TabView(.page(indexDisplayMode:
+  .always))` when `additionalImageURLs` is non-empty, falling back to a
+  single `HeroImageView` for tours with one photo. Images are inset
+  from the screen edges with a corner radius. All 3 Times Square images
   are reachable in-app. `HeroImageView` also fixed to constrain
   `scaledToFill()` layout so card sizing is stable.
 - **Content authoring tooling at scale (M-content-tooling).** The
