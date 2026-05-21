@@ -28,6 +28,10 @@ struct HomeView: View {
     /// peek and fades the recenter button while the user is panning,
     /// then clears when the camera settles.
     @State private var isMapMoving = false
+    /// Guards against the map firing continuous camera events during
+    /// its initial render — drawer retraction only kicks in after the
+    /// first onEnd (camera has settled at least once).
+    @State private var mapHasSettledOnce = false
     /// Lifted out of BottomSheet so the recenter button can read the
     /// drawer's in-progress drag delta and stay glued to its top edge
     /// throughout the drag (not just snap on release).
@@ -64,12 +68,13 @@ struct HomeView: View {
                         cameraPosition: $cameraPosition,
                         onCameraChanged: { region in
                             visibleRegion = region
+                            mapHasSettledOnce = true
                             withAnimation(.easeInOut(duration: 0.3)) {
                                 isMapMoving = false
                             }
                         },
                         onCameraMoving: {
-                            guard !isMapMoving else { return }
+                            guard mapHasSettledOnce, !isMapMoving else { return }
                             withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
                                 isMapMoving = true
                                 if sheetDetent != .peek {
