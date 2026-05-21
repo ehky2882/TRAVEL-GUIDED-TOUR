@@ -71,10 +71,12 @@ complete. Per-release upload flow documented in `docs/testflight.md`
 session-by-session log.
 
 What's left for V1:
-- **M-qa real-device pass via TestFlight** — owner completes
-  TestFlight setup in App Store Connect (Internal Testing group +
-  paste "What to Test") → installs Atlas via TestFlight app on
-  iPhone → walks the 10-step checklist below. **Next priority.**
+- **Upload build 1.0/2 to TestFlight** — background audio bug fixed
+  in PR #53 requires a new build. Increment build number to 2,
+  Archive + upload via Xcode, wait for processing, install on iPhone.
+  See `docs/testflight.md`. **Next priority.**
+- **M-qa real-device pass via TestFlight** — after installing build
+  1.0/2, walk the 10-step checklist below.
 - **Hero image carousel UI** — Option A data layer is shipped
   (`additionalImageURLs: [String]?`) and 3 Times Square photos are
   on `gh-pages`, but `TourDetailView` only renders `heroImageURL`.

@@ -146,6 +146,14 @@ final class AudioPlayerService {
     }
 
     func play() {
+        // Re-activate the audio session before resuming. If the session
+        // was deactivated while backgrounded (e.g. lock screen + another
+        // app taking audio focus), player.play() silently fails without
+        // this call — the remote-command play tap appears to "work" but
+        // audio never starts and the now-playing slot reverts to Spotify.
+        #if os(iOS) || os(visionOS)
+        try? AVAudioSession.sharedInstance().setActive(true)
+        #endif
         player.play()
         // Same rate-restore as play(url:title:artist:) — resume should
         // honor the user's last speed selection.
