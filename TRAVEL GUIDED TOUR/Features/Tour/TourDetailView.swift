@@ -96,12 +96,16 @@ struct TourDetailView: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .frame(height: AtlasSpacing.heroHeight)
+            .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
+            .padding(.horizontal, AtlasSpacing.lg)
         } else {
             HeroImageView(
                 imageName: tour.heroImageURL,
                 height: AtlasSpacing.heroHeight,
+                cornerRadius: AtlasSpacing.cardCornerRadius,
                 category: tour.primaryCategory
             )
+            .padding(.horizontal, AtlasSpacing.lg)
         }
     }
 
