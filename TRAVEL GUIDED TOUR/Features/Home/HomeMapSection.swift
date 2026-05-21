@@ -32,12 +32,6 @@ struct HomeMapSection: View {
     /// stop-id → parent tour-id and push that up through the binding.
     @State private var selectedStopId: UUID?
 
-    /// The map camera's own heading, captured on every camera change.
-    /// The user-location wedge rotates by `userHeading - mapHeading`
-    /// so it points the right way whether the map is north-up or
-    /// rotated (e.g. in follow-with-heading mode).
-    @State private var mapHeading: CLLocationDirection = 0
-
     var body: some View {
         Map(position: $cameraPosition, selection: $selectedStopId) {
             ForEach(allStopMarkers, id: \.id) { marker in
@@ -57,12 +51,10 @@ struct HomeMapSection: View {
             MapCompass()
             MapScaleView()
         }
-        .onMapCameraChange(frequency: .continuous) { context in
-            mapHeading = context.camera.heading
+        .onMapCameraChange(frequency: .continuous) { _ in
             onCameraMoving()
         }
         .onMapCameraChange(frequency: .onEnd) { context in
-            mapHeading = context.camera.heading
             onCameraChanged(context.region)
         }
         .onChange(of: selectedStopId, initial: false) { _, newStopId in
@@ -78,12 +70,11 @@ struct HomeMapSection: View {
     // MARK: - Derived
 
     /// Screen-space rotation for the user-dot's heading wedge, in
-    /// degrees. `nil` hides the wedge when heading is unavailable.
-    /// Subtracting the map's own heading keeps the wedge pointing at
-    /// the real-world bearing even when the map itself is rotated.
+    /// degrees — equal to the device compass heading so the wedge
+    /// points the real-world direction the user is facing.
+    /// `nil` hides the wedge when heading is unavailable.
     private var wedgeRotationDegrees: Double? {
-        guard let userHeading else { return nil }
-        return userHeading - mapHeading
+        userHeading
     }
 
     /// All stops across every tour, flattened into pin descriptors.

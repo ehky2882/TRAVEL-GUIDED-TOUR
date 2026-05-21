@@ -1,4 +1,5 @@
 import SwiftUI
+import Foundation
 
 /// Root shell — V1 has 3 surfaces (Home / Library / Me).
 ///
