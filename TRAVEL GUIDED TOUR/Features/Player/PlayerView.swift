@@ -43,11 +43,7 @@ struct PlayerView: View {
 
             ScrollView {
                 VStack(spacing: AtlasSpacing.lg) {
-                    HeroImageView(
-                        imageName: tour.heroImageURL,
-                        height: AtlasSpacing.heroHeight,
-                        category: tour.primaryCategory
-                    )
+                    imageSection
 
                     titleSection
                     currentStopSection
@@ -156,6 +152,30 @@ struct PlayerView: View {
         }
         .frame(maxWidth: .infinity)
         .background(AtlasColors.background)
+    }
+
+    @ViewBuilder
+    private var imageSection: some View {
+        let allImages = [tour.heroImageURL] + (tour.additionalImageURLs ?? [])
+        if allImages.count > 1 {
+            TabView {
+                ForEach(allImages, id: \.self) { url in
+                    HeroImageView(imageName: url, height: AtlasSpacing.heroHeight)
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .always))
+            .frame(height: AtlasSpacing.heroHeight)
+            .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
+            .padding(.horizontal, AtlasSpacing.lg)
+        } else {
+            HeroImageView(
+                imageName: tour.heroImageURL,
+                height: AtlasSpacing.heroHeight,
+                cornerRadius: AtlasSpacing.cardCornerRadius,
+                category: tour.primaryCategory
+            )
+            .padding(.horizontal, AtlasSpacing.lg)
+        }
     }
 
     private var titleSection: some View {
