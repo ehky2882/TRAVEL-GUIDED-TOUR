@@ -54,7 +54,7 @@ struct HomeView: View {
     /// handle (~16pt) + centered header line (~30pt) all fit — and
     /// nothing more. Increasing this lets the first list item peek;
     /// decreasing clips the header.
-    private let peekHeight: CGFloat = 110
+    private let peekHeight: CGFloat = 130
 
     var body: some View {
         // NavigationStack wraps the layout so the tour list cards,
@@ -197,7 +197,7 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal, AtlasSpacing.lg)
                     .padding(.top, AtlasSpacing.sm)
-                    .padding(.bottom, AtlasSpacing.sm)
+                    .padding(.bottom, AtlasSpacing.md)
 
                 ScrollView {
                     LazyVStack(alignment: .leading, spacing: AtlasSpacing.md) {
