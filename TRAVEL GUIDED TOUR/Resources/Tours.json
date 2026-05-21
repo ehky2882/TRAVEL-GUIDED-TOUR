@@ -352,6 +352,40 @@
       "primaryCategory": "culturalHeritage",
       "tags": ["9/11 memorial", "world trade center", "lower manhattan", "michael arad", "memorial", "reflecting absence"],
       "priceUSD": 0
+    },
+    {
+      "id": "cc251534-28cb-4f9b-bded-24602cef3a95",
+      "title": "Brooklyn Museum",
+      "shortDescription": "Two and a half minutes on the facade of the Brooklyn Museum — a monument to civic ambition that ended up less than a quarter of what was planned.",
+      "longDescription": "Stand on Eastern Parkway facing the Brooklyn Museum's main facade: two architectural eras side by side, a Beaux-Arts limestone palace behind a modern glass-and-steel entrance pavilion. The plans drawn up by McKim, Mead & White in 1895 would have made it the largest museum in the world — bigger than the Louvre, bigger than the British Museum. Only the first portion was ever built. In 1898, Brooklyn merged with New York City, lost its political independence, and the funding dried up. The building you're looking at is less than a quarter of the original scheme — and the museum that grew inside it has become one of the most consequential collections in the country anyway.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/brooklyn-museum-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ef51c65d-8244-4ca9-9b25-e725ebc23d18",
+          "order": 0,
+          "title": "Brooklyn Museum",
+          "caption": "Stand on Eastern Parkway facing the museum's main facade. Look for the two eras side by side: the Beaux-Arts limestone behind the modern glass pavilion.",
+          "latitude": 40.6721,
+          "longitude": -73.9635,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/brooklyn-museum.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The building in front of you is less than a quarter of what was originally planned.\n\nTwo architectural eras face each other on this facade. Behind, a Beaux-Arts limestone palace — long horizontal lines, classical columns, a triangular pediment, sculptures along the cornice. In front of it, a modern glass-and-steel entrance pavilion, jutting out toward the sidewalk. You're on Eastern Parkway in Prospect Heights. The wide road behind you is Eastern Parkway itself — designed by Olmsted and Vaux in the 1860s as one of the first parkways in America.\n\nThe original entrance, you'll have to imagine. For the first thirty-six years of the museum's life, a grand staircase rose from the street to the second floor. It was demolished in 1934 after being deemed unsafe.\n\nThe museum opened in 1897. At the time, Brooklyn was still its own city. The plans were enormous: McKim, Mead, and White — the firm that designed the wings of the Metropolitan Museum across the river — were commissioned to build a museum that would be the largest in the world. Bigger than the Louvre. Bigger than the British Museum. A monument to Brooklyn's civic ambition.\n\nOnly the first portion was ever built. In 1898, Brooklyn merged with New York City — losing its independence and most of its political muscle — and the funding for the rest of the project dried up. The museum that was supposed to anchor a great independent city ended up serving a borough of a larger one. The modern glass entrance, designed by the firm Polshek Partnership, was added in 2004.\n\nInside is the second-largest museum collection in New York City — Egyptian antiquities going back four thousand years, an extensive collection of African and Native American art, and one of the most important collections of feminist art in the world, including Judy Chicago's The Dinner Party. The Brooklyn Museum has, historically, been more willing to take risks than the Met. It collects what others didn't think to collect.\n\nFor now, look at the building. Notice what's missing. The story of this place is partly the story of a Brooklyn that almost became something bigger — and a museum that, despite that, has kept finding interesting things to do."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.6721,
+      "centroidLongitude": -73.9635,
+      "city": "New York",
+      "primaryCategory": "artAndMuseums",
+      "tags": ["brooklyn", "beaux-arts", "mckim mead and white", "1897", "prospect heights", "museum"],
+      "priceUSD": 0
     }
   ]
 }
