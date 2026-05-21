@@ -297,7 +297,7 @@ Run the unit test suite:
 ```bash
 xcodebuild test \
   -scheme "TRAVEL GUIDED TOUR" \
-  -destination "platform=iOS Simulator,name=iPhone 16,OS=latest" \
+  -destination "platform=iOS Simulator,name=iPhone 17,OS=latest" \
   -configuration Debug
 ```
 
