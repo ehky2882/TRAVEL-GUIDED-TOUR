@@ -41,6 +41,7 @@ struct HomeView: View {
     @State private var sheetDragOffset: CGFloat = 0
     @State private var selectedCategory: TourCategory? = nil
     @State private var selectedTourId: UUID? = nil
+    @Namespace private var mapScope
     @State private var cameraPosition: MapCameraPosition = .region(
         MKCoordinateRegion(
             // Fallback start (NYC) — overridden on first appear if
@@ -69,6 +70,7 @@ struct HomeView: View {
                         userLocation: locationManager.userLocation,
                         selectedTourId: $selectedTourId,
                         cameraPosition: $cameraPosition,
+                        scope: mapScope,
                         onCameraChanged: { region in
                             visibleRegion = region
                             withAnimation(.easeInOut(duration: 0.3)) {
@@ -111,7 +113,7 @@ struct HomeView: View {
                     // which includes the in-progress drag delta — so the
                     // button stays glued to the drawer's top edge during
                     // the drag, not just after release.
-                    recenterButton
+                    MapUserLocationButton(scope: mapScope)
                         .padding(.leading, AtlasSpacing.md)
                         .padding(.bottom, drawerVisibleHeight(in: geo) + AtlasSpacing.sm)
                         .frame(
@@ -153,34 +155,6 @@ struct HomeView: View {
         case .large:  baseHeight = geo.size.height - (AtlasSpacing.sm * 2)
         }
         return max(peekHeight, baseHeight - sheetDragOffset)
-    }
-
-    // MARK: - Recenter button
-
-    private var recenterButton: some View {
-        Button {
-            recenterOnUser()
-        } label: {
-            Image(systemName: "location.fill")
-                .font(.system(size: 16))
-                .foregroundStyle(AtlasColors.primaryText)
-                .frame(width: 44, height: 44)
-                .background(.thickMaterial)
-                .clipShape(Circle())
-        }
-        .accessibilityLabel("Recenter on my location")
-    }
-
-    private func recenterOnUser() {
-        guard let userLocation = locationManager.userLocation else { return }
-        withAnimation(.easeInOut(duration: 0.4)) {
-            cameraPosition = .region(
-                MKCoordinateRegion(
-                    center: userLocation.coordinate,
-                    span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-                )
-            )
-        }
     }
 
     // MARK: - Drawer content
