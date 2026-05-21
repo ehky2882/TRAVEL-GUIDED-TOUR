@@ -18,6 +18,12 @@ import SwiftUI
 struct AtlasTabBar: View {
     @Binding var selected: AtlasTab
 
+    /// When false the background is .clear — used on the Home tab so
+    /// the drawer's single material surface shows through the tab bar
+    /// area too, giving a truly unified floating island with no
+    /// double-layer compounding.
+    var showBackground: Bool = true
+
     /// Same horizontal inset the BottomSheet uses (8pt) so the tab
     /// bar columns align with the drawer's edges.
     var horizontalInset: CGFloat = 8
@@ -35,7 +41,7 @@ struct AtlasTabBar: View {
         }
         .padding(.vertical, AtlasSpacing.sm)
         .frame(maxWidth: .infinity)
-        .background(.thickMaterial)
+        .background(showBackground ? AnyShapeStyle(.thickMaterial) : AnyShapeStyle(.clear))
         .clipShape(
             UnevenRoundedRectangle(
                 topLeadingRadius: topCornerRadius,

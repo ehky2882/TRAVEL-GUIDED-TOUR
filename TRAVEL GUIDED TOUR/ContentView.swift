@@ -25,7 +25,10 @@ struct ContentView: View {
         ZStack(alignment: .bottom) {
             tabContent
 
-            AtlasTabBar(selected: $selectedTab)
+            // Home tab: background is clear so the drawer's single
+            // material layer covers both regions — no double-compounding.
+            // Library/Me tabs: drawer is absent, tab bar needs its own.
+            AtlasTabBar(selected: $selectedTab, showBackground: selectedTab != .home)
         }
         .ignoresSafeArea(.container, edges: .bottom)
         .onAppear {
