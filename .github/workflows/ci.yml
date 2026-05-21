@@ -22,6 +22,9 @@ jobs:
   build:
     name: Build (iOS Simulator)
     runs-on: macos-latest
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - name: Show available Xcode
@@ -35,7 +38,22 @@ jobs:
             -scheme "TRAVEL GUIDED TOUR" \
             -destination "generic/platform=iOS Simulator" \
             -configuration Debug \
-            CODE_SIGNING_ALLOWED=NO
+            CODE_SIGNING_ALLOWED=NO 2>&1 | tee build.log
+      - name: Report build errors
+        if: failure() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          {
+            echo "### CI build-failure diagnostics (temporary)"
+            echo ""
+            echo "Compiler \`error:\` lines from \`build.log\`:"
+            echo ""
+            echo '```'
+            grep -E -A3 "error:" build.log | head -120 || echo "(no 'error:' lines matched)"
+            echo '```'
+          } > comment.md
+          gh pr comment "${{ github.event.pull_request.number }}" --body-file comment.md
 
   test:
     name: Run unit tests
