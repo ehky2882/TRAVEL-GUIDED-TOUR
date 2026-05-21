@@ -223,6 +223,7 @@ struct HomeView: View {
 
     // MARK: - Drawer content
 
+    @ViewBuilder
     private func drawerContent(in geo: GeometryProxy) -> some View {
         // Fade the scrollable list in as the drawer opens past peek.
         // At the peek detent the list is hidden entirely — otherwise a
@@ -231,7 +232,7 @@ struct HomeView: View {
         let visible = drawerVisibleHeight(in: geo)
         let listOpacity = min(1, max(0, (visible - peekHeight) / 90))
 
-        return ScrollViewReader { proxy in
+        ScrollViewReader { proxy in
             VStack(alignment: .leading, spacing: 0) {
                 // Header — dynamic count for the area in view.
                 // Centered to read cleanly at the peek detent where
