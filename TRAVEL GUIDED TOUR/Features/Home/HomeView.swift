@@ -23,7 +23,11 @@ struct HomeView: View {
     @Environment(TourDownloader.self) private var tourDownloader
 
     @State private var visibleRegion: MKCoordinateRegion?
-    @State private var sheetDetent: BottomSheetDetent = .peek
+    @State private var sheetDetent: BottomSheetDetent = .large
+    /// True while the map camera is in motion. Retracts the drawer to
+    /// peek and fades the recenter button while the user is panning,
+    /// then clears when the camera settles.
+    @State private var isMapMoving = false
     /// Lifted out of BottomSheet so the recenter button can read the
     /// drawer's in-progress drag delta and stay glued to its top edge
     /// throughout the drag (not just snap on release).
@@ -60,6 +64,18 @@ struct HomeView: View {
                         cameraPosition: $cameraPosition,
                         onCameraChanged: { region in
                             visibleRegion = region
+                            withAnimation(.easeInOut(duration: 0.3)) {
+                                isMapMoving = false
+                            }
+                        },
+                        onCameraMoving: {
+                            guard !isMapMoving else { return }
+                            withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+                                isMapMoving = true
+                                if sheetDetent != .peek {
+                                    sheetDetent = .peek
+                                }
+                            }
                         }
                     )
                     .ignoresSafeArea()
@@ -96,11 +112,11 @@ struct HomeView: View {
                             maxHeight: .infinity,
                             alignment: .bottomLeading
                         )
-                        // Hide at the full detent — the drawer covers
-                        // the map so a "recenter on me" affordance is
-                        // meaningless. Fades in/out with the detent.
-                        .opacity(sheetDetent == .large ? 0 : 1)
-                        .allowsHitTesting(sheetDetent != .large)
+                        // Hidden at full detent (drawer covers the map)
+                        // and while the map is moving (clean panning UX).
+                        // Button fades back when the camera settles.
+                        .opacity(sheetDetent == .large || isMapMoving ? 0 : 1)
+                        .allowsHitTesting(sheetDetent != .large && !isMapMoving)
                 }
                 .toolbar(.hidden, for: .navigationBar)
                 .onChange(of: selectedTourId, initial: false) { _, _ in

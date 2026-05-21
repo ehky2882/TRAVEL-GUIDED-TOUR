@@ -93,7 +93,7 @@ struct BottomSheet<Content: View>: View {
             }
             .frame(maxWidth: .infinity)
             .frame(height: dragHeight, alignment: .top)
-            .background(.regularMaterial)
+            .background(.thickMaterial)
             .clipShape(
                 UnevenRoundedRectangle(
                     topLeadingRadius: topCornerRadius,

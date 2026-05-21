@@ -20,6 +20,10 @@ struct HomeMapSection: View {
     /// Fires after a pan settles. The parent uses this to recompute
     /// the in-view tour count and any location-anchored UI.
     let onCameraChanged: (MKCoordinateRegion) -> Void
+    /// Fires on every camera-change frame while the user is panning or
+    /// flinging the map (`.continuous` frequency). The parent uses this
+    /// to retract the drawer and fade the recenter button.
+    let onCameraMoving: () -> Void
 
     /// Internal selection state for `Map(selection:)`. We resolve
     /// stop-id → parent tour-id and push that up through the binding.
@@ -44,6 +48,9 @@ struct HomeMapSection: View {
         .mapControls {
             MapCompass()
             MapScaleView()
+        }
+        .onMapCameraChange(frequency: .continuous) { _ in
+            onCameraMoving()
         }
         .onMapCameraChange(frequency: .onEnd) { context in
             onCameraChanged(context.region)
