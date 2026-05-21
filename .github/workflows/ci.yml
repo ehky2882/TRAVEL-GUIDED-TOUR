@@ -47,10 +47,24 @@ jobs:
           {
             echo "### CI build-failure diagnostics (temporary)"
             echo ""
-            echo "Compiler \`error:\` lines from \`build.log\`:"
-            echo ""
+            echo "**error: lines (8 lines trailing context)**"
             echo '```'
-            grep -E -A3 "error:" build.log | head -120 || echo "(no 'error:' lines matched)"
+            grep -E -A8 "error:" build.log | head -200 || echo "(none)"
+            echo '```'
+            echo ""
+            echo "**note: lines**"
+            echo '```'
+            grep -E "note:" build.log | head -80 || echo "(none)"
+            echo '```'
+            echo ""
+            echo "**SwiftCompile / Compiling lines (which files compile together)**"
+            echo '```'
+            grep -E "SwiftCompile|Compiling|CompileSwiftSources" build.log | head -40 || echo "(none)"
+            echo '```'
+            echo ""
+            echo "**Last 60 lines**"
+            echo '```'
+            tail -60 build.log
             echo '```'
           } > comment.md
           gh pr comment "${{ github.event.pull_request.number }}" --body-file comment.md
