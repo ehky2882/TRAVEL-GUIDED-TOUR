@@ -72,11 +72,13 @@ batch, a CI fix (build + test now run on the `macos-26` runner so CI
 uses the Xcode 26 toolchain the project targets — Xcode 16 miscompiled
 the iOS-26 SwiftUI), and 9 new tours all shipped via **PR #54**,
 squash-merged to `main` on 2026-05-22. TestFlight build **1.0 (5)**
-was uploaded 2026-05-22, carrying all of it.
-What's left for V1: run the M-qa checklist against build 5 on device
-(multi-stop checks still need a multi-stop tour in the catalog), more
-**M-launch-content** tours if desired, and the deferred **design /
-polish pass**.
+was uploaded 2026-05-22; an on-device M-qa pass against it the same
+day cleared every applicable check with **no issues found** — V1
+functionality is device-validated.
+What's left for V1: a **multi-stop walking tour** (the only M-qa
+steps still open are the multi-stop ones — geofenced stop advancement
+and manual next-stop — blocked because all 20 tours are single-stop),
+and the deferred **design / polish pass**.
 
 What's true today (2026-05-22):
 

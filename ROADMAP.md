@@ -79,10 +79,12 @@ complete. Per-release upload flow documented in `docs/testflight.md`
 session-by-session log.
 
 What's left for V1:
-- **M-qa on device against build 1.0 (5)** — install via the
-  TestFlight app and walk the M-qa checklist (§ M-qa). The multi-stop
-  checks need a multi-stop tour authored first (all 20 tours are
-  single-stop).
+- **A multi-stop walking tour.** M-qa on build 1.0 (5) passed every
+  applicable check on device (2026-05-22, no issues found). The only
+  M-qa steps still open are the multi-stop ones — geofenced stop
+  advancement and manual next-stop — blocked until a multi-stop tour
+  is authored. All 20 tours are single-stop, so the app's defining
+  feature is uncovered by content.
 - **M-launch-content (optional more)** — owner may decide 20 tours
   are enough for V1 launch, or add more. See `docs/authoring-tours.md`.
 - **Deferred design / polish pass** — theme tokens, real app icon
@@ -532,8 +534,16 @@ next TestFlight build):
   directional heading wedge driven by the device compass
   (`LocationManager.heading`, iOS only).
 
-Owner verifies all of the above on the next TestFlight build (5),
-which needs a Mac session to archive + upload.
+**M-qa device pass — build 1.0 (5) (2026-05-22).** Full walkthrough
+on device. Checklist items 1–5 and 8–10 all passed, plus every
+build-5 UX change verified — the always-present mini-player (idle +
+active states), the square-topped island, the tour-detail action
+bar, drawer-card carousels, pinch-to-zoom hero images, the compass
+heading wedge, the Library/Settings island backgrounds, and
+drawer-detent persistence across tab switches. Items 6/7 (multi-stop
+geofenced + manual) still deferred — no multi-stop tour exists.
+**No issues found.** V1 functionality is device-validated; only the
+multi-stop checks remain, blocked on content.
 
 **Files touched:** none expected. Bugs become small targeted fixes.
 
