@@ -386,6 +386,40 @@
       "primaryCategory": "visualArt",
       "tags": ["brooklyn", "beaux-arts", "mckim mead and white", "1897", "prospect heights", "museum"],
       "priceUSD": 0
+    },
+    {
+      "id": "b66f9ad2-0562-4038-a5c0-ba198f0bc2de",
+      "title": "Casa da Música",
+      "shortDescription": "Two and a half minutes on Rem Koolhaas's white-concrete concert hall — the Porto landmark that began life as an unbuilt house.",
+      "longDescription": "On the Rotunda da Boavista in central Porto, a white concrete polyhedron sits on a sloping travertine plaza — angular, asymmetric, with no obvious front or back, like a meteorite that happened to land on a roundabout. This is the Casa da Música, the concert hall designed by Rem Koolhaas and his Rotterdam firm OMA, with project architect Ellen van Loon. Commissioned by the city in 1999 for Porto's turn as European Capital of Culture, it opened — four years late — in 2005, with an inaugural concert by Lou Reed. It is widely held to be the most important piece of contemporary architecture in Portugal.\n\nIts design has an unusual origin. Weeks before the Porto competition deadline, Koolhaas was working on an unbuilt private house in Rotterdam — a polyhedral mass hollowed out around a single central living room. He realized the same logic applied to a concert hall: a building organized around a central void. He scaled the house up. The main auditorium, the Sala Suggia, is that void — a twelve-hundred-seat hall suspended inside the polyhedron, with glass walls at both ends that let the audience see out and passersby see in.\n\nA short stop, taken from the plaza. Walk a slow loop around the building: Koolhaas designed it without a front, so it looks different from every angle.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/casa-da-musica-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9c9428aa-8309-4f1e-84f0-6926e8fb4b24",
+          "order": 0,
+          "title": "Casa da Música",
+          "caption": "Stand on the travertine plaza at the Rotunda da Boavista, looking up at the concert hall.",
+          "latitude": 41.158349,
+          "longitude": -8.630339,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/casa-da-musica.mp3",
+          "audioDurationSeconds": 148,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "This concert hall was originally designed as a house.\n\nYou're standing on the travertine plaza of the Casa da Música, on the Rotunda da Boavista in central Porto. The building above you is a white concrete polyhedron — angular, asymmetric, with no obvious front or back, set down on a sloping marble landscape like a meteorite that happened to land on a roundabout. It opened in 2005. It is the most important piece of contemporary architecture in Portugal, and one of the most discussed concert halls built anywhere in the last twenty-five years.\n\nThe architect was Rem Koolhaas, of the Rotterdam firm OMA, working with the project architect Ellen van Loon. The commission came from the city of Porto in 1999, in preparation for Porto's year as European Capital of Culture in 2001. The original plan was for the building to open in 2001. It opened four years late, in April 2005, with an inaugural concert by Lou Reed. The cost ran to around one hundred and ten million euros.\n\nWhat's unusual about the building is how it began. A few weeks before the Porto competition was due, Koolhaas was working on a different project — an unbuilt private house in Rotterdam, internally called the Y2K House. The clients wanted a single autonomous central living space, with smaller rooms around it. Koolhaas had developed a polyhedral form to house this — a hollowed-out mass with the main living room as the central void. When the Porto deadline approached, he realized the same logic applied. A concert hall is also a building organized around a central void. He scaled the house up.\n\n[beat]\n\nThe result is the building above you. The main concert hall, called the Sala Suggia — named after the Portuguese cellist Guilhermina Suggia — is the central void: a twelve-hundred-seat shoebox auditorium suspended inside the polyhedron. The other halls, rehearsal rooms, bars, and offices wrap around it in the cut-away spaces. The most radical decision was the wall. The auditorium has glass walls at both ends, looking out onto the streets of Porto. Passersby can see in. Audiences can see out. Most concert halls are sealed boxes. This one isn't.\n\nWalk a slow loop around the plaza. From every angle, the building looks different. That's deliberate. Koolhaas designed it without a front."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 148,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.158349,
+      "centroidLongitude": -8.630339,
+      "city": "Porto",
+      "primaryCategory": "architecture",
+      "tags": ["contemporary architecture", "rem koolhaas", "concert hall", "2005", "boavista", "porto"],
+      "priceUSD": 0
     }
   ]
 }
