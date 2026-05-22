@@ -624,6 +624,40 @@
       "primaryCategory": "natureAndParks",
       "tags": ["governors island", "new york harbor", "car-free", "the hills", "lenape", "military history"],
       "priceUSD": 0
+    },
+    {
+      "id": "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
+      "title": "Guggenheim Museum",
+      "shortDescription": "Two minutes on Frank Lloyd Wright's spiral on Fifth Avenue — the architect's only New York building, finished six months after he died.",
+      "longDescription": "On Fifth Avenue between 88th and 89th Streets, across from Central Park, stands a stack of widening white concrete spirals — an inverted cone, wider at the top, looking more like a ceramic vessel than a building. This is the Guggenheim Museum, the only building Frank Lloyd Wright designed in New York City. He was hired in 1943 by Solomon Guggenheim — a mining magnate and art collector — to house a collection of modern paintings, and then spent a decade and a half designing, redesigning, and fighting with the building commissioners. Wright died in April 1959. The museum opened that October.\n\nWhat he built was controversial almost immediately. Critics complained that the curving interior ramp made paintings hard to hang — the walls slope outward, the floors slope downward, and there is nowhere to stand and view a work straight on. Wright didn't consider this a flaw. He wanted visitors to take the elevator to the top and walk slowly down the spiral, encountering the art as they descended: a single continuous experience rather than a series of rooms.\n\nFor most of its history the Guggenheim has been treated as a piece of architecture that happens to contain art, rather than a place to see art — it is one of the most photographed and most filmed museums in the world, its spiral turning up in dozens of movies, advertisements, and music videos. Inside is a smaller, sharper collection than the larger museums down the avenue: Kandinsky, Picasso, Mondrian, Brancusi. If you go in, follow Wright's plan — elevator up first, then walk down — and you'll see the building the way he meant it to be seen.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/guggenheim-museum-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dba94df1-a160-43a4-a86e-dae268566efb",
+          "order": 0,
+          "title": "Guggenheim Museum",
+          "caption": "Stand on Fifth Avenue between 88th and 89th Streets, looking up at the white spiral.",
+          "latitude": 40.7831793289656,
+          "longitude": -73.95916598843854,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/guggenheim-museum.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The architect of this building died six months before it opened.\n\nThe Guggenheim Museum stands on Fifth Avenue between 88th and 89th Streets. Look up. The building is a stack of widening white concrete spirals, like an inverted cone with the wide end at the top. It looks more like a ceramic vessel than a building. Behind it, a darker rectangular tower added later. To your left, Central Park stretches across the street.\n\nThe architect was Frank Lloyd Wright. The Guggenheim is his only building in New York City, and it took sixteen years to build. He was hired in 1943 by Solomon Guggenheim, a mining magnate and art collector, to design a home for his collection of modern paintings. Wright spent the next decade-and-a-half designing, redesigning, fighting with the building commissioners, and revising. He died in April 1959. The museum opened that October.\n\nWhat he built was almost immediately controversial. Critics complained that the curving interior ramp made it difficult to hang paintings — the walls slope outward, the floors slope downward, and there's nowhere to view a work straight on. Wright didn't see this as a flaw. He wanted visitors to enter at the bottom, take the elevator to the top, and then walk slowly down the spiral, encountering the art as they descended. The building was meant to be a single continuous experience, not a series of rooms.\n\nFor most of its history, the Guggenheim has been treated as a piece of architecture that happens to contain art, rather than a place to see art. It's one of the most photographed museums in the world, and one of the most filmed — its spiral has shown up in dozens of movies, advertisements, and music videos. The building is its own attraction.\n\n[beat]\n\nInside is a smaller but sharper collection than the bigger museums down the avenue: Kandinsky, Picasso, Mondrian, Brancusi. The current rotation depends on the show, but the building is always there, regardless. If you go in, follow Wright's plan — take the elevator up first, then walk down. You'll see the building the way he designed it to be seen."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7831793289656,
+      "centroidLongitude": -73.95916598843854,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["frank lloyd wright", "fifth avenue", "spiral", "modern art", "museum", "1959"],
+      "priceUSD": 0
     }
   ]
 }
