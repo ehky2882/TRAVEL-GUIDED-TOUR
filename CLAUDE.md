@@ -43,7 +43,7 @@ app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 (iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
 — same app body, three different "TVs" it can play on.
 
-## Current State (V1 functionality + audit cleanup complete; M-qa UX fixes merged; build 5 ready)
+## Current State (V1 functionality complete; M-qa UX fixes merged; TestFlight build 1.0 (5) uploaded)
 
 Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`.
 The AllTrails-style home redesign landed via PR #31 on 2026-05-18 and
@@ -67,46 +67,46 @@ the seed-tour / ESB-GPS / hero-image fixes, then uploaded TestFlight build
 **1.0 (4)** carrying all of it.
 On 2026-05-21 the first on-device M-qa pass ran against build 1.0 (4):
 core flows (launch, search, playback, lock-screen, offline, save,
-maker page) passed; five UX issues were fixed the same session — a
-persistent **mini-player** between the home drawer and tab bar, the
-peek-detent hero-image bleed, a smooth recenter animation + gentler
-button fade, and a rebuilt user-location dot with a compass heading
-wedge. Those fixes plus 10 new tours and a CI runner fix (`macos-26`
-so the iOS 26 SDK is used) shipped via PR #54 on 2026-05-21 and merged
-the same evening. Build number bumped to 5 immediately after merge.
-What's left for V1: a Mac session to archive + upload **build 5** to
-TestFlight (build is already bumped — ~10 min active), the multi-stop
-M-qa checks (still need a multi-stop tour in the catalog), and the
-deferred **design / polish pass**. M-launch-content target (5–15 tours)
-is now satisfied with 20 tours.
+maker page) passed. The M-qa fixes, a large simulator-review polish
+batch, a CI fix (build + test now run on the `macos-26` runner so CI
+uses the Xcode 26 toolchain the project targets — Xcode 16 miscompiled
+the iOS-26 SwiftUI), and 9 new tours all shipped via **PR #54**,
+squash-merged to `main` on 2026-05-22. TestFlight build **1.0 (5)**
+was uploaded 2026-05-22, carrying all of it.
+What's left for V1: run the M-qa checklist against build 5 on device
+(multi-stop checks still need a multi-stop tour in the catalog), more
+**M-launch-content** tours if desired, and the deferred **design /
+polish pass**.
 
-What's true today (2026-05-21):
+What's true today (2026-05-22):
 
 - `ContentView.swift` uses a custom `AtlasTabBar` (3 tabs: **Home /
-  Library / Me**) shaped to match the home drawer's width/inset/
-  corners so they read as one "floating island." A persistent
-  **mini-player** (`Features/Player/MiniPlayerBar.swift`) slots in
-  above the tab bar whenever audio is loaded — inline pause/resume,
-  tap to reopen the full player; the home drawer's peek height grows
-  to clear it.
+  Library / Me**). A persistent **mini-player**
+  (`Features/Player/MiniPlayerBar.swift`) sits directly above the tab
+  bar **at all times** — showing the active tour (inline pause/resume,
+  tap to open the full player) or a muted "Nothing playing" idle
+  state. The mini-player is a square-cornered rectangle; the tab bar
+  has square top corners + phone-radius bottom corners, so the two
+  stack into one bottom "island." The home drawer's peek height grows
+  to clear the mini-player.
 - `Features/Home/` is the AllTrails-style layout: full-screen map +
   filter chip row + vertical tour list in a persistent bottom drawer
   + a floating location button (Apple-style: tapping cycles none →
   follow → follow-with-heading; falls back to a custom button because
   `MapUserLocationButton` does not render reliably as a free-floating
   view).
-- `Resources/Tours.json` has **20 real tours**: Grand Central south
-  facade, Times Square TKTS, South Street Seaport, Empire State
-  Building, Statue of Liberty, Brooklyn Bridge, Rockefeller Center,
-  Met 5th Ave Steps, High Line, 9/11 Memorial, Brooklyn Museum,
-  Casa da Música, Whitney Museum, American Museum of Natural History,
-  Brooklyn Bridge Park, Chrysler Building, Flatiron Building,
-  Governors Island, Guggenheim Museum, Intrepid Sea/Air/Space Museum.
-  Seed tours (Cooper Hewitt, Architects of Hidden Brooklyn) removed.
+- `Resources/Tours.json` has **20 tours** (all single-stop): the
+  original 10 NYC landmarks (Grand Central, Times Square, South Street
+  Seaport, Empire State Building, Statue of Liberty, Brooklyn Bridge,
+  Rockefeller Center, Met, High Line, 9/11 Memorial), Brooklyn Museum,
+  and 9 added 2026-05-21/22 — Whitney, AMNH, Brooklyn Bridge Park,
+  Chrysler Building, Flatiron Building, Governors Island, Guggenheim,
+  Intrepid (NYC), and Casa da Música (Porto — the first non-NYC tour).
   Audio hosted on the `gh-pages` branch (served at
-  `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
-  GitHub Releases tried first but serves wrong MIME type — see
-  `docs/cdn-decision.md`.
+  `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`);
+  GitHub Releases tried first but serves the wrong MIME type — see
+  `docs/cdn-decision.md`. **No multi-stop tour exists yet** — M-qa's
+  multi-stop checks need one authored.
 - **Photographic content + carousel shipped** (2026-05-20): 3 Times Square
   photos on `gh-pages` at `/images/`. Times Square tour uses a real
   `heroImageURL` and populates `additionalImageURLs: [String]?`. Both
@@ -115,6 +115,8 @@ What's true today (2026-05-21):
   when `additionalImageURLs` is non-empty, otherwise fall back to the
   single `HeroImageView`. `HeroImageView` fixed to properly constrain
   `scaledToFill()` layout so card sizing is stable in all contexts.
+  The home drawer's `TourListCard` carousels multi-image tours too,
+  and `TourDetailView`'s hero images are pinch-to-zoom.
 - **Pre-M-qa audit closed** (PR #51, 2026-05-20). P0 findings closed
   earlier; P1 batch (5 findings: sort key, avatar, player-tour ID,
   remote image loading, antimeridian), P2 cleanup (BottomSheet

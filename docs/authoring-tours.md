@@ -272,16 +272,19 @@ the contract.
    directly or give an address / corner ("NE corner of 34th & 5th")
    and Claude resolves it. Single-piece tours: one coord. Multi-stop:
    one per stop.
-2. **Trigger mode** — `onArrival` (geofence fires when user walks
-   into the radius) or `manual` (user taps Play). Default is
-   `onArrival` for walking tours; ask explicitly if there's any
-   reason to vary it.
-3. **Category** — one of `history`, `architecture`, `natureAndParks`,
-   `culturalHeritage`, `foodAndDrink`, `artAndMuseums`, `nightlife`,
-   `shoppingAndMarkets`. Drives which home rail the tour lands on.
-   Tour-level, not stop-level.
+2. **Trigger mode** — `geofenced` (audio fires when the user walks
+   into the stop's radius) or `manual` (user taps Play). The V1
+   catalog uses `manual` throughout; default to `manual` unless the
+   owner says a stop should be geofenced.
+3. **Category** — one of the ten `TourCategory` values: `history`,
+   `architecture`, `visualArt`, `musicAndPerformance`, `literature`,
+   `foodAndDrink`, `natureAndParks`, `hiddenGems`, `culturalHeritage`,
+   `sacredSites`. Drives which home filter chip the tour matches.
+   Tour-level, not stop-level. These are the **only** valid values —
+   the JSON-value column in the Categories table above is canonical;
+   verify against `Models/TourCategory.swift` if unsure.
 
-(If the owner offers a trigger radius other than the 40m default, or
+(If the owner offers a trigger radius other than the 30m default, or
 a non-Atlas-Studio maker, treat those as additional inputs in the
 same pass — don't re-prompt.)
 
@@ -311,7 +314,7 @@ same pass — don't re-prompt.)
   file.
 - **Order indices** — sequential by the order the owner pastes the
   stops.
-- **`triggerRadiusMeters`** — 40 unless the owner says otherwise.
+- **`triggerRadiusMeters`** — 30 unless the owner says otherwise.
 - **`totalDurationSeconds`** — sum of stop `audioDurationSeconds`
   values; no separate ask.
 - **`kind`** — `single` if one stop, `multiStop` if 2+.

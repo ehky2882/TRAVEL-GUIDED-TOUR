@@ -38,31 +38,36 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
-**Status (2026-05-20):** every V1 functionality milestone is shipped
+**Status (2026-05-22):** every V1 functionality milestone is shipped
 on `main` (M1–M3, M-data-model, M-audio-foundation, M-tour-detail,
 M-player, M-home, M-search, M-maker, M-library, M-geofencing,
 M-offline; M-map was cut). AllTrails-style home (PR #31) is the
 production home. **Pre-M-qa audit complete** — P0 findings closed
-(PRs #22 / #23 / #24, May 2026-05-18); P1 + P2 + P3 cleanup batch
-shipped 2026-05-20 (PR #51) along with the Option A data layer for
-the hero image carousel. Unit test target wired (PR #33) and runs on
-CI per PR. **TestFlight: build 1.0 (4) uploaded to App Store Connect on
-2026-05-20 evening**, carrying the full day's UX + content work;
-processing at Apple at session end. Earlier builds: 1.0 (1) was the
-first upload (2026-05-19 9:38 PM); 1.0 (3) verified the background-audio
-fix on device. M-qa 10-step checklist still needs a run on device
-against build 4.
+(PRs #22 / #23 / #24, 2026-05-18); P1 + P2 + P3 cleanup batch shipped
+2026-05-20 (PR #51). Unit test target wired (PR #33) and runs on CI
+per PR; CI runs on the `macos-26` runner so it uses the Xcode 26
+toolchain the project targets. **TestFlight: build 1.0 (5) uploaded to
+App Store Connect on 2026-05-22** — the current build. It carries
+PR #54: the on-device M-qa fixes, a simulator-review UX-polish batch
+(always-present mini-player, square-topped island, tour-detail action
+bar, drawer-card carousels, pinch-zoom), and 9 new tours. Earlier
+builds: 1.0 (1) first upload (2026-05-19); 1.0 (3) verified the
+background-audio fix; 1.0 (4) carried the first home-UX batch and was
+the build the 2026-05-21 M-qa pass ran against. The M-qa checklist
+still needs a run against build 5.
 
-**Content (M-launch-content).** 10 real tours in `Resources/Tours.json`
-(seed tours Cooper Hewitt + Architects of Hidden Brooklyn removed
-2026-05-20). NYC landmarks: Grand Central south facade, Times Square TKTS,
-South Street Seaport, Empire State Building, Statue of Liberty, Brooklyn
-Bridge, Rockefeller Center, Met 5th Ave Steps, High Line, 9/11 Memorial.
-~26 min total audio across 4 categories. Empire State Building GPS corrected
-to 40.748434, -73.984571 (was 40.7521, -73.9821). Audio hosted on `gh-pages`
-branch (served at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
-GitHub Releases tried first but serves wrong `Content-Type` for AVPlayer —
-see `docs/cdn-decision.md` § "Why we switched from Releases to Pages."
+**Content (M-launch-content).** 20 tours in `Resources/Tours.json`,
+all single-stop. The original 10 NYC landmarks (Grand Central, Times
+Square, South Street Seaport, Empire State Building, Statue of Liberty,
+Brooklyn Bridge, Rockefeller Center, Met, High Line, 9/11 Memorial),
+Brooklyn Museum, and 9 added 2026-05-21/22 — Whitney, AMNH, Brooklyn
+Bridge Park, Chrysler Building, Flatiron Building, Governors Island,
+Guggenheim, Intrepid, and Casa da Música (Porto — the first non-NYC
+tour). Audio hosted on the `gh-pages` branch (served at
+`https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`);
+GitHub Releases tried first but serves the wrong `Content-Type` for
+AVPlayer — see `docs/cdn-decision.md` § "Why we switched from Releases
+to Pages." No multi-stop tour exists yet.
 
 **TestFlight signing wired (2026-05-19).**
 `DEVELOPMENT_TEAM = CPC7M72JTP` in `project.pbxproj`, Apple
@@ -74,12 +79,11 @@ complete. Per-release upload flow documented in `docs/testflight.md`
 session-by-session log.
 
 What's left for V1:
-- **M-qa on device** — build 1.0 (4) is uploaded (carries seed-tour
-  removal, ESB GPS fix, HeroImageView layout fix, image carousel, the
-  home-screen UX batch, and the location-button rework). Once Apple
-  finishes processing, install via the TestFlight app and walk the
-  M-qa 10-step checklist (§ M-qa). Bugs become small targeted fixes.
-- **M-launch-content (optional more)** — owner may decide 10 tours
+- **M-qa on device against build 1.0 (5)** — install via the
+  TestFlight app and walk the M-qa checklist (§ M-qa). The multi-stop
+  checks need a multi-stop tour authored first (all 20 tours are
+  single-stop).
+- **M-launch-content (optional more)** — owner may decide 20 tours
   are enough for V1 launch, or add more. See `docs/authoring-tours.md`.
 - **Deferred design / polish pass** — theme tokens, real app icon
   (replace placeholder green sphere), custom map pins, final
@@ -91,10 +95,11 @@ from one Claude account to another. See
 working-style notes written specifically for the new account's first
 session.
 
-**No parked branches.** All `claude/*` work has either landed or been
-deleted. Only `gh-pages` (audio CDN + privacy policy) remains as a
-non-main branch, deliberately separate (orphan, no shared history
-with main).
+**Branches.** `gh-pages` (audio CDN + privacy policy) is the
+deliberate non-main branch — orphan, no shared history with main.
+One stale leftover on `origin`: `fix/pr54-build` — superseded when
+PR #54 merged; safe to delete (it only carries an obsolete handoff
+draft).
 
 **Pivot history.** The previous editorial-city-guide V1 work was
 mostly reshaped, not thrown out. The migration tables below are kept
