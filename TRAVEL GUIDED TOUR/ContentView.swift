@@ -25,20 +25,25 @@ struct ContentView: View {
     @State private var didRequestLocationPermission = false
     /// Drives the full-player sheet opened by tapping the mini-player.
     @State private var showingFullPlayer = false
+    /// The home drawer's detent, lifted out of `HomeView` so it
+    /// survives HomeView being recreated on tab switches. Starts
+    /// expanded on a fresh launch; returning to the Home tab restores
+    /// whatever detent the user last left it at.
+    @State private var homeSheetDetent: BottomSheetDetent = .large
 
     var body: some View {
         ZStack(alignment: .bottom) {
             tabContent
 
             // Mini-player + tab bar stack as one floating bottom
-            // island. The mini-player only appears while audio is
-            // loaded.
+            // island. The mini-player is always present — it shows the
+            // active tour, or a muted "Nothing playing" idle state.
             VStack(spacing: 0) {
-                if let tour = nowPlayingTour {
-                    MiniPlayerBar(tour: tour, maker: dataService.maker(for: tour)) {
-                        showingFullPlayer = true
-                    }
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                MiniPlayerBar(
+                    tour: nowPlayingTour,
+                    maker: nowPlayingTour.flatMap { dataService.maker(for: $0) }
+                ) {
+                    showingFullPlayer = true
                 }
                 AtlasTabBar(selected: $selectedTab)
             }
@@ -60,7 +65,7 @@ struct ContentView: View {
     @ViewBuilder
     private var tabContent: some View {
         switch selectedTab {
-        case .home:    HomeView()
+        case .home:    HomeView(sheetDetent: $homeSheetDetent)
         case .library: LibraryView()
         case .me:      SettingsView()
         }

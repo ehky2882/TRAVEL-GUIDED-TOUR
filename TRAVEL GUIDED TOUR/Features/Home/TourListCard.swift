@@ -68,18 +68,39 @@ struct TourListCard: View {
 
     // MARK: - Subviews
 
-    private var heroSection: some View {
-        ZStack(alignment: .topTrailing) {
-            // No cornerRadius — the parent card clips for us, so the
-            // image's top-left and top-right corners get the card's
-            // outer radius automatically and the bottom edge sits
-            // flush against the title section.
+    /// Hero area — a paged carousel when the tour supplies
+    /// `additionalImageURLs`, otherwise a single image. No corner
+    /// radius: the parent card clips, so the top corners inherit the
+    /// card's outer radius and the bottom sits flush with the title.
+    @ViewBuilder
+    private var heroImage: some View {
+        let allImages = [tour.heroImageURL] + (tour.additionalImageURLs ?? [])
+        if allImages.count > 1 {
+            TabView {
+                ForEach(allImages, id: \.self) { url in
+                    HeroImageView(
+                        imageName: url,
+                        height: 160,
+                        cornerRadius: 0,
+                        category: tour.primaryCategory
+                    )
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .always))
+            .frame(height: 160)
+        } else {
             HeroImageView(
                 imageName: tour.heroImageURL,
                 height: 160,
                 cornerRadius: 0,
                 category: tour.primaryCategory
             )
+        }
+    }
+
+    private var heroSection: some View {
+        ZStack(alignment: .topTrailing) {
+            heroImage
 
             // Category badge top-right of hero
             HStack(spacing: AtlasSpacing.xs) {

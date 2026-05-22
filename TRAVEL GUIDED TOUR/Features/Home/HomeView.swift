@@ -21,10 +21,11 @@ struct HomeView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
     @Environment(TourDownloader.self) private var tourDownloader
-    @Environment(AudioPlayerService.self) private var audioPlayer
 
     @State private var visibleRegion: MKCoordinateRegion?
-    @State private var sheetDetent: BottomSheetDetent = .large
+    /// Drawer detent — owned by `ContentView` so it persists across
+    /// tab switches (returning to Home restores the last detent).
+    @Binding var sheetDetent: BottomSheetDetent
     /// True while the map camera is in motion. Retracts the drawer to
     /// peek and fades the recenter button while the user is panning,
     /// then clears when the camera settles.
@@ -58,16 +59,11 @@ struct HomeView: View {
     /// decreasing clips the header.
     private let basePeekHeight: CGFloat = 130
 
-    /// True while the mini-player is showing — it sits between the
-    /// drawer and the tab bar, so the drawer's peek height grows by
-    /// the bar's footprint to keep the same content visible above it.
-    private var isMiniPlayerVisible: Bool {
-        audioPlayer.state != .idle
-    }
-
-    /// Effective peek height — grows when the mini-player is on screen.
+    /// Effective peek height. The mini-player is a permanent fixture
+    /// between the drawer and the tab bar, so the peek height always
+    /// includes its footprint to keep the header line clear of it.
     private var peekHeight: CGFloat {
-        isMiniPlayerVisible ? basePeekHeight + MiniPlayerBar.layoutHeight : basePeekHeight
+        basePeekHeight + MiniPlayerBar.layoutHeight
     }
 
     /// Bottom padding for the drawer's scroll list so the last card
@@ -75,8 +71,7 @@ struct HomeView: View {
     /// drawer is fully open.
     private var bottomListInset: CGFloat {
         let tabBar: CGFloat = 64
-        let miniPlayer = isMiniPlayerVisible ? MiniPlayerBar.layoutHeight : 0
-        return tabBar + miniPlayer + AtlasSpacing.md
+        return tabBar + MiniPlayerBar.layoutHeight + AtlasSpacing.md
     }
 
     var body: some View {
@@ -192,9 +187,9 @@ struct HomeView: View {
         Button { cycleTrackingMode() } label: {
             Image(systemName: trackingMode.iconName)
                 .font(.system(size: 16))
-                .foregroundStyle(.white)
+                .foregroundStyle(AtlasColors.primaryText)
                 .frame(width: 44, height: 44)
-                .background(Color(uiColor: .systemGray3))
+                .background(AtlasColors.secondaryBackground)
                 .clipShape(Circle())
         }
         .buttonStyle(.plain)
@@ -208,12 +203,12 @@ struct HomeView: View {
             trackingMode = .follow
             // Animate the camera so it glides to the user instead of
             // snapping there abruptly.
-            withAnimation(.easeInOut(duration: 0.45)) {
+            withAnimation(.easeInOut(duration: 1.2)) {
                 cameraPosition = .userLocation(followsHeading: false, fallback: cameraPosition)
             }
         case .follow:
             trackingMode = .followWithHeading
-            withAnimation(.easeInOut(duration: 0.45)) {
+            withAnimation(.easeInOut(duration: 1.2)) {
                 cameraPosition = .userLocation(followsHeading: true, fallback: cameraPosition)
             }
         case .followWithHeading:

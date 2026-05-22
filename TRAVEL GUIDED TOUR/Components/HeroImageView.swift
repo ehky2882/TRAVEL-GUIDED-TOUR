@@ -5,6 +5,12 @@ struct HeroImageView: View {
     let height: CGFloat
     var cornerRadius: CGFloat = 0
     var category: TourCategory? = nil
+    /// When true, the loaded image can be pinch-zoomed in place. The
+    /// view's frame and corner radius never change — the image scales
+    /// within its clip and springs back to fit when the pinch ends.
+    var zoomable: Bool = false
+
+    @State private var zoom: CGFloat = 1.0
 
     // Loads the remote image from `imageName` (an HTTPS URL on the
     // CDN — gh-pages during the prototype phase, R2 post-V1; see
@@ -23,11 +29,21 @@ struct HeroImageView: View {
             AsyncImage(url: URL(string: imageName)) { phase in
                 switch phase {
                 case .success(let image):
-                    image
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: proxy.size.width, height: height)
-                        .clipped()
+                    if zoomable {
+                        image
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: proxy.size.width, height: height)
+                            .scaleEffect(zoom)
+                            .clipped()
+                            .gesture(pinchToZoom)
+                    } else {
+                        image
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: proxy.size.width, height: height)
+                            .clipped()
+                    }
                 default:
                     Rectangle()
                         .fill(AtlasColors.placeholderWarm)
@@ -38,5 +54,20 @@ struct HeroImageView: View {
         .frame(maxWidth: .infinity)
         .frame(height: height)
         .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+    }
+
+    /// Pinch-to-peek: scales the image up to 4× while the fingers are
+    /// down, then springs back to fit. The frame and border never move
+    /// — only the image content scales, clipped to the same bounds.
+    private var pinchToZoom: some Gesture {
+        MagnifyGesture()
+            .onChanged { value in
+                zoom = min(max(value.magnification, 1), 4)
+            }
+            .onEnded { _ in
+                withAnimation(.spring(response: 0.35, dampingFraction: 0.8)) {
+                    zoom = 1
+                }
+            }
     }
 }
