@@ -488,6 +488,40 @@
       "primaryCategory": "history",
       "tags": ["theodore roosevelt", "central park west", "beaux-arts", "natural history", "museum", "1936"],
       "priceUSD": 0
+    },
+    {
+      "id": "540613ee-b72f-4460-95ff-a03d921681ae",
+      "title": "Brooklyn Bridge Park",
+      "shortDescription": "Two minutes at Pier 1, where a century of closed-off cargo waterfront became eighty-five acres of public park under the bridge.",
+      "longDescription": "Brooklyn Bridge Park runs two and a half miles along the East River, and this stop sits at its northern end — Pier 1, with the Brooklyn Bridge overhead, the Lower Manhattan skyline laid out across the water, the Statue of Liberty to the left and the Manhattan Bridge to the right. For most of the twentieth century, none of this was open to the public. The piers were working cargo piers, owned by the Port Authority; behind them stood a wall of warehouses. The Brooklyn waterfront was industrial, fenced off, and largely invisible to the city.\n\nWhen the shipping industry left, the piers sat empty for decades while the city argued about what to do with them. What emerged is an eighty-five-acre park, designed by the landscape architect Michael Van Valkenburgh, which opened in stages starting in 2010. Each pier has its own character — a skyline meadow at Pier 1, basketball courts and a roller rink at Pier 2, soccer fields at Pier 5, flower gardens at Pier 6 — and between them spins Jane's Carousel, a 1922 wooden carousel rescued from Ohio and housed in a glass pavilion by the French architect Jean Nouvel.\n\nWhat makes the park work is what's no longer here: the warehouses, the fences, the chain-link. The city's most heavily guarded waterfront is now its most accessible — a continuous public path from the Manhattan Bridge to Atlantic Avenue. Find a spot to sit. The skyline across the water is the same one millions of people crossed an ocean to see — only most of them saw it from a boat.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/brooklyn-bridge-park-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "497bd289-86a8-4212-8b29-8773103936bf",
+          "order": 0,
+          "title": "Brooklyn Bridge Park",
+          "caption": "Stand at Pier 1, the park's northern end, the Brooklyn Bridge overhead and the skyline across the water.",
+          "latitude": 40.70308819457529,
+          "longitude": -73.99559348536273,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/brooklyn-bridge-park.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Until 2010, you wouldn't have been allowed to stand here.\n\nThe park around you is Brooklyn Bridge Park. You're at Pier 1, the northernmost section, with the Brooklyn Bridge soaring overhead and the East River in front of you. Across the water, the Lower Manhattan skyline is laid out like a model. The Statue of Liberty is to your left. The Manhattan Bridge is to your right.\n\nFor most of the twentieth century, none of this was open to the public. The piers were working cargo piers, owned by the Port Authority and used to load and unload container ships. Behind you, where the lawns and walkways now are, was a wall of warehouses. The Brooklyn waterfront — for two and a half miles along this stretch of the East River — was industrial, closed off, and largely invisible to the city.\n\nThe shipping industry left in the late twentieth century. The piers sat empty for decades while different groups argued about what to do with them. What emerged was a park — eighty-five acres of waterfront, designed by the landscape architect Michael Van Valkenburgh, that opened in stages starting in 2010.\n\nPier 1 is a meadow with skyline views. Pier 2 has basketball courts and a roller rink. Pier 5 has soccer fields. Pier 6 has flower gardens. Between them, you'll find Jane's Carousel — a 1922 wooden carousel rescued from Ohio and now spinning under a glass pavilion designed by the French architect Jean Nouvel.\n\n[beat]\n\nWhat makes the park work is what's not here. The warehouses are gone. The fences are gone. The chain-link is gone. What was the city's most heavily guarded waterfront is now its most accessible. You can walk all the way from the Manhattan Bridge to Atlantic Avenue along the river — almost two miles of public path, with the Manhattan skyline as the backdrop.\n\nFor now, find a spot to sit. The view changes through the day. The skyline you're looking at is the same one millions of people came to America to see — only most of them saw it from a boat."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.70308819457529,
+      "centroidLongitude": -73.99559348536273,
+      "city": "New York",
+      "primaryCategory": "natureAndParks",
+      "tags": ["brooklyn bridge park", "waterfront", "east river", "michael van valkenburgh", "park", "2010"],
+      "priceUSD": 0
     }
   ]
 }
