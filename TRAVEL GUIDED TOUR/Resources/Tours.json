@@ -556,6 +556,40 @@
       "primaryCategory": "architecture",
       "tags": ["art deco", "skyscraper", "william van alen", "1930", "42nd street", "walter chrysler"],
       "priceUSD": 0
+    },
+    {
+      "id": "bd4d95e6-403e-4b9b-a894-efbc205668a5",
+      "title": "Flatiron Building",
+      "shortDescription": "Two minutes on the triangular tower whose famous shape wasn't a choice — it was the leftover wedge where Broadway crosses Fifth.",
+      "longDescription": "Where Broadway cuts diagonally across the Manhattan grid and crosses Fifth Avenue at 23rd Street, it leaves behind a wedge of land shaped like a flatiron — the old cast-iron tool for pressing clothes. The block sat awkward and mostly empty for decades. In 1901 the George A. Fuller construction company bought it and hired Daniel Burnham — the Chicago architect known for the 1893 World's Fair — to design a building that would fit the strange site. The famous shape, in other words, wasn't a choice. It was a constraint.\n\nWhat Burnham built is a triangular tower of limestone and terra cotta, twenty-two stories tall, tapering from the broad end where you're standing to a point only six feet wide. When it opened in 1902 it was one of the tallest buildings in New York, and an instant sensation — critics also predicted it would collapse in the first serious windstorm. It hasn't. The triangular shape did funnel wind upward, though, and on gusty days women crossing 23rd Street found their skirts blown up around them; crowds of men gathered to watch, and police shooed them off — by legend, with the cry of \"Twenty-three skidoo.\" This corner may be the origin of the phrase.\n\nThe Flatiron has been continuously occupied for over a hundred and twenty years. After a long dispute among its owners, it has been put through a major renovation and converted from offices to luxury apartments — it is no longer an office building but a place to live. Walk around it: the view from the south, on Broadway looking up, is the one on every postcard. The view from the north, where the building narrows to its prow, almost no one photographs — and it's worth a minute.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/flatiron-building-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8376959d-5799-451e-82df-d84967dda768",
+          "order": 0,
+          "title": "Flatiron Building",
+          "caption": "Stand at the broad end of the triangle, on 23rd Street, looking up the tower toward its point.",
+          "latitude": 40.7409,
+          "longitude": -73.9896,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/flatiron-building.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The building's famous shape wasn't really a choice. It was a constraint.\n\nThe Flatiron Building stands at the intersection of Broadway, Fifth Avenue, and 23rd Street — a triangular tower of limestone and terra cotta, twenty-two stories tall. The corner you're standing on is the broad end of the triangle. At the other end, the building tapers to a point only six feet wide. From most angles, it looks like a slice of a building rather than a whole one.\n\nThe shape was dictated by the street grid. Broadway cuts diagonally across the Manhattan grid, and where it crosses Fifth Avenue at 23rd Street, the leftover block of land was shaped like a flatiron — the old-fashioned cast-iron tool used for pressing clothes. The block had been an awkward, mostly empty lot for decades. In 1901, the George A. Fuller construction company bought it and hired Daniel Burnham, a Chicago architect best known for his work on the 1893 World's Fair, to design a building that would fit the strange site.\n\nWhen it opened in 1902, it was one of the tallest buildings in New York City. The shape was an instant sensation. Critics also predicted it would collapse in the first serious windstorm. It hasn't.\n\nThe wind at this corner was unusual. The triangular shape funneled air upward, and on windy days, women crossing 23rd Street here found their skirts blown up around them. Crowds of men gathered to watch. According to legend, police would shoo them away by yelling \"Twenty-three skidoo!\" — the corner you're standing on may be the origin of one of the only New York phrases that ever made it into the national vocabulary.\n\n[beat]\n\nThe building has been continuously occupied for over a hundred and twenty years. In recent years, after a long dispute among its owners, it was put through a major renovation and is being converted from office space to luxury residential. The Flatiron is no longer an office building. It's a place to live.\n\nFor now, walk around it. The view from the south, on Broadway looking up, is the one on every postcard. The view from the north — where the building meets the point — almost no one photographs, but it's worth a minute to stand at the prow and look up."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7409,
+      "centroidLongitude": -73.9896,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["flatiron building", "daniel burnham", "1902", "terra cotta", "broadway", "twenty-three skidoo"],
+      "priceUSD": 0
     }
   ]
 }
