@@ -420,6 +420,40 @@
       "primaryCategory": "architecture",
       "tags": ["contemporary architecture", "rem koolhaas", "concert hall", "2005", "boavista", "porto"],
       "priceUSD": 0
+    },
+    {
+      "id": "0c54e6d4-03f5-4550-a8e9-78c7224d4def",
+      "title": "Whitney Museum of American Art",
+      "shortDescription": "Two minutes on Renzo Piano's ship-like museum at the foot of the High Line — and the Whitney's third home in ninety years.",
+      "longDescription": "On the corner of Gansevoort and Washington Streets, at the southern end of the High Line in the Meatpacking District, stands the Whitney Museum of American Art — an asymmetric, industrial-grey building, wider at the top than the bottom, its cantilevered terraces stepping outward as it rises. It is the work of Renzo Piano, and it opened here in 2015.\n\nThis is the Whitney's third home. The museum was founded in 1931 by Gertrude Vanderbilt Whitney — a sculptor and patron of living American artists — after the Met declined her collection. It began on Eighth Street in Greenwich Village, moved in 1966 to Marcel Breuer's Brutalist concrete fortress on Madison Avenue, and arrived at this Hudson-side site in 2015. Piano was born in the port city of Genoa, and from the river his building reads as a ship — a battleship or an ocean liner moored to the shoreline. It suits the site: in the nineteenth century, cargo ships docked right where you're standing.\n\nInside is the largest collection of twentieth- and twenty-first-century American art in the world — Hopper, O'Keeffe, Jasper Johns, Jeff Koons, Cindy Sherman. If you go in, go up first: take the elevator to the top, walk out onto the terraces over the Hudson, and work your way down. The view is half the building, and Piano knew it.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/whitney-museum-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "023606e4-942f-483e-878f-5e51493ca051",
+          "order": 0,
+          "title": "Whitney Museum of American Art",
+          "caption": "Stand at the corner of Gansevoort and Washington Streets, the museum ahead of you and the High Line above.",
+          "latitude": 40.7395,
+          "longitude": -74.0089,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/whitney-museum.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The building in front of you doesn't have a single shape. From this side it looks industrial. From the river, it looks like a ship.\n\nThe corner you're on is Gansevoort and Washington, in the Meatpacking District. The building ahead is the Whitney Museum of American Art. It's asymmetric — wider at the top than the bottom, with cantilevered terraces stepping outward as it rises. The exterior is industrial-grey, with exposed structural framing and large rectangular windows. Above you is the southern terminus of the High Line. The Hudson River is two blocks behind you.\n\nThis is the Whitney's third building. The museum was founded in 1931 by Gertrude Vanderbilt Whitney, a sculptor and patron of living American artists. She'd offered her collection to the Met, which declined. So she opened her own museum on Eighth Street in Greenwich Village. In 1966, it moved uptown to a Brutalist concrete fortress on Madison Avenue, designed by Marcel Breuer. In 2015, it moved here, into this building designed by Renzo Piano.\n\nPiano was born in Genoa, a port city, and maritime imagery runs through much of his work. From the Hudson side, the Whitney's stepped, asymmetric form — the cantilevered decks, the cabin-like upper floors, the steel cladding — has reminded critics of an anchored ship, a battleship, an ocean liner moored to the shoreline. Whether or not Piano set out to make a ship, the building reads as one. And it makes sense for the site: in the nineteenth century, this stretch of the Hudson was a working port, with cargo ships docking right where you're standing.\n\n[beat]\n\nThe Whitney holds the largest collection of twentieth and twenty-first century American art in the world — Hopper, O'Keeffe, Jasper Johns, Jeff Koons, Cindy Sherman. The outdoor terraces on the upper floors look out at the Hudson, the Statue of Liberty in the distance, the city stretching north along the High Line.\n\nIf you have time, go up before you go in. Take the elevator to the top, walk out onto the terraces, then work your way down. The view is half the building, and Piano knew it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7395,
+      "centroidLongitude": -74.0089,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["renzo piano", "meatpacking district", "american art", "high line", "museum", "2015"],
+      "priceUSD": 0
     }
   ]
 }
