@@ -43,7 +43,7 @@ app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 (iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
 — same app body, three different "TVs" it can play on.
 
-## Current State (V1 functionality + audit cleanup complete; background audio bug fixed)
+## Current State (V1 functionality + audit cleanup complete; M-qa UX fixes merged; build 5 ready)
 
 Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`.
 The AllTrails-style home redesign landed via PR #31 on 2026-05-18 and
@@ -71,13 +71,14 @@ maker page) passed; five UX issues were fixed the same session — a
 persistent **mini-player** between the home drawer and tab bar, the
 peek-detent hero-image bleed, a smooth recenter animation + gentler
 button fade, and a rebuilt user-location dot with a compass heading
-wedge. Those fixes reach the device only on the next TestFlight
-build (5), which needs a Mac session.
-What's left for V1: a Mac session to ship build 5 (carries the
-2026-05-21 M-qa fixes), the multi-stop M-qa checks (still need a
-multi-stop tour in the catalog), more **M-launch-content** tours if
-desired (currently 10 of 5–15), and the deferred **design / polish
-pass**.
+wedge. Those fixes plus 10 new tours and a CI runner fix (`macos-26`
+so the iOS 26 SDK is used) shipped via PR #54 on 2026-05-21 and merged
+the same evening. Build number bumped to 5 immediately after merge.
+What's left for V1: a Mac session to archive + upload **build 5** to
+TestFlight (build is already bumped — ~10 min active), the multi-stop
+M-qa checks (still need a multi-stop tour in the catalog), and the
+deferred **design / polish pass**. M-launch-content target (5–15 tours)
+is now satisfied with 20 tours.
 
 What's true today (2026-05-21):
 
@@ -94,14 +95,15 @@ What's true today (2026-05-21):
   follow → follow-with-heading; falls back to a custom button because
   `MapUserLocationButton` does not render reliably as a free-floating
   view).
-- `Resources/Tours.json` has **10 real tours** (NYC: Grand Central
-  south facade, Times Square TKTS, South Street Seaport, Empire State
+- `Resources/Tours.json` has **20 real tours**: Grand Central south
+  facade, Times Square TKTS, South Street Seaport, Empire State
   Building, Statue of Liberty, Brooklyn Bridge, Rockefeller Center,
-  Met 5th Ave Steps, High Line, 9/11 Memorial). Seed tours (Cooper
-  Hewitt, Architects of Hidden Brooklyn) removed. ~26 min total audio.
-  Spans 4 categories (history 5, architecture 4, natureAndParks 1,
-  culturalHeritage 1). Empire State Building GPS corrected to
-  40.748434, -73.984571. Audio hosted on the `gh-pages` branch (served at
+  Met 5th Ave Steps, High Line, 9/11 Memorial, Brooklyn Museum,
+  Casa da Música, Whitney Museum, American Museum of Natural History,
+  Brooklyn Bridge Park, Chrysler Building, Flatiron Building,
+  Governors Island, Guggenheim Museum, Intrepid Sea/Air/Space Museum.
+  Seed tours (Cooper Hewitt, Architects of Hidden Brooklyn) removed.
+  Audio hosted on the `gh-pages` branch (served at
   `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
   GitHub Releases tried first but serves wrong MIME type — see
   `docs/cdn-decision.md`.
