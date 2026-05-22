@@ -658,6 +658,40 @@
       "primaryCategory": "architecture",
       "tags": ["frank lloyd wright", "fifth avenue", "spiral", "modern art", "museum", "1959"],
       "priceUSD": 0
+    },
+    {
+      "id": "915bc2b1-e039-4e87-9441-0ea965ab8dea",
+      "title": "Intrepid Sea, Air & Space Museum",
+      "shortDescription": "Two minutes on the USS Intrepid — the carrier that survived five kamikaze hits, then fished astronauts out of the sea.",
+      "longDescription": "Docked at Pier 86, off the Hudson River Greenway near 46th Street, is the USS Intrepid — nine hundred feet of aircraft carrier, twenty-seven thousand tons, with preserved warplanes on her flight deck, a Concorde parked to her north, and the Space Shuttle Enterprise in a pavilion behind. She was launched in 1943, six months after Pearl Harbor, and fought across the Pacific — Truk, the Philippines, Okinawa. Japanese kamikaze planes hit her five times; each time she was repaired and sent back into combat. Her crews called her \"the Fighting I.\"\n\nHer service didn't end with the war. She became a Cold War submarine-hunter, then a Vietnam-era carrier, then a recovery vessel for the Mercury and Gemini space programs — when astronauts splashed down in the ocean, Intrepid's helicopters pulled them out of the water. By the time she was decommissioned in 1974, she had served three decades, in three wars, and at the dawn of the space age.\n\nThe museum is what saved her. The Navy planned to scrap her in the early 1980s, until a real estate developer named Zachary Fisher led a campaign to preserve her instead; in 1982 she became the centerpiece of this museum. The Concorde and the Enterprise came later — retired Concorde airframes donated by British Airways and Air France after the program ended in 2003, and the Enterprise, the prototype shuttle that flew test flights but never reached space, acquired from NASA in 2012. Go aboard: walk the hangar deck, climb to the flight deck. There aren't many places where you can stand on a piece of equipment that fought a world war, then watched the space age begin.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/intrepid-museum-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1b269f32-1407-4c99-9e70-5ae624e289c4",
+          "order": 0,
+          "title": "Intrepid Sea, Air & Space Museum",
+          "caption": "Stand on the Hudson River Greenway near 46th Street, the carrier docked at Pier 86 ahead of you.",
+          "latitude": 40.7643861255481,
+          "longitude": -73.99906733636573,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/intrepid-museum.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The ship in front of you launched aircraft over the Pacific in World War Two.\n\nThe carrier in front of you is the USS Intrepid — nine hundred feet long, twenty-seven thousand tons, docked at Pier 86. You're on the Hudson River Greenway, around 46th Street and 12th Avenue. On her flight deck, you can see the dark shapes of preserved aircraft. To her north, the white delta-winged shape of a Concorde. Behind her, a covered pavilion containing the Space Shuttle Enterprise.\n\nThe Intrepid was launched in 1943, six months after Pearl Harbor. She fought across the Pacific — at Truk, the Philippines, Okinawa — and was hit by Japanese kamikaze attacks five times during her wartime service. After each hit, she was repaired and sent back into combat. By the end of the war, she had sunk dozens of enemy vessels and survived torpedoes that would have ended other ships. The crews called her \"the Fighting I.\"\n\nAfter the war, her role kept evolving. She became a Cold War sub-hunter, then a Vietnam-era carrier, then a recovery vessel for the Mercury and Gemini space programs — astronauts splashed down in the ocean, and Intrepid's helicopters pulled them out of the water. By the time she was decommissioned in 1974, she had served three decades, in three wars, and at the start of the space age.\n\n[beat]\n\nThe museum is what saved her. The Navy planned to scrap her in the early 1980s. A real estate developer named Zachary Fisher led a campaign to preserve her instead, and in 1982 she became the centerpiece of this museum.\n\nThe Concorde and the Enterprise joined her later — British Airways and Air France donated retired Concorde airframes after the program was discontinued in 2003, and the Enterprise, the prototype shuttle that flew test flights but never went to space, was acquired from NASA in 2012.\n\nSo go aboard. Walk her hangar deck. Climb to the flight deck. There aren't many places where you can stand on a piece of equipment that fought a world war, then watched the space age begin."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7643861255481,
+      "centroidLongitude": -73.99906733636573,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": ["uss intrepid", "aircraft carrier", "world war two", "pier 86", "space shuttle", "hudson river"],
+      "priceUSD": 0
     }
   ]
 }
