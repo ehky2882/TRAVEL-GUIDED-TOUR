@@ -590,6 +590,40 @@
       "primaryCategory": "architecture",
       "tags": ["flatiron building", "daniel burnham", "1902", "terra cotta", "broadway", "twenty-three skidoo"],
       "priceUSD": 0
+    },
+    {
+      "id": "fe0cd6fb-d28f-4735-b818-ff021b1ca6fd",
+      "title": "Governors Island",
+      "shortDescription": "Two minutes on the car-free harbor island — off-limits to civilians for two centuries, now the one place to see New York from outside it.",
+      "longDescription": "Governors Island is a hundred and seventy-two acres of car-free land in New York Harbor, half a mile south of Manhattan and reachable only by an eight-minute ferry. The views are the reason to go: the Lower Manhattan skyline to the north, the Statue of Liberty and Ellis Island to the west, the Brooklyn waterfront to the east. It may be the only place in New York that lets you see the city from outside it.\n\nFor most of four hundred years, the island was off-limits to civilians. The Lenape called it Pagganck — \"nut island\" — and in 1637 Dutch settlers bought it from them for two ax heads, a string of beads, and a handful of nails. The British took it in 1664 and renamed it; after the Revolution the US Army built fortifications — Fort Jay near the center, and Castle Williams, the round red sandstone fort, to the north. The island held Confederate prisoners during the Civil War and served as a Coast Guard base for most of the twentieth century.\n\nThe Coast Guard left in 1996. After a long debate the island passed to a public trust and slowly opened to visitors, and in 2016 the city added an artificial range of hills at the southern end — the highest offering a view back at Manhattan that almost no other vantage in the city provides. What makes the island worth the trip is what it doesn't have: no cars, no skyscrapers, no traffic — just wide lawns, old brick officers' housing, the round red fort, and the hills. Walk, and climb the hills if you have time. The last ferry back is around six in the evening.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/governors-island-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ea18b1e9-17f4-4710-8541-aea384a42e5a",
+          "order": 0,
+          "title": "Governors Island",
+          "caption": "Begin near the ferry landing and walk — the island is car-free, with Lower Manhattan across the water to the north.",
+          "latitude": 40.691227019863874,
+          "longitude": -74.0123713906841,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/governors-island.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "For two hundred years, this island was off-limits to civilians.\n\nGovernors Island. A hundred and seventy-two acres of car-free land in New York Harbor, half a mile south of Manhattan. From here, you can see the entire skyline of Lower Manhattan to the north — the towers of the Financial District, One World Trade Center, the Brooklyn Bridge in the distance. To the west, the Statue of Liberty and Ellis Island. To the east, the Brooklyn waterfront. The island is reachable only by ferry — about an eight-minute ride from Manhattan or Brooklyn.\n\nThe island has been here longer than any of those landmarks. The native Lenape called it Pagganck, \"nut island.\" In 1637, Dutch settlers bought it from them for two ax heads, a string of beads, and a handful of nails — an exchange that would set the terms for almost everything that followed in Manhattan's real estate history.\n\nFor most of the next four hundred years, this island belonged to the military. The British took it in 1664 and renamed it. After the Revolution, the US Army built fortifications here — Fort Jay, near the center of the island, and Castle Williams, the round red sandstone fort to your north. During the Civil War, the island held Confederate prisoners. For most of the twentieth century, it was a Coast Guard base. Civilians weren't allowed.\n\nIn 1996, the Coast Guard left. After a long debate, the island was transferred to a public trust and slowly opened to visitors. In 2016, the city opened something new — an artificial range of hills at the southern end of the island. The highest one gives you a view back at the Manhattan skyline that almost no other vantage in New York provides.\n\n[beat]\n\nWhat makes the island worth visiting is what makes it different from the city it sits next to. No cars. No skyscrapers. No traffic. Just wide lawns, old brick officers' housing, the round red fort, and the hills. It is the only place in New York that lets you see New York from outside it.\n\nFor now, walk. Climb the hills if you have time. The last ferry back is around six in the evening, depending on the season."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.691227019863874,
+      "centroidLongitude": -74.0123713906841,
+      "city": "New York",
+      "primaryCategory": "natureAndParks",
+      "tags": ["governors island", "new york harbor", "car-free", "the hills", "lenape", "military history"],
+      "priceUSD": 0
     }
   ]
 }
