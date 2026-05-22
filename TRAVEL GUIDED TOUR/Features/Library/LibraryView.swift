@@ -47,7 +47,7 @@ struct LibraryView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
-            .background(AtlasColors.background)
+            .background(AtlasColors.secondaryBackground)
             .navigationTitle("Library")
             .inlineNavigationBarTitle()
         }

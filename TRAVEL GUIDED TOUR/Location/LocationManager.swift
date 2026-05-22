@@ -7,11 +7,21 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
     private let manager = CLLocationManager()
     private(set) var userLocation: CLLocation?
     private(set) var authorizationStatus: CLAuthorizationStatus = .notDetermined
+    /// Device compass heading in degrees (0 = true north, clockwise).
+    /// `nil` until the first heading update arrives, or on platforms
+    /// without a magnetometer (macOS / visionOS). Drives the
+    /// directional wedge on the home-map user-location dot.
+    private(set) var heading: CLLocationDirection?
 
     override init() {
         super.init()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        #if os(iOS)
+        // Smooth out magnetometer jitter — only report heading changes
+        // larger than a couple of degrees.
+        manager.headingFilter = 2
+        #endif
         authorizationStatus = manager.authorizationStatus
     }
 
@@ -42,10 +52,16 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
 
     func startUpdating() {
         manager.startUpdatingLocation()
+        #if os(iOS)
+        manager.startUpdatingHeading()
+        #endif
     }
 
     func stopUpdating() {
         manager.stopUpdatingLocation()
+        #if os(iOS)
+        manager.stopUpdatingHeading()
+        #endif
     }
 
     nonisolated func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -65,9 +81,22 @@ final class LocationManager: NSObject, CLLocationManagerDelegate {
             #endif
             if authorized {
                 manager.startUpdatingLocation()
+                #if os(iOS)
+                manager.startUpdatingHeading()
+                #endif
             }
         }
     }
+
+    #if os(iOS)
+    nonisolated func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        MainActor.assumeIsolated {
+            // Prefer true heading (geographic north); fall back to
+            // magnetic when true is unavailable (reported as negative).
+            heading = newHeading.trueHeading >= 0 ? newHeading.trueHeading : newHeading.magneticHeading
+        }
+    }
+    #endif
 
     func distanceString(toLatitude latitude: Double, longitude: Double) -> String? {
         guard let userLocation else { return nil }

@@ -6,8 +6,8 @@ import SwiftUI
 /// the buttons stay legible regardless of what the map is showing
 /// behind it.
 ///
-/// Shape mirrors the BottomSheet drawer's:
-///   - Top corners: small radius (matches drawer's `cornerRadius`)
+/// Shape:
+///   - Top corners: square — the rectangular mini-player stacks flush above
 ///   - Bottom corners: phone-screen radius (the floating-island look)
 ///
 /// When the home drawer is open, the drawer's glass extends down
@@ -21,9 +21,10 @@ struct AtlasTabBar: View {
     /// Same horizontal inset the BottomSheet uses (8pt) so the tab
     /// bar columns align with the drawer's edges.
     var horizontalInset: CGFloat = 8
-    /// Small top corner radius — matches drawer's top corners so
-    /// when drawer + tab bar stack, transitions are seamless.
-    var topCornerRadius: CGFloat = 20
+    /// Square top corners — the rectangular mini-player stacks flush
+    /// on top, so the tab bar's top edge must be square to meet it
+    /// seamlessly.
+    var topCornerRadius: CGFloat = 0
     /// Phone-screen radius for the bottom corners.
     var bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius
 

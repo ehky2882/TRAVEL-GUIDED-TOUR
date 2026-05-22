@@ -48,7 +48,7 @@ struct TourDetailView: View {
                     Color.clear.frame(height: AtlasSpacing.xxl + AtlasSpacing.lg)
                 }
             }
-            .background(AtlasColors.background)
+            .background(AtlasColors.secondaryBackground)
 
             actionBar
         }
@@ -91,7 +91,7 @@ struct TourDetailView: View {
         if allImages.count > 1 {
             TabView {
                 ForEach(allImages, id: \.self) { url in
-                    HeroImageView(imageName: url, height: AtlasSpacing.heroHeight)
+                    HeroImageView(imageName: url, height: AtlasSpacing.heroHeight, zoomable: true)
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
@@ -103,7 +103,8 @@ struct TourDetailView: View {
                 imageName: tour.heroImageURL,
                 height: AtlasSpacing.heroHeight,
                 cornerRadius: AtlasSpacing.cardCornerRadius,
-                category: tour.primaryCategory
+                category: tour.primaryCategory,
+                zoomable: true
             )
             .padding(.horizontal, AtlasSpacing.lg)
         }
@@ -228,13 +229,24 @@ struct TourDetailView: View {
 
     // MARK: - Action bar
 
+    /// Shared height for all three action-bar controls so the primary
+    /// button, Save, and Download line up in size and baseline.
+    private let controlHeight: CGFloat = 36
+
+    /// Action-bar height — sized so its top edge lands level with the
+    /// home drawer's peek detent: HomeView's basePeekHeight (130) +
+    /// the mini-player's footprint + the drawer's 8pt float inset.
+    private var actionBarHeight: CGFloat {
+        130 + MiniPlayerBar.layoutHeight + 8
+    }
+
     private var actionBar: some View {
         HStack(spacing: AtlasSpacing.md) {
             Button(action: handlePrimaryAction) {
                 Label(primaryButtonTitle, systemImage: primaryButtonIcon)
                     .font(AtlasTypography.body)
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, AtlasSpacing.sm)
+                    .frame(height: controlHeight)
             }
             .buttonStyle(.borderedProminent)
             .disabled(isThisTourLoading)
@@ -242,7 +254,7 @@ struct TourDetailView: View {
             Button(action: toggleSaved) {
                 Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
                     .font(AtlasTypography.body)
-                    .frame(width: 44, height: 44)
+                    .frame(width: controlHeight, height: controlHeight)
             }
             .buttonStyle(.bordered)
             .accessibilityLabel(isSaved ? "Remove from saved" : "Save tour")
@@ -250,12 +262,23 @@ struct TourDetailView: View {
             downloadButton
         }
         .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.vertical, AtlasSpacing.md)
+        .padding(.top, AtlasSpacing.lg)
+        .frame(maxWidth: .infinity)
+        // Fixed height so the action bar's top edge lines up with the
+        // home drawer's peek detent. Buttons sit at the top; the space
+        // below clears the bottom island (tab bar + mini-player),
+        // which overlays it.
+        .frame(height: actionBarHeight, alignment: .top)
         .background(
-            AtlasColors.background
+            AtlasColors.secondaryBackground
                 .shadow(color: AtlasColors.cardShadow, radius: 8, y: -2)
-                .ignoresSafeArea(edges: .bottom)
         )
+        // Extend to the physical screen bottom so actionBarHeight is
+        // measured from the same baseline as the drawer (which also
+        // ignores the bottom safe area). Without this the action bar
+        // stops at the home-indicator inset and its top sits higher
+        // than the drawer's peek detent.
+        .ignoresSafeArea(.container, edges: .bottom)
     }
 
     // MARK: - Download button
@@ -274,30 +297,23 @@ struct TourDetailView: View {
         let isOtherActive = tourDownloader.activeTourId != nil
             && tourDownloader.activeTourId != tour.id
 
-        VStack(spacing: 2) {
-            Button(action: handleDownloadTap) {
-                downloadButtonIcon(for: state)
-                    .font(AtlasTypography.body)
-                    .frame(width: 44, height: 44)
-            }
-            .buttonStyle(.bordered)
-            .disabled(isOtherActive)
-            .accessibilityLabel(
-                isOtherActive
-                    ? "Download unavailable"
-                    : downloadAccessibilityLabel(for: state)
-            )
-            .accessibilityHint(
-                isOtherActive
-                    ? "Wait for the current download to finish, then try again."
-                    : ""
-            )
-
-            Text(downloadCaption(for: state))
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
-                .lineLimit(1)
+        Button(action: handleDownloadTap) {
+            downloadButtonIcon(for: state)
+                .font(AtlasTypography.body)
+                .frame(width: controlHeight, height: controlHeight)
         }
+        .buttonStyle(.bordered)
+        .disabled(isOtherActive)
+        .accessibilityLabel(
+            isOtherActive
+                ? "Download unavailable"
+                : downloadAccessibilityLabel(for: state)
+        )
+        .accessibilityHint(
+            isOtherActive
+                ? "Wait for the current download to finish, then try again."
+                : ""
+        )
     }
 
     @ViewBuilder
@@ -324,15 +340,6 @@ struct TourDetailView: View {
             // promote this to an AtlasColors.success token later.
             Image(systemName: "checkmark.circle.fill")
                 .foregroundStyle(.green)
-        }
-    }
-
-    private func downloadCaption(for state: TourDownloader.DownloadState) -> String {
-        switch state {
-        case .idle: return "Download"
-        case .downloading(let progress): return "\(Int(progress * 100))%"
-        case .completed: return "Downloaded"
-        case .failed: return "Retry"
         }
     }
 
@@ -391,7 +398,7 @@ struct TourDetailView: View {
     }
 
     private var primaryButtonTitle: String {
-        isThisTourActive ? "Open player" : "Start"
+        isThisTourActive ? "Open player" : "Start Tour"
     }
 
     private var primaryButtonIcon: String {

@@ -23,7 +23,9 @@ struct HomeView: View {
     @Environment(TourDownloader.self) private var tourDownloader
 
     @State private var visibleRegion: MKCoordinateRegion?
-    @State private var sheetDetent: BottomSheetDetent = .large
+    /// Drawer detent — owned by `ContentView` so it persists across
+    /// tab switches (returning to Home restores the last detent).
+    @Binding var sheetDetent: BottomSheetDetent
     /// True while the map camera is in motion. Retracts the drawer to
     /// peek and fades the recenter button while the user is panning,
     /// then clears when the camera settles.
@@ -51,11 +53,26 @@ struct HomeView: View {
         )
     )
 
-    /// Peek-detent height. Sized so the AtlasTabBar (~62pt) + drag
+    /// Base peek-detent height. Sized so the AtlasTabBar (~62pt) + drag
     /// handle (~16pt) + centered header line (~30pt) all fit — and
     /// nothing more. Increasing this lets the first list item peek;
     /// decreasing clips the header.
-    private let peekHeight: CGFloat = 130
+    private let basePeekHeight: CGFloat = 130
+
+    /// Effective peek height. The mini-player is a permanent fixture
+    /// between the drawer and the tab bar, so the peek height always
+    /// includes its footprint to keep the header line clear of it.
+    private var peekHeight: CGFloat {
+        basePeekHeight + MiniPlayerBar.layoutHeight
+    }
+
+    /// Bottom padding for the drawer's scroll list so the last card
+    /// clears the floating island (tab bar + mini-player) when the
+    /// drawer is fully open.
+    private var bottomListInset: CGFloat {
+        let tabBar: CGFloat = 64
+        return tabBar + MiniPlayerBar.layoutHeight + AtlasSpacing.md
+    }
 
     var body: some View {
         // NavigationStack wraps the layout so the tour list cards,
@@ -68,6 +85,7 @@ struct HomeView: View {
                     HomeMapSection(
                         tours: filteredTours,
                         userLocation: locationManager.userLocation,
+                        userHeading: locationManager.heading,
                         selectedTourId: $selectedTourId,
                         cameraPosition: $cameraPosition,
                         onCameraChanged: { region in
@@ -105,7 +123,7 @@ struct HomeView: View {
                         dragOffset: $sheetDragOffset,
                         peekHeight: peekHeight
                     ) {
-                        drawerContent
+                        drawerContent(in: geo)
                     }
 
                     // Floating recenter button anchored to bottom-leading,
@@ -124,7 +142,11 @@ struct HomeView: View {
                         // Hidden at full detent (drawer covers the map)
                         // and while the map is moving (clean panning UX).
                         // Button fades back when the camera settles.
+                        // Explicit gentle eases so the fade doesn't snap
+                        // with whatever spring drove the drawer/camera.
                         .opacity(sheetDetent == .large || isMapMoving ? 0 : 1)
+                        .animation(.easeInOut(duration: 0.5), value: isMapMoving)
+                        .animation(.easeInOut(duration: 0.3), value: sheetDetent)
                         .allowsHitTesting(sheetDetent != .large && !isMapMoving)
                 }
                 .toolbar(.hidden, for: .navigationBar)
@@ -134,7 +156,9 @@ struct HomeView: View {
                 }
                 .onChange(of: selectedTourId, initial: false) { _, _ in
                     if selectedTourId != nil && sheetDetent == .peek {
-                        sheetDetent = .medium
+                        withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+                            sheetDetent = .medium
+                        }
                     }
                 }
             }
@@ -163,9 +187,9 @@ struct HomeView: View {
         Button { cycleTrackingMode() } label: {
             Image(systemName: trackingMode.iconName)
                 .font(.system(size: 16))
-                .foregroundStyle(.white)
+                .foregroundStyle(AtlasColors.primaryText)
                 .frame(width: 44, height: 44)
-                .background(Color(uiColor: .systemGray3))
+                .background(AtlasColors.secondaryBackground)
                 .clipShape(Circle())
         }
         .buttonStyle(.plain)
@@ -177,10 +201,16 @@ struct HomeView: View {
         case .none:
             guard locationManager.userLocation != nil else { return }
             trackingMode = .follow
-            cameraPosition = .userLocation(followsHeading: false, fallback: cameraPosition)
+            // Animate the camera so it glides to the user instead of
+            // snapping there abruptly.
+            withAnimation(.easeInOut(duration: 1.2)) {
+                cameraPosition = .userLocation(followsHeading: false, fallback: cameraPosition)
+            }
         case .follow:
             trackingMode = .followWithHeading
-            cameraPosition = .userLocation(followsHeading: true, fallback: cameraPosition)
+            withAnimation(.easeInOut(duration: 1.2)) {
+                cameraPosition = .userLocation(followsHeading: true, fallback: cameraPosition)
+            }
         case .followWithHeading:
             trackingMode = .none
         }
@@ -188,7 +218,15 @@ struct HomeView: View {
 
     // MARK: - Drawer content
 
-    private var drawerContent: some View {
+    @ViewBuilder
+    private func drawerContent(in geo: GeometryProxy) -> some View {
+        // Fade the scrollable list in as the drawer opens past peek.
+        // At the peek detent the list is hidden entirely — otherwise a
+        // sliver of the first card (often a hero image) shows above
+        // the tab bar (M-qa finding).
+        let visible = drawerVisibleHeight(in: geo)
+        let listOpacity = min(1, max(0, (visible - peekHeight) / 90))
+
         ScrollViewReader { proxy in
             VStack(alignment: .leading, spacing: 0) {
                 // Header — dynamic count for the area in view.
@@ -231,8 +269,11 @@ struct HomeView: View {
                             }
                         }
                     }
-                    .padding(.vertical, AtlasSpacing.sm)
+                    .padding(.top, AtlasSpacing.sm)
+                    .padding(.bottom, bottomListInset)
                 }
+                .opacity(listOpacity)
+                .allowsHitTesting(listOpacity > 0.01)
                 .onChange(of: selectedTourId, initial: false) { _, newId in
                     guard let newId else { return }
                     withAnimation(.easeInOut(duration: 0.25)) {

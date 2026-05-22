@@ -264,9 +264,11 @@ advances correctly.
 
 ### M-home. Map-dominant home screen with curated rails — ✅ Done (PR #10; redesigned in PR #19)
 
-> Follow-up after PR #19's full-screen-map redesign: "Because you
-> searched [X]" rail data is captured by `RecentSearchStore` but not
-> yet surfaced in `HomeRailsViewModel`. Tracked in HANDOFF.md.
+> PR #19's full-screen-map redesign replaced the stacked rails with
+> a single distance-sorted tour list in a bottom drawer. The shipping
+> home has no rails — `HomeRailsViewModel` and `RailCarousel` are
+> unused by the app (still exercised by the unit suite). The old
+> "Because you searched [X]" rail is retired along with the layout.
 
 **What:** Build the new home screen, modeled on the Airbnb landing
 page pattern. See `atlas_claude_code_prompt.md` § Key screens #1 for
@@ -487,14 +489,16 @@ to use either path.
 **What:** End-to-end walkthrough of the running app with real content
 loaded. Functional checklist:
 
-1. App launches → map-dominant home with pins, search bar, and
-   curated rails below the map (or graceful fallback if no location).
-2. Pan the map → location-anchored rails recompute for the new area.
+1. App launches → map-dominant home with pins, search bar, filter
+   chips, and the tour list in the bottom drawer (or graceful
+   fallback if no location). The list sorts nearest-first when
+   location is granted, with distance labels on each card.
+2. Pan the map → the drawer header's "N tours in view" count
+   recomputes for the new area.
 3. Tap the search bar → results screen works (title / maker /
-   category match). Open a tour from search → return to home →
-   "Because you searched [X]" rail now reflects the query.
-4. Tap a tour (pin, rail, or search) → tour detail → tap Start →
-   audio plays.
+   category match). Open a tour from search → tour detail opens.
+4. Tap a tour (pin, drawer card, or search) → tour detail → tap
+   Start → audio plays.
 5. Lock the phone → audio continues; lock-screen controls work.
 6. Multi-stop geofenced tour → simulated walking along stops → next
    stop's audio triggers on arrival.
@@ -502,6 +506,31 @@ loaded. Functional checklist:
 8. Download a tour → airplane mode → tour plays end to end.
 9. Save a tour → force-quit + relaunch → still saved.
 10. Maker page → tour list correct → tap tour → tour detail opens.
+
+**M-qa device pass — build 1.0 (4) (2026-05-21).** First on-device
+walkthrough. Checklist 1, 3, 4, 5, 8, 9, 10 passed. Items 6/7
+(multi-stop geofenced + manual) deferred — no multi-stop tour is in
+the current catalog. Five UX issues surfaced and were fixed the same
+session (remote — code on the feature branch, ships to device on the
+next TestFlight build):
+
+- **Mini-player added.** A persistent now-playing bar sits between
+  the home drawer and the tab bar whenever audio is loaded —
+  pause/resume inline, tap to reopen the full player. New
+  `Features/Player/MiniPlayerBar.swift`; hosted by `ContentView`;
+  the home drawer's peek height grows to clear it.
+- **Hero-image bleed-through at the peek detent fixed** — the
+  drawer's scroll list now fades out at peek instead of leaking a
+  sliver of the first card above the tab bar.
+- **Recenter animation** — the camera now glides to the user
+  (0.45 s ease) instead of snapping; the recenter button's
+  fade-in/out on map pan is gentler.
+- **User-location dot rebuilt** — explicit Apple-Maps blue, plus a
+  directional heading wedge driven by the device compass
+  (`LocationManager.heading`, iOS only).
+
+Owner verifies all of the above on the next TestFlight build (5),
+which needs a Mac session to archive + upload.
 
 **Files touched:** none expected. Bugs become small targeted fixes.
 
@@ -589,9 +618,13 @@ picked up during M-qa or the polish phase. (Lifted from
 `archive/HANDOFF-260518.md` so they live in a doc that future
 sessions actually read.)
 
-- **"Because you searched [X]" home rail.** `RecentSearchStore`
-  captures the data but `HomeRailsViewModel` doesn't surface it as
-  a rail yet. Wire it up during the post-PR-#20 home-polish pass.
+- **Rails layout retired.** The AllTrails redesign (PR #19/#31)
+  dropped the stacked-rails home for a map + single distance-sorted
+  drawer list. `HomeRailsViewModel` and `RailCarousel` are no longer
+  referenced by the app (the unit suite still covers
+  `HomeRailsViewModel`). Deleting them would mean dropping that test
+  too, so they're left in place for now. The old "Because you
+  searched [X]" rail is retired with the layout.
 - **`AudioPlayerService` progress aggregation.** `listenedSeconds`
   on `LibraryEntry` currently reflects position within the current
   audio item only — it doesn't aggregate across stops in a

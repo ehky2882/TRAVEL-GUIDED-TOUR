@@ -65,15 +65,29 @@ peek), the PlayerView image carousel, the location-button rework (Apple-style
 tracking-mode cycling + blue user dot), MakerView avatar/thumbnail fixes, and
 the seed-tour / ESB-GPS / hero-image fixes, then uploaded TestFlight build
 **1.0 (4)** carrying all of it.
-What's left for V1: run the M-qa 10-step checklist on device against build
-1.0 (4), more **M-launch-content** tours if desired (currently 10 of 5–15),
-and the deferred **design / polish pass**.
+On 2026-05-21 the first on-device M-qa pass ran against build 1.0 (4):
+core flows (launch, search, playback, lock-screen, offline, save,
+maker page) passed; five UX issues were fixed the same session — a
+persistent **mini-player** between the home drawer and tab bar, the
+peek-detent hero-image bleed, a smooth recenter animation + gentler
+button fade, and a rebuilt user-location dot with a compass heading
+wedge. Those fixes reach the device only on the next TestFlight
+build (5), which needs a Mac session.
+What's left for V1: a Mac session to ship build 5 (carries the
+2026-05-21 M-qa fixes), the multi-stop M-qa checks (still need a
+multi-stop tour in the catalog), more **M-launch-content** tours if
+desired (currently 10 of 5–15), and the deferred **design / polish
+pass**.
 
-What's true today (2026-05-20):
+What's true today (2026-05-21):
 
 - `ContentView.swift` uses a custom `AtlasTabBar` (3 tabs: **Home /
   Library / Me**) shaped to match the home drawer's width/inset/
-  corners so they read as one "floating island."
+  corners so they read as one "floating island." A persistent
+  **mini-player** (`Features/Player/MiniPlayerBar.swift`) slots in
+  above the tab bar whenever audio is loaded — inline pause/resume,
+  tap to reopen the full player; the home drawer's peek height grows
+  to clear it.
 - `Features/Home/` is the AllTrails-style layout: full-screen map +
   filter chip row + vertical tour list in a persistent bottom drawer
   + a floating location button (Apple-style: tapping cycles none →
@@ -343,7 +357,7 @@ TRAVEL GUIDED TOUR/
 │   ├── DataService.swift          Loads Tours.json into [Tour] at launch
 │   ├── LibraryStore.swift         Read/write store of [LibraryEntry]; persists across launches
 │   ├── RecentSearchStore.swift    Local persistence for search history (cap 20)
-│   ├── RecentlyViewedStore.swift  Backs the "Recently viewed" home rail
+│   ├── RecentlyViewedStore.swift  Backs the "Recently viewed" quick-resume banner on home
 │   └── ToursData.swift            JSON ↔ Swift translator
 ├── Resources/
 │   └── Tours.json                 Seed entries; replaced by real content in M-launch-content
@@ -351,18 +365,21 @@ TRAVEL GUIDED TOUR/
 │   ├── AudioPlayerService.swift   AVQueuePlayer wrapper + lock-screen / Now Playing integration
 │   └── TourDownloader.swift       Offline tour caching via URLSession background downloads
 ├── Features/
-│   ├── Home/                      Map-dominant home: full-screen map + curated rails in a bottom sheet
+│   ├── Home/                      Map-dominant home: full-screen map + tour list in a bottom drawer
 │   │   ├── HomeView.swift
 │   │   ├── HomeMapSection.swift
-│   │   ├── HomeRailsViewModel.swift
-│   │   └── RailCarousel.swift
+│   │   ├── CategoryChipRow.swift
+│   │   ├── TourListCard.swift
+│   │   ├── HomeRailsViewModel.swift   (unused by the app since the PR #31 redesign; still unit-tested)
+│   │   └── RailCarousel.swift         (unused by the app since the PR #31 redesign)
 │   ├── Search/                    Search bar + results screen
 │   │   ├── SearchBar.swift
 │   │   └── SearchView.swift
 │   ├── Tour/                      Tour detail screen
 │   │   └── TourDetailView.swift
-│   ├── Player/                    Full-screen audio player (modal sheet)
-│   │   └── PlayerView.swift
+│   ├── Player/                    Full-screen audio player + persistent mini-player
+│   │   ├── PlayerView.swift
+│   │   └── MiniPlayerBar.swift
 │   ├── Maker/                     Maker bio + their tour list
 │   │   └── MakerView.swift
 │   ├── Library/                   Saved / Downloaded / Recently played

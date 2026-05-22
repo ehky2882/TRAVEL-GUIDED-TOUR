@@ -144,6 +144,13 @@ struct SettingsView: View {
                     Label("All data stored on device", systemImage: "iphone")
                 }
             }
+            // Merge the page with the bottom island: hide the List's
+            // default grouped backdrop, paint our island color, and
+            // clear the row (section "card") backgrounds so the whole
+            // surface reads as one continuous color.
+            .scrollContentBackground(.hidden)
+            .background(AtlasColors.secondaryBackground)
+            .listRowBackground(Color.clear)
             .navigationTitle("Settings")
             .inlineNavigationBarTitle()
         }
