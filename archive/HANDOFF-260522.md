@@ -115,10 +115,9 @@ TestFlight build.
 
 - `main` at `6e12328` (build-number bump) — or later if this handoff
   commit lands after. PR #54 fully merged.
-- Branches: `gh-pages` (audio CDN, active). `fix/pr54-build` is a
-  **stale leftover** on `origin` — safe to delete; it only carries an
-  obsolete handoff draft (`HANDOFF-260521.md`, never merged — the CI
-  problem it documented is solved).
+- Branches: `gh-pages` (audio CDN, active) is the only non-main
+  branch. The stale `fix/pr54-build` was deleted at session end —
+  `origin` now carries just `main` + `gh-pages`.
 - `Tours.json`: 20 tours, all single-stop, validator-clean.
 - TestFlight: build 1.0 (5) uploaded 2026-05-22.
 

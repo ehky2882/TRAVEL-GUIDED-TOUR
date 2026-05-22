@@ -95,11 +95,9 @@ from one Claude account to another. See
 working-style notes written specifically for the new account's first
 session.
 
-**Branches.** `gh-pages` (audio CDN + privacy policy) is the
-deliberate non-main branch — orphan, no shared history with main.
-One stale leftover on `origin`: `fix/pr54-build` — superseded when
-PR #54 merged; safe to delete (it only carries an obsolete handoff
-draft).
+**Branches.** `gh-pages` (audio CDN + privacy policy) is the only
+non-main branch — orphan, no shared history with main. No parked or
+stale branches otherwise.
 
 **Pivot history.** The previous editorial-city-guide V1 work was
 mostly reshaped, not thrown out. The migration tables below are kept
