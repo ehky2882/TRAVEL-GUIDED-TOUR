@@ -24,19 +24,16 @@ jobs:
     runs-on: macos-26
     steps:
       - uses: actions/checkout@v4
-      - name: Select newest Xcode
+      - name: Show Xcode
         run: |
-          # The project targets iOS 26.2, so CI must build with the
-          # Xcode 26 toolchain (iOS 26 SDK). An older Xcode (16.x /
-          # iOS 18 SDK) miscompiles SwiftUI result-builder code that
-          # is valid under the iOS 26 SDK — it surfaces as a bogus
-          # "MapContentBuilder ... availability" error in unrelated
-          # image-carousel code. Selecting the highest Xcode on the
-          # runner keeps CI in sync with local + TestFlight builds.
-          ls -d /Applications/Xcode*.app
-          XC=$(ls -d /Applications/Xcode*.app | sort -V | tail -1)
-          echo "Selecting $XC"
-          sudo xcode-select -s "$XC"
+          # Use the macos-26 runner's DEFAULT Xcode. It is an Xcode 26
+          # release (iOS 26 SDK) — enough to compile this project, which
+          # targets iOS 26.2 — and GitHub ships it with a matching iOS
+          # simulator runtime pre-installed. Do NOT xcode-select a newer
+          # Xcode: the newest one on the image can carry an SDK ahead of
+          # every installed simulator runtime, which breaks the test job
+          # ("No simulator runtime version ... available to use with
+          # iphonesimulator SDK version ...").
           xcodebuild -version
           xcrun simctl list runtimes | head -20
       - name: Build
@@ -54,11 +51,11 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v4
-      - name: Select newest Xcode
+      - name: Show Xcode
         run: |
-          XC=$(ls -d /Applications/Xcode*.app | sort -V | tail -1)
-          echo "Selecting $XC"
-          sudo xcode-select -s "$XC"
+          # Default Xcode only — see the build job's note. Selecting a
+          # newer Xcode here picks an SDK with no matching simulator
+          # runtime, and the test build fails.
           xcodebuild -version
       - name: Detect test scheme
         id: check
