@@ -522,6 +522,40 @@
       "primaryCategory": "natureAndParks",
       "tags": ["brooklyn bridge park", "waterfront", "east river", "michael van valkenburgh", "park", "2010"],
       "priceUSD": 0
+    },
+    {
+      "id": "aca59342-5146-44d7-9ed1-b273edce0ad6",
+      "title": "Chrysler Building",
+      "shortDescription": "Two and a half minutes on the Art Deco tower that won the race to be the world's tallest — by hoisting a secret spire into place.",
+      "longDescription": "At the corner of 42nd Street and Lexington Avenue, the Chrysler Building rises seventy-seven stories of brick and steel to a stainless-steel crown that's been called the most beautiful object in New York. It is, top to bottom, a billboard for an automobile company: eagles modeled on Chrysler hood ornaments project from the sixty-first floor, and hubcaps run lower down. It was completed in 1930, designed by the architect William Van Alen for Walter Chrysler, who wanted the tallest building in the world.\n\nSo did several other people. In 1929, Manhattan's skyscrapers were in an arms race, and the Chrysler Building's main rival was the Bank of Manhattan Building at 40 Wall Street — designed, as it happened, by Van Alen's former partner. Van Alen's response was almost theatrical: he had a 125-foot stainless-steel spire assembled in secret inside the building's fire shaft, where no one could see it. After 40 Wall Street topped out at 927 feet, he waited a few weeks, then hoisted the hidden spire into place. In ninety minutes the Chrysler Building grew from 925 to 1,046 feet — the tallest in the world. It held the title for eleven months, until the Empire State Building opened.\n\nThe building was Van Alen's masterpiece, and nearly the end of his career. Walter Chrysler refused to pay his fee, accusing him of taking bribes from subcontractors — a charge never proved, but enough to effectively blacklist him. He died in 1954, mostly forgotten. The building he designed is now considered one of the greatest works of Art Deco architecture in the world. If the lobby is open, step inside: red African travertine, Art Deco marble, and a ceiling mural by Edward Trumbull on transportation and human energy.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/chrysler-building-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4121aafd-d4f8-4494-aa26-f6c52690ee5b",
+          "order": 0,
+          "title": "Chrysler Building",
+          "caption": "Stand at the corner of 42nd Street and Lexington Avenue, looking up at the steel crown.",
+          "latitude": 40.751786096634206,
+          "longitude": -73.97541529509634,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chrysler-building.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The spire on top of this building was assembled in secret.\n\nLook up. The Chrysler Building rises at the corner of 42nd Street and Lexington Avenue — seventy-seven stories of brick and steel, topped by a stainless steel crown that's been called the most beautiful object in New York. Look at the corners as the building rises: at the sixty-first floor, eagles modeled on Chrysler car hood ornaments. Lower down, hubcaps. The whole tower is a billboard for an automobile company.\n\nThe building was completed in 1930, designed by the architect William Van Alen. Walter Chrysler commissioned it as the headquarters of his expanding empire. He wanted the tallest building in the world.\n\nSo did several other people. In 1929, there was an arms race between Manhattan skyscrapers. The main competition was the Bank of Manhattan Building at 40 Wall Street, designed by Van Alen's former partner. Whichever building was taller would win the title of tallest in the world.\n\nVan Alen's response was almost theatrical. He'd designed a 125-foot stainless-steel spire — but kept its existence secret. The pieces were assembled inside the building, in the fire shaft, where nobody outside could see. After 40 Wall Street topped out at 927 feet — taller than the Chrysler Building's then-public height — Van Alen waited a few weeks, then hoisted the hidden spire into place. In ninety minutes, the Chrysler Building grew from 925 feet to 1,046 feet. The tallest in the world.\n\nIt held the title for eleven months. Then the Empire State Building opened.\n\n[beat]\n\nThe Chrysler Building was Van Alen's masterpiece — and nearly his career's ending. Walter Chrysler refused to pay his fee after the building was completed, accusing him of taking bribes from subcontractors. The charge was never proved, but Van Alen was effectively blacklisted. He died in 1954, mostly forgotten. The building he designed is now considered one of the greatest examples of Art Deco architecture in the world.\n\nIf the lobby is open, go in. The interior is red African Travertine, Art Deco marble, and a ceiling mural by Edward Trumbull that depicts transportation and human energy."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 141,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.751786096634206,
+      "centroidLongitude": -73.97541529509634,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["art deco", "skyscraper", "william van alen", "1930", "42nd street", "walter chrysler"],
+      "priceUSD": 0
     }
   ]
 }
