@@ -454,6 +454,40 @@
       "primaryCategory": "architecture",
       "tags": ["renzo piano", "meatpacking district", "american art", "high line", "museum", "2015"],
       "priceUSD": 0
+    },
+    {
+      "id": "fceeb6bf-89a6-40c9-81c4-4b8efc781dcd",
+      "title": "American Museum of Natural History",
+      "shortDescription": "Two and a half minutes at the museum's Beaux-Arts entrance — the Theodore Roosevelt Memorial, and the empty pedestal where his statue stood.",
+      "longDescription": "At the foot of the grand steps on Central Park West, a Beaux-Arts colonnade rises across the museum's facade — four massive columns, an arched portico, and the words \"Theodore Roosevelt Memorial\" carved above. At the top of the steps sits an empty granite pedestal. For eighty-two years it held a bronze statue of Theodore Roosevelt on horseback, flanked by a Native American man and an African man, both on foot. Critics long argued the composition implied a racial hierarchy; the museum requested its removal in 2020, and the statue came down in January 2022. The pedestal is still here, and the museum hasn't said what, if anything, will replace it.\n\nRoosevelt's connection to the museum runs deep — his father was one of its founders — and the whole entrance is officially the New York State Theodore Roosevelt Memorial, designed by John Russell Pope and completed in 1936. Whatever you make of the statue's removal, the building itself was conceived as a monument to him, and still is.\n\nBehind the facade is one of the largest natural history collections in the world: thirty-three million specimens, dioramas, fossils, and a ninety-four-foot blue whale suspended over the Hall of Ocean Life. The Hayden Planetarium sits in the glass cube of the Rose Center, and around the corner on Columbus Avenue is the newest addition — the Gilder Center, by architect Jeanne Gang, opened in 2023, looking like a cave carved from stone. The collection is too big for one visit; pick a hall or two. The blue whale alone is worth the trip.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/american-museum-natural-history-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "868f46cf-8fc0-4848-a4b0-ecebda4b35de",
+          "order": 0,
+          "title": "American Museum of Natural History",
+          "caption": "Stand at the foot of the grand steps on Central Park West, looking up at the colonnade and the empty pedestal.",
+          "latitude": 40.7813,
+          "longitude": -73.9739,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/american-museum-natural-history.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "For eighty-two years, this entrance was guarded by a bronze statue of Theodore Roosevelt on horseback.\n\nYou should be standing at the foot of the grand steps on Central Park West, looking up at the entrance to the American Museum of Natural History. Above you, a Beaux-Arts colonnade rises across the facade — four massive columns, an arched portico, and the words \"Theodore Roosevelt Memorial\" carved across the top. At the top of the steps, in the center, is an empty granite pedestal. That's where the statue stood.\n\nThe Roosevelt statue was installed in 1940. It depicted the twenty-sixth president on horseback, flanked by a Native American man on one side and an African man on the other — both on foot. For decades, critics argued that the composition suggested a racial hierarchy. In 2020, the museum formally requested its removal. The statue came down in January 2022. The pedestal is still here. The museum hasn't announced what, if anything, will replace it.\n\nRoosevelt's connection to this place runs deep. His father was one of the museum's founders. The whole entrance behind you is officially the New York State Theodore Roosevelt Memorial, designed by John Russell Pope and completed in 1936. The colonnade's frieze quotes Roosevelt on nature, on manhood, on the state. Whatever you think of the statue's removal, the building itself was conceived as a monument to him — and still is.\n\n[beat]\n\nBehind the facade is one of the largest natural history collections in the world. Thirty-three million specimens. Dioramas, fossils, a ninety-four-foot blue whale model suspended over the Hall of Ocean Life. The Hayden Planetarium is in the glass cube of the Rose Center, just to your right. And around the corner on Columbus Avenue, you can see the newest addition — the Gilder Center, designed by the architect Jeanne Gang and opened in 2023. It looks like a cave carved out of stone. The contrast between the Beaux-Arts steps in front of you and the Gilder Center around the back is, in itself, a history of how museums have changed in the last century.\n\nSo go on up. The collection is too big to see in one visit. Pick a hall or two. The blue whale alone is worth the trip."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7813,
+      "centroidLongitude": -73.9739,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": ["theodore roosevelt", "central park west", "beaux-arts", "natural history", "museum", "1936"],
+      "priceUSD": 0
     }
   ]
 }
