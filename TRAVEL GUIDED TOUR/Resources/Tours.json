@@ -998,6 +998,40 @@
       "primaryCategory": "history",
       "tags": ["washington square park", "stanford white", "fifth avenue", "potters field", "nyu", "greenwich village"],
       "priceUSD": 0
+    },
+    {
+      "id": "f5f8fc98-713a-4aa6-9fc9-adb353ea911b",
+      "title": "Cooper Hewitt, Smithsonian Design Museum",
+      "shortDescription": "Two and a half minutes at Andrew Carnegie's \"modest\" 64-room mansion — now the only U.S. museum dedicated entirely to design.",
+      "longDescription": "On the corner of Fifth Avenue and 91st Street stands a five-story red-brick and limestone mansion behind a wrought-iron fence and a small lawn. Andrew Carnegie commissioned it in 1899; it opened in 1902 as the home of the Scottish-born steel magnate who had just sold Carnegie Steel for four hundred and eighty million dollars and was, briefly, the richest man in the world. The architects — Babb, Cook and Welch — worked in a restrained Georgian Revival style. Carnegie called it \"the most modest, plainest, and roomiest home in New York.\" It has sixty-four rooms.\n\nRestraint was the point. Carnegie was famously uncomfortable with Gilded Age ostentation. Modest, by his standard, meant sixty-four rooms, the first private residence in New York to have a passenger elevator, and a state-of-the-art steel structural frame — but no obvious gold leaf, no marble palace, no homage to a French château. By the standards of Fifth Avenue mansions of the era, the building was almost austere. Carnegie spent the last sixteen years of his life giving away most of his fortune — funding thousands of libraries around the world, building Carnegie Hall, founding Carnegie Mellon University, supporting peace organizations. He died in 1919. His wife continued to live in the house until 1946, after which the Carnegies donated the building to the Smithsonian.\n\nThe Cooper Hewitt is the only museum in the country dedicated entirely to design — not art, not craft, but design as a discipline. Furniture, graphic design, typography, product design, architecture. Every visitor is given an interactive pen that lets you \"save\" any object you see on display, building a personal catalogue you can review online later. What you go inside for is two things: the objects, and the rooms. Walking through the Carnegie mansion gives you a sense of how the richest American of his era actually chose to live — wealthy but not extravagant, deliberate but not flashy. Of all the Gilded Age mansions in New York, this is the one most worth walking through.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/cooper-hewitt-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "539069f5-4327-474a-9fb0-8953e243acf8",
+          "order": 0,
+          "title": "Cooper Hewitt, Smithsonian Design Museum",
+          "caption": "Stand on Fifth Avenue at 91st Street, in front of the wrought-iron fence and the small lawn of the Carnegie mansion.",
+          "latitude": 40.78439026550675,
+          "longitude": -73.95784340140588,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cooper-hewitt.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Andrew Carnegie called this \"the most modest, plainest, and roomiest home in New York.\" It has sixty-four rooms.\n\nAndrew Carnegie commissioned this mansion in 1899. The house at 2 East 91st Street, on the corner of Fifth Avenue, was completed in 1902 as the home of the Scottish-born steel magnate — who, after selling his Carnegie Steel Company in 1901 for four hundred and eighty million dollars, was briefly the richest man in the world. The architects were Babb, Cook and Welch, working in a restrained Georgian Revival style. Five stories. Red brick and limestone. A wrought-iron fence, a small lawn, a deliberately modest entrance.\n\nRestraint was the point. Carnegie was famously uncomfortable with Gilded Age ostentation. Modest, by his standard, meant sixty-four rooms, the first private residence in New York to have a passenger elevator, and a state-of-the-art steel structural frame — but no obvious gold leaf, no marble palace, no homage to a French château. By the standards of Fifth Avenue mansions of the era, the building was almost austere.\n\nCarnegie spent the last sixteen years of his life giving away most of his fortune — funding thousands of libraries around the world, building Carnegie Hall, founding Carnegie Mellon University, supporting peace organizations. He died in 1919. His wife continued to live in the house until 1946. The Carnegies donated the building to the Smithsonian, and it became a museum.\n\n[beat]\n\nThe Cooper Hewitt is the only museum in the country dedicated entirely to design — not art, not craft, but design as a discipline. Furniture, graphic design, typography, product design, architecture. The museum is built around an unusual concept: every visitor is given an interactive pen that lets you \"save\" any object you see on display, building a personal catalogue you can review online later.\n\nWhat you go inside for is two things. The objects, and the rooms. Walking through the Carnegie mansion gives you a sense of how the richest American of his era actually chose to live — wealthy but not extravagant, deliberate but not flashy. Of all the Gilded Age mansions in New York, this is the one most worth walking through."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.78439026550675,
+      "centroidLongitude": -73.95784340140588,
+      "city": "New York",
+      "primaryCategory": "culturalHeritage",
+      "tags": ["cooper hewitt", "smithsonian", "andrew carnegie", "design museum", "museum mile", "gilded age"],
+      "priceUSD": 0
     }
   ]
 }
