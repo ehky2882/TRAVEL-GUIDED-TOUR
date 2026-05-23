@@ -38,7 +38,7 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
-**Status (2026-05-22):** every V1 functionality milestone is shipped
+**Status (2026-05-23):** every V1 functionality milestone is shipped
 on `main` (M1–M3, M-data-model, M-audio-foundation, M-tour-detail,
 M-player, M-home, M-search, M-maker, M-library, M-geofencing,
 M-offline; M-map was cut). AllTrails-style home (PR #31) is the
@@ -46,24 +46,33 @@ production home. **Pre-M-qa audit complete** — P0 findings closed
 (PRs #22 / #23 / #24, 2026-05-18); P1 + P2 + P3 cleanup batch shipped
 2026-05-20 (PR #51). Unit test target wired (PR #33) and runs on CI
 per PR; CI runs on the `macos-26` runner so it uses the Xcode 26
-toolchain the project targets. **TestFlight: build 1.0 (5) uploaded to
-App Store Connect on 2026-05-22** — the current build. It carries
-PR #54: the on-device M-qa fixes, a simulator-review UX-polish batch
+toolchain the project targets. **TestFlight: build 1.0 (6) being
+uploaded 2026-05-23** carrying the mini-player UX upgrade (welcome
+text in idle, marquee-scroll on overflowing titles, always-present
+skip-10 button, progress ring around play/pause) and 11 additional
+tours (catalog 20 → 31). Build 1.0 (5) uploaded 2026-05-22 carried
+PR #54: on-device M-qa fixes, a simulator-review UX-polish batch
 (always-present mini-player, square-topped island, tour-detail action
-bar, drawer-card carousels, pinch-zoom), and 9 new tours. Earlier
-builds: 1.0 (1) first upload (2026-05-19); 1.0 (3) verified the
+bar, drawer-card carousels, pinch-zoom), and 9 new tours; cleared
+the full M-qa device pass with no issues 2026-05-22. Earlier builds:
+1.0 (1) first upload (2026-05-19); 1.0 (3) verified the
 background-audio fix; 1.0 (4) carried the first home-UX batch and was
-the build the 2026-05-21 M-qa pass ran against. The M-qa checklist
-still needs a run against build 5.
+the build the 2026-05-21 M-qa pass ran against. Quick simulator-only
+verification of build 6's mini-player changes; an on-device pass
+against build 6 is the next step.
 
-**Content (M-launch-content).** 20 tours in `Resources/Tours.json`,
+**Content (M-launch-content).** 31 tours in `Resources/Tours.json`,
 all single-stop. The original 10 NYC landmarks (Grand Central, Times
 Square, South Street Seaport, Empire State Building, Statue of Liberty,
 Brooklyn Bridge, Rockefeller Center, Met, High Line, 9/11 Memorial),
-Brooklyn Museum, and 9 added 2026-05-21/22 — Whitney, AMNH, Brooklyn
+Brooklyn Museum, 9 added 2026-05-21/22 — Whitney, AMNH, Brooklyn
 Bridge Park, Chrysler Building, Flatiron Building, Governors Island,
 Guggenheim, Intrepid, and Casa da Música (Porto — the first non-NYC
-tour). Audio hosted on the `gh-pages` branch (served at
+tour) — and 11 added 2026-05-22/23: Little Island, Manhattan Bridge
+(from DUMBO), Museum of the City of New York, NYPL Fifth Avenue, The
+Oculus, St. Patrick's Cathedral, Vessel (Hudson Yards), Wall Street,
+Washington Square Park, Cooper Hewitt, and El Museo del Barrio. Audio
+hosted on the `gh-pages` branch (served at
 `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`);
 GitHub Releases tried first but serves the wrong `Content-Type` for
 AVPlayer — see `docs/cdn-decision.md` § "Why we switched from Releases
@@ -83,9 +92,9 @@ What's left for V1:
   applicable check on device (2026-05-22, no issues found). The only
   M-qa steps still open are the multi-stop ones — geofenced stop
   advancement and manual next-stop — blocked until a multi-stop tour
-  is authored. All 20 tours are single-stop, so the app's defining
+  is authored. All 31 tours are single-stop, so the app's defining
   feature is uncovered by content.
-- **M-launch-content (optional more)** — owner may decide 20 tours
+- **M-launch-content (optional more)** — owner may decide 31 tours
   are enough for V1 launch, or add more. See `docs/authoring-tours.md`.
 - **Deferred design / polish pass** — theme tokens, real app icon
   (replace placeholder green sphere), custom map pins, final

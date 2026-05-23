@@ -43,7 +43,7 @@ app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 (iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
 — same app body, three different "TVs" it can play on.
 
-## Current State (V1 functionality complete; M-qa UX fixes merged; TestFlight build 1.0 (5) uploaded)
+## Current State (V1 functionality complete; M-qa device-validated; mini-player UX upgraded; TestFlight build 1.0 (6) in flight)
 
 Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`.
 The AllTrails-style home redesign landed via PR #31 on 2026-05-18 and
@@ -75,36 +75,60 @@ squash-merged to `main` on 2026-05-22. TestFlight build **1.0 (5)**
 was uploaded 2026-05-22; an on-device M-qa pass against it the same
 day cleared every applicable check with **no issues found** — V1
 functionality is device-validated.
+On 2026-05-22/23 (evening + late-night session) **11 more tours**
+were added directly to `main` (catalog 20 → 31) and a **mini-player
+UX upgrade** shipped:
+- The idle mini-player now shows a friendly welcome message
+  (*"Hello! Ready to explore? Let's find an audio tour!"*) in place
+  of the old `-` placeholder.
+- Both title and subtitle use a new `Components/MarqueeText.swift`:
+  text that fits renders statically; text that overflows scrolls
+  continuously (two-copy seam-less loop driven by `ViewThatFits`).
+- A **skip-forward 10s** button (`goforward.10`) was added next to
+  play/pause — visible at all times (muted/inert when idle).
+- A **progress ring** wraps the play/pause icon: a faint full-circle
+  track + a trim arc that fills clockwise as `currentTime / duration`
+  advances. Always visible (ring is empty when idle).
+Build **1.0 (6)** is being uploaded to TestFlight to carry these
+changes.
 What's left for V1: a **multi-stop walking tour** (the only M-qa
 steps still open are the multi-stop ones — geofenced stop advancement
-and manual next-stop — blocked because all 20 tours are single-stop),
+and manual next-stop — blocked because all 31 tours are single-stop),
 and the deferred **design / polish pass**.
 
-What's true today (2026-05-22):
+What's true today (2026-05-23):
 
 - `ContentView.swift` uses a custom `AtlasTabBar` (3 tabs: **Home /
   Library / Me**). A persistent **mini-player**
   (`Features/Player/MiniPlayerBar.swift`) sits directly above the tab
   bar **at all times** — showing the active tour (inline pause/resume,
-  tap to open the full player) or a muted "Nothing playing" idle
-  state. The mini-player is a square-cornered rectangle; the tab bar
-  has square top corners + phone-radius bottom corners, so the two
-  stack into one bottom "island." The home drawer's peek height grows
-  to clear the mini-player.
+  skip-forward-10, tap to open the full player) or a muted welcome
+  state ("Hello! Ready to explore? Let's find an audio tour!") with
+  the same control footprint. The mini-player is a square-cornered
+  rectangle; the tab bar has square top corners + phone-radius bottom
+  corners, so the two stack into one bottom "island." The home
+  drawer's peek height grows to clear the mini-player. **Titles
+  marquee-scroll** when too long (see
+  `Components/MarqueeText.swift`); the **play/pause icon is wrapped
+  in a progress ring** that fills clockwise with playback progress.
 - `Features/Home/` is the AllTrails-style layout: full-screen map +
   filter chip row + vertical tour list in a persistent bottom drawer
   + a floating location button (Apple-style: tapping cycles none →
   follow → follow-with-heading; falls back to a custom button because
   `MapUserLocationButton` does not render reliably as a free-floating
   view).
-- `Resources/Tours.json` has **20 tours** (all single-stop): the
+- `Resources/Tours.json` has **31 tours** (all single-stop): the
   original 10 NYC landmarks (Grand Central, Times Square, South Street
   Seaport, Empire State Building, Statue of Liberty, Brooklyn Bridge,
   Rockefeller Center, Met, High Line, 9/11 Memorial), Brooklyn Museum,
-  and 9 added 2026-05-21/22 — Whitney, AMNH, Brooklyn Bridge Park,
+  9 added 2026-05-21/22 — Whitney, AMNH, Brooklyn Bridge Park,
   Chrysler Building, Flatiron Building, Governors Island, Guggenheim,
-  Intrepid (NYC), and Casa da Música (Porto — the first non-NYC tour).
-  Audio hosted on the `gh-pages` branch (served at
+  Intrepid (NYC), and Casa da Música (Porto — the first non-NYC tour) —
+  and 11 added 2026-05-22/23: Little Island, Manhattan Bridge (from
+  DUMBO), Museum of the City of New York, NYPL Fifth Avenue, The
+  Oculus, St. Patrick's Cathedral, Vessel (Hudson Yards), Wall Street,
+  Washington Square Park, Cooper Hewitt, and El Museo del Barrio. Audio
+  hosted on the `gh-pages` branch (served at
   `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`);
   GitHub Releases tried first but serves the wrong MIME type — see
   `docs/cdn-decision.md`. **No multi-stop tour exists yet** — M-qa's

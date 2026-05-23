@@ -2,16 +2,17 @@ import SwiftUI
 
 /// Persistent now-playing bar shown directly above the tab bar.
 /// **Always present** — when a tour's audio is loaded it shows the
-/// active tour with inline pause/resume and tap-to-open-player; when
-/// nothing is playing it shows a muted placeholder so the bottom
+/// active tour with inline pause/resume, skip-forward, and
+/// tap-to-open-player; when nothing is playing it shows a muted
+/// welcome state with the same control footprint, so the bottom
 /// island keeps a constant height.
 ///
 /// Hosted by `ContentView` between the tab content and `AtlasTabBar`.
 /// The bar is a plain rectangle with square corners; it stacks flush
 /// on top of the tab bar (whose top corners are also square), so the
 /// two read as one shape — square at the top, phone-rounded at the
-/// bottom. Tapping the bar body (anywhere but the play/pause button)
-/// opens the full `PlayerView`.
+/// bottom. Tapping the bar body (anywhere but the controls) opens
+/// the full `PlayerView` when a tour is loaded.
 struct MiniPlayerBar: View {
     /// The loaded tour, or `nil` when nothing is playing — the bar then
     /// renders its muted idle state.
@@ -39,15 +40,38 @@ struct MiniPlayerBar: View {
     /// Diameter of the circular leading icon (author avatar / idle
     /// placeholder).
     private static let iconSize: CGFloat = 32
+    /// Visible diameter of the progress ring around the play/pause
+    /// icon. The button's tappable frame is larger (`controlSize`).
+    private static let playRingSize: CGFloat = 36
+    /// Tappable square frame for both the skip-forward and play/pause
+    /// controls — kept ≥ Apple's 44pt HIG minimum.
+    private static let controlSize: CGFloat = 44
+
+    /// Welcome message shown in the title slot when no tour is loaded.
+    private static let idleWelcomeText = "Hello! Ready to explore? Let's find an audio tour!"
+
+    /// 0…1 fraction of the loaded audio that has played. 0 when no
+    /// tour is loaded or the duration is not yet known. Drives both
+    /// the trim arc and animates smoothly because
+    /// `AudioPlayerService` republishes `currentTime` ~2×/sec.
+    private var progress: Double {
+        guard tour != nil, audioPlayer.duration > 0 else { return 0 }
+        let raw = audioPlayer.currentTime / audioPlayer.duration
+        return min(max(raw, 0), 1)
+    }
+
+    /// True when the bar has no tour loaded — used to gate control
+    /// behavior and tone the icons down so the bar reads as inert.
+    private var isIdle: Bool { tour == nil }
 
     var body: some View {
-        Group {
-            if let tour {
-                activeBar(tour: tour)
-            } else {
-                idleBar
-            }
+        HStack(spacing: AtlasSpacing.sm) {
+            bodyButton
+            skipForwardButton
+            playPauseButton
         }
+        .padding(.leading, AtlasSpacing.lg)
+        .padding(.trailing, AtlasSpacing.md)
         .frame(height: Self.barHeight)
         .frame(maxWidth: .infinity)
         .background(AtlasColors.secondaryBackground)
@@ -55,83 +79,53 @@ struct MiniPlayerBar: View {
         .padding(.top, Self.topGap)
     }
 
-    // MARK: - Idle state
+    // MARK: - Leading body (icon + titles)
 
-    /// Shown when no tour is loaded. Structurally identical to the
-    /// active bar — same icon slot, same two text lines — so nothing
-    /// shifts position when playback starts. The lines just read " - ".
-    private var idleBar: some View {
-        HStack(spacing: AtlasSpacing.sm) {
-            idleIcon
-
-            VStack(alignment: .leading, spacing: 1) {
-                Text(" - ")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(1)
-                Text(" - ")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .lineLimit(1)
-            }
-
-            Spacer(minLength: 0)
-        }
-        .padding(.leading, AtlasSpacing.lg)
-        .padding(.trailing, AtlasSpacing.md)
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("Nothing playing")
-    }
-
-    /// Circular muted placeholder — the headphones glyph in the same
-    /// 32pt slot the author avatar occupies when a tour is playing.
-    private var idleIcon: some View {
-        ZStack {
-            Circle().fill(AtlasColors.tertiaryText.opacity(0.15))
-            Image(systemName: "headphones")
-                .font(.system(size: 15))
-                .foregroundStyle(AtlasColors.tertiaryText)
-        }
-        .frame(width: Self.iconSize, height: Self.iconSize)
-    }
-
-    // MARK: - Active state
-
-    private func activeBar(tour: Tour) -> some View {
-        // The bar body and the play/pause control are sibling buttons,
-        // not nested — nested SwiftUI Buttons swallow each other's
-        // taps unreliably.
-        HStack(spacing: AtlasSpacing.sm) {
+    /// Icon + two-line marquee block. Tappable when a tour is loaded
+    /// (opens the full player); a passive view otherwise.
+    @ViewBuilder
+    private var bodyButton: some View {
+        if isIdle {
+            bodyContent
+                .accessibilityElement(children: .combine)
+                .accessibilityLabel(Self.idleWelcomeText)
+        } else {
             Button(action: onExpand) {
-                HStack(spacing: AtlasSpacing.sm) {
-                    authorIcon
-
-                    VStack(alignment: .leading, spacing: 1) {
-                        // Title and subtitle share a type size — they're
-                        // distinguished only by tint (primary vs.
-                        // secondary).
-                        Text(tour.title)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.primaryText)
-                            .lineLimit(1)
-                        Text(subtitle)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                            .lineLimit(1)
-                    }
-
-                    Spacer(minLength: 0)
-                }
-                .contentShape(Rectangle())
+                bodyContent
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Now playing: \(tour.title)")
+            .accessibilityLabel("Now playing: \(tour?.title ?? "")")
             .accessibilityHint("Opens the full player.")
-
-            playPauseButton
         }
-        .padding(.leading, AtlasSpacing.lg)
-        .padding(.trailing, AtlasSpacing.md)
+    }
+
+    private var bodyContent: some View {
+        HStack(spacing: AtlasSpacing.sm) {
+            leadingIcon
+
+            VStack(alignment: .leading, spacing: 1) {
+                MarqueeText(
+                    text: titleText,
+                    font: AtlasTypography.caption,
+                    color: AtlasColors.primaryText
+                )
+                MarqueeText(
+                    text: subtitleText,
+                    font: AtlasTypography.caption,
+                    color: AtlasColors.secondaryText
+                )
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var leadingIcon: some View {
+        if tour != nil {
+            authorIcon
+        } else {
+            idleIcon
+        }
     }
 
     /// Circular avatar of the tour's maker. Falls back to the Atlas
@@ -159,7 +153,25 @@ struct MiniPlayerBar: View {
         .clipShape(Circle())
     }
 
-    private var subtitle: String {
+    /// Circular muted placeholder — headphones glyph in the same
+    /// 32pt slot the author avatar occupies when a tour is playing.
+    private var idleIcon: some View {
+        ZStack {
+            Circle().fill(AtlasColors.tertiaryText.opacity(0.15))
+            Image(systemName: "headphones")
+                .font(.system(size: 15))
+                .foregroundStyle(AtlasColors.tertiaryText)
+        }
+        .frame(width: Self.iconSize, height: Self.iconSize)
+    }
+
+    private var titleText: String {
+        if let tour { return tour.title }
+        return Self.idleWelcomeText
+    }
+
+    private var subtitleText: String {
+        guard tour != nil else { return " " } // blank second line keeps layout stable
         switch audioPlayer.state {
         case .loading:
             return "Loading…"
@@ -169,19 +181,61 @@ struct MiniPlayerBar: View {
             if let maker { return "Paused · \(maker.displayName)" }
             return "Paused"
         case .idle, .playing, .ended:
-            return maker?.displayName ?? ""
+            return maker?.displayName ?? " "
         }
     }
 
-    private var playPauseButton: some View {
-        Button(action: togglePlayPause) {
-            Image(systemName: playPauseIcon)
-                .font(.system(size: 24))
-                .foregroundStyle(AtlasColors.primaryText)
-                .frame(width: 44, height: 44)
+    // MARK: - Controls
+
+    /// 10-second jump-ahead control. Always visible; tonally muted +
+    /// inert when there's no tour to skip within.
+    private var skipForwardButton: some View {
+        Button(action: skipForward) {
+            Image(systemName: "goforward.10")
+                .font(.system(size: 20, weight: .regular))
+                .foregroundStyle(isIdle ? AtlasColors.tertiaryText : AtlasColors.primaryText)
+                .frame(width: Self.controlSize, height: Self.controlSize)
                 .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
+        .disabled(isIdle)
+        .accessibilityLabel("Skip forward 10 seconds")
+    }
+
+    /// Play / pause control wrapped in a thin circular progress ring.
+    /// Ring trims from 0 to `progress` so it fills clockwise as the
+    /// current audio advances. Always visible; tap is inert when
+    /// nothing's loaded.
+    private var playPauseButton: some View {
+        Button(action: togglePlayPause) {
+            ZStack {
+                // Background track — a faint full circle so the ring
+                // is legible even at 0% progress.
+                Circle()
+                    .stroke(
+                        AtlasColors.tertiaryText.opacity(0.3),
+                        lineWidth: 2
+                    )
+                    .frame(width: Self.playRingSize, height: Self.playRingSize)
+                // Progress arc.
+                Circle()
+                    .trim(from: 0, to: progress)
+                    .stroke(
+                        isIdle ? AtlasColors.tertiaryText : AtlasColors.primaryText,
+                        style: StrokeStyle(lineWidth: 2, lineCap: .round)
+                    )
+                    .rotationEffect(.degrees(-90))
+                    .frame(width: Self.playRingSize, height: Self.playRingSize)
+                    .animation(.linear(duration: 0.5), value: progress)
+                Image(systemName: playPauseIcon)
+                    .font(.system(size: 18, weight: .regular))
+                    .foregroundStyle(isIdle ? AtlasColors.tertiaryText : AtlasColors.primaryText)
+            }
+            .frame(width: Self.controlSize, height: Self.controlSize)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .disabled(isIdle)
         .accessibilityLabel(audioPlayer.state == .playing ? "Pause" : "Play")
     }
 
@@ -195,6 +249,7 @@ struct MiniPlayerBar: View {
     }
 
     private func togglePlayPause() {
+        guard tour != nil else { return }
         switch audioPlayer.state {
         case .playing:
             audioPlayer.pause()
@@ -205,5 +260,10 @@ struct MiniPlayerBar: View {
             // which owns stop/intro sequencing and the retry path.
             onExpand()
         }
+    }
+
+    private func skipForward() {
+        guard tour != nil else { return }
+        audioPlayer.skip(by: 10)
     }
 }
