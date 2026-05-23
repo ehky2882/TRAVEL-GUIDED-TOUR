@@ -930,6 +930,40 @@
       "primaryCategory": "architecture",
       "tags": ["vessel", "hudson yards", "thomas heatherwick", "2019", "public art", "the shed"],
       "priceUSD": 0
+    },
+    {
+      "id": "715c30c6-bec9-49de-ba5d-f0686e3546a9",
+      "title": "Wall Street",
+      "shortDescription": "Two minutes at the corner where George Washington was inaugurated and, three years later, the stock market was born across the street.",
+      "longDescription": "At the intersection of Wall, Broad, and Nassau Streets, two founding moments of American life face each other across a single block. To the north is Federal Hall, a Greek Revival temple with massive columns and a bronze statue of George Washington on its steps — standing roughly where, on April 30, 1789, Washington placed his hand on a Bible and was sworn in as the first president of the United States. The original Federal Hall, torn down in 1812, was also where the first Congress met, where the Bill of Rights was passed, and where the Supreme Court first convened. For about a year, this corner was the capital of the United States.\n\nTo the south, across the intersection, is the New York Stock Exchange — six Corinthian columns, a carved pediment, and, on most days, an enormous American flag draped across the facade. In 1792, twenty-four brokers signed an agreement under a buttonwood tree just down the street to trade with each other on fixed terms. That agreement became the NYSE. The street itself takes its name from a wooden wall the Dutch built here in 1653 to defend against an expected British attack — the British took the city anyway, removed the wall, and the road kept the name.\n\nFor most of the eighteenth and nineteenth centuries, the civic founding and the financial founding sat across the street from each other, quietly. Then, slowly, the financial side took over. The capital moved to Washington. The traders grew rich. By the twentieth century, \"Wall Street\" had stopped meaning a place and started meaning an idea — a synonym for American capitalism, for power, sometimes for excess. But the corner is still both things at once. The country was made on these stones. The market was made across the way.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/wall-street-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f44b6df7-a7b4-409b-b9a1-3fc6fb1f6c95",
+          "order": 0,
+          "title": "Wall Street, the Corner of Wall, Broad, and Nassau",
+          "caption": "Stand at the intersection of Wall, Broad, and Nassau Streets, between Federal Hall and the New York Stock Exchange.",
+          "latitude": 40.70710742645961,
+          "longitude": -74.01058628880524,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wall-street.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The first American president was inaugurated here. And then this became Wall Street.\n\nYou should be standing at the intersection of Wall, Broad, and Nassau Streets. Look north. The Greek Revival building with the massive columns and the bronze statue on its steps is Federal Hall. The statue is George Washington. He's standing roughly where, on April 30, 1789, he placed his hand on a Bible and was sworn in as the first president of the United States.\n\nLook south, across the intersection. The building draped in the enormous American flag — the one with the six Corinthian columns and the carved pediment — is the New York Stock Exchange.\n\nThe street running east-west between them is called Wall because in 1653, the Dutch built an actual wooden wall here, to defend against an expected British attack. The British took the city anyway, removed the wall, and the road kept the name.\n\nTwo American institutions were born on this corner.\n\nThe first was the country itself. The original Federal Hall — torn down in 1812 — was where George Washington was inaugurated, where the first Congress met, where the Bill of Rights was passed, where the Supreme Court first convened. For about a year, this was the capital of the United States.\n\nThe second was the stock market. In 1792, twenty-four brokers signed an agreement under a buttonwood tree just down the street to trade with each other on fixed terms. That agreement became the New York Stock Exchange.\n\n[beat]\n\nFor most of the eighteenth and nineteenth centuries, these two institutions were neighbors — the civic founding and the financial founding sat across the street from each other, quietly. Then, slowly, the financial side took over. The capital moved to Washington. The traders grew rich. By the twentieth century, \"Wall Street\" had stopped meaning a place and started meaning an idea — a synonym for American capitalism, for power, sometimes for excess.\n\nBut the corner is still both things at once. The country was made on these stones. The market was made across the way. It's worth knowing they happened on the same block."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.70710742645961,
+      "centroidLongitude": -74.01058628880524,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": ["wall street", "federal hall", "george washington", "nyse", "1789", "1792"],
+      "priceUSD": 0
     }
   ]
 }
