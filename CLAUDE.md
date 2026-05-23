@@ -43,6 +43,21 @@ app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 (iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
 — same app body, three different "TVs" it can play on.
 
+## Claude Automation Rules
+
+These happen **automatically, without the owner asking**. The owner
+should never need to say "run the tests," "validate tours," "merge
+the PR," "update the docs," or "write a handoff."
+
+| # | Trigger | What Claude does automatically |
+|---|---------|-------------------------------|
+| 1 | Every session start | Run full git/PR health check (§ Session-start ritual) + read latest HANDOFF file — before any other work |
+| 2 | After any edit to `Resources/Tours.json` | Run `swift scripts/validate-tours.swift`; fix errors before continuing |
+| 3 | Before pushing any code PR | Call `test_sim` (XcodeBuildMCP); fix failures before pushing |
+| 4 | Doc-only PR is ready | Create branch → commit → open PR → wait for CI → squash-merge — all in one flow |
+| 5 | Session ends (touched code or content) | Update `CLAUDE.md` + `ROADMAP.md` in same commit; write `archive/HANDOFF-YYMMDD.md`; update `archive/README.md` |
+| 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
+
 ## Current State (V1 functionality complete; M-qa device-validated; mini-player UX upgraded; TestFlight build 1.0 (6) uploaded)
 
 Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`.
@@ -200,93 +215,36 @@ historical reference). **First session under a new Claude account?**
 Also read `archive/ACCOUNT-TRANSFER-260520.md` for cold-start
 orientation + working-style notes.
 
-## Keep these docs in sync
+## Keep Docs in Sync (automatic — no prompting needed)
 
-**Rule:** every session that ships a milestone, cuts scope, or
-changes the "what's true today" state of the project updates
-`CLAUDE.md` (this file) and `ROADMAP.md` *in the same commit* —
-never as a follow-up.
+Every session that ships a milestone, cuts scope, or changes "what's true today"
+must update `CLAUDE.md` + `ROADMAP.md` in the same commit — never as a follow-up.
+Claude also writes `archive/HANDOFF-YYMMDD.md` (today's date) + updates
+`archive/README.md` at the end of any session that touched code or content.
+These are non-negotiable; the owner should never have to ask.
 
-Concretely, before ending a session that touched feature code,
-check whether:
-- the **Current State** section above still describes reality
-- the **Architecture** folder map still matches the on-disk layout
-- the relevant **ROADMAP** milestone is marked ✅ Done (PR #N) and
-  any decisions / cuts / follow-ups are recorded
-
-If yes, no doc change needed. If no, fix it in the same commit as
-the code change. Stale docs poisoned a recent session (Claude
-reported "all milestones done" without knowing about PR #19's home
-redesign) — the rule prevents a repeat.
-
-Temporary session-bridge notes don't live at repo root. If a
-session needs one, fold the permanent content into `CLAUDE.md` /
-`ROADMAP.md` before the session ends and move the snapshot to
-`archive/` with a `YYMMDD` suffix (e.g. `archive/HANDOFF-260518.md`).
-
-## Session-start ritual
-
-Before doing anything substantive in a session — especially the
-first action that opens Xcode or runs the app — verify the local
-state. This prevents the "why doesn't my simulator show last
-night's work?" confusion (see `docs/troubleshooting.md` § 1).
+## Session-start ritual (automatic — Claude runs this first, every session)
 
 ```bash
-cd ~/Desktop/"TRAVEL GUIDED TOUR"
-git fetch                        # see what's on origin
-git status                       # any uncommitted leftovers?
-git branch --show-current        # are you on main, or a branch?
-git log origin/main..HEAD        # any local commits not pushed?
-gh pr list --state open          # any in-flight PRs?
+git fetch && git status && git branch --show-current && git log origin/main..HEAD && gh pr list --state open
+ls archive/HANDOFF-*.md | tail -1   # then read that file
 ```
 
-Then read the **most recent `archive/HANDOFF-*.md`** —
-`ls archive/HANDOFF-*.md | tail -1` to find it. It captures
-mid-flight state the repo's permanent docs don't: queued feedback,
-what was about to be tackled next, tribal knowledge from the prior
-session. Older HANDOFFs in `archive/` are historical — only the
-latest is part of this ritual.
+Run these commands as the first action, before responding to any substantive
+request. Read the HANDOFF file output before doing anything else. Investigate
+uncommitted changes before acting on them; never blindly add/commit leftovers.
 
-If `git status` shows uncommitted changes from a prior session,
-investigate before continuing — don't blindly add/commit. The
-prior session may have left them deliberately (parked, WIP) or
-accidentally (Xcode auto-save, abandoned experiment).
+## Merging PRs
 
-If on a feature branch with un-pushed commits, decide whether to
-push, merge, or abandon them before starting new work — switching
-branches with un-pushed work loses the work.
+**Doc-only / content-only (auto-merge, no owner approval needed):**
+`*.md`, `docs/`, `archive/`, `scripts/`, `TRAVEL GUIDED TOURTests/`,
+`.github/workflows/`, lint configs, `Resources/Tours.json`.
+Claude creates the PR, waits for CI green, then squash-merges — all in one
+uninterrupted flow. Owner pre-authorized this class of PR on 2026-05-18.
 
-## Merging PRs (working rule with the owner)
-
-**Owner pre-authorization (established 2026-05-18):** Claude may
-merge **doc-only and content-only PRs** without asking for explicit
-per-PR approval, using GitHub's squash-merge. Code PRs (anything
-touching `.swift` files inside the `TRAVEL GUIDED TOUR/` source
-folder) always wait for owner OK, since they affect the running
-app and owner wants to validate visually in the simulator.
-
-Concrete boundary, what counts as doc-only / content-only (auto-mergeable):
-- `*.md` files (docs)
-- `ROADMAP.md`, `CLAUDE.md`, `CONTRIBUTING.md`
-- `docs/`, `archive/`
-- `scripts/` (developer tooling, doesn't ship in the app)
-- `TRAVEL GUIDED TOURTests/` (test code; doesn't affect the
-  running app on phones, only the test target on CI)
-- `.github/workflows/` (CI definitions; only run on GitHub's
-  servers)
-- Lint / tooling configs (`.swiftlint.yml`, etc.)
-- `Resources/Tours.json` content additions or edits
-
-What's **not** auto-mergeable — code touching the running app:
-- Anything in `TRAVEL GUIDED TOUR/<source-folder>/*.swift`
-  (Audio, Components, Data, Features, Location, Models, Theme,
-  ContentView, SplashView, App entry)
-- The Xcode project file (`*.xcodeproj`, `*.pbxproj`) —
-  changes affect what builds
-- Asset catalogs (`Assets.xcassets/`) — affect what users see
-
-When in doubt, ask. Better to over-confirm than to merge something
-that turns out to be visible to users without their review.
+**Code PRs (wait for owner OK):**
+`*.swift` source files, `*.xcodeproj`/`*.pbxproj`, `Assets.xcassets/`.
+Open the PR, post a summary, then stop and wait for explicit owner approval.
 
 ## Repo-root layout
 
@@ -331,50 +289,45 @@ Beyond this file and `ROADMAP.md`:
 
 ## Build & Run
 
-(Build = compile the source files into a runnable app, like baking
-ingredients into a cake.)
+**Use XcodeBuildMCP tools — never raw `xcodebuild` shell commands.**
+XcodeBuildMCP (provided by the Sentry MCP server) is the preferred path for
+all Xcode operations. Session defaults are persisted in
+`.xcodebuildmcp/config.yaml` (project, scheme, simulator, configuration) so
+most calls need zero arguments.
+
+### XcodeBuildMCP tool cheat-sheet
+
+| Task | Tool to call | Notes |
+|------|-------------|-------|
+| Verify defaults are set | `session_show_defaults` | **Required first call every session before any build/test** |
+| Build for iOS Simulator | `build_sim` | Compile-only, no launch |
+| Build + launch in Simulator | `build_run_sim` | Boots sim, installs, opens Simulator.app |
+| Run unit tests | `test_sim` | Runs `TRAVEL GUIDED TOURTests` target |
+| Take simulator screenshot | `screenshot` | Returns image path or base64 |
+| List available schemes | `list_schemes` | Useful after project structure changes |
+
+### Automation rule
+
+**Run `test_sim` automatically before pushing any code PR.** No exceptions
+for covered layers (`Models/`, `Data/`, `Audio/`, `Location/`). Skip for
+doc-only, CI-only, `Features/`/`Components/`/`Theme/`-only, or `Tours.json`
+content-only changes — CI covers those.
+
+### Fallback (CI + macOS builds)
+
+CI and macOS-specific builds still use raw `xcodebuild` because XcodeBuildMCP
+targets simulator workflows:
 
 ```bash
-# macOS
+# macOS build (fallback only)
 xcodebuild -scheme "TRAVEL GUIDED TOUR" -configuration Debug build
 
-# iOS Simulator (a fake iPhone running on the Mac for testing)
-xcodebuild -scheme "TRAVEL GUIDED TOUR" -destination "generic/platform=iOS Simulator" build
-
-# visionOS Simulator (a fake Vision Pro headset on the Mac)
+# visionOS Simulator (not covered by XcodeBuildMCP defaults)
 xcodebuild -scheme "TRAVEL GUIDED TOUR" -destination "generic/platform=visionOS Simulator" build
 ```
 
-Run the unit test suite:
-
-```bash
-xcodebuild test \
-  -scheme "TRAVEL GUIDED TOUR" \
-  -destination "platform=iOS Simulator,name=iPhone 17,OS=latest" \
-  -configuration Debug
-```
-
-The `TRAVEL GUIDED TOURTests` Unit Testing Bundle target hosts six
-XCTest classes against the data / logic layer (no UI / view tests).
-Same suite runs on CI per PR via `.github/workflows/ci.yml`.
-
-**When to run tests (Claude rule):** cadence is trigger-based, not
-time-based.
-
-- **Run them when** you've edited code in `Models/`, `Data/`,
-  `Audio/`, or `Location/` (the layers tests actually cover), or
-  before pushing any code PR, or after rebasing / merging `main`
-  into a feature branch, or after resolving a merge conflict in
-  code.
-- **Skip them when** the change is doc-only, CI-only,
-  Xcode-config-only, or only touches `Features/` / `Components/` /
-  `Theme/` (no UI tests exist), or only adds `Resources/Tours.json`
-  content (the validator script + decoding tests on CI cover this).
-- **Don't run them "just to check"** at session start — if no
-  covered code changed, nothing has changed.
-
-Typical session: 1–2 runs total, right before pushing each code PR.
-CI is the safety net regardless.
+The `TRAVEL GUIDED TOURTests` bundle has 6 XCTest classes covering the
+data/logic layer (no UI tests). Same suite runs on CI per PR.
 
 ## Architecture
 
