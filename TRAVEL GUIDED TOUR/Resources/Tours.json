@@ -760,6 +760,40 @@
       "primaryCategory": "history",
       "tags": ["manhattan bridge", "dumbo", "1909", "leon moisseiff", "beaux-arts", "east river"],
       "priceUSD": 0
+    },
+    {
+      "id": "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
+      "title": "Museum of the City of New York",
+      "shortDescription": "Two minutes on the Colonial Revival museum at 103rd Street — the only major NYC museum whose single subject is the city itself.",
+      "longDescription": "On Fifth Avenue at 103rd Street — the northern end of Museum Mile, just across from Central Park's Conservatory Garden — stands a red-brick, white-marble Colonial Revival facade with a symmetrical entrance and tall arched windows. This is the Museum of the City of New York, founded in 1923 to do something simple but unusual: document the city itself. Not the art of New York, not the natural history of New York, but the actual city — its streets, its people, its political history, its architecture, its photographs, its everyday objects. It's the only major museum in New York whose single subject is the city itself.\n\nThe current building opened in 1932, designed by Joseph H. Freedlander in a Colonial-American style with no real historical accuracy in this neighborhood — a deliberate signal of \"old New York\" to anyone walking up. Behind the facade, the collection now numbers around one and a half million objects. The strongest section is photography — over a million images, including Berenice Abbott's photographs of 1930s New York and Jacob Riis's photographs of the Lower East Side that helped expose the conditions of nineteenth-century tenement life. There are also costumes, maps, paintings, theatrical ephemera, political artifacts — anything that documents what New York has been.\n\nAmong the big New York museums, this one gets less attention. It's smaller; it doesn't have the marquee paintings. But if you've ever wondered what New York looked like a hundred years ago, what the air felt like in the tenements, who lived where, what they wore — this is the museum that knows. Go in if you have time. Or keep walking up Fifth Avenue: the Conservatory Garden, just across the street, is one of the quietest spots in Central Park.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/museum-of-the-city-of-new-york-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b6f693c4-cddc-4c83-b87c-49bac7283093",
+          "order": 0,
+          "title": "Museum of the City of New York",
+          "caption": "Stand on Fifth Avenue at 103rd Street, looking at the red-brick Colonial Revival entrance.",
+          "latitude": 40.7927,
+          "longitude": -73.9521,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/museum-of-the-city-of-new-york.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Most museums in this city are about somewhere else. This one is about here.\n\nRed brick and white marble, a Colonial Revival facade — the Museum of the City of New York stands on Fifth Avenue at 103rd Street, at the northern end of what's called Museum Mile. The entrance is symmetrical, with tall arched windows. Across the street, behind you, is the entrance to Central Park's Conservatory Garden.\n\nThe museum was founded in 1923 to do something simple but unusual: document the city itself. Not the art of New York, not the natural history of New York, but the actual city — its streets, its people, its political history, its architecture, its photographs, its everyday objects. It is the only major museum in New York that takes the city as its single subject.\n\nThe current building opened in 1932, designed by the architect Joseph H. Freedlander to look colonial-American — not a style with much historical accuracy in this neighborhood, but a deliberate choice. The museum's founders wanted a building that signaled \"old New York\" — that telegraphed history at first glance, before you even walked in.\n\nThe collection now numbers around one and a half million objects. The strongest section is photography — over a million images, including the Berenice Abbott photographs of 1930s New York and the Jacob Riis photographs of the Lower East Side that helped expose the conditions of nineteenth-century tenement life. There are also costumes, maps, paintings, theatrical ephemera, political artifacts. Anything that documents what New York has been.\n\n[beat]\n\nAmong the big New York museums — the Met, MoMA, the Whitney — this one gets less attention. It's smaller. It doesn't have the marquee paintings. But if you've ever wondered what New York looked like a hundred years ago, what the air felt like in the tenements, who lived where, what they wore, this is the museum that knows.\n\nGo in if you have time. Or just keep walking up Fifth Avenue — Conservatory Garden, just across the street, is one of the quietest spots in Central Park."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7927,
+      "centroidLongitude": -73.9521,
+      "city": "New York",
+      "primaryCategory": "culturalHeritage",
+      "tags": ["museum mile", "fifth avenue", "colonial revival", "jacob riis", "berenice abbott", "1923"],
+      "priceUSD": 0
     }
   ]
 }
