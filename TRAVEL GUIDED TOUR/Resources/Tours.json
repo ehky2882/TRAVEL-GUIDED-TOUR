@@ -726,6 +726,40 @@
       "primaryCategory": "natureAndParks",
       "tags": ["little island", "heatherwick", "concrete tulips", "hudson river", "pier 54", "titanic"],
       "priceUSD": 0
+    },
+    {
+      "id": "bc45f93d-016b-455c-ac94-e5c82f60d77c",
+      "title": "Manhattan Bridge, from DUMBO",
+      "shortDescription": "Two minutes on the workhorse bridge of New York — and the corner in DUMBO where everyone takes the picture.",
+      "longDescription": "On the corner of Washington and Water Streets in DUMBO, look east. The view in front of you — the Manhattan Bridge framing the Empire State Building, with the cobblestones of Washington Street running toward it — has shown up in more films, fashion shoots, and Instagram photos than almost any other view in New York. Every day a few hundred people stop on this spot to take the picture.\n\nThe bridge itself is the Manhattan Bridge — a suspension bridge with a main span of just under fifteen hundred feet, designed by the engineer Leon Moisseiff and opened in 1909, twenty-six years after the Brooklyn Bridge just to the south. Where the Brooklyn Bridge is the romantic one, the older sibling on every postcard, the Manhattan Bridge is the workhorse: four subway lines run across its lower decks, seven lanes of cars cross its middle, and a pedestrian walkway and a separate bike lane sit above. It is what actually keeps Lower Manhattan connected to Brooklyn day in and day out.\n\nOn the Manhattan side, the bridge's grand entrance — a Beaux-Arts colonnade and triumphal arch on the Bowery — was designed by Carrère and Hastings, the firm behind the New York Public Library. It is some of the most impressive civic architecture in the city, and almost nobody notices. But what most people see is what you're looking at right now: the bridge framed in a perfect Brooklyn view, with Manhattan visible through its arches. Take the photo. Then walk under the bridge and out to the East River — the view from the waterfront is even better.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/manhattan-bridge-from-dumbo-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8fe24419-173b-4f3b-931d-dd8b0ef18db7",
+          "order": 0,
+          "title": "Manhattan Bridge, from DUMBO",
+          "caption": "Stand at Washington and Water Streets in DUMBO, looking east at the bridge framing the Empire State Building.",
+          "latitude": 40.70339402267329,
+          "longitude": -73.98941690060667,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/manhattan-bridge-from-dumbo.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "You're standing on the most photographed corner in Brooklyn.\n\nThe corner you're on is Washington Street and Water Street, in DUMBO. Look east. The view in front of you — the Manhattan Bridge framing the Empire State Building, with the cobblestones of Washington Street leading toward it — has appeared in more films, fashion shoots, and Instagram photos than almost any other view in New York. Every day, several hundred people stop on this exact spot to take the picture.\n\nThe bridge itself is the Manhattan Bridge. It opened in 1909 — twenty-six years after the Brooklyn Bridge, just to the south. It's a suspension bridge, with a main span of just under fifteen hundred feet, designed by the engineer Leon Moisseiff. Like the Brooklyn Bridge, it connects Lower Manhattan to Brooklyn — but it's larger, faster, and carries far more traffic. Four subway lines run across its lower decks. Seven lanes of cars cross its middle. Above all of that, a pedestrian walkway and a separate bike lane.\n\nThe Manhattan Bridge is one of the great forgotten landmarks of New York. It opened to less fanfare than its older neighbor, and it has never quite escaped the Brooklyn Bridge's shadow. The Brooklyn Bridge is the romantic one — older, more storied, the symbol on every postcard. The Manhattan Bridge is the workhorse. It carries the trains. It carries the trucks. It is what actually keeps Lower Manhattan connected to Brooklyn day in and day out.\n\nOn the Manhattan side, the bridge's grand entrance was designed by the firm Carrère and Hastings — the architects of the New York Public Library. The colonnade and triumphal arch at the foot of the bridge, on the Bowery, are some of the most impressive Beaux-Arts civic architecture in the city. Almost nobody notices them.\n\n[beat]\n\nBut what most people see is what you're looking at right now — the bridge framed in a perfect Brooklyn view, with Manhattan visible through its arches. The composition is so good it's hard to take a bad photo here. Go ahead, take one.\n\nWhen you're done, walk under the bridge and out to the East River. The view from the waterfront is even better."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.70339402267329,
+      "centroidLongitude": -73.98941690060667,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": ["manhattan bridge", "dumbo", "1909", "leon moisseiff", "beaux-arts", "east river"],
+      "priceUSD": 0
     }
   ]
 }
