@@ -692,6 +692,40 @@
       "primaryCategory": "history",
       "tags": ["uss intrepid", "aircraft carrier", "world war two", "pier 86", "space shuttle", "hudson river"],
       "priceUSD": 0
+    },
+    {
+      "id": "05f53b83-abde-422e-9d6f-a2bb21c4be07",
+      "title": "Little Island, Southwest Overlook",
+      "shortDescription": "Two and a half minutes from the high point of Heatherwick's concrete-tulip park, built where the Carpathia once landed Titanic survivors.",
+      "longDescription": "The Southwest Overlook is the highest point on Little Island — a 2.4-acre park floating above the Hudson at 13th Street, in the Meatpacking District. From here you can see most of the park at a glance: the amphitheater curving down toward the water below you, the Hudson stretching south toward the Statue of Liberty, and the Manhattan skyline to the east with Hudson Yards just north and the Empire State Building beyond it. Directly beneath your feet is the engineering trick that holds the whole park up — more than a hundred concrete piles rising out of the river, each carved into a shallow bowl. Concrete tulips.\n\nThe site used to be Pier 54, one of the great transatlantic piers of the early twentieth century. The Lusitania departed from here on its final voyage in 1915; three years earlier, the Cunard ship Carpathia had docked at this pier carrying the seven hundred and ten passengers and crew rescued from the lifeboats of the Titanic. The pier was destroyed by Hurricane Sandy in 2012, by which point it was already long abandoned.\n\nWhat was built in its place is one of the most expensive privately funded public parks in American history. Little Island opened in 2021, designed by Heatherwick Studio — the same firm behind the Vessel in Hudson Yards — at a cost of around two hundred and sixty million dollars, almost all of it paid by Barry Diller and Diane von Furstenberg. The concrete tulips were an engineering answer to the fact that the Hudson bottom couldn't take a normal pier; Heatherwick designed a park that floats on a forest of stems. The amphitheater below hosts free music, theater, and dance all summer, and the view from here is one of the better sunset views in Manhattan.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/little-island-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1e43790b-69a5-48d7-8852-6a6b0f471dbb",
+          "order": 0,
+          "title": "Little Island, Southwest Overlook",
+          "caption": "Stand at the Southwest Overlook, the highest point on the island, the amphitheater below you and the Hudson to your south.",
+          "latitude": 40.741898238219996,
+          "longitude": -74.01128824249908,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/little-island.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Titanic survivors landed on a pier that used to be here.\n\nThe Southwest Overlook is the highest point on Little Island, the 2.4-acre park that floats above the Hudson River at 13th Street, in the Meatpacking District. From here, you can see most of the park in one glance. Below you, the amphitheater curves down toward the water. To your south, the Hudson stretches toward the Statue of Liberty, visible in the distance. To your east, the Manhattan skyline — Hudson Yards just to the north, the Empire State Building beyond it. And directly beneath your feet, the engineering trick that holds the whole park up: more than a hundred concrete piles rising out of the river, each one carved into a shallow bowl. Concrete tulips. They support everything.\n\nThe park stands on the site of what was once Pier 54 — one of the great transatlantic piers of the early twentieth century. The Lusitania departed from here on its final voyage in 1915. Three years earlier, in 1912, the Cunard ship Carpathia had docked here carrying the survivors of the Titanic — the seven hundred and ten passengers and crew rescued from the lifeboats. The pier was destroyed by Hurricane Sandy in 2012, by which point it was already long abandoned.\n\nWhat was built in its place is one of the most expensive privately funded public parks in American history. Little Island opened in 2021. It was designed by Heatherwick Studio — the same firm responsible for the Vessel in Hudson Yards. It cost about two hundred and sixty million dollars, almost entirely paid for by Barry Diller and Diane von Furstenberg.\n\nThe concrete tulips were an engineering response to a real constraint. The Hudson River bottom couldn't take a normal pier. So Heatherwick designed something that floats, more or less, on a forest of stems. The tulip tops act as planters, water catchments, and structural supports all at once.\n\n[beat]\n\nThe amphitheater below you hosts free performances all summer — music, theater, dance. The view from where you're standing is one of the better sunset views in Manhattan.\n\nFor now, stay a while. The Hudson is in front of you. The city is behind you. Most visitors walk straight through the island in fifteen minutes. The view rewards a longer look."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.741898238219996,
+      "centroidLongitude": -74.01128824249908,
+      "city": "New York",
+      "primaryCategory": "natureAndParks",
+      "tags": ["little island", "heatherwick", "concrete tulips", "hudson river", "pier 54", "titanic"],
+      "priceUSD": 0
     }
   ]
 }
