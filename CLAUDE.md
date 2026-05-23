@@ -43,7 +43,7 @@ app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
 (iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
 — same app body, three different "TVs" it can play on.
 
-## Current State (V1 functionality complete; M-qa device-validated; mini-player UX upgraded; TestFlight build 1.0 (6) in flight)
+## Current State (V1 functionality complete; M-qa device-validated; mini-player UX upgraded; TestFlight build 1.0 (6) uploaded)
 
 Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`.
 The AllTrails-style home redesign landed via PR #31 on 2026-05-18 and
@@ -89,8 +89,8 @@ UX upgrade** shipped:
 - A **progress ring** wraps the play/pause icon: a faint full-circle
   track + a trim arc that fills clockwise as `currentTime / duration`
   advances. Always visible (ring is empty when idle).
-Build **1.0 (6)** is being uploaded to TestFlight to carry these
-changes.
+TestFlight build **1.0 (6)** was uploaded 2026-05-23 carrying these
+changes; on-device M-qa against build 6 is the next step.
 What's left for V1: a **multi-stop walking tour** (the only M-qa
 steps still open are the multi-stop ones — geofenced stop advancement
 and manual next-stop — blocked because all 31 tours are single-stop),

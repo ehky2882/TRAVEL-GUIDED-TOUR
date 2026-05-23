@@ -46,20 +46,21 @@ production home. **Pre-M-qa audit complete** — P0 findings closed
 (PRs #22 / #23 / #24, 2026-05-18); P1 + P2 + P3 cleanup batch shipped
 2026-05-20 (PR #51). Unit test target wired (PR #33) and runs on CI
 per PR; CI runs on the `macos-26` runner so it uses the Xcode 26
-toolchain the project targets. **TestFlight: build 1.0 (6) being
-uploaded 2026-05-23** carrying the mini-player UX upgrade (welcome
-text in idle, marquee-scroll on overflowing titles, always-present
-skip-10 button, progress ring around play/pause) and 11 additional
-tours (catalog 20 → 31). Build 1.0 (5) uploaded 2026-05-22 carried
+toolchain the project targets. **TestFlight: build 1.0 (6) uploaded
+to App Store Connect on 2026-05-23** — the current build. Carries
+the mini-player UX upgrade (welcome text in idle, marquee-scroll on
+overflowing titles, always-present skip-10 button, progress ring
+around play/pause) and 11 additional tours (catalog 20 → 31). Build
+1.0 (5) uploaded 2026-05-22 carried
 PR #54: on-device M-qa fixes, a simulator-review UX-polish batch
 (always-present mini-player, square-topped island, tour-detail action
 bar, drawer-card carousels, pinch-zoom), and 9 new tours; cleared
 the full M-qa device pass with no issues 2026-05-22. Earlier builds:
 1.0 (1) first upload (2026-05-19); 1.0 (3) verified the
 background-audio fix; 1.0 (4) carried the first home-UX batch and was
-the build the 2026-05-21 M-qa pass ran against. Quick simulator-only
-verification of build 6's mini-player changes; an on-device pass
-against build 6 is the next step.
+the build the 2026-05-21 M-qa pass ran against. Build 6's mini-player
+changes were verified in the simulator before upload; an on-device
+M-qa pass against build 6 is the next step.
 
 **Content (M-launch-content).** 31 tours in `Resources/Tours.json`,
 all single-stop. The original 10 NYC landmarks (Grand Central, Times
