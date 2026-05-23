@@ -862,6 +862,40 @@
       "primaryCategory": "architecture",
       "tags": ["santiago calatrava", "world trade center", "oculus", "path station", "transit hub", "2016"],
       "priceUSD": 0
+    },
+    {
+      "id": "0bb4b9ae-ae40-4759-9128-ea433d378bb8",
+      "title": "St. Patrick's Cathedral",
+      "shortDescription": "Two minutes at the Gothic cathedral that began on the city's northern frontier — built by Irish-American pennies into a claim to belong.",
+      "longDescription": "On Fifth Avenue between 50th and 51st Streets, two white-marble spires rise three hundred and thirty feet above the sidewalk. This is St. Patrick's Cathedral — the seat of the Archdiocese of New York and the largest Gothic Revival Catholic cathedral in the United States. It was designed by James Renwick Jr., the architect of the Smithsonian Castle in Washington and Grace Church downtown, in a Gothic style modeled on the great cathedrals of France and Germany. Construction began in 1858 and continued through the Civil War, finally opening in 1879.\n\nWhat made it remarkable wasn't just the architecture. When ground was broken, this stretch of Fifth Avenue was the northern frontier of the city — open fields, a few farmhouses. Locating the cathedral here was deliberate: a public claim that Irish-American Catholics, then the city's largest immigrant group and one of its most despised, belonged at the center of New York's future. Archbishop John Hughes raised the construction funds largely from the city's Catholic poor — pennies and nickels from servants, laborers, and washerwomen, contributed over two decades. The result was a building whose presence was, and is, a political statement as much as a religious one.\n\nSt. Patrick's remains a working cathedral. Mass is celebrated multiple times a day. State funerals have been held here for Babe Ruth, Robert F. Kennedy, and Joe DiMaggio. The bronze doors weigh more than nine thousand pounds each. The Rose Window above the main entrance is twenty-six feet across. And the side chapels, including the Lady Chapel behind the main altar, are open to anyone who walks in — a quiet pocket of stone and stained glass that, on a weekday morning, feels like a different city entirely.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/st-patricks-cathedral-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "090b3359-b18f-4b1b-a9f1-93b5db356c1a",
+          "order": 0,
+          "title": "St. Patrick's Cathedral",
+          "caption": "Stand on Fifth Avenue between 50th and 51st Streets, looking up at the spires.",
+          "latitude": 40.758814786337624,
+          "longitude": -73.97684751866338,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-patricks-cathedral.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "When this cathedral was built, it sat on the northern frontier of the city. Now it sits in the middle of midtown Manhattan.\n\nFifth Avenue between 50th and 51st Streets. In front of you is St. Patrick's Cathedral — the seat of the Archdiocese of New York and the largest Gothic Revival Catholic cathedral in the United States. The two white-marble spires rise 330 feet above the sidewalk. The building is the work of James Renwick Jr., the architect who also designed the Smithsonian Castle in Washington and Grace Church downtown in the Village. Construction began in 1858 and continued through the Civil War, finally opening in 1879.\n\nThe design is Gothic Revival, modeled on the great cathedrals of France and Germany — pointed arches, flying buttresses, a Rose Window above the main entrance that's twenty-six feet across. What made it remarkable wasn't just the architecture, though. When ground was broken, this stretch of Fifth Avenue was open fields and a few farmhouses. Locating the cathedral here was deliberate: a public claim that Irish-American Catholics, then the city's largest immigrant group and one of its most despised, belonged at the center of New York's future.\n\n[beat]\n\nArchbishop John Hughes raised the construction funds largely from the city's Catholic poor — pennies and nickels from servants, laborers, and washerwomen, contributed over two decades. The result was a building whose presence was, and is, a political statement as much as a religious one.\n\nSt. Patrick's remains a working cathedral. Mass is celebrated multiple times a day. State funerals have been held here for Babe Ruth, Robert F. Kennedy, and Joe DiMaggio. The bronze doors weigh more than nine thousand pounds each.\n\nIf you have a few minutes, the side chapels are open to anyone who walks in — including the Lady Chapel behind the main altar. On a weekday morning, it's a quiet pocket of stone and stained glass that feels like a different city entirely."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.758814786337624,
+      "centroidLongitude": -73.97684751866338,
+      "city": "New York",
+      "primaryCategory": "sacredSites",
+      "tags": ["st patricks cathedral", "gothic revival", "fifth avenue", "james renwick jr", "1879", "irish-american"],
+      "priceUSD": 0
     }
   ]
 }
