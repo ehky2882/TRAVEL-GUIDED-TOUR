@@ -964,6 +964,40 @@
       "primaryCategory": "history",
       "tags": ["wall street", "federal hall", "george washington", "nyse", "1789", "1792"],
       "priceUSD": 0
+    },
+    {
+      "id": "83090c8c-ab5d-4311-a881-519b1e36183e",
+      "title": "Washington Square Park",
+      "shortDescription": "Two minutes under the marble arch — a centennial monument built atop a potter's field with twenty thousand graves still beneath it.",
+      "longDescription": "At the southern end of Fifth Avenue, a seventy-seven-foot white marble arch frames the entrance to Washington Square Park. It was designed by Stanford White and modeled on the Arch of Titus in Rome. Two statues of George Washington flank its piers — Washington in civilian dress on the east, Washington as commander in chief on the west. The first version of the arch wasn't this one: in 1889, for the centennial of Washington's inauguration on Wall Street, the city built a temporary wooden arch at this spot, also designed by White. It was so popular that within three years donors raised the money for a permanent marble version. The wooden original stood for a few months. The marble one has stood for over a hundred and thirty years.\n\nWhat you're standing on used to be a cemetery. Before Washington Square was a park, it was the city's potter's field — an unmarked burial ground for the poor, the indigent, and the victims of yellow fever epidemics. Around twenty thousand people are still buried beneath the square. When the field closed in 1825, the city converted the land to a parade ground, then a public park. In the late nineteenth century, the surrounding blocks became some of the most fashionable addresses in New York — Henry James grew up here, Edith Wharton lived nearby. By the twentieth century the neighborhood had turned bohemian: Beat poets, folk singers, Bob Dylan, Joan Baez all spent time in this park.\n\nIt's still that mix, in different proportions. Beyond the arch, the open square holds fountains, chess tables, dog runs, street musicians, and the surrounding NYU campus — where students study, where chess hustlers play for cash, where someone is almost always performing music near the fountain. New York used to be a city full of squares like this. Most of them got built over. This one survived.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/washington-square-park-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ccd31295-aafd-4004-9d35-4dfba6abfd1f",
+          "order": 0,
+          "title": "Washington Square Park",
+          "caption": "Stand at the north entrance to the park, just under the marble arch at the foot of Fifth Avenue.",
+          "latitude": 40.731039831774694,
+          "longitude": -73.99727752165509,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/washington-square-park.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The arch in front of you was originally built out of wood.\n\nWashington Square Park, at the southern end of Fifth Avenue. The arch frames the entrance to the park from the north — white marble, seventy-seven feet tall, modeled on the Arch of Titus in Rome. Two statues of George Washington flank its piers: on the east side, Washington in civilian dress; on the west, Washington as commander in chief. Beyond the arch, the open square: fountains, chess tables, dog runs, street musicians, and the surrounding NYU campus.\n\nThe first version of the arch wasn't this one. In 1889, for the centennial of George Washington's inauguration on Wall Street, the city built a temporary wooden arch at this spot, designed by the architect Stanford White. It was so popular that within three years, donors raised the money for a permanent marble version. White redesigned it, and the new arch opened in 1892. The wooden original stood for a few months. The marble one has stood for over a hundred and thirty years.\n\nWhat you're standing on used to be a cemetery. Before Washington Square was a park, it was the city's potter's field — an unmarked burial ground for the poor, the indigent, and the victims of yellow fever epidemics. Around twenty thousand people are still buried beneath the square. When the field closed in 1825, the city converted the land to a parade ground, then a public park.\n\nIn the late nineteenth century, the surrounding blocks became some of the most fashionable addresses in New York. Henry James grew up here. Edith Wharton lived nearby. By the twentieth century, the neighborhood had turned bohemian — Beat poets, folk singers, Bob Dylan, Joan Baez all spent time in this park.\n\n[beat]\n\nIt's still that mix, in different proportions. The park is where NYU students study, where chess hustlers play for cash, where someone is almost always performing music near the fountain. New York used to be a city full of squares like this. Most of them got built over. This one survived.\n\nFor now, find a bench. The arch will be there when you're ready.\n"
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.731039831774694,
+      "centroidLongitude": -73.99727752165509,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": ["washington square park", "stanford white", "fifth avenue", "potters field", "nyu", "greenwich village"],
+      "priceUSD": 0
     }
   ]
 }
