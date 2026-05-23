@@ -62,18 +62,21 @@ the build the 2026-05-21 M-qa pass ran against. Build 6's mini-player
 changes were verified in the simulator before upload; an on-device
 M-qa pass against build 6 is the next step.
 
-**Content (M-launch-content).** 31 tours in `Resources/Tours.json`,
+**Content (M-launch-content).** 38 tours in `Resources/Tours.json`,
 all single-stop. The original 10 NYC landmarks (Grand Central, Times
 Square, South Street Seaport, Empire State Building, Statue of Liberty,
 Brooklyn Bridge, Rockefeller Center, Met, High Line, 9/11 Memorial),
 Brooklyn Museum, 9 added 2026-05-21/22 — Whitney, AMNH, Brooklyn
 Bridge Park, Chrysler Building, Flatiron Building, Governors Island,
 Guggenheim, Intrepid, and Casa da Música (Porto — the first non-NYC
-tour) — and 11 added 2026-05-22/23: Little Island, Manhattan Bridge
+tour); 11 added 2026-05-22/23: Little Island, Manhattan Bridge
 (from DUMBO), Museum of the City of New York, NYPL Fifth Avenue, The
 Oculus, St. Patrick's Cathedral, Vessel (Hudson Yards), Wall Street,
-Washington Square Park, Cooper Hewitt, and El Museo del Barrio. Audio
-hosted on the `gh-pages` branch (served at
+Washington Square Park, Cooper Hewitt, and El Museo del Barrio; and
+**7 added 2026-05-23 afternoon** — The Frick Collection, Neue Galerie,
+Museum of Arts and Design, New Museum, The Morgan Library & Museum,
+The Shed, and **MoMA PS1** (the first Queens tour). Audio hosted on
+the `gh-pages` branch (served at
 `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`);
 GitHub Releases tried first but serves the wrong `Content-Type` for
 AVPlayer — see `docs/cdn-decision.md` § "Why we switched from Releases
@@ -93,9 +96,9 @@ What's left for V1:
   applicable check on device (2026-05-22, no issues found). The only
   M-qa steps still open are the multi-stop ones — geofenced stop
   advancement and manual next-stop — blocked until a multi-stop tour
-  is authored. All 31 tours are single-stop, so the app's defining
+  is authored. All 38 tours are single-stop, so the app's defining
   feature is uncovered by content.
-- **M-launch-content (optional more)** — owner may decide 31 tours
+- **M-launch-content (optional more)** — owner may decide 38 tours
   are enough for V1 launch, or add more. See `docs/authoring-tours.md`.
 - **Deferred design / polish pass** — theme tokens, real app icon
   (replace placeholder green sphere), custom map pins, final
