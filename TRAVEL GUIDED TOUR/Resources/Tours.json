@@ -828,6 +828,40 @@
       "primaryCategory": "culturalHeritage",
       "tags": ["new york public library", "fifth avenue", "beaux-arts", "patience and fortitude", "1911", "rose reading room"],
       "priceUSD": 0
+    },
+    {
+      "id": "32d39027-caf6-4b14-96c4-8ab8981f1675",
+      "title": "The Oculus",
+      "shortDescription": "Two minutes on Calatrava's white-ribbed Oculus at the World Trade Center — a $4 billion train station shaped like a dove.",
+      "longDescription": "On the World Trade Center plaza stands a white skeleton of steel ribs that looks, depending on the angle, like a dove, a whale, or a ribcage. The ribs curve upward to a three-hundred-and-fifty-foot skylight running the length of the building. This is the Oculus — at heart, a train station: inside is the Westfield mall, and beneath that, the PATH transit station that connects Manhattan to New Jersey. The PATH station beneath the original Twin Towers was destroyed on September 11, and the brief for its replacement was ambitious — not just to rebuild infrastructure, but to create a symbol, a phoenix rising on the site. The Spanish architect Santiago Calatrava — known for sculptural transportation hubs that lean into the boundary between engineering and art — got the commission.\n\nCalatrava's original concept was a dove of peace being released from a child's hands. The white ribs flaring out around you are its wings. The execution didn't go smoothly. Construction stretched on for years, opening in 2016 — seven years behind schedule — and went four billion dollars over its initial estimate. Critics savaged it; the New York Times called it a monument to public extravagance. The wings, which were designed to mechanically open and let light pour in on September 11 each year, did so for only a few years before the mechanism was largely deactivated.\n\nAnd yet — when you walk inside and the light pours down through the skylight onto the white marble floor, it's hard not to be moved. The building works as a sculpture, even if it failed as a transit project. Fifty million people pass through it every year and almost all of them stop to look up. Whatever Calatrava's intentions, he built something people respond to. The interior is the experience — stand under the ribs and look up.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/oculus-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e21c1a87-defb-4f08-aa63-5a19450eafa5",
+          "order": 0,
+          "title": "The Oculus",
+          "caption": "Stand on the World Trade Center plaza facing the white ribs, then step inside and look up.",
+          "latitude": 40.71191351079484,
+          "longitude": -74.01191607937287,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/oculus.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The structure in front of you cost four billion dollars. It is, at heart, a train station.\n\nWorld Trade Center plaza. In front of you is the Oculus — a white skeleton of steel ribs that looks like a dove, a whale, or a ribcage, depending on your angle. The ribs curve upward to a 350-foot-long skylight that runs the length of the building. Inside is the Westfield World Trade Center mall, and beneath that, the PATH transit station that connects Manhattan to New Jersey.\n\nThe building was designed by the Spanish architect Santiago Calatrava, who's known for sculptural transportation hubs — bridges, train stations, airports — that lean into the boundary between engineering and art. The Oculus was commissioned after September 11 to replace the PATH station that had been destroyed beneath the original Twin Towers. The brief was ambitious: not just to rebuild infrastructure, but to create a symbol — a phoenix, of sorts, rising on the site.\n\nCalatrava's original concept was a dove of peace being released from a child's hands. The white ribs that flare out around you are its wings.\n\nThe execution didn't go smoothly. The construction stretched on for years, opening in 2016 — seven years behind schedule — and went four billion dollars over its initial estimate. Critics savaged it. The New York Times called it a monument to public extravagance. The wings, which were designed to mechanically open to let in light on September 11 each year, did so for only a few years before the mechanism was largely deactivated.\n\n[beat]\n\nAnd yet — when you walk inside, when the light pours down through the skylight onto the white marble floor, it's hard not to be moved. The building works as a sculpture, even if it failed as a transit project. Fifty million people pass through it every year, and almost all of them stop to look up. Whatever Calatrava's intentions, he built something people respond to.\n\nIf you have a minute, walk inside. The interior is the experience — stand under the ribs and look up at the skylight."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.71191351079484,
+      "centroidLongitude": -74.01191607937287,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["santiago calatrava", "world trade center", "oculus", "path station", "transit hub", "2016"],
+      "priceUSD": 0
     }
   ]
 }
