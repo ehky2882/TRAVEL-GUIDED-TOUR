@@ -1032,6 +1032,40 @@
       "primaryCategory": "culturalHeritage",
       "tags": ["cooper hewitt", "smithsonian", "andrew carnegie", "design museum", "museum mile", "gilded age"],
       "priceUSD": 0
+    },
+    {
+      "id": "a58601e7-a4aa-4c63-942b-e9191d64da5c",
+      "title": "El Museo del Barrio",
+      "shortDescription": "Two and a half minutes at the northern end of Museum Mile — the only New York museum dedicated to Latino art, founded in 1969 in a classroom.",
+      "longDescription": "At the northernmost edge of Museum Mile, on the corner of Fifth Avenue and 104th Street, stands El Museo del Barrio. The building — the Heckscher, a 1921 brick structure at 1230 Fifth Avenue — was originally a children's hospital, later served as an orphanage, and now houses both the museum and several public school programs. El Museo is the only museum in New York dedicated to the art and culture of Latin America, the Caribbean, and the Latino diaspora.\n\nThe museum was founded in 1969 by Raphael Montañez Ortíz — a New York-born artist, educator, and activist of Puerto Rican descent. Montañez Ortíz was teaching in East Harlem at a time when there was almost no representation of Puerto Rican or Latino artists in any major New York museum. Together with parents and community members, he started El Museo del Barrio as an educational program — initially housed in a public school classroom, then in a series of borrowed spaces around East Harlem. The name translates roughly to \"the museum of the neighborhood\" — barrio being both the Spanish word for neighborhood and the colloquial name for the surrounding part of East Harlem, sometimes called Spanish Harlem. The collection grew through donations from artists, families, and community members — pre-Columbian artifacts from the Caribbean, twentieth-century Puerto Rican folk art, contemporary work by Latino artists across the Americas — and the museum settled in this building in the late 1970s.\n\nWhat sets El Museo apart from the other museums on Fifth Avenue is its origin. The Met, the Guggenheim, the Frick, the Neue Galerie — all began as the private collections of wealthy donors. El Museo began as a teaching project in a public school classroom. Its founding question was not \"what art should we collect?\" but \"what art is being ignored?\" The collection rewards visiting precisely because it covers ground other museums in New York don't: the pre-Columbian objects are unusually strong, the twentieth-century work from Puerto Rico is rarely shown elsewhere, and the contemporary work is some of the best contemporary Latino art being shown in the United States.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/el-museo-del-barrio-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d69c7fd2-22ea-4a7d-9f6c-a034381c0563",
+          "order": 0,
+          "title": "El Museo del Barrio",
+          "caption": "Stand on Fifth Avenue at 104th Street, in front of the Heckscher Building.",
+          "latitude": 40.79319952511574,
+          "longitude": -73.95150411166009,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/el-museo-del-barrio.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Until 1969, no museum in New York City was dedicated to Latino art.\n\nOn the northernmost edge of Museum Mile sits El Museo del Barrio, in a building called the Heckscher — a 1921 brick structure at 1230 Fifth Avenue, on the corner of 104th Street. The building was originally a children's hospital, later served as an orphanage, and now houses both the museum and several public school programs. El Museo is the only museum in New York dedicated to the art and culture of Latin America, the Caribbean, and the Latino diaspora.\n\nThe museum was founded in 1969 by Raphael Montañez Ortíz — a New York-born artist, educator, and activist of Puerto Rican descent. Montañez Ortíz was teaching in East Harlem at a time when there was almost no representation of Puerto Rican or Latino artists in any major New York museum. Together with parents and community members, he started El Museo del Barrio as an educational program — initially housed in a public school classroom, then in a series of borrowed spaces around East Harlem. The name translates roughly to \"the museum of the neighborhood\" — barrio being both the Spanish word for neighborhood and the colloquial name for the surrounding part of East Harlem, sometimes called Spanish Harlem.\n\nThe collection grew through donations from artists, families, and community members — pre-Columbian artifacts from the Caribbean, twentieth-century Puerto Rican folk art, contemporary work by Latino artists across the Americas. The museum settled in this building in the late 1970s and has occupied the space ever since.\n\n[beat]\n\nWhat sets El Museo apart from the other museums on Fifth Avenue is its origin. The Met, the Guggenheim, the Frick, the Neue Galerie — all of them began as the private collections of wealthy donors. El Museo began as a teaching project in a public school classroom. Its founding question was not \"what art should we collect?\" but \"what art is being ignored?\"\n\nThe collection rewards visiting precisely because it covers ground other museums in New York don't. The pre-Columbian objects are unusually strong. The twentieth-century work, particularly from Puerto Rico, is rarely shown elsewhere. And the contemporary work is some of the best contemporary Latino art being shown in the United States."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.79319952511574,
+      "centroidLongitude": -73.95150411166009,
+      "city": "New York",
+      "primaryCategory": "culturalHeritage",
+      "tags": ["el museo del barrio", "museum mile", "east harlem", "latino art", "puerto rican", "1969"],
+      "priceUSD": 0
     }
   ]
 }
