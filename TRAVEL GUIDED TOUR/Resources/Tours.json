@@ -794,6 +794,40 @@
       "primaryCategory": "culturalHeritage",
       "tags": ["museum mile", "fifth avenue", "colonial revival", "jacob riis", "berenice abbott", "1923"],
       "priceUSD": 0
+    },
+    {
+      "id": "92db00f1-f1d4-4067-ab7c-5ecc519bf949",
+      "title": "New York Public Library, Fifth Avenue",
+      "shortDescription": "Just under two minutes at Patience and Fortitude — the 1911 Beaux-Arts library where anyone can walk in and read a Gutenberg.",
+      "longDescription": "At Fifth Avenue and 42nd Street, two marble lions sit at the foot of the steps: Patience and Fortitude. They were carved in 1911 by Edward Clark Potter and originally named Leo Astor and Leo Lenox, after the two wealthy donors whose private libraries became the foundation of the collection. In the depths of the Depression, Mayor Fiorello La Guardia renamed them — the virtues, he said, that New Yorkers would need to survive the decade. The names stuck.\n\nThe building they guard is the main branch of the New York Public Library, a solid white-marble Beaux-Arts landmark with six Corinthian columns and a carved frieze above the steps, essentially unchanged since 1911. Bryant Park sits directly behind it. The site was previously occupied by the Croton Reservoir — a massive granite structure that had supplied New York's drinking water for half a century — and the library, the result of an 1895 agreement among three private libraries to merge their holdings into a single free public reference library, took fourteen years to build.\n\nInside is one of the largest research libraries in the world — over fifty-five million items, including a Gutenberg Bible, the original copy of Jefferson's draft of the Declaration of Independence, and the manuscript of George Washington's farewell address. The Rose Reading Room — three hundred feet long, its ceiling painted with murals of clouds — is one of the great rooms in any American building. And it's all free. Anyone can walk in. That was the founders' idea, and it still is.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/new-york-public-library-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "60c37e4a-73f3-4386-83db-ef7fc1ad9bd7",
+          "order": 0,
+          "title": "New York Public Library, Fifth Avenue",
+          "caption": "Stand at the foot of the steps on Fifth Avenue at 42nd Street, between Patience and Fortitude.",
+          "latitude": 40.75292537139929,
+          "longitude": -73.98151258235318,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/new-york-public-library.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Look at the lions guarding the steps. Their names are Patience and Fortitude.\n\nThe building they guard is the main branch of the New York Public Library, on Fifth Avenue at 42nd Street. Above the steps, six Corinthian columns support a carved frieze. The building is solid white marble, designed in the Beaux-Arts style, and has stood here essentially unchanged since 1911. Bryant Park is directly behind it.\n\nThe lions were sculpted in 1911 by Edward Clark Potter. They were originally called Leo Astor and Leo Lenox, after the two wealthy donors whose private libraries became the foundation of the collection. In the 1930s, during the depths of the Depression, Mayor Fiorello La Guardia renamed them Patience and Fortitude — the virtues, he said, that New Yorkers would need to survive that decade. The names stuck.\n\nThe library itself was the result of an unusual idea: in 1895, three private libraries agreed to merge their holdings and open a single, free, public reference library in the heart of Manhattan. The site they chose, this corner, was previously occupied by the Croton Reservoir — a massive granite structure that had supplied New York's drinking water for half a century. They tore it down and built this in its place. It took fourteen years.\n\n[beat]\n\nInside is one of the largest research libraries in the world — over fifty-five million items, including a Gutenberg Bible, the original copy of Jefferson's draft of the Declaration of Independence, and the manuscript of George Washington's farewell address. The Rose Reading Room — three hundred feet long, ceiling painted with murals of clouds — is one of the great rooms in any American building.\n\nIt's all free. Anyone can walk in. That was the founders' idea, and it still is."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.75292537139929,
+      "centroidLongitude": -73.98151258235318,
+      "city": "New York",
+      "primaryCategory": "culturalHeritage",
+      "tags": ["new york public library", "fifth avenue", "beaux-arts", "patience and fortitude", "1911", "rose reading room"],
+      "priceUSD": 0
     }
   ]
 }
