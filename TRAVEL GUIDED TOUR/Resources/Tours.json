@@ -896,6 +896,40 @@
       "primaryCategory": "sacredSites",
       "tags": ["st patricks cathedral", "gothic revival", "fifth avenue", "james renwick jr", "1879", "irish-american"],
       "priceUSD": 0
+    },
+    {
+      "id": "bedf6d2d-ebdb-4b2e-b3e3-ba160f18d2d1",
+      "title": "Vessel, Hudson Yards",
+      "shortDescription": "Two minutes at Heatherwick's $200 million copper honeycomb — a sculpture, climbing frame, and selfie spot all at once.",
+      "longDescription": "In the Public Square at the heart of Hudson Yards stands a 150-foot copper-colored honeycomb of interlocking staircases — 2,500 steps and 80 landings spiraling around an open central void. This is the Vessel, designed by the British architect-designer Thomas Heatherwick and opened in 2019 as the centerpiece of Hudson Yards, the largest private real estate development in American history. The structure weighs six hundred tons and cost roughly two hundred million dollars to build.\n\nHeatherwick's idea was a kind of urban climbing frame — a public artwork designed to be walked, not just looked at. Visitors would climb the staircases, take in the Hudson from different heights, and descend by different paths. He called it \"public architecture,\" a category he essentially invented. Critics have struggled to categorize it more precisely: sculpture? climbing frame? selfie backdrop? For Heatherwick's defenders, that ambiguity is the point — a piece of public art that resists being one thing. For his critics, it's a two-hundred-million-dollar selfie spot dressed up as architecture.\n\nAround the Vessel is Hudson Yards itself — a twenty-eight-acre, twenty-five-billion-dollar development built over the West Side Rail Yards, on what was once one of the last large undeveloped tracts in Manhattan. The skyscrapers ringing the plaza are the work of some of the most prominent architects of this generation: Bjarke Ingels, Kohn Pedersen Fox, and Diller Scofidio + Renfro, whose white cultural venue The Shed sits just to the south on what look like enormous wheels. Walk the plaza, look up at the Vessel from different angles, and — if it's open — climb the lower levels for a view of the river.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://atlas-tours.example/images/vessel-hudson-yards-hero.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d2b1436c-8807-478d-b869-4f1f0c2aa795",
+          "order": 0,
+          "title": "Vessel, Hudson Yards Plaza",
+          "caption": "Stand in the Public Square at Hudson Yards facing the copper-colored honeycomb.",
+          "latitude": 40.75349984607447,
+          "longitude": -74.00208697394926,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vessel-hudson-yards.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The structure in front of you has two thousand five hundred steps, eighty landings, and looks like a giant copper-colored honeycomb.\n\nThe Vessel — Thomas Heatherwick's 150-foot sculpture — stands in the Public Square at the heart of Hudson Yards. The exterior is a network of interlocking staircases that rise and twist around an open central void. The whole thing weighs six hundred tons. It opened in 2019 as the centerpiece of Hudson Yards, the largest private real estate development in American history.\n\nThe idea was a kind of urban climbing frame — a public artwork designed to be walked, not just looked at. Visitors would climb the staircases, look out at the Hudson from different heights and angles, and come down by different paths. Heatherwick designed it as the focal point that would make Hudson Yards feel like a neighborhood, not a corporate campus.\n\nWhat you're looking at cost about two hundred million dollars to build. Heatherwick called it a piece of \"public architecture\" — a category he essentially made up. Critics have struggled to categorize it more precisely. Sculpture? Climbing frame? Selfie backdrop? It is all of those, and none of them quite. For Heatherwick's defenders, that ambiguity is the point — a piece of public art that resists being one thing. For his critics, it's a two-hundred-million-dollar selfie spot dressed up as architecture.\n\n[beat]\n\nAround the Vessel is Hudson Yards itself — a twenty-eight-acre development built over the West Side Rail Yards, on what was once one of the last large undeveloped tracts in Manhattan. About twenty-five billion dollars went into it. The skyscrapers around you are the work of some of the most prominent architects of this generation — Bjarke Ingels, Kohn Pedersen Fox, Diller Scofidio + Renfro, whose white cultural venue, the Shed, sits just south of here on what look like enormous wheels.\n\nFor now, walk the plaza. Look up at the Vessel from different angles. If it's open, climb the lower levels for a view of the river and the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.75349984607447,
+      "centroidLongitude": -74.00208697394926,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["vessel", "hudson yards", "thomas heatherwick", "2019", "public art", "the shed"],
+      "priceUSD": 0
     }
   ]
 }
