@@ -2,9 +2,16 @@
   "makers": [
     {
       "id": "00000000-0000-0000-0000-000000000001",
-      "displayName": "Atlas Studio",
+      "displayName": "Atlas Studio NYC",
       "avatarURL": null,
       "bio": "Atlas Studio is the in-house team producing the audio tours that ship with Atlas at launch. Founding makers join after V1.",
+      "websiteURL": null
+    },
+    {
+      "id": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "displayName": "Atlas Studio Porto",
+      "avatarURL": null,
+      "bio": "Atlas Studio's Porto bureau — audio tours of the city's architecture and culture.",
       "websiteURL": null
     }
   ],
@@ -472,7 +479,7 @@
       "title": "Casa da Música",
       "shortDescription": "Two and a half minutes on Rem Koolhaas's white-concrete concert hall — the Porto landmark that began life as an unbuilt house.",
       "longDescription": "On the Rotunda da Boavista in central Porto, a white concrete polyhedron sits on a sloping travertine plaza — angular, asymmetric, with no obvious front or back, like a meteorite that happened to land on a roundabout. This is the Casa da Música, the concert hall designed by Rem Koolhaas and his Rotterdam firm OMA, with project architect Ellen van Loon. Commissioned by the city in 1999 for Porto's turn as European Capital of Culture, it opened — four years late — in 2005, with an inaugural concert by Lou Reed. It is widely held to be the most important piece of contemporary architecture in Portugal.\n\nIts design has an unusual origin. Weeks before the Porto competition deadline, Koolhaas was working on an unbuilt private house in Rotterdam — a polyhedral mass hollowed out around a single central living room. He realized the same logic applied to a concert hall: a building organized around a central void. He scaled the house up. The main auditorium, the Sala Suggia, is that void — a twelve-hundred-seat hall suspended inside the polyhedron, with glass walls at both ends that let the audience see out and passersby see in.\n\nA short stop, taken from the plaza. Walk a slow loop around the building: Koolhaas designed it without a front, so it looks different from every angle.",
-      "makerId": "00000000-0000-0000-0000-000000000001",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Casa_Da_Musica_%283190746009%29.jpg/3840px-Casa_Da_Musica_%283190746009%29.jpg",
       "kind": "single",
       "stops": [
