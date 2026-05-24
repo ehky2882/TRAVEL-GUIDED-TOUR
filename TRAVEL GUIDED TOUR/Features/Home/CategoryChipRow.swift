@@ -28,7 +28,7 @@ struct CategoryChipRow: View {
                 .font(AtlasTypography.caption)
                 .foregroundStyle(isSelected ? AtlasColors.background : AtlasColors.primaryText)
                 .padding(.horizontal, AtlasSpacing.md)
-                .padding(.vertical, AtlasSpacing.xs + 2)
+                .frame(height: AtlasSpacing.searchBarHeight)
                 .background(chipBackground(isSelected: isSelected))
         }
         .buttonStyle(.plain)
@@ -47,7 +47,7 @@ struct CategoryChipRow: View {
             }
             .foregroundStyle(isSelected ? AtlasColors.background : AtlasColors.primaryText)
             .padding(.horizontal, AtlasSpacing.md)
-            .padding(.vertical, AtlasSpacing.xs + 2)
+            .frame(height: AtlasSpacing.searchBarHeight)
             .background(chipBackground(isSelected: isSelected))
         }
         .buttonStyle(.plain)

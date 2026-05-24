@@ -14,17 +14,17 @@ struct SearchBar: View {
         } label: {
             HStack(spacing: AtlasSpacing.sm) {
                 Image(systemName: "magnifyingglass")
-                    .font(AtlasTypography.body)
+                    .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
 
                 Text("Search tours, makers, categories")
-                    .font(AtlasTypography.body)
+                    .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
 
                 Spacer()
             }
             .padding(.horizontal, AtlasSpacing.md)
-            .padding(.vertical, AtlasSpacing.sm + AtlasSpacing.xs)
+            .frame(height: AtlasSpacing.searchBarHeight)
             // Glass material so the bar reads cleanly over both
             // the map underneath (HomeView) and the white background
             // of any other parent. iOS 26's `.regularMaterial` carries

@@ -10,8 +10,15 @@ enum AtlasSpacing {
     static let heroHeight: CGFloat = 320
     static let cardCornerRadius: CGFloat = 12
     static let chipCornerRadius: CGFloat = 20
-    /// Approximation of the modern iPhone screen corner radius. Used
-    /// for the home-page floating-island shape so the drawer + tab
-    /// bar look like they "follow" the device's bottom curve.
-    static let phoneScreenRadius: CGFloat = 48
+    /// Used for the home-page floating-island shape so the drawer +
+    /// tab bar look like they "follow" the device's bottom curve.
+    /// Sized a touch larger than the iPhone bezel radius so the
+    /// island reads as generously rounded rather than tracing the
+    /// screen edge exactly.
+    static let phoneScreenRadius: CGFloat = 56
+    /// Shared control height for the home-screen search bar and the
+    /// category filter chips below it, so the two rows visually line
+    /// up. Sized to clear Apple's 44pt HIG minimum tappable target
+    /// while staying compact enough to leave the map readable.
+    static let searchBarHeight: CGFloat = 46
 }
