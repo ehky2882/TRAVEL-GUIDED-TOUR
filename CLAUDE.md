@@ -28,7 +28,9 @@ These happen **automatically, without the owner asking**.
 
 V1 functionality complete and device-validated. TestFlight build **1.0 (7)** uploading now (owner archives from Xcode).
 
-**What's left:** author one multi-stop walking tour (unblocks the last M-qa checks) → design/polish pass.
+PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kills the post-tour "Loading…"/hourglass flicker and adds in-place replay via new `AudioPlayerService.replayLast()`. Sibling polish iteration sits on `claude/home-visual-polish-bundle` (`5db7aaa`) — pushed but not PR'd yet.
+
+**What's left:** author one multi-stop walking tour (unblocks the last M-qa checks) → PR the polish branch → broader design/polish pass.
 
 Key facts:
 - **38 single-stop tours** in `Resources/Tours.json`; audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
