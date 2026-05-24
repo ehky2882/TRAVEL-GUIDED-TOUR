@@ -54,8 +54,13 @@ struct MiniPlayerBar: View {
     /// tour is loaded or the duration is not yet known. Drives both
     /// the trim arc and animates smoothly because
     /// `AudioPlayerService` republishes `currentTime` ~2×/sec.
+    /// Forced to 1 on `.ended` so the ring reads as a complete circle
+    /// even when AVPlayer stopped publishing `currentTime` a touch
+    /// short of `duration`.
     private var progress: Double {
-        guard tour != nil, audioPlayer.duration > 0 else { return 0 }
+        guard tour != nil else { return 0 }
+        if audioPlayer.state == .ended { return 1 }
+        guard audioPlayer.duration > 0 else { return 0 }
         let raw = audioPlayer.currentTime / audioPlayer.duration
         return min(max(raw, 0), 1)
     }
@@ -173,14 +178,17 @@ struct MiniPlayerBar: View {
     private var subtitleText: String {
         guard tour != nil else { return " " } // blank second line keeps layout stable
         switch audioPlayer.state {
-        case .loading:
-            return "Loading…"
         case .failed:
             return "Tap to retry"
         case .paused:
             if let maker { return "Paused · \(maker.displayName)" }
             return "Paused"
-        case .idle, .playing, .ended:
+        case .idle, .loading, .playing, .ended:
+            // The mini-player never surfaces a transient "Loading…"
+            // line — the full-screen player owns that affordance.
+            // Falling through to the maker name keeps the bar visually
+            // stable as the tour spins up, finishes, or briefly
+            // re-buffers between AVPlayer transitions.
             return maker?.displayName ?? " "
         }
     }
@@ -236,15 +244,26 @@ struct MiniPlayerBar: View {
         }
         .buttonStyle(.plain)
         .disabled(isIdle)
-        .accessibilityLabel(audioPlayer.state == .playing ? "Pause" : "Play")
+        .accessibilityLabel(playPauseAccessibilityLabel)
     }
 
+    private var playPauseAccessibilityLabel: String {
+        switch audioPlayer.state {
+        case .playing: return "Pause"
+        case .ended:   return "Replay tour"
+        default:       return "Play"
+        }
+    }
+
+    /// `.loading` resolves to the play glyph rather than an hourglass
+    /// on purpose: the mini-player keeps the same icon throughout
+    /// buffering and end-of-tour transitions so it doesn't flicker
+    /// when AVPlayer briefly re-enters `.waitingToPlayAtSpecifiedRate`.
     private var playPauseIcon: String {
         switch audioPlayer.state {
-        case .playing:               return "pause.fill"
-        case .loading:               return "hourglass"
-        case .failed:                return "arrow.clockwise"
-        case .idle, .paused, .ended: return "play.fill"
+        case .playing:                         return "pause.fill"
+        case .failed:                          return "arrow.clockwise"
+        case .idle, .loading, .paused, .ended: return "play.fill"
         }
     }
 
@@ -255,7 +274,14 @@ struct MiniPlayerBar: View {
             audioPlayer.pause()
         case .paused:
             audioPlayer.play()
-        case .loading, .failed, .ended, .idle:
+        case .ended:
+            // Tour finished — restart from the beginning in place so
+            // the user doesn't have to open the full player just to
+            // replay. AVQueuePlayer has already drained its queue, so
+            // we re-issue the last play(url:) rather than calling
+            // play() with no args.
+            audioPlayer.replayLast()
+        case .loading, .failed, .idle:
             // No clean in-place resume — hand off to the full player,
             // which owns stop/intro sequencing and the retry path.
             onExpand()

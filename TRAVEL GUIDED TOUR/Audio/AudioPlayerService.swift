@@ -67,6 +67,11 @@ final class AudioPlayerService {
     /// `.playing` transition we trust the observer, so subsequent
     /// scrubs and pause/resume don't fight it.
     private var isAwaitingFirstPlayTransition = false
+    /// URL handed to the most recent `play(url:title:artist:sourceId:)`.
+    /// Retained so callers can re-trigger the same item without
+    /// re-deriving the URL from the tour model — used by the
+    /// mini-player's tap-to-replay path after `.ended`.
+    private var lastPlayedURL: URL?
 
     init() {
         configureAudioSession()
@@ -105,6 +110,7 @@ final class AudioPlayerService {
         currentTitle = title
         currentArtist = artist
         currentSourceId = sourceId
+        lastPlayedURL = url
         currentTime = 0
         duration = 0
         lastError = nil
@@ -189,10 +195,22 @@ final class AudioPlayerService {
         currentTitle = nil
         currentArtist = nil
         currentSourceId = nil
+        lastPlayedURL = nil
         lastError = nil
         state = .idle
         isAwaitingFirstPlayTransition = false
         updateNowPlayingInfo()
+    }
+
+    /// Replays the most recent item from the beginning, reusing the
+    /// last title / artist / sourceId. No-op if nothing has been
+    /// played yet. Used by the mini-player when the user taps play
+    /// after a tour has reached `.ended`: AVQueuePlayer auto-drains
+    /// its queue at end-of-item, so a parameterless `play()` would
+    /// have nothing to resume.
+    func replayLast() {
+        guard let url = lastPlayedURL else { return }
+        play(url: url, title: currentTitle, artist: currentArtist, sourceId: currentSourceId)
     }
 
     func seek(to time: TimeInterval) {
@@ -286,13 +304,20 @@ final class AudioPlayerService {
                         self.cancelLoadingTimeout()
                     }
                 case .waitingToPlayAtSpecifiedRate:
-                    // Don't override .failed: AVPlayer keeps reporting
-                    // .waitingToPlayAtSpecifiedRate even after the item
-                    // has failed to load. If we blindly set .loading
-                    // here, the UI snaps back to the hourglass moments
-                    // after the item-status KVO transitioned us to
-                    // .failed.
-                    if self.state != .failed {
+                    // Only treat this as `.loading` from states where
+                    // we expect AVPlayer to actually start producing
+                    // audio. Terminal states (`.failed`, `.ended`) and
+                    // `.idle` must be preserved: AVPlayer keeps emitting
+                    // `.waitingToPlayAtSpecifiedRate` after a failure
+                    // *and* after end-of-item, so blindly setting
+                    // `.loading` would snap the UI back to the hourglass
+                    // and the "Loading…" subtitle moments after the
+                    // item-status KVO or `didPlayToEndTime` notification
+                    // moved us off `.loading`.
+                    switch self.state {
+                    case .failed, .ended, .idle:
+                        break
+                    case .loading, .playing, .paused:
                         self.state = .loading
                     }
                 @unknown default:
