@@ -23,14 +23,15 @@ These happen **automatically, without the owner asking**.
 | 5 | Session ends (touched code or content) | Update `CLAUDE.md` + `ROADMAP.md` in same commit; write `archive/HANDOFF-YYMMDD.md`; update `archive/README.md` |
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 
-## Current State (2026-05-23)
+## Current State (2026-05-24)
 
-V1 functionality complete and device-validated. TestFlight build **1.0 (6)** uploaded 2026-05-23.
+V1 functionality complete and device-validated. TestFlight build **1.0 (7)** uploading now (owner archives from Xcode).
 
 **What's left:** author one multi-stop walking tour (unblocks the last M-qa checks) → design/polish pass.
 
 Key facts:
 - **38 single-stop tours** in `Resources/Tours.json`; audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **All 38 tours have `heroImageURL`** — CC-licensed Wikimedia Commons landscape photos (committed 2026-05-23/24). Whitney and MAD have no landscape exterior on Commons; best available used.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
 - AppIcon is placeholder (green sphere); AccentColor: terracotta `#B85042` (placeholder)
