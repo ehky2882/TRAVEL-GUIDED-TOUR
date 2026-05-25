@@ -54,12 +54,9 @@ struct LibraryView: View {
             // stack so the last list item is always reachable above the
             // module rather than hidden behind it.
             .safeAreaInset(edge: .bottom, spacing: 0) {
-                Color.clear.frame(
-                    height: AtlasBottomModule.height(extendsToScreenEdges: true)
-                )
+                Color.clear.frame(height: AtlasBottomModule.height())
             }
         }
-        .atlasModuleGeometry(.fullEdge)
     }
 
     // MARK: - Sections

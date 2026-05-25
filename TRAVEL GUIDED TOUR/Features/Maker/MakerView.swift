@@ -10,6 +10,7 @@ struct MakerView: View {
     let maker: Maker
 
     @Environment(DataService.self) private var dataService
+    @Environment(AtlasNavigationState.self) private var navState
 
     private let avatarSize: CGFloat = 96
 
@@ -36,13 +37,13 @@ struct MakerView: View {
         // Reserve room at the bottom for the mini-player + tab bar
         // stack so the last tour row is reachable above the module.
         .safeAreaInset(edge: .bottom, spacing: 0) {
-            Color.clear.frame(
-                height: AtlasBottomModule.height(extendsToScreenEdges: true)
-            )
+            Color.clear.frame(height: AtlasBottomModule.height())
         }
-        // Pushed screens always get the full-edge module — overrides
-        // the host tab's preference while this view is on top.
-        .atlasModuleGeometry(.fullEdge)
+        // Mark this surface as a pushed detail screen so the bottom
+        // module switches to full-edge while it's on top — even
+        // when reached from Home.
+        .onAppear { navState.push() }
+        .onDisappear { navState.pop() }
     }
 
     // MARK: - Sections

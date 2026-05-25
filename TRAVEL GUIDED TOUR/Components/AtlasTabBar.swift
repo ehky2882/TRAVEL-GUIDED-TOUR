@@ -2,34 +2,35 @@ import SwiftUI
 
 /// Custom floating tab bar — replaces the system `TabView` chrome
 /// so we can match the home-screen drawer's width, inset, and shape
-/// exactly. Uses `.thickMaterial` for an almost-opaque backdrop so
-/// the buttons stay legible regardless of what the map is showing
-/// behind it.
+/// exactly. Uses `secondaryBackground` so the buttons stay legible
+/// regardless of what the map is showing behind it.
 ///
 /// Shape:
 ///   - Top corners: square — the rectangular mini-player stacks flush above
-///   - Bottom corners: phone-screen radius on Home; square on every
-///     other surface, where the bar reads as a flat strip flush to
-///     the screen edges
+///   - Bottom corners: phone-screen radius on Home (the floating-
+///     island pill look); square on every other surface, where the
+///     bar reads as a flat strip flush to the screen edges
 ///
-/// In both modes the button row sits at the same screen-y position
-/// (8pt outer gap below the painted bar) so the bar doesn't appear
-/// to jump up or down when the user switches tabs or pushes a
-/// detail screen. The only thing that changes between modes is what
-/// gets painted in the 8pt outer gap + home-indicator strip below
-/// the buttons: transparent (map shows through) on Home,
-/// `secondaryBackground` on everywhere else.
+/// In both modes the entire view occupies a fixed 64pt at the
+/// bottom of the screen (56pt painted button row + 8pt outer
+/// strip), so the buttons themselves sit at the same screen-y
+/// across all tabs and pushed detail screens — the bar doesn't
+/// appear to jump when the user moves between Home and Library /
+/// Me / a detail. What changes between modes is *what gets painted
+/// in the 8pt outer strip below the buttons*: transparent on Home
+/// (the floating-island gap — map shows through; home indicator
+/// sits over map), opaque `secondaryBackground` on every other
+/// surface (the bar continues down through the home-indicator strip
+/// as one continuous surface).
 struct AtlasTabBar: View {
     @Binding var selected: AtlasTab
 
-    /// When `true` (non-Home tabs and every pushed detail screen)
-    /// the bar drops its horizontal inset and bottom corner radius
-    /// so it spans the full screen width as a flat strip, and its
-    /// background extends down through the 8pt outer gap *and* the
-    /// home-indicator safe-area inset as one continuous surface.
-    /// When `false` (Home root only) the bar keeps the
-    /// AllTrails-style floating-island look that PR #60 dialed in:
-    /// inset, rounded bottom corners, transparent gap below.
+    /// When `true` (non-Home tabs + every pushed detail screen) the
+    /// bar drops its horizontal inset and bottom corner radius so
+    /// it spans the full screen width as a flat strip, and the 8pt
+    /// outer strip below the buttons is painted opaquely. When
+    /// `false` (Home root only) the bar keeps the AllTrails-style
+    /// floating-island look that PR #60 dialed in.
     var extendsToScreenEdges: Bool = false
     /// Square top corners — the rectangular mini-player stacks flush
     /// on top, so the tab bar's top edge must be square to meet it
@@ -45,34 +46,13 @@ struct AtlasTabBar: View {
     private var bottomCornerRadius: CGFloat {
         extendsToScreenEdges ? 0 : AtlasSpacing.phoneScreenRadius
     }
-    /// Height of the painted area below the tab bar's button row.
-    /// Always at least 8pt (the outer gap that keeps the buttons
-    /// anchored at the same screen-y across modes); on non-Home
-    /// the home-indicator safe-area inset is added on top so the
-    /// tab bar background bleeds through the device's bottom strip.
-    private var bottomExtensionHeight: CGFloat {
-        extendsToScreenEdges ? (8 + safeAreaBottomInset) : 8
-    }
-    /// Mirrors `AtlasBottomModule.bottomSafeAreaInset` — kept here as
-    /// a tiny duplicate so this component has no dependency on the
-    /// Player feature module beyond the shared spacing tokens.
-    private var safeAreaBottomInset: CGFloat {
-        #if canImport(UIKit)
-        UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .first(where: { $0.activationState == .foregroundActive })?
-            .windows.first(where: { $0.isKeyWindow })?
-            .safeAreaInsets.bottom ?? 0
-        #else
-        0
-        #endif
-    }
 
     var body: some View {
         VStack(spacing: 0) {
-            // Button row. Identical layout in both modes — same
-            // inner padding, same height — so the buttons themselves
-            // sit at the same screen-y regardless of geometry.
+            // Button row — identical layout in both modes (same
+            // inner padding, same background, same intrinsic
+            // height) so the buttons sit at the same screen-y
+            // regardless of geometry.
             HStack(spacing: 0) {
                 ForEach(AtlasTab.allCases, id: \.self) { tab in
                     tabButton(tab)
@@ -92,11 +72,13 @@ struct AtlasTabBar: View {
             )
             .padding(.horizontal, horizontalInset)
 
-            // Outer gap below the button row. Transparent on Home
-            // (the floating-island look — map shows behind through
-            // the 8pt gap); opaque on every other surface, where
-            // the tab bar background continues down through the
-            // home-indicator strip as one continuous surface.
+            // 8pt strip below the painted button row. Transparent
+            // on Home (the floating-island look — map shows through;
+            // home indicator sits over map). Opaque on every other
+            // surface (continuous bar background — the home
+            // indicator pill sits over the bar's secondaryBackground
+            // like a standard iOS tab bar). Height is the SAME in
+            // both modes so the buttons stay at the same screen-y.
             Group {
                 if extendsToScreenEdges {
                     Rectangle()
@@ -106,7 +88,7 @@ struct AtlasTabBar: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .frame(height: bottomExtensionHeight)
+            .frame(height: 8)
         }
     }
 
