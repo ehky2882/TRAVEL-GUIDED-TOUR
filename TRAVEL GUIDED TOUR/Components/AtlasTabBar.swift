@@ -18,15 +18,53 @@ import SwiftUI
 struct AtlasTabBar: View {
     @Binding var selected: AtlasTab
 
-    /// Same horizontal inset the BottomSheet uses (8pt) so the tab
-    /// bar columns align with the drawer's edges.
-    var horizontalInset: CGFloat = 8
+    /// When `true` (non-Home tabs) the bar drops its horizontal inset
+    /// and bottom corner radius and extends flush to the screen edges;
+    /// the tab bar's background also extends through the bottom
+    /// safe-area inset (home-indicator strip), with the button column
+    /// padded up to sit above it. When `false` (Home) the bar keeps
+    /// the AllTrails-style floating-island look that PR #60 dialed in.
+    var extendsToScreenEdges: Bool = false
     /// Square top corners — the rectangular mini-player stacks flush
     /// on top, so the tab bar's top edge must be square to meet it
     /// seamlessly.
     var topCornerRadius: CGFloat = 0
-    /// Phone-screen radius for the bottom corners.
-    var bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius
+
+    /// Same horizontal inset the BottomSheet uses (8pt) on Home so the
+    /// tab bar columns align with the drawer's edges; zero on non-Home
+    /// tabs so the bar spans the full screen width.
+    private var horizontalInset: CGFloat {
+        extendsToScreenEdges ? 0 : 8
+    }
+    private var bottomCornerRadius: CGFloat {
+        extendsToScreenEdges ? 0 : AtlasSpacing.phoneScreenRadius
+    }
+    /// In floating mode the outer bottom padding (8pt) lifts the
+    /// island above the device bottom. In full-edge mode the
+    /// background runs all the way down to the screen edge, so the
+    /// button column instead gets an inner bottom padding equal to
+    /// the home-indicator safe-area inset — buttons clear the
+    /// indicator while the background fills the edge.
+    private var outerBottomPadding: CGFloat {
+        extendsToScreenEdges ? 0 : 8
+    }
+    private var innerBottomPadding: CGFloat {
+        extendsToScreenEdges ? safeAreaBottomInset : 0
+    }
+    /// Mirrors `AtlasBottomModule.bottomSafeAreaInset` — kept here as
+    /// a tiny duplicate so this component has no dependency on the
+    /// Player feature module beyond the shared spacing tokens.
+    private var safeAreaBottomInset: CGFloat {
+        #if canImport(UIKit)
+        UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first(where: { $0.activationState == .foregroundActive })?
+            .windows.first(where: { $0.isKeyWindow })?
+            .safeAreaInsets.bottom ?? 0
+        #else
+        0
+        #endif
+    }
 
     var body: some View {
         HStack(spacing: 0) {
@@ -35,6 +73,7 @@ struct AtlasTabBar: View {
             }
         }
         .padding(.vertical, AtlasSpacing.sm)
+        .padding(.bottom, innerBottomPadding)
         .frame(maxWidth: .infinity)
         .background(AtlasColors.secondaryBackground)
         .clipShape(
@@ -47,7 +86,7 @@ struct AtlasTabBar: View {
             )
         )
         .padding(.horizontal, horizontalInset)
-        .padding(.bottom, horizontalInset)
+        .padding(.bottom, outerBottomPadding)
     }
 
     private func tabButton(_ tab: AtlasTab) -> some View {

@@ -10,6 +10,7 @@ struct MakerView: View {
     let maker: Maker
 
     @Environment(DataService.self) private var dataService
+    @Environment(\.atlasIsHomeTab) private var isHomeTab
 
     private let avatarSize: CGFloat = 96
 
@@ -33,6 +34,13 @@ struct MakerView: View {
         .background(AtlasColors.background)
         .navigationTitle(maker.displayName)
         .inlineNavigationBarTitle()
+        // Reserve room at the bottom for the mini-player + tab bar
+        // stack so the last tour row is reachable above the module.
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            Color.clear.frame(
+                height: AtlasBottomModule.height(extendsToScreenEdges: !isHomeTab)
+            )
+        }
     }
 
     // MARK: - Sections

@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 enum AtlasSpacing {
     static let xs: CGFloat = 4
@@ -21,4 +22,21 @@ enum AtlasSpacing {
     /// up. Sized to clear Apple's 44pt HIG minimum tappable target
     /// while staying compact enough to leave the map readable.
     static let searchBarHeight: CGFloat = 46
+}
+
+/// Propagates "the active tab is Home" down the view tree so pushed
+/// children (TourDetailView, MakerView, ManageDownloadsView) can size
+/// their bottom safe-area inset to match the floating-island vs.
+/// full-edge mini-player + tab bar geometry. Defaults to `true` so
+/// previews and isolated screens render with the home-style island
+/// geometry.
+private struct AtlasIsHomeTabKey: EnvironmentKey {
+    static let defaultValue: Bool = true
+}
+
+extension EnvironmentValues {
+    var atlasIsHomeTab: Bool {
+        get { self[AtlasIsHomeTabKey.self] }
+        set { self[AtlasIsHomeTabKey.self] = newValue }
+    }
 }

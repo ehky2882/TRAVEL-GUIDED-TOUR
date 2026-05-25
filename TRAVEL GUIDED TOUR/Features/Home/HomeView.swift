@@ -69,9 +69,12 @@ struct HomeView: View {
     /// continuous with the mini-player. Also fed to the recenter
     /// button's bottom offset so it sits a fixed distance above the
     /// drawer's top edge regardless of which detent is active.
+    ///
+    /// Sourced from the shared `AtlasBottomModule.height` helper so it
+    /// stays in lockstep with the matching `safeAreaInset(.bottom)`
+    /// applied to scrollable surfaces on non-Home tabs.
     private var floatingIslandHeight: CGFloat {
-        let tabBar: CGFloat = 64
-        return tabBar + MiniPlayerBar.layoutHeight
+        AtlasBottomModule.height(extendsToScreenEdges: false)
     }
 
     var body: some View {
