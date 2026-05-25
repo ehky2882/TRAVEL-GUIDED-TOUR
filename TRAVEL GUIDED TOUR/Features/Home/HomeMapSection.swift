@@ -7,11 +7,13 @@ import CoreLocation
 /// when location is denied / unavailable). Reports the visible
 /// region's center after every pan so the parent can update the
 /// "in view" count, and reports the tapped tour upward via
-/// `onTourSelected` so the parent can scroll its drawer to that
+/// `selectedTourId` so the parent can scroll its drawer to that
 /// tour's card (AllTrails pattern).
 ///
-/// Selection state is owned by the parent via `selectedTourId` so the
-/// pin and the drawer card can be kept visually in sync.
+/// Pins are small filled circles in the Atlas accent color — no
+/// category glyph, no balloon shape. At wide zoom (city-level) nearby
+/// pins collapse into cluster badges; tapping a cluster zooms in to
+/// break it apart.
 struct HomeMapSection: View {
     let tours: [Tour]
     let userLocation: CLLocation?
@@ -28,16 +30,17 @@ struct HomeMapSection: View {
     /// to retract the drawer and fade the recenter button.
     let onCameraMoving: () -> Void
 
-    /// Internal selection state for `Map(selection:)`. We resolve
-    /// stop-id → parent tour-id and push that up through the binding.
-    @State private var selectedStopId: UUID?
+    /// Current visible region, kept fresh by `.onMapCameraChange` so
+    /// clustering math reacts to live pans and pinches.
+    @State private var currentRegion: MKCoordinateRegion?
 
     var body: some View {
-        Map(position: $cameraPosition, selection: $selectedStopId) {
-            ForEach(allStopMarkers, id: \.id) { marker in
-                Marker(marker.title, systemImage: marker.systemImage, coordinate: marker.coordinate)
-                    .tint(AtlasColors.accent)
-                    .tag(marker.id)
+        Map(position: $cameraPosition) {
+            ForEach(clusterItems, id: \.id) { item in
+                Annotation(item.accessibilityLabel, coordinate: item.coordinate, anchor: .center) {
+                    pinView(for: item)
+                }
+                .annotationTitles(.hidden)
             }
 
             if let userLocation {
@@ -51,19 +54,36 @@ struct HomeMapSection: View {
             MapCompass()
             MapScaleView()
         }
-        .onMapCameraChange(frequency: .continuous) { _ in
+        .onMapCameraChange(frequency: .continuous) { context in
+            currentRegion = context.region
             onCameraMoving()
         }
         .onMapCameraChange(frequency: .onEnd) { context in
+            currentRegion = context.region
             onCameraChanged(context.region)
         }
-        .onChange(of: selectedStopId, initial: false) { _, newStopId in
-            selectedTourId = tourId(forStopId: newStopId)
-        }
-        .onChange(of: selectedTourId, initial: false) { _, newTourId in
-            // Allow the parent to clear selection (e.g. user tapped
-            // empty space in the drawer or scrolled away).
-            if newTourId == nil { selectedStopId = nil }
+    }
+
+    // MARK: - Pin rendering
+
+    @ViewBuilder
+    private func pinView(for item: ClusterItem) -> some View {
+        switch item.kind {
+        case .single(let marker):
+            StopPin(isSelected: marker.tourId == selectedTourId)
+                .onTapGesture {
+                    selectedTourId = marker.tourId
+                }
+                .accessibilityLabel(marker.title)
+                .accessibilityAddTraits(.isButton)
+
+        case .cluster(let count, let stops):
+            ClusterPin(count: count)
+                .onTapGesture {
+                    zoomIn(on: stops)
+                }
+                .accessibilityLabel("\(count) tours")
+                .accessibilityAddTraits(.isButton)
         }
     }
 
@@ -83,27 +103,192 @@ struct HomeMapSection: View {
             tour.stops.map { stop in
                 StopMarker(
                     id: stop.id,
+                    tourId: tour.id,
                     title: stop.title,
-                    systemImage: tour.primaryCategory.iconName,
                     coordinate: stop.coordinate
                 )
             }
         }
     }
 
-    private func tourId(forStopId stopId: UUID?) -> UUID? {
-        guard let stopId else { return nil }
-        return tours.first(where: { tour in
-            tour.stops.contains { $0.id == stopId }
-        })?.id
+    /// Bucket markers into the current visible region's grid, collapsing
+    /// any cell that holds 2+ pins into a cluster. Grid resolution
+    /// scales with `region.span`, so a city-wide view groups aggressively
+    /// while a block-level view leaves everything individual.
+    private var clusterItems: [ClusterItem] {
+        Self.cluster(markers: allStopMarkers, in: currentRegion)
+    }
+
+    private static func cluster(markers: [StopMarker], in region: MKCoordinateRegion?) -> [ClusterItem] {
+        guard let region else {
+            return markers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
+        }
+
+        // 14 cells across the visible region. Empirically this gives
+        // ~50–80pt cell pitch at typical iPhone sizes — close enough
+        // that dense Manhattan clumps merge but Brooklyn/NJ outliers
+        // stay separate.
+        let cellsAcross: Double = 14
+        let cellSpanLat = region.span.latitudeDelta / cellsAcross
+        let cellSpanLon = region.span.longitudeDelta / cellsAcross
+        guard cellSpanLat > 0, cellSpanLon > 0 else {
+            return markers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
+        }
+
+        let originLat = region.center.latitude - region.span.latitudeDelta / 2
+        let originLon = region.center.longitude - region.span.longitudeDelta / 2
+
+        var buckets: [BucketKey: [StopMarker]] = [:]
+        for marker in markers {
+            let row = Int(floor((marker.coordinate.latitude - originLat) / cellSpanLat))
+            let col = Int(floor((marker.coordinate.longitude - originLon) / cellSpanLon))
+            buckets[BucketKey(row: row, col: col), default: []].append(marker)
+        }
+
+        return buckets.map { key, stops in
+            if stops.count == 1, let only = stops.first {
+                return ClusterItem(coordinate: only.coordinate, kind: .single(only))
+            }
+            let avgLat = stops.reduce(0) { $0 + $1.coordinate.latitude } / Double(stops.count)
+            let avgLon = stops.reduce(0) { $0 + $1.coordinate.longitude } / Double(stops.count)
+            return ClusterItem(
+                coordinate: CLLocationCoordinate2D(latitude: avgLat, longitude: avgLon),
+                kind: .cluster(count: stops.count, stops: stops),
+                bucketKey: key
+            )
+        }
+    }
+
+    /// Tighten the camera around a cluster's bounding box so it breaks
+    /// apart on the next render. Mirrors MKMapView's default
+    /// cluster-tap behavior.
+    private func zoomIn(on stops: [StopMarker]) {
+        guard !stops.isEmpty else { return }
+        let lats = stops.map(\.coordinate.latitude)
+        let lons = stops.map(\.coordinate.longitude)
+        guard let minLat = lats.min(), let maxLat = lats.max(),
+              let minLon = lons.min(), let maxLon = lons.max() else { return }
+
+        let center = CLLocationCoordinate2D(
+            latitude: (minLat + maxLat) / 2,
+            longitude: (minLon + maxLon) / 2
+        )
+        // Pad by 2.5x so the cluster doesn't hug the edges, and floor
+        // at a span that's roughly neighborhood-level — keeps a single
+        // tap from over-zooming into a 1-block view.
+        let span = MKCoordinateSpan(
+            latitudeDelta: max((maxLat - minLat) * 2.5, 0.01),
+            longitudeDelta: max((maxLon - minLon) * 2.5, 0.01)
+        )
+        withAnimation(.easeInOut(duration: 0.35)) {
+            cameraPosition = .region(MKCoordinateRegion(center: center, span: span))
+        }
     }
 }
 
-private struct StopMarker: Identifiable {
+// MARK: - Pin views
+
+/// Small filled circle, accent-tinted. Selected state thickens the
+/// ring and bumps the radius so the active pin pops above its
+/// neighbors without changing pin density elsewhere.
+private struct StopPin: View {
+    let isSelected: Bool
+
+    var body: some View {
+        Circle()
+            .fill(AtlasColors.accent)
+            .frame(width: diameter, height: diameter)
+            .overlay(
+                Circle().stroke(Color.white, lineWidth: isSelected ? 3 : 1.5)
+            )
+            .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
+            .contentShape(Circle())
+    }
+
+    private var diameter: CGFloat { isSelected ? 18 : 14 }
+}
+
+/// Cluster badge: a larger circle with a count, in the accent color
+/// so it reads as the same family as the individual pins.
+private struct ClusterPin: View {
+    let count: Int
+
+    var body: some View {
+        ZStack {
+            Circle()
+                .fill(AtlasColors.accent.opacity(0.25))
+                .frame(width: outerDiameter, height: outerDiameter)
+            Circle()
+                .fill(AtlasColors.accent)
+                .frame(width: innerDiameter, height: innerDiameter)
+                .overlay(Circle().stroke(Color.white, lineWidth: 1.5))
+            Text("\(count)")
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(.white)
+        }
+        .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
+        .contentShape(Circle())
+    }
+
+    private var innerDiameter: CGFloat {
+        switch count {
+        case ..<10: return 26
+        case ..<100: return 30
+        default: return 34
+        }
+    }
+
+    private var outerDiameter: CGFloat { innerDiameter + 10 }
+}
+
+// MARK: - Cluster model
+
+private struct StopMarker: Identifiable, Hashable {
     let id: UUID
+    let tourId: UUID
     let title: String
-    let systemImage: String
     let coordinate: CLLocationCoordinate2D
+
+    static func == (lhs: StopMarker, rhs: StopMarker) -> Bool { lhs.id == rhs.id }
+    func hash(into hasher: inout Hasher) { hasher.combine(id) }
+}
+
+private struct BucketKey: Hashable {
+    let row: Int
+    let col: Int
+}
+
+private struct ClusterItem: Identifiable {
+    let coordinate: CLLocationCoordinate2D
+    let kind: Kind
+    private let bucketKey: BucketKey?
+
+    init(coordinate: CLLocationCoordinate2D, kind: Kind, bucketKey: BucketKey? = nil) {
+        self.coordinate = coordinate
+        self.kind = kind
+        self.bucketKey = bucketKey
+    }
+
+    enum Kind {
+        case single(StopMarker)
+        case cluster(count: Int, stops: [StopMarker])
+    }
+
+    var id: String {
+        switch kind {
+        case .single(let m): return "s-\(m.id.uuidString)"
+        case .cluster(let count, _):
+            let key = bucketKey.map { "\($0.row),\($0.col)" } ?? "n"
+            return "c-\(key)-\(count)"
+        }
+    }
+
+    var accessibilityLabel: String {
+        switch kind {
+        case .single(let m): return m.title
+        case .cluster(let count, _): return "\(count) tours"
+        }
+    }
 }
 
 /// iOS-Maps-style user-location indicator: a soft accuracy halo, an
