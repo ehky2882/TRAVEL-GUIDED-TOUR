@@ -442,20 +442,39 @@ struct PlayerView: View {
         switch audioPlayer.state {
         case .playing:
             audioPlayer.pause()
-        case .paused, .ended:
+        case .paused:
             audioPlayer.play()
+        case .ended:
+            // AVQueuePlayer drains its queue at end-of-item, so a
+            // parameterless `play()` would no-op. Restart the current
+            // item from the beginning — feels like "replay" from the
+            // user's POV. Mirrors the mini-player's tap-to-replay path.
+            replayCurrent()
         case .idle, .failed:
             // No item loaded, or previous load failed → retry from the
             // tour's start (or current stop, if mid-tour).
-            if currentStopIndex == -1 {
-                startPlaybackIfNeeded()
-            } else if sortedStops.indices.contains(currentStopIndex) {
-                playStop(at: currentStopIndex)
-            } else {
-                startPlaybackIfNeeded()
-            }
+            replayCurrent()
         case .loading:
             break
+        }
+    }
+
+    /// Re-plays whatever is "current" — intro if we're on it, otherwise
+    /// the current stop, otherwise the tour's start. Used after `.ended`
+    /// (drained queue) and `.idle/.failed` (no/failed item).
+    ///
+    /// Goes directly through `playIntro` / `playStop` rather than
+    /// `startPlaybackIfNeeded`, which short-circuits when our own
+    /// sourceId is already loaded — exactly the case here.
+    private func replayCurrent() {
+        if currentStopIndex == -1 {
+            playIntro()
+        } else if sortedStops.indices.contains(currentStopIndex) {
+            playStop(at: currentStopIndex)
+        } else if tour.introAudioURL != nil {
+            playIntro()
+        } else if !sortedStops.isEmpty {
+            playStop(at: 0)
         }
     }
 

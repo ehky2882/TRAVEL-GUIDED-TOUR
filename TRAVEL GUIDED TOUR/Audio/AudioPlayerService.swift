@@ -221,6 +221,24 @@ final class AudioPlayerService {
         // there as AVPlayer resumes reporting time.
         currentTime = time
         player.seek(to: target)
+
+        // Seek-to-end (or beyond) doesn't fire
+        // `AVPlayerItem.didPlayToEndTime` — that notification only
+        // arrives when AVPlayer reaches the end via continuous
+        // playback. Without this synthesized `.ended` transition,
+        // AVPlayer parks in `.waitingToPlayAtSpecifiedRate` after a
+        // seek-to-end and our observer would flip state to `.loading`,
+        // leaving the mini- and full-player stuck on hourglass /
+        // "Loading…". Mirror the natural end semantics: pause the
+        // player and publish `.ended` so the play button reverts to
+        // play.fill and tap-to-replay works.
+        if duration > 0 && time >= duration - 0.1 {
+            player.pause()
+            currentTime = duration
+            state = .ended
+            cancelLoadingTimeout()
+            updateNowPlayingInfo()
+        }
     }
 
     func skip(by seconds: TimeInterval) {
