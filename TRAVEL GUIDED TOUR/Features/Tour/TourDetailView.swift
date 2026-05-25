@@ -25,6 +25,7 @@ struct TourDetailView: View {
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
     @Environment(TourDownloader.self) private var tourDownloader
+    @Environment(AtlasNavigationState.self) private var navState
 
     @State private var showingPlayer = false
 
@@ -59,16 +60,19 @@ struct TourDetailView: View {
         }
         .navigationTitle(tour.title)
         .inlineNavigationBarTitle()
-        // Detail screens always render with the full-edge bottom
-        // module — even when reached from the Home tab — so the
-        // mini-player + tab bar look the same past the map and
-        // don't shrink to the floating-island shape underneath.
-        .atlasModuleGeometry(.fullEdge)
         .sheet(isPresented: $showingPlayer) {
             PlayerView(tour: tour)
         }
+        // Mark this surface as a pushed detail screen so the
+        // bottom module switches to full-edge while it's on top of
+        // the stack — even when reached from the Home tab. Reverts
+        // to the host tab's root geometry on pop / disappear.
         .onAppear {
+            navState.push()
             recentlyViewedStore.record(tour.id)
+        }
+        .onDisappear {
+            navState.pop()
         }
         .onChange(of: tourDownloader.states[tour.id]) { _, newState in
             // Keep LibraryStore in sync with the download lifecycle.
@@ -254,13 +258,11 @@ struct TourDetailView: View {
     /// Action-bar height — large enough to (a) seat its button row at
     /// the top with the standard padding profile, and (b) extend its
     /// background down through the entire mini-player + tab bar
-    /// module that floats over it from `ContentView`. Pinned to the
-    /// full-edge module height because detail screens always render
-    /// with that geometry now (see `.atlasModuleGeometry(.fullEdge)`
-    /// above), regardless of which tab the user pushed from.
+    /// module that floats over it from `ContentView`. The module's
+    /// height is constant across geometry modes now, so we just call
+    /// `AtlasBottomModule.height()` without arguments.
     private var actionBarHeight: CGFloat {
-        AtlasBottomModule.height(extendsToScreenEdges: true)
-            + actionBarButtonArea
+        AtlasBottomModule.height() + actionBarButtonArea
     }
 
     private var actionBar: some View {

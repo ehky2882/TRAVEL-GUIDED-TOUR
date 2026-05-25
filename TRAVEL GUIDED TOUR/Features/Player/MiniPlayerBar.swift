@@ -8,49 +8,43 @@ import UIKit
 /// on Home and `safeAreaInset(.bottom)` on every other scrollable
 /// surface so content never hides behind the module.
 ///
-/// In both modes the mini-player + tab-bar BUTTONS sit at the same
-/// screen-y: there's an 8pt outer gap below the tab bar's painted
-/// region (the `floatingSideInset` constant). That gap is
-/// transparent on Home (the floating-island look — map shows
-/// behind) and opaque on non-Home (the tab bar's background extends
-/// down through the gap *and* the home-indicator safe-area inset).
-/// Anchoring the button row this way fixes the position jump the
-/// previous geometry produced when switching tabs: only what's
-/// painted below the buttons changes, not where they sit.
+/// The module is **the same height (126pt) in every geometry mode**:
+/// mini-player (62pt = 54 bar + 8 transparent top) + tab bar's
+/// painted button row (56pt) + an 8pt outer strip below the buttons
+/// (transparent on Home, opaque elsewhere). Because the height is
+/// the same, the mini-player + tab bar buttons sit at the same
+/// screen-y across all tabs and pushed detail screens.
+///
+/// The 8pt outer strip + the safe area beneath it (~34pt on Face-ID
+/// iPhones) is already covered by the *painted* button row on
+/// non-Home — the painted area extends down through the safe area
+/// because the parent `ContentView` ignores the bottom safe area
+/// and the VStack is bottom-aligned. So we don't need to *add*
+/// safe-area height to the module's measurement; the standard 64pt
+/// of tab bar already covers it.
+///
+/// The `extendsToScreenEdges` parameter is kept for callers that
+/// want to be explicit at the call site about which geometry their
+/// surface uses; the value it returns is the same in both modes.
 enum AtlasBottomModule {
-    /// Empirically-tuned height of the `AtlasTabBar` painted button
-    /// row (button column + vertical padding), excluding any outer
-    /// gap or safe-area extension. Mirrors the constant `HomeView`
-    /// previously inlined when sizing `BottomSheet.bottomReservedHeight`.
+    /// Height of the `AtlasTabBar` painted button row (button
+    /// column + 8pt vertical padding × 2). Constant across geometry
+    /// modes — see `AtlasTabBar.body`.
     static let tabBarBackgroundHeight: CGFloat = 56
 
-    static func height(extendsToScreenEdges: Bool) -> CGFloat {
-        // 8pt outer gap below the tab bar's button row — always
-        // present so the button row sits at the same position in
-        // both modes. Plus the home-indicator inset on non-Home,
-        // since the tab bar's background fills through it as one
-        // continuous surface.
-        let trailing = extendsToScreenEdges
-            ? (MiniPlayerBar.floatingSideInset + bottomSafeAreaInset())
-            : MiniPlayerBar.floatingSideInset
-        return MiniPlayerBar.layoutHeight + tabBarBackgroundHeight + trailing
-    }
-
-    /// Bottom safe-area inset of the active foreground scene's key
-    /// window. ~34pt on Face-ID iPhones, 0 on home-button devices.
-    /// Looked up through `UIWindowScene` since `ContentView` ignores
-    /// the bottom safe area for the floating island and SwiftUI
-    /// `GeometryReader.safeAreaInsets` consequently reads 0 there.
-    private static func bottomSafeAreaInset() -> CGFloat {
-        #if canImport(UIKit)
-        return UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .first(where: { $0.activationState == .foregroundActive })?
-            .windows.first(where: { $0.isKeyWindow })?
-            .safeAreaInsets.bottom ?? 0
-        #else
-        return 0
-        #endif
+    /// Constant 126pt: 62 (mini-player view incl. 8pt transparent
+    /// top) + 56 (tab bar painted) + 8 (outer strip). Same in both
+    /// geometry modes, by design — only what's painted in the 8pt
+    /// outer strip differs.
+    static func height(extendsToScreenEdges: Bool = false) -> CGFloat {
+        // `extendsToScreenEdges` no longer affects the math; both
+        // modes have the same module height. Kept as a parameter
+        // (with a default) so call sites that already pass it stay
+        // valid and self-documenting at the boundary.
+        _ = extendsToScreenEdges
+        return MiniPlayerBar.layoutHeight
+            + tabBarBackgroundHeight
+            + MiniPlayerBar.floatingSideInset
     }
 }
 

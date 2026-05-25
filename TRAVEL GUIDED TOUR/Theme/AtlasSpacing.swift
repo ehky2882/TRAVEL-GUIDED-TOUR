@@ -30,59 +30,73 @@ enum AtlasSpacing {
 /// screen bottom.
 ///
 /// `.floatingIsland` is the AllTrails-style look — phone-radius
-/// rounded corners, an 8pt outer gap to the device edge, transparent
-/// home-indicator strip so the map shows behind. Used ONLY on the
-/// Home tab's root screen.
+/// rounded corners on the tab bar, an 8pt outer gap to the device
+/// edge, transparent home-indicator strip so the map shows behind.
+/// Used ONLY at the Home tab's root.
 ///
 /// `.fullEdge` is the flat-strip look used everywhere else: tab bar
-/// spans the full screen width with square outer corners, and its
-/// background extends down through the home-indicator safe area as
-/// one continuous surface. Every non-Home tab uses it, and every
-/// pushed detail screen (TourDetailView / MakerView / SearchView /
-/// ManageDownloadsView) also uses it — even when reached from the
-/// Home tab — so the module reads the same way once the user moves
-/// past the map.
+/// spans the full screen width with square outer corners, and the
+/// 8pt strip below the buttons is filled opaquely so the bar reads
+/// as one continuous surface flush against the screen bottom. Every
+/// non-Home tab uses it, and every pushed detail screen
+/// (TourDetailView / MakerView / SearchView / ManageDownloadsView)
+/// also uses it — even when reached from the Home tab — so the
+/// module reads the same way once the user moves past the map.
 ///
-/// In both modes the mini-player + tab-bar BUTTONS sit at the same
-/// vertical position on screen; only what's painted below them
-/// changes. Anchoring the buttons makes the bar look glued in place
-/// across tabs and pushes instead of "jumping" up when moving to
-/// Library / Me / a detail screen.
+/// In both modes the mini-player + tab bar BUTTONS sit at the same
+/// vertical position on screen: 8pt of opaque painted area below
+/// the button row in both modes, then either an 8pt transparent
+/// outer gap (Home) or an 8pt opaque continuation (everywhere
+/// else). The painted button row's painted area covers most of the
+/// home-indicator safe area in both modes; the 8pt strip below
+/// covers the rest of it on non-Home. Anchoring the buttons this
+/// way keeps the bar visually glued in place across tabs and
+/// pushes instead of jumping up when moving to Library / Me / a
+/// detail screen.
 enum AtlasModuleGeometry: Equatable {
     case floatingIsland
     case fullEdge
 }
 
-/// Preference that lets the currently-visible content surface
-/// declare which geometry it wants for the bottom module.
-/// `ContentView` reads the resolved value via `.onPreferenceChange`
-/// and threads it into `MiniPlayerBar` and `AtlasTabBar`.
-///
-/// Reduce picks the latest (deepest / topmost) value so a pushed
-/// detail screen's `.fullEdge` overrides its host tab's preference
-/// while it's on screen, and reverts when the user pops back.
-///
-/// Default is `.fullEdge` — the safer choice. Tab roots that want
-/// the floating island (Home) opt in explicitly; everything else
-/// either declares `.fullEdge` or inherits it.
-struct AtlasModuleGeometryKey: PreferenceKey {
-    static let defaultValue: AtlasModuleGeometry = .fullEdge
-    static func reduce(
-        value: inout AtlasModuleGeometry,
-        nextValue: () -> AtlasModuleGeometry
-    ) {
-        value = nextValue()
-    }
-}
+// MARK: - Atlas navigation state
 
-extension View {
-    /// Declare which bottom-module geometry this surface wants.
-    /// Apply at the root of each tab view (`HomeView` →
-    /// `.floatingIsland`; `LibraryView` / `SettingsView` →
-    /// `.fullEdge`) and at the root of each pushed detail screen
-    /// (always `.fullEdge`). The deepest declaration wins, so a
-    /// pushed detail's preference overrides its host tab's.
-    func atlasModuleGeometry(_ geometry: AtlasModuleGeometry) -> some View {
-        preference(key: AtlasModuleGeometryKey.self, value: geometry)
+/// Tracks how many "detail" screens are currently pushed on top of
+/// any tab's navigation stack. `ContentView` reads
+/// `isShowingDetail` and uses it (together with the active tab) to
+/// decide the bottom module's geometry: floating island when on
+/// Home root with nothing pushed, full-edge in every other case
+/// (non-Home tabs, OR Home with a pushed detail).
+///
+/// Replaces an earlier preference-key approach that proved
+/// unreliable in practice — the preference value sometimes stuck
+/// at `.fullEdge` after popping back from a detail, leaving Home
+/// rendering in the wrong geometry. Push/pop counting via the
+/// pushed view's own `.onAppear` / `.onDisappear` is deterministic:
+/// the value only changes when SwiftUI actually attaches /
+/// detaches the pushed view.
+///
+/// Pushed-style screens (`TourDetailView`, `MakerView`,
+/// `ManageDownloadsView`, `SearchView`) call `push()` on appear
+/// and `pop()` on disappear. Tab roots (`HomeView`, `LibraryView`,
+/// `SettingsView`) do nothing — they're not "detail" screens.
+@Observable
+final class AtlasNavigationState {
+    /// Stack-depth counter. `> 0` means at least one detail screen
+    /// is currently on top of some tab's nav stack and the bottom
+    /// module should be full-edge regardless of which tab is
+    /// active.
+    private(set) var pushedDepth: Int = 0
+
+    var isShowingDetail: Bool { pushedDepth > 0 }
+
+    func push() {
+        pushedDepth += 1
+    }
+
+    func pop() {
+        // Guard against unbalanced pops — onDisappear can fire
+        // without a matching onAppear in some SwiftUI lifecycle
+        // edge cases. Clamping keeps the counter sane.
+        pushedDepth = max(0, pushedDepth - 1)
     }
 }

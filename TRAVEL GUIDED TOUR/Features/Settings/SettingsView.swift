@@ -157,12 +157,9 @@ struct SettingsView: View {
             // stack so the last settings row is always reachable above
             // the module rather than hidden behind it.
             .safeAreaInset(edge: .bottom, spacing: 0) {
-                Color.clear.frame(
-                    height: AtlasBottomModule.height(extendsToScreenEdges: true)
-                )
+                Color.clear.frame(height: AtlasBottomModule.height())
             }
         }
-        .atlasModuleGeometry(.fullEdge)
     }
 
     #if os(iOS) || os(visionOS)

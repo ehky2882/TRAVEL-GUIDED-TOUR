@@ -31,16 +31,24 @@ struct ContentView: View {
     /// whatever detent the user last left it at.
     @State private var homeSheetDetent: BottomSheetDetent = .large
 
-    /// Bottom-module geometry, driven by the currently-visible
-    /// content's `.atlasModuleGeometry(...)` preference. Floating
-    /// island only when the user is at the Home tab's root; every
-    /// non-Home tab and every pushed detail screen overrides this
-    /// to `.fullEdge`. Anchoring the buttons to the same screen-y
-    /// across both modes (see `AtlasTabBar`) means the visual
-    /// difference between the two is purely cosmetic — what gets
-    /// painted in the 8pt outer gap + home-indicator strip below
-    /// the buttons.
-    @State private var moduleGeometry: AtlasModuleGeometry = .floatingIsland
+    /// Tracks whether any pushed detail screen is currently visible.
+    /// Driven by each detail view's `.onAppear` / `.onDisappear`
+    /// calling `push()` / `pop()`. Injected into the environment so
+    /// children can find it without prop-drilling.
+    @State private var navState = AtlasNavigationState()
+
+    /// Floating-island look ONLY when on the Home tab AT ROOT — no
+    /// detail pushed. Every other state (non-Home tab, OR Home with
+    /// a pushed detail) uses the full-edge geometry. The two modes
+    /// share the same bottom-module height and button position, so
+    /// switching between them only changes what's painted in the
+    /// 8pt outer strip below the buttons (transparent vs. opaque).
+    private var moduleGeometry: AtlasModuleGeometry {
+        if navState.isShowingDetail {
+            return .fullEdge
+        }
+        return selectedTab == .home ? .floatingIsland : .fullEdge
+    }
 
     private var extendsToScreenEdges: Bool {
         moduleGeometry == .fullEdge
@@ -55,9 +63,10 @@ struct ContentView: View {
             // tour, or a muted "Nothing playing" idle state. On the
             // Home tab's root the stack floats as a rounded island
             // (per PR #60); on every other surface — including
-            // pushed detail screens reached from Home — it extends
-            // flush to the screen edges so the bar reads the same
-            // way past the map.
+            // pushed detail screens reached from Home — it reads as
+            // a flat strip flush to the screen edges. In both modes
+            // the buttons sit at the same screen-y; only what's
+            // painted in the 8pt outer strip below them changes.
             VStack(spacing: 0) {
                 MiniPlayerBar(
                     tour: nowPlayingTour,
@@ -74,10 +83,8 @@ struct ContentView: View {
         }
         .ignoresSafeArea(.container, edges: .bottom)
         .animation(.spring(response: 0.4, dampingFraction: 0.86), value: nowPlayingTour?.id)
-        .animation(.easeInOut(duration: 0.25), value: moduleGeometry)
-        .onPreferenceChange(AtlasModuleGeometryKey.self) { newGeometry in
-            moduleGeometry = newGeometry
-        }
+        .animation(.easeInOut(duration: 0.2), value: moduleGeometry)
+        .environment(navState)
         .sheet(isPresented: $showingFullPlayer) {
             if let tour = nowPlayingTour {
                 PlayerView(tour: tour)

@@ -14,6 +14,7 @@ import SwiftUI
 struct SearchView: View {
     @Environment(DataService.self) private var dataService
     @Environment(RecentSearchStore.self) private var recentSearchStore
+    @Environment(AtlasNavigationState.self) private var navState
 
     @State private var query: String = ""
     @State private var selectedTour: Tour?
@@ -47,14 +48,16 @@ struct SearchView: View {
         // module entirely), but matters now that search is pushed
         // into the host nav stack with the module still visible.
         .safeAreaInset(edge: .bottom, spacing: 0) {
-            Color.clear.frame(
-                height: AtlasBottomModule.height(extendsToScreenEdges: true)
-            )
+            Color.clear.frame(height: AtlasBottomModule.height())
         }
-        // Pushed surfaces always render with the full-edge module.
-        .atlasModuleGeometry(.fullEdge)
+        // Mark this surface as a pushed detail screen so the bottom
+        // module switches to full-edge while search is on top.
         .onAppear {
             queryFieldFocused = true
+            navState.push()
+        }
+        .onDisappear {
+            navState.pop()
         }
     }
 
