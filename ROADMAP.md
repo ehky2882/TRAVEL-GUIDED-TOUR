@@ -119,6 +119,39 @@ onAppear/onDisappear — deterministic, no sticky values. Verified via
 matching the OLD Home position exactly. Commit `8d928b3`. 84/84
 tests pass; CI green.
 
+**Buttons identical across surfaces; only background fill differs (PR
+#70, 2026-05-25 pm — final shape).** Bar contents render the exact same
+form on every surface — Home, Library, Me, every pushed detail. 8pt
+horizontal inset, phone-screen-radius rounded bottom corners,
+transparent 8pt strip below. The only difference between Home
+(floating island) and the rest (full-edge): `ContentView` paints an
+edge-to-edge `secondaryBackground` rectangle BEHIND the inset bar on
+non-Home surfaces, making the side + bottom gaps blend into a
+continuous strip the same color as the bar. On Home that fill isn't
+painted, so the gaps show the map. `AtlasTabBar` + `MiniPlayerBar`
+lost their `extendsToScreenEdges` flags entirely (single form now).
+Final snapshot_ui anchor: tab buttons at x=8 / 136.67 / 265.33 width
+128.67 on every surface, identical to OLD Home. Commit `643cbd7`.
+84/84 tests pass; CI green.
+
+**Restore Home floating island after PR #68 regression (PR #69,
+2026-05-25 pm).** PR #68 made non-Home's tab bar 34pt taller (by
+adding the safe-area inset to its painted height), which physically
+shoved buttons up — opposite of the "anchor at OLD Home position"
+goal. Its PreferenceKey-driven `moduleGeometry` also got stuck at
+`.fullEdge` after popping back from a detail, so Home rendered in
+the wrong (full-edge) shape with the buttons in the wrong (higher)
+position. PR #69 fixed both: `AtlasTabBar` view height pinned at a
+fixed 64pt in every geometry (56pt painted button row + 8pt outer
+strip — only the strip's fill differs between modes); replaced the
+preference with an `@Observable AtlasNavigationState` tracking
+`pushedDepth` via push/pop from each pushed view's
+appear/disappear; `AtlasBottomModule.height` locked to a constant
+126pt. Commit `8d928b3`. 84/84 tests pass; CI green. Superseded
+mechanism-wise by PR #70 (which collapsed even the remaining
+conditional bottom-strip fill into a single fill-rectangle
+decision in `ContentView`).
+
 **Consistent bottom module across tabs + detail (PR #68, 2026-05-25 pm).**
 Visual review of PRs #65 + #66 on `main` caught three follow-ups that
 PR #66 left on the floor. (1) `SearchBar` was presenting `SearchView` as
