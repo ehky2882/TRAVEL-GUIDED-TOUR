@@ -5,54 +5,33 @@ import SwiftUI
 /// exactly. Uses `secondaryBackground` so the buttons stay legible
 /// regardless of what the map is showing behind it.
 ///
-/// Shape:
-///   - Top corners: square — the rectangular mini-player stacks flush above
-///   - Bottom corners: phone-screen radius on Home (the floating-
-///     island pill look); square on every other surface, where the
-///     bar reads as a flat strip flush to the screen edges
+/// Shape: rounded pill, 8pt inset from the screen edges on both
+/// sides, phone-radius rounded bottom corners, square top corners
+/// (so the rectangular mini-player stacks flush above it).
 ///
-/// In both modes the entire view occupies a fixed 64pt at the
-/// bottom of the screen (56pt painted button row + 8pt outer
-/// strip), so the buttons themselves sit at the same screen-y
-/// across all tabs and pushed detail screens — the bar doesn't
-/// appear to jump when the user moves between Home and Library /
-/// Me / a detail. What changes between modes is *what gets painted
-/// in the 8pt outer strip below the buttons*: transparent on Home
-/// (the floating-island gap — map shows through; home indicator
-/// sits over map), opaque `secondaryBackground` on every other
-/// surface (the bar continues down through the home-indicator strip
-/// as one continuous surface).
+/// **The view renders this same shape everywhere — Home root,
+/// Library, Me, every pushed detail.** That keeps the buttons
+/// themselves in the exact same place across surfaces — same x,
+/// same y, same width per column. The only thing that changes
+/// between Home (floating-island look) and the other surfaces
+/// (full-edge look) is a separate edge-to-edge background fill
+/// `ContentView` paints behind this view. On Home there's no fill,
+/// so the 8pt side gaps + 8pt bottom gap show the map underneath;
+/// elsewhere the fill is `secondaryBackground` (same color as the
+/// bar), so the gaps blend into the fill and the whole bottom
+/// region reads as one continuous opaque strip.
 struct AtlasTabBar: View {
     @Binding var selected: AtlasTab
 
-    /// When `true` (non-Home tabs + every pushed detail screen) the
-    /// bar drops its horizontal inset and bottom corner radius so
-    /// it spans the full screen width as a flat strip, and the 8pt
-    /// outer strip below the buttons is painted opaquely. When
-    /// `false` (Home root only) the bar keeps the AllTrails-style
-    /// floating-island look that PR #60 dialed in.
-    var extendsToScreenEdges: Bool = false
     /// Square top corners — the rectangular mini-player stacks flush
     /// on top, so the tab bar's top edge must be square to meet it
     /// seamlessly.
     var topCornerRadius: CGFloat = 0
 
-    /// Same horizontal inset the BottomSheet uses (8pt) on Home so the
-    /// tab bar columns align with the drawer's edges; zero on non-Home
-    /// tabs so the bar spans the full screen width.
-    private var horizontalInset: CGFloat {
-        extendsToScreenEdges ? 0 : 8
-    }
-    private var bottomCornerRadius: CGFloat {
-        extendsToScreenEdges ? 0 : AtlasSpacing.phoneScreenRadius
-    }
-
     var body: some View {
         VStack(spacing: 0) {
-            // Button row — identical layout in both modes (same
-            // inner padding, same background, same intrinsic
-            // height) so the buttons sit at the same screen-y
-            // regardless of geometry.
+            // Button row — the painted "pill". Identical layout on
+            // every surface so the buttons themselves never shift.
             HStack(spacing: 0) {
                 ForEach(AtlasTab.allCases, id: \.self) { tab in
                     tabButton(tab)
@@ -64,31 +43,22 @@ struct AtlasTabBar: View {
             .clipShape(
                 UnevenRoundedRectangle(
                     topLeadingRadius: topCornerRadius,
-                    bottomLeadingRadius: bottomCornerRadius,
-                    bottomTrailingRadius: bottomCornerRadius,
+                    bottomLeadingRadius: AtlasSpacing.phoneScreenRadius,
+                    bottomTrailingRadius: AtlasSpacing.phoneScreenRadius,
                     topTrailingRadius: topCornerRadius,
                     style: .continuous
                 )
             )
-            .padding(.horizontal, horizontalInset)
+            .padding(.horizontal, 8)
 
-            // 8pt strip below the painted button row. Transparent
-            // on Home (the floating-island look — map shows through;
-            // home indicator sits over map). Opaque on every other
-            // surface (continuous bar background — the home
-            // indicator pill sits over the bar's secondaryBackground
-            // like a standard iOS tab bar). Height is the SAME in
-            // both modes so the buttons stay at the same screen-y.
-            Group {
-                if extendsToScreenEdges {
-                    Rectangle()
-                        .fill(AtlasColors.secondaryBackground)
-                } else {
-                    Color.clear
-                }
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 8)
+            // 8pt transparent strip below the painted pill. On Home
+            // this shows the map behind; on non-Home surfaces it
+            // shows the edge-to-edge background fill `ContentView`
+            // paints behind the whole module (same color as the
+            // pill, so the gap blends in).
+            Color.clear
+                .frame(maxWidth: .infinity)
+                .frame(height: 8)
         }
     }
 
