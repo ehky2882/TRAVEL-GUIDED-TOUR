@@ -46,6 +46,13 @@ struct BottomSheet<Content: View>: View {
     /// uses the same bottom radius so when stacked they read as one
     /// continuous phone-shaped pill.
     var bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius
+    /// Vertical space the parent has reserved for a floating element
+    /// below the drawer (mini-player + tab bar, on the home screen).
+    /// The `.large` detent stops short by this amount, so the drawer
+    /// stacks *on top of* that element instead of extending behind it
+    /// and letting its rounded bottom corners peek out around the
+    /// floating island's edges.
+    var bottomReservedHeight: CGFloat = 0
 
     /// Signed drag delta in points: positive when the user is dragging
     /// down (shrinking the drawer), negative when dragging up. Reset
@@ -65,6 +72,7 @@ struct BottomSheet<Content: View>: View {
         horizontalInset: CGFloat = 8,
         topCornerRadius: CGFloat = 30,
         bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius,
+        bottomReservedHeight: CGFloat = 0,
         @ViewBuilder content: () -> Content
     ) {
         self._detent = detent
@@ -73,6 +81,7 @@ struct BottomSheet<Content: View>: View {
         self.horizontalInset = horizontalInset
         self.topCornerRadius = topCornerRadius
         self.bottomCornerRadius = bottomCornerRadius
+        self.bottomReservedHeight = bottomReservedHeight
         self.content = content()
     }
 
@@ -102,14 +111,14 @@ struct BottomSheet<Content: View>: View {
                     style: .continuous
                 )
             )
-            // Equal inset on left, right, and bottom — the drawer's
-            // glass extends *past* the safe area into the tab bar's
-            // territory, so the tab bar visually sits on top of the
-            // drawer's bottom edge. iOS 26's tab bar uses the same
-            // glass material, so the two read as a single integrated
-            // bottom element.
+            // 8pt insets on left + right. The bottom padding is
+            // exactly the parent's reserved height — when 0, the
+            // drawer sits flush against the screen edge (default
+            // behavior); when set (home screen passes the floating
+            // mini-player + tab bar height) the drawer's bottom edge
+            // lines up flush with the top of that element, no gap.
             .padding(.horizontal, horizontalInset)
-            .padding(.bottom, horizontalInset)
+            .padding(.bottom, bottomReservedHeight)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             .gesture(dragGesture(in: geo))
         }
@@ -204,10 +213,13 @@ struct BottomSheet<Content: View>: View {
         case .peek:   return peekHeight
         case .medium: return geo.size.height * 0.5
         case .large:
-            // Fill the container, less an inset on top to mirror the
-            // 8pt bottom inset. Result: drawer reads as a fully-floating
-            // card whose top hides the search bar / chip row behind it.
-            return geo.size.height - (horizontalInset * 2)
+            // Fill the container, less the 8pt top inset, less the
+            // height the parent reserved at the bottom for a floating
+            // element (mini-player + tab bar on the home screen). The
+            // matching `.padding(.bottom, bottomReservedHeight)` below
+            // pushes the drawer's bottom edge flush against the top of
+            // that element — no gap.
+            return geo.size.height - horizontalInset - bottomReservedHeight
         }
     }
 

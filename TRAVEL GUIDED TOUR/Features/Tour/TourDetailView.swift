@@ -249,7 +249,10 @@ struct TourDetailView: View {
                     .frame(height: controlHeight)
             }
             .buttonStyle(.borderedProminent)
-            .disabled(isThisTourLoading)
+            // Intentionally never disabled — even when the audio engine
+            // is mid-load or stuck in a transient `.loading` state (e.g.
+            // after a seek-to-end), the player sheet is the user's
+            // escape hatch and must stay reachable.
 
             Button(action: toggleSaved) {
                 Image(systemName: isSaved ? "bookmark.fill" : "bookmark")

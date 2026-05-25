@@ -1,6 +1,7 @@
 import SwiftUI
 import MapKit
 import CoreLocation
+import UIKit
 
 /// Map-dominant home screen — AllTrails-style.
 ///
@@ -53,25 +54,24 @@ struct HomeView: View {
         )
     )
 
-    /// Base peek-detent height. Sized so the AtlasTabBar (~62pt) + drag
-    /// handle (~16pt) + centered header line (~30pt) all fit — and
-    /// nothing more. Increasing this lets the first list item peek;
-    /// decreasing clips the header.
-    private let basePeekHeight: CGFloat = 130
+    /// Peek-detent height. Sized to fit the drag handle (~16pt) + the
+    /// centered header line (~30pt) with some breathing room — and
+    /// nothing more. The drawer's `bottomReservedHeight` keeps it
+    /// stacked *above* the mini-player + tab bar, so the peek doesn't
+    /// need to reserve any height for the floating island itself.
+    private let peekHeight: CGFloat = 80
 
-    /// Effective peek height. The mini-player is a permanent fixture
-    /// between the drawer and the tab bar, so the peek height always
-    /// includes its footprint to keep the header line clear of it.
-    private var peekHeight: CGFloat {
-        basePeekHeight + MiniPlayerBar.layoutHeight
-    }
-
-    /// Bottom padding for the drawer's scroll list so the last card
-    /// clears the floating island (tab bar + mini-player) when the
-    /// drawer is fully open.
-    private var bottomListInset: CGFloat {
+    /// Exact pixel height of the floating mini-player + tab bar stack
+    /// at the bottom of the screen. Passed to `BottomSheet` so its
+    /// `.large` detent stops short by this amount — the drawer's
+    /// bottom edge sits flush against the mini-player's top edge with
+    /// no gap, and the drawer's square bottom corners read as visually
+    /// continuous with the mini-player. Also fed to the recenter
+    /// button's bottom offset so it sits a fixed distance above the
+    /// drawer's top edge regardless of which detent is active.
+    private var floatingIslandHeight: CGFloat {
         let tabBar: CGFloat = 64
-        return tabBar + MiniPlayerBar.layoutHeight + AtlasSpacing.md
+        return tabBar + MiniPlayerBar.layoutHeight
     }
 
     var body: some View {
@@ -121,7 +121,12 @@ struct HomeView: View {
                     BottomSheet(
                         detent: $sheetDetent,
                         dragOffset: $sheetDragOffset,
-                        peekHeight: peekHeight
+                        peekHeight: peekHeight,
+                        // Square bottom corners read as visually
+                        // continuous with the rectangular mini-player
+                        // sitting directly below.
+                        bottomCornerRadius: 0,
+                        bottomReservedHeight: floatingIslandHeight
                     ) {
                         drawerContent(in: geo)
                     }
@@ -133,7 +138,13 @@ struct HomeView: View {
                     // the drag, not just after release.
                     locationButton
                         .padding(.leading, AtlasSpacing.md)
-                        .padding(.bottom, drawerVisibleHeight(in: geo) + AtlasSpacing.sm)
+                        // Drawer now floats *above* the mini-player +
+                        // tab bar, so the button's offset from the
+                        // screen bottom is the drawer's height PLUS
+                        // the reserved floating-island height — that
+                        // puts the button a fixed `sm` gap above the
+                        // drawer's top edge in every detent.
+                        .padding(.bottom, drawerVisibleHeight(in: geo) + floatingIslandHeight + AtlasSpacing.sm)
                         .frame(
                             maxWidth: .infinity,
                             maxHeight: .infinity,
@@ -165,18 +176,20 @@ struct HomeView: View {
         }
     }
 
-    /// Mirrors the formula BottomSheet uses internally so the
-    /// recenter button can sit exactly at the drawer's top edge —
-    /// including during the drag. `sheetDragOffset` is the in-flight
-    /// drag delta (negative = dragging up, positive = dragging down)
-    /// so the visible height grows/shrinks live with the user's
-    /// finger.
+    /// Mirrors the height formula BottomSheet uses internally so the
+    /// recenter button can sit at a fixed offset above the drawer's
+    /// top edge — including during the drag. `sheetDragOffset` is the
+    /// in-flight drag delta (negative = dragging up, positive =
+    /// dragging down) so the visible height grows/shrinks live with
+    /// the user's finger. Does NOT include `floatingIslandHeight` —
+    /// callers add that explicitly when they need the drawer's top
+    /// position measured from the screen bottom.
     private func drawerVisibleHeight(in geo: GeometryProxy) -> CGFloat {
         let baseHeight: CGFloat
         switch sheetDetent {
         case .peek:   baseHeight = peekHeight
         case .medium: baseHeight = geo.size.height * 0.5
-        case .large:  baseHeight = geo.size.height - (AtlasSpacing.sm * 2)
+        case .large:  baseHeight = geo.size.height - AtlasSpacing.sm - floatingIslandHeight
         }
         return max(peekHeight, baseHeight - sheetDragOffset)
     }
@@ -227,12 +240,19 @@ struct HomeView: View {
         let visible = drawerVisibleHeight(in: geo)
         let listOpacity = min(1, max(0, (visible - peekHeight) / 90))
 
+        // Clip the visible region to the strip of map between the top
+        // of the screen and the drawer's top edge, then count tours
+        // with any stop in that strip. At large the drawer covers
+        // nearly everything, so we swap the count for a friendly
+        // invitation instead of "0 tours in view".
+        let aboveDrawerCount = toursInViewCount(in: geo)
+
         ScrollViewReader { proxy in
             VStack(alignment: .leading, spacing: 0) {
                 // Header — dynamic count for the area in view.
                 // Centered to read cleanly at the peek detent where
                 // this is the *only* drawer content visible.
-                Text(headerText)
+                Text(headerText(forCount: aboveDrawerCount))
                     .font(AtlasTypography.headline)
                     .foregroundStyle(AtlasColors.primaryText)
                     .frame(maxWidth: .infinity)
@@ -270,7 +290,7 @@ struct HomeView: View {
                         }
                     }
                     .padding(.top, AtlasSpacing.sm)
-                    .padding(.bottom, bottomListInset)
+                    .padding(.bottom, AtlasSpacing.lg)
                 }
                 .opacity(listOpacity)
                 .allowsHitTesting(listOpacity > 0.01)
@@ -361,13 +381,64 @@ struct HomeView: View {
         TourCategory.allCases
     }
 
-    private var toursInView: [Tour] {
-        guard let region = visibleRegion else { return filteredTours }
-        return filteredTours.filter { region.contains($0.coordinate) }
+    /// Number of tours with at least one stop pin in the strip of
+    /// map between the screen's top edge and the drawer's top edge.
+    /// The map `.ignoresSafeArea()`, so its actual render height is
+    /// the full screen height (not `geo.size.height`, which excludes
+    /// top + bottom safe areas). We measure the drawer's top edge in
+    /// those same screen coordinates to keep the pixel-to-latitude
+    /// mapping consistent. Counts tours rather than raw pins
+    /// (matches the "N tours in view" wording), and tests each tour's
+    /// individual stops so multi-stop tours with off-screen centroids
+    /// still count when any of their pins is visible.
+    private func toursInViewCount(in geo: GeometryProxy) -> Int {
+        guard let region = visibleRegion else { return filteredTours.count }
+        let screenHeight = currentScreenHeight() ?? geo.size.height
+        guard screenHeight > 0 else { return 0 }
+        // Drawer's top edge measured from the screen's top edge. The
+        // drawer + floating island stack flush against the screen
+        // bottom (`ContentView` ignores the bottom safe area), so
+        // both heights subtract directly off the full screen height.
+        let drawerTopY = screenHeight
+            - drawerVisibleHeight(in: geo)
+            - floatingIslandHeight
+        let visibleFraction = max(0, min(1, drawerTopY / screenHeight))
+        guard visibleFraction > 0 else { return 0 }
+        let topLatitude = region.center.latitude + region.span.latitudeDelta / 2
+        let clippedLatDelta = region.span.latitudeDelta * visibleFraction
+        let clipped = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(
+                latitude: topLatitude - clippedLatDelta / 2,
+                longitude: region.center.longitude
+            ),
+            span: MKCoordinateSpan(
+                latitudeDelta: clippedLatDelta,
+                longitudeDelta: region.span.longitudeDelta
+            )
+        )
+        return filteredTours.filter { tour in
+            tour.stops.contains { clipped.contains($0.coordinate) }
+        }.count
     }
 
-    private var headerText: String {
-        let n = toursInView.count
+    /// Full pixel height of the device screen, looked up via the
+    /// active `UIWindowScene` (iOS 26's recommended replacement for
+    /// `UIScreen.main.bounds`). Returns `nil` when no scene is
+    /// available — extremely rare in the running app, but callers
+    /// should fall back to `geo.size.height` defensively.
+    private func currentScreenHeight() -> CGFloat? {
+        UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first(where: { $0.activationState == .foregroundActive })?
+            .screen.bounds.height
+    }
+
+    private func headerText(forCount n: Int) -> String {
+        // At `.large` the drawer covers nearly all of the map, so "0
+        // tours in view" would always be true and read as a dead-end.
+        // Swap in a friendly invitation that primes the user to scroll
+        // the tour list below instead.
+        if sheetDetent == .large { return "Let's explore together!" }
         switch n {
         case 0: return "No tours in view"
         case 1: return "1 tour in view"
