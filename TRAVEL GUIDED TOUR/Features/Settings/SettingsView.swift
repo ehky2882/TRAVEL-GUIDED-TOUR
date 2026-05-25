@@ -38,6 +38,7 @@ enum ColorSchemePreference: String, CaseIterable, Identifiable {
 struct SettingsView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(DataService.self) private var dataService
+    @Environment(\.atlasIsHomeTab) private var isHomeTab
     @AppStorage("colorSchemePreference") private var colorSchemePreference: ColorSchemePreference = .system
 
     var body: some View {
@@ -153,6 +154,14 @@ struct SettingsView: View {
             .listRowBackground(Color.clear)
             .navigationTitle("Settings")
             .inlineNavigationBarTitle()
+            // Reserve room at the bottom for the mini-player + tab bar
+            // stack so the last settings row is always reachable above
+            // the module rather than hidden behind it.
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Color.clear.frame(
+                    height: AtlasBottomModule.height(extendsToScreenEdges: !isHomeTab)
+                )
+            }
         }
     }
 

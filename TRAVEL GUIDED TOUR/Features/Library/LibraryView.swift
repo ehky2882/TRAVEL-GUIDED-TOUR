@@ -21,6 +21,7 @@ struct LibraryView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(TourDownloader.self) private var tourDownloader
+    @Environment(\.atlasIsHomeTab) private var isHomeTab
 
     @State private var selectedSection: Section = .saved
 
@@ -50,6 +51,14 @@ struct LibraryView: View {
             .background(AtlasColors.secondaryBackground)
             .navigationTitle("Library")
             .inlineNavigationBarTitle()
+            // Reserve room at the bottom for the mini-player + tab bar
+            // stack so the last list item is always reachable above the
+            // module rather than hidden behind it.
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Color.clear.frame(
+                    height: AtlasBottomModule.height(extendsToScreenEdges: !isHomeTab)
+                )
+            }
         }
     }
 

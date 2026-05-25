@@ -1,4 +1,51 @@
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#endif
+
+/// Total visible height of the mini-player + tab bar stack at the
+/// bottom of every screen — fed into `BottomSheet.bottomReservedHeight`
+/// on Home and `safeAreaInset(.bottom)` on every other scrollable
+/// surface so content never hides behind the module.
+///
+/// On Home (`extendsToScreenEdges: false`) the stack floats as an
+/// island 8pt above the device bottom; the home-indicator safe area
+/// is just visible negative space behind the island. On non-Home tabs
+/// (`extendsToScreenEdges: true`) the stack runs flush to the screen
+/// edges and the tab bar's background extends through the bottom
+/// safe-area inset, so that inset must be reserved on top of the
+/// floating-island measurement.
+enum AtlasBottomModule {
+    /// Empirically-tuned height of the `AtlasTabBar` background
+    /// (button column + vertical padding), excluding any outer
+    /// padding. Mirrors the constant `HomeView` previously inlined
+    /// when sizing `BottomSheet.bottomReservedHeight`.
+    static let tabBarBackgroundHeight: CGFloat = 56
+
+    static func height(extendsToScreenEdges: Bool) -> CGFloat {
+        let trailing = extendsToScreenEdges
+            ? bottomSafeAreaInset()
+            : MiniPlayerBar.floatingSideInset
+        return MiniPlayerBar.layoutHeight + tabBarBackgroundHeight + trailing
+    }
+
+    /// Bottom safe-area inset of the active foreground scene's key
+    /// window. ~34pt on Face-ID iPhones, 0 on home-button devices.
+    /// Looked up through `UIWindowScene` since `ContentView` ignores
+    /// the bottom safe area for the floating island and SwiftUI
+    /// `GeometryReader.safeAreaInsets` consequently reads 0 there.
+    private static func bottomSafeAreaInset() -> CGFloat {
+        #if canImport(UIKit)
+        return UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first(where: { $0.activationState == .foregroundActive })?
+            .windows.first(where: { $0.isKeyWindow })?
+            .safeAreaInsets.bottom ?? 0
+        #else
+        return 0
+        #endif
+    }
+}
 
 /// Persistent now-playing bar shown directly above the tab bar.
 /// **Always present** — when a tour's audio is loaded it shows the
@@ -18,6 +65,11 @@ struct MiniPlayerBar: View {
     /// renders its muted idle state.
     let tour: Tour?
     let maker: Maker?
+    /// When `true` the bar drops its horizontal inset so it extends
+    /// flush to the screen edges — used on non-Home tabs, where the
+    /// bottom module is a flat full-width strip instead of a floating
+    /// island.
+    var extendsToScreenEdges: Bool = false
     /// Invoked when the user taps the bar body — opens the full player.
     var onExpand: () -> Void
 
@@ -28,14 +80,19 @@ struct MiniPlayerBar: View {
     /// Gap above the bar, separating the bottom island from the
     /// content / drawer above it.
     static let topGap: CGFloat = 8
-    /// Horizontal inset — matches the tab bar's inset so the bar and
-    /// tab bar stack into one flush, equal-width island.
-    static let sideInset: CGFloat = 8
+    /// Horizontal inset in floating-island mode — matches the tab
+    /// bar's inset so the bar and tab bar stack into one flush,
+    /// equal-width island.
+    static let floatingSideInset: CGFloat = 8
     /// Total vertical space the bar occupies, including its top gap.
     /// `HomeView` adds this to its drawer peek height, and
     /// `TourDetailView` to its action-bar inset, so their content
     /// clears the bar.
     static var layoutHeight: CGFloat { barHeight + topGap }
+
+    private var sideInset: CGFloat {
+        extendsToScreenEdges ? 0 : Self.floatingSideInset
+    }
 
     /// Diameter of the circular leading icon (author avatar / idle
     /// placeholder).
@@ -80,7 +137,7 @@ struct MiniPlayerBar: View {
         .frame(height: Self.barHeight)
         .frame(maxWidth: .infinity)
         .background(AtlasColors.secondaryBackground)
-        .padding(.horizontal, Self.sideInset)
+        .padding(.horizontal, sideInset)
         .padding(.top, Self.topGap)
     }
 

@@ -25,6 +25,7 @@ struct TourDetailView: View {
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
     @Environment(TourDownloader.self) private var tourDownloader
+    @Environment(\.atlasIsHomeTab) private var isHomeTab
 
     @State private var showingPlayer = false
 
@@ -43,9 +44,14 @@ struct TourDetailView: View {
                     }
                     .padding(.horizontal, AtlasSpacing.lg)
 
-                    // Spacer so the sticky action bar doesn't cover the
-                    // last stop row when the user scrolls to the bottom.
-                    Color.clear.frame(height: AtlasSpacing.xxl + AtlasSpacing.lg)
+                    // Spacer matches the sticky action bar's full height
+                    // so the last stop / description line lands at the
+                    // action bar's top edge when the user scrolls all
+                    // the way down. The action bar itself is sized to
+                    // cover the bottom mini-player + tab bar module
+                    // beneath it, so the buttons stay above the module
+                    // and nothing scrollable hides behind either.
+                    Color.clear.frame(height: actionBarHeight)
                 }
             }
             .background(AtlasColors.secondaryBackground)
@@ -233,11 +239,24 @@ struct TourDetailView: View {
     /// button, Save, and Download line up in size and baseline.
     private let controlHeight: CGFloat = 36
 
-    /// Action-bar height — sized so its top edge lands level with the
-    /// home drawer's peek detent: HomeView's basePeekHeight (130) +
-    /// the mini-player's footprint + the drawer's 8pt float inset.
+    /// Vertical space the action bar reserves for its button row above
+    /// the bottom module: `top padding (lg)` + the button itself + a
+    /// small breathing gap (`sm`) so the buttons don't kiss the
+    /// floating-island's top edge.
+    private var actionBarButtonArea: CGFloat {
+        AtlasSpacing.lg + controlHeight + AtlasSpacing.sm
+    }
+
+    /// Action-bar height — large enough to (a) seat its button row at
+    /// the top with the standard padding profile, and (b) extend its
+    /// background down through the entire mini-player + tab bar module
+    /// that floats over it from `ContentView`. Tracks
+    /// `AtlasBottomModule.height` directly so the value stays correct
+    /// when the module switches between Home's floating-island look
+    /// and the full-edge look used on other tabs.
     private var actionBarHeight: CGFloat {
-        130 + MiniPlayerBar.layoutHeight + 8
+        AtlasBottomModule.height(extendsToScreenEdges: !isHomeTab)
+            + actionBarButtonArea
     }
 
     private var actionBar: some View {
