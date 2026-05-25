@@ -176,6 +176,12 @@ struct HomeView: View {
                     }
                 }
             }
+            // Home root is the only surface that gets the
+            // floating-island bottom module. Pushed children
+            // (TourDetailView, MakerView, SearchView) declare
+            // `.fullEdge` themselves and override this while
+            // they're on top of the stack.
+            .atlasModuleGeometry(.floatingIsland)
         }
     }
 

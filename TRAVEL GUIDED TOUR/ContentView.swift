@@ -31,37 +31,53 @@ struct ContentView: View {
     /// whatever detent the user last left it at.
     @State private var homeSheetDetent: BottomSheetDetent = .large
 
-    /// Whether the active tab is Home. Drives the bottom-module
-    /// geometry switch: Home keeps the floating-island look (inset +
-    /// rounded bottom); every other tab extends flush to the screen
-    /// edges. Plumbed into the module directly and propagated down to
-    /// pushed children via `\.atlasIsHomeTab` so scrollable content
-    /// can size its `safeAreaInset(.bottom)` to match.
-    private var isHomeTab: Bool { selectedTab == .home }
+    /// Bottom-module geometry, driven by the currently-visible
+    /// content's `.atlasModuleGeometry(...)` preference. Floating
+    /// island only when the user is at the Home tab's root; every
+    /// non-Home tab and every pushed detail screen overrides this
+    /// to `.fullEdge`. Anchoring the buttons to the same screen-y
+    /// across both modes (see `AtlasTabBar`) means the visual
+    /// difference between the two is purely cosmetic — what gets
+    /// painted in the 8pt outer gap + home-indicator strip below
+    /// the buttons.
+    @State private var moduleGeometry: AtlasModuleGeometry = .floatingIsland
+
+    private var extendsToScreenEdges: Bool {
+        moduleGeometry == .fullEdge
+    }
 
     var body: some View {
         ZStack(alignment: .bottom) {
             tabContent
-                .environment(\.atlasIsHomeTab, isHomeTab)
 
             // Mini-player + tab bar stack at the bottom of every tab.
             // The mini-player is always present — it shows the active
-            // tour, or a muted "Nothing playing" idle state. On Home
-            // the stack floats as a rounded island (per PR #60); on
-            // every other tab it extends flush to the screen edges.
+            // tour, or a muted "Nothing playing" idle state. On the
+            // Home tab's root the stack floats as a rounded island
+            // (per PR #60); on every other surface — including
+            // pushed detail screens reached from Home — it extends
+            // flush to the screen edges so the bar reads the same
+            // way past the map.
             VStack(spacing: 0) {
                 MiniPlayerBar(
                     tour: nowPlayingTour,
                     maker: nowPlayingTour.flatMap { dataService.maker(for: $0) },
-                    extendsToScreenEdges: !isHomeTab
+                    extendsToScreenEdges: extendsToScreenEdges
                 ) {
                     showingFullPlayer = true
                 }
-                AtlasTabBar(selected: $selectedTab, extendsToScreenEdges: !isHomeTab)
+                AtlasTabBar(
+                    selected: $selectedTab,
+                    extendsToScreenEdges: extendsToScreenEdges
+                )
             }
         }
         .ignoresSafeArea(.container, edges: .bottom)
         .animation(.spring(response: 0.4, dampingFraction: 0.86), value: nowPlayingTour?.id)
+        .animation(.easeInOut(duration: 0.25), value: moduleGeometry)
+        .onPreferenceChange(AtlasModuleGeometryKey.self) { newGeometry in
+            moduleGeometry = newGeometry
+        }
         .sheet(isPresented: $showingFullPlayer) {
             if let tour = nowPlayingTour {
                 PlayerView(tour: tour)

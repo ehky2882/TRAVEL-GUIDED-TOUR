@@ -8,23 +8,30 @@ import UIKit
 /// on Home and `safeAreaInset(.bottom)` on every other scrollable
 /// surface so content never hides behind the module.
 ///
-/// On Home (`extendsToScreenEdges: false`) the stack floats as an
-/// island 8pt above the device bottom; the home-indicator safe area
-/// is just visible negative space behind the island. On non-Home tabs
-/// (`extendsToScreenEdges: true`) the stack runs flush to the screen
-/// edges and the tab bar's background extends through the bottom
-/// safe-area inset, so that inset must be reserved on top of the
-/// floating-island measurement.
+/// In both modes the mini-player + tab-bar BUTTONS sit at the same
+/// screen-y: there's an 8pt outer gap below the tab bar's painted
+/// region (the `floatingSideInset` constant). That gap is
+/// transparent on Home (the floating-island look — map shows
+/// behind) and opaque on non-Home (the tab bar's background extends
+/// down through the gap *and* the home-indicator safe-area inset).
+/// Anchoring the button row this way fixes the position jump the
+/// previous geometry produced when switching tabs: only what's
+/// painted below the buttons changes, not where they sit.
 enum AtlasBottomModule {
-    /// Empirically-tuned height of the `AtlasTabBar` background
-    /// (button column + vertical padding), excluding any outer
-    /// padding. Mirrors the constant `HomeView` previously inlined
-    /// when sizing `BottomSheet.bottomReservedHeight`.
+    /// Empirically-tuned height of the `AtlasTabBar` painted button
+    /// row (button column + vertical padding), excluding any outer
+    /// gap or safe-area extension. Mirrors the constant `HomeView`
+    /// previously inlined when sizing `BottomSheet.bottomReservedHeight`.
     static let tabBarBackgroundHeight: CGFloat = 56
 
     static func height(extendsToScreenEdges: Bool) -> CGFloat {
+        // 8pt outer gap below the tab bar's button row — always
+        // present so the button row sits at the same position in
+        // both modes. Plus the home-indicator inset on non-Home,
+        // since the tab bar's background fills through it as one
+        // continuous surface.
         let trailing = extendsToScreenEdges
-            ? bottomSafeAreaInset()
+            ? (MiniPlayerBar.floatingSideInset + bottomSafeAreaInset())
             : MiniPlayerBar.floatingSideInset
         return MiniPlayerBar.layoutHeight + tabBarBackgroundHeight + trailing
     }

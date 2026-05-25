@@ -21,7 +21,6 @@ struct LibraryView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(TourDownloader.self) private var tourDownloader
-    @Environment(\.atlasIsHomeTab) private var isHomeTab
 
     @State private var selectedSection: Section = .saved
 
@@ -56,10 +55,11 @@ struct LibraryView: View {
             // module rather than hidden behind it.
             .safeAreaInset(edge: .bottom, spacing: 0) {
                 Color.clear.frame(
-                    height: AtlasBottomModule.height(extendsToScreenEdges: !isHomeTab)
+                    height: AtlasBottomModule.height(extendsToScreenEdges: true)
                 )
             }
         }
+        .atlasModuleGeometry(.fullEdge)
     }
 
     // MARK: - Sections
