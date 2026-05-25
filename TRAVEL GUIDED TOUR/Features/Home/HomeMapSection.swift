@@ -54,13 +54,32 @@ struct HomeMapSection: View {
             MapCompass()
             MapScaleView()
         }
-        .onMapCameraChange(frequency: .continuous) { context in
-            currentRegion = context.region
+        // `.continuous` fires on every animation frame during a
+        // pan / pinch. We DON'T update `currentRegion` here —
+        // re-bucketing 60× per second causes visible flicker as
+        // SwiftUI tears down and re-adds annotations whose cluster
+        // IDs shift. The only mid-gesture work is notifying the
+        // parent to retract the drawer / cancel location tracking;
+        // that closure is guard-gated so it only does work once
+        // per gesture.
+        .onMapCameraChange(frequency: .continuous) { _ in
             onCameraMoving()
         }
+        // `.onEnd` fires once when the gesture settles — that's
+        // when we re-cluster. The annotations themselves are
+        // positioned by lat/lon so they pan smoothly with the map
+        // even while clusters are "frozen" from the prior region.
         .onMapCameraChange(frequency: .onEnd) { context in
             currentRegion = context.region
             onCameraChanged(context.region)
+        }
+        // Seed `currentRegion` from the initial camera position so
+        // clusters appear on first render — `.onEnd` doesn't fire
+        // until the user actually moves the map.
+        .task {
+            if currentRegion == nil {
+                currentRegion = cameraPosition.region
+            }
         }
     }
 
@@ -135,13 +154,22 @@ struct HomeMapSection: View {
             return markers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
         }
 
-        let originLat = region.center.latitude - region.span.latitudeDelta / 2
-        let originLon = region.center.longitude - region.span.longitudeDelta / 2
-
+        // Bucket by an ABSOLUTE (lat=0, lon=0) grid origin rather
+        // than the visible region's southwest corner. With a
+        // region-relative origin every pan would re-index every
+        // pin (the origin shifts with the camera), so a marker's
+        // bucket key — and therefore its cluster's SwiftUI
+        // annotation ID — would change on every recompute. With
+        // an absolute origin the bucket assignment depends only
+        // on the marker's coordinate and the current zoom level
+        // (cell pitch), so a pan with no zoom change keeps every
+        // cluster's ID stable across recomputes: SwiftUI updates
+        // the existing annotation in place instead of removing +
+        // re-adding it.
         var buckets: [BucketKey: [StopMarker]] = [:]
         for marker in markers {
-            let row = Int(floor((marker.coordinate.latitude - originLat) / cellSpanLat))
-            let col = Int(floor((marker.coordinate.longitude - originLon) / cellSpanLon))
+            let row = Int(floor(marker.coordinate.latitude / cellSpanLat))
+            let col = Int(floor(marker.coordinate.longitude / cellSpanLon))
             buckets[BucketKey(row: row, col: col), default: []].append(marker)
         }
 
