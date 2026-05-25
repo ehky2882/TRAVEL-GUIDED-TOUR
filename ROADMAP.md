@@ -91,13 +91,40 @@ module so the last list item / settings row / tour-detail description is
 always reachable above the module. Mechanism: new
 `AtlasBottomModule.height(extendsToScreenEdges:)` helper centralizes the
 math (replaces HomeView's inlined `floatingIslandHeight = 64 +
-layoutHeight`); new `\.atlasIsHomeTab` env value plumbs the active-tab
-context to pushed children; `MiniPlayerBar` and `AtlasTabBar` each gain
-an `extendsToScreenEdges` flag. TourDetailView's `actionBarHeight` now
+layoutHeight`); `MiniPlayerBar` and `AtlasTabBar` each gain an
+`extendsToScreenEdges` flag. TourDetailView's `actionBarHeight` now
 tracks the helper (was hardcoded `130 + layoutHeight + 8`) and its
 trailing ScrollView spacer matches `actionBarHeight` exactly — fixes the
 pre-existing too-small 72pt spacer that let the last description lines
 hide behind the action bar. Commit `2452f52`. 84/84 tests pass; CI green.
+
+**Consistent bottom module across tabs + detail (PR #68, 2026-05-25 pm).**
+Visual review of PRs #65 + #66 on `main` caught three follow-ups that
+PR #66 left on the floor. (1) `SearchBar` was presenting `SearchView` as
+`.sheet(...)`, which covered `ContentView`'s ZStack — the mini-player +
+tab bar disappeared when the user opened search, and the further
+`TourDetailView` push inherited the sheet's own nav stack. Switched to a
+`NavigationLink` push into the host tab's stack so the module stays
+visible underneath; `SearchView` dropped its inner `NavigationStack` +
+"Close" toolbar and now applies a `safeAreaInset(.bottom)` so result
+rows clear the module. (2) `AtlasTabBar` was adding the home-indicator
+safe-area inset *inside* the painted button row in full-edge mode,
+shoving the buttons ~26pt higher than they sat on Home — the bar
+appeared to jump up when switching tabs. Refactored so the safe-area
+fill is a separate background rectangle below an identically-laid-out
+button row; only what's painted below changes between modes. (3) Detail
+screens (`TourDetailView` / `MakerView` / `ManageDownloadsView` /
+`SearchView`) used to inherit the Home tab's floating-island look when
+pushed from Home, which let scrolled content peek through the 8pt outer
+transparent gap below the rounded tab bar. Now every detail screen
+declares the full-edge geometry directly and overrides its host tab's
+preference while it's on top. Mechanism: replaced `\.atlasIsHomeTab` env
+value (deleted) with a typed `AtlasModuleGeometry` preference; each
+surface declares its preference at its root; the deepest declaration
+wins; `ContentView` reads via `onPreferenceChange` and threads geometry
+into `MiniPlayerBar` + `AtlasTabBar`. `AtlasBottomModule.height` math
+updated to add the new 8pt outer gap above the safe-area fill on
+non-Home. Commit `fe11d99`. 84/84 tests pass; CI green.
 
 Brooklyn Bridge, Rockefeller Center, Met, High Line, 9/11 Memorial),
 Brooklyn Museum, 9 added 2026-05-21/22 — Whitney, AMNH, Brooklyn
