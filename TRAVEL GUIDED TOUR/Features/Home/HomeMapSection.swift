@@ -2,25 +2,43 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
+/// Coordinate + view payload for the floating placecard preview the
+/// map renders when a pin is tapped. Kept inert (no behavior, just
+/// data) so `HomeMapSection` doesn't need to know how the placecard
+/// is constructed.
+struct PlacecardAnchor {
+    let coordinate: CLLocationCoordinate2D
+    let view: AnyView
+}
+
 /// Map section at the top of the home screen. Renders a pin per stop
 /// across `tours`, centered on the user's location (or an NYC default
 /// when location is denied / unavailable). Reports the visible
 /// region's center after every pan so the parent can update the
-/// "in view" count, and reports the tapped tour upward via
-/// `selectedTourId` so the parent can scroll its drawer to that
-/// tour's card (AllTrails pattern).
+/// "in view" count, and reports a tapped pin upward via
+/// `onPinTapped` so the parent can pop up a placecard preview anchored
+/// to that pin.
 ///
 /// Pins are small filled circles in the Atlas accent color — no
 /// category glyph, no balloon shape. At wide zoom (city-level) nearby
 /// pins collapse into cluster badges; tapping a cluster zooms in to
 /// break it apart.
+///
+/// When `placecard` is non-nil, the placecard view is rendered as
+/// another map annotation anchored above the tapped pin so it tracks
+/// the map's pan/zoom. Tapping the map outside any pin or the
+/// placecard invokes `onMapTapped`, which the parent uses to dismiss
+/// the placecard.
 struct HomeMapSection: View {
     let tours: [Tour]
     let userLocation: CLLocation?
     /// Device compass heading in degrees (0 = true north). When
     /// present, the user-location dot shows a directional wedge.
     let userHeading: CLLocationDirection?
-    @Binding var selectedTourId: UUID?
+    /// ID of the currently-selected pin (the one whose placecard is
+    /// showing). Drives the StopPin's thicker selection ring. Pure
+    /// presentation — pin taps go up via `onPinTapped`.
+    let selectedTourId: UUID?
     @Binding var cameraPosition: MapCameraPosition
     /// Active map type — Standard / Hybrid / Satellite. Lifted to the
     /// parent so the map-mode selector button can cycle it.
@@ -32,6 +50,17 @@ struct HomeMapSection: View {
     /// flinging the map (`.continuous` frequency). The parent uses this
     /// to retract the drawer and fade the recenter button.
     let onCameraMoving: () -> Void
+    /// Fires when the user taps a stop pin. Carries the tour id and
+    /// the tapped stop's coordinate so the parent can anchor a
+    /// placecard above that pin.
+    let onPinTapped: (UUID, CLLocationCoordinate2D) -> Void
+    /// Fires when the user taps the map outside any pin or the
+    /// placecard. Parent uses this to dismiss the placecard.
+    let onMapTapped: () -> Void
+    /// When non-nil, an annotation rendering `view` is anchored just
+    /// above `coordinate` so it tracks the map as the user
+    /// pans/zooms.
+    let placecard: PlacecardAnchor?
 
     /// Current visible region, kept fresh by `.onMapCameraChange` so
     /// clustering math reacts to live pans and pinches.
@@ -39,6 +68,13 @@ struct HomeMapSection: View {
 
     var body: some View {
         styledMap
+        // Map taps that don't hit an annotation propagate here —
+        // SwiftUI prefers the inner annotation gestures, so pin and
+        // placecard taps still fire. Parent uses this to dismiss the
+        // placecard on tap-anywhere-else.
+        .onTapGesture {
+            onMapTapped()
+        }
         .mapControls {
             MapCompass()
             MapScaleView()
@@ -92,6 +128,18 @@ struct HomeMapSection: View {
                 }
                 .annotationTitles(.hidden)
             }
+
+            if let placecard {
+                // `.bottom` anchors the view's bottom edge at the
+                // pin's coordinate. The trailing `.padding(.bottom)`
+                // lifts the placecard another ~14pt so it clears the
+                // pin's circle instead of overlapping it.
+                Annotation("Tour preview", coordinate: placecard.coordinate, anchor: .bottom) {
+                    placecard.view
+                        .padding(.bottom, 14)
+                }
+                .annotationTitles(.hidden)
+            }
         }
         switch mapMode {
         case .standard: map.mapStyle(.standard)
@@ -108,7 +156,7 @@ struct HomeMapSection: View {
         case .single(let marker):
             StopPin(isSelected: marker.tourId == selectedTourId)
                 .onTapGesture {
-                    selectedTourId = marker.tourId
+                    onPinTapped(marker.tourId, marker.coordinate)
                 }
                 .accessibilityLabel(marker.title)
                 .accessibilityAddTraits(.isButton)
