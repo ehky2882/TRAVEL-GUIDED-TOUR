@@ -61,6 +61,24 @@ was the build the 2026-05-21 M-qa pass ran against.
 **Content (M-launch-content).** 38 tours in `Resources/Tours.json`,
 all single-stop. The original 10 NYC landmarks (Grand Central, Times
 Square, South Street Seaport, Empire State Building, Statue of Liberty,
+**Home polish + player-state hardening (PR #60, 2026-05-24 late-pm).**
+Bigger bottom-module radius (48→56), drawer now overlays the mini-player +
+tab bar (squared bottom corners via new `bottomReservedHeight` /
+`bottomCornerRadius: 0`), chip row + search bar share `searchBarHeight =
+46`, `caption` font throughout, "tours in view" count math fixed (uses
+individual stops + screen-coord math; swaps to "Let's explore together!"
+at the `.large` detent), recenter button tracks the drawer's top edge in
+every detent. Same PR fixed three audio-state bugs surfaced during the
+visual review: (1) `TourDetailView` no longer disables "Open player"
+mid-load — the sheet is the user's escape hatch; (2)
+`AudioPlayerService.seek(to:)` synthesizes `.ended` when the user scrubs
+to/past `duration` (AVPlayer doesn't fire `didPlayToEndTime` on manual
+seek, so without this we'd park in `.waitingToPlayAtSpecifiedRate` →
+flip to `.loading`); (3) `PlayerView.togglePlayPause` on `.ended` now
+calls a new `replayCurrent()` that restarts via `playIntro`/`playStop`
+(was `audioPlayer.play()`, a no-op on the drained AVQueuePlayer queue).
+Commit `e5b31da`. 84/84 tests pass; CI green.
+
 Brooklyn Bridge, Rockefeller Center, Met, High Line, 9/11 Memorial),
 Brooklyn Museum, 9 added 2026-05-21/22 — Whitney, AMNH, Brooklyn
 Bridge Park, Chrysler Building, Flatiron Building, Governors Island,

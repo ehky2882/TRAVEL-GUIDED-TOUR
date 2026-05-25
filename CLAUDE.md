@@ -28,9 +28,9 @@ These happen **automatically, without the owner asking**.
 
 V1 functionality complete and device-validated. TestFlight build **1.0 (7)** uploading now (owner archives from Xcode).
 
-PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kills the post-tour "Loading…"/hourglass flicker and adds in-place replay via new `AudioPlayerService.replayLast()`. Sibling polish iteration sits on `claude/home-visual-polish-bundle` (`5db7aaa`) — pushed but not PR'd yet.
+PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kills the post-tour "Loading…"/hourglass flicker and adds in-place replay via new `AudioPlayerService.replayLast()`. PR #60 (home polish bundle + player-state hardening — `e5b31da`) shipped 2026-05-24 late-pm: bigger bottom-module radius (48→56), drawer now stacks on top of mini-player + tab bar via new `bottomReservedHeight`, chip + search-bar share `searchBarHeight = 46`, "tours in view" count + `Let's explore together!` empty state, recenter button tracks drawer detent. Same PR also fixed three player-state bugs surfaced during visual review: Open-player button no longer disabled mid-load, `seek(to:)` synthesizes `.ended` on scrub-to-end (AVPlayer doesn't fire `didPlayToEndTime` on manual seek), full-player tap-to-replay on `.ended` via new `replayCurrent()`.
 
-**What's left:** author one multi-stop walking tour (unblocks the last M-qa checks) → PR the polish branch → broader design/polish pass.
+**What's left:** author one multi-stop walking tour (unblocks the last M-qa checks) → broader design/polish pass.
 
 Key facts:
 - **38 single-stop tours** in `Resources/Tours.json`; audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
