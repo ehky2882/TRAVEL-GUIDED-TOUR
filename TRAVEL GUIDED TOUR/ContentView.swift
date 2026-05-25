@@ -58,27 +58,37 @@ struct ContentView: View {
         ZStack(alignment: .bottom) {
             tabContent
 
-            // Mini-player + tab bar stack at the bottom of every tab.
-            // The mini-player is always present — it shows the active
-            // tour, or a muted "Nothing playing" idle state. On the
-            // Home tab's root the stack floats as a rounded island
-            // (per PR #60); on every other surface — including
-            // pushed detail screens reached from Home — it reads as
-            // a flat strip flush to the screen edges. In both modes
-            // the buttons sit at the same screen-y; only what's
-            // painted in the 8pt outer strip below them changes.
-            VStack(spacing: 0) {
-                MiniPlayerBar(
-                    tour: nowPlayingTour,
-                    maker: nowPlayingTour.flatMap { dataService.maker(for: $0) },
-                    extendsToScreenEdges: extendsToScreenEdges
-                ) {
-                    showingFullPlayer = true
+            // Mini-player + tab bar stack at the bottom of every
+            // tab. The mini-player + tab bar themselves are
+            // rendered IDENTICALLY on every surface (8pt inset,
+            // rounded bottom, transparent 8pt outer strip) — same
+            // buttons, same shape, same position. The only thing
+            // that changes between Home root (floating island)
+            // and every other surface (full-edge look) is the
+            // background fill BEHIND the island: on Home root
+            // nothing's painted behind, so the 8pt side + bottom
+            // gaps show the map; elsewhere we paint an
+            // edge-to-edge `secondaryBackground` rectangle behind
+            // the island so the gaps blend into one continuous
+            // full-width strip the same color as the bar.
+            ZStack(alignment: .bottom) {
+                if extendsToScreenEdges {
+                    Rectangle()
+                        .fill(AtlasColors.secondaryBackground)
+                        .frame(maxWidth: .infinity)
+                        .frame(height: AtlasBottomModule.height())
+                        .allowsHitTesting(false)
                 }
-                AtlasTabBar(
-                    selected: $selectedTab,
-                    extendsToScreenEdges: extendsToScreenEdges
-                )
+
+                VStack(spacing: 0) {
+                    MiniPlayerBar(
+                        tour: nowPlayingTour,
+                        maker: nowPlayingTour.flatMap { dataService.maker(for: $0) }
+                    ) {
+                        showingFullPlayer = true
+                    }
+                    AtlasTabBar(selected: $selectedTab)
+                }
             }
         }
         .ignoresSafeArea(.container, edges: .bottom)

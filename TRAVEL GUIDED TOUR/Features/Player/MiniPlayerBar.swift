@@ -66,11 +66,6 @@ struct MiniPlayerBar: View {
     /// renders its muted idle state.
     let tour: Tour?
     let maker: Maker?
-    /// When `true` the bar drops its horizontal inset so it extends
-    /// flush to the screen edges — used on non-Home tabs, where the
-    /// bottom module is a flat full-width strip instead of a floating
-    /// island.
-    var extendsToScreenEdges: Bool = false
     /// Invoked when the user taps the bar body — opens the full player.
     var onExpand: () -> Void
 
@@ -81,19 +76,21 @@ struct MiniPlayerBar: View {
     /// Gap above the bar, separating the bottom island from the
     /// content / drawer above it.
     static let topGap: CGFloat = 8
-    /// Horizontal inset in floating-island mode — matches the tab
-    /// bar's inset so the bar and tab bar stack into one flush,
-    /// equal-width island.
+    /// Horizontal inset — matches the tab bar's inset so the bar
+    /// and tab bar stack into one flush, equal-width island. Used
+    /// on every surface: the bar is always rendered in the
+    /// inset-island form so the buttons sit in the same place
+    /// across Home, Library, Me, and every pushed detail. On
+    /// non-Home surfaces `ContentView` paints an edge-to-edge
+    /// background behind the inset island so the side gaps blend
+    /// into a continuous full-width strip; the bar itself is
+    /// unchanged.
     static let floatingSideInset: CGFloat = 8
     /// Total vertical space the bar occupies, including its top gap.
     /// `HomeView` adds this to its drawer peek height, and
     /// `TourDetailView` to its action-bar inset, so their content
     /// clears the bar.
     static var layoutHeight: CGFloat { barHeight + topGap }
-
-    private var sideInset: CGFloat {
-        extendsToScreenEdges ? 0 : Self.floatingSideInset
-    }
 
     /// Diameter of the circular leading icon (author avatar / idle
     /// placeholder).
@@ -138,7 +135,7 @@ struct MiniPlayerBar: View {
         .frame(height: Self.barHeight)
         .frame(maxWidth: .infinity)
         .background(AtlasColors.secondaryBackground)
-        .padding(.horizontal, sideInset)
+        .padding(.horizontal, Self.floatingSideInset)
         .padding(.top, Self.topGap)
     }
 
