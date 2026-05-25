@@ -98,6 +98,27 @@ trailing ScrollView spacer matches `actionBarHeight` exactly — fixes the
 pre-existing too-small 72pt spacer that let the last description lines
 hide behind the action bar. Commit `2452f52`. 84/84 tests pass; CI green.
 
+**Restore Home floating island + anchor at OLD Home position (PR #69,
+2026-05-25 pm-2).** PR #68 introduced two compounding regressions on
+Home that the owner caught immediately. (1) `AtlasTabBar` added the
+home-indicator safe-area inset to the view's *height* in full-edge
+mode — physically shoved the buttons + mini-player up by ~34pt. (2)
+The PreferenceKey-driven `moduleGeometry` got stuck at `.fullEdge`
+after popping back from a detail screen, leaving Home in the wrong
+geometry. Net effect: Home no longer floated AND everything sat too
+high. Fix: `AtlasTabBar.body` is now a fixed-height VStack (56pt
+painted button row + 8pt outer strip) in both modes; only what's
+painted in the 8pt strip changes (transparent on Home, opaque
+elsewhere). The safe-area zone underneath is already covered by the
+painted button row because of the parent `.ignoresSafeArea(.bottom)`.
+`AtlasBottomModule.height` is a constant 126pt across modes.
+Replaced PreferenceKey with `@Observable AtlasNavigationState`
+tracking `pushedDepth` via push/pop from each pushed view's
+onAppear/onDisappear — deterministic, no sticky values. Verified via
+`snapshot_ui`: tab buttons at y=807 in every tab (Home, Library, Me),
+matching the OLD Home position exactly. Commit `8d928b3`. 84/84
+tests pass; CI green.
+
 **Consistent bottom module across tabs + detail (PR #68, 2026-05-25 pm).**
 Visual review of PRs #65 + #66 on `main` caught three follow-ups that
 PR #66 left on the floor. (1) `SearchBar` was presenting `SearchView` as
