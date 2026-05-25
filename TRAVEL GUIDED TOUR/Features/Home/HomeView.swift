@@ -44,7 +44,21 @@ struct HomeView: View {
     @State private var sheetDragOffset: CGFloat = 0
     @State private var selectedCategory: TourCategory? = nil
     @State private var selectedTourId: UUID? = nil
-    @State private var trackingMode: LocationTrackingMode = .none
+    /// Active map type. Cycled / picked by the map-mode selector
+    /// button. Standard is the default — same as Apple Maps.
+    @State private var mapMode: MapMode = .standard
+    /// Loaded Look Around scene for the current map center, or `nil`
+    /// when the center has no Look Around coverage. Probed
+    /// asynchronously on every settled camera change so the Look
+    /// Around button's disabled state reflects current coverage.
+    @State private var lookAroundScene: MKLookAroundScene?
+    /// Drives the sheet that presents `LookAroundView`. Held as a Bool
+    /// so dismissing the sheet doesn't clear `lookAroundScene` (which
+    /// would disable the button until the next probe completes).
+    @State private var isShowingLookAround = false
+    /// Most recently probed center — used to debounce probes when the
+    /// camera reports many `.onEnd` events with the same center.
+    @State private var lastProbedCenter: CLLocationCoordinate2D?
     @State private var cameraPosition: MapCameraPosition = .region(
         MKCoordinateRegion(
             // Fallback start (NYC) — overridden on first appear if
@@ -91,17 +105,18 @@ struct HomeView: View {
                         userHeading: locationManager.heading,
                         selectedTourId: $selectedTourId,
                         cameraPosition: $cameraPosition,
+                        mapMode: mapMode,
                         onCameraChanged: { region in
                             visibleRegion = region
                             withAnimation(.easeInOut(duration: 0.3)) {
                                 isMapMoving = false
                             }
+                            probeLookAround(at: region.center)
                         },
                         onCameraMoving: {
                             guard mapInteractionEnabled, !isMapMoving else { return }
                             withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
                                 isMapMoving = true
-                                trackingMode = .none
                                 if sheetDetent != .peek {
                                     sheetDetent = .peek
                                 }
@@ -134,12 +149,14 @@ struct HomeView: View {
                         drawerContent(in: geo)
                     }
 
-                    // Floating recenter button anchored to bottom-leading,
-                    // padded up by the drawer's *current* visible height —
-                    // which includes the in-progress drag delta — so the
-                    // button stays glued to the drawer's top edge during
-                    // the drag, not just after release.
-                    locationButton
+                    // Floating map-control button stack anchored to
+                    // bottom-leading, padded up by the drawer's
+                    // *current* visible height — which includes the
+                    // in-progress drag delta — so the stack stays glued
+                    // to the drawer's top edge during the drag, not
+                    // just after release. All three buttons share the
+                    // same `MapControlButton` shape per the design rule.
+                    mapControlStack
                         .padding(.leading, AtlasSpacing.md)
                         // Drawer now floats *above* the mini-player +
                         // tab bar, so the button's offset from the
@@ -197,38 +214,91 @@ struct HomeView: View {
         return max(peekHeight, baseHeight - sheetDragOffset)
     }
 
-    // MARK: - Location button
+    // MARK: - Map control buttons
 
-    private var locationButton: some View {
-        Button { cycleTrackingMode() } label: {
-            Image(systemName: trackingMode.iconName)
-                .font(.system(size: 16))
-                .foregroundStyle(AtlasColors.primaryText)
-                .frame(width: 44, height: 44)
-                .background(AtlasColors.secondaryBackground)
-                .clipShape(Circle())
+    /// Standard zoom span the recenter button snaps to — roughly
+    /// 0.005° ≈ 555m N-S / ~420m E-W at NYC latitude, i.e. a few
+    /// city blocks across. Picked to land between "neighborhood
+    /// overview" and "block-level detail" so a tap from any zoom
+    /// returns the user to a useful local view without overshooting
+    /// to a single building.
+    private static let recenterSpan = MKCoordinateSpan(
+        latitudeDelta: 0.005,
+        longitudeDelta: 0.005
+    )
+
+    private var mapControlStack: some View {
+        VStack(spacing: AtlasSpacing.sm) {
+            MapControlButton(systemImage: "binoculars.fill", isEnabled: lookAroundScene != nil) {
+                guard lookAroundScene != nil else { return }
+                isShowingLookAround = true
+            }
+            .accessibilityLabel(lookAroundScene != nil ? "Look Around" : "Look Around not available here")
+
+            Menu {
+                Picker("Map type", selection: $mapMode) {
+                    ForEach(MapMode.allCases) { mode in
+                        Label(mode.title, systemImage: mode.iconName).tag(mode)
+                    }
+                }
+            } label: {
+                MapControlButtonLabel(systemImage: mapMode.iconName)
+            }
+            .accessibilityLabel("Map type — \(mapMode.title)")
+
+            MapControlButton(systemImage: "location.fill") {
+                recenterOnUser()
+            }
+            .accessibilityLabel("Recenter on my location")
         }
-        .buttonStyle(.plain)
-        .accessibilityLabel("My location")
+        .sheet(isPresented: $isShowingLookAround) {
+            if let scene = lookAroundScene {
+                LookAroundView(scene: scene)
+                    .ignoresSafeArea()
+            }
+        }
     }
 
-    private func cycleTrackingMode() {
-        switch trackingMode {
-        case .none:
-            guard locationManager.userLocation != nil else { return }
-            trackingMode = .follow
-            // Animate the camera so it glides to the user instead of
-            // snapping there abruptly.
-            withAnimation(.easeInOut(duration: 1.2)) {
-                cameraPosition = .userLocation(followsHeading: false, fallback: cameraPosition)
+    /// Single-action recenter: snap the camera to the user's current
+    /// location at the standard zoom, with 2D tilt and a North-up
+    /// heading. `.region(...)` sets a non-tilted, north-aligned
+    /// camera by default, so resetting all four attributes is just
+    /// "build a fresh region centered on the user."
+    private func recenterOnUser() {
+        guard let user = locationManager.userLocation else { return }
+        let region = MKCoordinateRegion(
+            center: user.coordinate,
+            span: Self.recenterSpan
+        )
+        withAnimation(.easeInOut(duration: 0.8)) {
+            cameraPosition = .region(region)
+        }
+    }
+
+    /// Async-probe Look Around coverage at `coordinate`. Cached on
+    /// `lastProbedCenter` so quick successive `.onEnd` events with
+    /// the same center don't fire a new request. The result drives
+    /// the Look Around button's enabled state — `nil` = no coverage.
+    private func probeLookAround(at coordinate: CLLocationCoordinate2D) {
+        if let last = lastProbedCenter,
+           abs(last.latitude - coordinate.latitude) < 1e-6,
+           abs(last.longitude - coordinate.longitude) < 1e-6 {
+            return
+        }
+        lastProbedCenter = coordinate
+        Task {
+            let request = MKLookAroundSceneRequest(coordinate: coordinate)
+            let scene = try? await request.scene
+            await MainActor.run {
+                // Drop the result if the camera has moved since the
+                // probe started — only the most recent center's scene
+                // should bind to the button.
+                if let current = lastProbedCenter,
+                   abs(current.latitude - coordinate.latitude) < 1e-6,
+                   abs(current.longitude - coordinate.longitude) < 1e-6 {
+                    lookAroundScene = scene
+                }
             }
-        case .follow:
-            trackingMode = .followWithHeading
-            withAnimation(.easeInOut(duration: 1.2)) {
-                cameraPosition = .userLocation(followsHeading: true, fallback: cameraPosition)
-            }
-        case .followWithHeading:
-            trackingMode = .none
         }
     }
 
@@ -475,14 +545,29 @@ struct HomeView: View {
     }
 }
 
-private enum LocationTrackingMode {
-    case none, follow, followWithHeading
+/// The three Apple-Maps map types Atlas exposes via the map-mode
+/// selector. `style` is the SwiftUI `MapStyle` value applied to the
+/// `Map`; `iconName` is the SF Symbol shown on the selector button
+/// when this mode is active.
+enum MapMode: String, CaseIterable, Identifiable {
+    case standard, hybrid, imagery
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .standard: return "Standard"
+        case .hybrid:   return "Hybrid"
+        case .imagery:  return "Satellite"
+        }
+    }
 
     var iconName: String {
         switch self {
-        case .none:              return "location"
-        case .follow:            return "location.fill"
-        case .followWithHeading: return "location.north.line.fill"
+        case .standard: return "map"
+        case .hybrid:   return "map.fill"
+        case .imagery:  return "globe.americas.fill"
         }
     }
+
 }

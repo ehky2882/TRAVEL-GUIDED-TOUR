@@ -22,6 +22,9 @@ struct HomeMapSection: View {
     let userHeading: CLLocationDirection?
     @Binding var selectedTourId: UUID?
     @Binding var cameraPosition: MapCameraPosition
+    /// Active map type — Standard / Hybrid / Satellite. Lifted to the
+    /// parent so the map-mode selector button can cycle it.
+    let mapMode: MapMode
     /// Fires after a pan settles. The parent uses this to recompute
     /// the in-view tour count and any location-anchored UI.
     let onCameraChanged: (MKCoordinateRegion) -> Void
@@ -35,21 +38,7 @@ struct HomeMapSection: View {
     @State private var currentRegion: MKCoordinateRegion?
 
     var body: some View {
-        Map(position: $cameraPosition) {
-            ForEach(clusterItems, id: \.id) { item in
-                Annotation(item.accessibilityLabel, coordinate: item.coordinate, anchor: .center) {
-                    pinView(for: item)
-                }
-                .annotationTitles(.hidden)
-            }
-
-            if let userLocation {
-                Annotation("My location", coordinate: userLocation.coordinate, anchor: .center) {
-                    UserLocationDot(headingDegrees: wedgeRotationDegrees)
-                }
-                .annotationTitles(.hidden)
-            }
-        }
+        styledMap
         .mapControls {
             MapCompass()
             MapScaleView()
@@ -80,6 +69,34 @@ struct HomeMapSection: View {
             if currentRegion == nil {
                 currentRegion = cameraPosition.region
             }
+        }
+    }
+
+    /// Map view with the right SwiftUI `MapStyle` applied. Branched
+    /// per `mapMode` because `mapStyle(_:)` takes a concrete
+    /// `MapStyle` and `MapStyle` is a protocol — we can't smuggle
+    /// the value through a stored property of protocol type.
+    @ViewBuilder
+    private var styledMap: some View {
+        let map = Map(position: $cameraPosition) {
+            ForEach(clusterItems, id: \.id) { item in
+                Annotation(item.accessibilityLabel, coordinate: item.coordinate, anchor: .center) {
+                    pinView(for: item)
+                }
+                .annotationTitles(.hidden)
+            }
+
+            if let userLocation {
+                Annotation("My location", coordinate: userLocation.coordinate, anchor: .center) {
+                    UserLocationDot(headingDegrees: wedgeRotationDegrees)
+                }
+                .annotationTitles(.hidden)
+            }
+        }
+        switch mapMode {
+        case .standard: map.mapStyle(.standard)
+        case .hybrid:   map.mapStyle(.hybrid)
+        case .imagery:  map.mapStyle(.imagery)
         }
     }
 
