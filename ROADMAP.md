@@ -79,6 +79,26 @@ calls a new `replayCurrent()` that restarts via `playIntro`/`playStop`
 (was `audioPlayer.play()`, a no-op on the drained AVQueuePlayer queue).
 Commit `e5b31da`. 84/84 tests pass; CI green.
 
+**Module geometry on non-Home tabs (PR #66, 2026-05-25).** Extends PR
+#60's bottom-module work past the home screen. On Home the mini-player +
+tab bar still float as a rounded island; on Library / Settings / Manage
+downloads / Tour Detail / Maker the module now extends flush to the
+screen edges (no horizontal inset, no rounded outer corners) and its
+background runs through the home-indicator safe area, with the button
+column padded up so taps still clear the indicator. Every scrollable
+non-Home surface now applies `.safeAreaInset(.bottom)` sized to the
+module so the last list item / settings row / tour-detail description is
+always reachable above the module. Mechanism: new
+`AtlasBottomModule.height(extendsToScreenEdges:)` helper centralizes the
+math (replaces HomeView's inlined `floatingIslandHeight = 64 +
+layoutHeight`); new `\.atlasIsHomeTab` env value plumbs the active-tab
+context to pushed children; `MiniPlayerBar` and `AtlasTabBar` each gain
+an `extendsToScreenEdges` flag. TourDetailView's `actionBarHeight` now
+tracks the helper (was hardcoded `130 + layoutHeight + 8`) and its
+trailing ScrollView spacer matches `actionBarHeight` exactly — fixes the
+pre-existing too-small 72pt spacer that let the last description lines
+hide behind the action bar. Commit `2452f52`. 84/84 tests pass; CI green.
+
 Brooklyn Bridge, Rockefeller Center, Met, High Line, 9/11 Memorial),
 Brooklyn Museum, 9 added 2026-05-21/22 — Whitney, AMNH, Brooklyn
 Bridge Park, Chrysler Building, Flatiron Building, Governors Island,
