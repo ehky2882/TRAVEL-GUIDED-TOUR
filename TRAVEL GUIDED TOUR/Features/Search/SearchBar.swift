@@ -5,12 +5,18 @@ import SwiftUI
 /// shape — tappable capsule with a magnifying-glass icon and
 /// placeholder copy — but the destination is the real search results
 /// screen.
+///
+/// Pushes `SearchView` into the host tab's `NavigationStack` rather
+/// than presenting it as a `.sheet`: a sheet covers the parent's
+/// view tree (including `ContentView`'s mini-player + tab bar
+/// overlay), so the bottom module disappeared whenever the user
+/// opened search. Pushing keeps the module in place and lets a
+/// further `TourDetailView` push extend the same nav stack instead
+/// of stacking presentation contexts.
 struct SearchBar: View {
-    @State private var showingSearch = false
-
     var body: some View {
-        Button {
-            showingSearch = true
+        NavigationLink {
+            SearchView()
         } label: {
             HStack(spacing: AtlasSpacing.sm) {
                 Image(systemName: "magnifyingglass")
@@ -36,8 +42,5 @@ struct SearchBar: View {
             )
         }
         .buttonStyle(.plain)
-        .sheet(isPresented: $showingSearch) {
-            SearchView()
-        }
     }
 }

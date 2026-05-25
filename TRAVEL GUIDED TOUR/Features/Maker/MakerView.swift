@@ -10,7 +10,6 @@ struct MakerView: View {
     let maker: Maker
 
     @Environment(DataService.self) private var dataService
-    @Environment(\.atlasIsHomeTab) private var isHomeTab
 
     private let avatarSize: CGFloat = 96
 
@@ -38,9 +37,12 @@ struct MakerView: View {
         // stack so the last tour row is reachable above the module.
         .safeAreaInset(edge: .bottom, spacing: 0) {
             Color.clear.frame(
-                height: AtlasBottomModule.height(extendsToScreenEdges: !isHomeTab)
+                height: AtlasBottomModule.height(extendsToScreenEdges: true)
             )
         }
+        // Pushed screens always get the full-edge module — overrides
+        // the host tab's preference while this view is on top.
+        .atlasModuleGeometry(.fullEdge)
     }
 
     // MARK: - Sections

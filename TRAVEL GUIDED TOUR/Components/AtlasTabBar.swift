@@ -8,22 +8,28 @@ import SwiftUI
 ///
 /// Shape:
 ///   - Top corners: square — the rectangular mini-player stacks flush above
-///   - Bottom corners: phone-screen radius (the floating-island look)
+///   - Bottom corners: phone-screen radius on Home; square on every
+///     other surface, where the bar reads as a flat strip flush to
+///     the screen edges
 ///
-/// When the home drawer is open, the drawer's glass extends down
-/// past the safe area and behind this tab bar; the two sit at the
-/// same horizontal inset, with the same bottom-corner radius, so
-/// they read as one floating phone-shaped island. On tabs without
-/// a drawer (Library, Me), the tab bar is the whole island.
+/// In both modes the button row sits at the same screen-y position
+/// (8pt outer gap below the painted bar) so the bar doesn't appear
+/// to jump up or down when the user switches tabs or pushes a
+/// detail screen. The only thing that changes between modes is what
+/// gets painted in the 8pt outer gap + home-indicator strip below
+/// the buttons: transparent (map shows through) on Home,
+/// `secondaryBackground` on everywhere else.
 struct AtlasTabBar: View {
     @Binding var selected: AtlasTab
 
-    /// When `true` (non-Home tabs) the bar drops its horizontal inset
-    /// and bottom corner radius and extends flush to the screen edges;
-    /// the tab bar's background also extends through the bottom
-    /// safe-area inset (home-indicator strip), with the button column
-    /// padded up to sit above it. When `false` (Home) the bar keeps
-    /// the AllTrails-style floating-island look that PR #60 dialed in.
+    /// When `true` (non-Home tabs and every pushed detail screen)
+    /// the bar drops its horizontal inset and bottom corner radius
+    /// so it spans the full screen width as a flat strip, and its
+    /// background extends down through the 8pt outer gap *and* the
+    /// home-indicator safe-area inset as one continuous surface.
+    /// When `false` (Home root only) the bar keeps the
+    /// AllTrails-style floating-island look that PR #60 dialed in:
+    /// inset, rounded bottom corners, transparent gap below.
     var extendsToScreenEdges: Bool = false
     /// Square top corners — the rectangular mini-player stacks flush
     /// on top, so the tab bar's top edge must be square to meet it
@@ -39,17 +45,13 @@ struct AtlasTabBar: View {
     private var bottomCornerRadius: CGFloat {
         extendsToScreenEdges ? 0 : AtlasSpacing.phoneScreenRadius
     }
-    /// In floating mode the outer bottom padding (8pt) lifts the
-    /// island above the device bottom. In full-edge mode the
-    /// background runs all the way down to the screen edge, so the
-    /// button column instead gets an inner bottom padding equal to
-    /// the home-indicator safe-area inset — buttons clear the
-    /// indicator while the background fills the edge.
-    private var outerBottomPadding: CGFloat {
-        extendsToScreenEdges ? 0 : 8
-    }
-    private var innerBottomPadding: CGFloat {
-        extendsToScreenEdges ? safeAreaBottomInset : 0
+    /// Height of the painted area below the tab bar's button row.
+    /// Always at least 8pt (the outer gap that keeps the buttons
+    /// anchored at the same screen-y across modes); on non-Home
+    /// the home-indicator safe-area inset is added on top so the
+    /// tab bar background bleeds through the device's bottom strip.
+    private var bottomExtensionHeight: CGFloat {
+        extendsToScreenEdges ? (8 + safeAreaBottomInset) : 8
     }
     /// Mirrors `AtlasBottomModule.bottomSafeAreaInset` — kept here as
     /// a tiny duplicate so this component has no dependency on the
@@ -67,26 +69,45 @@ struct AtlasTabBar: View {
     }
 
     var body: some View {
-        HStack(spacing: 0) {
-            ForEach(AtlasTab.allCases, id: \.self) { tab in
-                tabButton(tab)
+        VStack(spacing: 0) {
+            // Button row. Identical layout in both modes — same
+            // inner padding, same height — so the buttons themselves
+            // sit at the same screen-y regardless of geometry.
+            HStack(spacing: 0) {
+                ForEach(AtlasTab.allCases, id: \.self) { tab in
+                    tabButton(tab)
+                }
             }
-        }
-        .padding(.vertical, AtlasSpacing.sm)
-        .padding(.bottom, innerBottomPadding)
-        .frame(maxWidth: .infinity)
-        .background(AtlasColors.secondaryBackground)
-        .clipShape(
-            UnevenRoundedRectangle(
-                topLeadingRadius: topCornerRadius,
-                bottomLeadingRadius: bottomCornerRadius,
-                bottomTrailingRadius: bottomCornerRadius,
-                topTrailingRadius: topCornerRadius,
-                style: .continuous
+            .padding(.vertical, AtlasSpacing.sm)
+            .frame(maxWidth: .infinity)
+            .background(AtlasColors.secondaryBackground)
+            .clipShape(
+                UnevenRoundedRectangle(
+                    topLeadingRadius: topCornerRadius,
+                    bottomLeadingRadius: bottomCornerRadius,
+                    bottomTrailingRadius: bottomCornerRadius,
+                    topTrailingRadius: topCornerRadius,
+                    style: .continuous
+                )
             )
-        )
-        .padding(.horizontal, horizontalInset)
-        .padding(.bottom, outerBottomPadding)
+            .padding(.horizontal, horizontalInset)
+
+            // Outer gap below the button row. Transparent on Home
+            // (the floating-island look — map shows behind through
+            // the 8pt gap); opaque on every other surface, where
+            // the tab bar background continues down through the
+            // home-indicator strip as one continuous surface.
+            Group {
+                if extendsToScreenEdges {
+                    Rectangle()
+                        .fill(AtlasColors.secondaryBackground)
+                } else {
+                    Color.clear
+                }
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height: bottomExtensionHeight)
+        }
     }
 
     private func tabButton(_ tab: AtlasTab) -> some View {
