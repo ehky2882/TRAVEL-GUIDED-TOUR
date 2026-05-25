@@ -43,7 +43,18 @@ struct HomeView: View {
     /// throughout the drag (not just snap on release).
     @State private var sheetDragOffset: CGFloat = 0
     @State private var selectedCategory: TourCategory? = nil
-    @State private var selectedTourId: UUID? = nil
+    /// Currently-tapped tour + the coordinate of its tapped stop. When
+    /// non-nil, the map renders a placecard preview anchored above
+    /// that coordinate. Set by `HomeMapSection.onPinTapped`; cleared
+    /// by `onMapTapped` (tap-elsewhere) or after navigating away.
+    @State private var placecardTour: Tour? = nil
+    @State private var placecardCoordinate: CLLocationCoordinate2D? = nil
+    /// Programmatic-navigation target driven by tapping the placecard.
+    /// Set in the placecard's `onTap`, consumed by
+    /// `.navigationDestination(item:)`, which pushes `TourDetailView`.
+    /// Separate from `placecardTour` so the placecard can dismiss
+    /// independently of the pushed detail screen.
+    @State private var navTargetTour: Tour? = nil
     /// Active map type. Cycled / picked by the map-mode selector
     /// button. Standard is the default — same as Apple Maps.
     @State private var mapMode: MapMode = .standard
@@ -103,7 +114,7 @@ struct HomeView: View {
                         tours: filteredTours,
                         userLocation: locationManager.userLocation,
                         userHeading: locationManager.heading,
-                        selectedTourId: $selectedTourId,
+                        selectedTourId: placecardTour?.id,
                         cameraPosition: $cameraPosition,
                         mapMode: mapMode,
                         onCameraChanged: { region in
@@ -121,7 +132,22 @@ struct HomeView: View {
                                     sheetDetent = .peek
                                 }
                             }
-                        }
+                        },
+                        onPinTapped: { tourId, coordinate in
+                            guard let tour = dataService.tour(by: tourId) else { return }
+                            withAnimation(.spring(response: 0.35, dampingFraction: 0.82)) {
+                                placecardTour = tour
+                                placecardCoordinate = coordinate
+                            }
+                        },
+                        onMapTapped: {
+                            guard placecardTour != nil else { return }
+                            withAnimation(.easeInOut(duration: 0.2)) {
+                                placecardTour = nil
+                                placecardCoordinate = nil
+                            }
+                        },
+                        placecard: placecardAnchor
                     )
                     .ignoresSafeArea()
 
@@ -185,15 +211,29 @@ struct HomeView: View {
                     try? await Task.sleep(for: .seconds(1))
                     mapInteractionEnabled = true
                 }
-                .onChange(of: selectedTourId, initial: false) { _, _ in
-                    if selectedTourId != nil && sheetDetent == .peek {
-                        withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
-                            sheetDetent = .medium
-                        }
-                    }
-                }
+            }
+            .navigationDestination(item: $navTargetTour) { tour in
+                TourDetailView(tour: tour)
             }
         }
+    }
+
+    /// Bundles the current placecard tour + its anchor coordinate into
+    /// the value `HomeMapSection` consumes. Erased to `AnyView` to
+    /// keep the map section unaware of the concrete placecard type.
+    private var placecardAnchor: PlacecardAnchor? {
+        guard let tour = placecardTour, let coordinate = placecardCoordinate else {
+            return nil
+        }
+        let card = PlacecardView(
+            tour: tour,
+            maker: dataService.maker(for: tour),
+            distanceText: distanceText(for: tour),
+            onTap: {
+                navTargetTour = tour
+            }
+        )
+        return PlacecardAnchor(coordinate: coordinate, view: AnyView(card))
     }
 
     /// Mirrors the height formula BottomSheet uses internally so the
@@ -320,60 +360,49 @@ struct HomeView: View {
         // invitation instead of "0 tours in view".
         let aboveDrawerCount = toursInViewCount(in: geo)
 
-        ScrollViewReader { proxy in
-            VStack(alignment: .leading, spacing: 0) {
-                // Header — dynamic count for the area in view.
-                // Centered to read cleanly at the peek detent where
-                // this is the *only* drawer content visible.
-                Text(headerText(forCount: aboveDrawerCount))
-                    .font(AtlasTypography.headline)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .frame(maxWidth: .infinity)
-                    .padding(.horizontal, AtlasSpacing.lg)
-                    .padding(.top, AtlasSpacing.sm)
-                    .padding(.bottom, AtlasSpacing.md)
+        VStack(alignment: .leading, spacing: 0) {
+            // Header — dynamic count for the area in view.
+            // Centered to read cleanly at the peek detent where
+            // this is the *only* drawer content visible.
+            Text(headerText(forCount: aboveDrawerCount))
+                .font(AtlasTypography.headline)
+                .foregroundStyle(AtlasColors.primaryText)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, AtlasSpacing.lg)
+                .padding(.top, AtlasSpacing.sm)
+                .padding(.bottom, AtlasSpacing.md)
 
-                ScrollView {
-                    LazyVStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                        // Quick-resume banners — surface above the main
-                        // list when the user has progress to pick up.
-                        if let resumeTour = continueListeningTour {
-                            quickResumeBanner(tour: resumeTour, label: "Continue listening")
-                                .id("continue-listening")
-                        }
-                        if let recentTour = recentlyViewedTour {
-                            quickResumeBanner(tour: recentTour, label: "Recently viewed")
-                                .id("recently-viewed")
-                        }
+            ScrollView {
+                LazyVStack(alignment: .leading, spacing: AtlasSpacing.md) {
+                    // Quick-resume banners — surface above the main
+                    // list when the user has progress to pick up.
+                    if let resumeTour = continueListeningTour {
+                        quickResumeBanner(tour: resumeTour, label: "Continue listening")
+                    }
+                    if let recentTour = recentlyViewedTour {
+                        quickResumeBanner(tour: recentTour, label: "Recently viewed")
+                    }
 
-                        if displayedTours.isEmpty {
-                            emptyState
-                        } else {
-                            ForEach(displayedTours) { tour in
-                                TourListCard(
-                                    tour: tour,
-                                    maker: dataService.maker(for: tour),
-                                    isDownloaded: tourDownloader.isDownloaded(tourId: tour.id),
-                                    distanceText: distanceText(for: tour),
-                                    isSelected: selectedTourId == tour.id
-                                )
-                                .id(tour.id)
-                                .padding(.horizontal, AtlasSpacing.lg)
-                            }
+                    if displayedTours.isEmpty {
+                        emptyState
+                    } else {
+                        ForEach(displayedTours) { tour in
+                            TourListCard(
+                                tour: tour,
+                                maker: dataService.maker(for: tour),
+                                isDownloaded: tourDownloader.isDownloaded(tourId: tour.id),
+                                distanceText: distanceText(for: tour),
+                                isSelected: placecardTour?.id == tour.id
+                            )
+                            .padding(.horizontal, AtlasSpacing.lg)
                         }
                     }
-                    .padding(.top, AtlasSpacing.sm)
-                    .padding(.bottom, AtlasSpacing.lg)
                 }
-                .opacity(listOpacity)
-                .allowsHitTesting(listOpacity > 0.01)
-                .onChange(of: selectedTourId, initial: false) { _, newId in
-                    guard let newId else { return }
-                    withAnimation(.easeInOut(duration: 0.25)) {
-                        proxy.scrollTo(newId, anchor: .top)
-                    }
-                }
+                .padding(.top, AtlasSpacing.sm)
+                .padding(.bottom, AtlasSpacing.lg)
             }
+            .opacity(listOpacity)
+            .allowsHitTesting(listOpacity > 0.01)
         }
     }
 
