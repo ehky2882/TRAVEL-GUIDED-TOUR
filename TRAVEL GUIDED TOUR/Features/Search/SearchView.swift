@@ -15,9 +15,9 @@ struct SearchView: View {
     @Environment(DataService.self) private var dataService
     @Environment(RecentSearchStore.self) private var recentSearchStore
     @Environment(AtlasNavigationState.self) private var navState
+    @Environment(TourPresenter.self) private var tourPresenter
 
     @State private var query: String = ""
-    @State private var selectedTour: Tour?
     @FocusState private var queryFieldFocused: Bool
 
     var body: some View {
@@ -38,9 +38,6 @@ struct SearchView: View {
         .background(AtlasColors.background)
         .navigationTitle("Search")
         .inlineNavigationBarTitle()
-        .navigationDestination(item: $selectedTour) { tour in
-            TourDetailView(tour: tour)
-        }
         // Reserve room at the bottom for the mini-player + tab bar
         // stack so the last result row is reachable above the
         // module rather than hidden behind it. Wasn't needed under
@@ -185,7 +182,7 @@ struct SearchView: View {
                 ForEach(filteredTours) { tour in
                     Button {
                         recentSearchStore.record(query: trimmedQuery)
-                        selectedTour = tour
+                        tourPresenter.present(tour)
                     } label: {
                         resultRow(tour)
                     }

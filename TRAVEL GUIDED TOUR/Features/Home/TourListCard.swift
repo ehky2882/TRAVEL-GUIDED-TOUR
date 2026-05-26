@@ -5,9 +5,9 @@ import CoreLocation
 /// home screen's bottom drawer. Larger and more informative than
 /// the rail carousel cards (since the drawer fits one column).
 ///
-/// Pushes `TourDetailView` via NavigationLink. The host
-/// ScrollViewReader uses `tour.id` as the scroll anchor — tapping a
-/// map pin will scroll the drawer to the matching card.
+/// Pure presentational view — taps are handled by the parent, which
+/// routes them through `TourPresenter` so the detail view always
+/// comes up from the bottom as a sheet.
 struct TourListCard: View {
     let tour: Tour
     let maker: Maker?
@@ -20,49 +20,29 @@ struct TourListCard: View {
     let isSelected: Bool
 
     var body: some View {
-        NavigationLink {
-            TourDetailView(tour: tour)
-        } label: {
-            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-                heroSection
+        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            heroSection
 
-                VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                    Text(tour.title)
-                        .font(AtlasTypography.body)
-                        .foregroundStyle(AtlasColors.primaryText)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                Text(tour.title)
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
 
-                    if let maker {
-                        Text("by \(maker.displayName)")
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                    }
-
-                    metaRow
+                if let maker {
+                    Text("by \(maker.displayName)")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
                 }
-                .padding(.horizontal, AtlasSpacing.sm)
-                // Padding only on the text section's bottom — the
-                // hero image fills the top edge-to-edge so selected
-                // and unselected cards look identical (no exposed
-                // gap above the image when the selection border
-                // appears).
-                .padding(.bottom, AtlasSpacing.sm)
+
+                metaRow
             }
-            // Clip the whole card so the hero image inherits the
-            // card's outer corner radius — no separate cornerRadius
-            // arg on HeroImageView. One outline instead of two.
-            //
-            // No selection-state border or tint: the drawer's auto-
-            // scroll to the tapped pin's card is the cue. A visible
-            // selection outline reads as inconsistency against the
-            // other cards, not as a useful signal.
-            .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
+            .padding(.horizontal, AtlasSpacing.sm)
+            .padding(.bottom, AtlasSpacing.sm)
         }
-        .buttonStyle(.plain)
-        // Selection is conveyed to VoiceOver but not visually —
-        // sighted users see the drawer scroll as the cue.
+        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
         .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 

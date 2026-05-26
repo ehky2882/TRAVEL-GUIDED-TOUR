@@ -26,6 +26,12 @@ struct TourDetailView: View {
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
     @Environment(TourDownloader.self) private var tourDownloader
     @Environment(AtlasNavigationState.self) private var navState
+    /// Used by the X close button in the top-leading toolbar slot —
+    /// closes the entire detail layer (slides it back down), even
+    /// when reached via a `NavigationLink` push (e.g. from
+    /// `MakerView`). Within the layer's nav stack the default back
+    /// chevron pops one level; X always exits the layer.
+    @Environment(TourPresenter.self) private var tourPresenter
 
     @State private var showingPlayer = false
 
@@ -60,6 +66,26 @@ struct TourDetailView: View {
         }
         .navigationTitle(tour.title)
         .inlineNavigationBarTitle()
+        // Match the nav bar background to the rest of the detail
+        // surface (and the mini-player + tab bar visible below) so
+        // the whole layer reads as one continuous color band.
+        .toolbarBackground(AtlasColors.secondaryBackground, for: .navigationBar)
+        .toolbarBackground(.visible, for: .navigationBar)
+        .toolbar {
+            // X close exits the entire detail layer (slides it back
+            // down), even when pushed onto the layer's nav stack
+            // from `MakerView`. SwiftUI shows the default back
+            // chevron alongside whenever there's something to pop —
+            // chevron pops one level; X always closes the layer.
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: { tourPresenter.dismiss() }) {
+                    Image(systemName: "xmark")
+                        .font(AtlasTypography.body.weight(.semibold))
+                        .foregroundStyle(AtlasColors.primaryText)
+                }
+                .accessibilityLabel("Close")
+            }
+        }
         .sheet(isPresented: $showingPlayer) {
             PlayerView(tour: tour)
         }
