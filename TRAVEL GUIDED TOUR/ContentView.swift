@@ -42,15 +42,12 @@ struct ContentView: View {
     /// tour" entry point (drawer card, placecard, library, search,
     /// maker, rail) calls `tourPresenter.present(tour)` instead of
     /// pushing a `NavigationLink` — the detail view always comes up
-    /// from the bottom as a modal sheet.
+    /// from the bottom as a modal sheet. The presenter also owns the
+    /// `displayedTour` lag (set synchronously in `present(_:)`, held
+    /// through the slide-down before clearing) so the inner content
+    /// is in the view tree on the same tick the layer's offset starts
+    /// animating — no separate `.onChange`-driven mirror in this view.
     @State private var tourPresenter = TourPresenter()
-    /// Mirrors `tourPresenter.presentedTour` but **lags** during
-    /// dismiss — kept non-nil for the duration of the slide-down so
-    /// the detail content stays rendered while the layer slides
-    /// off-screen. Without this lag, the conditional content would
-    /// be torn down the instant `presentedTour` goes nil and the
-    /// layer would slide down empty (looking like a fade).
-    @State private var displayedTour: Tour? = nil
 
     /// Active screen height. Used as the off-screen offset for the
     /// detail layer so the slide animation is fully visible across
@@ -107,23 +104,31 @@ struct ContentView: View {
         return ZStack(alignment: .bottom) {
             tabContent
 
-            // Tour detail layer — ALWAYS rendered in the view tree
-            // (not conditional). Position controlled via `.offset`
-            // so we can use a deterministic `.animation(_, value:)`
-            // instead of relying on SwiftUI's `.transition`, which
-            // falls back to an opacity fade on removal for views
-            // containing `NavigationStack` regardless of the
-            // `.move` transition we specify.
+            // Tour detail layer — always in the view tree (not
+            // conditional on a parent `if`). Position controlled via
+            // `.offset` so we can use a deterministic
+            // `.animation(_, value:)` instead of relying on SwiftUI's
+            // `.transition`, which falls back to an opacity fade on
+            // removal for views containing `NavigationStack`.
             //
-            // `displayedTour` lags behind `tourPresenter.presentedTour`
-            // — kept non-nil for the dismiss-animation duration so
-            // the content stays visible while the layer slides
-            // off-screen.
+            // The inner `if let displayedTour` is read off the
+            // presenter (set synchronously in `present(_:)` and held
+            // through the slide-down via a lag in `dismiss()`), so
+            // the content is in the view tree on the SAME SwiftUI
+            // tick the offset animation starts — no one-frame gap
+            // that SwiftUI fills with an opacity fade-in. The
+            // `.transition(.identity)` belt-and-suspenders the same
+            // guarantee for the eventual remove.
+            //
+            // Z-index 2: ABOVE the drawer (which drops to z-1 while
+            // a detail is up — see the drawer block below), BELOW
+            // the mini-player + tab bar (z-3) so their buttons stay
+            // tappable while the detail is up.
             ZStack(alignment: .top) {
                 AtlasColors.secondaryBackground
                     .ignoresSafeArea(.container, edges: .top)
 
-                if let tour = displayedTour {
+                if let tour = tourPresenter.displayedTour {
                     NavigationStack {
                         TourDetailView(tour: tour)
                     }
@@ -136,6 +141,7 @@ struct ContentView: View {
                     .environment(libraryStore)
                     .environment(recentlyViewedStore)
                     .environment(tourDownloader)
+                    .transition(.identity)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -150,12 +156,13 @@ struct ContentView: View {
                 .smooth(duration: 0.4),
                 value: tourPresenter.presentedTour != nil
             )
+            .zIndex(2)
 
-            // Mini-player + tab bar — rendered AFTER the detail
-            // layer so it stays z-order on top and remains visible
-            // even when a tour detail is open. Rendered identically
-            // across surfaces; only the background fill behind it
-            // changes between modes.
+            // Mini-player + tab bar — z-index 3, always the topmost
+            // chrome. Stays tappable even when the detail layer is
+            // up; the layer's action bar paints the same
+            // `secondaryBackground` color through the bottom-module
+            // area so the seam isn't visible.
             ZStack(alignment: .bottom) {
                 if extendsToScreenEdges {
                     Rectangle()
@@ -175,21 +182,26 @@ struct ContentView: View {
                     AtlasTabBar(selected: $selectedTab)
                 }
             }
+            .zIndex(3)
 
-            // Home drawer — z-stacked AFTER the mini-player + tab
-            // bar so its bottom edge can sit flush against them
-            // without the last card peeking behind.
+            // Home drawer — z-index dynamic:
+            //   - no detail (displayedTour nil): z-4, ABOVE the
+            //     mini-player + tab bar. PR #76's "last card visible
+            //     at scroll-end" fix — the drawer's rounded bottom
+            //     sits flush against the bottom module without the
+            //     last card peeking behind.
+            //   - detail active (displayedTour set): z-1, BELOW the
+            //     detail layer. The detail's slide-up then COVERS
+            //     the drawer naturally as it rises — no drawer
+            //     opacity fade needed, which was the source of the
+            //     "fade in / fade out" perception from the drawer
+            //     entry point (drawer at .large covered most of the
+            //     screen, so its opacity-fade dominated visually).
             //
-            // Always rendered when on the Home tab (no longer
-            // conditional on `tourPresenter.presentedTour`) — its
-            // insertion/removal was running on the same SwiftUI
-            // animation tick as the detail-layer's slide, and the
-            // drawer's default opacity-fade transition was bleeding
-            // into the detail layer's transition so the detail
-            // read as fading out instead of sliding down. Keeping
-            // the drawer rendered and just opacity-controlling it
-            // avoids the conflict — the detail's `.move` runs
-            // alone now.
+            // The drawer stays at full opacity throughout; visibility
+            // is gated by z-order alone. Hit-testing is off while a
+            // detail is up so taps that miss the X button can't
+            // sneak through to drawer cards underneath.
             if selectedTab == .home {
                 BottomSheet(
                     detent: $homeSheetDetent,
@@ -205,17 +217,8 @@ struct ContentView: View {
                         }
                     )
                 }
-                .opacity(tourPresenter.presentedTour == nil ? 1 : 0)
-                .allowsHitTesting(tourPresenter.presentedTour == nil)
-                // Match the detail layer's slide duration so the
-                // drawer's fade-out and the detail's slide-up run
-                // on the same clock. Otherwise the drawer pops away
-                // instantly while the detail is still entering and
-                // the user perceives a flash / fade.
-                .animation(
-                    .smooth(duration: 0.4),
-                    value: tourPresenter.presentedTour != nil
-                )
+                .allowsHitTesting(tourPresenter.displayedTour == nil)
+                .zIndex(tourPresenter.displayedTour == nil ? 4 : 1)
             }
         }
         .ignoresSafeArea(.container, edges: .bottom)
@@ -238,26 +241,6 @@ struct ContentView: View {
             guard !didRequestLocationPermission else { return }
             didRequestLocationPermission = true
             locationManager.requestPermission()
-        }
-        // Drive `displayedTour` from `tourPresenter.presentedTour`,
-        // with a lag on dismiss so the content stays rendered while
-        // the layer slides off-screen.
-        .onChange(of: tourPresenter.presentedTour?.id) { _, _ in
-            if let new = tourPresenter.presentedTour {
-                displayedTour = new
-            } else {
-                Task {
-                    // Slightly longer than the offset animation so
-                    // the view is fully off-screen before its
-                    // content tears down.
-                    try? await Task.sleep(for: .seconds(0.45))
-                    await MainActor.run {
-                        if tourPresenter.presentedTour == nil {
-                            displayedTour = nil
-                        }
-                    }
-                }
-            }
         }
     }
 

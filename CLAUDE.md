@@ -26,25 +26,24 @@ These happen **automatically, without the owner asking**.
 
 ## Current State (2026-05-25)
 
-### Detail-as-sheet refactor (session 5, this commit)
+### Tour-detail slide animation fix (session 6 — PR #77)
 
-Five connected changes, plus one **OPEN ISSUE** the owner has flagged.
+Resolves the open issue flagged at the end of session 5 (fade-from-drawer / fade-from-placecard). Two competing transitions were masking the layer's `.offset` slide:
 
-1. **Home drawer hoisted out of `HomeView` into `ContentView`.** New `HomeSharedState` (`@Observable`) carries the map ↔ drawer state (`selectedCategory`, `placecardTour`, `placecardCoordinate`, `visibleRegion`, `sheetDragOffset`). `HomeDrawerContent.swift` extracts the drawer body. The drawer now z-stacks above the mini-player + tab bar, fixing the long-running "last card peeks behind the tab bar / can't reach scroll-end" complaint.
+1. **Inner content was inserted one tick late.** `displayedTour` lived on `ContentView` as `@State` and mirrored `tourPresenter.presentedTour` via `.onChange` — which fires AFTER the offset animation starts. The `if let displayedTour` conditional inserted the `NavigationStack` mid-slide, and SwiftUI filled the gap with its default opacity-fade transition. **Fix:** `displayedTour` moved onto `TourPresenter`, updated synchronously inside `present(_:)` (same SwiftUI tick as the offset). `dismiss()` keeps the lag (cleared 0.45s later) so content stays rendered through the slide-down. `.transition(.identity)` on the inner content as belt-and-suspenders.
+2. **Drawer opacity-fade caused the entry-point asymmetry.** The drawer (z-stacked ABOVE the detail layer in PR #76) was fading 1→0 on present and 0→1 on dismiss on the same 0.4s clock. From the drawer entry (drawer `.large`) the fade-out dominated the perceived motion; from the placecard entry (drawer `.peek`) only the bottom 80pt faded so the slide stayed visible. **Fix:** drawer no longer animates opacity. Its `.zIndex` swaps: **z-4 when no detail is up** (above mini-player + tab bar — PR #76's "last card visible at scroll-end" fix preserved); **z-1 when detail active** (below the detail layer). The detail's slide-up COVERS the drawer naturally; the slide-down REVEALS it. Mini-player + tab bar stay at z-3 so their buttons remain tappable through the detail layer.
+
+Verified in simulator from both entry points; all 84 unit tests pass.
+
+### Detail-as-sheet refactor (PR #76)
+
+Five connected changes that landed the slide-up layer.
+
+1. **Home drawer hoisted out of `HomeView` into `ContentView`.** New `HomeSharedState` (`@Observable`) carries the map ↔ drawer state (`selectedCategory`, `placecardTour`, `placecardCoordinate`, `visibleRegion`, `sheetDragOffset`). `HomeDrawerContent.swift` extracts the drawer body. The drawer now z-stacks above the mini-player + tab bar (when no detail is up — see PR #77 for the dynamic-zIndex twist), fixing the long-running "last card peeks behind the tab bar / can't reach scroll-end" complaint.
 2. **Tour detail always presented as a slide-up layer.** New `TourPresenter` (`@Observable`) drives a `ContentView`-level layer; every entry point (`TourListCard`, `RailCarousel`, `LibraryView`, `MakerView`, `SearchView`'s result rows, the placecard, the quick-resume banners) calls `tourPresenter.present(tour)` instead of pushing via `NavigationLink`. `TourListCard` is now pure presentational — no NavigationLink. `MakerView`'s in-stack push stays as a `NavigationLink` since it pushes onto the layer's own `NavigationStack`.
 3. **`TourDetailView` X close.** Default back chevron hidden; X in the top-leading toolbar slot calls `tourPresenter.dismiss()`. `.toolbarBackground(AtlasColors.secondaryBackground, for: .navigationBar)` so the nav bar matches the rest of the detail surface.
-4. **Mini-player + tab bar stay visible underneath the detail layer.** `moduleGeometry` now reads `tourPresenter.presentedTour != nil` directly (in addition to `navState.isShowingDetail`) so the module switches to `.fullEdge` on the SAME SwiftUI tick the layer comes up. Bottom-module ZStack order in `ContentView` puts the bottom module AFTER the detail layer so it overlays on top.
+4. **Mini-player + tab bar stay visible underneath the detail layer.** `moduleGeometry` now reads `tourPresenter.presentedTour != nil` directly (in addition to `navState.isShowingDetail`) so the module switches to `.fullEdge` on the SAME SwiftUI tick the layer comes up. Mini-player + tab bar's z-index keeps them above the detail layer so their buttons remain tappable.
 5. **SearchBar + chips background.** Both swapped from `.regularMaterial` + stroke to `AtlasColors.secondaryBackground` with no border — one unified chrome color across drawer / mini-player / tab bar / search bar / chips.
-
-### ⚠️ Open issue — tour-detail slide animation
-
-**Status: NOT working as expected. Owner-flagged, multiple fix attempts unsuccessful, tracked in PR #76.** The layer slides up but the dismiss animation reads as a fade rather than a clean slide-down. From the home drawer the present also reads as a fade. Multiple approaches were tried in this session — `.transition(.move(edge: .bottom))` with various wrapper modifiers (clipShape, shadow, compositingGroup), then a switch to explicit `.offset` + `.animation(_, value:)` with a lagging `displayedTour` for content lifecycle, then offset value tuned to actual screen height, then synchronized opacity animation on the drawer. None landed cleanly with the owner. The current code uses the offset-based approach; do NOT iterate on this further in the bulk PR — the fix is owned by the follow-up PR.
-
-Best leads for the follow-up:
-- Confirm the slide is actually animating (UIView layer inspection / video capture) — the user's report differentiates present vs. dismiss visually, which suggests the offset IS animating but other view-tree changes mask it.
-- Try replacing the lagging `displayedTour` with a separate `@State` that's set inside `present()` / `dismiss()` directly on the presenter (move state ownership out of `ContentView`).
-- Consider whether the home drawer's `opacity` animation is what the user perceives as "fade" — when opened FROM the drawer, the drawer fades out as the detail slides up; if the drawer is the dominant visible element pre-tap, its fade may overshadow the detail's slide.
-- A `UIViewControllerRepresentable`-bridged custom presentation (mimicking the system sheet but with a configurable bottom inset to keep the mini-player visible) is the nuclear option.
 
 ### Earlier this day
 
