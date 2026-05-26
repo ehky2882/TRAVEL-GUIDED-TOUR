@@ -1,7 +1,16 @@
 # Open issue: tour-detail slide animation
 
-**Status:** open — owner-flagged 2026-05-25 session 5. Bulk refactor
-landed in PR #76. This PR (#77) is a tracking stub for the fix.
+**Status:** RESOLVED in PR #77 (2026-05-25 session 6). The fix
+landed two changes: (a) move `displayedTour` ownership to
+`TourPresenter` and update it synchronously inside `present(_:)`
+so the inner content is in the view tree on the same SwiftUI tick
+the offset animation starts (no SwiftUI default opacity-fade
+filling the one-tick gap), and (b) replace the drawer's
+opacity-fade animation with a `.zIndex` swap — drawer drops below
+the detail layer while a detail is up, so the slide covers and
+reveals it naturally without a competing fade. See PR #77 for the
+full diff. The history below is preserved as a record of what was
+tried in session 5 (and didn't land).
 
 ## What's broken
 
