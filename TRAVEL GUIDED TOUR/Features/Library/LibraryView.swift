@@ -21,6 +21,7 @@ struct LibraryView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(TourDownloader.self) private var tourDownloader
+    @Environment(TourPresenter.self) private var tourPresenter
 
     @State private var selectedSection: Section = .saved
 
@@ -92,8 +93,8 @@ struct LibraryView: View {
         } else {
             LazyVStack(alignment: .leading, spacing: 0) {
                 ForEach(tours) { tour in
-                    NavigationLink {
-                        TourDetailView(tour: tour)
+                    Button {
+                        tourPresenter.present(tour)
                     } label: {
                         tourRow(tour)
                     }

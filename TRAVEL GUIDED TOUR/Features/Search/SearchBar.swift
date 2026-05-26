@@ -31,15 +31,11 @@ struct SearchBar: View {
             }
             .padding(.horizontal, AtlasSpacing.md)
             .frame(height: AtlasSpacing.searchBarHeight)
-            // Glass material so the bar reads cleanly over both
-            // the map underneath (HomeView) and the white background
-            // of any other parent. iOS 26's `.regularMaterial` carries
-            // the Liquid Glass look automatically.
-            .background(.regularMaterial, in: Capsule())
-            .overlay(
-                Capsule()
-                    .stroke(AtlasColors.secondaryText.opacity(0.15), lineWidth: 1)
-            )
+            // Match the drawer / mini-player / tab bar surface — one
+            // unified bar color across the whole bottom-and-top
+            // chrome. No stroke (would read as inconsistency against
+            // the other surfaces, which have none).
+            .background(AtlasColors.secondaryBackground, in: Capsule())
         }
         .buttonStyle(.plain)
     }

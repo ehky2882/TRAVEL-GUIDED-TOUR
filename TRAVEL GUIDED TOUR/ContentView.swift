@@ -14,6 +14,9 @@ struct ContentView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(DataService.self) private var dataService
+    @Environment(LibraryStore.self) private var libraryStore
+    @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
+    @Environment(TourDownloader.self) private var tourDownloader
 
     @State private var selectedTab: AtlasTab = .home
     /// `.onAppear` fires every time the view re-attaches (tab switch,
@@ -30,6 +33,37 @@ struct ContentView: View {
     /// expanded on a fresh launch; returning to the Home tab restores
     /// whatever detent the user last left it at.
     @State private var homeSheetDetent: BottomSheetDetent = .large
+    /// State shared between `HomeView`'s map surface and the home
+    /// drawer (which is hosted here in `ContentView` so it can stack
+    /// z-order on top of the mini-player + tab bar). Both sides read
+    /// it via `@Environment`.
+    @State private var homeSharedState = HomeSharedState()
+    /// App-wide tour-detail presentation channel. Every "open this
+    /// tour" entry point (drawer card, placecard, library, search,
+    /// maker, rail) calls `tourPresenter.present(tour)` instead of
+    /// pushing a `NavigationLink` — the detail view always comes up
+    /// from the bottom as a modal sheet.
+    @State private var tourPresenter = TourPresenter()
+    /// Mirrors `tourPresenter.presentedTour` but **lags** during
+    /// dismiss — kept non-nil for the duration of the slide-down so
+    /// the detail content stays rendered while the layer slides
+    /// off-screen. Without this lag, the conditional content would
+    /// be torn down the instant `presentedTour` goes nil and the
+    /// layer would slide down empty (looking like a fade).
+    @State private var displayedTour: Tour? = nil
+
+    /// Active screen height. Used as the off-screen offset for the
+    /// detail layer so the slide animation is fully visible across
+    /// its full duration. Earlier hardcoded `2000` left ~57% of the
+    /// animation off-screen (especially on smaller iPhones), and
+    /// the visible tail read as a "pop in" / fade rather than a
+    /// clean slide.
+    private var screenHeight: CGFloat {
+        UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first(where: { $0.activationState == .foregroundActive })?
+            .screen.bounds.height ?? 900
+    }
 
     /// Tracks whether any pushed detail screen is currently visible.
     /// Driven by each detail view's `.onAppear` / `.onDisappear`
@@ -38,13 +72,15 @@ struct ContentView: View {
     @State private var navState = AtlasNavigationState()
 
     /// Floating-island look ONLY when on the Home tab AT ROOT — no
-    /// detail pushed. Every other state (non-Home tab, OR Home with
-    /// a pushed detail) uses the full-edge geometry. The two modes
-    /// share the same bottom-module height and button position, so
-    /// switching between them only changes what's painted in the
-    /// 8pt outer strip below the buttons (transparent vs. opaque).
+    /// detail layer up and no `NavigationStack` push. Every other
+    /// state uses full-edge. Both `tourPresenter.presentedTour` and
+    /// `navState.isShowingDetail` are read here so the geometry
+    /// switches at the SAME tick as the detail layer's slide
+    /// (otherwise the module's fade-to-fullEdge happens on a
+    /// different curve / duration and the whole thing reads as two
+    /// uncoordinated animations).
     private var moduleGeometry: AtlasModuleGeometry {
-        if navState.isShowingDetail {
+        if tourPresenter.presentedTour != nil || navState.isShowingDetail {
             return .fullEdge
         }
         return selectedTab == .home ? .floatingIsland : .fullEdge
@@ -55,22 +91,71 @@ struct ContentView: View {
     }
 
     var body: some View {
-        ZStack(alignment: .bottom) {
+        // NOTE on bindings: deliberately NOT using `@Bindable` for
+        // these — `@Bindable`'s `$` projection during body registers
+        // an Observable read for the property, so `sheetDragOffset`
+        // (written 60×/sec during a drag) would re-evaluate the
+        // entire `ContentView` body on every frame. Manual
+        // `Binding(get:set:)` captures the reference without
+        // touching the tracked property at body time; SwiftUI only
+        // reads through the closure when it actually needs the
+        // value, which avoids that re-eval storm.
+        let dragOffsetBinding = Binding(
+            get: { homeSharedState.sheetDragOffset },
+            set: { homeSharedState.sheetDragOffset = $0 }
+        )
+        return ZStack(alignment: .bottom) {
             tabContent
 
-            // Mini-player + tab bar stack at the bottom of every
-            // tab. The mini-player + tab bar themselves are
-            // rendered IDENTICALLY on every surface (8pt inset,
-            // rounded bottom, transparent 8pt outer strip) — same
-            // buttons, same shape, same position. The only thing
-            // that changes between Home root (floating island)
-            // and every other surface (full-edge look) is the
-            // background fill BEHIND the island: on Home root
-            // nothing's painted behind, so the 8pt side + bottom
-            // gaps show the map; elsewhere we paint an
-            // edge-to-edge `secondaryBackground` rectangle behind
-            // the island so the gaps blend into one continuous
-            // full-width strip the same color as the bar.
+            // Tour detail layer — ALWAYS rendered in the view tree
+            // (not conditional). Position controlled via `.offset`
+            // so we can use a deterministic `.animation(_, value:)`
+            // instead of relying on SwiftUI's `.transition`, which
+            // falls back to an opacity fade on removal for views
+            // containing `NavigationStack` regardless of the
+            // `.move` transition we specify.
+            //
+            // `displayedTour` lags behind `tourPresenter.presentedTour`
+            // — kept non-nil for the dismiss-animation duration so
+            // the content stays visible while the layer slides
+            // off-screen.
+            ZStack(alignment: .top) {
+                AtlasColors.secondaryBackground
+                    .ignoresSafeArea(.container, edges: .top)
+
+                if let tour = displayedTour {
+                    NavigationStack {
+                        TourDetailView(tour: tour)
+                    }
+                    .environment(navState)
+                    .environment(homeSharedState)
+                    .environment(tourPresenter)
+                    .environment(dataService)
+                    .environment(locationManager)
+                    .environment(audioPlayer)
+                    .environment(libraryStore)
+                    .environment(recentlyViewedStore)
+                    .environment(tourDownloader)
+                }
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            // Off-screen position = exactly one screen height
+            // below natural position. This keeps the slide visible
+            // throughout the animation — too-large values left the
+            // layer off-screen for most of the duration and the
+            // visible tail read as a fade-in / pop.
+            .offset(y: tourPresenter.presentedTour == nil ? screenHeight : 0)
+            .allowsHitTesting(tourPresenter.presentedTour != nil)
+            .animation(
+                .smooth(duration: 0.4),
+                value: tourPresenter.presentedTour != nil
+            )
+
+            // Mini-player + tab bar — rendered AFTER the detail
+            // layer so it stays z-order on top and remains visible
+            // even when a tour detail is open. Rendered identically
+            // across surfaces; only the background fill behind it
+            // changes between modes.
             ZStack(alignment: .bottom) {
                 if extendsToScreenEdges {
                     Rectangle()
@@ -90,11 +175,60 @@ struct ContentView: View {
                     AtlasTabBar(selected: $selectedTab)
                 }
             }
+
+            // Home drawer — z-stacked AFTER the mini-player + tab
+            // bar so its bottom edge can sit flush against them
+            // without the last card peeking behind.
+            //
+            // Always rendered when on the Home tab (no longer
+            // conditional on `tourPresenter.presentedTour`) — its
+            // insertion/removal was running on the same SwiftUI
+            // animation tick as the detail-layer's slide, and the
+            // drawer's default opacity-fade transition was bleeding
+            // into the detail layer's transition so the detail
+            // read as fading out instead of sliding down. Keeping
+            // the drawer rendered and just opacity-controlling it
+            // avoids the conflict — the detail's `.move` runs
+            // alone now.
+            if selectedTab == .home {
+                BottomSheet(
+                    detent: $homeSheetDetent,
+                    dragOffset: dragOffsetBinding,
+                    peekHeight: 80,
+                    bottomCornerRadius: 0,
+                    bottomReservedHeight: AtlasBottomModule.height()
+                ) {
+                    HomeDrawerContent(
+                        sheetDetent: $homeSheetDetent,
+                        onTourTap: { tour in
+                            tourPresenter.present(tour)
+                        }
+                    )
+                }
+                .opacity(tourPresenter.presentedTour == nil ? 1 : 0)
+                .allowsHitTesting(tourPresenter.presentedTour == nil)
+                // Match the detail layer's slide duration so the
+                // drawer's fade-out and the detail's slide-up run
+                // on the same clock. Otherwise the drawer pops away
+                // instantly while the detail is still entering and
+                // the user perceives a flash / fade.
+                .animation(
+                    .smooth(duration: 0.4),
+                    value: tourPresenter.presentedTour != nil
+                )
+            }
         }
         .ignoresSafeArea(.container, edges: .bottom)
         .animation(.spring(response: 0.4, dampingFraction: 0.86), value: nowPlayingTour?.id)
-        .animation(.easeInOut(duration: 0.2), value: moduleGeometry)
+        // Match the detail-layer's slide curve so the bottom
+        // module's fade-to-fullEdge stays in lockstep with the
+        // slide. Same `.smooth` curve, slightly longer than the
+        // dismiss so the trailing module change reads as part of
+        // the same gesture.
+        .animation(.smooth(duration: 0.35), value: moduleGeometry)
         .environment(navState)
+        .environment(homeSharedState)
+        .environment(tourPresenter)
         .sheet(isPresented: $showingFullPlayer) {
             if let tour = nowPlayingTour {
                 PlayerView(tour: tour)
@@ -104,6 +238,26 @@ struct ContentView: View {
             guard !didRequestLocationPermission else { return }
             didRequestLocationPermission = true
             locationManager.requestPermission()
+        }
+        // Drive `displayedTour` from `tourPresenter.presentedTour`,
+        // with a lag on dismiss so the content stays rendered while
+        // the layer slides off-screen.
+        .onChange(of: tourPresenter.presentedTour?.id) { _, _ in
+            if let new = tourPresenter.presentedTour {
+                displayedTour = new
+            } else {
+                Task {
+                    // Slightly longer than the offset animation so
+                    // the view is fully off-screen before its
+                    // content tears down.
+                    try? await Task.sleep(for: .seconds(0.45))
+                    await MainActor.run {
+                        if tourPresenter.presentedTour == nil {
+                            displayedTour = nil
+                        }
+                    }
+                }
+            }
         }
     }
 

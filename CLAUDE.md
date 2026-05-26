@@ -26,7 +26,27 @@ These happen **automatically, without the owner asking**.
 
 ## Current State (2026-05-25)
 
-V1 functionality complete and device-validated. Build number bumped to **1.0 (9)** this session — `xcodebuild archive` ran cleanly at `/tmp/Atlas-20260525-1746.xcarchive`, owner running the Organizer upload. Build 9 is the first TestFlight that carries PRs #65, #66, #68, #69, and #70.
+### Detail-as-sheet refactor (session 5, this commit)
+
+Five connected changes, plus one **OPEN ISSUE** the owner has flagged.
+
+1. **Home drawer hoisted out of `HomeView` into `ContentView`.** New `HomeSharedState` (`@Observable`) carries the map ↔ drawer state (`selectedCategory`, `placecardTour`, `placecardCoordinate`, `visibleRegion`, `sheetDragOffset`). `HomeDrawerContent.swift` extracts the drawer body. The drawer now z-stacks above the mini-player + tab bar, fixing the long-running "last card peeks behind the tab bar / can't reach scroll-end" complaint.
+2. **Tour detail always presented as a slide-up layer.** New `TourPresenter` (`@Observable`) drives a `ContentView`-level layer; every entry point (`TourListCard`, `RailCarousel`, `LibraryView`, `MakerView`, `SearchView`'s result rows, the placecard, the quick-resume banners) calls `tourPresenter.present(tour)` instead of pushing via `NavigationLink`. `TourListCard` is now pure presentational — no NavigationLink. `MakerView`'s in-stack push stays as a `NavigationLink` since it pushes onto the layer's own `NavigationStack`.
+3. **`TourDetailView` X close.** Default back chevron hidden; X in the top-leading toolbar slot calls `tourPresenter.dismiss()`. `.toolbarBackground(AtlasColors.secondaryBackground, for: .navigationBar)` so the nav bar matches the rest of the detail surface.
+4. **Mini-player + tab bar stay visible underneath the detail layer.** `moduleGeometry` now reads `tourPresenter.presentedTour != nil` directly (in addition to `navState.isShowingDetail`) so the module switches to `.fullEdge` on the SAME SwiftUI tick the layer comes up. Bottom-module ZStack order in `ContentView` puts the bottom module AFTER the detail layer so it overlays on top.
+5. **SearchBar + chips background.** Both swapped from `.regularMaterial` + stroke to `AtlasColors.secondaryBackground` with no border — one unified chrome color across drawer / mini-player / tab bar / search bar / chips.
+
+### ⚠️ Open issue — tour-detail slide animation
+
+**Status: NOT working as expected. Owner-flagged, multiple fix attempts unsuccessful, tracked in PR #76.** The layer slides up but the dismiss animation reads as a fade rather than a clean slide-down. From the home drawer the present also reads as a fade. Multiple approaches were tried in this session — `.transition(.move(edge: .bottom))` with various wrapper modifiers (clipShape, shadow, compositingGroup), then a switch to explicit `.offset` + `.animation(_, value:)` with a lagging `displayedTour` for content lifecycle, then offset value tuned to actual screen height, then synchronized opacity animation on the drawer. None landed cleanly with the owner. The current code uses the offset-based approach; do NOT iterate on this further in the bulk PR — the fix is owned by the follow-up PR.
+
+Best leads for the follow-up:
+- Confirm the slide is actually animating (UIView layer inspection / video capture) — the user's report differentiates present vs. dismiss visually, which suggests the offset IS animating but other view-tree changes mask it.
+- Try replacing the lagging `displayedTour` with a separate `@State` that's set inside `present()` / `dismiss()` directly on the presenter (move state ownership out of `ContentView`).
+- Consider whether the home drawer's `opacity` animation is what the user perceives as "fade" — when opened FROM the drawer, the drawer fades out as the detail slides up; if the drawer is the dominant visible element pre-tap, its fade may overshadow the detail's slide.
+- A `UIViewControllerRepresentable`-bridged custom presentation (mimicking the system sheet but with a configurable bottom inset to keep the mini-player visible) is the nuclear option.
+
+### Earlier this day
 
 PR #70 (buttons identical across surfaces — `643cbd7`) shipped 2026-05-25 pm-3: final shape of the bottom-module rework. Bar contents render the EXACT same form on every surface (Home, Library, Me, every pushed detail): 8pt horizontal inset, phone-screen-radius rounded bottom corners, transparent 8pt strip below. The only thing that differs between Home (floating island) and the rest (full-edge look) is whether `ContentView` paints an edge-to-edge `secondaryBackground` rectangle BEHIND the inset bar — on Home it doesn't (gaps show the map); elsewhere the same-colored fill makes the gaps blend into a continuous full-width strip. `AtlasTabBar` + `MiniPlayerBar` lost their `extendsToScreenEdges` flags entirely (single form now). Verified via `snapshot_ui`: tab buttons at x=8 / 136.67 / 265.33 with width 128.67 on every surface, identical to OLD Home position. The "fill or not" decision is now a single conditional in `ContentView`, driven by `selectedTab == .home && !navState.isShowingDetail`.
 

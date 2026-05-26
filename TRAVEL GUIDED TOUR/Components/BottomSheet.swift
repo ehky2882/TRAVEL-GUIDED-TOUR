@@ -101,6 +101,11 @@ struct BottomSheet<Content: View>: View {
             }
             .frame(maxWidth: .infinity)
             .frame(height: dragHeight, alignment: .top)
+            // Hard clip BEFORE the rounded clipShape so inner ScrollView
+            // content can't bleed past the drawer's rectangular bounds
+            // (`clipShape` alone left small overflow visible behind the
+            // mini-player in the `.large` detent on iOS 26).
+            .clipped()
             .background(AtlasColors.secondaryBackground)
             .clipShape(
                 UnevenRoundedRectangle(
