@@ -38,28 +38,18 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
-**Status (2026-05-23/24):** every V1 functionality milestone is shipped
-on `main` (M1–M3, M-data-model, M-audio-foundation, M-tour-detail,
-M-player, M-home, M-search, M-maker, M-library, M-geofencing,
-M-offline; M-map was cut). AllTrails-style home (PR #31) is the
-production home. **Pre-M-qa audit complete** — P0 findings closed
-(PRs #22 / #23 / #24, 2026-05-18); P1 + P2 + P3 cleanup batch shipped
-2026-05-20 (PR #51). Unit test target wired (PR #33) and runs on CI
-per PR; CI runs on the `macos-26` runner so it uses the Xcode 26
-toolchain the project targets. **TestFlight: build 1.0 (7) bumped
-and being uploaded** — this build carries all hero images (see below)
-and the 7 museum tours added 2026-05-23. Build 1.0 (6) (uploaded
-2026-05-23) carried the mini-player UX upgrade (welcome text in idle,
-marquee-scroll on overflowing titles, always-present skip-10 button,
-progress ring around play/pause) and 11 additional tours (catalog
-20 → 31). Build 1.0 (5) uploaded 2026-05-22 carried PR #54:
-on-device M-qa fixes, UX-polish batch, and 9 new tours; cleared the
-full M-qa device pass with no issues. Earlier builds: 1.0 (1) first
-upload (2026-05-19); 1.0 (3) verified background-audio fix; 1.0 (4)
-was the build the 2026-05-21 M-qa pass ran against.
+**Status (2026-05-26):** every V1 functionality milestone is shipped on
+`main`. Major UX work shipped 2026-05-24/25 — bottom module consistency
+(PRs #66–70), home polish + player-state hardening (PRs #60–61), placecard
+pop-up on pin tap (PR #75), tour detail as slide-up layer with drawer hoist
+(PR #76), slide animation fix (PR #77). **PR #78** (hero image crossfade fix
+during slide-up) is open and in CI — auto-merges when green. Latest
+TestFlight build is **1.0 (11)**. Next upload after PR #78 merges = build 12.
 
-**Content (M-launch-content).** 38 tours in `Resources/Tours.json`,
-all single-stop. The original 10 NYC landmarks (Grand Central, Times
+**Content (M-launch-content ✅).** **39 tours** in `Resources/Tours.json`.
+First **multi-stop tour** added 2026-05-26: "American Museum of Natural
+History: Four Facades" — 5 stops (~8m 44s), exterior architecture walk,
+geofenced. This unblocks M-qa checklist items 6 + 7. The original 10 NYC landmarks (Grand Central, Times
 Square, South Street Seaport, Empire State Building, Statue of Liberty,
 **Home polish + player-state hardening (PR #60, 2026-05-24 late-pm).**
 Bigger bottom-module radius (48→56), drawer now overlays the mini-player +
