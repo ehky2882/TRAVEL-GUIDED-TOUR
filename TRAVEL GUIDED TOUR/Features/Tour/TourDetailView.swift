@@ -125,13 +125,26 @@ struct TourDetailView: View {
 
     /// Hero area: single image for tours with one photo, paging carousel
     /// for tours that supply `additionalImageURLs`.
+    ///
+    /// `disableLoadAnimation: true` on every hero image here — this
+    /// view comes up via the `TourPresenter` slide-up layer, and the
+    /// default AsyncImage crossfade would compete with the slide
+    /// (the hero would visibly fade in mid-slide on first present,
+    /// asymmetric with the exit-slide where the image stays static).
+    /// With the crossfade off, cached images render frame-zero and
+    /// uncached images snap in cleanly when they land.
     @ViewBuilder
     private var imageSection: some View {
         let allImages = [tour.heroImageURL] + (tour.additionalImageURLs ?? [])
         if allImages.count > 1 {
             TabView {
                 ForEach(allImages, id: \.self) { url in
-                    HeroImageView(imageName: url, height: AtlasSpacing.heroHeight, zoomable: true)
+                    HeroImageView(
+                        imageName: url,
+                        height: AtlasSpacing.heroHeight,
+                        zoomable: true,
+                        disableLoadAnimation: true
+                    )
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
@@ -144,7 +157,8 @@ struct TourDetailView: View {
                 height: AtlasSpacing.heroHeight,
                 cornerRadius: AtlasSpacing.cardCornerRadius,
                 category: tour.primaryCategory,
-                zoomable: true
+                zoomable: true,
+                disableLoadAnimation: true
             )
             .padding(.horizontal, AtlasSpacing.lg)
         }
