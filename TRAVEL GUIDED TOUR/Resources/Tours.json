@@ -1592,7 +1592,7 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/USA-NYC-American_Museum_of_Natural_History.JPG/3840px-USA-NYC-American_Museum_of_Natural_History.JPG",
       "additionalImageURLs": null,
-      "kind": "multi",
+      "kind": "multiStop",
       "stops": [
         {
           "id": "d332ab3e-aa41-419f-9f6d-70cf29f25567",
