@@ -2023,6 +2023,52 @@
         "copyright"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "d0aba09c-8a27-41a1-9850-7ea43c2761a9",
+      "title": "The Noguchi Museum",
+      "shortDescription": "Almost no major artist gets to design their own museum. Isamu Noguchi did.",
+      "longDescription": "On 33rd Road in Long Island City, Queens, the Noguchi Museum opened in 1985 — designed, arranged, and curated by the artist Isamu Noguchi himself, three years before he died. The exterior is unassuming dark brick, the former home of a photo-engraving plant that Noguchi bought in 1974 and used as a studio for ten years before converting it into a museum. Noguchi was one of the most consequential American sculptors of the twentieth century — born in Los Angeles in 1904 to a Japanese poet and an American mother, he spent his childhood between Japan and the United States, voluntarily entered a Japanese-American internment camp in Arizona during WWII to advocate for the people inside, then spent decades making sculpture, gardens, playgrounds, and lighting that drew equally from both traditions. The museum holds the largest collection of his work in the world across twelve indoor and outdoor galleries. Noguchi designed the layout himself: which works went where, the lighting, the wall colors, the bench placements. No labels next to the work, sparse descriptions, lots of empty floor. What makes the place unusual is that it isn't just a museum about Noguchi — it's a museum by Noguchi. Almost every other major artist has had their legacy curated after death by directors and estate trustees. Noguchi got to decide himself.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Noguchi_Museum.JPG/1280px-Noguchi_Museum.JPG",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "83c5710e-639a-475f-b805-81fe291a2830",
+          "order": 0,
+          "title": "The Noguchi Museum",
+          "caption": "9-01 33rd Road, Long Island City — the sculpture garden is open in any weather.",
+          "latitude": 40.76285,
+          "longitude": -73.93538,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/The_Noguchi_Museum.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Almost no major artist gets to design their own museum. Isamu Noguchi did.\n\nThe building in front of you, on 33rd Road in Long Island City, is the Noguchi Museum — opened by the artist Isamu Noguchi in 1985, three years before he died. The exterior is unassuming: dark brick, industrial, the kind of building you'd walk past without a second look. It used to be a photo-engraving plant, which Noguchi bought in 1974, when the surrounding neighborhood — Long Island City, then a working industrial part of Queens — was a few subway stops east of the Manhattan art world and almost completely overlooked. He used the building as a studio for ten years before converting it into a museum.\n\nNoguchi was one of the most consequential American sculptors of the twentieth century. Born in Los Angeles in 1904 to a Japanese poet and an American mother, he spent his childhood between Japan and the United States. He voluntarily entered a Japanese-American internment camp in Arizona during the Second World War to advocate for the people inside, then spent decades after the war making sculpture, gardens, playgrounds, and lighting that drew from both traditions equally.\n\nThe museum holds the largest collection of his work in the world, distributed across twelve indoor and outdoor galleries and a sculpture garden where stone, bamboo, and gravel are arranged in a way that reads as obviously Japanese. Noguchi designed the layout himself — he selected which works would go where, chose the lighting, the wall colors, and the bench placements. The galleries are deliberately quiet, with no labels next to the work, sparse descriptions, and lots of empty floor.\n\nWhat's unusual about the place is that it isn't just a museum about Noguchi — it's a museum by Noguchi. Almost every other major artist has had their legacy curated, after their death, by museum directors and estate trustees. Noguchi got to make those decisions himself: he decided which work mattered, designed the rooms it would sit in, and picked the neighborhood. The building you're looking at is arguably the most complete realization of his ideas — not because it holds his work, but because it is his work.\n\nThe garden is open in any weather. The neighborhood around the museum has changed beyond recognition in the forty years since he opened it — but the museum hasn't."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.76285,
+      "centroidLongitude": -73.93538,
+      "city": "New York City",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "new york",
+        "queens",
+        "long island city",
+        "isamu noguchi",
+        "sculpture",
+        "museum",
+        "japanese american",
+        "art",
+        "sculpture garden",
+        "lic"
+      ],
+      "priceUSD": 0
     }
   ]
 }
