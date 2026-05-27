@@ -1928,6 +1928,54 @@
         "foz do douro"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "63c7e6d8-30a9-482c-b2eb-5c2f640e1bb2",
+      "title": "Fraunces Tavern",
+      "shortDescription": "George Washington said goodbye to his army in this building — then walked out and went home.",
+      "longDescription": "At the corner of Pearl and Broad Streets in Lower Manhattan stands Fraunces Tavern, a three-story brick building with white trim and dark green shutters — a colonial-era structure dating to 1719, one of the very few of its kind still standing in Manhattan. In November 1783, the British army formally evacuated New York City, and Washington and the Continental Army marched in from the north. On December 4th, in the upstairs Long Room of this tavern, Washington gathered the officers of his army and said goodbye. The Treaty of Paris had been signed, the war was over, and the army was being disbanded. He thanked the men who had served with him for eight years, then walked outside and began the long journey home to Mount Vernon — no government position, and for the first time in nearly a decade, the status of a private citizen. The reason this farewell matters is that Washington could have stayed. After the British left, the new country had no constitution, no executive branch, no clear plan for who would lead it, and he could have remained the indefinite commander of the army. Instead, he came here, said goodbye, and went home — and did the same thing six years later, after his second term as president. The Long Room is still there, now a museum. The building has been a tavern, hotel, post office, and federal government building over three centuries; the Sons of the Revolution run it today as a combined museum and restaurant.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Front_of_Fraunces_Tavern_I_November_2021.jpg/1280px-Front_of_Fraunces_Tavern_I_November_2021.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "16c5c3ff-286c-43e9-a315-c06a81ddd5b9",
+          "order": 0,
+          "title": "Fraunces Tavern",
+          "caption": "Corner of Pearl and Broad Streets — the Long Room upstairs is open as a museum.",
+          "latitude": 40.70334,
+          "longitude": -74.01122,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Fraunces_Tavern.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "George Washington said goodbye to the army in this building.\n\nYou're at the corner of Pearl and Broad Streets in Lower Manhattan, standing in front of Fraunces Tavern — a three-story brick building with white trim and dark green shutters, the kind of colonial-era structure you'd expect to see in Williamsburg, Virginia, not three blocks from the New York Stock Exchange. The building dates to 1719, and it is one of the very few colonial buildings still standing in Manhattan.\n\nIn November of 1783, the British army formally evacuated New York City — the last redoubt of British power in the new United States — and Washington and the Continental Army marched in from the north and occupied the city. On December the fourth, in the upstairs room of this tavern, he gathered the officers of his army and said goodbye. The Treaty of Paris had been signed, the war was over, and the army was being disbanded. Washington thanked the men who had served with him for eight years, then walked outside and began the long journey home to Mount Vernon, with no government position and, for the first time in nearly a decade, the status of a private citizen.\n\nThe upstairs room — the Long Room — is still there. It has been restored more than once over the past three centuries; the building has been a tavern, a hotel, a museum, a post office, and a federal government building at various points. The current owners, the Sons of the Revolution, run it as a combined museum and restaurant.\n\nThe reason Washington's farewell is one of the defining moments of the American experiment is that he could have stayed. After the British left, the new country had no constitution, no executive branch, no clear plan for who would lead it, and Washington could have remained the indefinite commander of the army — a kind of military protector of the new republic. Instead, he came here, said goodbye, and went home — and did the same thing six years later, after his second term as president.\n\nThe Long Room upstairs is open as a museum, and the restaurant downstairs is a working restaurant. Stand at the corner and look at the door — the man who walked out of it in December 1783 was, by that afternoon, just a private citizen."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.70334,
+      "centroidLongitude": -74.01122,
+      "city": "New York City",
+      "primaryCategory": "history",
+      "tags": [
+        "new york",
+        "manhattan",
+        "lower manhattan",
+        "george washington",
+        "american revolution",
+        "colonial",
+        "history",
+        "fraunces tavern",
+        "pearl street",
+        "1783",
+        "continental army",
+        "museum"
+      ],
+      "priceUSD": 0
     }
   ]
 }
