@@ -47,9 +47,9 @@ pop-up on pin tap (PR #75), tour detail as slide-up layer with drawer hoist
 a UIKit `UIPresentationController`-driven modal so detail slides up *from
 behind* the persistent mini-player + tab bar (now hosted in a secondary
 higher-level `UIWindow` — Apple Music pattern). Sticky action bar dropped;
-Start Tour / bookmark / download moved inline. TestFlight build is **1.0
-(12)**. Known follow-up: subtle chrome shade mismatch in dark mode (see
-session-8 handoff for leads).
+Start Tour / bookmark / download moved inline. TestFlight build **1.0 (12) is live** (uploaded 2026-05-27). Known
+follow-up: subtle chrome shade mismatch in dark mode (see session-8
+handoff for leads).
 
 **Content (M-launch-content ✅).** **39 tours** in `Resources/Tours.json`.
 First **multi-stop tour** added 2026-05-26: "American Museum of Natural
