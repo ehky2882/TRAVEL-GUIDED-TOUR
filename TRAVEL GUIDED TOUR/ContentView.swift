@@ -25,6 +25,7 @@ struct ContentView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
+    @Environment(ProximityMonitor.self) private var proximityMonitor
     @Environment(TourDownloader.self) private var tourDownloader
     @Environment(AppSharedState.self) private var appShared
     @Environment(TourPresenter.self) private var tourPresenter
@@ -143,6 +144,7 @@ struct ContentView: View {
                     .environment(audioPlayer)
                     .environment(libraryStore)
                     .environment(recentlyViewedStore)
+                    .environment(proximityMonitor)
                     .environment(tourDownloader)
                     .environment(appShared),
                     onDismiss: { tourPresenter.dismiss() }
