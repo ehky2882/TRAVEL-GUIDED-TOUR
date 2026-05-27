@@ -1734,6 +1734,52 @@
         "sacredSites"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "4b8c4701-45df-48a5-ac2f-a84d2d28da2b",
+      "title": "Rua do Passeio Alegre 212",
+      "shortDescription": "Souto de Moura's Cantareira: three concrete boxes that don't line up, and why that's the whole point.",
+      "longDescription": "On Rua do Passeio Alegre in Foz do Douro — the old neighbourhood at the mouth of the Douro where the river opens into the Atlantic — Souto de Moura completed the Cantareira in 2013. From across the pavement it reads as three concrete boxes stacked on top of each other, each rotated slightly from the one below, so the facade planes shift and lean from floor to floor in a way that has no obvious geometric logic until someone explains what's actually going on. Each level was rotated deliberately, so inside the apartments the rooms don't face the estuary straight on — they look at it from an oblique angle, and a corner window captures the water and the far bank simultaneously in a way a flat-fronted building wouldn't give you. Look closely at the joints between floors: what appears to be three separate volumes is structurally one continuous concrete frame, with a narrow shadow line carved at the edge doing the work of visual separation.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Rua_do_Passeio_Alegre_212_hero.webp",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1d9c5f69-9998-44b9-b53b-e5cdbb03c270",
+          "order": 0,
+          "title": "Cantareira Facade",
+          "caption": "Step back far enough to read the whole facade — the floors don't line up.",
+          "latitude": 41.147852829249416,
+          "longitude": -8.66378208981884,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Rua_do_Passeio_Alegre_212.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "There's a curious thing about this building, which you'll notice the moment you step back far enough to read the whole facade: the floors don't line up with each other.\n\nYou're on Rua do Passeio Alegre, in Foz do Douro — the old neighbourhood at the mouth of the Douro, where the river opens into the Atlantic and where Porto's wealthier families have traditionally kept their houses facing the water. The street has the character that money and time make together: mature trees, well-maintained villas, a particular quiet. Souto de Moura completed the Cantareira in twenty thirteen, and from across the pavement it reads as three concrete boxes stacked on top of each other, each one rotated slightly from the one below, so the facade planes shift and lean and alternate from floor to floor in a way that has no obvious geometric logic until someone explains what's actually going on.\n\nWhat's actually going on is this: each level was rotated deliberately, which means that inside the apartments the rooms don't face the estuary straight on — they look at it from an oblique angle, and a window at the corner of a rotated room captures the water and the far bank simultaneously in a way that a flat-fronted building simply wouldn't give you.\n\nNow have a closer look at the joints between the floors, because there's a structural sleight of hand happening there that's easy to miss. The building reads as three separate volumes, but Souto de Moura didn't want to double the structure at each level — a floor slab above and a separate ceiling slab below, stacked twice over, would have been wasteful and unnecessarily thick — so instead each concrete slab extends right to the face of the building, and a narrow slot is carved in the concrete at the edge, creating a shadow line that reads as a gap between separate volumes. What looks like three stacked boxes is, structurally, one continuous concrete frame with a shadow doing the work of visual separation.\n\nThe bedrooms face the rear courtyard and the living rooms face the street and the estuary, which tells you that the building has a clear opinion about which direction matters — and it just doesn't face it straight."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.147852829249416,
+      "centroidLongitude": -8.66378208981884,
+      "city": "Porto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "porto",
+        "architecture",
+        "souto de moura",
+        "foz do douro",
+        "cantareira",
+        "concrete",
+        "contemporary",
+        "residential",
+        "portugal",
+        "pritzker"
+      ],
+      "priceUSD": 0
     }
   ]
 }
