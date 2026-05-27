@@ -1976,6 +1976,53 @@
         "museum"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "3e5b579c-c267-445d-959d-5792187c86fe",
+      "title": "LOVE Sculpture",
+      "shortDescription": "Robert Indiana's four red letters — one of the most reproduced images in American art history, and he never got paid for most of it.",
+      "longDescription": "At the corner of 55th Street and 6th Avenue stands the LOVE sculpture by Robert Indiana — four red letters arranged in two rows, the second 'O' tilted at a thirty-degree angle, painted red on the front and blue and green on the sides. Installed in 1971, it is one of the most reproduced images in American art history. The image started as a Christmas card: in 1964, MoMA commissioned Indiana to design a card for their annual greeting series. He sent in three sketches, the Museum picked the LOVE one, and it went out in 1965. Then it escaped. Within a few years the design was on t-shirts, posters, postcards, mugs, and jewelry. The U.S. Postal Service issued a LOVE stamp in 1973. Indiana had never copyrighted the image — copyright in the 1960s was less aggressive than now, and the design had spread through legitimate reproductions before he could establish exclusive rights. By the time he tried to protect it, it was effectively public domain. He kept making the image — paintings, sculptures, prints, in every color and configuration — and the sculptures were among his only consistent source of income from the design. He spent the last decades of his life on an island off the coast of Maine, increasingly isolated and frustrated, and died in 2018. The original 1965 Christmas card is in MoMA's collection, two blocks south.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/LOVE_sculpture_NY.JPG/1280px-LOVE_sculpture_NY.JPG",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bb68b4a4-6b30-46df-a089-7dfb7e0512c7",
+          "order": 0,
+          "title": "LOVE Sculpture",
+          "caption": "Corner of 55th Street and 6th Avenue — the original Christmas card is at MoMA, two blocks south.",
+          "latitude": 40.76248,
+          "longitude": -73.97923,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/LOVE_Sculpture.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "The artist who designed this image never got paid for most of the times it was used.\n\nAt the corner of 55th Street and 6th Avenue stands the LOVE sculpture by Robert Indiana — four red letters arranged in two rows, the second letter \"O\" tilted at a thirty-degree angle, painted red on the front and blue and green on the sides. It was installed in 1971, and is one of dozens of LOVE sculptures Indiana created or licensed in the years that followed, in cities around the world — and one of the most reproduced images in American art history.\n\nThe image was originally a Christmas card. In 1964, the Museum of Modern Art commissioned Indiana to design a card for their annual greeting series. He had been working on word-based paintings for years, pulled from old commercial signage he had seen as a child in Indiana. He sent in three sketches for the card, the Museum picked the LOVE one, and it went out as a Christmas card in 1965.\n\nThen it escaped — within a few years, the LOVE design was on t-shirts, posters, postcards, mugs, jewelry, and tattoos. The U.S. Postal Service issued a LOVE stamp in 1973. Indiana had never copyrighted the image — copyright in the 1960s was less aggressive than now, and the image had spread through legitimate licensed reproductions before he could establish exclusive rights. By the time he tried to protect it, the design was effectively public domain.\n\nHe kept making the image — paintings, sculptures, prints, in every color combination and configuration. The sculptures, including this one, were among his only consistent source of income from the design. He spent the last decades of his life on an island off the coast of Maine, increasingly isolated and frustrated, and he died in 2018. The image he created was, by then, more famous than he was.\n\nThe original Christmas card from 1965 is in the Museum of Modern Art's collection, two blocks south of here. The image they sell in the gift shop is the same one."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.76248,
+      "centroidLongitude": -73.97923,
+      "city": "New York City",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "new york",
+        "manhattan",
+        "midtown",
+        "robert indiana",
+        "sculpture",
+        "public art",
+        "love",
+        "6th avenue",
+        "moma",
+        "art history",
+        "copyright"
+      ],
+      "priceUSD": 0
     }
   ]
 }
