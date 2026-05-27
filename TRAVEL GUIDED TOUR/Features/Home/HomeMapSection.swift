@@ -182,16 +182,21 @@ struct HomeMapSection: View {
     }
 
     /// All stops across every tour, flattened into pin descriptors.
+    /// Multi-stop tours show only their first stop (order == 0) on the
+    /// map — the entry point — so the route doesn't scatter multiple
+    /// pins across the city for a single tour.
     private var allStopMarkers: [StopMarker] {
         tours.flatMap { tour in
-            tour.stops.map { stop in
-                StopMarker(
-                    id: stop.id,
-                    tourId: tour.id,
-                    title: stop.title,
-                    coordinate: stop.coordinate
-                )
-            }
+            tour.stops
+                .filter { tour.kind == .single || $0.order == 0 }
+                .map { stop in
+                    StopMarker(
+                        id: stop.id,
+                        tourId: tour.id,
+                        title: stop.title,
+                        coordinate: stop.coordinate
+                    )
+                }
         }
     }
 
