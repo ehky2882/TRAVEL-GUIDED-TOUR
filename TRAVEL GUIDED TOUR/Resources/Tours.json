@@ -1829,6 +1829,56 @@
         "pritzker"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "b4a638a4-81fd-4876-90f5-60949a742c5f",
+      "title": "Capela do Senhor da Pedra",
+      "shortDescription": "A hexagonal chapel on an Atlantic rock that was a place of worship two thousand years before Christianity arrived.",
+      "longDescription": "On the beach at Miramar, a small whitewashed hexagonal chapel sits on a granite outcrop at the edge of the Atlantic — close enough that at high tide the sea comes up to the base of the rock. The rock has been a place of worship for roughly two thousand years, making the chapel, built in 1686, very much the newest thing here. The hexagonal form is unusual for a chapel — six sides rather than the almost universal rectangle — giving the structure a sense of having grown from the rock rather than been placed upon it. The azulejo panels flanking the entrance are unusually direct: the inscription records that this rock was almost certainly the oldest place of worship in the parish, and that before Christianity arrived, it was a pagan altar. The Church didn't conceal that fact — they inscribed it in tile at the front door. The reasoning traces back to a letter Pope Gregory the First wrote in the sixth century, advising missionaries to convert sacred sites rather than destroy them: people are more likely to embrace a new faith if it arrives in a place they already consider holy. Inside, three altars in gilded rococo woodwork, and a stone in the floor with an indent shaped like a horseshoe.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Capela_do_Senhor_da_Pedra_hero.webp",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "786f6604-e8c0-4c66-96a0-339dee2bdc98",
+          "order": 0,
+          "title": "Chapel on the Rock",
+          "caption": "Stand at the foot of the outcrop before going up — the hexagonal shape reads better from down here.",
+          "latitude": 41.06890515652519,
+          "longitude": -8.65853013030168,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Capela_do_Senhor_da_Pedra.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "The rock this chapel sits on has been a place of worship for roughly two thousand years, which means the building on top of it is very much the newest thing here.\n\nYou should be on the beach at Miramar, facing the water, with the chapel directly ahead of you — a small whitewashed hexagonal building on a granite outcrop right at the edge of the Atlantic, close enough that at high tide the sea comes up to the base of the rock. As you walk toward it, it's worth stopping at the foot of the outcrop before going up, because the shape of the building is easier to read from down here than from inside it.\n\nSix sides, which is unusual for a chapel, where rectangular is almost the default — but the hexagonal form gives the structure something that a rectangle wouldn't, a sense of having grown from the rock rather than been placed upon it, reinforced by the six pinnacles at the roof corners and the small bell tower at the top, all catching the Atlantic light. The whitewash and the grey granite underneath it work together in a way that makes the building look as though it's been here long enough to belong.\n\nNow, before you go in, find the azulejo panels on either side of the wooden entrance, because they're unusually direct about the building's history: the inscription states that this rock was almost certainly the oldest place of worship in the parish, and that before Christianity arrived here, it was a pagan altar. The Church didn't conceal that fact — they recorded it in tile at the front door, which is a rather confident thing to do.\n\nThe reasoning behind that confidence goes back to a letter Pope Gregory the First wrote in the sixth century, advising missionaries to convert sacred sites rather than destroy them, on the grounds that people are more likely to embrace a new faith if it arrives in a place they already consider holy. So in sixteen eighty-six, a Catholic chapel went up on a rock where people had been coming to the edge of the ocean for centuries to do whatever it is you do when you need something from the sea.\n\nInside there are three altars in gilded rococo woodwork, and somewhere on the floor there is a stone with an indent shaped like a horseshoe, for which the explanations range from the Virgin Mary's donkey to a king whose horse slipped on the rock in the sixteenth century — and standing here, with the waves coming in below you, both feel about equally plausible."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.06890515652519,
+      "centroidLongitude": -8.65853013030168,
+      "city": "Miramar",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "miramar",
+        "porto",
+        "chapel",
+        "atlantic",
+        "sacred sites",
+        "pagan",
+        "hexagonal",
+        "azulejo",
+        "history",
+        "portugal",
+        "beach",
+        "christianity",
+        "roman",
+        "rococo"
+      ],
+      "priceUSD": 0
     }
   ]
 }
