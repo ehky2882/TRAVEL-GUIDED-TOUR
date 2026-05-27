@@ -36,41 +36,44 @@ struct TourDetailView: View {
     @State private var showingPlayer = false
 
     var body: some View {
-        ZStack(alignment: .bottom) {
-            ScrollView {
-                VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
-                    imageSection
+        ScrollView {
+            VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
+                // Breathing room between the nav bar and the hero —
+                // without this the image kisses the title strip.
+                imageSection
+                    .padding(.top, AtlasSpacing.md)
 
-                    VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                        titleSection
-                        makerRow
-                        metaRow
-                        descriptionSection
-                        stopsSection
-                    }
-                    .padding(.horizontal, AtlasSpacing.lg)
-
-                    // Spacer matches the sticky action bar's full height
-                    // so the last stop / description line lands at the
-                    // action bar's top edge when the user scrolls all
-                    // the way down. The action bar itself is sized to
-                    // cover the bottom mini-player + tab bar module
-                    // beneath it, so the buttons stay above the module
-                    // and nothing scrollable hides behind either.
-                    Color.clear.frame(height: actionBarHeight)
+                VStack(alignment: .leading, spacing: AtlasSpacing.md) {
+                    titleSection
+                    makerRow
+                    metaRow
+                    descriptionSection
+                    stopsSection
+                    // Action buttons live in the body now (owner
+                    // dropped the sticky action bar — design /
+                    // layout pass for the buttons happens later).
+                    buttonRow
+                        .padding(.top, AtlasSpacing.md)
                 }
-            }
-            .background(AtlasColors.secondaryBackground)
+                .padding(.horizontal, AtlasSpacing.lg)
 
-            actionBar
+                // Bottom inset so the last line of content clears the
+                // mini-player + tab bar that float over this view from
+                // the secondary higher-level window.
+                Color.clear.frame(height: AtlasBottomModule.height())
+            }
         }
+        .background(AtlasColors.secondaryBackground)
         .navigationTitle(tour.title)
         .inlineNavigationBarTitle()
-        // Match the nav bar background to the rest of the detail
-        // surface (and the mini-player + tab bar visible below) so
-        // the whole layer reads as one continuous color band.
-        .toolbarBackground(AtlasColors.secondaryBackground, for: .navigationBar)
-        .toolbarBackground(.visible, for: .navigationBar)
+        // Hide the toolbar's own background — SwiftUI's
+        // `.toolbarBackground(Color…)` was rendering as a
+        // *translucent material* tinted with the color, not as a
+        // solid fill, so the nav bar always read as a slightly
+        // different shade than the body below it. Hiding it lets
+        // the hosting view's UIKit-level `.secondarySystemBackground`
+        // show behind the X + title, matching the rest exactly.
+        .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             // X close exits the entire detail layer (slides it back
             // down), even when pushed onto the layer's nav stack
@@ -281,31 +284,15 @@ struct TourDetailView: View {
         .padding(.vertical, AtlasSpacing.xs)
     }
 
-    // MARK: - Action bar
+    // MARK: - Button row
 
-    /// Shared height for all three action-bar controls so the primary
-    /// button, Save, and Download line up in size and baseline.
+    /// Shared height for the three buttons so they line up in size and
+    /// baseline.
     private let controlHeight: CGFloat = 36
 
-    /// Vertical space the action bar reserves for its button row above
-    /// the bottom module: `top padding (lg)` + the button itself + a
-    /// small breathing gap (`sm`) so the buttons don't kiss the
-    /// floating-island's top edge.
-    private var actionBarButtonArea: CGFloat {
-        AtlasSpacing.lg + controlHeight + AtlasSpacing.sm
-    }
-
-    /// Action-bar height — large enough to (a) seat its button row at
-    /// the top with the standard padding profile, and (b) extend its
-    /// background down through the entire mini-player + tab bar
-    /// module that floats over it from `ContentView`. The module's
-    /// height is constant across geometry modes now, so we just call
-    /// `AtlasBottomModule.height()` without arguments.
-    private var actionBarHeight: CGFloat {
-        AtlasBottomModule.height() + actionBarButtonArea
-    }
-
-    private var actionBar: some View {
+    /// Inline button row inside the ScrollView body. Temporary
+    /// placement — owner will redesign the layout later.
+    private var buttonRow: some View {
         HStack(spacing: AtlasSpacing.md) {
             Button(action: handlePrimaryAction) {
                 Label(primaryButtonTitle, systemImage: primaryButtonIcon)
@@ -314,10 +301,6 @@ struct TourDetailView: View {
                     .frame(height: controlHeight)
             }
             .buttonStyle(.borderedProminent)
-            // Intentionally never disabled — even when the audio engine
-            // is mid-load or stuck in a transient `.loading` state (e.g.
-            // after a seek-to-end), the player sheet is the user's
-            // escape hatch and must stay reachable.
 
             Button(action: toggleSaved) {
                 Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
@@ -329,24 +312,7 @@ struct TourDetailView: View {
 
             downloadButton
         }
-        .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.top, AtlasSpacing.lg)
         .frame(maxWidth: .infinity)
-        // Fixed height so the action bar's top edge lines up with the
-        // home drawer's peek detent. Buttons sit at the top; the space
-        // below clears the bottom island (tab bar + mini-player),
-        // which overlays it.
-        .frame(height: actionBarHeight, alignment: .top)
-        .background(
-            AtlasColors.secondaryBackground
-                .shadow(color: AtlasColors.cardShadow, radius: 8, y: -2)
-        )
-        // Extend to the physical screen bottom so actionBarHeight is
-        // measured from the same baseline as the drawer (which also
-        // ignores the bottom safe area). Without this the action bar
-        // stops at the home-indicator inset and its top sits higher
-        // than the drawer's peek detent.
-        .ignoresSafeArea(.container, edges: .bottom)
     }
 
     // MARK: - Download button

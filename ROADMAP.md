@@ -38,13 +38,18 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
-**Status (2026-05-26):** every V1 functionality milestone is shipped on
+**Status (2026-05-27):** every V1 functionality milestone is shipped on
 `main`. Major UX work shipped 2026-05-24/25 — bottom module consistency
 (PRs #66–70), home polish + player-state hardening (PRs #60–61), placecard
 pop-up on pin tap (PR #75), tour detail as slide-up layer with drawer hoist
-(PR #76), slide animation fix (PR #77). **PR #78** (hero image crossfade fix
-during slide-up) is open and in CI — auto-merges when green. Latest
-TestFlight build is **1.0 (11)**. Next upload after PR #78 merges = build 12.
+(PR #76), slide animation fix (PR #77), AsyncImage crossfade fix (PR #78).
+**Session 8 (2026-05-27)** replaced the SwiftUI `.offset` slide layer with
+a UIKit `UIPresentationController`-driven modal so detail slides up *from
+behind* the persistent mini-player + tab bar (now hosted in a secondary
+higher-level `UIWindow` — Apple Music pattern). Sticky action bar dropped;
+Start Tour / bookmark / download moved inline. TestFlight build is **1.0
+(12)**. Known follow-up: subtle chrome shade mismatch in dark mode (see
+session-8 handoff for leads).
 
 **Content (M-launch-content ✅).** **39 tours** in `Resources/Tours.json`.
 First **multi-stop tour** added 2026-05-26: "American Museum of Natural

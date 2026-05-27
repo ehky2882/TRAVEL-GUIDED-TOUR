@@ -73,9 +73,13 @@ struct MiniPlayerBar: View {
 
     /// Bar content height.
     static let barHeight: CGFloat = 54
-    /// Gap above the bar, separating the bottom island from the
-    /// content / drawer above it.
-    static let topGap: CGFloat = 8
+    /// Top gap is 0 — the painted bar's top edge IS the top of the
+    /// mini-player view, so there's no transparent strip above the
+    /// bar showing through to whatever's behind. Without this, the
+    /// bar's painted top edge floats 8pt below the mini-player
+    /// view's top, and any subtle window-compositing or subpixel
+    /// alignment difference reads as a hairline "bump" at that y.
+    static let topGap: CGFloat = 0
     /// Horizontal inset — matches the tab bar's inset so the bar
     /// and tab bar stack into one flush, equal-width island. Used
     /// on every surface: the bar is always rendered in the
