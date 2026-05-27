@@ -2117,6 +2117,54 @@
         "guerrilla art"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "c7052e56-8a06-4e35-ba64-4a65f2f5e11c",
+      "title": "The Unisphere",
+      "shortDescription": "This is what's left of the future — the 140-foot steel globe built for the 1964 World's Fair.",
+      "longDescription": "The Unisphere sits in a reflecting pool in Flushing Meadows Corona Park, Queens, on the site of the 1964 World's Fair. One hundred and forty feet tall, weighing 900,000 pounds — the largest representation of the Earth ever built. The three rings around it represent the orbits of the first artificial satellites: Sputnik, Telstar, and the Apollo astronauts. Built by U.S. Steel as the centerpiece of the 1964-65 World's Fair, the globe drew 51 million visitors over two seasons under the theme \"Peace Through Understanding.\" The fair saw the public debut of the Ford Mustang, the picturephone, the IBM Selectric typewriter, and a Disney attraction called It's a Small World that opened here before moving to Disneyland. When the fair ended in 1965, almost all pavilions were dismantled. The Unisphere was meant to remain as a permanent monument — but the maintenance budget didn't survive. Through the 1970s and 80s the globe rusted in place, the reflecting pool sat empty, the plaza abandoned. The city was broke and the future was elsewhere. Restored in 1994 when the city found parks funding again, it is today what it was supposed to be in 1965: a monument to the postwar American belief that the future was something you could build, and that it would be an optimistic place to live. The New York State Pavilion's flying-saucer towers still stand across the plaza — ruins of the same fair — alongside the Queens Museum. The whole park is a layered ruin of a future that didn't quite arrive.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Flushing_Meadows_Fair_Grounds_td_%282018-05-26%29_020_-_Unisphere.jpg/1280px-Flushing_Meadows_Fair_Grounds_td_%282018-05-26%29_020_-_Unisphere.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5f744b21-c5e1-45b4-8dd9-b79caffa3413",
+          "order": 0,
+          "title": "The Unisphere",
+          "caption": "Flushing Meadows Corona Park, Queens — walk through the whole plaza after.",
+          "latitude": 40.74664,
+          "longitude": -73.84569,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/The_Unisphere.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": "This is what's left of the future.\n\nThe Unisphere sits in the middle of a reflecting pool in Flushing Meadows Corona Park, in Queens, on the site of the 1964 World's Fair. The globe is a hundred and forty feet tall and weighs nine hundred thousand pounds — the largest representation of the Earth ever built. The three rings around it represent the orbits of the first artificial satellites: Sputnik, Telstar, and the Apollo astronauts.\n\nThe Unisphere was built by U.S. Steel as the centerpiece of the 1964-65 World's Fair, which drew fifty-one million people over its two seasons. The theme was \"Peace Through Understanding.\" The fair featured pavilions from sixty-six countries, futuristic exhibits about space exploration and computing, a Disney-built attraction called \"It's a Small World\" that opened here before being moved to Disneyland, and the public debut of products that would shape the next half-century — the Ford Mustang, the picturephone, the IBM Selectric typewriter.\n\nWhen the fair ended in 1965, almost all of its pavilions were dismantled. The site was supposed to become a park, with the Unisphere as a permanent monument. The park happened, but the maintenance budget for the Unisphere did not. For most of the 1970s and 80s, the globe rusted in place, the reflecting pool sat empty, the surrounding plaza was abandoned — the city was broke, and the future was elsewhere.\n\nThe Unisphere was finally restored in 1994, when the city found money for parks again — the reflecting pool was refilled and the globe was cleaned. It is, today, what it was supposed to be in 1965: a permanent monument to the postwar American belief that the future was a thing you could build, and that it would be a generally optimistic place to live.\n\nAcross the plaza, the flying-saucer towers of the New York State Pavilion still stand — a ruin of the same fair — and beyond them sits the Queens Museum, which was also part of the exhibition. The whole park is a layered ruin of a future that didn't quite arrive. Walk through it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.74664,
+      "centroidLongitude": -73.84569,
+      "city": "New York City",
+      "primaryCategory": "history",
+      "tags": [
+        "new york",
+        "queens",
+        "flushing meadows",
+        "1964 worlds fair",
+        "unisphere",
+        "cold war",
+        "postwar",
+        "u.s. steel",
+        "public art",
+        "landmark",
+        "corona park",
+        "history"
+      ],
+      "priceUSD": 0
     }
   ]
 }
