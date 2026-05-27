@@ -2069,6 +2069,54 @@
         "lic"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "7298da4a-bcc7-4e2a-b8b4-7b0e0b38afb4",
+      "title": "The Charging Bull",
+      "shortDescription": "This statue was installed illegally — and has since been completely absorbed into the culture it was made in opposition to.",
+      "longDescription": "In the median of Broadway at Bowling Green stands the Charging Bull — a three-and-a-half-ton bronze sculpture by Sicilian-born artist Arturo Di Modica, eleven feet tall and sixteen feet long. Nobody asked him to make it. Alarmed by the 1987 stock market crash, the largest single-day percentage drop in Wall Street history, Di Modica decided to make an unsolicited gift to the city: a bronze bull embodying American resilience as an optimistic taunt at the crash. He worked for two years, paying roughly $300,000 of his own money for the bronze and foundry work. On the night of December 15, 1989, he drove a flatbed truck up Broadway, lowered the bull onto the sidewalk outside the New York Stock Exchange, and left. The police removed it the next morning — but it had already gone viral in a pre-internet way, news crews having filmed the installation, and a public outcry demanded it be brought back. The Parks Department relocated it here to Bowling Green, where it has remained ever since. What's striking is what it has come to mean. Di Modica installed it as a protest gift — an outsider artist commenting on financial collapse — but it has been completely absorbed into Wall Street culture. The fact that it was an unauthorized guerrilla installation by an Italian immigrant has been almost entirely written out of the popular understanding. The bronze is polished bright in the places people touch most: the horns, the nose, and the testicles. The dull patina elsewhere is the original finish.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Bowling_Green_td_%282018-12-13%29_06_-_26_Broadway%2C_Charging_Bull.jpg/1280px-Bowling_Green_td_%282018-12-13%29_06_-_26_Broadway%2C_Charging_Bull.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a182ebc8-62b0-4234-97c8-104e7b1e7fe2",
+          "order": 0,
+          "title": "The Charging Bull",
+          "caption": "Broadway at Bowling Green — the patina is dull everywhere except where people touch.",
+          "latitude": 40.70554,
+          "longitude": -74.01342,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/The_Charging_Bull.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "This statue was installed illegally.\n\nIn the median of Broadway, between Bowling Green and the Financial District, stands the Charging Bull — a three-and-a-half-ton bronze sculpture by the Sicilian-born artist Arturo Di Modica, eleven feet tall and sixteen feet long. Depending on the source, it is either the most photographed sculpture in New York City or the second most, behind the Statue of Liberty.\n\nNobody asked Di Modica to make it. He had moved to New York from Italy in the 1970s and built a successful career as a sculptor, and he was alarmed by the 1987 stock market crash — the largest single-day percentage drop in Wall Street history. He decided to make a gift to the city: a bronze sculpture that embodied \"American resilience,\" in the form of a charging bull. The bull is the symbol of an up market, and the sculpture was an optimistic taunt at the crash.\n\nHe worked on it for two years, paying for the bronze and the foundry work himself — about three hundred thousand dollars of his own money. On the night of December the fifteenth, 1989, he drove a flatbed truck up Broadway, lowered the bull onto the sidewalk outside the New York Stock Exchange, and left it there as a Christmas gift to the city.\n\nThe police took it away the next morning, but the bull had already gone viral, in a pre-internet kind of way — news crews had filmed it, and within days a public outcry was demanding it be brought back. The Parks Department compromised by relocating it here, to Bowling Green, where it has remained ever since.\n\nWhat's interesting about the bull, standing here looking at it, is what it has come to mean. Di Modica installed it as a protest gift — an outsider artist commenting on the financial collapse — but it has been completely absorbed into Wall Street culture. Tourists touch it for luck, brokers pose with it, and the fact that it was an unauthorized guerrilla installation by an Italian immigrant has been almost completely written out of the popular understanding of the thing. It is now what it was made in opposition to.\n\nThe bronze is polished to a high shine in the places where people touch it most — the horns, the nose, and, traditionally, the testicles. The dull patina elsewhere is the original finish."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.70554,
+      "centroidLongitude": -74.01342,
+      "city": "New York City",
+      "primaryCategory": "history",
+      "tags": [
+        "new york",
+        "manhattan",
+        "lower manhattan",
+        "charging bull",
+        "wall street",
+        "bowling green",
+        "arturo di modica",
+        "sculpture",
+        "public art",
+        "finance",
+        "1987 crash",
+        "guerrilla art"
+      ],
+      "priceUSD": 0
     }
   ]
 }
