@@ -1780,6 +1780,55 @@
         "pritzker"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "ae287886-2c55-4c3e-b8c2-e2389323aec6",
+      "title": "Casa de Chá da Boa Nova",
+      "shortDescription": "Siza's first building: a tea house on the Atlantic rocks that earned two Michelin stars and a national monument listing.",
+      "longDescription": "On the rocks at Leça da Palmeira, at the edge of the Atlantic, Álvaro Siza Vieira designed this tea house as his first professional project — begun at twenty-five, opened at thirty. Fernando Távora won the municipal competition in 1956, chose this site, then left on holiday and handed the project to six young collaborators in his studio. Siza's version is the one that got built. The approach is a sinuous white stone promenade that moves through the rocks rather than over them, alternately hiding and revealing the sea as you turn. The roofline runs in a single unbroken horizontal across ragged, fractured geology — one precise stroke laid across chaos, with Roman terracotta tiles sloping to long projecting eaves trimmed in copper and timber. Inside, the frames of both dining rooms retract entirely into the floor so the eaves of the roof continue directly as the ceiling — no threshold between the building and the Atlantic. Everything inside, from floors to furniture, is African Afzelia wood, all designed by Siza. The building is a national monument. Chef Rui Paula has held two Michelin stars here since 2014. When Siza did the restoration that year — at eighty — he made replicas of the original furniture and sourced replacement tiles whose profile matched the originals exactly.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_de_Cha_da_Boa_Nova_hero.webp",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "87564bd8-8177-44fc-95bb-88d21bb73926",
+          "order": 0,
+          "title": "Casa de Chá da Boa Nova",
+          "caption": "Walk the full approach path before you go in — it earns its length.",
+          "latitude": 41.20270923110776,
+          "longitude": -8.714618856134091,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Casa_de_Cha_da_Boa_Nova.mp3",
+          "audioDurationSeconds": 152,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "The path you're walking on is the first thing Siza designed, and it's worth taking slowly.\n\nThis is his first professional project — begun when he was twenty-five, opened when he was thirty — and the approach was designed as a deliberate sequence: a sinuous white stone promenade that moves through the rocks rather than over them, alternately hiding the sea and revealing it as you turn, pulling you closer to the Atlantic before you ever reach the building itself. Fernando Távora won the municipal competition in nineteen fifty-six, chose this site on the rocks at Leça da Palmeira, then left on holiday and handed the project to six young collaborators in his studio, and Siza's version is the one that got built.\n\nWalk the full path before you go in, because it earns its length.\n\nWhen you arrive at the building, stop and look along the roofline before you reach for the door. The rocks behind and around the structure are ragged and fractured — entirely geological, entirely irregular — and the roof ridge above them runs in a single unbroken horizontal line, one precise stroke laid across all of that chaos, with the red Roman terracotta tiles sloping down to long projecting eaves whose undersides are trimmed in copper and timber. That contrast between the ruled line and the rocks it sits among was entirely deliberate, and it's one of those architectural decisions that seems obvious in retrospect and almost impossible to arrive at in advance.\n\nOnce you're inside, the building opens up in ways the exterior doesn't quite prepare you for, beginning with the windows: in both dining rooms, the frames retract entirely into the floor, so that when they're open the eaves of the roof continue directly as the ceiling inside, and there is no threshold at all between the building and the Atlantic. Everything inside — the floors, the ceiling, the walls, the staircase, the half-height panels, the furniture — is finished in African Afzelia wood, all from the same material, all designed by Siza himself, giving the interior a warmth and continuity that reads less like a fitted-out restaurant and more like something that was always going to look this way.\n\nThe building is a national monument, and it has held two Michelin stars since twenty fourteen, when chef Rui Paula took over the kitchen. When Siza did the restoration that year — at eighty years old — he made replicas of the original furniture and sourced replacement tiles whose profile matched the originals, because the originals had gone out of production, and he wasn't interested in anything that wasn't exactly right."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 152,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.20270923110776,
+      "centroidLongitude": -8.714618856134091,
+      "city": "Leça da Palmeira",
+      "primaryCategory": "architecture",
+      "tags": [
+        "porto",
+        "leça da palmeira",
+        "álvaro siza",
+        "siza vieira",
+        "architecture",
+        "tea house",
+        "restaurant",
+        "michelin star",
+        "national monument",
+        "atlantic",
+        "portugal",
+        "modernism",
+        "pritzker"
+      ],
+      "priceUSD": 0
     }
   ]
 }
