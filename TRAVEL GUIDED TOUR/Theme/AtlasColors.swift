@@ -22,6 +22,11 @@ enum AtlasColors {
     static let accent = Color.accentColor
     static let accentLight = Color.accentColor.opacity(0.6)
 
+    /// Map pin color — dark gold `#8B7535`. Separate from the brand
+    /// accent so pin styling can diverge from interactive-element
+    /// tinting without a global accent change.
+    static let mapPin = Color(red: 139/255, green: 117/255, blue: 53/255)
+
     /// Three-step text hierarchy. SwiftUI's semantic colors adapt
     /// to color scheme: primary is black in light mode and white
     /// in dark mode; secondary is a muted gray in both.

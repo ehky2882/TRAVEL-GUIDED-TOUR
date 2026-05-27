@@ -213,11 +213,10 @@ struct HomeMapSection: View {
             return markers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
         }
 
-        // 14 cells across the visible region. Empirically this gives
-        // ~50–80pt cell pitch at typical iPhone sizes — close enough
-        // that dense Manhattan clumps merge but Brooklyn/NJ outliers
-        // stay separate.
-        let cellsAcross: Double = 14
+        // 20 cells across the visible region. Finer grid than the
+        // original 14 so pins only cluster when they're very close
+        // together — reduces false merges at neighbourhood zoom.
+        let cellsAcross: Double = 20
         let cellSpanLat = region.span.latitudeDelta / cellsAcross
         let cellSpanLon = region.span.longitudeDelta / cellsAcross
         guard cellSpanLat > 0, cellSpanLon > 0 else {
@@ -294,7 +293,7 @@ private struct StopPin: View {
 
     var body: some View {
         Circle()
-            .fill(AtlasColors.accent)
+            .fill(AtlasColors.mapPin)
             .frame(width: diameter, height: diameter)
             .overlay(
                 Circle().stroke(Color.white, lineWidth: isSelected ? 3 : 1.5)
@@ -314,10 +313,10 @@ private struct ClusterPin: View {
     var body: some View {
         ZStack {
             Circle()
-                .fill(AtlasColors.accent.opacity(0.25))
+                .fill(AtlasColors.mapPin.opacity(0.25))
                 .frame(width: outerDiameter, height: outerDiameter)
             Circle()
-                .fill(AtlasColors.accent)
+                .fill(AtlasColors.mapPin)
                 .frame(width: innerDiameter, height: innerDiameter)
                 .overlay(Circle().stroke(Color.white, lineWidth: 1.5))
             Text("\(count)")
