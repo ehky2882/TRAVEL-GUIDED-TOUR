@@ -1879,6 +1879,55 @@
         "rococo"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "49a3cc08-8070-4385-aa69-0a719efc12d1",
+      "title": "Bouça Housing Complex",
+      "shortDescription": "Siza's SAAL housing project: designed in 1973, stalled by revolution and austerity, finished 33 years later by the tenants who never left.",
+      "longDescription": "The Bouça Housing Complex took thirty-three years to finish, and the people who moved into the first phase waited nearly three decades for the rest of it to arrive. Originally designed in 1973 for law clerks, the Carnation Revolution of April 1974 transformed the project: it was handed to SAAL — the government programme responding to a housing crisis so severe that roughly a quarter of Portugal's population was living without basic amenities — and Siza adapted the design for working-class families from the surrounding neighbourhood. The red end walls at each corner are a deliberate reference to Bruno Taut's Hufeisensiedlung in Berlin, where the same warm red appeared on workers' housing in the 1920s — a gesture carrying a political lineage, stating that social housing can carry a point of view about itself. The courtyards and passages between the blocks were designed specifically to create places where people would stop and talk: community built into the structure, not left to chance. In 1978, with only 58 of the planned 131 homes built, SAAL was abolished as the revolutionary period ended and the money ran out. The complex sat unfinished for nearly thirty years. What completed it wasn't a government initiative — it was the families in those first 58 homes, pressing the city and the national housing institute for three decades, until the remaining blocks were finally finished in 2006.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bouca_Housing_Complex_hero.webp",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0511cb28-855e-4ba9-b29a-293551512e06",
+          "order": 0,
+          "title": "Bouça Courtyard Entrance",
+          "caption": "Face the rows of four-storey blocks — find the red end walls at each corner.",
+          "latitude": 41.15623301829432,
+          "longitude": -8.617516513120428,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Bouca_Housing_Complex.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "This housing complex took thirty-three years to finish, and the people who moved into the first phase waited nearly three decades for the rest of it to arrive.\n\nThe Bouça was originally designed in nineteen seventy-three for law clerks working in Porto's courts, but the Carnation Revolution of April nineteen seventy-four changed all of that: the project was handed to SAAL — the government programme set up to respond to a housing crisis so severe that roughly a quarter of Portugal's population was living without basic amenities — and Siza adapted the design for working-class families from the surrounding neighbourhood.\n\nAt the entrance to the complex, facing the rows of four-storey blocks, you'll see the courtyard structure stretching ahead of you, with narrow passages between the buildings and the red end walls visible at each corner.\n\nHave a look at the red, because it's deliberate — Siza chose that particular colour as a direct reference to the Hufeisensiedlung, the Horseshoe Estate in Berlin, where Bruno Taut used exactly the same warm red on workers' housing in the nineteen twenties. It's a gesture with a political lineage running through it, a way of stating, on the outside of a building, that social housing can carry a point of view about itself.\n\nNow look at the courtyards and the passages between the blocks, because they were designed specifically to create places where people would stop and talk — community as something built into the structure, not left to chance. Siza described the site challenge as \"forming a whole with ruins,\" working with the elevated railway embankment behind the complex rather than ignoring it.\n\nIn nineteen seventy-eight, with only fifty-eight of the planned one hundred and thirty-one homes built, SAAL was abolished as the revolutionary period ended and the money ran out, and the two completed rows sat in that unfinished state for nearly three decades, used as emergency accommodation for Porto's poorest tenants.\n\nWhat brought the project back wasn't a government initiative or an architectural prize — it was the families who had moved into those first fifty-eight homes in the late seventies, pressing the city and the national housing institute for almost thirty years until the remaining blocks were finally completed in two thousand and six. The complex is now under consideration for listing as a national monument, which would make it, in effect, a protected piece of Portugal's revolutionary history.\n\nSocial housing built during a revolution, abandoned when the revolution ended, and finished by the people who never left."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.15623301829432,
+      "centroidLongitude": -8.617516513120428,
+      "city": "Porto",
+      "primaryCategory": "history",
+      "tags": [
+        "porto",
+        "siza vieira",
+        "saal",
+        "social housing",
+        "carnation revolution",
+        "architecture",
+        "history",
+        "housing",
+        "portugal",
+        "revolution",
+        "bruno taut",
+        "modernism",
+        "foz do douro"
+      ],
+      "priceUSD": 0
     }
   ]
 }
