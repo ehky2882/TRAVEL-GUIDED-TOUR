@@ -2165,6 +2165,42 @@
         "history"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "745dcaef-864b-4770-8bc6-aa3e8751371f",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Braga Municipal Stadium",
+      "subtitle": "Eduardo Souto de Moura's Pritzker Prize–winning quarry stadium",
+      "category": "architecture",
+      "durationLabel": "2m 28s",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Braga_Stadium_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Braga_Stadium_exterior.webp"
+      ],
+      "tags": [
+        "architecture",
+        "pritzker",
+        "football",
+        "braga",
+        "souto-de-moura"
+      ],
+      "stops": [
+        {
+          "id": "8d04a015-7391-40f9-82ab-75c60310000a",
+          "order": 1,
+          "title": "Estádio Municipal de Braga",
+          "caption": "Eduardo Souto de Moura's quarry stadium — 2004 UEFA Euro host, 2011 Pritzker Prize citation",
+          "latitude": 41.560272719333426,
+          "longitude": -8.432707215674963,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Braga_Stadium.mp3",
+          "audioDurationSeconds": 148,
+          "triggerMode": "proximity",
+          "triggerRadiusMeters": 100,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Braga_Stadium_hero.webp",
+          "transcriptText": "There's a story about how this stadium came to exist. The city of Braga first approached Norman Foster and Santiago Calatrava — two of the biggest names in architecture — and both said yes, but then the city saw their fees and rang Eduardo Souto de Moura instead.\n\nYou should be inside the bowl, or approaching it, with the two long stands facing each other across the pitch, and you'll notice something unusual at both ends: there are no stands behind the goals, and both ends are open. Everything else about this stadium follows from that one fact.\n\nWhen Souto de Moura accepted the commission, he admitted he knew nothing about football and had never designed a stadium, so he spent a month going to matches, watching entrances and exits and the way crowds actually move. Then he came to this site — a disused granite quarry carved into the north flank of Monte do Castro, overlooking Braga — and made a decision that explains everything you're looking at.\n\nHis argument was simple: football is played from left to right and right to left, with the action running along the length of the pitch, so sitting behind the goalposts makes no sense. He built two stands facing each other across the field and left both ends open, and what those open ends give you is the whole reason the building works.\n\nBehind one goal, the stand is pressed up against forty metres of raw granite, vertical and untreated, exactly as the blasting left it, so that sitting in that stand puts the mountain directly behind your head. Behind the other goal, there is no wall at all — just open air, open sky, and the whole valley spread out below you.\n\nIf you look up at the roof, the two canopies are connected across the two-hundred-metre gap by dozens of steel cables running parallel from one roofline to the other. Souto de Moura took the idea from Inca suspension bridges, and the cables hold the roofs up by pulling against each other from opposite sides, which is also, broadly, how the whole building stays together.\n\nThe stadium is known as A Pedreira — the Quarry — and Sporting Clube de Braga pays five hundred euros a month to use it. The architect won the Pritzker Prize in twenty eleven, and the committee's citation specifically mentioned this building.\n\nIf you've got a few minutes, walk round to the open end behind the quarry wall and look back at the stand from the outside, because the granite face and the roof cables together, from that angle, make a fairly convincing case on their own."
+        }
+      ]
     }
   ]
 }
