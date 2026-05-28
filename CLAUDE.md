@@ -30,7 +30,27 @@ These happen **automatically, without the owner asking**.
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
 
-## Current State (2026-05-27)
+## Current State (2026-05-28)
+
+### Bottom-module chrome-shade seam fix + bars-to-edges (session 11)
+
+PR #91 closes the "subtle chrome shade mismatch" known issue carried forward through sessions 8–10. The bump owner saw at the top of the *MINI PLAYER* when the tour detail sheet was up had two compounding causes:
+
+1. **Trait variance.** `Color(uiColor: .secondarySystemBackground)` resolves to a different RGB at `.base` vs `.elevated` `userInterfaceLevel`. The detail body lives in window 1 (.base); the bars in window 2 (`windowLevel = .normal + 1`, treated as elevated). Same semantic color → two different RGBs → visible chrome band at the boundary in dark mode.
+2. **Geometry.** The painted `Rectangle` in `BottomModuleRoot` ran edge-to-edge full-width, but the bars themselves were inset 8pt H — so the Rectangle peeked above the bars' top edge at the side corners, making the band particularly visible.
+
+Two coordinated changes in PR #91:
+
+- **`AtlasColors.secondaryBackground` → hardcoded RGB** via a `UIColor(dynamicProvider:)` block that keys only on `userInterfaceStyle`. No elevation variance. Light `#F2F2F7` / Dark `#1C1C1E` (Apple's `.base` shade — same as Settings/Music/Photos). New companion `AtlasColors.secondaryBackgroundUIColor` for UIKit consumers (`BottomLayerPresentation` sets the detail hosting view to this directly).
+- **Bars grow edge-to-edge on Library / Me / detail-up; island only on Home-no-detail.** New `extendsToScreenEdges` parameter on `MiniPlayerBar` + `AtlasTabBar`. When true: painted background extends to screen edges, square outer corners, painted 8pt strip below. When false: current Home form (inset 8pt H, rounded bottom corners, transparent strip). Buttons keep identical x positions via *inner* horizontal padding, so the design rule of "buttons identical everywhere" (PR #70, `feedback-atlas-module-design.md`) still holds. The separate window-2 `Rectangle` is gone — bars now own their fill in both modes.
+
+`BottomModuleRoot` is a clean VStack of two bars now; no extra fill behind them in either mode. `ContentView` paints no extra fill. The bottom module is one component now, not three layers across two windows.
+
+**TestFlight build 1.0 (16)** cut at session end — owner uploaded via Organizer.
+
+**Diagnostic workflow worth remembering** — bright contrasting test colors per painted surface (magenta sheet, cyan mini-player, yellow tab bar, orange behind-fill) turned a fuzzy "subtle hairline" complaint into a precise geometric finding within one screenshot. Saved as `feedback-visual-debugging.md`. Reach for it early when next debugging any multi-surface visual bug.
+
+**Parked for next bottom-module pass:** lift mini-player title to a stronger *TYPE STYLE* (both lines are `caption` today — no hierarchy); align skip-forward (size 20) + play/pause (size 18) glyph sizes; bump avatar 32pt → 36pt to match the play-ring diameter.
 
 ### Content batch: gallery images + 3 new Portugal tours + Lisbon maker (session 9)
 
