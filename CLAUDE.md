@@ -26,6 +26,16 @@ These happen **automatically, without the owner asking**.
 
 ## Current State (2026-05-27)
 
+### Content batch: gallery images + 3 new Portugal tours + Lisbon maker (session 9)
+
+Content-only PR train (#84–#90, all squash-merged). Two threads:
+
+**Task A — backfilled gallery images for 6 existing Porto/Braga tours.** PR #81's broken hero links resolved by uploading the actual webps to `gh-pages` and populating `additionalImageURLs` on each catalog entry. Tours updated: Bouça Housing Complex (+6 gallery), Chapel of Souls (+1 — `_tiles`), Capela do Senhor da Pedra (+1), Cantareira / Rua do Passeio Alegre 212 (+2), Casa de Chá da Boa Nova (+7), Braga Municipal Stadium (+3). Naming convention: `<slug>_hero.webp` for Main1/canonical shot + `<slug>_2.webp` … `<slug>_N.webp` for the gallery — except where the catalog had a pre-existing descriptive name (Chapel's `_tiles`).
+
+**Task B — 3 new single-stop tours.** Expo'98 Portuguese National Pavilion (Lisbon, 38.7660, -9.0950, 146s, +8 gallery images), Piscina da Quinta da Conceição (Matosinhos, 41.1978, -8.6849, 144s, +6), Porto School of Architecture / FAUP (Porto, 41.1499, -8.6364, 143s, +17). All architecture-category, geofenced. **New maker added:** "Atlas Studio Lisbon" (`B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA`) — the Expo'98 tour points at it; Piscina + FAUP stay on Atlas Studio Porto.
+
+**Catalog totals:** 53 tours, 3 makers, 57 stops (was 50/2/54 at session start). No `*.swift` changes this session.
+
 ### UIKit-backed slide-up presentation + unified chrome (session 8)
 
 Replaces the SwiftUI `.offset` slide layer with a UIKit `UIPresentationController`-driven modal so the tour-detail view slides up *from behind* the persistent mini-player + tab bar — the Apple Music pattern. New machinery in `Components/`:
@@ -88,9 +98,9 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device/TestFlight build 12 — now live) → broader design/polish pass.
 
 Key facts:
-- **39 tours** in `Resources/Tours.json`; audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **38 single-stop + 1 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, geofenced exterior walk) — added 2026-05-26, unblocks M-qa items 6 + 7
-- **All 39 tours have `heroImageURL`** — CC-licensed Wikimedia Commons landscape photos at the 1280px thumb variant (switched 2026-05-27 from 3840px source — 1280px is the right size for ~400pt iPhone width and saves bandwidth on cellular).
+- **53 tours, 3 makers** in `Resources/Tours.json`; audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **52 single-stop + 1 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, geofenced exterior walk) — added 2026-05-26, unblocks M-qa items 6 + 7
+- **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
 - AppIcon is placeholder (green sphere); AccentColor: terracotta `#B85042` (placeholder)
