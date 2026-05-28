@@ -2337,6 +2337,66 @@
       "totalDurationSeconds": 144,
       "city": "Matosinhos",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "AB4DE61C-781E-4D35-97B0-632E8E1D695F",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Porto School of Architecture (FAUP)",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_8.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_9.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_10.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_11.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_12.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_13.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_14.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_15.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_16.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_17.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_18.webp"
+      ],
+      "tags": [
+        "architecture",
+        "pritzker",
+        "siza vieira",
+        "porto school",
+        "faup",
+        "porto"
+      ],
+      "stops": [
+        {
+          "id": "8CC0DFD3-8FBC-4BE8-B28C-F3193FCD9D6B",
+          "order": 0,
+          "title": "FAUP — the Ten Volumes on Via Panorâmica",
+          "caption": "Approach the campus from Via Panorâmica — find the pink Casa Cor-de-Rosa first, then the studios facing south toward the Douro.",
+          "latitude": 41.149883363758946,
+          "longitude": -8.636428995367817,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Porto_School_of_Architecture.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_School_of_Architecture_hero.webp",
+          "transcriptText": "The man who designed this building studied here when it was somewhere else, which is one of the more pleasing facts about a campus that has rather a lot of them.\n\nÁlvaro Siza graduated from the Porto School of Fine Arts — the predecessor of this faculty, before it had its own building or its own identity — and when the school finally became independent and needed a home, they asked him to come back and build it. He broke ground in nineteen eighty-five and finished in nineteen ninety-three, and what he built is immediately obvious as you approach from Via Panorâmica: not a single building with a front door, but ten separate volumes arranged across the site, each with its own character and proportion, each in a slightly different relationship to the ground. Siza described the ambition as a small town, and once you've heard that framing, it's very difficult to unsee it.\n\nBefore you go any further, find the pink house.\n\nIt's called the Casa Cor-de-Rosa, and it predates Siza's buildings entirely — it was already on the site when he arrived, along with a set of old stables called the Cavalariças — and rather than hide either of them or build over them, he calibrated the new buildings around what was already there, tuning the dimensions and proportions of his facades to respond to the existing house. This is a more disciplined approach than it might sound, because it means every decision about scale in the new buildings was made in conversation with a structure Siza didn't design and couldn't change, which is a useful constraint for an architect who might otherwise have had complete freedom.\n\nNow look at which direction the classroom buildings face, because the orientation is one of the most telling decisions on the whole campus. The highway runs along the northern edge of the site, and the buildings turn their backs to it completely, with the studios and teaching spaces oriented south and west toward the Douro River and the city, so that students spend their days looking at the landscape they're learning to work in rather than the traffic they're not.\n\n[beat]\n\nTwo people who studied and taught at this school have won the Pritzker Prize — Siza himself in nineteen ninety-two, and Eduardo Souto de Moura in twenty eleven — and if you've been following this tour, you've already stood in buildings by both of them. This is where they learned to make buildings like those, and there's something satisfying about ending up here and being able to see, in the campus itself, the same instincts at work: the existing thing respected, the landscape brought in, the hierarchy quietly refused."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 41.149883363758946,
+      "centroidLongitude": -8.636428995367817,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Álvaro Siza's faculty of architecture at the University of Porto (FAUP) — ten separate volumes on a sloped site overlooking the Douro, designed for the school that originally trained him. Broken ground 1985, completed 1993. Siza described the ambition as 'a small town' rather than a single building. The existing pink Casa Cor-de-Rosa and the old Cavalariças stables predated his commission and stayed; the new buildings calibrate their proportions around what was already there. The studios turn their backs on the northern highway and face south and west toward the Douro and the city. Two Pritzker Prize winners studied and taught here: Siza himself in 1992, and Eduardo Souto de Moura in 2011.",
+      "shortDescription": "Siza's faculty of architecture — ten volumes facing the Douro, designed for the school that trained him.",
+      "totalDurationSeconds": 143,
+      "city": "Porto",
+      "walkingDistanceMeters": null
     }
   ]
 }
