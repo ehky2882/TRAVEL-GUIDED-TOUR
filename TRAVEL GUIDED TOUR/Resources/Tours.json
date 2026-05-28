@@ -13,6 +13,13 @@
       "avatarURL": null,
       "bio": "Atlas Studio's Porto bureau — audio tours of the city's architecture and culture.",
       "websiteURL": null
+    },
+    {
+      "id": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "displayName": "Atlas Studio Lisbon",
+      "avatarURL": null,
+      "bio": "Atlas Studio's Lisbon bureau — audio tours of the city's architecture and culture.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -2211,7 +2218,7 @@
     },
     {
       "id": "96B9CF6A-1BC1-48D6-B72C-8DB9573AD724",
-      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
       "title": "Expo'98 Portuguese National Pavilion",
       "priceUSD": 0,
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Expo_98_Portuguese_National_Pavilion_hero.webp",
