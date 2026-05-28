@@ -19,7 +19,7 @@ These happen **automatically, without the owner asking**.
 | 1 | Every session start | Run full git/PR health check (§ Session-start ritual) + read latest HANDOFF file — before any other work |
 | 2 | After any edit to `Resources/Tours.json` | Run `swift scripts/validate-tours.swift`; fix errors before continuing |
 | 3 | Before pushing any code PR | Call `test_sim` (XcodeBuildMCP); fix failures before pushing |
-| 4 | Any PR is ready (CI green) | Squash-merge to `main` automatically — no owner approval gate. Resolve merge conflicts in-line without prompting (unless they require a business-logic decision — see § Merging PRs). Delete the merged branch. Owner reviews via TestFlight downstream. |
+| 4 | Doc-only / content-only / asset PR is ready (CI green) | Squash-merge to `main` automatically — no owner approval gate. Resolve merge conflicts in-line. Delete the merged branch. **Code PRs (anything in `*.swift`, `*.xcodeproj`/`*.pbxproj`, `Assets.xcassets/`) wait for explicit owner OK + visual simulator confirmation — see § Merging PRs for the exact boundary.** |
 | 5 | Session ends (touched code or content) | Update `CLAUDE.md` + `ROADMAP.md` in same commit; write `archive/HANDOFF-YYMMDD.md`; update `archive/README.md` |
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
@@ -110,15 +110,28 @@ Run before any substantive work. Investigate uncommitted changes before acting o
 
 ## Merging PRs
 
-**Auto-merge all PRs that pass CI (squash, no owner approval).** This includes code PRs (`*.swift`, `*.xcodeproj`/`*.pbxproj`, `Assets.xcassets/`) — owner reviews via TestFlight after the fact, not before merge. Flow: open PR → wait for CI green → `gh pr merge --squash --delete-branch`.
+**Auto-merge (squash, no owner approval) — content/docs/assets/CI/test code:**
+- `*.md`, `docs/`, `archive/`, `ROADMAP.md`, `CLAUDE.md`, `CONTRIBUTING.md`
+- `Resources/Tours.json` (content additions and edits)
+- `scripts/` (developer tooling, doesn't ship in the app)
+- `TRAVEL GUIDED TOURTests/` (test target; doesn't affect the running app)
+- `.github/workflows/` (CI definitions)
+- Lint / tooling configs (`.swiftlint.yml`, etc.)
+- Audio + image uploads to `gh-pages` branch
 
-**Merge conflicts: resolve them automatically.** When merging or rebasing produces a conflict, Claude resolves it without prompting. Pure structural conflicts (file renames, neighboring edits, import reorderings, doc reformats, version-number bumps) are always auto-resolved. Only stop and ask if the conflict reflects a real business-logic disagreement two PRs are taking different positions on (e.g. two PRs implementing the same feature differently) — surface the choice before resolving.
+Flow for auto-merge PRs: open PR → wait for CI green → `gh pr merge --squash --delete-branch`.
 
-**Exceptions — still wait for owner OK:**
-- Anything that adds an `Info.plist` capability key the owner hasn't asked for (`UIBackgroundModes` additions, `NSAppTransportSecurity`, etc.)
-- Anything that bumps the deployment target
-- Anything that introduces a third-party dependency
-- Anything that changes signing identity / team / bundle ID
+**Wait for owner OK (visual simulator review required) — code:**
+- Anything in `TRAVEL GUIDED TOUR/<source-folder>/*.swift` (`Audio/`, `Components/`, `Data/`, `Features/`, `Location/`, `Models/`, `Theme/`, `ContentView.swift`, `SplashView.swift`, the App entry)
+- Xcode project file (`*.xcodeproj`/`*.pbxproj`)
+- Asset catalogs (`Assets.xcassets/`)
+- `Info.plist`
+
+Owner reviews via iOS Simulator or TestFlight before merge — not by reading code. **Reason:** the previous auto-merge-everything policy (briefly in effect 2026-05-25/27) produced visible regressions on `main` that required follow-up fix PRs (#68→#69→#70 chain after #66; #77→#78 chain after #76). Pre-merge visual review catches these in the simulator and avoids the fix-forward thrash.
+
+**Merge conflicts: resolve them automatically** when they're structural (file renames, neighboring edits, import reorderings, doc reformats, version-number bumps). Stop and ask only if the conflict reflects a real business-logic disagreement between two PRs.
+
+**When in doubt, ask** — better to over-confirm than merge something the owner hadn't seen yet.
 
 ## Keep Docs in Sync (automatic — no prompting needed)
 
