@@ -1742,7 +1742,10 @@
       "longDescription": "On Rua do Passeio Alegre in Foz do Douro — the old neighbourhood at the mouth of the Douro where the river opens into the Atlantic — Souto de Moura completed the Cantareira in 2013. From across the pavement it reads as three concrete boxes stacked on top of each other, each rotated slightly from the one below, so the facade planes shift and lean from floor to floor in a way that has no obvious geometric logic until someone explains what's actually going on. Each level was rotated deliberately, so inside the apartments the rooms don't face the estuary straight on — they look at it from an oblique angle, and a corner window captures the water and the far bank simultaneously in a way a flat-fronted building wouldn't give you. Look closely at the joints between floors: what appears to be three separate volumes is structurally one continuous concrete frame, with a narrow shadow line carved at the edge doing the work of visual separation.",
       "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Rua_do_Passeio_Alegre_212_hero.webp",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Rua_do_Passeio_Alegre_212_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Rua_do_Passeio_Alegre_212_3.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -1837,7 +1840,9 @@
       "longDescription": "On the beach at Miramar, a small whitewashed hexagonal chapel sits on a granite outcrop at the edge of the Atlantic — close enough that at high tide the sea comes up to the base of the rock. The rock has been a place of worship for roughly two thousand years, making the chapel, built in 1686, very much the newest thing here. The hexagonal form is unusual for a chapel — six sides rather than the almost universal rectangle — giving the structure a sense of having grown from the rock rather than been placed upon it. The azulejo panels flanking the entrance are unusually direct: the inscription records that this rock was almost certainly the oldest place of worship in the parish, and that before Christianity arrived, it was a pagan altar. The Church didn't conceal that fact — they inscribed it in tile at the front door. The reasoning traces back to a letter Pope Gregory the First wrote in the sixth century, advising missionaries to convert sacred sites rather than destroy them: people are more likely to embrace a new faith if it arrives in a place they already consider holy. Inside, three altars in gilded rococo woodwork, and a stone in the floor with an indent shaped like a horseshoe.",
       "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Capela_do_Senhor_da_Pedra_hero.webp",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Capela_do_Senhor_da_Pedra_2.webp"
+      ],
       "kind": "single",
       "stops": [
         {
