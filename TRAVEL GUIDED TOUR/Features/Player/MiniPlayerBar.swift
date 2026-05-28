@@ -68,6 +68,13 @@ struct MiniPlayerBar: View {
     let maker: Maker?
     /// Invoked when the user taps the bar body — opens the full player.
     var onExpand: () -> Void
+    /// When `false` (Home + detail-up), the painted bar is inset
+    /// 8pt from the screen edges — the floating-island look. When
+    /// `true` (Library / Me with no detail), the painted bar grows
+    /// to the screen edges. In both modes the controls sit at the
+    /// SAME x positions so the design rule of "buttons identical
+    /// everywhere" holds.
+    var extendsToScreenEdges: Bool = false
 
     @Environment(AudioPlayerService.self) private var audioPlayer
 
@@ -134,12 +141,16 @@ struct MiniPlayerBar: View {
             skipForwardButton
             playPauseButton
         }
-        .padding(.leading, AtlasSpacing.lg)
-        .padding(.trailing, AtlasSpacing.md)
+        // Inner H padding: shifts the controls in by 8pt in
+        // edge-to-edge mode so they match the island-mode x
+        // positions (where the .padding(.horizontal, 8) below
+        // creates the inset).
+        .padding(.leading, AtlasSpacing.lg + (extendsToScreenEdges ? Self.floatingSideInset : 0))
+        .padding(.trailing, AtlasSpacing.md + (extendsToScreenEdges ? Self.floatingSideInset : 0))
         .frame(height: Self.barHeight)
         .frame(maxWidth: .infinity)
-        .background(AtlasColors.secondaryBackground)
-        .padding(.horizontal, Self.floatingSideInset)
+        .background(AtlasColors.miniPlayerBackground)
+        .padding(.horizontal, extendsToScreenEdges ? 0 : Self.floatingSideInset)
         .padding(.top, Self.topGap)
     }
 
