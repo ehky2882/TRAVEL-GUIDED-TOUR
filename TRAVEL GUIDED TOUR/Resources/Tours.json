@@ -13,6 +13,13 @@
       "avatarURL": null,
       "bio": "Atlas Studio's Porto bureau — audio tours of the city's architecture and culture.",
       "websiteURL": null
+    },
+    {
+      "id": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "displayName": "Atlas Studio Lisbon",
+      "avatarURL": null,
+      "bio": "Atlas Studio's Lisbon bureau — audio tours of the city's architecture and culture.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -2229,6 +2236,57 @@
       "shortDescription": "Pritzker Prize–winning stadium carved into a granite quarry, with open ends facing raw rock and open sky.",
       "totalDurationSeconds": 148,
       "city": "Braga",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "96B9CF6A-1BC1-48D6-B72C-8DB9573AD724",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "title": "Expo'98 Portuguese National Pavilion",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Expo_98_Portuguese_National_Pavilion_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Expo_98_Portuguese_National_Pavilion_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Expo_98_Portuguese_National_Pavilion_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Expo_98_Portuguese_National_Pavilion_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Expo_98_Portuguese_National_Pavilion_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Expo_98_Portuguese_National_Pavilion_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Expo_98_Portuguese_National_Pavilion_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Expo_98_Portuguese_National_Pavilion_8.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Expo_98_Portuguese_National_Pavilion_9.webp"
+      ],
+      "tags": [
+        "architecture",
+        "pritzker",
+        "siza vieira",
+        "lisbon",
+        "expo 98",
+        "parque das nacoes"
+      ],
+      "stops": [
+        {
+          "id": "207A1606-DD01-46A6-A0B6-894FF8A57647",
+          "order": 0,
+          "title": "Pavilhão de Portugal — the Suspended Canopy",
+          "caption": "Stand beneath the concrete canopy between the two tiled porticoes, with the main building (now University of Lisbon) on one side and the Tagus on the other.",
+          "latitude": 38.76595364185747,
+          "longitude": -9.095044463293146,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Expo_98_Portuguese_National_Pavilion.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Expo_98_Portuguese_National_Pavilion_hero.webp",
+          "transcriptText": "Three years before this was built, the ground you're standing on was a contaminated oil refinery, which is perhaps the most unlikely origin story for one of the most discussed buildings in Portuguese architecture.\n\nThe three hundred and forty hectares of eastern Lisbon that became Parque das Nações — fuel tanks, a slaughterhouse, decades of petrochemical waste along the Tagus waterfront — were decontaminated specifically to host a world's fair themed around the oceans, timed to the five hundredth anniversary of Vasco da Gama's voyage to India. One chimney stack from the old industrial complex was kept standing deliberately, as a reminder of what the land had been before the exposition arrived, and it's still there if you look for it.\n\nWalk under the canopy now, if you haven't already, and take a moment to stand in the middle of it.\n\nWhat you're standing under is sixty-five metres wide, fifty metres deep, and twenty centimetres thick — a pre-stressed concrete slab suspended on steel cables between two massive porticoes, sagging at the centre and curving upward at both ends where the cables emerge from the concrete before connecting to the piers. Siza's own description of the concept was a sheet of paper resting on two bricks, which captures something true about it: the weight is real, the span is extraordinary, and yet the whole thing reads as effortless, the way a piece of paper does when it bends across two supports.\n\nThe porticoes on either side of you are faced in ceramic tiles — nine columns each, spaced to create shadow between them — and behind one portico is the main building, now used by the University of Lisbon, while behind the other the Tagus opens out toward the south bank. The structure beneath the cladding is a three-dimensional carbon steel frame, which meant the interior galleries could be left entirely without columns, though you'd need to go inside to appreciate that properly.\n\n[beat]\n\nSiza has said that he designed the pavilion without knowing what it would become after the exposition closed — that he was working with a programme that might end up as an office building or a museum, which he admitted made it difficult to give the building the kind of settled character that comes from knowing exactly what a space is for. What saved it, in a sense, was the canopy: a single structural gesture so confident and so complete that it gave the whole complex an identity that no floor plan could have provided, and which has held up rather well in the decades since."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 38.76595364185747,
+      "centroidLongitude": -9.095044463293146,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Álvaro Siza's Portuguese National Pavilion for Expo'98 — a 65 × 50 metre pre-stressed concrete canopy just 20 cm thick, suspended on steel cables between two ceramic-tiled porticoes. Siza himself described the concept as 'a sheet of paper resting on two bricks.' The site, in eastern Lisbon's Parque das Nações, was a contaminated oil refinery and slaughterhouse before being cleaned up to host the 1998 world's fair commemorating the 500th anniversary of Vasco da Gama's voyage to India. One chimney stack from the old industrial complex was deliberately preserved. Behind one portico, the main building now houses the University of Lisbon; behind the other, the Tagus opens out toward the south bank. Siza won the Pritzker Prize in 1992, six years before this was built.",
+      "shortDescription": "Two and a half minutes under Siza's suspended concrete canopy — built for Expo'98 on a reclaimed Lisbon refinery.",
+      "totalDurationSeconds": 146,
+      "city": "Lisbon",
       "walkingDistanceMeters": null
     }
   ]
