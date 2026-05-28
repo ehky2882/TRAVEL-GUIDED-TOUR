@@ -10,6 +10,12 @@ GPS-anchored audio tour platform. Makers record audio; consumers browse, downloa
 
 Multi-platform SwiftUI. iOS 26.2 / macOS 26.2 / visionOS 26.2.
 
+## Session workflow
+
+- **Web sessions** (like this one) are for project management, content uploads, and planning. Code changes happen here only when they're small and self-contained.
+- **Implementation work** (new features, refactors, UI changes) → owner spawns a new session and creates a new branch. This keeps the main project-management session context clean.
+- Owner does not use Terminal. Claude handles all shell/git work.
+
 ## Claude Automation Rules
 
 These happen **automatically, without the owner asking**.
