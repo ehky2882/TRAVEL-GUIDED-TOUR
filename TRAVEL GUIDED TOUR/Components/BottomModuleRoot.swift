@@ -18,35 +18,26 @@ struct BottomModuleRoot: View {
 
     var body: some View {
         @Bindable var appShared = appShared
-        // Edge-to-edge fill on every surface except Home root —
-        // makes the bottom-region read as one continuous chrome band
-        // when a detail is up or the user's on Library / Me. On Home
-        // (no fill) the bar + tab bar's individual backgrounds float
-        // as the island, with map showing through the 8pt side gaps
-        // and the 8pt outer strip below.
-        let extendsToScreenEdges = tourPresenter.presentedTour != nil
-            || appShared.selectedTab != .home
+        // Only Home (no detail) preserves the floating-island look so
+        // the map shows through the 8pt side gaps + outer strip.
+        // Everywhere else — Library, Me, and ANY tab with a detail
+        // sheet open — the bars grow edge-to-edge with square outer
+        // corners. Buttons sit at identical x positions across both
+        // forms (design rule: only the fill changes).
+        let extendsToScreenEdges = appShared.selectedTab != .home
+            || tourPresenter.presentedTour != nil
         return VStack(spacing: 0) {
             Spacer(minLength: 0)
-            ZStack(alignment: .bottom) {
-                if extendsToScreenEdges {
-                    Rectangle()
-                        .fill(AtlasColors.secondaryBackground)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: AtlasBottomModule.height())
-                        .allowsHitTesting(false)
-                }
-
-                VStack(spacing: 0) {
-                    MiniPlayerBar(
-                        tour: nowPlayingTour,
-                        maker: nowPlayingTour.flatMap { dataService.maker(for: $0) }
-                    ) {
-                        appShared.showingFullPlayer = true
-                    }
-                    AtlasTabBar(selected: $appShared.selectedTab)
-                }
-            }
+            MiniPlayerBar(
+                tour: nowPlayingTour,
+                maker: nowPlayingTour.flatMap { dataService.maker(for: $0) },
+                onExpand: { appShared.showingFullPlayer = true },
+                extendsToScreenEdges: extendsToScreenEdges
+            )
+            AtlasTabBar(
+                selected: $appShared.selectedTab,
+                extendsToScreenEdges: extendsToScreenEdges
+            )
         }
         .ignoresSafeArea(.container, edges: .bottom)
         .animation(.spring(response: 0.4, dampingFraction: 0.86), value: nowPlayingTour?.id)

@@ -23,40 +23,47 @@ import SwiftUI
 struct AtlasTabBar: View {
     @Binding var selected: AtlasTab
 
-    /// Square top corners — the rectangular mini-player stacks flush
-    /// on top, so the tab bar's top edge must be square to meet it
-    /// seamlessly.
-    var topCornerRadius: CGFloat = 0
+    /// When `false` (Home + detail-up), the painted button row is
+    /// inset 8pt from the screen edges with phone-radius rounded
+    /// bottom corners, and an 8pt transparent strip sits below it
+    /// — the floating-island look. When `true` (Library / Me with
+    /// no detail), the painted row grows to the screen edges with
+    /// square corners and no outer strip — the flat full-edge look.
+    /// In both modes the buttons themselves sit at the SAME x
+    /// positions (8pt inner padding inside the painted row), so
+    /// the design rule of "buttons identical everywhere" holds.
+    var extendsToScreenEdges: Bool = false
 
     var body: some View {
         VStack(spacing: 0) {
-            // Button row — the painted "pill". Identical layout on
-            // every surface so the buttons themselves never shift.
             HStack(spacing: 0) {
                 ForEach(AtlasTab.allCases, id: \.self) { tab in
                     tabButton(tab)
                 }
             }
+            // Inner H padding keeps the buttons inset from the
+            // painted bar's edges in edge-to-edge mode (so the
+            // button x positions match the island mode).
+            .padding(.horizontal, extendsToScreenEdges ? 8 : 0)
             .padding(.vertical, AtlasSpacing.sm)
             .frame(maxWidth: .infinity)
-            .background(AtlasColors.secondaryBackground)
+            .background(AtlasColors.tabBarBackground)
             .clipShape(
                 UnevenRoundedRectangle(
-                    topLeadingRadius: topCornerRadius,
-                    bottomLeadingRadius: AtlasSpacing.phoneScreenRadius,
-                    bottomTrailingRadius: AtlasSpacing.phoneScreenRadius,
-                    topTrailingRadius: topCornerRadius,
+                    topLeadingRadius: 0,
+                    bottomLeadingRadius: extendsToScreenEdges ? 0 : AtlasSpacing.phoneScreenRadius,
+                    bottomTrailingRadius: extendsToScreenEdges ? 0 : AtlasSpacing.phoneScreenRadius,
+                    topTrailingRadius: 0,
                     style: .continuous
                 )
             )
-            .padding(.horizontal, 8)
+            .padding(.horizontal, extendsToScreenEdges ? 0 : 8)
 
-            // 8pt transparent strip below the painted pill. On Home
-            // this shows the map behind; on non-Home surfaces it
-            // shows the edge-to-edge background fill `ContentView`
-            // paints behind the whole module (same color as the
-            // pill, so the gap blends in).
-            Color.clear
+            // 8pt strip below the painted button row. Transparent
+            // in island mode (map / detail body shows through),
+            // opaque-painted in edge-to-edge mode so the chrome
+            // continues down to the screen bottom seamlessly.
+            (extendsToScreenEdges ? AtlasColors.tabBarBackground : Color.clear)
                 .frame(maxWidth: .infinity)
                 .frame(height: 8)
         }

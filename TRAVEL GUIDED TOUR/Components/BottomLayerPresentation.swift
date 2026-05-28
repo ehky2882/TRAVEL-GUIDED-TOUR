@@ -267,8 +267,11 @@ final class BottomLayerController {
         // content uses for its surface. Without this the host view
         // defaults to .systemBackground (pure black in dark mode);
         // any region not covered by the SwiftUI content shows that
-        // color instead of secondarySystemBackground.
-        hosting.view.backgroundColor = .secondarySystemBackground
+        // color instead of the bar fill. Uses the hardcoded
+        // `AtlasColors.secondaryBackgroundUIColor` so the detail
+        // body's UIKit fill matches the bars' SwiftUI fill exactly
+        // — no elevation-trait shade divergence between windows.
+        hosting.view.backgroundColor = AtlasColors.secondaryBackgroundUIColor
         // Force the elevated user-interface-level trait. The
         // mini-player + tab bar live in a higher-level UIWindow
         // (`windowLevel = .normal + 1`), which UIKit treats as
