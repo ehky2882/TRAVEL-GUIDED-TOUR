@@ -2288,6 +2288,55 @@
       "totalDurationSeconds": 146,
       "city": "Lisbon",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "AFE37C10-3F2B-4ACF-A781-EBCC3A9A4563",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Piscina da Quinta da Conceição",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_da_Quinta_da_Conceicao_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_da_Quinta_da_Conceicao_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_da_Quinta_da_Conceicao_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_da_Quinta_da_Conceicao_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_da_Quinta_da_Conceicao_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_da_Quinta_da_Conceicao_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_da_Quinta_da_Conceicao_7.webp"
+      ],
+      "tags": [
+        "architecture",
+        "pritzker",
+        "siza vieira",
+        "tavora",
+        "porto",
+        "matosinhos"
+      ],
+      "stops": [
+        {
+          "id": "55F26CF9-D3CF-4201-B819-A6E2EFD0789C",
+          "order": 0,
+          "title": "Piscina da Quinta da Conceição",
+          "caption": "Stand by the pool inside Quinta da Conceição park — Manueline portal and Távora's tennis pavilion are nearby.",
+          "latitude": 41.197798074375854,
+          "longitude": -8.684948723005324,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Piscina_da_Quinta_da_Conceicao.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_da_Quinta_da_Conceicao_hero.webp",
+          "transcriptText": "The Franciscans arrived here in fourteen eighty-one, which means this site has been accumulating layers of history for well over five hundred years, and the swimming pool is only the most recent of them.\n\nThe convent they built — Nossa Senhora da Conceição — stood on this land for centuries, and when the municipality eventually took over the property and turned it into a public park, enough of the original fabric survived to still be visible: the cloister, the chapel, and the Manueline portal, that carved stone arch where Renaissance ornament and Gothic structure collide in the same doorway in a way that was entirely characteristic of sixteenth-century Portugal. Fernando Távora was brought in to redesign the park in the nineteen sixties, and he built a tennis pavilion here in exposed concrete and timber on slender pilotis, its horizontal lines set deliberately against the old stone as a kind of manifesto about the relationship between tradition and modernity. Then he handed his student a brief: build a swimming pool somewhere in this landscape.\n\nThe student was Álvaro Siza, who was twenty-eight years old.\n\nWalk toward the pool through the park, and if the Manueline portal is on your route, stop briefly at it — not because it needs a long explanation, but because the transition from that carved stone to the concrete you're about to encounter is itself one of the things this park is about.\n\nThe pool is a long concrete basin set into the park's terrain, enclosed by garden rather than exposed to open sea, which makes it feel quite different from the Tea House at Boa Nova that Siza was designing at exactly the same time and just two kilometres up the coast. Where the Tea House confronts the Atlantic directly, this pool is sheltered and internal, surrounded by trees, and the approach to it is deliberately controlled — pathways through the park that reveal the water gradually rather than all at once, the same instinct for choreographed arrival that runs through Siza's work across every scale.\n\n[beat]\n\nStanding here, it's worth looking for Távora's tennis pavilion if it's visible from where you are, because the two buildings together — teacher and student, on the same ground, from the same period — tell you more about what the Porto School actually was than any formal description could. The pavilion shows the idea; the pool shows what a twenty-eight-year-old took from it and did next, and the fact that both are still here, in the same park, still in use, is one of the quieter pleasures of this part of the coast."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 41.197798074375854,
+      "centroidLongitude": -8.684948723005324,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Álvaro Siza's first major built project — a public swimming pool he designed at twenty-eight, set inside Quinta da Conceição, a Matosinhos park whose layered history stretches back to a fifteenth-century Franciscan convent. Fernando Távora redesigned the park in the 1960s, building his own tennis pavilion in exposed concrete on slender pilotis, then handed his student Siza the brief for the pool. The result is a long concrete basin sheltered by trees rather than facing the Atlantic — designed at exactly the same time as Siza's Casa de Chá da Boa Nova two kilometres up the coast, but with the opposite instinct: enclosed, internal, choreographed. The Manueline portal of the old convent still stands at the park's edge. Teacher and student, on the same ground, from the same period — one of the clearest places to see what the Porto School actually was.",
+      "shortDescription": "Siza's first major built project at twenty-eight — a public pool inside a Matosinhos park layered with Franciscan history and Távora's tennis pavilion.",
+      "totalDurationSeconds": 144,
+      "city": "Matosinhos",
+      "walkingDistanceMeters": null
     }
   ]
 }
