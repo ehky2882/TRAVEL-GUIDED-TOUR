@@ -24,6 +24,7 @@ struct PlayerView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(ProximityMonitor.self) private var proximityMonitor
     @Environment(TourDownloader.self) private var tourDownloader
+    @Environment(AppSharedState.self) private var appShared
 
     /// -1 means the tour's intro audio is playing (only valid when
     /// the tour has an `introAudioURL`). 0...n indexes `sortedStops`.
@@ -410,6 +411,10 @@ struct PlayerView: View {
         let url = tourDownloader.localURL(forIntroOf: tour) ?? remoteURL
 
         currentStopIndex = -1
+        // Intro audio doesn't belong to any single stop — clear
+        // the shared playing-stop id so the detail-sheet now-playing
+        // indicator doesn't light up an unrelated row.
+        appShared.currentPlayingStopId = nil
         let maker = dataService.maker(for: tour)
         audioPlayer.play(
             url: url,
@@ -429,6 +434,10 @@ struct PlayerView: View {
         let url = tourDownloader.localURL(forStop: stop, in: tour) ?? remoteURL
 
         currentStopIndex = index
+        // Surface the currently-playing stop to the detail-sheet
+        // now-playing indicator (shared via AppSharedState — the
+        // detail sheet may be the visible surface when this fires).
+        appShared.currentPlayingStopId = stop.id
         let maker = dataService.maker(for: tour)
         audioPlayer.play(
             url: url,
