@@ -86,6 +86,25 @@ final class BottomModuleWindowController {
         w.isHidden = false
         window = w
     }
+
+    /// Mirrors the app-level color-scheme preference onto the
+    /// secondary window's `overrideUserInterfaceStyle`. SwiftUI's
+    /// `.preferredColorScheme(...)` only propagates into a window
+    /// owned by a `WindowGroup`; it does not reach a manually-
+    /// created `UIWindow` hosting a `UIHostingController`. Without
+    /// this bridge, the second window's trait collection always
+    /// follows SYSTEM appearance and the dynamic-provider colors
+    /// (e.g. `secondaryBackgroundUIColor`) resolve to the wrong
+    /// shade when the user picks an appearance in Settings that
+    /// differs from the system.
+    func apply(preference: ColorSchemePreference) {
+        guard let window else { return }
+        switch preference {
+        case .system: window.overrideUserInterfaceStyle = .unspecified
+        case .light:  window.overrideUserInterfaceStyle = .light
+        case .dark:   window.overrideUserInterfaceStyle = .dark
+        }
+    }
 }
 
 /// A `UIWindow` whose hit-testing returns nil for any point that

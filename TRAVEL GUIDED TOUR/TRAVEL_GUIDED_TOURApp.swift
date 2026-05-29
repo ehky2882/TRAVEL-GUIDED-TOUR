@@ -85,8 +85,29 @@ struct TRAVEL_GUIDED_TOURApp: App {
                                 .environment(tourDownloader)
                                 .environment(appShared)
                                 .environment(tourPresenter)
-                                .preferredColorScheme(colorSchemePreference.colorScheme)
+                            // No `.preferredColorScheme(...)` here:
+                            // the install closure is evaluated ONCE
+                            // and would freeze the host
+                            // controller's `overrideUserInterfaceStyle`
+                            // at the install-time value, shadowing
+                            // the window-level override applied
+                            // below. The window override + .onChange
+                            // hook is the single source of truth for
+                            // the second window's trait collection.
                         }
+                        // SwiftUI's `.preferredColorScheme` doesn't
+                        // propagate into a manually-created
+                        // UIWindow, so bridge the preference
+                        // directly onto the second window's
+                        // `overrideUserInterfaceStyle`. Without
+                        // this, the second window's trait
+                        // collection follows SYSTEM appearance and
+                        // the bars render inverted whenever the
+                        // picker disagrees with the system.
+                        bottomModuleWindow.apply(preference: colorSchemePreference)
+                    }
+                    .onChange(of: colorSchemePreference) { _, newValue in
+                        bottomModuleWindow.apply(preference: newValue)
                     }
             }
         }
