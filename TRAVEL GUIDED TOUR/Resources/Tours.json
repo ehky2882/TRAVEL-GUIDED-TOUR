@@ -2397,6 +2397,54 @@
       "totalDurationSeconds": 143,
       "city": "Porto",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "13F1103F-23BE-41D9-9011-5AE943CA2363",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "title": "Casa das Histórias Paula Rego",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_das_Historias_Paula_Rego_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_das_Historias_Paula_Rego_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_das_Historias_Paula_Rego_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_das_Historias_Paula_Rego_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_das_Historias_Paula_Rego_5.webp"
+      ],
+      "tags": [
+        "architecture",
+        "souto de moura",
+        "paula rego",
+        "cascais",
+        "museum",
+        "portuguese architecture",
+        "2009"
+      ],
+      "stops": [
+        {
+          "id": "A5CBF5C1-5F27-4A1D-81FA-E87CF7D0B114",
+          "order": 0,
+          "title": "Casa das Histórias — the Red Pyramids",
+          "caption": "Approach from the garden side and stand back far enough to read the whole building at once, with the two terracotta pyramids rising above the roofline.",
+          "latitude": 38.69465762047994,
+          "longitude": -9.423588100500758,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/casa-das-historias-paula-rego.mp3",
+          "audioDurationSeconds": 148,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_das_Historias_Paula_Rego_hero.webp",
+          "transcriptText": "Paula Rego gave the architect his brief in one sentence, and that sentence was: the building should be fun, lively, and also a bit mischievous.\n\nEduardo Souto de Moura — an architect whose work runs characteristically to minimalism, abstraction, granite, and glass — took that instruction seriously, and what he built in response is the most conspicuous thing he has ever made, which you'll have no difficulty confirming the moment you approach from the garden side and see two terracotta-red truncated pyramids rising above the roofline against the Cascais sky.\n\nBefore you look at the pyramids in detail, step back far enough to read the whole building at once, because the red needs distance to land properly.\n\nEverything is the same colour — the two towers, the walls between them, the surfaces facing the street and the garden — and Souto de Moura arrived at that particular terracotta through a process of testing multiple concrete samples, adjusting the dye until he found the tone that matched the render and roof tiles of the villas along this coastline, so the building is red in the way that this part of Portugal has always been red, which is the first of several ways in which it turns out to be less outlandish than it initially appears.\n\nNow look at the towers themselves, because they're a direct architectural reference rather than a decorative invention: Souto de Moura took his cue from the conical kitchen chimneys of the Palace of Sintra, about fourteen kilometres north of here, which are white and medieval and unmistakable on the palace's roofline. His version recast them in dyed concrete, shuttered in herringbone timber planks, truncated rather than pointed, and shifted them to red — so what you're looking at is a specific Portuguese vernacular detail that's been run through Souto de Moura's own sensibility until something new came out.\n\n[beat]\n\nPaula Rego grew up in Estoril, five minutes along this coast, before her father sent her to London at seventeen to keep her away from Salazar's Portugal — and she lived in London for the rest of her life, her work full of dark folk-tale imagery, female power, and the kind of childhood stories that aren't really for children. When she chose to give a large collection of her work to Cascais and chose this architect to house it, she was coming back to the landscape she grew up in, and asking for a building that matched her temperament rather than her reputation. She asked for mischievous, and the building, standing here in its confident red against the garden trees, is exactly that."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 38.69465762047994,
+      "centroidLongitude": -9.423588100500758,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Eduardo Souto de Moura's 2009 museum for the painter Paula Rego in Cascais — the most conspicuous building of his career, and a deliberate departure from his usual register of minimalism, granite, and glass. Rego's brief was a single sentence: fun, lively, and a bit mischievous. Souto de Moura answered with two terracotta-red truncated pyramids rising above the roofline, recasting the white conical kitchen chimneys of the Palace of Sintra — fourteen kilometres north — in dyed concrete shuttered with herringbone timber planks. The colour was calibrated against the render and roof tiles of the coastal villas, so the building's confident red sits inside a Portuguese tradition rather than against it.\n\nRego grew up in Estoril, five minutes along this coast, before her father sent her to London at seventeen to keep her clear of Salazar's Portugal. She spent the rest of her life there, building a body of work full of dark folk-tale imagery, female power, and childhood stories that aren't really for children. When she gave a large collection of her work to Cascais and chose Souto de Moura to house it, she was returning to the landscape she grew up in and asking for a building that matched her temperament rather than her reputation. Souto de Moura won the Pritzker Prize in 2011, two years after this opened.",
+      "shortDescription": "Two and a half minutes in front of Souto de Moura's red-pyramid museum, built for Paula Rego in the coastal landscape she grew up in.",
+      "totalDurationSeconds": 148,
+      "city": "Cascais",
+      "walkingDistanceMeters": null
     }
   ]
 }
