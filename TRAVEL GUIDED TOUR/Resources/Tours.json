@@ -2445,6 +2445,241 @@
       "totalDurationSeconds": 148,
       "city": "Cascais",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "896D7154-018A-4C5C-BC1A-33E64F5F32C6",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Edifício Burgo",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Edificio_Burgo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Edificio_Burgo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Edificio_Burgo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Edificio_Burgo_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Edificio_Burgo_5.webp"
+      ],
+      "tags": [
+        "architecture",
+        "souto de moura",
+        "pritzker",
+        "office architecture",
+        "boavista",
+        "porto",
+        "2007"
+      ],
+      "stops": [
+        {
+          "id": "9388E944-B384-49F7-91A8-F2E6438D710C",
+          "order": 0,
+          "title": "Edifício Burgo",
+          "caption": "Stand on Avenida da Boavista facing the complex — a seventy-metre tower on a raised platform and a low horizontal ribbon along the street.",
+          "latitude": 41.16039581419734,
+          "longitude": -8.644522943676751,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/edificio-burgo.mp3",
+          "audioDurationSeconds": 162,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Edificio_Burgo_hero.webp",
+          "transcriptText": "Souto de Moura's own description of this project was characteristically direct: \"A twenty-storey office tower is an unusual project for me — I began my career building single family houses.\"\n\nYou should be on Avenida da Boavista, facing the complex, where you'll see two buildings: a tower set back from the avenue on a raised platform, and a low horizontal ribbon running along the street in front of it, both clad in the same granite and aluminium, both grey, both part of the same design. The tower rises seventeen floors to seventy metres, and the horizontal building reads as though it has been sliced from a continuous length of something much longer, its end walls detailed as clean cross-sections rather than finished facades.\n\nBefore you can understand what Souto de Moura did here, it helps to know what he was given to work with, because almost every major dimension of the tower was fixed before he drew anything. Fire safety regulations in Portugal impose a seventy-metre height limit, which settled the tower's height immediately. English engineering consultants specified the column spacing to accommodate three car parking bays per module in the basement, which set the structural grid. That grid, combined with the slab thickness the engineers required for the spans involved, fixed the tower's width at exactly twenty-seven metres. Safety regulations then required a central core with two staircases and four lifts. By the time Souto de Moura sat down to design, every significant dimension was already determined by someone else.\n\nWhat he was left with, as he put it himself, was the architecture of the building's skin — and his response to that constraint was to push the skin further than the client expected. He proposed a structural facade, one where the granite and aluminium cladding would also carry load, and when the engineers raised their concerns he offered them a reassurance that is now one of the better lines in Portuguese architectural history: \"The structure is incontrovertible — without it the building would collapse,\" he told them, which, he noted with some satisfaction, calmed them down considerably.\n\n[beat]\n\nThe end walls of the low horizontal building are worth finding before you leave, because they're detailed as though the building has been sliced from an infinite ribbon — unframed glass, granite floor slabs exposed at the cut, aluminium elements projecting at the edge — and the Pritzker jury, when they awarded Souto de Moura the prize in twenty eleven, cited this building specifically, describing two structures side by side, one vertical and one horizontal, in dialogue with each other and with the city around them. He started with single family houses, and the dialogue, it turns out, sounds the same at any scale."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 41.16039581419734,
+      "centroidLongitude": -8.644522943676751,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Eduardo Souto de Moura's twenty-storey office complex on Avenida da Boavista — completed 2007, an outlier in a career he built mostly on single-family houses. Two buildings clad in identical granite and aluminium: a seventeen-storey, seventy-metre tower set back on a raised platform, and a low horizontal ribbon running along the street with end walls detailed as clean cross-sections rather than finished facades. Almost every major dimension was fixed before he drew anything — fire regulations capped the height at seventy metres, engineering consultants specified the column grid for basement parking, the structural slab fixed the tower width at twenty-seven metres exact. What he was left with, as he put it, was the architecture of the skin. He pushed it into a structural facade where the granite and aluminium cladding carries load, reassuring nervous engineers with the line that has since entered Portuguese architectural folklore: 'The structure is incontrovertible — without it the building would collapse.' The Pritzker jury cited Burgo specifically when they awarded him the prize in 2011 — two structures side by side, one vertical and one horizontal, in dialogue with each other and with the city around them.",
+      "shortDescription": "Souto de Moura's Pritzker-cited Boavista complex — a seventy-metre tower and a low horizontal ribbon in matching granite and aluminium.",
+      "totalDurationSeconds": 162,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "ED02F95F-D033-459B-941D-1ED4266DC6A6",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "House at Rua do Crasto 213",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/House_at_Rua_do_Crasto_213_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/House_at_Rua_do_Crasto_213_2.webp"
+      ],
+      "tags": [
+        "architecture",
+        "souto de moura",
+        "pritzker",
+        "foz do douro",
+        "houses",
+        "porto",
+        "2001"
+      ],
+      "stops": [
+        {
+          "id": "4FC35A36-43FD-48C6-A666-8A37D4541178",
+          "order": 0,
+          "title": "House at Rua do Crasto 213",
+          "caption": "Stand on Rua do Crasto in Foz do Douro — narrow concrete facade, three square timber-lined windows, full-width vertical timber screen at ground level.",
+          "latitude": 41.15840182858477,
+          "longitude": -8.679603077781746,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/house-at-rua-do-crasto-213.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/House_at_Rua_do_Crasto_213_hero.webp",
+          "transcriptText": "The official architectural guide to Souto de Moura's houses in Porto describes them as \"discreet towards the city, but filled with light inside,\" and this one is perhaps the purest expression of that idea you'll find anywhere in Foz do Douro.\n\nYou're on Rua do Crasto, two blocks from the Atlantic, in a neighbourhood of long, narrow eighteenth-century plots where every house is a consequence of the same geometry: deep rather than wide, built to the party walls on either side, the facade a thin slice of a building that extends far behind it. The house at number two hundred and thirteen follows all of those rules exactly — narrow, built to the edges, three storeys — and then reduces everything on the exterior to its absolute minimum: bare concrete, three square windows with warm timber reveals, and a full-width vertical timber screen at ground level that reads as a single considered element rather than a door beside a wall.\n\nHave a look at those three windows, because their arrangement is worth a moment's attention before you move on. Two sit side by side on the upper floor, symmetrically placed, their deep timber-lined reveals catching the afternoon light and giving the otherwise austere surface the only warmth it offers; a third sits alone on the middle floor, centred, slightly taller than it is wide, with the same timber lining, and the same quiet relationship between the opening and the expanse of concrete around it. The composition is simple enough that it looks almost inevitable — which, as a rule, is the kind of simplicity that takes the longest to arrive at.\n\nWhat the exterior doesn't prepare you for is what the guide is hinting at with \"filled with light inside\" — the interior of Souto de Moura's Porto houses consistently turns its back on the street and opens itself toward private gardens and courtyards, where the restraint of the facade gives way to generosity of space and light that you'd never suspect from out here.\n\n[beat]\n\nThe house was completed in two thousand and one, and it belongs to a body of domestic work that, according to the same guide, genuinely transformed the architectural taste of Porto's middle class in the final decades of the twentieth century — not by making a spectacle of itself, but by demonstrating, one quiet facade at a time, that modernity and discretion are not opposites."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 41.15840182858477,
+      "centroidLongitude": -8.679603077781746,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Eduardo Souto de Moura's house at number 213 on Rua do Crasto, two blocks from the Atlantic in Foz do Douro — completed 2001, perhaps the purest expression of what the official guide to his Porto houses calls 'discreet towards the city, but filled with light inside.' The plot follows the eighteenth-century neighbourhood's rules exactly: long and narrow, built to the party walls, three storeys. Souto de Moura reduces the exterior to its absolute minimum: bare concrete, three square windows with warm timber reveals, and a full-width vertical timber screen at ground level that reads as a single considered element rather than a door beside a wall. The composition looks almost inevitable — the kind of simplicity that takes the longest to arrive at. The house belongs to a body of domestic work that quietly transformed the architectural taste of Porto's middle class in the final decades of the twentieth century, one facade at a time, by demonstrating that modernity and discretion aren't opposites.",
+      "shortDescription": "Souto de Moura's purest 'discreet outside, light inside' house — narrow concrete facade with three timber-lined windows in Foz do Douro.",
+      "totalDurationSeconds": 139,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "11B4526D-530F-4792-B2A0-CBBB23065AA0",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Leixões Cruise Terminal",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Leixoes_Cruise_Terminal_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Leixoes_Cruise_Terminal_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Leixoes_Cruise_Terminal_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Leixoes_Cruise_Terminal_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Leixoes_Cruise_Terminal_5.webp"
+      ],
+      "tags": [
+        "architecture",
+        "luis pedro silva",
+        "leixoes",
+        "matosinhos",
+        "ceramic tiles",
+        "port",
+        "2015"
+      ],
+      "stops": [
+        {
+          "id": "08B21D5C-CC77-40BB-9BAB-7E01BB84C7C1",
+          "order": 0,
+          "title": "Leixões Cruise Terminal",
+          "caption": "Stand on the south jetty looking out at the curving white-tiled ribbon of the terminal building.",
+          "latitude": 41.177270133059395,
+          "longitude": -8.701836600093268,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/leixoes-cruise-terminal.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Leixoes_Cruise_Terminal_hero.webp",
+          "transcriptText": "Porto has never had a deepwater harbour, which has been the defining problem of its maritime life for most of recorded history.\nThe Douro River, which runs through the heart of the city, has a sandbar at its mouth that blocks large ships from entering, and for centuries that constraint shaped everything about how Porto traded and how it suffered — most dramatically in eighteen fifty-two, when a steamship called the Porto hit rocks near the river mouth and sixty-six people died, which turned what had been a long civic argument about port infrastructure into something considerably more urgent. Construction on the Port of Leixões began in eighteen eighty-four, and the solution the engineers arrived at was essentially to build a harbour where none existed: two enormous breakwaters driven out into the Atlantic, the northern one running more than fifteen hundred metres and the southern just over a thousand, enclosing a sheltered basin on a coast that had offered none before. To move the granite blocks required for this into position, the builders commissioned two steam-powered cranes so large they were immediately nicknamed the Titans, and the port they built has been operating ever since.\nYou're standing on the south jetty, and the terminal building is ahead of you.\nIt was completed in twenty fifteen and designed by the Portuguese architect Luís Pedro Silva, and the form is the first thing to read from here: a long curving ribbon that appears to unfurl from the city toward the sea, dropping from triple height at the landward end down to a single storey at the waterfront, so that the whole building reads as continuous downward motion from one end to the other. The surface covering it — over a million ceramic hexagonal tiles, irregular in shape, white, made by Vista Alegre, one of Portugal's oldest ceramics manufacturers — catches the Atlantic light differently at every angle, so the building changes character across the day in a way that a flat or uniform surface simply wouldn't.\n[beat]\nWhat most visitors don't realise is that the terminal isn't purely a place for ships to dock and passengers to pass through, because alongside the passenger hall there are laboratories and offices for CIIMAR — the University of Porto's marine sciences research centre, with around two hundred researchers working on Atlantic ecology — which means that the port built because Porto had a problem with the sea now contains, in its newest building, people who have devoted their careers to understanding it."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 41.177270133059395,
+      "centroidLongitude": -8.701836600093268,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Luís Pedro Silva's cruise terminal at the Port of Leixões — completed 2015, sitting on a south jetty that's the modern conclusion to one of Porto's oldest civic problems. Porto never had a deepwater harbour. The Douro's mouth has a sandbar that blocks large ships, and the constraint shaped the city's maritime life for centuries — most dramatically in 1852, when the steamship Porto hit rocks at the river mouth and sixty-six people died. Construction at Leixões began in 1884; the engineers essentially built a harbour where none existed, two enormous breakwaters driven into the Atlantic, the granite blocks moved by steam-powered cranes so vast they were nicknamed the Titans. Silva's terminal is the newest chapter: a long curving ribbon unfurling from the city toward the sea, dropping from triple height at the landward end down to a single storey at the waterfront. Over a million irregular white hexagonal tiles, made by Vista Alegre, catch the Atlantic light differently at every angle through the day. Alongside the passenger hall sit the laboratories and offices of CIIMAR — the University of Porto's marine sciences research centre, where around two hundred researchers work on Atlantic ecology. The port built because Porto had a problem with the sea now houses, in its newest building, people who have devoted their careers to understanding it.",
+      "shortDescription": "Luís Pedro Silva's curving white-tiled ribbon at the end of a 130-year-old Atlantic breakwater — cruise terminal and marine sciences research centre in one.",
+      "totalDurationSeconds": 143,
+      "city": "Leixões",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "CA666546-F322-4330-9AB9-7089C37B34C0",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Majestic Café",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Majestic_Cafe_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Majestic_Cafe_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Majestic_Cafe_3.webp"
+      ],
+      "tags": [
+        "art nouveau",
+        "cafe",
+        "santa catarina",
+        "belle epoque",
+        "porto",
+        "1921",
+        "joao queiroz"
+      ],
+      "stops": [
+        {
+          "id": "CC964B3D-149F-4AEC-8077-A8E4D5D997BD",
+          "order": 0,
+          "title": "Majestic Café",
+          "caption": "Stand on Rua de Santa Catarina in front of the ornate facade — go inside when you're ready.",
+          "latitude": 41.147317214996015,
+          "longitude": -8.60655045913355,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/majestic-cafe.mp3",
+          "audioDurationSeconds": 169,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Majestic_Cafe_hero.webp",
+          "transcriptText": "The café you're about to enter was not called Majestic when it opened — it was called Elite, which turned out to be a problem.\nThe Majestic opened on the seventeenth of December, nineteen twenty-one, designed by the architect João Queiroz in the Art Nouveau style that was then the language of Parisian sophistication, and the name Elite was chosen to signal exactly that kind of cosmopolitan elegance. The difficulty, as the owners quickly discovered, was that \"Elite\" carried an uncomfortable hint of monarchy in a city that was republican, bourgeois, and proud of it — so within a few years the name was changed to Majestic, which had all the Belle Époque charm without the monarchist undertone, and the café settled into its role as the gathering place for Porto's intellectuals, artists, and writers through the nineteen twenties and thirties.\nYou're on Rua de Santa Catarina, Porto's main pedestrian shopping street, and the exterior should be visible from where you're standing — the ornate facade, the large windows, the general sense of a building that considers itself rather important. Go inside when you're ready, and before you order anything, take a moment to look at what's actually in front of you.\nThe interior is Art Nouveau throughout: carved woodwork framing large mirrors, brass fittings, chandeliers hanging from stucco ceilings decorated with organic motifs, marble countertops, and leather-upholstered benches — and the effect is of a room that has been preserved in amber from the nineteen twenties, which is approximately true but not entirely. Some of the décor is real wood and some is plaster, sculpted and painted to resemble more precious materials, which was a common technique of the period — so the authenticity you're responding to is partly genuine and partly very skilled imitation, which, when you think about it, is rather fitting for a café that renamed itself to seem more sophisticated than its original name allowed.\nThe café fell into serious decline from the nineteen sixties onward, was classified as a building of public interest in the early nineteen eighties, and closed for restoration in nineteen ninety-two before reopening in nineteen ninety-four with its Belle Époque interior restored — and it's worth knowing that the period furniture you're sitting on is largely not original to the nineteen twenties, though the mirrors on the walls, pitted with black scars, show the kind of ageing that's consistent with their stated age.\n\nAt the back of the café there's a conservatory — a winter garden — that connects Santa Catarina Street to Rua Passos Manuel behind it, and the waiters, wearing short white jackets and white gloves and balancing drinks on small round trays, are performing a version of service that Porto's bourgeoisie would have recognised a hundred years ago, which is either charming or theatrical depending entirely on your temperament, and the café has the good grace not to insist on which."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 41.147317214996015,
+      "centroidLongitude": -8.60655045913355,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The Belle Époque Art Nouveau café on Rua de Santa Catarina that opened on the seventeenth of December 1921 — designed by João Queiroz, and not originally called Majestic at all. The first name was Elite, chosen to signal Parisian sophistication; within a few years the owners discovered the word carried an uncomfortable hint of monarchy in a city that was republican, bourgeois, and proud of it, so they swapped to Majestic and the café settled into its role as the gathering place for Porto's intellectuals, artists, and writers through the 1920s and 30s. The interior is Art Nouveau throughout — carved woodwork framing large mirrors, brass fittings, chandeliers under stucco ceilings of organic motifs, marble counters, leather benches. The effect is of a room preserved in amber from the twenties, which is approximately true but not entirely: some of the décor is real wood, some is plaster sculpted and painted to resemble more precious materials, a common period technique that's rather fitting for a café that renamed itself to seem more sophisticated than its original name allowed. After serious decline from the 1960s onward, classification as a building of public interest in the early 1980s, and a 1992–94 restoration, it reopened with its Belle Époque interior recovered. At the back, a winter-garden conservatory connects Santa Catarina to Rua Passos Manuel; waiters in short white jackets, gloves, and round trays perform a version of service Porto's bourgeoisie would have recognised a hundred years ago.",
+      "shortDescription": "Porto's Belle Époque Art Nouveau café — opened 1921 as 'Elite,' renamed for the republican city it served, restored in the 1990s, still in business.",
+      "totalDurationSeconds": 169,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "A03FFA2D-6F9F-4BBD-9A32-43273D95D44C",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Piscina das Marés",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_das_Mares_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_das_Mares_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_das_Mares_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_das_Mares_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_das_Mares_5.webp"
+      ],
+      "tags": [
+        "architecture",
+        "siza vieira",
+        "pritzker",
+        "leca da palmeira",
+        "swimming pools",
+        "modernist",
+        "1966"
+      ],
+      "stops": [
+        {
+          "id": "6CF3B027-6270-41A8-823B-D928A3E25B5F",
+          "order": 0,
+          "title": "Piscina das Marés",
+          "caption": "Start at the entrance on Avenida da Liberdade — black wooden door at the top of the descending ramp.",
+          "latitude": 41.1929577598942,
+          "longitude": -8.70762830145992,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/piscina-das-mares.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_das_Mares_hero.webp",
+          "transcriptText": "The city asked for a swimming pool, and what they got was something rather more considered than that.\nYou should be at the entrance on Avenida da Liberdade, at the top of the descending ramp, where there's a black wooden door and a modest sign that gives almost nothing away about what's on the other side — which, as you'll discover, is entirely deliberate. Start walking down.\nAs you descend, the concrete walls rise around you, the road disappears behind you, and the horizon drops away until all you can hear is the sea without being able to see it yet, and what Siza was doing with this approach is exactly what he did at the Tea House at Boa Nova a few years earlier and just up the coast: he wanted you to lose the world before he gave you a new one.\nWhen you reach the terrace and the pools come into view, stop and take a moment before reading any of the details.\nTwo pools, one for adults and one for children, cut into the granite outcrop right at the edge of the Atlantic — and the water in them is the same water as the ocean, because it is the ocean, filling the pools with the tides and draining with them, with no pipes or pumps involved at all, the sea simply doing the work through openings in the rock walls that Siza designed to allow exactly the right exchange. It's a piece of engineering that sounds straightforward until you stand here and watch a wave come in over the outer edge and understand quite how precisely it all had to be calculated.\nNow look at where the concrete ends and the rock begins, because that boundary — or rather, the absence of one — is the central architectural idea of the whole complex. When Siza was commissioned for this project in the early nineteen sixties, there was no topographical survey of the site, so he came out here himself for several days and mapped every rock formation by hand before he drew anything, and then designed the concrete walls to sit in the gaps between the outcrops rather than over them, which is why the structure looks as though it was always here and the Atlantic coast simply grew a place to swim around it.\n[beat]\nWhat's rather satisfying about this place is how ordinary it feels once you're actually in it — families, children, people eating sandwiches on the terrace, the whole apparatus of a normal summer afternoon — and the building became a national monument in two thousand and six while continuing to operate as a public pool every summer, which is the greatest compliment you can pay it: nobody is treating it like a monument."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 41.1929577598942,
+      "centroidLongitude": -8.70762830145992,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Álvaro Siza's tidal swimming pools at Leça da Palmeira, completed 1966 — two pools, one for adults and one for children, cut into the granite outcrop right at the edge of the Atlantic. The water in them is the same water as the ocean, because it is the ocean: pools fill with the tides and drain with them, no pipes or pumps involved, the sea doing the work through openings in the rock walls Siza designed to allow exactly the right exchange. The approach is choreographed in the same way as the Tea House at Boa Nova a few years earlier just up the coast — a descending ramp from Avenida da Liberdade where the concrete walls rise around you, the road disappears behind you, and the horizon drops away until all you can hear is the sea without yet seeing it. Where the concrete ends and the rock begins, the central architectural idea is the absence of a boundary: with no topographical survey of the site available, Siza came out and mapped every rock formation by hand before he drew anything, then designed the concrete walls to sit in the gaps between the outcrops rather than over them. The complex became a national monument in 2006 while continuing to operate as a public pool every summer — families, children, sandwiches on the terrace. Nobody is treating it like a monument.",
+      "shortDescription": "Siza's tidal pools at the edge of the Atlantic — granite-and-concrete bathing complex (1966), national monument, still a working public pool.",
+      "totalDurationSeconds": 141,
+      "city": "Leça da Palmeira",
+      "walkingDistanceMeters": null
     }
   ]
 }
