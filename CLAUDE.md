@@ -30,7 +30,17 @@ These happen **automatically, without the owner asking**.
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
 
-## Current State (2026-05-28)
+## Current State (2026-05-29)
+
+### TestFlight 1.0 (17) + tour-detail retool + light-mode fix + 6 new tours (session 12)
+
+Session 12 batched four parallel-session landings, then cut TestFlight build 1.0 (17). Build bump `f359f55` direct to main; archive at `/tmp/Atlas-20260529-1626.xcarchive`; owner uploaded via Organizer.
+
+- **PR #93 — tour-detail masthead + toolbar + overflow menu.** Toolbar is X close (left) · Save (right) · ellipsis overflow menu (right) with no title text (the body's title carries page identity). Overflow menu: Download · Save · Share · *Follow creator (disabled)* · Go to creator · *Report a concern (destructive)*. Masthead: square-cornered hero · title · maker row · subtitle line (`3 min · 1 stop · 455 ft away`; multi-stop swaps in `… · 1.2 mi walk`) · inline button row above the description · description peek with soft fade-mask. Inline button row repeated at the bottom of the scroll body. Carousel gets a `N photos` overlay pill when >5 images. Stops section header unified to `Stops` for single + multi. **PR #93 is part 1 of 2** — part 2 (not yet shipped) reshapes stops into a numbered timeline with thumbnails + animated `waveform` now-playing indicator, and rewires Start Tour to non-modal playback start.
+- **PR #95 — light-mode tab bar fix.** Bottom-module bars were showing inverted appearance (light fill in dark mode, dark fill in light mode) when the Settings appearance picker disagreed with the system. Root cause: SwiftUI's `.preferredColorScheme(...)` only propagates into a `WindowGroup`-owned window, NOT into the manually-created secondary `UIWindow` (`PassThroughWindow`) that hosts the bars. New `BottomModuleWindowController.apply(preference:)` sets `window.overrideUserInterfaceStyle` from the current `ColorSchemePreference`; called once in `.onAppear` and again on every `colorSchemePreference` change so the secondary window's trait collection mirrors the picker. The earlier `.preferredColorScheme` modifier inside the install closure (frozen at install time) was removed. PR #91's `secondaryBackgroundUIColor` dynamic-provider RGBs are untouched — chrome-seam guarantee preserved.
+- **Content additions: 6 new tours.** PR #92 added Casa das Histórias Paula Rego (Eduardo Souto de Moura, 2009) in Cascais — **first Cascais tour** + 2nd under Atlas Studio Lisbon. PR #94 added 5 Porto-area architecture tours under Atlas Studio Porto: Edifício Burgo (Souto de Moura, 2007), House at Rua do Crasto 213 (Souto de Moura, 2001), Leixões Cruise Terminal (Luís Pedro Silva, 2015), Majestic Café (João Queiroz, 1921), Piscina das Marés (Álvaro Siza, 1966). **New city: Leixões.** Catalog 53 → 59 tours.
+
+**Latest TestFlight build: 1.0 (17)** — uploaded 2026-05-29 via Organizer.
 
 ### Bottom-module chrome-shade seam fix + bars-to-edges (session 11)
 
@@ -123,11 +133,9 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
-**Latest TestFlight build: 1.0 (15)** — uploaded 2026-05-28.
-
 Key facts:
-- **53 tours, 3 makers** in `Resources/Tours.json`; audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **52 single-stop + 1 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, geofenced exterior walk) — added 2026-05-26, unblocks M-qa items 6 + 7
+- **59 tours, 3 makers** in `Resources/Tours.json` (43 NYC + 14 Porto-area + 2 Lisbon-makers including 1 Cascais); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **58 single-stop + 1 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, geofenced exterior walk) — added 2026-05-26, unblocks M-qa items 6 + 7
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously

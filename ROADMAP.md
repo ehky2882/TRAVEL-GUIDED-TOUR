@@ -38,7 +38,7 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
-**Status (2026-05-27):** every V1 functionality milestone is shipped on
+**Status (2026-05-29):** every V1 functionality milestone is shipped on
 `main`. Major UX work shipped 2026-05-24/25 — bottom module consistency
 (PRs #66–70), home polish + player-state hardening (PRs #60–61), placecard
 pop-up on pin tap (PR #75), tour detail as slide-up layer with drawer hoist
@@ -46,12 +46,16 @@ pop-up on pin tap (PR #75), tour detail as slide-up layer with drawer hoist
 **Session 8 (2026-05-27)** replaced the SwiftUI `.offset` slide layer with
 a UIKit `UIPresentationController`-driven modal so detail slides up *from
 behind* the persistent mini-player + tab bar (now hosted in a secondary
-higher-level `UIWindow` — Apple Music pattern). Sticky action bar dropped;
-Start Tour / bookmark / download moved inline. TestFlight build **1.0 (15) is live** (uploaded 2026-05-28). Known
-follow-up: subtle chrome shade mismatch in dark mode (see session-8
-handoff for leads).
+higher-level `UIWindow` — Apple Music pattern). **Session 11 (2026-05-28)**
+closed the chrome-shade seam (PR #91) — hardcoded RGB in `secondaryBackground` +
+bars edge-to-edge in non-Home/detail-up. **Session 12 (2026-05-29)** landed
+PR #93 (tour-detail masthead + toolbar + overflow menu, part 1 of 2),
+PR #95 (light-mode bottom-module bug — secondary-window trait-collection
+plumbing), PR #92 (Casa das Histórias Paula Rego — first Cascais tour),
+and PR #94 (5 Porto-area architecture tours). TestFlight build **1.0 (17)
+is live** (uploaded 2026-05-29).
 
-**Content (M-launch-content ✅).** **39 tours** in `Resources/Tours.json`.
+**Content (M-launch-content ✅).** **59 tours** in `Resources/Tours.json` (43 NYC + 14 Porto-area + 2 Lisbon-makers including 1 Cascais).
 First **multi-stop tour** added 2026-05-26: "American Museum of Natural
 History: Four Facades" — 5 stops (~8m 44s), exterior architecture walk,
 geofenced. This unblocks M-qa checklist items 6 + 7. The original 10 NYC landmarks (Grand Central, Times
