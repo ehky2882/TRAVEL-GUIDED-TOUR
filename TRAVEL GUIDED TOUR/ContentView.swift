@@ -130,6 +130,16 @@ struct ContentView: View {
                 tourPresenter.dismiss()
             }
         }
+        // Bridge geofence-triggered stop playback into shared state
+        // so the tour-detail sheet's now-playing indicator can light
+        // up the matching stop row. ProximityMonitor stays free of
+        // UI-state coupling — the bridge lives here, where both
+        // dependencies are already in scope.
+        .onChange(of: proximityMonitor.lastEnteredStopId) { _, newStopId in
+            if let newStopId {
+                appShared.currentPlayingStopId = newStopId
+            }
+        }
         .onChange(of: tourPresenter.presentedTour?.id) { _, _ in
             if let tour = tourPresenter.presentedTour {
                 bottomLayer.present(

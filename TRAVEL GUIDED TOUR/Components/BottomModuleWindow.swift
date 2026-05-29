@@ -24,6 +24,16 @@ final class AppSharedState {
     /// second window's `MiniPlayerBar` but the sheet presents from
     /// the main window's content.
     var showingFullPlayer: Bool = false
+    /// The stop currently being played, when known. `nil` means
+    /// no stop-level identity (no audio playing, intro audio
+    /// playing, or audio whose owner didn't record a stop id).
+    /// `TourDetailView` reads this to animate a now-playing
+    /// indicator next to the matching stop row. Set from every
+    /// site that triggers stop-level playback:
+    /// `PlayerView.playStop`, `ProximityMonitor.handleEntry`, and
+    /// `TourDetailView.handlePrimaryAction` (Start Tour from the
+    /// inline button row).
+    var currentPlayingStopId: UUID? = nil
 }
 
 /// Installs and tears down the secondary `UIWindow` that hosts the

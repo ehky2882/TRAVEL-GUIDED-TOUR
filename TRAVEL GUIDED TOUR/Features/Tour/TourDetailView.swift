@@ -56,9 +56,9 @@ struct TourDetailView: View {
     /// `MakerView`). Within the layer's nav stack the default back
     /// chevron pops one level; X always exits the layer.
     @Environment(TourPresenter.self) private var tourPresenter
+    @Environment(AppSharedState.self) private var appShared
     @Environment(\.openURL) private var openURL
 
-    @State private var showingPlayer = false
     /// Programmatic push for the menu's "Go to creator" item. The
     /// inline maker row uses its own inline `NavigationLink`; the
     /// menu item can't host a NavigationLink directly inside a Menu's
@@ -80,11 +80,6 @@ struct TourDetailView: View {
                         .padding(.top, AtlasSpacing.xs)
                     descriptionSection
                     stopsSection
-                    // Same button row repeated at the bottom — owner
-                    // confirmed redundancy is fine (mirror of the
-                    // Save / Download repeat in the overflow menu).
-                    buttonRow
-                        .padding(.top, AtlasSpacing.md)
                 }
                 .padding(.horizontal, AtlasSpacing.lg)
 
@@ -93,24 +88,6 @@ struct TourDetailView: View {
                 // the secondary higher-level window.
                 Color.clear.frame(height: AtlasBottomModule.height())
             }
-        }
-        // Soft fade at the bottom of the scroll viewport (just above
-        // the bottom module). Signals "more content below" when the
-        // description / stops would otherwise be hard-clipped by the
-        // viewport edge. Mirrors iOS 18+ `.scrollEdgeEffect` but works
-        // on any iOS version we target.
-        .overlay(alignment: .bottom) {
-            LinearGradient(
-                colors: [
-                    AtlasColors.secondaryBackground.opacity(0),
-                    AtlasColors.secondaryBackground
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .frame(height: 40)
-            .offset(y: -AtlasBottomModule.height())
-            .allowsHitTesting(false)
         }
         .background(AtlasColors.secondaryBackground)
         // Title moved into the body — the nav bar carries only the
@@ -150,9 +127,6 @@ struct TourDetailView: View {
             if let maker = dataService.maker(for: tour) {
                 MakerView(maker: maker)
             }
-        }
-        .sheet(isPresented: $showingPlayer) {
-            PlayerView(tour: tour)
         }
         // Mark this surface as a pushed detail screen so the bottom
         // module switches to full-edge while it's on top of the
@@ -199,28 +173,18 @@ struct TourDetailView: View {
     private var imageSection: some View {
         let allImages = [tour.heroImageURL] + (tour.additionalImageURLs ?? [])
         if allImages.count > 1 {
-            ZStack(alignment: .bottomTrailing) {
-                TabView {
-                    ForEach(allImages, id: \.self) { url in
-                        HeroImageView(
-                            imageName: url,
-                            height: AtlasSpacing.heroHeight,
-                            zoomable: true,
-                            disableLoadAnimation: true
-                        )
-                    }
-                }
-                .tabViewStyle(.page(indexDisplayMode: .always))
-                .frame(height: AtlasSpacing.heroHeight)
-                // "N / M" counter pill, bottom-trailing. Only shown when
-                // there are more images than the default dot indicator
-                // can comfortably represent — past ~5 dots the row gets
-                // visually noisy and people lose count.
-                if allImages.count > 5 {
-                    galleryCounterPill(total: allImages.count)
-                        .padding(AtlasSpacing.sm)
+            TabView {
+                ForEach(allImages, id: \.self) { url in
+                    HeroImageView(
+                        imageName: url,
+                        height: AtlasSpacing.heroHeight,
+                        zoomable: true,
+                        disableLoadAnimation: true
+                    )
                 }
             }
+            .tabViewStyle(.page(indexDisplayMode: .always))
+            .frame(height: AtlasSpacing.heroHeight)
             .padding(.horizontal, AtlasSpacing.lg)
         } else {
             HeroImageView(
@@ -232,22 +196,6 @@ struct TourDetailView: View {
             )
             .padding(.horizontal, AtlasSpacing.lg)
         }
-    }
-
-    /// Small overlay pill showing total image count when the carousel
-    /// has too many images for dots to be useful. Reads as "1 / 17"
-    /// on first appearance; SwiftUI's PageTabViewStyle doesn't expose
-    /// the current index, so the count is static (always shows total).
-    /// A future iteration can wire the live page index via UIKit's
-    /// UIPageViewController bridging.
-    private func galleryCounterPill(total: Int) -> some View {
-        Text("\(total) photos")
-            .font(AtlasTypography.caption.weight(.semibold))
-            .foregroundStyle(.white)
-            .padding(.horizontal, AtlasSpacing.sm)
-            .padding(.vertical, AtlasSpacing.xs)
-            .background(Color.black.opacity(0.55))
-            .clipShape(Capsule())
     }
 
     // MARK: - Masthead
@@ -349,10 +297,25 @@ struct TourDetailView: View {
 
     private func stopRow(_ stop: Stop) -> some View {
         HStack(alignment: .top, spacing: AtlasSpacing.md) {
-            Text("\(stop.order + 1)")
-                .font(AtlasTypography.body)
-                .foregroundStyle(AtlasColors.secondaryText)
-                .frame(width: 24, alignment: .leading)
+            // Stop number, OR an animated waveform when this stop is
+            // currently playing. The waveform sits in the same 24pt
+            // slot as the number so the column alignment doesn't
+            // shift when playback starts. `.symbolEffect(.variableColor.iterative)`
+            // is iOS 17+ — Atlas targets 26.2+, so it's fine.
+            Group {
+                if isPlayingStop(stop) {
+                    Image(systemName: "waveform")
+                        .font(AtlasTypography.body.weight(.semibold))
+                        .foregroundStyle(AtlasColors.mapPin)
+                        .symbolEffect(.variableColor.iterative, options: .repeating)
+                        .accessibilityLabel("Playing")
+                } else {
+                    Text("\(stop.order + 1)")
+                        .font(AtlasTypography.body)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                }
+            }
+            .frame(width: 24, alignment: .leading)
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 Text(stop.title)
@@ -382,10 +345,10 @@ struct TourDetailView: View {
     /// baseline.
     private let controlHeight: CGFloat = 44
 
-    /// Inline button row — appears twice, once above the description
-    /// (so users can act without scrolling) and once after the stops
-    /// list (so users who scroll through don't have to scroll back).
-    /// Order: Start Tour (primary, full width) · Save · Download.
+    /// Inline button row — sits above the description so users can
+    /// act without scrolling. Order: Start Tour (primary, full
+    /// width) · Save · Download. Tinted with the map-pin gold so the
+    /// inline action surface matches the map's visual identity.
     private var buttonRow: some View {
         HStack(spacing: AtlasSpacing.md) {
             Button(action: handlePrimaryAction) {
@@ -407,6 +370,12 @@ struct TourDetailView: View {
             downloadButton
         }
         .frame(maxWidth: .infinity)
+        // Owner-confirmed: inline action buttons should read in the
+        // same gold as map pins, giving the detail-sheet action
+        // surface a visual handshake with the map. `.tint` propagates
+        // to .borderedProminent (fill color) and .bordered (icon +
+        // stroke).
+        .tint(AtlasColors.mapPin)
     }
 
     // MARK: - Download button
@@ -621,16 +590,82 @@ struct TourDetailView: View {
 
     // MARK: - Actions
 
-    /// The primary button always opens the player sheet. The player itself
-    /// owns playback orchestration — starting audio on first appear, and
-    /// keeping it going when the sheet is dismissed. Re-tapping opens the
-    /// sheet back up without restarting audio.
+    /// Start Tour kicks off audio playback *non-modally* — the
+    /// full `PlayerView` sheet is no longer presented from the detail
+    /// sheet. The user opens the full player by tapping the
+    /// mini-player at the bottom of the screen, the same way Apple
+    /// Music and Spotify gate the full now-playing UI.
     ///
-    /// PR 2 of the detail-sheet retool rewires this: Start Tour will
-    /// call `AudioPlayerService.play(...)` directly and the mini-player
-    /// becomes the only path to PlayerView (non-modal playback start).
+    /// Logic mirrors `PlayerView.startPlaybackIfNeeded`: if this
+    /// tour's audio is already loaded, just resume (or no-op when
+    /// already playing). Otherwise, start from the intro audio if
+    /// it exists, else the first stop.
+    ///
+    /// **Multi-stop auto-advance.** For geofenced multi-stop tours
+    /// (Atlas's common case) `ProximityMonitor` drives the next
+    /// stop's playback as the user walks. For non-geofenced
+    /// multi-stop tours auto-advance still requires `PlayerView` to
+    /// be the visible surface (its `.onChange(of: audioPlayer.state)`
+    /// observer is what calls `playStop(at: nextIndex)`); a future
+    /// pass can promote that orchestrator to an env-level service so
+    /// auto-advance survives without `PlayerView` on screen. Single-
+    /// stop tours and geofenced multi-stop tours are unaffected.
     private func handlePrimaryAction() {
-        showingPlayer = true
+        // If this tour's audio is already loaded, don't restart —
+        // resume if paused, no-op otherwise. The "Open player" label
+        // case is already handled by this branch (mini-player is
+        // where users go to actually open it now).
+        if audioPlayer.currentSourceId == tour.id.uuidString
+            && audioPlayer.state != .idle
+            && audioPlayer.state != .failed {
+            if audioPlayer.state == .paused || audioPlayer.state == .ended {
+                audioPlayer.play()
+            }
+            return
+        }
+
+        let maker = dataService.maker(for: tour)
+        let sortedStops = tour.stops.sorted(by: { $0.order < $1.order })
+
+        // Prefer the on-disk copy when the tour is downloaded — same
+        // pattern PlayerView uses. Falls back to streaming.
+        if let introString = tour.introAudioURL,
+           let remoteURL = URL(string: introString) {
+            let url = tourDownloader.localURL(forIntroOf: tour) ?? remoteURL
+            // Intro audio doesn't belong to a single stop.
+            appShared.currentPlayingStopId = nil
+            audioPlayer.play(
+                url: url,
+                title: tour.title,
+                artist: maker?.displayName,
+                sourceId: tour.id.uuidString
+            )
+        } else if let firstStop = sortedStops.first,
+                  let remoteURL = URL(string: firstStop.audioURL) {
+            let url = tourDownloader.localURL(forStop: firstStop, in: tour) ?? remoteURL
+            // Light up the now-playing indicator on the first stop
+            // row immediately — `PlayerView` would do this too if it
+            // were the surface starting playback.
+            appShared.currentPlayingStopId = firstStop.id
+            audioPlayer.play(
+                url: url,
+                title: tour.title,
+                artist: maker?.displayName,
+                sourceId: tour.id.uuidString
+            )
+        }
+    }
+
+    /// Whether a given stop is the one currently producing audio.
+    /// Combines the shared `currentPlayingStopId` (set by every
+    /// playback trigger — PlayerView, ProximityMonitor, this view's
+    /// Start Tour) with the audio engine's live state, so the
+    /// indicator clears on pause / end / failure rather than
+    /// flickering as a stale highlight.
+    private func isPlayingStop(_ stop: Stop) -> Bool {
+        appShared.currentPlayingStopId == stop.id
+            && audioPlayer.currentSourceId == tour.id.uuidString
+            && (audioPlayer.state == .playing || audioPlayer.state == .loading)
     }
 
     private func toggleSaved() {
@@ -655,12 +690,28 @@ struct TourDetailView: View {
             && audioPlayer.state != .failed
     }
 
+    /// Label adapts to the audio state:
+    ///   - "Start Tour" when idle / no audio loaded → tap starts playback.
+    ///   - "Playing" when audio is actively producing sound → tap is a
+    ///     no-op (visual indicator only — the mini-player handles
+    ///     transport and is the only path to the full player).
+    ///   - "Resume" when paused or ended → tap resumes / replays.
     private var primaryButtonTitle: String {
-        isThisTourActive ? "Open player" : "Start Tour"
+        guard isThisTourActive else { return "Start Tour" }
+        switch audioPlayer.state {
+        case .playing, .loading: return "Playing"
+        case .paused, .ended:    return "Resume"
+        case .idle, .failed:     return "Start Tour"
+        }
     }
 
     private var primaryButtonIcon: String {
-        isThisTourActive ? "waveform" : "play.fill"
+        guard isThisTourActive else { return "play.fill" }
+        switch audioPlayer.state {
+        case .playing, .loading: return "waveform"
+        case .paused, .ended:    return "play.fill"
+        case .idle, .failed:     return "play.fill"
+        }
     }
 
     private var isThisTourLoading: Bool {
