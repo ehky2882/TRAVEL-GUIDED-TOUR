@@ -2,21 +2,44 @@ import SwiftUI
 
 /// Tour detail screen — spec § Key screens #4 / roadmap M-tour-detail.
 ///
-/// Layout (top to bottom):
-///   - Hero image (`HeroImageView` with category icon fallback)
-///   - Title + category chip
-///   - Maker row (NavigationLink → MakerView)
-///   - Meta row (length, walking distance for multi-stop, stop count)
-///   - Long description
-///   - Stops list (non-tappable; tap-to-play is a player concern in M-player)
-///   - Sticky action bar at the bottom: Start / Save / Download
+/// PR 1 of the detail-sheet retool (session 12, 2026-05-29). Owner-driven
+/// design pass — see `archive/HANDOFF-260529.md` for the full Q&A trail.
 ///
-/// Start hands off to `AudioPlayerService` — plays intro audio if the
-/// tour has one, otherwise stop 0. Sequencing through subsequent stops
-/// lands in M-player.
+/// **Layout** (top to bottom, in scroll order):
+///   - Toolbar (in nav bar): X close (leading) · bookmark (trailing) · `…`
+///     overflow menu (trailing). **No title text** — the body's title
+///     carries the page identity.
+///   - Hero image — single image OR paging carousel (multi-image tours).
+///     Inset side padding, **no corner radius** (square corners).
+///   - Title
+///   - Maker row (chevron pushes to MakerView)
+///   - Subtitle line: `"3 min · 1 stop · 455 ft away"` (or, multi-stop:
+///     `"… · 1.2 mi walk"`). Replaces the old meta row + chips.
+///   - Button row: Start Tour / Save / Download. Repeated at the bottom
+///     of the scroll body, redundancy intentional.
+///   - Description — full text inline, scroll-edge gradient fade signals
+///     "more below."
+///   - Stops section — same simple numbered list as today for both
+///     single- and multi-stop tours (PR 2 reshapes this into a numbered
+///     timeline with thumbnails + a now-playing indicator).
+///   - Button row (second copy)
+///   - Bottom inset reserving room for the mini-player + tab bar that
+///     float over from the secondary higher-level UIWindow.
 ///
-/// Save is fully wired to `LibraryStore`.
-/// Download is visible but disabled until M-offline.
+/// **Overflow menu** (`…`): Download · Save · Share · Follow creator
+/// (disabled, V1 has no follow graph) · Go to creator · Report a concern.
+///
+/// **Action wiring** (PR 1 only — Start Tour still opens PlayerView;
+/// PR 2 rewires it to a non-modal playback start):
+///   - Start Tour → opens PlayerView sheet (today's behaviour).
+///   - Save / bookmark → `LibraryStore.toggleSaved`.
+///   - Download → state-aware (idle / downloading / completed / failed),
+///     gated when another tour is mid-download.
+///   - Share → `ShareLink` with the tour title + maker line.
+///   - Report a concern → `mailto:` to owner inbox prefilled with tour
+///     title + ID.
+///   - Go to creator → in-stack `NavigationLink` to MakerView, same
+///     destination as tapping the inline maker row.
 struct TourDetailView: View {
     let tour: Tour
 
@@ -26,14 +49,22 @@ struct TourDetailView: View {
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
     @Environment(TourDownloader.self) private var tourDownloader
     @Environment(AtlasNavigationState.self) private var navState
+    @Environment(LocationManager.self) private var locationManager
     /// Used by the X close button in the top-leading toolbar slot —
     /// closes the entire detail layer (slides it back down), even
     /// when reached via a `NavigationLink` push (e.g. from
     /// `MakerView`). Within the layer's nav stack the default back
     /// chevron pops one level; X always exits the layer.
     @Environment(TourPresenter.self) private var tourPresenter
+    @Environment(\.openURL) private var openURL
 
     @State private var showingPlayer = false
+    /// Programmatic push for the menu's "Go to creator" item. The
+    /// inline maker row uses its own inline `NavigationLink`; the
+    /// menu item can't host a NavigationLink directly inside a Menu's
+    /// content closure (iOS would render it as a plain row that
+    /// doesn't push), so we drive it through `.navigationDestination`.
+    @State private var showingMaker = false
 
     var body: some View {
         ScrollView {
@@ -44,14 +75,14 @@ struct TourDetailView: View {
                     .padding(.top, AtlasSpacing.md)
 
                 VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                    titleSection
-                    makerRow
-                    metaRow
+                    masthead
+                    buttonRow
+                        .padding(.top, AtlasSpacing.xs)
                     descriptionSection
                     stopsSection
-                    // Action buttons live in the body now (owner
-                    // dropped the sticky action bar — design /
-                    // layout pass for the buttons happens later).
+                    // Same button row repeated at the bottom — owner
+                    // confirmed redundancy is fine (mirror of the
+                    // Save / Download repeat in the overflow menu).
                     buttonRow
                         .padding(.top, AtlasSpacing.md)
                 }
@@ -63,23 +94,38 @@ struct TourDetailView: View {
                 Color.clear.frame(height: AtlasBottomModule.height())
             }
         }
+        // Soft fade at the bottom of the scroll viewport (just above
+        // the bottom module). Signals "more content below" when the
+        // description / stops would otherwise be hard-clipped by the
+        // viewport edge. Mirrors iOS 18+ `.scrollEdgeEffect` but works
+        // on any iOS version we target.
+        .overlay(alignment: .bottom) {
+            LinearGradient(
+                colors: [
+                    AtlasColors.secondaryBackground.opacity(0),
+                    AtlasColors.secondaryBackground
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .frame(height: 40)
+            .offset(y: -AtlasBottomModule.height())
+            .allowsHitTesting(false)
+        }
         .background(AtlasColors.secondaryBackground)
-        .navigationTitle(tour.title)
+        // Title moved into the body — the nav bar carries only the
+        // chrome (close + bookmark + overflow). Empty `navigationTitle`
+        // keeps SwiftUI's toolbar geometry stable.
+        .navigationTitle("")
         .inlineNavigationBarTitle()
         // Hide the toolbar's own background — SwiftUI's
-        // `.toolbarBackground(Color…)` was rendering as a
-        // *translucent material* tinted with the color, not as a
-        // solid fill, so the nav bar always read as a slightly
-        // different shade than the body below it. Hiding it lets
-        // the hosting view's UIKit-level `.secondarySystemBackground`
-        // show behind the X + title, matching the rest exactly.
+        // `.toolbarBackground(Color…)` renders as a *translucent
+        // material* tinted with the color, not as a solid fill, so
+        // the nav bar reads as a slightly different shade than the
+        // body. Hidden so the hosting view's UIKit-level
+        // `.secondarySystemBackground` shows behind the toolbar items.
         .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
-            // X close exits the entire detail layer (slides it back
-            // down), even when pushed onto the layer's nav stack
-            // from `MakerView`. SwiftUI shows the default back
-            // chevron alongside whenever there's something to pop —
-            // chevron pops one level; X always closes the layer.
             ToolbarItem(placement: .topBarLeading) {
                 Button(action: { tourPresenter.dismiss() }) {
                     Image(systemName: "xmark")
@@ -88,14 +134,30 @@ struct TourDetailView: View {
                 }
                 .accessibilityLabel("Close")
             }
+            ToolbarItem(placement: .atlasTrailing) {
+                Button(action: toggleSaved) {
+                    Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
+                        .font(AtlasTypography.body.weight(.semibold))
+                        .foregroundStyle(AtlasColors.primaryText)
+                }
+                .accessibilityLabel(isSaved ? "Remove from saved" : "Save tour")
+            }
+            ToolbarItem(placement: .atlasTrailing) {
+                overflowMenu
+            }
+        }
+        .navigationDestination(isPresented: $showingMaker) {
+            if let maker = dataService.maker(for: tour) {
+                MakerView(maker: maker)
+            }
         }
         .sheet(isPresented: $showingPlayer) {
             PlayerView(tour: tour)
         }
-        // Mark this surface as a pushed detail screen so the
-        // bottom module switches to full-edge while it's on top of
-        // the stack — even when reached from the Home tab. Reverts
-        // to the host tab's root geometry on pop / disappear.
+        // Mark this surface as a pushed detail screen so the bottom
+        // module switches to full-edge while it's on top of the
+        // stack — even when reached from the Home tab. Reverts to the
+        // host tab's root geometry on pop / disappear.
         .onAppear {
             navState.push()
             recentlyViewedStore.record(tour.id)
@@ -111,10 +173,6 @@ struct TourDetailView: View {
             case .completed:
                 libraryStore.markDownloaded(tour.id)
             case .idle, .failed, .none:
-                // .idle from a delete or a failed-and-cleaned state;
-                // .none if we never touched it. In both cases clear
-                // the LibraryStore record so Library → Downloaded is
-                // accurate.
                 if libraryStore.entry(for: tour.id)?.downloadedAt != nil {
                     libraryStore.clearDownload(tour.id)
                 }
@@ -124,41 +182,50 @@ struct TourDetailView: View {
         }
     }
 
-    // MARK: - Sections
+    // MARK: - Hero image
 
     /// Hero area: single image for tours with one photo, paging carousel
     /// for tours that supply `additionalImageURLs`.
     ///
-    /// `disableLoadAnimation: true` on every hero image here — this
-    /// view comes up via the `TourPresenter` slide-up layer, and the
-    /// default AsyncImage crossfade would compete with the slide
-    /// (the hero would visibly fade in mid-slide on first present,
-    /// asymmetric with the exit-slide where the image stays static).
-    /// With the crossfade off, cached images render frame-zero and
-    /// uncached images snap in cleanly when they land.
+    /// `cornerRadius` defaults to 0 on `HeroImageView`, so we pass
+    /// nothing — the hero renders as a square-cornered rectangle with
+    /// its side padding intact. Owner chose this in the detail-sheet
+    /// retool: same shape as before, just no rounded corners.
+    ///
+    /// `disableLoadAnimation: true` keeps the hero from crossfading
+    /// while the detail layer is sliding up (see HeroImageView's
+    /// `disableLoadAnimation` doc for the full reason).
     @ViewBuilder
     private var imageSection: some View {
         let allImages = [tour.heroImageURL] + (tour.additionalImageURLs ?? [])
         if allImages.count > 1 {
-            TabView {
-                ForEach(allImages, id: \.self) { url in
-                    HeroImageView(
-                        imageName: url,
-                        height: AtlasSpacing.heroHeight,
-                        zoomable: true,
-                        disableLoadAnimation: true
-                    )
+            ZStack(alignment: .bottomTrailing) {
+                TabView {
+                    ForEach(allImages, id: \.self) { url in
+                        HeroImageView(
+                            imageName: url,
+                            height: AtlasSpacing.heroHeight,
+                            zoomable: true,
+                            disableLoadAnimation: true
+                        )
+                    }
+                }
+                .tabViewStyle(.page(indexDisplayMode: .always))
+                .frame(height: AtlasSpacing.heroHeight)
+                // "N / M" counter pill, bottom-trailing. Only shown when
+                // there are more images than the default dot indicator
+                // can comfortably represent — past ~5 dots the row gets
+                // visually noisy and people lose count.
+                if allImages.count > 5 {
+                    galleryCounterPill(total: allImages.count)
+                        .padding(AtlasSpacing.sm)
                 }
             }
-            .tabViewStyle(.page(indexDisplayMode: .always))
-            .frame(height: AtlasSpacing.heroHeight)
-            .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
             .padding(.horizontal, AtlasSpacing.lg)
         } else {
             HeroImageView(
                 imageName: tour.heroImageURL,
                 height: AtlasSpacing.heroHeight,
-                cornerRadius: AtlasSpacing.cardCornerRadius,
                 category: tour.primaryCategory,
                 zoomable: true,
                 disableLoadAnimation: true
@@ -167,19 +234,40 @@ struct TourDetailView: View {
         }
     }
 
-    private var titleSection: some View {
+    /// Small overlay pill showing total image count when the carousel
+    /// has too many images for dots to be useful. Reads as "1 / 17"
+    /// on first appearance; SwiftUI's PageTabViewStyle doesn't expose
+    /// the current index, so the count is static (always shows total).
+    /// A future iteration can wire the live page index via UIKit's
+    /// UIPageViewController bridging.
+    private func galleryCounterPill(total: Int) -> some View {
+        Text("\(total) photos")
+            .font(AtlasTypography.caption.weight(.semibold))
+            .foregroundStyle(.white)
+            .padding(.horizontal, AtlasSpacing.sm)
+            .padding(.vertical, AtlasSpacing.xs)
+            .background(Color.black.opacity(0.55))
+            .clipShape(Capsule())
+    }
+
+    // MARK: - Masthead
+
+    /// Title + maker row + subtitle line. Replaces the old
+    /// title+chips+maker+meta stack with a tighter editorial-style
+    /// header. Category chips dropped per the design pass; duration /
+    /// stops / distance folded into a single small subtitle line.
+    private var masthead: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
             Text(tour.title)
                 .font(AtlasTypography.headline)
                 .foregroundStyle(AtlasColors.primaryText)
                 .fixedSize(horizontal: false, vertical: true)
 
-            HStack(spacing: AtlasSpacing.sm) {
-                TagChip(text: tour.primaryCategory.displayName)
-                if tour.kind == .multiStop {
-                    TagChip(text: "Walking tour")
-                }
-            }
+            makerRow
+
+            Text(subtitleLine)
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
         }
     }
 
@@ -201,7 +289,7 @@ struct TourDetailView: View {
                             .font(AtlasTypography.caption)
                             .foregroundStyle(AtlasColors.tertiaryText)
                     }
-                    .padding(.vertical, AtlasSpacing.sm)
+                    .padding(.vertical, AtlasSpacing.xs)
                 }
                 .buttonStyle(.plain)
             } else {
@@ -210,27 +298,27 @@ struct TourDetailView: View {
         }
     }
 
-    private var metaRow: some View {
-        HStack(spacing: AtlasSpacing.md) {
-            metaItem(icon: "clock", text: formattedDuration(tour.totalDurationSeconds))
+    /// One-line summary: `"3 min · 1 stop · 455 ft away"` for single-stop
+    /// tours when the user's location is known, `"3 min · 1 stop"`
+    /// otherwise. Multi-stop tours swap "away" for total walking
+    /// distance: `"8 min 44 sec · 5 stops · 1.2 mi walk"`.
+    private var subtitleLine: String {
+        var parts: [String] = []
+        parts.append(AtlasFormatters.duration(seconds: tour.totalDurationSeconds))
 
-            if tour.kind == .multiStop {
-                metaItem(icon: "figure.walk", text: formattedWalkingDistance(tour.walkingDistanceMeters))
-                metaItem(icon: "mappin.and.ellipse", text: "\(tour.stops.count) stops")
-            }
+        let stopWord = tour.stops.count == 1 ? "stop" : "stops"
+        parts.append("\(tour.stops.count) \(stopWord)")
+
+        if tour.kind == .multiStop, let meters = tour.walkingDistanceMeters {
+            parts.append("\(AtlasFormatters.distance(meters: Double(meters))) walk")
+        } else if let user = locationManager.userLocation {
+            parts.append(AtlasFormatters.distanceAway(meters: tour.distance(from: user)))
         }
+
+        return parts.joined(separator: " · ")
     }
 
-    private func metaItem(icon: String, text: String) -> some View {
-        HStack(spacing: AtlasSpacing.xs) {
-            Image(systemName: icon)
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
-            Text(text)
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
-        }
-    }
+    // MARK: - Description + stops
 
     private var descriptionSection: some View {
         Text(tour.longDescription)
@@ -239,9 +327,13 @@ struct TourDetailView: View {
             .fixedSize(horizontal: false, vertical: true)
     }
 
+    /// Stops list — header unified to "Stops" for both single- and
+    /// multi-stop tours per the album/track-list metaphor (PR 2 will
+    /// reshape this into a numbered timeline with thumbnails + a
+    /// now-playing indicator next to the currently-playing row).
     private var stopsSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            Text(tour.kind == .multiStop ? "Stops" : "Location")
+            Text("Stops")
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.tertiaryText)
                 .padding(.top, AtlasSpacing.md)
@@ -274,7 +366,7 @@ struct TourDetailView: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
 
-                Text(formattedDuration(stop.audioDurationSeconds))
+                Text(AtlasFormatters.duration(seconds: stop.audioDurationSeconds))
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.tertiaryText)
             }
@@ -284,19 +376,21 @@ struct TourDetailView: View {
         .padding(.vertical, AtlasSpacing.xs)
     }
 
-    // MARK: - Button row
+    // MARK: - Button row (inline)
 
     /// Shared height for the three buttons so they line up in size and
     /// baseline.
-    private let controlHeight: CGFloat = 36
+    private let controlHeight: CGFloat = 44
 
-    /// Inline button row inside the ScrollView body. Temporary
-    /// placement — owner will redesign the layout later.
+    /// Inline button row — appears twice, once above the description
+    /// (so users can act without scrolling) and once after the stops
+    /// list (so users who scroll through don't have to scroll back).
+    /// Order: Start Tour (primary, full width) · Save · Download.
     private var buttonRow: some View {
         HStack(spacing: AtlasSpacing.md) {
             Button(action: handlePrimaryAction) {
                 Label(primaryButtonTitle, systemImage: primaryButtonIcon)
-                    .font(AtlasTypography.body)
+                    .font(AtlasTypography.body.weight(.semibold))
                     .frame(maxWidth: .infinity)
                     .frame(height: controlHeight)
             }
@@ -399,12 +493,142 @@ struct TourDetailView: View {
         }
     }
 
+    // MARK: - Overflow menu
+
+    /// Top-trailing `…` overflow menu. Order:
+    ///   1. Download (mirrors the inline download button's current state)
+    ///   2. Save (mirrors the inline bookmark)
+    ///   3. Share (ShareLink → standard iOS share sheet)
+    ///   4. Follow creator — DISABLED in V1; the follow graph requires
+    ///      accounts which aren't in scope. Shown grayed-out so the
+    ///      slot is visible and the feature reads as "planned" rather
+    ///      than missing.
+    ///   5. Go to creator — pushes MakerView via `.navigationDestination`.
+    ///   6. Report a concern — `mailto:` to owner inbox.
+    @ViewBuilder
+    private var overflowMenu: some View {
+        Menu {
+            Button(action: handleDownloadTap) {
+                Label(menuDownloadLabel, systemImage: menuDownloadIcon)
+            }
+            .disabled(menuDownloadDisabled)
+
+            Button(action: toggleSaved) {
+                Label(
+                    isSaved ? "Remove from saved" : "Save",
+                    systemImage: isSaved ? "bookmark.fill" : "bookmark"
+                )
+            }
+
+            ShareLink(item: shareText, subject: Text(tour.title)) {
+                Label("Share", systemImage: "square.and.arrow.up")
+            }
+
+            Section {
+                Button {
+                    // No-op — kept as a disabled item to surface the
+                    // upcoming "Follow" feature without delivering the
+                    // (unbuilt) follow graph.
+                } label: {
+                    Label("Follow creator", systemImage: "person.badge.plus")
+                }
+                .disabled(true)
+
+                Button {
+                    showingMaker = true
+                } label: {
+                    Label("Go to creator", systemImage: "person.crop.circle")
+                }
+            }
+
+            Section {
+                Button(role: .destructive) {
+                    if let url = reportURL {
+                        openURL(url)
+                    }
+                } label: {
+                    Label("Report a concern", systemImage: "exclamationmark.bubble")
+                }
+            }
+        } label: {
+            Image(systemName: "ellipsis.circle")
+                .font(AtlasTypography.body.weight(.semibold))
+                .foregroundStyle(AtlasColors.primaryText)
+                .accessibilityLabel("More options")
+        }
+    }
+
+    /// Menu-side label for the download item — mirrors the inline
+    /// button's state so the menu reads as a parallel control surface.
+    private var menuDownloadLabel: String {
+        let state = tourDownloader.states[tour.id] ?? .idle
+        switch state {
+        case .idle:        return "Download"
+        case .downloading: return "Cancel download"
+        case .completed:   return "Remove download"
+        case .failed:      return "Retry download"
+        }
+    }
+
+    private var menuDownloadIcon: String {
+        let state = tourDownloader.states[tour.id] ?? .idle
+        switch state {
+        case .idle:        return "arrow.down.circle"
+        case .downloading: return "stop.circle"
+        case .completed:   return "checkmark.circle.fill"
+        case .failed:      return "exclamationmark.circle"
+        }
+    }
+
+    private var menuDownloadDisabled: Bool {
+        tourDownloader.activeTourId != nil
+            && tourDownloader.activeTourId != tour.id
+    }
+
+    /// Plain-text payload for `ShareLink`. V1 has no public web
+    /// presence yet so we share a tour-identifying string rather than
+    /// a deep link — the design pass / launch can swap this for a
+    /// universal link without changing the UI.
+    private var shareText: String {
+        if let maker = dataService.maker(for: tour) {
+            return "\(tour.title) — by \(maker.displayName) on Atlas"
+        }
+        return "\(tour.title) on Atlas"
+    }
+
+    /// `mailto:` URL for the Report a concern menu item. Owner is sole
+    /// recipient for V1 (no moderation backend yet). Subject + body
+    /// are URL-encoded; tour ID lets the owner trace the report.
+    private var reportURL: URL? {
+        let to = "eyung@tishman.com"
+        let subject = "Atlas — report concern: \(tour.title)"
+        let body = """
+            Tour: \(tour.title)
+            Tour ID: \(tour.id.uuidString)
+
+            Concern:
+
+            """
+        var components = URLComponents()
+        components.scheme = "mailto"
+        components.path = to
+        components.queryItems = [
+            URLQueryItem(name: "subject", value: subject),
+            URLQueryItem(name: "body", value: body)
+        ]
+        return components.url
+    }
+
     // MARK: - Actions
 
     /// The primary button always opens the player sheet. The player itself
     /// owns playback orchestration — starting audio on first appear, and
     /// keeping it going when the sheet is dismissed. Re-tapping opens the
     /// sheet back up without restarting audio.
+    ///
+    /// PR 2 of the detail-sheet retool rewires this: Start Tour will
+    /// call `AudioPlayerService.play(...)` directly and the mini-player
+    /// becomes the only path to PlayerView (non-modal playback start).
     private func handlePrimaryAction() {
         showingPlayer = true
     }
@@ -442,16 +666,5 @@ struct TourDetailView: View {
     private var isThisTourLoading: Bool {
         audioPlayer.currentSourceId == tour.id.uuidString
             && audioPlayer.state == .loading
-    }
-
-    // MARK: - Formatters
-
-    private func formattedDuration(_ seconds: Int) -> String {
-        AtlasFormatters.duration(seconds: seconds)
-    }
-
-    private func formattedWalkingDistance(_ meters: Int?) -> String {
-        guard let meters else { return "—" }
-        return AtlasFormatters.distance(meters: Double(meters))
     }
 }
