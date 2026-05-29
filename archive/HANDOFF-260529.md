@@ -58,4 +58,4 @@ Still parked from session 12 (PR #93): owner feedback round 2+ on detail masthea
 
 Owner-facing chrome-shade-mismatch polish is now fully complete: seam closed (PR #91) + appearance-tracking fixed (PR #95). No known bottom-module visual bugs remain.
 
-No new TestFlight build cut. If the owner wants 1.0 (17) to ship this fix, bump `CURRENT_PROJECT_VERSION` 16 → 17 and run `xcodebuild archive`.
+Build 17 ships this fix (see middle of doc) — no further build-bump needed for it.
