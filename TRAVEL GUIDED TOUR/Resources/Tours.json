@@ -2992,6 +2992,220 @@
       "totalDurationSeconds": 169,
       "city": "Porto",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "34D5CFB8-EFF6-4F46-86F6-4DDA59855F34",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Beacon Theatre",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Beacon_Theatre_%2849020061512%29.jpg/1280px-Beacon_Theatre_%2849020061512%29.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "beacon theatre",
+        "upper west side",
+        "1929",
+        "movie palace",
+        "music venue",
+        "allman brothers",
+        "art deco"
+      ],
+      "stops": [
+        {
+          "id": "012376C3-0AEB-46E6-B3C2-001195C4AECE",
+          "order": 0,
+          "title": "Beacon Theatre",
+          "caption": "Stand on Broadway between 74th and 75th Streets, under the blade marquee.",
+          "latitude": 40.7798,
+          "longitude": -73.9817,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/beacon-theatre.mp3",
+          "audioDurationSeconds": 149,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Beacon_Theatre_%2849020061512%29.jpg/1280px-Beacon_Theatre_%2849020061512%29.jpg",
+          "transcriptText": "For twenty-five years, the Allman Brothers played a March residency on this stage.\n\nOn Broadway between 74th and 75th Streets, the Beacon Theatre rises above the street with its blade marquee and three-story ornamental facade — a 1929 movie palace that has been continuously operating, in one form or another, for nearly a hundred years. The architect was Walter Ahlschlager, and the theatre opened in December 1929, just weeks after the stock market crash, as a combined vaudeville and movie venue with two thousand eight hundred and ninety-four seats — at the time, the largest theatre on the Upper West Side.\n\nThe interior is the part that matters. Ahlschlager designed it as a fantasy of accumulated grandeur: gold leaf, painted murals, plaster sculpture, a vast vaulted ceiling decorated with classical figures, columns ornamented with Roman, Greek, Renaissance, and Rococo elements all at once. It is what was called, at the time, an \"atmospheric theatre\" — a building designed to make moviegoers feel they were entering somewhere worth being.\n\nMost theatres of this type were demolished in the second half of the twentieth century. Movie palaces of the 1920s were enormous buildings with enormous heating bills, and as suburban multiplexes took over American moviegoing, the Beacons of New York were torn down one by one. The Beacon survived in part by accident — it became a rock concert venue in the 1970s, then a Madison Square Garden Entertainment property in the 2000s, and was restored in 2008 in a sixteen-million-dollar renovation.\n\n[beat]\n\nThe Allman Brothers Band first played the Beacon in 1989, then returned in 1992, and made it an annual tradition: every March, for fifteen to twenty consecutive nights, the band would play at the Beacon and nowhere else in New York. The residency ran every year until 2014, when guitarist Derek Trucks left the band — and effectively ended the band's New York presence. Over those twenty-five years, the band played more than two hundred nights at the Beacon, and most of the band's bootlegs and live recordings from that era are taken from this stage.\n\nThe marquee still announces shows nearly every night of the year. Walk close to the entrance to see the ticket booth, the lobby behind the doors, and the original box office windows — the Beacon is one of the only major concert venues in New York where the building itself is worth seeing, even if you're not seeing a show."
+        }
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "centroidLatitude": 40.7798,
+      "centroidLongitude": -73.9817,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Broadway between 74th and 75th Streets, the Beacon Theatre rises above the street with its blade marquee and three-story ornamental facade — a 1929 movie palace that has been continuously operating, in one form or another, for nearly a hundred years. The architect was Walter Ahlschlager, and the theatre opened in December 1929, just weeks after the stock market crash, as a combined vaudeville and movie venue with 2,894 seats — at the time, the largest theatre on the Upper West Side. The interior is the part that matters: Ahlschlager designed it as a fantasy of accumulated grandeur — gold leaf, painted murals, plaster sculpture, a vast vaulted ceiling decorated with classical figures, columns ornamented with Roman, Greek, Renaissance, and Rococo elements all at once. It is what was called, at the time, an \"atmospheric theatre\" — a building designed to make moviegoers feel they were entering somewhere worth being.\n\nMost theatres of this type were demolished in the second half of the twentieth century. Movie palaces of the 1920s were enormous buildings with enormous heating bills, and as suburban multiplexes took over American moviegoing, the Beacons of New York were torn down one by one. The Beacon survived in part by accident — it became a rock concert venue in the 1970s, then a Madison Square Garden Entertainment property in the 2000s, and was restored in 2008 in a $16M renovation. The Allman Brothers Band first played the Beacon in 1989, then returned in 1992, and made it an annual tradition: every March, for fifteen to twenty consecutive nights, the band would play at the Beacon and nowhere else in New York. The residency ran every year until 2014, when guitarist Derek Trucks left the band. Over those twenty-five years, the band played more than two hundred nights here, and most of the band's bootlegs and live recordings from that era are taken from this stage.",
+      "shortDescription": "The 1929 Upper West Side movie palace turned premier concert hall — home of the Allman Brothers' twenty-five-year March residency.",
+      "totalDurationSeconds": 149,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "17D3F51A-3EBA-4D4C-922A-45656A2A67A7",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Chelsea Market",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Chelsea_Market_%2849052085186%29.jpg/1280px-Chelsea_Market_%2849052085186%29.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "chelsea market",
+        "meatpacking district",
+        "food hall",
+        "nabisco factory",
+        "1898",
+        "oreo",
+        "high line"
+      ],
+      "stops": [
+        {
+          "id": "932B4E4B-A10C-4D9C-BA0B-ABD87D266530",
+          "order": 0,
+          "title": "Chelsea Market",
+          "caption": "Enter the concourse on Ninth Avenue between 15th and 16th Streets.",
+          "latitude": 40.7424,
+          "longitude": -74.0061,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chelsea-market.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Chelsea_Market_%2849052085186%29.jpg/1280px-Chelsea_Market_%2849052085186%29.jpg",
+          "transcriptText": "The Oreo cookie was invented inside this building.\n\nChelsea Market occupies the entire block between Fifteenth and Sixteenth Streets on Ninth Avenue. The exterior is dark red brick, with industrial windows and the original factory loading bays still visible. The High Line, the elevated park you may have walked, runs directly through the upper floors of the building — entering on the south side, exiting on the north.\n\nThe factory was built in 1898 as the headquarters and main production facility of the National Biscuit Company, later known as Nabisco. For most of the early twentieth century, this building was one of the largest food manufacturing operations in New York. The Saltine cracker was made here. So was the Fig Newton, the Mallomar, and most notably, the Oreo — which was invented in 1912 by Nabisco chemists working in this building, on a then-experimental cream filling encased between two chocolate wafers. The recipe has been essentially unchanged for over a hundred years.\n\nThe factory closed in the 1950s. The building sat partially empty for decades. In the 1990s, the developer Irwin Cohen bought it and began converting it into mixed-use space — preserving the industrial character of the building while adding a long ground-floor concourse of food vendors. Chelsea Market opened in 1997. The upper floors became offices, eventually occupied by Google, which bought the entire upper portion of the building in 2018 for nearly two and a half billion dollars.\n\n[beat]\n\nWhat survives is the architecture, and the food. The concourse runs the length of the block, with about thirty-five vendors — bakeries, oyster bars, lobster rolls, tacos, Japanese knife shops, the original Amy's Bread, the Lobster Place, Los Tacos No. 1. The building is also where the Food Network operated for many years; their old studio is still on the south side. About six million people visit each year, making it one of the most popular food halls in the world.\n\nInside, the concourse runs the length of the building. It takes about ten minutes if you don't stop. Most people stop."
+        }
+      ],
+      "primaryCategory": "foodAndDrink",
+      "centroidLatitude": 40.7424,
+      "centroidLongitude": -74.0061,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Chelsea Market occupies the entire block between Fifteenth and Sixteenth Streets on Ninth Avenue. The exterior is dark red brick, with industrial windows and the original factory loading bays still visible; the High Line, the elevated park you may have walked, runs directly through the upper floors — entering on the south side, exiting on the north. The factory was built in 1898 as the headquarters and main production facility of the National Biscuit Company, later known as Nabisco. For most of the early twentieth century, this building was one of the largest food manufacturing operations in New York. The Saltine cracker was made here. So was the Fig Newton, the Mallomar, and most notably the Oreo — invented in 1912 by Nabisco chemists working in this building. The recipe has been essentially unchanged for over a hundred years.\n\nThe factory closed in the 1950s and the building sat partially empty for decades. In the 1990s, the developer Irwin Cohen bought it and began converting it into mixed-use space — preserving the industrial character while adding a long ground-floor concourse of food vendors. Chelsea Market opened in 1997. The upper floors became offices, eventually occupied by Google, which bought the entire upper portion of the building in 2018 for nearly $2.5 billion. What survives is the architecture, and the food. The concourse runs the length of the block with about thirty-five vendors — bakeries, oyster bars, lobster rolls, tacos, Japanese knife shops, the original Amy's Bread, the Lobster Place, Los Tacos No. 1. The Food Network operated here for many years; their old studio is still on the south side. About six million people visit each year, making it one of the most popular food halls in the world.",
+      "shortDescription": "The Meatpacking District food hall inside the 1898 Nabisco factory where the Oreo was invented — thirty-five vendors, six million visitors a year, the High Line running overhead.",
+      "totalDurationSeconds": 130,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "5CC23395-E76C-4CBE-8041-7B81E9886030",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Radio City Music Hall",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Radio_City_Music_Hall_%2851395756913%29.jpg/1280px-Radio_City_Music_Hall_%2851395756913%29.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "radio city music hall",
+        "rockefeller center",
+        "art deco",
+        "1932",
+        "rockettes",
+        "christmas spectacular",
+        "midtown"
+      ],
+      "stops": [
+        {
+          "id": "2D6DDCCA-6AA7-4C95-B505-1A4988BBF05E",
+          "order": 0,
+          "title": "Radio City Music Hall",
+          "caption": "Stand on Sixth Avenue at 50th Street and look up at the vertical Art Deco marquee.",
+          "latitude": 40.76,
+          "longitude": -73.9799,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/radio-city-music-hall.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Radio_City_Music_Hall_%2851395756913%29.jpg/1280px-Radio_City_Music_Hall_%2851395756913%29.jpg",
+          "transcriptText": "When this theater opened in 1932, it was the largest indoor theater in the world.\n\nLook up. The marquee runs nearly the entire facade — the most famous Art Deco marquee in New York, with the words \"RADIO CITY MUSIC HALL\" in massive vertical letters. The building is on Sixth Avenue at 50th Street, part of the Rockefeller Center complex, designed and built at the same time as the rest of it, opening on December 27, 1932.\n\nThe architect was Edward Durell Stone — the same architect who designed the original Lollipop Building at Columbus Circle. The interior was designed by Donald Deskey, one of the major American Art Deco designers, and is considered one of the most fully realized Art Deco interiors in the world. The auditorium itself is the gold standard for what an Art Deco theater could be: a fan-shaped ceiling that rises in concentric curves, walls in muted gold and sunset colors, six thousand seats arranged in three deep balconies.\n\nThe theater was originally intended as a vaudeville house. The opening-night program was a six-hour extravaganza of dance numbers, comedy sketches, animal acts, and live music. The audience hated it. Within weeks, the management changed format — moving to a combination of first-run movies and live stage shows, a model that Radio City pioneered.\n\nThe other thing that started early at Radio City was the Rockettes. The precision dance group — formed in 1925 in St. Louis, originally called the Missouri Rockets — moved to Radio City in 1932 as a permanent feature of the stage shows. The Christmas Spectacular, an annual holiday production built around the Rockettes, has run every December at Radio City since 1933. It is one of the longest-running theatrical productions in American history.\n\n[beat]\n\nToday the theater runs about three hundred events a year — concerts, award shows, the Tony Awards, and the Christmas Spectacular every winter. The interior is largely unchanged from 1932. If you have a chance to see anything inside, the building is the reason to go.\n\nWalk under the marquee. The Deskey-designed lobby is visible through the doors. Even the parts of Radio City visible from the sidewalk are some of the most carefully designed public surfaces in New York."
+        }
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "centroidLatitude": 40.76,
+      "centroidLongitude": -73.9799,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Look up. The marquee runs nearly the entire facade — the most famous Art Deco marquee in New York, with the words RADIO CITY MUSIC HALL in massive vertical letters. The building is on Sixth Avenue at 50th Street, part of the Rockefeller Center complex, designed and built at the same time as the rest of it, opening on December 27, 1932. The architect was Edward Durell Stone; the interior was designed by Donald Deskey, one of the major American Art Deco designers, and is considered one of the most fully realized Art Deco interiors in the world. The auditorium itself is the gold standard for what an Art Deco theater could be: a fan-shaped ceiling that rises in concentric curves, walls in muted gold and sunset colors, six thousand seats arranged in three deep balconies.\n\nThe theater was originally intended as a vaudeville house. The opening-night program was a six-hour extravaganza of dance numbers, comedy sketches, animal acts, and live music — and the audience hated it. Within weeks the management changed format, moving to a combination of first-run movies and live stage shows, a model Radio City pioneered. The other thing that started early at Radio City was the Rockettes: the precision dance group, formed in 1925 in St. Louis and originally called the Missouri Rockets, moved to Radio City in 1932 as a permanent feature of the stage shows. The Christmas Spectacular, built around the Rockettes, has run every December here since 1933 — one of the longest-running theatrical productions in American history. Today the theater runs about three hundred events a year — concerts, award shows, the Tony Awards, and the Christmas Spectacular every winter. The interior is largely unchanged from 1932.",
+      "shortDescription": "The 1932 Art Deco landmark at Rockefeller Center — six thousand seats, the Rockettes since opening night, the Christmas Spectacular every December for ninety years.",
+      "totalDurationSeconds": 141,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "B9E7EE4D-8EA7-419A-A345-F43CE996916E",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Tenement Museum",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Tenement_Museum_%2851624759160%29.jpg/1280px-The_Tenement_Museum_%2851624759160%29.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "tenement museum",
+        "lower east side",
+        "immigrant history",
+        "orchard street",
+        "1863",
+        "97 orchard"
+      ],
+      "stops": [
+        {
+          "id": "54257AA2-1E48-4A80-9A30-5C3129AF7621",
+          "order": 0,
+          "title": "Tenement Museum",
+          "caption": "Stand outside 97 Orchard Street on the Lower East Side; the visitor center is at 103.",
+          "latitude": 40.7188,
+          "longitude": -73.9897,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tenement-museum.mp3",
+          "audioDurationSeconds": 150,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Tenement_Museum_%2851624759160%29.jpg/1280px-The_Tenement_Museum_%2851624759160%29.jpg",
+          "transcriptText": "This building was sealed shut for fifty years, which is why it survived.\n\nIn front of you, at 97 Orchard Street, is the Tenement Museum — a five-story brick building, narrow and tall, that looks like every other Lower East Side tenement from the same era because that's exactly what it is. The building was constructed in 1863 by a German immigrant named Lukas Glockner as rental housing for the wave of immigrants arriving on the Lower East Side in the post-Civil War decades. Between 1863 and 1935, approximately seven thousand people from twenty different countries lived inside.\n\nWhat makes the building unique is what happened next. In 1935, after seventy-two years of continuous occupation, the upper floors were closed when new tenement laws required improvements the landlord didn't want to make. The ground-floor shops kept operating, but the apartments above them were locked, abandoned, and forgotten. For fifty-three years, nobody lived in 97 Orchard Street, and the building became, in effect, a time capsule — the wallpaper from the 1880s stayed on the walls, the linoleum floors from the 1910s stayed on the floors, and the layouts, fixtures, and painted moldings were simply left in place.\n\nIn 1988, a historian named Ruth Abram was looking for a building to use as an immigration museum, and she found this one. The upper floors had not been seen by anyone other than the landlord since the 1930s, and Abram and her co-founder Anita Jacobson realized that what they had was not a place to build a museum but a museum that had already built itself. They restored individual apartments to reflect the lives of actual identifiable former residents — German garment workers, Italian Catholic seamstresses, Jewish refugees, Greek shopkeepers — based on census records, court documents, and oral histories from descendants.\n\n[beat]\n\nWhat you can do here that you can't do anywhere else in New York is walk into the actual apartment of a specific identified family from a specific year, and see what their kitchen looked like, what their walls were like, and where their children slept. The tours are small, eight to ten people at a time, and they take place inside the recreated apartments themselves. The visitor center is at 103 Orchard, just south of here, and contains more recent apartments from later immigrant waves — Puerto Rican, Chinese, Bangladeshi families.\n\nThe exterior is plain — the historical weight is inside."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 40.7188,
+      "centroidLongitude": -73.9897,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "At 97 Orchard Street stands the Tenement Museum — a five-story brick building, narrow and tall, that looks like every other Lower East Side tenement from the same era because that's exactly what it is. It was constructed in 1863 by a German immigrant named Lukas Glockner as rental housing for the wave of immigrants arriving on the Lower East Side in the post-Civil War decades. Between 1863 and 1935, approximately seven thousand people from twenty different countries lived inside. What makes the building unique is what happened next: in 1935, after seventy-two years of continuous occupation, the upper floors were closed when new tenement laws required improvements the landlord didn't want to make. The ground-floor shops kept operating, but the apartments above them were locked, abandoned, and forgotten. For fifty-three years nobody lived here, and the building became, in effect, a time capsule — the wallpaper from the 1880s stayed on the walls, the linoleum from the 1910s stayed on the floors, layouts and fixtures simply left in place.\n\nIn 1988, the historian Ruth Abram was looking for a building to use as an immigration museum, and she found this one. The upper floors had not been seen by anyone other than the landlord since the 1930s, and Abram and her co-founder Anita Jacobson realized that what they had was not a place to build a museum but a museum that had already built itself. They restored individual apartments to reflect the lives of actual identifiable former residents — German garment workers, Italian Catholic seamstresses, Jewish refugees, Greek shopkeepers — based on census records, court documents, and oral histories from descendants. What you can do here that you can't do anywhere else in New York is walk into the actual apartment of a specific identified family from a specific year. The tours are small, eight to ten people at a time, inside the recreated apartments themselves; the visitor center at 103 Orchard contains more recent apartments from later immigrant waves — Puerto Rican, Chinese, Bangladeshi families.",
+      "shortDescription": "97 Orchard Street — a Lower East Side tenement built in 1863, sealed shut from 1935 to 1988, accidentally preserved as a time capsule of immigrant life.",
+      "totalDurationSeconds": 150,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "7E4C1263-6FBA-49C1-A275-E462A449DDE9",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "The Woolworth Building",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Exterior_Woolworth_Building_2015.jpg/1280px-Exterior_Woolworth_Building_2015.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "woolworth building",
+        "cass gilbert",
+        "1913",
+        "cathedral of commerce",
+        "lower manhattan",
+        "gothic revival",
+        "skyscraper"
+      ],
+      "stops": [
+        {
+          "id": "A8879481-4D17-4B8B-9919-F99CCB7578B2",
+          "order": 0,
+          "title": "The Woolworth Building",
+          "caption": "Stand on Broadway across from City Hall Park looking up at 233 Broadway.",
+          "latitude": 40.7124,
+          "longitude": -74.0084,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/woolworth-building.mp3",
+          "audioDurationSeconds": 160,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Exterior_Woolworth_Building_2015.jpg/1280px-Exterior_Woolworth_Building_2015.jpg",
+          "transcriptText": "Frank Woolworth paid for this building in cash.\n\nLook up. The Gothic Revival skyscraper in front of you, on Broadway across from City Hall Park, is the Woolworth Building — completed in 1913, 792 feet tall, sixty stories, the tallest building in the world for seventeen years. The exterior is white terra cotta and limestone, carved with Gothic detailing: pointed arches, flying buttresses, gargoyles, a steep central tower. The clergyman who delivered the opening speech in 1913 called it the \"Cathedral of Commerce,\" and the name stuck.\n\nFrank Winfield Woolworth made his money one nickel at a time. He had opened a \"five-cent store\" in Utica, New York, in 1879, selling small household goods at a fixed low price — needles, soap, pots, candy — but the store failed. He tried again in Lancaster, Pennsylvania, with a five-and-ten-cent format, and that one worked. By the early 1900s, F.W. Woolworth had built a chain of nearly six hundred stores across the United States and Britain, and he had become one of the richest men in America.\n\nHe commissioned the building in 1910 from the architect Cass Gilbert, who would later design the U.S. Supreme Court building in Washington. Gilbert gave him Gothic Revival — a style associated with cathedrals, universities, and old money — which was exactly the signal Woolworth wanted to send. The building cost thirteen and a half million dollars, and Woolworth paid in cash, in full, with no mortgage. The lobby is decorated with mosaics, marble, and bronze, and a bas-relief above one elevator shows Woolworth himself, counting coins.\n\n[beat]\n\nWhat's worth knowing, looking up at this building, is what it represented at the moment it opened. In 1913, the skyline of New York City was about to change permanently. The Woolworth Building was the first true skyscraper to be built primarily as a corporate symbol — the headquarters of a single company, designed to advertise that company's wealth and reach. The pattern it established would define the next century of American corporate architecture: every major company that has built a flagship skyscraper since — Chrysler, Empire State, Seagram, Citigroup, One World Trade — is, in some sense, building a more modern version of the same idea.\n\nThe upper floors are now luxury condominiums, and the lobby is occasionally open for tours, by appointment. Walk in if you can — the marble and the mosaic ceiling are genuinely unlike anything else in New York."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 40.7124,
+      "centroidLongitude": -74.0084,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The Gothic Revival skyscraper on Broadway across from City Hall Park is the Woolworth Building — completed in 1913, 792 feet tall, sixty stories, the tallest building in the world for seventeen years. The exterior is white terra cotta and limestone, carved with Gothic detailing: pointed arches, flying buttresses, gargoyles, a steep central tower. The clergyman who delivered the opening speech in 1913 called it the Cathedral of Commerce, and the name stuck. Frank Winfield Woolworth made his money one nickel at a time. He had opened a five-cent store in Utica in 1879, selling small household goods at a fixed low price — needles, soap, pots, candy — but the store failed. He tried again in Lancaster, Pennsylvania, with a five-and-ten-cent format, and that one worked. By the early 1900s, F.W. Woolworth had built a chain of nearly six hundred stores across the United States and Britain.\n\nHe commissioned the building in 1910 from Cass Gilbert, who would later design the U.S. Supreme Court building in Washington. Gilbert gave him Gothic Revival — a style associated with cathedrals, universities, and old money — which was exactly the signal Woolworth wanted to send. The building cost $13.5 million and Woolworth paid in cash, in full, with no mortgage. The lobby is decorated with mosaics, marble, and bronze, and a bas-relief above one elevator shows Woolworth himself, counting coins. In 1913 the skyline of New York City was about to change permanently. The Woolworth Building was the first true skyscraper built primarily as a corporate symbol — the headquarters of a single company, designed to advertise that company's wealth and reach. The pattern it established would define the next century of American corporate architecture: Chrysler, Empire State, Seagram, Citigroup, One World Trade. The upper floors are now luxury condominiums; the lobby is occasionally open for tours by appointment.",
+      "shortDescription": "Cass Gilbert's 1913 \"Cathedral of Commerce\" on Broadway — 792 feet of white terra cotta Gothic Revival, world's tallest building for seventeen years, paid for by Frank Woolworth in cash.",
+      "totalDurationSeconds": 160,
+      "city": "New York",
+      "walkingDistanceMeters": null
     }
   ]
 }
