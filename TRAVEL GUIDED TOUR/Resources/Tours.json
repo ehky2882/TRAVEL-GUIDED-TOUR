@@ -2680,6 +2680,318 @@
       "totalDurationSeconds": 141,
       "city": "Leça da Palmeira",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "87F9ACCF-358D-4775-AD08-4AAEB3A5CE98",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Apollo Theater",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Apollo_Theater_Harlem_NYC_2010.JPG/1280px-Apollo_Theater_Harlem_NYC_2010.JPG",
+      "additionalImageURLs": [],
+      "tags": [
+        "apollo theater",
+        "harlem",
+        "music venue",
+        "african american culture",
+        "amateur night",
+        "1934",
+        "art deco"
+      ],
+      "stops": [
+        {
+          "id": "C633E18C-9F4C-49E5-912C-7266BC912334",
+          "order": 0,
+          "title": "Apollo Theater",
+          "caption": "Stand on West 125th Street under the red-and-yellow Art Deco marquee.",
+          "latitude": 40.81002,
+          "longitude": -73.95019,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/apollo-theater.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Apollo_Theater_Harlem_NYC_2010.JPG/1280px-Apollo_Theater_Harlem_NYC_2010.JPG",
+          "transcriptText": "Every Wednesday since 1934, amateurs have tried out on the stage behind you.\n\nThe Art Deco marquee above you reads \"Apollo\" — red and yellow neon, the name in massive lettering. The theater is on West 125th Street between Adam Clayton Powell and Frederick Douglass Boulevards, in Harlem. The building is older than the Apollo brand. It was built in 1914 as Hurtig and Seamon's New Burlesque Theater, a vaudeville house. In 1934, after years of decline, the building was bought by a new pair of owners who reopened it as the Apollo — a venue for Black audiences and Black performers, at a time when most New York theaters were segregated and almost no major venue was open to Black artists.\n\nWhat followed defined American popular music. The Apollo's Wednesday Amateur Night, which started in 1934 and has run almost continuously ever since, has been the launching pad for an extraordinary list of careers. Ella Fitzgerald, seventeen years old, won her first cash prize on the Apollo stage in November of 1934. James Brown, Sarah Vaughan, Sammy Davis Jr., Lauryn Hill, the Jackson 5, Stevie Wonder — all of them won Amateur Night before they were famous. The audience at Amateur Night is, by tradition, the loudest and least forgiving in American show business. They cheer talent and boo failure. A performer who can hold the Apollo crowd has done something other performers cannot.\n\nThe theater holds about fifteen hundred seats. Backstage, there is a stump of wood mounted to the wall — a fragment of an elm tree that once stood across the street, called the \"Tree of Hope,\" that performers from the 1920s onward touched for luck before going on. Touching the stump is still tradition.\n\n[beat]\n\nThe Apollo has been more than a music venue. In its prime, it was a community center for Harlem — political rallies, church services, fundraisers, theatrical productions all happened here. Civil rights leaders spoke from this stage. So did virtually every major Black American musician of the twentieth century. The building has been continuously operating for over ninety years.\n\nLook up at the marquee, then walk a block or two. Harlem stretches in every direction, and the Apollo is one of many landmarks along this stretch of 125th Street."
+        }
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "centroidLatitude": 40.81002,
+      "centroidLongitude": -73.95019,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The Art Deco marquee on West 125th Street between Adam Clayton Powell and Frederick Douglass Boulevards spells out Apollo in red and yellow neon — but the building itself is older than the brand. It opened in 1914 as Hurtig and Seamon's New Burlesque Theater, a vaudeville house, and was rebought in 1934 by new owners who reopened it as the Apollo: a venue for Black audiences and Black performers at a time when most New York theaters were segregated and almost no major venue was open to Black artists. What followed defined American popular music. The Apollo's Wednesday Amateur Night, which started in 1934 and has run almost continuously since, has launched an extraordinary list of careers — Ella Fitzgerald won her first cash prize here at seventeen in November 1934; James Brown, Sarah Vaughan, Sammy Davis Jr., Lauryn Hill, the Jackson 5, and Stevie Wonder all won Amateur Night before they were famous.\n\nThe theater holds about fifteen hundred seats. Backstage, mounted to the wall, is a stump of wood — a fragment of an elm tree that once stood across the street, called the Tree of Hope, that performers from the 1920s onward touched for luck before going on. Touching the stump is still tradition. In its prime the Apollo was more than a music venue: political rallies, church services, fundraisers, and theatrical productions all happened here, and civil rights leaders spoke from this stage alongside virtually every major Black American musician of the twentieth century. The building has been continuously operating for over ninety years.",
+      "shortDescription": "Harlem's Apollo Theater — Amateur Night since 1934, the stage that launched Ella Fitzgerald, James Brown, and most of American popular music.",
+      "totalDurationSeconds": 145,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "3A777F95-D8BA-4286-B9F0-F2A02D105E56",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Carnegie Hall",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Carnegie_Hall_exterior%2C_NYC_IMG_3937.JPG/1280px-Carnegie_Hall_exterior%2C_NYC_IMG_3937.JPG",
+      "additionalImageURLs": [],
+      "tags": [
+        "carnegie hall",
+        "midtown",
+        "concert hall",
+        "italian renaissance revival",
+        "1891",
+        "tchaikovsky",
+        "isaac stern"
+      ],
+      "stops": [
+        {
+          "id": "15A89D5E-78DA-4DB1-AAE4-32A2C809568D",
+          "order": 0,
+          "title": "Carnegie Hall",
+          "caption": "Stand at the corner of 57th Street and Seventh Avenue looking at the Italian Renaissance Revival facade.",
+          "latitude": 40.76512,
+          "longitude": -73.97994,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/carnegie-hall.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Carnegie_Hall_exterior%2C_NYC_IMG_3937.JPG/1280px-Carnegie_Hall_exterior%2C_NYC_IMG_3937.JPG",
+          "transcriptText": "Carnegie Hall was almost demolished in 1960.\n\nAt the corner of 57th Street and Seventh Avenue stands Carnegie Hall — the most famous concert hall in the United States, and one of the most acoustically renowned rooms in the world. The exterior is solid Italian Renaissance Revival — terra cotta and brick, six stories, an arched entrance on 57th Street. The architecture is restrained. What matters is inside.\n\nCarnegie Hall opened on May 5, 1891. The funding came from Andrew Carnegie, the steel baron. The architect was William Burnet Tuthill, an amateur cellist whose only major building this was. Tuthill had spent years researching concert hall design, and had laid out the interior specifically to favor sound — using fan-shaped, plaster-walled forms that, by accident as much as engineering, produced the acoustics that have defined the building's reputation ever since.\n\nTchaikovsky conducted at the opening night gala. In the years since, virtually every major classical musician has played here — and most of the major figures of twentieth-century popular music as well. The Beatles played here in 1964. Bob Dylan, Billie Holiday, Frank Sinatra, Ella Fitzgerald, Judy Garland — the list runs on for pages. The American debuts of Tchaikovsky, Strauss, Mahler, Dvořák, and Rachmaninoff all happened in this building.\n\n[beat]\n\nIn 1960, Carnegie Hall was nearly demolished. The New York Philharmonic had decided to move to the new Lincoln Center complex, and the developer who owned Carnegie Hall planned to tear it down and build an office tower in its place. A coalition of musicians, led by the violinist Isaac Stern, mounted a campaign to save the building. They succeeded at the very last possible moment — the city bought the building from the developer in 1960, and a nonprofit was created to run it. The Philharmonic moved to Lincoln Center anyway. Carnegie Hall has remained, and the new concert hall they moved to has been extensively rebuilt twice since.\n\nThe marquee runs day and night. The day's concerts are listed inside the lobby — most evenings, two or three concerts are happening simultaneously in the building's three halls."
+        }
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "centroidLatitude": 40.76512,
+      "centroidLongitude": -73.97994,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "At the corner of 57th Street and Seventh Avenue stands Carnegie Hall — the most famous concert hall in the United States, and one of the most acoustically renowned rooms in the world. The exterior is solid Italian Renaissance Revival in terra cotta and brick, six stories, an arched entrance on 57th Street. The architecture is restrained. What matters is inside. Carnegie Hall opened on May 5, 1891. The funding came from Andrew Carnegie, the steel baron; the architect was William Burnet Tuthill, an amateur cellist whose only major building this was. Tuthill had spent years researching concert hall design and laid out the interior specifically to favor sound — fan-shaped, plaster-walled forms that, by accident as much as engineering, produced the acoustics that have defined the building's reputation ever since. Tchaikovsky conducted at the opening night gala.\n\nIn the years since, virtually every major classical musician has played here, and most of the major figures of twentieth-century popular music as well — the Beatles in 1964, Bob Dylan, Billie Holiday, Frank Sinatra, Ella Fitzgerald, Judy Garland. The American debuts of Strauss, Mahler, Dvořák, and Rachmaninoff all happened in this building. In 1960, Carnegie Hall was nearly demolished: the New York Philharmonic had decided to move to the new Lincoln Center complex, and the developer who owned Carnegie Hall planned to tear it down for an office tower. A coalition of musicians led by the violinist Isaac Stern saved the building at the very last possible moment — the city bought it in 1960 and a nonprofit was created to run it. The Philharmonic moved to Lincoln Center anyway. Carnegie Hall has remained, and the new concert hall they moved to has been extensively rebuilt twice since.",
+      "shortDescription": "Tchaikovsky inaugurated it in 1891; Isaac Stern saved it from the wrecking ball in 1960. The most famous concert hall in America, still running three rooms a night.",
+      "totalDurationSeconds": 141,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "AF13873B-D1F4-4B82-B2A4-CF16D379771E",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "The Cloisters",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/2013_The_Cloisters_from_Linden_Terrace_in_Fort_Tryon_Park.jpg/1280px-2013_The_Cloisters_from_Linden_Terrace_in_Fort_Tryon_Park.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "the cloisters",
+        "fort tryon park",
+        "metropolitan museum",
+        "medieval art",
+        "rockefeller",
+        "unicorn tapestries",
+        "1938"
+      ],
+      "stops": [
+        {
+          "id": "4E52B65E-A314-4C2A-A58A-401DCF4FD126",
+          "order": 0,
+          "title": "The Cloisters",
+          "caption": "Start at the steps at the museum entrance looking west across the Hudson to the Palisades.",
+          "latitude": 40.86486,
+          "longitude": -74.01858,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cloisters.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/2013_The_Cloisters_from_Linden_Terrace_in_Fort_Tryon_Park.jpg/1280px-2013_The_Cloisters_from_Linden_Terrace_in_Fort_Tryon_Park.jpg",
+          "transcriptText": "Rockefeller bought the view too.\n\nAt the northern tip of Manhattan, in Fort Tryon Park, stands The Cloisters — the medieval art branch of the Metropolitan Museum. From the steps at the entrance, you can see across the Hudson River to the cliffs of New Jersey, called the Palisades. The view from inside the museum, from the windows and terraces, is the same: the river, the cliffs, the forested park around you. It is one of the few places in New York City where you can look at a landscape that is essentially unchanged from the seventeenth century.\n\nThe Cloisters was built between 1934 and 1938, funded entirely by John D. Rockefeller Jr. Rockefeller had purchased the medieval art collection of the sculptor George Grey Barnard, who had been collecting fragments of dismantled European monasteries for decades. Rockefeller donated the collection to the Met and commissioned the architect Charles Collens to design a building to house it. The result is a museum that looks, deliberately, like a medieval monastery — but is built partly from real medieval monasteries. Stones, columns, arches, and entire sections of cloisters from twelfth-century French abbeys were shipped to New York and incorporated into the new building.\n\nThe four cloisters that give the museum its name are largely reassembled from those original pieces — the Cuxa, Saint-Guilhem, Bonnefont, and Trie cloisters, each from a different French abbey. Among them, the museum displays one of the most important medieval art collections in the Western Hemisphere, including the Unicorn Tapestries — seven late fifteenth-century tapestries that are among the most studied artworks in any museum.\n\n[beat]\n\nThe view is the other thing Rockefeller bought. To preserve the medieval atmosphere from inside the museum, he purchased seven hundred acres of land across the Hudson River, in New Jersey, and donated it to the Palisades Interstate Park Commission to keep it from being developed. The cliffs you see from the museum windows have stayed undeveloped because Rockefeller paid to make sure they would.\n\nFind a spot at the wall. Look across the river. What you're seeing is not nature. It is a view that was deliberately curated, and paid for, almost a hundred years ago."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 40.86486,
+      "centroidLongitude": -74.01858,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "At the northern tip of Manhattan, in Fort Tryon Park, stands The Cloisters — the medieval art branch of the Metropolitan Museum. From the steps at the entrance you can see across the Hudson River to the cliffs of New Jersey, called the Palisades. The view from inside the museum is the same: the river, the cliffs, the forested park around you. It is one of the few places in New York City where you can look at a landscape essentially unchanged from the seventeenth century. The Cloisters was built between 1934 and 1938, funded entirely by John D. Rockefeller Jr., who had purchased the medieval art collection of the sculptor George Grey Barnard — fragments of dismantled European monasteries Barnard had been gathering for decades. Rockefeller donated the collection to the Met and commissioned the architect Charles Collens to design a building to house it.\n\nThe result is a museum that looks, deliberately, like a medieval monastery — and is built partly from real ones. Stones, columns, arches, and entire sections of cloisters from twelfth-century French abbeys were shipped to New York and incorporated into the new building. The four cloisters that give the museum its name are largely reassembled from those original pieces — Cuxa, Saint-Guilhem, Bonnefont, and Trie, each from a different French abbey. Among them the museum displays one of the most important medieval art collections in the Western Hemisphere, including the Unicorn Tapestries. The view is the other thing Rockefeller bought: to preserve the medieval atmosphere from inside, he purchased seven hundred acres of land across the Hudson River in New Jersey and donated it to the Palisades Interstate Park Commission to keep it from being developed. The cliffs you see from the museum windows have stayed undeveloped because Rockefeller paid to make sure they would.",
+      "shortDescription": "The Met's medieval art outpost in Fort Tryon Park, built 1934–38 from real twelfth-century French monasteries — and the cliffs across the Hudson are part of the view by design.",
+      "totalDurationSeconds": 134,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "0CFBC186-090A-4884-977B-208781C962DE",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Lincoln Center for the Performing Arts",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/150919_003_Lincoln_Center_-_Revson_Fountain%2C_Koch_Theater%2C_Metropolitan_Opera_%2821223352214%29.jpg/1280px-150919_003_Lincoln_Center_-_Revson_Fountain%2C_Koch_Theater%2C_Metropolitan_Opera_%2821223352214%29.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "lincoln center",
+        "upper west side",
+        "performing arts",
+        "metropolitan opera",
+        "san juan hill",
+        "wallace harrison",
+        "1962"
+      ],
+      "stops": [
+        {
+          "id": "95CEF26F-44ED-473F-953C-C932002FF019",
+          "order": 0,
+          "title": "Lincoln Center for the Performing Arts",
+          "caption": "Stand at Josie Robertson Plaza by the Revson Fountain, Met Opera to the west.",
+          "latitude": 40.77264,
+          "longitude": -73.98363,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lincoln-center.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/150919_003_Lincoln_Center_-_Revson_Fountain%2C_Koch_Theater%2C_Metropolitan_Opera_%2821223352214%29.jpg/1280px-150919_003_Lincoln_Center_-_Revson_Fountain%2C_Koch_Theater%2C_Metropolitan_Opera_%2821223352214%29.jpg",
+          "transcriptText": "Lincoln Center was built on a neighborhood that was demolished.\n\nThe plaza in front of you is the Josie Robertson Plaza, the central courtyard of Lincoln Center. At the center, the round basin of the Revson Fountain. Around it, three buildings: to your west, the Metropolitan Opera House, with its five tall arched windows. To your north, the David Geffen Hall — home of the New York Philharmonic. To your south, the David H. Koch Theater — home of New York City Ballet. Behind those buildings, Juilliard, the Chamber Music Society, several smaller theaters, and a film center. Together, they make up the largest performing arts complex in the world.\n\nLincoln Center opened in stages, between 1962 and 1969. The project was led by John D. Rockefeller the Third — the same Rockefeller family that built The Cloisters and Rockefeller Center. Three different architects designed the three main buildings: Wallace Harrison did the Met Opera, Max Abramovitz did the Philharmonic hall, Philip Johnson did the ballet theater. The plaza itself was designed to feel like an Italian piazza.\n\nBefore any of this was here, the site was a working-class neighborhood called San Juan Hill. It was one of the largest Black and Puerto Rican neighborhoods in Manhattan, home to about seven thousand people. The conditions were poor, but the community was tightly knit, and the music coming out of it — early jazz, Latin music — was nationally influential. In the late 1950s, the city designated the neighborhood as a \"slum clearance\" site under urban renewal laws, condemned the buildings, and evicted the residents. The neighborhood was demolished to make way for what you're standing on now.\n\n[beat]\n\nThe most famous image of San Juan Hill is from a movie. The 1961 film of West Side Story was filmed in the half-demolished streets of the neighborhood, in the months just before the bulldozers finished the job. The neighborhood you see in the opening scene — the dance numbers, the playground basketball, the brick tenements — was being destroyed in real time as the cameras rolled. By the time the film opened in theaters, San Juan Hill no longer existed.\n\nThe Revson Fountain at the center pulses on a five-minute cycle. The complex is free to enter and walk through, whether there's a performance or not."
+        }
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "centroidLatitude": 40.77264,
+      "centroidLongitude": -73.98363,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The plaza is the Josie Robertson Plaza, the central courtyard of Lincoln Center, with the Revson Fountain at the center. Around it are three buildings: the Metropolitan Opera House to the west with its five tall arched windows, David Geffen Hall to the north (home of the New York Philharmonic), and the David H. Koch Theater to the south (home of New York City Ballet). Behind those are Juilliard, the Chamber Music Society, several smaller theaters, and a film center. Together they make up the largest performing arts complex in the world. Lincoln Center opened in stages between 1962 and 1969, led by John D. Rockefeller III. Three different architects designed the three main buildings — Wallace Harrison did the Met Opera, Max Abramovitz did the Philharmonic hall, Philip Johnson did the ballet theater. The plaza itself was designed to feel like an Italian piazza.\n\nBefore any of this was here, the site was a working-class neighborhood called San Juan Hill — one of the largest Black and Puerto Rican neighborhoods in Manhattan, home to about seven thousand people. The conditions were poor but the community was tightly knit, and the music coming out of it — early jazz, Latin music — was nationally influential. In the late 1950s the city designated the neighborhood as a slum-clearance site under urban renewal laws, condemned the buildings, and evicted the residents. The neighborhood was demolished to make way for what you're standing on. The most famous image of San Juan Hill is from a movie: the 1961 film of West Side Story was shot in the half-demolished streets in the months just before the bulldozers finished the job. By the time the film opened, San Juan Hill no longer existed. The Revson Fountain at the center pulses on a five-minute cycle. The complex is free to enter and walk through, whether there's a performance or not.",
+      "shortDescription": "The world's largest performing arts complex — Met Opera, Philharmonic, City Ballet, Juilliard — built 1962–69 on the demolished San Juan Hill neighborhood.",
+      "totalDurationSeconds": 140,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "17BE3EA0-C3E6-4CE9-87C5-E9F2C07CC2BD",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Stonewall Inn",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Stonewall_Inn%2C_NYC_%28May_2014%29_-_2.JPG/1280px-Stonewall_Inn%2C_NYC_%28May_2014%29_-_2.JPG",
+      "additionalImageURLs": [],
+      "tags": [
+        "stonewall inn",
+        "greenwich village",
+        "west village",
+        "lgbtq history",
+        "1969 uprising",
+        "national monument",
+        "christopher street"
+      ],
+      "stops": [
+        {
+          "id": "7C4D94B7-78AE-4788-986D-95F997FB6E3C",
+          "order": 0,
+          "title": "Stonewall Inn, Greenwich Village",
+          "caption": "Stand at 53 Christopher Street looking at the red brick building with the rainbow flag.",
+          "latitude": 40.73395,
+          "longitude": -74.00237,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/stonewall-inn.mp3",
+          "audioDurationSeconds": 154,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Stonewall_Inn%2C_NYC_%28May_2014%29_-_2.JPG/1280px-Stonewall_Inn%2C_NYC_%28May_2014%29_-_2.JPG",
+          "transcriptText": "The bar in front of you is a national monument.\n\nFind the red brick building with the small rainbow flag in the front window. That's the Stonewall Inn, 53 Christopher Street, in the West Village. The building is two stories, narrower than its neighbors, with a faded red awning. It doesn't look like much. Across the street, Christopher Park — a small triangular park with a statue group called \"Gay Liberation\" by the sculptor George Segal: two pairs of figures, painted white. Around you, the West Village stretches in every direction: narrow streets, low brick townhouses, a neighborhood that has refused to fit the Manhattan grid.\n\nOn the night of June 28, 1969, the New York Police Department raided the Stonewall Inn. Police raids of gay bars were routine at the time — it was illegal to dance with a same-sex partner in New York, illegal to serve alcohol to gay patrons, illegal in many places to be openly gay. What was different that night was the response. The patrons did not disperse. They fought back. The crowd outside the bar grew, then grew larger, then grew larger still. The protests continued for six days.\n\nThe Stonewall Riots are now considered the founding moment of the modern gay rights movement. The first Pride March, one year later on June 28, 1970, started from this corner and walked uptown to Central Park. Every Pride parade since — in any city, anywhere in the world — traces back to that night and this bar.\n\nIn 2016, President Obama designated the Stonewall Inn and the surrounding seven and a half acres a national monument — the first in the United States dedicated to the LGBTQ+ rights movement.\n\n[beat]\n\nThe bar is still operating. It's still a gay bar, though now it's also a destination — visitors come from around the world to see the place where it happened. On Pride weekend, the streets outside fill with hundreds of thousands of people.\n\nThe Village around you was what surrounded the bar in 1969 — a neighborhood that, since the early twentieth century, has been the city's center of bohemian, artistic, and queer life. Henry James, Edna St. Vincent Millay, Bob Dylan, James Baldwin, Patti Smith, Andy Warhol all lived or worked within a few blocks of where you're standing.\n\nWalk Christopher Street. Cross into the park to see the Segal sculpture. The bar will be open later if you want to step inside."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 40.73395,
+      "centroidLongitude": -74.00237,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The red brick building with the small rainbow flag in the front window is the Stonewall Inn, 53 Christopher Street, in the West Village — two stories, narrower than its neighbors, with a faded red awning. It doesn't look like much. Across the street is Christopher Park, a small triangular park with George Segal's sculpture group Gay Liberation: two pairs of figures painted white. Around you the West Village stretches in every direction — narrow streets, low brick townhouses, a neighborhood that has refused to fit the Manhattan grid. On the night of June 28, 1969, the New York Police Department raided the Stonewall Inn. Police raids of gay bars were routine at the time — it was illegal to dance with a same-sex partner in New York, illegal to serve alcohol to gay patrons, illegal in many places to be openly gay. What was different that night was the response: the patrons did not disperse. They fought back. The crowd outside the bar grew, then grew larger, then grew larger still. The protests continued for six days.\n\nThe Stonewall Riots are now considered the founding moment of the modern gay rights movement. The first Pride March, one year later on June 28, 1970, started from this corner and walked uptown to Central Park. Every Pride parade since — in any city, anywhere in the world — traces back to that night and this bar. In 2016, President Obama designated the Stonewall Inn and the surrounding seven and a half acres a national monument, the first in the United States dedicated to the LGBTQ+ rights movement. The bar is still operating, and it's still a gay bar, though now it's also a destination — visitors come from around the world to see the place where it happened. The Village around you was what surrounded the bar in 1969: a neighborhood that, since the early twentieth century, has been the city's center of bohemian, artistic, and queer life — Henry James, Edna St. Vincent Millay, Bob Dylan, James Baldwin, Patti Smith, Andy Warhol all lived or worked within a few blocks.",
+      "shortDescription": "53 Christopher Street — the West Village bar where, on June 28, 1969, patrons fought back against a police raid. First U.S. national monument to the LGBTQ+ rights movement.",
+      "totalDurationSeconds": 154,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "AE09A378-A06A-4890-BD3D-435FAC5EB7A9",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Bolhão Market",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bolhao_Market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bolhao_Market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bolhao_Market_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bolhao_Market_4.webp"
+      ],
+      "tags": [
+        "bolhao market",
+        "porto",
+        "historic market",
+        "1914",
+        "food market",
+        "beaux-arts",
+        "azulejo"
+      ],
+      "stops": [
+        {
+          "id": "FA97D88B-BB58-4435-82F8-AB7FB815E73D",
+          "order": 0,
+          "title": "Bolhão Market",
+          "caption": "Enter from Rua Formosa to the south and stop at the edge of the ground floor before moving through.",
+          "latitude": 41.148694732362266,
+          "longitude": -8.607493012562879,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bolhao-market.mp3",
+          "audioDurationSeconds": 148,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bolhao_Market_hero.webp",
+          "transcriptText": "Before this was a market, before it was even a square, it was waterlogged ground with a stream running through it — and where the stream pooled, it formed a bubble, which in Portuguese is bolhão, and that is how a food market in the centre of Porto came to be named after a marsh that no longer exists.\nThe city council built on the site in eighteen thirty-nine, but the building you're standing in front of now came seventy-five years after that, in nineteen fourteen, designed by the architect António Correia da Silva in a combination that was genuinely unusual for a market of its time: reinforced concrete alongside an iron structure, which gave him the large open spans the interior required while the exterior was dressed in the neoclassical granite language that Porto expected of its civic buildings. The result is a building that presents itself as one thing from the street and reveals itself as something rather different once you're inside.\nYou should be at one of the four street entrances — Rua Formosa to the south is the main one — so go in and stop at the edge of the ground floor to take in the full interior before you start moving through it.\nTwo levels, an open central courtyard, iron galleries running the full length of the upper floor on slender columns, corrugated metal and timber over the stalls below, and the whole thing flooded with the sounds and smells of a working food market that has been operating on this site, in various forms, for the better part of two centuries. The renovation completed in twenty twenty-two — the fourth attempt after three previous failures across three decades, this one finally successful after four years of work — introduced something worth looking down at as you walk: the aisles are named as streets, and the signs are set in traditional azulejo tiles of the kind used for street names across Porto, so the market's internal layout is mapped as though it were a neighbourhood, which is a small decision with a surprisingly large effect on how the place feels to move through.\n[beat]\nWhen the Portuguese government listed Bolhão as a Monument of Public Interest, the protection order covered two things: the Beaux-Arts building and its function as a traditional food market — not just the architecture, but the activity inside it, the vendors, the fish stalls, the flower sellers — which is not how heritage protection normally works, because most listed buildings are protected for what they look like rather than what they do. Around seventy traders work here daily, and the fish section is worth finding if you haven't already."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 41.148694732362266,
+      "centroidLongitude": -8.607493012562879,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Before this was a market, before it was even a square, it was waterlogged ground with a stream running through it — and where the stream pooled, it formed a bubble, which in Portuguese is bolhão, and that is how a food market in the centre of Porto came to be named after a marsh that no longer exists. The city council built on the site in 1839, but the building you see now came seventy-five years after that, in 1914, designed by António Correia da Silva in a combination genuinely unusual for a market of its time: reinforced concrete alongside an iron structure, which gave him the large open spans the interior required while the exterior was dressed in the neoclassical granite language Porto expected of its civic buildings. The result presents itself as one thing from the street and reveals itself as something rather different once you're inside — two levels, an open central courtyard, iron galleries running the full length of the upper floor on slender columns, corrugated metal and timber over the stalls below.\n\nThe renovation completed in 2022 — the fourth attempt after three previous failures across three decades, this one finally successful after four years of work — introduced something worth looking down at as you walk: the aisles are named as streets, and the signs are set in traditional azulejo tiles of the kind used for street names across Porto, so the market's internal layout is mapped as though it were a neighbourhood. When the Portuguese government listed Bolhão as a Monument of Public Interest, the protection order covered two things: the Beaux-Arts building and its function as a traditional food market — not just the architecture, but the activity inside it, the vendors, the fish stalls, the flower sellers — which is not how heritage protection normally works. Around seventy traders work here daily; the fish section is worth finding if you haven't already.",
+      "shortDescription": "Porto's Beaux-Arts food market — 1914 concrete-and-iron building protected for both its architecture AND its trading activity, recently renovated 2022.",
+      "totalDurationSeconds": 148,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "24A5FF02-DFF6-437B-9FD8-F3D71B70A627",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Serralves Museum of Contemporary Art",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Serralves_Museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Serralves_Museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Serralves_Museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Serralves_Museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Serralves_Museum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Serralves_Museum_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Serralves_Museum_7.webp"
+      ],
+      "tags": [
+        "serralves",
+        "siza vieira",
+        "porto",
+        "contemporary art",
+        "museum",
+        "pritzker",
+        "1999"
+      ],
+      "stops": [
+        {
+          "id": "8E50727F-CAB7-400F-94E2-1B69F3E7C6E4",
+          "order": 0,
+          "title": "Serralves Museum of Contemporary Art",
+          "caption": "Approach from Via Panorâmica on the western edge of the campus, then find the descending entry ramp.",
+          "latitude": 41.159886546202294,
+          "longitude": -8.659990512908239,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/serralves-museum.mp3",
+          "audioDurationSeconds": 169,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Serralves_Museum_hero.webp",
+          "transcriptText": "The building you're about to enter was built where a vegetable garden used to be, which tells you something important about how seriously Siza took the existing site before he drew anything.\nHe spent years studying this location — the light, the slope of the land, the mature trees, and the pink Art Deco villa two hundred metres away that had been standing here since the nineteen thirties — and when he finally broke ground in nineteen eighty-five and finished in nineteen ninety-three, what he produced was a building whose most consistent quality is its reluctance to announce itself. You should be approaching from Via Panorâmica on the western edge of the campus, where the complex first becomes visible, and the first thing worth registering is that it doesn't read as a single building: ten separate volumes, each with its own character and proportion and relationship to the ground, arranged across the site in the way a small town might be rather than the way an institution usually is.\nFind the entry ramp before you go in, because it's the first thing Siza designed here in the sense that matters.\nThe ramp descends from street level, narrows as you go down — the walls rise, the outside world drops away behind you — and then opens, without announcement, into a bright lobby, and that sequence of compression and release is not incidental plumbing between the car park and the museum but the first spatial sentence of a building that keeps doing exactly this. Take it slowly.\nInside, the U-shaped plan opens southward, with the two wings extending toward the garden and enclosing a courtyard between them where, in the centre, there is a magnolia tree that Siza described as the reason the U opens in that direction — he wanted the park to be able to enter the building, and the windows along the inner walls are positioned to frame specific trees and specific patches of sky rather than to provide general views, so the landscape outside is not a backdrop but a series of chosen moments that the building offers you one at a time. On the ramps connecting the gallery levels — Siza used ramps throughout, because a staircase breaks your gaze and forces you to watch your feet, while a ramp lets you keep looking at whatever is on the walls — the ceiling lighting distributes natural and artificial light evenly across the space through a system the museum's own materials describe as an inverted table, which produces a room without shadows from above and without the glare of spotlights.\n[beat]\nBefore you leave, walk back outside and look toward the villa — pink, ornate, built for a textile magnate who filled it with René Lalique glass and Art Deco furniture — because Siza's museum, white and spare, sitting two hundred metres away in the same park, is in deliberate conversation with it, and the contrast between the two buildings, made sixty years apart on the same land, is the argument the whole estate is quietly making about what changes in architecture and what doesn't."
+        }
+      ],
+      "primaryCategory": "visualArt",
+      "centroidLatitude": 41.159886546202294,
+      "centroidLongitude": -8.659990512908239,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The museum was built where a vegetable garden used to be, which tells you something important about how seriously Álvaro Siza took the existing site before he drew anything. He spent years studying this location — the light, the slope of the land, the mature trees, and the pink Art Deco villa two hundred metres away that had been standing here since the 1930s — and when he finally broke ground in 1985 and finished in 1999 (with parts continuing into the early 2000s), what he produced was a building whose most consistent quality is its reluctance to announce itself. From Via Panorâmica on the western edge of the campus, the complex first becomes visible: ten separate volumes, each with its own character and proportion and relationship to the ground, arranged across the site in the way a small town might be rather than the way an institution usually is.\n\nThe entry ramp is the first thing Siza designed here in the sense that matters. The ramp descends from street level, narrows as you go down — the walls rise, the outside world drops away behind you — and then opens, without announcement, into a bright lobby. That sequence of compression and release is not incidental plumbing between the car park and the museum but the first spatial sentence of a building that keeps doing exactly this. Inside, the U-shaped plan opens southward, with the two wings extending toward the garden and enclosing a courtyard between them where, in the centre, there is a magnolia tree that Siza described as the reason the U opens in that direction — he wanted the park to be able to enter the building, and the windows along the inner walls are positioned to frame specific trees and specific patches of sky rather than to provide general views. On the ramps connecting the gallery levels (Siza used ramps throughout, because a staircase breaks your gaze and forces you to watch your feet, while a ramp lets you keep looking at whatever is on the walls) the ceiling lighting distributes natural and artificial light evenly through what the museum's own materials describe as an inverted table, producing a room without shadows from above and without the glare of spotlights. Outside, the pink villa — built for a textile magnate who filled it with René Lalique glass and Art Deco furniture — sits two hundred metres away in the same park, and the contrast between the two buildings, made sixty years apart on the same land, is the argument the whole estate is quietly making about what changes in architecture and what doesn't.",
+      "shortDescription": "Siza's white modernist museum in Porto — ten volumes arranged like a small town, in deliberate conversation with the pink Art Deco villa across the park.",
+      "totalDurationSeconds": 169,
+      "city": "Porto",
+      "walkingDistanceMeters": null
     }
   ]
 }
