@@ -3206,6 +3206,221 @@
       "totalDurationSeconds": 160,
       "city": "New York",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "A0346E14-8B04-48FC-B174-483C6CB038DA",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "The Dakota",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg/1280px-1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "the dakota",
+        "upper west side",
+        "1884",
+        "henry hardenbergh",
+        "john lennon",
+        "apartment building",
+        "central park west"
+      ],
+      "stops": [
+        {
+          "id": "BB308FE5-71C1-4FD5-8FE0-EA99E426A15B",
+          "order": 0,
+          "title": "The Dakota",
+          "caption": "Stand at the corner of Central Park West and 72nd Street, across from the building's entry archway.",
+          "latitude": 40.7763,
+          "longitude": -73.9755,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dakota.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg/1280px-1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg",
+          "transcriptText": "The Dakota was named the Dakota because it was so far from downtown Manhattan.\n\nAt the corner of Central Park West and 72nd Street is the Dakota — one of the most famous apartment buildings in the United States, and one of the first true luxury apartment buildings ever built in New York. The exterior is German Renaissance: dark sandstone, gabled roofs, dormers, balconies, the kind of building that looks like it was lifted out of central Europe and dropped onto Central Park West. It was designed by Henry Janeway Hardenbergh, who later designed the Plaza Hotel.\n\nConstruction began in 1880, commissioned by Edward Cabot Clark, who had made his fortune as a partner in the Singer Sewing Machine company. The neighborhood, at the time, was almost entirely undeveloped — the West 70s were farmland, the streets unpaved, the subway not yet imagined — and Clark's friends thought he was insane to build a luxury apartment building in the middle of nowhere. The name, which Clark chose himself, was a joke at his own expense: the Dakota Territory, in the 1880s, was the most remote part of the United States, and he was building, the joke went, in a Dakota of his own.\n\nThe building opened in 1884 with 65 apartments, ranging from four to twenty rooms each. The lobby is gas-lit, and the central courtyard is one of the few interior open spaces of its kind in New York. Over the next century, the building became the home of a remarkable concentration of cultural figures — Leonard Bernstein, Lauren Bacall, Rudolf Nureyev, Judy Holliday, the writer Saul Bellow, and most famously, John Lennon and Yoko Ono.\n\nOn December 8, 1980, Lennon was shot in the entry archway of the Dakota and died at Roosevelt Hospital later that night. Yoko Ono still lives in the building.\n\n[beat]\n\nWhat's worth knowing, looking at the Dakota, is that it set a template that defined the rest of New York's history. Before the Dakota, \"apartment\" was a word associated with tenements — crowded, low-status, working-class housing. The Dakota proved that wealthy New Yorkers would live in apartments if the apartments were grand enough, and within twenty years the West Side had filled in, with Central Park West lined by buildings imitating the Dakota's model.\n\nAcross the street, in Central Park, is a small memorial called Strawberry Fields, about a hundred yards inside the park gate."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 40.7763,
+      "centroidLongitude": -73.9755,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "At the corner of Central Park West and 72nd Street is the Dakota — one of the most famous apartment buildings in the United States, and one of the first true luxury apartment buildings ever built in New York. The exterior is German Renaissance: dark sandstone, gabled roofs, dormers, balconies, the kind of building that looks like it was lifted out of central Europe and dropped onto Central Park West. It was designed by Henry Janeway Hardenbergh, who later designed the Plaza Hotel. Construction began in 1880, commissioned by Edward Cabot Clark, who had made his fortune as a partner in the Singer Sewing Machine company. The neighborhood at the time was almost entirely undeveloped — the West 70s were farmland, the streets unpaved, the subway not yet imagined — and Clark's friends thought he was insane to build a luxury apartment building in the middle of nowhere. The name, which Clark chose himself, was a joke at his own expense: the Dakota Territory in the 1880s was the most remote part of the United States, and he was building, the joke went, in a Dakota of his own.\n\nThe building opened in 1884 with 65 apartments ranging from four to twenty rooms each. The lobby is gas-lit, and the central courtyard is one of the few interior open spaces of its kind in New York. Over the next century the building became the home of a remarkable concentration of cultural figures — Leonard Bernstein, Lauren Bacall, Rudolf Nureyev, Judy Holliday, Saul Bellow, and most famously John Lennon and Yoko Ono. On December 8, 1980, Lennon was shot in the entry archway and died at Roosevelt Hospital later that night; Yoko Ono still lives in the building. Before the Dakota, \"apartment\" was a word associated with tenements — crowded, low-status, working-class housing. The Dakota proved that wealthy New Yorkers would live in apartments if the apartments were grand enough, and within twenty years the West Side had filled in, Central Park West lined by buildings imitating the model. Across the street, inside Central Park, is the Strawberry Fields memorial.",
+      "shortDescription": "Henry Hardenbergh's 1884 German Renaissance apartment building on Central Park West — the original luxury New York apartment house, John Lennon's home, the template the rest of the West Side copied.",
+      "totalDurationSeconds": 145,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "A84C0000-A4E6-413C-A8D2-DC362D88199E",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Lever House",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Lever_House_Nov_2025_33.jpg/1280px-Lever_House_Nov_2025_33.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "lever house",
+        "park avenue",
+        "1952",
+        "som",
+        "gordon bunshaft",
+        "modernist",
+        "curtain wall"
+      ],
+      "stops": [
+        {
+          "id": "1228E3C4-146A-4D9B-98AD-4CC86EC081B9",
+          "order": 0,
+          "title": "Lever House",
+          "caption": "Stand on Park Avenue at 53rd Street, looking up at the glass tower over its open plaza.",
+          "latitude": 40.7596,
+          "longitude": -73.9728,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lever-house.mp3",
+          "audioDurationSeconds": 159,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Lever_House_Nov_2025_33.jpg/1280px-Lever_House_Nov_2025_33.jpg",
+          "transcriptText": "Before this building, no skyscraper in New York had walls of glass.\n\nOn Park Avenue at 53rd Street stands Lever House — built in 1952, the first true glass curtain wall skyscraper in New York City. The building is twenty-one stories of green-tinted glass and stainless steel, sitting on a low horizontal base that floats above an open plaza at street level. The architect was Gordon Bunshaft of Skidmore, Owings and Merrill — the firm known as SOM, which would go on to design Sears Tower, the original World Trade Center, Burj Khalifa, and most of the major American corporate skyscrapers of the second half of the twentieth century. Lever House was Bunshaft's first major commission and the project that established the model.\n\nThe building was commissioned by Lever Brothers — the British soap and detergent company best known in America for Dove, Lifebuoy, and Pepsodent. Lever Brothers wanted a New York headquarters that would feel modern, forward-looking, and clean — qualities they associated with their products — so they asked Bunshaft for a building that would look unlike anything else in the city, and he gave them a tower of glass.\n\nLever House broke with every convention of New York skyscraper design. Earlier skyscrapers — the Woolworth, the Chrysler, the Empire State — were stone-clad buildings that filled their entire lots and rose in setbacks dictated by 1916 zoning law, whereas Lever House occupied only a fraction of the lot, set back from the street to leave a public plaza at ground level. The walls were glass instead of stone, and the steel structure was expressed honestly through the facade rather than hidden behind ornament. It was, essentially, a European modernist building dropped onto Park Avenue.\n\n[beat]\n\nThe impact was immediate. Within a decade, every major corporate headquarters in New York was being built in the same style — Mies van der Rohe's Seagram Building, across the street, completed in 1958, took the same approach further. The CBS Building, the Pan Am Building, Citigroup Center, the World Trade Center — every one of them traces its lineage to Lever House. The city's 1961 zoning law was rewritten to encourage exactly the plaza-set-back model that Lever House introduced, and New York's skyline, from the 1960s onward, is essentially the answer to a question this building asked.\n\nThe plaza at the base is open to the public — walk through it. The ground-floor gallery space, on the south side, often has free contemporary art exhibitions."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 40.7596,
+      "centroidLongitude": -73.9728,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Park Avenue at 53rd Street stands Lever House — built in 1952, the first true glass curtain wall skyscraper in New York City. The building is twenty-one stories of green-tinted glass and stainless steel, sitting on a low horizontal base that floats above an open plaza at street level. The architect was Gordon Bunshaft of Skidmore, Owings and Merrill — the firm known as SOM, which would go on to design Sears Tower, the original World Trade Center, Burj Khalifa, and most of the major American corporate skyscrapers of the second half of the twentieth century. Lever House was Bunshaft's first major commission and the project that established the model. It was commissioned by Lever Brothers — the British soap and detergent company best known in America for Dove, Lifebuoy, and Pepsodent — who wanted a New York headquarters that would feel modern, forward-looking, and clean.\n\nLever House broke with every convention of New York skyscraper design. Earlier skyscrapers — the Woolworth, the Chrysler, the Empire State — were stone-clad buildings that filled their entire lots and rose in setbacks dictated by 1916 zoning law; Lever House occupied only a fraction of the lot, set back from the street to leave a public plaza at ground level. The walls were glass instead of stone, and the steel structure was expressed honestly through the facade rather than hidden behind ornament. It was essentially a European modernist building dropped onto Park Avenue. The impact was immediate. Within a decade, every major corporate headquarters in New York was being built in the same style — Mies's Seagram Building, across the street, took the same approach further in 1958. The CBS Building, the Pan Am Building, Citigroup Center, the World Trade Center — every one of them traces its lineage to Lever House. The city's 1961 zoning law was rewritten to encourage exactly the plaza-set-back model Lever House introduced, and New York's skyline from the 1960s onward is essentially the answer to a question this building asked.",
+      "shortDescription": "Gordon Bunshaft's 1952 glass-and-steel tower on Park Avenue — New York's first true curtain-wall skyscraper and the model every postwar corporate headquarters in the city is copying.",
+      "totalDurationSeconds": 159,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "6AD2C00B-A865-4C8D-A300-3BF5BC62AED0",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Seagram Building",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Seagram_Building_Nov_2025_06.jpg/1280px-Seagram_Building_Nov_2025_06.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "seagram building",
+        "park avenue",
+        "1958",
+        "mies van der rohe",
+        "philip johnson",
+        "international style",
+        "bronze"
+      ],
+      "stops": [
+        {
+          "id": "4B660617-978C-4733-AED3-F267E726F592",
+          "order": 0,
+          "title": "Seagram Building",
+          "caption": "Stand on the Seagram Plaza on Park Avenue between 52nd and 53rd Streets, near one of the reflecting pools.",
+          "latitude": 40.7587,
+          "longitude": -73.9716,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/seagram-building.mp3",
+          "audioDurationSeconds": 153,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Seagram_Building_Nov_2025_06.jpg/1280px-Seagram_Building_Nov_2025_06.jpg",
+          "transcriptText": "The plaza you're standing on changed American zoning law.\n\nYou're on the Seagram Plaza, on Park Avenue between 52nd and 53rd Streets. The building rising in front of you — thirty-eight stories of bronze-and-amber glass, set back fifty feet from the street — is the Seagram Building, designed by the German architect Mies van der Rohe with Philip Johnson, completed in 1958. It is one of the most influential buildings in the history of architecture, and almost every other skyscraper built in the world since 1960 is, in some sense, a version of this one.\n\nThe building exists because of a twenty-seven-year-old woman named Phyllis Lambert. In 1954, Lambert was living in Paris when she received word that her father, Samuel Bronfman — the head of the Seagram Distilling Company — had commissioned a New York headquarters that he was unhappy with. Phyllis wrote him a long letter explaining why the design was bad, then flew home to take charge of the project herself. She traveled to architecture schools across the United States, interviewed leading architects, and concluded that the building should be designed by Mies van der Rohe, then teaching in Chicago. She convinced her father, and the Seagram Building is the result.\n\nMies designed almost everything you can see. The building's bronze curtain wall — the first bronze curtain wall ever built — has the I-beams of the building's structure expressed on the exterior, even though they're not structural; they're symbolic, indicating the building's frame to the viewer. The plaza in front, with its two reflecting pools, was a radical decision that cost Seagram an entire usable floor of office space — in exchange, the building got something almost no Park Avenue tower had: room to breathe.\n\n[beat]\n\nThe plaza is what changed New York. When the city revised its zoning code in 1961, it borrowed directly from what Seagram had done — offering developers extra floor area in exchange for providing public open space at street level — and within ten years, every new tower on Park Avenue and Sixth Avenue had a Seagram-style plaza out front. Most of them are worse — smaller, windier, more hostile to the public, with fewer benches and meaner proportions — but the model is the same, and New York's modern skyline is, essentially, a series of failed attempts to copy this building.\n\nIf you have a few minutes, sit on one of the granite walls bordering the pools. The plaza was specifically designed to be comfortable to sit in — most of its imitators were not."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 40.7587,
+      "centroidLongitude": -73.9716,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On the Seagram Plaza, on Park Avenue between 52nd and 53rd Streets, rises thirty-eight stories of bronze-and-amber glass set back fifty feet from the street — the Seagram Building, designed by Mies van der Rohe with Philip Johnson, completed in 1958. It is one of the most influential buildings in the history of architecture, and almost every other skyscraper built in the world since 1960 is, in some sense, a version of this one. The building exists because of a twenty-seven-year-old woman named Phyllis Lambert. In 1954, Lambert was living in Paris when she received word that her father, Samuel Bronfman — head of the Seagram Distilling Company — had commissioned a New York headquarters he was unhappy with. Phyllis wrote him a long letter explaining why the design was bad, then flew home to take charge of the project herself, traveling to architecture schools across the United States, interviewing leading architects, and concluding the building should be designed by Mies van der Rohe, then teaching in Chicago.\n\nMies designed almost everything you can see. The bronze curtain wall — the first ever built — has the I-beams of the building's structure expressed on the exterior even though they're not structural; they're symbolic, indicating the building's frame to the viewer. The plaza in front, with its two reflecting pools, was a radical decision that cost Seagram an entire usable floor of office space — in exchange, the building got something almost no Park Avenue tower had: room to breathe. The plaza is what changed New York. When the city revised its zoning code in 1961, it borrowed directly from what Seagram had done — offering developers extra floor area in exchange for providing public open space at street level — and within ten years every new tower on Park Avenue and Sixth Avenue had a Seagram-style plaza out front. Most of them are worse — smaller, windier, more hostile to the public, with fewer benches and meaner proportions — but the model is the same, and New York's modern skyline is essentially a series of failed attempts to copy this building.",
+      "shortDescription": "Mies van der Rohe and Philip Johnson's 1958 bronze-and-glass tower on Park Avenue — the canonical International Style skyscraper and the plaza that rewrote New York's 1961 zoning code.",
+      "totalDurationSeconds": 153,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "C6C2D598-DF2F-436D-8B19-C9B8B206BC9D",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Stonewall National Monument",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Stonewall_statues.jpg/1280px-Stonewall_statues.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "stonewall national monument",
+        "christopher park",
+        "lgbtq history",
+        "2016 designation",
+        "west village",
+        "national monument",
+        "gay liberation"
+      ],
+      "stops": [
+        {
+          "id": "CBB0169A-1D16-4A2A-9BF3-EC0B48B7CA6A",
+          "order": 0,
+          "title": "Stonewall National Monument",
+          "caption": "Stand inside Christopher Park, near the white George Segal figures, looking across Christopher Street toward the Stonewall Inn.",
+          "latitude": 40.7339,
+          "longitude": -74.0029,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/stonewall-national-monument.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Stonewall_statues.jpg/1280px-Stonewall_statues.jpg",
+          "transcriptText": "The modern gay rights movement started across the street.\n\nChristopher Park is the small triangular park you're standing in, tucked between Christopher Street, Grove Street, and West Fourth Street in Greenwich Village. The brick building you can see across Christopher Street, with the red brick facade and the small marquee reading \"STONEWALL,\" is the Stonewall Inn — a bar that, in 1969, was one of the only places in New York where gay and lesbian and transgender people could gather openly. On June 28th of that year, at around one-thirty in the morning, the New York Police Department raided the bar. Raids of gay bars were routine in the 1960s, but this one went differently — the patrons fought back.\n\nThe first night's confrontation lasted several hours, with crowds gathering outside the bar and around this park, and the police barricaded inside the Stonewall Inn awaiting reinforcements. The next night the crowds came back, and the night after that, and the night after that — six consecutive nights of protests, with police charges, broken windows, and improvised marches through the surrounding streets. By the end of the week, the gay community of Lower Manhattan had publicly organized itself in a way it had never done before. The first Pride march, exactly one year later in June 1970, traced a route from this park north to Central Park, and it has happened every June since.\n\nThe white painted figures in the park around you are part of a sculpture by the artist George Segal called \"Gay Liberation,\" installed in 1992: two standing men and two seated women, painted entirely white, in postures of casual intimacy. It was one of the first public sculptures in the United States to depict gay and lesbian relationships.\n\n[beat]\n\nIn June of 2016, President Obama designated Christopher Park, the Stonewall Inn, and the surrounding streets the Stonewall National Monument — the first national monument in the United States dedicated to LGBTQ history. A small visitor center opened on the corner of the park in 2024, and the Stonewall Inn itself is still operating as a working bar, more than fifty years after the night that made it famous.\n\nThe park is small enough to walk through in a minute — the history is what makes it worth standing here for longer."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 40.7339,
+      "centroidLongitude": -74.0029,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Christopher Park is the small triangular park tucked between Christopher Street, Grove Street, and West Fourth Street in Greenwich Village — and it is the heart of the Stonewall National Monument, the broader federal site that President Obama designated in June 2016 as the first national monument in the United States dedicated to LGBTQ history. The monument takes in Christopher Park itself, the Stonewall Inn across the street, and the surrounding blocks where six consecutive nights of protest in June 1969 began the modern gay rights movement. The brick building across Christopher Street, with the red facade and the small marquee reading \"STONEWALL,\" is the Stonewall Inn — in 1969 one of the only places in New York where gay, lesbian, and transgender people could gather openly. On the night of June 28th the NYPD raided it; the patrons fought back; the crowd in this park grew larger every night for a week. The first Pride march, one year later, traced a route from this park north to Central Park.\n\nThis tour stands inside the park itself and treats the federal monument as the subject — distinct from the Stonewall Inn tour, which stands outside the bar and focuses on the 1969 uprising. The white painted figures around you are part of George Segal's 1992 sculpture \"Gay Liberation,\" installed by the city of New York: two standing men and two seated women in postures of casual intimacy, one of the first public sculptures in the United States to depict gay and lesbian relationships. A small National Park Service visitor center opened at the corner of the park in 2024, the first NPS visitor center in the country devoted to LGBTQ history. The Stonewall Inn is still operating as a working bar, more than fifty years after the night that made it famous.",
+      "shortDescription": "The 2016 federal monument inside Christopher Park — the first US national monument dedicated to LGBTQ history, taking in Christopher Park, the Stonewall Inn, George Segal's Gay Liberation sculpture, and the 2024 NPS visitor center.",
+      "totalDurationSeconds": 138,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "BA966FE3-99F1-4CCB-8507-492BA9BFCA0C",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "TWA Hotel at JFK",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TWA_Flight_Center_2015_NY4.jpg/1280px-TWA_Flight_Center_2015_NY4.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "twa hotel",
+        "jfk airport",
+        "eero saarinen",
+        "1962",
+        "terminal 5",
+        "googie architecture",
+        "mid-century modern"
+      ],
+      "stops": [
+        {
+          "id": "28BC8596-2FE3-4AC4-93D6-04053C666381",
+          "order": 0,
+          "title": "TWA Hotel at JFK",
+          "caption": "Stand outside JFK Terminal 5, looking at the curving concrete shells of the original TWA Flight Center head house.",
+          "latitude": 40.6447,
+          "longitude": -73.7895,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/twa-hotel-jfk.mp3",
+          "audioDurationSeconds": 158,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TWA_Flight_Center_2015_NY4.jpg/1280px-TWA_Flight_Center_2015_NY4.jpg",
+          "transcriptText": "Eero Saarinen designed this building to look like a bird about to fly. He died before it opened.\n\nAt JFK Airport, just outside terminal five, sits the TWA Flight Center — designed by the Finnish-American architect Eero Saarinen and completed in 1962. The form is unmistakable: two great concrete shells curving up and outward like wings about to lift off, supported by minimal columns, an entire facade of glass between them. From across the parking lot, the building looks like it's pulling itself up off the ground, and from inside, every surface, every staircase, every floor edge is rounded.\n\nThe building was commissioned in 1955 by Trans World Airlines — TWA — at the height of the Jet Age, the moment when air travel was being transformed from a luxury into a mass-market industry. Saarinen was given the freedom to design something that would express the optimism of the moment, and he worked on it for six years. He died of a brain tumor in September of 1961, eleven months before the building opened, at the age of fifty-one.\n\nThe terminal operated for thirty-nine years. TWA itself went into a long decline through the 1980s and 90s, hit by deregulation, by a series of crashes, and by an aging fleet. The airline declared bankruptcy in 2001, and the terminal was closed in October of that year. For the next seventeen years, it sat empty — too significant to demolish, too inefficient for modern air travel to reuse as a working terminal.\n\nIn 2019, the building reopened as the TWA Hotel — the original Saarinen head house preserved as a lobby, with two new hotel towers built behind it. The interior — the curved staircases, the original signage, the round red conversation pit, the long sweeping tubes that connected the head house to the gates — has been restored to its 1962 appearance, almost obsessively.\n\n[beat]\n\nWhat's striking about the place is that the building is what survived. The airline is gone, the Jet Age is gone, the model of travel the building was made for — leisurely, formal, optimistic — is gone. The architecture, which was supposed to be the most ephemeral part of the whole enterprise, is the part that's still here. You can sit at the bar in the round red conversation pit and have a martini, in the same room Don Draper would have ordered one.\n\nThe hotel is open to the public — walk through, sit in the lobby. The pool, on the tarmac, is for guests only."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 40.6447,
+      "centroidLongitude": -73.7895,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "At JFK Airport, just outside terminal five, sits the TWA Flight Center — designed by the Finnish-American architect Eero Saarinen and completed in 1962. The form is unmistakable: two great concrete shells curving up and outward like wings about to lift off, supported by minimal columns, an entire facade of glass between them. From across the parking lot, the building looks like it's pulling itself up off the ground; from inside, every surface, every staircase, every floor edge is rounded. The building was commissioned in 1955 by Trans World Airlines at the height of the Jet Age — the moment when air travel was being transformed from a luxury into a mass-market industry. Saarinen was given the freedom to design something that would express the optimism of the moment, and he worked on it for six years. He died of a brain tumor in September of 1961, eleven months before the building opened, at the age of fifty-one.\n\nThe terminal operated for thirty-nine years. TWA itself went into a long decline through the 1980s and 90s, hit by deregulation, by a series of crashes, and by an aging fleet. The airline declared bankruptcy in 2001 and the terminal was closed in October of that year. For the next seventeen years it sat empty — too significant to demolish, too inefficient for modern air travel to reuse as a working terminal. In 2019 the building reopened as the TWA Hotel: the original Saarinen head house preserved as a lobby, two new hotel towers built behind it. The interior — the curved staircases, the original signage, the round red conversation pit, the long sweeping tubes that connected the head house to the gates — has been restored to its 1962 appearance, almost obsessively. What's striking about the place is that the building is what survived. The airline is gone, the Jet Age is gone, the model of travel the building was made for — leisurely, formal, optimistic — is gone. The architecture, which was supposed to be the most ephemeral part of the whole enterprise, is the part that's still here.",
+      "shortDescription": "Eero Saarinen's 1962 winged-concrete head house at JFK Terminal 5 — closed for seventeen years after TWA's bankruptcy, restored almost obsessively as a hotel lobby in 2019.",
+      "totalDurationSeconds": 158,
+      "city": "New York",
+      "walkingDistanceMeters": null
     }
   ]
 }
