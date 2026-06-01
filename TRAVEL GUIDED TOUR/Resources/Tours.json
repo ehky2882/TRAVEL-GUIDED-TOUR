@@ -3421,6 +3421,221 @@
       "totalDurationSeconds": 158,
       "city": "New York",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "7F1F9980-116A-4732-9AF9-8E14CEC196E8",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Bethesda Terrace",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Bethesda_fountain_and_the_terrace%2C_Central_Park%2C_NYC.jpg/1280px-Bethesda_fountain_and_the_terrace%2C_Central_Park%2C_NYC.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "bethesda terrace",
+        "central park",
+        "calvert vaux",
+        "1864",
+        "angel of the waters",
+        "emma stebbins",
+        "minton tiles"
+      ],
+      "stops": [
+        {
+          "id": "AB24652E-880F-42E0-9C47-D835C237242B",
+          "order": 0,
+          "title": "Bethesda Terrace",
+          "caption": "Stand at the top of Bethesda Terrace in Central Park, looking down the great stone staircase toward the Angel of the Waters fountain on the lower terrace.",
+          "latitude": 40.7741,
+          "longitude": -73.9711,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bethesda-terrace.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Bethesda_fountain_and_the_terrace%2C_Central_Park%2C_NYC.jpg/1280px-Bethesda_fountain_and_the_terrace%2C_Central_Park%2C_NYC.jpg",
+          "transcriptText": "The angel in front of you is the first major public sculpture by a woman in New York.\n\nYou're at the top of the Bethesda Terrace, the central architectural feature of Central Park. The two stone staircases descend on either side to the lower terrace and the Bethesda Fountain at its center, beyond which the lake opens out toward the rowboats and the trees of the Ramble. The terrace was designed by Calvert Vaux and Jacob Wrey Mould as the only formal architectural composition in the entire eight hundred and forty-three acres of the park — Frederick Law Olmsted's design treated nearly the whole park as a managed natural landscape, and Bethesda was the one place where stone, geometry, and ceremony were allowed to take over.\n\nThe fountain at the center of the lower terrace was completed in 1873 and is called \"Angel of the Waters.\" It was sculpted by Emma Stebbins, an American expatriate working in Rome, and it was the first major public sculpture commission awarded to a woman by the city of New York. The angel atop the fountain holds a lily in one hand and gestures downward with the other, blessing the water — a reference to the Pool of Bethesda in the Gospel of John, where an angel is said to have stirred the waters with healing properties.\n\nIf you walk to the lower terrace and look up under the great staircase, you'll see the most surprising feature of the entire composition: a vaulted tile ceiling, covered in approximately fifteen thousand individually patterned encaustic tiles made in England by the Minton company in the 1860s. It is the only Minton tile installation of this scale anywhere in the United States, and it was nearly lost — the tiles were removed for safekeeping in 1983 and were not reinstalled until 2007, after a multi-year restoration.\n\n[beat]\n\nThe terrace is the part of Central Park most photographed in films and television — the fountain has appeared in everything from \"Hair\" to \"Home Alone 2\" to \"When Harry Met Sally\" — but more than that, it is the part of the park where the public actually gathers. Buskers play here, couples are photographed here, and people meet here, the way they do in great urban plazas across the world.\n\nThe terrace sits roughly in the geographic center of the park, and the Mall, with its statues and its allée of American elms, leads directly here from the south. It is the most direct way to walk down to the fountain from the southern entrances."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 40.7741,
+      "centroidLongitude": -73.9711,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "You're at the top of the Bethesda Terrace, the central architectural feature of Central Park. The two stone staircases descend to the lower terrace and the Bethesda Fountain at its center, beyond which the lake opens out toward the rowboats and the trees of the Ramble. The terrace was designed by Calvert Vaux and Jacob Wrey Mould as the only formal architectural composition in the entire eight hundred and forty-three acres of the park — Frederick Law Olmsted's design treated nearly the whole park as a managed natural landscape, and Bethesda was the one place where stone, geometry, and ceremony were allowed to take over. The fountain at the center of the lower terrace was completed in 1873 and is called \"Angel of the Waters.\" It was sculpted by Emma Stebbins, an American expatriate working in Rome, and it was the first major public sculpture commission awarded to a woman by the city of New York. The angel holds a lily in one hand and gestures downward with the other, blessing the water — a reference to the Pool of Bethesda in the Gospel of John.\n\nIf you walk to the lower terrace and look up under the great staircase, you'll see the most surprising feature of the entire composition: a vaulted tile ceiling, covered in approximately fifteen thousand individually patterned encaustic tiles made in England by the Minton company in the 1860s. It is the only Minton tile installation of this scale anywhere in the United States, and it was nearly lost — the tiles were removed for safekeeping in 1983 and not reinstalled until 2007, after a multi-year restoration. The terrace is the part of Central Park most photographed in films and television — the fountain has appeared in everything from \"Hair\" to \"Home Alone 2\" to \"When Harry Met Sally\" — but more than that, it is the part of the park where the public actually gathers. Buskers play here, couples are photographed here, and people meet here, the way they do in great urban plazas across the world.",
+      "shortDescription": "Calvert Vaux and Jacob Wrey Mould's 1864 stone terrace at the heart of Central Park — the only formal architectural composition in Olmsted's managed landscape, anchored by Emma Stebbins's *Angel of the Waters*, the city's first major public sculpture commission awarded to a woman.",
+      "totalDurationSeconds": 143,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "79FED394-1311-4446-A55C-9BEC9C772081",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Cathedral of St. John the Divine",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Cathedral_of_Saint_John_the_Divine%2C_New_York.JPG/1280px-Cathedral_of_Saint_John_the_Divine%2C_New_York.JPG",
+      "additionalImageURLs": [],
+      "tags": [
+        "cathedral st john the divine",
+        "morningside heights",
+        "episcopal",
+        "1892",
+        "largest cathedral",
+        "gothic",
+        "ralph adams cram"
+      ],
+      "stops": [
+        {
+          "id": "258EB70E-187C-4927-B3B6-079465ECB4E4",
+          "order": 0,
+          "title": "Cathedral of St. John the Divine",
+          "caption": "Stand on Amsterdam Avenue at 112th Street, facing the western front of the Cathedral of Saint John the Divine.",
+          "latitude": 40.8035,
+          "longitude": -73.9618,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cathedral-st-john-the-divine.mp3",
+          "audioDurationSeconds": 152,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Cathedral_of_Saint_John_the_Divine%2C_New_York.JPG/1280px-Cathedral_of_Saint_John_the_Divine%2C_New_York.JPG",
+          "transcriptText": "This cathedral has been under construction for one hundred and thirty-four years.\n\nYou're on Amsterdam Avenue at 112th Street, outside the Cathedral of St. John the Divine — the seat of the Episcopal Diocese of New York and the largest Anglican cathedral in the world. Construction began in 1892, with a Romanesque-Byzantine design by the architects Heins and LaFarge. In 1911, after the early structure of the choir had been completed, the cathedral's leadership changed direction and brought in a new architect, Ralph Adams Cram, who redesigned the rest of the building in French Gothic. The result is that the eastern half is Romanesque, the western half is Gothic, and the building, more than a hundred years later, is still not complete.\n\nThe exterior is six hundred and one feet long and two hundred and thirty-two feet wide, with two towers planned for the western front that have never been built above the height of the lower roofline. The interior is even more impressive: the central nave is wider than that of any Gothic cathedral in Europe except Cologne, the rose window on the western front is forty feet across, and the floor area is approximately one hundred and twenty-four thousand square feet — depending on how it's measured, either the largest cathedral in the world or one of the two largest.\n\nThe cathedral has acquired a nickname, \"St. John the Unfinished,\" and there is something accurate and not entirely affectionate in the phrase. Construction has paused multiple times: during the First World War, during the Depression, during the Second World War, and after a major fire in 2001 that closed the building for several years. Each time, the work has resumed slowly, with funds raised piecemeal, and each time, the project has gotten a little further.\n\n[beat]\n\nWhat is unusual about St. John's, beyond its size, is what it has become. The cathedral has, over the past century, evolved into one of the most architecturally and culturally inclusive religious spaces in the world — interfaith services are held inside, the Dalai Lama has preached here, an AIDS memorial is housed here, and the annual Blessing of the Animals draws hundreds of New Yorkers and their pets to the nave on the feast of Saint Francis. The cathedral functions, in practice, as a kind of civic temple as much as a religious one.\n\nThe exterior gardens are open to the public, and the interior is open every day. The walk through the nave, from the front doors to the high altar, takes a noticeable amount of time — the building is genuinely too big to take in from outside."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 40.8035,
+      "centroidLongitude": -73.9618,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "You're on Amsterdam Avenue at 112th Street, outside the Cathedral of St. John the Divine — the seat of the Episcopal Diocese of New York and the largest Anglican cathedral in the world. Construction began in 1892, with a Romanesque-Byzantine design by the architects Heins and LaFarge. In 1911, after the early structure of the choir had been completed, the cathedral's leadership changed direction and brought in a new architect, Ralph Adams Cram, who redesigned the rest of the building in French Gothic. The result is that the eastern half is Romanesque, the western half is Gothic, and the building, more than a hundred years later, is still not complete. The exterior is six hundred and one feet long and two hundred and thirty-two feet wide, with two towers planned for the western front that have never been built above the lower roofline. The central nave is wider than that of any Gothic cathedral in Europe except Cologne, and the floor area is approximately one hundred and twenty-four thousand square feet — either the largest cathedral in the world or one of the two largest, depending on how it's measured.\n\nThe cathedral has acquired a nickname, \"St. John the Unfinished,\" and there is something accurate in the phrase. Construction has paused during the First World War, during the Depression, during the Second World War, and after a major fire in 2001 that closed the building for several years. What's unusual about St. John's, beyond its size, is what it has become — over the past century the cathedral has evolved into one of the most architecturally and culturally inclusive religious spaces in the world. Interfaith services are held inside, the Dalai Lama has preached here, an AIDS memorial is housed here, and the annual Blessing of the Animals draws hundreds of New Yorkers and their pets to the nave on the feast of Saint Francis. The cathedral functions, in practice, as a kind of civic temple as much as a religious one.",
+      "shortDescription": "Construction began on this Episcopal cathedral in 1892 and has not finished — the world's largest Anglican cathedral, Romanesque-Byzantine on the east, French Gothic on the west, still missing its two western towers.",
+      "totalDurationSeconds": 152,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "31EB5230-9667-493C-AE37-9011D8E34F72",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "The Astor Place Cube",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/The_Astor_Place_Cube_%2848072759542%29.jpg/1280px-The_Astor_Place_Cube_%2848072759542%29.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "astor place cube",
+        "alamo",
+        "tony rosenthal",
+        "1967",
+        "sculpture",
+        "east village",
+        "public art"
+      ],
+      "stops": [
+        {
+          "id": "B5A7C1A7-87C4-4EA1-96E5-8FC4962BB701",
+          "order": 0,
+          "title": "The Astor Place Cube",
+          "caption": "Stand at the traffic island where Cooper Square, Lafayette Street, and Fourth Avenue converge, beside the corner-balanced black steel cube.",
+          "latitude": 40.7298,
+          "longitude": -73.9911,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/astor-place-cube.mp3",
+          "audioDurationSeconds": 152,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/The_Astor_Place_Cube_%2848072759542%29.jpg/1280px-The_Astor_Place_Cube_%2848072759542%29.jpg",
+          "transcriptText": "If you push hard enough, this sculpture spins.\n\nYou're at Astor Place, where Cooper Square, Lafayette Street, and Fourth Avenue converge in the East Village. The black steel cube in the middle of the traffic island, eight feet on each side, mounted on a single point at one corner, is called \"The Alamo.\" It is a sculpture by the American artist Tony Rosenthal, installed in 1967 as part of a New York City public art program. The cube weighs about a ton, sits on a vertical pole that runs through one diagonal axis of the cube, and rotates on that axis when pushed by several people working together. The spinning, depending on who is pushing, can range from a slow shuffle to a surprisingly fast revolution.\n\nRosenthal designed and fabricated the cube specifically for this site, and it was supposed to be a temporary installation — one of a number of works that were placed around the city in 1967 to test how public sculpture would be received by ordinary New Yorkers. The reception of \"The Alamo\" was, by every measurement, extraordinary. Within days of its installation, people had figured out that it would spin, and groups of students from nearby Cooper Union, NYU, and the public schools were gathering at the cube to push it around in their lunch breaks. The temporary installation became permanent in 1968.\n\nThe cube has been continuously at Astor Place ever since, with one major interruption: in 2014, it was removed for restoration and sent to a foundry in Philadelphia for several months of work, during which the corners were welded, the surface was repainted, and the rotation mechanism was repaired. When it was returned, the city held a small ceremony, and someone — predictably — pushed it.\n\n[beat]\n\nWhat makes the Alamo specifically distinctive, beyond the fact that it spins, is its role in the cultural geography of the East Village. The cube is the unofficial meeting point of the neighborhood — punks gathered here in the 1980s, skateboarders gather here now, students still meet here between classes, and the cube has appeared in films, photographs, and graffiti as a kind of shorthand for downtown New York. It is one of the very few public sculptures in the city that the public actually uses, rather than simply photographs.\n\nIf you want to push it, you'll usually need at least three or four other people — it's heavier than it looks. The Cooper Union building across the plaza, with its sharp angular metal facade, is the work of architect Thom Mayne, and is worth a look in its own right."
+        }
+      ],
+      "primaryCategory": "visualArt",
+      "centroidLatitude": 40.7298,
+      "centroidLongitude": -73.9911,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "You're at Astor Place, where Cooper Square, Lafayette Street, and Fourth Avenue converge in the East Village. The black steel cube in the middle of the traffic island — eight feet on each side, mounted on a single point at one corner — is called \"The Alamo.\" It is a sculpture by the American artist Tony Rosenthal, installed in 1967 as part of a New York City public art program. The cube weighs about a ton, sits on a vertical pole that runs through one diagonal axis, and rotates on that axis when pushed by several people working together. Rosenthal designed it specifically for this site, and it was supposed to be a temporary installation — one of a number of works placed around the city in 1967 to test how public sculpture would be received by ordinary New Yorkers. The reception was, by every measurement, extraordinary. Within days, people had figured out it would spin, and groups of students from nearby Cooper Union, NYU, and the public schools were gathering at the cube to push it around in their lunch breaks. The temporary installation became permanent in 1968.\n\nThe cube has been continuously at Astor Place ever since, with one major interruption: in 2014 it was removed for restoration and sent to a foundry in Philadelphia for several months of work, during which the corners were welded, the surface was repainted, and the rotation mechanism was repaired. When it was returned, the city held a small ceremony, and someone — predictably — pushed it. What makes the Alamo distinctive, beyond the fact that it spins, is its role in the cultural geography of the East Village. The cube is the unofficial meeting point of the neighborhood — punks gathered here in the 1980s, skateboarders gather here now, students still meet here between classes, and the cube has appeared in films, photographs, and graffiti as a kind of shorthand for downtown New York. It is one of the very few public sculptures in the city that the public actually uses, rather than simply photographs.",
+      "shortDescription": "Tony Rosenthal's 1967 corner-balanced black steel sculpture *Alamo* — eight feet on a side, mounted on a pole that lets several people spin it on its diagonal axis, the unofficial meeting point of the East Village.",
+      "totalDurationSeconds": 152,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "5E6047F6-12BD-4BFB-A2F1-D74622EFAB62",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "The Plaza Hotel",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/New_York_-_Manhattan_-_Plaza_Hotel.jpg/1280px-New_York_-_Manhattan_-_Plaza_Hotel.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "plaza hotel",
+        "henry hardenbergh",
+        "1907",
+        "fifth avenue",
+        "grand army plaza",
+        "french renaissance",
+        "gilded age"
+      ],
+      "stops": [
+        {
+          "id": "221E2804-A41C-47F6-B762-26DBA7370E4C",
+          "order": 0,
+          "title": "The Plaza Hotel",
+          "caption": "Stand at Grand Army Plaza at 5th Avenue and 59th Street, looking up at the white-glazed-brick French Renaissance facade of the Plaza Hotel.",
+          "latitude": 40.7644,
+          "longitude": -73.9745,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/plaza-hotel.mp3",
+          "audioDurationSeconds": 172,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/New_York_-_Manhattan_-_Plaza_Hotel.jpg/1280px-New_York_-_Manhattan_-_Plaza_Hotel.jpg",
+          "transcriptText": "The architect who designed the Dakota also designed this hotel, twenty-three years later.\n\nYou're at the corner of 5th Avenue and 59th Street, at Grand Army Plaza, looking up at the Plaza Hotel — a nineteen-story French Renaissance chateau in white glazed brick, with a mansard roof, ornate dormers, gold trim, and the words \"THE PLAZA\" lettered across the front. The architect was Henry Janeway Hardenbergh, who had previously designed the Dakota apartment building on Central Park West, twenty-three years earlier in 1884. By the time the Plaza opened in 1907, Hardenbergh had perfected the formula: a luxurious European-style residential building that brought the architectural vocabulary of Paris and Munich to American streets, with American interior amenities and American scale.\n\nThe Plaza was, from the beginning, designed for both permanent residents and short-stay guests. It had eight hundred rooms, four hundred bathrooms, two of the largest ballrooms in New York, and four restaurants. The clientele over the first century included Mark Twain, F. Scott Fitzgerald, Ernest Hemingway, the Beatles in 1964 — they stayed during their first American tour, surrounded by fans on every side of the building — and Truman Capote, whose 1966 Black and White Ball in the Grand Ballroom is still considered the most famous private party in twentieth-century New York. The hotel was also the fictional home of Eloise, the precocious six-year-old in Kay Thompson's 1955 children's book, and her portrait still hangs in the lobby.\n\nIn 2008, two-thirds of the rooms were converted into private condominiums — a financial decision driven by the Plaza's then-owner, the Israeli developer Elad Properties, and a controversial one. The Plaza had been a working hotel for a hundred and one years, and the conversion reduced the number of hotel rooms to around two hundred and eighty. The lobby remains open to the public, however, and the Palm Court, the iconic restaurant under the stained-glass ceiling, still serves breakfast, tea, and a steady diet of tourist photographs.\n\n[beat]\n\nWhat's worth knowing, standing at Grand Army Plaza, is that the Plaza is the only one of New York's great Gilded Age grand hotels still operating from its original 1907 building, in something resembling its original use. The Astor, the Knickerbocker, the Waldorf-Astoria, the Vanderbilt — all of them either demolished, converted to offices, or rebuilt in different locations. The Plaza is the survivor.\n\nWalk into the lobby if you want — it is open to the public, the Palm Court is on the ground floor to the right, and the elaborate gold ceilings are unchanged from when Hardenbergh finished them."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 40.7644,
+      "centroidLongitude": -73.9745,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "You're at the corner of 5th Avenue and 59th Street, at Grand Army Plaza, looking up at the Plaza Hotel — a nineteen-story French Renaissance chateau in white glazed brick, with a mansard roof, ornate dormers, gold trim, and the words \"THE PLAZA\" lettered across the front. The architect was Henry Janeway Hardenbergh, who had previously designed the Dakota apartment building on Central Park West, twenty-three years earlier in 1884. By the time the Plaza opened in 1907, Hardenbergh had perfected the formula: a luxurious European-style residential building that brought the architectural vocabulary of Paris and Munich to American streets, with American interior amenities and American scale. The Plaza was, from the beginning, designed for both permanent residents and short-stay guests. It had eight hundred rooms, four hundred bathrooms, two of the largest ballrooms in New York, and four restaurants.\n\nThe clientele over the first century included Mark Twain, F. Scott Fitzgerald, Ernest Hemingway, the Beatles in 1964 — they stayed during their first American tour, surrounded by fans on every side of the building — and Truman Capote, whose 1966 Black and White Ball in the Grand Ballroom is still considered the most famous private party in twentieth-century New York. The hotel was also the fictional home of Eloise, the precocious six-year-old in Kay Thompson's 1955 children's book. In 2008, two-thirds of the rooms were converted into private condominiums — a financial decision driven by the then-owner, Elad Properties, and a controversial one. The Plaza had been a working hotel for a hundred and one years, and the conversion reduced the number of hotel rooms to around two hundred and eighty. What's worth knowing, standing at Grand Army Plaza, is that the Plaza is the only one of New York's great Gilded Age grand hotels still operating from its original 1907 building, in something resembling its original use. The Astor, the Knickerbocker, the Waldorf-Astoria, the Vanderbilt — all demolished, converted to offices, or rebuilt elsewhere. The Plaza is the survivor.",
+      "shortDescription": "Henry Hardenbergh's 1907 French Renaissance chateau at Grand Army Plaza — the same architect as the Dakota, twenty-three years later — and the only Gilded Age grand hotel still operating from its original 1907 building.",
+      "totalDurationSeconds": 172,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "723B7069-EECE-4684-B25D-333A8BCDF405",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Trinity Church",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Trinity_Church_-_Wall_Street%2C_New_York%2C_NY%2C_USA_-_August_19%2C_2015_-_panoramio.jpg/1280px-Trinity_Church_-_Wall_Street%2C_New_York%2C_NY%2C_USA_-_August_19%2C_2015_-_panoramio.jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "trinity church",
+        "wall street",
+        "richard upjohn",
+        "1846",
+        "gothic revival",
+        "alexander hamilton",
+        "episcopal"
+      ],
+      "stops": [
+        {
+          "id": "1078100E-826F-4344-9E73-21A19A9667F8",
+          "order": 0,
+          "title": "Trinity Church",
+          "caption": "Stand at the head of Wall Street where it meets Broadway, facing the brownstone Gothic Revival facade and copper spire of Trinity Church.",
+          "latitude": 40.7081,
+          "longitude": -74.0119,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trinity-church.mp3",
+          "audioDurationSeconds": 157,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Trinity_Church_-_Wall_Street%2C_New_York%2C_NY%2C_USA_-_August_19%2C_2015_-_panoramio.jpg/1280px-Trinity_Church_-_Wall_Street%2C_New_York%2C_NY%2C_USA_-_August_19%2C_2015_-_panoramio.jpg",
+          "transcriptText": "Alexander Hamilton is buried in the cemetery in front of you.\n\nYou're at the head of Wall Street, where it meets Broadway, looking at Trinity Church — a Gothic Revival church in brownstone, with a tall central tower topped by a copper steeple. The current building was completed in 1846 and is the third church to stand on this site, which has been the home of Trinity Parish since 1697, when King William the Third of England granted the land to the Anglican congregation. The architect was Richard Upjohn, who would later design the Gothic Revival main gate of Green-Wood Cemetery in Brooklyn, and the church was, when completed, the tallest building in New York City. It held that distinction for twenty-three years.\n\nThe graveyard in front of you, between the church and Broadway, has been in use since the late seventeenth century, and is the burial place of a number of figures from the founding generation of the United States. Alexander Hamilton, the first Secretary of the Treasury, was buried here after his death in the duel with Aaron Burr in 1804, and his tomb is the larger square monument near the southern edge of the cemetery. His wife Eliza Schuyler Hamilton, who outlived him by fifty years, is buried next to him. Robert Fulton, who developed the first commercially successful steamboat, is also buried here, along with the second Secretary of the Treasury Albert Gallatin, and several signers of the Declaration of Independence.\n\nThe graveyard is unusual in lower Manhattan in several ways: most colonial-era cemeteries in the area were relocated or built over in the nineteenth century, and Trinity's survival is partly a function of the church's continuous ownership and its formal designation as an active religious institution rather than a public burial ground.\n\n[beat]\n\nWhat's worth knowing about Trinity, standing here, is that it survived the events of September 11, 2001. The original World Trade Center towers stood about two blocks west of here, and when they collapsed, the dust and debris cloud blew through the cemetery and against the church walls. The building took damage but did not fall, and the congregation reopened a few days later. Trinity functioned as one of the relief centers in the months following the attack, and the small chapel a few blocks north — St. Paul's, the older sister chapel to Trinity, completed in 1766 — served as the meal and rest station for rescue workers throughout the recovery effort.\n\nThe graveyard is open to the public during church hours, and the church itself is open every day for visitors. The lobby just inside the front doors has a small museum about the parish's history."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 40.7081,
+      "centroidLongitude": -74.0119,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "You're at the head of Wall Street, where it meets Broadway, looking at Trinity Church — a Gothic Revival church in brownstone, with a tall central tower topped by a copper steeple. The current building was completed in 1846 and is the third church to stand on this site, which has been the home of Trinity Parish since 1697, when King William the Third of England granted the land to the Anglican congregation. The architect was Richard Upjohn, who would later design the Gothic Revival main gate of Green-Wood Cemetery in Brooklyn, and the church was, when completed, the tallest building in New York City. It held that distinction for twenty-three years. The graveyard in front of you, between the church and Broadway, has been in use since the late seventeenth century, and is the burial place of a number of figures from the founding generation of the United States. Alexander Hamilton, the first Secretary of the Treasury, was buried here after his death in the duel with Aaron Burr in 1804; his wife Eliza Schuyler Hamilton, who outlived him by fifty years, is buried next to him. Robert Fulton, the second Secretary of the Treasury Albert Gallatin, and several signers of the Declaration of Independence are also here.\n\nThe graveyard is unusual in lower Manhattan in several ways: most colonial-era cemeteries in the area were relocated or built over in the nineteenth century, and Trinity's survival is partly a function of the church's continuous ownership and its formal designation as an active religious institution rather than a public burial ground. What's worth knowing about Trinity, standing here, is that it survived the events of September 11, 2001 — the original World Trade Center towers stood about two blocks west of here, and when they collapsed, the dust and debris cloud blew through the cemetery and against the church walls. The building took damage but did not fall, and the congregation reopened a few days later. Trinity functioned as one of the relief centers in the months following the attack, and the small chapel a few blocks north — St. Paul's, the older sister chapel to Trinity, completed in 1766 — served as the meal and rest station for rescue workers throughout the recovery effort.",
+      "shortDescription": "Richard Upjohn's 1846 Gothic Revival brownstone church at the head of Wall Street — the third on a site held by Trinity Parish since 1697; Alexander Hamilton, Eliza Hamilton, and Robert Fulton are buried in the churchyard.",
+      "totalDurationSeconds": 157,
+      "city": "New York",
+      "walkingDistanceMeters": null
     }
   ]
 }
