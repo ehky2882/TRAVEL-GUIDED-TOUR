@@ -3721,6 +3721,93 @@
           "transcriptText": "Mark Twain rented this house for a winter.\n\nYou're at Wave Hill, a twenty-eight-acre public garden in Riverdale, the northwest corner of the Bronx, perched on a bluff above the Hudson River. From the gardens, the view stretches west across the river to the New Jersey Palisades — the same cliffs that John D. Rockefeller Jr. paid to preserve, sixty years later, for the benefit of The Cloisters museum a few miles south. Wave Hill enjoys the view by accident of geography, not philanthropy.\n\nThe estate consists of two large houses and the grounds connecting them. Wave Hill House, the older of the two, was built in 1843 by William Lewis Morris, a New York jurist, and over the following century it was occupied by a series of remarkable tenants. Theodore Roosevelt's family rented it in the 1870s, when Roosevelt was a teenager. Mark Twain leased it for the winter of 1901, and described it in a letter as 'a house befitting the gods.' Arturo Toscanini lived here in the 1940s while conducting at NBC. The British government leased the estate during the Second World War as the official residence of the United Nations ambassador.\n\nIn 1960, the property was donated to the City of New York, and in 1965 it opened as a public garden. The current grounds include a flower garden, a wild garden, an aquatic garden, a herb and dry garden, and a conservatory with seasonal exhibits — all of it designed in the English landscape tradition, with the views to the Hudson functioning as the visual anchor.\n\nWhat Wave Hill does that no other public garden in New York does is integrate horticulture with one of the most dramatic natural views in the city. The Palisades, directly across the river, are an unbroken three-hundred-foot cliff face that runs for miles. From the lawns at Wave Hill, the cliffs appear close enough to touch, but there is nothing between you and them but water and air. On clear afternoons, the view is the kind that requires no commentary.\n\nThe garden is open year-round, with seasonal exhibits in the conservatory and on the grounds. It is a forty-minute trip from Manhattan by train, and the kind of place worth a half-day on a clear afternoon."
         }
       ]
+    },
+    {
+      "id": "f4c92d43-14b3-48e7-8372-598996917b2d",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Queens Museum",
+      "shortDescription": "Home to the Panorama of the City of New York — a 9,335-square-foot scale model of all five boroughs, updated continuously since 1964.",
+      "longDescription": "The Queens Museum occupies the former New York City Pavilion from the 1939 and 1964 World's Fairs, in Flushing Meadows Corona Park. Its centrepiece is the Panorama of the City of New York: a 1-inch-to-100-feet scale model covering 9,335 square feet and containing roughly 895,000 individual buildings, commissioned by Robert Moses for the 1964 Fair and updated ever since. The same gallery served as the United Nations General Assembly chamber from 1946 to 1950 — the vote to partition Palestine and the founding of UNICEF both happened in what is now the Panorama room.",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Queens_Museum_2014.jpg/1280px-Queens_Museum_2014.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7461,
+      "centroidLongitude": -73.846,
+      "city": "Queens",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "museum",
+        "panorama",
+        "world-fair",
+        "flushing-meadows",
+        "united-nations",
+        "robert-moses",
+        "queens"
+      ],
+      "priceUSD": 0,
+      "stops": [
+        {
+          "id": "bf491951-d43d-4d76-96ce-7ab34902616d",
+          "order": 0,
+          "title": "Queens Museum",
+          "caption": "Former NYC Pavilion of the 1939 & 1964 World's Fairs, Flushing Meadows Corona Park",
+          "latitude": 40.7461,
+          "longitude": -73.846,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Queens_Museum.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Queens_Museum_2014.jpg/1280px-Queens_Museum_2014.jpg",
+          "transcriptText": "Inside this building is a scale model of New York City that has been continuously updated for sixty years.\n\nYou're outside the Queens Museum, in Flushing Meadows Corona Park, in the same building that served as the New York City Pavilion for both the 1939 and 1964 World's Fairs. The building's most famous interior feature is the Panorama of the City of New York, a meticulous three-dimensional scale model of the entire five boroughs at a ratio of one inch to one hundred feet — meaning that a building one hundred feet tall is one inch tall on the model. The Panorama covers nine thousand three hundred and thirty-five square feet and contains approximately eight hundred and ninety-five thousand individual buildings.\n\nThe model was originally built for the 1964 World's Fair, when Robert Moses commissioned it as a kind of architectural promotional film made physical — a way for visitors to see, in one room, the scale and ambition of postwar New York. Crews of carpenters and architects worked for three years to build it, using city planning records, aerial photographs, and on-site measurements. When the fair opened, visitors rode an automated \"helicopter tour\" around the perimeter of the model on a moving platform suspended above it.\n\nThe Panorama survived the closing of the fair and has been continuously updated ever since. When buildings are demolished, the museum's staff replaces their models with empty lots, and when new buildings open, model versions are built and dropped into place. The World Trade Center towers were on the model from 1964 to 2002, then the empty footprints were left in place for several years, and now two new towers — One World Trade and Three World Trade — occupy the same scale spot.\n\nThe other thing worth knowing about this building is that the United Nations General Assembly met here, in this same room, from 1946 to 1950 — the years when the UN was being founded and its permanent headquarters was being built in Manhattan. The vote to partition Palestine, the early debates of the Cold War, and the founding of UNICEF all happened in what is now the Panorama gallery. A few brass plaques on the floor mark where the delegates' tables stood.\n\nThe museum is open Wednesday through Sunday, and the Panorama room alone is worth the trip — it is genuinely impossible to come away from it without noticing something about New York you had never noticed before."
+        }
+      ]
+    },
+    {
+      "id": "e74f5c44-0348-4761-b6a3-ea87df3c8767",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Museum of the Moving Image",
+      "shortDescription": "A museum of film, TV, and digital media built inside Paramount's former East Coast studio, where the Marx Brothers shot their first movie in 1929.",
+      "longDescription": "The Museum of the Moving Image occupies a building that was part of Paramount's Astoria Studios from 1920 to 1971 — the studio where the Marx Brothers filmed 'The Cocoanuts' (1929) while performing the same show on Broadway each evening. Renovated in 1988 and dramatically expanded by Leeser Architecture in 2011, the museum holds 130,000 artifacts and an interactive permanent exhibition on the craft of making moving images. Kaufman Astoria Studios, the still-active descendant of the same Paramount complex, is directly next door — 'Sesame Street,' 'Orange Is the New Black,' and 'Saturday Night Live' rehearsals all happen within a block.",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Museum_of_the_Moving_Image_2.jpg/1280px-Museum_of_the_Moving_Image_2.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "introAudioURL": null,
+      "totalDurationSeconds": 161,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7561,
+      "centroidLongitude": -73.9256,
+      "city": "Queens",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "museum",
+        "film",
+        "television",
+        "astoria",
+        "paramount",
+        "marx-brothers",
+        "kaufman-studios",
+        "queens"
+      ],
+      "priceUSD": 0,
+      "stops": [
+        {
+          "id": "8f90550d-53bf-485f-a393-692c3e835171",
+          "order": 0,
+          "title": "Museum of the Moving Image",
+          "caption": "Former Paramount Astoria Studios, Astoria, Queens",
+          "latitude": 40.7561,
+          "longitude": -73.9256,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Museum_of_the_Moving_Image.mp3",
+          "audioDurationSeconds": 161,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Museum_of_the_Moving_Image_2.jpg/1280px-Museum_of_the_Moving_Image_2.jpg",
+          "transcriptText": "The Marx Brothers made their first movie inside this building.\n\nYou're in Astoria, Queens, outside the Museum of the Moving Image, in a building that was originally part of the Paramount Famous Players-Lasky Studios — Paramount's East Coast production facility from 1920 until 1971. The studios occupied an entire block of Astoria and produced hundreds of films and television shows during their five decades of operation, including the Marx Brothers' first movie, \"The Cocoanuts,\" in 1929, which was shot here while the brothers were simultaneously performing the same material on Broadway in the evenings.\n\nThe studios closed in 1971, after Paramount consolidated its operations in Los Angeles, but the buildings themselves were preserved. In 1988, one of the larger structures was renovated and opened as the Museum of the Moving Image — a museum dedicated to the history, technology, and artistry of film, television, video games, and digital media. The current building was extensively redesigned in 2011 by the New York firm Leeser Architecture, which added blue-glowing translucent surfaces and a sweeping new exterior while preserving the original Paramount-era brick.\n\nThe collection inside is roughly one hundred and thirty thousand artifacts — original film cameras, props from movies, makeup molds, animation cels, vintage televisions and video game consoles, costumes from \"Star Trek\" and \"Mad Men\" and \"The Sopranos.\" The museum's permanent exhibition, \"Behind the Screen,\" is interactive: visitors can edit a scene from a film, dub a voice over a clip, or animate a short piece of stop-motion. The exhibits are designed less as a passive history than as a working introduction to the technical craft of making moving images.\n\nWhat makes this museum specifically interesting is its proximity to the still-active film industry in this neighborhood. The Kaufman Astoria Studios — the modern operating descendant of the same Paramount complex — is directly next door, and films and television shows are produced there continuously. \"Sesame Street\" has been filmed at Kaufman Astoria for most of its run, \"Orange Is the New Black\" was filmed there, and \"Saturday Night Live\" rehearses there before going live. So the museum is not just a history of moving image production but a kind of explanation in advance of what is happening, this week, fifty feet to the north.\n\nThe museum is open Wednesday through Sunday, and the building exterior, with its electric-blue glow at night, is one of the most striking pieces of recent architecture in Queens."
+        }
+      ]
     }
   ]
 }
