@@ -30,7 +30,19 @@ These happen **automatically, without the owner asking**.
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
 
-## Current State (2026-05-29)
+## Current State (2026-06-01)
+
+### 10 new NYC tours + coordinate/hero fixes (session 13 — web/PM)
+
+Session 13 was a web-only PM session — no Swift changes. All commits direct to `main`.
+
+- **10 new NYC tours added** (catalog 81 → 91): Domino Park (Brooklyn), Wave Hill (Bronx), Queens Museum, Museum of the Moving Image, Snug Harbor Cultural Center (Staten Island), Yankee Stadium (Bronx), Citi Field, Madison Square Garden, Riverside Church, One World Trade Center. All Atlas Studio NYC, single-stop, geofenced. Audio on `gh-pages`; all hero images verified live.
+- **Hero image audit** — all 10 new tours had guessed/broken Wikimedia URLs on first commit; all fixed with verified hash paths.
+- **Coordinate fixes** — The Cloisters (`40.865220, -73.931122`, was wrongly in NJ) + Beacon Theatre (`40.780491, -73.981257`).
+- **Flatiron Building hero** replaced: wide landscape → nearly-square portrait (3024×3903) from the prow angle, CC BY-SA 4.0. Better fit for square card frames.
+- **Catalog: 91 tours, 3 makers, 73 NYC-area.** Build still 1.0 (19).
+
+**Latest TestFlight build: 1.0 (19)** — uploaded from local session 2026-05-31.
 
 ### TestFlight 1.0 (17) + tour-detail retool + light-mode fix + 6 new tours (session 12)
 
@@ -134,7 +146,7 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **59 tours, 3 makers** in `Resources/Tours.json` (43 NYC + 14 Porto-area + 2 Lisbon-makers including 1 Cascais); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **91 tours, 3 makers** in `Resources/Tours.json` (73 NYC-area + 14 Porto-area + others); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
 - **58 single-stop + 1 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, geofenced exterior walk) — added 2026-05-26, unblocks M-qa items 6 + 7
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
