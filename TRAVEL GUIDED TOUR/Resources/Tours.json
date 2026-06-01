@@ -3808,6 +3808,90 @@
           "transcriptText": "The Marx Brothers made their first movie inside this building.\n\nYou're in Astoria, Queens, outside the Museum of the Moving Image, in a building that was originally part of the Paramount Famous Players-Lasky Studios — Paramount's East Coast production facility from 1920 until 1971. The studios occupied an entire block of Astoria and produced hundreds of films and television shows during their five decades of operation, including the Marx Brothers' first movie, \"The Cocoanuts,\" in 1929, which was shot here while the brothers were simultaneously performing the same material on Broadway in the evenings.\n\nThe studios closed in 1971, after Paramount consolidated its operations in Los Angeles, but the buildings themselves were preserved. In 1988, one of the larger structures was renovated and opened as the Museum of the Moving Image — a museum dedicated to the history, technology, and artistry of film, television, video games, and digital media. The current building was extensively redesigned in 2011 by the New York firm Leeser Architecture, which added blue-glowing translucent surfaces and a sweeping new exterior while preserving the original Paramount-era brick.\n\nThe collection inside is roughly one hundred and thirty thousand artifacts — original film cameras, props from movies, makeup molds, animation cels, vintage televisions and video game consoles, costumes from \"Star Trek\" and \"Mad Men\" and \"The Sopranos.\" The museum's permanent exhibition, \"Behind the Screen,\" is interactive: visitors can edit a scene from a film, dub a voice over a clip, or animate a short piece of stop-motion. The exhibits are designed less as a passive history than as a working introduction to the technical craft of making moving images.\n\nWhat makes this museum specifically interesting is its proximity to the still-active film industry in this neighborhood. The Kaufman Astoria Studios — the modern operating descendant of the same Paramount complex — is directly next door, and films and television shows are produced there continuously. \"Sesame Street\" has been filmed at Kaufman Astoria for most of its run, \"Orange Is the New Black\" was filmed there, and \"Saturday Night Live\" rehearses there before going live. So the museum is not just a history of moving image production but a kind of explanation in advance of what is happening, this week, fifty feet to the north.\n\nThe museum is open Wednesday through Sunday, and the building exterior, with its electric-blue glow at night, is one of the most striking pieces of recent architecture in Queens."
         }
       ]
+    },
+    {
+      "id": "c9e7a03a-77e9-4827-9a8a-f32282f49eea",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Snug Harbor Cultural Center",
+      "shortDescription": "Five matched Greek Revival halls built as America's first retirement home for merchant sailors, sold to New York City for $1 and preserved as an 83-acre cultural complex.",
+      "longDescription": "Sailors' Snug Harbor was founded under the 1801 will of shipping merchant Robert Richard Randall, who left his entire estate to create a home for 'aged, decrepit and worn-out sailors.' The five Greek Revival halls — designed by self-taught architect Minard Lafever — operated as a sailors' retirement community from 1833 to 1976, housing more than 28,000 mariners over that span. Sold to New York City for one dollar in 1976 to prevent demolition, the complex now hosts the Staten Island Museum, Newhouse Center for Contemporary Art, Noble Maritime Collection, Staten Island Botanical Garden, and a Chinese Scholar's Garden.",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Snug_Harbor_-_panoramio.jpg/1280px-Snug_Harbor_-_panoramio.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "introAudioURL": null,
+      "totalDurationSeconds": 165,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.6432,
+      "centroidLongitude": -74.1016,
+      "city": "Staten Island",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "greek-revival",
+        "sailors",
+        "maritime",
+        "staten-island",
+        "minard-lafever",
+        "botanical-garden"
+      ],
+      "priceUSD": 0,
+      "stops": [
+        {
+          "id": "fdace8be-bcfc-4f64-b259-3bd687968ffa",
+          "order": 0,
+          "title": "Snug Harbor Cultural Center",
+          "caption": "Former Sailors' Snug Harbor, north shore of Staten Island",
+          "latitude": 40.6432,
+          "longitude": -74.1016,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Snug_Harbor.mp3",
+          "audioDurationSeconds": 165,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Snug_Harbor_-_panoramio.jpg/1280px-Snug_Harbor_-_panoramio.jpg",
+          "transcriptText": "These buildings were a retirement home for sailors.\n\nYou're at Snug Harbor, an eighty-three-acre cultural complex on the north shore of Staten Island. The five matched Greek Revival buildings facing you across the front lawn — white columns, Ionic capitals, pediments, all of them connected by a single covered walkway — were built between 1831 and 1880 as Sailors' Snug Harbor, the first home in the United States for retired and disabled sailors of the American merchant marine. The complex was funded entirely by a New York shipping merchant named Robert Richard Randall, who left his entire estate, in 1801, for the explicit purpose of creating \"a home for aged, decrepit and worn-out sailors.\" Randall had no other heirs and no nautical experience himself.\n\nThe buildings were designed by Minard Lafever, a self-taught architect who became one of the leading American practitioners of Greek Revival in the mid-nineteenth century. The five main halls served different functions — chapel, dining hall, dormitories, infirmary — and they were arranged along an axis facing the Kill Van Kull, the strait that separates Staten Island from New Jersey. Retired sailors lived here until the end of their lives, with full board and lodging, in exchange for nothing other than their service at sea.\n\nSailors' Snug Harbor operated continuously from 1833 to 1976, by which time it had housed more than twenty-eight thousand retired mariners. As the American merchant marine declined through the mid-twentieth century, the population of the home also declined, and by the 1970s the complex was almost empty, expensive to maintain, and slated for demolition. A coalition of preservationists, including the architectural historian Margot Gayle, fought to save the buildings, and in 1976 the entire site was sold to the City of New York for one dollar, on the condition that it be preserved as a cultural complex.\n\nWhat now occupies the site is a federation of separate institutions: the Staten Island Museum in the largest of the original buildings, the Newhouse Center for Contemporary Art, the Noble Maritime Collection of nineteenth-century maritime artifacts and paintings, the Staten Island Botanical Garden, and a Chinese Scholar's Garden built by Chinese craftsmen in the 1990s using traditional materials. The grounds also include a working farm, a children's museum, and three concert venues.\n\nThe site is open every day and is free to walk through. The main hall is occasionally open for tours, and the interior is worth the visit — the original chapel ceiling, painted to imitate a star-filled sky, is one of the most unusual mid-nineteenth-century American interiors that has survived."
+        }
+      ]
+    },
+    {
+      "id": "53c8ffe9-ec87-42fb-99cf-2692ffa49d0e",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Yankee Stadium",
+      "shortDescription": "The 2009 home of the New York Yankees, built directly across the street from the original 'House that Ruth Built,' which stood from 1923 to 2008.",
+      "longDescription": "The current Yankee Stadium opened in April 2009 on River Avenue in the South Bronx, replacing the original stadium that stood across 161st Street from 1923 to 2008. Designed by Populous to evoke the original's limestone facade, copper frieze, and bronze lettering, the $1.5 billion building was largely financed through public tax-exempt bonds. The original — where Babe Ruth, Lou Gehrig, Joe DiMaggio, Mickey Mantle, and Derek Jeter played — was demolished; its footprint is now Heritage Field, a public park visible from the new stadium's exterior.",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Yankee_Stadium_2.jpg/1280px-Yankee_Stadium_2.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "introAudioURL": null,
+      "totalDurationSeconds": 155,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.8296,
+      "centroidLongitude": -73.9262,
+      "city": "Bronx",
+      "primaryCategory": "history",
+      "tags": [
+        "baseball",
+        "yankees",
+        "bronx",
+        "sports",
+        "babe-ruth",
+        "stadium"
+      ],
+      "priceUSD": 0,
+      "stops": [
+        {
+          "id": "b70ded74-c8e9-4afe-8259-f0f1168d8e1a",
+          "order": 0,
+          "title": "Yankee Stadium — Main Gate",
+          "caption": "161st Street & River Avenue, South Bronx",
+          "latitude": 40.8296,
+          "longitude": -73.9262,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Yankee_Stadium.mp3",
+          "audioDurationSeconds": 155,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Yankee_Stadium_2.jpg/1280px-Yankee_Stadium_2.jpg",
+          "transcriptText": "This stadium is a careful imitation of the one that used to stand across the street.\n\nYou're at 161st Street and River Avenue, in the South Bronx, outside the main gate of Yankee Stadium — the home of the New York Yankees baseball franchise. The current stadium opened in April 2009, on a site directly across 161st Street from where the original Yankee Stadium stood from 1923 to 2008. The architect was the firm Populous, formerly known as HOK Sport, and the new stadium was designed to recall as many features of the original as possible: the limestone facade, the bronze \"Yankee Stadium\" lettering above the gate, the decorative copper frieze that runs along the top of the upper deck, and the angled wall in right field that gave the original its distinctive shape.\n\nThe original Yankee Stadium, which was demolished after the new one opened, was the most famous baseball stadium in the world. Babe Ruth played his first season there, in 1923, and it was Ruth's enormous draw that justified its construction — sportswriter Fred Lieb's nickname for it, \"the House that Ruth Built,\" is the name that stuck. Lou Gehrig, Joe DiMaggio, Mickey Mantle, Yogi Berra, Whitey Ford, Reggie Jackson, Don Mattingly, and Derek Jeter all played most or all of their careers in that building, and the Yankees won twenty-six of their twenty-seven World Series championships either at the old stadium or its 1976 renovation.\n\nThe new stadium cost approximately one and a half billion dollars to build, most of it in public subsidies through the city's tax-exempt bond program, and the move across the street was contentious. The original stadium had been a New York City landmark for the better part of a century, the new stadium was largely identical in feel but came with significantly more luxury suites and fewer affordable seats, and the original site was turned into a public park called Heritage Field that now occupies the footprint of the demolished building.\n\nYou can see the original site from where you're standing. The ball field at the center of Heritage Field sits in approximately the same position as the field of the old stadium, and during games at the new stadium, the lights from the new stadium illuminate the empty grass of the old one across the street.\n\nThe stadium itself is open on game days, with public tours available on most non-game days. The Monument Park area, beyond the center field wall, contains the bronze plaques honoring the most important Yankees players, and is open to ticketholders before game time."
+        }
+      ]
     }
   ]
 }
