@@ -3892,6 +3892,93 @@
           "transcriptText": "This stadium is a careful imitation of the one that used to stand across the street.\n\nYou're at 161st Street and River Avenue, in the South Bronx, outside the main gate of Yankee Stadium — the home of the New York Yankees baseball franchise. The current stadium opened in April 2009, on a site directly across 161st Street from where the original Yankee Stadium stood from 1923 to 2008. The architect was the firm Populous, formerly known as HOK Sport, and the new stadium was designed to recall as many features of the original as possible: the limestone facade, the bronze \"Yankee Stadium\" lettering above the gate, the decorative copper frieze that runs along the top of the upper deck, and the angled wall in right field that gave the original its distinctive shape.\n\nThe original Yankee Stadium, which was demolished after the new one opened, was the most famous baseball stadium in the world. Babe Ruth played his first season there, in 1923, and it was Ruth's enormous draw that justified its construction — sportswriter Fred Lieb's nickname for it, \"the House that Ruth Built,\" is the name that stuck. Lou Gehrig, Joe DiMaggio, Mickey Mantle, Yogi Berra, Whitey Ford, Reggie Jackson, Don Mattingly, and Derek Jeter all played most or all of their careers in that building, and the Yankees won twenty-six of their twenty-seven World Series championships either at the old stadium or its 1976 renovation.\n\nThe new stadium cost approximately one and a half billion dollars to build, most of it in public subsidies through the city's tax-exempt bond program, and the move across the street was contentious. The original stadium had been a New York City landmark for the better part of a century, the new stadium was largely identical in feel but came with significantly more luxury suites and fewer affordable seats, and the original site was turned into a public park called Heritage Field that now occupies the footprint of the demolished building.\n\nYou can see the original site from where you're standing. The ball field at the center of Heritage Field sits in approximately the same position as the field of the old stadium, and during games at the new stadium, the lights from the new stadium illuminate the empty grass of the old one across the street.\n\nThe stadium itself is open on game days, with public tours available on most non-game days. The Monument Park area, beyond the center field wall, contains the bronze plaques honoring the most important Yankees players, and is open to ticketholders before game time."
         }
       ]
+    },
+    {
+      "id": "58756f3f-2798-4fa6-9c48-8f1b9d3090ed",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Citi Field",
+      "shortDescription": "The Mets' 2009 stadium designed not to evoke itself but Ebbets Field — a demolished Brooklyn ballpark for a team that left New York half a century earlier.",
+      "longDescription": "Citi Field opened in 2009 in Flushing Meadows, Queens, replacing Shea Stadium (1964–2008). Designed by Populous — the same firm behind the new Yankee Stadium — it deliberately references Ebbets Field, the demolished Brooklyn home of the Dodgers, who left New York in 1957. The Jackie Robinson Rotunda at the main entrance honours the Dodgers legend who never played in Queens. Shea Stadium's footprint, marked with its original bases and home plate, sits in the adjacent parking lot.",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Citi_Field_-_Flushing%2C_NY_%2843500848470%29.jpg/1280px-Citi_Field_-_Flushing%2C_NY_%2843500848470%29.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "introAudioURL": null,
+      "totalDurationSeconds": 157,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7571,
+      "centroidLongitude": -73.8458,
+      "city": "Queens",
+      "primaryCategory": "history",
+      "tags": [
+        "baseball",
+        "mets",
+        "queens",
+        "ebbets-field",
+        "dodgers",
+        "jackie-robinson",
+        "shea-stadium"
+      ],
+      "priceUSD": 0,
+      "stops": [
+        {
+          "id": "73a333e1-a3ab-4d07-b9d6-01fd9a78c855",
+          "order": 0,
+          "title": "Citi Field — Main Entrance",
+          "caption": "Home of the New York Mets, Flushing Meadows, Queens",
+          "latitude": 40.7571,
+          "longitude": -73.8458,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Citi_Field.mp3",
+          "audioDurationSeconds": 157,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Citi_Field_-_Flushing%2C_NY_%2843500848470%29.jpg/1280px-Citi_Field_-_Flushing%2C_NY_%2843500848470%29.jpg",
+          "transcriptText": "Citi Field was designed to look like a stadium for a team that doesn't exist anymore.\n\nYou're in Flushing Meadows, Queens, outside Citi Field — the home of the New York Mets baseball franchise. The stadium opened in 2009, replacing the older Shea Stadium that operated next door from 1964 to 2008. The architect was the firm Populous, the same firm that designed the new Yankee Stadium that opened the same year. But unlike the new Yankee Stadium — which was designed to imitate the old one across the street — Citi Field was designed to imitate a different stadium entirely: Ebbets Field, the legendary Brooklyn home of the Brooklyn Dodgers, which was demolished in 1960.\n\nThe Dodgers, as you may know, left Brooklyn in 1957 and moved to Los Angeles. The Mets were founded in 1962 as a National League replacement franchise to fill the void left by the Dodgers and Giants when both moved west. From the team's founding, the Mets cultivated a sense of inheritance from the old Brooklyn franchise — borrowing colors, names, and emotional weight from a team that had been gone for five years. Citi Field extends that lineage in architecture: the brick facade, the arched windows, the rotunda at the main entrance, all of them deliberate references to the architectural vocabulary of Ebbets Field.\n\nThe rotunda at the main entrance, the first space you walk into, is named the Jackie Robinson Rotunda, in honor of the Brooklyn Dodgers' Hall of Famer who broke baseball's color barrier in 1947. The walls are inscribed with Robinson's words, and his number 42 is retired across all of Major League Baseball — but it is displayed here with particular prominence, even though Robinson never played a single game in Queens, and never played for the Mets, and was indeed retired before the Mets existed.\n\nWhat makes Citi Field interesting, standing outside it, is the question of what a stadium is supposed to be. The new Yankee Stadium imitates a stadium that stood next door for eighty-six years. Citi Field imitates a stadium that was demolished nearly fifty years before it was built, for a team that left town a decade before that. Both are nostalgia projects in their way, but only one of them has anything actually to be nostalgic about in this location — Citi Field's nostalgia is borrowed from someone else's borough.\n\nThe Mets play here from April through September, and the stadium is open for public tours in the off-season. Shea Stadium's former footprint, in the parking lot just east of here, is now marked with bases and a home plate where the original ones stood."
+        }
+      ]
+    },
+    {
+      "id": "664a707a-ef01-4014-8ee5-c0b7100db2c1",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Madison Square Garden",
+      "shortDescription": "The arena built over Penn Station's ruins — and the reason New York passed America's first landmarks preservation law in 1965.",
+      "longDescription": "Madison Square Garden (the fourth building to bear the name) opened in 1968 above the platforms of Penn Station, whose Beaux-Arts McKim, Mead & White hall — completed 1910, widely considered the most beautiful building in America — was demolished between 1963 and 1968 to make way for it. The public outcry prompted New York City to pass the Landmarks Preservation Act in 1965, the law that later saved Grand Central Terminal. MSG's operating permit, renewed for only five years in 2023, expires in 2028; multiple proposals for rebuilding Penn Station below — with or without a new MSG above — are under active consideration.",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Madison_Square_Garden_%2801%29.jpg/1280px-Madison_Square_Garden_%2801%29.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "introAudioURL": null,
+      "totalDurationSeconds": 296,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7505,
+      "centroidLongitude": -73.9934,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": [
+        "penn-station",
+        "preservation",
+        "architecture",
+        "sports",
+        "knicks",
+        "rangers",
+        "midtown",
+        "landmarks-law"
+      ],
+      "priceUSD": 0,
+      "stops": [
+        {
+          "id": "b1180c78-0fe2-4f17-bd1f-6366192eba5e",
+          "order": 0,
+          "title": "Madison Square Garden — 7th Avenue",
+          "caption": "7th Avenue & 33rd Street, above Penn Station, Midtown Manhattan",
+          "latitude": 40.7505,
+          "longitude": -73.9934,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Madison_Square_Garden.mp3",
+          "audioDurationSeconds": 296,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Madison_Square_Garden_%2801%29.jpg/1280px-Madison_Square_Garden_%2801%29.jpg",
+          "transcriptText": "Madison Square Garden is the reason historic preservation exists in America.\n\nYou're at the corner of 7th Avenue and 33rd Street, outside Madison Square Garden. The arena itself — a round, low-slung drum that occupies the entire block between 31st and 33rd, 7th and 8th avenues — is to your west, and the main 7th Avenue entrance, with its glass-and-LED canopy, is just south of you. Behind you, on the corner itself, is a separate glass dome: the East End Gateway, a new entrance to Penn Station that opened in 2020.\n\nThe building above you opened in 1968 and is, by general consensus, one of the least distinguished pieces of major architecture in midtown Manhattan. The architect was Charles Luckman; the building's external form is a windowless drum on a concrete plinth; the interior is the working arena where the Knicks and the Rangers play, along with about three hundred and twenty other major events a year. This is the fourth structure to use the name \"Madison Square Garden\" — the previous three, none of them on this site, were built in 1879, 1890, and 1925.\n\nThe reason this particular Garden matters historically is what was destroyed to build it. Under the streets you're standing on is Penn Station, the busiest train station in the Western Hemisphere. The original Penn Station was an enormous Beaux-Arts masterpiece, completed in 1910 by the firm McKim, Mead and White — a travertine and granite hall with vaulted ceilings, classical statuary, and a waiting room modeled on the Baths of Caracalla. It was widely considered one of the most beautiful pieces of architecture in the United States.\n\nIn 1962, the Pennsylvania Railroad, which owned the station and was losing money on passenger service, announced that it would demolish the building and sell the air rights over the train platforms to a developer. The developer planned to build Madison Square Garden on top of the platforms. Architects, historians, and preservation groups protested, and the New York Times published an editorial calling the demolition a civic crime, but the city had no legal authority to stop it. The station was demolished between 1963 and 1968, and the new MSG opened on top of the platforms in 1968.\n\nThe shock of the loss prompted New York City, in 1965, to pass the Landmarks Preservation Act, the first effective historic preservation law in the United States. It came too late for Penn Station, but it has saved hundreds of buildings since, including Grand Central Terminal — which was nearly demolished in the 1970s and was protected, after a Supreme Court case, by the same Landmarks Act that Penn Station's destruction had inspired.\n\nThe building you're looking at is, in most of the ways that matter, not the same one that opened in 1968. Between 2011 and 2013, MSG underwent a billion-dollar renovation — a project the owners called \"the Transformation\" — that gutted and rebuilt the entire arena interior, with new seating, new concourses, two suspended bridges spanning the playing floor, restored ceiling work, and a fully rebuilt 7th Avenue entrance. The canopy south of you, with two six-hundred-square-foot LED screens set into its ceiling, is part of that entrance — roughly twice the size of the original. And the concrete shell of the 1968 structure, still standing behind the new entrance and around the rest of the building, has since been wrapped in programmable LED lighting that runs along the seams of the facade and around the roof — so the whole building is now lit, at night, in colors that change with the event inside.\n\nWhat's worth knowing standing here is that the future of the building is, for the first time in decades, genuinely in question. In 2023, the city's special operating permit for the arena was renewed for only five years — half the term of the previous permit, and a deliberate signal from the City Council that it had grown frustrated by the lack of cooperation between MSG's ownership and the agencies trying to redevelop Penn Station beneath the building. The permit expires in 2028, and multiple competing proposals are under active consideration: some that would rebuild Penn Station while keeping MSG above it, others that would move MSG to a new site nearby and finally allow a full Penn Station rebuild below.\n\nThe architectural critic Vincent Scully described the original loss with a line that has been quoted ever since: \"One entered the city like a god; one scuttles in now like a rat.\" Whether you read that as a permanent indictment or as a temporary embarrassment depends, more than at any other point in the past sixty years, on what happens between now and 2028."
+        }
+      ]
     }
   ]
 }
