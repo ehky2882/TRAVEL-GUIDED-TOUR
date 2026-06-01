@@ -3636,6 +3636,91 @@
       "totalDurationSeconds": 157,
       "city": "New York",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "4827e124-6873-4478-9cae-5cf5f965bbe1",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Domino Park",
+      "shortDescription": "A former sugar refinery transformed into a public waterfront park, its industrial cranes and catwalks preserved as sculptural landmarks.",
+      "longDescription": "Domino Park occupies the site of the Domino Sugar Refinery, which operated on the Williamsburg waterfront from 1856 to 2004 — for most of the twentieth century, the largest sugar refinery in America. Designed by James Corner Field Operations (also responsible for the High Line) and opened in 2018, the park preserves the refinery's rusted cranes, syrup tanks, and conveyors as integrated park features. The elevated walkway follows the catwalks once used by refinery workers, offering the same view across the East River to the Manhattan skyline and the Williamsburg Bridge.",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Domino_Park_-_panoramio.jpg/1280px-Domino_Park_-_panoramio.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7128,
+      "centroidLongitude": -73.9635,
+      "city": "Brooklyn",
+      "primaryCategory": "history",
+      "tags": [
+        "industrial",
+        "waterfront",
+        "williamsburg",
+        "east-river",
+        "sugar-refinery",
+        "james-corner"
+      ],
+      "priceUSD": 0,
+      "stops": [
+        {
+          "id": "315e2f42-ce9b-4235-ab13-0c9a4c5d1774",
+          "order": 0,
+          "title": "Domino Park — Elevated Walkway",
+          "caption": "Former Domino Sugar Refinery site, Williamsburg waterfront",
+          "latitude": 40.7128,
+          "longitude": -73.9635,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Domino_Park.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Domino_Park_-_panoramio.jpg/1280px-Domino_Park_-_panoramio.jpg",
+          "transcriptText": "The cranes above you used to lift sugar.\n\nYou're on the elevated walkway at Domino Park, on the Williamsburg waterfront of the East River. To your west, across the water, the Manhattan skyline — from the spires of midtown north to the towers of the Lower East Side. Closer in, the Williamsburg Bridge crosses the river to your south. Around you, preserved as park features, are the rusted cranes, syrup tanks, conveyors, and steel beams of what used to be the Domino Sugar Refinery — for most of the twentieth century, the largest sugar refinery in America.\n\nThe refinery operated on this site from 1856 to 2004 — one hundred and forty-eight years. At its peak, it processed more than half of all sugar consumed in the United States. The sugar arrived in raw form by ship from the Caribbean — Cuba, the Dominican Republic, Puerto Rico — was unloaded at the piers behind you, refined in the buildings around you, packaged, and shipped out. Williamsburg, the neighborhood you're standing in, grew up around the refinery. The smell of cooking sugar was in the air for over a century.\n\nThe refinery closed in 2004. The site sat mostly empty for a decade. In 2012, the developer Two Trees Management bought the property and began converting the land into a mix of housing and public space.\n\nDomino Park opened in 2018, as part of that transformation. It was designed by James Corner Field Operations — the same firm that designed the High Line. The decision to preserve the industrial artifacts — the cranes, the syrup tanks, the catwalks — was deliberate. Rather than scrub the site of its history, the designers integrated the equipment into the park itself.\n\nWhat you're standing on is what happens when industrial infrastructure is treated as sculpture. The cranes that used to swing bags of raw sugar from ships now hang above a public path. The catwalks workers used to walk are part of the elevated walkway. The view is the same view workers had — the East River, the Williamsburg Bridge, the Manhattan skyline — except now you can sit down and look at it.\n\nWalk to the edge. Look out at the water, then back at the cranes. The park is small. The history is large."
+        }
+      ]
+    },
+    {
+      "id": "a3362636-7ea4-4fb7-bc75-11d39d7b60c6",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Wave Hill",
+      "shortDescription": "A 28-acre public garden in the Bronx perched above the Hudson River, once rented by Mark Twain and Theodore Roosevelt's family.",
+      "longDescription": "Wave Hill is a 28-acre public garden in Riverdale, the Bronx, occupying a bluff above the Hudson River with unobstructed views of the New Jersey Palisades. Wave Hill House was built in 1843 and over the following century housed Theodore Roosevelt's family in the 1870s, Mark Twain in 1901 (who called it 'a house befitting the gods'), and conductor Arturo Toscanini in the 1940s. The British government leased the estate as its UN ambassador's official residence during World War II. Donated to New York City in 1960 and opened as a public garden in 1965, Wave Hill today features a flower garden, wild garden, aquatic garden, herb and dry garden, and a conservatory — all designed in the English landscape tradition with the dramatic Palisades as backdrop.",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Wave_Hill_-_panoramio_%281%29.jpg/1280px-Wave_Hill_-_panoramio_%281%29.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.9005,
+      "centroidLongitude": -73.912,
+      "city": "Bronx",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "garden",
+        "hudson-river",
+        "bronx",
+        "riverdale",
+        "mark-twain",
+        "roosevelt",
+        "palisades"
+      ],
+      "priceUSD": 0,
+      "stops": [
+        {
+          "id": "75b8dd04-0fa9-44ae-b2c6-9807fa49f96a",
+          "order": 0,
+          "title": "Wave Hill Garden",
+          "caption": "28-acre public garden above the Hudson, Riverdale, Bronx",
+          "latitude": 40.9005,
+          "longitude": -73.912,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Wave_Hill.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 80,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Wave_Hill_-_panoramio_%281%29.jpg/1280px-Wave_Hill_-_panoramio_%281%29.jpg",
+          "transcriptText": "Mark Twain rented this house for a winter.\n\nYou're at Wave Hill, a twenty-eight-acre public garden in Riverdale, the northwest corner of the Bronx, perched on a bluff above the Hudson River. From the gardens, the view stretches west across the river to the New Jersey Palisades — the same cliffs that John D. Rockefeller Jr. paid to preserve, sixty years later, for the benefit of The Cloisters museum a few miles south. Wave Hill enjoys the view by accident of geography, not philanthropy.\n\nThe estate consists of two large houses and the grounds connecting them. Wave Hill House, the older of the two, was built in 1843 by William Lewis Morris, a New York jurist, and over the following century it was occupied by a series of remarkable tenants. Theodore Roosevelt's family rented it in the 1870s, when Roosevelt was a teenager. Mark Twain leased it for the winter of 1901, and described it in a letter as 'a house befitting the gods.' Arturo Toscanini lived here in the 1940s while conducting at NBC. The British government leased the estate during the Second World War as the official residence of the United Nations ambassador.\n\nIn 1960, the property was donated to the City of New York, and in 1965 it opened as a public garden. The current grounds include a flower garden, a wild garden, an aquatic garden, a herb and dry garden, and a conservatory with seasonal exhibits — all of it designed in the English landscape tradition, with the views to the Hudson functioning as the visual anchor.\n\nWhat Wave Hill does that no other public garden in New York does is integrate horticulture with one of the most dramatic natural views in the city. The Palisades, directly across the river, are an unbroken three-hundred-foot cliff face that runs for miles. From the lawns at Wave Hill, the cliffs appear close enough to touch, but there is nothing between you and them but water and air. On clear afternoons, the view is the kind that requires no commentary.\n\nThe garden is open year-round, with seasonal exhibits in the conservatory and on the grounds. It is a forty-minute trip from Manhattan by train, and the kind of place worth a half-day on a clear afternoon."
+        }
+      ]
     }
   ]
 }
