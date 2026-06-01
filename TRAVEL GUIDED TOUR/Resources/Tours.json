@@ -3979,6 +3979,93 @@
           "transcriptText": "Madison Square Garden is the reason historic preservation exists in America.\n\nYou're at the corner of 7th Avenue and 33rd Street, outside Madison Square Garden. The arena itself — a round, low-slung drum that occupies the entire block between 31st and 33rd, 7th and 8th avenues — is to your west, and the main 7th Avenue entrance, with its glass-and-LED canopy, is just south of you. Behind you, on the corner itself, is a separate glass dome: the East End Gateway, a new entrance to Penn Station that opened in 2020.\n\nThe building above you opened in 1968 and is, by general consensus, one of the least distinguished pieces of major architecture in midtown Manhattan. The architect was Charles Luckman; the building's external form is a windowless drum on a concrete plinth; the interior is the working arena where the Knicks and the Rangers play, along with about three hundred and twenty other major events a year. This is the fourth structure to use the name \"Madison Square Garden\" — the previous three, none of them on this site, were built in 1879, 1890, and 1925.\n\nThe reason this particular Garden matters historically is what was destroyed to build it. Under the streets you're standing on is Penn Station, the busiest train station in the Western Hemisphere. The original Penn Station was an enormous Beaux-Arts masterpiece, completed in 1910 by the firm McKim, Mead and White — a travertine and granite hall with vaulted ceilings, classical statuary, and a waiting room modeled on the Baths of Caracalla. It was widely considered one of the most beautiful pieces of architecture in the United States.\n\nIn 1962, the Pennsylvania Railroad, which owned the station and was losing money on passenger service, announced that it would demolish the building and sell the air rights over the train platforms to a developer. The developer planned to build Madison Square Garden on top of the platforms. Architects, historians, and preservation groups protested, and the New York Times published an editorial calling the demolition a civic crime, but the city had no legal authority to stop it. The station was demolished between 1963 and 1968, and the new MSG opened on top of the platforms in 1968.\n\nThe shock of the loss prompted New York City, in 1965, to pass the Landmarks Preservation Act, the first effective historic preservation law in the United States. It came too late for Penn Station, but it has saved hundreds of buildings since, including Grand Central Terminal — which was nearly demolished in the 1970s and was protected, after a Supreme Court case, by the same Landmarks Act that Penn Station's destruction had inspired.\n\nThe building you're looking at is, in most of the ways that matter, not the same one that opened in 1968. Between 2011 and 2013, MSG underwent a billion-dollar renovation — a project the owners called \"the Transformation\" — that gutted and rebuilt the entire arena interior, with new seating, new concourses, two suspended bridges spanning the playing floor, restored ceiling work, and a fully rebuilt 7th Avenue entrance. The canopy south of you, with two six-hundred-square-foot LED screens set into its ceiling, is part of that entrance — roughly twice the size of the original. And the concrete shell of the 1968 structure, still standing behind the new entrance and around the rest of the building, has since been wrapped in programmable LED lighting that runs along the seams of the facade and around the roof — so the whole building is now lit, at night, in colors that change with the event inside.\n\nWhat's worth knowing standing here is that the future of the building is, for the first time in decades, genuinely in question. In 2023, the city's special operating permit for the arena was renewed for only five years — half the term of the previous permit, and a deliberate signal from the City Council that it had grown frustrated by the lack of cooperation between MSG's ownership and the agencies trying to redevelop Penn Station beneath the building. The permit expires in 2028, and multiple competing proposals are under active consideration: some that would rebuild Penn Station while keeping MSG above it, others that would move MSG to a new site nearby and finally allow a full Penn Station rebuild below.\n\nThe architectural critic Vincent Scully described the original loss with a line that has been quoted ever since: \"One entered the city like a god; one scuttles in now like a rat.\" Whether you read that as a permanent indictment or as a temporary embarrassment depends, more than at any other point in the past sixty years, on what happens between now and 2028."
         }
       ]
+    },
+    {
+      "id": "0f36af00-f06c-422a-af50-b176a9fb2565",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Riverside Church",
+      "shortDescription": "John D. Rockefeller Jr.'s Gothic Revival skyscraper-church, where Martin Luther King delivered his 1967 'Beyond Vietnam' speech — and America's tallest church tower.",
+      "longDescription": "Riverside Church was built 1927–1930 on Riverside Drive at 120th Street, funded by John D. Rockefeller Jr. and modelled on Chartres Cathedral. Its 392-foot tower — the tallest church tower in the United States — houses the world's largest carillon (74 bells, including one weighing over 20 tons). The pulpit has hosted Nelson Mandela, Desmond Tutu, the Dalai Lama, and on April 4, 1967 — exactly one year before his assassination — Martin Luther King Jr., who delivered 'Beyond Vietnam: A Time to Break Silence,' now considered one of the most important speeches of 20th-century American rhetoric.",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Riverside_Church_from_the_south.jpg/1280px-Riverside_Church_from_the_south.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "introAudioURL": null,
+      "totalDurationSeconds": 184,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.8098,
+      "centroidLongitude": -73.9632,
+      "city": "New York",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "gothic-revival",
+        "rockefeller",
+        "martin-luther-king",
+        "vietnam",
+        "church",
+        "harlem",
+        "riverside-drive",
+        "carillon"
+      ],
+      "priceUSD": 0,
+      "stops": [
+        {
+          "id": "fea1e332-79cf-4f81-a738-d1e17f29e6e7",
+          "order": 0,
+          "title": "Riverside Church",
+          "caption": "Riverside Drive at 120th Street, Morningside Heights, Manhattan",
+          "latitude": 40.8098,
+          "longitude": -73.9632,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Riverside_Church.mp3",
+          "audioDurationSeconds": 184,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Riverside_Church_from_the_south.jpg/1280px-Riverside_Church_from_the_south.jpg",
+          "transcriptText": "Martin Luther King gave his speech against the Vietnam War from the pulpit of this church.\n\nYou're on Riverside Drive at 120th Street, outside Riverside Church — a Gothic Revival skyscraper-church built between 1927 and 1930, funded almost entirely by John D. Rockefeller Junior, who also funded The Cloisters museum twenty blocks north and the Riverside campus of Columbia University across the street. The building has a Gothic structural exterior and a steel-frame interior, the tower is three hundred and ninety-two feet tall — the tallest church tower in the United States — and the carillon at the top contains seventy-four bells, the largest in the world, including a single bottom bell that weighs more than twenty tons.\n\nThe church was designed by Henry C. Pelton and the firm Allen, Pelton and Collens, and it was deliberately patterned on the Cathedral of Chartres in France, with significant modifications for the New York site and for Protestant rather than Catholic worship. Rockefeller and the Baptist pastor Harry Emerson Fosdick, who served as the church's first preacher, envisioned an ecumenical Protestant congregation that would draw worshippers across denominational lines and across the income spectrum — an explicitly cosmopolitan, urban, modern Protestantism, of the kind that defined much of mainstream American religious thought in the middle of the twentieth century.\n\nThe pulpit has been used by an unusual concentration of internationally significant speakers. Reinhold Niebuhr preached here, Nelson Mandela spoke here after his release from prison, Desmond Tutu spoke here, and the Dalai Lama has spoken from this pulpit. Bill Clinton, Cesar Chavez, Kofi Annan, Fidel Castro, and Jesse Jackson have all stood at it.\n\nBut the speech that defined the church's twentieth-century identity was Martin Luther King's address on April 4, 1967, exactly one year before he was assassinated. The speech, titled \"Beyond Vietnam: A Time to Break Silence,\" was King's most direct public condemnation of the American war in Vietnam, and it was widely criticized at the time — including by the New York Times — as a misuse of his civil rights authority to oppose government foreign policy. The speech, taken in full, is now considered one of the most important pieces of American twentieth-century rhetoric.\n\nWhat makes Riverside Church specifically interesting, standing outside it, is its dual identity. It is a religious building, with active congregational life and weekly services, and it is also a civic and political institution — a kind of national pulpit where significant public speech happens on the questions of the moment. The building was designed for both.\n\nGrant's Tomb, the burial place of President Ulysses S. Grant and his wife Julia, is in the small park immediately north of the church, and is open to the public. The church itself is open most days, with daily services and occasional concerts on the carillon."
+        }
+      ]
+    },
+    {
+      "id": "b0ef546a-db5c-4b27-8eb3-be4dd6665e61",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "One World Trade Center",
+      "shortDescription": "The 1,776-foot tower completed in 2014 on the site of the original World Trade Center — the tallest building in the Western Hemisphere, and one of the most symbolic skyscrapers ever built.",
+      "longDescription": "One World Trade Center, completed 2014, stands 1,776 feet — the year of American independence, by deliberate design. Architect David Childs of Skidmore, Owings and Merrill gave it a square base that chamfers progressively into an octagon at mid-height and back to a rotated square at the top, creating a twisting silhouette. The $3.5 billion tower was not built on the original north tower's footprint; those footprints, along with the south tower's, are preserved as the 9/11 Memorial reflecting pools immediately south. The base has 30-foot-thick reinforced concrete walls and no windows below the 20th floor.",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/One_World_Trade_Center_from_Liberty_Park.jpg/1280px-One_World_Trade_Center_from_Liberty_Park.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "introAudioURL": null,
+      "totalDurationSeconds": 165,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7127,
+      "centroidLongitude": -74.0134,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": [
+        "september-11",
+        "skyscraper",
+        "architecture",
+        "lower-manhattan",
+        "som",
+        "1776",
+        "memorial"
+      ],
+      "priceUSD": 0,
+      "stops": [
+        {
+          "id": "7d8d72f6-8b01-4bcc-860b-4f7f0a74a932",
+          "order": 0,
+          "title": "One World Trade Center",
+          "caption": "Northwest corner of the World Trade Center site, Lower Manhattan",
+          "latitude": 40.7127,
+          "longitude": -74.0134,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/One_World_Trade_Center.mp3",
+          "audioDurationSeconds": 165,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/One_World_Trade_Center_from_Liberty_Park.jpg/1280px-One_World_Trade_Center_from_Liberty_Park.jpg",
+          "transcriptText": "The height of this tower is a date.\n\nLook up. The building rising in front of you is One World Trade Center, completed in 2014, at the northwest corner of what was the original World Trade Center complex. The tower is one thousand seven hundred and seventy-six feet tall — not by coincidence, but by deliberate design, in reference to the year of American independence. It is the tallest building in the Western Hemisphere, and one of the most heavily symbolic skyscrapers ever built in the United States.\n\nThe architect was David Childs of the firm Skidmore, Owings and Merrill — the same firm that designed Lever House across town, and most of the major American corporate skyscrapers of the past seventy years. The building's form is more complicated than it first appears: the base is a square cube, two hundred feet on each side, but as the tower rises, the corners are progressively chamfered, so that the cube transforms into a perfect octagon at the midpoint, and then narrows again toward a smaller square at the top, oriented forty-five degrees from the base. The effect, depending on the angle, is that the building seems to twist as it rises.\n\nConstruction took eight years and cost approximately three and a half billion dollars, making it one of the most expensive office buildings ever built. The tower replaced the original World Trade Center's north tower, which collapsed on September 11, 2001 — but it was not built on the original tower's footprint. The footprints of the two original towers, both preserved as reflecting pools, are the centerpieces of the 9/11 Memorial, just south of you, and the new tower was built on a site nearby so that the memorial pools could occupy the original tower locations exactly.\n\nWhat this building does, standing here looking up at it, is occupy a kind of impossible role. It has to be a working skyscraper with viable commercial office space, and it has to be tall enough to signal that the city has rebuilt. It has to be safe — the building has reinforced concrete walls thirty feet thick at the base, no windows below the twentieth floor, and is engineered to be one of the most blast-resistant buildings in the world. And it has to coexist, every day, with the memorial directly beside it — a fact that shapes nearly every aspect of its design, from the height to the orientation to the symbolic numbers.\n\nThe observation deck at the top, called One World Observatory, is open to the public, and the building's main entrance is on the south side, facing the memorial plaza. The ground floor of the building includes the West Concourse, a long underground passageway connecting to the Oculus and the various subway lines."
+        }
+      ]
     }
   ]
 }
