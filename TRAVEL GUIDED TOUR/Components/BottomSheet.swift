@@ -98,11 +98,20 @@ struct BottomSheet<Content: View>: View {
         GeometryReader { geo in
             let topInset = geo.safeAreaInsets.top
             let baseHeight = heightForDetent(detent, in: geo, topInset: topInset)
+            // Clamp the drag-time visual height to the `.large` detent's
+            // resolved height — NOT the full container height. Otherwise
+            // an upward drag could grow the drawer past `.large`, which
+            // on the home screen means past the search bar + chip row
+            // (`.large` reserves space for those via topReservedHeight).
+            // The snap-to-detent at gesture end already targets a real
+            // detent, but during the drag itself the user could pull
+            // the drawer all the way to the top edge of the screen.
+            let largeHeight = heightForDetent(.large, in: geo, topInset: topInset)
             // Negative dragOffset = drag up = drawer grows.
             // Positive dragOffset = drag down = drawer shrinks.
             let dragHeight = min(
                 max(peekHeight, baseHeight - dragOffset),
-                geo.size.height - horizontalInset
+                largeHeight
             )
 
             VStack(spacing: 0) {
