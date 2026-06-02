@@ -4417,6 +4417,76 @@
       "primaryCategory": "sacredSites",
       "tags": ["colonial", "church", "george washington", "9/11", "history", "lower manhattan"],
       "priceUSD": 0
+    },
+    {
+      "id": "e241b830-ff71-409a-a91a-2b7e96fb98bd",
+      "title": "The Ansonia",
+      "shortDescription": "The Beaux-Arts residential hotel where Caruso, Toscanini, and Babe Ruth all lived — and where the owner once kept a bear on the roof.",
+      "longDescription": "You're on Broadway, between 73rd and 74th Streets, outside the Ansonia — a seventeen-story Beaux-Arts residential building with twin corner towers, a Parisian mansard roof, and an exuberantly ornamented facade that has earned it the local nickname \"the wedding cake of the Upper West Side.\" The building was constructed between 1899 and 1904, and at the time of its completion it was the largest residential hotel in New York City — three hundred and forty suites, more than five hundred thousand square feet, with the world's largest indoor swimming pool in the basement, Turkish baths, a fountain with live seals in the lobby, and what is generally credited as the first air conditioning system in any New York hotel.\n\nThe driving force behind the building was a man named William Earle Dodge Stokes — a Phelps-Dodge copper heir, an early advocate for Broadway as a grand thoroughfare to rival Fifth Avenue, and one of the more eccentric New York millionaires of his generation. Stokes conceived the Ansonia as something close to a self-sufficient utopia, and the rooftop farm was part of that vision: five hundred chickens, several ducks, six goats, a pig named Nanki-Poo, and a small bear. Bellhops collected eggs every morning and delivered them to the tenants. The Department of Health was not amused. In 1907, after residents complained about the smell and the noise, the city ordered the farm shut down — and Stokes and his teenage son spent the night before the inspection moving the animals down the freight elevators and hiding them in the basement.\n\nWhat made the Ansonia famous in the decades that followed was not the farm but the walls. Stokes had specified extraordinarily thick interior partitions throughout the building — thick enough to make individual apartments effectively soundproof. That single architectural detail made the Ansonia the favored residence of every working musician in New York: Enrico Caruso lived here, Arturo Toscanini lived here, Igor Stravinsky composed here, and the young Plácido Domingo lived here in the early years of his career. Babe Ruth lived here during his Yankees years, Theodore Dreiser wrote here, and Jack Dempsey kept an apartment here. Several members of the Chicago White Sox are said to have met in a suite here in September 1919 to plan throwing the World Series — the Black Sox scandal. The building was converted to residential condominiums in 1992. The bear, the pig, and the seals are long gone.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/The_Ansonia_building_as_seen_from_73rd_Street%2C_2026.jpg/1280px-The_Ansonia_building_as_seen_from_73rd_Street%2C_2026.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b6834afd-fec4-4d8c-a0e1-fa2962c358d2",
+          "order": 0,
+          "title": "The Ansonia",
+          "caption": "2109 Broadway, Upper West Side",
+          "latitude": 40.77966,
+          "longitude": -73.98163,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-ansonia.mp3",
+          "audioDurationSeconds": 244,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 244,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.77966,
+      "centroidLongitude": -73.98163,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["beaux-arts", "residential", "musicians", "upper west side", "history"],
+      "priceUSD": 0
+    },
+    {
+      "id": "ad6ebad4-5b69-4a08-86ed-c5090fbc5e32",
+      "title": "The Chelsea Hotel",
+      "shortDescription": "The Victorian Gothic hotel on 23rd Street that housed a century of American literary and artistic life — and two of its most notorious tragedies.",
+      "longDescription": "You're on West 23rd Street, outside the Chelsea Hotel — a twelve-story Victorian Gothic building in dark red brick, with wrought-iron balconies running across the entire facade and a small red neon sign reading \"HOTEL CHELSEA\" above the entrance. The building was completed in 1884, designed by the architect Philip Hubert, and at the time it was the tallest building in New York City. It opened as the first private apartment cooperative in the United States, intended for upper-middle-class families who wanted a more communal alternative to the brownstone houses then dominant on the West Side.\n\nThe cooperative model failed within twenty years. The wealthy moved north, the neighborhood declined, and in 1905 the building was converted into a hotel. From that point forward, the Chelsea became the central residence of the American literary and artistic avant-garde for almost a century. Among the writers: Thomas Wolfe wrote \"You Can't Go Home Again\" in one of the upstairs rooms; Arthur Miller lived here in the 1960s; Arthur C. Clarke wrote \"2001: A Space Odyssey\" on the top floor. Among the musicians: Bob Dylan wrote \"Sad-Eyed Lady of the Lowlands\" in one of the rooms; Patti Smith and Robert Mapplethorpe shared an apartment here in the early 1970s; Leonard Cohen wrote \"Chelsea Hotel No. 2\" about a brief encounter with Janis Joplin somewhere upstairs. Andy Warhol filmed \"Chelsea Girls\" inside, and Madonna lived here in the 1980s.\n\nTwo of the building's most famous moments were tragedies. In November 1953, the Welsh poet Dylan Thomas collapsed after a long night of drinking and died a few days later in a nearby hospital. In October 1978, Nancy Spungen, the girlfriend of Sex Pistols bassist Sid Vicious, was found stabbed to death in their room. Sid Vicious was charged with her murder but died of a heroin overdose four months later, before the case came to trial. In 2011 the building was sold, closed to new guests, and underwent an eleven-year renovation contested repeatedly in court by long-term residents. The Chelsea reopened in stages from 2022 as a luxury boutique hotel. The lobby is open to the public, and the wrought-iron staircase that climbs the central atrium is one of the most distinctive interiors in any New York hotel.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Chelsea_Manhattan_Aug_2025_102.jpg/1280px-Chelsea_Manhattan_Aug_2025_102.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "95a1aa5e-fa06-4834-8352-3ee4af1ea9b3",
+          "order": 0,
+          "title": "The Chelsea Hotel",
+          "caption": "222 West 23rd Street, Chelsea",
+          "latitude": 40.74454,
+          "longitude": -74.00025,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-chelsea-hotel.mp3",
+          "audioDurationSeconds": 224,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 224,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.74454,
+      "centroidLongitude": -74.00025,
+      "city": "New York",
+      "primaryCategory": "culturalHeritage",
+      "tags": ["hotel", "literary", "music", "art", "history", "chelsea"],
+      "priceUSD": 0
     }
   ]
 }
