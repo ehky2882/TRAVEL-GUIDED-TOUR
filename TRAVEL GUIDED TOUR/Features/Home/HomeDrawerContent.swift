@@ -37,7 +37,7 @@ struct HomeDrawerContent: View {
             let aboveDrawerCount = toursInViewCount(in: geo)
 
             VStack(alignment: .leading, spacing: 0) {
-                Text(headerText(forCount: aboveDrawerCount))
+                headerLabel(forCount: aboveDrawerCount)
                     .font(AtlasTypography.headline)
                     .foregroundStyle(AtlasColors.primaryText)
                     .frame(maxWidth: .infinity)
@@ -66,7 +66,9 @@ struct HomeDrawerContent: View {
                                         maker: dataService.maker(for: tour),
                                         isDownloaded: tourDownloader.isDownloaded(tourId: tour.id),
                                         distanceText: distanceText(for: tour),
-                                        isSelected: sharedState.placecardTour?.id == tour.id
+                                        isSelected: sharedState.placecardTour?.id == tour.id,
+                                        isSaved: libraryStore.isSaved(tour.id),
+                                        onBookmarkTap: { libraryStore.toggleSaved(tour.id) }
                                     )
                                 }
                                 .buttonStyle(.plain)
@@ -160,7 +162,13 @@ struct HomeDrawerContent: View {
         switch sheetDetent {
         case .peek:   baseHeight = peekHeight
         case .medium: baseHeight = geo.size.height * 0.5
-        case .large:  baseHeight = geo.size.height - AtlasSpacing.sm - AtlasBottomModule.height()
+        case .large:
+            // Mirrors BottomSheet.heightForDetent(.large) — subtract
+            // search/chips block + small buffer so the tours-in-view
+            // clipping math uses the real drawer height. Safe-area
+            // top is NOT added here (see matching note in BottomSheet).
+            let topGap = AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
+            baseHeight = geo.size.height - topGap - AtlasBottomModule.height()
         }
         return max(peekHeight, baseHeight - sharedState.sheetDragOffset)
     }
@@ -202,12 +210,26 @@ struct HomeDrawerContent: View {
             .screen.bounds.height
     }
 
-    private func headerText(forCount n: Int) -> String {
-        if sheetDetent == .large { return "Let's explore together!" }
-        switch n {
-        case 0: return "No tours in view"
-        case 1: return "1 tour in view"
-        default: return "\(n) tours in view"
+    /// The "N tours in view" header. While the map is mid-pan/-fling
+    /// (sharedState.isMapMoving), shows an animated *ELLIPSIS*
+    /// cycling . / .. / ... via a TimelineView — better than letting
+    /// the count flicker through 0 mid-gesture, which reads as
+    /// "no results."
+    @ViewBuilder
+    private func headerLabel(forCount n: Int) -> some View {
+        if sheetDetent == .large {
+            Text("Let's explore together!")
+        } else if sharedState.isMapMoving {
+            TimelineView(.periodic(from: .now, by: 0.4)) { context in
+                let tick = Int(context.date.timeIntervalSinceReferenceDate / 0.4) % 3 + 1
+                Text(String(repeating: ".", count: tick))
+            }
+        } else {
+            switch n {
+            case 0: Text("No tours in view")
+            case 1: Text("1 tour in view")
+            default: Text("\(n) tours in view")
+            }
         }
     }
 

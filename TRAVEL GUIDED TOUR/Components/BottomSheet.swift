@@ -53,6 +53,13 @@ struct BottomSheet<Content: View>: View {
     /// and letting its rounded bottom corners peek out around the
     /// floating island's edges.
     var bottomReservedHeight: CGFloat = 0
+    /// Vertical space the parent has reserved for floating elements
+    /// ABOVE the drawer (search bar + chip row, on the home screen).
+    /// The `.large` detent stops short by this much from the top so
+    /// those elements stay visible when the drawer is fully expanded.
+    /// Pass the bare content height — the sheet adds the container's
+    /// top safe-area inset internally.
+    var topReservedHeight: CGFloat = 0
 
     /// Signed drag delta in points: positive when the user is dragging
     /// down (shrinking the drawer), negative when dragging up. Reset
@@ -73,6 +80,7 @@ struct BottomSheet<Content: View>: View {
         topCornerRadius: CGFloat = 30,
         bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius,
         bottomReservedHeight: CGFloat = 0,
+        topReservedHeight: CGFloat = 0,
         @ViewBuilder content: () -> Content
     ) {
         self._detent = detent
@@ -82,12 +90,14 @@ struct BottomSheet<Content: View>: View {
         self.topCornerRadius = topCornerRadius
         self.bottomCornerRadius = bottomCornerRadius
         self.bottomReservedHeight = bottomReservedHeight
+        self.topReservedHeight = topReservedHeight
         self.content = content()
     }
 
     var body: some View {
         GeometryReader { geo in
-            let baseHeight = heightForDetent(detent, in: geo)
+            let topInset = geo.safeAreaInsets.top
+            let baseHeight = heightForDetent(detent, in: geo, topInset: topInset)
             // Negative dragOffset = drag up = drawer grows.
             // Positive dragOffset = drag down = drawer shrinks.
             let dragHeight = min(
@@ -125,7 +135,7 @@ struct BottomSheet<Content: View>: View {
             .padding(.horizontal, horizontalInset)
             .padding(.bottom, bottomReservedHeight)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-            .gesture(dragGesture(in: geo))
+            .gesture(dragGesture(in: geo, topInset: topInset))
         }
         .ignoresSafeArea(.container, edges: .bottom)
     }
@@ -183,7 +193,7 @@ struct BottomSheet<Content: View>: View {
 
     // MARK: - Gesture
 
-    private func dragGesture(in geo: GeometryProxy) -> some Gesture {
+    private func dragGesture(in geo: GeometryProxy, topInset: CGFloat) -> some Gesture {
         DragGesture()
             .updating($isDragging) { _, state, _ in
                 state = true
@@ -192,11 +202,12 @@ struct BottomSheet<Content: View>: View {
                 dragOffset = value.translation.height
             }
             .onEnded { value in
-                let currentVisible = heightForDetent(detent, in: geo) - value.translation.height
-                let predictedVisible = heightForDetent(detent, in: geo) - value.predictedEndTranslation.height
+                let currentVisible = heightForDetent(detent, in: geo, topInset: topInset) - value.translation.height
+                let predictedVisible = heightForDetent(detent, in: geo, topInset: topInset) - value.predictedEndTranslation.height
                 let target = nearestDetent(
                     toVisibleHeight: predictedVisible,
                     in: geo,
+                    topInset: topInset,
                     fallback: currentVisible
                 )
                 // Animate detent change AND dragOffset reset together
@@ -213,33 +224,51 @@ struct BottomSheet<Content: View>: View {
 
     // MARK: - Detent math
 
-    private func heightForDetent(_ d: BottomSheetDetent, in geo: GeometryProxy) -> CGFloat {
+    private func heightForDetent(_ d: BottomSheetDetent, in geo: GeometryProxy, topInset: CGFloat) -> CGFloat {
         switch d {
         case .peek:   return peekHeight
         case .medium: return geo.size.height * 0.5
         case .large:
-            // Fill the container, less the 8pt top inset, less the
-            // height the parent reserved at the bottom for a floating
-            // element (mini-player + tab bar on the home screen). The
-            // matching `.padding(.bottom, bottomReservedHeight)` below
-            // pushes the drawer's bottom edge flush against the top of
-            // that element — no gap.
-            return geo.size.height - horizontalInset - bottomReservedHeight
+            // Fill the container, less:
+            // - the parent's bottom-reserved height (mini-player +
+            //   tab bar on the home screen) so the drawer stacks on
+            //   top of that element with no gap;
+            // - the parent's top-reserved height (search bar + chip
+            //   row on the home screen) so those elements remain
+            //   visible above the drawer when it's fully expanded.
+            //
+            // Note: topInset is NOT added here. The GeometryReader's
+            // bounds already start below the device safe-area top
+            // (the parent ZStack respects top safe area), so the
+            // drawer's geo-space top position IS already in the
+            // safe-area-respecting region. Apple's
+            // `geo.safeAreaInsets.top` still reports the device's
+            // actual inset value here (it describes the device, not
+            // remaining padding), so naively adding it would
+            // double-count the offset and push the drawer ~safe-
+            // area-height too far down. When topReservedHeight is 0
+            // (every other caller), the old `horizontalInset`-as-
+            // top-spacer behavior is preserved.
+            let topGap = topReservedHeight > 0
+                ? topReservedHeight
+                : horizontalInset
+            return geo.size.height - topGap - bottomReservedHeight
         }
     }
 
     private func nearestDetent(
         toVisibleHeight target: CGFloat,
         in geo: GeometryProxy,
+        topInset: CGFloat,
         fallback: CGFloat
     ) -> BottomSheetDetent {
         let scored = BottomSheetDetent.allCases.map { d in
-            (d, abs(heightForDetent(d, in: geo) - target))
+            (d, abs(heightForDetent(d, in: geo, topInset: topInset) - target))
         }
         return scored.min(by: { $0.1 < $1.1 })?.0
             ?? BottomSheetDetent.allCases.min(by: {
-                abs(heightForDetent($0, in: geo) - fallback)
-                    < abs(heightForDetent($1, in: geo) - fallback)
+                abs(heightForDetent($0, in: geo, topInset: topInset) - fallback)
+                    < abs(heightForDetent($1, in: geo, topInset: topInset) - fallback)
             })
             ?? .peek
     }
