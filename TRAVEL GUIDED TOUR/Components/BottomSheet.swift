@@ -233,14 +233,24 @@ struct BottomSheet<Content: View>: View {
             // - the parent's bottom-reserved height (mini-player +
             //   tab bar on the home screen) so the drawer stacks on
             //   top of that element with no gap;
-            // - the parent's top-reserved height plus the top safe-
-            //   area inset (search bar + chip row on the home screen)
-            //   so those elements remain visible above the drawer
-            //   when it's fully expanded. When topReservedHeight is
-            //   0 (every other caller), the old `horizontalInset`-as-
-            //   top-spacer behavior is preserved.
+            // - the parent's top-reserved height (search bar + chip
+            //   row on the home screen) so those elements remain
+            //   visible above the drawer when it's fully expanded.
+            //
+            // Note: topInset is NOT added here. The GeometryReader's
+            // bounds already start below the device safe-area top
+            // (the parent ZStack respects top safe area), so the
+            // drawer's geo-space top position IS already in the
+            // safe-area-respecting region. Apple's
+            // `geo.safeAreaInsets.top` still reports the device's
+            // actual inset value here (it describes the device, not
+            // remaining padding), so naively adding it would
+            // double-count the offset and push the drawer ~safe-
+            // area-height too far down. When topReservedHeight is 0
+            // (every other caller), the old `horizontalInset`-as-
+            // top-spacer behavior is preserved.
             let topGap = topReservedHeight > 0
-                ? topInset + topReservedHeight
+                ? topReservedHeight
                 : horizontalInset
             return geo.size.height - topGap - bottomReservedHeight
         }

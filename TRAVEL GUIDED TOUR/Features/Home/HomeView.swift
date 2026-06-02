@@ -196,12 +196,13 @@ struct HomeView: View {
         case .peek:   baseHeight = peekHeight
         case .medium: baseHeight = geo.size.height * 0.5
         case .large:
-            // Mirrors BottomSheet.heightForDetent(.large) — must
-            // subtract top safe-area inset + search/chips block +
-            // small buffer (matching ContentView's topReservedHeight)
-            // so the map controls don't think the drawer is taller
-            // than it actually is.
-            let topGap = geo.safeAreaInsets.top + AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
+            // Mirrors BottomSheet.heightForDetent(.large) — subtract
+            // the search/chips block + small buffer (matching
+            // ContentView's topReservedHeight) so the map controls
+            // don't think the drawer is taller than it actually is.
+            // Safe-area top is NOT added — see the matching note in
+            // BottomSheet.heightForDetent for why.
+            let topGap = AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
             baseHeight = geo.size.height - topGap - floatingIslandHeight
         }
         return max(peekHeight, baseHeight - sharedState.sheetDragOffset)
