@@ -4066,6 +4066,287 @@
           "transcriptText": "The height of this tower is a date.\n\nLook up. The building rising in front of you is One World Trade Center, completed in 2014, at the northwest corner of what was the original World Trade Center complex. The tower is one thousand seven hundred and seventy-six feet tall — not by coincidence, but by deliberate design, in reference to the year of American independence. It is the tallest building in the Western Hemisphere, and one of the most heavily symbolic skyscrapers ever built in the United States.\n\nThe architect was David Childs of the firm Skidmore, Owings and Merrill — the same firm that designed Lever House across town, and most of the major American corporate skyscrapers of the past seventy years. The building's form is more complicated than it first appears: the base is a square cube, two hundred feet on each side, but as the tower rises, the corners are progressively chamfered, so that the cube transforms into a perfect octagon at the midpoint, and then narrows again toward a smaller square at the top, oriented forty-five degrees from the base. The effect, depending on the angle, is that the building seems to twist as it rises.\n\nConstruction took eight years and cost approximately three and a half billion dollars, making it one of the most expensive office buildings ever built. The tower replaced the original World Trade Center's north tower, which collapsed on September 11, 2001 — but it was not built on the original tower's footprint. The footprints of the two original towers, both preserved as reflecting pools, are the centerpieces of the 9/11 Memorial, just south of you, and the new tower was built on a site nearby so that the memorial pools could occupy the original tower locations exactly.\n\nWhat this building does, standing here looking up at it, is occupy a kind of impossible role. It has to be a working skyscraper with viable commercial office space, and it has to be tall enough to signal that the city has rebuilt. It has to be safe — the building has reinforced concrete walls thirty feet thick at the base, no windows below the twentieth floor, and is engineered to be one of the most blast-resistant buildings in the world. And it has to coexist, every day, with the memorial directly beside it — a fact that shapes nearly every aspect of its design, from the height to the orientation to the symbolic numbers.\n\nThe observation deck at the top, called One World Observatory, is open to the public, and the building's main entrance is on the south side, facing the memorial plaza. The ground floor of the building includes the West Concourse, a long underground passageway connecting to the Oculus and the various subway lines."
         }
       ]
+    },
+    {
+      "id": "DC9AE8A3-B797-4094-A7B3-2E61C4627C5B",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Porto Tram Museum",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Tram_Museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Tram_Museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Tram_Museum_3.webp"
+      ],
+      "tags": [
+        "porto tram museum",
+        "massarelos",
+        "historic trams",
+        "transportation",
+        "industrial heritage",
+        "1915"
+      ],
+      "stops": [
+        {
+          "id": "05DF4599-B579-4FCC-A794-F2A151546DA1",
+          "order": 0,
+          "title": "Porto Tram Museum",
+          "caption": "Inside the former Massarelos thermoelectric power station — trams arranged chronologically across the floor; start at the oldest, on the left.",
+          "latitude": 41.14772580975504,
+          "longitude": -8.632916429692058,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/porto-tram-museum.mp3",
+          "audioDurationSeconds": 172,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Tram_Museum_hero.webp",
+          "transcriptText": "The building you're standing in used to generate the electricity that powered the trams outside, which means the machines that moved the city were fed by this building, and now the building holds the machines — and there is a neatness to that circularity that makes it one of the more satisfying museum premises in Porto.\nYou're in the former Massarelos thermoelectric power station, built in nineteen fifteen on the bank of the Douro, and the main floor is a large industrial hall with a high ceiling, exposed ironwork, and the particular smell of old wood and metal that comes from vehicles that stopped running decades ago but have been cared for ever since. The trams are arranged across the floor roughly in chronological order, with the oldest to your left and the most recent toward the far end, so walk slowly toward the oldest one first and let the building organise the history for you.\nThe first vehicle you'll reach is the Carro Americano — the American Car — a horse-drawn tram whose design came from the United States and whose specific body was built by the Starbuck Car and Wagon Company in Birkenhead, England, in eighteen seventy-two, and which was pulled through Porto's streets by mules for the better part of thirty years before the last one was retired in nineteen oh four. It is, standing in front of it, a genuinely strange object: wooden benches, open platforms, and a name that commemorates an American design tradition built in an English industrial town for a Portuguese city that would eventually replace it with electric vehicles inspired by the same American model, only without the animal.\nContinue further into the hall toward the electric trams, because the dates here matter.\nIn eighteen ninety-five, Porto became the first city on the entire Iberian Peninsula to electrify its tram network — six years before Lisbon, which is a fact Porto is entirely justified in being pleased about — and the electricity for those early cars came from this building, the one you're standing in now. At the network's peak in nineteen fifty-eight, the city was running a hundred and ninety-two trams across eighty-one kilometres of track, which covered every neighbourhood and every hill, and then came the car, and the lines closed through the sixties and seventies with most of the fleet scrapped, until only three heritage routes survived through the old city.\n\nWhat's worth noticing, before you leave, is what the trams themselves look like up close — the polished wood interiors, the brass fittings, the windows scaled for a narrower city — because these weren't simply transit vehicles but the physical infrastructure around which Porto's streets were originally built: the hills, the tight corners, the cobblestones, the whole texture of the old city was shaped partly by the width of a tram car and the radius it could turn, and Line One stops right outside if you'd like to feel what that radius actually is."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 41.14772580975504,
+      "centroidLongitude": -8.632916429692058,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The Porto Tram Museum occupies the former Massarelos thermoelectric power station, built in 1915 on the bank of the Douro — the building that once generated the electricity that powered Porto's trams now holds them. A large industrial hall with high ceiling and exposed ironwork, the floor laid out chronologically: oldest to your left, most recent toward the far end. The earliest vehicle is the Carro Americano, a horse-drawn tram built in Birkenhead by the Starbuck Car and Wagon Company in 1872 and pulled through Porto's streets by mules for thirty years. In 1895, Porto became the first city on the Iberian Peninsula to electrify its tram network — six years before Lisbon, a fact Porto is justifiably pleased about — and the early electric cars drew their power from this building. At the network's 1958 peak the city ran 192 trams across 81 kilometres of track; the lines closed through the sixties and seventies, leaving only three heritage routes through the old city. Line One stops directly outside.",
+      "shortDescription": "Three minutes inside the former Massarelos thermoelectric power station — the building that once generated electricity for Porto's trams now holds them.",
+      "totalDurationSeconds": 172,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "AAF6A3C7-3884-4ADD-B699-66CF5D91DD7F",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Church of Santa Maria",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Santa_Maria_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Santa_Maria_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Santa_Maria_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Santa_Maria_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Santa_Maria_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Santa_Maria_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Santa_Maria_7.webp"
+      ],
+      "tags": [
+        "church of santa maria",
+        "marco de canaveses",
+        "alvaro siza",
+        "modernist church",
+        "religious architecture",
+        "1996"
+      ],
+      "stops": [
+        {
+          "id": "B03B19FB-2CDF-4FDC-8BC1-66BFD1CE3D70",
+          "order": 0,
+          "title": "Church of Santa Maria",
+          "caption": "On the forecourt platform facing the main facade — a 17.5-metre square of white concrete with two projecting towers and ten-metre steel doors between them.",
+          "latitude": 41.18871618950502,
+          "longitude": -8.145676892367486,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/church-of-santa-maria.mp3",
+          "audioDurationSeconds": 188,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Santa_Maria_hero.webp",
+          "transcriptText": "This church exists because a parish priest made a phone call, and the fact that it ended up as one of the most discussed pieces of religious architecture of the twentieth century begins with that single decision.\n\nFather Nuno Higino decided personally to commission Álvaro Siza — no competition, no institutional process, just a direct approach and a complete willingness to trust him — and Siza's first visit to the site left him, by his own account, genuinely disturbed: a steep escarpment, a noisy highway running in front and to the side, height differences that made any conventional placement seem impossible. He spent a long time studying one nearby building, which he described as not particularly beautiful but geometrically precise, and placed the church at right angles to it, which became the foundation of every other decision that followed.\n\nYou should be standing on the forecourt platform, facing the main facade, having come up a ramp or a flight of stairs from street level, which is four metres below where you're standing now, and from here the church already tells you what it intends to be: the road is behind you, the building turns its back on it entirely, and what you're facing is a square of white concrete seventeen and a half metres on each side with three sections, two projecting towers, and ten-metre steel doors between them that open the full height of the facade.\n\nThere is no ornament on the walls, which is worth stating plainly because it takes a moment to fully register: no carvings, no applied decoration, no colour, nothing — just the concrete surface and the geometry, and the very deliberate implication that if you want the building to give you something, you'll have to go inside to find it.\n\nGo inside, and turn right toward the long window at the base of the nave wall.\n\nIt runs the full width of the space at floor level, a horizontal strip of light low to the ground rather than above the congregation's heads, and in most churches light enters from high windows or clerestories so that the congregation looks up toward it — whereas here it enters from below eye level, washing the floor and the lower walls, so that the light doesn't lead you upward but spreads horizontally through the space at the level of your feet, which produces an atmosphere that is completely unlike any conventional ecclesiastical interior and entirely dependent on the concrete walls having nothing on them to interrupt it.\n\n[beat]\n\n\"Directly below the assembly hall — in the same building, reached from outside, designed as part of the original commission — is the mortuary chapel, so the church is literally built over its own funeral space, stacking the two functions vertically in a way that, in Portugal, where the relationship between the Church and death has been continuous for a thousand years, Siza treated not as a provocation but as the natural structural logic of a building that takes both things seriously. The building won the Grande Prémio Nacional de Arquitectura in nineteen ninety-three, and the jury cited specifically \"\"the use of light in the poetic conformation of architecture,\"\" which is, when you're standing here with the floor-level light crossing in front of you, a rather precise description of what's actually happening.\""
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 41.18871618950502,
+      "centroidLongitude": -8.145676892367486,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The Igreja de Santa Maria de Marco de Canaveses exists because parish priest Father Nuno Higino made one phone call — no competition, no institutional process, just a direct approach to Álvaro Siza and complete willingness to trust him. The site is a steep escarpment with a noisy highway running in front, and Siza placed the church at right angles to a nearby building he described as not particularly beautiful but geometrically precise — the foundational move from which every other decision followed. The main facade is a 17.5-metre square of white concrete with two projecting towers and ten-metre steel doors between them, four metres above street level. No carvings, no applied decoration, no colour — just the concrete surface and the geometry, with the deliberate implication that if you want the building to give you something, you'll have to go inside to find it. Inside, a long window runs the full width of the nave at floor level, a horizontal strip of light low to the ground rather than above the congregation's heads — light enters from below eye level, washing the floor and lower walls, producing an atmosphere unlike any conventional ecclesiastical interior. The mortuary chapel is stacked directly beneath the assembly hall, the church built literally over its own funeral space — for Siza, the natural structural logic of a building that takes both things seriously. Awarded the Grande Prémio Nacional de Arquitectura in 1993, with the jury citing 'the use of light in the poetic conformation of architecture.'",
+      "shortDescription": "Three minutes at Álvaro Siza's modernist parish church in Marco de Canaveses — commissioned by a single phone call, awarded the 1993 Grande Prémio Nacional de Arquitectura.",
+      "totalDurationSeconds": 188,
+      "city": "Marco de Canaveses",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "8F9BB8DE-8222-4616-B65A-6193F393EE9A",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Fundação Livraria Lello",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Fundacao_Livraria_Lello_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Fundacao_Livraria_Lello_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Fundacao_Livraria_Lello_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Fundacao_Livraria_Lello_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Fundacao_Livraria_Lello_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Fundacao_Livraria_Lello_6.webp"
+      ],
+      "tags": [
+        "fundacao livraria lello",
+        "leca do bailio",
+        "knights hospitaller",
+        "camino de santiago",
+        "fortified monastery",
+        "alvaro siza"
+      ],
+      "stops": [
+        {
+          "id": "328CA4B9-D030-42A0-859A-8B840E80FB94",
+          "order": 0,
+          "title": "Fundação Livraria Lello",
+          "caption": "Facing the main church facade with the fortified tower on your left — arrow slits and crenellations that were functional, not ornamental.",
+          "latitude": 41.21002658326483,
+          "longitude": -8.623187492828366,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fundacao-livraria-lello.mp3",
+          "audioDurationSeconds": 148,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Fundacao_Livraria_Lello_hero.webp",
+          "transcriptText": "The ground beneath this monastery has been a place of worship for roughly two thousand years, with a Roman temple to Jupiter occupying the site before Christianity arrived and built over it — which is the kind of origin story that puts a fourteenth-century fortified church very firmly in its place.\n\nYou should be facing the main church facade, with the fortified tower on your left carrying arrow slits and crenellations that are not ornamental but were genuinely functional: the Knights Hospitaller, a military order whose original purpose was to protect pilgrims travelling to Jerusalem, were given this site in the twelfth century and built it to work, because the monastery sat directly on the Portuguese route of the Camino de Santiago and the Knights were responsible for the safety of everyone who passed through. Before you go inside, find the circular structure to the side of the main entrance — Álvaro Siza's contribution to the recent renovation — which is a former storage silo that has been converted into an open fountain where visitors are invited to remove their shoes and stand in it, a gesture that references the practice of foot-washing before entering a sacred space, which runs across multiple religious traditions and which Siza, now in his nineties, chose to make present here on one of the great pilgrimage roads of medieval Europe.\n\nGo in through the main entrance when you're ready, and take a moment in the cloister before moving into the church.\n\nThe monastery's most historically charged interior moment happened in thirteen seventy-two, when the King of Portugal, Fernando the First, married Leonor Teles here in secret, having broken off his engagement to a Spanish princess in circumstances that nearly triggered a war between the two kingdoms — and the cloister you're walking through was already old when that happened, having been built in the decades following the monastery's founding in the twelfth century, which gives the space a layered quality that's difficult to describe but very easy to feel when you're standing in it.\n\n[beat]\n\nThe monastery is still an active church and the building is still garrisoned — the Serra do Pilar Artillery Regiment uses part of the complex — but since twenty twenty-two it has also been the headquarters of the Fundação Livraria Lello, the charitable foundation of the family that owns the famous bookshop on Rua das Carmelitas in Porto. The connection between a fourteenth-century fortified monastery on a medieval pilgrimage road and one of the world's most visited bookshops is not immediately obvious, and the foundation doesn't particularly insist on explaining it, which is perhaps the most interesting thing about the arrangement."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 41.21002658326483,
+      "centroidLongitude": -8.623187492828366,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The ground beneath this monastery has been a place of worship for roughly two thousand years — a Roman temple to Jupiter preceded the medieval church. The Knights Hospitaller, the military order originally tasked with protecting pilgrims to Jerusalem, were given the site in the twelfth century and built it to work: the monastery sits directly on the Portuguese route of the Camino de Santiago, and the fortified tower carries arrow slits and crenellations that were functional, not ornamental. Álvaro Siza's recent contribution — a former storage silo converted into an open fountain where visitors are invited to remove their shoes and stand in it — references the practice of foot-washing before entering a sacred space, present across multiple religious traditions and made present here by the architect, now in his nineties, on one of medieval Europe's great pilgrimage roads. The most charged interior moment came in 1372, when King Fernando I of Portugal married Leonor Teles here in secret, having broken off his engagement to a Spanish princess in circumstances that nearly triggered war between the two kingdoms. The monastery is still an active church and still partly garrisoned by the Serra do Pilar Artillery Regiment — but since 2022 it has also been the headquarters of the Fundação Livraria Lello, the charitable foundation of the family that owns the famous bookshop on Rua das Carmelitas. The connection between a fourteenth-century fortified monastery on a medieval pilgrimage road and one of the world's most visited bookshops is not immediately obvious, and the foundation doesn't insist on explaining it.",
+      "shortDescription": "Two and a half minutes at the fortified 14th-century monastery on the Portuguese Camino — Knights Hospitaller stronghold, now headquarters of the Fundação Livraria Lello.",
+      "totalDurationSeconds": 148,
+      "city": "Matosinhos",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "34887987-540B-4388-839D-D0CD4BD5BBCE",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Livraria Lello",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Livraria_Lello_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Livraria_Lello_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Livraria_Lello_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Livraria_Lello_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Livraria_Lello_5.webp"
+      ],
+      "tags": [
+        "livraria lello",
+        "art nouveau",
+        "bookstore",
+        "1906",
+        "rua das carmelitas",
+        "harry potter",
+        "decus in labore"
+      ],
+      "stops": [
+        {
+          "id": "28E33E6C-D5C3-427A-8FA6-7BF9A44C46B8",
+          "order": 0,
+          "title": "Livraria Lello",
+          "caption": "On Rua das Carmelitas facing the carved-granite facade — Art on the left, Science on the right, and Decus in Labore across the stained glass above.",
+          "latitude": 41.146961998172856,
+          "longitude": -8.614860428995875,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/livraria-lello.mp3",
+          "audioDurationSeconds": 176,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Livraria_Lello_hero.webp",
+          "transcriptText": "The queue outside is for a bookshop — a real one, still operating, still selling books — and that fact is worth holding onto as you wait, because it's easier than you might think to forget once you're inside.\nYou're on Rua das Carmelitas, and the building in front of you is two floors of carved granite with a large stained-glass window across the top, flanked by two painted figures: Art on the left, Science on the right, and between them across the glass a motto in Latin — Decus in Labore, which translates as Dignity in Work, and which was the Lello brothers' operating principle stated publicly on the front of the building rather than kept as an internal aspiration. When you get to the entrance, look at the whole facade from across the street if you can, because it's only at distance that you can read the figures and the lettering together as a single composed argument.\nGo inside when you can, and stop at the foot of the staircase before you move any further.\nThe staircase is the reason most people are here, and it is extraordinary, but what makes it extraordinary is not what the photographs suggest: it's a forked curve in red that appears to float from the ground floor to the gallery above, the balustrades in carved wood, the whole thing apparently defying the expectation of how much a staircase should weigh, and what you're looking at is the first staircase built in reinforced concrete in Portugal. The engineer — and note that: an engineer, not an architect — was Francisco Xavier Esteves, who designed and built it in nineteen oh six and then concealed the concrete so completely inside the carved ornament that the signature he carved into the base was only discovered during restoration work more than a century after he put it there, which is either a remarkable act of professional modesty or a very long-delayed calling card, depending on how you read it.\nNow look up at the ceiling.\nThe skylight running the full length of the building above you is stained glass, made by Viúva Lamego — Lisbon's oldest stained-glass workshop — and it bears the Lello monogram in the central panels; and the carved arches, the wood-panelled shelves running from floor to ceiling, and the busts of Portuguese writers set into the columns were all designed to produce exactly the feeling you're likely having right now, which is that buying a book here is a more serious act than buying a book anywhere else, which is not an accident but a deliberate piece of commercial architecture.\n\nThere is a well-travelled story that J. K. Rowling, who lived in Porto in the early nineteen nineties while teaching English, was inspired by this staircase when she was writing Harry Potter, and the story has been repeated so often that it now functions as part of the building's identity regardless of its accuracy — which is fortunate, because Rowling has publicly denied it, saying she never came inside. The staircase is still the first reinforced concrete staircase in Portugal, still extraordinary, and in no need of the borrowed mythology whatsoever."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 41.146961998172856,
+      "centroidLongitude": -8.614860428995875,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Livraria Lello is still a working bookshop — that fact is easy to forget once you're inside. Two floors of carved granite on Rua das Carmelitas, a large stained-glass window across the top flanked by painted figures of Art and Science, and a Latin motto across the glass: Decus in Labore — Dignity in Work — the Lello brothers' operating principle stated publicly on the front of the building rather than kept as an internal aspiration. The forked red staircase that floats from ground floor to gallery is the reason most people are here, and it is the first staircase built in reinforced concrete in Portugal — designed in 1906 by engineer Francisco Xavier Esteves, who concealed the concrete so completely inside the carved ornament that the signature he carved into the base was only discovered during restoration more than a century after he put it there. The skylight running the full length of the building is stained glass by Viúva Lamego — Lisbon's oldest stained-glass workshop — and carries the Lello monogram in the central panels. The well-travelled story that J.K. Rowling was inspired by this staircase while writing Harry Potter has been publicly denied by Rowling, who has said she never came inside — but the story has been repeated so often that it now functions as part of the building's identity regardless of its accuracy, which is fortunate, because the staircase is in no need of the borrowed mythology whatsoever.",
+      "shortDescription": "Three minutes inside Porto's famous 1906 Art Nouveau bookstore on Rua das Carmelitas — the first reinforced concrete staircase in Portugal, hidden inside carved wood.",
+      "totalDurationSeconds": 176,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "57330DDF-BEBB-4218-AD87-DEB1A4D2647C",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Parque de São Roque",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Parque_de_Sao_Roque_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Parque_de_Sao_Roque_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Parque_de_Sao_Roque_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Parque_de_Sao_Roque_4.webp"
+      ],
+      "tags": [
+        "parque de sao roque",
+        "porto",
+        "urban park",
+        "quinta da lameira",
+        "port wine estate",
+        "jacinto de matos"
+      ],
+      "stops": [
+        {
+          "id": "D9F028C4-5A1D-4553-8EFC-F156B93D95F6",
+          "order": 0,
+          "title": "Parque de São Roque",
+          "caption": "Upper terrace at Travessa das Antas — children's playground first, then descend through the camellia garden, boxwood maze and grotto.",
+          "latitude": 41.159916738276856,
+          "longitude": -8.589645643724559,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/parque-de-sao-roque.mp3",
+          "audioDurationSeconds": 161,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Parque_de_Sao_Roque_hero.webp",
+          "transcriptText": "The children playing in front of you are inside a Port wine family's private estate, and they almost certainly have no idea.\nThe slides and climbing frames occupy the upper terrace of what was, until nineteen seventy-nine, the Quinta da Lameira — a walled garden, vineyard, and hunting lodge that had belonged to the Calém family since seventeen fifty-nine, when they first established themselves here on the proceeds of exporting Port wine down the Douro and out through the mouth of the river. You entered from Travessa das Antas, the upper entrance, which puts you on the terrace that the family would have used as the working agricultural heart of the estate, and the park continues downward through several more levels as you descend the slope — and that is where it gets considerably more interesting.\nHead down through the park when you're ready, and take your time on the way.\nThe garden descending below the playground was designed between nineteen hundred and nineteen eleven by Jacinto de Matos, who was at that point Porto's most prominent landscape designer, and what he built here reflects exactly the kind of ambitions that a prosperous Port wine family would have had in the early twentieth century: around two hundred species of camellia, which still bloom every winter along the stone paths; a formal maze cut from Buxus sempervirens — the same slow-growing boxwood used in the great gardens of northern Europe — whose pattern is perfectly legible from the terrace above and completely disorienting from inside; and a grotto, which is worth a small explanation.\nFind the grotto below the maze level, because it rewards a moment's attention.\nIn the nineteenth century, no properly ambitious romantic garden in Europe was considered complete without an artificial cave containing a lake, which served as a stage set for what garden writers of the period called the agreeable sensation of melancholy — a kind of theatrical dampness, architecturally induced, that was considered both fashionable and philosophically improving. The Calém family had one, which tells you that Porto's Port wine merchants were reading the same design magazines, and absorbing the same ideas about landscape and sensibility, as their counterparts in England and France.\n\nNear the lower entrance there is a chapel that wasn't built here — it was dismantled from its original site at Largo Actor Dias, transported across the city, and reconstructed inside the park in nineteen ninety, which is the kind of logistical undertaking that tends to be invisible once it's done. The city bought the entire estate in nineteen seventy-nine, the playground arrived later, and the grotto, the maze, the camellias, and the two hundred and sixty years of accumulated wealth that shaped all of them were already here long before either."
+        }
+      ],
+      "primaryCategory": "natureAndParks",
+      "centroidLatitude": 41.159916738276856,
+      "centroidLongitude": -8.589645643724559,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The children playing on the upper terrace are inside what was, until 1979, the Quinta da Lameira — a walled garden, vineyard, and hunting lodge that had belonged to the Calém family since 1759, when they first established themselves on the proceeds of exporting Port wine down the Douro. The garden descending below the playground was designed between 1900 and 1911 by Jacinto de Matos, Porto's most prominent landscape designer of the era. Around 200 species of camellia bloom every winter along the stone paths; a formal maze cut from Buxus sempervirens — the same slow-growing boxwood used in the great gardens of northern Europe — is perfectly legible from the terrace above and completely disorienting from inside; and below the maze sits a grotto, the artificial cave with lake that no properly ambitious romantic garden of the nineteenth century considered itself complete without, designed to produce what garden writers of the period called the agreeable sensation of melancholy — theatrical dampness, architecturally induced, fashionable and philosophically improving in equal measure. Near the lower entrance stands a chapel that wasn't built here: it was dismantled from Largo Actor Dias, transported across the city, and reconstructed inside the park in 1990. The city bought the estate in 1979; the playground arrived later. The grotto, the maze, the camellias, and the 260 years of accumulated wealth that shaped them were already here long before either.",
+      "shortDescription": "Two and a half minutes through a Port wine family's former private estate — camellia garden, boxwood maze, and a romantic grotto, now a public park in eastern Porto.",
+      "totalDurationSeconds": 161,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "7621CC87-818B-44CC-B7B4-FC5F14AB3DA2",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Pavilhão Multiusos de Gondomar",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Multiusos_de_Gondomar_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Multiusos_de_Gondomar_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Multiusos_de_Gondomar_3.webp"
+      ],
+      "tags": [
+        "pavilhao multiusos",
+        "gondomar",
+        "alvaro siza",
+        "multipurpose pavilion",
+        "2007",
+        "concrete canopy"
+      ],
+      "stops": [
+        {
+          "id": "0BC875A2-7BDF-43F8-88DD-5DF89A67B311",
+          "order": 0,
+          "title": "Pavilhão Multiusos de Gondomar",
+          "caption": "Approaching the main entrance — 520m² of concrete suspended overhead as a single flat plane hovering above the threshold.",
+          "latitude": 41.13460546646075,
+          "longitude": -8.539009812350265,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pavilhao-multiusos-gondomar.mp3",
+          "audioDurationSeconds": 164,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Multiusos_de_Gondomar_hero.webp",
+          "transcriptText": "This is not the famous Seeza building — it's the other one, and that distinction is worth holding onto for a moment.\nIf you've been following this tour, you've already stood at his swimming pools at Leça da Palmeira, his museum at Serralves, and the architecture school at Campo Alegre, all of which appear regularly in the architectural press and on the shortlists that get compiled whenever someone wants to argue about the best buildings in Portugal. This building — a multipurpose arena in Gondomar, five minutes by motorway from the Estádio do Dragão — does not appear on those shortlists, opened in two thousand and seven, holds up to eight thousand four hundred people standing, and is used primarily for sporting events, concerts, and congresses by audiences who are almost certainly thinking about the event rather than the building they're sitting in.\nYou should be approaching the main entrance, where the first thing worth registering is the canopy.\nFive hundred and twenty square metres of concrete, suspended over the forecourt as a single flat plane hovering above the arriving visitor — and Seeza has done something like this before, most conspicuously at the Portuguese Pavilion for Expo ninety-eight in Lisbon, where an entire ceremonial square was covered by a thin pre-stressed concrete slab described at the time as a sheet of paper resting on two bricks. The logic at Gondomar is the same: the cover as arrival, the concrete held in suspension above the threshold, a signal that someone thought carefully about what it means to walk in from the weather and into something significant, even if most of the people doing so are thinking about the football.\nGo inside, and look up.\nThe main nave is elliptical, and what you won't expect in a building of this scale — a building that holds eight thousand people and is wrapped in a double reinforced concrete wall within a steel lattice — is the light: courtyards run along the longitudinal axis of the complex, invisible from the exterior, pulling daylight down into the interior spaces so that a building designed for events that mostly happen in the dark has, nevertheless, been given light from above as a matter of principle rather than necessity, which is the kind of decision that reveals something about what an architect believes buildings are for rather than what they're used for.\n\nThe acoustic isolation was engineered from the beginning — the elliptical form distributes sound in ways that a rectangular room wouldn't, and the double concrete wall within the steel lattice keeps the interior separated from the motorway five minutes away — and if the doors close while you're inside, you'll feel that separation very directly. The cities give the major commissions to the famous architects, and the famous architects, it turns out, take the minor commissions just as seriously."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 41.13460546646075,
+      "centroidLongitude": -8.539009812350265,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "This is not the famous Siza building — it's the other one, and that distinction is worth holding onto. The major buildings appear on every shortlist: the swimming pools at Leça da Palmeira, the Serralves museum, the architecture school at Campo Alegre. This multipurpose arena in Gondomar — five minutes by motorway from Estádio do Dragão — does not. Opened in 2007, it holds up to 8,400 people standing, and is used primarily for sporting events, concerts, and congresses by audiences almost certainly thinking about the event rather than the building they're sitting in. The first thing worth registering at the entrance is the canopy: 520 square metres of concrete suspended over the forecourt as a single flat plane hovering above the arriving visitor — the same logic Siza applied at the Portuguese Pavilion for Expo'98 in Lisbon, where an entire ceremonial square was covered by a thin pre-stressed concrete slab described at the time as a sheet of paper resting on two bricks. The cover as arrival, the concrete held in suspension above the threshold, a signal that someone thought carefully about what it means to walk in from the weather and into something significant. The main nave is elliptical, wrapped in a double reinforced concrete wall within a steel lattice, with courtyards running along the longitudinal axis pulling daylight down into the interior — a building designed for events that mostly happen in the dark, given light from above as a matter of principle rather than necessity. The cities give the major commissions to the famous architects, and the famous architects, it turns out, take the minor commissions just as seriously.",
+      "shortDescription": "Two and a half minutes at Álvaro Siza's Gondomar arena — the lesser-known one — a 520m² floating concrete canopy over the entrance, elliptical interior holding 8,400.",
+      "totalDurationSeconds": 164,
+      "city": "Gondomar",
+      "walkingDistanceMeters": null
     }
   ]
 }
