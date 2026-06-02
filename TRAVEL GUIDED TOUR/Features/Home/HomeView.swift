@@ -178,7 +178,7 @@ struct HomeView: View {
         didCenterOnUser = true
         let region = MKCoordinateRegion(
             center: user.coordinate,
-            span: Self.recenterSpan
+            span: Self.initialUserSpan
         )
         withAnimation(.easeInOut(duration: 0.6)) {
             cameraPosition = .region(region)
@@ -233,6 +233,16 @@ struct HomeView: View {
     private static let recenterSpan = MKCoordinateSpan(
         latitudeDelta: 0.005,
         longitudeDelta: 0.005
+    )
+
+    /// Wider zoom span used on first appear only, so the user sees
+    /// nearby tours in the surrounding neighborhood instead of being
+    /// dropped at a few-block zoom that hides most pins. ~0.05° is
+    /// roughly 5.5 km N-S / ~4.2 km E-W at NYC latitude — borough-
+    /// edge to borough-edge across midtown.
+    private static let initialUserSpan = MKCoordinateSpan(
+        latitudeDelta: 0.05,
+        longitudeDelta: 0.05
     )
 
     private var mapControlStack: some View {
