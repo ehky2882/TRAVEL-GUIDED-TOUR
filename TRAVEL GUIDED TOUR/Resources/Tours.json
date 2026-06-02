@@ -4487,6 +4487,41 @@
       "primaryCategory": "culturalHeritage",
       "tags": ["hotel", "literary", "music", "art", "history", "chelsea"],
       "priceUSD": 0
+    },
+    {
+      "id": "9c079059-84a6-4a3f-8286-9e410c75dfe6",
+      "title": "Park Avenue Armory",
+      "shortDescription": "The Gilded Age fortress on Park Avenue — built entirely with private money, with interiors by Tiffany, Stanford White, and the leading designers of the American Aesthetic Movement.",
+      "longDescription": "You're at Park Avenue and 66th Street, outside the Park Avenue Armory — a brick-and-granite building that takes up the entire block between 66th and 67th, and that looks, from the outside, like a medieval Italian fortress. It was built between 1877 and 1881 as the Seventh Regiment Armory, designed by the architect Charles W. Clinton, who was himself a veteran of the regiment. The exterior evokes a fortified palazzo from a thirteenth-century Italian city-state — flat surfaces of red pressed brick, granite trim, and three crenellated towers along the Park Avenue side.\n\nThe Seventh Regiment of the New York National Guard was, in the late nineteenth century, one of the most socially prestigious militia units in the United States — known as the \"Silk Stocking Regiment,\" with members including Vanderbilts, Roosevelts, Harrimans, and most of the other established old-money families of New York. When the regiment decided to build a new armory in the 1870s, they did not seek state or federal funding — they paid for the entire building themselves by private subscription, making this the only armory in the United States ever built and furnished entirely with private money.\n\nWhat the regiment did with that money is what makes the building unique. The drill hall is one of the largest unobstructed indoor spaces in New York: fifty-five thousand square feet under an eighty-foot-high barrel-vaulted iron roof, with no internal columns. The reception rooms were commissioned individually from the most prominent designers of the American Aesthetic Movement. The Veterans Room was designed in 1879 by Louis Comfort Tiffany — working with the twenty-seven-year-old Stanford White, the textile designer Candace Wheeler, and the painter Samuel Colman — a dense, eclectic interior of carved wood screens, hammered copper, blue mosaic tile, and stained glass borrowing from Islamic, Celtic, Japanese, and Egyptian sources. Tiffany was thirty-one and had not yet made his famous lamps. The New York City Landmarks Preservation Commission has described the Armory as containing \"the single most important collection of nineteenth-century interiors to survive intact in one building\" in the United States.\n\nIn 2007 the building's military function was retired and it was converted into a cultural center, using the vast Drill Hall for major art installations, concerts, and immersive performances. An ongoing restoration by the Swiss firm Herzog and de Meuron is still in progress. The Veterans Room and several other interiors are open to the public on regular tour days.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Park_Av_May_2024_13.jpg/1280px-Park_Av_May_2024_13.jpg",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "32a8b4e5-8db7-4e62-9477-83dbc62c4b9d",
+          "order": 0,
+          "title": "Park Avenue Armory",
+          "caption": "643 Park Avenue, Upper East Side",
+          "latitude": 40.76530,
+          "longitude": -73.96650,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/park-avenue-armory.mp3",
+          "audioDurationSeconds": 230,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": null
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 230,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.76530,
+      "centroidLongitude": -73.96650,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": ["gilded age", "tiffany", "stanford white", "aesthetic movement", "upper east side", "military"],
+      "priceUSD": 0
     }
   ]
 }
