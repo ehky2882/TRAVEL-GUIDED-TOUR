@@ -32,6 +32,24 @@ These happen **automatically, without the owner asking**.
 
 ## Current State (2026-06-01)
 
+### TestFlight 1.0 (21) + 6 Porto-area tours (session 14 — web/PM)
+
+Session 14 was a web-only PM session — six new tours under Atlas Studio Porto, then TestFlight build 21 cut to ship them. Tours landed via [PR #100](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/100); build bump via [PR #101](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/101) (auto-merge classifier flagged the historical direct-to-main bump pattern, so this one went via short-lived PR).
+
+- **6 new Porto-area tours** (catalog 91 → 97):
+  - Porto Tram Museum (Porto, culturalHeritage, 172s) — Massarelos thermoelectric station, 1915
+  - Church of Santa Maria (Marco de Canaveses, sacredSites, 188s) — Álvaro Siza, 1996; **first Marco de Canaveses tour**
+  - Fundação Livraria Lello (Matosinhos, culturalHeritage, 148s) — foundation HQ in the 14th-c Mosteiro de Leça do Bailio on the Portuguese Camino
+  - Livraria Lello (Porto, culturalHeritage, 176s) — Art Nouveau bookstore, 1906 — Esteves' first reinforced-concrete staircase in Portugal
+  - Parque de São Roque (Porto, natureAndParks, 161s) — former Calém Port-wine Quinta da Lameira; garden by Jacinto de Matos 1900–1911
+  - Pavilhão Multiusos de Gondomar (Gondomar, architecture, 164s) — Álvaro Siza, 2007; **first Gondomar tour**
+- Audio (6 MP3s, slug-based) + 28 webps uploaded to `gh-pages` (commits `332367f` audio, `2f3dc04` images).
+- **The two Lellos ship as distinct tours, owner-confirmed.** Foundation entry's longDescription leads with the Knights Hospitaller monastery on the Camino and Siza's foot-washing fountain (the foundation is a closing note); bookstore entry's longDescription leads with Decus in Labore, the 1906 Esteves staircase, Viúva Lamego skylight, and the Rowling-denied Harry Potter mythology.
+- **Catalog: 97 tours, 3 makers**. New cities in catalog: **Marco de Canaveses**, **Matosinhos**, **Gondomar** (Matosinhos hosts the Leça do Bailio monastery; Leça da Palmeira was already present from prior Porto batches).
+- Build bumped 20 → 21; archive at `/tmp/Atlas-20260601-2057.xcarchive`; owner uploaded via Organizer. **TestFlight 1.0 (21) is live.**
+
+**Latest TestFlight build: 1.0 (21)** — uploaded 2026-06-01 via Organizer.
+
 ### 10 new NYC tours + coordinate/hero fixes (session 13 — web/PM)
 
 Session 13 was a web-only PM session — no Swift changes. All commits direct to `main`.
@@ -42,7 +60,7 @@ Session 13 was a web-only PM session — no Swift changes. All commits direct to
 - **Flatiron Building hero** replaced: wide landscape → nearly-square portrait (3024×3903) from the prow angle, CC BY-SA 4.0. Better fit for square card frames.
 - **Catalog: 91 tours, 3 makers, 73 NYC-area.** Build still 1.0 (19).
 
-**Latest TestFlight build: 1.0 (19)** — uploaded from local session 2026-05-31.
+**TestFlight at session-13 end: 1.0 (19)** — uploaded from local session 2026-05-31. (Superseded by 1.0 (21) in session 14.)
 
 ### TestFlight 1.0 (17) + tour-detail retool + light-mode fix + 6 new tours (session 12)
 
@@ -146,7 +164,7 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **91 tours, 3 makers** in `Resources/Tours.json` (73 NYC-area + 14 Porto-area + others); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **97 tours, 3 makers** in `Resources/Tours.json` (73 NYC-area + 17 Porto-area + 3 elsewhere-in-Portugal/Iberia + others); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
 - **58 single-stop + 1 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, geofenced exterior walk) — added 2026-05-26, unblocks M-qa items 6 + 7
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message

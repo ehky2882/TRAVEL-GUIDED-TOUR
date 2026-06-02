@@ -38,6 +38,8 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
+**Status (2026-06-01):** every V1 functionality milestone is shipped on `main`. **TestFlight 1.0 (21) is live** (uploaded 2026-06-01) — carries 6 new Porto-area tours added in session 14 (PR #100): Porto Tram Museum, Igreja de Santa Maria de Marco de Canaveses (Siza, 1996), Fundação Livraria Lello (foundation HQ at the Mosteiro de Leça do Bailio), Livraria Lello (Art Nouveau bookstore, 1906), Parque de São Roque (former Calém Port-wine Quinta da Lameira), and Pavilhão Multiusos de Gondomar (Siza, 2007). Catalog now **97 tours, 3 makers**. Earlier the same day, session 13 (web/PM) added 10 NYC tours, fixed hero URLs across the batch, corrected two coordinates, and replaced the Flatiron hero. No `*.swift` changes in either session. Earlier status follows.
+
 **Status (2026-05-29):** every V1 functionality milestone is shipped on
 `main`. Major UX work shipped 2026-05-24/25 — bottom module consistency
 (PRs #66–70), home polish + player-state hardening (PRs #60–61), placecard
@@ -55,7 +57,7 @@ plumbing), PR #92 (Casa das Histórias Paula Rego — first Cascais tour),
 and PR #94 (5 Porto-area architecture tours). TestFlight build **1.0 (17)
 is live** (uploaded 2026-05-29).
 
-**Content (M-launch-content ✅).** **59 tours** in `Resources/Tours.json` (43 NYC + 14 Porto-area + 2 Lisbon-makers including 1 Cascais).
+**Content (M-launch-content ✅).** **97 tours** in `Resources/Tours.json` (73 NYC + 17 Porto-area + 2 Marco de Canaveses/Lisbon/Cascais/Matosinhos under Atlas Studio Lisbon and Atlas Studio Porto).
 First **multi-stop tour** added 2026-05-26: "American Museum of Natural
 History: Four Facades" — 5 stops (~8m 44s), exterior architecture walk,
 geofenced. This unblocks M-qa checklist items 6 + 7. The original 10 NYC landmarks (Grand Central, Times
