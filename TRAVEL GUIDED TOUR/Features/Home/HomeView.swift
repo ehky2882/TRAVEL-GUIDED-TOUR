@@ -236,13 +236,13 @@ struct HomeView: View {
     )
 
     /// Wider zoom span used on first appear only, so the user sees
-    /// nearby tours in the surrounding neighborhood instead of being
-    /// dropped at a few-block zoom that hides most pins. ~0.05° is
-    /// roughly 5.5 km N-S / ~4.2 km E-W at NYC latitude — borough-
-    /// edge to borough-edge across midtown.
+    /// nearby tours across multiple neighborhoods instead of being
+    /// dropped at a few-block zoom that hides most pins. ~0.1° is
+    /// roughly 11 km N-S / ~8.5 km E-W at NYC latitude — about the
+    /// full length of Manhattan island.
     private static let initialUserSpan = MKCoordinateSpan(
-        latitudeDelta: 0.05,
-        longitudeDelta: 0.05
+        latitudeDelta: 0.1,
+        longitudeDelta: 0.1
     )
 
     private var mapControlStack: some View {
