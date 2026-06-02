@@ -22,6 +22,13 @@ enum AtlasSpacing {
     /// up. Sized to clear Apple's 44pt HIG minimum tappable target
     /// while staying compact enough to leave the map readable.
     static let searchBarHeight: CGFloat = 46
+    /// Combined height of the home screen's search bar + chip row
+    /// block — its top padding plus both rows plus the inter-row
+    /// spacing. Does NOT include the device's top safe-area inset.
+    /// The drawer's `.large` detent reserves this much (plus the
+    /// safe-area inset) at the top so the search bar + chips stay
+    /// visible when the drawer is fully expanded.
+    static let searchAndChipsBlockHeight: CGFloat = sm + searchBarHeight + sm + searchBarHeight
 }
 
 // MARK: - Bottom module geometry

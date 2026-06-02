@@ -52,7 +52,7 @@ struct PlacecardView: View {
             }
             .padding(AtlasSpacing.sm)
             .background(
-                .regularMaterial,
+                AtlasColors.secondaryBackground,
                 in: RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius)
             )
             .shadow(color: Color.black.opacity(0.18), radius: 6, y: 2)

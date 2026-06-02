@@ -88,7 +88,13 @@ struct ContentView: View {
                     dragOffset: dragOffsetBinding,
                     peekHeight: 80,
                     bottomCornerRadius: 0,
-                    bottomReservedHeight: AtlasBottomModule.height()
+                    bottomReservedHeight: AtlasBottomModule.height(),
+                    // .large stops below the search bar + chip row
+                    // so they stay anchored at the top of the screen
+                    // when the drawer is fully expanded. AtlasSpacing.sm
+                    // is a small visual buffer between the chip row's
+                    // bottom edge and the drawer's top edge.
+                    topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
                 ) {
                     HomeDrawerContent(
                         sheetDetent: $homeSheetDetent,

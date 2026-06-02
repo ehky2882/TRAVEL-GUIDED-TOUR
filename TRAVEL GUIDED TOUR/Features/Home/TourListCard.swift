@@ -18,6 +18,14 @@ struct TourListCard: View {
     /// True when this card matches the currently-selected pin on the
     /// map; receives a subtle highlight to anchor the eye.
     let isSelected: Bool
+    /// True when this tour is currently saved to the library — drives
+    /// the bookmark button's filled-vs-outline glyph in the hero
+    /// corner.
+    let isSaved: Bool
+    /// Called when the bookmark button on the hero corner is tapped.
+    /// The card itself does not mutate library state; the parent
+    /// routes the tap through `LibraryStore.toggleSaved(_:)`.
+    let onBookmarkTap: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
@@ -82,18 +90,24 @@ struct TourListCard: View {
         ZStack(alignment: .topTrailing) {
             heroImage
 
-            // Category badge top-right of hero
-            HStack(spacing: AtlasSpacing.xs) {
-                Image(systemName: tour.primaryCategory.iconName)
-                    .font(AtlasTypography.caption)
-                Text(tour.primaryCategory.displayName)
-                    .font(AtlasTypography.caption)
+            // Bookmark AFFORDANCE top-right of hero. Replaces the
+            // earlier category badge — category is still filterable
+            // via the chip row above the drawer, so dropping it from
+            // the card frees the corner for a save control. The
+            // button sits inside the parent's Button label; SwiftUI
+            // routes the tap to the innermost interactive view, so
+            // tapping the bookmark fires `onBookmarkTap` while taps
+            // anywhere else on the card open the tour detail.
+            Button(action: onBookmarkTap) {
+                Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .frame(width: 36, height: 36)
+                    .background(.regularMaterial, in: Circle())
             }
-            .foregroundStyle(AtlasColors.primaryText)
-            .padding(.horizontal, AtlasSpacing.sm)
-            .padding(.vertical, AtlasSpacing.xs)
-            .background(.regularMaterial, in: Capsule())
+            .buttonStyle(.plain)
             .padding(AtlasSpacing.sm)
+            .accessibilityLabel(isSaved ? "Saved" : "Save tour")
         }
     }
 

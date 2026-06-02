@@ -26,10 +26,6 @@ struct HomeView: View {
     /// map controls below can read it from the same source.
     @Binding var sheetDetent: BottomSheetDetent
 
-    /// True while the map camera is in motion. Retracts the drawer to
-    /// peek and fades the recenter button while the user is panning,
-    /// then clears when the camera settles.
-    @State private var isMapMoving = false
     /// Guards against the map firing camera events during initial
     /// render. Set to true 1 s after the view appears — enough time
     /// for the map's first tile load / settle cycle to complete so
@@ -94,14 +90,14 @@ struct HomeView: View {
                         onCameraChanged: { region in
                             sharedState.visibleRegion = region
                             withAnimation(.easeInOut(duration: 0.3)) {
-                                isMapMoving = false
+                                sharedState.isMapMoving = false
                             }
                             probeLookAround(at: region.center)
                         },
                         onCameraMoving: {
-                            guard mapInteractionEnabled, !isMapMoving else { return }
+                            guard mapInteractionEnabled, !sharedState.isMapMoving else { return }
                             withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
-                                isMapMoving = true
+                                sharedState.isMapMoving = true
                                 if sheetDetent != .peek {
                                     sheetDetent = .peek
                                 }
@@ -158,10 +154,10 @@ struct HomeView: View {
                         // controls would crowd it. Also hidden while
                         // the map is moving (clean panning UX); fades
                         // back when the camera settles.
-                        .opacity(sheetDetent != .peek || isMapMoving ? 0 : 1)
-                        .animation(.easeInOut(duration: 0.5), value: isMapMoving)
+                        .opacity(sheetDetent != .peek || sharedState.isMapMoving ? 0 : 1)
+                        .animation(.easeInOut(duration: 0.5), value: sharedState.isMapMoving)
                         .animation(.easeInOut(duration: 0.3), value: sheetDetent)
-                        .allowsHitTesting(sheetDetent == .peek && !isMapMoving)
+                        .allowsHitTesting(sheetDetent == .peek && !sharedState.isMapMoving)
                 }
                 .toolbar(.hidden, for: .navigationBar)
                 .task {
@@ -199,7 +195,14 @@ struct HomeView: View {
         switch sheetDetent {
         case .peek:   baseHeight = peekHeight
         case .medium: baseHeight = geo.size.height * 0.5
-        case .large:  baseHeight = geo.size.height - AtlasSpacing.sm - floatingIslandHeight
+        case .large:
+            // Mirrors BottomSheet.heightForDetent(.large) — must
+            // subtract top safe-area inset + search/chips block +
+            // small buffer (matching ContentView's topReservedHeight)
+            // so the map controls don't think the drawer is taller
+            // than it actually is.
+            let topGap = geo.safeAreaInsets.top + AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
+            baseHeight = geo.size.height - topGap - floatingIslandHeight
         }
         return max(peekHeight, baseHeight - sharedState.sheetDragOffset)
     }

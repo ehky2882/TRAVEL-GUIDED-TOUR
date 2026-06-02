@@ -33,4 +33,11 @@ final class HomeSharedState {
     /// so they stay glued to the drawer's top edge DURING the drag —
     /// not just after the snap.
     var sheetDragOffset: CGFloat = 0
+
+    /// True while the map camera is mid-pan/-fling (between
+    /// `.onMapCameraChange(.continuous)` and `.onMapCameraChange(.onEnd)`).
+    /// The map writes it; the drawer reads it to render an animated
+    /// *ELLIPSIS* in the "N tours in view" header while the count
+    /// is still settling, instead of momentarily reading as "0 tours."
+    var isMapMoving: Bool = false
 }
