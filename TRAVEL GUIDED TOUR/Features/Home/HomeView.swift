@@ -36,22 +36,16 @@ struct HomeView: View {
     /// Active map type. Cycled / picked by the map-mode selector
     /// button. Standard is the default — same as Apple Maps.
     @State private var mapMode: MapMode = .standard
-    /// Loaded Look Around scene for the current map center, or `nil`
-    /// when the center has no Look Around coverage. Probed
-    /// asynchronously on every settled camera change so the Look
-    /// Around button's disabled state reflects current coverage.
-    @State private var lookAroundScene: MKLookAroundScene?
-    /// Drives the sheet that presents `LookAroundView`. Held as a Bool
-    /// so dismissing the sheet doesn't clear `lookAroundScene` (which
-    /// would disable the button until the next probe completes).
-    @State private var isShowingLookAround = false
-    /// Most recently probed center — used to debounce probes when the
-    /// camera reports many `.onEnd` events with the same center.
-    @State private var lastProbedCenter: CLLocationCoordinate2D?
+    /// True once the first non-nil `userLocation` reading has been
+    /// used to recenter the camera. Guards against re-snapping the
+    /// camera to the user after they've panned away — only the very
+    /// first location reading triggers a recenter.
+    @State private var didCenterOnUser = false
     @State private var cameraPosition: MapCameraPosition = .region(
         MKCoordinateRegion(
-            // Fallback start (NYC) — overridden on first appear if
-            // the user has granted location.
+            // Fallback when location permission is denied or no
+            // reading has arrived yet. The first non-nil userLocation
+            // reading replaces this via `centerOnUserIfNeeded`.
             center: CLLocationCoordinate2D(latitude: 40.7484, longitude: -73.9857),
             span: MKCoordinateSpan(latitudeDelta: 0.18, longitudeDelta: 0.18)
         )
@@ -92,7 +86,6 @@ struct HomeView: View {
                             withAnimation(.easeInOut(duration: 0.3)) {
                                 sharedState.isMapMoving = false
                             }
-                            probeLookAround(at: region.center)
                         },
                         onCameraMoving: {
                             guard mapInteractionEnabled, !sharedState.isMapMoving else { return }
@@ -164,7 +157,31 @@ struct HomeView: View {
                     try? await Task.sleep(for: .seconds(1))
                     mapInteractionEnabled = true
                 }
+                // First non-nil reading after launch recenters the
+                // camera on the user (item #1). After that the user
+                // owns the camera — pan, zoom, and the recenter
+                // button take over.
+                .onAppear { centerOnUserIfNeeded() }
+                .onChange(of: locationManager.userLocation) { _, _ in
+                    centerOnUserIfNeeded()
+                }
             }
+        }
+    }
+
+    /// Recenter the camera on the user's current location, but only
+    /// once per launch — subsequent location updates don't snatch the
+    /// camera back from the user's pans.
+    private func centerOnUserIfNeeded() {
+        guard !didCenterOnUser,
+              let user = locationManager.userLocation else { return }
+        didCenterOnUser = true
+        let region = MKCoordinateRegion(
+            center: user.coordinate,
+            span: Self.initialUserSpan
+        )
+        withAnimation(.easeInOut(duration: 0.6)) {
+            cameraPosition = .region(region)
         }
     }
 
@@ -218,14 +235,18 @@ struct HomeView: View {
         longitudeDelta: 0.005
     )
 
+    /// Wider zoom span used on first appear only, so the user sees
+    /// nearby tours across multiple neighborhoods instead of being
+    /// dropped at a few-block zoom that hides most pins. ~0.1° is
+    /// roughly 11 km N-S / ~8.5 km E-W at NYC latitude — about the
+    /// full length of Manhattan island.
+    private static let initialUserSpan = MKCoordinateSpan(
+        latitudeDelta: 0.1,
+        longitudeDelta: 0.1
+    )
+
     private var mapControlStack: some View {
         VStack(spacing: AtlasSpacing.sm) {
-            MapControlButton(systemImage: "binoculars.fill", isEnabled: lookAroundScene != nil) {
-                guard lookAroundScene != nil else { return }
-                isShowingLookAround = true
-            }
-            .accessibilityLabel(lookAroundScene != nil ? "Look Around" : "Look Around not available here")
-
             Menu {
                 Picker("Map type", selection: $mapMode) {
                     ForEach(MapMode.allCases) { mode in
@@ -242,12 +263,6 @@ struct HomeView: View {
             }
             .accessibilityLabel("Recenter on my location")
         }
-        .sheet(isPresented: $isShowingLookAround) {
-            if let scene = lookAroundScene {
-                LookAroundView(scene: scene)
-                    .ignoresSafeArea()
-            }
-        }
     }
 
     /// Single-action recenter: snap the camera to the user's current
@@ -261,29 +276,6 @@ struct HomeView: View {
         )
         withAnimation(.easeInOut(duration: 0.8)) {
             cameraPosition = .region(region)
-        }
-    }
-
-    /// Async-probe Look Around coverage at `coordinate`. Cached on
-    /// `lastProbedCenter` so quick successive `.onEnd` events with
-    /// the same center don't fire a new request.
-    private func probeLookAround(at coordinate: CLLocationCoordinate2D) {
-        if let last = lastProbedCenter,
-           abs(last.latitude - coordinate.latitude) < 1e-6,
-           abs(last.longitude - coordinate.longitude) < 1e-6 {
-            return
-        }
-        lastProbedCenter = coordinate
-        Task {
-            let request = MKLookAroundSceneRequest(coordinate: coordinate)
-            let scene = try? await request.scene
-            await MainActor.run {
-                if let current = lastProbedCenter,
-                   abs(current.latitude - coordinate.latitude) < 1e-6,
-                   abs(current.longitude - coordinate.longitude) < 1e-6 {
-                    lookAroundScene = scene
-                }
-            }
         }
     }
 
