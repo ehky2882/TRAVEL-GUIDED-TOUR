@@ -32,14 +32,16 @@ These happen **automatically, without the owner asking**.
 
 ## Current State (2026-06-01)
 
-### Home-screen polish pass + TestFlight 1.0 (22) (session 15)
+### Home-screen polish pass + TestFlight 1.0 (23) (session 15)
 
 Eleven-item home-screen polish brief from the owner. Seven items implemented and shipped across two PRs; three deferred as informational; one (clustering) parked for a future visual verify.
 
 - **[PR #103](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/103) — items #1 + #4 (map cleanup).** Default location at launch is now location-based: on first appear the camera recenters on `locationManager.userLocation` at a wider span (`initialUserSpan = 0.1°` ≈ 11 km N-S, ~Manhattan length). Guarded by `didCenterOnUser` so subsequent location updates don't snatch the camera back from user pans. When permission is denied / no reading arrives, the existing NYC fallback region is retained (permission was already requested at `ContentView.onAppear`). Recenter button keeps the tighter 0.005° span. Look Around button + probe + `LookAroundView.swift` removed entirely; map-mode picker and recenter are the only two map controls now.
 - **[PR #104](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/104) — items #5, #7, #9, #10, #11 (drawer + cards).** Drawer's `.large` detent now caps below the search bar + chip row via a new `BottomSheet.topReservedHeight` parameter (search/chips stay anchored above when fully expanded). New `AtlasSpacing.searchAndChipsBlockHeight` token (`sm + searchBarHeight + sm + searchBarHeight = 108 pt`) is the single source of truth for the search/chips block. `PlacecardView` background swapped from `.regularMaterial` to `AtlasColors.secondaryBackground` (matches drawer / bars / search / chips). `TourListCard` hero corner: category badge replaced by a bookmark Button wired to `LibraryStore.toggleSaved` / `isSaved`; category dropped from the card. `isMapMoving` lifted from `HomeView.@State` into `HomeSharedState`; drawer header shows a `TimelineView`-driven `. / .. / ...` dot cycle (0.4 s period) while the map is mid-pan, instead of letting the count flicker through "0 tours in view."
 - **Drawer-gap bug fixed mid-review.** Initial `BottomSheet.heightForDetent(.large)` formula was `topGap = topInset + topReservedHeight` — but the GeometryReader's bounds already start below the device top safe area while `geo.safeAreaInsets.top` still **reports** the device's actual inset value (it describes the device, not what remains to consume). The `+ topInset` was double-counting the offset by ~59 pt. Discovered via bright-magenta diagnostic per `feedback-visual-debugging.md`; removed in BottomSheet and in both `drawerVisibleHeight` mirrors (HomeView, HomeDrawerContent). Gap is now mathematically and visually `AtlasSpacing.sm` (8 pt), matching the search-bar-to-chips gap.
-- **[PR #105](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/105) — build bump 21 → 22 for TestFlight.** Merged with `--admin` (metadata-only). `xcodebuild archive` clean at `/tmp/Atlas-20260601-2233.xcarchive`; owner uploaded via Organizer. **TestFlight 1.0 (22) is live.**
+- **[PR #105](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/105) — build bump 21 → 22 for TestFlight.** Merged with `--admin` (metadata-only). `xcodebuild archive` clean at `/tmp/Atlas-20260601-2233.xcarchive`; owner uploaded via Organizer.
+- **[PR #107](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/107) — drag clamp.** Owner reviewed 1.0 (22) on device and reported that the drawer could be dragged past `.large` (covering the search bar / chip row) before snapping back on release. Cause: drag-time visual ceiling in `BottomSheet.body` was `geo.size.height - horizontalInset` (nearly full screen). Fix: clamp the ceiling to `heightForDetent(.large, ...)` so the drawer can never grow past the resolved `.large` height during a gesture. `.large` already respects `topReservedHeight` so the drag visually bounds where the snap will land.
+- **[PR #108](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/108) — build bump 22 → 23.** Admin-merged. `xcodebuild archive` clean at `/tmp/Atlas-20260601-2302.xcarchive`; owner uploaded via Organizer. **TestFlight 1.0 (23) is live.**
 
 **Deferred / informational only (no code change this session):**
 
@@ -50,7 +52,7 @@ Eleven-item home-screen polish brief from the owner. Seven items implemented and
 
 84/84 tests pass after both PRs and after the diagnostic-driven gap fix.
 
-**Latest TestFlight build: 1.0 (22)** — uploaded 2026-06-01.
+**Latest TestFlight build: 1.0 (23)** — uploaded 2026-06-01.
 
 ### TestFlight 1.0 (21) + 6 Porto-area tours (session 14 — web/PM)
 
