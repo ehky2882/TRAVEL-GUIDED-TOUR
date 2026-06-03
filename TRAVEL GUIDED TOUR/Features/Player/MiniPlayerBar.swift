@@ -112,6 +112,13 @@ struct MiniPlayerBar: View {
     /// Tappable square frame for both the skip-forward and play/pause
     /// controls — kept ≥ Apple's 44pt HIG minimum.
     private static let controlSize: CGFloat = 44
+    /// Inner-HStack trailing inset. Chosen so the progress ring's
+    /// outer right edge ends up 16pt from the bar's right edge:
+    /// the ring (`playRingSize` = 36) sits centered in the
+    /// `controlSize` = 44 frame, leaving 4pt between the ring and
+    /// the frame's right edge; adding this 12pt trailing inset
+    /// yields 16pt total ring-to-bar-edge.
+    private static let trailingInnerInset: CGFloat = 12
 
     /// Welcome message shown in the title slot when no tour is loaded.
     private static let idleWelcomeText = "Hello! Ready to explore? Let's find an audio tour!"
@@ -136,7 +143,15 @@ struct MiniPlayerBar: View {
     private var isIdle: Bool { tour == nil }
 
     var body: some View {
-        HStack(spacing: AtlasSpacing.sm) {
+        // Outer HStack spacing is 0: the 44pt control frames sit
+        // edge-to-edge, but the 20pt skip-forward glyph and 36pt
+        // play-ring inside them are each centered, so the *visual*
+        // gap from the skip glyph's right edge to the ring's left
+        // edge works out to 44 − 10 − 18 = 16pt — matching the
+        // bar-edge paddings. The bodyButton/skipForwardButton
+        // boundary remains a clean tap split because each control
+        // has its own `.contentShape(Rectangle())`.
+        HStack(spacing: 0) {
             bodyButton
             skipForwardButton
             playPauseButton
@@ -145,8 +160,14 @@ struct MiniPlayerBar: View {
         // edge-to-edge mode so they match the island-mode x
         // positions (where the .padding(.horizontal, 8) below
         // creates the inset).
-        .padding(.leading, AtlasSpacing.lg + (extendsToScreenEdges ? Self.floatingSideInset : 0))
-        .padding(.trailing, AtlasSpacing.md + (extendsToScreenEdges ? Self.floatingSideInset : 0))
+        //
+        // Leading 16pt → avatar's left edge sits 16pt from bar's
+        // left edge. Trailing 12pt + 4pt (ring-to-frame inset, half
+        // the 44-36 diameter difference) → progress ring's outer
+        // right edge sits 16pt from bar's right edge. Both gaps
+        // match so the bar reads symmetric.
+        .padding(.leading, AtlasSpacing.md + (extendsToScreenEdges ? Self.floatingSideInset : 0))
+        .padding(.trailing, Self.trailingInnerInset + (extendsToScreenEdges ? Self.floatingSideInset : 0))
         .frame(height: Self.barHeight)
         .frame(maxWidth: .infinity)
         .background(AtlasColors.miniPlayerBackground)
@@ -176,13 +197,21 @@ struct MiniPlayerBar: View {
     }
 
     private var bodyContent: some View {
-        HStack(spacing: AtlasSpacing.sm) {
+        // 16pt gap between avatar's right edge and the text block's
+        // left edge — matches the bar-edge paddings so the body
+        // half of the mini-player reads with consistent breathing
+        // room on all sides.
+        HStack(spacing: AtlasSpacing.md) {
             leadingIcon
 
+            // Title sits in `body` (15pt SF Pro regular) while the
+            // subtitle stays in `caption` (13pt SF Mono) — gives the
+            // two lines a real type hierarchy instead of two
+            // equally-weighted captions.
             VStack(alignment: .leading, spacing: 1) {
                 MarqueeText(
                     text: titleText,
-                    font: AtlasTypography.caption,
+                    font: AtlasTypography.body,
                     color: AtlasColors.primaryText
                 )
                 MarqueeText(
@@ -203,13 +232,24 @@ struct MiniPlayerBar: View {
         }
     }
 
-    /// Circular avatar of the tour's maker. Falls back to the Atlas
-    /// Studio app-icon avatar when the maker has no remote avatar —
-    /// mirrors `MakerView`.
+    /// Circular avatar of the tour's maker. Resolution order:
+    ///   1. `maker.avatarEmoji` — a single glyph rendered inside a
+    ///      muted circular plate (the Atlas Studio NYC red apple).
+    ///   2. `maker.avatarURL` — async-loaded remote image.
+    ///   3. The bundled `AtlasStudioAvatar` asset, as the last-resort
+    ///      brand fallback.
+    /// `MakerView`'s avatar uses the same resolution order at a larger
+    /// frame so the two surfaces stay in sync.
     private var authorIcon: some View {
         Group {
-            if let urlString = maker?.avatarURL,
-               let url = URL(string: urlString) {
+            if let emoji = maker?.avatarEmoji, !emoji.isEmpty {
+                ZStack {
+                    Circle().fill(AtlasColors.placeholderWarm)
+                    Text(emoji)
+                        .font(.system(size: Self.iconSize * 0.6))
+                }
+            } else if let urlString = maker?.avatarURL,
+                      let url = URL(string: urlString) {
                 AsyncImage(url: url) { phase in
                     switch phase {
                     case .success(let image):
@@ -240,9 +280,14 @@ struct MiniPlayerBar: View {
         .frame(width: Self.iconSize, height: Self.iconSize)
     }
 
+    /// Title line — uppercased so the mini-player reads with the
+    /// same editorial-caps voice as the drawer header. The string
+    /// is uppercased at the call site (not via `.textCase(.uppercase)`
+    /// on Text) because `MarqueeText` renders its own internal Text
+    /// and the modifier wouldn't propagate through it.
     private var titleText: String {
-        if let tour { return tour.title }
-        return Self.idleWelcomeText
+        if let tour { return tour.title.uppercased() }
+        return Self.idleWelcomeText.uppercased()
     }
 
     private var subtitleText: String {
@@ -306,7 +351,7 @@ struct MiniPlayerBar: View {
                     .frame(width: Self.playRingSize, height: Self.playRingSize)
                     .animation(.linear(duration: 0.5), value: progress)
                 Image(systemName: playPauseIcon)
-                    .font(.system(size: 18, weight: .regular))
+                    .font(.system(size: 20, weight: .regular))
                     .foregroundStyle(isIdle ? AtlasColors.tertiaryText : AtlasColors.primaryText)
             }
             .frame(width: Self.controlSize, height: Self.controlSize)

@@ -16,6 +16,7 @@ enum TestFixtures {
             id: id,
             displayName: displayName,
             avatarURL: nil,
+            avatarEmoji: nil,
             bio: "Test bio",
             websiteURL: nil
         )

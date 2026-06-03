@@ -20,7 +20,7 @@ struct MapControlButtonLabel: View {
 
     var body: some View {
         Image(systemName: systemImage)
-            .font(.system(size: 16))
+            .font(.system(size: 20))
             .foregroundStyle(isEnabled ? AtlasColors.primaryText : AtlasColors.tertiaryText)
             .frame(width: Self.diameter, height: Self.diameter)
             .background(AtlasColors.secondaryBackground)

@@ -116,7 +116,7 @@ struct HomeView: View {
 
                     VStack(spacing: AtlasSpacing.sm) {
                         SearchBar()
-                            .padding(.horizontal, AtlasSpacing.lg)
+                            .padding(.horizontal, AtlasSpacing.md)
 
                         CategoryChipRow(
                             availableCategories: TourCategory.allCases,
@@ -228,11 +228,14 @@ struct HomeView: View {
     // MARK: - Map control buttons
 
     /// Standard zoom span the recenter button snaps to — roughly
-    /// 0.005° ≈ 555m N-S / ~420m E-W at NYC latitude, i.e. a few
-    /// city blocks across.
+    /// 0.02° ≈ 2.2 km N-S / ~1.7 km E-W at NYC latitude, i.e. a
+    /// neighborhood-scale view that puts the user dot plus several
+    /// surrounding blocks (and any nearby tour pins) in frame. The
+    /// previous tighter 0.005° zoom dropped the user onto a few-
+    /// block view that hid most pins on real-device review.
     private static let recenterSpan = MKCoordinateSpan(
-        latitudeDelta: 0.005,
-        longitudeDelta: 0.005
+        latitudeDelta: 0.02,
+        longitudeDelta: 0.02
     )
 
     /// Wider zoom span used on first appear only, so the user sees

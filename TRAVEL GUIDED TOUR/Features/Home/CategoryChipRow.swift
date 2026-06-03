@@ -15,7 +15,7 @@ struct CategoryChipRow: View {
                     chip(for: category)
                 }
             }
-            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.horizontal, AtlasSpacing.md)
         }
     }
 

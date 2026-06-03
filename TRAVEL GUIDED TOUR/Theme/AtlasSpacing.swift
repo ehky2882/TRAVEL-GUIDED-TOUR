@@ -19,9 +19,11 @@ enum AtlasSpacing {
     static let phoneScreenRadius: CGFloat = 56
     /// Shared control height for the home-screen search bar and the
     /// category filter chips below it, so the two rows visually line
-    /// up. Sized to clear Apple's 44pt HIG minimum tappable target
-    /// while staying compact enough to leave the map readable.
-    static let searchBarHeight: CGFloat = 46
+    /// up. Sized to match Apple's 44pt HIG minimum tappable target
+    /// exactly — and the diameter of the floating map control
+    /// buttons over the same surface — so all interactive elements
+    /// on the home map carry the same vertical footprint.
+    static let searchBarHeight: CGFloat = 44
     /// Combined height of the home screen's search bar + chip row
     /// block — its top padding plus both rows plus the inter-row
     /// spacing. Does NOT include the device's top safe-area inset.

@@ -38,7 +38,7 @@ struct HomeDrawerContent: View {
 
             VStack(alignment: .leading, spacing: 0) {
                 headerLabel(forCount: aboveDrawerCount)
-                    .font(AtlasTypography.headline)
+                    .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.primaryText)
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal, AtlasSpacing.lg)
@@ -218,7 +218,7 @@ struct HomeDrawerContent: View {
     @ViewBuilder
     private func headerLabel(forCount n: Int) -> some View {
         if sheetDetent == .large {
-            Text("Let's explore together!")
+            Text("LET'S EXPLORE TOGETHER!")
         } else if sharedState.isMapMoving {
             TimelineView(.periodic(from: .now, by: 0.4)) { context in
                 let tick = Int(context.date.timeIntervalSinceReferenceDate / 0.4) % 3 + 1
@@ -226,9 +226,9 @@ struct HomeDrawerContent: View {
             }
         } else {
             switch n {
-            case 0: Text("No tours in view")
-            case 1: Text("1 tour in view")
-            default: Text("\(n) tours in view")
+            case 0: Text("NO TOURS IN VIEW")
+            case 1: Text("1 TOUR IN VIEW")
+            default: Text("\(n) TOURS IN VIEW")
             }
         }
     }
