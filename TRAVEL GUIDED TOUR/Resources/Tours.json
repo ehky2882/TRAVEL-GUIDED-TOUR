@@ -5582,6 +5582,95 @@
         "history"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "3f07598b-d9f7-4a9f-a074-ec26d8966abd",
+      "title": "Schomburg Center for Research in Black Culture",
+      "shortDescription": "Arthur Schomburg's teacher told him Black people had no history. He spent the rest of his life proving him wrong \u2014 and built the world's most important collection of African-diaspora culture.",
+      "longDescription": "The research library at 515 Malcolm X Boulevard at 135th Street in central Harlem holds more than eleven million items documenting the history and culture of the African diaspora \u2014 generally recognized as the world's preeminent collection of its kind. It was founded on the personal collection of Arthur Alfonso Schomburg, a Black Puerto Rican born in San Juan in 1874 who emigrated to New York at seventeen and spent four decades systematically collecting books, documents, and artworks in response to a teacher who told him the African race had no history. The New York Public Library acquired the collection in 1926; Schomburg became its curator in 1932 and continued building it until his death in 1938. The branch was renamed in his honor in 1940. The current building, completed in 1991, was designed by Bond Ryder and Associates with Davis Brody.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Schomburg_Center_for_Research_in_Black_Culture_135_St_2023_jeh.jpg/1280px-Schomburg_Center_for_Research_in_Black_Culture_135_St_2023_jeh.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d3fb9bf4-d179-48b4-ade5-4e5f243156b0",
+          "order": 0,
+          "title": "Schomburg Center for Research in Black Culture",
+          "caption": "Stand at the corner of Malcolm X Boulevard and 135th Street, facing the Schomburg Center entrance.",
+          "latitude": 40.8143,
+          "longitude": -73.9408,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/schomburg_center.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": "Arthur Schomburg's teacher told him Black people had no history. He spent the rest of his life proving him wrong.\n\nYou're at 515 Malcolm X Boulevard, on the corner of 135th Street in central Harlem, outside the Schomburg Center for Research in Black Culture \u2014 a research library that is part of the New York Public Library and houses what is generally recognized as the world's preeminent collection of materials documenting the history and culture of the African diaspora. The collection contains more than eleven million items.\n\nArthur Alfonso Schomburg was a Black Puerto Rican, born in San Juan in 1874. As a young student, he was told by a teacher that the African race had no history, no heroes, no great moments \u2014 that he had inherited no past worth knowing. Schomburg never forgot the conversation. He emigrated to New York in 1891 at the age of seventeen and spent the next four decades systematically collecting books, documents, and artworks documenting the African and African-diaspora past, in every language he could find them in.\n\nBy 1925, Schomburg's personal collection was the largest of its kind held by any private individual in the world. The New York Public Library acquired it the following year for ten thousand dollars and made it the founding collection of what was then called the Division of Negro Literature, History, and Prints at the library's 135th Street branch. Schomburg himself became the curator of the collection in 1932 and continued building it until his death in 1938. The branch was renamed in his honor in 1940.\n\nThe current Schomburg Center building, completed in 1991, was designed by the firm of Bond Ryder and Associates with Davis Brody, and it includes reading rooms, exhibition galleries, a theater, and climate-controlled storage for the collection. The exhibitions on the ground floor are free and open to the public.\n\nThe Schomburg has become, over the past century, the institution Arthur Schomburg's elementary school teacher said could not exist."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.8143,
+      "centroidLongitude": -73.9408,
+      "city": "New York",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "schomburg",
+        "harlem",
+        "135th-street",
+        "arthur-schomburg",
+        "nypl",
+        "african-diaspora",
+        "research-library",
+        "1926",
+        "1991"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8add1db1-098c-48c1-a637-cf71e30b05dd",
+      "title": "Coney Island",
+      "shortDescription": "By 1905, three separate amusement parks here were each, at different moments, the largest in the world. By 1964, all three were gone.",
+      "longDescription": "The Surf Avenue strip at the southern shore of Brooklyn is the birthplace of American mass amusement. Three competing parks made it famous: Steeplechase (1897\u20131964), Luna Park (1903\u20131944, lit with 250,000 electric bulbs and visible from ships miles at sea), and Dreamland (1904\u20131911), the most ambitious amusement park ever built, with a million electric bulbs, a thousand-foot central tower, and recreations of Pompeii and Switzerland. Dreamland burned in a single night in May 1911; Luna burned in 1944; Steeplechase closed in 1964. The Cyclone roller coaster and Wonder Wheel still operate. The Parachute Jump \u2014 the white skeletal tower west of the boardwalk \u2014 is the only surviving structure from any of the three original parks, and it hasn't run as a ride in over seventy-five years.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Coney_Island_Parachute_Jump_%28June_2016%29.jpg/1280px-Coney_Island_Parachute_Jump_%28June_2016%29.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d8b17d2f-d9c7-45eb-8011-4ae85a873783",
+          "order": 0,
+          "title": "Coney Island",
+          "caption": "Stand on Surf Avenue near the Cyclone roller coaster and the Wonder Wheel, at the heart of the historic amusement district.",
+          "latitude": 40.5745,
+          "longitude": -73.9819,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/coney_island.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 80,
+          "imageURL": null,
+          "transcriptText": "By 1905, there were three different amusement parks here \u2014 and each of them, at one point or another, was the largest in the world.\n\nYou're at Surf Avenue at Coney Island, on the southern shore of Brooklyn, the historic center of American amusement-park culture. The Cyclone roller coaster is to your east, the Wonder Wheel rises behind you, and Nathan's Famous is on the corner. The Atlas tour for the surviving rides is a separate walk \u2014 this one is about the three parks that disappeared.\n\nGeorge Tilyou opened Steeplechase Park in 1897, named after its signature ride, a mechanical horse race around a circular track. It was the longest-running of the three major Coney Island parks, operating in different forms until 1964.\n\nLuna Park opened in 1903 on the site of an earlier attraction. It was lit with two hundred and fifty thousand electric light bulbs \u2014 more than any building in New York at the time \u2014 and was visible for miles at night from passing ships. The signature attraction was a simulated trip to the moon. Within two years of opening, Luna was the largest amusement park in the world.\n\nDreamland opened next, in 1904, directly adjacent to Luna and explicitly intended to be larger and more refined. Dreamland had a million electric bulbs to Luna's quarter-million, a thousand-foot central tower, recreations of Pompeii and Switzerland, a Lilliputian village staffed by three hundred people of short stature, and a vast central lagoon. It is generally considered the most ambitious amusement park ever built.\n\nOn the night of May 27, 1911, a small fire broke out in the Hell Gate ride at Dreamland. The park's electricity was cut off as firefighters arrived, which delayed the response, and the dry summer wind drove the fire across the wooden walkways. By morning, all of Dreamland was gone. Luna Park burned in 1944, and Steeplechase closed in 1964.\n\nA new amusement park using the name Luna Park opened in 2010 on part of the original Luna and Dreamland site, and the Cyclone and Wonder Wheel still operate. The Parachute Jump, the white skeletal tower west of the boardwalk, is the only structure to survive from any of the three original parks \u2014 and it hasn't run as a ride in seventy-five years."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 143,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.5745,
+      "centroidLongitude": -73.9819,
+      "city": "Brooklyn",
+      "primaryCategory": "history",
+      "tags": [
+        "coney-island",
+        "brooklyn",
+        "amusement-park",
+        "steeplechase",
+        "luna-park",
+        "dreamland",
+        "1903",
+        "1911",
+        "parachute-jump",
+        "wonder-wheel"
+      ],
+      "priceUSD": 0
     }
   ]
 }
