@@ -5847,6 +5847,94 @@
         "wc-handy"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "91c9fd6a-8423-4519-9b03-df764850dc9b",
+      "title": "IAC Building",
+      "shortDescription": "Frank Gehry has built in dozens of cities worldwide. The IAC Building is his only completed structure in New York.",
+      "longDescription": "The IAC Building rises ten stories on the West Side Highway between 18th and 19th Streets — a curtain wall of white-fritted glass with bottom edges that curve upward like the hull of a sail, its asymmetrical facades twisting slightly with each story. Completed in 2007, it is the New York headquarters of Barry Diller's media holding company IAC, and it is the only finished building Frank Gehry has ever constructed in New York City. Gehry — best known for the titanium-clad Guggenheim Bilbao and the Walt Disney Concert Hall in Los Angeles — designed the sail form at Diller's request: an avid sailor, Diller wanted something that referenced the Hudson River the building faces. The white frit pattern on the glass acts as both a sun screen and a softening agent, giving the building its characteristic milky luminescence in daylight. Across the highway, the Diller architecture cluster continues: Diane von Furstenberg's headquarters by Work Architecture Company, Little Island on the Hudson, and the High Line — both of which Diller and von Furstenberg helped fund.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/NYC_-_Frank_Gehry_designed_building_IAC_%28Inter_Active_Corp%29_on_West_18th_Street.jpg/1280px-NYC_-_Frank_Gehry_designed_building_IAC_%28Inter_Active_Corp%29_on_West_18th_Street.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f8c37a96-48b5-48da-9185-e9fb174db20c",
+          "order": 0,
+          "title": "IAC Building",
+          "caption": "Stand on the sidewalk along the West Side Highway facing the building. Walk around the curved corner at 18th Street to see how the facades shift.",
+          "latitude": 40.7432,
+          "longitude": -74.0083,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/iac_building.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 80,
+          "imageURL": null,
+          "transcriptText": "Frank Gehry has designed buildings in dozens of cities. He's only built one in New York.\n\nYou're on the West Side Highway, between 18th and 19th Streets, looking at the IAC Building — a ten-story curtain wall of white-fritted glass, with the bottom edges curving upward like the bottom of a sail, and an asymmetrical sequence of facades that twists slightly with each story. The building was completed in 2007 and is the New York headquarters of IAC, the media holding company founded by Barry Diller — who, with his wife Diane von Furstenberg, has been one of the most consistent patrons of architecture along this stretch of the West Side.\n\nThe architect is Frank Gehry, best known for the titanium-clad Guggenheim Museum in Bilbao and the Walt Disney Concert Hall in Los Angeles. Gehry's work is unusual in being almost instantly recognizable, with its sweeping curves and sculptural forms, but the firm has never built another completed structure in New York City. The IAC Building remains, as of this writing, his only finished New York project.\n\nThe form is meant to evoke overlapping sails — Diller, an avid sailor, asked Gehry for something that referenced the Hudson River the building faces. The white frit pattern on the glass curtain wall acts as both a sun screen and a softening device, giving the building its characteristic milky luminescence in daylight and an ethereal glow at night.\n\nAcross the West Side Highway from the IAC Building is the rest of Diller's contribution to the neighborhood: Diane von Furstenberg's headquarters and showroom designed by Work Architecture Company, the new Little Island park on the Hudson, and the High Line, which Diller and von Furstenberg helped fund. Little Island and the High Line each have their own Atlas tours.\n\nThe IAC Building is an office building, not open to the public. Look at it from the sidewalk, walk around the curved corner at 18th Street to see how the facades shift, and continue along the highway for a good view of the whole Diller architecture cluster."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7432,
+      "centroidLongitude": -74.0083,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": [
+        "iac-building",
+        "frank-gehry",
+        "chelsea",
+        "west-side-highway",
+        "2007",
+        "barry-diller",
+        "curtain-wall",
+        "high-line",
+        "little-island"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f87e0bdc-c738-415d-927d-a6299337db5e",
+      "title": "The Strand Bookstore",
+      "shortDescription": "The Strand opened in 1927 on a block with forty-seven other bookstores. It's the only one left.",
+      "longDescription": "The Strand stands at the corner of Broadway and 12th Street under its red-and-white awning, outdoor carts of used books lining the sidewalk — the last surviving member of Book Row, the used-and-rare bookstore district that once stretched along Fourth Avenue from Astor Place to Union Square. At its peak in the 1920s and 30s, Book Row held forty-eight separate stores across six blocks, sustained by cheap prewar rents, proximity to NYU and Cooper Union, and a steady stream of librarians, scholars, and collectors. The Strand opened on Fourth Avenue in 1927, founded by Lithuanian-born immigrant Benjamin Bass, who specialized in used books at unusually low prices. His son Fred moved the store to this Broadway location in 1957. The other bookstores closed one by one — rising rents, mass-market paperbacks, chain stores, eventually the internet. By the early 2000s only the Strand remained. The store now claims eighteen miles of books across three floors, with a rare-books room on the third floor holding signed first editions. Still family-owned, now in its third generation, run by Fred's daughter Nancy Bass Wyden.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Strand_Bookstore_-_Landscape_%2848072699533%29.jpg/1280px-Strand_Bookstore_-_Landscape_%2848072699533%29.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "553863e2-d0dd-4e32-82f2-f26c5535e489",
+          "order": 0,
+          "title": "The Strand Bookstore",
+          "caption": "Stand at the corner of Broadway and 12th Street, facing the red awning and the outdoor book carts.",
+          "latitude": 40.7322,
+          "longitude": -73.9908,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/strand_bookstore.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": "The Strand opened in 1927 on a block with forty-seven other bookstores. They're all gone.\n\nYou're at 828 Broadway, on the corner of 12th Street, outside the Strand Bookstore — the red-and-white awning, the outdoor carts of used books, the lines of people browsing on the sidewalk. The Strand is the last surviving member of what was, for most of the twentieth century, the used-and-rare bookstore district known as Book Row.\n\nBook Row was the stretch of Fourth Avenue between Astor Place and Union Square, two blocks east of where you're standing. At its peak in the 1920s and 30s, the area contained forty-eight separate bookstores along a six-block stretch — used, antiquarian, scholarly, specialized. It survived on cheap prewar rents, on proximity to NYU, Cooper Union, and the New School, and on the librarians, scholars, and collectors who used Book Row as their primary supply line.\n\nThe Strand opened on Fourth Avenue in 1927, founded by a Lithuanian-born immigrant named Benjamin Bass. The store specialized in used books at unusually low prices and grew rapidly. Bass passed the business to his son Fred in 1956, and Fred moved the store to this Broadway location the following year, slightly outside the by-then-declining Book Row.\n\nThe other bookstores closed one by one over the second half of the twentieth century. Rising rents, mass-market paperbacks, chain bookstores, eventually the internet — every shift in the publishing industry shrank Book Row by one or two stores, and by the early 2000s only the Strand was left.\n\nThe store now claims a stock of eighteen miles of books — a tagline used since the 1980s — across three floors, with a rare-books room on the third floor that holds signed first editions. The Strand is still family-owned, now in its third generation, run by Nancy Bass Wyden, Fred's daughter.\n\nThe carts on the sidewalk are usually the cheapest books in the store; the third floor has the most expensive."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7322,
+      "centroidLongitude": -73.9908,
+      "city": "New York",
+      "primaryCategory": "literature",
+      "tags": [
+        "strand-bookstore",
+        "book-row",
+        "broadway",
+        "greenwich-village",
+        "1927",
+        "bookstore",
+        "used-books",
+        "independent-bookstore",
+        "nancy-bass-wyden"
+      ],
+      "priceUSD": 0
     }
   ]
 }
