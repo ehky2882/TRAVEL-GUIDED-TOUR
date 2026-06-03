@@ -36,10 +36,9 @@ struct BottomSheet<Content: View>: View {
     /// Inset from the screen edges on the left, right, AND bottom of
     /// the drawer.
     var horizontalInset: CGFloat = 8
-    /// Drawer's top corner radius. Softer than a typical card corner
-    /// but well short of the phone-radius bottom — a moderate curve
-    /// that doesn't make the drawer look like a flipped half-pill.
-    var topCornerRadius: CGFloat = 30
+    /// Drawer's top corner radius. A modest curve — softer than a
+    /// flat-square top but well short of the phone-radius bottom.
+    var topCornerRadius: CGFloat = 28
     /// Drawer's bottom corner radius — matches the phone screen's
     /// rounded corners so the drawer feels like a floating island
     /// that "follows" the device's bottom curvature. The AtlasTabBar
@@ -77,7 +76,7 @@ struct BottomSheet<Content: View>: View {
         dragOffset: Binding<CGFloat>,
         peekHeight: CGFloat = 100,
         horizontalInset: CGFloat = 8,
-        topCornerRadius: CGFloat = 30,
+        topCornerRadius: CGFloat = 28,
         bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius,
         bottomReservedHeight: CGFloat = 0,
         topReservedHeight: CGFloat = 0,

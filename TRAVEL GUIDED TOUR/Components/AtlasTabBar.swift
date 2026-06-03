@@ -76,8 +76,12 @@ struct AtlasTabBar: View {
         } label: {
             VStack(spacing: 2) {
                 Image(systemName: isSelected ? tab.selectedSystemImage : tab.systemImage)
-                    .font(.system(size: 22))
-                Text(tab.label)
+                    .font(.system(size: 20))
+                // Uppercased at the display site (not in the enum)
+                // so the .accessibilityLabel(tab.label) below stays
+                // proper-cased — VoiceOver pronounces "Home" as a
+                // word instead of spelling H-O-M-E.
+                Text(tab.label.uppercased())
                     .font(AtlasTypography.caption)
             }
             .foregroundStyle(

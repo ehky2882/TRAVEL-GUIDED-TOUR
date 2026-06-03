@@ -208,6 +208,22 @@ struct HomeMapSection: View {
         Self.cluster(markers: allStopMarkers, in: currentRegion)
     }
 
+    /// Round `span` to two significant figures so MapKit's
+    /// sub-percent settle drift on pure pans doesn't perturb the
+    /// derived cluster cell pitch. A real pinch step changes span
+    /// by at least several percent — well above this snap precision
+    /// — so legitimate zoom changes still cross a snap boundary.
+    /// E.g. 0.0050 / 0.005001 / 0.00499 all snap to 0.0050; 0.006
+    /// remains 0.006.
+    private static func snappedSpan(_ span: Double) -> Double {
+        guard span > 0, span.isFinite else { return span }
+        // Scale so the first two sig figs become the integer part,
+        // round, then scale back.
+        let exponent = floor(log10(span)) - 1
+        let unit = pow(10.0, exponent)
+        return (span / unit).rounded() * unit
+    }
+
     private static func cluster(markers: [StopMarker], in region: MKCoordinateRegion?) -> [ClusterItem] {
         guard let region else {
             return markers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
@@ -217,8 +233,19 @@ struct HomeMapSection: View {
         // original 14 so pins only cluster when they're very close
         // together — reduces false merges at neighbourhood zoom.
         let cellsAcross: Double = 20
-        let cellSpanLat = region.span.latitudeDelta / cellsAcross
-        let cellSpanLon = region.span.longitudeDelta / cellsAcross
+        // Snap span to two significant figures BEFORE deriving cell
+        // pitch. MapKit reports sub-percent drift on the span when a
+        // pan gesture settles (even when the user didn't zoom), and
+        // ANY change in pitch re-buckets markers that sit near a
+        // cell boundary — the visible symptom is clusters appearing
+        // to shift / reform on pure pans. Two sig figs is coarse
+        // enough to absorb that drift, fine enough that real zoom
+        // changes (always at least several percent per pinch step)
+        // still cross a snap boundary and re-cluster as expected.
+        let snappedLatSpan = Self.snappedSpan(region.span.latitudeDelta)
+        let snappedLonSpan = Self.snappedSpan(region.span.longitudeDelta)
+        let cellSpanLat = snappedLatSpan / cellsAcross
+        let cellSpanLon = snappedLonSpan / cellsAcross
         guard cellSpanLat > 0, cellSpanLon > 0 else {
             return markers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
         }
