@@ -30,7 +30,26 @@ These happen **automatically, without the owner asking**.
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
 
-## Current State (2026-06-02)
+## Current State (2026-06-03)
+
+### 18 new NYC tours + TestFlight 1.0 (26) (session 18 — web/PM)
+
+Web/PM session. Eighteen new NYC tours had been landing direct-to-main between sessions; this session bundled them into a TestFlight cut. Catalog **113 → 131 tours**, 3 makers; NYC-area **73 → 91**. Multi-stop count **1 → 2**.
+
+- **5 NYC tours (114–118, `7e3e9a9`):** Four Freedoms Park, Green-Wood Cemetery, African Burial Ground National Monument, Cooper Union Foundation Building, Tompkins Square Park.
+- **2 NYC tours (119–120, `9df3983`):** Museum of Modern Art (MoMA), Bryant Park.
+- **Fifth Avenue Walk multi-stop tour (121, `88bf893`)** — **second multi-stop tour ever** in the catalog (joining AMNH Four Facades from 2026-05-26).
+- **2 NYC tours (122–123, `8261107`):** Federal Hall, Columbus Park (Chinatown).
+- **2 NYC tours (124–125, `64a04e3`):** Schomburg Center for Research in Black Culture, Coney Island.
+- **2 NYC tours (126–127, `79f6b49`):** Eldridge Street Synagogue, Grand Army Plaza (Brooklyn).
+- **2 NYC tours (128–129, `fab0e53`):** Grand Concourse, Strivers' Row.
+- **2 NYC tours (130–131, `ab7c1f8`):** IAC Building (Frank Gehry, 2007), The Strand Bookstore.
+- **Two validator-caught typo fixes** before the build: `triggerMode geofence → geofenced` across tours 114–131 (`3235d33`), and `TourKind multi → multiStop` on Fifth Avenue Walk (`7c11003`).
+- **Build bumped 25 → 26 in `17dba88`** — direct-to-main per established pattern (`aba765f` for 25, `401358f` for 24). Single-line pbxproj edit. `xcodebuild archive` clean at `/tmp/Atlas-20260603-1840.xcarchive` (~3 min). Owner uploaded via Organizer.
+
+No Swift / asset / project structure changes this session beyond the pbxproj bump.
+
+**Latest TestFlight build: 1.0 (26)** — uploaded 2026-06-03 evening.
 
 ### Home polish batch + cluster smoothness + TestFlight 1.0 (25) (session 17)
 
@@ -225,8 +244,8 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **113 tours, 3 makers** in `Resources/Tours.json` (73 NYC-area + 30 Atlas Studio Porto + 5 Atlas Studio Lisbon + others); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **58 single-stop + 1 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, geofenced exterior walk) — added 2026-05-26, unblocks M-qa items 6 + 7
+- **131 tours, 3 makers** in `Resources/Tours.json` (91 NYC-area + 30 Atlas Studio Porto + 5 Atlas Studio Lisbon + others); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **129 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
