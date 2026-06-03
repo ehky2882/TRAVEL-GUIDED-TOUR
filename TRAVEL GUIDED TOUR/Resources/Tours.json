@@ -5671,6 +5671,94 @@
         "wonder-wheel"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "a41d0cbf-bf41-46a6-bff7-1380ff443c18",
+      "title": "Eldridge Street Synagogue",
+      "shortDescription": "The first great synagogue built by Eastern European Jewish immigrants in America \u2014 its main sanctuary was sealed and forgotten for fifty years, then restored over two decades.",
+      "longDescription": "The building at 12 Eldridge Street, completed in 1887, was the first synagogue constructed in the United States by an Eastern European Jewish immigrant congregation. The architects Peter and Francis Herter \u2014 specialists in tenement buildings with no prior synagogue experience \u2014 mixed Moorish, Gothic, and Romanesque elements into a facade of pointed arches, horseshoe arches, a rose window, and Stars of David. The interior sanctuary features a seventy-foot vaulted ceiling, hand-stenciled walls, brass chandeliers, and an Italian-walnut ark. At its peak in the 1890s, over a thousand worshippers attended High Holy Day services. By the 1940s the congregation had dwindled and the main sanctuary was locked; it sat sealed for nearly fifty years. A twenty-million-dollar restoration began in 1986 and took two decades. The new western rose window was designed by Kiki Smith and Deborah Gans.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Eldridge_Street_Synagogue_%2842773%29.jpg/1280px-Eldridge_Street_Synagogue_%2842773%29.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4eae5b4f-db2e-4b37-b877-f57c91a706fa",
+          "order": 0,
+          "title": "Eldridge Street Synagogue",
+          "caption": "Stand on Eldridge Street facing the facade with its rose window, horseshoe arches, and Stars of David.",
+          "latitude": 40.7143,
+          "longitude": -73.9972,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/eldridge_street_synagogue.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": "This is the first great synagogue built by Eastern European Jewish immigrants in America.\n\nYou're at 12 Eldridge Street, on the southern edge of what is now Chinatown but was, in the 1880s, the densest Jewish neighborhood in the world. The building in front of you is the Eldridge Street Synagogue, completed in 1887 and built by a congregation called Kahal Adath Jeshurun \u2014 primarily Russian and Eastern European Jewish immigrants who had arrived in New York in the previous two decades. It was the first synagogue building constructed in the United States by an Eastern European Jewish immigrant congregation.\n\nThe architects were two German brothers, Peter and Francis Herter, who specialized in tenement buildings and had no previous experience with synagogue design. They drew on a combination of Moorish, Gothic, and Romanesque elements \u2014 the architectural styles most commonly associated with the European synagogues of the same period \u2014 and produced a facade that mixes pointed arches, horseshoe arches, a rose window, and stars of David in a single composition.\n\nThe interior is one of the most elaborate surviving nineteenth-century synagogue interiors in the United States. The main sanctuary, on the second floor, features a seventy-foot-high vaulted ceiling, hand-stenciled walls, brass chandeliers, an Italian-walnut ark, and a large stained-glass rose window above the western entrance.\n\nAt its peak in the 1890s and early 1900s, more than a thousand worshippers attended services here on the High Holy Days. By the 1940s, the immigrant generation had aged and moved north to Harlem and the Bronx; the main sanctuary was closed and locked, and the small remaining congregation moved its services to the basement chapel. The main sanctuary sat sealed for almost fifty years.\n\nIn 1986, a community group began an effort to restore the building. The restoration took twenty years and cost approximately twenty million dollars. The new western rose window, designed by the artists Kiki Smith and Deborah Gans, replaced the original which had been lost to weather damage.\n\nThe building now operates as the Museum at Eldridge Street, with regular tours and services held by a small remaining congregation."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7143,
+      "centroidLongitude": -73.9972,
+      "city": "New York",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "eldridge-street",
+        "lower-east-side",
+        "synagogue",
+        "1887",
+        "jewish-immigration",
+        "moorish",
+        "kiki-smith",
+        "museum",
+        "chinatown"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8cfbebad-3727-4c44-9640-772b808735d1",
+      "title": "Grand Army Plaza, Brooklyn",
+      "shortDescription": "Thomas Eakins \u2014 best known as a realist painter \u2014 traveled to Illinois to study a horse's anatomy so he could sculpt the reliefs inside this triumphal arch.",
+      "longDescription": "The Soldiers' and Sailors' Memorial Arch at the northern entrance to Prospect Park rises eighty feet above the convergence of six streets. Built between 1889 and 1892 by architect John H. Duncan \u2014 who later designed Grant's Tomb \u2014 the granite arch is modeled on the Arc de Triomphe and commemorates the Union dead of the Civil War. Frederick MacMonnies's quadriga of Lady Columbia driving four horses crowns the top. Inside, the equestrian reliefs of Lincoln and Grant were made by the painter Thomas Eakins in collaboration with sculptor William Rudolf O'Donovan \u2014 among Eakins's only works in three dimensions. To study Grant's horse Cincinnati, Eakins traveled to Galena, Illinois, and worked from a living animal of the same breed. The Brooklyn Public Library curves along the plaza's eastern edge.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Soldiers%27_and_Sailors%27_Arch_-_Grand_Army_Plaza_%2855268471678%29.jpg/1280px-Soldiers%27_and_Sailors%27_Arch_-_Grand_Army_Plaza_%2855268471678%29.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "681d1d59-be63-4784-b103-ea53d2d399ea",
+          "order": 0,
+          "title": "Grand Army Plaza, Brooklyn",
+          "caption": "Stand in the plaza facing the arch, with Prospect Park behind it and the Brooklyn Public Library curving to your left.",
+          "latitude": 40.6736,
+          "longitude": -73.97,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/grand_army_plaza_brooklyn.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 80,
+          "imageURL": null,
+          "transcriptText": "Thomas Eakins, the painter, did sculpture for this arch.\n\nYou're at Grand Army Plaza, the formal entrance to Prospect Park on the northern side, where six streets converge in a wide oval. The structure in the center of the plaza, eighty feet high and eighty feet wide, is the Soldiers' and Sailors' Memorial Arch \u2014 a granite triumphal arch built between 1889 and 1892 to commemorate the Union dead of the Civil War. It is the second-largest triumphal arch in New York City, after the Washington Square Arch in Manhattan.\n\nThe architect was John H. Duncan, who would later design Grant's Tomb on the Upper West Side. The form is a classical Roman triumphal arch, modeled on the Arc de Triomphe in Paris. The relief panels, the figural sculpture, and the quadriga at the top were added in stages between 1892 and 1901, by some of the leading American sculptors of the period.\n\nThe quadriga \u2014 a four-horse chariot driven by a winged figure of Lady Columbia \u2014 is the work of Frederick MacMonnies, the leading American Beaux-Arts sculptor of his generation. The two large equestrian reliefs inside the arch, depicting Abraham Lincoln on the left and Ulysses S. Grant on the right, were produced by the painter Thomas Eakins working in collaboration with the sculptor William Rudolf O'Donovan.\n\nEakins is best known as a realist painter \u2014 the rower in \"The Champion Single Sculls,\" the surgeons in \"The Gross Clinic\" \u2014 and his work in sculpture is much less remembered. The Grand Army Plaza reliefs are among his only major works in three dimensions, and the equestrian figures are particularly notable for their anatomical realism. Eakins traveled to Galena, Illinois, to study Grant's horse Cincinnati from a living animal of the same breed.\n\nThe plaza is the formal connection to Prospect Park to the south, which has its own Atlas tour. The Brooklyn Public Library, the curving stone building on the east side, is also worth a few minutes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.6736,
+      "centroidLongitude": -73.97,
+      "city": "Brooklyn",
+      "primaryCategory": "architecture",
+      "tags": [
+        "grand-army-plaza",
+        "brooklyn",
+        "prospect-park",
+        "triumphal-arch",
+        "civil-war",
+        "thomas-eakins",
+        "1892",
+        "beaux-arts",
+        "john-h-duncan"
+      ],
+      "priceUSD": 0
     }
   ]
 }
