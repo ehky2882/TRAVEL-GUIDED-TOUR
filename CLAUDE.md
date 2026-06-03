@@ -30,7 +30,34 @@ These happen **automatically, without the owner asking**.
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
 
-## Current State (2026-06-01)
+## Current State (2026-06-02)
+
+### TestFlight 1.0 (24) + 11 Portugal tours (session 16 — web/PM)
+
+Web/PM session — single 11-tour Portugal batch under PR [#110](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/110), then build bump 23 → 24 via PR [#111](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/111) (admin-merged, single-line metadata). `xcodebuild archive` clean at `/tmp/Atlas-20260602-2146.xcarchive`; owner uploaded via Organizer. **TestFlight 1.0 (24) is live.**
+
+- **11 new Portugal tours** (catalog 102 → 113, 105 → 117 stops):
+  - **Atlas Studio Porto (8):**
+    - Batalha Centro de Cinema (Porto, culturalHeritage, 167s) — 1947 Art Deco cinema, Estado Novo censors destroyed the hammer-and-sickle facade; restored in 2022 stainless steel; Atelier 15 renovation
+    - Building in Senhora da Luz (Porto, architecture, 139s) — Souto de Moura, 2016; Foz do Douro 3-family apartment block with exposed-concrete grid on east/west elevations
+    - Mosteiro Santo Agostinho da Serra do Pilar (Vila Nova de Gaia, sacredSites, 151s) — 1538–1670 UNESCO monastery, Portugal's only circular cloister; Wellington spotted the wine barges from here in 1809
+    - Teatro Rivoli (Porto, musicAndPerformance, 167s) — Júlio Brito Art Deco redesign, 1923; Praça Dom João I, opposite Porto City Hall; Fantasporto host
+    - Trindade Metro Station (Porto, architecture, 146s) — Souto de Moura, six-line interchange, white-tile pavilions + 736-tile 2025 azulejo mural for the Carnation Revolution's fiftieth
+    - Vodafone Headquarters (Porto, architecture, 158s) — Barbosa & Guimarães, 2009; faceted concrete shell on Boavista, structure-as-skin (no internal frame)
+    - Municipal Library of Viana do Castelo (Viana do Castelo, literature, 158s) — **first Viana do Castelo tour** — Álvaro Siza, 2008; 45m white-concrete square with 20m void cut through the upper volume, in Távora's waterfront master plan
+    - Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro (Angra do Heroísmo, literature, 167s) — **first Azores tour in catalog** — Inês Lobo; Mies van der Rohe Award nominee 2017; UNESCO Angra
+  - **Atlas Studio Lisbon (3):**
+    - Adega Mayor (Campo Maior, architecture, 135s) — **first Campo Maior + first Alentejo tour** — Álvaro Siza, 2006 winery for the Nabeiro coffee family; 120m white facade on the Spanish border plain
+    - Óbidos (Óbidos, culturalHeritage, 155s) — **first Óbidos tour** — Vila das Rainhas; 1,565m of medieval walls; the keep is a layered Moorish / 1148-reconquest / 1755-earthquake palimpsest
+    - Capela do Monte (Lagos, sacredSites, 173s) — **first Lagos + first Algarve tour** — Álvaro Siza, 2016; his only Algarve building; 10×6m non-denominational hilltop chapel above Monte da Charneca, no electricity / heating / running water
+- Audio (11 MP3s, slug-based) uploaded across 3 chunked commits — `f4e849d`, `259309d`, `7a67dc9` — after persistent HTTPS 408s on the combined push.
+- Images (42 webp + 3 jpg-for-Adega) at commit `24c6e36`. Naming follows the established `<Base>_hero.<ext>` / `<Base>_N.<ext>` pattern.
+- All 22 live-URL spot-checks (11 audio + 11 heroes) returned 200 against `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/`.
+- Validator: 3 makers / 113 tours / 117 stops, no issues. CI green (validator + iOS Simulator build + unit tests).
+- **Atlas Studio Porto** grows 22 → 30 tours; **Atlas Studio Lisbon** grows 2 → 5.
+- **New cities in catalog (5):** Viana do Castelo, Angra do Heroísmo, Campo Maior, Óbidos, Lagos. Mainland Portugal coverage now spans north (Viana / Porto / Braga / Marco de Canaveses / Gondomar / Matosinhos / Vila Nova de Gaia), centre (Óbidos), Lisbon belt (Lisbon / Cascais), Alentejo (Campo Maior), Algarve (Lagos) — plus Terceira (Azores).
+
+**Latest TestFlight build: 1.0 (24)** — uploaded 2026-06-02 via Organizer.
 
 ### Home-screen polish pass + TestFlight 1.0 (23) (session 15)
 
@@ -186,7 +213,7 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **97 tours, 3 makers** in `Resources/Tours.json` (73 NYC-area + 17 Porto-area + 3 elsewhere-in-Portugal/Iberia + others); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **113 tours, 3 makers** in `Resources/Tours.json` (73 NYC-area + 30 Atlas Studio Porto + 5 Atlas Studio Lisbon + others); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
 - **58 single-stop + 1 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, geofenced exterior walk) — added 2026-05-26, unblocks M-qa items 6 + 7
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
