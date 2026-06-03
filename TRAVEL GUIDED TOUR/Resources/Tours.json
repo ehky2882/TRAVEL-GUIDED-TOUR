@@ -5290,6 +5290,95 @@
         "park"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "d2b4a854-c1ac-463a-bccd-fcf3f66f8399",
+      "title": "Museum of Modern Art (MoMA)",
+      "shortDescription": "MoMA opened ten days after the stock market crashed \u2014 founded in 1929 by three women who decided that the art of their time deserved an institution.",
+      "longDescription": "The glass facade on 53rd Street, behind a black canopy added in the 2019 Diller Scofidio + Renfro renovation, is the latest layer of a building that has expanded five separate times in ninety-five years. MoMA was founded by Abby Aldrich Rockefeller, Lillie P. Bliss, and Mary Quinn Sullivan in a rented apartment in November 1929, ten days after the Wall Street crash. Their idea \u2014 a museum dedicated entirely to contemporary art, taking living artists seriously when other institutions wouldn't \u2014 became the most influential modern art collection in the world. The 1939 International Style building was expanded by Philip Johnson in the 1960s, Cesar Pelli in the 1980s, Yoshio Taniguchi in 2004, and Diller Scofidio + Renfro most recently. Inside: Van Gogh's Starry Night, Picasso's Demoiselles d'Avignon, Warhol's Campbell's Soup Cans, Dal\u00ed's melting clocks, Monet's water lilies.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Museum_of_Modern_Art_%28MoMA%29_%2851395759113%29.jpg/1280px-Museum_of_Modern_Art_%28MoMA%29_%2851395759113%29.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "eddce980-ddbc-453c-a639-eba22f64dd2d",
+          "order": 0,
+          "title": "Museum of Modern Art (MoMA)",
+          "caption": "Stand on 53rd Street facing the glass facade and black canopy of the main entrance.",
+          "latitude": 40.7614,
+          "longitude": -73.9776,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/MoMA_53rd_Street_Entrance.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": "MoMA opened ten days after the stock market crashed.\n\nFind the entrance to the Museum of Modern Art on 53rd Street, between Fifth and Sixth Avenues. The facade is a wall of glass set behind a black-framed canopy that extends over the sidewalk. The building has expanded sideways, upward, and outward in five separate construction phases over ninety-five years \u2014 each one designed by a different architect. What you're looking at is the result.\n\nThe museum was founded in 1929 by three women \u2014 Abby Aldrich Rockefeller, Lillie P. Bliss, and Mary Quinn Sullivan. The idea was new and slightly heretical: a museum dedicated entirely to contemporary art. At the time, most American museums collected dead European masters. The three founders wanted a place that would take living artists seriously \u2014 Picasso, Matisse, C\u00e9zanne, the Cubists. They opened in a rented apartment in November 1929, ten days after the Wall Street crash. It didn't slow them down.\n\nWithin ten years, MoMA had its own building on this site \u2014 the 1939 International Style box, partly visible behind the current glass. The collection grew faster than the building could hold it. The original building was expanded by Philip Johnson in the 1960s, by Cesar Pelli in the 1980s, by Yoshio Taniguchi in 2004, and most recently by Diller Scofidio and Renfro in 2019. The black canopy above you is part of that last renovation.\n\nInside is the most influential modern art collection in the world. Van Gogh's Starry Night. Picasso's Demoiselles d'Avignon. Warhol's Campbell's Soup Cans. Dal\u00ed's melting clocks. Monet's water lilies. The objects that defined what modern art was \u2014 most of them are in there.\n\nWhat's worth knowing, standing here, is that all of this started with three women in 1929 deciding that the art of their time deserved an institution. Almost every artist they collected was unfashionable, ignored, or actively dismissed at some point. MoMA's whole reason for existing was to take seriously what other museums wouldn't.\n\nSo go in. The collection is too big for one visit, but pick a floor."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 141,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7614,
+      "centroidLongitude": -73.9776,
+      "city": "New York",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "moma",
+        "midtown",
+        "modern-art",
+        "1929",
+        "rockefeller",
+        "philip-johnson",
+        "taniguchi",
+        "van-gogh",
+        "picasso",
+        "diller-scofidio"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "771c68bd-a100-482b-ba7d-cd4bbad137d3",
+      "title": "Bryant Park",
+      "shortDescription": "Thirty years ago, no one came here \u2014 today twelve million people a year do. One of the great urban turnarounds in American history.",
+      "longDescription": "A green rectangle behind the New York Public Library, bounded by movable chairs and gravel paths. In the 1980s, it was one of the most dangerous places in Midtown \u2014 crime, drug dealing, hedges designed for privacy that had become walls hiding what was happening inside. In 1988 the Bryant Park Corporation took over, applying urbanist William H. Whyte's research on what makes public spaces work: tear out the hedges, open the sightlines, add movable chairs borrowed from the Jardin du Luxembourg, fill it with programmed events. By the reopening in 1992 the transformation was complete. The park's history goes further back: a potter's field in the 1840s, New York's Crystal Palace World's Fair in 1853, a fire in 1858, and renamed for the poet William Cullen Bryant in 1884.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/At_New_York%2C_USA_2017_085.jpg/1280px-At_New_York%2C_USA_2017_085.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8fdf6725-fc9d-4e52-8918-6c7ef1ebb858",
+          "order": 0,
+          "title": "Bryant Park",
+          "caption": "Step onto the lawn or find one of the movable green chairs on the gravel paths.",
+          "latitude": 40.7536,
+          "longitude": -73.9832,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Bryant_Park.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 80,
+          "imageURL": null,
+          "transcriptText": "Thirty years ago, no one came here.\n\nLook at the lawn. You're in Bryant Park \u2014 a green rectangle of lawn and gravel paths tucked behind the New York Public Library. To your east, the back of the library \u2014 a Beaux-Arts limestone wall, broken by tall arched windows. To your west, the park stretches out toward Sixth Avenue. Movable green chairs scatter across the gravel. In summer, the lawn fills with people on lunch breaks. In winter, the lawn becomes an ice rink. About twelve million people pass through this park every year.\n\nIt hasn't always been this way. In the 1980s, this was one of the most notorious places in midtown Manhattan. Drug dealing, crime, and disrepair had hollowed it out. The hedges around the perimeter \u2014 designed to give the park a sense of privacy \u2014 became walls that hid what was happening inside. Office workers refused to walk through it.\n\nWhat happened next is one of the great urban turnarounds in American history. In 1988, a private group called the Bryant Park Corporation took over the park's management, applying ideas from the urbanist William H. Whyte about what makes public spaces work. They tore out the hedges to open sightlines. They added the movable chairs you're sitting on or stepping around, an idea borrowed from the Jardin du Luxembourg in Paris. They booked daily events. They made the park visible, safe, and full of people. By the time it reopened in 1992, the transformation was complete.\n\nThe park's history goes deeper than that. In the 1840s, this land was a potter's field \u2014 an unmarked burial ground for the city's poor. Then, in 1853, the Crystal Palace, New York's first World's Fair pavilion, was built on this site. It burned down in 1858. The square was renamed Bryant Park in 1884, after the poet and journalist William Cullen Bryant.\n\nFor now, find a chair. Sit a while. You're in one of the most visited public spaces in the country \u2014 and one of the most carefully designed."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7536,
+      "centroidLongitude": -73.9832,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": [
+        "bryant-park",
+        "midtown",
+        "william-h-whyte",
+        "public-space",
+        "1853",
+        "crystal-palace",
+        "1992",
+        "potter's-field",
+        "william-cullen-bryant"
+      ],
+      "priceUSD": 0
     }
   ]
 }
