@@ -5157,6 +5157,95 @@
         "sunset-park"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "3d117c47-6c6e-42b8-a0f9-9820796d85de",
+      "title": "African Burial Ground National Monument",
+      "shortDescription": "In 1991, construction workers digging for a federal office tower uncovered a colonial-era cemetery for ten to twenty thousand Africans \u2014 lost for two hundred years beneath Lower Manhattan.",
+      "longDescription": "The polished black granite memorial on Duane Street marks the location of the largest known colonial-era cemetery for Africans and African Americans in North America. Used for over a century beginning around 1697, the burial ground held the remains of enslaved and free Africans who were forbidden from burying their dead in the city's churchyards. By the late eighteenth century it was paved over and forgotten. When federal construction crews uncovered it in 1991, the project stopped; over four hundred individuals were excavated and studied at Howard University, then re-interred on site in 2003 in coffins of African mahogany. The memorial, designed by architect Rodney Leon, was dedicated in 2007. President Bush designated it a National Monument in 2006 \u2014 the only one in New York City.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Looking_up_in_African_Burial_Ground_National_Monument.jpg/1280px-Looking_up_in_African_Burial_Ground_National_Monument.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a02a2905-4c88-467a-99aa-d0bf777f8b2d",
+          "order": 0,
+          "title": "African Burial Ground National Monument",
+          "caption": "Stand at the memorial on Duane Street near Broadway, facing the polished black granite monument.",
+          "latitude": 40.7142,
+          "longitude": -74.0044,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/African_Burial_Ground_National_Monument.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": "In 1991, construction workers digging the foundation for a federal building uncovered a graveyard.\n\nThe memorial in front of you, on Duane Street near Broadway, is the African Burial Ground National Monument. It marks the location of what was, in the seventeenth and eighteenth centuries, the largest cemetery for Africans and African Americans in colonial-era New York. The polished black granite memorial was designed by the architect Rodney Leon and dedicated in 2007. A few steps behind it, beneath the modern federal office building that now occupies most of the site, the burial ground itself remains.\n\nThe cemetery was used for over a hundred years, beginning around 1697. Enslaved and free Africans living in the colonial city \u2014 Dutch at first, then English \u2014 were forbidden from burying their dead in the city's main churchyards. So they buried them here, on what was then a hillside outside the city walls. Estimates of how many people were buried in the ground range from ten thousand to twenty thousand. Most were Africans who had been transported to New York through the slave trade, or were the children and grandchildren of those Africans, born into a colonial society that had structured itself around their unfree labor.\n\nBy the late eighteenth century, the cemetery was paved over and forgotten. Buildings were constructed on the site. The graves were buried beneath layers of fill, then concrete, then more buildings. For two hundred years, the cemetery was lost.\n\nIn 1991, the federal government began excavating the site to build a thirty-four-story office tower at 290 Broadway. Within weeks, the construction crew began uncovering human remains. The work stopped. Archaeologists were brought in. Over the next several years, more than four hundred individual burials were carefully excavated and studied at Howard University. The remains were re-interred at the site in 2003, in seven coffins of African mahogany.\n\nThe office building was built. But a portion of the site was preserved as a memorial. In 2006, President Bush designated it a National Monument \u2014 the only one in New York City. The visitor center, beneath the memorial, is free and is one of the only places in New York that takes seriously the question of what the city was built on, and by whom."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7142,
+      "centroidLongitude": -74.0044,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": [
+        "national-monument",
+        "slavery",
+        "colonial",
+        "1697",
+        "lower-manhattan",
+        "memorial",
+        "rodney-leon",
+        "2007",
+        "archaeology"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "364c2287-c6c1-4850-bc9e-cce71fe29d2c",
+      "title": "Cooper Union Foundation Building",
+      "shortDescription": "The man who invented gelatin and the first American steam locomotive also founded a free school in the East Village \u2014 and the Great Hall inside has hosted Lincoln, the NAACP, and Obama.",
+      "longDescription": "The brownstone Italianate block at Cooper Square, completed 1859, is one of the oldest steel-frame buildings in the United States. Its founder, Peter Cooper \u2014 largely self-taught, having left school at ten \u2014 built the first American steam locomotive in 1830, patented the formulation that became Jell-O, and ran for president at eighty-five. He opened Cooper Union as a tuition-free school in 1859, admitting students regardless of race, gender, or background. The free tuition lasted over 150 years before a financial crisis forced the board to charge undergraduates in 2014; students occupied the building for two months in protest. In the Great Hall downstairs, Lincoln gave the speech that won him the Republican nomination; the NAACP was founded on the same stage in 1909.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/The_Cooper_Union%27s_Foundation_Building_-_North_Side_%2848072759802%29.jpg/1280px-The_Cooper_Union%27s_Foundation_Building_-_North_Side_%2848072759802%29.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2b449733-83a9-4ece-9d4e-4a168eba2238",
+          "order": 0,
+          "title": "Cooper Union Foundation Building",
+          "caption": "Stand on Cooper Square outside the brownstone Foundation Building, facing the main facade.",
+          "latitude": 40.7286,
+          "longitude": -73.9906,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Cooper_Union_Foundation_Building.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": "The man who invented gelatin and the first American steam locomotive also founded the school in front of you.\n\nYou're at Cooper Square in the East Village, outside the Cooper Union Foundation Building \u2014 a brownstone Italianate block, six stories tall, completed in 1859. It is one of the oldest steel-frame buildings in the United States, with iron beams that were experimental when the building was designed by the architect Frederick A. Petersen.\n\nThe founder was Peter Cooper, a self-taught industrialist. He built Tom Thumb, the first American steam locomotive, in 1830; he patented the formulation that became Jell-O; he manufactured iron and glue, financed the first transatlantic telegraph cable, and ran for President of the United States in 1876, at the age of eighty-five, on the Greenback Party ticket. Cooper himself had almost no formal education, having left school at the age of ten \u2014 and the experience shaped what he built here.\n\nCooper Union opened in 1859 as a free school. From its first year, it offered tuition-free education in art, architecture, and engineering to anyone admitted, regardless of race, gender, or background \u2014 a radical experiment in nineteenth-century higher education. The free tuition was maintained for more than a hundred and fifty years, until a financial crisis forced the trustees, in 2014, to begin charging undergraduate tuition for the first time. Student protests occupied this building for two months.\n\nThe Great Hall, in the basement of the building, has hosted some of the most consequential public speeches in American history. Abraham Lincoln gave his \"Right Makes Might\" speech here on February 27, 1860, attacking slavery in front of an audience of New York Republicans \u2014 a speech widely credited with winning him the Republican presidential nomination later that year. The NAACP was founded in this same hall in 1909, and Mark Twain, Susan B. Anthony, Frederick Douglass, and Barack Obama have all spoken from the same stage.\n\nThe Great Hall is occasionally open to the public for events; the lobby is open during business hours."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7286,
+      "centroidLongitude": -73.9906,
+      "city": "New York",
+      "primaryCategory": "architecture",
+      "tags": [
+        "cooper-union",
+        "east-village",
+        "peter-cooper",
+        "1859",
+        "free-school",
+        "lincoln",
+        "naacp",
+        "steel-frame",
+        "italianate",
+        "great-hall"
+      ],
+      "priceUSD": 0
     }
   ]
 }
