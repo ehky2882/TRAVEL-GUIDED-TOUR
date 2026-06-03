@@ -4522,6 +4522,433 @@
       "primaryCategory": "architecture",
       "tags": ["gilded age", "tiffany", "stanford white", "aesthetic movement", "upper east side", "military"],
       "priceUSD": 0
+    },
+    {
+      "id": "47ffc329-a973-4f8f-a642-d8050e0ae6d8",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Batalha Centro de Cinema",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Batalha_Centro_de_Cinema_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Batalha_Centro_de_Cinema_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Batalha_Centro_de_Cinema_3.webp"
+      ],
+      "tags": ["batalha centro de cinema", "porto", "art deco", "artur andrade", "1947", "censorship", "atelier 15"],
+      "stops": [
+        {
+          "id": "8e6238bd-96e3-4b28-b834-fbed38e602ee",
+          "order": 0,
+          "title": "Batalha Centro de Cinema",
+          "caption": "Praça da Batalha — Art Deco facade with the restored stainless-steel hammer on the lateral bas-relief.",
+          "latitude": 41.14518,
+          "longitude": -8.60703,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/batalha-centro-de-cinema.mp3",
+          "audioDurationSeconds": 167,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Batalha_Centro_de_Cinema_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 41.14518,
+      "centroidLongitude": -8.60703,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Inaugurated 3 June 1947 on Praça da Batalha — and on the same opening night the Estado Novo censors ordered the destruction of a mural in the foyer and the removal of a hammer and sickle from the facade. Artur Andrade's Art Deco design integrated art and sculpture as structural elements rather than applied decoration: the bas-relief panel on the lateral facade by sculptor Américo Braga depicts a labourer with a hammer and a farmer with a sickle. The hammer was destroyed by the censors because, together with the sickle, the regime read it as a Communist motif. The 2022 renovation restored it in stainless steel as a symbol of permanent return. Inside, the foyer murals by Júlio Pomar — one of the most significant Portuguese painters of the twentieth century — depicted festive scenes from Porto's São João celebrations. After Pomar was arrested for his political activities, the regime ordered the murals covered. They stayed under six to eight layers of paint for nearly eight decades, until the team working for Alexandre Alves Costa and Sérgio Fernandez of Atelier 15 began stripping the walls in 2019 and discovered they were still there. The €5m Porto City Council renovation reopened the Batalha in December 2022 with two projection rooms, a film installation space, and a programme of auteur cinema, archive screenings, and cine-concerts. One of the very few cultural venues in Portugal where the censorship history of the building is not merely commemorated but actively present in the spaces where you sit and watch films.",
+      "shortDescription": "Two and a half minutes on Praça da Batalha — the 1947 Art Deco cinema whose hammer-and-sickle facade was destroyed by the Estado Novo censors, restored eight decades later under six layers of paint.",
+      "totalDurationSeconds": 167,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "3ca244af-c9ae-41a6-b2d7-b00b248b6cd9",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Building in Senhora da Luz",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Building_in_Senhora_da_Luz_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Building_in_Senhora_da_Luz_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Building_in_Senhora_da_Luz_3.webp"
+      ],
+      "tags": ["souto de moura", "foz do douro", "porto", "2016", "concrete grid", "apartment building"],
+      "stops": [
+        {
+          "id": "a98a2e09-d578-447c-ab34-3e782d00a12e",
+          "order": 0,
+          "title": "Building in Senhora da Luz",
+          "caption": "Rua da Senhora da Luz, Foz do Douro — exposed-concrete grid on the east and west elevations.",
+          "latitude": 41.15120,
+          "longitude": -8.67710,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/building-in-senhora-da-luz.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Building_in_Senhora_da_Luz_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 41.15120,
+      "centroidLongitude": -8.67710,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Three families live here, one per floor, and if you look at the building carefully enough you can work out which direction each of them faces every morning. The site is in Foz do Douro, where the Douro estuary opens into the Atlantic and where Porto's older merchant class traditionally built their houses to face the water. Souto de Moura completed the building in 2016, following the neighbourhood's constructive logic without apology — narrow facade, deep plan, built to the party walls on either side — then introducing an exact and even grid of exposed concrete on the east and west elevations, repeating across both faces with the kind of precision that requires total control of the formwork, and reading in a street of render, tile, and stone as a declaration rather than a decoration. The plan is where the building's real argument lives: living rooms face west toward the Atlantic, so every sitting room shares the same view of afternoon light and water beyond the rooftops; bedrooms face east toward the quieter back street; and the kitchens and vertical circulation occupy the centre. Every room is placed according to what it needs to face rather than what is most convenient structurally — a distinction that sounds simple until you consider how rarely it is actually followed through. The same instinct visible at the Cantareira Building in Foz do Douro and the Burgo Tower on Boavista: Souto de Moura consistently organising his buildings around which direction matters and then putting the right room there, across every scale from a national office tower to three apartments and a rooftop terrace facing the estuary.",
+      "shortDescription": "Two and a half minutes in Foz do Douro at a Souto de Moura apartment building — three families, one per floor, organised by which direction each room needs to face.",
+      "totalDurationSeconds": 139,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "e25e5718-6f18-4f7c-8d5a-174662f1a953",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Mosteiro Santo Agostinho da Serra do Pilar",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mosteiro_Santo_Agostinho_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mosteiro_Santo_Agostinho_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mosteiro_Santo_Agostinho_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mosteiro_Santo_Agostinho_4.webp"
+      ],
+      "tags": ["mosteiro santo agostinho", "serra do pilar", "vila nova de gaia", "16th century", "unesco", "circular cloister", "wellington"],
+      "stops": [
+        {
+          "id": "79df57b0-524f-47d8-afcb-d0d419401665",
+          "order": 0,
+          "title": "Mosteiro Santo Agostinho da Serra do Pilar",
+          "caption": "Terrace overlooking the Douro and Porto's historic centre — where Wellington spotted the wine barges in 1809.",
+          "latitude": 41.13844,
+          "longitude": -8.60860,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mosteiro-santo-agostinho-serra-do-pilar.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mosteiro_Santo_Agostinho_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 41.13844,
+      "centroidLongitude": -8.60860,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "You're standing where Wellington stood on the morning of 12 May 1809, and the problem he was trying to solve from this exact vantage point was not abstract: Marshal Soult's French army held Porto across the river, had destroyed every bridge, and confiscated every boat on the south bank, leaving the Douro between them — tidal and deep and fast — with no obvious means of crossing. From this terrace, or one very close to it, Wellesley spotted four wine barges that local people had hidden upstream before the French could find them, and crossed in broad daylight — thirty soldiers per barge, fully visible to the city on the opposite bank — and the French didn't notice until it was too late. Porto was retaken in a matter of hours. The monastery behind you was started in 1538 and took 132 years to finish, partly for lack of money and partly because Portugal spent a significant portion of that period under Spanish rule. When it was finally completed in 1670 the result was something genuinely unusual: both the church and the cloister are circular, making it the only circular cloister of its kind in Portugal, with a colonnade of 36 Ionic columns running around the cloister perimeter and 72 tombstones paving the floor beneath them — the monks who spent their lives here and are buried in the ground you're walking on. The monastery has been in the hands of the Portuguese army since the Napoleonic Wars, and the Serra do Pilar Artillery Regiment is still garrisoned here. At sunset — which is the reason most people make the climb — face northwest: Porto's historic centre fills the entire view, the cathedral on the hill, the iron arch of the Dom Luís I Bridge below you, the Ribeira waterfront, and the Atlantic somewhere beyond all of it. UNESCO listed.",
+      "shortDescription": "Two and a half minutes on the terrace where Wellington spotted the wine barges in 1809 — Portugal's only circular cloister, 132 years in the making, with one of the great views over Porto.",
+      "totalDurationSeconds": 151,
+      "city": "Vila Nova de Gaia",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "8efa1abc-1274-475f-89ee-c506bb72f1ea",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Teatro Rivoli",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Teatro_Rivoli_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Teatro_Rivoli_2.webp"
+      ],
+      "tags": ["teatro rivoli", "porto", "art deco", "julio brito", "1923", "fantasporto", "praca dom joao i"],
+      "stops": [
+        {
+          "id": "88258b3f-40c9-41e1-a1b7-58c570576330",
+          "order": 0,
+          "title": "Teatro Rivoli",
+          "caption": "Praça Dom João I — Art Deco facade across the square from Porto City Hall.",
+          "latitude": 41.14774,
+          "longitude": -8.60894,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/teatro-rivoli.mp3",
+          "audioDurationSeconds": 167,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Teatro_Rivoli_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "centroidLatitude": 41.14774,
+      "centroidLongitude": -8.60894,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Three different things in one life on this square — a national theatre, a cinema, and a municipal arts centre — and the fact that it still looks like one coherent building is largely the achievement of a single architect given ten years' worth of decisions to make in the 1920s. The Rivoli opened in 1913 as a National Theatre. Changes in the urban centre forced a reconsideration of what the building should be, and in 1923 it was refurbished and adapted as a cinema while retaining a programme of opera, dance, theatre, and concerts, with architect and engineer Júlio Brito signing the project. The site sits on Praça Dom João I, directly across from Porto City Hall — one of the most formally composed public spaces in the city, looking at the seat of municipal power from across a well-maintained set of cobblestones. In 2015 the theatre became the Teatro Municipal do Porto, the city formally assuming permanent responsibility for the building it had been eyeing from across the square for over a century. The Art Deco redesign introduced geometric forms, clean lines, and ornamental details that set it apart from Porto's predominantly neoclassical and baroque cityscape; the concrete construction enabled a spacious auditorium and expansive foyer. The building's golden period came in the 1940s and 50s, when Maria Borges — from a prominent Porto banking and industrial family — took on the theatre as a personal project after her father's death and directed it for more than two decades. A major restoration led by Pedro Ramalho (1994–97) preserved the Art Deco character while updating acoustics, stage, and accessibility. Every February the theatre hosts Fantasporto, the annual Fantastic Cinema Festival running since 1981.",
+      "shortDescription": "Two and a half minutes on Praça Dom João I — the 1913 National Theatre that became a 1923 Art Deco cinema and is now Porto's municipal arts centre, looking at City Hall across the square.",
+      "totalDurationSeconds": 167,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "237b31b8-24d6-4edd-ad30-c7f89db56c82",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Trindade Metro Station",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Trindade_Metro_Station_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Trindade_Metro_Station_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Trindade_Metro_Station_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Trindade_Metro_Station_4.webp"
+      ],
+      "tags": ["trindade metro", "porto metro", "souto de moura", "infrastructure", "azulejo", "interchange"],
+      "stops": [
+        {
+          "id": "bb3e4324-d608-4e88-ad31-b96fa3f8a004",
+          "order": 0,
+          "title": "Trindade Metro Station",
+          "caption": "Surface pavilions in small white ceramic tiles — Porto Metro's busiest interchange.",
+          "latitude": 41.15185,
+          "longitude": -8.60971,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trindade-metro-station.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Trindade_Metro_Station_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 41.15185,
+      "centroidLongitude": -8.60971,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Souto de Moura's argument about cities — set out in his own project statement for the Porto Metro — is that cities don't change of their own free will or by political decree, but with the emergence of the systems they need to survive and develop, and he traced that argument through Porto's entire history: the Romans built their forum at the crossing of two routes, the Middle Ages replaced it with a cathedral, the Baroque era ran axes from the cathedral to the city gates, the nineteenth century brought the railway and turned some convents into train stations, and then came the metro. Trindade is where all six lines of Porto's metro network converge — the busiest interchange in the system and the one Souto de Moura designed himself, along with Casa da Música and Bolhão. The rest of the network was built by other architects working within a standardised set of components and details that he had drawn up as the system's chief architect — a framework so economical in its means that Álvaro Siza, who was involved in the Aliados corridor, described the entire Porto Metro project as having been worked out from just seven basic details across seventy-plus stations. The surface pavilions are clad in small white ceramic tiles — regular, consistent, the same vocabulary that appears at the Bolhão entrance several blocks away. The station itself is unusually flat and horizontal for a major interchange, designed to sit within the existing urban landscape rather than impose a new monument on the street above it: infrastructure that should belong to the city rather than interrupt it. On the wall inside there is an azulejo mural of 736 tiles, made by more than 1,500 participants and unveiled in 2025 to mark the fiftieth anniversary of the Carnation Revolution — traditional material, recent making, civic occasion. Porto has been tiling its walls since the fifteenth century, so the metro was simply the latest surface available.",
+      "shortDescription": "Two and a half minutes at Porto Metro's busiest interchange — Souto de Moura's white-tile surface pavilions and a 736-tile azulejo mural for the Carnation Revolution's fiftieth.",
+      "totalDurationSeconds": 146,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "1d6d5a22-19bf-45d3-87bb-ae0e7d5f1496",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Vodafone Headquarters",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Vodafone_Headquarters_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Vodafone_Headquarters_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Vodafone_Headquarters_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Vodafone_Headquarters_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Vodafone_Headquarters_5.webp"
+      ],
+      "tags": ["vodafone headquarters", "boavista", "barbosa e guimaraes", "2009", "faceted concrete", "corporate"],
+      "stops": [
+        {
+          "id": "10819e4a-bad4-4370-81c0-ebb83f73ff47",
+          "order": 0,
+          "title": "Vodafone Headquarters",
+          "caption": "Avenida da Boavista — faceted concrete shell carrying its own load with only two stairwells and three central pillars.",
+          "latitude": 41.16277,
+          "longitude": -8.65845,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vodafone-headquarters.mp3",
+          "audioDurationSeconds": 158,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Vodafone_Headquarters_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 41.16277,
+      "centroidLongitude": -8.65845,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "In 2006 Vodafone ran a competition inviting fifty Portuguese architectural firms to design a building that embodied the company's slogan — Life in Motion — and Barbosa & Guimarães won it with a proposal that, depending on who you ask, looks like a glacier, a crumpled piece of paper, or, in the words of at least one architectural critic who visited the interior, Planet Krypton. The surface is faceted — not a smooth wall but a series of flat angular planes meeting at irregular angles, punctured by triangular windows that sit in the concrete at different tilts. The critical thing to understand about those facets is that they are not a cladding system applied to a conventional structural frame beneath them, but the structure itself: the faceted concrete shell carries the load, supported only by two stairwells and three central pillars, which leaves the office floors inside largely column-free and open in a way a conventional frame building simply wouldn't be. The height of the headquarters was deliberately calibrated to match its neighbours, which was a conscious design decision rather than a planning concession — Barbosa's own stated position: \"This is not a UFO, this is a building that respects the context and the city.\" In the south garden there's a timber frame embedded in the grass following the same angular geometry as the facade — the building's formal language pressed into the ground as though the structure has leaked into the landscape — and inside, the ground-floor corridor has fissures cut into the ceiling through which natural light enters in diagonal lines. The geometry continues inward and downward through every layer of the design rather than stopping at the outer skin. €13.4m, 240 workstations across five floors above ground, three floors of parking and facilities below, on a 1,970m² plot on one of Porto's most architecturally contested avenues.",
+      "shortDescription": "Two and a half minutes on Boavista at Barbosa & Guimarães' 2009 Vodafone HQ — a faceted concrete shell that carries its own load, no structural frame inside, only two stairwells and three pillars.",
+      "totalDurationSeconds": 158,
+      "city": "Porto",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "4ca3f9e0-e597-480b-8ec2-a24902b8d76c",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Municipal Library of Viana do Castelo",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Viana_do_Castelo_Library_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Viana_do_Castelo_Library_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Viana_do_Castelo_Library_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Viana_do_Castelo_Library_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Viana_do_Castelo_Library_5.webp"
+      ],
+      "tags": ["municipal library", "viana do castelo", "alvaro siza", "2008", "fernando tavora", "praca da liberdade", "lima river"],
+      "stops": [
+        {
+          "id": "14cd0c4a-374e-4d1e-b294-e6604648a242",
+          "order": 0,
+          "title": "Municipal Library of Viana do Castelo",
+          "caption": "Riverside promenade — 45×45m elevated white-concrete square with a 20×20m void cut through the upper volume.",
+          "latitude": 41.69159,
+          "longitude": -8.82679,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/municipal-library-viana-do-castelo.mp3",
+          "audioDurationSeconds": 158,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Viana_do_Castelo_Library_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "primaryCategory": "literature",
+      "centroidLatitude": 41.69159,
+      "centroidLongitude": -8.82679,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Fernando Távora designed this waterfront, Álvaro Siza designed the library, and Eduardo Souto de Moura designed the building next to it — three architects from the same lineage on the same stretch of the Lima River, each working within a master plan Távora had laid out and then handed to his former students to complete. The relationship matters more than it might initially seem: Távora was Siza's teacher and Siza was Souto de Moura's. At the centre of Távora's plan, between the buildings, there is a square and a monument to the Carnation Revolution of 25 April 1974, and the square is called Liberdade. From the riverside promenade the library reads as a square: 45 metres by 45 metres, elevated, white concrete, with a void of 20×20m cut cleanly through the upper volume so the building is not a solid block but a frame, lifted above the ground, with the Lima River visible through the hole at its centre and the hills of Viana do Castelo beyond it. The void is structural, not decorative: the reading rooms are on the upper floor, cantilevered over the central opening and carried by prestressed concrete with draped steel tendons — the combination giving Siza the clear span he needed across the opening without any columns interrupting the view through the building from the promenade. From the reading room the Lima River is at eye level and the hills are beyond it, the white concrete cast and left visible rather than covered with a finish bouncing the river light across the room through the day. Less a container for books and more a room specifically positioned to receive a particular quality of light from a particular direction — which is what the best libraries tend to be. Completed 2008.",
+      "shortDescription": "Two and a half minutes on the Viana do Castelo waterfront at Siza's 2008 municipal library — a 45m white-concrete square lifted above the ground, with a 20m void cut through it framing the Lima River.",
+      "totalDurationSeconds": 158,
+      "city": "Viana do Castelo",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "203d1cba-6ec2-489f-bc0a-734f10038403",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "title": "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Biblioteca_Publica_Angra_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Biblioteca_Publica_Angra_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Biblioteca_Publica_Angra_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Biblioteca_Publica_Angra_4.webp"
+      ],
+      "tags": ["biblioteca publica", "angra do heroismo", "azores", "terceira", "ines lobo", "mies van der rohe nominee", "archive"],
+      "stops": [
+        {
+          "id": "f483e861-67b9-4ac8-a991-e3ad59ace563",
+          "order": 0,
+          "title": "Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro",
+          "caption": "South plaza facing the UNESCO city and the bay — U-shaped lower volume framing the open fourth side.",
+          "latitude": 38.65541,
+          "longitude": -27.21538,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/biblioteca-publica-angra.mp3",
+          "audioDurationSeconds": 167,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Biblioteca_Publica_Angra_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "primaryCategory": "literature",
+      "centroidLatitude": 38.65541,
+      "centroidLongitude": -27.21538,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Most public buildings are designed around themselves — the architect decides what the building should be, and the open spaces outside it are whatever's left over. The approach Inês Lobo took here was to design the open spaces first and then build the structure around them, which produces a building whose most distinctive quality is a kind of deliberate generosity toward everything outside it. From the southern edge of the plaza, looking back at the building, a U-shaped lower volume frames the space on three sides and leaves the fourth — facing you, facing the water — completely open, so that the view through the plaza from the building's own interior runs unobstructed to the Atlantic horizon. Angra do Heroísmo has been a UNESCO World Heritage city since 1983: from this plaza you're looking directly at the reason — the layered historic fabric of a city that was, for most of the Age of Exploration, one of the most strategically important stops in the entire Atlantic. Above the U-shaped lower volume a second, broader body extends northward to meet the garden wall of the Silveira e Paulo palace next door, so the building doesn't end at its own edge but continues the green of the palace garden over its own roof, threading the new fabric into the historic city rather than landing beside it. The reading rooms upstairs open south over the city toward the bay; the archive — the most extensive of the three archives in the Azores, holding records for Terceira, São Jorge, and Graciosa — is held in the building's core, away from direct light. The library serves the people who come today, and the archive serves the centuries that came before. Nominated for the European Union Prize for Contemporary Architecture (Mies van der Rohe Award) in 2017. Angra received its first public library only in 1860; the archive, established 1948 from the records of dissolved island monasteries and convents, spent the better part of a century waiting for a building actually designed to hold it with the care the records deserve.",
+      "shortDescription": "Two and a half minutes at the Azores' largest public archive — Inês Lobo's library above the bay in UNESCO Angra do Heroísmo, designed by laying out the open spaces first.",
+      "totalDurationSeconds": 167,
+      "city": "Angra do Heroísmo",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "a17dbd1d-3491-4062-a62e-9b0059c678f7",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "title": "Adega Mayor",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Adega_Mayor_hero.jpg",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Adega_Mayor_2.jpg",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Adega_Mayor_3.jpg"
+      ],
+      "tags": ["adega mayor", "alentejo", "campo maior", "alvaro siza", "2006", "winery", "nabeiro"],
+      "stops": [
+        {
+          "id": "0cee4479-2a03-4aff-8512-2c17a3406135",
+          "order": 0,
+          "title": "Adega Mayor",
+          "caption": "Approaching from the south — 120m white facade, nine metres high, almost entirely without windows on the sides.",
+          "latitude": 39.04975,
+          "longitude": -7.09437,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/adega-mayor.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Adega_Mayor_hero.jpg",
+          "transcriptText": null
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 39.04975,
+      "centroidLongitude": -7.09437,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "When Siza visited the site, the most prominent feature was a hollow in the ground where building rubble had been dumped for years — a scar in the Alentejo plain that most architects would have worked around. He chose to build into it instead, so the walls of the winery rise from that exact hollow, and the white rectangle on the hillside is anchored, at its base, to what was originally the ugliest part of the plot. The long facade stretches 120 metres wide, nine metres high, almost entirely without windows on the sides, with cork oaks to the left, vineyards behind, and the Alentejo plain running out to the horizon on every side. The white surface isn't simply an aesthetic choice: the summer sun in Campo Maior is serious enough — temperatures regularly climbing into the high thirties — that a white exterior reflects rather than absorbs the heat, which keeps the interior at the stable temperature the wine needs to age properly. The building looks the way it does because of what's happening inside it in the dark, right now. The roof terrace tasting room opens onto a small lake, a stretch of lawn, and a marble panel Siza designed himself: three overlapping silhouettes carved into the stone — a coffee cup, a wine glass, and a bottle. The Nabeiro family who commissioned the building built their fortune on coffee (Delta, Portugal's largest coffee brand, belongs to them), and the winery represents a second chapter of that same story told in a different drink. Campo Maior sits on the Portuguese-Spanish border, on a stretch of land contested and fought over across six centuries. Completed 2006 — one of the commissions Siza described as most rewarding; there aren't many places where a building gets to sit in landscape quite like this.",
+      "shortDescription": "Two and a quarter minutes at Álvaro Siza's 2006 Alentejo winery for the Nabeiro coffee family — 120m of white wall on the Spanish border plain, built into a rubble-filled hollow.",
+      "totalDurationSeconds": 135,
+      "city": "Campo Maior",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "fa6c4699-ef21-4eb2-879c-d51b03bf830d",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "title": "Óbidos",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Obidos_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Obidos_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Obidos_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Obidos_4.webp"
+      ],
+      "tags": ["obidos", "walled town", "vila das rainhas", "queen isabel", "medieval", "azulejo", "central portugal"],
+      "stops": [
+        {
+          "id": "bb007ec1-15ca-4e39-a910-19af7eb16798",
+          "order": 0,
+          "title": "Óbidos",
+          "caption": "Foot of the castle, facing the keep — walls running 1,565m around the town's perimeter, 13m high at the highest point.",
+          "latitude": 39.35931,
+          "longitude": -9.15780,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/obidos.mp3",
+          "audioDurationSeconds": 155,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Obidos_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 39.35931,
+      "centroidLongitude": -9.15780,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The sea used to reach these walls, which is the kind of fact that takes a moment to absorb when you're standing on a hill forty kilometres from the nearest beach. Óbidos was a working port — ships docked here, goods were loaded, the town had a reason to exist beyond its own beauty — but the river silted up in the sixteenth century, the harbour disappeared, and what was left was a walled town on a hill with no particular economic rationale except that it had already been there for several hundred years, which tends to be sufficient. From the foot of the castle, facing the keep, the walls run away on both sides for a total of 1,565 metres around the town's perimeter — 13m at the highest point, no railings, which is either exhilarating or alarming depending entirely on your relationship with heights. The keep is not a building from a single moment in history but the visible result of a continuous centuries-long project: Moorish fortification, Portuguese reconquest in 1148, successive royal expansions, serious damage in the 1755 earthquake, and twentieth-century restoration have all left their mark on the same structure. The azulejo panels lining the interior of the main gate arch are among the finest eighteenth-century tile work in the region, telling the story of the town's foundation with the kind of narrative confidence that suggests the people who commissioned them were not troubled by historical ambiguity. In 1281 King Dinis gave the entire walled town to his wife Queen Isabel as a wedding present — not a painting or a piece of jewellery but a fortified medieval town, complete with its inhabitants — establishing a tradition that lasted for several centuries in which the kings of Portugal offered Óbidos to their queens as part of the royal dowry. That is how the town came to be called Vila das Rainhas, the Town of Queens, and how it came to be so well maintained: queens turned out to be more reliable patrons of civic infrastructure than most. The castle itself is now a four-star hotel.",
+      "shortDescription": "Two and a half minutes inside Portugal's Town of Queens — 1,565 metres of medieval walls, the keep that successive royal expansions and the 1755 earthquake reshaped, and the azulejo panels at the gate.",
+      "totalDurationSeconds": 155,
+      "city": "Óbidos",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "f52baac3-7f4d-43c2-b516-4b703451f15a",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "title": "Capela do Monte",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Capela_do_Monte_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Capela_do_Monte_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Capela_do_Monte_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Capela_do_Monte_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Capela_do_Monte_5.webp"
+      ],
+      "tags": ["capela do monte", "algarve", "alvaro siza", "monte da charneca", "viuva lamego", "modern chapel", "lagos"],
+      "stops": [
+        {
+          "id": "5cd0520a-25d7-474b-a5e3-36a876d8c47a",
+          "order": 0,
+          "title": "Capela do Monte",
+          "caption": "Hilltop above Monte da Charneca — 10×6 metres of beige render and white trim, low and horizontal against the Algarve sky.",
+          "latitude": 37.13003,
+          "longitude": -8.76563,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/capela-do-monte.mp3",
+          "audioDurationSeconds": 173,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Capela_do_Monte_hero.webp",
+          "transcriptText": null
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 37.13003,
+      "centroidLongitude": -8.76563,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The path you walked to get here was the first thing Siza designed, and if it felt like more than a practical route up a hill, that's because it was intended to be. The chapel was commissioned in 2016 by a Swiss-American couple who have been living in this part of the Algarve since the 1980s, built on the highest point of their property on a hill above the hamlet of Monte da Charneca — a former farming settlement that had been abandoned, like most of the small agricultural villages in this region, and which the couple have been slowly rebuilding. Siza called it \"a pure architectural project\" and described his pleasure at being asked to design in the Algarve, where he had never before completed a building. When he was eighty years old he came back to restore it, making replicas of the original furniture and sourcing replacement tiles whose profile matched the originals because the originals had gone out of production, and because he was not interested in anything that wasn't exactly right. The form is small and deliberate — 10×6 metres, roughly the footprint of a large living room — exterior beige render, white trim, low and horizontal against the Algarve sky, no steeple or bell tower visible from outside, the building making no claim on the landscape beyond its own quiet presence. That restraint is doing a considerable amount of work: the Algarve is an assertive landscape, particularly in summer, and a building that arrives on a hilltop and refuses to compete with it is making a more specific decision than it might initially appear. Inside: no electricity, no heating, no running water — walls of insulated brick, limestone floor, the geometry creating the natural ventilation that keeps it cool in summer, the thermal mass holding warmth in winter. The cross, altar, bench, and chairs were all designed by Siza and made by a carpentry firm in Porto; the tile murals depicting scenes from the life of Jesus are his own drawings realised in blue and white by Viúva Lamego. Non-denominational; Siza is not a religious architect, but came here because he was asked, because the site was beautiful, and because someone was willing to commission something complete and small and entirely itself.",
+      "shortDescription": "Just under three minutes on a hilltop above Monte da Charneca — Siza's only Algarve building, a 10×6m non-denominational chapel with no electricity, heating, or water.",
+      "totalDurationSeconds": 173,
+      "city": "Lagos",
+      "walkingDistanceMeters": null
     }
   ]
 }
