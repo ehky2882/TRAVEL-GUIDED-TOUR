@@ -40,6 +40,7 @@ struct Maker: Codable {
     let id: UUID
     let displayName: String
     let avatarURL: String?
+    let avatarEmoji: String?
     let bio: String
     let websiteURL: String?
 }

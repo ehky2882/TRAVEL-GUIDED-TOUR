@@ -203,13 +203,24 @@ struct MiniPlayerBar: View {
         }
     }
 
-    /// Circular avatar of the tour's maker. Falls back to the Atlas
-    /// Studio app-icon avatar when the maker has no remote avatar —
-    /// mirrors `MakerView`.
+    /// Circular avatar of the tour's maker. Resolution order:
+    ///   1. `maker.avatarEmoji` — a single glyph rendered inside a
+    ///      muted circular plate (the Atlas Studio NYC red apple).
+    ///   2. `maker.avatarURL` — async-loaded remote image.
+    ///   3. The bundled `AtlasStudioAvatar` asset, as the last-resort
+    ///      brand fallback.
+    /// `MakerView`'s avatar uses the same resolution order at a larger
+    /// frame so the two surfaces stay in sync.
     private var authorIcon: some View {
         Group {
-            if let urlString = maker?.avatarURL,
-               let url = URL(string: urlString) {
+            if let emoji = maker?.avatarEmoji, !emoji.isEmpty {
+                ZStack {
+                    Circle().fill(AtlasColors.placeholderWarm)
+                    Text(emoji)
+                        .font(.system(size: Self.iconSize * 0.6))
+                }
+            } else if let urlString = maker?.avatarURL,
+                      let url = URL(string: urlString) {
                 AsyncImage(url: url) { phase in
                     switch phase {
                     case .success(let image):

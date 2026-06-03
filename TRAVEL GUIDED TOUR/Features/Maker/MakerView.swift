@@ -67,8 +67,18 @@ struct MakerView: View {
 
     private var avatar: some View {
         Group {
-            if let urlString = maker.avatarURL,
-               let url = URL(string: urlString) {
+            if let emoji = maker.avatarEmoji, !emoji.isEmpty {
+                // Single-glyph brand mark (e.g. the Atlas Studio NYC
+                // red apple) rendered inside a muted circular plate.
+                // MiniPlayerBar.authorIcon uses the same resolution
+                // order at a smaller frame.
+                ZStack {
+                    Circle().fill(AtlasColors.placeholderWarm)
+                    Text(emoji)
+                        .font(.system(size: avatarSize * 0.6))
+                }
+            } else if let urlString = maker.avatarURL,
+                      let url = URL(string: urlString) {
                 AsyncImage(url: url) { phase in
                     switch phase {
                     case .success(let image):
@@ -78,8 +88,8 @@ struct MakerView: View {
                     }
                 }
             } else {
-                // No remote avatar — use the Atlas Studio app icon as
-                // the profile image (the only V1 maker is Atlas Studio).
+                // No remote avatar or emoji — fall back to the bundled
+                // Atlas Studio brand asset.
                 Image("AtlasStudioAvatar")
                     .resizable()
                     .scaledToFill()
