@@ -30,7 +30,26 @@ These happen **automatically, without the owner asking**.
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
 
-## Current State (2026-06-02)
+## Current State (2026-06-03)
+
+### 18 NYC tours + CI enum fixes (session 18 — web/PM)
+
+Web/PM session. 18 new NYC audio tours added across 10 commits (catalog 113 → 131, NYC 73 → 96). Two validator bugs that had been silently breaking CI since tour 114 were found and fixed:
+
+- **`triggerMode: "geofence"` → `"geofenced"`** — 23 stops across tours 114–131 ([PR #125](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/125))
+- **`kind: "multi"` → `"multiStop"`** — Fifth Avenue Walk tour 121 ([PR #126](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/126))
+
+Valid JSON enum raw values (memorize these — Swift model is strict):
+- `triggerMode`: `"manual"` or `"geofenced"` (NOT `"geofence"`)
+- `kind`: `"single"` or `"multiStop"` (NOT `"multi"`)
+- `primaryCategory`: `"history"` | `"architecture"` | `"visualArt"` | `"musicAndPerformance"` | `"literature"` | `"foodAndDrink"` | `"natureAndParks"` | `"hiddenGems"` | `"culturalHeritage"` | `"sacredSites"`
+
+Tours added this session (all Atlas Studio NYC, all single-stop unless noted):
+Four Freedoms Park (132s) · Green-Wood Cemetery (149s) · African Burial Ground (138s) · Cooper Union (139s) · Tompkins Square Park (132s) · MoMA (118s) · Bryant Park (122s) · **Fifth Avenue Walk** (multi-stop, 6 stops + intro, ~9m) · Federal Hall (120s) · Columbus Park Chinatown (121s) · Schomburg Center (136s) · Coney Island (130s) · Eldridge Street Synagogue (121s) · Grand Army Plaza Brooklyn (119s) · Grand Concourse (137s) · Strivers' Row (135s) · IAC Building (121s) · The Strand Bookstore (125s).
+
+**NYC goal: 96 / 100 — 4 tours to go.** Owner will record and upload; top candidates: United Nations, Jefferson Market Library, Tweed Courthouse, Delmonico's (see HANDOFF-260603.md for full list of 8).
+
+**Latest TestFlight build: 1.0 (25)** — unchanged from session 17.
 
 ### Home polish batch + cluster smoothness + TestFlight 1.0 (25) (session 17)
 
@@ -225,8 +244,8 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **113 tours, 3 makers** in `Resources/Tours.json` (73 NYC-area + 30 Atlas Studio Porto + 5 Atlas Studio Lisbon + others); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **58 single-stop + 1 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, geofenced exterior walk) — added 2026-05-26, unblocks M-qa items 6 + 7
+- **131 tours, 3 makers** in `Resources/Tours.json` (96 NYC-area + 30 Atlas Studio Porto + 5 Atlas Studio Lisbon); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **129 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s) and "Fifth Avenue Walk" (6 stops + intro, ~9m, 82nd → 59th St along 5th Ave)
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
