@@ -5494,6 +5494,94 @@
         "1910s"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "109ccfc9-3c6d-4ec7-bc70-09ed412b9ff3",
+      "title": "Federal Hall",
+      "shortDescription": "The first United States Congress met here, George Washington took the oath of office on this spot, and the Bill of Rights was drafted in this building \u2014 then it was demolished.",
+      "longDescription": "The Greek Revival marble temple at 26 Wall Street marks the site of one of the most consequential buildings in American history. The original Federal Hall, a smaller redbrick structure on this lot, served successively as New York's City Hall, the U.S. Capitol, and the site of Washington's first inauguration on April 30, 1789. The First Congress, meeting in the chamber below, was simultaneously drafting the Bill of Rights. New York was the nation's first capital for a year and a half before the government moved to Philadelphia in 1790. The original building was demolished in 1812; the current Greek Revival structure by Ithiel Town and Alexander Jackson Davis was completed in 1842 as a Custom House. John Quincy Adams Ward's bronze Washington, installed in 1883, stands approximately where the inaugural balcony once was.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/MMDA-Photos_-_2019-06-01_-_Federal_Hall.jpg/1280px-MMDA-Photos_-_2019-06-01_-_Federal_Hall.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dd15b313-df4b-4cff-b029-f2333c417542",
+          "order": 0,
+          "title": "Federal Hall",
+          "caption": "Stand on Wall Street facing the colonnaded portico and the bronze Washington statue on the front steps.",
+          "latitude": 40.7074,
+          "longitude": -74.0104,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/federal_hall.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": "The first United States Congress met on the spot where you're standing.\n\nYou're at 26 Wall Street, opposite the New York Stock Exchange, looking at Federal Hall \u2014 a Greek Revival temple in white marble, with a colonnaded portico and a bronze statue of George Washington on the front steps. The building is a federal monument operated by the National Park Service, and it commemorates one of the foundational sites of the United States government. The building itself, completed in 1842, is not the original \u2014 the original, a smaller redbrick building on the same lot, was demolished in 1812.\n\nOn the morning of April 30, 1789, George Washington stood on the second-floor balcony of that original building and took the oath of office as the first President of the United States. The First Congress, sitting in the chamber below, had already begun work on what would become the Bill of Rights. The original Federal Hall had also served, in earlier lives, as New York's City Hall and then as the U.S. Capitol \u2014 for the year and a half, between 1789 and 1790, that New York was the nation's first capital.\n\nThe federal government moved to Philadelphia in late 1790, and the original building was demolished within two decades. The current Greek Revival structure, designed by the architects Ithiel Town and Alexander Jackson Davis, was completed in 1842 as a U.S. Custom House, later used as a federal sub-treasury, and converted to a national memorial in 1939.\n\nThe bronze statue of Washington on the steps, by the sculptor John Quincy Adams Ward, was installed in 1883 \u2014 placed approximately where the original inaugural balcony stood. The interior of the memorial is open free of charge to the public during business hours, with a small museum about the role of this site in the founding of the federal government."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7074,
+      "centroidLongitude": -74.0104,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": [
+        "federal-hall",
+        "wall-street",
+        "washington",
+        "1789",
+        "inauguration",
+        "bill-of-rights",
+        "first-congress",
+        "greek-revival",
+        "financial-district"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6877114e-0d89-4271-a16b-dbabb95f42ae",
+      "title": "Columbus Park, Chinatown",
+      "shortDescription": "This park was built on the site of the most notorious slum in nineteenth-century America \u2014 and became the central living room of New York's Chinatown.",
+      "longDescription": "The small triangular park at the heart of Chinatown \u2014 bounded by Mulberry, Bayard, Mosco, and Worth Streets \u2014 was built on the cleared remains of the Five Points slum, the half-square-mile district of tenements, brothels, and gang violence that Charles Dickens visited in 1842 and described as all that is loathsome, drooping, and decayed. Jacob Riis's 1890 book 'How the Other Half Lives' documented conditions here and triggered the city's clearance of the Mulberry Bend tenements. The park, designed by Calvert Vaux (co-designer of Central Park), opened in 1897, two years after Vaux's death. Originally called Mulberry Bend Park, renamed Columbus Park in 1911 for the Italian community then living nearby. By the mid-twentieth century Chinatown had grown around it, and the park became what it is today: older men playing mahjong and Chinese chess, women practicing tai chi, musicians playing Cantonese opera.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Singers_and_musicians_in_Columbus_Park_%2800246%29.jpg/1280px-Singers_and_musicians_in_Columbus_Park_%2800246%29.jpg",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "21203435-aa4e-4524-b029-ebbb2c9e5a5f",
+          "order": 0,
+          "title": "Columbus Park, Chinatown",
+          "caption": "Enter Columbus Park from the Mulberry Street side and find a bench near the center of the park.",
+          "latitude": 40.7153,
+          "longitude": -74.0001,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chinatown_columbus_park.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": "This park was built on the site of the most notorious slum in nineteenth-century America.\n\nYou're in Columbus Park, the small triangular green space at the heart of Chinatown, bounded by Mulberry, Bayard, Mosco, and Worth Streets. On any clear afternoon, the park is full of Chinese New Yorkers \u2014 older men playing mahjong and Chinese chess, women practicing tai chi, families on the benches, a small group of musicians playing traditional Cantonese opera at the southern end. It functions as the Chinatown community's central living room.\n\nThe site has a different history. Until the 1890s, the land you're standing on was the center of the Five Points slum \u2014 a half-square-mile district of tenements, brothels, gambling houses, and saloons that had become, by the middle of the nineteenth century, the most notorious urban slum in the United States. Charles Dickens visited in 1842 and described it in his American Notes as \"all that is loathsome, drooping, and decayed.\" Cholera epidemics swept through repeatedly, and gang violence between Irish, Italian, and other immigrant groups was endemic.\n\nIn 1890, the journalist Jacob Riis published \"How the Other Half Lives,\" a book of photographs and reporting that documented the living conditions of Five Points and other Lower Manhattan slums. The book was a public sensation, and within a few years the city began clearing the worst of the Mulberry Bend tenements. The land was redeveloped as a park, designed by the landscape architect Calvert Vaux \u2014 who, with Frederick Law Olmsted, had designed Central Park three decades earlier.\n\nVaux died in 1895, two years before his park opened. The park was originally called Mulberry Bend Park, then renamed Columbus Park in 1911 in honor of the surrounding Italian community. The Italian community has long since left for other neighborhoods, but the park has remained \u2014 and by accident of geography and timing, it became the central public space of New York's Chinatown as that community grew through the twentieth century.\n\nThe pavilion at the north end, with its pagoda-style roof, is a more recent addition. The southern lawn, where you'll usually find the loudest of the musicians, is the heart of the park."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7153,
+      "centroidLongitude": -74.0001,
+      "city": "New York",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "chinatown",
+        "five-points",
+        "lower-manhattan",
+        "calvert-vaux",
+        "jacob-riis",
+        "1897",
+        "chinese-community",
+        "mulberry-bend",
+        "history"
+      ],
+      "priceUSD": 0
     }
   ]
 }
