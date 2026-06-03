@@ -12,24 +12,90 @@ future sessions don't rediscover the gauntlet.
 
 ---
 
-## TL;DR — per-release upload (the recurring ~10 min)
+## TL;DR — per-release upload (the recurring ~3 min owner action)
 
 Assumes first-time setup is done (it is, on 2026-05-19).
 
-1. Open Xcode at `~/Desktop/"TRAVEL GUIDED TOUR"/TRAVEL GUIDED TOUR.xcodeproj`.
-2. **Bump build number** (or version, see § "Versioning" below) — easiest:
-   - Project navigator → main app target → **General** tab → "Build" field, type `2` (or whatever the next integer is). Keep "Marketing Version" `1.0` for now.
-3. **Set destination to "Any iOS Device (arm64)"** in the top toolbar.
-   Archive doesn't work against simulators.
-4. **Product → Archive**. Takes 2–5 min. Organizer opens automatically.
-5. In Organizer, select the new archive → **Distribute App** → **App Store Connect** → **Upload** → keep defaults on every screen → final **Upload**.
+**Claude does automatically (no owner action needed):**
+1. Bumps `CURRENT_PROJECT_VERSION` in `project.pbxproj` and pushes to `main`.
+2. Runs `xcodebuild archive` to produce the `.xcarchive` (2–5 min, fully scripted).
+
+**Owner does (2–3 min in Xcode Organizer):**
+3. Open Xcode — it will already be open after Claude's archive run.
+4. **Window → Organizer** (or it opens automatically after archive).
+5. Select the new archive → **Distribute App** → **App Store Connect** → **Upload** → keep defaults on every screen → final **Upload**.
 6. Wait 1–3 min for the upload to finish ("Upload Successful" alert).
 7. Wait **15–30 min** for Apple to process the build. You'll get an email titled "Your build has finished processing."
 8. App Store Connect → your app → **TestFlight** tab → click the new build → optionally paste **"What to Test"** notes.
-9. New build auto-distributes to whoever is already in your Internal Testing group, and to External Testing groups it's been added to (see § "Inviting external testers" if this is the first external build). On the iPhone, the **TestFlight app** shows the new version with an Install button.
+9. New build auto-distributes to whoever is already in your Internal Testing group. On the iPhone, the **TestFlight app** shows the new version with an Install button.
 
-That's it. No phone plugging, no certificate dance, no Developer Mode
-toggling — those are all already set up.
+That's it. No phone plugging, no certificate dance — those are already set up.
+
+### Full automation (future — when ready)
+
+Once an App Store Connect API key or Apple ID app-specific password is set up,
+Claude can run the Organizer step too via `xcrun altool --upload-app`. That
+reduces owner action to zero. See § "Full upload automation" below to enable.
+
+---
+
+## Archive command (Claude runs this)
+
+```bash
+cd ~/Desktop/"TRAVEL GUIDED TOUR"
+
+xcodebuild archive \
+  -project "TRAVEL GUIDED TOUR.xcodeproj" \
+  -scheme "TRAVEL GUIDED TOUR" \
+  -configuration Release \
+  -destination "generic/platform=iOS" \
+  -archivePath /tmp/Atlas-$(date +%Y%m%d-%H%M).xcarchive \
+  | xcpretty 2>/dev/null || true
+
+open /tmp   # Organizer also opens automatically; either way, the archive lands there
+```
+
+The archive uses Automatic Signing with the Apple Distribution certificate already
+in the Keychain — no flags needed. After it completes, Xcode Organizer opens the
+archive ready for Distribute App.
+
+---
+
+## Full upload automation (set up when ready)
+
+When you want to skip the Organizer step entirely, do this one-time setup:
+
+**Option A — App-Specific Password (5 min)**
+
+1. Go to [appleid.apple.com](https://appleid.apple.com) → Sign-In and Security →
+   App-Specific Passwords → Generate.
+2. Name it "Atlas Xcode Upload". Copy the password (shown once).
+3. Tell Claude the password. Claude stores it in Keychain:
+   ```bash
+   xcrun altool --store-password-in-keychain-item "ATLAS_ASC_PASSWORD" \
+     -u "YOUR_APPLE_ID_EMAIL" -p "THE_APP_SPECIFIC_PASSWORD"
+   ```
+4. From then on, the upload is fully automated after archive:
+   ```bash
+   xcrun altool --upload-app \
+     -f /tmp/Atlas-YYYYMMDD-HHMM.xcarchive/Products/Applications/*.ipa \
+     --type ios \
+     -u "YOUR_APPLE_ID_EMAIL" \
+     -p "@keychain:ATLAS_ASC_PASSWORD"
+   ```
+
+**Option B — App Store Connect API Key (10 min, preferred for CI)**
+
+1. App Store Connect → Users & Access → Integrations → App Store Connect API.
+2. Generate a key with **App Manager** role. Download the `.p8` file.
+3. Note the **Key ID** (10-char string) and **Issuer ID** (UUID).
+4. Place the `.p8` file at `~/.appstoreconnect/private_keys/AuthKey_KEYID.p8`.
+5. Upload command:
+   ```bash
+   xcrun altool --upload-app \
+     -f /path/to/app.ipa --type ios \
+     --apiKey YOUR_KEY_ID --apiIssuer YOUR_ISSUER_ID
+   ```
 
 ---
 

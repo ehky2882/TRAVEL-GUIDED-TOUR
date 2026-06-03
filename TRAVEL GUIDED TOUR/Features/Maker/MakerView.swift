@@ -10,6 +10,7 @@ struct MakerView: View {
     let maker: Maker
 
     @Environment(DataService.self) private var dataService
+    @Environment(AtlasNavigationState.self) private var navState
 
     private let avatarSize: CGFloat = 96
 
@@ -33,6 +34,16 @@ struct MakerView: View {
         .background(AtlasColors.background)
         .navigationTitle(maker.displayName)
         .inlineNavigationBarTitle()
+        // Reserve room at the bottom for the mini-player + tab bar
+        // stack so the last tour row is reachable above the module.
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            Color.clear.frame(height: AtlasBottomModule.height())
+        }
+        // Mark this surface as a pushed detail screen so the bottom
+        // module switches to full-edge while it's on top — even
+        // when reached from Home.
+        .onAppear { navState.push() }
+        .onDisappear { navState.pop() }
     }
 
     // MARK: - Sections
@@ -56,8 +67,18 @@ struct MakerView: View {
 
     private var avatar: some View {
         Group {
-            if let urlString = maker.avatarURL,
-               let url = URL(string: urlString) {
+            if let emoji = maker.avatarEmoji, !emoji.isEmpty {
+                // Single-glyph brand mark (e.g. the Atlas Studio NYC
+                // red apple) rendered inside a muted circular plate.
+                // MiniPlayerBar.authorIcon uses the same resolution
+                // order at a smaller frame.
+                ZStack {
+                    Circle().fill(AtlasColors.placeholderWarm)
+                    Text(emoji)
+                        .font(.system(size: avatarSize * 0.6))
+                }
+            } else if let urlString = maker.avatarURL,
+                      let url = URL(string: urlString) {
                 AsyncImage(url: url) { phase in
                     switch phase {
                     case .success(let image):
@@ -67,8 +88,8 @@ struct MakerView: View {
                     }
                 }
             } else {
-                // No remote avatar — use the Atlas Studio app icon as
-                // the profile image (the only V1 maker is Atlas Studio).
+                // No remote avatar or emoji — fall back to the bundled
+                // Atlas Studio brand asset.
                 Image("AtlasStudioAvatar")
                     .resizable()
                     .scaledToFill()

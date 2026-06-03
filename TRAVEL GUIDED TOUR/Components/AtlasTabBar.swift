@@ -2,51 +2,71 @@ import SwiftUI
 
 /// Custom floating tab bar — replaces the system `TabView` chrome
 /// so we can match the home-screen drawer's width, inset, and shape
-/// exactly. Uses `.thickMaterial` for an almost-opaque backdrop so
-/// the buttons stay legible regardless of what the map is showing
-/// behind it.
+/// exactly. Uses `secondaryBackground` so the buttons stay legible
+/// regardless of what the map is showing behind it.
 ///
-/// Shape mirrors the BottomSheet drawer's:
-///   - Top corners: small radius (matches drawer's `cornerRadius`)
-///   - Bottom corners: phone-screen radius (the floating-island look)
+/// Shape: rounded pill, 8pt inset from the screen edges on both
+/// sides, phone-radius rounded bottom corners, square top corners
+/// (so the rectangular mini-player stacks flush above it).
 ///
-/// When the home drawer is open, the drawer's glass extends down
-/// past the safe area and behind this tab bar; the two sit at the
-/// same horizontal inset, with the same bottom-corner radius, so
-/// they read as one floating phone-shaped island. On tabs without
-/// a drawer (Library, Me), the tab bar is the whole island.
+/// **The view renders this same shape everywhere — Home root,
+/// Library, Me, every pushed detail.** That keeps the buttons
+/// themselves in the exact same place across surfaces — same x,
+/// same y, same width per column. The only thing that changes
+/// between Home (floating-island look) and the other surfaces
+/// (full-edge look) is a separate edge-to-edge background fill
+/// `ContentView` paints behind this view. On Home there's no fill,
+/// so the 8pt side gaps + 8pt bottom gap show the map underneath;
+/// elsewhere the fill is `secondaryBackground` (same color as the
+/// bar), so the gaps blend into the fill and the whole bottom
+/// region reads as one continuous opaque strip.
 struct AtlasTabBar: View {
     @Binding var selected: AtlasTab
 
-    /// Same horizontal inset the BottomSheet uses (8pt) so the tab
-    /// bar columns align with the drawer's edges.
-    var horizontalInset: CGFloat = 8
-    /// Small top corner radius — matches drawer's top corners so
-    /// when drawer + tab bar stack, transitions are seamless.
-    var topCornerRadius: CGFloat = 20
-    /// Phone-screen radius for the bottom corners.
-    var bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius
+    /// When `false` (Home + detail-up), the painted button row is
+    /// inset 8pt from the screen edges with phone-radius rounded
+    /// bottom corners, and an 8pt transparent strip sits below it
+    /// — the floating-island look. When `true` (Library / Me with
+    /// no detail), the painted row grows to the screen edges with
+    /// square corners and no outer strip — the flat full-edge look.
+    /// In both modes the buttons themselves sit at the SAME x
+    /// positions (8pt inner padding inside the painted row), so
+    /// the design rule of "buttons identical everywhere" holds.
+    var extendsToScreenEdges: Bool = false
 
     var body: some View {
-        HStack(spacing: 0) {
-            ForEach(AtlasTab.allCases, id: \.self) { tab in
-                tabButton(tab)
+        VStack(spacing: 0) {
+            HStack(spacing: 0) {
+                ForEach(AtlasTab.allCases, id: \.self) { tab in
+                    tabButton(tab)
+                }
             }
-        }
-        .padding(.vertical, AtlasSpacing.sm)
-        .frame(maxWidth: .infinity)
-        .background(AtlasColors.secondaryBackground)
-        .clipShape(
-            UnevenRoundedRectangle(
-                topLeadingRadius: topCornerRadius,
-                bottomLeadingRadius: bottomCornerRadius,
-                bottomTrailingRadius: bottomCornerRadius,
-                topTrailingRadius: topCornerRadius,
-                style: .continuous
+            // Inner H padding keeps the buttons inset from the
+            // painted bar's edges in edge-to-edge mode (so the
+            // button x positions match the island mode).
+            .padding(.horizontal, extendsToScreenEdges ? 8 : 0)
+            .padding(.vertical, AtlasSpacing.sm)
+            .frame(maxWidth: .infinity)
+            .background(AtlasColors.tabBarBackground)
+            .clipShape(
+                UnevenRoundedRectangle(
+                    topLeadingRadius: 0,
+                    bottomLeadingRadius: extendsToScreenEdges ? 0 : AtlasSpacing.phoneScreenRadius,
+                    bottomTrailingRadius: extendsToScreenEdges ? 0 : AtlasSpacing.phoneScreenRadius,
+                    topTrailingRadius: 0,
+                    style: .continuous
+                )
             )
-        )
-        .padding(.horizontal, horizontalInset)
-        .padding(.bottom, horizontalInset)
+            .padding(.horizontal, extendsToScreenEdges ? 0 : 8)
+
+            // 8pt strip below the painted button row. Transparent
+            // in island mode (map / detail body shows through),
+            // opaque-painted in edge-to-edge mode so the chrome
+            // continues down to the screen bottom seamlessly.
+            (extendsToScreenEdges ? AtlasColors.tabBarBackground : Color.clear)
+                .frame(maxWidth: .infinity)
+                .frame(height: 8)
+        }
     }
 
     private func tabButton(_ tab: AtlasTab) -> some View {
@@ -56,8 +76,12 @@ struct AtlasTabBar: View {
         } label: {
             VStack(spacing: 2) {
                 Image(systemName: isSelected ? tab.selectedSystemImage : tab.systemImage)
-                    .font(.system(size: 22))
-                Text(tab.label)
+                    .font(.system(size: 20))
+                // Uppercased at the display site (not in the enum)
+                // so the .accessibilityLabel(tab.label) below stays
+                // proper-cased — VoiceOver pronounces "Home" as a
+                // word instead of spelling H-O-M-E.
+                Text(tab.label.uppercased())
                     .font(AtlasTypography.caption)
             }
             .foregroundStyle(

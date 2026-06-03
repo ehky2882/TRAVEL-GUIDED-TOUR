@@ -11,7 +11,7 @@ jobs:
     name: Validate Tours.json
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Set up Swift
         uses: swift-actions/setup-swift@v2
         with:
@@ -21,11 +21,19 @@ jobs:
 
   build:
     name: Build (iOS Simulator)
-    runs-on: macos-latest
+    runs-on: macos-26
     steps:
-      - uses: actions/checkout@v4
-      - name: Show available Xcode
+      - uses: actions/checkout@v6
+      - name: Show Xcode
         run: |
+          # Use the macos-26 runner's DEFAULT Xcode. It is an Xcode 26
+          # release (iOS 26 SDK) — enough to compile this project, which
+          # targets iOS 26.2 — and GitHub ships it with a matching iOS
+          # simulator runtime pre-installed. Do NOT xcode-select a newer
+          # Xcode: the newest one on the image can carry an SDK ahead of
+          # every installed simulator runtime, which breaks the test job
+          # ("No simulator runtime version ... available to use with
+          # iphonesimulator SDK version ...").
           xcodebuild -version
           xcrun simctl list runtimes | head -20
       - name: Build
@@ -39,10 +47,16 @@ jobs:
 
   test:
     name: Run unit tests
-    runs-on: macos-latest
+    runs-on: macos-26
     needs: build
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
+      - name: Show Xcode
+        run: |
+          # Default Xcode only — see the build job's note. Selecting a
+          # newer Xcode here picks an SDK with no matching simulator
+          # runtime, and the test build fails.
+          xcodebuild -version
       - name: Detect test scheme
         id: check
         run: |
@@ -58,11 +72,11 @@ jobs:
         if: steps.check.outputs.has_tests == 'true'
         id: sim
         run: |
-          # GitHub Actions runner-pool variance: some macos-latest runners
-          # come with pre-created iPhone simulators ready to use, others
-          # have only Xcode + runtimes installed and no concrete devices.
-          # On the latter, `xcodebuild test -destination "name=iPhone 16"`
-          # fails with "Unable to find a device matching the provided
+          # GitHub Actions runner-pool variance: some runners come with
+          # pre-created iPhone simulators ready to use, others have only
+          # Xcode + runtimes installed and no concrete devices. On the
+          # latter, `xcodebuild test -destination "name=iPhone NN"` fails
+          # with "Unable to find a device matching the provided
           # destination specifier" after a ~60s timeout. Fix: explicitly
           # create + boot a simulator at job start so we control the state.
           # See docs/troubleshooting.md § "CI test job: no concrete iOS
@@ -86,8 +100,8 @@ jobs:
           DEVICE_TYPE=$(xcrun simctl list devicetypes -j | python3 -c '
           import json, sys
           dts = json.load(sys.stdin)["devicetypes"]
-          # Prefer iPhone 16, then 17, then any iPhone
-          preferred = ["iPhone 16", "iPhone 17", "iPhone 15", "iPhone 16 Pro", "iPhone 17 Pro"]
+          # Prefer a recent non-Pro iPhone, then fall back to any iPhone
+          preferred = ["iPhone 17", "iPhone 16", "iPhone 18", "iPhone 17 Pro", "iPhone 16 Pro"]
           by_name = {d["name"]: d["identifier"] for d in dts}
           for name in preferred:
               if name in by_name:

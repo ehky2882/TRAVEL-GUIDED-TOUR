@@ -144,8 +144,21 @@ struct SettingsView: View {
                     Label("All data stored on device", systemImage: "iphone")
                 }
             }
+            // Merge the page with the bottom island: hide the List's
+            // default grouped backdrop, paint our island color, and
+            // clear the row (section "card") backgrounds so the whole
+            // surface reads as one continuous color.
+            .scrollContentBackground(.hidden)
+            .background(AtlasColors.secondaryBackground)
+            .listRowBackground(Color.clear)
             .navigationTitle("Settings")
             .inlineNavigationBarTitle()
+            // Reserve room at the bottom for the mini-player + tab bar
+            // stack so the last settings row is always reachable above
+            // the module rather than hidden behind it.
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Color.clear.frame(height: AtlasBottomModule.height())
+            }
         }
     }
 

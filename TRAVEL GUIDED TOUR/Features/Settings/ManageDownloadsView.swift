@@ -9,6 +9,7 @@ struct ManageDownloadsView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(TourDownloader.self) private var tourDownloader
+    @Environment(AtlasNavigationState.self) private var navState
 
     var body: some View {
         List {
@@ -35,6 +36,15 @@ struct ManageDownloadsView: View {
         }
         .navigationTitle("Manage downloads")
         .inlineNavigationBarTitle()
+        // Reserve room at the bottom for the mini-player + tab bar
+        // stack so the last download row is reachable above the module.
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            Color.clear.frame(height: AtlasBottomModule.height())
+        }
+        // Mark this surface as a pushed detail screen so the
+        // bottom module switches to full-edge while it's on top.
+        .onAppear { navState.push() }
+        .onDisappear { navState.pop() }
     }
 
     private func rowFor(_ tour: Tour) -> some View {

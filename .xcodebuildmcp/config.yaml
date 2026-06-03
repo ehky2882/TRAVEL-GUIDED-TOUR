@@ -1,0 +1,8 @@
+schemaVersion: 1
+sessionDefaults:
+  projectPath: /Users/EY/Desktop/TRAVEL GUIDED TOUR/TRAVEL GUIDED TOUR.xcodeproj
+  scheme: TRAVEL GUIDED TOUR
+  configuration: Debug
+  simulatorName: iPhone 16 Pro
+  useLatestOS: true
+  simulatorPlatform: iOS Simulator

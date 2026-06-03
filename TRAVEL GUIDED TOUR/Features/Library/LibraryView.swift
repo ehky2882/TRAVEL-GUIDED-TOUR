@@ -21,6 +21,7 @@ struct LibraryView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(TourDownloader.self) private var tourDownloader
+    @Environment(TourPresenter.self) private var tourPresenter
 
     @State private var selectedSection: Section = .saved
 
@@ -47,9 +48,15 @@ struct LibraryView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
-            .background(AtlasColors.background)
+            .background(AtlasColors.secondaryBackground)
             .navigationTitle("Library")
             .inlineNavigationBarTitle()
+            // Reserve room at the bottom for the mini-player + tab bar
+            // stack so the last list item is always reachable above the
+            // module rather than hidden behind it.
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Color.clear.frame(height: AtlasBottomModule.height())
+            }
         }
     }
 
@@ -86,8 +93,8 @@ struct LibraryView: View {
         } else {
             LazyVStack(alignment: .leading, spacing: 0) {
                 ForEach(tours) { tour in
-                    NavigationLink {
-                        TourDetailView(tour: tour)
+                    Button {
+                        tourPresenter.present(tour)
                     } label: {
                         tourRow(tour)
                     }

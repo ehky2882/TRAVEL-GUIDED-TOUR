@@ -2,11 +2,14 @@ import SwiftUI
 
 /// Reusable horizontal-scroll rail used by every rail family on the
 /// home screen (location-anchored, personalized, interest-based).
-/// Renders the rail title + a horizontally-scrolling row of tour cards.
-/// Each card pushes `TourDetailView` via NavigationLink.
+/// Renders the rail title + a horizontally-scrolling row of tour
+/// cards. Each card opens `TourDetailView` via `TourPresenter` —
+/// always as a bottom sheet, never a side push.
 struct RailCarousel: View {
     let title: String
     let tours: [Tour]
+
+    @Environment(TourPresenter.self) private var tourPresenter
 
     var body: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
@@ -18,8 +21,8 @@ struct RailCarousel: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: AtlasSpacing.md) {
                     ForEach(tours) { tour in
-                        NavigationLink {
-                            TourDetailView(tour: tour)
+                        Button {
+                            tourPresenter.present(tour)
                         } label: {
                             TourCard(tour: tour)
                         }

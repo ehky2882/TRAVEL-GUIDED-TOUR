@@ -38,31 +38,169 @@ Principles that override everything else in this file:
 
 ## Where we are right now
 
-**Status (2026-05-20):** every V1 functionality milestone is shipped
-on `main` (M1–M3, M-data-model, M-audio-foundation, M-tour-detail,
-M-player, M-home, M-search, M-maker, M-library, M-geofencing,
-M-offline; M-map was cut). AllTrails-style home (PR #31) is the
-production home. **Pre-M-qa audit complete** — P0 findings closed
-(PRs #22 / #23 / #24, May 2026-05-18); P1 + P2 + P3 cleanup batch
-shipped 2026-05-20 (PR #51) along with the Option A data layer for
-the hero image carousel. Unit test target wired (PR #33) and runs on
-CI per PR. **TestFlight: build 1.0 (4) uploaded to App Store Connect on
-2026-05-20 evening**, carrying the full day's UX + content work;
-processing at Apple at session end. Earlier builds: 1.0 (1) was the
-first upload (2026-05-19 9:38 PM); 1.0 (3) verified the background-audio
-fix on device. M-qa 10-step checklist still needs a run on device
-against build 4.
+**Status (2026-06-02, session 17):** every V1 functionality milestone is shipped on `main`. **TestFlight 1.0 (25) is live** (uploaded 2026-06-02 evening) — carries a long iterative home-polish batch via [PR #113](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/113) on top of session 16's 11-tour Portugal content. PR #113 highlights: typography overhaul (`AtlasTypography.caption` is now 13pt SF Mono regular; `body` is now 15pt SF Pro regular); home-chrome dimensions tightened (search/chips 24→16pt horizontal inset and 46→44pt height; map control glyphs 16→20pt; tab bar icons 22→20pt; drawer top corner 30→28pt; mini-player avatar→bar and ring→bar both 16pt, avatar→text 16pt, skip-glyph→ring outer 16pt visual); ALL CAPS pass across the home header, mini-player title line, and tab bar labels; new `Maker.avatarEmoji` field with Atlas Studio NYC's avatar set to 🍎; and cluster smoothness — item #6 of the original 11-item brief closed via a new `HomeMapSection.snappedSpan(_:)` helper that rounds the visible region's span to two significant figures before deriving cluster cell pitch, so MapKit's sub-percent settle drift on pure pans no longer re-buckets markers near cell boundaries. Build bumped 24 → 25 via [PR #114](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/114). Earlier the same day, session 16 (web/PM) added 11 Portugal tours via [PR #110](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/110) on top of the prior session's home-screen polish work. Eight new Atlas Studio Porto tours (Batalha Centro de Cinema, Building in Senhora da Luz, Mosteiro Santo Agostinho da Serra do Pilar, Teatro Rivoli, Trindade Metro Station, Vodafone Headquarters, Municipal Library of Viana do Castelo, and Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro in Angra do Heroísmo — **the catalog's first Azores tour**) and three new Atlas Studio Lisbon tours (Adega Mayor in Campo Maior — **first Alentejo tour**; Óbidos; Capela do Monte above Monte da Charneca in Lagos — **first Algarve tour**). Catalog **113 tours, 3 makers** (102 → 113; 105 → 117 stops). Atlas Studio Porto 22 → 30; Atlas Studio Lisbon 2 → 5. New cities in catalog: Viana do Castelo, Angra do Heroísmo, Campo Maior, Óbidos, Lagos. Audio + images chunked across four gh-pages commits (`f4e849d`, `259309d`, `7a67dc9`, `24c6e36`) after the combined push hit HTTP 408 — no SSH key on machine, fell back to HTTPS chunks. Build bumped 23 → 24 via [PR #111](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/111) (admin-merged metadata change). `xcodebuild archive` clean at `/tmp/Atlas-20260602-2146.xcarchive`; owner uploaded via Organizer. Mainland Portugal coverage now spans north → centre → Lisbon belt → Alentejo → Algarve, plus Terceira. The prior session (15, 2026-06-01) shipped the eleven-item home-screen polish pass via [PR #103](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/103) + [PR #104](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/104) + drag-clamp follow-up [PR #107](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/107), with builds 22 ([PR #105](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/105)) and 23 ([PR #108](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/108)). Earlier status follows.
 
-**Content (M-launch-content).** 10 real tours in `Resources/Tours.json`
-(seed tours Cooper Hewitt + Architects of Hidden Brooklyn removed
-2026-05-20). NYC landmarks: Grand Central south facade, Times Square TKTS,
-South Street Seaport, Empire State Building, Statue of Liberty, Brooklyn
-Bridge, Rockefeller Center, Met 5th Ave Steps, High Line, 9/11 Memorial.
-~26 min total audio across 4 categories. Empire State Building GPS corrected
-to 40.748434, -73.984571 (was 40.7521, -73.9821). Audio hosted on `gh-pages`
-branch (served at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
-GitHub Releases tried first but serves wrong `Content-Type` for AVPlayer —
-see `docs/cdn-decision.md` § "Why we switched from Releases to Pages."
+**Status (2026-05-29):** every V1 functionality milestone is shipped on
+`main`. Major UX work shipped 2026-05-24/25 — bottom module consistency
+(PRs #66–70), home polish + player-state hardening (PRs #60–61), placecard
+pop-up on pin tap (PR #75), tour detail as slide-up layer with drawer hoist
+(PR #76), slide animation fix (PR #77), AsyncImage crossfade fix (PR #78).
+**Session 8 (2026-05-27)** replaced the SwiftUI `.offset` slide layer with
+a UIKit `UIPresentationController`-driven modal so detail slides up *from
+behind* the persistent mini-player + tab bar (now hosted in a secondary
+higher-level `UIWindow` — Apple Music pattern). **Session 11 (2026-05-28)**
+closed the chrome-shade seam (PR #91) — hardcoded RGB in `secondaryBackground` +
+bars edge-to-edge in non-Home/detail-up. **Session 12 (2026-05-29)** landed
+PR #93 (tour-detail masthead + toolbar + overflow menu, part 1 of 2),
+PR #95 (light-mode bottom-module bug — secondary-window trait-collection
+plumbing), PR #92 (Casa das Histórias Paula Rego — first Cascais tour),
+and PR #94 (5 Porto-area architecture tours). TestFlight build **1.0 (17)
+is live** (uploaded 2026-05-29).
+
+**Content (M-launch-content ✅).** **97 tours** in `Resources/Tours.json` (73 NYC + 17 Porto-area + 2 Marco de Canaveses/Lisbon/Cascais/Matosinhos under Atlas Studio Lisbon and Atlas Studio Porto).
+First **multi-stop tour** added 2026-05-26: "American Museum of Natural
+History: Four Facades" — 5 stops (~8m 44s), exterior architecture walk,
+geofenced. This unblocks M-qa checklist items 6 + 7. The original 10 NYC landmarks (Grand Central, Times
+Square, South Street Seaport, Empire State Building, Statue of Liberty,
+**Home polish + player-state hardening (PR #60, 2026-05-24 late-pm).**
+Bigger bottom-module radius (48→56), drawer now overlays the mini-player +
+tab bar (squared bottom corners via new `bottomReservedHeight` /
+`bottomCornerRadius: 0`), chip row + search bar share `searchBarHeight =
+46`, `caption` font throughout, "tours in view" count math fixed (uses
+individual stops + screen-coord math; swaps to "Let's explore together!"
+at the `.large` detent), recenter button tracks the drawer's top edge in
+every detent. Same PR fixed three audio-state bugs surfaced during the
+visual review: (1) `TourDetailView` no longer disables "Open player"
+mid-load — the sheet is the user's escape hatch; (2)
+`AudioPlayerService.seek(to:)` synthesizes `.ended` when the user scrubs
+to/past `duration` (AVPlayer doesn't fire `didPlayToEndTime` on manual
+seek, so without this we'd park in `.waitingToPlayAtSpecifiedRate` →
+flip to `.loading`); (3) `PlayerView.togglePlayPause` on `.ended` now
+calls a new `replayCurrent()` that restarts via `playIntro`/`playStop`
+(was `audioPlayer.play()`, a no-op on the drained AVQueuePlayer queue).
+Commit `e5b31da`. 84/84 tests pass; CI green.
+
+**Module geometry on non-Home tabs (PR #66, 2026-05-25).** Extends PR
+#60's bottom-module work past the home screen. On Home the mini-player +
+tab bar still float as a rounded island; on Library / Settings / Manage
+downloads / Tour Detail / Maker the module now extends flush to the
+screen edges (no horizontal inset, no rounded outer corners) and its
+background runs through the home-indicator safe area, with the button
+column padded up so taps still clear the indicator. Every scrollable
+non-Home surface now applies `.safeAreaInset(.bottom)` sized to the
+module so the last list item / settings row / tour-detail description is
+always reachable above the module. Mechanism: new
+`AtlasBottomModule.height(extendsToScreenEdges:)` helper centralizes the
+math (replaces HomeView's inlined `floatingIslandHeight = 64 +
+layoutHeight`); `MiniPlayerBar` and `AtlasTabBar` each gain an
+`extendsToScreenEdges` flag. TourDetailView's `actionBarHeight` now
+tracks the helper (was hardcoded `130 + layoutHeight + 8`) and its
+trailing ScrollView spacer matches `actionBarHeight` exactly — fixes the
+pre-existing too-small 72pt spacer that let the last description lines
+hide behind the action bar. Commit `2452f52`. 84/84 tests pass; CI green.
+
+**Restore Home floating island + anchor at OLD Home position (PR #69,
+2026-05-25 pm-2).** PR #68 introduced two compounding regressions on
+Home that the owner caught immediately. (1) `AtlasTabBar` added the
+home-indicator safe-area inset to the view's *height* in full-edge
+mode — physically shoved the buttons + mini-player up by ~34pt. (2)
+The PreferenceKey-driven `moduleGeometry` got stuck at `.fullEdge`
+after popping back from a detail screen, leaving Home in the wrong
+geometry. Net effect: Home no longer floated AND everything sat too
+high. Fix: `AtlasTabBar.body` is now a fixed-height VStack (56pt
+painted button row + 8pt outer strip) in both modes; only what's
+painted in the 8pt strip changes (transparent on Home, opaque
+elsewhere). The safe-area zone underneath is already covered by the
+painted button row because of the parent `.ignoresSafeArea(.bottom)`.
+`AtlasBottomModule.height` is a constant 126pt across modes.
+Replaced PreferenceKey with `@Observable AtlasNavigationState`
+tracking `pushedDepth` via push/pop from each pushed view's
+onAppear/onDisappear — deterministic, no sticky values. Verified via
+`snapshot_ui`: tab buttons at y=807 in every tab (Home, Library, Me),
+matching the OLD Home position exactly. Commit `8d928b3`. 84/84
+tests pass; CI green.
+
+**Buttons identical across surfaces; only background fill differs (PR
+#70, 2026-05-25 pm — final shape).** Bar contents render the exact same
+form on every surface — Home, Library, Me, every pushed detail. 8pt
+horizontal inset, phone-screen-radius rounded bottom corners,
+transparent 8pt strip below. The only difference between Home
+(floating island) and the rest (full-edge): `ContentView` paints an
+edge-to-edge `secondaryBackground` rectangle BEHIND the inset bar on
+non-Home surfaces, making the side + bottom gaps blend into a
+continuous strip the same color as the bar. On Home that fill isn't
+painted, so the gaps show the map. `AtlasTabBar` + `MiniPlayerBar`
+lost their `extendsToScreenEdges` flags entirely (single form now).
+Final snapshot_ui anchor: tab buttons at x=8 / 136.67 / 265.33 width
+128.67 on every surface, identical to OLD Home. Commit `643cbd7`.
+84/84 tests pass; CI green.
+
+**Restore Home floating island after PR #68 regression (PR #69,
+2026-05-25 pm).** PR #68 made non-Home's tab bar 34pt taller (by
+adding the safe-area inset to its painted height), which physically
+shoved buttons up — opposite of the "anchor at OLD Home position"
+goal. Its PreferenceKey-driven `moduleGeometry` also got stuck at
+`.fullEdge` after popping back from a detail, so Home rendered in
+the wrong (full-edge) shape with the buttons in the wrong (higher)
+position. PR #69 fixed both: `AtlasTabBar` view height pinned at a
+fixed 64pt in every geometry (56pt painted button row + 8pt outer
+strip — only the strip's fill differs between modes); replaced the
+preference with an `@Observable AtlasNavigationState` tracking
+`pushedDepth` via push/pop from each pushed view's
+appear/disappear; `AtlasBottomModule.height` locked to a constant
+126pt. Commit `8d928b3`. 84/84 tests pass; CI green. Superseded
+mechanism-wise by PR #70 (which collapsed even the remaining
+conditional bottom-strip fill into a single fill-rectangle
+decision in `ContentView`).
+
+**Consistent bottom module across tabs + detail (PR #68, 2026-05-25 pm).**
+Visual review of PRs #65 + #66 on `main` caught three follow-ups that
+PR #66 left on the floor. (1) `SearchBar` was presenting `SearchView` as
+`.sheet(...)`, which covered `ContentView`'s ZStack — the mini-player +
+tab bar disappeared when the user opened search, and the further
+`TourDetailView` push inherited the sheet's own nav stack. Switched to a
+`NavigationLink` push into the host tab's stack so the module stays
+visible underneath; `SearchView` dropped its inner `NavigationStack` +
+"Close" toolbar and now applies a `safeAreaInset(.bottom)` so result
+rows clear the module. (2) `AtlasTabBar` was adding the home-indicator
+safe-area inset *inside* the painted button row in full-edge mode,
+shoving the buttons ~26pt higher than they sat on Home — the bar
+appeared to jump up when switching tabs. Refactored so the safe-area
+fill is a separate background rectangle below an identically-laid-out
+button row; only what's painted below changes between modes. (3) Detail
+screens (`TourDetailView` / `MakerView` / `ManageDownloadsView` /
+`SearchView`) used to inherit the Home tab's floating-island look when
+pushed from Home, which let scrolled content peek through the 8pt outer
+transparent gap below the rounded tab bar. Now every detail screen
+declares the full-edge geometry directly and overrides its host tab's
+preference while it's on top. Mechanism: replaced `\.atlasIsHomeTab` env
+value (deleted) with a typed `AtlasModuleGeometry` preference; each
+surface declares its preference at its root; the deepest declaration
+wins; `ContentView` reads via `onPreferenceChange` and threads geometry
+into `MiniPlayerBar` + `AtlasTabBar`. `AtlasBottomModule.height` math
+updated to add the new 8pt outer gap above the safe-area fill on
+non-Home. Commit `fe11d99`. 84/84 tests pass; CI green.
+
+Brooklyn Bridge, Rockefeller Center, Met, High Line, 9/11 Memorial),
+Brooklyn Museum, 9 added 2026-05-21/22 — Whitney, AMNH, Brooklyn
+Bridge Park, Chrysler Building, Flatiron Building, Governors Island,
+Guggenheim, Intrepid, and Casa da Música (Porto — the first non-NYC
+tour); 11 added 2026-05-22/23: Little Island, Manhattan Bridge
+(from DUMBO), Museum of the City of New York, NYPL Fifth Avenue, The
+Oculus, St. Patrick's Cathedral, Vessel (Hudson Yards), Wall Street,
+Washington Square Park, Cooper Hewitt, and El Museo del Barrio; and
+**7 added 2026-05-23 afternoon** — The Frick Collection, Neue Galerie,
+Museum of Arts and Design, New Museum, The Morgan Library & Museum,
+The Shed, and **MoMA PS1** (the first Queens tour). **All 38 tours
+now have `heroImageURL` populated** — CC-licensed Wikimedia Commons
+photos added 2026-05-23/24 (commit `8699ac6` + subsequent individual
+corrections). Images are landscape-optimised where possible; Whitney
+and MAD have no landscape exterior on Commons and use the best
+available option. Audio hosted on the `gh-pages` branch (served at
+`https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`);
+GitHub Releases tried first but serves the wrong `Content-Type` for
+AVPlayer — see `docs/cdn-decision.md` § "Why we switched from Releases
+to Pages." No multi-stop tour exists yet.
 
 **TestFlight signing wired (2026-05-19).**
 `DEVELOPMENT_TEAM = CPC7M72JTP` in `project.pbxproj`, Apple
@@ -74,12 +212,13 @@ complete. Per-release upload flow documented in `docs/testflight.md`
 session-by-session log.
 
 What's left for V1:
-- **M-qa on device** — build 1.0 (4) is uploaded (carries seed-tour
-  removal, ESB GPS fix, HeroImageView layout fix, image carousel, the
-  home-screen UX batch, and the location-button rework). Once Apple
-  finishes processing, install via the TestFlight app and walk the
-  M-qa 10-step checklist (§ M-qa). Bugs become small targeted fixes.
-- **M-launch-content (optional more)** — owner may decide 10 tours
+- **A multi-stop walking tour.** M-qa on build 1.0 (5) passed every
+  applicable check on device (2026-05-22, no issues found). The only
+  M-qa steps still open are the multi-stop ones — geofenced stop
+  advancement and manual next-stop — blocked until a multi-stop tour
+  is authored. All 38 tours are single-stop, so the app's defining
+  feature is uncovered by content.
+- **M-launch-content (optional more)** — owner may decide 38 tours
   are enough for V1 launch, or add more. See `docs/authoring-tours.md`.
 - **Deferred design / polish pass** — theme tokens, real app icon
   (replace placeholder green sphere), custom map pins, final
@@ -91,10 +230,9 @@ from one Claude account to another. See
 working-style notes written specifically for the new account's first
 session.
 
-**No parked branches.** All `claude/*` work has either landed or been
-deleted. Only `gh-pages` (audio CDN + privacy policy) remains as a
-non-main branch, deliberately separate (orphan, no shared history
-with main).
+**Branches.** `gh-pages` (audio CDN + privacy policy) is the only
+non-main branch — orphan, no shared history with main. No parked or
+stale branches otherwise.
 
 **Pivot history.** The previous editorial-city-guide V1 work was
 mostly reshaped, not thrown out. The migration tables below are kept
@@ -264,9 +402,11 @@ advances correctly.
 
 ### M-home. Map-dominant home screen with curated rails — ✅ Done (PR #10; redesigned in PR #19)
 
-> Follow-up after PR #19's full-screen-map redesign: "Because you
-> searched [X]" rail data is captured by `RecentSearchStore` but not
-> yet surfaced in `HomeRailsViewModel`. Tracked in HANDOFF.md.
+> PR #19's full-screen-map redesign replaced the stacked rails with
+> a single distance-sorted tour list in a bottom drawer. The shipping
+> home has no rails — `HomeRailsViewModel` and `RailCarousel` are
+> unused by the app (still exercised by the unit suite). The old
+> "Because you searched [X]" rail is retired along with the layout.
 
 **What:** Build the new home screen, modeled on the Airbnb landing
 page pattern. See `atlas_claude_code_prompt.md` § Key screens #1 for
@@ -487,14 +627,16 @@ to use either path.
 **What:** End-to-end walkthrough of the running app with real content
 loaded. Functional checklist:
 
-1. App launches → map-dominant home with pins, search bar, and
-   curated rails below the map (or graceful fallback if no location).
-2. Pan the map → location-anchored rails recompute for the new area.
+1. App launches → map-dominant home with pins, search bar, filter
+   chips, and the tour list in the bottom drawer (or graceful
+   fallback if no location). The list sorts nearest-first when
+   location is granted, with distance labels on each card.
+2. Pan the map → the drawer header's "N tours in view" count
+   recomputes for the new area.
 3. Tap the search bar → results screen works (title / maker /
-   category match). Open a tour from search → return to home →
-   "Because you searched [X]" rail now reflects the query.
-4. Tap a tour (pin, rail, or search) → tour detail → tap Start →
-   audio plays.
+   category match). Open a tour from search → tour detail opens.
+4. Tap a tour (pin, drawer card, or search) → tour detail → tap
+   Start → audio plays.
 5. Lock the phone → audio continues; lock-screen controls work.
 6. Multi-stop geofenced tour → simulated walking along stops → next
    stop's audio triggers on arrival.
@@ -502,6 +644,39 @@ loaded. Functional checklist:
 8. Download a tour → airplane mode → tour plays end to end.
 9. Save a tour → force-quit + relaunch → still saved.
 10. Maker page → tour list correct → tap tour → tour detail opens.
+
+**M-qa device pass — build 1.0 (4) (2026-05-21).** First on-device
+walkthrough. Checklist 1, 3, 4, 5, 8, 9, 10 passed. Items 6/7
+(multi-stop geofenced + manual) deferred — no multi-stop tour is in
+the current catalog. Five UX issues surfaced and were fixed the same
+session (remote — code on the feature branch, ships to device on the
+next TestFlight build):
+
+- **Mini-player added.** A persistent now-playing bar sits between
+  the home drawer and the tab bar whenever audio is loaded —
+  pause/resume inline, tap to reopen the full player. New
+  `Features/Player/MiniPlayerBar.swift`; hosted by `ContentView`;
+  the home drawer's peek height grows to clear it.
+- **Hero-image bleed-through at the peek detent fixed** — the
+  drawer's scroll list now fades out at peek instead of leaking a
+  sliver of the first card above the tab bar.
+- **Recenter animation** — the camera now glides to the user
+  (0.45 s ease) instead of snapping; the recenter button's
+  fade-in/out on map pan is gentler.
+- **User-location dot rebuilt** — explicit Apple-Maps blue, plus a
+  directional heading wedge driven by the device compass
+  (`LocationManager.heading`, iOS only).
+
+**M-qa device pass — build 1.0 (5) (2026-05-22).** Full walkthrough
+on device. Checklist items 1–5 and 8–10 all passed, plus every
+build-5 UX change verified — the always-present mini-player (idle +
+active states), the square-topped island, the tour-detail action
+bar, drawer-card carousels, pinch-to-zoom hero images, the compass
+heading wedge, the Library/Settings island backgrounds, and
+drawer-detent persistence across tab switches. Items 6/7 (multi-stop
+geofenced + manual) still deferred — no multi-stop tour exists.
+**No issues found.** V1 functionality is device-validated; only the
+multi-stop checks remain, blocked on content.
 
 **Files touched:** none expected. Bugs become small targeted fixes.
 
@@ -589,9 +764,13 @@ picked up during M-qa or the polish phase. (Lifted from
 `archive/HANDOFF-260518.md` so they live in a doc that future
 sessions actually read.)
 
-- **"Because you searched [X]" home rail.** `RecentSearchStore`
-  captures the data but `HomeRailsViewModel` doesn't surface it as
-  a rail yet. Wire it up during the post-PR-#20 home-polish pass.
+- **Rails layout retired.** The AllTrails redesign (PR #19/#31)
+  dropped the stacked-rails home for a map + single distance-sorted
+  drawer list. `HomeRailsViewModel` and `RailCarousel` are no longer
+  referenced by the app (the unit suite still covers
+  `HomeRailsViewModel`). Deleting them would mean dropping that test
+  too, so they're left in place for now. The old "Because you
+  searched [X]" rail is retired with the layout.
 - **`AudioPlayerService` progress aggregation.** `listenedSeconds`
   on `LibraryEntry` currently reflects position within the current
   audio item only — it doesn't aggregate across stops in a

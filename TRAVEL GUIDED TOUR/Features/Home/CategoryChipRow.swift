@@ -15,7 +15,7 @@ struct CategoryChipRow: View {
                     chip(for: category)
                 }
             }
-            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.horizontal, AtlasSpacing.md)
         }
     }
 
@@ -28,7 +28,7 @@ struct CategoryChipRow: View {
                 .font(AtlasTypography.caption)
                 .foregroundStyle(isSelected ? AtlasColors.background : AtlasColors.primaryText)
                 .padding(.horizontal, AtlasSpacing.md)
-                .padding(.vertical, AtlasSpacing.xs + 2)
+                .frame(height: AtlasSpacing.searchBarHeight)
                 .background(chipBackground(isSelected: isSelected))
         }
         .buttonStyle(.plain)
@@ -47,15 +47,16 @@ struct CategoryChipRow: View {
             }
             .foregroundStyle(isSelected ? AtlasColors.background : AtlasColors.primaryText)
             .padding(.horizontal, AtlasSpacing.md)
-            .padding(.vertical, AtlasSpacing.xs + 2)
+            .frame(height: AtlasSpacing.searchBarHeight)
             .background(chipBackground(isSelected: isSelected))
         }
         .buttonStyle(.plain)
     }
 
-    /// Unselected chips use `.regularMaterial` so the map underneath
-    /// is softened — without this, the map shows clearly through the
-    /// chip and competes with the label text.
+    /// Unselected chips match the drawer / mini-player / tab bar
+    /// surface so the entire chrome reads as one unified color band.
+    /// No stroke (would read as inconsistency against those surfaces,
+    /// which have none).
     @ViewBuilder
     private func chipBackground(isSelected: Bool) -> some View {
         if isSelected {
@@ -63,11 +64,7 @@ struct CategoryChipRow: View {
                 .fill(AtlasColors.primaryText)
         } else {
             Capsule()
-                .fill(.regularMaterial)
-                .overlay(
-                    Capsule()
-                        .stroke(AtlasColors.primaryText.opacity(0.2), lineWidth: 1)
-                )
+                .fill(AtlasColors.secondaryBackground)
         }
     }
 }

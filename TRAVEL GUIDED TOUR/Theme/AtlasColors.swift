@@ -22,6 +22,11 @@ enum AtlasColors {
     static let accent = Color.accentColor
     static let accentLight = Color.accentColor.opacity(0.6)
 
+    /// Map pin color — dark gold `#8B7535`. Separate from the brand
+    /// accent so pin styling can diverge from interactive-element
+    /// tinting without a global accent change.
+    static let mapPin = Color(red: 139/255, green: 117/255, blue: 53/255)
+
     /// Three-step text hierarchy. SwiftUI's semantic colors adapt
     /// to color scheme: primary is black in light mode and white
     /// in dark mode; secondary is a muted gray in both.
@@ -35,7 +40,27 @@ enum AtlasColors {
     // asset-catalog colorsets if the brand wants warmer surfaces.
     #if canImport(UIKit)
     static let background = Color(uiColor: .systemBackground)
-    static let secondaryBackground = Color(uiColor: .secondarySystemBackground)
+    /// Hardcoded RGB pair instead of `.secondarySystemBackground` so
+    /// every painted surface — tour-detail body in window 1, bars in
+    /// window 2, drawer, search bar — resolves to the EXACT same
+    /// RGB regardless of which window or elevation context renders
+    /// it. The system semantic color resolved differently at
+    /// `.base` vs `.elevated` user-interface-level traits, which is
+    /// why the bottom-module CHROME used to show a visible seam
+    /// against the detail body in dark mode.
+    /// Light: #F2F2F7 (system default). Dark: #1C1C1E (base level).
+    static let secondaryBackgroundUIColor: UIColor = UIColor { traits in
+        traits.userInterfaceStyle == .dark
+            ? UIColor(red: 28/255, green: 28/255, blue: 30/255, alpha: 1)
+            : UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1)
+    }
+    static let secondaryBackground = Color(uiColor: secondaryBackgroundUIColor)
+    /// The bottom-module surfaces (mini-player painted bar, tab bar
+    /// painted button row) all use the same shade as the rest of
+    /// the secondary CHROME, so the boundary between the bars and
+    /// the surrounding detail body / drawer is invisible.
+    static let miniPlayerBackground = secondaryBackground
+    static let tabBarBackground = secondaryBackground
     static let cardBackground = Color(uiColor: .systemBackground)
     static let placeholderWarm = Color(uiColor: .tertiarySystemFill)
     static let placeholderCool = Color(uiColor: .tertiarySystemFill)

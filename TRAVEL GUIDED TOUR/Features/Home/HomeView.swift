@@ -1,33 +1,31 @@
 import SwiftUI
 import MapKit
 import CoreLocation
+import UIKit
 
 /// Map-dominant home screen — AllTrails-style.
 ///
 /// **Layout:**
-///   - `ZStack`: map fills entire background; floating search bar +
-///     filter chip row at top; persistent BottomSheet at bottom.
-///   - Map pins reflect the currently-applied category filter.
-///   - Tapping a pin scrolls the drawer's vertical tour list to that
-///     tour's card and highlights it (and vice-versa).
-///   - Drawer content is a single vertical list of `TourListCard`,
-///     filtered by the selected category and sorted by distance from
-///     the user (falls back to insertion order without location).
-///   - "Continue listening" / "Recently viewed" surface as inline
-///     banner rows above the main list when present.
+///   - `ZStack`: map fills the entire background; floating search bar
+///     + filter chip row at the top; map control buttons over the
+///     bottom edge.
+///   - The bottom drawer (filter results / tour list) is NOT rendered
+///     here — `ContentView` hosts it via a `BottomSheet` z-stacked on
+///     top of the mini-player + tab bar. Shared state between the map
+///     and the drawer (selected category, placecard tour, visible
+///     region, drag offset) lives in `HomeSharedState`, injected via
+///     `@Environment`.
 struct HomeView: View {
     @Environment(DataService.self) private var dataService
-    @Environment(LibraryStore.self) private var libraryStore
     @Environment(LocationManager.self) private var locationManager
-    @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
-    @Environment(TourDownloader.self) private var tourDownloader
+    @Environment(HomeSharedState.self) private var sharedState
+    @Environment(TourPresenter.self) private var tourPresenter
 
-    @State private var visibleRegion: MKCoordinateRegion?
-    @State private var sheetDetent: BottomSheetDetent = .large
-    /// True while the map camera is in motion. Retracts the drawer to
-    /// peek and fades the recenter button while the user is panning,
-    /// then clears when the camera settles.
-    @State private var isMapMoving = false
+    /// Drawer detent — owned by `ContentView` so it persists across
+    /// tab switches and so the drawer (also at `ContentView`) and the
+    /// map controls below can read it from the same source.
+    @Binding var sheetDetent: BottomSheetDetent
+
     /// Guards against the map firing camera events during initial
     /// render. Set to true 1 s after the view appears — enough time
     /// for the map's first tile load / settle cycle to complete so
@@ -35,339 +33,294 @@ struct HomeView: View {
     /// anything. onEnd-based approach was unreliable because onEnd
     /// fires immediately on first render, making the guard useless.
     @State private var mapInteractionEnabled = false
-    /// Lifted out of BottomSheet so the recenter button can read the
-    /// drawer's in-progress drag delta and stay glued to its top edge
-    /// throughout the drag (not just snap on release).
-    @State private var sheetDragOffset: CGFloat = 0
-    @State private var selectedCategory: TourCategory? = nil
-    @State private var selectedTourId: UUID? = nil
-    @State private var trackingMode: LocationTrackingMode = .none
+    /// Active map type. Cycled / picked by the map-mode selector
+    /// button. Standard is the default — same as Apple Maps.
+    @State private var mapMode: MapMode = .standard
+    /// True once the first non-nil `userLocation` reading has been
+    /// used to recenter the camera. Guards against re-snapping the
+    /// camera to the user after they've panned away — only the very
+    /// first location reading triggers a recenter.
+    @State private var didCenterOnUser = false
     @State private var cameraPosition: MapCameraPosition = .region(
         MKCoordinateRegion(
-            // Fallback start (NYC) — overridden on first appear if
-            // the user has granted location.
+            // Fallback when location permission is denied or no
+            // reading has arrived yet. The first non-nil userLocation
+            // reading replaces this via `centerOnUserIfNeeded`.
             center: CLLocationCoordinate2D(latitude: 40.7484, longitude: -73.9857),
             span: MKCoordinateSpan(latitudeDelta: 0.18, longitudeDelta: 0.18)
         )
     )
 
-    /// Peek-detent height. Sized so the AtlasTabBar (~62pt) + drag
-    /// handle (~16pt) + centered header line (~30pt) all fit — and
-    /// nothing more. Increasing this lets the first list item peek;
-    /// decreasing clips the header.
-    private let peekHeight: CGFloat = 130
+    /// Peek-detent height. Sized to fit the drag handle (~16pt) + the
+    /// centered header line (~30pt) with some breathing room — and
+    /// nothing more. Must match `HomeDrawerContent.peekHeight`.
+    private let peekHeight: CGFloat = 80
+
+    /// Exact pixel height of the mini-player + tab bar stack at the
+    /// bottom of the screen. Fed to the map control button stack's
+    /// bottom offset so the buttons sit a fixed distance above the
+    /// drawer's top edge in every detent.
+    private var floatingIslandHeight: CGFloat {
+        AtlasBottomModule.height(extendsToScreenEdges: false)
+    }
 
     var body: some View {
-        // NavigationStack wraps the layout so the tour list cards,
-        // quick-resume banners, and any other NavigationLinks have a
-        // context to push onto. The nav bar itself is hidden — the
-        // floating search bar + filter chips replace it visually.
-        NavigationStack {
+        // NavigationStack wraps the map layout so SearchBar's push
+        // to `SearchView` still works. Tour detail no longer pushes
+        // here — it comes up via `TourPresenter` as a sheet at the
+        // `ContentView` level. The nav bar is hidden; the floating
+        // search bar + filter chips replace it.
+        @Bindable var sharedState = sharedState
+        return NavigationStack {
             GeometryReader { geo in
                 ZStack(alignment: .top) {
                     HomeMapSection(
                         tours: filteredTours,
                         userLocation: locationManager.userLocation,
-                        selectedTourId: $selectedTourId,
+                        userHeading: locationManager.heading,
+                        selectedTourId: sharedState.placecardTour?.id,
                         cameraPosition: $cameraPosition,
+                        mapMode: mapMode,
                         onCameraChanged: { region in
-                            visibleRegion = region
+                            sharedState.visibleRegion = region
                             withAnimation(.easeInOut(duration: 0.3)) {
-                                isMapMoving = false
+                                sharedState.isMapMoving = false
                             }
                         },
                         onCameraMoving: {
-                            guard mapInteractionEnabled, !isMapMoving else { return }
+                            guard mapInteractionEnabled, !sharedState.isMapMoving else { return }
                             withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
-                                isMapMoving = true
-                                trackingMode = .none
+                                sharedState.isMapMoving = true
                                 if sheetDetent != .peek {
                                     sheetDetent = .peek
                                 }
                             }
-                        }
+                        },
+                        onPinTapped: { tourId, coordinate in
+                            guard let tour = dataService.tour(by: tourId) else { return }
+                            withAnimation(.spring(response: 0.35, dampingFraction: 0.82)) {
+                                sharedState.placecardTour = tour
+                                sharedState.placecardCoordinate = coordinate
+                            }
+                        },
+                        onMapTapped: {
+                            guard sharedState.placecardTour != nil else { return }
+                            withAnimation(.easeInOut(duration: 0.2)) {
+                                sharedState.placecardTour = nil
+                                sharedState.placecardCoordinate = nil
+                            }
+                        },
+                        placecard: placecardAnchor
                     )
                     .ignoresSafeArea()
 
                     VStack(spacing: AtlasSpacing.sm) {
                         SearchBar()
-                            .padding(.horizontal, AtlasSpacing.lg)
+                            .padding(.horizontal, AtlasSpacing.md)
 
                         CategoryChipRow(
-                            availableCategories: chipPlaceholderCategories,
-                            selectedCategory: $selectedCategory
+                            availableCategories: TourCategory.allCases,
+                            selectedCategory: $sharedState.selectedCategory
                         )
                     }
                     .padding(.top, AtlasSpacing.sm)
 
-                    BottomSheet(
-                        detent: $sheetDetent,
-                        dragOffset: $sheetDragOffset,
-                        peekHeight: peekHeight
-                    ) {
-                        drawerContent
-                    }
-
-                    // Floating recenter button anchored to bottom-leading,
-                    // padded up by the drawer's *current* visible height —
-                    // which includes the in-progress drag delta — so the
-                    // button stays glued to the drawer's top edge during
-                    // the drag, not just after release.
-                    locationButton
+                    // Map-control button stack anchored to bottom-leading,
+                    // padded up by the drawer's *current* visible height
+                    // (read off `sharedState.sheetDragOffset` so it stays
+                    // glued during the drag, not just after release).
+                    mapControlStack
                         .padding(.leading, AtlasSpacing.md)
-                        .padding(.bottom, drawerVisibleHeight(in: geo) + AtlasSpacing.sm)
+                        .padding(.bottom, drawerVisibleHeight(in: geo) + floatingIslandHeight + AtlasSpacing.sm)
                         .frame(
                             maxWidth: .infinity,
                             maxHeight: .infinity,
                             alignment: .bottomLeading
                         )
-                        // Hidden at full detent (drawer covers the map)
-                        // and while the map is moving (clean panning UX).
-                        // Button fades back when the camera settles.
-                        .opacity(sheetDetent == .large || isMapMoving ? 0 : 1)
-                        .allowsHitTesting(sheetDetent != .large && !isMapMoving)
+                        // Match the drawer's coordinate space — the
+                        // drawer ignores the bottom safe area, so the
+                        // button stack must too or the padding math is
+                        // off by the home-indicator inset.
+                        .ignoresSafeArea(.container, edges: .bottom)
+                        // Visible only at peek. At medium / large the
+                        // drawer covers enough of the map that the
+                        // controls would crowd it. Also hidden while
+                        // the map is moving (clean panning UX); fades
+                        // back when the camera settles.
+                        .opacity(sheetDetent != .peek || sharedState.isMapMoving ? 0 : 1)
+                        .animation(.easeInOut(duration: 0.5), value: sharedState.isMapMoving)
+                        .animation(.easeInOut(duration: 0.3), value: sheetDetent)
+                        .allowsHitTesting(sheetDetent == .peek && !sharedState.isMapMoving)
                 }
                 .toolbar(.hidden, for: .navigationBar)
                 .task {
                     try? await Task.sleep(for: .seconds(1))
                     mapInteractionEnabled = true
                 }
-                .onChange(of: selectedTourId, initial: false) { _, _ in
-                    if selectedTourId != nil && sheetDetent == .peek {
-                        sheetDetent = .medium
-                    }
+                // First non-nil reading after launch recenters the
+                // camera on the user (item #1). After that the user
+                // owns the camera — pan, zoom, and the recenter
+                // button take over.
+                .onAppear { centerOnUserIfNeeded() }
+                .onChange(of: locationManager.userLocation) { _, _ in
+                    centerOnUserIfNeeded()
                 }
             }
         }
     }
 
-    /// Mirrors the formula BottomSheet uses internally so the
-    /// recenter button can sit exactly at the drawer's top edge —
-    /// including during the drag. `sheetDragOffset` is the in-flight
-    /// drag delta (negative = dragging up, positive = dragging down)
-    /// so the visible height grows/shrinks live with the user's
-    /// finger.
+    /// Recenter the camera on the user's current location, but only
+    /// once per launch — subsequent location updates don't snatch the
+    /// camera back from the user's pans.
+    private func centerOnUserIfNeeded() {
+        guard !didCenterOnUser,
+              let user = locationManager.userLocation else { return }
+        didCenterOnUser = true
+        let region = MKCoordinateRegion(
+            center: user.coordinate,
+            span: Self.initialUserSpan
+        )
+        withAnimation(.easeInOut(duration: 0.6)) {
+            cameraPosition = .region(region)
+        }
+    }
+
+    /// Bundles the current placecard tour + its anchor coordinate into
+    /// the value `HomeMapSection` consumes. Erased to `AnyView` to
+    /// keep the map section unaware of the concrete placecard type.
+    private var placecardAnchor: PlacecardAnchor? {
+        guard let tour = sharedState.placecardTour,
+              let coordinate = sharedState.placecardCoordinate else {
+            return nil
+        }
+        let card = PlacecardView(
+            tour: tour,
+            maker: dataService.maker(for: tour),
+            distanceText: distanceText(for: tour),
+            onTap: {
+                tourPresenter.present(tour)
+            }
+        )
+        return PlacecardAnchor(coordinate: coordinate, view: AnyView(card))
+    }
+
+    /// Mirrors the height formula `BottomSheet` and `HomeDrawerContent`
+    /// use so the map control buttons can sit at a fixed offset above
+    /// the drawer's top edge — including DURING the drag.
     private func drawerVisibleHeight(in geo: GeometryProxy) -> CGFloat {
         let baseHeight: CGFloat
         switch sheetDetent {
         case .peek:   baseHeight = peekHeight
         case .medium: baseHeight = geo.size.height * 0.5
-        case .large:  baseHeight = geo.size.height - (AtlasSpacing.sm * 2)
+        case .large:
+            // Mirrors BottomSheet.heightForDetent(.large) — subtract
+            // the search/chips block + small buffer (matching
+            // ContentView's topReservedHeight) so the map controls
+            // don't think the drawer is taller than it actually is.
+            // Safe-area top is NOT added — see the matching note in
+            // BottomSheet.heightForDetent for why.
+            let topGap = AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
+            baseHeight = geo.size.height - topGap - floatingIslandHeight
         }
-        return max(peekHeight, baseHeight - sheetDragOffset)
+        return max(peekHeight, baseHeight - sharedState.sheetDragOffset)
     }
 
-    // MARK: - Location button
+    // MARK: - Map control buttons
 
-    private var locationButton: some View {
-        Button { cycleTrackingMode() } label: {
-            Image(systemName: trackingMode.iconName)
-                .font(.system(size: 16))
-                .foregroundStyle(.white)
-                .frame(width: 44, height: 44)
-                .background(Color(uiColor: .systemGray3))
-                .clipShape(Circle())
-        }
-        .buttonStyle(.plain)
-        .accessibilityLabel("My location")
-    }
+    /// Standard zoom span the recenter button snaps to — roughly
+    /// 0.02° ≈ 2.2 km N-S / ~1.7 km E-W at NYC latitude, i.e. a
+    /// neighborhood-scale view that puts the user dot plus several
+    /// surrounding blocks (and any nearby tour pins) in frame. The
+    /// previous tighter 0.005° zoom dropped the user onto a few-
+    /// block view that hid most pins on real-device review.
+    private static let recenterSpan = MKCoordinateSpan(
+        latitudeDelta: 0.02,
+        longitudeDelta: 0.02
+    )
 
-    private func cycleTrackingMode() {
-        switch trackingMode {
-        case .none:
-            guard locationManager.userLocation != nil else { return }
-            trackingMode = .follow
-            cameraPosition = .userLocation(followsHeading: false, fallback: cameraPosition)
-        case .follow:
-            trackingMode = .followWithHeading
-            cameraPosition = .userLocation(followsHeading: true, fallback: cameraPosition)
-        case .followWithHeading:
-            trackingMode = .none
-        }
-    }
+    /// Wider zoom span used on first appear only, so the user sees
+    /// nearby tours across multiple neighborhoods instead of being
+    /// dropped at a few-block zoom that hides most pins. ~0.1° is
+    /// roughly 11 km N-S / ~8.5 km E-W at NYC latitude — about the
+    /// full length of Manhattan island.
+    private static let initialUserSpan = MKCoordinateSpan(
+        latitudeDelta: 0.1,
+        longitudeDelta: 0.1
+    )
 
-    // MARK: - Drawer content
-
-    private var drawerContent: some View {
-        ScrollViewReader { proxy in
-            VStack(alignment: .leading, spacing: 0) {
-                // Header — dynamic count for the area in view.
-                // Centered to read cleanly at the peek detent where
-                // this is the *only* drawer content visible.
-                Text(headerText)
-                    .font(AtlasTypography.headline)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .frame(maxWidth: .infinity)
-                    .padding(.horizontal, AtlasSpacing.lg)
-                    .padding(.top, AtlasSpacing.sm)
-                    .padding(.bottom, AtlasSpacing.md)
-
-                ScrollView {
-                    LazyVStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                        // Quick-resume banners — surface above the main
-                        // list when the user has progress to pick up.
-                        if let resumeTour = continueListeningTour {
-                            quickResumeBanner(tour: resumeTour, label: "Continue listening")
-                                .id("continue-listening")
-                        }
-                        if let recentTour = recentlyViewedTour {
-                            quickResumeBanner(tour: recentTour, label: "Recently viewed")
-                                .id("recently-viewed")
-                        }
-
-                        if displayedTours.isEmpty {
-                            emptyState
-                        } else {
-                            ForEach(displayedTours) { tour in
-                                TourListCard(
-                                    tour: tour,
-                                    maker: dataService.maker(for: tour),
-                                    isDownloaded: tourDownloader.isDownloaded(tourId: tour.id),
-                                    distanceText: distanceText(for: tour),
-                                    isSelected: selectedTourId == tour.id
-                                )
-                                .id(tour.id)
-                                .padding(.horizontal, AtlasSpacing.lg)
-                            }
-                        }
-                    }
-                    .padding(.vertical, AtlasSpacing.sm)
-                }
-                .onChange(of: selectedTourId, initial: false) { _, newId in
-                    guard let newId else { return }
-                    withAnimation(.easeInOut(duration: 0.25)) {
-                        proxy.scrollTo(newId, anchor: .top)
+    private var mapControlStack: some View {
+        VStack(spacing: AtlasSpacing.sm) {
+            Menu {
+                Picker("Map type", selection: $mapMode) {
+                    ForEach(MapMode.allCases) { mode in
+                        Label(mode.title, systemImage: mode.iconName).tag(mode)
                     }
                 }
+            } label: {
+                MapControlButtonLabel(systemImage: mapMode.iconName)
             }
+            .accessibilityLabel("Map type — \(mapMode.title)")
+
+            MapControlButton(systemImage: "location.fill") {
+                recenterOnUser()
+            }
+            .accessibilityLabel("Recenter on my location")
         }
     }
 
-    private func quickResumeBanner(tour: Tour, label: String) -> some View {
-        NavigationLink {
-            TourDetailView(tour: tour)
-        } label: {
-            HStack(spacing: AtlasSpacing.md) {
-                HeroImageView(
-                    imageName: tour.heroImageURL,
-                    height: 48,
-                    cornerRadius: 8,
-                    category: tour.primaryCategory
-                )
-                .frame(width: 48)
-
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(label)
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.tertiaryText)
-                    Text(tour.title)
-                        .font(AtlasTypography.body)
-                        .foregroundStyle(AtlasColors.primaryText)
-                        .lineLimit(1)
-                }
-
-                Spacer()
-
-                Image(systemName: "chevron.right")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-            }
-            .padding(.horizontal, AtlasSpacing.md)
-            .padding(.vertical, AtlasSpacing.sm)
-            .background(.regularMaterial, in: RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
+    /// Single-action recenter: snap the camera to the user's current
+    /// location at the standard zoom, 2D, North-up. `.region(...)`
+    /// sets a non-tilted, north-aligned camera by default.
+    private func recenterOnUser() {
+        guard let user = locationManager.userLocation else { return }
+        let region = MKCoordinateRegion(
+            center: user.coordinate,
+            span: Self.recenterSpan
+        )
+        withAnimation(.easeInOut(duration: 0.8)) {
+            cameraPosition = .region(region)
         }
-        .buttonStyle(.plain)
-        .padding(.horizontal, AtlasSpacing.lg)
     }
 
     // MARK: - Derived
 
-    /// Tours after the category-chip filter is applied.
+    /// Tours after the category-chip filter is applied. Fed to the
+    /// map's pin set. The drawer's filtered list is computed in
+    /// `HomeDrawerContent` from the same `sharedState.selectedCategory`.
     private var filteredTours: [Tour] {
-        guard let selectedCategory else { return dataService.tours }
-        return dataService.tours.filter { $0.primaryCategory == selectedCategory }
-    }
-
-    /// Tours visible in the drawer list — filter + distance-sort.
-    private var displayedTours: [Tour] {
-        let base = filteredTours
-        guard let userLocation = locationManager.userLocation else { return base }
-        return base.sorted { $0.distance(from: userLocation) < $1.distance(from: userLocation) }
-    }
-
-    private var continueListeningTour: Tour? {
-        libraryStore.entries
-            .filter { $0.listenedSeconds > 0 && $0.completedAt == nil }
-            .sorted { ($0.savedAt ?? .distantPast) > ($1.savedAt ?? .distantPast) }
-            .compactMap { dataService.tour(by: $0.tourId) }
-            .first
-    }
-
-    private var recentlyViewedTour: Tour? {
-        // Skip if it'd duplicate the continue-listening banner.
-        let cont = continueListeningTour?.id
-        return recentlyViewedStore.tourIds
-            .compactMap { dataService.tour(by: $0) }
-            .first { $0.id != cont }
-    }
-
-    /// Show all `TourCategory` cases as filter-chip placeholders for
-    /// now. Owner direction: surface the chip taxonomy even before
-    /// every category has content. Categories with no tours filter
-    /// to an empty list when tapped — fine as a placeholder; will
-    /// likely refine once M-launch-content populates the catalog.
-    private var chipPlaceholderCategories: [TourCategory] {
-        TourCategory.allCases
-    }
-
-    private var toursInView: [Tour] {
-        guard let region = visibleRegion else { return filteredTours }
-        return filteredTours.filter { region.contains($0.coordinate) }
-    }
-
-    private var headerText: String {
-        let n = toursInView.count
-        switch n {
-        case 0: return "No tours in view"
-        case 1: return "1 tour in view"
-        default: return "\(n) tours in view"
+        guard let selectedCategory = sharedState.selectedCategory else {
+            return dataService.tours
         }
+        return dataService.tours.filter { $0.primaryCategory == selectedCategory }
     }
 
     private func distanceText(for tour: Tour) -> String? {
         guard let user = locationManager.userLocation else { return nil }
         return AtlasFormatters.distanceAway(meters: tour.distance(from: user))
     }
-
-    private var emptyState: some View {
-        VStack(spacing: AtlasSpacing.md) {
-            Image(systemName: "magnifyingglass")
-                .font(.system(size: 40))
-                .foregroundStyle(AtlasColors.secondaryText.opacity(0.4))
-            Text(selectedCategory == nil ? "No tours yet" : "No tours in this category")
-                .font(AtlasTypography.headline)
-                .foregroundStyle(AtlasColors.primaryText)
-            Text(selectedCategory == nil
-                 ? "Check back soon — Atlas is preparing its first audio tours."
-                 : "No tours in this category yet — try a different one or clear the filter.")
-                .font(AtlasTypography.body)
-                .foregroundStyle(AtlasColors.secondaryText)
-                .multilineTextAlignment(.center)
-        }
-        .frame(maxWidth: .infinity)
-        .padding(.top, AtlasSpacing.xl)
-        .padding(.horizontal, AtlasSpacing.lg)
-    }
 }
 
-private enum LocationTrackingMode {
-    case none, follow, followWithHeading
+/// The three Apple-Maps map types Atlas exposes via the map-mode
+/// selector. `iconName` is the SF Symbol shown on the selector button
+/// when this mode is active.
+enum MapMode: String, CaseIterable, Identifiable {
+    case standard, hybrid, imagery
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .standard: return "Standard"
+        case .hybrid:   return "Hybrid"
+        case .imagery:  return "Satellite"
+        }
+    }
 
     var iconName: String {
         switch self {
-        case .none:              return "location"
-        case .follow:            return "location.fill"
-        case .followWithHeading: return "location.north.line.fill"
+        case .standard: return "map"
+        case .hybrid:   return "map.fill"
+        case .imagery:  return "globe.americas.fill"
         }
     }
 }

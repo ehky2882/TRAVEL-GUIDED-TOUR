@@ -1,527 +1,365 @@
 # CLAUDE.md
 
-Guidance for Claude Code (claude.ai/code) when working in this repository.
+## Project: Atlas
 
-> **How to read this file (for the human owner):** every technical term has
-> a plain-English analogy in parentheses right after it. The file is dense
-> on purpose because Claude reads it at the start of every session — but you
-> should be able to read along by leaning on the analogies. If a sentence
-> still doesn't make sense after the analogy, that's a bug — ask Claude to
-> rewrite it.
+GPS-anchored audio tour platform. Makers record audio; consumers browse, download, and play while walking — audio auto-triggers at each stop. Closer to AllTrails than a guidebook.
 
-## Project Overview
+**Spec:** `atlas_claude_code_prompt.md` — read before product decisions.
+**Execution plan:** `ROADMAP.md` — read before implementation decisions.
+**V1:** Consumer-side only. No backend, auth, payments, or maker upload.
 
-The **product** is **Atlas** — a creator platform for **GPS-anchored
-audio tours**. Makers record audio about a place (a single piece on
-one location, or a multi-stop walking tour); consumers browse tours
-near them, download for offline listening, and play them while
-walking — with audio that automatically triggers at each stop. Shape
-of the product is closer to AllTrails or Atlas Obscura than to a
-guidebook. (See `atlas_claude_code_prompt.md` for the canonical
-spec.)
+Multi-platform SwiftUI. iOS 26.2 / macOS 26.2 / visionOS 26.2.
 
-> **Pivot history (May 2026):** Atlas was *originally* spec'd as an
-> "editorial city guide" (Monocle-style). The product pivoted to
-> the audio-tour creator platform described above. The reshape is
-> complete on `main` — the old `SeedData.json` / `City` / `Place`
-> code is gone; the audio-tour data model, audio engine, and
-> feature views are in. The Xcode project folder name —
-> `TRAVEL GUIDED TOUR` — is now more on-point than it was originally;
-> in code, copy, and conversation the product is Atlas.
+## Session workflow
 
-**V1 is consumer-side only.** Atlas team creates the launch content;
-no backend, no auth, no payments, no in-app maker upload. See
-`atlas_claude_code_prompt.md` § V1 scope.
+- **Web sessions** (like this one) are for project management, content uploads, and planning. Code changes happen here only when they're small and self-contained.
+- **Implementation work** (new features, refactors, UI changes) → owner spawns a new session and creates a new branch. This keeps the main project-management session context clean.
+- Owner does not use Terminal. Claude handles all shell/git work.
 
-The canonical product spec is `atlas_claude_code_prompt.md` at repo
-root — read it before making product decisions. The execution plan
-is `ROADMAP.md` at repo root — read it before making implementation
-decisions.
+## Claude Automation Rules
 
-Multi-platform SwiftUI app (SwiftUI = Apple's modern toolkit for building
-app screens — think LEGO bricks for iPhone interfaces). Runs on iOS 26.2
-(iPhone/iPad), macOS 26.2 (Mac), visionOS 26.2 (Apple Vision Pro headset)
-— same app body, three different "TVs" it can play on.
+These happen **automatically, without the owner asking**.
 
-## Current State (V1 functionality + audit cleanup complete; background audio bug fixed)
+| # | Trigger | What Claude does automatically |
+|---|---------|-------------------------------|
+| 1 | Every session start | Run full git/PR health check (§ Session-start ritual) + read latest HANDOFF file — before any other work |
+| 2 | After any edit to `Resources/Tours.json` | Run `swift scripts/validate-tours.swift`; fix errors before continuing |
+| 3 | Before pushing any code PR | Call `test_sim` (XcodeBuildMCP); fix failures before pushing |
+| 4 | Doc-only / content-only / asset PR is ready (CI green) | Squash-merge to `main` automatically — no owner approval gate. Resolve merge conflicts in-line. Delete the merged branch. **Code PRs (anything in `*.swift`, `*.xcodeproj`/`*.pbxproj`, `Assets.xcassets/`) wait for explicit owner OK + visual simulator confirmation — see § Merging PRs for the exact boundary.** |
+| 5 | Session ends (touched code or content) | Update `CLAUDE.md` + `ROADMAP.md` in same commit; write `archive/HANDOFF-YYMMDD.md`; update `archive/README.md` |
+| 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
+| 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
 
-Every V1 functionality milestone in `ROADMAP.md` is shipped on `main`.
-The AllTrails-style home redesign landed via PR #31 on 2026-05-18 and
-is now the production home. On 2026-05-19, the first TestFlight build
-(1.0/1) was uploaded to App Store Connect. On 2026-05-20, the pre-M-qa
-audit cleanup batch shipped via PR #51 — closing all remaining P1
-findings, the actionable P2 findings (accessibility + locale-aware
-formatters), three small P3 findings, and adding the Option A data
-layer for the hero image carousel (`additionalImageURLs: [String]?`).
-On 2026-05-20 M-qa on device uncovered a critical bug: `UIBackgroundModes: audio`
-was silently dropped from the compiled Info.plist because Xcode ignores
-`INFOPLIST_KEY_UIBackgroundModes` for array-type keys. Fixed by creating an
-explicit `Info.plist` at repo root and switching both app target configs to
-`GENERATE_INFOPLIST_FILE = NO` + `INFOPLIST_FILE = Info.plist`; shipped via
-PR #53. M-qa background-audio step passed on build 1.0/3. On 2026-05-20
-evening a Mac session shipped — directly to `main` — home-screen UX work
-(unified opaque island, expanded default drawer, map-pan retraction, taller
-peek), the PlayerView image carousel, the location-button rework (Apple-style
-tracking-mode cycling + blue user dot), MakerView avatar/thumbnail fixes, and
-the seed-tour / ESB-GPS / hero-image fixes, then uploaded TestFlight build
-**1.0 (4)** carrying all of it.
-What's left for V1: run the M-qa 10-step checklist on device against build
-1.0 (4), more **M-launch-content** tours if desired (currently 10 of 5–15),
-and the deferred **design / polish pass**.
+## Current State (2026-06-02)
 
-What's true today (2026-05-20):
+### Home polish batch + cluster smoothness + TestFlight 1.0 (25) (session 17)
 
-- `ContentView.swift` uses a custom `AtlasTabBar` (3 tabs: **Home /
-  Library / Me**) shaped to match the home drawer's width/inset/
-  corners so they read as one "floating island."
-- `Features/Home/` is the AllTrails-style layout: full-screen map +
-  filter chip row + vertical tour list in a persistent bottom drawer
-  + a floating location button (Apple-style: tapping cycles none →
-  follow → follow-with-heading; falls back to a custom button because
-  `MapUserLocationButton` does not render reliably as a free-floating
-  view).
-- `Resources/Tours.json` has **10 real tours** (NYC: Grand Central
-  south facade, Times Square TKTS, South Street Seaport, Empire State
-  Building, Statue of Liberty, Brooklyn Bridge, Rockefeller Center,
-  Met 5th Ave Steps, High Line, 9/11 Memorial). Seed tours (Cooper
-  Hewitt, Architects of Hidden Brooklyn) removed. ~26 min total audio.
-  Spans 4 categories (history 5, architecture 4, natureAndParks 1,
-  culturalHeritage 1). Empire State Building GPS corrected to
-  40.748434, -73.984571. Audio hosted on the `gh-pages` branch (served at
-  `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`).
-  GitHub Releases tried first but serves wrong MIME type — see
-  `docs/cdn-decision.md`.
-- **Photographic content + carousel shipped** (2026-05-20): 3 Times Square
-  photos on `gh-pages` at `/images/`. Times Square tour uses a real
-  `heroImageURL` and populates `additionalImageURLs: [String]?`. Both
-  `TourDetailView` and `PlayerView` render all images as a paged
-  `TabView(.page)` carousel (inset from screen edges with corner radius)
-  when `additionalImageURLs` is non-empty, otherwise fall back to the
-  single `HeroImageView`. `HeroImageView` fixed to properly constrain
-  `scaledToFill()` layout so card sizing is stable in all contexts.
-- **Pre-M-qa audit closed** (PR #51, 2026-05-20). P0 findings closed
-  earlier; P1 batch (5 findings: sort key, avatar, player-tour ID,
-  remote image loading, antimeridian), P2 cleanup (BottomSheet
-  VoiceOver, location-denied deep link, locale-aware
-  `AtlasFormatters`), and P3 small fixes (permission gate, search
-  tag/description matching, alphabetical ManageDownloads) all
-  shipped. P3-4 download retry with exponential backoff also
-  shipped. A few P3 items intentionally deferred — see
-  `ROADMAP.md` § M-qa for the live checklist.
-- **Audio playback** runs through `Audio/AudioPlayerService.swift`
-  (AVQueuePlayer + lock-screen integration + audio session
-  interruption + headphone-unplug handling).
-  `UIBackgroundModes` → `audio` is enabled.
-- **Offline playback** runs through `Audio/TourDownloader.swift`;
-  managed from Settings → Manage Downloads.
-- **Geofencing** ships with both
-  `NSLocationWhenInUseUsageDescription` and
-  `NSLocationAlwaysAndWhenInUseUsageDescription` set; foreground
-  notifications display via a `UNUserNotificationCenterDelegate`.
-- **Appearance toggle** in Settings (System / Light / Dark) backed
-  by `@AppStorage("colorSchemePreference")`, applied app-wide via
-  `.preferredColorScheme(...)` in `TRAVEL_GUIDED_TOURApp.swift`.
-- **Unit test target** wired (PR #33) — `TRAVEL GUIDED TOURTests`
-  XCTest bundle with 6 test classes; Cmd-U runs locally, same suite
-  runs on CI per PR.
-- **TestFlight signing wired** (2026-05-19):
-  `DEVELOPMENT_TEAM = CPC7M72JTP` in `project.pbxproj`, Apple
-  Distribution certificate in macOS Keychain, iPhone UDID registered
-  with team, App Store Connect record + privacy policy + App Privacy
-  questionnaire all complete. Per-release upload flow documented in
-  `docs/testflight.md` (~10 min active per upload).
-- `Assets.xcassets/AppIcon.appiconset/atlas-icon-1024.png` is a
-  **placeholder** (green sphere on black). Universal iOS slot only —
-  dark/tinted/macOS slots empty. M-polish-icon will replace.
-- `Assets.xcassets/AccentColor.colorset` is terracotta `#B85042`
-  (light) with a lighter dark-mode variant.
-- Theme tokens in `Theme/Atlas{Colors,Typography,Spacing}.swift` are
-  still **placeholder values** pending the deferred design pass.
+Long iterative implementation session — owner sat at the sim and asked for one or two changes at a time, I implemented + rebuilt + relaunched, they reviewed and either kept iterating or moved on. Most changes are 1-2 lines but they add up to a meaningful refresh of the home chrome. Cluster smoothness (item #6 from the original 11-item brief) also landed.
 
-See `ROADMAP.md` for milestone-by-milestone history and remaining
-work, the latest `archive/HANDOFF-*.md` for the most recent session
-handoff snapshot, `docs/troubleshooting.md` for Xcode + git landmines
-documented from real incidents, and `docs/testflight.md` for the
-TestFlight upload runbook (per-release ~10-min flow + first-time setup
-historical reference). **First session under a new Claude account?**
-Also read `archive/ACCOUNT-TRANSFER-260520.md` for cold-start
-orientation + working-style notes.
+- **[PR #113](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/113) — home polish batch.** Search bar + chip row tightened (`AtlasSpacing.searchBarHeight` 46 → 44 to match the 44pt map control button diameter; horizontal padding `lg` (24) → `md` (16)). Recenter button zoom widened `0.005°` → `0.02°` (~2km neighborhood view; initial-launch span `0.1°` from PR #103 unchanged). New `Maker.avatarEmoji: String?` field — Atlas Studio NYC maker shows **🍎** in mini-player + maker page; resolution order is emoji → URL → bundled fallback. Typography tokens overhauled: `caption` is now **13pt SF Mono regular** (was `Font.caption` 12pt SF Pro); `body` is now **15pt SF Pro regular** (was `Font.body` 17pt; pinned fixed-size so Dynamic Type stops scaling that token — flagged in code comment as a follow-up). `captionSerif` doc clarified that it intentionally diverges from caption now and stays at SwiftUI's semantic placeholder. "N tours in view" header dropped headline → body → finally **caption**, with all variant strings **ALL CAPS** (`LET'S EXPLORE TOGETHER!`, `NO TOURS IN VIEW`, etc.); the animated dot cycle for mid-pan is unchanged. Map control glyphs 16 → 20pt. Tab bar icons 22 → 20pt; tab labels uppercased at display site (enum value stays proper-cased so VoiceOver pronounces "Home" as a word). Mini-player: title `caption` → `body`; title strings uppercased; play/pause glyph 18 → 20pt (matches skip-forward); leading inner inset `lg` → `md` (avatar's left edge 16pt from bar left edge); new `trailingInnerInset: CGFloat = 12` (ring's outer right edge 16pt from bar right edge); bodyContent HStack spacing `sm` → `md` (avatar→text gap 8 → 16pt); outer body HStack spacing `sm` → 0 (skip-glyph right edge → ring left edge lands at exactly 16pt visually, derived from `44 − 10 − 18` with controls edge-to-edge but glyphs centered). Drawer `BottomSheet.topCornerRadius` 30 → **28pt** (bottom radius / phone-radius 56 unchanged).
+- **Cluster smoothness — item #6 closed.** Original brief said clusters morphed on pure pan. Code already used an absolute (lat=0, lon=0) grid origin so it *should* have been stable; on-device review proved otherwise. Cause: cell pitch derives from `region.span / cellsAcross`, and MapKit reports sub-percent drift on `region.span` when a pan gesture settles even without zoom — any drift re-buckets markers near cell boundaries. Fix: new `HomeMapSection.snappedSpan(_:)` static helper rounds the span to two significant figures before cell pitch is computed. Sub-percent drift collapses to a single value; real pinch-zoom (always several percent per step) still crosses snap boundaries cleanly. Pin diameters were already constants; no change there.
+- **[PR #114](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/114) — build bump 24 → 25.** Admin-merged. `xcodebuild archive` clean at `/tmp/Atlas-20260602-2310.xcarchive`; owner uploaded via Organizer. **TestFlight 1.0 (25) is live.**
 
-## Keep these docs in sync
+`xcodebuild test` succeeds locally on iPhone 17 Pro / 26.5 throughout the session.
 
-**Rule:** every session that ships a milestone, cuts scope, or
-changes the "what's true today" state of the project updates
-`CLAUDE.md` (this file) and `ROADMAP.md` *in the same commit* —
-never as a follow-up.
+**Latest TestFlight build: 1.0 (25)** — uploaded 2026-06-02 evening.
 
-Concretely, before ending a session that touched feature code,
-check whether:
-- the **Current State** section above still describes reality
-- the **Architecture** folder map still matches the on-disk layout
-- the relevant **ROADMAP** milestone is marked ✅ Done (PR #N) and
-  any decisions / cuts / follow-ups are recorded
+### TestFlight 1.0 (24) + 11 Portugal tours (session 16 — web/PM)
 
-If yes, no doc change needed. If no, fix it in the same commit as
-the code change. Stale docs poisoned a recent session (Claude
-reported "all milestones done" without knowing about PR #19's home
-redesign) — the rule prevents a repeat.
+Web/PM session — single 11-tour Portugal batch under PR [#110](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/110), then build bump 23 → 24 via PR [#111](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/111) (admin-merged, single-line metadata). `xcodebuild archive` clean at `/tmp/Atlas-20260602-2146.xcarchive`; owner uploaded via Organizer. **TestFlight 1.0 (24) is live.**
 
-Temporary session-bridge notes don't live at repo root. If a
-session needs one, fold the permanent content into `CLAUDE.md` /
-`ROADMAP.md` before the session ends and move the snapshot to
-`archive/` with a `YYMMDD` suffix (e.g. `archive/HANDOFF-260518.md`).
+- **11 new Portugal tours** (catalog 102 → 113, 105 → 117 stops):
+  - **Atlas Studio Porto (8):**
+    - Batalha Centro de Cinema (Porto, culturalHeritage, 167s) — 1947 Art Deco cinema, Estado Novo censors destroyed the hammer-and-sickle facade; restored in 2022 stainless steel; Atelier 15 renovation
+    - Building in Senhora da Luz (Porto, architecture, 139s) — Souto de Moura, 2016; Foz do Douro 3-family apartment block with exposed-concrete grid on east/west elevations
+    - Mosteiro Santo Agostinho da Serra do Pilar (Vila Nova de Gaia, sacredSites, 151s) — 1538–1670 UNESCO monastery, Portugal's only circular cloister; Wellington spotted the wine barges from here in 1809
+    - Teatro Rivoli (Porto, musicAndPerformance, 167s) — Júlio Brito Art Deco redesign, 1923; Praça Dom João I, opposite Porto City Hall; Fantasporto host
+    - Trindade Metro Station (Porto, architecture, 146s) — Souto de Moura, six-line interchange, white-tile pavilions + 736-tile 2025 azulejo mural for the Carnation Revolution's fiftieth
+    - Vodafone Headquarters (Porto, architecture, 158s) — Barbosa & Guimarães, 2009; faceted concrete shell on Boavista, structure-as-skin (no internal frame)
+    - Municipal Library of Viana do Castelo (Viana do Castelo, literature, 158s) — **first Viana do Castelo tour** — Álvaro Siza, 2008; 45m white-concrete square with 20m void cut through the upper volume, in Távora's waterfront master plan
+    - Biblioteca Pública e Arquivo Regional Luís da Silva Ribeiro (Angra do Heroísmo, literature, 167s) — **first Azores tour in catalog** — Inês Lobo; Mies van der Rohe Award nominee 2017; UNESCO Angra
+  - **Atlas Studio Lisbon (3):**
+    - Adega Mayor (Campo Maior, architecture, 135s) — **first Campo Maior + first Alentejo tour** — Álvaro Siza, 2006 winery for the Nabeiro coffee family; 120m white facade on the Spanish border plain
+    - Óbidos (Óbidos, culturalHeritage, 155s) — **first Óbidos tour** — Vila das Rainhas; 1,565m of medieval walls; the keep is a layered Moorish / 1148-reconquest / 1755-earthquake palimpsest
+    - Capela do Monte (Lagos, sacredSites, 173s) — **first Lagos + first Algarve tour** — Álvaro Siza, 2016; his only Algarve building; 10×6m non-denominational hilltop chapel above Monte da Charneca, no electricity / heating / running water
+- Audio (11 MP3s, slug-based) uploaded across 3 chunked commits — `f4e849d`, `259309d`, `7a67dc9` — after persistent HTTPS 408s on the combined push.
+- Images (42 webp + 3 jpg-for-Adega) at commit `24c6e36`. Naming follows the established `<Base>_hero.<ext>` / `<Base>_N.<ext>` pattern.
+- All 22 live-URL spot-checks (11 audio + 11 heroes) returned 200 against `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/`.
+- Validator: 3 makers / 113 tours / 117 stops, no issues. CI green (validator + iOS Simulator build + unit tests).
+- **Atlas Studio Porto** grows 22 → 30 tours; **Atlas Studio Lisbon** grows 2 → 5.
+- **New cities in catalog (5):** Viana do Castelo, Angra do Heroísmo, Campo Maior, Óbidos, Lagos. Mainland Portugal coverage now spans north (Viana / Porto / Braga / Marco de Canaveses / Gondomar / Matosinhos / Vila Nova de Gaia), centre (Óbidos), Lisbon belt (Lisbon / Cascais), Alentejo (Campo Maior), Algarve (Lagos) — plus Terceira (Azores).
 
-## Session-start ritual
+**Latest TestFlight build: 1.0 (24)** — uploaded 2026-06-02 via Organizer.
 
-Before doing anything substantive in a session — especially the
-first action that opens Xcode or runs the app — verify the local
-state. This prevents the "why doesn't my simulator show last
-night's work?" confusion (see `docs/troubleshooting.md` § 1).
+### Home-screen polish pass + TestFlight 1.0 (23) (session 15)
+
+Eleven-item home-screen polish brief from the owner. Seven items implemented and shipped across two PRs; three deferred as informational; one (clustering) parked for a future visual verify.
+
+- **[PR #103](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/103) — items #1 + #4 (map cleanup).** Default location at launch is now location-based: on first appear the camera recenters on `locationManager.userLocation` at a wider span (`initialUserSpan = 0.1°` ≈ 11 km N-S, ~Manhattan length). Guarded by `didCenterOnUser` so subsequent location updates don't snatch the camera back from user pans. When permission is denied / no reading arrives, the existing NYC fallback region is retained (permission was already requested at `ContentView.onAppear`). Recenter button keeps the tighter 0.005° span. Look Around button + probe + `LookAroundView.swift` removed entirely; map-mode picker and recenter are the only two map controls now.
+- **[PR #104](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/104) — items #5, #7, #9, #10, #11 (drawer + cards).** Drawer's `.large` detent now caps below the search bar + chip row via a new `BottomSheet.topReservedHeight` parameter (search/chips stay anchored above when fully expanded). New `AtlasSpacing.searchAndChipsBlockHeight` token (`sm + searchBarHeight + sm + searchBarHeight = 108 pt`) is the single source of truth for the search/chips block. `PlacecardView` background swapped from `.regularMaterial` to `AtlasColors.secondaryBackground` (matches drawer / bars / search / chips). `TourListCard` hero corner: category badge replaced by a bookmark Button wired to `LibraryStore.toggleSaved` / `isSaved`; category dropped from the card. `isMapMoving` lifted from `HomeView.@State` into `HomeSharedState`; drawer header shows a `TimelineView`-driven `. / .. / ...` dot cycle (0.4 s period) while the map is mid-pan, instead of letting the count flicker through "0 tours in view."
+- **Drawer-gap bug fixed mid-review.** Initial `BottomSheet.heightForDetent(.large)` formula was `topGap = topInset + topReservedHeight` — but the GeometryReader's bounds already start below the device top safe area while `geo.safeAreaInsets.top` still **reports** the device's actual inset value (it describes the device, not what remains to consume). The `+ topInset` was double-counting the offset by ~59 pt. Discovered via bright-magenta diagnostic per `feedback-visual-debugging.md`; removed in BottomSheet and in both `drawerVisibleHeight` mirrors (HomeView, HomeDrawerContent). Gap is now mathematically and visually `AtlasSpacing.sm` (8 pt), matching the search-bar-to-chips gap.
+- **[PR #105](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/105) — build bump 21 → 22 for TestFlight.** Merged with `--admin` (metadata-only). `xcodebuild archive` clean at `/tmp/Atlas-20260601-2233.xcarchive`; owner uploaded via Organizer.
+- **[PR #107](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/107) — drag clamp.** Owner reviewed 1.0 (22) on device and reported that the drawer could be dragged past `.large` (covering the search bar / chip row) before snapping back on release. Cause: drag-time visual ceiling in `BottomSheet.body` was `geo.size.height - horizontalInset` (nearly full screen). Fix: clamp the ceiling to `heightForDetent(.large, ...)` so the drawer can never grow past the resolved `.large` height during a gesture. `.large` already respects `topReservedHeight` so the drag visually bounds where the snap will land.
+- **[PR #108](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/108) — build bump 22 → 23.** Admin-merged. `xcodebuild archive` clean at `/tmp/Atlas-20260601-2302.xcarchive`; owner uploaded via Organizer. **TestFlight 1.0 (23) is live.**
+
+**Deferred / informational only (no code change this session):**
+
+- **#2 search bar + chip height vs map button diameter.** Measured map buttons at 44 pt; search bar + chips at 46 pt (2 pt difference). Owner declined the match for now.
+- **#3 typography audit.** Home uses 3 text styles (body / caption / headline) plus 3 SF-Symbol sizes (12 / 16 / 40 pt). Already at the floor; further reduction would crush hierarchy.
+- **#8 horizontal alignment.** Today the bottom module sits at 8 pt, map buttons at 16 pt, search/chips at 24 pt. Three gutters; owner has the numbers.
+- **#6 clustering smoothness.** Code already uses an absolute (lat=0, lon=0) grid origin so panning without zoom should not re-cluster, and pin diameters are constant across zoom. Skipped a code change pending a visual verify together — not done this session.
+
+84/84 tests pass after both PRs and after the diagnostic-driven gap fix.
+
+**Latest TestFlight build: 1.0 (23)** — uploaded 2026-06-01.
+
+### TestFlight 1.0 (21) + 6 Porto-area tours (session 14 — web/PM)
+
+Session 14 was a web-only PM session — six new tours under Atlas Studio Porto, then TestFlight build 21 cut to ship them. Tours landed via [PR #100](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/100); build bump via [PR #101](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/101) (auto-merge classifier flagged the historical direct-to-main bump pattern, so this one went via short-lived PR).
+
+- **6 new Porto-area tours** (catalog 91 → 97):
+  - Porto Tram Museum (Porto, culturalHeritage, 172s) — Massarelos thermoelectric station, 1915
+  - Church of Santa Maria (Marco de Canaveses, sacredSites, 188s) — Álvaro Siza, 1996; **first Marco de Canaveses tour**
+  - Fundação Livraria Lello (Matosinhos, culturalHeritage, 148s) — foundation HQ in the 14th-c Mosteiro de Leça do Bailio on the Portuguese Camino
+  - Livraria Lello (Porto, culturalHeritage, 176s) — Art Nouveau bookstore, 1906 — Esteves' first reinforced-concrete staircase in Portugal
+  - Parque de São Roque (Porto, natureAndParks, 161s) — former Calém Port-wine Quinta da Lameira; garden by Jacinto de Matos 1900–1911
+  - Pavilhão Multiusos de Gondomar (Gondomar, architecture, 164s) — Álvaro Siza, 2007; **first Gondomar tour**
+- Audio (6 MP3s, slug-based) + 28 webps uploaded to `gh-pages` (commits `332367f` audio, `2f3dc04` images).
+- **The two Lellos ship as distinct tours, owner-confirmed.** Foundation entry's longDescription leads with the Knights Hospitaller monastery on the Camino and Siza's foot-washing fountain (the foundation is a closing note); bookstore entry's longDescription leads with Decus in Labore, the 1906 Esteves staircase, Viúva Lamego skylight, and the Rowling-denied Harry Potter mythology.
+- **Catalog: 97 tours, 3 makers**. New cities in catalog: **Marco de Canaveses**, **Matosinhos**, **Gondomar** (Matosinhos hosts the Leça do Bailio monastery; Leça da Palmeira was already present from prior Porto batches).
+- Build bumped 20 → 21; archive at `/tmp/Atlas-20260601-2057.xcarchive`; owner uploaded via Organizer. **TestFlight 1.0 (21) is live.**
+
+**Latest TestFlight build: 1.0 (21)** — uploaded 2026-06-01 via Organizer.
+
+### 10 new NYC tours + coordinate/hero fixes (session 13 — web/PM)
+
+Session 13 was a web-only PM session — no Swift changes. All commits direct to `main`.
+
+- **10 new NYC tours added** (catalog 81 → 91): Domino Park (Brooklyn), Wave Hill (Bronx), Queens Museum, Museum of the Moving Image, Snug Harbor Cultural Center (Staten Island), Yankee Stadium (Bronx), Citi Field, Madison Square Garden, Riverside Church, One World Trade Center. All Atlas Studio NYC, single-stop, geofenced. Audio on `gh-pages`; all hero images verified live.
+- **Hero image audit** — all 10 new tours had guessed/broken Wikimedia URLs on first commit; all fixed with verified hash paths.
+- **Coordinate fixes** — The Cloisters (`40.865220, -73.931122`, was wrongly in NJ) + Beacon Theatre (`40.780491, -73.981257`).
+- **Flatiron Building hero** replaced: wide landscape → nearly-square portrait (3024×3903) from the prow angle, CC BY-SA 4.0. Better fit for square card frames.
+- **Catalog: 91 tours, 3 makers, 73 NYC-area.** Build still 1.0 (19).
+
+**TestFlight at session-13 end: 1.0 (19)** — uploaded from local session 2026-05-31. (Superseded by 1.0 (21) in session 14.)
+
+### TestFlight 1.0 (17) + tour-detail retool + light-mode fix + 6 new tours (session 12)
+
+Session 12 batched four parallel-session landings, then cut TestFlight build 1.0 (17). Build bump `f359f55` direct to main; archive at `/tmp/Atlas-20260529-1626.xcarchive`; owner uploaded via Organizer.
+
+- **PR #93 — tour-detail masthead + toolbar + overflow menu.** Toolbar is X close (left) · Save (right) · ellipsis overflow menu (right) with no title text (the body's title carries page identity). Overflow menu: Download · Save · Share · *Follow creator (disabled)* · Go to creator · *Report a concern (destructive)*. Masthead: square-cornered hero · title · maker row · subtitle line (`3 min · 1 stop · 455 ft away`; multi-stop swaps in `… · 1.2 mi walk`) · inline button row above the description · description peek with soft fade-mask. Inline button row repeated at the bottom of the scroll body. Carousel gets a `N photos` overlay pill when >5 images. Stops section header unified to `Stops` for single + multi. **PR #93 is part 1 of 2** — part 2 (not yet shipped) reshapes stops into a numbered timeline with thumbnails + animated `waveform` now-playing indicator, and rewires Start Tour to non-modal playback start.
+- **PR #95 — light-mode tab bar fix.** Bottom-module bars were showing inverted appearance (light fill in dark mode, dark fill in light mode) when the Settings appearance picker disagreed with the system. Root cause: SwiftUI's `.preferredColorScheme(...)` only propagates into a `WindowGroup`-owned window, NOT into the manually-created secondary `UIWindow` (`PassThroughWindow`) that hosts the bars. New `BottomModuleWindowController.apply(preference:)` sets `window.overrideUserInterfaceStyle` from the current `ColorSchemePreference`; called once in `.onAppear` and again on every `colorSchemePreference` change so the secondary window's trait collection mirrors the picker. The earlier `.preferredColorScheme` modifier inside the install closure (frozen at install time) was removed. PR #91's `secondaryBackgroundUIColor` dynamic-provider RGBs are untouched — chrome-seam guarantee preserved.
+- **Content additions: 6 new tours.** PR #92 added Casa das Histórias Paula Rego (Eduardo Souto de Moura, 2009) in Cascais — **first Cascais tour** + 2nd under Atlas Studio Lisbon. PR #94 added 5 Porto-area architecture tours under Atlas Studio Porto: Edifício Burgo (Souto de Moura, 2007), House at Rua do Crasto 213 (Souto de Moura, 2001), Leixões Cruise Terminal (Luís Pedro Silva, 2015), Majestic Café (João Queiroz, 1921), Piscina das Marés (Álvaro Siza, 1966). **New city: Leixões.** Catalog 53 → 59 tours.
+
+**Latest TestFlight build: 1.0 (17)** — uploaded 2026-05-29 via Organizer.
+
+### Bottom-module chrome-shade seam fix + bars-to-edges (session 11)
+
+PR #91 closes the "subtle chrome shade mismatch" known issue carried forward through sessions 8–10. The bump owner saw at the top of the *MINI PLAYER* when the tour detail sheet was up had two compounding causes:
+
+1. **Trait variance.** `Color(uiColor: .secondarySystemBackground)` resolves to a different RGB at `.base` vs `.elevated` `userInterfaceLevel`. The detail body lives in window 1 (.base); the bars in window 2 (`windowLevel = .normal + 1`, treated as elevated). Same semantic color → two different RGBs → visible chrome band at the boundary in dark mode.
+2. **Geometry.** The painted `Rectangle` in `BottomModuleRoot` ran edge-to-edge full-width, but the bars themselves were inset 8pt H — so the Rectangle peeked above the bars' top edge at the side corners, making the band particularly visible.
+
+Two coordinated changes in PR #91:
+
+- **`AtlasColors.secondaryBackground` → hardcoded RGB** via a `UIColor(dynamicProvider:)` block that keys only on `userInterfaceStyle`. No elevation variance. Light `#F2F2F7` / Dark `#1C1C1E` (Apple's `.base` shade — same as Settings/Music/Photos). New companion `AtlasColors.secondaryBackgroundUIColor` for UIKit consumers (`BottomLayerPresentation` sets the detail hosting view to this directly).
+- **Bars grow edge-to-edge on Library / Me / detail-up; island only on Home-no-detail.** New `extendsToScreenEdges` parameter on `MiniPlayerBar` + `AtlasTabBar`. When true: painted background extends to screen edges, square outer corners, painted 8pt strip below. When false: current Home form (inset 8pt H, rounded bottom corners, transparent strip). Buttons keep identical x positions via *inner* horizontal padding, so the design rule of "buttons identical everywhere" (PR #70, `feedback-atlas-module-design.md`) still holds. The separate window-2 `Rectangle` is gone — bars now own their fill in both modes.
+
+`BottomModuleRoot` is a clean VStack of two bars now; no extra fill behind them in either mode. `ContentView` paints no extra fill. The bottom module is one component now, not three layers across two windows.
+
+**TestFlight build 1.0 (16)** cut at session end — owner uploaded via Organizer.
+
+**Diagnostic workflow worth remembering** — bright contrasting test colors per painted surface (magenta sheet, cyan mini-player, yellow tab bar, orange behind-fill) turned a fuzzy "subtle hairline" complaint into a precise geometric finding within one screenshot. Saved as `feedback-visual-debugging.md`. Reach for it early when next debugging any multi-surface visual bug.
+
+**Parked for next bottom-module pass:** lift mini-player title to a stronger *TYPE STYLE* (both lines are `caption` today — no hierarchy); align skip-forward (size 20) + play/pause (size 18) glyph sizes; bump avatar 32pt → 36pt to match the play-ring diameter.
+
+### Content batch: gallery images + 3 new Portugal tours + Lisbon maker (session 9)
+
+Content-only PR train (#84–#90, all squash-merged). Two threads:
+
+**Task A — backfilled gallery images for 6 existing Porto/Braga tours.** PR #81's broken hero links resolved by uploading the actual webps to `gh-pages` and populating `additionalImageURLs` on each catalog entry. Tours updated: Bouça Housing Complex (+6 gallery), Chapel of Souls (+1 — `_tiles`), Capela do Senhor da Pedra (+1), Cantareira / Rua do Passeio Alegre 212 (+2), Casa de Chá da Boa Nova (+7), Braga Municipal Stadium (+3). Naming convention: `<slug>_hero.webp` for Main1/canonical shot + `<slug>_2.webp` … `<slug>_N.webp` for the gallery — except where the catalog had a pre-existing descriptive name (Chapel's `_tiles`).
+
+**Task B — 3 new single-stop tours.** Expo'98 Portuguese National Pavilion (Lisbon, 38.7660, -9.0950, 146s, +8 gallery images), Piscina da Quinta da Conceição (Matosinhos, 41.1978, -8.6849, 144s, +6), Porto School of Architecture / FAUP (Porto, 41.1499, -8.6364, 143s, +17). All architecture-category, geofenced. **New maker added:** "Atlas Studio Lisbon" (`B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA`) — the Expo'98 tour points at it; Piscina + FAUP stay on Atlas Studio Porto.
+
+**Catalog totals:** 53 tours, 3 makers, 57 stops (was 50/2/54 at session start). No `*.swift` changes this session.
+
+### UIKit-backed slide-up presentation + unified chrome (session 8)
+
+Replaces the SwiftUI `.offset` slide layer with a UIKit `UIPresentationController`-driven modal so the tour-detail view slides up *from behind* the persistent mini-player + tab bar — the Apple Music pattern. New machinery in `Components/`:
+
+- **`BottomModuleWindow.swift`** — installs a secondary higher-level `UIWindow` (`PassThroughWindow`, `windowLevel = .normal + 1`) that hosts the mini-player + tab bar. The window's `hitTest` returns hits only inside the bottom-inset strip; touches above pass through to the main window.
+- **`BottomModuleRoot.swift`** — SwiftUI root for window 2. Paints an edge-to-edge `secondaryBackground` Rectangle on every surface *except* Home (so Home keeps its floating-island look with map showing through the 8pt sides + 8pt outer strip).
+- **`BottomLayerPresentation.swift`** — `UIPresentationController` + slide-up/down animators. The presented view's frame is full-screen so it slides up *behind* window 2's mini-player + tab bar rather than stopping short. `BottomLayerContainerView` passes touches in the bottom strip through to window 2. `BottomLayerController` is the SwiftUI-facing public entry; `ContentView`'s `.onChange(of: tourPresenter.presentedTour?.id)` calls `present`/`dismiss`.
+- **`AppSharedState`** (`@Observable`) — `selectedTab` + `showingFullPlayer` shared across the two windows. `TourPresenter` was promoted from `ContentView` state to App-level state for the same reason.
+
+Other bottom-module geometry changes:
+
+- `MiniPlayerBar.topGap = 0` — the painted bar's top edge IS the top of the mini-player view; no transparent strip mid-bottom-region that reads as a hairline at the window-compositing boundary.
+- Tapping a tab while the detail is up auto-dismisses the detail (otherwise the new tab content swaps in *behind* the modal and the user appears stuck — icon updates, content doesn't).
+- `PassThroughWindow.hitTest` decides pass-through purely geometrically off the point. The earlier `hit === rootViewController?.view` check rejected legitimate SwiftUI Button taps (SwiftUI often returns the hosting view as the hit target), which is why Library / Me tabs initially weren't switching.
+
+Detail view rework:
+
+- Sticky action bar removed. Start Tour / bookmark / download buttons moved inline into the `ScrollView` body (after the stops list). Layout pass for the buttons comes later.
+- `.toolbarBackground(.hidden, for: .navigationBar)` so the nav bar's X + title sit on the body's `secondaryBackground` rather than the translucent material SwiftUI applies by default.
+- Top padding (`AtlasSpacing.md`) added between the nav bar and the hero image.
+- Hosting controller's view paints `UIColor.secondarySystemBackground` directly + `traitOverrides.userInterfaceLevel = .elevated` so the detail body resolves the *same shade* of `secondarySystemBackground` that window 2 resolves at its higher window level. (In dark mode UIKit's elevated-trait variant of `secondarySystemBackground` is slightly lighter than the base variant.)
+
+**Known issue: subtle chrome shade mismatch.** In dark mode the detail body still reads as a *very subtly* different shade than the mini-player + tab bar even with the `.elevated` trait override. Owner has noted this for a future polish pass — not a blocker for the build.
+
+### Tour-detail enter-slide mirror (session 7 — PR #78)
+
+Follow-up to PR #77's structural fix. Owner said exit is now perfect but enter still isn't the exact opposite. The remaining asymmetry was `AsyncImage`'s default transaction — a ~250ms crossfade from `.empty` placeholder to `.success` loaded image. On exit, the hero image is already loaded so no crossfade fires; on enter, the crossfade runs concurrent with the slide, reading as a fade-in stacked on the slide motion. Fix: new `disableLoadAnimation: Bool` parameter on `HeroImageView`, set to `true` only on the hero(s) in `TourDetailView`. Cached images (the common case — drawer's `TourListCard` and map's `PlacecardView` both load the same URL into URLCache before the user taps to open detail) now render frame-zero of the first body eval; uncached images snap in cleanly when they land. Other `HeroImageView` usages keep the default crossfade — those surfaces appear in place, not via a slide, so the crossfade is polish there.
+
+### Tour-detail slide animation fix (session 6 — PR #77)
+
+Resolves the open issue flagged at the end of session 5 (fade-from-drawer / fade-from-placecard). Two competing transitions were masking the layer's `.offset` slide:
+
+1. **Inner content was inserted one tick late.** `displayedTour` lived on `ContentView` as `@State` and mirrored `tourPresenter.presentedTour` via `.onChange` — which fires AFTER the offset animation starts. The `if let displayedTour` conditional inserted the `NavigationStack` mid-slide, and SwiftUI filled the gap with its default opacity-fade transition. **Fix:** `displayedTour` moved onto `TourPresenter`, updated synchronously inside `present(_:)` (same SwiftUI tick as the offset). `dismiss()` keeps the lag (cleared 0.45s later) so content stays rendered through the slide-down. `.transition(.identity)` on the inner content as belt-and-suspenders.
+2. **Drawer opacity-fade caused the entry-point asymmetry.** The drawer (z-stacked ABOVE the detail layer in PR #76) was fading 1→0 on present and 0→1 on dismiss on the same 0.4s clock. From the drawer entry (drawer `.large`) the fade-out dominated the perceived motion; from the placecard entry (drawer `.peek`) only the bottom 80pt faded so the slide stayed visible. **Fix:** drawer no longer animates opacity. Its `.zIndex` swaps: **z-4 when no detail is up** (above mini-player + tab bar — PR #76's "last card visible at scroll-end" fix preserved); **z-1 when detail active** (below the detail layer). The detail's slide-up COVERS the drawer naturally; the slide-down REVEALS it. Mini-player + tab bar stay at z-3 so their buttons remain tappable through the detail layer.
+
+Verified in simulator from both entry points; all 84 unit tests pass.
+
+### Detail-as-sheet refactor (PR #76)
+
+Five connected changes that landed the slide-up layer.
+
+1. **Home drawer hoisted out of `HomeView` into `ContentView`.** New `HomeSharedState` (`@Observable`) carries the map ↔ drawer state (`selectedCategory`, `placecardTour`, `placecardCoordinate`, `visibleRegion`, `sheetDragOffset`). `HomeDrawerContent.swift` extracts the drawer body. The drawer now z-stacks above the mini-player + tab bar (when no detail is up — see PR #77 for the dynamic-zIndex twist), fixing the long-running "last card peeks behind the tab bar / can't reach scroll-end" complaint.
+2. **Tour detail always presented as a slide-up layer.** New `TourPresenter` (`@Observable`) drives a `ContentView`-level layer; every entry point (`TourListCard`, `RailCarousel`, `LibraryView`, `MakerView`, `SearchView`'s result rows, the placecard, the quick-resume banners) calls `tourPresenter.present(tour)` instead of pushing via `NavigationLink`. `TourListCard` is now pure presentational — no NavigationLink. `MakerView`'s in-stack push stays as a `NavigationLink` since it pushes onto the layer's own `NavigationStack`.
+3. **`TourDetailView` X close.** Default back chevron hidden; X in the top-leading toolbar slot calls `tourPresenter.dismiss()`. `.toolbarBackground(AtlasColors.secondaryBackground, for: .navigationBar)` so the nav bar matches the rest of the detail surface.
+4. **Mini-player + tab bar stay visible underneath the detail layer.** `moduleGeometry` now reads `tourPresenter.presentedTour != nil` directly (in addition to `navState.isShowingDetail`) so the module switches to `.fullEdge` on the SAME SwiftUI tick the layer comes up. Mini-player + tab bar's z-index keeps them above the detail layer so their buttons remain tappable.
+5. **SearchBar + chips background.** Both swapped from `.regularMaterial` + stroke to `AtlasColors.secondaryBackground` with no border — one unified chrome color across drawer / mini-player / tab bar / search bar / chips.
+
+### Earlier this day
+
+PR #70 (buttons identical across surfaces — `643cbd7`) shipped 2026-05-25 pm-3: final shape of the bottom-module rework. Bar contents render the EXACT same form on every surface (Home, Library, Me, every pushed detail): 8pt horizontal inset, phone-screen-radius rounded bottom corners, transparent 8pt strip below. The only thing that differs between Home (floating island) and the rest (full-edge look) is whether `ContentView` paints an edge-to-edge `secondaryBackground` rectangle BEHIND the inset bar — on Home it doesn't (gaps show the map); elsewhere the same-colored fill makes the gaps blend into a continuous full-width strip. `AtlasTabBar` + `MiniPlayerBar` lost their `extendsToScreenEdges` flags entirely (single form now). Verified via `snapshot_ui`: tab buttons at x=8 / 136.67 / 265.33 with width 128.67 on every surface, identical to OLD Home position. The "fill or not" decision is now a single conditional in `ContentView`, driven by `selectedTab == .home && !navState.isShowingDetail`.
+
+PR #69 (restore Home floating island + anchor at OLD Home position — `8d928b3`) shipped 2026-05-25 pm-2: fixes two regressions PR #68 introduced on Home. (1) `AtlasTabBar.bottomExtensionHeight` was adding the home-indicator safe-area inset to the view's *height* on non-Home, which physically pushed the buttons (and the mini-player above them) up by ~34pt — opposite of the intent. Fixed by making the view a constant 64pt in both modes (56pt painted button row + 8pt outer strip); only what's painted in the 8pt strip changes (transparent on Home, opaque elsewhere). The safe-area zone underneath is already covered by the painted button row because the parent ZStack `.ignoresSafeArea(.bottom)` extends it down. (2) The PreferenceKey-driven `moduleGeometry` was getting stuck at `.fullEdge` after popping back from a detail screen, so Home rendered in full-edge geometry. Replaced with `@Observable AtlasNavigationState` that tracks `pushedDepth` via `push()` / `pop()` from each pushed view's `onAppear` / `onDisappear` — deterministic, no stuck values. ContentView derives geometry from `selectedTab` + `navState.isShowingDetail`. NEW Home button positions match OLD Home exactly (verified via `snapshot_ui`: Home/Library/Me buttons at y=807 in every tab). `AtlasBottomModule.height` is now a constant 126pt across modes. `\.atlasIsHomeTab` env + `AtlasModuleGeometryKey` PreferenceKey both removed.
+
+PR #68 (consistent bottom module across tabs + detail screens — `fe11d99`) shipped 2026-05-25 pm: three connected fixes surfaced by the PR #66 visual review. (1) `SearchBar` no longer presents `SearchView` as `.sheet(...)` — switched to `NavigationLink` push so the mini-player + tab bar stay visible while the user searches (and the further `TourDetailView` push extends the same stack). (2) `AtlasTabBar` refactored so its button row sits at the same screen-y in both geometries — the home-indicator safe-area inset moved OUT of the painted button row into a separate background rectangle below it. Identical button layout in both modes; only what's painted below changes (transparent on Home → map shows; opaque on every other surface → continuous `secondaryBackground` through the home-indicator strip). (3) Detail screens (`TourDetailView` / `MakerView` / `SearchView` / `ManageDownloadsView`) always render with the full-edge module now, even when reached from the Home tab — fixes the floating-island leak where scrolled content peeked through the 8pt outer gap on Home-entry detail screens. Mechanism: replaced `\.atlasIsHomeTab` env value (deleted) with typed `AtlasModuleGeometry` preference — each surface declares its preference at its root; the deepest declaration wins; `ContentView` reads via `onPreferenceChange` and threads geometry into `MiniPlayerBar` + `AtlasTabBar`. `AtlasBottomModule.height` math updated: non-Home now reads `layoutHeight (62) + tabBarBackgroundHeight (56) + 8 + safeAreaBottomInset` (the extra 8pt is the new outer gap above the safe-area fill).
+
+PR #66 (module geometry on non-Home tabs — `2452f52`) shipped 2026-05-25: extends PR #60's bottom-module work past the home screen. On Home the mini-player + tab bar still floats as a rounded island; on Library / Settings / Manage downloads / Tour Detail / Maker the module extends flush to the screen edges and the tab bar background runs through the home-indicator safe area. Every non-Home scrollable surface now applies `.safeAreaInset(.bottom)` sized to the shared `AtlasBottomModule.height(extendsToScreenEdges:)` helper so content never hides behind the module. TourDetailView's `actionBarHeight` now tracks that helper too — also fixes the long-standing too-small 72pt trailing spacer that let the last description lines hide behind the action bar. (PR #68 above superseded its `\.atlasIsHomeTab` env-value plumbing with a typed preference; the helper itself stays.)
+
+PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kills the post-tour "Loading…"/hourglass flicker and adds in-place replay via new `AudioPlayerService.replayLast()`. PR #60 (home polish bundle + player-state hardening — `e5b31da`) shipped 2026-05-24 late-pm: bigger bottom-module radius (48→56), drawer now stacks on top of mini-player + tab bar via new `bottomReservedHeight`, chip + search-bar share `searchBarHeight = 46`, "tours in view" count + `Let's explore together!` empty state, recenter button tracks drawer detent. Same PR also fixed three player-state bugs surfaced during visual review: Open-player button no longer disabled mid-load, `seek(to:)` synthesizes `.ended` on scrub-to-end (AVPlayer doesn't fire `didPlayToEndTime` on manual seek), full-player tap-to-replay on `.ended` via new `replayCurrent()`.
+
+**What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
+
+Key facts:
+- **113 tours, 3 makers** in `Resources/Tours.json` (73 NYC-area + 30 Atlas Studio Porto + 5 Atlas Studio Lisbon + others); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **58 single-stop + 1 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, geofenced exterior walk) — added 2026-05-26, unblocks M-qa items 6 + 7
+- **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
+- `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
+- `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
+- AppIcon is placeholder (green sphere); AccentColor: terracotta `#B85042` (placeholder)
+- Theme tokens in `Theme/Atlas*.swift` are placeholder values pending design pass
+- `UIBackgroundModes=audio` now in explicit `Info.plist` (not INFOPLIST_KEY — Xcode ignores that for arrays)
+
+See `ROADMAP.md` for full milestone history. Read latest `archive/HANDOFF-*.md` for mid-flight context.
+
+## Session-start ritual (automatic — Claude runs this first, every session)
 
 ```bash
-cd ~/Desktop/"TRAVEL GUIDED TOUR"
-git fetch                        # see what's on origin
-git status                       # any uncommitted leftovers?
-git branch --show-current        # are you on main, or a branch?
-git log origin/main..HEAD        # any local commits not pushed?
-gh pr list --state open          # any in-flight PRs?
+git fetch && git status && git branch --show-current && git log origin/main..HEAD && gh pr list --state open
+ls archive/HANDOFF-*.md | tail -1   # then read that file
 ```
 
-Then read the **most recent `archive/HANDOFF-*.md`** —
-`ls archive/HANDOFF-*.md | tail -1` to find it. It captures
-mid-flight state the repo's permanent docs don't: queued feedback,
-what was about to be tackled next, tribal knowledge from the prior
-session. Older HANDOFFs in `archive/` are historical — only the
-latest is part of this ritual.
+Run before any substantive work. Investigate uncommitted changes before acting on them.
 
-If `git status` shows uncommitted changes from a prior session,
-investigate before continuing — don't blindly add/commit. The
-prior session may have left them deliberately (parked, WIP) or
-accidentally (Xcode auto-save, abandoned experiment).
+## Merging PRs
 
-If on a feature branch with un-pushed commits, decide whether to
-push, merge, or abandon them before starting new work — switching
-branches with un-pushed work loses the work.
-
-## Merging PRs (working rule with the owner)
-
-**Owner pre-authorization (established 2026-05-18):** Claude may
-merge **doc-only and content-only PRs** without asking for explicit
-per-PR approval, using GitHub's squash-merge. Code PRs (anything
-touching `.swift` files inside the `TRAVEL GUIDED TOUR/` source
-folder) always wait for owner OK, since they affect the running
-app and owner wants to validate visually in the simulator.
-
-Concrete boundary, what counts as doc-only / content-only (auto-mergeable):
-- `*.md` files (docs)
-- `ROADMAP.md`, `CLAUDE.md`, `CONTRIBUTING.md`
-- `docs/`, `archive/`
+**Auto-merge (squash, no owner approval) — content/docs/assets/CI/test code:**
+- `*.md`, `docs/`, `archive/`, `ROADMAP.md`, `CLAUDE.md`, `CONTRIBUTING.md`
+- `Resources/Tours.json` (content additions and edits)
 - `scripts/` (developer tooling, doesn't ship in the app)
-- `TRAVEL GUIDED TOURTests/` (test code; doesn't affect the
-  running app on phones, only the test target on CI)
-- `.github/workflows/` (CI definitions; only run on GitHub's
-  servers)
+- `TRAVEL GUIDED TOURTests/` (test target; doesn't affect the running app)
+- `.github/workflows/` (CI definitions)
 - Lint / tooling configs (`.swiftlint.yml`, etc.)
-- `Resources/Tours.json` content additions or edits
+- Audio + image uploads to `gh-pages` branch
 
-What's **not** auto-mergeable — code touching the running app:
-- Anything in `TRAVEL GUIDED TOUR/<source-folder>/*.swift`
-  (Audio, Components, Data, Features, Location, Models, Theme,
-  ContentView, SplashView, App entry)
-- The Xcode project file (`*.xcodeproj`, `*.pbxproj`) —
-  changes affect what builds
-- Asset catalogs (`Assets.xcassets/`) — affect what users see
+Flow for auto-merge PRs: open PR → wait for CI green → `gh pr merge --squash --delete-branch`.
 
-When in doubt, ask. Better to over-confirm than to merge something
-that turns out to be visible to users without their review.
+**Wait for owner OK (visual simulator review required) — code:**
+- Anything in `TRAVEL GUIDED TOUR/<source-folder>/*.swift` (`Audio/`, `Components/`, `Data/`, `Features/`, `Location/`, `Models/`, `Theme/`, `ContentView.swift`, `SplashView.swift`, the App entry)
+- Xcode project file (`*.xcodeproj`/`*.pbxproj`)
+- Asset catalogs (`Assets.xcassets/`)
+- `Info.plist`
 
-## Repo-root layout
+Owner reviews via iOS Simulator or TestFlight before merge — not by reading code. **Reason:** the previous auto-merge-everything policy (briefly in effect 2026-05-25/27) produced visible regressions on `main` that required follow-up fix PRs (#68→#69→#70 chain after #66; #77→#78 chain after #76). Pre-merge visual review catches these in the simulator and avoids the fix-forward thrash.
 
-Beyond this file and `ROADMAP.md`:
+**Merge conflicts: resolve them automatically** when they're structural (file renames, neighboring edits, import reorderings, doc reformats, version-number bumps). Stop and ask only if the conflict reflects a real business-logic disagreement between two PRs.
 
-- `atlas_claude_code_prompt.md` — canonical product spec.
-- `CONTRIBUTING.md` — onboarding doc for new contributors:
-  toolchain setup, branching/PR workflow, code conventions
-  pointer, communication norms.
-- `docs/` — reference material that isn't read at session start:
-  - `docs/authoring-tours.md` — UI-agnostic field-by-field guide
-    for authoring tour content (used in M-launch-content; doubles
-    as the spec for the future maker upload form).
-  - `docs/Tours.template.json` — example tours showing every field.
-  - `docs/cdn-decision.md` — owner-facing brief comparing
-    Cloudflare R2 / S3+CloudFront / Apple ODR for V1 audio hosting.
-    Owner picks; update the brief's Status line when they do.
-  - `docs/design-tokens.md` — single-sheet reference for the
-    typographic hierarchy, color palette, spacing scale, and icon
-    vocabulary. Mirrors the values in `Theme/Atlas*.swift`; update
-    in the same commit when tokens change.
-- `scripts/` — developer-facing tooling:
-  - `scripts/validate-tours.swift` — runs against
-    `TRAVEL GUIDED TOUR/Resources/Tours.json` and catches typos /
-    duplicate UUIDs / broken maker refs / kind ↔ stop count
-    mismatches / coord-range errors before the app crashes at
-    launch. Invoke: `swift scripts/validate-tours.swift`.
-    **The script mirrors the Swift data model — if you change
-    `Tour.swift` / `Stop.swift` / `Maker.swift` / `TourCategory.swift`,
-    update the mirror types at the top of the script in the same
-    commit.**
-- `TRAVEL GUIDED TOURTests/` — XCTest unit suite for the data /
-  logic layer. Wired to the Xcode project as the
-  `TRAVEL GUIDED TOURTests` Unit Testing Bundle target (PR #33,
-  2026-05-18). Six test classes + `TestFixtures.swift`. Runs on
-  `Cmd-U` locally and on CI per PR.
-- `.github/workflows/` — CI definitions. `ci.yml` runs three
-  jobs on every PR: Tours.json validation (Linux), `xcodebuild build`
-  (macOS), and `xcodebuild test` (macOS, conditional on the test
-  scheme existing).
-- `archive/` — dated snapshots of retired docs (see `archive/README.md`).
+**When in doubt, ask** — better to over-confirm than merge something the owner hadn't seen yet.
+
+## Keep Docs in Sync (automatic — no prompting needed)
+
+Every session that ships a milestone, cuts scope, or changes "what's true today" must update `CLAUDE.md` + `ROADMAP.md` in the same commit. Write `archive/HANDOFF-YYMMDD.md` + update `archive/README.md` at session end if code or content was touched. Non-negotiable.
+
+## Repo Layout
+
+| Path | Purpose |
+|------|---------|
+| `atlas_claude_code_prompt.md` | Canonical product spec |
+| `ROADMAP.md` | Execution plan + milestone history |
+| `docs/authoring-tours.md` | Tour content authoring guide |
+| `docs/cdn-decision.md` | Audio hosting decision |
+| `docs/design-tokens.md` | Typography/color/spacing reference |
+| `docs/testflight.md` | Per-release upload runbook (~10 min) |
+| `docs/troubleshooting.md` | Xcode + git landmines from real incidents |
+| `scripts/validate-tours.swift` | Validates `Tours.json`; run: `swift scripts/validate-tours.swift` |
+| `TRAVEL GUIDED TOURTests/` | 6 XCTest classes, data/logic layer |
+| `archive/` | Dated session snapshots |
+
+**`validate-tours.swift` mirrors `Tour/Stop/Maker/TourCategory.swift` — update the script in the same commit if any model changes.**
 
 ## Build & Run
 
-(Build = compile the source files into a runnable app, like baking
-ingredients into a cake.)
+Use **XcodeBuildMCP tools** — prefer over raw `xcodebuild` shell commands.
 
+| Task | XcodeBuildMCP tool |
+|------|--------------------|
+| Verify session defaults | `session_show_defaults` — **call first every session before any build/test** |
+| Build for iOS Simulator | `build_sim` |
+| Build + launch in Simulator | `build_run_sim` |
+| Run unit tests | `test_sim` |
+| Take simulator screenshot | `screenshot` |
+
+**Run `test_sim` automatically before pushing any code PR.** Skip for doc-only, CI-only, `Features/`/`Components/`/`Theme/`-only, or `Tours.json` content-only changes.
+
+Fallback raw commands (CI + macOS builds):
 ```bash
-# macOS
 xcodebuild -scheme "TRAVEL GUIDED TOUR" -configuration Debug build
-
-# iOS Simulator (a fake iPhone running on the Mac for testing)
-xcodebuild -scheme "TRAVEL GUIDED TOUR" -destination "generic/platform=iOS Simulator" build
-
-# visionOS Simulator (a fake Vision Pro headset on the Mac)
-xcodebuild -scheme "TRAVEL GUIDED TOUR" -destination "generic/platform=visionOS Simulator" build
+xcodebuild test -scheme "TRAVEL GUIDED TOUR" \
+  -destination "platform=iOS Simulator,name=iPhone 16,OS=latest" -configuration Debug
 ```
-
-Run the unit test suite:
-
-```bash
-xcodebuild test \
-  -scheme "TRAVEL GUIDED TOUR" \
-  -destination "platform=iOS Simulator,name=iPhone 17,OS=latest" \
-  -configuration Debug
-```
-
-The `TRAVEL GUIDED TOURTests` Unit Testing Bundle target hosts six
-XCTest classes against the data / logic layer (no UI / view tests).
-Same suite runs on CI per PR via `.github/workflows/ci.yml`.
-
-**When to run tests (Claude rule):** cadence is trigger-based, not
-time-based.
-
-- **Run them when** you've edited code in `Models/`, `Data/`,
-  `Audio/`, or `Location/` (the layers tests actually cover), or
-  before pushing any code PR, or after rebasing / merging `main`
-  into a feature branch, or after resolving a merge conflict in
-  code.
-- **Skip them when** the change is doc-only, CI-only,
-  Xcode-config-only, or only touches `Features/` / `Components/` /
-  `Theme/` (no UI tests exist), or only adds `Resources/Tours.json`
-  content (the validator script + decoding tests on CI cover this).
-- **Don't run them "just to check"** at session start — if no
-  covered code changed, nothing has changed.
-
-Typical session: 1–2 runs total, right before pushing each code PR.
-CI is the safety net regardless.
 
 ## Architecture
 
-(Architecture = the floor plan of the codebase: which folder does what.)
-
 ```
 TRAVEL GUIDED TOUR/
-├── TRAVEL_GUIDED_TOURApp.swift    App entry; sets up environment shelves (services)
-├── ContentView.swift              3-tab TabView (Home / Library / Me)
-├── SplashView.swift               2-second launch splash
-├── Models/
-│   ├── Tour.swift                 A tour: title, maker, stops, category, …
-│   ├── Stop.swift                 A stop within a tour: lat/lon, audio URL, trigger mode
-│   ├── Maker.swift                A maker: display name, avatar, bio, tours
-│   ├── TourCategory.swift         Closed enum of categories that drive home rails
-│   ├── RecentSearch.swift         Local-only record of a search query
-│   └── LibraryEntry.swift         Local "saved / downloaded / progress" record per tour
-├── Data/
-│   ├── DataService.swift          Loads Tours.json into [Tour] at launch
-│   ├── LibraryStore.swift         Read/write store of [LibraryEntry]; persists across launches
-│   ├── RecentSearchStore.swift    Local persistence for search history (cap 20)
-│   ├── RecentlyViewedStore.swift  Backs the "Recently viewed" home rail
-│   └── ToursData.swift            JSON ↔ Swift translator
-├── Resources/
-│   └── Tours.json                 Seed entries; replaced by real content in M-launch-content
-├── Audio/
-│   ├── AudioPlayerService.swift   AVQueuePlayer wrapper + lock-screen / Now Playing integration
-│   └── TourDownloader.swift       Offline tour caching via URLSession background downloads
+├── TRAVEL_GUIDED_TOURApp.swift    App entry + SwiftUI Environment setup
+├── ContentView.swift              AtlasTabBar — 3 tabs: Home / Library / Me
+├── SplashView.swift
+├── Models/                        Tour, Stop, Maker, TourCategory, RecentSearch, LibraryEntry
+├── Data/                          DataService, LibraryStore, RecentSearchStore, RecentlyViewedStore, ToursData
+├── Resources/Tours.json
+├── Audio/                         AudioPlayerService (AVQueuePlayer + lock-screen), TourDownloader
 ├── Features/
-│   ├── Home/                      Map-dominant home: full-screen map + curated rails in a bottom sheet
-│   │   ├── HomeView.swift
-│   │   ├── HomeMapSection.swift
-│   │   ├── HomeRailsViewModel.swift
-│   │   └── RailCarousel.swift
-│   ├── Search/                    Search bar + results screen
-│   │   ├── SearchBar.swift
-│   │   └── SearchView.swift
-│   ├── Tour/                      Tour detail screen
-│   │   └── TourDetailView.swift
-│   ├── Player/                    Full-screen audio player (modal sheet)
-│   │   └── PlayerView.swift
-│   ├── Maker/                     Maker bio + their tour list
-│   │   └── MakerView.swift
-│   ├── Library/                   Saved / Downloaded / Recently played
-│   │   └── LibraryView.swift
-│   └── Settings/                  "Me" tab + Manage Downloads
-│       ├── SettingsView.swift
-│       └── ManageDownloadsView.swift
-├── Location/
-│   ├── LocationManager.swift      GPS reporter — drives "tours near you" sort + distance
-│   └── ProximityMonitor.swift     Watches stop geofences; fires when user arrives at a stop
-├── Components/                    HeroImageView, TagChip, BottomSheet, PlatformHelpers
-├── Theme/                         AtlasColors, AtlasTypography, AtlasSpacing (placeholder values)
-└── Assets.xcassets/               AccentColor terracotta #B85042; AppIcon still empty template
+│   ├── Home/                      HomeView, HomeMapSection, CategoryChipRow, TourListCard, HomeRailsViewModel, RailCarousel
+│   ├── Search/                    SearchBar, SearchView
+│   ├── Tour/                      TourDetailView
+│   ├── Player/                    PlayerView, MiniPlayerBar
+│   ├── Maker/                     MakerView
+│   ├── Library/                   LibraryView
+│   └── Settings/                  SettingsView, ManageDownloadsView
+├── Location/                      LocationManager, ProximityMonitor
+├── Components/                    HeroImageView, MarqueeText, TagChip, BottomSheet, PlatformHelpers
+├── Theme/                         AtlasColors, AtlasTypography, AtlasSpacing
+└── Assets.xcassets/
 ```
 
-## Design System
-
-> **Important — owner direction (May 2026):** design and theming decisions
-> are **deferred**. Build for functionality first. The final color palette,
-> typography, app icon, map-pin style, and editorial tone of all copy will
-> be decided after V1 functionality lands. Until then, the rule below
-> ensures that swap is cheap when it happens.
-
-The three files in `Theme/` are the **single source of truth** for colors,
-fonts, and spacing — like the brand-guidelines PDF on a designer's wall.
-Their current *values* are placeholders, but the *structure* is locked in.
-
-- **Always use the tokens, never hardcode values.** New code must reach
-  for `AtlasColors.*`, `AtlasTypography.*`, `AtlasSpacing.*` instead of
-  literal `Color(red:...)`, `.font(.system(size: 24))`, or `.padding(16)`.
-  This is what makes the future design pass a 3-file change instead of a
-  60-file change. (Hardcoding = baking a specific color into one screen
-  instead of pulling it from the shared palette.)
-- The Atlas accent in `Assets.xcassets/AccentColor.colorset` is set to
-  terracotta `#B85042` per the original spec, but treat that value as a
-  placeholder until the design pass.
-- Interim design intent (pending the design pass): spare,
-  audio-first, photography-forward where photos exist. Final palette,
-  typography, and visual language all TBD. Some specifics from the
-  earlier editorial-reader spec — e.g., "no star ratings, no review
-  counts" — are *under review* in the audio-tour product, since a
-  creator marketplace may eventually need quality signals. Don't
-  treat the old principles as locked.
-
-## Data Flow
-
-(Data flow = how information moves from where it's stored to the screen
-that displays it.)
-
-`TRAVEL_GUIDED_TOURApp.swift` sets up "shared shelves" the moment the
-app launches:
-
-- **DataService** — read-only library of tours and makers, loaded
-  from `Resources/Tours.json` at launch.
-- **LibraryStore** — read/write storage for the user's saved /
-  downloaded / recently-played tours, as `[LibraryEntry]`. Persists
-  across launches.
-- **RecentSearchStore** — local search history (cap 20), feeds the
-  "Because you searched [X]" rail.
-- **RecentlyViewedStore** — backs the "Recently viewed" home rail.
-- **LocationManager** — the GPS reporter: "you're at lat X, lon Y."
-- **AudioPlayerService** — wraps `AVQueuePlayer`, manages the audio
-  session, drives lock-screen / Control Center / CarPlay integration.
-  Every screen that wants to play audio talks to this.
-- **TourDownloader** — manages offline audio caching via
-  `URLSession` background downloads.
-
-These shelves are placed in the SwiftUI `Environment` (a hallway shelf
-every screen can reach into). Any screen that needs them just says "give
-me the DataService off the hallway shelf" — instead of every screen making
-its own copy. Don't instantiate these inside individual screens.
+Environment services (instantiated once at app entry, injected via SwiftUI Environment — never in views): `DataService`, `LibraryStore`, `RecentSearchStore`, `RecentlyViewedStore`, `LocationManager`, `AudioPlayerService`, `TourDownloader`.
 
 ## Conventions
 
-(Conventions = house rules. Follow them so the codebase stays consistent.)
+- `@Observable` not `ObservableObject`. `NavigationStack` not `NavigationView`.
+- Hero images: use `Components/HeroImageView.swift` — never raw `AsyncImage`.
+- Audio: always through `AudioPlayerService`. Never create `AVPlayer` in a view.
+- No third-party libraries in V1. Apple frameworks only: SwiftUI, MapKit, CoreLocation, AVFoundation, MediaPlayer, SwiftData/UserDefaults.
+- Design tokens: use `AtlasColors.*`, `AtlasTypography.*`, `AtlasSpacing.*`. No hardcoded colors/fonts/padding.
+- Support Dynamic Type and Dark Mode.
 
-- `@Observable` (a label that means "screens watching this object will
-  auto-redraw when its data changes" — like a stock ticker), **not** the
-  older `ObservableObject`.
-- `NavigationStack` (the back/forward stack of screens — like a deck of
-  cards you push a new screen onto and pop off to go back), **not** the
-  older `NavigationView`.
-- For every hero image (the big top photo on a screen), use
-  `Components/HeroImageView.swift`. Don't reach for `AsyncImage` (the raw
-  Apple "download a photo on the fly" tool) directly — `HeroImageView`
-  already wraps it with a placeholder color.
-- **No third-party libraries in V1.** Apple frameworks only:
-  - SwiftUI — all UI
-  - MapKit — Apple Maps as a drop-in building block
-  - CoreLocation — GPS + geofencing
-  - AVFoundation — audio playback (`AVQueuePlayer` wraps a queue of
-    stop-audio clips for a tour)
-  - MediaPlayer — `MPNowPlayingInfoCenter` + `MPRemoteCommandCenter`
-    for lock-screen / Control Center / CarPlay integration
-  - SwiftData *or* `Codable` + `UserDefaults` — local library +
-    listening progress
-- **Audio playback always goes through `AudioPlayerService`.** Don't
-  spin up your own `AVPlayer` in a view. The service exists so audio
-  session config, lock-screen integration, and queue management happen
-  in one place.
-- Support Dynamic Type (so users who set bigger text in iOS Settings get
-  bigger text in Atlas) and Dark Mode (so the app looks right in both
-  light and dark themes).
-- Map pins currently use Apple's `Marker` with a SF Symbol — see
-  `HomeMapSection.swift`. Custom-designed terracotta pins with
-  category/maker glyphs are deferred to M-polish-pins.
+## Design System
 
-## Build Configuration
+Tokens in `Theme/` are single source of truth; values are placeholders pending deferred design pass. Accent `#B85042` is also placeholder. Build for function first.
 
-- **Bundle ID:** `com.ehky.TRAVEL-GUIDED-TOUR` (the unique "phone number"
-  Apple uses to identify this specific app).
-- **Swift Language Mode:** Swift 5.0 (Swift = the programming language;
-  5.0 = the version/edition).
-- **Deployment Targets:** iOS 26.2, macOS 26.2, visionOS 26.2 (the *oldest*
-  OS versions the app will run on — anything newer also works).
-- **Device Families:** iPhone, iPad, Apple Vision.
-- **App Sandbox:** Enabled, read-only file access. (Sandbox = a fence
-  around the app so it can't reach other apps' files — like a kid's
-  playpen. "Read-only" = it can look at files outside the fence but not
-  change them.)
-- **Code Signing:** Automatic. (Code signing = Apple's tamper-proof seal
-  that says "this app really is from this developer." "Automatic" means
-  Xcode handles it for us.)
-- **Info.plist:** auto-generated from `INFOPLIST_KEY_*` build
-  settings (Debug + Release):
-  - `NSLocationWhenInUseUsageDescription` — audio-tour-aware copy.
-  - `NSLocationAlwaysAndWhenInUseUsageDescription` — set so stop
-    geofences can fire while the app is backgrounded / phone locked.
-  - `UIBackgroundModes` = `audio` — audio continues playing with
-    the phone locked. Without this, audio cuts on lock — fatal for
-    a walking-tour app.
-  - `ITSAppUsesNonExemptEncryption` = `NO` — Atlas uses only
-    standard HTTPS, no custom crypto, so it qualifies for the
-    standard export-compliance exemption. Set so Xcode doesn't
-    prompt for the answer on every archive.
+## Build Config
+
+- Bundle ID: `com.ehky.TRAVEL-GUIDED-TOUR`
+- Swift 5.0; deployment targets iOS 26.2 / macOS 26.2 / visionOS 26.2
+- Device families: iPhone, iPad, Apple Vision; code signing automatic, team `CPC7M72JTP`
+- `Info.plist` at repo root (explicit file — `GENERATE_INFOPLIST_FILE = NO`)
+- Keys: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, `UIBackgroundModes=audio`, `ITSAppUsesNonExemptEncryption=NO`
 
 ## Out of Scope for V1
 
-Per `atlas_claude_code_prompt.md` §"What NOT to build in V1":
-
-- **No backend / server / API.** All content ships via a static JSON
-  manifest + audio files hosted on a CDN.
-- **No user accounts / authentication.** "Sign in" is a placeholder UI
-  entry in Settings; real auth is post-V1.
-- **No in-app maker upload.** Atlas team edits `Tours.json` and uploads
-  audio to the CDN by hand.
-- **No payments / IAP / paid tours / maker payouts.** All V1 content is
-  Atlas-made and free. The `Tour.priceUSD` field exists in the data
-  model so tours can be priced later, but no buy buttons, no purchase
-  flow, no payouts in V1.
-- **No moderation tooling.** Atlas-made content only.
-- **No comments, reviews, or ratings.**
-- **No follow-a-maker, sharing, or other social features.**
-- **No push notifications.** Local notifications for geofenced stop
-  arrivals are allowed — they're how the geofence trigger surfaces
-  when the app is backgrounded.
-- **No onboarding tutorial.** The app should be self-evident.
-- **No in-app search.** The V1 catalog is small enough to browse.
-- **No analytics SDK** beyond Apple's built-in App Store Connect
-  metrics.
-
-Don't introduce any of these without a spec update.
+No: backend/API, user accounts/auth, in-app maker upload, payments/IAP, moderation, comments/reviews/ratings, follow/sharing/social, push notifications (local geofence notifications OK), onboarding tutorial, in-app search, analytics SDK. Don't introduce any without a spec update.

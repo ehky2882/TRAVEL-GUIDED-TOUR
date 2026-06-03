@@ -8,47 +8,53 @@ import SwiftUI
 /// deferred per spec.
 ///
 /// When the user taps a result, we record the current query as a
-/// "successful" RecentSearch and navigate to TourDetailView inside
-/// the sheet's own NavigationStack.
+/// "successful" RecentSearch and push `TourDetailView` onto the host
+/// tab's navigation stack (the same stack `SearchView` itself was
+/// pushed onto by `SearchBar`).
 struct SearchView: View {
-    @Environment(\.dismiss) private var dismiss
     @Environment(DataService.self) private var dataService
     @Environment(RecentSearchStore.self) private var recentSearchStore
+    @Environment(AtlasNavigationState.self) private var navState
+    @Environment(TourPresenter.self) private var tourPresenter
 
     @State private var query: String = ""
-    @State private var selectedTour: Tour?
     @FocusState private var queryFieldFocused: Bool
 
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
-                searchField
-                    .padding(.horizontal, AtlasSpacing.lg)
-                    .padding(.vertical, AtlasSpacing.sm)
+        VStack(spacing: 0) {
+            searchField
+                .padding(.horizontal, AtlasSpacing.lg)
+                .padding(.vertical, AtlasSpacing.sm)
 
-                Divider()
+            Divider()
 
-                contentArea
-                    // Pin content area to fill available space, top-aligned.
-                    // Without this the outer VStack collapses to fit small
-                    // empty-state content and SwiftUI centers it vertically,
-                    // which makes the search bar appear to jump downward.
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            }
-            .background(AtlasColors.background)
-            .navigationTitle("Search")
-            .inlineNavigationBarTitle()
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Close") { dismiss() }
-                }
-            }
-            .navigationDestination(item: $selectedTour) { tour in
-                TourDetailView(tour: tour)
-            }
+            contentArea
+                // Pin content area to fill available space, top-aligned.
+                // Without this the outer VStack collapses to fit small
+                // empty-state content and SwiftUI centers it vertically,
+                // which makes the search bar appear to jump downward.
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
+        .background(AtlasColors.background)
+        .navigationTitle("Search")
+        .inlineNavigationBarTitle()
+        // Reserve room at the bottom for the mini-player + tab bar
+        // stack so the last result row is reachable above the
+        // module rather than hidden behind it. Wasn't needed under
+        // the old `.sheet` presentation (the sheet covered the
+        // module entirely), but matters now that search is pushed
+        // into the host nav stack with the module still visible.
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            Color.clear.frame(height: AtlasBottomModule.height())
+        }
+        // Mark this surface as a pushed detail screen so the bottom
+        // module switches to full-edge while search is on top.
         .onAppear {
             queryFieldFocused = true
+            navState.push()
+        }
+        .onDisappear {
+            navState.pop()
         }
     }
 
@@ -176,7 +182,7 @@ struct SearchView: View {
                 ForEach(filteredTours) { tour in
                     Button {
                         recentSearchStore.record(query: trimmedQuery)
-                        selectedTour = tour
+                        tourPresenter.present(tour)
                     } label: {
                         resultRow(tour)
                     }

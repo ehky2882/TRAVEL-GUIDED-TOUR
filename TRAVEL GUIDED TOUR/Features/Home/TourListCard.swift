@@ -5,9 +5,9 @@ import CoreLocation
 /// home screen's bottom drawer. Larger and more informative than
 /// the rail carousel cards (since the drawer fits one column).
 ///
-/// Pushes `TourDetailView` via NavigationLink. The host
-/// ScrollViewReader uses `tour.id` as the scroll anchor — tapping a
-/// map pin will scroll the drawer to the matching card.
+/// Pure presentational view — taps are handled by the parent, which
+/// routes them through `TourPresenter` so the detail view always
+/// comes up from the bottom as a sheet.
 struct TourListCard: View {
     let tour: Tour
     let maker: Maker?
@@ -18,81 +18,96 @@ struct TourListCard: View {
     /// True when this card matches the currently-selected pin on the
     /// map; receives a subtle highlight to anchor the eye.
     let isSelected: Bool
+    /// True when this tour is currently saved to the library — drives
+    /// the bookmark button's filled-vs-outline glyph in the hero
+    /// corner.
+    let isSaved: Bool
+    /// Called when the bookmark button on the hero corner is tapped.
+    /// The card itself does not mutate library state; the parent
+    /// routes the tap through `LibraryStore.toggleSaved(_:)`.
+    let onBookmarkTap: () -> Void
 
     var body: some View {
-        NavigationLink {
-            TourDetailView(tour: tour)
-        } label: {
-            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-                heroSection
+        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            heroSection
 
-                VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                    Text(tour.title)
-                        .font(AtlasTypography.body)
-                        .foregroundStyle(AtlasColors.primaryText)
-                        .lineLimit(2)
-                        .multilineTextAlignment(.leading)
-                        .fixedSize(horizontal: false, vertical: true)
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                Text(tour.title)
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
 
-                    if let maker {
-                        Text("by \(maker.displayName)")
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                    }
-
-                    metaRow
+                if let maker {
+                    Text("by \(maker.displayName)")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
                 }
-                .padding(.horizontal, AtlasSpacing.sm)
-                // Padding only on the text section's bottom — the
-                // hero image fills the top edge-to-edge so selected
-                // and unselected cards look identical (no exposed
-                // gap above the image when the selection border
-                // appears).
-                .padding(.bottom, AtlasSpacing.sm)
+
+                metaRow
             }
-            // Clip the whole card so the hero image inherits the
-            // card's outer corner radius — no separate cornerRadius
-            // arg on HeroImageView. One outline instead of two.
-            //
-            // No selection-state border or tint: the drawer's auto-
-            // scroll to the tapped pin's card is the cue. A visible
-            // selection outline reads as inconsistency against the
-            // other cards, not as a useful signal.
-            .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
+            .padding(.horizontal, AtlasSpacing.sm)
+            .padding(.bottom, AtlasSpacing.sm)
         }
-        .buttonStyle(.plain)
-        // Selection is conveyed to VoiceOver but not visually —
-        // sighted users see the drawer scroll as the cue.
+        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
         .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 
     // MARK: - Subviews
 
-    private var heroSection: some View {
-        ZStack(alignment: .topTrailing) {
-            // No cornerRadius — the parent card clips for us, so the
-            // image's top-left and top-right corners get the card's
-            // outer radius automatically and the bottom edge sits
-            // flush against the title section.
+    /// Hero area — a paged carousel when the tour supplies
+    /// `additionalImageURLs`, otherwise a single image. No corner
+    /// radius: the parent card clips, so the top corners inherit the
+    /// card's outer radius and the bottom sits flush with the title.
+    @ViewBuilder
+    private var heroImage: some View {
+        let allImages = [tour.heroImageURL] + (tour.additionalImageURLs ?? [])
+        if allImages.count > 1 {
+            TabView {
+                ForEach(allImages, id: \.self) { url in
+                    HeroImageView(
+                        imageName: url,
+                        height: 160,
+                        cornerRadius: 0,
+                        category: tour.primaryCategory
+                    )
+                }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .always))
+            .frame(height: 160)
+        } else {
             HeroImageView(
                 imageName: tour.heroImageURL,
                 height: 160,
                 cornerRadius: 0,
                 category: tour.primaryCategory
             )
+        }
+    }
 
-            // Category badge top-right of hero
-            HStack(spacing: AtlasSpacing.xs) {
-                Image(systemName: tour.primaryCategory.iconName)
-                    .font(AtlasTypography.caption)
-                Text(tour.primaryCategory.displayName)
-                    .font(AtlasTypography.caption)
+    private var heroSection: some View {
+        ZStack(alignment: .topTrailing) {
+            heroImage
+
+            // Bookmark AFFORDANCE top-right of hero. Replaces the
+            // earlier category badge — category is still filterable
+            // via the chip row above the drawer, so dropping it from
+            // the card frees the corner for a save control. The
+            // button sits inside the parent's Button label; SwiftUI
+            // routes the tap to the innermost interactive view, so
+            // tapping the bookmark fires `onBookmarkTap` while taps
+            // anywhere else on the card open the tour detail.
+            Button(action: onBookmarkTap) {
+                Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .frame(width: 36, height: 36)
+                    .background(.regularMaterial, in: Circle())
             }
-            .foregroundStyle(AtlasColors.primaryText)
-            .padding(.horizontal, AtlasSpacing.sm)
-            .padding(.vertical, AtlasSpacing.xs)
-            .background(.regularMaterial, in: Capsule())
+            .buttonStyle(.plain)
             .padding(AtlasSpacing.sm)
+            .accessibilityLabel(isSaved ? "Saved" : "Save tour")
         }
     }
 

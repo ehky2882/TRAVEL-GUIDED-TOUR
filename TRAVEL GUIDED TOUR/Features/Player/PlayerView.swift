@@ -24,6 +24,7 @@ struct PlayerView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(ProximityMonitor.self) private var proximityMonitor
     @Environment(TourDownloader.self) private var tourDownloader
+    @Environment(AppSharedState.self) private var appShared
 
     /// -1 means the tour's intro audio is playing (only valid when
     /// the tour has an `introAudioURL`). 0...n indexes `sortedStops`.
@@ -410,6 +411,10 @@ struct PlayerView: View {
         let url = tourDownloader.localURL(forIntroOf: tour) ?? remoteURL
 
         currentStopIndex = -1
+        // Intro audio doesn't belong to any single stop — clear
+        // the shared playing-stop id so the detail-sheet now-playing
+        // indicator doesn't light up an unrelated row.
+        appShared.currentPlayingStopId = nil
         let maker = dataService.maker(for: tour)
         audioPlayer.play(
             url: url,
@@ -429,6 +434,10 @@ struct PlayerView: View {
         let url = tourDownloader.localURL(forStop: stop, in: tour) ?? remoteURL
 
         currentStopIndex = index
+        // Surface the currently-playing stop to the detail-sheet
+        // now-playing indicator (shared via AppSharedState — the
+        // detail sheet may be the visible surface when this fires).
+        appShared.currentPlayingStopId = stop.id
         let maker = dataService.maker(for: tour)
         audioPlayer.play(
             url: url,
@@ -442,20 +451,39 @@ struct PlayerView: View {
         switch audioPlayer.state {
         case .playing:
             audioPlayer.pause()
-        case .paused, .ended:
+        case .paused:
             audioPlayer.play()
+        case .ended:
+            // AVQueuePlayer drains its queue at end-of-item, so a
+            // parameterless `play()` would no-op. Restart the current
+            // item from the beginning — feels like "replay" from the
+            // user's POV. Mirrors the mini-player's tap-to-replay path.
+            replayCurrent()
         case .idle, .failed:
             // No item loaded, or previous load failed → retry from the
             // tour's start (or current stop, if mid-tour).
-            if currentStopIndex == -1 {
-                startPlaybackIfNeeded()
-            } else if sortedStops.indices.contains(currentStopIndex) {
-                playStop(at: currentStopIndex)
-            } else {
-                startPlaybackIfNeeded()
-            }
+            replayCurrent()
         case .loading:
             break
+        }
+    }
+
+    /// Re-plays whatever is "current" — intro if we're on it, otherwise
+    /// the current stop, otherwise the tour's start. Used after `.ended`
+    /// (drained queue) and `.idle/.failed` (no/failed item).
+    ///
+    /// Goes directly through `playIntro` / `playStop` rather than
+    /// `startPlaybackIfNeeded`, which short-circuits when our own
+    /// sourceId is already loaded — exactly the case here.
+    private func replayCurrent() {
+        if currentStopIndex == -1 {
+            playIntro()
+        } else if sortedStops.indices.contains(currentStopIndex) {
+            playStop(at: currentStopIndex)
+        } else if tour.introAudioURL != nil {
+            playIntro()
+        } else if !sortedStops.isEmpty {
+            playStop(at: 0)
         }
     }
 
