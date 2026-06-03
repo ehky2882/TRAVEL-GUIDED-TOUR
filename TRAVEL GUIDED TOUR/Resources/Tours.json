@@ -5246,6 +5246,50 @@
         "great-hall"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "1edd4218-4e5d-4115-842f-650135137f99",
+      "title": "Tompkins Square Park",
+      "shortDescription": "The small marble fountain in this park commemorates the largest single loss of life in New York City history before September 11 \u2014 a story that reshaped the entire neighborhood.",
+      "longDescription": "Ten and a half acres in the East Village, laid out in 1834, bounded by Avenue A and B between 7th and 10th Streets. Near the center stands the Slocum Memorial \u2014 a marble fountain inscribed \"They were earth's purest children young and fair\" \u2014 marking the 1904 General Slocum disaster, in which more than a thousand people, mostly German immigrant women and children from the surrounding blocks of Kleindeutschland, died when a steamship excursion caught fire on the East River. The catastrophe effectively ended Little Germany as a neighborhood. The East Village that replaced it \u2014 punk, anarchism, the Hare Krishnas founded under an elm tree here in 1966, the police riot of 1988 \u2014 built up on the empty space the Slocum left behind.",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/General_Slocum_Memorial_Tompkins_Square_Park_NYC.JPG/1280px-General_Slocum_Memorial_Tompkins_Square_Park_NYC.JPG",
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ec6239d6-adf5-4b95-9dd0-ebd3cf562a50",
+          "order": 0,
+          "title": "Tompkins Square Park",
+          "caption": "Find the small marble Slocum Memorial fountain near the center of the park.",
+          "latitude": 40.7264,
+          "longitude": -73.9815,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/Tompkins_Square_Park.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofence",
+          "triggerRadiusMeters": 60,
+          "imageURL": null,
+          "transcriptText": "The fountain in the middle of this park is a memorial to a boat fire.\n\nYou're in Tompkins Square Park, ten and a half acres in the East Village, bounded by Avenue A and Avenue B between 7th and 10th Streets. The park was laid out in 1834 and named for Daniel Tompkins, the sixth Vice President of the United States. The small marble fountain near the center of the park, with the relief of two children's faces and the inscription \"They were earth's purest children young and fair,\" is the Slocum Memorial \u2014 and the story behind it is one of the most consequential and least-remembered tragedies in New York history.\n\nOn the morning of June 15, 1904, more than thirteen hundred people, mostly German immigrant families from the surrounding blocks of \"Kleindeutschland\" \u2014 Little Germany \u2014 boarded the steamship General Slocum for a church picnic up the East River. About forty minutes into the trip, fire broke out below deck. The crew was untrained, the fire hoses had rotted, and the life jackets, which had been stored for years above the boilers, crumbled to powder in the passengers' hands. The captain refused to beach the ship and instead steered toward North Brother Island, accelerating the wind that fed the flames. More than a thousand people died, most of them women and children \u2014 the largest single loss of life in New York City history before September 11, 2001.\n\nThe disaster effectively ended Little Germany. Survivors and grieving families couldn't bear to remain in the neighborhood where every block held a connection to the lost, and within a decade most of the surviving German population had relocated to Yorkville on the Upper East Side. The Lower East Side filled in with Eastern European Jewish, Polish, and Ukrainian immigrants. Everything we now think of as East Village identity built up on the empty space left by the Slocum: punk and anarchism, the Hare Krishna movement founded under an elm tree in the park in 1966, the police riot that erupted here in 1988.\n\nThe fountain is small \u2014 the story it carries isn't."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 40.7264,
+      "centroidLongitude": -73.9815,
+      "city": "New York",
+      "primaryCategory": "history",
+      "tags": [
+        "east-village",
+        "tompkins-square",
+        "general-slocum",
+        "1904",
+        "kleindeutschland",
+        "memorial",
+        "1834",
+        "1988",
+        "park"
+      ],
+      "priceUSD": 0
     }
   ]
 }
