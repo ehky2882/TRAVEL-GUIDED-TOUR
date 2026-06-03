@@ -5387,7 +5387,7 @@
       "longDescription": "A walking tour from Grand Army Plaza at 59th Street south to Saks and Rockefeller Center at 50th — the most famous retail strip in the world, built almost entirely on the footprint of demolished private houses. Between 1910 and 1940, the Vanderbilt, Astor, Carnegie, Whitney, and Gould mansions were torn down one by one and replaced by department stores, hotels, and corporate towers. The walk visits the Apple Cube at the GM Building, the Tiffany and Bergdorf corner at 57th Street, and the only surviving mansion: the Cartier building at 52nd Street, traded in 1917 for a pearl necklace. St. Patrick's Cathedral and Rockefeller Center frame the southern end. Walk south on the east side of the avenue.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cartier_Building_-_NYC_%2851395758693%29.jpg/1280px-Cartier_Building_-_NYC_%2851395758693%29.jpg",
-      "kind": "multi",
+      "kind": "multiStop",
       "introAudioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fifth_avenue_multistop_00_intro.mp3",
       "stops": [
         {
