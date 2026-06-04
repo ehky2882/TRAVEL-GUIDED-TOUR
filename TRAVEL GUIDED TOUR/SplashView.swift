@@ -25,7 +25,7 @@ struct SplashView: View {
                 // Wordmark in iOS's New York serif system font —
                 // editorial register matches the gold map-pin palette.
                 Text("Dozent")
-                    .font(.system(size: 28, weight: .regular, design: .serif))
+                    .font(.system(size: 15, weight: .regular, design: .serif))
                     .foregroundStyle(.white)
                     .tracking(2)
             }
