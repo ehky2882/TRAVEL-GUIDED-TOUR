@@ -298,7 +298,11 @@
       "shortDescription": "Three minutes on the complex that was supposed to be an opera house — built instead during the Depression, and accidentally invented the rink and the tree.",
       "longDescription": "The whole complex was supposed to be an opera house. In 1928, John D. Rockefeller Jr. signed a long-term lease on three blocks of midtown as part of a deal to build a new home for the Metropolitan Opera. Then the stock market crashed. The Opera backed out. Rockefeller, already committed to twenty-four years of rent on land he couldn't return, decided to build something else — by himself, on his own money. What he built is what you're looking at: fourteen Art Deco buildings, completed between 1932 and 1939, with integrated public spaces, gardens, and one of the most ambitious public-art programs in the world. The largest private building project in American history at the time, spent in the middle of the Depression. It kept seventy-five thousand people in work.\n\nThree minutes on Prometheus, on the Lee Lawrie relief above him, and on the two of America's most beloved holiday traditions — the skating rink and the Christmas tree — that both started here, by accident.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Rockefeller_Center_2_%28New_York%29_%2844331718505%29.jpg/1280px-Rockefeller_Center_2_%28New_York%29_%2844331718505%29.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rockefeller-center-the-plaza_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rockefeller-center-the-plaza_2.webp",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Rockefeller_Center_2_%28New_York%29_%2844331718505%29.jpg/1280px-Rockefeller_Center_2_%28New_York%29_%2844331718505%29.jpg"
+      ],
       "kind": "single",
       "stops": [
         {
