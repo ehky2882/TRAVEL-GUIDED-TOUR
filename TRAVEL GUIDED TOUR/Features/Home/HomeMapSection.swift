@@ -144,9 +144,13 @@ struct HomeMapSection: View {
         switch mapMode {
         // `.muted` emphasis desaturates the standard style so the
         // pins, placecard, and chrome don't compete with the map's
-        // own colour. Hybrid + Imagery don't expose a muted variant
-        // — they stay at their default emphasis.
-        case .standard: map.mapStyle(.standard(emphasis: .muted))
+        // own colour. The POI include-list curates Apple's labels
+        // down to the categories that matter to a tour-seeker
+        // (cultural / civic / transit landmarks); the noise
+        // (ATMs, gas stations, pharmacies, retail, etc.) is hidden
+        // so the map reads as canvas, not a Yelp grid. Hybrid +
+        // Imagery don't expose these options; they stay at default.
+        case .standard: map.mapStyle(.standard(emphasis: .muted, pointsOfInterest: Self.tourPOI))
         case .hybrid:   map.mapStyle(.hybrid)
         case .imagery:  map.mapStyle(.imagery)
         }
@@ -211,6 +215,28 @@ struct HomeMapSection: View {
     private var clusterItems: [ClusterItem] {
         Self.cluster(markers: allStopMarkers, in: currentRegion)
     }
+
+    /// Curated allowlist of Apple Maps POI categories — only the
+    /// ones that help a tour-seeker get oriented (cultural, civic,
+    /// nature, transit) survive. Categories like ATMs, gas stations,
+    /// pharmacies, retail, restrooms, and laundry are filtered out
+    /// so the map reads as a canvas for the Atlas pins rather than
+    /// a Yelp grid. Easy to revisit; iterate by adding / removing
+    /// categories here.
+    private static let tourPOI: PointOfInterestCategories = .including([
+        // Cultural / civic landmarks
+        .landmark, .museum, .nationalMonument, .library, .castle, .fortress,
+        // Performance + venues
+        .theater, .movieTheater, .musicVenue, .stadium,
+        // Family / educational attractions
+        .aquarium, .planetarium, .zoo, .amusementPark,
+        // Nature + open space
+        .park, .nationalPark, .beach, .marina,
+        // Civic anchors
+        .university,
+        // Travel + transit
+        .airport, .publicTransport, .hotel, .parking, .evCharger
+    ])
 
     /// Round `span` to two significant figures so MapKit's
     /// sub-percent settle drift on pure pans doesn't perturb the
