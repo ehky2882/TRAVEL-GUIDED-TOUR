@@ -2873,8 +2873,11 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "Lincoln Center for the Performing Arts",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/150919_003_Lincoln_Center_-_Revson_Fountain%2C_Koch_Theater%2C_Metropolitan_Opera_%2821223352214%29.jpg/1280px-150919_003_Lincoln_Center_-_Revson_Fountain%2C_Koch_Theater%2C_Metropolitan_Opera_%2821223352214%29.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincoln-center_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincoln-center_2.webp",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/150919_003_Lincoln_Center_-_Revson_Fountain%2C_Koch_Theater%2C_Metropolitan_Opera_%2821223352214%29.jpg/1280px-150919_003_Lincoln_Center_-_Revson_Fountain%2C_Koch_Theater%2C_Metropolitan_Opera_%2821223352214%29.jpg"
+      ],
       "tags": [
         "lincoln center",
         "upper west side",
