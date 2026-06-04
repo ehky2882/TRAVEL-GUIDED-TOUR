@@ -3454,8 +3454,12 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "Bethesda Terrace",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Bethesda_fountain_and_the_terrace%2C_Central_Park%2C_NYC.jpg/1280px-Bethesda_fountain_and_the_terrace%2C_Central_Park%2C_NYC.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bethesda-terrace_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bethesda-terrace_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bethesda-terrace_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bethesda-terrace_4.webp"
+      ],
       "tags": [
         "bethesda terrace",
         "central park",
