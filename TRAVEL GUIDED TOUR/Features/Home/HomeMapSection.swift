@@ -142,7 +142,11 @@ struct HomeMapSection: View {
             }
         }
         switch mapMode {
-        case .standard: map.mapStyle(.standard)
+        // `.muted` emphasis desaturates the standard style so the
+        // pins, placecard, and chrome don't compete with the map's
+        // own colour. Hybrid + Imagery don't expose a muted variant
+        // — they stay at their default emphasis.
+        case .standard: map.mapStyle(.standard(emphasis: .muted))
         case .hybrid:   map.mapStyle(.hybrid)
         case .imagery:  map.mapStyle(.imagery)
         }
