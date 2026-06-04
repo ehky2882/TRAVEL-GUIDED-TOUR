@@ -32,6 +32,21 @@ These happen **automatically, without the owner asking**.
 
 ## Current State (2026-06-03)
 
+### Six home polish PRs + TestFlight 1.0 (28) (session 19)
+
+Six small focused home-screen tweaks layered on top of session 18's content, plus the build bumps that cut 27 (left unshipped by session 18) then 28 (defensive re-bump before owner upload). **TestFlight 1.0 (28) is live.** Catalog now **138 tours / 147 stops / 3 makers** (session 18's 131 + PR #127's 7 central Porto classics: Cathedral, São Bento, Clérigos, Ribeira, São Francisco, Bolsa, Dom Luís I).
+
+- **[PR #128](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/128) — muted standard map style.** `MapStyle.standard` now uses `.standard(emphasis: .muted)` so the canvas reads as desaturated and the pins / placecard / chrome stop competing with the map's own colour. Hybrid + Imagery unchanged.
+- **[PR #129](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/129) — pin sizes + cluster count typography.** `StopPin` diameter **14 → 16 pt** (unselected) and **18 → 20 pt** (selected). Cluster count text dropped semibold-SF-Pro for **SF Mono regular** at 12 pt — matches the new editorial voice on the home caption surfaces.
+- **[PR #130](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/130) — curated POI categories.** New `HomeMapSection.tourPOI` static allowlist passes `pointsOfInterest: .including(...)` to the standard map style. Cultural / civic / nature / transit kept; ATMs, gas stations, banks, retail, nightlife, restrooms, and the entire activity-venue group hidden. Single list to iterate on.
+- **[PR #131](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/131) — drawer list scoped to map view.** `displayedTours` now filters to tours whose stops fall inside `sharedState.visibleRegion` and sorts by tour-centroid distance from the map *center*. Header count collapses to `displayedTours.count` so "N TOURS IN VIEW" always matches the cards below. Strip-clipping helpers + `currentScreenHeight()` shim + unused `UIKit` import dropped. Doc comment flags the rails direction — when the drawer pivots to a rail layout (`HomeRailsViewModel`), this becomes the "In map view" rail and a sibling rail sorting by `Tour.distance(from: userLocation)` becomes "Near you" — no model change required.
+- **[PR #132](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/132) — keyboard overlay on bottom module + drawer.** `BottomModuleRoot` and `BottomSheet` switched from `.ignoresSafeArea(.container, edges: .bottom)` to `.ignoresSafeArea(.all, edges: .bottom)`. Focusing a `TextField` (e.g. inside `SearchView`) no longer pushes the bottom module + drawer up by the keyboard's height — the keyboard slides up *over* them, anchored at the screen bottom.
+- **[PR #133](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/133) — recenter on pin tap.** `onPinTapped` animates `cameraPosition` to centre the tapped pin's coordinate at the current visible span (read off `sharedState.visibleRegion?.span`, fall back to `recenterSpan`). Pin sits at screen geometric centre; placecard rises above it. Reads as a pan, not a zoom.
+
+`xcodebuild archive` clean at `/tmp/Atlas-20260603-2123-b28.xcarchive`; owner uploaded via Organizer. Build 27 was bumped direct-to-main in session 18 (`89dd5df`) but never archived; first archive of this session cut at 27, owner then asked to defensively bump to 28 — landed via [PR #134](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/134).
+
+**Latest TestFlight build: 1.0 (28)** — uploaded 2026-06-03 evening.
+
 ### 18 new NYC tours + TestFlight 1.0 (26) (session 18 — web/PM)
 
 Web/PM session. Eighteen new NYC tours had been landing direct-to-main between sessions; this session bundled them into a TestFlight cut. Catalog **113 → 131 tours**, 3 makers; NYC-area **73 → 91**. Multi-stop count **1 → 2**.
