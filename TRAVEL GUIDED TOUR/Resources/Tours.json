@@ -4072,8 +4072,11 @@
       "title": "One World Trade Center",
       "shortDescription": "The 1,776-foot tower completed in 2014 on the site of the original World Trade Center — the tallest building in the Western Hemisphere, and one of the most symbolic skyscrapers ever built.",
       "longDescription": "One World Trade Center, completed 2014, stands 1,776 feet — the year of American independence, by deliberate design. Architect David Childs of Skidmore, Owings and Merrill gave it a square base that chamfers progressively into an octagon at mid-height and back to a rotated square at the top, creating a twisting silhouette. The $3.5 billion tower was not built on the original north tower's footprint; those footprints, along with the south tower's, are preserved as the 9/11 Memorial reflecting pools immediately south. The base has 30-foot-thick reinforced concrete walls and no windows below the 20th floor.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/One_World_Trade_Center_2025_309.jpg/1280px-One_World_Trade_Center_2025_309.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/One_World_Trade_Center_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/One_World_Trade_Center_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/One_World_Trade_Center_3.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 165,
