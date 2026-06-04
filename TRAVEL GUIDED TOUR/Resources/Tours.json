@@ -659,7 +659,12 @@
       "shortDescription": "Two and a half minutes on the Art Deco tower that won the race to be the world's tallest — by hoisting a secret spire into place.",
       "longDescription": "At the corner of 42nd Street and Lexington Avenue, the Chrysler Building rises seventy-seven stories of brick and steel to a stainless-steel crown that's been called the most beautiful object in New York. It is, top to bottom, a billboard for an automobile company: eagles modeled on Chrysler hood ornaments project from the sixty-first floor, and hubcaps run lower down. It was completed in 1930, designed by the architect William Van Alen for Walter Chrysler, who wanted the tallest building in the world.\n\nSo did several other people. In 1929, Manhattan's skyscrapers were in an arms race, and the Chrysler Building's main rival was the Bank of Manhattan Building at 40 Wall Street — designed, as it happened, by Van Alen's former partner. Van Alen's response was almost theatrical: he had a 125-foot stainless-steel spire assembled in secret inside the building's fire shaft, where no one could see it. After 40 Wall Street topped out at 927 feet, he waited a few weeks, then hoisted the hidden spire into place. In ninety minutes the Chrysler Building grew from 925 to 1,046 feet — the tallest in the world. It held the title for eleven months, until the Empire State Building opened.\n\nThe building was Van Alen's masterpiece, and nearly the end of his career. Walter Chrysler refused to pay his fee, accusing him of taking bribes from subcontractors — a charge never proved, but enough to effectively blacklist him. He died in 1954, mostly forgotten. The building he designed is now considered one of the greatest works of Art Deco architecture in the world. If the lobby is open, step inside: red African travertine, Art Deco marble, and a ceiling mural by Edward Trumbull on transportation and human energy.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Chrysler_Building_2005_4.jpg/1280px-Chrysler_Building_2005_4.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chrysler-building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chrysler-building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chrysler-building_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chrysler-building_4.webp"
+      ],
       "kind": "single",
       "stops": [
         {
