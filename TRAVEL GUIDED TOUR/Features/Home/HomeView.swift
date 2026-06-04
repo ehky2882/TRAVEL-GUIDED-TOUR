@@ -102,6 +102,20 @@ struct HomeView: View {
                                 sharedState.placecardTour = tour
                                 sharedState.placecardCoordinate = coordinate
                             }
+                            // Recenter the map on the tapped pin's
+                            // coordinate so the pin (and the
+                            // placecard that rises above it) sit at
+                            // the screen's geometric center. Preserve
+                            // the current zoom span so the action
+                            // reads as a pan, not a zoom.
+                            let span = sharedState.visibleRegion?.span
+                                ?? Self.recenterSpan
+                            withAnimation(.easeInOut(duration: 0.35)) {
+                                cameraPosition = .region(MKCoordinateRegion(
+                                    center: coordinate,
+                                    span: span
+                                ))
+                            }
                         },
                         onMapTapped: {
                             guard sharedState.placecardTour != nil else { return }
