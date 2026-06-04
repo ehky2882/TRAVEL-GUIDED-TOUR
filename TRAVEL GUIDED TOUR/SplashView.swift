@@ -10,8 +10,8 @@ struct SplashView: View {
 
             VStack(spacing: 16) {
                 Circle()
-                    .fill(Color(red: 0.22, green: 1.0, blue: 0.08))
-                    .frame(width: 24, height: 24)
+                    .fill(AtlasColors.mapPin)
+                    .frame(width: 44, height: 44)
                     .opacity(opacity)
                     .animation(
                         .easeInOut(duration: 0.8)
@@ -22,10 +22,12 @@ struct SplashView: View {
                         opacity = 0.2
                     }
 
-                Text("atlas")
-                    .font(AtlasTypography.caption)
+                // Wordmark in iOS's New York serif system font —
+                // editorial register matches the gold map-pin palette.
+                Text("Dozent")
+                    .font(.system(size: 28, weight: .regular, design: .serif))
                     .foregroundStyle(.white)
-                    .tracking(4)
+                    .tracking(2)
             }
         }
     }
