@@ -145,7 +145,14 @@ struct BottomSheet<Content: View>: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
             .gesture(dragGesture(in: geo, topInset: topInset))
         }
-        .ignoresSafeArea(.container, edges: .bottom)
+        // `.all` covers both the container inset (home-indicator
+        // strip) AND the keyboard inset. Without ignoring the
+        // keyboard, focusing a TextField in the host nav stack
+        // (e.g. SearchView) would push the drawer up by the
+        // keyboard's height. We want the drawer to stay anchored
+        // and let the keyboard overlay it — matches the behavior
+        // we apply to the bottom module in `BottomModuleRoot`.
+        .ignoresSafeArea(.all, edges: .bottom)
     }
 
     // MARK: - Subviews
