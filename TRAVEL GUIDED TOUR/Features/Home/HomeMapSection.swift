@@ -333,7 +333,7 @@ private struct StopPin: View {
             .contentShape(Circle())
     }
 
-    private var diameter: CGFloat { isSelected ? 18 : 14 }
+    private var diameter: CGFloat { isSelected ? 20 : 16 }
 }
 
 /// Cluster badge: a larger circle with a count, in the accent color
@@ -351,7 +351,7 @@ private struct ClusterPin: View {
                 .frame(width: innerDiameter, height: innerDiameter)
                 .overlay(Circle().stroke(Color.white, lineWidth: 1.5))
             Text("\(count)")
-                .font(.system(size: 12, weight: .semibold))
+                .font(.system(size: 12, weight: .regular, design: .monospaced))
                 .foregroundStyle(.white)
         }
         .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
