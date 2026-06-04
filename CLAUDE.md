@@ -29,6 +29,39 @@ These happen **automatically, without the owner asking**.
 | 5 | Session ends (touched code or content) | Update `CLAUDE.md` + `ROADMAP.md` in same commit; write `archive/HANDOFF-YYMMDD.md`; update `archive/README.md` |
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
+| 8 | New tour added that lacks gallery images | Run the image pipeline (§ Image Pipeline) automatically — no prompting. **Exception: owner-supplied images (Portugal/Porto/Lisbon tours) — do not run pipeline, use the provided assets.** |
+
+## Image Pipeline
+
+Standard process for sourcing hero + gallery images for tours that don't have owner-supplied assets. Run this automatically whenever a new tour is added without images, or when the owner asks to improve existing images.
+
+**Tools:** Unsplash API (source) → Gemini vision (verification gate) → Pillow (resize/crop) → gh-pages (hosting) → Tours.json patch.
+
+**API keys** (owner pastes fresh each session — do not store):
+- Unsplash: `Client-ID <key>` header on `https://api.unsplash.com/search/photos`
+- Gemini: `?key=<key>` on `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent`
+- Gemini key format: starts with `AQ.` (NOT `AIzaSy` — do not prepend anything)
+
+**Pipeline steps:**
+1. **Search** — 5–6 targeted Unsplash queries per tour, 3 results each, covering different vantage points (exterior, interior, aerial, detail, night, golden hour, etc.). `orientation=landscape&content_filter=high`.
+2. **Verify** — Send each candidate to `gemini-2.5-flash-lite` with a subject-specific YES/NO prompt. Reject non-subject images silently.
+3. **Label** — Crop to 1200×900 WebP q82 (Pillow: `scale = max(W/w, H/h)` → resize → center crop). Add large white-box number + category label for owner review.
+4. **Owner picks** — Send labeled images; owner replies e.g. `"3 hero, 1, 7, 9"`. First number = hero; rest = gallery order.
+5. **Process** — Crop selections to final 1200×900 WebP (no label). Name: `{audio-slug}_hero.webp`, `{audio-slug}_2.webp`, etc.
+6. **Upload** — Commit to `gh-pages` branch under `images/`. Pull + rebase if non-fast-forward.
+7. **Patch Tours.json** — Replace `heroImageURL` + set/update `additionalImageURLs`. Commit + push to session branch.
+
+**Special cases:**
+- Owner says "keep current hero" → leave `heroImageURL` as-is; only add `additionalImageURLs`.
+- Owner says "keep current hero in gallery" → put original URL as last entry in `additionalImageURLs`.
+- Too few verified images → tell owner, offer to fetch more with different queries, or skip.
+- Unsplash rate limit (50 req/hr free tier) → pause, note time to reset, continue other work.
+
+**Audio slug** = the filename stem of the tour's `audioURL` (e.g. `audio/empire-state-building.mp3` → `empire-state-building`). Use this as the image filename prefix. Some older slugs use dots or mixed case — match exactly.
+
+**Image URL base:** `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
+
+**gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
 ## Current State (2026-06-03)
 
