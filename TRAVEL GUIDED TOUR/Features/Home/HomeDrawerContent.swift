@@ -1,7 +1,6 @@
 import SwiftUI
 import CoreLocation
 import MapKit
-import UIKit
 
 /// The home drawer's scrollable content — header + quick-resume
 /// banners + filtered tour list. Lifted out of `HomeView` so it can
@@ -34,10 +33,10 @@ struct HomeDrawerContent: View {
         GeometryReader { geo in
             let visible = drawerVisibleHeight(in: geo)
             let listOpacity = min(1, max(0, (visible - peekHeight) / 90))
-            let aboveDrawerCount = toursInViewCount(in: geo)
+            let inViewCount = displayedTours.count
 
             VStack(alignment: .leading, spacing: 0) {
-                headerLabel(forCount: aboveDrawerCount)
+                headerLabel(forCount: inViewCount)
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.primaryText)
                     .frame(maxWidth: .infinity)
@@ -136,10 +135,35 @@ struct HomeDrawerContent: View {
         return dataService.tours.filter { $0.primaryCategory == selectedCategory }
     }
 
+    /// Tours surfaced in the scrollable list, in order. The list is
+    /// scoped to the *current map view* — only tours with at least
+    /// one stop inside `sharedState.visibleRegion` are included, and
+    /// they're sorted by the tour's centroid distance from the map's
+    /// center. The header count above the list reflects the same
+    /// set, so "N TOURS IN VIEW" matches the number of cards below.
+    /// Before the first `.onMapCameraChange` fires (visibleRegion ==
+    /// nil), the unfiltered list is shown so the drawer isn't blank
+    /// on launch.
+    ///
+    /// Future direction: when the drawer grows into a rail layout
+    /// (see `HomeRailsViewModel`), this single in-view feed becomes
+    /// one rail ("Tours in map view") and a sibling rail will sort
+    /// `filteredTours` by `Tour.distance(from: userLocation)` for a
+    /// "Near you" feed. Both shapes are derivable from the same
+    /// `filteredTours` base + the existing `sharedState.visibleRegion`
+    /// and `locationManager.userLocation` inputs, so no model change
+    /// is required for that pivot — it's just lifting these closures
+    /// into rail-shaped computed properties.
     private var displayedTours: [Tour] {
         let base = filteredTours
-        guard let userLocation = locationManager.userLocation else { return base }
-        return base.sorted { $0.distance(from: userLocation) < $1.distance(from: userLocation) }
+        guard let region = sharedState.visibleRegion else { return base }
+        let center = CLLocation(latitude: region.center.latitude,
+                                longitude: region.center.longitude)
+        return base
+            .filter { tour in
+                tour.stops.contains { region.contains($0.coordinate) }
+            }
+            .sorted { $0.distance(from: center) < $1.distance(from: center) }
     }
 
     private var continueListeningTour: Tour? {
@@ -173,42 +197,6 @@ struct HomeDrawerContent: View {
         return max(peekHeight, baseHeight - sharedState.sheetDragOffset)
     }
 
-    /// Mirrors `HomeView.toursInViewCount(in:)`. Clips the visible map
-    /// region to the strip of map between the screen top and the
-    /// drawer's top edge, then counts tours with any stop in that
-    /// strip.
-    private func toursInViewCount(in geo: GeometryProxy) -> Int {
-        guard let region = sharedState.visibleRegion else { return filteredTours.count }
-        let screenHeight = currentScreenHeight() ?? geo.size.height
-        guard screenHeight > 0 else { return 0 }
-        let drawerTopY = screenHeight
-            - drawerVisibleHeight(in: geo)
-            - AtlasBottomModule.height()
-        let visibleFraction = max(0, min(1, drawerTopY / screenHeight))
-        guard visibleFraction > 0 else { return 0 }
-        let topLatitude = region.center.latitude + region.span.latitudeDelta / 2
-        let clippedLatDelta = region.span.latitudeDelta * visibleFraction
-        let clipped = MKCoordinateRegion(
-            center: CLLocationCoordinate2D(
-                latitude: topLatitude - clippedLatDelta / 2,
-                longitude: region.center.longitude
-            ),
-            span: MKCoordinateSpan(
-                latitudeDelta: clippedLatDelta,
-                longitudeDelta: region.span.longitudeDelta
-            )
-        )
-        return filteredTours.filter { tour in
-            tour.stops.contains { clipped.contains($0.coordinate) }
-        }.count
-    }
-
-    private func currentScreenHeight() -> CGFloat? {
-        UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .first(where: { $0.activationState == .foregroundActive })?
-            .screen.bounds.height
-    }
 
     /// The "N tours in view" header. While the map is mid-pan/-fling
     /// (sharedState.isMapMoving), shows an animated *ELLIPSIS*
