@@ -9,23 +9,47 @@ enum AtlasFormatters {
 
     // MARK: - Duration
 
-    /// Renders an audio duration as `"5 min"`, `"45 sec"`, or
-    /// `"1 hr 5 min"` — adapting unit words to the device's locale.
-    /// Uses `.abbreviated` style so the strings stay short on rail
-    /// cards and metadata rows. Drops the zero component for cleaner
-    /// reading (`"5 min"` instead of `"5 min 0 sec"`).
+    /// Renders an audio duration as `"45 sec"`, `"1 min 59 sec"`,
+    /// `"5 min"`, or `"1 hr 25 min"` — adapting unit words to the
+    /// device's locale. Uses `.abbreviated` style so the strings stay
+    /// short on rail cards and metadata rows. Drops zero components
+    /// for cleaner reading (`"5 min"` instead of `"5 min 0 sec"`).
+    ///
+    /// Sub-hour durations include seconds so the masthead subtitle on
+    /// the tour detail sheet matches the playback bar's countdown —
+    /// previously a 1m 59s tour read as `"1m"` in the subtitle while
+    /// the bar counted down from `1:59`, looking like a bug
+    /// (2026-06-03 owner correction).
     static func duration(seconds: Int) -> String {
         let total = TimeInterval(max(0, seconds))
         if total < 60 {
             // Sub-minute → second-only formatter so we don't emit "0 min 30 sec".
             return secondFormatter.string(from: total) ?? "\(seconds)s"
         }
-        return durationFormatter.string(from: total) ?? "\(seconds / 60) min"
+        if total < 3600 {
+            return minuteSecondFormatter.string(from: total) ?? "\(seconds / 60) min"
+        }
+        return hourMinuteFormatter.string(from: total) ?? "\(seconds / 3600) hr"
     }
 
-    private static let durationFormatter: DateComponentsFormatter = {
+    /// One-hour-plus formatter — drops seconds. A 1h 25m 17s tour
+    /// reads as `"1 hr 25 min"`; the extra precision wouldn't help.
+    private static let hourMinuteFormatter: DateComponentsFormatter = {
         let f = DateComponentsFormatter()
         f.allowedUnits = [.hour, .minute]
+        f.unitsStyle = .abbreviated
+        f.zeroFormattingBehavior = .dropAll
+        f.maximumUnitCount = 2
+        return f
+    }()
+
+    /// Sub-hour formatter — keeps seconds so the catalog's
+    /// `audioDurationSeconds` value matches what the user hears
+    /// counted down from the play bar. `maximumUnitCount = 2`
+    /// caps at `"M min S sec"` for under an hour.
+    private static let minuteSecondFormatter: DateComponentsFormatter = {
+        let f = DateComponentsFormatter()
+        f.allowedUnits = [.minute, .second]
         f.unitsStyle = .abbreviated
         f.zeroFormattingBehavior = .dropAll
         f.maximumUnitCount = 2

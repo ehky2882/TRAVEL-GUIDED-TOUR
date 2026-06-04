@@ -32,24 +32,39 @@ These happen **automatically, without the owner asking**.
 
 ## Current State (2026-06-03)
 
-### 18 NYC tours + CI enum fixes (session 18 — web/PM)
+### Six home polish PRs + TestFlight 1.0 (28) (session 19)
 
-Web/PM session. 18 new NYC audio tours added across 10 commits (catalog 113 → 131, NYC 73 → 96). Two validator bugs that had been silently breaking CI since tour 114 were found and fixed:
+Six small focused home-screen tweaks layered on top of session 18's content, plus the build bumps that cut 27 (left unshipped by session 18) then 28 (defensive re-bump before owner upload). **TestFlight 1.0 (28) is live.** Catalog now **138 tours / 147 stops / 3 makers** (session 18's 131 + PR #127's 7 central Porto classics: Cathedral, São Bento, Clérigos, Ribeira, São Francisco, Bolsa, Dom Luís I).
 
-- **`triggerMode: "geofence"` → `"geofenced"`** — 23 stops across tours 114–131 ([PR #125](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/125))
-- **`kind: "multi"` → `"multiStop"`** — Fifth Avenue Walk tour 121 ([PR #126](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/126))
+- **[PR #128](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/128) — muted standard map style.** `MapStyle.standard` now uses `.standard(emphasis: .muted)` so the canvas reads as desaturated and the pins / placecard / chrome stop competing with the map's own colour. Hybrid + Imagery unchanged.
+- **[PR #129](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/129) — pin sizes + cluster count typography.** `StopPin` diameter **14 → 16 pt** (unselected) and **18 → 20 pt** (selected). Cluster count text dropped semibold-SF-Pro for **SF Mono regular** at 12 pt — matches the new editorial voice on the home caption surfaces.
+- **[PR #130](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/130) — curated POI categories.** New `HomeMapSection.tourPOI` static allowlist passes `pointsOfInterest: .including(...)` to the standard map style. Cultural / civic / nature / transit kept; ATMs, gas stations, banks, retail, nightlife, restrooms, and the entire activity-venue group hidden. Single list to iterate on.
+- **[PR #131](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/131) — drawer list scoped to map view.** `displayedTours` now filters to tours whose stops fall inside `sharedState.visibleRegion` and sorts by tour-centroid distance from the map *center*. Header count collapses to `displayedTours.count` so "N TOURS IN VIEW" always matches the cards below. Strip-clipping helpers + `currentScreenHeight()` shim + unused `UIKit` import dropped. Doc comment flags the rails direction — when the drawer pivots to a rail layout (`HomeRailsViewModel`), this becomes the "In map view" rail and a sibling rail sorting by `Tour.distance(from: userLocation)` becomes "Near you" — no model change required.
+- **[PR #132](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/132) — keyboard overlay on bottom module + drawer.** `BottomModuleRoot` and `BottomSheet` switched from `.ignoresSafeArea(.container, edges: .bottom)` to `.ignoresSafeArea(.all, edges: .bottom)`. Focusing a `TextField` (e.g. inside `SearchView`) no longer pushes the bottom module + drawer up by the keyboard's height — the keyboard slides up *over* them, anchored at the screen bottom.
+- **[PR #133](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/133) — recenter on pin tap.** `onPinTapped` animates `cameraPosition` to centre the tapped pin's coordinate at the current visible span (read off `sharedState.visibleRegion?.span`, fall back to `recenterSpan`). Pin sits at screen geometric centre; placecard rises above it. Reads as a pan, not a zoom.
 
-Valid JSON enum raw values (memorize these — Swift model is strict):
-- `triggerMode`: `"manual"` or `"geofenced"` (NOT `"geofence"`)
-- `kind`: `"single"` or `"multiStop"` (NOT `"multi"`)
-- `primaryCategory`: `"history"` | `"architecture"` | `"visualArt"` | `"musicAndPerformance"` | `"literature"` | `"foodAndDrink"` | `"natureAndParks"` | `"hiddenGems"` | `"culturalHeritage"` | `"sacredSites"`
+`xcodebuild archive` clean at `/tmp/Atlas-20260603-2123-b28.xcarchive`; owner uploaded via Organizer. Build 27 was bumped direct-to-main in session 18 (`89dd5df`) but never archived; first archive of this session cut at 27, owner then asked to defensively bump to 28 — landed via [PR #134](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/134).
 
-Tours added this session (all Atlas Studio NYC, all single-stop unless noted):
-Four Freedoms Park (132s) · Green-Wood Cemetery (149s) · African Burial Ground (138s) · Cooper Union (139s) · Tompkins Square Park (132s) · MoMA (118s) · Bryant Park (122s) · **Fifth Avenue Walk** (multi-stop, 6 stops + intro, ~9m) · Federal Hall (120s) · Columbus Park Chinatown (121s) · Schomburg Center (136s) · Coney Island (130s) · Eldridge Street Synagogue (121s) · Grand Army Plaza Brooklyn (119s) · Grand Concourse (137s) · Strivers' Row (135s) · IAC Building (121s) · The Strand Bookstore (125s).
+**Latest TestFlight build: 1.0 (28)** — uploaded 2026-06-03 evening.
 
-**NYC goal: 96 / 100 — 4 tours to go.** Owner will record and upload; top candidates: United Nations, Jefferson Market Library, Tweed Courthouse, Delmonico's (see HANDOFF-260603.md for full list of 8).
+### 18 new NYC tours + TestFlight 1.0 (26) (session 18 — web/PM)
 
-**Latest TestFlight build: 1.0 (25)** — unchanged from session 17.
+Web/PM session. Eighteen new NYC tours had been landing direct-to-main between sessions; this session bundled them into a TestFlight cut. Catalog **113 → 131 tours**, 3 makers; NYC-area **73 → 91**. Multi-stop count **1 → 2**.
+
+- **5 NYC tours (114–118, `7e3e9a9`):** Four Freedoms Park, Green-Wood Cemetery, African Burial Ground National Monument, Cooper Union Foundation Building, Tompkins Square Park.
+- **2 NYC tours (119–120, `9df3983`):** Museum of Modern Art (MoMA), Bryant Park.
+- **Fifth Avenue Walk multi-stop tour (121, `88bf893`)** — **second multi-stop tour ever** in the catalog (joining AMNH Four Facades from 2026-05-26).
+- **2 NYC tours (122–123, `8261107`):** Federal Hall, Columbus Park (Chinatown).
+- **2 NYC tours (124–125, `64a04e3`):** Schomburg Center for Research in Black Culture, Coney Island.
+- **2 NYC tours (126–127, `79f6b49`):** Eldridge Street Synagogue, Grand Army Plaza (Brooklyn).
+- **2 NYC tours (128–129, `fab0e53`):** Grand Concourse, Strivers' Row.
+- **2 NYC tours (130–131, `ab7c1f8`):** IAC Building (Frank Gehry, 2007), The Strand Bookstore.
+- **Two validator-caught typo fixes** before the build: `triggerMode geofence → geofenced` across tours 114–131 (`3235d33`), and `TourKind multi → multiStop` on Fifth Avenue Walk (`7c11003`).
+- **Build bumped 25 → 26 in `17dba88`** — direct-to-main per established pattern (`aba765f` for 25, `401358f` for 24). Single-line pbxproj edit. `xcodebuild archive` clean at `/tmp/Atlas-20260603-1840.xcarchive` (~3 min). Owner uploaded via Organizer.
+
+No Swift / asset / project structure changes this session beyond the pbxproj bump.
+
+**Latest TestFlight build: 1.0 (26)** — uploaded 2026-06-03 evening.
 
 ### Home polish batch + cluster smoothness + TestFlight 1.0 (25) (session 17)
 
@@ -244,8 +259,8 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **131 tours, 3 makers** in `Resources/Tours.json` (96 NYC-area + 30 Atlas Studio Porto + 5 Atlas Studio Lisbon); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **129 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s) and "Fifth Avenue Walk" (6 stops + intro, ~9m, 82nd → 59th St along 5th Ave)
+- **131 tours, 3 makers** in `Resources/Tours.json` (91 NYC-area + 30 Atlas Studio Porto + 5 Atlas Studio Lisbon + others); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **129 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously

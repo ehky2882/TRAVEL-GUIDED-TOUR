@@ -39,7 +39,15 @@ struct BottomModuleRoot: View {
                 extendsToScreenEdges: extendsToScreenEdges
             )
         }
-        .ignoresSafeArea(.container, edges: .bottom)
+        // `.all` covers both the container inset (home-indicator
+        // strip — already needed for the floating-island look) AND
+        // the keyboard inset. Without ignoring the keyboard, focusing
+        // a TextField anywhere in the main window (SearchView,
+        // Settings, etc.) would push the bottom module up by the
+        // keyboard's height. We want the bottom module to stay
+        // anchored at the bottom of the screen and let the keyboard
+        // overlay it.
+        .ignoresSafeArea(.all, edges: .bottom)
         .animation(.spring(response: 0.4, dampingFraction: 0.86), value: nowPlayingTour?.id)
     }
 

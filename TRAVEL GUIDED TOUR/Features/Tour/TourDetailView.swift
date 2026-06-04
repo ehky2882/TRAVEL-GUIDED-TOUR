@@ -66,72 +66,50 @@ struct TourDetailView: View {
     /// doesn't push), so we drive it through `.navigationDestination`.
     @State private var showingMaker = false
 
+    /// Toggles between the truncated 4-line preview of `longDescription`
+    /// and the full text. Apple Music / Podcasts pattern — keeps the
+    /// action row close to the fold, lets readers expand inline.
+    @State private var isDescriptionExpanded = false
+
+    /// Lines shown in the truncated state. iOS convention (Apple Music
+    /// album notes, Podcasts show notes); ~25 words at 15pt SF Pro.
+    private static let descriptionPreviewLineLimit = 4
+
+    /// Active when the user is dragging on the primary button's
+    /// progress bar. Mirrors PlayerView's scrub pattern: while true,
+    /// the bar fill + time-remaining text track `scrubTime` instead
+    /// of the live `audioPlayer.currentTime`, so the thumb doesn't
+    /// fight the periodic time observer.
+    @State private var isScrubbingPrimary = false
+    @State private var primaryScrubTime: TimeInterval = 0
+
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
-                // Breathing room between the nav bar and the hero —
-                // without this the image kisses the title strip.
-                imageSection
-                    .padding(.top, AtlasSpacing.md)
-
-                VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                    masthead
-                    buttonRow
-                        .padding(.top, AtlasSpacing.xs)
-                    descriptionSection
-                    stopsSection
-                }
-                .padding(.horizontal, AtlasSpacing.lg)
-
-                // Bottom inset so the last line of content clears the
-                // mini-player + tab bar that float over this view from
-                // the secondary higher-level window.
-                Color.clear.frame(height: AtlasBottomModule.height())
+        scrollBody
+            // `.safeAreaInset(.top)` parks the chromeRow above the
+            // ScrollView's content area: the row stays anchored at
+            // the screen top while the body content scrolls *under*
+            // it. Solid material + tint backdrop, hard bottom edge.
+            // A gradient fade was explored on 2026-06-03 and parked
+            // — owner wants to revisit later.
+            .safeAreaInset(edge: .top, spacing: 0) {
+                chromeRow
+                    .background(AtlasColors.secondaryBackground.opacity(0.8))
+                    .background(.regularMaterial)
             }
-        }
-        .background(AtlasColors.secondaryBackground)
-        // Title moved into the body — the nav bar carries only the
-        // chrome (close + bookmark + overflow). Empty `navigationTitle`
-        // keeps SwiftUI's toolbar geometry stable.
-        .navigationTitle("")
-        .inlineNavigationBarTitle()
-        // Hide the toolbar's own background — SwiftUI's
-        // `.toolbarBackground(Color…)` renders as a *translucent
-        // material* tinted with the color, not as a solid fill, so
-        // the nav bar reads as a slightly different shade than the
-        // body. Hidden so the hosting view's UIKit-level
-        // `.secondarySystemBackground` shows behind the toolbar items.
-        .toolbarBackground(.hidden, for: .navigationBar)
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Button(action: { tourPresenter.dismiss() }) {
-                    Image(systemName: "xmark")
-                        .font(AtlasTypography.body.weight(.semibold))
-                        .foregroundStyle(AtlasColors.primaryText)
-                }
-                .accessibilityLabel("Close")
-            }
-            ToolbarItem(placement: .atlasTrailing) {
-                Button(action: toggleSaved) {
-                    Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
-                        .font(AtlasTypography.body.weight(.semibold))
-                        .foregroundStyle(AtlasColors.primaryText)
-                }
-                .accessibilityLabel(isSaved ? "Remove from saved" : "Save tour")
-            }
-            ToolbarItem(placement: .atlasTrailing) {
-                overflowMenu
-            }
-        }
+            .background(AtlasColors.secondaryBackground)
+            // System nav bar hidden — our chromeRow handles all top
+            // chrome inline so each control is an identical 44pt
+            // Capsule, sized + styled to match the action row's
+            // secondary buttons exactly. iOS 26's auto glass-grouping
+            // around toolbar items was visually stacking on top of
+            // any custom chrome we added, producing a "two layers"
+            // look (owner correction, 2026-06-03).
+            .toolbar(.hidden, for: .navigationBar)
         .navigationDestination(isPresented: $showingMaker) {
             if let maker = dataService.maker(for: tour) {
                 MakerView(maker: maker)
             }
         }
-        // Mark this surface as a pushed detail screen so the bottom
-        // module switches to full-edge while it's on top of the
-        // stack — even when reached from the Home tab. Reverts to the
-        // host tab's root geometry on pop / disappear.
         .onAppear {
             navState.push()
             recentlyViewedStore.record(tour.id)
@@ -140,9 +118,6 @@ struct TourDetailView: View {
             navState.pop()
         }
         .onChange(of: tourDownloader.states[tour.id]) { _, newState in
-            // Keep LibraryStore in sync with the download lifecycle.
-            // The downloader is decoupled from LibraryStore so this is
-            // the single place that mirrors the two.
             switch newState {
             case .completed:
                 libraryStore.markDownloaded(tour.id)
@@ -152,6 +127,66 @@ struct TourDetailView: View {
                 }
             case .downloading:
                 break
+            }
+        }
+    }
+
+    /// Sticky top chrome — X close (leading) · Save · overflow
+    /// (trailing). Renders three discrete `chromeCapsule`-styled
+    /// buttons matching the inline action row's secondary
+    /// (save/download) buttons: 44×44 Capsule with
+    /// `AtlasColors.mapPin.opacity(0.15)` fill + 20pt regular SF
+    /// Symbol in `mapPin` gold. The row sits at the top of the
+    /// body (outside the ScrollView) so it stays put while the
+    /// content scrolls underneath.
+    private var chromeRow: some View {
+        HStack(spacing: AtlasSpacing.sm) {
+            Button(action: { tourPresenter.dismiss() }) {
+                chromeCapsule("xmark")
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Close")
+
+            Spacer()
+
+            Button(action: toggleSaved) {
+                chromeCapsule(isSaved ? "bookmark.fill" : "bookmark")
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(isSaved ? "Remove from saved" : "Save tour")
+
+            overflowMenu
+        }
+        .padding(.horizontal, AtlasSpacing.lg)
+        .padding(.vertical, AtlasSpacing.sm)
+    }
+
+    /// Scrollable body content — everything below the chromeRow.
+    private var scrollBody: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
+                // Breathing room between the chrome row and the hero —
+                // without this the image kisses the row.
+                imageSection
+                    .padding(.top, AtlasSpacing.md)
+
+                VStack(alignment: .leading, spacing: AtlasSpacing.md) {
+                    masthead
+                    buttonRow
+                        // VStack `md` (16) + this `sm` (8) on top *and*
+                        // bottom = 24pt visible above and below the
+                        // action row (owner-set, 2026-06-03). Asymmetric
+                        // breath above the row removed.
+                        .padding(.vertical, AtlasSpacing.sm)
+                    descriptionSection
+                    stopsSection
+                }
+                .padding(.horizontal, AtlasSpacing.lg)
+
+                // Bottom inset so the last line of content clears the
+                // mini-player + tab bar that float over this view from
+                // the secondary higher-level window.
+                Color.clear.frame(height: AtlasBottomModule.height())
             }
         }
     }
@@ -205,9 +240,15 @@ struct TourDetailView: View {
     /// header. Category chips dropped per the design pass; duration /
     /// stops / distance folded into a single small subtitle line.
     private var masthead: some View {
-        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            Text(tour.title)
-                .font(AtlasTypography.headline)
+        // VStack spacing is 0 on purpose — the visible 4pt gap above
+        // and below the maker row comes from `makerRow`'s own
+        // `.padding(.vertical, AtlasSpacing.xs)` (4pt top + 4pt
+        // bottom). Keeping the gap inside the maker row lets the
+        // NavigationLink's tap zone include that gap, instead of
+        // pushing the gap up into inert VStack spacing.
+        VStack(alignment: .leading, spacing: 0) {
+            Text(tour.title.uppercased())
+                .font(AtlasTypography.body)
                 .foregroundStyle(AtlasColors.primaryText)
                 .fixedSize(horizontal: false, vertical: true)
 
@@ -226,12 +267,9 @@ struct TourDetailView: View {
                     MakerView(maker: maker)
                 } label: {
                     HStack(spacing: AtlasSpacing.sm) {
-                        Image(systemName: "person.crop.circle")
-                            .font(AtlasTypography.body)
+                        Text(maker.displayName)
+                            .font(AtlasTypography.caption)
                             .foregroundStyle(AtlasColors.secondaryText)
-                        Text("by \(maker.displayName)")
-                            .font(AtlasTypography.body)
-                            .foregroundStyle(AtlasColors.primaryText)
                         Spacer()
                         Image(systemName: "chevron.right")
                             .font(AtlasTypography.caption)
@@ -268,11 +306,51 @@ struct TourDetailView: View {
 
     // MARK: - Description + stops
 
+    /// Description — truncated to a 4-line preview by default with an
+    /// inline "Read more" / "Show less" toggle. Apple Music / Podcasts
+    /// pattern; keeps the action row close to the fold for tours with
+    /// long editorial-voice longDescription strings (the Cloisters
+    /// runs ~32 lines unbounded).
+    ///
+    /// The toggle row only renders when the text actually overflows
+    /// the limit — short descriptions skip the affordance entirely.
+    /// We detect overflow by comparing the text's intrinsic height
+    /// at body typography against the height of the same text capped
+    /// at `descriptionPreviewLineLimit` lines.
     private var descriptionSection: some View {
-        Text(tour.longDescription)
-            .font(AtlasTypography.body)
-            .foregroundStyle(AtlasColors.primaryText)
-            .fixedSize(horizontal: false, vertical: true)
+        VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+            Text(tour.longDescription)
+                .font(AtlasTypography.body)
+                .foregroundStyle(AtlasColors.primaryText)
+                .lineLimit(isDescriptionExpanded ? nil : Self.descriptionPreviewLineLimit)
+                .fixedSize(horizontal: false, vertical: true)
+                .animation(.easeInOut(duration: 0.2), value: isDescriptionExpanded)
+
+            if shouldShowReadMoreToggle {
+                Button {
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        isDescriptionExpanded.toggle()
+                    }
+                } label: {
+                    Text(isDescriptionExpanded ? "Show less" : "Read more")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(isDescriptionExpanded ? "Show less description" : "Read more description")
+            }
+        }
+    }
+
+    /// Cheap overflow check — uses raw character count as a proxy for
+    /// "does this overflow 4 lines at 15pt body on iPhone width?"
+    /// 240 chars is the empirical break point (4 × ~60 chars/line at
+    /// our content width); anything under that always fits, anything
+    /// over reliably overflows. A character-count proxy avoids a
+    /// GeometryReader / Text-measurement round-trip on every body
+    /// eval, which would fight the inline truncation animation.
+    private var shouldShowReadMoreToggle: Bool {
+        tour.longDescription.count > 240
     }
 
     /// Stops list — header unified to "Stops" for both single- and
@@ -283,7 +361,7 @@ struct TourDetailView: View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
             Text("Stops")
                 .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
+                .foregroundStyle(AtlasColors.secondaryText)
                 .padding(.top, AtlasSpacing.md)
 
             ForEach(tour.stops.sorted(by: { $0.order < $1.order })) { stop in
@@ -295,48 +373,110 @@ struct TourDetailView: View {
         }
     }
 
+    /// Tappable stop row — whole row acts as one play affordance
+    /// (Apple Podcasts pattern). Leading column shows the stop
+    /// number, or an animated waveform when this stop is currently
+    /// producing audio. Trailing column shows a play / pause SF
+    /// Symbol so the per-row affordance is also visible at the
+    /// row's right edge — same effect on tap.
     private func stopRow(_ stop: Stop) -> some View {
-        HStack(alignment: .top, spacing: AtlasSpacing.md) {
-            // Stop number, OR an animated waveform when this stop is
-            // currently playing. The waveform sits in the same 24pt
-            // slot as the number so the column alignment doesn't
-            // shift when playback starts. `.symbolEffect(.variableColor.iterative)`
-            // is iOS 17+ — Atlas targets 26.2+, so it's fine.
-            Group {
-                if isPlayingStop(stop) {
-                    Image(systemName: "waveform")
-                        .font(AtlasTypography.body.weight(.semibold))
-                        .foregroundStyle(AtlasColors.mapPin)
-                        .symbolEffect(.variableColor.iterative, options: .repeating)
-                        .accessibilityLabel("Playing")
-                } else {
-                    Text("\(stop.order + 1)")
+        Button {
+            handleStopTap(stop)
+        } label: {
+            HStack(alignment: .top, spacing: AtlasSpacing.md) {
+                // Stop number, OR an animated waveform when this stop is
+                // currently playing. The waveform sits in the same 24pt
+                // slot as the number so the column alignment doesn't
+                // shift when playback starts. `.symbolEffect(.variableColor.iterative)`
+                // is iOS 17+ — Atlas targets 26.2+, so it's fine.
+                Group {
+                    if isPlayingStop(stop) {
+                        Image(systemName: "waveform")
+                            .font(AtlasTypography.body.weight(.semibold))
+                            .foregroundStyle(AtlasColors.mapPin)
+                            .symbolEffect(.variableColor.iterative, options: .repeating)
+                            .accessibilityLabel("Playing")
+                    } else {
+                        Text("\(stop.order + 1)")
+                            .font(AtlasTypography.body)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                    }
+                }
+                .frame(width: 24, alignment: .leading)
+
+                VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                    Text(stop.title.uppercased())
                         .font(AtlasTypography.body)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                }
-            }
-            .frame(width: 24, alignment: .leading)
+                        .foregroundStyle(AtlasColors.primaryText)
+                        .multilineTextAlignment(.leading)
 
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                Text(stop.title)
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
+                    if let caption = stop.caption {
+                        Text(caption)
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                            .multilineTextAlignment(.leading)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
 
-                if let caption = stop.caption {
-                    Text(caption)
+                    Text(AtlasFormatters.duration(seconds: stop.audioDurationSeconds))
                         .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                        .fixedSize(horizontal: false, vertical: true)
+                        .foregroundStyle(AtlasColors.tertiaryText)
                 }
 
-                Text(AtlasFormatters.duration(seconds: stop.audioDurationSeconds))
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
+                Spacer()
             }
-
-            Spacer()
+            .padding(.vertical, AtlasSpacing.xs)
+            .contentShape(Rectangle())
         }
-        .padding(.vertical, AtlasSpacing.xs)
+        .buttonStyle(.plain)
+        .accessibilityLabel(stopRowAccessibilityLabel(for: stop))
+        .accessibilityHint("Plays this stop")
+    }
+
+    private func stopRowAccessibilityLabel(for stop: Stop) -> String {
+        let base = "Stop \(stop.order + 1): \(stop.title)"
+        if isPlayingStop(stop) && audioPlayer.state == .playing {
+            return "\(base), now playing"
+        }
+        return base
+    }
+
+    /// Whole-row tap handler. If this stop is the audible one, toggle
+    /// pause / resume in place; otherwise start playback at this stop.
+    private func handleStopTap(_ stop: Stop) {
+        let isAudible = appShared.currentPlayingStopId == stop.id
+            && audioPlayer.currentSourceId == tour.id.uuidString
+        if isAudible {
+            switch audioPlayer.state {
+            case .playing, .loading:
+                audioPlayer.pause()
+                return
+            case .paused, .ended:
+                audioPlayer.play()
+                return
+            case .idle, .failed:
+                break // fall through to a fresh play
+            }
+        }
+        playStop(stop)
+    }
+
+    /// Plays the given stop's audio through `AudioPlayerService` —
+    /// lifted from `PlayerView.playStop(at:)`. Prefers the on-disk
+    /// copy when the tour is downloaded; sets the shared
+    /// `currentPlayingStopId` so the waveform indicator + row
+    /// highlight light up immediately.
+    private func playStop(_ stop: Stop) {
+        guard let remoteURL = URL(string: stop.audioURL) else { return }
+        let url = tourDownloader.localURL(forStop: stop, in: tour) ?? remoteURL
+        let maker = dataService.maker(for: tour)
+        appShared.currentPlayingStopId = stop.id
+        audioPlayer.play(
+            url: url,
+            title: tour.title,
+            artist: maker?.displayName,
+            sourceId: tour.id.uuidString
+        )
     }
 
     // MARK: - Button row (inline)
@@ -347,35 +487,75 @@ struct TourDetailView: View {
 
     /// Inline button row — sits above the description so users can
     /// act without scrolling. Order: Start Tour (primary, full
-    /// width) · Save · Download. Tinted with the map-pin gold so the
-    /// inline action surface matches the map's visual identity.
+    /// width) · Save · Download. Buttons are rendered as custom
+    /// Capsule fills (primary) / strokes (secondary) rather than
+    /// system `.borderedProminent` / `.bordered` so they sit at
+    /// **exactly** 44pt visual height — the system styles add their
+    /// own vertical padding around the label that would inflate the
+    /// rendered button past 44.
+    ///
+    /// When this tour is the audible source, the Start Tour button's
+    /// leading glyph is wrapped in a *PROGRESS RING* identical to the
+    /// MiniPlayerBar's (lineWidth 2, clockwise trim, faint full-circle
+    /// track behind). Same ring math, same visual identity — the
+    /// detail-sheet button and the persistent mini-player read as one
+    /// surface.
     private var buttonRow: some View {
         HStack(spacing: AtlasSpacing.md) {
-            Button(action: handlePrimaryAction) {
-                Label(primaryButtonTitle, systemImage: primaryButtonIcon)
-                    .font(AtlasTypography.body.weight(.semibold))
-                    .frame(maxWidth: .infinity)
-                    .frame(height: controlHeight)
-            }
-            .buttonStyle(.borderedProminent)
-
+            primaryTransportButton
             Button(action: toggleSaved) {
                 Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
-                    .font(AtlasTypography.body)
+                    .font(.system(size: 20))
+                    .foregroundStyle(AtlasColors.mapPin)
                     .frame(width: controlHeight, height: controlHeight)
+                    .background(Capsule().fill(AtlasColors.mapPin.opacity(0.15)))
             }
-            .buttonStyle(.bordered)
+            .buttonStyle(.plain)
             .accessibilityLabel(isSaved ? "Remove from saved" : "Save tour")
 
             downloadButton
         }
         .frame(maxWidth: .infinity)
-        // Owner-confirmed: inline action buttons should read in the
-        // same gold as map pins, giving the detail-sheet action
-        // surface a visual handshake with the map. `.tint` propagates
-        // to .borderedProminent (fill color) and .bordered (icon +
-        // stroke).
-        .tint(AtlasColors.mapPin)
+    }
+
+    /// Composite primary transport surface — gold Capsule with three
+    /// independent interactive zones:
+    ///   - Leading icon button: tap = play/pause.
+    ///   - Middle progress bar: drag = scrub (calls
+    ///     `audioPlayer.seek(to:)` on release); tap is inert so the
+    ///     user can't accidentally jump while reaching for the bar.
+    ///   - Trailing time text: tap = play/pause (same as icon).
+    /// The outer wrapper is NOT a Button — wrapping the whole row
+    /// would consume the drag gesture before it reaches the bar.
+    private var primaryTransportButton: some View {
+        HStack(spacing: AtlasSpacing.sm) {
+            Button(action: handlePrimaryAction) {
+                Image(systemName: primaryButtonIcon)
+                    .font(.system(size: 20, weight: .semibold))
+                    .frame(width: 28, height: controlHeight)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(primaryButtonTitle)
+
+            primaryProgressBar
+                .frame(maxWidth: .infinity)
+
+            Button(action: handlePrimaryAction) {
+                Text(primaryButtonTimeText)
+                    .font(AtlasTypography.caption)
+                    .monospacedDigit()
+                    .frame(height: controlHeight)
+                    .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityHidden(true)
+        }
+        .foregroundStyle(Color.white)
+        .padding(.horizontal, AtlasSpacing.md)
+        .frame(maxWidth: .infinity)
+        .frame(height: controlHeight)
+        .background(Capsule().fill(AtlasColors.mapPin))
     }
 
     // MARK: - Download button
@@ -396,10 +576,12 @@ struct TourDetailView: View {
 
         Button(action: handleDownloadTap) {
             downloadButtonIcon(for: state)
-                .font(AtlasTypography.body)
+                .font(.system(size: 20))
+                .foregroundStyle(AtlasColors.mapPin)
                 .frame(width: controlHeight, height: controlHeight)
+                .background(Capsule().fill(AtlasColors.mapPin.opacity(0.15)))
         }
-        .buttonStyle(.bordered)
+        .buttonStyle(.plain)
         .disabled(isOtherActive)
         .accessibilityLabel(
             isOtherActive
@@ -520,11 +702,24 @@ struct TourDetailView: View {
                 }
             }
         } label: {
-            Image(systemName: "ellipsis.circle")
-                .font(AtlasTypography.body.weight(.semibold))
-                .foregroundStyle(AtlasColors.primaryText)
+            chromeCapsule("ellipsis")
                 .accessibilityLabel("More options")
         }
+    }
+
+    /// Shared visual for every top chrome control — 44×44 Capsule
+    /// with a neutral dark translucent fill and a 20pt regular-weight
+    /// SF Symbol in `AtlasColors.primaryText`. Gold (`mapPin`) is
+    /// reserved for the inline action row so the chrome's "navigate
+    /// + manage" controls stay tonally separate from the chrome's
+    /// "play this tour" controls (owner correction, 2026-06-03).
+    private func chromeCapsule(_ systemName: String) -> some View {
+        Image(systemName: systemName)
+            .font(.system(size: 20, weight: .regular))
+            .foregroundStyle(AtlasColors.primaryText)
+            .frame(width: 44, height: 44)
+            .background(Capsule().fill(AtlasColors.tertiaryText.opacity(0.18)))
+            .contentShape(Capsule())
     }
 
     /// Menu-side label for the download item — mirrors the inline
@@ -611,15 +806,22 @@ struct TourDetailView: View {
     /// auto-advance survives without `PlayerView` on screen. Single-
     /// stop tours and geofenced multi-stop tours are unaffected.
     private func handlePrimaryAction() {
-        // If this tour's audio is already loaded, don't restart —
-        // resume if paused, no-op otherwise. The "Open player" label
-        // case is already handled by this branch (mini-player is
-        // where users go to actually open it now).
+        // If this tour's audio is already loaded, toggle pause/resume
+        // in place — the button now doubles as the tour-level
+        // transport control on the detail sheet (owner-confirmed,
+        // 2026-06-03). The mini-player is still the canonical
+        // transport surface, but the detail button is no longer a
+        // dead-end "Playing" label.
         if audioPlayer.currentSourceId == tour.id.uuidString
             && audioPlayer.state != .idle
             && audioPlayer.state != .failed {
-            if audioPlayer.state == .paused || audioPlayer.state == .ended {
+            switch audioPlayer.state {
+            case .playing, .loading:
+                audioPlayer.pause()
+            case .paused, .ended:
                 audioPlayer.play()
+            case .idle, .failed:
+                break
             }
             return
         }
@@ -692,14 +894,12 @@ struct TourDetailView: View {
 
     /// Label adapts to the audio state:
     ///   - "Start Tour" when idle / no audio loaded → tap starts playback.
-    ///   - "Playing" when audio is actively producing sound → tap is a
-    ///     no-op (visual indicator only — the mini-player handles
-    ///     transport and is the only path to the full player).
+    ///   - "Pause"  when audio is actively producing sound → tap pauses.
     ///   - "Resume" when paused or ended → tap resumes / replays.
     private var primaryButtonTitle: String {
         guard isThisTourActive else { return "Start Tour" }
         switch audioPlayer.state {
-        case .playing, .loading: return "Playing"
+        case .playing, .loading: return "Pause"
         case .paused, .ended:    return "Resume"
         case .idle, .failed:     return "Start Tour"
         }
@@ -708,7 +908,7 @@ struct TourDetailView: View {
     private var primaryButtonIcon: String {
         guard isThisTourActive else { return "play.fill" }
         switch audioPlayer.state {
-        case .playing, .loading: return "waveform"
+        case .playing, .loading: return "pause.fill"
         case .paused, .ended:    return "play.fill"
         case .idle, .failed:     return "play.fill"
         }
@@ -717,5 +917,118 @@ struct TourDetailView: View {
     private var isThisTourLoading: Bool {
         audioPlayer.currentSourceId == tour.id.uuidString
             && audioPlayer.state == .loading
+    }
+
+    // MARK: - Primary-button transport row
+
+    /// 0…1 fraction of the loaded audio that has played, mirrored
+    /// from MiniPlayerBar's identical computation. 0 when this tour
+    /// isn't the audible source or the duration isn't yet known.
+    /// Forced to 1 on `.ended` so the bar reads as fully filled when
+    /// AVPlayer stops publishing currentTime a hair short of duration.
+    private var tourProgressFraction: Double {
+        guard isThisTourActive else { return 0 }
+        if audioPlayer.state == .ended { return 1 }
+        guard audioPlayer.duration > 0 else { return 0 }
+        let raw = audioPlayer.currentTime / audioPlayer.duration
+        return min(max(raw, 0), 1)
+    }
+
+    /// Linear scrubbable progress bar inside the primary button.
+    /// Background track is white at 25% opacity; fill is solid white.
+    /// Drag = scrub: while the gesture is active, the bar fill +
+    /// time-remaining text mirror the user's finger position; on
+    /// release we call `audioPlayer.seek(to:)`. The drag gesture
+    /// lives ON the bar (not on the outer button) so the icon + time
+    /// text remain clean play/pause tap targets.
+    private var primaryProgressBar: some View {
+        GeometryReader { geo in
+            ZStack(alignment: .leading) {
+                Capsule()
+                    .fill(Color.white.opacity(0.25))
+                    .frame(width: geo.size.width, height: 4)
+                Capsule()
+                    .fill(Color.white)
+                    .frame(width: geo.size.width * displayedPrimaryProgress, height: 4)
+                    .animation(isScrubbingPrimary ? nil : .linear(duration: 0.5),
+                               value: displayedPrimaryProgress)
+            }
+            .frame(maxHeight: .infinity, alignment: .center)
+            .contentShape(Rectangle())
+            .gesture(primaryScrubGesture(barWidth: geo.size.width))
+        }
+        .frame(height: controlHeight)
+        .accessibilityLabel("Playback progress")
+        .accessibilityValue(primaryButtonTimeText)
+    }
+
+    /// Drag gesture for the primary progress bar. No-ops on idle
+    /// tours (nothing to scrub); on the audible tour it tracks the
+    /// finger position to `primaryScrubTime`, then commits with
+    /// `audioPlayer.seek(to:)` on release.
+    private func primaryScrubGesture(barWidth: CGFloat) -> some Gesture {
+        DragGesture(minimumDistance: 0)
+            .onChanged { value in
+                guard isThisTourActive, audioPlayer.duration > 0 else { return }
+                if !isScrubbingPrimary {
+                    isScrubbingPrimary = true
+                    primaryScrubTime = audioPlayer.currentTime
+                }
+                let fraction = min(max(value.location.x / barWidth, 0), 1)
+                primaryScrubTime = fraction * audioPlayer.duration
+            }
+            .onEnded { value in
+                guard isThisTourActive, audioPlayer.duration > 0 else {
+                    isScrubbingPrimary = false
+                    return
+                }
+                let fraction = min(max(value.location.x / barWidth, 0), 1)
+                let target = fraction * audioPlayer.duration
+                primaryScrubTime = target
+                audioPlayer.seek(to: target)
+                isScrubbingPrimary = false
+            }
+    }
+
+    /// Bar-fill fraction — shows the scrub position while dragging,
+    /// the live playback position otherwise.
+    private var displayedPrimaryProgress: Double {
+        if isScrubbingPrimary, audioPlayer.duration > 0 {
+            return min(max(primaryScrubTime / audioPlayer.duration, 0), 1)
+        }
+        return tourProgressFraction
+    }
+
+    /// Time remaining text on the primary button's trailing edge.
+    /// While the tour is playing this counts down from `duration` to
+    /// zero; while scrubbing it counts the remaining time at the
+    /// scrub position. Before playback starts (or for any other tour)
+    /// it shows the tour's total duration.
+    private var primaryButtonTimeText: String {
+        let totalSeconds: TimeInterval
+        let elapsed: TimeInterval
+        if isThisTourActive && audioPlayer.duration > 0 {
+            totalSeconds = audioPlayer.duration
+            elapsed = isScrubbingPrimary ? primaryScrubTime : audioPlayer.currentTime
+        } else {
+            totalSeconds = TimeInterval(tour.totalDurationSeconds)
+            elapsed = 0
+        }
+        let remaining = max(0, totalSeconds - elapsed)
+        return formatTimeRemaining(remaining)
+    }
+
+    /// `M:SS` for under an hour, `H:MM:SS` for an hour or more.
+    /// Mirrors PlayerView's `formatTime` for visual consistency.
+    private func formatTimeRemaining(_ seconds: TimeInterval) -> String {
+        guard seconds.isFinite, seconds >= 0 else { return "0:00" }
+        let total = Int(seconds.rounded())
+        let h = total / 3600
+        let m = (total % 3600) / 60
+        let s = total % 60
+        if h > 0 {
+            return String(format: "%d:%02d:%02d", h, m, s)
+        }
+        return String(format: "%d:%02d", m, s)
     }
 }

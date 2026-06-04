@@ -12,6 +12,7 @@
       "id": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
       "displayName": "Atlas Studio Porto",
       "avatarURL": null,
+      "avatarEmoji": "🇵🇹",
       "bio": "Atlas Studio's Porto bureau — audio tours of the city's architecture and culture.",
       "websiteURL": null
     },
@@ -19,6 +20,7 @@
       "id": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
       "displayName": "Atlas Studio Lisbon",
       "avatarURL": null,
+      "avatarEmoji": "🇵🇹",
       "bio": "Atlas Studio's Lisbon bureau — audio tours of the city's architecture and culture.",
       "websiteURL": null
     }
@@ -5933,6 +5935,335 @@
         "used-books",
         "independent-bookstore",
         "nancy-bass-wyden"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9d7c66f0-1c4a-4f00-966c-4f5bb41615de",
+      "title": "Church of Saint Francis",
+      "shortDescription": "Two and a half minutes inside Porto's most spectacular contradiction — a Franciscan church (built on a vow of poverty) whose interior is plated with 300–400 kg of Brazilian gold leaf.",
+      "longDescription": "Begun in 1383 under King Fernando I and completed around 1425, the Igreja de São Francisco was raised by an order founded on a vow of poverty — and the west facade still shows it. The Gothic rose window and pointed arches sit in the deliberately plain mendicant manner, the last moment of restraint the building ever had.\n\nStep inside and the church abandons its own founding principle. Every surface — walls, pillars, side chapels, ceiling — disappears beneath talha dourada, the carved gilded woodwork applied through the seventeenth and eighteenth centuries with somewhere between 300 and 400 kilograms of gold leaf, most of it sourced from Brazil and bankrolled by the colonial wealth the original friars could not have imagined and certainly could not have reconciled. The cumulative effect is less like being in a church than being inside a very large gold object that has been persuaded to function as one.\n\nTwo things deserve more time than visitors usually give them: the polychrome Tree of Jesse altarpiece (Retable da Árvore de Jessé) on the left of the nave, and the white stone statue of Saint Francis himself, the only figure in the interior without a gram of gold on it. Downstairs the catacombs hold a small glass window set into the nave floor above, through which you can look down at where the people who paid for all of it eventually ended up.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Saint_Francis_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Saint_Francis_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Saint_Francis_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "67c57e07-e26c-47b5-ab65-6dd982f21e03",
+          "order": 0,
+          "title": "Church of Saint Francis",
+          "caption": "On Rua do Infante Dom Henrique, facing the Gothic facade — Palácio da Bolsa to your left.",
+          "latitude": 41.14066,
+          "longitude": -8.61574,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/church-of-saint-francis.mp3",
+          "audioDurationSeconds": 167,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Church_of_Saint_Francis_hero.webp",
+          "transcriptText": "The Franciscans built this church, which creates a certain tension with what's inside it — because the Franciscan Order was founded on a vow of poverty.\nHave a look at the exterior before you go in: you're on Rua do Infante Dom Henrique, with the Gothic facade of the church directly ahead of you, next door to the Palácio da Bolsa on your left. The west facade has a rose window and pointed arches in the restrained Gothic manner typical of mendicant orders — churches built by communities who had sworn to own nothing, designed to look like it. The Franciscans arrived in Porto in twelve twenty-three, this church was commissioned by King Fernando the First in thirteen eighty-three, and it was completed around fourteen twenty-five in the same plain, deliberately austere style, which is the last moment of restraint the building ever had.\nGo in through the main entrance and give your eyes a moment to adjust.\nWhat you're looking at — covering the walls, the pillars, the side chapels, the ceiling, essentially every surface that could receive it — is talha dourada, carved gilded woodwork applied to the interior during the seventeenth and eighteenth centuries using somewhere between three hundred and four hundred kilograms of gold leaf, most of it sourced from Brazil, where Portugal had by then built a colonial empire that generated wealth on a scale the original Franciscan friars could not have imagined and certainly could not have reconciled with their vow. The cumulative effect, standing in the nave and looking toward the altar, is less like being in a church and more like being inside a very large gold object that has been persuaded to function as one.\nNow find two specific things before you move further in.\nThe first is the Tree of Jesse altarpiece — the Retable da Árvore de Jessé — on the left side of the nave, a polychrome carved composition showing the genealogy of Christ growing upward from Jesse's reclining figure through an elaborate branching structure of figures and foliage, which is the finest single object in the church and deserves more time than most visitors give it. The second is the white statue of Saint Francis himself, which is somewhere in the interior without a gram of gold on it, and which is considerably more striking for that reason than almost anything around it — a plain stone figure from the thirteenth century, still carrying the austerity the building abandoned three hundred years after he died.\n[beat]\nIf you're willing to go downstairs before you leave, the catacombs beneath the church are worth the visit, not because they're particularly spectacular but because the floor of the nave above has a small glass window set into it through which you can look down at them, and there's something rather thought-provoking about standing in one of the most gilded interiors in Portugal and being able to see, through a pane of glass beneath your feet, where the people who paid for all of it eventually ended up."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 167,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14066,
+      "centroidLongitude": -8.61574,
+      "city": "Porto",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "church of saint francis",
+        "igreja de sao francisco",
+        "porto",
+        "gothic",
+        "baroque interior",
+        "gilded",
+        "14th century"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "89a46a3a-4e06-48c8-a27b-c1da6d376bf2",
+      "title": "Dom Luís I Bridge",
+      "shortDescription": "Almost three minutes on Porto's iconic double-deck iron arch — not designed by Eiffel, but by his Belgian partner Théophile Seyrig, who entered the 1879 competition independently and beat Eiffel's own competing proposal.",
+      "longDescription": "Almost everyone assumes this bridge was designed by Gustave Eiffel, which is understandable but wrong — and the true story is, if anything, more interesting. The Dom Luís I was designed by Théophile Seyrig, a Belgian engineer who had co-founded Eiffel's firm Eiffel et Cie in 1868. When the Portuguese government held an international competition in 1879 to replace the ageing Ponte Pênsil suspension bridge, Seyrig entered independently from Brussels and beat Eiffel's own proposal.\n\nConstruction began in 1881; the upper deck and main arch were completed on 30 October 1886 and the bridge opened the next day for a toll of four réis per person. What you're looking at is a double-deck parabolic iron arch — main arch spanning 172 metres across the river at the lower level, the full upper deck running 395 metres between the masonry piers at a height of 45 metres above the water. The intersecting lattice ironwork was engineered using graphic statics methods Seyrig was simultaneously publishing in academic papers in Paris, so the bridge is in part a live demonstration of structural theory its designer was working out in real time.\n\nThe upper deck was widened in 1931 and now carries the Porto Metro, so what began as a road bridge for a horse-drawn city has become, 140 years later, a metro viaduct. The previous Ponte Pênsil was not demolished to make way for the Luís I but dismantled alongside it — the civil engineering equivalent of changing the wheels on a moving vehicle, which meant Porto never lost its river crossing for a single day during the five years of construction.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Dom_Luis_I_Bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Dom_Luis_I_Bridge_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Dom_Luis_I_Bridge_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Dom_Luis_I_Bridge_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f1386a67-0982-4e60-a969-77a36ff119ff",
+          "order": 0,
+          "title": "Dom Luís I Bridge",
+          "caption": "From the Ribeira waterfront or the Serra do Pilar terrace across the river — the bridge needs distance to read properly.",
+          "latitude": 41.13805,
+          "longitude": -8.60911,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dom-luis-i-bridge.mp3",
+          "audioDurationSeconds": 161,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Dom_Luis_I_Bridge_hero.webp",
+          "transcriptText": "Almost everyone assumes this bridge was designed by Gustave Eiffel, which is understandable but wrong — and the true story is, if anything, more interesting than the mistaken version.\nThe bridge was designed by Théophile Seyrig, a Belgian engineer who had co-founded Eiffel's own firm, Eiffel et Cie, back in eighteen sixty-eight, which is why the two men's work looks so similar and why the confusion is so persistent. When the Portuguese government held an international competition in eighteen seventy-nine for a new bridge to replace the ageing Ponte Pênsil suspension bridge that had stood here since eighteen forty-three, Seyrig entered independently from Brussels — and beat Eiffel's own competing proposal. Construction began in eighteen eighty-one, the upper deck and main arch were completed on the thirtieth of October eighteen eighty-six, and the bridge opened the following day, with a toll of four réis per person, which in the context of what had just been built seems, in retrospect, a modest charge.\nYou should be somewhere with a view of the full span, either from the Ribeira waterfront or from the Serra do Pilar terrace across the river in Vila Nova de Gaia, because the bridge needs distance to read properly.\nWhat you're looking at is a double-deck parabolic iron arch, with the main arch spanning a hundred and seventy-two metres across the river at the lower level, and the full upper deck running to three hundred and ninety-five metres between the masonry piers that anchor it to the granite banks on both sides, at a height of forty-five metres above the water — and the lattice ironwork that carries the structure, intersecting in diagonal patterns up the inside of the arch, was engineered by Seyrig using graphic statics methods that he was simultaneously publishing in academic papers in Paris, so the bridge you're looking at was, in part, a live demonstration of structural theory that its designer was working out in real time.\nThe upper deck was widened in nineteen thirty-one to accommodate increased pedestrian traffic, and now carries the Porto Metro across the river, so what began as a road bridge for a city that still got around by horse has become, a hundred and forty years later, a metro viaduct — a piece of infrastructure that has simply absorbed each successive definition of what crossing a river quickly is supposed to mean.\n[beat]\nThe previous bridge, the Ponte Pênsil, was not demolished to make way for the Luís I but was dismantled during construction, with the new bridge built alongside its towers before the old one was taken down — which is the civil engineering equivalent of changing the wheels on a moving vehicle, and which meant that Porto never lost its river crossing for a single day during the five years it took to build the replacement."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 161,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.13805,
+      "centroidLongitude": -8.60911,
+      "city": "Porto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "dom luis i bridge",
+        "porto",
+        "douro river",
+        "1886",
+        "iron bridge",
+        "theophile seyrig",
+        "eiffel"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "aaf11e1b-619b-49b7-99ab-7af06c549903",
+      "title": "Palácio da Bolsa",
+      "shortDescription": "Three and a half minutes at Porto's 19th-century Stock Exchange Palace — built on the ruins of a convent that burned in 1832 and culminating in the Salão Árabe, a Moorish dream room inaugurated for the tricentenary of Camões.",
+      "longDescription": "The Palácio da Bolsa was raised on the ruins of a convent that burned down during a siege — a characteristically Porto way of beginning a stock exchange. The Igreja de São Francisco survived the fire of 24 July 1832 next door; the Commercial Association of Porto received the cleared ground from Queen Maria II in 1841 and laid the first stone the following year, with the intention of announcing the city's commercial ambitions to the world.\n\nStep inside and stop in the Pátio das Nações — the Courtyard of Nations — under Tomás Soler's octagonal iron-and-glass dome of around 1880. The flags of the nations Porto traded with in the nineteenth century run around the upper walls, turning architectural ornament into a list of business contacts. The shell was largely complete by 1850 but the interior decoration ran on until 1909, becoming an informal training ground for several generations of Portuguese craftsmen.\n\nThe room the whole building is leading you toward is the Salão Árabe, designed by Gustavo Adolfo Gonçalves e Sousa and built over eighteen years between 1862 and 1880. Every available surface is carved and gilded stucco, gold Arabic inscriptions moving across walls and ceiling, the room shifting between deep crimson, blue and gold — no structural reason whatsoever to look like a Moorish palace and every commercial reason to make visiting dignitaries feel they had arrived somewhere extraordinary. It was inaugurated on 12 June 1880, deliberately timed to the tricentenary of the death of Luís de Camões. The Golden Room nearby still hosts the Association's monthly board meeting; its display cases hold the oldest bottle of Port in the collection and the pen Queen Maria II used in 1841 to sign the building's site into existence.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_da_Bolsa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_da_Bolsa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_da_Bolsa_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1c6ff17e-8af4-401e-a515-6bb5b2d193bf",
+          "order": 0,
+          "title": "Palácio da Bolsa",
+          "caption": "On Rua Ferreira Borges, facing the neoclassical granite facade — Igreja de São Francisco to your right.",
+          "latitude": 41.14159,
+          "longitude": -8.61543,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/palacio-da-bolsa.mp3",
+          "audioDurationSeconds": 205,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_da_Bolsa_hero.webp",
+          "transcriptText": "The building in front of you was raised on the ruins of a convent that burned down during a siege — which is a characteristically Porto way of beginning a stock exchange.\nTake a moment to orient yourself: you're on Rua Ferreira Borges, with the neoclassical granite facade of the Palácio da Bolsa directly ahead of you and the Igreja de São Francisco to your right, the Gothic church that survived the same fire that destroyed the convent beside it on the night of the twenty-fourth of July, eighteen thirty-two. The Commercial Association of Porto received the cleared ground from Queen Maria II in eighteen forty-one and laid the first stone of this building the following year, with the intention of constructing something that would announce the city's commercial ambitions to the world — and if the exterior seems slightly soberer than what I'm about to describe inside, that contrast is entirely deliberate.\nGo in through the main entrance and stop in the Pátio das Nações — the Courtyard of Nations — before moving further into the building.\nThe courtyard is covered with an octagonal iron-and-glass dome designed by Tomás Soler and completed around eighteen eighty, and the flags of the nations with which Porto held commercial relations in the nineteenth century run around the upper walls — which I always find rather telling, because it turns architectural ornament into a list of business contacts, and makes the ambitions of a trading city visible as a kind of institutional decoration. The main shell of the building was largely complete by eighteen fifty, but the interior decoration wasn't finished until nineteen oh nine, which means the project took nearly seven decades to complete and, in the process, became an informal training ground for several generations of Portuguese craftsmen and decorative artists who learned their trade by working on it.\nNow follow the tour through to the Arab Room — the Salão Árabe — which is the room the whole building is really leading you toward.\nIt took eighteen years to build, between eighteen sixty-two and eighteen eighty, designed by Gustavo Adolfo Gonçalves e Sousa, who drew his inspiration from the Alhambra in Granada — every available surface covered in carved and gilded stucco, gold Arabic inscriptions moving across the walls and ceiling, the room shifting between deep crimson, blue, and gold in a way that has no structural reason whatsoever to look like a Moorish palace and every commercial reason to make visiting foreign dignitaries feel that they have arrived somewhere entirely extraordinary. The room was inaugurated on the twelfth of June, eighteen eighty, timed to coincide with the tricentennial celebrations of the death of Luís de Camões — Portugal's greatest poet — because the Association was building not just a space to impress merchants but a room that placed Porto's commercial culture deliberately inside Portugal's own sense of its literary and historical greatness.\n[beat]\nBefore you leave, find the Golden Room, where the board of the Commercial Association still meets every month, and have a look at the display cases: they hold the oldest bottle of Port wine in the association's collection and the pen that Queen Maria II used in eighteen forty-one to sign the document granting the monastery ruins to the Association in the first place. The pen that made the building possible is kept inside the building it made possible — which is either very tidy record-keeping, or a rather elegant piece of institutional self-awareness, and on balance I think it's both."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 205,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14159,
+      "centroidLongitude": -8.61543,
+      "city": "Porto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "palacio da bolsa",
+        "porto",
+        "stock exchange",
+        "arabian room",
+        "19th century",
+        "salao arabe"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d6b330df-82a2-4048-9aaf-bbe28c5f53b0",
+      "title": "Porto Cathedral",
+      "shortDescription": "Three and a half minutes at Penaventosa Hill — a Romanesque-bones cathedral founded by the mother of Portugal's first king, refaced over eight centuries with Gothic cloisters, Nasoni's loggia, and azulejos of Ovid and the Song of Solomon.",
+      "longDescription": "The Sé do Porto was already standing when Portugal became a country, because it was founded by the woman whose son became its first king. Dona Teresa, mother of Afonso Henriques, commissioned the original church on Penaventosa Hill in the early twelfth century. The structure was Romanesque in its bones — thick granite walls, small windows, two square bell towers with crenellated arches that made the facade read more like a fortified military building than a place of worship, which on the twelfth-century Iberian peninsula was not an unreasonable precaution.\n\nWhat you're looking at now is eight centuries of addition, renovation, and stylistic overlay: Gothic cloisters, Baroque altars, Nasoni's loggia, and a 1930s restoration that tried to reconcile everything that had accumulated. The only original feature of the main facade still in place is the Romanesque rose window, set within a crenellated arch above the entrance — a circle of carved stone that has presided over everything added around it, including Nicolau Nasoni's elegant Baroque loggia of 1736 on the north side, which sits with characteristic Nasoni ease against the older stone.\n\nInside, turn toward the cloister. Begun in 1385 — the same year as the Battle of Aljubarrota that secured Portuguese independence from Castile — its walls were lined in the eighteenth century with azulejo panels by Valentim de Almeida depicting scenes from the Song of Solomon and from Ovid's Metamorphoses. Ovid on the walls of a fourteenth-century cloister rewards a moment's thought. The main chapel's silver altarpiece of the Sacrament was hidden behind a layer of plaster during the Napoleonic invasion to prevent it being seized or melted down, and rediscovered after the French left. Dom João I and Philippa of Lancaster were married here in 1387 — the building has been accumulating significant events for almost as long as it has been accumulating architectural styles.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Cathedral_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Cathedral_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Cathedral_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Cathedral_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Cathedral_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Cathedral_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Cathedral_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bcf71e4b-a042-4712-9e45-9d9000f20dfc",
+          "order": 0,
+          "title": "Porto Cathedral",
+          "caption": "From the terrace in front of the facade — the rose window above the main entrance is the only original twelfth-century feature still in place.",
+          "latitude": 41.14248,
+          "longitude": -8.61172,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/porto-cathedral.mp3",
+          "audioDurationSeconds": 200,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Cathedral_hero.webp",
+          "transcriptText": "The building in front of you was already standing when Portugal became a country, because it was founded by the woman whose son became the country's first king — which is a reasonable way for a cathedral to begin.\nDona Teresa, mother of Afonso Henriques, commissioned the original church on Penaventosa Hill in the early twelfth century, and the structure that rose from that founding was Romanesque in its bones: thick granite walls, small windows, two square bell towers with crenellated arches that gave the whole facade the appearance of a fortified military building rather than a place of worship, which in the Iberian peninsula of the twelfth century was not an unreasonable precaution. What you're looking at now is the result of eight centuries of addition, renovation, and stylistic overlay, during which Gothic cloisters were added, Baroque altars were inserted, Nasoni arrived with his loggia, and the 1930s brought a restoration that tried to reconcile everything that had accumulated — so the cathedral is less a building from one period than a record of what people in each successive century thought a cathedral ought to look like.\nBefore you go inside, stop and look at the façade from the terrace.\nThe only original feature of the main facade that has survived every subsequent intervention is the Romanesque rose window, set within a crenellated arch above the main entrance — a circle of carved stone that has been here since the twelfth century, presiding over everything that was added around it and beneath it, including Nasoni's elegant Baroque loggia on the north side, which he added in seventeen thirty-six and which sits with characteristic Nasoni ease against the older stone, as though it had always been part of the composition rather than an eighteenth-century afterthought.\nGo in through the main entrance and then turn toward the cloister.\nThe Gothic cloister was begun in thirteen eighty-five — the same year as the Battle of Aljubarrota, when Portugal secured its independence from Castile — and its walls were lined in the eighteenth century with azulejo tile panels painted by Valentim de Almeida, which depict two subjects that sit in interesting company in a cathedral cloister: scenes from the Song of Solomon, the biblical love poem, and scenes from Ovid's Metamorphoses, the Roman mythological epic. Ovid on the walls of a fourteenth-century church cloister is the kind of detail that rewards a moment's thought, because it reflects the particular Baroque sensibility that saw no contradiction between classical learning and Christian devotion, and which treated the walls of a sacred building as a reasonable place to depict a Roman poet's account of gods turning into swans.\n[beat]\nIn the main chapel, the silver altarpiece of the Sacrament — one of the most valuable objects in the cathedral — was hidden behind a layer of plaster during the Napoleonic invasion of the early nineteenth century, to prevent it from being seized or melted down, and rediscovered after the French had left, which is the kind of story that tends to be filed under institutional wisdom but might equally be filed under the experience of having had your cathedral occupied by a foreign army and taking sensible precautions. Dom João I and Philippa of Lancaster were married here in thirteen eighty-seven, two years after the cloister was begun, which means the building has been accumulating significant events for almost as long as it has been accumulating architectural styles."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 200,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14248,
+      "centroidLongitude": -8.61172,
+      "city": "Porto",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "porto cathedral",
+        "se do porto",
+        "romanesque",
+        "12th century",
+        "porto",
+        "afonso henriques",
+        "azulejos"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "73c6f127-c1c7-49af-abd2-f889b57dc214",
+      "title": "Ribeira District",
+      "shortDescription": "Three minutes on Porto's UNESCO waterfront — eight centuries of medieval river city stacked up the Douro bank, where Henry the Navigator was born in 1394 in what was, at the time, a municipal tax office.",
+      "longDescription": "The buildings of the Ribeira are so steep that some can be entered at street level on one side and from the roof on the street above — a reasonable summary of what the district has always been: a place that organises itself around the river first and worries about conventional urbanism second. You're on the north bank of the Douro, in the quarter that effectively made Porto a UNESCO World Heritage city when the designation was granted in 1996 — not because the district was preserved in amber but because eight hundred years of continuous commercial occupation produced a layered urban fabric the committee considered irreplaceable.\n\nNarrow granite townhouses painted in ochre, terracotta and blue stack up the hillside so steeply that conventional street geometry becomes impossible. The Cais da Ribeira — the quayside — is where merchants loaded barrels of port wine onto flat-bottomed rabelo boats for transport downstream to the Atlantic, a trade that ran for centuries and shaped not only this waterfront but the entire Douro Valley above it. The lodges across the river in Vila Nova de Gaia, visible from where you stand, were the storage and ageing warehouses for the same wine, positioned on the south bank because the cooler microclimate suited the barrels.\n\nA short walk to the right is the Casa do Infante, built in 1325 as the customs house for the port and named after Infante Dom Henrique — Henry the Navigator — who was born in this building in 1394, which makes it the birthplace of the man who launched Portugal's Age of Discovery from what was, at the time of his birth, a municipal tax office. The Guindais funicular, which has been descending the cliff face from Batalha to the quayside in various forms since 1891, drops sixty-one metres in three minutes; the walk back up through the medieval alleys rewards getting slightly lost.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ribeira_District_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ribeira_District_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ribeira_District_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ribeira_District_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ribeira_District_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8577943e-c0f6-4d53-be6b-a9e11ca7a656",
+          "order": 0,
+          "title": "Ribeira District",
+          "caption": "On the Cais da Ribeira, north bank of the Douro — Vila Nova de Gaia's port-wine lodges across the water.",
+          "latitude": 41.1408,
+          "longitude": -8.61123,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ribeira-district.mp3",
+          "audioDurationSeconds": 180,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ribeira_District_hero.webp",
+          "transcriptText": "The buildings you're walking past are so steep that some of them can be entered at street level on one side and from the roof on the street above, which is a reasonable summary of what the Ribeira has always been: a place that organises itself around the river first and worries about conventional urbanism second.\nYou're on the north bank of the Douro, in the compact quarter that effectively made Porto a UNESCO World Heritage city when the designation was granted in nineteen ninety-six — not because the district was preserved in amber but because it accumulated, over roughly eight hundred years of continuous commercial occupation, a layered urban fabric that the committee considered irreplaceable. The buildings are narrow granite townhouses painted in ochre, terracotta, and blue, stacked up the hillside so steeply that the topography makes conventional street geometry impossible, and if you look up the hill behind you, what you're seeing is essentially a medieval solution to the problem of building a lot of housing on a very steep riverbank, which turns out to produce exactly the kind of dense, vertical, irregularly-beautiful neighbourhood that people now travel considerable distances to walk through.\nBefore you explore the alleys, look at the waterfront in front of you.\nThe Cais da Ribeira — the quayside — is where merchants loaded barrels of port wine onto flat-bottomed rabelo boats for transport downstream to the Atlantic, a trade that ran for centuries and that shaped not only this waterfront but the entire Douro Valley above it, where the vine terraces were planted specifically to produce wine for export through this quay. The lodges across the river in Vila Nova de Gaia, visible from where you're standing, were the storage and ageing warehouses for that same wine, positioned on the south bank because the cooler, slightly more stable microclimate there was better for the barrels — so the trade route that made Porto wealthy had its loading point here and its maturation point directly across the water, connected by the river that ran between them.\nNow find the Casa do Infante, which is on the waterfront a short walk to your right.\nIt was built in thirteen twenty-five as a customs house for the port, and it is named after Infante Dom Henrique — Henry the Navigator — who was born in this building in thirteen ninety-four, which makes it the birthplace of the man who launched Portugal's Age of Discovery and, in doing so, changed the direction of global history from a building that was, at the time of his birth, a municipal tax office. It is now a museum and the headquarters of Porto's historical archive, which is either a promotion or a demotion depending on your view of how history should be housed.\n[beat]\nThe Guindais funicular, which descends sixty-one metres down the cliff face from the Batalha area to the quayside in three minutes, has been making that journey in various forms since eighteen ninety-one — and if you haven't come down that way, it's worth knowing that the walk back up through the medieval alleys is one of those urban experiences that rewards getting slightly lost, because the streets that don't lead anywhere obvious tend to be the ones that lead somewhere worth finding."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 180,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.1408,
+      "centroidLongitude": -8.61123,
+      "city": "Porto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "ribeira",
+        "porto",
+        "unesco",
+        "douro waterfront",
+        "historic district",
+        "world heritage",
+        "henry the navigator"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b1ecf113-5ff7-4c7a-ab51-3b52d42822ef",
+      "title": "São Bento Station",
+      "shortDescription": "Three minutes inside Porto's 1916 train station — twenty thousand Jorge Colaço azulejos covering the entry hall, named with characteristic Portuguese tact after the Benedictine monastery the railway replaced.",
+      "longDescription": "The name of the station is the first piece of history it offers: São Bento — Saint Benedict — refers to the Benedictine monastery that stood on this site for three centuries before the last nun died in 1892 and the building was demolished to make way for the railway. The station was named, with a certain Portuguese tact, after the institution it replaced.\n\nKing Carlos I laid the foundation stone in 1900. The architect was José Marques da Silva, a Porto native trained at the École des Beaux-Arts in Paris, who would go on to reshape much of the city's early-twentieth-century fabric. The station was inaugurated in 1916, by which point the entry hall had already been covered over the preceding eleven years with twenty thousand azulejo tiles painted by Jorge Colaço — the fact that makes São Bento something rather more than a working railway terminus.\n\nThe hall is covered in two registers. Large blue-and-white panels at eye level depict specific historical episodes — the Battle of Valdevez in 1140, Egas Moniz before Alfonso VII of Castile, the 1387 arrival of João I and Philippa of Lancaster for their royal wedding, the Conquest of Ceuta in 1415. Above them a polychrome frieze runs toward the ceiling tracing the history of transport in Portugal up to the arrival of the railway. Colaço, born in Tangier in 1868 to a Portuguese diplomat, worked almost entirely in the azulejo tradition; figurative panels on this scale almost never appear in a secular public building — the genre grew out of ecclesiastical patronage, and the decision to treat a railway station as worthy of the same ambition is either civic self-confidence or a very good accident. The station is still fully operational, with trains leaving for the Douro Valley, Braga, Guimarães and the coast.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Sao_Bento_Station_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Sao_Bento_Station_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Sao_Bento_Station_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "96c6a72c-8c40-4443-a460-4e99aeff3102",
+          "order": 0,
+          "title": "São Bento Station",
+          "caption": "Just inside the main entrance — the entry hall is a single coherent artwork, floor to ceiling.",
+          "latitude": 41.14536,
+          "longitude": -8.61082,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sao-bento-station.mp3",
+          "audioDurationSeconds": 182,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Sao_Bento_Station_hero.webp",
+          "transcriptText": "The name of this station is the first piece of history it offers you, because São Bento — Saint Benedict — refers to the Benedictine monastery that stood on this site for three centuries before the last nun died in eighteen ninety-two and the building was demolished to make way for the railway, which means that the station was named, with a certain Portuguese tact, after the institution it replaced.\nKing Carlos I laid the foundation stone in nineteen hundred, the architect was José Marques da Silva — a Porto native who had trained at the École des Beaux-Arts in Paris and who would go on to reshape much of the city's early-twentieth-century fabric — and the station was inaugurated in nineteen sixteen, by which point the hall you're about to enter had already been covered, over the preceding eleven years, with twenty thousand azulejo tiles painted by Jorge Colaço, which is the fact that makes São Bento something rather more than a functioning railway terminus.\nGo inside and stop as soon as you're through the door.\nThe hall is covered on every wall with tile panels in two registers: the large blue-and-white panels at eye level, which depict specific historical episodes in a narrative sequence — the Battle of Valdevez in eleven forty, the meeting of the knight Egas Moniz with Alfonso VII of Castile, the arrival of King João I and Philippa of Lancaster in Porto in thirteen eighty-seven for their royal wedding, the Conquest of Ceuta in fourteen fifteen — and above them, running in a polychrome frieze toward the ceiling, a sequence depicting the history of transport in Portugal from its primitive origins up to the moment when the railway arrived and someone decided to commemorate the whole story in ceramic on the walls of a station. The scale of it is worth taking a moment to absorb before you start reading the individual panels, because the instinct to move immediately to the nearest scene tends to make you miss the fact that the entire hall is, from floor to ceiling, a single coherent artwork.\nColaço was born in Tangier in eighteen sixty-eight, the son of a Portuguese diplomat, and spent his career working almost entirely in the azulejo tradition — and what he did here, which the writer on tiles Olá Daniela put well, is something that large figurative azulejo panels almost never do, which is appear in a secular public building: normally you find work on this scale in churches, because the genre grew out of ecclesiastical patronage, and the decision to treat a railway station as a space worthy of the same ambition is either a piece of civic self-confidence or a very good accident, depending on how much you credit the committee that commissioned it.\n[beat]\nThe station is still fully operational — trains leave from here to the Douro Valley, to Braga, to Guimarães, and along the coast — and the combination of commuters moving through the hall and tourists standing still in the middle of it produces, most mornings, exactly the kind of productive confusion that a building like this deserves, where the people who know where they're going and the people who have stopped to look are equally at home in the same space."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 182,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14536,
+      "centroidLongitude": -8.61082,
+      "city": "Porto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "sao bento station",
+        "porto",
+        "azulejos",
+        "1916",
+        "tile mural",
+        "train station",
+        "jorge colaco"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "60de976a-a8da-4dfc-a1cc-9d2a26fea2fc",
+      "title": "Torre dos Clérigos",
+      "shortDescription": "Three and a quarter minutes at Porto's 75m baroque bell tower — meant to be one of two, built by Nicolau Nasoni between 1732 and 1763, who agreed to work for free and is buried in the crypt below.",
+      "longDescription": "The tower was supposed to be one of two, which is worth knowing before you look at it — it changes the way the single tower reads against the skyline, not as a building designed to stand alone but as one half of a symmetrical composition that was never completed, leaving Nicolau Nasoni's Baroque ambition visible in the asymmetry it produced.\n\nNasoni was an Italian architect born in Tuscany in 1691 who arrived in Porto in 1725 and spent the rest of his life here, reshaping the city's Baroque fabric more thoroughly than any other architect of his period. The Brotherhood of the Clérigos — a charitable institution supporting the poorest clergy in Porto — commissioned the church and tower from him over a period that stretched from the foundation stone in 1732 to the iron cross placed at the summit in July 1763, by which point Nasoni was in his seventies and had agreed to work without remuneration, presumably because he believed in what he was building. He is buried in the church crypt at his own request; the exact location of his grave within it is not known.\n\nSeventy-five metres of granite in six floors, Baroque ornament unwinding upward, forty-nine bells in the belfry at the top — used in the eighteenth century to announce ship arrivals in the Ribeira, to signal noon by mortar fire, to ring royal births and deaths, and at night as a visual reference for sailors navigating the Douro, with fires lit near the top. The Igreja dos Clérigos on the ground floor was one of the first Baroque churches in Portugal to adopt an elliptical floor plan, and the oval nave produces acoustic properties the two pipe organs flanking the main altar were specifically designed to exploit. The tower remained the tallest building in Portugal from its completion in 1763 until the late nineteenth century, and is still the tallest structure in Porto's historic quarter.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Torre_dos_Clerigos_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Torre_dos_Clerigos_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Torre_dos_Clerigos_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Torre_dos_Clerigos_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a2603500-7b3a-4536-8372-cc6f0794fa45",
+          "order": 0,
+          "title": "Torre dos Clérigos",
+          "caption": "From the small praça at the base — read the tower from the ground up before climbing the 240 steps.",
+          "latitude": 41.14567,
+          "longitude": -8.61498,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/torre-dos-clerigos.mp3",
+          "audioDurationSeconds": 197,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Torre_dos_Clerigos_hero.webp",
+          "transcriptText": "The tower you're looking at was supposed to be one of two, which is worth knowing before you look at it, because it changes the way the single tower reads against the skyline — not as a building that was designed to stand alone, but as one half of a symmetrical composition that was never completed, presumably for financial reasons, leaving Nicolau Nasoni's Baroque ambition visible in the asymmetry it produced.\nNasoni was an Italian architect born in Tuscany in sixteen ninety-one who arrived in Porto in seventeen twenty-five and spent the rest of his life here, leaving a body of work that reshaped the Baroque fabric of the city more thoroughly than any other single architect of his period — and the Brotherhood of the Clérigos, a charitable institution founded to support the poorest clergy in Porto, commissioned the church and tower complex from him over a period that stretched from the laying of the foundation stone in seventeen thirty-two to the placement of the iron cross at the summit in July of seventeen sixty-three, by which point Nasoni was in his seventies and had, by the early stages of the project, agreed to work without remuneration, presumably because he believed in what he was building. He is buried in the church crypt, at his own request, though the exact location of his grave within it is not known.\nStand back from the base if you can, and read the tower from the ground up.\nSeventy-five metres of granite in six floors, with Baroque ornament — statues of saints, prominent cornices, balustrades, the spiral form unwinding upward — and forty-nine bells in the belfry at the top, which were used in the eighteenth century for a range of civic functions that tell you a great deal about what a tower like this meant to a city before it had any other way of communicating at scale: the arrival of ships in the Ribeira was announced from here, noon was signalled by firing a mortar from the steeple, royal births and royal deaths were rung out on the bells, and at night sailors navigating the Douro used the tower as a visual reference, with fires lit near the top to mark its position in the dark, so the building was simultaneously a church, a clock, a lighthouse, and a broadcasting system for a city that had no other.\nBefore or after you climb the two hundred and forty steps to the top, go into the church on the ground floor and look at the plan.\nThe Igreja dos Clérigos was one of the first Baroque churches in Portugal to adopt an elliptical floor plan, which Nasoni derived from his knowledge of Italian Baroque precedents, and the oval nave produces acoustic properties that the two pipe organs flanking the main altar were specifically designed to exploit — so the interior is not only visually unusual but was conceived as a musical instrument, which is the kind of ambition that tends to announce itself rather quietly until you happen to be inside it when someone begins to play.\n[beat]\nThe tower remained the tallest building in Portugal from its completion in seventeen sixty-three until the late nineteenth century, and it is still the tallest structure in Porto's historic quarter, which means that for most of the city's modern history the point on the skyline that told you where you were, whether you were arriving by river or by road or simply looking up from the Ribeira, was the top of a building that one Italian architect agreed to build for nothing because the Brotherhood asked him nicely and he thought it was worth doing."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 197,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14567,
+      "centroidLongitude": -8.61498,
+      "city": "Porto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "torre dos clerigos",
+        "porto",
+        "baroque",
+        "1763",
+        "nicolau nasoni",
+        "bell tower",
+        "elliptical church"
       ],
       "priceUSD": 0
     }

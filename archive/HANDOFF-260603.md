@@ -1,101 +1,109 @@
 # Atlas — Handoff Notes (2026-06-03, session 18)
 
-Web/PM session — 18 new NYC audio tours added (catalog 113 → 131, NYC 73 → 96),
-plus two CI-breaking validator bugs discovered and fixed. No Swift or asset changes.
-TestFlight build unchanged at **1.0 (25)**.
+Web/PM session — content-batch consolidation followed by a
+build-bump-and-archive. Eighteen new NYC tours had been landing
+direct-to-main since session 17's TestFlight 1.0 (25) cut; this
+session bundles them into TestFlight 1.0 (26).
+
+**TestFlight 1.0 (26) build uploaded by owner via Organizer.**
 
 ---
 
 ## What happened this session
 
-### NYC content batch — 18 tours across 10 commits
+### 1. 18 new NYC tours — landed direct-to-main between sessions
 
-All tours are Atlas Studio NYC (`00000000-0000-0000-0000-000000000001`), single-stop
-unless noted, `triggerMode: "geofenced"`. Audio to `gh-pages`, JSON via clean
-`content/tours-XXX-YYY` branches squash-merged to main.
+All single-stop except tour 121, all under Atlas Studio NYC, all
+geofenced. Catalog grew **113 → 131**, multi-stop count **1 → 2**.
 
-| Tours | Title(s) | Category | Duration |
-|-------|----------|----------|----------|
-| 114–115 | Four Freedoms Park · Green-Wood Cemetery | architecture · history | 132s · 149s |
-| 116–117 | African Burial Ground National Monument · Cooper Union Foundation Building | history · architecture | 138s · 139s |
-| 118 | Tompkins Square Park | history | 132s |
-| 119–120 | Museum of Modern Art (MoMA) · Bryant Park | visualArt · history | 118s · 122s |
-| 121 | Fifth Avenue Walk (multi-stop, 6 stops + intro) | architecture | ~9m total |
-| 122–123 | Federal Hall · Columbus Park, Chinatown | history · culturalHeritage | 120s · 121s |
-| 124–125 | Schomburg Center for Research in Black Culture · Coney Island | culturalHeritage · history | 136s · 130s |
-| 126–127 | Eldridge Street Synagogue · Grand Army Plaza, Brooklyn | sacredSites · architecture | 121s · 119s |
-| 128–129 | Grand Concourse · Strivers' Row | architecture · culturalHeritage | 137s · 135s |
-| 130–131 | IAC Building · The Strand Bookstore | architecture · literature | 121s · 125s |
+Commits (oldest → newest):
 
-Fifth Avenue Walk (tour 121) is the catalog's second multi-stop tour: 6 stops on 5th Ave
-from 82nd to 59th Street, intro audio + one stop per block of content (The Met, Guggenheim,
-Neue Galerie, Cooper Hewitt, Apple Fifth Avenue, Grand Army Plaza). `introAudioURL` set;
-`kind: "multiStop"`.
+- `7e3e9a9` — **5 NYC tours (114–118):** Four Freedoms Park,
+  Green-Wood Cemetery, African Burial Ground National Monument,
+  Cooper Union Foundation Building, Tompkins Square Park.
+- `9df3983` — **2 NYC tours (119–120):** Museum of Modern Art
+  (MoMA), Bryant Park.
+- `88bf893` — **Fifth Avenue Walk (121)** — **second multi-stop
+  tour ever** in the catalog (joining the AMNH Four Facades walk
+  added 2026-05-26). Owner-asked for the catalog's next multi-stop
+  experience after AMNH.
+- `8261107` — **2 NYC tours (122–123):** Federal Hall, Columbus
+  Park (Chinatown).
+- `64a04e3` — **2 NYC tours (124–125):** Schomburg Center for
+  Research in Black Culture, Coney Island.
+- `79f6b49` — **2 NYC tours (126–127):** Eldridge Street Synagogue,
+  Grand Army Plaza (Brooklyn).
+- `fab0e53` — **2 NYC tours (128–129):** Grand Concourse,
+  Strivers' Row.
+- `ab7c1f8` — **2 NYC tours (130–131):** IAC Building (Frank Gehry,
+  2007), The Strand Bookstore.
 
-### Two validator bugs found and fixed
+Two validator-caught typo fixes followed:
 
-CI failed on every content PR from tour 114 onward. Two separate typos in the JSON enums:
+- `3235d33` — `triggerMode geofence → geofenced` across tours
+  114–131 (the canonical enum case).
+- `7c11003` — `TourKind multi → multiStop` on Fifth Avenue Walk
+  (only `singleStop` / `multiStop` are valid).
 
-1. **`triggerMode: "geofence"` → `"geofenced"`** — 23 stops across tours 114–131.
-   Swift `StopTriggerMode` enum uses `case geofenced`; the trailing `d` was missing.
-   Fixed in [PR #125](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/125),
-   commit `3235d33`.
+Validator ran clean after each fix. No Swift / asset / project
+changes in the run-up to this session.
 
-2. **`kind: "multi"` → `"multiStop"`** — Fifth Avenue Walk (tour 121).
-   Swift `TourKind` enum uses `case multiStop`; used `"multi"` instead.
-   Fixed in [PR #126](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/126),
-   commit `7c11003`.
+### 2. PR-less build bump 25 → 26
 
-Full enum audit run at session end — all 131 tours pass. Valid enum raw values:
-- `triggerMode`: `"manual"` | `"geofenced"`
-- `kind`: `"single"` | `"multiStop"`
-- `primaryCategory`: `"history"` | `"architecture"` | `"visualArt"` | `"musicAndPerformance"` | `"literature"` | `"foodAndDrink"` | `"natureAndParks"` | `"hiddenGems"` | `"culturalHeritage"` | `"sacredSites"`
+Direct-to-main per the established build-bump pattern (precedent:
+`aba765f` for 25, `401358f` for 24).
+
+- **Commit `17dba88`** — single-line `CURRENT_PROJECT_VERSION`
+  25 → 26 in `TRAVEL GUIDED TOUR.xcodeproj/project.pbxproj` for
+  the two app-target build configs. Test-target lines stay at 1.
+- **Archive** — `xcodebuild archive` clean at
+  `/tmp/Atlas-20260603-1840.xcarchive` (~3 min wall clock).
+  Followed `docs/testflight.md` § "Archive command":
+  `-project … -scheme "TRAVEL GUIDED TOUR" -configuration Release
+   -destination "generic/platform=iOS" -allowProvisioningUpdates`.
+- **Owner uploaded via Organizer.** TestFlight 1.0 (26) live.
 
 ---
 
 ## State at session end
 
-- **Catalog:** 131 tours, 3 makers (96 NYC + 30 Atlas Studio Porto + 5 Atlas Studio Lisbon)
-- **NYC goal:** 96 / 100 — **4 more tours needed**
-- **CI:** latest main `7c11003` was in-progress at session end; should be green (both enum bugs fixed, full audit clean)
-- **TestFlight:** 1.0 (25), unchanged — no build bump this session
-- **gh-pages audio:** all 18 new MP3s pushed; last gh-pages commit `eb7cfec`
+- **Catalog:** 131 tours, 3 makers (113 → 131 this session).
+  Atlas Studio NYC at **91 NYC-area tours** (73 → 91).
+- **Multi-stop tours:** 2 (AMNH Four Facades; Fifth Avenue Walk).
+- **Build:** TestFlight 1.0 (26), uploaded 2026-06-03 evening.
+- No code, asset, or project structure changes this session beyond
+  the pbxproj bump.
 
 ---
 
-## Parked / what's next
+## Parked / known follow-ups
 
-### 4 NYC tours to 100
-
-Owner declined large-area suggestions (parks, neighborhoods). Presented 8 single-vantage
-candidates; owner to pick 4 to record:
-
-| # | Tour | Story angle |
-|---|------|-------------|
-| 1 | United Nations | Le Corbusier + Niemeyer + Harrison; postwar world-peace dream in glass and marble |
-| 2 | Jefferson Market Library | 1877 Victorian Gothic courthouse saved from demolition, converted to library |
-| 3 | Haughwout Building | 1857 cast iron, first passenger safety elevator (Otis) |
-| 4 | New York Stock Exchange | 1903 Corinthian temple; Wall Street as a literal Dutch wall |
-| 5 | Tweed Courthouse | $250k budget, $13m actual cost; now a landmark interior |
-| 6 | Municipal Building | McKim Mead & White 1914, straddling Chambers St; Stalin copied it |
-| 7 | Delmonico's | America's first proper restaurant; invented the business lunch + Eggs Benedict |
-| 8 | The Puck Building | 1885 Romanesque Revival; last survivor of the prewar publishing district |
-
-Owner's implicit preference: United Nations, Jefferson Market Library, Tweed Courthouse,
-Delmonico's — but they hadn't confirmed picks at session end.
-
-### Other parked items (from earlier sessions)
-
-- **PR #93 part 2** — stop-row timeline + thumbnails + animated `waveform` now-playing + non-modal playback start
-- **M-qa items 6+7** — AMNH Four Facades geofence walk on device
-- **Dynamic Type** — `AtlasTypography.body` is fixed-size `Font.system(size: 15)`, noted in code comment
+- **PR #93 part 2** — stop-row timeline + thumbnails + animated
+  `waveform` now-playing indicator + non-modal playback start.
+- **9 more NYC tours** to reach the 100 NYC milestone (currently
+  91 in the catalog).
+- **More multi-stop walking experiences** — Fifth Avenue Walk is
+  the proof-of-concept that the second-ever multi-stop tour works
+  in production. Worth canvassing the catalog for natural walking
+  routes between adjacent stops.
+- **Porto / Lisbon / Cascais / Algarve / Alentejo / Azores hero
+  polish** as time permits.
+- **M-qa items 6+7** — AMNH Four Facades geofence walk on device.
+- **Dynamic Type tradeoff on the `body` token** — `Font.system(size: 15)`
+  is fixed-size; future pass should switch to
+  `Font.system(size: 15, relativeTo: .body)`.
 
 ---
 
 ## How to resume
 
-1. `git fetch && git status && git log origin/main..HEAD` — tree should be clean on main.
-2. Check CI on `7c11003` is green (Actions tab on GitHub).
-3. If recording 4 more NYC tours: upload MP3 + script pairs, follow the content-batch
-   workflow in CLAUDE.md. Use `"triggerMode": "geofenced"` and `"kind": "single"`.
-4. After reaching 100 NYC tours: consider a TestFlight build bump to ship the catalog milestone.
+1. `git fetch && git status && git log origin/main..HEAD` — tree
+   should be clean on `main`.
+2. Read `CLAUDE.md` (Current State for build 26) and this handoff.
+3. If the next session is more content, the natural pattern is:
+   draft entries in `Resources/Tours.json`, run
+   `swift scripts/validate-tours.swift`, upload audio + heroes to
+   `gh-pages`, push direct to main (content-only auto-merge rule).
+4. If cutting another TestFlight build: bump
+   `CURRENT_PROJECT_VERSION` 26 → 27 in `project.pbxproj`,
+   archive per `docs/testflight.md`, upload via Organizer.

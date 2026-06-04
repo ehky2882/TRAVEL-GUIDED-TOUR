@@ -50,7 +50,9 @@ struct TourListCard: View {
             .padding(.horizontal, AtlasSpacing.sm)
             .padding(.bottom, AtlasSpacing.sm)
         }
-        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
+        // Square corners on the whole card so the hero image's top
+        // edge reads as a flat rectangle, not a rounded crop
+        // (owner choice, 2026-06-04 — "all images square corners").
         .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 

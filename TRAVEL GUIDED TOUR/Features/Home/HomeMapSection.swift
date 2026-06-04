@@ -142,7 +142,15 @@ struct HomeMapSection: View {
             }
         }
         switch mapMode {
-        case .standard: map.mapStyle(.standard)
+        // `.muted` emphasis desaturates the standard style so the
+        // pins, placecard, and chrome don't compete with the map's
+        // own colour. The POI include-list curates Apple's labels
+        // down to the categories that matter to a tour-seeker
+        // (cultural / civic / transit landmarks); the noise
+        // (ATMs, gas stations, pharmacies, retail, etc.) is hidden
+        // so the map reads as canvas, not a Yelp grid. Hybrid +
+        // Imagery don't expose these options; they stay at default.
+        case .standard: map.mapStyle(.standard(emphasis: .muted, pointsOfInterest: Self.tourPOI))
         case .hybrid:   map.mapStyle(.hybrid)
         case .imagery:  map.mapStyle(.imagery)
         }
@@ -207,6 +215,28 @@ struct HomeMapSection: View {
     private var clusterItems: [ClusterItem] {
         Self.cluster(markers: allStopMarkers, in: currentRegion)
     }
+
+    /// Curated allowlist of Apple Maps POI categories — only the
+    /// ones that help a tour-seeker get oriented (cultural, civic,
+    /// nature, transit) survive. Categories like ATMs, gas stations,
+    /// pharmacies, retail, restrooms, and laundry are filtered out
+    /// so the map reads as a canvas for the Atlas pins rather than
+    /// a Yelp grid. Easy to revisit; iterate by adding / removing
+    /// categories here.
+    private static let tourPOI: PointOfInterestCategories = .including([
+        // Cultural / civic landmarks
+        .landmark, .museum, .nationalMonument, .library, .castle, .fortress,
+        // Performance + venues
+        .theater, .movieTheater, .musicVenue, .stadium,
+        // Family / educational attractions
+        .aquarium, .planetarium, .zoo, .amusementPark,
+        // Nature + open space
+        .park, .nationalPark, .beach, .marina,
+        // Civic anchors
+        .university,
+        // Travel + transit
+        .airport, .publicTransport, .hotel, .parking, .evCharger
+    ])
 
     /// Round `span` to two significant figures so MapKit's
     /// sub-percent settle drift on pure pans doesn't perturb the
@@ -329,7 +359,7 @@ private struct StopPin: View {
             .contentShape(Circle())
     }
 
-    private var diameter: CGFloat { isSelected ? 18 : 14 }
+    private var diameter: CGFloat { isSelected ? 20 : 16 }
 }
 
 /// Cluster badge: a larger circle with a count, in the accent color
@@ -347,7 +377,7 @@ private struct ClusterPin: View {
                 .frame(width: innerDiameter, height: innerDiameter)
                 .overlay(Circle().stroke(Color.white, lineWidth: 1.5))
             Text("\(count)")
-                .font(.system(size: 12, weight: .semibold))
+                .font(.system(size: 12, weight: .regular, design: .monospaced))
                 .foregroundStyle(.white)
         }
         .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
