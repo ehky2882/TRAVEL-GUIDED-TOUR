@@ -63,7 +63,33 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-03)
+## Current State (2026-06-04)
+
+### Image pipeline pass — 14 NYC tours backfilled (session 20)
+
+Web/PM session. No new tours, no Swift changes, no build bump. Catalog stays at **138 tours / 147 stops / 3 makers**. Branch `claude/session-012bd7xvvgfz8cpkucw3bqy8-0MeY7` open, not yet merged to main.
+
+Image pipeline codified as **Rule #8** (+ full § Image Pipeline section added this session). Ran the pipeline on 14 NYC tours — Unsplash fetch → Gemini verify → owner picks labeled previews → crop to 1200×900 WebP q82 → gh-pages → Tours.json patch:
+
+- **Empire State Building** — new hero (obs deck) + 3 gallery
+- **Chrysler Building** — new hero (gargoyle) + 3 gallery
+- **Brooklyn Bridge** — new hero + 4 gallery
+- **Met Museum** — new hero + 2 gallery
+- **Bethesda Terrace** — new hero (fountain) + 3 gallery
+- **Grand Central** — kept Wikimedia hero, 2 exterior gallery shots added
+- **High Line** — kept Wikimedia hero, 1 overlook gallery shot added
+- **Rockefeller Center** — new gh-pages hero, ice rink + original Wikimedia in gallery
+- **One WTC** — new hero + 2 gallery
+- **Guggenheim** — new hero (FLW facade) + 4 gallery
+- **Times Square** — skipped (owner: "None, leave as-is")
+- **Statue of Liberty** — new hero (aerial) + 4 gallery
+- **Washington Square Park** — kept Wikimedia hero, 5 gallery shots added
+- **Flatiron Building** — new hero (symmetry) + 3 gallery
+- **Lincoln Center** — new gh-pages hero (plaza-wide) + night gallery + original Wikimedia in gallery
+
+~25 NYC tours still need gallery images. 9/11 Memorial is queued next (background fetch script running at session end). See `archive/HANDOFF-260604.md` for in-flight details and the full remaining queue.
+
+**Latest TestFlight build: 1.0 (28)** — uploaded 2026-06-03 evening (session 19).
 
 ### Six home polish PRs + TestFlight 1.0 (28) (session 19)
 
