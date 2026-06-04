@@ -46,7 +46,7 @@ private struct TourCard: View {
             HeroImageView(
                 imageName: tour.heroImageURL,
                 height: 140,
-                cornerRadius: AtlasSpacing.cardCornerRadius,
+                cornerRadius: 0,
                 category: tour.primaryCategory
             )
 

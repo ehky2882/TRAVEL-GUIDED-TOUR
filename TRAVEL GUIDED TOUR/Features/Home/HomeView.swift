@@ -131,6 +131,24 @@ struct HomeView: View {
                     VStack(spacing: AtlasSpacing.sm) {
                         SearchBar()
                             .padding(.horizontal, AtlasSpacing.md)
+                            // Retract the drawer to `.peek` when the
+                            // user opens search from `.medium` or
+                            // `.large` — without this the SearchView
+                            // pushes on top of a fully-expanded drawer
+                            // and the user has to swipe down again
+                            // to get the map back when they pop
+                            // (owner request, 2026-06-04).
+                            // `.simultaneousGesture` runs alongside
+                            // the NavigationLink's tap so the push
+                            // still fires.
+                            .simultaneousGesture(
+                                TapGesture().onEnded {
+                                    guard sheetDetent != .peek else { return }
+                                    withAnimation(.easeInOut(duration: 0.25)) {
+                                        sheetDetent = .peek
+                                    }
+                                }
+                            )
 
                         CategoryChipRow(
                             availableCategories: TourCategory.allCases,

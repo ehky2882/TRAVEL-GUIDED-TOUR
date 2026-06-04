@@ -97,7 +97,7 @@ struct HomeDrawerContent: View {
                 HeroImageView(
                     imageName: tour.heroImageURL,
                     height: 48,
-                    cornerRadius: 8,
+                    cornerRadius: 0,
                     category: tour.primaryCategory
                 )
                 .frame(width: 48)
