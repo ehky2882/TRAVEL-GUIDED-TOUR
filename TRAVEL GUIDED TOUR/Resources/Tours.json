@@ -336,7 +336,11 @@
       "shortDescription": "Three minutes on the Met's facade — Beaux-Arts ceremony, Richard Morris Hunt's last project, and the four uncarved blocks above the columns.",
       "longDescription": "The Met was founded in 1870 — a deliberate act of American cultural ambition, an attempt to build a museum that could compete with the Louvre and the British Museum. The original 1880 building is still in there, completely surrounded by a hundred and fifty years of expansion. The facade in front of you was designed by Richard Morris Hunt — the first American to study at the École des Beaux-Arts — and finished by his son in 1902 after Hunt died in 1895. The two wings followed, by McKim, Mead, and White, between 1906 and 1926. The whole thing is a Beaux-Arts temple.\n\nLook up. Just above the four columns, you'll see four large rectangular blocks of stone, uncarved. They were supposed to become sculptures representing Ancient, Medieval, Renaissance, and Modern art. The money ran out. They've stayed uncarved for over a hundred and twenty years. The Met has, in a way, never been finished. Three minutes on what the facade is doing — and the promise it's making — before you walk up the steps.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg/1280px-Metropolitan_Museum_of_Art_%28The_Met%29_-_Central_Park%2C_NYC.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/metropolitan-museum-fifth-ave-steps_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/metropolitan-museum-fifth-ave-steps_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/metropolitan-museum-fifth-ave-steps_3.webp"
+      ],
       "kind": "single",
       "stops": [
         {
