@@ -159,7 +159,12 @@
       "shortDescription": "Two and a half minutes on the skyscraper that went up in 410 days — Art Deco audacity in the middle of the Great Depression.",
       "longDescription": "From 34th and Fifth, the Empire State Building rises into the frame like the postcard it became. The base set back from the street, the wedding-cake terraces stepping inward, the Art Deco crown — 1,454 feet from the sidewalk. When it opened in 1931, it was the tallest building in the world; it held the title for forty years.\n\nThe audacity is in the timing. Construction started in 1930, the year after the stock market crashed. While the country slid into the Depression, three thousand four hundred workers built the tallest skyscraper in history in four hundred and ten days, using assembly-line techniques borrowed from the automobile industry. It came in under budget and ahead of schedule — then sat almost entirely empty for years. They called it the Empty State Building. Two and a half minutes on what the building is, what it was supposed to be, and why the lobby is worth slowing down for.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/USA-NYC-Empire_State1.JPG/1280px-USA-NYC-Empire_State1.JPG",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/empire-state-building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/empire-state-building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/empire-state-building_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/empire-state-building_4.webp"
+      ],
       "kind": "single",
       "stops": [
         {
