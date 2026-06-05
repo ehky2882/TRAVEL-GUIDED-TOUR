@@ -29,12 +29,71 @@ These happen **automatically, without the owner asking**.
 | 5 | Session ends (touched code or content) | Update `CLAUDE.md` + `ROADMAP.md` in same commit; write `archive/HANDOFF-YYMMDD.md`; update `archive/README.md` |
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
+| 8 | New tour added that lacks gallery images | Run the image pipeline (§ Image Pipeline) automatically — no prompting. **Exception: owner-supplied images (Portugal/Porto/Lisbon tours) — do not run pipeline, use the provided assets.** |
 
-## Current State (2026-06-03)
+## Image Pipeline
+
+Standard process for sourcing hero + gallery images for tours that don't have owner-supplied assets. Run this automatically whenever a new tour is added without images, or when the owner asks to improve existing images.
+
+**Tools:** Unsplash API (source) → Gemini vision (verification gate) → Pillow (resize/crop) → gh-pages (hosting) → Tours.json patch.
+
+**API keys** (owner pastes fresh each session — do not store):
+- Unsplash: `Client-ID <key>` header on `https://api.unsplash.com/search/photos`
+- Gemini: `?key=<key>` on `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent`
+- Gemini key format: starts with `AQ.` (NOT `AIzaSy` — do not prepend anything)
+
+**Pipeline steps:**
+1. **Search** — 5–6 targeted Unsplash queries per tour, 3 results each, covering different vantage points (exterior, interior, aerial, detail, night, golden hour, etc.). `orientation=landscape&content_filter=high`.
+2. **Verify** — Send each candidate to `gemini-2.5-flash-lite` with a subject-specific YES/NO prompt. Reject non-subject images silently.
+3. **Label** — Crop to 1200×900 WebP q82 (Pillow: `scale = max(W/w, H/h)` → resize → center crop). Add large white-box number + category label for owner review.
+4. **Owner picks** — Send labeled images; owner replies e.g. `"3 hero, 1, 7, 9"`. First number = hero; rest = gallery order.
+5. **Process** — Crop selections to final 1200×900 WebP (no label). Name: `{audio-slug}_hero.webp`, `{audio-slug}_2.webp`, etc.
+6. **Upload** — Commit to `gh-pages` branch under `images/`. Pull + rebase if non-fast-forward.
+7. **Patch Tours.json** — Replace `heroImageURL` + set/update `additionalImageURLs`. Commit + push to session branch.
+
+**Special cases:**
+- Owner says "keep current hero" → leave `heroImageURL` as-is; only add `additionalImageURLs`.
+- Owner says "keep current hero in gallery" → put original URL as last entry in `additionalImageURLs`.
+- Too few verified images → tell owner, offer to fetch more with different queries, or skip.
+- Unsplash rate limit (50 req/hr free tier) → pause, note time to reset, continue other work.
+
+**Audio slug** = the filename stem of the tour's `audioURL` (e.g. `audio/empire-state-building.mp3` → `empire-state-building`). Use this as the image filename prefix. Some older slugs use dots or mixed case — match exactly.
+
+**Image URL base:** `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
+
+**gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
+
+## Current State (2026-06-04)
+
+### Image pipeline pass — 14 NYC tours backfilled (session 20)
+
+Web/PM session. No new tours, no Swift changes, no build bump. Catalog stays at **138 tours / 147 stops / 3 makers**. Branch `claude/session-012bd7xvvgfz8cpkucw3bqy8-0MeY7` open, not yet merged to main.
+
+Image pipeline codified as **Rule #8** (+ full § Image Pipeline section added this session). Ran the pipeline on 14 NYC tours — Unsplash fetch → Gemini verify → owner picks labeled previews → crop to 1200×900 WebP q82 → gh-pages → Tours.json patch:
+
+- **Empire State Building** — new hero (obs deck) + 3 gallery
+- **Chrysler Building** — new hero (gargoyle) + 3 gallery
+- **Brooklyn Bridge** — new hero + 4 gallery
+- **Met Museum** — new hero + 2 gallery
+- **Bethesda Terrace** — new hero (fountain) + 3 gallery
+- **Grand Central** — kept Wikimedia hero, 2 exterior gallery shots added
+- **High Line** — kept Wikimedia hero, 1 overlook gallery shot added
+- **Rockefeller Center** — new gh-pages hero, ice rink + original Wikimedia in gallery
+- **One WTC** — new hero + 2 gallery
+- **Guggenheim** — new hero (FLW facade) + 4 gallery
+- **Times Square** — skipped (owner: "None, leave as-is")
+- **Statue of Liberty** — new hero (aerial) + 4 gallery
+- **Washington Square Park** — kept Wikimedia hero, 5 gallery shots added
+- **Flatiron Building** — new hero (symmetry) + 3 gallery
+- **Lincoln Center** — new gh-pages hero (plaza-wide) + night gallery + original Wikimedia in gallery
+
+~25 NYC tours still need gallery images. 9/11 Memorial is queued next (background fetch script running at session end). See `archive/HANDOFF-260604.md` for in-flight details and the full remaining queue.
+
+**Latest TestFlight build: 1.0 (28)** — uploaded 2026-06-03 evening (session 19).
 
 ### Six home polish PRs + TestFlight 1.0 (28) (session 19)
 
-Six small focused home-screen tweaks layered on top of session 18's content, plus the build bumps that cut 27 (left unshipped by session 18) then 28 (defensive re-bump before owner upload). **TestFlight 1.0 (28) is live.** Catalog now **138 tours / 147 stops / 3 makers** (session 18's 131 + PR #127's 7 central Porto classics: Cathedral, São Bento, Clérigos, Ribeira, São Francisco, Bolsa, Dom Luís I).
+Six small focused home-screen tweaks layered on top of session 18's content, plus the build bumps that cut 27 (left unshipped by session 18) then 28 (defensive re-bump before owner upload). **TestFlight 1.0 (28) is live.** Catalog now **138 tours / 147 stops / 3 makers** — **96 Atlas Studio NYC** (105 stops) + 37 Atlas Studio Porto + 5 Atlas Studio Lisbon — from session 18's 131 + PR #127's 7 central Porto classics (Cathedral, São Bento, Clérigos, Ribeira, São Francisco, Bolsa, Dom Luís I) + 4 more NYC tours added during the session-18 web/PM run (Grand Concourse, Strivers' Row, IAC Building, The Strand Bookstore).
 
 - **[PR #128](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/128) — muted standard map style.** `MapStyle.standard` now uses `.standard(emphasis: .muted)` so the canvas reads as desaturated and the pins / placecard / chrome stop competing with the map's own colour. Hybrid + Imagery unchanged.
 - **[PR #129](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/129) — pin sizes + cluster count typography.** `StopPin` diameter **14 → 16 pt** (unselected) and **18 → 20 pt** (selected). Cluster count text dropped semibold-SF-Pro for **SF Mono regular** at 12 pt — matches the new editorial voice on the home caption surfaces.
@@ -259,8 +318,8 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **131 tours, 3 makers** in `Resources/Tours.json` (91 NYC-area + 30 Atlas Studio Porto + 5 Atlas Studio Lisbon + others); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **129 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
+- **138 tours, 3 makers** in `Resources/Tours.json` (96 Atlas Studio NYC + 37 Atlas Studio Porto + 5 Atlas Studio Lisbon); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **136 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
