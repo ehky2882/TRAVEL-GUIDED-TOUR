@@ -6321,6 +6321,325 @@
         "elliptical church"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "c1301b25-646f-4a9a-9de9-87f0f73273eb",
+      "title": "Avenida dos Aliados",
+      "shortDescription": "Three and a quarter minutes on Porto's main civic avenue — a Barry Parker layout from 1915 that demolished an entire neighbourhood to clear the ground, then handed the architecture to French-trained locals who ignored Parker's English restraint entirely.",
+      "longDescription": "The Avenida dos Aliados is Porto's living room — the wide granite esplanade running north from Praça da Liberdade up to the Câmara Municipal, where New Year's Eve gathers, where FC Porto's championship parades end, and where the full civic ambition of the early twentieth century still surrounds you in two rows of Beaux-Arts and Art Nouveau granite. The avenue's origin is more contested than the buildings let on.\n\nA British architect and urban planner named Barry Parker drew up the plan in 1915, and it required the demolition of the entire Laranjal neighbourhood — streets, buildings, the old Town Hall of 1816 — to clear the ground. Parker proposed a sober, neoclassical layout with a landscaped median and two-storey buildings, the English restraint of someone who had spent his career on garden cities. Porto's municipal architects, trained mostly in Paris, were unimpressed: Parker's plan was accepted as an urban layout but the architecture along it was handed to local designers, which is why the avenue reads Parisian rather than English and why Parker's name appears nowhere on it.\n\nAt the northern end, the City Hall (Correia da Silva, finished by Carlos Ramos, 1920–1955) survived a mid-construction proposal that the whole thing be demolished and started again on the grounds that the Beaux-Arts style had become old-fashioned. One floor was cut from the 70m central tower so it would not exceed the Clérigos church a few blocks away. The central esplanade itself was a landscaped garden until 2006, when Álvaro Siza and Eduardo Souto de Moura replaced it with the granite cobblestone you're standing on — granite because that's what Porto is built from.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Avenida_dos_Aliados_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Avenida_dos_Aliados_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Avenida_dos_Aliados_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c98352df-0668-41d8-9ccc-9a08dd3bf099",
+          "order": 0,
+          "title": "Avenida dos Aliados",
+          "caption": "On the central esplanade — look both ways: São Bento Station south, City Hall tower north.",
+          "latitude": 41.14798,
+          "longitude": -8.61109,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/avenida-dos-aliados.mp3",
+          "audioDurationSeconds": 199,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Avenida_dos_Aliados_hero.webp",
+          "transcriptText": "An entire neighbourhood was demolished to make this avenue — and then the city largely ignored the architect who designed it and built something rather more flamboyant instead.\nRight. You should be somewhere on the central esplanade of the Avenida dos Aliados, the wide granite-paved pedestrian strip that runs north from Praça da Liberdade up toward the City Hall at the top of the slope — and the best way to read the avenue is to stand on the central axis and look both ways along it: south toward São Bento Station and north toward the City Hall tower, with the two rows of Beaux-Arts and Art Nouveau granite buildings on either side framing the view. This is Porto's living room, as the city calls it, the place where New Year's Eve is celebrated, where FC Porto's championship victories spill into the streets, and where the full civic ambition of the early twentieth century is still visible in the buildings surrounding you.\nNow, the avenue's origin is more contested than it looks.\nThe plan was drawn up by a British architect and urban planner named Barry Parker in nineteen fifteen, and it required the demolition of an entire neighbourhood — the Laranjal — along with its streets, its buildings, and the old Town Hall, which had stood on Praça da Liberdade since eighteen sixteen. Parker proposed a relatively sober, neoclassical design with a landscaped median, two-storey buildings, and the English restraint of someone who had spent his career building garden cities. Porto's municipal architects, who had mostly trained in Paris and had strong views about what a grand avenue should look like, were not particularly impressed by English restraint — so Parker's plan was accepted as an urban layout but the architecture along it was handed to a generation of local designers whose buildings are considerably more ornamental and exuberant than anything Parker had in mind, which is why the avenue looks Parisian rather than English, and why Barry Parker's name is not prominently displayed anywhere on it.\nLook at the City Hall at the northern end of the avenue, which took thirty-five years and two architects to complete.\nDesigned by Correia da Silva and finished with modifications by Carlos Ramos, the building was constructed between nineteen twenty and nineteen fifty-five — and during construction, city officials at one point recommended demolishing the whole thing and starting again, on the grounds that the Beaux-Arts style had become old-fashioned. It survived, with one adjustment that tells you something useful about Porto: a floor was removed from the seventy-metre central tower so that the building would not be taller than the Clérigos church, several blocks away, because the Clérigos tower had been the tallest structure in Porto for nearly two centuries and the municipality, apparently, felt that a town hall was not the right thing to replace it.\n[beat]\nThe central esplanade beneath your feet was originally a landscaped garden with vegetation and pergolas, which was removed in two thousand and six and replaced with the granite cobblestone surface you're standing on now — a redesign carried out by Álvaro Siza and Eduardo Souto de Moura, who have between them shaped more of Porto's contemporary fabric than any other living architects, and who chose granite because it is what Porto is built from and what Porto has always been built from, which is the kind of decision that looks obvious only after someone makes it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 199,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14798,
+      "centroidLongitude": -8.61109,
+      "city": "Porto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "avenida dos aliados",
+        "porto",
+        "civic avenue",
+        "beaux-arts",
+        "porto city hall",
+        "barry parker"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "96b369ab-e962-4916-884d-e7459ff3da59",
+      "title": "Casa do Infante",
+      "shortDescription": "Three minutes at Porto's oldest building — a 1325 royal customs house built directly on top of a Roman villa, where Henry the Navigator was most likely born in 1394, and which then spent the next five centuries as a tax office.",
+      "longDescription": "The Casa do Infante is the oldest building in Porto, dating from 1325, and it sits on Praça do Infante Dom Henrique in the Ribeira a short walk from the Church of São Francisco on one side and the Palácio da Bolsa on the other. Four levels of granite windows above a grand arched entrance carry the royal coat of arms; a Neo-Manueline commemorative stone above the main door was placed there in 1894, five hundred years after the event it records.\n\nKing Afonso IV founded it in 1325 as the royal customs house — the Alfândega Régia — built specifically to control and tax goods arriving by river from northern Europe and Venice, and constructed on top of the remains of a Roman villa that the fourteenth-century builders either didn't know about or didn't consider relevant. Around 1370, Fernando I added a royal mint, and Porto's coins were produced here continuously from 1370 until 1721 — three and a half centuries of coinage from a building that was simultaneously handling customs, storing royal merchandise, and providing living quarters for Crown officials in the only royal building Porto possessed. Excavations in the 1990s, during the conversion into the current museum and municipal archive, uncovered fourth- and fifth-century Roman mosaic floor and foundations in situ under glass; you can stand in a fourteenth-century customs house and look down through the floor at the Roman city underneath.\n\nThe name Casa do Infante comes from an oral tradition that Henry the Navigator was born here on 4 March 1394, when his parents — King João I and Queen Philippa of Lancaster — were in Porto and this customs house was the only royal building in the city, and therefore the only plausible location for a royal birth. Henry went on to sponsor the Portuguese expeditions that opened the Atlantic and fundamentally changed the world's geography. The building where he was most likely born spent the following five centuries as a warehouse and tax office, which is the kind of biographical footnote that tends to be left out of the heroic versions of the story.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_do_Infante_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_do_Infante_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_do_Infante_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "44696f9b-ea95-48ef-9509-0a129891e70b",
+          "order": 0,
+          "title": "Casa do Infante",
+          "caption": "On Praça do Infante Dom Henrique — the four-storey granite facade with the Neo-Manueline commemorative stone above the arched entrance.",
+          "latitude": 41.14079,
+          "longitude": -8.61432,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/casa-do-infante.mp3",
+          "audioDurationSeconds": 180,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_do_Infante_hero.webp",
+          "transcriptText": "This building was a customs house for over five centuries, and then it turned out that the most important thing to have happened here was a birth.\nRight. You're on Praça do Infante Dom Henrique, in the Ribeira, with the facade of the Casa do Infante directly in front of you — four levels of granite windows above a grand arched entrance marked with the royal coat of arms, and a Neo-Manueline commemorative stone above the main door that was placed there in eighteen ninety-four, which is to say five hundred years after the event it records. The building is the oldest in Porto, dating from thirteen twenty-five, and it sits a short walk from the Church of São Francisco on one side and the Palácio da Bolsa on the other, in the cluster of buildings that defines the commercial and civic heart of the medieval waterfront.\nNow, the building's layered history is the real reason to come inside, because it has been more things than its current appearance suggests.\nIt was founded in thirteen twenty-five by King Afonso IV as the royal customs house — the Alfândega Régia — built specifically to control and tax the goods arriving by river from northern Europe and Venice, and it was constructed on top of the remains of a Roman villa, which the fourteenth-century builders either didn't know about or simply didn't consider relevant. Around thirteen seventy, King Fernando the First added a royal mint to the complex, and Porto's coins were produced in this building continuously from thirteen seventy until seventeen twenty-one, which is three hundred and fifty years of coinage from a building that was simultaneously handling customs, storing royal merchandise, and providing living quarters for the Crown's officials in the only royal building Porto possessed.\nGo inside and find the archaeological section in the lower floor.\nIn the nineteen nineties, when the building was being converted into its current use as a museum and municipal archive, excavations beneath the floor uncovered fourth and fifth-century Roman mosaic flooring and building foundations — the remains of the villa that Afonso IV's builders had simply built on top of seven hundred years earlier — and these are displayed in situ, under glass, so you can stand in a fourteenth-century customs house and look down through the floor at the Roman city underneath it, which I find one of the more quietly extraordinary things in Porto.\n[beat]\nThe name Casa do Infante — House of the Prince — comes from an oral tradition, rather than a documented record, that Henry the Navigator was born here on the fourth of March, thirteen ninety-four, when his parents, King João the First and Queen Philippa of Lancaster, were in Porto and this customs house was the only royal building in the city and therefore the only plausible location for a royal birth to occur. Henry went on to sponsor the Portuguese expeditions that opened the Atlantic and fundamentally changed the world's geography — and the building where he was most likely born spent the following five centuries as a warehouse and tax office, which is the kind of biographical footnote that tends to be left out of the heroic versions of the story."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 180,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14079,
+      "centroidLongitude": -8.61432,
+      "city": "Porto",
+      "primaryCategory": "history",
+      "tags": [
+        "casa do infante",
+        "porto",
+        "henry the navigator",
+        "1394",
+        "medieval",
+        "ribeira",
+        "customs house"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f0082ff3-030d-4742-99b8-8ab50969174a",
+      "title": "Castelo do Queijo",
+      "shortDescription": "Two and three-quarter minutes at the 'Cheese Castle' — a 1661 trapezoidal granite fort built during the Restoration War on a boulder the locals thought looked like a wheel of cheese, with cannons on the parapet and pensioners playing cards at the base.",
+      "longDescription": "The fort has a perfectly good official name — Forte de São Francisco Xavier — and absolutely no one uses it. The rock the fort sits on is the reason for the name everyone actually uses: a large, rounded granite boulder whose shape, to the eyes of the people who built here, resembled a wheel of cheese. Castelo do Queijo — Cheese Castle — is what it has been called ever since, with the official dedication to São Francisco Xavier quietly fading into administrative memory.\n\nThe trapezoidal granite structure was completed in 1661, designed by the engineer Miguel l'Ecole, and built not against dairy-related threats but during the Portuguese Restoration War — the period when Portugal was disentangling itself from sixty years of Spanish rule that had begun in 1580 — when the coastal defences along the Douro estuary were being systematically reinforced against the Spanish fleet. The walls are battered (sloped) for greater resistance to cannon fire, producing the characteristic low silhouette that makes the fort read as part of the rock rather than something placed on top of it. The arched entrance bears the carved coat of arms of a noble family; inside there are cannons on the parapet, a small exhibition about Portugal's Commando Association who currently maintain the building, and from the top a view that takes in the Atlantic, the beach below, and on clear days the coastline north toward Matosinhos and south toward the Douro mouth.\n\nThe fort had a turbulent nineteenth century: during the 1832 siege of Porto — the same Liberal Wars that burned the Convent of São Francisco in the Ribeira — it endured sustained bombardment, was plundered, and was left derelict for decades before settling into its current role as a monument. What the official history tends not to mention is that at dusk local retirees regularly gather at the base of the fort and use the battle-worn rocks as improvised tables and chairs for card games — which is the most honest measure of how completely Castelo do Queijo has been absorbed into the city it was once built to defend.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Castelo_do_Queijo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Castelo_do_Queijo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Castelo_do_Queijo_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c820bb47-1430-40c3-915a-7b39a976ab44",
+          "order": 0,
+          "title": "Castelo do Queijo",
+          "caption": "At Praça de Gonçalves Zarco — the trapezoidal granite fort on its cheese-shaped boulder where the city meets the Atlantic.",
+          "latitude": 41.16874,
+          "longitude": -8.68991,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/castelo-do-queijo.mp3",
+          "audioDurationSeconds": 162,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Castelo_do_Queijo_hero.webp",
+          "transcriptText": "The fort has a perfectly good official name — Forte de São Francisco Xavier — and absolutely no one uses it.\nRight. You should be at the fort itself, or approaching it from Praça de Gonçalves Zarco, the roundabout at the western edge of Porto where the city meets the Atlantic — with the fort on its granite outcrop ahead of you, the beach to one side, and the ocean beyond. The rock the fort sits on is the reason for the name everyone actually uses: it's a large, rounded granite boulder whose shape, to the eyes of the people who built here, resembled a wheel of cheese, and so Castelo do Queijo — Cheese Castle — is what it has been called ever since, with the official dedication to São Francisco Xavier quietly fading into administrative memory.\nNow look at the fort itself before you decide whether to go in.\nThe trapezoidal granite structure was completed in sixteen sixty-one, designed by the engineer Miguel l'Ecole, and it was built not — as the name might suggest — to guard against dairy-related threats, but during the Portuguese Restoration War, the period when Portugal was fighting to disentangle itself from sixty years of Spanish rule that had begun in fifteen eighty, and the coastal defences along the Douro estuary were being systematically reinforced against the Spanish fleet. The walls are built in a sloping manner — battered, in the technical term — which gives them greater resistance to cannon fire and produces the characteristic low, wide silhouette that makes the fort read as part of the rock rather than something placed on top of it.\nThe arched entrance gate bears the carved coat of arms of a noble Portuguese family, and inside there are cannons on the parapet, a small exhibition about Portugal's Commando Association who currently maintain the building, and from the top a view that takes in the Atlantic, the beach below, and on clear days the coastline running north toward Matosinhos and south toward the Douro mouth.\n[beat]\nThe fort had a turbulent nineteenth century: during the eighteen thirty-two siege of Porto — the same Liberal Wars that burned the Convent of São Francisco in the Ribeira — it endured sustained bombardment and was subsequently plundered and left derelict for decades, passing through several owners and uses before settling into its current role as a monument. What the building's official history tends not to mention, but what I find the most honest measure of how a place has been absorbed into a city, is that at dusk local retirees regularly gather at the base of the fort and use the battle-worn rocks as improvised tables and chairs for card games — which suggests that Castelo do Queijo has achieved something that most military fortifications never manage, which is to become genuinely domestic."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 162,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.16874,
+      "centroidLongitude": -8.68991,
+      "city": "Porto",
+      "primaryCategory": "history",
+      "tags": [
+        "castelo do queijo",
+        "porto",
+        "foz do douro",
+        "17th century",
+        "fort",
+        "atlantic coast",
+        "restoration war"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6b30022e-2630-489d-80ea-02e6931b4ae0",
+      "title": "Igreja de Santo António dos Congregados",
+      "shortDescription": "Three and a quarter minutes at the Baroque church across from São Bento — same Jorge Colaço azulejo facade as the station opposite, plus the mummified body of Pope Saint Clement I in a side chapel, the only pope buried outside the Vatican.",
+      "longDescription": "On the corner of Rua de Sá da Bandeira and Praça de Almeida Garrett, with the church's azulejo facade in front of you and São Bento Station across the square behind, the competition for attention is genuinely unequal: São Bento has twenty thousand tiles and trains; this church has a sober Baroque facade, its own twenty thousand tiles, and a papal relic in a side chapel that almost no visitor ever finds. The building has been here since 1703 — predating the Avenida dos Aliados, the station, and most of what surrounds it.\n\nThe blue-and-white azulejo panels covering the exterior were designed by Jorge Colaço — the same artist responsible for the twenty thousand tiles inside São Bento Station directly opposite, a detail that tends not to appear in the descriptions of either building. The panels depict scenes from the life of Saint Anthony and were applied in 1922 to a Baroque structure that dates from 1703 (built on the site of an earlier 1662 chapel), so the tiles are considerably younger than the walls they cover, as is the case with most of Porto's famous azulejo facades.\n\nIn a glass reliquary in the chapel of the Sagrada Família, on the right side of the nave, lies the mummified body of Pope Saint Clement I — the fourth Bishop of Rome and the first pope to be martyred, who died in the first century AD. According to a tradition of considerable antiquity, his remains were discovered by Saints Cyril and Methodius in Crimea in the ninth century and subsequently distributed among the churches of Europe; how part of them came to rest in this particular church in Porto is a matter the church's own documentation handles with appropriate scholarly caution, but the practical consequence is that this is the only place outside the Vatican where a pope is buried. The interior also has gilded Baroque pulpits, eighteenth-century lateral altarpieces, murals by Acácio Lino completed in 1927, and stained glass by Robert Léone from 1920 — three artists, three media, three centuries, all visible once you're inside.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_Santo_Antonio_Congregados_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_Santo_Antonio_Congregados_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "63eb186f-68ba-4e2b-84b2-6dbf565cd303",
+          "order": 0,
+          "title": "Igreja de Santo António dos Congregados",
+          "caption": "On the corner of Rua de Sá da Bandeira and Praça de Almeida Garrett — facing the azulejo facade, with São Bento Station behind you.",
+          "latitude": 41.14611,
+          "longitude": -8.61083,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/igreja-santo-antonio-congregados.mp3",
+          "audioDurationSeconds": 196,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_Santo_Antonio_Congregados_hero.webp",
+          "transcriptText": "This church contains the body of a pope — the only pope buried outside the Vatican — and almost nobody stops to go in, because the building directly opposite is São Bento Station.\nRight. You're on the corner of Rua de Sá da Bandeira and Praça de Almeida Garrett, with the church's azulejo facade directly in front of you and the main entrance to São Bento Station across the square behind you — and the competition for attention between these two buildings is a genuinely unequal contest, because São Bento has twenty thousand tiles and trains, while this church has a sober baroque facade, its own twenty thousand tiles, and a papal relic in a side chapel that almost no visitor ever finds. The location is excellent: you are at the bottom of the Avenida dos Aliados, in the geographical centre of Porto's civic life, and the church has been here since seventeen oh three, which means it predates the avenue, the station, and most of what surrounds it.\nTake a moment with the facade before you go in, because it rewards the attention.\nThe blue-and-white azulejo panels covering the exterior were designed by Jorge Colaço — and if that name sounds familiar, it's because Colaço also designed the twenty thousand tiles inside São Bento Station directly opposite, which means that the artist responsible for one of the most celebrated tilework interiors in Portugal is also responsible for the facade of the church that stands in its shadow, a detail that tends not to appear in the descriptions of either building. The panels on this facade depict scenes from the life of Saint Anthony, and were applied in the twentieth century to a church whose sober baroque structure dates from seventeen oh three, built on the site of an earlier chapel from sixteen sixty-two — so the tiles are considerably younger than the walls they cover, as is the case with most of Porto's famous azulejo facades.\nGo inside, and when you're in the nave, look to the right toward the chapel of the Sagrada Família.\nIn a glass reliquary in that chapel there is the mummified body of Pope Saint Clement I, the fourth Bishop of Rome and the first pope to be martyred, who died in the first century AD and whose remains were — according to a tradition of considerable antiquity — discovered by Saints Cyril and Methodius in Crimea in the ninth century and subsequently distributed among the churches of Europe. How part of his remains came to rest in this church in Porto, and when, is a matter of historical complexity that the church's own documentation handles with appropriate scholarly caution, but the practical consequence is that this is the only place outside the Vatican where a pope is buried — which is, by any measure, a remarkable thing to have in a side chapel.\n[beat]\nThe interior also has gilded baroque pulpits and lateral altarpieces from the eighteenth century, mural paintings by Acácio Lino completed in nineteen twenty-seven, and stained glass windows by Robert Léone from nineteen twenty — three different artists working in three different media across three different centuries, all of which is entirely visible once you're inside and free to look, since entry is free and the church maintains regular opening hours. I find it one of the more quietly rewarding stops in this part of the city, precisely because the station across the square takes care of drawing the crowds."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 196,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14611,
+      "centroidLongitude": -8.61083,
+      "city": "Porto",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "igreja de santo antonio dos congregados",
+        "porto",
+        "baroque",
+        "azulejos",
+        "jorge colaco",
+        "1922",
+        "pope clement"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f7e9e489-f276-4681-9efa-b8064340d18b",
+      "title": "Maria Pia Bridge",
+      "shortDescription": "Three and a half minutes at the 1877 iron railway bridge over the Douro — Théophile Seyrig's calculations and Eiffel et Cie's construction, 160 metres without a pier in the river, world record for seven years until Eiffel built a longer arch in France and knocked himself off his own list.",
+      "longDescription": "Three hundred and fifty-three metres of wrought iron, sixty metres above the water, with a single crescent arch spanning a hundred and sixty metres across the river at the centre — and closed to rail traffic since 1991, a national monument standing in the river gorge and doing nothing in particular, which in the specific case of this bridge seems an entirely appropriate occupation. The Maria Pia reads best from a distance: the Douro riverbank east of the Dom Luís I Bridge (where the Maria Pia sits upstream), or the hillside approaches on either bank where the full profile of the arch is visible against the valley.\n\nThe engineering problem is the bridge. The Douro here is fast-flowing, up to twenty metres deep in flood, with a deep gravel bed — which meant that building piers in the river was impossible, which meant the bridge had to cross the full hundred and sixty metres at the centre with no support from below. The solution developed by Eiffel et Cie, with Théophile Seyrig (Eiffel's business partner, later credited by Eiffel himself at the 1878 Paris World's Fair with the calculations and drawings), was to build the arch outward from both banks simultaneously, cantilevering each half toward the centre while suspending the growing weight from temporary steel cables anchored to the tops of the approach piers, until the two halves met in the middle with no scaffolding beneath them. Construction began in January 1876, paused through the winter flooding, resumed in March 1877, and was complete by October — twenty-one months, 150 workers, over 1,600 tonnes of wrought iron.\n\nThe deck is only six metres wide: a single railway track, no more. For over a hundred years the entire Lisbon–Porto railway crossed the Douro on a deck six metres wide and sixty metres above the water, on a bridge that was, at its completion, operating at the absolute limit of what iron arch engineering could do. The Maria Pia is the only Portuguese monument on the American Society of Civil Engineers' list of historic engineering landmarks, and held its world record until 1884, when the Garabit Viaduct in France — also by Eiffel, with a span of 165 metres — took the title. What the Garabit didn't take is the view: the Maria Pia sits in its gorge with the particular authority of a structure built to do something genuinely difficult, which succeeded, and which has been standing in the same place ever since as evidence of that fact.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Maria_Pia_Bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Maria_Pia_Bridge_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "48d61916-436a-49b1-9e81-c7dbe7365513",
+          "order": 0,
+          "title": "Maria Pia Bridge",
+          "caption": "From the Douro riverbank east of the Dom Luís I Bridge — the Maria Pia sits upstream, the crescent arch reading full against the valley.",
+          "latitude": 41.1401,
+          "longitude": -8.59565,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/maria-pia-bridge.mp3",
+          "audioDurationSeconds": 202,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Maria_Pia_Bridge_hero.webp",
+          "transcriptText": "This bridge held the world record for the longest iron arch span for seven years — and then Eiffel built a longer one in France and knocked himself off the top of his own list.\nRight. You need to find a viewpoint with a clear line to the bridge, because it can only be properly read from a distance: the best positions are on the Douro riverbank east of the Dom Luís I Bridge, where the Maria Pia sits upstream, or from the hillside approaches on either bank where the full profile of the crescent arch is visible against the valley. What you're looking at is three hundred and fifty-three metres of wrought iron, sixty metres above the water, with a single crescent arch spanning one hundred and sixty metres across the river at the centre — and the bridge has been closed to rail traffic since nineteen ninety-one, a national monument, standing in the river gorge and doing nothing in particular, which in the specific case of this bridge seems an entirely appropriate occupation.\nThe engineering problem that produced this bridge is worth understanding, because the solution is the bridge.\nThe Douro at this point is fast-flowing, up to twenty metres deep in flood, and the riverbed is deep gravel — which meant that building piers in the river was impossible, because there was nothing solid to found them on, which meant the bridge had to cross the full hundred and sixty metres at the centre without any support from below. The solution that Eiffel et Cie developed — with Théophile Seyrig, Eiffel's business partner, later credited by Eiffel himself at the eighteen seventy-eight Paris World's Fair with the calculations and drawings — was to build the arch outward from both banks simultaneously, cantilevering each half toward the centre while suspending the growing weight from temporary steel cables anchored to the tops of the approach piers, until the two halves met in the middle over the river with no scaffolding beneath them. Construction began in January eighteen seventy-six, paused through the winter flooding, resumed in March eighteen seventy-seven, and was complete by October of the same year — twenty-one months, with a hundred and fifty workers, and over sixteen hundred tonnes of wrought iron.\nNow look at the deck, which is only six metres wide.\nA single railway track, no more. For over a hundred years, the entire Lisbon to Porto railway — one of Portugal's most important routes — crossed the Douro on a deck six metres wide, sixty metres above the water, on a bridge that was, at the moment of its completion, operating at the absolute limit of what iron arch engineering could do. At the inauguration on the fourth of November, eighteen seventy-seven, the first train to cross carried twenty-four carriages and around twelve hundred people, with crowds filling the valley and waving handkerchiefs as it passed — which is, I think, a reasonable response to watching something that had never existed before cross a river for the first time.\n[beat]\nThe Maria Pia Bridge is the only Portuguese monument on the American Society of Civil Engineers' list of historic engineering landmarks, and it held its world record until eighteen eighty-four, when the Garabit Viaduct in France — also by Eiffel, with a span of one hundred and sixty-five metres — took the title. What the Garabit didn't take is the view: the Maria Pia sits in its gorge above the Douro with the particular authority of a structure that was built to do something genuinely difficult, and which succeeded, and which has been standing in the same place ever since as evidence of that fact."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 202,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.1401,
+      "centroidLongitude": -8.59565,
+      "city": "Porto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "maria pia bridge",
+        "porto",
+        "douro",
+        "1877",
+        "theophile seyrig",
+        "eiffel",
+        "railway bridge",
+        "wrought iron"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0aa26daf-e710-4eea-b08c-160ff35a71ee",
+      "title": "Mercado Ferreira Borges",
+      "shortDescription": "Three and a half minutes at Porto's 1885 iron-and-glass market hall — designed by João Carlos Machado, refused by the traders it was built for, and now a concert venue after passing through service as a warehouse, a soup kitchen, and a fruit-and-veg wholesaler.",
+      "longDescription": "The Mercado Ferreira Borges sits on Rua da Bolsa between the Palácio da Bolsa and the river — a long rectangular iron-and-glass hall painted deep red, in the cluster of buildings that makes up the commercial heart of the medieval Ribeira. It was completed in 1885, designed by the architect João Carlos Machado, and built by the Companhia Aliança (the old Massarelos Foundry, which also produced much of the ironwork for Porto's infrastructure during the same period). The cast-iron columns inside still bear foundry stamps: Fundição de Massarelos, and Empreza Industrial Portuguesa, Santo Amaro of Lisbon — the two suppliers of iron for a building whose occupants never arrived.\n\nThe hall was built specifically to replace the old Mercado da Ribeira, and when it opened the city expected the riverside traders to move in. The traders declined: they had been in the Ribeira for generations, they were attached to where they were, and a new purpose-built facility up the hill was not a compelling reason to relocate. The market that was built to replace a market was therefore not, in any meaningful sense, a market — and on its way to becoming the Hard Club concert venue it currently houses (since 2010), the building has been a military equipment warehouse, a community kitchen feeding Porto's poorest residents during the early twentieth century, a fruit and vegetable wholesale market between 1939 and 1978, then a period of abandonment, then a series of proposals about what to do with it.\n\nOne of those proposals, in the 1970s, was to convert it into a museum of modern art — and the civic official who blocked that plan, Adriano Vasco Rodrigues, later noted his objection was partly practical: a building this close to the river would be too damp for paintings and fragile works on paper. He suggested instead that the museum should be housed in an empty palace on the western side of the city, with a wonderful garden — which is how the Museu de Serralves came to exist where it does, which means the building you're standing in indirectly gave Porto one of the most celebrated contemporary art museums in Portugal by declining to become one itself.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mercado_Ferreira_Borges_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mercado_Ferreira_Borges_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9498720b-7abc-416f-8578-8777f29efa0a",
+          "order": 0,
+          "title": "Mercado Ferreira Borges",
+          "caption": "On Rua da Bolsa, between the Palácio da Bolsa and the river — the deep red iron-and-glass hall with the Douro behind it.",
+          "latitude": 41.14162,
+          "longitude": -8.61492,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mercado-ferreira-borges.mp3",
+          "audioDurationSeconds": 207,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mercado_Ferreira_Borges_hero.webp",
+          "transcriptText": "This building was designed to be a market, and the traders refused to move in — which is the beginning of one of the more improbable institutional histories in Porto.\nRight. You're on Rua da Bolsa, between the Palácio da Bolsa and the river, with the Mercado Ferreira Borges directly in front of you: a long rectangular iron and glass hall painted a deep red, with the Praça do Infante Dom Henrique to one side and the Douro visible behind it, sitting in the cluster of buildings that makes up the commercial heart of the medieval Ribeira. The building was completed in eighteen eighty-five, designed by the architect João Carlos Machado, and built by the Companhia Aliança — the old Massarelos Foundry, which also produced much of the ironwork for Porto's infrastructure during the same period. If you look at the cast iron columns inside, some of them bear the foundry stamp: Fundição de Massarelos, and Empreza Industrial Portuguesa, Santo Amaro of Lisbon — the two suppliers of iron for a building whose occupants never arrived.\nStep back and look at the structure itself before you go in.\nThe red ironwork is the thing — prefabricated columns, trusses, and roof elements assembled on site in a manner that was already becoming standard for large public buildings across Europe but which was still relatively unusual in Portugal in the eighteen eighties, and the red colour, which reads from the street with a certain Victorian confidence, distinguishes it immediately from the granite civic buildings beside it. The hall was built specifically to replace the Mercado da Ribeira — the old riverside market — and when it opened, the city expected the traders from the old market to move their stalls in. The traders declined: they had been in the Ribeira for generations, they were attached to where they were, and a new purpose-built facility up the hill was not a compelling reason to relocate. The market that was built to replace a market was therefore not, in any meaningful sense, a market.\nGo inside and look at the space.\nFrom here the iron bones of the structure are visible in full — the columns, the arching trusses, the glass roof panels admitting the afternoon light — and the building has operated as the Hard Club since twenty ten, which is a music and cultural venue that uses the full height of the hall for concerts and exhibitions in a way that no fruit market ever could. What the building had on its way to becoming a concert hall is worth a brief inventory: it was a military equipment warehouse, then a community kitchen providing meals for the poorest residents of Porto during the early twentieth century, then a fruit and vegetable wholesale market between nineteen thirty-nine and nineteen seventy-eight, then a period of abandonment, then a series of proposals about what to do with it.\n[beat]\nOne of those proposals, in the nineteen seventies, was to convert it into a museum of modern art — and the civic official who blocked that plan, Adriano Vasco Rodrigues, later noted that his objection was partly practical: a building this close to the river would be too damp for paintings and fragile works on paper. He suggested instead that the museum should be housed in an empty palace on the western side of the city, with a wonderful garden — and that is how the Museu de Serralves came to exist where it does, which means that the building you're standing in indirectly gave Porto one of the most celebrated contemporary art museums in Portugal, by declining to become one itself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 207,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14162,
+      "centroidLongitude": -8.61492,
+      "city": "Porto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "mercado ferreira borges",
+        "porto",
+        "1885",
+        "iron market",
+        "cultural space",
+        "hard club",
+        "ribeira"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ea8727f6-b5f6-4344-8d7f-5665d60016ba",
+      "title": "Muralhas Fernandinas do Porto",
+      "shortDescription": "Two and three-quarter minutes along Porto's 14th-century Fernandine Walls — a 2,600m, 9m-high granite circuit with seventeen gates begun under Afonso IV in 1336, finished by Fernando I in 1376, then largely demolished by the city itself in the eighteenth century.",
+      "longDescription": "The best-preserved stretch of the Muralhas Fernandinas runs along the Trecho dos Guindais, between the Convent of Santa Clara and the Dom Luís I Bridge. Near the Escadas do Caminho Novo a substantial section of granite curtain wall sits beside or above you, with the Douro visible beyond it and the stepped streets of the Ribeira below. What remains is part of a circuit that was originally 2,600 metres long, nine metres high, topped with battlements, reinforced with rectangular watchtowers, and pierced by seventeen gates — enclosing 44.5 hectares of medieval Porto and defining the edge of the city at its completion.\n\nThe naming is worth a moment's attention. The wall is called Fernandina after King Fernando I, who completed it in 1376 — but construction actually began in 1336 under his predecessor Afonso IV, which means the project took forty years and two reigns to finish, and Fernando got the credit for completing what Afonso started, which is how naming rights tend to work in large public-works projects regardless of the century. Look for the Postigo do Carvão, the only surviving original gate in the entire circuit, set into the granite near the riverfront and bearing an inscription dating from 1348. It's worth standing at this gate for a moment and considering what seventeen gates once meant to a city that could only be entered legally through them, where tolls were collected, identities checked, and goods taxed on the way in — the wall functioning simultaneously as a military defence and a customs barrier for a commercial city that understood the two things were inseparable.\n\nFrom the second half of the eighteenth century onwards, as the city expanded beyond them, the walls lost their military importance and were gradually demolished by the municipality to make way for new streets and houses. The fragments you're walking past today survived not because anyone particularly valued them at the time, but because they happened to be in places where demolition was awkward, or where someone built directly against them and the wall became the back of a building — which is the most honest preservation story available: medieval things tend to survive the moment cities decide they aren't useful anymore only when they're too inconvenient to pull down.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Muralhas_Fernandinas_Porto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Muralhas_Fernandinas_Porto_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Muralhas_Fernandinas_Porto_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0d772691-a6a7-4758-bed4-1f571879d4d2",
+          "order": 0,
+          "title": "Muralhas Fernandinas do Porto",
+          "caption": "On the Trecho dos Guindais between Santa Clara and the Dom Luís I Bridge — a substantial granite curtain wall with the Douro beyond.",
+          "latitude": 41.14289,
+          "longitude": -8.60832,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/muralhas-fernandinas-porto.mp3",
+          "audioDurationSeconds": 162,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Muralhas_Fernandinas_Porto_hero.webp",
+          "transcriptText": "Most of the wall you're standing next to has already been demolished — and the curious thing is that it was the city itself that did it, not any invading army.\nRight. To orient yourself: the best-preserved stretch of the Muralhas Fernandinas runs along the Trecho dos Guindais, between the Convent of Santa Clara and the Dom Luís I Bridge, and if you're standing near the Escadas do Caminho Novo you should have a substantial section of granite curtain wall beside or above you, with the Douro visible beyond it and the stepped streets of the Ribeira below. What you're looking at is what remains of a circuit that was originally two thousand six hundred metres long, nine metres high, topped with battlements, reinforced with rectangular watchtowers, and pierced by seventeen gates — a wall that enclosed forty-four and a half hectares of medieval Porto and was, at the time of its completion, the defining edge of the city.\nNow, the naming is worth a moment's attention, because this wall is called Fernandina after King Fernando the First, who completed it in thirteen seventy-six — but construction actually began in thirteen thirty-six under his predecessor, King Afonso the Fourth, which means the project took forty years and two reigns to finish, and Fernando got the credit for completing what Afonso started, which is how naming rights tend to work in large public-works projects regardless of the century.\nLook for the Postigo do Carvão, which is the only surviving original gate in the entire wall circuit, set into the granite near the riverfront, and which bears an inscription dating from thirteen forty-eight that marks the foundations of this section — and it's worth standing at this gate for a moment and considering what seventeen gates once meant to a city that could only be entered legally through them, where tolls were collected, identities were checked, and goods were taxed on the way in, the wall functioning simultaneously as a military defence and a customs barrier for a commercial city that understood the two things were inseparable.\n[beat]\nFrom the second half of the eighteenth century onwards, the walls lost their military importance as the city expanded well beyond them, and were gradually demolished by the municipality to make way for new streets and houses — so the fragments you're walking past today survived not because anyone particularly valued them at the time, but because they happened to be in places where demolition was awkward, or where someone built directly against them and the wall became the back of a building. There's something rather honest about that as a preservation story: the wall is here because it was useful, in the way that medieval things often are, right up until the moment when the city decided it wasn't anymore, and these particular sections were simply too inconvenient to pull down."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 162,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14289,
+      "centroidLongitude": -8.60832,
+      "city": "Porto",
+      "primaryCategory": "history",
+      "tags": [
+        "muralhas fernandinas",
+        "porto",
+        "14th century",
+        "medieval walls",
+        "fortifications",
+        "afonso iv",
+        "fernando i"
+      ],
+      "priceUSD": 0
     }
   ]
 }
