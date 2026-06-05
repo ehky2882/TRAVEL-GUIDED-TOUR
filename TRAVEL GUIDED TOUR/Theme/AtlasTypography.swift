@@ -36,4 +36,9 @@ enum AtlasTypography {
     /// serif face — intentionally NOT the same value as `caption`
     /// above, which is now monospaced.
     static let captionSerif = Font.caption
+    /// Brand wordmark face — **New York** (the serif system design) at
+    /// caption size. Used for the "DOZENT" app name on the Settings
+    /// masthead so the wordmark reads as a logotype, distinct from the
+    /// SF Mono caption used everywhere else on that surface.
+    static let wordmark = Font.system(size: 13, weight: .regular, design: .serif)
 }
