@@ -2,6 +2,8 @@
 
 How to source, verify, crop, and publish hero + gallery images for Atlas tours.
 
+> **Showing images to the owner:** Always use the `SendUserFile` tool with the local file paths (e.g. `/tmp/<slug>/labeled/labeled_1.webp`). This is the only mechanism that renders images inline in the chat. Pasting URLs, base64 data, or file paths as plain text does not work — the owner will not see the images.
+
 **When to run:** Any tour that lacks a `heroImageURL` or has no `additionalImageURLs`, or when the owner asks to improve existing images. Run automatically when a new tour is added without images (CLAUDE.md Rule #8).
 
 **When NOT to run:** Portugal / Porto / Lisbon tours — the owner supplies those images directly.
@@ -168,7 +170,21 @@ for idx, (orig_n, c) in enumerate(verified, 1):
     img.save(LABELED / f"labeled_{idx}.webp", "WEBP", quality=82)
 ```
 
-Send the labeled images to the owner for review.
+Send the labeled images to the owner for review using the **`SendUserFile` tool** — this is the only way to display images inline in the chat. Do NOT paste URLs, base64 strings, or file paths as text — the owner cannot see those as images.
+
+```
+SendUserFile(
+  files=[
+    "/tmp/empire-state-building/labeled/labeled_1.webp",
+    "/tmp/empire-state-building/labeled/labeled_2.webp",
+    ... (all labeled files)
+  ],
+  status="normal",
+  caption="Empire State Building — N verified candidates. Brief note on what each shows. Pick hero + gallery e.g. '3 hero, 1, 5, 7'"
+)
+```
+
+Pass all labeled images in a **single `SendUserFile` call** so they appear together. Include a short caption explaining what each numbered image shows (exterior, aerial, detail, interior, etc.) so the owner can pick without downloading.
 
 ---
 
