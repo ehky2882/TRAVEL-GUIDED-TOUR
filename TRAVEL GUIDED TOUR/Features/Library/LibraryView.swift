@@ -43,7 +43,7 @@ struct LibraryView: View {
     enum Section: String, CaseIterable, Identifiable {
         case saved = "Saved"
         case downloaded = "Downloaded"
-        case recentlyPlayed = "Recently played"
+        case recentlyPlayed = "Recents"
 
         var id: String { rawValue }
     }
@@ -66,6 +66,18 @@ struct LibraryView: View {
             .background(AtlasColors.secondaryBackground)
             .navigationTitle("Library")
             .inlineNavigationBarTitle()
+            // ALL CAPS caption-styled inline title — replaces the
+            // default nav title rendering with the editorial voice
+            // carried by every other small auxiliary label on home /
+            // detail. `navigationTitle("Library")` stays for VoiceOver
+            // identity; this toolbar item overrides the visible label.
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("LIBRARY")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.primaryText)
+                }
+            }
             // Reserve room at the bottom for the mini-player + tab bar
             // stack so the last list item is always reachable above the
             // module rather than hidden behind it.
@@ -134,12 +146,11 @@ struct LibraryView: View {
             .frame(width: 64)
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                Text(tour.title)
+                Text(tour.title.uppercased())
                     .font(AtlasTypography.body)
                     .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
 
                 if let maker = dataService.maker(for: tour) {
                     Text(maker.displayName)
@@ -148,19 +159,13 @@ struct LibraryView: View {
                 }
 
                 HStack(spacing: AtlasSpacing.xs) {
-                    Text(tour.primaryCategory.displayName)
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.tertiaryText)
-                    Text("•")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.tertiaryText)
                     Text(formattedDuration(tour.totalDurationSeconds))
                         .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.tertiaryText)
+                        .foregroundStyle(AtlasColors.secondaryText)
 
                     // Small download badge so users scanning Saved /
-                    // Recently played can see which tours are already
-                    // cached for offline listening.
+                    // Recents can see which tours are already cached
+                    // for offline listening.
                     if tourDownloader.isDownloaded(tourId: tour.id) {
                         Image(systemName: "arrow.down.circle.fill")
                             .font(AtlasTypography.caption)
@@ -175,7 +180,7 @@ struct LibraryView: View {
 
             Image(systemName: "chevron.right")
                 .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
+                .foregroundStyle(AtlasColors.secondaryText)
         }
         .padding(.horizontal, AtlasSpacing.lg)
         .padding(.vertical, AtlasSpacing.sm)
