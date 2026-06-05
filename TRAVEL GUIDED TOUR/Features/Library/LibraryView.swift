@@ -31,16 +31,24 @@ struct LibraryView: View {
         case recentlyPlayed = "Recently played"
 
         var id: String { rawValue }
+
+        /// ALL CAPS editorial label rendered inside the chip — matches
+        /// the SF Mono caption voice the home tab established (tab bar
+        /// labels, "N TOURS IN VIEW" header, mini-player title).
+        var displayLabel: String {
+            switch self {
+            case .saved: "SAVED"
+            case .downloaded: "DOWNLOADED"
+            case .recentlyPlayed: "RECENTLY PLAYED"
+            }
+        }
     }
 
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                sectionPicker
-                    .padding(.horizontal, AtlasSpacing.lg)
-                    .padding(.vertical, AtlasSpacing.sm)
-
-                Divider()
+                LibrarySectionChipRow(selection: $selectedSection)
+                    .padding(.vertical, AtlasSpacing.lg)
 
                 ScrollView {
                     sectionContent
@@ -58,17 +66,6 @@ struct LibraryView: View {
                 Color.clear.frame(height: AtlasBottomModule.height())
             }
         }
-    }
-
-    // MARK: - Sections
-
-    private var sectionPicker: some View {
-        Picker("Library section", selection: $selectedSection) {
-            ForEach(Section.allCases) { section in
-                Text(section.rawValue).tag(section)
-            }
-        }
-        .pickerStyle(.segmented)
     }
 
     @ViewBuilder
@@ -222,6 +219,47 @@ private struct RecentlyPlayedEmptyState: View {
             title: "Nothing played yet",
             message: "Tours you start listening to will appear here so you can pick up where you left off."
         )
+    }
+}
+
+// MARK: - Section chip row
+
+/// Horizontally-scrolling chip row that picks the active Library
+/// section. Modeled on `CategoryChipRow` so the two surfaces feel
+/// like one design system — same 44pt capsule, same SF Mono caption,
+/// same selected/unselected fill treatment.
+private struct LibrarySectionChipRow: View {
+    @Binding var selection: LibraryView.Section
+
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: AtlasSpacing.sm) {
+                ForEach(LibraryView.Section.allCases) { section in
+                    chip(for: section)
+                }
+            }
+            .padding(.horizontal, AtlasSpacing.md)
+        }
+    }
+
+    private func chip(for section: LibraryView.Section) -> some View {
+        let isSelected = selection == section
+        return Button {
+            selection = section
+        } label: {
+            Text(section.displayLabel)
+                .font(AtlasTypography.caption)
+                .foregroundStyle(isSelected ? AtlasColors.background : AtlasColors.primaryText)
+                .padding(.horizontal, AtlasSpacing.md)
+                .frame(height: AtlasSpacing.searchBarHeight)
+                .background(
+                    Capsule()
+                        .fill(isSelected ? AtlasColors.primaryText : AtlasColors.secondaryBackground)
+                )
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(section.rawValue)
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 }
 
