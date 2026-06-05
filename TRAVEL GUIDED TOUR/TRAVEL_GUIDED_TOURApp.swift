@@ -9,6 +9,18 @@ import SwiftUI
 
 @main
 struct TRAVEL_GUIDED_TOURApp: App {
+    init() {
+        // Expand URLCache limits so disk-cached images survive app
+        // restarts and cold launches without a network round-trip.
+        // Default limits (4 MB memory / 20 MB disk) are too small for
+        // 138+ hero images. ImageCache handles in-session RAM; URLCache
+        // handles cross-launch disk persistence.
+        URLCache.shared = URLCache(
+            memoryCapacity: 50_000_000,
+            diskCapacity: 200_000_000
+        )
+    }
+
     @State private var dataService = DataService()
     @State private var libraryStore = LibraryStore()
     @State private var locationManager = LocationManager()

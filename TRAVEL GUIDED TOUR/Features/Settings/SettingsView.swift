@@ -140,6 +140,9 @@ struct SettingsView: View {
 
                     Button {
                         URLCache.shared.removeAllCachedResponses()
+                        #if canImport(UIKit)
+                        ImageCache.shared.clear()
+                        #endif
                     } label: {
                         Label("Clear Cache", systemImage: "trash")
                     }

@@ -1,87 +1,143 @@
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#endif
 
 struct HeroImageView: View {
     let imageName: String
     let height: CGFloat
     var cornerRadius: CGFloat = 0
     var category: TourCategory? = nil
-    /// When true, the loaded image can be pinch-zoomed in place. The
-    /// view's frame and corner radius never change — the image scales
-    /// within its clip and springs back to fit when the pinch ends.
     var zoomable: Bool = false
-    /// When true, the `AsyncImage` phase transitions (placeholder →
-    /// loaded image) are NOT animated. Use for hero images on
-    /// surfaces that come up via a slide animation (e.g. tour detail),
-    /// where the default crossfade would compete with the slide and
-    /// read as a separate fade-in on top of the slide motion.
-    /// Defaults to false so the gentle crossfade still applies on
-    /// surfaces that just appear in place (drawer cards, library
-    /// rows, maker view) — there it's a polish, not a competing
-    /// animation.
+    /// When true, the placeholder → image transition is NOT animated.
+    /// Used on tour detail (slide-up presentation) so the image either
+    /// renders frame-zero on cache hit or snaps in cleanly on miss,
+    /// rather than crossfading mid-slide. Defaults to false so the
+    /// gentle fade still runs on surfaces that appear in place.
     var disableLoadAnimation: Bool = false
 
+    #if canImport(UIKit)
+    @State private var cachedImage: UIImage?
+    #endif
     @State private var zoom: CGFloat = 1.0
 
-    // Loads the remote image from `imageName` (an HTTPS URL on the
-    // CDN — gh-pages during the prototype phase, R2 post-V1; see
-    // docs/cdn-decision.md). The adaptive-grey block is the
-    // placeholder while loading, the failure fallback when the
-    // network errors, and the empty state when `imageName` isn't a
-    // valid URL.
+    init(
+        imageName: String,
+        height: CGFloat,
+        cornerRadius: CGFloat = 0,
+        category: TourCategory? = nil,
+        zoomable: Bool = false,
+        disableLoadAnimation: Bool = false
+    ) {
+        self.imageName = imageName
+        self.height = height
+        self.cornerRadius = cornerRadius
+        self.category = category
+        self.zoomable = zoomable
+        self.disableLoadAnimation = disableLoadAnimation
+        #if canImport(UIKit)
+        // Pre-populate from the in-memory cache so the image renders
+        // on the first frame with zero placeholder flash on cache hits.
+        let cached = URL(string: imageName).flatMap { ImageCache.shared.image(for: $0) }
+        self._cachedImage = State(initialValue: cached)
+        #endif
+    }
 
     var body: some View {
-        // GeometryReader reads the exact offered width so scaledToFill
-        // is clamped to (proxy.size.width × height) — not to maxWidth:
-        // .infinity, which lets AsyncImage propose an unconstrained
-        // width to the image and causes the 64 pt thumbnail in
-        // MakerView to overflow its parent.
-        //
-        // When `disableLoadAnimation` is true, the AsyncImage
-        // transaction has no animation — phase changes (placeholder
-        // → loaded image) snap in instantly instead of crossfading.
-        // Tour detail opts into this so its hero image is either
-        // visible-from-frame-zero (cache hit) or snaps in cleanly
-        // (cache miss) instead of crossfading mid-slide, which would
-        // read as a fade-in stacked on top of the slide.
         GeometryReader { proxy in
-            AsyncImage(
-                url: URL(string: imageName),
-                transaction: disableLoadAnimation
-                    ? Transaction(animation: nil)
-                    : Transaction()
-            ) { phase in
-                switch phase {
-                case .success(let image):
-                    if zoomable {
-                        image
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: proxy.size.width, height: height)
-                            .scaleEffect(zoom)
-                            .clipped()
-                            .gesture(pinchToZoom)
-                    } else {
-                        image
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: proxy.size.width, height: height)
-                            .clipped()
-                    }
-                default:
-                    Rectangle()
-                        .fill(AtlasColors.placeholderWarm)
-                        .frame(width: proxy.size.width, height: height)
-                }
-            }
+            #if canImport(UIKit)
+            cachedContent(proxy: proxy)
+                // Animate only the nil → non-nil transition (first load).
+                // If cachedImage was pre-set in init, the value never
+                // changes and no animation fires — zero flash on cache hits.
+                .animation(
+                    disableLoadAnimation ? nil : .easeIn(duration: 0.15),
+                    value: cachedImage != nil
+                )
+            #else
+            asyncContent(proxy: proxy)
+            #endif
         }
         .frame(maxWidth: .infinity)
         .frame(height: height)
         .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+        #if canImport(UIKit)
+        .task(id: imageName) { await fetchIfNeeded() }
+        #endif
     }
 
-    /// Pinch-to-peek: scales the image up to 4× while the fingers are
-    /// down, then springs back to fit. The frame and border never move
-    /// — only the image content scales, clipped to the same bounds.
+    // MARK: - UIKit path (iOS / visionOS)
+
+    #if canImport(UIKit)
+    @ViewBuilder
+    private func cachedContent(proxy: GeometryProxy) -> some View {
+        if let uiImage = cachedImage {
+            renderedImage(Image(uiImage: uiImage), proxy: proxy)
+        } else {
+            placeholder(proxy: proxy)
+        }
+    }
+
+    private func fetchIfNeeded() async {
+        guard let url = URL(string: imageName) else { return }
+        if ImageCache.shared.image(for: url) != nil { return }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            guard let uiImage = UIImage(data: data) else { return }
+            ImageCache.shared.store(uiImage, for: url)
+            cachedImage = uiImage
+        } catch {
+            // Network error or task cancelled — placeholder stays.
+        }
+    }
+    #endif
+
+    // MARK: - macOS fallback (AsyncImage)
+
+    @ViewBuilder
+    private func asyncContent(proxy: GeometryProxy) -> some View {
+        AsyncImage(
+            url: URL(string: imageName),
+            transaction: disableLoadAnimation
+                ? Transaction(animation: nil)
+                : Transaction()
+        ) { phase in
+            switch phase {
+            case .success(let image):
+                renderedImage(image, proxy: proxy)
+            default:
+                placeholder(proxy: proxy)
+            }
+        }
+    }
+
+    // MARK: - Shared helpers
+
+    @ViewBuilder
+    private func renderedImage(_ image: Image, proxy: GeometryProxy) -> some View {
+        if zoomable {
+            image
+                .resizable()
+                .scaledToFill()
+                .frame(width: proxy.size.width, height: height)
+                .scaleEffect(zoom)
+                .clipped()
+                .gesture(pinchToZoom)
+        } else {
+            image
+                .resizable()
+                .scaledToFill()
+                .frame(width: proxy.size.width, height: height)
+                .clipped()
+        }
+    }
+
+    private func placeholder(proxy: GeometryProxy) -> some View {
+        Rectangle()
+            .fill(AtlasColors.placeholderWarm)
+            .frame(width: proxy.size.width, height: height)
+    }
+
     private var pinchToZoom: some Gesture {
         MagnifyGesture()
             .onChanged { value in
