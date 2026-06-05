@@ -128,7 +128,9 @@ struct LibraryView: View {
                     .buttonStyle(.plain)
 
                     if tour.id != tours.last?.id {
-                        Divider().padding(.leading, AtlasSpacing.lg)
+                        Divider()
+                            .padding(.leading, AtlasSpacing.lg)
+                            .padding(.trailing, AtlasSpacing.lg)
                     }
                 }
             }
@@ -140,7 +142,7 @@ struct LibraryView: View {
             HeroImageView(
                 imageName: tour.heroImageURL,
                 height: 64,
-                cornerRadius: 8,
+                cornerRadius: 0,
                 category: tour.primaryCategory
             )
             .frame(width: 64)
@@ -253,14 +255,14 @@ private struct EmptyStateLayout: View {
     var body: some View {
         VStack(spacing: AtlasSpacing.md) {
             Image(systemName: icon)
-                .font(.system(size: 40))
+                .font(.system(size: 20))
                 .foregroundStyle(AtlasColors.secondaryText.opacity(0.4))
             Text(title)
-                .font(AtlasTypography.headline)
+                .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.primaryText)
                 .multilineTextAlignment(.center)
             Text(message)
-                .font(AtlasTypography.body)
+                .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
