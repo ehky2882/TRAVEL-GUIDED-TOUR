@@ -74,9 +74,11 @@ struct ManageDownloadsView: View {
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(tour.title)
-                    .font(AtlasTypography.caption)
+                    .font(AtlasTypography.body)
+                    .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(2)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
                 Text(formattedBytes(tourDownloader.diskUsage(tourId: tour.id)))
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)

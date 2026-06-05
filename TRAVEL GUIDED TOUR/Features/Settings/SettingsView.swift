@@ -44,22 +44,35 @@ struct SettingsView: View {
         NavigationStack {
             List {
                 Section {
-                    VStack(spacing: AtlasSpacing.md) {
+                    // Base gap is 4pt; the tagline adds 4pt on top so
+                    // DOZENT↔tagline = 8pt while tagline↔Version = 4pt.
+                    VStack(spacing: AtlasSpacing.xs) {
+                        // Wordmark: caption mono but letter-spaced so the
+                        // app name reads as a logotype rather than just
+                        // another 13pt row.
                         Text("DOZENT")
-                            .font(AtlasTypography.caption)
+                            .font(AtlasTypography.wordmark)
+                            .tracking(6)
+                            .foregroundStyle(AtlasColors.mapPin)
                         Text("Audio tours, anchored to places.")
                             .font(AtlasTypography.caption)
                             .foregroundStyle(AtlasColors.secondaryText)
+                            .padding(.top, AtlasSpacing.xs)
                         Text("Version 1.0")
                             .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.tertiaryText)
+                            .foregroundStyle(AtlasColors.secondaryText)
                     }
                     .frame(maxWidth: .infinity)
                     .listRowBackground(Color.clear)
-                    .padding(.vertical, AtlasSpacing.lg)
+                    // Tight masthead: 4pt row inset + 4pt VStack padding
+                    // = 8pt above DOZENT and below Version 1.0.
+                    .listRowInsets(EdgeInsets(
+                        top: AtlasSpacing.xs, leading: AtlasSpacing.md,
+                        bottom: AtlasSpacing.xs, trailing: AtlasSpacing.md))
+                    .padding(.vertical, AtlasSpacing.xs)
                 }
 
-                Section("Account") {
+                Section(header: sectionHeader("Account")) {
                     HStack {
                         Label("Sign in", systemImage: "person.crop.circle")
                         Spacer()
@@ -74,17 +87,40 @@ struct SettingsView: View {
                     }
                 }
 
-                Section("Appearance") {
+                Section(header: sectionHeader("Appearance")) {
                     ThemeDropdown(selection: $colorSchemePreference)
                 }
 
-                Section("Location") {
+                Section(header: sectionHeader("Location")) {
+                    #if os(iOS) || os(visionOS)
+                    // The whole row is tappable and deep-links to Atlas's
+                    // page in the system Settings app, where location
+                    // access is changed. (The standalone "Open in
+                    // Settings" button is now redundant and removed.)
+                    Button {
+                        openSystemSettings()
+                    } label: {
+                        HStack {
+                            Label("Location Access", systemImage: "location")
+                            Spacer()
+                            Text(locationStatusText)
+                                .foregroundStyle(AtlasColors.secondaryText)
+                            Image(systemName: "chevron.right")
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.secondaryText)
+                        }
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityHint("Opens the Settings app to change Atlas's location access.")
+                    #else
                     HStack {
                         Label("Location Access", systemImage: "location")
                         Spacer()
                         Text(locationStatusText)
                             .foregroundStyle(AtlasColors.secondaryText)
                     }
+                    #endif
 
                     if locationManager.authorizationStatus == .notDetermined {
                         Button {
@@ -93,21 +129,9 @@ struct SettingsView: View {
                             Label("Enable Location", systemImage: "location.circle")
                         }
                     }
-
-                    #if os(iOS) || os(visionOS)
-                    if locationManager.authorizationStatus == .denied
-                        || locationManager.authorizationStatus == .restricted {
-                        Button {
-                            openSystemSettings()
-                        } label: {
-                            Label("Open in Settings", systemImage: "gear")
-                        }
-                        .accessibilityHint("Opens the iOS Settings app to grant Atlas location access.")
-                    }
-                    #endif
                 }
 
-                Section("Data") {
+                Section(header: sectionHeader("Data")) {
                     NavigationLink {
                         ManageDownloadsView()
                     } label: {
@@ -121,7 +145,7 @@ struct SettingsView: View {
                     }
                 }
 
-                Section("About") {
+                Section(header: sectionHeader("About")) {
                     HStack {
                         Label("Tours", systemImage: "headphones")
                         Spacer()
@@ -150,6 +174,17 @@ struct SettingsView: View {
             // explicit fonts were switched to caption above so they don't
             // override the cascade.
             .font(AtlasTypography.caption)
+            // Spacing pass (tokens only):
+            // - pull the masthead up under the nav bar (top gap)
+            // - tighten the gap between sections
+            // - reduce row height so the mono rows read denser
+            .contentMargins(.top, 0, for: .scrollContent)
+            .listSectionSpacing(AtlasSpacing.sm)
+            .environment(\.defaultMinListRowHeight, AtlasSpacing.xl + AtlasSpacing.xs)
+            // No terracotta on this surface: List auto-tints row icons +
+            // button labels with the accent, so pin the tint to
+            // primaryText instead.
+            .tint(AtlasColors.primaryText)
             .navigationTitle("Settings")
             .inlineNavigationBarTitle()
             // Render the nav-bar title ourselves so it carries the
@@ -182,6 +217,16 @@ struct SettingsView: View {
         UIApplication.shared.open(url)
     }
     #endif
+
+    /// Section header styled to match the rest of the screen: caption
+    /// mono, ALL CAPS, secondary tint — instead of the system grey
+    /// Title-Case header.
+    private func sectionHeader(_ title: String) -> some View {
+        Text(title)
+            .font(AtlasTypography.caption)
+            .foregroundStyle(AtlasColors.secondaryText)
+            .textCase(.uppercase)
+    }
 
     private var locationStatusText: String {
         switch locationManager.authorizationStatus {
@@ -219,7 +264,7 @@ private struct ThemeDropdown: View {
                 Spacer()
                 Text(selection.label)
                     .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.accent)
+                    .foregroundStyle(AtlasColors.primaryText)
                 Image(systemName: "chevron.down")
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
@@ -257,7 +302,7 @@ private struct ThemeDropdownMenu: View {
                         Spacer(minLength: 0)
                         Image(systemName: "checkmark")
                             .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.accent)
+                            .foregroundStyle(AtlasColors.primaryText)
                             .opacity(pref == selection ? 1 : 0)
                     }
                     .padding(.horizontal, AtlasSpacing.md)
