@@ -36,7 +36,11 @@ struct PlayerView: View {
     @State private var isScrubbing: Bool = false
     @State private var scrubTime: TimeInterval = 0
 
-    private let availableRates: [Float] = [1.0, 1.25, 1.5, 2.0]
+    /// Drives the inline 3-line / full toggle on the current stop's
+    /// caption.
+    @State private var isCaptionExpanded: Bool = false
+
+    private let availableRates: [Float] = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0]
 
     var body: some View {
         VStack(spacing: 0) {
@@ -46,7 +50,6 @@ struct PlayerView: View {
                 VStack(spacing: AtlasSpacing.lg) {
                     imageSection
 
-                    titleSection
                     currentStopSection
                     if audioPlayer.state == .failed {
                         failureBanner
@@ -143,79 +146,110 @@ struct PlayerView: View {
 
     // MARK: - Sections
 
+    /// Chevron-down close button. The player is presented as a
+    /// `.fullScreenCover` (so it covers the mini-player + tab bar
+    /// window), which has no built-in swipe-to-dismiss — this is the
+    /// only way out, wired to the environment `dismiss`.
     private var dismissHandle: some View {
-        VStack(spacing: 0) {
-            Capsule()
-                .fill(AtlasColors.secondaryText.opacity(0.3))
-                .frame(width: 40, height: 5)
-                .padding(.top, AtlasSpacing.sm)
-                .padding(.bottom, AtlasSpacing.sm)
+        HStack {
+            Button(action: { dismiss() }) {
+                Image(systemName: "chevron.down")
+                    .font(.system(size: 20, weight: .semibold))
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
+            }
+            .accessibilityLabel("Close player")
+            Spacer()
         }
+        .padding(.horizontal, AtlasSpacing.sm)
+        .padding(.top, AtlasSpacing.xs)
         .frame(maxWidth: .infinity)
         .background(AtlasColors.background)
     }
 
+    /// Hero carousel — mirrors `TourDetailView.imageSection` exactly:
+    /// square-cornered (no `clipShape` / `cornerRadius`), pinch-to-zoom
+    /// enabled, and load crossfade disabled. Page dots match.
     @ViewBuilder
     private var imageSection: some View {
         let allImages = [tour.heroImageURL] + (tour.additionalImageURLs ?? [])
         if allImages.count > 1 {
             TabView {
                 ForEach(allImages, id: \.self) { url in
-                    HeroImageView(imageName: url, height: AtlasSpacing.heroHeight)
+                    HeroImageView(
+                        imageName: url,
+                        height: AtlasSpacing.heroHeight,
+                        zoomable: true,
+                        disableLoadAnimation: true
+                    )
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
             .frame(height: AtlasSpacing.heroHeight)
-            .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
             .padding(.horizontal, AtlasSpacing.lg)
         } else {
             HeroImageView(
                 imageName: tour.heroImageURL,
                 height: AtlasSpacing.heroHeight,
-                cornerRadius: AtlasSpacing.cardCornerRadius,
-                category: tour.primaryCategory
+                category: tour.primaryCategory,
+                zoomable: true,
+                disableLoadAnimation: true
             )
             .padding(.horizontal, AtlasSpacing.lg)
         }
     }
 
-    private var titleSection: some View {
-        VStack(spacing: AtlasSpacing.xs) {
-            Text(tour.title)
-                .font(AtlasTypography.headline)
-                .foregroundStyle(AtlasColors.primaryText)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
-
-            if let maker = dataService.maker(for: tour) {
-                Text("by \(maker.displayName)")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-            }
-        }
-        .padding(.horizontal, AtlasSpacing.lg)
-    }
-
+    /// Now-playing block. Sits directly under the carousel (the old
+    /// tour-title section was removed — the stop title carries page
+    /// identity). Header is the muted "Now playing" / "Stop N of M"
+    /// line; the stop title is the prominent BODY all-caps element;
+    /// the caption truncates to 3 lines with an inline Read more.
     private var currentStopSection: some View {
         VStack(spacing: AtlasSpacing.xs) {
             Text(stopHeaderText)
                 .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
+                .foregroundStyle(AtlasColors.secondaryText)
 
-            Text(currentStopTitle)
+            Text(currentStopTitle.uppercased())
                 .font(AtlasTypography.body)
                 .foregroundStyle(AtlasColors.primaryText)
                 .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
 
             if let caption = currentStopCaption {
                 Text(caption)
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
                     .multilineTextAlignment(.center)
+                    .lineLimit(isCaptionExpanded ? nil : 3)
                     .fixedSize(horizontal: false, vertical: true)
+                    .animation(.easeInOut(duration: 0.2), value: isCaptionExpanded)
+
+                if captionOverflowsThreeLines(caption) {
+                    Button {
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            isCaptionExpanded.toggle()
+                        }
+                    } label: {
+                        Text(isCaptionExpanded ? "Show less" : "Read more…")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel(isCaptionExpanded ? "Show less" : "Read more")
+                }
             }
         }
         .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    /// Char-count proxy for "does this caption exceed 3 lines at our
+    /// width?" — mirrors `TourDetailView`'s description overflow proxy
+    /// (~60 chars/line on iPhone width → ~180 for 3 lines). Avoids a
+    /// GeometryReader round-trip that would fight the expand animation.
+    private func captionOverflowsThreeLines(_ text: String) -> Bool {
+        text.count > 180
     }
 
     /// Shown when `audioPlayer.state == .failed`. The transport row's
@@ -257,6 +291,7 @@ struct PlayerView: View {
                     }
                 }
             )
+            .tint(AtlasColors.mapPin)
             .disabled(audioPlayer.duration <= 0)
 
             HStack {
@@ -272,53 +307,110 @@ struct PlayerView: View {
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
+    /// Transport row. The leading + trailing controls swap on tour
+    /// kind: multi-stop tours navigate between stops (prev/next),
+    /// single-stop tours — which have no other stops to jump to —
+    /// scrub the current audio by ±10s instead, so the controls are
+    /// always live rather than greyed out.
     private var transportRow: some View {
         HStack(spacing: AtlasSpacing.xl) {
-            Button(action: previousStop) {
-                Image(systemName: "backward.fill")
-                    .font(.system(size: 24))
-                    .foregroundStyle(canGoPrevious ? AtlasColors.primaryText : AtlasColors.tertiaryText)
+            if tour.kind == .multiStop {
+                previousStopButton
+            } else {
+                skipBackwardButton
             }
-            .disabled(!canGoPrevious)
-            .accessibilityLabel("Previous stop")
 
-            Button(action: togglePlayPause) {
-                Image(systemName: playPauseIcon)
-                    .font(.system(size: 44))
-                    .foregroundStyle(AtlasColors.primaryText)
-            }
-            .accessibilityLabel(audioPlayer.state == .playing ? "Pause" : "Play")
+            playPauseButton
 
-            Button(action: nextStop) {
-                Image(systemName: "forward.fill")
-                    .font(.system(size: 24))
-                    .foregroundStyle(canGoNext ? AtlasColors.primaryText : AtlasColors.tertiaryText)
+            if tour.kind == .multiStop {
+                nextStopButton
+            } else {
+                skipForwardButton
             }
-            .disabled(!canGoNext)
-            .accessibilityLabel("Next stop")
-
-            Button(action: cycleRate) {
-                Text(rateLabel)
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .padding(.horizontal, AtlasSpacing.sm)
-                    .padding(.vertical, AtlasSpacing.xs)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius / 2)
-                            .stroke(AtlasColors.secondaryText.opacity(0.3), lineWidth: 1)
-                    )
-            }
-            .accessibilityLabel("Playback speed \(rateLabel)")
         }
-        .padding(.horizontal, AtlasSpacing.lg)
+        // Center the skip/play/skip cluster on the full width so the
+        // play button lands on the horizontal center of the screen;
+        // the speed button is a trailing overlay so it never shifts
+        // the cluster off center.
+        .frame(maxWidth: .infinity)
+        .overlay(alignment: .trailing) {
+            rateButton
+                .padding(.trailing, AtlasSpacing.lg)
+        }
         .padding(.vertical, AtlasSpacing.md)
+    }
+
+    /// Play / pause — the screen-centered anchor of the transport row,
+    /// tinted map-pin gold to match the scrubber.
+    private var playPauseButton: some View {
+        Button(action: togglePlayPause) {
+            Image(systemName: playPauseIcon)
+                .font(.system(size: 44))
+                .foregroundStyle(AtlasColors.mapPin)
+        }
+        .accessibilityLabel(audioPlayer.state == .playing ? "Pause" : "Play")
+    }
+
+    private var rateButton: some View {
+        Button(action: cycleRate) {
+            Text(rateLabel)
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.primaryText)
+                .padding(.horizontal, AtlasSpacing.sm)
+                .padding(.vertical, AtlasSpacing.xs)
+                .overlay(
+                    RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius / 2)
+                        .stroke(AtlasColors.secondaryText.opacity(0.3), lineWidth: 1)
+                )
+        }
+        .accessibilityLabel("Playback speed \(rateLabel)")
+    }
+
+    private var previousStopButton: some View {
+        Button(action: previousStop) {
+            Image(systemName: "backward.fill")
+                .font(.system(size: 24))
+                .foregroundStyle(canGoPrevious ? AtlasColors.primaryText : AtlasColors.tertiaryText)
+        }
+        .disabled(!canGoPrevious)
+        .accessibilityLabel("Previous stop")
+    }
+
+    private var nextStopButton: some View {
+        Button(action: nextStop) {
+            Image(systemName: "forward.fill")
+                .font(.system(size: 24))
+                .foregroundStyle(canGoNext ? AtlasColors.primaryText : AtlasColors.tertiaryText)
+        }
+        .disabled(!canGoNext)
+        .accessibilityLabel("Next stop")
+    }
+
+    private var skipBackwardButton: some View {
+        Button(action: { audioPlayer.skip(by: -10) }) {
+            Image(systemName: "gobackward.10")
+                .font(.system(size: 24))
+                .foregroundStyle(canSkip ? AtlasColors.primaryText : AtlasColors.tertiaryText)
+        }
+        .disabled(!canSkip)
+        .accessibilityLabel("Skip back 10 seconds")
+    }
+
+    private var skipForwardButton: some View {
+        Button(action: { audioPlayer.skip(by: 10) }) {
+            Image(systemName: "goforward.10")
+                .font(.system(size: 24))
+                .foregroundStyle(canSkip ? AtlasColors.primaryText : AtlasColors.tertiaryText)
+        }
+        .disabled(!canSkip)
+        .accessibilityLabel("Skip forward 10 seconds")
     }
 
     private var stopsListSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
             Text(tour.kind == .multiStop ? "Stops" : "Location")
                 .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
+                .foregroundStyle(AtlasColors.secondaryText)
                 .padding(.horizontal, AtlasSpacing.lg)
 
             ForEach(Array(sortedStops.enumerated()), id: \.element.id) { index, stop in
@@ -341,18 +433,18 @@ struct PlayerView: View {
             ZStack {
                 if index == currentStopIndex {
                     Image(systemName: audioPlayer.state == .playing ? "speaker.wave.2.fill" : "speaker.fill")
-                        .font(AtlasTypography.body)
+                        .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.primaryText)
                 } else {
                     Text("\(stop.order + 1)")
-                        .font(AtlasTypography.body)
+                        .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
                 }
             }
             .frame(width: 24, alignment: .leading)
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                Text(stop.title)
+                Text(stop.title.uppercased())
                     .font(AtlasTypography.body)
                     .foregroundStyle(AtlasColors.primaryText)
                     .multilineTextAlignment(.leading)
@@ -543,6 +635,12 @@ struct PlayerView: View {
     private var canGoNext: Bool {
         if currentStopIndex == -1 { return !sortedStops.isEmpty }
         return currentStopIndex < sortedStops.count - 1
+    }
+
+    /// Whether the ±10s skip controls (single-stop tours) are live —
+    /// true once an audio item with a known duration is loaded.
+    private var canSkip: Bool {
+        audioPlayer.duration > 0
     }
 
     private var playPauseIcon: String {

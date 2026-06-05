@@ -105,6 +105,17 @@ final class BottomModuleWindowController {
         case .dark:   window.overrideUserInterfaceStyle = .dark
         }
     }
+
+    /// Hides or shows the secondary window. Used to clear the
+    /// mini-player + tab bar out of the way while the full-screen
+    /// `PlayerView` cover is up — the window sits one level above
+    /// modal presentations (see `install`), so a `.fullScreenCover`
+    /// in the main window would otherwise show *under* it. Hiding the
+    /// whole window is purely a visibility toggle; it doesn't touch
+    /// the mini-player's own layout or design.
+    func setHidden(_ hidden: Bool) {
+        window?.isHidden = hidden
+    }
 }
 
 /// A `UIWindow` whose hit-testing returns nil for any point that
