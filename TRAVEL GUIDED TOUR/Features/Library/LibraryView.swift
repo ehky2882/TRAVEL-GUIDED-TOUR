@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 /// Library tab — spec section Flow 3: Library / roadmap M-library.
 ///
@@ -24,6 +25,20 @@ struct LibraryView: View {
     @Environment(TourPresenter.self) private var tourPresenter
 
     @State private var selectedSection: Section = .saved
+
+    /// Push the section picker's labels to SF Mono caption (13pt
+    /// monospaced regular) — matches the editorial voice carried by
+    /// every other small auxiliary label on home + detail. SwiftUI
+    /// doesn't expose a font modifier on a segmented `Picker`, so we
+    /// reach down to UIKit's appearance proxy. Set globally because
+    /// Library is the only place a segmented control appears in the
+    /// app today; if another segmented control lands later it'll
+    /// inherit the same SF Mono treatment automatically.
+    init() {
+        let mono = UIFont.monospacedSystemFont(ofSize: 13, weight: .regular)
+        UISegmentedControl.appearance().setTitleTextAttributes([.font: mono], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.font: mono], for: .selected)
+    }
 
     enum Section: String, CaseIterable, Identifiable {
         case saved = "Saved"
