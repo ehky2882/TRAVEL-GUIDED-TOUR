@@ -45,10 +45,10 @@ struct SettingsView: View {
             List {
                 Section {
                     VStack(spacing: AtlasSpacing.md) {
-                        Text("Atlas")
-                            .font(AtlasTypography.headline)
+                        Text("DOZENT")
+                            .font(AtlasTypography.caption)
                         Text("Audio tours, anchored to places.")
-                            .font(AtlasTypography.body)
+                            .font(AtlasTypography.caption)
                             .foregroundStyle(AtlasColors.secondaryText)
                         Text("Version 1.0")
                             .font(AtlasTypography.caption)
@@ -75,14 +75,7 @@ struct SettingsView: View {
                 }
 
                 Section("Appearance") {
-                    Picker(selection: $colorSchemePreference) {
-                        ForEach(ColorSchemePreference.allCases) { pref in
-                            Text(pref.label).tag(pref)
-                        }
-                    } label: {
-                        Label("Theme", systemImage: "circle.lefthalf.filled")
-                    }
-                    .pickerStyle(.menu)
+                    ThemeDropdown(selection: $colorSchemePreference)
                 }
 
                 Section("Location") {
@@ -151,8 +144,26 @@ struct SettingsView: View {
             .scrollContentBackground(.hidden)
             .background(AtlasColors.secondaryBackground)
             .listRowBackground(Color.clear)
+            // Owner-requested: every text element on Settings renders in
+            // the caption token (13pt SF Mono). Applied at the List so it
+            // cascades into all row labels + values; the masthead's
+            // explicit fonts were switched to caption above so they don't
+            // override the cascade.
+            .font(AtlasTypography.caption)
             .navigationTitle("Settings")
             .inlineNavigationBarTitle()
+            // Render the nav-bar title ourselves so it carries the
+            // caption token (13pt SF Mono) in ALL CAPS. The principal
+            // toolbar item replaces the system inline title visually;
+            // `.navigationTitle("Settings")` is kept above so the
+            // back-button label on pushed screens still reads "Settings".
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("SETTINGS")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.primaryText)
+                }
+            }
             // Reserve room at the bottom for the mini-player + tab bar
             // stack so the last settings row is always reachable above
             // the module rather than hidden behind it.
@@ -185,5 +196,83 @@ struct SettingsView: View {
             #endif
             return "Unknown"
         }
+    }
+}
+
+/// Theme chooser styled to look like the native menu picker — a
+/// compact one-line row ("Theme … Dark ⌄") — but built ourselves so
+/// the popped-up options carry the caption token (13pt SF Mono). The
+/// real `.menu` picker can't take a custom font; this presents the
+/// three choices in a `.popover` (forced to compact-popover
+/// adaptation so it floats anchored to the row on iPhone instead of
+/// adapting to a sheet). Tokens only — no hardcoded colors / fonts.
+private struct ThemeDropdown: View {
+    @Binding var selection: ColorSchemePreference
+    @State private var isExpanded = false
+
+    var body: some View {
+        Button {
+            isExpanded = true
+        } label: {
+            HStack(spacing: AtlasSpacing.sm) {
+                Label("Theme", systemImage: "circle.lefthalf.filled")
+                Spacer()
+                Text(selection.label)
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.accent)
+                Image(systemName: "chevron.down")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .rotationEffect(.degrees(isExpanded ? 180 : 0))
+            }
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .animation(.easeInOut(duration: 0.18), value: isExpanded)
+        .popover(isPresented: $isExpanded) {
+            ThemeDropdownMenu(selection: $selection, isExpanded: $isExpanded)
+                .presentationCompactAdaptation(.popover)
+        }
+    }
+}
+
+/// The floating card of options shown by `ThemeDropdown`. Each option
+/// is a caption-mono row with an accent checkmark on the current
+/// selection; picking one updates the binding and closes the popover.
+private struct ThemeDropdownMenu: View {
+    @Binding var selection: ColorSchemePreference
+    @Binding var isExpanded: Bool
+
+    var body: some View {
+        VStack(spacing: 0) {
+            ForEach(ColorSchemePreference.allCases) { pref in
+                Button {
+                    selection = pref
+                    isExpanded = false
+                } label: {
+                    HStack(spacing: AtlasSpacing.lg) {
+                        Text(pref.label)
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.primaryText)
+                        Spacer(minLength: 0)
+                        Image(systemName: "checkmark")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.accent)
+                            .opacity(pref == selection ? 1 : 0)
+                    }
+                    .padding(.horizontal, AtlasSpacing.md)
+                    .padding(.vertical, AtlasSpacing.sm)
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .accessibilityAddTraits(pref == selection ? [.isButton, .isSelected] : .isButton)
+
+                if pref != ColorSchemePreference.allCases.last {
+                    Divider()
+                }
+            }
+        }
+        .padding(.vertical, AtlasSpacing.xs)
+        .frame(minWidth: 168)
     }
 }
