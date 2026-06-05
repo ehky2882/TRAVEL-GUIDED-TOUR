@@ -3316,7 +3316,9 @@
       "title": "The Dakota",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg/1280px-1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dakota_2.webp"
+      ],
       "tags": [
         "the dakota",
         "upper west side",
