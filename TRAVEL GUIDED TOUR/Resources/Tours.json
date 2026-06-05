@@ -3175,7 +3175,12 @@
       "title": "Radio City Music Hall",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Radio_City_Music_Hall_%2851395756913%29.jpg/1280px-Radio_City_Music_Hall_%2851395756913%29.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/radio-city-music-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/radio-city-music-hall_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/radio-city-music-hall_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/radio-city-music-hall_5.webp"
+      ],
       "tags": [
         "radio city music hall",
         "rockefeller center",
