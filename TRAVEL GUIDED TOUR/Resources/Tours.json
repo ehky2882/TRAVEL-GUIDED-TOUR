@@ -2778,7 +2778,11 @@
       "title": "Apollo Theater",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Apollo_Theater_Harlem_NYC_2010.JPG/1280px-Apollo_Theater_Harlem_NYC_2010.JPG",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/apollo-theater_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/apollo-theater_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/apollo-theater_4.webp"
+      ],
       "tags": [
         "apollo theater",
         "harlem",
