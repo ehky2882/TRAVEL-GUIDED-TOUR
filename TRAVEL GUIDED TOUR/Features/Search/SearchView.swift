@@ -63,11 +63,11 @@ struct SearchView: View {
     private var searchField: some View {
         HStack(spacing: AtlasSpacing.sm) {
             Image(systemName: "magnifyingglass")
-                .font(AtlasTypography.body)
+                .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
 
             TextField("Search tours, makers, categories", text: $query)
-                .font(AtlasTypography.body)
+                .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.primaryText)
                 .atlasNoAutocapitalization()
                 .autocorrectionDisabled()
@@ -79,7 +79,7 @@ struct SearchView: View {
                     query = ""
                 } label: {
                     Image(systemName: "xmark.circle.fill")
-                        .font(AtlasTypography.body)
+                        .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.tertiaryText)
                 }
                 .buttonStyle(.plain)
@@ -100,7 +100,7 @@ struct SearchView: View {
     private var contentArea: some View {
         if trimmedQuery.isEmpty {
             recentSearchesSection
-        } else if filteredTours.isEmpty {
+        } else if filteredTours.isEmpty && filteredMakers.isEmpty {
             emptyResults
         } else {
             resultsList
@@ -112,7 +112,7 @@ struct SearchView: View {
             VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
                 if recentSearchStore.searches.isEmpty {
                     Text("Try a title, maker, or category — like \"history\" or \"architecture\".")
-                        .font(AtlasTypography.body)
+                        .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
                         .padding(.top, AtlasSpacing.xl)
                         .padding(.horizontal, AtlasSpacing.lg)
@@ -152,10 +152,10 @@ struct SearchView: View {
             } label: {
                 HStack(spacing: AtlasSpacing.md) {
                     Image(systemName: "clock.arrow.circlepath")
-                        .font(AtlasTypography.body)
+                        .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
                     Text(recent.query)
-                        .font(AtlasTypography.body)
+                        .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.primaryText)
                     Spacer()
                 }
@@ -179,6 +179,30 @@ struct SearchView: View {
     private var resultsList: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 0) {
+                // Makers section — maker entries that deep-link to the
+                // maker page (owner direction 2026-06-06). Pushed onto
+                // the host nav stack via NavigationLink, the same way
+                // "Go to creator" pushes MakerView from TourDetailView.
+                if !filteredMakers.isEmpty {
+                    sectionHeader("Makers")
+                    ForEach(filteredMakers) { maker in
+                        NavigationLink {
+                            MakerView(maker: maker)
+                        } label: {
+                            makerRow(maker)
+                        }
+                        .buttonStyle(.plain)
+
+                        if maker.id != filteredMakers.last?.id {
+                            Divider().padding(.leading, AtlasSpacing.lg)
+                        }
+                    }
+
+                    if !filteredTours.isEmpty {
+                        sectionHeader("Tours")
+                    }
+                }
+
                 ForEach(filteredTours) { tour in
                     Button {
                         recentSearchStore.record(query: trimmedQuery)
@@ -197,37 +221,94 @@ struct SearchView: View {
         }
     }
 
+    /// Caption all-caps section divider for the Makers / Tours groups.
+    /// Only shown when makers are present, so the common tours-only
+    /// query keeps its clean headerless list.
+    private func sectionHeader(_ title: String) -> some View {
+        Text(title)
+            .font(AtlasTypography.caption)
+            .textCase(.uppercase)
+            .foregroundStyle(AtlasColors.tertiaryText)
+            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.top, AtlasSpacing.md)
+            .padding(.bottom, AtlasSpacing.sm)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    /// Maker result row — parallels `resultRow` but with a circular
+    /// avatar (emoji when the maker supplies one, else a person glyph)
+    /// and a tour-count subtitle. Title is BODY all-caps like the tour
+    /// rows; everything else is caption.
+    private func makerRow(_ maker: Maker) -> some View {
+        HStack(alignment: .center, spacing: AtlasSpacing.md) {
+            ZStack {
+                Circle().fill(AtlasColors.secondaryBackground)
+                if let emoji = maker.avatarEmoji {
+                    Text(emoji)
+                        .font(.system(size: 28))
+                } else {
+                    Image(systemName: "person.crop.circle.fill")
+                        .font(.system(size: 32))
+                        .foregroundStyle(AtlasColors.secondaryText)
+                }
+            }
+            .frame(width: 56, height: 56)
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                Text(maker.displayName)
+                    .font(AtlasTypography.body)
+                    .textCase(.uppercase)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+
+                Text(makerTourCountText(maker))
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .lineLimit(1)
+            }
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.tertiaryText)
+        }
+        .padding(.horizontal, AtlasSpacing.lg)
+        .padding(.vertical, AtlasSpacing.sm)
+    }
+
     private func resultRow(_ tour: Tour) -> some View {
-        HStack(alignment: .top, spacing: AtlasSpacing.md) {
+        HStack(alignment: .center, spacing: AtlasSpacing.md) {
+            // Square corners (cornerRadius 0) per the app-wide
+            // "all images square corners" rule (owner, 2026-06-04).
             HeroImageView(
                 imageName: tour.heroImageURL,
                 height: 56,
-                cornerRadius: 8,
+                cornerRadius: 0,
                 category: tour.primaryCategory
             )
             .frame(width: 56)
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                // Title: BODY, all-caps, single line, tail-truncated
+                // (owner direction 2026-06-06). The only non-caption
+                // text on this surface — mirrors the Player's "stop
+                // titles → BODY all-caps" exception.
                 Text(tour.title)
                     .font(AtlasTypography.body)
+                    .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
 
-                HStack(spacing: AtlasSpacing.xs) {
-                    Text(tour.primaryCategory.displayName)
+                // Subtitle: maker name only (no category), single line.
+                if let maker = dataService.maker(for: tour) {
+                    Text(maker.displayName)
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
-
-                    if let maker = dataService.maker(for: tour) {
-                        Text("•")
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.tertiaryText)
-                        Text(maker.displayName)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                    }
+                        .lineLimit(1)
+                        .truncationMode(.tail)
                 }
             }
 
@@ -247,7 +328,7 @@ struct SearchView: View {
                 .font(.system(size: 36))
                 .foregroundStyle(AtlasColors.secondaryText.opacity(0.4))
             Text("No tours match \"\(trimmedQuery)\"")
-                .font(AtlasTypography.body)
+                .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
                 .multilineTextAlignment(.center)
             Text("Try a different word, or check spelling.")
@@ -263,6 +344,26 @@ struct SearchView: View {
 
     private var trimmedQuery: String {
         query.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    /// Makers whose display name matches the query (case-insensitive
+    /// substring). Surfaced as their own result section above tours so
+    /// the user can jump straight to the maker page. Small catalog
+    /// (3 makers), so no cap needed.
+    private var filteredMakers: [Maker] {
+        let q = trimmedQuery.lowercased()
+        guard !q.isEmpty else { return [] }
+        return dataService.makers.filter {
+            $0.displayName.lowercased().contains(q)
+        }
+    }
+
+    /// "N tours" subtitle for a maker row.
+    private func makerTourCountText(_ maker: Maker) -> String {
+        let count = dataService.tours.filter {
+            dataService.maker(for: $0)?.id == maker.id
+        }.count
+        return count == 1 ? "1 tour" : "\(count) tours"
     }
 
     /// Substring (case-insensitive) match on title, category display
