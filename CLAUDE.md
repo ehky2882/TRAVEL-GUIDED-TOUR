@@ -65,6 +65,17 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-06-06)
 
+### Full-screen Player polish, round 2 (session 24)
+
+Continued the Player polish from session 22, owner-driven at the simulator. One `PlayerView`-focused PR. **No build bump (stays 33). No `AudioPlayerService` API changes. 88/88 tests pass.**
+
+- **Player now presented from the top window.** `PlayerView` is a `.fullScreenCover` on `BottomModuleRoot` (the secondary window that hosts the mini-player + tab bar) instead of `ContentView`. The cover slides up over the module **in the same window**, so the module no longer has to be hidden/shown around the player — this removes the transition gap (module briefly missing) that no timing tweak could fix. Removed `BottomModuleWindowController.setHidden` + the App-level show/hide. `PassThroughWindow.hitTest` now claims all touches while that window is presenting a modal, so the player is fully interactive.
+- **Floating island on retract.** Opening the player dismisses any detail sheet underneath (`ContentView` `onChange(showingFullPlayer)` → `tourPresenter.dismiss()`), so retracting returns to the tab root — Home shows its floating island instead of edge-to-edge bars. `BottomModuleRoot` reads `showingFullPlayer` so geometry recomputes on toggle.
+- **Now-playing block:** title is a single line — centered when it fits, `MarqueeText` scroll when too long; caption always reserves 3 lines (`reservesSpace: true`).
+- **Volume:** system `MPVolumeView` bracketed by `speaker.fill` / `speaker.wave.3.fill` icons; 12pt thumb. Device-only (blank in sim) by design.
+
+Real-device check still pending: volume/AirPlay (device-only) and the drag-to-dismiss / present-retract animations (sim HID can't drag). See `archive/HANDOFF-260606-2.md`.
+
 ### Place search (session 23)
 
 Implementation session — **place/location search added to Search**. Owner approved lifting the prior "Home map camera is settled — don't touch" constraint for this additive change. **No build bump (stays 33). 88/88 tests pass (4 new).**
