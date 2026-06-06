@@ -40,4 +40,26 @@ final class HomeSharedState {
     /// *ELLIPSIS* in the "N tours in view" header while the count
     /// is still settling, instead of momentarily reading as "0 tours."
     var isMapMoving: Bool = false
+
+    /// One-shot request to fly the map camera somewhere, set by
+    /// `SearchView` when the user taps a place result and consumed +
+    /// cleared by `HomeView`. Lets the Search screen drive the Home
+    /// map without lifting `cameraPosition` out of `HomeView`.
+    var pendingMapMove: PendingMapMove? = nil
+}
+
+/// A one-shot request to fly the Home map camera to a region. Written
+/// by `SearchView` when the user taps a place result, consumed by
+/// `HomeView` (which animates the camera there, then clears it).
+///
+/// Wrapped with a `UUID` so it's `Equatable` for `.onChange` even
+/// though `MKCoordinateRegion` isn't — and so two flights to the *same*
+/// region still register as distinct events worth re-flying to.
+struct PendingMapMove: Equatable, Identifiable {
+    let id = UUID()
+    let region: MKCoordinateRegion
+
+    static func == (lhs: PendingMapMove, rhs: PendingMapMove) -> Bool {
+        lhs.id == rhs.id
+    }
 }

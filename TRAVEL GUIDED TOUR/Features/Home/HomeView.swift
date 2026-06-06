@@ -50,6 +50,17 @@ struct HomeView: View {
             span: MKCoordinateSpan(latitudeDelta: 0.18, longitudeDelta: 0.18)
         )
     )
+    /// Shows the "No Atlas tours here yet" hint after a place search
+    /// flies the camera to an area with no tour pins. Cleared by a map
+    /// tap or after a fixed timeout.
+    @State private var showNoToursOverlay = false
+    /// Bumped each time the hint is shown so a stale auto-dismiss timer
+    /// from an earlier fly-to can't hide a newer hint.
+    @State private var showOverlayToken = 0
+    /// Set when a place-search fly-to is in flight; consumed once the
+    /// camera settles so the no-tours check runs against the region the
+    /// user actually landed on (not the mid-animation frames).
+    @State private var pendingArrivalRegion: MKCoordinateRegion? = nil
 
     /// Peek-detent height. Sized to fit the drag handle (~16pt) + the
     /// centered header line (~30pt) with some breathing room — and
@@ -86,6 +97,7 @@ struct HomeView: View {
                             withAnimation(.easeInOut(duration: 0.3)) {
                                 sharedState.isMapMoving = false
                             }
+                            evaluatePlaceArrival(settledRegion: region)
                         },
                         onCameraMoving: {
                             guard mapInteractionEnabled, !sharedState.isMapMoving else { return }
@@ -118,6 +130,11 @@ struct HomeView: View {
                             }
                         },
                         onMapTapped: {
+                            if showNoToursOverlay {
+                                withAnimation(.easeInOut(duration: 0.3)) {
+                                    showNoToursOverlay = false
+                                }
+                            }
                             guard sharedState.placecardTour != nil else { return }
                             withAnimation(.easeInOut(duration: 0.2)) {
                                 sharedState.placecardTour = nil
@@ -183,6 +200,31 @@ struct HomeView: View {
                         .animation(.easeInOut(duration: 0.5), value: sharedState.isMapMoving)
                         .animation(.easeInOut(duration: 0.3), value: sheetDetent)
                         .allowsHitTesting(sheetDetent == .peek && !sharedState.isMapMoving)
+
+                    // Transient hint shown when a place search lands on
+                    // an area with no Atlas tours. Non-interactive so a
+                    // tap underneath still dismisses it. The pill is
+                    // padded down from the top and placed in a top-
+                    // aligned full-size frame; the transition is a plain
+                    // opacity fade (a `.move` here would slide the
+                    // full-height frame off-screen).
+                }
+                // Place-search "no tours here" hint. Attached as an
+                // `.overlay` (not a ZStack child) so it composites above
+                // the UIKit-backed `Map` — a conditionally-inserted
+                // ZStack *sibling* of the map did not paint at all.
+                // Non-interactive so a tap underneath dismisses it.
+                // NOTE: in the iOS *simulator* the pill can appear a few
+                // seconds late on the first fly to a far, uncached region
+                // — MKMapView's tile streaming starves SwiftUI layer
+                // compositing there. On device (Metal compositor) it
+                // shows promptly; verify on a real device / TestFlight.
+                .overlay(alignment: .top) {
+                    if showNoToursOverlay {
+                        noToursOverlay
+                            .padding(.top, geo.size.height * 0.16)
+                            .allowsHitTesting(false)
+                    }
                 }
                 .toolbar(.hidden, for: .navigationBar)
                 .task {
@@ -196,6 +238,12 @@ struct HomeView: View {
                 .onAppear { centerOnUserIfNeeded() }
                 .onChange(of: locationManager.userLocation) { _, _ in
                     centerOnUserIfNeeded()
+                }
+                // A place tapped in SearchView arrives here as a
+                // one-shot request: fly the camera there.
+                .onChange(of: sharedState.pendingMapMove) { _, move in
+                    guard let move else { return }
+                    flyTo(move.region)
                 }
             }
         }
@@ -215,6 +263,79 @@ struct HomeView: View {
         withAnimation(.easeInOut(duration: 0.6)) {
             cameraPosition = .region(region)
         }
+    }
+
+    /// Glide the camera to a region requested by a place search. Clears
+    /// the one-shot request, retracts the drawer + any open placecard so
+    /// the destination isn't hidden, and arms the no-tours check for
+    /// when the camera settles. Doesn't touch the recenter / pin-tap /
+    /// startup paths — it's a parallel, additive camera driver.
+    private func flyTo(_ region: MKCoordinateRegion) {
+        sharedState.pendingMapMove = nil
+        showNoToursOverlay = false
+        sharedState.placecardTour = nil
+        sharedState.placecardCoordinate = nil
+        if sheetDetent != .peek {
+            withAnimation(.easeInOut(duration: 0.25)) { sheetDetent = .peek }
+        }
+        pendingArrivalRegion = region
+        withAnimation(.easeInOut(duration: 0.6)) {
+            cameraPosition = .region(region)
+        }
+    }
+
+    /// When the camera settles after a place-search fly-to, show the
+    /// "No Atlas tours here yet" hint if the destination has no tour
+    /// pins in view. Guarded by `pendingArrivalRegion` so it fires once
+    /// per fly-to and never on ordinary pans. Uses the actual settled
+    /// region so the check matches what the user sees.
+    private func evaluatePlaceArrival(settledRegion: MKCoordinateRegion) {
+        guard pendingArrivalRegion != nil else { return }
+        pendingArrivalRegion = nil
+        guard !MapRegionGeometry.anyStop(of: dataService.tours, inside: settledRegion) else { return }
+        showOverlayToken += 1
+        let token = showOverlayToken
+        // Shown without an insertion animation — a fade transition is
+        // starved by the map's continuous render transactions while the
+        // destination's tiles stream in.
+        showNoToursOverlay = true
+        // Fixed-duration hint. We deliberately DON'T dismiss on camera
+        // movement: a streaming vector map keeps emitting settle frames
+        // for seconds after a fly-to, which would clear the hint almost
+        // immediately. A tap on the map dismisses it early (onMapTapped);
+        // otherwise it fades after the timeout. The token guards against
+        // a stale timer from an earlier fly-to hiding a newer hint.
+        Task {
+            try? await Task.sleep(for: .seconds(6))
+            if showNoToursOverlay, token == showOverlayToken {
+                showNoToursOverlay = false
+            }
+        }
+    }
+
+    /// Pill shown over the map when a place search lands somewhere with
+    /// no Atlas tours. Same `secondaryBackground` chrome as the rest of
+    /// the floating UI; caption typography.
+    private var noToursOverlay: some View {
+        HStack(spacing: AtlasSpacing.sm) {
+            Image(systemName: "mappin.slash")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                Text("No Atlas tours here yet")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.primaryText)
+                Text("Atlas tours are in New York and Portugal.")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+            }
+        }
+        .padding(.horizontal, AtlasSpacing.md)
+        .padding(.vertical, AtlasSpacing.sm)
+        .background(AtlasColors.secondaryBackground, in: RoundedRectangle(cornerRadius: 14))
+        .shadow(color: .black.opacity(0.12), radius: 6, y: 2)
+        .padding(.horizontal, AtlasSpacing.lg)
     }
 
     /// Bundles the current placecard tour + its anchor coordinate into
