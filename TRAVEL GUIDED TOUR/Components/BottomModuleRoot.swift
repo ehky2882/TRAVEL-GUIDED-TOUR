@@ -24,6 +24,12 @@ struct BottomModuleRoot: View {
         // sheet open — the bars grow edge-to-edge with square outer
         // corners. Buttons sit at identical x positions across both
         // forms (design rule: only the fill changes).
+        // Reading `showingFullPlayer` registers it as a dependency so
+        // the bars recompute their island/edge form the moment the
+        // player retracts — this window is hidden while the player is
+        // up, so without an explicit dependency the geometry could read
+        // stale on re-show.
+        _ = appShared.showingFullPlayer
         let extendsToScreenEdges = appShared.selectedTab != .home
             || tourPresenter.presentedTour != nil
         return VStack(spacing: 0) {
@@ -49,6 +55,16 @@ struct BottomModuleRoot: View {
         // overlay it.
         .ignoresSafeArea(.all, edges: .bottom)
         .animation(.spring(response: 0.4, dampingFraction: 0.86), value: nowPlayingTour?.id)
+        // Present the full player from THIS window (above the detail
+        // modal) so the cover slides up over the mini-player + tab bar
+        // in the same window — no hiding/showing of the module, so the
+        // transition has no empty gap. `PassThroughWindow.hitTest`
+        // claims all touches while this modal is up.
+        .fullScreenCover(isPresented: $appShared.showingFullPlayer) {
+            if let tour = nowPlayingTour {
+                PlayerView(tour: tour)
+            }
+        }
     }
 
     private var nowPlayingTour: Tour? {

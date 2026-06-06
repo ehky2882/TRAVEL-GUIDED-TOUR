@@ -389,19 +389,25 @@ struct PlayerView: View {
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
 
-            Text(currentStopTitle.uppercased())
-                .font(AtlasTypography.body)
-                .foregroundStyle(AtlasColors.primaryText)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
+            // Title is always a single line. When it fits at its
+            // natural width it renders centered; when it's too long it
+            // falls back to a scrolling marquee instead of wrapping.
+            ViewThatFits(in: .horizontal) {
+                Text(currentStopTitle.uppercased())
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(1)
+                    .fixedSize(horizontal: true, vertical: false)
+                MarqueeText(
+                    text: currentStopTitle.uppercased(),
+                    font: AtlasTypography.body,
+                    color: AtlasColors.primaryText
+                )
+            }
+            .frame(maxWidth: .infinity)
 
             if let caption = currentStopCaption {
-                Text(caption)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(isCaptionExpanded ? nil : 3)
-                    .fixedSize(horizontal: false, vertical: true)
+                captionView(caption)
                     .animation(.easeInOut(duration: 0.2), value: isCaptionExpanded)
 
                 if captionOverflowsThreeLines(caption) {
@@ -420,6 +426,22 @@ struct PlayerView: View {
             }
         }
         .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    /// The stop caption. Collapsed, it always **reserves 3 lines** of
+    /// height (`reservesSpace: true`) so the layout doesn't jump for
+    /// short captions; expanded, it shows the full text.
+    @ViewBuilder
+    private func captionView(_ caption: String) -> some View {
+        let base = Text(caption)
+            .font(AtlasTypography.caption)
+            .foregroundStyle(AtlasColors.secondaryText)
+            .multilineTextAlignment(.center)
+        if isCaptionExpanded {
+            base.lineLimit(nil)
+        } else {
+            base.lineLimit(3, reservesSpace: true)
+        }
     }
 
     /// Char-count proxy for "does this caption exceed 3 lines at our
@@ -548,9 +570,17 @@ struct PlayerView: View {
     @ViewBuilder
     private var volumeSection: some View {
         #if os(iOS) || os(visionOS)
-        SystemVolumeSlider()
-            .frame(height: 24)
-            .padding(.horizontal, AtlasSpacing.lg)
+        HStack(spacing: AtlasSpacing.sm) {
+            Image(systemName: "speaker.fill")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+            SystemVolumeSlider()
+                .frame(height: 24)
+            Image(systemName: "speaker.wave.3.fill")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+        }
+        .padding(.horizontal, AtlasSpacing.lg)
         #endif
     }
 
@@ -916,6 +946,14 @@ private struct SystemVolumeSlider: UIViewRepresentable {
     func makeUIView(context: Context) -> MPVolumeView {
         let view = MPVolumeView()
         view.tintColor = UIColor(AtlasColors.mapPin)
+        // Replace the default (large) thumb with a small white circle
+        // so the track reads as a thin line, not a chunky pill.
+        let d: CGFloat = 12
+        let thumb = UIGraphicsImageRenderer(size: CGSize(width: d, height: d)).image { _ in
+            UIColor.white.setFill()
+            UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: d, height: d)).fill()
+        }
+        view.setVolumeThumbImage(thumb, for: .normal)
         return view
     }
 

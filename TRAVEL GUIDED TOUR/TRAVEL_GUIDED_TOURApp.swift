@@ -121,13 +121,11 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .onChange(of: colorSchemePreference) { _, newValue in
                         bottomModuleWindow.apply(preference: newValue)
                     }
-                    // Hide the mini-player + tab bar window while the
-                    // full-screen PlayerView cover is up. The window
-                    // sits above modal presentations, so without this
-                    // the bottom module would float over the player.
-                    .onChange(of: appShared.showingFullPlayer) { _, isUp in
-                        bottomModuleWindow.setHidden(isUp)
-                    }
+                    // NOTE: the full player is presented from within the
+                    // bottom-module window itself (see `BottomModuleRoot`),
+                    // so there's no longer any need to hide/show that
+                    // window while the player is up — the cover slides
+                    // over the module in the same window.
             }
         }
     }

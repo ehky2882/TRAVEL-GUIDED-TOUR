@@ -108,11 +108,11 @@ struct ContentView: View {
         .ignoresSafeArea(.container, edges: .bottom)
         .environment(navState)
         .environment(homeSharedState)
-        .fullScreenCover(isPresented: $appShared.showingFullPlayer) {
-            if let tour = nowPlayingTour {
-                PlayerView(tour: tour)
-            }
-        }
+        // NOTE: the full PlayerView is presented from `BottomModuleRoot`
+        // (the secondary top window), NOT here — so the cover physically
+        // slides up over the mini-player + tab bar in the same window,
+        // with no separate hide/show of the module (which used to leave
+        // a visible gap during the transition).
         .onAppear {
             guard !didRequestLocationPermission else { return }
             didRequestLocationPermission = true
@@ -133,6 +133,16 @@ struct ContentView: View {
         // playing modal away is a separate gesture from changing tabs.
         .onChange(of: appShared.selectedTab) { _, _ in
             if tourPresenter.presentedTour != nil {
+                tourPresenter.dismiss()
+            }
+        }
+        // Opening the full player makes it the now-playing surface, so
+        // drop any detail sheet underneath it. Otherwise retracting the
+        // player lands back on the stale detail sheet — which forces the
+        // bottom module into its edge-to-edge form even when the user
+        // expects to be back on Home (floating island).
+        .onChange(of: appShared.showingFullPlayer) { _, isUp in
+            if isUp && tourPresenter.presentedTour != nil {
                 tourPresenter.dismiss()
             }
         }
