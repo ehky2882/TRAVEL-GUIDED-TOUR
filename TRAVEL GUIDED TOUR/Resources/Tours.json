@@ -4640,7 +4640,10 @@
       "longDescription": "You're on West 23rd Street, outside the Chelsea Hotel \u2014 a twelve-story Victorian Gothic building in dark red brick, with wrought-iron balconies running across the entire facade and a small red neon sign reading \"HOTEL CHELSEA\" above the entrance. The building was completed in 1884, designed by the architect Philip Hubert, and at the time it was the tallest building in New York City. It opened as the first private apartment cooperative in the United States, intended for upper-middle-class families who wanted a more communal alternative to the brownstone houses then dominant on the West Side.\n\nThe cooperative model failed within twenty years. The wealthy moved north, the neighborhood declined, and in 1905 the building was converted into a hotel. From that point forward, the Chelsea became the central residence of the American literary and artistic avant-garde for almost a century. Among the writers: Thomas Wolfe wrote \"You Can't Go Home Again\" in one of the upstairs rooms; Arthur Miller lived here in the 1960s; Arthur C. Clarke wrote \"2001: A Space Odyssey\" on the top floor. Among the musicians: Bob Dylan wrote \"Sad-Eyed Lady of the Lowlands\" in one of the rooms; Patti Smith and Robert Mapplethorpe shared an apartment here in the early 1970s; Leonard Cohen wrote \"Chelsea Hotel No. 2\" about a brief encounter with Janis Joplin somewhere upstairs. Andy Warhol filmed \"Chelsea Girls\" inside, and Madonna lived here in the 1980s.\n\nTwo of the building's most famous moments were tragedies. In November 1953, the Welsh poet Dylan Thomas collapsed after a long night of drinking and died a few days later in a nearby hospital. In October 1978, Nancy Spungen, the girlfriend of Sex Pistols bassist Sid Vicious, was found stabbed to death in their room. Sid Vicious was charged with her murder but died of a heroin overdose four months later, before the case came to trial. In 2011 the building was sold, closed to new guests, and underwent an eleven-year renovation contested repeatedly in court by long-term residents. The Chelsea reopened in stages from 2022 as a luxury boutique hotel. The lobby is open to the public, and the wrought-iron staircase that climbs the central atrium is one of the most distinctive interiors in any New York hotel.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Chelsea_Manhattan_Aug_2025_102.jpg/1280px-Chelsea_Manhattan_Aug_2025_102.jpg",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-chelsea-hotel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-chelsea-hotel_3.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -5235,7 +5238,7 @@
       "shortDescription": "Louis Kahn's granite memorial to FDR \u2014 built from 1974 drawings, opened in 2012, thirty-eight years after its architect's death.",
       "longDescription": "A white granite wedge at the southern tip of Roosevelt Island, narrowing to a point above the East River with the UN and Lower Manhattan skyline to the west. Louis Kahn finished the design in 1974, carried the drawings in his briefcase to India, and died of a heart attack at Penn Station on the way home. New York shelved the project for thirty-five years. A private foundation revived it in 2008; the park opened in October 2012, built almost exactly to Kahn's specifications. At the southern end, a sunken open-air room called The Room holds a marble bust of Roosevelt against granite walls open to the sky.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Four_Freedoms_Park_(8603774871).jpg/1280px-Four_Freedoms_Park_(8603774871).jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Four_Freedoms_Park_Roosevelt_Island_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5249,7 +5252,7 @@
           "audioDurationSeconds": 139,
           "triggerMode": "geofenced",
           "triggerRadiusMeters": 60,
-          "imageURL": null,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Four_Freedoms_Park_Roosevelt_Island_hero.webp",
           "transcriptText": "The architect who designed this park died thirty-eight years before it was finished.\n\nFour Freedoms Park sits at the southern tip of Roosevelt Island, a narrow strip of land in the East River between Manhattan and Queens. The park is a triangular wedge of mowed grass and white granite, narrowing to a point at the southernmost end. To your west, the United Nations and the Lower Manhattan skyline rise across the water. To your east, the Long Island City waterfront. Above you, no buildings \u2014 Four Freedoms Park is one of the few places in New York where the sky takes up almost the entire view.\n\nThe architect was Louis Kahn \u2014 one of the most important American architects of the twentieth century, the designer of the Salk Institute in California and the Kimbell Art Museum in Texas. In 1973, Kahn was commissioned to design a memorial to Franklin D. Roosevelt \u2014 specifically to FDR's 1941 \"Four Freedoms\" speech, in which Roosevelt named the four freedoms he believed should be universal: freedom of speech, freedom of worship, freedom from want, freedom from fear.\n\nKahn finished the design in 1974. He carried the rolled drawings in his briefcase on a trip to India. On the way home, he died of a heart attack in a men's room at Penn Station. The drawings were in his luggage. New York City, in the throes of a fiscal crisis, shelved the project. For the next thirty-five years, the design existed only on paper.\n\nIn 2008, a private foundation took up the project. The park was built almost exactly to Kahn's specifications and opened in October 2012.\n\nWhat he designed is severe and elemental. White granite blocks, cut to mathematical proportions. A long lawn flanked by linden trees. At the southern tip, a sunken open-air room called \"The Room\" \u2014 three walls of granite around a fourth wall that holds a marble bust of Roosevelt. From inside The Room, you can see only the bust, the granite, and the sky.\n\nWhat's worth knowing, standing here, is that this is one of the only major monuments built in New York from a design that predates the architect's death. The park is Kahn's voice, decades after his voice was gone."
         }
       ],
@@ -5271,7 +5274,12 @@
         "2012",
         "1974"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Four_Freedoms_Park_Roosevelt_Island_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Four_Freedoms_Park_Roosevelt_Island_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Four_Freedoms_Park_Roosevelt_Island_4.webp"
+      ]
     },
     {
       "id": "28489c01-beef-41fc-82f8-f16cd4795d71",
