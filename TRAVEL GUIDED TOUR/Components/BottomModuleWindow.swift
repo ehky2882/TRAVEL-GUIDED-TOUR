@@ -106,16 +106,6 @@ final class BottomModuleWindowController {
         }
     }
 
-    /// Hides or shows the secondary window. Used to clear the
-    /// mini-player + tab bar out of the way while the full-screen
-    /// `PlayerView` cover is up — the window sits one level above
-    /// modal presentations (see `install`), so a `.fullScreenCover`
-    /// in the main window would otherwise show *under* it. Hiding the
-    /// whole window is purely a visibility toggle; it doesn't touch
-    /// the mini-player's own layout or design.
-    func setHidden(_ hidden: Bool) {
-        window?.isHidden = hidden
-    }
 }
 
 /// A `UIWindow` whose hit-testing returns nil for any point that
@@ -148,6 +138,12 @@ final class PassThroughWindow: UIWindow {
     var interactiveBottomInset: CGFloat = 0
 
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        // When this window is presenting a modal (the full-screen
+        // PlayerView), it owns the entire screen — claim every touch so
+        // the player is fully interactive, not just its bottom strip.
+        if rootViewController?.presentedViewController != nil {
+            return super.hitTest(point, with: event)
+        }
         // Anything above the painted bottom strip is decorative
         // (transparent Spacers / VStacks in the SwiftUI tree) and
         // must pass through to the main window. We decide
