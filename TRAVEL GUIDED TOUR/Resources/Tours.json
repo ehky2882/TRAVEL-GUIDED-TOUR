@@ -1256,7 +1256,11 @@
         "1789",
         "1792"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wall-street_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wall-street_3.webp"
+      ]
     },
     {
       "id": "83090c8c-ab5d-4311-a881-519b1e36183e",
@@ -3140,7 +3144,10 @@
       "title": "Chelsea Market",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Chelsea_Market_%2849052085186%29.jpg/1280px-Chelsea_Market_%2849052085186%29.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-market_3.webp"
+      ],
       "tags": [
         "chelsea market",
         "meatpacking district",
