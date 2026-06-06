@@ -63,7 +63,16 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-04)
+## Current State (2026-06-05)
+
+### Full-screen Player polish (session 22)
+
+Implementation session — owner-driven, turn-by-turn at the simulator. Two `PlayerView`-focused code PRs to `main`. **No build bump (stays 32). No `AudioPlayerService` API changes. 84/84 tests pass.**
+
+- **[PR #148](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/148) — full-screen cover + caption typography + carousel.** `PlayerView` now covers the whole screen; the bottom-module window is hidden while it's up via new `BottomModuleWindowController.setHidden(_:)`, toggled from the App entry on `appShared.showingFullPlayer` (the module window sits at `windowLevel = .normal + 1`, above modals, so a cover alone wouldn't hide it). Hero carousel matched to `TourDetailView` (square corners, pinch-to-zoom, no load crossfade). Redundant tour-title section removed; now-playing block moved up under the carousel. Text flattened to the `caption` token.
+- **[PR #150](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/150) — drag-to-dismiss sheet, overflow menu, 5-button transport.** Player is a `.fullScreenCover` (edge-to-edge to the top) with a grab handle driving a **custom drag-to-dismiss** (`@State dragOffset` + `.offset`, dismiss past ~150pt / a fling). **••• overflow menu** on the hero's top-right mirroring the detail sheet (Download · Save · Share · Follow [disabled] · Go to creator · Report) — player wrapped in its own `NavigationStack` so "Go to creator" pushes `MakerView`. Transport reworked to **five equal columns** (`speed · skip-back-10 · play · skip-forward-10 · next-track`) so play is screen-centered; skip ±10s always live, next-track disabled on single-stop; speed menu gained 0.5×/0.75×. Scrubber is a thin **gold** line (no thumb knob); play + scrubber tinted `AtlasColors.mapPin`. Stop titles → BODY all-caps; current-stop caption truncates to 3 lines with inline Read more. **System volume slider** (`MPVolumeView`) below the transport row — draws on device only, **blank in the simulator by design**.
+
+Owner-confirmed constraints honored: mini-player design untouched (only its window's visibility toggles); native iOS menus kept (system font — `UIMenu` typography isn't customizable). **Drag-to-dismiss feel + volume slider + AirPlay button need a real-device check** (sim can't drag; MPVolumeView is device-only). See `archive/HANDOFF-260605.md`.
 
 ### Image pipeline pass — 14 NYC tours backfilled (session 20)
 
