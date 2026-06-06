@@ -3595,7 +3595,10 @@
       "title": "Cathedral of St. John the Divine",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Cathedral_of_Saint_John_the_Divine%2C_New_York.JPG/1280px-Cathedral_of_Saint_John_the_Divine%2C_New_York.JPG",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cathedral-st-john-the-divine_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cathedral-st-john-the-divine_3.webp"
+      ],
       "tags": [
         "cathedral st john the divine",
         "morningside heights",
