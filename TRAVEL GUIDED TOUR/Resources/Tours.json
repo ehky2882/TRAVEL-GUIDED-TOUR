@@ -441,11 +441,6 @@
       "longDescription": "The two pools sit exactly where the Twin Towers stood. Each is roughly one acre \u2014 the actual footprint of the buildings that once rose from this ground. Water falls thirty feet into each pool, then another twenty into a smaller square void at the centre: the largest manmade waterfalls in North America. The memorial is called \"Reflecting Absence,\" designed by Michael Arad after a competition that drew over five thousand submissions. Where the towers reached upward, the pools reach downward.\n\nThe bronze parapets are cut with the names of nearly three thousand dead \u2014 those killed here on September 11, 2001, and the six killed in the 1993 World Trade Center bombing. The names are not alphabetical. Arad's team used what they called \"meaningful adjacencies\" \u2014 coworkers next to coworkers, friends next to friends, those who died together placed together. Two minutes on the design, the Survivor Tree, and the architect's harder-than-usual job: not a monument to impose meaning, but a space that holds room for whoever shows up.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nine-eleven-memorial_hero.webp",
-      "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nine-eleven-memorial_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nine-eleven-memorial_3.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nine-eleven-memorial_4.webp"
-      ],
       "kind": "single",
       "stops": [
         {
@@ -478,7 +473,12 @@
         "memorial",
         "reflecting absence"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nine-eleven-memorial_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nine-eleven-memorial_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nine-eleven-memorial_4.webp"
+      ]
     },
     {
       "id": "cc251534-28cb-4f9b-bded-24602cef3a95",
@@ -1036,14 +1036,6 @@
       "longDescription": "At Fifth Avenue and 42nd Street, two marble lions sit at the foot of the steps: Patience and Fortitude. They were carved in 1911 by Edward Clark Potter and originally named Leo Astor and Leo Lenox, after the two wealthy donors whose private libraries became the foundation of the collection. In the depths of the Depression, Mayor Fiorello La Guardia renamed them \u2014 the virtues, he said, that New Yorkers would need to survive the decade. The names stuck.\n\nThe building they guard is the main branch of the New York Public Library, a solid white-marble Beaux-Arts landmark with six Corinthian columns and a carved frieze above the steps, essentially unchanged since 1911. Bryant Park sits directly behind it. The site was previously occupied by the Croton Reservoir \u2014 a massive granite structure that had supplied New York's drinking water for half a century \u2014 and the library, the result of an 1895 agreement among three private libraries to merge their holdings into a single free public reference library, took fourteen years to build.\n\nInside is one of the largest research libraries in the world \u2014 over fifty-five million items, including a Gutenberg Bible, the original copy of Jefferson's draft of the Declaration of Independence, and the manuscript of George Washington's farewell address. The Rose Reading Room \u2014 three hundred feet long, its ceiling painted with murals of clouds \u2014 is one of the great rooms in any American building. And it's all free. Anyone can walk in. That was the founders' idea, and it still is.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_hero.webp",
-      "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_3.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_4.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_5.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_6.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_7.webp"
-      ],
       "kind": "single",
       "stops": [
         {
@@ -1076,7 +1068,15 @@
         "1911",
         "rose reading room"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_7.webp"
+      ]
     },
     {
       "id": "32d39027-caf6-4b14-96c4-8ab8981f1675",
@@ -1085,10 +1085,6 @@
       "longDescription": "On the World Trade Center plaza stands a white skeleton of steel ribs that looks, depending on the angle, like a dove, a whale, or a ribcage. The ribs curve upward to a three-hundred-and-fifty-foot skylight running the length of the building. This is the Oculus \u2014 at heart, a train station: inside is the Westfield mall, and beneath that, the PATH transit station that connects Manhattan to New Jersey. The PATH station beneath the original Twin Towers was destroyed on September 11, and the brief for its replacement was ambitious \u2014 not just to rebuild infrastructure, but to create a symbol, a phoenix rising on the site. The Spanish architect Santiago Calatrava \u2014 known for sculptural transportation hubs that lean into the boundary between engineering and art \u2014 got the commission.\n\nCalatrava's original concept was a dove of peace being released from a child's hands. The white ribs flaring out around you are its wings. The execution didn't go smoothly. Construction stretched on for years, opening in 2016 \u2014 seven years behind schedule \u2014 and went four billion dollars over its initial estimate. Critics savaged it; the New York Times called it a monument to public extravagance. The wings, which were designed to mechanically open and let light pour in on September 11 each year, did so for only a few years before the mechanism was largely deactivated.\n\nAnd yet \u2014 when you walk inside and the light pours down through the skylight onto the white marble floor, it's hard not to be moved. The building works as a sculpture, even if it failed as a transit project. Fifty million people pass through it every year and almost all of them stop to look up. Whatever Calatrava's intentions, he built something people respond to. The interior is the experience \u2014 stand under the ribs and look up.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oculus_hero.webp",
-      "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oculus_2.webp",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Oculus_NYC.jpg/1280px-Oculus_NYC.jpg"
-      ],
       "kind": "single",
       "stops": [
         {
@@ -1121,7 +1117,11 @@
         "transit hub",
         "2016"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oculus_2.webp",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Oculus_NYC.jpg/1280px-Oculus_NYC.jpg"
+      ]
     },
     {
       "id": "0bb4b9ae-ae40-4759-9128-ea433d378bb8",
@@ -1130,10 +1130,6 @@
       "longDescription": "On Fifth Avenue between 50th and 51st Streets, two white-marble spires rise three hundred and thirty feet above the sidewalk. This is St. Patrick's Cathedral \u2014 the seat of the Archdiocese of New York and the largest Gothic Revival Catholic cathedral in the United States. It was designed by James Renwick Jr., the architect of the Smithsonian Castle in Washington and Grace Church downtown, in a Gothic style modeled on the great cathedrals of France and Germany. Construction began in 1858 and continued through the Civil War, finally opening in 1879.\n\nWhat made it remarkable wasn't just the architecture. When ground was broken, this stretch of Fifth Avenue was the northern frontier of the city \u2014 open fields, a few farmhouses. Locating the cathedral here was deliberate: a public claim that Irish-American Catholics, then the city's largest immigrant group and one of its most despised, belonged at the center of New York's future. Archbishop John Hughes raised the construction funds largely from the city's Catholic poor \u2014 pennies and nickels from servants, laborers, and washerwomen, contributed over two decades. The result was a building whose presence was, and is, a political statement as much as a religious one.\n\nSt. Patrick's remains a working cathedral. Mass is celebrated multiple times a day. State funerals have been held here for Babe Ruth, Robert F. Kennedy, and Joe DiMaggio. The bronze doors weigh more than nine thousand pounds each. The Rose Window above the main entrance is twenty-six feet across. And the side chapels, including the Lady Chapel behind the main altar, are open to anyone who walks in \u2014 a quiet pocket of stone and stained glass that, on a weekday morning, feels like a different city entirely.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-patricks-cathedral_hero.webp",
-      "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-patricks-cathedral_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-patricks-cathedral_3.webp"
-      ],
       "kind": "single",
       "stops": [
         {
@@ -1166,7 +1162,11 @@
         "1879",
         "irish-american"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-patricks-cathedral_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-patricks-cathedral_3.webp"
+      ]
     },
     {
       "id": "bedf6d2d-ebdb-4b2e-b3e3-ba160f18d2d1",
@@ -1175,14 +1175,6 @@
       "longDescription": "In the Public Square at the heart of Hudson Yards stands a 150-foot copper-colored honeycomb of interlocking staircases \u2014 2,500 steps and 80 landings spiraling around an open central void. This is the Vessel, designed by the British architect-designer Thomas Heatherwick and opened in 2019 as the centerpiece of Hudson Yards, the largest private real estate development in American history. The structure weighs six hundred tons and cost roughly two hundred million dollars to build.\n\nHeatherwick's idea was a kind of urban climbing frame \u2014 a public artwork designed to be walked, not just looked at. Visitors would climb the staircases, take in the Hudson from different heights, and descend by different paths. He called it \"public architecture,\" a category he essentially invented. Critics have struggled to categorize it more precisely: sculpture? climbing frame? selfie backdrop? For Heatherwick's defenders, that ambiguity is the point \u2014 a piece of public art that resists being one thing. For his critics, it's a two-hundred-million-dollar selfie spot dressed up as architecture.\n\nAround the Vessel is Hudson Yards itself \u2014 a twenty-eight-acre, twenty-five-billion-dollar development built over the West Side Rail Yards, on what was once one of the last large undeveloped tracts in Manhattan. The skyscrapers ringing the plaza are the work of some of the most prominent architects of this generation: Bjarke Ingels, Kohn Pedersen Fox, and Diller Scofidio + Renfro, whose white cultural venue The Shed sits just to the south on what look like enormous wheels. Walk the plaza, look up at the Vessel from different angles, and \u2014 if it's open \u2014 climb the lower levels for a view of the river.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Hudson_Yards_Plaza_March_2019_53.jpg/1280px-Hudson_Yards_Plaza_March_2019_53.jpg",
-      "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_3.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_4.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_5.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_6.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_7.webp"
-      ],
       "kind": "single",
       "stops": [
         {
@@ -1215,7 +1207,15 @@
         "public art",
         "the shed"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_7.webp"
+      ]
     },
     {
       "id": "715c30c6-bec9-49de-ba5d-f0686e3546a9",
@@ -1256,7 +1256,11 @@
         "1789",
         "1792"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wall-street_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wall-street_3.webp"
+      ]
     },
     {
       "id": "83090c8c-ab5d-4311-a881-519b1e36183e",
@@ -2194,7 +2198,7 @@
       "additionalImageURLs": [
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_2.webp",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_3.webp",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Bowling_Green_td_%282018-12-13%29_06_-_26_Broadway%2C_Charging_Bull.jpg/1280px-Bowling_Green_td_%282018-12-13%29_06_-_26_Broadway%2C_Charging_Bull.jpg"
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Bowling_Green_td_%282018-12-13%29_06_-_26_Broadway%2C_Charging_Bull.jpg/1280px-Bowling_Green_td_%282018-12-13%29_06_-_26_Broadway%2C_Charging_Bull.jpg"
       ],
       "kind": "single",
       "stops": [
@@ -3140,7 +3144,10 @@
       "title": "Chelsea Market",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Chelsea_Market_%2849052085186%29.jpg/1280px-Chelsea_Market_%2849052085186%29.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-market_3.webp"
+      ],
       "tags": [
         "chelsea market",
         "meatpacking district",
@@ -3272,8 +3279,10 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "The Woolworth Building",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Exterior_Woolworth_Building_2015.jpg/1280px-Exterior_Woolworth_Building_2015.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/woolworth-building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/woolworth-building_2.webp"
+      ],
       "tags": [
         "woolworth building",
         "cass gilbert",
@@ -3489,8 +3498,14 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "TWA Hotel at JFK",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TWA_Flight_Center_2015_NY4.jpg/1280px-TWA_Flight_Center_2015_NY4.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_5.webp",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TWA_Flight_Center_2015_NY4.jpg/1280px-TWA_Flight_Center_2015_NY4.jpg"
+      ],
       "tags": [
         "twa hotel",
         "jfk airport",
@@ -3580,7 +3595,10 @@
       "title": "Cathedral of St. John the Divine",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Cathedral_of_Saint_John_the_Divine%2C_New_York.JPG/1280px-Cathedral_of_Saint_John_the_Divine%2C_New_York.JPG",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cathedral-st-john-the-divine_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cathedral-st-john-the-divine_3.webp"
+      ],
       "tags": [
         "cathedral st john the divine",
         "morningside heights",
@@ -5748,14 +5766,6 @@
       "longDescription": "The Surf Avenue strip at the southern shore of Brooklyn is the birthplace of American mass amusement. Three competing parks made it famous: Steeplechase (1897\u20131964), Luna Park (1903\u20131944, lit with 250,000 electric bulbs and visible from ships miles at sea), and Dreamland (1904\u20131911), the most ambitious amusement park ever built, with a million electric bulbs, a thousand-foot central tower, and recreations of Pompeii and Switzerland. Dreamland burned in a single night in May 1911; Luna burned in 1944; Steeplechase closed in 1964. The Cyclone roller coaster and Wonder Wheel still operate. The Parachute Jump \u2014 the white skeletal tower west of the boardwalk \u2014 is the only surviving structure from any of the three original parks, and it hasn't run as a ride in over seventy-five years.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_hero.webp",
-      "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_3.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_4.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_5.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_6.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_7.webp"
-      ],
       "kind": "single",
       "stops": [
         {
@@ -5792,7 +5802,15 @@
         "parachute-jump",
         "wonder-wheel"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_7.webp"
+      ]
     },
     {
       "id": "a41d0cbf-bf41-46a6-bff7-1380ff443c18",
@@ -6388,6 +6406,140 @@
       "priceUSD": 0
     },
     {
+      "id": "51EDB2E0-5A2E-48B2-8490-36A5622CCED7",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Ford Foundation Building",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ford_Foundation_Building_(51921997207).jpg/1280px-Ford_Foundation_Building_(51921997207).jpg",
+      "additionalImageURLs": [],
+      "tags": [
+        "ford foundation",
+        "kevin roche",
+        "john dinkeloo",
+        "1967",
+        "modernism",
+        "atrium garden",
+        "midtown east"
+      ],
+      "stops": [
+        {
+          "id": "BDBD489D-F657-457D-AB72-450CC4A25E52",
+          "order": 0,
+          "title": "Ford Foundation Building",
+          "caption": "Stand at 320 East 43rd Street between First and Second Avenues, looking at the Cor-Ten frame and glass corner.",
+          "latitude": 40.7503,
+          "longitude": -73.971,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ford-foundation-building.mp3",
+          "audioDurationSeconds": 185,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ford_Foundation_Building_%2851921997207%29.jpg/1280px-Ford_Foundation_Building_%2851921997207%29.jpg",
+          "transcriptText": "This is an office building with a twelve-story garden inside it.\n\nYou're at 320 East 43rd Street, between First and Second Avenues, looking at the Ford Foundation Building \u2014 designed by the firm of Kevin Roche, John Dinkeloo and Associates and completed in 1967. Before the garden \u2014 and we'll get to the garden \u2014 give the outside a moment, because it would be worth stopping for even if there were nothing behind the glass. The frame is Cor-Ten steel, deliberately left to weather to a deep russet brown, set against piers of brown granite, with two great glass walls meeting at the building's southern and western corner. Where most nineteen-sixties office buildings reached for sleek anonymity \u2014 the glass box, repeated floor after floor \u2014 this one is warm, heavy, and unmistakably itself, as much a piece of civic architecture as a place to work.\n\nAnd then there's what it's built around. The southwest corner \u2014 the part you can see straight through the glass \u2014 is a single enclosed garden, one hundred and thirty feet tall and roughly a quarter of an acre in plan, with mature trees, terraced plantings, a small pool, and a glass roof open to the sky. The garden was designed by the modernist landscape architect Dan Kiley and conceived as an indoor public park for the building's employees and visitors. Every office in the building \u2014 about three hundred of them, across ten floors \u2014 opens onto the atrium, with desks and meeting rooms wrapped around the garden like a giant glass-walled bookshelf.\n\nThe architects, Kevin Roche and John Dinkeloo, had taken over the practice of Eero Saarinen after Saarinen's death in 1961, and the Ford Foundation Building was the first major project they completed under their own names. The design was meant to embody the Ford Foundation's institutional values of openness and shared mission \u2014 rather than retreat into private offices facing outward, every employee would face the same shared garden, and everyone in the building would be able to see everyone else at work.\n\n[beat]\n\nThe building was an immediate critical sensation, and it became one of the most copied corporate types of the late twentieth century. The dramatic enclosed atrium \u2014 floors of offices opening onto it \u2014 became the model for hundreds of later buildings, including the John Portman hotels of the 1970s and 80s and countless variants since. Many of those imitations are larger, glassier, and more theatrical, yet none quite recover the specific calm of Kiley's planted garden, which is unusual among atriums in being more park than spectacle.\n\nThe Ford Foundation Building was designated a New York City landmark in 1997, and reopened in 2018 as the Ford Foundation Center for Social Justice after a major restoration by the firm Gensler, with the atrium garden carefully brought back.\n\nThe atrium is open to the public during weekday business hours, free of charge \u2014 the Ford Foundation has kept, throughout the building's history, the original 1967 decision that the garden be available to anyone who walks in."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 40.7503,
+      "centroidLongitude": -73.971,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "At 320 East 43rd Street stands the Ford Foundation Building \u2014 Kevin Roche, John Dinkeloo & Associates, 1967 \u2014 an office building built around a twelve-story enclosed garden. The frame is Cor-Ten steel, deliberately left to weather to a deep russet brown, set against piers of brown granite, with two great glass walls meeting at the southern-and-western corner. The southwest corner is a single enclosed garden, 130 feet tall and roughly a quarter of an acre in plan, with mature trees, terraced plantings, a small pool, and a glass roof open to the sky. The garden was designed by the modernist landscape architect Dan Kiley and conceived as an indoor public park; every one of the building's roughly 300 offices opens onto the atrium, with desks and meeting rooms wrapped around the garden like a giant glass-walled bookshelf.\n\nRoche and Dinkeloo had taken over Eero Saarinen's practice after his death in 1961, and the Ford Foundation Building was their first major project under their own names. It was an immediate critical sensation and became the model for hundreds of later atrium buildings \u2014 the John Portman hotels of the 1970s and 80s and countless variants since \u2014 though few recover the specific calm of Kiley's planted garden. Designated a NYC landmark in 1997 and reopened in 2018 as the Ford Foundation Center for Social Justice after a Gensler restoration. The atrium is open to the public during weekday business hours, free of charge \u2014 kept open since 1967.",
+      "shortDescription": "Kevin Roche & John Dinkeloo's 1967 modernist landmark at 320 East 43rd \u2014 Cor-Ten steel frame around Dan Kiley's twelve-story enclosed garden atrium, the model for hundreds of imitators.",
+      "totalDurationSeconds": 185,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "0CA4E70E-33C8-4B46-B3E1-DF7909BC7753",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "Tudor City Greens",
+      "priceUSD": 0,
+      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Tudor_City_jeh.JPG/1280px-Tudor_City_jeh.JPG",
+      "additionalImageURLs": [],
+      "tags": [
+        "tudor city",
+        "tudor city greens",
+        "fred f french",
+        "1928",
+        "tudor revival",
+        "midtown east",
+        "private park"
+      ],
+      "stops": [
+        {
+          "id": "79EB046C-BF4F-4480-BB6D-2036158512BD",
+          "order": 0,
+          "title": "Tudor City Greens",
+          "caption": "Stand in either of the two small parks on East 42nd Street at Tudor City Place, framed by Tudor Revival apartment towers.",
+          "latitude": 40.7493,
+          "longitude": -73.9711,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tudor-city-greens.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Tudor_City_jeh.JPG/1280px-Tudor_City_jeh.JPG",
+          "transcriptText": "Almost every apartment window in the buildings around you faces these parks, not the East River. There's a reason.\n\nYou're in Tudor City Greens, the two small parks on either side of East 42nd Street between First and Second Avenues, just west of the United Nations. The twelve buildings surrounding the parks make up Tudor City, one of the first residential skyscraper complexes in the United States, built between 1925 and 1932 by the developer Fred F. French and designed primarily by the architect H. Douglas Ives. The style is Tudor Revival \u2014 Gothic arches, gargoyles, leaded glass, half-timbering \u2014 all applied to twenty-five-story apartment buildings.\n\nThe parks were designed as the front yards of the complex, which is why the buildings around you face inward toward the gardens with their largest windows and most ornate facades. The river side, where the United Nations now stands, was at the time of construction a strip of slaughterhouses, gas plants, coal yards, and the worst tenement slums in Manhattan \u2014 and Tudor City was deliberately designed to turn its back on that view. The apartments rented in the late 1920s with the promise that residents would never have to look at the river.\n\nThat promise aged badly. In 1947, the United Nations chose the slaughterhouse site for its new headquarters, and by 1952 the back of Tudor City \u2014 its lowest-rent, fewest-windowed side \u2014 looked out at one of the most famous diplomatic skylines in the world. Apartment values shifted accordingly.\n\n[beat]\n\nThe parks themselves nearly didn't survive. In 1972, the real estate magnate Harry Helmsley, who had acquired most of Tudor City a few years earlier, announced plans to demolish both Greens and replace them with two new apartment towers. The Tudor City residents organized in opposition, joined by city preservationists, and the campaign to save the parks lasted more than a decade. The parks were sold to the Trust for Public Land in 1986 and transferred to the City of New York in 1988. They are now operated by a nonprofit called Tudor City Greens, Inc.\n\nBoth parks are small \u2014 about three-quarters of an acre between them \u2014 but they sit on a bluff above the rest of midtown, and the view east from either one runs straight to the East River. Forty-second Street passes underneath you, in the cut where it slices through Murray Hill before reaching the river."
+        }
+      ],
+      "primaryCategory": "natureAndParks",
+      "centroidLatitude": 40.7493,
+      "centroidLongitude": -73.9711,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Tudor City Greens are the two small parks on either side of East 42nd Street between First and Second Avenues, just west of the United Nations. The twelve buildings around them make up Tudor City, one of the first residential skyscraper complexes in the United States, built 1925\u20131932 by the developer Fred F. French and designed primarily by the architect H. Douglas Ives \u2014 Tudor Revival (Gothic arches, gargoyles, leaded glass, half-timbering) applied to twenty-five-story apartment buildings. The parks were designed as the complex's front yards, which is why the buildings face inward toward them with their largest windows and most ornate facades. The river side, where the UN now stands, was at the time of construction a strip of slaughterhouses, gas plants, coal yards, and the worst tenement slums in Manhattan, and Tudor City was deliberately built to turn its back on it. Apartments rented in the late 1920s with the promise that residents would never have to look at the river.\n\nThat promise aged badly: by 1952 the back of Tudor City looked out at one of the most famous diplomatic skylines in the world. The parks themselves nearly didn't survive a 1972 Harry Helmsley demolition proposal \u2014 residents and city preservationists organized in opposition for more than a decade. The parks were sold to the Trust for Public Land in 1986 and transferred to NYC in 1988; they are now operated by the nonprofit Tudor City Greens, Inc. Both parks together cover roughly three-quarters of an acre on a bluff above midtown, with views east straight to the East River; 42nd Street passes underneath in the Murray Hill cut.",
+      "shortDescription": "Two small Tudor Revival-framed private parks on East 42nd at Tudor City Place \u2014 front yards of Fred F. French's 1928 residential skyscraper complex, saved from demolition in the 1970s\u201380s and city-owned since 1988.",
+      "totalDurationSeconds": 145,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "B5F0EE9E-77C1-4FEF-893A-963A5456B207",
+      "makerId": "00000000-0000-0000-0000-000000000001",
+      "title": "United Nations Headquarters",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_4.webp"
+      ],
+      "tags": [
+        "united nations",
+        "un headquarters",
+        "1952",
+        "wallace harrison",
+        "le corbusier",
+        "oscar niemeyer",
+        "international style",
+        "east river"
+      ],
+      "stops": [
+        {
+          "id": "A86B4B6A-89FE-46DB-970C-C4A0AB1D8D3D",
+          "order": 0,
+          "title": "United Nations Headquarters",
+          "caption": "Stand on the west side of First Avenue, looking east across the street at the Secretariat tower and the General Assembly slab.",
+          "latitude": 40.7489,
+          "longitude": -73.968,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/united-nations-headquarters.mp3",
+          "audioDurationSeconds": 150,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_hero.webp",
+          "transcriptText": "This is the closest you can stand to a piece of land that doesn't belong to any country.\n\nYou're on the west side of First Avenue, looking east across the street at the United Nations Headquarters. The campus sits on eighteen acres of what was, until the late nineteen-forties, slaughterhouses and tenements along the East River \u2014 Turtle Bay at its grimmest. John D. Rockefeller Jr. bought the land and gave it to the new organization, and once the deal was done, the site stopped being part of New York, or even the United States. The ground in front of you is international territory.\n\nTwo buildings define what you're seeing. To your left, the long, low slab with the gently curved roof and the shallow dome is the General Assembly building \u2014 the hall where every member nation gets one seat and one vote. To the right, the tall, thin tower of green glass and white marble is the Secretariat, thirty-nine stories of offices, finished in 1952. When it went up, that flat glass curtain wall was a genuine shock; almost nothing in the city looked like it yet. The whole International Style of corporate Manhattan \u2014 the glass box that would define the next half-century \u2014 arguably starts here.\n\nThe design came out of an international committee, which is exactly as fraught as it sounds. The American architect Wallace Harrison ran it, but the two figures who mattered most were Le Corbusier, the Swiss-French father of modernism, and Oscar Niemeyer, the young Brazilian who would later build Bras\u00edlia. Niemeyer's sketch and Le Corbusier's scheme were eventually fused into the design that got built \u2014 and Le Corbusier, feeling robbed of credit, never quite forgave any of them.\n\n[beat]\n\nIt helps to remember what this was supposed to be. In 1945 the world had just finished killing sixty million people, and the United Nations was the enormous, fragile bet that it never needed to happen again \u2014 that nations could be talked out of war across a table instead of a battlefield. This campus is that bet rendered in glass and marble: the postwar dream of world government, given a skyline. Whether the dream worked is a conversation that never ends. But the architecture still says it plainly \u2014 open, transparent, deliberately unlike a fortress.\n\nStay a moment and watch the flags. There's one for every member nation, and they fly in alphabetical order \u2014 which means the lineup quietly rearranges itself every time the membership of the world changes."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 40.7489,
+      "centroidLongitude": -73.968,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The United Nations Headquarters sits on eighteen acres of former Turtle Bay slaughterhouses and tenements that John D. Rockefeller Jr. bought and gave to the new organization in the late 1940s \u2014 once the deal was done, the site stopped being part of New York or the United States. The ground is international territory. Two buildings define the campus. The long, low slab with the gently curved roof and shallow dome is the General Assembly building \u2014 the hall where every member nation gets one seat and one vote. The tall, thin tower of green glass and white marble is the Secretariat, thirty-nine stories of offices, finished in 1952. That flat glass curtain wall was a genuine shock when it went up; almost nothing in the city looked like it yet. The whole International Style of corporate Manhattan \u2014 the glass box that would define the next half-century \u2014 arguably starts here.\n\nThe design came out of an international committee \u2014 Wallace Harrison ran it, but Le Corbusier and the young Brazilian Oscar Niemeyer (who would later build Bras\u00edlia) shaped what got built; Le Corbusier, feeling robbed of credit, never quite forgave any of them. It helps to remember what this was supposed to be: in 1945 the world had just finished killing sixty million people, and the UN was the enormous, fragile bet that it never needed to happen again \u2014 that nations could be talked out of war across a table instead of a battlefield. The campus is that bet rendered in glass and marble. Watch the flags on First Avenue: one for every member nation, flown in alphabetical order, the lineup quietly rearranging itself every time the membership of the world changes.",
+      "shortDescription": "The 1952 international-territory campus on the East River \u2014 Wallace Harrison led the international committee; Le Corbusier and Oscar Niemeyer shaped the Secretariat tower whose green-glass curtain wall launched the International Style.",
+      "totalDurationSeconds": 150,
+      "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
       "id": "c1301b25-646f-4a9a-9de9-87f0f73273eb",
       "title": "Avenida dos Aliados",
       "shortDescription": "Three and a quarter minutes on Porto's main civic avenue \u2014 a Barry Parker layout from 1915 that demolished an entire neighbourhood to clear the ground, then handed the architecture to French-trained locals who ignored Parker's English restraint entirely.",
@@ -6746,140 +6898,6 @@
       "longDescription": "The five-story granite-clad inverted ziggurat at 945 Madison Avenue is the Breuer Building \u2014 Marcel Breuer's 1966 design with Hamilton P. Smith, generally considered the finest Brutalist building in New York. Each floor cantilevers outward over the one below; the only major window on Madison Avenue is a single trapezoidal opening sometimes called the \"eye.\" The cladding is Vermont gray granite, the frames are bronze, and the entrance reaches across a small bridge over what was once a moat-like sculpture pool. Breuer \u2014 Bauhaus-trained, Hungarian-born, designer of the Wassily and Cesca chairs and the UNESCO Headquarters in Paris \u2014 built it deliberately to refuse the Manhattan grid, a fortress for art rather than a part of the commercial street.\n\nThe original commission came from the Whitney Museum of American Art, which occupied the building from 1966 to 2014 before moving to its Renzo Piano building in the Meatpacking District. The Met took over from 2016 to 2020 as the Met Breuer; the Frick Collection followed from 2021 to 2024 as the Frick Madison while its Fifth Avenue mansion was renovated. Sotheby's bought the building from the Whitney in 2023 for approximately $100M and opened its global headquarters here in 2025 after a Herzog & de Meuron interior renovation \u2014 the first non-museum tenant in the building's history. The exterior is unchanged. Sotheby's exhibitions and previews are open to the public free of charge.",
       "shortDescription": "Marcel Breuer's 1966 Brutalist masterpiece at 945 Madison \u2014 granite-clad inverted ziggurat, former Whitney Museum, then Met Breuer, then Frick Madison, now Sotheby's global headquarters.",
       "totalDurationSeconds": 200,
-      "city": "New York",
-      "walkingDistanceMeters": null
-    },
-    {
-      "id": "51EDB2E0-5A2E-48B2-8490-36A5622CCED7",
-      "makerId": "00000000-0000-0000-0000-000000000001",
-      "title": "Ford Foundation Building",
-      "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ford_Foundation_Building_%2851921997207%29.jpg/1280px-Ford_Foundation_Building_%2851921997207%29.jpg",
-      "additionalImageURLs": [],
-      "tags": [
-        "ford foundation",
-        "kevin roche",
-        "john dinkeloo",
-        "1967",
-        "modernism",
-        "atrium garden",
-        "midtown east"
-      ],
-      "stops": [
-        {
-          "id": "BDBD489D-F657-457D-AB72-450CC4A25E52",
-          "order": 0,
-          "title": "Ford Foundation Building",
-          "caption": "Stand at 320 East 43rd Street between First and Second Avenues, looking at the Cor-Ten frame and glass corner.",
-          "latitude": 40.7503,
-          "longitude": -73.971,
-          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ford-foundation-building.mp3",
-          "audioDurationSeconds": 185,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ford_Foundation_Building_%2851921997207%29.jpg/1280px-Ford_Foundation_Building_%2851921997207%29.jpg",
-          "transcriptText": "This is an office building with a twelve-story garden inside it.\n\nYou're at 320 East 43rd Street, between First and Second Avenues, looking at the Ford Foundation Building \u2014 designed by the firm of Kevin Roche, John Dinkeloo and Associates and completed in 1967. Before the garden \u2014 and we'll get to the garden \u2014 give the outside a moment, because it would be worth stopping for even if there were nothing behind the glass. The frame is Cor-Ten steel, deliberately left to weather to a deep russet brown, set against piers of brown granite, with two great glass walls meeting at the building's southern and western corner. Where most nineteen-sixties office buildings reached for sleek anonymity \u2014 the glass box, repeated floor after floor \u2014 this one is warm, heavy, and unmistakably itself, as much a piece of civic architecture as a place to work.\n\nAnd then there's what it's built around. The southwest corner \u2014 the part you can see straight through the glass \u2014 is a single enclosed garden, one hundred and thirty feet tall and roughly a quarter of an acre in plan, with mature trees, terraced plantings, a small pool, and a glass roof open to the sky. The garden was designed by the modernist landscape architect Dan Kiley and conceived as an indoor public park for the building's employees and visitors. Every office in the building \u2014 about three hundred of them, across ten floors \u2014 opens onto the atrium, with desks and meeting rooms wrapped around the garden like a giant glass-walled bookshelf.\n\nThe architects, Kevin Roche and John Dinkeloo, had taken over the practice of Eero Saarinen after Saarinen's death in 1961, and the Ford Foundation Building was the first major project they completed under their own names. The design was meant to embody the Ford Foundation's institutional values of openness and shared mission \u2014 rather than retreat into private offices facing outward, every employee would face the same shared garden, and everyone in the building would be able to see everyone else at work.\n\n[beat]\n\nThe building was an immediate critical sensation, and it became one of the most copied corporate types of the late twentieth century. The dramatic enclosed atrium \u2014 floors of offices opening onto it \u2014 became the model for hundreds of later buildings, including the John Portman hotels of the 1970s and 80s and countless variants since. Many of those imitations are larger, glassier, and more theatrical, yet none quite recover the specific calm of Kiley's planted garden, which is unusual among atriums in being more park than spectacle.\n\nThe Ford Foundation Building was designated a New York City landmark in 1997, and reopened in 2018 as the Ford Foundation Center for Social Justice after a major restoration by the firm Gensler, with the atrium garden carefully brought back.\n\nThe atrium is open to the public during weekday business hours, free of charge \u2014 the Ford Foundation has kept, throughout the building's history, the original 1967 decision that the garden be available to anyone who walks in."
-        }
-      ],
-      "primaryCategory": "architecture",
-      "centroidLatitude": 40.7503,
-      "centroidLongitude": -73.971,
-      "introAudioURL": null,
-      "kind": "single",
-      "longDescription": "At 320 East 43rd Street stands the Ford Foundation Building \u2014 Kevin Roche, John Dinkeloo & Associates, 1967 \u2014 an office building built around a twelve-story enclosed garden. The frame is Cor-Ten steel, deliberately left to weather to a deep russet brown, set against piers of brown granite, with two great glass walls meeting at the southern-and-western corner. The southwest corner is a single enclosed garden, 130 feet tall and roughly a quarter of an acre in plan, with mature trees, terraced plantings, a small pool, and a glass roof open to the sky. The garden was designed by the modernist landscape architect Dan Kiley and conceived as an indoor public park; every one of the building's roughly 300 offices opens onto the atrium, with desks and meeting rooms wrapped around the garden like a giant glass-walled bookshelf.\n\nRoche and Dinkeloo had taken over Eero Saarinen's practice after his death in 1961, and the Ford Foundation Building was their first major project under their own names. It was an immediate critical sensation and became the model for hundreds of later atrium buildings \u2014 the John Portman hotels of the 1970s and 80s and countless variants since \u2014 though few recover the specific calm of Kiley's planted garden. Designated a NYC landmark in 1997 and reopened in 2018 as the Ford Foundation Center for Social Justice after a Gensler restoration. The atrium is open to the public during weekday business hours, free of charge \u2014 kept open since 1967.",
-      "shortDescription": "Kevin Roche & John Dinkeloo's 1967 modernist landmark at 320 East 43rd \u2014 Cor-Ten steel frame around Dan Kiley's twelve-story enclosed garden atrium, the model for hundreds of imitators.",
-      "totalDurationSeconds": 185,
-      "city": "New York",
-      "walkingDistanceMeters": null
-    },
-    {
-      "id": "0CA4E70E-33C8-4B46-B3E1-DF7909BC7753",
-      "makerId": "00000000-0000-0000-0000-000000000001",
-      "title": "Tudor City Greens",
-      "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Tudor_City_jeh.JPG/1280px-Tudor_City_jeh.JPG",
-      "additionalImageURLs": [],
-      "tags": [
-        "tudor city",
-        "tudor city greens",
-        "fred f french",
-        "1928",
-        "tudor revival",
-        "midtown east",
-        "private park"
-      ],
-      "stops": [
-        {
-          "id": "79EB046C-BF4F-4480-BB6D-2036158512BD",
-          "order": 0,
-          "title": "Tudor City Greens",
-          "caption": "Stand in either of the two small parks on East 42nd Street at Tudor City Place, framed by Tudor Revival apartment towers.",
-          "latitude": 40.7493,
-          "longitude": -73.9711,
-          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tudor-city-greens.mp3",
-          "audioDurationSeconds": 145,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Tudor_City_jeh.JPG/1280px-Tudor_City_jeh.JPG",
-          "transcriptText": "Almost every apartment window in the buildings around you faces these parks, not the East River. There's a reason.\n\nYou're in Tudor City Greens, the two small parks on either side of East 42nd Street between First and Second Avenues, just west of the United Nations. The twelve buildings surrounding the parks make up Tudor City, one of the first residential skyscraper complexes in the United States, built between 1925 and 1932 by the developer Fred F. French and designed primarily by the architect H. Douglas Ives. The style is Tudor Revival \u2014 Gothic arches, gargoyles, leaded glass, half-timbering \u2014 all applied to twenty-five-story apartment buildings.\n\nThe parks were designed as the front yards of the complex, which is why the buildings around you face inward toward the gardens with their largest windows and most ornate facades. The river side, where the United Nations now stands, was at the time of construction a strip of slaughterhouses, gas plants, coal yards, and the worst tenement slums in Manhattan \u2014 and Tudor City was deliberately designed to turn its back on that view. The apartments rented in the late 1920s with the promise that residents would never have to look at the river.\n\nThat promise aged badly. In 1947, the United Nations chose the slaughterhouse site for its new headquarters, and by 1952 the back of Tudor City \u2014 its lowest-rent, fewest-windowed side \u2014 looked out at one of the most famous diplomatic skylines in the world. Apartment values shifted accordingly.\n\n[beat]\n\nThe parks themselves nearly didn't survive. In 1972, the real estate magnate Harry Helmsley, who had acquired most of Tudor City a few years earlier, announced plans to demolish both Greens and replace them with two new apartment towers. The Tudor City residents organized in opposition, joined by city preservationists, and the campaign to save the parks lasted more than a decade. The parks were sold to the Trust for Public Land in 1986 and transferred to the City of New York in 1988. They are now operated by a nonprofit called Tudor City Greens, Inc.\n\nBoth parks are small \u2014 about three-quarters of an acre between them \u2014 but they sit on a bluff above the rest of midtown, and the view east from either one runs straight to the East River. Forty-second Street passes underneath you, in the cut where it slices through Murray Hill before reaching the river."
-        }
-      ],
-      "primaryCategory": "natureAndParks",
-      "centroidLatitude": 40.7493,
-      "centroidLongitude": -73.9711,
-      "introAudioURL": null,
-      "kind": "single",
-      "longDescription": "Tudor City Greens are the two small parks on either side of East 42nd Street between First and Second Avenues, just west of the United Nations. The twelve buildings around them make up Tudor City, one of the first residential skyscraper complexes in the United States, built 1925\u20131932 by the developer Fred F. French and designed primarily by the architect H. Douglas Ives \u2014 Tudor Revival (Gothic arches, gargoyles, leaded glass, half-timbering) applied to twenty-five-story apartment buildings. The parks were designed as the complex's front yards, which is why the buildings face inward toward them with their largest windows and most ornate facades. The river side, where the UN now stands, was at the time of construction a strip of slaughterhouses, gas plants, coal yards, and the worst tenement slums in Manhattan, and Tudor City was deliberately built to turn its back on it. Apartments rented in the late 1920s with the promise that residents would never have to look at the river.\n\nThat promise aged badly: by 1952 the back of Tudor City looked out at one of the most famous diplomatic skylines in the world. The parks themselves nearly didn't survive a 1972 Harry Helmsley demolition proposal \u2014 residents and city preservationists organized in opposition for more than a decade. The parks were sold to the Trust for Public Land in 1986 and transferred to NYC in 1988; they are now operated by the nonprofit Tudor City Greens, Inc. Both parks together cover roughly three-quarters of an acre on a bluff above midtown, with views east straight to the East River; 42nd Street passes underneath in the Murray Hill cut.",
-      "shortDescription": "Two small Tudor Revival-framed private parks on East 42nd at Tudor City Place \u2014 front yards of Fred F. French's 1928 residential skyscraper complex, saved from demolition in the 1970s\u201380s and city-owned since 1988.",
-      "totalDurationSeconds": 145,
-      "city": "New York",
-      "walkingDistanceMeters": null
-    },
-    {
-      "id": "B5F0EE9E-77C1-4FEF-893A-963A5456B207",
-      "makerId": "00000000-0000-0000-0000-000000000001",
-      "title": "United Nations Headquarters",
-      "priceUSD": 0,
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_hero.webp",
-      "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_3.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_4.webp"
-      ],
-      "tags": [
-        "united nations",
-        "un headquarters",
-        "1952",
-        "wallace harrison",
-        "le corbusier",
-        "oscar niemeyer",
-        "international style",
-        "east river"
-      ],
-      "stops": [
-        {
-          "id": "A86B4B6A-89FE-46DB-970C-C4A0AB1D8D3D",
-          "order": 0,
-          "title": "United Nations Headquarters",
-          "caption": "Stand on the west side of First Avenue, looking east across the street at the Secretariat tower and the General Assembly slab.",
-          "latitude": 40.7489,
-          "longitude": -73.968,
-          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/united-nations-headquarters.mp3",
-          "audioDurationSeconds": 150,
-          "triggerMode": "manual",
-          "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_hero.webp",
-          "transcriptText": "This is the closest you can stand to a piece of land that doesn't belong to any country.\n\nYou're on the west side of First Avenue, looking east across the street at the United Nations Headquarters. The campus sits on eighteen acres of what was, until the late nineteen-forties, slaughterhouses and tenements along the East River \u2014 Turtle Bay at its grimmest. John D. Rockefeller Jr. bought the land and gave it to the new organization, and once the deal was done, the site stopped being part of New York, or even the United States. The ground in front of you is international territory.\n\nTwo buildings define what you're seeing. To your left, the long, low slab with the gently curved roof and the shallow dome is the General Assembly building \u2014 the hall where every member nation gets one seat and one vote. To the right, the tall, thin tower of green glass and white marble is the Secretariat, thirty-nine stories of offices, finished in 1952. When it went up, that flat glass curtain wall was a genuine shock; almost nothing in the city looked like it yet. The whole International Style of corporate Manhattan \u2014 the glass box that would define the next half-century \u2014 arguably starts here.\n\nThe design came out of an international committee, which is exactly as fraught as it sounds. The American architect Wallace Harrison ran it, but the two figures who mattered most were Le Corbusier, the Swiss-French father of modernism, and Oscar Niemeyer, the young Brazilian who would later build Bras\u00edlia. Niemeyer's sketch and Le Corbusier's scheme were eventually fused into the design that got built \u2014 and Le Corbusier, feeling robbed of credit, never quite forgave any of them.\n\n[beat]\n\nIt helps to remember what this was supposed to be. In 1945 the world had just finished killing sixty million people, and the United Nations was the enormous, fragile bet that it never needed to happen again \u2014 that nations could be talked out of war across a table instead of a battlefield. This campus is that bet rendered in glass and marble: the postwar dream of world government, given a skyline. Whether the dream worked is a conversation that never ends. But the architecture still says it plainly \u2014 open, transparent, deliberately unlike a fortress.\n\nStay a moment and watch the flags. There's one for every member nation, and they fly in alphabetical order \u2014 which means the lineup quietly rearranges itself every time the membership of the world changes."
-        }
-      ],
-      "primaryCategory": "architecture",
-      "centroidLatitude": 40.7489,
-      "centroidLongitude": -73.968,
-      "introAudioURL": null,
-      "kind": "single",
-      "longDescription": "The United Nations Headquarters sits on eighteen acres of former Turtle Bay slaughterhouses and tenements that John D. Rockefeller Jr. bought and gave to the new organization in the late 1940s \u2014 once the deal was done, the site stopped being part of New York or the United States. The ground is international territory. Two buildings define the campus. The long, low slab with the gently curved roof and shallow dome is the General Assembly building \u2014 the hall where every member nation gets one seat and one vote. The tall, thin tower of green glass and white marble is the Secretariat, thirty-nine stories of offices, finished in 1952. That flat glass curtain wall was a genuine shock when it went up; almost nothing in the city looked like it yet. The whole International Style of corporate Manhattan \u2014 the glass box that would define the next half-century \u2014 arguably starts here.\n\nThe design came out of an international committee \u2014 Wallace Harrison ran it, but Le Corbusier and the young Brazilian Oscar Niemeyer (who would later build Bras\u00edlia) shaped what got built; Le Corbusier, feeling robbed of credit, never quite forgave any of them. It helps to remember what this was supposed to be: in 1945 the world had just finished killing sixty million people, and the UN was the enormous, fragile bet that it never needed to happen again \u2014 that nations could be talked out of war across a table instead of a battlefield. The campus is that bet rendered in glass and marble. Watch the flags on First Avenue: one for every member nation, flown in alphabetical order, the lineup quietly rearranging itself every time the membership of the world changes.",
-      "shortDescription": "The 1952 international-territory campus on the East River \u2014 Wallace Harrison led the international committee; Le Corbusier and Oscar Niemeyer shaped the Secretariat tower whose green-glass curtain wall launched the International Style.",
-      "totalDurationSeconds": 150,
       "city": "New York",
       "walkingDistanceMeters": null
     }
