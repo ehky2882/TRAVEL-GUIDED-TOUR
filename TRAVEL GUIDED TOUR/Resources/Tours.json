@@ -3491,8 +3491,13 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "TWA Hotel at JFK",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TWA_Flight_Center_2015_NY4.jpg/1280px-TWA_Flight_Center_2015_NY4.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_5.webp"
+      ],
       "tags": [
         "twa hotel",
         "jfk airport",
