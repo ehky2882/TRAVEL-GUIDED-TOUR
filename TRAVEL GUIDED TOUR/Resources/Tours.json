@@ -651,6 +651,11 @@
       "longDescription": "Brooklyn Bridge Park runs two and a half miles along the East River, and this stop sits at its northern end \u2014 Pier 1, with the Brooklyn Bridge overhead, the Lower Manhattan skyline laid out across the water, the Statue of Liberty to the left and the Manhattan Bridge to the right. For most of the twentieth century, none of this was open to the public. The piers were working cargo piers, owned by the Port Authority; behind them stood a wall of warehouses. The Brooklyn waterfront was industrial, fenced off, and largely invisible to the city.\n\nWhen the shipping industry left, the piers sat empty for decades while the city argued about what to do with them. What emerged is an eighty-five-acre park, designed by the landscape architect Michael Van Valkenburgh, which opened in stages starting in 2010. Each pier has its own character \u2014 a skyline meadow at Pier 1, basketball courts and a roller rink at Pier 2, soccer fields at Pier 5, flower gardens at Pier 6 \u2014 and between them spins Jane's Carousel, a 1922 wooden carousel rescued from Ohio and housed in a glass pavilion by the French architect Jean Nouvel.\n\nWhat makes the park work is what's no longer here: the warehouses, the fences, the chain-link. The city's most heavily guarded waterfront is now its most accessible \u2014 a continuous public path from the Manhattan Bridge to Atlantic Avenue. Find a spot to sit. The skyline across the water is the same one millions of people crossed an ocean to see \u2014 only most of them saw it from a boat.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/View_of_Brooklyn_Bridge_Park_from_Manhattan_Bridge.jpg/1280px-View_of_Brooklyn_Bridge_Park_from_Manhattan_Bridge.jpg",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-bridge-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-bridge-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-bridge-park_4.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -3773,8 +3778,11 @@
       "title": "Domino Park",
       "shortDescription": "A former sugar refinery transformed into a public waterfront park, its industrial cranes and catwalks preserved as sculptural landmarks.",
       "longDescription": "Domino Park occupies the site of the Domino Sugar Refinery, which operated on the Williamsburg waterfront from 1856 to 2004 \u2014 for most of the twentieth century, the largest sugar refinery in America. Designed by James Corner Field Operations (also responsible for the High Line) and opened in 2018, the park preserves the refinery's rusted cranes, syrup tanks, and conveyors as integrated park features. The elevated walkway follows the catwalks once used by refinery workers, offering the same view across the East River to the Manhattan skyline and the Williamsburg Bridge.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/View_from_Domino_Park_019.jpg/1280px-View_from_Domino_Park_019.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Domino_Park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Domino_Park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Domino_Park_3.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 138,
@@ -3987,8 +3995,12 @@
       "title": "Yankee Stadium",
       "shortDescription": "The 2009 home of the New York Yankees, built directly across the street from the original 'House that Ruth Built,' which stood from 1923 to 2008.",
       "longDescription": "The current Yankee Stadium opened in April 2009 on River Avenue in the South Bronx, replacing the original stadium that stood across 161st Street from 1923 to 2008. Designed by Populous to evoke the original's limestone facade, copper frieze, and bronze lettering, the $1.5 billion building was largely financed through public tax-exempt bonds. The original \u2014 where Babe Ruth, Lou Gehrig, Joe DiMaggio, Mickey Mantle, and Derek Jeter played \u2014 was demolished; its footprint is now Heritage Field, a public park visible from the new stadium's exterior.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Yankee_Stadium%2C_Jul_2009_-_16.jpg/1280px-Yankee_Stadium%2C_Jul_2009_-_16.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Yankee_Stadium_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Yankee_Stadium_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Yankee_Stadium_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Yankee_Stadium_4.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 155,
@@ -4072,8 +4084,10 @@
       "title": "Madison Square Garden",
       "shortDescription": "The arena built over Penn Station's ruins \u2014 and the reason New York passed America's first landmarks preservation law in 1965.",
       "longDescription": "Madison Square Garden (the fourth building to bear the name) opened in 1968 above the platforms of Penn Station, whose Beaux-Arts McKim, Mead & White hall \u2014 completed 1910, widely considered the most beautiful building in America \u2014 was demolished between 1963 and 1968 to make way for it. The public outcry prompted New York City to pass the Landmarks Preservation Act in 1965, the law that later saved Grand Central Terminal. MSG's operating permit, renewed for only five years in 2023, expires in 2028; multiple proposals for rebuilding Penn Station below \u2014 with or without a new MSG above \u2014 are under active consideration.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Madison_Square_Garden_Front_Entrance.jpg/1280px-Madison_Square_Garden_Front_Entrance.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Madison_Square_Garden_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Madison_Square_Garden_2.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 296,
@@ -5474,7 +5488,13 @@
       "shortDescription": "Thirty years ago, no one came here \u2014 today twelve million people a year do. One of the great urban turnarounds in American history.",
       "longDescription": "A green rectangle behind the New York Public Library, bounded by movable chairs and gravel paths. In the 1980s, it was one of the most dangerous places in Midtown \u2014 crime, drug dealing, hedges designed for privacy that had become walls hiding what was happening inside. In 1988 the Bryant Park Corporation took over, applying urbanist William H. Whyte's research on what makes public spaces work: tear out the hedges, open the sightlines, add movable chairs borrowed from the Jardin du Luxembourg, fill it with programmed events. By the reopening in 1992 the transformation was complete. The park's history goes further back: a potter's field in the 1840s, New York's Crystal Palace World's Fair in 1853, a fire in 1858, and renamed for the poet William Cullen Bryant in 1884.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/At_New_York%2C_USA_2017_085.jpg/1280px-At_New_York%2C_USA_2017_085.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bryant_Park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bryant_Park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bryant_Park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bryant_Park_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bryant_Park_5.webp"
+      ],
       "kind": "single",
       "stops": [
         {
