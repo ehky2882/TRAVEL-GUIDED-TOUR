@@ -108,7 +108,7 @@ struct ContentView: View {
         .ignoresSafeArea(.container, edges: .bottom)
         .environment(navState)
         .environment(homeSharedState)
-        .sheet(isPresented: $appShared.showingFullPlayer) {
+        .fullScreenCover(isPresented: $appShared.showingFullPlayer) {
             if let tour = nowPlayingTour {
                 PlayerView(tour: tour)
             }

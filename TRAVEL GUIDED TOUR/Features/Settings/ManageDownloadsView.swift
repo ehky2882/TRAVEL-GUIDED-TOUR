@@ -16,7 +16,7 @@ struct ManageDownloadsView: View {
             if downloadedTours.isEmpty {
                 Section {
                     Text("No downloads yet. Tap the download button on a tour to cache it for offline listening.")
-                        .font(AtlasTypography.body)
+                        .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
                 }
             } else {
@@ -34,8 +34,23 @@ struct ManageDownloadsView: View {
                 }
             }
         }
+        // Every text element on this screen renders in the caption
+        // token (13pt SF Mono); applied at the List so it cascades into
+        // the row title / size / Delete and the header. Explicit body
+        // fonts above were switched to caption so they don't override.
+        .font(AtlasTypography.caption)
         .navigationTitle("Manage downloads")
         .inlineNavigationBarTitle()
+        // Render the nav-bar title ourselves so it carries the caption
+        // token in ALL CAPS. `.navigationTitle` is kept for the
+        // accessibility label; the principal item replaces it visually.
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("MANAGE DOWNLOADS")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.primaryText)
+            }
+        }
         // Reserve room at the bottom for the mini-player + tab bar
         // stack so the last download row is reachable above the module.
         .safeAreaInset(edge: .bottom, spacing: 0) {
@@ -60,8 +75,10 @@ struct ManageDownloadsView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(tour.title)
                     .font(AtlasTypography.body)
+                    .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(2)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
                 Text(formattedBytes(tourDownloader.diskUsage(tourId: tour.id)))
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
@@ -74,7 +91,7 @@ struct ManageDownloadsView: View {
                 libraryStore.clearDownload(tour.id)
             } label: {
                 Text("Delete")
-                    .font(AtlasTypography.body)
+                    .font(AtlasTypography.caption)
             }
             .buttonStyle(.borderless)
         }
