@@ -1,4 +1,8 @@
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+import MediaPlayer
+#endif
 
 /// Full-screen audio player — spec § Key screens #6 / roadmap M-player.
 ///
@@ -18,6 +22,7 @@ struct PlayerView: View {
     let tour: Tour
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.openURL) private var openURL
     @Environment(DataService.self) private var dataService
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(LibraryStore.self) private var libraryStore
@@ -40,15 +45,37 @@ struct PlayerView: View {
     /// caption.
     @State private var isCaptionExpanded: Bool = false
 
+    /// Drives the overflow menu's "Go to creator" push. The player is
+    /// wrapped in its own NavigationStack so MakerView can push over it.
+    @State private var showingMaker: Bool = false
+
+    /// Live downward-drag distance for the interactive drag-to-dismiss.
+    /// The player is a full-screen cover (edge-to-edge to the top), so
+    /// it has no native swipe-to-dismiss — dragging the grab handle
+    /// drives this offset and dismisses past a threshold.
+    @State private var dragOffset: CGFloat = 0
+
     private let availableRates: [Float] = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0]
 
     var body: some View {
-        VStack(spacing: 0) {
-            dismissHandle
+        ZStack {
+            // Full-bleed backing so the drag-to-dismiss reveals the
+            // player's own surface color (not a black gap) as the
+            // content slides down.
+            AtlasColors.background.ignoresSafeArea()
+
+            NavigationStack {
+            VStack(spacing: 0) {
+                dismissHandle
 
             ScrollView {
                 VStack(spacing: AtlasSpacing.lg) {
                     imageSection
+                        .overlay(alignment: .topTrailing) {
+                            overflowMenu
+                                .padding(.top, AtlasSpacing.md)
+                                .padding(.trailing, AtlasSpacing.lg + AtlasSpacing.md)
+                        }
 
                     currentStopSection
                     if audioPlayer.state == .failed {
@@ -56,6 +83,7 @@ struct PlayerView: View {
                     }
                     scrubBar
                     transportRow
+                    volumeSection
                     stopsListSection
                 }
                 .padding(.bottom, AtlasSpacing.xl)
@@ -102,6 +130,16 @@ struct PlayerView: View {
             // continue while the user pockets their phone. Monitoring
             // is torn down only on a new tour's start or explicit stop.
         }
+        .toolbar(.hidden, for: .navigationBar)
+        .navigationDestination(isPresented: $showingMaker) {
+            if let maker = dataService.maker(for: tour) {
+                MakerView(maker: maker)
+            }
+        }
+            .offset(y: dragOffset)
+            .animation(.interactiveSpring(response: 0.3, dampingFraction: 0.85), value: dragOffset)
+        }
+        }
     }
 
     // MARK: - Geofencing
@@ -146,26 +184,35 @@ struct PlayerView: View {
 
     // MARK: - Sections
 
-    /// Chevron-down close button. The player is presented as a
-    /// `.fullScreenCover` (so it covers the mini-player + tab bar
-    /// window), which has no built-in swipe-to-dismiss — this is the
-    /// only way out, wired to the environment `dismiss`.
+    /// Sheet grab handle. The player is presented as a draggable
+    /// `.sheet` (the bottom-module window is hidden while it's up, so
+    /// the sheet still covers the mini-player + tab bar). Drag down
+    /// from the top to dismiss — this capsule is the affordance for it.
     private var dismissHandle: some View {
-        HStack {
-            Button(action: { dismiss() }) {
-                Image(systemName: "chevron.down")
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .frame(width: 44, height: 44)
-                    .contentShape(Rectangle())
-            }
-            .accessibilityLabel("Close player")
-            Spacer()
-        }
-        .padding(.horizontal, AtlasSpacing.sm)
-        .padding(.top, AtlasSpacing.xs)
-        .frame(maxWidth: .infinity)
-        .background(AtlasColors.background)
+        Capsule()
+            .fill(AtlasColors.secondaryText.opacity(0.4))
+            .frame(width: 40, height: 5)
+            .padding(.vertical, AtlasSpacing.sm)
+            .frame(maxWidth: .infinity)
+            .background(AtlasColors.background)
+            .contentShape(Rectangle())
+            .gesture(
+                DragGesture(minimumDistance: 1)
+                    .onChanged { value in
+                        dragOffset = max(0, value.translation.height)
+                    }
+                    .onEnded { value in
+                        // Dismiss on a decisive downward drag (distance
+                        // or fling); otherwise snap back to the top.
+                        if value.translation.height > 150
+                            || value.predictedEndTranslation.height > 400 {
+                            dismiss()
+                        } else {
+                            dragOffset = 0
+                        }
+                    }
+            )
+            .accessibilityLabel("Drag down to close")
     }
 
     /// Hero carousel — mirrors `TourDetailView.imageSection` exactly:
@@ -198,6 +245,137 @@ struct PlayerView: View {
             )
             .padding(.horizontal, AtlasSpacing.lg)
         }
+    }
+
+    // MARK: - Overflow menu
+
+    /// Top-trailing `…` overflow menu over the hero image — mirrors
+    /// `TourDetailView.overflowMenu`: Download · Save · Share ·
+    /// Follow creator (disabled) · Go to creator · Report a concern.
+    private var overflowMenu: some View {
+        Menu {
+            Button(action: handleDownloadTap) {
+                Label(menuDownloadLabel, systemImage: menuDownloadIcon)
+            }
+            .disabled(menuDownloadDisabled)
+
+            Button(action: toggleSaved) {
+                Label(
+                    isSaved ? "Remove from saved" : "Save",
+                    systemImage: isSaved ? "bookmark.fill" : "bookmark"
+                )
+            }
+
+            ShareLink(item: shareText, subject: Text(tour.title)) {
+                Label("Share", systemImage: "square.and.arrow.up")
+            }
+
+            Section {
+                Button {
+                    // Disabled placeholder — surfaces the planned
+                    // "Follow" feature without the (unbuilt) follow graph.
+                } label: {
+                    Label("Follow creator", systemImage: "person.badge.plus")
+                }
+                .disabled(true)
+
+                Button {
+                    showingMaker = true
+                } label: {
+                    Label("Go to creator", systemImage: "person.crop.circle")
+                }
+            }
+
+            Section {
+                Button(role: .destructive) {
+                    if let url = reportURL {
+                        openURL(url)
+                    }
+                } label: {
+                    Label("Report a concern", systemImage: "exclamationmark.bubble")
+                }
+            }
+        } label: {
+            Image(systemName: "ellipsis")
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundStyle(AtlasColors.primaryText)
+                .frame(width: 30, height: 30)
+                .background(.ultraThinMaterial, in: Circle())
+                .accessibilityLabel("More options")
+        }
+    }
+
+    private func handleDownloadTap() {
+        let state = tourDownloader.states[tour.id] ?? .idle
+        switch state {
+        case .idle, .failed:
+            tourDownloader.download(tour: tour)
+        case .downloading:
+            tourDownloader.cancel(tourId: tour.id)
+        case .completed:
+            tourDownloader.deleteDownload(tourId: tour.id)
+            libraryStore.clearDownload(tour.id)
+        }
+    }
+
+    private var isSaved: Bool {
+        libraryStore.isSaved(tour.id)
+    }
+
+    private func toggleSaved() {
+        libraryStore.toggleSaved(tour.id)
+    }
+
+    private var menuDownloadLabel: String {
+        switch tourDownloader.states[tour.id] ?? .idle {
+        case .idle:        return "Download"
+        case .downloading: return "Cancel download"
+        case .completed:   return "Remove download"
+        case .failed:      return "Retry download"
+        }
+    }
+
+    private var menuDownloadIcon: String {
+        switch tourDownloader.states[tour.id] ?? .idle {
+        case .idle:        return "arrow.down.circle"
+        case .downloading: return "stop.circle"
+        case .completed:   return "checkmark.circle.fill"
+        case .failed:      return "exclamationmark.circle"
+        }
+    }
+
+    private var menuDownloadDisabled: Bool {
+        tourDownloader.activeTourId != nil
+            && tourDownloader.activeTourId != tour.id
+    }
+
+    /// Plain-text Share payload — mirrors the detail sheet (V1 has no
+    /// public web link yet, so we share an identifying string).
+    private var shareText: String {
+        if let maker = dataService.maker(for: tour) {
+            return "\(tour.title) — by \(maker.displayName) on Atlas"
+        }
+        return "\(tour.title) on Atlas"
+    }
+
+    /// `mailto:` Report-a-concern URL — mirrors the detail sheet.
+    private var reportURL: URL? {
+        let subject = "Atlas — report concern: \(tour.title)"
+        let body = """
+            Tour: \(tour.title)
+            Tour ID: \(tour.id.uuidString)
+
+            Concern:
+
+            """
+        var components = URLComponents()
+        components.scheme = "mailto"
+        components.path = "eyung@tishman.com"
+        components.queryItems = [
+            URLQueryItem(name: "subject", value: subject),
+            URLQueryItem(name: "body", value: body)
+        ]
+        return components.url
     }
 
     /// Now-playing block. Sits directly under the carousel (the old
@@ -276,23 +454,28 @@ struct PlayerView: View {
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
+    /// Thin gold progress line — no thumb knob. Mirrors
+    /// `TourDetailView.primaryProgressBar`: a 4pt capsule track with a
+    /// solid gold fill, scrubbable by dragging anywhere along it.
     private var scrubBar: some View {
         VStack(spacing: AtlasSpacing.xs) {
-            Slider(
-                value: scrubValueBinding,
-                in: 0...(max(audioPlayer.duration, 1)),
-                onEditingChanged: { editing in
-                    if editing {
-                        isScrubbing = true
-                        scrubTime = audioPlayer.currentTime
-                    } else {
-                        audioPlayer.seek(to: scrubTime)
-                        isScrubbing = false
-                    }
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(AtlasColors.secondaryText.opacity(0.25))
+                        .frame(width: geo.size.width, height: 4)
+                    Capsule()
+                        .fill(AtlasColors.mapPin)
+                        .frame(width: geo.size.width * progressFraction, height: 4)
+                        .animation(isScrubbing ? nil : .linear(duration: 0.5),
+                                   value: progressFraction)
                 }
-            )
-            .tint(AtlasColors.mapPin)
-            .disabled(audioPlayer.duration <= 0)
+                .frame(maxHeight: .infinity, alignment: .center)
+                .contentShape(Rectangle())
+                .gesture(scrubGesture(barWidth: geo.size.width))
+            }
+            .frame(height: 24)
+            .accessibilityLabel("Playback progress")
 
             HStack {
                 Text(formatTime(displayedTime))
@@ -307,41 +490,71 @@ struct PlayerView: View {
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
-    /// Transport row. The leading + trailing controls swap on tour
-    /// kind: multi-stop tours navigate between stops (prev/next),
-    /// single-stop tours — which have no other stops to jump to —
-    /// scrub the current audio by ±10s instead, so the controls are
-    /// always live rather than greyed out.
+    /// Drag-to-seek along the thin progress line. No-ops until an item
+    /// with a known duration is loaded; tracks the finger to
+    /// `scrubTime`, then commits via `audioPlayer.seek(to:)` on release.
+    private func scrubGesture(barWidth: CGFloat) -> some Gesture {
+        DragGesture(minimumDistance: 0)
+            .onChanged { value in
+                guard audioPlayer.duration > 0 else { return }
+                if !isScrubbing {
+                    isScrubbing = true
+                    scrubTime = audioPlayer.currentTime
+                }
+                let fraction = min(max(value.location.x / barWidth, 0), 1)
+                scrubTime = fraction * audioPlayer.duration
+            }
+            .onEnded { value in
+                guard audioPlayer.duration > 0 else {
+                    isScrubbing = false
+                    return
+                }
+                let fraction = min(max(value.location.x / barWidth, 0), 1)
+                let target = fraction * audioPlayer.duration
+                scrubTime = target
+                audioPlayer.seek(to: target)
+                isScrubbing = false
+            }
+    }
+
+    /// 0…1 fill fraction — scrub position while dragging, live
+    /// playback position otherwise.
+    private var progressFraction: Double {
+        guard audioPlayer.duration > 0 else { return 0 }
+        return min(max(displayedTime / audioPlayer.duration, 0), 1)
+    }
+
+    /// Transport row — five controls in equal-width columns so the
+    /// play button always lands on the horizontal center of the screen.
+    /// Left → right: speed · skip-back-10 · play · skip-forward-10 ·
+    /// next-track. Skip ±10s are always live; next-track jumps to the
+    /// next stop and is disabled on single-stop tours (no next stop).
     private var transportRow: some View {
-        HStack(spacing: AtlasSpacing.xl) {
-            if tour.kind == .multiStop {
-                previousStopButton
-            } else {
-                skipBackwardButton
-            }
-
-            playPauseButton
-
-            if tour.kind == .multiStop {
-                nextStopButton
-            } else {
-                skipForwardButton
-            }
+        HStack(spacing: 0) {
+            rateButton.frame(maxWidth: .infinity)
+            skipBackwardButton.frame(maxWidth: .infinity)
+            playPauseButton.frame(maxWidth: .infinity)
+            skipForwardButton.frame(maxWidth: .infinity)
+            nextTrackButton.frame(maxWidth: .infinity)
         }
-        // Center the skip/play/skip cluster on the full width so the
-        // play button lands on the horizontal center of the screen;
-        // the speed button is a trailing overlay so it never shifts
-        // the cluster off center.
-        .frame(maxWidth: .infinity)
-        .overlay(alignment: .trailing) {
-            rateButton
-                .padding(.trailing, AtlasSpacing.lg)
-        }
+        .padding(.horizontal, AtlasSpacing.lg)
         .padding(.vertical, AtlasSpacing.md)
     }
 
-    /// Play / pause — the screen-centered anchor of the transport row,
-    /// tinted map-pin gold to match the scrubber.
+    /// System output-volume slider (Apple-standard `MPVolumeView`),
+    /// which also surfaces the AirPlay route button. iOS/visionOS only;
+    /// renders blank in the simulator (no audio hardware) but is
+    /// functional on a real device.
+    @ViewBuilder
+    private var volumeSection: some View {
+        #if os(iOS) || os(visionOS)
+        SystemVolumeSlider()
+            .frame(height: 24)
+            .padding(.horizontal, AtlasSpacing.lg)
+        #endif
+    }
+
+    /// Play / pause — tinted map-pin gold to match the scrubber.
     private var playPauseButton: some View {
         Button(action: togglePlayPause) {
             Image(systemName: playPauseIcon)
@@ -351,8 +564,23 @@ struct PlayerView: View {
         .accessibilityLabel(audioPlayer.state == .playing ? "Pause" : "Play")
     }
 
+    /// Playback-speed control — tapping opens a menu of speeds to pick
+    /// from (the current speed is check-marked). Replaces the old
+    /// tap-to-cycle behavior.
     private var rateButton: some View {
-        Button(action: cycleRate) {
+        Menu {
+            ForEach(availableRates, id: \.self) { rate in
+                Button {
+                    audioPlayer.setPlaybackRate(rate)
+                } label: {
+                    if audioPlayer.rate == rate {
+                        Label(formatRate(rate), systemImage: "checkmark")
+                    } else {
+                        Text(formatRate(rate))
+                    }
+                }
+            }
+        } label: {
             Text(rateLabel)
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.primaryText)
@@ -366,19 +594,12 @@ struct PlayerView: View {
         .accessibilityLabel("Playback speed \(rateLabel)")
     }
 
-    private var previousStopButton: some View {
-        Button(action: previousStop) {
-            Image(systemName: "backward.fill")
-                .font(.system(size: 24))
-                .foregroundStyle(canGoPrevious ? AtlasColors.primaryText : AtlasColors.tertiaryText)
-        }
-        .disabled(!canGoPrevious)
-        .accessibilityLabel("Previous stop")
-    }
-
-    private var nextStopButton: some View {
+    /// Jump to the next stop. Disabled on single-stop tours (no next
+    /// stop) but kept visible so the transport row reads consistently
+    /// across tour kinds.
+    private var nextTrackButton: some View {
         Button(action: nextStop) {
-            Image(systemName: "forward.fill")
+            Image(systemName: "forward.end.fill")
                 .font(.system(size: 24))
                 .foregroundStyle(canGoNext ? AtlasColors.primaryText : AtlasColors.tertiaryText)
         }
@@ -579,15 +800,6 @@ struct PlayerView: View {
         }
     }
 
-    private func previousStop() {
-        // From intro, no-op. From stop 0, no-op (caller disables it).
-        // From stop n>0, go to stop n-1. (No "back to intro" jump —
-        // the intro is a once-per-session preface, not a re-listenable item.)
-        if currentStopIndex > 0 {
-            playStop(at: currentStopIndex - 1)
-        }
-    }
-
     private func nextStop() {
         if currentStopIndex == -1 {
             // Intro → first stop.
@@ -616,20 +828,10 @@ struct PlayerView: View {
         // tour by tapping next.
     }
 
-    private func cycleRate() {
-        let currentIndex = availableRates.firstIndex(of: audioPlayer.rate) ?? 0
-        let nextIndex = (currentIndex + 1) % availableRates.count
-        audioPlayer.setPlaybackRate(availableRates[nextIndex])
-    }
-
     // MARK: - Derived state
 
     private var sortedStops: [Stop] {
         tour.stops.sorted(by: { $0.order < $1.order })
-    }
-
-    private var canGoPrevious: Bool {
-        currentStopIndex > 0
     }
 
     private var canGoNext: Bool {
@@ -653,7 +855,13 @@ struct PlayerView: View {
     }
 
     private var rateLabel: String {
-        let r = audioPlayer.rate
+        formatRate(audioPlayer.rate)
+    }
+
+    /// Formats a playback rate for display, e.g. 1.0 → "1x", 0.5 →
+    /// "0.5x", 1.25 → "1.25x". Used by both the speed button label and
+    /// the speed menu's options.
+    private func formatRate(_ r: Float) -> String {
         if r == floor(r) {
             return String(format: "%.0fx", r)
         }
@@ -690,13 +898,6 @@ struct PlayerView: View {
         isScrubbing ? scrubTime : audioPlayer.currentTime
     }
 
-    private var scrubValueBinding: Binding<TimeInterval> {
-        Binding(
-            get: { displayedTime },
-            set: { scrubTime = $0 }
-        )
-    }
-
     private func formatTime(_ seconds: TimeInterval) -> String {
         guard seconds.isFinite, seconds >= 0 else { return "0:00" }
         let total = Int(seconds)
@@ -705,3 +906,19 @@ struct PlayerView: View {
         return String(format: "%d:%02d", minutes, secs)
     }
 }
+
+#if os(iOS) || os(visionOS)
+/// Thin UIKit bridge for the system volume slider + AirPlay route
+/// button. Tinted map-pin gold to match the player's scrubber and play
+/// button. Renders blank in the simulator (no audio hardware) but is
+/// functional on a real device.
+private struct SystemVolumeSlider: UIViewRepresentable {
+    func makeUIView(context: Context) -> MPVolumeView {
+        let view = MPVolumeView()
+        view.tintColor = UIColor(AtlasColors.mapPin)
+        return view
+    }
+
+    func updateUIView(_ uiView: MPVolumeView, context: Context) {}
+}
+#endif
