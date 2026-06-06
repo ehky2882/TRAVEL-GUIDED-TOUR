@@ -63,7 +63,19 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-05)
+## Current State (2026-06-06)
+
+### Place search (session 23)
+
+Implementation session — **place/location search added to Search**. Owner approved lifting the prior "Home map camera is settled — don't touch" constraint for this additive change. **No build bump (stays 33). 88/88 tests pass (4 new).**
+
+- **What it does.** Typing a place name (e.g. "London", "Brooklyn") surfaces a **Places** section above the Makers/Tours catalog results. Tapping a place dismisses Search and glides the Home map camera to that region. If there are no Atlas tours there, a transient **"No Atlas tours here yet — Atlas tours are in New York and Portugal."** hint shows on the map.
+- **`PlaceSearchService`** (`Features/Search/`) — `@MainActor @Observable` wrapper around Apple's **`MKLocalSearch`** (no new deps, no backend). Debounced 300ms, cancels stale lookups, caps at 4 results; each `MKMapItem` → name/subtitle/region with per-feature zoom derived from the placemark's `CLCircularRegion` radius (clamped 1–50km).
+- **`SearchView`** — new Places section (gold `mappin.and.ellipse`, BODY all-caps name, locality subtitle, `arrow.up.right` affordance) above Makers/Tours. Section headers now show whenever Places *or* Makers are present; tours-only stays headerless (unchanged). Tapping a place sets `HomeSharedState.pendingMapMove` + `dismiss()`. Places are **not** recorded in `RecentSearch`.
+- **`HomeSharedState.pendingMapMove`** — one-shot, UUID-keyed `PendingMapMove` (Equatable for `.onChange`; re-taps to the same place re-fire). The channel from Search → map without lifting `cameraPosition` out of `HomeView`.
+- **`HomeView`** — observes `pendingMapMove`, flies the camera (additive; recenter / pin-tap / startup paths untouched), retracts the drawer, and shows the no-tours hint via `.overlay` (attaching it as a ZStack sibling of the UIKit `Map` did **not** composite — use `.overlay`). Hint auto-dismisses after 6s or on a map tap.
+- **`MapRegionGeometry.anyStop(of:inside:)`** (`Features/Home/`) — pure, unit-tested; reuses the existing antimeridian-aware `MKCoordinateRegion.contains`.
+- **Known / follow-ups.** In the **simulator** the no-tours hint can paint a few seconds late on the first fly to a far, uncached region (MKMapView tile streaming starves SwiftUI overlay compositing) — verify prompt on device/TestFlight. One cosmetic `MKMapItem.placemark` iOS-26 deprecation warning left in `PlaceSearchService` (kept for the per-feature zoom; new address API shape uncertain). Folds in the same day's Search-polish commit (caption typography, single-line result rows, maker result section). See `archive/HANDOFF-260606.md`.
 
 ### Full-screen Player polish (session 22)
 

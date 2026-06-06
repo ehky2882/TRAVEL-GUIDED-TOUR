@@ -1,4 +1,5 @@
 import SwiftUI
+import MapKit
 
 /// Minimal V1 search — spec § Key screens #2 / roadmap M-search.
 ///
@@ -16,8 +17,14 @@ struct SearchView: View {
     @Environment(RecentSearchStore.self) private var recentSearchStore
     @Environment(AtlasNavigationState.self) private var navState
     @Environment(TourPresenter.self) private var tourPresenter
+    // Shared with the Home map so tapping a place result can fly the
+    // camera there. Injected at the `ContentView` ZStack level, so it
+    // reaches this pushed screen too. `dismiss` pops back to Home.
+    @Environment(HomeSharedState.self) private var sharedState
+    @Environment(\.dismiss) private var dismiss
 
     @State private var query: String = ""
+    @State private var placeSearch = PlaceSearchService()
     @FocusState private var queryFieldFocused: Bool
 
     var body: some View {
@@ -55,6 +62,14 @@ struct SearchView: View {
         }
         .onDisappear {
             navState.pop()
+            placeSearch.clear()
+        }
+        // Drive the (debounced) geocoder off the live query. Tour /
+        // maker filtering stays synchronous; only places hit Apple's
+        // service, so they're fetched here rather than recomputed in a
+        // view-derived property.
+        .onChange(of: query) { _, newValue in
+            placeSearch.search(newValue)
         }
     }
 
@@ -100,7 +115,8 @@ struct SearchView: View {
     private var contentArea: some View {
         if trimmedQuery.isEmpty {
             recentSearchesSection
-        } else if filteredTours.isEmpty && filteredMakers.isEmpty {
+        } else if filteredTours.isEmpty && filteredMakers.isEmpty
+                    && placeSearch.results.isEmpty && !placeSearch.isSearching {
             emptyResults
         } else {
             resultsList
@@ -177,14 +193,40 @@ struct SearchView: View {
     }
 
     private var resultsList: some View {
-        ScrollView {
+        // Show section headers whenever there's more than tours to
+        // label. Tours-only keeps its clean headerless list (existing
+        // behavior); any Places or Makers section turns headers on for
+        // every group so the boundaries read clearly.
+        let showHeaders = !placeSearch.results.isEmpty || !filteredMakers.isEmpty
+        return ScrollView {
             LazyVStack(alignment: .leading, spacing: 0) {
+                // Places section — geographic results from Apple's
+                // geocoder. Tapping one closes Search and flies the
+                // Home map there (owner direction 2026-06-06). Sits
+                // above Makers + Tours so "take me somewhere on the
+                // map" reads as distinct from "open this tour / maker".
+                if !placeSearch.results.isEmpty {
+                    if showHeaders { sectionHeader("Places") }
+                    ForEach(placeSearch.results) { place in
+                        Button {
+                            goToPlace(place)
+                        } label: {
+                            placeRow(place)
+                        }
+                        .buttonStyle(.plain)
+
+                        if place.id != placeSearch.results.last?.id {
+                            Divider().padding(.leading, AtlasSpacing.lg)
+                        }
+                    }
+                }
+
                 // Makers section — maker entries that deep-link to the
                 // maker page (owner direction 2026-06-06). Pushed onto
                 // the host nav stack via NavigationLink, the same way
                 // "Go to creator" pushes MakerView from TourDetailView.
                 if !filteredMakers.isEmpty {
-                    sectionHeader("Makers")
+                    if showHeaders { sectionHeader("Makers") }
                     ForEach(filteredMakers) { maker in
                         NavigationLink {
                             MakerView(maker: maker)
@@ -197,23 +239,22 @@ struct SearchView: View {
                             Divider().padding(.leading, AtlasSpacing.lg)
                         }
                     }
-
-                    if !filteredTours.isEmpty {
-                        sectionHeader("Tours")
-                    }
                 }
 
-                ForEach(filteredTours) { tour in
-                    Button {
-                        recentSearchStore.record(query: trimmedQuery)
-                        tourPresenter.present(tour)
-                    } label: {
-                        resultRow(tour)
-                    }
-                    .buttonStyle(.plain)
+                if !filteredTours.isEmpty {
+                    if showHeaders { sectionHeader("Tours") }
+                    ForEach(filteredTours) { tour in
+                        Button {
+                            recentSearchStore.record(query: trimmedQuery)
+                            tourPresenter.present(tour)
+                        } label: {
+                            resultRow(tour)
+                        }
+                        .buttonStyle(.plain)
 
-                    if tour.id != filteredTours.last?.id {
-                        Divider().padding(.leading, AtlasSpacing.lg)
+                        if tour.id != filteredTours.last?.id {
+                            Divider().padding(.leading, AtlasSpacing.lg)
+                        }
                     }
                 }
             }
@@ -276,6 +317,54 @@ struct SearchView: View {
         }
         .padding(.horizontal, AtlasSpacing.lg)
         .padding(.vertical, AtlasSpacing.sm)
+    }
+
+    /// Place result row — a geographic destination (city, neighborhood,
+    /// landmark) from Apple's geocoder. Mirrors the maker/tour row
+    /// rhythm (56-wide leading element, BODY all-caps title, caption
+    /// subtitle) but uses a map-pin glyph and an "out to the map"
+    /// affordance instead of a disclosure chevron.
+    private func placeRow(_ place: PlaceResult) -> some View {
+        HStack(alignment: .center, spacing: AtlasSpacing.md) {
+            Image(systemName: "mappin.and.ellipse")
+                .font(.system(size: 26))
+                .foregroundStyle(AtlasColors.mapPin)
+                .frame(width: 56, height: 56)
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                Text(place.name)
+                    .font(AtlasTypography.body)
+                    .textCase(.uppercase)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+
+                if !place.subtitle.isEmpty {
+                    Text(place.subtitle)
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                }
+            }
+
+            Spacer()
+
+            Image(systemName: "arrow.up.right")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.tertiaryText)
+        }
+        .padding(.horizontal, AtlasSpacing.lg)
+        .padding(.vertical, AtlasSpacing.sm)
+    }
+
+    /// Hand the place's region to the Home map (via shared state) and
+    /// pop back so the user sees the camera fly there. Places are
+    /// deliberately NOT recorded in Recent Searches — those stay
+    /// tour/catalog-focused.
+    private func goToPlace(_ place: PlaceResult) {
+        sharedState.pendingMapMove = PendingMapMove(region: place.region)
+        dismiss()
     }
 
     private func resultRow(_ tour: Tour) -> some View {
