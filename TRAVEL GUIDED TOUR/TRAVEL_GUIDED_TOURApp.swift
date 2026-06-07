@@ -40,6 +40,16 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// switches between floating-island and full-edge based on
     /// whether a detail is up).
     @State private var tourPresenter = TourPresenter()
+    /// Tracks how many pushed detail screens are on top of any tab's
+    /// nav stack. Promoted from `ContentView` to the App level so the
+    /// bottom-module window (a separate `UIWindow`) can read it too:
+    /// the mini-player + tab bar's island/full-edge geometry — and the
+    /// Home drawer's visibility — switch off `isShowingDetail`, so both
+    /// windows must observe the SAME instance. Details reached via a
+    /// `NavigationLink` push (Search, Maker-via-Search) keep
+    /// `tourPresenter.presentedTour == nil`, so this counter is the
+    /// only signal that flips the chrome to full-edge for them.
+    @State private var navState = AtlasNavigationState()
     /// Holds the secondary `UIWindow` that renders the mini-player
     /// + tab bar above any UIKit modal presented in the main
     /// window. Installed once on first appearance.
@@ -72,6 +82,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(tourDownloader)
                     .environment(appShared)
                     .environment(tourPresenter)
+                    .environment(navState)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
                     .onAppear {
                         // Install the secondary higher-level window
@@ -97,6 +108,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                                 .environment(tourDownloader)
                                 .environment(appShared)
                                 .environment(tourPresenter)
+                                .environment(navState)
                             // No `.preferredColorScheme(...)` here:
                             // the install closure is evaluated ONCE
                             // and would freeze the host
