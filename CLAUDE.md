@@ -63,7 +63,15 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-06)
+## Current State (2026-06-07)
+
+### TestFlight 1.0 (35) (session 26 — web/PM)
+
+Build cut to ship sessions 24–25's player + search work plus the latest content. Build bumped 34 → 35 direct-to-main (`ce32d88`, app-target lines only; test target stays 1). `xcodebuild archive` clean at `/tmp/Atlas-20260607-0649.xcarchive` (~4 min, no validation 90474 — `UIRequiresFullScreen` from build 34 held). Owner uploaded via Organizer. **TestFlight 1.0 (35) is live.**
+
+Carries: **PR #159** (Player presented from top window — gapless transition + floating island on retract), **PR #160** (place-search perf via `MKLocalSearchCompleter` + tap spinner), and **7 tours' new photo galleries** (Intrepid, Little Island, Manhattan Bridge, Chelsea Hotel, Four Freedoms Park, Unisphere, Cooper Union). No Swift/asset/project changes this session beyond the pbxproj bump. **Catalog: 149 tours / 3 makers.**
+
+**Latest TestFlight build: 1.0 (35)** — uploaded 2026-06-07.
 
 ### Search polish + place-search performance (session 25)
 
