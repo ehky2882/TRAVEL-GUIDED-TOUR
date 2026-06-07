@@ -25,6 +25,10 @@ struct SearchView: View {
 
     @State private var query: String = ""
     @State private var placeSearch = PlaceSearchService()
+    /// The place row currently resolving its coordinate after a tap —
+    /// drives a small spinner on that row so the tap doesn't feel dead
+    /// during the one-off geocode.
+    @State private var resolvingPlaceID: PlaceSuggestion.ID?
     @FocusState private var queryFieldFocused: Bool
 
     var body: some View {
@@ -116,7 +120,7 @@ struct SearchView: View {
         if trimmedQuery.isEmpty {
             recentSearchesSection
         } else if filteredTours.isEmpty && filteredMakers.isEmpty
-                    && placeSearch.results.isEmpty && !placeSearch.isSearching {
+                    && placeSearch.suggestions.isEmpty && !placeSearch.isSearching {
             emptyResults
         } else {
             resultsList
@@ -197,17 +201,18 @@ struct SearchView: View {
         // label. Tours-only keeps its clean headerless list (existing
         // behavior); any Places or Makers section turns headers on for
         // every group so the boundaries read clearly.
-        let showHeaders = !placeSearch.results.isEmpty || !filteredMakers.isEmpty
+        let showHeaders = !placeSearch.suggestions.isEmpty || !filteredMakers.isEmpty
         return ScrollView {
             LazyVStack(alignment: .leading, spacing: 0) {
-                // Places section — geographic results from Apple's
-                // geocoder. Tapping one closes Search and flies the
-                // Home map there (owner direction 2026-06-06). Sits
-                // above Makers + Tours so "take me somewhere on the
-                // map" reads as distinct from "open this tour / maker".
-                if !placeSearch.results.isEmpty {
+                // Places section — autocomplete suggestions from Apple's
+                // geocoder. Tapping one resolves its coordinate, closes
+                // Search, and flies the Home map there (owner direction
+                // 2026-06-06). Sits above Makers + Tours so "take me
+                // somewhere on the map" reads as distinct from "open
+                // this tour / maker".
+                if !placeSearch.suggestions.isEmpty {
                     if showHeaders { sectionHeader("Places") }
-                    ForEach(placeSearch.results) { place in
+                    ForEach(placeSearch.suggestions) { place in
                         Button {
                             goToPlace(place)
                         } label: {
@@ -215,7 +220,7 @@ struct SearchView: View {
                         }
                         .buttonStyle(.plain)
 
-                        if place.id != placeSearch.results.last?.id {
+                        if place.id != placeSearch.suggestions.last?.id {
                             Divider().padding(.leading, AtlasSpacing.lg)
                         }
                     }
@@ -324,7 +329,7 @@ struct SearchView: View {
     /// rhythm (56-wide leading element, BODY all-caps title, caption
     /// subtitle) but uses a map-pin glyph and an "out to the map"
     /// affordance instead of a disclosure chevron.
-    private func placeRow(_ place: PlaceResult) -> some View {
+    private func placeRow(_ place: PlaceSuggestion) -> some View {
         HStack(alignment: .center, spacing: AtlasSpacing.md) {
             Image(systemName: "mappin.and.ellipse")
                 .font(.system(size: 26))
@@ -332,7 +337,7 @@ struct SearchView: View {
                 .frame(width: 56, height: 56)
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                Text(place.name)
+                Text(place.title)
                     .font(AtlasTypography.body)
                     .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.primaryText)
@@ -350,21 +355,37 @@ struct SearchView: View {
 
             Spacer()
 
-            Image(systemName: "arrow.up.right")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
+            if resolvingPlaceID == place.id {
+                ProgressView()
+                    .controlSize(.small)
+            } else {
+                Image(systemName: "arrow.up.right")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.tertiaryText)
+            }
         }
         .padding(.horizontal, AtlasSpacing.lg)
         .padding(.vertical, AtlasSpacing.sm)
     }
 
-    /// Hand the place's region to the Home map (via shared state) and
-    /// pop back so the user sees the camera fly there. Places are
-    /// deliberately NOT recorded in Recent Searches — those stay
-    /// tour/catalog-focused.
-    private func goToPlace(_ place: PlaceResult) {
-        sharedState.pendingMapMove = PendingMapMove(region: place.region)
-        dismiss()
+    /// Resolve the tapped suggestion to a coordinate (one MKLocalSearch),
+    /// hand the region to the Home map (via shared state), and pop back
+    /// so the user sees the camera fly there. The resolve is the only
+    /// network round-trip in the place flow — type-ahead above is served
+    /// by the completer. Places are deliberately NOT recorded in Recent
+    /// Searches — those stay tour/catalog-focused.
+    private func goToPlace(_ place: PlaceSuggestion) {
+        // Ignore extra taps while a resolve is already in flight (also
+        // avoids firing back-to-back MKLocalSearch calls).
+        guard resolvingPlaceID == nil else { return }
+        resolvingPlaceID = place.id
+        Task {
+            let region = await placeSearch.resolve(place)
+            resolvingPlaceID = nil
+            guard let region else { return }
+            sharedState.pendingMapMove = PendingMapMove(region: region)
+            dismiss()
+        }
     }
 
     private func resultRow(_ tour: Tour) -> some View {
