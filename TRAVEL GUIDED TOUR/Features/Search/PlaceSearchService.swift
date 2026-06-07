@@ -48,6 +48,27 @@ final class PlaceSearchService: NSObject, MKLocalSearchCompleterDelegate {
 
     private let completer = MKLocalSearchCompleter()
 
+    /// POI categories that count as a "notable place" worth flying the
+    /// map to — cultural / civic / nature / venue landmarks. Restaurants,
+    /// shops, and other businesses are excluded so place search reads as
+    /// "take me to a city / neighborhood / landmark", not a Yelp list.
+    /// Deliberately tighter than the map's orientation allowlist
+    /// (`HomeMapSection.tourPOI`): no transit / hotels / parking / EV /
+    /// ATMs here — those are useful to *see* on the map but aren't search
+    /// destinations.
+    private static let landmarkCategories: [MKPointOfInterestCategory] = [
+        // Cultural / civic landmarks
+        .landmark, .museum, .nationalMonument, .library, .castle, .fortress,
+        // Performance + venues
+        .theater, .movieTheater, .musicVenue, .stadium,
+        // Family / educational attractions
+        .aquarium, .planetarium, .zoo, .amusementPark,
+        // Nature + open space
+        .park, .nationalPark, .beach, .marina,
+        // Civic anchor
+        .university
+    ]
+
     override init() {
         super.init()
         completer.delegate = self
@@ -55,6 +76,11 @@ final class PlaceSearchService: NSObject, MKLocalSearchCompleterDelegate {
         // "Brooklyn"); points of interest cover named landmarks. Both
         // resolve to a place the camera can fly to.
         completer.resultTypes = [.address, .pointOfInterest]
+        // Restrict the POI half to landmark categories only, so
+        // restaurants / shops / services don't clutter place results.
+        // (Addresses — cities, towns, neighborhoods — are unaffected.)
+        completer.pointOfInterestFilter =
+            MKPointOfInterestFilter(including: Self.landmarkCategories)
     }
 
     /// Update the live query. The completer streams matches to the
