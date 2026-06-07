@@ -65,6 +65,13 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-06-06)
 
+### Search polish + place-search performance (session 25)
+
+Owner-directed Search pass, turn-by-turn at the simulator. Two PRs to `main`. **No build bump (34). No data-shape changes. 88/88 tests pass.**
+
+- **[PR #154](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/154) — Search polish.** Typography flattened to the `caption` token across the search field, recent searches, and no-results copy; result-row + maker-row **titles stay `body` ALL CAPS** (the one exception — mirrors the Player's "stop titles → BODY all-caps"). Result rows: single-line all-caps title with tail truncation, **maker-name-only** subtitle (category + "•" bullet dropped), **square-corner** thumbnails — removes the prior two-line category•maker wrap. New **Makers** result section above Tours: maker rows (circular emoji avatar, all-caps name, tour-count subtitle) deep-link to `MakerView` via the host nav stack. `SearchView.swift` only; the shared `SearchBar` (Home) untouched.
+- **[PR #160](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/160) — place-search performance.** Replaced the per-keystroke `MKLocalSearch` (a full network round-trip on every character — the typing lag) with **`MKLocalSearchCompleter`**: lightweight title/subtitle suggestions stream as you type; the heavy `MKLocalSearch` geocode runs **once, on tap**, to resolve the coordinate the map flies to. `PlaceSearchService` rewritten around the completer (delegate-based; intentionally **not** `@MainActor` so the conformance doesn't cross an actor boundary — callbacks already arrive on main). The tapped place row shows a **spinner** while it resolves; extra taps ignored mid-resolve. `Features/Search/` only.
+
 ### Full-screen Player polish, round 2 (session 24)
 
 Continued the Player polish from session 22, owner-driven at the simulator. One `PlayerView`-focused PR. **No build bump (stays 33). No `AudioPlayerService` API changes. 88/88 tests pass.**
@@ -81,7 +88,7 @@ Real-device check still pending: volume/AirPlay (device-only) and the drag-to-di
 Implementation session — **place/location search added to Search**. Owner approved lifting the prior "Home map camera is settled — don't touch" constraint for this additive change. **No build bump (stays 33). 88/88 tests pass (4 new).**
 
 - **What it does.** Typing a place name (e.g. "London", "Brooklyn") surfaces a **Places** section above the Makers/Tours catalog results. Tapping a place dismisses Search and glides the Home map camera to that region. If there are no Atlas tours there, a transient **"No Atlas tours here yet — Atlas tours are in New York and Portugal."** hint shows on the map.
-- **`PlaceSearchService`** (`Features/Search/`) — `@MainActor @Observable` wrapper around Apple's **`MKLocalSearch`** (no new deps, no backend). Debounced 300ms, cancels stale lookups, caps at 4 results; each `MKMapItem` → name/subtitle/region with per-feature zoom derived from the placemark's `CLCircularRegion` radius (clamped 1–50km).
+- **`PlaceSearchService`** (`Features/Search/`) — originally an `@MainActor @Observable` wrapper around Apple's **`MKLocalSearch`** (no new deps, no backend), debounced 300ms, 4-result cap, per-feature zoom from the placemark's `CLCircularRegion` radius (clamped 1–50km). *Rewritten in PR #160 (session 25) around `MKLocalSearchCompleter` for instant type-ahead — see that block above; the per-feature zoom logic is retained on the on-tap resolve.*
 - **`SearchView`** — new Places section (gold `mappin.and.ellipse`, BODY all-caps name, locality subtitle, `arrow.up.right` affordance) above Makers/Tours. Section headers now show whenever Places *or* Makers are present; tours-only stays headerless (unchanged). Tapping a place sets `HomeSharedState.pendingMapMove` + `dismiss()`. Places are **not** recorded in `RecentSearch`.
 - **`HomeSharedState.pendingMapMove`** — one-shot, UUID-keyed `PendingMapMove` (Equatable for `.onChange`; re-taps to the same place re-fire). The channel from Search → map without lifting `cameraPosition` out of `HomeView`.
 - **`HomeView`** — observes `pendingMapMove`, flies the camera (additive; recenter / pin-tap / startup paths untouched), retracts the drawer, and shows the no-tours hint via `.overlay` (attaching it as a ZStack sibling of the UIKit `Map` did **not** composite — use `.overlay`). Hint auto-dismisses after 6s or on a map tap.
