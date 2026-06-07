@@ -15,6 +15,7 @@ struct BottomModuleRoot: View {
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(AppSharedState.self) private var appShared
+    @Environment(AtlasNavigationState.self) private var navState
 
     var body: some View {
         @Bindable var appShared = appShared
@@ -30,7 +31,16 @@ struct BottomModuleRoot: View {
         // up, so without an explicit dependency the geometry could read
         // stale on re-show.
         _ = appShared.showingFullPlayer
+        // `navState.isShowingDetail` is the primary signal: every pushed
+        // detail (TourDetail, Search, Maker, ManageDownloads) calls
+        // push()/pop(), so this catches NavigationLink-pushed screens
+        // that stay on the Home tab — e.g. the Search→Maker deep-link —
+        // which the tab check alone misses. `presentedTour != nil` is
+        // kept as belt-and-suspenders for the UIKit-presented tour
+        // sheet so its edge form can't flicker on any push/pop timing
+        // gap.
         let extendsToScreenEdges = appShared.selectedTab != .home
+            || navState.isShowingDetail
             || tourPresenter.presentedTour != nil
         return VStack(spacing: 0) {
             Spacer(minLength: 0)

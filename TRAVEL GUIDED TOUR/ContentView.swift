@@ -50,9 +50,10 @@ struct ContentView: View {
 
     /// Tracks whether any pushed detail screen is currently visible.
     /// Driven by each detail view's `.onAppear` / `.onDisappear`
-    /// calling `push()` / `pop()`. Injected into the environment so
-    /// children can find it without prop-drilling.
-    @State private var navState = AtlasNavigationState()
+    /// calling `push()` / `pop()`. Owned at the App level (so the
+    /// bottom-module window observes the same instance) and read here
+    /// to hide the Home drawer once a detail is pushed.
+    @Environment(AtlasNavigationState.self) private var navState
 
     /// UIKit presentation controller — finds the topmost view
     /// controller in the active window and presents
@@ -81,8 +82,13 @@ struct ContentView: View {
         return ZStack(alignment: .bottom) {
             tabContent
 
-            // Home drawer — only on Home tab.
-            if appShared.selectedTab == .home {
+            // Home drawer — only on the Home tab root. Once a detail
+            // is pushed (tour detail, Search, Maker — including the
+            // Search→Maker deep-link, which stays on the Home tab and
+            // so wouldn't be caught by the tab check alone) the drawer
+            // hides so it can't leak its "N TOURS IN VIEW" header over
+            // the pushed screen.
+            if appShared.selectedTab == .home && !navState.isShowingDetail {
                 BottomSheet(
                     detent: $homeSheetDetent,
                     dragOffset: dragOffsetBinding,
