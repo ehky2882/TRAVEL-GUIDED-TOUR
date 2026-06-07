@@ -46,7 +46,12 @@ struct SearchView: View {
                 // which makes the search bar appear to jump downward.
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         }
-        .background(AtlasColors.background)
+        // `secondaryBackground` (fixed RGB) rather than the
+        // level-sensitive `.systemBackground`, so Search reads as the
+        // same shade as the module + sibling detail pages instead of
+        // falling to pure black at the main window's base level. Same
+        // fix as MakerView; matches TourDetailView / ManageDownloadsView.
+        .background(AtlasColors.secondaryBackground)
         .navigationTitle("Search")
         .inlineNavigationBarTitle()
         // Reserve room at the bottom for the mini-player + tab bar

@@ -31,7 +31,15 @@ struct MakerView: View {
             .padding(.horizontal, AtlasSpacing.lg)
             .padding(.bottom, AtlasSpacing.xl)
         }
-        .background(AtlasColors.background)
+        // `secondaryBackground` (a fixed RGB, not the level-sensitive
+        // `.systemBackground`) so the page reads as the SAME shade as
+        // the bottom module + the tour-detail body regardless of how
+        // MakerView is reached. Via the tour-detail sheet (elevated
+        // userInterfaceLevel) `.systemBackground` resolved to #1C1C1E
+        // and happened to match; pushed from Search (base level) it
+        // fell to pure black and mismatched the module. Matches the
+        // token TourDetailView / ManageDownloadsView already use.
+        .background(AtlasColors.secondaryBackground)
         .navigationTitle(maker.displayName)
         .inlineNavigationBarTitle()
         // Reserve room at the bottom for the mini-player + tab bar
