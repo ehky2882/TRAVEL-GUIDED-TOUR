@@ -11,8 +11,13 @@ struct MakerView: View {
 
     @Environment(DataService.self) private var dataService
     @Environment(AtlasNavigationState.self) private var navState
+    @Environment(SavedMakersStore.self) private var savedMakersStore
+    @Environment(TourPresenter.self) private var tourPresenter
+    @Environment(\.openURL) private var openURL
 
     private let avatarSize: CGFloat = 96
+
+    private var isSaved: Bool { savedMakersStore.isSaved(maker.id) }
 
     var body: some View {
         ScrollView {
@@ -40,8 +45,30 @@ struct MakerView: View {
         // fell to pure black and mismatched the module. Matches the
         // token TourDetailView / ManageDownloadsView already use.
         .background(AtlasColors.secondaryBackground)
-        .navigationTitle(maker.displayName)
+        // No visible nav-bar title (owner direction): the masthead
+        // already shows the maker name. Empty string keeps the bar +
+        // back button while dropping the centered title text. The
+        // `navigationTitle` accessibility identity moves to the
+        // masthead name in the body.
+        .navigationTitle("")
         .inlineNavigationBarTitle()
+        // Trailing nav-bar controls mirror the tour-detail sheet:
+        // a bookmark (toggles this maker as saved) + a `…` overflow
+        // menu (Save · Share · Follow [disabled] · Report).
+        .toolbar {
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                Button {
+                    savedMakersStore.toggleSaved(maker.id)
+                } label: {
+                    Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
+                }
+                .accessibilityLabel(isSaved
+                    ? "Remove \(maker.displayName) from saved"
+                    : "Save \(maker.displayName)")
+
+                overflowMenu
+            }
+        }
         // Reserve room at the bottom for the mini-player + tab bar
         // stack so the last tour row is reachable above the module.
         .safeAreaInset(edge: .bottom, spacing: 0) {
@@ -156,10 +183,33 @@ struct MakerView: View {
             } else {
                 LazyVStack(alignment: .leading, spacing: 0) {
                     ForEach(makerTours) { tour in
-                        NavigationLink {
-                            TourDetailView(tour: tour)
-                        } label: {
-                            tourRow(tour)
+                        // Opening a tour depends on how MakerView itself
+                        // was reached:
+                        //  • Top-level push (Library / Search / Home) —
+                        //    no detail layer is up, so present the tour
+                        //    via the shared `tourPresenter` slide-up
+                        //    layer (same as every other tour list). The
+                        //    sheet's X close — wired to
+                        //    `tourPresenter.dismiss()` — then works.
+                        //  • Already inside a detail layer (reached via a
+                        //    tour sheet → "Go to creator") — push the
+                        //    next tour within that layer's own nav stack
+                        //    so we don't double-stack a second layer; the
+                        //    X still dismisses the whole layer.
+                        Group {
+                            if tourPresenter.presentedTour == nil {
+                                Button {
+                                    tourPresenter.present(tour)
+                                } label: {
+                                    tourRow(tour)
+                                }
+                            } else {
+                                NavigationLink {
+                                    TourDetailView(tour: tour)
+                                } label: {
+                                    tourRow(tour)
+                                }
+                            }
                         }
                         .buttonStyle(.plain)
 
@@ -209,6 +259,77 @@ struct MakerView: View {
                 .foregroundStyle(AtlasColors.tertiaryText)
         }
         .padding(.vertical, AtlasSpacing.sm)
+    }
+
+    // MARK: - Nav-bar overflow
+
+    /// Top-trailing `…` overflow menu — mirrors the tour-detail sheet's
+    /// menu, minus the tour-only items (Download / Go to creator).
+    /// Order: Save · Share · Follow [disabled] · Report a concern.
+    private var overflowMenu: some View {
+        Menu {
+            Button {
+                savedMakersStore.toggleSaved(maker.id)
+            } label: {
+                Label(
+                    isSaved ? "Remove from saved" : "Save",
+                    systemImage: isSaved ? "bookmark.fill" : "bookmark"
+                )
+            }
+
+            ShareLink(item: shareText, subject: Text(maker.displayName)) {
+                Label("Share", systemImage: "square.and.arrow.up")
+            }
+
+            Section {
+                // Disabled in V1 — the follow graph (a social feature)
+                // isn't built. Saving (above) is a separate local
+                // bookmark, not a follow. Kept visible to surface the
+                // upcoming feature, matching the tour-detail menu.
+                Button {} label: {
+                    Label("Follow creator", systemImage: "person.badge.plus")
+                }
+                .disabled(true)
+            }
+
+            Section {
+                Button(role: .destructive) {
+                    if let url = reportURL { openURL(url) }
+                } label: {
+                    Label("Report a concern", systemImage: "exclamationmark.bubble")
+                }
+            }
+        } label: {
+            Image(systemName: "ellipsis")
+                .accessibilityLabel("More options")
+        }
+    }
+
+    private var shareText: String {
+        "\(maker.displayName) on Atlas"
+    }
+
+    /// `mailto:` URL for Report a concern. Owner is sole recipient for
+    /// V1 (no moderation backend yet); maker name + id let the owner
+    /// trace the report. Mirrors `TourDetailView.reportURL`.
+    private var reportURL: URL? {
+        let to = "eyung@tishman.com"
+        let subject = "Atlas — report concern: \(maker.displayName)"
+        let body = """
+            Maker: \(maker.displayName)
+            Maker ID: \(maker.id.uuidString)
+
+            Concern:
+
+            """
+        var components = URLComponents()
+        components.scheme = "mailto"
+        components.path = to
+        components.queryItems = [
+            URLQueryItem(name: "subject", value: subject),
+            URLQueryItem(name: "body", value: body)
+        ]
+        return components.url
     }
 
     // MARK: - Derived
