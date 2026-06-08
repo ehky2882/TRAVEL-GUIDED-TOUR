@@ -23,6 +23,14 @@
       "avatarEmoji": "\ud83c\uddf5\ud83c\uddf9",
       "bio": "Atlas Studio's Lisbon bureau \u2014 audio tours of the city's architecture and culture.",
       "websiteURL": null
+    },
+    {
+      "id": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "displayName": "Atlas Studio LDN",
+      "avatarURL": null,
+      "avatarEmoji": "\ud83c\uddec\ud83c\udde7",
+      "bio": "Atlas Studio's London bureau \u2014 audio tours of the city's architecture and history.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -7154,6 +7162,246 @@
       "shortDescription": "Marcel Breuer's 1966 Brutalist masterpiece at 945 Madison \u2014 granite-clad inverted ziggurat, former Whitney Museum, then Met Breuer, then Frick Madison, now Sotheby's global headquarters.",
       "totalDurationSeconds": 200,
       "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "9776d9ce-94c5-490d-a0d8-cb5a0241d83f",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "St Paul's Cathedral",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_6.webp"
+      ],
+      "tags": [
+        "st paul's cathedral",
+        "christopher wren",
+        "dome",
+        "ludgate hill",
+        "city of london",
+        "baroque",
+        "the blitz"
+      ],
+      "stops": [
+        {
+          "id": "056b86ce-7664-435f-9dd2-51400a66d1d4",
+          "order": 0,
+          "title": "St Paul's Cathedral",
+          "caption": "Stand on Ludgate Hill, looking up at the west front and the great dome of Wren's cathedral.",
+          "latitude": 51.5138,
+          "longitude": -0.0984,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-pauls-cathedral.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_hero.webp",
+          "transcriptText": "There has been a cathedral on this spot for fourteen hundred years. This is the fifth.\n\nYou're standing on Ludgate Hill, looking up at the west front of St Paul's \u2014 the great pair of towers, the deep portico of paired columns, and behind them, rising over everything, the dome. This is Christopher Wren's cathedral, built between 1675 and 1710 to replace the medieval St Paul's that burned in the Great Fire of London in 1666. Wren was an astronomer and mathematician before he was an architect, and it shows: the dome above you is one of the largest in the world, and it's a piece of structural cunning as much as a piece of beauty.\n\nLook at the dome properly. What you see is not quite what's holding it up. Wren built three domes, one inside the next \u2014 an outer dome of timber and lead for the skyline, an inner dome for the view from the cathedral floor, and hidden between them a brick cone that does the actual structural work of carrying the stone lantern at the top. The graceful thing on the skyline and the strong thing doing the lifting are not the same object. That's the astronomer's mind: solve the problem you can't see, and let the visible part be calm.\n\nFor over two hundred years this dome was the tallest thing in London, and the city was legally arranged to keep it that way. Protected sightlines \u2014 the famous views of St Paul's from across the city \u2014 are still written into London planning law today, which is why certain towers have strange notches and angles cut into them: they were bent out of the way of the cathedral.\n\n[beat]\n\nBut the image most Londoners carry of this building isn't from the seventeenth century. It's from the night of the twenty-ninth of December, nineteen forty, during the Blitz, when a photographer caught the dome standing serene above a city wrapped in smoke and fire. St Paul's survived the war largely intact while much of the surrounding city did not, and that photograph became a national symbol \u2014 the thing that did not fall. Wren built a cathedral. The twentieth century turned it into a promise the city had kept.\n\nStay on the hill a moment before you go in. The dome rewards being looked at slowly \u2014 and it was built, three layers deep, by a man who knew you'd only ever see one of them."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5138,
+      "centroidLongitude": -0.0984,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The west front of St Paul's rises over Ludgate Hill \u2014 paired columns, twin towers, and behind them Christopher Wren's great dome, built between 1675 and 1710 to replace the medieval cathedral that burned in the Great Fire of London in 1666. Wren was an astronomer and mathematician before he was an architect, and the dome is structural cunning as much as beauty: three domes nested one inside the next \u2014 an outer timber-and-lead shell for the skyline, an inner dome for the view from the floor, and a hidden brick cone between them that carries the stone lantern at the top. The graceful thing on the skyline and the strong thing doing the lifting are not the same object.\n\nFor over two hundred years this was the tallest building in London, and the city was arranged by law to keep it visible \u2014 the protected sightlines of St Paul's are still written into London planning law, which is why certain towers carry strange notches cut to clear the view. But the image most Londoners carry of the cathedral is from the night of 29 December 1940, during the Blitz, when a photographer caught the dome standing serene above a city wrapped in smoke and fire. St Paul's survived the war largely intact while much around it did not, and that photograph became a national symbol \u2014 the thing that did not fall.",
+      "shortDescription": "Christopher Wren's baroque masterpiece on Ludgate Hill \u2014 the triple-shell dome that survived the Blitz and still shapes London's legally protected skyline.",
+      "totalDurationSeconds": 135,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "4e8b2a91-6d3c-4f57-8a1e-9c0b5d7e2f43",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Monument",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monument_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monument_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monument_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monument_4.webp"
+      ],
+      "tags": [
+        "the monument",
+        "great fire of london",
+        "christopher wren",
+        "robert hooke",
+        "pudding lane",
+        "royal society",
+        "city of london"
+      ],
+      "stops": [
+        {
+          "id": "a3f1c7d2-58e9-4b16-9c0a-2d4e7f8b91c5",
+          "order": 0,
+          "title": "The Monument",
+          "caption": "Stand at the bottom of Monument Street, looking up at the fluted column and its gilded urn of flame.",
+          "latitude": 51.5102,
+          "longitude": -0.0859,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-monument.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monument_hero.webp",
+          "transcriptText": "This column is exactly as tall as the distance to the spot where the fire started.\n\nYou're at the bottom of Monument Street, looking up at a single fluted column of Portland stone, two hundred and two feet high, topped with a gilded urn of flame. This is the Monument to the Great Fire of London \u2014 designed by Christopher Wren and his friend Robert Hooke, and finished in 1677. It marks the fire of 1666, which began in a bakery on Pudding Lane and burned for four days, destroying most of the medieval City: thirteen thousand houses, eighty-seven churches, old St Paul's.\n\nHere's the detail worth carrying away. The column is two hundred and two feet tall, and it stands exactly two hundred and two feet from the site of the bakery where the fire began. The height is the distance. If you could lay the Monument flat on the ground, hinged at its base, the urn of flame at the top would land precisely on the spot where the whole thing started.\n\nThat's not a coincidence, and it's not only poetry. Wren and Hooke were both founding members of the Royal Society \u2014 scientists first \u2014 and they built the column to double as a working instrument. There's a laboratory in the basement and a hatch in that golden urn, and the entire shaft is hollow, with a central staircase doubling as the tube of a giant zenith telescope for observing the stars directly overhead. The vibrations from the traffic eventually made the readings useless, but the intent is built into the stone: a monument to a disaster, designed by two men who couldn't resist also making it do science.\n\n[beat]\n\nThere are three hundred and eleven steps up the inside, and a cage at the top \u2014 added in the nineteenth century after a run of people used the viewing platform to end their lives. The view from up there is mostly glass towers now. But the thing to hold onto is down here at the base: a column that tells you the size of the catastrophe by the simple, exact fact of where it can reach."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5102,
+      "centroidLongitude": -0.0859,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "At the bottom of Monument Street stands a single fluted column of Portland stone, 202 feet high and topped with a gilded urn of flame: the Monument to the Great Fire of London, designed by Christopher Wren and Robert Hooke and finished in 1677. It marks the fire of 1666, which began in a bakery on Pudding Lane and burned for four days, destroying most of the medieval City \u2014 thirteen thousand houses, eighty-seven churches, and old St Paul's. The detail worth carrying away: the column is 202 feet tall and stands exactly 202 feet from the site of the bakery. The height is the distance \u2014 laid flat and hinged at its base, the urn would land precisely where the fire started.\n\nThat is not only poetry. Wren and Hooke were founding members of the Royal Society, and they built the column to double as a working instrument: a laboratory in the basement, a hatch in the golden urn, and a hollow shaft whose central staircase served as the tube of a giant zenith telescope for observing the stars overhead. Traffic vibration eventually ruined the readings, but the intent is built into the stone. There are 311 steps to a viewing cage at the top \u2014 the cage added in the nineteenth century after a run of suicides \u2014 and the view today is mostly glass towers. The thing to hold onto is at the base: a column that tells you the size of the catastrophe by the exact fact of where it can reach.",
+      "shortDescription": "Wren and Hooke's 202-foot column to the Great Fire of 1666 \u2014 its height is the exact distance to the Pudding Lane bakery where the fire began, and the hollow shaft was built as a giant zenith telescope.",
+      "totalDurationSeconds": 117,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "b9d6f3a2-1c84-4e07-9a35-2d8b7e1f6c04",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Tower of London",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_5.webp"
+      ],
+      "tags": [
+        "tower of london",
+        "white tower",
+        "william the conqueror",
+        "crown jewels",
+        "anne boleyn",
+        "fortress",
+        "tower hill"
+      ],
+      "stops": [
+        {
+          "id": "7c2e4f81-3a96-4d52-b8e1-6f0a9d3c4e75",
+          "order": 0,
+          "title": "The Tower of London",
+          "caption": "Stand on Tower Hill, looking down and across at the fortress and its central White Tower.",
+          "latitude": 51.5081,
+          "longitude": -0.0759,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tower-of-london.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_hero.webp",
+          "transcriptText": "For nearly a thousand years, this has been the most frightening building in England.\n\nYou're on Tower Hill, looking down and across at the Tower of London \u2014 and the first thing to understand is that \"the Tower\" is not one tower but a whole fortress, rings of wall within wall, built up over centuries around the pale stone keep at its centre. That keep is the White Tower, begun by William the Conqueror around 1078, barely a decade after he took England. He built it to do one thing: to loom over the city and remind London who was in charge. It has never really stopped doing that job.\n\nFind the White Tower first \u2014 the square, four-turreted block in the middle, taller than everything around it. When it went up it was the tallest building in London, whitewashed so it could be seen for miles, a deliberate act of intimidation in stone. Everything else you can see \u2014 the curtain walls, the towers along them, the moat, now drained and green \u2014 was added later, each generation thickening the defences.\n\nHere's what makes the Tower strange. Most great fortresses do one job. This one has done nearly all of them at once. It has been a royal palace, a prison, an armoury, a treasury, a mint that struck the nation's coins, a menagerie of exotic animals, an observatory, and the place where the Crown Jewels are still kept today. Kings sheltered here and prisoners died here, sometimes in the same decade, sometimes in the same week.\n\n[beat]\n\nAnd it kept its grip on the imagination because of what happened inside. Two young princes vanished here in 1483 and were never seen again. Anne Boleyn was executed on the green within these walls. The last person held here was a Nazi, Rudolf Hess, in 1941 \u2014 which means the Tower was still doing its oldest job within living memory.\n\nStay up here on the hill a while before you go down. From this height you get the whole thing at once \u2014 the fortress, the river behind it, the glass towers of the modern City rising just beyond. Nine hundred years of power in one frame, with the oldest and hardest part still sitting dead in the centre."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5081,
+      "centroidLongitude": -0.0759,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "From Tower Hill you get the whole thing at once: not one tower but a fortress of wall within wall, built up over centuries around the pale stone keep at its centre. That keep is the White Tower, begun by William the Conqueror around 1078, barely a decade after he took England \u2014 a square, four-turreted block, once the tallest building in London and whitewashed so it could be seen for miles, a deliberate act of intimidation in stone. Everything else \u2014 the curtain walls, the towers along them, the moat now drained and green \u2014 was added later, each generation thickening the defences.\n\nWhat makes the Tower strange is that it has done nearly every job at once: royal palace, prison, armoury, treasury, a mint that struck the nation's coins, a menagerie of exotic animals, an observatory, and the place where the Crown Jewels are still kept. Kings sheltered here and prisoners died here, sometimes in the same week. Two young princes vanished here in 1483 and were never seen again; Anne Boleyn was executed on the green within these walls; the last prisoner was the Nazi Rudolf Hess in 1941 \u2014 the Tower still doing its oldest job within living memory. Stay up on the hill: nine hundred years of power in one frame, the river behind and the glass towers of the modern City just beyond, with the oldest and hardest part sitting dead in the centre.",
+      "shortDescription": "William the Conqueror's White Tower at the heart of a thousand-year fortress \u2014 royal palace, prison, mint, menagerie, and home of the Crown Jewels, seen whole from Tower Hill.",
+      "totalDurationSeconds": 138,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "c1f8b6e3-4d29-4a75-9e08-3b5a7d2c8f61",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Tower Bridge",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_5.webp"
+      ],
+      "tags": [
+        "tower bridge",
+        "bascule bridge",
+        "victorian engineering",
+        "river thames",
+        "1894",
+        "gothic revival",
+        "city of london"
+      ],
+      "stops": [
+        {
+          "id": "e5c81a37-9b24-4f60-8d13-7a2e6c0f9b48",
+          "order": 0,
+          "title": "Tower Bridge",
+          "caption": "Stand by the Thames with the two Gothic towers and the lifting roadway in front of you.",
+          "latitude": 51.5055,
+          "longitude": -0.0754,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tower-bridge.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_hero.webp",
+          "transcriptText": "This is the most Victorian object in London: a machine for the future, dressed up as the past.\n\nYou're looking at Tower Bridge \u2014 and the first thing to do is correct a misunderstanding, because half the people who photograph it think they're looking at London Bridge. They're not. London Bridge is the plain one upstream. This is the famous one: two great Gothic towers in pale stone, linked by high walkways, with a roadway between them that splits and lifts to let ships through. It opened in 1894.\n\nLook at those towers properly. They look medieval \u2014 pointed, turreted, like something from a castle four hundred years older than they are. That is entirely deliberate, and it's a kind of lie. Underneath the stone, the towers are steel \u2014 a riveted steel frame, cutting-edge engineering for the 1890s, then clad in stone so it wouldn't clash with the actual medieval Tower of London right beside it. The architect dressed a modern machine in a historical costume so it would look like it belonged.\n\nAnd it is a machine. The whole central section \u2014 the two halves of roadway, each weighing about a thousand tonnes \u2014 used to be lifted by steam. Coal-fired boilers raised steam, the steam drove pumping engines, the engines pressurised water, and the water powered the mechanism that swung the great leaves up in about a minute. It still opens around eight hundred times a year, though electric motors do the lifting now. The Victorians built a drawbridge for the largest port on earth and made it work like clockwork.\n\n[beat]\n\nThe bridge has a darker piece of trivia, too. In 1952 a double-decker bus was halfway across when the bridge began to rise beneath it \u2014 and the driver, rather than stop, accelerated and jumped the gap as the south leaf climbed. He made it. The bus landed on the far side and nobody was seriously hurt.\n\nStand here a while and watch it. If you're lucky the bridge will lift while you wait \u2014 and you'll see a hundred-and-thirty-year-old machine do exactly the thing it was built to do, in a city that long ago stopped needing it to."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.5055,
+      "centroidLongitude": -0.0754,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Tower Bridge is the most Victorian object in London: a machine for the future dressed up as the past \u2014 and not, despite the constant confusion, London Bridge (the plain one upstream). Two great Gothic towers in pale stone, linked by high walkways, with a roadway between them that splits and lifts to let ships through; it opened in 1894. The towers look medieval, pointed and turreted, but that is deliberate stagecraft: underneath the stone they are a riveted steel frame \u2014 cutting-edge engineering for the 1890s \u2014 clad in masonry so they wouldn't clash with the actual medieval Tower of London right beside them. The architect dressed a modern machine in a historical costume so it would look like it belonged.\n\nAnd it is a machine. The central section \u2014 two roadway leaves, each about a thousand tonnes \u2014 was originally lifted by steam: coal-fired boilers raised steam, the steam drove pumping engines, the engines pressurised water, and the water swung the great leaves up in about a minute. It still opens around 800 times a year, though electric motors do the lifting now. There is a darker piece of trivia, too: in 1952 a double-decker bus was halfway across when the bridge began to rise, and the driver accelerated and jumped the gap as the south leaf climbed \u2014 he made it, and nobody was seriously hurt. Stand and watch a while; with luck the bridge will lift, and you'll see a 130-year-old machine do exactly the thing it was built to do, in a city that long ago stopped needing it to.",
+      "shortDescription": "London's most-photographed bridge \u2014 two mock-Gothic towers hiding a riveted-steel Victorian machine, whose 1,000-tonne bascules still lift about 800 times a year.",
+      "totalDurationSeconds": 125,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "a72c5e94-8f31-4b06-9d28-6c0a3b7e1f52",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Leadenhall Market",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_5.webp"
+      ],
+      "tags": [
+        "leadenhall market",
+        "horace jones",
+        "victorian arcade",
+        "roman londinium",
+        "city of london",
+        "harry potter",
+        "cast iron"
+      ],
+      "stops": [
+        {
+          "id": "f6b3d829-4e71-4c95-8a02-1d7e9c5b3a64",
+          "order": 0,
+          "title": "Leadenhall Market",
+          "caption": "Stand at the centre, where the four arcades meet under the highest part of the painted iron roof.",
+          "latitude": 51.5128,
+          "longitude": -0.0836,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/leadenhall-market.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_hero.webp",
+          "transcriptText": "You're standing in a Victorian shopping arcade built on top of the centre of Roman London.\n\nThis is Leadenhall Market \u2014 a covered Victorian arcade of cream and maroon and green, wrought iron and glass, with cobbles underfoot and ornate painted ironwork overhead. It was designed by Horace Jones, the City's architect, and built in 1881. If it looks familiar and you've never been to London, that may be because it stood in for a wizarding alley in the first Harry Potter film \u2014 but its real story is far older and stranger than that.\n\nLook up at the ironwork and the painted ceiling, then look down at the ground. You are standing very close to the dead centre of Roman London \u2014 Londinium. Right here, around two thousand years ago, stood the basilica and forum, the largest Roman building north of the Alps: a town hall and marketplace and law court combined, bigger than St Paul's Cathedral is today. The Romans put the beating heart of their city on this exact spot. For two thousand years, in one form or another, this has been a place where Londoners come to buy and sell and argue.\n\nThere has been a market here continuously since the fourteenth century \u2014 first poultry, then cheese, then a general market for the eastern City. The name comes from a lead-roofed mansion that stood here in the Middle Ages. What you see now, the elegant iron arcade, is the Victorian rebuild, the moment the City decided its scruffy medieval market deserved a cathedral of cast iron.\n\n[beat]\n\nHere's the quiet thing about it. The City of London empties out at night and at weekends \u2014 it's offices now, not homes, and the crowds vanish when the work does. But this little crossing of covered lanes has been a market through Roman occupation, through the Black Death, through the Great Fire that stopped just short of here, through the Blitz. Empires came and went over it. The selling never stopped.\n\nTake the lane to the centre, where the four arcades meet under the highest part of the roof. Stand there a moment. Two thousand years of commerce, on one spot, and the painted ironwork above you is only the most recent roof."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5128,
+      "centroidLongitude": -0.0836,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Leadenhall Market is a covered Victorian arcade of cream, maroon and green \u2014 wrought iron and glass, cobbles underfoot, ornate painted ironwork overhead \u2014 designed by the City architect Horace Jones and built in 1881. It may look familiar even if you've never been to London: it stood in for a wizarding alley in the first Harry Potter film. But its real story is older and stranger. Look down at the ground: you are standing very close to the dead centre of Roman London. Right here, around two thousand years ago, stood the basilica and forum \u2014 the largest Roman building north of the Alps, a town hall, marketplace and law court combined, bigger than St Paul's Cathedral is today. The Romans put the beating heart of their city on this exact spot.\n\nThere has been a market here continuously since the fourteenth century \u2014 first poultry, then cheese, then a general market for the eastern City. The name comes from a lead-roofed mansion that stood here in the Middle Ages; the elegant iron arcade is the Victorian rebuild, the moment the City decided its scruffy medieval market deserved a cathedral of cast iron. The quiet thing about it: the City empties out at night and on weekends \u2014 offices now, not homes \u2014 but this little crossing of covered lanes has been a market through Roman occupation, the Black Death, the Great Fire that stopped just short of here, and the Blitz. Empires came and went over it; the selling never stopped. Take the lane to the centre, where the four arcades meet under the highest part of the roof: two thousand years of commerce on one spot, and the painted ironwork above you is only the most recent roof.",
+      "shortDescription": "Horace Jones's 1881 cast-iron arcade over the dead centre of Roman Londinium \u2014 a market on this spot since the 14th century, and Diagon Alley in the first Harry Potter film.",
+      "totalDurationSeconds": 130,
+      "city": "London",
       "walkingDistanceMeters": null
     }
   ]

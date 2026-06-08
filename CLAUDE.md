@@ -29,24 +29,25 @@ These happen **automatically, without the owner asking**.
 | 5 | Session ends (touched code or content) | Update `CLAUDE.md` + `ROADMAP.md` in same commit; write `archive/HANDOFF-YYMMDD.md`; update `archive/README.md` |
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
-| 8 | New tour added that lacks gallery images | Run the image pipeline (§ Image Pipeline) automatically — no prompting. **Exception: owner-supplied images (Portugal/Porto/Lisbon tours) — do not run pipeline, use the provided assets.** |
+| 8 | New tour added (to `Tours.json`) that lacks images | Run the image pipeline (§ Image Pipeline) automatically — no prompting — and **reply with a numbered, labeled contact sheet of ~12 verified CC0 candidates per tour so the owner can pick hero + gallery by number** (e.g. `"3 hero, 1, 7, 9"`). This is the standard "upload tours without images" flow. **Exception: owner-supplied images (Portugal/Porto/Lisbon tours) — do not run pipeline, use the provided assets.** |
 
 ## Image Pipeline
 
 Standard process for sourcing hero + gallery images for tours that don't have owner-supplied assets. Run this automatically whenever a new tour is added without images, or when the owner asks to improve existing images.
 
-**Tools:** Unsplash API (source) → Gemini vision (verification gate) → Pillow (resize/crop) → gh-pages (hosting) → Tours.json patch.
+**Tools:** Unsplash API + Openverse API (sources) → Gemini vision (verification gate) → Pillow (resize/crop) → gh-pages (hosting) → Tours.json patch.
 
-**API keys** (owner pastes fresh each session — do not store):
-- Unsplash: `Client-ID <key>` header on `https://api.unsplash.com/search/photos`
-- Gemini: `?key=<key>` on `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent`
+**Sources & API keys** (owner pastes secret-bearing keys fresh each session — do not store):
+- **Unsplash:** `Client-ID <key>` header on `https://api.unsplash.com/search/photos`. Generic/atmospheric travel shots; weakest at exact-subject match.
+- **Openverse:** `GET https://api.openverse.org/v1/images/` — aggregates 800M+ CC/public-domain works across 45+ sources (Wikimedia Commons, Flickr, Europeana, …) in one call. Search the place by name. No key needed for low volume, but **anonymous is throttled hard (~5 req/hr, 100/day)** — too low for a full pipeline run. To get the Standard tier (much higher limits): register once via `POST https://api.openverse.org/v1/auth_tokens/register/` (JSON: `name`, `description`, `email`) → returns `client_id` + `client_secret`; exchange them for a Bearer token via OAuth2 `client_credentials` at `POST /v1/auth_tokens/token/`, then send `Authorization: Bearer <token>`. Useful query params: `q`, `license`/`license_type`, `source`, `category`, `aspect_ratio=wide`, `size`, `page`, `page_size`. **License policy (owner decision 2026-06-08): prefer public-domain only — `license=cc0,pdm`.** The app has NO attribution UI (no credit field on `Tour`), and CC BY / BY-SA legally require crediting creator + license. PD images (`cc0`, `pdm`) carry no such obligation, so they're safe to ship as-is. Only fall back to BY/BY-SA if PD coverage is too thin *and* the owner OKs it for that tour. Wikimedia downloads: send a descriptive `User-Agent` and space requests ~1.5s apart — `upload.wikimedia.org` returns **HTTP 429** on rapid bursts. **Caveat: Openverse depth varies wildly by subject** — strong for some landmarks, near-empty for others (e.g. Seagram Building = one Wikimedia "Park Av" series + false matches). For a thin subject, query **Wikimedia Commons directly** (MediaWiki API, no key — e.g. the building's `Category:` page) for a deeper, cleaner pool, or add Unsplash.
+- **Gemini:** `?key=<key>` on `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent`
 - Gemini key format: starts with `AQ.` (NOT `AIzaSy` — do not prepend anything)
 
 **Pipeline steps:**
-1. **Search** — 5–6 targeted Unsplash queries per tour, 3 results each, covering different vantage points (exterior, interior, aerial, detail, night, golden hour, etc.). `orientation=landscape&content_filter=high`.
-2. **Verify** — Send each candidate to `gemini-2.5-flash-lite` with a subject-specific YES/NO prompt. Reject non-subject images silently.
-3. **Label** — Crop to 1200×900 WebP q82 (Pillow: `scale = max(W/w, H/h)` → resize → center crop). Add large white-box number + category label for owner review.
-4. **Owner picks** — Send labeled images; owner replies e.g. `"3 hero, 1, 7, 9"`. First number = hero; rest = gallery order.
+1. **Search** — 5–6 targeted queries per tour, ~3 results each, covering different vantage points (exterior, interior, aerial, detail, night, golden hour, etc.). **Sourcing order under the CC0-only policy:** (a) **Openverse** `license=cc0,pdm` (search the landmark by name); (b) if too thin, **Wikimedia Commons directly** filtered to PD (the building's `Category:` page, no key); (c) **Unsplash** (`orientation=landscape&content_filter=high`) for atmospheric coverage — Unsplash needs no per-image credit so it's policy-safe. Filter to images that can crop to 1200×900 without upscaling (`min(w,h)≥900` and the long side ≥1200). Dedupe by image URL before the verify step.
+2. **Verify** — Send each candidate to `gemini-2.5-flash-lite` with a subject-specific YES/NO prompt. Reject non-subject images silently. **Mandatory for Openverse — its result titles are unreliable** (generic strings like "Park Av Nov 2025 01" that may be a neighboring building, a streetscape, or a different landmark entirely); never trust Openverse metadata for subject match, always verify the pixels.
+3. **Label** — Present the verified candidates (~10–12; fewer if the subject is thin) as **individual full-size images, sent inline** (each ~1000px long side, with a large number badge + source/license tag burned into the corner), batched a handful per `SendUserFile` call with a group caption. **Do NOT use a small contact-sheet grid** — owner feedback (2026-06-08): grid tiles are too small to judge. The number burned onto each image is how the owner refers back to it. Use a distinct number namespace per source when mixing (e.g. `1–35` CC0 vs `U01–U32` Unsplash) so picks are unambiguous.
+4. **Owner picks** — Owner replies e.g. `"U07 hero, U01, U22, U20"`. First = hero; the rest = gallery order. Default target is **1 hero + up to ~5 gallery** (owner can pick fewer/more, mix sources, or say "none, leave as-is" / "keep current hero" / "find more on unsplash").
 5. **Process** — Crop selections to final 1200×900 WebP (no label). Name: `{audio-slug}_hero.webp`, `{audio-slug}_2.webp`, etc.
 6. **Upload** — Commit to `gh-pages` branch under `images/`. Pull + rebase if non-fast-forward.
 7. **Patch Tours.json** — Replace `heroImageURL` + set/update `additionalImageURLs`. Commit + push to session branch.
@@ -56,6 +57,8 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 - Owner says "keep current hero in gallery" → put original URL as last entry in `additionalImageURLs`.
 - Too few verified images → tell owner, offer to fetch more with different queries, or skip.
 - Unsplash rate limit (50 req/hr free tier) → pause, note time to reset, continue other work.
+- Openverse rate limit → anonymous is ~5 req/hr (100/day); if hit, authenticate (register → Bearer token, see Sources above) for the Standard tier, or fall back to Unsplash-only for that run.
+- Openverse subject too thin (few/no PD matches) → say so, then try Wikimedia Commons directly (the building's `Category:` page) and/or Unsplash, rather than settling for off-subject or BY-SA shots.
 
 **Audio slug** = the filename stem of the tour's `audioURL` (e.g. `audio/empire-state-building.mp3` → `empire-state-building`). Use this as the image filename prefix. Some older slugs use dots or mixed case — match exactly.
 
@@ -63,7 +66,24 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-07)
+## Current State (2026-06-08)
+
+### London launch — first 5 London tours + Atlas Studio LDN + Openverse source (session 28 — web/PM)
+
+Web/PM session. No Swift/asset/project changes. Two threads: a new image source codified into the pipeline, and the catalog's **first London tours under a new fourth maker**.
+
+- **Openverse added as a pipeline image source** (Rule #8 + § Image Pipeline). Aggregates 800M+ CC/PD works across 45+ sources (Wikimedia, Flickr, Europeana…) in one API. **License policy (owner decision): public-domain only — `license=cc0,pdm`** — the app has no attribution UI, so CC BY/BY-SA are off the table; PD carries no crediting obligation. Lessons baked in: Openverse titles are unreliable → the verify gate is **mandatory**; `upload.wikimedia.org` 429-throttles bursts → descriptive User-Agent + ~1.5s spacing; Openverse depth varies wildly by subject (Seagram = near-empty; St Paul's = deep but skews to historical engravings since modern photos are rarely PD).
+- **"Upload tours without images" protocol formalized** — add tours to `Tours.json` with no images → auto-source candidates → reply with **individual full-size inline images** (not a cramped contact-sheet grid — owner feedback) numbered per source (`1–35` CC0 / `U01–U35` Unsplash) → owner picks `hero + gallery` by number → crop 1200×900 WebP → gh-pages → patch `Tours.json`.
+- **New maker: Atlas Studio LDN** (`9c40396a-74ed-49d2-9796-a41edb9e4105`, 🇬🇧) — London bureau, fourth maker.
+- **5 London tours** (catalog 149 → 154 tours, 154 → 163 stops), all single-stop / geofenced / Atlas Studio LDN, owner-narrated:
+  - **St Paul's Cathedral** (`sacredSites`, 135s) — Wren's triple-shell dome, Ludgate Hill.
+  - **The Monument** (`history`, 117s) — Wren & Hooke's 1677 column to the Great Fire; hero **top-biased crop** to keep the gilded urn (tall-column subjects fight the 1200×900 landscape format — anchor the crop high).
+  - **The Tower of London** (`history`, 138s) — White Tower + fortress from Tower Hill.
+  - **Tower Bridge** (`architecture`, 125s) — Victorian bascule machine; hero shows the bascules raised.
+  - **Leadenhall Market** (`culturalHeritage`, 130s) — Horace Jones's 1881 cast-iron arcade over Roman Londinium.
+- All images Unsplash (owner picked all-modern-photo over CC0 historical art); Unsplash download endpoints triggered per API terms. Audio + images on `gh-pages`, all live-URL spot-checked **200**. Validator clean each time. **All 5 on branch `claude/dreamy-wozniak-nM6a4`, not yet merged to main** — owner to decide on a PR.
+
+**Catalog: 4 makers / 154 tours / 163 stops** (96 Atlas Studio NYC + 37 OPO + 5 LIS + 5 LDN). **Latest TestFlight build: 1.0 (36).**
 
 ### TestFlight 1.0 (36) (session 27 — web/PM)
 
@@ -374,8 +394,8 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **138 tours, 3 makers** in `Resources/Tours.json` (96 Atlas Studio NYC + 37 Atlas Studio Porto + 5 Atlas Studio Lisbon); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **136 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
+- **154 tours, 4 makers** in `Resources/Tours.json` (96 Atlas Studio NYC + 37 Atlas Studio Porto + 5 Atlas Studio Lisbon + 5 Atlas Studio LDN/London); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **152 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
