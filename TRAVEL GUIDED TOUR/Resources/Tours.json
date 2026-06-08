@@ -1761,7 +1761,11 @@
       "longDescription": "The American Museum of Natural History takes up an entire city block on the Upper West Side. What most visitors never see is the outside: four facades, each designed by a different architect, in a different decade, in a completely different style. This tour walks the perimeter \u2014 a Beaux-Arts national temple on Central Park West, an 1890s granite cathedral on 77th Street, a 2023 biomimetic shell on Columbus Avenue, and a glass vitrine housing a floating aluminum sphere on 81st Street. Together they make the most complete history of American museum architecture you can see anywhere in New York City. Allow about 30 minutes to walk it at a comfortable pace.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/USA-NYC-American_Museum_of_Natural_History.JPG/3840px-USA-NYC-American_Museum_of_Natural_History.JPG",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/AMNH__Introduction_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/AMNH__Introduction_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/AMNH__Introduction_4.webp"
+      ],
       "kind": "multiStop",
       "stops": [
         {
@@ -4186,6 +4190,13 @@
           "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_hero.webp",
           "transcriptText": "Citi Field was designed to look like a stadium for a team that doesn't exist anymore.\n\nYou're in Flushing Meadows, Queens, outside Citi Field \u2014 the home of the New York Mets baseball franchise. The stadium opened in 2009, replacing the older Shea Stadium that operated next door from 1964 to 2008. The architect was the firm Populous, the same firm that designed the new Yankee Stadium that opened the same year. But unlike the new Yankee Stadium \u2014 which was designed to imitate the old one across the street \u2014 Citi Field was designed to imitate a different stadium entirely: Ebbets Field, the legendary Brooklyn home of the Brooklyn Dodgers, which was demolished in 1960.\n\nThe Dodgers, as you may know, left Brooklyn in 1957 and moved to Los Angeles. The Mets were founded in 1962 as a National League replacement franchise to fill the void left by the Dodgers and Giants when both moved west. From the team's founding, the Mets cultivated a sense of inheritance from the old Brooklyn franchise \u2014 borrowing colors, names, and emotional weight from a team that had been gone for five years. Citi Field extends that lineage in architecture: the brick facade, the arched windows, the rotunda at the main entrance, all of them deliberate references to the architectural vocabulary of Ebbets Field.\n\nThe rotunda at the main entrance, the first space you walk into, is named the Jackie Robinson Rotunda, in honor of the Brooklyn Dodgers' Hall of Famer who broke baseball's color barrier in 1947. The walls are inscribed with Robinson's words, and his number 42 is retired across all of Major League Baseball \u2014 but it is displayed here with particular prominence, even though Robinson never played a single game in Queens, and never played for the Mets, and was indeed retired before the Mets existed.\n\nWhat makes Citi Field interesting, standing outside it, is the question of what a stadium is supposed to be. The new Yankee Stadium imitates a stadium that stood next door for eighty-six years. Citi Field imitates a stadium that was demolished nearly fifty years before it was built, for a team that left town a decade before that. Both are nostalgia projects in their way, but only one of them has anything actually to be nostalgic about in this location \u2014 Citi Field's nostalgia is borrowed from someone else's borough.\n\nThe Mets play here from April through September, and the stadium is open for public tours in the off-season. Shea Stadium's former footprint, in the parking lot just east of here, is now marked with bases and a home plate where the original ones stood."
         }
+      ],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_6.webp"
       ]
     },
     {
@@ -5407,7 +5418,7 @@
       "shortDescription": "In the 1850s, second only to Niagara Falls as a tourist destination \u2014 and the landscape that directly inspired Central Park.",
       "longDescription": "The Gothic Revival brownstone gate at Fifth Avenue and 25th Street opens onto 478 acres of landscaped hills, ponds, and mausoleums \u2014 the highest natural point in Brooklyn included. Founded in 1838 before public parks existed in New York, Green-Wood drew half a million visitors a year by the 1850s. Frederick Law Olmsted came here; the experience helped convince New York that the city needed Central Park. Six hundred thousand people are buried at Green-Wood: Leonard Bernstein, Jean-Michel Basquiat, Samuel Morse, Louis Comfort Tiffany, Boss Tweed, and Charles Ebbets, who built Ebbets Field for the Brooklyn Dodgers. The cemetery is still active and increasingly functions, again, as a public space.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2015_Green-Wood_Cemetery_Gate_from_outside.jpg/1280px-2015_Green-Wood_Cemetery_Gate_from_outside.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/GreenWood_Cemetery_Main_Gate_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5444,7 +5455,12 @@
         "history",
         "sunset-park"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/GreenWood_Cemetery_Main_Gate_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/GreenWood_Cemetery_Main_Gate_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/GreenWood_Cemetery_Main_Gate_4.webp"
+      ]
     },
     {
       "id": "3d117c47-6c6e-42b8-a0f9-9820796d85de",
@@ -5452,7 +5468,7 @@
       "shortDescription": "In 1991, construction workers digging for a federal office tower uncovered a colonial-era cemetery for ten to twenty thousand Africans \u2014 lost for two hundred years beneath Lower Manhattan.",
       "longDescription": "The polished black granite memorial on Duane Street marks the location of the largest known colonial-era cemetery for Africans and African Americans in North America. Used for over a century beginning around 1697, the burial ground held the remains of enslaved and free Africans who were forbidden from burying their dead in the city's churchyards. By the late eighteenth century it was paved over and forgotten. When federal construction crews uncovered it in 1991, the project stopped; over four hundred individuals were excavated and studied at Howard University, then re-interred on site in 2003 in coffins of African mahogany. The memorial, designed by architect Rodney Leon, was dedicated in 2007. President Bush designated it a National Monument in 2006 \u2014 the only one in New York City.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Looking_up_in_African_Burial_Ground_National_Monument.jpg/1280px-Looking_up_in_African_Burial_Ground_National_Monument.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/African_Burial_Ground_National_Monument_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5488,7 +5504,10 @@
         "2007",
         "archaeology"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/African_Burial_Ground_National_Monument_2.webp"
+      ]
     },
     {
       "id": "364c2287-c6c1-4850-bc9e-cce71fe29d2c",
@@ -5926,7 +5945,10 @@
         "1926",
         "1991"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/schomburg_center_2.webp"
+      ]
     },
     {
       "id": "8add1db1-098c-48c1-a637-cf71e30b05dd",
