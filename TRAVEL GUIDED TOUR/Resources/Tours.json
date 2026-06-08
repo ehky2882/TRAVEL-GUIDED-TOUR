@@ -7403,6 +7403,55 @@
       "totalDurationSeconds": 130,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "e7a2d9c4-1b86-4f30-8a75-2c9e6b3d8f41",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Gherkin",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gherkin_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gherkin_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gherkin_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gherkin_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gherkin_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gherkin_6.webp"
+      ],
+      "tags": [
+        "the gherkin",
+        "30 st mary axe",
+        "norman foster",
+        "2004",
+        "skyscraper",
+        "city of london",
+        "baltic exchange"
+      ],
+      "stops": [
+        {
+          "id": "b8e4c1f6-3d97-4a52-9c08-5e2a7b6d1f93",
+          "order": 0,
+          "title": "The Gherkin",
+          "caption": "Step back on St Mary Axe until you can see the whole curve of the tower against the sky.",
+          "latitude": 51.5144,
+          "longitude": -0.0803,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-gherkin.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gherkin_hero.webp",
+          "transcriptText": "Every Londoner calls this building a pickle, and the architects have made their peace with it.\n\nYou're looking up at 30 St Mary Axe \u2014 officially that, universally \"the Gherkin.\" Forty-one storeys of glass and steel, curved like a bullet or a pinecone or, yes, a pickle, tapering at the top and swelling in the middle. It was designed by Norman Foster's practice and completed in 2004, and when it opened it was the first new skyscraper in the City of London in a generation. It broke the seal. Everything tall and strange that has gone up around it since \u2014 and look around, there's a forest of it now \u2014 followed the Gherkin.\n\nLook at the shape and notice it isn't decoration. The bulge in the middle means the building is widest where the wind would otherwise hit it hardest, and the curve lets air slip around it rather than slamming into a flat wall \u2014 which matters enormously for a tall tower in a windy city. The spiralling dark lines climbing the glass are light wells, drawing daylight deep into the floors and letting the building breathe through natural ventilation. It looks playful. It's actually one of the most quietly logical tall buildings in London.\n\nBut the reason it stands here at all is grim. This was the site of the Baltic Exchange, a beautiful Edwardian trading hall wrecked by an IRA bomb in 1992. The blast killed three people and damaged the old building beyond saving. After years of argument over what to do with the wound in the streetscape, the City chose this \u2014 a deliberately forward-looking tower on a site defined by destruction.\n\n[beat]\n\nThere's a neat irony in what it became. The Gherkin was built as offices for a giant insurance company \u2014 a business that exists to put a price on disaster \u2014 on the spot where a disaster had just rewritten the map. The City rebuilt itself, as it always does, and made the rebuilding into a landmark.\n\nStep back far enough to see the whole curve against the sky. It's twenty years old now, dwarfed by newer, taller neighbours it made possible \u2014 and still the one everybody points at."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.5144,
+      "centroidLongitude": -0.0803,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "30 St Mary Axe \u2014 universally 'the Gherkin' \u2014 is 41 storeys of glass and steel curved like a bullet or a pinecone, tapering at the top and swelling in the middle. Designed by Norman Foster's practice and completed in 2004, it was the first new skyscraper in the City of London in a generation; it broke the seal, and the forest of tall, strange towers that has gone up around it since followed the Gherkin. The shape isn't decoration: the bulge puts the building at its widest where the wind would hit hardest, and the curve lets air slip around it rather than slamming into a flat wall \u2014 while the spiralling dark lines climbing the glass are light wells, drawing daylight deep into the floors and letting the tower breathe through natural ventilation. It looks playful; it's one of the most quietly logical tall buildings in London.\n\nBut the reason it stands here is grim. This was the site of the Baltic Exchange, a beautiful Edwardian trading hall wrecked by an IRA bomb in 1992 that killed three people and damaged the building beyond saving. After years of argument over the wound in the streetscape, the City chose a deliberately forward-looking tower \u2014 and there's a neat irony in what it became: built as offices for a giant insurance company, a business that exists to put a price on disaster, on the spot where a disaster had just rewritten the map. Step back far enough to see the whole curve against the sky. It's twenty years old now, dwarfed by the taller neighbours it made possible \u2014 and still the one everybody points at.",
+      "shortDescription": "Norman Foster's 2004 tower at 30 St Mary Axe \u2014 the curved glass 'pickle' that broke the seal on the modern City skyline, built on the bomb-wrecked site of the Baltic Exchange.",
+      "totalDurationSeconds": 129,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
