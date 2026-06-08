@@ -7104,6 +7104,54 @@
       "totalDurationSeconds": 138,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "c1f8b6e3-4d29-4a75-9e08-3b5a7d2c8f61",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Tower Bridge",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_5.webp"
+      ],
+      "tags": [
+        "tower bridge",
+        "bascule bridge",
+        "victorian engineering",
+        "river thames",
+        "1894",
+        "gothic revival",
+        "city of london"
+      ],
+      "stops": [
+        {
+          "id": "e5c81a37-9b24-4f60-8d13-7a2e6c0f9b48",
+          "order": 0,
+          "title": "Tower Bridge",
+          "caption": "Stand by the Thames with the two Gothic towers and the lifting roadway in front of you.",
+          "latitude": 51.5055,
+          "longitude": -0.0754,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tower-bridge.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-bridge_hero.webp",
+          "transcriptText": "This is the most Victorian object in London: a machine for the future, dressed up as the past.\n\nYou're looking at Tower Bridge \u2014 and the first thing to do is correct a misunderstanding, because half the people who photograph it think they're looking at London Bridge. They're not. London Bridge is the plain one upstream. This is the famous one: two great Gothic towers in pale stone, linked by high walkways, with a roadway between them that splits and lifts to let ships through. It opened in 1894.\n\nLook at those towers properly. They look medieval \u2014 pointed, turreted, like something from a castle four hundred years older than they are. That is entirely deliberate, and it's a kind of lie. Underneath the stone, the towers are steel \u2014 a riveted steel frame, cutting-edge engineering for the 1890s, then clad in stone so it wouldn't clash with the actual medieval Tower of London right beside it. The architect dressed a modern machine in a historical costume so it would look like it belonged.\n\nAnd it is a machine. The whole central section \u2014 the two halves of roadway, each weighing about a thousand tonnes \u2014 used to be lifted by steam. Coal-fired boilers raised steam, the steam drove pumping engines, the engines pressurised water, and the water powered the mechanism that swung the great leaves up in about a minute. It still opens around eight hundred times a year, though electric motors do the lifting now. The Victorians built a drawbridge for the largest port on earth and made it work like clockwork.\n\n[beat]\n\nThe bridge has a darker piece of trivia, too. In 1952 a double-decker bus was halfway across when the bridge began to rise beneath it \u2014 and the driver, rather than stop, accelerated and jumped the gap as the south leaf climbed. He made it. The bus landed on the far side and nobody was seriously hurt.\n\nStand here a while and watch it. If you're lucky the bridge will lift while you wait \u2014 and you'll see a hundred-and-thirty-year-old machine do exactly the thing it was built to do, in a city that long ago stopped needing it to."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.5055,
+      "centroidLongitude": -0.0754,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Tower Bridge is the most Victorian object in London: a machine for the future dressed up as the past \u2014 and not, despite the constant confusion, London Bridge (the plain one upstream). Two great Gothic towers in pale stone, linked by high walkways, with a roadway between them that splits and lifts to let ships through; it opened in 1894. The towers look medieval, pointed and turreted, but that is deliberate stagecraft: underneath the stone they are a riveted steel frame \u2014 cutting-edge engineering for the 1890s \u2014 clad in masonry so they wouldn't clash with the actual medieval Tower of London right beside them. The architect dressed a modern machine in a historical costume so it would look like it belonged.\n\nAnd it is a machine. The central section \u2014 two roadway leaves, each about a thousand tonnes \u2014 was originally lifted by steam: coal-fired boilers raised steam, the steam drove pumping engines, the engines pressurised water, and the water swung the great leaves up in about a minute. It still opens around 800 times a year, though electric motors do the lifting now. There is a darker piece of trivia, too: in 1952 a double-decker bus was halfway across when the bridge began to rise, and the driver accelerated and jumped the gap as the south leaf climbed \u2014 he made it, and nobody was seriously hurt. Stand and watch a while; with luck the bridge will lift, and you'll see a 130-year-old machine do exactly the thing it was built to do, in a city that long ago stopped needing it to.",
+      "shortDescription": "London's most-photographed bridge \u2014 two mock-Gothic towers hiding a riveted-steel Victorian machine, whose 1,000-tonne bascules still lift about 800 times a year.",
+      "totalDurationSeconds": 125,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
