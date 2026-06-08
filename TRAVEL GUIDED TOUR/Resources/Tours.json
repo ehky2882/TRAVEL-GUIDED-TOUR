@@ -23,6 +23,14 @@
       "avatarEmoji": "\ud83c\uddf5\ud83c\uddf9",
       "bio": "Atlas Studio's Lisbon bureau \u2014 audio tours of the city's architecture and culture.",
       "websiteURL": null
+    },
+    {
+      "id": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "displayName": "Atlas Studio LDN",
+      "avatarURL": null,
+      "avatarEmoji": "\ud83c\uddec\ud83c\udde7",
+      "bio": "Atlas Studio's London bureau \u2014 audio tours of the city's architecture and history.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -6951,6 +6959,55 @@
       "shortDescription": "Marcel Breuer's 1966 Brutalist masterpiece at 945 Madison \u2014 granite-clad inverted ziggurat, former Whitney Museum, then Met Breuer, then Frick Madison, now Sotheby's global headquarters.",
       "totalDurationSeconds": 200,
       "city": "New York",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "9776d9ce-94c5-490d-a0d8-cb5a0241d83f",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "St Paul's Cathedral",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_6.webp"
+      ],
+      "tags": [
+        "st paul's cathedral",
+        "christopher wren",
+        "dome",
+        "ludgate hill",
+        "city of london",
+        "baroque",
+        "the blitz"
+      ],
+      "stops": [
+        {
+          "id": "056b86ce-7664-435f-9dd2-51400a66d1d4",
+          "order": 0,
+          "title": "St Paul's Cathedral",
+          "caption": "Stand on Ludgate Hill, looking up at the west front and the great dome of Wren's cathedral.",
+          "latitude": 51.5138,
+          "longitude": -0.0984,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-pauls-cathedral.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-cathedral_hero.webp",
+          "transcriptText": "There has been a cathedral on this spot for fourteen hundred years. This is the fifth.\n\nYou're standing on Ludgate Hill, looking up at the west front of St Paul's \u2014 the great pair of towers, the deep portico of paired columns, and behind them, rising over everything, the dome. This is Christopher Wren's cathedral, built between 1675 and 1710 to replace the medieval St Paul's that burned in the Great Fire of London in 1666. Wren was an astronomer and mathematician before he was an architect, and it shows: the dome above you is one of the largest in the world, and it's a piece of structural cunning as much as a piece of beauty.\n\nLook at the dome properly. What you see is not quite what's holding it up. Wren built three domes, one inside the next \u2014 an outer dome of timber and lead for the skyline, an inner dome for the view from the cathedral floor, and hidden between them a brick cone that does the actual structural work of carrying the stone lantern at the top. The graceful thing on the skyline and the strong thing doing the lifting are not the same object. That's the astronomer's mind: solve the problem you can't see, and let the visible part be calm.\n\nFor over two hundred years this dome was the tallest thing in London, and the city was legally arranged to keep it that way. Protected sightlines \u2014 the famous views of St Paul's from across the city \u2014 are still written into London planning law today, which is why certain towers have strange notches and angles cut into them: they were bent out of the way of the cathedral.\n\n[beat]\n\nBut the image most Londoners carry of this building isn't from the seventeenth century. It's from the night of the twenty-ninth of December, nineteen forty, during the Blitz, when a photographer caught the dome standing serene above a city wrapped in smoke and fire. St Paul's survived the war largely intact while much of the surrounding city did not, and that photograph became a national symbol \u2014 the thing that did not fall. Wren built a cathedral. The twentieth century turned it into a promise the city had kept.\n\nStay on the hill a moment before you go in. The dome rewards being looked at slowly \u2014 and it was built, three layers deep, by a man who knew you'd only ever see one of them."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5138,
+      "centroidLongitude": -0.0984,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The west front of St Paul's rises over Ludgate Hill \u2014 paired columns, twin towers, and behind them Christopher Wren's great dome, built between 1675 and 1710 to replace the medieval cathedral that burned in the Great Fire of London in 1666. Wren was an astronomer and mathematician before he was an architect, and the dome is structural cunning as much as beauty: three domes nested one inside the next \u2014 an outer timber-and-lead shell for the skyline, an inner dome for the view from the floor, and a hidden brick cone between them that carries the stone lantern at the top. The graceful thing on the skyline and the strong thing doing the lifting are not the same object.\n\nFor over two hundred years this was the tallest building in London, and the city was arranged by law to keep it visible \u2014 the protected sightlines of St Paul's are still written into London planning law, which is why certain towers carry strange notches cut to clear the view. But the image most Londoners carry of the cathedral is from the night of 29 December 1940, during the Blitz, when a photographer caught the dome standing serene above a city wrapped in smoke and fire. St Paul's survived the war largely intact while much around it did not, and that photograph became a national symbol \u2014 the thing that did not fall.",
+      "shortDescription": "Christopher Wren's baroque masterpiece on Ludgate Hill \u2014 the triple-shell dome that survived the Blitz and still shapes London's legally protected skyline.",
+      "totalDurationSeconds": 135,
+      "city": "London",
       "walkingDistanceMeters": null
     }
   ]
