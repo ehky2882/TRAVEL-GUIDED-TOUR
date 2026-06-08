@@ -5721,7 +5721,7 @@
       "shortDescription": "Ten blocks, twenty-five minutes, one story: almost every building on this stretch replaced a Gilded Age mansion. Find the one that didn't.",
       "longDescription": "A walking tour from Grand Army Plaza at 59th Street south to Saks and Rockefeller Center at 50th \u2014 the most famous retail strip in the world, built almost entirely on the footprint of demolished private houses. Between 1910 and 1940, the Vanderbilt, Astor, Carnegie, Whitney, and Gould mansions were torn down one by one and replaced by department stores, hotels, and corporate towers. The walk visits the Apple Cube at the GM Building, the Tiffany and Bergdorf corner at 57th Street, and the only surviving mansion: the Cartier building at 52nd Street, traded in 1917 for a pearl necklace. St. Patrick's Cathedral and Rockefeller Center frame the southern end. Walk south on the east side of the avenue.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cartier_Building_-_NYC_%2851395758693%29.jpg/1280px-Cartier_Building_-_NYC_%2851395758693%29.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fifth_avenue_multistop_01_grand_army_hero.webp",
       "kind": "multiStop",
       "introAudioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fifth_avenue_multistop_00_intro.mp3",
       "stops": [
@@ -5828,7 +5828,19 @@
         "rockefeller-center",
         "1910s"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fifth_avenue_multistop_01_grand_army_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fifth_avenue_multistop_01_grand_army_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fifth_avenue_multistop_01_grand_army_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fifth_avenue_multistop_01_grand_army_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fifth_avenue_multistop_01_grand_army_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fifth_avenue_multistop_01_grand_army_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fifth_avenue_multistop_01_grand_army_8.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fifth_avenue_multistop_01_grand_army_9.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fifth_avenue_multistop_01_grand_army_10.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fifth_avenue_multistop_01_grand_army_11.webp"
+      ]
     },
     {
       "id": "109ccfc9-3c6d-4ec7-bc70-09ed412b9ff3",
