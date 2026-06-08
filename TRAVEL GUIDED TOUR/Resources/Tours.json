@@ -446,7 +446,7 @@
       "shortDescription": "Two minutes on the two voids where the towers stood, the bronze parapets cut with three thousand names, and the architect's harder-than-usual job.",
       "longDescription": "The two pools sit exactly where the Twin Towers stood. Each is roughly one acre \u2014 the actual footprint of the buildings that once rose from this ground. Water falls thirty feet into each pool, then another twenty into a smaller square void at the centre: the largest manmade waterfalls in North America. The memorial is called \"Reflecting Absence,\" designed by Michael Arad after a competition that drew over five thousand submissions. Where the towers reached upward, the pools reach downward.\n\nThe bronze parapets are cut with the names of nearly three thousand dead \u2014 those killed here on September 11, 2001, and the six killed in the 1993 World Trade Center bombing. The names are not alphabetical. Arad's team used what they called \"meaningful adjacencies\" \u2014 coworkers next to coworkers, friends next to friends, those who died together placed together. Two minutes on the design, the Survivor Tree, and the architect's harder-than-usual job: not a monument to impose meaning, but a space that holds room for whoever shows up.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/9-11_Memorial_and_Museum_%2828815276064%29.jpg/1280px-9-11_Memorial_and_Museum_%2828815276064%29.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nine-eleven-memorial_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -479,7 +479,12 @@
         "memorial",
         "reflecting absence"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nine-eleven-memorial_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nine-eleven-memorial_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nine-eleven-memorial_4.webp"
+      ]
     },
     {
       "id": "cc251534-28cb-4f9b-bded-24602cef3a95",
@@ -520,7 +525,11 @@
         "prospect heights",
         "museum"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-museum_3.webp"
+      ]
     },
     {
       "id": "b66f9ad2-0562-4038-a5c0-ba198f0bc2de",
@@ -650,7 +659,11 @@
         "museum",
         "1936"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/american-museum-natural-history_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/american-museum-natural-history_3.webp"
+      ]
     },
     {
       "id": "540613ee-b72f-4460-95ff-a03d921681ae",
@@ -691,7 +704,12 @@
         "park",
         "2010"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-bridge-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-bridge-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-bridge-park_4.webp"
+      ]
     },
     {
       "id": "aca59342-5146-44d7-9ed1-b273edce0ad6",
@@ -883,7 +901,7 @@
       "shortDescription": "Two minutes on the USS Intrepid \u2014 the carrier that survived five kamikaze hits, then fished astronauts out of the sea.",
       "longDescription": "Docked at Pier 86, off the Hudson River Greenway near 46th Street, is the USS Intrepid \u2014 nine hundred feet of aircraft carrier, twenty-seven thousand tons, with preserved warplanes on her flight deck, a Concorde parked to her north, and the Space Shuttle Enterprise in a pavilion behind. She was launched in 1943, six months after Pearl Harbor, and fought across the Pacific \u2014 Truk, the Philippines, Okinawa. Japanese kamikaze planes hit her five times; each time she was repaired and sent back into combat. Her crews called her \"the Fighting I.\"\n\nHer service didn't end with the war. She became a Cold War submarine-hunter, then a Vietnam-era carrier, then a recovery vessel for the Mercury and Gemini space programs \u2014 when astronauts splashed down in the ocean, Intrepid's helicopters pulled them out of the water. By the time she was decommissioned in 1974, she had served three decades, in three wars, and at the dawn of the space age.\n\nThe museum is what saved her. The Navy planned to scrap her in the early 1980s, until a real estate developer named Zachary Fisher led a campaign to preserve her instead; in 1982 she became the centerpiece of this museum. The Concorde and the Enterprise came later \u2014 retired Concorde airframes donated by British Airways and Air France after the program ended in 2003, and the Enterprise, the prototype shuttle that flew test flights but never reached space, acquired from NASA in 2012. Go aboard: walk the hangar deck, climb to the flight deck. There aren't many places where you can stand on a piece of equipment that fought a world war, then watched the space age begin.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Intrepid_Museum_%2849052290092%29.jpg/1280px-Intrepid_Museum_%2849052290092%29.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/intrepid-museum_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -916,7 +934,10 @@
         "space shuttle",
         "hudson river"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/intrepid-museum_2.webp"
+      ]
     },
     {
       "id": "05f53b83-abde-422e-9d6f-a2bb21c4be07",
@@ -924,7 +945,7 @@
       "shortDescription": "Two and a half minutes from the high point of Heatherwick's concrete-tulip park, built where the Carpathia once landed Titanic survivors.",
       "longDescription": "The Southwest Overlook is the highest point on Little Island \u2014 a 2.4-acre park floating above the Hudson at 13th Street, in the Meatpacking District. From here you can see most of the park at a glance: the amphitheater curving down toward the water below you, the Hudson stretching south toward the Statue of Liberty, and the Manhattan skyline to the east with Hudson Yards just north and the Empire State Building beyond it. Directly beneath your feet is the engineering trick that holds the whole park up \u2014 more than a hundred concrete piles rising out of the river, each carved into a shallow bowl. Concrete tulips.\n\nThe site used to be Pier 54, one of the great transatlantic piers of the early twentieth century. The Lusitania departed from here on its final voyage in 1915; three years earlier, the Cunard ship Carpathia had docked at this pier carrying the seven hundred and ten passengers and crew rescued from the lifeboats of the Titanic. The pier was destroyed by Hurricane Sandy in 2012, by which point it was already long abandoned.\n\nWhat was built in its place is one of the most expensive privately funded public parks in American history. Little Island opened in 2021, designed by Heatherwick Studio \u2014 the same firm behind the Vessel in Hudson Yards \u2014 at a cost of around two hundred and sixty million dollars, almost all of it paid by Barry Diller and Diane von Furstenberg. The concrete tulips were an engineering answer to the fact that the Hudson bottom couldn't take a normal pier; Heatherwick designed a park that floats on a forest of stems. The amphitheater below hosts free music, theater, and dance all summer, and the view from here is one of the better sunset views in Manhattan.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Little_Island_NYC.jpg/1280px-Little_Island_NYC.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/little-island_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -957,7 +978,13 @@
         "pier 54",
         "titanic"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/little-island_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/little-island_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/little-island_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/little-island_5.webp"
+      ]
     },
     {
       "id": "bc45f93d-016b-455c-ac94-e5c82f60d77c",
@@ -965,7 +992,7 @@
       "shortDescription": "Two minutes on the workhorse bridge of New York \u2014 and the corner in DUMBO where everyone takes the picture.",
       "longDescription": "On the corner of Washington and Water Streets in DUMBO, look east. The view in front of you \u2014 the Manhattan Bridge framing the Empire State Building, with the cobblestones of Washington Street running toward it \u2014 has shown up in more films, fashion shoots, and Instagram photos than almost any other view in New York. Every day a few hundred people stop on this spot to take the picture.\n\nThe bridge itself is the Manhattan Bridge \u2014 a suspension bridge with a main span of just under fifteen hundred feet, designed by the engineer Leon Moisseiff and opened in 1909, twenty-six years after the Brooklyn Bridge just to the south. Where the Brooklyn Bridge is the romantic one, the older sibling on every postcard, the Manhattan Bridge is the workhorse: four subway lines run across its lower decks, seven lanes of cars cross its middle, and a pedestrian walkway and a separate bike lane sit above. It is what actually keeps Lower Manhattan connected to Brooklyn day in and day out.\n\nOn the Manhattan side, the bridge's grand entrance \u2014 a Beaux-Arts colonnade and triumphal arch on the Bowery \u2014 was designed by Carr\u00e8re and Hastings, the firm behind the New York Public Library. It is some of the most impressive civic architecture in the city, and almost nobody notices. But what most people see is what you're looking at right now: the bridge framed in a perfect Brooklyn view, with Manhattan visible through its arches. Take the photo. Then walk under the bridge and out to the East River \u2014 the view from the waterfront is even better.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Manhattan_Bridge_view_from_Washington_Street_DUMBO_Brooklyn_Morning_2022.jpg/1280px-Manhattan_Bridge_view_from_Washington_Street_DUMBO_Brooklyn_Morning_2022.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/manhattan-bridge-from-dumbo_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -998,7 +1025,11 @@
         "beaux-arts",
         "east river"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/manhattan-bridge-from-dumbo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/manhattan-bridge-from-dumbo_3.webp"
+      ]
     },
     {
       "id": "21c1b7e3-b8fb-413b-83b7-0fa67693155c",
@@ -1051,7 +1082,7 @@
       "shortDescription": "Just under two minutes at Patience and Fortitude \u2014 the 1911 Beaux-Arts library where anyone can walk in and read a Gutenberg.",
       "longDescription": "At Fifth Avenue and 42nd Street, two marble lions sit at the foot of the steps: Patience and Fortitude. They were carved in 1911 by Edward Clark Potter and originally named Leo Astor and Leo Lenox, after the two wealthy donors whose private libraries became the foundation of the collection. In the depths of the Depression, Mayor Fiorello La Guardia renamed them \u2014 the virtues, he said, that New Yorkers would need to survive the decade. The names stuck.\n\nThe building they guard is the main branch of the New York Public Library, a solid white-marble Beaux-Arts landmark with six Corinthian columns and a carved frieze above the steps, essentially unchanged since 1911. Bryant Park sits directly behind it. The site was previously occupied by the Croton Reservoir \u2014 a massive granite structure that had supplied New York's drinking water for half a century \u2014 and the library, the result of an 1895 agreement among three private libraries to merge their holdings into a single free public reference library, took fourteen years to build.\n\nInside is one of the largest research libraries in the world \u2014 over fifty-five million items, including a Gutenberg Bible, the original copy of Jefferson's draft of the Declaration of Independence, and the manuscript of George Washington's farewell address. The Rose Reading Room \u2014 three hundred feet long, its ceiling painted with murals of clouds \u2014 is one of the great rooms in any American building. And it's all free. Anyone can walk in. That was the founders' idea, and it still is.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Public_Building_Library.jpg/1280px-Public_Building_Library.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -1084,7 +1115,15 @@
         "1911",
         "rose reading room"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/new-york-public-library_7.webp"
+      ]
     },
     {
       "id": "32d39027-caf6-4b14-96c4-8ab8981f1675",
@@ -1092,7 +1131,7 @@
       "shortDescription": "Two minutes on Calatrava's white-ribbed Oculus at the World Trade Center \u2014 a $4 billion train station shaped like a dove.",
       "longDescription": "On the World Trade Center plaza stands a white skeleton of steel ribs that looks, depending on the angle, like a dove, a whale, or a ribcage. The ribs curve upward to a three-hundred-and-fifty-foot skylight running the length of the building. This is the Oculus \u2014 at heart, a train station: inside is the Westfield mall, and beneath that, the PATH transit station that connects Manhattan to New Jersey. The PATH station beneath the original Twin Towers was destroyed on September 11, and the brief for its replacement was ambitious \u2014 not just to rebuild infrastructure, but to create a symbol, a phoenix rising on the site. The Spanish architect Santiago Calatrava \u2014 known for sculptural transportation hubs that lean into the boundary between engineering and art \u2014 got the commission.\n\nCalatrava's original concept was a dove of peace being released from a child's hands. The white ribs flaring out around you are its wings. The execution didn't go smoothly. Construction stretched on for years, opening in 2016 \u2014 seven years behind schedule \u2014 and went four billion dollars over its initial estimate. Critics savaged it; the New York Times called it a monument to public extravagance. The wings, which were designed to mechanically open and let light pour in on September 11 each year, did so for only a few years before the mechanism was largely deactivated.\n\nAnd yet \u2014 when you walk inside and the light pours down through the skylight onto the white marble floor, it's hard not to be moved. The building works as a sculpture, even if it failed as a transit project. Fifty million people pass through it every year and almost all of them stop to look up. Whatever Calatrava's intentions, he built something people respond to. The interior is the experience \u2014 stand under the ribs and look up.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Oculus_NYC.jpg/1280px-Oculus_NYC.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oculus_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -1125,7 +1164,10 @@
         "transit hub",
         "2016"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oculus_2.webp"
+      ]
     },
     {
       "id": "0bb4b9ae-ae40-4759-9128-ea433d378bb8",
@@ -1133,7 +1175,7 @@
       "shortDescription": "Two minutes at the Gothic cathedral that began on the city's northern frontier \u2014 built by Irish-American pennies into a claim to belong.",
       "longDescription": "On Fifth Avenue between 50th and 51st Streets, two white-marble spires rise three hundred and thirty feet above the sidewalk. This is St. Patrick's Cathedral \u2014 the seat of the Archdiocese of New York and the largest Gothic Revival Catholic cathedral in the United States. It was designed by James Renwick Jr., the architect of the Smithsonian Castle in Washington and Grace Church downtown, in a Gothic style modeled on the great cathedrals of France and Germany. Construction began in 1858 and continued through the Civil War, finally opening in 1879.\n\nWhat made it remarkable wasn't just the architecture. When ground was broken, this stretch of Fifth Avenue was the northern frontier of the city \u2014 open fields, a few farmhouses. Locating the cathedral here was deliberate: a public claim that Irish-American Catholics, then the city's largest immigrant group and one of its most despised, belonged at the center of New York's future. Archbishop John Hughes raised the construction funds largely from the city's Catholic poor \u2014 pennies and nickels from servants, laborers, and washerwomen, contributed over two decades. The result was a building whose presence was, and is, a political statement as much as a religious one.\n\nSt. Patrick's remains a working cathedral. Mass is celebrated multiple times a day. State funerals have been held here for Babe Ruth, Robert F. Kennedy, and Joe DiMaggio. The bronze doors weigh more than nine thousand pounds each. The Rose Window above the main entrance is twenty-six feet across. And the side chapels, including the Lady Chapel behind the main altar, are open to anyone who walks in \u2014 a quiet pocket of stone and stained glass that, on a weekday morning, feels like a different city entirely.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/2013_Exterior_of_St._Patrick%27s_Cathedral_%28Manhattan%29_%282%29.jpg/1280px-2013_Exterior_of_St._Patrick%27s_Cathedral_%28Manhattan%29_%282%29.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-patricks-cathedral_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -1166,7 +1208,11 @@
         "1879",
         "irish-american"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-patricks-cathedral_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-patricks-cathedral_3.webp"
+      ]
     },
     {
       "id": "bedf6d2d-ebdb-4b2e-b3e3-ba160f18d2d1",
@@ -1207,7 +1253,15 @@
         "public art",
         "the shed"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vessel-hudson-yards_7.webp"
+      ]
     },
     {
       "id": "715c30c6-bec9-49de-ba5d-f0686e3546a9",
@@ -1248,7 +1302,11 @@
         "1789",
         "1792"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wall-street_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wall-street_3.webp"
+      ]
     },
     {
       "id": "83090c8c-ab5d-4311-a881-519b1e36183e",
@@ -1652,7 +1710,10 @@
         "kinetic architecture",
         "performance"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shed_2.webp"
+      ]
     },
     {
       "id": "0e32b78d-1538-4571-a18e-0c2a609a9a6b",
@@ -2123,7 +2184,9 @@
       "longDescription": "At the corner of 55th Street and 6th Avenue stands the LOVE sculpture by Robert Indiana \u2014 four red letters arranged in two rows, the second 'O' tilted at a thirty-degree angle, painted red on the front and blue and green on the sides. Installed in 1971, it is one of the most reproduced images in American art history. The image started as a Christmas card: in 1964, MoMA commissioned Indiana to design a card for their annual greeting series. He sent in three sketches, the Museum picked the LOVE one, and it went out in 1965. Then it escaped. Within a few years the design was on t-shirts, posters, postcards, mugs, and jewelry. The U.S. Postal Service issued a LOVE stamp in 1973. Indiana had never copyrighted the image \u2014 copyright in the 1960s was less aggressive than now, and the design had spread through legitimate reproductions before he could establish exclusive rights. By the time he tried to protect it, it was effectively public domain. He kept making the image \u2014 paintings, sculptures, prints, in every color and configuration \u2014 and the sculptures were among his only consistent source of income from the design. He spent the last decades of his life on an island off the coast of Maine, increasingly isolated and frustrated, and died in 2018. The original 1965 Christmas card is in MoMA's collection, two blocks south.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/LOVE_sculpture_NY.JPG/1280px-LOVE_sculpture_NY.JPG",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/LOVE_Sculpture_2.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -2217,8 +2280,11 @@
       "shortDescription": "This statue was installed illegally \u2014 and has since been completely absorbed into the culture it was made in opposition to.",
       "longDescription": "In the median of Broadway at Bowling Green stands the Charging Bull \u2014 a three-and-a-half-ton bronze sculpture by Sicilian-born artist Arturo Di Modica, eleven feet tall and sixteen feet long. Nobody asked him to make it. Alarmed by the 1987 stock market crash, the largest single-day percentage drop in Wall Street history, Di Modica decided to make an unsolicited gift to the city: a bronze bull embodying American resilience as an optimistic taunt at the crash. He worked for two years, paying roughly $300,000 of his own money for the bronze and foundry work. On the night of December 15, 1989, he drove a flatbed truck up Broadway, lowered the bull onto the sidewalk outside the New York Stock Exchange, and left. The police removed it the next morning \u2014 but it had already gone viral in a pre-internet way, news crews having filmed the installation, and a public outcry demanded it be brought back. The Parks Department relocated it here to Bowling Green, where it has remained ever since. What's striking is what it has come to mean. Di Modica installed it as a protest gift \u2014 an outsider artist commenting on financial collapse \u2014 but it has been completely absorbed into Wall Street culture. The fact that it was an unauthorized guerrilla installation by an Italian immigrant has been almost entirely written out of the popular understanding. The bronze is polished bright in the places people touch most: the horns, the nose, and the testicles. The dull patina elsewhere is the original finish.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Bowling_Green_td_%282018-12-13%29_06_-_26_Broadway%2C_Charging_Bull.jpg/1280px-Bowling_Green_td_%282018-12-13%29_06_-_26_Broadway%2C_Charging_Bull.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_3.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -2266,7 +2332,10 @@
       "longDescription": "The Unisphere sits in a reflecting pool in Flushing Meadows Corona Park, Queens, on the site of the 1964 World's Fair. One hundred and forty feet tall, weighing 900,000 pounds \u2014 the largest representation of the Earth ever built. The three rings around it represent the orbits of the first artificial satellites: Sputnik, Telstar, and the Apollo astronauts. Built by U.S. Steel as the centerpiece of the 1964-65 World's Fair, the globe drew 51 million visitors over two seasons under the theme \"Peace Through Understanding.\" The fair saw the public debut of the Ford Mustang, the picturephone, the IBM Selectric typewriter, and a Disney attraction called It's a Small World that opened here before moving to Disneyland. When the fair ended in 1965, almost all pavilions were dismantled. The Unisphere was meant to remain as a permanent monument \u2014 but the maintenance budget didn't survive. Through the 1970s and 80s the globe rusted in place, the reflecting pool sat empty, the plaza abandoned. The city was broke and the future was elsewhere. Restored in 1994 when the city found parks funding again, it is today what it was supposed to be in 1965: a monument to the postwar American belief that the future was something you could build, and that it would be an optimistic place to live. The New York State Pavilion's flying-saucer towers still stand across the plaza \u2014 ruins of the same fair \u2014 alongside the Queens Museum. The whole park is a layered ruin of a future that didn't quite arrive.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Flushing_Meadows_Fair_Grounds_td_%282018-05-26%29_020_-_Unisphere.jpg/1280px-Flushing_Meadows_Fair_Grounds_td_%282018-05-26%29_020_-_Unisphere.jpg",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Unisphere_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Unisphere_3.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -2801,7 +2870,11 @@
       "title": "Apollo Theater",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Apollo_Theater_Harlem_NYC_2010.JPG/1280px-Apollo_Theater_Harlem_NYC_2010.JPG",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/apollo-theater_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/apollo-theater_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/apollo-theater_4.webp"
+      ],
       "tags": [
         "apollo theater",
         "harlem",
@@ -2986,8 +3059,12 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "Stonewall Inn",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Stonewall_Inn%2C_NYC_%28May_2014%29_-_2.JPG/1280px-Stonewall_Inn%2C_NYC_%28May_2014%29_-_2.JPG",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-inn_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-inn_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-inn_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-inn_4.webp"
+      ],
       "tags": [
         "stonewall inn",
         "greenwich village",
@@ -3174,7 +3251,10 @@
       "title": "Chelsea Market",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Chelsea_Market_%2849052085186%29.jpg/1280px-Chelsea_Market_%2849052085186%29.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-market_3.webp"
+      ],
       "tags": [
         "chelsea market",
         "meatpacking district",
@@ -3217,7 +3297,12 @@
       "title": "Radio City Music Hall",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Radio_City_Music_Hall_%2851395756913%29.jpg/1280px-Radio_City_Music_Hall_%2851395756913%29.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/radio-city-music-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/radio-city-music-hall_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/radio-city-music-hall_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/radio-city-music-hall_5.webp"
+      ],
       "tags": [
         "radio city music hall",
         "rockefeller center",
@@ -3301,8 +3386,10 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "The Woolworth Building",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Exterior_Woolworth_Building_2015.jpg/1280px-Exterior_Woolworth_Building_2015.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/woolworth-building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/woolworth-building_2.webp"
+      ],
       "tags": [
         "woolworth building",
         "cass gilbert",
@@ -3345,7 +3432,9 @@
       "title": "The Dakota",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg/1280px-1_West_72nd_Street_%28The_Dakota%29_by_David_Shankbone.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dakota_2.webp"
+      ],
       "tags": [
         "the dakota",
         "upper west side",
@@ -3478,7 +3567,7 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "Stonewall National Monument",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Stonewall_statues.jpg/1280px-Stonewall_statues.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-national-monument_hero.webp",
       "additionalImageURLs": [],
       "tags": [
         "stonewall national monument",
@@ -3521,8 +3610,13 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "TWA Hotel at JFK",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TWA_Flight_Center_2015_NY4.jpg/1280px-TWA_Flight_Center_2015_NY4.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twa-hotel-jfk_5.webp"
+      ],
       "tags": [
         "twa hotel",
         "jfk airport",
@@ -3612,7 +3706,10 @@
       "title": "Cathedral of St. John the Divine",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Cathedral_of_Saint_John_the_Divine%2C_New_York.JPG/1280px-Cathedral_of_Saint_John_the_Divine%2C_New_York.JPG",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cathedral-st-john-the-divine_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cathedral-st-john-the-divine_3.webp"
+      ],
       "tags": [
         "cathedral st john the divine",
         "morningside heights",
@@ -3701,7 +3798,10 @@
       "title": "The Plaza Hotel",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/New_York_-_Manhattan_-_Plaza_Hotel.jpg/1280px-New_York_-_Manhattan_-_Plaza_Hotel.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/plaza-hotel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/plaza-hotel_3.webp"
+      ],
       "tags": [
         "plaza hotel",
         "henry hardenbergh",
@@ -3790,8 +3890,11 @@
       "title": "Domino Park",
       "shortDescription": "A former sugar refinery transformed into a public waterfront park, its industrial cranes and catwalks preserved as sculptural landmarks.",
       "longDescription": "Domino Park occupies the site of the Domino Sugar Refinery, which operated on the Williamsburg waterfront from 1856 to 2004 \u2014 for most of the twentieth century, the largest sugar refinery in America. Designed by James Corner Field Operations (also responsible for the High Line) and opened in 2018, the park preserves the refinery's rusted cranes, syrup tanks, and conveyors as integrated park features. The elevated walkway follows the catwalks once used by refinery workers, offering the same view across the East River to the Manhattan skyline and the Williamsburg Bridge.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/View_from_Domino_Park_019.jpg/1280px-View_from_Domino_Park_019.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Domino_Park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Domino_Park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Domino_Park_3.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 138,
@@ -4014,8 +4117,12 @@
       "title": "Yankee Stadium",
       "shortDescription": "The 2009 home of the New York Yankees, built directly across the street from the original 'House that Ruth Built,' which stood from 1923 to 2008.",
       "longDescription": "The current Yankee Stadium opened in April 2009 on River Avenue in the South Bronx, replacing the original stadium that stood across 161st Street from 1923 to 2008. Designed by Populous to evoke the original's limestone facade, copper frieze, and bronze lettering, the $1.5 billion building was largely financed through public tax-exempt bonds. The original \u2014 where Babe Ruth, Lou Gehrig, Joe DiMaggio, Mickey Mantle, and Derek Jeter played \u2014 was demolished; its footprint is now Heritage Field, a public park visible from the new stadium's exterior.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Yankee_Stadium%2C_Jul_2009_-_16.jpg/1280px-Yankee_Stadium%2C_Jul_2009_-_16.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Yankee_Stadium_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Yankee_Stadium_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Yankee_Stadium_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Yankee_Stadium_4.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 155,
@@ -4106,8 +4213,10 @@
       "title": "Madison Square Garden",
       "shortDescription": "The arena built over Penn Station's ruins \u2014 and the reason New York passed America's first landmarks preservation law in 1965.",
       "longDescription": "Madison Square Garden (the fourth building to bear the name) opened in 1968 above the platforms of Penn Station, whose Beaux-Arts McKim, Mead & White hall \u2014 completed 1910, widely considered the most beautiful building in America \u2014 was demolished between 1963 and 1968 to make way for it. The public outcry prompted New York City to pass the Landmarks Preservation Act in 1965, the law that later saved Grand Central Terminal. MSG's operating permit, renewed for only five years in 2023, expires in 2028; multiple proposals for rebuilding Penn Station below \u2014 with or without a new MSG above \u2014 are under active consideration.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Madison_Square_Garden_Front_Entrance.jpg/1280px-Madison_Square_Garden_Front_Entrance.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Madison_Square_Garden_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Madison_Square_Garden_2.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 296,
@@ -4150,8 +4259,15 @@
       "title": "Riverside Church",
       "shortDescription": "John D. Rockefeller Jr.'s Gothic Revival skyscraper-church, where Martin Luther King delivered his 1967 'Beyond Vietnam' speech \u2014 and America's tallest church tower.",
       "longDescription": "Riverside Church was built 1927\u20131930 on Riverside Drive at 120th Street, funded by John D. Rockefeller Jr. and modelled on Chartres Cathedral. Its 392-foot tower \u2014 the tallest church tower in the United States \u2014 houses the world's largest carillon (74 bells, including one weighing over 20 tons). The pulpit has hosted Nelson Mandela, Desmond Tutu, the Dalai Lama, and on April 4, 1967 \u2014 exactly one year before his assassination \u2014 Martin Luther King Jr., who delivered 'Beyond Vietnam: A Time to Break Silence,' now considered one of the most important speeches of 20th-century American rhetoric.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Neo-Gothic_-_New_York%2C_NY_-_Riverside_Church_(1).jpg/1280px-Neo-Gothic_-_New_York%2C_NY_-_Riverside_Church_(1).jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_7.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 184,
@@ -4521,8 +4637,11 @@
       "shortDescription": "The oldest city hall still in continuous use in the United States \u2014 and the story of why its back was built cheaper than its front.",
       "longDescription": "You're in City Hall Park, looking north at the main facade of New York City Hall. The building is small by the standards of nineteenth-century civic architecture \u2014 only two stories above a partial basement, no enormous dome, no monumental portico \u2014 but the proportions are crisp, the limestone white, and the detailing is meticulous. It was designed by two architects working in unusual collaboration: a French-born \u00e9migr\u00e9 named Joseph-Fran\u00e7ois Mangin, who provided the French Renaissance facade and the overall plan, and a New Yorker named John McComb Jr., who handled the engineering and the more restrained Federal-style interior. The cornerstone was laid in 1803, and the building opened in 1812 \u2014 it is the oldest city hall still in continuous use anywhere in the United States.\n\nThe famous story about this building is what's behind it. When City Hall was being built, the northern edge of New York's developed area was at about Houston Street, twenty blocks south. The architects and the city council assumed nobody would ever view the back \u2014 so the south, east, and west sides were faced in expensive Massachusetts marble, but the north facade was originally faced in cheap brownstone. The city kept growing north, and within thirty years the brownstone back was facing as much pedestrian traffic as the marble front. The mismatched facades persisted for over a hundred years, until the entire exterior was re-clad in matching Alabama limestone in the mid-1950s.\n\nCity Hall has been the seat of New York government for more than two hundred years. Lincoln lay in state in the rotunda upstairs in April 1865, on his way back to Springfield. The Governor's Room contains portraits of every governor of New York State, along with George Washington's writing desk, and is open to the public on weekday tours. The Tweed Courthouse \u2014 named after the corrupt Tammany Hall boss who oversaw its construction \u2014 is just behind City Hall, and the Surrogate's Courthouse, with its Beaux-Arts facade, is across Chambers Street to the east.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/City_Hall-_Exterior.JPG/1280px-City_Hall-_Exterior.JPG",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/city-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/city-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/city-hall_3.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -4657,7 +4776,10 @@
       "longDescription": "You're on West 23rd Street, outside the Chelsea Hotel \u2014 a twelve-story Victorian Gothic building in dark red brick, with wrought-iron balconies running across the entire facade and a small red neon sign reading \"HOTEL CHELSEA\" above the entrance. The building was completed in 1884, designed by the architect Philip Hubert, and at the time it was the tallest building in New York City. It opened as the first private apartment cooperative in the United States, intended for upper-middle-class families who wanted a more communal alternative to the brownstone houses then dominant on the West Side.\n\nThe cooperative model failed within twenty years. The wealthy moved north, the neighborhood declined, and in 1905 the building was converted into a hotel. From that point forward, the Chelsea became the central residence of the American literary and artistic avant-garde for almost a century. Among the writers: Thomas Wolfe wrote \"You Can't Go Home Again\" in one of the upstairs rooms; Arthur Miller lived here in the 1960s; Arthur C. Clarke wrote \"2001: A Space Odyssey\" on the top floor. Among the musicians: Bob Dylan wrote \"Sad-Eyed Lady of the Lowlands\" in one of the rooms; Patti Smith and Robert Mapplethorpe shared an apartment here in the early 1970s; Leonard Cohen wrote \"Chelsea Hotel No. 2\" about a brief encounter with Janis Joplin somewhere upstairs. Andy Warhol filmed \"Chelsea Girls\" inside, and Madonna lived here in the 1980s.\n\nTwo of the building's most famous moments were tragedies. In November 1953, the Welsh poet Dylan Thomas collapsed after a long night of drinking and died a few days later in a nearby hospital. In October 1978, Nancy Spungen, the girlfriend of Sex Pistols bassist Sid Vicious, was found stabbed to death in their room. Sid Vicious was charged with her murder but died of a heroin overdose four months later, before the case came to trial. In 2011 the building was sold, closed to new guests, and underwent an eleven-year renovation contested repeatedly in court by long-term residents. The Chelsea reopened in stages from 2022 as a luxury boutique hotel. The lobby is open to the public, and the wrought-iron staircase that climbs the central atrium is one of the most distinctive interiors in any New York hotel.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Chelsea_Manhattan_Aug_2025_102.jpg/1280px-Chelsea_Manhattan_Aug_2025_102.jpg",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-chelsea-hotel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-chelsea-hotel_3.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -5439,7 +5561,10 @@
         "italianate",
         "great-hall"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Cooper_Union_Foundation_Building_2.webp"
+      ]
     },
     {
       "id": "1edd4218-4e5d-4115-842f-650135137f99",
@@ -5543,7 +5668,7 @@
       "shortDescription": "Thirty years ago, no one came here \u2014 today twelve million people a year do. One of the great urban turnarounds in American history.",
       "longDescription": "A green rectangle behind the New York Public Library, bounded by movable chairs and gravel paths. In the 1980s, it was one of the most dangerous places in Midtown \u2014 crime, drug dealing, hedges designed for privacy that had become walls hiding what was happening inside. In 1988 the Bryant Park Corporation took over, applying urbanist William H. Whyte's research on what makes public spaces work: tear out the hedges, open the sightlines, add movable chairs borrowed from the Jardin du Luxembourg, fill it with programmed events. By the reopening in 1992 the transformation was complete. The park's history goes further back: a potter's field in the 1840s, New York's Crystal Palace World's Fair in 1853, a fire in 1858, and renamed for the poet William Cullen Bryant in 1884.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/At_New_York%2C_USA_2017_085.jpg/1280px-At_New_York%2C_USA_2017_085.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bryant_Park_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5579,7 +5704,13 @@
         "potter's-field",
         "william-cullen-bryant"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bryant_Park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bryant_Park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bryant_Park_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bryant_Park_5.webp"
+      ]
     },
     {
       "id": "b8b71d88-7dfc-4ff9-af2f-1fc195c6f175",
@@ -5714,7 +5845,7 @@
       "shortDescription": "The first United States Congress met here, George Washington took the oath of office on this spot, and the Bill of Rights was drafted in this building \u2014 then it was demolished.",
       "longDescription": "The Greek Revival marble temple at 26 Wall Street marks the site of one of the most consequential buildings in American history. The original Federal Hall, a smaller redbrick structure on this lot, served successively as New York's City Hall, the U.S. Capitol, and the site of Washington's first inauguration on April 30, 1789. The First Congress, meeting in the chamber below, was simultaneously drafting the Bill of Rights. New York was the nation's first capital for a year and a half before the government moved to Philadelphia in 1790. The original building was demolished in 1812; the current Greek Revival structure by Ithiel Town and Alexander Jackson Davis was completed in 1842 as a Custom House. John Quincy Adams Ward's bronze Washington, installed in 1883, stands approximately where the inaugural balcony once was.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/MMDA-Photos_-_2019-06-01_-_Federal_Hall.jpg/1280px-MMDA-Photos_-_2019-06-01_-_Federal_Hall.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/federal_hall_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5750,7 +5881,11 @@
         "greek-revival",
         "financial-district"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/federal_hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/federal_hall_3.webp"
+      ]
     },
     {
       "id": "6877114e-0d89-4271-a16b-dbabb95f42ae",
@@ -5853,7 +5988,7 @@
       "shortDescription": "By 1905, three separate amusement parks here were each, at different moments, the largest in the world. By 1964, all three were gone.",
       "longDescription": "The Surf Avenue strip at the southern shore of Brooklyn is the birthplace of American mass amusement. Three competing parks made it famous: Steeplechase (1897\u20131964), Luna Park (1903\u20131944, lit with 250,000 electric bulbs and visible from ships miles at sea), and Dreamland (1904\u20131911), the most ambitious amusement park ever built, with a million electric bulbs, a thousand-foot central tower, and recreations of Pompeii and Switzerland. Dreamland burned in a single night in May 1911; Luna burned in 1944; Steeplechase closed in 1964. The Cyclone roller coaster and Wonder Wheel still operate. The Parachute Jump \u2014 the white skeletal tower west of the boardwalk \u2014 is the only surviving structure from any of the three original parks, and it hasn't run as a ride in over seventy-five years.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Coney_Island_Parachute_Jump_%28June_2016%29.jpg/1280px-Coney_Island_Parachute_Jump_%28June_2016%29.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5890,7 +6025,15 @@
         "parachute-jump",
         "wonder-wheel"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coney_island_7.webp"
+      ]
     },
     {
       "id": "a41d0cbf-bf41-46a6-bff7-1380ff443c18",
@@ -5898,7 +6041,7 @@
       "shortDescription": "The first great synagogue built by Eastern European Jewish immigrants in America \u2014 its main sanctuary was sealed and forgotten for fifty years, then restored over two decades.",
       "longDescription": "The building at 12 Eldridge Street, completed in 1887, was the first synagogue constructed in the United States by an Eastern European Jewish immigrant congregation. The architects Peter and Francis Herter \u2014 specialists in tenement buildings with no prior synagogue experience \u2014 mixed Moorish, Gothic, and Romanesque elements into a facade of pointed arches, horseshoe arches, a rose window, and Stars of David. The interior sanctuary features a seventy-foot vaulted ceiling, hand-stenciled walls, brass chandeliers, and an Italian-walnut ark. At its peak in the 1890s, over a thousand worshippers attended High Holy Day services. By the 1940s the congregation had dwindled and the main sanctuary was locked; it sat sealed for nearly fifty years. A twenty-million-dollar restoration began in 1986 and took two decades. The new western rose window was designed by Kiki Smith and Deborah Gans.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Eldridge_Street_Synagogue_%2842773%29.jpg/1280px-Eldridge_Street_Synagogue_%2842773%29.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eldridge_street_synagogue_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5978,7 +6121,11 @@
         "beaux-arts",
         "john-h-duncan"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grand_army_plaza_brooklyn_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grand_army_plaza_brooklyn_3.webp"
+      ]
     },
     {
       "id": "2023e7d5-a544-480d-8dc9-ce0bcd05e47a",
@@ -6648,8 +6795,12 @@
       "shortDescription": "Eighteen acres of international territory on the East River \u2014 the Secretariat's 1952 glass curtain wall helped launch the International Style that would define postwar Manhattan.",
       "longDescription": "You're on the west side of First Avenue, looking east across the street at the United Nations Headquarters. The campus sits on eighteen acres of what was, until the late nineteen-forties, slaughterhouses and tenements along the East River \u2014 Turtle Bay at its grimmest. John D. Rockefeller Jr. bought the land and gave it to the new organization, and once the deal was done, the site stopped being part of New York, or even the United States. The ground in front of you is international territory.\n\nTwo buildings define what you're seeing. To your left, the long, low slab with the gently curved roof and the shallow dome is the General Assembly building \u2014 the hall where every member nation gets one seat and one vote. To the right, the tall, thin tower of green glass and white marble is the Secretariat, thirty-nine stories of offices, finished in 1952. When it went up, that flat glass curtain wall was a genuine shock; almost nothing in the city looked like it yet. The whole International Style of corporate Manhattan \u2014 the glass box that would define the next half-century \u2014 arguably starts here.\n\nThe design came out of an international committee, which is exactly as fraught as it sounds. The American architect Wallace Harrison ran it, but the two figures who mattered most were Le Corbusier, the Swiss-French father of modernism, and Oscar Niemeyer, the young Brazilian who would later build Bras\u00edlia. Niemeyer's sketch and Le Corbusier's scheme were eventually fused into the design that got built \u2014 and Le Corbusier, feeling robbed of credit, never quite forgave any of them.\n\nIt helps to remember what this was supposed to be. In 1945 the world had just finished killing sixty million people, and the United Nations was the enormous, fragile bet that it never needed to happen again \u2014 that nations could be talked out of war across a table instead of a battlefield. This campus is that bet rendered in glass and marble: the postwar dream of world government, given a skyline. Whether the dream worked is a conversation that never ends. But the architecture still says it plainly \u2014 open, transparent, deliberately unlike a fortress.\n\nStay a moment and watch the flags. There's one for every member nation, and they fly in alphabetical order \u2014 which means the lineup quietly rearranges itself every time the membership of the world changes.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/UN_HQ_NYC.jpg/1280px-UN_HQ_NYC.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/united-nations-headquarters_4.webp"
+      ],
       "kind": "single",
       "stops": [
         {
