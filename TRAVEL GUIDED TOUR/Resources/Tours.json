@@ -842,7 +842,11 @@
         "lenape",
         "military history"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/governors-island_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/governors-island_3.webp"
+      ]
     },
     {
       "id": "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
@@ -3204,7 +3208,11 @@
       "title": "Beacon Theatre",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Beacon_Theatre_%2849020061512%29.jpg/1280px-Beacon_Theatre_%2849020061512%29.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beacon-theatre_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beacon-theatre_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beacon-theatre_4.webp"
+      ],
       "tags": [
         "beacon theatre",
         "upper west side",
@@ -3751,7 +3759,10 @@
       "title": "The Astor Place Cube",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/The_Astor_Place_Cube_%2848072759542%29.jpg/1280px-The_Astor_Place_Cube_%2848072759542%29.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/astor-place-cube_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/astor-place-cube_3.webp"
+      ],
       "tags": [
         "astor place cube",
         "alamo",
@@ -3839,8 +3850,10 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "Trinity Church",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Trinity_Church_-_Wall_Street%2C_New_York%2C_NY%2C_USA_-_August_19%2C_2015_-_panoramio.jpg/1280px-Trinity_Church_-_Wall_Street%2C_New_York%2C_NY%2C_USA_-_August_19%2C_2015_-_panoramio.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trinity-church_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trinity-church_2.webp"
+      ],
       "tags": [
         "trinity church",
         "wall street",
@@ -5563,7 +5576,7 @@
       "shortDescription": "The small marble fountain in this park commemorates the largest single loss of life in New York City history before September 11 \u2014 a story that reshaped the entire neighborhood.",
       "longDescription": "Ten and a half acres in the East Village, laid out in 1834, bounded by Avenue A and B between 7th and 10th Streets. Near the center stands the Slocum Memorial \u2014 a marble fountain inscribed \"They were earth's purest children young and fair\" \u2014 marking the 1904 General Slocum disaster, in which more than a thousand people, mostly German immigrant women and children from the surrounding blocks of Kleindeutschland, died when a steamship excursion caught fire on the East River. The catastrophe effectively ended Little Germany as a neighborhood. The East Village that replaced it \u2014 punk, anarchism, the Hare Krishnas founded under an elm tree here in 1966, the police riot of 1988 \u2014 built up on the empty space the Slocum left behind.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/General_Slocum_Memorial_Tompkins_Square_Park_NYC.JPG/1280px-General_Slocum_Memorial_Tompkins_Square_Park_NYC.JPG",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tompkins_Square_Park_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5599,7 +5612,10 @@
         "1988",
         "park"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tompkins_Square_Park_2.webp"
+      ]
     },
     {
       "id": "d2b4a854-c1ac-463a-bccd-fcf3f66f8399",
@@ -5644,7 +5660,10 @@
         "picasso",
         "diller-scofidio"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MoMA_53rd_Street_Entrance_2.webp"
+      ]
     },
     {
       "id": "771c68bd-a100-482b-ba7d-cd4bbad137d3",
@@ -5901,7 +5920,11 @@
         "mulberry-bend",
         "history"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_columbus_park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_columbus_park_3.webp"
+      ]
     },
     {
       "id": "3f07598b-d9f7-4a9f-a074-ec26d8966abd",
@@ -6196,7 +6219,7 @@
       "shortDescription": "Frank Gehry has built in dozens of cities worldwide. The IAC Building is his only completed structure in New York.",
       "longDescription": "The IAC Building rises ten stories on the West Side Highway between 18th and 19th Streets \u2014 a curtain wall of white-fritted glass with bottom edges that curve upward like the hull of a sail, its asymmetrical facades twisting slightly with each story. Completed in 2007, it is the New York headquarters of Barry Diller's media holding company IAC, and it is the only finished building Frank Gehry has ever constructed in New York City. Gehry \u2014 best known for the titanium-clad Guggenheim Bilbao and the Walt Disney Concert Hall in Los Angeles \u2014 designed the sail form at Diller's request: an avid sailor, Diller wanted something that referenced the Hudson River the building faces. The white frit pattern on the glass acts as both a sun screen and a softening agent, giving the building its characteristic milky luminescence in daylight. Across the highway, the Diller architecture cluster continues: Diane von Furstenberg's headquarters by Work Architecture Company, Little Island on the Hudson, and the High Line \u2014 both of which Diller and von Furstenberg helped fund.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/NYC_-_Frank_Gehry_designed_building_IAC_%28Inter_Active_Corp%29_on_West_18th_Street.jpg/1280px-NYC_-_Frank_Gehry_designed_building_IAC_%28Inter_Active_Corp%29_on_West_18th_Street.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iac_building_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -6232,7 +6255,13 @@
         "high-line",
         "little-island"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iac_building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iac_building_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iac_building_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iac_building_5.webp"
+      ]
     },
     {
       "id": "f87e0bdc-c738-415d-927d-a6299337db5e",
@@ -6660,8 +6689,11 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "Tudor City Greens",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Tudor_City_jeh.JPG/1280px-Tudor_City_jeh.JPG",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tudor-city-greens_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tudor-city-greens_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tudor-city-greens_3.webp"
+      ],
       "tags": [
         "tudor city",
         "tudor city greens",
