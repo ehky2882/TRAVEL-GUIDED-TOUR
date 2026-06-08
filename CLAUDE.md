@@ -29,7 +29,7 @@ These happen **automatically, without the owner asking**.
 | 5 | Session ends (touched code or content) | Update `CLAUDE.md` + `ROADMAP.md` in same commit; write `archive/HANDOFF-YYMMDD.md`; update `archive/README.md` |
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
-| 8 | New tour added that lacks gallery images | Run the image pipeline (§ Image Pipeline) automatically — no prompting. **Exception: owner-supplied images (Portugal/Porto/Lisbon tours) — do not run pipeline, use the provided assets.** |
+| 8 | New tour added (to `Tours.json`) that lacks images | Run the image pipeline (§ Image Pipeline) automatically — no prompting — and **reply with a numbered, labeled contact sheet of ~12 verified CC0 candidates per tour so the owner can pick hero + gallery by number** (e.g. `"3 hero, 1, 7, 9"`). This is the standard "upload tours without images" flow. **Exception: owner-supplied images (Portugal/Porto/Lisbon tours) — do not run pipeline, use the provided assets.** |
 
 ## Image Pipeline
 
@@ -44,10 +44,10 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 - Gemini key format: starts with `AQ.` (NOT `AIzaSy` — do not prepend anything)
 
 **Pipeline steps:**
-1. **Search** — 5–6 targeted queries per tour, ~3 results each, covering different vantage points (exterior, interior, aerial, detail, night, golden hour, etc.). Run them against **both Unsplash and Openverse** and pool the candidates: Unsplash (`orientation=landscape&content_filter=high`) for atmospheric coverage, Openverse (search the landmark by name, `license_type=commercial`, `aspect_ratio=wide`) for exact-subject shots Unsplash tends to miss. Dedupe by image URL before the verify step.
+1. **Search** — 5–6 targeted queries per tour, ~3 results each, covering different vantage points (exterior, interior, aerial, detail, night, golden hour, etc.). **Sourcing order under the CC0-only policy:** (a) **Openverse** `license=cc0,pdm` (search the landmark by name); (b) if too thin, **Wikimedia Commons directly** filtered to PD (the building's `Category:` page, no key); (c) **Unsplash** (`orientation=landscape&content_filter=high`) for atmospheric coverage — Unsplash needs no per-image credit so it's policy-safe. Filter to images that can crop to 1200×900 without upscaling (`min(w,h)≥900` and the long side ≥1200). Dedupe by image URL before the verify step.
 2. **Verify** — Send each candidate to `gemini-2.5-flash-lite` with a subject-specific YES/NO prompt. Reject non-subject images silently. **Mandatory for Openverse — its result titles are unreliable** (generic strings like "Park Av Nov 2025 01" that may be a neighboring building, a streetscape, or a different landmark entirely); never trust Openverse metadata for subject match, always verify the pixels.
-3. **Label** — Crop to 1200×900 WebP q82 (Pillow: `scale = max(W/w, H/h)` → resize → center crop). Add large white-box number + category label for owner review.
-4. **Owner picks** — Send labeled images; owner replies e.g. `"3 hero, 1, 7, 9"`. First number = hero; rest = gallery order.
+3. **Label** — Assemble the verified candidates (~12; fewer if the subject is thin) into a **single numbered contact sheet** (4-up grid): each tile cropped 4:3 with a large white-box number badge + a resolution/license caption. Send as one image for fast review.
+4. **Owner picks** — Owner replies e.g. `"3 hero, 1, 7, 9"`. First number = hero; the rest = gallery order. Default target is **1 hero + up to ~5 gallery** (owner can pick fewer/more, or say "none, leave as-is" / "keep current hero").
 5. **Process** — Crop selections to final 1200×900 WebP (no label). Name: `{audio-slug}_hero.webp`, `{audio-slug}_2.webp`, etc.
 6. **Upload** — Commit to `gh-pages` branch under `images/`. Pull + rebase if non-fast-forward.
 7. **Patch Tours.json** — Replace `heroImageURL` + set/update `additionalImageURLs`. Commit + push to session branch.
