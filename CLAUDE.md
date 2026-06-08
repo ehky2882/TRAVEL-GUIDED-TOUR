@@ -35,15 +35,16 @@ These happen **automatically, without the owner asking**.
 
 Standard process for sourcing hero + gallery images for tours that don't have owner-supplied assets. Run this automatically whenever a new tour is added without images, or when the owner asks to improve existing images.
 
-**Tools:** Unsplash API (source) → Gemini vision (verification gate) → Pillow (resize/crop) → gh-pages (hosting) → Tours.json patch.
+**Tools:** Unsplash API + Openverse API (sources) → Gemini vision (verification gate) → Pillow (resize/crop) → gh-pages (hosting) → Tours.json patch.
 
-**API keys** (owner pastes fresh each session — do not store):
-- Unsplash: `Client-ID <key>` header on `https://api.unsplash.com/search/photos`
-- Gemini: `?key=<key>` on `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent`
+**Sources & API keys** (owner pastes secret-bearing keys fresh each session — do not store):
+- **Unsplash:** `Client-ID <key>` header on `https://api.unsplash.com/search/photos`. Generic/atmospheric travel shots; weakest at exact-subject match.
+- **Openverse:** `GET https://api.openverse.org/v1/images/` — aggregates 800M+ CC/public-domain works across 45+ sources (Wikimedia Commons, Flickr, Europeana, …) in one call. **Best for exact-landmark match** — search the place by name. No key needed for low volume, but **anonymous is throttled hard (~5 req/hr, 100/day)** — too low for a full pipeline run. To get the Standard tier (much higher limits): register once via `POST https://api.openverse.org/v1/auth_tokens/register/` (JSON: `name`, `description`, `email`) → returns `client_id` + `client_secret`; exchange them for a Bearer token via OAuth2 `client_credentials` at `POST /v1/auth_tokens/token/`, then send `Authorization: Bearer <token>`. Useful query params: `q`, `license_type=commercial` (and/or `modification`), `source`, `category`, `aspect_ratio=wide`, `size`, `page`, `page_size`. **Every Openverse image is CC/PD → record `license` + `attribution` per chosen image** (returned in the result JSON); attribution obligations differ per license.
+- **Gemini:** `?key=<key>` on `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent`
 - Gemini key format: starts with `AQ.` (NOT `AIzaSy` — do not prepend anything)
 
 **Pipeline steps:**
-1. **Search** — 5–6 targeted Unsplash queries per tour, 3 results each, covering different vantage points (exterior, interior, aerial, detail, night, golden hour, etc.). `orientation=landscape&content_filter=high`.
+1. **Search** — 5–6 targeted queries per tour, ~3 results each, covering different vantage points (exterior, interior, aerial, detail, night, golden hour, etc.). Run them against **both Unsplash and Openverse** and pool the candidates: Unsplash (`orientation=landscape&content_filter=high`) for atmospheric coverage, Openverse (search the landmark by name, `license_type=commercial`, `aspect_ratio=wide`) for exact-subject shots Unsplash tends to miss. Dedupe by image URL before the verify step.
 2. **Verify** — Send each candidate to `gemini-2.5-flash-lite` with a subject-specific YES/NO prompt. Reject non-subject images silently.
 3. **Label** — Crop to 1200×900 WebP q82 (Pillow: `scale = max(W/w, H/h)` → resize → center crop). Add large white-box number + category label for owner review.
 4. **Owner picks** — Send labeled images; owner replies e.g. `"3 hero, 1, 7, 9"`. First number = hero; rest = gallery order.
@@ -56,6 +57,8 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 - Owner says "keep current hero in gallery" → put original URL as last entry in `additionalImageURLs`.
 - Too few verified images → tell owner, offer to fetch more with different queries, or skip.
 - Unsplash rate limit (50 req/hr free tier) → pause, note time to reset, continue other work.
+- Openverse rate limit → anonymous is ~5 req/hr (100/day); if hit, authenticate (register → Bearer token, see Sources above) for the Standard tier, or fall back to Unsplash-only for that run.
+- Openverse image chosen for hero/gallery → carry its `license` + `attribution`/`source` through to a credit note (don't drop the attribution data the API returns).
 
 **Audio slug** = the filename stem of the tour's `audioURL` (e.g. `audio/empire-state-building.mp3` → `empire-state-building`). Use this as the image filename prefix. Some older slugs use dots or mixed case — match exactly.
 
