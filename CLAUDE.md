@@ -66,7 +66,24 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-07)
+## Current State (2026-06-08)
+
+### London launch — first 5 London tours + Atlas Studio LDN + Openverse source (session 28 — web/PM)
+
+Web/PM session. No Swift/asset/project changes. Two threads: a new image source codified into the pipeline, and the catalog's **first London tours under a new fourth maker**.
+
+- **Openverse added as a pipeline image source** (Rule #8 + § Image Pipeline). Aggregates 800M+ CC/PD works across 45+ sources (Wikimedia, Flickr, Europeana…) in one API. **License policy (owner decision): public-domain only — `license=cc0,pdm`** — the app has no attribution UI, so CC BY/BY-SA are off the table; PD carries no crediting obligation. Lessons baked in: Openverse titles are unreliable → the verify gate is **mandatory**; `upload.wikimedia.org` 429-throttles bursts → descriptive User-Agent + ~1.5s spacing; Openverse depth varies wildly by subject (Seagram = near-empty; St Paul's = deep but skews to historical engravings since modern photos are rarely PD).
+- **"Upload tours without images" protocol formalized** — add tours to `Tours.json` with no images → auto-source candidates → reply with **individual full-size inline images** (not a cramped contact-sheet grid — owner feedback) numbered per source (`1–35` CC0 / `U01–U35` Unsplash) → owner picks `hero + gallery` by number → crop 1200×900 WebP → gh-pages → patch `Tours.json`.
+- **New maker: Atlas Studio LDN** (`9c40396a-74ed-49d2-9796-a41edb9e4105`, 🇬🇧) — London bureau, fourth maker.
+- **5 London tours** (catalog 149 → 154 tours, 154 → 163 stops), all single-stop / geofenced / Atlas Studio LDN, owner-narrated:
+  - **St Paul's Cathedral** (`sacredSites`, 135s) — Wren's triple-shell dome, Ludgate Hill.
+  - **The Monument** (`history`, 117s) — Wren & Hooke's 1677 column to the Great Fire; hero **top-biased crop** to keep the gilded urn (tall-column subjects fight the 1200×900 landscape format — anchor the crop high).
+  - **The Tower of London** (`history`, 138s) — White Tower + fortress from Tower Hill.
+  - **Tower Bridge** (`architecture`, 125s) — Victorian bascule machine; hero shows the bascules raised.
+  - **Leadenhall Market** (`culturalHeritage`, 130s) — Horace Jones's 1881 cast-iron arcade over Roman Londinium.
+- All images Unsplash (owner picked all-modern-photo over CC0 historical art); Unsplash download endpoints triggered per API terms. Audio + images on `gh-pages`, all live-URL spot-checked **200**. Validator clean each time. **All 5 on branch `claude/dreamy-wozniak-nM6a4`, not yet merged to main** — owner to decide on a PR.
+
+**Catalog: 4 makers / 154 tours / 163 stops** (96 Atlas Studio NYC + 37 OPO + 5 LIS + 5 LDN). **Latest TestFlight build: 1.0 (36).**
 
 ### TestFlight 1.0 (36) (session 27 — web/PM)
 
@@ -377,8 +394,8 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **138 tours, 3 makers** in `Resources/Tours.json` (96 Atlas Studio NYC + 37 Atlas Studio Porto + 5 Atlas Studio Lisbon); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **136 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
+- **154 tours, 4 makers** in `Resources/Tours.json` (96 Atlas Studio NYC + 37 Atlas Studio Porto + 5 Atlas Studio Lisbon + 5 Atlas Studio LDN/London); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **152 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
