@@ -1658,7 +1658,10 @@
         "kinetic architecture",
         "performance"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shed_2.webp"
+      ]
     },
     {
       "id": "0e32b78d-1538-4571-a18e-0c2a609a9a6b",
@@ -2121,7 +2124,9 @@
       "longDescription": "At the corner of 55th Street and 6th Avenue stands the LOVE sculpture by Robert Indiana \u2014 four red letters arranged in two rows, the second 'O' tilted at a thirty-degree angle, painted red on the front and blue and green on the sides. Installed in 1971, it is one of the most reproduced images in American art history. The image started as a Christmas card: in 1964, MoMA commissioned Indiana to design a card for their annual greeting series. He sent in three sketches, the Museum picked the LOVE one, and it went out in 1965. Then it escaped. Within a few years the design was on t-shirts, posters, postcards, mugs, and jewelry. The U.S. Postal Service issued a LOVE stamp in 1973. Indiana had never copyrighted the image \u2014 copyright in the 1960s was less aggressive than now, and the design had spread through legitimate reproductions before he could establish exclusive rights. By the time he tried to protect it, it was effectively public domain. He kept making the image \u2014 paintings, sculptures, prints, in every color and configuration \u2014 and the sculptures were among his only consistent source of income from the design. He spent the last decades of his life on an island off the coast of Maine, increasingly isolated and frustrated, and died in 2018. The original 1965 Christmas card is in MoMA's collection, two blocks south.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/LOVE_sculpture_NY.JPG/1280px-LOVE_sculpture_NY.JPG",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/LOVE_Sculpture_2.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -4058,8 +4063,7 @@
       "title": "Citi Field",
       "shortDescription": "The Mets' 2009 stadium designed not to evoke itself but Ebbets Field \u2014 a demolished Brooklyn ballpark for a team that left New York half a century earlier.",
       "longDescription": "Citi Field opened in 2009 in Flushing Meadows, Queens, replacing Shea Stadium (1964\u20132008). Designed by Populous \u2014 the same firm behind the new Yankee Stadium \u2014 it deliberately references Ebbets Field, the demolished Brooklyn home of the Dodgers, who left New York in 1957. The Jackie Robinson Rotunda at the main entrance honours the Dodgers legend who never played in Queens. Shea Stadium's footprint, marked with its original bases and home plate, sits in the adjacent parking lot.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Citi_Field_August_2021.jpg/1280px-Citi_Field_August_2021.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_hero.webp",
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 157,
@@ -4090,7 +4094,7 @@
           "audioDurationSeconds": 157,
           "triggerMode": "geofenced",
           "triggerRadiusMeters": 80,
-          "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Citi_Field_August_2021.jpg/1280px-Citi_Field_August_2021.jpg",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_hero.webp",
           "transcriptText": "Citi Field was designed to look like a stadium for a team that doesn't exist anymore.\n\nYou're in Flushing Meadows, Queens, outside Citi Field \u2014 the home of the New York Mets baseball franchise. The stadium opened in 2009, replacing the older Shea Stadium that operated next door from 1964 to 2008. The architect was the firm Populous, the same firm that designed the new Yankee Stadium that opened the same year. But unlike the new Yankee Stadium \u2014 which was designed to imitate the old one across the street \u2014 Citi Field was designed to imitate a different stadium entirely: Ebbets Field, the legendary Brooklyn home of the Brooklyn Dodgers, which was demolished in 1960.\n\nThe Dodgers, as you may know, left Brooklyn in 1957 and moved to Los Angeles. The Mets were founded in 1962 as a National League replacement franchise to fill the void left by the Dodgers and Giants when both moved west. From the team's founding, the Mets cultivated a sense of inheritance from the old Brooklyn franchise \u2014 borrowing colors, names, and emotional weight from a team that had been gone for five years. Citi Field extends that lineage in architecture: the brick facade, the arched windows, the rotunda at the main entrance, all of them deliberate references to the architectural vocabulary of Ebbets Field.\n\nThe rotunda at the main entrance, the first space you walk into, is named the Jackie Robinson Rotunda, in honor of the Brooklyn Dodgers' Hall of Famer who broke baseball's color barrier in 1947. The walls are inscribed with Robinson's words, and his number 42 is retired across all of Major League Baseball \u2014 but it is displayed here with particular prominence, even though Robinson never played a single game in Queens, and never played for the Mets, and was indeed retired before the Mets existed.\n\nWhat makes Citi Field interesting, standing outside it, is the question of what a stadium is supposed to be. The new Yankee Stadium imitates a stadium that stood next door for eighty-six years. Citi Field imitates a stadium that was demolished nearly fifty years before it was built, for a team that left town a decade before that. Both are nostalgia projects in their way, but only one of them has anything actually to be nostalgic about in this location \u2014 Citi Field's nostalgia is borrowed from someone else's borough.\n\nThe Mets play here from April through September, and the stadium is open for public tours in the off-season. Shea Stadium's former footprint, in the parking lot just east of here, is now marked with bases and a home plate where the original ones stood."
         }
       ]
