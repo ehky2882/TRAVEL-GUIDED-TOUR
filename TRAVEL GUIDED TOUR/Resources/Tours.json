@@ -3496,7 +3496,9 @@
       "title": "Stonewall National Monument",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Stonewall_statues.jpg/1280px-Stonewall_statues.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-national-monument_hero.webp"
+      ],
       "tags": [
         "stonewall national monument",
         "christopher park",
@@ -5898,7 +5900,7 @@
       "shortDescription": "The first great synagogue built by Eastern European Jewish immigrants in America \u2014 its main sanctuary was sealed and forgotten for fifty years, then restored over two decades.",
       "longDescription": "The building at 12 Eldridge Street, completed in 1887, was the first synagogue constructed in the United States by an Eastern European Jewish immigrant congregation. The architects Peter and Francis Herter \u2014 specialists in tenement buildings with no prior synagogue experience \u2014 mixed Moorish, Gothic, and Romanesque elements into a facade of pointed arches, horseshoe arches, a rose window, and Stars of David. The interior sanctuary features a seventy-foot vaulted ceiling, hand-stenciled walls, brass chandeliers, and an Italian-walnut ark. At its peak in the 1890s, over a thousand worshippers attended High Holy Day services. By the 1940s the congregation had dwindled and the main sanctuary was locked; it sat sealed for nearly fifty years. A twenty-million-dollar restoration began in 1986 and took two decades. The new western rose window was designed by Kiki Smith and Deborah Gans.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Eldridge_Street_Synagogue_%2842773%29.jpg/1280px-Eldridge_Street_Synagogue_%2842773%29.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eldridge_street_synagogue_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5934,7 +5936,10 @@
         "museum",
         "chinatown"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Eldridge_Street_Synagogue_%2842773%29.jpg/1280px-Eldridge_Street_Synagogue_%2842773%29.jpg"
+      ]
     },
     {
       "id": "8cfbebad-3727-4c44-9640-772b808735d1",
