@@ -50,6 +50,11 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// `tourPresenter.presentedTour == nil`, so this counter is the
     /// only signal that flips the chrome to full-edge for them.
     @State private var navState = AtlasNavigationState()
+    /// On-device "saved makers" bookmark store. App-level so every
+    /// surface that can reach a maker (Home/Search push, the
+    /// tour-detail sheet's stack, the player window) and the Library
+    /// tab all read + mutate the same instance.
+    @State private var savedMakersStore = SavedMakersStore()
     /// Holds the secondary `UIWindow` that renders the mini-player
     /// + tab bar above any UIKit modal presented in the main
     /// window. Installed once on first appearance.
@@ -83,6 +88,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(appShared)
                     .environment(tourPresenter)
                     .environment(navState)
+                    .environment(savedMakersStore)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
                     .onAppear {
                         // Install the secondary higher-level window
@@ -109,6 +115,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                                 .environment(appShared)
                                 .environment(tourPresenter)
                                 .environment(navState)
+                                .environment(savedMakersStore)
                             // No `.preferredColorScheme(...)` here:
                             // the install closure is evaluated ONCE
                             // and would freeze the host

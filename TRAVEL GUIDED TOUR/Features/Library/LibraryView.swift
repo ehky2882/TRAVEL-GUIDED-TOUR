@@ -23,6 +23,7 @@ struct LibraryView: View {
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(TourDownloader.self) private var tourDownloader
     @Environment(TourPresenter.self) private var tourPresenter
+    @Environment(SavedMakersStore.self) private var savedMakersStore
 
     @State private var selectedSection: Section = .saved
 
@@ -102,7 +103,7 @@ struct LibraryView: View {
     private var sectionContent: some View {
         switch selectedSection {
         case .saved:
-            tourList(tours: savedTours, empty: SavedEmptyState())
+            savedContent
         case .downloaded:
             tourList(tours: downloadedTours, empty: DownloadedEmptyState())
         case .recentlyPlayed:
@@ -135,6 +136,102 @@ struct LibraryView: View {
                 }
             }
         }
+    }
+
+    /// The Saved tab: a "Makers" section (saved makers) above the
+    /// saved tours. When no makers are saved this falls through to the
+    /// original tour-only list + empty state, so the common case is
+    /// unchanged.
+    @ViewBuilder
+    private var savedContent: some View {
+        if savedMakers.isEmpty {
+            tourList(tours: savedTours, empty: SavedEmptyState())
+        } else {
+            LazyVStack(alignment: .leading, spacing: 0) {
+                librarySectionHeader("Makers")
+                ForEach(savedMakers) { maker in
+                    NavigationLink {
+                        MakerView(maker: maker)
+                    } label: {
+                        makerRow(maker)
+                    }
+                    .buttonStyle(.plain)
+
+                    if maker.id != savedMakers.last?.id {
+                        Divider().padding(.horizontal, AtlasSpacing.lg)
+                    }
+                }
+
+                if !savedTours.isEmpty {
+                    librarySectionHeader("Tours")
+                    ForEach(savedTours) { tour in
+                        Button {
+                            tourPresenter.present(tour)
+                        } label: {
+                            tourRow(tour)
+                        }
+                        .buttonStyle(.plain)
+
+                        if tour.id != savedTours.last?.id {
+                            Divider().padding(.horizontal, AtlasSpacing.lg)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /// Caption all-caps section divider — matches the Search view's
+    /// Makers / Tours group headers.
+    private func librarySectionHeader(_ title: String) -> some View {
+        Text(title)
+            .font(AtlasTypography.caption)
+            .textCase(.uppercase)
+            .foregroundStyle(AtlasColors.tertiaryText)
+            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.top, AtlasSpacing.md)
+            .padding(.bottom, AtlasSpacing.sm)
+            .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    /// Saved-maker row — circular emoji avatar, BODY all-caps name,
+    /// caption tour-count subtitle. Mirrors the Search makers rows.
+    private func makerRow(_ maker: Maker) -> some View {
+        HStack(alignment: .center, spacing: AtlasSpacing.md) {
+            ZStack {
+                Circle().fill(AtlasColors.placeholderWarm)
+                if let emoji = maker.avatarEmoji, !emoji.isEmpty {
+                    Text(emoji).font(.system(size: 28))
+                } else {
+                    Image(systemName: "person.crop.circle.fill")
+                        .font(.system(size: 32))
+                        .foregroundStyle(AtlasColors.secondaryText)
+                }
+            }
+            .frame(width: 56, height: 56)
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                Text(maker.displayName)
+                    .font(AtlasTypography.body)
+                    .textCase(.uppercase)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+
+                Text(makerTourCountText(maker))
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .lineLimit(1)
+            }
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+        }
+        .padding(.horizontal, AtlasSpacing.lg)
+        .padding(.vertical, AtlasSpacing.sm)
     }
 
     private func tourRow(_ tour: Tour) -> some View {
@@ -198,6 +295,19 @@ struct LibraryView: View {
         }
     }
 
+    /// Saved makers, most-recently-saved first. Makers no longer in
+    /// the catalog are dropped silently (mirrors `savedTours`).
+    private var savedMakers: [Maker] {
+        savedMakersStore.savedEntries.compactMap { entry in
+            dataService.maker(by: entry.makerId)
+        }
+    }
+
+    private func makerTourCountText(_ maker: Maker) -> String {
+        let count = dataService.tours(by: maker).count
+        return count == 1 ? "1 tour" : "\(count) tours"
+    }
+
     private var downloadedTours: [Tour] {
         libraryStore.downloadedEntries.compactMap { entry in
             dataService.tour(by: entry.tourId)
@@ -222,7 +332,7 @@ private struct SavedEmptyState: View {
         EmptyStateLayout(
             icon: "bookmark",
             title: "Nothing saved yet",
-            message: "Tap the bookmark on any tour to save it for later."
+            message: "Tap the bookmark on any tour or maker to save it for later."
         )
     }
 }
