@@ -7056,6 +7056,54 @@
       "totalDurationSeconds": 117,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "b9d6f3a2-1c84-4e07-9a35-2d8b7e1f6c04",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Tower of London",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_5.webp"
+      ],
+      "tags": [
+        "tower of london",
+        "white tower",
+        "william the conqueror",
+        "crown jewels",
+        "anne boleyn",
+        "fortress",
+        "tower hill"
+      ],
+      "stops": [
+        {
+          "id": "7c2e4f81-3a96-4d52-b8e1-6f0a9d3c4e75",
+          "order": 0,
+          "title": "The Tower of London",
+          "caption": "Stand on Tower Hill, looking down and across at the fortress and its central White Tower.",
+          "latitude": 51.5081,
+          "longitude": -0.0759,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tower-of-london.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_hero.webp",
+          "transcriptText": "For nearly a thousand years, this has been the most frightening building in England.\n\nYou're on Tower Hill, looking down and across at the Tower of London \u2014 and the first thing to understand is that \"the Tower\" is not one tower but a whole fortress, rings of wall within wall, built up over centuries around the pale stone keep at its centre. That keep is the White Tower, begun by William the Conqueror around 1078, barely a decade after he took England. He built it to do one thing: to loom over the city and remind London who was in charge. It has never really stopped doing that job.\n\nFind the White Tower first \u2014 the square, four-turreted block in the middle, taller than everything around it. When it went up it was the tallest building in London, whitewashed so it could be seen for miles, a deliberate act of intimidation in stone. Everything else you can see \u2014 the curtain walls, the towers along them, the moat, now drained and green \u2014 was added later, each generation thickening the defences.\n\nHere's what makes the Tower strange. Most great fortresses do one job. This one has done nearly all of them at once. It has been a royal palace, a prison, an armoury, a treasury, a mint that struck the nation's coins, a menagerie of exotic animals, an observatory, and the place where the Crown Jewels are still kept today. Kings sheltered here and prisoners died here, sometimes in the same decade, sometimes in the same week.\n\n[beat]\n\nAnd it kept its grip on the imagination because of what happened inside. Two young princes vanished here in 1483 and were never seen again. Anne Boleyn was executed on the green within these walls. The last person held here was a Nazi, Rudolf Hess, in 1941 \u2014 which means the Tower was still doing its oldest job within living memory.\n\nStay up here on the hill a while before you go down. From this height you get the whole thing at once \u2014 the fortress, the river behind it, the glass towers of the modern City rising just beyond. Nine hundred years of power in one frame, with the oldest and hardest part still sitting dead in the centre."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5081,
+      "centroidLongitude": -0.0759,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "From Tower Hill you get the whole thing at once: not one tower but a fortress of wall within wall, built up over centuries around the pale stone keep at its centre. That keep is the White Tower, begun by William the Conqueror around 1078, barely a decade after he took England \u2014 a square, four-turreted block, once the tallest building in London and whitewashed so it could be seen for miles, a deliberate act of intimidation in stone. Everything else \u2014 the curtain walls, the towers along them, the moat now drained and green \u2014 was added later, each generation thickening the defences.\n\nWhat makes the Tower strange is that it has done nearly every job at once: royal palace, prison, armoury, treasury, a mint that struck the nation's coins, a menagerie of exotic animals, an observatory, and the place where the Crown Jewels are still kept. Kings sheltered here and prisoners died here, sometimes in the same week. Two young princes vanished here in 1483 and were never seen again; Anne Boleyn was executed on the green within these walls; the last prisoner was the Nazi Rudolf Hess in 1941 \u2014 the Tower still doing its oldest job within living memory. Stay up on the hill: nine hundred years of power in one frame, the river behind and the glass towers of the modern City just beyond, with the oldest and hardest part sitting dead in the centre.",
+      "shortDescription": "William the Conqueror's White Tower at the heart of a thousand-year fortress \u2014 royal palace, prison, mint, menagerie, and home of the Crown Jewels, seen whole from Tower Hill.",
+      "totalDurationSeconds": 138,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
