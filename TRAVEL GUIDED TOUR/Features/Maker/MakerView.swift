@@ -61,12 +61,13 @@ struct MakerView: View {
             avatar
 
             Text(maker.displayName)
-                .font(AtlasTypography.headline)
+                .font(AtlasTypography.caption)
+                .textCase(.uppercase)
                 .foregroundStyle(AtlasColors.primaryText)
                 .multilineTextAlignment(.center)
 
             Text(maker.bio)
-                .font(AtlasTypography.body)
+                .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
@@ -172,34 +173,33 @@ struct MakerView: View {
     }
 
     private func tourRow(_ tour: Tour) -> some View {
-        HStack(alignment: .top, spacing: AtlasSpacing.md) {
+        HStack(alignment: .center, spacing: AtlasSpacing.md) {
+            // Square corners per the app-wide "all images square
+            // corners" rule (owner, 2026-06-04) — matches the Search
+            // result rows.
             HeroImageView(
                 imageName: tour.heroImageURL,
                 height: 64,
-                cornerRadius: 8,
+                cornerRadius: 0,
                 category: tour.primaryCategory
             )
             .frame(width: 64)
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                // Title: BODY, all-caps, single line, tail-truncated —
+                // mirrors the Search result rows / Player stop titles.
                 Text(tour.title)
                     .font(AtlasTypography.body)
+                    .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
 
-                HStack(spacing: AtlasSpacing.xs) {
-                    Text(tour.primaryCategory.displayName)
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                    Text("•")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.tertiaryText)
-                    Text(formattedDuration(tour.totalDurationSeconds))
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                }
+                // Subtitle: duration only (category dropped), one line.
+                Text(formattedDuration(tour.totalDurationSeconds))
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .lineLimit(1)
             }
 
             Spacer()
