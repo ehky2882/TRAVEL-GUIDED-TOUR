@@ -123,7 +123,7 @@
       "shortDescription": "Two and a half minutes at Pier 16 \u2014 the Wavertree's masts, the old Fulton Fish Market, and the saltwater city New York used to be.",
       "longDescription": "Pier 16 is where the foot of Fulton Street meets the East River. To your right, the masts and rigging of the historic tall ships \u2014 including the Wavertree, an 1885 iron-hulled cargo vessel that hauled jute from India and grain from Argentina, all under sail. To your left, the Tin Building, built in 1907 as the Fulton Fish Market and reopened in 2022 as a food hall. Behind both of them, the glass towers of the Financial District \u2014 the modern city that grew up around all of this, then turned its back on the water.\n\nFor most of the nineteenth century, this stretch of waterfront was one of the busiest ports in the world. Hundreds of masts crowded the river. New York's wealth wasn't built downtown by bankers \u2014 it was built right here. A short piece, best taken with the wind off the river and the rigging clinking overhead.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/South_Street_Seaport%2C_Detroit_Photographic_Company_%280616%29.jpg/1280px-South_Street_Seaport%2C_Detroit_Photographic_Company_%280616%29.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/south-street-seaport-pier-16_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -155,7 +155,13 @@
         "tall ships",
         "south street seaport"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/south-street-seaport-pier-16_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/south-street-seaport-pier-16_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/south-street-seaport-pier-16_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/south-street-seaport-pier-16_5.webp"
+      ]
     },
     {
       "id": "f71ced9c-bd9a-45da-a39c-74869ce8db65",
@@ -605,7 +611,14 @@
         "museum",
         "2015"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whitney-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whitney-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whitney-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whitney-museum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whitney-museum_6.webp"
+      ]
     },
     {
       "id": "fceeb6bf-89a6-40c9-81c4-4b8efc781dcd",
@@ -1021,7 +1034,7 @@
       "shortDescription": "Two minutes on the Colonial Revival museum at 103rd Street \u2014 the only major NYC museum whose single subject is the city itself.",
       "longDescription": "On Fifth Avenue at 103rd Street \u2014 the northern end of Museum Mile, just across from Central Park's Conservatory Garden \u2014 stands a red-brick, white-marble Colonial Revival facade with a symmetrical entrance and tall arched windows. This is the Museum of the City of New York, founded in 1923 to do something simple but unusual: document the city itself. Not the art of New York, not the natural history of New York, but the actual city \u2014 its streets, its people, its political history, its architecture, its photographs, its everyday objects. It's the only major museum in New York whose single subject is the city itself.\n\nThe current building opened in 1932, designed by Joseph H. Freedlander in a Colonial-American style with no real historical accuracy in this neighborhood \u2014 a deliberate signal of \"old New York\" to anyone walking up. Behind the facade, the collection now numbers around one and a half million objects. The strongest section is photography \u2014 over a million images, including Berenice Abbott's photographs of 1930s New York and Jacob Riis's photographs of the Lower East Side that helped expose the conditions of nineteenth-century tenement life. There are also costumes, maps, paintings, theatrical ephemera, political artifacts \u2014 anything that documents what New York has been.\n\nAmong the big New York museums, this one gets less attention. It's smaller; it doesn't have the marquee paintings. But if you've ever wondered what New York looked like a hundred years ago, what the air felt like in the tenements, who lived where, what they wore \u2014 this is the museum that knows. Go in if you have time. Or keep walking up Fifth Avenue: the Conservatory Garden, just across the street, is one of the quietest spots in Central Park.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Museum_of_the_City_of_New_York_1220_Fifth_Avenue_from_west.jpg/1280px-Museum_of_the_City_of_New_York_1220_Fifth_Avenue_from_west.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-the-city-of-new-york_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -1054,7 +1067,11 @@
         "berenice abbott",
         "1923"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-the-city-of-new-york_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-the-city-of-new-york_3.webp"
+      ]
     },
     {
       "id": "92db00f1-f1d4-4067-ab7c-5ecc519bf949",
@@ -1376,7 +1393,10 @@
         "museum mile",
         "gilded age"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cooper-hewitt_2.webp"
+      ]
     },
     {
       "id": "a58601e7-a4aa-4c63-942b-e9191d64da5c",
@@ -1425,7 +1445,7 @@
       "shortDescription": "Two and a quarter minutes outside Henry Clay Frick's Fifth Avenue mansion \u2014 the Gilded Age home of one of America's most hated industrialists, holding one of its greatest art collections.",
       "longDescription": "On the corner of Fifth Avenue and 70th Street stands a limestone Beaux-Arts mansion built between 1913 and 1914 for Henry Clay Frick \u2014 the Pittsburgh steel baron, Andrew Carnegie's partner at Carnegie Steel, and one of the most hated industrialists of the late nineteenth century. The architects were Carr\u00e8re and Hastings, the same firm that designed the New York Public Library. Frick lived here for the last five years of his life. After his death, his will turned the building into a public museum.\n\nThe paradox of Frick is that while he was crushing labor strikes \u2014 most famously the Homestead Strike of 1892, where he hired three hundred armed Pinkerton agents to break a Pittsburgh steel plant strike, leaving ten men dead \u2014 he was simultaneously assembling one of the most refined art collections in the world. Vermeer, Rembrandt, Bellini, Whistler, Vel\u00e1zquez, Holbein. The collection inside includes some of the most important paintings in any American museum, displayed in the rooms where Frick chose to hang them \u2014 the dining room, the library, the West Gallery \u2014 exactly as he arranged them.\n\nThe Frick reopened in 2025 after a multi-year renovation by the architect Annabelle Selldorf \u2014 the first major expansion in its history, adding new galleries above the mansion while preserving the period rooms below. What you go inside for is the experience of seeing a private collection in a private home. The Met is institutional; the Frick is intimate. You're not in a museum \u2014 you're in someone's living room, looking at the paintings they chose to live with. They happen to be some of the best paintings in the country.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Frickmusjeh.JPG/1280px-Frickmusjeh.JPG",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frick-collection_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -1459,7 +1479,14 @@
         "vermeer",
         "rembrandt"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frick-collection_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frick-collection_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frick-collection_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frick-collection_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/frick-collection_6.webp"
+      ]
     },
     {
       "id": "15590326-bc27-446a-b642-87cd7df5f194",
@@ -1501,7 +1528,12 @@
         "fifth avenue",
         "museum mile"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/neue-galerie_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/neue-galerie_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/neue-galerie_4.webp"
+      ]
     },
     {
       "id": "cd1195ed-63ac-4955-991b-034b6f00d166",
@@ -1542,7 +1574,10 @@
         "brad cloepfil",
         "lollipop building"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-arts-and-design_2.webp"
+      ]
     },
     {
       "id": "fb824f29-4d1a-4e39-bdf2-881da8665cbc",
@@ -1625,7 +1660,14 @@
         "gutenberg bible",
         "manuscripts"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/morgan-library_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/morgan-library_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/morgan-library_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/morgan-library_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/morgan-library_6.webp"
+      ]
     },
     {
       "id": "b5551cf9-0156-47d9-b769-e65fe14d45d6",
@@ -2083,8 +2125,12 @@
       "shortDescription": "George Washington said goodbye to his army in this building \u2014 then walked out and went home.",
       "longDescription": "At the corner of Pearl and Broad Streets in Lower Manhattan stands Fraunces Tavern, a three-story brick building with white trim and dark green shutters \u2014 a colonial-era structure dating to 1719, one of the very few of its kind still standing in Manhattan. In November 1783, the British army formally evacuated New York City, and Washington and the Continental Army marched in from the north. On December 4th, in the upstairs Long Room of this tavern, Washington gathered the officers of his army and said goodbye. The Treaty of Paris had been signed, the war was over, and the army was being disbanded. He thanked the men who had served with him for eight years, then walked outside and began the long journey home to Mount Vernon \u2014 no government position, and for the first time in nearly a decade, the status of a private citizen. The reason this farewell matters is that Washington could have stayed. After the British left, the new country had no constitution, no executive branch, no clear plan for who would lead it, and he could have remained the indefinite commander of the army. Instead, he came here, said goodbye, and went home \u2014 and did the same thing six years later, after his second term as president. The Long Room is still there, now a museum. The building has been a tavern, hotel, post office, and federal government building over three centuries; the Sons of the Revolution run it today as a combined museum and restaurant.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Front_of_Fraunces_Tavern_I_November_2021.jpg/1280px-Front_of_Fraunces_Tavern_I_November_2021.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Fraunces_Tavern_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Fraunces_Tavern_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Fraunces_Tavern_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Fraunces_Tavern_4.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -2180,8 +2226,10 @@
       "shortDescription": "Almost no major artist gets to design their own museum. Isamu Noguchi did.",
       "longDescription": "On 33rd Road in Long Island City, Queens, the Noguchi Museum opened in 1985 \u2014 designed, arranged, and curated by the artist Isamu Noguchi himself, three years before he died. The exterior is unassuming dark brick, the former home of a photo-engraving plant that Noguchi bought in 1974 and used as a studio for ten years before converting it into a museum. Noguchi was one of the most consequential American sculptors of the twentieth century \u2014 born in Los Angeles in 1904 to a Japanese poet and an American mother, he spent his childhood between Japan and the United States, voluntarily entered a Japanese-American internment camp in Arizona during WWII to advocate for the people inside, then spent decades making sculpture, gardens, playgrounds, and lighting that drew equally from both traditions. The museum holds the largest collection of his work in the world across twelve indoor and outdoor galleries. Noguchi designed the layout himself: which works went where, the lighting, the wall colors, the bench placements. No labels next to the work, sparse descriptions, lots of empty floor. What makes the place unusual is that it isn't just a museum about Noguchi \u2014 it's a museum by Noguchi. Almost every other major artist has had their legacy curated after death by directors and estate trustees. Noguchi got to decide himself.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Noguchi_Museum.JPG/1280px-Noguchi_Museum.JPG",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Noguchi_Museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Noguchi_Museum_2.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -2863,8 +2911,13 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "Carnegie Hall",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Carnegie_Hall_exterior%2C_NYC_IMG_3937.JPG/1280px-Carnegie_Hall_exterior%2C_NYC_IMG_3937.JPG",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnegie-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnegie-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnegie-hall_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnegie-hall_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnegie-hall_5.webp"
+      ],
       "tags": [
         "carnegie hall",
         "midtown",
@@ -2906,8 +2959,14 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "The Cloisters",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/2013_The_Cloisters_from_Linden_Terrace_in_Fort_Tryon_Park.jpg/1280px-2013_The_Cloisters_from_Linden_Terrace_in_Fort_Tryon_Park.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cloisters_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cloisters_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cloisters_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cloisters_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cloisters_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cloisters_6.webp"
+      ],
       "tags": [
         "the cloisters",
         "fort tryon park",
@@ -3409,8 +3468,11 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "Lever House",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Lever_House_Nov_2025_33.jpg/1280px-Lever_House_Nov_2025_33.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lever-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lever-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lever-house_3.webp"
+      ],
       "tags": [
         "lever house",
         "park avenue",
@@ -3452,8 +3514,10 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "Seagram Building",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Seagram_Building_Nov_2025_06.jpg/1280px-Seagram_Building_Nov_2025_06.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seagram-building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seagram-building_2.webp"
+      ],
       "tags": [
         "seagram building",
         "park avenue",
@@ -3861,7 +3925,9 @@
       "shortDescription": "A 28-acre public garden in the Bronx perched above the Hudson River, once rented by Mark Twain and Theodore Roosevelt's family.",
       "longDescription": "Wave Hill is a 28-acre public garden in Riverdale, the Bronx, occupying a bluff above the Hudson River with unobstructed views of the New Jersey Palisades. Wave Hill House was built in 1843 and over the following century housed Theodore Roosevelt's family in the 1870s, Mark Twain in 1901 (who called it 'a house befitting the gods'), and conductor Arturo Toscanini in the 1940s. The British government leased the estate as its UN ambassador's official residence during World War II. Donated to New York City in 1960 and opened as a public garden in 1965, Wave Hill today features a flower garden, wild garden, aquatic garden, herb and dry garden, and a conservatory \u2014 all designed in the English landscape tradition with the dramatic Palisades as backdrop.",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Wave_Hill1.jpg/1280px-Wave_Hill1.jpg",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Wave_Hill_2.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 137,
@@ -3904,7 +3970,9 @@
       "shortDescription": "Home to the Panorama of the City of New York \u2014 a 9,335-square-foot scale model of all five boroughs, updated continuously since 1964.",
       "longDescription": "The Queens Museum occupies the former New York City Pavilion from the 1939 and 1964 World's Fairs, in Flushing Meadows Corona Park. Its centrepiece is the Panorama of the City of New York: a 1-inch-to-100-feet scale model covering 9,335 square feet and containing roughly 895,000 individual buildings, commissioned by Robert Moses for the 1964 Fair and updated ever since. The same gallery served as the United Nations General Assembly chamber from 1946 to 1950 \u2014 the vote to partition Palestine and the founding of UNICEF both happened in what is now the Panorama room.",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Queens_Museum-1.jpg/1280px-Queens_Museum-1.jpg",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Queens_Museum_2.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 145,
@@ -3946,8 +4014,11 @@
       "title": "Museum of the Moving Image",
       "shortDescription": "A museum of film, TV, and digital media built inside Paramount's former East Coast studio, where the Marx Brothers shot their first movie in 1929.",
       "longDescription": "The Museum of the Moving Image occupies a building that was part of Paramount's Astoria Studios from 1920 to 1971 \u2014 the studio where the Marx Brothers filmed 'The Cocoanuts' (1929) while performing the same show on Broadway each evening. Renovated in 1988 and dramatically expanded by Leeser Architecture in 2011, the museum holds 130,000 artifacts and an interactive permanent exhibition on the craft of making moving images. Kaufman Astoria Studios, the still-active descendant of the same Paramount complex, is directly next door \u2014 'Sesame Street,' 'Orange Is the New Black,' and 'Saturday Night Live' rehearsals all happen within a block.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Museum_of_the_Moving_Image_Marquee.jpg/1280px-Museum_of_the_Moving_Image_Marquee.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museum_of_the_Moving_Image_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museum_of_the_Moving_Image_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museum_of_the_Moving_Image_3.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 161,
@@ -3991,7 +4062,10 @@
       "shortDescription": "Five matched Greek Revival halls built as America's first retirement home for merchant sailors, sold to New York City for $1 and preserved as an 83-acre cultural complex.",
       "longDescription": "Sailors' Snug Harbor was founded under the 1801 will of shipping merchant Robert Richard Randall, who left his entire estate to create a home for 'aged, decrepit and worn-out sailors.' The five Greek Revival halls \u2014 designed by self-taught architect Minard Lafever \u2014 operated as a sailors' retirement community from 1833 to 1976, housing more than 28,000 mariners over that span. Sold to New York City for one dollar in 1976 to prevent demolition, the complex now hosts the Staten Island Museum, Newhouse Center for Contemporary Art, Noble Maritime Collection, Staten Island Botanical Garden, and a Chinese Scholar's Garden.",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Staten_Island_Museum_at_Snug_Harbor_Cultural_Center_%26_Botanical_Garden%2C_Staten_Island%2C_NY.jpg/1280px-Staten_Island_Museum_at_Snug_Harbor_Cultural_Center_%26_Botanical_Garden%2C_Staten_Island%2C_NY.jpg",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Snug_Harbor_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Snug_Harbor_3.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 165,
@@ -4589,8 +4663,14 @@
       "shortDescription": "The colonial-era chapel where Washington prayed at his inauguration \u2014 and the building that survived September 11 intact.",
       "longDescription": "You're on Broadway, outside St. Paul's Chapel \u2014 a small Georgian church in brown stone, with a colonnaded portico, a slim white steeple, and a graveyard wrapping around the sides. The chapel was built in 1766 by the Anglican congregation of Trinity Church, as a \"chapel of ease\" for parishioners who lived too far from the main Trinity site on Wall Street. It is the oldest surviving church building in Manhattan, and one of the few remaining colonial-era buildings of any kind in lower Manhattan. The architect is traditionally attributed to Thomas McBean, a Scottish student of James Gibbs \u2014 the same architect who had designed St Martin-in-the-Fields in London, which St. Paul's was deliberately modeled on.\n\nThe chapel has survived two extraordinary events. The first was the Great Fire of 1776, which destroyed about a quarter of New York in the weeks after the British occupied it during the Revolutionary War. The fire burned through the surrounding blocks, including the original Trinity Church a few blocks south, but St. Paul's was spared. Thirteen years later, on April 30, 1789, George Washington walked here from his inauguration at Federal Hall with members of the new Congress, and held the first official religious service of the American presidency in this building. Washington continued to worship here for the two years New York City served as the capital of the new country.\n\nThe second extraordinary survival was September 11, 2001. The east edge of the original World Trade Center complex was directly across the street, and when the towers fell, the chapel and its graveyard were buried in dust and debris. Steel and concrete landed in the graveyard; the mature trees absorbed most of the falling debris and shielded the building behind them. When the dust cleared, the chapel was structurally intact, with only one broken window. For the next nine months, St. Paul's became the round-the-clock relief station for the recovery workers at Ground Zero \u2014 meals, music, medical care, rest. The chapel earned a nickname: \"The Little Chapel That Stood.\"",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/St_Paul_steeple_sun_jeh.jpg/1280px-St_Paul_steeple_sun_jeh.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-chapel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-chapel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-chapel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-chapel_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-chapel_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pauls-chapel_6.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -4632,7 +4712,12 @@
       "longDescription": "You're on Broadway, between 73rd and 74th Streets, outside the Ansonia \u2014 a seventeen-story Beaux-Arts residential building with twin corner towers, a Parisian mansard roof, and an exuberantly ornamented facade that has earned it the local nickname \"the wedding cake of the Upper West Side.\" The building was constructed between 1899 and 1904, and at the time of its completion it was the largest residential hotel in New York City \u2014 three hundred and forty suites, more than five hundred thousand square feet, with the world's largest indoor swimming pool in the basement, Turkish baths, a fountain with live seals in the lobby, and what is generally credited as the first air conditioning system in any New York hotel.\n\nThe driving force behind the building was a man named William Earle Dodge Stokes \u2014 a Phelps-Dodge copper heir, an early advocate for Broadway as a grand thoroughfare to rival Fifth Avenue, and one of the more eccentric New York millionaires of his generation. Stokes conceived the Ansonia as something close to a self-sufficient utopia, and the rooftop farm was part of that vision: five hundred chickens, several ducks, six goats, a pig named Nanki-Poo, and a small bear. Bellhops collected eggs every morning and delivered them to the tenants. The Department of Health was not amused. In 1907, after residents complained about the smell and the noise, the city ordered the farm shut down \u2014 and Stokes and his teenage son spent the night before the inspection moving the animals down the freight elevators and hiding them in the basement.\n\nWhat made the Ansonia famous in the decades that followed was not the farm but the walls. Stokes had specified extraordinarily thick interior partitions throughout the building \u2014 thick enough to make individual apartments effectively soundproof. That single architectural detail made the Ansonia the favored residence of every working musician in New York: Enrico Caruso lived here, Arturo Toscanini lived here, Igor Stravinsky composed here, and the young Pl\u00e1cido Domingo lived here in the early years of his career. Babe Ruth lived here during his Yankees years, Theodore Dreiser wrote here, and Jack Dempsey kept an apartment here. Several members of the Chicago White Sox are said to have met in a suite here in September 1919 to plan throwing the World Series \u2014 the Black Sox scandal. The building was converted to residential condominiums in 1992. The bear, the pig, and the seals are long gone.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/The_Ansonia_building_as_seen_from_73rd_Street%2C_2026.jpg/1280px-The_Ansonia_building_as_seen_from_73rd_Street%2C_2026.jpg",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-ansonia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-ansonia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-ansonia_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-ansonia_5.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -4717,8 +4802,10 @@
       "shortDescription": "The Gilded Age fortress on Park Avenue \u2014 built entirely with private money, with interiors by Tiffany, Stanford White, and the leading designers of the American Aesthetic Movement.",
       "longDescription": "You're at Park Avenue and 66th Street, outside the Park Avenue Armory \u2014 a brick-and-granite building that takes up the entire block between 66th and 67th, and that looks, from the outside, like a medieval Italian fortress. It was built between 1877 and 1881 as the Seventh Regiment Armory, designed by the architect Charles W. Clinton, who was himself a veteran of the regiment. The exterior evokes a fortified palazzo from a thirteenth-century Italian city-state \u2014 flat surfaces of red pressed brick, granite trim, and three crenellated towers along the Park Avenue side.\n\nThe Seventh Regiment of the New York National Guard was, in the late nineteenth century, one of the most socially prestigious militia units in the United States \u2014 known as the \"Silk Stocking Regiment,\" with members including Vanderbilts, Roosevelts, Harrimans, and most of the other established old-money families of New York. When the regiment decided to build a new armory in the 1870s, they did not seek state or federal funding \u2014 they paid for the entire building themselves by private subscription, making this the only armory in the United States ever built and furnished entirely with private money.\n\nWhat the regiment did with that money is what makes the building unique. The drill hall is one of the largest unobstructed indoor spaces in New York: fifty-five thousand square feet under an eighty-foot-high barrel-vaulted iron roof, with no internal columns. The reception rooms were commissioned individually from the most prominent designers of the American Aesthetic Movement. The Veterans Room was designed in 1879 by Louis Comfort Tiffany \u2014 working with the twenty-seven-year-old Stanford White, the textile designer Candace Wheeler, and the painter Samuel Colman \u2014 a dense, eclectic interior of carved wood screens, hammered copper, blue mosaic tile, and stained glass borrowing from Islamic, Celtic, Japanese, and Egyptian sources. Tiffany was thirty-one and had not yet made his famous lamps. The New York City Landmarks Preservation Commission has described the Armory as containing \"the single most important collection of nineteenth-century interiors to survive intact in one building\" in the United States.\n\nIn 2007 the building's military function was retired and it was converted into a cultural center, using the vast Drill Hall for major art installations, concerts, and immersive performances. An ongoing restoration by the Swiss firm Herzog and de Meuron is still in progress. The Veterans Room and several other interiors are open to the public on regular tour days.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Park_Av_May_2024_13.jpg/1280px-Park_Av_May_2024_13.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/park-avenue-armory_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/park-avenue-armory_2.webp"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -5995,7 +6082,7 @@
       "shortDescription": "The most concentrated stretch of Art Deco residential architecture in the United States \u2014 designed in 1892 on the model of the Champs-\u00c9lys\u00e9es.",
       "longDescription": "The Grand Concourse runs four and a half miles north-south through the central Bronx \u2014 one hundred and eighty feet wide, with a tree-lined center mall and almost continuous Art Deco apartment buildings along both sides. It is the most concentrated stretch of Art Deco residential architecture in the United States. The boulevard was designed in 1892 by the French-born civil engineer Louis Aloys Risse on the model of the Champs-\u00c9lys\u00e9es \u2014 same width, same tree-lined median \u2014 and opened to traffic in 1909. The defining wave of construction came in the 1920s, when hundreds of apartment buildings went up in less than two decades: streamlined geometric facades, colored terra-cotta details, stainless-steel marquees, bronze entryways. The neighborhood they created was the Jewish Bronx \u2014 middle-class, often union-affiliated, \u201cthe Park Avenue of the middle class\u201d as it was called in the 1930s. From the 1960s onward the demographics shifted; the Concourse became primarily Puerto Rican, Dominican, and West African. The buildings stayed. Many are now NYC landmarks, restored to their original Art Deco condition.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/StrollOnGrandConcourse_ArtDeco1.JPG/1280px-StrollOnGrandConcourse_ArtDeco1.JPG",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grand_concourse_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -6031,7 +6118,11 @@
         "apartment-buildings",
         "champs-elysees"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grand_concourse_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grand_concourse_3.webp"
+      ]
     },
     {
       "id": "30254375-b208-4a41-a3c8-28aa9d0bb4d8",
@@ -6500,7 +6591,12 @@
       "title": "Ford Foundation Building",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Ford_Foundation_Building_(51921997207).jpg/1280px-Ford_Foundation_Building_(51921997207).jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ford-foundation-building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ford-foundation-building_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ford-foundation-building_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ford-foundation-building_5.webp"
+      ],
       "tags": [
         "ford foundation",
         "kevin roche",
@@ -6953,7 +7049,11 @@
       "title": "The Breuer Building",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/MET_Breuer_%2848377070386%29.jpg/1280px-MET_Breuer_%2848377070386%29.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/breuer-building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/breuer-building_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/breuer-building_4.webp"
+      ],
       "tags": [
         "breuer building",
         "marcel breuer",
