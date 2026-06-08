@@ -65,6 +65,14 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-06-07)
 
+### TestFlight 1.0 (36) (session 27 — web/PM)
+
+Build cut to ship the maker-page polish + save-maker feature plus recent chrome/search fixes and new galleries. Build bumped 35 → 36 direct-to-main (`ca671c8`, app-target lines only; test target stays 1). `xcodebuild archive` clean at `/tmp/Atlas-20260607-2112.xcarchive` (fast — DerivedData warm from build 35; embedded version verified `1.0 (36)`). No validation 90474 — `UIRequiresFullScreen` from build 34 held. Owner uploaded via Organizer. **TestFlight 1.0 (36) is live.**
+
+Carries: **PR #163** (full-edge module + no drawer leak on pushed details), **#164** (place results limited to cities/landmarks, businesses dropped), **#166** (Maker + Search page background pinned to the module shade), **#167** (maker editorial typography + square thumbnails), **#168** (new galleries: The Shed, Citi Field, LOVE Sculpture), **#170** (save-maker bookmark + nav chrome + Library section). No project changes this session beyond the pbxproj bump. **Catalog: 149 tours / 3 makers.**
+
+**Latest TestFlight build: 1.0 (36)** — uploaded 2026-06-07.
+
 ### TestFlight 1.0 (35) (session 26 — web/PM)
 
 Build cut to ship sessions 24–25's player + search work plus the latest content. Build bumped 34 → 35 direct-to-main (`ce32d88`, app-target lines only; test target stays 1). `xcodebuild archive` clean at `/tmp/Atlas-20260607-0649.xcarchive` (~4 min, no validation 90474 — `UIRequiresFullScreen` from build 34 held). Owner uploaded via Organizer. **TestFlight 1.0 (35) is live.**
