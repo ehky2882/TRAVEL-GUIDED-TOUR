@@ -4151,8 +4151,15 @@
       "title": "Riverside Church",
       "shortDescription": "John D. Rockefeller Jr.'s Gothic Revival skyscraper-church, where Martin Luther King delivered his 1967 'Beyond Vietnam' speech \u2014 and America's tallest church tower.",
       "longDescription": "Riverside Church was built 1927\u20131930 on Riverside Drive at 120th Street, funded by John D. Rockefeller Jr. and modelled on Chartres Cathedral. Its 392-foot tower \u2014 the tallest church tower in the United States \u2014 houses the world's largest carillon (74 bells, including one weighing over 20 tons). The pulpit has hosted Nelson Mandela, Desmond Tutu, the Dalai Lama, and on April 4, 1967 \u2014 exactly one year before his assassination \u2014 Martin Luther King Jr., who delivered 'Beyond Vietnam: A Time to Break Silence,' now considered one of the most important speeches of 20th-century American rhetoric.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Neo-Gothic_-_New_York%2C_NY_-_Riverside_Church_(1).jpg/1280px-Neo-Gothic_-_New_York%2C_NY_-_Riverside_Church_(1).jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_7.webp"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 184,
