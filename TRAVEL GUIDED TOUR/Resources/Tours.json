@@ -7009,6 +7009,53 @@
       "totalDurationSeconds": 135,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "4e8b2a91-6d3c-4f57-8a1e-9c0b5d7e2f43",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Monument",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monument_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monument_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monument_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monument_4.webp"
+      ],
+      "tags": [
+        "the monument",
+        "great fire of london",
+        "christopher wren",
+        "robert hooke",
+        "pudding lane",
+        "royal society",
+        "city of london"
+      ],
+      "stops": [
+        {
+          "id": "a3f1c7d2-58e9-4b16-9c0a-2d4e7f8b91c5",
+          "order": 0,
+          "title": "The Monument",
+          "caption": "Stand at the bottom of Monument Street, looking up at the fluted column and its gilded urn of flame.",
+          "latitude": 51.5102,
+          "longitude": -0.0859,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-monument.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monument_hero.webp",
+          "transcriptText": "This column is exactly as tall as the distance to the spot where the fire started.\n\nYou're at the bottom of Monument Street, looking up at a single fluted column of Portland stone, two hundred and two feet high, topped with a gilded urn of flame. This is the Monument to the Great Fire of London \u2014 designed by Christopher Wren and his friend Robert Hooke, and finished in 1677. It marks the fire of 1666, which began in a bakery on Pudding Lane and burned for four days, destroying most of the medieval City: thirteen thousand houses, eighty-seven churches, old St Paul's.\n\nHere's the detail worth carrying away. The column is two hundred and two feet tall, and it stands exactly two hundred and two feet from the site of the bakery where the fire began. The height is the distance. If you could lay the Monument flat on the ground, hinged at its base, the urn of flame at the top would land precisely on the spot where the whole thing started.\n\nThat's not a coincidence, and it's not only poetry. Wren and Hooke were both founding members of the Royal Society \u2014 scientists first \u2014 and they built the column to double as a working instrument. There's a laboratory in the basement and a hatch in that golden urn, and the entire shaft is hollow, with a central staircase doubling as the tube of a giant zenith telescope for observing the stars directly overhead. The vibrations from the traffic eventually made the readings useless, but the intent is built into the stone: a monument to a disaster, designed by two men who couldn't resist also making it do science.\n\n[beat]\n\nThere are three hundred and eleven steps up the inside, and a cage at the top \u2014 added in the nineteenth century after a run of people used the viewing platform to end their lives. The view from up there is mostly glass towers now. But the thing to hold onto is down here at the base: a column that tells you the size of the catastrophe by the simple, exact fact of where it can reach."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5102,
+      "centroidLongitude": -0.0859,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "At the bottom of Monument Street stands a single fluted column of Portland stone, 202 feet high and topped with a gilded urn of flame: the Monument to the Great Fire of London, designed by Christopher Wren and Robert Hooke and finished in 1677. It marks the fire of 1666, which began in a bakery on Pudding Lane and burned for four days, destroying most of the medieval City \u2014 thirteen thousand houses, eighty-seven churches, and old St Paul's. The detail worth carrying away: the column is 202 feet tall and stands exactly 202 feet from the site of the bakery. The height is the distance \u2014 laid flat and hinged at its base, the urn would land precisely where the fire started.\n\nThat is not only poetry. Wren and Hooke were founding members of the Royal Society, and they built the column to double as a working instrument: a laboratory in the basement, a hatch in the golden urn, and a hollow shaft whose central staircase served as the tube of a giant zenith telescope for observing the stars overhead. Traffic vibration eventually ruined the readings, but the intent is built into the stone. There are 311 steps to a viewing cage at the top \u2014 the cage added in the nineteenth century after a run of suicides \u2014 and the view today is mostly glass towers. The thing to hold onto is at the base: a column that tells you the size of the catastrophe by the exact fact of where it can reach.",
+      "shortDescription": "Wren and Hooke's 202-foot column to the Great Fire of 1666 \u2014 its height is the exact distance to the Pudding Lane bakery where the fire began, and the hollow shaft was built as a giant zenith telescope.",
+      "totalDurationSeconds": 117,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
