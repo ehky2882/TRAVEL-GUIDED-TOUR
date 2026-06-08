@@ -824,7 +824,11 @@
         "lenape",
         "military history"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/governors-island_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/governors-island_3.webp"
+      ]
     },
     {
       "id": "48149f3c-5cbd-4eb3-80f2-23ce84ff2fbe",
@@ -1698,7 +1702,11 @@
       "longDescription": "The American Museum of Natural History takes up an entire city block on the Upper West Side. What most visitors never see is the outside: four facades, each designed by a different architect, in a different decade, in a completely different style. This tour walks the perimeter \u2014 a Beaux-Arts national temple on Central Park West, an 1890s granite cathedral on 77th Street, a 2023 biomimetic shell on Columbus Avenue, and a glass vitrine housing a floating aluminum sphere on 81st Street. Together they make the most complete history of American museum architecture you can see anywhere in New York City. Allow about 30 minutes to walk it at a comfortable pace.",
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/USA-NYC-American_Museum_of_Natural_History.JPG/3840px-USA-NYC-American_Museum_of_Natural_History.JPG",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/AMNH__Introduction_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/AMNH__Introduction_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/AMNH__Introduction_4.webp"
+      ],
       "kind": "multiStop",
       "stops": [
         {
@@ -3119,7 +3127,11 @@
       "title": "Beacon Theatre",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Beacon_Theatre_%2849020061512%29.jpg/1280px-Beacon_Theatre_%2849020061512%29.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beacon-theatre_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beacon-theatre_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beacon-theatre_4.webp"
+      ],
       "tags": [
         "beacon theatre",
         "upper west side",
@@ -3643,7 +3655,10 @@
       "title": "The Astor Place Cube",
       "priceUSD": 0,
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/The_Astor_Place_Cube_%2848072759542%29.jpg/1280px-The_Astor_Place_Cube_%2848072759542%29.jpg",
-      "additionalImageURLs": [],
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/astor-place-cube_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/astor-place-cube_3.webp"
+      ],
       "tags": [
         "astor place cube",
         "alamo",
@@ -3728,8 +3743,11 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "Trinity Church",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Trinity_Church_-_Wall_Street%2C_New_York%2C_NY%2C_USA_-_August_19%2C_2015_-_panoramio.jpg/1280px-Trinity_Church_-_Wall_Street%2C_New_York%2C_NY%2C_USA_-_August_19%2C_2015_-_panoramio.jpg",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trinity-church_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trinity-church_2.webp",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Trinity_Church_-_Wall_Street%2C_New_York%2C_NY%2C_USA_-_August_19%2C_2015_-_panoramio.jpg/1280px-Trinity_Church_-_Wall_Street%2C_New_York%2C_NY%2C_USA_-_August_19%2C_2015_-_panoramio.jpg"
+      ],
       "tags": [
         "trinity church",
         "wall street",
@@ -4038,8 +4056,15 @@
       "title": "Citi Field",
       "shortDescription": "The Mets' 2009 stadium designed not to evoke itself but Ebbets Field \u2014 a demolished Brooklyn ballpark for a team that left New York half a century earlier.",
       "longDescription": "Citi Field opened in 2009 in Flushing Meadows, Queens, replacing Shea Stadium (1964\u20132008). Designed by Populous \u2014 the same firm behind the new Yankee Stadium \u2014 it deliberately references Ebbets Field, the demolished Brooklyn home of the Dodgers, who left New York in 1957. The Jackie Robinson Rotunda at the main entrance honours the Dodgers legend who never played in Queens. Shea Stadium's footprint, marked with its original bases and home plate, sits in the adjacent parking lot.",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Citi_Field_August_2021.jpg/1280px-Citi_Field_August_2021.jpg",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Citi_Field_6.webp",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Citi_Field_August_2021.jpg/1280px-Citi_Field_August_2021.jpg"
+      ],
       "kind": "single",
       "introAudioURL": null,
       "totalDurationSeconds": 157,
@@ -5229,7 +5254,7 @@
       "shortDescription": "Louis Kahn's granite memorial to FDR \u2014 built from 1974 drawings, opened in 2012, thirty-eight years after its architect's death.",
       "longDescription": "A white granite wedge at the southern tip of Roosevelt Island, narrowing to a point above the East River with the UN and Lower Manhattan skyline to the west. Louis Kahn finished the design in 1974, carried the drawings in his briefcase to India, and died of a heart attack at Penn Station on the way home. New York shelved the project for thirty-five years. A private foundation revived it in 2008; the park opened in October 2012, built almost exactly to Kahn's specifications. At the southern end, a sunken open-air room called The Room holds a marble bust of Roosevelt against granite walls open to the sky.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Four_Freedoms_Park_(8603774871).jpg/1280px-Four_Freedoms_Park_(8603774871).jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Four_Freedoms_Park_Roosevelt_Island_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5265,7 +5290,12 @@
         "2012",
         "1974"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Four_Freedoms_Park_Roosevelt_Island_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Four_Freedoms_Park_Roosevelt_Island_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Four_Freedoms_Park_Roosevelt_Island_4.webp"
+      ]
     },
     {
       "id": "28489c01-beef-41fc-82f8-f16cd4795d71",
@@ -5273,7 +5303,7 @@
       "shortDescription": "In the 1850s, second only to Niagara Falls as a tourist destination \u2014 and the landscape that directly inspired Central Park.",
       "longDescription": "The Gothic Revival brownstone gate at Fifth Avenue and 25th Street opens onto 478 acres of landscaped hills, ponds, and mausoleums \u2014 the highest natural point in Brooklyn included. Founded in 1838 before public parks existed in New York, Green-Wood drew half a million visitors a year by the 1850s. Frederick Law Olmsted came here; the experience helped convince New York that the city needed Central Park. Six hundred thousand people are buried at Green-Wood: Leonard Bernstein, Jean-Michel Basquiat, Samuel Morse, Louis Comfort Tiffany, Boss Tweed, and Charles Ebbets, who built Ebbets Field for the Brooklyn Dodgers. The cemetery is still active and increasingly functions, again, as a public space.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2015_Green-Wood_Cemetery_Gate_from_outside.jpg/1280px-2015_Green-Wood_Cemetery_Gate_from_outside.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/GreenWood_Cemetery_Main_Gate_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5310,7 +5340,13 @@
         "history",
         "sunset-park"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/GreenWood_Cemetery_Main_Gate_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/GreenWood_Cemetery_Main_Gate_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/GreenWood_Cemetery_Main_Gate_4.webp",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2015_Green-Wood_Cemetery_Gate_from_outside.jpg/1280px-2015_Green-Wood_Cemetery_Gate_from_outside.jpg"
+      ]
     },
     {
       "id": "3d117c47-6c6e-42b8-a0f9-9820796d85de",
@@ -5318,7 +5354,7 @@
       "shortDescription": "In 1991, construction workers digging for a federal office tower uncovered a colonial-era cemetery for ten to twenty thousand Africans \u2014 lost for two hundred years beneath Lower Manhattan.",
       "longDescription": "The polished black granite memorial on Duane Street marks the location of the largest known colonial-era cemetery for Africans and African Americans in North America. Used for over a century beginning around 1697, the burial ground held the remains of enslaved and free Africans who were forbidden from burying their dead in the city's churchyards. By the late eighteenth century it was paved over and forgotten. When federal construction crews uncovered it in 1991, the project stopped; over four hundred individuals were excavated and studied at Howard University, then re-interred on site in 2003 in coffins of African mahogany. The memorial, designed by architect Rodney Leon, was dedicated in 2007. President Bush designated it a National Monument in 2006 \u2014 the only one in New York City.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Looking_up_in_African_Burial_Ground_National_Monument.jpg/1280px-Looking_up_in_African_Burial_Ground_National_Monument.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/African_Burial_Ground_National_Monument_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5354,7 +5390,11 @@
         "2007",
         "archaeology"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/African_Burial_Ground_National_Monument_2.webp",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Looking_up_in_African_Burial_Ground_National_Monument.jpg/1280px-Looking_up_in_African_Burial_Ground_National_Monument.jpg"
+      ]
     },
     {
       "id": "364c2287-c6c1-4850-bc9e-cce71fe29d2c",
@@ -5407,7 +5447,7 @@
       "shortDescription": "The small marble fountain in this park commemorates the largest single loss of life in New York City history before September 11 \u2014 a story that reshaped the entire neighborhood.",
       "longDescription": "Ten and a half acres in the East Village, laid out in 1834, bounded by Avenue A and B between 7th and 10th Streets. Near the center stands the Slocum Memorial \u2014 a marble fountain inscribed \"They were earth's purest children young and fair\" \u2014 marking the 1904 General Slocum disaster, in which more than a thousand people, mostly German immigrant women and children from the surrounding blocks of Kleindeutschland, died when a steamship excursion caught fire on the East River. The catastrophe effectively ended Little Germany as a neighborhood. The East Village that replaced it \u2014 punk, anarchism, the Hare Krishnas founded under an elm tree here in 1966, the police riot of 1988 \u2014 built up on the empty space the Slocum left behind.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/General_Slocum_Memorial_Tompkins_Square_Park_NYC.JPG/1280px-General_Slocum_Memorial_Tompkins_Square_Park_NYC.JPG",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tompkins_Square_Park_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5443,7 +5483,11 @@
         "1988",
         "park"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tompkins_Square_Park_2.webp",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/General_Slocum_Memorial_Tompkins_Square_Park_NYC.JPG/1280px-General_Slocum_Memorial_Tompkins_Square_Park_NYC.JPG"
+      ]
     },
     {
       "id": "d2b4a854-c1ac-463a-bccd-fcf3f66f8399",
@@ -5488,7 +5532,10 @@
         "picasso",
         "diller-scofidio"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MoMA_53rd_Street_Entrance_2.webp"
+      ]
     },
     {
       "id": "771c68bd-a100-482b-ba7d-cd4bbad137d3",
@@ -5747,7 +5794,11 @@
         "mulberry-bend",
         "history"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_columbus_park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_columbus_park_3.webp"
+      ]
     },
     {
       "id": "3f07598b-d9f7-4a9f-a074-ec26d8966abd",
@@ -5791,7 +5842,10 @@
         "1926",
         "1991"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/schomburg_center_2.webp"
+      ]
     },
     {
       "id": "8add1db1-098c-48c1-a637-cf71e30b05dd",
@@ -6024,7 +6078,7 @@
       "shortDescription": "Frank Gehry has built in dozens of cities worldwide. The IAC Building is his only completed structure in New York.",
       "longDescription": "The IAC Building rises ten stories on the West Side Highway between 18th and 19th Streets \u2014 a curtain wall of white-fritted glass with bottom edges that curve upward like the hull of a sail, its asymmetrical facades twisting slightly with each story. Completed in 2007, it is the New York headquarters of Barry Diller's media holding company IAC, and it is the only finished building Frank Gehry has ever constructed in New York City. Gehry \u2014 best known for the titanium-clad Guggenheim Bilbao and the Walt Disney Concert Hall in Los Angeles \u2014 designed the sail form at Diller's request: an avid sailor, Diller wanted something that referenced the Hudson River the building faces. The white frit pattern on the glass acts as both a sun screen and a softening agent, giving the building its characteristic milky luminescence in daylight. Across the highway, the Diller architecture cluster continues: Diane von Furstenberg's headquarters by Work Architecture Company, Little Island on the Hudson, and the High Line \u2014 both of which Diller and von Furstenberg helped fund.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/NYC_-_Frank_Gehry_designed_building_IAC_%28Inter_Active_Corp%29_on_West_18th_Street.jpg/1280px-NYC_-_Frank_Gehry_designed_building_IAC_%28Inter_Active_Corp%29_on_West_18th_Street.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iac_building_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -6060,7 +6114,13 @@
         "high-line",
         "little-island"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iac_building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iac_building_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iac_building_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/iac_building_5.webp"
+      ]
     },
     {
       "id": "f87e0bdc-c738-415d-927d-a6299337db5e",
@@ -6540,8 +6600,11 @@
       "shortDescription": "The two small parks at the center of New York's first residential skyscraper complex \u2014 built in the 1920s with their backs to the East River slaughterhouses, now overlooking the United Nations.",
       "longDescription": "You're in Tudor City Greens, the two small parks on either side of East 42nd Street between First and Second Avenues, just west of the United Nations. The twelve buildings surrounding the parks make up Tudor City, one of the first residential skyscraper complexes in the United States, built between 1925 and 1932 by the developer Fred F. French and designed primarily by the architect H. Douglas Ives. The style is Tudor Revival \u2014 Gothic arches, gargoyles, leaded glass, half-timbering \u2014 all applied to twenty-five-story apartment buildings.\n\nThe parks were designed as the front yards of the complex, which is why the buildings around you face inward toward the gardens with their largest windows and most ornate facades. The river side, where the United Nations now stands, was at the time of construction a strip of slaughterhouses, gas plants, coal yards, and the worst tenement slums in Manhattan \u2014 and Tudor City was deliberately designed to turn its back on that view. The apartments rented in the late 1920s with the promise that residents would never have to look at the river.\n\nThat promise aged badly. In 1947, the United Nations chose the slaughterhouse site for its new headquarters, and by 1952 the back of Tudor City \u2014 its lowest-rent, fewest-windowed side \u2014 looked out at one of the most famous diplomatic skylines in the world. Apartment values shifted accordingly.\n\nThe parks themselves nearly didn't survive. In 1972, the real estate magnate Harry Helmsley, who had acquired most of Tudor City a few years earlier, announced plans to demolish both Greens and replace them with two new apartment towers. The Tudor City residents organized in opposition, joined by city preservationists, and the campaign to save the parks lasted more than a decade. The parks were sold to the Trust for Public Land in 1986 and transferred to the City of New York in 1988. They are now operated by a nonprofit called Tudor City Greens, Inc.\n\nBoth parks are small \u2014 about three-quarters of an acre between them \u2014 but they sit on a bluff above the rest of midtown, and the view east from either one runs straight to the East River. Forty-second Street passes underneath you, in the cut where it slices through Murray Hill before reaching the river.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Tudor_City_jeh.JPG/1280px-Tudor_City_jeh.JPG",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tudor-city-greens_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tudor-city-greens_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tudor-city-greens_3.webp"
+      ],
       "kind": "single",
       "stops": [
         {
