@@ -519,7 +519,11 @@
         "prospect heights",
         "museum"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brooklyn-museum_3.webp"
+      ]
     },
     {
       "id": "b66f9ad2-0562-4038-a5c0-ba198f0bc2de",
@@ -642,7 +646,11 @@
         "museum",
         "1936"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/american-museum-natural-history_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/american-museum-natural-history_3.webp"
+      ]
     },
     {
       "id": "540613ee-b72f-4460-95ff-a03d921681ae",
@@ -2987,8 +2995,13 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "title": "Stonewall Inn",
       "priceUSD": 0,
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Stonewall_Inn%2C_NYC_%28May_2014%29_-_2.JPG/1280px-Stonewall_Inn%2C_NYC_%28May_2014%29_-_2.JPG",
-      "additionalImageURLs": [],
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-inn_hero.webp",
+      "additionalImageURLs": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Stonewall_Inn%2C_NYC_%28May_2014%29_-_2.JPG/1280px-Stonewall_Inn%2C_NYC_%28May_2014%29_-_2.JPG",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-inn_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-inn_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-inn_4.webp"
+      ],
       "tags": [
         "stonewall inn",
         "greenwich village",
@@ -4529,8 +4542,12 @@
       "shortDescription": "The oldest city hall still in continuous use in the United States \u2014 and the story of why its back was built cheaper than its front.",
       "longDescription": "You're in City Hall Park, looking north at the main facade of New York City Hall. The building is small by the standards of nineteenth-century civic architecture \u2014 only two stories above a partial basement, no enormous dome, no monumental portico \u2014 but the proportions are crisp, the limestone white, and the detailing is meticulous. It was designed by two architects working in unusual collaboration: a French-born \u00e9migr\u00e9 named Joseph-Fran\u00e7ois Mangin, who provided the French Renaissance facade and the overall plan, and a New Yorker named John McComb Jr., who handled the engineering and the more restrained Federal-style interior. The cornerstone was laid in 1803, and the building opened in 1812 \u2014 it is the oldest city hall still in continuous use anywhere in the United States.\n\nThe famous story about this building is what's behind it. When City Hall was being built, the northern edge of New York's developed area was at about Houston Street, twenty blocks south. The architects and the city council assumed nobody would ever view the back \u2014 so the south, east, and west sides were faced in expensive Massachusetts marble, but the north facade was originally faced in cheap brownstone. The city kept growing north, and within thirty years the brownstone back was facing as much pedestrian traffic as the marble front. The mismatched facades persisted for over a hundred years, until the entire exterior was re-clad in matching Alabama limestone in the mid-1950s.\n\nCity Hall has been the seat of New York government for more than two hundred years. Lincoln lay in state in the rotunda upstairs in April 1865, on his way back to Springfield. The Governor's Room contains portraits of every governor of New York State, along with George Washington's writing desk, and is open to the public on weekday tours. The Tweed Courthouse \u2014 named after the corrupt Tammany Hall boss who oversaw its construction \u2014 is just behind City Hall, and the Surrogate's Courthouse, with its Beaux-Arts facade, is across Chambers Street to the east.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/City_Hall-_Exterior.JPG/1280px-City_Hall-_Exterior.JPG",
-      "additionalImageURLs": null,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/city-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/city-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/city-hall_3.webp",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/City_Hall-_Exterior.JPG/1280px-City_Hall-_Exterior.JPG"
+      ],
       "kind": "single",
       "stops": [
         {
@@ -5692,7 +5709,7 @@
       "shortDescription": "The first United States Congress met here, George Washington took the oath of office on this spot, and the Bill of Rights was drafted in this building \u2014 then it was demolished.",
       "longDescription": "The Greek Revival marble temple at 26 Wall Street marks the site of one of the most consequential buildings in American history. The original Federal Hall, a smaller redbrick structure on this lot, served successively as New York's City Hall, the U.S. Capitol, and the site of Washington's first inauguration on April 30, 1789. The First Congress, meeting in the chamber below, was simultaneously drafting the Bill of Rights. New York was the nation's first capital for a year and a half before the government moved to Philadelphia in 1790. The original building was demolished in 1812; the current Greek Revival structure by Ithiel Town and Alexander Jackson Davis was completed in 1842 as a Custom House. John Quincy Adams Ward's bronze Washington, installed in 1883, stands approximately where the inaugural balcony once was.",
       "makerId": "00000000-0000-0000-0000-000000000001",
-      "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/MMDA-Photos_-_2019-06-01_-_Federal_Hall.jpg/1280px-MMDA-Photos_-_2019-06-01_-_Federal_Hall.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/federal_hall_hero.webp",
       "kind": "single",
       "stops": [
         {
@@ -5728,7 +5745,11 @@
         "greek-revival",
         "financial-district"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/federal_hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/federal_hall_3.webp"
+      ]
     },
     {
       "id": "6877114e-0d89-4271-a16b-dbabb95f42ae",
@@ -5957,7 +5978,11 @@
         "beaux-arts",
         "john-h-duncan"
       ],
-      "priceUSD": 0
+      "priceUSD": 0,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grand_army_plaza_brooklyn_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grand_army_plaza_brooklyn_3.webp"
+      ]
     },
     {
       "id": "2023e7d5-a544-480d-8dc9-ce0bcd05e47a",
