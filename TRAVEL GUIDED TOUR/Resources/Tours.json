@@ -7152,6 +7152,54 @@
       "totalDurationSeconds": 125,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "a72c5e94-8f31-4b06-9d28-6c0a3b7e1f52",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Leadenhall Market",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_5.webp"
+      ],
+      "tags": [
+        "leadenhall market",
+        "horace jones",
+        "victorian arcade",
+        "roman londinium",
+        "city of london",
+        "harry potter",
+        "cast iron"
+      ],
+      "stops": [
+        {
+          "id": "f6b3d829-4e71-4c95-8a02-1d7e9c5b3a64",
+          "order": 0,
+          "title": "Leadenhall Market",
+          "caption": "Stand at the centre, where the four arcades meet under the highest part of the painted iron roof.",
+          "latitude": 51.5128,
+          "longitude": -0.0836,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/leadenhall-market.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_hero.webp",
+          "transcriptText": "You're standing in a Victorian shopping arcade built on top of the centre of Roman London.\n\nThis is Leadenhall Market \u2014 a covered Victorian arcade of cream and maroon and green, wrought iron and glass, with cobbles underfoot and ornate painted ironwork overhead. It was designed by Horace Jones, the City's architect, and built in 1881. If it looks familiar and you've never been to London, that may be because it stood in for a wizarding alley in the first Harry Potter film \u2014 but its real story is far older and stranger than that.\n\nLook up at the ironwork and the painted ceiling, then look down at the ground. You are standing very close to the dead centre of Roman London \u2014 Londinium. Right here, around two thousand years ago, stood the basilica and forum, the largest Roman building north of the Alps: a town hall and marketplace and law court combined, bigger than St Paul's Cathedral is today. The Romans put the beating heart of their city on this exact spot. For two thousand years, in one form or another, this has been a place where Londoners come to buy and sell and argue.\n\nThere has been a market here continuously since the fourteenth century \u2014 first poultry, then cheese, then a general market for the eastern City. The name comes from a lead-roofed mansion that stood here in the Middle Ages. What you see now, the elegant iron arcade, is the Victorian rebuild, the moment the City decided its scruffy medieval market deserved a cathedral of cast iron.\n\n[beat]\n\nHere's the quiet thing about it. The City of London empties out at night and at weekends \u2014 it's offices now, not homes, and the crowds vanish when the work does. But this little crossing of covered lanes has been a market through Roman occupation, through the Black Death, through the Great Fire that stopped just short of here, through the Blitz. Empires came and went over it. The selling never stopped.\n\nTake the lane to the centre, where the four arcades meet under the highest part of the roof. Stand there a moment. Two thousand years of commerce, on one spot, and the painted ironwork above you is only the most recent roof."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5128,
+      "centroidLongitude": -0.0836,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Leadenhall Market is a covered Victorian arcade of cream, maroon and green \u2014 wrought iron and glass, cobbles underfoot, ornate painted ironwork overhead \u2014 designed by the City architect Horace Jones and built in 1881. It may look familiar even if you've never been to London: it stood in for a wizarding alley in the first Harry Potter film. But its real story is older and stranger. Look down at the ground: you are standing very close to the dead centre of Roman London. Right here, around two thousand years ago, stood the basilica and forum \u2014 the largest Roman building north of the Alps, a town hall, marketplace and law court combined, bigger than St Paul's Cathedral is today. The Romans put the beating heart of their city on this exact spot.\n\nThere has been a market here continuously since the fourteenth century \u2014 first poultry, then cheese, then a general market for the eastern City. The name comes from a lead-roofed mansion that stood here in the Middle Ages; the elegant iron arcade is the Victorian rebuild, the moment the City decided its scruffy medieval market deserved a cathedral of cast iron. The quiet thing about it: the City empties out at night and on weekends \u2014 offices now, not homes \u2014 but this little crossing of covered lanes has been a market through Roman occupation, the Black Death, the Great Fire that stopped just short of here, and the Blitz. Empires came and went over it; the selling never stopped. Take the lane to the centre, where the four arcades meet under the highest part of the roof: two thousand years of commerce on one spot, and the painted ironwork above you is only the most recent roof.",
+      "shortDescription": "Horace Jones's 1881 cast-iron arcade over the dead centre of Roman Londinium \u2014 a market on this spot since the 14th century, and Diagon Alley in the first Harry Potter film.",
+      "totalDurationSeconds": 130,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
