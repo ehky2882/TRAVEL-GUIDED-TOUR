@@ -8060,6 +8060,54 @@
       "totalDurationSeconds": 137,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The National Gallery",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_5.webp"
+      ],
+      "tags": [
+        "national gallery",
+        "paintings",
+        "western art",
+        "trafalgar square",
+        "free museum",
+        "leonardo",
+        "van gogh"
+      ],
+      "stops": [
+        {
+          "id": "f3c8b2a1-7d64-4e50-9a08-3f7c6e1b2d95",
+          "order": 0,
+          "title": "The National Gallery",
+          "caption": "Stand on the north side of Trafalgar Square before the portico \u2014 then go in and pick one room.",
+          "latitude": 51.5089,
+          "longitude": -0.1283,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/national-gallery.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 45,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_hero.webp",
+          "transcriptText": "This is one of the greatest collections of paintings on earth, and it costs nothing to walk in \u2014 which was the entire point.\n\nYou're on the north side of Trafalgar Square, looking at the long, low Classical front of the National Gallery, with its dome and portico stretching the width of the square. The building went up in the eighteen-thirties; the architecture is, frankly, the least interesting thing about the place, and even at the time people grumbled it was too modest for its setting. What matters is inside: eight hundred years of European painting, from medieval gold-ground altarpieces to the Impressionists. Van Eyck, Leonardo, Vermeer, Turner, Van Gogh's sunflowers, Constable's hay wain \u2014 a great slice of the canon of Western art, in one building.\n\nHere's what makes the National Gallery itself, as opposed to just a great museum. When it was founded in 1824, the nation bought a collection of just thirty-eight paintings as its seed. And from the start the principle was that it would be free, and central, and open to everyone \u2014 placed deliberately at Trafalgar Square, the argument went, so that it sat exactly between the wealthy West End and the poorer districts to the east, reachable on foot by anyone in the city. Art for the clerk and the costermonger, not just the collector.\n\nThat principle held. Unlike many of the world's great galleries, it has stayed free to enter for two hundred years. You can walk in off the square, with no ticket and no money, and stand in front of a Leonardo.\n\n[beat]\n\nThe collection nearly didn't survive intact. During the Second World War, with bombs falling on London, the entire collection was evacuated and hidden deep in a slate mine in Wales. The empty gallery then did something quietly defiant: it brought back one painting at a time, a single masterpiece displayed each month, so Londoners under the Blitz could still come and look at one great thing. People queued for it.\n\nGo in, even for twenty minutes, and pick one room. The whole place was built on the idea that you, specifically, should be able to do exactly that \u2014 for free, any day, no reason required."
+        }
+      ],
+      "primaryCategory": "visualArt",
+      "centroidLatitude": 51.5089,
+      "centroidLongitude": -0.1283,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On the north side of Trafalgar Square stretches the long, low Classical front of the National Gallery, with its dome and portico. The building went up in the 1830s; the architecture is, frankly, the least interesting thing about the place \u2014 even at the time people grumbled it was too modest for its setting. What matters is inside: eight hundred years of European painting, from medieval gold-ground altarpieces to the Impressionists \u2014 Van Eyck, Leonardo, Vermeer, Turner, Van Gogh's sunflowers, Constable's hay wain \u2014 a great slice of the canon of Western art in one building. What makes it the National Gallery, as opposed to just a great museum, is the founding principle. When it was founded in 1824 the nation bought a seed collection of just thirty-eight paintings, and from the start it would be free, central, and open to everyone \u2014 placed deliberately at Trafalgar Square so it sat between the wealthy West End and the poorer districts to the east, reachable on foot by anyone. Art for the clerk and the costermonger, not just the collector.\n\nThat principle held. Unlike many of the world's great galleries it has stayed free to enter for two hundred years: you can walk in off the square, no ticket and no money, and stand in front of a Leonardo. The collection nearly didn't survive intact \u2014 during the Second World War, with bombs falling on London, it was evacuated and hidden deep in a slate mine in Wales, and the empty gallery did something quietly defiant: it brought back one painting at a time, a single masterpiece displayed each month, so Londoners under the Blitz could still come and look at one great thing. People queued for it. Go in, even for twenty minutes, and pick one room \u2014 the whole place was built on the idea that you, specifically, should be able to do exactly that, for free, any day, no reason required.",
+      "shortDescription": "One of the greatest collections of paintings on earth \u2014 Van Eyck to Van Gogh \u2014 free to enter for 200 years, placed on Trafalgar Square so anyone in the city could walk in.",
+      "totalDurationSeconds": 131,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
