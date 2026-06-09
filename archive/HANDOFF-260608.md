@@ -66,8 +66,8 @@ Bridge, Leadenhall interior) center-crop fine.
   6 LDN). **All on `main`** — London batch merged via PR #181 (first 5)
   and PR #182 (The Gherkin), both CI-green (validate + iOS build + tests).
 - gh-pages has all 6 tours' audio + 29 images.
-- **No build bump.** Latest TestFlight still **1.0 (36)** — the 6 London
-  tours are on `main` but not yet shipped in a build.
+- **TestFlight 1.0 (37) is live** (build `49a81ac`, bumped 36 → 37 and
+  uploaded from the owner's local session) — ships the 6 London tours.
 - Git identity set to `Claude <noreply@anthropic.com>` mid-session (stop
   hook flagged GitHub's squash-merge committer email on already-merged
   `main` history — left untouched, since rewriting published history would
@@ -75,11 +75,9 @@ Bridge, Leadenhall interior) center-crop fine.
 
 ## How to resume / open items
 1. Session-start ritual + read this file.
-2. **NEXT ACTION (owner, local session tonight): cut TestFlight 37** to
-   ship the 6 London tours. Bump `CURRENT_PROJECT_VERSION` 36 → 37 in
-   `project.pbxproj` (app-target lines only; test target stays 1), commit
-   + push, `xcodebuild archive`, upload via Organizer. Audio + images are
-   already live on gh-pages, so the build needs nothing else.
+2. ~~Cut TestFlight 37~~ **DONE** — `49a81ac` bumped 36 → 37, archived +
+   uploaded from the owner's local session; **1.0 (37) is live** with the
+   6 London tours.
 3. If more London tours come, same flow: text+TTS+MP3 → add under Atlas
    Studio LDN → Unsplash-led images (owner prefers modern) → inline
    full-size picks → finalize → PR + merge. Tall subjects (columns/spires/

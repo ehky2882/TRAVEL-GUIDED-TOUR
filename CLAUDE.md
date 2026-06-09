@@ -68,7 +68,13 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-06-08)
 
-### London launch — first 5 London tours + Atlas Studio LDN + Openverse source (session 28 — web/PM)
+### TestFlight 1.0 (37) — ships the 6 London tours (session 28)
+
+Build bumped **36 → 37** direct-to-main (`49a81ac`, app-target `CURRENT_PROJECT_VERSION` lines only; test target stays 1; `MARKETING_VERSION` stays 1.0) and archived/uploaded from the owner's local session. **TestFlight 1.0 (37) is live.** Carries the 6 London tours + Atlas Studio LDN (PRs #181/#182) — no code/asset changes, just the new content + the pbxproj bump.
+
+**Latest TestFlight build: 1.0 (37)** — live 2026-06-08.
+
+### London launch — first 6 London tours + Atlas Studio LDN + Openverse source (session 28 — web/PM)
 
 Web/PM session. No Swift/asset/project changes. Two threads: a new image source codified into the pipeline, and the catalog's **first London tours under a new fourth maker**.
 
@@ -84,7 +90,7 @@ Web/PM session. No Swift/asset/project changes. Two threads: a new image source 
   - **The Gherkin** (`architecture`, 129s) — Foster's 2004 30 St Mary Axe on the bombed Baltic Exchange site; tall tapering tower → landscape hero (full curve, stormy sky); the one vertical gallery pick (old church + tower) got a top-biased crop.
 - All images Unsplash (owner picked all-modern-photo over CC0 historical art); Unsplash download endpoints triggered per API terms. Audio + images on `gh-pages`, all live-URL spot-checked **200**. Validator clean each time. **Merged to `main` via PR #181 (first 5) + #182 (The Gherkin); CI green (validate + iOS build + unit tests).**
 
-**Catalog: 4 makers / 155 tours / 164 stops** (96 Atlas Studio NYC + 37 OPO + 5 LIS + 6 LDN). **Latest TestFlight build: 1.0 (36)** — these 6 London tours are on `main` but not yet in a build; next cut bumps 36 → 37.
+**Catalog: 4 makers / 155 tours / 164 stops** (96 Atlas Studio NYC + 37 OPO + 5 LIS + 6 LDN). **Shipped in TestFlight 1.0 (37)** (build `49a81ac`, live 2026-06-08).
 
 ### TestFlight 1.0 (36) (session 27 — web/PM)
 
