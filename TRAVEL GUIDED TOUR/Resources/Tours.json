@@ -7499,6 +7499,54 @@
       "totalDurationSeconds": 139,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "a8c3e1f7-4d92-4b60-8e05-3f7a2c6d9b14",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Bank Junction",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_5.webp"
+      ],
+      "tags": [
+        "bank junction",
+        "bank of england",
+        "royal exchange",
+        "mansion house",
+        "city of london",
+        "square mile",
+        "threadneedle street"
+      ],
+      "stops": [
+        {
+          "id": "d2f7b4a9-6c83-4e15-9a07-1d5e8c3b9f62",
+          "order": 0,
+          "title": "Bank Junction",
+          "caption": "Find a safe corner at the junction and turn slowly \u2014 the Bank of England, Royal Exchange and Mansion House ring it.",
+          "latitude": 51.5134,
+          "longitude": -0.0886,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bank-junction.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_hero.webp",
+          "transcriptText": "Stand still in the middle of this and you're at the dead centre of British money \u2014 seven streets, and on three of the corners, the institutions that ran an empire's finances.\n\nYou're at Bank junction, where something like seven streets collide in the heart of the City. It's chaos \u2014 traffic, cyclists, commuters pouring out of the Underground station beneath your feet \u2014 so find a safe corner and turn slowly, because the buildings around this junction are the point.\n\nStart with the long, low, windowless wall of pale stone that wraps around one whole side. That's the Bank of England \u2014 the nation's central bank, founded in 1694, the institution that prints the money and sets the interest rates for the entire country. Notice it has almost no windows at ground level: it's a fortress, a great stone safe, and that blank outer wall, designed by John Soane, is the original Georgian building's curtain wrapped around a completely rebuilt interior. Londoners nicknamed it \"the Old Lady of Threadneedle Street.\"\n\nNow turn to the building with the great triangular portico and the columns, like a Roman temple dropped into the City. That's the Royal Exchange, founded in 1565 as the place where merchants met to trade \u2014 the original London marketplace for commerce, rebuilt twice after fires, now full of luxury shops. And the grand mansion with its own columned front is the Mansion House, the official home of the Lord Mayor of the City of London \u2014 not the Mayor of London you've heard of, but the older, stranger office that governs just the Square Mile.\n\n[beat]\n\nHere's what to hold onto. For a couple of centuries, the decisions made on these three corners moved money across half the planet. The Bank financed wars and railways and empire; the Exchange set the prices; the City lent to the world. This unremarkable, traffic-choked junction was, for a long time, one of the most powerful pieces of ground on earth.\n\nWatch the crowds cross for a moment \u2014 tens of thousands a day, heads down, late for something. It's easy to pour through here without ever looking up at the temple fronts on every side. But the whole story of how Britain got rich is written on these four corners, in stone, for anyone who stops."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5134,
+      "centroidLongitude": -0.0886,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Bank junction is where seven streets collide in the heart of the City \u2014 chaos of traffic, cyclists and commuters pouring out of the Underground \u2014 but the buildings around it are the point. The long, low, near-windowless wall of pale stone wrapping one whole side is the Bank of England, the nation's central bank founded in 1694: a fortress, a great stone safe, its blank outer curtain designed by John Soane wrapped around a completely rebuilt interior \u2014 \"the Old Lady of Threadneedle Street.\" The building with the great triangular portico and columns, like a Roman temple dropped into the City, is the Royal Exchange, founded in 1565 as the place where merchants met to trade, rebuilt twice after fires and now full of luxury shops. The grand columned mansion is Mansion House, official home of the Lord Mayor of the City of London \u2014 not the Mayor of London, but the older, stranger office that governs just the Square Mile.\n\nFor a couple of centuries the decisions made on these three corners moved money across half the planet: the Bank financed wars and railways and empire, the Exchange set the prices, the City lent to the world. This unremarkable, traffic-choked junction was, for a long time, one of the most powerful pieces of ground on earth. Watch the crowds cross \u2014 tens of thousands a day, heads down, late for something \u2014 and look up at the temple fronts on every side: the whole story of how Britain got rich is written on these four corners, in stone, for anyone who stops.",
+      "shortDescription": "The traffic-choked heart of the City where seven streets meet \u2014 ringed by the Bank of England, the Royal Exchange, and Mansion House, three corners that once moved money across half the planet.",
+      "totalDurationSeconds": 144,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
