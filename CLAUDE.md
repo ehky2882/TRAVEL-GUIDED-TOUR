@@ -68,6 +68,16 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-06-09)
 
+### London expansion II — 19 more London tours (sessions 29–30 — web/PM)
+
+Web/PM. No Swift/asset/project changes; no build bump (TestFlight stays 1.0 (37)). Two large London content pushes took London from 6 → **25** and the catalog to **4 makers / 174 tours / 183 stops**. All single-stop, geofenced, owner-narrated, under Atlas Studio LDN.
+
+- **Session 29 (9 tours):** Lloyd's of London, Bank Junction, St Stephen Walbrook, St Bartholomew the Great, Smithfield Market, Postman's Park, The Barbican, Guildhall, Temple Church. Merged via PR #185 (Lloyd's) + PR #186 (consolidated 8).
+- **Session 30 (10 tours — Westminster/Whitehall cluster):** Westminster Abbey, Houses of Parliament & Big Ben, Westminster Hall, Trafalgar Square, The National Gallery, St Martin-in-the-Fields, Banqueting House, The Cenotaph, Churchill War Rooms, Parliament Square. Merged via **PR #188** (one consolidated PR, CI green).
+- **Image sourcing, reconfirmed:** Unsplash is deep for famous landmarks (Parliament, Trafalgar, Abbey, Barbican) — but for **restricted-access / interior-famous** subjects (Westminster Hall's hammerbeam roof, the Banqueting House Rubens ceiling, the Churchill War Rooms Map Room, the interior-famous City churches) Unsplash returns wrong subjects and the only modern photos are CC BY-SA, so the **owner pastes images into chat** and Claude pulls them from the session-transcript `.jsonl` (base64). Verify-gate caught lots of look-alikes this round (V&A vs National Gallery, Budapest's parliament vs Parliament Square, Women-of-WWII/Battle-of-Britain memorials vs the Cenotaph, St Paul Minnesota vs St Paul's, etc.).
+- **Pipeline notes reconfirmed:** `exif_transpose` then NO manual rotate; top-bias crops for tall subjects (columns/spires/towers); per-tour candidates presented inline full-size; **Unsplash free tier ~50 searches/hr** — a few queries 403'd late in the batch (pace it, or fall back to CC0). CI's iOS-simulator job runs slow (sim-prep ~1–5 min); confirm true status via `actions_get get_workflow_job`, not the lagging `get_check_runs`.
+- **Westminster Abbey hero:** owner is swapping it to an owner-supplied twin-tower **west front** (matches the script's opening), with the rose-window north front (U01) moving into the gallery — swap in progress at session end.
+
 ### London expansion — 9 more London tours (session 29 — web/PM)
 
 Web/PM session. No Swift/asset/project changes; no build bump (TestFlight stays 1.0 (37)). Added **9 more London tours** under Atlas Studio LDN, taking London from 6 → **15** and the catalog to **4 makers / 164 tours / 173 stops**. All single-stop, geofenced, owner-narrated; merged to `main` via **PR #185** (Lloyd's) + **PR #186** (the other 8, one consolidated PR).
@@ -411,8 +421,8 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **164 tours, 4 makers** in `Resources/Tours.json` (96 Atlas Studio NYC + 37 Atlas Studio Porto + 5 Atlas Studio Lisbon + 15 Atlas Studio LDN/London); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **162 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
+- **174 tours, 4 makers** in `Resources/Tours.json` (96 Atlas Studio NYC + 37 Atlas Studio Porto + 5 Atlas Studio Lisbon + 25 Atlas Studio LDN/London); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **172 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
