@@ -7917,6 +7917,55 @@
       "totalDurationSeconds": 143,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "d9f3c7a2-8b41-4e64-9a05-2c8e7b3d1f96",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Houses of Parliament and Big Ben",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_6.webp"
+      ],
+      "tags": [
+        "houses of parliament",
+        "big ben",
+        "elizabeth tower",
+        "palace of westminster",
+        "charles barry",
+        "augustus pugin",
+        "gothic revival"
+      ],
+      "stops": [
+        {
+          "id": "c2e8a4f1-7b63-4d50-9a08-3f7c6e1b2d95",
+          "order": 0,
+          "title": "Houses of Parliament and Big Ben",
+          "caption": "Look across the river at the Palace of Westminster and the Elizabeth Tower; wait for the chime.",
+          "latitude": 51.4995,
+          "longitude": -0.1248,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/houses-of-parliament.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_hero.webp",
+          "transcriptText": "The bell is called Big Ben. The tower is not. Let's clear that up before we go any further.\n\nYou're looking across at the Palace of Westminster \u2014 the Houses of Parliament \u2014 a vast cliff of pale, pinnacled Gothic stone running along the river, with a great clock tower at the north end. Almost everyone calls that tower Big Ben. They're wrong, but pleasantly so. Big Ben is the name of the largest bell inside the tower, the one that strikes the hours. The tower itself is the Elizabeth Tower, renamed for the late Queen in 2012. For most of its life it was just \"the Clock Tower,\" but the bell's name leaked onto the whole thing decades ago, and there's no fixing it now.\n\nLook at the building properly. It seems impossibly old, almost medieval \u2014 but most of what you see was built in the eighteen-forties and fifties. The medieval palace that stood here burned down in a catastrophic fire in 1834, watched by half of London from the riverbanks. The competition to rebuild it was won by Charles Barry, a Classical architect, who teamed up with a young man named Augustus Pugin, a fanatical Gothic genius. Barry laid out the great symmetrical plan; Pugin drew almost every detail \u2014 every carved panel, every spire, every inch of decoration. The result is one of the most ornate buildings on earth, and the work nearly killed both of them.\n\nNow the clock. Each of the four faces is seven metres across. The hands, the numerals, the mechanism \u2014 all of it Victorian precision engineering, and famously accurate. The bell, Big Ben, weighs over thirteen tonnes, and it cracked shortly after it was installed. The crack is still there, which is why its tone is slightly off \u2014 a flaw you can hear in the most famous chime in the world.\n\n[beat]\n\nHere's the irony worth carrying. This building, the very image of ancient England \u2014 Gothic, timeless, the backdrop to a thousand postcards \u2014 is essentially a Victorian version of the Middle Ages, built by two arguing geniuses on the ashes of the real thing. It looks a thousand years old. It's younger than the United States.\n\nStand and wait for the chime if you can. Thirteen tonnes of cracked Victorian bronze, telling the time to a country that built it to look far older than it is."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.4995,
+      "centroidLongitude": -0.1248,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The bell is called Big Ben; the tower is not. You're looking across at the Palace of Westminster \u2014 the Houses of Parliament \u2014 a vast cliff of pale, pinnacled Gothic stone along the river, with a great clock tower at the north end. Almost everyone calls that tower Big Ben; they're wrong but pleasantly so. Big Ben is the largest bell inside, the one that strikes the hours; the tower itself is the Elizabeth Tower, renamed for the late Queen in 2012 (for most of its life just \"the Clock Tower\"). It seems impossibly old, almost medieval \u2014 but most of what you see was built in the 1840s and 50s. The medieval palace here burned down in a catastrophic fire in 1834, watched by half of London from the riverbanks. The rebuild competition was won by Charles Barry, a Classical architect, who teamed with the young Augustus Pugin, a fanatical Gothic genius: Barry laid out the great symmetrical plan, Pugin drew almost every carved panel, spire and inch of decoration. The result is one of the most ornate buildings on earth, and the work nearly killed both men.\n\nEach of the clock's four faces is seven metres across \u2014 Victorian precision engineering, famously accurate. The bell weighs over thirteen tonnes and cracked shortly after it was installed; the crack is still there, which is why its tone is slightly off, a flaw you can hear in the most famous chime in the world. Here's the irony to carry: this building, the very image of ancient England \u2014 Gothic, timeless, the backdrop to a thousand postcards \u2014 is essentially a Victorian version of the Middle Ages, built by two arguing geniuses on the ashes of the real thing. It looks a thousand years old. It's younger than the United States. Stand and wait for the chime: thirteen tonnes of cracked Victorian bronze, telling the time to a country that built it to look far older than it is.",
+      "shortDescription": "Barry & Pugin's 1840s\u201350s Gothic Revival Palace of Westminster \u2014 the cracked 13-tonne bell 'Big Ben' in the Elizabeth Tower, a Victorian medieval fantasy younger than the USA.",
+      "totalDurationSeconds": 144,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
