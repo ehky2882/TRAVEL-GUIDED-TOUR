@@ -8108,6 +8108,53 @@
       "totalDurationSeconds": 131,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "b3c8a6e1-9d45-4e54-8a06-3c9e7b2d1f9a",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "St Martin-in-the-Fields",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_4.webp"
+      ],
+      "tags": [
+        "st martin-in-the-fields",
+        "james gibbs",
+        "portico spire",
+        "trafalgar square",
+        "parish church template",
+        "music",
+        "homeless charity"
+      ],
+      "stops": [
+        {
+          "id": "a3c8b2e1-7d64-4e50-9a08-3f7c6e1b2d96",
+          "order": 0,
+          "title": "St Martin-in-the-Fields",
+          "caption": "Stand at the north-east corner of Trafalgar Square and take in the portico and the spire fused above it.",
+          "latitude": 51.5089,
+          "longitude": -0.1267,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-martin-in-the-fields.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_hero.webp",
+          "transcriptText": "This church has been copied more times, in more countries, than almost any building in the world \u2014 and you've probably stood in one of the copies without knowing it.\n\nYou're at the north-east corner of Trafalgar Square, looking at St Martin-in-the-Fields \u2014 a church with a strange and brilliant combination: a Classical temple front, a great columned portico like a Greek or Roman temple, and then, rising directly behind it, a tall, slender church spire. Temple and steeple, fused. It was built between 1722 and 1726 by the architect James Gibbs, and that fusion was the innovation.\n\nHere's why it matters far beyond London. Gibbs published his designs in a book, and that book travelled \u2014 especially to colonial America. The combination he invented here, the temple portico with the spire behind, became the template for the parish church across the English-speaking world. Town after town in New England, across the American colonies and then far beyond, built their churches as variations on St Martin's. If you have a mental image of a classic white American church \u2014 columns at the front, a tall white spire \u2014 you are picturing the great-grandchild of this building. One London church, reproduced endlessly across an ocean.\n\nThe name, by the way, is now absurd. \"In-the-Fields\" \u2014 because when an earlier church stood here, it really was open countryside between the cities of London and Westminster. Now it sits on the most crowded square in the capital. The fields have been gone for centuries; the name stayed.\n\n[beat]\n\nAnd there's a second life to this place, less famous than its architecture. For about a century, St Martin's has been a centre for helping London's homeless and destitute, running shelters and outreach for people sleeping rough. It's also long been a home for music; the celebrated chamber orchestra named after it has carried the church's name to people who've never seen the building. A working church, then, that fed an architectural idea to half the world and quietly looked after the people sleeping on its doorstep.\n\nStep into the portico and look back across the square. You're standing in the original \u2014 the building all those distant white spires are quietly imitating."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5089,
+      "centroidLongitude": -0.1267,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "At the north-east corner of Trafalgar Square stands St Martin-in-the-Fields, a church with a strange and brilliant combination: a Classical temple front \u2014 a great columned portico like a Greek or Roman temple \u2014 and, rising directly behind it, a tall slender spire. Temple and steeple, fused. It was built between 1722 and 1726 by James Gibbs, and that fusion was the innovation. Here's why it matters far beyond London: Gibbs published his designs in a book, and that book travelled \u2014 especially to colonial America. The combination he invented here became the template for the parish church across the English-speaking world. Town after town in New England and across the American colonies built their churches as variations on St Martin's. If you picture a classic white American church \u2014 columns at the front, a tall white spire \u2014 you are picturing the great-grandchild of this building. One London church, reproduced endlessly across an ocean.\n\nThe name is now absurd: \"in-the-Fields\" because when an earlier church stood here it really was open countryside between London and Westminster; the fields have been gone for centuries, the name stayed. And there's a second, less famous life to the place: for about a century St Martin's has been a centre for helping London's homeless and destitute, running shelters and outreach for people sleeping rough \u2014 and it's long been a home for music, the celebrated chamber orchestra named after it carrying the church's name to people who've never seen the building. A working church, then, that fed an architectural idea to half the world and quietly looked after the people sleeping on its doorstep. Step into the portico and look back across the square: you're standing in the original, the building all those distant white spires are quietly imitating.",
+      "shortDescription": "James Gibbs's 1720s church on Trafalgar Square \u2014 the temple-portico-plus-spire design that became the template for the parish church across the English-speaking world.",
+      "totalDurationSeconds": 138,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
