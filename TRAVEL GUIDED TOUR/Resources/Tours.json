@@ -7824,6 +7824,51 @@
       "totalDurationSeconds": 149,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "f2c8b6a3-9d41-4e64-8a05-3c9e8b1d7f42",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Temple Church",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/temple-church_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/temple-church_2.webp"
+      ],
+      "tags": [
+        "temple church",
+        "knights templar",
+        "round church",
+        "the temple",
+        "inns of court",
+        "medieval",
+        "effigies"
+      ],
+      "stops": [
+        {
+          "id": "d8f4c2a1-7b63-4e50-9a08-3f7c6e2b1d95",
+          "order": 0,
+          "title": "Temple Church",
+          "caption": "Find the church in the Temple courtyards and walk round to the round east end; step inside to the knight effigies.",
+          "latitude": 51.5135,
+          "longitude": -0.1106,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/temple-church.mp3",
+          "audioDurationSeconds": 154,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/temple-church_hero.webp",
+          "transcriptText": "This round church was built by warrior-monks who answered to no king, only to the Pope \u2014 and for a while they were the richest men in Europe.\n\nYou're at Temple Church, hidden away in the maze of courtyards and alleys between Fleet Street and the river known as the Temple. It's quiet here, lawyers' country \u2014 two of the Inns of Court, where English barristers have trained for centuries, surround it. But the church at the centre is far older than the law that grew up around it, and its shape gives the secret away. Walk round to see it: one end is a perfect circle of stone, a round church, which is rare and deliberate. It was built to echo the Church of the Holy Sepulchre in Jerusalem.\n\nBecause this was the London headquarters of the Knights Templar. The Templars were a military religious order, founded during the Crusades \u2014 monks who were also soldiers, sworn to protect pilgrims to the Holy Land. They built this round church and consecrated it in 1185. And here's what they became: bankers. Pilgrims and kings deposited money and treasure with the Templars across Europe, because the order's network was trusted and protected, and it could move wealth from one country to another safely. They effectively invented a form of international banking, grew colossally rich and powerful \u2014 and answered to no national king, only to the Pope.\n\nThat was their undoing. In the early fourteenth century the King of France, deep in debt to them and frightened of their power, had the Templars arrested, tortured, and destroyed on charges of heresy. The order was crushed across Europe and dissolved by the Pope in 1312. Their London temple passed to the lawyers, who have been here ever since.\n\n[beat]\n\nStep inside if you can. On the floor of the round church lie carved stone effigies of medieval knights, worn smooth, swords at their sides \u2014 some of the most evocative things in London. These are the warrior-monks, or their patrons, lying where they've lain for eight hundred years, in the round church they built to remember Jerusalem.\n\nIt's astonishingly easy to miss. Thousands walk down Fleet Street above without ever turning into the courtyards. But step through the right alley and you're in the twelfth century, among the tombs of the most powerful soldier-bankers medieval Europe ever produced."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5135,
+      "centroidLongitude": -0.1106,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Temple Church is hidden in the maze of courtyards and alleys between Fleet Street and the river known as the Temple \u2014 quiet lawyers' country, ringed by two of the Inns of Court where English barristers have trained for centuries. But the church at the centre is far older than the law around it, and its shape gives the secret away: one end is a perfect circle of stone, a round church, rare and deliberate, built to echo the Church of the Holy Sepulchre in Jerusalem. Because this was the London headquarters of the Knights Templar \u2014 a military religious order founded during the Crusades, monks who were also soldiers, sworn to protect pilgrims to the Holy Land. They built and consecrated this round church in 1185. And here's what they became: bankers. Pilgrims and kings deposited money and treasure with the Templars across Europe, because the order's protected network could move wealth safely between countries; they effectively invented a form of international banking, grew colossally rich, and answered to no national king, only to the Pope.\n\nThat was their undoing. In the early fourteenth century the King of France, deep in debt to them and frightened of their power, had the Templars arrested, tortured and destroyed on charges of heresy; the order was crushed across Europe and dissolved by the Pope in 1312. Their London temple passed to the lawyers, who have been here ever since. Step inside: on the floor of the round church lie carved stone effigies of medieval knights, worn smooth, swords at their sides \u2014 the warrior-monks, or their patrons, lying where they've lain for eight hundred years. It's astonishingly easy to miss; thousands walk down Fleet Street above without ever turning into the courtyards. But step through the right alley and you're in the twelfth century, among the tombs of the most powerful soldier-bankers medieval Europe ever produced.",
+      "shortDescription": "The Knights Templar's round church of 1185, hidden in the Temple between Fleet Street and the river \u2014 the warrior-monk bankers' London HQ, with worn knight effigies on the floor.",
+      "totalDurationSeconds": 154,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
