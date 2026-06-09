@@ -8343,6 +8343,467 @@
       "totalDurationSeconds": 135,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "b6d34420-492f-4f80-9c57-e281e9b365ff",
+      "title": "Escovaria de Belomonte",
+      "shortDescription": "A hand-brush workshop on Rua de Belomonte, founded in 1927 and now in its fourth generation \u2014 a medieval Porto alley where craft heritage and contemporary design are held in the same hand.",
+      "longDescription": "Rua de Belomonte descends between S\u00e3o Domingos and Largo de S\u00e3o Jo\u00e3o Novo, a short walk west of the Ribeira, on a street whose written records reach back to 1503. At number 34, behind a narrow frontage hung with colourful brooms, the Escovaria de Belomonte has been making brushes by hand since Ant\u00f3nio da Silva opened it in 1927 and moved it here in 1948. It took its name not from its founder but from the street itself.\n\nInside, brushes and brooms hang from the ceiling \u2014 bristles drawn from goats, boars, horses, pigs and a Mexican cactus fibre, worked by four techniques: hand-sewing finished with a family oil-and-wax recipe, hand-punching, gluing, and a vintage semi-automatic filling machine. Fernando Cruz Silva, who took over in 1979, was described as the only artisan brushmaker in the Iberian Peninsula to handcraft each piece; his daughter Olinda and her husband Rui Rodrigues brought design thinking in 2007, and the fourth generation, S\u00e9rgio Silva Rodrigues, now leads the creative direction.\n\nThe street around it carries the same accumulated variety \u2014 the Pacheco Pereira Palace, one of Porto's finest examples of 18th-century civil architecture, stands further along, and an adjacent building once housed a centre of the Porto School of Arts. It is the kind of layered, mixed-use historic street that tends to vanish when cities simplify their centres, which makes the detour from the busier streets below worthwhile.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Escovaria_de_Belomonte_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Escovaria_de_Belomonte_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "aee2c19e-f71c-43b0-8a46-ecd31aeba404",
+          "order": 0,
+          "title": "Escovaria de Belomonte",
+          "caption": "Find number 34 Rua de Belomonte, a narrow shopfront hung with colourful brooms \u2014 then step inside and look up at the ceiling first.",
+          "latitude": 41.14279,
+          "longitude": -8.61589,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/escovaria-de-belomonte.mp3",
+          "audioDurationSeconds": 193,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The shop on this street was founded in nineteen twenty-seven, moved to its current address in nineteen forty-eight, and has now passed through four generations of the same family \u2014 which is a longer institutional memory than most businesses achieve, and considerably longer than most brushmakers.\nRua de Belomonte descends between the area of S\u00e3o Domingos and Largo de S\u00e3o Jo\u00e3o Novo, a short walk west of the Ribeira, in a street whose written records go back to fifteen oh three, when a deed recorded land being leased to an armourer to build five houses there, and the shop you're looking for is at number thirty-four \u2014 a narrow frontage in a row of seventeenth and eighteenth-century facades, distinguished at close range by the colourful brooms visible through the window, and named not after its founder but after the street itself, because when Ant\u00f3nio da Silva opened the business as the Escovaria de Ant\u00f3nio da Silva, in nineteen twenty-seven, and moved it to this address in nineteen forty-eight, the street gave it something better than a personal name.\nGo inside and look up before you look at anything else.\nThe brooms and brushes hanging from the ceiling are the first and most immediate argument the shop makes for itself, and what they represent \u2014 in terms of material, technique, and lineage \u2014 is considerably more specific than they might initially appear. The bristles come from goats, boars, horses, pigs, and a plant fibre extracted from a Mexican cactus used primarily for dish brushes and furniture polishing, and the brushes are made by hand using four distinct techniques: hand-sewing, where bristles are stitched into drilled wood and finished with a Belomonte oil and wax recipe that has been passed down through the family; hand-punching, using a punch, a small hammer, and a metal clip to insert tufts of fibre into the wood; gluing, for personal and household brushes; and semi-automatic punching using a vintage filling machine that the family describes as maintaining the manual essence of the process while introducing a degree of efficiency.\nFernando Cruz Silva, who took over in nineteen seventy-nine, was described as the only artisan brushmaker in the Iberian Peninsula to handcraft each piece \u2014 and his daughter Olinda and her husband Rui Rodrigues joined in two thousand and seven, bringing design thinking into what had been a purely production-led business, while the fourth generation, S\u00e9rgio Silva Rodrigues, now leads the creative direction, which means the shop is currently in a moment where craft heritage and contemporary design are being held in the same hand, which is not the most common position for a brushmaker in a medieval Porto alley to find itself in.\n[beat]\nThe Pacheco Pereira Palace further along the same street is considered one of the finest examples of eighteenth-century civil architecture in Porto, and the building adjacent once housed a centre of the Porto School of Arts \u2014 so the street that contains a brush shop documented in its fourth generation of family ownership, in a building on a street mentioned in deeds since fifteen oh three, also carries a baroque palace and a former art school, which is the specific kind of accumulated variety that tends to disappear when cities simplify their historic centres into a single use, and which makes Rua de Belomonte worth the detour from the more visited streets below."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 193,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14279,
+      "centroidLongitude": -8.61589,
+      "city": "Porto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "craft",
+        "artisan",
+        "ribeira",
+        "family-business",
+        "heritage",
+        "brushes",
+        "1927"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "da803a7d-61a5-44c7-a1b0-7c9f35994e64",
+      "title": "Est\u00e1dio do Drag\u00e3o",
+      "shortDescription": "FC Porto's 50,000-seat stadium and 27-zone club museum \u2014 a tilework-clad arena, the bench where Mourinho stood in 2003\u201304, and a trophy room no other Portuguese club can match.",
+      "longDescription": "FC Porto was founded in 1893 by a wine merchant who had watched English workers playing football in the city's streets and decided Porto needed a club. On Avenida de Fern\u00e3o de Magalh\u00e3es in the east of the city, the Est\u00e1dio do Drag\u00e3o rises ahead \u2014 a 50,000-seat UEFA Category Four stadium by Manuel Salgado, inaugurated on 16 November 2003 when Porto beat Barcelona 2\u20130 before 52,000 people. Built to replace the old Est\u00e1dio das Antas and to host Euro 2004, its most distinctive feature is the 21,000 square metres of azulejo tiles on its facade \u2014 among the largest tilework surfaces on any building in Portugal.\n\nThe pitch-side tour runs through the tunnel, past the dressing rooms, to the technical bench where Jos\u00e9 Mourinho stood during the 2003\u201304 season \u2014 the year Porto won the Primeira Liga, the UEFA Cup and the Champions League, the first club in nine years from outside the major leagues to lift the trophy. The museum, opened in 2013, spans 27 thematic zones; its trophy room is the centrepiece: two Champions League trophies, two Europa League trophies, the UEFA Super Cup and two Intercontinental Cups \u2014 seven international titles.\n\nThe club's model \u2014 develop players and coaches, sell them on, reinvest and win again \u2014 is studied worldwide. Bobby Robson managed here before Barcelona; Mourinho and Andr\u00e9 Villas-Boas both left for Chelsea; and the museum names them all. Porto takes the fee and begins again, and the trophy cabinet suggests the approach has been working since 1893.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Estadio_do_Dragao_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Estadio_do_Dragao_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Estadio_do_Dragao_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "18ed30d2-8511-4015-8c45-5ad637a18ca6",
+          "order": 0,
+          "title": "Est\u00e1dio do Drag\u00e3o",
+          "caption": "Stand on Avenida de Fern\u00e3o de Magalh\u00e3es facing the stadium; find the azulejo-tiled facade before you go in for the pitch tour and museum.",
+          "latitude": 41.1605,
+          "longitude": -8.58241,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/estadio-do-dragao.mp3",
+          "audioDurationSeconds": 188,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "FC Porto was founded in eighteen ninety-three by a wine merchant who had watched English workers playing football in the streets of Porto and decided the city needed a club \u2014 which is a characteristically Porto origin story, involving trade, English influence, and someone with commercial instincts deciding to organise something.\nBefore you go in, look at the building you're standing beside: you're on Avenida de Fern\u00e3o de Magalh\u00e3es in the east of the city, with the Est\u00e1dio do Drag\u00e3o rising ahead of you \u2014 a fifty-thousand-seat UEFA Category Four stadium designed by Manuel Salgado and inaugurated on the sixteenth of November two thousand and three, when FC Porto beat Barcelona two goals to nil in front of fifty-two thousand people, which was already exceeding the official capacity on opening night. The stadium was built to replace the old Est\u00e1dio das Antas, a short distance away, and to serve as one of the host venues for UEFA Euro two thousand and four \u2014 and the most distinctive exterior detail, which is worth finding before you enter, is the twenty-one thousand square metres of azulejo tiles covering the facade, which makes it one of the largest tilework surfaces on any building in Portugal and a reminder that the architects considered this a Porto building as much as a football stadium.\nInside the stadium, the pitch-side tour takes you through the tunnel, past the dressing rooms, and to the technical bench where Jos\u00e9 Mourinho stood during the two thousand and three to four season \u2014 the year Porto won the Primeira Liga, the UEFA Cup, and then the Champions League, becoming the first club in nine years from outside the traditional big four leagues to lift the trophy, under a coach who left for Chelsea immediately afterward and never quite stopped talking about it.\nNow go through to the museum, which opened in two thousand and thirteen and occupies twenty-seven thematic zones across an exhibition space that covers the full arc of the club's history.\nThe trophy room is the centrepiece: two Champions League trophies, two Europa League trophies, the UEFA Super Cup, and two Intercontinental Cups \u2014 seven international titles in total, a collection that no other Portuguese club comes close to matching and that the museum displays with the particular pride of an institution that knows it has been consistently punching above its weight for over a century. The museum was founded in eighteen ninety-three by Ant\u00f3nio Nicolau de Almeida with almost nothing, and the contrast between that origin and the cabinet you're looking at is, in its quiet way, the whole story.\n[beat]\nThe club's model \u2014 developing players and coaches, selling them to larger clubs, then reinvesting and winning again \u2014 is studied by football institutions worldwide, and the museum doesn't shy away from naming the people who passed through: Bobby Robson managed here, then went to Barcelona; Mourinho left for Chelsea; Andr\u00e9 Villas-Boas left for the same destination a few years later, along with players who became some of the most recognisable names in the sport. Porto gets credit for the careers and takes the fee, and then begins again, and the trophy cabinet suggests that the approach has been working rather well since eighteen ninety-three."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 188,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.1605,
+      "centroidLongitude": -8.58241,
+      "city": "Porto",
+      "primaryCategory": "history",
+      "tags": [
+        "football",
+        "fc-porto",
+        "stadium",
+        "museum",
+        "azulejo",
+        "mourinho",
+        "sport"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "77675265-3f7c-4894-8762-7c49878e1c17",
+      "title": "Gaia Cable Car",
+      "shortDescription": "The Telef\u00e9rico de Gaia \u2014 a five-minute, 562-metre ride over the port-wine lodges of the Douro waterfront that hands you the whole spatial grammar of Porto at once.",
+      "longDescription": "The lower station sits on Avenida de Ramos Pinto, on the Vila Nova de Gaia side of the Douro, with the river promenade behind you and the port-wine lodges \u2014 long, low cellars with company names painted across their rooftops \u2014 stretching along the waterfront. They have been here since the 17th century. The upper station lies 562 metres away and 58.5 metres up, beside the Jardim do Morro metro stop and the upper deck of the Dom Lu\u00eds I Bridge, with the Serra do Pilar monastery a short walk on.\n\nThe gondola passes directly over the terracotta and slate roofs of the lodges, the names readable from above, and as it climbs Porto opens on the north bank: the Ribeira waterfront, both decks of the Dom Lu\u00eds I Bridge, the Cl\u00e9rigos tower, the Cathedral on its hill, the historic centre stacking up the hillside in ochre and terracotta, the Atlantic beyond. On a clear day the view runs from the Foz coastline to the industrial port of Leix\u00f5es. Built by the Austrian firm Doppelmayr for twelve million euros and opened in April 2011, it can carry up to 850 passengers an hour at peak.\n\nWhat the ride really gives you is the spatial grammar of this part of the city. At street level Porto is a series of individual encounters; from fifty metres above the rooftops it becomes a single composed thing \u2014 and the two readings are different enough that five minutes in the gondola changes how you read the streets once you come back down.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Gaia_Cable_Car_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Gaia_Cable_Car_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "080a07cc-6f0c-4d2a-b1b8-b7523faab29f",
+          "order": 0,
+          "title": "Gaia Cable Car",
+          "caption": "Board at the lower station on Avenida de Ramos Pinto, Gaia riverside; watch the port-wine lodge rooftops fall away as you climb toward Jardim do Morro.",
+          "latitude": 41.13703,
+          "longitude": -8.61614,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/gaia-cable-car.mp3",
+          "audioDurationSeconds": 159,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "In five minutes and five hundred and sixty-two metres, this cable car will show you something that took Porto eight hundred years to build \u2014 and it will show you all of it at once.\nHave a look around before you board: you're at the lower station on Avenida de Ramos Pinto, on the Vila Nova de Gaia side of the Douro, with the river promenade behind you and the lodges of the port wine companies stretching along the waterfront in both directions \u2014 those long, low buildings with the company names painted in white letters on their rooftops are the cellars where the wine ages before it's bottled, and they have been on this riverbank since the seventeenth century, which is long enough to have shaped the entire character of this part of the city. The upper station, where the gondola is heading, is five hundred and sixty-two metres away and fifty-eight and a half metres above you, next to the Jardim do Morro metro station and directly beside the upper deck of the Dom Lu\u00eds I Bridge, with the Serra do Pilar Monastery a short walk from the exit.\nBoard when you're ready, and watch the ground fall away.\nThe gondola passes directly over the rooftops of the port wine lodges \u2014 the terracotta and slate of the cellar roofs a few metres below your feet, the lodge names readable from above rather than from the street \u2014 and as the cable rises toward the upper station, Porto opens on the north bank of the river in a way that no street-level viewpoint quite manages: the Ribeira waterfront, the Dom Lu\u00eds I Bridge in both its levels, the towers of the Clerigos church, the Cathedral on its hill, and the buildings of the historic centre stacking up the hillside in their ochre and terracotta, with the Atlantic somewhere beyond all of it. On a clear day the view from the top of the ascent takes in the full arc of the city, from the Foz coastline to the west across to the industrial port of Leix\u00f5es in the north.\nThe cable car was built by Doppelmayr \u2014 the Austrian firm that has constructed more gondola systems than any other company in the world \u2014 at a cost of twelve million euros, opened in April twenty eleven, and can carry up to eight hundred and fifty passengers per hour during peak season, which is a considerable volume of people to lift over a port wine district in gondolas.\n[beat]\nWhat I find most useful about this ride \u2014 and I say useful deliberately \u2014 is that it gives you the spatial grammar of this part of the city in a way that walking through it doesn't, because when you're at street level you understand Porto as a series of individual experiences and encounters, whereas from fifty metres above the rooftops you understand it as a single composed thing, and the two understandings are different enough that the five minutes in the gondola genuinely changes how you read the streets below once you come back down to them."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 159,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.13703,
+      "centroidLongitude": -8.61614,
+      "city": "Vila Nova de Gaia",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "cable-car",
+        "douro",
+        "port-wine",
+        "viewpoint",
+        "gaia",
+        "river",
+        "teleferico"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "de53706b-0c9e-4915-aab7-7ecbf0f7e19e",
+      "title": "Igreja de Nossa Senhora da Boavista",
+      "shortDescription": "A board-formed concrete church on Rua do Foco \u2014 the final, most significant piece of Agostinho Ricca's Complexo da Boavista, lit from above so daylight falls on the altar while the nave stays in shadow.",
+      "longDescription": "The Igreja de Nossa Senhora da Boavista stands on Rua do Foco, within the larger Complexo da Boavista that the Porto architect Agostinho Ricca designed in stages from 1962 \u2014 housing, commercial galleries, a cinema and the Tivoli Hotel arranged around public gardens. The church, added between 1975 and 1979, was the final and most architecturally significant piece of the ensemble. Ricca, trained under Marques da Silva, brought to the modernist tradition what one critic called after his death \"a more organic dimension of solidity, quality and comfort.\"\n\nInside, the church is exposed board-formed concrete throughout \u2014 walls, ceiling, every surface \u2014 raw and unfinished in the late Brutalist manner. The quality the Portuguese press singled out when Ricca died in 2010 was the handling of natural light: it is directed from above so the presbytery and altar receive daylight while the nave stays in deeper, more contemplative shadow. The stained glass, the Via Crucis panels and the figure of Christ were all made by J\u00falio Resende, one of Porto's most significant 20th-century painters \u2014 a coherent artistic programme that the concrete envelope holds rather than competes with.\n\nRicca was ninety-four when he died, and his funeral left from this church \u2014 a building he had designed, on a complex he had spent thirty-seven years shaping. That kind of relationship between an architect and a single site tends to produce something more considered than a commission.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_Boavista_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_Boavista_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_Boavista_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_Boavista_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_Boavista_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_Boavista_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e2e337b7-3af2-4a28-9dbb-05ced9dc2d3d",
+          "order": 0,
+          "title": "Igreja de Nossa Senhora da Boavista",
+          "caption": "Find the church on Rua do Foco within the Complexo da Boavista; step inside and let your eyes adjust to the light falling on the altar.",
+          "latitude": 41.16181,
+          "longitude": -8.64719,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/igreja-boavista.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The church was designed by the same architect who designed the hotel and the cinema and the housing blocks surrounding it \u2014 which is less common than it sounds, and produces a coherence that most urban complexes never achieve.\nThe Igreja de Nossa Senhora da Boavista is on Rua do Foco, within the larger Complexo da Boavista that Agostinho Ricca designed in stages from nineteen sixty-two \u2014 housing, commercial galleries, a cinema, and the Tivoli Hotel arranged around public gardens \u2014 with the church added between nineteen seventy-five and nineteen seventy-nine as the final and most architecturally significant piece of the ensemble. Ricca was a Porto architect, trained under Marques da Silva, who added to the modernist tradition what one critic described after his death as \"a more organic dimension of solidity, quality and comfort.\"\nGo inside, and let your eyes adjust to the light.\nThe interior is exposed board-formed concrete throughout \u2014 walls, ceiling, every surface \u2014 raw and unfinished in the deliberate manner of the late Brutalist tradition, and the quality that the Portuguese press specifically cited when Ricca died in two thousand and ten was the way the building uses natural light to illuminate the presbytery, directing it from above so that the altar receives daylight while the nave remains in a deeper, more contemplative shadow. The stained glass, the Via Crucis panels, and the figure of Christ in the interior were all made by J\u00falio Resende \u2014 one of Porto's most significant painters of the twentieth century \u2014 and together they constitute a coherent artistic programme that the concrete envelope holds rather than competes with.\n[beat]\nRicca was ninety-four when he died, and his funeral left from this church \u2014 a building he had designed, on a complex he had spent thirty-seven years shaping, which is the kind of relationship between an architect and a single site that tends to produce something more considered than a commission."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.16181,
+      "centroidLongitude": -8.64719,
+      "city": "Porto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "architecture",
+        "modernist",
+        "brutalist",
+        "concrete",
+        "agostinho-ricca",
+        "church",
+        "boavista"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0b188d21-824e-4ced-8514-7f0032ed69b3",
+      "title": "Jardim Bot\u00e2nico do Porto",
+      "shortDescription": "The University of Porto's botanical garden around Casa Andresen \u2014 camellias, a hedge cut into the letter J, and the childhood home of the poet Sophia de Mello Breyner Andresen.",
+      "longDescription": "When the Portuguese government bought the Quinta do Campo Alegre from the Andresen family in 1949 and gave it to the University of Porto as a botanical garden, the estate was far larger than the four hectares that remain \u2014 but the access roads for the Arr\u00e1bida Bridge, built from 1956, expropriated the western section, and the garden simply lost that part of itself to the motorway. The entrance is on Rua do Campo Alegre, and the garden descends in three terraced levels around Casa Andresen, the manor house the family had owned since 1895.\n\nCut into the formal layout in low hedging is the letter J \u2014 for Joana and Jo\u00e3o Andresen, who gave the estate its romantic late-19th-century character. The botanical highlight they left is the camellia collection: around 750 plants, over 260 cultivars and 26 species, including one cultivar, Dona Jane Andresen, selected here in 1896. Two members of the family who grew up in this garden became major figures in Portuguese literature: Sophia de Mello Breyner Andresen, widely considered Portugal's greatest female poet, and her brother, the novelist Ruben A. Sophia's early writings are a unique record of the garden's evolution through her childhood.\n\nThe garden's restoration in the 1950s was carried out partly by the landscape architect Franz Koepp, who designed the cactus and succulent sections and the greenhouse \u2014 and partly by institutionalised children from the Juvenile Court's correctional facilities, brought in to clear and repair the grounds. It is a detail that rarely appears in any official history, and a reminder that how public spaces are made is often quite different from who gets the credit.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_Botanico_Porto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_Botanico_Porto_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_Botanico_Porto_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6f203f93-a741-4e03-ac0a-ef6850e834a7",
+          "order": 0,
+          "title": "Jardim Bot\u00e2nico do Porto",
+          "caption": "Enter from Rua do Campo Alegre and walk down toward Casa Andresen; look for the J Garden cut into the hedging before exploring the terraces.",
+          "latitude": 41.154,
+          "longitude": -8.6425,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jardim-botanico-porto.mp3",
+          "audioDurationSeconds": 188,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The garden you're walking into is considerably smaller than it should be, because eight hectares of it were lost to a road.\nWhen the Portuguese government bought the Quinta do Campo Alegre from the Andresen family in nineteen forty-nine and transferred it to the University of Porto as a botanical garden, the estate was substantially larger than the four hectares that remain today \u2014 but the construction of the Arr\u00e1bida Bridge access roads in nineteen fifty-six required the expropriation of the western section of the grounds, and the garden that was already being established on the site simply lost that part of itself to the motorway, which is how botanical gardens occasionally end up shaped by civil engineering rather than botany. The entrance is on Rua do Campo Alegre, and the main garden descends in three terraced levels around Casa Andresen, the manor house at the centre of the estate that the family had owned since eighteen ninety-five.\nWalk down from the entrance and look for the J Garden before you explore the rest of the grounds.\nThe letter J, cut into the formal garden layout in low hedging, stands for Joana and Jo\u00e3o Andresen \u2014 the owners who gave the estate the romantic garden character it still has today, laid out in the late nineteenth century in the style that was fashionable among prosperous Porto families of that period, and which the garden has preserved largely intact through the municipal and then university ownership that followed. The camellia collection is the botanical highlight of what the Andresens left behind: around seven hundred and fifty camellia plants, over two hundred and sixty cultivars, and twenty-six species \u2014 with one cultivar, Dona Jane Andresen, selected here in eighteen ninety-six and named after the last private owner, which means the garden has been growing a plant that carries the family name in its botanical designation for over a century.\nNow look at Casa Andresen itself, because the building carries a literary history as significant as its botanical one.\nTwo members of the family who lived here became important figures in twentieth-century Portuguese literature: Sophia de Mello Breyner Andresen, widely considered Portugal's greatest female poet, and her brother Ruben A., who became a significant novelist, both grew up in this garden, and Sophia's early writings contain what scholars have described as a unique historic record of the garden's evolution through her childhood \u2014 which means the garden has a literary archive as well as a botanical one, and that the plants growing here in the early twentieth century were observed and recorded not by scientists but by a poet who later won the Cam\u00f5es Prize, the highest honour in Portuguese-language literature.\n[beat]\nThe rehabilitation of the neglected garden in the nineteen fifties was carried out partly by the landscape architect Franz Koepp, who designed the cactus and succulent sections and the greenhouse, and partly \u2014 in an detail that tends not to appear in any official history \u2014 by institutionalised children from the Juvenile Court of Porto's Correctional Facilities, who were brought to the grounds to clear and repair the gardens in the early stages of the restoration, which is a reminder that the history of how public spaces are made is often quite different from the history of who gets credit for them."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 188,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.154,
+      "centroidLongitude": -8.6425,
+      "city": "Porto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "garden",
+        "botanical",
+        "camellias",
+        "university",
+        "sophia-andresen",
+        "nature",
+        "casa-andresen"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f68a2e3b-446d-42ce-b622-07ee86bb2a51",
+      "title": "Jardins do Pal\u00e1cio de Cristal",
+      "shortDescription": "Hilltop gardens above the Douro that kept the name of a glass palace demolished in 1951 \u2014 olive trees, a rose terrace, proprietorial peacocks, and long views west to the river mouth.",
+      "longDescription": "There has been no crystal palace here since 1951, but the name stayed because the city was too attached to it to let go. The gardens sit on the hill west of the centre, above the Douro, with the concrete dome of the Super Bock Arena \u2014 which replaced the original glass-and-iron palace \u2014 visible nearby. The main viewing terraces face south and west, where the land drops toward the river and the views open across to Vila Nova de Gaia and the bridges, from the Dom Lu\u00eds I in the east to the Arr\u00e1bida further west, with the Douro mouth and the Atlantic beyond on a clear day.\n\nThe original Crystal Palace was completed in 1865 to a design by the British architect Thomas Dillen Jones, who took his cue directly from London's 1851 Crystal Palace in Hyde Park. It was built to host the International Exhibition of Porto that year, which drew over 3,000 exhibitors and announced the city's industrial ambition on the European stage. The gardens were laid out alongside it by the German landscape architect Em\u00edlio David, and they have outlasted everything built at the same time by seven decades. A small chapel in the grounds predates them both: built as a memorial to Carlos Alberto, King of Sardinia, who came to Porto in 1849 after abdicating and died here in exile.\n\nWhat remains when you take the palace away \u2014 the question Porto's gardeners have been answering since 1951 \u2014 is that the gardens were the durable thing all along: the old olive trees, the rose garden on the south terrace, the peacocks that patrol the paths with complete self-assurance, and the views across the Douro that were here before any of the buildings and will outlast the concrete dome too.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardins_Palacio_de_Cristal_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardins_Palacio_de_Cristal_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardins_Palacio_de_Cristal_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0bb8dfe0-23c6-453c-8d56-63f9e596576c",
+          "order": 0,
+          "title": "Jardins do Pal\u00e1cio de Cristal",
+          "caption": "Get your bearings near the Super Bock Arena dome, then head for the south and west terraces where the views open across the Douro.",
+          "latitude": 41.14851,
+          "longitude": -8.62547,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jardins-palacio-de-cristal.mp3",
+          "audioDurationSeconds": 171,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There is no crystal palace here, and there hasn't been since nineteen fifty-one \u2014 but the name stayed because people were too attached to it to let it go, which is a reasonable measure of how much the original building meant to the city.\nTake a moment to get your bearings: you're in the gardens on the hill above the Douro, west of the city centre, with the concrete dome of the Super Bock Arena visible somewhere to your right or ahead of you \u2014 that dome, which replaced the original glass-and-iron palace and has been called a great many things over the years, none of them particularly flattering, is nonetheless the reason the gardens are here at all. The park's main viewing terraces are to the south and west, where the land drops away toward the river and the views open across the Douro toward Vila Nova de Gaia and the bridges, from the Dom Lu\u00eds I Bridge in the east to the Arr\u00e1bida Bridge further west \u2014 and on a clear day the Douro mouth and the Atlantic are visible beyond them.\nThe original Crystal Palace was completed in eighteen sixty-five, designed by the British architect Thomas Dillen Jones who took his inspiration directly from the Crystal Palace in Hyde Park \u2014 London's great glass exhibition hall from eighteen fifty-one \u2014 and it was built specifically to host the International Exhibition of Porto that year, a global event that drew over three thousand exhibitors from around the world and was Porto's way of announcing itself as a city of industrial and commercial ambition on the European stage. The gardens were designed alongside the palace by the German landscape architect Em\u00edlio David, and they have outlasted by seven decades everything else that was built at the same time.\nFind the small chapel in the gardens before you leave, because it is older than everything around it.\nIt predates both the palace and the gardens, having been built as a memorial to Carlos Alberto, the King of Sardinia, who came to Porto in eighteen forty-nine after abdicating his throne following the First Italian War of Independence and died here in exile \u2014 making Porto's hilltop garden the resting place, at least temporarily, of a deposed king who found the city hospitable enough to die in, which is a particular kind of posthumous compliment. The chapel was here when Thomas Dillen Jones arrived to build his glass palace, and it's still here now that the glass palace has gone.\n[beat]\nWhat remains when you take the Crystal Palace away \u2014 and this is the question the gardeners of Porto have been answering since nineteen fifty-one \u2014 is that the gardens turned out to be the durable thing all along: the old olive trees, the rose garden on the south terrace, the peacocks that wander the paths with a proprietary air that suggests they are entirely aware of their own charm and have no intention of being modest about it, and the views across the Douro that were here before any of the buildings and will be here long after the concrete dome has had its own turn at being demolished."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 171,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14851,
+      "centroidLongitude": -8.62547,
+      "city": "Porto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "garden",
+        "viewpoint",
+        "douro",
+        "peacocks",
+        "history",
+        "crystal-palace",
+        "nature"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "defeef28-4159-4ad2-813a-111c64720889",
+      "title": "Matosinhos Beach",
+      "shortDescription": "An 800-metre Atlantic surf beach created by accident \u2014 its fine sand a side effect of the Leix\u00f5es port seawalls \u2014 beside Europe's densest concentration of fish restaurants and Janet Echelman's billowing 'She Changes' sculpture.",
+      "longDescription": "The Praia de Matosinhos runs along the Atlantic ten kilometres north of central Porto, bookended by the container port and fishing harbour of Leix\u00f5es to the north and the 17th-century Castelo do Queijo to the south. The beach itself was created by accident: the massive seawalls protecting the Leix\u00f5es port entrance interrupted the natural coastal erosion, so sand that would have been carried away accumulated instead \u2014 producing eight hundred metres of unusually fine, soft sand, noticeably softer than the nearby beaches at Foz.\n\nMatosinhos has fished these waters since at least the 11th century, when it appears in the records as Matesinus, and a thousand years of maritime industry have left it with the highest density of fish restaurants per square metre in Europe \u2014 around 600 of them, most concentrated on Rua Her\u00f3is de Fran\u00e7a, where the catch comes off the fishing pier at the end of the same street each morning. At the southern end of the promenade stands She Changes, known locally as An\u00e9mona \u2014 a fifty-metre work by the American artist Janet Echelman, unveiled in 2004, made of high-tech fibre netting that billows and reshapes in the wind above a traffic roundabout, commissioned to commemorate the city's fishing heritage and now its symbol.\n\nThe Atlantic here is powerful enough for serious surfing and forgiving enough for beginners, the metro from central Porto reaches Matosinhos Sul in about twenty minutes, and the lunch question answers itself on Rua Her\u00f3is de Fran\u00e7a \u2014 grilled fish that was in the water this morning, at a price only possible in a city with a working fishing fleet two hundred metres from the restaurant door.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Matosinhos_Beach_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Matosinhos_Beach_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ad383327-0b30-44fc-86cc-633d01db432b",
+          "order": 0,
+          "title": "Matosinhos Beach",
+          "caption": "Stand on the promenade with Leix\u00f5es port to the north and Castelo do Queijo to the south; look for Echelman's 'She Changes' sculpture at the southern end.",
+          "latitude": 41.17402,
+          "longitude": -8.68926,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/matosinhos-beach.mp3",
+          "audioDurationSeconds": 179,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The beach you're standing on was created by accident \u2014 a consequence of industrial infrastructure that was built to do something else entirely and happened, as a side effect, to produce eight hundred metres of unusually soft sand.\nSpend a moment getting the full picture of where you are: the Praia de Matosinhos runs along the Atlantic coast ten kilometres north of Porto's city centre, with the container port and fishing harbour of Leix\u00f5es forming the northern boundary and the Castelo do Queijo marking the southern edge, so the beach is bookended by a seventeenth-century fort on one side and one of Portugal's busiest industrial ports on the other, which gives it a setting that is less picturesque than most beaches of its quality and considerably more interesting. The massive seawalls that protect the entrance to the Leix\u00f5es port \u2014 extending far out into the Atlantic to shelter the harbour mouth \u2014 interrupted the natural pattern of coastal erosion along this stretch of coast, and the sand that would otherwise have been carried away by the current accumulated instead, producing the beach that is now here, with its characteristic fineness that locals note is noticeably softer than the nearby beaches at Foz.\nMatosinhos has been fishing these waters since at least the eleventh century, when the area appears in historical records under its ancient name of Matesinus, and the consequence of a thousand years of maritime industry concentrated in one place is that the city now has the highest density of fish restaurants per square metre in Europe \u2014 approximately six hundred of them, according to local estimates \u2014 with the greatest concentration on Rua Her\u00f3is de Fran\u00e7a, where most of the restaurants source their fish from the fishing pier at the end of the same street every morning, which means the distance between the catch and the plate is measured in minutes and metres rather than hours and kilometres.\nBefore you leave the beach area, look for the roundabout sculpture at the southern end of the promenade \u2014 a fifty-metre-tall work by the American artist Janet Echelman, unveiled in two thousand and four, made of high-tech fibre netting that billows and changes shape in the wind above the road, and which is called She Changes, or locally An\u00e9mona, the Sea Anemone.\nEchelman was commissioned to create a piece that commemorated Matosinhos's fishing heritage, and what she produced is a structure that moves the way a fishing net moves in water \u2014 suspended in the air, responding to the Atlantic wind, never the same shape twice \u2014 and it has since become the symbol of the city as thoroughly as any historic monument, which is a considerable achievement for a piece of contemporary public art installed in the middle of a traffic roundabout.\n[beat]\nThe Atlantic here is powerful enough for serious surfing and regular enough for beginners, the metro from central Porto runs to Matosinhos Sul in around twenty minutes, and the lunch question answers itself on Rua Her\u00f3is de Fran\u00e7a, where you can eat grilled fish that was in the water this morning at a price that would be implausible in any city that didn't have a functioning fishing fleet two hundred metres from the restaurant door."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 179,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.17402,
+      "centroidLongitude": -8.68926,
+      "city": "Matosinhos",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "beach",
+        "surf",
+        "atlantic",
+        "matosinhos",
+        "seafood",
+        "echelman",
+        "coast"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "00bc47f9-639f-44d9-9735-65c8ac608144",
+      "title": "Mercado Municipal de Matosinhos",
+      "shortDescription": "A modernist market hall designed in 1936 but not opened until 1952 \u2014 a monumental concrete vault, azulejo panels by Am\u00e9rico Soares Braga, and seventy unbroken years of selling fish and vegetables.",
+      "longDescription": "This market won its architectural competition in 1936 with what the judges called an innovative project, but it did not open until 1952 \u2014 the Second World War interrupted construction, and iron, which the building needed a great deal of, became impossible to source. On the north facade on Rua Conde S\u00e3o Salvador are azulejo panels by Am\u00e9rico Soares Braga, the sculptor who also made the labourer-and-farmer bas-relief destroyed by Estado Novo censors on the opening night of the Batalha cinema \u2014 so two of the most significant modernist buildings in the Porto area share a ceramic artist, and neither's description usually mentions it. It was designed by the ARS practice \u2014 Fortunato Cabral, Morais Soares and Cunha Le\u00e3o \u2014 three architects in their thirties.\n\nInside, the defining gesture is the monumental vaulted ceiling: a long arched concrete span running the full length of the hall, bringing in light from above and giving the interior a civic generosity most municipal markets never achieved. The builder, Lu\u00eds Jos\u00e9 Oliveira, came to the contract as a second choice after the original winner withdrew, and formed the arches with a timber framework that slid along rails, advancing through the hall as each section cured. The building also handles its sloping site cleverly: fish on the lower floor, the general market above, and a transversal road between them so vehicles can unload directly into both.\n\nClassified a Monument of Public Interest since 2013, it has operated continuously in its original function since 1952 \u2014 avoiding the fate of most modernist markets, conversion into a food hall or cultural venue, by simply continuing to sell fish and vegetables for over seventy years. It became the kind of building that eventually gets protected for doing the ordinary thing it was always doing, rather than for stopping and becoming something more photogenic.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mercado_Municipal_Matosinhos_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mercado_Municipal_Matosinhos_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mercado_Municipal_Matosinhos_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ac890ea2-0b36-4f34-b0a3-b479f8c4ac82",
+          "order": 0,
+          "title": "Mercado Municipal de Matosinhos",
+          "caption": "Pause at the entrance on Rua Conde S\u00e3o Salvador to read the azulejo panels on the north facade, then go inside and stand beneath the vault.",
+          "latitude": 41.18647,
+          "longitude": -8.69266,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mercado-municipal-matosinhos.mp3",
+          "audioDurationSeconds": 182,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "This market was designed in nineteen thirty-six, won its architectural competition with what the judges called an innovative project, and didn't open until nineteen fifty-two \u2014 because the Second World War interrupted construction and iron, which the building needed a great deal of, became impossible to source.\nSettle yourself at the entrance on Rua Conde S\u00e3o Salvador and look at the north facade before going in, because it carries something worth knowing about: azulejo ceramic panels designed by Am\u00e9rico Soares Braga, the sculptor who also created the bas-relief of the labourer and the farmer that was destroyed by Estado Novo censors on the opening night of the Batalha cinema \u2014 which means that two of the most architecturally significant modernist buildings in the Porto metropolitan area share the same ceramic artist, and neither building's description usually mentions it. The building occupies the site of a demolished city block, sits between the Rua Brito Capelo and the avenue running alongside the Leix\u00f5es port docks, and was designed by the ARS architectural practice \u2014 Fortunato Cabral, Morais Soares, and Cunha Le\u00e3o, three architects in their thirties who won the commission in nineteen thirty-six when they were young enough for a vaulted concrete market hall to seem like a reasonable thing to attempt.\nGo inside and stand under the vault.\nThe monumental vaulted ceiling that covers the interior is the building's defining gesture \u2014 a long arched concrete span that runs the full length of the market hall, bringing in natural light from above and giving the interior a civic generosity that most municipal markets of the period never achieved. The builder who constructed it, Lu\u00eds Jos\u00e9 Oliveira, arrived at the contract because the original winner withdrew at signing, which meant that the man who built the vault did so as a second-choice contractor working on a pioneering structure, in wartime, with restricted materials \u2014 and the method he used to form the arches was a timber framework that slid along rails as each section of the vault was completed, advancing through the hall as the concrete cured.\nThe building is also unusual in how it handles the sloping site: the lower floor is dedicated entirely to fish, the upper floor to the general market, and a transversal access road between them allows vehicles to unload directly into both floors from the interior, which is a piece of logistics thinking so embedded in the building's structure that you'd only notice it if someone pointed it out.\n[beat]\nThe market has been classified as a Monument of Public Interest since two thousand and thirteen, and it has been operating continuously in its original function since nineteen fifty-two, which means it avoided the fate of most modernist market buildings of its generation \u2014 conversion to a food hall, a cultural venue, or a boutique commercial space \u2014 by simply continuing to sell fish and vegetables without interruption for over seventy years, and thereby becoming the kind of building that eventually gets protected for doing the ordinary thing it was always doing, rather than for stopping and being converted into something more photogenic."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 182,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.18647,
+      "centroidLongitude": -8.69266,
+      "city": "Matosinhos",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "market",
+        "modernist",
+        "architecture",
+        "azulejo",
+        "matosinhos",
+        "concrete",
+        "heritage"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "03539b5c-a936-41aa-9508-e527db0c41ea",
+      "title": "Museu de Hist\u00f3ria Natural e da Ci\u00eancia da Universidade do Porto",
+      "shortDescription": "The University of Porto's natural history and science museum in the historic Rectory building \u2014 19th-century specimens of species now extinct, a 120,000-specimen herbarium, and a teaching-instrument collection that surprises everyone.",
+      "longDescription": "The museum holds specimens of species that no longer exist anywhere else, gathered from Portugal and its former colonies in the 19th century, when taxonomy was actively discovering the world and before mass extinction was an everyday idea. Its core collections are housed in the Historic Building of the University of Porto's Rectory on Campo dos M\u00e1rtires da P\u00e1tria, beside the Jardim da Cordoaria and within sight of the Cl\u00e9rigos tower. The Rectory has been under extensive refurbishment since 2019, hosting temporary exhibitions rather than the full permanent display \u2014 so check what is currently accessible before you go in; its full reinstallation will be one of Porto's most significant museum openings when it arrives.\n\nThe collections span geology, palaeontology, zoology, archaeology, ethnography, botany, physical anthropology, numismatics and scientific instruments \u2014 not separate museums merged on paper but a genuine accumulation of scientific practice the university has built since the late 19th century. The herbarium alone, assembled largely by the botanist Gon\u00e7alo Sampaio, holds an estimated 120,000 specimens of vascular plants, bryophytes, lichens, fungi and algae. The scientific-instruments collection is the section that surprises people most: physics apparatus, mathematical models and chemistry equipment used in teaching across the 19th and 20th centuries, each decade's purchases a precise index of what the institution believed science was.\n\nThe museum's second site, the Biodiversity Gallery at Casa Andresen in the Botanical Garden, is open and worth the separate trip \u2014 the first university museum in Portugal formally tied to a Ci\u00eancia Viva science centre. Among its holdings is a whale skeleton referenced by Sophia de Mello Breyner Andresen, who grew up in the house, in writings that predate the museum by decades. The collection and the literary memory of the building arrived separately, across about a century, and ended up in the same room.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museu_Historia_Natural_UPorto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museu_Historia_Natural_UPorto_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museu_Historia_Natural_UPorto_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f79666ef-338f-4ff4-9e89-cd88470381ef",
+          "order": 0,
+          "title": "Museu de Hist\u00f3ria Natural e da Ci\u00eancia da Universidade do Porto",
+          "caption": "Stand outside the University Rectory on Campo dos M\u00e1rtires da P\u00e1tria, by the Jardim da Cordoaria; check what is open during the refurbishment before going in.",
+          "latitude": 41.14627,
+          "longitude": -8.61582,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/museu-historia-natural-uporto.mp3",
+          "audioDurationSeconds": 210,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "This museum holds specimens of species that no longer exist anywhere else, collected from Portugal and its former colonies in the nineteenth century, at a moment in natural history when the discipline of taxonomy was actively discovering the world and before the idea of mass extinction had become an everyday concept.\nThe building you're outside is the Historic Building of the University of Porto's Rectory, on Campo dos M\u00e1rtires da P\u00e1tria, with the Jardim da Cordoaria \u2014 the public garden with the old cordage factory \u2014 immediately to your side and the Cl\u00e9rigos tower visible a short distance away. The museum's core collections are housed inside this Rectory building, which has been undergoing extensive refurbishment since two thousand and nineteen, during which it has been hosting temporary exhibitions rather than the full permanent display \u2014 so verify what is currently accessible before you go in, as the collection's full installation will be one of the most significant museum openings in Porto when it arrives. The museum's second site, the Biodiversity Gallery at Casa Andresen in the Botanical Garden, is open and worth the separate trip.\nOnce inside, the breadth of what the museum holds becomes clear rather quickly.\nThe collections span geology, palaeontology, zoology, archaeology, ethnography, botany, physical anthropology, numismatics, and scientific instruments associated with physics, mathematics and chemistry teaching \u2014 not as separate museums that have been merged administratively, but as a genuine accumulation of scientific practice that the University of Porto has been building since the late nineteenth century. The herbarium alone, assembled largely through the work of the botanist Gon\u00e7alo Sampaio, contains an estimated one hundred and twenty thousand specimens of vascular plants, bryophytes, lichens, fungi and algae, which is a number that takes a moment to hold: a hundred and twenty thousand individual plant specimens, pressed and catalogued, many of them collected from places and at times when the plants in question were considerably more common than they are today.\nThe scientific instruments collection is the section that tends to surprise people most.\nPhysics apparatus, mathematical models, chemistry equipment \u2014 all used in teaching at the University of Porto across the nineteenth and twentieth centuries, and now objects of historical interest in their own right, because the instruments that a university buys for its students in any given decade are a precise index of what that institution believed science was and what it believed students needed to understand it. The museum also holds maritime charts, photographs, films and manuscripts, which extends its scope from natural history into the broader documentary history of Portuguese scientific observation.\n[beat]\nThe Biodiversity Gallery at Casa Andresen \u2014 the second site, in the Botanical Garden on Rua do Campo Alegre \u2014 was the first university museum in Portugal to be formally associated with a Ci\u00eancia Viva science centre, and it holds, among other things, a whale skeleton that was specifically referenced by Sophia de Mello Breyner Andresen, who grew up in the house the gallery now occupies, in writings that predate the museum by several decades. The collection and the literary memory of the building it's in arrived separately, across about a century, and ended up in the same room \u2014 which is the kind of institutional coincidence that only becomes legible in retrospect."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 210,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.14627,
+      "centroidLongitude": -8.61582,
+      "city": "Porto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "museum",
+        "science",
+        "natural-history",
+        "university",
+        "herbarium",
+        "collections",
+        "cordoaria"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "633b095c-207f-4ccb-8936-920993e8793a",
+      "title": "Parque da Cidade do Porto",
+      "shortDescription": "Portugal's largest urban park \u2014 83 hectares running all the way to the Atlantic, built partly from the granite of demolished Porto buildings, with sight lines the rest of the city never gives you.",
+      "longDescription": "Planned in the 1960s and not built until the 1990s, the Parque da Cidade benefited from the thirty-year gap \u2014 by the time it arrived the city had grown large enough to need it properly. It covers 83 hectares, the largest urban park in Portugal, running from the residential edge of Porto's western suburbs all the way to the Atlantic \u2014 a park that ends at the ocean rather than a road or fence, which is genuinely unusual. The second phase, completed in 2002, was the extension that closed the gap to the sea. About ten kilometres of paths run through a landscape built partly from the granite of demolished Porto buildings, giving its walls and paving a material continuity with the city.\n\nThe landscape architect was Sid\u00f3nio Pardal, working from 1991 on a concept first drawn up three decades earlier by the French planner Robert Auzelle. Pardal's own description reframes what you are walking through: the landscape, he wrote, is an end in itself and does not attempt to imitate nature, but exists for direct use as a public space for contemplation and recreation. That is a more rigorous position than it sounds \u2014 a park that does not imitate nature must find a reason for every stone, path and sight line \u2014 and Portugal's Order of Engineers named it one of the hundred most remarkable works built in the country in the 20th century. Near one of the lakes stands the Pavilh\u00e3o da \u00c1gua, a water museum built for Expo '98 in Lisbon and relocated here in 2002.\n\nThe park is sometimes called Porto's lungs, which undersells it slightly. What really sets it apart is the sight lines \u2014 four hundred metres of open ground before you reach treeline, a distance the rest of Porto never offers. The city outside the entrance is intimate, vertical and stone; the city inside is horizontal, open, made of grass and granite and Atlantic light \u2014 and the two versions of the same place are different enough that an hour in one changes how you read the other on the way out.",
+      "makerId": "f24fa1d2-4846-40fc-b9f9-8d61797a34f3",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Parque_da_Cidade_Porto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Parque_da_Cidade_Porto_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Parque_da_Cidade_Porto_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Parque_da_Cidade_Porto_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cee280b3-c48b-43f8-a20a-539c89b45aa6",
+          "order": 0,
+          "title": "Parque da Cidade do Porto",
+          "caption": "Enter from the eastern, city side and head west toward the lakes and the coast; look for the Pavilh\u00e3o da \u00c1gua water museum near one of the lakes.",
+          "latitude": 41.16574,
+          "longitude": -8.67182,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/parque-da-cidade-porto.mp3",
+          "audioDurationSeconds": 186,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "This park was planned in the nineteen sixties and not built until the nineteen nineties \u2014 and the thirty-year gap turned out to be useful, because it meant the city had grown large enough to need it properly by the time it arrived.\nFind your bearings before you walk anywhere: you're somewhere in Portugal's largest urban park, eighty-three hectares of designed landscape that runs from the residential edge of Porto's western suburbs all the way to the Atlantic coastline \u2014 and that last part is the detail worth holding onto, because urban parks that end at the ocean rather than a road or a fence are genuinely unusual, and the second phase of the park completed in two thousand and two was specifically the extension that closed the distance between the city and the sea. The main lakes are toward the centre, the Atlantic is to the west, and the paths run for approximately ten kilometres through a landscape that was built partly from the granite stones of demolished Porto buildings, which gives the walls and paving a material continuity with the city that constructed them.\nThe landscape architect who executed the park was Sid\u00f3nio Pardal, working from nineteen ninety-one, though the original concept had been drawn up three decades earlier by the French urban planner Robert Auzelle \u2014 and Pardal's description of his own approach is worth knowing before you walk through it, because it reframes what you're looking at: the park's landscape, he wrote, is an end in itself and doesn't attempt to imitate nature, but has no purpose other than direct use as a public urban space for contemplation and recreation. That is a more rigorous design position than it sounds, because a park that doesn't attempt to imitate nature has to find a different reason for every stone and every path and every sight line, and Pardal's park was selected by Portugal's Order of Engineers as one of the hundred most remarkable works constructed in the country in the twentieth century on precisely those grounds.\nLook for the Pavilh\u00e3o da \u00c1gua somewhere within the park, a low building near one of the lakes that functions as a water museum.\nIt wasn't built here: it was constructed for the Expo ninety-eight in Lisbon, where it stood in the Parque das Na\u00e7\u00f5es alongside the Portuguese Pavilion, and was dismantled and relocated to Porto in two thousand and two when the second phase of the park was completed \u2014 which means that the building you're walking past has already had a previous life as an exhibition hall at a world's fair, and now stands quietly among the trees as an educational museum about the water cycle, which is either a significant career change or a very logical one, depending on how you think about water.\n[beat]\nThe park is sometimes described as Porto's lungs, which is accurate but undersells it slightly, because the thing that sets it apart from most urban green spaces is the sight lines \u2014 four hundred metres of open ground before you reach treeline, which is a distance the rest of Porto never gives you. The city on the other side of the park entrance is intimate and vertical and stone; the city in here is horizontal and open and made of grass and granite and Atlantic light, and the two versions of the same place are different enough that spending an hour in one genuinely changes how you read the other when you come back out."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 186,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.16574,
+      "centroidLongitude": -8.67182,
+      "city": "Porto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "park",
+        "nature",
+        "atlantic",
+        "urban-park",
+        "sidonio-pardal",
+        "granite",
+        "porto"
+      ],
+      "priceUSD": 0
     }
   ]
 }
