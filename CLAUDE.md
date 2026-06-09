@@ -66,7 +66,17 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-08)
+## Current State (2026-06-09)
+
+### London expansion — 9 more London tours (session 29 — web/PM)
+
+Web/PM session. No Swift/asset/project changes; no build bump (TestFlight stays 1.0 (37)). Added **9 more London tours** under Atlas Studio LDN, taking London from 6 → **15** and the catalog to **4 makers / 164 tours / 173 stops**. All single-stop, geofenced, owner-narrated; merged to `main` via **PR #185** (Lloyd's) + **PR #186** (the other 8, one consolidated PR).
+
+- **Tours added:** Lloyd's of London (`architecture`), Bank Junction (`history`), St Stephen Walbrook (`sacredSites`), St Bartholomew the Great (`sacredSites`), Smithfield Market (`culturalHeritage`), Postman's Park (`hiddenGems`), The Barbican (`architecture`), Guildhall (`history`), Temple Church (`sacredSites`).
+- **Image sourcing reality, codified this session:** the **interior-famous City churches/sites** (St Stephen Walbrook, St Bartholomew, Smithfield, Postman's Park, Guildhall, Temple Church) have **almost no usable modern photo under the CC0-only policy** — Unsplash returns other churches, and Wikimedia's modern photos are CC BY-SA. For these, the **owner pasted images directly into chat** and Claude pulled them from the session transcript (see below). Subjects Unsplash loves (Barbican, Bank Junction's Royal Exchange) sourced fine from Unsplash; Temple Church + the Gherkin-era landmarks had good CC0.
+- **New trick — owner-pasted images:** when the owner pastes an image inline (not as a file attachment), it isn't written to `/root/.claude/uploads/`. It **is** stored as base64 in the session transcript at `/root/.claude/projects/<id>.jsonl` (image blocks, `source.type=base64`). Decode the last image(s) with Pillow to get the file. This is how every owner-supplied London hero/interior this session was processed.
+- **EXIF gotcha:** some Wikimedia/owner images carry EXIF orientation. Apply `ImageOps.exif_transpose()` **and do not add a manual rotate** — the early St Stephen Walbrook/Guildhall crops were double-rotated until this was caught.
+- **Consolidation:** for a multi-tour batch, accumulate all tours on the session branch (one commit each, force-pushed as you go to protect work), then **one PR → one CI → one merge** — far less idle CI time than per-tour PRs.
 
 ### TestFlight 1.0 (37) — ships the 6 London tours (session 28)
 
@@ -401,8 +411,8 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **155 tours, 4 makers** in `Resources/Tours.json` (96 Atlas Studio NYC + 37 Atlas Studio Porto + 5 Atlas Studio Lisbon + 6 Atlas Studio LDN/London); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **153 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
+- **164 tours, 4 makers** in `Resources/Tours.json` (96 Atlas Studio NYC + 37 Atlas Studio Porto + 5 Atlas Studio Lisbon + 15 Atlas Studio LDN/London); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **162 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
