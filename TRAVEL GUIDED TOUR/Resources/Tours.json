@@ -7452,6 +7452,53 @@
       "totalDurationSeconds": 129,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "f3b8d27a-5c61-4e94-8a07-2d9b6c4e1f85",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Lloyd's of London",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lloyds-of-london_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lloyds-of-london_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lloyds-of-london_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lloyds-of-london_4.webp"
+      ],
+      "tags": [
+        "lloyd's of london",
+        "richard rogers",
+        "high-tech architecture",
+        "lime street",
+        "1986",
+        "insurance",
+        "lutine bell"
+      ],
+      "stops": [
+        {
+          "id": "c9d6a3f1-7b25-4e80-9a14-3f2c6e8b5d40",
+          "order": 0,
+          "title": "Lloyd's of London",
+          "caption": "Stand across Lime Street and follow the steel ducts and staircases up the building's outside.",
+          "latitude": 51.5138,
+          "longitude": -0.0824,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lloyds-of-london.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lloyds-of-london_hero.webp",
+          "transcriptText": "This is a building turned inside out \u2014 all its guts bolted to the outside so the inside could be left clear.\n\nYou're looking at the Lloyd's building, on Lime Street, designed by Richard Rogers and finished in 1986. Your eye doesn't quite know where to rest, and that's the point. Stainless steel ducts, staircases, lifts, and pipework climb all over the outside like the workings of a machine that's been unzipped. There are blue cranes still fixed to the roof. It looks unfinished, or turned the wrong way out \u2014 and it was meant to.\n\nHere's the logic. Rogers had done the same thing in Paris with the Pompidou Centre a few years earlier: put all the services \u2014 lifts, pipes, ducts, the loos, even the staircases \u2014 on the outside of the building. Why? Because then the inside is one vast uninterrupted space, with nothing structural getting in the way, and the bits that wear out or need replacing are all on the exterior where engineers can reach them without tearing the place apart. It's a building designed to be maintained and rewired for a century without anyone having to gut it.\n\nAnd inside that cleared-out space is the Room \u2014 the great trading floor of Lloyd's, the insurance market that has been running since the sixteen-eighties, when it began in Edward Lloyd's coffee house near the river. This is where the world insures the things nobody else will touch: ships, oil rigs, satellites, a footballer's legs, a singer's voice. At the centre of the Room hangs the Lutine Bell, salvaged from a wrecked ship, once rung to announce news of overdue vessels \u2014 once for bad news, twice for good.\n\n[beat]\n\nThere's a wonderful contradiction here. Lloyd's is one of the oldest institutions in the City \u2014 three and a half centuries of tradition, bell and ledgers and ritual \u2014 and it chose to house itself in the most radical, futuristic building London had seen in decades. The ancient business of insuring against disaster, wrapped in a machine that wears its insides on its skin.\n\nStand across Lime Street and follow one of the staircases with your eye, all the way up. It's a building that explains exactly how it works, if you let it."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.5138,
+      "centroidLongitude": -0.0824,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The Lloyd's building on Lime Street, by Richard Rogers and finished in 1986, is a building turned inside out: stainless-steel ducts, staircases, lifts and pipework climb all over the exterior like the workings of an unzipped machine \u2014 blue cranes still fixed to the roof \u2014 so your eye doesn't know where to rest, which is the point. Rogers had done the same in Paris with the Pompidou Centre: put the services (lifts, pipes, ducts, even the loos and staircases) on the outside, leaving the inside one vast uninterrupted space, with the parts that wear out reachable by engineers without gutting the place. It's a building designed to be maintained and rewired for a century.\n\nInside that cleared space is the Room \u2014 the great trading floor of Lloyd's, the insurance market running since the 1680s, when it began in Edward Lloyd's coffee house near the river. This is where the world insures what nobody else will touch: ships, oil rigs, satellites, a footballer's legs, a singer's voice. At the centre hangs the Lutine Bell, salvaged from a wrecked ship, once rung to announce overdue vessels \u2014 once for bad news, twice for good. There's a wonderful contradiction here: one of the City's oldest institutions, three and a half centuries of bell and ledger and ritual, chose to house itself in the most radical, futuristic building London had seen in decades \u2014 the ancient business of insuring against disaster, wrapped in a machine that wears its insides on its skin. Stand across Lime Street and follow a staircase with your eye, all the way up.",
+      "shortDescription": "Richard Rogers's 1986 'inside-out' building on Lime Street \u2014 services, lifts and ducts bolted to the outside so the Room, Lloyd's 340-year-old insurance market, sits in clear space within.",
+      "totalDurationSeconds": 139,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
