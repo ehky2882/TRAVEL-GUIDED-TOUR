@@ -7594,6 +7594,51 @@
       "totalDurationSeconds": 132,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "c5e8b1f4-9a27-4e60-8d03-2f7a6c4e8b91",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "St Bartholomew the Great",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-bartholomew-the-great_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-bartholomew-the-great_2.webp"
+      ],
+      "tags": [
+        "st bartholomew the great",
+        "norman",
+        "1123",
+        "rahere",
+        "smithfield",
+        "barts hospital",
+        "medieval"
+      ],
+      "stops": [
+        {
+          "id": "f4a7c2e9-6b81-4d35-9c08-3e7a1d6b9f52",
+          "order": 0,
+          "title": "St Bartholomew the Great",
+          "caption": "Pass under the Tudor gatehouse and stand at the west end, looking down the Norman nave to the round arches.",
+          "latitude": 51.5193,
+          "longitude": -0.0998,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-bartholomew-the-great.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-bartholomew-the-great_hero.webp",
+          "transcriptText": "This is the oldest church interior in London \u2014 and it survived because everyone forgot it was here.\n\nYou're at the entrance to St Bartholomew the Great, in Smithfield, and the way in is itself a clue. You pass under a Tudor gatehouse, timber-framed and crooked, and down a path that feels like leaving the modern city behind. Inside is something almost nothing else in London can offer: a great Norman interior, built in 1123, with massive round stone pillars and round arches, dim and heavy and astonishingly old. Nine hundred years. This is the London the Great Fire didn't reach and the Blitz mostly missed.\n\nIt was founded by a man called Rahere, a courtier of King Henry the First \u2014 by legend a jester who, after nearly dying of fever on pilgrimage, vowed to build a priory if he lived. He lived. He built this, along with the great hospital next door, St Bartholomew's \u2014 \"Barts\" \u2014 still a working London hospital today, the oldest in Britain on its original site. The church and the hospital were born together, nine centuries ago, from one man's bargain with death.\n\nHere's how it survived. At the Reformation, when Henry the Eighth dissolved the monasteries, most great priory churches were destroyed or stripped. This one was mostly demolished too \u2014 but the choir, the oldest core, was kept on as a humble parish church and then, crucially, forgotten. Over the centuries the leftover buildings were swallowed by the City: parts became a print works, a forge, a hop store, even a stable. The Norman stone was hidden inside later junk, which is exactly why it lasted.\n\n[beat]\n\nYou may recognise it without knowing why. Because it's one of the few genuinely medieval interiors left, film crews use it constantly \u2014 Shakespeare in Love, Four Weddings and a Funeral, others. The camera loves it because the camera can't fake nine hundred years.\n\nStand at the west end and look down the length of the nave to the round arches at the far end. That stone was cut and set when London had perhaps forty thousand people in it. It has stood through everything since."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5193,
+      "centroidLongitude": -0.0998,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "St Bartholomew the Great, in Smithfield, offers something almost nothing else in London can: a great Norman interior built in 1123 \u2014 massive round stone pillars, round arches, dim and heavy and astonishingly old. You reach it under a crooked Tudor gatehouse, down a path that feels like leaving the modern city behind. This is the London the Great Fire didn't reach and the Blitz mostly missed. It was founded by Rahere, a courtier of Henry I \u2014 by legend a jester who, after nearly dying of fever on pilgrimage, vowed to build a priory if he lived. He lived, and built this along with the great hospital next door, St Bartholomew's \u2014 \"Barts\" \u2014 still working today, the oldest in Britain on its original site. Church and hospital were born together, nine centuries ago, from one man's bargain with death.\n\nIt survived by being forgotten. At the Reformation most great priory churches were destroyed; this one was mostly demolished too, but the choir \u2014 the oldest core \u2014 was kept on as a humble parish church and then overlooked. The leftover buildings were swallowed by the City: a print works, a forge, a hop store, even a stable. The Norman stone, hidden inside later junk, is exactly why it lasted. You may recognise it without knowing why \u2014 one of the few genuinely medieval interiors left, it's a constant film location (Shakespeare in Love, Four Weddings and a Funeral). Stand at the west end and look down the nave to the round arches: that stone was cut and set when London had perhaps forty thousand people in it, and it has stood through everything since.",
+      "shortDescription": "London's oldest church interior \u2014 a great Norman nave of 1123 in Smithfield, founded by Rahere with St Bart's hospital next door, and a constant film location because nine centuries can't be faked.",
+      "totalDurationSeconds": 142,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
