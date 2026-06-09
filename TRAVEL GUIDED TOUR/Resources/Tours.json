@@ -7869,6 +7869,479 @@
       "totalDurationSeconds": 154,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "b8e2c6a1-7d39-4f54-9a06-3c9e7b2d1f84",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Westminster Abbey",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_5.webp"
+      ],
+      "tags": [
+        "westminster abbey",
+        "coronation",
+        "monarchy",
+        "poets corner",
+        "hawksmoor",
+        "gothic",
+        "burial"
+      ],
+      "stops": [
+        {
+          "id": "a1d7c4f9-6b82-4e53-9a08-2f7c6e3b1d40",
+          "order": 0,
+          "title": "Westminster Abbey",
+          "caption": "Stand under the west towers, or in the nave if you're inside, near the coronation spot before the high altar.",
+          "latitude": 51.4994,
+          "longitude": -0.1273,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/westminster-abbey.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 45,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_hero.webp",
+          "transcriptText": "Almost every English monarch for the last thousand years has been crowned on one spot inside this building \u2014 and a surprising number of them are buried within a few feet of where they were made king.\n\nYou're outside Westminster Abbey, looking up at the great west front \u2014 two square towers, pale stone, deep Gothic doorways, statues in tiers. A confession first: those twin towers are not as old as they look. They were finished in the seventeen-thirties, designed by Nicholas Hawksmoor, centuries after the rest. Most of the Abbey behind them is genuinely medieval, thirteenth century and later, but the face it shows the street is an eighteenth-century afterthought, done so well most people never question it.\n\nGo inside if you can \u2014 and the thing to find is the floor in front of the high altar. Since 1066, the year of the Norman Conquest, almost every coronation of an English and then British monarch has happened on this exact spot. William the Conqueror was crowned here on Christmas Day that year, and the line runs unbroken to the present King. There is a battered wooden chair, the Coronation Chair, six hundred years old and carved with centuries of visitors' graffiti, that every modern monarch has sat in to be crowned.\n\nBut the Abbey is also the most crowded burial ground in Britain, and that's the stranger half of it. Some three thousand people are buried or memorialised in here \u2014 kings and queens, yes, but also Isaac Newton, Charles Darwin, Charles Dickens, a clutch of scientists and writers and statesmen, packed into a building that is part church, part coronation stage, part national attic of the dead. There is a corner, Poets' Corner, where the writers cluster, and people still leave flowers for men dead three hundred years.\n\n[beat]\n\nHere's the thing to hold. This single building is where the nation crowns its monarchs and where it buries the people it most wants to remember \u2014 the making of power and the keeping of memory, under one roof, for a thousand years. Coronation and grave, the beginning and the end, in the same few hundred feet of stone.\n\nStand in the nave a while if you're inside, or under the towers if you're not. Whatever you make of monarchy, this is the room where England has told itself who it is, over and over, for a millennium."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.4994,
+      "centroidLongitude": -0.1273,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Westminster Abbey shows the street a great Gothic west front \u2014 two square towers, pale stone, deep doorways, statues in tiers \u2014 but a confession: those twin towers aren't as old as they look. They were finished in the 1730s to Nicholas Hawksmoor's design, centuries after the rest. Most of the Abbey behind is genuinely medieval, thirteenth century and later, but its face is an eighteenth-century afterthought done so well most people never question it. Inside, the thing to find is the floor before the high altar: since 1066, the year of the Norman Conquest, almost every coronation of an English and then British monarch has happened on this exact spot. William the Conqueror was crowned here on Christmas Day that year, and the line runs unbroken to the present King \u2014 in a battered six-hundred-year-old wooden Coronation Chair, carved with centuries of visitors' graffiti.\n\nBut the Abbey is also the most crowded burial ground in Britain. Some three thousand people are buried or memorialised here \u2014 kings and queens, but also Isaac Newton, Charles Darwin, Charles Dickens, a clutch of scientists, writers and statesmen, packed into a building that is part church, part coronation stage, part national attic of the dead. In Poets' Corner the writers cluster, and people still leave flowers for men dead three hundred years. This single building is where the nation crowns its monarchs and buries the people it most wants to remember \u2014 the making of power and the keeping of memory under one roof for a thousand years. Coronation and grave, the beginning and the end, in the same few hundred feet of stone: the room where England has told itself who it is, over and over, for a millennium.",
+      "shortDescription": "Coronation church and national burial ground for a thousand years \u2014 every English monarch crowned here since 1066, with Newton, Darwin and Dickens among 3,000 buried within.",
+      "totalDurationSeconds": 143,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "d9f3c7a2-8b41-4e64-9a05-2c8e7b3d1f96",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Houses of Parliament and Big Ben",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_6.webp"
+      ],
+      "tags": [
+        "houses of parliament",
+        "big ben",
+        "elizabeth tower",
+        "palace of westminster",
+        "charles barry",
+        "augustus pugin",
+        "gothic revival"
+      ],
+      "stops": [
+        {
+          "id": "c2e8a4f1-7b63-4d50-9a08-3f7c6e1b2d95",
+          "order": 0,
+          "title": "Houses of Parliament and Big Ben",
+          "caption": "Look across the river at the Palace of Westminster and the Elizabeth Tower; wait for the chime.",
+          "latitude": 51.4995,
+          "longitude": -0.1248,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/houses-of-parliament.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_hero.webp",
+          "transcriptText": "The bell is called Big Ben. The tower is not. Let's clear that up before we go any further.\n\nYou're looking across at the Palace of Westminster \u2014 the Houses of Parliament \u2014 a vast cliff of pale, pinnacled Gothic stone running along the river, with a great clock tower at the north end. Almost everyone calls that tower Big Ben. They're wrong, but pleasantly so. Big Ben is the name of the largest bell inside the tower, the one that strikes the hours. The tower itself is the Elizabeth Tower, renamed for the late Queen in 2012. For most of its life it was just \"the Clock Tower,\" but the bell's name leaked onto the whole thing decades ago, and there's no fixing it now.\n\nLook at the building properly. It seems impossibly old, almost medieval \u2014 but most of what you see was built in the eighteen-forties and fifties. The medieval palace that stood here burned down in a catastrophic fire in 1834, watched by half of London from the riverbanks. The competition to rebuild it was won by Charles Barry, a Classical architect, who teamed up with a young man named Augustus Pugin, a fanatical Gothic genius. Barry laid out the great symmetrical plan; Pugin drew almost every detail \u2014 every carved panel, every spire, every inch of decoration. The result is one of the most ornate buildings on earth, and the work nearly killed both of them.\n\nNow the clock. Each of the four faces is seven metres across. The hands, the numerals, the mechanism \u2014 all of it Victorian precision engineering, and famously accurate. The bell, Big Ben, weighs over thirteen tonnes, and it cracked shortly after it was installed. The crack is still there, which is why its tone is slightly off \u2014 a flaw you can hear in the most famous chime in the world.\n\n[beat]\n\nHere's the irony worth carrying. This building, the very image of ancient England \u2014 Gothic, timeless, the backdrop to a thousand postcards \u2014 is essentially a Victorian version of the Middle Ages, built by two arguing geniuses on the ashes of the real thing. It looks a thousand years old. It's younger than the United States.\n\nStand and wait for the chime if you can. Thirteen tonnes of cracked Victorian bronze, telling the time to a country that built it to look far older than it is."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.4995,
+      "centroidLongitude": -0.1248,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The bell is called Big Ben; the tower is not. You're looking across at the Palace of Westminster \u2014 the Houses of Parliament \u2014 a vast cliff of pale, pinnacled Gothic stone along the river, with a great clock tower at the north end. Almost everyone calls that tower Big Ben; they're wrong but pleasantly so. Big Ben is the largest bell inside, the one that strikes the hours; the tower itself is the Elizabeth Tower, renamed for the late Queen in 2012 (for most of its life just \"the Clock Tower\"). It seems impossibly old, almost medieval \u2014 but most of what you see was built in the 1840s and 50s. The medieval palace here burned down in a catastrophic fire in 1834, watched by half of London from the riverbanks. The rebuild competition was won by Charles Barry, a Classical architect, who teamed with the young Augustus Pugin, a fanatical Gothic genius: Barry laid out the great symmetrical plan, Pugin drew almost every carved panel, spire and inch of decoration. The result is one of the most ornate buildings on earth, and the work nearly killed both men.\n\nEach of the clock's four faces is seven metres across \u2014 Victorian precision engineering, famously accurate. The bell weighs over thirteen tonnes and cracked shortly after it was installed; the crack is still there, which is why its tone is slightly off, a flaw you can hear in the most famous chime in the world. Here's the irony to carry: this building, the very image of ancient England \u2014 Gothic, timeless, the backdrop to a thousand postcards \u2014 is essentially a Victorian version of the Middle Ages, built by two arguing geniuses on the ashes of the real thing. It looks a thousand years old. It's younger than the United States. Stand and wait for the chime: thirteen tonnes of cracked Victorian bronze, telling the time to a country that built it to look far older than it is.",
+      "shortDescription": "Barry & Pugin's 1840s\u201350s Gothic Revival Palace of Westminster \u2014 the cracked 13-tonne bell 'Big Ben' in the Elizabeth Tower, a Victorian medieval fantasy younger than the USA.",
+      "totalDurationSeconds": 144,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "e1c4b8a3-9d42-4f54-8a06-3c9e7b2d1f97",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Westminster Hall",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-hall_3.webp"
+      ],
+      "tags": [
+        "westminster hall",
+        "hammerbeam roof",
+        "medieval",
+        "palace of westminster",
+        "charles i",
+        "lying in state",
+        "law court"
+      ],
+      "stops": [
+        {
+          "id": "d3f8c1a4-7b62-4e50-9a08-2f7c6e3b1d96",
+          "order": 0,
+          "title": "Westminster Hall",
+          "caption": "If you can get inside the Palace of Westminster, find the great hall and look up at the hammerbeam roof.",
+          "latitude": 51.4992,
+          "longitude": -0.1255,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/westminster-hall.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-hall_hero.webp",
+          "transcriptText": "This is the oldest part of Parliament by five hundred years, and almost nobody outside it knows the room exists.\n\nYou're at Westminster Hall \u2014 and you may have to take this one partly on trust, because the hall is inside the Palace of Westminster, reachable when Parliament opens it to visitors. But it's worth knowing what's behind that wall, because it's the single most historic room in the country. While the rest of the palace you just looked at is Victorian, this hall is the real medieval survivor. It was built in 1097 by William the Second, son of the Conqueror, and it is one of the largest medieval halls in Europe.\n\nThe glory of it is the roof. Around 1393, the old flat roof was replaced with a vast timber structure called a hammerbeam roof \u2014 great oak beams that step inward and seem to reach across the enormous width with no columns holding them up at all. It's a feat of carpentry that still makes engineers blink: six hundred years of oak, spanning sixty-eight feet, holding itself up by geometry and nerve.\n\nAnd the things that have happened under that roof are the spine of English history. This was the country's chief law court for centuries. William Wallace was condemned to death here. Thomas More was tried here. King Charles the First was tried and sentenced here, in his own palace, by his own subjects \u2014 a thing that had never happened to an English king. And in the other direction, this is where monarchs lie in state after death: the late Queen lay here in 2022, and the queue to file past her stretched for miles along the river for days.\n\n[beat]\n\nSo this one room holds both halves of English power. Kings were condemned here and kings are mourned here. The same stone floor has seen a monarch sentenced to death and a monarch honoured by a queue of a million people \u2014 triumph and catastrophe, under the same six-hundred-year-old oak.\n\nIf you get the chance to stand in it, look up first, at the roof \u2014 and then down at the floor, and think about who has been carried across it."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.4992,
+      "centroidLongitude": -0.1255,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Westminster Hall is the oldest part of Parliament by five hundred years, and almost nobody outside knows the room exists. It's inside the Palace of Westminster, reachable when Parliament opens it to visitors \u2014 but it's worth knowing what's behind the wall, because it's the single most historic room in the country. While the rest of the palace is Victorian, this hall is the real medieval survivor: built in 1097 by William II, son of the Conqueror, and one of the largest medieval halls in Europe. Its glory is the roof. Around 1393 the old flat roof was replaced with a vast hammerbeam structure \u2014 great oak beams that step inward and seem to reach across the enormous width with no columns holding them up at all. It's a feat of carpentry that still makes engineers blink: six hundred years of oak spanning sixty-eight feet, holding itself up by geometry and nerve.\n\nAnd the things that have happened under that roof are the spine of English history. This was the country's chief law court for centuries. William Wallace was condemned to death here; Thomas More was tried here; King Charles I was tried and sentenced here, in his own palace, by his own subjects \u2014 a thing that had never happened to an English king. And in the other direction, this is where monarchs lie in state after death: the late Queen lay here in 2022, and the queue to file past her stretched for miles along the river for days. So one room holds both halves of English power \u2014 kings condemned here and kings mourned here, triumph and catastrophe under the same six-hundred-year-old oak. If you get the chance to stand in it, look up first, at the roof \u2014 then down at the floor, and think about who has been carried across it.",
+      "shortDescription": "The oldest part of Parliament \u2014 a 1097 medieval hall under a vast 1390s hammerbeam oak roof, where kings were tried and condemned and where monarchs now lie in state.",
+      "totalDurationSeconds": 120,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "f8c2a6e1-9b43-4e54-8a06-3c9e7b2d1f98",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Trafalgar Square",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_5.webp"
+      ],
+      "tags": [
+        "trafalgar square",
+        "nelson's column",
+        "national gallery",
+        "fourth plinth",
+        "landseer lions",
+        "battle of trafalgar",
+        "protest"
+      ],
+      "stops": [
+        {
+          "id": "e2c8b4a1-7d63-4f50-9a08-3f7c6e1b2d94",
+          "order": 0,
+          "title": "Trafalgar Square",
+          "caption": "Stand by the fountains, look up at Nelson on his column, and watch the crowd cross the square.",
+          "latitude": 51.508,
+          "longitude": -0.1281,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trafalgar-square.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_hero.webp",
+          "transcriptText": "This is the spot the whole country defaults to \u2014 for celebration, for protest, for grief. If something matters to Britain, it tends to end up here.\n\nYou're in Trafalgar Square, the great paved public space at the centre of London, with the towering column in the middle and the long Classical front of the National Gallery along the north side. The square was laid out in the eighteen-thirties and forties on the site of the old royal stables, and it was named for the Battle of Trafalgar, the 1805 sea battle in which the British fleet under Admiral Nelson destroyed the combined navies of France and Spain \u2014 and Nelson was killed in the moment of victory.\n\nSo they put him on a column. Look up: Nelson's Column rises about fifty metres, with the admiral himself, a surprisingly small figure, standing on top, facing south toward the Admiralty and, beyond it, the sea. At the base are four huge bronze lions, cast \u2014 so the story goes \u2014 partly from the metal of French cannon captured in the wars. Children climb them constantly. The whole monument is a hymn to empire and naval power at its absolute height.\n\nBut here's what the square actually became. Because it's the symbolic centre of the nation, it became the place the nation gathers \u2014 New Year's Eve, football celebrations, the ends of both World Wars when crowds packed it shoulder to shoulder. And just as often, protest: anti-war marches, suffragette rallies, demonstrations against the poll tax and apartheid and government after government. A monument to military power turned into the country's main stage for arguing with power.\n\n[beat]\n\nThere's a lovely democratic detail up on the square. Three of the four plinths hold permanent statues of generals and a king. The fourth \u2014 the Fourth Plinth \u2014 stood empty for over a century and now hosts a rolling series of modern artworks, swapped out every couple of years. So among all the bronze admirals and kings, there's one spot deliberately kept open for whatever a living artist wants to say now.\n\nStand by the fountains a while and watch the crowd \u2014 tourists, protesters, pigeons, somebody's demonstration assembling at the edge. Two hundred years on, it's still the room the whole country walks into when it has something to say."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.508,
+      "centroidLongitude": -0.1281,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Trafalgar Square is the great paved public space at the centre of London \u2014 a towering column in the middle, the long Classical front of the National Gallery along the north side. It was laid out in the 1830s and 40s on the site of the old royal stables and named for the Battle of Trafalgar, the 1805 sea battle in which the British fleet under Admiral Nelson destroyed the combined navies of France and Spain \u2014 and Nelson was killed in the moment of victory. So they put him on a column: Nelson's Column rises about fifty metres, the admiral a surprisingly small figure on top, facing south toward the Admiralty and the sea. At the base are four huge bronze lions, cast (so the story goes) partly from the metal of captured French cannon; children climb them constantly. The whole monument is a hymn to empire and naval power at its absolute height.\n\nBut here's what the square became. As the symbolic centre of the nation, it became the place the nation gathers \u2014 New Year's Eve, football celebrations, the ends of both World Wars when crowds packed it shoulder to shoulder \u2014 and just as often protest: anti-war marches, suffragette rallies, demonstrations against the poll tax and apartheid and government after government. A monument to military power turned into the country's main stage for arguing with power. There's a lovely democratic detail, too: three of the four plinths hold permanent statues of generals and a king, but the Fourth Plinth stood empty for over a century and now hosts a rolling series of modern artworks \u2014 one spot deliberately kept open for whatever a living artist wants to say now. Two hundred years on, it's still the room the whole country walks into when it has something to say.",
+      "shortDescription": "The nation's gathering place \u2014 Nelson's Column and its four bronze lions before the National Gallery, the country's main stage for celebration and protest alike.",
+      "totalDurationSeconds": 137,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "a2c8b6e1-9d44-4e54-8a06-3c9e7b2d1f99",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The National Gallery",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_5.webp"
+      ],
+      "tags": [
+        "national gallery",
+        "paintings",
+        "western art",
+        "trafalgar square",
+        "free museum",
+        "leonardo",
+        "van gogh"
+      ],
+      "stops": [
+        {
+          "id": "f3c8b2a1-7d64-4e50-9a08-3f7c6e1b2d95",
+          "order": 0,
+          "title": "The National Gallery",
+          "caption": "Stand on the north side of Trafalgar Square before the portico \u2014 then go in and pick one room.",
+          "latitude": 51.5089,
+          "longitude": -0.1283,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/national-gallery.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 45,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_hero.webp",
+          "transcriptText": "This is one of the greatest collections of paintings on earth, and it costs nothing to walk in \u2014 which was the entire point.\n\nYou're on the north side of Trafalgar Square, looking at the long, low Classical front of the National Gallery, with its dome and portico stretching the width of the square. The building went up in the eighteen-thirties; the architecture is, frankly, the least interesting thing about the place, and even at the time people grumbled it was too modest for its setting. What matters is inside: eight hundred years of European painting, from medieval gold-ground altarpieces to the Impressionists. Van Eyck, Leonardo, Vermeer, Turner, Van Gogh's sunflowers, Constable's hay wain \u2014 a great slice of the canon of Western art, in one building.\n\nHere's what makes the National Gallery itself, as opposed to just a great museum. When it was founded in 1824, the nation bought a collection of just thirty-eight paintings as its seed. And from the start the principle was that it would be free, and central, and open to everyone \u2014 placed deliberately at Trafalgar Square, the argument went, so that it sat exactly between the wealthy West End and the poorer districts to the east, reachable on foot by anyone in the city. Art for the clerk and the costermonger, not just the collector.\n\nThat principle held. Unlike many of the world's great galleries, it has stayed free to enter for two hundred years. You can walk in off the square, with no ticket and no money, and stand in front of a Leonardo.\n\n[beat]\n\nThe collection nearly didn't survive intact. During the Second World War, with bombs falling on London, the entire collection was evacuated and hidden deep in a slate mine in Wales. The empty gallery then did something quietly defiant: it brought back one painting at a time, a single masterpiece displayed each month, so Londoners under the Blitz could still come and look at one great thing. People queued for it.\n\nGo in, even for twenty minutes, and pick one room. The whole place was built on the idea that you, specifically, should be able to do exactly that \u2014 for free, any day, no reason required."
+        }
+      ],
+      "primaryCategory": "visualArt",
+      "centroidLatitude": 51.5089,
+      "centroidLongitude": -0.1283,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On the north side of Trafalgar Square stretches the long, low Classical front of the National Gallery, with its dome and portico. The building went up in the 1830s; the architecture is, frankly, the least interesting thing about the place \u2014 even at the time people grumbled it was too modest for its setting. What matters is inside: eight hundred years of European painting, from medieval gold-ground altarpieces to the Impressionists \u2014 Van Eyck, Leonardo, Vermeer, Turner, Van Gogh's sunflowers, Constable's hay wain \u2014 a great slice of the canon of Western art in one building. What makes it the National Gallery, as opposed to just a great museum, is the founding principle. When it was founded in 1824 the nation bought a seed collection of just thirty-eight paintings, and from the start it would be free, central, and open to everyone \u2014 placed deliberately at Trafalgar Square so it sat between the wealthy West End and the poorer districts to the east, reachable on foot by anyone. Art for the clerk and the costermonger, not just the collector.\n\nThat principle held. Unlike many of the world's great galleries it has stayed free to enter for two hundred years: you can walk in off the square, no ticket and no money, and stand in front of a Leonardo. The collection nearly didn't survive intact \u2014 during the Second World War, with bombs falling on London, it was evacuated and hidden deep in a slate mine in Wales, and the empty gallery did something quietly defiant: it brought back one painting at a time, a single masterpiece displayed each month, so Londoners under the Blitz could still come and look at one great thing. People queued for it. Go in, even for twenty minutes, and pick one room \u2014 the whole place was built on the idea that you, specifically, should be able to do exactly that, for free, any day, no reason required.",
+      "shortDescription": "One of the greatest collections of paintings on earth \u2014 Van Eyck to Van Gogh \u2014 free to enter for 200 years, placed on Trafalgar Square so anyone in the city could walk in.",
+      "totalDurationSeconds": 131,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "b3c8a6e1-9d45-4e54-8a06-3c9e7b2d1f9a",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "St Martin-in-the-Fields",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_4.webp"
+      ],
+      "tags": [
+        "st martin-in-the-fields",
+        "james gibbs",
+        "portico spire",
+        "trafalgar square",
+        "parish church template",
+        "music",
+        "homeless charity"
+      ],
+      "stops": [
+        {
+          "id": "a3c8b2e1-7d64-4e50-9a08-3f7c6e1b2d96",
+          "order": 0,
+          "title": "St Martin-in-the-Fields",
+          "caption": "Stand at the north-east corner of Trafalgar Square and take in the portico and the spire fused above it.",
+          "latitude": 51.5089,
+          "longitude": -0.1267,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-martin-in-the-fields.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_hero.webp",
+          "transcriptText": "This church has been copied more times, in more countries, than almost any building in the world \u2014 and you've probably stood in one of the copies without knowing it.\n\nYou're at the north-east corner of Trafalgar Square, looking at St Martin-in-the-Fields \u2014 a church with a strange and brilliant combination: a Classical temple front, a great columned portico like a Greek or Roman temple, and then, rising directly behind it, a tall, slender church spire. Temple and steeple, fused. It was built between 1722 and 1726 by the architect James Gibbs, and that fusion was the innovation.\n\nHere's why it matters far beyond London. Gibbs published his designs in a book, and that book travelled \u2014 especially to colonial America. The combination he invented here, the temple portico with the spire behind, became the template for the parish church across the English-speaking world. Town after town in New England, across the American colonies and then far beyond, built their churches as variations on St Martin's. If you have a mental image of a classic white American church \u2014 columns at the front, a tall white spire \u2014 you are picturing the great-grandchild of this building. One London church, reproduced endlessly across an ocean.\n\nThe name, by the way, is now absurd. \"In-the-Fields\" \u2014 because when an earlier church stood here, it really was open countryside between the cities of London and Westminster. Now it sits on the most crowded square in the capital. The fields have been gone for centuries; the name stayed.\n\n[beat]\n\nAnd there's a second life to this place, less famous than its architecture. For about a century, St Martin's has been a centre for helping London's homeless and destitute, running shelters and outreach for people sleeping rough. It's also long been a home for music; the celebrated chamber orchestra named after it has carried the church's name to people who've never seen the building. A working church, then, that fed an architectural idea to half the world and quietly looked after the people sleeping on its doorstep.\n\nStep into the portico and look back across the square. You're standing in the original \u2014 the building all those distant white spires are quietly imitating."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5089,
+      "centroidLongitude": -0.1267,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "At the north-east corner of Trafalgar Square stands St Martin-in-the-Fields, a church with a strange and brilliant combination: a Classical temple front \u2014 a great columned portico like a Greek or Roman temple \u2014 and, rising directly behind it, a tall slender spire. Temple and steeple, fused. It was built between 1722 and 1726 by James Gibbs, and that fusion was the innovation. Here's why it matters far beyond London: Gibbs published his designs in a book, and that book travelled \u2014 especially to colonial America. The combination he invented here became the template for the parish church across the English-speaking world. Town after town in New England and across the American colonies built their churches as variations on St Martin's. If you picture a classic white American church \u2014 columns at the front, a tall white spire \u2014 you are picturing the great-grandchild of this building. One London church, reproduced endlessly across an ocean.\n\nThe name is now absurd: \"in-the-Fields\" because when an earlier church stood here it really was open countryside between London and Westminster; the fields have been gone for centuries, the name stayed. And there's a second, less famous life to the place: for about a century St Martin's has been a centre for helping London's homeless and destitute, running shelters and outreach for people sleeping rough \u2014 and it's long been a home for music, the celebrated chamber orchestra named after it carrying the church's name to people who've never seen the building. A working church, then, that fed an architectural idea to half the world and quietly looked after the people sleeping on its doorstep. Step into the portico and look back across the square: you're standing in the original, the building all those distant white spires are quietly imitating.",
+      "shortDescription": "James Gibbs's 1720s church on Trafalgar Square \u2014 the temple-portico-plus-spire design that became the template for the parish church across the English-speaking world.",
+      "totalDurationSeconds": 138,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "c4c8a6e1-9d46-4e54-8a06-3c9e7b2d1f9b",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Banqueting House",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/banqueting-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/banqueting-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/banqueting-house_3.webp"
+      ],
+      "tags": [
+        "banqueting house",
+        "inigo jones",
+        "palladian",
+        "rubens ceiling",
+        "charles i",
+        "whitehall",
+        "execution"
+      ],
+      "stops": [
+        {
+          "id": "a4c8b2e1-7d64-4e50-9a08-3f7c6e1b2d97",
+          "order": 0,
+          "title": "Banqueting House",
+          "caption": "Stand on Whitehall before the plain Palladian facade, and look to where the scaffold stood.",
+          "latitude": 51.5044,
+          "longitude": -0.1261,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/banqueting-house.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/banqueting-house_hero.webp",
+          "transcriptText": "A king walked out of an upstairs window of this building onto a scaffold and lost his head in front of his own palace. It's the only time England has ever put its monarch to death.\n\nYou're on Whitehall, looking at the Banqueting House \u2014 and at first it may underwhelm you, because it's a restrained, elegant, almost plain Classical building: pale stone, regular windows, sitting in a row of government offices. That plainness is the historical point. When Inigo Jones designed it in 1622, England had never seen anything like it. Everything around it was still gabled, timbered, higgledy-piggledy Jacobean. Jones had been to Italy, studied the architecture of Palladio, and brought back pure Classical proportion \u2014 then dropped it into Whitehall like a visitor from the future. This building is, in effect, where modern Classical architecture begins in England, the seed of every columned bank and town hall that came after.\n\nIt was the great ceremonial room of the old Palace of Whitehall, the sprawling royal palace that once filled this whole area and later burned almost entirely down. Inside, the ceiling is covered by an enormous painting by Rubens \u2014 the great Flemish master \u2014 celebrating the divine right of kings, commissioned by King Charles the First to glorify his father and his crown. A king who put up a ceiling proclaiming that kings are chosen by God.\n\n[beat]\n\nAnd that is the terrible irony of the place. In 1649, after the Civil War, the same Charles the First \u2014 defeated, tried, and condemned \u2014 was brought to this building, walked through that very room beneath the Rubens ceiling proclaiming his sacred right to rule, and then out through a window onto a black-draped scaffold built against the wall outside. There, before a vast silent crowd, the King of England was beheaded. He wore two shirts that January morning so the cold wouldn't make him shiver and look afraid.\n\nStand on the pavement and look up at the building, then along the front to where the scaffold stood. The most radical thing that ever happened in English politics happened right here: a country deciding, for one stunned moment, that even a king was not above the law."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5044,
+      "centroidLongitude": -0.1261,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Whitehall stands the Banqueting House, and at first it may underwhelm you \u2014 a restrained, elegant, almost plain Classical building of pale stone and regular windows in a row of government offices. That plainness is the point. When Inigo Jones designed it in 1622, England had never seen anything like it: everything around was still gabled, timbered, higgledy-piggledy Jacobean. Jones had been to Italy, studied Palladio, and brought back pure Classical proportion, then dropped it into Whitehall like a visitor from the future. This building is, in effect, where modern Classical architecture begins in England \u2014 the seed of every columned bank and town hall that came after. It was the great ceremonial room of the old Palace of Whitehall (which later burned almost entirely down), and inside, the ceiling is covered by an enormous Rubens painting celebrating the divine right of kings, commissioned by Charles I to glorify his father and his crown \u2014 a king who put up a ceiling proclaiming that kings are chosen by God.\n\nAnd that is the terrible irony of the place. In 1649, after the Civil War, the same Charles I \u2014 defeated, tried and condemned \u2014 was brought here, walked through that very room beneath the Rubens ceiling proclaiming his sacred right to rule, and then out through a window onto a black-draped scaffold built against the wall outside. There, before a vast silent crowd, the King of England was beheaded; he wore two shirts that January morning so the cold wouldn't make him shiver and look afraid. Stand on the pavement and look up at the building, then along the front to where the scaffold stood: the most radical thing that ever happened in English politics happened right here \u2014 a country deciding, for one stunned moment, that even a king was not above the law.",
+      "shortDescription": "Inigo Jones's 1622 Palladian hall on Whitehall \u2014 where modern Classical architecture began in England, beneath a Rubens ceiling, and where Charles I was beheaded in 1649.",
+      "totalDurationSeconds": 132,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "d5c8a6e1-9d47-4e54-8a06-3c9e7b2d1f9c",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Cenotaph",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-cenotaph_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-cenotaph_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-cenotaph_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-cenotaph_4.webp"
+      ],
+      "tags": [
+        "the cenotaph",
+        "edwin lutyens",
+        "war memorial",
+        "whitehall",
+        "remembrance",
+        "the glorious dead",
+        "first world war"
+      ],
+      "stops": [
+        {
+          "id": "a5c8b2e1-7d64-4e50-9a08-3f7c6e1b2d98",
+          "order": 0,
+          "title": "The Cenotaph",
+          "caption": "Stand on Whitehall by the plain stone pylon in the middle of the road \u2014 the empty tomb for 'The Glorious Dead'.",
+          "latitude": 51.5024,
+          "longitude": -0.1262,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-cenotaph.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-cenotaph_hero.webp",
+          "transcriptText": "This is the most important war memorial in Britain, and it is, very deliberately, empty.\n\nYou're on Whitehall, looking at the Cenotaph \u2014 a tall, pale stone monument standing alone in the middle of the road, with the traffic of government flowing around it. It's strikingly plain: no soldiers, no angels, no horses, no figurative sculpture of any kind. Just a tapering pylon of Portland stone, topped with a simple carved wreath, a few flags, and the words \"The Glorious Dead.\" After the carnage of the First World War, that emptiness was the whole idea.\n\nThe word \"cenotaph\" comes from the Greek for \"empty tomb.\" And that's exactly what it is \u2014 a tomb with no body in it, standing for all the dead who never came home: the hundreds of thousands buried in foreign fields or never found at all. It was designed by Edwin Lutyens, the leading architect of the age, and unveiled in 1920. He refused all the usual Victorian war-memorial language \u2014 no triumphant figures, no overt religious symbols even \u2014 so that men of every faith and none could be mourned beneath it equally. Just pure, restrained form, standing for an absence too large to picture.\n\nThere's a piece of hidden geometry in it, very Lutyens. The monument looks perfectly straight, all vertical lines and flat planes. It isn't. There are almost no true straight lines in it at all: the verticals, extended upward, would meet at a point a thousand feet in the air, and the horizontals are sections of an enormous circle. The eye reads it as severe and rigid; it's secretly built on vast, subtle curves. Grief made geometric.\n\n[beat]\n\nEvery November, on Remembrance Sunday, the entire machinery of the British state \u2014 the monarch, the prime minister, the heads of the armed forces \u2014 comes to this spot and falls silent around this empty tomb. The country built itself a grave with nobody in it, precisely so that it could stand for everybody.\n\nCross to it safely if you can, and notice how little it says. No names, no figures, almost no words. The greatest loss the country had ever suffered, answered with the plainest possible stone \u2014 which is exactly why it works."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5024,
+      "centroidLongitude": -0.1262,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Whitehall stands the Cenotaph, a tall pale stone monument alone in the middle of the road with the traffic of government flowing around it. It's strikingly plain: no soldiers, no angels, no horses, no figurative sculpture at all \u2014 just a tapering pylon of Portland stone topped with a simple carved wreath, a few flags, and the words \"The Glorious Dead.\" After the carnage of the First World War, that emptiness was the whole idea. The word \"cenotaph\" comes from the Greek for \"empty tomb,\" and that's exactly what it is \u2014 a tomb with no body, standing for all the dead who never came home. It was designed by Edwin Lutyens and unveiled in 1920; he refused the usual Victorian war-memorial language \u2014 no triumphant figures, no overt religious symbols \u2014 so that men of every faith and none could be mourned beneath it equally.\n\nThere's a piece of hidden geometry in it, very Lutyens. The monument looks perfectly straight, all vertical lines and flat planes \u2014 but it isn't. There are almost no true straight lines: the verticals, extended upward, would meet at a point a thousand feet in the air, and the horizontals are sections of an enormous circle. The eye reads it as severe and rigid; it's secretly built on vast, subtle curves. Grief made geometric. Every November, on Remembrance Sunday, the entire machinery of the British state \u2014 the monarch, the prime minister, the heads of the armed forces \u2014 comes to this spot and falls silent around this empty tomb. The country built itself a grave with nobody in it, precisely so that it could stand for everybody. Notice how little it says: no names, no figures, almost no words \u2014 the greatest loss the country had ever suffered, answered with the plainest possible stone, which is exactly why it works.",
+      "shortDescription": "Britain's national war memorial on Whitehall \u2014 Lutyens's deliberately empty 'tomb' of 1920, plain Portland stone for 'The Glorious Dead', secretly built on vast subtle curves.",
+      "totalDurationSeconds": 140,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "e6c8a6e1-9d48-4e54-8a06-3c9e7b2d1f9d",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Churchill War Rooms",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churchill-war-rooms_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churchill-war-rooms_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churchill-war-rooms_3.webp"
+      ],
+      "tags": [
+        "churchill war rooms",
+        "cabinet war rooms",
+        "winston churchill",
+        "second world war",
+        "map room",
+        "bunker",
+        "whitehall"
+      ],
+      "stops": [
+        {
+          "id": "a6c8b2e1-7d64-4e50-9a08-3f7c6e1b2d99",
+          "order": 0,
+          "title": "Churchill War Rooms",
+          "caption": "Stand at the Clive Steps entrance on Whitehall \u2014 the bunker is a few feet below the pavement.",
+          "latitude": 51.5022,
+          "longitude": -0.129,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/churchill-war-rooms.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churchill-war-rooms_hero.webp",
+          "transcriptText": "A few feet below this pavement, the Second World War was run from a cramped, airless basement \u2014 and when it ended, they switched off the lights and left everything exactly where it sat.\n\nYou're on Whitehall, near the edge of St James's Park, above the entrance to the Churchill War Rooms. The thing to grasp is that there's almost nothing to see from street level \u2014 and that was the point. Beneath the government building here lies a warren of low, reinforced basement rooms where Winston Churchill and the British high command directed the war from 1939 onward, safe, they hoped, from the bombs falling on London above. A secret bunker, hidden in plain sight under Whitehall.\n\nGo down, if you have time, into the preserved rooms. The astonishing thing is that they're almost untouched. When the war against Japan ended in August 1945, the staff in the Map Room simply switched off the lights and walked out \u2014 and the place was sealed and largely forgotten for decades. So what you see is frozen: the maps still pinned to the walls, stuck with thousands of coloured pin-holes tracking convoys across the Atlantic; the sugar cubes one officer hid at the back of a drawer, rationing being what it was; Churchill's small bedroom; the transatlantic telephone room disguised as his private toilet, so secret that staff assumed the great man simply spent a great deal of time in the lavatory.\n\nIt was grim down here \u2014 low ceilings, no daylight, recycled air, the constant hum of generators, and bombs overhead. People worked and slept in these rooms for years. Churchill hated being underground and often went up to the roof during raids, to the alarm of everyone responsible for keeping him alive.\n\n[beat]\n\nHere's what makes it land. Most war history is told through grand sweeping narratives. This is the opposite: the war reduced to a stuffy office basement, a man on a telephone, a clerk moving a pin across a map of the ocean. The biggest decisions of the century were taken by tired people in a cramped room with bad air \u2014 and the room is still sitting there exactly as they left it.\n\nStand above it on the street for a moment first. Ordinary Whitehall pavement \u2014 and a few feet down, the locked, frozen heart of the war."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5022,
+      "centroidLongitude": -0.129,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Whitehall, near the edge of St James's Park, is the entrance to the Churchill War Rooms \u2014 and the thing to grasp is that there's almost nothing to see from street level, which was the point. Beneath the government building lies a warren of low, reinforced basement rooms where Winston Churchill and the British high command directed the war from 1939, safe (they hoped) from the bombs above: a secret bunker hidden in plain sight under Whitehall. The astonishing thing is that the preserved rooms are almost untouched. When the war against Japan ended in August 1945, the staff in the Map Room simply switched off the lights and walked out, and the place was sealed and largely forgotten for decades. So what you see is frozen: the maps still pinned to the walls, stuck with thousands of coloured pin-holes tracking convoys across the Atlantic; the sugar cubes one officer hid at the back of a drawer; Churchill's small bedroom; the transatlantic telephone room disguised as his private toilet, so secret that staff assumed the great man simply spent a great deal of time in the lavatory.\n\nIt was grim down here \u2014 low ceilings, no daylight, recycled air, the constant hum of generators, and bombs overhead. People worked and slept in these rooms for years; Churchill hated being underground and often went up to the roof during raids, to the alarm of everyone responsible for keeping him alive. Here's what makes it land: most war history is told through grand sweeping narratives, but this is the opposite \u2014 the war reduced to a stuffy office basement, a man on a telephone, a clerk moving a pin across a map of the ocean. The biggest decisions of the century were taken by tired people in a cramped room with bad air \u2014 and the room is still sitting there exactly as they left it. Stand above it on the street first: ordinary Whitehall pavement, and a few feet down, the locked, frozen heart of the war.",
+      "shortDescription": "The secret WWII bunker under Whitehall where Churchill ran the war \u2014 sealed and frozen in 1945, the Map Room left exactly as the staff switched off the lights and walked out.",
+      "totalDurationSeconds": 135,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "f7c8a6e1-9d49-4e54-8a06-3c9e7b2d1f9e",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Parliament Square",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_5.webp"
+      ],
+      "tags": [
+        "parliament square",
+        "churchill statue",
+        "nelson mandela",
+        "millicent fawcett",
+        "statues",
+        "protest",
+        "westminster"
+      ],
+      "stops": [
+        {
+          "id": "a7c8b2e1-7d64-4e50-9a08-3f7c6e1b2da0",
+          "order": 0,
+          "title": "Parliament Square",
+          "caption": "Walk a slow circuit of the statues \u2014 Churchill, Lincoln, Mandela, Fawcett \u2014 in front of Parliament.",
+          "latitude": 51.5007,
+          "longitude": -0.1268,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/parliament-square.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 45,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_hero.webp",
+          "transcriptText": "Look at who's standing on this lawn and you're looking at the very short list of people Britain has chosen to put at the centre of its democracy \u2014 and at the arguments that choice still causes.\n\nYou're at Parliament Square, the green space hemmed in by the Houses of Parliament, Westminster Abbey, and the Supreme Court, with statues dotted around its edges. It's one of the most charged pieces of ground in the country: directly outside the seat of government, it's both a formal showcase of national heroes and the default site for protest aimed squarely at the building across the road.\n\nWalk the statues, because they're a deliberate hall of fame, and the choices are revealing. Winston Churchill stands glowering toward Parliament, the most prominent of them all. There's Abraham Lincoln, and there's Nelson Mandela \u2014 and it's worth noticing that two of the figures the British state chose to honour outside its own Parliament aren't British at all, but an American president and a South African revolutionary, both symbols of a wider idea of freedom. There are nineteenth-century prime ministers most passers-by couldn't name. And for a very long time, every single statue here was of a man.\n\nThat changed recently, and the story of how is the point. In 2018, after a public campaign, a statue of Millicent Fawcett was unveiled here \u2014 the first woman among them, a leader of the suffragists who won British women the vote. She holds a banner reading \"Courage calls to courage everywhere.\" It took until 2018 for the square outside the so-called mother of parliaments to honour a single woman \u2014 which tells you something both about how slowly these things move and about the fact that they do, eventually, move.\n\n[beat]\n\nThat's what the square really is: not a fixed monument but an ongoing, visible argument about who deserves to be remembered at the centre of national life. Every statue here was someone's decision, and a few of them are actively contested today. The lawn is, in effect, a debate in bronze, standing permanently in front of the place where the debates are had.\n\nWalk a slow circuit and read the plinths. It's the country's own account of its heroes \u2014 incomplete, argued-over, slowly changing \u2014 laid out on a square of grass for anyone to inspect."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5007,
+      "centroidLongitude": -0.1268,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Parliament Square is the green space hemmed in by the Houses of Parliament, Westminster Abbey and the Supreme Court, with statues dotted around its edges \u2014 one of the most charged pieces of ground in the country: directly outside the seat of government, it's both a formal showcase of national heroes and the default site for protest aimed squarely at the building across the road. Walk the statues, because they're a deliberate hall of fame and the choices are revealing. Winston Churchill stands glowering toward Parliament, the most prominent of them all. There's Abraham Lincoln, and there's Nelson Mandela \u2014 two of the figures the British state chose to honour outside its own Parliament aren't British at all, but an American president and a South African revolutionary, both symbols of a wider idea of freedom. There are nineteenth-century prime ministers most passers-by couldn't name. And for a very long time, every single statue here was of a man.\n\nThat changed recently, and the story of how is the point. In 2018, after a public campaign, a statue of Millicent Fawcett was unveiled here \u2014 the first woman among them, a leader of the suffragists who won British women the vote; she holds a banner reading \"Courage calls to courage everywhere.\" It took until 2018 for the square outside the so-called mother of parliaments to honour a single woman \u2014 which tells you something both about how slowly these things move and about the fact that they do, eventually, move. That's what the square really is: not a fixed monument but an ongoing, visible argument about who deserves to be remembered at the centre of national life \u2014 a debate in bronze, standing permanently in front of the place where the debates are had. Walk a slow circuit and read the plinths: the country's own account of its heroes, incomplete, argued-over, slowly changing, laid out on a square of grass for anyone to inspect.",
+      "shortDescription": "The 'debate in bronze' outside Parliament \u2014 statues of Churchill, Lincoln, Mandela and, since 2018, the suffragist Millicent Fawcett, the first woman among them; also the City's default protest ground.",
+      "totalDurationSeconds": 135,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
