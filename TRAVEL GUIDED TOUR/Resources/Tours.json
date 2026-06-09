@@ -7966,6 +7966,52 @@
       "totalDurationSeconds": 144,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "e1c4b8a3-9d42-4f54-8a06-3c9e7b2d1f97",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Westminster Hall",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-hall_3.webp"
+      ],
+      "tags": [
+        "westminster hall",
+        "hammerbeam roof",
+        "medieval",
+        "palace of westminster",
+        "charles i",
+        "lying in state",
+        "law court"
+      ],
+      "stops": [
+        {
+          "id": "d3f8c1a4-7b62-4e50-9a08-2f7c6e3b1d96",
+          "order": 0,
+          "title": "Westminster Hall",
+          "caption": "If you can get inside the Palace of Westminster, find the great hall and look up at the hammerbeam roof.",
+          "latitude": 51.4992,
+          "longitude": -0.1255,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/westminster-hall.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-hall_hero.webp",
+          "transcriptText": "This is the oldest part of Parliament by five hundred years, and almost nobody outside it knows the room exists.\n\nYou're at Westminster Hall \u2014 and you may have to take this one partly on trust, because the hall is inside the Palace of Westminster, reachable when Parliament opens it to visitors. But it's worth knowing what's behind that wall, because it's the single most historic room in the country. While the rest of the palace you just looked at is Victorian, this hall is the real medieval survivor. It was built in 1097 by William the Second, son of the Conqueror, and it is one of the largest medieval halls in Europe.\n\nThe glory of it is the roof. Around 1393, the old flat roof was replaced with a vast timber structure called a hammerbeam roof \u2014 great oak beams that step inward and seem to reach across the enormous width with no columns holding them up at all. It's a feat of carpentry that still makes engineers blink: six hundred years of oak, spanning sixty-eight feet, holding itself up by geometry and nerve.\n\nAnd the things that have happened under that roof are the spine of English history. This was the country's chief law court for centuries. William Wallace was condemned to death here. Thomas More was tried here. King Charles the First was tried and sentenced here, in his own palace, by his own subjects \u2014 a thing that had never happened to an English king. And in the other direction, this is where monarchs lie in state after death: the late Queen lay here in 2022, and the queue to file past her stretched for miles along the river for days.\n\n[beat]\n\nSo this one room holds both halves of English power. Kings were condemned here and kings are mourned here. The same stone floor has seen a monarch sentenced to death and a monarch honoured by a queue of a million people \u2014 triumph and catastrophe, under the same six-hundred-year-old oak.\n\nIf you get the chance to stand in it, look up first, at the roof \u2014 and then down at the floor, and think about who has been carried across it."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.4992,
+      "centroidLongitude": -0.1255,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Westminster Hall is the oldest part of Parliament by five hundred years, and almost nobody outside knows the room exists. It's inside the Palace of Westminster, reachable when Parliament opens it to visitors \u2014 but it's worth knowing what's behind the wall, because it's the single most historic room in the country. While the rest of the palace is Victorian, this hall is the real medieval survivor: built in 1097 by William II, son of the Conqueror, and one of the largest medieval halls in Europe. Its glory is the roof. Around 1393 the old flat roof was replaced with a vast hammerbeam structure \u2014 great oak beams that step inward and seem to reach across the enormous width with no columns holding them up at all. It's a feat of carpentry that still makes engineers blink: six hundred years of oak spanning sixty-eight feet, holding itself up by geometry and nerve.\n\nAnd the things that have happened under that roof are the spine of English history. This was the country's chief law court for centuries. William Wallace was condemned to death here; Thomas More was tried here; King Charles I was tried and sentenced here, in his own palace, by his own subjects \u2014 a thing that had never happened to an English king. And in the other direction, this is where monarchs lie in state after death: the late Queen lay here in 2022, and the queue to file past her stretched for miles along the river for days. So one room holds both halves of English power \u2014 kings condemned here and kings mourned here, triumph and catastrophe under the same six-hundred-year-old oak. If you get the chance to stand in it, look up first, at the roof \u2014 then down at the floor, and think about who has been carried across it.",
+      "shortDescription": "The oldest part of Parliament \u2014 a 1097 medieval hall under a vast 1390s hammerbeam oak roof, where kings were tried and condemned and where monarchs now lie in state.",
+      "totalDurationSeconds": 120,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
