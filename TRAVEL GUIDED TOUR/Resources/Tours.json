@@ -7869,6 +7869,54 @@
       "totalDurationSeconds": 154,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "b8e2c6a1-7d39-4f54-9a06-3c9e7b2d1f84",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Westminster Abbey",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_5.webp"
+      ],
+      "tags": [
+        "westminster abbey",
+        "coronation",
+        "monarchy",
+        "poets corner",
+        "hawksmoor",
+        "gothic",
+        "burial"
+      ],
+      "stops": [
+        {
+          "id": "a1d7c4f9-6b82-4e53-9a08-2f7c6e3b1d40",
+          "order": 0,
+          "title": "Westminster Abbey",
+          "caption": "Stand under the west towers, or in the nave if you're inside, near the coronation spot before the high altar.",
+          "latitude": 51.4994,
+          "longitude": -0.1273,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/westminster-abbey.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 45,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_hero.webp",
+          "transcriptText": "Almost every English monarch for the last thousand years has been crowned on one spot inside this building \u2014 and a surprising number of them are buried within a few feet of where they were made king.\n\nYou're outside Westminster Abbey, looking up at the great west front \u2014 two square towers, pale stone, deep Gothic doorways, statues in tiers. A confession first: those twin towers are not as old as they look. They were finished in the seventeen-thirties, designed by Nicholas Hawksmoor, centuries after the rest. Most of the Abbey behind them is genuinely medieval, thirteenth century and later, but the face it shows the street is an eighteenth-century afterthought, done so well most people never question it.\n\nGo inside if you can \u2014 and the thing to find is the floor in front of the high altar. Since 1066, the year of the Norman Conquest, almost every coronation of an English and then British monarch has happened on this exact spot. William the Conqueror was crowned here on Christmas Day that year, and the line runs unbroken to the present King. There is a battered wooden chair, the Coronation Chair, six hundred years old and carved with centuries of visitors' graffiti, that every modern monarch has sat in to be crowned.\n\nBut the Abbey is also the most crowded burial ground in Britain, and that's the stranger half of it. Some three thousand people are buried or memorialised in here \u2014 kings and queens, yes, but also Isaac Newton, Charles Darwin, Charles Dickens, a clutch of scientists and writers and statesmen, packed into a building that is part church, part coronation stage, part national attic of the dead. There is a corner, Poets' Corner, where the writers cluster, and people still leave flowers for men dead three hundred years.\n\n[beat]\n\nHere's the thing to hold. This single building is where the nation crowns its monarchs and where it buries the people it most wants to remember \u2014 the making of power and the keeping of memory, under one roof, for a thousand years. Coronation and grave, the beginning and the end, in the same few hundred feet of stone.\n\nStand in the nave a while if you're inside, or under the towers if you're not. Whatever you make of monarchy, this is the room where England has told itself who it is, over and over, for a millennium."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.4994,
+      "centroidLongitude": -0.1273,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Westminster Abbey shows the street a great Gothic west front \u2014 two square towers, pale stone, deep doorways, statues in tiers \u2014 but a confession: those twin towers aren't as old as they look. They were finished in the 1730s to Nicholas Hawksmoor's design, centuries after the rest. Most of the Abbey behind is genuinely medieval, thirteenth century and later, but its face is an eighteenth-century afterthought done so well most people never question it. Inside, the thing to find is the floor before the high altar: since 1066, the year of the Norman Conquest, almost every coronation of an English and then British monarch has happened on this exact spot. William the Conqueror was crowned here on Christmas Day that year, and the line runs unbroken to the present King \u2014 in a battered six-hundred-year-old wooden Coronation Chair, carved with centuries of visitors' graffiti.\n\nBut the Abbey is also the most crowded burial ground in Britain. Some three thousand people are buried or memorialised here \u2014 kings and queens, but also Isaac Newton, Charles Darwin, Charles Dickens, a clutch of scientists, writers and statesmen, packed into a building that is part church, part coronation stage, part national attic of the dead. In Poets' Corner the writers cluster, and people still leave flowers for men dead three hundred years. This single building is where the nation crowns its monarchs and buries the people it most wants to remember \u2014 the making of power and the keeping of memory under one roof for a thousand years. Coronation and grave, the beginning and the end, in the same few hundred feet of stone: the room where England has told itself who it is, over and over, for a millennium.",
+      "shortDescription": "Coronation church and national burial ground for a thousand years \u2014 every English monarch crowned here since 1066, with Newton, Darwin and Dickens among 3,000 buried within.",
+      "totalDurationSeconds": 143,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
