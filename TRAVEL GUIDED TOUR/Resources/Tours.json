@@ -8155,6 +8155,52 @@
       "totalDurationSeconds": 138,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "c4c8a6e1-9d46-4e54-8a06-3c9e7b2d1f9b",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Banqueting House",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/banqueting-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/banqueting-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/banqueting-house_3.webp"
+      ],
+      "tags": [
+        "banqueting house",
+        "inigo jones",
+        "palladian",
+        "rubens ceiling",
+        "charles i",
+        "whitehall",
+        "execution"
+      ],
+      "stops": [
+        {
+          "id": "a4c8b2e1-7d64-4e50-9a08-3f7c6e1b2d97",
+          "order": 0,
+          "title": "Banqueting House",
+          "caption": "Stand on Whitehall before the plain Palladian facade, and look to where the scaffold stood.",
+          "latitude": 51.5044,
+          "longitude": -0.1261,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/banqueting-house.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/banqueting-house_hero.webp",
+          "transcriptText": "A king walked out of an upstairs window of this building onto a scaffold and lost his head in front of his own palace. It's the only time England has ever put its monarch to death.\n\nYou're on Whitehall, looking at the Banqueting House \u2014 and at first it may underwhelm you, because it's a restrained, elegant, almost plain Classical building: pale stone, regular windows, sitting in a row of government offices. That plainness is the historical point. When Inigo Jones designed it in 1622, England had never seen anything like it. Everything around it was still gabled, timbered, higgledy-piggledy Jacobean. Jones had been to Italy, studied the architecture of Palladio, and brought back pure Classical proportion \u2014 then dropped it into Whitehall like a visitor from the future. This building is, in effect, where modern Classical architecture begins in England, the seed of every columned bank and town hall that came after.\n\nIt was the great ceremonial room of the old Palace of Whitehall, the sprawling royal palace that once filled this whole area and later burned almost entirely down. Inside, the ceiling is covered by an enormous painting by Rubens \u2014 the great Flemish master \u2014 celebrating the divine right of kings, commissioned by King Charles the First to glorify his father and his crown. A king who put up a ceiling proclaiming that kings are chosen by God.\n\n[beat]\n\nAnd that is the terrible irony of the place. In 1649, after the Civil War, the same Charles the First \u2014 defeated, tried, and condemned \u2014 was brought to this building, walked through that very room beneath the Rubens ceiling proclaiming his sacred right to rule, and then out through a window onto a black-draped scaffold built against the wall outside. There, before a vast silent crowd, the King of England was beheaded. He wore two shirts that January morning so the cold wouldn't make him shiver and look afraid.\n\nStand on the pavement and look up at the building, then along the front to where the scaffold stood. The most radical thing that ever happened in English politics happened right here: a country deciding, for one stunned moment, that even a king was not above the law."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5044,
+      "centroidLongitude": -0.1261,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Whitehall stands the Banqueting House, and at first it may underwhelm you \u2014 a restrained, elegant, almost plain Classical building of pale stone and regular windows in a row of government offices. That plainness is the point. When Inigo Jones designed it in 1622, England had never seen anything like it: everything around was still gabled, timbered, higgledy-piggledy Jacobean. Jones had been to Italy, studied Palladio, and brought back pure Classical proportion, then dropped it into Whitehall like a visitor from the future. This building is, in effect, where modern Classical architecture begins in England \u2014 the seed of every columned bank and town hall that came after. It was the great ceremonial room of the old Palace of Whitehall (which later burned almost entirely down), and inside, the ceiling is covered by an enormous Rubens painting celebrating the divine right of kings, commissioned by Charles I to glorify his father and his crown \u2014 a king who put up a ceiling proclaiming that kings are chosen by God.\n\nAnd that is the terrible irony of the place. In 1649, after the Civil War, the same Charles I \u2014 defeated, tried and condemned \u2014 was brought here, walked through that very room beneath the Rubens ceiling proclaiming his sacred right to rule, and then out through a window onto a black-draped scaffold built against the wall outside. There, before a vast silent crowd, the King of England was beheaded; he wore two shirts that January morning so the cold wouldn't make him shiver and look afraid. Stand on the pavement and look up at the building, then along the front to where the scaffold stood: the most radical thing that ever happened in English politics happened right here \u2014 a country deciding, for one stunned moment, that even a king was not above the law.",
+      "shortDescription": "Inigo Jones's 1622 Palladian hall on Whitehall \u2014 where modern Classical architecture began in England, beneath a Rubens ceiling, and where Charles I was beheaded in 1649.",
+      "totalDurationSeconds": 132,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
