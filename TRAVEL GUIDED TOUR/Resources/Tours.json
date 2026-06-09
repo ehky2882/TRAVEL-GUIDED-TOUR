@@ -7639,6 +7639,52 @@
       "totalDurationSeconds": 142,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "d7f3a1c8-6b29-4e54-8a06-3c9e7b4d2f81",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Smithfield Market",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/smithfield-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/smithfield-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/smithfield-market_3.webp"
+      ],
+      "tags": [
+        "smithfield market",
+        "horace jones",
+        "meat market",
+        "victorian ironwork",
+        "west smithfield",
+        "execution ground",
+        "city of london"
+      ],
+      "stops": [
+        {
+          "id": "a9c4e2f7-5d61-4b80-9e03-2f8a6c1d7b54",
+          "order": 0,
+          "title": "Smithfield Market",
+          "caption": "Stand at the corner and take in the length of the painted-iron market hall.",
+          "latitude": 51.5188,
+          "longitude": -0.1003,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/smithfield-market.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/smithfield-market_hero.webp",
+          "transcriptText": "For eight hundred years, this was where London came to kill things \u2014 and it still is, just more politely now.\n\nYou're at Smithfield, looking at a long, ornate Victorian market hall \u2014 coloured ironwork, arched roofs, the look of a railway station crossed with a cathedral. This is London's great meat market, a place of slaughter and trade for the better part of a thousand years. The name has nothing to do with blacksmiths; it's \"smooth field,\" the open ground just outside the medieval city wall where livestock could be driven, sold, and butchered.\n\nThe handsome building you see was designed by Horace Jones \u2014 the same architect as Leadenhall Market and Tower Bridge \u2014 and opened in the eighteen-sixties, the moment the Victorians decided the messy, ancient business of meat deserved a grand iron palace. Beneath your feet runs a railway, built to bring carcasses in directly from across the country. It is, even now, one of the last great wholesale markets still working on its original site in central London \u2014 though its days here are numbered, with a move out of the City long planned.\n\nBut the field's older history is darker, and it's worth knowing where you're standing. For centuries Smithfield was London's main site of public execution. The Scottish leader William Wallace was put to death here in 1305 \u2014 there's a plaque on the hospital wall. Wat Tyler, leader of the Peasants' Revolt, was killed here in 1381 in front of the boy-king Richard the Second. And under Queen Mary, dozens of Protestant martyrs were burned here for their faith. The smooth field saw a great deal of blood that had nothing to do with cattle.\n\n[beat]\n\nSo hold the two things together. This cheerful Victorian market hall, with its painted ironwork and its butchers in white coats, sits on a field that was, for centuries, the place London came to watch people die. The city paved over its execution ground and turned it into a place to buy a Sunday joint.\n\nStand at the corner and take in the length of the building. Eight hundred years of trade, on top of older, harder ground \u2014 one of the very last working remnants of the City's appetite for the physical, messy stuff of life."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5188,
+      "centroidLongitude": -0.1003,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Smithfield is a long, ornate Victorian market hall \u2014 coloured ironwork, arched roofs, the look of a railway station crossed with a cathedral \u2014 and London's great meat market, a place of slaughter and trade for the better part of a thousand years. The name has nothing to do with blacksmiths: it's \"smooth field,\" the open ground just outside the medieval wall where livestock could be driven, sold and butchered. The hall was designed by Horace Jones \u2014 the same architect as Leadenhall Market and Tower Bridge \u2014 and opened in the 1860s, when the Victorians decided the messy, ancient business of meat deserved a grand iron palace; a railway runs beneath to bring carcasses in from across the country. It is even now one of the last great wholesale markets working on its original site in central London, though its days here are numbered, with a long-planned move out of the City.\n\nThe field's older history is darker. For centuries Smithfield was London's main site of public execution: the Scottish leader William Wallace was put to death here in 1305 (a plaque marks it on the hospital wall); Wat Tyler, leader of the Peasants' Revolt, was killed here in 1381 before the boy-king Richard II; and under Queen Mary dozens of Protestant martyrs were burned here for their faith. So hold the two things together: this cheerful Victorian hall, with its painted ironwork and its butchers in white coats, sits on a field that was for centuries the place London came to watch people die \u2014 the city paved over its execution ground and turned it into a place to buy a Sunday joint.",
+      "shortDescription": "Horace Jones's 1860s iron-and-colour meat-market hall \u2014 London's great wholesale meat market, on a 'smooth field' that was for centuries the City's main execution ground.",
+      "totalDurationSeconds": 144,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
