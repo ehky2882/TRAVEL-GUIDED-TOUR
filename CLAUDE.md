@@ -68,6 +68,14 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-06-09)
 
+### TestFlight 1.0 (38) — ships the London expansion + 10 Porto/Matosinhos tours (session 31 — web/PM)
+
+Build cut to ship everything on `main` since build 37 (London batches 2+3, the Westminster Abbey hero swap, and the Porto/Matosinhos batch). Build bumped **37 → 38 direct-to-main** (`cf00495`, app-target `CURRENT_PROJECT_VERSION` lines only; test target stays 1; `MARKETING_VERSION` stays 1.0). `xcodebuild archive` clean at `/tmp/Atlas-20260609-1853.xcarchive` (~6 min); embedded version verified `1.0 (38)`; no validation 90474 — `UIRequiresFullScreen` from build 34 held. Owner uploaded via Organizer. **TestFlight 1.0 (38) is live.**
+
+Carries (content + images only, no app-code change): **#185** (Lloyd's of London), **#186** (London batch 2 — 8 City tours), **#188** (London batch 3 — 10 Westminster/Whitehall tours), **#189** (Westminster Abbey hero swap), **#190** (10 Porto/Matosinhos tours). **Catalog 155 → 184 tours / 4 makers** (100 Atlas Studio NYC + 54 OPO + 25 LDN + 5 LIS). London 6 → 25; Porto-area 44 → 54.
+
+**Latest TestFlight build: 1.0 (38)** — live 2026-06-09.
+
 ### London expansion II — 19 more London tours (sessions 29–30 — web/PM)
 
 Web/PM. No Swift/asset/project changes; no build bump (TestFlight stays 1.0 (37)). Two large London content pushes took London from 6 → **25** and the catalog to **4 makers / 174 tours / 183 stops**. All single-stop, geofenced, owner-narrated, under Atlas Studio LDN.
