@@ -7499,6 +7499,376 @@
       "totalDurationSeconds": 139,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "a8c3e1f7-4d92-4b60-8e05-3f7a2c6d9b14",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Bank Junction",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_5.webp"
+      ],
+      "tags": [
+        "bank junction",
+        "bank of england",
+        "royal exchange",
+        "mansion house",
+        "city of london",
+        "square mile",
+        "threadneedle street"
+      ],
+      "stops": [
+        {
+          "id": "d2f7b4a9-6c83-4e15-9a07-1d5e8c3b9f62",
+          "order": 0,
+          "title": "Bank Junction",
+          "caption": "Find a safe corner at the junction and turn slowly \u2014 the Bank of England, Royal Exchange and Mansion House ring it.",
+          "latitude": 51.5134,
+          "longitude": -0.0886,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bank-junction.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_hero.webp",
+          "transcriptText": "Stand still in the middle of this and you're at the dead centre of British money \u2014 seven streets, and on three of the corners, the institutions that ran an empire's finances.\n\nYou're at Bank junction, where something like seven streets collide in the heart of the City. It's chaos \u2014 traffic, cyclists, commuters pouring out of the Underground station beneath your feet \u2014 so find a safe corner and turn slowly, because the buildings around this junction are the point.\n\nStart with the long, low, windowless wall of pale stone that wraps around one whole side. That's the Bank of England \u2014 the nation's central bank, founded in 1694, the institution that prints the money and sets the interest rates for the entire country. Notice it has almost no windows at ground level: it's a fortress, a great stone safe, and that blank outer wall, designed by John Soane, is the original Georgian building's curtain wrapped around a completely rebuilt interior. Londoners nicknamed it \"the Old Lady of Threadneedle Street.\"\n\nNow turn to the building with the great triangular portico and the columns, like a Roman temple dropped into the City. That's the Royal Exchange, founded in 1565 as the place where merchants met to trade \u2014 the original London marketplace for commerce, rebuilt twice after fires, now full of luxury shops. And the grand mansion with its own columned front is the Mansion House, the official home of the Lord Mayor of the City of London \u2014 not the Mayor of London you've heard of, but the older, stranger office that governs just the Square Mile.\n\n[beat]\n\nHere's what to hold onto. For a couple of centuries, the decisions made on these three corners moved money across half the planet. The Bank financed wars and railways and empire; the Exchange set the prices; the City lent to the world. This unremarkable, traffic-choked junction was, for a long time, one of the most powerful pieces of ground on earth.\n\nWatch the crowds cross for a moment \u2014 tens of thousands a day, heads down, late for something. It's easy to pour through here without ever looking up at the temple fronts on every side. But the whole story of how Britain got rich is written on these four corners, in stone, for anyone who stops."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5134,
+      "centroidLongitude": -0.0886,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Bank junction is where seven streets collide in the heart of the City \u2014 chaos of traffic, cyclists and commuters pouring out of the Underground \u2014 but the buildings around it are the point. The long, low, near-windowless wall of pale stone wrapping one whole side is the Bank of England, the nation's central bank founded in 1694: a fortress, a great stone safe, its blank outer curtain designed by John Soane wrapped around a completely rebuilt interior \u2014 \"the Old Lady of Threadneedle Street.\" The building with the great triangular portico and columns, like a Roman temple dropped into the City, is the Royal Exchange, founded in 1565 as the place where merchants met to trade, rebuilt twice after fires and now full of luxury shops. The grand columned mansion is Mansion House, official home of the Lord Mayor of the City of London \u2014 not the Mayor of London, but the older, stranger office that governs just the Square Mile.\n\nFor a couple of centuries the decisions made on these three corners moved money across half the planet: the Bank financed wars and railways and empire, the Exchange set the prices, the City lent to the world. This unremarkable, traffic-choked junction was, for a long time, one of the most powerful pieces of ground on earth. Watch the crowds cross \u2014 tens of thousands a day, heads down, late for something \u2014 and look up at the temple fronts on every side: the whole story of how Britain got rich is written on these four corners, in stone, for anyone who stops.",
+      "shortDescription": "The traffic-choked heart of the City where seven streets meet \u2014 ringed by the Bank of England, the Royal Exchange, and Mansion House, three corners that once moved money across half the planet.",
+      "totalDurationSeconds": 144,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "b6d9f3c1-8a27-4e64-9d05-3f8a2c7e6b41",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "St Stephen Walbrook",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-stephen-walbrook_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-stephen-walbrook_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-stephen-walbrook_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-stephen-walbrook_4.webp"
+      ],
+      "tags": [
+        "st stephen walbrook",
+        "christopher wren",
+        "dome",
+        "henry moore",
+        "samaritans",
+        "city of london",
+        "mansion house"
+      ],
+      "stops": [
+        {
+          "id": "e1c4b7a2-9d36-4f50-8b08-2c7e6a3d1f95",
+          "order": 0,
+          "title": "St Stephen Walbrook",
+          "caption": "Step inside if it's open and look up at the coffered dome; Henry Moore's altar sits beneath it.",
+          "latitude": 51.5126,
+          "longitude": -0.0896,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-stephen-walbrook.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-stephen-walbrook_hero.webp",
+          "transcriptText": "Before Christopher Wren built the dome of St Paul's, he built a small one here, to see if he could.\n\nYou're outside St Stephen Walbrook, a Wren church tucked behind the Mansion House, easy to walk straight past \u2014 a fairly plain stone exterior on a cramped City street. The outside doesn't prepare you for what's in. This is one of the most important small interiors in England, and the reason is overhead.\n\nGo in if it's open, and look up. The ceiling lifts into a great coffered dome, floating on slender columns, flooding the space with light from above. Wren built it in the sixteen-seventies, and it was, in effect, his trial run. He was at that moment beginning to wrestle with the enormous problem of St Paul's \u2014 how to raise a dome over a crossing \u2014 and here, in a parish church a fraction of the size, he worked the idea out in miniature first. This little dome is the sketch for the great one. Stand under it and you're standing under the rehearsal for the most famous skyline in Britain.\n\nThe other thing in the room is the altar \u2014 and it's a shock, because it's modern. A great rough boulder of creamy travertine stone, carved by the sculptor Henry Moore in the nineteen-eighties and set right in the centre, directly under Wren's dome. People argued bitterly about it; some loved it, some thought it desecrated a masterpiece. It's been nicknamed \"the Camembert\" for its round, soft shape.\n\n[beat]\n\nThere's one more thread here, almost too neat to be true. This church has a long association with the Samaritans \u2014 the charity that listens to people in despair \u2014 founded by its rector, Chad Varah, in 1953. The first such telephone helpline in Britain was run from the crypt directly beneath this floor. A small church, then: Wren's quiet dome above, and below it, the place where a national source of help to the desperate began.\n\nStand under the dome a while if you can. It's the great cathedral's first draft \u2014 and unlike the cathedral, you can have it almost to yourself."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5126,
+      "centroidLongitude": -0.0896,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "St Stephen Walbrook is a Wren church tucked behind the Mansion House, easy to walk straight past \u2014 a plain stone exterior on a cramped City street whose outside doesn't prepare you for what's within. Go in and look up: the ceiling lifts into a great coffered dome, floating on slender columns and flooding the space with light from above. Wren built it in the 1670s as, in effect, his trial run \u2014 at the very moment he was beginning to wrestle with how to raise a dome over the crossing of St Paul's, he worked the idea out here in miniature first. This little dome is the sketch for the great one; stand under it and you're under the rehearsal for the most famous skyline in Britain.\n\nThe other thing in the room is a shock, because it's modern: a great rough boulder of creamy travertine carved by Henry Moore in the 1980s and set right at the centre, directly under Wren's dome \u2014 nicknamed \"the Camembert\" for its round, soft shape, and bitterly argued over when it arrived. There's one more thread, almost too neat: the church has a long association with the Samaritans, the charity that listens to people in despair, founded by its rector Chad Varah in 1953 \u2014 the first such telephone helpline in Britain was run from the crypt directly beneath this floor. A small church, then: Wren's quiet dome above, and below it the place where a national source of help to the desperate began. Unlike the cathedral, you can have it almost to yourself.",
+      "shortDescription": "Wren's trial dome for St Paul's, hidden in a plain City church behind the Mansion House \u2014 with Henry Moore's travertine 'Camembert' altar set right beneath it.",
+      "totalDurationSeconds": 132,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "c5e8b1f4-9a27-4e60-8d03-2f7a6c4e8b91",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "St Bartholomew the Great",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-bartholomew-the-great_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-bartholomew-the-great_2.webp"
+      ],
+      "tags": [
+        "st bartholomew the great",
+        "norman",
+        "1123",
+        "rahere",
+        "smithfield",
+        "barts hospital",
+        "medieval"
+      ],
+      "stops": [
+        {
+          "id": "f4a7c2e9-6b81-4d35-9c08-3e7a1d6b9f52",
+          "order": 0,
+          "title": "St Bartholomew the Great",
+          "caption": "Pass under the Tudor gatehouse and stand at the west end, looking down the Norman nave to the round arches.",
+          "latitude": 51.5193,
+          "longitude": -0.0998,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-bartholomew-the-great.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-bartholomew-the-great_hero.webp",
+          "transcriptText": "This is the oldest church interior in London \u2014 and it survived because everyone forgot it was here.\n\nYou're at the entrance to St Bartholomew the Great, in Smithfield, and the way in is itself a clue. You pass under a Tudor gatehouse, timber-framed and crooked, and down a path that feels like leaving the modern city behind. Inside is something almost nothing else in London can offer: a great Norman interior, built in 1123, with massive round stone pillars and round arches, dim and heavy and astonishingly old. Nine hundred years. This is the London the Great Fire didn't reach and the Blitz mostly missed.\n\nIt was founded by a man called Rahere, a courtier of King Henry the First \u2014 by legend a jester who, after nearly dying of fever on pilgrimage, vowed to build a priory if he lived. He lived. He built this, along with the great hospital next door, St Bartholomew's \u2014 \"Barts\" \u2014 still a working London hospital today, the oldest in Britain on its original site. The church and the hospital were born together, nine centuries ago, from one man's bargain with death.\n\nHere's how it survived. At the Reformation, when Henry the Eighth dissolved the monasteries, most great priory churches were destroyed or stripped. This one was mostly demolished too \u2014 but the choir, the oldest core, was kept on as a humble parish church and then, crucially, forgotten. Over the centuries the leftover buildings were swallowed by the City: parts became a print works, a forge, a hop store, even a stable. The Norman stone was hidden inside later junk, which is exactly why it lasted.\n\n[beat]\n\nYou may recognise it without knowing why. Because it's one of the few genuinely medieval interiors left, film crews use it constantly \u2014 Shakespeare in Love, Four Weddings and a Funeral, others. The camera loves it because the camera can't fake nine hundred years.\n\nStand at the west end and look down the length of the nave to the round arches at the far end. That stone was cut and set when London had perhaps forty thousand people in it. It has stood through everything since."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5193,
+      "centroidLongitude": -0.0998,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "St Bartholomew the Great, in Smithfield, offers something almost nothing else in London can: a great Norman interior built in 1123 \u2014 massive round stone pillars, round arches, dim and heavy and astonishingly old. You reach it under a crooked Tudor gatehouse, down a path that feels like leaving the modern city behind. This is the London the Great Fire didn't reach and the Blitz mostly missed. It was founded by Rahere, a courtier of Henry I \u2014 by legend a jester who, after nearly dying of fever on pilgrimage, vowed to build a priory if he lived. He lived, and built this along with the great hospital next door, St Bartholomew's \u2014 \"Barts\" \u2014 still working today, the oldest in Britain on its original site. Church and hospital were born together, nine centuries ago, from one man's bargain with death.\n\nIt survived by being forgotten. At the Reformation most great priory churches were destroyed; this one was mostly demolished too, but the choir \u2014 the oldest core \u2014 was kept on as a humble parish church and then overlooked. The leftover buildings were swallowed by the City: a print works, a forge, a hop store, even a stable. The Norman stone, hidden inside later junk, is exactly why it lasted. You may recognise it without knowing why \u2014 one of the few genuinely medieval interiors left, it's a constant film location (Shakespeare in Love, Four Weddings and a Funeral). Stand at the west end and look down the nave to the round arches: that stone was cut and set when London had perhaps forty thousand people in it, and it has stood through everything since.",
+      "shortDescription": "London's oldest church interior \u2014 a great Norman nave of 1123 in Smithfield, founded by Rahere with St Bart's hospital next door, and a constant film location because nine centuries can't be faked.",
+      "totalDurationSeconds": 142,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "d7f3a1c8-6b29-4e54-8a06-3c9e7b4d2f81",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Smithfield Market",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/smithfield-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/smithfield-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/smithfield-market_3.webp"
+      ],
+      "tags": [
+        "smithfield market",
+        "horace jones",
+        "meat market",
+        "victorian ironwork",
+        "west smithfield",
+        "execution ground",
+        "city of london"
+      ],
+      "stops": [
+        {
+          "id": "a9c4e2f7-5d61-4b80-9e03-2f8a6c1d7b54",
+          "order": 0,
+          "title": "Smithfield Market",
+          "caption": "Stand at the corner and take in the length of the painted-iron market hall.",
+          "latitude": 51.5188,
+          "longitude": -0.1003,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/smithfield-market.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/smithfield-market_hero.webp",
+          "transcriptText": "For eight hundred years, this was where London came to kill things \u2014 and it still is, just more politely now.\n\nYou're at Smithfield, looking at a long, ornate Victorian market hall \u2014 coloured ironwork, arched roofs, the look of a railway station crossed with a cathedral. This is London's great meat market, a place of slaughter and trade for the better part of a thousand years. The name has nothing to do with blacksmiths; it's \"smooth field,\" the open ground just outside the medieval city wall where livestock could be driven, sold, and butchered.\n\nThe handsome building you see was designed by Horace Jones \u2014 the same architect as Leadenhall Market and Tower Bridge \u2014 and opened in the eighteen-sixties, the moment the Victorians decided the messy, ancient business of meat deserved a grand iron palace. Beneath your feet runs a railway, built to bring carcasses in directly from across the country. It is, even now, one of the last great wholesale markets still working on its original site in central London \u2014 though its days here are numbered, with a move out of the City long planned.\n\nBut the field's older history is darker, and it's worth knowing where you're standing. For centuries Smithfield was London's main site of public execution. The Scottish leader William Wallace was put to death here in 1305 \u2014 there's a plaque on the hospital wall. Wat Tyler, leader of the Peasants' Revolt, was killed here in 1381 in front of the boy-king Richard the Second. And under Queen Mary, dozens of Protestant martyrs were burned here for their faith. The smooth field saw a great deal of blood that had nothing to do with cattle.\n\n[beat]\n\nSo hold the two things together. This cheerful Victorian market hall, with its painted ironwork and its butchers in white coats, sits on a field that was, for centuries, the place London came to watch people die. The city paved over its execution ground and turned it into a place to buy a Sunday joint.\n\nStand at the corner and take in the length of the building. Eight hundred years of trade, on top of older, harder ground \u2014 one of the very last working remnants of the City's appetite for the physical, messy stuff of life."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5188,
+      "centroidLongitude": -0.1003,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Smithfield is a long, ornate Victorian market hall \u2014 coloured ironwork, arched roofs, the look of a railway station crossed with a cathedral \u2014 and London's great meat market, a place of slaughter and trade for the better part of a thousand years. The name has nothing to do with blacksmiths: it's \"smooth field,\" the open ground just outside the medieval wall where livestock could be driven, sold and butchered. The hall was designed by Horace Jones \u2014 the same architect as Leadenhall Market and Tower Bridge \u2014 and opened in the 1860s, when the Victorians decided the messy, ancient business of meat deserved a grand iron palace; a railway runs beneath to bring carcasses in from across the country. It is even now one of the last great wholesale markets working on its original site in central London, though its days here are numbered, with a long-planned move out of the City.\n\nThe field's older history is darker. For centuries Smithfield was London's main site of public execution: the Scottish leader William Wallace was put to death here in 1305 (a plaque marks it on the hospital wall); Wat Tyler, leader of the Peasants' Revolt, was killed here in 1381 before the boy-king Richard II; and under Queen Mary dozens of Protestant martyrs were burned here for their faith. So hold the two things together: this cheerful Victorian hall, with its painted ironwork and its butchers in white coats, sits on a field that was for centuries the place London came to watch people die \u2014 the city paved over its execution ground and turned it into a place to buy a Sunday joint.",
+      "shortDescription": "Horace Jones's 1860s iron-and-colour meat-market hall \u2014 London's great wholesale meat market, on a 'smooth field' that was for centuries the City's main execution ground.",
+      "totalDurationSeconds": 144,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "f1b7d4c9-6a28-4e53-8d05-3c9a7e6b2f84",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Postman's Park",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/postmans-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/postmans-park_2.webp"
+      ],
+      "tags": [
+        "postman's park",
+        "watts memorial",
+        "heroic self-sacrifice",
+        "george frederic watts",
+        "city of london",
+        "memorial",
+        "hidden gem"
+      ],
+      "stops": [
+        {
+          "id": "e8c2a4f1-7d63-4b95-9a08-2f6c1e7b3d49",
+          "order": 0,
+          "title": "Postman's Park",
+          "caption": "Walk up to the canopied wall of memorial tiles, then read a few of the names slowly.",
+          "latitude": 51.5168,
+          "longitude": -0.0976,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/postmans-park.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/postmans-park_hero.webp",
+          "transcriptText": "This is the smallest, quietest memorial in London, and it commemorates the kind of people history usually forgets.\n\nYou're in Postman's Park, a small green pocket tucked behind the streets near St Paul's \u2014 benches, trees, a scrap of calm in the City. It takes its name from the great postal headquarters that once stood beside it; postal workers came here on their breaks. But you haven't come for the garden. You've come for the wall along one side, under a long wooden canopy.\n\nWalk up to it. It's covered in ceramic tiles \u2014 hand-painted Victorian plaques, each one commemorating an ordinary person who died trying to save someone else. Not soldiers, not the famous. A servant, a labourer, a young boy, a clerk. Each tile gives a name, a date, and a single sentence describing what they did. And the sentences are devastating in their plainness: someone who went back into a burning building for a stranger; someone who drowned trying to reach a child; someone killed pushing another person clear of a train.\n\nThis is the Memorial to Heroic Self-Sacrifice, the idea of the painter George Frederic Watts, one of the most celebrated artists of the Victorian age. He believed the people truly worth remembering weren't the generals and kings filling London's plinths, but ordinary people who did one extraordinary, selfless thing for someone else \u2014 and that they vanished from memory precisely because they were ordinary. He spent years pushing for this, and it finally opened in 1900. He'd hoped for hundreds of tiles. There are fifty-four.\n\n[beat]\n\nRead a few slowly. That's the whole design \u2014 it only works if you stop and read the individual names and the small, extraordinary stories behind them. A man who saved his brother. A woman who gave up her own chance of safety to others. People who would otherwise be utterly forgotten, kept here on painted tiles for over a century because one artist thought their kind of courage was the kind that mattered most.\n\nFind a bench afterwards and sit a moment. It's one of the few places in the City that asks nothing of you except that you remember some strangers."
+        }
+      ],
+      "primaryCategory": "hiddenGems",
+      "centroidLatitude": 51.5168,
+      "centroidLongitude": -0.0976,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Postman's Park is a small green pocket tucked behind the streets near St Paul's \u2014 benches, trees, a scrap of calm in the City, named for the great postal headquarters that once stood beside it (postal workers came here on their breaks). But you've come for the wall along one side, under a long wooden canopy: it's covered in hand-painted Victorian ceramic plaques, each commemorating an ordinary person who died trying to save someone else \u2014 not soldiers, not the famous, but a servant, a labourer, a young boy, a clerk. Each tile gives a name, a date and a single, devastatingly plain sentence: someone who went back into a burning building for a stranger, who drowned trying to reach a child, who was killed pushing another person clear of a train.\n\nThis is the Memorial to Heroic Self-Sacrifice, the idea of the painter George Frederic Watts, one of the most celebrated artists of the Victorian age. He believed the people truly worth remembering weren't the generals and kings filling London's plinths but ordinary people who did one extraordinary, selfless thing \u2014 and that they vanished from memory precisely because they were ordinary. He pushed for it for years; it finally opened in 1900. He'd hoped for hundreds of tiles; there are fifty-four. The whole design only works if you stop and read the individual names and the small, extraordinary stories behind them \u2014 people who would otherwise be utterly forgotten, kept here on painted tiles for over a century because one artist thought their kind of courage was the kind that mattered most. It's one of the few places in the City that asks nothing of you except that you remember some strangers.",
+      "shortDescription": "A tiny green pocket near St Paul's holding the Watts Memorial \u2014 54 hand-painted tiles to ordinary people who died saving strangers, the heroes history forgets.",
+      "totalDurationSeconds": 141,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Barbican",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_6.webp"
+      ],
+      "tags": [
+        "barbican",
+        "brutalism",
+        "chamberlin powell and bon",
+        "concrete",
+        "arts centre",
+        "blitz",
+        "city of london"
+      ],
+      "stops": [
+        {
+          "id": "b3e7c1a4-8d62-4f95-9a08-2c6e1d7b3f50",
+          "order": 0,
+          "title": "The Barbican",
+          "caption": "Find your way up onto the raised walkways and look down over the lake to the concrete towers.",
+          "latitude": 51.5202,
+          "longitude": -0.0935,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/barbican.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_hero.webp",
+          "transcriptText": "Londoners spent fifty years deciding whether they loved or hated this place. Most have settled on both.\n\nYou're looking at the Barbican \u2014 a vast complex of raw concrete towers, walkways, terraces, and a lake, all built on a thirty-five-acre site in the City. The first thing to know is what was here before: nothing. Or rather, rubble. This whole area was flattened in the Blitz, bombed so completely in a single night in 1940 that it became an open wasteland in the middle of London. The Barbican is what they built on the crater.\n\nWhat they built was a complete vision of how people might live in a city \u2014 a utopian one. Three huge towers, among the tallest residential buildings in Europe when they opened, plus long blocks of flats, all raised on a network of elevated walkways so pedestrians would float above the traffic entirely. There are gardens, a lake with fountains, a conservatory full of tropical plants, and at the centre an arts centre \u2014 concert hall, theatres, cinemas, galleries \u2014 one of the largest in Europe. It was designed by the firm Chamberlin, Powell and Bon and built over the nineteen-sixties and seventies, all in that rough, board-marked concrete the style is named for: Brutalism, from the French for raw concrete, \"beton brut.\"\n\nHere's the thing people miss. The Barbican is genuinely hard to navigate \u2014 the elevated walkways confuse everyone, there are painted lines on the floor to help you find the arts centre, and residents joke that getting lost is part of living here. For years that, plus the grey concrete, made it many people's idea of an eyesore. And yet the people who live here adore it, it's now a protected listed building, and a whole generation has decided the Brutalist concrete it was once mocked for is beautiful.\n\n[beat]\n\nThat's the real story of the Barbican: a bombed hole in the City, filled with one of the most complete and ambitious visions of urban living Britain ever attempted \u2014 too strange to love at first, slowly claimed as a masterpiece.\n\nWalk up onto the raised walkways if you can find the way, and look down over the lake to the towers. It's a whole little world, sealed off from the streets \u2014 exactly as its architects intended."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.5202,
+      "centroidLongitude": -0.0935,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The Barbican is a vast complex of raw concrete towers, walkways, terraces and a lake on a 35-acre site in the City \u2014 and to understand it you have to know what was here before: nothing, or rather rubble. The whole area was flattened in the Blitz, bombed so completely in a single night in 1940 that it became an open wasteland in the middle of London. The Barbican is what they built on the crater: a complete, utopian vision of how people might live in a city. Three huge towers, among the tallest residential buildings in Europe when they opened, plus long blocks of flats, all raised on a network of elevated walkways so pedestrians float above the traffic; gardens, a lake with fountains, a conservatory full of tropical plants, and at the centre an arts centre \u2014 concert hall, theatres, cinemas, galleries \u2014 one of the largest in Europe. It was designed by Chamberlin, Powell and Bon over the 1960s and 70s, all in the rough, board-marked concrete the style is named for: Brutalism, from the French for raw concrete, b\u00e9ton brut.\n\nHere's what people miss. The Barbican is genuinely hard to navigate \u2014 the elevated walkways confuse everyone, there are painted lines on the floor to help you find the arts centre, and residents joke that getting lost is part of living here. For years that, plus the grey concrete, made it many people's idea of an eyesore. And yet the people who live here adore it, it's now a protected listed building, and a whole generation has decided the Brutalist concrete it was once mocked for is beautiful. That's the real story: a bombed hole in the City, filled with one of the most complete and ambitious visions of urban living Britain ever attempted \u2014 too strange to love at first, slowly claimed as a masterpiece. Walk up onto the raised walkways and look down over the lake to the towers: a whole little world, sealed off from the streets, exactly as its architects intended.",
+      "shortDescription": "Chamberlin, Powell & Bon's Brutalist masterpiece \u2014 concrete towers, elevated walkways, a lake and Europe's largest arts centre, built on a 35-acre Blitz crater in the City.",
+      "totalDurationSeconds": 145,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "e9c3b7a2-8d61-4f54-9a06-3c8e7b2d1f95",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Guildhall",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/guildhall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/guildhall_2.webp"
+      ],
+      "tags": [
+        "guildhall",
+        "city of london",
+        "livery companies",
+        "gog and magog",
+        "roman amphitheatre",
+        "londinium",
+        "medieval hall"
+      ],
+      "stops": [
+        {
+          "id": "c7e4a1f9-6b83-4d50-9a08-2f7c6e1b3d95",
+          "order": 0,
+          "title": "Guildhall",
+          "caption": "Stand in the yard on the dark curved line in the paving \u2014 it traces the Roman amphitheatre buried beneath.",
+          "latitude": 51.5158,
+          "longitude": -0.0917,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/guildhall.mp3",
+          "audioDurationSeconds": 149,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/guildhall_hero.webp",
+          "transcriptText": "For nine hundred years the City of London has governed itself from this spot \u2014 and underneath it lies the arena where Roman London watched men die.\n\nYou're in the Guildhall yard, looking at the Guildhall \u2014 the great hall that has been the seat of the City of London's own government since the Middle Ages. Not the government of greater London \u2014 that's elsewhere, and newer. This is the older, stranger thing: the City, the Square Mile, which has run its own affairs since before England had a parliament, and has done it from a hall on this site since around 1411. The grand stone porch in front of you mixes Gothic with a peculiar bit of later decoration; the hall behind it is one of the few secular stone buildings to survive from medieval London, scorched by both the Great Fire and the Blitz and patched back each time.\n\nInside \u2014 if it's open \u2014 is a vast medieval hall hung with the banners and shields of the City's great livery companies, the ancient trade guilds that gave the building its name. Goldsmiths, Mercers, Fishmongers: these guilds controlled who could practise a trade in the City, and they still elect the Lord Mayor here today. Two carved giants, Gog and Magog, legendary guardians of the City, stand watch inside.\n\nBut the strangest thing here is invisible from the yard, and it's under your feet. In 1988, builders digging here found the remains of London's Roman amphitheatre \u2014 the arena where Londinium, two thousand years ago, watched gladiator fights and public executions. It had been lost for centuries. Look down at the ground of the yard: there's a great dark curved line laid into the paving, tracing the exact outline of the amphitheatre buried below. You can go down and stand inside the actual Roman remains in the gallery beneath.\n\n[beat]\n\nSo the layers stack up perfectly here. Two thousand years ago, the crowd-arena of Roman London. Six hundred years ago, the hall where the medieval City governed itself. Today, both at once \u2014 a working seat of power with its Roman entertainment ground preserved in the basement.\n\nStand on the dark curved line in the paving for a moment. You're on the edge of the arena, on the floor of the hall, in the oldest continuous centre of power in the city."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5158,
+      "centroidLongitude": -0.0917,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "In the Guildhall yard you're looking at the great hall that has been the seat of the City of London's own government since the Middle Ages \u2014 not the government of greater London (that's elsewhere and newer), but the older, stranger thing: the City, the Square Mile, which has run its own affairs since before England had a parliament, from a hall on this site since around 1411. The grand stone porch mixes Gothic with a peculiar bit of later decoration; the hall behind is one of the few secular stone buildings to survive from medieval London, scorched by both the Great Fire and the Blitz and patched back each time. Inside is a vast medieval hall hung with the banners and shields of the City's great livery companies \u2014 Goldsmiths, Mercers, Fishmongers, the ancient trade guilds that gave the building its name and still elect the Lord Mayor here. Two carved giants, Gog and Magog, legendary guardians of the City, stand watch.\n\nBut the strangest thing is invisible from the yard and under your feet. In 1988 builders found the remains of London's Roman amphitheatre \u2014 the arena where Londinium, two thousand years ago, watched gladiator fights and public executions, lost for centuries. A great dark curved line laid into the paving of the yard traces its exact outline, and you can go down and stand inside the actual Roman remains in the gallery beneath. The layers stack up perfectly: two thousand years ago the crowd-arena of Roman London; six hundred years ago the hall where the medieval City governed itself; today both at once \u2014 a working seat of power with its Roman entertainment ground preserved in the basement. Stand on the dark curved line in the paving: you're on the edge of the arena, on the floor of the hall, in the oldest continuous centre of power in the city.",
+      "shortDescription": "The City of London's own seat of government since c.1411 \u2014 a surviving medieval great hall, with the remains of Londinium's Roman amphitheatre traced in the yard and preserved beneath.",
+      "totalDurationSeconds": 149,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "f2c8b6a3-9d41-4e64-8a05-3c9e8b1d7f42",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Temple Church",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/temple-church_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/temple-church_2.webp"
+      ],
+      "tags": [
+        "temple church",
+        "knights templar",
+        "round church",
+        "the temple",
+        "inns of court",
+        "medieval",
+        "effigies"
+      ],
+      "stops": [
+        {
+          "id": "d8f4c2a1-7b63-4e50-9a08-3f7c6e2b1d95",
+          "order": 0,
+          "title": "Temple Church",
+          "caption": "Find the church in the Temple courtyards and walk round to the round east end; step inside to the knight effigies.",
+          "latitude": 51.5135,
+          "longitude": -0.1106,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/temple-church.mp3",
+          "audioDurationSeconds": 154,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/temple-church_hero.webp",
+          "transcriptText": "This round church was built by warrior-monks who answered to no king, only to the Pope \u2014 and for a while they were the richest men in Europe.\n\nYou're at Temple Church, hidden away in the maze of courtyards and alleys between Fleet Street and the river known as the Temple. It's quiet here, lawyers' country \u2014 two of the Inns of Court, where English barristers have trained for centuries, surround it. But the church at the centre is far older than the law that grew up around it, and its shape gives the secret away. Walk round to see it: one end is a perfect circle of stone, a round church, which is rare and deliberate. It was built to echo the Church of the Holy Sepulchre in Jerusalem.\n\nBecause this was the London headquarters of the Knights Templar. The Templars were a military religious order, founded during the Crusades \u2014 monks who were also soldiers, sworn to protect pilgrims to the Holy Land. They built this round church and consecrated it in 1185. And here's what they became: bankers. Pilgrims and kings deposited money and treasure with the Templars across Europe, because the order's network was trusted and protected, and it could move wealth from one country to another safely. They effectively invented a form of international banking, grew colossally rich and powerful \u2014 and answered to no national king, only to the Pope.\n\nThat was their undoing. In the early fourteenth century the King of France, deep in debt to them and frightened of their power, had the Templars arrested, tortured, and destroyed on charges of heresy. The order was crushed across Europe and dissolved by the Pope in 1312. Their London temple passed to the lawyers, who have been here ever since.\n\n[beat]\n\nStep inside if you can. On the floor of the round church lie carved stone effigies of medieval knights, worn smooth, swords at their sides \u2014 some of the most evocative things in London. These are the warrior-monks, or their patrons, lying where they've lain for eight hundred years, in the round church they built to remember Jerusalem.\n\nIt's astonishingly easy to miss. Thousands walk down Fleet Street above without ever turning into the courtyards. But step through the right alley and you're in the twelfth century, among the tombs of the most powerful soldier-bankers medieval Europe ever produced."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5135,
+      "centroidLongitude": -0.1106,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Temple Church is hidden in the maze of courtyards and alleys between Fleet Street and the river known as the Temple \u2014 quiet lawyers' country, ringed by two of the Inns of Court where English barristers have trained for centuries. But the church at the centre is far older than the law around it, and its shape gives the secret away: one end is a perfect circle of stone, a round church, rare and deliberate, built to echo the Church of the Holy Sepulchre in Jerusalem. Because this was the London headquarters of the Knights Templar \u2014 a military religious order founded during the Crusades, monks who were also soldiers, sworn to protect pilgrims to the Holy Land. They built and consecrated this round church in 1185. And here's what they became: bankers. Pilgrims and kings deposited money and treasure with the Templars across Europe, because the order's protected network could move wealth safely between countries; they effectively invented a form of international banking, grew colossally rich, and answered to no national king, only to the Pope.\n\nThat was their undoing. In the early fourteenth century the King of France, deep in debt to them and frightened of their power, had the Templars arrested, tortured and destroyed on charges of heresy; the order was crushed across Europe and dissolved by the Pope in 1312. Their London temple passed to the lawyers, who have been here ever since. Step inside: on the floor of the round church lie carved stone effigies of medieval knights, worn smooth, swords at their sides \u2014 the warrior-monks, or their patrons, lying where they've lain for eight hundred years. It's astonishingly easy to miss; thousands walk down Fleet Street above without ever turning into the courtyards. But step through the right alley and you're in the twelfth century, among the tombs of the most powerful soldier-bankers medieval Europe ever produced.",
+      "shortDescription": "The Knights Templar's round church of 1185, hidden in the Temple between Fleet Street and the river \u2014 the warrior-monk bankers' London HQ, with worn knight effigies on the floor.",
+      "totalDurationSeconds": 154,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
