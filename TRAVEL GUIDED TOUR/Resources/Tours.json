@@ -7730,6 +7730,55 @@
       "totalDurationSeconds": 141,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "d8f2a6c1-7b39-4e64-8a05-3c9e7b1d4f82",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Barbican",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_6.webp"
+      ],
+      "tags": [
+        "barbican",
+        "brutalism",
+        "chamberlin powell and bon",
+        "concrete",
+        "arts centre",
+        "blitz",
+        "city of london"
+      ],
+      "stops": [
+        {
+          "id": "b3e7c1a4-8d62-4f95-9a08-2c6e1d7b3f50",
+          "order": 0,
+          "title": "The Barbican",
+          "caption": "Find your way up onto the raised walkways and look down over the lake to the concrete towers.",
+          "latitude": 51.5202,
+          "longitude": -0.0935,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/barbican.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_hero.webp",
+          "transcriptText": "Londoners spent fifty years deciding whether they loved or hated this place. Most have settled on both.\n\nYou're looking at the Barbican \u2014 a vast complex of raw concrete towers, walkways, terraces, and a lake, all built on a thirty-five-acre site in the City. The first thing to know is what was here before: nothing. Or rather, rubble. This whole area was flattened in the Blitz, bombed so completely in a single night in 1940 that it became an open wasteland in the middle of London. The Barbican is what they built on the crater.\n\nWhat they built was a complete vision of how people might live in a city \u2014 a utopian one. Three huge towers, among the tallest residential buildings in Europe when they opened, plus long blocks of flats, all raised on a network of elevated walkways so pedestrians would float above the traffic entirely. There are gardens, a lake with fountains, a conservatory full of tropical plants, and at the centre an arts centre \u2014 concert hall, theatres, cinemas, galleries \u2014 one of the largest in Europe. It was designed by the firm Chamberlin, Powell and Bon and built over the nineteen-sixties and seventies, all in that rough, board-marked concrete the style is named for: Brutalism, from the French for raw concrete, \"beton brut.\"\n\nHere's the thing people miss. The Barbican is genuinely hard to navigate \u2014 the elevated walkways confuse everyone, there are painted lines on the floor to help you find the arts centre, and residents joke that getting lost is part of living here. For years that, plus the grey concrete, made it many people's idea of an eyesore. And yet the people who live here adore it, it's now a protected listed building, and a whole generation has decided the Brutalist concrete it was once mocked for is beautiful.\n\n[beat]\n\nThat's the real story of the Barbican: a bombed hole in the City, filled with one of the most complete and ambitious visions of urban living Britain ever attempted \u2014 too strange to love at first, slowly claimed as a masterpiece.\n\nWalk up onto the raised walkways if you can find the way, and look down over the lake to the towers. It's a whole little world, sealed off from the streets \u2014 exactly as its architects intended."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.5202,
+      "centroidLongitude": -0.0935,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The Barbican is a vast complex of raw concrete towers, walkways, terraces and a lake on a 35-acre site in the City \u2014 and to understand it you have to know what was here before: nothing, or rather rubble. The whole area was flattened in the Blitz, bombed so completely in a single night in 1940 that it became an open wasteland in the middle of London. The Barbican is what they built on the crater: a complete, utopian vision of how people might live in a city. Three huge towers, among the tallest residential buildings in Europe when they opened, plus long blocks of flats, all raised on a network of elevated walkways so pedestrians float above the traffic; gardens, a lake with fountains, a conservatory full of tropical plants, and at the centre an arts centre \u2014 concert hall, theatres, cinemas, galleries \u2014 one of the largest in Europe. It was designed by Chamberlin, Powell and Bon over the 1960s and 70s, all in the rough, board-marked concrete the style is named for: Brutalism, from the French for raw concrete, b\u00e9ton brut.\n\nHere's what people miss. The Barbican is genuinely hard to navigate \u2014 the elevated walkways confuse everyone, there are painted lines on the floor to help you find the arts centre, and residents joke that getting lost is part of living here. For years that, plus the grey concrete, made it many people's idea of an eyesore. And yet the people who live here adore it, it's now a protected listed building, and a whole generation has decided the Brutalist concrete it was once mocked for is beautiful. That's the real story: a bombed hole in the City, filled with one of the most complete and ambitious visions of urban living Britain ever attempted \u2014 too strange to love at first, slowly claimed as a masterpiece. Walk up onto the raised walkways and look down over the lake to the towers: a whole little world, sealed off from the streets, exactly as its architects intended.",
+      "shortDescription": "Chamberlin, Powell & Bon's Brutalist masterpiece \u2014 concrete towers, elevated walkways, a lake and Europe's largest arts centre, built on a 35-acre Blitz crater in the City.",
+      "totalDurationSeconds": 145,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
