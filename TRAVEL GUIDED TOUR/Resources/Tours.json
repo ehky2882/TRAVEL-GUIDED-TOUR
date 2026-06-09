@@ -7685,6 +7685,51 @@
       "totalDurationSeconds": 144,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "f1b7d4c9-6a28-4e53-8d05-3c9a7e6b2f84",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Postman's Park",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/postmans-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/postmans-park_2.webp"
+      ],
+      "tags": [
+        "postman's park",
+        "watts memorial",
+        "heroic self-sacrifice",
+        "george frederic watts",
+        "city of london",
+        "memorial",
+        "hidden gem"
+      ],
+      "stops": [
+        {
+          "id": "e8c2a4f1-7d63-4b95-9a08-2f6c1e7b3d49",
+          "order": 0,
+          "title": "Postman's Park",
+          "caption": "Walk up to the canopied wall of memorial tiles, then read a few of the names slowly.",
+          "latitude": 51.5168,
+          "longitude": -0.0976,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/postmans-park.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/postmans-park_hero.webp",
+          "transcriptText": "This is the smallest, quietest memorial in London, and it commemorates the kind of people history usually forgets.\n\nYou're in Postman's Park, a small green pocket tucked behind the streets near St Paul's \u2014 benches, trees, a scrap of calm in the City. It takes its name from the great postal headquarters that once stood beside it; postal workers came here on their breaks. But you haven't come for the garden. You've come for the wall along one side, under a long wooden canopy.\n\nWalk up to it. It's covered in ceramic tiles \u2014 hand-painted Victorian plaques, each one commemorating an ordinary person who died trying to save someone else. Not soldiers, not the famous. A servant, a labourer, a young boy, a clerk. Each tile gives a name, a date, and a single sentence describing what they did. And the sentences are devastating in their plainness: someone who went back into a burning building for a stranger; someone who drowned trying to reach a child; someone killed pushing another person clear of a train.\n\nThis is the Memorial to Heroic Self-Sacrifice, the idea of the painter George Frederic Watts, one of the most celebrated artists of the Victorian age. He believed the people truly worth remembering weren't the generals and kings filling London's plinths, but ordinary people who did one extraordinary, selfless thing for someone else \u2014 and that they vanished from memory precisely because they were ordinary. He spent years pushing for this, and it finally opened in 1900. He'd hoped for hundreds of tiles. There are fifty-four.\n\n[beat]\n\nRead a few slowly. That's the whole design \u2014 it only works if you stop and read the individual names and the small, extraordinary stories behind them. A man who saved his brother. A woman who gave up her own chance of safety to others. People who would otherwise be utterly forgotten, kept here on painted tiles for over a century because one artist thought their kind of courage was the kind that mattered most.\n\nFind a bench afterwards and sit a moment. It's one of the few places in the City that asks nothing of you except that you remember some strangers."
+        }
+      ],
+      "primaryCategory": "hiddenGems",
+      "centroidLatitude": 51.5168,
+      "centroidLongitude": -0.0976,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Postman's Park is a small green pocket tucked behind the streets near St Paul's \u2014 benches, trees, a scrap of calm in the City, named for the great postal headquarters that once stood beside it (postal workers came here on their breaks). But you've come for the wall along one side, under a long wooden canopy: it's covered in hand-painted Victorian ceramic plaques, each commemorating an ordinary person who died trying to save someone else \u2014 not soldiers, not the famous, but a servant, a labourer, a young boy, a clerk. Each tile gives a name, a date and a single, devastatingly plain sentence: someone who went back into a burning building for a stranger, who drowned trying to reach a child, who was killed pushing another person clear of a train.\n\nThis is the Memorial to Heroic Self-Sacrifice, the idea of the painter George Frederic Watts, one of the most celebrated artists of the Victorian age. He believed the people truly worth remembering weren't the generals and kings filling London's plinths but ordinary people who did one extraordinary, selfless thing \u2014 and that they vanished from memory precisely because they were ordinary. He pushed for it for years; it finally opened in 1900. He'd hoped for hundreds of tiles; there are fifty-four. The whole design only works if you stop and read the individual names and the small, extraordinary stories behind them \u2014 people who would otherwise be utterly forgotten, kept here on painted tiles for over a century because one artist thought their kind of courage was the kind that mattered most. It's one of the few places in the City that asks nothing of you except that you remember some strangers.",
+      "shortDescription": "A tiny green pocket near St Paul's holding the Watts Memorial \u2014 54 hand-painted tiles to ordinary people who died saving strangers, the heroes history forgets.",
+      "totalDurationSeconds": 141,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
