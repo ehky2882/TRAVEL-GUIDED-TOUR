@@ -8248,6 +8248,52 @@
       "totalDurationSeconds": 140,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "e6c8a6e1-9d48-4e54-8a06-3c9e7b2d1f9d",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Churchill War Rooms",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churchill-war-rooms_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churchill-war-rooms_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churchill-war-rooms_3.webp"
+      ],
+      "tags": [
+        "churchill war rooms",
+        "cabinet war rooms",
+        "winston churchill",
+        "second world war",
+        "map room",
+        "bunker",
+        "whitehall"
+      ],
+      "stops": [
+        {
+          "id": "a6c8b2e1-7d64-4e50-9a08-3f7c6e1b2d99",
+          "order": 0,
+          "title": "Churchill War Rooms",
+          "caption": "Stand at the Clive Steps entrance on Whitehall \u2014 the bunker is a few feet below the pavement.",
+          "latitude": 51.5022,
+          "longitude": -0.129,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/churchill-war-rooms.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/churchill-war-rooms_hero.webp",
+          "transcriptText": "A few feet below this pavement, the Second World War was run from a cramped, airless basement \u2014 and when it ended, they switched off the lights and left everything exactly where it sat.\n\nYou're on Whitehall, near the edge of St James's Park, above the entrance to the Churchill War Rooms. The thing to grasp is that there's almost nothing to see from street level \u2014 and that was the point. Beneath the government building here lies a warren of low, reinforced basement rooms where Winston Churchill and the British high command directed the war from 1939 onward, safe, they hoped, from the bombs falling on London above. A secret bunker, hidden in plain sight under Whitehall.\n\nGo down, if you have time, into the preserved rooms. The astonishing thing is that they're almost untouched. When the war against Japan ended in August 1945, the staff in the Map Room simply switched off the lights and walked out \u2014 and the place was sealed and largely forgotten for decades. So what you see is frozen: the maps still pinned to the walls, stuck with thousands of coloured pin-holes tracking convoys across the Atlantic; the sugar cubes one officer hid at the back of a drawer, rationing being what it was; Churchill's small bedroom; the transatlantic telephone room disguised as his private toilet, so secret that staff assumed the great man simply spent a great deal of time in the lavatory.\n\nIt was grim down here \u2014 low ceilings, no daylight, recycled air, the constant hum of generators, and bombs overhead. People worked and slept in these rooms for years. Churchill hated being underground and often went up to the roof during raids, to the alarm of everyone responsible for keeping him alive.\n\n[beat]\n\nHere's what makes it land. Most war history is told through grand sweeping narratives. This is the opposite: the war reduced to a stuffy office basement, a man on a telephone, a clerk moving a pin across a map of the ocean. The biggest decisions of the century were taken by tired people in a cramped room with bad air \u2014 and the room is still sitting there exactly as they left it.\n\nStand above it on the street for a moment first. Ordinary Whitehall pavement \u2014 and a few feet down, the locked, frozen heart of the war."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5022,
+      "centroidLongitude": -0.129,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Whitehall, near the edge of St James's Park, is the entrance to the Churchill War Rooms \u2014 and the thing to grasp is that there's almost nothing to see from street level, which was the point. Beneath the government building lies a warren of low, reinforced basement rooms where Winston Churchill and the British high command directed the war from 1939, safe (they hoped) from the bombs above: a secret bunker hidden in plain sight under Whitehall. The astonishing thing is that the preserved rooms are almost untouched. When the war against Japan ended in August 1945, the staff in the Map Room simply switched off the lights and walked out, and the place was sealed and largely forgotten for decades. So what you see is frozen: the maps still pinned to the walls, stuck with thousands of coloured pin-holes tracking convoys across the Atlantic; the sugar cubes one officer hid at the back of a drawer; Churchill's small bedroom; the transatlantic telephone room disguised as his private toilet, so secret that staff assumed the great man simply spent a great deal of time in the lavatory.\n\nIt was grim down here \u2014 low ceilings, no daylight, recycled air, the constant hum of generators, and bombs overhead. People worked and slept in these rooms for years; Churchill hated being underground and often went up to the roof during raids, to the alarm of everyone responsible for keeping him alive. Here's what makes it land: most war history is told through grand sweeping narratives, but this is the opposite \u2014 the war reduced to a stuffy office basement, a man on a telephone, a clerk moving a pin across a map of the ocean. The biggest decisions of the century were taken by tired people in a cramped room with bad air \u2014 and the room is still sitting there exactly as they left it. Stand above it on the street first: ordinary Whitehall pavement, and a few feet down, the locked, frozen heart of the war.",
+      "shortDescription": "The secret WWII bunker under Whitehall where Churchill ran the war \u2014 sealed and frozen in 1945, the Map Room left exactly as the staff switched off the lights and walked out.",
+      "totalDurationSeconds": 135,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
