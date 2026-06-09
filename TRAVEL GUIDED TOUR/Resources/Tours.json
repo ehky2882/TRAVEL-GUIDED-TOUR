@@ -8201,6 +8201,53 @@
       "totalDurationSeconds": 132,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "d5c8a6e1-9d47-4e54-8a06-3c9e7b2d1f9c",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Cenotaph",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-cenotaph_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-cenotaph_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-cenotaph_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-cenotaph_4.webp"
+      ],
+      "tags": [
+        "the cenotaph",
+        "edwin lutyens",
+        "war memorial",
+        "whitehall",
+        "remembrance",
+        "the glorious dead",
+        "first world war"
+      ],
+      "stops": [
+        {
+          "id": "a5c8b2e1-7d64-4e50-9a08-3f7c6e1b2d98",
+          "order": 0,
+          "title": "The Cenotaph",
+          "caption": "Stand on Whitehall by the plain stone pylon in the middle of the road \u2014 the empty tomb for 'The Glorious Dead'.",
+          "latitude": 51.5024,
+          "longitude": -0.1262,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-cenotaph.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-cenotaph_hero.webp",
+          "transcriptText": "This is the most important war memorial in Britain, and it is, very deliberately, empty.\n\nYou're on Whitehall, looking at the Cenotaph \u2014 a tall, pale stone monument standing alone in the middle of the road, with the traffic of government flowing around it. It's strikingly plain: no soldiers, no angels, no horses, no figurative sculpture of any kind. Just a tapering pylon of Portland stone, topped with a simple carved wreath, a few flags, and the words \"The Glorious Dead.\" After the carnage of the First World War, that emptiness was the whole idea.\n\nThe word \"cenotaph\" comes from the Greek for \"empty tomb.\" And that's exactly what it is \u2014 a tomb with no body in it, standing for all the dead who never came home: the hundreds of thousands buried in foreign fields or never found at all. It was designed by Edwin Lutyens, the leading architect of the age, and unveiled in 1920. He refused all the usual Victorian war-memorial language \u2014 no triumphant figures, no overt religious symbols even \u2014 so that men of every faith and none could be mourned beneath it equally. Just pure, restrained form, standing for an absence too large to picture.\n\nThere's a piece of hidden geometry in it, very Lutyens. The monument looks perfectly straight, all vertical lines and flat planes. It isn't. There are almost no true straight lines in it at all: the verticals, extended upward, would meet at a point a thousand feet in the air, and the horizontals are sections of an enormous circle. The eye reads it as severe and rigid; it's secretly built on vast, subtle curves. Grief made geometric.\n\n[beat]\n\nEvery November, on Remembrance Sunday, the entire machinery of the British state \u2014 the monarch, the prime minister, the heads of the armed forces \u2014 comes to this spot and falls silent around this empty tomb. The country built itself a grave with nobody in it, precisely so that it could stand for everybody.\n\nCross to it safely if you can, and notice how little it says. No names, no figures, almost no words. The greatest loss the country had ever suffered, answered with the plainest possible stone \u2014 which is exactly why it works."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5024,
+      "centroidLongitude": -0.1262,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Whitehall stands the Cenotaph, a tall pale stone monument alone in the middle of the road with the traffic of government flowing around it. It's strikingly plain: no soldiers, no angels, no horses, no figurative sculpture at all \u2014 just a tapering pylon of Portland stone topped with a simple carved wreath, a few flags, and the words \"The Glorious Dead.\" After the carnage of the First World War, that emptiness was the whole idea. The word \"cenotaph\" comes from the Greek for \"empty tomb,\" and that's exactly what it is \u2014 a tomb with no body, standing for all the dead who never came home. It was designed by Edwin Lutyens and unveiled in 1920; he refused the usual Victorian war-memorial language \u2014 no triumphant figures, no overt religious symbols \u2014 so that men of every faith and none could be mourned beneath it equally.\n\nThere's a piece of hidden geometry in it, very Lutyens. The monument looks perfectly straight, all vertical lines and flat planes \u2014 but it isn't. There are almost no true straight lines: the verticals, extended upward, would meet at a point a thousand feet in the air, and the horizontals are sections of an enormous circle. The eye reads it as severe and rigid; it's secretly built on vast, subtle curves. Grief made geometric. Every November, on Remembrance Sunday, the entire machinery of the British state \u2014 the monarch, the prime minister, the heads of the armed forces \u2014 comes to this spot and falls silent around this empty tomb. The country built itself a grave with nobody in it, precisely so that it could stand for everybody. Notice how little it says: no names, no figures, almost no words \u2014 the greatest loss the country had ever suffered, answered with the plainest possible stone, which is exactly why it works.",
+      "shortDescription": "Britain's national war memorial on Whitehall \u2014 Lutyens's deliberately empty 'tomb' of 1920, plain Portland stone for 'The Glorious Dead', secretly built on vast subtle curves.",
+      "totalDurationSeconds": 140,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
