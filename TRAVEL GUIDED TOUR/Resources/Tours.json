@@ -7547,6 +7547,53 @@
       "totalDurationSeconds": 144,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "b6d9f3c1-8a27-4e64-9d05-3f8a2c7e6b41",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "St Stephen Walbrook",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-stephen-walbrook_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-stephen-walbrook_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-stephen-walbrook_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-stephen-walbrook_4.webp"
+      ],
+      "tags": [
+        "st stephen walbrook",
+        "christopher wren",
+        "dome",
+        "henry moore",
+        "samaritans",
+        "city of london",
+        "mansion house"
+      ],
+      "stops": [
+        {
+          "id": "e1c4b7a2-9d36-4f50-8b08-2c7e6a3d1f95",
+          "order": 0,
+          "title": "St Stephen Walbrook",
+          "caption": "Step inside if it's open and look up at the coffered dome; Henry Moore's altar sits beneath it.",
+          "latitude": 51.5126,
+          "longitude": -0.0896,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-stephen-walbrook.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-stephen-walbrook_hero.webp",
+          "transcriptText": "Before Christopher Wren built the dome of St Paul's, he built a small one here, to see if he could.\n\nYou're outside St Stephen Walbrook, a Wren church tucked behind the Mansion House, easy to walk straight past \u2014 a fairly plain stone exterior on a cramped City street. The outside doesn't prepare you for what's in. This is one of the most important small interiors in England, and the reason is overhead.\n\nGo in if it's open, and look up. The ceiling lifts into a great coffered dome, floating on slender columns, flooding the space with light from above. Wren built it in the sixteen-seventies, and it was, in effect, his trial run. He was at that moment beginning to wrestle with the enormous problem of St Paul's \u2014 how to raise a dome over a crossing \u2014 and here, in a parish church a fraction of the size, he worked the idea out in miniature first. This little dome is the sketch for the great one. Stand under it and you're standing under the rehearsal for the most famous skyline in Britain.\n\nThe other thing in the room is the altar \u2014 and it's a shock, because it's modern. A great rough boulder of creamy travertine stone, carved by the sculptor Henry Moore in the nineteen-eighties and set right in the centre, directly under Wren's dome. People argued bitterly about it; some loved it, some thought it desecrated a masterpiece. It's been nicknamed \"the Camembert\" for its round, soft shape.\n\n[beat]\n\nThere's one more thread here, almost too neat to be true. This church has a long association with the Samaritans \u2014 the charity that listens to people in despair \u2014 founded by its rector, Chad Varah, in 1953. The first such telephone helpline in Britain was run from the crypt directly beneath this floor. A small church, then: Wren's quiet dome above, and below it, the place where a national source of help to the desperate began.\n\nStand under the dome a while if you can. It's the great cathedral's first draft \u2014 and unlike the cathedral, you can have it almost to yourself."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5126,
+      "centroidLongitude": -0.0896,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "St Stephen Walbrook is a Wren church tucked behind the Mansion House, easy to walk straight past \u2014 a plain stone exterior on a cramped City street whose outside doesn't prepare you for what's within. Go in and look up: the ceiling lifts into a great coffered dome, floating on slender columns and flooding the space with light from above. Wren built it in the 1670s as, in effect, his trial run \u2014 at the very moment he was beginning to wrestle with how to raise a dome over the crossing of St Paul's, he worked the idea out here in miniature first. This little dome is the sketch for the great one; stand under it and you're under the rehearsal for the most famous skyline in Britain.\n\nThe other thing in the room is a shock, because it's modern: a great rough boulder of creamy travertine carved by Henry Moore in the 1980s and set right at the centre, directly under Wren's dome \u2014 nicknamed \"the Camembert\" for its round, soft shape, and bitterly argued over when it arrived. There's one more thread, almost too neat: the church has a long association with the Samaritans, the charity that listens to people in despair, founded by its rector Chad Varah in 1953 \u2014 the first such telephone helpline in Britain was run from the crypt directly beneath this floor. A small church, then: Wren's quiet dome above, and below it the place where a national source of help to the desperate began. Unlike the cathedral, you can have it almost to yourself.",
+      "shortDescription": "Wren's trial dome for St Paul's, hidden in a plain City church behind the Mansion House \u2014 with Henry Moore's travertine 'Camembert' altar set right beneath it.",
+      "totalDurationSeconds": 132,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
