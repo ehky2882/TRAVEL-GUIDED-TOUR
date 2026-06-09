@@ -7779,6 +7779,51 @@
       "totalDurationSeconds": 145,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "e9c3b7a2-8d61-4f54-9a06-3c8e7b2d1f95",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Guildhall",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/guildhall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/guildhall_2.webp"
+      ],
+      "tags": [
+        "guildhall",
+        "city of london",
+        "livery companies",
+        "gog and magog",
+        "roman amphitheatre",
+        "londinium",
+        "medieval hall"
+      ],
+      "stops": [
+        {
+          "id": "c7e4a1f9-6b83-4d50-9a08-2f7c6e1b3d95",
+          "order": 0,
+          "title": "Guildhall",
+          "caption": "Stand in the yard on the dark curved line in the paving \u2014 it traces the Roman amphitheatre buried beneath.",
+          "latitude": 51.5158,
+          "longitude": -0.0917,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/guildhall.mp3",
+          "audioDurationSeconds": 149,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/guildhall_hero.webp",
+          "transcriptText": "For nine hundred years the City of London has governed itself from this spot \u2014 and underneath it lies the arena where Roman London watched men die.\n\nYou're in the Guildhall yard, looking at the Guildhall \u2014 the great hall that has been the seat of the City of London's own government since the Middle Ages. Not the government of greater London \u2014 that's elsewhere, and newer. This is the older, stranger thing: the City, the Square Mile, which has run its own affairs since before England had a parliament, and has done it from a hall on this site since around 1411. The grand stone porch in front of you mixes Gothic with a peculiar bit of later decoration; the hall behind it is one of the few secular stone buildings to survive from medieval London, scorched by both the Great Fire and the Blitz and patched back each time.\n\nInside \u2014 if it's open \u2014 is a vast medieval hall hung with the banners and shields of the City's great livery companies, the ancient trade guilds that gave the building its name. Goldsmiths, Mercers, Fishmongers: these guilds controlled who could practise a trade in the City, and they still elect the Lord Mayor here today. Two carved giants, Gog and Magog, legendary guardians of the City, stand watch inside.\n\nBut the strangest thing here is invisible from the yard, and it's under your feet. In 1988, builders digging here found the remains of London's Roman amphitheatre \u2014 the arena where Londinium, two thousand years ago, watched gladiator fights and public executions. It had been lost for centuries. Look down at the ground of the yard: there's a great dark curved line laid into the paving, tracing the exact outline of the amphitheatre buried below. You can go down and stand inside the actual Roman remains in the gallery beneath.\n\n[beat]\n\nSo the layers stack up perfectly here. Two thousand years ago, the crowd-arena of Roman London. Six hundred years ago, the hall where the medieval City governed itself. Today, both at once \u2014 a working seat of power with its Roman entertainment ground preserved in the basement.\n\nStand on the dark curved line in the paving for a moment. You're on the edge of the arena, on the floor of the hall, in the oldest continuous centre of power in the city."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5158,
+      "centroidLongitude": -0.0917,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "In the Guildhall yard you're looking at the great hall that has been the seat of the City of London's own government since the Middle Ages \u2014 not the government of greater London (that's elsewhere and newer), but the older, stranger thing: the City, the Square Mile, which has run its own affairs since before England had a parliament, from a hall on this site since around 1411. The grand stone porch mixes Gothic with a peculiar bit of later decoration; the hall behind is one of the few secular stone buildings to survive from medieval London, scorched by both the Great Fire and the Blitz and patched back each time. Inside is a vast medieval hall hung with the banners and shields of the City's great livery companies \u2014 Goldsmiths, Mercers, Fishmongers, the ancient trade guilds that gave the building its name and still elect the Lord Mayor here. Two carved giants, Gog and Magog, legendary guardians of the City, stand watch.\n\nBut the strangest thing is invisible from the yard and under your feet. In 1988 builders found the remains of London's Roman amphitheatre \u2014 the arena where Londinium, two thousand years ago, watched gladiator fights and public executions, lost for centuries. A great dark curved line laid into the paving of the yard traces its exact outline, and you can go down and stand inside the actual Roman remains in the gallery beneath. The layers stack up perfectly: two thousand years ago the crowd-arena of Roman London; six hundred years ago the hall where the medieval City governed itself; today both at once \u2014 a working seat of power with its Roman entertainment ground preserved in the basement. Stand on the dark curved line in the paving: you're on the edge of the arena, on the floor of the hall, in the oldest continuous centre of power in the city.",
+      "shortDescription": "The City of London's own seat of government since c.1411 \u2014 a surviving medieval great hall, with the remains of Londinium's Roman amphitheatre traced in the yard and preserved beneath.",
+      "totalDurationSeconds": 149,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
