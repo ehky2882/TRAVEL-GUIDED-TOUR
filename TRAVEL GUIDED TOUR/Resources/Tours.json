@@ -8012,6 +8012,54 @@
       "totalDurationSeconds": 120,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "f8c2a6e1-9b43-4e54-8a06-3c9e7b2d1f98",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Trafalgar Square",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_5.webp"
+      ],
+      "tags": [
+        "trafalgar square",
+        "nelson's column",
+        "national gallery",
+        "fourth plinth",
+        "landseer lions",
+        "battle of trafalgar",
+        "protest"
+      ],
+      "stops": [
+        {
+          "id": "e2c8b4a1-7d63-4f50-9a08-3f7c6e1b2d94",
+          "order": 0,
+          "title": "Trafalgar Square",
+          "caption": "Stand by the fountains, look up at Nelson on his column, and watch the crowd cross the square.",
+          "latitude": 51.508,
+          "longitude": -0.1281,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trafalgar-square.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trafalgar-square_hero.webp",
+          "transcriptText": "This is the spot the whole country defaults to \u2014 for celebration, for protest, for grief. If something matters to Britain, it tends to end up here.\n\nYou're in Trafalgar Square, the great paved public space at the centre of London, with the towering column in the middle and the long Classical front of the National Gallery along the north side. The square was laid out in the eighteen-thirties and forties on the site of the old royal stables, and it was named for the Battle of Trafalgar, the 1805 sea battle in which the British fleet under Admiral Nelson destroyed the combined navies of France and Spain \u2014 and Nelson was killed in the moment of victory.\n\nSo they put him on a column. Look up: Nelson's Column rises about fifty metres, with the admiral himself, a surprisingly small figure, standing on top, facing south toward the Admiralty and, beyond it, the sea. At the base are four huge bronze lions, cast \u2014 so the story goes \u2014 partly from the metal of French cannon captured in the wars. Children climb them constantly. The whole monument is a hymn to empire and naval power at its absolute height.\n\nBut here's what the square actually became. Because it's the symbolic centre of the nation, it became the place the nation gathers \u2014 New Year's Eve, football celebrations, the ends of both World Wars when crowds packed it shoulder to shoulder. And just as often, protest: anti-war marches, suffragette rallies, demonstrations against the poll tax and apartheid and government after government. A monument to military power turned into the country's main stage for arguing with power.\n\n[beat]\n\nThere's a lovely democratic detail up on the square. Three of the four plinths hold permanent statues of generals and a king. The fourth \u2014 the Fourth Plinth \u2014 stood empty for over a century and now hosts a rolling series of modern artworks, swapped out every couple of years. So among all the bronze admirals and kings, there's one spot deliberately kept open for whatever a living artist wants to say now.\n\nStand by the fountains a while and watch the crowd \u2014 tourists, protesters, pigeons, somebody's demonstration assembling at the edge. Two hundred years on, it's still the room the whole country walks into when it has something to say."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.508,
+      "centroidLongitude": -0.1281,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Trafalgar Square is the great paved public space at the centre of London \u2014 a towering column in the middle, the long Classical front of the National Gallery along the north side. It was laid out in the 1830s and 40s on the site of the old royal stables and named for the Battle of Trafalgar, the 1805 sea battle in which the British fleet under Admiral Nelson destroyed the combined navies of France and Spain \u2014 and Nelson was killed in the moment of victory. So they put him on a column: Nelson's Column rises about fifty metres, the admiral a surprisingly small figure on top, facing south toward the Admiralty and the sea. At the base are four huge bronze lions, cast (so the story goes) partly from the metal of captured French cannon; children climb them constantly. The whole monument is a hymn to empire and naval power at its absolute height.\n\nBut here's what the square became. As the symbolic centre of the nation, it became the place the nation gathers \u2014 New Year's Eve, football celebrations, the ends of both World Wars when crowds packed it shoulder to shoulder \u2014 and just as often protest: anti-war marches, suffragette rallies, demonstrations against the poll tax and apartheid and government after government. A monument to military power turned into the country's main stage for arguing with power. There's a lovely democratic detail, too: three of the four plinths hold permanent statues of generals and a king, but the Fourth Plinth stood empty for over a century and now hosts a rolling series of modern artworks \u2014 one spot deliberately kept open for whatever a living artist wants to say now. Two hundred years on, it's still the room the whole country walks into when it has something to say.",
+      "shortDescription": "The nation's gathering place \u2014 Nelson's Column and its four bronze lions before the National Gallery, the country's main stage for celebration and protest alike.",
+      "totalDurationSeconds": 137,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
