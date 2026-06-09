@@ -8294,6 +8294,54 @@
       "totalDurationSeconds": 135,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "f7c8a6e1-9d49-4e54-8a06-3c9e7b2d1f9e",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Parliament Square",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_5.webp"
+      ],
+      "tags": [
+        "parliament square",
+        "churchill statue",
+        "nelson mandela",
+        "millicent fawcett",
+        "statues",
+        "protest",
+        "westminster"
+      ],
+      "stops": [
+        {
+          "id": "a7c8b2e1-7d64-4e50-9a08-3f7c6e1b2da0",
+          "order": 0,
+          "title": "Parliament Square",
+          "caption": "Walk a slow circuit of the statues \u2014 Churchill, Lincoln, Mandela, Fawcett \u2014 in front of Parliament.",
+          "latitude": 51.5007,
+          "longitude": -0.1268,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/parliament-square.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 45,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_hero.webp",
+          "transcriptText": "Look at who's standing on this lawn and you're looking at the very short list of people Britain has chosen to put at the centre of its democracy \u2014 and at the arguments that choice still causes.\n\nYou're at Parliament Square, the green space hemmed in by the Houses of Parliament, Westminster Abbey, and the Supreme Court, with statues dotted around its edges. It's one of the most charged pieces of ground in the country: directly outside the seat of government, it's both a formal showcase of national heroes and the default site for protest aimed squarely at the building across the road.\n\nWalk the statues, because they're a deliberate hall of fame, and the choices are revealing. Winston Churchill stands glowering toward Parliament, the most prominent of them all. There's Abraham Lincoln, and there's Nelson Mandela \u2014 and it's worth noticing that two of the figures the British state chose to honour outside its own Parliament aren't British at all, but an American president and a South African revolutionary, both symbols of a wider idea of freedom. There are nineteenth-century prime ministers most passers-by couldn't name. And for a very long time, every single statue here was of a man.\n\nThat changed recently, and the story of how is the point. In 2018, after a public campaign, a statue of Millicent Fawcett was unveiled here \u2014 the first woman among them, a leader of the suffragists who won British women the vote. She holds a banner reading \"Courage calls to courage everywhere.\" It took until 2018 for the square outside the so-called mother of parliaments to honour a single woman \u2014 which tells you something both about how slowly these things move and about the fact that they do, eventually, move.\n\n[beat]\n\nThat's what the square really is: not a fixed monument but an ongoing, visible argument about who deserves to be remembered at the centre of national life. Every statue here was someone's decision, and a few of them are actively contested today. The lawn is, in effect, a debate in bronze, standing permanently in front of the place where the debates are had.\n\nWalk a slow circuit and read the plinths. It's the country's own account of its heroes \u2014 incomplete, argued-over, slowly changing \u2014 laid out on a square of grass for anyone to inspect."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5007,
+      "centroidLongitude": -0.1268,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Parliament Square is the green space hemmed in by the Houses of Parliament, Westminster Abbey and the Supreme Court, with statues dotted around its edges \u2014 one of the most charged pieces of ground in the country: directly outside the seat of government, it's both a formal showcase of national heroes and the default site for protest aimed squarely at the building across the road. Walk the statues, because they're a deliberate hall of fame and the choices are revealing. Winston Churchill stands glowering toward Parliament, the most prominent of them all. There's Abraham Lincoln, and there's Nelson Mandela \u2014 two of the figures the British state chose to honour outside its own Parliament aren't British at all, but an American president and a South African revolutionary, both symbols of a wider idea of freedom. There are nineteenth-century prime ministers most passers-by couldn't name. And for a very long time, every single statue here was of a man.\n\nThat changed recently, and the story of how is the point. In 2018, after a public campaign, a statue of Millicent Fawcett was unveiled here \u2014 the first woman among them, a leader of the suffragists who won British women the vote; she holds a banner reading \"Courage calls to courage everywhere.\" It took until 2018 for the square outside the so-called mother of parliaments to honour a single woman \u2014 which tells you something both about how slowly these things move and about the fact that they do, eventually, move. That's what the square really is: not a fixed monument but an ongoing, visible argument about who deserves to be remembered at the centre of national life \u2014 a debate in bronze, standing permanently in front of the place where the debates are had. Walk a slow circuit and read the plinths: the country's own account of its heroes, incomplete, argued-over, slowly changing, laid out on a square of grass for anyone to inspect.",
+      "shortDescription": "The 'debate in bronze' outside Parliament \u2014 statues of Churchill, Lincoln, Mandela and, since 2018, the suffragist Millicent Fawcett, the first woman among them; also the City's default protest ground.",
+      "totalDurationSeconds": 135,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
