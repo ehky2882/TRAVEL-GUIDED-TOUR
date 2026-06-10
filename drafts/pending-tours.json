@@ -763,10 +763,16 @@
     "shortDescription": "Charles Holden's austere Portland-stone tower — University of London's HQ, wartime propaganda HQ, and Orwell's model for the Ministry of Truth.",
     "caption": "Senate House, University of London, Bloomsbury",
     "transcript": "Senate House\n\nWhen George Orwell needed a building to stand for the totalitarian state — the Ministry of Truth, the place where lies are manufactured — he had this one in mind.\n\nYou're looking at Senate House, the administrative headquarters and library of the University of London, in Bloomsbury — a vast, pale, stepped tower of Portland stone, austere and monumental, rising in tiers like a cliff. It was built in the nineteen-thirties, designed by Charles Holden, and when it went up it was one of the tallest secular buildings in London, a deliberate statement of permanence and authority. And that's exactly the quality that gave it its dark literary afterlife.\n\nDuring the Second World War, Senate House was requisitioned as the home of the Ministry of Information — the government department responsible for wartime propaganda and censorship, controlling what the British public was told. George Orwell's wife worked there, and Orwell knew the building and what went on inside it. When he came to write Nineteen Eighty-Four, his nightmare of a state that controls truth itself, he is widely believed to have modelled the Ministry of Truth — the colossal pyramid where history is endlessly rewritten — on this very building. The real ministry of information became the fictional ministry of lies.\n\n[beat]\n\nThere's a strange power in that, standing here. The building was meant to project enlightenment — it's a university, a library, a temple to learning. But its sheer scale and severity, the way it looms, made it read to one of the century's sharpest minds as something sinister: the architecture of a state too big and too sure of itself. The same stone says \"knowledge\" and \"control,\" depending on who's looking.\n\nIt's been a film location for exactly this reason ever since — whenever a production needs a building that radiates impersonal authority, Senate House gets the call. Look up at the tiers of blank stone and you can see why: genuinely impressive, and faintly, deliberately, intimidating. A building that knows how big it is.\n\nStand back across the square to take in the full height. Enlightenment or oppression, learning or propaganda — it's the same tower, and which one you see says as much about you as about the stone.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
+    "heroPick": "owner-supplied (view from outside the gates)",
+    "galleryPicks": [
+      "owner-supplied (courtyard, looming)"
+    ],
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/senate-house_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/senate-house_2.webp"
+    ]
   }
 ]
