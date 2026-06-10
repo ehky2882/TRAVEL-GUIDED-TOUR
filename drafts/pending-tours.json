@@ -532,5 +532,31 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnaby-street_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnaby-street_4.webp"
     ]
+  },
+  {
+    "slug": "british-museum",
+    "title": "The British Museum",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "culturalHeritage",
+    "lat": 51.5194,
+    "lon": -0.127,
+    "triggerRadiusMeters": 70,
+    "tags": [
+      "London",
+      "British Museum",
+      "Great Court",
+      "Rosetta Stone",
+      "Parthenon Marbles",
+      "history"
+    ],
+    "shortDescription": "The world's first free national museum — eight million objects under one roof, and the fiercest argument about who owns the past.",
+    "caption": "The British Museum, London",
+    "transcript": "The British Museum\n\nThis was the first national public museum in the world — free, open to everyone, founded on the idea that all human knowledge could sit under one roof. That idea is now also its biggest problem.\n\nYou're in front of the British Museum, looking at the great Greek-temple front on Great Russell Street — a long row of towering columns, like a Classical temple blown up to enormous size. It was built in the eighteen-forties, but the institution is older: founded in 1753, when a physician and collector named Hans Sloane left his vast cabinet of curiosities to the nation, and Parliament decided to create something new — a museum any \"studious and curious person\" could enter, free of charge. That was genuinely radical. Museums before this were private, royal, for the few. This was for everyone.\n\nGo inside to the Great Court, the vast covered courtyard at the centre, with its spectacular curving glass-and-steel roof — designed by Norman Foster and opened in 2000, the largest covered public square in Europe. At its heart sits the old circular Reading Room, where Marx wrote and where Gandhi and countless others studied. For a long time this courtyard had been lost, filled with bookstacks; the glass roof reclaimed it.\n\n[beat]\n\nAnd then the collection — and the argument. The museum holds some eight million objects from every corner of the earth: the Rosetta Stone, vast Assyrian reliefs, and, most contentiously, the Parthenon Marbles, the sculptures stripped from the Parthenon in Athens two centuries ago. Many of the greatest things here were acquired in the age of empire, and a growing number of countries want them back. The museum's founding dream — the whole world's heritage gathered in one place for everyone — now reads to many as the loot of empire, and the question of who owns the past is argued over these galleries every single day.\n\nWalk in, and hold both things at once: one of the greatest collections ever assembled, free to all, and a building full of objects whose right to be here is seriously contested. Few places make you think harder about what a museum is for.\n",
+    "heroPick": null,
+    "galleryPicks": [],
+    "imagesStaged": null,
+    "audioStatus": "PENDING",
+    "batch": 2
   }
 ]
