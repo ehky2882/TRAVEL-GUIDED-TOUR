@@ -940,10 +940,18 @@
     "shortDescription": "A thousand-year-old Gothic cathedral hidden by Borough Market and the Shard — Shakespeare's parish church and John Harvard's font.",
     "caption": "Southwark Cathedral, London",
     "transcript": "Southwark Cathedral\n\nThis is one of the oldest churches in London, it's Gothic, it's beautiful, and almost nobody visits it — because it has the bad luck to sit in the shadow of more famous neighbours.\n\nYou're at Southwark Cathedral — and first, the name: it's \"SUTH-uck,\" not \"South-wark.\" It sits right by Borough Market and London Bridge, on the south bank, and the odds are you'd walk straight past it. That's the theme of this stop: a genuinely ancient and gorgeous building that gets overlooked because it's hemmed in by the market, the railway, and the river, with the Shard towering over it.\n\nThere's been a church on this site for well over a thousand years, and the present building is largely medieval Gothic — the choir at the east end is among the oldest Gothic church architecture in London, thirteenth century, pointed arches and soaring stone. It only officially became a cathedral in 1905; for most of its life it was a priory and then a parish church. But the building is far older than that recent promotion suggests.\n\nIts real richness is in the people connected to it. This was Shakespeare's parish church when he lived and worked in this neighbourhood, beside the original Globe — his brother Edmund is buried here, and there's a memorial to the playwright himself, reclining in stone beneath a stained-glass window full of his characters. The American John Harvard, who gave his name and his books to Harvard University, was baptised here in 1607; there's a chapel named for him.\n\n[beat]\n\nHere's why it rewards the detour. In a part of London that's all noise and crowds and selfies in front of the Shard, this is a pool of quiet and real antiquity, hidden in plain sight. Most of the thousands streaming through Borough Market never put their heads round the door — which means you can have a thousand-year-old cathedral, with Shakespeare's church and Harvard's font, very nearly to yourself.\n\nStep inside out of the crowds. It's free, it's ancient, and it's one of the best small surprises on the south bank — the beautiful old thing everyone walks past on the way to lunch.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
+    "heroPick": "owner-supplied (exterior + tower + Shard)",
+    "galleryPicks": [
+      "owner-supplied (choir/nave interior)",
+      "SG (CC0 stained glass)"
+    ],
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southwark-cathedral_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southwark-cathedral_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southwark-cathedral_3.webp"
+    ]
   }
 ]
