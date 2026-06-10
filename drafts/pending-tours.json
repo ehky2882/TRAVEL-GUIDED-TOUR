@@ -795,10 +795,12 @@
     "shortDescription": "London's diamond quarter — a plain street of jewellers hiding the trust-and-handshake diamond trade, and the vault of the 2015 pensioners' heist.",
     "caption": "Hatton Garden, London",
     "transcript": "Hatton Garden\n\nThis unremarkable street is the centre of the British diamond trade — and in 2015, a gang of elderly career criminals tunnelled into a vault beneath it and pulled off the largest burglary in English history.\n\nYou're on Hatton Garden, in the borderland between Holborn and Clerkenwell — a street that looks like nothing much, lined with small shopfronts, but whose windows give it away: jeweller after jeweller, glittering with diamonds and gold. This is, and has been for over a century, the heart of London's jewellery and diamond district, the place where the trade clusters, much of it still conducted between dealers in ways that have barely changed in generations — deals sealed on trust and a handshake, stones carried in folded paper packets.\n\nThe area has deep roots in the trade, strengthened in the nineteenth and twentieth centuries by waves of Jewish and later other immigrant craftsmen and dealers who made it Europe's diamond quarter alongside Antwerp. Behind the modest shopfronts lie workshops, safes, and the Hatton Garden Safe Deposit — a vault where dealers and wealthy locals stored their valuables.\n\n[beat]\n\nAnd that vault is why the street is now famous worldwide. Over the Easter weekend of 2015, a crew of mostly elderly, mostly retired professional thieves — men in their sixties and seventies — broke in. They disabled the lift, climbed down the shaft, and used a heavy industrial drill to bore through half a metre of reinforced concrete into the vault, then emptied dozens of safe deposit boxes, getting away with cash, gold, and jewels worth perhaps fourteen million pounds — the largest burglary in English legal history. The detail the world loved was the gang's age: a pensioners' heist, planned for years, pulled off by men who should have been long retired. They were caught, in the end, largely by their own sloppiness and a bugged car.\n\nSo this plain little street holds two stories at once: the quiet, ancient, trust-based world of the diamond trade, and the most audacious robbery the country has ever seen, right underneath it.\n\nWalk its length and look in the windows. It's a working street first, a crime legend second — and the two have been sitting on top of each other, literally, the whole time.\n",
-    "heroPick": null,
+    "heroPick": "owner-supplied (jewellery-shop street)",
     "galleryPicks": [],
-    "imagesStaged": null,
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hatton-garden_hero.webp",
+    "additionalImageURLs": []
   }
 ]
