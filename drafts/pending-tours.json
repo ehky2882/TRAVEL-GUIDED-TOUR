@@ -709,5 +709,31 @@
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/foundling-museum_2.webp"
     ]
+  },
+  {
+    "slug": "charles-dickens-museum",
+    "title": "The Charles Dickens Museum",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "literature",
+    "lat": 51.5237,
+    "lon": -0.1163,
+    "triggerRadiusMeters": 35,
+    "tags": [
+      "London",
+      "Bloomsbury",
+      "Doughty Street",
+      "Charles Dickens",
+      "writer's house",
+      "literature"
+    ],
+    "shortDescription": "The only surviving London home of Dickens — where, in his twenties, he wrote Oliver Twist and Nicholas Nickleby and became a phenomenon.",
+    "caption": "The Charles Dickens Museum, Doughty Street, London",
+    "transcript": "The Charles Dickens Museum\n\nOf all the houses Dickens lived in across London, this is the only one still standing — and it's where he wrote his way from struggling young writer to the most famous author in the world.\n\nYou're outside the Charles Dickens Museum on Doughty Street in Bloomsbury — a handsome but unremarkable Georgian terraced house, the kind there are thousands of in London. What makes this one matter is that Dickens lived here from 1837 to 1839, in his mid-twenties, and it's the sole survivor of his many London homes. He moved often, restlessly, all his life; the wreckers and developers got the rest. This one was saved and turned into a museum.\n\nThe years he spent here were the hinge of his whole life. When he moved in, he was a promising young writer; by the time he left, he was a phenomenon. He finished The Pickwick Papers here, and wrote Oliver Twist and Nicholas Nickleby at the desk in this house — three novels in barely two years, in his twenties, the burst of work that made him the most popular writer in the English-speaking world. You can see the actual rooms where that happened, furnished as they would have been, down to his writing desk.\n\nIt was also where private grief struck. Dickens's young sister-in-law Mary, whom he adored, died suddenly in this house at just seventeen — a loss that haunted him for the rest of his life and echoes through the deaths of young women in his fiction.\n\n[beat]\n\nHere's what the house gives you that the novels can't. Dickens is so vast a figure, so woven into the very idea of London, that he can seem almost abstract — a brand, a Christmas card, a statue. This narrow house pulls him back to human scale: a young man on the way up, working at a furious pace in a few small rooms, knowing real grief and real money worries, before he became \"Dickens.\"\n\nGo in if you have the time, and stand in the study. The handwriting on the manuscripts is small, crossed-out, urgent. This is where a young man wrote himself into immortality, in four flights of an ordinary terraced house.\n",
+    "heroPick": null,
+    "galleryPicks": [],
+    "imagesStaged": null,
+    "audioStatus": "PENDING",
+    "batch": 2
   }
 ]
