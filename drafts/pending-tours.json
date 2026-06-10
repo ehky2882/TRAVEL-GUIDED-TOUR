@@ -665,10 +665,16 @@
     "shortDescription": "London's largest garden square — a great green rectangle ringed by legal London, preserved because powerful neighbours wanted the view.",
     "caption": "Lincoln's Inn Fields, London",
     "transcript": "Lincoln's Inn Fields\n\nThis is the largest public square in London, and for four hundred years it's been surrounded by lawyers — which is exactly why the open space in the middle survived.\n\nYou're in Lincoln's Inn Fields, a great rectangle of grass, plane trees, and tennis courts in the heart of legal London, ringed by handsome buildings. The first thing worth knowing is the scale: this is the biggest of all London's garden squares, and there's a charming, almost certainly untrue legend that its dimensions were copied from the base of the Great Pyramid. The truth is less neat, but it is genuinely enormous — a rare piece of open green held onto in a part of London that could easily have been built solid.\n\nIt's named after Lincoln's Inn, one of the four Inns of Court — the ancient institutions that, between them, control entry to the English bar. To become a barrister in England you must join one of these four Inns, and they've trained lawyers on these sites since the Middle Ages. The whole quarter around you — Lincoln's Inn, Gray's Inn, the Temple down by the river — is legal London, a self-contained world of chambers, courts, dining halls, and quiet gardens that most Londoners never enter.\n\nThe square has a dark patch in its history. For centuries it was a place of public execution; several Catholic martyrs and, later, men convicted of treason were put to death here, in front of crowds, on this very grass.\n\n[beat]\n\nAnd around the edges sit some remarkable things, almost casually. On the north side is Sir John Soane's house, frozen in time. On the south is the Royal College of Surgeons, with its collection of anatomical specimens. The fields themselves were, for a long time, a notorious haunt of the destitute and homeless, a place that drifted between elegance and hard edges — and to some extent still does.\n\nFind a bench under the planes and take in the size of it. Four centuries of lawyers walking the same paths, a green space that survived because powerful people wanted to keep their view — a quiet, grand, slightly secretive corner of the city.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
+    "heroPick": "owner-supplied (stone fountain)",
+    "galleryPicks": [
+      "owner-supplied (bandstand)"
+    ],
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincolns-inn-fields_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincolns-inn-fields_2.webp"
+    ]
   }
 ]
