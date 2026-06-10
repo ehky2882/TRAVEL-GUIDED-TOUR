@@ -226,9 +226,15 @@
     "shortDescription": "A village of crooked lanes and pubs folded into the middle of Mayfair — the survivor of the riotous old May Fair.",
     "caption": "Shepherd Market, Mayfair, London",
     "transcript": "Shepherd Market\n\nIn the middle of the richest district in London there's a tiny tangle of lanes that still feels like a village — and it's named after a man, not a flock.\n\nYou're in Shepherd Market, a small warren of narrow pedestrian lanes, little squares, pubs, and restaurants tucked into the middle of Mayfair, a few steps from Piccadilly. The contrast is the point: all around it is the grandeur of Mayfair — the embassies, the five-star hotels, the hedge funds — and then you turn into this, and suddenly the scale drops to something human and slightly ramshackle, low buildings and crooked lanes and tables spilling onto the pavement.\n\nThe name is a small trap. It's not \"shepherd\" as in sheep — it's named after Edward Shepherd, an architect and developer who laid the area out in the seventeen-thirties. But there's a flock in the deeper history anyway, because this was the site of the May Fair, the actual fair that gives the whole district its name. Every spring, for a couple of weeks, a raucous, disreputable fair was held here: livestock, theatre, drinking, gambling, prizefighting. It got so rowdy and so notorious that the respectable residents of the smart new houses going up around it had it shut down in the eighteenth century. The fair was suppressed; the name stuck to the neighbourhood forever.\n\nFor a long time afterward Shepherd Market kept a slightly racy reputation — a bohemian, faintly disreputable little quarter of artists and writers, and for much of the twentieth century a discreet red-light trade, all of it hidden in plain sight in the most respectable district in London.\n\n[beat]\n\nThat's the charm of it. The grandest, most expensive square mile in the city has, folded into its centre, this small survivor of an older, messier London — a place that began as a riotous fair, got tidied away, and somehow kept its village scale and its slightly raffish air while everything around it turned into glass and money.\n\nWander the lanes for ten minutes with no particular aim, and get a drink at one of the little pubs. It's the one corner of Mayfair that doesn't feel like it's guarding something — the village the fair left behind.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
-    "audioStatus": "PENDING"
+    "heroPick": "owner-supplied (daytime fairy-lit lanes)",
+    "galleryPicks": [
+      "owner-supplied (night, Shepherd Market sign + King's Arms)"
+    ],
+    "imagesStaged": true,
+    "audioStatus": "PENDING",
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shepherd-market_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shepherd-market_2.webp"
+    ]
   }
 ]
