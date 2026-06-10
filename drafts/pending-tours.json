@@ -1122,10 +1122,18 @@
     "shortDescription": "A ribbon-covered gate on a Southwark backstreet — the grassroots memorial to the paupers and 'Winchester Geese' buried in unconsecrated ground.",
     "caption": "Cross Bones Graveyard, Southwark, London",
     "transcript": "Cross Bones Graveyard\n\nThis is a memorial to the outcast dead — the paupers and prostitutes buried in unconsecrated ground, forgotten for centuries, and now quietly, stubbornly remembered.\n\nYou're at Cross Bones, on Redcross Way in Southwark, in front of a set of iron gates almost entirely covered in ribbons, flowers, tokens, and handwritten messages. It doesn't look like much — there's no grand monument — but it's one of the most moving small places in London. Behind the gates is a patch of ground that was, for centuries, a burial place for the poorest and most marginal people of Southwark, those refused burial in consecrated churchyards. As many as fifteen thousand people may lie here, most in unmarked paupers' graves.\n\nThe history reaches back to the medieval period and the strange status of this district. For centuries Southwark sat outside the City's jurisdiction, and this stretch was controlled by the Bishop of Winchester, who licensed and taxed the brothels here. The women who worked in them were known, with grim local humour, as \"Winchester Geese.\" In death, the Church that had profited from them in life often refused them holy burial — so they were put here, in unconsecrated ground. Later it became a general paupers' graveyard, packed far beyond capacity, until it was closed in the eighteen-fifties.\n\n[beat]\n\nIt was nearly forgotten entirely, then almost built over when the land was disturbed by Underground works in the nineteen-nineties, which uncovered the densely packed remains. Local people, led by the writer John Constable, began holding vigils and tying tributes to the gates, refusing to let the outcast dead be erased a second time. That grassroots memorial has continued for decades; the gates are re-dressed with fresh tokens constantly, and a garden of remembrance has been made on the site.\n\nStand at the gates a moment and read a few of the ribbons. The whole point of this place is a simple, defiant idea: that the people society discarded — the poor, the sex workers, the unnamed — are worth remembering anyway. It's one of the few memorials in London to the people history was built to forget.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
+    "heroPick": "owner-supplied (ribbon railings + Shard)",
+    "galleryPicks": [
+      "C00 (CC0 ribbon gates)",
+      "C01 (CC0 Redcross Way + Shard)"
+    ],
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_3.webp"
+    ]
   }
 ]
