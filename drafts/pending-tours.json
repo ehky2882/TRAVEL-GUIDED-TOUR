@@ -993,5 +993,32 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_5.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_6.webp"
     ]
+  },
+  {
+    "slug": "national-theatre",
+    "title": "The National Theatre",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "architecture",
+    "lat": 51.507,
+    "lon": -0.114,
+    "triggerRadiusMeters": 50,
+    "tags": [
+      "London",
+      "South Bank",
+      "National Theatre",
+      "Brutalism",
+      "Denys Lasdun",
+      "concrete",
+      "theatre"
+    ],
+    "shortDescription": "London's most divisive building — Denys Lasdun's Brutalist concrete 'urban landscape' on the South Bank, grim by day and magnificent by night.",
+    "caption": "The National Theatre, South Bank, London",
+    "transcript": "The National Theatre\n\nThis is probably the most divisive building in London — people genuinely either love it or loathe it — and it's a masterpiece of the style everyone loves to hate.\n\nYou're on the south bank, looking at the National Theatre — a great, sprawling composition of raw grey concrete, all horizontal terraces and two blocky towers, sitting right on the river near Waterloo Bridge. It's the flagship of British Brutalism, designed by the architect Denys Lasdun and opened in 1976, and it's been starting arguments ever since. A future king famously called it a clever way of building a nuclear power station in the middle of London without anyone objecting. Others consider it one of the finest buildings of its era.\n\nLasdun didn't think of it as a building so much as an \"urban landscape\" — a series of strata, layers, and terraces, like rock formations or a set of cliffs, with the public invited to wander up and along the outdoor terraces and look out over the Thames. The concrete was poured against rough-sawn timber boards so that it carries the grain of the wood, a deliberate texture; this isn't meant to be slick, it's meant to be elemental, like stone.\n\n[beat]\n\nWhatever you make of the outside, what it's for is glorious. Inside are three theatres, and it's the home of some of the best theatre in the world — a producing house that has launched countless famous productions. The building was designed from the inside out, around the practical needs of making theatre, with the foyers deliberately open and democratic, full of people, bars, and music, with no sense that you need a ticket to come in and belong. At night, lit up, with crowds spilling across its terraces by the river, even many of its critics admit it comes alive.\n\nIt's the perfect test of whether you can love Brutalism. By day it can look grim and grey; by night, busy and warm, it can look magnificent. Same concrete, completely different building.\n\nWalk up onto the terraces and out toward the river. Run your hand along the concrete and feel the wood grain in it. Then decide, for yourself, which side of the great argument you're on.\n",
+    "heroPick": null,
+    "galleryPicks": [],
+    "imagesStaged": null,
+    "audioStatus": "PENDING",
+    "batch": 2
   }
 ]
