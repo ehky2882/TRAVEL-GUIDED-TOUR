@@ -1052,10 +1052,13 @@
     "shortDescription": "The lone survivor of the 1951 Festival of Britain — the concert hall that seeded the whole South Bank, an auditorium suspended like an egg in a box.",
     "caption": "The Royal Festival Hall, South Bank, London",
     "transcript": "The Royal Festival Hall\n\nThis is the only thing left standing from a great national party — a month-long festival in 1951 meant to cheer up a broken, bombed-out, exhausted country.\n\nYou're on the south bank, looking at the Royal Festival Hall — a large, clean, light building, all glass and pale stone and horizontal lines, sitting among the wider concrete of the Southbank Centre. To understand it you have to go back to 1951 and the Festival of Britain. The country was worn down: six years after the war, still rationed, still rebuilding, still scarred with bomb sites. The government staged a huge national festival — part celebration of British achievement, part deliberate morale-booster, a \"tonic to the nation\" — and its centrepiece was a fairground of brilliant, optimistic modern buildings put up right here, on a derelict bombed stretch of the south bank.\n\nAlmost all of it was temporary. When the festival ended, the pavilions and the famous structures — a great vertical cigar-shaped tower called the Skylon, the saucer-like Dome of Discovery — were dismantled, some of it scrapped on the orders of an incoming government that disapproved of the whole thing. The Festival of Britain vanished almost entirely.\n\nThe Royal Festival Hall is the one major building that was meant to be permanent, and survived. It's a concert hall, and a famous one, with an auditorium cleverly suspended inside the structure like an egg in a box, isolated from the noise of the trains and the river outside. It launched the whole idea of the South Bank as London's cultural quarter — everything else, the National Theatre, the galleries, came later, around this seed.\n\n[beat]\n\nHere's the poignancy of it. This optimistic, forward-looking building was the lone survivor of a moment when a battered country threw itself a party to remember how to hope. The Skylon and the rest were swept away; this one hall carried the spirit of 1951 forward, and grew the entire South Bank around itself.\n\nGo inside if there's nothing on — the foyers are open and welcoming, often with free music. You're in the last building standing from the day Britain decided, despite everything, to cheer itself up.\n",
-    "heroPick": null,
+    "heroPick": "owner-supplied (river-front exterior)",
     "galleryPicks": [],
-    "imagesStaged": null,
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-festival-hall_hero.webp",
+    "additionalImageURLs": [],
+    "note": "gallery empty — Southbank Centre/Unsplash had no usable building shots; owner can paste foyer/interior to enrich"
   }
 ]
