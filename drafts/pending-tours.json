@@ -631,10 +631,18 @@
     "shortDescription": "An architect's house, frozen exactly as he left it in 1837 — a mad, brilliant puzzle of light, mirrors, and antiquities.",
     "caption": "Sir John Soane's Museum, Lincoln's Inn Fields, London",
     "transcript": "Sir John Soane's Museum\n\nAn architect left his house to the nation on one condition: that nothing in it ever be moved. Two hundred years later, it's exactly as he left it — and it's one of the strangest, most wonderful rooms in London.\n\nYou're outside Sir John Soane's Museum, on the north side of Lincoln's Inn Fields — a tall, narrow townhouse with a slightly odd projecting stone facade. Soane was one of the greatest British architects of his age; he designed the Bank of England, the great windowless fortress we met at Bank junction. But this was his home, and over his life he filled it, obsessively, with antiquities, casts, paintings, and architectural fragments, then arranged the house itself as a three-dimensional puzzle of light and space.\n\nWhen he died in 1837, he left the house to the nation by Act of Parliament, with a strict condition: it had to be kept exactly as he left it — nothing added, nothing taken away. So what you walk into is a frozen moment: a brilliant, eccentric man's home and collection, preserved for nearly two centuries precisely as he arranged it.\n\nInside, it's astonishing and slightly mad. Rooms open into rooms; mirrors and coloured skylights play tricks with the light; the walls of the picture room fold open like cupboards to reveal more paintings hidden behind paintings. And in the basement sits his greatest trophy: the actual alabaster sarcophagus of the Egyptian pharaoh Seti the First, glowing and translucent, which Soane bought when the British Museum wouldn't pay the price — and then threw a three-day party to celebrate.\n\n[beat]\n\nThat's the joy of the place. It wasn't designed to be a museum. It's a real home, the personal obsession of one man, kept under glass by his own command — the closest you can come to walking into the head of a genius from two hundred years ago and finding it exactly as he left it.\n\nIt's free, it's small, and it's like nowhere else. Go in, look up at the skylights, and let yourself get slightly lost. That's precisely what Soane built it to do.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
+    "heroPick": "owner-supplied (facade, Lincoln's Inn Fields)",
+    "galleryPicks": [
+      "owner-supplied (Picture Room)",
+      "owner-supplied (Dome/casts interior)"
+    ],
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sir-john-soanes-museum_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sir-john-soanes-museum_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sir-john-soanes-museum_3.webp"
+    ]
   }
 ]
