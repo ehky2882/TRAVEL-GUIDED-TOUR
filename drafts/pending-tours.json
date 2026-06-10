@@ -139,5 +139,30 @@
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burlington-arcade_2.webp"
     ]
+  },
+  {
+    "slug": "royal-academy",
+    "title": "The Royal Academy",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "visualArt",
+    "lat": 51.5093,
+    "lon": -0.1396,
+    "triggerRadiusMeters": 50,
+    "tags": [
+      "London",
+      "Piccadilly",
+      "art",
+      "Burlington House",
+      "Summer Exhibition",
+      "Michelangelo"
+    ],
+    "shortDescription": "Britain's first art academy at Burlington House — and the Summer Exhibition that opens its walls to the whole country.",
+    "caption": "The Royal Academy of Arts, Burlington House, London",
+    "transcript": "The Royal Academy\n\nEvery summer this building does something almost no other major art institution dares: it lets anyone in the country submit a work, and hangs over a thousand of them, floor to ceiling, on the same walls that show the masters.\n\nYou're in the courtyard of Burlington House on Piccadilly, looking at the grand stone front of the Royal Academy of Arts. Burlington House is one of the few surviving great aristocratic mansions of the West End; the Academy has occupied it since the eighteen-sixties. But the institution is older than that — founded in 1768 by a group of artists under King George the Third, with the painter Joshua Reynolds as its first president. It was Britain's first proper art school and its first self-governing body of artists, and it still trains students for free today.\n\nThe thing that makes the Academy unlike anywhere else is the Summer Exhibition. Every year since 1769 — an unbroken run of over two hundred and fifty years, one of the longest-running art shows in the world — the Academy throws its walls open to public submission. Anyone can enter. A schoolteacher in Hull, a retired plumber, an unknown twenty-year-old, alongside famous Royal Academicians and household names. A committee selects, and around a thousand works are hung together, packed frame-to-frame from skirting board to ceiling in the old style, almost all of them for sale.\n\nThe result is gloriously democratic and slightly mad: a celebrated artist's piece next to an amateur watercolour of a spaniel, a vast abstract canvas above a tiny etching by someone nobody's heard of. It's the one moment each year when the gates of the British art establishment swing open to absolutely everyone.\n\n[beat]\n\nThere's a quiet treasure inside, too, usually free to see: a marble relief by Michelangelo, the Taddei Tondo, the only Michelangelo sculpture in Britain, of the infant Christ startled by a bird. It sits in the Academy almost casually, a five-hundred-year-old masterpiece you can stand in front of without a ticket.\n\nStep into the courtyard and look up at the old mansion. It's a school, a club, a gallery, and once a year the most open art show in the country — the establishment, briefly, throwing its doors wide to the spaniel-painters of the nation.\n",
+    "heroPick": null,
+    "galleryPicks": [],
+    "imagesStaged": null,
+    "audioStatus": "PENDING"
   }
 ]
