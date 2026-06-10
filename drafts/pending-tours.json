@@ -93,9 +93,20 @@
     "shortDescription": "London's red ceremonial avenue, laid straight from Trafalgar Square to the palace gates.",
     "caption": "The Mall and Admiralty Arch, London",
     "transcript": "The Mall and Admiralty Arch\n\nThis is the only road in London built to be processed down — a red avenue laid out for the monarchy to travel in a straight line to its own front door.\n\nYou're on the Mall — and say it the British way, to rhyme with \"shall,\" not \"mall\" like a shopping centre. It's the broad, dead-straight, red-surfaced avenue running between Trafalgar Square and Buckingham Palace, lined with plane trees and flagpoles. The red surface is the giveaway: it's coloured to read like a vast ceremonial carpet rolled out toward the palace. This is the route of state processions — coronations, royal weddings, the funeral cortège of a monarch — and it was designed, in the early twentieth century, precisely for that, a grand processional way the like of which London had never really had.\n\nAt the Trafalgar Square end, look at the great curved screen of white stone you'd pass through: that's Admiralty Arch, built around 1912 as both a grand gateway to the Mall and a working government building — offices wrapped around a triumphal arch. For a century it housed civil servants; it's now being turned into a luxury hotel, which tells you something about the age we're in.\n\nThere's a small, strange detail hidden on the arch worth knowing. On the inner wall, if you know where to look, there's a tiny carved human nose protruding from the stonework — \"the Mall nose.\" Nobody official will quite explain it; it's become a piece of London folklore, with stories that it was a sly protest, or a joke by a stonemason. Whatever the truth, generations have rubbed it for luck.\n\n[beat]\n\nHere's what the whole composition is doing. Stand at the Trafalgar Square end and look down the Mall: it's a single, theatrical, unbroken line of sight, from the heart of the city straight to the palace gates, with the golden Victoria Memorial glinting at the far end. It was engineered so that when the monarchy moves, the entire nation can watch it travel in a straight, slow, deliberate line — power turned into a procession.\n\nWalk it slowly, if you have time, toward the palace. You're on the one street in London built for nothing but ceremony — and on an ordinary day, it's just a very handsome avenue full of joggers and tour buses.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
-    "audioStatus": "PENDING"
+    "heroPick": "owner-supplied (golden-hour Admiralty Arch from the Mall)",
+    "galleryPicks": [
+      "C02",
+      "C04",
+      "C03"
+    ],
+    "imagesStaged": true,
+    "audioStatus": "PENDING",
+    "heldPick": "C01 (1024x571 only — too small for clean 1200x900; pending owner OK)",
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-mall-admiralty-arch_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-mall-admiralty-arch_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-mall-admiralty-arch_3.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-mall-admiralty-arch_4.webp"
+    ]
   }
 ]
