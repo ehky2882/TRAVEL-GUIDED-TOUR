@@ -481,9 +481,21 @@
     "shortDescription": "London's populist entertainment square for two centuries — now home of the British film premiere and its red carpets.",
     "caption": "Leicester Square, London",
     "transcript": "Leicester Square\n\nThis is where Britain premieres its films — the patch of London where the red carpets roll out and the crowds scream — and it spent the century before that as a byword for cheerful vulgarity.\n\nYou're in Leicester Square — pronounced \"Lester,\" never \"Lie-cester\" — a pedestrian square ringed by huge cinemas, with a small garden and a statue of Shakespeare at its centre. Today its identity is simple: this is the home of the British film premiere. The giant cinemas around the square are where new films are launched in the UK, where the red carpet is laid down and the stars walk it while fans pack the barriers. If you've seen footage of a London film premiere, you've seen this square.\n\nIt started as a respectable seventeenth-century residential square — named after the Earl of Leicester, whose house stood here — but it didn't stay respectable. By the Victorian era it had become London's great hub of popular entertainment: music halls, theatres, panoramas, exhibitions, dancing, the slightly raffish, slightly vulgar heart of the city's nightlife. Where Covent Garden had the opera and Soho had the demimonde, Leicester Square had the crowd-pleasers — the spectacles and shows for ordinary Londoners out for a good time. When cinema arrived in the twentieth century, it slotted naturally into a square that had always been about putting on a show for the masses.\n\n[beat]\n\nThe square has, frankly, often teetered on the edge of tat — for a long stretch it was a rather tacky, slightly grubby tourist trap of fast food and hustle, and locals tended to avoid it. A major revamp in recent years cleaned it up. But the underlying character has been consistent for almost two centuries: this is London's populist entertainment square, the un-snobbish one, the place built to give the largest possible crowd a thrill. The film premiere is just the latest form of a very old function.\n\nFind the Shakespeare statue and the small bronze film-star statues dotted around, and watch the crowds funnel toward the cinemas. Premiere or not, you're standing in the spot London has used to entertain its masses, in one fashion or another, for the better part of two hundred years.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
-    "audioStatus": "PENDING"
+    "heroPick": "U13",
+    "galleryPicks": [
+      "U08",
+      "U06",
+      "U11",
+      "U00"
+    ],
+    "imagesStaged": true,
+    "audioStatus": "PENDING",
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_3.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_4.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_5.webp"
+    ]
   }
 ]
