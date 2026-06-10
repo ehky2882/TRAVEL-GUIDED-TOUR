@@ -974,10 +974,24 @@
     "shortDescription": "Renzo Piano's tapering glass spike by London Bridge — the UK's tallest building, named after the insult that called it a shard through historic London.",
     "caption": "The Shard, London",
     "transcript": "The Shard\n\nIt's the tallest building in the country, it's named after a piece of broken glass, and the man who designed it took the idea partly from old paintings of London.\n\nYou're near London Bridge, looking up at the Shard — a vast, tapering spike of glass rising over a thousand feet above you, far taller than anything else around, its top dissolving into a jagged, unfinished point. Completed in 2012, it's the tallest building in the United Kingdom and one of the tallest in Europe. It was designed by the Italian architect Renzo Piano — the same man who, decades earlier, co-designed the inside-out Pompidou Centre in Paris.\n\nThe name was almost an accident. Piano sketched the first design imagining a slender shape rising out of the river like a spire — he was thinking partly of ships' masts and of the steeples in old paintings of London, the city of spires that Canaletto painted in the eighteenth century. A heritage campaigner, opposing the scheme, scornfully said it would be like a shard of glass through the heart of historic London. Piano and the developers liked the insult so much they adopted it. The Shard. The criticism became the name.\n\nLook at how it's made. The glass facets don't quite meet at the top — they splay apart, leaving the corners open, so the building seems to fray into the sky rather than stopping with a clean roof. That deliberate incompleteness is the whole idea: a shard, a splinter, something broken off and pointing upward.\n\n[beat]\n\nIt's worth knowing what it did to a long argument. London spent centuries keeping its buildings low, protecting the dominance of St Paul's dome. The Shard, planted right by the river in a historic area, was the boldest break with that — and it provoked exactly the fight you'd expect. Now it's simply part of the view, the thing that orients you from miles away, but it stands for a real decision about what kind of city London was going to be: one that builds tall.\n\nCrane your neck and watch the top catch the light. A broken splinter of glass, named after an insult, standing taller than anything else in the country.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
+    "heroPick": "U08",
+    "galleryPicks": [
+      "U20",
+      "U02",
+      "U26",
+      "U13",
+      "U05"
+    ],
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_3.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_4.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_5.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_6.webp"
+    ]
   }
 ]
