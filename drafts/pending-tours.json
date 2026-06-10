@@ -190,9 +190,19 @@
     "shortDescription": "Mayfair's garden square, where 1789 plane trees are worth more than the mansions around them.",
     "caption": "Berkeley Square, Mayfair, London",
     "transcript": "Berkeley Square\n\nThe most expensive ground in Britain has a row of trees on it worth more, individually, than most houses — and they're the reason to stop here.\n\nYou're in Berkeley Square — and first, the name: Londoners say \"Barkley,\" not \"Berk-lee,\" however it's spelled. It's a garden square in the heart of Mayfair, the most expensive district in London and, by most measures, some of the priciest real estate on the planet. Around the square sit hedge funds, private banks, and a famous old nightclub or two; this is old money and new money in close, discreet proximity.\n\nBut walk into the central garden and look at the trees. These are London plane trees, planted in 1789 — the year the French Revolution began. They're among the oldest planes in London, vast now, with mottled, peeling bark and huge canopies, and they have been valued, individually, in the millions of pounds. There is genuinely a tree in this square worth more than a flat would cost almost anywhere else in the country. They've stood here through the entire history of modern Mayfair, getting slowly more magnificent and more valuable.\n\nThe square has the usual Mayfair pedigree of grand residents and ghosts — there's a townhouse here long reputed to be one of the most haunted in London — and it gave its name to a famous old song about a nightingale singing here, written in a more romantic age, when you could half believe a square in central London might still hold birdsong.\n\n[beat]\n\nHere's the contrast worth holding. All around you is the hardest, most modern money in Britain — billions moving through quiet Georgian doorways, the most expensive postcode in the land. And in the middle of it stands a garden of trees planted the year the Bastille fell, worth a fortune precisely because nobody can buy the two hundred years it took to grow them. Money can rent the buildings. It can't hurry the trees.\n\nFind a bench under the planes for a minute. It's one of the few places in Mayfair where the most valuable thing in sight is alive — and older than almost everyone who has ever owned the houses around it.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
-    "audioStatus": "PENDING"
+    "heroPick": "S01",
+    "galleryPicks": [
+      "S00",
+      "S02",
+      "S03"
+    ],
+    "imagesStaged": true,
+    "audioStatus": "PENDING",
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/berkeley-square_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/berkeley-square_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/berkeley-square_3.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/berkeley-square_4.webp"
+    ]
   }
 ]
