@@ -129,9 +129,15 @@
     "shortDescription": "The world's first covered shopping arcade — Regency luxury under glass, still policed by top-hatted Beadles.",
     "caption": "Burlington Arcade, Piccadilly, London",
     "transcript": "Burlington Arcade\n\nThere are rules in this shopping arcade — no whistling, no singing, no hurrying — and there are uniformed officers who will still enforce them. They've been doing it since 1819.\n\nYou're at the entrance to Burlington Arcade, just off Piccadilly — a long, elegant, glass-roofed shopping passage lined with small luxury shops: jewellers, cashmere, antique silver, shoes that cost more than a holiday. It opened in 1819, which makes it one of the very first covered shopping arcades in the world — the ancestor of every shopping mall on earth, built a full century before anyone thought to air-condition one.\n\nThe story of why it was built is wonderfully petty. The land belonged to Lord George Cavendish, who lived in Burlington House next door — now the Royal Academy. He was, the story goes, sick of people throwing rubbish and oyster shells over his garden wall, so he built a covered row of shops along the boundary to stop them. A piece of private spite that turned into one of the most elegant retail spaces in London.\n\nAnd then there are the Beadles. The arcade has its own private uniformed guards — the Beadles, in their top hats and frock coats — and it has had them since the day it opened. They're said to be the oldest and smallest private police force in the world. They enforce the arcade's Regency rules of conduct, drawn up two hundred years ago: no running, no whistling, no singing, no playing of musical instruments, no opening of umbrellas. The rules were originally aimed at pickpockets and rowdies; the Beadles still, gently, uphold them today.\n\n[beat]\n\nThere's a lovely bit of social history buried in the no-whistling rule. In the arcade's early days, the rooms above the shops were used by, let's say, women whose business wasn't entirely retail — and a whistle was the signal that the Beadles were coming. Ban the whistling, and you cut the warning system. The genteel rule against whistling in a smart shopping arcade is, at root, about who was doing what upstairs.\n\nWalk its length slowly and watch for a Beadle in his top hat. Two hundred years on, this little glass-roofed passage is still selling luxury under Regency rules — the world's first mall, with its own private police, and a no-whistling policy with a scandalous past.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
-    "audioStatus": "PENDING"
+    "heroPick": "owner-supplied (chandelier glass-roof interior)",
+    "galleryPicks": [
+      "B01"
+    ],
+    "imagesStaged": true,
+    "audioStatus": "PENDING",
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burlington-arcade_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burlington-arcade_2.webp"
+    ]
   }
 ]
