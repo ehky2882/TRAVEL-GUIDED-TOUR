@@ -1081,10 +1081,24 @@
     "shortDescription": "Foster's steel 'blade of light' to St Paul's — London's first new Thames bridge in a century, the 'Wobbly Bridge' that taught engineers how crowds and structures sync.",
     "caption": "The Millennium Bridge, London",
     "transcript": "The Millennium Bridge\n\nThis bridge had to close three days after it opened, because the moment Londoners walked onto it, it started to sway alarmingly — and fixing that taught engineers something they hadn't known.\n\nYou're at the Millennium Bridge, a sleek, low, steel footbridge crossing the Thames in a single flat line, connecting Tate Modern on the south bank directly to St Paul's Cathedral on the north. It's deliberately understated — the architect Norman Foster and the sculptor Anthony Caro called it a \"blade of light,\" a thin ribbon across the river that wouldn't block the view of St Paul's. It was London's first new bridge across the Thames in over a century, opened in the year 2000 to mark the millennium.\n\nAnd then it wobbled. On the opening day, thousands of people streamed onto it — and the bridge began to sway from side to side, noticeably, unnervingly. The more it swayed, the more people instinctively adjusted their footing to stay balanced, all stepping in time with the sway — and that synchronised stepping pushed it further, in a feedback loop. The bridge was swiftly closed, just two days after opening, and Londoners promptly nicknamed it \"the Wobbly Bridge.\"\n\n[beat]\n\nHere's the genuinely interesting part. That effect — crowds unconsciously synchronising their footsteps with a bridge's tiny movements and amplifying them — wasn't properly understood by engineers at the time. The Millennium Bridge became a famous case study; fixing it, with dozens of dampers fitted underneath to absorb the motion, advanced the science of how pedestrians and structures interact. It was closed for nearly two years and reopened, rock-steady, in 2002. A very expensive, very public lesson, now taught to engineering students everywhere.\n\nSo the bridge's embarrassing failure turned out to be its most valuable contribution — a real addition to what we know about building things people walk on.\n\nWalk across it, toward St Paul's, and feel how solid it is now. Then remember it once danced under people's feet so badly they had to shut it — and that the dancing is exactly why we now know how to stop it.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
+    "heroPick": "U02",
+    "galleryPicks": [
+      "U04",
+      "U17",
+      "U05",
+      "U01",
+      "U19"
+    ],
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_3.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_4.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_5.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_6.webp"
+    ]
   }
 ]
