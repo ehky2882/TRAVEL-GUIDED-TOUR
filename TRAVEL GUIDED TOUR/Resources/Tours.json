@@ -8804,6 +8804,1214 @@
         "porto"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "5604CD42-2DCE-4041-8045-A1A12DCBB026",
+      "title": "Browers Beato",
+      "shortDescription": "Just under two minutes inside a microbrewery and restaurant in a converted military power station \u2014 Souto de Moura's first Lisbon restaurant interior.",
+      "longDescription": "The Browers Beato occupies the former power station of the Manuten\u00e7\u00e3o Militar \u2014 the Portuguese Army's nineteenth-century logistics headquarters on the eastern waterfront, now the Hub Criativo do Beato, Lisbon's largest creative and innovation complex. The Portuguese army once generated electricity here; now the Super Bock Group brews beer in the same building, an entirely typical sequence of events for the Beato district.\n\nThe interior was designed by Eduardo Souto de Moura with Nuno Gra\u00e7a Moura, the original facade and structure preserved while the 700-square-metre space was reconfigured into a three-million-euro microbrewery and restaurant that opened in July 2024. The whole plan turns on a single long counter on the longitudinal axis \u2014 public areas to the east, service to the west, and the brewery raised about seventy centimetres above the restaurant floor so the fermentation vessels stay visible over the counter while you eat. It is Souto de Moura's first completed restaurant interior in Lisbon, and the logic of making production visible is more precise spatial thinking than most brewery conversions manage.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Browers_Beato_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Browers_Beato_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "B5C5C51F-7520-4DB1-B4A7-480266B53B14",
+          "order": 0,
+          "title": "Browers Beato",
+          "caption": "Stand inside the Browers Beato, in the old power-station building of the Hub Criativo do Beato. Look at the long counter running the length of the space.",
+          "latitude": 38.731983180017025,
+          "longitude": -9.106332115447767,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/browers-beato.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Browers_Beato_hero.webp",
+          "transcriptText": "The Portuguese army used to generate electricity here, and now the Super Bock Group brews beer in the same building \u2014 which is, in the specific context of Lisbon's Beato district, an entirely typical sequence of events.\nYou're inside the Hub Criativo do Beato, Lisbon's largest creative and innovation complex, built on the former Manuten\u00e7\u00e3o Militar \u2014 the Portuguese Army's logistics and supply headquarters, a vast nineteenth-century industrial complex on the eastern waterfront that was in military use until the twenty-first century. The Browers Beato occupies the old power station building within that complex, designed by Eduardo Souto de Moura and Nuno Gra\u00e7a Moura \u2014 the latter a former collaborator of Souto de Moura who was invited as co-author \u2014 with the original facade, windows, and relevant structural elements preserved while the seven-hundred-square-metre interior was reconfigured for a three-million-euro microbrewery and restaurant operation run by The Browers Company, a spin-off of the Super Bock Group.\nLook at the counter that runs the length of the space.\nThe long counter on the longitudinal axis is the design decision the whole interior is organised around \u2014 public areas to the east, service areas to the west, and the brewery itself raised about seventy centimetres above the restaurant floor on the western side, so you can see the fermentation vessels over the counter while you eat. That seventy-centimetre elevation is not incidental: it's the building making the production visible to the person consuming the product, which is a more precise piece of spatial thinking than most brewery conversions manage.\n[beat]\nThe building opened in July twenty twenty-four, and Souto de Moura's involvement here \u2014 his first completed restaurant interior in Lisbon \u2014 is the reason to look carefully at the details before ordering, because the decisions that seem obvious in a space like this usually aren't."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.731983180017025,
+      "centroidLongitude": -9.106332115447767,
+      "city": "Lisbon",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "brewery",
+        "beato",
+        "souto-de-moura",
+        "craft-beer",
+        "industrial-heritage",
+        "food",
+        "2024"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E743D100-97B3-43CC-948F-BFBF029EFB89",
+      "title": "A Ginjinha",
+      "shortDescription": "A little over three minutes at a wardrobe-sized bar that has poured sour-cherry liqueur on the same Lisbon square since 1840.",
+      "longDescription": "A Ginjinha Espinheira is about the size of a large wardrobe and has been pouring its sour-cherry liqueur continuously since 1840. It was founded by Francisco Espinheira, a Galician immigrant who, on the advice of a friar from the nearby Church of Santo Ant\u00f3nio, made the once-expensive cherry liqueur cheap by infusing morello cherries in aguardente with sugar, cinnamon, and water. When you order you'll be asked one question \u2014 com elas ou sem elas, with or without the cherries \u2014 and the drink comes deep ruby, sweet, slightly tart, and warming, for around two euros, a price that in real terms hasn't moved far since the nineteenth century.\n\nStep inside if there's room and the Belle \u00c9poque glass paintings on the walls carry sayings about the drink's virtues and references to gold medals won in Rio in 1923 and Macau in 1926 \u2014 a surprising geographic reach for a liqueur from a tiny bar behind Rossio. Older Lisboetas still mention parents and grandparents prescribing small shots for colds and sore throats, and the bar runs to this day on the same square, in the same building, serving the same recipe made by a descendant of its founder \u2014 a continuity several of the grand stone buildings around Largo de S\u00e3o Domingos never managed.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/A_Ginjinha_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/A_Ginjinha_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/A_Ginjinha_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "CB7E9F83-BB1D-4181-B0F8-FE6B6822E12E",
+          "order": 0,
+          "title": "A Ginjinha",
+          "caption": "Find the open-fronted counter on the east side of Largo de S\u00e3o Domingos, just behind Rossio \u2014 look for the cluster of people on the pavement holding small glasses.",
+          "latitude": 38.71477983816771,
+          "longitude": -9.13907252202618,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/a-ginjinha.mp3",
+          "audioDurationSeconds": 197,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/A_Ginjinha_hero.webp",
+          "transcriptText": "The bar selling this drink is about the size of a large wardrobe \u2014 and it has been operating continuously since eighteen forty, which makes it one of the smaller institutional arrangements to have lasted nearly two centuries in Lisbon.\nLook for the open-fronted counter on the east side of Largo de S\u00e3o Domingos, which is the small square immediately behind Rossio and to the left of the Igreja de S\u00e3o Domingos \u2014 you'll find it by the cluster of people standing outside holding small glasses, because there is not enough room inside the bar for more than two or three people to stand at the counter, and the rest of the experience happens on the pavement. The bar's full name is A Ginjinha Espinheira, named after its founder Francisco Espinheira, a Galician immigrant who arrived in Lisbon in the eighteen thirties and opened this specific establishment in eighteen forty after a friar from the nearby Church of Santo Ant\u00f3nio advised him that cherry liqueur, which had previously been an expensive drink available only to wealthier Lisboetas because fermenting it directly from the fruit was slow and costly, could be made more cheaply and quickly by infusing the cherries in aguardente \u2014 Portuguese brandy \u2014 and adding sugar, cinnamon, and water, a process that produced something the friar apparently considered equivalent and the public considered rather better.\nWhen you step up to order, you'll be asked one question: com elas ou sem elas \u2014 with or without.\nWith or without the cherries, that is, which have been soaking in the liqueur and carry a concentrated hit of it when eaten, a detail that matters more than it sounds at the point of consumption. The drink itself is a deep ruby red, sweet, slightly tart from the morello cherries, and warming from the aguardente, served in a small ceramic cup or a glass depending on the time of day and the preferences of whoever is behind the counter \u2014 and it costs approximately two euros, which has not changed dramatically since the nineteenth century in real terms, and which is one of the reasons it has remained a drink for everyone rather than becoming a heritage experience priced accordingly.\nStep inside briefly if there's room, and look at the walls.\nThe interior holds Belle \u00c9poque glass paintings bearing sayings about the virtues of the drink \u2014 in Portuguese, naturally, and unapologetically promotional \u2014 and references to the Gold Medals the liqueur won at the International Exhibition in Rio de Janeiro in nineteen twenty-three and in Macau in nineteen twenty-six, which gives you a sense of the geographic reach that a small sour-cherry liqueur from a wardrobe-sized bar in central Lisbon had achieved by the nineteen twenties.\n[beat]\nOlder Lisboetas will sometimes mention, unprompted, that their parents or grandparents gave them small shots of ginjinha as a cure for colds, sore throats, and a range of other ailments whose treatment by cherry brandy the medical establishment has not formally endorsed but has also not apparently managed to disprove to the satisfaction of the families concerned \u2014 and the bar has been running since eighteen forty on this square, in this same building, serving the same drink made by a descendant of Francisco Espinheira to the same mix of locals and visitors, which is a form of institutional continuity that the large stone buildings around Largo de S\u00e3o Domingos have, in several cases, not managed to match."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 197,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71477983816771,
+      "centroidLongitude": -9.13907252202618,
+      "city": "Lisbon",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "ginjinha",
+        "liqueur",
+        "rossio",
+        "historic-bar",
+        "baixa",
+        "drink",
+        "1840"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "01DE8848-E30B-4473-8F4B-AEDF61D3F669",
+      "title": "Arco da Rua Augusta",
+      "shortDescription": "Under two minutes at the triumphal arch closing the Baixa \u2014 114 years in the building, crowned by Glory, Genius, and Valour.",
+      "longDescription": "Construction of the Arco da Rua Augusta began in 1759 and finished in 1873 \u2014 and in between, still unfinished, it served as a ceremonial gate for the 1862 royal wedding of King Lu\u00eds I. It stands at the northern end of Pra\u00e7a do Com\u00e9rcio, on the axis of Rua Augusta, where the rebuilt Pombaline Baixa meets the Tagus. Six columns carry four statues by V\u00edtor Bastos \u2014 Viriato, Vasco da Gama, the Marquis of Pombal, and Nuno \u00c1lvares Pereira \u2014 while at the very top the French sculptor C\u00e9lestin Calmels shows Glory crowning Genius and Valour. A clock was added to the north face in 1941, and a lift reaches an interior Clock Room with a small exhibition on the arch's construction.\n\nThe figure of Pombal rewards a moment's attention: he both organised the reconstruction the arch celebrates and was controversial enough \u2014 governing by decree, expelling the Jesuits, eventually exiled \u2014 that honouring him in his own lifetime would have been unthinkable. Putting him up here in 1873, nearly a century after his death, is the particular Portuguese way with complicated historical figures. Go up to the terrace if you can: the view reads the entire Pombaline grid in one direction and the river in the other, which is exactly what the arch was built to frame.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Arco_da_Rua_Augusta_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Arco_da_Rua_Augusta_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Arco_da_Rua_Augusta_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Arco_da_Rua_Augusta_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "80769342-04D2-4B7E-B5AF-E14CA71A7107",
+          "order": 0,
+          "title": "Arco da Rua Augusta",
+          "caption": "Stand at the northern end of Pra\u00e7a do Com\u00e9rcio, on the axis of Rua Augusta, looking up at the triumphal arch where the Baixa meets the river.",
+          "latitude": 38.7079,
+          "longitude": -9.1366,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/arco-da-rua-augusta.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Arco_da_Rua_Augusta_hero.webp",
+          "transcriptText": "Construction began in seventeen fifty-nine and the arch was completed in eighteen seventy-three \u2014 and in between, it was used as a ceremonial gate for the royal wedding of King Lu\u00eds the First in eighteen sixty-two, while it was still unfinished, which is either a statement about the occasion or about the pace of the project.\nThe arch stands at the northern end of Pra\u00e7a do Com\u00e9rcio, directly on the axis of Rua Augusta, where the rebuilt Pombaline Baixa meets the river \u2014 and the six columns supporting it carry four statues by V\u00edtor Bastos representing Viriato, Vasco da Gama, the Marquis of Pombal, and Nuno \u00c1lvares Pereira, while the figures at the very top, by the French sculptor C\u00e9lestin Calmels, show Glory crowning Genius and Valour, which is the kind of allegorical confidence that mid-nineteenth-century public monuments rarely resisted. The arch also contains a clock on its north face, installed in nineteen forty-one, and an interior accessible by lift where the Clock Room holds a small exhibition about the building's construction history.\nThe figure of Pombal on the columns is worth a moment's attention, because he is both the man who organised the reconstruction that the arch was built to celebrate and a figure sufficiently controversial \u2014 he governed by decree, eliminated rivals, expelled the Jesuits, and was eventually exiled \u2014 that putting him on a triumphal arch in his own lifetime would have been unthinkable, and putting him there in eighteen seventy-three, nearly a century after his death, represents the particular Portuguese relationship with complicated historical figures.\n[beat]\nGo up to the terrace if you can, because the view from the top reads the entire Pombaline grid of the Baixa in one direction and the Tagus in the other \u2014 which is, in a way, exactly what the arch was designed to frame."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.7079,
+      "centroidLongitude": -9.1366,
+      "city": "Lisbon",
+      "primaryCategory": "architecture",
+      "tags": [
+        "triumphal-arch",
+        "baixa",
+        "praca-do-comercio",
+        "pombaline",
+        "monument",
+        "viewpoint",
+        "1873"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "CAB7F0DE-0884-4B42-ACCA-AC3C8C878C68",
+      "title": "Bel\u00e9m Tower",
+      "shortDescription": "Three minutes at the Manueline tower that replaced a warship \u2014 UNESCO-listed, and home to Europe's first carved rhinoceros.",
+      "longDescription": "The Torre de Bel\u00e9m replaced a thousand-tonne man-of-war, the Grande Nau, that had guarded the Tagus approach until the stone fort was ready. Built between 1514 and 1519 by Francisco de Arruda, it originally sat on its own island midstream; the 1755 earthquake shifted the river enough to close the gap, which is why a causeway now links it to the shore.\n\nWalk the exterior before going in \u2014 the stonework is why it became a UNESCO World Heritage Site. The Manueline style, named for King Manuel I, carves twisted ropes and cables up the corner columns, armillary spheres in relief, and the cross of the Order of Christ along the battlements. On the river-facing bastion, find the animal gargoyle: it is the earliest surviving sculptural rhinoceros in European art, carved from a description of the live rhino Manuel received in 1515 and later shipped to the Pope, only for it to drown in a wreck before arriving.\n\nInside is far more austere \u2014 five storeys, a spiral stair, a basement dungeon whose tidal watermark shows how far the Tagus once rose. Napoleon's forces dismantled the top two storeys in 1807 to build a gun platform; they were rebuilt in 1845, so the top of the tower is thirty-eight years younger than the bottom, and the consistency of the stonework across that gap is one of the more underappreciated achievements of nineteenth-century Portuguese heritage work.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Belem_Tower_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Belem_Tower_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "99540453-CB06-428E-AC32-B5E6C1AA0DDA",
+          "order": 0,
+          "title": "Bel\u00e9m Tower",
+          "caption": "Stand on the Bel\u00e9m waterfront, on Avenida de Bras\u00edlia, looking out at the Torre de Bel\u00e9m in the river \u2014 with the Jer\u00f3nimos Monastery on the bank behind you.",
+          "latitude": 38.69180977588412,
+          "longitude": -9.216009482066037,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/belem-tower.mp3",
+          "audioDurationSeconds": 200,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Belem_Tower_hero.webp",
+          "transcriptText": "The tower you're looking at replaced a warship \u2014 a thousand-tonne man-of-war called the Grande Nau that had been moored in the Tagus estuary, guarding the approach to Lisbon, until the stone fort was ready to take its place.\nPicture where you are physically: you're on the western waterfront of Bel\u00e9m, on Avenida de Bras\u00edlia, and the Torre de Bel\u00e9m stands in the river ahead of you \u2014 or rather, nearly so. When it was built, between fifteen fourteen and fifteen nineteen, it sat on its own small island in the middle of the Tagus, accessible only by boat, positioned midstream to command the harbour approach from both directions, with the Jer\u00f3nimos Monastery visible on the bank behind you. The tower is where it is today \u2014 connected to the riverbank by a narrow causeway \u2014 because the earthquake of seventeen fifty-five shifted the Tagus enough to close the gap between the island and the shore, which is one of those quietly extraordinary consequences of a disaster that destroyed most of Lisbon above ground while rearranging its waterfront below.\nWalk around the exterior before you go in, because the stonework is the reason this building became a UNESCO World Heritage Site and not just a functional fort.\nThe Manueline style in which Francisco de Arruda built the tower is named after King Manuel I and blends late Gothic with maritime ornament in a way that had no precedent elsewhere in Europe: twisted ropes and cables carved in stone running up the corner columns, armillary spheres \u2014 the navigational instruments Portugal's sailors used to plot their position at sea \u2014 carved in relief on the surfaces, and the cross of the Order of Christ decorating the battlements, the same military religious order whose funds had supported much of the Portuguese maritime expansion. Now look specifically at the bastion that extends into the water at the base of the tower, and find the animal gargoyle facing the river \u2014 because what you're looking at is the earliest surviving sculptural representation of a rhinoceros in European art, carved from a description of the animal that King Manuel had received as a live gift from the Governor of Portuguese India in fifteen fifteen, had displayed in Lisbon to considerable public sensation, and had subsequently packed onto a ship bound for the Pope in Rome, where it died in a shipwreck before arriving.\nInside, the fort is considerably more austere than the exterior suggests \u2014 five storeys, a spiral staircase, a dungeon in the basement, the Governor's Chamber and King's Chamber on the upper floors \u2014 and the dungeon is worth visiting not for its atmosphere, which is damp and extremely low-ceilinged, but for the tidal watermark on the walls, which shows how far the Tagus rose at high tide when the tower was an island and the dungeon sat below the waterline.\n[beat]\nNapoleon's forces, during the eighteen oh seven occupation of Lisbon, dismantled the upper two storeys of the tower to build a wooden gun platform in their place, and those storeys were only reconstructed in eighteen forty-five \u2014 which means that the top of the tower you're climbing was rebuilt thirty-eight years after the bottom, by a different generation, in a different political context, for a different purpose entirely, and the consistency of the stonework between the original sections and the restored ones is, frankly, one of the more underappreciated achievements of nineteenth-century Portuguese heritage practice."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 200,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.69180977588412,
+      "centroidLongitude": -9.216009482066037,
+      "city": "Lisbon",
+      "primaryCategory": "history",
+      "tags": [
+        "belem",
+        "manueline",
+        "unesco",
+        "fortress",
+        "tagus",
+        "maritime",
+        "16th-century"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C6D74828-2FC9-40AE-A70F-318F1B812AB7",
+      "title": "Carmo Archaeological Museum",
+      "shortDescription": "Three and a half minutes inside the roofless Gothic nave Lisbon chose never to rebuild after 1755 \u2014 now Portugal's first archaeological museum.",
+      "longDescription": "The roof of the Carmo Convent fell in during All Saints' Day Mass on the morning of 1 November 1755, and Lisbon eventually decided it should stay that way. The convent was founded in 1389 by Nuno \u00c1lvares Pereira \u2014 the commander whose victory at Aljubarrota secured Portugal's independence \u2014 who then renounced his wealth, joined the Carmelites, and built it as thanksgiving. By 1755 it was the largest and grandest church in Lisbon, which made the decision not to rebuild it so significant: a Neo-Gothic reconstruction stalled, was halted by the 1834 dissolution of the religious orders, and was abandoned once it became clear the roofless nave had become a better memorial than any restored building could be.\n\nThrough to the sacristy, which survived intact, is the museum \u2014 founded in 1864, the first museum of art and archaeology in Portugal. Its collection arrived by donation and rescue: pre-Columbian ceramics, Egyptian sarcophagi, Visigothic buckles, Roman epigraphy, the tomb of King Fernando I, and two upright sixteenth-century Peruvian mummies that most visitors come specifically to see.\n\nIn April 1974 the building briefly became a command post for the Carnation Revolution, and the surrender of the dictator Caetano to General Sp\u00ednola was negotiated within these walls \u2014 so this roofless ruin has been, in turn, the largest church in Lisbon, an earthquake memorial, Portugal's first museum, and the place a forty-eight-year dictatorship ended.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Carmo_Archaeological_Museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Carmo_Archaeological_Museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Carmo_Archaeological_Museum_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7EC62BA3-AAF9-492A-AFD5-90A64FC681EB",
+          "order": 0,
+          "title": "Carmo Archaeological Museum",
+          "caption": "Enter through the doorway on Largo do Carmo in Chiado, beneath the roofless Gothic arches of the ruined Carmo Convent.",
+          "latitude": 38.711979529287355,
+          "longitude": -9.14071014594665,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/carmo-archaeological-museum.mp3",
+          "audioDurationSeconds": 206,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Carmo_Archaeological_Museum_hero.webp",
+          "transcriptText": "The roof fell in during the All Saints' Day Mass on the morning of the first of November, seventeen fifty-five, and Lisbon decided \u2014 not immediately, but eventually \u2014 that it should stay that way.\nThe nave entrance is through the doorway on Largo do Carmo in the Chiado district, and the square itself is on a small plateau you'll have reached either by walking up from the Baixa or via the Santa Justa Lift, whose upper bridge connects \u2014 through a gated path to the right of the convent entrance that most visitors miss entirely \u2014 directly to this square at no extra charge and without the queue that forms at the lift's lower entrance. Once through the main door, the building announces itself immediately: roofless Gothic arches rising fifteen metres above you, the Lisbon sky framed between the stone ribs, and the length of the nave stretching ahead, open to weather and light in a way that no functioning church ever would be.\nThe convent was founded in thirteen eighty-nine by Nuno \u00c1lvares Pereira \u2014 the military commander whose victory at the Battle of Aljubarrota in that same year secured Portugal's independence from Castile, and who subsequently renounced his wealth, joined the Carmelite Order, and built this convent on the hill across from the S\u00e3o Jorge Castle as an act of thanksgiving \u2014 and at the time of the seventeen fifty-five earthquake it was the largest and grandest church in Lisbon, which is what made the decision not to rebuild it so significant.\nWhen reconstruction was attempted the following year in a Neo-Gothic style, it stalled, was halted by the dissolution of the religious orders in eighteen thirty-four, and was eventually abandoned not through indifference but through the realisation that the roofless nave had become something that a rebuilt roof would destroy \u2014 a space where the architecture and the event that shaped it were the same thing, visible simultaneously, and which served better as a memorial than as a restored building.\nGo inside and through to the sacristy, which survived the earthquake intact and now houses the museum collections.\nThe Carmo Archaeological Museum, founded in eighteen sixty-four, was the first museum of art and archaeology in Portugal, and its collections arrived through a combination of deliberate donation and rescue \u2014 objects saved from other buildings damaged in the earthquake, pre-Columbian ceramics, Egyptian sarcophagi, Visigothic buckles, medieval tombstones, Roman epigraphy, and the tomb of King Fernando the First, which is the largest tomb in the collection. The two Peruvian mummies from the sixteenth century, which stand upright in glass cases in the museum's interior rooms, are the objects most visitors come specifically to see, and they are genuinely strange \u2014 preserved in a technique that has kept them intact for five centuries while everything around them in the earthquake-damaged church has long since been consolidated, restored, or left as ruins.\n[beat]\nThe convent became briefly famous in April nineteen seventy-four, when the Portuguese military units that staged the Carnation Revolution used the building as a command post during the coup \u2014 and the surrender of the secret police director Caetano to General Spinola was negotiated from within these walls, which means this roofless Gothic ruin has been, in its history, the largest church in Lisbon, an earthquake memorial, Portugal's first archaeological museum, and the location where a forty-eight-year dictatorship ended."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 206,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.711979529287355,
+      "centroidLongitude": -9.14071014594665,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "carmo",
+        "ruins",
+        "gothic",
+        "museum",
+        "chiado",
+        "1755-earthquake",
+        "carnation-revolution"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A71280AB-9381-4EED-94A4-2E0ABC3C1FD8",
+      "title": "Castelo de S\u00e3o Jorge",
+      "shortDescription": "Under two minutes at the hilltop castle every power in Lisbon's history fortified \u2014 Roman, Visigoth, Moor, and Portuguese.",
+      "longDescription": "Every significant power in Lisbon's history built on this hill \u2014 Romans, Visigoths, Moors, Portuguese \u2014 less from cultural continuity than from geography: it is the highest, most defensible point in the city. The walls date largely from the eleventh-century Moorish occupation, expanded after King Afonso Henriques took the fortress in 1147 with the help of Northern European crusaders passing through on their way to Jerusalem. It then served as a royal residence for three centuries, until the court moved to the waterfront Ribeira Palace in the sixteenth, and what you walk today is partly medieval and partly a substantial twentieth-century restoration that rebuilt more than it found.\n\nNear the keep, look for the archaeological site: excavations uncovered a Moorish neighbourhood \u2014 houses, streets, everyday objects \u2014 continuously occupied from before the Romans through every later conquest, the layers in the ground a more complete account of Lisbon than any wall above them. The peacocks that roam the grounds arrived at some point and decided to stay, which makes them, in that one respect, indistinguishable from every other occupying force this hill has received in two thousand years.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Castelo_de_Sao_Jorge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Castelo_de_Sao_Jorge_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Castelo_de_Sao_Jorge_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "F510A1CB-96F3-410A-9F6D-88E4C8865B92",
+          "order": 0,
+          "title": "Castelo de S\u00e3o Jorge",
+          "caption": "Arrive at the main entrance on Rua de Santa Cruz do Castelo in Alfama \u2014 the highest point in the city, reachable by the number 28 tram.",
+          "latitude": 38.71245812613408,
+          "longitude": -9.133391691113294,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/castelo-de-sao-jorge.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Castelo_de_Sao_Jorge_hero.webp",
+          "transcriptText": "Every significant power in Lisbon's history built something on this hill \u2014 the Romans, the Visigoths, the Moors, the Portuguese \u2014 which is less a matter of cultural continuity than of simple geography, because this is the highest point in the city, and the highest point is always the most defensible.\nThe castle is in the Alfama district, reached from the Baixa by the number twenty-eight tram or by a fairly sustained climb through the oldest streets in the city, and when you arrive at the main entrance on Rua de Santa Cruz do Castelo, the walls you're looking at date largely from the Moorish occupation of the eleventh century, expanded and modified after King Afonso Henriques captured the fortress from the Moors in eleven forty-seven with the help of Northern European crusaders who were passing through Lisbon on their way to Jerusalem. The castle then became a royal residence for three centuries, housing Portuguese kings from the thirteenth until the sixteenth, when the court moved to the Ribeira Palace on the waterfront \u2014 and what you're walking around today is partly medieval, partly the result of a significant twentieth-century restoration that rebuilt more than it found.\nInside, look for the archaeological site near the castle keep.\nExcavations there uncovered a Moorish neighbourhood \u2014 houses, streets, and everyday objects \u2014 that had been continuously occupied from before the Romans and through every subsequent conquest, and the layers visible in the ground represent a more complete account of Lisbon's history than any of the walls above them.\n[beat]\nThe peacocks that roam the castle grounds arrived at some point and appear to have decided to stay, which makes them, in that specific respect, indistinguishable from every other occupying force this hill has received over the past two thousand years."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71245812613408,
+      "centroidLongitude": -9.133391691113294,
+      "city": "Lisbon",
+      "primaryCategory": "history",
+      "tags": [
+        "castle",
+        "alfama",
+        "moorish",
+        "afonso-henriques",
+        "fortress",
+        "viewpoint",
+        "medieval"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "868AE974-7EE5-4C95-9259-005771357CBA",
+      "title": "Centro de Arte Moderna Gulbenkian (CAM)",
+      "shortDescription": "Three and a half minutes at the Gulbenkian's modern-art museum \u2014 Kengo Kuma's first Portuguese building, born of one oil magnate's will.",
+      "longDescription": "Calouste Gulbenkian was an Armenian oil magnate who arrived in Lisbon during the Second World War to escape the Nazis, never left, and on his death in 1955 left his entire fortune and art collection to Portugal \u2014 a country he had lived in for only eleven years. Everything here follows from that. The Foundation's eighteen-acre woodland campus opened in 1969; the Centro de Arte Moderna was added in 1983 to house Portuguese modern and contemporary art.\n\nThe long curving canopy sweeping from the building into the garden \u2014 107 metres long, surfaced in 3,274 white azulejo tiles above and overlapping ash timber below \u2014 was completed in September 2024 and is Kengo Kuma's first finished building in Portugal. The 1983 building had been described, candidly, in the renovation brief as 'an imposition' on the garden; Kuma answered with the engawa, the sheltered transitional walkway of traditional Japanese houses, so the canopy reads as a gradation rather than a threshold.\n\nInside, the collection runs to nearly twelve thousand works, strongest in Portuguese art from the 1900s on \u2014 including Paula Rego's dark figurative work \u2014 alongside international figures such as Robert Delaunay. The Foundation has become one of Europe's most significant philanthropic institutions, and the freely accessible campus is the most visible expression of what one decision, made in a Lisbon hotel room in 1955, set in motion.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/CAM_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/CAM_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/CAM_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/CAM_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/CAM_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/CAM_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "DA87809F-FC30-44C4-9C01-057367BFB4DE",
+          "order": 0,
+          "title": "Centro de Arte Moderna Gulbenkian (CAM)",
+          "caption": "Stand on the Gulbenkian Foundation campus in northern Lisbon, by the long curving canopy that sweeps from the modern-art museum out into the garden.",
+          "latitude": 38.735674141578606,
+          "longitude": -9.154382549315285,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cam-gulbenkian.mp3",
+          "audioDurationSeconds": 205,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/CAM_hero.webp",
+          "transcriptText": "Calouste Gulbenkian was an Armenian oil magnate who died in Lisbon in nineteen fifty-five and left his entire personal fortune \u2014 his art collection, his assets, and his estate \u2014 to Portugal, a country he had lived in for only eleven years, having arrived during the Second World War to avoid the Nazis and simply never left.\nEverything you're about to see is the consequence of that decision. You're on the Gulbenkian Foundation campus in northern Lisbon, an eighteen-acre woodland park that opened in nineteen sixty-nine with a headquarters building and museum designed by Portuguese architects Ruy d'Athouguia, Alberto Pessoa, and Pedro Cid, and with gardens laid out by landscape architect Gon\u00e7alo Ribeiro Telles \u2014 and the Centro de Arte Moderna, which sits in the southern part of those gardens and is the building you're here for, was added in nineteen eighty-three to house a separate collection of modern and contemporary Portuguese art. The canopy you can see extending from the building into the garden \u2014 a long curving wooden and ceramic structure sweeping out over the path between the museum and the trees \u2014 was completed in September twenty twenty-four and represents Kengo Kuma's first completed building in Portugal.\nWalk under the canopy before you go inside, because the structure is the argument the renovation is making.\n\"The original nineteen eighty-three building by Leslie Martin was described, in the brief for the twenty twenty-four renovation competition, as having become \"\"an imposition\"\" on the garden rather than a part of it \u2014 which is an unusually candid thing for an institution to say about one of its own buildings \u2014 and Kengo Kuma's response was to draw inspiration from the engawa, the sheltered transitional walkway that runs around the perimeter of traditional Japanese dwellings and belongs neither entirely to the interior nor entirely to the outdoors. The canopy is a hundred and seven metres long and fifteen metres wide, rising from two metres at the garden's edge to ten metres at the building facade, so it is a gradation rather than a threshold \u2014 you pass under it and through it and the building's edge becomes ambiguous, which is, in Kuma's own articulation, the point. The canopy roof is surfaced in three thousand two hundred and seventy-four square white azulejo tiles and the underside in overlapping ash timber, the ceramic above and the wood below each responding to a different Portuguese material tradition.\"\nNow go inside, and give the collection the time it deserves.\nThe museum holds nearly twelve thousand works, with the permanent collection focusing on Portuguese modern and contemporary art from the nineteen hundreds onwards, and among the most significant holdings are works by Paula Rego, whose dark figurative work you'll have encountered if you've visited the Casa das Hist\u00f3rias in Cascais, alongside international figures including Robert Delaunay, whose relationship with the Lisbon art world through his wife Sonia Delaunay gave the collection a connection to European modernism that most Portuguese institutions of the same period lacked.\n[beat]\nThe foundation Gulbenkian created in his will has since become one of the most significant philanthropic institutions in Europe \u2014 funding art, science, education, and civic projects across Portugal and internationally \u2014 and the campus you're standing in, freely accessible to the public as a park on weekdays and weekends alike, is the most visible expression of what a single person's decision, made in a Lisbon hotel room in nineteen fifty-five, set in motion."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 205,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.735674141578606,
+      "centroidLongitude": -9.154382549315285,
+      "city": "Lisbon",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "gulbenkian",
+        "modern-art",
+        "kengo-kuma",
+        "museum",
+        "paula-rego",
+        "azulejo",
+        "2024"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "79A79A2C-DC49-4C42-8FD0-4C2B0ADF54E5",
+      "title": "EDP Sede II",
+      "shortDescription": "Three minutes at EDP's second headquarters \u2014 Pritzker laureate Alejandro Aravena's civic-minded concrete cantilever over the waterfront.",
+      "longDescription": "Alejandro Aravena is the Chilean architect who won the Pritzker in 2016 for half-built social housing residents could complete themselves \u2014 so EDP, one of Portugal's largest corporations, commissioning him for a headquarters deserves a moment's thought. This building, completed in 2024, is the second of two EDP headquarters on the same waterfront campus, sitting on the second row of the grid directly across a public square from the Aires Mateus towers of 2016. Two glass volumes are sandwiched between monolithic board-formed concrete slabs.\n\nThe entrance is placed on the south side rather than facing the square \u2014 a deliberate decision, in Aravena's team's words, so that a citizen does not feel a company is doing them the favour of using a quality space. The slabs were designed to erase the notion of floors, reading as civic monumentality rather than corporate facade, and the building folds the ground of the public square to keep a north-south pedestrian route while connecting the two volumes beneath it.\n\nIt also cantilevers toward the river, gaining enough height to lean over the Aires Mateus building and win a clear view of the Tagus from the second row \u2014 an assertive solution from an architect better known for restraint, and a reminder that the river view from inside is the whole reason to build on this stretch of waterfront at all.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/EDP_Sede_II_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/EDP_Sede_II_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/EDP_Sede_II_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "E73F5538-6208-4952-8D55-834DC35F22A8",
+          "order": 0,
+          "title": "EDP Sede II",
+          "caption": "Stand on the public square on Avenida 24 de Julho, between the two glass volumes of the second EDP headquarters \u2014 across from the Aires Mateus towers.",
+          "latitude": 38.70761828084961,
+          "longitude": -9.148711554348765,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/edp-sede-ii.mp3",
+          "audioDurationSeconds": 188,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/EDP_Sede_II_hero.webp",
+          "transcriptText": "Alejandro Aravena is the Chilean architect who won the Pritzker Prize in twenty sixteen for designing social housing for communities who couldn't afford to build the whole house \u2014 so they built half, and left the other half for the residents to complete when they could afford to. That EDP, one of Portugal's largest corporations, commissioned him to build their headquarters is a conjunction that deserves a moment's thought.\nThe building you're looking at is the second of two EDP headquarters on the same waterfront campus, directly across a public square from the Aires Mateus towers completed in twenty sixteen \u2014 the two buildings forming a pair that EDP commissioned separately, a decade apart, from two very different architectural sensibilities. This one was completed in twenty twenty-four, and it sits on the second row of Lisbon's urban grid, set back from the river behind the first EDP building, on Avenida Vinte e Quatro de Julho. The two glass-fronted volumes are sandwiched between monolithic concrete slabs \u2014 substantial, horizontal bands of board-formed concrete that run the full width of each volume \u2014 and the square between this building and the one across the street from it is public, accessible to anyone, with a caf\u00e9 at ground level and the building's own entrance placed on the south side rather than facing the square.\nThat last detail \u2014 where the entrance is \u2014 is the building's most explicit civic statement, and Aravena's team were precise about it: it was a deliberate decision not to put the access in the square so that a citizen does not feel that a company is doing them the favour of using a quality space.\nNow look at the concrete slabs, and then look at the square they create between the two volumes.\nThe slabs were designed, in Elemental partner Juan Cerda's own words, to evoke timelessness \u2014 by erasing the notion of floors, you feel and see civic monumentality rather than the language of a corporate office building, which is a specific architectural ambition that requires considerable restraint to achieve, because the instinct in a headquarters building is almost always to assert the company's identity through the facade rather than to erase it. The building also had to solve what Aravena described as a paradox: the masterplan required north-south continuity of public space through the campus, which meant splitting the building into two volumes, while the building itself needed to function as a single entity requiring east-west connection between those volumes \u2014 and the solution was to fold the ground of the public space with a slight slope that maintains the north-south pedestrian route while connecting the two volumes beneath the highest point of that folded ground.\n[beat]\nThe building also cantilevers toward the river, gaining enough height to lean over the Aires Mateus building across the street and achieve a clear view of the Tagus from what is technically the second row of the urban grid \u2014 which is the kind of problem that sounds purely geometric until you realise that the view of the river from inside a building is not a luxury detail but the primary reason to build on this particular stretch of waterfront at all, and that solving it required a concrete cantilever projecting over someone else's building, which is an assertive solution from an architect better known for restraint."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 188,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.70761828084961,
+      "centroidLongitude": -9.148711554348765,
+      "city": "Lisbon",
+      "primaryCategory": "architecture",
+      "tags": [
+        "aravena",
+        "elemental",
+        "architecture",
+        "waterfront",
+        "concrete",
+        "edp",
+        "2024"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2418E4CC-7611-4FC9-A915-4DC596D5D9C7",
+      "title": "Gra\u00e7a Funicular",
+      "shortDescription": "Ninety seconds on Lisbon's newest funicular, opened in 2024 on a line first built in 1893 and abandoned for 120 years.",
+      "longDescription": "The Ascensor da Gra\u00e7a opened in 2024 \u2014 one of Lisbon's newest pieces of public infrastructure \u2014 but it runs on a line first built in 1893, decommissioned in 1904 when a tram made it seem redundant, and then left without a replacement for a hundred and twenty years. The lower station is on Rua dos Lagares at the edge of Mouraria; the upper connects to the Miradouro da Gra\u00e7a.\n\nFor such a short line the engineering was significant: to anchor it, Atelier Bugio dug a basement shaft more than nine metres down through the geological and archaeological layers Lisbon's hills accumulate. The ride is seventy-four metres of track at a 31-degree gradient, climbing forty-four metres in ninety seconds, passing through the Jardim da Cerca da Gra\u00e7a where the design frames the greenery rather than blocking it \u2014 four distinct architectural moments in a journey that's over before most people have put their phone away. The yellow cars match Lisbon's historic funiculars, carry fourteen passengers, and accept bikes and dogs.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Graca_Funicular_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Graca_Funicular_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3508C778-DD60-4959-A1CA-F91A8767F898",
+          "order": 0,
+          "title": "Gra\u00e7a Funicular",
+          "caption": "Board at the lower station on Rua dos Lagares, at the edge of Mouraria \u2014 the line climbs to the Miradouro da Gra\u00e7a at the top of the hill.",
+          "latitude": 38.71657826552756,
+          "longitude": -9.13245326804728,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/graca-funicular.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Graca_Funicular_hero.webp",
+          "transcriptText": "The funicular you're about to board opened in twenty twenty-four \u2014 which makes it one of Lisbon's newest pieces of public infrastructure \u2014 but it's running on a line that was first built in eighteen ninety-three, decommissioned in nineteen oh four when a tram route made it seem redundant, and then left without a replacement for a hundred and twenty years.\nThe lower station is on Rua dos Lagares, at the edge of Mouraria, and the upper station connects to the Miradouro da Gra\u00e7a at the top of the hill \u2014 and if you're wondering why such a short line required significant engineering, the answer is visible once you're in the lower station: to anchor the structure on this site, the architects at Atelier Bugio had to dig a basement shaft more than nine metres into the ground, navigating geological and archaeological layers that Lisbon's hills tend to accumulate over two thousand years of continuous occupation. The journey itself is seventy-four metres of track at a thirty-one degree gradient, overcoming a forty-four metre elevation change, and takes ninety seconds.\nOn the way up, the funicular passes through the Jardim da Cerca da Gra\u00e7a, where the design team chose to work with an existing high retention wall rather than against it, framing the garden's greenery rather than blocking it \u2014 so the ninety-second ride offers four distinct architectural moments rather than a single sustained view, which is an unusual amount of spatial variety to fit into a journey that is over before most people have put their phone away.\n[beat]\nThe cars are painted yellow to match Lisbon's historic funiculars, carry fourteen passengers, and accept bikes and dogs, which suggests that Lisbon's approach to public transport has, in at least some respects, moved in a reasonable direction since nineteen oh four."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 100,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71657826552756,
+      "centroidLongitude": -9.13245326804728,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "funicular",
+        "graca",
+        "mouraria",
+        "public-transport",
+        "hillside",
+        "yellow",
+        "2024"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "136E6351-B1C3-4AA4-9153-460B6C1AE76B",
+      "title": "Jardim Bot\u00e2nico da Ajuda",
+      "shortDescription": "Three and a half minutes in Portugal's oldest botanical garden \u2014 built in 1768 beside the wooden palace a king preferred after the earthquake.",
+      "longDescription": "This garden was built next to a wooden palace: after the 1755 earthquake the king refused to sleep under a stone roof, so Pombal had a timber residence raised on the hill above the ruins. Completed in 1768 by the Italian naturalist Domingos Vandelli, it is the oldest botanical garden in Portugal \u2014 a two-level geometric design, the upper terrace of ponds and tree collections offering a clear view over the Tagus toward the 25 de Abril bridge without a museum admission, the lower a baroque box garden around a central fountain.\n\nThat fountain, the Fonte das Serpentes \u2014 the Fountain of Forty Nozzles \u2014 carries serpents, winged fish, seahorses, frogs, and mythological figures, dedicated to Nossa Senhora da Ajuda. The garden was built both as a pleasure ground for royal grandchildren and as Portugal's first museum-nursery for botanical species, with expeditions to Angola, Brazil, and Cape Verde bringing back seeds whose study informed how the Crown managed its territories. On the upper terrace, look for the dragon tree \u2014 a Dracaena draco already growing here when Vandelli arrived, estimated at four hundred years old, which has outlived the wooden palace, the French invasion, the monarchy, and the Republic that replaced them.\n\nIn 1808 Napoleon's troops carried more than fifteen hundred specimens off to Paris, a loss the collection never fully recovered from, and the garden wasn't opened to the public until 1910. What you walk today is the result of a 1994\u201397 restoration aiming to restore its botanical origins while preserving the spirit of scientific enquiry the explorers brought home in their specimen cases.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_Botanico_da_Ajuda_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_Botanico_da_Ajuda_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_Botanico_da_Ajuda_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_Botanico_da_Ajuda_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "E5A7A3F8-F94E-4F70-9678-0F256B7A40EE",
+          "order": 0,
+          "title": "Jardim Bot\u00e2nico da Ajuda",
+          "caption": "Climb Cal\u00e7ada da Ajuda from the direction of Bel\u00e9m; the formal garden gateway is on your left, leading into a two-level geometric garden above the Tagus.",
+          "latitude": 38.70622491250165,
+          "longitude": -9.19913294397274,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jardim-botanico-ajuda.mp3",
+          "audioDurationSeconds": 201,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_Botanico_da_Ajuda_hero.webp",
+          "transcriptText": "This garden was built next to a wooden palace \u2014 because after the seventeen fifty-five earthquake, the king refused to sleep under a stone roof, and Pombal had a timber residence constructed for the royal family on the hill above the ruins, which is the kind of administrative decision that tends to produce unexpected consequences.\nCal\u00e7ada da Ajuda runs uphill from the direction of Bel\u00e9m, and the garden entrance is on the left as you climb \u2014 a formal gateway leading into a two-level geometric garden that you'll have to yourselves on quieter mornings, since it remains considerably less visited than the Jer\u00f3nimos and the Tower below despite being the oldest botanical garden in Portugal and one of the few places in Lisbon where the upper terrace offers a clear view over the Tagus toward the Ponte Vinte e Cinco de Abril without charging a museum admission price for the privilege. The garden was completed in seventeen sixty-eight by Domingos Vandelli, an Italian naturalist from Padua commissioned by Pombal, who designed the upper level around geometric ponds and tree collections and the lower level as a baroque box garden with a central fountain, nurseries, and herbs.\nWalk down to the lower level first, and find the fountain at its centre.\nThe Fonte das Serpentes \u2014 the Fountain of Forty Nozzles \u2014 is decorated with carvings of serpents, winged fish, seahorses, frogs, and mythological figures, and dedicated to Nossa Senhora da Ajuda following a local tradition of apparitions in the area, which means the garden's central water feature combines natural history iconography with Marian devotion in the specific way that eighteenth-century Portuguese royal commissions tended to do. The garden was originally built with two purposes: as a pleasure ground and place of learning for the royal family's grandchildren, but also as the first institution in Portugal specifically designed to act as a museum and nursery for botanical species collected from around the world \u2014 with expeditions sent to Angola, Brazil, and Cape Verde to bring back seeds and plants whose study informed Portuguese understanding of the territories the Crown was attempting to manage.\nNow go back up to the upper terrace and look for the dragon tree on your way.\nThe oldest living thing in this garden is not a plant that arrived in one of those eighteenth-century expeditions but a dragon tree \u2014 a Dracaena draco \u2014 that was already growing on this hillside when Vandelli arrived to design the garden around it, and is estimated to be four hundred years old, which places its germination somewhere around the early seventeenth century and means it has outlived the wooden palace, the French invasion, the monarchy, and the Republic by which all of those things were eventually replaced.\n[beat]\nIn eighteen oh eight, Napoleon's troops took more than fifteen hundred botanical specimens from this garden to Paris, a loss from which the collection never fully recovered \u2014 and the garden was not opened to the public until nineteen ten, after the establishment of the Portuguese Republic, having spent its first hundred and forty-two years as an exclusively royal and scientific resource. What you're walking through today is the result of a nineteen ninety-four to nineteen ninety-seven restoration that aimed to restore the garden's botanical origins while preserving the spirit of scientific enquiry that the Portuguese explorers brought back in their specimen cases, which is a more precise institutional ambition than most gardens have thought to articulate."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 201,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.70622491250165,
+      "centroidLongitude": -9.19913294397274,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "botanical-garden",
+        "ajuda",
+        "18th-century",
+        "dragon-tree",
+        "viewpoint",
+        "nature",
+        "oldest"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "194481D6-6865-42A1-96CC-041761B12EA7",
+      "title": "Jardim do Torel",
+      "shortDescription": "Under two minutes at a quiet hillside garden that looks straight across Avenida da Liberdade at the viewpoint opposite.",
+      "longDescription": "The Jardim do Torel sits at the top of the Santana hill and looks directly at another viewpoint \u2014 the Miradouro de S\u00e3o Pedro de Alc\u00e2ntara on the S\u00e3o Roque hill opposite \u2014 the two facing each other across Avenida da Liberdade with the mutual awareness of things that have been looking at each other a long time. Reach it by the Elevador do Lavra, Lisbon's oldest funicular, which stops just below, or by climbing Rua do Telhal. Once a private estate named for the Visconde de Torel, it only opened to the public in the 1960s and stays far quieter than most Lisbon viewpoints at the same height, despite a direct view over the Baixa, the full length of the avenue, and the Tagus beyond.\n\nThe garden splits in two: an upper section shaded by mature trees, and a lower terrace with a caf\u00e9, a pond that becomes a small swimming pool in summer, and a bust of the pianist Vianna da Mota, one of the most celebrated Portuguese musicians of the late nineteenth century, who on the evidence of his placement here spent the afterlife with a reasonably good view. The aristocratic mansions around the garden declined over the twentieth century; two have since reopened as the Torel Palace Hotel.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_do_Torel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_do_Torel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_do_Torel_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "171F3828-7723-41B7-B8FE-05B44DEDAA9C",
+          "order": 0,
+          "title": "Jardim do Torel",
+          "caption": "Stand at the viewpoint atop the Santana hill \u2014 reached by the Elevador do Lavra or by climbing Rua do Telhal from Avenida da Liberdade.",
+          "latitude": 38.719278921754075,
+          "longitude": -9.141161698188698,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jardim-do-torel.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_do_Torel_hero.webp",
+          "transcriptText": "The viewpoint you're standing at looks directly at another viewpoint \u2014 the Miradouro de S\u00e3o Pedro de Alc\u00e2ntara on the S\u00e3o Roque hill opposite \u2014 and the two of them face each other across Avenida da Liberdade with the particular mutual awareness of things that have been looking at each other for a long time.\nThe garden occupies the top of the Santana hill and is reached either via the Elevador do Lavra \u2014 Lisbon's oldest funicular, which stops immediately below \u2014 or by climbing Rua do Telhal from the direction of Avenida da Liberdade. Originally a private estate, named after the Visconde de Torel whose family owned it, the garden only opened to the public in the nineteen sixties and remains considerably less visited than most Lisbon viewpoints at the same altitude, despite having a direct view over Baixa, the full length of Avenida da Liberdade, and the Tagus beyond it on clear days.\nThe garden splits into two levels, with the upper section shaded by mature trees and the lower terrace holding a caf\u00e9, a pond \u2014 in summer converted to a small pool where people actually swim \u2014 and a bust of the pianist Vianna da Mota, who was one of the most celebrated Portuguese musicians of the late nineteenth century and who, on the evidence of his placement here, spent the afterlife with a reasonably good view.\n[beat]\nThe aristocratic mansions surrounding the garden fell into disrepair over the twentieth century and two have since been restored as the Torel Palace Hotel \u2014 so the hill that declined and the garden that somehow didn't decline together now occupy the same hilltop, which is an accurate description of how Lisbon tends to manage its heritage when nobody is paying close enough attention to get in the way."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.719278921754075,
+      "centroidLongitude": -9.141161698188698,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "miradouro",
+        "garden",
+        "torel",
+        "viewpoint",
+        "hidden-gem",
+        "avenida-da-liberdade",
+        "nature"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "421D7599-EBF8-4898-9F80-14B63783C74E",
+      "title": "Jer\u00f3nimos Monastery",
+      "shortDescription": "Nearly four minutes at the Manueline monastery a pepper tax built \u2014 Vasco da Gama's tomb, an empty king's sarcophagus, and the EU's Treaty of Lisbon.",
+      "longDescription": "The Jer\u00f3nimos Monastery was funded by a pepper tax \u2014 a five percent levy on the spice trade, with pepper, cinnamon, and cloves pointedly exempted so the Crown could keep that income. Vasco da Gama kept vigil on this exact ground before sailing for India in 1497; on his successful return, King Manuel I petitioned the Pope to build a monastery in thanks, broke ground on 6 January 1501, and paid for it with the wealth the voyage made possible. It took over a century and four principal architects to finish, in 1600.\n\nBefore the south portal, stand back and read the sculpture \u2014 designed by Jo\u00e3o de Castilho, who took over in 1517, it is one of the masterpieces of Manueline stone carving, saints and explorers and maritime motifs and Manuel's armillary sphere carved at a density without precedent in Portugal. Inside, the two-storey cloister of 1544 is among the finest spaces in the country, and its quiet marvel is that no two columns are decorated alike \u2014 an encyclopaedia of Manueline ornament you can read column by column.\n\nIn the church find three tombs: Vasco da Gama on the right, the poet Lu\u00eds de Cam\u00f5es on the left, and between them an empty carved sarcophagus for King Sebastian, who led fifteen thousand men into Morocco in 1578, lost at Ksar El Kebir, and whose body was never recovered \u2014 so his tomb has stood empty for 447 years. In 2007 the Treaty of Lisbon, the founding reform document of the European Union, was signed here, in a building funded by the trade routes that first connected Europe to Asia and Africa.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jeronimos_Monastery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jeronimos_Monastery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jeronimos_Monastery_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jeronimos_Monastery_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9E892181-63BE-47C8-B28B-0B6F8B0B08D0",
+          "order": 0,
+          "title": "Jer\u00f3nimos Monastery",
+          "caption": "Stand on Pra\u00e7a do Imp\u00e9rio in Bel\u00e9m, facing the long south facade of the Mosteiro dos Jer\u00f3nimos \u2014 the south portal to your right, the western entrance further left.",
+          "latitude": 38.69685922019846,
+          "longitude": -9.206611823196752,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jeronimos-monastery.mp3",
+          "audioDurationSeconds": 218,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jeronimos_Monastery_hero.webp",
+          "transcriptText": "The building you're about to enter was funded by a pepper tax \u2014 specifically a five percent levy on the spice trade, known as the Vintena da Pimienta, but with pepper, cinnamon, and cloves deliberately exempted because those were the most valuable spices and the Crown wanted to keep that income for itself.\nEverything here begins on this ground: you're on Pra\u00e7a do Imp\u00e9rio in Bel\u00e9m, with the south facade of the Mosteiro dos Jer\u00f3nimos directly facing you \u2014 a horizontal expanse of golden Lioz limestone that stretches nearly three hundred metres east to west along the waterfront, with the south portal at your right as you face the building and the western entrance further left. Vasco da Gama and his crew spent the night in vigil on this exact spot, at the small hermitage that stood here before the monastery, before departing for India in fourteen ninety-seven \u2014 and when he returned successfully, King Manuel I petitioned the Pope for permission to build a great monastery in thanks, began construction on the sixth of January fifteen oh one, and funded it with the wealth that the voyage had made possible. The building took over a century to complete, passing through the hands of four principal architects, and was finally finished in sixteen hundred.\nBefore you go through the south portal, stand back from it and read the sculpture.\nThe portal, designed by Jo\u00e3o de Castilho, who took over from the original architect Diogo de Boitaca in fifteen seventeen, is considered one of the masterpieces of Manueline stone carving in Portugal: saints, explorers, maritime motifs, royal symbols, and the armillary sphere that was King Manuel's personal emblem are all carved into the stone archway at a density of detail that has no precedent in Portuguese architecture before it. The Manueline style \u2014 named after Manuel I, blending Gothic structure with Renaissance decoration and maritime ornament \u2014 was invented, in a meaningful sense, in the process of building this monastery, as successive architects pushed the decorative programme further with each new section they completed.\nGo through the south door and straight to the cloister.\nThe two-storey cloister, completed in fifteen forty-four under Jo\u00e3o de Castilho, is one of the finest architectural spaces in Portugal, and the detail that rewards the closest attention is the one easiest to overlook: no two columns in the cloister are decorated alike, each carrying a unique carved programme that means the cloister functions simultaneously as an architectural space and as an encyclopaedia of Manueline ornament, which you can read column by column all the way around both levels.\nNow go into the church and find the three tombs in the transept: Vasco da Gama on the right, Lu\u00eds de Cam\u00f5es \u2014 Portugal's greatest poet \u2014 on the left, and between them, at the crossing, a large carved sarcophagus that is entirely empty, placed there to commemorate King Sebastian, who led fifteen thousand Portuguese soldiers into Morocco in fifteen seventy-eight, lost the Battle of Ksar El Kebir, and whose body was never recovered \u2014 so his tomb has been empty for four hundred and forty-seven years, which is a particular kind of monument.\n[beat]\nIn two thousand and seven, the Treaty of Lisbon \u2014 the foundational reform document of the European Union \u2014 was signed in this monastery, in a building that had been standing for five centuries and had been funded by the trade routes that first connected Europe to Asia and Africa, which is the kind of institutional coincidence that historians and European officials both seemed to appreciate, judging by the choice of venue."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 218,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.69685922019846,
+      "centroidLongitude": -9.206611823196752,
+      "city": "Lisbon",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "jeronimos",
+        "manueline",
+        "unesco",
+        "belem",
+        "vasco-da-gama",
+        "monastery",
+        "16th-century"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3A61D9A3-8787-4AD2-B754-F33B3FFB03EB",
+      "title": "LX Factory",
+      "shortDescription": "Just over three minutes through a nineteenth-century textile factory turned creative complex, with bridge traffic overhead and a bookshop in the old print hall.",
+      "longDescription": "The site was chosen in 1846 because it was close to the river, the city centre, and the main transport routes \u2014 the same logic that makes it work as a creative hub 175 years later. The entrance is in Alc\u00e2ntara, with the 25 de Abril bridge close enough overhead that you can hear the traffic from the inner courtyards: the most literal illustration of how completely the area was bypassed once industry left in the 1990s. The complex covers twenty-three thousand square metres of nineteenth-century factory buildings \u2014 brick walls, iron columns, high windows, loading bays, all intact \u2014 running as a mixed creative and commercial site since 2009, a revitalisation that deliberately preserved the industrial aesthetic rather than replacing it.\n\nThe Companhia de Fia\u00e7\u00e3o e Tecidos Lisbonense established the original textile factory here in 1846; the site later passed through food processing and printing before a decade of disuse. The printing history reads most clearly in the Ler Devagar bookshop, occupying a former print hall, its shelves rising to the full factory ceiling with a rusted bicycle suspended on wires above the reading tables. Street art accumulating on the brick and iron turns the complex into a continuously changing surface \u2014 one of Europe's more successful examples of a creative district that looks genuinely inhabited rather than recently designed to appear that way.\n\nThe Sunday market, ten until roughly six, is when it all converges \u2014 local producers between fashion pop-ups and design studios, bridge traffic overhead, the river a ten-minute walk south \u2014 the complex at its fullest and most itself.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/LX_Factory_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/LX_Factory_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/LX_Factory_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/LX_Factory_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "29BAB630-F3E3-4264-8023-01F880438D2A",
+          "order": 0,
+          "title": "LX Factory",
+          "caption": "Enter on Rua Rodrigues de Faria in Alc\u00e2ntara, beneath the 25 de Abril bridge \u2014 then follow the main axis through the old factory buildings.",
+          "latitude": 38.70350940772495,
+          "longitude": -9.178711466847515,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lx-factory.mp3",
+          "audioDurationSeconds": 193,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/LX_Factory_hero.webp",
+          "transcriptText": "The site was chosen in eighteen forty-six because it was close to the river, the city centre, and the main transportation routes \u2014 and the same logic that made it a good industrial location is the reason it works as a creative hub a hundred and seventy-five years later.\nThe entrance is on Rua Rodrigues de Faria, in Alc\u00e2ntara, with the Ponte Vinte e Cinco de Abril overhead \u2014 close enough overhead, in fact, that you can hear the traffic on the bridge from the inner courtyards, and looking up from the right angle you'll see the approach road passing directly above the complex, which is the most literal possible illustration of how completely the area was bypassed once the industrial use ended in the nineteen nineties. The complex covers twenty-three thousand square metres across a cluster of nineteenth-century factory buildings \u2014 brick walls, iron columns, high windows, loading bays, all intact \u2014 and has been operating as a mixed creative and commercial site since officially opening in two thousand and nine, after a revitalisation that began the previous year and was explicitly designed to preserve the industrial aesthetic rather than replace it.\nFollow the main axis through from the entrance and let the complex reveal itself in sections.\nThe Companhia de Fia\u00e7\u00e3o e Tecidos Lisbonense \u2014 Lisbon's weaving and textile company \u2014 established the original factory here in eighteen forty-six, making it one of the most significant manufacturing facilities in Lisbon's industrial history, and the site subsequently passed through food processing companies and printing houses before being abandoned to a decade of disuse so complete that a major road approach to the bridge overhead was built without the complex apparently registering as something worth routing around or connecting to. The printing history is the most directly legible in the existing fabric: the Ler Devagar bookshop occupies a former print hall, its shelves rising to the full height of the old factory ceiling, with a rusted bicycle suspended on wires above the reading tables as a memorial to the kind of decision-making that happens when a bookseller is given a space large enough to think in.\nStop at the Ler Devagar if you haven't already, because the building's scale and the books together make an argument that neither would make alone.\nThe street art accumulating on the interior and exterior walls \u2014 commissioned and otherwise \u2014 turns the complex into a continuously changing surface that the industrial buildings provide the ideal substrate for, rough brick and rusting iron being more accommodating of painted imagery than glass or polished concrete, and the overall visual character of LX Factory is one of the more successful examples anywhere in Europe of a creative district that looks genuinely inhabited rather than recently designed to appear that way.\n[beat]\nThe Sunday market, running from ten in the morning until roughly six in the evening, is the moment when all of this converges in the most direct way \u2014 local producers selling food and plants in the space between fashion pop-ups and design studios, with the bridge traffic audible overhead and the river a ten-minute walk to the south, and the complex at its fullest and most itself, which is a reasonable description of what the site was always good at doing, whether the product was fabric or coffee or second-hand ceramics."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 193,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.70350940772495,
+      "centroidLongitude": -9.178711466847515,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "lx-factory",
+        "alcantara",
+        "industrial-heritage",
+        "creative-hub",
+        "street-art",
+        "bookshop",
+        "market"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FDE50398-FFF7-48BA-8119-BEAB09A95650",
+      "title": "Lisbon Cathedral",
+      "shortDescription": "Under two minutes at the cathedral Lisbon's first bishop \u2014 an Englishman \u2014 was installed in, built on the city's main mosque in 1147.",
+      "longDescription": "Lisbon's first bishop was an Englishman: Gilbert of Hastings, an Anglo-Norman monk who joined the crusader force that helped Afonso Henriques take the city in 1147 and then simply stayed. The cathedral on Largo da S\u00e9, directly on the number 28 tram route, was commissioned by Afonso Henriques immediately after the conquest, built on the site of the main mosque, with Gilbert installed as bishop before the campaign had properly ended. Its current look is largely a twentieth-century restoration that stripped away Baroque additions and rebuilt the rose window from fragments of the original destroyed in 1755 \u2014 a collage of medieval stone rearranged into coherence nine centuries on.\n\nInside, the baptismal font near the entrance is reputed to be the one in which Saint Anthony of Lisbon was baptised in 1195 \u2014 the saint born less than two hundred metres from this door who became patron saint of Portugal and, improbably, of lost things worldwide. In the cloister, excavations begun in 1990 revealed a Roman road lined with shops, the walls of an Islamic mosque, and structures from the seventh century BC: two thousand years of religious and commercial Lisbon beneath the medieval cathedral, mostly invisible, mostly intact, and visible through a glass panel in the cloister floor.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Lisbon_Cathedral_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Lisbon_Cathedral_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Lisbon_Cathedral_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Lisbon_Cathedral_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "BF597D7F-28F4-4081-A724-77A37DF992DC",
+          "order": 0,
+          "title": "Lisbon Cathedral",
+          "caption": "Stand on Largo da S\u00e9 in lower Alfama, on the number 28 tram route, before the two Romanesque towers of the cathedral's main facade.",
+          "latitude": 38.70969651727209,
+          "longitude": -9.133630472081729,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lisbon-cathedral.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Lisbon_Cathedral_hero.webp",
+          "transcriptText": "Lisbon's first bishop was an Englishman \u2014 an Anglo-Norman monk named Gilbert of Hastings who joined the crusader force that helped Afonso Henriques take the city in eleven forty-seven and then simply stayed, which is one of the less-expected consequences of a siege.\nThe cathedral is on Largo da S\u00e9, in the lower Alfama, directly on the number twenty-eight tram route and visible from some distance by the two Romanesque towers flanking the main facade \u2014 the building that Afonso Henriques commissioned immediately after the conquest, built on the site of the city's main mosque, with Gilbert of Hastings installed as its first bishop before the military campaign had even properly concluded. The current appearance is largely the result of a twentieth-century restoration that stripped away later Baroque additions and reconstructed the rose window above the main entrance from fragments of the original, destroyed in seventeen fifty-five \u2014 a rose window that is, in other words, a collage of medieval stone rearranged into coherence nine hundred years after it was first made.\nGo inside and find the baptismal font in the nave.\nThe font near the entrance is reputed to be the one in which Saint Anthony of Lisbon was baptised in eleven ninety-five \u2014 the saint born less than two hundred metres from this door who became the patron saint of Portugal and, rather more improbably, the patron saint of lost things worldwide.\n[beat]\nIn the cloister, excavations begun in nineteen ninety revealed a Roman road with shops on both sides, the walls of an Islamic mosque, and structures dating from the seventh century BC \u2014 which means the ground beneath this medieval cathedral contains two thousand years of religious and commercial Lisbon, mostly invisible, mostly intact, and entirely accessible through a glass panel in the cloister floor."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.70969651727209,
+      "centroidLongitude": -9.133630472081729,
+      "city": "Lisbon",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "cathedral",
+        "se",
+        "alfama",
+        "romanesque",
+        "afonso-henriques",
+        "saint-anthony",
+        "medieval"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FE2C76C3-3A27-46B8-8DB5-89C718B311AA",
+      "title": "MAAT \u2014 Museum of Art, Architecture and Technology",
+      "shortDescription": "Three and a half minutes at Amanda Levete's riverside museum \u2014 a tiled white wave that bends light off the Tagus into the galleries below.",
+      "longDescription": "Amanda Levete's account of MAAT is the most precise: the waterfront is so essential that the design literally reflects it, and she meant that physically. The museum sits on a 3.8-hectare site on the Tagus in Bel\u00e9m \u2014 two buildings at opposite ends, one new and one old. The new one is an undulating white ellipse reading from the promenade as a single curved surface rising from the river's edge to a rooftop terrace, clad in fifteen thousand three-dimensional ceramic tiles that catch the light differently through the day. Behind it stands the Central Tejo, the former power station that generated Lisbon's electricity, now renovated as additional exhibition space.\n\nEnter at river level. The main gallery is lit partly by natural light through an overhanging roof that projects out over the river, angled to bounce sunlight off the surface of the Tagus and down into the gallery \u2014 so the light inside is never fixed, changing with the river, the cloud, and the hour. Before going down, walk up to the rooftop: a public park, ticket or not, curving from the promenade to the building's highest point, taking in the estuary, the 25 de Abril bridge, and the south bank. The commission specified restoring the lost connection between city and waterfront, and the rooftop is its most legible expression.\n\nThat the campus incorporates a 1920s coal-fired power station alongside a twenty-first-century art building is not the obvious curatorial decision \u2014 but together the two make an argument about technology, energy, and culture that neither could make alone.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MAAT_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MAAT_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MAAT_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MAAT_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MAAT_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MAAT_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "E2A21C7E-CFF7-436F-AFAB-6A2720AE9326",
+          "order": 0,
+          "title": "MAAT \u2014 Museum of Art, Architecture and Technology",
+          "caption": "Approach along the Bel\u00e9m riverfront promenade, toward the undulating white ellipse of MAAT rising from the water's edge \u2014 the old power station beyond it.",
+          "latitude": 38.696023516345285,
+          "longitude": -9.193344180824413,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/maat.mp3",
+          "audioDurationSeconds": 216,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MAAT_hero.webp",
+          "transcriptText": "The architect's description of this building contains the most precise account of what she was trying to do: the waterfront, Amanda Levete said, is so essential to the project that the design literally reflects it \u2014 and she meant that in the most physical sense possible.\nYou are on the Tagus riverfront in Bel\u00e9m, the historic district west of Lisbon's city centre where the Monument to the Discoveries and the Jer\u00f3nimos Monastery stand a short walk away, and the MAAT campus occupies a three-point-eight-hectare site directly on the water \u2014 two buildings, one new and one old, at opposite ends of the site. The new building you're approaching is the undulating white ellipse that reads, from the waterside promenade, as a single curved surface rising from the river's edge to a rooftop terrace, covered in fifteen thousand white three-dimensional ceramic tiles that catch the light differently at different times of day and in different weather. The building behind it, at the far end of the campus, is the Central Tejo power station \u2014 the former generator of Lisbon's electricity, now renovated as additional exhibition space \u2014 and the two buildings together constitute a museum that is, simultaneously, about art, architecture, technology, and the industrial history of the city's relationship with energy.\nGo in through the main entrance, which is set into the side of the curved building at river level.\nThe main gallery \u2014 the largest of the four interconnected exhibition spaces \u2014 is below the ticket desk and lit partly by natural light that enters through the overhanging roof, which projects out over the river and is angled to bounce sunlight off the surface of the Tagus and reflect it down into the gallery below, so the lighting condition inside the building is not fixed but changes with the river's surface, with the cloud cover, and with the time of day in a way that no artificial system can replicate. Levete's description of this was precise: the roof creates shade, and simultaneously uses that shade to direct river light inward, which means the building is doing two apparently contradictory things with sunlight at the same time, which is the kind of architectural problem that sounds simple until someone actually solves it.\nBefore you go downstairs, walk up to the rooftop terrace.\nThe roof is a public park \u2014 accessible whether or not you have a museum ticket \u2014 that curves from the waterside promenade up to the highest point of the building, and the view from there takes in the Tagus estuary, the April Twenty-Fifth Bridge to the east, and the hills of the south bank beyond the water. This is not incidental: the museum's commission from the EDP Foundation specified restoring the historic connection between the city and the waterfront that had been lost when industrial use of the site closed it off from public access, and the rooftop park is the most legible expression of that intention, because it gives anyone who walks along the promenade a way onto and over a building that would otherwise simply be a wall between them and the river.\n[beat]\nThe Central Tejo power station at the far end of the campus was originally built to generate electricity for Lisbon's trams and has been an industrial heritage site and electricity museum for decades, long predating MAAT, and the decision to incorporate it into the museum complex rather than build a single new institution is worth a moment's thought \u2014 because the combination of a twenty-first-century contemporary art building and a coal-fired power station from the nineteen twenties is not the most obvious curatorial decision, and yet the two buildings together make an argument about the relationship between technology, energy, and culture that neither one could make alone."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 216,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.696023516345285,
+      "centroidLongitude": -9.193344180824413,
+      "city": "Lisbon",
+      "primaryCategory": "architecture",
+      "tags": [
+        "maat",
+        "amanda-levete",
+        "museum",
+        "belem",
+        "architecture",
+        "waterfront",
+        "ceramic-tiles"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F1F109E7-BCE2-4AFE-98B1-844DCC77A56D",
+      "title": "Miradouro da Senhora do Monte",
+      "shortDescription": "Three minutes at the highest viewpoint in Lisbon \u2014 castle, river, and bridge laid out, with a childbirth-easing stone chair in the chapel behind.",
+      "longDescription": "This is the highest viewpoint in Lisbon's historic centre, the place from which everything else becomes a manageable idea rather than a confusing series of hills. The chapel of Nossa Senhora do Monte stands behind you; an azulejo panel names the landmarks, and the view runs west from S\u00e3o Jorge Castle in the middle distance down to the Baixa, the Tagus curving south past the 25 de Abril bridge and the Cristo Rei statue, the pastel rooftops of Alfama below. Use the tile panel before you look without it \u2014 having names for what you see is the difference between standing somewhere beautiful and understanding where you are.\n\nThe chapel has occupied this hill since the twelfth century, founded after the 1147 reconquest; tradition holds Afonso Henriques camped here during the siege, making this a site of military importance 870 years before it became a viewpoint. Rebuilt in the eighteenth century after 1755, it is dedicated to the Virgin and to Saint Gens, an early bishop said to have been martyred here. Inside, a stone chair believed used by the saint was held to ease childbirth \u2014 persuasively enough that Queen Maria Ana, pregnant, sat in it in 1711.\n\nThe best sunset is in autumn, when the sun sets on the river's horizon and turns the Tagus briefly copper; arrive thirty to forty-five minutes before to get the directional light and the space before the crowd. The Miradouro da Gra\u00e7a is a three-minute walk downhill for a wider, closer angle on the same view \u2014 neither charges admission.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_Senhora_do_Monte_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_Senhora_do_Monte_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_Senhora_do_Monte_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2299B551-F552-4D11-8BF1-9EBC47FD1D0E",
+          "order": 0,
+          "title": "Miradouro da Senhora do Monte",
+          "caption": "Stand at the top of the Gra\u00e7a district, the chapel of Nossa Senhora do Monte behind you, the azulejo panel naming the landmarks to one side and the city running west below.",
+          "latitude": 38.719235211707506,
+          "longitude": -9.13277049556066,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/miradouro-senhora-do-monte.mp3",
+          "audioDurationSeconds": 187,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_Senhora_do_Monte_hero.webp",
+          "transcriptText": "This is the highest viewpoint in Lisbon, which makes it, on a clear afternoon or evening, the place from which everything else in the city becomes a manageable idea rather than a confusing series of hills and streets.\nCatch your breath and orient yourself: you're at the top of the Gra\u00e7a district, at the highest point in Lisbon's historic centre, with the chapel of Nossa Senhora do Monte \u2014 Our Lady of the Mountain \u2014 directly behind you, the azulejo tile panel listing the visible landmarks somewhere to your left or right, and the view running west across the city from S\u00e3o Jorge Castle in the middle distance to the Baixa below it, the Tagus curving south with the Ponte Vinte e Cinco de Abril bridge and the Cristo Rei statue beyond, the pastel rooftops of Alfama on the slope to your right, and the northern districts of the city beyond the lower Miradouro da Gra\u00e7a below this point. The tile panel is worth using before you look without it, because having names for what you're seeing changes the experience from overwhelming to specific, which is the difference between standing somewhere beautiful and actually understanding where you are.\nThe chapel behind you has occupied this hill since the twelfth century, founded after the Christian reconquest of Lisbon in eleven forty-seven, and tradition holds that Afonso Henriques \u2014 Portugal's first king \u2014 camped here during the siege of the city that preceded the conquest, which would make this hill a site of military importance eight hundred and seventy years before it became a tourist viewpoint. The current chapel was rebuilt in the eighteenth century after the seventeen fifty-five earthquake destroyed the earlier structure, and it is dedicated not only to the Virgin but specifically to Saint Gens, an early bishop of Lisbon said to have been martyred on this site in the third century.\nGo inside the chapel if it's open, and look for the stone chair in the interior.\nMedieval tradition held that sitting in this chair \u2014 which is believed to have been used by Saint Gens \u2014 would ease the pain of childbirth, and the belief was evidently persuasive enough that Queen Dona Maria Ana, wife of King Jo\u00e3o the Fifth, sat in the chair in seventeen eleven while pregnant, which is the kind of detail that suggests the superstition had achieved a level of social respectability that most folk beliefs never manage.\nNow come back outside and face the view properly.\nThe best sunset from this viewpoint is in autumn, when the sun tracks lower in the sky and sets on the river's horizon rather than above the city, and the light at that angle catches the Tagus and turns it briefly copper before the city's lights begin to replace it \u2014 and if you're here in the late afternoon in any season, arriving thirty to forty-five minutes before the sun goes down gives you the light while it's still directional rather than diffuse, and gives you the space before the later crowd arrives.\n[beat]\nThe Miradouro da Gra\u00e7a is a three-minute walk directly downhill from here and offers a slightly different angle on the same view \u2014 wider toward the east, closer to the castle \u2014 so if you have the time, walking between the two in either direction as the light changes is not the worst way to spend an hour in Lisbon, and neither viewpoint charges admission for the service of showing you the city from above."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 187,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.719235211707506,
+      "centroidLongitude": -9.13277049556066,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "miradouro",
+        "graca",
+        "viewpoint",
+        "sunset",
+        "chapel",
+        "panorama",
+        "highest"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "03A50FE4-0B29-470E-820F-95EA3905A7D1",
+      "title": "Miradouro de S\u00e3o Pedro de Alc\u00e2ntara",
+      "shortDescription": "Under two minutes at a two-level Bairro Alto belvedere, its 1952 tile map keyed to the castle hill across the valley.",
+      "longDescription": "The azulejo tile map on the balustrade tells you what everything is \u2014 more useful than it sounds when you're standing between two hills looking at a third, in a city that organises itself around slopes rather than grids. The garden sits at the top of Rua de S\u00e3o Pedro de Alc\u00e2ntara on the western edge of Bairro Alto, reached by walking up from the Chiado or by the Gl\u00f3ria funicular, running from Pra\u00e7a dos Restauradores since 1885 and depositing you beside the upper terrace in about three minutes. The view faces northeast across the valley \u2014 Baixa, Avenida da Liberdade, S\u00e3o Jorge Castle in the middle distance, Gra\u00e7a and Alfama stacking behind \u2014 all readable against the 1952 panel that maps each element to a named key.\n\nThe garden itself splits into two levels: the upper terrace with benches, kiosk caf\u00e9s, and the tile map; the lower geometric garden of busts from Greco-Roman mythology among the hedges, including a Minerva and a Ulysses, whose supposed founding of Lisbon is one of those origin stories the city holds onto with more affection than certainty. Directly across the street is the Solar do Vinho do Porto, a Port wine institute in an eighteenth-century building where you can work through a menu of over three hundred Ports, some dating to 1937.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_Sao_Pedro_Alcantara_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_Sao_Pedro_Alcantara_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_Sao_Pedro_Alcantara_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "33588E41-0F2A-4A84-9D2E-764CBBAB364A",
+          "order": 0,
+          "title": "Miradouro de S\u00e3o Pedro de Alc\u00e2ntara",
+          "caption": "Stand at the top of Rua de S\u00e3o Pedro de Alc\u00e2ntara, on the western edge of Bairro Alto \u2014 the azulejo tile map on the balustrade naming the skyline opposite.",
+          "latitude": 38.71479406744801,
+          "longitude": -9.144397666416067,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/miradouro-sao-pedro-alcantara.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_Sao_Pedro_Alcantara_hero.webp",
+          "transcriptText": "The azulejo tile map on the balustrade tells you what everything is \u2014 which is more useful than it sounds when you're standing between two hills looking at a third, in a city that organises itself around slopes rather than grids.\nThe garden sits at the top of Rua de S\u00e3o Pedro de Alc\u00e2ntara, on the western edge of Bairro Alto, and you almost certainly arrived either by walking up from the Chiado or by the Gl\u00f3ria funicular, which has been running from Pra\u00e7a dos Restauradores up this hill since eighteen eighty-five and deposits you directly beside the upper garden terrace in approximately three minutes. The view faces northeast across the valley \u2014 Baixa, the Avenida da Liberdade, and the castle hill beyond, with S\u00e3o Jorge Castle visible in the middle distance and the hills of Gra\u00e7a and Alfama stacking up behind it, all of it readable against the azulejo panel added in nineteen fifty-two that maps each element of the skyline against a named key.\nThe garden itself splits into two levels \u2014 the upper terrace with benches, kiosk caf\u00e9s, and the tile map, and the lower geometric garden reached by steps, where busts of figures from Greco-Roman mythology sit rather unexpectedly among the hedges, including a Minerva and a representation of Ulysses, whose supposed founding of Lisbon is one of those origin stories the city has always held onto with more affection than certainty.\n[beat]\nDirectly across the street is the Solar do Vinho do Porto, a Port wine institute housed in an eighteenth-century building where you can sit down and work through the menu of over three hundred different Ports, some of them dating to nineteen thirty-seven \u2014 and if the tile map has done its job, the direction in which the Douro Valley wines had to travel to reach this particular glass is visible from where you're standing."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71479406744801,
+      "centroidLongitude": -9.144397666416067,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "miradouro",
+        "bairro-alto",
+        "viewpoint",
+        "azulejo",
+        "gloria-funicular",
+        "port-wine",
+        "panorama"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6ACC3176-A4EF-4009-A772-E4085B4C2EA2",
+      "title": "Pal\u00e1cio da Justi\u00e7a",
+      "shortDescription": "Under two minutes at a modernist courthouse that quietly refused the Estado Novo's monumental expectations.",
+      "longDescription": "The Pal\u00e1cio da Justi\u00e7a was planned as the centrepiece of a complete justice quarter \u2014 a formal forum bringing all the city's courts together \u2014 but only the civil courts and the public square were ever built, the rest abandoned somewhere between the drawing board and 1970. The architects, Janu\u00e1rio Godinho and Jo\u00e3o Andresen, faced a political decision when the commission came in the 1950s: an Estado Novo government expected civic architecture to be monumental and authoritarian in the manner of most contemporary justice buildings across Europe. What they produced instead was a modernist building of, in the Trienal de Lisboa's words, marked originality, breaking explicitly with the heavy classical tradition of other Portuguese courthouses.\n\nInside, the interior was designed as a complete environment, all furnishings made specifically for the building, and the atrium facades carry expressionist windows that shift the light through the day \u2014 which the architects described as a deliberate symbolic allusion to transparency, on the reasonable grounds that a justice building making natural light visible says something about what justice is supposed to be. The larger forum meant to surround it never arrived, leaving the civil courts standing somewhat alone in their square \u2014 a building designed to be part of something larger that turned out to be more interesting on its own.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_da_Justica_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_da_Justica_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_da_Justica_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_da_Justica_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "C4F57E1C-867B-442F-A3E8-21F344B6AE91",
+          "order": 0,
+          "title": "Pal\u00e1cio da Justi\u00e7a",
+          "caption": "Stand on Rua Marqu\u00eas de Fronteira, near Campo de Santana, before the modernist courthouse and its public square.",
+          "latitude": 38.7322897970475,
+          "longitude": -9.157506274429565,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/palacio-da-justica.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_da_Justica_hero.webp",
+          "transcriptText": "This building was planned as the centrepiece of a complete justice quarter for Lisbon \u2014 a formal forum that would bring all the city's courts together in one civic complex \u2014 and only the civil courts and the public square were ever built, the rest of the plan having been quietly abandoned somewhere between the drawing board and nineteen seventy.\nThe building is on Rua Marqu\u00eas de Fronteira, near Campo de Santana, and the architects were Janu\u00e1rio Godinho and Jo\u00e3o Andresen \u2014 two architects who, when the commission came in the nineteen fifties, had a political decision to make about what kind of building they were going to deliver to a Estado Novo government that expected civic architecture to be monumental and authoritarian in the manner of most contemporary justice buildings across Europe. What they produced instead was a modernist building of \u2014 in the words of the Trienal de Lisboa \u2014 marked originality, with a volume and expression that broke explicitly with the heavy classical tradition of other Portuguese courthouses.\nGo inside if the courts are accessible and look at the atrium.\nThe interior was designed as a complete environment \u2014 all the furnishings were made specifically for this building \u2014 and the atrium facades are defined by expressionist windows that create a shifting play of light inside throughout the day, which the architects described as a deliberate symbolic allusion to transparency, on the reasonable grounds that a justice building whose interior makes natural light visible is making a statement about what justice is supposed to be.\n[beat]\nThe larger forum that was meant to surround this building never arrived, which left the civil courts standing somewhat alone in their square \u2014 a modernist building designed to be part of something larger, which turned out to be more interesting on its own."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.7322897970475,
+      "centroidLongitude": -9.157506274429565,
+      "city": "Lisbon",
+      "primaryCategory": "architecture",
+      "tags": [
+        "courthouse",
+        "modernism",
+        "estado-novo",
+        "architecture",
+        "campo-de-santana",
+        "civic",
+        "1970"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "52187B20-0857-4F93-AF49-CA085BDF288D",
+      "title": "Past\u00e9is de Bel\u00e9m",
+      "shortDescription": "Three minutes at the 1837 bakery with the only legally protected Pastel de Bel\u00e9m \u2014 a recipe born from a monastery laundry problem.",
+      "longDescription": "The recipe was invented to solve a laundry problem. In the early nineteenth century the Hieronymite monks of the Jer\u00f3nimos used egg whites to starch their habits, leaving a systematic surplus of yolks; the recipe that used them up \u2014 custard, puff pastry, very hot oven, cinnamon \u2014 was sold to visitors arriving by steamboat from Lisbon, in the days when Bel\u00e9m was far enough from the city that the river was the practical way there. When the 1834 Liberal Revolution shut down the religious orders and expelled the monks, a confectioner sold the recipe to Domingos Rafael Alves, who owned the sugar refinery next door and opened the bakery in 1837. His descendants have run it ever since, the full recipe known to only three people and prepared every day behind locked doors.\n\nGo in and find a seat in the azulejo-lined rooms that extend back from the counter, each decorated with blue-and-white panels of Bel\u00e9m's history. The tart \u2014 puff pastry shell, creamy custard, baked very hot for its dark caramelised spots, served warm with cinnamon and icing sugar \u2014 is legally distinguished from every other custard tart in Portugal by the trademark Pastel de Bel\u00e9m: you can buy a pastel de nata anywhere, but this is the only place selling a Pastel de Bel\u00e9m. The bakery sells over twenty thousand tarts on a normal weekday and closer to forty thousand at weekends, so the queue moves faster than it looks \u2014 and the solution to a surplus of monastic egg yolks has turned out to be one of the more consequential culinary decisions in Portuguese history.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Pasteis_de_Belem_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Pasteis_de_Belem_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Pasteis_de_Belem_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "F92759B8-449A-4947-A2E1-F9EBFA5E2620",
+          "order": 0,
+          "title": "Past\u00e9is de Bel\u00e9m",
+          "caption": "Find the Antiga Confeitaria de Bel\u00e9m on Rua de Bel\u00e9m, a short walk west of the Jer\u00f3nimos Monastery \u2014 you'll know it by the queue and the smell of cinnamon.",
+          "latitude": 38.697729583497896,
+          "longitude": -9.203272502224786,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pasteis-de-belem.mp3",
+          "audioDurationSeconds": 184,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Pasteis_de_Belem_hero.webp",
+          "transcriptText": "The recipe for these tarts was invented as a solution to a laundry problem \u2014 which is, admittedly, an unusual origin for something declared one of the Seven Wonders of Portuguese Gastronomy.\nThe building you're looking for is on Rua de Bel\u00e9m, a short walk west of the Jer\u00f3nimos Monastery on the same street, the Antiga Confeitaria de Bel\u00e9m \u2014 the old Bel\u00e9m confectionery \u2014 which has been on this site since eighteen thirty-seven and which you'll recognise by the queue outside it and the smell of cinnamon and hot pastry that precedes it by several metres. The monastery is the relevant reference point: in the early nineteenth century, the Hieronymite monks used egg whites to starch their habits and vestments, which left a systematic surplus of egg yolks, and the recipe that used those yolks up \u2014 custard, puff pastry, very hot oven, cinnamon \u2014 was what the monks began selling to the visitors who arrived by steamboat from Lisbon, because in those days Bel\u00e9m was so far from the city that the river was the practical means of getting there.\nGo inside and find a seat in one of the tiled rooms while you wait, because the building is larger than the exterior suggests.\nThe azulejo-lined dining rooms extend back from the shop counter in a series of interconnected chambers, each decorated with hand-painted blue-and-white tile panels depicting Bel\u00e9m's history and the monastery's relationship to the neighbourhood, and the effect is of a place that has been actively maintaining its own context rather than simply serving pastry. In eighteen thirty-four, when the Liberal Revolution shut down Portugal's religious orders and expelled the monks from the Jer\u00f3nimos, a confectioner from the monastery sold the recipe to Domingos Rafael Alves, who owned a sugar refinery next door \u2014 and Alves opened the bakery in eighteen thirty-seven, the same year the recipe passed into commercial hands, and his descendants have been running it ever since, with the full recipe known, according to the current owner Pedro Clarinha, to only three people in the world, and prepared every day behind locked doors.\nThe tart itself \u2014 puff pastry shell, creamy egg custard filling, baked at a very high temperature to produce the characteristic dark caramelised spots on the surface \u2014 is served warm with cinnamon and icing sugar on the side, and the version made here is legally distinguished from all other custard tarts in Portugal by the trademark designation Pastel de Bel\u00e9m, which means you can buy a pastel de nata in any caf\u00e9 in the country but this is the only place from which you can buy a Pastel de Bel\u00e9m, and the trademark is the shop's way of stating, in intellectual property terms, that these are not the same thing.\n[beat]\nThe bakery sells over twenty thousand tarts on a normal weekday and closer to forty thousand at weekends, which suggests that the queue you're standing in, while real and occasionally dispiriting, is moving rather faster than it looks \u2014 and that the solution to a surplus of monastic egg yolks in the early nineteenth century has turned out, in the long run, to be one of the more consequential culinary decisions in Portuguese history."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 184,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.697729583497896,
+      "centroidLongitude": -9.203272502224786,
+      "city": "Lisbon",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "pasteis-de-belem",
+        "custard-tart",
+        "belem",
+        "bakery",
+        "food",
+        "monastery",
+        "1837"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "03D221D8-BC4A-4F95-806F-CF9094C28EA7",
+      "title": "Percurso Ribeirinho de Loures",
+      "shortDescription": "Two minutes on a six-kilometre boardwalk built over saltmarsh without draining it \u2014 flamingos at the water's edge, the city behind.",
+      "longDescription": "This walkway was built over a wetland without draining it, which sounds straightforward until you read that it required 4,612 wooden piles driven to an average depth of eight metres, plus 192 micro-piles at twenty-five, just to keep the boards above the water. The Percurso Ribeirinho de Loures is a 6.1-kilometre elevated timber walkway along the Tagus in the municipality of Loures, running from the mouth of the Tranc\u00e3o \u2014 where a new pedestrian bridge connects to the Parque das Na\u00e7\u00f5es side \u2014 northeast to Santa Iria de Az\u00f3ia, where the trail ends near the train station and the return by rail takes about ten minutes. It opened on 7 September 2023, a thirteen-million-euro project accelerated by the preparations for World Youth Day on the adjacent land.\n\nThe design, by Topiaris Landscape Architecture, turned the marshland's constraints \u2014 no draining, no heavy foundations, minimal disruption \u2014 into assets rather than obstacles. Fourteen timber-slatted shade tunnels cut the summer heat and make the six kilometres read as considered design; four birdwatching and rest stations give reasons to stop and look toward the Tagus Estuary Natural Reserve, where flamingos are frequently spotted near the Tranc\u00e3o mouth. The walkway links Lisbon to Vila Franca de Xira on foot and by bicycle for the first time \u2014 and standing on a wooden bridge over saltmarsh six kilometres from the centre, with flamingos at the water's edge, makes the ambition feel less like a press release and more like the right idea.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Percurso_Ribeirinho_de_Loures_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Percurso_Ribeirinho_de_Loures_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Percurso_Ribeirinho_de_Loures_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Percurso_Ribeirinho_de_Loures_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Percurso_Ribeirinho_de_Loures_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "B53DA63E-8F76-4A58-951C-44DCC4F1A509",
+          "order": 0,
+          "title": "Percurso Ribeirinho de Loures",
+          "caption": "Stand on the elevated wooden walkway along the Tagus in Loures \u2014 running from the mouth of the Tranc\u00e3o River northeast toward Santa Iria de Az\u00f3ia.",
+          "latitude": 38.79818065155435,
+          "longitude": -9.0925650286466,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/percurso-ribeirinho-loures.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Percurso_Ribeirinho_de_Loures_hero.webp",
+          "transcriptText": "This walkway was built over a wetland without draining it, which sounds straightforward until you read that the structure required four thousand six hundred and twelve wooden piles driven to an average depth of eight metres, plus a further hundred and ninety-two micro-piles at twenty-five metres, just to keep the boards above the water.\nThe Percurso Ribeirinho de Loures is a six-point-one kilometre elevated wooden walkway along the Tagus waterfront in the municipality of Loures, running from the mouth of the Tranc\u00e3o River \u2014 where a new pedestrian bridge connects it to the Parque das Na\u00e7\u00f5es side of the river \u2014 northeast to Santa Iria de Az\u00f3ia, where the trail ends near the train station and the return journey by rail takes around ten minutes. Inaugurated on the seventh of September twenty twenty-three, after a construction project that came in at thirteen million euros, the trail was accelerated by the preparations for World Youth Day, whose events took place on the adjacent land.\nThe design is by Topiaris Landscape Architecture, whose team described their approach with a phrase worth holding onto: the constraints imposed by the marshland habitat \u2014 no draining, no heavy foundations, minimal ecological disruption \u2014 became assets for landscape design inspiration rather than obstacles to work around. The fourteen shade tunnels of timber-slatted construction are the most visible expression of that thinking, functional enough to cut the summer heat and specific enough to make the six kilometres read as a considered design rather than a municipal path, while the four birdwatching and rest stations give you reasons to stop and look outward toward the Tagus Estuary Natural Reserve, where flamingos are frequently spotted near the Tranc\u00e3o mouth.\n[beat]\nThe walkway links Lisbon to Vila Franca de Xira by foot and bicycle for the first time, which is the kind of infrastructure ambition that tends to get buried in press releases \u2014 but standing on a wooden bridge over saltmarsh six kilometres from the city centre, with flamingos at the water's edge, makes the ambition feel rather less like a press release and rather more like the right idea."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.79818065155435,
+      "centroidLongitude": -9.0925650286466,
+      "city": "Loures",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "loures",
+        "boardwalk",
+        "tagus",
+        "wetland",
+        "flamingos",
+        "nature-reserve",
+        "walking"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4398D11B-9E07-4AFA-B90A-455384C3F434",
+      "title": "Pra\u00e7a Dom Pedro IV (Rossio Square)",
+      "shortDescription": "Under two minutes on Rossio \u2014 Lisbon's medieval commons, its wave-pattern paving, and a theatre built where the Inquisition's court once stood.",
+      "longDescription": "The square has been called Rossio since the Middle Ages \u2014 the word simply means commons, large public ground \u2014 and it has been the most central space in Lisbon so long that its official name, Pra\u00e7a Dom Pedro IV, stays largely decorative. It sits at the north end of the Pombaline Baixa grid, the Teatro Nacional Dona Maria II filling the entire north side, the twenty-three-metre column of Dom Pedro IV at the centre, the black-and-white wave-pattern mosaic underfoot \u2014 designed to resemble the ocean and reliably disorientating to late-night pedestrians since the 1840s \u2014 and two bronze fountains imported from France in 1889.\n\nThe theatre replaced the Estaus Palace, where the Portuguese Inquisition ran its court and staged Portugal's first auto-da-f\u00e9 in 1540, so the building now given to theatrical performance stands on the ground where public executions once took place. The statue of Pedro IV, raised in 1870 on a column that replaced an earlier pedestal Lisboners had nicknamed o galheteiro \u2014 the cruet-stand \u2014 shows the king holding the Constitution, with Justice, Wisdom, Strength, and Moderation at the base. The Rossio has hosted bullfights, revolts, executions, royal proclamations, and New Year's Eve, and now hosts mostly pigeons and tourists \u2014 a fairly typical trajectory for a medieval commons that outlasted every use anyone put it to.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Praca_Dom_Pedro_IV_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Praca_Dom_Pedro_IV_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Praca_Dom_Pedro_IV_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "FC8B5E86-2A7B-4B91-89E5-045E31B2406D",
+          "order": 0,
+          "title": "Pra\u00e7a Dom Pedro IV (Rossio Square)",
+          "caption": "Stand at the northern end of the Pombaline Baixa grid, on Rossio's wave-pattern mosaic paving, the Teatro Nacional Dona Maria II filling the north side.",
+          "latitude": 38.71387288867273,
+          "longitude": -9.139324817083928,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/praca-dom-pedro-iv.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Praca_Dom_Pedro_IV_hero.webp",
+          "transcriptText": "The square has been called Rossio since the Middle Ages \u2014 the word simply means commons, large public ground \u2014 and it has been the most central space in Lisbon for so long that its official name, Pra\u00e7a Dom Pedro the Fourth, remains largely decorative.\nLook around the full perimeter before you settle on any detail: you're at the northern end of the Pombaline Baixa grid, where the reconstructed city opens into its main civic square, with the Teatro Nacional Dona Maria the Second occupying the entire north side and the twenty-three-metre column of Dom Pedro the Fourth at the centre, the wave-pattern black and white mosaic paving underfoot \u2014 designed to resemble the ocean, and documented as reliably disorientating to late-night pedestrians since its installation in the eighteen forties \u2014 and the two bronze fountains imported from France in eighteen eighty-nine.\n\"The theatre on the north side replaced the Estaus Palace, where the Portuguese Inquisition ran its court and staged Portugal's first auto-da-f\u00e9 in fifteen forty \u2014 which means the building now dedicated to theatrical performances stands directly on the ground where public executions once took place, a fact the current programming does not always acknowledge. The statue of Pedro the Fourth, erected in eighteen seventy on a column that replaced an earlier, deeply unloved pedestal that Lisboners had been calling \"\"o galheteiro\"\" \u2014 the cruet-stand \u2014 since its installation in eighteen fifty-two, depicts the king holding the Portuguese Constitution, with four female figures at the base representing Justice, Wisdom, Strength, and Moderation.\"\n[beat]\nThe Rossio has hosted bullfights, revolts, executions, royal proclamations, and New Year's Eve celebrations \u2014 and it currently hosts, mostly, pigeons and tourists \u2014 which represents a fairly typical trajectory for a medieval commons that outlasted every use anyone put it to."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71387288867273,
+      "centroidLongitude": -9.139324817083928,
+      "city": "Lisbon",
+      "primaryCategory": "history",
+      "tags": [
+        "rossio",
+        "baixa",
+        "square",
+        "inquisition",
+        "pombaline",
+        "mosaic",
+        "history"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BCB89D70-6E55-456F-87BA-42AACE25096E",
+      "title": "Pra\u00e7a do Com\u00e9rcio",
+      "shortDescription": "Just under two minutes on the grand riverside square Pombal built where a royal palace fell in nine minutes in 1755.",
+      "longDescription": "The triumphal arch at the back of this square was begun in 1759 to celebrate the swift reconstruction of Lisbon after the earthquake \u2014 and completed in 1873, a hundred and fourteen years after the swift reconstruction it was meant to celebrate. The Pra\u00e7a do Com\u00e9rcio faces the Tagus, yellow arcaded government buildings on three sides and the river on the fourth, designed by Eug\u00e9nio dos Santos under Pombal as the grandest public space in the rebuilt city. Before 1755 this was the Terreiro do Pa\u00e7o, the Palace Square, and the Ribeira Palace occupied the western side \u2014 one of Portugal's most impressive royal buildings, with a library of over seventy thousand books, all destroyed in nine minutes on the morning of 1 November. What remained was cleared, and Pombal built this square in its place.\n\nWalk down to the Cais das Colunas, the marble Steps of the Columns, older than the square itself: foreign dignitaries traditionally disembarked here straight from the water, a tradition used into the twentieth century, including Queen Elizabeth II in 1957. The equestrian statue of King Jos\u00e9 I at the centre was cast by Machado de Castro in 1775, while the city was still being rebuilt around it, and faces the river with the confidence of someone who had very little to do with the actual rebuilding. The arch took 114 years, the square was named for commerce rather than royalty, and the marble steps survived everything \u2014 a reasonable summary of Lisbon's relationship with its own history.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Praca_do_Comercio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Praca_do_Comercio_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Praca_do_Comercio_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Praca_do_Comercio_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Praca_do_Comercio_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "E1F0502B-3E00-4C99-94C2-B2A9D59C3682",
+          "order": 0,
+          "title": "Pra\u00e7a do Com\u00e9rcio",
+          "caption": "Stand in the great riverside square facing the Tagus, yellow arcaded buildings on three sides \u2014 the triumphal arch behind you, the marble steps at the water ahead.",
+          "latitude": 38.707500423874286,
+          "longitude": -9.136425665739797,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/praca-do-comercio.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Praca_do_Comercio_hero.webp",
+          "transcriptText": "The triumphal arch at the back of this square was started in seventeen fifty-nine to celebrate the swift reconstruction of Lisbon after the earthquake \u2014 and was completed in eighteen seventy-three, which is one hundred and fourteen years after the swift reconstruction it was meant to celebrate.\nYou're in the Pra\u00e7a do Com\u00e9rcio, the great riverside square that faces the Tagus, with the yellow arcaded government buildings on three sides and the river on the fourth \u2014 open to the south, open to the water, designed by Eug\u00e9nio dos Santos under Pombal's direction as the grandest public space in the rebuilt city. Before the earthquake of seventeen fifty-five, this was called the Terreiro do Pa\u00e7o, the Palace Square, and the Ribeira Palace occupied the western side \u2014 one of the most impressive royal buildings in Portugal, with a library of over seventy thousand books, all of it destroyed in nine minutes on the morning of the first of November. What remained was cleared, and Pombal built this square in its place.\nWalk down to the marble steps at the river's edge, which are older than the square itself.\nThe Cais das Colunas \u2014 the Steps of the Columns \u2014 predate the seventeen fifty-five earthquake and were where foreign dignitaries traditionally disembarked when visiting Lisbon, stepping directly from the water into the palace, and they have been used for state arrivals right through the twentieth century, including Queen Elizabeth II in nineteen fifty-seven. The equestrian statue of King Jos\u00e9 I in the centre of the square was cast by Machado de Castro in seventeen seventy-five \u2014 while the city was still being rebuilt around it \u2014 and faces the river with the specific confidence of someone who had very little to do with the actual rebuilding.\n[beat]\nThe arch took a hundred and fourteen years to finish, the square was named after commerce rather than royalty, and the marble steps at the water's edge survived everything \u2014 which is a reasonable summary of Lisbon's relationship with its own history."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.707500423874286,
+      "centroidLongitude": -9.136425665739797,
+      "city": "Lisbon",
+      "primaryCategory": "history",
+      "tags": [
+        "praca-do-comercio",
+        "baixa",
+        "square",
+        "pombaline",
+        "tagus",
+        "1755-earthquake",
+        "history"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EB123E68-A754-458A-9D1C-F9920DC1D18B",
+      "title": "Restaurante Ponto Final",
+      "shortDescription": "Two and a half minutes at the yellow-chaired restaurant at the literal end of a derelict Almada pier, facing Lisbon across the Tagus.",
+      "longDescription": "You had to take a ferry to get here, then walk a kilometre along a pier past what looks like a row of abandoned warehouses \u2014 and nothing about that walk suggested a restaurant at the end of it, which is precisely the point. Restaurante Ponto Final sits at the end of the Cais do Ginjal pier on the Almada shore, directly opposite Lisbon, the view taking in the waterfront from Alc\u00e2ntara to Alfama, the Cristo Rei statue on the hill behind, and the 25 de Abril bridge \u2014 the suspension bridge Portuguese people call the Vinte e Cinco and everyone else says looks exactly like the Golden Gate. Cacilhas was once a working harbour; the rusted warehouses you passed are the evidence of a place that declined, didn't quite recover, but also never developed into anything more photogenic, and is therefore still itself.\n\nThe restaurant has been here since 1978, run by the same family for over forty years, on a small platform over the water with the yellow chairs recognisable in photographs from every decade. The food is traditional Portuguese seafood \u2014 clams Bulh\u00e3o Pato, grilled fish, and the arroz de tamboril, monkfish rice, that most visitors come specifically for \u2014 a short menu, large portions, the particular hospitality that treats abundance as respect. Ponto Final means full stop: the end of the pier, the end of the walkable waterfront, the point beyond which there is only water and the city across it. It closed the Netflix series Money Heist, bringing a wave of visitors who take the ferry, walk the kilometre, and understand why someone opened a restaurant here in 1978 and kept it.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ponto_Final_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ponto_Final_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "42D29772-A3D8-4011-A522-326B47E236AD",
+          "order": 0,
+          "title": "Restaurante Ponto Final",
+          "caption": "Stand at the end of the Cais do Ginjal pier on Rua do Ginjal, Almada \u2014 on the south bank, the full sweep of Lisbon's waterfront across the river.",
+          "latitude": 38.685352105021735,
+          "longitude": -9.156911905663458,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/restaurante-ponto-final.mp3",
+          "audioDurationSeconds": 162,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ponto_Final_hero.webp",
+          "transcriptText": "You had to take a ferry to get here, and then walk a kilometre along a pier past what looks like a row of abandoned warehouses \u2014 and nothing about that walk suggested there would be a restaurant at the end of it, which is precisely the point.\nIf you're here, you've already done the position verification yourself. You're on Rua do Ginjal, at the end of the Cais do Ginjal pier on the north shore of Almada, on the south bank of the Tagus directly opposite Lisbon, and the view from where you're standing or sitting takes in the full sweep of Lisbon's waterfront from Alc\u00e2ntara to Alfama, the Cristo Rei statue on the hill behind you to your left, and the Ponte Vinte e Cinco de Abril \u2014 the suspension bridge that Portuguese people call the Vinte e Cinco but that everyone else describes as looking exactly like the Golden Gate Bridge \u2014 spanning the river from your right. Cacilhas was once a working harbour, busy with fishing boats and commercial shipping, and the rusted warehouses you walked past to get here are the physical evidence of that former life, which has given this stretch of waterfront the particular character of a place that declined and didn't quite recover but also, in the process, didn't develop into anything more photogenic, and is therefore still itself.\nThe restaurant has been here since nineteen seventy-eight, owned and run by the same Portuguese family for over forty years, and it sits on a small platform over the water with yellow chairs \u2014 the yellow chairs are recognisable in photographs from every decade of the restaurant's existence \u2014 and a handful of outdoor tables that require booking months in advance, with the covered interior available for walk-ins on quieter evenings if the outdoor seats are full.\nThe food is traditional Portuguese seafood: clams Bulh\u00e3o Pato style, grilled fish, and the arroz de tamboril \u2014 monkfish rice \u2014 that is the dish most visitors come specifically for, made with enough rice and fish that two people sharing it constitutes a complete meal with leftovers to negotiate at the end. The menu is short and the portions are not, which reflects the particular Portuguese hospitality that treats abundance as respect.\n[beat]\nPonto Final means full stop in Portuguese \u2014 the end of a sentence, the end of the line \u2014 and the name is geographically accurate: this is literally the end of the pier, the end of the walkable waterfront, the point beyond which there is only water and the city across it. The restaurant appeared in the closing scenes of the Netflix series Money Heist, which brought a wave of visitors who had to take the ferry, walk the kilometre, and arrive at yellow chairs in front of Lisbon's skyline and understand, as everyone does when they get here, why someone opened a restaurant at the end of a derelict pier in nineteen seventy-eight and kept it there."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 162,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.685352105021735,
+      "centroidLongitude": -9.156911905663458,
+      "city": "Almada",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "ponto-final",
+        "almada",
+        "seafood",
+        "restaurant",
+        "cacilhas",
+        "waterfront",
+        "tagus"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "FF1CD921-3EA7-458C-99D9-0411BC932FA7",
+      "title": "Santa Justa Lift",
+      "shortDescription": "Ninety seconds at the 1902 wrought-iron street lift that sold three thousand tickets in a thunderstorm on its opening day.",
+      "longDescription": "On 10 July 1902, during a thunderstorm, Lisbon opened a forty-five-metre iron tower in the middle of the Baixa and sold three thousand tickets on the first day \u2014 which says something about the mix of novelty and necessity the lift represented. The tower stands on Rua de Santa Justa, half a minute east of Rua Augusta, identifiable from a distance by its Neo-Gothic ironwork and the viewing terrace at the top, from which the original steam engine once operated a hydraulic balancing mechanism \u2014 water pumped into tanks below each cabin so the weight of the upper cabin raised the lower one. An electric motor replaced steam in 1907, and that motor is still running.\n\nThe engineer was Raoul Mesnier du Ponsard, born in Porto to a French family, who studied under Gustave Eiffel and designed the Gl\u00f3ria, Bica, and Lavra funiculars before this, the only remaining vertical lift among them \u2014 and the Neo-Gothic ironwork is close enough to Eiffel's aesthetic that the comparison has become almost obligatory, which doesn't make it less accurate. At the top, a walkway connects to the ruins of the Carmo Convent, and the terrace view takes in Rossio, the castle hill, and the Tagus \u2014 the appropriate reward for a ninety-second vertical journey, or simply what Lisbon looks like when you get high enough to see it properly.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Santa_Justa_Lift_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Santa_Justa_Lift_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Santa_Justa_Lift_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Santa_Justa_Lift_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Santa_Justa_Lift_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "D3F2BF29-8292-434F-9B0A-F2BECF368E71",
+          "order": 0,
+          "title": "Santa Justa Lift",
+          "caption": "Stand on Rua de Santa Justa, half a minute east of Rua Augusta, beneath the forty-five-metre Neo-Gothic iron tower.",
+          "latitude": 38.71216359691119,
+          "longitude": -9.139188291618336,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/santa-justa-lift.mp3",
+          "audioDurationSeconds": 95,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Santa_Justa_Lift_hero.webp",
+          "transcriptText": "On the tenth of July, nineteen oh two, during a torrential storm with lightning, Lisbon opened a forty-five-metre iron tower in the middle of the Baixa and sold three thousand tickets on the first day \u2014 which tells you something about the combination of novelty and necessity that this lift represented.\nThe entrance is on Rua de Santa Justa, half a minute's walk east of Rua Augusta, and the tower is identifiable from some distance by the Neo-Gothic ironwork and the small viewing terrace at the top \u2014 the same viewing terrace from which the original steam engine operated, pumping water into tanks below each of the two cabins so that increasing the weight of the upper cabin raised the lower one, a hydraulic balancing mechanism that transferred the lift's power from steam to the physics of water before an electric motor replaced it in nineteen oh seven. That motor is still running.\nThe engineer was Raoul Mesnier du Ponsard, born in Porto to a French family, who had studied under Gustave Eiffel and went on to design the Gl\u00f3ria, Bica, and Lavra funiculars before building this, the only remaining vertical lift among them \u2014 and the Neo-Gothic decorative vocabulary of the ironwork is close enough to Eiffel's aesthetic that the comparison is made so often it has become almost obligatory, which doesn't make it less accurate.\n[beat]\nAt the top, a walkway connects to the ruins of the Carmo Convent \u2014 the roofless Gothic nave you saw from below \u2014 and the view from the terrace takes in Rossio Square, the castle hill, and the Tagus, which is either the appropriate reward for a ninety-second vertical journey, or simply what Lisbon looks like when you get high enough to see it properly."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 95,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71216359691119,
+      "centroidLongitude": -9.139188291618336,
+      "city": "Lisbon",
+      "primaryCategory": "architecture",
+      "tags": [
+        "santa-justa",
+        "lift",
+        "baixa",
+        "neo-gothic",
+        "iron",
+        "eiffel",
+        "1902"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "95F3221B-DD69-4CB2-8F84-C37B02E313AA",
+      "title": "Time Out Market",
+      "shortDescription": "Three and a half minutes inside a Victorian iron market turned global-template food hall \u2014 with a Roman foundry beneath the car park.",
+      "longDescription": "When the renovation team started on the western half of this building in 2013, archaeologists found a Roman metal castings factory beneath the floor \u2014 either a very good omen for a place about to become a food hall or the most Lisbon thing ever to happen on a building site. The Mercado da Ribeira sits on the Tagus waterfront at Cais do Sodr\u00e9; the modified onion dome added in 1930 was promptly nicknamed the Mesquita do Nabo \u2014 the Turnip Mosque. Designed in 1876 by Francisco Ressano Garcia, who laid out Avenida da Liberdade, and inaugurated on New Year's Day 1882, the great iron-and-glass hall housed Lisbon's wholesale fish, produce, and flower trade for most of the twentieth century.\n\nAfter the wholesale market relocated in 2000, the city launched a concession in 2010 that Time Out Lisboa won with the idea of bringing the best of the city under one roof. The renovation, by Aires Mateus, turned the western half into an open food court of over forty kiosks run by chefs and producers, communal tables seating over five hundred, while the eastern wing keeps the traditional fresh-produce market. Down on the car-park level, glass cases display the Roman foundry's output \u2014 bowls, pots, processed metal from ground that produced goods for some five hundred years and now supports a food court drawing four million visitors a year.\n\nThe Time Out Market concept was replicated in Miami, New York, Boston, Chicago, Montreal, Dubai, Porto, and Barcelona \u2014 a food hall in a Victorian iron market that became a global format, the original still under its Turnip Mosque dome, with a Roman foundry beneath its car park.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Time_Out_Market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Time_Out_Market_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "40C9CBE1-DF40-4856-A90D-36B97F9A1093",
+          "order": 0,
+          "title": "Time Out Market",
+          "caption": "Step into the Mercado da Ribeira at Cais do Sodr\u00e9, on Avenida 24 de Julho \u2014 the modified onion dome above, the great iron hall ahead.",
+          "latitude": 38.70650451714463,
+          "longitude": -9.145667089991006,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/time-out-market.mp3",
+          "audioDurationSeconds": 209,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Time_Out_Market_hero.webp",
+          "transcriptText": "When the renovation team started work on the western half of this building in twenty thirteen, archaeologists found a Roman metal castings factory underneath the floor \u2014 which is either a very good omen for a place that was about to become a food hall, or simply the most Lisbon thing that has ever happened on a building site.\nThe Mercado da Ribeira is on Avenida Vinte e Quatro de Julho at Cais do Sodr\u00e9, directly on the Tagus waterfront, with the river to your south and the Cais do Sodr\u00e9 station a short walk to your east \u2014 and the dome rising above the iron and tile facade is the feature you'll have noticed from outside, a modified onion dome added in nineteen thirty that the people of Lisbon promptly nicknamed the Mesquita do Nabo, which translates, without loss of meaning, as the Turnip Mosque. The building was designed in eighteen seventy-six by the engineer Francisco Ressano Garcia \u2014 the same man who laid out Avenida da Liberdade, Avenida Vinte e Quatro de Julho itself, and the Campo de Ourique neighbourhood \u2014 and was inaugurated on New Year's Day eighteen eighty-two, survived a major fire in eighteen ninety-three, and has operated under various configurations of wholesale, retail, and cultural use ever since.\nGo straight into the main hall and look up at the iron structure before you decide where to eat.\nThe great iron and glass hall \u2014 characteristic of late-nineteenth-century market architecture across Europe, the same tradition as Les Halles in Paris and the Mercado de San Miguel in Madrid \u2014 was not built to be a food hall in the contemporary sense but to house Lisbon's wholesale fish, produce, and flower trade, and it did that for most of the twentieth century before the wholesale market relocated to the edge of the city in two thousand, leaving the building to a decade of diminishing cultural programming before the city launched a concession in twenty ten that Time Out Lisboa magazine won with the concept of bringing the best of the city under one roof. The renovation, designed by Aires Mateus, transformed the western half of the hall into an open food court with over forty kiosks operated by chefs and food producers, communal tables seating over five hundred people, and an integrated programme of live events, while retaining the traditional fresh produce market in the eastern wing for morning shopping.\nBefore or after you eat, go down to the underground car park level and look for the glass cases near the lift.\nThe Roman metal castings factory found in twenty thirteen was in use from the first century BC to the fifth century AD, meaning the site produced metal goods for approximately five hundred years during the Roman occupation \u2014 and what the glass cases in the car park display is the physical evidence of that, bowls and pots and processed metal from the same ground that now supports a food court attended by four million visitors a year, which is either a continuity of commercial purpose spanning two thousand years or a coincidence that the management has wisely chosen not to overthink.\n[beat]\nThe Time Out Market concept was replicated in Miami, New York, Boston, Chicago, Montreal, Dubai, Porto, and Barcelona after Lisbon's success made it demonstrably exportable, which means that a food hall in a Victorian iron market on the Tagus waterfront became the template for a global format \u2014 and the original still operates under a Turnip Mosque dome, with a Roman foundry beneath its car park, serving past\u00e9is de nata from a counter that was here before any of those other cities thought to try the idea."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 209,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.70650451714463,
+      "centroidLongitude": -9.145667089991006,
+      "city": "Lisbon",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "time-out-market",
+        "cais-do-sodre",
+        "food-hall",
+        "mercado-da-ribeira",
+        "iron-architecture",
+        "roman",
+        "food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F9DA8019-F0D3-4FFE-9F72-1FAD231BD191",
+      "title": "Tram 28",
+      "shortDescription": "Three minutes on the heritage tram Lisbon's hills made impossible to replace \u2014 1930s woodwork through streets buses cannot enter.",
+      "longDescription": "Tram 28 is still running because Lisbon's hills made it impossible to replace \u2014 one of the more honest accounts of how historic infrastructure survives into the twenty-first century. The full line runs seven kilometres between Pra\u00e7a Martim Moniz and Campo de Ourique, about forty-five minutes end to end, through Gra\u00e7a, Alfama, the S\u00e9, Baixa, Chiado, S\u00e3o Bento, and Estrela \u2014 most of Lisbon's historic fabric in a single ride. The cars are the Remodelado models, designed in the 1930s with polished wood, brass fittings, and a profile narrow enough for streets buses can't enter; the route opened in 1914 and has run for over a century on tracks never wide enough for anything larger.\n\nBefore the tram arrives, look at the street: the narrow-gauge track \u2014 nine hundred millimetres between the rails against the standard 1,435 \u2014 sits embedded in cobblestones, the tram sharing the street with pedestrians, cars, and delivery motorcycles in a negotiated informality the city has practised for a century. The Remodelados survive not from sentiment but geometry: the streets of Alfama and Gra\u00e7a are too tight, too steep, too curved for modern low-floor trams, and no amount of fleet modernisation changes the width of a medieval alley.\n\nGet a window seat for the moment the tram rounds from Rua da Concei\u00e7\u00e3o into Alfama \u2014 it leans into the curve, the old houses close in within touching distance, the bell rings, and the driver judges the speed by experience no automation has replicated. About half the passengers are Lisboetas with grocery bags, the other half visitors with cameras trying to capture something temporal rather than visual: it's the forty-five minutes of it, not any single frame, that is the experience \u2014 something the locals have understood for a hundred years.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tram_28_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tram_28_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "556E2BF3-1BEE-40D6-A2E7-2711AF8432F9",
+          "order": 0,
+          "title": "Tram 28",
+          "caption": "Board anywhere along the route \u2014 the line runs seven kilometres from Pra\u00e7a Martim Moniz in the east to Campo de Ourique in the west, through Gra\u00e7a, Alfama, and the S\u00e9.",
+          "latitude": 38.71611768228142,
+          "longitude": -9.135775911413699,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tram-28.mp3",
+          "audioDurationSeconds": 185,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tram_28_hero.webp",
+          "transcriptText": "The tram is still running because Lisbon's hills made it impossible to replace \u2014 which is one of the more honest accounts of how a piece of historic infrastructure survives into the twenty-first century.\nWherever you're boarding along the route, the full line runs seven kilometres between Pra\u00e7a Martim Moniz in the east and Campo de Ourique in the west, taking roughly forty-five minutes end to end when the streets are clear and considerably longer when they aren't, and passing through Gra\u00e7a, Alfama, the S\u00e9 Cathedral, Baixa, Chiado, S\u00e3o Bento, Estrela, and Campo de Ourique on its way \u2014 which is most of Lisbon's historic fabric in a single ride. The trams you'll board are the Remodelado models, designed in the nineteen thirties with polished wood interiors, brass fittings, and a profile narrow enough to fit through streets that buses cannot enter, and the route was inaugurated in nineteen fourteen, meaning this line has been running for over a hundred years on tracks that have never been wide enough for anything larger.\nBefore the tram arrives, look at the street.\nThe narrow-gauge track \u2014 nine hundred millimetres between the rails, compared to the standard gauge of fourteen hundred and thirty-five millimetres on main lines \u2014 sits embedded in cobblestones that belong to the same streets Lisbon's medieval residents walked, and the tram shares those streets with pedestrians, cars, and delivery motorcycles with a negotiated informality that the city has been practising for a century. The reason the Remodelado trams survive is not sentiment, though sentiment helps: it's geometry. The streets of Alfama and Gra\u00e7a are simply too tight, too steep, and too curved for the modern low-floor trams that run on Lisbon's other routes, and no amount of fleet modernisation changes the width of a medieval alley, which means the nineteen-thirties vehicles are the only ones that fit.\nWhen you board, get a window seat if you can and pay attention to the moment the tram rounds the corner from Rua da Concei\u00e7\u00e3o into the Alfama section.\nThe tram leans into the curve and the old houses close in on both sides within what seems like touching distance, and the bell rings to ask pedestrians to move, and whoever is driving adjusts the speed through a combination of experience and judgement that no automation has yet replicated on streets this old \u2014 and the reason this matters is not nostalgia but specificity: what the tram gives you is a reading of the city's topography from the inside, at a speed that allows you to see where the hills rise and fall, where the neighbourhoods change character, and where Lisbon stops being a tourist destination and becomes the city people actually live in.\n[beat]\nAbout half the passengers at any given moment are Lisboetas on their way somewhere with grocery bags or work bags or school bags, and the other half are visitors with cameras trying to capture something that is genuinely difficult to photograph well because its quality is temporal rather than visual \u2014 it's the forty-five minutes of it, not any single frame of it, that constitutes the experience, and the locals with grocery bags have understood this for a hundred years without needing anyone to point it out."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 185,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71611768228142,
+      "centroidLongitude": -9.135775911413699,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "tram-28",
+        "alfama",
+        "graca",
+        "heritage-tram",
+        "remodelado",
+        "public-transport",
+        "1930s"
+      ],
+      "priceUSD": 0
     }
   ]
 }
