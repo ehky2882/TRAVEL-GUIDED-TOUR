@@ -429,5 +429,30 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_6.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_7.webp"
     ]
+  },
+  {
+    "slug": "denmark-street",
+    "title": "Denmark Street",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "musicAndPerformance",
+    "lat": 51.5156,
+    "lon": -0.1292,
+    "triggerRadiusMeters": 40,
+    "tags": [
+      "London",
+      "Denmark Street",
+      "Tin Pan Alley",
+      "music",
+      "guitar shops",
+      "history"
+    ],
+    "shortDescription": "Britain's Tin Pan Alley — the scruffy row of guitar shops where a huge slice of British pop was written.",
+    "caption": "Denmark Street, London",
+    "transcript": "Denmark Street\n\nThis scruffy little street is where a huge slice of British pop music was actually written — the engine room behind songs you know by heart, hidden in a row of shopfronts you'd walk straight past.\n\nYou're on Denmark Street, a short, narrow street near the bottom of Tottenham Court Road, lined with small shops, many of them selling guitars and instruments. It looks utterly ordinary. But for a good chunk of the twentieth century this was the centre of the British music industry, known as Britain's \"Tin Pan Alley,\" after the original songwriting district in New York. This is where the business of making British pop music largely happened.\n\nIn the first half of the century it was home to the music publishers — the people who owned and sold the actual songs, in the era when sheet music was the product. Then, as pop and rock took over, it became the place of songwriters, recording studios, management offices, and the music press. Songwriters worked in tiny rooms here, banging out material on pianos; bands recorded in cramped basement studios; the whole grubby commercial machinery of British pop was packed into this one little street.\n\nAn astonishing roll-call of musicians passed through. Some of the most famous British acts of the nineteen-sixties and seventies recorded, wrote, signed deals, or simply hung around on Denmark Street — the Rolling Stones recorded in a studio here early on, and David Bowie, Elton John, and many others had connections to the street. There's a flat above one of the shops whose walls are reportedly still covered in graffiti scrawled by a famous band who lived there.\n\n[beat]\n\nWhat's poignant about it now is the familiar story: the music business has long since moved on and dispersed, redevelopment has loomed over the street for years, and people keep predicting its end. Yet the guitar shops cling on, and you can still walk in and buy an instrument on the street where the songs were once written — which is a rarer thing than it sounds.\n\nWalk its short length and look up above the shopfronts at the ordinary upper windows. Behind those plain panes, a remarkable amount of the music in your head was first put on paper.\n",
+    "heroPick": null,
+    "galleryPicks": [],
+    "imagesStaged": null,
+    "audioStatus": "PENDING"
   }
 ]
