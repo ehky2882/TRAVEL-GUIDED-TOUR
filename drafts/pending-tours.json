@@ -370,9 +370,23 @@
     "shortDescription": "London's after-dark quarter for three centuries — immigrant haven, bohemia, music, and red lights, forever reinventing its disrepute.",
     "caption": "Soho, London",
     "transcript": "Soho\n\nFor three hundred years this square mile has been London's id — where the city comes to do the things it doesn't talk about in daylight. It has been many different kinds of disreputable, and it's on its way to being another.\n\nYou're in Soho, the dense grid of streets north of Leicester Square and east of Regent Street, and the first thing to know is that Soho has always been the outsider's quarter. The name itself is thought to come from an old hunting cry — \"So-ho!\" — from when this was open hunting land. But almost as soon as it was built up, in the late seventeenth century, it became the place London's immigrants and outsiders landed: French Huguenots fleeing persecution first, then Italians, Greeks, Chinese, a constant churn of new arrivals who couldn't or wouldn't settle in the more respectable districts.\n\nThat outsider character made it the city's centre of everything bohemian and disreputable. For two centuries Soho was where you came for the things the rest of London pretended not to want: the music, the drinking, the sex trade, the artists and writers drinking themselves to ruin in its pubs and clubs. It was the heart of the British jazz scene, then of the nineteen-sixties music explosion; the recording studios and music publishers clustered here. It had London's most open gay scene, centred on Old Compton Street, long before that was safe or legal. And it had a large, frank red-light district, which the authorities periodically cleaned up and which periodically came back.\n\n[beat]\n\nWhat's happening now is the latest turn of a very old wheel. Rising rents and redevelopment have been steadily scrubbing Soho's rougher edges — the seedy bits closing, the independent venues struggling, the chains moving in. Every generation of Londoners is convinced Soho is finally losing its soul, and every generation has been partly right and partly wrong: it loses one disreputable identity and slowly grows another. Bohemian, then sleazy, then cool, then threatened, over and over.\n\nWalk it without a destination — Old Compton Street, Berwick Street and its market, the tangle of lanes — and take the mix as you find it. You're in the part of London that has, for three centuries, done the city's living for it after dark.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
-    "audioStatus": "PENDING"
+    "heroPick": "U00",
+    "galleryPicks": [
+      "U17",
+      "U07",
+      "U09",
+      "U12",
+      "U11"
+    ],
+    "imagesStaged": true,
+    "audioStatus": "PENDING",
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_3.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_4.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_5.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_6.webp"
+    ]
   }
 ]
