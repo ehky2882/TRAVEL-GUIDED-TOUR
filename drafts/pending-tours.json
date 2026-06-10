@@ -312,5 +312,29 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seven-dials_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seven-dials_4.webp"
     ]
+  },
+  {
+    "slug": "neals-yard",
+    "title": "Neal's Yard",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "hiddenGems",
+    "lat": 51.5143,
+    "lon": -0.1264,
+    "triggerRadiusMeters": 30,
+    "tags": [
+      "London",
+      "Covent Garden",
+      "hidden courtyard",
+      "colourful",
+      "wholefood"
+    ],
+    "shortDescription": "A hidden courtyard off Seven Dials that explodes into colour — London's best little sleight-of-hand trick.",
+    "caption": "Neal's Yard, Covent Garden, London",
+    "transcript": "Neal's Yard\n\nStep through a gap you'd never notice, and London suddenly turns every colour at once.\n\nYou're heading into Neal's Yard, a tiny hidden courtyard tucked off the streets near Seven Dials, and the whole experience of it is the contrast. You approach down a narrow, easy-to-miss passage between buildings, the kind of gap you'd walk past a hundred times — and then it opens into a small enclosed courtyard that is an absolute riot of colour. The buildings around it are painted in bright yellows, greens, pinks, and blues, hung with plants tumbling from every window and balcony, bicycles and café tables crammed into the small space. After the grey-brown of the surrounding streets, it's like stepping into a different climate.\n\nThe name comes from Thomas Neale again — the same developer behind Seven Dials in the sixteen-nineties. For most of its history this was an unremarkable, slightly grubby service yard behind the warehouses, nothing special. Its transformation is recent, and largely down to one man: in the nineteen-seventies and eighties, an entrepreneur named Nicholas Saunders started a string of small wholefood and alternative businesses here — a wholefood warehouse, a famous apothecary — and turned the neglected yard into a hub of the city's emerging wholefood and alternative-living scene. The colours and the herbal, healthy-living character of the place grew from that.\n\n[beat]\n\nIt's become, frankly, one of the most photographed small spaces in London — you'll likely have to wait your turn for the picture everyone takes. And there's a fair charge that it's now more backdrop than living community, a courtyard that gets visited rather than used. But even allowing for that, the basic magic still works: the hidden entrance, the sudden burst of colour, the surprise of finding this folded into the dense grey city.\n\nThe right way to enjoy it is simply to find the unmarked passage, walk through, and let the courtyard do its reveal. It's a small thing — a painted yard about the size of a tennis court — but it's one of London's best little sleight-of-hand tricks: nothing, nothing, nothing, and then suddenly all the colour in the world.\n",
+    "heroPick": null,
+    "galleryPicks": [],
+    "imagesStaged": null,
+    "audioStatus": "PENDING"
   }
 ]
