@@ -277,5 +277,30 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_6.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_7.webp"
     ]
+  },
+  {
+    "slug": "seven-dials",
+    "title": "Seven Dials",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "history",
+    "lat": 51.5144,
+    "lon": -0.1279,
+    "triggerRadiusMeters": 40,
+    "tags": [
+      "London",
+      "Covent Garden",
+      "sundial",
+      "town planning",
+      "Dickens",
+      "history"
+    ],
+    "shortDescription": "Seven streets meeting at a sundial pillar — a 1690s tax-dodging property scheme that became a slum, then a legend.",
+    "caption": "Seven Dials, Covent Garden, London",
+    "transcript": "Seven Dials\n\nStand on this spot and seven streets shoot away from you like spokes — a piece of deliberate town planning that started as a property scam and became, for a while, one of the worst slums in London.\n\nYou're at Seven Dials, a small circular junction in Covent Garden where seven narrow streets meet at a single point, with a slim pillar and sundial in the centre. It looks charming now — boutiques, cafés, a tidy little hub — but every part of it has a story, starting with the layout itself.\n\nIn the sixteen-nineties a developer named Thomas Neale laid this out, and the radiating-streets design was a money-making trick. London property was valued and taxed largely by the width of a building's frontage onto the street. By carving the land into seven wedge-shaped streets meeting at a point, Neale created the maximum number of corner plots and street frontages — far more saleable frontage than a normal grid would allow. The elegant star pattern you're standing in is, at root, a clever piece of tax-efficient property development from three hundred years ago.\n\nThe central pillar has six sundial faces, not seven, even though seven streets meet here — the column itself was intended to act as the seventh pointer. The original was pulled down in the eighteenth century, partly on a rumour that treasure was buried beneath it; the one you see is a careful modern replacement.\n\n[beat]\n\nBut here's the turn. The smart development didn't stay smart. Within a few generations Seven Dials and the streets around it had decayed into one of the most notorious slums — \"rookeries\" — in London, a maze of overcrowded courts that Dickens wrote about with horror and fascination, a byword for poverty and crime through the whole nineteenth century. The very design that made it profitable — all those tight wedges and corners — helped make it a warren almost impossible to police.\n\nAnd now it's smart again, cleaned up and gentrified into a fashionable little quarter. Stand by the pillar and turn slowly through the seven streets. You're standing in a three-hundred-year-old property scheme that became a slum, became a legend, and became a shopping district — the same seven streets the whole time.\n",
+    "heroPick": null,
+    "galleryPicks": [],
+    "imagesStaged": null,
+    "audioStatus": "PENDING"
   }
 ]
