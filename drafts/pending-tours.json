@@ -901,10 +901,22 @@
     "shortDescription": "A thousand-year-old market at the foot of London Bridge — Victorian iron and glass, now one of the world's great food halls.",
     "caption": "Borough Market, London",
     "transcript": "Borough Market\n\nThere has been a market on this spot for something close to a thousand years — London has been buying its food here since before it had most of its history.\n\nYou're at Borough Market, in the tangle of streets beneath the railway arches near London Bridge, on the south bank. It's a covered market of iron and glass, crammed with food stalls — cheese, bread, oysters, game, spices, street food from everywhere — packed with crowds, smelling of a hundred things at once. It's now one of London's great food destinations. But the remarkable thing is the sheer age of it: there has been a market trading at this end of London Bridge for roughly a thousand years, which makes it one of the oldest in the country.\n\nThe reason is pure geography. For most of London's history, London Bridge was the only bridge across the Thames — the single point where everything coming into the city from the south, from the Channel ports and the Continent, had to funnel across. A market grew up at the southern foot of that bridge to catch all that trade, and it never left. The location made it inevitable.\n\nThe handsome Victorian market buildings you see date from the nineteenth century, when it was mainly a wholesale fruit and vegetable market, supplying the trade rather than the public. Its current life — as a retail food market and foodie magnet — is much more recent, a revival from the nineteen-nineties onward that turned a declining wholesale market into one of the most famous food halls in the world.\n\n[beat]\n\nHere's the thread to hold. This isn't a heritage attraction pretending to be old; it's genuinely, continuously old — a working market that has been feeding Londoners on the same patch of ground, in one form or another, since the Middle Ages. The artisan cheese and the craft coffee are just the latest layer on something a thousand years deep.\n\nWander in and graze. Try something. You're eating in a spot where Londoners have come to buy their food since before the city had a Tower, a St Paul's, or most of what we've been looking at.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
+    "heroPick": "U22",
+    "galleryPicks": [
+      "U05",
+      "U02",
+      "U01",
+      "U04"
+    ],
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_3.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_4.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_5.webp"
+    ]
   }
 ]
