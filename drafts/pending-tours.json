@@ -409,9 +409,25 @@
     "shortDescription": "Gerrard Street's lanterns and paifang gate — London's second Chinatown, built in postwar Soho on the strength of its cooking.",
     "caption": "Chinatown, Gerrard Street, London",
     "transcript": "Chinatown\n\nThe Chinese community didn't come to this street first. It came here second, after a war wrecked the first Chinatown — and built something far bigger on the rebound.\n\nYou're on Gerrard Street, the heart of London's Chinatown, walking under the great ornamental gate — the paifang, with its carved, painted, tiled roof — past restaurants, bakeries, herbalists, and supermarkets, the street signs in both English and Chinese, red lanterns strung overhead. It feels permanent, like it's always been here. It hasn't. This Chinatown is younger than you'd think, and it's the second one.\n\nLondon's original Chinatown was miles east of here, in Limehouse, down by the docks, where Chinese sailors and merchants settled from the nineteenth century onward. That East End community was the London Chinatown for decades — and it was heavily damaged by bombing in the Second World War, then finished off by postwar slum clearance and the decline of the docks. The original Chinatown essentially ceased to exist.\n\nWhat created this one, here in Soho, was food. After the war, returning British servicemen who'd been stationed in Asia had acquired a taste for Chinese cooking, and a wave of immigration, especially from Hong Kong, brought people with the skills to feed that appetite. Cheap, empty premises in a run-down postwar Soho drew Chinese restaurants to Gerrard Street in the nineteen-fifties and sixties, and a new Chinatown grew up around them — built not around the docks this time, but around the restaurant trade and the heart of the West End.\n\n[beat]\n\nSo this is a community that was bombed out of one home and built a bigger, more central one a few miles away, on the strength of London finally developing an appetite for its cooking. The lanterns and the gate arrived later, in the latter part of the twentieth century, marking out the territory and turning a cluster of restaurants into a declared quarter of the city.\n\nWander the short grid of streets, look in the bakery windows, read the gate. It's a small, dense, entirely living piece of the city — and a quietly remarkable story of a community that lost its first London home and made a second one right in the centre of town.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
-    "audioStatus": "PENDING"
+    "heroPick": "U00",
+    "galleryPicks": [
+      "U02",
+      "U06",
+      "U04",
+      "U14",
+      "U10",
+      "U12"
+    ],
+    "imagesStaged": true,
+    "audioStatus": "PENDING",
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_3.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_4.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_5.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_6.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_7.webp"
+    ]
   }
 ]
