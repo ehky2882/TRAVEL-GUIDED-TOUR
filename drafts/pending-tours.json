@@ -845,5 +845,32 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_6.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_7.webp"
     ]
+  },
+  {
+    "slug": "shakespeares-globe",
+    "title": "Shakespeare's Globe",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "musicAndPerformance",
+    "lat": 51.5081,
+    "lon": -0.0972,
+    "triggerRadiusMeters": 45,
+    "tags": [
+      "London",
+      "Bankside",
+      "Shakespeare",
+      "Globe Theatre",
+      "Sam Wanamaker",
+      "Elizabethan",
+      "theatre"
+    ],
+    "shortDescription": "A faithful thatched reconstruction of Shakespeare's open-air playhouse — built from one American's twenty-year obsession, playing the way the originals did.",
+    "caption": "Shakespeare's Globe, Bankside, London",
+    "transcript": "Shakespeare's Globe\n\nThis theatre is a reconstruction — it's only about thirty years old — but it sits a few hundred feet from where the original stood, and it exists because of one American's stubborn twenty-year obsession.\n\nYou're on Bankside, looking at Shakespeare's Globe — a round, white, half-timbered building with a thatched roof, looking convincingly Elizabethan among the modern riverside. And the honesty up front is the interesting part: this is not the original Globe. It's a careful modern reconstruction, opened in 1997. The original Globe, where many of Shakespeare's plays were first performed, stood near here from 1599, burned down, was rebuilt, and was finally demolished in the sixteen-forties when the Puritans closed the theatres. For three centuries there was no Globe at all.\n\nIt's back because of Sam Wanamaker, an American actor and director who came to London, was dismayed to find only a grimy plaque marking the site of the most famous theatre in history, and spent more than twenty years — most of the rest of his life — campaigning and fundraising to rebuild it. He died in 1993, four years before it opened. He never saw it finished.\n\nWhat they built is as close to the original as scholarship and fire regulations allow: oak timbers joined with wooden pegs, walls of lime plaster, the first thatched roof permitted in London since the Great Fire of 1666. And crucially, it works the way the original did. It's open to the sky. The \"groundlings\" stand in the open yard in front of the stage, in all weathers, for a few pounds, exactly as the poorest spectators did four hundred years ago. There's no amplification, no spotlights; the actors play in daylight, to a crowd they can see and who can heckle back.\n\n[beat]\n\nThat's what makes it more than a replica. It's an experiment in how these plays were meant to land — rowdy, communal, weather-beaten, with the audience part of the show rather than sitting silently in the dark. You don't just watch a Shakespeare play here; you experience something close to the conditions he wrote for.\n\nStand by the river and look at the thatch. One man's refusal to accept that it was gone forever is the only reason it's here at all.\n",
+    "heroPick": null,
+    "galleryPicks": [],
+    "imagesStaged": null,
+    "audioStatus": "PENDING",
+    "batch": 2
   }
 ]
