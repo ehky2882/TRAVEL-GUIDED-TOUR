@@ -574,5 +574,31 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_6.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_7.webp"
     ]
+  },
+  {
+    "slug": "british-library",
+    "title": "The British Library",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "literature",
+    "lat": 51.53,
+    "lon": -0.1276,
+    "triggerRadiusMeters": 60,
+    "tags": [
+      "London",
+      "British Library",
+      "St Pancras",
+      "King's Library",
+      "Magna Carta",
+      "books"
+    ],
+    "shortDescription": "The unloved red-brick vault by St Pancras that holds the written memory of the nation — Magna Carta, Beatles lyrics, and a copy of nearly everything.",
+    "caption": "The British Library, London",
+    "transcript": "The British Library\n\nThis looks, from the outside, like one of the least-loved modern buildings in London — and it's one of the most important, because it holds the written memory of the nation.\n\nYou're in the forecourt of the British Library, beside St Pancras, looking at a large red-brick building that took so long to build and ran so far over budget that it became a national joke — a future king famously likened it to an academy for secret police. It opened in 1998 after decades of trouble. The red brick was meant to nod to the great Gothic St Pancras hotel next door; many people just found it dull. But give it a moment, because the building is shaped, deliberately, like a ship — and what it carries is extraordinary.\n\nThis is the national library of the United Kingdom, and it holds a copy of nearly everything. By law, a copy of every book, newspaper, and magazine published in Britain and Ireland must be deposited here — around two hundred million items, growing by millions a year, on hundreds of miles of shelving, much of it deep underground beneath where you're standing.\n\nWalk inside and find the heart of it: a tall glass tower rising through the centre of the building, filled with thousands of old leather-bound volumes in gold and brown. That's the King's Library, the collection of King George the Third, given to the nation and now displayed in a six-storey glass column at the building's core — books as the literal spine of the place.\n\n[beat]\n\nAnd in a dim, hushed gallery off to one side sits the real treasure: original Magna Carta, Leonardo's notebooks, Shakespeare's First Folio, handwritten Beatles lyrics on the backs of envelopes, ancient gospels, the lot. Some of the most precious documents in British history, in one quiet room, free to see. The unloved brick box turns out to be a vault for the nation's memory.\n\nGo in, even briefly, and find that treasures gallery. The building outside may not move you. What's inside is the closest thing Britain has to a complete record of itself.\n",
+    "heroPick": null,
+    "galleryPicks": [],
+    "imagesStaged": null,
+    "audioStatus": "PENDING",
+    "batch": 2
   }
 ]
