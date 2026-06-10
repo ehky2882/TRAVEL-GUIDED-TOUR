@@ -497,5 +497,30 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_4.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_5.webp"
     ]
+  },
+  {
+    "slug": "carnaby-street",
+    "title": "Carnaby Street",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "culturalHeritage",
+    "lat": 51.5132,
+    "lon": -0.1389,
+    "triggerRadiusMeters": 50,
+    "tags": [
+      "London",
+      "Carnaby Street",
+      "Soho",
+      "Swinging London",
+      "fashion",
+      "sixties"
+    ],
+    "shortDescription": "The short Soho strip that was the centre of Swinging London — and learned to live, happily, with having peaked.",
+    "caption": "Carnaby Street, Soho, London",
+    "transcript": "Carnaby Street\n\nFor about five years in the nineteen-sixties, this one short street was, briefly, the centre of the fashionable universe — and then it spent fifty years living that down and growing back up.\n\nYou're on Carnaby Street, a pedestrianised shopping street in Soho, just east of Regent Street, lined with fashion shops and strung, usually, with some kind of decorative display overhead. It's pleasant, busy, commercial — and to understand it you have to rewind to the moment it became, for a few short years, the single most fashionable street on earth.\n\nIn the early nineteen-sixties this was a quiet, cheap back street. A few independent boutiques opened here selling bold, cheap, brilliantly modern clothes aimed at the young — and the timing was perfect. London was becoming the centre of youth culture, the moment the newspapers christened \"Swinging London,\" and Carnaby Street became its retail heart, the place the Mods bought their clothes and the fashionable young came to be seen. For a few years in the mid-sixties, Carnaby Street was a global byword for cool, splashed across magazines around the world as the epicentre of where it was all happening.\n\nIt could not possibly last, and it didn't. By the seventies the cool had curdled into cliché; Carnaby Street became a tourist trap selling Union Jack tat and souvenirs of a moment that had already passed. For decades it traded on nostalgia for a brief, dead heyday — the very definition of a place that peaked early.\n\n[beat]\n\nWhat's interesting is that it eventually recovered by accepting what it is. Rather than chasing its lost cutting-edge status, it settled into being a solid, well-run fashion-retail street with a famous name and a good story, leaning into its sixties heritage without pretending the sixties never ended. It's a neat parable about fashion itself: nothing is more dated than yesterday's idea of the future, and the only way to survive being briefly the coolest place on earth is to outlive the embarrassment of it.\n\nWalk its short length and look at the famous street sign. You're on the strip that was, for one giddy moment, the centre of the whole fashionable world — and learned to live, quite happily, with having been.\n",
+    "heroPick": null,
+    "galleryPicks": [],
+    "imagesStaged": null,
+    "audioStatus": "PENDING"
   }
 ]
