@@ -257,9 +257,25 @@
     "shortDescription": "London's first public square — Inigo Jones's Italian piazza, three centuries a market, now a stage for buskers.",
     "caption": "Covent Garden Piazza, London",
     "transcript": "Covent Garden\n\nThis was London's first public square, its biggest fruit-and-veg market for three hundred years, and now it's where you stand to watch a man juggle fire — and all three facts come from the same Italian idea.\n\nYou're in the Covent Garden Piazza, the open, paved square ringed by columned buildings, with the covered market hall in the middle and a church closing off the western end. Start with that word, \"piazza\" — it's Italian, and it's the clue to everything. In the sixteen-thirties the Earl of Bedford hired Inigo Jones — the same architect as the Banqueting House — to lay out this square, and Jones, fresh from studying Italy, modelled it on the elegant arcaded piazzas he'd seen there. It was the first formal public square in London, a brand-new idea: an open, ordered, Classical space for people to promenade. The grand London square — and there are dozens now — starts right here.\n\nLook at the church at the west end, St Paul's Covent Garden — not the cathedral, a different St Paul's. It's known as \"the actors' church,\" because of the theatres all around, and its portico is famous: it's the spot where, in the play Pygmalion and the musical it became, Eliza Doolittle is first found selling flowers. Which is fitting, because for three centuries this square was a market.\n\nThat market is the long middle chapter. From the sixteen-seventies until 1974, this was London's principal wholesale fruit, vegetable, and flower market — barrows and porters and horse-carts, chaos from before dawn, the gritty engine that fed the city. It grew too big and too snarled, and in the nineteen-seventies the whole market was moved out south of the river. The handsome empty market hall was nearly demolished — and was saved, restored, and reborn as the shops, cafés, and street-performance space you see now.\n\n[beat]\n\nSo three lives, one square. A Classical Italian experiment, then three hundred years as the city's grubby, vital marketplace, then a near-death and a second life as a stage for buskers and tourists. The jugglers and opera-singing waiters aren't a modern gimmick, either — street performance has been licensed here since Samuel Pepys watched a Punch and Judy show in this very square in the sixteen-sixties.\n\nFind a spot by the portico and watch whatever's on. You're in London's first square, on what's been a stage of one kind or another for four hundred years.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
-    "audioStatus": "PENDING"
+    "heroPick": "U02",
+    "galleryPicks": [
+      "U06",
+      "U08",
+      "U16",
+      "U11",
+      "U05",
+      "U00"
+    ],
+    "imagesStaged": true,
+    "audioStatus": "PENDING",
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_3.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_4.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_5.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_6.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_7.webp"
+    ]
   }
 ]
