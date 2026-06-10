@@ -1135,5 +1135,31 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_3.webp"
     ]
+  },
+  {
+    "slug": "old-operating-theatre",
+    "title": "The Old Operating Theatre",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "history",
+    "lat": 51.5034,
+    "lon": -0.0883,
+    "triggerRadiusMeters": 35,
+    "tags": [
+      "London",
+      "Southwark",
+      "Old Operating Theatre",
+      "medical history",
+      "herb garret",
+      "surgery"
+    ],
+    "shortDescription": "Europe's oldest surviving operating theatre, hidden in a church attic — wooden viewing stands where surgery was a spectacle, before anaesthetic or germ theory.",
+    "caption": "The Old Operating Theatre Museum, London",
+    "transcript": "The Old Operating Theatre\n\nHidden in the attic of a church is the oldest surviving operating theatre in Europe — a place where surgery was performed in front of an audience, before anaesthetic, before anyone knew about germs.\n\nYou're near London Bridge, at the Old Operating Theatre Museum — and the way to reach it is part of the strangeness: you climb a tight, narrow spiral staircase up into the roof space, the attic, of an early-eighteenth-century church. Up there, tucked into the herb garret where a hospital once dried its medicinal plants, is a wooden operating theatre dating from 1822, the oldest surviving one in Europe, rediscovered by accident in the twentieth century after being sealed and forgotten for decades.\n\nThe word \"theatre\" is literal. It's a small room with the operating table at the centre and steeply raked wooden stands rising around it, where students and observers crowded in to watch — standing room, packed tight, craning to see. Surgery was a spectacle, performed in front of a crowd.\n\nAnd it was performed in conditions that are hard to take in now. This was before anaesthetic — patients were awake, held still, and the surgeon's chief virtue was speed, working as fast as possible before shock overwhelmed the patient. It was before anyone understood infection, so surgeons operated in their ordinary coats, moving from case to case without washing; more patients died of infection afterward than of the operation itself.\n\n[beat]\n\nIt's a sobering place, and the museum doesn't pretend otherwise — but it's also a vivid, honest window into how recent modern medicine really is. The two great mercies we now take for granted — that surgery shouldn't hurt, and shouldn't kill you with infection — both arrived after this room was already in use. People living when this theatre opened simply had to face it without either.\n\nClimb up if you have the nerve and the knees. It's a small, eerie, unforgettable room — the place that reminds you, more than any cathedral, exactly how lucky you are to have been born when you were.\n",
+    "heroPick": null,
+    "galleryPicks": [],
+    "imagesStaged": null,
+    "audioStatus": "PENDING",
+    "batch": 2
   }
 ]
