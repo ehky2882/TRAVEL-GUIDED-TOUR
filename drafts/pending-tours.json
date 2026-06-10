@@ -698,10 +698,16 @@
     "shortDescription": "Britain's first children's charity and first public art gallery — and the wall of tiny tokens left by mothers who gave up their babies.",
     "caption": "The Foundling Museum, Bloomsbury, London",
     "transcript": "The Foundling Museum\n\nThis was the first children's charity in Britain, the first public art gallery, and the place where some of the saddest objects in London are kept — and all three come from the same eighteenth-century hospital for abandoned babies.\n\nYou're at the Foundling Museum, near Brunswick Square in Bloomsbury, on the site of the old Foundling Hospital. \"Foundling\" means an abandoned child, found and taken in — and that's what this place was for. In 1739 a retired sea captain named Thomas Coram, appalled by the sight of babies abandoned and dying on London's streets, spent seventeen years campaigning until he won a royal charter to found a hospital that would take them in, feed them, and raise them. It was the first charity of its kind in the country.\n\nHere's where it becomes almost unbearably moving. So many desperate mothers brought babies that the hospital had to hold lotteries for places. And when a mother gave up her child, she often left a small token — a coin, a scrap of fabric, a button, a ribbon — kept with the records so that, if she could ever come back for the child, it could be identified. Most never came back. The museum displays these tokens: a wall of tiny, ordinary objects, each one the last trace of contact between a mother and a baby she would never see again. They are among the most affecting things in any London museum.\n\n[beat]\n\nAnd then the art. To raise money and awareness, Coram enlisted the great figures of the age. The painter William Hogarth donated works and persuaded other artists to do the same, hanging them here for the public to come and view — which made the Foundling Hospital, in effect, Britain's first public art gallery, decades before the Royal Academy. And the composer Handel was a major patron, conducting benefit performances of his Messiah here year after year, raising enormous sums for the children.\n\nSo this one institution braided three things together: practical mercy for the abandoned, the birth of the public gallery, and great music as charity. Go in for the tokens especially. A button on a card can tell you more about eighteenth-century London than any history book.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
+    "heroPick": "owner-supplied (modern facade)",
+    "galleryPicks": [
+      "owner-supplied (Court Room — first public gallery)"
+    ],
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/foundling-museum_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/foundling-museum_2.webp"
+    ]
   }
 ]
