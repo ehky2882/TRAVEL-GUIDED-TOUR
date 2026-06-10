@@ -824,10 +824,26 @@
     "shortDescription": "A dead Bankside power station reborn as the world's most-visited modern art gallery — the cathedral-scale Turbine Hall and the river-crossing that rewired London.",
     "caption": "Tate Modern, Bankside, London",
     "transcript": "Tate Modern\n\nThey turned off a power station, hollowed it out, and filled it with modern art — and it became the most visited gallery of modern art in the world.\n\nYou're on Bankside, on the south bank of the Thames, looking at Tate Modern: an enormous, austere brick building with a single tall chimney rising from its centre, directly across the river from St Paul's Cathedral. For most of the twentieth century this was Bankside Power Station, burning oil to make electricity for London, designed by Giles Gilbert Scott — the same architect behind Battersea Power Station and, of all things, the red telephone box. It was switched off in 1981 and sat derelict, a vast dead industrial hulk on the river, for years.\n\nThe transformation, opened in 2000, was the work of the Swiss architects Herzog and de Meuron, and their key decision was restraint: rather than gut the building, they kept its raw industrial character and worked with it. The centrepiece is the Turbine Hall — the immense, cathedral-like space, five storeys high, where the power station's turbines once stood. It's now used for giant commissioned installations: artists are handed this colossal volume to fill, and some of the most famous artworks of the century have been made for it — a giant indoor sun, a crack running the length of the floor, a field of millions of ceramic sunflower seeds.\n\n[beat]\n\nHere's what it changed. Before Tate Modern, this stretch of the south bank was neglected, cut off, somewhere you didn't really go. The gallery, together with the Millennium Bridge built to connect it straight across to St Paul's, completely rewired the centre of London — it pulled millions of visitors across the river and turned the south bank into one of the city's great cultural promenades. A dead power station didn't just become a gallery; it dragged the whole geography of the city across the water.\n\nGo inside, even just into the Turbine Hall, which is free and astonishing in its sheer scale. Stand at the top of the ramp and look down. They kept the cathedral of power and filled it with art — and it worked beyond anyone's expectations.\n",
-    "heroPick": null,
-    "galleryPicks": [],
-    "imagesStaged": null,
+    "heroPick": "E01 (night exterior across river)",
+    "galleryPicks": [
+      "E06",
+      "U04",
+      "U17",
+      "U00",
+      "U07",
+      "U31"
+    ],
+    "imagesStaged": true,
     "audioStatus": "PENDING",
-    "batch": 2
+    "batch": 2,
+    "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_hero.webp",
+    "additionalImageURLs": [
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_2.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_3.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_4.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_5.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_6.webp",
+      "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_7.webp"
+    ]
   }
 ]
