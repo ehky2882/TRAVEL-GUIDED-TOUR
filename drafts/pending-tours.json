@@ -34,5 +34,30 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/buckingham-palace_4.webp"
     ],
     "imagesStaged": true
+  },
+  {
+    "slug": "st-jamess-park",
+    "title": "St James's Park",
+    "city": "London",
+    "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+    "primaryCategory": "natureAndParks",
+    "lat": 51.5025,
+    "lon": -0.134,
+    "triggerRadiusMeters": 60,
+    "tags": [
+      "st james's park",
+      "royal park",
+      "pelicans",
+      "blue bridge",
+      "charles ii",
+      "lake",
+      "whitehall view"
+    ],
+    "shortDescription": "London's oldest royal park — a lake, willows and resident pelicans (gifted to Charles II in 1664) between Buckingham Palace and Whitehall, with the city's prettiest staged view.",
+    "caption": "Walk to the blue bridge over the lake and stop in the middle — look east to the Whitehall skyline.",
+    "transcript": "There are pelicans in this park, and there have been for over three hundred and sixty years, because a Russian ambassador once gave some to a king.\n\nYou're in St James's Park, the oldest of London's royal parks — a long ribbon of green running between Buckingham Palace at one end and Horse Guards at the other, with a lake down the middle. After the stone weight of Whitehall and the palace, this is the exhale: willows, water, deckchairs, and one of the best views in London. Walk to the blue bridge across the lake and stop in the middle of it. Looking east, the domes and pinnacles of Whitehall rise over the trees and water like something out of a fairy tale; looking west, Buckingham Palace closes the view. It's deliberately, gorgeously staged.\n\nThe land was marshy ground that Henry the Eighth drained as a deer park in the fifteen-thirties. But it became a proper pleasure garden under Charles the Second, after the monarchy was restored in 1660 — he'd spent his exile in France, admired the grand formal gardens there, and laid this out in that style, strolling here with his courtiers and his many dogs.\n\nAnd the pelicans. In 1664 a Russian ambassador presented Charles the Second with a gift of pelicans for the new park, and the park has kept them ever since — an unbroken line of resident pelicans for over three hundred and sixty years. They're still here, still fed daily, lounging on the rocks by the lake, looking faintly prehistoric and entirely unbothered by the seat of government a few hundred yards away.\n\n[beat]\n\nHere's the quiet thing to notice. You are standing in the green heart of British power — the palace on one side, the prime minister's offices and the whole machinery of government just across the park on the other. Cabinet ministers cross this park on foot. Spies, famously, have met by this lake. And it's also just a park, with office workers eating sandwiches and toddlers chasing the ducks, the whole apparatus of the state hidden behind a screen of willows.\n\nFind the bridge, take the view east, and stay a while. It's the prettiest spot in central London, and it's been laid on, in one form or another, for three and a half centuries.",
+    "heroPick": null,
+    "galleryPicks": [],
+    "audioStatus": "PENDING"
   }
 ]
