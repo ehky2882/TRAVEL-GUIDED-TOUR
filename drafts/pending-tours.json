@@ -399,7 +399,7 @@
       "U11"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_2.webp",
@@ -407,7 +407,9 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_4.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_5.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_6.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/soho.mp3",
+    "audioDurationSeconds": 141
   },
   {
     "slug": "chinatown",
@@ -439,7 +441,7 @@
       "U12"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_2.webp",
@@ -448,7 +450,9 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_5.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_6.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_7.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chinatown.mp3",
+    "audioDurationSeconds": 130
   },
   {
     "slug": "denmark-street",
@@ -475,11 +479,13 @@
       "owner-supplied (Tin Pan Alley blue plaque)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/denmark-street_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/denmark-street_2.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/denmark-street.mp3",
+    "audioDurationSeconds": 127
   },
   {
     "slug": "leicester-square",
@@ -509,14 +515,16 @@
       "U00"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_4.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leicester-square_5.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/leicester-square.mp3",
+    "audioDurationSeconds": 130
   },
   {
     "slug": "carnaby-street",
@@ -545,12 +553,14 @@
       "U17"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnaby-street_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnaby-street_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnaby-street_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnaby-street_4.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/carnaby-street.mp3",
+    "audioDurationSeconds": 133
   }
 ]
