@@ -26,14 +26,16 @@
       "U15",
       "U19"
     ],
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/buckingham-palace_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/buckingham-palace_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/buckingham-palace_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/buckingham-palace_4.webp"
     ],
-    "imagesStaged": true
+    "imagesStaged": true,
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/buckingham-palace.mp3",
+    "audioDurationSeconds": 137
   },
   {
     "slug": "st-jamess-park",
@@ -63,7 +65,7 @@
       "U13",
       "U05"
     ],
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-jamess-park_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-jamess-park_2.webp",
@@ -71,7 +73,9 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-jamess-park_4.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-jamess-park_5.webp"
     ],
-    "imagesStaged": true
+    "imagesStaged": true,
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-jamess-park.mp3",
+    "audioDurationSeconds": 131
   },
   {
     "slug": "the-mall-admiralty-arch",
@@ -100,14 +104,16 @@
       "C03"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heldPick": "C01 (1024x571 only — too small for clean 1200x900; pending owner OK)",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-mall-admiralty-arch_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-mall-admiralty-arch_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-mall-admiralty-arch_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-mall-admiralty-arch_4.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-mall-admiralty-arch.mp3",
+    "audioDurationSeconds": 136
   },
   {
     "slug": "burlington-arcade",
@@ -134,11 +140,13 @@
       "B01"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burlington-arcade_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burlington-arcade_2.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/burlington-arcade.mp3",
+    "audioDurationSeconds": 138
   },
   {
     "slug": "royal-academy",
@@ -165,11 +173,13 @@
       "owner-supplied (courtyard + Reynolds statue)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-academy_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-academy_2.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/royal-academy.mp3",
+    "audioDurationSeconds": 138
   },
   {
     "slug": "berkeley-square",
