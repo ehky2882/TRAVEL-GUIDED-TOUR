@@ -207,13 +207,15 @@
       "S03"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/berkeley-square_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/berkeley-square_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/berkeley-square_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/berkeley-square_4.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/berkeley-square.mp3",
+    "audioDurationSeconds": 124
   },
   {
     "slug": "shepherd-market",
@@ -241,11 +243,13 @@
       "owner-supplied (night, Shepherd Market sign + King's Arms)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shepherd-market_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shepherd-market_2.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/shepherd-market.mp3",
+    "audioDurationSeconds": 132
   },
   {
     "slug": "covent-garden",
@@ -277,7 +281,7 @@
       "U00"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_2.webp",
@@ -286,7 +290,9 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_5.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_6.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_7.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/covent-garden.mp3",
+    "audioDurationSeconds": 151
   },
   {
     "slug": "seven-dials",
@@ -315,13 +321,15 @@
       "D (PD Sketches by Boz)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seven-dials_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seven-dials_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seven-dials_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seven-dials_4.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/seven-dials.mp3",
+    "audioDurationSeconds": 135
   },
   {
     "slug": "neals-yard",
@@ -350,14 +358,16 @@
       "U02"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/neals-yard_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/neals-yard_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/neals-yard_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/neals-yard_4.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/neals-yard_5.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/neals-yard.mp3",
+    "audioDurationSeconds": 129
   },
   {
     "slug": "soho",
