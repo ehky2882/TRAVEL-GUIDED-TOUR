@@ -211,12 +211,14 @@
       "C00 (PD Dickens portrait)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/charles-dickens-museum_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/charles-dickens-museum_2.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/charles-dickens-museum.mp3",
+    "audioDurationSeconds": 123
   },
   {
     "slug": "senate-house",
@@ -244,12 +246,14 @@
       "owner-supplied (courtyard, looming)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/senate-house_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/senate-house_2.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/senate-house.mp3",
+    "audioDurationSeconds": 134
   },
   {
     "slug": "hatton-garden",
@@ -274,10 +278,12 @@
     "heroPick": "owner-supplied (jewellery-shop street)",
     "galleryPicks": [],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hatton-garden_hero.webp",
-    "additionalImageURLs": []
+    "additionalImageURLs": [],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hatton-garden.mp3",
+    "audioDurationSeconds": 138
   },
   {
     "slug": "tate-modern",
@@ -310,7 +316,7 @@
       "U31"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_hero.webp",
     "additionalImageURLs": [
@@ -320,7 +326,9 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_5.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_6.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_7.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tate-modern.mp3",
+    "audioDurationSeconds": 131
   },
   {
     "slug": "shakespeares-globe",
@@ -349,13 +357,15 @@
       "owner-supplied (stage + open yard interior)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shakespeares-globe_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shakespeares-globe_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shakespeares-globe_3.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/shakespeares-globe.mp3",
+    "audioDurationSeconds": 136
   },
   {
     "slug": "borough-market",
