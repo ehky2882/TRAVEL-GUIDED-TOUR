@@ -66,7 +66,23 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-09)
+## Current State (2026-06-11)
+
+### TestFlight 1.0 (40) — ships London West End / Soho batch 1 (session 33 — web/PM)
+
+Build cut to ship everything on `main` since build 39 (`ea197f0`) — **PR #192** (London batch 1: 15 West End / Soho tours — theatre district, shopping, Soho landmarks). Content + images only, no app-code change. Build bumped **39 → 40 direct-to-main** (`0cf79b3`, app-target `CURRENT_PROJECT_VERSION` lines only; test target stays 1; `MARKETING_VERSION` stays 1.0). `xcodebuild archive` clean at `/tmp/Atlas-20260611-1900.xcarchive` (~3 min); embedded version verified `1.0 (40)`; no validation 90474 — `UIRequiresFullScreen=YES` from build 34 held. Owner uploaded via Organizer. **TestFlight 1.0 (40) is live.**
+
+**London 25 → 40** (West End / Soho now covered, on top of the City + Westminster/Whitehall already in catalog from build 38). **Catalog 210 → 225 tours / 4 makers** (100 Atlas Studio NYC + 54 OPO + 40 LDN + 31 LIS).
+
+**Latest TestFlight build: 1.0 (40)** — live 2026-06-11.
+
+### TestFlight 1.0 (39) — ships the Lisbon expansion (26 LIS tours, session 32 — web/PM)
+
+Build cut to ship everything on `main` since build 38 (`cf00495`) — **PR #191** (26 Lisbon tours: Belém, Jerónimos, Castelo de São Jorge, Tram 28, and more). Content + images only, no app-code change. Build bumped **38 → 39 direct-to-main** (`ea197f0`, app-target `CURRENT_PROJECT_VERSION` lines only; test target stays 1; `MARKETING_VERSION` stays 1.0). Owner uploaded via Organizer. **TestFlight 1.0 (39) is live.**
+
+**Lisbon 5 → 31** — Atlas Studio LIS's first large batch. **Catalog 184 → 210 tours / 4 makers** (100 Atlas Studio NYC + 54 OPO + 25 LDN + 31 LIS). London unchanged at 25 this build (the West End / Soho batch ships in build 40). *Note: the build-39 bump commit message reads "26 Lisbon + 19 London" — the 19 London tours had already shipped in build 38; only the 26 Lisbon (#191) were new in this cut.*
+
+**Latest TestFlight build (at session 32 end): 1.0 (39)** — live 2026-06-10. (Superseded by 1.0 (40) on 2026-06-11.)
 
 ### TestFlight 1.0 (38) — ships the London expansion + 10 Porto/Matosinhos tours (session 31 — web/PM)
 
