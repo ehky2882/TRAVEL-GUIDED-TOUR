@@ -13,8 +13,13 @@ struct RailCarousel: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            // Rail title in the SF Mono ALL-CAPS caption that the rest
+            // of the home surfaces use (search placeholder, chips, the
+            // "N TOURS IN VIEW" header) so every small label on the map
+            // shares one editorial voice.
             Text(title)
-                .font(AtlasTypography.headline)
+                .font(AtlasTypography.caption)
+                .textCase(.uppercase)
                 .foregroundStyle(AtlasColors.primaryText)
                 .padding(.horizontal, AtlasSpacing.lg)
 
@@ -39,16 +44,13 @@ struct RailCarousel: View {
 private struct TourCard: View {
     let tour: Tour
 
+    @Environment(LibraryStore.self) private var libraryStore
+
     private let cardWidth: CGFloat = 220
 
     var body: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            HeroImageView(
-                imageName: tour.heroImageURL,
-                height: 140,
-                cornerRadius: 0,
-                category: tour.primaryCategory
-            )
+            heroSection
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 Text(tour.title)
@@ -78,6 +80,36 @@ private struct TourCard: View {
             .padding(.horizontal, AtlasSpacing.xs)
         }
         .frame(width: cardWidth, alignment: .leading)
+    }
+
+    /// Hero image with the bookmark AFFORDANCE in the top-right
+    /// corner — same control as the full-width list card, so saving a
+    /// tour reads identically on the map's rails and in detail. The
+    /// button sits inside the rail card's outer Button; SwiftUI routes
+    /// the tap to the innermost interactive view, so the bookmark
+    /// fires `toggleSaved` while a tap anywhere else opens the tour.
+    private var heroSection: some View {
+        ZStack(alignment: .topTrailing) {
+            HeroImageView(
+                imageName: tour.heroImageURL,
+                height: 140,
+                cornerRadius: 0,
+                category: tour.primaryCategory
+            )
+
+            Button {
+                libraryStore.toggleSaved(tour.id)
+            } label: {
+                Image(systemName: libraryStore.isSaved(tour.id) ? "bookmark.fill" : "bookmark")
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .frame(width: 36, height: 36)
+                    .background(.regularMaterial, in: Circle())
+            }
+            .buttonStyle(.plain)
+            .padding(AtlasSpacing.sm)
+            .accessibilityLabel(libraryStore.isSaved(tour.id) ? "Saved" : "Save tour")
+        }
     }
 
     private func formattedDuration(_ seconds: Int) -> String {

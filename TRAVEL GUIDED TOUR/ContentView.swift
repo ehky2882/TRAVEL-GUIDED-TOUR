@@ -104,10 +104,7 @@ struct ContentView: View {
                     topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
                 ) {
                     HomeDrawerContent(
-                        sheetDetent: $homeSheetDetent,
-                        onTourTap: { tour in
-                            tourPresenter.present(tour)
-                        }
+                        sheetDetent: $homeSheetDetent
                     )
                 }
             }

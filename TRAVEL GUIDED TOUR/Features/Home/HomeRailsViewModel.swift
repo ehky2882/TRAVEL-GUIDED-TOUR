@@ -48,20 +48,49 @@ enum HomeRailsViewModel {
         }
 
         // Interest-based — one per category, in TourCategory case order.
-        // Hide categories with zero tours.
+        // Hide categories with zero tours. Within each category the
+        // tours are ordered by distance from the *viewer* (the user's
+        // location, falling back to the map center) so the nearest
+        // tours of that interest surface first — a secondary sort on
+        // top of the category grouping.
+        let viewer = viewerLocation(userLocation: userLocation, visibleRegion: visibleRegion)
         for category in TourCategory.allCases {
             let matching = tours.filter { $0.primaryCategory == category }
             if matching.isEmpty { continue }
+            let ordered: [Tour]
+            if let viewer {
+                ordered = matching.sorted { $0.distance(from: viewer) < $1.distance(from: viewer) }
+            } else {
+                ordered = matching
+            }
             rails.append(
                 HomeRail(
                     id: "category.\(category.rawValue)",
                     title: category.displayName,
-                    tours: Array(matching.prefix(maxPerRail))
+                    tours: Array(ordered.prefix(maxPerRail))
                 )
             )
         }
 
         return rails
+    }
+
+    /// The reference point for distance-based ordering: the user's
+    /// location when known, otherwise the center of the visible map
+    /// region. `nil` only before any location fix *and* before the
+    /// first camera settle, in which case callers keep catalog order.
+    private static func viewerLocation(
+        userLocation: CLLocation?,
+        visibleRegion: MKCoordinateRegion?
+    ) -> CLLocation? {
+        if let userLocation { return userLocation }
+        if let visibleRegion {
+            return CLLocation(
+                latitude: visibleRegion.center.latitude,
+                longitude: visibleRegion.center.longitude
+            )
+        }
+        return nil
     }
 
     // MARK: - Rail builders
