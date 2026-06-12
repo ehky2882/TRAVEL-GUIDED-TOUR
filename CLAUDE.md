@@ -68,12 +68,20 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-06-12)
 
+### TestFlight 1.0 (41) — ships London batch 2 (session 35 — local build cut)
+
+Build cut to ship everything on `main` since build 40 (`0cf79b3`) — **PR #193** (London batch 2: 18 Bloomsbury/South Bank tours) + the #195 docs sync. Content + images only, no app-code change. Build bumped **40 → 41 direct-to-main** (`7cf3590`, app-target `CURRENT_PROJECT_VERSION` lines only; test target stays 1; `MARKETING_VERSION` stays 1.0). **Bump + archive ran in a throwaway worktree** (`git worktree add /tmp/build41 main`) because the primary checkout was mid-flight on `claude/home-drawer-rails` (PR #194, category rails) — **intentionally NOT merged or included**; owner reviewing separately. Use the worktree pattern whenever the main checkout isn't on `main`. `xcodebuild archive` clean at `/tmp/Atlas-20260612-0832.xcarchive` (~1–2 min, warm DerivedData); embedded version verified `1.0 (41)`; no validation 90474 — `UIRequiresFullScreen=YES` from build 34 held. Owner uploaded via Organizer. **TestFlight 1.0 (41) is live.**
+
+**London 40 → 58** (Bloomsbury / South Bank now covered) — **London is now the #2 city, ahead of Porto.** **Catalog 225 → 243 tours / 4 makers** (100 Atlas Studio NYC + 58 LDN + 54 OPO + 31 LIS).
+
+**Latest TestFlight build: 1.0 (41)** — live 2026-06-12.
+
 ### London batches 1 + 2 shipped via the audio-pending staging workflow (session 34 — web/PM, multi-day)
 
 The **"stage tours ahead of audio" workflow** ran end-to-end at scale for the first time: **33 new London tours** were text-drafted + image-staged days before audio existed (in `drafts/pending-tours.json` on per-batch session branches, images on `gh-pages`), then wired into `Tours.json` and merged the day the MP3s arrived (uploaded 5 at a time; durations read via `mutagen`).
 
 - **PR #192 — batch 1 (15 West End/Soho):** Buckingham Palace, St James's Park, The Mall & Admiralty Arch, Burlington Arcade, Royal Academy, Berkeley Square, Shepherd Market, Covent Garden, Seven Dials, Neal's Yard, Soho, Chinatown, Denmark Street, Leicester Square, Carnaby Street. Shipped in **TestFlight 1.0 (40)**.
-- **PR #193 — batch 2 (18 Bloomsbury/South Bank):** British Museum, British Library, Sir John Soane's Museum, Lincoln's Inn Fields, Foundling Museum, Charles Dickens Museum, Senate House, Hatton Garden, Tate Modern, Shakespeare's Globe, Borough Market, Southwark Cathedral, The Shard, National Theatre, Royal Festival Hall, Millennium Bridge, Cross Bones Graveyard, Old Operating Theatre. **Not yet in a TestFlight build — next cut bundles these.**
+- **PR #193 — batch 2 (18 Bloomsbury/South Bank):** British Museum, British Library, Sir John Soane's Museum, Lincoln's Inn Fields, Foundling Museum, Charles Dickens Museum, Senate House, Hatton Garden, Tate Modern, Shakespeare's Globe, Borough Market, Southwark Cathedral, The Shard, National Theatre, Royal Festival Hall, Millennium Bridge, Cross Bones Graveyard, Old Operating Theatre. **Shipped in TestFlight 1.0 (41).**
 
 **Catalog: 4 makers / 243 tours / 252 stops** (100 NYC + 54 OPO + 31 LIS + **58 LDN**). London 25 → 58. All single-stop, geofenced, owner-narrated; audio + images on `gh-pages`, every URL live-checked 200; validator clean.
 
@@ -85,7 +93,7 @@ Build cut to ship everything on `main` since build 39 (`ea197f0`) — **PR #192*
 
 **London 25 → 40** (West End / Soho now covered, on top of the City + Westminster/Whitehall already in catalog from build 38). **Catalog 210 → 225 tours / 4 makers** (100 Atlas Studio NYC + 54 OPO + 40 LDN + 31 LIS).
 
-**Latest TestFlight build: 1.0 (40)** — live 2026-06-11.
+**Latest TestFlight build (at session 33 end): 1.0 (40)** — live 2026-06-11. (Superseded by 1.0 (41) on 2026-06-12.)
 
 ### TestFlight 1.0 (39) — ships the Lisbon expansion (26 LIS tours, session 32 — web/PM)
 
