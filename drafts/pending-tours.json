@@ -29,7 +29,7 @@
       "U00"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_hero.webp",
     "additionalImageURLs": [
@@ -39,7 +39,9 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_5.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_6.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_7.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/british-museum.mp3",
+    "audioDurationSeconds": 132
   },
   {
     "slug": "british-library",
@@ -68,14 +70,16 @@
       "U26 (King's Library tower)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-library_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-library_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-library_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-library_4.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/british-library.mp3",
+    "audioDurationSeconds": 124
   },
   {
     "slug": "sir-john-soanes-museum",
@@ -103,13 +107,15 @@
       "owner-supplied (Dome/casts interior)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sir-john-soanes-museum_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sir-john-soanes-museum_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sir-john-soanes-museum_3.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sir-john-soanes-museum.mp3",
+    "audioDurationSeconds": 129
   },
   {
     "slug": "lincolns-inn-fields",
@@ -136,12 +142,14 @@
       "owner-supplied (bandstand)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincolns-inn-fields_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincolns-inn-fields_2.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lincolns-inn-fields.mp3",
+    "audioDurationSeconds": 126
   },
   {
     "slug": "foundling-museum",
@@ -169,12 +177,14 @@
       "owner-supplied (Court Room — first public gallery)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/foundling-museum_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/foundling-museum_2.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/foundling-museum.mp3",
+    "audioDurationSeconds": 130
   },
   {
     "slug": "charles-dickens-museum",
