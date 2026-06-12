@@ -549,11 +549,13 @@
     "heroPick": "owner-supplied (river-front exterior)",
     "galleryPicks": [],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-festival-hall_hero.webp",
     "additionalImageURLs": [],
-    "note": "gallery empty — Southbank Centre/Unsplash had no usable building shots; owner can paste foyer/interior to enrich"
+    "note": "gallery empty — Southbank Centre/Unsplash had no usable building shots; owner can paste foyer/interior to enrich",
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/royal-festival-hall.mp3",
+    "audioDurationSeconds": 133
   },
   {
     "slug": "millennium-bridge",
@@ -624,13 +626,15 @@
       "C01 (CC0 Redcross Way + Shard)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_3.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cross-bones-graveyard.mp3",
+    "audioDurationSeconds": 131
   },
   {
     "slug": "old-operating-theatre",
@@ -660,7 +664,7 @@
       "C03 (museum displays)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-operating-theatre_hero.webp",
     "additionalImageURLs": [
@@ -668,6 +672,8 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-operating-theatre_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-operating-theatre_4.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-operating-theatre_5.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/old-operating-theatre.mp3",
+    "audioDurationSeconds": 122
   }
 ]
