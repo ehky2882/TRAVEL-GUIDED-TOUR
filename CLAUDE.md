@@ -66,7 +66,18 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-11)
+## Current State (2026-06-12)
+
+### London batches 1 + 2 shipped via the audio-pending staging workflow (session 34 — web/PM, multi-day)
+
+The **"stage tours ahead of audio" workflow** ran end-to-end at scale for the first time: **33 new London tours** were text-drafted + image-staged days before audio existed (in `drafts/pending-tours.json` on per-batch session branches, images on `gh-pages`), then wired into `Tours.json` and merged the day the MP3s arrived (uploaded 5 at a time; durations read via `mutagen`).
+
+- **PR #192 — batch 1 (15 West End/Soho):** Buckingham Palace, St James's Park, The Mall & Admiralty Arch, Burlington Arcade, Royal Academy, Berkeley Square, Shepherd Market, Covent Garden, Seven Dials, Neal's Yard, Soho, Chinatown, Denmark Street, Leicester Square, Carnaby Street. Shipped in **TestFlight 1.0 (40)**.
+- **PR #193 — batch 2 (18 Bloomsbury/South Bank):** British Museum, British Library, Sir John Soane's Museum, Lincoln's Inn Fields, Foundling Museum, Charles Dickens Museum, Senate House, Hatton Garden, Tate Modern, Shakespeare's Globe, Borough Market, Southwark Cathedral, The Shard, National Theatre, Royal Festival Hall, Millennium Bridge, Cross Bones Graveyard, Old Operating Theatre. **Not yet in a TestFlight build — next cut bundles these.**
+
+**Catalog: 4 makers / 243 tours / 252 stops** (100 NYC + 54 OPO + 31 LIS + **58 LDN**). London 25 → 58. All single-stop, geofenced, owner-narrated; audio + images on `gh-pages`, every URL live-checked 200; validator clean.
+
+Lessons codified (details in `archive/HANDOFF-260612.md`): a **conflicted PR never triggers CI** (0 check runs — resolve the conflict first, don't wait); resolve parallel-session Tours.json conflicts by taking main's file and re-running the idempotent assembler; **this environment's git proxy blocks branch deletion** — merged branches `claude/dreamy-wozniak-nM6a4` + `-batch2` need UI deletion; close-together gh-pages pushes race Pages deploys (the older one 401s harmlessly — verify by URL, not by the failure email); wrong-building Unsplash matches are the norm for niche subjects (Royal *Albert* Hall for Royal Festival Hall, Seattle's Smith Tower for Senate House) — verify pixels, else owner pastes.
 
 ### TestFlight 1.0 (40) — ships London West End / Soho batch 1 (session 33 — web/PM)
 
@@ -445,8 +456,8 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **174 tours, 4 makers** in `Resources/Tours.json` (96 Atlas Studio NYC + 37 Atlas Studio Porto + 5 Atlas Studio Lisbon + 25 Atlas Studio LDN/London); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **172 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
+- **243 tours, 4 makers, 252 stops** in `Resources/Tours.json` (100 Atlas Studio NYC + 54 Atlas Studio OPO + 31 Atlas Studio LIS + 58 Atlas Studio LDN); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **241 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
