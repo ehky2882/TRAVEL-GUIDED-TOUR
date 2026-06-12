@@ -68,13 +68,19 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-06-12)
 
+### TestFlight 1.0 (42) — home drawer pivots to category rails (session 36 — implementation)
+
+Implementation session, owner-driven at the simulator. **PR #194** landed the long-planned rails pivot: the home drawer body now renders `HomeRailsViewModel.rails()` (compact **Continue listening** row → **NEAR YOU** → **IN VIEW** when panned ≥500m → one shelf per category, whole catalog, distance-sorted from the viewer) instead of the flat in-view list. Category chips are now **jump-scroll** (glide to that shelf), not filters. Rail card (owner-iterated over 4 sizing rounds): **260pt / 4:3 hero (260×195** — the catalog's exact 1200×900 aspect, heroes uncropped), one-line BODY all-caps title, maker-name subtitle, secondary-color duration, bookmark on the hero corner, rail-header chevron, and rail padding on the scroll **viewport** so cards clip at the drawer margins mid-scroll. Continue-listening row sources the **player's loaded tour first** (mini-player signal), then falls back to most-recent unfinished library entry by `lastListenedAt` (was savedAt — owner-flagged bug). "Recently viewed" row dropped (still in Library). Also in #194: **detent-persistence fix** — the drawer stays mounted beneath the tour-detail layer when presented from the Home root (`tourLayerCoversDrawer` in `ContentView` + a new completion param on `BottomLayerController.dismiss`), so closing a tour reveals the drawer at its old detent instead of flashing it back in; **compass relocated** to the trailing edge aligned with the recenter button (`Map(scope:)` + manual `MapCompass(scope:)` — the default slot hid it under the search bar; auto-visibility preserved; needs a ⌥-drag hand check); **44pt pin hit areas** (pins drew 16pt and hit-tested 16pt — that was "pins feel hard to tap"). `BottomSheet.swift` untouched. `TourListCard.swift` now unused (candidate for a per-rail "see all" list). **88/88 tests pass.** Build bumped **41 → 42 via PR #196** (the auto-mode classifier blocked a direct-to-main bump push this session — use the short-lived-PR pattern); archive clean at `/tmp/Atlas-20260612-1117-b42.xcarchive`; owner uploaded via Organizer. **TestFlight 1.0 (42) is live.** Upload-automation (ASC API key) offered per the standing TODO; owner deferred again ("archive only this time"). See `archive/HANDOFF-260612-3.md`.
+
+**Latest TestFlight build: 1.0 (42)** — live 2026-06-12.
+
 ### TestFlight 1.0 (41) — ships London batch 2 (session 35 — local build cut)
 
 Build cut to ship everything on `main` since build 40 (`0cf79b3`) — **PR #193** (London batch 2: 18 Bloomsbury/South Bank tours) + the #195 docs sync. Content + images only, no app-code change. Build bumped **40 → 41 direct-to-main** (`7cf3590`, app-target `CURRENT_PROJECT_VERSION` lines only; test target stays 1; `MARKETING_VERSION` stays 1.0). **Bump + archive ran in a throwaway worktree** (`git worktree add /tmp/build41 main`) because the primary checkout was mid-flight on `claude/home-drawer-rails` (PR #194, category rails) — **intentionally NOT merged or included**; owner reviewing separately. Use the worktree pattern whenever the main checkout isn't on `main`. `xcodebuild archive` clean at `/tmp/Atlas-20260612-0832.xcarchive` (~1–2 min, warm DerivedData); embedded version verified `1.0 (41)`; no validation 90474 — `UIRequiresFullScreen=YES` from build 34 held. Owner uploaded via Organizer. **TestFlight 1.0 (41) is live.**
 
 **London 40 → 58** (Bloomsbury / South Bank now covered) — **London is now the #2 city, ahead of Porto.** **Catalog 225 → 243 tours / 4 makers** (100 Atlas Studio NYC + 58 LDN + 54 OPO + 31 LIS).
 
-**Latest TestFlight build: 1.0 (41)** — live 2026-06-12.
+**Latest TestFlight build (at session 35 end): 1.0 (41)** — live 2026-06-12. (Superseded by 1.0 (42) later the same day.)
 
 ### London batches 1 + 2 shipped via the audio-pending staging workflow (session 34 — web/PM, multi-day)
 
