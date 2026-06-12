@@ -395,7 +395,7 @@
       "U04"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_hero.webp",
     "additionalImageURLs": [
@@ -403,7 +403,9 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_4.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_5.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/borough-market.mp3",
+    "audioDurationSeconds": 119
   },
   {
     "slug": "southwark-cathedral",
@@ -432,13 +434,15 @@
       "SG (CC0 stained glass)"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southwark-cathedral_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southwark-cathedral_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southwark-cathedral_3.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/southwark-cathedral.mp3",
+    "audioDurationSeconds": 124
   },
   {
     "slug": "the-shard",
@@ -469,7 +473,7 @@
       "U05"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_hero.webp",
     "additionalImageURLs": [
@@ -478,7 +482,9 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_4.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_5.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_6.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-shard.mp3",
+    "audioDurationSeconds": 133
   },
   {
     "slug": "national-theatre",
@@ -508,14 +514,16 @@
       "U03"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-theatre_hero.webp",
     "additionalImageURLs": [
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-theatre_2.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-theatre_3.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-theatre_4.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/national-theatre.mp3",
+    "audioDurationSeconds": 130
   },
   {
     "slug": "royal-festival-hall",
@@ -576,7 +584,7 @@
       "U19"
     ],
     "imagesStaged": true,
-    "audioStatus": "PENDING",
+    "audioStatus": "READY",
     "batch": 2,
     "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_hero.webp",
     "additionalImageURLs": [
@@ -585,7 +593,9 @@
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_4.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_5.webp",
       "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_6.webp"
-    ]
+    ],
+    "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/millennium-bridge.mp3",
+    "audioDurationSeconds": 126
   },
   {
     "slug": "cross-bones-graveyard",
