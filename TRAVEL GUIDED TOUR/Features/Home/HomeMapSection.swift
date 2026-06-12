@@ -31,6 +31,13 @@ struct PlacecardAnchor {
 /// the placecard.
 struct HomeMapSection: View {
     let tours: [Tour]
+    /// Namespace tying this map to externally-placed map controls.
+    /// `HomeView` renders a `MapCompass(scope:)` against this scope so
+    /// the compass can sit OUTSIDE the framework's fixed top-trailing
+    /// control slot (where the search bar + chips hide it) — aligned
+    /// with the recenter button instead. The compass keeps MapKit's
+    /// automatic visibility (appears when rotated off north).
+    let mapScope: Namespace.ID
     let userLocation: CLLocation?
     /// Device compass heading in degrees (0 = true north). When
     /// present, the user-location dot shows a directional wedge.
@@ -75,8 +82,12 @@ struct HomeMapSection: View {
         .onTapGesture {
             onMapTapped()
         }
+        // No MapCompass() here — the default control slot is
+        // top-trailing, underneath the floating search bar + chip
+        // row, so a rotated map showed a compass nobody could see.
+        // `HomeView` places the compass explicitly (via `mapScope`)
+        // on the trailing edge aligned with the recenter button.
         .mapControls {
-            MapCompass()
             MapScaleView()
         }
         // `.continuous` fires on every animation frame during a
@@ -114,7 +125,7 @@ struct HomeMapSection: View {
     /// the value through a stored property of protocol type.
     @ViewBuilder
     private var styledMap: some View {
-        let map = Map(position: $cameraPosition) {
+        let map = Map(position: $cameraPosition, scope: mapScope) {
             ForEach(clusterItems, id: \.id) { item in
                 Annotation(item.accessibilityLabel, coordinate: item.coordinate, anchor: .center) {
                     pinView(for: item)
@@ -158,11 +169,18 @@ struct HomeMapSection: View {
 
     // MARK: - Pin rendering
 
+    /// Pins draw small (16–20pt circles) but hit-test at Apple's
+    /// 44pt HIG minimum: the `.frame` + `.contentShape` below give
+    /// every pin an invisible 44pt round tap area centered on the
+    /// visual dot, without changing pin density on the map. Taps
+    /// land on the gesture; drags still pass through to pan the map.
     @ViewBuilder
     private func pinView(for item: ClusterItem) -> some View {
         switch item.kind {
         case .single(let marker):
             StopPin(isSelected: marker.tourId == selectedTourId)
+                .frame(width: 44, height: 44)
+                .contentShape(Circle())
                 .onTapGesture {
                     onPinTapped(marker.tourId, marker.coordinate)
                 }
@@ -171,6 +189,8 @@ struct HomeMapSection: View {
 
         case .cluster(let count, let stops):
             ClusterPin(count: count)
+                .frame(width: 44, height: 44)
+                .contentShape(Circle())
                 .onTapGesture {
                     zoomIn(on: stops)
                 }
@@ -356,7 +376,6 @@ private struct StopPin: View {
                 Circle().stroke(Color.white, lineWidth: isSelected ? 3 : 1.5)
             )
             .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
-            .contentShape(Circle())
     }
 
     private var diameter: CGFloat { isSelected ? 20 : 16 }
@@ -381,7 +400,6 @@ private struct ClusterPin: View {
                 .foregroundStyle(.white)
         }
         .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
-        .contentShape(Circle())
     }
 
     private var innerDiameter: CGFloat {

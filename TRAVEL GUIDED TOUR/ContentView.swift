@@ -65,6 +65,18 @@ struct ContentView: View {
         bottomInset: AtlasBottomModule.height()
     )
 
+    /// True while the tour-detail layer is up (or animating) having
+    /// been presented from the Home ROOT — i.e. the drawer was
+    /// visible underneath when it came up. While true, the drawer
+    /// stays mounted behind the layer instead of being removed, so
+    /// dismissing the layer reveals the drawer already sitting at
+    /// its old detent ("it stayed there") rather than re-inserting
+    /// it after the slide finishes (which read as a flash). Captured
+    /// at present time as `pushedDepth == 0` so tours opened from
+    /// inside Search/Maker DON'T mount the drawer over those
+    /// screens; cleared by the dismiss animation's completion.
+    @State private var tourLayerCoversDrawer = false
+
     var body: some View {
         @Bindable var appShared = appShared
         // NOTE on bindings: deliberately NOT using `@Bindable` for
@@ -84,12 +96,18 @@ struct ContentView: View {
             tabContent
 
             // Home drawer — only on the Home tab root. Once a detail
-            // is pushed (tour detail, Search, Maker — including the
-            // Search→Maker deep-link, which stays on the Home tab and
-            // so wouldn't be caught by the tab check alone) the drawer
-            // hides so it can't leak its "N TOURS IN VIEW" header over
-            // the pushed screen.
-            if appShared.selectedTab == .home && !navState.isShowingDetail {
+            // is pushed (Search, Maker — including the Search→Maker
+            // deep-link, which stays on the Home tab and so wouldn't
+            // be caught by the tab check alone) the drawer hides so
+            // it can't leak its header over the pushed screen.
+            // Exception: the tour-detail LAYER presented from the
+            // Home root keeps the drawer mounted underneath
+            // (`tourLayerCoversDrawer`) — the layer fully covers it,
+            // and keeping it in place means the dismiss slide reveals
+            // the drawer at its old detent instead of flashing it
+            // back in after the animation.
+            if appShared.selectedTab == .home
+                && (tourLayerCoversDrawer || !navState.isShowingDetail) {
                 BottomSheet(
                     detent: $homeSheetDetent,
                     dragOffset: dragOffsetBinding,
@@ -104,10 +122,7 @@ struct ContentView: View {
                     topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
                 ) {
                     HomeDrawerContent(
-                        sheetDetent: $homeSheetDetent,
-                        onTourTap: { tour in
-                            tourPresenter.present(tour)
-                        }
+                        sheetDetent: $homeSheetDetent
                     )
                 }
             }
@@ -165,6 +180,11 @@ struct ContentView: View {
         }
         .onChange(of: tourPresenter.presentedTour?.id) { _, _ in
             if let tour = tourPresenter.presentedTour {
+                // Capture BEFORE the layer's TourDetailView registers
+                // its own push — depth 0 here means the layer is
+                // coming up over the Home root with the drawer
+                // visible beneath it.
+                tourLayerCoversDrawer = navState.pushedDepth == 0
                 bottomLayer.present(
                     NavigationStack {
                         TourDetailView(tour: tour)
@@ -184,7 +204,14 @@ struct ContentView: View {
                     onDismiss: { tourPresenter.dismiss() }
                 )
             } else {
-                bottomLayer.dismiss()
+                // Keep the drawer mounted through the slide-down;
+                // clear the cover flag only once the layer has fully
+                // revealed it (the detail's own navState.pop() fires
+                // around the same moment, so the drawer condition
+                // hands over seamlessly from one term to the other).
+                bottomLayer.dismiss {
+                    tourLayerCoversDrawer = false
+                }
             }
         }
     }

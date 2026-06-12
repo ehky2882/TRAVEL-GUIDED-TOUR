@@ -289,10 +289,16 @@ final class BottomLayerController {
         presented = hosting
     }
 
-    /// Dismiss the currently-presented detail, if any.
-    func dismiss() {
-        guard let presented else { return }
-        presented.dismiss(animated: true)
+    /// Dismiss the currently-presented detail, if any. `completion`
+    /// fires when the slide-down animation finishes — callers use it
+    /// to flip state that must outlast the animation (e.g. keeping
+    /// the home drawer mounted until the layer has fully revealed it).
+    func dismiss(completion: (() -> Void)? = nil) {
+        guard let presented else {
+            completion?()
+            return
+        }
+        presented.dismiss(animated: true, completion: completion)
     }
 
     private func topViewController() -> UIViewController? {

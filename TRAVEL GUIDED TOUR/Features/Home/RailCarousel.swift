@@ -13,11 +13,27 @@ struct RailCarousel: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            Text(title)
-                .font(AtlasTypography.headline)
-                .foregroundStyle(AtlasColors.primaryText)
-                .padding(.horizontal, AtlasSpacing.lg)
+            // Rail title in the SF Mono ALL-CAPS caption that the rest
+            // of the home surfaces use (search placeholder, chips, the
+            // "N TOURS IN VIEW" header) so every small label on the map
+            // shares one editorial voice. The trailing chevron signals
+            // the row scrolls horizontally.
+            HStack(spacing: AtlasSpacing.xs) {
+                Text(title)
+                    .font(AtlasTypography.caption)
+                    .textCase(.uppercase)
+                    .foregroundStyle(AtlasColors.primaryText)
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+            }
+            .padding(.horizontal, AtlasSpacing.lg)
 
+            // The horizontal padding sits on the ScrollView itself
+            // (shrinking its viewport), not on the content inside it,
+            // so mid-scroll the cards clip at the drawer's side margins
+            // instead of sliding edge-to-edge (owner request).
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: AtlasSpacing.md) {
                     ForEach(tours) { tour in
@@ -29,8 +45,8 @@ struct RailCarousel: View {
                         .buttonStyle(.plain)
                     }
                 }
-                .padding(.horizontal, AtlasSpacing.lg)
             }
+            .padding(.horizontal, AtlasSpacing.lg)
         }
     }
 }
@@ -39,45 +55,81 @@ struct RailCarousel: View {
 private struct TourCard: View {
     let tour: Tour
 
-    private let cardWidth: CGFloat = 220
+    @Environment(DataService.self) private var dataService
+    @Environment(LibraryStore.self) private var libraryStore
+
+    /// One dominant card per viewport with a peek of the next: 260pt
+    /// wide leaves a ~78pt peek inside the drawer's 24pt side margins,
+    /// and the shorter hero lets the next rail's title row peek up
+    /// from the bottom of the drawer as a vertical scroll cue too.
+    /// The hero is 4:3 (260×195) — the exact aspect of the catalog's
+    /// 1200×900 gallery images, so heroes render uncropped.
+    private let cardWidth: CGFloat = 260
+    private var heroHeight: CGFloat { cardWidth * 3 / 4 }
 
     var body: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            HeroImageView(
-                imageName: tour.heroImageURL,
-                height: 140,
-                cornerRadius: 0,
-                category: tour.primaryCategory
-            )
+            heroSection
 
+            // Uniform AtlasSpacing.xs between all three text rows —
+            // title → maker → time — so the block reads as one evenly
+            // set unit (no extra pad on the time row).
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 Text(tour.title)
                     .font(AtlasTypography.body)
+                    .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(1)
 
-                Text(tour.shortDescription)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .lineLimit(2)
-                    .multilineTextAlignment(.leading)
-                    .fixedSize(horizontal: false, vertical: true)
+                if let maker = dataService.maker(for: tour) {
+                    Text(maker.displayName)
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                        .lineLimit(1)
+                }
 
                 HStack(spacing: AtlasSpacing.xs) {
                     Image(systemName: "clock")
                         .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.tertiaryText)
+                        .foregroundStyle(AtlasColors.secondaryText)
                     Text(formattedDuration(tour.totalDurationSeconds))
                         .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.tertiaryText)
+                        .foregroundStyle(AtlasColors.secondaryText)
                 }
-                .padding(.top, AtlasSpacing.xs)
             }
             .padding(.horizontal, AtlasSpacing.xs)
         }
         .frame(width: cardWidth, alignment: .leading)
+    }
+
+    /// Hero image with the bookmark AFFORDANCE in the top-right
+    /// corner — same control as the full-width list card, so saving a
+    /// tour reads identically on the map's rails and in detail. The
+    /// button sits inside the rail card's outer Button; SwiftUI routes
+    /// the tap to the innermost interactive view, so the bookmark
+    /// fires `toggleSaved` while a tap anywhere else opens the tour.
+    private var heroSection: some View {
+        ZStack(alignment: .topTrailing) {
+            HeroImageView(
+                imageName: tour.heroImageURL,
+                height: heroHeight,
+                cornerRadius: 0,
+                category: tour.primaryCategory
+            )
+
+            Button {
+                libraryStore.toggleSaved(tour.id)
+            } label: {
+                Image(systemName: libraryStore.isSaved(tour.id) ? "bookmark.fill" : "bookmark")
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .frame(width: 36, height: 36)
+                    .background(.regularMaterial, in: Circle())
+            }
+            .buttonStyle(.plain)
+            .padding(AtlasSpacing.sm)
+            .accessibilityLabel(libraryStore.isSaved(tour.id) ? "Saved" : "Save tour")
+        }
     }
 
     private func formattedDuration(_ seconds: Int) -> String {
