@@ -10707,6 +10707,834 @@
       "totalDurationSeconds": 133,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "a342e458-5de5-4e74-82bf-26fc6b1ea4c0",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The British Museum",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_7.webp"
+      ],
+      "tags": [
+        "london",
+        "british museum",
+        "great court",
+        "rosetta stone",
+        "parthenon marbles",
+        "history"
+      ],
+      "stops": [
+        {
+          "id": "46195b2c-ea0a-4bc4-a02b-835c9e5583c4",
+          "order": 0,
+          "title": "The British Museum",
+          "caption": "Stand on Great Russell Street before the great colonnade, then go inside to the glass-roofed Great Court.",
+          "latitude": 51.5194,
+          "longitude": -0.127,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/british-museum.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 70,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_hero.webp",
+          "transcriptText": "The British Museum\n\nThis was the first national public museum in the world — free, open to everyone, founded on the idea that all human knowledge could sit under one roof. That idea is now also its biggest problem.\n\nYou're in front of the British Museum, looking at the great Greek-temple front on Great Russell Street — a long row of towering columns, like a Classical temple blown up to enormous size. It was built in the eighteen-forties, but the institution is older: founded in 1753, when a physician and collector named Hans Sloane left his vast cabinet of curiosities to the nation, and Parliament decided to create something new — a museum any \"studious and curious person\" could enter, free of charge. That was genuinely radical. Museums before this were private, royal, for the few. This was for everyone.\n\nGo inside to the Great Court, the vast covered courtyard at the centre, with its spectacular curving glass-and-steel roof — designed by Norman Foster and opened in 2000, the largest covered public square in Europe. At its heart sits the old circular Reading Room, where Marx wrote and where Gandhi and countless others studied. For a long time this courtyard had been lost, filled with bookstacks; the glass roof reclaimed it.\n\n[beat]\n\nAnd then the collection — and the argument. The museum holds some eight million objects from every corner of the earth: the Rosetta Stone, vast Assyrian reliefs, and, most contentiously, the Parthenon Marbles, the sculptures stripped from the Parthenon in Athens two centuries ago. Many of the greatest things here were acquired in the age of empire, and a growing number of countries want them back. The museum's founding dream — the whole world's heritage gathered in one place for everyone — now reads to many as the loot of empire, and the question of who owns the past is argued over these galleries every single day.\n\nWalk in, and hold both things at once: one of the greatest collections ever assembled, free to all, and a building full of objects whose right to be here is seriously contested. Few places make you think harder about what a museum is for.\n"
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5194,
+      "centroidLongitude": -0.127,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The British Museum's great Greek-temple front on Great Russell Street — a long row of towering columns — fronts the first national public museum in the world, founded in 1753 when the physician and collector Hans Sloane left his vast cabinet of curiosities to the nation and Parliament created something radical: a museum any 'studious and curious person' could enter, free of charge. Inside, the Great Court — Norman Foster's spectacular glass-and-steel roof, opened in 2000 and the largest covered public square in Europe — wraps the old circular Reading Room where Marx wrote and Gandhi studied. The collection runs to some eight million objects from every corner of the earth: the Rosetta Stone, vast Assyrian reliefs, and, most contentiously, the Parthenon Marbles stripped from Athens two centuries ago. Many of its greatest things were acquired in the age of empire, and the founding dream — the whole world's heritage gathered in one place for everyone — now reads to many as the loot of empire, the question of who owns the past argued over these galleries every day.",
+      "shortDescription": "The world's first free national museum — eight million objects under one roof, and the fiercest argument about who owns the past.",
+      "totalDurationSeconds": 132,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "70a6cf56-ba03-4be2-b569-dda7b08ef7a4",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The British Library",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-library_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-library_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-library_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-library_4.webp"
+      ],
+      "tags": [
+        "london",
+        "british library",
+        "st pancras",
+        "king's library",
+        "magna carta",
+        "books"
+      ],
+      "stops": [
+        {
+          "id": "010abd4b-858b-408e-a6a4-9964227ec267",
+          "order": 0,
+          "title": "The British Library",
+          "caption": "Stand in the forecourt by St Pancras, then go inside to the six-storey glass tower of the King's Library.",
+          "latitude": 51.53,
+          "longitude": -0.1276,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/british-library.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-library_hero.webp",
+          "transcriptText": "The British Library\n\nThis looks, from the outside, like one of the least-loved modern buildings in London — and it's one of the most important, because it holds the written memory of the nation.\n\nYou're in the forecourt of the British Library, beside St Pancras, looking at a large red-brick building that took so long to build and ran so far over budget that it became a national joke — a future king famously likened it to an academy for secret police. It opened in 1998 after decades of trouble. The red brick was meant to nod to the great Gothic St Pancras hotel next door; many people just found it dull. But give it a moment, because the building is shaped, deliberately, like a ship — and what it carries is extraordinary.\n\nThis is the national library of the United Kingdom, and it holds a copy of nearly everything. By law, a copy of every book, newspaper, and magazine published in Britain and Ireland must be deposited here — around two hundred million items, growing by millions a year, on hundreds of miles of shelving, much of it deep underground beneath where you're standing.\n\nWalk inside and find the heart of it: a tall glass tower rising through the centre of the building, filled with thousands of old leather-bound volumes in gold and brown. That's the King's Library, the collection of King George the Third, given to the nation and now displayed in a six-storey glass column at the building's core — books as the literal spine of the place.\n\n[beat]\n\nAnd in a dim, hushed gallery off to one side sits the real treasure: original Magna Carta, Leonardo's notebooks, Shakespeare's First Folio, handwritten Beatles lyrics on the backs of envelopes, ancient gospels, the lot. Some of the most precious documents in British history, in one quiet room, free to see. The unloved brick box turns out to be a vault for the nation's memory.\n\nGo in, even briefly, and find that treasures gallery. The building outside may not move you. What's inside is the closest thing Britain has to a complete record of itself.\n"
+        }
+      ],
+      "primaryCategory": "literature",
+      "centroidLatitude": 51.53,
+      "centroidLongitude": -0.1276,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Beside St Pancras stands the British Library — a large red-brick building that ran so far over budget it became a national joke, a future king likening it to an academy for secret police, opened in 1998 after decades of trouble. But the unloved brick box, shaped deliberately like a ship, holds the written memory of the nation: by law a copy of nearly every book, newspaper, and magazine published in Britain and Ireland is deposited here — around two hundred million items on hundreds of miles of shelving, much of it deep underground. At its heart a tall glass tower rises through the building, filled with the gold-and-brown leather volumes of King George III's library, books as the literal spine of the place. And in a dim, hushed gallery sits the real treasure, free to see: original Magna Carta, Leonardo's notebooks, Shakespeare's First Folio, handwritten Beatles lyrics, ancient gospels — the closest thing Britain has to a complete record of itself.",
+      "shortDescription": "The unloved red-brick vault by St Pancras that holds the written memory of the nation — Magna Carta, Beatles lyrics, and a copy of nearly everything.",
+      "totalDurationSeconds": 124,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "e812b4fa-35dd-4715-9b60-b068db0741d7",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Sir John Soane's Museum",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sir-john-soanes-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sir-john-soanes-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sir-john-soanes-museum_3.webp"
+      ],
+      "tags": [
+        "london",
+        "lincoln's inn fields",
+        "house museum",
+        "john soane",
+        "architecture",
+        "antiquities"
+      ],
+      "stops": [
+        {
+          "id": "fca9b003-356d-4e43-981a-0b484ba7466a",
+          "order": 0,
+          "title": "Sir John Soane's Museum",
+          "caption": "Stand outside on Lincoln's Inn Fields, then climb in among the casts, mirrors, and coloured skylights.",
+          "latitude": 51.5165,
+          "longitude": -0.1175,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sir-john-soanes-museum.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sir-john-soanes-museum_hero.webp",
+          "transcriptText": "Sir John Soane's Museum\n\nAn architect left his house to the nation on one condition: that nothing in it ever be moved. Two hundred years later, it's exactly as he left it — and it's one of the strangest, most wonderful rooms in London.\n\nYou're outside Sir John Soane's Museum, on the north side of Lincoln's Inn Fields — a tall, narrow townhouse with a slightly odd projecting stone facade. Soane was one of the greatest British architects of his age; he designed the Bank of England, the great windowless fortress we met at Bank junction. But this was his home, and over his life he filled it, obsessively, with antiquities, casts, paintings, and architectural fragments, then arranged the house itself as a three-dimensional puzzle of light and space.\n\nWhen he died in 1837, he left the house to the nation by Act of Parliament, with a strict condition: it had to be kept exactly as he left it — nothing added, nothing taken away. So what you walk into is a frozen moment: a brilliant, eccentric man's home and collection, preserved for nearly two centuries precisely as he arranged it.\n\nInside, it's astonishing and slightly mad. Rooms open into rooms; mirrors and coloured skylights play tricks with the light; the walls of the picture room fold open like cupboards to reveal more paintings hidden behind paintings. And in the basement sits his greatest trophy: the actual alabaster sarcophagus of the Egyptian pharaoh Seti the First, glowing and translucent, which Soane bought when the British Museum wouldn't pay the price — and then threw a three-day party to celebrate.\n\n[beat]\n\nThat's the joy of the place. It wasn't designed to be a museum. It's a real home, the personal obsession of one man, kept under glass by his own command — the closest you can come to walking into the head of a genius from two hundred years ago and finding it exactly as he left it.\n\nIt's free, it's small, and it's like nowhere else. Go in, look up at the skylights, and let yourself get slightly lost. That's precisely what Soane built it to do.\n"
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5165,
+      "centroidLongitude": -0.1175,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On the north side of Lincoln's Inn Fields, behind a slightly odd projecting stone facade, is Sir John Soane's Museum — the house of one of the greatest British architects of his age, the man who designed the Bank of England. Soane filled it obsessively with antiquities, casts, paintings, and architectural fragments, and arranged the house itself as a three-dimensional puzzle of light and space; when he died in 1837 he left it to the nation by Act of Parliament on one strict condition: that it be kept exactly as he left it, nothing added or taken away. So you walk into a frozen moment — rooms opening into rooms, mirrors and coloured skylights playing tricks with the light, the walls of the Picture Room folding open like cupboards to reveal more paintings behind paintings. In the basement glows his greatest trophy, the alabaster sarcophagus of the pharaoh Seti I, which he bought when the British Museum wouldn't pay the price and then celebrated with a three-day party. It's the closest you can come to walking into the head of a genius from two hundred years ago.",
+      "shortDescription": "An architect's house, frozen exactly as he left it in 1837 — a mad, brilliant puzzle of light, mirrors, and antiquities.",
+      "totalDurationSeconds": 129,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "7f06e7fa-85ae-499d-87e6-c1a1cf391975",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Lincoln's Inn Fields",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincolns-inn-fields_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincolns-inn-fields_2.webp"
+      ],
+      "tags": [
+        "london",
+        "lincoln's inn fields",
+        "garden square",
+        "legal london",
+        "inns of court",
+        "plane trees"
+      ],
+      "stops": [
+        {
+          "id": "182b6574-44e4-4fbe-be38-2698ac7c907e",
+          "order": 0,
+          "title": "Lincoln's Inn Fields",
+          "caption": "Find a bench under the plane trees and take in the scale of London's largest garden square.",
+          "latitude": 51.516,
+          "longitude": -0.1175,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lincolns-inn-fields.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 90,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincolns-inn-fields_hero.webp",
+          "transcriptText": "Lincoln's Inn Fields\n\nThis is the largest public square in London, and for four hundred years it's been surrounded by lawyers — which is exactly why the open space in the middle survived.\n\nYou're in Lincoln's Inn Fields, a great rectangle of grass, plane trees, and tennis courts in the heart of legal London, ringed by handsome buildings. The first thing worth knowing is the scale: this is the biggest of all London's garden squares, and there's a charming, almost certainly untrue legend that its dimensions were copied from the base of the Great Pyramid. The truth is less neat, but it is genuinely enormous — a rare piece of open green held onto in a part of London that could easily have been built solid.\n\nIt's named after Lincoln's Inn, one of the four Inns of Court — the ancient institutions that, between them, control entry to the English bar. To become a barrister in England you must join one of these four Inns, and they've trained lawyers on these sites since the Middle Ages. The whole quarter around you — Lincoln's Inn, Gray's Inn, the Temple down by the river — is legal London, a self-contained world of chambers, courts, dining halls, and quiet gardens that most Londoners never enter.\n\nThe square has a dark patch in its history. For centuries it was a place of public execution; several Catholic martyrs and, later, men convicted of treason were put to death here, in front of crowds, on this very grass.\n\n[beat]\n\nAnd around the edges sit some remarkable things, almost casually. On the north side is Sir John Soane's house, frozen in time. On the south is the Royal College of Surgeons, with its collection of anatomical specimens. The fields themselves were, for a long time, a notorious haunt of the destitute and homeless, a place that drifted between elegance and hard edges — and to some extent still does.\n\nFind a bench under the planes and take in the size of it. Four centuries of lawyers walking the same paths, a green space that survived because powerful people wanted to keep their view — a quiet, grand, slightly secretive corner of the city.\n"
+        }
+      ],
+      "primaryCategory": "natureAndParks",
+      "centroidLatitude": 51.516,
+      "centroidLongitude": -0.1175,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Lincoln's Inn Fields is the largest of all London's garden squares — a great rectangle of grass, plane trees, and tennis courts in the heart of legal London, ringed by handsome buildings, with a charming (almost certainly untrue) legend that its dimensions were copied from the base of the Great Pyramid. It's named after Lincoln's Inn, one of the four Inns of Court — the ancient institutions that control entry to the English bar and have trained lawyers on these sites since the Middle Ages — and the whole quarter around it is a self-contained world of chambers, courts, and quiet gardens most Londoners never enter. The square has a dark patch in its history: for centuries it was a place of public execution, where Catholic martyrs and men convicted of treason were put to death before crowds. Around its edges sit remarkable things almost casually — Sir John Soane's house on the north, the Royal College of Surgeons on the south — a green space that survived because powerful people wanted to keep their view.",
+      "shortDescription": "London's largest garden square — a great green rectangle ringed by legal London, preserved because powerful neighbours wanted the view.",
+      "totalDurationSeconds": 126,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "224a9981-9d3a-4364-9d6a-b93c6b18e332",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Foundling Museum",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/foundling-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/foundling-museum_2.webp"
+      ],
+      "tags": [
+        "london",
+        "bloomsbury",
+        "foundling hospital",
+        "thomas coram",
+        "hogarth",
+        "handel",
+        "social history"
+      ],
+      "stops": [
+        {
+          "id": "78a40669-f9ab-42b7-9772-aed32f5f028c",
+          "order": 0,
+          "title": "The Foundling Museum",
+          "caption": "Stand outside near Brunswick Square, then go in for the wall of tokens especially.",
+          "latitude": 51.5246,
+          "longitude": -0.122,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/foundling-museum.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/foundling-museum_hero.webp",
+          "transcriptText": "The Foundling Museum\n\nThis was the first children's charity in Britain, the first public art gallery, and the place where some of the saddest objects in London are kept — and all three come from the same eighteenth-century hospital for abandoned babies.\n\nYou're at the Foundling Museum, near Brunswick Square in Bloomsbury, on the site of the old Foundling Hospital. \"Foundling\" means an abandoned child, found and taken in — and that's what this place was for. In 1739 a retired sea captain named Thomas Coram, appalled by the sight of babies abandoned and dying on London's streets, spent seventeen years campaigning until he won a royal charter to found a hospital that would take them in, feed them, and raise them. It was the first charity of its kind in the country.\n\nHere's where it becomes almost unbearably moving. So many desperate mothers brought babies that the hospital had to hold lotteries for places. And when a mother gave up her child, she often left a small token — a coin, a scrap of fabric, a button, a ribbon — kept with the records so that, if she could ever come back for the child, it could be identified. Most never came back. The museum displays these tokens: a wall of tiny, ordinary objects, each one the last trace of contact between a mother and a baby she would never see again. They are among the most affecting things in any London museum.\n\n[beat]\n\nAnd then the art. To raise money and awareness, Coram enlisted the great figures of the age. The painter William Hogarth donated works and persuaded other artists to do the same, hanging them here for the public to come and view — which made the Foundling Hospital, in effect, Britain's first public art gallery, decades before the Royal Academy. And the composer Handel was a major patron, conducting benefit performances of his Messiah here year after year, raising enormous sums for the children.\n\nSo this one institution braided three things together: practical mercy for the abandoned, the birth of the public gallery, and great music as charity. Go in for the tokens especially. A button on a card can tell you more about eighteenth-century London than any history book.\n"
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5246,
+      "centroidLongitude": -0.122,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Near Brunswick Square in Bloomsbury, the Foundling Museum stands on the site of the old Foundling Hospital — Britain's first children's charity, won by a retired sea captain named Thomas Coram, who, appalled by babies abandoned and dying on London's streets, spent seventeen years campaigning until a 1739 royal charter let him build a hospital to take them in. So many desperate mothers came that the hospital held lotteries for places, and when a mother gave up her child she often left a small token — a coin, a scrap of fabric, a button — kept with the records so the child could be identified if she ever returned. Most never did. The museum's wall of these tiny tokens, each the last trace of contact between a mother and a baby she would never see again, is among the most affecting things in any London museum. The institution braided three firsts together: to raise money, Hogarth donated works and hung them for the public — making this, in effect, Britain's first public art gallery — and Handel conducted benefit performances of his Messiah here, year after year, for the children.",
+      "shortDescription": "Britain's first children's charity and first public art gallery — and the wall of tiny tokens left by mothers who gave up their babies.",
+      "totalDurationSeconds": 130,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "1d8d35df-4c14-4466-8dd9-fdb6adb1bf2b",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Charles Dickens Museum",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/charles-dickens-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/charles-dickens-museum_2.webp"
+      ],
+      "tags": [
+        "london",
+        "bloomsbury",
+        "doughty street",
+        "charles dickens",
+        "writer's house",
+        "literature"
+      ],
+      "stops": [
+        {
+          "id": "8960fc67-2d07-418d-916a-fb077c540b9c",
+          "order": 0,
+          "title": "The Charles Dickens Museum",
+          "caption": "Stand outside on Doughty Street, then go in and stand in the study where Oliver Twist was written.",
+          "latitude": 51.5237,
+          "longitude": -0.1163,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/charles-dickens-museum.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/charles-dickens-museum_hero.webp",
+          "transcriptText": "The Charles Dickens Museum\n\nOf all the houses Dickens lived in across London, this is the only one still standing — and it's where he wrote his way from struggling young writer to the most famous author in the world.\n\nYou're outside the Charles Dickens Museum on Doughty Street in Bloomsbury — a handsome but unremarkable Georgian terraced house, the kind there are thousands of in London. What makes this one matter is that Dickens lived here from 1837 to 1839, in his mid-twenties, and it's the sole survivor of his many London homes. He moved often, restlessly, all his life; the wreckers and developers got the rest. This one was saved and turned into a museum.\n\nThe years he spent here were the hinge of his whole life. When he moved in, he was a promising young writer; by the time he left, he was a phenomenon. He finished The Pickwick Papers here, and wrote Oliver Twist and Nicholas Nickleby at the desk in this house — three novels in barely two years, in his twenties, the burst of work that made him the most popular writer in the English-speaking world. You can see the actual rooms where that happened, furnished as they would have been, down to his writing desk.\n\nIt was also where private grief struck. Dickens's young sister-in-law Mary, whom he adored, died suddenly in this house at just seventeen — a loss that haunted him for the rest of his life and echoes through the deaths of young women in his fiction.\n\n[beat]\n\nHere's what the house gives you that the novels can't. Dickens is so vast a figure, so woven into the very idea of London, that he can seem almost abstract — a brand, a Christmas card, a statue. This narrow house pulls him back to human scale: a young man on the way up, working at a furious pace in a few small rooms, knowing real grief and real money worries, before he became \"Dickens.\"\n\nGo in if you have the time, and stand in the study. The handwriting on the manuscripts is small, crossed-out, urgent. This is where a young man wrote himself into immortality, in four flights of an ordinary terraced house.\n"
+        }
+      ],
+      "primaryCategory": "literature",
+      "centroidLatitude": 51.5237,
+      "centroidLongitude": -0.1163,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Doughty Street in Bloomsbury, a handsome but unremarkable Georgian terraced house is the only one of Dickens's many London homes still standing. He lived here from 1837 to 1839, in his mid-twenties, and the years he spent here were the hinge of his whole life: he arrived a promising young writer and left a phenomenon, finishing The Pickwick Papers and writing Oliver Twist and Nicholas Nickleby at the desk in this house — three novels in barely two years, the burst of work that made him the most popular writer in the English-speaking world. It was also where private grief struck: his young sister-in-law Mary, whom he adored, died suddenly here at just seventeen, a loss that haunted him for life and echoes through the deaths of young women in his fiction. The house pulls a vast figure back to human scale — a young man on the way up, working at a furious pace in a few small rooms, knowing real grief and real money worries, before he became 'Dickens.'",
+      "shortDescription": "The only surviving London home of Dickens — where, in his twenties, he wrote Oliver Twist and Nicholas Nickleby and became a phenomenon.",
+      "totalDurationSeconds": 123,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "0c535436-71b3-4af1-9258-154d84ca3acf",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Senate House",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/senate-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/senate-house_2.webp"
+      ],
+      "tags": [
+        "london",
+        "bloomsbury",
+        "senate house",
+        "charles holden",
+        "art deco",
+        "orwell",
+        "architecture"
+      ],
+      "stops": [
+        {
+          "id": "9bd52e8d-06bf-4823-8c97-9aa2a3fecca7",
+          "order": 0,
+          "title": "Senate House",
+          "caption": "Stand back across the square to take in the full height of the pale stone tower.",
+          "latitude": 51.5215,
+          "longitude": -0.129,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/senate-house.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/senate-house_hero.webp",
+          "transcriptText": "Senate House\n\nWhen George Orwell needed a building to stand for the totalitarian state — the Ministry of Truth, the place where lies are manufactured — he had this one in mind.\n\nYou're looking at Senate House, the administrative headquarters and library of the University of London, in Bloomsbury — a vast, pale, stepped tower of Portland stone, austere and monumental, rising in tiers like a cliff. It was built in the nineteen-thirties, designed by Charles Holden, and when it went up it was one of the tallest secular buildings in London, a deliberate statement of permanence and authority. And that's exactly the quality that gave it its dark literary afterlife.\n\nDuring the Second World War, Senate House was requisitioned as the home of the Ministry of Information — the government department responsible for wartime propaganda and censorship, controlling what the British public was told. George Orwell's wife worked there, and Orwell knew the building and what went on inside it. When he came to write Nineteen Eighty-Four, his nightmare of a state that controls truth itself, he is widely believed to have modelled the Ministry of Truth — the colossal pyramid where history is endlessly rewritten — on this very building. The real ministry of information became the fictional ministry of lies.\n\n[beat]\n\nThere's a strange power in that, standing here. The building was meant to project enlightenment — it's a university, a library, a temple to learning. But its sheer scale and severity, the way it looms, made it read to one of the century's sharpest minds as something sinister: the architecture of a state too big and too sure of itself. The same stone says \"knowledge\" and \"control,\" depending on who's looking.\n\nIt's been a film location for exactly this reason ever since — whenever a production needs a building that radiates impersonal authority, Senate House gets the call. Look up at the tiers of blank stone and you can see why: genuinely impressive, and faintly, deliberately, intimidating. A building that knows how big it is.\n\nStand back across the square to take in the full height. Enlightenment or oppression, learning or propaganda — it's the same tower, and which one you see says as much about you as about the stone.\n"
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.5215,
+      "centroidLongitude": -0.129,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Senate House, the administrative headquarters and library of the University of London in Bloomsbury, is a vast, pale, stepped tower of Portland stone — austere and monumental, rising in tiers like a cliff. Designed by Charles Holden and built in the 1930s, it was one of the tallest secular buildings in London, a deliberate statement of permanence and authority — and that quality gave it a dark literary afterlife. During the Second World War it housed the Ministry of Information, the department responsible for wartime propaganda and censorship; George Orwell's wife worked there, and when Orwell wrote Nineteen Eighty-Four he is widely believed to have modelled the Ministry of Truth — the colossal pyramid where history is endlessly rewritten — on this very building. The same stone says 'knowledge' and 'control' depending on who's looking, which is why it gets the call whenever a film needs a building that radiates impersonal authority: genuinely impressive, and faintly, deliberately, intimidating.",
+      "shortDescription": "Charles Holden's austere Portland-stone tower — University of London's HQ, wartime propaganda HQ, and Orwell's model for the Ministry of Truth.",
+      "totalDurationSeconds": 134,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "aac3cee7-3ce2-4f28-a78b-2b1db53bf8da",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Hatton Garden",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hatton-garden_hero.webp",
+      "additionalImageURLs": [],
+      "tags": [
+        "london",
+        "hatton garden",
+        "diamond trade",
+        "jewellery",
+        "heist",
+        "clerkenwell"
+      ],
+      "stops": [
+        {
+          "id": "0e5df9c5-fcd7-433b-9d48-08401ee26108",
+          "order": 0,
+          "title": "Hatton Garden",
+          "caption": "Walk the length of the street and look in the windows of jeweller after jeweller.",
+          "latitude": 51.5205,
+          "longitude": -0.1086,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hatton-garden.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hatton-garden_hero.webp",
+          "transcriptText": "Hatton Garden\n\nThis unremarkable street is the centre of the British diamond trade — and in 2015, a gang of elderly career criminals tunnelled into a vault beneath it and pulled off the largest burglary in English history.\n\nYou're on Hatton Garden, in the borderland between Holborn and Clerkenwell — a street that looks like nothing much, lined with small shopfronts, but whose windows give it away: jeweller after jeweller, glittering with diamonds and gold. This is, and has been for over a century, the heart of London's jewellery and diamond district, the place where the trade clusters, much of it still conducted between dealers in ways that have barely changed in generations — deals sealed on trust and a handshake, stones carried in folded paper packets.\n\nThe area has deep roots in the trade, strengthened in the nineteenth and twentieth centuries by waves of Jewish and later other immigrant craftsmen and dealers who made it Europe's diamond quarter alongside Antwerp. Behind the modest shopfronts lie workshops, safes, and the Hatton Garden Safe Deposit — a vault where dealers and wealthy locals stored their valuables.\n\n[beat]\n\nAnd that vault is why the street is now famous worldwide. Over the Easter weekend of 2015, a crew of mostly elderly, mostly retired professional thieves — men in their sixties and seventies — broke in. They disabled the lift, climbed down the shaft, and used a heavy industrial drill to bore through half a metre of reinforced concrete into the vault, then emptied dozens of safe deposit boxes, getting away with cash, gold, and jewels worth perhaps fourteen million pounds — the largest burglary in English legal history. The detail the world loved was the gang's age: a pensioners' heist, planned for years, pulled off by men who should have been long retired. They were caught, in the end, largely by their own sloppiness and a bugged car.\n\nSo this plain little street holds two stories at once: the quiet, ancient, trust-based world of the diamond trade, and the most audacious robbery the country has ever seen, right underneath it.\n\nWalk its length and look in the windows. It's a working street first, a crime legend second — and the two have been sitting on top of each other, literally, the whole time.\n"
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5205,
+      "centroidLongitude": -0.1086,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Hatton Garden, in the borderland between Holborn and Clerkenwell, looks like nothing much — small shopfronts on a plain street — but its windows give it away: jeweller after jeweller, glittering with diamonds and gold. This has been the heart of London's jewellery and diamond district for over a century, much of the trade still conducted between dealers on trust and a handshake, stones carried in folded paper packets, its roots deepened by waves of Jewish and other immigrant craftsmen who made it Europe's diamond quarter alongside Antwerp. Behind the modest shopfronts lie workshops, safes, and the Hatton Garden Safe Deposit — the vault that made the street famous worldwide. Over the Easter weekend of 2015, a crew of mostly elderly, retired professional thieves disabled the lift, climbed down the shaft, drilled through half a metre of reinforced concrete, and emptied dozens of safe deposit boxes, getting away with perhaps fourteen million pounds in the largest burglary in English legal history — a pensioners' heist the world loved. So the plain little street holds two stories at once: the quiet, ancient diamond trade, and the most audacious robbery the country has ever seen, right underneath it.",
+      "shortDescription": "London's diamond quarter — a plain street of jewellers hiding the trust-and-handshake diamond trade, and the vault of the 2015 pensioners' heist.",
+      "totalDurationSeconds": 138,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "9932791e-1c59-4c12-8616-31bd0db64a94",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Tate Modern",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_7.webp"
+      ],
+      "tags": [
+        "london",
+        "bankside",
+        "tate modern",
+        "turbine hall",
+        "power station",
+        "herzog de meuron",
+        "modern art"
+      ],
+      "stops": [
+        {
+          "id": "090c1617-c413-45ac-b9d0-421225f2c238",
+          "order": 0,
+          "title": "Tate Modern",
+          "caption": "Stand on Bankside facing the brick building and chimney, then go in to the Turbine Hall and look down from the ramp.",
+          "latitude": 51.5076,
+          "longitude": -0.0994,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tate-modern.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 60,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_hero.webp",
+          "transcriptText": "Tate Modern\n\nThey turned off a power station, hollowed it out, and filled it with modern art — and it became the most visited gallery of modern art in the world.\n\nYou're on Bankside, on the south bank of the Thames, looking at Tate Modern: an enormous, austere brick building with a single tall chimney rising from its centre, directly across the river from St Paul's Cathedral. For most of the twentieth century this was Bankside Power Station, burning oil to make electricity for London, designed by Giles Gilbert Scott — the same architect behind Battersea Power Station and, of all things, the red telephone box. It was switched off in 1981 and sat derelict, a vast dead industrial hulk on the river, for years.\n\nThe transformation, opened in 2000, was the work of the Swiss architects Herzog and de Meuron, and their key decision was restraint: rather than gut the building, they kept its raw industrial character and worked with it. The centrepiece is the Turbine Hall — the immense, cathedral-like space, five storeys high, where the power station's turbines once stood. It's now used for giant commissioned installations: artists are handed this colossal volume to fill, and some of the most famous artworks of the century have been made for it — a giant indoor sun, a crack running the length of the floor, a field of millions of ceramic sunflower seeds.\n\n[beat]\n\nHere's what it changed. Before Tate Modern, this stretch of the south bank was neglected, cut off, somewhere you didn't really go. The gallery, together with the Millennium Bridge built to connect it straight across to St Paul's, completely rewired the centre of London — it pulled millions of visitors across the river and turned the south bank into one of the city's great cultural promenades. A dead power station didn't just become a gallery; it dragged the whole geography of the city across the water.\n\nGo inside, even just into the Turbine Hall, which is free and astonishing in its sheer scale. Stand at the top of the ramp and look down. They kept the cathedral of power and filled it with art — and it worked beyond anyone's expectations.\n"
+        }
+      ],
+      "primaryCategory": "visualArt",
+      "centroidLatitude": 51.5076,
+      "centroidLongitude": -0.0994,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Bankside, directly across the river from St Paul's, stands Tate Modern: an enormous, austere brick building with a single tall chimney, once Bankside Power Station — designed by Giles Gilbert Scott, the architect behind Battersea Power Station and the red telephone box — switched off in 1981 and left derelict for years. The transformation, opened in 2000, was the work of Swiss architects Herzog & de Meuron, whose key decision was restraint: rather than gut the building they kept its raw industrial character. The centrepiece is the Turbine Hall, the immense, cathedral-like space five storeys high where the turbines once stood, now filled with giant commissioned installations — a giant indoor sun, a crack running the length of the floor, a field of millions of ceramic sunflower seeds. The gallery, with the Millennium Bridge built to connect it straight to St Paul's, rewired the centre of London, pulling millions across the river and turning the south bank into one of the city's great cultural promenades. A dead power station didn't just become a gallery; it dragged the whole geography of the city across the water.",
+      "shortDescription": "A dead Bankside power station reborn as the world's most-visited modern art gallery — the cathedral-scale Turbine Hall and the river-crossing that rewired London.",
+      "totalDurationSeconds": 131,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "7811381f-5806-4423-8b95-ba9c53ae2114",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Shakespeare's Globe",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shakespeares-globe_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shakespeares-globe_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shakespeares-globe_3.webp"
+      ],
+      "tags": [
+        "london",
+        "bankside",
+        "shakespeare",
+        "globe theatre",
+        "sam wanamaker",
+        "elizabethan",
+        "theatre"
+      ],
+      "stops": [
+        {
+          "id": "5589fe65-2fef-4592-8ab0-227860cd25a2",
+          "order": 0,
+          "title": "Shakespeare's Globe",
+          "caption": "Stand by the river and look at the thatch, then step inside to the open yard and stage.",
+          "latitude": 51.5081,
+          "longitude": -0.0972,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/shakespeares-globe.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 45,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shakespeares-globe_hero.webp",
+          "transcriptText": "Shakespeare's Globe\n\nThis theatre is a reconstruction — it's only about thirty years old — but it sits a few hundred feet from where the original stood, and it exists because of one American's stubborn twenty-year obsession.\n\nYou're on Bankside, looking at Shakespeare's Globe — a round, white, half-timbered building with a thatched roof, looking convincingly Elizabethan among the modern riverside. And the honesty up front is the interesting part: this is not the original Globe. It's a careful modern reconstruction, opened in 1997. The original Globe, where many of Shakespeare's plays were first performed, stood near here from 1599, burned down, was rebuilt, and was finally demolished in the sixteen-forties when the Puritans closed the theatres. For three centuries there was no Globe at all.\n\nIt's back because of Sam Wanamaker, an American actor and director who came to London, was dismayed to find only a grimy plaque marking the site of the most famous theatre in history, and spent more than twenty years — most of the rest of his life — campaigning and fundraising to rebuild it. He died in 1993, four years before it opened. He never saw it finished.\n\nWhat they built is as close to the original as scholarship and fire regulations allow: oak timbers joined with wooden pegs, walls of lime plaster, the first thatched roof permitted in London since the Great Fire of 1666. And crucially, it works the way the original did. It's open to the sky. The \"groundlings\" stand in the open yard in front of the stage, in all weathers, for a few pounds, exactly as the poorest spectators did four hundred years ago. There's no amplification, no spotlights; the actors play in daylight, to a crowd they can see and who can heckle back.\n\n[beat]\n\nThat's what makes it more than a replica. It's an experiment in how these plays were meant to land — rowdy, communal, weather-beaten, with the audience part of the show rather than sitting silently in the dark. You don't just watch a Shakespeare play here; you experience something close to the conditions he wrote for.\n\nStand by the river and look at the thatch. One man's refusal to accept that it was gone forever is the only reason it's here at all.\n"
+        }
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "centroidLatitude": 51.5081,
+      "centroidLongitude": -0.0972,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Bankside stands Shakespeare's Globe — a round, white, half-timbered building with a thatched roof, looking convincingly Elizabethan among the modern riverside, and honest about what it is: not the original, but a careful reconstruction opened in 1997, a few hundred feet from where the original Globe stood from 1599 until the Puritans closed the theatres in the 1640s. It exists because of Sam Wanamaker, an American actor who came to London, was dismayed to find only a grimy plaque marking the most famous theatre in history, and spent more than twenty years campaigning and fundraising to rebuild it; he died in 1993, four years before it opened, and never saw it finished. What they built is as close to the original as scholarship and fire regulations allow — oak timbers joined with wooden pegs, lime-plaster walls, the first thatched roof permitted in London since the Great Fire of 1666 — and crucially it works the way the original did: open to the sky, with the 'groundlings' standing in the yard in all weathers for a few pounds, no amplification, the actors playing in daylight to a crowd that can heckle back. It's not a replica but an experiment in how these plays were meant to land — rowdy, communal, with the audience part of the show.",
+      "shortDescription": "A faithful thatched reconstruction of Shakespeare's open-air playhouse — built from one American's twenty-year obsession, playing the way the originals did.",
+      "totalDurationSeconds": 136,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "df1b9acf-5fb5-4ef0-b186-be992e69fb8f",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Borough Market",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_5.webp"
+      ],
+      "tags": [
+        "london",
+        "borough market",
+        "food market",
+        "london bridge",
+        "victorian",
+        "southwark"
+      ],
+      "stops": [
+        {
+          "id": "bb49ecd9-c4ca-4738-bd0d-dd62f25e9e93",
+          "order": 0,
+          "title": "Borough Market",
+          "caption": "Wander in beneath the railway arches and iron-and-glass roof, and graze the food stalls.",
+          "latitude": 51.5055,
+          "longitude": -0.0909,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/borough-market.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_hero.webp",
+          "transcriptText": "Borough Market\n\nThere has been a market on this spot for something close to a thousand years — London has been buying its food here since before it had most of its history.\n\nYou're at Borough Market, in the tangle of streets beneath the railway arches near London Bridge, on the south bank. It's a covered market of iron and glass, crammed with food stalls — cheese, bread, oysters, game, spices, street food from everywhere — packed with crowds, smelling of a hundred things at once. It's now one of London's great food destinations. But the remarkable thing is the sheer age of it: there has been a market trading at this end of London Bridge for roughly a thousand years, which makes it one of the oldest in the country.\n\nThe reason is pure geography. For most of London's history, London Bridge was the only bridge across the Thames — the single point where everything coming into the city from the south, from the Channel ports and the Continent, had to funnel across. A market grew up at the southern foot of that bridge to catch all that trade, and it never left. The location made it inevitable.\n\nThe handsome Victorian market buildings you see date from the nineteenth century, when it was mainly a wholesale fruit and vegetable market, supplying the trade rather than the public. Its current life — as a retail food market and foodie magnet — is much more recent, a revival from the nineteen-nineties onward that turned a declining wholesale market into one of the most famous food halls in the world.\n\n[beat]\n\nHere's the thread to hold. This isn't a heritage attraction pretending to be old; it's genuinely, continuously old — a working market that has been feeding Londoners on the same patch of ground, in one form or another, since the Middle Ages. The artisan cheese and the craft coffee are just the latest layer on something a thousand years deep.\n\nWander in and graze. Try something. You're eating in a spot where Londoners have come to buy their food since before the city had a Tower, a St Paul's, or most of what we've been looking at.\n"
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5055,
+      "centroidLongitude": -0.0909,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Beneath the railway arches near London Bridge, Borough Market is a covered market of iron and glass crammed with food stalls — cheese, bread, oysters, game, spices, street food from everywhere — packed with crowds and smelling of a hundred things at once, now one of London's great food destinations. But the remarkable thing is its age: there has been a market trading at this end of London Bridge for roughly a thousand years, making it one of the oldest in the country. The reason is pure geography — for most of London's history, London Bridge was the only crossing of the Thames, the single point everything from the south had to funnel across, and a market grew up at its southern foot to catch the trade and never left. The handsome Victorian buildings date from the nineteenth century, when it was mainly a wholesale fruit and vegetable market; its current life as a foodie magnet is a revival from the 1990s onward. This isn't a heritage attraction pretending to be old — it's genuinely, continuously old, a working market feeding Londoners on the same patch of ground since the Middle Ages, the artisan cheese just the latest layer on something a thousand years deep.",
+      "shortDescription": "A thousand-year-old market at the foot of London Bridge — Victorian iron and glass, now one of the world's great food halls.",
+      "totalDurationSeconds": 119,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "9d95a895-3464-4719-9d8c-4bb41003a163",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Southwark Cathedral",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southwark-cathedral_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southwark-cathedral_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southwark-cathedral_3.webp"
+      ],
+      "tags": [
+        "london",
+        "southwark",
+        "cathedral",
+        "gothic",
+        "shakespeare",
+        "john harvard",
+        "medieval"
+      ],
+      "stops": [
+        {
+          "id": "5b71a8a3-c647-4b18-a4d5-b21c7a29f84b",
+          "order": 0,
+          "title": "Southwark Cathedral",
+          "caption": "Step inside out of the Borough Market crowds, into the thirteenth-century Gothic choir.",
+          "latitude": 51.5061,
+          "longitude": -0.0879,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/southwark-cathedral.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southwark-cathedral_hero.webp",
+          "transcriptText": "Southwark Cathedral\n\nThis is one of the oldest churches in London, it's Gothic, it's beautiful, and almost nobody visits it — because it has the bad luck to sit in the shadow of more famous neighbours.\n\nYou're at Southwark Cathedral — and first, the name: it's \"SUTH-uck,\" not \"South-wark.\" It sits right by Borough Market and London Bridge, on the south bank, and the odds are you'd walk straight past it. That's the theme of this stop: a genuinely ancient and gorgeous building that gets overlooked because it's hemmed in by the market, the railway, and the river, with the Shard towering over it.\n\nThere's been a church on this site for well over a thousand years, and the present building is largely medieval Gothic — the choir at the east end is among the oldest Gothic church architecture in London, thirteenth century, pointed arches and soaring stone. It only officially became a cathedral in 1905; for most of its life it was a priory and then a parish church. But the building is far older than that recent promotion suggests.\n\nIts real richness is in the people connected to it. This was Shakespeare's parish church when he lived and worked in this neighbourhood, beside the original Globe — his brother Edmund is buried here, and there's a memorial to the playwright himself, reclining in stone beneath a stained-glass window full of his characters. The American John Harvard, who gave his name and his books to Harvard University, was baptised here in 1607; there's a chapel named for him.\n\n[beat]\n\nHere's why it rewards the detour. In a part of London that's all noise and crowds and selfies in front of the Shard, this is a pool of quiet and real antiquity, hidden in plain sight. Most of the thousands streaming through Borough Market never put their heads round the door — which means you can have a thousand-year-old cathedral, with Shakespeare's church and Harvard's font, very nearly to yourself.\n\nStep inside out of the crowds. It's free, it's ancient, and it's one of the best small surprises on the south bank — the beautiful old thing everyone walks past on the way to lunch.\n"
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5061,
+      "centroidLongitude": -0.0879,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Right by Borough Market and London Bridge, hemmed in by the market, the railway, and the Shard, Southwark Cathedral — said 'SUTH-uck' — is one of the oldest churches in London, genuinely ancient and gorgeous, and almost nobody puts their head round the door. There has been a church on this site for well over a thousand years; the present building is largely medieval Gothic, the choir at the east end among the oldest Gothic church architecture in London, thirteenth century, pointed arches and soaring stone. It only became a cathedral in 1905, having been a priory and then a parish church. Its real richness is in the people connected to it: this was Shakespeare's parish church when he worked beside the original Globe — his brother Edmund is buried here, and there's a memorial to the playwright beneath a window full of his characters — and John Harvard, who gave his name and books to Harvard University, was baptised here in 1607. In a part of London that's all noise and selfies in front of the Shard, it's a pool of quiet and real antiquity, hidden in plain sight.",
+      "shortDescription": "A thousand-year-old Gothic cathedral hidden by Borough Market and the Shard — Shakespeare's parish church and John Harvard's font.",
+      "totalDurationSeconds": 124,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "f2e248ef-1b00-49a1-b27e-e31172641815",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Shard",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_6.webp"
+      ],
+      "tags": [
+        "london",
+        "the shard",
+        "renzo piano",
+        "skyscraper",
+        "london bridge",
+        "architecture"
+      ],
+      "stops": [
+        {
+          "id": "afb15634-64e4-4df0-8d94-86ecb883ba95",
+          "order": 0,
+          "title": "The Shard",
+          "caption": "Crane your neck near London Bridge and watch the fractured glass top catch the light.",
+          "latitude": 51.5045,
+          "longitude": -0.0865,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-shard.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_hero.webp",
+          "transcriptText": "The Shard\n\nIt's the tallest building in the country, it's named after a piece of broken glass, and the man who designed it took the idea partly from old paintings of London.\n\nYou're near London Bridge, looking up at the Shard — a vast, tapering spike of glass rising over a thousand feet above you, far taller than anything else around, its top dissolving into a jagged, unfinished point. Completed in 2012, it's the tallest building in the United Kingdom and one of the tallest in Europe. It was designed by the Italian architect Renzo Piano — the same man who, decades earlier, co-designed the inside-out Pompidou Centre in Paris.\n\nThe name was almost an accident. Piano sketched the first design imagining a slender shape rising out of the river like a spire — he was thinking partly of ships' masts and of the steeples in old paintings of London, the city of spires that Canaletto painted in the eighteenth century. A heritage campaigner, opposing the scheme, scornfully said it would be like a shard of glass through the heart of historic London. Piano and the developers liked the insult so much they adopted it. The Shard. The criticism became the name.\n\nLook at how it's made. The glass facets don't quite meet at the top — they splay apart, leaving the corners open, so the building seems to fray into the sky rather than stopping with a clean roof. That deliberate incompleteness is the whole idea: a shard, a splinter, something broken off and pointing upward.\n\n[beat]\n\nIt's worth knowing what it did to a long argument. London spent centuries keeping its buildings low, protecting the dominance of St Paul's dome. The Shard, planted right by the river in a historic area, was the boldest break with that — and it provoked exactly the fight you'd expect. Now it's simply part of the view, the thing that orients you from miles away, but it stands for a real decision about what kind of city London was going to be: one that builds tall.\n\nCrane your neck and watch the top catch the light. A broken splinter of glass, named after an insult, standing taller than anything else in the country.\n"
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.5045,
+      "centroidLongitude": -0.0865,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Near London Bridge rises the Shard — a vast, tapering spike of glass over a thousand feet tall, far taller than anything around it, its top dissolving into a jagged, unfinished point. Completed in 2012, it's the tallest building in the United Kingdom, designed by the Italian architect Renzo Piano, who decades earlier co-designed the inside-out Pompidou Centre in Paris. The name was almost an accident: Piano imagined a slender spire rising from the river, thinking of ships' masts and the steeples in old Canaletto paintings of London, and a heritage campaigner opposing the scheme scornfully said it would be like a shard of glass through the heart of historic London — Piano and the developers liked the insult so much they adopted it. Look at how it's made: the glass facets don't quite meet at the top, splaying apart so the building frays into the sky rather than stopping with a clean roof — a deliberate incompleteness. London spent centuries keeping its buildings low to protect the dominance of St Paul's; the Shard, planted in a historic area by the river, was the boldest break with that, and stands for a real decision about what kind of city London was going to be: one that builds tall.",
+      "shortDescription": "Renzo Piano's tapering glass spike by London Bridge — the UK's tallest building, named after the insult that called it a shard through historic London.",
+      "totalDurationSeconds": 133,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "88b44354-87c7-402f-99a2-778c1dd1e889",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The National Theatre",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-theatre_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-theatre_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-theatre_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-theatre_4.webp"
+      ],
+      "tags": [
+        "london",
+        "south bank",
+        "national theatre",
+        "brutalism",
+        "denys lasdun",
+        "concrete",
+        "theatre"
+      ],
+      "stops": [
+        {
+          "id": "5d7e3309-78ad-43f2-b90c-bc37d97d7a97",
+          "order": 0,
+          "title": "The National Theatre",
+          "caption": "Walk up onto the riverside terraces and run your hand along the wood-grained concrete.",
+          "latitude": 51.507,
+          "longitude": -0.114,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/national-theatre.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-theatre_hero.webp",
+          "transcriptText": "The National Theatre\n\nThis is probably the most divisive building in London — people genuinely either love it or loathe it — and it's a masterpiece of the style everyone loves to hate.\n\nYou're on the south bank, looking at the National Theatre — a great, sprawling composition of raw grey concrete, all horizontal terraces and two blocky towers, sitting right on the river near Waterloo Bridge. It's the flagship of British Brutalism, designed by the architect Denys Lasdun and opened in 1976, and it's been starting arguments ever since. A future king famously called it a clever way of building a nuclear power station in the middle of London without anyone objecting. Others consider it one of the finest buildings of its era.\n\nLasdun didn't think of it as a building so much as an \"urban landscape\" — a series of strata, layers, and terraces, like rock formations or a set of cliffs, with the public invited to wander up and along the outdoor terraces and look out over the Thames. The concrete was poured against rough-sawn timber boards so that it carries the grain of the wood, a deliberate texture; this isn't meant to be slick, it's meant to be elemental, like stone.\n\n[beat]\n\nWhatever you make of the outside, what it's for is glorious. Inside are three theatres, and it's the home of some of the best theatre in the world — a producing house that has launched countless famous productions. The building was designed from the inside out, around the practical needs of making theatre, with the foyers deliberately open and democratic, full of people, bars, and music, with no sense that you need a ticket to come in and belong. At night, lit up, with crowds spilling across its terraces by the river, even many of its critics admit it comes alive.\n\nIt's the perfect test of whether you can love Brutalism. By day it can look grim and grey; by night, busy and warm, it can look magnificent. Same concrete, completely different building.\n\nWalk up onto the terraces and out toward the river. Run your hand along the concrete and feel the wood grain in it. Then decide, for yourself, which side of the great argument you're on.\n"
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.507,
+      "centroidLongitude": -0.114,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On the south bank by Waterloo Bridge stands the National Theatre — a great, sprawling composition of raw grey concrete, all horizontal terraces and two blocky towers, the flagship of British Brutalism, designed by Denys Lasdun and opened in 1976. It's probably the most divisive building in London: a future king famously called it a clever way of building a nuclear power station in the middle of London without anyone objecting, while others consider it one of the finest buildings of its era. Lasdun thought of it not as a building but as an 'urban landscape' — strata and terraces like rock formations, with the public invited to wander up and look out over the Thames — and poured the concrete against rough-sawn timber so it carries the grain of the wood, elemental rather than slick. Whatever you make of the outside, what it's for is glorious: three theatres and some of the best theatre in the world, with foyers deliberately open and democratic, full of people, bars, and music. By day it can look grim and grey; by night, lit up with crowds spilling across its terraces, even many critics admit it comes alive — the same concrete, a completely different building.",
+      "shortDescription": "London's most divisive building — Denys Lasdun's Brutalist concrete 'urban landscape' on the South Bank, grim by day and magnificent by night.",
+      "totalDurationSeconds": 130,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "4b217d13-0cd2-4a98-8445-c496405da7e2",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Royal Festival Hall",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-festival-hall_hero.webp",
+      "additionalImageURLs": [],
+      "tags": [
+        "london",
+        "south bank",
+        "royal festival hall",
+        "festival of britain",
+        "1951",
+        "concert hall",
+        "modernism"
+      ],
+      "stops": [
+        {
+          "id": "6bce3ec1-d833-4657-ab2b-c8094168299b",
+          "order": 0,
+          "title": "The Royal Festival Hall",
+          "caption": "Look at the clean, light building among the concrete, then go in to the open foyers — often with free music.",
+          "latitude": 51.5055,
+          "longitude": -0.1163,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/royal-festival-hall.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 50,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-festival-hall_hero.webp",
+          "transcriptText": "The Royal Festival Hall\n\nThis is the only thing left standing from a great national party — a month-long festival in 1951 meant to cheer up a broken, bombed-out, exhausted country.\n\nYou're on the south bank, looking at the Royal Festival Hall — a large, clean, light building, all glass and pale stone and horizontal lines, sitting among the wider concrete of the Southbank Centre. To understand it you have to go back to 1951 and the Festival of Britain. The country was worn down: six years after the war, still rationed, still rebuilding, still scarred with bomb sites. The government staged a huge national festival — part celebration of British achievement, part deliberate morale-booster, a \"tonic to the nation\" — and its centrepiece was a fairground of brilliant, optimistic modern buildings put up right here, on a derelict bombed stretch of the south bank.\n\nAlmost all of it was temporary. When the festival ended, the pavilions and the famous structures — a great vertical cigar-shaped tower called the Skylon, the saucer-like Dome of Discovery — were dismantled, some of it scrapped on the orders of an incoming government that disapproved of the whole thing. The Festival of Britain vanished almost entirely.\n\nThe Royal Festival Hall is the one major building that was meant to be permanent, and survived. It's a concert hall, and a famous one, with an auditorium cleverly suspended inside the structure like an egg in a box, isolated from the noise of the trains and the river outside. It launched the whole idea of the South Bank as London's cultural quarter — everything else, the National Theatre, the galleries, came later, around this seed.\n\n[beat]\n\nHere's the poignancy of it. This optimistic, forward-looking building was the lone survivor of a moment when a battered country threw itself a party to remember how to hope. The Skylon and the rest were swept away; this one hall carried the spirit of 1951 forward, and grew the entire South Bank around itself.\n\nGo inside if there's nothing on — the foyers are open and welcoming, often with free music. You're in the last building standing from the day Britain decided, despite everything, to cheer itself up.\n"
+        }
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "centroidLatitude": 51.5055,
+      "centroidLongitude": -0.1163,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On the south bank, a large, clean, light building of glass and pale stone among the wider concrete of the Southbank Centre, the Royal Festival Hall is the lone survivor of a great national party. To understand it you go back to 1951 and the Festival of Britain: six years after the war, the country still rationed and scarred with bomb sites, the government staged a huge festival — part celebration, part deliberate morale-booster, a 'tonic to the nation' — with a fairground of brilliant, optimistic modern buildings on a derelict bombed stretch of the south bank. Almost all of it was temporary; when the festival ended the pavilions and famous structures — the cigar-shaped Skylon, the saucer-like Dome of Discovery — were dismantled, some scrapped on the orders of an incoming government that disapproved of the whole thing, and the Festival of Britain vanished almost entirely. The Royal Festival Hall is the one major building meant to be permanent: a famous concert hall with an auditorium suspended inside the structure like an egg in a box, isolated from the noise of the trains and the river. It launched the whole idea of the South Bank as London's cultural quarter — everything else came later, around this seed — the last building standing from the day Britain decided, despite everything, to cheer itself up.",
+      "shortDescription": "The lone survivor of the 1951 Festival of Britain — the concert hall that seeded the whole South Bank, an auditorium suspended like an egg in a box.",
+      "totalDurationSeconds": 133,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "0e044571-e715-4b5b-a2c3-785e184e1379",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Millennium Bridge",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_6.webp"
+      ],
+      "tags": [
+        "london",
+        "millennium bridge",
+        "norman foster",
+        "st paul's",
+        "thames",
+        "wobbly bridge"
+      ],
+      "stops": [
+        {
+          "id": "ab419dc7-a816-4d73-80c4-bbb31ee6f91e",
+          "order": 0,
+          "title": "The Millennium Bridge",
+          "caption": "Walk across the steel blade toward St Paul's, and feel how solid it is now.",
+          "latitude": 51.5095,
+          "longitude": -0.0985,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/millennium-bridge.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 55,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/millennium-bridge_hero.webp",
+          "transcriptText": "The Millennium Bridge\n\nThis bridge had to close three days after it opened, because the moment Londoners walked onto it, it started to sway alarmingly — and fixing that taught engineers something they hadn't known.\n\nYou're at the Millennium Bridge, a sleek, low, steel footbridge crossing the Thames in a single flat line, connecting Tate Modern on the south bank directly to St Paul's Cathedral on the north. It's deliberately understated — the architect Norman Foster and the sculptor Anthony Caro called it a \"blade of light,\" a thin ribbon across the river that wouldn't block the view of St Paul's. It was London's first new bridge across the Thames in over a century, opened in the year 2000 to mark the millennium.\n\nAnd then it wobbled. On the opening day, thousands of people streamed onto it — and the bridge began to sway from side to side, noticeably, unnervingly. The more it swayed, the more people instinctively adjusted their footing to stay balanced, all stepping in time with the sway — and that synchronised stepping pushed it further, in a feedback loop. The bridge was swiftly closed, just two days after opening, and Londoners promptly nicknamed it \"the Wobbly Bridge.\"\n\n[beat]\n\nHere's the genuinely interesting part. That effect — crowds unconsciously synchronising their footsteps with a bridge's tiny movements and amplifying them — wasn't properly understood by engineers at the time. The Millennium Bridge became a famous case study; fixing it, with dozens of dampers fitted underneath to absorb the motion, advanced the science of how pedestrians and structures interact. It was closed for nearly two years and reopened, rock-steady, in 2002. A very expensive, very public lesson, now taught to engineering students everywhere.\n\nSo the bridge's embarrassing failure turned out to be its most valuable contribution — a real addition to what we know about building things people walk on.\n\nWalk across it, toward St Paul's, and feel how solid it is now. Then remember it once danced under people's feet so badly they had to shut it — and that the dancing is exactly why we now know how to stop it.\n"
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.5095,
+      "centroidLongitude": -0.0985,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The Millennium Bridge is a sleek, low steel footbridge crossing the Thames in a single flat line, connecting Tate Modern on the south bank directly to St Paul's Cathedral on the north — deliberately understated, called by architect Norman Foster and sculptor Anthony Caro a 'blade of light,' a thin ribbon that wouldn't block the view of St Paul's. London's first new bridge across the Thames in over a century, it opened in 2000 to mark the millennium — and then it wobbled. On opening day thousands streamed onto it and the bridge began to sway from side to side; the more it swayed, the more people instinctively stepped in time with it, amplifying the motion in a feedback loop, and it was closed just two days later, promptly nicknamed the 'Wobbly Bridge.' That effect — crowds unconsciously synchronising their footsteps with a bridge's tiny movements — wasn't properly understood at the time; the Millennium Bridge became a famous case study, and fixing it with dozens of dampers advanced the science of how pedestrians and structures interact. Closed for nearly two years, it reopened rock-steady in 2002 — a very public, very expensive lesson now taught to engineering students everywhere, the embarrassing failure turning out to be its most valuable contribution.",
+      "shortDescription": "Foster's steel 'blade of light' to St Paul's — London's first new Thames bridge in a century, the 'Wobbly Bridge' that taught engineers how crowds and structures sync.",
+      "totalDurationSeconds": 126,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "4129f7b5-70f1-4dcc-8540-fcb2710889ee",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Cross Bones Graveyard",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_3.webp"
+      ],
+      "tags": [
+        "london",
+        "southwark",
+        "cross bones",
+        "memorial",
+        "winchester geese",
+        "outcast dead",
+        "history"
+      ],
+      "stops": [
+        {
+          "id": "9fcadc1b-e604-4cbe-91b1-83c14f4d851a",
+          "order": 0,
+          "title": "Cross Bones Graveyard",
+          "caption": "Stand at the ribbon-covered gates on Redcross Way and read a few of the tributes.",
+          "latitude": 51.5028,
+          "longitude": -0.0925,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cross-bones-graveyard.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_hero.webp",
+          "transcriptText": "Cross Bones Graveyard\n\nThis is a memorial to the outcast dead — the paupers and prostitutes buried in unconsecrated ground, forgotten for centuries, and now quietly, stubbornly remembered.\n\nYou're at Cross Bones, on Redcross Way in Southwark, in front of a set of iron gates almost entirely covered in ribbons, flowers, tokens, and handwritten messages. It doesn't look like much — there's no grand monument — but it's one of the most moving small places in London. Behind the gates is a patch of ground that was, for centuries, a burial place for the poorest and most marginal people of Southwark, those refused burial in consecrated churchyards. As many as fifteen thousand people may lie here, most in unmarked paupers' graves.\n\nThe history reaches back to the medieval period and the strange status of this district. For centuries Southwark sat outside the City's jurisdiction, and this stretch was controlled by the Bishop of Winchester, who licensed and taxed the brothels here. The women who worked in them were known, with grim local humour, as \"Winchester Geese.\" In death, the Church that had profited from them in life often refused them holy burial — so they were put here, in unconsecrated ground. Later it became a general paupers' graveyard, packed far beyond capacity, until it was closed in the eighteen-fifties.\n\n[beat]\n\nIt was nearly forgotten entirely, then almost built over when the land was disturbed by Underground works in the nineteen-nineties, which uncovered the densely packed remains. Local people, led by the writer John Constable, began holding vigils and tying tributes to the gates, refusing to let the outcast dead be erased a second time. That grassroots memorial has continued for decades; the gates are re-dressed with fresh tokens constantly, and a garden of remembrance has been made on the site.\n\nStand at the gates a moment and read a few of the ribbons. The whole point of this place is a simple, defiant idea: that the people society discarded — the poor, the sex workers, the unnamed — are worth remembering anyway. It's one of the few memorials in London to the people history was built to forget.\n"
+        }
+      ],
+      "primaryCategory": "hiddenGems",
+      "centroidLatitude": 51.5028,
+      "centroidLongitude": -0.0925,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "On Redcross Way in Southwark, a set of iron gates almost entirely covered in ribbons, flowers, tokens, and handwritten messages marks Cross Bones — one of the most moving small places in London. Behind the gates is a patch of ground that was, for centuries, a burial place for the poorest and most marginal people of Southwark, those refused burial in consecrated churchyards; as many as fifteen thousand may lie here in unmarked paupers' graves. The history reaches back to the medieval period, when this district lay outside the City's jurisdiction and was controlled by the Bishop of Winchester, who licensed and taxed the brothels here — the women who worked in them were known, with grim humour, as 'Winchester Geese,' and the Church that profited from them in life often refused them holy burial in death. Nearly forgotten, then almost built over when Underground works disturbed the densely packed remains in the 1990s, the site was saved by local people, led by the writer John Constable, who began holding vigils and tying tributes to the gates. The whole point of the place is a simple, defiant idea: that the people society discarded — the poor, the sex workers, the unnamed — are worth remembering anyway.",
+      "shortDescription": "A ribbon-covered gate on a Southwark backstreet — the grassroots memorial to the paupers and 'Winchester Geese' buried in unconsecrated ground.",
+      "totalDurationSeconds": 131,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "0699b4e6-6994-4892-8e1d-41f03406b57e",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "The Old Operating Theatre",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-operating-theatre_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-operating-theatre_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-operating-theatre_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-operating-theatre_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-operating-theatre_5.webp"
+      ],
+      "tags": [
+        "london",
+        "southwark",
+        "old operating theatre",
+        "medical history",
+        "herb garret",
+        "surgery"
+      ],
+      "stops": [
+        {
+          "id": "65e4a379-654e-4403-82fb-3966e22c5ba5",
+          "order": 0,
+          "title": "The Old Operating Theatre",
+          "caption": "Climb the tight spiral staircase into the church attic, to the wooden theatre with its raked stands.",
+          "latitude": 51.5034,
+          "longitude": -0.0883,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/old-operating-theatre.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 35,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-operating-theatre_hero.webp",
+          "transcriptText": "The Old Operating Theatre\n\nHidden in the attic of a church is the oldest surviving operating theatre in Europe — a place where surgery was performed in front of an audience, before anaesthetic, before anyone knew about germs.\n\nYou're near London Bridge, at the Old Operating Theatre Museum — and the way to reach it is part of the strangeness: you climb a tight, narrow spiral staircase up into the roof space, the attic, of an early-eighteenth-century church. Up there, tucked into the herb garret where a hospital once dried its medicinal plants, is a wooden operating theatre dating from 1822, the oldest surviving one in Europe, rediscovered by accident in the twentieth century after being sealed and forgotten for decades.\n\nThe word \"theatre\" is literal. It's a small room with the operating table at the centre and steeply raked wooden stands rising around it, where students and observers crowded in to watch — standing room, packed tight, craning to see. Surgery was a spectacle, performed in front of a crowd.\n\nAnd it was performed in conditions that are hard to take in now. This was before anaesthetic — patients were awake, held still, and the surgeon's chief virtue was speed, working as fast as possible before shock overwhelmed the patient. It was before anyone understood infection, so surgeons operated in their ordinary coats, moving from case to case without washing; more patients died of infection afterward than of the operation itself.\n\n[beat]\n\nIt's a sobering place, and the museum doesn't pretend otherwise — but it's also a vivid, honest window into how recent modern medicine really is. The two great mercies we now take for granted — that surgery shouldn't hurt, and shouldn't kill you with infection — both arrived after this room was already in use. People living when this theatre opened simply had to face it without either.\n\nClimb up if you have the nerve and the knees. It's a small, eerie, unforgettable room — the place that reminds you, more than any cathedral, exactly how lucky you are to have been born when you were.\n"
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5034,
+      "centroidLongitude": -0.0883,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Near London Bridge, hidden in the roof space of an early-eighteenth-century church, is the Old Operating Theatre Museum — the oldest surviving operating theatre in Europe. You reach it by climbing a tight, narrow spiral staircase up into the attic, into the herb garret where a hospital once dried its medicinal plants, where a wooden operating theatre dating from 1822 was sealed and forgotten for decades before being rediscovered by accident in the twentieth century. The word 'theatre' is literal: a small room with the operating table at the centre and steeply raked wooden stands rising around it, where students and observers crowded in to watch surgery as a spectacle. And it was performed in conditions hard to take in now — before anaesthetic, patients awake and held still while the surgeon worked as fast as possible before shock overwhelmed them; before anyone understood infection, surgeons operating in their ordinary coats, moving from case to case without washing, so that more patients died of infection than of the operation itself. It's a sobering place, and a vivid, honest window into how recent the two great mercies of modern medicine — that surgery shouldn't hurt, and shouldn't kill you with infection — really are.",
+      "shortDescription": "Europe's oldest surviving operating theatre, hidden in a church attic — wooden viewing stands where surgery was a spectacle, before anaesthetic or germ theory.",
+      "totalDurationSeconds": 122,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
