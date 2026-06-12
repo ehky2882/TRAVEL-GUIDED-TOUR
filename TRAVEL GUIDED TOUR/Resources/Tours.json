@@ -11535,6 +11535,698 @@
       "totalDurationSeconds": 122,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "C4415E25-892D-4FFA-8B73-BB24676BD0FB",
+      "title": "Glória Funicular",
+      "shortDescription": "The oldest of Lisbon's funiculars still on its original route — hauling passengers up the 265-metre climb to Bairro Alto since 1885.",
+      "longDescription": "At the bottom of Calçada da Glória, on the eastern edge of Praça dos Restauradores, a small canary-yellow tram car waits to make the 265-metre climb to Bairro Alto. The Elevador da Glória is one of three surviving funiculars in the city and the oldest still running on its original route — steam-powered when it opened in 1885, converted to electric in 1914, and in near-continuous service ever since. The floor inside slopes at the same angle as the track, so the seats are stepped like an auditorium's, and the rest of the city tilts around you as you ride.\n\nLisbon's funiculars weren't built as curiosities or tourist attractions. They were built because the city is genuinely, relentlessly hilly, and the people who lived at the top needed a reliable way to get down to the river and back. The engineering is Victorian, the problem is eternal, and the solution hasn't changed in over a hundred years. The three-minute ride deposits you at the top of Bairro Alto, next to the Solar do Vinho do Porto — the Port Wine Institute, where you can work through a list of ports by the glass before the walk back down.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Gloria_Funicular_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Gloria_Funicular_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Gloria_Funicular_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ABEF85E7-10E7-4A0A-8BE1-4251A62B61AB",
+          "order": 0,
+          "title": "Glória Funicular",
+          "caption": "The lower station sits on the eastern edge of Praça dos Restauradores, at the foot of Calçada da Glória.",
+          "latitude": 38.716276096726396,
+          "longitude": -9.142749965520444,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/gloria-funicular.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Gloria_Funicular_hero.webp",
+          "transcriptText": "It's eighteen eighty-five, and the hills of Lisbon are still something you simply have to climb.\nAt the bottom of Calçada da Glória — the steep cobbled lane directly ahead of you — a small yellow tram car sits on a pair of narrow rails, waiting to make the two-hundred-and-sixty-five-metre climb to Bairro Alto. The Elevador da Glória is one of three surviving funiculars in the city, and the oldest still running on its original route. The lower station is here, on the eastern edge of Praça dos Restauradores, where the boulevard opens out and the city begins to tilt sharply upward.\nThe car itself is worth a proper look before you board. The wooden bodywork, painted that particular shade of canary yellow the city uses for all its trams and funiculars, dates the design to an era when these carriages were the most modern things on the street — steam-powered at first, converted to electric in nineteen fourteen, and in near-continuous service ever since. The floor inside slopes at the same angle as the track, so the seats are stepped like an auditorium's, and when you're inside, the rest of the city tilts around you at a rather disorienting angle.\nHere's the thing about the Glória, and about all of Lisbon's funiculars: they weren't built as curiosities or tourist attractions. They were built because the city is genuinely, relentlessly hilly, and the people who lived at the top needed a reliable way to get down to the river and back up again. The engineering is Victorian, the problem is eternal, and the solution hasn't changed in over a hundred years.\n[beat]\nThe ride takes about three minutes and deposits you at the top of Bairro Alto, next to the Solar do Vinho do Porto — the Port Wine Institute, where you can sit inside a quiet old house and work through a list of ports by the glass. A good plan, if you ask me, particularly after the walk back down."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.716276096726396,
+      "centroidLongitude": -9.142749965520444,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "funicular",
+        "bairro-alto",
+        "restauradores",
+        "public-transport",
+        "yellow-tram",
+        "victorian",
+        "1885"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BB4AD1CB-3C9D-48B7-8F14-F197D82002D8",
+      "title": "Igreja de São Roque",
+      "shortDescription": "Behind the plainest facade in Bairro Alto hides what's often called the most expensive chapel in Europe — built in Rome, blessed by a pope, and shipped to Lisbon in three ships.",
+      "longDescription": "The earliest Jesuit church in Portugal, completed in its current form in 1565, was designed for preaching rather than ceremony: a wide nave under a flat painted timber ceiling, built to put the congregation in contact with the spoken word rather than the stone. From Largo Trindade Coelho the facade gives nothing away — which makes the fourth chapel on the left a more theatrical surprise.\n\nThe Chapel of Saint John the Baptist was commissioned by King João V, designed by Luigi Vanvitelli and Nicola Salvi, and built in Rome between 1742 and 1750, where Pope Benedict XIV consecrated it and said Mass in it. It was then dismantled, shipped to Lisbon in three ships, and reassembled here. The materials are lapis lazuli, amethyst, alabaster, agate, ivory, precious marbles, gold and silver — and the effect is of something that arrived from elsewhere, which is literally true.\n\nThe Jesuits were expelled from Portugal by Pombal in 1759, and the church passed to the Santa Casa da Misericórdia, which still administers it — so the Society's main Portuguese church has now been run longer by a charitable institution than it ever was by the order that built it.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_de_Sao_Roque_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_de_Sao_Roque_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_de_Sao_Roque_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_de_Sao_Roque_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_de_Sao_Roque_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "FC6145A7-9D9D-4B8A-BB43-C6F7654F362B",
+          "order": 0,
+          "title": "Igreja de São Roque",
+          "caption": "Enter from Largo Trindade Coelho in Bairro Alto, straight from the street into the nave — the famous chapel is the fourth on the left.",
+          "latitude": 38.713346682640406,
+          "longitude": -9.143227853069973,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/igreja-de-sao-roque.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Igreja_de_Sao_Roque_hero.webp",
+          "transcriptText": "The plainest facade on the street conceals what is commonly described as the most expensive chapel in Europe — which is either very good Jesuit restraint, or a more theatrical kind of surprise than it first appears.\nThe church is on Largo Trindade Coelho in Bairro Alto, the entrance free, entry from the street directly into the nave — and the building itself was the earliest Jesuit church in Portugal, completed in its current form in fifteen sixty-five, designed for preaching rather than ceremony in the auditorium style that the Society of Jesus had pioneered elsewhere, so the wide nave with its flat painted timber ceiling was a deliberate departure from the vaulted Gothic tradition, built to put the congregation in contact with the spoken word rather than the stone.\nWalk toward the far left of the nave and find the fourth chapel.\nThe Chapel of Saint John the Baptist was commissioned by King João the Fifth, designed by Luigi Vanvitelli and Nicola Salvi, built in Rome between seventeen forty-two and seventeen fifty, consecrated by Pope Benedict the Fourteenth who actually said Mass in it there, then dismantled and shipped to Lisbon in three ships in seventeen forty-seven, and reassembled here in what had been a different chapel. The materials are lapis lazuli, amethyst, alabaster, agate, ivory, precious marbles, gold and silver — and the effect is of something that arrived from elsewhere, which is literally true, and which gives it a quality of displacement that the other chapels, however beautiful, do not have.\n[beat]\nThe Jesuits were expelled from Portugal by Pombal in seventeen fifty-nine, and the church passed to the Santa Casa da Misericórdia, which still administers it — so the building that housed the Society's main Portuguese church for two centuries has been managed for a longer period since by a charitable institution than it ever was by the order that built it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.713346682640406,
+      "centroidLongitude": -9.143227853069973,
+      "city": "Lisbon",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "jesuit",
+        "chapel",
+        "baroque",
+        "bairro-alto",
+        "gold",
+        "rome",
+        "1565"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "51BB962E-016A-4ABD-8E61-7E83D45E59FF",
+      "title": "Amoreiras 360º Panoramic View",
+      "shortDescription": "A full-circle view of Lisbon from 174 metres up, on the roof of Tomás Taveira's postmodern chess-piece towers of 1985.",
+      "longDescription": "The three towers visible from almost anywhere in Lisbon were designed to represent a queen flanked by two knights on a chess board — the kind of architectural conceit that makes a building either more interesting or more irritating, depending on your relationship with postmodernism. Tomás Taveira's Amoreiras complex opened in September 1985 as the first large urban shopping and services complex in Portugal, and at the time the fourth largest commercial space in Europe. It landed on the skyline at a specific moment: ten years after the Carnation Revolution, when Portugal was building itself a new identity, and an extravagantly postmodern complex on a hilltop in the capital read as a statement about what kind of country this was going to be.\n\nThe viewpoint sits 174 metres above sea level on the east tower, finished in lioz limestone, glass railings, and white lacquer — a deliberate contrast with the dark mirrored glass and warm brick below. From here the city's geography reads more clearly than from any of the lower miradouros: the seven hills actually visible as hills, the Tagus opening toward the Atlantic, the April 25th Bridge and Cristo Rei on a clear day, and the Castle of São Jorge framing the historic quarter against the water. The complex won the Valmor Prize in 1993, eight years after it opened — shock first, appreciation later.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Amoreiras_360_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Amoreiras_360_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Amoreiras_360_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "F651702A-DBC7-4B9F-AAAA-D01A42282F90",
+          "order": 0,
+          "title": "Amoreiras 360º Panoramic View",
+          "caption": "Take the lift to the rooftop of the east tower at the Amoreiras complex on Avenida Engenheiro Duarte Pacheco.",
+          "latitude": 38.723941091207216,
+          "longitude": -9.161335722411607,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/amoreiras-360.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Amoreiras_360_hero.webp",
+          "transcriptText": "The three towers you can see from almost anywhere in Lisbon were designed to represent a queen flanked by two knights on a chess board — which is the kind of architectural conceit that either makes a building more interesting or more irritating, depending on your relationship with postmodernism.\nYou're at the Amoreiras complex on Avenida Engenheiro Duarte Pacheco, at one hundred and seventy-four metres above sea level on the east tower, and the viewpoint itself uses lioz limestone, glass railings, and white lacquer — a deliberate contrast in material with the dark mirrored glass and warm brick tones of the complex beneath you, which was designed by Tomás Taveira and inaugurated in September nineteen eighty-five as the first large urban shopping and services complex in Portugal, and at the time the fourth largest commercial space in Europe. The three towers, with their helmet-shaped crowns, landed on Lisbon's skyline at a specific historical moment: ten years after the Carnation Revolution, when Portugal was building itself a new identity, and an extravagantly postmodern complex on a hilltop in the capital was read as a statement about what kind of country this was now going to be.\nLook south first, then turn slowly north.\nFrom here you can read the city's geography more clearly than from any of the lower viewpoints — the seven hills actually visible as hills, the Tagus opening toward the Atlantic in the south, the April Twenty-Fifth Bridge and Cristo Rei visible on a clear day, and the Castle of São Jorge on its hill to the east framing the historic quarter against the water, with the Monument to the Discoveries and Belém Tower on the river's edge to the west.\n[beat]\nThe complex won the Valmor and Municipal Architecture Prize in nineteen ninety-three, eight years after it opened, which suggests that Lisbon's relationship with the towers followed the usual trajectory — shock first, appreciation later — and that the viewpoint, which is the best argument for the building's location, arrived last."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.723941091207216,
+      "centroidLongitude": -9.161335722411607,
+      "city": "Lisbon",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "viewpoint",
+        "postmodern",
+        "amoreiras",
+        "skyline",
+        "towers",
+        "tomas-taveira",
+        "1985"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9283D1D6-A58F-43A4-BF69-8BBBE41C1735",
+      "title": "Ascensor da Bica",
+      "shortDescription": "Lisbon's most photographed funicular threads a lane so narrow the car nearly fills it — the steepest climb of the city's three, running since 1892.",
+      "longDescription": "Face uphill from the lower station on Rua de São Paulo and the track stretches ahead in a long, straight climb through one of the oldest and most tightly packed parts of Lisbon. The lane is narrow enough that the funicular car fills almost its entire width, and the buildings press in close — tiled facades, shuttered windows, the odd pot of geraniums on a ledge. The counterweight system means a descending car pulls the ascending one up, so the two always travel together, passing at the midpoint.\n\nOpened in 1892, the Bica is the youngest of Lisbon's three funiculars but covers the steepest single stretch of any of them — roughly one-in-four at its sharpest, the kind of incline that makes the case for mechanical assistance rather compellingly. What the Bica gives you that the others don't is the street itself, close enough on both sides to feel like you're threading through someone's neighbourhood rather than riding an attraction — because that's exactly what you're doing. At the top, turn left and within two minutes you're at the Miradouro de Santa Catarina, one of the city's quieter viewpoints, with a long view west over the Tagus toward the bridge.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ascensor_da_Bica_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ascensor_da_Bica_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "82BF5348-5D80-41E9-AAC9-037CE7DF5F64",
+          "order": 0,
+          "title": "Ascensor da Bica",
+          "caption": "Start at the lower station on Rua de São Paulo and face uphill — the track climbs straight through the Bica neighbourhood toward Bairro Alto.",
+          "latitude": 38.71092535261992,
+          "longitude": -9.145736593811428,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ascensor-da-bica.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ascensor_da_Bica_hero.webp",
+          "transcriptText": "This is the Ascensor da Bica — and it is, genuinely, as photogenic as it looks on every postcard in the city.\nFace uphill from the lower station on Rua de São Paulo, and the track stretches ahead of you in a long, straight climb through one of the oldest and most tightly packed parts of Lisbon. The lane is narrow enough that the funicular car fills almost the entire width of it, leaving barely a pavement on either side, and the buildings press in close — tiled facades, shuttered windows, the odd pot of geraniums balanced on a ledge. If the car is at the bottom when you arrive, stand back and watch it move: the counterweight system means a descending car pulls the ascending one up, so the two always travel together, passing each other at the midpoint of the track.\nOpened in eighteen ninety-two, the Bica is the youngest of Lisbon's three funiculars by a few years, though it covers the steepest single stretch of any of them. The gradient is roughly one in four at its sharpest point, which is the kind of incline that makes the case for mechanical assistance rather compellingly. The route climbs from the waterfront edge of Bairro Alto down to the Tagus, connecting a residential neighbourhood to the river in under three minutes, and it has done so, more or less continuously, for over a hundred and thirty years.\n[beat]\nWhat the Bica gives you that the other funiculars don't is the street itself — close enough on both sides to feel like you're threading through someone's neighbourhood rather than riding an attraction, because that's exactly what you're doing.\nAt the top, Rua Marechal Saldanha opens onto Bairro Alto proper; turn left and within two minutes you're at the Miradouro de Santa Catarina, one of the quieter viewpoints in the city, with a long view west over the Tagus toward the bridge."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71092535261992,
+      "centroidLongitude": -9.145736593811428,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "funicular",
+        "bica",
+        "photogenic",
+        "hillside",
+        "yellow-tram",
+        "counterweight",
+        "1892"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4488A2E8-4FB2-48D6-9EF8-72C892627298",
+      "title": "Church of São Vicente de Fora",
+      "shortDescription": "The burial church of Portugal's last royal dynasty — whose cloisters are tiled, improbably, with the talking-animal fables of La Fontaine.",
+      "longDescription": "Designed by the Italian architect Filippo Terzi under the commission of King Philip II of Spain — simultaneously Philip I of Portugal during the Iberian Union — the church was completed in 1627, though the full monastery took another century. The twin-towered Mannerist limestone facade is visible from Campo de Santa Clara, and the former refectory holds the Royal Pantheon of the House of Braganza: the tombs of virtually every Portuguese monarch from João IV to the last king, Manuel II.\n\nGo into the cloisters before the pantheon, because the azulejo programme is the most surprising thing in the building. Thirty-eight tile panels cover the walls, depicting the 1147 Siege of Lisbon alongside illustrations of La Fontaine's fables — the fox and the crow, the hare and the tortoise — rendered in the same blue-and-white ceramic with the same seriousness, a tone simultaneously historical, moral, and slightly absurd in a way Portuguese ecclesiastical architecture does not usually attempt.\n\nIn the Braganza Pantheon, the tombs of King Carlos I and his heir Prince Luís Filipe — assassinated together at Praça do Comércio in February 1908 — are marked by a single weeping female statue covering both sarcophagi, more eloquent about what happened to the Portuguese monarchy than most explanations manage.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Sao_Vicente_de_Fora_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Sao_Vicente_de_Fora_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Sao_Vicente_de_Fora_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "DB9F7F52-68AE-47F0-B822-8E46503C3458",
+          "order": 0,
+          "title": "Church of São Vicente de Fora",
+          "caption": "The entrance is on Largo de São Vicente in Alfama — see the cloisters and their azulejo fables before the Braganza pantheon.",
+          "latitude": 38.71482588330878,
+          "longitude": -9.128471191588075,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sao-vicente-de-fora.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Sao_Vicente_de_Fora_hero.webp",
+          "transcriptText": "The cloister of this monastery is decorated with azulejo tiles depicting the fables of Jean de La Fontaine — the seventeenth-century French moralist best known for his talking animals — which is not the most obvious choice of subject matter for the burial church of the Portuguese royal family.\nThe entrance is on Largo de São Vicente in Alfama, and the church complex — designed by the Italian architect Filippo Terzi under the commission of King Philip the Second of Spain, who was simultaneously Philip the First of Portugal during the Iberian Union — was completed in sixteen twenty-seven with the church, though the full monastery took another century to finish. The facade of two bell towers and a Mannerist limestone composition is visible from Campo de Santa Clara, a short walk from the National Pantheon, and the interior holds the Royal Pantheon of the House of Braganza in the former refectory — the tombs of virtually every Portuguese monarch from João the Fourth to the last king, Manuel the Second.\nGo into the cloisters before the pantheon, because the azulejo programme is the most surprising thing in the building.\nThirty-eight tile panels cover the cloister walls, depicting the 1147 Siege of Lisbon alongside illustrations of La Fontaine's fables — the fox and the crow, the hare and the tortoise — rendered in the same blue-and-white ceramic with the same seriousness, which gives the cloisters a tone that is simultaneously historical, moral, and slightly absurd in a way that Portuguese ecclesiastical architecture does not usually attempt.\n[beat]\nIn the Braganza Pantheon, the tombs of King Carlos the First and his heir Prince Luís Filipe — both assassinated together at Praça do Comércio in February nineteen oh eight — are marked by a single weeping female statue covering both sarcophagi, which is the most affecting object in the building and is more eloquent about what happened to the Portuguese monarchy than most explanations manage."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71482588330878,
+      "centroidLongitude": -9.128471191588075,
+      "city": "Lisbon",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "monastery",
+        "azulejos",
+        "braganza",
+        "alfama",
+        "royal-tombs",
+        "cloister",
+        "la-fontaine"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "65E69888-866C-4D1E-B8AD-E1803DB11ECA",
+      "title": "Livraria Bertrand",
+      "shortDescription": "The world's oldest operating bookshop — selling books since 1732, with the Guinness certificate just inside the door to prove it.",
+      "longDescription": "Pedro Faure, a Frenchman, opened the original bookshop in 1732 on the corner of Rua Direita do Loreto and Rua do Norte; the Bertrand brothers joined as associates in 1747 and the shop took their name after Faure's death. The 1755 earthquake destroyed the original premises — twenty-three years after opening — and the rebuilt bookshop on Rua Garrett has been here continuously ever since, absorbing an earthquake, a civil war, a regicide, two republics, and a dictatorship without interruption. The blue-and-white azulejo-tiled facade stands a few minutes' walk from the Baixa-Chiado metro.\n\nInside, the shop unfolds as a series of interconnected rooms named after celebrated Portuguese authors, running far deeper than the street suggests. Among them is a corner dedicated to the novelist Aquilino Ribeiro, who used to come here to read and sit, preserved as a specific place rather than simply a section of shelf. Buy a book and the staff will stamp it with the date and a certificate confirming the world's oldest bookshop as its provenance — either a charming piece of institutional self-confidence or an entirely reasonable thing to do when you have been selling books continuously since 1732.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Livraria_Bertrand_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Livraria_Bertrand_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "87BA523A-1F65-4778-8CC7-AAF6F5811E64",
+          "order": 0,
+          "title": "Livraria Bertrand",
+          "caption": "Find the blue-and-white tiled facade on Rua Garrett in Chiado, a few minutes from the Baixa-Chiado metro.",
+          "latitude": 38.7108464340821,
+          "longitude": -9.141146213444708,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/livraria-bertrand.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Livraria_Bertrand_hero.webp",
+          "transcriptText": "The oldest operating bookshop in the world was destroyed in an earthquake twenty-three years after it opened, rebuilt, renamed, moved, and is still here — which is a survival record that most institutions would find difficult to match.\nThe bookshop is on Rua Garrett in the Chiado district, the Guinness World Records certificate visible just inside the entrance confirming what the plaque on the facade already says, and the building itself — its exterior tiled in blue-and-white azulejos — is a few minutes' walk from the Baixa-Chiado metro. Pedro Faure, a Frenchman, opened the original bookshop in 1732 on the corner of Rua Direita do Loreto and Rua do Norte; the Bertrand brothers joined as associates in 1747; Faure died in 1753 and the shop took the brothers' name; the 1755 earthquake destroyed the original premises; and the rebuilt bookshop on Rua Garrett has been here continuously ever since, absorbing an earthquake, a civil war, a regicide, two republics, and a dictatorship without interruption.\nGo inside and walk through the rooms rather than stopping at the front.\nThe bookshop is arranged as a series of interconnected rooms named after celebrated Portuguese authors, and the depth of the space is one of the more reliable surprises it offers to people who assume, from the street, that it is smaller than it is — and among the rooms is a corner dedicated to the novelist Aquilino Ribeiro, where the writer used to come to read and sit, and which the bookshop has preserved as a specific place rather than simply a section of shelf.\n[beat]\nWhen you buy a book here, the staff will stamp it with the date and a certificate confirming the world's oldest bookshop as its provenance — which is either a charming piece of institutional self-confidence or an entirely reasonable thing to do when you have been selling books continuously since seventeen thirty-two."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.7108464340821,
+      "centroidLongitude": -9.141146213444708,
+      "city": "Lisbon",
+      "primaryCategory": "literature",
+      "tags": [
+        "bookshop",
+        "chiado",
+        "guinness-record",
+        "azulejos",
+        "1732",
+        "literary",
+        "oldest-bookstore"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3B78F99C-A031-4EF7-A55B-10D9D7C550A4",
+      "title": "MUDE — Museu do Design e da Moda",
+      "shortDescription": "Lisbon's design and fashion museum, at home in the stripped concrete shell of a 1960s colonial bank on Rua Augusta.",
+      "longDescription": "The long, low pale-stone block at the river end of Rua Augusta was built in the 1960s as the headquarters of the Banco Nacional Ultramarino — the national bank that handled Portugal's colonial finances — with that particular mid-century institutional confidence, solid and a little austere, built for permanence rather than welcome. When the bank left, the city took it over and opened MUDE, the Museum of Design and Fashion, in 2009, with the plan of eventually restoring the interior. For over a decade the museum showed its collection inside the raw, stripped-out shell of the old banking floors — concrete columns, exposed services, unfinished walls — which turned out to suit a design museum rather well: the objects more finished than the room holding them.\n\nThe collection is the reason to come: roughly two thousand pieces covering fashion and industrial design from the 1930s onward, with particular strength in mid-century furniture and late-twentieth-century Portuguese design. Its core was assembled by a single private collector, Francisco Capelo, and donated to the city wholesale — which is how Lisbon ended up with a serious design museum at all. Praça do Comércio and the river are two minutes south; the Arco da Rua Augusta is worth a look before you go.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MUDE_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MUDE_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MUDE_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MUDE_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MUDE_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6F1F6684-7CC4-4EF2-BAE9-8C4F98E8FD6A",
+          "order": 0,
+          "title": "MUDE — Museu do Design e da Moda",
+          "caption": "The long pale-stone block sits on Rua Augusta at the edge of the Baixa grid, two minutes north of Praça do Comércio.",
+          "latitude": 38.709215868039536,
+          "longitude": -9.136949037230847,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mude-design-museum.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MUDE_hero.webp",
+          "transcriptText": "There's a curious thing about this building — it spent years as one of Lisbon's most-visited museums without ever quite being finished.\nThe facade on Rua Augusta is the giveaway: a long, low horizontal block in pale stone, sitting at the edge of the Baixa grid where the pedestrian street opens toward the river. The building was constructed in the nineteen sixties as the headquarters of the Banco Nacional Ultramarino — the national bank that handled Portugal's colonial finances — and the architecture has that particular quality of mid-century institutional confidence, solid and a little austere, built for permanence rather than welcome. When the bank left, the city took it over and opened MUDE, the Museum of Design and Fashion, in two thousand and nine, with the explicit plan of eventually restoring and expanding the interior. That restoration is, at the time of writing, still underway, and what the museum showed for over a decade was its collection displayed inside the raw, stripped-out shell of the old banking floors — concrete columns, exposed services, unfinished walls — which turned out to suit a design museum rather well.\nThe collection itself is the reason to come: roughly two thousand pieces covering fashion and industrial design from the nineteen thirties onward, with particular strength in mid-century furniture and Portuguese design of the late twentieth century. The gift detail, if you want one, is that the core of the collection was assembled by a single private collector — Francisco Capelo — and donated to the city wholesale, which is how Lisbon ended up with a serious design museum at all.\n[beat]\nWell, the renovation will resolve the building eventually, and it will no doubt be very considered and correct. I always think there was something fitting about a design collection living inside a space that looked like a work in progress — the objects more finished than the room holding them.\nThe Praça do Comércio and the river are two minutes south; the Arco da Rua Augusta, the triumphal arch at the top of the street behind you, is worth a look before you go."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.709215868039536,
+      "centroidLongitude": -9.136949037230847,
+      "city": "Lisbon",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "design",
+        "fashion",
+        "museum",
+        "baixa",
+        "mid-century",
+        "capelo",
+        "rua-augusta"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8D3B9E6A-EA04-4D47-8FE8-6C5E83C0D4C2",
+      "title": "Museu Nacional do Azulejo",
+      "shortDescription": "Portugal's tile museum inside a 1509 convent — where a 23-metre panel preserves, tile by tile, the Lisbon the earthquake destroyed.",
+      "longDescription": "The building that houses this museum is itself one of the finest collections of azulejo tile in Portugal — an unusual situation where the museum's container and its content are the same thing. The Convento da Madre de Deus in Xabregas was founded in 1509 by Queen Leonor and extended, embellished, and retiled across four centuries into the Baroque interior it has today; the church, with its gilded carved wood and azulejo nave panels among the finest in Lisbon, is threaded through the museum route rather than saved for the end.\n\nGo straight to the second floor and find the Grand Panorama of Lisbon: a 23-metre panel of some 1,300 blue-and-white tiles, attributed to the Spanish painter Gabriel del Barco and dating from around 1700, showing fourteen kilometres of Lisbon's waterfront as it appeared before the 1755 earthquake reduced most of it to rubble. That makes it not merely a work of tile art but the most complete visual document of a city that no longer exists.\n\nThe rest of the collection runs from the fifteenth century to the present — Moorish-influenced geometric patterns, Chinese-inspired blue-and-white Baroque panels, the 1580 Our Lady of Life altarpiece of 1,498 tiles, and twentieth-century work by artists including Júlio Pomar.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museu_Nacional_do_Azulejo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museu_Nacional_do_Azulejo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museu_Nacional_do_Azulejo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museu_Nacional_do_Azulejo_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9A831644-33A5-4C50-A780-F511E7F224EB",
+          "order": 0,
+          "title": "Museu Nacional do Azulejo",
+          "caption": "The museum fills the Convento da Madre de Deus on Rua da Madre de Deus in Xabregas — head straight to the Grand Panorama on the second floor.",
+          "latitude": 38.72523161649632,
+          "longitude": -9.113496078202568,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/museu-nacional-do-azulejo.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museu_Nacional_do_Azulejo_hero.webp",
+          "transcriptText": "The building that houses this museum is itself one of the finest collections of azulejo tile in Portugal, which creates an unusual situation where the museum's container and the museum's content are the same thing.\nThe museum is in the Convento da Madre de Deus, on Rua da Madre de Deus in Xabregas — the eastern edge of Lisbon, about twenty minutes from the city centre by bus or tram — a convent founded in fifteen oh nine by Queen Leonor that was extended, embellished, and retiled across four centuries into the Baroque interior it has today, with a church whose gilded carved wood and azulejo nave panels are among the finest in Lisbon and which you walk through as part of the museum route rather than arriving at the end of it.\nGo straight to the second floor when you enter, and find the Grand Panorama.\nThe Grand Panorama of Lisbon is a twenty-three-metre panel of thirteen hundred blue-and-white tiles, attributed to the Spanish painter Gabriel del Barco and dating from around seventeen hundred, that shows fourteen kilometres of Lisbon's waterfront as it appeared before the seventeen fifty-five earthquake reduced most of it to rubble — which makes it not merely a work of tile art but the most complete visual document of a city that no longer exists, showing palaces, churches, and a waterfront that were destroyed within decades of the panel being made.\n[beat]\nThe rest of the collection takes you from the fifteenth century to the present, through Moorish-influenced geometric patterns, Chinese-inspired blue-and-white Baroque panels, the Our Lady of Life altarpiece from fifteen eighty made from fourteen hundred and ninety-eight tiles, and twentieth-century work by artists including Júlio Pomar — and the convent cloisters and church are threaded through the route as a reminder that the tiles were always made for buildings, not for glass cases."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.72523161649632,
+      "centroidLongitude": -9.113496078202568,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "azulejos",
+        "tiles",
+        "convent",
+        "xabregas",
+        "grand-panorama",
+        "baroque",
+        "queen-leonor"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8ED8CB10-3E8A-4C09-AFFD-356102F75948",
+      "title": "MAC/CCB — Museum of Contemporary Art",
+      "shortDescription": "Picasso, Warhol, Bacon and Dalí — 862 of the works here were seized by Portuguese courts as debt collateral, now hung beside the best of Portuguese modernism.",
+      "longDescription": "The museum sits inside the Centro Cultural de Belém, the large limestone complex on Praça do Império designed by Vittorio Gregotti and Manuel Salgado for Lisbon's 1993 presidency of the European Community — an institutional volume between the Jerónimos Monastery and the river that also houses a concert hall, conference facilities, and the Garagem Sul architecture centre. The MAC/CCB itself opened on 27 October 2023, combining the Berardo Collection — 862 works seized by Portuguese courts in 2019 as debt collateral, Picasso, Warhol, Bacon and Dalí among them — with the State Contemporary Art Collection, the Teixeira de Freitas Collection, and the Ellipse Collection in a single permanent display.\n\nThe galleries run roughly chronologically through Surrealism, Abstract Expressionism, Pop Art, Minimalism, and Conceptualism, with the Portuguese artists — Paula Rego, Maria Helena Vieira da Silva, Amadeo de Souza-Cardoso — integrated alongside the international names rather than separated into a national room: the right curatorial decision for a collection that insists on the equal standing of Portuguese modernism within the European twentieth century. The outdoor terrace at the back faces the Tagus in direct sightline with the Monument to the Discoveries — contemporary art staring down the imperial past it has spent a hundred years commenting on.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MAC_CCB_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MAC_CCB_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MAC_CCB_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "236EC2EB-79AF-4A57-8AC0-C7DB9238C01F",
+          "order": 0,
+          "title": "MAC/CCB — Museum of Contemporary Art",
+          "caption": "Enter the Centro Cultural de Belém from Praça do Império and head straight for the permanent-collection galleries on the western side.",
+          "latitude": 38.6961670596251,
+          "longitude": -9.208984077658412,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mac-ccb.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/MAC_CCB_hero.webp",
+          "transcriptText": "The collection in this museum includes eight hundred and sixty-two works seized by Portuguese courts in twenty nineteen as debt collateral — Picasso, Warhol, Bacon, Dalí — which is either a very effective enforcement mechanism or simply the most consequential art loan dispute in Portuguese history, depending on your perspective.\nThe museum is inside the Centro Cultural de Belém, a large limestone complex on Praça do Império that opened in nineteen ninety-three, designed by Vittorio Gregotti and Manuel Salgado for Lisbon's presidency of the European Community, and whose scale makes it feel slightly detached from the rest of Belém — an institutional volume sitting between the Jerónimos Monastery and the river, which houses the national contemporary art museum on its western side and a concert hall, conference facilities, and the Garagem Sul architecture centre through the rest of its considerable footprint. The MAC/CCB itself opened on the twenty-seventh of October twenty twenty-three, combining the seized Berardo Collection with the State Contemporary Art Collection, the Teixeira de Freitas Collection, and the Ellipse Collection into a single permanent display.\nGo in from the Praça do Império entrance and head directly to the permanent collection galleries.\nThe works are presented roughly chronologically, moving through Surrealism, Abstract Expressionism, Pop Art, Minimalism, and Conceptualism, with the Portuguese artists — Paula Rego, Maria Helena Vieira da Silva, Amadeo de Souza-Cardoso — integrated alongside the international names rather than separated into a national room, which is the right curatorial decision for a collection that insists on the equal standing of Portuguese modernism within the European twentieth century.\n[beat]\nThe view from the museum's outdoor terrace at the back faces the Tagus at the same level as the Monument to the Discoveries across the gardens — which places contemporary art in direct sightline with the imperial past it has spent the last hundred years commenting on, and which, if you stand there long enough, starts to feel less like a coincidence."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.6961670596251,
+      "centroidLongitude": -9.208984077658412,
+      "city": "Lisbon",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "contemporary-art",
+        "belem",
+        "berardo",
+        "ccb",
+        "picasso",
+        "paula-rego",
+        "museum"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "BE32E1B7-FCBA-4ED8-B599-92F9FE09BB3D",
+      "title": "Museum of the Orient",
+      "shortDescription": "Five hundred years of Portugal in Asia, in a converted dockside warehouse — including Japanese screens that painted the Portuguese as fascinating barbarians.",
+      "longDescription": "\"Namban\" means Southern Barbarians — the Japanese term for the Portuguese traders who arrived from the south in the sixteenth century — which means this museum contains an entire artistic genre named after a cultural insult that became a term of endearment. The former warehouse at the Doca de Alcântara opened as a museum in 2008 after a thirty-million-euro conversion, keeping the industrial facade while gutting the interior for seven thousand square metres of exhibition space.\n\nThe collection divides in two. The Portuguese Presence in Asia covers five hundred years of encounter across trade, missionary work, and cultural exchange — its centrepiece the seventeenth-century Namban screens, made by Japanese artists depicting the Portuguese arriving in Japan: strangely dressed merchants with unfamiliar ships, large noses, African companions and dogs, rendered as objects of intense curiosity in the Japanese aesthetic of the period. A visual record of two cultures meeting with no shared language and finding each other fascinating in equal measure.\n\nThe Kwok On Collection upstairs is a different kind of surprise — over thirteen thousand costumes, masks, puppets, and instruments from the performing traditions of Asia, from Turkey to Japan, assembled by the French sinologist Jacques Pimpaneau, who spent decades collecting what he recognised as a disappearing world.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museum_of_the_Orient_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museum_of_the_Orient_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museum_of_the_Orient_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museum_of_the_Orient_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "D6D214F3-1FBE-4AB5-9418-5060D3046DA2",
+          "order": 0,
+          "title": "Museum of the Orient",
+          "caption": "The former warehouse stands at the Doca de Alcântara Norte on Avenida de Brasília, a few minutes' walk from Alcântara station.",
+          "latitude": 38.70303345315953,
+          "longitude": -9.170572836929484,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/museum-of-the-orient.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Museum_of_the_Orient_hero.webp",
+          "transcriptText": "\"Namban\" means Southern Barbarians — it was the Japanese term for the Portuguese traders who arrived from the south in the sixteenth century — which means this museum contains an entire artistic genre named after a cultural insult that became a term of endearment.\nThe museum is at the Doca de Alcântara Norte on Avenida de Brasília, in a former warehouse on the waterfront, and you're most likely here having come from Belém along the riverside promenade or from the Alcântara train station a few minutes' walk away — a building that opened as a museum in two thousand and eight after thirty million euros of conversion, retaining the industrial facade while gutting the interior to create seven thousand square metres of exhibition space on multiple levels. The permanent collection is divided into two main parts: the Portuguese Presence in Asia, covering five hundred years of encounter across trade, missionary work, and cultural exchange; and the Kwok On Collection — over thirteen thousand objects related to the performing arts of the region from Turkey to Japan, assembled by French sinologist Jacques Pimpaneau and donated to the Fundação Oriente.\nGo upstairs to the Portuguese Presence galleries and find the Namban screens.\nThe seventeenth-century Japanese folding screens in this collection were made by Japanese artists depicting the Portuguese arriving in Japan — the strangely dressed merchants with their unfamiliar ships, their large noses, their African companions, their dogs — as objects of intense curiosity rendered in the Japanese aesthetic of the period, creating a visual record of the moment two cultures encountered each other with no shared language or prior context, and found each other fascinating in equal measure.\n[beat]\nThe Kwok On Collection on the second floor is an entirely different kind of surprise — thirteen thousand costumes, masks, puppets, and instruments from the performing traditions of Asia, assembled not because of any Portuguese connection but because Pimpaneau spent decades collecting what he recognised as a disappearing world, and the collection ended up here because this was the institution willing to keep it together."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.70303345315953,
+      "centroidLongitude": -9.170572836929484,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "asia",
+        "namban",
+        "alcantara",
+        "warehouse",
+        "kwok-on",
+        "trade",
+        "museum"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3CD5FE07-FE45-40D4-B0D3-233397ED1F0E",
+      "title": "National Museum of Ancient Art",
+      "shortDescription": "Portugal's greatest painting was lost for 130 years before turning up in a palace — the Saint Vincent Panels now crown the national collection on the Street of Green Windows.",
+      "longDescription": "The museum occupies a seventeenth-century palace on Rua das Janelas Verdes — the Street of Green Windows, named for the palace's green-shuttered windows before it became a museum in 1884 — originally built for the first Count of Alvor and later owned by the Marquis of Pombal. The collection of over forty thousand objects covers Portuguese and European art from the Middle Ages to the nineteenth century, with silverware, ceramics, Japanese screens, and Flemish masters on the lower floors and Portuguese painting at the top.\n\nGo straight to the top floor for the Saint Vincent Panels. The six panels, attributed to Nuno Gonçalves and painted around 1470, were lost after the 1755 earthquake and only rediscovered in the 1880s. The fifty-eight figures arranged around Lisbon's patron saint include monks, knights, fishermen, and Henry the Navigator — simultaneously a religious altarpiece and the most complete surviving portrait of the Portuguese court and society of its era, now considered a unique group portrait in the history of European painting.\n\nBefore you leave, find the sixteenth-century Japanese Nanban screens on the lower floors — the Portuguese merchants seen through Japanese eyes, strange fashions and large noses recorded with a deadpan accuracy that makes them the most unexpectedly entertaining objects in the building.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/National_Museum_Ancient_Art_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/National_Museum_Ancient_Art_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/National_Museum_Ancient_Art_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "F164E1B5-CA97-4040-83C2-CFCC0D22C744",
+          "order": 0,
+          "title": "National Museum of Ancient Art",
+          "caption": "The museum is on Rua das Janelas Verdes in Santos, a short walk southwest of Cais do Sodré — the Saint Vincent Panels are on the top floor.",
+          "latitude": 38.705025339245815,
+          "longitude": -9.161442835706772,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/national-museum-ancient-art.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/National_Museum_Ancient_Art_hero.webp",
+          "transcriptText": "The most important painting in Portuguese art history was lost for roughly a hundred and thirty years, rediscovered in a palace, and is now considered a unique group portrait in the history of European painting — which is a fairly significant trajectory for something that was simply misplaced.\nThe museum is on Rua das Janelas Verdes — the Street of Green Windows, which is what locals called it before it became a museum in eighteen eighty-four — in the Santos district, a short walk southwest of the Cais do Sodré along the river, housed in a seventeenth-century palace originally built for the first Count of Alvor and later owned by the Marquis of Pombal, whose green-shuttered windows are the reason the street still carries that name. The collection of over forty thousand objects covers Portuguese and European art from the Middle Ages to the nineteenth century, with silverware, ceramics, Japanese screens, and Flemish masters on the lower floors and Portuguese painting at the top.\nGo straight to the top floor and find the Saint Vincent Panels.\nThe six panels, attributed to Nuno Gonçalves and painted around fourteen seventy, were lost after the seventeen fifty-five earthquake and only rediscovered in the eighteen eighties — and the fifty-eight figures arranged around the patron saint of Lisbon include monks, knights, fishermen, and Henry the Navigator, making the work simultaneously a religious altarpiece and the most complete surviving portrait of the Portuguese court and society of its era.\n[beat]\nBefore you leave, find the sixteenth-century Japanese Nanban screens on the lower floors — large folding panels made in Japan shortly after the Portuguese became the first Europeans to arrive there, depicting the Portuguese merchants through Japanese eyes, with their strange fashions and large noses recorded with a combination of fascination and deadpan accuracy that makes them the most unexpectedly entertaining objects in the building."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.705025339245815,
+      "centroidLongitude": -9.161442835706772,
+      "city": "Lisbon",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "painting",
+        "saint-vincent-panels",
+        "museum",
+        "santos",
+        "nuno-goncalves",
+        "flemish",
+        "nanban"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8A02D214-E8D2-4F4A-B4B7-3144F1CF3655",
+      "title": "National Pantheon",
+      "shortDescription": "Started in 1682, finished in 1966 — the dome that took 284 years gave Portuguese an idiom for projects that never end.",
+      "longDescription": "Construction of the Igreja de Santa Engrácia began in 1682 and the dome was completed in 1966 — 284 years — and the Portuguese language gained an idiom from the experience: \"obras de Santa Engrácia\" still means any project that never seems to end. The reasons for the delay involve a robbery in 1630, a wrongful execution, a dying man's curse, the collapse of an earlier building, and repeated interruptions for wars, political instability, and insufficient funds. The final push came from Salazar in 1966, amid speculation that he intended the building as his own resting place — resolved when he died in 1970 and left instructions to be buried in his hometown instead.\n\nThe octagonal Baroque structure on Campo de Santa Clara now serves as the National Pantheon, its white dome visible from much of eastern Lisbon. Inside are the tombs of Amália Rodrigues, the fado singer who became Portugal's most internationally recognised voice, and Eusébio, the footballer from Mozambique who became one of the greatest players of his generation — alongside poets, presidents, and cenotaphs for figures whose remains are elsewhere, including Vasco da Gama, whose tomb here is empty because his bones are in Jerónimos. Go up to the dome terrace if the weather allows: the view over Alfama, the Tagus, and the bridges is the best argument for having taken 284 years to finish it.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/National_Pantheon_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/National_Pantheon_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "39DBE218-BA1D-449B-905C-C9F9E7A995A2",
+          "order": 0,
+          "title": "National Pantheon",
+          "caption": "The white dome rises over Campo de Santa Clara in Alfama — go up to the dome terrace for the view if the weather allows.",
+          "latitude": 38.71464700599674,
+          "longitude": -9.125606157281034,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/national-pantheon.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/National_Pantheon_hero.webp",
+          "transcriptText": "Construction began in sixteen eighty-two and the dome was completed in nineteen sixty-six — two hundred and eighty-four years — and the Portuguese language gained an idiom from the experience: \"obras de Santa Engrácia\" still means any project that never seems to end.\nThe building is the Igreja de Santa Engrácia, on Campo de Santa Clara in Alfama, and the white dome rising above the neighbourhood is visible from much of eastern Lisbon — an octagonal baroque structure now serving as the National Pantheon, where the tombs and cenotaphs of the people Portugal has decided to honour are gathered in one building, under one roof that took the better part of three centuries to put there. The reason for the delay involves, among other things, a robbery in sixteen thirty, a wrongful execution, a dying man's curse, the collapse of an earlier building, and several subsequent interruptions for wars, political instability, and insufficient funds — and the final push to complete the dome was made by Salazar in nineteen sixty-six, amid widespread speculation that he intended it as his own future resting place, a speculation that was resolved when he died in nineteen seventy and left instructions to be buried in his hometown instead.\nInside, the tombs of Amália Rodrigues — the fado singer who became Portugal's most internationally recognised voice — and Eusébio, the footballer from Mozambique who became one of the greatest players of his generation, sit alongside poets, presidents, and cenotaphs for figures whose remains are elsewhere, including Vasco da Gama, whose tomb here is empty because his bones are in Jerónimos.\n[beat]\nGo up to the terrace on the dome's exterior if the weather allows, because the view over Alfama, the Tagus, and the bridges from there is, frankly, the best argument for having taken two hundred and eighty-four years to finish it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71464700599674,
+      "centroidLongitude": -9.125606157281034,
+      "city": "Lisbon",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "pantheon",
+        "dome",
+        "alfama",
+        "baroque",
+        "amalia-rodrigues",
+        "eusebio",
+        "santa-engracia"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "EC39474D-A865-4751-84B5-27F7895109AA",
+      "title": "Palácio Nacional da Ajuda",
+      "shortDescription": "A royal palace frozen mid-sentence in 1910 — begun in 1795, abandoned by a fleeing court, and only finished in 2022.",
+      "longDescription": "Construction began in 1795 and the building was never finished for the family it was meant for: the royal court fled to Brazil, a civil war intervened, and by the time anyone might have completed it, the monarchy had fallen. The palace is the direct consequence of the 1755 earthquake, which destroyed the royal family's riverside palace — after which King José I refused to sleep under stone, and the court moved to a wooden complex on this hill. When that burned down in 1794, work finally began on a permanent neoclassical palace intended to be one of the largest in Europe. The monarchy fell in 1910 before the ambition was realised, and the palace became a museum with its contents frozen exactly as they were the day the royal family left.\n\nThe state rooms on the upper floor are preserved as King Luís I and Queen Maria Pia of Savoy furnished and used them from 1861 to 1910 — Portuguese and European decorative arts, seventeen thousand pieces of porcelain, and the personal effects of a royal household arrested mid-sentence, which gives the interior a quality of suspended time most museums deliberately avoid. The ruined western wing was finally completed in 2022, in a contemporary style and after thirty-one million euros, to house the Royal Treasure Museum and the crown jewels — meaning the palace that was never completed finally was, more than two centuries late.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_Nacional_da_Ajuda_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_Nacional_da_Ajuda_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_Nacional_da_Ajuda_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_Nacional_da_Ajuda_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8F20C20F-BDDA-4457-98DD-18EE46FBB5A2",
+          "order": 0,
+          "title": "Palácio Nacional da Ajuda",
+          "caption": "The palace faces Largo do Palácio da Ajuda, uphill from Belém — the preserved state rooms are on the upper floor.",
+          "latitude": 38.70777538689946,
+          "longitude": -9.197966933413179,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/palacio-nacional-da-ajuda.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palacio_Nacional_da_Ajuda_hero.webp",
+          "transcriptText": "Construction began in seventeen ninety-five and the north wing was never finished — because the royal family fled to Brazil, then a civil war intervened, then the monarchy fell, and by the time anyone might have completed it, there was no longer a royal family to complete it for.\nThe palace is on Largo do Palácio da Ajuda in the Ajuda district, uphill from Belém and about ten minutes by bus from the city centre, and the building you're looking at is the direct consequence of the seventeen fifty-five earthquake, which destroyed the royal family's riverside palace, after which King José I refused to sleep under stone and the court moved to a wooden complex on this hill — which then burned down in seventeen ninety-four — and only then did construction begin on a permanent neoclassical palace intended to be one of the largest in Europe. The monarchy fell in nineteen ten before that ambition was realised, and the palace was turned into a museum with its contents frozen exactly as they were on the day the royal family left.\nGo inside and walk through the state rooms on the upper floor.\nThe rooms are preserved as King Luís the First and Queen Maria Pia of Savoy furnished and used them from eighteen sixty-one until nineteen ten, and the combination of Portuguese and European decorative arts, seventeen thousand pieces of porcelain, and the personal effects of a royal household arrested mid-sentence in nineteen ten gives the interior a quality of suspended time that most museums deliberately try to avoid.\n[beat]\nThe ruined western wing was finally completed in twenty twenty-two in a contemporary style, after thirty-one million euros and over a century of its remaining unfinished, to house the Royal Treasure Museum with the crown jewels — which means the palace that was never completed finally was, which might count as the most delayed resolution to an interrupted building project in Lisbon's history."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.70777538689946,
+      "centroidLongitude": -9.197966933413179,
+      "city": "Lisbon",
+      "primaryCategory": "history",
+      "tags": [
+        "palace",
+        "royal",
+        "ajuda",
+        "neoclassical",
+        "crown-jewels",
+        "monarchy",
+        "museum"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3E5FE0E3-8A8C-48E7-A1D0-A4F528C88B38",
+      "title": "Pink Street",
+      "shortDescription": "A hundred metres of road painted defiantly pink in 2011 — the city's trick for dragging a rough dockside strip into the light, now one of Lisbon's most photographed corners.",
+      "longDescription": "Rua Nova do Carvalho runs about a hundred metres through Cais do Sodré, and the entire length of it is painted a deep, almost aggressive pink — pavement, kerb, road, all one shade. The bars and clubs lining both sides were, until fairly recently, the kind of places a sensible person avoided after dark, and that history is rather baked into the colour: the pink appeared in 2011 as part of a city-led effort to reclaim the street from decades of neglect, the idea being to make it so visible, so deliberately cheerful, that it couldn't slide back into the shadows. It worked. Within a few years the old dive bars had been joined by wine bars and restaurants, and Lisbon had accidentally created one of its most photographed corners.\n\nWhat's worth sitting with is that the transformation didn't erase what came before. A handful of the original sailors' bars survived, unchanged except for the clientele, and above the neon signs the facades are still the faded, salt-worn plaster of an old port neighbourhood. The street is liveliest from early evening onward, when the bars open onto the pavement and the whole thing becomes something between a queue and a promenade; in daylight the colours read sharper, a bit absurd, rather wonderful. Cais do Sodré station is at the far end, and the Time Out Market is just across the road.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Pink_Street_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0E161D9D-E484-423D-A0F9-F56DFEC84074",
+          "order": 0,
+          "title": "Pink Street",
+          "caption": "Rua Nova do Carvalho runs pink from end to end in Cais do Sodré — the station is at the far end, with the Time Out Market across the road.",
+          "latitude": 38.707430533739576,
+          "longitude": -9.14379542240981,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pink-street.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Pink_Street_hero.webp",
+          "transcriptText": "The colour was meant to solve a problem, not become a landmark.\nThe street in front of you — Rua Nova do Carvalho — runs about a hundred metres through the Cais do Sodré neighbourhood, and the entire length of it is painted a deep, almost aggressive pink. Pavement, kerb, the road itself, all one shade. Take a moment to get your bearings: the bars and clubs lining both sides were, until fairly recently, the kind of places a sensible person avoided after dark, and that history is rather baked into the colour.\nThe pink appeared in two thousand and eleven, as part of a city-led effort to reclaim the street from decades of neglect and low-level disorder. The idea was simple enough — make it so visible, so deliberately cheerful, that it couldn't slide back into the shadows. It worked, more or less. Within a few years, the old dive bars had been joined by wine bars and restaurants, the street had become a destination, and Lisbon had accidentally created one of its most photographed corners.\nWhat's worth sitting with, standing here, is that the transformation didn't erase what came before. A handful of the original sailors' bars survived, unchanged except for the clientele, and if you look at the buildings above the neon signs, the facades are still the faded, salt-worn plaster of an old port neighbourhood — the kind that hasn't quite decided what it wants to be yet. The pink is modern confidence layered over something older and considerably less tidy.\n[beat]\nThe street is liveliest from early evening onward, when the bars open their doors onto the pavement and the whole thing becomes something between a queue and a promenade. If you're here in daylight, the colours read differently — sharper, a bit absurd, rather wonderful.\nCais do Sodré station is at the far end, if you're continuing along the waterfront — and the Time Out Market, Lisbon's great covered food hall, is just across the road and worth the detour."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.707430533739576,
+      "centroidLongitude": -9.14379542240981,
+      "city": "Lisbon",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "pink",
+        "cais-do-sodre",
+        "nightlife",
+        "photogenic",
+        "regeneration",
+        "bars",
+        "2011"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "16B250C0-EC16-4961-8B2A-3545CE21A230",
+      "title": "Tropical Botanical Garden",
+      "shortDescription": "Seven hectares of colonial-era botany hidden beside the Jerónimos Monastery — six hundred species, fourteen loaded statues, and peacocks who outrank everyone.",
+      "longDescription": "This garden has had more names than most institutions manage in a century — the Tropical Agriculture Museum Garden, the Colonial Garden, the Garden of the Colonies, the Garden of Overseas Territories — and each renaming was a deliberate political signal about what Portugal was willing to call its relationship with the territories it governed. Founded by Royal Decree in 1906 to support the study of tropical agronomy for the colonies, the seven hectares tucked between the Jerónimos Monastery and the Belém Palace hold around six hundred species from former Portuguese territories including Angola, Mozambique, Macau, and Brazil — along with some of the only specimens in Europe of plants that have since disappeared from their natural habitats. Most visitors to Belém walk straight past it, which makes it one of the more quietly rewarding detours in this part of the city.\n\nThe Oriental Garden, added in 1940 as part of the Colonial Section of Salazar's Portuguese World Exhibition and inspired by Macau, makes the site's ambivalence visible — a scientific institution doubling as political display, underlined by fourteen statues and busts of Asian and African figures made for the same exhibition, still standing among the trees. The garden was classified as a National Monument in 2007 and is now managed by the University of Lisbon — and the peacocks, who manage themselves, have been here longer than either institution and show no particular interest in what the garden should be called.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tropical_Botanical_Garden_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tropical_Botanical_Garden_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tropical_Botanical_Garden_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tropical_Botanical_Garden_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "F83A96EF-8B9D-416D-94CA-994956CF0D3B",
+          "order": 0,
+          "title": "Tropical Botanical Garden",
+          "caption": "The entrance is on Largo de Belém, tucked between the Jerónimos Monastery and the Belém Palace — head for the Oriental Garden first.",
+          "latitude": 38.698366533695484,
+          "longitude": -9.203694164423244,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tropical-botanical-garden.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tropical_Botanical_Garden_hero.webp",
+          "transcriptText": "This garden has had more names than most institutions manage in a century — the Tropical Agriculture Museum Garden, the Colonial Garden, the Garden of the Colonies, the Garden of Overseas Territories — and each renaming was a deliberate political signal about what Portugal was willing to call its relationship with the territories it governed.\nThe garden is tucked between the Jerónimos Monastery and the Belém Palace on Largo de Belém, seven hectares of tropical and subtropical planting that most visitors to Belém walk straight past on their way to the monastery, which makes it one of the more quietly rewarding detours in this part of the city. Founded by Royal Decree in nineteen oh six to support the study of tropical agronomy for Portugal's colonies, the garden holds around six hundred species from former Portuguese territories including Angola, Mozambique, Macau, and Brazil, along with some of the only specimens in Europe of plants that have since disappeared from their natural habitats.\nWalk in from the main entrance and go directly to the Oriental Garden.\nThe Oriental Garden was added in nineteen forty as part of the Colonial Section of Salazar's Portuguese World Exhibition, inspired by Macau, and its presence in a scientific botanical garden reflects the ambivalence with which the whole site sits between research institution and political display — an ambivalence that fourteen statues and busts of Asian and African figures, also made for the nineteen forty exhibition, make entirely visible if you look for them among the trees.\n[beat]\nThe garden was classified as a National Monument in two thousand and seven, and the University of Lisbon now manages it alongside the National Museum of Natural History — and the peacocks, who manage themselves, have been here considerably longer than either institution and show no particular interest in the question of what the garden should be called."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.698366533695484,
+      "centroidLongitude": -9.203694164423244,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "garden",
+        "belem",
+        "botanical",
+        "colonial-history",
+        "peacocks",
+        "oriental-garden",
+        "1906"
+      ],
+      "priceUSD": 0
     }
   ]
 }
