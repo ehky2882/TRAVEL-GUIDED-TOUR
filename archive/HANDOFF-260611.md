@@ -18,8 +18,9 @@ pbxproj bump.
   shopping, Soho landmarks), under Atlas Studio LDN.
 
 **London 25 → 40** — West End / Soho now covered, on top of the City +
-Westminster/Whitehall that shipped in build 39 (`ea197f0`). **Catalog 210 → 225
-tours / 4 makers** (100 Atlas Studio NYC + 54 OPO + 40 LDN + 31 LIS).
+Westminster/Whitehall already in catalog from build 38. (Build 39 was the Lisbon
+expansion — see `HANDOFF-260610.md`.) **Catalog 210 → 225 tours / 4 makers**
+(100 Atlas Studio NYC + 54 OPO + 40 LDN + 31 LIS).
 
 ## Process notes
 
