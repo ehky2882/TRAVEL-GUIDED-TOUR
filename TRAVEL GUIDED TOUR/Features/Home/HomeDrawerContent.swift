@@ -21,6 +21,7 @@ struct HomeDrawerContent: View {
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
     @Environment(HomeSharedState.self) private var sharedState
     @Environment(TourPresenter.self) private var tourPresenter
+    @Environment(AudioPlayerService.self) private var audioPlayer
 
     /// Peek-detent height — mirrors `HomeView.peekHeight`. Used to
     /// fade the scrollable rails in as the drawer opens past peek so a
@@ -131,16 +132,34 @@ struct HomeDrawerContent: View {
         .filter { $0.id != "continueListening" && $0.id != "recentlyViewed" }
     }
 
-    /// The single most-recently-listened, unfinished tour — the
-    /// compact "Continue listening" row. Ordered by `lastListenedAt`
-    /// (NOT save date — resuming is about what you last heard, even
-    /// if you saved something else since).
+    /// The tour for the compact "Continue listening" row. Priority:
+    /// whatever is CURRENTLY loaded in the player (it is literally
+    /// the thing you'd continue listening to — same signal the
+    /// mini-player keys on), falling back to the most-recently-
+    /// listened unfinished library entry when the player is idle.
+    /// The fallback orders by `lastListenedAt` (NOT save date —
+    /// resuming is about what you last heard, even if you saved
+    /// something else since).
     private var continueListeningTour: Tour? {
-        libraryStore.entries
+        if let loaded = nowPlayingTour { return loaded }
+        return libraryStore.entries
             .filter { $0.listenedSeconds > 0 && $0.completedAt == nil }
             .sorted { ($0.lastListenedAt ?? .distantPast) > ($1.lastListenedAt ?? .distantPast) }
             .compactMap { dataService.tour(by: $0.tourId) }
             .first
+    }
+
+    /// The tour whose audio is loaded in the player, or `nil` when
+    /// idle. Mirrors `ContentView.nowPlayingTour` (the mini-player's
+    /// visibility signal) so the row and the mini-player always
+    /// agree on what "currently playing" means.
+    private var nowPlayingTour: Tour? {
+        guard audioPlayer.state != .idle,
+              let sourceId = audioPlayer.currentSourceId,
+              let uuid = UUID(uuidString: sourceId) else {
+            return nil
+        }
+        return dataService.tour(by: uuid)
     }
 
     // MARK: - Quick-resume banner
