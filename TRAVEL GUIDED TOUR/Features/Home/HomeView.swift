@@ -75,6 +75,10 @@ struct HomeView: View {
         AtlasBottomModule.height(extendsToScreenEdges: false)
     }
 
+    /// Scope tying the externally-placed `MapCompass` to the `Map`
+    /// inside `HomeMapSection` — see the compass placement in `body`.
+    @Namespace private var mapScope
+
     var body: some View {
         // NavigationStack wraps the map layout so SearchBar's push
         // to `SearchView` still works. Tour detail no longer pushes
@@ -87,6 +91,7 @@ struct HomeView: View {
                 ZStack(alignment: .top) {
                     HomeMapSection(
                         tours: filteredTours,
+                        mapScope: mapScope,
                         userLocation: locationManager.userLocation,
                         userHeading: locationManager.heading,
                         selectedTourId: sharedState.placecardTour?.id,
@@ -201,6 +206,30 @@ struct HomeView: View {
                         .animation(.easeInOut(duration: 0.3), value: sheetDetent)
                         .allowsHitTesting(sheetDetent == .peek && !sharedState.isMapMoving)
 
+                    // Compass — placed manually (via `mapScope`) because
+                    // the framework's default control slot is top-
+                    // trailing, hidden under the search bar + chips.
+                    // Trailing edge, bottom-aligned with the recenter
+                    // button (same bottom-padding formula as the
+                    // control stack). MapKit keeps its automatic
+                    // visibility: appears only while the map is
+                    // rotated off true north, fades when re-aligned.
+                    // Unlike the control stack it is NOT hidden while
+                    // the map is moving — rotation happens mid-
+                    // gesture, which is exactly when it's needed.
+                    MapCompass(scope: mapScope)
+                        .padding(.trailing, AtlasSpacing.md)
+                        .padding(.bottom, drawerVisibleHeight(in: geo) + floatingIslandHeight + AtlasSpacing.sm)
+                        .frame(
+                            maxWidth: .infinity,
+                            maxHeight: .infinity,
+                            alignment: .bottomTrailing
+                        )
+                        .ignoresSafeArea(.container, edges: .bottom)
+                        .opacity(sheetDetent != .peek ? 0 : 1)
+                        .animation(.easeInOut(duration: 0.3), value: sheetDetent)
+                        .allowsHitTesting(sheetDetent == .peek)
+
                     // Transient hint shown when a place search lands on
                     // an area with no Atlas tours. Non-interactive so a
                     // tap underneath still dismisses it. The pill is
@@ -209,6 +238,11 @@ struct HomeView: View {
                     // opacity fade (a `.move` here would slide the
                     // full-height frame off-screen).
                 }
+                // Resolves the `mapScope` namespace: associates the
+                // `Map` inside `HomeMapSection` with the manually-
+                // placed `MapCompass` above. Must sit on a container
+                // that encloses both.
+                .mapScope(mapScope)
                 // Place-search "no tours here" hint. Attached as an
                 // `.overlay` (not a ZStack child) so it composites above
                 // the UIKit-backed `Map` — a conditionally-inserted

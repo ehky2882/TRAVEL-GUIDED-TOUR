@@ -3,16 +3,15 @@ import CoreLocation
 import MapKit
 
 /// The home drawer's scrollable content — header + quick-resume
-/// banners + filtered tour list. Lifted out of `HomeView` so it can
+/// banners + category rails. Lifted out of `HomeView` so it can
 /// live inside a `BottomSheet` hosted at the `ContentView` level,
 /// which lets the drawer stack z-order ON TOP of the mini-player +
 /// tab bar (previously the drawer rendered behind, causing the last
 /// card to peek out at scroll-end).
 ///
-/// Reads the shared map/drawer state via `HomeSharedState`. Tour-tap
-/// navigation goes through the caller-supplied `onTourTap` closure so
-/// presentation policy (push, sheet, full-screen cover) is decided by
-/// the parent.
+/// Reads the shared map/drawer state via `HomeSharedState`. Tour
+/// taps (banner rows here, rail cards in `RailCarousel`) present via
+/// `TourPresenter`, so the detail always comes up as a bottom sheet.
 struct HomeDrawerContent: View {
     @Binding var sheetDetent: BottomSheetDetent
 
@@ -21,6 +20,7 @@ struct HomeDrawerContent: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
     @Environment(HomeSharedState.self) private var sharedState
+    @Environment(TourPresenter.self) private var tourPresenter
 
     /// Peek-detent height — mirrors `HomeView.peekHeight`. Used to
     /// fade the scrollable rails in as the drawer opens past peek so a
@@ -45,6 +45,19 @@ struct HomeDrawerContent: View {
                 ScrollViewReader { proxy in
                     ScrollView {
                         LazyVStack(alignment: .leading, spacing: AtlasSpacing.lg) {
+                            // The resume entry renders as a compact
+                            // single ROW, not a shelf — you don't
+                            // browse "continue listening," you tap
+                            // it. One line keeps "NEAR YOU" (the
+                            // first real shelf, and the map-anchored
+                            // one) above the fold. ("Recently viewed"
+                            // was dropped from the drawer entirely —
+                            // owner trial 2026-06-12; it still lives
+                            // in Library.)
+                            if let resumeTour = continueListeningTour {
+                                quickResumeBanner(tour: resumeTour, label: "Continue listening")
+                            }
+
                             if railList.isEmpty {
                                 emptyState
                             } else {
@@ -97,11 +110,14 @@ struct HomeDrawerContent: View {
 
     // MARK: - Derived
 
-    /// The ordered rails shown in the drawer — personalized
-    /// (Continue listening / Recently viewed), location-anchored
+    /// The ordered rails shown in the drawer — location-anchored
     /// (Near you / In view), then one shelf per category drawn from
     /// the whole catalog. Built by the pure `HomeRailsViewModel`;
     /// recomputed each render, which is cheap for V1's small catalog.
+    /// The personalized rails the view-model also produces (Continue
+    /// listening / Recently viewed) are dropped here — they render as
+    /// compact single-row banners above the shelves instead, so the
+    /// location rails aren't pushed below the fold.
     /// The category chips above the drawer no longer *filter* this
     /// set — they jump-scroll to a shelf (see `jumpToCategory`).
     private var rails: [HomeRail] {
@@ -112,6 +128,66 @@ struct HomeDrawerContent: View {
             userLocation: locationManager.userLocation,
             visibleRegion: sharedState.visibleRegion
         )
+        .filter { $0.id != "continueListening" && $0.id != "recentlyViewed" }
+    }
+
+    /// The single most-recently-listened, unfinished tour — the
+    /// compact "Continue listening" row. Ordered by `lastListenedAt`
+    /// (NOT save date — resuming is about what you last heard, even
+    /// if you saved something else since).
+    private var continueListeningTour: Tour? {
+        libraryStore.entries
+            .filter { $0.listenedSeconds > 0 && $0.completedAt == nil }
+            .sorted { ($0.lastListenedAt ?? .distantPast) > ($1.lastListenedAt ?? .distantPast) }
+            .compactMap { dataService.tour(by: $0.tourId) }
+            .first
+    }
+
+    // MARK: - Quick-resume banner
+
+    private func quickResumeBanner(tour: Tour, label: String) -> some View {
+        Button {
+            tourPresenter.present(tour)
+        } label: {
+            HStack(spacing: AtlasSpacing.md) {
+                HeroImageView(
+                    imageName: tour.heroImageURL,
+                    height: 48,
+                    cornerRadius: 0,
+                    category: tour.primaryCategory
+                )
+                .frame(width: 48)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(label)
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.tertiaryText)
+                    Text(tour.title)
+                        .font(AtlasTypography.body)
+                        .textCase(.uppercase)
+                        .foregroundStyle(AtlasColors.primaryText)
+                        .lineLimit(1)
+                }
+
+                Spacer()
+
+                Image(systemName: "chevron.right")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.tertiaryText)
+            }
+            // Leading inset matches the vertical inset so the square
+            // thumbnail sits at an even distance from the box's top,
+            // bottom, and left edges; the trailing side keeps the
+            // larger inset so the chevron doesn't crowd the edge.
+            .padding(.leading, AtlasSpacing.sm)
+            .padding(.trailing, AtlasSpacing.md)
+            .padding(.vertical, AtlasSpacing.sm)
+            // Square corners — matches the square-cornered tour
+            // imagery everywhere else on home (owner choice).
+            .background(.regularMaterial)
+        }
+        .buttonStyle(.plain)
+        .padding(.horizontal, AtlasSpacing.lg)
     }
 
     /// Count of tours with at least one stop inside the current map
