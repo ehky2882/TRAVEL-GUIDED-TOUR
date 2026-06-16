@@ -1,0 +1,16 @@
+# Image credits — attribution-required (CC BY / CC BY-SA) images shipped in the London batch
+# Logged because the app currently has no in-app attribution UI; surface these if/when required.
+# file<TAB>license<TAB>source_url
+
+## Brompton Oratory (tour 65) — gallery
+brompton-oratory_2.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/d/dc/2016_Brompton_Oratory%2C_interior_01.jpg
+brompton-oratory_3.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/1/12/2016_Brompton_Oratory%2C_interior_03.jpg
+brompton-oratory_4.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/3/35/2016_Brompton_Oratory%2C_interior_06.jpg
+brompton-oratory_5.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/1/13/2016_Brompton_Oratory%2C_interior_07.jpg
+brompton-oratory_6.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/5/53/Brompton_Oratory%2C_London._Fujifilm._%2851807241302%29.jpg
+
+## Science Museum (tour 61) — gallery
+science-museum_2.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/3/3e/2017_Science_Museum_%28London%29_02.jpg
+science-museum_3.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/a/af/Energy_Hall%2C_Science_Museum%2C_London_%282%29.jpg
+science-museum_4.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/c/c7/Flight_gallery%2C_Science_Museum%2C_London.jpg
+science-museum_5.webp	CC BY-SA 3.0	https://upload.wikimedia.org/wikipedia/commons/a/a8/London_-_Science_Museum_2.jpg
