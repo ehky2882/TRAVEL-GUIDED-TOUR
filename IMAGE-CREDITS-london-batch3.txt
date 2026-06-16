@@ -77,3 +77,7 @@ after-the-fire-wrens-city_stop0.webp	Public domain	https://upload.wikimedia.org/
 after-the-fire-wrens-city_stop1.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/f/f4/Pudding_lane_%2833489044156%29.jpg
 after-the-fire-wrens-city_stop3.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/1/1f/2025-09-02_-_St_Stephen%2C_Walbrook_-_17.jpg
 after-the-fire-wrens-city_stop4.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/3/38/Church_of_St_Mary_le_Bow_Cheapside_City_of_London_1064696_20230824_0340.jpg
+
+## The Spine of Power (multi-stop) — Wikimedia stop images
+the-spine-of-power_stop4.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/5/51/10_Downing_Street_%28geograph_5460596%29.jpg
+the-spine-of-power_stop5.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/9/90/The_Cenotaph%2C_Whitehall_-_geograph.org.uk_-_3572200.jpg
