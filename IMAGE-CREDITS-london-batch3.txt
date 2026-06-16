@@ -36,3 +36,9 @@ dennis-severs-house_hero.webp	CC BY 4.0	https://upload.wikimedia.org/wikipedia/c
 ## Royal Observatory (67) — added interior gallery (Wikimedia)
 royal-observatory-greenwich_4.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/f/fc/Greenwich_-_Royal_Observatory_-_View_West_towards_Octagon_Room_%26_Time_Ball.jpg
 royal-observatory-greenwich_5.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/e/e7/Flamsteed_House_-_Royal_Observatory_Greenwich_-_Octagon_Room_%288131348515%29.jpg
+
+## Coal Drops Yard (82) — Wikimedia gallery
+coal-drops-yard_hero.webp	CC0	https://upload.wikimedia.org/wikipedia/commons/6/6f/Coal_Drops_Yard_%28view_from_the_south%29_2025-09-18.jpg
+coal-drops-yard_2.webp	CC BY 4.0	https://upload.wikimedia.org/wikipedia/commons/5/56/Coal_Drops_Yard.png
+coal-drops-yard_3.webp	CC0	https://upload.wikimedia.org/wikipedia/commons/6/61/Coal_Drops_Yard_%2850192917261%29.jpg
+coal-drops-yard_4.webp	CC0	https://upload.wikimedia.org/wikipedia/commons/5/56/Coal_Drops_Yard_%28view_from_the_north%29_2025-09-18.jpg
