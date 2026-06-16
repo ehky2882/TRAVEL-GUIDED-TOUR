@@ -1,0 +1,15 @@
+The Royal Observatory and the Prime Meridian
+
+There's a metal line in the courtyard here, and it's the line — zero degrees longitude, the place from which every position on Earth is measured. The whole planet's address system starts under your feet.
+
+You're at the top of the hill in Greenwich Park, at the Royal Observatory — a small cluster of historic buildings with a view back down over the park, the river, and the towers of Docklands. The observatory was founded by Charles the Second in 1675 with one severely practical purpose: solving navigation. Ships were being lost because sailors could find their latitude from the sun but not their longitude — how far east or west they were — and the king set his astronomers the problem.
+
+The answer turned out to be time. Your longitude is, in effect, the difference between your local time and the time at a fixed reference point. Crack accurate timekeeping at sea, and you crack longitude. The hero of that story is John Harrison, a self-taught carpenter-turned-clockmaker who spent four decades building marine clocks accurate enough to do it — and his actual machines, the famous H1 through H4, tick away inside this observatory today, among the most important instruments ever made.
+
+The line in the courtyard came later. As Greenwich's tables and time became the world standard for navigators, an international conference in Washington in 1884 voted to adopt the meridian through this observatory as the world's zero of longitude — and Greenwich Mean Time, the time on this hill, as the world's reference time. Every time zone on Earth is still defined as an offset from here.
+
+[beat]
+
+Notice what that means. Longitude zero is not a fact of nature; the universe has no preferred line. It's an agreement — a Victorian conference deciding that the world's geography and clocks would all point at one small hill in south-east London. Empires fade, but the world still tells time against this courtyard.
+
+Do the inevitable thing: straddle the line, one foot in each hemisphere, and take the photo. Then look at Harrison's clocks inside. A carpenter solved the oceans, and a committee gave this hill the planet.
