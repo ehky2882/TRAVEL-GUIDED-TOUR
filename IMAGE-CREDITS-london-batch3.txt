@@ -14,3 +14,21 @@ science-museum_2.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/common
 science-museum_3.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/a/af/Energy_Hall%2C_Science_Museum%2C_London_%282%29.jpg
 science-museum_4.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/c/c7/Flight_gallery%2C_Science_Museum%2C_London.jpg
 science-museum_5.webp	CC BY-SA 3.0	https://upload.wikimedia.org/wikipedia/commons/a/a8/London_-_Science_Museum_2.jpg
+
+## Christ Church Spitalfields (73) — owner-supplied (no attribution needed)
+## Columbia Road (78), Whitechapel Gallery (79), Bevis Marks (77), Wilton's (80), Dennis Severs' (75) — Wikimedia gallery
+columbia-road_hero.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/4/43/Columbia_Road_Flower_Market_%283787909079%29.jpg
+columbia-road_2.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/6/61/Columbia_Road_Flower_Market_%283788720884%29.jpg
+columbia-road_3.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/2/25/Columbia_Road_Flower_Market_%283788721950%29.jpg
+columbia-road_4.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/c/c1/Columbia_Road_Flower_Market_2022.jpg
+whitechapel-gallery_hero.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/3/35/Whitechapel_Art_Gallery_-_geograph.org.uk_-_3805303.jpg
+whitechapel-gallery_2.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/3/36/Whitechapel_Gallery_2020_%283%29_-_Copy.jpg
+whitechapel-gallery_3.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/e/e5/Whitechapel_Art_Gallery_-_geograph.org.uk_-_4487016.jpg
+bevis-marks-synagogue_hero.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/e/e3/Bevis_Marks_Synagogue%2C_City_of_London_-_23291457351.jpg
+bevis-marks-synagogue_2.webp	CC BY-SA 3.0	https://upload.wikimedia.org/wikipedia/commons/b/b9/Bevis_Marks_Synagogue_03.JPG
+bevis-marks-synagogue_3.webp	CC BY-SA 3.0	https://upload.wikimedia.org/wikipedia/commons/c/cd/Bevis_Marks_Synagogue_04.JPG
+wiltons-music-hall_hero.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/f/f8/View_of_Wilton%27s_Music_Hall_detail_%5E2_-_geograph.org.uk_-_4871805.jpg
+wiltons-music-hall_2.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/d/db/Wilton%27s_Music_Hall_-_geograph.org.uk_-_1756668.jpg
+wiltons-music-hall_3.webp	CC BY 3.0	https://upload.wikimedia.org/wikipedia/commons/b/b4/Wilton%27s_Music_Hall_-_Interior.jpg
+wiltons-music-hall_4.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/9/9a/Wilton%27s_Music_Hall%2C_London-21948865095.jpg
+dennis-severs-house_hero.webp	CC BY 4.0	https://upload.wikimedia.org/wikipedia/commons/0/01/Dennis_Severs%27_House_-_2026-05-17.jpg
