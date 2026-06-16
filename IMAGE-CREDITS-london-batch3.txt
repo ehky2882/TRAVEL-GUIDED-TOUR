@@ -63,3 +63,7 @@ london-zoo_hero.webp	CC BY-SA 3.0	https://upload.wikimedia.org/wikipedia/commons
 london-zoo_2.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/c/cd/Penguin_Pool_%283616025435%29.jpg
 london-zoo_3.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/9/9e/Entrance_to_the_former_Aquarium_beneath_the_Mappin_Terraces_%281913-14%2C_pre-stressed_concrete%29.jpg
 highgate-cemetery_hero.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/4/45/GOC_Ally_Pally_024_Highgate_Cemetery_entrance_building%2C_Highgate_%2828824241392%29.jpg
+
+## London Zoo +1 (85), Leighton House hero (93) — Wikimedia
+london-zoo_4.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/6/6b/Giraffe_%283341849851%29.jpg
+leighton-house_hero.webp	CC0	https://upload.wikimedia.org/wikipedia/commons/3/3d/Leighton_House_Museum%2C_the_garden.jpg
