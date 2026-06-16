@@ -12227,6 +12227,646 @@
         "1906"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "E70E2320-EAA5-41A6-ACE4-2C21D6EDFDDA",
+      "title": "Avenida da Liberdade",
+      "shortDescription": "Lisbon's grand kilometre-and-a-half boulevard, laid out in 1882 in imitation of the Champs-Élysées — and built over the public garden it replaced.",
+      "longDescription": "Avenida da Liberdade runs one and a half kilometres due north from Praça dos Restauradores to the Marquês de Pombal roundabout, climbing gently the whole way. It was laid out in 1882, modelled explicitly on the Champs-Élysées in Paris, as part of a broad effort to give Lisbon the appearance of a modern European capital: two broad carriageways flanking a wide central promenade planted with lime and plane trees, with mosaic pavements, fountains, and memorial busts set into the greenery.\n\nThe telling detail is what the avenue replaced — the Passeio Público, the city's first enclosed public garden and a genuine gathering place for over a century. Lisbon pulled it down to build the boulevard, trading something intimate and collective for something grand and aspirational. It's an exchange that has repeated across Europe and never quite resolves.\n\nToday the early-twentieth-century residential blocks increasingly share the frontage with international luxury flagships — a shift in the avenue's social character over the past thirty years. Walk the central promenade rather than the pavement: the mosaic underfoot changes pattern every block, and Eduardo VII park continues the axis northward with a view back down the full length toward the river.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Avenida_da_Liberdade_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Avenida_da_Liberdade_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Avenida_da_Liberdade_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Avenida_da_Liberdade_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "91AE7DEF-BAE7-4C04-B66A-61E86C166155",
+          "order": 0,
+          "title": "Avenida da Liberdade",
+          "caption": "Start at Praça dos Restauradores and walk the central promenade north — the avenue climbs 1.5 km to the Marquês de Pombal roundabout.",
+          "latitude": 38.71526151085587,
+          "longitude": -9.14124810415524,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/avenida-da-liberdade.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Avenida_da_Liberdade_hero.webp",
+          "transcriptText": "On a clear afternoon, with the light coming in from the west, this boulevard is rather lovely — and it knows it.\nThe avenue runs one and a half kilometres due north from Praça dos Restauradores, where you're standing now, up to the Marquês de Pombal roundabout at the top, where a statue of the eighteenth-century prime minister surveys the whole thing from a column. The layout is deliberately symmetrical: two broad carriageways separated by a wide central promenade, planted with lime and plane trees that form a continuous canopy in summer, with mosaic pavements, fountains, and a sequence of memorial busts and plaques set into the greenery as you walk. The buildings lining both sides are a mix of early twentieth-century residential blocks and, increasingly, the flagship shops of international luxury brands — which tells you something about how the avenue's social character has shifted over the past thirty years.\nAvenida da Liberdade was laid out in eighteen eighty-two, modelled explicitly on the Champs-Élysées in Paris, as part of a broader effort to give Lisbon the appearance of a modern European capital. The gift detail, if you want one, is what it replaced: a public garden called the Passeio Público, which had been the city's first enclosed public green space and had served as a genuine gathering place for Lisbon's population for over a century. The city chose the boulevard and pulled the garden down to build it — a trade of something intimate and collective for something grand and aspirational.\nNow, that exchange has been repeated in cities across Europe and it never quite resolves: the grand avenue wins on paper and loses something in the transaction that you can't entirely name.\n[beat]\nWalk the central promenade north rather than the pavement — the mosaic underfoot changes pattern every block or so, and the memorial plaques set into the hedges are worth pausing for. At the top, the Eduardo VII park continues the axis northward and has a good view back down the full length of the avenue toward the river."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71526151085587,
+      "centroidLongitude": -9.14124810415524,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "boulevard",
+        "avenida-da-liberdade",
+        "restauradores",
+        "1882",
+        "champs-elysees",
+        "mosaic-pavement",
+        "marques-de-pombal"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "F30B5657-82AD-4AC0-BD10-A10F7396297B",
+      "title": "Basilica of Estrela",
+      "shortDescription": "The great white-and-pink domed basilica above Estrela, built 1779–90 to fulfil a queen's vow for a male heir — and now her tomb.",
+      "longDescription": "Queen Maria I vowed to build a great basilica in Lisbon if God granted her a male heir. He did — Infante José was born in 1761 — and the church rose between 1779 and 1790 in white and pale-pink limestone from the Arrábida quarries: two matching bell towers flanking a curved central front, with one of the largest domes in Portugal rising behind it to give this corner of the city its skyline.\n\nThe promise turned out crueller than the vow. The church took nearly thirty years, and Infante José died of smallpox in 1788, aged twenty-seven, a year before it was consecrated. Maria I never saw it finished; her grief tipped into a breakdown from which she never recovered, and she died in Brazil in 1816. She is buried inside — the only Portuguese monarch interred in Lisbon rather than at Mafra or Batalha — so the building she commissioned in gratitude became, in the end, her tomb.\n\nThe interior rewards a short visit for its polychrome marble floors and gilded woodwork, and for a remarkable nativity scene of over five hundred terracotta and cork figures attributed to Joaquim Machado de Castro, shown by a keeper with a torch. The Jardim da Estrela directly across the square — laid out in 1852 to give the neighbourhood something to look at — is the place to sit with the view back to the facade.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Basilica_of_Estrela_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Basilica_of_Estrela_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Basilica_of_Estrela_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Basilica_of_Estrela_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "78EEBDD0-4FB2-4663-8FB0-665493CBB9B5",
+          "order": 0,
+          "title": "Basilica of Estrela",
+          "caption": "Face the west front from Praça da Estrela; Maria I's tomb and the Machado de Castro nativity are inside.",
+          "latitude": 38.71354167665383,
+          "longitude": -9.160579558299423,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/basilica-of-estrela.mp3",
+          "audioDurationSeconds": 163,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Basilica_of_Estrela_hero.webp",
+          "transcriptText": "There's a curious thing about this church — it was built to keep a promise, and the promise turned out to be a great deal more complicated than the person who made it had anticipated.\nFace the facade from the square and take in the west front: two matching bell towers flanking a curved central section, the whole composition in white and pale pink limestone from the Arrábida quarries, with the dome rising behind — one of the largest church domes in Portugal, and the one that gives this corner of Lisbon its distinctive skyline silhouette. The church was built between seventeen seventy-nine and seventeen ninety by order of Queen Maria I, who had made a vow to God that she would construct a great basilica in Lisbon if He granted her a male heir. He did: Infante José was born in seventeen sixty-one. The church, however, took nearly thirty years to build, and Infante José died of smallpox in seventeen eighty-eight, aged twenty-seven, a year before it was consecrated — which Maria I never saw, because by then her grief had tipped into a complete mental breakdown from which she never recovered. She spent her final years in Brazil, where the Portuguese court had fled from Napoleon, and died there in eighteen sixteen.\nWorth knowing, standing here: Maria I is buried inside this church — the only Portuguese monarch interred in Lisbon rather than at the royal pantheon in Mafra or the great monastery at Batalha. The burial is a kind of final irony; the building she commissioned as an expression of gratitude became, in the end, her tomb.\nThe interior is open and worth the short visit for two things: the polychrome marble floors and gilded woodwork of the nave, and a room off to one side that holds a remarkable nativity scene — over five hundred terracotta and cork figures, attributed to the sculptor Joaquim Machado de Castro, shown in near-darkness by a keeper with a torch. It is, a bit unexpectedly, one of the more memorable things in Lisbon.\n[beat]\nThe Jardim da Estrela, directly across the square, is the natural place to sit with all of this — the garden was laid out in eighteen fifty-two specifically to give the neighbourhood something to look at across from the church, and the view back toward the facade from the far side of the garden is the one worth finding."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 163,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71354167665383,
+      "centroidLongitude": -9.160579558299423,
+      "city": "Lisbon",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "basilica",
+        "sacred-sites",
+        "estrela",
+        "maria-i",
+        "dome",
+        "18th-century",
+        "royal-tomb"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6B2D7C72-2F49-43F7-A66C-02C9B15D8F43",
+      "title": "Casa dos Bicos",
+      "shortDescription": "The ‘House of Beaks’ — a 1523 facade of over a thousand diamond-cut stones, sitting on Roman fish tanks and now home to the José Saramago Foundation.",
+      "longDescription": "The owner meant to call it the House of Diamonds, after the Palazzo dei Diamanti in Ferrara that inspired it — but Lisbon looked at the facade of more than a thousand pyramidal stone points and saw beaks, and the popular name won. Brás de Albuquerque, son of the first Viceroy of Portuguese India, built it in 1523 on Campo das Cebolas after returning from Italy with strong views about Renaissance architecture.\n\nThe building survived the 1755 earthquake with partial damage, lost its upper floors, and spent well over a century as a codfish warehouse — a steep demotion for a viceroy's family home. The ground floor now holds an archaeological site: Roman fish-preservation tanks and a section of Moorish wall visible through glass in the floor, placing a Renaissance palace directly on top of a Roman fish-processing operation two thousand years older.\n\nThe upper floors are the headquarters of the José Saramago Foundation, dedicated to the Nobel laureate; outside, an olive tree brought from his hometown of Azinhaga marks where his ashes were scattered. The house the people named against the owner's wishes now keeps the legacy of a writer shaped entirely by ordinary Portuguese life.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_dos_Bicos_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_dos_Bicos_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "78F4F0B3-B0B6-42CA-A3D1-755ED9ECE2F3",
+          "order": 0,
+          "title": "Casa dos Bicos",
+          "caption": "On Campo das Cebolas just east of Praça do Comércio — go inside for the Roman tanks under the floor.",
+          "latitude": 38.709186321183665,
+          "longitude": -9.13261574641754,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/casa-dos-bicos.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_dos_Bicos_hero.webp",
+          "transcriptText": "The owner intended to call this building the House of Diamonds — after the Palazzo dei Diamanti in Ferrara that inspired it — but the people of Lisbon looked at the facade and saw beaks rather than diamonds, called it the House of Beaks, and the popular name won, as popular names generally do.\n\nThe building is on Campo das Cebolas, just east of Praça do Comércio, in the transitional zone between Alfama and the Baixa grid, and the facade of over a thousand diamond-shaped stone points — which to some eyes do resemble beaks and to other eyes genuinely do look like diamonds — was built in fifteen twenty-three by Brás de Albuquerque, son of Afonso de Albuquerque, the first Viceroy of Portuguese India, after Brás visited Italy and came back with strong views about Renaissance architecture. The building survived the seventeen fifty-five earthquake with partial damage, lost its upper floors, and was subsequently used as a codfish warehouse for well over a century, which is a fairly significant demotion for the son of a viceroy's family home.\n\nGo inside, where the ground floor holds the archaeological site.\n\nRoman fish-preservation tanks and sections of a Moorish wall are visible through glass panels in the floor, placing the building — built by a Renaissance nobleman inspired by Italian palaces — directly on top of a Roman fish-processing operation from two thousand years earlier, which is an architectural layering that the Casa dos Bicos does not appear to find especially incongruous.\n\n[beat]\n\nThe upper floors are the headquarters of the José Saramago Foundation, dedicated to the Nobel Prize-winning novelist, and outside the building an olive tree brought from Saramago's hometown of Azinhaga do Ribatejo marks the spot where his ashes were scattered — which means the building that was named by the people against the owner's wishes now holds the legacy of a writer whose work was shaped entirely by his relationship with ordinary Portuguese life."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.709186321183665,
+      "centroidLongitude": -9.13261574641754,
+      "city": "Lisbon",
+      "primaryCategory": "history",
+      "tags": [
+        "casa-dos-bicos",
+        "history",
+        "renaissance",
+        "jose-saramago",
+        "alfama",
+        "roman-ruins",
+        "1523"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B2729A26-BBE0-4934-8966-E4D2C1D3D8E5",
+      "title": "Eduardo VII Park",
+      "shortDescription": "Lisbon's largest central park, named for the visiting English king in 1903 — its clipped box hedges framing a half-kilometre view down to the Tagus.",
+      "longDescription": "From the central axis facing south, the park's signature carpet of clipped box hedging — the canteiro central — runs downhill for some five hundred metres, drawing the eye over the Marquês de Pombal roundabout and along Avenida da Liberdade to the river beyond. The view is the park's main event, and it was laid out to frame it.\n\nCreated in the early twentieth century on land long used as informal green space, the park was named for the 1903 visit of King Edward VII of Britain. Portugal and Britain have been formal allies since the Treaty of Windsor in 1386 — one of the longest continuously active alliances in history — so an English king's name on a Portuguese park is a compressed expression of six hundred years of mutual accommodation.\n\nAt the northwestern corner, half out of sight, are the Estufa Fria and Estufa Quente — a cold and a hot greenhouse built into the hillside. The Estufa Fria especially is worth the detour: a vast latticed structure sheltering ferns and tropical plants, cool even in high summer, with fishponds and a light all its own. The belvedere at the top gives the best southward view, where avenue, park, and river align.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Eduardo_VII_Park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Eduardo_VII_Park_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2D23659B-E48D-4F49-ACE0-13B06C25D789",
+          "order": 0,
+          "title": "Eduardo VII Park",
+          "caption": "Stand on the central axis facing south for the framed view to the Tagus; the Estufa Fria greenhouses are at the northwest corner.",
+          "latitude": 38.728467477623695,
+          "longitude": -9.152639986335041,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/eduardo-vii-park.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Eduardo_VII_Park_hero.webp",
+          "transcriptText": "It's nineteen oh three, and the King of England has come to Lisbon — and the city has decided to name a park after him.\nWalk to the central axis of the park and orientate yourself facing south, with the long formal carpet of clipped box hedging running downhill ahead of you toward the city. That strip of dark green geometry — the canteiro central — extends for the full length of the park, about five hundred metres, drawing the eye down over the rooftops of the Marquês de Pombal roundabout and along the tree-lined corridor of Avenida da Liberdade toward the Tagus, which on a clear day is visible as a bright strip of water at the far end of the avenue. The view is the park's main event, and it was laid out specifically to frame it.\nThe park was created in the early twentieth century on land that had served as an informal public green space since the late nineteenth, and its naming honoured the visit of King Edward VII of Britain in nineteen oh three — a gesture that made sense at the time and still carries its own logic now. Portugal and Britain have been formal allies since the Treaty of Windsor in thirteen eighty-six, making theirs one of the longest continuously active diplomatic alliances in recorded history. The park named after an English king in a Portuguese capital is a rather compressed expression of six hundred years of mutual accommodation.\nAt the northwestern corner of the park, largely out of sight from the central axis, are the Estufa Fria and Estufa Quente — a cold greenhouse and a hot greenhouse built into the hillside, both open to the public. The Estufa Fria in particular is worth the detour: a vast latticed structure sheltering a forest of ferns and tropical plants, cool even in high summer, with fishponds and a quality of light that feels entirely separate from the city outside.\n[beat]\nThe belvedere at the top of the park, just behind you, is the best vantage for the full southward view — if you fancy finding the exact spot where the avenue, the park, and the river align."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.728467477623695,
+      "centroidLongitude": -9.152639986335041,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "park",
+        "nature-and-parks",
+        "eduardo-vii",
+        "estufa-fria",
+        "marques-de-pombal",
+        "viewpoint",
+        "greenhouse"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "447F5C9B-583F-4EF9-990E-BD2923E25EA0",
+      "title": "Jardim da Estrela",
+      "shortDescription": "A romantic 1852 garden opposite the Basílica da Estrela — mature exotic trees, a green Victorian bandstand, and a duck pond, still doing the same job 170 years on.",
+      "longDescription": "Step through the gates from Praça da Estrela and the city goes quiet. The formal garden, laid out in 1852, runs gravel paths between mature exotic trees — Canary Island palms, cedar, Judas trees — toward a green Victorian bandstand still used for Sunday concerts in summer. A duck pond sits to the left of the entrance, a café kiosk further along under a spreading fig, and the white dome of the Basílica da Estrela rises across the square.\n\nThe church came first, completed in 1790; the garden was laid out sixty years later to give the neighbourhood something to sit in front of it. It was designed at a moment when public green space was understood as a social good in itself — clean air, shade, room for children to run — and it has held that purpose with remarkable consistency. The trees are enormous because they were planted then; the paths haven't moved; and the weekday mix of parents, retired neighbours, and office workers is roughly what it would have been in 1880.\n\nBefore leaving the neighbourhood, the English Cemetery — Cemitério dos Ingleses — is a ten-minute walk east. Henry Fielding, author of Tom Jones, is buried there; he came to Lisbon in 1754 hoping the climate would restore his health and died two months later. The cemetery is quietly beautiful, and seldom visited.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_da_Estrela_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_da_Estrela_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_da_Estrela_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1399736A-CE7E-4CE6-B463-865998D8AC76",
+          "order": 0,
+          "title": "Jardim da Estrela",
+          "caption": "Enter from Praça da Estrela; the bandstand is at the centre, the Basílica's dome visible across the square.",
+          "latitude": 38.71380226182995,
+          "longitude": -9.160335147520108,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jardim-da-estrela.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jardim_da_Estrela_hero.webp",
+          "transcriptText": "The moment you step through the gates, the city goes quiet — not silent, but noticeably quieter, as if the iron railings are doing more work than they appear to.\nThe main entrance on Praça da Estrela opens into a formal garden laid out in eighteen fifty-two, with gravel paths curving between mature exotic trees — Canary Island palms, cedar, Judas trees — toward a Victorian bandstand at the centre, painted green, still used for Sunday concerts in summer. The duck pond is to your left as you enter, and the café kiosk is further along the central path, shaded by a spreading fig. Across the square outside, visible above the roofline to your right, is the white dome of the Basílica da Estrela — the church was built first, completed in seventeen ninety, and the garden was laid out sixty years later to give the neighbourhood something to sit in front of it.\nHere's what I love about this corner of Lisbon: the Jardim da Estrela was designed at a moment when access to green public space was understood as a social good in itself — clean air, shade, a place for children to run — and the garden has held that purpose with fairly remarkable consistency for over a hundred and seventy years. The trees are enormous now because they were planted then, and the paths are in the same places, and on any given weekday morning the mix of people using it — parents with small children, retired neighbours, office workers eating sandwiches on benches — is roughly what it would have been in eighteen eighty.\n[beat]\nBefore you leave the neighbourhood, the English Cemetery — Cemitério dos Ingleses — is a ten-minute walk east along Rua de São Jorge. Henry Fielding, the English novelist who wrote Tom Jones, is buried there; he came to Lisbon in seventeen fifty-four hoping the climate would restore his health, and died two months after arriving. The cemetery itself is a quietly beautiful place, and seldom visited."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71380226182995,
+      "centroidLongitude": -9.160335147520108,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "garden",
+        "nature-and-parks",
+        "estrela",
+        "bandstand",
+        "1852",
+        "romantic-garden",
+        "duck-pond"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "301A1479-85AB-476D-BAE4-A9B7381F2AA8",
+      "title": "Jazigo dos Duques de Palmela",
+      "shortDescription": "A deliberately unfinished stone pyramid at Prazeres cemetery — the largest private mausoleum in Europe, dense with Masonic symbolism and a Canova cenotaph.",
+      "longDescription": "At the far end of the Cemitério dos Prazeres, past avenues of family vaults and cypress, a large unfinished pyramid in pale stone rises at the southern boundary, approached by a black-and-white diamond-patterned avenue leading to a Doric portico of seven steps. It is the largest private mausoleum in Europe, and almost nothing about it is accidental.\n\nCommissioned in the 1840s by Pedro de Sousa Holstein, first Duke of Palmela, and designed by the Italian architect and Freemason Giuseppe Cinatti, the structure carries Masonic symbolism on every surface: the black-and-white paving, columns evoking the Temple of Solomon, the seven steps, and the Egyptian-revival pyramid itself. Inside, the principal object is a Carrara-marble cenotaph by Antonio Canova honouring the Duke — who died in Rome in 1850 and is buried there, so the monument commemorates a man who is not present. In the surrounding garden the family's servants are buried in two rows, women to the north and men to the south, separated in death as in life.\n\nThe whole composition has a quiet, extraordinary ambition: a man who gave the land for Lisbon's public cemetery then built himself a private one inside it, filled it with Masonic symbols, hired Europe's greatest sculptor for a monument to his own absence, and arranged his servants around him. The Cemitério dos Prazeres itself rewards an hour on foot, with some of the finest nineteenth-century funerary sculpture in the city.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jazigo_Duques_de_Palmela_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jazigo_Duques_de_Palmela_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jazigo_Duques_de_Palmela_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "D9A1CF04-930A-419E-AC5A-CA13E3F4BE07",
+          "order": 0,
+          "title": "Jazigo dos Duques de Palmela",
+          "caption": "At the southern boundary of the Cemitério dos Prazeres, reached via the diamond-paved avenue to the Doric portico.",
+          "latitude": 38.71545342518356,
+          "longitude": -9.170704235197821,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jazigo-duques-de-palmela.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jazigo_Duques_de_Palmela_hero.webp",
+          "transcriptText": "You are standing in front of a pyramid. In Lisbon. In a municipal cemetery. This does require some explanation.\nAt the far end of the Cemitério dos Prazeres, past the long avenues of family vaults and cypress trees, the Jazigo dos Duques de Palmela rises at the southern boundary of the cemetery — a large, deliberately unfinished pyramid in pale stone, approached by an avenue of black-and-white diamond-patterned cobbles leading to a Doric portico with seven steps. It is the largest private mausoleum in Europe, and almost nothing about it is accidental.\nThe structure was commissioned in the eighteen forties by Pedro de Sousa Holstein, the first Duke of Palmela, and designed by the Italian architect Giuseppe Cinatti — himself a prominent Freemason, working to the Duke's own instructions. The Masonic symbolism is built into every surface: the black and white paving of the approach avenue, the columns evoking the Temple of Solomon, the seven steps of the entrance, and the pyramid form itself, drawn from an Egyptian revival tradition that ran through Masonic funerary architecture across the nineteenth century. Inside the chapel, the principal object is a cenotaph in Carrara marble by Antonio Canova — one of the finest sculptors in Europe — carved in honour of the first Duke. The Duke himself, I always think, deserved some credit for the commission: he died in Rome in eighteen fifty and is buried there, so the Canova cenotaph commemorates a man who is not actually present. Outside the chapel, in the small garden that surrounds it, the family's servants are buried in two rows — women on the north side, men on the south — separated in death as they had been in life.\nThe whole composition is rather extraordinary in its quiet ambition: a man who gave the land for Lisbon's public cemetery then built himself a private one inside it, filled it with Masonic symbols, commissioned Europe's greatest sculptor for a monument to his own absence, and arranged his servants around him in the garden.\n[beat]\nThe Cemitério dos Prazeres itself is worth an hour on foot — the older sections, nearest the main entrance on Rua da Beneficência, have some of the finest nineteenth-century funerary sculpture in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71545342518356,
+      "centroidLongitude": -9.170704235197821,
+      "city": "Lisbon",
+      "primaryCategory": "history",
+      "tags": [
+        "mausoleum",
+        "history",
+        "prazeres-cemetery",
+        "freemasonry",
+        "canova",
+        "pyramid",
+        "duques-de-palmela"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "02DDDD4C-4A56-48B8-8326-185746E8837B",
+      "title": "Miradouro da Graça",
+      "shortDescription": "The highest of Lisbon's hill viewpoints — an unpretentious neighbourhood terrace with the widest unobstructed view across the city to the castle and the river.",
+      "longDescription": "Largo da Graça is a quiet residential square at the top of the Graça hill, the highest of Lisbon's miradouros and so the one with the widest unobstructed view. From the terrace railing at the southern edge the panorama opens across the full width of the city: the Castelo de São Jorge directly west, the Alfama rooftops cascading toward the river, the Baixa grid in the middle distance, and on a clear day the 25 de Abril bridge and the Cristo Rei statue on the far bank.\n\nThe viewpoint itself is simple — a terrace, a low wall, a couple of benches — and the simplicity is the point. Graça hasn't been dressed up for visitors the way Santa Luzia and Portas do Sol have: no pergolas, no souvenir stands, no information boards. Turn round and Largo da Graça is just functioning as a neighbourhood square, with a corner café, the Igreja da Graça on the north side, and residents cutting through on their way elsewhere.\n\nThe district grew up around a fourteenth-century Augustinian convent and kept its working-class residential character well into the twenty-first century — a large part of why standing here feels different from the more visited viewpoints below. The Igreja da Graça behind you holds some of the better azulejo tilework in this part of the city, and is seldom crowded.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_da_Graca_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_da_Graca_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_da_Graca_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "78C3D8F4-DD58-40EA-AAE1-F2DAE64780A4",
+          "order": 0,
+          "title": "Miradouro da Graça",
+          "caption": "Walk to the railing at the south edge of Largo da Graça for the city-wide view; the church behind has fine azulejos.",
+          "latitude": 38.71662869303596,
+          "longitude": -9.131578862655076,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/miradouro-da-graca.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_da_Graca_hero.webp",
+          "transcriptText": "Here's what separates this viewpoint from the others: the cafe behind you has been here longer than the tourists have.\nLargo da Graça is a quiet residential square at the top of the Graça hill — the highest of Lisbon's miradouros and, for that reason, the one with the widest unobstructed view of the city. Walk to the terrace railing at the southern edge of the square and the panorama opens up across the full width of Lisbon: the castle of São Jorge on the hill directly to your west, the Alfama rooftops cascading below it toward the river, the Baixa grid in the middle distance, and on a clear day the 25 de Abril bridge spanning the Tagus to the south, with the Cristo Rei statue visible on the far bank, arms extended over the water.\nThe viewpoint itself is simple — a terrace, a low wall, a couple of benches — and the simplicity is the point. Graça has not been dressed up for visitors in the way that Santa Luzia and Portas do Sol have: there are no pergolas, no souvenir stands, no information boards. What there is, if you turn round, is Largo da Graça functioning as a neighbourhood square — the cafe on the corner, the Igreja da Graça on the north side, the old convent buildings converted into flats, local residents cutting through on their way somewhere else entirely.\nThe Graça district grew up around a fourteenth-century Augustinian convent, and the neighbourhood retained its working-class residential character well into the twenty-first century — which is, if you ask me, a large part of why standing here feels a bit different from the more visited viewpoints below. The view is longer; the feeling of being in someone's city rather than someone's attraction is rather more pronounced.\n[beat]\nThe Igreja da Graça, behind you on the north side of the square, is worth stepping inside before you leave — the interior holds some of the better azulejo tilework in this part of the city, and it's seldom crowded."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71662869303596,
+      "centroidLongitude": -9.131578862655076,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "miradouro",
+        "nature-and-parks",
+        "graca",
+        "viewpoint",
+        "panorama",
+        "alfama",
+        "hidden-gems"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4C6C8B8E-7A27-49D2-AF16-F9CCD0C9CD20",
+      "title": "Miradouro das Portas do Sol",
+      "shortDescription": "An Alfama belvedere built around the statue of São Vicente and his two ravens — Lisbon's patron saint, and the birds on the city's coat of arms.",
+      "longDescription": "The terrace opens onto a wide belvedere at the edge of the Alfama escarpment, the rooftops of Mouraria falling away to the left and the Tagus ahead. At its centre, on a low plinth, stands São Vicente — Saint Vincent, Lisbon's patron — holding a small boat with two birds on its prow. Those are the ravens: when the saint's remains were brought by sea from the Algarve in the twelfth century, two ravens supposedly accompanied the boat the whole way and stood guard over the body on arrival.\n\nThe ravens stayed in Lisbon, were kept at the cathedral, and eventually reached the city's coat of arms — which is why almost any official Lisbon emblem shows a ship flanked by two birds. Across the square, the building with barred windows set into the slope is the Museu do Aljube, a former Estado Novo political prison now a museum of resistance and memory. It's easy to walk past without registering it, and the few metres between a medieval patron saint and a twentieth-century prison are about as compressed a version of Lisbon's history as a single glance allows.\n\nThe view east from the railing looks over the Mouraria — the neighbourhood the Moorish population was pushed into after the Christian reconquest of 1147, and one of the oldest continuously inhabited parts of the city. The streets below are worth an hour on foot if you have the time.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_Portas_do_Sol_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_Portas_do_Sol_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "D817E5D5-E635-4D54-AE23-C52F8A3C5295",
+          "order": 0,
+          "title": "Miradouro das Portas do Sol",
+          "caption": "Built around the São Vicente statue on the Alfama escarpment; the Museu do Aljube faces the square.",
+          "latitude": 38.71212902335823,
+          "longitude": -9.129981433889663,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/miradouro-portas-do-sol.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_Portas_do_Sol_hero.webp",
+          "transcriptText": "It's the twelfth century, and two ravens are keeping watch over a body on a ship.\nThe terrace opens out ahead of you onto a wide belvedere at the edge of the Alfama escarpment, with the rooftops of Mouraria falling away to your left and the Tagus visible in the distance ahead. At the centre of the square, on a low plinth, stands a statue of São Vicente — Saint Vincent — Lisbon's patron saint, shown holding a small boat with two birds perched on its prow. Those are the ravens, and the story attached to them is the gift detail this square is built around: when São Vicente's remains were brought by sea from the Algarve to Lisbon in the twelfth century, two ravens supposedly accompanied the boat the entire journey and stood guard over the body on arrival. The ravens stayed in Lisbon, were kept at the cathedral, and eventually made it onto the city's coat of arms — which is why, if you look closely at almost any official Lisbon emblem, you'll find a ship flanked by two birds.\nAcross the square to your right, the building with the barred windows set into the slope is the Museu do Aljube — formerly a prison used by the Estado Novo dictatorship to hold political detainees during the Salazar years, now a museum of resistance and memory. It's rather easy to walk past without registering what it is, which is what's worth knowing: the distance between the medieval patron saint on his plinth and the twentieth-century political prison a few metres away is about as compressed a version of Lisbon's history as you'll find in a single glance.\n[beat]\nThe view east from the railing looks over the Mouraria — the neighbourhood the Moorish population was pushed into after the Christian reconquest in eleven forty-seven, and one of the oldest continuously inhabited parts of the city. The streets below are worth an hour on foot if you have the time."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71212902335823,
+      "centroidLongitude": -9.129981433889663,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "miradouro",
+        "nature-and-parks",
+        "alfama",
+        "sao-vicente",
+        "viewpoint",
+        "ravens",
+        "portas-do-sol"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2DDA0046-686D-440B-8EEF-1E40E399CC34",
+      "title": "Miradouro de Santa Catarina",
+      "shortDescription": "The westernmost viewpoint of the old city, watched over by Adamastor — the sea monster from Camões's epic, set at the sailors' last sight of Lisbon.",
+      "longDescription": "The terrace sits at the western edge of the Bairro Alto hill, looking out over the mouth of the Tagus where the river opens to the Atlantic, the 25 de Abril bridge to the south and the far bank beyond. The figure at the centre, arms spread, is Adamastor — a sea monster from Os Lusíadas, the sixteenth-century epic by Luís de Camões that commemorates the Portuguese voyages of discovery. In the poem he guards the Cape of Good Hope and confronts Vasco da Gama's fleet, a mythological embodiment of the terror of the unknown ocean.\n\nWhy here? This is the westernmost viewpoint of the old city, the last high ground before the river, and the spot from which departing sailors would have had their final view of Lisbon before it disappeared behind the hills. There's something quietly right about placing the monster of the unknown at the point of departure rather than the destination — not warning you about what lies ahead so much as standing at the edge of everything familiar, looking back at it with you.\n\nThe terrace has a different atmosphere from the miradouros on the eastern hills — less civic, more informal, with a long tradition of students and musicians gathering at dusk, especially on warm evenings when the light off the river turns the western sky a deep amber. The Solar do Vinho do Porto, the Port Wine Institute, is just behind on Rua de São Pedro de Alcântara, a fine place to sit with a glass and let the view settle.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_de_Santa_Catarina_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_de_Santa_Catarina_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_de_Santa_Catarina_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "BD5A6160-D074-4478-A195-2F5017D5C68D",
+          "order": 0,
+          "title": "Miradouro de Santa Catarina",
+          "caption": "On the western edge of Bairro Alto, around the Adamastor statue; best at dusk.",
+          "latitude": 38.709649836944024,
+          "longitude": -9.147674909072787,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/miradouro-de-santa-catarina.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_de_Santa_Catarina_hero.webp",
+          "transcriptText": "Look at the figure on the plinth — the one with the arms spread and the expression that suggests things have not gone entirely to plan.\nThe terrace sits at the western edge of the Bairro Alto hill, looking out over the mouth of the Tagus where the river opens into the Atlantic, with the 25 de Abril bridge visible to the south and the hills of the far bank beyond it. The statue at the centre of the terrace is Adamastor — a sea monster from Os Lusíadas, the sixteenth-century epic poem by Luís de Camões that commemorates the Portuguese voyages of discovery. In the poem, Adamastor guards the Cape of Good Hope and confronts Vasco da Gama's fleet as it rounds Africa — a mythological embodiment of the terror of the unknown ocean, of everything that lay beyond the edge of the charted world.\nThe gift detail is why he's here, on this particular terrace: this is the westernmost viewpoint of the old city, the last high ground before the river, and the spot from which sailors departing on the great voyages would have had their final view of Lisbon before the city disappeared behind the hills. I always think there's something quietly right about placing the monster of the unknown at the point of departure rather than the destination — he isn't warning you about what lies ahead so much as standing at the edge of everything familiar, looking back at it with you.\nThe terrace itself has a different atmosphere from the miradouros on the eastern hills — less civic, more informal, with a long tradition of students and musicians gathering here at dusk, particularly on warm evenings when the light off the river turns the whole western sky a deep amber.\n[beat]\nWell, the Solar do Vinho do Porto — the Port Wine Institute — is directly behind you on the left, in a fine old house on Rua de São Pedro de Alcântara, and is a considered place to sit with a glass and let the view settle."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.709649836944024,
+      "centroidLongitude": -9.147674909072787,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "miradouro",
+        "nature-and-parks",
+        "bairro-alto",
+        "adamastor",
+        "camoes",
+        "viewpoint",
+        "sunset"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "08FA5214-28A6-4678-9AD9-6B9F1E13F9CF",
+      "title": "Miradouro de Santa Luzia",
+      "shortDescription": "A pergola-shaded Alfama terrace whose azulejo panels record the riverside city the 1755 earthquake destroyed — made by survivors, in a neighbourhood that survived.",
+      "longDescription": "Most people walk straight to the railing, but the two large azulejo panels set into the south wall of the Igreja de Santa Luzia are the reason to come. The left panel shows the Terreiro do Paço — the great riverside square — as it looked before the morning of 1 November 1755, with the original Royal Palace, colonnades, and waterfront towers all in careful blue-and-white detail. What you're looking at is a city that no longer exists, destroyed within minutes by the earthquake, then the fires, then the tsunami that followed up the Tagus. The second panel shows the 1147 assault on the Castelo de São Jorge during the Christian reconquest.\n\nThen turn to the river. The terrace runs along the escarpment under a pergola hung with bougainvillea, the terracotta rooftops of Alfama falling away below toward the Tagus. This is one of the oldest continuously inhabited parts of the city, and it survived 1755 largely intact — the dense medieval street pattern absorbed the shock differently from the lower city, which was almost entirely rebuilt afterwards.\n\nThat's the thing worth sitting with: the panel behind you is a record made by survivors, in a neighbourhood that survived, depicting a city that didn't. The Miradouro das Portas do Sol is a two-minute walk east along the escarpment, looking back over a slightly different angle of the same roofscape.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_de_Santa_Luzia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_de_Santa_Luzia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_de_Santa_Luzia_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9A5A1941-E309-4EB0-AE70-52821EE4BAD0",
+          "order": 0,
+          "title": "Miradouro de Santa Luzia",
+          "caption": "Look at the azulejo panels on the church wall before turning to the river; Portas do Sol is two minutes east.",
+          "latitude": 38.711878567133304,
+          "longitude": -9.130172631509778,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/miradouro-de-santa-luzia.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Miradouro_de_Santa_Luzia_hero.webp",
+          "transcriptText": "The view from this terrace is not the most important thing here — though it is, admittedly, quite something.\nBehind you, set into the south wall of the Igreja de Santa Luzia, are two large azulejo tile panels that most people walk straight past on their way to the railing. Have a look at them before you turn to the river. The panel on the left depicts the Terreiro do Paço — the great riverside square at the heart of Lisbon — as it appeared before the first of November, seventeen fifty-five, the morning the earthquake struck. What you're looking at is a city that no longer exists: the original Royal Palace, the colonnades, the towers along the waterfront, all of it shown in careful detail and all of it destroyed within minutes, first by the quake, then by the fires, then by the tsunami that followed it up the Tagus. The second panel shows the subsequent assault on the Castelo de São Jorge during the Christian reconquest of the city from the Moors in eleven forty-seven — considerably older history, rendered in the same calm blue and white.\nNow turn to face the river. The terrace extends along the edge of the escarpment, shaded by a pergola hung with bougainvillea, with the terracotta rooftops of Alfama falling away below you toward the Tagus. The neighbourhood you're standing in is one of the oldest continuously inhabited parts of the city, and it survived seventeen fifty-five largely intact — the dense medieval street pattern absorbed the shock differently from the lower city, which was almost entirely rebuilt in the decades that followed.\nAnd that's the thing worth sitting with: the azulejo panel on the wall behind you is a record made by survivors, in a neighbourhood that survived, depicting a city that didn't.\n[beat]\nThe Miradouro das Portas do Sol is a two-minute walk east along the escarpment and looks back over a slightly different angle of the same roofscape — worth the short detour before heading down into Alfama proper."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.711878567133304,
+      "centroidLongitude": -9.130172631509778,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "miradouro",
+        "nature-and-parks",
+        "alfama",
+        "azulejo",
+        "1755-earthquake",
+        "viewpoint",
+        "santa-luzia"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B2A1573B-88F2-4235-864B-21AB2DAE9F73",
+      "title": "Monument to the Discoveries",
+      "shortDescription": "Belém's 52-metre stone caravel — the Padrão dos Descobrimentos — first built in plaster for a 1940 Salazar propaganda show, rebuilt permanently in 1960.",
+      "longDescription": "The Padrão dos Descobrimentos stands on the Belém waterfront, fifty-two metres of stone shaped as the prow of a caravel, with thirty-three figures carved in two receding lines: Henry the Navigator at the prow, followed by Vasco da Gama, Cabral, Magellan, and the cartographers, navigators, priests, and patrons of the Age of Discovery. The fifty-metre compass-rose mosaic in the forecourt, gifted by South Africa in 1960, maps the routes of Portuguese exploration across a fourteen-metre chart of the known world.\n\nThe range on the flanks is more interesting than the hierarchy at the prow. The thirty-three figures include not only explorers but a poet — Luís de Camões, who canonised the discoveries in verse — alongside a painter, cartographers, and a queen who funded the expeditions. It's a different argument than the dramatic prow suggests: the Age of Discovery was made not only by navigators but by everyone who made navigation possible.\n\nThe monument's own history is worth pausing on. It was first built in plaster in 1940 for a propaganda exhibition staged by the Salazar dictatorship, dismantled afterwards, then rebuilt permanently in concrete and limestone in 1960 — when the Estado Novo, which conceived it to use the imperial past as a substitute for political freedom, still had fourteen years to run. What it means now, in a democracy, is a genuinely open question the monument itself does not resolve.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Monument_to_the_Discoveries_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Monument_to_the_Discoveries_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "F70257B0-D798-4722-BA72-293AE952CB45",
+          "order": 0,
+          "title": "Monument to the Discoveries",
+          "caption": "On the Belém waterfront at Avenida de Brasília; the compass-rose mosaic is in the forecourt.",
+          "latitude": 38.69377309480376,
+          "longitude": -9.205711493814746,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/monument-to-the-discoveries.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Monument_to_the_Discoveries_hero.webp",
+          "transcriptText": "This monument was first built in plaster in nineteen forty for a propaganda exhibition organised by the Salazar dictatorship — dismantled afterwards, rebuilt permanently in concrete and limestone twenty years later — and now stands as one of Lisbon's most-visited landmarks, which is a career trajectory worth pausing on.\n\nThe Padrão dos Descobrimentos is on the Belém waterfront at Avenida de Brasília, fifty-two metres of stone shaped as the prow of a caravel with thirty-three figures carved in two receding lines on either side — Henry the Navigator at the prow, followed by Vasco da Gama, Pedro Álvares Cabral, Magellan, and others who represent the cartographers, navigators, priests, and patrons of the Age of Discovery. The compass rose mosaic in the forecourt, fifty metres across, was gifted by South Africa in nineteen sixty and shows the routes of Portuguese exploration across a fourteen-metre map of the known world.\n\nLook at the list of figures on the flanks of the monument rather than just the prow, because the range is more interesting than the hierarchy.\n\nThe thirty-three people depicted include not only explorers but a poet — Luís de Camões, who wrote the epic that canonised the discoveries — alongside a painter, cartographers, and a queen who funded the expeditions, which gives the monument a different argument than its dramatic prow suggests: the Age of Discovery was not only made by navigators but by everyone around them who made navigation possible.\n\n[beat]\n\nThe monument was conceived by the Estado Novo specifically to use Portugal's imperial past as a substitute for political freedom, and it was built permanently in nineteen sixty when that regime still had fourteen years to run — and what it means now, in a democracy, is a genuinely open question that the monument itself does not resolve, and probably shouldn't."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.69377309480376,
+      "centroidLongitude": -9.205711493814746,
+      "city": "Lisbon",
+      "primaryCategory": "history",
+      "tags": [
+        "monument",
+        "history",
+        "belem",
+        "age-of-discovery",
+        "padrao-dos-descobrimentos",
+        "estado-novo",
+        "henry-the-navigator"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8883E508-7593-4216-919B-976B840D4B94",
+      "title": "National Coach Museum",
+      "shortDescription": "The world's largest collection of royal coaches, in Belém — three centuries of gilded Baroque pageantry inside a stark Paulo Mendes da Rocha building.",
+      "longDescription": "The Museu Nacional dos Coches holds the largest collection of royal coaches in the world, in a long, low concrete building on Avenida da Índia designed by the Brazilian architect Paulo Mendes da Rocha and completed in 2015 — deliberately austere outside, deliberately theatrical within. The collection is laid out along a single vast floor: coaches, berlins, and ceremonial litters in sequence, spanning roughly three centuries of European court pageantry from the late 1600s to the early nineteenth century.\n\nThe vehicles to find are from the reign of King João V in the early 1700s: three coaches commissioned for a 1716 diplomatic embassy to Rome, each covered in carved gilt figures — allegories, gods, sea creatures, the full vocabulary of Baroque excess — and together probably the most elaborate display of rolling propaganda ever built. They were made to impress Pope Clement XI, and on that score they appear to have succeeded.\n\nThese were never primarily transport. A royal coach moving through a street was an announcement — of wealth, of divine favour, of the absolute distance between the person inside and everyone watching from the pavement — and the craftsmanship is extraordinary precisely because ordinariness was not an option. The original royal riding school where the collection was first housed still stands a short walk away on Praça Afonso de Albuquerque, worth seeing for the building alone.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/National_Coach_Museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/National_Coach_Museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/National_Coach_Museum_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4C213203-EF93-4A75-8506-77F351F45406",
+          "order": 0,
+          "title": "National Coach Museum",
+          "caption": "Main entrance on Avenida da Índia, Belém; start with the coaches nearest the door and work toward the João V embassy coaches.",
+          "latitude": 38.69673866034361,
+          "longitude": -9.19745280679842,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/national-coach-museum.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/National_Coach_Museum_hero.webp",
+          "transcriptText": "The largest collection of royal coaches in the world is here, in Belém, in a building that looks like a very long aircraft hangar — and that contrast is quite part of the point.\n\nAt the main entrance on Avenida da Índia, the new museum building opens ahead of you: a long, low concrete structure designed by the Brazilian architect Paulo Mendes da Rocha and completed in two thousand and fifteen, deliberately austere on the outside and deliberately theatrical within. Step inside and the collection is laid out along a single vast floor — coaches, berlins, and ceremonial litters arranged in sequence, spanning roughly three centuries of European court pageantry, from the late sixteen hundreds through to the early nineteenth century.\n\nStart with the coaches nearest the entrance and work your way toward the far end. The vehicles from the reign of King João V, in the early seventeen hundreds, are the ones to find: three coaches commissioned for a diplomatic embassy to Rome in seventeen sixteen, each one covered in carved gilt figures — allegorical scenes, gods, sea creatures, the full vocabulary of Baroque excess — and together forming what is probably the most elaborate display of rolling propaganda ever built. They were made to impress Pope Clement XI, and on that score they appear to have succeeded.\n\nAnd here's what's worth understanding about all of this: these were not primarily transport. A royal coach moving through a city street was an announcement — of wealth, of divine favour, of the absolute distance between the person inside and everyone watching from the pavement. The gilding and the carvings were a political statement, and you'll notice, looking closely, that the craftsmanship is extraordinary precisely because ordinariness was not an option.\n\n[beat]\n\nThe original royal riding school where the collection was first housed still stands a short walk away on Praça Afonso de Albuquerque — smaller, older, and worth seeing for the building alone, with a handful of the earliest coaches still displayed there."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.69673866034361,
+      "centroidLongitude": -9.19745280679842,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "museum",
+        "cultural-heritage",
+        "belem",
+        "royal-coaches",
+        "baroque",
+        "paulo-mendes-da-rocha",
+        "joao-v"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3352A793-95F0-4C16-B96B-3A7AFAB05CA3",
+      "title": "Ribeira das Naus",
+      "shortDescription": "A stepped limestone riverfront between Praça do Comércio and Cais do Sodré — built on the Arsenal das Naus, the shipyard where the ships of the Age of Discovery were made.",
+      "longDescription": "The promenade runs about four hundred metres along the Tagus between Praça do Comércio and Cais do Sodré — a wide, stepped limestone terrace descending in shallow stages to the water's edge, with shade trees and the river close enough to hear against the stone. Behind it, the long blue-tiled facades of the Arsenal da Marinha — the Royal Arsenal, now Navy administration — mark the boundary of what was, from the fifteenth century, the most important shipyard in Portugal and quite possibly in Europe.\n\nThe Arsenal das Naus is where the caravels and carracks of the age of exploration were built, fitted, and launched directly into the Tagus. The ships that rounded the Cape of Good Hope, crossed the Atlantic, and reached India were made here, by carpenters and caulkers and riggers in long covered sheds running down to the water. The promenade was redesigned and opened to the public in 2013, and there is a curious thing about it: the landscaping makes no reference whatsoever to what this ground was, nothing at pavement level to mark that world history was substantially altered by work done on this ordinary-looking strip of waterfront.\n\nThat absence is worth sitting with — the most consequential shipyard of the early modern world is now a pleasant place to eat a sandwich in the sun, and the city has decided, on the whole, that this is enough. The Museu de Marinha in Belém holds the fullest record of what was built and launched from sites like this one, about twenty minutes west along the waterfront by tram.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ribeira_das_Naus_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ribeira_das_Naus_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "F4762060-7059-4B7C-AA37-2CFAF05E4DD5",
+          "order": 0,
+          "title": "Ribeira das Naus",
+          "caption": "The stepped terrace along the Tagus between Praça do Comércio and Cais do Sodré; the Arsenal facades are behind you.",
+          "latitude": 38.706771473167024,
+          "longitude": -9.138283802502372,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ribeira-das-naus.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ribeira_das_Naus_hero.webp",
+          "transcriptText": "The ground you're standing on is where Vasco da Gama's ships were built.\nThe promenade runs for roughly four hundred metres along the Tagus waterfront between Praça do Comércio to your east and Cais do Sodré to your west — a wide, stepped limestone terrace that descends in broad shallow stages toward the river's edge, with shade trees planted at intervals and the water close enough that you can hear it against the stone. Behind you, the long blue-tiled facades of the Arsenal da Marinha — the Royal Arsenal, now the central administration of the Portuguese Navy and part of the Ministério da Defesa Nacional — mark the boundary of what was, from the fifteenth century onward, the most important shipyard in Portugal, and quite possibly in Europe.\nThe Arsenal das Naus, as the site was originally known, is where the caravels and carracks of the age of exploration were constructed, fitted, and launched directly into the Tagus. The ships that rounded the Cape of Good Hope, crossed the Atlantic, and reached India were built here, on this stretch of riverbank, by carpenters and caulkers and riggers working in long covered sheds that ran down to the water. The promenade you're standing on was redesigned and opened to the public in two thousand and thirteen, and I find it a slightly curious experience — the limestone steps are elegant and the river view is considerable, but the landscaping makes no reference whatsoever to what this ground was, and there is nothing at pavement level to indicate that the course of world history was substantially altered by work carried out on this quite ordinary-looking strip of waterfront.\nThat absence is worth sitting with. The most consequential shipyard in the early modern world is now a pleasant place to eat a sandwich in the sun, and the city has decided, on the whole, that this is enough.\n[beat]\nThe Museu de Marinha in Belém holds the most complete record of what was built and launched from sites like this one — a good destination if the history here has caught your interest, and about twenty minutes west along the waterfront by tram."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.706771473167024,
+      "centroidLongitude": -9.138283802502372,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "riverfront",
+        "cultural-heritage",
+        "tagus",
+        "arsenal-das-naus",
+        "age-of-discovery",
+        "promenade",
+        "shipyard"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1AB1AF41-145D-47C0-BDAE-04D2012874CD",
+      "title": "Village Underground Lisboa",
+      "shortDescription": "Six shipping containers and three retired London double-decker buses stacked on a railway viaduct in Alcântara — a creative workspace modelled on Shoreditch's original.",
+      "longDescription": "On the viaduct ahead stands Village Underground Lisboa — a creative workspace, event venue, and cultural hub that opened in Alcântara in 2014, modelled on the original Village Underground in Shoreditch, London. It is exactly what it looks like: six shipping containers cantilevered from the arches of a nineteenth-century railway viaduct, painted in murals, and topped — improbably — by three retired London double-decker buses converted into studio spaces. The buses still carry their destination boards. They no longer go anywhere.\n\nThe containers below house studios let to artists, designers, musicians, and small creative businesses on affordable leases — the model the Shoreditch site pioneered, carried across intact. The viaduct is the old Linha de Cintura, the ring railway that once served Lisbon's western industrial port, and its arches, like railway arches everywhere, proved adaptable to uses their engineers never imagined.\n\nNone of this is accidental whimsy. Alcântara spent most of the late twentieth century as a post-industrial neighbourhood in slow decline, and Village Underground arrived as part of a deliberate wave of cultural occupation that has gradually pulled the area back into use. The buses are the most honest part of it: visually absurd, completely functional, exported from one city's creative economy to seed another's. The LX Factory is a five-minute walk along Rua Rodrigues de Faria — a larger complex of repurposed industrial buildings with a Sunday market worth the detour.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Village_Underground_Lisboa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Village_Underground_Lisboa_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "59F6A947-90E0-4E81-8D6E-7B71FBDDAB7F",
+          "order": 0,
+          "title": "Village Underground Lisboa",
+          "caption": "On the railway viaduct in Alcântara; the LX Factory is five minutes further along Rua Rodrigues de Faria.",
+          "latitude": 38.700734987805255,
+          "longitude": -9.178219642279753,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/village-underground-lisboa.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Village_Underground_Lisboa_hero.webp",
+          "transcriptText": "You probably didn't expect to find a stack of shipping containers and three old London buses balanced on a railway viaduct. Stay with it.\nThe structure on the viaduct ahead of you is Village Underground Lisboa — a creative workspace, event venue, and cultural hub that opened in Alcântara in two thousand and fourteen, modelled on the original Village Underground in Shoreditch, London. What you're looking at is exactly what it appears to be: six shipping containers cantilevered out from the arches of a nineteenth-century railway viaduct, painted in murals, and topped — improbably — by three retired London double-decker buses that have been converted into studio spaces. The buses still have their destination boards. They no longer go anywhere.\nThe containers below house studios rented to artists, designers, musicians, and small creative businesses on affordable leases, which is the model the original Shoreditch site pioneered and which the Lisbon version carried across intact. The viaduct itself is the old Linha de Cintura — the ring railway that once served Lisbon's western industrial port — and the arches beneath it, like railway arches in cities everywhere, proved adaptable to uses their engineers never anticipated.\nWhat's worth understanding, standing here, is that none of this is accidental whimsy. Alcântara spent most of the late twentieth century as a post-industrial neighbourhood in slow decline — the docks quieter, the warehouses emptying — and Village Underground arrived as part of a deliberate wave of cultural occupation that has gradually pulled the area back into use. I find the buses the most honest part of it: visually absurd, completely functional, and exported from one city's creative economy to seed another's.\n[beat]\nThe LX Factory is a five-minute walk further along Rua Rodrigues de Faria — a much larger complex of repurposed industrial buildings with restaurants, shops, and a Sunday market that takes over the main street and is worth the detour if you're here at the weekend."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.700734987805255,
+      "centroidLongitude": -9.178219642279753,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "village-underground",
+        "cultural-heritage",
+        "alcantara",
+        "creative-hub",
+        "shipping-containers",
+        "london-buses",
+        "post-industrial"
+      ],
+      "priceUSD": 0
     }
   ]
 }
