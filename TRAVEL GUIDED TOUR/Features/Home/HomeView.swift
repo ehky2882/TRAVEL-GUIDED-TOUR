@@ -75,9 +75,14 @@ struct HomeView: View {
         AtlasBottomModule.height(extendsToScreenEdges: false)
     }
 
-    /// Scope tying the externally-placed `MapCompass` to the `Map`
-    /// inside `HomeMapSection` — see the compass placement in `body`.
-    @Namespace private var mapScope
+    /// Isolated holder for the map's live camera, written from the map
+    /// section's `onCameraInfoChanged` callback. Lives in its own
+    /// `@Observable` so the ~60/sec updates during a rotate gesture
+    /// re-render ONLY the leaf `MapCompassButton` (the sole reader of
+    /// `.heading`), never `HomeView`'s body. `HomeView` writes to it
+    /// but never reads it, so the per-frame writes don't invalidate
+    /// this view.
+    @State private var compassModel = MapCompassModel()
 
     var body: some View {
         // NavigationStack wraps the map layout so SearchBar's push
@@ -91,7 +96,6 @@ struct HomeView: View {
                 ZStack(alignment: .top) {
                     HomeMapSection(
                         tours: filteredTours,
-                        mapScope: mapScope,
                         userLocation: locationManager.userLocation,
                         userHeading: locationManager.heading,
                         selectedTourId: sharedState.placecardTour?.id,
@@ -112,6 +116,13 @@ struct HomeView: View {
                                     sheetDetent = .peek
                                 }
                             }
+                        },
+                        onCameraInfoChanged: { camera in
+                            // Write-only into the isolated model — does
+                            // NOT invalidate HomeView (it never reads
+                            // the model). Only `MapCompassButton`
+                            // re-renders, per frame, off `.heading`.
+                            compassModel.camera = camera
                         },
                         onPinTapped: { tourId, coordinate in
                             guard let tour = dataService.tour(by: tourId) else { return }
@@ -206,18 +217,21 @@ struct HomeView: View {
                         .animation(.easeInOut(duration: 0.3), value: sheetDetent)
                         .allowsHitTesting(sheetDetent == .peek && !sharedState.isMapMoving)
 
-                    // Compass — placed manually (via `mapScope`) because
-                    // the framework's default control slot is top-
-                    // trailing, hidden under the search bar + chips.
-                    // Trailing edge, bottom-aligned with the recenter
-                    // button (same bottom-padding formula as the
-                    // control stack). MapKit keeps its automatic
-                    // visibility: appears only while the map is
-                    // rotated off true north, fades when re-aligned.
-                    // Unlike the control stack it is NOT hidden while
-                    // the map is moving — rotation happens mid-
-                    // gesture, which is exactly when it's needed.
-                    MapCompass(scope: mapScope)
+                    // Compass — trailing edge, bottom-aligned with the
+                    // recenter button (same bottom-padding formula as
+                    // the control stack). The button manages its own
+                    // appear-when-rotated visibility and live needle
+                    // rotation off the isolated `compassModel`, so this
+                    // positioning wrapper does NOT read the heading and
+                    // therefore doesn't re-render per frame. Unlike the
+                    // control stack it stays visible while the map is
+                    // moving — rotation happens mid-gesture, which is
+                    // exactly when the compass is needed.
+                    MapCompassButton(
+                        model: compassModel,
+                        isAtPeek: sheetDetent == .peek,
+                        onTap: resetMapToNorth
+                    )
                         .padding(.trailing, AtlasSpacing.md)
                         .padding(.bottom, drawerVisibleHeight(in: geo) + floatingIslandHeight + AtlasSpacing.sm)
                         .frame(
@@ -226,9 +240,6 @@ struct HomeView: View {
                             alignment: .bottomTrailing
                         )
                         .ignoresSafeArea(.container, edges: .bottom)
-                        .opacity(sheetDetent != .peek ? 0 : 1)
-                        .animation(.easeInOut(duration: 0.3), value: sheetDetent)
-                        .allowsHitTesting(sheetDetent == .peek)
 
                     // Transient hint shown when a place search lands on
                     // an area with no Atlas tours. Non-interactive so a
@@ -238,11 +249,6 @@ struct HomeView: View {
                     // opacity fade (a `.move` here would slide the
                     // full-height frame off-screen).
                 }
-                // Resolves the `mapScope` namespace: associates the
-                // `Map` inside `HomeMapSection` with the manually-
-                // placed `MapCompass` above. Must sit on a container
-                // that encloses both.
-                .mapScope(mapScope)
                 // Place-search "no tours here" hint. Attached as an
                 // `.overlay` (not a ZStack child) so it composites above
                 // the UIKit-backed `Map` — a conditionally-inserted
@@ -456,6 +462,27 @@ struct HomeView: View {
         return (screenWidth ?? 390) * 2.0 / 3.0
     }
 
+    /// Snap the map back to true north. Builds an explicit north-up
+    /// `MapCamera` from the current centre + distance (captured live
+    /// in `compassModel.camera`) rather than re-setting `.region(_:)`.
+    /// A `.region` reset can be silently ignored — `MapCameraPosition`
+    /// comparison treats it as unchanged because a region doesn't
+    /// carry heading, so SwiftUI never pushes the rotation back to 0.
+    /// A `.camera` with heading 0 differs from the current (rotated)
+    /// camera, so the update actually lands.
+    private func resetMapToNorth() {
+        guard let current = compassModel.camera else { return }
+        let northUp = MapCamera(
+            centerCoordinate: current.centerCoordinate,
+            distance: current.distance,
+            heading: 0,
+            pitch: 0
+        )
+        withAnimation(.easeInOut(duration: 0.4)) {
+            cameraPosition = .camera(northUp)
+        }
+    }
+
     private var mapControlStack: some View {
         VStack(spacing: AtlasSpacing.sm) {
             Menu {
@@ -505,6 +532,110 @@ struct HomeView: View {
     private func distanceText(for tour: Tour) -> String? {
         guard let user = locationManager.userLocation else { return nil }
         return AtlasFormatters.distanceAway(meters: tour.distance(from: user))
+    }
+}
+
+// MARK: - Compass
+
+/// Isolated holder for the map's live camera. Separated into its own
+/// `@Observable` so the leaf `MapCompassButton` (the only view that
+/// reads `heading`) is the only thing SwiftUI invalidates when the
+/// camera changes ~60×/sec during a rotate gesture. The host
+/// `HomeView` writes to it but never reads it, so the per-frame
+/// writes don't ripple into a full `HomeView` body re-evaluation.
+@MainActor
+@Observable
+final class MapCompassModel {
+    /// Latest camera reported by the map. `nil` until the first
+    /// camera-change frame fires.
+    var camera: MapCamera?
+
+    /// Camera heading in degrees clockwise from true north (0 when no
+    /// camera yet).
+    var heading: CLLocationDirection { camera?.heading ?? 0 }
+}
+
+/// Two-tone compass needle: a red half pointing north over a grey
+/// half pointing south, the pair rotated by `-heading` so the red
+/// always points to true north as the map turns underneath. Drawn
+/// with a `Triangle` so it reads as a proper compass needle rather
+/// than a generic arrow glyph.
+private struct CompassNeedle: View {
+    var body: some View {
+        VStack(spacing: 0) {
+            Triangle()
+                .fill(Color.red)
+                .frame(width: 7, height: 9)
+            Triangle()
+                .fill(AtlasColors.tertiaryText)
+                .rotationEffect(.degrees(180))
+                .frame(width: 7, height: 9)
+        }
+    }
+}
+
+/// A simple upward-pointing triangle (apex at top-centre, base at
+/// the bottom).
+private struct Triangle: Shape {
+    nonisolated func path(in rect: CGRect) -> Path {
+        var p = Path()
+        p.move(to: CGPoint(x: rect.midX, y: rect.minY))
+        p.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        p.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        p.closeSubpath()
+        return p
+    }
+}
+
+/// Circular compass button matching `MapControlButtonLabel`'s style,
+/// placed by `HomeView` on the trailing edge opposite the recenter
+/// button. Shows only while the map is rotated off true north; the
+/// red needle counter-rotates so it always points north. Tapping it
+/// snaps the camera back to north.
+///
+/// Replaces Apple's `MapCompass(scope:)`, whose external-placement
+/// scope binding renders a zero-size view on iOS 26 (verified — even
+/// forced visible with `.mapControlVisibility(.visible)` it never
+/// paints, so the framework's only working compass slot is the fixed
+/// top-trailing one, under the search bar + chips).
+private struct MapCompassButton: View {
+    let model: MapCompassModel
+    /// Drawer is at peek — the compass is only interactive then, to
+    /// match the recenter button's gating (at medium / large the
+    /// drawer covers the controls strip).
+    let isAtPeek: Bool
+    let onTap: () -> Void
+
+    /// Heading magnitude (degrees) below which the map counts as "at
+    /// north" and the compass hides. A small dead zone keeps it from
+    /// flickering as the camera settles onto exactly 0.
+    private static let deadZoneDegrees: Double = 1.0
+
+    /// True when the map is rotated far enough off north to warrant
+    /// showing the compass. Sign-agnostic so 1° and 359° both count.
+    private var isOffNorth: Bool {
+        let m = abs(model.heading.truncatingRemainder(dividingBy: 360))
+        return min(m, 360 - m) >= Self.deadZoneDegrees
+    }
+
+    var body: some View {
+        Button(action: onTap) {
+            CompassNeedle()
+                // Counter-rotate by the heading so the red half tracks
+                // true north live as the map turns. No animation here —
+                // a 1:1 mirror of the camera reads as "reacting to the
+                // rotation" rather than lagging behind it.
+                .rotationEffect(.degrees(-model.heading))
+                .frame(width: 44, height: 44)
+                .background(AtlasColors.secondaryBackground)
+                .clipShape(Circle())
+                .shadow(color: Color.black.opacity(0.12), radius: 2, y: 1)
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Compass — reset to north")
+        .opacity(isOffNorth ? 1 : 0)
+        .animation(.easeInOut(duration: 0.3), value: isOffNorth)
+        .allowsHitTesting(isOffNorth && isAtPeek)
     }
 }
 
