@@ -90,3 +90,6 @@ the-south-bank-mile_stop8.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikiped
 ## Albertopolis (multi-stop) — intro + hero (Great Exhibition, Wikimedia/PD)
 albertopolis_hero.webp	Public domain	https://upload.wikimedia.org/wikipedia/commons/9/92/Crystal_Palace_from_the_northeast_from_Dickinson%27s_Comprehensive_Pictures_of_the_Great_Exhibition_of_1851._1854.jpg
 albertopolis_stop0.webp	Public domain	https://upload.wikimedia.org/wikipedia/commons/e/eb/Crystal_Palace_interior.jpg
+
+## The Measure of the World (multi-stop) — intro (Wikimedia)
+the-measure-of-the-world_stop0.webp	CC BY-SA 3.0	https://upload.wikimedia.org/wikipedia/commons/c/c8/0_line-Greenwich.jpg
