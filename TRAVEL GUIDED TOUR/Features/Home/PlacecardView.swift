@@ -28,10 +28,17 @@ struct PlacecardView: View {
                 .frame(width: 64)
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(tour.title)
+                    // ALL CAPS title to match the editorial-caps
+                    // voice used on the mini-player title and the
+                    // drawer header. Two-line cap with tail
+                    // ellipsis (SwiftUI's default truncation) so a
+                    // long name doesn't blow out the card's
+                    // standardized width.
+                    Text(tour.title.uppercased())
                         .font(AtlasTypography.body)
                         .foregroundStyle(AtlasColors.primaryText)
-                        .lineLimit(1)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
 
                     if let maker {
                         Text("by \(maker.displayName)")
@@ -43,7 +50,7 @@ struct PlacecardView: View {
                     if let distanceText {
                         Text(distanceText)
                             .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.tertiaryText)
+                            .foregroundStyle(AtlasColors.secondaryText)
                             .lineLimit(1)
                     }
                 }
