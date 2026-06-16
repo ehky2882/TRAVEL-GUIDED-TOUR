@@ -66,13 +66,26 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-12)
+## Current State (2026-06-15)
+
+### TestFlight 1.0 (44) — ships 14 Lisbon tours + home placecard polish (session 38 — web/PM)
+
+Build cut to ship everything on `main` since build 43 (`39795d5`): **PR #200** (Lisbon batch 3 — 14 tours) + **PR #201** (home placecard polish, merged by a parallel session). Build bumped **43 → 44** via short-lived **PR #202** (`7f675a3`, app-target `CURRENT_PROJECT_VERSION` lines only; test target stays 1; `MARKETING_VERSION` stays 1.0 — the auto-mode classifier blocks direct-to-main bump pushes). `xcodebuild archive` clean at `/tmp/Atlas-20260615-2246-b44.xcarchive`; embedded version verified `1.0 (44)`; no validation 90474 — `UIRequiresFullScreen=YES` from build 34 held. Owner uploaded via Organizer. **TestFlight 1.0 (44) is live.**
+
+- **PR #200 — 14 Lisbon tours (LIS 46 → 60).** Owner-supplied audio + images (`/Users/EY/Downloads/260615_PORTUGAL/`), no sourcing pipeline. All single-stop, manual trigger, 30 m radius, free, under **Atlas Studio LIS**: Avenida da Liberdade (`culturalHeritage`), Basilica of Estrela (`sacredSites`), Casa dos Bicos (`history`), Eduardo VII Park (`natureAndParks`), Jardim da Estrela (`natureAndParks`), Jazigo dos Duques de Palmela (`history`), Miradouro da Graça, Miradouro das Portas do Sol, Miradouro de Santa Catarina, Miradouro de Santa Luzia (all four `natureAndParks`), Monument to the Discoveries (`history`), National Coach Museum (`culturalHeritage`), Ribeira das Naus (`culturalHeritage`), Village Underground Lisboa (`culturalHeritage`). gh-pages: audio `d4bd503` (14 MP3), images `b56899a` (38 webp); all live URLs 200. Validator clean (4 makers / 272 tours / 281 stops). Squash-merged `cccbd9b`. Category note: **Ribeira das Naus uses `culturalHeritage`** (the transcript is entirely about the Arsenal das Naus shipyard heritage, not green space) rather than the brief's suggested `natureAndParks`.
+- **PR #201 — home placecard polish** (`0ea562b`, merged by a parallel session): `PlacecardView` title ALL CAPS with `lineLimit(2)`, distance line bumped `tertiaryText` → `secondaryText`, and card width standardized at **2/3 of the active scene width** via a new `HomeView.placecardWidth` static (same visual proportion across iPhone sizes). `HomeView.swift` + `PlacecardView.swift`.
+
+**Catalog 258 → 272 tours / 4 makers / 281 stops** (100 NYC + 58 LDN + 54 OPO + **60 LIS**). Belém (Monument to the Discoveries, National Coach Museum), the four Alfama / Bairro Alto miradouros, and the Estrela pair (basilica + garden) are now covered.
+
+**Parallel-session notes.** Multiple sessions were live on this checkout. All mutating work (gh-pages uploads, the `Tours.json` edit, the build bump) ran in isolated `git worktree`s (`/tmp/ghpages`, `/tmp/lisbon-batch`, `/tmp/build44`), so the primary checkout stayed on `main` throughout — **no branch-flip incidents this session**. One snag: `gh pr merge --delete-branch` threw a local `'main' is already used by worktree` error during its post-merge checkout step, but the squash-merge had already landed server-side — recovery was to delete the remote branch + ff-pull main manually. See `archive/HANDOFF-260615.md`.
+
+**Latest TestFlight build: 1.0 (44)** — live 2026-06-15.
 
 ### TestFlight 1.0 (42) — home drawer pivots to category rails (session 36 — implementation)
 
 Implementation session, owner-driven at the simulator. **PR #194** landed the long-planned rails pivot: the home drawer body now renders `HomeRailsViewModel.rails()` (compact **Continue listening** row → **NEAR YOU** → **IN VIEW** when panned ≥500m → one shelf per category, whole catalog, distance-sorted from the viewer) instead of the flat in-view list. Category chips are now **jump-scroll** (glide to that shelf), not filters. Rail card (owner-iterated over 4 sizing rounds): **260pt / 4:3 hero (260×195** — the catalog's exact 1200×900 aspect, heroes uncropped), one-line BODY all-caps title, maker-name subtitle, secondary-color duration, bookmark on the hero corner, rail-header chevron, and rail padding on the scroll **viewport** so cards clip at the drawer margins mid-scroll. Continue-listening row sources the **player's loaded tour first** (mini-player signal), then falls back to most-recent unfinished library entry by `lastListenedAt` (was savedAt — owner-flagged bug). "Recently viewed" row dropped (still in Library). Also in #194: **detent-persistence fix** — the drawer stays mounted beneath the tour-detail layer when presented from the Home root (`tourLayerCoversDrawer` in `ContentView` + a new completion param on `BottomLayerController.dismiss`), so closing a tour reveals the drawer at its old detent instead of flashing it back in; **compass relocated** to the trailing edge aligned with the recenter button (`Map(scope:)` + manual `MapCompass(scope:)` — the default slot hid it under the search bar; auto-visibility preserved; needs a ⌥-drag hand check); **44pt pin hit areas** (pins drew 16pt and hit-tested 16pt — that was "pins feel hard to tap"). `BottomSheet.swift` untouched. `TourListCard.swift` now unused (candidate for a per-rail "see all" list). **88/88 tests pass.** Build bumped **41 → 42 via PR #196** (the auto-mode classifier blocked a direct-to-main bump push this session — use the short-lived-PR pattern); archive clean at `/tmp/Atlas-20260612-1117-b42.xcarchive`; owner uploaded via Organizer. **TestFlight 1.0 (42) is live.** Upload-automation (ASC API key) offered per the standing TODO; owner deferred again ("archive only this time"). See `archive/HANDOFF-260612-3.md`.
 
-**Latest TestFlight build: 1.0 (42)** — live 2026-06-12.
+**Latest TestFlight build: 1.0 (42)** — live 2026-06-12. (Superseded by 1.0 (43) then 1.0 (44).)
 
 ### TestFlight 1.0 (41) — ships London batch 2 (session 35 — local build cut)
 
@@ -470,8 +483,8 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **243 tours, 4 makers, 252 stops** in `Resources/Tours.json` (100 Atlas Studio NYC + 54 Atlas Studio OPO + 31 Atlas Studio LIS + 58 Atlas Studio LDN); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **241 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
+- **272 tours, 4 makers, 281 stops** in `Resources/Tours.json` (100 Atlas Studio NYC + 58 Atlas Studio LDN + 54 Atlas Studio OPO + 60 Atlas Studio LIS); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
+- **270 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
