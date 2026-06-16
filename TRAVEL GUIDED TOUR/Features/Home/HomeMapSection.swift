@@ -31,13 +31,6 @@ struct PlacecardAnchor {
 /// the placecard.
 struct HomeMapSection: View {
     let tours: [Tour]
-    /// Namespace tying this map to externally-placed map controls.
-    /// `HomeView` renders a `MapCompass(scope:)` against this scope so
-    /// the compass can sit OUTSIDE the framework's fixed top-trailing
-    /// control slot (where the search bar + chips hide it) — aligned
-    /// with the recenter button instead. The compass keeps MapKit's
-    /// automatic visibility (appears when rotated off north).
-    let mapScope: Namespace.ID
     let userLocation: CLLocation?
     /// Device compass heading in degrees (0 = true north). When
     /// present, the user-location dot shows a directional wedge.
@@ -57,6 +50,16 @@ struct HomeMapSection: View {
     /// flinging the map (`.continuous` frequency). The parent uses this
     /// to retract the drawer and fade the recenter button.
     let onCameraMoving: () -> Void
+    /// Fires on every continuous camera frame with the live camera.
+    /// The parent routes it into an isolated `@Observable` model read
+    /// only by the leaf compass button, so the ~60/sec updates during
+    /// a rotate gesture re-render just that small view — not all of
+    /// `HomeView`. Carries the whole `MapCamera` (not just heading) so
+    /// the parent can build a north-up reset camera from the current
+    /// centre + distance. Replaces Apple's `MapCompass(scope:)`, whose
+    /// external-placement scope binding renders a zero-size view on
+    /// iOS 26 (verified — even forced visible it never paints).
+    let onCameraInfoChanged: (MapCamera) -> Void
     /// Fires when the user taps a stop pin. Carries the tour id and
     /// the tapped stop's coordinate so the parent can anchor a
     /// placecard above that pin.
@@ -82,11 +85,11 @@ struct HomeMapSection: View {
         .onTapGesture {
             onMapTapped()
         }
-        // No MapCompass() here — the default control slot is
-        // top-trailing, underneath the floating search bar + chip
-        // row, so a rotated map showed a compass nobody could see.
-        // `HomeView` places the compass explicitly (via `mapScope`)
-        // on the trailing edge aligned with the recenter button.
+        // No MapCompass() here — the framework only renders it in the
+        // fixed top-trailing slot (under the search bar + chips), and
+        // its external-placement scope binding is broken on iOS 26.
+        // `HomeView` draws its own compass button on the trailing edge
+        // (opposite the recenter button), driven off `onCameraInfoChanged`.
         .mapControls {
             MapScaleView()
         }
@@ -98,8 +101,9 @@ struct HomeMapSection: View {
         // parent to retract the drawer / cancel location tracking;
         // that closure is guard-gated so it only does work once
         // per gesture.
-        .onMapCameraChange(frequency: .continuous) { _ in
+        .onMapCameraChange(frequency: .continuous) { context in
             onCameraMoving()
+            onCameraInfoChanged(context.camera)
         }
         // `.onEnd` fires once when the gesture settles — that's
         // when we re-cluster. The annotations themselves are
@@ -125,7 +129,7 @@ struct HomeMapSection: View {
     /// the value through a stored property of protocol type.
     @ViewBuilder
     private var styledMap: some View {
-        let map = Map(position: $cameraPosition, scope: mapScope) {
+        let map = Map(position: $cameraPosition) {
             ForEach(clusterItems, id: \.id) { item in
                 Annotation(item.accessibilityLabel, coordinate: item.coordinate, anchor: .center) {
                     pinView(for: item)
