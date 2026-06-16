@@ -32,3 +32,7 @@ wiltons-music-hall_2.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/co
 wiltons-music-hall_3.webp	CC BY 3.0	https://upload.wikimedia.org/wikipedia/commons/b/b4/Wilton%27s_Music_Hall_-_Interior.jpg
 wiltons-music-hall_4.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/9/9a/Wilton%27s_Music_Hall%2C_London-21948865095.jpg
 dennis-severs-house_hero.webp	CC BY 4.0	https://upload.wikimedia.org/wikipedia/commons/0/01/Dennis_Severs%27_House_-_2026-05-17.jpg
+
+## Royal Observatory (67) — added interior gallery (Wikimedia)
+royal-observatory-greenwich_4.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/f/fc/Greenwich_-_Royal_Observatory_-_View_West_towards_Octagon_Room_%26_Time_Ball.jpg
+royal-observatory-greenwich_5.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/e/e7/Flamsteed_House_-_Royal_Observatory_Greenwich_-_Octagon_Room_%288131348515%29.jpg
