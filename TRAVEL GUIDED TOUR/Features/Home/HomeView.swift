@@ -380,6 +380,13 @@ struct HomeView: View {
               let coordinate = sharedState.placecardCoordinate else {
             return nil
         }
+        // Standardize the placecard at 2/3 of the device's screen
+        // width so the card reads as the same visual proportion of
+        // the map across every iPhone size. Falls back to a sensible
+        // fixed width if no window scene is available (test / preview
+        // contexts). Wider would feel more like an overlay sheet;
+        // narrower would cramp the 64pt hero next to the 2-line
+        // ALL CAPS title.
         let card = PlacecardView(
             tour: tour,
             maker: dataService.maker(for: tour),
@@ -388,6 +395,7 @@ struct HomeView: View {
                 tourPresenter.present(tour)
             }
         )
+        .frame(width: Self.placecardWidth)
         return PlacecardAnchor(coordinate: coordinate, view: AnyView(card))
     }
 
@@ -434,6 +442,19 @@ struct HomeView: View {
         latitudeDelta: 0.1,
         longitudeDelta: 0.1
     )
+
+    /// Standardized placecard width — 2/3 of the active scene's screen
+    /// width so the card reads as the same visual proportion of the
+    /// map across every iPhone size. Falls back to a sensible fixed
+    /// width if there's no active window scene (test / preview
+    /// contexts).
+    private static var placecardWidth: CGFloat {
+        let screenWidth = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first(where: { $0.activationState == .foregroundActive })?
+            .screen.bounds.width
+        return (screenWidth ?? 390) * 2.0 / 3.0
+    }
 
     private var mapControlStack: some View {
         VStack(spacing: AtlasSpacing.sm) {
