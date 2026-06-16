@@ -42,3 +42,18 @@ coal-drops-yard_hero.webp	CC0	https://upload.wikimedia.org/wikipedia/commons/6/6
 coal-drops-yard_2.webp	CC BY 4.0	https://upload.wikimedia.org/wikipedia/commons/5/56/Coal_Drops_Yard.png
 coal-drops-yard_3.webp	CC0	https://upload.wikimedia.org/wikipedia/commons/6/61/Coal_Drops_Yard_%2850192917261%29.jpg
 coal-drops-yard_4.webp	CC0	https://upload.wikimedia.org/wikipedia/commons/5/56/Coal_Drops_Yard_%28view_from_the_north%29_2025-09-18.jpg
+
+## Abbey Road (88), Lord's (89), Kenwood (90) — Wikimedia gallery
+abbey-road-crossing_hero.webp	CC BY 4.0	https://upload.wikimedia.org/wikipedia/commons/f/f2/Abbey_Road_zebra_crossing_-_2025-07-22.jpg
+abbey-road-crossing_2.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/0/05/Abbey_Road_Crossing_-_geograph.org.uk_-_3428564.jpg
+abbey-road-crossing_3.webp	CC BY 3.0	https://upload.wikimedia.org/wikipedia/commons/6/64/Abbey_Road_Crossing_London_Sander_Lamme.jpg
+abbey-road-crossing_4.webp	CC0	https://upload.wikimedia.org/wikipedia/commons/3/32/Abbey_Road_zebra_crossing%2C_24-11-2015.jpg
+lords-cricket-ground_hero.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/d/d0/J_P_Morgan_Media_Centre_at_Lord%E2%80%99s_Cricket_Ground_%28Ank_Kumar%29_07.jpg
+lords-cricket-ground_2.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/1/1d/J_P_Morgan_Media_Centre_at_Lord%E2%80%99s_Cricket_Ground_%28Ank_Kumar%29_04.jpg
+lords-cricket-ground_3.webp	CC BY-SA 3.0	https://upload.wikimedia.org/wikipedia/commons/8/8b/Lord%27s_Cricket_Ground_Grand_Stand.jpg
+lords-cricket-ground_4.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/7/77/Lords-Cricket-Ground-Pavilion-06-08-2017.jpg
+kenwood-house_hero.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/0/08/1379242_I_KENWOOD_HOUSE%2C_from_S_Camden_London_20250612_0008.jpg
+kenwood-house_2.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/1/18/1379242_I_KENWOOD_HOUSE%2C_from_N_Camden_London_20250612_0001.jpg
+kenwood-house_3.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/3/3a/1379242_I_KENWOOD_HOUSE%2C_from_SW_Camden_London_20250612_0002.jpg
+kenwood-house_4.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/e/e6/1379242_I_KENWOOD_HOUSE%2C_from_S_Camden_London_20250612_0001.jpg
+kenwood-house_5.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/4/4d/1379242_I_KENWOOD_HOUSE%2C_from_S_Camden_London_20250612_0012.jpg
