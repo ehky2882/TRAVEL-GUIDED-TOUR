@@ -86,3 +86,7 @@ the-spine-of-power_stop5.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedi
 the-south-bank-mile_stop2.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/1/1f/London%2C_London_Eye_--_2016_--_4625.jpg
 the-south-bank-mile_stop5.webp	CC BY-SA 2.0	https://upload.wikimedia.org/wikipedia/commons/3/33/Gabriel%27s_Wharf_%2C_Upper_Ground_-_geograph.org.uk_-_4240122.jpg
 the-south-bank-mile_stop8.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/7/77/Restaurante_The_Swan%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_113.jpg
+
+## Albertopolis (multi-stop) — intro + hero (Great Exhibition, Wikimedia/PD)
+albertopolis_hero.webp	Public domain	https://upload.wikimedia.org/wikipedia/commons/9/92/Crystal_Palace_from_the_northeast_from_Dickinson%27s_Comprehensive_Pictures_of_the_Great_Exhibition_of_1851._1854.jpg
+albertopolis_stop0.webp	Public domain	https://upload.wikimedia.org/wikipedia/commons/e/eb/Crystal_Palace_interior.jpg
