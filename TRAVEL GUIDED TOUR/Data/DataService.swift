@@ -7,21 +7,37 @@ final class DataService {
     private(set) var tours: [Tour] = []
     private(set) var makers: [Maker] = []
 
-    init() {
-        loadTours()
+    private let loader: RemoteCatalogLoader
+
+    /// - Parameters:
+    ///   - loader: catalog source (local cache/bundle + network refresh).
+    ///   - autoRefresh: when true (production), kicks off a background network
+    ///     refresh on init. Tests pass false to keep loading deterministic.
+    init(loader: RemoteCatalogLoader = RemoteCatalogLoader(), autoRefresh: Bool = true) {
+        self.loader = loader
+        // 1. Load the immediately-available local catalog (cache → bundle)
+        //    synchronously so the UI has data at first frame and offline works
+        //    exactly as before.
+        if let local = loader.loadLocal() {
+            tours = local.tours
+            makers = local.makers
+        }
+        // 2. Refresh from the network in the background. On success it
+        //    overwrites the cache and updates the published catalog so views
+        //    react live; any failure leaves the local copy untouched.
+        if autoRefresh {
+            Task { await refresh() }
+        }
     }
 
-    private func loadTours() {
-        guard let url = Bundle.main.url(forResource: "Tours", withExtension: "json"),
-              let data = try? Data(contentsOf: url) else {
-            return
+    /// Fetches the latest catalog and applies it on the main actor if it
+    /// succeeds. Safe to call anytime; a network/decode failure is a no-op.
+    func refresh() async {
+        guard let fresh = await loader.refresh() else { return }
+        await MainActor.run {
+            self.tours = fresh.tours
+            self.makers = fresh.makers
         }
-        let decoder = JSONDecoder()
-        guard let bundle = try? decoder.decode(ToursData.self, from: data) else {
-            return
-        }
-        tours = bundle.tours
-        makers = bundle.makers
     }
 
     func tour(by id: UUID) -> Tour? {
