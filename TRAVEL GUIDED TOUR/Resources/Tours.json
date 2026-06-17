@@ -13888,6 +13888,280 @@
       "totalDurationSeconds": 153,
       "city": "London",
       "walkingDistanceMeters": null
+    },
+    {
+      "id": "5C0F7E2A-9D34-4B61-8E2C-1A4D6F90B7C1",
+      "title": "Conserveira de Lisboa",
+      "shortDescription": "A working tinned-fish shop on the old street of the cod sellers, unchanged since 1930 — original wooden counter, floor-to-ceiling tins, and the Tricana and Prata do Mar brands still packed by the same family.",
+      "longDescription": "The shop occupies a narrow ground-floor space on Rua dos Bacalhoeiros — the street of the cod-fish sellers — its wooden counter, shelves, and back office all original, unchanged since it opened in 1930 as the Mercearia do Minho. In 1942 the family registered their own conserve brands, Tricana and Prata do Mar, and the name became Conserveira de Lisboa; those brands are still made, still sold over the same counter, and now reach twenty-seven countries.\n\nThe tins are the thing — sardines, tuna, mackerel, octopus, and squid, packed in olive oil, tomato, escabeche, lemon, and spiced variants, with label designs barely changed in eighty years. The shop's one great change was the closure of the old tuna brining tank, a remnant of the era when salted tuna arrived whole from the Algarve and the Azores to be broken down and packed on the premises.\n\nWhat looks like a charming tin of retro sardines is a thread running straight back to the age of the great Atlantic fishing fleets — not a heritage project or a tourist conceit, but a working family business that has simply outlasted everything around it. The Sé, Lisbon's cathedral, is two minutes east along the same street, with the old lanes of Alfama climbing behind it.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Conserveira_de_Lisboa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Conserveira_de_Lisboa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Conserveira_de_Lisboa_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0E1A6B4C-72F8-4D55-9A3B-2C7E81F0DA64",
+          "order": 0,
+          "title": "Conserveira de Lisboa",
+          "caption": "Look through the window before you go in — the counter and shelves are original to 1930. On Rua dos Bacalhoeiros, two minutes west of the Sé.",
+          "latitude": 38.70947006092559,
+          "longitude": -9.134719157750002,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/conserveira-de-lisboa.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Conserveira_de_Lisboa_hero.webp",
+          "transcriptText": "Look through the window before you go in.\nThe shop occupies a narrow ground-floor space on Rua dos Bacalhoeiros — the street of the cod fish sellers — with a wooden counter running the length of the interior, shelves stacked floor to ceiling with coloured tins, and glass advertising panels on the walls carrying slogans in the rounded lettering of the nineteen thirties. The counter, the shelves, and the office behind them are original, unchanged since the shop opened in nineteen thirty under the name Mercearia do Minho. In nineteen forty-two the family registered their own conserve brands — Tricana and Prata do Mar — and the name changed to Conserveira de Lisboa. Those brands are still made, still sold here, and now distributed to twenty-seven countries, though you wouldn't necessarily guess that from the scale of the room.\nWell, the tins are the thing to pay attention to: sardines, tuna, mackerel, octopus, and squid, packed in olive oil, in tomato, in escabeche, in lemon, in spiced variants, with label designs that have barely changed in eighty years and with prices that are, by the standards of what's inside, quite reasonable. The shop's greatest change, the management notes without sentiment, was the closure of the old tuna brining tank — a remnant of the era when salted tuna arrived whole from the Algarve and the Azores and was broken down and packed on the premises.\nThat detail matters. The street outside is named for the cod merchants who worked it for centuries, and this shop has been selling fish on the same counter for nearly a hundred years — not as a heritage project or a tourist conceit, but as a working family business that happens to have outlasted everything around it. What looks like a charming tin of retro sardines is, if you ask me, a thread running straight back to the age of the great Atlantic fishing fleets.\n[beat]\nThe Sé — Lisbon's cathedral — is two minutes east along the same street, and the cluster of old Alfama lanes behind it is worth exploring on foot from here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.70947006092559,
+      "centroidLongitude": -9.134719157750002,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "conserveira-de-lisboa",
+        "cultural-heritage",
+        "tinned-fish",
+        "sardines",
+        "family-business",
+        "alfama",
+        "1930"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "B3E8D1F0-4A27-4C99-9B6E-7D2F50A8C3E5",
+      "title": "Dolls Hospital",
+      "shortDescription": "Founded in 1830 above a herb shop, the Hospital de Bonecas has been repairing and restoring broken dolls for nearly two centuries — its walls lined with spare arms, legs, and rows of glass eyes.",
+      "longDescription": "The hospital occupies number seven on the northern side of Praça da Figueira — a Pombaline row house with an azulejo-tiled facade, easy to miss at pavement level. Through the window is a room that takes a moment to read correctly: walls lined not with medicine but with spare parts — arms and legs in every size and material, heads, and rows of glass eyes kept in reserve for surgery. The operating room is upstairs, and the waiting list for a full restoration runs to about four months.\n\nCarlota da Luz Afonso founded the hospital in 1830 as a sideline to her herbalism, repairing the broken dolls children brought to her door. The business passed through the family and has never substantially changed its model: dolls arrive broken, are assessed, repaired or restored by skilled artisans, and returned. Porcelain, plastic, cloth, vintage, or contemporary — the hospital is indifferent to category. What matters is the attachment.\n\nThe square itself offers one more detail. Praça da Figueira was built on the footprint of the Hospital Real de Todos os Santos, the largest and most important hospital in Lisbon, founded in 1504 and destroyed in the 1755 earthquake, its site cleared and turned into a market square. A doll hospital now stands on the ground of a human one. The Rossio is immediately adjacent to the west.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Dolls_Hospital_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Dolls_Hospital_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Dolls_Hospital_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9F4C2A77-1E8B-4D30-8C51-6A0B93E7F2D8",
+          "order": 0,
+          "title": "Dolls Hospital",
+          "caption": "At number seven on the north side of Praça da Figueira — easy to miss; look for the tiled facade and the small sign above the door.",
+          "latitude": 38.71441730303317,
+          "longitude": -9.137908494642375,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dolls-hospital.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Dolls_Hospital_hero.webp",
+          "transcriptText": "It's eighteen thirty, and a woman called Carlota is sitting at the door of her herb shop in the Praça da Figueira, making rag dolls.\nThe hospital occupies number seven on the square's northern side — a Pombaline row house with an azulejo-tiled facade, easy to miss at pavement level, with a small sign above the door and, through the window, a room that takes a moment to read correctly. The walls inside are lined not with shelves of medicine but with spare parts: arms and legs in various sizes and materials, heads, and rows of glass eyes — blinking, unblinking, brown, blue, and green — removed from donor dolls and kept in reserve for surgery. The operating room is upstairs. The waiting list, for a full restoration, runs to around four months.\nCarlota da Luz Afonso founded the hospital in eighteen thirty, initially as a sideline to her herbalism business — she was skilled with her hands and began repairing the broken dolls that children brought to her door. The business passed through the family, and I find it telling that it has never substantially changed its model: dolls still arrive broken, are assessed, repaired or restored by skilled artisans, and returned. Porcelain, plastic, cloth, vintage, contemporary — the hospital is quite indifferent to category. What matters is the attachment.\nAnd here is the detail the square itself offers, if you want it: the Praça da Figueira was built on the footprint of the Hospital Real de Todos os Santos — the largest and most important hospital in Lisbon, founded in fifteen hundred and four and destroyed in the earthquake of seventeen fifty-five, its site cleared and turned into a market square. A doll hospital now stands on the ground of a human one. The city keeps returning, it seems, to the same instinct.\n[beat]\nThe Rossio — Lisbon's central square — is immediately adjacent to the west, and the covered Mercado da Figueira entrance is a few steps north along the same pavement if you want to continue through the Baixa."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.71441730303317,
+      "centroidLongitude": -9.137908494642375,
+      "city": "Lisbon",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "dolls-hospital",
+        "cultural-heritage",
+        "hospital-de-bonecas",
+        "artisan",
+        "praca-da-figueira",
+        "1830",
+        "hidden-gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7A2C9E14-6B85-4F02-A1D3-8E4760B9C2F1",
+      "title": "Oceanário de Lisboa",
+      "shortDescription": "Peter Chermayeff's 1998 Expo aquarium in Parque das Nações — a five-million-litre central tank ringed by four ocean habitats, built around a single idea: not four oceans, but one.",
+      "longDescription": "From the waterfront promenade of Parque das Nações, the Oceanário reads as a large steel-and-glass structure on a pier — flat-decked and horizontal, with cantilevered walkways at its edges — designed by the American architect Peter Chermayeff and opened in May 1998 as the centrepiece of Expo '98. The fair's theme, \"The Oceans: A Heritage for the Future,\" marked the five-hundredth anniversary of Vasco da Gama's first voyage to India. The site was a derelict industrial dock on the eastern waterfront, cleared for the fair and now one of Lisbon's largest cultural districts.\n\nInside, the design is built around a single argument. The central tank — five million litres, representing the open ocean — is ringed by four habitat tanks: North Atlantic rocky coast, Antarctic coastline, temperate Pacific kelp forest, and tropical Indian Ocean coral reef. Hidden acrylic panels make the four habitats appear to open directly into the central tank, so as you descend the spiral ramp you see the same vast body of water through four entirely different ecosystems. Not four oceans, but one, approached from different shores.\n\nThat is the point. The Oceanário was built at the moment Portugal was both commemorating its role in opening the world's oceans and confronting what five centuries of that exploitation had cost them. One global ocean — interconnected, finite, under pressure — is a position as much as a design decision, and the building makes it quietly and persistently. The Pavilhão do Conhecimento science museum is ten minutes north along the same waterfront.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Oceanario_de_Lisboa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Oceanario_de_Lisboa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Oceanario_de_Lisboa_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1D8F3B60-9C24-4E7A-B052-3F6189A4E0C7",
+          "order": 0,
+          "title": "Oceanário de Lisboa",
+          "caption": "On the pier off the Parque das Nações promenade — follow the spiral ramp down so the four habitats reveal the central tank in turn.",
+          "latitude": 38.76371374107848,
+          "longitude": -9.093689768113434,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/oceanario-de-lisboa.mp3",
+          "audioDurationSeconds": 153,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Oceanario_de_Lisboa_hero.webp",
+          "transcriptText": "The building ahead of you sits in a lagoon, looks like a ship, and contains, in its central tank alone, five million litres of ocean.\nFrom the waterfront promenade of the Parque das Nações, the Oceanário reads as a large steel-and-glass structure on a pier — flat-decked, horizontal, with cantilevered walkways at its edges — designed by the American architect Peter Chermayeff and opened in May nineteen ninety-eight as the centrepiece of Expo '98. The exposition's theme was \"The Oceans: A Heritage for the Future,\" chosen because nineteen ninety-eight was the five-hundredth anniversary of Vasco da Gama's first voyage to India — the moment Portuguese navigation opened the ocean to European trade. The site itself was formerly a derelict industrial dock on Lisbon's eastern waterfront, cleared and rebuilt for the fair and now one of the city's largest residential and cultural districts.\nInside, the design is built around a single conceptual argument. The central tank — five million litres, representing the open ocean — is surrounded by four separate habitat tanks: North Atlantic rocky coast, Antarctic coastline, Temperate Pacific kelp forest, and Tropical Indian Ocean coral reef. The four habitats appear, through hidden acrylic panels, to open directly into the central tank, so that as you move around the building on the spiral ramp, you'll notice the same vast body of water seen consecutively through four entirely different ecosystems. The effect is deliberate: not four oceans, but one, approached from different shores.\nThat is the argument. The Oceanário was built at the moment Portugal was simultaneously commemorating its role in opening the world's oceans to European exploration and confronting what five centuries of that exploitation had cost those same oceans. One global ocean — interconnected, finite, under pressure — is a position as much as a design decision, and the building makes it quietly and persistently, from the moment you walk in.\n[beat]\nThe Parque das Nações riverfront is worth a walk north after your visit — the Telecabine cable car runs above the Tagus from the marina, and the Pavilhão do Conhecimento science museum is ten minutes on foot, on the same waterfront."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 153,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.76371374107848,
+      "centroidLongitude": -9.093689768113434,
+      "city": "Lisbon",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "oceanario-de-lisboa",
+        "nature",
+        "aquarium",
+        "parque-das-nacoes",
+        "expo-98",
+        "marine-life",
+        "peter-chermayeff"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "C4F1A8D6-3E92-4B47-8C05-2A7D69E1F3B0",
+      "title": "Palace Fronteira",
+      "shortDescription": "A 1670s Baroque palace at the edge of Monsanto, still home to the Mascarenhas family after three and a half centuries — and holding some of the finest azulejo tilework in Portugal.",
+      "longDescription": "The palace sits at the edge of the Monsanto Forest Park in Benfica, set back behind gates at the end of a quiet largo — a seventeenth-century Baroque manor in terracotta and ochre, its formal gardens falling away toward a long rectangular lake. Dom João de Mascarenhas, the first Marquis of Fronteira, commissioned it around 1670 as a hunting pavilion and summer retreat after receiving his title for loyal service in the Restoration War — the twenty-eight-year struggle that ended Spanish control of Portugal in 1668. It was inaugurated in 1672 in the presence of the Prince Regent.\n\nThe azulejo panels are the reason to come. The garden terraces are faced in polychrome tiles of noblemen on horseback, mermaids, hunting scenes, and allegorical figures; the long wall beside the Knights Lake carries a gallery of busts of the Portuguese kings above a continuous band of blue-and-white tile. Inside, the Hall of Battles depicts specific engagements from the Restoration War — the same conflict that made Mascarenhas a marquis — rendered in blue and white with a precision that makes them feel less like decoration than testimony.\n\nWhat makes the place unusual rather than merely fine is that it is still lived in. The Mascarenhas family has occupied it continuously since the seventeenth century, and the rooms have the quality of a house used rather than preserved — books on the shelves, furniture moved and moved again. The gardens are open without a guided tour; the interior requires one, and the tours are small and timed, so booking ahead is worth doing. The Museu Nacional do Azulejo across the city is the natural companion visit.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palace_Fronteira_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palace_Fronteira_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palace_Fronteira_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6B0E7C39-8A41-4D26-9F73-5C81204A6DE9",
+          "order": 0,
+          "title": "Palace Fronteira",
+          "caption": "Behind gates at the end of a quiet largo in Benfica. The gardens are open freely; the interior needs a small timed tour, so book ahead.",
+          "latitude": 38.74028926120356,
+          "longitude": -9.180282339942176,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/palace-fronteira.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Palace_Fronteira_hero.webp",
+          "transcriptText": "The man who built this palace was given his title for winning a war, and then spent the rest of his life making sure no one could walk through his garden without knowing it.\nThe palace sits at the edge of the Monsanto Forest Park in Benfica, set back behind gates at the end of a quiet largo — a seventeenth-century Baroque manor house in terracotta and ochre, with formal gardens falling away in front of it toward a long rectangular lake. Dom João de Mascarenhas, the first Marquis of Fronteira, commissioned the building around sixteen seventy, initially as a hunting pavilion and summer retreat, after receiving his title from the Crown for loyal service during the Restoration War — the twenty-eight-year struggle that ended Spanish control of Portugal in sixteen sixty-eight. The palace was inaugurated in sixteen seventy-two in the presence of the Prince Regent.\nThe azulejo panels are the reason to come. The gardens alone hold some of the finest tilework in Portugal: the terrace walls are faced in polychrome tiles depicting noblemen on horseback, mermaids, hunting scenes, and allegorical figures, and the long wall beside the Knights Lake carries a gallery of busts of the Portuguese kings above a continuous band of blue-and-white tile. Inside the palace, the Hall of Battles contains a cycle of panels depicting specific engagements from the Restoration War — the same conflict that made Mascarenhas a marquis — rendered in blue and white with a precision and composure that makes them feel less like decoration and more like testimony.\nWhat makes this place actually unusual, rather than merely fine, is that it is still lived in. The Mascarenhas family has occupied the palace continuously since the seventeenth century, and the rooms have the particular quality of a house that has been used rather than preserved — books on the shelves, furniture that has been moved and moved again, portraits of people whose descendants still walk through the same doors.\n[beat]\nThe gardens are open without a guided tour; the interior requires one, and the tours are small and timed, so booking ahead is worth doing. The Museu Nacional do Azulejo, in the Xabregas district across the city, is the natural companion visit if the tilework here has caught your interest."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 146,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.74028926120356,
+      "centroidLongitude": -9.180282339942176,
+      "city": "Lisbon",
+      "primaryCategory": "history",
+      "tags": [
+        "palace-fronteira",
+        "history",
+        "azulejos",
+        "baroque",
+        "restoration-war",
+        "benfica",
+        "17th-century"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "E0D5B392-7C18-4A6F-9B24-1F8360C5A7D4",
+      "title": "Ponte 25 de Abril",
+      "shortDescription": "Lisbon's Golden Gate look-alike — and no coincidence, built by the same American company. A 1966 suspension bridge renamed for the day the Carnation Revolution ended the dictatorship.",
+      "longDescription": "From the Alcântara waterfront the full span opens to the south: a suspension bridge in the same dark red as its San Francisco counterpart, its main span stretching just over a kilometre between pylons that rise 180 metres above the Tagus. The deck hangs seventy metres over the water — high enough for ocean-going vessels to pass beneath — carrying six road lanes above and two railway tracks below, the rail deck added in 1999 by the American Bridge Company of New York, which also built the San Francisco–Oakland Bay Bridge, and that is exactly why it looks the way it does. The foundations reach eighty metres to bedrock, among the deepest of any bridge in the world.\n\nIt was inaugurated on 6 August 1966 as the Ponte Salazar, named for the dictator who had ordered it and who was still in power when it opened. It held that name for eight years. On 25 April 1974 the Carnation Revolution ended the Estado Novo in a nearly bloodless coup, and the bridge was renamed at once — not only symbolically: during the uprising, revolutionary forces had blocked the bridge for several days, keeping loyalist troops from crossing the Tagus to defend the regime. The bridge was a chokepoint in its own political transformation.\n\nThat is the detail that makes the name more than a date. Every sign, every map, every navigation instruction reading \"Ponte 25 de Abril\" repeats the day the old name was taken down — a recurring announcement that the thing that used to be here is gone. The Gare Marítima de Alcântara nearby, a 1930s Art Deco passenger terminal with large azulejo panels by Jorge Colaço, is a quieter place than its size suggests and worth a look before you leave.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ponte_25_de_Abril_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ponte_25_de_Abril_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2F9A4C81-5D70-4E13-8062-7B3E91D0F6A5",
+          "order": 0,
+          "title": "Ponte 25 de Abril",
+          "caption": "Best seen whole from the Alcântara waterfront, looking south. The Gare Marítima de Alcântara, with its Colaço azulejos, is a few minutes east.",
+          "latitude": 38.70093597929622,
+          "longitude": -9.178716999149318,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ponte-25-de-abril.mp3",
+          "audioDurationSeconds": 148,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Ponte_25_de_Abril_hero.webp",
+          "transcriptText": "This is the Ponte 25 de Abril — and yes, it looks exactly like the Golden Gate Bridge, and that is not a coincidence.\nFrom the Alcântara waterfront, the full span opens ahead of you to the south: a suspension bridge in the same dark red as its San Francisco counterpart, the main span stretching just over a kilometre between pylons that rise a hundred and eighty metres above the river. The deck hangs seventy metres above the Tagus — high enough to allow ocean-going vessels to pass beneath it — and carries six lanes of road traffic above and two railway tracks below, the rail deck added in nineteen ninety-nine by the same American company that built the bridge in the first place. That company was the American Bridge Company of New York, also responsible for the San Francisco-Oakland Bay Bridge, which explains the resemblance precisely. The foundations go down eighty metres to bedrock, among the deepest of any bridge in the world.\nThe bridge was inaugurated on the sixth of August, nineteen sixty-six, and opened under the name Ponte Salazar — named after António de Oliveira Salazar, the dictator who had ordered its construction and who was still in power when it opened. It held that name for eight years. On the twenty-fifth of April, nineteen seventy-four, the Carnation Revolution ended the Estado Novo regime in a nearly bloodless military coup, and the bridge was renamed immediately — not just symbolically, but strategically: during the uprising, revolutionary forces had blocked the bridge for several days, preventing loyalist troops from the south from crossing the Tagus to defend the regime. The bridge was a chokepoint in its own political transformation.\nI always think this is the detail that makes the name more than a date. Every sign on this bridge, every map, every navigation instruction that says \"Ponte 25 de Abril\" is repeating the day the old name was taken down — a bit like a recurring announcement that the thing that used to be here is gone.\n[beat]\nThe Gare Marítima de Alcântara, a few minutes east along the waterfront, is worth a look before you leave the area — an Art Deco passenger terminal from the nineteen thirties, still in occasional use, with large azulejo panels by Jorge Colaço covering the interior walls. It is a quieter place than its size suggests, and the panels are good."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 148,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.70093597929622,
+      "centroidLongitude": -9.178716999149318,
+      "city": "Lisbon",
+      "primaryCategory": "architecture",
+      "tags": [
+        "ponte-25-de-abril",
+        "architecture",
+        "suspension-bridge",
+        "carnation-revolution",
+        "tagus",
+        "alcantara",
+        "1966"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "A8C3F567-2B40-4E91-8D7C-6051E29B4F03",
+      "title": "Vasco da Gama Bridge",
+      "shortDescription": "At 17.2 km the longest bridge over water in Europe — a cable-stayed span built in under three years for Expo '98, and halted for three weeks to spare the estuary's migrating birds.",
+      "longDescription": "Seventeen point two kilometres long, the bridge crosses the full width of the Tagus estuary from Sacavém on the north bank to Montijo on the south — the longest bridge over water in Europe. From the Parque das Nações waterfront the northern approach viaducts and the cable-stayed main span are visible to the south-east, white pylons rising 148 metres above the water and the main span reaching 420 metres between them, before the structure continues on and disappears into the estuary haze long before the far bank.\n\nConstruction began in February 1995 and the bridge opened on 29 March 1998, just under three years later — an extremely tight deadline driven by the need to have it ready for Expo '98. The contract went to the Lusoponte consortium, which in exchange for building and operating the bridge received forty years of toll control over both of Lisbon's bridges. The name marks the five-hundredth anniversary of Vasco da Gama's sea voyage from Europe to India — the same anniversary that themed the Expo itself.\n\nWhat rewards a moment's thought is the gap between the name and the building. Vasco da Gama's fleet rounded Africa with no environmental assessment and no thought for migratory birds; the Ponte Vasco da Gama halted construction for three weeks in the spring of 1995 specifically to avoid disturbing the bird routes crossing the estuary, with foundations designed to protect the Samouco salt-marsh nature reserve. A bridge named for the age of exploration, built with the conscience of a different age. At its inauguration, sixteen thousand Lisboetas gathered along a five-kilometre stretch to lunch together — described at the time as the world's longest dining table.",
+      "makerId": "B1A9EAF0-7B07-46A4-BDAE-F28D430A55FA",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Vasco_da_Gama_Bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Vasco_da_Gama_Bridge_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3E7B1D04-9F62-4C58-A013-8D45726E0BC9",
+          "order": 0,
+          "title": "Vasco da Gama Bridge",
+          "caption": "Seen from the Parque das Nações waterfront, looking south-east — the far end vanishes into the estuary haze long before it reaches Montijo.",
+          "latitude": 38.78370924888393,
+          "longitude": -9.089667073815093,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vasco-da-gama-bridge.mp3",
+          "audioDurationSeconds": 153,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Vasco_da_Gama_Bridge_hero.webp",
+          "transcriptText": "Seventeen point two kilometres. That is how long this bridge is — and on a clear day, you cannot see the other end of it.\nThe bridge begins at Sacavém on the northern bank and crosses the full width of the Tagus estuary to Montijo on the south, a distance that makes it the longest bridge over water in Europe. From where you're standing on the Parque das Nações waterfront, the northern approach viaducts and the cable-stayed main span are visible ahead of you to the south-east, the white pylons rising one hundred and forty-eight metres above the water, the main span stretching four hundred and twenty metres between them — and then the bridge continues, and continues, and eventually disappears into the estuary haze long before it reaches the other bank.\nConstruction began in February nineteen ninety-five and the bridge was opened on twenty-ninth March nineteen ninety-eight, just under three years later — an extremely tight deadline driven by the requirement to have it ready for Expo '98. The contract was awarded to the consortium Lusoponte in nineteen ninety-four; in exchange for building and operating the bridge, Lusoponte received control of toll collection for both of Lisbon's bridges for the following forty years. The bridge was named to mark the five-hundredth anniversary of Vasco da Gama's sea voyage from Europe to India — the same anniversary that themed the Expo itself.\nWhat's rather worth sitting with, standing here, is the gap between the bridge's name and its construction. Vasco da Gama's fleet rounded Africa with no environmental assessment, no noise mitigation, and no consideration for migratory birds. The Ponte Vasco da Gama halted construction for three weeks in the spring of nineteen ninety-five specifically to avoid disturbing the migratory bird routes crossing the estuary, and its foundations were designed to protect the Samouco salt marsh nature reserve. A bridge named for the age of exploration, built with the conscience of a different age entirely.\n[beat]\nThe inauguration ceremony included sixteen thousand Lisboetas gathering on a five-kilometre section of the bridge to have lunch together — described at the time as the world's longest dining table. That detail is worth finding a moment to appreciate, somewhere along the waterfront, before you move on."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 153,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 38.78370924888393,
+      "centroidLongitude": -9.089667073815093,
+      "city": "Lisbon",
+      "primaryCategory": "architecture",
+      "tags": [
+        "vasco-da-gama-bridge",
+        "architecture",
+        "cable-stayed-bridge",
+        "parque-das-nacoes",
+        "expo-98",
+        "tagus-estuary",
+        "1998"
+      ],
+      "priceUSD": 0
     }
   ]
 }
