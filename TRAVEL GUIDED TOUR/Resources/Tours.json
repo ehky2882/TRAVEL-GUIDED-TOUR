@@ -12867,6 +12867,1027 @@
         "post-industrial"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "6a2bf4c0-24b1-44e8-a494-6e0499822dbb",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Victoria and Albert Museum",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victoria-and-albert-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victoria-and-albert-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victoria-and-albert-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victoria-and-albert-museum_4.webp"
+      ],
+      "tags": [
+        "victoria and albert museum",
+        "v&a",
+        "design",
+        "decorative arts",
+        "south kensington",
+        "great exhibition"
+      ],
+      "stops": [
+        {
+          "id": "523af51d-da83-4604-a6f9-2edea7d43ea3",
+          "order": 0,
+          "title": "Victoria and Albert Museum",
+          "caption": "This museum was founded on a strange, practical idea: that British design was falling behind the world's, and the cure was to show ordinary people beautiful things.",
+          "latitude": 51.4966,
+          "longitude": -0.1722,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/victoria-and-albert-museum.mp3",
+          "audioDurationSeconds": 157,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victoria-and-albert-museum_hero.webp",
+          "transcriptText": "This museum was founded on a strange, practical idea: that British design was falling behind the world's, and the cure was to show ordinary people beautiful things.\n\nYou're on Cromwell Road in South Kensington, looking at the Victoria and Albert Museum — a vast, ornate palace of red brick and pale stone, with a crown-topped central tower over the entrance. The V&A is the world's largest museum of decorative arts and design: not paintings on walls so much as the made world itself — furniture, fashion, ceramics, jewellery, ironwork, textiles, sculpture, theatre, photography — some two and a quarter million objects spanning five thousand years.\n\nIt was born out of national anxiety. After the Great Exhibition of 1851 — the giant world's fair in Hyde Park that showed Britain both its industrial power and, uncomfortably, how much better French and other foreign design often was — the profits were used to buy land here and build institutions to fix the problem. The museum's founding mission was bluntly educational: collect the best-designed objects from every age and country, show them to manufacturers, students, and the public, and raise the standard of British taste and trade. It even opened in the evenings, with gas lighting, so working people could come after their shift — and it housed the world's first museum restaurant, on the logic that a fed visitor stays longer.\n\nInside, the range is gloriously disorienting. The Cast Courts hold full-size Victorian plaster casts of European masterpieces — including a replica of Michelangelo's David and a two-piece cast of Trajan's Column from Rome, so tall it had to be displayed cut in half. There are whole rooms of iron keys, of theatre costumes, of medieval reliquaries; the fashion galleries run from court dress to the catwalk.\n\nThe founding bargain still holds: it's free to enter, and it's still, at heart, a working library of human making — a place designers actually come to study. The Victorians built it to teach a nation taste. Whether it managed that is debatable; what it certainly became is the world's attic of beautiful things.\n\nGo in without a plan and turn left when you'd normally turn right. The V&A rewards getting lost better than any museum in London."
+        }
+      ],
+      "primaryCategory": "visualArt",
+      "centroidLatitude": 51.4966,
+      "centroidLongitude": -0.1722,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The V&A holds some 2.25 million objects of decorative art and design across 5,000 years — furniture, fashion, ceramics, ironwork, whole rooms lifted from old buildings. Funded by the 1851 Great Exhibition's profits and the first museum in the world with a restaurant, it was built not to flaunt empire's spoils but to teach: to raise British design by letting anyone study the best of it, free.",
+      "shortDescription": "The world's leading museum of art and design on Cromwell Road — a 'school disguised as a palace', built to teach a nation to make beautiful things.",
+      "totalDurationSeconds": 157,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "0eb6ec6f-cc39-4016-861b-8fee4ac64e07",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Natural History Museum",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_7.webp"
+      ],
+      "tags": [
+        "natural history museum",
+        "waterhouse",
+        "terracotta",
+        "hintze hall",
+        "blue whale",
+        "south kensington"
+      ],
+      "stops": [
+        {
+          "id": "727036fc-1986-4d69-81bf-4d3bb49651d7",
+          "order": 0,
+          "title": "Natural History Museum",
+          "caption": "This building was designed as a cathedral — but a cathedral to nature, with monkeys climbing the arches and a blue whale where the altar would be.",
+          "latitude": 51.4967,
+          "longitude": -0.1764,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/natural-history-museum.mp3",
+          "audioDurationSeconds": 160,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_hero.webp",
+          "transcriptText": "This building was designed as a cathedral — but a cathedral to nature, with monkeys climbing the arches and a blue whale where the altar would be.\n\nYou're on Cromwell Road, looking at the Natural History Museum — a long, twin-towered building in striped blue-grey and honey-coloured terracotta, with a great rounded Romanesque entrance like the door of a cathedral. That resemblance is completely deliberate. The architect, Alfred Waterhouse, built it in the eighteen-seventies as a \"cathedral to nature,\" and the religious architecture carries a quiet argument from its founder, the great anatomist Richard Owen — the man who, incidentally, invented the word \"dinosaur\" — that the study of nature was a form of reverence.\n\nGet close to the walls before you go in, because the building itself is part of the collection. The terracotta is crawling with sculpted animals and plants — monkeys scrambling up arches, fish, birds, lizards, leaves — and there's a code: living species decorate one wing, extinct species the other. The whole facade is a catalogue of life, modelled in clay.\n\nInside, the centrepiece of the great vaulted central hall is a real blue whale skeleton, twenty-five metres of her, diving from the ceiling — she's named Hope, and she replaced the museum's famous cast diplodocus, Dippy, in 2017. The collection behind the galleries is staggering: some eighty million specimens, including ones collected by Darwin himself on the voyage of the Beagle. This is not just a display; it's one of the most important scientific research collections on the planet, with hundreds of working scientists behind the walls.\n\nThere's a good irony in the cathedral idea. Owen, who built it, was a fierce opponent of Darwin's theory of evolution. Yet the museum he created became one of the great engines and showcases of evolutionary science — his temple to creation now tells, room after room, the story he resisted.\n\nJoin the queue with the school parties and go in. Look up in the main hall — at the whale, and past her at the painted ceiling of plants. It's the grandest room in London with a skeleton in it, and it was built to make you feel exactly the awe you'll feel."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.4967,
+      "centroidLongitude": -0.1764,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Opened in 1881, the Natural History Museum was designed by Alfred Waterhouse as a temple to nature, its pale terracotta front covered in carved animals — living species on the west wing, extinct ones on the east. Inside are some 80 million specimens; in Hintze Hall a blue whale skeleton now dives through the air where the diplodocus 'Dippy' once greeted generations of children.",
+      "shortDescription": "Alfred Waterhouse's terracotta cathedral to nature in South Kensington — living creatures carved on one wing, extinct on the other, a blue whale soaring in Hintze Hall.",
+      "totalDurationSeconds": 160,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "bc4fca93-4c40-4041-8303-ddf4422fba1c",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Science Museum",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/science-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/science-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/science-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/science-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/science-museum_5.webp"
+      ],
+      "tags": [
+        "science museum",
+        "exhibition road",
+        "stephenson's rocket",
+        "apollo 10",
+        "south kensington",
+        "invention"
+      ],
+      "stops": [
+        {
+          "id": "7c18b45e-a930-4f0c-9f33-2b5972401ecb",
+          "order": 0,
+          "title": "Science Museum",
+          "caption": "The machines that built the modern world aren't models or replicas here — they're the actual machines, the very ones, retired and standing quietly in a hall in South Kensington.",
+          "latitude": 51.4978,
+          "longitude": -0.1745,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/science-museum.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/science-museum_hero.webp",
+          "transcriptText": "The machines that built the modern world aren't models or replicas here — they're the actual machines, the very ones, retired and standing quietly in a hall in South Kensington.\n\nYou're on Exhibition Road, at the Science Museum — the plainest-looking of the three great South Kensington museums, and the one whose contents need the least dressing up. Like its neighbours, it grew out of the Great Exhibition of 1851 and the Victorian conviction that showing people machines and inventions would improve the nation. What it became is the country's attic of world-changing hardware.\n\nThe thing to understand is that the headline objects are originals. Stephenson's Rocket — the 1829 locomotive that won the trials proving steam railways could work, the direct ancestor of every train you've ever taken — the actual Rocket, is here. Puffing Billy, even older, the world's oldest surviving steam locomotive. The Apollo Ten command module — the real spacecraft that carried three astronauts around the Moon in 1969 as the dress rehearsal for the landing, its heat shield still scorched from re-entry. A James Watt steam engine the size of a house. The first jet engines. Babbage's calculating machines, the Victorian ancestors of the computer. These aren't illustrations of history; they're the objects themselves, the way a museum of painting has the actual paintings.\n\nThere's a particular pleasure in how unheroic they look. The Rocket is small, black, and dumpy; the Apollo capsule is a scorched metal cone barely big enough for three people to sit in. The machines that remade human life — that shrank the world, that left it entirely — turn out to be modest, practical, human-scaled things, built by people solving one problem at a time. Standing in front of them quietly deflates the idea that history is made by giants. It's made by tinkerers.\n\nIt's free, like its neighbours, and endless — five floors, everything from medicine to flight. Go straight to the energy and space galleries first, find the Rocket and the capsule, and stand with them a minute. You're in the company of the actual machines that made the world you live in."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.4978,
+      "centroidLongitude": -0.1745,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The Science Museum completes Prince Albert's South Kensington trio — art, nature and human invention side by side. Its halls hold the genuine articles: Stephenson's Rocket, the 1829 locomotive that launched the railway age, and the scorched Apollo 10 command module that flew three astronauts around the Moon in 1969.",
+      "shortDescription": "South Kensington's museum of how the modern world was built — Stephenson's Rocket and the real Apollo 10 capsule, the things themselves, not the stories of them.",
+      "totalDurationSeconds": 144,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "ce447c93-1d3e-4e18-9ad0-993bdae684e5",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Royal Albert Hall",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-albert-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-albert-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-albert-hall_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-albert-hall_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-albert-hall_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-albert-hall_6.webp"
+      ],
+      "tags": [
+        "royal albert hall",
+        "the proms",
+        "kensington gore",
+        "prince albert",
+        "concert hall",
+        "mushrooms"
+      ],
+      "stops": [
+        {
+          "id": "54a65784-3d89-45e0-ba7e-cd4a31fb96eb",
+          "order": 0,
+          "title": "Royal Albert Hall",
+          "caption": "Every summer this great round hall holds the world's biggest classical music festival, where the cheapest tickets put you closest to the orchestra — standing, for the price of a…",
+          "latitude": 51.5009,
+          "longitude": -0.1774,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/royal-albert-hall.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-albert-hall_hero.webp",
+          "transcriptText": "Every summer this great round hall holds the world's biggest classical music festival, where the cheapest tickets put you closest to the orchestra — standing, for the price of a sandwich.\n\nYou're at the Royal Albert Hall in South Kensington, looking at a vast elliptical drum of red brick and terracotta, wrapped in a continuous mosaic frieze and capped with a shallow dome of glass and iron. It opened in 1871, named for Prince Albert, Queen Victoria's husband, who had died a decade earlier — the man whose vision of an education quarter funded by the Great Exhibition built everything around you here. Victoria, still deep in mourning, opened the building; by some accounts she was too overcome to speak.\n\nWalk a little of the circumference and read the frieze running around the top — \"The Triumph of Arts and Sciences,\" a Victorian mission statement in mosaic. The hall beneath it has hosted practically everything: symphonies, boxing matches, sumo tournaments, rock concerts, film premieres, political rallies, tennis. It's less a concert hall than the nation's great all-purpose indoor amphitheatre.\n\nBut its heart is the Proms — the summer festival of nightly classical concerts running for eight weeks, held here since the Second World War. The founding idea, from 1895, was radical: bring classical music to people who couldn't afford it, with cheap tickets and an informal atmosphere — you could originally eat, drink, and smoke during the music. The tradition survives in the \"Prommers\": for each concert, hundreds of standing places in the arena, right at the orchestra's feet, are sold on the day for a few pounds. The best spot in the hall, for the least money, to whoever turns up.\n\nOne engineering confession: the hall opened with notoriously bad acoustics — a wicked echo, so pronounced that wags said it was the only place a British composer could be sure of hearing his work twice. It took until 1969 to fix it properly, with the fleet of mushroom-shaped acoustic discs you can see floating beneath the dome.\n\nStand back and take in the whole drum. A memorial to one man's belief that art and science belong to everyone — which, every summer, for the price of a sandwich, it briefly makes true."
+        }
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "centroidLatitude": 51.5009,
+      "centroidLongitude": -0.1774,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Opened in 1871, the Royal Albert Hall has been London's great room ever since — concerts, boxing, the Beatles, and every summer the Proms. For a century its dome threw back a notorious echo, fixed in 1969 by the 'mushrooms', the fibreglass diffusers still floating overhead. It was the first building in Albertopolis to carry Albert's name.",
+      "shortDescription": "London's great oval drum of red brick and terracotta, open since 1871 — home of the Proms, and of the acoustic 'mushrooms' that finally killed its century-long echo.",
+      "totalDurationSeconds": 151,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "06caa939-25fe-4f25-8936-5ac6b4993db8",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Albert Memorial",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albert-memorial_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albert-memorial_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albert-memorial_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albert-memorial_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albert-memorial_5.webp"
+      ],
+      "tags": [
+        "albert memorial",
+        "prince albert",
+        "kensington gardens",
+        "george gilbert scott",
+        "gothic revival",
+        "great exhibition"
+      ],
+      "stops": [
+        {
+          "id": "db551d1b-5071-46ce-a8e3-4295bfa09e1a",
+          "order": 0,
+          "title": "Albert Memorial",
+          "caption": "A queen lost her husband and answered with this: a hundred and seventy six feet of gilded Gothic excess, with the dead man sitting golden at the centre, holding a catalogue.",
+          "latitude": 51.5022,
+          "longitude": -0.1779,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/albert-memorial.mp3",
+          "audioDurationSeconds": 155,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albert-memorial_hero.webp",
+          "transcriptText": "A queen lost her husband and answered with this: a hundred and seventy six feet of gilded Gothic excess, with the dead man sitting golden at the centre, holding a catalogue.\n\nYou're in Kensington Gardens, opposite the Royal Albert Hall, looking at the Albert Memorial — an enormous Gothic canopy, like a cathedral spire stood on the ground, glittering with gold, mosaic, and enamel, sheltering a giant gilded statue of a seated man. The man is Prince Albert, Queen Victoria's husband, who died of illness in 1861 at just forty-two. Victoria's grief was total and famous — she wore black for the remaining forty years of her life — and this monument, finished in the eighteen-seventies to designs by George Gilbert Scott, is that grief made architecture: the most elaborate memorial ever raised in Britain to someone who wasn't a monarch.\n\nLook at what golden Albert is holding. Not a sword, not a sceptre — a book. It's the catalogue of the Great Exhibition of 1851, the world's fair he championed, whose profits built the entire museum quarter around you. The memorial's makers chose to immortalise him not as a prince but as the patron of arts, science, and industry — a man holding, essentially, a programme.\n\nWalk around the base. The white marble frieze wrapping the podium carries a hundred and sixty-nine life-size carved figures — poets, musicians, painters, architects, sculptors from across history, a sort of stone Wikipedia of Western culture. At the four outer corners sit marble groups representing the four continents as the Victorians saw them — Europe, Asia, Africa, the Americas, each with its emblematic animals — a piece of imperial worldview now read very differently than intended, and worth looking at with that in mind.\n\nTaste has whiplashed about this thing for a century and a half. The Victorians thought it sublime; the twentieth century found it ludicrous, and it was left to blacken and decay — the gold vanished under grime so long that many Londoners never knew the statue was gilded at all. A vast restoration in the nineteen-nineties re-gilded Albert, and opinion has mellowed into affection.\n\nStand back where you can see the Albert Hall behind it. Memorial and hall, grief and purpose, facing each other — a marriage commemorated on a truly imperial scale."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.5022,
+      "centroidLongitude": -0.1779,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Finished in 1872, the Albert Memorial is unashamedly a shrine: a tall gilded neo-Gothic canopy by George Gilbert Scott sheltering a golden, seated Prince Albert. In his hands rests the catalogue of the 1851 Great Exhibition — the idea behind the whole Albertopolis district arrayed before him, with sculpted groups of the four continents at the corners.",
+      "shortDescription": "Gilbert Scott's gilded Gothic shrine in Kensington Gardens — Prince Albert in gold, holding the catalogue of the Great Exhibition that started it all.",
+      "totalDurationSeconds": 155,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "5e67a9fb-3bdc-4463-a248-355facefdb56",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Harrods",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harrods_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harrods_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harrods_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harrods_4.webp"
+      ],
+      "tags": [
+        "harrods",
+        "knightsbridge",
+        "department store",
+        "edwardian",
+        "terracotta",
+        "brompton road"
+      ],
+      "stops": [
+        {
+          "id": "63b58e4b-ac90-4201-ab4d-380be0fc59f9",
+          "order": 0,
+          "title": "Harrods",
+          "caption": "This shop's old motto was Latin for \"all things, for all people, everywhere\" — and it once sold, among other things, lion cubs, aeroplanes, and an alligator.",
+          "latitude": 51.4994,
+          "longitude": -0.1633,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/harrods.mp3",
+          "audioDurationSeconds": 154,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harrods_hero.webp",
+          "transcriptText": "This shop's old motto was Latin for \"all things, for all people, everywhere\" — and it once sold, among other things, lion cubs, aeroplanes, and an alligator.\n\nYou're on Brompton Road in Knightsbridge, looking at Harrods — a vast terracotta palace of a department store, a whole city block of ornate brick and stone, picked out at night by eleven thousand light bulbs tracing its outline. It began in 1849 as a small grocery shop run by Charles Henry Harrod, and grew, floor by floor and department by department, into the most famous department store in the world: over a million square feet, hundreds of departments, its own dress code, and a food hall so ornate — Edwardian tiles, painted ceilings — that it's worth visiting as architecture even if you buy nothing.\n\nThe old motto, Omnia Omnibus Ubique — all things, for all people, everywhere — was meant almost literally. For much of the twentieth century Harrods ran an \"anything\" service: the store famously sold and delivered practically whatever you asked for. Customers ordered exotic pets from its pet department — lion cubs, alligators, a baby elephant on at least one famous occasion — alongside aeroplanes, yachts, and funerals. The store's boast was that it could source anything legal, and for decades it more or less could.\n\nTwo further pieces of history hide in the building. In 1898 Harrods installed the first escalator in England — a moving belt that so alarmed customers that staff reportedly stood at the top offering brandy to the shaken. And the store's ownership has tracked the world's money: family firm, then public company, then the Egyptian businessman Mohamed Al-Fayed, and now the sovereign wealth fund of Qatar — a fair map of where wealth has lived over the past century.\n\nThat's really what Harrods is: a barometer. What it sells, who shops there, who owns it — each era's answer tells you who has money and what they want. The lion cubs are long gone, banned by law and by conscience; the marble halls of luxury brands are what \"everything\" looks like now.\n\nStep into the food hall at least, brandy optional. The tiles alone are worth the crowds."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.4994,
+      "centroidLongitude": -0.1633,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Harrods grew from a single grocer's shop into the Knightsbridge institution behind a vast Edwardian terracotta facade, its motto Omnia Omnibus Ubique — all things, for all people, everywhere. By night the building is outlined by around twelve thousand lights, a landmark in its own right on the Brompton Road.",
+      "shortDescription": "The Knightsbridge palace of consumption — a vast Edwardian terracotta department store, outlined after dark by some twelve thousand lights.",
+      "totalDurationSeconds": 154,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "b429a81a-88bf-494c-b48d-bde2b519b4bc",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Brompton Oratory",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brompton-oratory_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brompton-oratory_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brompton-oratory_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brompton-oratory_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brompton-oratory_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brompton-oratory_6.webp"
+      ],
+      "tags": [
+        "brompton oratory",
+        "london oratory",
+        "baroque",
+        "catholic church",
+        "south kensington",
+        "dome"
+      ],
+      "stops": [
+        {
+          "id": "4d62b631-6d3b-4cae-bb65-870e31dcc244",
+          "order": 0,
+          "title": "Brompton Oratory",
+          "caption": "Step through these doors and you leave London for Rome — a full-blooded Italian Baroque church, incense and marble and gold, built in Victorian England as a deliberate act of de…",
+          "latitude": 51.4977,
+          "longitude": -0.169,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/brompton-oratory.mp3",
+          "audioDurationSeconds": 150,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brompton-oratory_hero.webp",
+          "transcriptText": "Step through these doors and you leave London for Rome — a full-blooded Italian Baroque church, incense and marble and gold, built in Victorian England as a deliberate act of defiance.\n\nYou're on Brompton Road, next door to the V&A, looking at the Brompton Oratory — properly the London Oratory — a great domed church with a grand Italianate front of pale stone. From outside it's imposing; inside, it's astonishing, because it commits completely: a vast Roman Baroque interior, the widest nave of almost any church in England, marble columns, gilded side chapels, statues of the apostles that actually stood for two centuries in Siena Cathedral before being bought and shipped here. Nothing about it compromises with English restraint. It is Rome, transplanted.\n\nThe defiance is the point. For most of three centuries after the Reformation, Catholicism in England was suppressed — Catholics couldn't worship openly, hold office, or build churches. Full legal emancipation came only in 1829, and the Catholic hierarchy was restored in 1850, to real public hostility. The Oratory, built in the eighteen-eighties, was one of the great statements of that re-emergence: not an apologetic, half-hidden chapel, but a triumphant Roman basilica planted in the middle of fashionable Kensington — Catholicism, back, and dressed exactly as it pleased.\n\nIt was founded by the Oratorians, the order brought to England by John Henry Newman — the most famous English convert of the age, an Anglican priest whose move to Rome in 1845 scandalised the establishment, and who ended canonised as a saint in 2019.\n\nOne stranger footnote: during the Cold War, the Oratory was used by Soviet intelligence as a dead-drop — a quiet, anonymous place where agents left material behind a statue for collection. A church built as a defiant public statement turned out to be an excellent place to hide things, precisely because everyone there is facing the altar.\n\nGo in if it's open, quietly — it's a working church with sung Latin Mass, not a museum. Stand at the back of that enormous nave and take in the unapologetic splendour. It was built to say: we're no longer hiding. It still says it."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.4977,
+      "centroidLongitude": -0.169,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The Brompton Oratory (the London Oratory) brought full-blooded Italian Baroque to Victorian London: a wide pedimented front, a dome behind, and inside a broad barrel-vaulted nave lined with marble and the giant white apostle statues carved by Giuseppe Mazzuoli, once in Siena Cathedral. It has served the Oratorian community since 1884.",
+      "shortDescription": "Italian Baroque drama in South Kensington — a great domed Catholic church of marble and giant statuary, home of the Oratorian fathers since 1884.",
+      "totalDurationSeconds": 150,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "7ad5059f-976e-4ecf-a17a-be8d5e907644",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Chelsea Physic Garden",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-physic-garden_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-physic-garden_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-physic-garden_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-physic-garden_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-physic-garden_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-physic-garden_6.webp"
+      ],
+      "tags": [
+        "chelsea physic garden",
+        "botanic garden",
+        "apothecaries",
+        "hans sloane",
+        "medicinal plants",
+        "chelsea"
+      ],
+      "stops": [
+        {
+          "id": "178d4330-110f-4504-b8a0-1ea02aab377c",
+          "order": 0,
+          "title": "Chelsea Physic Garden",
+          "caption": "Behind a high brick wall by the Thames is London's oldest botanic garden — founded to train apothecaries, and quietly responsible for changing what half the world farms.",
+          "latitude": 51.4847,
+          "longitude": -0.1659,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chelsea-physic-garden.mp3",
+          "audioDurationSeconds": 152,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-physic-garden_hero.webp",
+          "transcriptText": "Behind a high brick wall by the Thames is London's oldest botanic garden — founded to train apothecaries, and quietly responsible for changing what half the world farms.\n\nYou're at the Chelsea Physic Garden, on the Chelsea Embankment — though from the street you'd hardly know it. A high wall hides nearly four acres of garden that have been here since 1673, when the Worshipful Society of Apothecaries founded it as a teaching garden. \"Physic\" means healing: this was a working classroom where apprentice apothecaries — the pharmacists of their day — learned to identify, grow, and prepare medicinal plants, in an age when botany and medicine were the same subject and a misidentified leaf could kill your patient.\n\nThe site was chosen shrewdly. The walled riverside plot traps warmth — the garden has its own gentle microclimate, noticeably milder than the streets around it — which lets it grow things that shouldn't survive outdoors in England, including what's claimed as the largest outdoor fruiting olive tree in Britain. Inside, the beds are still arranged the old way: by use and by family — plants for medicine, poisons clearly labelled, dye plants, edibles — a living pharmacy laid out in soil.\n\nIts reach went far beyond Chelsea. In the seventeen-thirties the garden sent cotton seed to the new colony of Georgia, a contribution to establishing cotton growing in America — a small botanical favour with a vast and ultimately terrible economic history attached. Through its seed-exchange network, set up in the same era, it still swaps seeds with botanic gardens worldwide, one of the oldest such exchanges on earth. And its early curators — men like Philip Miller, the most famous gardener of the eighteenth century — trained and supplied the botanists who went out with the great voyages.\n\nWhat makes it special now is that it's still itself. Kew is vast and imperial; this is small, walled, specific — a working medicinal garden on its original site, three and a half centuries on, where every bed has a purpose and most plants have a job.\n\nIt's open to visitors most of the year. Go in, find the poison bed, and read the labels. Medicine started here — leaf by leaf, carefully labelled, behind a warm brick wall."
+        }
+      ],
+      "primaryCategory": "natureAndParks",
+      "centroidLatitude": 51.4847,
+      "centroidLongitude": -0.1659,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Founded in 1673 by the Worshipful Society of Apothecaries to grow medicinal plants, the Chelsea Physic Garden is London's oldest botanic garden — a walled, south-facing haven by the Thames whose warm microclimate keeps tender species alive. A statue of Sir Hans Sloane presides over its ordered beds, glasshouses and historic rock garden.",
+      "shortDescription": "London's oldest botanic garden, walled beside the Thames since 1673 — founded to grow medicinal plants for apprentice apothecaries.",
+      "totalDurationSeconds": 152,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "96e8c6ce-6c1c-4614-9fef-36822da91d23",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Royal Observatory Greenwich",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-observatory-greenwich_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-observatory-greenwich_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-observatory-greenwich_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-observatory-greenwich_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-observatory-greenwich_5.webp"
+      ],
+      "tags": [
+        "royal observatory",
+        "greenwich",
+        "prime meridian",
+        "longitude",
+        "gmt",
+        "flamsteed house",
+        "time ball"
+      ],
+      "stops": [
+        {
+          "id": "12084916-408d-4389-b2c8-67d13af2ff6a",
+          "order": 0,
+          "title": "Royal Observatory Greenwich",
+          "caption": "There's a metal line in the courtyard here, and it's the line — zero degrees longitude, the place from which every position on Earth is measured.",
+          "latitude": 51.4769,
+          "longitude": -0.0005,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/royal-observatory-greenwich.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-observatory-greenwich_hero.webp",
+          "transcriptText": "There's a metal line in the courtyard here, and it's the line — zero degrees longitude, the place from which every position on Earth is measured. The whole planet's address system starts under your feet.\n\nYou're at the top of the hill in Greenwich Park, at the Royal Observatory — a small cluster of historic buildings with a view back down over the park, the river, and the towers of Docklands. The observatory was founded by Charles the Second in 1675 with one severely practical purpose: solving navigation. Ships were being lost because sailors could find their latitude from the sun but not their longitude — how far east or west they were — and the king set his astronomers the problem.\n\nThe answer turned out to be time. Your longitude is, in effect, the difference between your local time and the time at a fixed reference point. Crack accurate timekeeping at sea, and you crack longitude. The hero of that story is John Harrison, a self-taught carpenter-turned-clockmaker who spent four decades building marine clocks accurate enough to do it — and his actual machines, the famous H1 through H4, tick away inside this observatory today, among the most important instruments ever made.\n\nThe line in the courtyard came later. As Greenwich's tables and time became the world standard for navigators, an international conference in Washington in 1884 voted to adopt the meridian through this observatory as the world's zero of longitude — and Greenwich Mean Time, the time on this hill, as the world's reference time. Every time zone on Earth is still defined as an offset from here.\n\nNotice what that means. Longitude zero is not a fact of nature; the universe has no preferred line. It's an agreement — a Victorian conference deciding that the world's geography and clocks would all point at one small hill in south-east London. Empires fade, but the world still tells time against this courtyard.\n\nDo the inevitable thing: straddle the line, one foot in each hemisphere, and take the photo. Then look at Harrison's clocks inside. A carpenter solved the oceans, and a committee gave this hill the planet."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.4769,
+      "centroidLongitude": -0.0005,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Charles II founded the Royal Observatory on Greenwich hill in 1675 to crack longitude — the deadly problem of fixing a ship's position east or west. The answer proved to be precise timekeeping, and the world ended up measuring both time and place from here: the Prime Meridian (0° longitude) runs through the courtyard, and the red time ball has dropped at 1pm since 1833.",
+      "shortDescription": "The hill where the world set its clock — Flamsteed House, the red time ball, and the Prime Meridian: zero degrees longitude.",
+      "totalDurationSeconds": 147,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "f9744075-abd1-422c-888c-b294ba1af65a",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Cutty Sark",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cutty-sark_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cutty-sark_2.webp"
+      ],
+      "tags": [
+        "cutty sark",
+        "tea clipper",
+        "greenwich",
+        "sailing ship",
+        "maritime",
+        "robert burns"
+      ],
+      "stops": [
+        {
+          "id": "1e1c190c-16ab-476a-9d9a-338c9f00da8f",
+          "order": 0,
+          "title": "Cutty Sark",
+          "caption": "This ship was built for one job — getting tea from China to London faster than anyone else — and she was made obsolete almost the moment she launched.",
+          "latitude": 51.4822,
+          "longitude": -0.0095,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cutty-sark.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cutty-sark_hero.webp",
+          "transcriptText": "This ship was built for one job — getting tea from China to London faster than anyone else — and she was made obsolete almost the moment she launched.\n\nYou're at Greenwich riverside, looking at the Cutty Sark — a tall sailing ship, all masts and rigging, sitting raised in a dry dock with a sweep of glass around her hull, so she seems to float on a glass sea. She's a tea clipper, launched in 1869, one of the fastest sailing ships ever built. The clippers were the thoroughbreds of commerce: the first tea of the season fetched premium prices in London, so the trade became an annual race from China — and the ships were honed for nothing but speed, knife-thin hulls under acres of sail.\n\nHer timing was terrible. The very year she launched, the Suez Canal opened — a shortcut to Asia that sailing ships couldn't easily use but steamships could. The tea race was over almost before she joined it. She found a second career hauling wool from Australia, where for a decade she made some of the fastest passages ever recorded under sail, before steam swallowed that trade too. The fastest of her kind, and the last: she's the only intact tea clipper left in the world.\n\nThe name is pure Scottish mischief. \"Cutty sark\" means a short shirt — it's what the young witch wears in Robert Burns's poem Tam o' Shanter, chasing Tam through the night. The figurehead under the bowsprit is that witch, arm outstretched, gripping a horse's tail — the trophy she snatched in the poem.\n\nShe nearly didn't survive. Preserved at Greenwich since the nineteen-fifties, she caught fire during restoration in 2007 — though, by luck, much of her original fabric had been removed for conservation and was spared. The restoration that followed raised her three metres into the air, which is why you can now do something no sailor ever could: walk directly underneath her, and run your eye along the gleaming hull lines that made her fast.\n\nWalk under the hull and look up. Built for a race that ended as she entered it — and still, a century and a half on, the most beautiful machine in Greenwich."
+        }
+      ],
+      "primaryCategory": "history",
+      "centroidLatitude": 51.4822,
+      "centroidLongitude": -0.0095,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Built in 1869, the Cutty Sark was one of the last and fastest tea clippers, racing the new season's tea from China for the best price — over 300 miles in a day under sail. The Suez Canal opened the same year and doomed sail for cargo, leaving her a masterpiece of a dying art. Named cheekily for the witch's short shirt — 'cutty sark' — in a Robert Burns poem, she now sits lifted above a Greenwich dry dock.",
+      "shortDescription": "The last of the great tea clippers, raised in a Greenwich dry dock — the fastest ship of an age that ended the year she launched.",
+      "totalDurationSeconds": 147,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "f24f565f-efcd-4631-b20b-211e326996e7",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Old Royal Naval College",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-royal-naval-college_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-royal-naval-college_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-royal-naval-college_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-royal-naval-college_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-royal-naval-college_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-royal-naval-college_6.webp"
+      ],
+      "tags": [
+        "old royal naval college",
+        "christopher wren",
+        "greenwich",
+        "baroque",
+        "painted hall",
+        "thornhill",
+        "nelson"
+      ],
+      "stops": [
+        {
+          "id": "6ed06dfc-433d-4ffd-9e03-9204fe8a236c",
+          "order": 0,
+          "title": "Old Royal Naval College",
+          "caption": "Christopher Wren split this building in two — cut his own design down the middle — because a queen refused to lose her view of the river.",
+          "latitude": 51.483,
+          "longitude": -0.0076,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/old-royal-naval-college.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-royal-naval-college_hero.webp",
+          "transcriptText": "Christopher Wren split this building in two — cut his own design down the middle — because a queen refused to lose her view of the river. The gap is the masterpiece.\n\nYou're at the Old Royal Naval College in Greenwich, among a set of grand Baroque buildings ranged along the Thames — twin domes, colonnades, courtyards of pale stone. This is Wren again, at full imperial scale. It was built from the sixteen-nineties as the Royal Hospital for Seamen — not a hospital in the modern sense, but a home for retired and wounded sailors, the navy's answer to the army's Chelsea pensioners.\n\nNotice the strangest thing about the composition: it's split. Two matching halves with a wide avenue of open space between them, running from the river up toward the Queen's House and the park behind. Wren wanted one great unified building, but Queen Mary insisted the view from the Queen's House to the river be preserved — so the architect cut his composition in two and turned the constraint into the design. The result frames the little white Queen's House like a jewel and gives Greenwich the most theatrical sightline in London. It's a masterclass in what a good architect does with a \"no.\"\n\nInside one wing is the Painted Hall — sometimes called Britain's Sistine Chapel — the sailors' dining room, every inch of its ceiling and walls covered in a vast Baroque painting by James Thornhill glorifying Britain's monarchs and naval power. It took him nineteen years. The pensioners eventually found it too grand to eat in. And it was here, in 1806, that the body of Admiral Nelson lay in state after Trafalgar, with enormous crowds filing past.\n\nThe site keeps one more secret: this was the birthplace of the Tudors' world — Greenwich Palace stood here, where Henry the Eighth and Elizabeth the First were both born. The palace is gone; the navy's baroque masterpiece stands on its footprint. Power handed the site from dynasty to fleet.\n\nStand in the central avenue, the gap the queen demanded, and look both ways — river one way, Queen's House and park the other. The hole in the design is the best thing in it."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.483,
+      "centroidLongitude": -0.0076,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Christopher Wren's Old Royal Naval College — built as a charitable home for old and injured sailors — is Britain's grandest Baroque ensemble: two domed blocks framing a lawn down to the river, deliberately split so as not to block the Queen's House behind. Inside, the Painted Hall took James Thornhill nineteen years; Nelson lay in state beneath its ceiling after Trafalgar.",
+      "shortDescription": "Wren's grandest Baroque set-piece at Greenwich — twin domes split to spare a queen's river view, and the Painted Hall, 'Britain's Sistine Chapel'.",
+      "totalDurationSeconds": 139,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "a6ebc456-5ae4-45b6-b58d-39ee0e2d0feb",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Queen's House",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queens-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queens-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queens-house_3.webp"
+      ],
+      "tags": [
+        "queen's house",
+        "inigo jones",
+        "greenwich",
+        "palladian",
+        "tulip stairs",
+        "renaissance",
+        "armada portrait"
+      ],
+      "stops": [
+        {
+          "id": "00cefbee-fa09-4693-84a0-bc70811611e9",
+          "order": 0,
+          "title": "Queen's House",
+          "caption": "This modest white box is the most revolutionary building in England — the first piece of true Classical architecture in the country, and the ancestor of every white-columned hou…",
+          "latitude": 51.4811,
+          "longitude": -0.0058,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/queens-house.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queens-house_hero.webp",
+          "transcriptText": "This modest white box is the most revolutionary building in England — the first piece of true Classical architecture in the country, and the ancestor of every white-columned house from here to Virginia.\n\nYou're in Greenwich, looking at the Queen's House — a small, perfectly plain white villa, square and serene, sitting between the Old Royal Naval College and the rising green of Greenwich Park. To modern eyes it's almost invisible: a nice white house. To understand it, you have to see it as people did when it was finished around 1635 — when everything else in England was brick gables, twisted chimneys, and timber framing. Into that world, Inigo Jones — back from Italy, soaked in the architecture of Palladio — dropped this: pure proportion, white render, flat roofline, a perfect cube of Classical logic. It would have looked like a spaceship.\n\nThis is the building where English Classicism starts. Before the Banqueting House in Whitehall, Jones began here, with a villa for Anne of Denmark, queen of James the First — by one story, a gift of apology from the king after he swore at her in public when she accidentally shot one of his favourite hunting dogs. Royal marriages have produced stranger architecture for stranger reasons, but not many.\n\nInside is the Great Hall, a perfect forty-foot cube, and the Tulip Stairs — the first self-supporting spiral staircase in Britain, an elegant helix of iron and stone curling upward with no central column, each step resting on the one below. It's also, for connoisseurs of such things, the site of one of the most famous \"ghost photographs\" ever taken, a nineteen-sixties image of a shrouded figure on these stairs that has never been satisfactorily explained — the house wears the story lightly.\n\nLook at it one more time, then mentally line it up with every white-porticoed bank, courthouse, and plantation house in the English-speaking world. The line runs through St Martin-in-the-Fields, through Georgian London, across the Atlantic. It starts at this quiet white box by the park.\n\nIt's free to enter, and full of art. Climb the Tulip Stairs yourself — carefully, and with an open mind."
+        }
+      ],
+      "primaryCategory": "architecture",
+      "centroidLatitude": 51.4811,
+      "centroidLongitude": -0.0058,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "When Inigo Jones built the Queen's House around 1616 he dropped a clean white classical cube into red-brick Tudor England — reckoned the country's first truly Renaissance building, ancestor of nearly every columned white facade since. Free to enter, it holds the self-supporting Tulip Stairs, which spiral up like a magic trick, and the Armada Portrait of Elizabeth I, her hand resting on a globe.",
+      "shortDescription": "Inigo Jones's white classical box at Greenwich, c.1616 — reckoned England's first truly Renaissance building, with the floating Tulip Stairs.",
+      "totalDurationSeconds": 141,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "d534ac4d-b9ce-4379-8fd7-a2c20fd989d4",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "National Maritime Museum",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-maritime-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-maritime-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-maritime-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-maritime-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-maritime-museum_5.webp"
+      ],
+      "tags": [
+        "national maritime museum",
+        "greenwich",
+        "nelson",
+        "trafalgar",
+        "maritime",
+        "royal navy"
+      ],
+      "stops": [
+        {
+          "id": "5c502332-e33d-4100-ab13-34188bfeec2e",
+          "order": 0,
+          "title": "National Maritime Museum",
+          "caption": "Britain is an island that built its entire history on the sea — and this is where the evidence is kept, down to the coat a national hero was wearing when he was shot.",
+          "latitude": 51.4806,
+          "longitude": -0.0053,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/national-maritime-museum.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-maritime-museum_hero.webp",
+          "transcriptText": "Britain is an island that built its entire history on the sea — and this is where the evidence is kept, down to the coat a national hero was wearing when he was shot.\n\nYou're in Greenwich, at the National Maritime Museum — the largest museum of its kind in the world, sitting at the foot of the park among the colonnades that once served the old naval hospital's school. The premise is simple and enormous: for an island nation, the sea was everything — food, trade, war, empire, exploration, migration — and you cannot tell Britain's story without telling its maritime one. This museum holds that story in objects: ship models, charts, instruments, uniforms, paintings, figureheads, millions of items.\n\nThe single most famous object is a coat. The undress uniform coat Admiral Nelson was wearing at the Battle of Trafalgar in 1805, when a French marksman's musket ball struck him down at the moment of his greatest victory — the bullet hole is clearly visible in the left shoulder. Few objects in any museum collapse the distance to a historical moment so completely: not a painting of the event, but the actual cloth, the actual hole.\n\nBut the museum's honesty is in its breadth. Alongside the heroics, it deals squarely with what the sea also carried: the galleries cover the transatlantic slave trade and the empire that British sea power built and enforced — the trade in human beings that ran through British ports and British ships for centuries. The maritime story is told here as triumph and as harm, navigation and exploitation in the same fleet.\n\nThat's what makes it more than a hall of ship models. The sea made Britain rich, fed it, defended it, and connected it to the world — and the same ships carried conquest and cruelty. An island can't choose only the flattering parts of its relationship with the water; this museum, at its best, doesn't try.\n\nIt's free, and bigger than it looks. Find Nelson's coat first — and then give equal time to the Atlantic galleries. Both are the truth, and they belonged to the same navy."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.4806,
+      "centroidLongitude": -0.0053,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "The National Maritime Museum holds the world's largest maritime collection — charts, instruments, figureheads, the whole story of British sea-power. Among it sits the plain naval coat Nelson wore at Trafalgar in 1805, the sniper's bullet hole still visible at the left shoulder: the glory and the cost, a few rooms apart. Free to enter, beside the Queen's House.",
+      "shortDescription": "The world's largest museum of the sea, at Greenwich — where the empire's ocean story narrows to the bullet hole in Nelson's coat.",
+      "totalDurationSeconds": 131,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "b689e044-e156-4bb4-9ee3-09dc3f6c7f31",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Greenwich Foot Tunnel",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/greenwich-foot-tunnel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/greenwich-foot-tunnel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/greenwich-foot-tunnel_3.webp"
+      ],
+      "tags": [
+        "greenwich foot tunnel",
+        "thames",
+        "1902",
+        "tunnel",
+        "isle of dogs",
+        "victorian engineering"
+      ],
+      "stops": [
+        {
+          "id": "79726ef0-60cc-498e-82fa-18cbe1f1822b",
+          "order": 0,
+          "title": "Greenwich Foot Tunnel",
+          "caption": "You can walk under the Thames here — fifty feet down, through a white-tiled Victorian tube, for free, exactly as dock workers have done since 1902.",
+          "latitude": 51.4827,
+          "longitude": -0.0098,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/greenwich-foot-tunnel.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/greenwich-foot-tunnel_hero.webp",
+          "transcriptText": "You can walk under the Thames here — fifty feet down, through a white-tiled Victorian tube, for free, exactly as dock workers have done since 1902.\n\nYou're by the river at Greenwich, next to the Cutty Sark, looking at a round red-brick building with a glass dome — like a small mausoleum or an oversized pepper pot. Its twin stands directly across the water on the Isle of Dogs. These are the entrance rotundas of the Greenwich Foot Tunnel, and the glass domes cap the shafts: inside each one, a lift and a spiral staircase drop about fifty feet down to a tunnel that runs under the riverbed to the other side.\n\nIt was built for workers. At the turn of the twentieth century, thousands of people living south of the river worked in the docks and shipyards on the north bank, and their only way across was an unreliable ferry — miss it, or find it cancelled by fog, and you lost a day's pay. The tunnel, opened in 1902, was a piece of plain municipal decency: a free, permanent, weatherproof crossing so working people could get to work. It has stayed free, and open, ever since.\n\nGo down and walk it. The experience is wonderfully strange: a long, gently dipping tube lined with glazed white tiles — around two hundred thousand of them — cool in all seasons, the sound of your footsteps running ahead of you, with the full weight of the Thames moving somewhere overhead. At the far end you surface on the Isle of Dogs, where a riverside path gives you the classic postcard view back across the water: the Old Royal Naval College, the Queen's House, the park rising behind — Greenwich arranged as a single composition, the view Canaletto painted.\n\nNear the northern end, look for where the tunnel lining changes: a stretch repaired with iron segments after a wartime bomb damaged the tube. The tunnel kept working through the Blitz, like the people it was built for.\n\nIt's a fifteen-minute round trip and one of London's best free experiences: under the river, into another borough, and back — through a tube of white tiles built so that nobody would ever again lose a day's pay to fog."
+        }
+      ],
+      "primaryCategory": "hiddenGems",
+      "centroidLatitude": 51.4827,
+      "centroidLongitude": -0.0098,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Opened in 1902 so South London dockers could walk to work on the Isle of Dogs, the Greenwich Foot Tunnel still runs beneath the Thames — entered through round glazed-dome rotundas on each bank and lined the whole way in white tile. A quietly extraordinary piece of Victorian engineering, free and open to all.",
+      "shortDescription": "A glazed-dome rotunda and a white-tiled tube under the Thames — Victorian London's 1902 walk to the Isle of Dogs.",
+      "totalDurationSeconds": 151,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "5155176b-3d52-48e7-847a-c04be247859d",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Christ Church Spitalfields",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/christ-church-spitalfields_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/christ-church-spitalfields_2.webp"
+      ],
+      "tags": [
+        "christ church spitalfields",
+        "hawksmoor",
+        "baroque",
+        "spire",
+        "commercial street",
+        "spitalfields"
+      ],
+      "stops": [
+        {
+          "id": "bae9c9b9-23bb-47a6-93f2-c28bc6a5a62a",
+          "order": 0,
+          "title": "Christ Church Spitalfields",
+          "caption": "This church was built to intimidate — a great white monolith planted among dissenters and immigrants to remind them who was in charge — and it has loomed over every community th…",
+          "latitude": 51.5196,
+          "longitude": -0.0748,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/christ-church-spitalfields.mp3",
+          "audioDurationSeconds": 159,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/christ-church-spitalfields_hero.webp",
+          "transcriptText": "This church was built to intimidate — a great white monolith planted among dissenters and immigrants to remind them who was in charge — and it has loomed over every community that's lived in its shadow since.\n\nYou're on Commercial Street in Spitalfields, looking up at Christ Church — and \"up\" is the word. A massive white Portland stone front: a huge arched portico like a gateway, and above it a great broad tower narrowing into a spire, the whole thing wildly oversized for a parish church, less a building than a presence. This is Nicholas Hawksmoor, Wren's brilliant, strange pupil, and it's usually counted his masterpiece.\n\nIt exists because of an act of parliament. In 1711, alarmed that fast-growing East London was full of nonconformists — Protestants outside the official church, including the French Huguenot silk weavers settling in Spitalfields — the government funded a series of grand new churches for the capital's edges. The intent was frankly assertive: plant monumental Church of England architecture among the dissenters and the poor, and let the stone do the preaching. Hawksmoor delivered exactly that — a church that doesn't welcome so much as preside.\n\nHis style is like nobody else's: massive, severe, abstract, assembled from pure geometric forms — people reach for words like \"primitive\" and \"elemental.\" Centuries later that strangeness made him a cult: writers and psychogeographers spun dark mythologies around his churches, casting him as the \"devil's architect\" — entertaining nonsense, but a measure of how unsettling this architecture genuinely is.\n\nAnd the neighbourhood kept changing beneath it. Huguenot weavers, then Irish labourers, then one of the largest Jewish communities in Europe, then the Bengali community of today — wave after wave arriving poor at the same streets, each in turn living under this same white tower. The church decayed almost to ruin in the twentieth century and was magnificently restored. The communities changed completely; the monolith stayed.\n\nCross the street for the full height of it, then step inside the restored interior if it's open — flooded with light, all that severity suddenly serene. It was built to overawe outsiders. The outsiders, generation after generation, turned out to be the story."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5196,
+      "centroidLongitude": -0.0748,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Nicholas Hawksmoor's Christ Church Spitalfields (1714–1729) is the boldest of his London churches — a vast portico of Tuscan columns rising into a 225-foot broach spire in white Portland stone, built to plant the Anglican church among the Huguenot weavers of Spitalfields. Saved from long neglect, it again dominates Commercial Street.",
+      "shortDescription": "Hawksmoor's towering white Baroque monolith on Commercial Street — a giant Tuscan portico under a 225-foot spire.",
+      "totalDurationSeconds": 159,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "a1b8d5ec-1a9e-4245-82ff-4ec3ca828d39",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Brick Lane",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brick-lane_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brick-lane_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brick-lane_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brick-lane_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brick-lane_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brick-lane_6.webp"
+      ],
+      "tags": [
+        "brick lane",
+        "east end",
+        "immigration",
+        "banglatown",
+        "street art",
+        "truman brewery"
+      ],
+      "stops": [
+        {
+          "id": "cc07f3bb-e732-4e67-808f-9bbfa39590c8",
+          "order": 0,
+          "title": "Brick Lane",
+          "caption": "There's a building on this street that has been a Protestant chapel, a Methodist chapel, a synagogue, and a mosque — the same building, changing faiths as the street changed peo…",
+          "latitude": 51.5215,
+          "longitude": -0.0717,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/brick-lane.mp3",
+          "audioDurationSeconds": 154,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brick-lane_hero.webp",
+          "transcriptText": "There's a building on this street that has been a Protestant chapel, a Methodist chapel, a synagogue, and a mosque — the same building, changing faiths as the street changed people. That building is Brick Lane's whole story.\n\nYou're on Brick Lane in the East End — a long, narrow street of curry houses, bagel shops, vintage clothing, street art, and market stalls, the heart of London's Bangladeshi community, with street signs in English and Bengali. The name comes from the brick kilns that worked here when this was the city's edge. What the street became is London's great landing strip: for three centuries, wave after wave of new arrivals has settled here, made the street theirs, prospered, and moved on — leaving the street to the next wave.\n\nThe sequence runs like geological strata. First the French Huguenots, Protestant refugees fleeing persecution in the sixteen-eighties, who built the silk-weaving industry — their grand weavers' houses, with wide attic windows built to light the looms, still stand on the side streets. Then Irish labourers. Then, from the late nineteenth century, Jewish refugees fleeing pogroms in Eastern Europe, who made this the most densely Jewish quarter in Britain — the famous beigel shops at the top of the street are the living remnant. Then, from the mid-twentieth century, Bangladeshi migrants, largely from Sylhet, whose community defines the street today and gave it the name \"Banglatown.\"\n\nAnd the proof stands at the corner of Fournier Street: the Brick Lane Mosque. Built in 1743 as a Huguenot chapel, it later served Methodists, became the Great Synagogue of the Jewish East End, and in 1976 became a mosque. One building, four communities, every change of faith tracking a change of population. On its wall is a sundial with a Latin motto: Umbra sumus — \"we are shadows.\"\n\nWe are shadows — meaning we pass. Every community that has owned this street believed itself permanent; each in turn handed it on. Gentrification is simply the current wave, and the street is mid-change again, as it always is.\n\nWalk it end to end — beigels at one end, biryani in the middle, street art everywhere — and find the sundial. The street will outlast its current self too. It always has."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5215,
+      "centroidLongitude": -0.0717,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Brick Lane is a layered map of East End immigration: Huguenot silk-weavers, then Jewish refugees, then the Bengali community whose curry houses and 'Banglatown' street signs define it today. Now also a canvas of street art and Sunday markets around the old Truman Brewery — one street that kept changing hands and never stopped reinventing itself.",
+      "shortDescription": "The East End street that kept changing hands — Huguenot, Jewish, Bengali — now curry houses, street art and the old Truman Brewery.",
+      "totalDurationSeconds": 154,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "3a7d52e6-f231-475f-9292-aae060f96ec1",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Dennis Severs' House",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dennis-severs-house_hero.webp",
+      "additionalImageURLs": [],
+      "tags": [
+        "dennis severs house",
+        "folgate street",
+        "spitalfields",
+        "huguenot",
+        "candlelit",
+        "immersive"
+      ],
+      "stops": [
+        {
+          "id": "d5f9b2fc-58a7-4243-8d72-14b3faee4bf6",
+          "order": 0,
+          "title": "Dennis Severs' House",
+          "caption": "Inside this house, a family of eighteenth-century silk weavers seems to have just left the room — the fire is lit, the tea is half-drunk, the bed is warm — and none of them ever…",
+          "latitude": 51.5201,
+          "longitude": -0.0759,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dennis-severs-house.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dennis-severs-house_hero.webp",
+          "transcriptText": "Inside this house, a family of eighteenth-century silk weavers seems to have just left the room — the fire is lit, the tea is half-drunk, the bed is warm — and none of them ever existed.\n\nYou're on Folgate Street in Spitalfields, outside number eighteen — one of the old Huguenot weavers' houses, dark brick, shutters, a gas lamp burning above the door. From the street it's merely handsome. Inside is one of the strangest experiences London offers, and it's the life's work of one man.\n\nDennis Severs was a Californian who fell in love with old London, bought this derelict house in the nineteen-seventies, and lived in it without electricity, gradually composing each of its ten rooms into a single continuous fiction: the home of the \"Jervises,\" an invented family of Huguenot silk weavers, whose fortunes rise and fall through the rooms across two centuries. It is not a museum. Severs called it a \"still-life drama,\" and his rule for visitors was blunt — you pass through in silence.\n\nThe conceit is that the family has just stepped out of whichever room you enter. Candles burn; a fire crackles in the grate; there's half-eaten bread on the table, tea cooling in cups, a wig tossed on a chair, an unmade bed still dented; you hear footsteps and voices from the floor above, church bells, a carriage outside. Every sense is staged. You move through someone's life mid-moment, room by room, from prosperous parlour to the cold, peeling garret of the family's decline — the whole arc of Spitalfields itself, told through one imaginary household.\n\nWhat makes it art rather than waxwork is that nothing is explained. No labels, no ropes, no guide — just you, in silence, assembling the story from the evidence of the rooms. Severs died in 1999; the house is kept exactly as he composed it, candles and all.\n\nIt's open on limited days, often by candlelight, and it books out. If you can get in, go — and keep the silence. It's the only house in London where the past isn't displayed but interrupted."
+        }
+      ],
+      "primaryCategory": "hiddenGems",
+      "centroidLatitude": 51.5201,
+      "centroidLongitude": -0.0759,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Behind a plain Georgian front at 18 Folgate Street, the artist Dennis Severs created a 'still-life drama': ten candlelit rooms staged as the home of an imaginary family of Huguenot silk-weavers across the 18th and 19th centuries — half-eaten food, crackling fires, voices just out of the room. Visited in silence, it is less a museum than a spell.",
+      "shortDescription": "A Georgian house at 18 Folgate Street frozen as a candlelit 'still-life drama' — ten rooms of an imaginary Huguenot family, as if they just left.",
+      "totalDurationSeconds": 141,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "cd87391c-47c0-4b6c-a341-a9f334ab84a2",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Old Spitalfields Market",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-spitalfields-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-spitalfields-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-spitalfields-market_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-spitalfields-market_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-spitalfields-market_5.webp"
+      ],
+      "tags": [
+        "old spitalfields market",
+        "market",
+        "victorian",
+        "iron and glass",
+        "spitalfields",
+        "1887"
+      ],
+      "stops": [
+        {
+          "id": "59f58916-b950-4991-a22a-beee58b94430",
+          "order": 0,
+          "title": "Old Spitalfields Market",
+          "caption": "A market has traded on this ground since the thirteen-eighties — and the handsome Victorian hall it lives in now was very nearly demolished for offices, twice.",
+          "latitude": 51.5192,
+          "longitude": -0.0756,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/old-spitalfields-market.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-spitalfields-market_hero.webp",
+          "transcriptText": "A market has traded on this ground since the thirteen-eighties — and the handsome Victorian hall it lives in now was very nearly demolished for offices, twice.\n\nYou're at Old Spitalfields Market, just east of the City's glass towers — a large covered market hall of brick, iron, and glass, full of stalls selling food, clothes, records, crafts, and antiques, ringed by restaurants. The name tells you where you are: \"Spitalfields\" is a worn-down contraction of \"hospital fields,\" the land of the medieval priory and hospital of St Mary Spital that stood here from the twelfth century. A market charter was granted in 1638, but informal trading on the ground goes back further still — call it the better part of seven centuries of selling on this spot.\n\nFor most of its modern life this was a wholesale fruit and vegetable market, the East End's answer to Covent Garden — the elegant hall you're standing in was built in the eighteen-eighties by Robert Horner, a former market porter who'd risen to own the lease, which is its own little parable. Lorries, crates, and pre-dawn chaos defined the place until 1991, when the wholesale market moved out to bigger premises, leaving the question every Victorian market eventually faces: demolish or reinvent.\n\nIt nearly went. With the City expanding hungrily eastward, the site was earmarked for office development, and for years the market survived on temporary reprieves while campaigners fought for it. The compromise you see today gave part of the site to new buildings while saving the Victorian hall — which then filled with the stall-and-street-food life that now defines it.\n\nThere's a neat symmetry in what it became. This corner of London has always lived off the meeting of City money and East End hustle — the market literally stands on the seam between the two, glass towers on one side, Brick Lane on the other. Seven hundred years in, it's still doing what markets at boundaries do: letting both sides mix.\n\nCome hungry, ideally at the weekend. The traders change, the goods change, the centuries change — the selling, on this exact ground, has barely paused since the Middle Ages."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.5192,
+      "centroidLongitude": -0.0756,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "There has been a market at Spitalfields since 1638; the grand iron-and-glass hall you walk through today went up in 1887 for the fruit-and-vegetable trade. Rescued from demolition and restored, Old Spitalfields Market now mixes independent traders, makers and food under its Victorian roof, hard against the City's eastern edge.",
+      "shortDescription": "A Victorian iron-and-glass market hall on the edge of the City — centuries of trading, now stalls, food and crowds under the 1887 roof.",
+      "totalDurationSeconds": 134,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "4fa2eeb0-1436-4cf0-8ca5-66eebe9159a3",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Bevis Marks Synagogue",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bevis-marks-synagogue_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bevis-marks-synagogue_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bevis-marks-synagogue_3.webp"
+      ],
+      "tags": [
+        "bevis marks synagogue",
+        "sephardi",
+        "1701",
+        "city of london",
+        "oldest synagogue",
+        "jewish heritage"
+      ],
+      "stops": [
+        {
+          "id": "ac63388e-d91c-4f84-8396-74c138df6ee7",
+          "order": 0,
+          "title": "Bevis Marks Synagogue",
+          "caption": "This is the oldest synagogue in Britain in continuous use — over three hundred years of unbroken worship — and it exists because England, having expelled its Jews for three and …",
+          "latitude": 51.5146,
+          "longitude": -0.0794,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bevis-marks-synagogue.mp3",
+          "audioDurationSeconds": 148,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bevis-marks-synagogue_hero.webp",
+          "transcriptText": "This is the oldest synagogue in Britain in continuous use — over three hundred years of unbroken worship — and it exists because England, having expelled its Jews for three and a half centuries, finally let them return.\n\nYou're at Bevis Marks, on the eastern edge of the City of London, at the entrance to a courtyard — the synagogue sits back from the street, behind buildings, as the law of its day required. Inside the courtyard is a dignified brick building of 1701 that looks, from outside, rather like a Protestant chapel of its period. That resemblance has a simple cause: it was built by a Quaker carpenter, working in the style he knew.\n\nThe deeper story starts with an absence. In 1290, England expelled its entire Jewish population — the first such national expulsion in medieval Europe — and for three hundred and sixty-five years there was officially no Jewish community here at all. Resettlement came in the sixteen-fifties, under Oliver Cromwell, when a community of Sephardic Jews — families of Spanish and Portuguese origin, many of whom had lived outwardly as Christians under the Inquisition — was quietly permitted to live and worship openly in London. Bevis Marks is that returned community's permanent home: built within two generations of readmission, and in continuous use ever since — through every war, including the Blitz, services have never stopped for long.\n\nStep inside if it's open to visitors. The interior is largely original: dark oak benches, brass candelabra hanging low — the great candelabrum from Amsterdam, sister community to this one — and candlelight still used for some services. Three hundred years of the same families, the same prayers, the same room.\n\nLook up when you leave the courtyard. The synagogue now sits in a canyon of glass — the Gherkin and the City's towers crowd directly over it, and battles over new skyscrapers blocking its ancient right to daylight have run for years. A building made deliberately modest, so as not to provoke, now holds its small ground against the tallest neighbours in Britain.\n\nIt's the quietest kind of monument: not to an event, but to a continuity — worship, unbroken, in one room, since 1701."
+        }
+      ],
+      "primaryCategory": "sacredSites",
+      "centroidLatitude": 51.5146,
+      "centroidLongitude": -0.0794,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Tucked into a courtyard off the City lane of Bevis Marks, this Sephardi synagogue has been in continuous use since 1701 — Britain's oldest. Its dark-wood interior is lit by seven hanging brass candelabra (one a gift from Amsterdam's Portuguese synagogue, on which it was modelled), and candlelight is still used at certain services. The plain exterior was required by law; the calm within is its secret.",
+      "shortDescription": "Britain's oldest synagogue in continuous use, hidden in a City courtyard since 1701 — lit by brass candelabra and, by tradition, candlelight.",
+      "totalDurationSeconds": 148,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "6b81f90e-935e-48e0-bb75-bd527cb7bbbd",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Columbia Road",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/columbia-road_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/columbia-road_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/columbia-road_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/columbia-road_4.webp"
+      ],
+      "tags": [
+        "columbia road",
+        "flower market",
+        "east end",
+        "sunday market",
+        "bethnal green",
+        "flowers"
+      ],
+      "stops": [
+        {
+          "id": "fdf7460b-01b7-42bd-9877-dbf098fad2b8",
+          "order": 0,
+          "title": "Columbia Road",
+          "caption": "Six days a week this is a quiet East End street of Victorian shopfronts.",
+          "latitude": 51.529,
+          "longitude": -0.0688,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/columbia-road.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/columbia-road_hero.webp",
+          "transcriptText": "Six days a week this is a quiet East End street of Victorian shopfronts. On Sunday mornings it disappears under flowers — a market tradition with roots in refugee gardeners and a failed philanthropic dream.\n\nYou're on Columbia Road in Bethnal Green — a short street of small two-storey Victorian shops, painted in deep colours, housing independent galleries, bakeries, and curiosity shops. If it's Sunday morning, you'll know: the entire street becomes a flower market, stalls running its full length, banked with cut flowers and plants, the air full of scent and the trademark shouts of the traders — \"everything a fiver!\" — crowds shuffling shoulder to shoulder. By mid-afternoon it's all gone, packed up until next week.\n\nThe flowers have deep roots here. The Huguenot silk weavers who settled this part of East London in the seventeenth and eighteenth centuries brought with them a passion for growing things — they were famous for their gardens and especially their competitive flower growing, prized auriculas and tulips raised in tiny East End yards. The area's flower trade grows out of that inheritance, formalised into a market in the Victorian era and shifted to Sunday in deference to the area's Jewish traders, for whom Saturday was the Sabbath.\n\nThere's a ghost story in the street's name. In the eighteen-sixties the philanthropist Angela Burdett-Coutts — the richest woman in England, Dickens's friend — built Columbia Market here: a colossal Gothic market hall, like a cathedral for costermongers, intended to give street traders a grand, hygienic home. It was a noble, total failure — the traders preferred the street, the hall stood mostly empty, and after decades of half-uses it was demolished. The street kept the name; the philanthropy is a vanished Gothic phantom.\n\nWhat survived instead was the thing nobody designed: the street itself as the market, one morning a week, governed by the rhythm of the traders and the seasons. The grand hall failed; the informal habit has now run for well over a century.\n\nCome before nine for the flowers or near closing for the bargains, then let the crowd carry you. It's London at its best trick — transforming completely, then putting itself back by tea-time."
+        }
+      ],
+      "primaryCategory": "culturalHeritage",
+      "centroidLatitude": 51.529,
+      "centroidLongitude": -0.0688,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Six days a week Columbia Road is a quiet Victorian street of small shops; on Sunday mornings it erupts into London's favourite flower market, barrows and buckets banked the length of the road and traders calling cut prices as the day winds down. The bakeries, galleries and plant shops behind have grown up around the market that made the street famous.",
+      "shortDescription": "A narrow East End street that becomes a wall of flowers every Sunday — London's best-loved flower market among Victorian shopfronts.",
+      "totalDurationSeconds": 151,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "22371a4f-7578-42e3-95ef-112d8eb0f4ef",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Whitechapel Gallery",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whitechapel-gallery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whitechapel-gallery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whitechapel-gallery_3.webp"
+      ],
+      "tags": [
+        "whitechapel gallery",
+        "east end",
+        "arts and crafts",
+        "townsend",
+        "modern art",
+        "guernica"
+      ],
+      "stops": [
+        {
+          "id": "50dd5817-d6b1-484f-ba96-a321718cbcdf",
+          "order": 0,
+          "title": "Whitechapel Gallery",
+          "caption": "In 1939, Picasso's Guernica — the most famous protest painting of the century — hung not in a national museum but here, in a gallery built to bring art to the East End poor.",
+          "latitude": 51.5157,
+          "longitude": -0.0703,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/whitechapel-gallery.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whitechapel-gallery_hero.webp",
+          "transcriptText": "In 1939, Picasso's Guernica — the most famous protest painting of the century — hung not in a national museum but here, in a gallery built to bring art to the East End poor. The entry fee was a pair of boots, for the men fighting Franco.\n\nYou're on Whitechapel High Street, at the Whitechapel Gallery — a handsome Arts and Crafts building of pale stone with an arched entrance, modest in scale among the bustle. It was founded in 1901 by Samuel and Henrietta Barnett, a vicar and social reformer working in what was then the poorest quarter of London. Their conviction was straightforward and radical: that the people of the slums had as much right to great art as anyone in the West End, and that beauty was not a luxury but a need. The gallery was built with no permanent collection — just changing exhibitions of the best art that could be borrowed, free to all comers.\n\nIt went on to a century of punching far above its weight. It gave many landmark artists their first major London shows, and it staged exhibitions that changed British art history — including the 1956 show often credited with launching Pop Art in Britain.\n\nBut the defining moment came in January 1939. Picasso's Guernica — his vast, howling canvas painted in response to the bombing of the Basque town of Guernica during the Spanish Civil War — was touring to raise support for the Spanish Republic. In London it was shown here, in the East End, among communities that had sent volunteers to fight in Spain. Admission was famously by donation — including, at one showing, a pair of usable boots for the Republican front. Workers queued after their shifts to see it.\n\nHold that image: the century's greatest anti-war painting, hanging a few streets from the docks, paid for in boots. It vindicates the founders' whole premise — that the East End didn't need art watered down; it needed the strongest art there was.\n\nThe gallery is free to this day. Go in and see what's on. The premise hasn't changed in a century and a quarter: the best art, where the people are."
+        }
+      ],
+      "primaryCategory": "visualArt",
+      "centroidLatitude": 51.5157,
+      "centroidLongitude": -0.0703,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Founded in 1901 to bring great art to the East End, the Whitechapel Gallery sits behind a distinctive Arts-and-Crafts facade by Charles Harrison Townsend. With no permanent collection, it has championed the new for over a century — it brought Picasso's Guernica to Britain in 1939 and gave early London shows to Pollock, Rothko and Hockney.",
+      "shortDescription": "The East End's pioneering public gallery — an Arts-and-Crafts front on Whitechapel High Street that brought Picasso's Guernica to Britain in 1939.",
+      "totalDurationSeconds": 138,
+      "city": "London",
+      "walkingDistanceMeters": null
+    },
+    {
+      "id": "9265f932-1e88-4077-b7a2-c8ec783a85cc",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Wilton's Music Hall",
+      "priceUSD": 0,
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wiltons-music-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wiltons-music-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wiltons-music-hall_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wiltons-music-hall_4.webp"
+      ],
+      "tags": [
+        "wilton's music hall",
+        "music hall",
+        "wapping",
+        "graces alley",
+        "victorian",
+        "conserved"
+      ],
+      "stops": [
+        {
+          "id": "9dc7172c-5504-431a-84f5-873c777ff4b0",
+          "order": 0,
+          "title": "Wilton's Music Hall",
+          "caption": "Down an alley in the East End stands the oldest surviving grand music hall in the world — and the reason it survived is that everyone forgot it was there.",
+          "latitude": 51.5109,
+          "longitude": -0.067,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wiltons-music-hall.mp3",
+          "audioDurationSeconds": 153,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wiltons-music-hall_hero.webp",
+          "transcriptText": "Down an alley in the East End stands the oldest surviving grand music hall in the world — and the reason it survived is that everyone forgot it was there.\n\nYou're on Graces Alley, near Cable Street in the East End, outside Wilton's Music Hall — and from the alley it's just a row of worn old terraced houses with a slightly grander doorway. That's the trick of it. Behind those house-fronts, John Wilton, in the eighteen-fifties, built his \"Magnificent New Music Hall\": a high galleried hall with barley-twist columns and a great sunburner chandelier, hidden completely behind the houses, which served as its entrance and bars.\n\nMusic hall was the people's entertainment of Victorian Britain — songs, comedy, novelty acts, spectacle, beer — the raucous ancestor of variety, stand-up, and pop. Wilton's was among its grandest early homes; the songs and stars of the age played here to packed, rowdy East End crowds.\n\nThe decline saved it. The hall closed as a theatre within a few decades — fire regulations and changing fashion — and then began the chain of accidents that preserved it: it became a Methodist mission hall, serving the poorest of the East End for sixty-odd years, feeding dockers' families through strikes and standing through the Blitz; then a rag warehouse. Nobody modernised it because nobody valued it; nobody demolished it because nobody noticed it. When it was rediscovered and slowly saved — a campaign reaching from the nineteen-sixties to a delicate repair finished in 2015 — the decision was made not to restore it to plush newness but to conserve it as found: peeling plaster, bare brick, layers of paint, all stabilised and kept.\n\nSo what you see inside is time itself, made visible — a hundred and seventy years of wear, honestly displayed, in a working theatre that once again stages shows, concerts, and films. Most beautiful old theatres are restorations pretending to be survivals. Wilton's is the real thing: a survival, scars and all.\n\nCheck what's on and come for a show if you can — or just for a drink in the Mahogany Bar. You'll be doing exactly what this alley was built for, a hundred and seventy years on."
+        }
+      ],
+      "primaryCategory": "musicAndPerformance",
+      "centroidLatitude": 51.5109,
+      "centroidLongitude": -0.067,
+      "introAudioURL": null,
+      "kind": "single",
+      "longDescription": "Built behind a row of houses off Graces Alley in the 1850s, Wilton's is the oldest surviving grand music hall in the world — a single balconied room carried on slender barley-twist iron columns. Rescued from dereliction and conserved rather than restored, its distressed walls and worn grandeur make it one of London's most atmospheric stages.",
+      "shortDescription": "The world's oldest surviving grand music hall, down a Wapping side-alley — a faded Victorian room of barley-twist columns and beautiful decay.",
+      "totalDurationSeconds": 153,
+      "city": "London",
+      "walkingDistanceMeters": null
     }
   ]
 }
