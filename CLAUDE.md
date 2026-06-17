@@ -66,7 +66,15 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-15)
+## Current State (2026-06-16)
+
+### TestFlight 1.0 (45) — ships 6 Lisbon + 22 London tours; catalog crosses 300 (session 39 — web/PM)
+
+Build cut to ship everything on `main` since build 44 (`7f675a3`): **PR #205** (6 Lisbon tours — Conserveira de Lisboa, Dolls Hospital, Oceanário de Lisboa, Palace Fronteira, Ponte 25 de Abril, Vasco da Gama Bridge; LIS 60 → 66) + **PR #206** (22 London tours wired into Tours.json; LDN 58 → 80). Content + images only — no app-code change since build 44 (the compass fix #204 and placecard polish #201 already shipped in 44). Build bumped **44 → 45** via short-lived **PR #207** (`acc05b4`, app-target `CURRENT_PROJECT_VERSION` lines only; test target stays 1; `MARKETING_VERSION` stays 1.0 — the auto-mode classifier blocks direct-to-main bump pushes). `xcodebuild archive` clean at `/tmp/Atlas-20260616-2045-b45.xcarchive` (~23s, warm DerivedData); embedded version verified `1.0 (45)`; no validation 90474 — `UIRequiresFullScreen=YES` from build 34 held. Owner uploaded via Organizer. **TestFlight 1.0 (45) is live.**
+
+**🎉 Catalog crosses 300 tours: 300 / 4 makers** (100 NYC + **80 LDN** + **66 LIS** + 54 OPO). Both London and Lisbon expanded this cut; London is now firmly the #2 city. The bump + PR-merge ran in a `/tmp/build45` worktree (created on the branch directly off `main` — `git worktree add -b … /tmp/build45 main` — since `main` was already checked out in the primary). Same post-merge snag as session 38: `gh pr merge --delete-branch` threw `'main' is already used by worktree` during its local checkout step, but the squash had landed server-side — recovered by deleting the remote branch + ff-pulling main in the primary checkout, then archiving from there. See `archive/HANDOFF-260616.md`.
+
+**Latest TestFlight build: 1.0 (45)** — live 2026-06-16.
 
 ### TestFlight 1.0 (44) — ships 14 Lisbon tours + home placecard polish (session 38 — web/PM)
 
