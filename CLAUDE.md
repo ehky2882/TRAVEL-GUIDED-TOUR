@@ -66,7 +66,22 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-16)
+## Current State (2026-06-18)
+
+### TestFlight 1.0 (46) — remote catalog detach: app now fetches Tours.json from gh-pages (session 40 — verify/build)
+
+**PR #209 (`de8ff6a`) lands the catalog-detach architecture.** The app no longer reads only the bundled `Tours.json` — it loads a **local copy first** (last-good network cache in Caches → bundled seed) for an instant, offline-capable first frame, then **refreshes from `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json`** in the background and republishes the `@Observable` `tours`/`makers` on the main actor so views update live. New `Data/RemoteCatalogLoader.swift` (network behind a `CatalogFetching` protocol; `reloadIgnoringLocalCacheData`; any network/decode failure leaves the local copy intact); `DataService` gains an injectable loader + `autoRefresh` flag. Bundled `Tours.json` retained as the offline/first-launch seed. **This is the first backend seam: content can now ship by pushing one file to gh-pages — no app rebuild, no App Store review.** 95/95 tests (7 new `RemoteCatalogLoaderTests` cover cache/bundle/nil load + fetch-error + undecodable-data fallbacks). CI green.
+
+**Verify-only task that turned into a ship.** PR #209 was branched at session 38 (272 tours) and the published gh-pages `Tours.json` had been frozen at **272** ever since — while `main` reached **300** (sessions 39's #205 + #206 were never re-published to gh-pages). So the app-side auto-refresh worked, but the *published* file was stale: a fresh launch would have **regressed 300 → 272**. Caught via a per-maker count cross-check (NYC 100 / LDN 80 / LIS 66 / OPO 54 = 300). Fixes this session:
+- **Republished gh-pages `Tours.json` to the current 300** (byte-identical to the bundled seed); verified live (HTTP 200, 300 tours, ~3 min Pages deploy).
+- **Live end-to-end proof (Approach B):** added a ★ to one tour title on gh-pages → relaunch (no rebuild) → ★ appeared in-app → reverted immediately. gh-pages left clean (0 ★, 300 tours). Earlier the same fetch→apply→republish path was also proven by tampering the sim's Caches copy and watching the refresh overwrite it back to the real remote.
+- **Caught the PR branch up to 300** (merged `main` in — clean, only the 3 Swift files differ from main) before merging, so the bundled offline seed ships 300 too, not 272.
+
+Build bumped **45 → 46** via short-lived **PR #210** (`6418fba`, admin-merged, app-target `CURRENT_PROJECT_VERSION` lines only; test target stays 1; `MARKETING_VERSION` stays 1.0). `xcodebuild archive` clean at `/tmp/Atlas-20260618-2257-b46.xcarchive`; embedded `1.0 (46)` verified; `UIRequiresFullScreen=true` held (no validation 90474). **Upload snag:** Organizer threw *"PLA Update available"* + *"No iOS Distribution certificate"* — root cause is the unaccepted **Program License Agreement** (the cert error is downstream of the PLA lock); owner accepted the updated agreement at developer.apple.com/account, retried, **uploaded. TestFlight 1.0 (46) is live.** See `archive/reference-testflight-pla-gotcha` note.
+
+**Follow-up flagged (owner request):** the app-side refresh is automatic, but **publishing to gh-pages is manual** — exactly how the 272/300 drift happened. Next project: auto-publish `Tours.json` → gh-pages on merge-to-main so the remote can never drift from the bundled seed. See `archive/HANDOFF-260618.md`.
+
+**Latest TestFlight build: 1.0 (46)** — live 2026-06-18.
 
 ### TestFlight 1.0 (45) — ships 6 Lisbon + 22 London tours; catalog crosses 300 (session 39 — web/PM)
 
