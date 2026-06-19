@@ -1,0 +1,84 @@
+name: Publish catalog
+
+# Keeps the remote tour catalog in lockstep with the repo.
+#
+# The app fetches its catalog from the gh-pages copy of Tours.json at launch,
+# with the bundled file as offline fallback. Source of truth is the bundled
+# file on main: TRAVEL GUIDED TOUR/Resources/Tours.json. This workflow copies
+# that one file to the gh-pages branch root whenever it changes, so the two
+# can never silently drift (as they did 272-vs-300 during PR #209 testing).
+#
+# It only ever touches Tours.json on gh-pages — audio/, images/, privacy/,
+# index.html etc. are uploaded by content sessions and are left untouched.
+# It pushes only to gh-pages (never main), so it cannot retrigger itself.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "TRAVEL GUIDED TOUR/Resources/Tours.json"
+  workflow_dispatch: # allow a manual force-resync from the Actions tab
+
+permissions:
+  contents: write # push the published file to gh-pages with the built-in GITHUB_TOKEN
+
+jobs:
+  publish:
+    name: Publish Tours.json to gh-pages
+    runs-on: ubuntu-latest
+    steps:
+      # main — the source of truth. We only need the one file, so sparse-checkout it.
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          path: main
+          sparse-checkout: |
+            TRAVEL GUIDED TOUR/Resources/Tours.json
+          sparse-checkout-cone-mode: false
+
+      # Validation gate: never publish a corrupt or empty catalog.
+      # We can't run the Swift validator on a generic runner, but a JSON parse
+      # plus a non-empty tours/makers sanity check catches the failure modes
+      # that would actually break the app (malformed JSON, truncated file).
+      - name: Validate Tours.json
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          path = "main/TRAVEL GUIDED TOUR/Resources/Tours.json"
+          with open(path) as f:
+              data = json.load(f)  # raises -> job fails on malformed JSON
+          tours = data.get("tours")
+          makers = data.get("makers")
+          if not isinstance(tours, list) or not tours:
+              sys.exit("Validation failed: 'tours' is missing or empty")
+          if not isinstance(makers, list) or not makers:
+              sys.exit("Validation failed: 'makers' is missing or empty")
+          print(f"OK: {len(tours)} tours / {len(makers)} makers")
+          PY
+
+      # gh-pages — the publish target. Full branch so the commit preserves
+      # audio/, images/, privacy/, etc. (we only stage Tours.json).
+      - name: Checkout gh-pages
+        uses: actions/checkout@v6
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Copy Tours.json to gh-pages root
+        run: cp "main/TRAVEL GUIDED TOUR/Resources/Tours.json" gh-pages/Tours.json
+
+      # Commit + push only when the content actually changed — no empty commits.
+      - name: Commit and push if changed
+        working-directory: gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Tours.json
+          if git diff --cached --quiet; then
+            echo "gh-pages Tours.json already matches main — nothing to publish."
+            exit 0
+          fi
+          git commit -m "chore(catalog): publish Tours.json to gh-pages [skip ci]"
+          git push origin gh-pages
+          echo "Published Tours.json to gh-pages."
