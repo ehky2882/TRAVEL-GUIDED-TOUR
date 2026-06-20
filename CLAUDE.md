@@ -506,8 +506,8 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **272 tours, 4 makers, 281 stops** in `Resources/Tours.json` (100 Atlas Studio NYC + 58 Atlas Studio LDN + 54 Atlas Studio OPO + 60 Atlas Studio LIS); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`
-- **270 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
+- **300 tours, 4 makers, 309 stops** in `Resources/Tours.json` (100 Atlas Studio NYC + 80 Atlas Studio LDN + 54 Atlas Studio OPO + 66 Atlas Studio LIS); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **Since build 46 the catalog is remote-loaded** from `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` (bundled copy = offline seed) via `RemoteCatalogLoader` — content ships by pushing that file to gh-pages, no app build.
+- **298 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
@@ -601,7 +601,7 @@ TRAVEL GUIDED TOUR/
 ├── ContentView.swift              AtlasTabBar — 3 tabs: Home / Library / Me
 ├── SplashView.swift
 ├── Models/                        Tour, Stop, Maker, TourCategory, RecentSearch, LibraryEntry
-├── Data/                          DataService, LibraryStore, RecentSearchStore, RecentlyViewedStore, ToursData
+├── Data/                          DataService, RemoteCatalogLoader, LibraryStore, RecentSearchStore, RecentlyViewedStore, ToursData
 ├── Resources/Tours.json
 ├── Audio/                         AudioPlayerService (AVQueuePlayer + lock-screen), TourDownloader
 ├── Features/
