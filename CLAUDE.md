@@ -66,7 +66,25 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-18)
+## Current State (2026-06-21)
+
+### V2 backend designed end-to-end — Steps 2–5 + maker authoring P1/P2 (session 41 — web/PM, design)
+
+Pure design/PM session (Linux web — no Xcode/Supabase runtime), executed against the new **V2 execution plan** (now tracked in `ROADMAP.md`). Backend decided: **Supabase (Postgres)**. This session designed + merged the entire near-term V2 backbone as docs + non-shipping SQL / an Edge Function (auto-merge class — **nothing ships in the app yet**); standing up Supabase + the app-side wiring are owner/Mac follow-ons.
+
+- **Step 2 — Catalog foundation (PR #218):** `backend/schema.sql` (makers/tours/stops, native enums, public-read RLS, `get_catalog()` RPC returning the exact `{makers,tours:[{…stops}]}` shape `ToursData` already decodes), `backend/seed_from_toursjson.py` (idempotent upsert seed, verified 5/307/316 parity), `backend/README.md` runbook, `docs/backend-design.md`.
+- **Step 3 — Accounts/auth (PR #220):** `backend/accounts.sql` + `docs/accounts-design.md`. Owner decisions: **self-serve makers + per-tour moderation**, **Apple + email + Google** sign-in, **consumer accounts now** (cross-device library/saved sync). `profiles` (auto-created on signup, admin-flag protected), maker ownership + write RLS (publish reserved to admins), `reports`, consumer-sync tables (own-row-only). `SECURITY DEFINER` helpers `is_admin`/`owns_maker`/`owns_tour`.
+- **Step 4 — Maker dashboard (PRs #222 + #223):** Phase 1 single-stop authoring (flow + ordered write contract) + media storage (`backend/storage.sql`: public `tour-audio`/`tour-images` buckets, `{maker_id}/{tour_id}/file` path RLS); Phase 2 multi-stop authoring (`docs/maker-dashboard-phase2-design.md`) — **needs no backend change** (stops.order/kind/intro_audio_url/walking_distance already exist), validating the foundation.
+- **Step 5 — Moderation, minimal (PR #224):** owner chose **"email me"** — `backend/functions/notify-moderation/index.ts` (Edge Function emailing on tour→in_review / new report via two DB webhooks) + `backend/moderation.sql` (`publish_tour`/`takedown_tour` admin helpers). Web admin tool deferred until volume grows.
+- **Housekeeping:** doc-sync (PR #219) catalog counts 300→**307 tours / 5 makers / 316 stops** (Hong Kong #217 added 5th maker HKG); tracked **V2 execution plan** added to ROADMAP (PR #221) with owner decisions recorded against the old "open questions."
+
+**Catalog health (live-checked this session):** gh-pages `Tours.json` in sync at 307/5/316 (auto-publish handled #217); URL sweep of 1,460 links → **2 dead gallery images** (The Oculus `additionalImageURLs[1]`, The Charging Bull `additionalImageURLs[2]`, both Wikimedia 404; heroes fine). **Owner deferred the fix — TODO below.**
+
+**Pending / next (owner + Mac — not doable in web):** (1) stand up Supabase free tier → run `schema.sql` → `accounts.sql` → `storage.sql` → `moderation.sql` → seed (`backend/README.md`); configure auth providers + moderation webhooks/Resend; (2) app-side: add **supabase-swift** (first 3rd-party dep), point `RemoteCatalogLoader` at the `get_catalog` RPC, sign-in UI, store sync, the `Features/Maker/` authoring UI — all gated by `test_sim` + simulator review; (3) **Step 6 payments** is the next design but needs owner calls (per-tour vs subscription; Stripe Connect). **PRs #223 + #224 were green-pending at session end** (repo auto-merge is OFF — merge on green; turning on Settings → Pull Requests → Allow auto-merge makes future doc/SQL PRs hands-off).
+
+**TODO (deferred by owner 2026-06-21):** fix 2 dead gallery images — **The Oculus** + **The Charging Bull** (Wikimedia 404s) — remove the entries or re-source CC0/PD via the image pipeline.
+
+**Branch cleanup (git proxy blocks deletion — delete in GitHub UI):** merged `claude/{backend-foundation, accounts-design, maker-dashboard-design, docsync-catalog-307, v2-roadmap, zealous-galileo-86z05a}` (+ `maker-phase2-design`, `moderation-design`, `handoff-260621` once their PRs merge). **Keep** (unmerged work): `claude/london-batch3-scripts-260616` (audio-pending staged London batch 4 + 5 multi-stop walks), `claude/dreamy-wozniak-tags-260612` (tag taxonomy proposal).
 
 ### TestFlight 1.0 (46) — remote catalog detach: app now fetches Tours.json from gh-pages (session 40 — verify/build)
 
