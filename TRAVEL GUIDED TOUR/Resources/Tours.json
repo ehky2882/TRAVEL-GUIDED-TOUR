@@ -31,6 +31,14 @@
       "avatarEmoji": "🇬🇧",
       "bio": "Atlas Studio's London bureau — audio tours of the city's architecture and history.",
       "websiteURL": null
+    },
+    {
+      "id": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "displayName": "Atlas Studio HKG",
+      "avatarURL": null,
+      "avatarEmoji": "🇭🇰",
+      "bio": "Atlas Studio's Hong Kong bureau — audio tours of the city's architecture, markets, and harbour.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -14160,6 +14168,320 @@
         "expo-98",
         "tagus-estuary",
         "1998"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dbc55a15-cddb-4ac7-9b28-07ac1587e0d6",
+      "title": "Bank of China Tower",
+      "shortDescription": "I.M. Pei's 1990 tower in glass and steel — bamboo geometry, a feng shui feud, and a building that opened six days after Tiananmen.",
+      "longDescription": "I.M. Pei accepted this commission partly because his father had once worked for the Bank of China. Step back toward Garden Road and the form resolves: a seventy-storey tower built from four triangular prisms rising from a cubic podium, each quadrant stepping back as it climbs until a single prism is left at the top, capped by twin steel masts. The geometry is drawn from bamboo — growing in sections, each narrower than the last — and the tower reads differently from every angle: a diamond from the east, a knife from the north, a sail from the harbour.\n\nCompleted in 1990, it was the tallest building in Hong Kong and Asia, and the first supertall skyscraper outside the United States. Its sharp edges drew a famous feng shui controversy — read as knife blades aimed at Government House and the neighbouring HSBC building, earning the Cantonese nickname \"one knife.\" The forty-third-floor observation deck, entered from Garden Road, offers one of the best public harbour panoramas in Central.\n\nThe opening date is the detail that changes the building's meaning most completely: 15 June 1990, six days after the Tiananmen Square massacre. Pei, who was Chinese-American, had taken the project partly as an act of cultural connection; instead it opened into a city in shock.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bank_of_China_Tower_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bank_of_China_Tower_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bank_of_China_Tower_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "58d49b16-7509-4641-a8f7-96e7403cdc40",
+          "order": 0,
+          "title": "Bank of China Tower",
+          "caption": "Step back toward Garden Road and take in the full tower — four triangular prisms rising from a cubic podium.",
+          "latitude": 22.27954,
+          "longitude": 114.16148,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bank-of-china-tower.mp3",
+          "audioDurationSeconds": 161,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "I.M. Pei accepted this commission partly because his father had once worked for the Bank of China — and partly because no one else would have taken it at that budget, knowing it would stand next to the most expensive building on earth.\n\nStep back from the base toward Garden Road and take in the full form: a seventy-storey tower built from four triangular prisms that rise from a cubic podium, each quadrant stepping back and diminishing as the building climbs, until a single triangular prism is left at the top, capped by twin steel masts. The geometry is explicitly based on bamboo — the way the plant grows in sections, each one narrower than the last, reaching upward — and the result is a building that reads differently from every angle: a diamond from the east, a knife from the north, a sail from the harbour. When it was completed in nineteen ninety, it was the tallest building in Hong Kong and Asia, and the first supertall skyscraper outside the United States.\n\nThe feng shui controversy started before construction. Pei's original design included X-shaped cross-bracing on the exterior frames, which practitioners described as inauspicious — the X being a negative symbol in Chinese tradition. Pei modified the pattern before building began, producing the diamond-shaped bracing you see now, though the fundamental geometry remained unchanged. The sharp triangular edges were still read by feng shui masters as knife blades aimed at the neighbours — Government House, the HSBC Building — and the tower acquired the Cantonese nickname yaat baa dou: \"one knife.\" In response, the HSBC building across the road reportedly had cannons placed on its rooftop, aimed back.\n\nI always think the opening date is the detail that changes the building's meaning most completely. The Bank of China Tower opened on fifteenth June nineteen ninety — six days after the Tiananmen Square massacre. Pei, who was Chinese-American, had accepted the project partly as an act of cultural connection; instead, it opened into a city in shock, and a world watching China with entirely different eyes than the ones that had commissioned the building.\n\nWell, the view from the forty-third floor observation deck is one of the best available to the public in Central — look for the entrance on the Garden Road side, and the harbour panorama from up there puts the building's scale in context."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 161,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.27954,
+      "centroidLongitude": 114.16148,
+      "city": "Hong Kong",
+      "primaryCategory": "architecture",
+      "tags": [
+        "i.m. pei",
+        "skyscraper",
+        "feng shui",
+        "central",
+        "modernism",
+        "harbour"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "de7b92ea-bf0c-4cf2-9dc5-c1928201c863",
+      "title": "Duddell Street Steps and Gas Lamps",
+      "shortDescription": "The last four working gas lamps in Hong Kong — amber light over granite steps laid in 1883, and the Victorian firm that still keeps them burning.",
+      "longDescription": "Gas always burns amber, and the four cast-iron lamp posts on these granite steps have been doing so, in some form, since the early twentieth century. The stairs run down from Queen's Road Central through a narrow lane to Ice House Street, completed in 1883 with Tuscan-style balustrades. These are the only working gas lamps left in Hong Kong — every other gas street light was replaced by electric lamps after the Second World War; by 1967 only these four remained, and in 1979 they were declared a monument. They still light at six in the evening and go out at six in the morning, automatically now rather than by hand.\n\nThe lamps are two-light Rochester models made by William Sugg & Co. of London. When Super Typhoon Mangkhut shattered two of them in September 2018, it was William Sugg & Co. — still trading, the same firm — that was brought in to help restore them, completed in December 2019 using three-dimensional scanning and original materials. The street itself is named after George Duddell, who arrived from Macau in 1841 and secured Hong Kong's first opium monopoly, becoming briefly the colony's third-largest landowner.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Duddell_Street_Steps_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Duddell_Street_Steps_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ec8da69f-3bd5-4a3f-8f02-8a97e377d26f",
+          "order": 0,
+          "title": "Duddell Street Steps and Gas Lamps",
+          "caption": "Stand by the granite steps between Queen's Road Central and Ice House Street, beside the cast-iron gas lamps.",
+          "latitude": 22.27972,
+          "longitude": 114.15671,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/duddell-street-steps.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Look at the colour of the light. Gas always burns amber — and in the middle of a Hong Kong afternoon, that warmth is rather wrong, and rather right.\n\nThe steps run down from Queen's Road Central through a narrow lane to Ice House Street below, granite stairs completed in eighteen eighty-three with Tuscan-style balustrades and four cast-iron lamp posts — two at the top, two at the bottom — that have been standing here, in some form, since the early twentieth century. These are the only working gas lamps left in Hong Kong. Every other gas street light in the city was replaced by electric lamps after the Second World War; by nineteen sixty-seven only these four remained, and in nineteen seventy-nine they were declared a monument. They still burn gas. They light at six in the evening and go out at six in the morning, automatically now rather than by hand.\n\nThe lamps are two-light Rochester models, manufactured by William Sugg & Co. of London — a Victorian engineering firm that specialised in gas fittings. When Super Typhoon Mangkhut struck Hong Kong in September twenty eighteen and a falling tree shattered two of the lamps and much of the balustrade, it was William Sugg & Co. — still trading, still the same firm — that was brought in to help restore them. The restoration was completed in December twenty nineteen, using three-dimensional scanning and original materials to match what had been there before.\n\nThe street itself was named after George Duddell, who arrived from Macau in eighteen forty-one and secured Hong Kong's first opium monopoly. He became, briefly, the third-largest landowner in the colony.\n\nThe gaslight, the granite steps, the opium money underneath the name on the sign — and the original manufacturer turning up a hundred years later to put it back together. If you fancy a moment to sit with all of that, the steps themselves are as good a place as any."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.27972,
+      "centroidLongitude": 114.15671,
+      "city": "Hong Kong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "gas lamps",
+        "victorian",
+        "granite steps",
+        "monument",
+        "central",
+        "hidden gems"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "39f182c7-0909-4648-8e36-9ec2b92b0764",
+      "title": "HSBC Building",
+      "shortDescription": "Norman Foster's 1985 headquarters — the most expensive building in the world when it opened, suspended from eight masts over a plaza you can walk straight through.",
+      "longDescription": "When it was completed in 1985 this was the most expensive building in the world — and you can walk under it for free. The entire ground level is an open public plaza, with no walls, lobby, or street-level barrier, and from it you look straight up through a fifty-metre glass atrium. There is no central core: the building is suspended from eight steel masts arranged in pairs along the exterior, the office floors hanging from cross-beams, leaving the interior entirely column-free. A system of angled mirrors on the south facade catches sunlight and redirects it down through the atrium to the plaza below.\n\nNorman Foster won the 1979 commission with a deceptively simple brief — the best bank building in the world. It took six years and HK$5.2 billion, roughly US$668 million at the time, with five main steel modules prefabricated near Glasgow by Scott Lithgow Shipbuilders and shipped to Hong Kong. At the escalator entrances stand the bronze lions Stephen and Stitt, named after former chief managers of the bank; the one on the left still carries unrepaired bullet marks from the Japanese occupation. The Bank of China Tower stands immediately to the east — two very different answers to what a bank should look like, built a decade apart.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/HSBC_Building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/HSBC_Building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/HSBC_Building_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/HSBC_Building_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "95f46c88-0e7d-4341-8378-061d90f4d729",
+          "order": 0,
+          "title": "HSBC Building",
+          "caption": "Stand in the open plaza beneath the building, looking up through the glass atrium.",
+          "latitude": 22.28046,
+          "longitude": 114.15935,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hsbc-building.mp3",
+          "audioDurationSeconds": 161,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "When it was completed in nineteen eighty-five, this was the most expensive building in the world — and you can walk under it for free.\n\nWalk under it before you look at it. The entire ground level of the HSBC Main Building is an open public plaza — no walls, no lobby, no security barrier at street level — and from here you can look straight up through a fifty-metre glass atrium into the heart of the building above you. The structural logic is immediately visible: there is no central core. The building is suspended from eight steel masts arranged in pairs along the exterior, with the office floors hanging from them on cross-beams, leaving the interior entirely column-free. Up on the south facade, have a look for the angled mirror system — a series of large reflectors that catch sunlight from outside and redirect it down through the atrium to the plaza where you're standing now.\n\nNorman Foster won the commission in nineteen seventy-nine with a brief that was, by any measure, straightforward: the best bank building in the world. The structure he designed took six years to build and cost HK$5.2 billion — roughly US$668 million at the time, making it the most expensive building constructed anywhere on earth. The five main steel modules were prefabricated near Glasgow by Scott Lithgow Shipbuilders and shipped to Hong Kong, because the precision engineering required couldn't be done on-site. The building has sixty-two escalators — the most of any building in the world when it opened.\n\nBefore you leave the plaza, have a look at the two bronze lions flanking the escalator entrances — Stephen and Stitt, named after two former chief managers of the bank. They date from an earlier building on this site. The one on the left carries bullet marks on its flank from the Japanese occupation during the Second World War, and has never had them repaired.\n\nThe commission was placed in nineteen seventy-eight — a nineteen-year bet, made in steel and aluminium, that Hong Kong would still be worth banking in after the handover to China. The building is a piece of corporate confidence made physical, and it's a bit more interesting for knowing that.\n\nThe Bank of China Tower by I.M. Pei is immediately to the east and worth a few minutes of comparison — two very different answers to the question of what a bank should look like, built a decade apart, in the same block."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 161,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.28046,
+      "centroidLongitude": 114.15935,
+      "city": "Hong Kong",
+      "primaryCategory": "architecture",
+      "tags": [
+        "norman foster",
+        "high-tech",
+        "atrium",
+        "central",
+        "banking",
+        "modernism"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cff82c20-1041-4ec9-bdf3-7f530b0d1df2",
+      "title": "Hong Kong Palace Museum",
+      "shortDescription": "A museum shaped like an ancient bronze ritual cauldron — Rocco Yim's 2022 building on the West Kowloon waterfront, holding treasures from Beijing's Palace Museum.",
+      "longDescription": "The building is modelled on a Fang Ding — an ancient Chinese bronze cauldron used in ceremonial rites, square-bodied, wide at the top and narrowing toward four legs at the base. Designed by Hong Kong architect Rocco Yim and opened in July 2022, the seven-storey museum sits at the western tip of the West Kowloon Cultural District on the Victoria Harbour waterfront, a few minutes' walk from M+. Terracotta cladding shifts from warm red to pale gold with the angle of the light, and the proportions of the windows and the spatial sequencing inside deliberately echo the courtyards and gate structures of Beijing's Forbidden City.\n\nInside are more than nine hundred objects from the Beijing Palace Museum — jade carvings, imperial robes, bronze vessels, painted scrolls and ceramics — including 160 artefacts designated Class A national treasures of China, which rarely leave Beijing. The opening exhibitions paired these with thirteen objects on loan from the Louvre. The institution's origin is worth sitting with: it was not part of the original West Kowloon plan but added in a 2016 deal struck without a legislative vote or public consultation, framed explicitly as a vehicle to \"tell a good China story.\" The objects are extraordinary on their own terms; the institution that holds them was built with a specific purpose, and the two things are not entirely the same.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Hong_Kong_Palace_Museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Hong_Kong_Palace_Museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Hong_Kong_Palace_Museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Hong_Kong_Palace_Museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Hong_Kong_Palace_Museum_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "69b98776-d600-4903-9a75-33ab357e5324",
+          "order": 0,
+          "title": "Hong Kong Palace Museum",
+          "caption": "Stand on the West Kowloon waterfront facing the terracotta-clad museum at the district's western tip.",
+          "latitude": 22.30198,
+          "longitude": 114.15605,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hong-kong-palace-museum.mp3",
+          "audioDurationSeconds": 157,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "It's roughly one thousand BC, and a bronze ritual vessel sits at the centre of a ceremony in the Yellow River basin. The building in front of you is shaped like one.\n\nThe Hong Kong Palace Museum is modelled on a Fang Ding — an ancient Chinese bronze cauldron used in ceremonial rites, square-bodied, wide at the top and narrowing toward four legs at the base. Designed by Hong Kong architect Rocco Yim and opened in July twenty twenty-two, the seven-storey building sits at the western tip of the West Kowloon Cultural District on the Victoria Harbour waterfront, a few minutes' walk from M+. The exterior is clad in terracotta panels that shift from warm red to pale gold depending on the angle of the light, and various architectural details — the proportions of the windows, the spatial sequencing inside — deliberately echo the courtyards and gate structures of the Forbidden City in Beijing.\n\nThe collection is the reason those echoes matter. Inside are more than nine hundred objects from the Beijing Palace Museum — jade carvings, imperial robes, bronze vessels, painted scrolls, ceramics — including one hundred and sixty artefacts designated Class A national treasures of China, which are among the most restricted objects in the national collection and rarely leave Beijing. The opening exhibitions placed these alongside thirteen objects on loan from the Louvre in Paris, a curatorial pairing of Chinese imperial culture with Western collections that set the tone the museum has maintained.\n\nI find the building's origin story worth sitting with, actually. The Hong Kong Palace Museum was not part of the original West Kowloon Cultural District plan. It was added in a deal struck in twenty sixteen, without a legislative vote or public consultation, and framed explicitly as a vehicle to \"tell a good China story\" to Hong Kong audiences. The objects inside are extraordinary on their own terms. The institution that holds them was built with a specific purpose, and the two things are not entirely the same.\n\nThe Art Park immediately outside runs along the harbourfront between the museum and M+, and is worth walking end-to-end — the views across Victoria Harbour to Hong Kong Island from this stretch of the waterfront are among the best the city offers at ground level."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 157,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.30198,
+      "centroidLongitude": 114.15605,
+      "city": "Hong Kong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "museum",
+        "forbidden city",
+        "imperial art",
+        "west kowloon",
+        "rocco yim",
+        "victoria harbour"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "324fb306-4c81-4053-bbe4-ee101132596e",
+      "title": "M+ Museum",
+      "shortDescription": "Asia's first museum of contemporary visual culture — Herzog & de Meuron's inverted-T tower on Victoria Harbour, its facade a sixty-six-metre LED screen.",
+      "longDescription": "Stand with Victoria Harbour behind you and the main facade ahead: two volumes — a long horizontal podium running left to right, and a slender eighteen-storey tower rising from its centre — intersect to form an inverted T. The tower's harbour-facing side is sixty-six metres of LED panels that, after dark, display artworks, images, and moving-image sequences visible across the water. The architects — Swiss firm Herzog & de Meuron, with Hong Kong studio Farrells — described this as a deliberate retort to the commercial billboard culture of the Kowloon skyline: a cultural institution inserting itself into the visual noise of the harbour on the city's own terms.\n\nM+ opened on 12 November 2021 as Asia's first museum dedicated to contemporary visual culture — visual art, design and architecture, and moving image — with around eight thousand works across thirty-three galleries. Its largest single component is the Sigg Collection: 1,510 works of contemporary Chinese art donated by Uli Sigg, a Swiss diplomat who assembled one of the most significant collections of twentieth- and twenty-first-century Chinese art outside China. M+ opened with the National Security Law already in force, and was described as a litmus test for what a Hong Kong cultural institution could show and say. Nearly three million Hong Kongers registered to visit in the first eighteen months — experiencing it, during travel restrictions, almost entirely as the city it was built for.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/M_Plus_Museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/M_Plus_Museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/M_Plus_Museum_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5193950e-fa5d-4f7d-92a6-a41e9a059254",
+          "order": 0,
+          "title": "M+ Museum",
+          "caption": "Stand with Victoria Harbour behind you, facing the tower and its LED facade.",
+          "latitude": 22.30069,
+          "longitude": 114.1595,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/m-plus-museum.mp3",
+          "audioDurationSeconds": 159,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Look at the tower. The entire harbour-facing wall is a screen.\n\nStand with Victoria Harbour behind you and the building's main facade ahead: two volumes — a long, flat horizontal podium running left to right, and a slender eighteen-storey tower rising from its centre — intersecting to form an inverted T. The tower's harbour-facing side is covered in sixty-six metres of LED panels, which after dark display artworks, images, and moving image sequences visible from across the water. The architects — Swiss firm Herzog & de Meuron, working with Hong Kong studio Farrells — described this as a deliberate retort to the commercial billboard culture of the Kowloon skyline: a cultural institution inserting itself into the visual noise of the harbour on the city's own terms.\n\nM+ opened on the twelfth of November twenty twenty-one as Asia's first museum dedicated to contemporary visual culture — covering visual art, design and architecture, and moving image, with a collection drawn from Hong Kong, greater China, Asia, and the wider world. The building holds thirty-three galleries across sixty-five thousand square metres, and the collection runs to around eight thousand works. The largest single component is the Sigg Collection: one thousand five hundred and ten works of contemporary Chinese art donated by Uli Sigg, a Swiss diplomat and collector who assembled what became one of the most significant collections of twentieth and twenty-first century Chinese art outside of China, and gave it here.\n\nWorth knowing, standing in front of it: M+ opened while Hong Kong's National Security Law was already in force, and was described at the time as a litmus test for what a cultural institution in Hong Kong could show and say. That question has not entirely resolved itself, and the museum operates in a context that gives its existence a weight that purely aesthetic institutions rarely carry. Nearly three million Hong Kongers registered to visit in the first eighteen months — during which international travel restrictions meant the museum was experienced almost entirely by the city it was built for, rather than the world it was built to address.\n\nThe West Kowloon waterfront promenade runs east from the museum toward the Avenue of Stars — the harbour walk is good at any hour, and the view back toward Hong Kong Island from the water's edge is worth the walk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 159,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.30069,
+      "centroidLongitude": 114.1595,
+      "city": "Hong Kong",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "museum",
+        "contemporary art",
+        "herzog & de meuron",
+        "west kowloon",
+        "led facade",
+        "visual culture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3428179d-5d3b-4c14-84c1-968951fff505",
+      "title": "Murray Building",
+      "shortDescription": "A 1969 modernist government tower with windows angled to keep the sun out — Ron Phillips's passive-solar landmark, now the Murray hotel.",
+      "longDescription": "There's a curious thing about this building — it received an environmental award in 1994 for design decisions made in 1969. Face the Cotton Tree Drive facade: a twenty-seven-storey tower in white concrete, sitting above a row of eleven-metre arches at street level, with deep-set windows arranged in a precise geometric grid. The windows are not square-on to the street — each is angled to deflect direct sunlight away from the interior, a passive solar strategy that Ron Phillips embedded into the structure at a time when air conditioning was becoming standard and almost no one was thinking about reducing the need for it. The effect is that the building reads differently depending on where you stand and the hour you visit.\n\nPhillips was a British civil-servant architect working in the government's Architectural Office when he designed this in the mid-1960s. It was the tallest government structure in Hong Kong when it opened in 1969, and a landmark of Hong Kong modernism — breezy, rational and precise without being cold. It closed as a government office in 2011 and was converted by Foster + Partners into the 336-room Murray hotel, which opened in 2018; Phillips, then ninety, was consulted throughout. Hong Kong Park sits directly behind, on the former site of Victoria Barracks, and the walk through it toward the Peak Tram lower terminus is a good one.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Murray_Building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Murray_Building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Murray_Building_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "89f6413b-80e0-4ca6-9e12-41a5e21823b0",
+          "order": 0,
+          "title": "Murray Building",
+          "caption": "Face the Cotton Tree Drive facade and its grid of deep-set, angled windows.",
+          "latitude": 22.27834,
+          "longitude": 114.1601,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/murray-building.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There's a curious thing about this building — it received an environmental award in nineteen ninety-four for design decisions made in nineteen sixty-nine.\n\nFace the Cotton Tree Drive facade and take in what Ron Phillips built for the Hong Kong Public Works Department: a twenty-seven-storey tower in white concrete, sitting above a row of eleven-metre arches at street level, with a facade of deep-set windows arranged in a precise geometric grid. The windows are not square-on to the street — they're angled, each one skewed to deflect direct sunlight away from the interior, a passive solar strategy Phillips embedded into the building's structure at a time when air conditioning was becoming standard and almost no one was thinking about reducing the need for it. The angled fins along the facade serve the same purpose. The effect is that the building reads differently depending on where you stand and what hour you visit it — the shadows shift, the depth of the openings changes, the white surface catches and releases light across the day.\n\nPhillips was a British civil servant architect working in the government's Architectural Office when he designed this in the mid-nineteen-sixties, and the building he produced was, if you ask me, considerably more considered than a government office block had any obligation to be. It was the tallest government structure in Hong Kong when it opened in nineteen sixty-nine, and rather a landmark of Hong Kong modernism — breezy, rational, and precise, without being cold.\n\nThe building closed as a government office in two thousand and eleven and was converted by Foster + Partners into a three-hundred-and-thirty-six-room luxury hotel — the Murray — which opened in twenty eighteen. Phillips, then aged ninety, was consulted throughout the renovation. Foster + Partners' own architects described his original passive design as pioneering work done thirty years before sustainability became an architectural conversation.\n\nHong Kong Park is directly behind the building, and the walk through it toward the Peak Tram lower terminus is a good one — the park sits on the former site of Victoria Barracks, and the contrast between the formal gardens and the tower blocks pressing in on all sides is worth the short detour."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.27834,
+      "centroidLongitude": 114.1601,
+      "city": "Hong Kong",
+      "primaryCategory": "architecture",
+      "tags": [
+        "modernism",
+        "ron phillips",
+        "passive solar",
+        "hotel",
+        "foster + partners",
+        "central"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "971beb56-e8e3-44ed-8521-3cf22ce14e75",
+      "title": "Stone Slab Street",
+      "shortDescription": "A stepped granite street laid for sedan-chair carriers in colonial Hong Kong — uneven by design, named for the colony's first governor, known to locals as daam baan gaai.",
+      "longDescription": "It's 1842, and Henry Pottinger has just negotiated the Treaty of Nanking — the agreement that handed Hong Kong Island to Britain and created the colony. He became its first governor the following year, stayed fourteen months, and left. The street under your feet is named after him. The steps descend from Hollywood Road down to Queen's Road Central — roughly two hundred metres, climbing fifty metres of elevation. The granite slabs are laid in an alternating raised-and-lowered pattern that looks almost accidental but isn't: the unevenness let sedan-chair carriers and the coolies moving goods on shoulder poles find purchase on the wet granite, and channelled rainwater between the stones rather than letting it sheet down the slope.\n\nThe Chinese nickname, daam baan gaai — Stone Slab Street — captures the materiality the English name misses. Small wooden kiosks along the steps sell seasonal goods that shift with the Chinese calendar, traders who have held the same positions for decades, and beneath the surface a no-longer-accessible Second World War air-raid shelter still remains. At the top, immediately to your left on Hollywood Road, is Tai Kwun — the former Central Police Station compound and Victoria Prison — whose public courtyard makes a fitting contrast with the colonial granite you've just climbed.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Stone_Slab_Street_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0d6cd53c-53c8-4771-81a6-4a1547cf8ff9",
+          "order": 0,
+          "title": "Stone Slab Street",
+          "caption": "Stand on the stepped granite street between Hollywood Road and Queen's Road Central.",
+          "latitude": 22.28257,
+          "longitude": 114.15498,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/stone-slab-street.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "It's eighteen forty-two, and Henry Pottinger has just negotiated the Treaty of Nanking — the agreement that handed Hong Kong Island to Britain and created the colony. He became its first governor the following year, stayed fourteen months, and left. The street under your feet is named after him.\n\nThe steps descend from Hollywood Road at the top of the slope all the way down to Queen's Road Central below — roughly two hundred metres, climbing fifty metres of elevation, the gradient steep enough that you'll notice the texture underfoot changes as you move. The granite slabs are laid in an alternating pattern: raised and lowered, irregular, uneven in a way that looks almost accidental. It isn't. The unevenness was deliberate — designed so that the sedan chair carriers and the coolies moving goods on shoulder poles up and down the hill could find purchase on the wet granite without losing their footing, and so that rainwater would drain between the stones rather than sheeting straight down the slope. The design is practical engineering for a specific economy, and it is quite unchanged from the day it was laid.\n\nThe Chinese nickname for the street is daam baan gaai — Stone Slab Street — and the name captures what the English one doesn't: the texture, the materiality, the physical fact of the stone underfoot rather than the colonial administrator it was formally named for. Along the steps you'll find small wooden kiosks selling seasonal goods — costumes and decorations that shift with the Chinese calendar — traders who have occupied the same positions on the same steps for decades.\n\nBeneath the surface, a World War Two air-raid shelter was built to protect civilians during Japanese bombing raids. It is no longer accessible, but it is still there.\n\nTai Kwun — the former Central Police Station compound and Victoria Prison — is at the top of the steps, immediately to your left as you reach Hollywood Road. The courtyard inside is open to the public, and the contrast between the colonial granite of the prison walls and the street you've just climbed is worth a few minutes of your time."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.28257,
+      "centroidLongitude": 114.15498,
+      "city": "Hong Kong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "granite steps",
+        "colonial history",
+        "pottinger",
+        "central",
+        "heritage",
+        "hidden gems"
       ],
       "priceUSD": 0
     }
