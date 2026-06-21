@@ -866,6 +866,35 @@ sessions actually read.)
 
 ---
 
+## V2 — execution plan (in progress)
+
+**V2 = open the platform to outside makers + give consumers accounts.** It executes
+Tier 1 below (backend → auth + moderation → maker UI) and pulls Tier 3's sign-in
+forward. Each step is shippable on its own; the *design* steps are docs+SQL produced in
+web sessions, the *app* steps need a Mac (`test_sim` + simulator review before merge).
+
+Backend decided: **Supabase (Postgres)** — see `docs/backend-design.md`.
+
+| Step | What | Status |
+|---|---|---|
+| **1. Detach catalog** | App reads the catalog from a URL (`RemoteCatalogLoader`); bundled copy = offline seed | ✅ Shipped — build 46 (PR #209) |
+| **2. Backend foundation** | `makers`/`tours`/`stops` schema, public-read RLS, `get_catalog()` RPC, seed from `Tours.json` | 🟡 Design + SQL landed (PR #218). Pending: stand up Supabase + seed (owner); app URL-swap (Mac) |
+| **3. Accounts & auth** | `profiles`, self-serve makers, per-tour moderation, `reports`, consumer-sync tables; Apple+email+Google | 🟡 Design + SQL landed (PR #220). Pending: provider config (owner); sign-in UI + store sync (Mac) |
+| **4. Maker dashboard** | Phase 1 single-piece creation (record/import audio, pin+radius, photos, transcript, metadata, submit→review), then Phase 2 multi-stop | ⬜ Not started — app-heavy; builds on #218/#220 |
+| **5. Moderation surface** | Admin queue UI over `status='in_review'` + `reports` (schema exists in #220) | ⬜ Not started |
+| **6. Paid tours** | Apple IAP; `Tour.priceUSD` goes live; ownership tracking (Tier 2 #4) | ⬜ Not started |
+| **7. Maker payouts** | Stripe Connect (Tier 2 #5) | ⬜ Not started |
+| **8. Consumer richness** | Follow-a-maker push, in-app search, share links (sign-in/sync already in Step 3) | ⬜ Partially pulled forward |
+
+**Catalog rollout (de-risked, two phases)** once the DB is live: (1) keep the app on
+gh-pages while a job exports `get_catalog()` → `Tours.json` → gh-pages (proves the DB,
+zero app change); (2) point the app's `RemoteCatalogLoader` at the Supabase RPC, gh-pages
+stays a fallback mirror. Details in `docs/backend-design.md`.
+
+Design references: `docs/backend-design.md`, `docs/accounts-design.md`, `backend/`.
+
+---
+
 ## Post-V1 — Future direction (owner takes my lead, reserves right to change)
 
 The big arc after V1 is **opening the platform to outside makers.**
@@ -1026,13 +1055,15 @@ controls) → maker UI (the surface).
 
 ### Open questions for the owner (answer before each tier starts)
 
-- **Tier 1 #1** — backend stack? Firebase / Supabase / custom?
-- **Tier 1 #2** — phone-only MVP, web-only MVP, or both from day one?
-- **Tier 1 #2** — auto-transcription via Apple's on-device API (free, lower quality) or Whisper API (paid, higher quality)?
-- **Tier 2 #4** — paid tours per-purchase, subscription, both?
-- **Tier 2 #5** — Stripe Connect or another marketplace processor?
-- **Tier 3 #6** — Sign in with Apple only, or also email / Google?
-- **Tier 4 #10** — do reviews and ratings ship at all, or never?
+- **Tier 1 #1** — backend stack? **DECIDED 2026-06-21: Supabase (Postgres).**
+- **Tier 1 #1 / maker onboarding** — application gate vs self-serve? **DECIDED 2026-06-21: self-serve + per-tour moderation** (anyone signed in can create one maker profile; publishing is admin-gated).
+- **Tier 1 #2** — phone-only MVP, web-only MVP, or both from day one? *(open)*
+- **Tier 1 #2** — auto-transcription via Apple's on-device API (free, lower quality) or Whisper API (paid, higher quality)? *(open)*
+- **Tier 2 #4** — paid tours per-purchase, subscription, both? *(open)*
+- **Tier 2 #5** — Stripe Connect or another marketplace processor? *(open)*
+- **Tier 3 #6** — Sign in with Apple only, or also email / Google? **DECIDED 2026-06-21: Apple + email + Google.**
+- **Tier 3 #6 / accounts scope** — consumer accounts now or later? **DECIDED 2026-06-21: now** (optional sign-in + cross-device library/saved sync; anonymous use still works).
+- **Tier 4 #10** — do reviews and ratings ship at all, or never? *(open)*
 
 ---
 
