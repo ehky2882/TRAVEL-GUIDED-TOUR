@@ -7,3 +7,8 @@ place-des-vosges_hero.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/c
 place-des-vosges_2.webp	CC BY 3.0	https://upload.wikimedia.org/wikipedia/commons/3/3d/Place_des_Vosges_vue_a%C3%A9rienne.png
 place-des-vosges_3.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/6/65/Plaza_de_los_Vosgos%2C_Par%C3%ADs%2C_Francia%2C_2022-10-30%2C_DD_58.jpg
 place-des-vosges_4.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/f/f6/Paris_-_Place_des_Vosges_%2831187973930%29.jpg
+## Quai Branly (paris 33) — Wikimedia gallery
+musee-du-quai-branly_2.webp	CC0	https://upload.wikimedia.org/wikipedia/commons/5/54/Green_wall_Paris.jpg
+musee-du-quai-branly_3.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/b/b1/Le_mur_v%C3%A9g%C3%A9tal_%28Mus%C3%A9e_du_quai_Branly%29_%287166632353%29.jpg
+musee-du-quai-branly_4.webp	CC BY-SA 3.0	https://upload.wikimedia.org/wikipedia/commons/2/2b/La_casa_de_plantas_-_panoramio.jpg
+musee-du-quai-branly_5.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/9/97/Mus%C3%A9e_du_Quai_Branly_April_30%2C_2008_n2.jpg
