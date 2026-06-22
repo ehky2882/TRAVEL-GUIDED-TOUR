@@ -2,3 +2,8 @@
 palais-royal_hero.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/9/9f/Paris_Palais_Royal_Colonnes_de_Buren_2.jpg
 palais-royal_2.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/4/42/Paris_Palais_Royal_Colonnes_de_Buren_5.jpg
 palais-royal_3.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/0/00/Colonnes_de_Buren_%40_Palais_Royal_%40_Paris_%2825989308703%29.jpg
+## Place des Vosges (paris 15) — Wikimedia
+place-des-vosges_hero.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/3/3f/Paris_Place_des_Vosges_230.jpg
+place-des-vosges_2.webp	CC BY 3.0	https://upload.wikimedia.org/wikipedia/commons/3/3d/Place_des_Vosges_vue_a%C3%A9rienne.png
+place-des-vosges_3.webp	CC BY-SA 4.0	https://upload.wikimedia.org/wikipedia/commons/6/65/Plaza_de_los_Vosgos%2C_Par%C3%ADs%2C_Francia%2C_2022-10-30%2C_DD_58.jpg
+place-des-vosges_4.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/f/f6/Paris_-_Place_des_Vosges_%2831187973930%29.jpg
