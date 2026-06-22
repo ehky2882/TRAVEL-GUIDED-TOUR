@@ -12,3 +12,8 @@ musee-du-quai-branly_2.webp	CC0	https://upload.wikimedia.org/wikipedia/commons/5
 musee-du-quai-branly_3.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/b/b1/Le_mur_v%C3%A9g%C3%A9tal_%28Mus%C3%A9e_du_quai_Branly%29_%287166632353%29.jpg
 musee-du-quai-branly_4.webp	CC BY-SA 3.0	https://upload.wikimedia.org/wikipedia/commons/2/2b/La_casa_de_plantas_-_panoramio.jpg
 musee-du-quai-branly_5.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/9/97/Mus%C3%A9e_du_Quai_Branly_April_30%2C_2008_n2.jpg
+## La Madeleine (paris 36) — Wikimedia gallery
+la-madeleine_3.webp	Public domain	https://upload.wikimedia.org/wikipedia/commons/4/4e/The_Church_of_La_Madeleine%2C_Paris_-_DPLA_-_d18939b5028bd7797b692493d64309b8_%28page_1%29.jpg
+la-madeleine_4.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/2/24/La_Madeleine_-_Paris_%283770431016%29.jpg
+la-madeleine_5.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/f/f2/Eglise_de_la_Madeleine_%40_Paris_%2831447875715%29.jpg
+la-madeleine_6.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/6/6d/Interior_of_%C3%89glise_de_la_Madeleine%2C_Paris_27_April_2008.jpg
