@@ -36,3 +36,12 @@ paris-triumphalway_stop3.webp	Place de la Concorde obelisk	Pexels
 paris-triumphalway_stop4.webp	Champs-Elysees	Unsplash
 paris-triumphalway_stop5.webp	Arc de Triomphe	Unsplash
 paris-triumphalway_stop6.webp	Grande Arche de la Defense	Pexels
+
+# Paris Montmartre multi-stop walk (staged 2026-06-23) — all ship-safe, no attribution required
+paris-montmartre_hero.webp	Sacre-Coeur above rooftops	Pexels
+paris-montmartre_stop0.webp	Montmartre staircase street	Unsplash
+paris-montmartre_stop1.webp	Place des Abbesses Guimard metro	Pexels
+paris-montmartre_stop2.webp	Wall of Love	Pexels
+paris-montmartre_stop3.webp	Sacre-Coeur steps	Pexels
+paris-montmartre_stop4.webp	Place du Tertre	Pexels
+paris-montmartre_stop5.webp	Moulin Rouge	Pexels
