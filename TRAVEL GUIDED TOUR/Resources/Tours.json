@@ -16887,7 +16887,14 @@
       "title": "After the Fire: Wren's City",
       "priceUSD": 0,
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/after-the-fire-wrens-city_hero.webp",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/after-the-fire-wrens-city_stop0.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/after-the-fire-wrens-city_stop1.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/after-the-fire-wrens-city_stop2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/after-the-fire-wrens-city_stop3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/after-the-fire-wrens-city_stop4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/after-the-fire-wrens-city_stop5.webp"
+      ],
       "tags": [
         "great fire of london",
         "christopher wren",
@@ -17000,7 +17007,14 @@
       "title": "Albertopolis",
       "priceUSD": 0,
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albertopolis_hero.webp",
-      "additionalImageURLs": null,
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albertopolis_stop0.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victoria-and-albert-museum_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/science-museum_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-albert-hall_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albert-memorial_hero.webp"
+      ],
       "tags": [
         "albertopolis",
         "prince albert",
