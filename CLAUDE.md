@@ -66,7 +66,20 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-21)
+## Current State (2026-06-23)
+
+### Doc sync — catalog at 362 tours / 5 cities; remote-catalog era (session 42 — web/PM, docs)
+
+Docs-only session: refreshed Current State to reality after the Hong Kong + London growth outran the docs (they read 307/4 in places). **No app/content/build change** — `CLAUDE.md` + `ROADMAP.md` + a new HANDOFF only (auto-merge class).
+
+**Catalog now 362 tours / 5 makers / 381 stops / 4 multi-stop** (live-verified against `Resources/Tours.json`):
+- **NYC 100 · London (LDN) 97 · Lisbon (LIS) 66 · Porto (OPO) 54 · Hong Kong (HKG) 45.** Five cities. **Hong Kong is the newest** — an Asian flagship built 0 → 45 in a few days (PRs #226–#234).
+- **All 45 Hong Kong tours are bilingual** — `English | 中文` title format (both tour and stop titles).
+- **4 multi-stop tours:** AMNH Four Facades (5 stops, NYC), Fifth Avenue Walk (6, NYC), After the Fire: Wren's City (6, London), Albertopolis (6, London). The two London walks were wired + gallery-fixed during this growth (PRs #232/#233). 3 more London multi-stop walks are drafted on `claude/london-batch3-scripts-260616`, awaiting wiring.
+
+**Remote-catalog era (the workflow change that matters):** since build 46, content ships with **no app build** — PR #209 made the app fetch `Tours.json` from gh-pages at launch (bundled copy = offline seed), and PR #212 auto-publishes `Tours.json` → gh-pages on every content merge to `main`. **Net: merge a content PR → it goes live to build-46+ users with no rebuild and no App Store review.** Realistic latency ≈ **~5 min after merge + an app relaunch** (~1–2 min publish + GitHub Pages CDN propagation; the app shows its cached catalog first, then refreshes in the background — sometimes a second relaunch is needed). **TestFlight 1.0 (46) remains current and is the last content-driven build** — build bumps are now only needed for actual app-code changes (and still go via the short-lived-PR pattern, since the classifier blocks direct-to-main pbxproj pushes).
+
+**In flight / on the horizon:** **Paris** being drafted as the 6th city (`claude/paris-scripts-260622`); **V2 creator-platform** groundwork continues across design/code branches (`backend-foundation`, `accounts-design`, `moderation-design`, `maker-dashboard-design`, `maker-phase2-design`, `v2-roadmap`) — see the session-41 block below and ROADMAP § V2.
 
 ### V2 backend designed end-to-end — Steps 2–5 + maker authoring P1/P2 (session 41 — web/PM, design)
 
@@ -524,8 +537,9 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **307 tours, 5 makers, 316 stops** in `Resources/Tours.json` (100 Atlas Studio NYC + 80 Atlas Studio LDN + 66 Atlas Studio LIS + 54 Atlas Studio OPO + 7 Atlas Studio HKG); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **Since build 46 the catalog is remote-loaded** from `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` (bundled copy = offline seed) via `RemoteCatalogLoader` — content ships by pushing that file to gh-pages, no app build.
-- **305 single-stop + 2 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, ~8m 44s, exterior walk, added 2026-05-26) and "Fifth Avenue Walk" (6 stops, added 2026-06-03) — both geofenced. AMNH unblocks M-qa items 6 + 7.
+- **362 tours, 5 makers, 381 stops** in `Resources/Tours.json` (100 Atlas Studio NYC + 97 Atlas Studio LDN + 66 Atlas Studio LIS + 54 Atlas Studio OPO + 45 Atlas Studio HKG); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **Since build 46 the catalog is remote-loaded** from `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` (bundled copy = offline seed) via `RemoteCatalogLoader`, and `.github/workflows/publish-catalog.yml` auto-publishes that file on every content merge to `main` — content ships by merging a `Tours.json` PR, no app build (live ≈ ~5 min + an app relaunch).
+- **358 single-stop + 4 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, NYC), "Fifth Avenue Walk" (6 stops, NYC), "After the Fire: Wren's City" (6 stops, London) and "Albertopolis" (6 stops, London) — all geofenced. AMNH unblocks M-qa items 6 + 7.
+- **All 45 Hong Kong (HKG) tours are bilingual** — `English | 中文` title format on both tour and stop titles.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
