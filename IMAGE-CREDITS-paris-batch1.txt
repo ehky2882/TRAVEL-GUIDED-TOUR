@@ -45,3 +45,12 @@ paris-montmartre_stop2.webp	Wall of Love	Pexels
 paris-montmartre_stop3.webp	Sacre-Coeur steps	Pexels
 paris-montmartre_stop4.webp	Place du Tertre	Pexels
 paris-montmartre_stop5.webp	Moulin Rouge	Pexels
+
+# Paris Marais multi-stop walk (staged 2026-06-23)
+paris-marais_hero.webp	Marais street	Pexels (no attribution required)
+paris-marais_stop0.webp	Marais street	Pexels (no attribution required)
+paris-marais_stop1.webp	Hotel de Ville	Pexels (no attribution required)
+paris-marais_stop2.webp	Centre Pompidou	Pexels (no attribution required)
+paris-marais_stop3.webp	Hotel Sale (Musee Picasso)	CC BY-SA 3.0	LPLT	https://commons.wikimedia.org/wiki/File:Hôtel_Salé.JPG	https://creativecommons.org/licenses/by-sa/3.0
+# stop 4 = paris-marais_stop4.webp (Place des Vosges, Pexels); stop 5 reuses existing musee-carnavalet_hero.webp
+paris-marais_stop4.webp	Place des Vosges	Pexels (no attribution required)
