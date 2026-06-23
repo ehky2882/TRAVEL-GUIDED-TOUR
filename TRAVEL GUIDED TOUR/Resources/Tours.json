@@ -16169,6 +16169,715 @@
         "cultural heritage"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "6865b88c-3d7f-4292-b41f-bc6425a3cc0c",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "St Pancras & King's Cross",
+      "shortDescription": "George Gilbert Scott's Gothic fairy-tale hotel and Barlow's record-breaking train shed — the whole Victorian century in one building, saved from demolition by a poet.",
+      "longDescription": "St Pancras pairs two Victorian masterpieces: the Midland Grand Hotel, George Gilbert Scott's exuberant Gothic frontage of spires and pinnacles, and behind it William Barlow's single-span iron-and-glass train shed, once the widest enclosed space on earth. By the 1960s it had fallen so far out of fashion that it was slated for demolition, like the Euston Arch before it. The poet John Betjeman led the fight that saved it — and a bronze statue of him now gazes up at the roof he rescued.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pancras-kings-cross_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pancras-kings-cross_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pancras-kings-cross_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pancras-kings-cross_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pancras-kings-cross_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pancras-kings-cross_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pancras-kings-cross_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pancras-kings-cross_8.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pancras-kings-cross_9.webp"
+      ],
+      "tags": [
+        "st pancras",
+        "king's cross",
+        "gothic revival",
+        "george gilbert scott",
+        "railway",
+        "victorian",
+        "john betjeman"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "464fff53-a2a7-4860-af97-a3f553be3009",
+          "order": 0,
+          "title": "St Pancras & King's Cross",
+          "caption": "Stand on the Euston Road, on the south side, and look up at the front of St Pancras station — the red-brick palace with the spires and the clock tower, the one that looks far too grand to be somewhere you catch a train.",
+          "latitude": 51.532,
+          "longitude": -0.1257,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-pancras-kings-cross.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-pancras-kings-cross_hero.webp",
+          "transcriptText": "Stand on the Euston Road, on the south side, and look up at the front of St Pancras station — the red-brick palace with the spires and the clock tower, the one that looks far too grand to be somewhere you catch a train.\n\nThat's the point. It was meant to.\n\nWhen it went up in the 1860s, the railway companies were the richest, most aggressive businesses in Britain, and the Midland Railway wanted a London terminus that said so out loud. So they hired George Gilbert Scott, the most fashionable Gothic architect of the day, and told him to build a hotel that would shame every rival into silence. The result is the Midland Grand — all those pinnacles and pointed arches and that improbable roofline, Gothic detail borrowed from Venetian palaces and Flemish cloth halls and stacked up in front of a railway shed.\n\nLook past the hotel for a moment, at the great curved roof of the shed behind it. When William Barlow threw that single span of iron and glass over the platforms, it was the widest enclosed space anywhere in the world. The fairy-tale front and the engineering miracle behind it — that's the whole Victorian century standing in one place.\n\nNow here's the part that should stop you. By the 1960s all of this had fallen so far out of fashion that there were serious plans to pull it down. Euston station, just up the road, had its famous arch demolished in 1962, and St Pancras looked like it was next in the queue.\n\nWhat saved it was, more or less, one man — the poet John Betjeman, who loved Victorian buildings when almost nobody else did, and who led the fight to keep this one standing. There's a statue of him inside now, up on the platform concourse, cap in hand, gazing up at the roof he helped rescue.\n\n[beat]\n\nSo when you go in — and you should — head up to the platform level and find him. A slightly rumpled man in bronze, looking up. It's easy to walk straight past him on the way to a train, but he's the reason there's anything here worth walking past."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.532,
+      "centroidLongitude": -0.1257,
+      "city": "London",
+      "primaryCategory": "architecture",
+      "priceUSD": 0
+    },
+    {
+      "id": "d3da65f8-885c-4807-a1f8-50dc2bb0494b",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Coal Drops Yard",
+      "shortDescription": "Victorian coal warehouses behind King's Cross — once among London's dirtiest spots — reborn as a Heatherwick-designed quarter that kept the brick, the bones, and the names.",
+      "longDescription": "Granary Square and the Coal Drops were the grimy engine room of Victorian London, where trains tipped coal, grain and ice straight onto canal barges. Derelict for most of the twentieth century — and home to a lawless 1990s nightclub scene — the two long brick sheds were reborn when Thomas Heatherwick stretched their swooping roofs towards each other until they kiss. The result keeps the industrial bones and the old names intact rather than pretending at history.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coal-drops-yard_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coal-drops-yard_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coal-drops-yard_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coal-drops-yard_4.webp"
+      ],
+      "tags": [
+        "coal drops yard",
+        "king's cross",
+        "granary square",
+        "heatherwick",
+        "regeneration",
+        "victorian",
+        "canal"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e26bd22c-6bf8-48db-bd45-4ba94a4f7e8d",
+          "order": 0,
+          "title": "Coal Drops Yard",
+          "caption": "You're standing in the middle of what used to be one of the dirtiest places in London.",
+          "latitude": 51.5355,
+          "longitude": -0.126,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/coal-drops-yard.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coal-drops-yard_hero.webp",
+          "transcriptText": "You're standing in the middle of what used to be one of the dirtiest places in London.\n\nIt doesn't look it now. Granary Square, where you're standing, is all clean stone and open water, and if you've timed it right there are a thousand little fountains rising and falling out of the ground in front of you, lit up after dark, children running through them in summer. But pull the gloss away and the names tell you what this was. Coal Drops. Granary. Goods Yard. This whole quarter behind King's Cross station was where the railways unloaded the things that kept Victorian London alive — coal, grain, ice, fish — straight off the trains and onto the canal barges waiting beside it.\n\nTurn and look at the long brick buildings to one side, the ones with the great swooping roofs that seem to lean towards each other across a narrow gap. Those are the Coal Drops — built in the 1850s so that trains could run along the top and tip their coal down through the floors into wagons and barges below. Industrial machinery, essentially, the size of a street. For most of the twentieth century, once the coal stopped, they sat derelict, and for a while in the 1980s and 90s the only thing happening in here was a legendary, slightly lawless nightclub scene.\n\nNow look at what's been done to them. The architect Thomas Heatherwick took those two Victorian roofs and stretched them towards each other until they kiss in the middle, making a single covered space out of two old sheds, and filled the lot with shops and restaurants.\n\n[beat]\n\nThat's the move worth noticing here. Nobody knocked the coal yards down and started again. They kept the brick, kept the bones, kept the names, and let the new thing grow out of the old one. So when you walk through, you're not in a shopping centre that's pretending to have history — you're in the actual machinery of Victorian London, still standing, still useful, just asked to do something gentler with its old age. Walk the canal towpath behind it if you've time. The barges are gone, but the water's exactly where it was."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.5355,
+      "centroidLongitude": -0.126,
+      "city": "London",
+      "primaryCategory": "culturalHeritage",
+      "priceUSD": 0
+    },
+    {
+      "id": "e73c0bde-55b6-4233-a278-b51268a821d4",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Regent's Park",
+      "shortDescription": "John Nash's grand stage set: palatial white terraces that are really rows of ordinary houses in disguise, ringing a park composed like a landscape painting.",
+      "longDescription": "Designed by John Nash for the Prince Regent in the early 1800s, Regent's Park is a piece of theatre. The palatial stuccoed terraces around it aren't great houses at all but rows of ordinary homes dressed up to read, from across the lawns, as one enormous palace. Nash spent his money on the silhouette — the view from the middle distance — and composed the park's lake, trees and sightlines as carefully as a painter arranges a canvas.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/regents-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/regents-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/regents-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/regents-park_4.webp"
+      ],
+      "tags": [
+        "regent's park",
+        "john nash",
+        "regency",
+        "terraces",
+        "royal parks",
+        "landscape"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3c35ca49-1b7d-4592-877c-1c3d74a7fe4f",
+          "order": 0,
+          "title": "Regent's Park",
+          "caption": "Find a spot near the edge of the park where you can see one of the long white terraces — a whole row of grand houses behind a single unbroken facade, columns and pediments running the length of the street, painted the colour of wedding cake.",
+          "latitude": 51.5313,
+          "longitude": -0.157,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/regents-park.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/regents-park_hero.webp",
+          "transcriptText": "Find a spot near the edge of the park where you can see one of the long white terraces — a whole row of grand houses behind a single unbroken facade, columns and pediments running the length of the street, painted the colour of wedding cake.\n\nWalk up close to one, and look carefully. It's a fake. Or rather, it's theatre.\n\nThese terraces were the work of John Nash, the favourite architect of the Prince Regent — the future George the Fourth — in the early 1800s. The Prince wanted a grand new park on the edge of town, ringed with palaces fit for the aristocracy, with a route running straight down to his own residence. Nash gave him exactly that, on paper. What actually got built is cleverer and slightly more dishonest. Behind those palatial fronts aren't single great houses at all — they're rows of ordinary terraced homes, dressed up to look, from across the park, like one enormous palace.\n\nThat's the trick worth seeing. Nash wasn't really designing buildings here so much as designing a view. He understood that almost nobody would ever stand where you're standing and inspect the brickwork — they'd see it from a carriage, from across the lawns, at a distance, where the columns and the symmetry read as sheer magnificence. So that's where he put all the money: on the surface, the silhouette, the bit you see from far away.\n\n[beat]\n\nNow turn and look at the park itself, because it's the other half of the same idea. It feels wild and rolling and natural, the lake curving off out of sight, trees placed as if they simply grew there. None of it is accidental. Every tree, every bend in the water, every gap that lets a terrace appear suddenly through the leaves was composed, the way a painter composes a landscape.\n\nSo this whole place is a stage set two hundred years old — the grandest backdrop in London, built to be admired from exactly the middle distance you're probably standing in. Step back. Let the terrace blur slightly into one great white sweep. That's the view Nash actually built. Up close was never the point."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.5313,
+      "centroidLongitude": -0.157,
+      "city": "London",
+      "primaryCategory": "natureAndParks",
+      "priceUSD": 0
+    },
+    {
+      "id": "b829e156-a654-493a-a8c8-bc9d18855ba1",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Primrose Hill",
+      "shortDescription": "The closest big view of central London you can reach on foot — and a skyline legally protected so nothing may ever block the dome of St Paul's.",
+      "longDescription": "From the top of Primrose Hill the whole of central London lies below — St Paul's, the City's glass towers, the Shard across the river. The view is more than scenic: a protected sightline drawn through the air legally forbids any building that would block the dome of St Paul's from this spot. It has been a poets' hill for two centuries, too — William Blake claimed a vision of the spiritual sun here, and his words are carved into the stone near the summit.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/primrose-hill_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/primrose-hill_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/primrose-hill_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/primrose-hill_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/primrose-hill_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/primrose-hill_6.webp"
+      ],
+      "tags": [
+        "primrose hill",
+        "viewpoint",
+        "protected view",
+        "st paul's",
+        "william blake",
+        "skyline"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4b1c0f37-df3a-4267-8d99-f0fc7e659847",
+          "order": 0,
+          "title": "Primrose Hill",
+          "caption": "You've climbed the hill, so catch your breath, turn around, and look south across the city.",
+          "latitude": 51.5388,
+          "longitude": -0.1607,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/primrose-hill.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/primrose-hill_hero.webp",
+          "transcriptText": "You've climbed the hill, so catch your breath, turn around, and look south across the city.\n\nThat view is the reason you came up here, and it's also the reason this hill looks the way it does — open, grassy, undeveloped, when it sits on some of the most valuable land in London. Somebody decided, long ago, that what you're looking at mattered more than what could be built here.\n\nTake the skyline in for a second. St Paul's dome, off to your right, low and pale. The cluster of glass towers in the City beyond it. The Shard further round to the left, standing on its own south of the river. The whole of central London laid out below you like a model, the parks stitching the green between the grey.\n\nHere's the thing that holds it all in place: this is a protected view. There's an actual law — a sightline drawn through the air — that says nothing may be built in the gap between this hill and St Paul's Cathedral that would block the dome. Developers have to prove their tower won't intrude on it. So the view in front of you isn't just nice. It's legally defended, an agreement that some things are worth keeping clear even when there's money to be made by filling them in.\n\n[beat]\n\nThere's a softer history here too. This hill has been a poets' hill for two centuries — Blake claimed he had a vision of the spiritual sun up here, and writers and walkers have come for the same reason you have: it's the closest big view to the centre that you can reach on foot, with no ticket and no queue. On the railings near the top you'll find William Blake's words carved into the stone, about the spiritual fourfold vision he said he saw from this spot.\n\nSo stay a while. This is one of the few places in London where the whole city agrees to hold still and let you look at it — and where, by law, it has to keep doing so. Come back at dusk if you can. The towers light up one by one, and the dome holds its ground in the middle, exactly where the law says it must."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.5388,
+      "centroidLongitude": -0.1607,
+      "city": "London",
+      "primaryCategory": "natureAndParks",
+      "priceUSD": 0
+    },
+    {
+      "id": "f76079e2-b876-4451-a3ba-551886f9c4be",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "London Zoo",
+      "shortDescription": "The world's oldest scientific zoo, where the word 'zoo' was coined — and home to Lubetkin's empty, beautiful 1934 Penguin Pool, a building the penguins themselves voted against.",
+      "longDescription": "Opened in 1828 as a research collection for the Zoological Society, London Zoo is the oldest scientific zoo in the world — and the place where the word 'zoo' was coined. Its most famous structure is Berthold Lubetkin's 1934 Penguin Pool, two wafer-thin spiralling concrete ramps that became a manifesto for modern architecture. The penguins were eventually moved out — the hard concrete was unkind to their feet — leaving a gorgeous listed monument standing empty, a perfect emblem of two centuries of changing minds about animals.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/london-zoo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/london-zoo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/london-zoo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/london-zoo_4.webp"
+      ],
+      "tags": [
+        "london zoo",
+        "zoological society",
+        "penguin pool",
+        "lubetkin",
+        "modernism",
+        "conservation"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "61968176-fb3d-4ebc-8da4-8be4cf60210f",
+          "order": 0,
+          "title": "London Zoo",
+          "caption": "Before you go in, a quiet fact: this is the oldest scientific zoo in the world.",
+          "latitude": 51.5353,
+          "longitude": -0.153,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/london-zoo.mp3",
+          "audioDurationSeconds": 148,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/london-zoo_hero.webp",
+          "transcriptText": "Before you go in, a quiet fact: this is the oldest scientific zoo in the world.\n\nNot the oldest place where animals were kept for show — kings had been doing that for centuries, and London itself had a royal menagerie in the Tower for six hundred years. This was something new. When it opened in 1828, the London Zoo wasn't built for the public at all. It was a research collection for the Zoological Society, a place for scientists to study living animals rather than dead specimens, and the word \"zoo\" — short for zoological gardens — was actually coined right here.\n\nBut the reason to slow down at this particular zoo isn't only the animals. It's the architecture, and one building above all. If you can find it — or look it up before you go — seek out the old Penguin Pool.\n\nIt was built in 1934 by Berthold Lubetkin, a Russian émigré architect, and it is one of the most famous small buildings in Britain. Two long curving concrete ramps, thin as ribbons, spiralling around each other over a shallow blue pool, with nothing holding them up in the middle. At the time, nobody believed concrete could be made to do that. It became a manifesto — proof that this strange new modern architecture could be elegant, even playful, not just stark.\n\n[beat]\n\nHere's the bittersweet part. The penguins were eventually moved out, because for all its beauty the pool turned out to be a slightly miserable home for them — the hard concrete was hard on their feet, and the design served the idea more than the birds. So it stands empty now, a listed monument with nothing living in it, beautiful and beside the point.\n\nAnd that's the thing worth carrying around the rest of the zoo. This whole place is two centuries of humans changing their minds about animals — from specimens to spectacle to the careful, enclosure-redesigning conservation thinking you'll see today. The empty penguin pool is the perfect emblem of it: a gorgeous building, built with total confidence, that the animals themselves quietly voted against. Keep an eye, as you walk round, for how much newer everything feels. That's not an accident. That's the apology."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 148,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.5353,
+      "centroidLongitude": -0.153,
+      "city": "London",
+      "primaryCategory": "natureAndParks",
+      "priceUSD": 0
+    },
+    {
+      "id": "cb909279-90b3-42c1-9077-77e7d4842241",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Camden Market",
+      "shortDescription": "A Georgian canal interchange that lost its job, sat empty, and filled up with stalls, music and youth culture — best understood from the lock that gave it its name.",
+      "longDescription": "Everyone comes to Camden for the market, but the canal is the reason it's all here. Camden Lock sits on the Regent's Canal, cut in the 1810s to carry coal and cargo across north London, with warehouses built to store the goods. When the canal trade died, the empty buildings filled with craftspeople, market stalls and a music scene that became an engine of British youth culture. Look for the old horse hospital and the cobbled ramps — relics of when the whole operation ran on horses.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/camden-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/camden-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/camden-market_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/camden-market_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/camden-market_5.webp"
+      ],
+      "tags": [
+        "camden market",
+        "camden lock",
+        "regent's canal",
+        "music",
+        "youth culture",
+        "warehouses"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5eade7b5-f62b-4aa8-8f6d-f853b853fddd",
+          "order": 0,
+          "title": "Camden Market",
+          "caption": "Everyone comes to Camden for the market — the stalls, the food, the leather and the band t-shirts, the crowds three deep on a Saturday. But stand for a moment by the water, at the lock itself, because the water is the reason all the rest of it is here.",
+          "latitude": 51.5414,
+          "longitude": -0.1466,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/camden-market.mp3",
+          "audioDurationSeconds": 148,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/camden-market_hero.webp",
+          "transcriptText": "Everyone comes to Camden for the market — the stalls, the food, the leather and the band t-shirts, the crowds three deep on a Saturday. But stand for a moment by the water, at the lock itself, because the water is the reason all the rest of it is here.\n\nThis is Camden Lock, and the clue's in the name. That gentle drop in the canal in front of you, where the water steps down between two sets of wooden gates — that's the lock that gave this whole place its identity. The canal is the Regent's Canal, cut in the 1810s and 20s to carry cargo across north London between the docks and the Midlands. Camden was a working interchange: goods came off the canal boats here, onto carts and later onto the railway, and the warehouses you can see around you were built to store all of it.\n\nLook at those buildings now, because they tell the story of what happened next. By the second half of the twentieth century the canal trade was finished, the warehouses were empty, and into that emptiness — cheap rent, big spaces, nobody minding — came craftspeople, then market stalls, then a music scene that turned Camden into one of the engines of British youth culture for decades. Punk, then everything after it, played the pubs and venues a few minutes' walk from where you're standing.\n\n[beat]\n\nThere's one lovely detail to hunt for. Tucked into the market there's a place called the Horse Hospital — or stables, depending which corner you find — a reminder that this was a transport hub long before lorries, when the whole operation ran on horses hauling boats and carts, and the animals needed somewhere to be stabled and treated. Look for the ramps and the cobbles built for hooves, not feet.\n\nSo here's Camden in one frame: a piece of Georgian shipping infrastructure that lost its job, sat empty long enough for something stranger and louder to move in, and turned into a marketplace for a kind of London that doesn't fit anywhere tidier. Buy something you didn't plan to. Then come back to the lock and watch a narrowboat work through it — slow, patient, exactly as it did two hundred years ago."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 148,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.5414,
+      "centroidLongitude": -0.1466,
+      "city": "London",
+      "primaryCategory": "culturalHeritage",
+      "priceUSD": 0
+    },
+    {
+      "id": "41aacac4-17ed-412b-8a60-7c30ffdcb4f1",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Highgate Cemetery",
+      "shortDescription": "London's most fashionable Victorian garden cemetery — theatrical tombs, the pharaonic Egyptian Avenue, and Karl Marx — half-reclaimed by ivy and roots.",
+      "longDescription": "Opened in 1839 as a grand answer to London's catastrophically overcrowded churchyards, Highgate became the most fashionable of the city's garden cemeteries — a place to walk, to be seen, and to admire monuments. Its tombs are pure Victorian theatre: broken columns, draped urns, sleeping angels, and the pharaonic Egyptian Avenue, now half-swallowed by ivy. Karl Marx rests on the eastern side, still drawing visitors from around the world, but the quieter graves carry the same message — that grief deserved grandeur.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/highgate-cemetery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/highgate-cemetery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/highgate-cemetery_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/highgate-cemetery_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/highgate-cemetery_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/highgate-cemetery_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/highgate-cemetery_7.webp"
+      ],
+      "tags": [
+        "highgate cemetery",
+        "victorian",
+        "garden cemetery",
+        "egyptian avenue",
+        "karl marx",
+        "monuments"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "18d69fca-571c-4180-b40b-1a8926510008",
+          "order": 0,
+          "title": "Highgate Cemetery",
+          "caption": "Go gently here. This is a cemetery, still in use, and people come to visit graves that matter to them. But it's also one of the most extraordinary places in London, and it's worth understanding why it looks the way it does.",
+          "latitude": 51.567,
+          "longitude": -0.147,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/highgate-cemetery.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/highgate-cemetery_hero.webp",
+          "transcriptText": "Go gently here. This is a cemetery, still in use, and people come to visit graves that matter to them. But it's also one of the most extraordinary places in London, and it's worth understanding why it looks the way it does.\n\nHighgate opened in 1839, and to understand it you have to know what came before it. By the 1830s London's old parish churchyards were catastrophically full — bodies stacked beyond any decency, a genuine public health crisis. The answer was a ring of huge new private cemeteries on the city's edge, landscaped like parks, and Highgate became the most fashionable of them all. People didn't just bury their dead here. They came to walk, to be seen, to admire the monuments. Death, to the Victorians, was something you dressed up and displayed.\n\nYou can read that everywhere you look. The tombs are theatrical — broken columns, draped urns, sleeping stone angels, a whole grammar of mourning carved in marble. The most famous stretch is the Egyptian Avenue, a row of tombs built like the entrance to a pharaoh's chamber, leading to a sunken circle of vaults ringed by a great cedar tree. It's overgrown now, half-reclaimed by ivy and roots, and that wildness is part of why people love it — a Victorian fantasy of death slowly being taken back by the living world.\n\n[beat]\n\nThere are famous people resting here — the one most visitors look for is Karl Marx, whose great bearded bust sits on the eastern side, still drawing visitors from across the world more than a century after he died a few streets away in poverty. But try not to let it become a celebrity hunt. The quieter graves matter just as much.\n\nWhat this place really preserves is an attitude — a century that believed grief deserved grandeur, that the dead should be remembered out loud, in stone, under trees. Walk slowly. Read a few of the ordinary names, not just the famous one. The whole point of a garden cemetery was that remembering could be beautiful rather than only sad, and standing here among the ivy and the leaning angels, you can feel them having got that right."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.567,
+      "centroidLongitude": -0.147,
+      "city": "London",
+      "primaryCategory": "culturalHeritage",
+      "priceUSD": 0
+    },
+    {
+      "id": "ed4ab3f3-8fc3-4446-a90e-a02ee599b20f",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Abbey Road",
+      "shortDescription": "The most photographed zebra crossing on earth, outside the working studio where the Beatles recorded — a piece of road so loved it's been given protected status.",
+      "longDescription": "On 8 August 1969 four Beatles walked across this zebra crossing while a photographer took six frames from a stepladder; one became the cover of Abbey Road. Behind it stands Abbey Road Studios, one of the oldest purpose-built recording studios in the world, opened in 1931 and still working today. The crossing has a live 24-hour webcam pointed at it and has been given listed status — a very British thing to do to some paint. The studio wall, endlessly painted over with fans' messages, is part of the ritual.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abbey-road-crossing_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abbey-road-crossing_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abbey-road-crossing_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abbey-road-crossing_4.webp"
+      ],
+      "tags": [
+        "abbey road",
+        "the beatles",
+        "zebra crossing",
+        "abbey road studios",
+        "recording",
+        "st john's wood"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e70f89fa-8e03-4e8a-ae95-c6ce5a469f9e",
+          "order": 0,
+          "title": "Abbey Road",
+          "caption": "You're looking at a zebra crossing. Black and white stripes, a Belisha beacon blinking on each side, cars waiting, slightly impatient, while people stop in the middle to take photographs. It is, almost certainly, the most photographed zebra crossing on earth.",
+          "latitude": 51.532,
+          "longitude": -0.1777,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/abbey-road-crossing.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abbey-road-crossing_hero.webp",
+          "transcriptText": "You're looking at a zebra crossing. Black and white stripes, a Belisha beacon blinking on each side, cars waiting, slightly impatient, while people stop in the middle to take photographs. It is, almost certainly, the most photographed zebra crossing on earth.\n\nYou already know why. On the eighth of August, 1969, four members of the Beatles walked across this exact crossing while a photographer stood on a stepladder in the road and took six frames in ten minutes. One of them became the cover of the album they named after the street: Abbey Road. No title on the sleeve, no band name — just four men walking. It didn't need words.\n\nNow turn and look at the building behind it, the white Georgian townhouse set back from the road. That's Abbey Road Studios, and it's the real reason any of this happened. It's one of the oldest purpose-built recording studios in the world, opened in 1931, and the Beatles recorded most of their music inside it. The crossing is famous because the studio was there, and the studio is still working — bands and film composers record here today, which is why you can't go in.\n\n[beat]\n\nHere's the small modern absurdity worth knowing. There is a webcam, pointed at this crossing, live, twenty-four hours a day. At any moment, people anywhere in the world can be watching this exact spot — watching you, if you step out onto it now. The crossing itself is so beloved that it's been given protected status, a piece of ordinary road infrastructure listed for its cultural importance, which is a very strange and very British thing to do to some paint.\n\nSo go ahead — wait for a proper gap, be kind to the drivers, and walk across. You'll be repeating something a few million people have done in imitation of a ten-minute photo shoot from over fifty years ago. It's daft, and it's joyful, and that's rather the point. The wall by the studio gate is covered in fans' messages, painted over and rewritten endlessly. Add nothing, just read a few. People came from everywhere to stand exactly where you are."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.532,
+      "centroidLongitude": -0.1777,
+      "city": "London",
+      "primaryCategory": "culturalHeritage",
+      "priceUSD": 0
+    },
+    {
+      "id": "b986f818-fb8d-4126-b1dc-85dc6315ea70",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Lord's Cricket Ground",
+      "shortDescription": "Cricket's cathedral: the Long Room walk, a playing field that famously isn't flat, and a joke trophy smaller than your hand that never leaves the building.",
+      "longDescription": "Lord's is the closest cricket has to a cathedral, home of the Marylebone Cricket Club that wrote and guarded the laws of the game worldwide for two centuries. Players walk out to bat through the wood-panelled Long Room, past members and portraits — by reputation the most nerve-shredding short walk in sport — onto a pitch that famously slopes two and a half metres from one side to the other. The Ashes urn, a tiny terracotta joke from 1882, lives in the museum here and almost never leaves; the teams play for a replica.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lords-cricket-ground_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lords-cricket-ground_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lords-cricket-ground_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lords-cricket-ground_4.webp"
+      ],
+      "tags": [
+        "lord's",
+        "cricket",
+        "marylebone cricket club",
+        "the ashes",
+        "long room",
+        "sport"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "31d71bc1-8a73-4c1c-b8a7-e988eac5dac3",
+          "order": 0,
+          "title": "Lord's Cricket Ground",
+          "caption": "If you know cricket, you don't need me to tell you what this place is. If you don't, here's the only thing you need: this is the closest the sport has to a cathedral, and people say \"Lord's\" the way they might say \"the Vatican.\"",
+          "latitude": 51.5294,
+          "longitude": -0.1727,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lords-cricket-ground.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lords-cricket-ground_hero.webp",
+          "transcriptText": "If you know cricket, you don't need me to tell you what this place is. If you don't, here's the only thing you need: this is the closest the sport has to a cathedral, and people say \"Lord's\" the way they might say \"the Vatican.\"\n\nIt's called the home of cricket, and the name on the gate is just a man's — Thomas Lord, who set up the ground in the early 1800s. But the institution behind it, the Marylebone Cricket Club, spent two centuries as the body that wrote and guarded the laws of the game for the entire world from this one address in north London.\n\nThere are a few things to look for. Inside the pavilion — the grand old building with the long windows — is the Long Room, a wood-panelled hall the players walk through on their way out to bat. Imagine it: you're about to play in front of thirty thousand people, and the path takes you through a quiet room full of members in ties and portraits of the dead greats watching you go. It is, by reputation, the most nerve-shredding short walk in sport.\n\nThen there's the slope. The whole playing field tilts — it drops by around two and a half metres from one side to the other, enough that the ball behaves differently depending on which end you bowl from. The most famous ground in cricket is, gloriously, not flat.\n\n[beat]\n\nAnd then the strangest treasure of all. Cricket's biggest contest between England and Australia is called the Ashes — and the trophy they supposedly play for is a tiny terracotta urn, just a few inches tall, said to contain the burnt remains of a cricket bail, created as a joke in a newspaper after England lost in 1882. That urn lives here, in the little museum, and here's the twist: it's so fragile and so precious that it almost never leaves. The teams play for it, but the actual urn stays at Lord's. They win a replica.\n\nSo that's this place — laws, a sloping pitch, a terrifying walk through a quiet room, and a national obsession that comes down to a joke urn smaller than your hand. Even if you never watch a match, that's a very English kind of greatness."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.5294,
+      "centroidLongitude": -0.1727,
+      "city": "London",
+      "primaryCategory": "history",
+      "priceUSD": 0
+    },
+    {
+      "id": "1bba7d45-498d-4885-ba93-c77a491727d3",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Kenwood House",
+      "shortDescription": "A free Robert Adam mansion on Hampstead Heath holding a Rembrandt self-portrait and a Vermeer — given to the nation on the condition no one is ever charged to see them.",
+      "longDescription": "At the top of Hampstead Heath, Kenwood House is Robert Adam's cool, pale remodelling of the 1760s, crowned by one of the most beautiful rooms in England — a long library with a curved, softly painted ceiling. In the 1920s Edward Guinness left the house and its art to the nation as the Iveagh Bequest, on condition it stay open and free forever. Among the collection hangs a late Rembrandt self-portrait and Vermeer's Guitar Player — a world-class masterpiece you can walk up to on a weekday afternoon for nothing.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kenwood-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kenwood-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kenwood-house_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kenwood-house_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kenwood-house_5.webp"
+      ],
+      "tags": [
+        "kenwood house",
+        "robert adam",
+        "hampstead heath",
+        "rembrandt",
+        "vermeer",
+        "iveagh bequest"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1b895774-27a1-4ba1-92f4-7c5154a71c3f",
+          "order": 0,
+          "title": "Kenwood House",
+          "caption": "You've walked up through Hampstead Heath, and here at the top, white against the green, is Kenwood House. Before you go in, know the best thing about it: it's free, and inside hangs one of the most valuable paintings in Britain, which you can walk up to without paying a penny.",
+          "latitude": 51.5715,
+          "longitude": -0.168,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kenwood-house.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kenwood-house_hero.webp",
+          "transcriptText": "You've walked up through Hampstead Heath, and here at the top, white against the green, is Kenwood House. Before you go in, know the best thing about it: it's free, and inside hangs one of the most valuable paintings in Britain, which you can walk up to without paying a penny.\n\nBut take the house in first. This is the work of Robert Adam, the most fashionable architect of the late 1700s, who remodelled an older house into this cool, pale, perfectly balanced thing in the 1760s. Adam's whole genius was the interior — light, delicate, classical, every ceiling and doorframe part of one coordinated scheme. The room to find is the library, a long space with a curved ceiling painted in soft pinks and blues, gilded just enough, considered down to the last inch. It's one of the most beautiful rooms in England, and it's a room, not a roped-off shrine. You can stand in it.\n\n[beat]\n\nNow the painting. In the 1920s the house and its art were given to the nation by Edward Guinness, of the brewing family — the Iveagh Bequest — on the condition that it stay open and free forever. And among what he left is a small, quiet picture by Rembrandt: a self-portrait of the artist as an old man, and, hanging nearby, a Vermeer — the Guitar Player — one of only a tiny handful of Vermeers anywhere in the world, in a country house on the edge of a public heath, guarded by almost nobody, costing nothing to see.\n\nSit with that for a second. There are people who fly across the world and queue for hours to see a single Vermeer behind glass in a crowded gallery. Here's one you can walk up to on a Tuesday afternoon, on the way back from a walk, for free, because a man a century ago decided that was how it should be.\n\nSo that's Kenwood — a perfect Adam interior and a world-class collection, given away on the condition that nobody would ever be charged to enjoy it. When you've looked your fill, go back out and sit on the lawn facing the city. The view down the slope to the ponds is the same one the painting's owners had. They just had to share it eventually."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.5715,
+      "centroidLongitude": -0.168,
+      "city": "London",
+      "primaryCategory": "history",
+      "priceUSD": 0
+    },
+    {
+      "id": "fc7430f8-c9a6-44b7-beec-0d375f346135",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Kensington Palace",
+      "shortDescription": "The least palatial royal palace — three centuries of the family's domestic 'aunt heap' — that became a national shrine after Diana lived and was mourned here.",
+      "longDescription": "From the gardens Kensington looks less like a palace than a very grand brick house, and that modesty is the point: for three hundred years it has been where the royal family housed its wider relatives, divided into apartments — George V called it 'the aunt heap.' Diana, Princess of Wales lived here, and after her death in 1997 the railings vanished under a sea of flowers in one of Britain's greatest outpourings of public grief. The Sunken Garden, replanted as a memorial with a statue of Diana, carries that story forward.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-palace_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-palace_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-palace_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-palace_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-palace_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-palace_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-palace_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-palace_8.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-palace_9.webp"
+      ],
+      "tags": [
+        "kensington palace",
+        "royal family",
+        "princess diana",
+        "sunken garden",
+        "monarchy",
+        "kensington gardens"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ff11cc08-36c0-45e3-b50c-9fbafb842997",
+          "order": 0,
+          "title": "Kensington Palace",
+          "caption": "From the gardens, Kensington Palace doesn't look much like a palace. No great dome, no vast facade — just a long, handsome brick house, the kind a very rich family might live in, set among lawns and avenues of trees. That modesty is the first clue to what this place actually is.",
+          "latitude": 51.505,
+          "longitude": -0.1877,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kensington-palace.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-palace_hero.webp",
+          "transcriptText": "From the gardens, Kensington Palace doesn't look much like a palace. No great dome, no vast facade — just a long, handsome brick house, the kind a very rich family might live in, set among lawns and avenues of trees. That modesty is the first clue to what this place actually is.\n\nFor three hundred years, Kensington has been where the royal family puts the relatives. The grand state business happens at Buckingham Palace, a couple of miles east. Kensington is the home — divided up into apartments, occupied by princes and princesses and minor royals, generation after generation. King George the Fifth is supposed to have called it \"the aunt heap,\" and the nickname stuck, because that's exactly what it was: a comfortable brick warren full of the wider family.\n\nBut one resident made it a place of pilgrimage. Diana, Princess of Wales, lived here for years, and after her death in 1997 the gates and railings in front of you vanished entirely under a sea of flowers — bouquets stacked metres deep, left by hundreds of thousands of strangers. If you stand at the main gates and picture them buried in cellophane and handwritten cards, you're picturing one of the most extraordinary outpourings of public grief Britain has ever seen.\n\n[beat]\n\nWalk round to find the Sunken Garden, because it's the loveliest corner and it carries that story forward. It's a formal garden, planted in tiers around a still pool, blazing with colour in summer — and it was redesigned and replanted as a memorial, with a statue of Diana now standing in it. A quiet, deliberately beautiful place made out of remembering one person.\n\nSo here's Kensington, in a sentence: the least palatial of the royal palaces, the family's domestic back-stage for three centuries, that became, almost by accident, a national shrine. Most of it is still lived in, behind those windows, by people you'd recognise from the news. Have a wander through the parts that are open, then sit by the round pond in the gardens. The whole point of this place was always that it felt like somewhere people actually lived. It still does."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 143,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.505,
+      "centroidLongitude": -0.1877,
+      "city": "London",
+      "primaryCategory": "history",
+      "priceUSD": 0
+    },
+    {
+      "id": "dc142370-e3da-4acc-a448-897a9bea171c",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Portobello Road",
+      "shortDescription": "Two streets in one: the world's most famous antiques market on Saturdays, a working neighbourhood market the rest of the week — and the cradle of Notting Hill Carnival.",
+      "longDescription": "Portobello Road is really two streets sharing a name. On Saturdays it's the world's most famous antiques market, running nearly a mile; on weekdays it reverts to an ordinary fruit-and-veg street market for the people who live there. Notting Hill, the neighbourhood around it, became a main home for the Windrush generation arriving from the Caribbean after the war — and from that community grew the Notting Hill Carnival, now one of the largest street festivals on the planet. Beneath the pastel houses and photo-ops is a tougher story about who built the place.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/portobello-road_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/portobello-road_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/portobello-road_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/portobello-road_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/portobello-road_5.webp"
+      ],
+      "tags": [
+        "portobello road",
+        "notting hill",
+        "antiques market",
+        "windrush",
+        "notting hill carnival",
+        "street market"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2dd1f02b-fcb1-4471-b121-cb5628725609",
+          "order": 0,
+          "title": "Portobello Road",
+          "caption": "The first thing to know about Portobello Road is that it's really two streets wearing the same name, and which one you get depends entirely on the day you came.",
+          "latitude": 51.517,
+          "longitude": -0.205,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/portobello-road.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/portobello-road_hero.webp",
+          "transcriptText": "The first thing to know about Portobello Road is that it's really two streets wearing the same name, and which one you get depends entirely on the day you came.\n\nCome on a Saturday, and this is the most famous antiques market in the world — stalls and shopfronts running for the better part of a mile, packed shoulder to shoulder with silver, old jewellery, prints, cameras, coins, the lovely and the dubious side by side, dealers who've been here for decades next to people who set up that morning. Come on a Tuesday, and the antiques largely vanish, and you find a working neighbourhood street market instead — fruit and veg, fish, household bits, the ordinary shopping of the people who actually live here. Same paving stones, two completely different streets.\n\nThat doubleness is the real story of Notting Hill, the area you're walking through, because this place has changed identity more than once. After the Second World War, this was a poor, run-down quarter, and it became one of the main places where families arriving from the Caribbean settled — part of the Windrush generation who came to help rebuild Britain and met, too often, hostility and terrible housing.\n\n[beat]\n\nOut of that community came something the whole city now claims as its own: the Notting Hill Carnival. Every August, these streets fill with sound systems and steel bands and costume and a couple of million people, in what's grown into one of the biggest street festivals on the planet — a celebration rooted directly in Caribbean culture and in this neighbourhood's history of being told it didn't belong.\n\nSo as you walk the market, hold both pictures at once. The pastel houses are achingly desirable now, some of the priciest in London, and the street's been polished by films and tourism into something charming. But underneath the antiques and the photo-op facades is a tougher, richer story about who built this place and what they made here. Buy something small if the spirit moves you — haggle gently, it's expected. And if you can possibly come back for Carnival, do. That's when the street tells you the truth about itself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.517,
+      "centroidLongitude": -0.205,
+      "city": "London",
+      "primaryCategory": "culturalHeritage",
+      "priceUSD": 0
+    },
+    {
+      "id": "14f26785-46df-42cb-a280-5be806d70b93",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Leighton House",
+      "shortDescription": "Behind a stern red-brick villa, the most establishment painter in Victorian Britain built a private pleasure-palace — its domed Arab Hall tiled floor to ceiling and murmuring with a fountain.",
+      "longDescription": "From the street Leighton House is a sober Victorian villa, and the gap between that plain exterior and the extraordinary interior is the whole experience. Frederic Leighton — president of the Royal Academy and the ultimate art-world insider — spent thirty years turning his home into a single growing work of art. Its centrepiece is the Arab Hall, a domed chamber with a black marble fountain pool and walls covered in genuine 16th- and 17th-century tiles collected across Syria and Turkey: one of the most sensuous interiors in London, built by the most proper man in British art.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leighton-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leighton-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leighton-house_3.webp"
+      ],
+      "tags": [
+        "leighton house",
+        "frederic leighton",
+        "arab hall",
+        "victorian",
+        "aesthetic movement",
+        "tiles"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b528628c-0f57-4f9f-82c7-f0957ae665c0",
+          "order": 0,
+          "title": "Leighton House",
+          "caption": "From the street, Leighton House looks like a fairly stern red-brick Victorian villa — handsome, but not the kind of thing you'd cross London for. That's deliberate. The whole point of this house is what it hides, and the gap between the plain outside and the extraordinary inside is the entire experience.",
+          "latitude": 51.4995,
+          "longitude": -0.201,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/leighton-house.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leighton-house_hero.webp",
+          "transcriptText": "From the street, Leighton House looks like a fairly stern red-brick Victorian villa — handsome, but not the kind of thing you'd cross London for. That's deliberate. The whole point of this house is what it hides, and the gap between the plain outside and the extraordinary inside is the entire experience.\n\nThis was the home of Frederic Leighton, the most successful, most establishment painter in Victorian Britain — president of the Royal Academy, eventually made a lord, the absolute summit of the respectable art world. And he built himself, behind that sober brick, a private pleasure-palace devoted entirely to beauty. A bachelor with no family to house, he spent thirty years turning his home into a single, growing work of art.\n\nThe room you've come to see is the Arab Hall. Step into it and the temperature of the place changes completely. It's a domed chamber modelled on a palace hall in the Islamic world, with a fountain murmuring in a black marble pool at its centre, and every wall covered floor to ceiling in antique tiles — genuine sixteenth and seventeenth-century tiles that Leighton collected on his travels through Syria, Turkey and beyond, brilliant blues and greens, gilded ceiling glinting above. It is one of the most sensuous interiors in London, built by the most proper man in British art.\n\n[beat]\n\nThat contradiction is the thing to hold on to. The Victorians are caricatured as buttoned-up and repressed, and Leighton was their ultimate insider — and yet here, in his own home, he built a space of pure escape, an Arabian fantasy soaked in colour and water and silence, the opposite of everything that public respectability was supposed to be. The house was part of a whole movement of artists who believed your surroundings should be works of art in themselves: the cult of the House Beautiful.\n\nSo take your time in here. Notice how the dim, jewel-box rooms make you lower your voice. This was never built to impress committees or sell paintings — it was built for one man to live inside his own idea of beauty. Standing in the Arab Hall, with the fountain going and the tiles glowing, you're standing in the most private wish of a very public man."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.4995,
+      "centroidLongitude": -0.201,
+      "city": "London",
+      "primaryCategory": "visualArt",
+      "priceUSD": 0
+    },
+    {
+      "id": "1fccf908-4bf6-4ce9-823d-a5145ec320e3",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Battersea Power Station",
+      "shortDescription": "Four white chimneys on a brick cathedral of electricity by Giles Gilbert Scott — derelict for thirty years, immortalised by a runaway Pink Floyd pig, now reborn.",
+      "longDescription": "Battersea Power Station is one of the largest brick buildings in Europe, designed by Giles Gilbert Scott — the same hand behind the red telephone box — to make a power station London could bear to look at. It generated electricity into the 1980s, then stood roofless and rotting for over thirty years, one of the world's most famous derelict buildings. Pink Floyd floated an inflatable pig between its chimneys in 1976; it broke loose and grounded planes at Heathrow. Now restored into shops, flats and offices with a chimney-top glass lift, the four chimneys still stand exactly where they always did.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/battersea-power-station_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/battersea-power-station_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/battersea-power-station_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/battersea-power-station_4.webp"
+      ],
+      "tags": [
+        "battersea power station",
+        "giles gilbert scott",
+        "art deco",
+        "pink floyd",
+        "industrial",
+        "regeneration"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4d5cfd62-9bb2-4043-88b9-b4debc2b012f",
+          "order": 0,
+          "title": "Battersea Power Station",
+          "caption": "Four white chimneys, one at each corner, rising off a vast brick box the colour of dried blood. You've almost certainly seen this building before you ever came to London — on a record sleeve, in a film, in the background of the city's imagination. This is Battersea Power Station, and for most of its life it didn't make a single beautiful thing. It made electricity.",
+          "latitude": 51.4818,
+          "longitude": -0.144,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/battersea-power-station.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/battersea-power-station_hero.webp",
+          "transcriptText": "Four white chimneys, one at each corner, rising off a vast brick box the colour of dried blood. You've almost certainly seen this building before you ever came to London — on a record sleeve, in a film, in the background of the city's imagination. This is Battersea Power Station, and for most of its life it didn't make a single beautiful thing. It made electricity.\n\nLook at the brick. There's an absurd amount of it — this is one of the largest brick buildings in Europe — and it's worked like architecture, not just stacked like a factory. That's the hand of Giles Gilbert Scott, who was brought in to make a power station that London could bear to look at. And here's a detail worth carrying: Scott is the same man who designed the red telephone box you've been photographing all over the city, and his cousin's firm later shaped Bankside Power Station downriver — the building that's now Tate Modern. Once you know that, you start seeing the family resemblance: the same instinct that an industrial brick monster could be made monumental, even noble.\n\nIt generated power into the 1980s, then fell silent — and then came the strange decades. For more than thirty years it stood empty, roofless for much of that time, slowly rotting, one of the most famous derelict buildings in the world. Plans came and went; nothing stuck.\n\n[beat]\n\nThe pop-culture moment that fixed it forever: in 1976, the band Pink Floyd floated an enormous inflatable pig between those chimneys for an album cover. The pig broke loose, drifted off into the flight path of Heathrow airport, and grounded planes. The building has been impossible to take entirely seriously ever since, which is part of its charm.\n\nNow look at what's happened. After all those derelict years it's finally been brought back — the shell restored, the interior turned into shops and flats and offices, one chimney rebuilt as a glass lift you can ride to the top. Some people love it, some mourn the romantic ruin it used to be. Either way, the four chimneys still stand exactly where they always did. Walk up to the brick and put your hand on it. Whatever's inside now, that wall was built to outlast all of us."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.4818,
+      "centroidLongitude": -0.144,
+      "city": "London",
+      "primaryCategory": "architecture",
+      "priceUSD": 0
+    },
+    {
+      "id": "ccf6f620-660b-4a88-ba94-606221d0cf7c",
+      "makerId": "9c40396a-74ed-49d2-9796-a41edb9e4105",
+      "title": "Kew Gardens Palm House",
+      "shortDescription": "A rainforest under glass and curved iron, built like an upturned ship's hull — one of architecture's most important buildings, and the botanical engine room of an empire.",
+      "longDescription": "The Palm House at Kew is a swelling bubble of glass and curved iron, and one of the most important buildings in architectural history. When it rose in the 1840s nobody had built anything like it: the ironworker Richard Turner solved the problem with shipyard techniques, curving wrought-iron ribs the way a ship's hull is built — essentially an upturned, glazed hull filled with rainforest. It was a machine for keeping the tropics alive in a cold country, the heart of Kew's role as the botanical engine room of the British Empire — a complicated history worth sitting with among the palms.",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kew-gardens-palm-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kew-gardens-palm-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kew-gardens-palm-house_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kew-gardens-palm-house_4.webp"
+      ],
+      "tags": [
+        "kew gardens",
+        "palm house",
+        "glasshouse",
+        "richard turner",
+        "victorian",
+        "botany"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d487bd1a-4db5-45a7-9e94-eed7475b4af5",
+          "order": 0,
+          "title": "Kew Gardens Palm House",
+          "caption": "In front of you is a building made almost entirely of glass and curved iron, swelling up in the middle like a great green bubble caught mid-rise. This is the Palm House at Kew, and it's one of the most important buildings in the history of architecture — which is a strange thing to say about a greenhouse.",
+          "latitude": 51.4787,
+          "longitude": -0.295,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kew-gardens-palm-house.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kew-gardens-palm-house_hero.webp",
+          "transcriptText": "In front of you is a building made almost entirely of glass and curved iron, swelling up in the middle like a great green bubble caught mid-rise. This is the Palm House at Kew, and it's one of the most important buildings in the history of architecture — which is a strange thing to say about a greenhouse.\n\nHere's why. When it went up in the 1840s, nobody had built anything like it. Architects worked in stone; you could not make a building this size out of glass, because glass and iron behaved in ways the old rules couldn't describe. So the people who solved it weren't really architects at all. The structural genius behind it, Richard Turner, was an ironworker — and the form they landed on came straight from the shipyards.\n\nThat's the detail to carry inside with you. Look at the great curved ribs holding the glass up. They're built the way the hull of a ship is built — the same wrought-iron techniques, the same understanding of how to make iron curve and hold under stress. They essentially took the upturned hull of a boat, inverted it, glazed it, and filled it with the rainforest. When you stand inside, under that soaring ribbed ceiling, you're standing inside a ship turned upside down and pointed at the sky.\n\n[beat]\n\nAnd then the purpose. This wasn't built for beauty, though it's beautiful. Kew was the botanical engine room of the British Empire — plants from every conquered and colonised corner of the world brought here to be studied, propagated, and sent on to wherever they could be made profitable. The Palm House was a machine for keeping the tropics alive in a cold country, so that the world's plants could be gathered, controlled, and understood in one place. That history is complicated, and worth sitting with as you walk among the palms.\n\nSo go in. Feel the heat and the wet hit you at the door — they keep it tropical year-round. Climb the spiral stair to the high walkway if it's open, up among the tops of the palms, and look at those iron ribs from close. A Victorian shipwright's solution to an impossible problem, still standing, still doing its job, nearly two centuries on."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 51.4787,
+      "centroidLongitude": -0.295,
+      "city": "London",
+      "primaryCategory": "natureAndParks",
+      "priceUSD": 0
     }
   ]
 }
