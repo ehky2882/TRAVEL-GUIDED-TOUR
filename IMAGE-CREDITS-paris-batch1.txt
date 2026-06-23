@@ -17,3 +17,12 @@ la-madeleine_3.webp	Public domain	https://upload.wikimedia.org/wikipedia/commons
 la-madeleine_4.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/2/24/La_Madeleine_-_Paris_%283770431016%29.jpg
 la-madeleine_5.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/f/f2/Eglise_de_la_Madeleine_%40_Paris_%2831447875715%29.jpg
 la-madeleine_6.webp	CC BY 2.0	https://upload.wikimedia.org/wikipedia/commons/6/6d/Interior_of_%C3%89glise_de_la_Madeleine%2C_Paris_27_April_2008.jpg
+
+# Paris Islands multi-stop walk (staged 2026-06-23)
+paris-islands_hero.webp	Île de la Cité aerial	CC BY-SA 3.0	David.Monniaux	https://commons.wikimedia.org/wiki/File:Ile_de_la_Cite_P1180997.jpg	https://creativecommons.org/licenses/by-sa/3.0
+paris-islands_stop0.webp	Seine aerial / islands	Pexels (no attribution required)
+paris-islands_stop1.webp	Pont Neuf	Unsplash (no attribution required)
+paris-islands_stop2.webp	Conciergerie	Pexels (no attribution required)
+paris-islands_stop3.webp	Sainte-Chapelle interior	Unsplash (no attribution required)
+paris-islands_stop4.webp	Notre-Dame west front	Pexels (no attribution required)
+paris-islands_stop5.webp	Île Saint-Louis quai	Unsplash (no attribution required)
