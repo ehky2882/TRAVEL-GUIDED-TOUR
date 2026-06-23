@@ -54,3 +54,13 @@ paris-marais_stop2.webp	Centre Pompidou	Pexels (no attribution required)
 paris-marais_stop3.webp	Hotel Sale (Musee Picasso)	CC BY-SA 3.0	LPLT	https://commons.wikimedia.org/wiki/File:Hôtel_Salé.JPG	https://creativecommons.org/licenses/by-sa/3.0
 # stop 4 = paris-marais_stop4.webp (Place des Vosges, Pexels); stop 5 reuses existing musee-carnavalet_hero.webp
 paris-marais_stop4.webp	Place des Vosges	Pexels (no attribution required)
+
+# Paris Left Bank (Latin Quarter) multi-stop walk (staged 2026-06-23) — all ship-safe, no attribution required
+paris-leftbank_hero.webp	Latin Quarter cafe street	Pexels
+paris-leftbank_stop0.webp	Latin Quarter street	Pexels
+paris-leftbank_stop1.webp	Pantheon	Pexels
+paris-leftbank_stop2.webp	Shakespeare and Company	Pixabay
+paris-leftbank_stop3.webp	Jardin du Luxembourg	Pexels
+paris-leftbank_stop4.webp	Saint-Sulpice	Pexels
+# stop 5 reuses existing saint-germain-des-pres_hero.webp
+paris-leftbank_stop6.webp	Musee d'Orsay	Pexels
