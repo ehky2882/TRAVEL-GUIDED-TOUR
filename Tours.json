@@ -15859,6 +15859,316 @@
         "birdcages"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "10ae65a5-ffcf-4701-a73c-049d89568114",
+      "title": "Central–Mid-Levels Escalators",
+      "shortDescription": "The world's longest outdoor covered escalator — eight hundred metres of moving walkway climbing the slope of Hong Kong Island, reversing direction with the commute, that accidentally created the SoHo nightlife district.",
+      "longDescription": "The Central–Mid-Levels Escalator is a single reversible track — sixteen escalators and three inclined walkways strung together by footbridges — running eight hundred metres and a hundred and thirty-five metres of elevation up the hillside, free of charge, carrying around ninety-nine thousand trips a day. It runs downhill until ten in the morning to serve the commute, then uphill until midnight. There simply wasn't room in the narrow streets for two parallel tracks, so the engineers built one that switches direction.\n\nIt opened in 1993 as a fix for Mid-Levels traffic congestion, a job it never really did — the roads above stayed jammed. What it did instead was bring footfall to the quiet lanes of Staunton and Shelley Streets and turn them into SoHo, Hong Kong's bar-and-restaurant district. A piece of infrastructure that failed at its stated purpose and accidentally created one of the city's most distinctive neighbourhoods.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Central_Mid_Levels_Escalators_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Central_Mid_Levels_Escalators_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "57aa968d-c4a3-4157-aaab-908c6bd7717b",
+          "order": 0,
+          "title": "Central–Mid-Levels Escalators",
+          "caption": "Step onto the Central–Mid-Levels Escalator heading uphill from Queen's Road Central.",
+          "latitude": 22.28357,
+          "longitude": 114.15499,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/central-mid-levels-escalators.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Every morning until ten o'clock, this escalator runs downhill. After ten, it runs uphill until midnight. There is only one track.\n\nYou're on the escalator system somewhere between Queen's Road Central below and Conduit Road above — eight hundred metres of covered moving walkway climbing a hundred and thirty-five metres up the slope of Hong Kong Island, taking roughly twenty minutes end to end. The system is made of sixteen separate escalators and three inclined walkways, not one continuous belt, connected by footbridges and short flat sections where the street crosses underneath. The whole thing runs free of charge, carries around ninety-nine thousand trips a day, and was built at a cost of HK$245 million — six times the original estimate.\n\nThe single-track design is the engineering constraint that shaped how the whole system works. There simply wasn't room in the narrow streets to build two parallel tracks, so the engineers built one reversible track instead, switching direction to serve the morning commute downhill and the rest of the day uphill. If you're on it now, you're going up, which is almost certainly why you're here.\n\nThe system opened in October nineteen ninety-three, originally planned as a traffic congestion solution for the Mid-Levels. It didn't really work as that — the roads above are still congested, and the traffic studies that justified the cost never quite materialised. What it did instead was rather more interesting: the footfall it brought to the quiet residential lanes of Staunton Street and Shelley Street turned them into SoHo, Hong Kong's bar and restaurant district, which now lines both sides of the escalator for several hundred metres. The system failed at its original purpose and accidentally created one of the city's most distinctive neighbourhoods.\n\nWatch for the Hollywood Road crossing, roughly halfway up — the footbridge gives you a view east and west along one of Hong Kong's oldest streets, and the Man Mo Temple is thirty seconds' walk to the left if you step off."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.28357,
+      "centroidLongitude": 114.15499,
+      "city": "Hong Kong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "escalator",
+        "soho",
+        "central",
+        "mid-levels",
+        "infrastructure",
+        "cultural heritage"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "de18a5cb-04be-42dc-832a-6e4772a66bee",
+      "title": "Hung Shing Temple (Ap Lei Chau)",
+      "shortDescription": "One of Hong Kong's oldest temples, built in 1773 by the Ap Lei Chau fishing community for the Tang-dynasty god of weather and the sea — still facing the water, though land reclamation has pushed the harbour back.",
+      "longDescription": "Hung Shing Temple sits on the eastern shore of Ap Lei Chau — a low, dark building with a green-tiled roof, ceramic figures along the ridge, and rare fung shui timber poles in the forecourt. Built in 1773 by the local fishing community, it is one of Hong Kong's oldest temples and one of very few to keep its original fung shui orientation, facing the sea so the deity inside could watch over the water. The bell in the main hall was cast the year the temple was built, the oldest surviving object and the clearest evidence of the founding date.\n\nHung Shing was a Tang-dynasty official famed for astronomy, geography, and weather forecasting — a god who could warn of a storm was a practical asset to fishermen, and his temples spread across the Pearl River Delta with the fleets. Until the 1950s the sea came right to the door; reclamation in 1950 and 1985 pushed the harbour back, so the buildings now between the temple and the water once were the sea itself. The temple still faces that direction. The water has simply moved.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Hung_Shing_Temple_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Hung_Shing_Temple_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Hung_Shing_Temple_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Hung_Shing_Temple_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "79b004ca-591b-498b-895b-8a6e80a7c575",
+          "order": 0,
+          "title": "Hung Shing Temple (Ap Lei Chau)",
+          "caption": "Stand in the doorway of Hung Shing Temple on Hung Shing Street, Ap Lei Chau.",
+          "latitude": 22.24502,
+          "longitude": 114.15599,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hung-shing-temple-ap-lei-chau.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Stand in the doorway and listen. On a still day, you can hear the harbour from inside this temple — which is exactly what the people who built it intended.\n\nThe temple sits on Hung Shing Street on the eastern shore of Ap Lei Chau, a low, dark building with a green-tiled roof, ceramic figures along the ridge, and rare fung shui timber poles standing in the forecourt. Built in seventeen seventy-three by the local fishing community, it is one of Hong Kong's oldest temples and one of very few that still retains its original fung shui orientation — designed to face the sea, so that the deity inside would have a clear view of the water the fishermen sailed on. Have a look at the bell hanging inside the main hall: it was cast in the same year the temple was built, making it the oldest surviving object here and the clearest evidence of the founding date.\n\nHung Shing was, in his mortal life, a Tang Dynasty official celebrated for his mastery of astronomy, geography, and most importantly weather forecasting. That last skill was what the fishing community valued — a god who could read the sky and warn you before a storm was not a metaphysical comfort but a practical asset. He was deified after his death, and temples dedicated to him spread across the Pearl River Delta with the fishing fleets.\n\nWorth knowing: the temple was designed to face open water, and until the nineteen fifties, the sea came right to its door. Land reclamation in nineteen fifty and again in nineteen eighty-five pushed the harbour back, and the buildings now standing between the temple and the water — the Marina Habitat, the Municipal Building — were once the sea itself. The temple still faces that direction. The water has simply moved.\n\nThe Hung Shing Festival on the thirteenth day of the second lunar month fills this waterfront with Cantonese opera performances staged for the god — one of the more particular local events on the Hong Kong calendar, and worth timing a visit around if you can."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.24502,
+      "centroidLongitude": 114.15599,
+      "city": "Hong Kong",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "temple",
+        "taoist",
+        "fishing community",
+        "ap lei chau",
+        "heritage",
+        "sacred sites"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "412f51ee-1938-4f96-885a-28e93399516d",
+      "title": "Jamia Mosque",
+      "shortDescription": "Hong Kong Island's oldest mosque and only minaret, set back off Shelley Street — built in 1915 on a site that Muslim sailors, soldiers and merchants have prayed on since 1850.",
+      "longDescription": "Jamia Mosque sits off Shelley Street behind a green archway and a flight of stairs, its green-and-white prayer hall topped by a single minaret carrying a crescent and star — the only minaret on any mosque on Hong Kong Island. The present building went up in 1915, funded entirely by a Bombay merchant, Haji Mohamed Essack Elias, to replace an earlier structure. A mosque has stood here since 1850, when the colonial government leased the land to the Muslim community — among the earliest formal recognitions of any non-Christian faith in the colony.\n\nThe first congregation mixed South Asian merchants, Muslim soldiers in the British military, and lascars — sailors on British ships docked between voyages — and the mosque was long known as the Lascar Temple. The pulpit inside was donated in 1915 by a local Chinese Muslim, Ma Chik Ting, one detail that complicates any simple picture of the congregation. Declared a monument in 2022, it now draws most worshippers on Fridays, many Pakistani office workers riding the Mid-Levels Escalator up from Central — more or less the route the lascars walked, a hundred and seventy years on.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jamia_Mosque_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jamia_Mosque_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Jamia_Mosque_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e2d52706-7f48-4a73-9a26-6de6e13c3bee",
+          "order": 0,
+          "title": "Jamia Mosque",
+          "caption": "Stand at the green archway and stairs to Jamia Mosque, off Shelley Street above Central.",
+          "latitude": 22.28041,
+          "longitude": 114.15169,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jamia-mosque.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "It's eighteen fifty, and a group of sailors has just walked uphill from the harbour, through a city that has existed for less than a decade, to find somewhere to pray.\n\nThe mosque sits off Shelley Street, set back behind a green archway and a flight of stairs, with the green-and-white facade of the prayer hall visible from the gate, a single minaret above it carrying a crescent and star at its tip — the only minaret on any mosque on Hong Kong Island. The building you're looking at was constructed in nineteen fifteen, funded entirely by a single Bombay merchant, Haji Mohamed Essack Elias, to replace an earlier structure on the same ground. The site has held a mosque since eighteen fifty, when the British colonial government leased this land to the Muslim community — among the earliest formal recognitions of any non-Christian faith in the colony.\n\nThe congregation the first mosque served was a mix of South Asian merchants, Muslim soldiers in the British military, and lascars — sailors who worked on British ships and docked in Hong Kong between voyages. Lascar is a word that came into English through Persian and Portuguese, and these men made this walk, or something close to it, up through the old streets of Central to get to this building. The mosque was known for a long time as the Lascar Temple. Worth noticing: the pulpit inside — the mimber — was donated in nineteen fifteen by a local Chinese Muslim, Mr Ma Chik Ting, one small detail that complicates any simple picture of what the congregation looked like.\n\nThe building was declared a monument in twenty twenty-two, and today sees most of its congregation on Fridays — primarily Pakistani office workers who take the Mid-Levels Escalator up from Central, more or less the same route the lascars walked, a hundred and seventy years on.\n\nThe mosque is open to respectful visitors outside prayer times — remove shoes at the entrance, and the caretaker on site is generally happy to answer questions. The interior, with its pointed multifoil arches and Kufic calligraphy, is rather fine."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.28041,
+      "centroidLongitude": 114.15169,
+      "city": "Hong Kong",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "mosque",
+        "islam",
+        "shelley street",
+        "lascars",
+        "heritage",
+        "sacred sites"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6f0a94f1-0638-4f13-a732-72b064a43b6a",
+      "title": "Lau Kee Aberdeen Boat Noodle",
+      "shortDescription": "Hong Kong's first licensed floating food kitchen, moored at Aberdeen Pier 6 since 1981 — boat noodles in a salted-flounder broth from the city's indigenous Tanka community.",
+      "longDescription": "Lau Kee is moored at Aberdeen Pier Six, on the promenade beside the typhoon shelter where sampans and fishing vessels still move through the harbour. Lam Lau has sold boat noodles here since 1981 under the name Lau Kee — the first licensed floating food kitchen in Hong Kong. The bowl is flat rice noodles or vermicelli in a broth of dried salted flounder, slow-cooked daily, topped with roasted duck, poached chicken, fish balls, and char siu in whatever combination you choose; the roast duck thigh noodle is the signature.\n\nLam is Tanka — one of Hong Kong's indigenous communities, for much of their history forbidden from living on land and building close-knit lives entirely on the water. The food came straight from that life: the morning catch, the broth from the daily haul, the meats roasted on board. The Tanka have largely moved ashore now, and much of the harbour life that defined Aberdeen for a century has gone with them. This boat, moored in one place rather than roving as it once did, is one of the last. From the promenade, kaito sampans cross to Ap Lei Chau in about five minutes.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Lau_Kee_Boat_Noodle_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Lau_Kee_Boat_Noodle_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Lau_Kee_Boat_Noodle_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "581d02b4-c979-49df-bd42-b325a1375183",
+          "order": 0,
+          "title": "Lau Kee Aberdeen Boat Noodle",
+          "caption": "Find the Lau Kee boat moored at Aberdeen Pier 6, beside the typhoon shelter.",
+          "latitude": 22.24735,
+          "longitude": 114.15373,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lau-kee-boat-noodle.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There's a curious thing about how the duck in your bowl was cooked — until recently, it was roasted on board this boat, inside a repurposed water drum. The owner, when asked about the fire risk, gestured at the surrounding water and laughed.\n\nThe boat is moored at Aberdeen Pier Six, on the promenade beside the typhoon shelter, where sampans and fishing vessels still move through the harbour in front of you. Lam Lau has been selling boat noodles here since nineteen eighty-one, under the name Lau Kee — the first licensed floating food kitchen in Hong Kong. The bowl is flat rice noodles or vermicelli in a broth made from dried salted flounder, slow-cooked daily, topped with whatever combination of roasted duck, poached chicken, fish balls, and char siu you choose. Prices run from around thirty to sixty-five dollars depending on toppings and whether you eat on board or take it away.\n\nLam is Tanka — one of Hong Kong's original indigenous communities, who for much of their history were forbidden from living on land and built close-knit lives entirely on the water. The food came directly from that life: the fish caught each morning, the broth made from the daily haul, the roasted meats prepared on board with whatever could fit in the kitchen. I always think the bowl tastes differently when you know that, though I concede it may be the flounder broth doing most of the work.\n\nThe Tanka community has largely moved ashore now, and quite a lot of the harbour life that defined Aberdeen for a century has gone with them. This boat, moored in one place rather than roving as it used to, is one of the last.\n\nOrder the roast duck thigh noodle. It's the signature, and the reason people come.\n\nFrom the promenade here, small kaito sampan ferries cross to Ap Lei Chau — the journey takes about five minutes and costs next to nothing. The Hung Shing Temple on the Ap Lei Chau waterfront is worth the short trip: a working Taoist temple dedicated to the god of the sea, used by the fishing community for generations, and quiet enough that you can actually hear the water from inside it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 146,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.24735,
+      "centroidLongitude": 114.15373,
+      "city": "Hong Kong",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "boat noodle",
+        "aberdeen",
+        "tanka",
+        "street food",
+        "seafood",
+        "food and drink"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0271c856-e5f5-42d2-ba65-1714e6bc8a75",
+      "title": "Mister Softee",
+      "shortDescription": "One of just fourteen licensed Mister Softee ice-cream vans left in Hong Kong — red, white and blue, The Blue Danube on a loop from the roof, a soft-serve cone for twelve dollars.",
+      "longDescription": "Known locally as the Regal Ice Cream from the Chinese name on its side, the Mister Softee van is unmistakable: red, white and blue livery and The Blue Danube playing on a loop from the roof speakers. The government stopped issuing hawking licences in 1978, just eight years after the first truck arrived, and has granted none since — so the fleet has been capped at fourteen ever since and can only shrink. The most reliable spots are outside the Star Ferry Pier in Tsim Sha Tsui, Golden Bauhinia Square in Wan Chai, and weekends near IKEA at Sha Tin; on weekdays they park near schools and stations.\n\nHo King-yuen brought the first truck over on Chinese New Year's Eve, 1970, inspired by Mister Softee vans he'd seen in London. The opening price was five cents a cone, and within days the trucks were selling sixteen hundred cones an hour. The name changed to Mobile Softee in 2010 when the US brand rights were pulled back, but the jingle, the van, and the flavour stayed. Ho died in January 2025, aged ninety-eight; the vans keep going on the same fourteen licences, playing The Blue Danube, indefinitely.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mister_Softee_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mister_Softee_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "933a8556-fabb-46b6-8bc0-2d8fd4ee4b98",
+          "order": 0,
+          "title": "Mister Softee",
+          "caption": "Find the red-white-and-blue Mister Softee ice-cream van.",
+          "latitude": 22.28564,
+          "longitude": 114.16182,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mister-softee.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "This is the Mister Softee van — known locally as the Regal Ice Cream, which is the name on the side in Chinese. It costs about twelve dollars.\n\nYou're standing in front of one of fourteen vans currently operating in Hong Kong, identifiable by the red, white, and blue livery and The Blue Danube playing on a loop from the roof speakers. The government stopped issuing new hawking licences in nineteen seventy-eight — just eight years after the first truck arrived — and no new licences have been granted since, so the fleet has been capped at fourteen ever since and can only shrink, never grow. If you're hunting one down: the most reliable spots are outside the Star Ferry Pier in Tsim Sha Tsui, Golden Bauhinia Square in Wan Chai, and on weekends near IKEA at Sha Tin MTR. On weekdays they tend to park near schools and train stations.\n\nHo King-yuen brought the first truck to Hong Kong on Chinese New Year's Eve, nineteen seventy — inspired, quite specifically, by seeing Mister Softee vans during a trip to London and deciding Hong Kong should have the same. The opening price was five cents a cone. Within days the trucks were selling sixteen hundred cones an hour.\n\nWell, the name changed to Mobile Softee in twenty ten after the US rights to the Mister Softee brand were pulled back, but the jingle stayed, the van stayed, the flavour stayed. Ho died in January twenty twenty-five, aged ninety-eight. He had long since transferred the business and moved to Australia, but the vans kept going without him, as they presumably will continue to do, playing The Blue Danube on a loop, on the same fourteen licences, indefinitely.\n\nOrder the cone. It's twelve dollars."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.28564,
+      "centroidLongitude": 114.16182,
+      "city": "Hong Kong",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "ice cream",
+        "mister softee",
+        "soft serve",
+        "street food",
+        "nostalgia",
+        "food and drink"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2979ceb1-696b-46d9-b6ce-1f9127457b89",
+      "title": "Upper Lascar Row Antique Street Market",
+      "shortDescription": "Cat Street — a narrow Sheung Wan alley of jade, old coins, propaganda badges and bronze Buddhas, named for the lascar sailors who settled here and once notorious as a thieves' market.",
+      "longDescription": "Upper Lascar Row runs roughly two hundred metres below Hollywood Road in Sheung Wan, connected to it by Ladder Street and the stone steps opposite Man Mo Temple — a narrow outdoor alley of stalls selling jade jewellery, old coins, porcelain figurines, Cultural Revolution propaganda badges, vintage photographs, mahjong sets, bronze Buddhas, and things with no obvious category. Unlike the curated galleries on Hollywood Road above, nothing here is priced to reflect certainty: the gap between a five-dollar curiosity and a five-thousand-dollar find is yours to judge.\n\nIt is officially named for the lascar sailors — Indian maritime workers on British ships — who settled here from the 1840s; the Cantonese name, Mo Lo Sheung Gaai, uses a term for Indians that grew controversial, and a 2010 petition to rename the street was rejected to preserve the historical name. The market spent decades as a genuine thieves' market, where stolen goods were sold openly among sailors, refugees and dealers — one of the more genuinely multicultural streets in colonial Hong Kong. That's largely gone; what remains is the outdoor-market instinct of looking through things that have passed through many hands, not knowing what you'll find.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Upper_Lascar_Row_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Upper_Lascar_Row_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ccb9c253-8c51-4b91-8ba5-5479cac43245",
+          "order": 0,
+          "title": "Upper Lascar Row Antique Street Market",
+          "caption": "Walk the stalls of Upper Lascar Row (Cat Street), below Hollywood Road in Sheung Wan.",
+          "latitude": 22.28517,
+          "longitude": 114.14966,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/upper-lascar-row.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Pick something up from the nearest stall. The chances are reasonable that it is either genuinely old or a convincing replica of something genuinely old, and you may not immediately know which.\n\nThe street runs roughly two hundred metres below Hollywood Road, connected to it by Ladder Street and the stone steps opposite Man Mo Temple — a narrow outdoor alley of stalls and shopfronts selling jade jewellery, old coins, porcelain figurines, Cultural Revolution propaganda badges, vintage photographs, mahjong sets, bronze Buddhas, and quantities of things with no obvious category. The range is the point. Unlike the galleries on Hollywood Road above, nothing here is curated, nothing is priced to reflect certainty, and the difference between a five-dollar curiosity and a five-thousand-dollar find is something you are expected to judge for yourself.\n\nThe street is officially called Upper Lascar Row — named for the lascar sailors, Indian maritime workers on British ships, who settled in this part of Sheung Wan from the eighteen forties. The Cantonese name, Mo Lo Sheung Gaai, uses a term for Indians that became controversial over time: in twenty ten, a formal petition to rename the street was rejected by the government, on the grounds that the historical name should be preserved.\n\nWell, the market that exists here now is considerably tidier than what it replaced — this street spent several decades as a genuine thieves' market, where stolen goods were sold openly, and where the mix of sailors, refugees, and dealers made it one of the more genuinely multicultural streets in colonial Hong Kong. That's largely gone. What remains is the outdoor market instinct — the pleasure of looking through things that have passed through many hands, not knowing what you'll find — which is, if you ask me, entirely worth preserving.\n\nLadder Street, directly at the western end, leads back up to Hollywood Road and down to Queen's Road below — worth the climb in both directions if you want to see how the three levels of this neighbourhood sit on top of each other."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.28517,
+      "centroidLongitude": 114.14966,
+      "city": "Hong Kong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "cat street",
+        "antiques",
+        "market",
+        "sheung wan",
+        "lascars",
+        "cultural heritage"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "44bee7a9-b1b0-4134-b7e4-fd3fcabcebb6",
+      "title": "Yue Po Chai Antique Co",
+      "shortDescription": "One of Hollywood Road's oldest antique shops, by Man Mo Temple — ten thousand square feet running from Neolithic ceramics to Qing porcelain, the residue of a trade driven by displacement.",
+      "longDescription": "Yue Po Chai sits at the Man Mo Temple end of Hollywood Road, one of the oldest antique shops on the street, with a facade you know before you've read the sign. The showroom runs to about ten thousand square feet and carries pieces from Neolithic burial ceramics to Qing-dynasty porcelain, stone carvings, jade, furniture, and scroll paintings — no single period, and no apology for it.\n\nHollywood Road was built in 1844, one of the first roads in the new colony, and for most of its history the antiques trade here was driven by displacement. A first wave came after 1949, when refugees fleeing Communist China sold family heirlooms; a second came during the Cultural Revolution, when artefacts were smuggled across the border ahead of the Red Guards who were burning what they caught. Most of what passed through was bought by Western dealers and museums and left Hong Kong entirely. The pieces still here — the ones that didn't sell fast enough, or found local buyers — are the residue of that trade: an accidental archive built not by curators but by consecutive waves of people who had to leave.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Yue_Po_Chai_Antique_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2779f118-4ba1-4c0c-938e-a440d65a8f0b",
+          "order": 0,
+          "title": "Yue Po Chai Antique Co",
+          "caption": "Stand outside Yue Po Chai Antique Co at the Man Mo Temple end of Hollywood Road.",
+          "latitude": 22.28442,
+          "longitude": 114.14997,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/yue-po-chai-antique.mp3",
+          "audioDurationSeconds": 150,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "During the Cultural Revolution, Red Guards across China were destroying antiques as symbols of the old order. Some of what they didn't reach ended up here.\n\nYue Po Chai sits at the Man Mo Temple end of Hollywood Road — one of the oldest antique shops on the street, with a facade that lets you know it before you've read the sign. The showroom inside runs to around ten thousand square feet and carries pieces ranging from Neolithic burial ceramics to Qing Dynasty porcelain, stone carvings, jade, furniture, and scroll paintings. The stock has no single period and makes no apologies for it.\n\nHollywood Road was built in eighteen forty-four, one of the first roads in the new British colony, and for most of its history the antiques trade here was driven by displacement. The first wave came after nineteen forty-nine, when refugees fleeing Communist China brought family heirlooms to sell. The second came during the Cultural Revolution of the nineteen sixties and seventies, when artefacts were smuggled across the border by people hoping to outrun the Red Guards — who were, at the same time, burning what they caught. Dealers on Hollywood Road described the period as extraordinary. Objects that had been in Chinese families for centuries appeared, priced to move.\n\nI find it worth knowing where things come from, standing in a shop like this one. Most of what passed through Hollywood Road was eventually bought by Western dealers, European museums, or private collectors overseas, and left Hong Kong entirely. The pieces still here — the ones that didn't sell fast enough, or that found local buyers, or that accumulated in the back rooms of shops like this one — are the residue of that trade. An accidental archive, built not by curators but by consecutive waves of people who had to leave.\n\nThe steps down to Cat Street — Upper Lascar Row — are directly opposite Man Mo Temple. The street below runs parallel and sells at considerably more affordable prices than Hollywood Road, which is rather the point of going down them."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 150,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.28442,
+      "centroidLongitude": 114.14997,
+      "city": "Hong Kong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "antiques",
+        "hollywood road",
+        "sheung wan",
+        "cultural revolution",
+        "qing dynasty",
+        "cultural heritage"
+      ],
+      "priceUSD": 0
     }
   ]
 }
