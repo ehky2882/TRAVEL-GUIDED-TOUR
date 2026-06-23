@@ -26,3 +26,13 @@ paris-islands_stop2.webp	Conciergerie	Pexels (no attribution required)
 paris-islands_stop3.webp	Sainte-Chapelle interior	Unsplash (no attribution required)
 paris-islands_stop4.webp	Notre-Dame west front	Pexels (no attribution required)
 paris-islands_stop5.webp	Île Saint-Louis quai	Unsplash (no attribution required)
+
+# Paris Triumphal Way (Axe historique) multi-stop walk (staged 2026-06-23) — all ship-safe, no attribution required
+paris-triumphalway_hero.webp	Axe historique aerial	Pexels
+paris-triumphalway_stop0.webp	Louvre + Tuileries axis	Unsplash
+paris-triumphalway_stop1.webp	Louvre pyramid	Unsplash
+paris-triumphalway_stop2.webp	Tuileries pond/green chairs	Pexels
+paris-triumphalway_stop3.webp	Place de la Concorde obelisk	Pexels
+paris-triumphalway_stop4.webp	Champs-Elysees	Unsplash
+paris-triumphalway_stop5.webp	Arc de Triomphe	Unsplash
+paris-triumphalway_stop6.webp	Grande Arche de la Defense	Pexels
