@@ -1,5 +1,25 @@
 import SwiftUI
 
+/// Ordering options for a maker's tour list — drives the sort
+/// pull-down in the Tours header. `default` is the catalog order.
+private enum MakerTourSort: String, CaseIterable, Identifiable {
+    case `default`, titleAZ, duration, nearest, city, newest, oldest
+
+    var id: String { rawValue }
+
+    var label: String {
+        switch self {
+        case .default:  return "Default"
+        case .titleAZ:  return "A–Z"
+        case .duration: return "Duration"
+        case .nearest:  return "Nearest"
+        case .city:     return "City"
+        case .newest:   return "Newest"
+        case .oldest:   return "Oldest"
+        }
+    }
+}
+
 /// Maker page — spec § Key screens #5 / roadmap M-maker.
 ///
 /// Replaces the stub that landed in M-tour-detail. Shows the maker's
@@ -13,9 +33,14 @@ struct MakerView: View {
     @Environment(AtlasNavigationState.self) private var navState
     @Environment(SavedMakersStore.self) private var savedMakersStore
     @Environment(TourPresenter.self) private var tourPresenter
+    @Environment(LocationManager.self) private var locationManager
     @Environment(\.openURL) private var openURL
 
     private let avatarSize: CGFloat = 96
+
+    /// Current ordering of the maker's tour list. Default = catalog
+    /// order. View-local: resets when you leave the page.
+    @State private var sortOrder: MakerTourSort = .default
 
     private var isSaved: Bool { savedMakersStore.isSaved(maker.id) }
 
@@ -165,13 +190,12 @@ struct MakerView: View {
     private var toursSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
             HStack {
-                Text("Tours")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-                Spacer()
                 Text(tourCountText)
                     .font(AtlasTypography.caption)
+                    .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.tertiaryText)
+                Spacer()
+                sortMenu
             }
             .padding(.top, AtlasSpacing.md)
 
@@ -220,6 +244,26 @@ struct MakerView: View {
                 }
             }
         }
+    }
+
+    /// Pull-down sort control. A `Picker` inside a `Menu` renders the
+    /// options as a checklist with a checkmark on the active sort.
+    private var sortMenu: some View {
+        Menu {
+            Picker("Sort tours", selection: $sortOrder) {
+                ForEach(MakerTourSort.allCases) { option in
+                    Text(option.label).tag(option)
+                }
+            }
+        } label: {
+            HStack(spacing: AtlasSpacing.xs) {
+                Image(systemName: "arrow.up.arrow.down")
+                Text(sortOrder.label)
+            }
+            .font(AtlasTypography.caption)
+            .foregroundStyle(AtlasColors.secondaryText)
+        }
+        .accessibilityLabel("Sort tours, currently \(sortOrder.label)")
     }
 
     private func tourRow(_ tour: Tour) -> some View {
@@ -335,7 +379,59 @@ struct MakerView: View {
     // MARK: - Derived
 
     private var makerTours: [Tour] {
-        dataService.tours(by: maker)
+        let tours = dataService.tours(by: maker)
+        switch sortOrder {
+        case .default:
+            return tours
+        case .titleAZ:
+            return tours.sorted {
+                $0.title.localizedCaseInsensitiveCompare($1.title) == .orderedAscending
+            }
+        case .duration:
+            return tours.sorted { $0.totalDurationSeconds < $1.totalDurationSeconds }
+        case .nearest:
+            // No location yet → leave catalog order rather than a
+            // meaningless one.
+            guard let location = locationManager.userLocation else { return tours }
+            return tours.sorted { $0.distance(from: location) < $1.distance(from: location) }
+        case .city:
+            return tours.sorted(by: Self.cityThenTitle)
+        case .newest:
+            return tours.sorted(by: Self.createdAtDescending)
+        case .oldest:
+            return tours.sorted(by: Self.createdAtAscending)
+        }
+    }
+
+    /// City A–Z (tours without a city sort last), then title A–Z within
+    /// a city.
+    private nonisolated static func cityThenTitle(_ lhs: Tour, _ rhs: Tour) -> Bool {
+        let lc = lhs.city ?? "", rc = rhs.city ?? ""
+        if lc.isEmpty != rc.isEmpty { return !lc.isEmpty }  // has-city first
+        let cmp = lc.localizedCaseInsensitiveCompare(rc)
+        if cmp != .orderedSame { return cmp == .orderedAscending }
+        return lhs.title.localizedCaseInsensitiveCompare(rhs.title) == .orderedAscending
+    }
+
+    /// `createdAt` newest-first; tours without a date sort last. ISO
+    /// "YYYY-MM-DD" strings compare chronologically as plain strings.
+    private nonisolated static func createdAtDescending(_ lhs: Tour, _ rhs: Tour) -> Bool {
+        switch (lhs.createdAt, rhs.createdAt) {
+        case let (l?, r?): return l > r
+        case (_?, nil):    return true
+        case (nil, _?):    return false
+        case (nil, nil):   return false
+        }
+    }
+
+    /// `createdAt` oldest-first; tours without a date sort last.
+    private nonisolated static func createdAtAscending(_ lhs: Tour, _ rhs: Tour) -> Bool {
+        switch (lhs.createdAt, rhs.createdAt) {
+        case let (l?, r?): return l < r
+        case (_?, nil):    return true
+        case (nil, _?):    return false
+        case (nil, nil):   return false
+        }
     }
 
     private var tourCountText: String {

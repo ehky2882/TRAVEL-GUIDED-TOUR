@@ -55,7 +55,8 @@ enum TestFixtures {
         category: TourCategory = .architecture,
         latitude: Double = 40.7484,
         longitude: Double = -73.9857,
-        stopCount: Int = 1
+        stopCount: Int = 1,
+        createdAt: String? = nil
     ) -> Tour {
         let stops = (0..<stopCount).map { i in
             makeStop(
@@ -85,7 +86,8 @@ enum TestFixtures {
             city: "Test City",
             primaryCategory: category,
             tags: [],
-            priceUSD: 0
+            priceUSD: 0,
+            createdAt: createdAt
         )
     }
 }
