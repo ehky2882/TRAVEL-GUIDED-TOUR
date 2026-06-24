@@ -1,0 +1,10 @@
+
+# SF batch 5 (2026-06-24) — CC BY-SA images (Wikimedia Commons; app has no attribution UI)
+fishermans-wharf_4.webp	Fisherman's Wharf fleet	CC BY-SA 4.0	Wikimedia Commons
+hyde-street-pier_hero.webp	Hyde St Pier sign	CC BY-SA 2.0	Wikimedia Commons
+hyde-street-pier_2.webp	Hyde St Pier historic fleet	CC BY-SA 4.0	Wikimedia Commons
+hyde-street-pier_3.webp	Eureka ferry	CC BY-SA 3.0	Wikimedia Commons
+city-lights-kerouac-alley_hero.webp	City Lights North Beach	CC BY-SA 3.0	Wikimedia Commons
+city-lights-kerouac-alley_2.webp	City Lights building	CC BY-SA 4.0	Wikimedia Commons
+washington-square-sf_2.webp	Saints Peter and Paul Church	CC BY-SA 2.0	Wikimedia Commons
+washington-square-sf_3.webp	Washington Square park	CC BY 2.0	Wikimedia Commons
