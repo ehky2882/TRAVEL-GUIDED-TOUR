@@ -31,3 +31,10 @@ sfmoma_6.webp	CC BY-SA 4.0	Wikimedia Commons
 nob-hill_hero.webp	CC BY 2.0	Wikimedia Commons
 nob-hill_2.webp	CC BY-SA 4.0	Wikimedia Commons
 nob-hill_3.webp	CC BY-SA 4.0	Wikimedia Commons
+
+# SF batch 8 (2026-06-24) — CC BY/BY-SA (Wikimedia)
+castro-theatre_4.webp	CC BY-SA 3.0	Wikimedia Commons
+harvey-milk-castro_hero.webp	Public domain	Wikimedia Commons
+harvey-milk-castro_4.webp	CC BY-SA 4.0	Wikimedia Commons
+de-young_hero.webp	Public domain	Wikimedia Commons
+de-young_3.webp	CC BY 3.0	Wikimedia Commons
