@@ -19,3 +19,10 @@ ross-alley_2.webp	CC BY-SA 3.0	Wikimedia Commons
 ross-alley_3.webp	CC BY 2.0	Wikimedia Commons
 ross-alley_4.webp	CC BY 2.0	Wikimedia Commons
 union-square-sf_2.webp	CC BY-SA 4.0	Wikimedia Commons
+
+# SFMOMA (batch 7) — hero owner-supplied; gallery CC BY-SA (Wikimedia)
+sfmoma_2.webp	CC BY-SA 4.0	Wikimedia Commons
+sfmoma_3.webp	CC BY-SA 4.0	Wikimedia Commons
+sfmoma_4.webp	CC BY-SA 4.0	Wikimedia Commons
+sfmoma_5.webp	CC BY 2.0	Wikimedia Commons
+sfmoma_6.webp	CC BY-SA 4.0	Wikimedia Commons
