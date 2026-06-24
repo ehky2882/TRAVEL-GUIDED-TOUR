@@ -26,3 +26,8 @@ sfmoma_3.webp	CC BY-SA 4.0	Wikimedia Commons
 sfmoma_4.webp	CC BY-SA 4.0	Wikimedia Commons
 sfmoma_5.webp	CC BY 2.0	Wikimedia Commons
 sfmoma_6.webp	CC BY-SA 4.0	Wikimedia Commons
+
+# Nob Hill (batch 7) — CC BY-SA (Wikimedia)
+nob-hill_hero.webp	CC BY 2.0	Wikimedia Commons
+nob-hill_2.webp	CC BY-SA 4.0	Wikimedia Commons
+nob-hill_3.webp	CC BY-SA 4.0	Wikimedia Commons
