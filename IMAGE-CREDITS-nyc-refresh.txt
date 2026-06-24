@@ -5,3 +5,7 @@ Riverside_Church_hero.webp	Riverside Church tower	Pexels (no attribution require
 Riverside_Church_2.webp	Riverside Church tower+nave	CC BY-SA 4.0	Epicgenius	https://commons.wikimedia.org/wiki/File:Riverside_Church_Mar_2026_37.jpg	https://creativecommons.org/licenses/by-sa/4.0
 Riverside_Church_3.webp	Riverside Church interior nave	CC BY-SA 4.0	Epicgenius	https://commons.wikimedia.org/wiki/File:Riverside_Church_Mar_2026_28.jpg	https://creativecommons.org/licenses/by-sa/4.0
 Riverside_Church_4.webp	Riverside Church tower	Unsplash (no attribution required)
+
+# SF Mission Dolores (batch 3) — 2026-06-24
+mission-dolores_hero.webp	Mission Dolores adobe + basilica	owner-supplied (no attribution required)
+mission-dolores_2.webp	Mission Dolores old adobe	Public domain (Wikimedia)
