@@ -1,0 +1,7 @@
+
+# Image refresh 2026-06-24 (NYC cleanup batch)
+# Charging Bull, Oculus, Madison Square Garden — all Unsplash/Pexels (no attribution required)
+Riverside_Church_hero.webp	Riverside Church tower	Pexels (no attribution required)
+Riverside_Church_2.webp	Riverside Church tower+nave	CC BY-SA 4.0	Epicgenius	https://commons.wikimedia.org/wiki/File:Riverside_Church_Mar_2026_37.jpg	https://creativecommons.org/licenses/by-sa/4.0
+Riverside_Church_3.webp	Riverside Church interior nave	CC BY-SA 4.0	Epicgenius	https://commons.wikimedia.org/wiki/File:Riverside_Church_Mar_2026_28.jpg	https://creativecommons.org/licenses/by-sa/4.0
+Riverside_Church_4.webp	Riverside Church tower	Unsplash (no attribution required)
