@@ -8,3 +8,14 @@ city-lights-kerouac-alley_hero.webp	City Lights North Beach	CC BY-SA 3.0	Wikimed
 city-lights-kerouac-alley_2.webp	City Lights building	CC BY-SA 4.0	Wikimedia Commons
 washington-square-sf_2.webp	Saints Peter and Paul Church	CC BY-SA 2.0	Wikimedia Commons
 washington-square-sf_3.webp	Washington Square park	CC BY 2.0	Wikimedia Commons
+
+# SF batch 6 (2026-06-24) — CC BY/BY-SA images (Wikimedia Commons; app has no attribution UI)
+waverly-place_hero.webp	CC BY-SA 4.0	Wikimedia Commons
+waverly-place_2.webp	CC BY 2.0	Wikimedia Commons
+waverly-place_3.webp	CC BY 2.0	Wikimedia Commons
+waverly-place_4.webp	CC0	Wikimedia Commons
+ross-alley_hero.webp	CC BY 2.0	Wikimedia Commons
+ross-alley_2.webp	CC BY-SA 3.0	Wikimedia Commons
+ross-alley_3.webp	CC BY 2.0	Wikimedia Commons
+ross-alley_4.webp	CC BY 2.0	Wikimedia Commons
+union-square-sf_2.webp	CC BY-SA 4.0	Wikimedia Commons
