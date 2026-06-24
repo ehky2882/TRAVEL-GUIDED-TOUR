@@ -1,23 +1,36 @@
 import SwiftUI
 
-/// Ordering options for a maker's tour list — drives the sort
-/// pull-down in the Tours header. `default` is the catalog order.
-private enum MakerTourSort: String, CaseIterable, Identifiable {
-    case `default`, titleAZ, duration, nearest, city, newest, oldest
+/// Sort criteria for a maker's tour list. Each (except `default`) is
+/// reversible — the menu shows a direction-specific label so the
+/// active sort reads in plain words ("A–Z" / "Z–A", "Newest" /
+/// "Oldest", …). `default` is the catalog order (no direction).
+private enum MakerSortCriterion: String, CaseIterable, Identifiable {
+    case `default`, name, duration, distance, dateAdded
 
     var id: String { rawValue }
 
-    var label: String {
+    /// The direction a criterion takes when first selected. Date added
+    /// defaults to newest-first; everything else to its natural
+    /// ascending form.
+    var defaultAscending: Bool {
+        self == .dateAdded ? false : true
+    }
+
+    /// Direction-aware label (their vocabulary, not "ascending").
+    func label(ascending: Bool) -> String {
         switch self {
-        case .default:  return "Default"
-        case .titleAZ:  return "A–Z"
-        case .duration: return "Duration"
-        case .nearest:  return "Nearest"
-        case .city:     return "City"
-        case .newest:   return "Newest"
-        case .oldest:   return "Oldest"
+        case .default:   return "Default"
+        case .name:      return ascending ? "A–Z" : "Z–A"
+        case .duration:  return ascending ? "Shortest" : "Longest"
+        case .distance:  return ascending ? "Nearest" : "Farthest"
+        case .dateAdded: return ascending ? "Oldest" : "Newest"
         }
     }
+}
+
+/// List vs. Instagram-style grid presentation of a maker's tours.
+private enum MakerListLayout {
+    case list, grid
 }
 
 /// Maker page — spec § Key screens #5 / roadmap M-maker.
@@ -38,9 +51,15 @@ struct MakerView: View {
 
     private let avatarSize: CGFloat = 96
 
-    /// Current ordering of the maker's tour list. Default = catalog
-    /// order. View-local: resets when you leave the page.
-    @State private var sortOrder: MakerTourSort = .default
+    /// Current sort of the maker's tour list. View-local: resets when
+    /// you leave the page. `ascending` is ignored for `.default`.
+    @State private var sortCriterion: MakerSortCriterion = .default
+    @State private var sortAscending: Bool = true
+
+    /// List vs grid presentation; view-local, resets on leave.
+    @State private var layout: MakerListLayout = .list
+    /// Measured width of the grid container — drives square tile sizing.
+    @State private var gridContentWidth: CGFloat = 0
 
     private var isSaved: Bool { savedMakersStore.isSaved(maker.id) }
 
@@ -189,12 +208,13 @@ struct MakerView: View {
 
     private var toursSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            HStack {
+            HStack(spacing: AtlasSpacing.md) {
                 Text(tourCountText)
                     .font(AtlasTypography.caption)
                     .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.tertiaryText)
                 Spacer()
+                layoutToggle
                 sortMenu
             }
             .padding(.top, AtlasSpacing.md)
@@ -204,66 +224,144 @@ struct MakerView: View {
                     .font(AtlasTypography.body)
                     .foregroundStyle(AtlasColors.secondaryText)
                     .padding(.vertical, AtlasSpacing.md)
+            } else if layout == .grid {
+                toursGrid
             } else {
-                LazyVStack(alignment: .leading, spacing: 0) {
-                    ForEach(makerTours) { tour in
-                        // Opening a tour depends on how MakerView itself
-                        // was reached:
-                        //  • Top-level push (Library / Search / Home) —
-                        //    no detail layer is up, so present the tour
-                        //    via the shared `tourPresenter` slide-up
-                        //    layer (same as every other tour list). The
-                        //    sheet's X close — wired to
-                        //    `tourPresenter.dismiss()` — then works.
-                        //  • Already inside a detail layer (reached via a
-                        //    tour sheet → "Go to creator") — push the
-                        //    next tour within that layer's own nav stack
-                        //    so we don't double-stack a second layer; the
-                        //    X still dismisses the whole layer.
-                        Group {
-                            if tourPresenter.presentedTour == nil {
-                                Button {
-                                    tourPresenter.present(tour)
-                                } label: {
-                                    tourRow(tour)
-                                }
-                            } else {
-                                NavigationLink {
-                                    TourDetailView(tour: tour)
-                                } label: {
-                                    tourRow(tour)
-                                }
-                            }
-                        }
-                        .buttonStyle(.plain)
+                toursList
+            }
+        }
+    }
 
-                        if tour.id != makerTours.last?.id {
-                            Divider()
-                        }
-                    }
+    /// Wraps a tour's tappable content with the correct open behavior.
+    /// Opening depends on how MakerView itself was reached:
+    ///  • Top-level push (Library / Search / Home) — no detail layer is
+    ///    up, so present the tour via the shared `tourPresenter`
+    ///    slide-up layer (same as every other tour list); the sheet's X
+    ///    close — wired to `tourPresenter.dismiss()` — then works.
+    ///  • Already inside a detail layer (reached via a tour sheet →
+    ///    "Go to creator") — push within that layer's own nav stack so
+    ///    we don't double-stack a second layer; X still dismisses it.
+    @ViewBuilder
+    private func tourOpen<Label: View>(_ tour: Tour, @ViewBuilder label: () -> Label) -> some View {
+        if tourPresenter.presentedTour == nil {
+            Button { tourPresenter.present(tour) } label: { label() }
+                .buttonStyle(.plain)
+        } else {
+            NavigationLink { TourDetailView(tour: tour) } label: { label() }
+                .buttonStyle(.plain)
+        }
+    }
+
+    private var toursList: some View {
+        LazyVStack(alignment: .leading, spacing: 0) {
+            ForEach(makerTours) { tour in
+                tourOpen(tour) { tourRow(tour) }
+
+                if tour.id != makerTours.last?.id {
+                    Divider()
                 }
             }
         }
     }
 
-    /// Pull-down sort control. A `Picker` inside a `Menu` renders the
-    /// options as a checklist with a checkmark on the active sort.
+    /// Instagram-style 3-column square photo grid (image only). Shows
+    /// the same sorted `makerTours`; tap a tile to open the tour. Tile
+    /// side is derived from the measured grid width so tiles stay
+    /// square at any device size.
+    private var toursGrid: some View {
+        let spacing: CGFloat = 2
+        let columns = Array(repeating: GridItem(.flexible(), spacing: spacing), count: 3)
+        let side = max(0, (gridContentWidth - spacing * 2) / 3)
+        return LazyVGrid(columns: columns, spacing: spacing) {
+            ForEach(makerTours) { tour in
+                tourOpen(tour) {
+                    HeroImageView(
+                        imageName: tour.heroImageURL,
+                        height: side,
+                        cornerRadius: 0,
+                        category: tour.primaryCategory
+                    )
+                    .clipped()
+                    .contentShape(Rectangle())
+                }
+            }
+        }
+        .background(
+            GeometryReader { geo in
+                Color.clear
+                    .onAppear { gridContentWidth = geo.size.width }
+                    .onChange(of: geo.size.width) { _, w in gridContentWidth = w }
+            }
+        )
+    }
+
+    /// List / grid presentation toggle.
+    private var layoutToggle: some View {
+        HStack(spacing: AtlasSpacing.sm) {
+            layoutToggleIcon("list.bullet", target: .list)
+            layoutToggleIcon("square.grid.3x3", target: .grid)
+        }
+    }
+
+    private func layoutToggleIcon(_ systemName: String, target: MakerListLayout) -> some View {
+        Button { layout = target } label: {
+            Image(systemName: systemName)
+                .font(AtlasTypography.caption)
+                .foregroundStyle(layout == target ? AtlasColors.primaryText : AtlasColors.tertiaryText)
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(target == .grid ? "Grid view" : "List view")
+    }
+
+    /// Pull-down sort control. Each criterion is one row; the active
+    /// one carries an up/down chevron and a direction-aware label.
+    /// Tapping the active criterion flips its direction; tapping
+    /// another selects it at its default direction.
     private var sortMenu: some View {
         Menu {
-            Picker("Sort tours", selection: $sortOrder) {
-                ForEach(MakerTourSort.allCases) { option in
-                    Text(option.label).tag(option)
+            ForEach(MakerSortCriterion.allCases) { criterion in
+                Button {
+                    if criterion == sortCriterion {
+                        if criterion != .default { sortAscending.toggle() }
+                    } else {
+                        sortCriterion = criterion
+                        sortAscending = criterion.defaultAscending
+                    }
+                } label: {
+                    sortMenuRowLabel(criterion)
                 }
             }
         } label: {
             HStack(spacing: AtlasSpacing.xs) {
                 Image(systemName: "arrow.up.arrow.down")
-                Text(sortOrder.label)
+                Text(activeSortLabel)
             }
             .font(AtlasTypography.caption)
             .foregroundStyle(AtlasColors.secondaryText)
         }
-        .accessibilityLabel("Sort tours, currently \(sortOrder.label)")
+        .accessibilityLabel("Sort tours, currently \(activeSortLabel)")
+    }
+
+    /// The active criterion shows its current direction + a chevron;
+    /// inactive ones show their default-direction label.
+    @ViewBuilder
+    private func sortMenuRowLabel(_ criterion: MakerSortCriterion) -> some View {
+        if criterion == sortCriterion {
+            if criterion == .default {
+                Label(criterion.label(ascending: true), systemImage: "checkmark")
+            } else {
+                Label(
+                    criterion.label(ascending: sortAscending),
+                    systemImage: sortAscending ? "chevron.up" : "chevron.down"
+                )
+            }
+        } else {
+            Text(criterion.label(ascending: criterion.defaultAscending))
+        }
+    }
+
+    private var activeSortLabel: String {
+        sortCriterion.label(ascending: sortAscending)
     }
 
     private func tourRow(_ tour: Tour) -> some View {
@@ -289,8 +387,10 @@ struct MakerView: View {
                     .lineLimit(1)
                     .truncationMode(.tail)
 
-                // Subtitle: duration only (category dropped), one line.
-                Text(formattedDuration(tour.totalDurationSeconds))
+                // Subtitle: duration, then distance-away when there's a
+                // location fix (e.g. "2m 15s · 1.2 mi away"); duration
+                // only otherwise. One line.
+                Text(subtitleText(tour))
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
                     .lineLimit(1)
@@ -380,62 +480,61 @@ struct MakerView: View {
 
     private var makerTours: [Tour] {
         let tours = dataService.tours(by: maker)
-        switch sortOrder {
+        let asc = sortAscending
+        switch sortCriterion {
         case .default:
             return tours
-        case .titleAZ:
-            return tours.sorted {
-                $0.title.localizedCaseInsensitiveCompare($1.title) == .orderedAscending
-            }
+        case .name:
+            return tours.sorted { Self.compareName($0, $1, ascending: asc) }
         case .duration:
-            return tours.sorted { $0.totalDurationSeconds < $1.totalDurationSeconds }
-        case .nearest:
+            return tours.sorted {
+                asc
+                    ? $0.totalDurationSeconds < $1.totalDurationSeconds
+                    : $0.totalDurationSeconds > $1.totalDurationSeconds
+            }
+        case .distance:
             // No location yet → leave catalog order rather than a
             // meaningless one.
             guard let location = locationManager.userLocation else { return tours }
-            return tours.sorted { $0.distance(from: location) < $1.distance(from: location) }
-        case .city:
-            return tours.sorted(by: Self.cityThenTitle)
-        case .newest:
-            return tours.sorted(by: Self.createdAtDescending)
-        case .oldest:
-            return tours.sorted(by: Self.createdAtAscending)
+            return tours.sorted {
+                let d0 = $0.distance(from: location)
+                let d1 = $1.distance(from: location)
+                return asc ? d0 < d1 : d0 > d1
+            }
+        case .dateAdded:
+            return tours.sorted { Self.compareCreatedAt($0, $1, ascending: asc) }
         }
     }
 
-    /// City A–Z (tours without a city sort last), then title A–Z within
-    /// a city.
-    private nonisolated static func cityThenTitle(_ lhs: Tour, _ rhs: Tour) -> Bool {
-        let lc = lhs.city ?? "", rc = rhs.city ?? ""
-        if lc.isEmpty != rc.isEmpty { return !lc.isEmpty }  // has-city first
-        let cmp = lc.localizedCaseInsensitiveCompare(rc)
-        if cmp != .orderedSame { return cmp == .orderedAscending }
-        return lhs.title.localizedCaseInsensitiveCompare(rhs.title) == .orderedAscending
+    /// Title compare, direction-aware.
+    private nonisolated static func compareName(_ lhs: Tour, _ rhs: Tour, ascending: Bool) -> Bool {
+        let cmp = lhs.title.localizedCaseInsensitiveCompare(rhs.title)
+        return ascending ? cmp == .orderedAscending : cmp == .orderedDescending
     }
 
-    /// `createdAt` newest-first; tours without a date sort last. ISO
-    /// "YYYY-MM-DD" strings compare chronologically as plain strings.
-    private nonisolated static func createdAtDescending(_ lhs: Tour, _ rhs: Tour) -> Bool {
+    /// `createdAt` compare, direction-aware. Tours without a date sort
+    /// LAST in both directions. ISO "YYYY-MM-DD" strings compare
+    /// chronologically as plain strings.
+    private nonisolated static func compareCreatedAt(_ lhs: Tour, _ rhs: Tour, ascending: Bool) -> Bool {
         switch (lhs.createdAt, rhs.createdAt) {
-        case let (l?, r?): return l > r
-        case (_?, nil):    return true
+        case let (l?, r?): return ascending ? l < r : l > r
+        case (_?, nil):    return true   // dated before undated, always
         case (nil, _?):    return false
         case (nil, nil):   return false
         }
     }
 
-    /// `createdAt` oldest-first; tours without a date sort last.
-    private nonisolated static func createdAtAscending(_ lhs: Tour, _ rhs: Tour) -> Bool {
-        switch (lhs.createdAt, rhs.createdAt) {
-        case let (l?, r?): return l < r
-        case (_?, nil):    return true
-        case (nil, _?):    return false
-        case (nil, nil):   return false
-        }
+    /// Subtitle: duration, plus "· N away" when a location fix exists
+    /// (e.g. "2m 15s · 1.2 mi away"); duration only otherwise.
+    private func subtitleText(_ tour: Tour) -> String {
+        let duration = formattedDuration(tour.totalDurationSeconds)
+        guard let location = locationManager.userLocation else { return duration }
+        let distance = AtlasFormatters.distanceAway(meters: tour.distance(from: location))
+        return "\(duration) · \(distance)"
     }
 
     private var tourCountText: String {
-        let count = makerTours.count
+        let count = dataService.tours(by: maker).count
         return count == 1 ? "1 tour" : "\(count) tours"
     }
 
