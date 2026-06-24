@@ -1,4 +1,5 @@
 import SwiftUI
+import MapKit
 
 /// Tour detail screen — spec § Key screens #4 / roadmap M-tour-detail.
 ///
@@ -82,6 +83,12 @@ struct TourDetailView: View {
     /// fight the periodic time observer.
     @State private var isScrubbingPrimary = false
     @State private var primaryScrubTime: TimeInterval = 0
+
+    /// Walking-route polylines between consecutive stops on multi-stop
+    /// tours. Empty for single-stop tours, and empty for multi-stop
+    /// tours until the async `MKDirections.calculate()` requests come
+    /// back. Pins render immediately; the route line draws when ready.
+    @State private var routePolylines: [MKPolyline] = []
 
     var body: some View {
         scrollBody
@@ -180,6 +187,7 @@ struct TourDetailView: View {
                         .padding(.vertical, AtlasSpacing.sm)
                     descriptionSection
                     stopsSection
+                    mapSection
                 }
                 .padding(.horizontal, AtlasSpacing.lg)
 
@@ -477,6 +485,296 @@ struct TourDetailView: View {
             artist: maker?.displayName,
             sourceId: tour.id.uuidString
         )
+    }
+
+    // MARK: - Map preview + directions
+
+    /// Inline pannable map showing every stop on the tour, with a
+    /// walking-route polyline between consecutive stops on multi-stop
+    /// tours. Initial camera frames a tight neighborhood span for a
+    /// single stop, or the bounding box of all stops (+ ~40% padding)
+    /// for a walk. Below the map, a plain "GET DIRECTIONS" text link
+    /// opens Apple Maps with walking directions to the start of the
+    /// tour.
+    ///
+    /// The map is interactive (pinch/pan) but the route line and pins
+    /// are decoration — the directions affordance is the text link
+    /// below, not a tap on the map itself, so we don't fight the
+    /// scroll view for vertical gestures inside the inline tile.
+    private var mapSection: some View {
+        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            Text("Location")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+                .padding(.top, AtlasSpacing.md)
+
+            Map(initialPosition: .region(initialMapRegion)) {
+                // Polylines declared first → drawn under the pins.
+                // MapContent z-order follows declaration order (later
+                // = on top).
+                ForEach(Array(routePolylines.enumerated()), id: \.offset) { _, polyline in
+                    MapPolyline(polyline)
+                        .stroke(AtlasColors.mapPin, lineWidth: 5)
+                }
+                ForEach(stopGroupsForMap) { group in
+                    Annotation(
+                        group.stops.first?.title ?? "Stop",
+                        coordinate: group.coordinate,
+                        anchor: .center
+                    ) {
+                        mapStopPin(for: group)
+                    }
+                }
+                // User-location dot — paints when the user has
+                // granted location permission (already requested by
+                // ContentView on first launch for the home map).
+                // Lets users zoom out to see where they are relative
+                // to the tour.
+                //
+                // System `UserAnnotation()` would inherit the app's
+                // terracotta `AccentColor` and render orange — same
+                // issue HomeMapSection.UserLocationDot's doc comment
+                // calls out. We paint an explicit Apple-Maps-blue
+                // dot here for the same reason; heading wedge isn't
+                // needed in this static preview, so this is just the
+                // halo + dot, not the full home `UserLocationDot`.
+                if let userLocation = locationManager.userLocation {
+                    Annotation("My location", coordinate: userLocation.coordinate, anchor: .center) {
+                        userLocationDot
+                    }
+                    .annotationTitles(.hidden)
+                }
+            }
+            // Match the home map's style exactly: muted standard
+            // emphasis + the same curated POI allowlist
+            // (`HomeMapSection.tourPOI`), so landmarks / museums /
+            // parks / transit show through but ATMs / retail /
+            // restaurants don't. Keeps the inline preview reading
+            // as the same canvas as the home map.
+            .mapStyle(.standard(emphasis: .muted, pointsOfInterest: HomeMapSection.tourPOI))
+            // Match the hero image's footprint exactly: same height
+            // token, no corner radius (square corners). The inner
+            // VStack already applies `.padding(.horizontal, .lg)`,
+            // so horizontal insets line up with the hero too.
+            .frame(height: AtlasSpacing.heroHeight)
+            .task(id: tour.id) {
+                await loadWalkingRoute()
+            }
+
+            // Menu lets the user pick Apple Maps or Google Maps.
+            // Google route uses the `?api=1` universal link — iOS
+            // routes it to the Google Maps app if installed, falls
+            // back to Safari otherwise. No Info.plist entry needed.
+            Menu {
+                Button {
+                    openInAppleMaps()
+                } label: {
+                    Label("Apple Maps", systemImage: "applelogo")
+                }
+                Button {
+                    openInGoogleMaps()
+                } label: {
+                    Label("Google Maps", systemImage: "globe")
+                }
+            } label: {
+                Text("GET DIRECTIONS")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.mapPin)
+            }
+            .padding(.top, AtlasSpacing.xs)
+            .accessibilityLabel("Get directions")
+            .accessibilityHint("Opens Apple Maps or Google Maps with walking directions to the start of the tour.")
+        }
+    }
+
+    private var sortedStopsForMap: [Stop] {
+        tour.stops.sorted(by: { $0.order < $1.order })
+    }
+
+    /// One pin per unique coordinate. When two or more stops share a
+    /// coordinate (e.g. an intro + first stop staged in the same
+    /// spot) they collapse into a single pin labeled with all their
+    /// numbers (e.g. `1,2`). Preserves stop order within a group.
+    private var stopGroupsForMap: [StopGroup] {
+        var buckets: [(coordinate: CLLocationCoordinate2D, stops: [Stop])] = []
+        for stop in sortedStopsForMap {
+            if let idx = buckets.firstIndex(where: {
+                $0.coordinate.latitude == stop.latitude
+                    && $0.coordinate.longitude == stop.longitude
+            }) {
+                buckets[idx].stops.append(stop)
+            } else {
+                buckets.append((stop.coordinate, [stop]))
+            }
+        }
+        return buckets.map { bucket in
+            StopGroup(coordinate: bucket.coordinate, stops: bucket.stops)
+        }
+    }
+
+    /// One pin's worth of stops — all stops at the same coordinate.
+    /// `id` is built from lat/lon so ForEach diffing is stable across
+    /// re-renders (CLLocationCoordinate2D itself isn't Hashable).
+    private struct StopGroup: Identifiable {
+        let coordinate: CLLocationCoordinate2D
+        let stops: [Stop]
+        var id: String { "\(coordinate.latitude),\(coordinate.longitude)" }
+    }
+
+    /// Stop pin for the inline preview. On single-stop tours we
+    /// render the same small 14pt gold dot as the home map's
+    /// `StopPin` (which is `private` to HomeMapSection so it can't
+    /// be reused directly). On multi-stop tours we render a numbered
+    /// gold badge — Capsule-shaped so it can stretch horizontally
+    /// when multiple stops share a coordinate (label becomes e.g.
+    /// `1,2` instead of layering pins on top of each other). Numbers
+    /// are stop `order + 1`, matching the numbered stops list above.
+    @ViewBuilder
+    private func mapStopPin(for group: StopGroup) -> some View {
+        if tour.kind == .multiStop {
+            let label = group.stops
+                .map { String($0.order + 1) }
+                .joined(separator: ",")
+            Text(label)
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(Color.white)
+                .padding(.horizontal, AtlasSpacing.sm)
+                .frame(minWidth: 22, minHeight: 22)
+                .background(Capsule().fill(AtlasColors.mapPin))
+                .overlay(Capsule().stroke(Color.white, lineWidth: 2))
+                .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
+        } else {
+            Circle()
+                .fill(AtlasColors.mapPin)
+                .frame(width: 14, height: 14)
+                .overlay(
+                    Circle().stroke(Color.white, lineWidth: 1.5)
+                )
+                .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
+        }
+    }
+
+    /// Apple-Maps-style user-location dot for the inline preview:
+    /// soft blue accuracy halo + solid blue dot with a white ring.
+    /// Mirrors HomeMapSection's `UserLocationDot` *without* the
+    /// heading wedge (this preview is static, no compass needed)
+    /// and with all colors explicit so the dot stays blue instead
+    /// of inheriting the terracotta app accent.
+    private var userLocationDot: some View {
+        ZStack {
+            Circle()
+                .fill(Color.blue.opacity(0.15))
+                .frame(width: 46, height: 46)
+            Circle()
+                .fill(Color.blue)
+                .frame(width: 16, height: 16)
+                .overlay(Circle().stroke(Color.white, lineWidth: 3))
+                .shadow(color: Color.black.opacity(0.25), radius: 1.5)
+        }
+        .frame(width: 46, height: 46)
+    }
+
+    /// Single stop → tight neighborhood span (~0.005°, matches the
+    /// home recenter button). Multi-stop → bounding box of all stop
+    /// coordinates with ~40% padding so the route doesn't kiss the
+    /// edges of the preview frame.
+    private var initialMapRegion: MKCoordinateRegion {
+        let stops = sortedStopsForMap
+        // Every tour has at least one stop per the schema, but guard
+        // anyway — fall back to a wide NYC view if somehow empty.
+        guard let first = stops.first else {
+            return MKCoordinateRegion(
+                center: CLLocationCoordinate2D(latitude: 40.7128, longitude: -74.0060),
+                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            )
+        }
+        if stops.count == 1 {
+            return MKCoordinateRegion(
+                center: first.coordinate,
+                span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+            )
+        }
+        let lats = stops.map(\.latitude)
+        let lons = stops.map(\.longitude)
+        let minLat = lats.min() ?? first.latitude
+        let maxLat = lats.max() ?? first.latitude
+        let minLon = lons.min() ?? first.longitude
+        let maxLon = lons.max() ?? first.longitude
+        let centerLat = (minLat + maxLat) / 2
+        let centerLon = (minLon + maxLon) / 2
+        let latDelta = max((maxLat - minLat) * 1.4, 0.005)
+        let lonDelta = max((maxLon - minLon) * 1.4, 0.005)
+        return MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: centerLat, longitude: centerLon),
+            span: MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
+        )
+    }
+
+    /// Async-fetches a walking route from `MKDirections` between each
+    /// consecutive pair of stops on a multi-stop tour. Sequential
+    /// awaits are intentional — MKDirections rate-limits concurrent
+    /// requests, and the typical Atlas walk is 4–6 stops so total
+    /// latency is acceptable. Failures are silent: any unreachable
+    /// segment just won't draw, and the pins stay correct.
+    private func loadWalkingRoute() async {
+        guard tour.kind == .multiStop else {
+            routePolylines = []
+            return
+        }
+        let stops = sortedStopsForMap
+        guard stops.count >= 2 else { return }
+        var polylines: [MKPolyline] = []
+        for i in 0..<(stops.count - 1) {
+            let req = MKDirections.Request()
+            req.source = MKMapItem(placemark: MKPlacemark(coordinate: stops[i].coordinate))
+            req.destination = MKMapItem(placemark: MKPlacemark(coordinate: stops[i + 1].coordinate))
+            req.transportType = .walking
+            do {
+                let response = try await MKDirections(request: req).calculate()
+                if let route = response.routes.first {
+                    polylines.append(route.polyline)
+                }
+            } catch {
+                // Silent: route segment skipped, pins remain.
+            }
+        }
+        routePolylines = polylines
+    }
+
+    /// Opens Apple Maps with walking directions to the FIRST stop of
+    /// the tour (where the user needs to walk to before the audio
+    /// starts). Multi-stop tours show the full inline preview already
+    /// — the directions link is "get me to the start," not "navigate
+    /// the whole walk for me."
+    private func openInAppleMaps() {
+        guard let destination = sortedStopsForMap.first else { return }
+        var components = URLComponents(string: "http://maps.apple.com/")!
+        components.queryItems = [
+            URLQueryItem(name: "daddr", value: "\(destination.latitude),\(destination.longitude)"),
+            URLQueryItem(name: "dirflg", value: "w")
+        ]
+        if let url = components.url {
+            openURL(url)
+        }
+    }
+
+    /// Opens Google Maps with walking directions to the first stop.
+    /// Uses the cross-platform `?api=1` universal link instead of the
+    /// `comgooglemaps://` scheme — iOS routes it to the Google Maps
+    /// app if installed and falls back to Safari otherwise, so we
+    /// don't need an `LSApplicationQueriesSchemes` entry in
+    /// `Info.plist` to detect installation.
+    private func openInGoogleMaps() {
+        guard let destination = sortedStopsForMap.first else { return }
+        var components = URLComponents(string: "https://www.google.com/maps/dir/")!
+        components.queryItems = [
+            URLQueryItem(name: "api", value: "1"),
+            URLQueryItem(name: "destination", value: "\(destination.latitude),\(destination.longitude)"),
+            URLQueryItem(name: "travelmode", value: "walking")
+        ]
+        if let url = components.url {
+            openURL(url)
+        }
     }
 
     // MARK: - Button row (inline)

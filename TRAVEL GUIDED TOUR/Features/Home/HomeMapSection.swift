@@ -247,7 +247,12 @@ struct HomeMapSection: View {
     /// so the map reads as a canvas for the Atlas pins rather than
     /// a Yelp grid. Easy to revisit; iterate by adding / removing
     /// categories here.
-    private static let tourPOI: PointOfInterestCategories = .including([
+    ///
+    /// Internal (not file-private) so `TourDetailView`'s inline
+    /// preview map can apply the same allowlist — keeps the home
+    /// map and the detail-sheet map visually consistent (same
+    /// landmark-vs-business filter rules).
+    static let tourPOI: PointOfInterestCategories = .including([
         // Cultural / civic landmarks
         .landmark, .museum, .nationalMonument, .library, .castle, .fortress,
         // Performance + venues
