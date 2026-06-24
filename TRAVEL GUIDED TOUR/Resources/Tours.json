@@ -17120,6 +17120,327 @@
       "totalDurationSeconds": 747,
       "city": "London",
       "walkingDistanceMeters": 850
+    },
+    {
+      "id": "f8712334-75f3-4a4a-9764-06dcaf5b5e56",
+      "createdAt": "2026-06-23",
+      "title": "King of Kowloon Calligraphy (Mong Kok) | 九龍皇帝墨蹟（旺角）",
+      "shortDescription": "Three buried layers of the King of Kowloon's ink calligraphy — hidden under paint for over a decade, rediscovered when it peeled away, and restored in 2024 as the largest surviving public work by Tsang Tsou-choi.",
+      "longDescription": "In 2022 a patch of paint peeled off the underside of a railway viaduct in Mong Kok, and underneath it conservators found Chinese ink characters — then more, then three distinct layers of them. The calligraphy runs along the bridge barrier of an MTR viaduct near Mong Kok East Station, close to Boundary Street: a five-metre-wide, one-and-a-half-metre-high panel of dense, overlapping characters concealed under paint for over a decade. The MTR Corporation commissioned professional conservators, who carefully excavated three separate layers of inscription left at different periods by the same hand — Tsang Tsou-choi, the King of Kowloon, asserting his ancestral claim to the land above his head. The restored piece opened to the public in January 2024, protected now by a drainage structure above and four layers of conservation material on the surface. It is the largest surviving public work by Tsang anywhere in the city.\n\nThere's a particular quality to finding something here rather than at the Star Ferry pier. The Tsim Sha Tsui pillar was applied in full public view on a busy waterfront, photographed endlessly and preserved almost immediately after his death in 2007. This piece was buried: three separate visits to the same concrete wall, three layers of the same obsession, under a viaduct in a busy residential district — and nobody knew it was there. The city only found it when the paint gave way on its own.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/King_of_Kowloon_Calligraphy_Mong_Kok_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/King_of_Kowloon_Calligraphy_Mong_Kok_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/King_of_Kowloon_Calligraphy_Mong_Kok_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "024ef723-1906-48a2-b8aa-26d5915e9c5e",
+          "order": 0,
+          "title": "King of Kowloon Calligraphy (Mong Kok) | 九龍皇帝墨蹟（旺角）",
+          "caption": "Stand back a few steps from the MTR viaduct near Mong Kok East Station to take in the full five-metre panel of ink characters on the bridge barrier.",
+          "latitude": 22.32669,
+          "longitude": 114.17448,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/king-of-kowloon-calligraphy-mong-kok.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "It's twenty twenty-two, and a patch of paint is peeling off the underside of a railway viaduct in Mong Kok. Underneath it, someone finds characters in Chinese ink. Then more characters. Then three distinct layers of them.\n\nThe calligraphy is on the bridge barrier of an MTR viaduct near Mong Kok East Station, close to Boundary Street — a five-metre-wide, one-and-a-half-metre-high panel of dense, overlapping Chinese ink characters that was concealed under paint for over a decade before its accidental rediscovery. The MTR Corporation commissioned professional art conservators, who carefully excavated three separate layers of inscription left at different periods, each one placed by the same hand: Tsang Tsou-choi, the King of Kowloon, asserting his ancestral claim to the land above his head. The restored piece opened to the public in January twenty twenty-four, now protected by a drainage structure above and four layers of specialist conservation material on the surface. It is the largest surviving public work by Tsang anywhere in the city.\n\nWell, there's a particular quality to finding something here rather than at the Star Ferry pier. The Tsim Sha Tsui pillar was applied in full public view on a busy tourist waterfront, photographed endlessly during Tsang's lifetime and preserved almost immediately after his death in two thousand and seven. This piece was buried. Three separate visits to the same concrete wall, three layers of the same obsession, under a railway viaduct in a busy residential district — and nobody knew it was there. The city only found it when the paint gave way on its own.\n\nThe piece runs left to right along the bridge barrier at roughly eye level — stand back a few steps from the viaduct to see the full width of it, and you'll notice the character density thins slightly at the edges, where the ink didn't penetrate as deeply."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.32669,
+      "centroidLongitude": 114.17448,
+      "city": "Hong Kong",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "tsang tsou-choi",
+        "calligraphy",
+        "street art",
+        "mong kok",
+        "kowloon",
+        "heritage"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fa3063f8-a8c4-454c-83bf-7cfb73f0d8a8",
+      "createdAt": "2026-06-23",
+      "title": "Kam Fat Mahjong | 金發麻雀",
+      "shortDescription": "A hand-carved mahjong shop beneath a Hung Hom staircase, where Sister Mei still cuts the same 42 tile designs her father taught her in 1962 — one of the city's last four or five tile carvers.",
+      "longDescription": "In 1962 a family of six arrived from Guangdong and opened a shop in Hung Hom that was also the room they lived in. The girl who grew up there is still working in the same room sixty years later. Kam Fat Mahjong sits at 2 Bulkeley Street, tucked under a staircase — a lau tai dai po, a shop beneath the stairs leading up to the flats above. The room is barely two metres wide: a glass case of coloured tiles reaching the ceiling on one side, a small red shrine glowing at the far end, and a workbench by the front window where Ho Sau-mei — Sister Mei to the neighbourhood — carves from about half past nine each morning until her hands ache too much to continue.\n\nHer father founded the shop and taught her the craft when she was thirteen. She has been carving the same forty-two tile designs ever since — cutting acrylic blanks with chisels she made herself, then painting the grooves red, green and blue. A full set of 144 tiles takes ten to fourteen days; there's a two-to-three-month waitlist, and each set costs around HK$3,300 in cash. The government listed hand tile-carving as Intangible Cultural Heritage in 2014, alongside kung fu and Cantonese opera. In the 1960s there were more than twenty carvers in the city; Ho reckons there are now four or five. She doesn't really play mahjong herself — \"Who has time to play mahjong?\" she once said. She stays because the shop holds her childhood. That's a different thing from heritage preservation, and considerably more honest.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Kam_Fat_Mahjong_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Kam_Fat_Mahjong_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Kam_Fat_Mahjong_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "970fda64-73f4-42d2-aa48-dde0edd283c0",
+          "order": 0,
+          "title": "Kam Fat Mahjong | 金發麻雀",
+          "caption": "Look for the shop tucked beneath the staircase at 2 Bulkeley Street, Hung Hom — barely two metres wide, with a glass case of mahjong tiles reaching the ceiling.",
+          "latitude": 22.30709,
+          "longitude": 114.18561,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kam-fat-mahjong.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "It's nineteen sixty-two, and a family of six has just arrived from Guangdong. The shop they open in Hung Hom is also the room they live in. The girl who grows up here will still be working in the same room sixty years later.\n\nThe shop is at two Bulkeley Street, tucked under a staircase — a lau tai dai po, which is exactly what it sounds like: a shop beneath the stairs leading up to the flats above. The room is barely two metres wide. On one side, a glass case reaching the ceiling holds stacks of coloured mahjong tiles. At the far end, a small shrine glows red. At the workbench near the front window, Ho Sau-mei — known in the neighbourhood as Sister Mei — is most likely carving. She works from around half past nine each morning until her hands ache too much to continue.\n\nHer father founded Kam Fat Mahjong in nineteen sixty-two and taught her the craft when she was thirteen. A sifu in the photograph on the wall taught them both. Ho has been doing the same forty-two tile designs since — carving acrylic blanks with chisels she made herself, then painting the grooves with red, green, and blue dyes. A full set of a hundred and forty-four tiles takes ten to fourteen days to make. There's a two-to-three month waitlist, and each set costs around HK$3,300 in cash. The government listed the craft as Intangible Cultural Heritage in twenty fourteen, alongside kung fu and Cantonese opera. In the nineteen sixties there were more than twenty tile carvers in the city. Ho estimates there are now four or five.\n\nWorth pausing on: Ho doesn't really play mahjong. \"Who has time to play mahjong?\" she once said. She stays because the shop contains her childhood memories. That's quite a different thing from heritage preservation, and considerably more honest.\n\nIf you're visiting during working hours, she's generally happy to have people watch — just don't expect a translation. Cash only if you're buying. Closed Sundays."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.30709,
+      "centroidLongitude": 114.18561,
+      "city": "Hong Kong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "mahjong",
+        "hand-carved",
+        "intangible cultural heritage",
+        "hung hom",
+        "craft",
+        "kowloon"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "799bcb24-029f-435a-b9bf-214b56e33f8d",
+      "createdAt": "2026-06-23",
+      "title": "Kau Kee | 九記牛腩",
+      "shortDescription": "Ninety years of beef-brisket noodles on Gough Street — a Michelin Bib Gourmand shop that looks utterly unassuming and has never once stopped drawing a queue.",
+      "longDescription": "You'll wait perhaps twenty minutes for a table; the bowl arrives ninety seconds after you order. Kau Kee sits at 21 Gough Street, a short lane between SoHo and Sheung Wan that the city now calls NoHo, running through a neighbourhood of independent cafés and boutiques in buildings that still have their original tong lau bones. It looks exactly like what it is: an old noodle shop that has outlasted every trend to pass through the street — small room, slightly slippery floor, tables shared with strangers, considerable noise. It began as a roadside stall run by a man known as Ah Kau (the nine in the name is the Cantonese of his nickname; the whole name means something like Kau's Beef Brisket Place). When the government stopped issuing street-hawker licences in 1997, the stall moved indoors and simply continued. Michelin has listed it on the Bib Gourmand every year for over a decade.\n\nThe menu is simple: beef brisket, tendon or slices, in clear broth or curry, with flat rice noodle, e-fu noodle or vermicelli. The e-fu is the right call — springy, holding up to both broth and curry. The clear broth looks like it has almost nothing in it, which is the point: beef bones stewed for hours, clear but dense and lightly sweet. The curry is the opposite — bold, oily, properly spicy — and the tendon soaks up the sauce better than the brisket. If there are two of you, order both. The whole argument for Kau Kee is that it looks entirely unassuming, treats you with the minimum courtesy required to take your order, and has done exactly that for ninety years to a queue that has never once stopped forming.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Kau_Kee_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Kau_Kee_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "32cb678f-46e5-4796-b840-751dff32b225",
+          "order": 0,
+          "title": "Kau Kee | 九記牛腩",
+          "caption": "Join the queue at 21 Gough Street in NoHo — a small, loud, shared-table beef brisket shop that has outlasted every trend on the street around it.",
+          "latitude": 22.28429,
+          "longitude": 114.1525,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kau-kee.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "You'll wait perhaps twenty minutes for a table. The bowl will arrive ninety seconds after you order.\n\nYou're at number twenty-one on Gough Street — a short east-west lane between SoHo and Sheung Wan that the city now calls NoHo, running through a neighbourhood of independent cafés, boutiques, and small restaurants in buildings that still have their original tong lau bones. Kau Kee sits among them looking exactly like what it is: an old noodle shop that has outlasted every trend that has passed through the street around it. The room inside is small, the floor is slightly slippery, the tables are shared with strangers, and the noise level is considerable.\n\nKau Kee was started as a roadside stall by a man known as Ah Kau — the nine in the name is the Cantonese pronunciation of his nickname, and the whole name means something close to Kau's Beef Brisket Place. His son runs it now. When the government stopped issuing new street-hawker licences in nineteen ninety-seven, the stall moved indoors to this shopfront and simply continued. Michelin has listed it on their Bib Gourmand every year for over a decade.\n\nThe menu is fairly simple: beef brisket, beef tendon, or beef slices, in either clear broth or curry, with a choice of flat rice noodle, e-fu noodle, or vermicelli. The e-fu is the right call — slightly thicker and springy, holding up to both broth and curry without going soft. The clear broth looks like it has almost nothing in it, which is the point: beef bones stewed for hours, clear but dense with flavour, lightly sweet. It built the reputation. The curry version is the opposite — bold, oily, properly spicy — and the tendon soaks up the sauce better than the brisket does. If there are two of you, order both.\n\nWell, the whole argument for Kau Kee is this: it looks entirely unassuming, it treats you with the minimum courtesy required to take your order, and it has been doing that for ninety years to a queue that has never once stopped forming.\n\nMilk tea, iced. Order it alongside the food, not after, or you'll be out of the door before it arrives. Closed Sundays."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.28429,
+      "centroidLongitude": 114.1525,
+      "city": "Hong Kong",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "beef brisket",
+        "noodles",
+        "michelin bib gourmand",
+        "gough street",
+        "central",
+        "food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "378a9e79-341b-43b7-a275-1294dfc1add1",
+      "createdAt": "2026-06-23",
+      "title": "Mido Café | 美都餐室",
+      "shortDescription": "A 1950 cha chaan teng on a Temple Street corner — blue-tiled floors, mint-green Formica, and seventy-odd years of baked spare rib rice, unchanged through the films that made it famous.",
+      "longDescription": "In July 2022 a handwritten note appeared on the door, quoting a Cantopop song and telling customers — after seventy-two years — that the café needed a rest. Three months later it reopened without further explanation. Mido Café occupies the ground and first floors of a curved corner building at 63 Temple Street, Yau Ma Tei, recognisable from the neon sign and the original mosaic tiling in the windows. Inside: blue tiled floors, mint-green Formica tables, wooden booths, ceiling fans and stained glass filtering the light. The second floor has the better views — the window seats look directly across at the Tin Hau Temple opposite, and the curved corner windows catch the street both ways. The interior has been largely unchanged since 1950.\n\nMido is a hybrid of two formats: a bing sutt — an ice house, the precursor to the cha chaan teng, serving affordable cold drinks and Western-style desserts to working-class Hong Kong — and a full cha chaan teng, the Chinese-Western café that became the backbone of everyday eating across the city. Opened in the post-war boom, it fed Yau Ma Tei through decades of change and appeared in films that used its interior as shorthand for a vanishing Hong Kong: The World of Suzie Wong (1960), Days of Being Wild (1990), Moonlight Express (1999). The closure note is the most revealing thing about it — seventy-two years of feeding the same neighbourhood, then a sign quoting a lyric, then three months of maintenance, then back to baked spare rib rice with tomato sauce as if the pause never happened.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mido_Cafe_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mido_Cafe_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Mido_Cafe_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9346f98e-f0cb-437e-a330-5e34265b03cc",
+          "order": 0,
+          "title": "Mido Café | 美都餐室",
+          "caption": "Find the curved corner building at 63 Temple Street, Yau Ma Tei — neon sign above, mosaic tiles in the windows — and take a window seat on the second floor.",
+          "latitude": 22.31045,
+          "longitude": 114.1703,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mido-cafe.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "In July twenty twenty-two, a handwritten note appeared on the door of this café, quoting a Cantopop song and telling its customers — after seventy-two years — that it needed a rest. Three months later, it reopened without further explanation.\n\nThe café occupies the ground and first floor of a curved corner building at sixty-three Temple Street, identifiable from the street by the neon sign above the entrance and the original mosaic tiling visible through the windows. Inside: blue tiled floors, mint-green Formica tables, wooden booths, ceiling fans turning overhead, and stained-glass windows that filter the light from the Temple Street side. The second floor has the better views — the window seats look directly across at the Tin Hau Temple opposite, and the curved corner windows catch the street in both directions. The whole interior has been largely unchanged since nineteen fifty.\n\nMido is technically a hybrid between two formats: a bing sutt — an ice house, the precursor to the cha chaan teng, serving affordable cold drinks and Western-style desserts to Hong Kong's working-class population — and a full cha chaan teng, the Chinese-Western café that became the backbone of everyday eating across the city. Opened in the early post-war boom years, it served the neighbourhood of Yau Ma Tei through decades of rapid change around it, appearing in films that used its interior as shorthand for a particular kind of vanishing Hong Kong: The World of Suzie Wong in nineteen sixty, Days of Being Wild in nineteen ninety, Moonlight Express in nineteen ninety-nine.\n\nI always think the closure note is the most revealing thing about this place. Seventy-two years of feeding the same neighbourhood, then a handwritten sign quoting a Cantopop lyric, then three months of maintenance, then back to baked spare rib rice with tomato sauce as if the pause never happened. Rather a good description of what a cha chaan teng actually is.\n\nOrder from the window seat on the second floor. The baked spare rib rice with tomato sauce is the signature, and the milk tea is cold or hot depending on what the weather requires."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.31045,
+      "centroidLongitude": 114.1703,
+      "city": "Hong Kong",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "cha chaan teng",
+        "bing sutt",
+        "yau ma tei",
+        "retro",
+        "film locations",
+        "food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f8e68791-4364-47dc-bf70-343076a9f552",
+      "createdAt": "2026-06-23",
+      "title": "Star Street Precinct | 星街小區",
+      "shortDescription": "Sun, Moon and Star Streets — named from a thirteenth-century classic to mark Hong Kong's first power station, built here in 1890 on an old cemetery, and now one of the world's coolest precincts.",
+      "longDescription": "There's a curious thing about these street names: they come from a thirteenth-century Chinese text about the cosmos, and they exist because of a power station. Sau Wa Fong is the narrow laneway that climbs from Queen's Road East into the Star Street Precinct — Star Street, Sun Street, Moon Street, Electric Street, St Francis Yard. The streets are named for the three luminaries (sun, moon, stars) from a line in the Three-Character Classic, a foundational educational text dating to the thirteenth century. The verse ended up on the signs here because in 1890 the Hongkong Electric Company built Hong Kong's first power station on the site of an abandoned cemetery at the junction of Star Street and Electric Street. Its output was barely enough for fifty light bulbs, but it made Hong Kong one of the first two cities in Asia with public electric street lighting — and to mark the occasion the surrounding streets were renamed for the luminaries that had previously provided all the light anyone had.\n\nThe power station was demolished in 1922; today a small bronze plaque in the Kwong Ming Street playground is all that remains. The neighbourhood stayed quiet and working-class for another eighty years, until Swire Properties opened Three Pacific Place in 2004 with a direct link to Admiralty MTR. The white-collar footfall came uphill, the cafés and restaurants followed, and the precinct that Time Out named one of the thirty coolest streets in the world in 2021 emerged fairly directly from that sequence. These streets have always had their character set by whoever was supplying the infrastructure — first electricity in 1890, then an escalator link to the MTR in 2004.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Star_Street_Precinct_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Star_Street_Precinct_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0678c45d-6a43-42ba-8a1e-9042073df021",
+          "order": 0,
+          "title": "Star Street Precinct | 星街小區",
+          "caption": "Climb Sau Wa Fong from Queen's Road East into the cluster of Star, Sun, Moon and Electric Streets above, in Wan Chai.",
+          "latitude": 22.27661,
+          "longitude": 114.16829,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/star-street-precinct.mp3",
+          "audioDurationSeconds": 168,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There's a curious thing about these street names — they come from a thirteenth-century Chinese text about the cosmos, and they exist because of a power station.\n\nSau Wa Fong is the narrow laneway that connects Queen's Road East to the precinct above — a gentle climb through a tight residential passage that opens, at the top, into the cluster of streets that make up the Star Street Precinct: Star Street, Sun Street, Moon Street, Electric Street, St Francis Yard. The streets are named for the three luminaries — sun, moon, stars — from a line in the Three-Character Classic, a foundational Chinese educational text dating to the thirteenth century. The reason this verse ended up on the street signs here is that in eighteen ninety, the Hongkong Electric Company built Hong Kong's first power station on the site of an abandoned cemetery at the junction of Star Street and Electric Street. The output was barely enough to power fifty light bulbs, but it made Hong Kong one of the first two cities in Asia with public electric street lighting — and to mark the occasion, the surrounding streets were renamed for the three luminaries that had previously provided all the light anyone had.\n\nThe power station was demolished in nineteen twenty-two, and today a small bronze plaque in the children's playground on Kwong Ming Street is all that remains of it. The neighbourhood it left behind stayed quiet and working-class for another eighty years, until Swire Properties opened Three Pacific Place in two thousand and four with a direct link to Admiralty MTR. The white-collar footfall came uphill, the independent cafés and restaurants followed, and the Star Street Precinct that Time Out named one of the thirty coolest streets in the world in twenty twenty-one emerged fairly directly from that sequence.\n\nActually, these streets have always had their character determined by whoever was supplying the infrastructure — first electricity in eighteen ninety, then an escalator link to the MTR in two thousand and four. If you ask me, that's a more honest description of how neighbourhoods acquire their reputations than most of them would care to admit.\n\nMoon Street is the quietest of the three main lanes and worth a slow walk — the building stock along the uphill side still shows the original tong lau bones, and the view back down toward Wan Chai and the harbour beyond it is one of the better mid-level vantage points on the island."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 168,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.27661,
+      "centroidLongitude": 114.16829,
+      "city": "Hong Kong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "star street",
+        "wan chai",
+        "power station",
+        "neighbourhood",
+        "history",
+        "heritage"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ecdb349d-51d4-4fc0-a4d4-3bc83916a400",
+      "createdAt": "2026-06-23",
+      "title": "Tai O | 大澳",
+      "shortDescription": "A Tanka stilt-house fishing village on Lantau that once supplied a quarter of Hong Kong's catch and shipped shrimp paste to Chinatowns worldwide — far more industrial than its quiet today suggests.",
+      "longDescription": "The smell reaches you before the stilt houses do — shrimp paste, dried fish, salt water and low tide, the scent of an industry that once supplied a quarter of Hong Kong's entire fish catch and sent its products to Chinatowns in London, Vancouver and San Francisco. From the footbridge over the main channel you can see the pang uk arranged on both banks: houses built on wooden poles above the tidal flats, connected by a maze of boardwalks. Some are weathered timber, others rebuilt in corrugated tin and concrete after two significant fires, in 2000 and 2013. The channels carry small fishing boats, cats moving along the planking, and the occasional elderly resident heading somewhere that requires crossing water.\n\nThe village was built by the Tanka — the water people — who lived on boats in these channels for generations before coming ashore to build the pang uk. The stilt houses were a practical solution, not a scenic one: somewhere safe for women and children to stay, on land that floods, while the men were at sea. At the peak in the 1930s and 40s virtually every family here produced shrimp paste — krill caught locally, fermented in salt, dried on bamboo trays — and a government salt monopoly gave Tai O unusual access to the quantities needed for commercial fermentation. The old police station on the western headland, built in 1902 and now the Tai O Heritage Hotel, was put there specifically to deal with the pirates who raided the coast. What looks like a preserved relic was once a serious industrial operation, exporting food to Chinese communities on the other side of the world.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tai_O_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tai_O_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tai_O_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Tai_O_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "82308e15-96db-4cca-a36b-053e5c475922",
+          "order": 0,
+          "title": "Tai O | 大澳",
+          "caption": "Stand at the footbridge over the main channel through the village, with the stilt houses — the pang uk — lining both banks of the water ahead of you.",
+          "latitude": 22.25406,
+          "longitude": 113.86213,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tai-o.mp3",
+          "audioDurationSeconds": 150,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The smell reaches you before the stilt houses do. Shrimp paste, dried fish, salt water and low tide — it's the smell of an industry that once supplied a quarter of Hong Kong's entire fish catch and sent its products to Chinatowns in London, Vancouver and San Francisco.\n\nYou're at the footbridge that crosses the main channel through the village, with the stilt houses — the pang uk — arranged on both banks of the water ahead of you. The houses are built on wooden poles above the tidal flats, connected to each other and to the bank by a maze of wooden boardwalks. You'll notice the mix of materials: some houses are in weathered timber, others have been rebuilt in corrugated tin and concrete after two significant fires, one in two thousand and one in twenty thirteen. The channels between them carry small fishing boats, cats moving along the planking, and the occasional elderly resident heading somewhere that requires crossing water.\n\nThe people who built this village are the Tanka — the water people — who lived on boats in these channels and tidal inlets for generations before they came ashore and built the pang uk instead. The stilt houses were a practical solution, not a scenic one: women and children needed somewhere safe to stay when the men were at sea, on land that floods. At the village's peak in the nineteen thirties and forties, virtually every family here was producing shrimp paste — the krill caught locally, fermented in salt, dried in the sun on bamboo trays — and the output went far beyond local consumption. Salt was a government monopoly, which gave Tai O unusual access to the quantities needed for fermentation on a commercial scale. The old police station on the western headland, built in nineteen oh two and now operating as the Tai O Heritage Hotel, was put there specifically to deal with the pirates who raided the coastline.\n\nRather more was going on here, in other words, than the quiet village atmosphere suggests. What looks like a preserved relic was once a serious industrial operation, exporting food to Chinese communities on the other side of the world.\n\nWalk further west past the market stalls to the coastal path, which follows the old salt pans toward the Tai O Heritage Hotel — the mangroves that now grow there were planted in the salt flats after the industry collapsed in the nineteen sixties."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 150,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.25406,
+      "centroidLongitude": 113.86213,
+      "city": "Hong Kong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "fishing village",
+        "stilt houses",
+        "tanka",
+        "lantau",
+        "shrimp paste",
+        "heritage"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4d27233e-07fe-457e-b187-d69fa1dd59b0",
+      "createdAt": "2026-06-23",
+      "title": "King of Kowloon Calligraffiti (Tsim Sha Tsui) | 九龍皇帝墨蹟（尖沙咀）",
+      "shortDescription": "The ink-covered pillar at the Tsim Sha Tsui Star Ferry Pier — Tsang Tsou-choi's decades-long ancestral claim to Kowloon, painted out for fifty years and now protected, collected by M+ and Sotheby's.",
+      "longDescription": "Look at the writing on the pillar in front of you. A magazine once named the man who put it there one of Hong Kong's ten least influential people. The pillar stands near the entrance of the Tsim Sha Tsui Star Ferry Pier, encased now in a clear protective box installed by the government after the author died in 2007. The writing is Chinese ink — dense, overlapping columns that include a family tree running back twenty-one generations, the names of past emperors, an insistence that Kowloon belongs by ancestral right to his family, and in places a demand that the government pay him land taxes.\n\nHis name was Tsang Tsou-choi, known across the city as the King of Kowloon. Born in Guangdong, he arrived in Hong Kong at sixteen as a barely literate worker and began marking the streets in his mid-thirties, convinced through his ancestral records that his family had been robbed of the Kowloon Peninsula by the British. He spent the next fifty years covering lampposts, electrical boxes, pillars, walls and bridges with his calligraphic claim; the government painted it over, and he came back and re-applied it as soon as the paint dried. His family disowned him, his wife left, and he was arrested, fined and largely ignored. The reversal is pointed: after his death his work appeared at Sotheby's, the M+ museum in West Kowloon acquired pieces, and curators described him as an urban poet and one of the earliest graffiti artists in the world. This pillar is one of only two surviving public works now formally protected by the city that spent five decades painting him out.",
+      "makerId": "ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/King_of_Kowloon_Calligraffiti_Tsim_Sha_Tsui_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/King_of_Kowloon_Calligraffiti_Tsim_Sha_Tsui_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/King_of_Kowloon_Calligraffiti_Tsim_Sha_Tsui_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e16e9fc0-ec57-451f-aeb7-2bac0e23dec7",
+          "order": 0,
+          "title": "King of Kowloon Calligraffiti (Tsim Sha Tsui) | 九龍皇帝墨蹟（尖沙咀）",
+          "caption": "Look at the ink-covered pillar near the entrance to the Tsim Sha Tsui Star Ferry Pier on Salisbury Road, now encased in a clear protective box.",
+          "latitude": 22.29406,
+          "longitude": 114.16878,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/king-of-kowloon-calligraffiti-tsim-sha-tsui.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Look at the writing on the pillar in front of you. A magazine once named the man who put it there one of Hong Kong's ten least influential people.\n\nThe pillar stands near the entrance of the Tsim Sha Tsui Star Ferry Pier, encased now in a clear protective box installed by the Hong Kong government after the author died in two thousand and seven. The writing is in Chinese ink — dense, overlapping columns of characters that include a family tree running back twenty-one generations, the names of past emperors, an insistence that Kowloon belongs by ancestral right to his family, and, in places, a demand that the government pay him land taxes.\n\nHis name was Tsang Tsou-choi, known in the city as the King of Kowloon. He was born in Guangdong, arrived in Hong Kong at sixteen as a barely literate worker, and began marking the streets around his mid-thirties after he became convinced, through reading his ancestral records, that his family had been robbed of the Kowloon Peninsula by the British. He spent the next fifty years covering lampposts, electrical boxes, pillars, walls, bridges, pavements, and at least one car with his calligraphic claim. The government painted it over; he came back and re-applied it as soon as the paint dried. His family disowned him. His wife left. He was arrested, fined, and largely ignored.\n\nI find that particular reversal rather pointed: after his death, his work appeared at Sotheby's. The M+ museum in West Kowloon acquired pieces. International curators described him as an urban poet, one of the earliest graffiti artists in the world. The pillar you're looking at is one of only two surviving public works now formally protected by the city that spent five decades painting him out.\n\nThe calligraphy is easier to read if you look for the vertical stroke patterns rather than trying to read individual characters — and if you move a little to the left, you can see his name, Tsang Tsou-choi, near the top of the column."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 22.29406,
+      "centroidLongitude": 114.16878,
+      "city": "Hong Kong",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "tsang tsou-choi",
+        "calligraphy",
+        "street art",
+        "tsim sha tsui",
+        "star ferry",
+        "heritage"
+      ],
+      "priceUSD": 0
     }
   ]
 }
