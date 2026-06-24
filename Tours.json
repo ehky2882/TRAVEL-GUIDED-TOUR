@@ -1209,7 +1209,7 @@
       "priceUSD": 0,
       "additionalImageURLs": [
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oculus_2.webp",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Oculus_NYC.jpg/1280px-Oculus_NYC.jpg"
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/oculus_3.webp"
       ]
     },
     {
@@ -2350,7 +2350,8 @@
       "additionalImageURLs": [
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_2.webp",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_3.webp",
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Bowling_Green_td_%282018-12-13%29_06_-_26_Broadway%2C_Charging_Bull.jpg/1280px-Bowling_Green_td_%282018-12-13%29_06_-_26_Broadway%2C_Charging_Bull.jpg"
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_5.webp"
       ],
       "kind": "single",
       "stops": [
@@ -4325,7 +4326,8 @@
       "longDescription": "Madison Square Garden (the fourth building to bear the name) opened in 1968 above the platforms of Penn Station, whose Beaux-Arts McKim, Mead & White hall — completed 1910, widely considered the most beautiful building in America — was demolished between 1963 and 1968 to make way for it. The public outcry prompted New York City to pass the Landmarks Preservation Act in 1965, the law that later saved Grand Central Terminal. MSG's operating permit, renewed for only five years in 2023, expires in 2028; multiple proposals for rebuilding Penn Station below — with or without a new MSG above — are under active consideration.",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Madison_Square_Garden_hero.webp",
       "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Madison_Square_Garden_2.webp"
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Madison_Square_Garden_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Madison_Square_Garden_3.webp"
       ],
       "kind": "single",
       "introAudioURL": null,
@@ -4374,10 +4376,7 @@
       "additionalImageURLs": [
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_2.webp",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_3.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_4.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_5.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_6.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_7.webp"
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Riverside_Church_4.webp"
       ],
       "kind": "single",
       "introAudioURL": null,
