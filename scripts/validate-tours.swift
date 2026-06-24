@@ -79,6 +79,9 @@ struct Tour: Codable {
     let primaryCategory: TourCategory
     let tags: [String]
     let priceUSD: Decimal
+    /// ISO "YYYY-MM-DD" catalog-added date (git-derived). Optional so
+    /// tours added without it still validate; mirrors `Tour.createdAt`.
+    let createdAt: String?
 }
 
 struct ToursFile: Codable {
