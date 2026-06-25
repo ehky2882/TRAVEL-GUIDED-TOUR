@@ -188,6 +188,7 @@ struct TourDetailView: View {
                     descriptionSection
                     stopsSection
                     mapSection
+                    nearbyToursSection
                 }
                 .padding(.horizontal, AtlasSpacing.lg)
 
@@ -775,6 +776,115 @@ struct TourDetailView: View {
         if let url = components.url {
             openURL(url)
         }
+    }
+
+    // MARK: - Nearby Tours
+
+    /// "Nearby Tours" — up to 5 tours closest to *this* tour (by
+    /// centroid distance), excluding self. Row style matches
+    /// `MakerView.tourRow`: 64pt square hero, BODY all-caps title,
+    /// caption subtitle (duration + distance from this tour), tail
+    /// chevron, divider between rows.
+    ///
+    /// Hidden when the catalog has no other tours.
+    @ViewBuilder
+    private var nearbyToursSection: some View {
+        let nearby = nearbyTours
+        if !nearby.isEmpty {
+            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+                Text("Nearby Tours")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .padding(.top, AtlasSpacing.md)
+
+                LazyVStack(alignment: .leading, spacing: 0) {
+                    ForEach(nearby) { other in
+                        // We're already inside the detail layer's
+                        // own NavigationStack, so push another
+                        // TourDetailView onto it — same pattern as
+                        // MakerView's `tourOpen` when reached from
+                        // within a detail layer. X close still
+                        // dismisses the whole layer; the back chevron
+                        // pops one level. Avoids double-stacking a
+                        // second slide-up layer.
+                        NavigationLink {
+                            TourDetailView(tour: other)
+                        } label: {
+                            nearbyTourRow(other)
+                        }
+                        .buttonStyle(.plain)
+
+                        if other.id != nearby.last?.id {
+                            Divider()
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /// 5 tours closest to this tour's centroid (centroid-to-centroid
+    /// distance), excluding self. `dataService.toursNearby` returns
+    /// the current tour first (distance 0 to itself), so we ask for
+    /// 6 then drop self.
+    private var nearbyTours: [Tour] {
+        let here = CLLocation(
+            latitude: tour.centroidLatitude,
+            longitude: tour.centroidLongitude
+        )
+        return dataService.toursNearby(here, limit: 6)
+            .filter { $0.id != tour.id }
+            .prefix(5)
+            .map { $0 }
+    }
+
+    /// Mirrors `MakerView.tourRow` exactly so list density is
+    /// identical across surfaces.
+    private func nearbyTourRow(_ other: Tour) -> some View {
+        HStack(alignment: .center, spacing: AtlasSpacing.md) {
+            HeroImageView(
+                imageName: other.heroImageURL,
+                height: 64,
+                cornerRadius: 0,
+                category: other.primaryCategory
+            )
+            .frame(width: 64)
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                Text(other.title)
+                    .font(AtlasTypography.body)
+                    .textCase(.uppercase)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+
+                Text(nearbySubtitleText(other))
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .lineLimit(1)
+            }
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.tertiaryText)
+        }
+        .padding(.vertical, AtlasSpacing.sm)
+    }
+
+    /// "2m 15s · 0.8 mi away" — distance is from this tour's
+    /// centroid (the section's anchor), not from the user.
+    /// `distanceAway`'s "away" suffix reads naturally in the
+    /// "Nearby Tours" section context.
+    private func nearbySubtitleText(_ other: Tour) -> String {
+        let duration = AtlasFormatters.duration(seconds: other.totalDurationSeconds)
+        let here = CLLocation(
+            latitude: tour.centroidLatitude,
+            longitude: tour.centroidLongitude
+        )
+        let distance = AtlasFormatters.distanceAway(meters: other.distance(from: here))
+        return "\(duration) · \(distance)"
     }
 
     // MARK: - Button row (inline)
