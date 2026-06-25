@@ -208,6 +208,12 @@ struct BottomSheet<Content: View>: View {
 
     // MARK: - Gesture
 
+    /// Detent snap-to-rest animation. Tuned for a crisp "click into
+    /// place": short response so it arrives fast, damping just under
+    /// critical so it settles with a tiny decisive overshoot rather
+    /// than a soft ease. Tunable in one spot.
+    private static var snapSpring: Animation { .spring(response: 0.3, dampingFraction: 0.8) }
+
     private func dragGesture(in geo: GeometryProxy, topInset: CGFloat) -> some Gesture {
         DragGesture()
             .updating($isDragging) { _, state, _ in
@@ -230,7 +236,13 @@ struct BottomSheet<Content: View>: View {
                 // state mutations and the offset-snap-back to 0 ran
                 // implicitly without an animation, which caused the
                 // jerk between detents.
-                withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
+                //
+                // Snappier than the old 0.35/0.85: a shorter response
+                // makes the drawer arrive quickly and the lighter
+                // damping lets it settle with a small, decisive
+                // "click" into the detent rather than easing in
+                // limply (owner feedback 2026-06-24).
+                withAnimation(Self.snapSpring) {
                     detent = target
                     dragOffset = 0
                 }

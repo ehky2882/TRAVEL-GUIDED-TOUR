@@ -33,15 +33,33 @@ struct HomeDrawerContent: View {
             let visible = drawerVisibleHeight(in: geo)
             let listOpacity = min(1, max(0, (visible - peekHeight) / 90))
             let railList = rails
+            // The count shows at peek AND medium (every resting state
+            // except fully-open); "LET'S EXPLORE" shows only once the
+            // drawer has SETTLED at .large (detent committed AND drag
+            // offset zeroed). Keyed off detent + drag offset — NOT the
+            // GeometryReader, whose `geo` here is the *drawer's* own
+            // height (it shrinks to the peek height at peek), not the
+            // screen, so any geo-derived progress is unreliable in
+            // this nested context. The cross-fade is what kills the
+            // old hard-swap "lag": flicking up fades the count out and
+            // "LET'S EXPLORE" in only at rest; dragging back down
+            // reverses it the instant the finger moves (offset != 0).
+            let showExplore = sheetDetent == .large && abs(sharedState.sheetDragOffset) < 1
 
             VStack(alignment: .leading, spacing: 0) {
-                headerLabel(forCount: toursInViewCount)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .frame(maxWidth: .infinity)
-                    .padding(.horizontal, AtlasSpacing.lg)
-                    .padding(.top, AtlasSpacing.sm)
-                    .padding(.bottom, AtlasSpacing.md)
+                ZStack {
+                    countHeader(forCount: toursInViewCount)
+                        .opacity(showExplore ? 0 : 1)
+                    Text("LET'S EXPLORE TOGETHER!")
+                        .opacity(showExplore ? 1 : 0)
+                }
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.mapPin)
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal, AtlasSpacing.lg)
+                .padding(.top, AtlasSpacing.sm)
+                .padding(.bottom, AtlasSpacing.md)
+                .animation(.easeInOut(duration: 0.3), value: showExplore)
 
                 ScrollViewReader { proxy in
                     ScrollView {
@@ -91,12 +109,19 @@ struct HomeDrawerContent: View {
     // MARK: - Jump-scroll
 
     /// Scroll the rails to the selected category's shelf. `nil` (the
-    /// "All" chip) returns to the top. Opens the drawer to `.large`
-    /// first when it was peeking so the destination lands on-screen.
+    /// "All" chip) returns to the top.
+    ///
+    /// At the peek detent we deliberately do NOT raise the drawer:
+    /// tapping a chip there filters the *map pins* (via
+    /// `HomeView.filteredTours`, keyed on the same
+    /// `sharedState.selectedCategory`) and the drawer stays put —
+    /// owner request 2026-06-24. The jump-scroll only matters once the
+    /// drawer is already open (medium / large), where the rails are
+    /// actually visible; at peek the rails are hidden, so there's
+    /// nothing to scroll to and raising the drawer would fight the
+    /// "only the pins change" intent.
     private func jumpToCategory(_ category: TourCategory?, using proxy: ScrollViewProxy, rails: [HomeRail]) {
-        if sheetDetent == .peek {
-            withAnimation(.easeInOut(duration: 0.25)) { sheetDetent = .large }
-        }
+        guard sheetDetent != .peek else { return }
         let targetId: String? = category.map { "category.\($0.rawValue)" } ?? rails.first?.id
         guard let targetId else { return }
         // Defer a tick so the rail is realized (the list fades / lazily
@@ -239,16 +264,15 @@ struct HomeDrawerContent: View {
     }
 
 
-    /// The "N tours in view" header. While the map is mid-pan/-fling
-    /// (sharedState.isMapMoving), shows an animated *ELLIPSIS*
-    /// cycling . / .. / ... via a TimelineView — better than letting
-    /// the count flicker through 0 mid-gesture, which reads as
-    /// "no results."
+    /// The "N TOURS IN VIEW" count layer (the ".large → LET'S EXPLORE"
+    /// case now lives in the body's cross-fade, not here). While the
+    /// map is mid-pan/-fling (sharedState.isMapMoving), shows an
+    /// animated *ELLIPSIS* cycling . / .. / ... via a TimelineView —
+    /// better than letting the count flicker through 0 mid-gesture,
+    /// which reads as "no results."
     @ViewBuilder
-    private func headerLabel(forCount n: Int) -> some View {
-        if sheetDetent == .large {
-            Text("LET'S EXPLORE TOGETHER!")
-        } else if sharedState.isMapMoving {
+    private func countHeader(forCount n: Int) -> some View {
+        if sharedState.isMapMoving {
             TimelineView(.periodic(from: .now, by: 0.4)) { context in
                 let tick = Int(context.date.timeIntervalSinceReferenceDate / 0.4) % 3 + 1
                 Text(String(repeating: ".", count: tick))

@@ -207,14 +207,15 @@ struct HomeView: View {
                         // button stack must too or the padding math is
                         // off by the home-indicator inset.
                         .ignoresSafeArea(.container, edges: .bottom)
-                        // Visible only at peek. At medium / large the
-                        // drawer covers enough of the map that the
-                        // controls would crowd it. Also hidden while
-                        // the map is moving (clean panning UX); fades
-                        // back when the camera settles.
-                        .opacity(sheetDetent != .peek || sharedState.isMapMoving ? 0 : 1)
-                        .animation(.easeInOut(duration: 0.5), value: sharedState.isMapMoving)
-                        .animation(.easeInOut(duration: 0.3), value: sheetDetent)
+                        // Fade out as the drawer rises off peek (not a
+                        // binary flip) so the buttons start dissolving
+                        // the instant the drawer moves — tracking the
+                        // drag 1:1, fully gone by the medium detent.
+                        // Also hidden while the map is moving (clean
+                        // panning UX); fades back when the camera
+                        // settles. Interactive only at peek.
+                        .opacity(mapControlsOpacity(in: geo))
+                        .animation(.easeInOut(duration: 0.4), value: sharedState.isMapMoving)
                         .allowsHitTesting(sheetDetent == .peek && !sharedState.isMapMoving)
 
                     // Compass — trailing edge, bottom-aligned with the
@@ -403,6 +404,22 @@ struct HomeView: View {
         )
         .frame(width: Self.placecardWidth)
         return PlacecardAnchor(coordinate: coordinate, view: AnyView(card))
+    }
+
+    /// Opacity for the floating map controls (map-mode + recenter),
+    /// faded against the drawer's rise off peek so they dissolve as
+    /// the drawer moves rather than flipping off at the first detent
+    /// boundary. 1 at peek, linearly → 0 by the medium height; 0 while
+    /// the map is panning. Reads `drawerVisibleHeight`, which folds in
+    /// the live `sheetDragOffset`, so the fade tracks the finger and
+    /// the release-snap animates it (the snap mutates offset/detent
+    /// inside BottomSheet's `withAnimation`).
+    private func mapControlsOpacity(in geo: GeometryProxy) -> CGFloat {
+        if sharedState.isMapMoving { return 0 }
+        let visible = drawerVisibleHeight(in: geo)
+        let mediumBase = geo.size.height * 0.5
+        let progress = min(1, max(0, (visible - peekHeight) / max(1, mediumBase - peekHeight)))
+        return 1 - progress
     }
 
     /// Mirrors the height formula `BottomSheet` and `HomeDrawerContent`
