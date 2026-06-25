@@ -66,7 +66,17 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-23)
+## Current State (2026-06-24)
+
+### TestFlight 1.0 (48) — ships #235/#239; **build 47 is poisoned, do not use** (session 43 — web/PM, build)
+
+**Latest TestFlight build: 1.0 (48)** — live 2026-06-24. Carries the two app-code features merged since build 46: **#239** (inline Location map + GET DIRECTIONS on the tour detail sheet) and **#235** (maker page tour-list sort menu + `createdAt` field), plus all content (370 tours / 5 makers — NYC 100 · LDN 98 · LIS 66 · OPO 54 · **HKG 52**, the 7 new HK tours from PR #238). Content was already live via remote catalog; the build exists to ship the two features.
+
+**⚠️ Build 1.0 (47) is a known-bad build — superseded by 48. Do NOT re-cut or reference it.** 47 was archived from the primary checkout while it carried an **uncommitted local edit** (left by a parallel session testing locally) that changed `RemoteCatalogLoader.remoteURL` from `…/Tours.json` to a dead `…/Tours.json.TEMP_LOCAL_DEMO` address. That URL 404s → `refresh()` fails → the app silently falls back to the **bundled** seed and **never fetches remote catalog updates**. 47 had already been uploaded before the bug was caught (it explains "why does my phone show 52 while a tester shows 45" — the 52 came from 47's *bundle*, not a live fetch). The committed code on `main` was always correct; **build 48 simply ships `main` cleanly** (PR #242 bumped 47→48; the only diff vs main is the build number). Binary verified post-archive: no `TEMP_LOCAL_DEMO`, correct `Tours.json` URL compiled in. **Anyone on 47 must update to 48 in TestFlight** to restore content updates; 46 users were never affected (their committed code has the right URL).
+
+**Lesson codified (memory `reference-archive-clean-checkout`):** before every `xcodebuild archive`, the checkout must be on `main` and **clean** (`git status --short`) — the repo is shared across parallel sessions that can leave uncommitted local hacks — and after archiving, **grep the built binary** to confirm the expected strings (e.g. the live `Tours.json` URL) before uploading. Safest: archive from a fresh worktree off `origin/main`. Build-bump PRs (#240 for 47, #242 for 48) already use worktrees; extend that discipline to the archive step itself.
+
+**Build-cut bug to harden later (separate session):** two testers on build 46 stayed stuck on a stale cached catalog (45 HK) for hours despite force-quitting — the remote `refresh()` gives up after one 15s timeout per launch with no retry. The whole no-build content pipeline depends on this being reliable; consider retry + longer timeout + refresh-on-foreground. Not blocking; flagged for a future code session.
 
 ### Doc sync — catalog at 362 tours / 5 cities; remote-catalog era (session 42 — web/PM, docs)
 
