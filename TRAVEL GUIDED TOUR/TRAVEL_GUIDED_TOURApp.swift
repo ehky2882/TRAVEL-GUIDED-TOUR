@@ -63,6 +63,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// Mirrors the `@AppStorage` key used by SettingsView's Appearance
     /// picker. Wired here so `.preferredColorScheme` applies app-wide.
     @AppStorage("colorSchemePreference") private var colorSchemePreference: ColorSchemePreference = .system
+    /// Drives the catalog refresh-on-foreground: returning to `.active` re-runs
+    /// the network refresh (debounced inside `DataService`) so reopening the app
+    /// picks up new content with no force-quit. See `DataService.refreshOnForeground`.
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
         WindowGroup {
@@ -90,6 +94,14 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(navState)
                     .environment(savedMakersStore)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
+                    .onChange(of: scenePhase) { _, phase in
+                        // Returning to the foreground re-pulls the catalog so a
+                        // plain relaunch picks up new content. DataService
+                        // debounces this against the cold-launch / last refresh.
+                        if phase == .active {
+                            Task { await dataService.refreshOnForeground() }
+                        }
+                    }
                     .onAppear {
                         // Install the secondary higher-level window
                         // for the mini-player + tab bar. Captures
