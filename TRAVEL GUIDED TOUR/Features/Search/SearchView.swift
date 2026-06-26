@@ -31,6 +31,18 @@ struct SearchView: View {
     @State private var resolvingPlaceID: PlaceSuggestion.ID?
     @FocusState private var queryFieldFocused: Bool
 
+    /// Precomputed, lowercased search fields built once from the catalog
+    /// so each keystroke does cheap substring checks instead of
+    /// re-lowercasing every tour's (long) text and re-resolving its
+    /// maker on the main thread every character. Re-lowercasing the whole
+    /// catalog per keystroke was the typing lag once it passed ~350 tours.
+    @State private var searchIndex: [SearchEntry] = []
+    /// Tour → maker, resolved once (avoids per-row linear `maker(for:)`).
+    @State private var makerByTourID: [Tour.ID: Maker] = [:]
+    /// Maker → tour count, resolved once (avoids an O(catalog) scan per
+    /// maker row).
+    @State private var makerTourCounts: [Maker.ID: Int] = [:]
+
     var body: some View {
         VStack(spacing: 0) {
             searchField
@@ -52,8 +64,20 @@ struct SearchView: View {
         // falling to pure black at the main window's base level. Same
         // fix as MakerView; matches TourDetailView / ManageDownloadsView.
         .background(AtlasColors.secondaryBackground)
+        // Title in the caption token (13pt SF Mono) ALL CAPS. The
+        // principal toolbar item replaces the system inline title
+        // visually; `.navigationTitle("Search")` is kept above so the
+        // back-button label on pushed screens still reads "Search".
+        // Same pattern as SettingsView / LibraryView.
         .navigationTitle("Search")
         .inlineNavigationBarTitle()
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("SEARCH")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.primaryText)
+            }
+        }
         // Reserve room at the bottom for the mini-player + tab bar
         // stack so the last result row is reachable above the
         // module rather than hidden behind it. Wasn't needed under
@@ -68,6 +92,7 @@ struct SearchView: View {
         .onAppear {
             queryFieldFocused = true
             navState.push()
+            buildIndexIfNeeded()
         }
         .onDisappear {
             navState.pop()
@@ -418,7 +443,7 @@ struct SearchView: View {
                     .truncationMode(.tail)
 
                 // Subtitle: maker name only (no category), single line.
-                if let maker = dataService.maker(for: tour) {
+                if let maker = makerByTourID[tour.id] {
                     Text(maker.displayName)
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
@@ -473,11 +498,9 @@ struct SearchView: View {
         }
     }
 
-    /// "N tours" subtitle for a maker row.
+    /// "N tours" subtitle for a maker row (count precomputed once).
     private func makerTourCountText(_ maker: Maker) -> String {
-        let count = dataService.tours.filter {
-            dataService.maker(for: $0)?.id == maker.id
-        }.count
+        let count = makerTourCounts[maker.id] ?? 0
         return count == 1 ? "1 tour" : "\(count) tours"
     }
 
@@ -498,30 +521,74 @@ struct SearchView: View {
         var tagHits: [Tour] = []
         var descriptionHits: [Tour] = []
 
-        for tour in dataService.tours {
-            if tour.title.lowercased().contains(q) {
-                titleHits.append(tour)
+        // Iterate the precomputed index — every field is already
+        // lowercased, so each keystroke is just substring checks (no
+        // per-tour `.lowercased()` of long descriptions, no maker scan).
+        for entry in searchIndex {
+            if entry.title.contains(q) {
+                titleHits.append(entry.tour)
                 continue
             }
-            if tour.primaryCategory.displayName.lowercased().contains(q) {
-                categoryHits.append(tour)
+            if entry.category.contains(q) {
+                categoryHits.append(entry.tour)
                 continue
             }
-            if let maker = dataService.maker(for: tour),
-               maker.displayName.lowercased().contains(q) {
-                makerHits.append(tour)
+            if !entry.makerName.isEmpty, entry.makerName.contains(q) {
+                makerHits.append(entry.tour)
                 continue
             }
-            if tour.tags.contains(where: { $0.lowercased().contains(q) }) {
-                tagHits.append(tour)
+            if entry.tags.contains(where: { $0.contains(q) }) {
+                tagHits.append(entry.tour)
                 continue
             }
-            if tour.shortDescription.lowercased().contains(q)
-                || tour.longDescription.lowercased().contains(q) {
-                descriptionHits.append(tour)
+            if entry.shortDescription.contains(q)
+                || entry.longDescription.contains(q) {
+                descriptionHits.append(entry.tour)
             }
         }
 
         return titleHits + categoryHits + makerHits + tagHits + descriptionHits
+    }
+
+    // MARK: - Search index
+
+    /// One tour's searchable fields, lowercased once up front.
+    private struct SearchEntry {
+        let tour: Tour
+        let title: String
+        let category: String
+        let makerName: String   // "" when the tour has no maker
+        let tags: [String]
+        let shortDescription: String
+        let longDescription: String
+    }
+
+    /// Build the lowercased search index + the tour→maker and
+    /// maker→count maps once. Guards on catalog size so a background
+    /// remote-catalog refresh (which changes `dataService.tours.count`)
+    /// rebuilds the index next time Search appears.
+    private func buildIndexIfNeeded() {
+        guard searchIndex.count != dataService.tours.count else { return }
+
+        var byTour: [Tour.ID: Maker] = [:]
+        var counts: [Maker.ID: Int] = [:]
+        searchIndex = dataService.tours.map { tour in
+            let maker = dataService.maker(for: tour)
+            if let maker {
+                byTour[tour.id] = maker
+                counts[maker.id, default: 0] += 1
+            }
+            return SearchEntry(
+                tour: tour,
+                title: tour.title.lowercased(),
+                category: tour.primaryCategory.displayName.lowercased(),
+                makerName: maker?.displayName.lowercased() ?? "",
+                tags: tour.tags.map { $0.lowercased() },
+                shortDescription: tour.shortDescription.lowercased(),
+                longDescription: tour.longDescription.lowercased()
+            )
+        }
+        makerByTourID = byTour
+        makerTourCounts = counts
     }
 }
