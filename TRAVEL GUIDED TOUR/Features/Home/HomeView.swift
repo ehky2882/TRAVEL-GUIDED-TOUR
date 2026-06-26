@@ -363,10 +363,10 @@ struct HomeView: View {
                 .foregroundStyle(AtlasColors.secondaryText)
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                Text("No Atlas tours here yet")
+                Text("No Dozents here yet")
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.primaryText)
-                Text("Atlas tours are in New York and Portugal.")
+                Text("Check back soon — we're always adding new places.")
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
             }
