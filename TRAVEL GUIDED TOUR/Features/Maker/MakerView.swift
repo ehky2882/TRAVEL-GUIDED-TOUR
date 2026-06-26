@@ -1,11 +1,11 @@
 import SwiftUI
 
-/// Sort criteria for a maker's tour list. Each (except `default`) is
-/// reversible — the menu shows a direction-specific label so the
-/// active sort reads in plain words ("A–Z" / "Z–A", "Newest" /
-/// "Oldest", …). `default` is the catalog order (no direction).
+/// Sort criteria for a maker's tour list. All reversible — the menu
+/// shows a direction-specific label so the active sort reads in plain
+/// words ("A–Z" / "Z–A", "Newest" / "Oldest", …). The page opens on
+/// Date added → Newest (see the `@AppStorage` default).
 private enum MakerSortCriterion: String, CaseIterable, Identifiable {
-    case `default`, name, duration, distance, dateAdded
+    case name, duration, distance, dateAdded
 
     var id: String { rawValue }
 
@@ -19,7 +19,6 @@ private enum MakerSortCriterion: String, CaseIterable, Identifiable {
     /// Direction-aware label (their vocabulary, not "ascending").
     func label(ascending: Bool) -> String {
         switch self {
-        case .default:   return "Default"
         case .name:      return ascending ? "A–Z" : "Z–A"
         case .duration:  return ascending ? "Shortest" : "Longest"
         case .distance:  return ascending ? "Nearest" : "Farthest"
@@ -29,7 +28,8 @@ private enum MakerSortCriterion: String, CaseIterable, Identifiable {
 }
 
 /// List vs. Instagram-style grid presentation of a maker's tours.
-private enum MakerListLayout {
+/// `String`-backed so it can persist via `@AppStorage`.
+private enum MakerListLayout: String {
     case list, grid
 }
 
@@ -51,13 +51,14 @@ struct MakerView: View {
 
     private let avatarSize: CGFloat = 96
 
-    /// Current sort of the maker's tour list. View-local: resets when
-    /// you leave the page. `ascending` is ignored for `.default`.
-    @State private var sortCriterion: MakerSortCriterion = .default
-    @State private var sortAscending: Bool = true
+    /// Current sort of the maker's tour list. Persisted across visits +
+    /// launches (shared by all maker pages). Opens on Date added →
+    /// Newest by default.
+    @AppStorage("makerSortCriterion") private var sortCriterion: MakerSortCriterion = .dateAdded
+    @AppStorage("makerSortAscending") private var sortAscending: Bool = false
 
-    /// List vs grid presentation; view-local, resets on leave.
-    @State private var layout: MakerListLayout = .list
+    /// List vs grid presentation; persisted like the sort.
+    @AppStorage("makerListLayout") private var layout: MakerListLayout = .list
     /// Measured width of the grid container — drives square tile sizing.
     @State private var gridContentWidth: CGFloat = 0
 
@@ -322,7 +323,7 @@ struct MakerView: View {
             ForEach(MakerSortCriterion.allCases) { criterion in
                 Button {
                     if criterion == sortCriterion {
-                        if criterion != .default { sortAscending.toggle() }
+                        sortAscending.toggle()
                     } else {
                         sortCriterion = criterion
                         sortAscending = criterion.defaultAscending
@@ -347,14 +348,10 @@ struct MakerView: View {
     @ViewBuilder
     private func sortMenuRowLabel(_ criterion: MakerSortCriterion) -> some View {
         if criterion == sortCriterion {
-            if criterion == .default {
-                Label(criterion.label(ascending: true), systemImage: "checkmark")
-            } else {
-                Label(
-                    criterion.label(ascending: sortAscending),
-                    systemImage: sortAscending ? "chevron.up" : "chevron.down"
-                )
-            }
+            Label(
+                criterion.label(ascending: sortAscending),
+                systemImage: sortAscending ? "chevron.up" : "chevron.down"
+            )
         } else {
             Text(criterion.label(ascending: criterion.defaultAscending))
         }
@@ -482,8 +479,6 @@ struct MakerView: View {
         let tours = dataService.tours(by: maker)
         let asc = sortAscending
         switch sortCriterion {
-        case .default:
-            return tours
         case .name:
             return tours.sorted { Self.compareName($0, $1, ascending: asc) }
         case .duration:
