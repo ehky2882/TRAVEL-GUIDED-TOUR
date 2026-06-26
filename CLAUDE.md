@@ -66,7 +66,17 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-24)
+## Current State (2026-06-26)
+
+### TestFlight 1.0 (49) — resilient catalog refresh + detail/maker/home/search batch (session 44 — code)
+
+**Latest TestFlight build: 1.0 (49)** — live 2026-06-26 (build bump 48→49 via **PR #249** `3dbf7f9`). Carries the five app-code PRs merged to `main` since build 48; **content is unchanged** (it already ships live via the remote catalog — ~370 tours / 5 makers).
+
+- **#245 — resilient catalog refresh (the headline fix; this session).** Hardens the gh-pages `Tours.json` refresh that had left two testers stuck on a stale cached catalog for hours (the "harden later" note below). Four changes across `Data/RemoteCatalogLoader.swift`, `Data/DataService.swift`, and the App entry: **(1) retry with backoff** — up to 3 attempts, ~1s/2s exponential + jitter via an injectable `CatalogRetryPolicy`; retries network/timeout + transient server responses (5xx/408/429), **not** a clean 4xx; still returns `nil` only after all attempts, so the good local copy is never clobbered. **(2) longer timeouts** — a dedicated `URLSession` at 30s request / 60s resource (was a single 15s). **(3) refresh on foreground** — `scenePhase → .active` re-runs the refresh (`DataService.refreshOnForeground`), debounced 60s + an in-flight guard, so **reopening the app picks up new content with no force-quit** (the exact tester complaint). **(4) version-stamped cache** — the cache is stamped with `CFBundleVersion` and discarded on load if written by a different/absent version, so a freshly bundled seed isn't shadowed by a stale cache after an update (the 47→48 case). +8 unit tests (`RemoteCatalogLoaderTests`, **103/103 green**). **Proven live in the sim:** added a ★ to one title on gh-pages → **backgrounded + reopened** the app (same pid, no force-quit) → ★ appeared in ~1s → reverted gh-pages **byte-exact** (sha256 verified, 0 ★ left). The `CatalogFetching` protocol seam is preserved. See `archive/HANDOFF-260626.md`.
+- **#244 — Nearby Tours** section added below the inline Location map on the tour detail sheet.
+- **#246 — maker-page sort/view persistence:** persists the tour-list sort + view choice; drops "Default," opens on **Newest**.
+- **#247 — home polish batch (7 items):** placecard / drawer / lock-screen polish.
+- **#248 — search polish:** caption-styled SEARCH title, refreshed empty-state copy, faster type-ahead.
 
 ### TestFlight 1.0 (48) — ships #235/#239; **build 47 is poisoned, do not use** (session 43 — web/PM, build)
 
@@ -76,7 +86,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **Lesson codified (memory `reference-archive-clean-checkout`):** before every `xcodebuild archive`, the checkout must be on `main` and **clean** (`git status --short`) — the repo is shared across parallel sessions that can leave uncommitted local hacks — and after archiving, **grep the built binary** to confirm the expected strings (e.g. the live `Tours.json` URL) before uploading. Safest: archive from a fresh worktree off `origin/main`. Build-bump PRs (#240 for 47, #242 for 48) already use worktrees; extend that discipline to the archive step itself.
 
-**Build-cut bug to harden later (separate session):** two testers on build 46 stayed stuck on a stale cached catalog (45 HK) for hours despite force-quitting — the remote `refresh()` gives up after one 15s timeout per launch with no retry. The whole no-build content pipeline depends on this being reliable; consider retry + longer timeout + refresh-on-foreground. Not blocking; flagged for a future code session.
+**Build-cut bug to harden later — ✅ RESOLVED in build 49 (PR #245).** Two testers on build 46 stayed stuck on a stale cached catalog (45 HK) for hours despite force-quitting — the remote `refresh()` gave up after one 15s timeout per launch with no retry, and only ran at cold launch. **Fixed by #245** (retry + backoff, 30s/60s timeouts, refresh-on-foreground with a 60s debounce, version-stamped cache) — shipped in TestFlight 1.0 (49). Reopening the app now picks up new content without a force-quit (proven live in the sim).
 
 ### Doc sync — catalog at 362 tours / 5 cities; remote-catalog era (session 42 — web/PM, docs)
 
