@@ -2,6 +2,9 @@ import Foundation
 import AVFoundation
 import MediaPlayer
 import Observation
+#if canImport(UIKit)
+import UIKit
+#endif
 
 @Observable
 final class AudioPlayerService {
@@ -31,6 +34,15 @@ final class AudioPlayerService {
     /// tours shared a title (audit P1-3).
     private(set) var currentSourceId: String?
     private(set) var rate: Float = 1.0
+    #if canImport(UIKit)
+    /// Lock-screen / Control-Center artwork for the current item —
+    /// the tour maker's avatar. Resolved off the main UI (the maker
+    /// avatar can be a remote URL, an emoji, or the bundled studio
+    /// mark) and pushed in via `setArtwork(_:for:)`; held here so
+    /// every `updateNowPlayingInfo()` re-attaches it. Cleared on each
+    /// new `play(url:…)` so a stale avatar never lingers across tours.
+    private var nowPlayingArtwork: MPMediaItemArtwork?
+    #endif
     /// Populated when `state == .failed`; cleared on the next
     /// successful `play(url:...)`. The watchdog timeout produces a
     /// generic error; AVPlayer's reported failures preserve
@@ -110,6 +122,11 @@ final class AudioPlayerService {
         currentTitle = title
         currentArtist = artist
         currentSourceId = sourceId
+        #if canImport(UIKit)
+        // Drop the previous tour's avatar immediately; the host
+        // re-resolves and re-attaches one via setArtwork(_:for:).
+        nowPlayingArtwork = nil
+        #endif
         lastPlayedURL = url
         currentTime = 0
         duration = 0
@@ -480,6 +497,24 @@ final class AudioPlayerService {
     }
     #endif
 
+    #if canImport(UIKit)
+    /// Set the lock-screen artwork (the maker avatar) for the tour
+    /// identified by `sourceId`. The host resolves the avatar image
+    /// asynchronously, so by the time it returns the user may have
+    /// started a different tour — the `sourceId` guard drops a
+    /// resolution that's no longer for the current item. Pass `nil`
+    /// image to clear.
+    func setArtwork(_ image: UIImage?, for sourceId: String?) {
+        guard sourceId == currentSourceId else { return }
+        if let image {
+            nowPlayingArtwork = MPMediaItemArtwork(boundsSize: image.size) { _ in image }
+        } else {
+            nowPlayingArtwork = nil
+        }
+        updateNowPlayingInfo()
+    }
+    #endif
+
     private func updateNowPlayingInfo() {
         var info: [String: Any] = [:]
         if let title = currentTitle {
@@ -488,6 +523,11 @@ final class AudioPlayerService {
         if let artist = currentArtist {
             info[MPMediaItemPropertyArtist] = artist
         }
+        #if canImport(UIKit)
+        if let nowPlayingArtwork {
+            info[MPMediaItemPropertyArtwork] = nowPlayingArtwork
+        }
+        #endif
         info[MPMediaItemPropertyPlaybackDuration] = duration
         info[MPNowPlayingInfoPropertyElapsedPlaybackTime] = currentTime
         info[MPNowPlayingInfoPropertyPlaybackRate] = state == .playing ? Double(rate) : 0.0

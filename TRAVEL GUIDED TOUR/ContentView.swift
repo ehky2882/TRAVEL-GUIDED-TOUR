@@ -214,6 +214,25 @@ struct ContentView: View {
                 }
             }
         }
+        // Resolve the current tour's maker avatar into lock-screen /
+        // Control-Center artwork whenever the loaded source changes.
+        // Done here (not in AudioPlayerService) because the avatar
+        // lives on the maker, which only DataService can resolve from
+        // the source id. The resolve is async (remote URL / emoji
+        // render); `setArtwork(_:for:)` drops the result if a newer
+        // tour has since loaded.
+        .onChange(of: audioPlayer.currentSourceId) { _, sourceId in
+            #if canImport(UIKit)
+            guard let sourceId,
+                  let uuid = UUID(uuidString: sourceId),
+                  let tour = dataService.tour(by: uuid) else { return }
+            let maker = dataService.maker(for: tour)
+            Task { @MainActor in
+                let image = await MakerArtwork.image(for: maker)
+                audioPlayer.setArtwork(image, for: sourceId)
+            }
+            #endif
+        }
     }
 
     @ViewBuilder

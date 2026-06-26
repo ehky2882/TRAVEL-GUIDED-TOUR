@@ -57,6 +57,7 @@ private struct TourCard: View {
 
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
+    @Environment(LocationManager.self) private var locationManager
 
     /// One dominant card per viewport with a peek of the next: 260pt
     /// wide leaves a ~78pt peek inside the drawer's 24pt side margins,
@@ -92,9 +93,14 @@ private struct TourCard: View {
                     Image(systemName: "clock")
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
-                    Text(formattedDuration(tour.totalDurationSeconds))
+                    // Duration, then distance-away after a separator
+                    // dot when the user's location is known — same
+                    // "3 min · 1.2 mi away" shape the placecard +
+                    // detail subtitle use.
+                    Text(metaLine)
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
+                        .lineLimit(1)
                 }
             }
             .padding(.horizontal, AtlasSpacing.xs)
@@ -132,7 +138,14 @@ private struct TourCard: View {
         }
     }
 
-    private func formattedDuration(_ seconds: Int) -> String {
-        AtlasFormatters.duration(seconds: seconds)
+    /// "3 min" alone, or "3 min · 1.2 mi away" when the user's
+    /// location is known. Crow-fly distance from the user to the
+    /// tour's centroid (same `Tour.distance(from:)` the drawer list
+    /// and placecard use).
+    private var metaLine: String {
+        let duration = AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
+        guard let user = locationManager.userLocation else { return duration }
+        let away = AtlasFormatters.distanceAway(meters: tour.distance(from: user))
+        return "\(duration) · \(away)"
     }
 }
