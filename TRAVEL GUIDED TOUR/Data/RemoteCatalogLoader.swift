@@ -71,6 +71,59 @@ struct URLSessionCatalogFetcher: CatalogFetching {
     }
 }
 
+/// Fetches the catalog from the Supabase `get_catalog` RPC.
+///
+/// The RPC is a `POST …/rest/v1/rpc/get_catalog` with an empty `{}` body and the
+/// `apikey` + `Authorization: Bearer <anon>` headers; it returns the same
+/// `{makers, tours}` JSON document `ToursData` already decodes (camelCase keys
+/// matching the Swift `Codable` names). Non-2xx surfaces as
+/// `CatalogFetchError.httpStatus` so the retry policy can classify it exactly
+/// like the gh-pages path. No third-party SDK — a plain `URLSession` POST is all
+/// the read side needs (the supabase-swift SDK arrives with auth in Step 3).
+struct SupabaseCatalogFetcher: CatalogFetching {
+    private let anonKey: String
+    private let session: URLSession
+
+    init(anonKey: String) {
+        self.anonKey = anonKey
+        let config = URLSessionConfiguration.ephemeral
+        config.timeoutIntervalForRequest = 30
+        config.timeoutIntervalForResource = 60
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.urlCache = nil
+        self.session = URLSession(configuration: config)
+    }
+
+    func fetchData(from url: URL) async throws -> Data {
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.timeoutInterval = 30
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        request.setValue(anonKey, forHTTPHeaderField: "apikey")
+        request.setValue("Bearer \(anonKey)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = Data("{}".utf8)
+
+        let (data, response) = try await session.data(for: request)
+        guard let http = response as? HTTPURLResponse else {
+            throw URLError(.badServerResponse)
+        }
+        guard (200..<300).contains(http.statusCode) else {
+            throw CatalogFetchError.httpStatus(http.statusCode)
+        }
+        return data
+    }
+}
+
+/// One catalog source: a fetcher paired with the URL it fetches. `refresh()`
+/// tries the configured sources in order — Supabase first, gh-pages as a
+/// fallback mirror — so a backend outage transparently degrades to the last
+/// published gh-pages copy (and then to the on-disk cache / bundled seed).
+struct CatalogSource: Sendable {
+    let fetcher: CatalogFetching
+    let url: URL
+}
+
 /// Loads the tour catalog with a **local-first, network-refresh** strategy.
 ///
 /// - `loadLocal()` returns an immediately-available catalog: the on-disk cache
@@ -86,7 +139,8 @@ struct URLSessionCatalogFetcher: CatalogFetching {
 /// This is the first reusable piece of the eventual backend: swapping
 /// `remoteURL` for a live API endpoint is all that changes on the app side.
 final class RemoteCatalogLoader {
-    /// The published catalog, hosted alongside audio + images on gh-pages.
+    /// The published catalog mirror, hosted alongside audio + images on gh-pages.
+    /// Retained as the automatic fallback source behind the Supabase RPC.
     static let remoteURL = URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json")!
 
     /// The running app's build number (`CFBundleVersion`), used to stamp the
@@ -95,24 +149,53 @@ final class RemoteCatalogLoader {
         (Bundle.main.infoDictionary?["CFBundleVersion"] as? String) ?? "unknown"
     }
 
-    private let fetcher: CatalogFetching
+    /// Production catalog sources, tried in order: the live Supabase backend
+    /// first, then the gh-pages mirror. The Supabase source is included only
+    /// when credentials are filled in (`SupabaseConfig.isConfigured`), so a
+    /// missing key degrades to gh-pages-only rather than failing every refresh.
+    static var defaultSources: [CatalogSource] {
+        var sources: [CatalogSource] = []
+        if SupabaseConfig.isConfigured {
+            sources.append(CatalogSource(fetcher: SupabaseCatalogFetcher(anonKey: SupabaseConfig.anonKey),
+                                         url: SupabaseConfig.catalogRPCURL))
+        }
+        sources.append(CatalogSource(fetcher: URLSessionCatalogFetcher(), url: remoteURL))
+        return sources
+    }
+
+    private let sources: [CatalogSource]
     private let bundle: Bundle
     private let cacheURL: URL?
     private let retryPolicy: CatalogRetryPolicy
     private let appVersion: String
 
-    init(fetcher: CatalogFetching = URLSessionCatalogFetcher(),
+    /// Designated initializer — takes the ordered list of catalog sources.
+    init(sources: [CatalogSource] = RemoteCatalogLoader.defaultSources,
          bundle: Bundle = .main,
          cacheDirectory: URL? = nil,
          retryPolicy: CatalogRetryPolicy = .default,
          appVersion: String = RemoteCatalogLoader.currentAppVersion) {
-        self.fetcher = fetcher
+        self.sources = sources
         self.bundle = bundle
         self.retryPolicy = retryPolicy
         self.appVersion = appVersion
         let dir = cacheDirectory
             ?? FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first
         self.cacheURL = dir?.appendingPathComponent("Tours.cache.json")
+    }
+
+    /// Single-source convenience — wraps one `fetcher` against `remoteURL`.
+    /// Used by the unit tests, which inject a stub fetcher.
+    convenience init(fetcher: CatalogFetching,
+                     bundle: Bundle = .main,
+                     cacheDirectory: URL? = nil,
+                     retryPolicy: CatalogRetryPolicy = .default,
+                     appVersion: String = RemoteCatalogLoader.currentAppVersion) {
+        self.init(sources: [CatalogSource(fetcher: fetcher, url: RemoteCatalogLoader.remoteURL)],
+                  bundle: bundle,
+                  cacheDirectory: cacheDirectory,
+                  retryPolicy: retryPolicy,
+                  appVersion: appVersion)
     }
 
     /// Sidecar file recording which app version wrote the cache.
@@ -132,20 +215,34 @@ final class RemoteCatalogLoader {
         readCache() ?? readBundle()
     }
 
-    /// Fetches the latest catalog from the network, retrying transient failures
-    /// with exponential backoff. On success, writes it to the cache (stamped
-    /// with the current app version) and returns it. Returns `nil` only after
-    /// all attempts fail, leaving the local copy untouched.
+    /// Fetches the latest catalog from the network, trying each source in order
+    /// (Supabase → gh-pages) and returning the first that yields a decodable
+    /// catalog. On success, writes it to the cache (stamped with the current app
+    /// version) and returns it. Returns `nil` only after every source fails,
+    /// leaving the local copy untouched.
     func refresh() async -> ToursData? {
+        for source in sources {
+            if let decoded = await refresh(from: source) {
+                return decoded
+            }
+        }
+        return nil
+    }
+
+    /// Fetches from a single source, retrying transient failures with
+    /// exponential backoff. Returns the decoded catalog (and caches it) on
+    /// success, or `nil` if this source is exhausted/unusable — the caller then
+    /// falls through to the next source.
+    private func refresh(from source: CatalogSource) async -> ToursData? {
         var attempt = 0
         while true {
             attempt += 1
             do {
-                let data = try await fetcher.fetchData(from: Self.remoteURL)
+                let data = try await source.fetcher.fetchData(from: source.url)
                 guard let decoded = try? JSONDecoder().decode(ToursData.self, from: data) else {
-                    // A 2xx with undecodable bytes is a bad published file, not
-                    // a transient glitch — a retry returns the same bytes. Give
-                    // up and keep the good local copy.
+                    // A 2xx with undecodable bytes is a bad response, not a
+                    // transient glitch — a retry returns the same bytes. Give up
+                    // on this source and fall through to the next.
                     return nil
                 }
                 writeCache(data)

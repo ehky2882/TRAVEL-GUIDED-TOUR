@@ -273,6 +273,78 @@ final class RemoteCatalogLoaderTests: XCTestCase {
         XCTAssertEqual(calls, 3, "5xx is transient — retry until it recovers")
     }
 
+    // MARK: - Multi-source fallback (Supabase → gh-pages)
+
+    func test_refresh_fallsBackToSecondSource_whenFirstFails() async throws {
+        let dir = makeTempDir()
+        let fallbackPayload = try JSONEncoder().encode(catalog(titled: "Fallback Tour"))
+        // Primary source: a clean 4xx (not retryable) → exhausted in one try.
+        let primary = CatalogSource(
+            fetcher: StubFetcher(result: .failure(CatalogFetchError.httpStatus(500))),
+            url: URL(string: "https://primary.example/rpc")!)
+        let fallback = CatalogSource(
+            fetcher: StubFetcher(result: .success(fallbackPayload)),
+            url: URL(string: "https://fallback.example/Tours.json")!)
+        let loader = RemoteCatalogLoader(sources: [primary, fallback],
+                                         bundle: emptyBundle,
+                                         cacheDirectory: dir,
+                                         retryPolicy: .none,
+                                         appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "Fallback Tour",
+                       "When the primary source fails, the fallback is used")
+        XCTAssertTrue(cacheExists(in: dir))
+    }
+
+    func test_refresh_usesFirstSource_andSkipsRest_whenItSucceeds() async throws {
+        let dir = makeTempDir()
+        let primaryPayload = try JSONEncoder().encode(catalog(titled: "Primary Tour"))
+        let primary = CatalogSource(
+            fetcher: StubFetcher(result: .success(primaryPayload)),
+            url: URL(string: "https://primary.example/rpc")!)
+        // Fallback counts calls so we can assert it was never reached.
+        let fallbackFetcher = SequenceFetcher(failures: 0,
+                                              error: URLError(.timedOut),
+                                              success: Data())
+        let fallback = CatalogSource(fetcher: fallbackFetcher,
+                                     url: URL(string: "https://fallback.example/Tours.json")!)
+        let loader = RemoteCatalogLoader(sources: [primary, fallback],
+                                         bundle: emptyBundle,
+                                         cacheDirectory: dir,
+                                         retryPolicy: .none,
+                                         appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertEqual(fresh?.tours.first?.title, "Primary Tour")
+        let fallbackCalls = await fallbackFetcher.callCount
+        XCTAssertEqual(fallbackCalls, 0, "The fallback is not touched once the primary succeeds")
+    }
+
+    func test_refresh_returnsNil_whenAllSourcesFail() async throws {
+        let dir = makeTempDir()
+        try seedCache(catalog(titled: "Good Local"), in: dir)
+        let s1 = CatalogSource(
+            fetcher: StubFetcher(result: .failure(URLError(.timedOut))),
+            url: URL(string: "https://primary.example/rpc")!)
+        let s2 = CatalogSource(
+            fetcher: StubFetcher(result: .failure(URLError(.notConnectedToInternet))),
+            url: URL(string: "https://fallback.example/Tours.json")!)
+        let loader = RemoteCatalogLoader(sources: [s1, s2],
+                                         bundle: emptyBundle,
+                                         cacheDirectory: dir,
+                                         retryPolicy: .none,
+                                         appVersion: Self.testVersion)
+
+        let fresh = await loader.refresh()
+
+        XCTAssertNil(fresh)
+        // The good local copy survives a total network failure.
+        XCTAssertEqual(loader.loadLocal()?.tours.first?.title, "Good Local")
+    }
+
     // MARK: - DataService integration
 
     func test_dataService_loadsLocalCatalog_withoutAutoRefresh() throws {
