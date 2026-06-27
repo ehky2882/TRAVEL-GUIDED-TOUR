@@ -38,7 +38,9 @@ enum ColorSchemePreference: String, CaseIterable, Identifiable {
 struct SettingsView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(DataService.self) private var dataService
+    @Environment(AuthService.self) private var authService
     @AppStorage("colorSchemePreference") private var colorSchemePreference: ColorSchemePreference = .system
+    @State private var showingSignIn = false
 
     var body: some View {
         NavigationStack {
@@ -73,11 +75,31 @@ struct SettingsView: View {
                 }
 
                 Section(header: sectionHeader("Account")) {
-                    HStack {
-                        Label("Sign in", systemImage: "person.crop.circle")
-                        Spacer()
-                        Text("Coming soon")
-                            .foregroundStyle(AtlasColors.secondaryText)
+                    if authService.isSignedIn {
+                        HStack {
+                            Label(authService.email ?? "Signed in",
+                                  systemImage: "person.crop.circle.fill")
+                            Spacer()
+                        }
+                        Button(role: .destructive) {
+                            Task { try? await authService.signOut() }
+                        } label: {
+                            Label("Sign out", systemImage: "rectangle.portrait.and.arrow.right")
+                        }
+                    } else {
+                        Button {
+                            showingSignIn = true
+                        } label: {
+                            HStack {
+                                Label("Sign in", systemImage: "person.crop.circle")
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .font(AtlasTypography.caption)
+                                    .foregroundStyle(AtlasColors.secondaryText)
+                            }
+                            .contentShape(Rectangle())
+                        }
+                        .buttonStyle(.plain)
                     }
                     HStack {
                         Label("Messages", systemImage: "bubble.left.and.bubble.right")
@@ -207,6 +229,9 @@ struct SettingsView: View {
             // the module rather than hidden behind it.
             .safeAreaInset(edge: .bottom, spacing: 0) {
                 Color.clear.frame(height: AtlasBottomModule.height())
+            }
+            .sheet(isPresented: $showingSignIn) {
+                SignInView()
             }
         }
     }

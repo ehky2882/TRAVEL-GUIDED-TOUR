@@ -22,6 +22,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
     }
 
     @State private var dataService = DataService()
+    @State private var authService = AuthService()
     @State private var libraryStore = LibraryStore()
     @State private var locationManager = LocationManager()
     @State private var audioPlayer = AudioPlayerService()
@@ -82,6 +83,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
             } else {
                 ContentView()
                     .environment(dataService)
+                    .environment(authService)
                     .environment(libraryStore)
                     .environment(locationManager)
                     .environment(audioPlayer)
@@ -117,6 +119,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                         ) {
                             BottomModuleRoot()
                                 .environment(dataService)
+                                .environment(authService)
                                 .environment(libraryStore)
                                 .environment(locationManager)
                                 .environment(audioPlayer)
