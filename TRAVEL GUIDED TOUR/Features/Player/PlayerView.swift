@@ -157,7 +157,12 @@ struct PlayerView: View {
             tour: tour,
             maker: dataService.maker(for: tour),
             audioPlayer: audioPlayer,
-            tourDownloader: tourDownloader
+            tourDownloader: tourDownloader,
+            // The stop the UI just started directly (a geofenced stop-0
+            // with no intro, or a manual intro stop) — nil when we
+            // started the tour's intro audio. Lets the monitor's
+            // already-inside path skip a stop the UI is already playing.
+            startedStopId: appShared.currentPlayingStopId
         )
     }
 
@@ -843,6 +848,12 @@ struct PlayerView: View {
         // Auto-advance from intro -> stop 0 is always desirable: the
         // user tapped Start so they've committed to begin the tour.
         if currentStopIndex == -1 {
+            // The UI is about to start stop 0. If the user is also
+            // standing inside stop 0's region at tour start, the
+            // proximity monitor was holding it as a pending
+            // already-inside stop — claim it here so the monitor
+            // doesn't *also* start stop 0 (double audio).
+            proximityMonitor.cancelPendingInsideStop()
             if !sortedStops.isEmpty { playStop(at: 0) }
             return
         }
