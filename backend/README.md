@@ -12,10 +12,21 @@ ships inside the iOS app.
 Design rationale, schema details, and the forward-designed maker-platform
 tables live in [`../docs/backend-design.md`](../docs/backend-design.md).
 
-## Status
-Foundation **design + artifacts** only. No Supabase project exists yet — this
-is the blueprint. The app still reads the catalog from gh-pages. Standing the
-database up and switching the app over are the follow-on steps below.
+## Status (2026-06-27)
+**Project is LIVE.** Supabase project "Dozent" (free tier) stood up via the
+dashboard; `schema.sql` → `accounts.sql` → `storage.sql` → `moderation.sql` all
+applied via the SQL Editor; `get_catalog()` verified end-to-end with a one-row
+smoke test (Empire State Building).
+
+**Still pending:**
+- **Full catalog seed** — load all ~370 tours (step 4 below). The one smoke-test
+  row is in; the seed upserts by id so it'll absorb it. ~1 MB file → run via psql,
+  not the browser.
+- **App cutover** — point `RemoteCatalogLoader` at the RPC (Mac step). The app
+  still reads gh-pages today, so nothing is blocked.
+
+> Owner is non-technical on infra — see CLAUDE.md § Session workflow. Any Supabase
+> guidance must be exact-copy-paste SQL + click-by-click dashboard steps.
 
 ## Stand-up runbook (when ready to build)
 You only need a Supabase account at this point — the **free tier** is fine for
