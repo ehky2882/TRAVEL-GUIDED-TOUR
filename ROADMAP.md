@@ -882,7 +882,7 @@ Backend decided: **Supabase (Postgres)** — see `docs/backend-design.md`.
 | Step | What | Status |
 |---|---|---|
 | **1. Detach catalog** | App reads the catalog from a URL (`RemoteCatalogLoader`); bundled copy = offline seed | ✅ Shipped — build 46 (PR #209) |
-| **2. Backend foundation** | `makers`/`tours`/`stops` schema, public-read RLS, `get_catalog()` RPC, seed from `Tours.json` | ✅ **LIVE (2026-06-27)** — Supabase project "Dozent" up, schema applied, all 370 tours seeded, `get_catalog()` verified. Pending: app URL-swap (Mac) |
+| **2. Backend foundation** | `makers`/`tours`/`stops` schema, public-read RLS, `get_catalog()` RPC, seed from `Tours.json` | ✅ **DONE (2026-06-27)** — Supabase project "Dozent" live + seeded (5/370/396); **app cutover shipped (PR #255)** — `RemoteCatalogLoader` reads `get_catalog` first, gh-pages fallback. Not yet in a TestFlight build |
 | **3. Accounts & auth** | `profiles`, self-serve makers, per-tour moderation, `reports`, consumer-sync tables; Apple+email+Google | 🟡 Schema applied to Supabase (PR #220). Pending: provider config (owner) + sign-in UI / store sync (Mac) |
 | **4. Maker dashboard** | Phase 1 single-piece creation (record/import audio, pin+radius, photos, transcript, metadata, submit→review), then Phase 2 multi-stop | 🟡 Storage buckets live (PR #222); design done (P1 #222 / P2 #223). Pending: authoring UI (Mac) |
 | **5. Moderation (email-me)** | Owner chose **email notify**, not a queue UI: emailed on submit/report, act via `publish_tour`/`takedown_tour` | 🟡 SQL helpers applied (PR #224). Pending: deploy `notify-moderation` Edge Function + Resend + 2 webhooks (owner) |
@@ -904,8 +904,8 @@ config) → A (Mac app work).** Everything else (payments, consumer extras, medi
 hosting) can follow.
 
 **A. App-side — needs a Mac / Xcode session (each gated by `test_sim` + simulator review)**
-- [ ] Add `supabase-swift` (first third-party dependency)
-- [ ] Point `RemoteCatalogLoader` at the `get_catalog` RPC (+ `apikey`/anon header) — the live cutover from gh-pages to Supabase
+- [ ] Add `supabase-swift` (first third-party dependency) — **deferred to Step 3** (auth/sign-in); the catalog read needs no SDK (plain `URLSession` POST)
+- [x] Point `RemoteCatalogLoader` at the `get_catalog` RPC (+ `apikey`/anon header) — **done, PR #255 (2026-06-27)**: Supabase-first with gh-pages fallback; `SupabaseCatalogFetcher` + `SupabaseConfig` (client-safe anon key). Live-verified 370 tours from Supabase in-sim
 - [ ] Sign-in UI (Apple / email / Google) in the "Me" tab
 - [ ] Sync a signed-in user's library / saved makers / recents → the `user_*` tables
 - [ ] Maker authoring UI (`Features/Maker/`) — Phase 1 single-stop, then Phase 2 multi-stop
