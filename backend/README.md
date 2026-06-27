@@ -18,12 +18,14 @@ dashboard; `schema.sql` → `accounts.sql` → `storage.sql` → `moderation.sql
 applied via the SQL Editor; `get_catalog()` verified end-to-end with a one-row
 smoke test (Empire State Building).
 
+**Full catalog seeded (2026-06-27):** all 5 makers / 370 tours / 396 stops loaded
+via the SQL Editor (`seed_from_toursjson.py` output split into 4 browser-pasteable
+parts), `select count(*)` verified 5/370/396. The DB now mirrors the gh-pages catalog.
+
 **Still pending:**
-- **Full catalog seed** — load all ~370 tours (step 4 below). The one smoke-test
-  row is in; the seed upserts by id so it'll absorb it. ~1 MB file → run via psql,
-  not the browser.
 - **App cutover** — point `RemoteCatalogLoader` at the RPC (Mac step). The app
   still reads gh-pages today, so nothing is blocked.
+- **Re-seed on content change** — rerun `seed_from_toursjson.py` (idempotent upsert).
 
 > Owner is non-technical on infra — see CLAUDE.md § Session workflow. Any Supabase
 > guidance must be exact-copy-paste SQL + click-by-click dashboard steps.
