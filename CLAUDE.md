@@ -68,6 +68,16 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-06-26)
 
+### Geofence "already-inside" fix — AMNH stop 2 now triggers at tour start (session 45 — code)
+
+Bug fix, owner-authorized merge to `main` ([PR #251](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/251), `2eb89c0`, squash) — **not yet in a TestFlight build; owner reviewing in-sim at leisure.** Real-device repro on the AMNH **Four Facades** multi-stop tour: geolocation worked, the intro played, but **stop 2 (Central Park West — Theodore Roosevelt Memorial) never auto-triggered** while standing on the spot; stops 3/4/5 worked.
+
+**Root cause:** `CLLocationManager` only delivers `didEnterRegion` on a boundary **crossing** — never for a region the user is already inside when monitoring begins. AMNH's intro (stop 1, `manual`) and stop 2 (`geofenced`, 30 m) share **identical coordinates** (`40.78083, -73.97280`), so the user starts inside stop 2's region → no entry event → it never fires. Stops 3/4/5 are 150–250 m away, so they cross normally. **General bug** (any tour where the user begins inside the first geofenced stop); 4 of 5 multi-stop tours lead with a geofenced stop-0, so it's not AMNH-specific. **Tour data unchanged — fixed in code.**
+
+**Fix — `Location/ProximityMonitor.swift` (+ small `Features/Player/PlayerView.swift` touchpoint):** after registering each region, call `requestState(for:)` and implement `didDetermineState`. On `.inside`, a pure unit-tested helper `decideInsideStopAction` decides: **play now if the player is idle, else hold the stop and play it when the current item (the intro) ends** — observed via `withObservationTracking`, so the intro is never interrupted. De-dupe via a `playedStopIds` set (real entry ↔ inside-determination, both directions). Overlapping regions → first stop in tour order. `PlayerView` passes `startedStopId` and calls `cancelPendingInsideStop()` on the intro→stop-0 auto-advance so the UI and monitor never both start a stop. All prior behavior intact (downloaded-tour local URL, foreground notification, 20-region cap, `stopMonitoring()` resets the new state too).
+
+**Verified:** 7 new `ProximityMonitorInsideStopTests`; `test_sim` **110/110**; CI green. **Sim repro (iPhone 17 Pro):** location set to the stop-2 coordinate before Start → **stop 2 now auto-fires untouched**; then location → stop 3 → **normal crossing still advances**. **UX choice (owner can revisit):** the already-inside stop plays *when the intro finishes*, not mid-intro.
+
 ### TestFlight 1.0 (49) — resilient catalog refresh + detail/maker/home/search batch (session 44 — code)
 
 **Latest TestFlight build: 1.0 (49)** — live 2026-06-26 (build bump 48→49 via **PR #249** `3dbf7f9`). Carries the five app-code PRs merged to `main` since build 48; **content is unchanged** (it already ships live via the remote catalog — ~370 tours / 5 makers).
