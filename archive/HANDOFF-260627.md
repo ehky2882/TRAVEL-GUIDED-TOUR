@@ -80,11 +80,36 @@ fallback mirror could be *newer* than the live source. Both currently
 mirror the same `Resources/Tours.json`. Worth automating later: a
 publish-to-Supabase step alongside `.github/workflows/publish-catalog.yml`.
 
+## Auto-seed automation (PR #260, activated 2026-06-27)
+
+Closed the "content must reach the DB manually" gap. New `seed-supabase` job
+in `.github/workflows/publish-catalog.yml`: on every `main` push touching
+`Tours.json` it regenerates `seed_from_toursjson.py` and `psql`-applies it to
+the Supabase DB — idempotent (upsert by id), transactional
+(`ON_ERROR_STOP=1` + `begin/commit`), serialized (concurrency group), parallel
+to and independent of the gh-pages publish (a DB failure never blocks the
+mirror).
+
+- **Opt-in via one repo secret**, `SUPABASE_DB_URL` = the Supabase
+  **Session-pooler** connection string (IPv4-proxied; the direct URL is
+  IPv6-only and would fail on GitHub runners). The job no-ops if the secret is
+  unset. **Owner added the secret 2026-06-27** — so it's live.
+- **Verified end-to-end:** manual `workflow_dispatch` of "Publish catalog" →
+  both jobs green; seed job emitted SQL for 5 makers / 370 tours / 396 stops,
+  `psql` printed "Catalog upserted into Supabase"; post-seed `get_catalog` RPC
+  still returns 5/370/396.
+- **No-delete by design:** upsert-only, never deletes DB rows absent from the
+  file — deliberate so future maker-created tours aren't wiped. Retire an
+  Atlas tour via `takedown_tour`/`status`, not by dropping it from the file.
+- Setup steps + limitation written into `backend/README.md`.
+
+**Net:** content merges now auto-sync to BOTH gh-pages and Supabase. No more
+hand-seeding via the SQL Editor.
+
 ## Next
 
-- **Build bump 49 → 50 + TestFlight** when the owner wants the cutover on
-  device (short-lived-PR pattern — classifier blocks direct-to-main pbxproj
-  pushes; archive from a clean `main` checkout, grep the binary).
+- **Build bump 49 → 50 + TestFlight** — DONE this session (see snapshot
+  above); listed here only because the original note predates the bump.
 - **Step 3 (accounts/auth):** add `supabase-swift`, sign-in UI (Apple /
   email / Google) in the "Me" tab, store sync → `user_*` tables. Owner
   still needs to enable auth providers in the dashboard (B-list in ROADMAP
