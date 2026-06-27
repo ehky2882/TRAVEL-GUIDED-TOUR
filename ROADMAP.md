@@ -882,10 +882,10 @@ Backend decided: **Supabase (Postgres)** — see `docs/backend-design.md`.
 | Step | What | Status |
 |---|---|---|
 | **1. Detach catalog** | App reads the catalog from a URL (`RemoteCatalogLoader`); bundled copy = offline seed | ✅ Shipped — build 46 (PR #209) |
-| **2. Backend foundation** | `makers`/`tours`/`stops` schema, public-read RLS, `get_catalog()` RPC, seed from `Tours.json` | 🟡 Design + SQL landed (PR #218). Pending: stand up Supabase + seed (owner); app URL-swap (Mac) |
-| **3. Accounts & auth** | `profiles`, self-serve makers, per-tour moderation, `reports`, consumer-sync tables; Apple+email+Google | 🟡 Design + SQL landed (PR #220). Pending: provider config (owner); sign-in UI + store sync (Mac) |
-| **4. Maker dashboard** | Phase 1 single-piece creation (record/import audio, pin+radius, photos, transcript, metadata, submit→review), then Phase 2 multi-stop | ⬜ Not started — app-heavy; builds on #218/#220 |
-| **5. Moderation surface** | Admin queue UI over `status='in_review'` + `reports` (schema exists in #220) | ⬜ Not started |
+| **2. Backend foundation** | `makers`/`tours`/`stops` schema, public-read RLS, `get_catalog()` RPC, seed from `Tours.json` | ✅ **LIVE (2026-06-27)** — Supabase project "Dozent" up, schema applied, all 370 tours seeded, `get_catalog()` verified. Pending: app URL-swap (Mac) |
+| **3. Accounts & auth** | `profiles`, self-serve makers, per-tour moderation, `reports`, consumer-sync tables; Apple+email+Google | 🟡 Schema applied to Supabase (PR #220). Pending: provider config (owner) + sign-in UI / store sync (Mac) |
+| **4. Maker dashboard** | Phase 1 single-piece creation (record/import audio, pin+radius, photos, transcript, metadata, submit→review), then Phase 2 multi-stop | 🟡 Storage buckets live (PR #222); design done (P1 #222 / P2 #223). Pending: authoring UI (Mac) |
+| **5. Moderation (email-me)** | Owner chose **email notify**, not a queue UI: emailed on submit/report, act via `publish_tour`/`takedown_tour` | 🟡 SQL helpers applied (PR #224). Pending: deploy `notify-moderation` Edge Function + Resend + 2 webhooks (owner) |
 | **6. Paid tours** | Apple IAP; `Tour.priceUSD` goes live; ownership tracking (Tier 2 #4) | ⬜ Not started |
 | **7. Maker payouts** | Stripe Connect (Tier 2 #5) | ⬜ Not started |
 | **8. Consumer richness** | Follow-a-maker push, in-app search, share links (sign-in/sync already in Step 3) | ⬜ Partially pulled forward |
@@ -896,6 +896,38 @@ zero app change); (2) point the app's `RemoteCatalogLoader` at the Supabase RPC,
 stays a fallback mirror. Details in `docs/backend-design.md`.
 
 Design references: `docs/backend-design.md`, `docs/accounts-design.md`, `backend/`.
+
+### V2 — remaining to-dos (checklist)
+
+As of 2026-06-27. **Critical path to "outside makers can publish a tour": B (Supabase
+config) → A (Mac app work).** Everything else (payments, consumer extras, media
+hosting) can follow.
+
+**A. App-side — needs a Mac / Xcode session (each gated by `test_sim` + simulator review)**
+- [ ] Add `supabase-swift` (first third-party dependency)
+- [ ] Point `RemoteCatalogLoader` at the `get_catalog` RPC (+ `apikey`/anon header) — the live cutover from gh-pages to Supabase
+- [ ] Sign-in UI (Apple / email / Google) in the "Me" tab
+- [ ] Sync a signed-in user's library / saved makers / recents → the `user_*` tables
+- [ ] Maker authoring UI (`Features/Maker/`) — Phase 1 single-stop, then Phase 2 multi-stop
+- [ ] Wire the "Report a concern" overflow action → `reports` table
+
+**B. Supabase config — owner (dashboard; Apple/Google need their dev consoles)**
+- [ ] Enable auth providers — email (toggle), Apple (Services ID), Google (OAuth client)
+- [ ] Deploy `notify-moderation` Edge Function + set Resend key + add 2 DB webhooks (tours UPDATE, reports INSERT)
+- [ ] Make yourself admin: `update profiles set is_admin = true where id = '<your auth uid>';` (once you have a signed-in account)
+
+**C. Needs owner decisions, then design**
+- [ ] Paid tours (Step 6): per-tour purchase / subscription / both → then design Apple IAP
+- [ ] Maker payouts (Step 7): confirm Stripe Connect → then design
+
+**D. Deferred / later**
+- [ ] Media hosting decision — gh-pages vs Supabase Storage vs a CDN (owner leans "one place"); see `docs/cdn-decision.md`
+- [ ] Consumer richness (Step 8): follow-a-maker + notifications, in-app search, share links
+- [ ] Moderation web admin tool — only if volume outgrows the email approach
+
+**E. Housekeeping**
+- [ ] Fix 2 dead gallery images (The Oculus, The Charging Bull — Wikimedia 404)
+- [ ] Delete merged `claude/*` branches (GitHub UI — proxy blocks deletion from sessions)
 
 ---
 
