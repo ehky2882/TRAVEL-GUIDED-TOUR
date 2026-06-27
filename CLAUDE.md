@@ -69,6 +69,12 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-06-27)
 
+### TestFlight 1.0 (50) — ships the geofence fix + the Supabase catalog cutover (session 47 — build)
+
+**TestFlight 1.0 (50) is live** (build bumped 49 → 50 via [PR #257](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/257), `3770a46`). Cuts everything on `main` since build 49 — two app-code changes, no content change (catalog now served from Supabase, ~370 tours / 5 makers):
+- **[PR #251](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/251) — geofence "already-inside" fix** (session 45): a stop the user is already standing inside at tour start now triggers (`ProximityMonitor` `requestState` + `didDetermineState`; held until the intro ends; de-duped). This is the **AMNH Four Facades stop-2 miss** — now testable on device by standing at the Theodore Roosevelt Memorial entrance and starting the tour.
+- **[PR #255](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/255) — Supabase catalog cutover** (session 46): the app reads `get_catalog` from the live Supabase backend first, gh-pages `Tours.json` as fallback mirror.
+
 ### V2 Step 2 app cutover — the app now reads its catalog from Supabase (session 46 — code)
 
 **[PR #255](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/255) (`fa8ec2a`, squash, owner-OK'd merge) points the app at the live Supabase backend.** The catalog is now fetched from the `get_catalog` RPC on project **"Dozent"** (`https://apkcihljybvuyuzpbnqd.supabase.co`) **first**, with gh-pages `Tours.json` kept as an automatic **fallback mirror** (then the on-disk cache, then the bundled offline seed). This is the change the Step-1 `CatalogFetching` seam was built for — `ToursData`, models, views, cache, and bundled seed are all unchanged. **Not yet in a TestFlight build (latest remains 1.0 (49)); needs a 49→50 bump when the owner wants it on device.**
