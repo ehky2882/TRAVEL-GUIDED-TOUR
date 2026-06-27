@@ -15,6 +15,7 @@ Multi-platform SwiftUI. iOS 26.2 / macOS 26.2 / visionOS 26.2.
 - **Web sessions** (like this one) are for project management, content uploads, and planning. Code changes happen here only when they're small and self-contained.
 - **Implementation work** (new features, refactors, UI changes) → owner spawns a new session and creates a new branch. This keeps the main project-management session context clean.
 - Owner does not use Terminal. Claude handles all shell/git work.
+- **Supabase / SQL / backend infra is beyond the owner's technical comfort — hand-hold maximally.** When guiding through Supabase (or any dashboard/SQL/infra) work: give **exact copy-paste-ready SQL blocks** (don't link to repo files — the repo is private and links 404), walk the dashboard **click-by-click**, explain each confirmation prompt (e.g. the "destructive operations" warning is just the `drop … if exists` lines on a fresh DB — safe), and never assume Terminal. The owner runs SQL by pasting into the Supabase **SQL Editor**.
 
 ## Claude Automation Rules
 
@@ -66,7 +67,18 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-26)
+## Current State (2026-06-27)
+
+### Supabase backend stood up + V2 schema applied — the catalog DB is LIVE (2026-06-27 — owner + Claude, hand-held)
+
+First time any V2 backend is **running**, not just designed. The owner stood up the Supabase project entirely through the web dashboard, fully hand-held by Claude (owner is non-technical on infra — see § Session workflow).
+
+- **Project:** Supabase free tier · org "ehky2882's Org" · project **"Dozent"** · GitHub-auth login · Americas region. URL/keys live in Dashboard → **Settings → API** (publishable a.k.a. anon key — client-safe) and **Settings → Data API** (base URL → `get_catalog` RPC at `…/rest/v1/rpc/get_catalog`). The **secret** key (service_role) stays private; never ship it / paste it.
+- **Schema applied** via the SQL Editor, in order — `backend/schema.sql` → `accounts.sql` → `storage.sql` → `moderation.sql` (each "Success. No rows returned."). Now live: catalog tables + public-read RLS + `get_catalog()` RPC; `profiles` + maker self-serve ownership + per-tour-moderation RLS + `reports` + consumer-sync tables; the two storage buckets; `publish_tour`/`takedown_tour` helpers.
+- **Verified end-to-end:** first a one-row smoke seed (Empire State Building), then the full seed → `select get_catalog()` returns the catalog nested in the exact `{makers,tours:[{…stops}]}` shape `ToursData` decodes. Tables → RLS → RPC → app-format all proven against the live project.
+- **DONE — full catalog seeded (2026-06-27):** all **5 makers / 370 tours / 396 stops** loaded via the SQL Editor; `select count(*)` verified 5/370/396. No-Terminal path: `seed_from_toursjson.py` output (~2.4 MB) was split into 4 browser-pasteable `begin/commit` parts run in order. The Supabase DB is now a complete mirror of the gh-pages catalog. (To re-seed after content changes: regenerate via `python3 backend/seed_from_toursjson.py` — idempotent upsert by id.)
+- **NEXT (Mac, gated by `test_sim` + sim review):** app-side cutover — add **supabase-swift**, point `RemoteCatalogLoader` at the `get_catalog` RPC (+ `apikey`/anon header); then sign-in UI + store sync + the maker authoring UI.
+- Design lives in `backend/` + `docs/{backend,accounts,maker-dashboard,maker-dashboard-phase2,moderation}-design.md` (V2 plan in `ROADMAP.md` § "V2 — execution plan").
 
 ### Geofence "already-inside" fix — AMNH stop 2 now triggers at tour start (session 45 — code)
 
