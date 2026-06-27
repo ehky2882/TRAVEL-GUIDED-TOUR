@@ -4,9 +4,12 @@
 Supabase backend. Shipped to `main` via
 **[PR #255](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/255)**
 (`fa8ec2a`, squash). Owner reviewed the behavior described and explicitly
-OK'd the merge ("i'm good with it for now. merge"). **Not yet in a
-TestFlight build** — latest remains 1.0 (49); needs a 49→50 bump when the
-owner wants it on device.
+OK'd the merge ("i'm good with it for now. merge"). **Shipped in
+TestFlight 1.0 (50)** — bump 49→50 via PR #257; archived
+(`/tmp/Atlas-20260627-0003-b50.xcarchive`, verified 1.0 (50),
+`UIRequiresFullScreen` held, Supabase host + anon key in the binary) and
+owner uploaded via Organizer; live 2026-06-27. Build 50 also carries the
+session-45 geofence fix (#251).
 
 ## What shipped
 
