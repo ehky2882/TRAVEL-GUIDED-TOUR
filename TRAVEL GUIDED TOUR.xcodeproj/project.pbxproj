@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C6784E2CBC84866B6AA412BE /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = D539478B88DD8E5B436DACF7 /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0741DB142FBC017A00EE9C95 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -22,16 +26,8 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0741DB112FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "TRAVEL GUIDED TOURTests";
-			sourceTree = "<group>";
-		};
-		078299CA2F5926C900D5EB03 /* TRAVEL GUIDED TOUR */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "TRAVEL GUIDED TOUR";
-			sourceTree = "<group>";
-		};
+		0741DB112FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = "TRAVEL GUIDED TOURTests"; sourceTree = "<group>"; };
+		078299CA2F5926C900D5EB03 /* TRAVEL GUIDED TOUR */ = {isa = PBXFileSystemSynchronizedRootGroup; path = "TRAVEL GUIDED TOUR"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6784E2CBC84866B6AA412BE /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +110,7 @@
 			);
 			name = "TRAVEL GUIDED TOUR";
 			packageProductDependencies = (
+				D539478B88DD8E5B436DACF7 /* Supabase */,
 			);
 			productName = "TRAVEL GUIDED TOUR";
 			productReference = 078299C82F5926C900D5EB03 /* TRAVEL GUIDED TOUR.app */;
@@ -146,6 +144,9 @@
 			);
 			mainGroup = 078299BF2F5926C900D5EB03;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1ED949299F87C345C46709C0 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 078299C92F5926C900D5EB03 /* Products */;
 			projectDirPath = "";
@@ -392,7 +393,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -441,7 +442,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -494,6 +495,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1ED949299F87C345C46709C0 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D539478B88DD8E5B436DACF7 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ED949299F87C345C46709C0 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 078299C02F5926C900D5EB03 /* Project object */;
 }
