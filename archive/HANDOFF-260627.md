@@ -127,3 +127,42 @@ hand-seeding via the SQL Editor.
   indexer, not a build error.
 - macOS has no `timeout`; capture console via a backgrounded
   `simctl launch --console-pty … & sleep N; kill`.
+
+## Auth foundation — V2 Step 3 begun (session 47, PR #262, `2c9525e`)
+
+Added the app's **first third-party dependency** (`supabase-swift` 2.48.0)
+and the accounts/auth foundation. First cut = **email/password**; Apple +
+Google are follow-ups on the same foundation (owner wants all three).
+Owner OK'd the merge on a screen review.
+
+- **SPM integration without the Xcode GUI:** used the `mod-pbxproj` Python
+  package (`pip install pbxproj`) in a venv — `XcodeProject.add_package(url,
+  {"kind":"upToNextMajorVersion","minimumVersion":"2.0.0"}, "Supabase",
+  "TRAVEL GUIDED TOUR")` then `.save()`. It wired the
+  XCRemoteSwiftPackageReference + product dependency + frameworks build-file
+  cleanly. Verified with `xcodebuild -resolvePackageDependencies` then a
+  build. **`Package.resolved` is committed** (pins the whole tree). This is
+  the reusable recipe for future deps — far safer than hand-editing pbxproj.
+- **Files:** `Data/SupabaseClientProvider.swift` (shared `SupabaseClient`),
+  `Data/AuthService.swift` (`@MainActor @Observable`: session restore +
+  `authStateChanges` → `user`; signUp/signIn/signOut; signUp returns
+  `.confirmationRequired` under email-confirm), `Features/Auth/SignInView.swift`
+  (email sheet). `SettingsView` Account section + `AuthService` injected at
+  the app entry (both env chains).
+- **Gotcha:** `deinit` can't touch a `@MainActor` stored property — dropped
+  the deinit (AuthService is app-lifetime). The catalog read deliberately
+  stays on its own `URLSession` fetcher; the SDK links app-target only (test
+  target unchanged → 113/113 still pass).
+- **Verification:** build clean; `test_sim` 113/113; live sim — drove the
+  sheet (sign-in + create modes, field input render correctly). Reaching the
+  **Me tab in the sim is blocked** — its tab-bar button isn't exposed to
+  accessibility (only Home is; pre-existing a11y gap in the secondary-window
+  tab bar), and XcodeBuildMCP tap/touch are elementRef-only (no coordinate
+  tap). Workaround: temporarily set `AppSharedState.selectedTab = .me`
+  (BottomModuleWindow.swift), screenshot, revert. Backend signup proven via
+  `curl`. **Email confirmation is ON** → the fully-signed-in→sign-out loop
+  isn't sim-verified; owner to toggle "Confirm email" OFF for dev or keep the
+  check-your-email flow.
+- **Next:** Apple Sign In (owner's Apple Developer Services ID + key,
+  hand-held) → Google → `user_*` sync. **Cleanup:** delete the 2 throwaway
+  `auth.users` rows (`claude.authprobe.…`, `dozent.simtest.…`).
