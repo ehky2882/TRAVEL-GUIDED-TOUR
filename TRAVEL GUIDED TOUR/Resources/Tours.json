@@ -19669,6 +19669,125 @@
         "walking tour"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "87e27455-674a-4ec6-bad5-3fa2b790b38d",
+      "title": "Golden Gate Park: The Music Concourse",
+      "shortDescription": "A walk through the cultural heart of Golden Gate Park — John McLaren's forest-on-sand, from the Conservatory of Flowers to Stow Lake.",
+      "longDescription": "Golden Gate Park was built on bare, shifting sand dunes — a thousand acres that gardener John McLaren spent half a century coaxing into one of the great urban parks in the world. This six-stop walk circles the Music Concourse at its cultural core: the glittering white Conservatory of Flowers, the copper-clad de Young Museum and Renzo Piano's living-roofed California Academy of Sciences facing each other across the concourse, the serene Japanese Tea Garden, and finally Stow Lake, where you can climb Strawberry Hill for a view back over the forest McLaren made.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-golden-gate-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-golden-gate-park_stop0.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-golden-gate-park_stop1.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/de-young_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/california-academy-of-sciences_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-golden-gate-park_stop4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-golden-gate-park_stop5.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "2f5a4f7b-3525-4b13-a716-bf9af4840255",
+          "order": 0,
+          "title": "Welcome to Golden Gate Park",
+          "caption": "Here's something almost nobody believes when they first hear it: every tree around you was planted on purpose, on bare sand.",
+          "latitude": 37.7702,
+          "longitude": -122.4685,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-golden-gate-park_stop0.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-golden-gate-park_stop0.webp",
+          "transcriptText": "Here's something almost nobody believes when they first hear it: every tree around you was planted on purpose, on bare sand. Before this was a park, this was dunes — windswept, shifting, treeless dunes running out to the ocean, land everyone agreed was worthless. The whole green world you're about to walk through is artificial, in the best sense of the word. Someone willed it into being.\n\nThat someone was mostly a Scottish gardener named John McLaren, who ran this park for over fifty years and is said to have planted something like two million trees. He took a few square miles of sand and grew a forest on it — and then he filled that forest with things for everyone. Not a private estate, not a rich man's garden: a public park, free, open, democratic, with museums and gardens and lakes that anybody could walk into.\n\nThis walk takes you through the cultural heart of that idea, the cluster around the Music Concourse — the sunken, tree-lined bowl that's been the park's living room since a World's Fair came through in 1894. Five stops: a Victorian glass greenhouse, two great museums facing each other across the Concourse, a Japanese garden with a complicated and beautiful history, and finally a lake that started life as a reservoir.\n\nFor your feet, this is one of the gentlest walks in the city — flat, paved, about a mile and a half end to end, with the stops bunched close together in the middle. Take your time; the park rewards it.\n\nWe'll start at the east end, at the oldest thing in the whole park. Head for the Conservatory of Flowers, the big white glass greenhouse on the rise off John F. Kennedy Drive, and meet me on the lawn out front."
+        },
+        {
+          "id": "5538d2d3-3012-45b4-94ef-66933095b041",
+          "order": 1,
+          "title": "Conservatory of Flowers",
+          "caption": "You're standing in front of the Conservatory of Flowers — and you're looking at the oldest building in Golden Gate Park, older than the park's museums, older than most of its trees.",
+          "latitude": 37.772,
+          "longitude": -122.4602,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-golden-gate-park_stop1.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-golden-gate-park_stop1.webp",
+          "transcriptText": "You're standing in front of the Conservatory of Flowers — and you're looking at the oldest building in Golden Gate Park, older than the park's museums, older than most of its trees. It's a Victorian greenhouse, all white-painted wood and glass, a long central dome with two wings, sitting up on its little rise like a wedding cake.\n\nIt opened in 1879, and it has the kind of origin story this park specializes in. The whole thing started as a prefabricated kit — milled wood and thousands of panes of glass — ordered by an eccentric millionaire named James Lick, who died before he ever put it together. It sat in crates until a group of wealthy San Franciscans bought it and gave it to the new park. The design was modeled on the great Palm House at Kew Gardens in London, which is why, if you've been to Kew, this might feel like a smaller cousin a long way from home.\n\nStep inside if you have time — it's warm, wet, and dense with tropical plants, including high-altitude orchids and water lilies with pads big enough to worry you. But here's the thing to hold onto: this building has nearly been lost more than once. It survived the 1906 earthquake, but a windstorm in 1995 shattered nearly half its glass and almost finished it off. The city raised twenty-five million dollars and spent the better part of a decade rebuilding it pane by pane.\n\n[beat]\n\nSo this delicate-looking glass box is actually one of the toughest survivors in the park — a Victorian greenhouse that refuses to break for good.\n\nWhen you're ready, follow John F. Kennedy Drive west, about a ten-minute walk, toward the Music Concourse. The first museum you'll come to, with the strange twisting copper tower, is the de Young — meet me out front."
+        },
+        {
+          "id": "426ee2a1-0222-472e-815b-fccb79f6ccf9",
+          "order": 2,
+          "title": "de Young Museum",
+          "caption": "You're at the de Young Museum now, on the north side of the Music Concourse.",
+          "latitude": 37.7715,
+          "longitude": -122.4687,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-golden-gate-park_stop2.mp3",
+          "audioDurationSeconds": 98,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/de-young_hero.webp",
+          "transcriptText": "You're at the de Young Museum now, on the north side of the Music Concourse. You can't miss it — it's the building wrapped in copper, with that nine-story tower twisting up out of one end. It's the city's main art museum, and the building itself is the first thing worth reading.\n\nLook closely at the skin. The whole exterior is copper, perforated and embossed with a dimpled pattern, and it was designed to do something most buildings try to avoid: corrode. The architects, the Swiss firm Herzog and de Meuron, wanted the copper to oxidize over time, to streak and darken and slowly turn green, so the building would settle into the green of the park and half-disappear into it. It's a museum engineered to age, on purpose.\n\nThe de Young is here at all because the old building on this spot was wrecked in the 1989 earthquake and had to come down. This copper replacement opened in 2005.\n\nNow, the gift, and it's a generous one. That twisting tower has an observation floor at the top, with windows on all sides and one of the best free views in San Francisco — the park below, the city beyond, the ocean to the west. You don't need a museum ticket to ride up. A lot of people never realize that.\n\n[beat]\n\nSo before you move on, consider going up: a free, quiet, glass-walled room above the treetops, in a building designed to vanish into them.\n\nWhen you're done, turn and look across the Concourse. The low building with the wavy roofline and the dome poking out of it is the California Academy of Sciences — that's our next stop, straight across the bowl."
+        },
+        {
+          "id": "10ee29f8-b131-498b-9abd-25137439a059",
+          "order": 3,
+          "title": "California Academy of Sciences",
+          "caption": "You're at the California Academy of Sciences, directly across the Music Concourse from the de Young.",
+          "latitude": 37.7699,
+          "longitude": -122.4661,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-golden-gate-park_stop3.mp3",
+          "audioDurationSeconds": 94,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/california-academy-of-sciences_hero.webp",
+          "transcriptText": "You're at the California Academy of Sciences, directly across the Music Concourse from the de Young. From the front it looks low and modern and fairly calm — but the whole trick of this building is on top, where you can't quite see it from here.\n\nThe roof is alive. It's a two-and-a-half-acre living roof, planted with native California wildflowers and grasses, rolling in seven green hills that echo the hills of San Francisco itself. It insulates the building, soaks up rainwater, and gives native bugs and birds a home seventy feet up. The architect, Renzo Piano, basically lifted a piece of the California landscape and draped it over a museum.\n\nAnd what's under that roof is the real wonder: this is four institutions in one. A natural history museum, an aquarium, a planetarium, and a four-story indoor rainforest under a glass dome, all beneath a single roof. You can stand in a rainforest, ride down to a coral reef, and walk out under a model of the universe, without ever stepping outside. There's even an albino alligator, which the city has a strange amount of affection for.\n\n[beat]\n\nThat's the idea this whole park keeps repeating, in one building: the natural world, gathered up and handed to the public, free to wander into. A roof that's a meadow, over a museum that's a planet.\n\nFrom the Academy, walk a short way west, just past the de Young, and you'll reach the entrance to the Japanese Tea Garden — the next stop, and the oldest of its kind in the country."
+        },
+        {
+          "id": "d0394cd8-9c85-4aad-8178-a30f176fbd66",
+          "order": 4,
+          "title": "Japanese Tea Garden",
+          "caption": "You're at the gate of the Japanese Tea Garden — five acres of winding paths, ponds, stone lanterns, and clipped pines, tucked right beside the Music Concourse.",
+          "latitude": 37.7702,
+          "longitude": -122.4703,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-golden-gate-park_stop4.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-golden-gate-park_stop4.webp",
+          "transcriptText": "You're at the gate of the Japanese Tea Garden — five acres of winding paths, ponds, stone lanterns, and clipped pines, tucked right beside the Music Concourse. It's the oldest public Japanese garden in the United States, and like a lot of this part of the park, it's a leftover from that 1894 World's Fair, which set up its whole midway right here where you're standing.\n\nWalk in and a few things will find you. There's a drum bridge, an arc so steep you climb it more than cross it, built to make a perfect circle with its own reflection in the water. There's a five-tiered pagoda, and a great bronze Buddha, and a tea house that still serves tea the way it has for generations. Take it slowly — the garden is designed to slow you down, that's the entire point.\n\nBut the garden's heart is a family. After the fair, a Japanese gardener named Makoto Hagiwara took over the site and spent the rest of his life turning a fairground exhibit into a real garden, importing plants, birds, and stone from Japan, raising his family in a home right here on the grounds. The Hagiwaras tended this place for nearly fifty years.\n\n[beat]\n\nAnd then, in 1942, they were forced out. Like a hundred and twenty thousand other Japanese Americans during the war, the Hagiwara family was sent to an internment camp, and they were never allowed to return to the garden they had built. For a time the city even stripped the name, calling it the Oriental Tea Garden, before it was set right. It's a quiet place with a hard history, and the garden marks it honestly, which is the right thing to do.\n\nOne small, sweeter footnote, and it connects to something the rest of this city likes to claim: the modern fortune cookie was very likely first served right here, by the Hagiwara family, before it ever became a Chinatown staple. The thing San Francisco files under \"Chinese\" was, once again, a Japanese invention — and this exact garden is where it started.\n\nWhen you're ready, leave the way you came and head west a few minutes to Stow Lake — now also called Blue Heron Lake — where this walk comes to rest on the water."
+        },
+        {
+          "id": "a5aba54d-093d-4855-ad3e-6dfe5049d365",
+          "order": 5,
+          "title": "Stow Lake & Strawberry Hill",
+          "caption": "And here's where the walk comes to rest: Stow Lake — though if you look at a new sign, you'll see it now goes by Blue Heron Lake.",
+          "latitude": 37.7693,
+          "longitude": -122.475,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-golden-gate-park_stop5.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-golden-gate-park_stop5.webp",
+          "transcriptText": "And here's where the walk comes to rest: Stow Lake — though if you look at a new sign, you'll see it now goes by Blue Heron Lake. We'll come back to that name in a moment. Stand anywhere on the path that rings the water and take in the shape of the place: a doughnut of lake wrapped all the way around a single wooded island.\n\nThat island is Strawberry Hill, and it's the highest point in the entire park. The whole scene looks utterly natural, like it's always been here — and it's completely man-made. Remember the dunes from the start of the walk? This lake was dug out of that sand in 1893, partly as a reservoir to water the rest of the park, partly as a place for people to drift around in rowboats on a Sunday. You can still rent a boat at the boathouse and do exactly that.\n\nLook across to the island and you'll spot two gifts. One is Huntington Falls, a hundred-and-ten-foot waterfall tumbling down Strawberry Hill — also entirely artificial, funded by a railroad baron and engineered to look wild. The other is the Golden Gate Pavilion, a bright Chinese pagoda given to San Francisco by its sister city, Taipei, as a gesture of friendship.\n\n[beat]\n\nNow, that name. The lake was named for a nineteenth-century politician named William Stow, and when the city took a harder look at his record — he was openly, aggressively antisemitic — it decided, recently, to rename the water Blue Heron Lake. You'll hear both names for a while yet. It's a small, honest example of a city deciding what it wants its public places to stand for.\n\nAnd that's the park, in miniature: a forest, a lake, a waterfall, all conjured out of bare sand and handed to everyone, and still being argued over and cared for more than a century on. Find a bench. Watch the boats. You've reached the calm center of the thing McLaren built."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 651,
+      "walkingDistanceMeters": 2400,
+      "centroidLatitude": 37.77052,
+      "centroidLongitude": -122.46813,
+      "city": "San Francisco",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "golden gate park",
+        "music concourse",
+        "john mclaren",
+        "de young",
+        "conservatory of flowers",
+        "walking tour"
+      ],
+      "priceUSD": 0
     }
   ]
 }
