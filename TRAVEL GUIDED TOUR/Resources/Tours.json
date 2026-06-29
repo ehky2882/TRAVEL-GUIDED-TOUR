@@ -19565,6 +19565,110 @@
         "american art"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "8acb04c1-0a15-46d9-9c4e-5ac2ce7f9443",
+      "title": "Chinatown: The City That Refused to Move",
+      "shortDescription": "A walk through the oldest Chinatown in North America — where the curved roofs and dragon lamps are a century-old act of self-defense.",
+      "longDescription": "After the 1906 earthquake leveled the neighborhood, powerful interests tried to push San Francisco's Chinese residents to the city's edge and seize this downtown-adjacent land. The community fought back with architecture — rebuilding on the same ground, deliberately more theatrical and \"Chinese\" than before, to make Chinatown an attraction too valuable to bulldoze. This five-stop walk runs from the Dragon Gate up Grant Avenue through the painted lanes of Waverly Place and Ross Alley to Portsmouth Square, the neighborhood's living room and the spot where the American flag was first raised over the city.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-chinatown_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-chinatown_stop0.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-dragon-gate_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waverly-place_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ross-alley_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-chinatown_stop4.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "80698b70-fd4a-48eb-b5a2-605b08d58be7",
+          "order": 0,
+          "title": "Welcome to Chinatown",
+          "caption": "Before you take a step, here's the idea that makes this walk worth doing.",
+          "latitude": 37.792,
+          "longitude": -122.4067,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-chinatown_stop0.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-chinatown_stop0.webp",
+          "transcriptText": "Before you take a step, here's the idea that makes this walk worth doing. You're about to walk through the oldest Chinatown in North America — and almost everything you'll find charming about it, the curved roofs, the dragon lamps, the color, was a deliberate act of self-defense.\n\nHere's why. In 1906, the earthquake and the fire that followed leveled this neighborhood completely, and a lot of powerful people in San Francisco saw an opportunity: clear the Chinese residents out, push them to the edge of the city, and take this valuable downtown-adjacent land for themselves. The community fought back — and they fought back, in part, with architecture. Merchants and their architects rebuilt Chinatown on the same ground, but flashier, more theatrical, more \"Chinese\" than it had ever actually looked, on purpose. The bet was simple: make it a place the whole city wants to visit, an attraction too valuable to bulldoze, and you make it permanent. It worked. What looks like decoration is really a survival strategy a century old.\n\nSo as we walk, look past the souvenir shops and read the neighborhood as what it is: a city within the city that refused to be moved.\n\nThe good news for your feet: this is one of the flattest, tightest walks in San Francisco. Four stops, a handful of blocks, no real hills until the very end. We'll start at the grand front door, work our way up Grant and into the back alleys where the real life is, and finish in the square where the whole city was born.\n\nLet's begin at the Dragon Gate, at the corner of Grant Avenue and Bush Street, the southern entrance to Chinatown. Make your way there, and meet me at the gate."
+        },
+        {
+          "id": "6e412054-34fd-4242-a384-dd99b78a19b3",
+          "order": 1,
+          "title": "Dragon Gate",
+          "caption": "You should be standing in front of the Dragon Gate, looking north up Grant Avenue into Chinatown.",
+          "latitude": 37.7908,
+          "longitude": -122.4056,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-chinatown_stop1.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-dragon-gate_hero.webp",
+          "transcriptText": "You should be standing in front of the Dragon Gate, looking north up Grant Avenue into Chinatown. Three openings, a green tiled roof curling up at the corners, and a pair of stone lions standing guard. This is the front door, and it's worth a second look before you walk through it.\n\nStart with the gate itself. It's younger than you'd think — it went up in 1970, a gift from Taiwan, modeled on the ceremonial gateways you'd find at the entrance to a Chinese village. Read the inscription up top if you like; it's a line attributed to Sun Yat-sen, the founder of modern China, and the gist is that everything under heaven is for the good of all. Grand words for a tourist arch — but they suit a neighborhood that has always been about more than it looks.\n\nNow look up the street. Grant Avenue is the oldest street in San Francisco — this was the main road of the original Yerba Buena settlement, back before the city had a name. The Chinatown strung along it, the lanterns between the buildings, the pagoda cornices, the dragon-wrapped lamp posts, almost all of it dates from after 1906. Remember the idea from the start of the walk: this look was chosen. Before the fire, Chinatown was mostly plain brick. The version you're walking into was rebuilt to be seen.\n\n[beat]\n\nOne small thing to carry with you. The dragon lamp posts down Grant were installed in the 1920s, and they were genuinely bold for their moment — a Chinese-American neighborhood insisting, in public, in the middle of an era of brutal exclusion laws, that it belonged here and intended to stay.\n\nWhen you're ready, walk a few blocks up Grant and turn right onto Waverly Place — a narrow side street that's about to ask you to look up."
+        },
+        {
+          "id": "86e23d3f-bf12-4dda-b794-b5804152e161",
+          "order": 2,
+          "title": "Waverly Place",
+          "caption": "You're on Waverly Place now, a two-block lane running between Grant and Stockton.",
+          "latitude": 37.7948,
+          "longitude": -122.4069,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-chinatown_stop2.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waverly-place_hero.webp",
+          "transcriptText": "You're on Waverly Place now, a two-block lane running between Grant and Stockton. It's narrow, it's quieter than Grant, and people call it the Street of Painted Balconies. Tilt your head back and you'll see why — the upper floors are stacked with balconies painted in bright reds, greens, and golds.\n\nHere's the thing to understand about this street, and really about all of Chinatown: the life you're looking for isn't at street level. Down here it's shops. The real heart of the community went up. When this neighborhood was packed into a few square blocks by law and by prejudice, with nowhere to expand outward, it expanded the only direction it could — vertically. Family associations, clubs, and temples took the upper floors, and they're still up there.\n\nLook at number one hundred and twenty-five Waverly. On the top floor sits the Tin How Temple, founded in 1852, said to be the oldest Chinese temple in the United States. It's dedicated to Tin How, the goddess who protects sailors and travelers — fitting, for a community that crossed an ocean to get here. You climb several flights of a narrow stairway to reach it, and you come out into a small, dim room thick with incense smoke and hung with hundreds of red lanterns. If it's open to visitors when you're here, it's worth the climb.\n\n[beat]\n\nThat's the lesson of Waverly: the postcard is at street level, but the neighborhood's soul is one, two, three floors up, where it's been quietly keeping faith for more than a hundred and seventy years.\n\nFrom the far end of Waverly, head over to Ross Alley — the next lane along, and the oldest alley in Chinatown, where we'll find something the whole world thinks it knows about Chinese food."
+        },
+        {
+          "id": "117fed7c-2d4a-4953-88cc-765ad5ea7c55",
+          "order": 3,
+          "title": "Ross Alley & the Fortune Cookie Factory",
+          "caption": "You're in Ross Alley now, a narrow, slightly crooked lane that's the oldest alley in Chinatown.",
+          "latitude": 37.7958,
+          "longitude": -122.4067,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-chinatown_stop3.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ross-alley_hero.webp",
+          "transcriptText": "You're in Ross Alley now, a narrow, slightly crooked lane that's the oldest alley in Chinatown. It's barely wide enough for the light to reach the ground, which is exactly why filmmakers love it — it's stood in for old Chinatown in more movies than its residents would probably like. But you didn't come down here for the scenery. You came for the smell: sweet, warm, vanilla, drifting out of a doorway on your right.\n\nThat's the Golden Gate Fortune Cookie Factory, and it's tiny — a couple of women at small round griddles, folding cookies by hand, the way it's been done for decades. Step in if there's room. You'll watch a flat, hot disc of batter get a paper fortune laid across it and folded into that familiar shape in about two seconds, faster than you can follow.\n\nNow here's the twist, and it's a good one. The fortune cookie — the single most \"Chinese\" thing in the whole American imagination — almost certainly isn't Chinese at all. The best evidence traces it back to Japanese rice crackers, and to Japanese-American families in California who were serving a version of it around the early 1900s. San Francisco and Los Angeles both claim to have invented it, and in 1983 the two cities staged a mock trial to settle the argument; San Francisco \"won,\" which tells you about as much as a mock trial should.\n\n[beat]\n\nSo the cookie in your hand is really an immigrant story folded into a snack — invented by one community, adopted by another, sold to everyone, and claimed by a city. Very San Francisco.\n\nEat the cookie. Then we'll walk the last short stretch over to Portsmouth Square — the spot where this whole city began."
+        },
+        {
+          "id": "a9607992-eb04-4403-a736-301d520f4d0a",
+          "order": 4,
+          "title": "Portsmouth Square",
+          "caption": "And here we are at the end of the walk, at Portsmouth Square — except, right now, you're standing at the edge of a construction site.",
+          "latitude": 37.7949,
+          "longitude": -122.4053,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-chinatown_stop4.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-chinatown_stop4.webp",
+          "transcriptText": "And here we are at the end of the walk, at Portsmouth Square — except, right now, you're standing at the edge of a construction site. Fences, hoarding, the hum of machinery. The square closed in June 2026 for a two-year rebuild and won't reopen until 2028, so I'm going to ask you to do something a little strange: stand here at the fence, on Kearny or up at the Clay Street corner, and picture it.\n\nBecause of everywhere we've walked today, this is the most important ground. This is where San Francisco began. It was the central plaza of a small settlement called Yerba Buena, and in 1846 a U.S. Navy captain came ashore and raised the American flag right here, the first time it flew over the town. The place was renamed San Francisco the next year. California's first public school opened on the southwest corner in 1848. The whole city radiated outward from this one square.\n\nAnd then it became something else — the heart of Chinatown. Chinatown's living room, people call it. For generations this was where elders played mahjong and Chinese chess in the sun, where kids ran the play structure, where the neighborhood gathered to celebrate and, when it had to, to protest. It's the civic center of the city within the city we've been walking through.\n\n[beat]\n\nThat's what the rebuild is protecting, not replacing. They're pulling down the ugly 1960s footbridge over Kearny to open the views back up, adding a stage, a new clubhouse, canopies built to carry lanterns at Lunar New Year. The old monuments are in storage, waiting to come home. So picture the square full again — because it will be. You've just walked the oldest Chinatown in North America, a neighborhood that was told to move and refused, and you're ending where the city itself first stood up. It's still here. It's just catching its breath."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 530,
+      "walkingDistanceMeters": 800,
+      "centroidLatitude": 37.79366,
+      "centroidLongitude": -122.40624,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "chinatown",
+        "grant avenue",
+        "1906 earthquake",
+        "dragon gate",
+        "portsmouth square",
+        "walking tour"
+      ],
+      "priceUSD": 0
     }
   ]
 }
