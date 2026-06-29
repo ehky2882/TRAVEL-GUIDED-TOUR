@@ -18879,6 +18879,692 @@
         "lagoon"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "1890ebcb-eafa-4d4f-9126-674bfa37f8c4",
+      "title": "Fisherman's Wharf",
+      "shortDescription": "The old working waterfront at the north edge of the city — a fishing port since the Gold Rush, now equal parts crab stands, sea air, and tourist bustle.",
+      "longDescription": "Fisherman's Wharf grew from the Italian fishing families who worked these waters from the 1850s on, and a small commercial fleet still ties up here. Behind the crab-wheel sign and the souvenir crowds, Pier 45, the lateen-rigged boats, and the smell of cracked Dungeness keep the old port alive.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fishermans-wharf_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fishermans-wharf_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fishermans-wharf_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fishermans-wharf_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fishermans-wharf_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1d735a68-812e-4fb5-9f6a-c4f2113939dd",
+          "order": 0,
+          "title": "Fisherman's Wharf",
+          "caption": "Stand at the foot of Taylor Street, where the sidewalk runs out and the harbor begins.",
+          "latitude": 37.808,
+          "longitude": -122.4177,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fishermans-wharf.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fishermans-wharf_hero.webp",
+          "transcriptText": "Stand at the foot of Taylor Street, where the sidewalk runs out and the harbor begins. Most people come to Fisherman's Wharf for the things behind you — the t-shirt racks, the wax museum, the sourdough shaped like a crab, the guy who's been hiding behind a bush startling tourists since the Reagan administration. Turn the other way.\n\nIn front of you is a working harbor. Not a reproduction of one. A real one, still going, though smaller every year.\n\nLook at the boats first. The squat wooden ones with the high curved bows are Monterey hulls — \"Monterey clippers\" — the design Italian fishermen brought to this coast more than a century ago, built to take a beating from the Pacific and still come home loaded. Many of the boats in front of you go out before dawn. The catch that built this place, and still defines it, is Dungeness crab — the season opens in November, and when it's running, the docks here smell like salt and diesel and the cold, sweet funk of fresh shellfish.\n\nThe fleet that fishes out of here was founded by Genoese and Sicilian families, and before them by Chinese fishermen who were pushed out by law in the late 1800s. The Italian names on the old restaurants — Alioto, Tarantino, Sabella — were fishing families first and restaurant families second. They sold their catch off the back of the boat, then opened a stand, then a dining room. The trap, in other words, grew out of the trade.\n\nHere's the thing worth standing here for. Everyone calls Fisherman's Wharf a tourist trap, and they're not wrong. But underneath the souvenir city is the actual reason it exists, still happening, just out of frame: a few dozen real boats, a real catch, a real fleet hanging on against rising costs and shrinking waters. The spectacle didn't replace the fishery. It grew on top of it, like a barnacle — and now it's the thing keeping the barnacle's host alive.\n\n[beat]\n\nSo before you buy the crab, walk down to Fish Alley, behind the restaurants on Jefferson Street, where the boats actually unload. That's the Wharf the postcards forgot — and it's the only part that was ever really here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.808,
+      "centroidLongitude": -122.4177,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "fisherman's wharf",
+        "the embarcadero",
+        "dungeness crab",
+        "fishing fleet",
+        "pier 45",
+        "waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a6af8461-6f38-489f-a8d0-f05768ecf107",
+      "title": "Hyde Street Pier",
+      "shortDescription": "A pier of historic ships at the foot of Hyde Street — a floating museum of the vessels that built the Pacific coast.",
+      "longDescription": "Hyde Street Pier, the heart of San Francisco Maritime National Historical Park, berths a fleet of preserved working ships: the square-rigger Balclutha, the side-wheel ferry Eureka, the schooner C.A. Thayer. Before the bridges, boats like these were how the West Coast moved its people and its cargo.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hyde-street-pier_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hyde-street-pier_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hyde-street-pier_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fc9c3307-1e3d-4d75-8e95-c126f8d235ef",
+          "order": 0,
+          "title": "Hyde Street Pier",
+          "caption": "You're standing on Hyde Street Pier, and the first thing to understand is that this isn't a museum about ships.",
+          "latitude": 37.809,
+          "longitude": -122.4213,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hyde-street-pier.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hyde-street-pier_hero.webp",
+          "transcriptText": "You're standing on Hyde Street Pier, and the first thing to understand is that this isn't a museum about ships. It's a parking lot for them — a working pier turned into a place to keep the actual vessels that built this coast floating, where they belong.\n\nLook at the big one with three masts and the black-and-white hull. That's the Balclutha, launched in Scotland in 1886, and she's no replica or stage set. She rounded Cape Horn — the brutal passage at the bottom of South America — seventeen times, hauling grain, coal, and lumber back when that journey was simply how cargo crossed the world. Walk her deck later and you're standing where sailors stood through storms that sank plenty of ships just like her.\n\nNow find the wide, blunt-faced boat that looks like a floating building. That's the Eureka, and in her day she was the largest passenger ferry in the world. Before the bridges, this is how you crossed the bay — you and your car packed onto a boat like this, chugging from San Francisco to Sausalito or Oakland, thousands of people and over a hundred cars at a time, all day, every day.\n\nWhich gets at the thing this pier is quietly telling you.\n\nFor most of San Francisco's history, the bay wasn't an obstacle. It was the highway — the fastest, and sometimes the only, way to move people and freight around the region. The ships tied up here were the trucks, the ferries, and the freighters of their age, and the water was thick with them. Then, in 1936 and 1937, the Bay Bridge and the Golden Gate opened within months of each other, and within a few short years the whole system of ferries and sailing freight was simply over. The Eureka isn't just an old boat. She's the thing the bridges replaced.\n\n[beat]\n\nSo the next time you drive across the Golden Gate, picture this: a few decades earlier, you'd have made the same crossing the slow way, standing at the rail of a boat like the Eureka, watching the fog come in. These ships didn't retire because they failed. They retired because we built something faster overhead — and somebody had the sense to keep a few of them tied up right here, so we could remember what the bay used to be."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.809,
+      "centroidLongitude": -122.4213,
+      "city": "San Francisco",
+      "primaryCategory": "history",
+      "tags": [
+        "hyde street pier",
+        "historic ships",
+        "eureka ferry",
+        "balclutha",
+        "maritime",
+        "national historical park"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "97f79752-2535-4866-8bc5-8f13e94352ce",
+      "title": "City Lights & Kerouac Alley",
+      "shortDescription": "The North Beach bookstore that published Ginsberg's \"Howl\" and stood trial for it — birthplace of the Beat movement, beside the alley named for Kerouac.",
+      "longDescription": "Lawrence Ferlinghetti's City Lights opened in 1953 as the first all-paperback bookstore in the country and became the publisher of Allen Ginsberg's \"Howl\" — the obscenity trial that followed, and its acquittal, was a landmark for free speech. The painted alley alongside honors Jack Kerouac and the Beat writers who made this corner their own.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/city-lights-kerouac-alley_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/city-lights-kerouac-alley_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3a6995b1-330e-45e8-b4ef-833c4edc6feb",
+          "order": 0,
+          "title": "City Lights & Kerouac Alley",
+          "caption": "There's a small bookstore on the triangular corner ahead of you, where Columbus cuts across the grid, and it looks like exactly what it is: three crammed floors of paperbacks, a poetry room up top, hand-lettered signs telling you to sit down and read.",
+          "latitude": 37.7976,
+          "longitude": -122.4065,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/city-lights-kerouac-alley.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/city-lights-kerouac-alley_hero.webp",
+          "transcriptText": "There's a small bookstore on the triangular corner ahead of you, where Columbus cuts across the grid, and it looks like exactly what it is: three crammed floors of paperbacks, a poetry room up top, hand-lettered signs telling you to sit down and read. What it doesn't look like is a place that changed American law. It did.\n\nCity Lights opened in 1953, founded by the poet Lawrence Ferlinghetti and a partner named Peter Martin, as the country's first all-paperback bookstore — a genuinely radical idea back when paperbacks were treated as cheap and disposable. That alone would have earned it a footnote. But in 1956, City Lights published a thin book of poems by a young writer named Allen Ginsberg, and the book was called Howl.\n\nIt was raw, furious, and sexually frank, and the authorities came for it. In 1957 the store's manager was arrested and Ferlinghetti was charged with selling an obscene book. The trial that followed wasn't really about one poem. It was about whether the government got to decide what Americans were allowed to read.\n\nFerlinghetti won. The judge ruled that a work with — in the court's phrase — redeeming social importance could not be banned as obscene, no matter how much it offended. That single ruling cracked the door open for nearly everything that came after it: the books that could finally be printed, sold, and argued about in the open.\n\nAnd that's the reframe worth standing here for. People treat this corner as a shrine to the Beat poets — and it is one; Ginsberg, Kerouac, and the whole restless crowd drank across the alley at Vesuvio and argued here for years. But the monument isn't the poetry. The monument is the verdict. City Lights matters less as a clubhouse than as the place that went to court for the right to sell a difficult book, and won.\n\n[beat]\n\nStep into the alley on the north side of the store. It's named for Jack Kerouac, and the pavement is set with quotes pressed into the stone. Then go inside, climb to the poetry room, and pull something off the shelf. You're allowed to stand there and read the whole thing — the signs say so, and a courtroom once said so too."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7976,
+      "centroidLongitude": -122.4065,
+      "city": "San Francisco",
+      "primaryCategory": "literature",
+      "tags": [
+        "city lights",
+        "kerouac alley",
+        "beat generation",
+        "ferlinghetti",
+        "allen ginsberg",
+        "north beach"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c8444fce-b30a-49fe-bf1b-5510f4a9cc6b",
+      "title": "Washington Square",
+      "shortDescription": "North Beach's village green, framed by the white twin spires of Saints Peter and Paul Church — the heart of San Francisco's Little Italy.",
+      "longDescription": "Washington Square is the social center of North Beach: morning tai chi on the lawn, Italian cafés around the edges, and the soaring marble-white facade of Saints Peter and Paul Church — \"the Italian Cathedral of the West\" — closing the north side. (Not to be confused with New York's Washington Square.)",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/washington-square-sf_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/washington-square-sf_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/washington-square-sf_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "39e86dd6-eeb0-4eba-8054-2481c33eefd1",
+          "order": 0,
+          "title": "Washington Square",
+          "caption": "Find a bench in the open green and look across at the church with the two white spires.",
+          "latitude": 37.8006,
+          "longitude": -122.4101,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/washington-square-sf.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/washington-square-sf_hero.webp",
+          "transcriptText": "Find a bench in the open green and look across at the church with the two white spires. This is Washington Square, one of the oldest parks in the city, and almost nothing here is quite what its name promises.\n\nStart with the statue near the center. In a square named for Washington, you'd reasonably expect George Washington. It's Benjamin Franklin. He's stood here since the 1870s, put up by a dentist and temperance crusader who — fittingly — plumbed the base to dispense free drinking water. The square kept Washington's name and got somebody else's monument: the first of several small switches you're surrounded by.\n\nNow the church. Saints Peter and Paul, finished in 1924, the twin-spired heart of what was once a densely Italian North Beach. They called it the Italian Cathedral of the West, and it anchored a neighborhood of Genoese and Sicilian families — often the same families who fished the wharf a few blocks downhill.\n\nHere's the detail people come looking for. In 1954, Joe DiMaggio and Marilyn Monroe stood on the steps of this church and were photographed by what felt like every newspaper on earth. It became one of the most famous wedding-day images of the century — except they weren't married here. DiMaggio had been divorced, so the church wouldn't perform the ceremony; they'd married that morning at City Hall, and came here only for the pictures. Another substitution. The image everyone remembers is of a wedding that never happened on these steps.\n\nAnd that's the quiet truth of this square — a place of stand-ins and overlaps, layered rather than fixed. The Italian neighborhood that built the church has largely moved on, out to the avenues, while Chinatown presses in from the south.\n\n[beat]\n\nSo on a given morning you'll see the result: rows of people, many of them Chinese, moving slowly through tai chi on the grass of a square named for Washington, in front of an Italian church, watched over by a statue of Franklin. Stay a few minutes and watch the green fill up. Nothing here matches its label, and somehow it all fits together anyway — which is about as San Francisco as a single block gets."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.8006,
+      "centroidLongitude": -122.4101,
+      "city": "San Francisco",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "washington square",
+        "north beach",
+        "saints peter and paul",
+        "little italy",
+        "green space",
+        "telegraph hill"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "18b57f84-8423-41b9-87bf-d2ca14cd3921",
+      "title": "Waverly Place",
+      "shortDescription": "Chinatown's \"Street of the Painted Balconies\" — a two-block lane stacked with brilliantly colored temple and association balconies.",
+      "longDescription": "Waverly Place runs just two blocks through the heart of Chinatown, lined with the ornate painted balconies of family associations and temples — among them Tin How, one of the oldest Chinese temples in the United States, perched on an upper floor. It's the neighborhood's most atmospheric lane, and a fixture of its literature.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waverly-place_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waverly-place_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waverly-place_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waverly-place_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ae783872-f309-46e5-8a80-40bea6d6fba9",
+          "order": 0,
+          "title": "Waverly Place",
+          "caption": "You're on Waverly Place, a two-block lane running parallel to Grant, and the trick to this street is simple: don't look at the shops.",
+          "latitude": 37.7948,
+          "longitude": -122.4069,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waverly-place.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waverly-place_hero.webp",
+          "transcriptText": "You're on Waverly Place, a two-block lane running parallel to Grant, and the trick to this street is simple: don't look at the shops. Look up.\n\nThey call this the Street of Painted Balconies, and once you raise your eyes you'll see why. The upper floors are banded in color — deep reds, golds, greens, jade blues — tier on tier of carved and painted balconies climbing three and four stories over your head. It's the most beautiful street in Chinatown, and almost all of its beauty is above eye level, which is the whole point.\n\nHere's why it's up there. When Chinatown rebuilt after the 1906 fire, the neighborhood was hemmed in — boxed by hostile city politics, denied room to spread out. So it grew the only direction left: up. The ground floors went to shops and restaurants, the rent-payers. But the soul of the community — the family associations, the social clubs, and above all the temples — climbed to the top floors, where the air was cleaner and the spirits, by tradition, belong closer to the sky.\n\nFind number one-twenty-five. On its top floor sits the Tin How Temple, founded in 1852, generally called the oldest Chinese temple in the United States. It's dedicated to Tin How — the goddess who protects sailors and travelers — which makes sense for a community that crossed an ocean to get here. To reach it you climb several narrow flights past the association offices, and you emerge into a small, red, incense-thick room hung with hundreds of gold lanterns, suspended right over the street you were just standing on.\n\n[beat]\n\nAnd that's the thing worth carrying with you down the block. The Chinatown most visitors photograph is the ground-floor one — the lanterns and souvenirs along Grant. But the real one was built upward, deliberately, a vertical neighborhood stacked floor by floor because that was the only room it was allowed. The temples on the top floors aren't hidden by accident. They're up there on purpose — and the only way to find them is to stop, on a lane like this one, and look up."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7948,
+      "centroidLongitude": -122.4069,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "waverly place",
+        "painted balconies",
+        "chinatown",
+        "temple",
+        "tin how",
+        "two-block alley"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "038b6f64-080a-47a6-89f0-4f456560e1d6",
+      "title": "Ross Alley",
+      "shortDescription": "Chinatown's oldest alley — a narrow brick lane home to the Golden Gate Fortune Cookie Factory, where the cookies are still folded by hand.",
+      "longDescription": "Ross Alley is said to be the oldest alley in Chinatown, once lined with gambling halls and now best known for the tiny Golden Gate Fortune Cookie Factory, where workers fold warm cookies by hand on small rotating griddles. The crooked, film-friendly lane has stood in for old Chinatown in more than one movie.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ross-alley_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ross-alley_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ross-alley_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ross-alley_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ca9f36fc-0165-47e7-a8d6-4d6b6fd88993",
+          "order": 0,
+          "title": "Ross Alley",
+          "caption": "Step into Ross Alley and the noise of Grant Avenue drops away.",
+          "latitude": 37.7958,
+          "longitude": -122.4067,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ross-alley.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ross-alley_hero.webp",
+          "transcriptText": "Step into Ross Alley and the noise of Grant Avenue drops away. It's narrow, a single block, brick on both sides — one of the oldest alleys in the city, and for a long stretch of its life one of the most notorious, lined with gambling dens and worse. Today it's quiet, photogenic, a favorite of film crews. But halfway down you'll find a small open doorway, and the smell coming out of it — warm, sweet, vanilla — is the reason most people come.\n\nThis is the Golden Gate Fortune Cookie Factory, and inside, women sit at small rotating griddles folding fortune cookies by hand, one at a time, the way it's been done here for decades. Watch for a minute. A flat, hot disc comes off the iron, a paper slip goes in, and three quick folds turn it into the shape you know. It's mesmerizing, and it's a good place to buy a warm bag straight off the griddle.\n\nNow, the cookie itself — here's the part worth knowing. The fortune cookie is one of the most \"Chinese\" things in the American imagination, and it isn't Chinese at all. You won't find it in China; people there often find it baffling. Its real roots trace to Japan — a grilled cracker with a paper fortune tucked inside — brought to California by Japanese immigrants around the turn of the last century, including, by the most common account, the family that ran the Japanese Tea Garden across town in Golden Gate Park.\n\n[beat]\n\nSan Francisco claims it invented the fortune cookie. So does Los Angeles, loudly, and the two cities have genuinely feuded over it — there was even a mock trial. The honest answer is that nobody can fully prove it, so treat the claim as exactly that: a claim, and a very San Francisco one.\n\nWhich is the real story of this little cookie. The thing the whole world reads as ancient Chinese wisdom is actually an immigrant invention — Japanese in origin, Chinese-American by adoption, born somewhere in California — that became a cliché before anyone thought to ask where it came from. Crack one open before you leave. The fortune won't be true. The history behind the cookie is the better one anyway."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7958,
+      "centroidLongitude": -122.4067,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "ross alley",
+        "fortune cookie factory",
+        "chinatown",
+        "oldest alley",
+        "golden gate fortune cookie",
+        "brick lane"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fd7e6fc1-5753-4dce-8aa5-5663a3a64879",
+      "title": "Transamerica Pyramid",
+      "shortDescription": "The 853-foot tapering spire that became the city's signature skyline silhouette — controversial when built, beloved ever since.",
+      "longDescription": "William Pereira's 1972 Transamerica Pyramid was attacked as a gimmick when it rose over the Financial District, but its tapering form — designed to throw less shadow and let more light to the streets — became the defining shape of the San Francisco skyline, on the site of the old Montgomery Block.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/transamerica-pyramid_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/transamerica-pyramid_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/transamerica-pyramid_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "57dcba78-cef0-4809-a112-a8790f4c4812",
+          "order": 0,
+          "title": "Transamerica Pyramid",
+          "caption": "Stand back far enough to take in the whole shape — the white spire narrowing to a point above the Financial District.",
+          "latitude": 37.7952,
+          "longitude": -122.4028,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/transamerica-pyramid.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/transamerica-pyramid_hero.webp",
+          "transcriptText": "Stand back far enough to take in the whole shape — the white spire narrowing to a point above the Financial District. You know this building even if you've never been to San Francisco. It's on the postcards, the souvenir mugs, the logo of half the local businesses in town. The Transamerica Pyramid is the city's signature, its most recognizable silhouette. And when it was proposed, people despised it.\n\nGo back to 1969. San Francisco was a city of flat-topped towers and bay windows, and the architect William Pereira handed it a four-sided pyramid, eight hundred and fifty-three feet of it, tapering to a hollow spire. Critics called it an insult to the skyline. There were protests. The nicknames were unprintable. A building that's now beloved arrived as something close to a civic scandal.\n\nIt opened in 1972 and held the title of the city's tallest for more than forty years. The shape, it turned out, was practical — the taper lets more light reach the streets below than a boxy tower would, and as it narrows the upper floors get smaller, ending in that pointed crown that's purely there to be looked at. There's nothing functional in the top spire at all. It exists to give the building its profile.\n\n[beat]\n\nNow walk to the base, on the Washington Street side, into Redwood Park. Here's the surprise the skyline doesn't tell you: at the foot of this tower is a small grove of coast redwoods, transplanted from the Santa Cruz Mountains, growing in the middle of the Financial District. A 2024 renovation reopened the grove and the lobby to the public, so you can sit under real redwoods with the glass canyons of downtown rising all around you.\n\nAnd that's the quiet lesson of this place. The most distinctive thing on the San Francisco skyline is the one the city fought hardest to keep out. People wanted it gone; now they can't imagine the view without it. Tastes change, and the buildings we're sure we hate have a way of becoming the ones we put on the postcard — a useful thing to remember the next time something new goes up and everyone tells you it ruins everything."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7952,
+      "centroidLongitude": -122.4028,
+      "city": "San Francisco",
+      "primaryCategory": "architecture",
+      "tags": [
+        "transamerica pyramid",
+        "william pereira",
+        "skyline",
+        "financial district",
+        "montgomery street",
+        "spire"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7bd0a4a4-2c2a-4796-a34c-049dd52348ea",
+      "title": "Union Square",
+      "shortDescription": "Downtown's central plaza, crowned by the Dewey Monument column — the city's premier shopping district and civic gathering place.",
+      "longDescription": "Union Square took its name from pro-Union rallies held here on the eve of the Civil War. The granite column at its center, topped by a bronze Victory, commemorates Admiral Dewey's 1898 victory at Manila Bay. Today the plaza anchors the city's flagship shopping district and its holiday crowds. (Distinct from New York's Union Square.)",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-square-sf_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-square-sf_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-square-sf_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1959f4f9-1c81-46cd-9c65-cff4f1b19863",
+          "order": 0,
+          "title": "Union Square",
+          "caption": "You're standing in Union Square, the city's front room — a single block of open granite ringed by department stores and hotels, the place San Francisco does its shopping, its protesting, its ice-skating at Christmas, and a fair amount of its people-watching.",
+          "latitude": 37.788,
+          "longitude": -122.4074,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/union-square-sf.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-square-sf_hero.webp",
+          "transcriptText": "You're standing in Union Square, the city's front room — a single block of open granite ringed by department stores and hotels, the place San Francisco does its shopping, its protesting, its ice-skating at Christmas, and a fair amount of its people-watching. Most people pass through it on the way to a store. Give it five minutes and it pays you back.\n\nStart with the name, because it isn't about labor unions or the shape of the streets. In the eighteen-sixties, on the eve of the Civil War, this was the spot where San Franciscans held mass rallies in support of the Union — for keeping the country together. The name stuck, a small political fossil sitting in the middle of the luxury district.\n\nNow look at the tall column in the center, with the bronze figure on top. That's the Dewey Monument, raised in 1903 to mark Admiral Dewey's naval victory at Manila Bay. It came through the 1906 earthquake standing, while much of the city around it fell. But the better story is the figure herself — Victory, holding a wreath and a trident. The sculptor needed a model, and he chose a tall young working-class woman named Alma de Bretteville, who posed for the goddess for a few dollars.\n\n[beat]\n\nHere's where it turns into a fairy tale. That same Alma later married Adolph Spreckels, heir to a sugar fortune, became one of the richest women in the city, and spent decades giving the money away — she's the reason the Legion of Honor museum out at Lands End exists. So the goddess of Victory on this column isn't an abstraction. She's a real San Francisco woman, modeled before she was wealthy, watching over the shopping district she'd one day help shape.\n\nThat's the trick of Union Square. It looks like pure commerce — flagship stores, glossy windows, somebody always handing out samples. But the granite under your feet remembers Civil War rallies, the column remembers a war most people have forgotten, and the woman on top climbed from a few-dollar modeling job to one of the great fortunes in the city. Stay on a bench a while. The square is busier with history than it lets on."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.788,
+      "centroidLongitude": -122.4074,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "union square",
+        "dewey monument",
+        "shopping district",
+        "downtown",
+        "civil war",
+        "plaza"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9e64d23b-c698-43ec-a3d1-c9944b996b39",
+      "title": "Nob Hill",
+      "shortDescription": "The hilltop where the railroad barons built their mansions — almost all lost in 1906, leaving the brownstone Flood Mansion as the lone survivor.",
+      "longDescription": "Nob Hill was the address of the \"Big Four\" railroad magnates, whose ostentatious mansions crowned the city until the 1906 fire swept them away. Only James Flood's brownstone survived — now the Pacific-Union Club — alongside the grand hotels, the Fairmont among them, that rose from the ashes on the same proud height.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nob-hill_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nob-hill_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nob-hill_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "be47c169-1741-45f7-8e91-381e0990e2a9",
+          "order": 0,
+          "title": "Nob Hill",
+          "caption": "You've made it to the top of Nob Hill — and notice it actually is a climb, which is the whole reason this place exists.",
+          "latitude": 37.7926,
+          "longitude": -122.4141,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nob-hill.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nob-hill_hero.webp",
+          "transcriptText": "You've made it to the top of Nob Hill — and notice it actually is a climb, which is the whole reason this place exists. In the eighteen-seventies, when cable cars finally made these slopes livable, the men who'd just gotten very rich building the transcontinental railroad raced to the top and put their mansions where everyone below could see them. The hill's name is a clipped version of \"nabob\" — an old word for someone newly, conspicuously wealthy. Locals had a sharper version: Snob Hill.\n\nThe kings of the hill were the so-called Big Four — Crocker, Huntington, Hopkins, Stanford — railroad barons whose wooden palaces sprawled across these blocks in a competition of pure ostentation. And then, in 1906, the earthquake and the fire that followed erased nearly all of it. The wooden mansions burned to their foundations in an afternoon.\n\nLook across to the brownstone building that's now the Pacific-Union Club. That one survived — it was the Flood mansion, built of Connecticut stone instead of wood, and its walls were about the only thing on the hilltop the fire couldn't take. It's the last of the barons' houses left standing.\n\n[beat]\n\nHere's what's interesting about what came next. The families didn't rebuild their private palaces. The empty lots became hotels — the Fairmont, the Mark Hopkins, the Huntington — and Grace Cathedral rose on land the Crocker family gave away. The fire turned a hill of private wealth into a hill of public luxury. Where you once needed to be a railroad baron to get past the gate, you can now ride a cable car up, walk into the Mark Hopkins, and take the elevator to the Top of the Mark — a sky-high bar where, during the Second World War, sailors shipping out to the Pacific drank a last round and their wives watched the convoys sail under the Golden Gate. They called one window Weepers' Corner.\n\nSo stand here a moment and read the hill correctly. It was built as a monument to keeping people out, then rebuilt, by accident of disaster, as a place that lets people in. Ride the cable car down when you're done. It's the same machine that made the climb worth it in the first place."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7926,
+      "centroidLongitude": -122.4141,
+      "city": "San Francisco",
+      "primaryCategory": "history",
+      "tags": [
+        "nob hill",
+        "pacific-union club",
+        "flood mansion",
+        "railroad barons",
+        "fairmont",
+        "big four"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ceeba1e6-3910-4c72-b5ab-8331cbdf04c6",
+      "title": "SFMOMA",
+      "shortDescription": "The San Francisco Museum of Modern Art — Mario Botta's striped brick-and-skylight landmark, doubled in size by Snøhetta's rippling white addition.",
+      "longDescription": "SFMOMA opened its Mario Botta building in 1995, a banded brick mass split by a great cylindrical oculus — the first museum on the West Coast devoted to 20th-century art. Snøhetta's 2016 expansion folded a rippling ten-story white wall around it, making it one of the largest modern-art museums in the country.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sfmoma_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sfmoma_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sfmoma_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sfmoma_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sfmoma_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sfmoma_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "95d71127-49e3-4c26-aec1-f32834dd6f48",
+          "order": 0,
+          "title": "SFMOMA",
+          "caption": "You're on Third Street, looking at two buildings pretending to be one.",
+          "latitude": 37.7857,
+          "longitude": -122.4011,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sfmoma.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sfmoma_hero.webp",
+          "transcriptText": "You're on Third Street, looking at two buildings pretending to be one. The older part, down at street level, is a stout brick block with a wide black-and-white striped cylinder rising out of its center like an eye turned up at the sky — that's the original San Francisco Museum of Modern Art, designed by Mario Botta and opened in 1995. Then, behind and above it, a great rippling white wall billows upward like a sheet caught in the wind. That's the part that doubled the place.\n\nThe white addition opened in 2016, designed by the Norwegian firm Snøhetta, and its wavy skin is meant to echo both fog and bay water — though most people just find it strange and beautiful and slightly hard to photograph. Behind it, the museum roughly tripled its gallery space, turning a respectable city museum into one of the largest spaces for modern and contemporary art in the country.\n\nBut the detail worth walking around for is on the third-floor outdoor terrace, where you'll find a living wall — a vertical garden of tens of thousands of plants, nearly all of them native to this region, one of the largest public living walls in the United States. It's a piece of the building that grows, breathes, and changes with the seasons, hung right there among the sculpture.\n\n[beat]\n\nHere's the part I like best, and it's free. When the museum expanded, it pushed art down to the ground floor and out toward the street, so a good stretch of it costs nothing to see. You can walk in off the sidewalk and stand in front of a towering Richard Serra sculpture — sheets of rust-colored steel curving over your head, taller than you'll expect — without ever buying a ticket. The art comes out to meet the city instead of hiding behind the admissions desk.\n\nAnd that's the quiet argument this whole building makes. A modern art museum can feel like a locked white box, intimidating by design. This one did the opposite — it grew a wall that's alive, set sculpture at street level for anyone walking by, and made the threshold low on purpose. Go in for the free floors at least. The hardest part of a museum like this is usually deciding to walk through the door, and here they've made that part easy."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7857,
+      "centroidLongitude": -122.4011,
+      "city": "San Francisco",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "sfmoma",
+        "mario botta",
+        "snohetta",
+        "modern art",
+        "yerba buena",
+        "living wall"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c5f5ae17-2c5b-49c5-adbd-985433693905",
+      "title": "Dolores Park",
+      "shortDescription": "The Mission's sunny hillside gathering spot — palm-lined lawns, a downtown skyline view, and the city's most social patch of grass.",
+      "longDescription": "Mission Dolores Park sits in one of the sunniest microclimates in San Francisco, and on a warm weekend the terraced lawns fill with the whole city: picnics, music, dogs, vendors. From the upper slope the view runs across the Mission rooftops to the downtown towers.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dolores-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dolores-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dolores-park_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5c73f884-3c30-4b75-b6dd-33b0f821c127",
+          "order": 0,
+          "title": "Dolores Park",
+          "caption": "Find a spot on the slope facing northeast, looking downhill toward the city.",
+          "latitude": 37.7596,
+          "longitude": -122.4269,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dolores-park.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dolores-park_hero.webp",
+          "transcriptText": "Find a spot on the slope facing northeast, looking downhill toward the city. On a sunny weekend this is the most San Francisco scene there is: a green hillside packed shoulder to shoulder, music drifting from a dozen directions, the downtown skyline framed by palm trees, and the whole sloping lawn tipped toward the view like a giant set of bleachers. This is Dolores Park — the city's communal backyard.\n\nIt works because of the tilt. The land rises as it runs west, which turns the whole park into natural seating angled at the skyline. People sort themselves across it almost by neighborhood: families and dogs lower down, the sunny southwest corner long known as a gathering spot for the city's queer community, everybody arranged on the grass like a crowd that showed up early for a show that never quite starts.\n\nBut the ground under all this leisure has a heavier past, and it's worth knowing. For decades these two blocks were Jewish cemeteries — until the city, running out of room, relocated nearly all its dead to the south early in the twentieth century. And in 1906, when the earthquake and fire drove tens of thousands from their homes, this hillside became a refugee camp, rows of army tents covering the slope where the picnic blankets are now.\n\n[beat]\n\nThat's the quiet thing to hold while you sit here. San Francisco has a habit of turning solemn ground into a place to lie in the sun — of letting a hillside that once held graves and then held the homeless become, a century later, the city's favorite spot to do absolutely nothing on a Saturday. It isn't disrespect. It's more like the city's deepest reflex: take what was hard, and make it a place to gather.\n\nSo stay a while. Watch the skyline catch the late light, listen to the overlapping music, let the slope do its job. You're sitting in the city's living room, on ground that has been a graveyard and a disaster camp and is now, simply, where San Francisco comes to be together. Few places carry their history this lightly — or this well."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7596,
+      "centroidLongitude": -122.4269,
+      "city": "San Francisco",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "dolores park",
+        "mission",
+        "picnic",
+        "skyline view",
+        "sunny microclimate",
+        "palm trees"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a645ccce-eade-4ab5-9711-9561f0817b5e",
+      "title": "Balmy & Clarion Alleys",
+      "shortDescription": "Two Mission District lanes wall-to-wall with murals — the dense heart of the city's street-art and Chicano-mural tradition.",
+      "longDescription": "Balmy Alley has been a canvas since the 1970s, when Mission artists began painting its fences and garage doors with murals of Central American solidarity and Latino life — the densest concentration in the city. Clarion Alley, a few blocks north, carries that tradition forward with constantly changing political street art.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/balmy-clarion-alleys_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/balmy-clarion-alleys_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/balmy-clarion-alleys_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/balmy-clarion-alleys_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "47cda782-7048-483e-aa2f-a012130282f6",
+          "order": 0,
+          "title": "Balmy & Clarion Alleys",
+          "caption": "You're in the Mission, in front of a wall that's talking.",
+          "latitude": 37.751,
+          "longitude": -122.4124,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/balmy-clarion-alleys.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/balmy-clarion-alleys_hero.webp",
+          "transcriptText": "You're in the Mission, in front of a wall that's talking. Whichever alley you've started in — Balmy, down off Twenty-fourth Street, or Clarion, over near Valencia — the rule is the same: every surface is painted, top to bottom, fence to garage door, and none of it is decoration. These are two of the most concentrated mural alleys in the country, and they're the loud, painted heart of a neighborhood that has used its walls to talk for fifty years.\n\nStart with Balmy Alley, the older of the two. The murals here began in the nineteen-seventies and eighties, and many of the earliest were explicitly political — made by Latino artists in solidarity with people living through the wars and upheavals of Central America, the Mission being home to families who'd fled exactly those places. Walk it slowly. Among the bright, dense imagery you'll find grief, protest, memory, and celebration, often on the same wall.\n\nThen there's Clarion Alley, started in 1992 by a collective of artists, and it runs hotter and rougher — more punk, more queer, more openly furious. Its defining feature is that it never holds still. Murals here are painted over, replaced, and renewed constantly, so the alley you see today is not the one from two years ago, and won't be the one two years from now.\n\n[beat]\n\nAnd that's the reframe worth carrying out of here. We tend to treat murals as monuments — finished, fixed, protected behind a velvet rope of respect. These aren't that. They're a conversation, an argument the neighborhood keeps having with itself and with the wider world: about immigration, displacement, police, gentrification, identity, joy. A wall says something; the times change; someone paints a reply. The art being temporary isn't a flaw. It's the entire point.\n\nTake your time, and read it as the living thing it is. The Mission has been pushed and pulled for decades — newcomers and rising rents pressing against a deep Latino community that built this place. These alleys are where that whole struggle gets said out loud, in color, where everyone can see it. Come back in a year and some of it will be gone, replaced by something newer and just as urgent. That's not the art failing to last. That's the neighborhood still speaking."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.751,
+      "centroidLongitude": -122.4124,
+      "city": "San Francisco",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "balmy alley",
+        "clarion alley",
+        "murals",
+        "mission",
+        "street art",
+        "chicano art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9b352297-c79b-4559-8ec9-e3963709fa87",
+      "title": "Castro Theatre",
+      "shortDescription": "The 1922 movie palace at the heart of the Castro — a Spanish-Colonial landmark famous for its Wurlitzer organ and its neon blade sign.",
+      "longDescription": "Timothy Pflueger designed the Castro Theatre in 1922, a lavish Spanish-Colonial movie palace with a cast-plaster ceiling and a mighty Wurlitzer that still rises before screenings. Its neon marquee presides over the Castro, and for decades it has been the spiritual home of the city's film festivals and sing-along revivals.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castro-theatre_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castro-theatre_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castro-theatre_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castro-theatre_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5dea4bbe-802e-49bf-a6de-b5176b7c5298",
+          "order": 0,
+          "title": "Castro Theatre",
+          "caption": "Stand across the street so you can see the whole front — the great neon blade sign spelling out CASTRO down the side of the building, the marquee below it, the Spanish-cathedral facade rising behind.",
+          "latitude": 37.762,
+          "longitude": -122.4347,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/castro-theatre.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castro-theatre_hero.webp",
+          "transcriptText": "Stand across the street so you can see the whole front — the great neon blade sign spelling out CASTRO down the side of the building, the marquee below it, the Spanish-cathedral facade rising behind. This is the Castro Theatre, opened in 1922, one of the last great movie palaces left standing in America and, for generations, the beating heart of queer San Francisco.\n\nStep inside later and look up — the ceiling is the showpiece, a vast plaster fantasy cast to look like the inside of a tent, dripping with ornament, anchored by a chandelier. The architect was Timothy Pflueger, a local who gave the city some of its most theatrical interiors. For decades, before the lights went down, an organist rose on a lift playing the mighty house organ, the whole crowd singing along, and the film didn't start until the organ sank back into the floor. This wasn't just a theater. It was a congregation.\n\nWhich is exactly why what happened next mattered so much. By the twenty-twenties the building was failing — water damage, old wiring, no real climate control — and a concert company took over with a forty-one-million-dollar plan to save it. The work reopened the Castro in early 2026, and it is genuinely restored: the ceiling glows, the neon blazes, a new organ, billed as the largest of its kind, sits where the old one did.\n\n[beat]\n\nBut the rescue came with a fight, and you should know about it. To make the place pay for itself, the new operators pulled out the fixed, sloped rows of cinema seats and replaced them with movable tiers, so the room can hold concerts and standing crowds as well as films. Many in the Castro fought hard against it — they didn't want their movie palace, their queer cultural sanctuary, turned into a flexible event space, and they pushed for nonprofit hands instead. The other side argued, just as sincerely, that a theater that can't pay its bills doesn't survive at all, and a changed Castro beats a shuttered one.\n\nBoth sides love this building. That's what makes it hard. So stand here and hold the real question it poses: when a beloved place is dying, do you save it by keeping it exactly as it was — or by letting it change enough to live? There's no clean answer. There's just this theater, lit up again, and a neighborhood still arguing about what it costs to keep something alive."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 146,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.762,
+      "centroidLongitude": -122.4347,
+      "city": "San Francisco",
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "castro theatre",
+        "movie palace",
+        "timothy pflueger",
+        "wurlitzer",
+        "1922",
+        "neon marquee"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8edaecf3-8360-4c06-97ac-3749fd6afb22",
+      "title": "Harvey Milk & the Castro",
+      "shortDescription": "The plaza and storefront where Harvey Milk ran his camera shop and his campaigns — ground zero of the gay-rights movement, under the giant rainbow flag.",
+      "longDescription": "From his Castro Camera shop at 575 Castro, Harvey Milk built the campaign that made him one of the first openly gay elected officials in the country, before his 1978 assassination. The neighborhood remains the symbolic capital of LGBTQ life, marked by the giant rainbow flag flying over Harvey Milk Plaza.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harvey-milk-castro_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harvey-milk-castro_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harvey-milk-castro_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harvey-milk-castro_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cb3de036-cbe4-4852-bf35-fd0a16906a9f",
+          "order": 0,
+          "title": "Harvey Milk & the Castro",
+          "caption": "Look up at the rainbow flag flying over the plaza at Castro and Market.",
+          "latitude": 37.7626,
+          "longitude": -122.435,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/harvey-milk-castro.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harvey-milk-castro_hero.webp",
+          "transcriptText": "Look up at the rainbow flag flying over the plaza at Castro and Market. It's enormous, deliberately so, and it marks this corner as the symbolic capital of gay America. The flag itself was designed here, in this neighborhood, in 1978 — and the reason this corner became a capital at all comes down largely to one man who ran a camera shop a few blocks up the street.\n\nWalk up Castro to number five-seventy-five. Today it's a storefront with a plaque, but in the nineteen-seventies it was Castro Camera, and behind the counter was Harvey Milk. He hadn't planned to be a politician. He came to San Francisco, opened a shop, and watched gay people pour into this neighborhood from all over the country — drawn here because here, finally, they could live openly. Milk turned his store into an unofficial community center and himself into its loudest advocate, and people started calling him the Mayor of Castro Street long before he held any office.\n\nIn 1977 he won a seat on the Board of Supervisors, becoming one of the first openly gay people elected to public office anywhere in the country. He served barely eleven months. In November of 1978 he was assassinated inside City Hall, together with Mayor George Moscone — a loss this neighborhood has never really stopped feeling, and one it marks every year with a candlelight march down Market Street.\n\n[beat]\n\nBut here's what Milk understood, and why this corner matters more than his short time in office would suggest. His whole strategy was visibility. He believed the single most powerful political act a gay person could perform was simply to be known — to come out, to families, to coworkers, to neighbors — because it's harder to fear or legislate against people you actually love. He pushed people to do it relentlessly, and he led by example, living his life completely in the open at a time when that took real courage.\n\nThat's the idea this giant flag is really flying for. Not a man — though he's worth remembering — but a conviction: that being seen, plainly and without apology, changes the world more than almost anything else. Stand under it a moment. The whole neighborhood below you is what happens when a lot of people decide to stop hiding."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7626,
+      "centroidLongitude": -122.435,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "harvey milk",
+        "the castro",
+        "castro camera",
+        "gay rights",
+        "rainbow flag",
+        "lgbtq history"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8b742d0d-6c70-4bd9-b831-cd8ee6847e2d",
+      "title": "de Young Museum",
+      "shortDescription": "Golden Gate Park's fine-arts museum — Herzog & de Meuron's perforated-copper building, topped by the twisting Hamon observation tower.",
+      "longDescription": "Rebuilt after the 1989 earthquake, the de Young reopened in 2005 as a Herzog & de Meuron design clad in dimpled, perforated copper meant to weather green over time, with a torqued nine-story Hamon Tower offering a free view across the park. It holds the city's collection of American, Oceanic, and African art.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/de-young_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/de-young_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/de-young_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/de-young_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/de-young_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2289060d-0eaf-40df-a46c-43d245dda309",
+          "order": 0,
+          "title": "de Young Museum",
+          "caption": "Stand in front of the de Young, in the heart of Golden Gate Park, and the first thing to make peace with is the color.",
+          "latitude": 37.7715,
+          "longitude": -122.4687,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/de-young.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/de-young_hero.webp",
+          "transcriptText": "Stand in front of the de Young, in the heart of Golden Gate Park, and the first thing to make peace with is the color. The whole building is sheathed in copper — dimpled, perforated, and embossed all over its surface — and when it opened in 2005 a lot of people thought it looked like a battleship that had wandered into the trees. Give it time. The architects, the Swiss firm Herzog and de Meuron, knew exactly what they were doing, and they were playing a long game.\n\nLook closely at that copper skin. It's punched and textured to mimic the pattern of light falling through a forest canopy — leaves, dapples, shadow. And copper does one thing reliably over time: it weathers. The architects designed this building to corrode on purpose, so that as the decades pass the bright metal turns a soft, mottled green and the whole museum slowly dissolves, visually, into the surrounding park. It's a building engineered to disappear.\n\nThe museum holds American art, and art from across the Pacific, Africa, and the Americas — well worth a few hours. But there's one part you can enjoy for nothing, and it's the reason a lot of locals come. At one end the building twists upward into the Hamon Tower, and the observation floor at the top is free. No ticket, no gallery admission. You ride up, step out, and get a glassed-in, three-hundred-sixty-degree view over the whole park, the avenues, and out to the ocean.\n\n[beat]\n\nThat free tower is the generous heart of the place. A museum could easily charge for the best view in the park; this one decided the view belonged to everybody, members and passersby alike, and just gave it away.\n\nSo take the elevator up first, before you decide anything else. Get the lay of the land — the green canopy you're standing in, the city beyond it, the Pacific at the edge. Then come back down and look at that copper one more time, and picture it fifty years from now, gone soft and green, the building finally keeping its promise to vanish into the trees it was always trying to become."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7715,
+      "centroidLongitude": -122.4687,
+      "city": "San Francisco",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "de young",
+        "herzog de meuron",
+        "hamon tower",
+        "copper facade",
+        "golden gate park",
+        "american art"
+      ],
+      "priceUSD": 0
     }
   ]
 }
