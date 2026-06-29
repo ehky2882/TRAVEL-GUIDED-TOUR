@@ -19788,6 +19788,110 @@
         "walking tour"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "46614e30-0164-4089-9e0e-412a3351f3f2",
+      "title": "The Mission: Where the City Began",
+      "shortDescription": "A walk through the Mission — from the 1791 adobe where San Francisco started to the muraled alleys where its art keeps starting.",
+      "longDescription": "The Mission is where San Francisco began, around the 1776 founding of Mission San Francisco de Asis, and where it keeps reinventing itself. This five-stop walk runs from the thick-walled adobe of Mission Dolores — the oldest building in the city — down to sunny Dolores Park, then into the Mission's living tradition of street art: Clarion Alley's ever-changing political murals and Balmy Alley, painted since the 1970s with the densest concentration of Latino and Central American murals in the city. Oldest building to youngest art, in about a mile.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-mission_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-mission_stop0.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mission-dolores_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dolores-park_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/balmy-clarion-alleys_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/balmy-clarion-alleys_2.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "68706157-2838-4429-9115-90d1276126a1",
+          "order": 0,
+          "title": "Welcome to the Mission",
+          "caption": "THE MISSION — Walk Intro  Here's something most people get wrong about San Francisco: it didn't start at the water.",
+          "latitude": 37.761,
+          "longitude": -122.421,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-mission_stop0.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-mission_stop0.webp",
+          "transcriptText": "THE MISSION — Walk Intro\n\nHere's something most people get wrong about San Francisco: it didn't start at the water.\n\nIt started here, in the Mission — a flat, sunny valley a few miles inland that the fog usually forgets, which is exactly why the Spanish picked it in 1776, and why everyone from earthquake refugees to artists has wanted to be here ever since. This is the warmest, sunniest neighborhood in the city, and on a good afternoon it shows.\n\nThis walk is an easy one. It's mostly flat, it's short — a little over a mile, end to end — and it runs from the oldest building in San Francisco to some of the youngest art in it. We'll start at the mission that gave the city both its birthplace and its name, climb a gentle slope to a park with one of the best free views in town, then drop into two alleys where the neighborhood paints exactly what it thinks, right on the walls.\n\nThat's the thread to hold onto. This is the place where San Francisco began, and it's still beginning — still arguing, still changing, still announcing itself. The mission tells you where the city came from; the murals tell you who lives here now, and what they're not willing to lose.\n\nA note before we go. The Mission is, today, the heart of San Francisco's Latino community — a culture that's been here for generations and has had to fight, more than once, to stay. You'll see that fight on the walls toward the end of this walk, so it's worth arriving ready to read it.\n\nOur first stop is the mission itself. Make your way to the corner of Sixteenth and Dolores Streets, where a low, pale adobe church sits beside a much grander one. The small, plain one is the one we want. I'll meet you there."
+        },
+        {
+          "id": "7487720f-ea1f-45ee-aaad-41c3fed1d7c8",
+          "order": 1,
+          "title": "Mission Dolores",
+          "caption": "THE MISSION — Stop 1: Mission Dolores  You're standing in front of the oldest building in San Francisco — and it's easy to walk right past it, because it's small.",
+          "latitude": 37.7644,
+          "longitude": -122.4269,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-mission_stop1.mp3",
+          "audioDurationSeconds": 153,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mission-dolores_hero.webp",
+          "transcriptText": "THE MISSION — Stop 1: Mission Dolores\n\nYou're standing in front of the oldest building in San Francisco — and it's easy to walk right past it, because it's small.\n\nThat's almost the point. Look at the little pale church, not the big ornate one beside it. The grand one is the basilica, and it's just over a hundred years old. The modest one — thick white walls, four squat columns, a red-tiled roof — is Mission San Francisco de Asís, finished in 1791. While nearly everything around it burned or fell in the earthquake and fire of 1906, this building simply stood there, the way it had stood for over a century, and the way it's stood ever since.\n\nIt survived because of how it was made. The walls are adobe — sun-dried mud brick — and they're roughly four feet thick. The roof beams are redwood, lashed together with rawhide by the Ohlone people, the Native Californians who were here long before the Spanish, and who built this place with their hands. Step inside if it's open, and look up: the ceiling is painted in patterns the Ohlone designed, using colors made from vegetable dyes. It's their work, on their land, in a building meant to replace the world they already had.\n\nThat's the harder truth underneath this pretty white chapel. The mission was the beginning of San Francisco, and it was the end of something, too. Out back there's a small cemetery — a camposanto — and thousands of Ohlone are buried in this ground, many of them lost to diseases that arrived with the missionaries. The garden is quiet and kept with care, and it asks you to remember them.\n\nOne more thing, and it's where the name comes from. The mission's formal name honors Saint Francis — San Francisco — and that's the name the whole city took. But there was a creek nearby the Spanish called the Laguna de los Dolores, the lagoon of sorrows, and that nickname stuck — first to the mission, then to the street, then to the park we're walking to next.\n\n[beat]\n\nHere's the detail to carry with you. The mission was founded in 1776 — the same summer that, on the far side of the continent, a group of colonists was declaring the United States independent. San Francisco and the country are almost exactly the same age, and they both began in that one remarkable year.\n\nWhen you're ready, walk up Dolores Street, away from the church, three blocks to the green slope of Dolores Park. It's a gentle uphill, lined with palm trees, and the view at the top earns the climb."
+        },
+        {
+          "id": "6af7e4a6-3634-4f9e-9017-afb0a21f694d",
+          "order": 2,
+          "title": "Dolores Park",
+          "caption": "THE MISSION — Stop 2: Dolores Park  You've reached the part of this walk where the whole neighborhood lies down in the sun.",
+          "latitude": 37.7596,
+          "longitude": -122.4269,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-mission_stop2.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dolores-park_hero.webp",
+          "transcriptText": "THE MISSION — Stop 2: Dolores Park\n\nYou've reached the part of this walk where the whole neighborhood lies down in the sun.\n\nThis is Dolores Park, and the first thing to do is climb to the top corner — the southwest corner, up to your right as you came in, the high ground near Twentieth and Church. Turn around when you get there. The park drops away below you like a green grandstand, and past it, framed by palm trees, is the downtown skyline. It's one of the best free views in San Francisco, and on a sunny weekend half the city is up here sharing it, sprawled on blankets, watching the same thing you are.\n\nIt wasn't always this gentle. For decades this land held two Jewish cemeteries, until the city moved the graves out and turned the hill into a park in 1905. A year later, the earthquake hit. When the fire that followed drove tens of thousands of people from their homes, they came here — Dolores Park became one of the city's great refugee camps, a slope covered in tents and cooking fires and families who had lost everything overnight. The same view you're enjoying was, for a while, the last thing a lot of people had left.\n\nThat's the quiet history under the picnic blankets, and it tells you something about what this park is for. San Francisco doesn't have many backyards — it's a dense city of apartments and stairs and small rooms — so it shares one. Old families and brand-new arrivals, the comfortable and the barely-hanging-on, everybody ends up on this same hill, and nobody really owns the best spot. You just have to get there early.\n\n[beat]\n\nTake a minute up here. Let the city show off a little.\n\nWhen you're ready, head back down and out the bottom of the park, and make your way a few blocks northeast toward Valencia Street and a narrow lane called Clarion Alley. The view you just had is the postcard San Francisco; Clarion Alley is the city talking back."
+        },
+        {
+          "id": "0dab21f7-f048-408e-a020-ccf58e528290",
+          "order": 3,
+          "title": "Clarion Alley",
+          "caption": "THE MISSION — Stop 3: Clarion Alley  Turn into Clarion Alley and the temperature of the art changes.",
+          "latitude": 37.7625,
+          "longitude": -122.4197,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-mission_stop3.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/balmy-clarion-alleys_hero.webp",
+          "transcriptText": "THE MISSION — Stop 3: Clarion Alley\n\nTurn into Clarion Alley and the temperature of the art changes.\n\nThis is a single block, running between Valencia and Mission Streets, and nearly every inch of it — both walls, the fences, the garage doors, the backs of buildings — is painted. It's been this way since 1992, when a handful of local artists started the Clarion Alley Mural Project, and the rule from the beginning was simple: the work would be free to make, free to see, and open to anyone in the community who had something to say.\n\nSo look closely, because these murals are not here to be pretty. They're here to argue. You'll find pieces about evictions and rising rents, about police and prisons, about queer and trans rights, about the people being pushed out of this exact neighborhood as the money moves in. The art is loud, direct, sometimes raw — and that's the point. Clarion Alley is the Mission's op-ed page, published right on the brick.\n\nIt also doesn't sit still. Unlike a museum, where a painting might hang for a century, the work here gets painted over and replaced as new artists and new fights come along, which means whatever you're looking at right now is really a snapshot — a record of what this neighborhood is angry about, hopeful about, fighting for, this particular season. Come back in a year and the conversation will have moved on.\n\nStep back out onto Valencia for a second and you'll feel the whole reason this alley exists. Out there: the new restaurants, the boutiques, the polished version of the Mission that money built. In here: the neighborhood that was here first, still holding its ground, one wall at a time.\n\n[beat]\n\nTake your time reading these. They reward it.\n\nWhen you're done, we're headed to the alley that started it all. Make your way south and east, down toward Twenty-fourth Street, to a smaller, older lane called Balmy Alley — the place where the Mission's painted walls began, and where the story underneath them gets deeper."
+        },
+        {
+          "id": "80d9550b-80dd-48dc-b1d0-c14154e8003e",
+          "order": 4,
+          "title": "Balmy Alley & 24th Street",
+          "caption": "THE MISSION — Stop 4: Balmy Alley & 24th Street  This is where the Mission's painted walls began.",
+          "latitude": 37.751,
+          "longitude": -122.4124,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-mission_stop4.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/balmy-clarion-alleys_2.webp",
+          "transcriptText": "THE MISSION — Stop 4: Balmy Alley & 24th Street\n\nThis is where the Mission's painted walls began.\n\nBalmy Alley is narrower and quieter than Clarion, a single block off Twenty-fourth Street, and the murals here go back further than almost anywhere in the city. Artists started painting these walls in the early 1970s, but the alley became what it is today in 1984, when a group of local muralists called PLACA covered it with work protesting the wars and the suffering then tearing through Central America — places many people in this neighborhood had come from, or still had family in. The murals weren't decoration, and they weren't tourism. They were a community on one side of the world refusing to look away from another.\n\nDecades later, the walls are still working. Some honor that original Central American story; others celebrate Mexican and indigenous heritage, or mourn neighbors lost, or — like Clarion — push back against the displacement pressing in on the Mission right now. The tradition gets repainted here, carefully, by people who treat these walls as something closer to a community altar than a gallery.\n\nWalk back out to Twenty-fourth Street and look around. This stretch has an official name now — the Calle Veinticuatro Latino Cultural District, recognized by the city in 2014 — a designation meant to protect the murals, the businesses, and the culture of a neighborhood that has spent decades being told, in one way or another, to leave. The taquerias, the bakeries, the produce stands, the music coming out of open doors: this is a living culture, not a preserved one.\n\n[beat]\n\nSo think about where this walk started. A few blocks from here, two and a half centuries ago, the Spanish built a small adobe church, called the place San Francisco, and began the city — which was also the end of the Ohlone world that came before. And here, at the other end of the same neighborhood, another community paints its own survival onto the walls, year after year, so that no one can pretend it isn't here.\n\nThat's the Mission. It's where San Francisco was born, and it's still, every single day, insisting on who it is. You picked a good place to stand and pay attention. Stay a while — get something to eat, read a few more walls. The neighborhood's glad to have you, as long as you're really looking."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 624,
+      "walkingDistanceMeters": 1700,
+      "centroidLatitude": 37.7597,
+      "centroidLongitude": -122.42138,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "the mission",
+        "mission dolores",
+        "murals",
+        "balmy alley",
+        "clarion alley",
+        "walking tour"
+      ],
+      "priceUSD": 0
     }
   ]
 }
