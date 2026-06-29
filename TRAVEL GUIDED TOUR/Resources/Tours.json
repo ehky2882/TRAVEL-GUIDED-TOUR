@@ -39,6 +39,14 @@
       "avatarEmoji": "🇭🇰",
       "bio": "Atlas Studio's Hong Kong bureau — audio tours of the city's architecture, markets, and harbour.",
       "websiteURL": null
+    },
+    {
+      "id": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "displayName": "Atlas Studio SFO",
+      "avatarURL": null,
+      "avatarEmoji": "🌉",
+      "bio": "Atlas Studio's San Francisco bureau — audio tours across the city by the bay, from the Ferry Building to Lands End.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -18135,6 +18143,742 @@
       "totalDurationSeconds": 876,
       "city": "London",
       "walkingDistanceMeters": 1600
+    },
+    {
+      "id": "0b630034-6ee5-4940-a70a-0aec90884dd5",
+      "title": "Ferry Building",
+      "shortDescription": "The 1898 clock tower at the foot of Market Street — once one of the busiest transit hubs on earth, walled off by a freeway for half a century, then handed back to the city by an earthquake.",
+      "longDescription": "For about forty years a double-decker freeway sealed the Ferry Building off from downtown. Then the 1989 Loma Prieta earthquake cracked it, the freeway came down, and the 1898 terminal — its clock tower modeled on the Giralda in Seville — reopened in 2003 as a beloved food market, with the bay wide open in front of it again.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ferry-building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ferry-building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ferry-building_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ferry-building_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ferry-building_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b81c5281-0797-457c-9ccf-b92ca41187be",
+          "order": 0,
+          "title": "Ferry Building",
+          "caption": "For about forty years, you couldn't really see this building.",
+          "latitude": 37.7955,
+          "longitude": -122.3937,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ferry-building.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ferry-building_hero.webp",
+          "transcriptText": "For about forty years, you couldn't really see this building. A double-decker freeway ran right along the water in front of it, throwing the whole waterfront into shadow, and the city more or less forgot the Ferry Building was here.\n\nStand on the plaza at the foot of Market Street and look up at the clock tower. It's a little over two hundred and forty feet tall, and the design is borrowed: the architect modeled it on the Giralda, the medieval bell tower attached to the cathedral in Seville. When it opened in 1898, this was one of the busiest transit hubs on earth — second only to a station in London — because before the bridges, the only way across the bay was by boat, and everyone funneled through here. Fifty thousand people a day, two big ferry crossings, the front door to San Francisco.\n\nThen the bridges came. The Bay Bridge in 1936, the Golden Gate in 1937, and almost overnight the ferries emptied out. The building faded. And in the 1950s the city did the thing cities did back then: it ran an elevated freeway straight across the foot of Market Street, sealing the building off from downtown behind a wall of concrete and traffic noise.\n\nHere's the turn. In 1989, the Loma Prieta earthquake shook that freeway hard enough to crack it. It was condemned, and after a long fight, torn down. The earthquake did in a few seconds what years of complaints couldn't — it gave the waterfront back.\n\nWhat you're standing in front of now is the second act. The hall behind those arches was restored in 2003 and turned into a food market: oyster bars, bread, cheese, coffee, and on market days the plaza fills with farm stalls. The clock still keeps time. The ferries, a few of them, still run.\n\nIt's a strange thing to think about, standing here in the sun with the bay wide open in front of you — that this view, the obvious one, the one that looks like it's always been here, only came back because something fell down. The city turned its back on the water for half a century, and then an earthquake turned it around."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7955,
+      "centroidLongitude": -122.3937,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "ferry building",
+        "embarcadero",
+        "clock tower",
+        "ferry terminal",
+        "food market",
+        "loma prieta"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d39a0aca-478c-4f6f-9af0-73bfe7c8aef9",
+      "title": "Pier 39 Sea Lions",
+      "shortDescription": "The one attraction on the pier that nobody planned, built, or owns — the wild California sea lions who hauled out on K-Dock after the 1989 quake and never left.",
+      "longDescription": "Sometime after the 1989 earthquake, California sea lions began hauling out on the floating docks west of Pier 39 — and stayed by the hundreds. Nobody invited them, nobody owns them, and they remain the most popular free show on the San Francisco waterfront.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pier-39-sea-lions_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pier-39-sea-lions_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pier-39-sea-lions_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pier-39-sea-lions_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pier-39-sea-lions_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c3cbeb33-fd2b-402d-827e-7afefeb097ac",
+          "order": 0,
+          "title": "Pier 39 Sea Lions",
+          "caption": "The best thing on this pier is the one thing nobody planned, nobody built, and nobody owns.",
+          "latitude": 37.8088,
+          "longitude": -122.4098,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pier-39-sea-lions.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pier-39-sea-lions_hero.webp",
+          "transcriptText": "The best thing on this pier is the one thing nobody planned, nobody built, and nobody owns. Follow the noise — that low, honking, barking racket coming from the west side — and look down at the floating docks in the marina.\n\nSea lions. Sometimes a few dozen, sometimes hundreds, hauled out on the docks, piled on top of each other, barking, shoving, sunbathing, and occasionally launching into the water for no clear reason. They are wild animals. No one feeds them. No one keeps them here. They just showed up.\n\nThe story is almost too neat. In 1989, right after the Loma Prieta earthquake, a handful of California sea lions started climbing onto the docks here. Nobody knew why — possibly the herring were running, possibly the marina offered shelter from predators and rough water. The boat owners were not thrilled; the sea lions had taken over slips people were paying for. The Marine Mammal Center was consulted, and the recommendation came back: leave them alone. They have as much right to be there as anyone.\n\nSo the marina gave up the docks. The boats moved out, the sea lions moved in, and a working marina quietly became one of the most popular free attractions in the city. The numbers swell in winter, when the herring come, and thin out in summer when a lot of the males head south to breed — so don't be surprised if the count looks different than you expected. On a big winter day there can be hundreds of them out there.\n\nThere's something worth sitting with here. You're on a pier engineered down to the last souvenir to separate tourists from their money — the shops, the carousel, the fudge — and the thing everyone actually leans on the railing to watch is a crowd of animals who wandered in uninvited and refused to leave. The pier spent a fortune trying to be an attraction. The sea lions did it for free, by accident, by squatting.\n\nStay and watch them for a while. They'll knock each other off the docks, climb right back up, and start the argument over. It never gets old."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.8088,
+      "centroidLongitude": -122.4098,
+      "city": "San Francisco",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "pier 39",
+        "sea lions",
+        "k-dock",
+        "fisherman's wharf",
+        "wildlife",
+        "loma prieta"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b5bdf103-b4f5-4a48-b15e-7ad1129ac768",
+      "title": "Alcatraz",
+      "shortDescription": "\"The Rock\" — fortress, maximum-security prison, site of a nineteen-month Native American occupation, and now a national park, all on one small island in the bay.",
+      "longDescription": "From 1934 to 1963 Alcatraz held the prisoners other prisons couldn't — Al Capone among them — until salt air and cost shut it down. In 1969 the activists of Indians of All Tribes occupied the island for nineteen months, a turning point in the Native American movement still marked each Thanksgiving by a sunrise ceremony. Today it's one of the most affecting park visits in the city.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alcatraz_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alcatraz_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alcatraz_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alcatraz_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alcatraz_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "899cd570-b8be-444f-a082-d7666fc58491",
+          "order": 0,
+          "title": "Alcatraz",
+          "caption": "Look out across the water to that low island with the tower and the long pale building running along its top.",
+          "latitude": 37.8267,
+          "longitude": -122.423,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/alcatraz.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alcatraz_hero.webp",
+          "transcriptText": "Look out across the water to that low island with the tower and the long pale building running along its top. That's Alcatraz — \"The Rock\" — and it has been, in turn, a fortress, a prison, a protest, and a place of pilgrimage. It's worth knowing all four before you go.\n\nStart with the obvious one. From 1934 to 1963, Alcatraz was the federal government's maximum-security prison, the place it sent the men other prisons couldn't hold. Al Capone did time here. So did the man the movies called the Birdman, though in fact he kept no birds on this island. The cold water and the current were supposed to make escape impossible, and officially, no one ever made it off and was accounted for again. What finally closed the prison wasn't a breakout — it was money. Salt air had eaten the buildings, and the island cost nearly three times what a mainland prison cost to run. So in 1963 they shut it down and left it empty.\n\nAnd then, in 1969, something remarkable happened. A group of Native American activists, calling themselves Indians of All Tribes, landed on the island and claimed it — pointing to a treaty provision that allowed Native people to reclaim surplus federal land. They stayed for nineteen months. The occupation drew national attention to federal policy toward Native Americans, and it's remembered as a turning point in that movement. Every year, before dawn on Thanksgiving, people still gather on the island for an Indigenous sunrise ceremony.\n\nToday it's a national park, and the cellhouse audio tour is one of the most affecting things you can do in the city. There's also a live debate about its future: the current federal administration has floated reopening Alcatraz as a working prison. As of now that's a budget proposal, not a plan — the island is still a park, and the people who study it mostly call a reopening a long shot.\n\nThat's a lot of history for one small rock. Held the country's most feared men, then handed a movement its loudest stage, and is now the subject of an argument about what it should be next.\n\nWhen you're ready to go out, the ferries leave from Pier 33 — and you'll want to book ahead. They sell out."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.8267,
+      "centroidLongitude": -122.423,
+      "city": "San Francisco",
+      "primaryCategory": "history",
+      "tags": [
+        "alcatraz",
+        "the rock",
+        "federal prison",
+        "indians of all tribes",
+        "occupation",
+        "national park"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "51be2e93-47af-4eff-904b-1c8f2e54dd8f",
+      "title": "Coit Tower",
+      "shortDescription": "The 210-foot Art Deco column atop Telegraph Hill — not, despite the legend, shaped like a fire-hose nozzle — wrapped inside with Depression-era frescoes.",
+      "longDescription": "Lillie Hitchcock Coit's 1933 bequest crowned Telegraph Hill with a fluted Art Deco tower (the fire-nozzle story is a myth). Inside, a ring of 1934 Public Works of Art frescoes paints California labor and daily life — and the climb to the top trades for one of the great views of the bay.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coit-tower_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coit-tower_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coit-tower_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coit-tower_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "38ecbc48-11e1-4a41-be3b-08be7c1f23ac",
+          "order": 0,
+          "title": "Coit Tower",
+          "caption": "Let's clear something up right away, because you've probably already heard it.",
+          "latitude": 37.8024,
+          "longitude": -122.4058,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/coit-tower.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coit-tower_hero.webp",
+          "transcriptText": "Let's clear something up right away, because you've probably already heard it. People love to tell you that Coit Tower was built to look like a fire-hose nozzle, because the woman who paid for it was obsessed with firefighters. It's a great story. The architect said it wasn't true.\n\nYou're standing on top of Telegraph Hill, at the base of a smooth, fluted concrete column a little over two hundred feet tall. The money came from Lillie Hitchcock Coit, a genuine San Francisco character who, as a girl, did chase fire engines and became a mascot of one of the volunteer companies. When she died in 1929 she left a third of her fortune to beautify the city, and this tower, finished in 1933, was the result. But Arthur Brown Junior, the architect, insisted the shape was just a clean Art Deco column. The fire-hose thing is a story the city told itself because it was better than the truth.\n\nThe real reward isn't the shape anyway. It's inside, around the base. When you step in, look at the walls: they're covered, floor to ceiling, in murals painted in 1934 by a small army of local artists, paid by a Depression-era federal program to put people back to work. And they didn't paint postcards. They painted California as it actually was in the thirties — laborers in the fields, workers on the docks, a man reading a newspaper full of left-wing headlines, a library shelf with the titles showing.\n\nIt was too much for some people. The imagery was considered so politically radical that the opening was delayed while the city argued about whether to paint parts of it over. In the end, they left it. It's one of the most honest pieces of public art in the country, hiding inside a tower famous for a shape its own architect denied.\n\nSo enjoy the view — and on a clear day, from up top, it is one of the great ones, the whole bay laid out below you. But don't leave without going inside. The tower out here is the legend. The murals in there are the truth, and they almost didn't survive the telling."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.8024,
+      "centroidLongitude": -122.4058,
+      "city": "San Francisco",
+      "primaryCategory": "architecture",
+      "tags": [
+        "coit tower",
+        "telegraph hill",
+        "lillie coit",
+        "pioneer park",
+        "murals",
+        "art deco"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "487b9999-6e2e-4f70-bccc-1c4b8beedebd",
+      "title": "Chinatown Dragon Gate",
+      "shortDescription": "The green-tiled paifang at Grant and Bush — the grand front door to the oldest Chinatown in North America.",
+      "longDescription": "Stone lions, a dragon-and-fish crest, and a 1970 gift of materials from Taiwan mark the Dragon Gate at Grant Avenue and Bush Street — the ceremonial entrance to a neighborhood that has been the heart of Chinese America since the Gold Rush, rebuilt deliberately ornate after the 1906 earthquake.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-dragon-gate_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-dragon-gate_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-dragon-gate_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-dragon-gate_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-dragon-gate_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "76b1e76f-b5df-44fd-a189-55520b0407fc",
+          "order": 0,
+          "title": "Chinatown Dragon Gate",
+          "caption": "Stand at the corner of Grant Avenue and Bush Street and look up at the gate.",
+          "latitude": 37.7908,
+          "longitude": -122.4056,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chinatown-dragon-gate.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-dragon-gate_hero.webp",
+          "transcriptText": "Stand at the corner of Grant Avenue and Bush Street and look up at the gate. Two stone lions at the base, a green-tiled roof curling up at the corners, a dragon and two fish riding the top, and a row of Chinese characters across the middle that translate, roughly, to a line about all under heaven being for the good of the people. This is the Dragon Gate, and it's the formal front door to the oldest Chinatown in North America.\n\nA couple of things to know before you walk through. The gate is younger than it looks — it went up in 1970, built in the style of a traditional ceremonial archway, with many of the materials donated from Taiwan. And the street beyond it, Grant Avenue, is the oldest street in San Francisco. People have lived and traded along here since the Gold Rush of 1849, when Chinese immigrants arrived to work the mines and build the railroads, and settled these few blocks.\n\nNow here's the thing most people walk straight past. Look at the architecture as you go: the pagoda rooflines, the dragons, the lanterns, the curved eaves. It looks, to a visitor, like a piece of imported China. It isn't, quite. It's a deliberate invention.\n\nIn 1906, the earthquake and fire leveled Chinatown completely. And some city leaders saw an opportunity — this was valuable land near downtown, and there was a serious push to move the Chinese community out to the edge of the city and take the land for something else. The community fought back, and they fought back partly with design. They rebuilt fast, and they rebuilt their neighborhood to look unmistakably, theatrically Chinese — more \"oriental,\" frankly, than anything back in China — precisely because a vibrant, exotic, tourist-drawing Chinatown was harder to bulldoze than a plain one. The look was a survival strategy.\n\nSo as you walk up Grant, past the souvenir shops and the herbalists and the roast-duck windows, keep that in mind. The picturesque rooflines you're photographing aren't just decoration, and they aren't just heritage. They're the visible record of a community that, told to leave, built something too beautiful and too profitable to erase — and stayed."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7908,
+      "centroidLongitude": -122.4056,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "chinatown",
+        "dragon gate",
+        "grant avenue",
+        "paifang",
+        "oldest chinatown",
+        "gateway"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9f22377f-ea12-4ecb-95c4-a96b56ad686a",
+      "title": "Cable Cars",
+      "shortDescription": "The only manually operated cable-car system left on earth — a National Historic Landmark you don't visit but ride.",
+      "longDescription": "Invented by Andrew Hallidie in 1873 after he watched horses fall on a wet hill, San Francisco's cable cars grip a continuously moving cable running beneath the street. Once a citywide network, three lines survive as a working National Historic Landmark — the only one of its kind anywhere.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cable-cars_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cable-cars_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cable-cars_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cable-cars_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cable-cars_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "56842b68-f359-4dcb-bb4e-bf98bcea308e",
+          "order": 0,
+          "title": "Cable Cars",
+          "caption": "Here's a thing you can do in San Francisco that you can't do anywhere else on the planet: you can ride a National Historic Landmark.",
+          "latitude": 37.7847,
+          "longitude": -122.4079,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cable-cars.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cable-cars_hero.webp",
+          "transcriptText": "Here's a thing you can do in San Francisco that you can't do anywhere else on the planet: you can ride a National Historic Landmark. Not visit one. Ride it. The cable cars are the only ones of their kind left running in the world.\n\nYou're probably near the Powell Street turnaround, the spot at Powell and Market where the line ends and a small crowd is usually waiting. Watch what happens when a car arrives. It can't turn around on its own — these cars only run one direction — so the operators get out, push the whole thing by hand onto a wooden turntable, and physically rotate it to point back up the hill. A hundred-and-fifty-year-old machine, turned around by two people leaning on it. That alone is worth the wait.\n\nNow, how the thing actually moves. There's no engine in the car. Underneath the street, running in a slot you can see between the rails, is a steel cable, and it's moving — constantly, in a loop, pulled by a giant powerhouse a few blocks away — at exactly nine and a half miles an hour, all day long. To go, the operator, called the gripman, pulls a lever that reaches down through that slot and clamps onto the moving cable, and the car is yanked into motion. To stop, he lets go and works the brakes. That's it. The car has no throttle. It's either gripping the cable and going nine and a half miles an hour, or it isn't.\n\nThe system dates to 1873. The story goes that the inventor, Andrew Hallidie, watched a team of horses lose their footing and get dragged down one of these wet, brutal hills, and decided there had to be a better way to climb them.\n\nSo when you ride one — and you should — pay attention to the gripman. Listen for the clang of the bell and the deep rumble of the cable in the slot under your feet. He's not driving. He's doing something stranger and older than that: grabbing a moving rope under the street, by hand, and hanging on, exactly the way it's been done for a hundred and fifty years."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7847,
+      "centroidLongitude": -122.4079,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "cable cars",
+        "national historic landmark",
+        "powell-hyde",
+        "andrew hallidie",
+        "grip",
+        "moving landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ee0f9fbe-25b2-4aa6-ba15-590e1e26402c",
+      "title": "Grace Cathedral",
+      "shortDescription": "The Episcopal cathedral on Nob Hill — with cast replicas of Ghiberti's Gates of Paradise at the door and a walking labyrinth set into the floor.",
+      "longDescription": "Grace Cathedral's bronze front doors are casts of Lorenzo Ghiberti's Gates of Paradise from the Florence Baptistery. Inside, a labyrinth copied from Chartres invites a slow walking meditation beneath modern stained glass — a French-Gothic-style cathedral, finished in 1964, on the hill the railroad barons once owned.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grace-cathedral_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grace-cathedral_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grace-cathedral_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grace-cathedral_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bbb3ea6b-16df-4c79-83b9-bc1c7c67fc34",
+          "order": 0,
+          "title": "Grace Cathedral",
+          "caption": "Walk up to the front doors of Grace Cathedral and look closely at them, because they're a secret hiding in plain sight.",
+          "latitude": 37.7919,
+          "longitude": -122.4127,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/grace-cathedral.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/grace-cathedral_hero.webp",
+          "transcriptText": "Walk up to the front doors of Grace Cathedral and look closely at them, because they're a secret hiding in plain sight. Those tall bronze doors, divided into ten gilded panels of biblical scenes — they are exact casts of one of the most famous works of the Italian Renaissance. The originals are in Florence, on the Baptistery, and Michelangelo is supposed to have called them the Gates of Paradise. The ones in front of you were cast from the same molds. You're standing at a set of Renaissance doors, on a hill in San Francisco.\n\nStep back and take in the whole building. It looks like a French Gothic cathedral — pointed arches, soaring nave, a great rose window — and it more or less is, except for one thing: it's made of concrete. Construction dragged on for decades, beginning in 1928 and not finishing until 1964, and the budget never stretched to stone. So they faked it, beautifully. This is one of the largest cathedrals in the country, and it's essentially a Gothic dream poured out of concrete.\n\nBut the doors aren't even the best part. The best part is on the floor. Set into the stone, both inside the cathedral and out on the plaza, are two labyrinths — winding circular paths modeled on the medieval one at Chartres. They are not mazes; you can't get lost. There's one way in and the same way out, and the idea is simply to walk it slowly, as a kind of moving meditation. And here's what matters: anyone can. You don't have to be religious, you don't have to pay, you don't have to believe anything. You just walk.\n\nInside, there's one more thing to find — a small chapel near the entrance with an altarpiece by the artist Keith Haring, his very last finished work before he died, dedicated to those lost in the AIDS epidemic.\n\nThat's the quiet genius of this place. A twentieth-century building, made of humble concrete, that reached back five hundred years to borrow Renaissance doors and a medieval path — and then opened all of it to anyone who wanders up the hill. Go walk the labyrinth. That's the part you'll remember."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7919,
+      "centroidLongitude": -122.4127,
+      "city": "San Francisco",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "grace cathedral",
+        "nob hill",
+        "ghiberti doors",
+        "labyrinth",
+        "episcopal",
+        "stained glass"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4b615e10-0753-415b-9c1d-6d0083948aad",
+      "title": "Lombard Street",
+      "shortDescription": "The famous one-block run of eight tight switchbacks down Russian Hill — a traffic-calming fix that became one of the city's most photographed streets.",
+      "longDescription": "The crooked block of Lombard Street was carved in 1922 with eight hairpin turns to tame a slope too steep for cars to climb straight. Planted with hydrangeas and lined with elegant houses, it draws a constant nose-to-tail crawl of cars and a crowd of photographers at the top.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lombard-street_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lombard-street_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lombard-street_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lombard-street_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lombard-street_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "438b524f-4455-4901-a66d-8e07612a2135",
+          "order": 0,
+          "title": "Lombard Street",
+          "caption": "You're at the top of the famous block — Lombard Street, the one with the eight tight switchbacks zigzagging down the hill through the flower beds.",
+          "latitude": 37.8021,
+          "longitude": -122.4187,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lombard-street.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lombard-street_hero.webp",
+          "transcriptText": "You're at the top of the famous block — Lombard Street, the one with the eight tight switchbacks zigzagging down the hill through the flower beds. Cars inch down it nose to tail, brakes squealing, while people line both sidewalks taking the same photo everyone takes. It's called the crookedest street in the world. Two things about that.\n\nFirst, it wasn't built to be charming. It was built to be survivable. This block of Lombard runs straight down Russian Hill at a natural grade of about twenty-seven percent — steep enough that a car coming down it in a straight line, especially in the early days of cars, was a genuine hazard, and a person walking it wasn't much better off. So in 1922 the property owners came up with a fix: instead of going straight down, switchback across the slope. The curves cut the effective steepness almost in half, to a manageable sixteen percent or so. The famous zigzag is, at heart, a safety feature — an engineering compromise with a hill that didn't want a road on it.\n\nSecond — and locals enjoy this one — it isn't actually the crookedest street in San Francisco. That title arguably belongs to a stretch of Vermont Street, over on Potrero Hill, which has fewer curves but tighter, sharper ones. Lombard won the fame because it's prettier and better placed, draped in hydrangeas with the bay glittering behind it. Vermont Street is crookeder. Lombard is photogenic. Fame went to the photogenic one, which tells you something about how reputations work.\n\nSo take the picture — everyone does, and the view straight down through the curves and out to Coit Tower and the bay really is lovely. But as you watch the cars crawl through those eight bends, remember what you're actually looking at. Not a whimsy, not a folly. A practical answer to a stubborn hill, dressed up so well in flowers and brick that the whole world decided it was charming on purpose."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.8021,
+      "centroidLongitude": -122.4187,
+      "city": "San Francisco",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "lombard street",
+        "crooked street",
+        "switchbacks",
+        "russian hill",
+        "hairpins",
+        "gardens"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "996e463c-0d3e-40f3-956e-1201bfe0086c",
+      "title": "Painted Ladies",
+      "shortDescription": "The pastel Victorian row on Steiner Street at Alamo Square — \"Postcard Row,\" framed against the downtown skyline.",
+      "longDescription": "The row of restored Queen Anne Victorians on the east slope of Alamo Square — repainted in the 1960s and 70s in the multicolor \"Painted Ladies\" style — lines up against the modern downtown skyline for one of the most photographed views in America.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/painted-ladies_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/painted-ladies_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dfaaba08-3e83-4045-bb6e-67fa58f16706",
+          "order": 0,
+          "title": "Painted Ladies",
+          "caption": "Find the bench, or just a patch of grass on the east slope of Alamo Square, and face downhill.",
+          "latitude": 37.7762,
+          "longitude": -122.4329,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/painted-ladies.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/painted-ladies_hero.webp",
+          "transcriptText": "Find the bench, or just a patch of grass on the east slope of Alamo Square, and face downhill. In front of you is one of the most photographed views in America: a row of pastel Victorian houses, prim and gabled and trimmed like wedding cakes, with the glass towers of downtown rising right behind them. You've almost certainly seen this exact lineup before — it's turned up behind the opening credits of more than one TV show. They call these the Painted Ladies, and the postcard you're looking at is doing more work than you'd think.\n\nStart with the houses themselves. This row on Steiner Street went up in the early 1890s, ordinary middle-class homes built by a developer, six of them, more or less identical. San Francisco built tens of thousands of houses like these before 1906 — it was a Victorian boomtown. Then two things came for them: the earthquake and fire of 1906, which destroyed huge swaths of the city, and then the twentieth century itself, which decided Victorians were fussy and old-fashioned. Thousands were torn down. Thousands more were \"modernized\" — stripped of their trim and slapped with gray paint. For a while, gingerbread like this was an embarrassment.\n\nThe color is the surprise. These houses weren't always candy-colored. The look you're photographing comes from a movement that started in the 1960s and seventies, when a new generation fell back in love with these old places and began repainting them in three, four, five colors to bring out all that woodwork. The term \"Painted Lady\" itself only dates to the late seventies. So the postcard is younger than it looks.\n\nBut the real reason to sit here is the contrast, which is the whole city compressed into a single frame. Gingerbread Victorians from the 1890s, lovingly restored, against a wall of twenty-first-century glass — old San Francisco and new San Francisco, in one glance, with a park full of dogs and picnics in between. These six houses survived the quake, survived the wrecking ball, survived being painted gray. Now they're the first thing the world pictures when it pictures this city. Not bad for a row of spec houses."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7762,
+      "centroidLongitude": -122.4329,
+      "city": "San Francisco",
+      "primaryCategory": "architecture",
+      "tags": [
+        "painted ladies",
+        "alamo square",
+        "victorian houses",
+        "postcard row",
+        "steiner street",
+        "skyline"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e057ed4e-38ee-406a-a557-80d32a7ccdf2",
+      "title": "Mission Dolores",
+      "shortDescription": "The 1791 adobe that gave the city its name — Mission San Francisco de Asís, the oldest intact building in San Francisco.",
+      "longDescription": "The thick-walled adobe church of Mission San Francisco de Asís, founded in 1776 and built by 1791, is the oldest standing structure in the city and the source of its name. It survived the 1906 earthquake that toppled its grander neighbors, and its small cemetery holds some of the city's earliest history.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mission-dolores_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mission-dolores_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "59645e57-7fb8-4927-b767-16d2a3abf968",
+          "order": 0,
+          "title": "Mission Dolores",
+          "caption": "This is where the name came from.",
+          "latitude": 37.7644,
+          "longitude": -122.4269,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mission-dolores.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mission-dolores_hero.webp",
+          "transcriptText": "This is where the name came from. The whole city — San Francisco — takes its name from this small, thick-walled adobe church in front of you, dedicated to Saint Francis of Assisi. And it's the oldest intact building in the city, by a long way. While almost everything around it has burned, fallen, and been rebuilt, this has simply stood here since the 1790s.\n\nLook at it plainly first. It's low and white and unfussy, with four squat columns across the front and walls of adobe brick about four feet thick — which is part of why it's still here. When the 1906 earthquake brought down grander, newer buildings all over town, this old adobe just sat tight. Step inside if it's open, and look up: the ceiling is painted in patterns based on Ohlone designs, the work of the Native people who actually built this place.\n\nBecause here is the harder history, and it's worth telling honestly. The mission was founded in 1776, part of a chain the Spanish strung up the California coast. It was built by the Ohlone, the people who had lived around this bay for thousands of years before any European arrived. The mission system brought them into its orbit to convert and to labor — and it brought European diseases they had no defense against. Thousands of Native people died in these mission years, and many of them are buried right next door, in the old cemetery beside the church. For a long time their graves went largely unmarked.\n\nThe big ornate basilica next door, by the way, is the new building — barely a century old. This little adobe is the original.\n\nSo stand here a moment with both things at once, because the place asks you to. This is a survivor, the seed the entire city grew from and took its name from, genuinely moving in its plainness. And it's also a monument to a meeting that cost the people who built it almost everything. The oldest building in San Francisco holds the city's beginning and its first great loss in the same four-foot walls. It's worth a quiet minute in the cemetery before you go."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7644,
+      "centroidLongitude": -122.4269,
+      "city": "San Francisco",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "mission dolores",
+        "mission san francisco de asis",
+        "oldest building",
+        "adobe",
+        "el camino real",
+        "1776"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "42e2ba1e-eb84-4648-8c3c-8d3f4cf4b3b9",
+      "title": "Haight-Ashbury",
+      "shortDescription": "The street corner that gave the 1960s counterculture its address — ground zero of the 1967 Summer of Love.",
+      "longDescription": "There's little to see at Haight and Ashbury but the signs themselves — yet this corner of Victorian flats was, in 1967, the epicenter of the Summer of Love, drawing tens of thousands of young people and giving the counterculture a place on the map. The neighborhood still trades on that legend.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/haight-ashbury_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/haight-ashbury_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/haight-ashbury_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/haight-ashbury_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "15e8d43e-043c-47fb-aef9-90c54f737b8d",
+          "order": 0,
+          "title": "Haight-Ashbury",
+          "caption": "You're standing at the corner of Haight Street and Ashbury Street, and there's not much to see.",
+          "latitude": 37.77,
+          "longitude": -122.4469,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/haight-ashbury.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/haight-ashbury_hero.webp",
+          "transcriptText": "You're standing at the corner of Haight Street and Ashbury Street, and there's not much to see. A couple of street signs people line up to photograph, some shops, a clock that's often stopped, the steady traffic of an ordinary city neighborhood. That's the first thing to understand about this place: it's a real corner, and for one strange summer it became a synonym for an entire era.\n\nThe summer was 1967 — the Summer of Love. For reasons that had a lot to do with cheap rent, the neighborhood had filled up with young people, musicians, dropouts, and seekers, drawn by big Victorian flats you could split a dozen ways for almost nothing. The Grateful Dead lived in a house just up Ashbury. Janis Joplin lived nearby. Jefferson Airplane was around the corner. And in that one summer, the word went out across the country that something was happening here, and tens of thousands of mostly very young people poured into these few blocks looking for it.\n\nBut here's the part the legend leaves out. It didn't really work, and it didn't last. The neighborhood couldn't absorb the crowds. What had been a small, idealistic scene got swamped — too many people, not enough food or housing, harder drugs moving in. By the fall of that very same year, the original residents had had enough of being a tourist attraction for their own utopia. So they staged a mock funeral, right here in the streets, complete with a coffin. They called it \"The Death of the Hippie.\" The idea was to declare the whole thing over, to kill the label, and to get their neighborhood back.\n\nSo this corner is honest in a way the postcards aren't. The Summer of Love was real, and brief, and messier than the myth — a genuine flowering that curdled almost as fast as it bloomed, and that the people living it tried to bury before it had even cooled. Wander up Haight a few blocks, past the vintage shops and the record stores, and you can still feel the tail of it. Just don't expect it to match the legend. The people who were here knew better, early."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.77,
+      "centroidLongitude": -122.4469,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "haight-ashbury",
+        "the haight",
+        "1967",
+        "summer of love",
+        "counterculture",
+        "victorian"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c9dbb40c-74ff-4990-b732-93f0600239ba",
+      "title": "Twin Peaks",
+      "shortDescription": "Nine hundred feet up near the geographic center of the city — the panorama that takes in almost all of San Francisco at once.",
+      "longDescription": "From the saddle between Twin Peaks, near the city's geographic center, the whole grid and skyline open at once — downtown, the bridges, the bay, and the ocean beyond. It's the classic San Francisco overlook, best at dusk when the city lights come up.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twin-peaks_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twin-peaks_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twin-peaks_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twin-peaks_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d5db76c8-800b-40ad-96f0-f2b1ced40524",
+          "order": 0,
+          "title": "Twin Peaks",
+          "caption": "You've come up about nine hundred feet, and the reward is the whole city at once.",
+          "latitude": 37.7544,
+          "longitude": -122.4477,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/twin-peaks.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/twin-peaks_hero.webp",
+          "transcriptText": "You've come up about nine hundred feet, and the reward is the whole city at once. From up here, near the geographic center of San Francisco, you can see almost all of it — the grid of streets running out to the bay, the downtown towers, the two bridges, and on a clear day the hills of the East Bay beyond. This is one of the highest points in the city, and the single best place to understand how San Francisco is actually put together.\n\nBecause that's the thing to look at from here — not just the pretty bits, but the pattern. Look at the streets. They run in a dead-straight grid, block after block after block, marching right over the tops of hills and down the other side as if the hills weren't there. San Francisco was laid out on paper by people who loved a clean grid and didn't much care what the land underneath was doing. So you get streets that climb at impossible angles, intersections perched on slopes, that whole vertical rollercoaster the city is famous for. From the ground it feels like chaos. From up here you can see it's the opposite — it's a stubbornly rational plan, slammed down on top of stubbornly irrational terrain, and neither one gave an inch.\n\nWatch the weather, too. If there's fog, this is a great seat for it. The fog comes off the cold Pacific to the west and spills over the hills in slow motion, and Twin Peaks sits right in its path. You can stand up here in bright sun and watch a gray river of cloud pour silently across the neighborhoods below.\n\nOne practical note: it's almost always windier and colder up here than down in the city, sometimes dramatically so, so whatever you're wearing, you probably want one more layer. But it's worth it. Most viewpoints just give you a nice picture. This one gives you the logic of the place — the grid against the hills, the fog against the sun — the argument San Francisco has been having with its own landscape since the day it was drawn. Take a minute. Find your hotel. Trace your day. It's all down there."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7544,
+      "centroidLongitude": -122.4477,
+      "city": "San Francisco",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "twin peaks",
+        "viewpoint",
+        "panorama",
+        "christmas tree point",
+        "hills",
+        "city center"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5085c5aa-b0ae-401f-b295-bd940b8322a5",
+      "title": "California Academy of Sciences",
+      "shortDescription": "Renzo Piano's natural-history museum in Golden Gate Park — crowned by a rolling, planted \"living roof\" of native green hills.",
+      "longDescription": "Renzo Piano's 2008 building puts an aquarium, planetarium, rainforest, and natural-history museum under one roof — and tops it with a 2.5-acre living roof of rolling green hummocks planted with native species, one of the most-copied pieces of architecture in the city.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/california-academy-of-sciences_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/california-academy-of-sciences_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/california-academy-of-sciences_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "255020ab-25da-46b2-a026-a063eeb07b21",
+          "order": 0,
+          "title": "California Academy of Sciences",
+          "caption": "Step back far enough to see the roof, because the roof is the whole idea.",
+          "latitude": 37.7699,
+          "longitude": -122.4661,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/california-academy-of-sciences.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/california-academy-of-sciences_hero.webp",
+          "transcriptText": "Step back far enough to see the roof, because the roof is the whole idea. It rolls and humps in a series of low green hills, planted edge to edge with living plants, with round skylights set into it like bubbles. That is a living roof — about two and a half acres of native California plants growing on top of the building — and it tells you exactly what kind of museum this is: one that would rather be part of nature than just describe it.\n\nThis is the California Academy of Sciences, and the trick of it is what's packed underneath that roof. Most cities make you choose. You go to the aquarium, or the planetarium, or the natural history museum, or the rainforest, on four different days. Here they're all in one building, under one roof. There's a full aquarium below your feet, a planetarium dome you can sit back and watch the universe in, a natural history collection, and — the showstopper — a four-story rainforest sealed inside a giant glass sphere, warm and humid and full of free-flying butterflies and birds, that you climb on a spiral ramp.\n\nThe institution itself is old — founded in 1853, which makes it one of the oldest scientific bodies in the West — but this building is new. It was rebuilt in 2008 by the architect Renzo Piano, and that roof isn't just for looks. The hills are shaped to draw warm air up and out through those round skylights, cooling the building without much air conditioning, and the plants soak up rainwater that would otherwise run off. The roof is doing real work.\n\nThere's a nice honesty to it, when you think about what a science museum is for. This one doesn't lecture you about the environment from behind glass and then guzzle power doing it. It tries, in its own structure, to behave the way it's telling you to behave — a building that grows a meadow on its head, cools itself with hot air, drinks the rain, and keeps a rainforest breathing inside a bubble. Go in. Look up through the glass sphere at the canopy, then go down and watch the same water in the tanks below. It's the rare museum that's also an argument."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.7699,
+      "centroidLongitude": -122.4661,
+      "city": "San Francisco",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "california academy of sciences",
+        "living roof",
+        "renzo piano",
+        "golden gate park",
+        "aquarium",
+        "planetarium"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8618f79f-cc8d-4177-9bcb-bc9b2b5c92bd",
+      "title": "Sutro Baths & Lands End",
+      "shortDescription": "The roofless concrete ruins of the world's largest indoor swimming complex, at the wild cliff edge of Lands End.",
+      "longDescription": "Adolph Sutro's 1896 Baths enclosed seven saltwater pools under three acres of glass — the largest indoor swimming complex on earth — until it closed and burned in 1966. Its skeletal ruins now sit half-returned to the sea at Lands End, one of the most dramatic walks in the city.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sutro-baths-lands-end_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sutro-baths-lands-end_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sutro-baths-lands-end_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sutro-baths-lands-end_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "49841495-43b6-46c2-887d-f47d37a96140",
+          "order": 0,
+          "title": "Sutro Baths & Lands End",
+          "caption": "Down below you, at the edge of the surf, are the ruins.",
+          "latitude": 37.78,
+          "longitude": -122.5137,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sutro-baths-lands-end.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sutro-baths-lands-end_hero.webp",
+          "transcriptText": "Down below you, at the edge of the surf, are the ruins. Roofless concrete walls, a grid of rectangular pools now filled with green tidewater and gulls, the bones of something enormous half-returned to the sea. People wander through them today as if they were ancient. They're a little over a century old, and what stood here was one of the most ambitious public pleasures any American city ever built.\n\nThis was the Sutro Baths. In 1896 a man named Adolph Sutro — a self-made mining millionaire who would go on to be mayor — opened on this spot a glass-and-iron palace the size of a stadium, filled with swimming pools. Not one or two. Seven of them, most fed straight from the ocean by the tides, ranging from cold seawater to heated, under a vast greenhouse roof. The place could hold something like ten thousand people at once. And Sutro's whole point was that it should be for everyone — cheap enough that an ordinary working family, not just the rich, could come spend a day swimming at the edge of the Pacific.\n\nIt never quite paid for itself, the public's tastes changed, and in 1966, as it was being demolished for redevelopment, the whole structure burned. What's left is what you see: the concrete footprint, slowly losing its argument with the ocean.\n\nJust up the bluff is the Cliff House, the big pale building that for generations was the restaurant out at the end of the world. It's been closed since 2020 and its future is uncertain, so don't count on a meal — but the setting is still extraordinary. And the real treasure is the trail from here: the Lands End path, winding along the cliffs through cypress trees, with the Golden Gate Bridge swinging into view and the wrecks of old ships sometimes showing at low tide.\n\nIt's a melancholy, beautiful corner, and worth the wind. Stand at the railing over the ruins and picture it full — the glass roof, the steam, ten thousand people laughing in the surf, a rich man's gift to everyone who couldn't afford the sea. Then look at the tide working through the empty pools. Few places hold the whole arc of a grand idea — the dream, the crowds, the slow return to water — as plainly as this one does."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.78,
+      "centroidLongitude": -122.5137,
+      "city": "San Francisco",
+      "primaryCategory": "history",
+      "tags": [
+        "sutro baths",
+        "lands end",
+        "adolph sutro",
+        "ruins",
+        "ocean beach",
+        "cliffs"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "729ad387-3138-48db-b829-700676d26b98",
+      "title": "Golden Gate Bridge",
+      "shortDescription": "The bridge almost everyone said couldn't be built — and the International Orange icon that defines the city.",
+      "longDescription": "Opened in 1937 across a deep, fierce strait that engineers called impossible, the Golden Gate Bridge was for decades the longest suspension span in the world. Its Art Deco towers, painted the warm International Orange that glows in the fog, made it the most recognizable bridge on earth.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-gate-bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-gate-bridge_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-gate-bridge_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a576b561-319e-465a-a7b4-8774f256d8c3",
+          "order": 0,
+          "title": "Golden Gate Bridge",
+          "caption": "Here it is — the one you came for.",
+          "latitude": 37.8199,
+          "longitude": -122.4783,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/golden-gate-bridge.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-gate-bridge_hero.webp",
+          "transcriptText": "Here it is — the one you came for. And the first thing worth knowing about the Golden Gate Bridge is that almost everyone said it couldn't be built. The strait it crosses is deep, the current is ferocious, the water is freezing, and the fog and wind come howling in off the open Pacific. For years the conventional wisdom was that no bridge could stand here. They built it anyway, and it opened in 1937.\n\nLook at the towers first. They rise about seven hundred and forty-six feet above the water, and the main span between them stretches a little over four thousand two hundred feet — for nearly thirty years after it opened, the longest suspension span in the world. Everything hangs from those two great cables sweeping between the towers; the whole roadway is essentially dangling from steel rope.\n\nNow the color, because the color was a fight. It's a specific shade called International Orange, and it was not the plan. The Navy wanted the bridge painted in black and yellow stripes so ships could see it. Others pushed for ordinary gray. But the consulting architect, Irving Morrow, noticed that the steel was arriving coated in a burnt-orange primer, and argued hard that this was the color — warm, glowing against the cool blues and grays of the water and sky, and oddly easy to see in fog. He won. The most famous color in American engineering started as a rust-proof undercoat that one man refused to paint over.\n\nOne more thing, looking toward the south end. Tucked underneath the bridge down there is Fort Point, a brick fortress from the Civil War era. The bridge's engineers could have simply demolished it. Instead, the chief engineer, Joseph Strauss, threw a special steel arch over the top of it so the old fort could stay. So the bridge actually bends around a building older than itself.\n\nSo stand here for a while and take it in. The fog may be pouring through the cables, or the whole thing may be glowing clear in the sun — both are the real bridge. And know that nearly everything you're admiring was an argument someone had to win: that it could be built at all, that it should be orange, that the old fort beneath it was worth bending steel to save. It's not just beautiful. It's a stack of stubborn good decisions, six hundred feet tall."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.8199,
+      "centroidLongitude": -122.4783,
+      "city": "San Francisco",
+      "primaryCategory": "architecture",
+      "tags": [
+        "golden gate bridge",
+        "joseph strauss",
+        "art deco",
+        "international orange",
+        "suspension bridge",
+        "the strait"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4b66eb5c-ed88-46dc-9afd-2aaabfb7592c",
+      "title": "Palace of Fine Arts",
+      "shortDescription": "Bernard Maybeck's romantic faux-Roman rotunda and colonnade beside a Marina lagoon — the last survivor of the 1915 world's fair.",
+      "longDescription": "Bernard Maybeck designed the Palace of Fine Arts for the 1915 Panama-Pacific International Exposition as a deliberately melancholy \"Roman ruin\" — a domed rotunda and curving colonnade reflected in a lagoon. Built to be temporary, it was so loved the city rebuilt it permanently in the 1960s.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palace-of-fine-arts_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palace-of-fine-arts_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palace-of-fine-arts_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palace-of-fine-arts_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "89a7681e-c0ec-4c7a-8640-c6081809afbd",
+          "order": 0,
+          "title": "Palace of Fine Arts",
+          "caption": "It looks like a Roman ruin that somehow drifted up against a San Francisco lagoon — a great domed rotunda the color of old sand, a sweeping colonnade, all of it weathered and romantic and clearly very old.",
+          "latitude": 37.8029,
+          "longitude": -122.4484,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/palace-of-fine-arts.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palace-of-fine-arts_hero.webp",
+          "transcriptText": "It looks like a Roman ruin that somehow drifted up against a San Francisco lagoon — a great domed rotunda the color of old sand, a sweeping colonnade, all of it weathered and romantic and clearly very old. Here's the joke: it was built to look that way on purpose, and it isn't old at all.\n\nThis is the Palace of Fine Arts, and it went up in 1915 for the Panama-Pacific International Exposition — a world's fair San Francisco threw partly to celebrate the opening of the Panama Canal, and partly to announce to the world that the city had fully recovered from the 1906 earthquake. The fair was a temporary fantasy city of palaces along the waterfront, and this was its most beloved building. The architect, Bernard Maybeck, didn't want it to feel triumphant. He wanted it to feel a little sad — the beautiful melancholy of a classical ruin, the sense of something grand slowly decaying. So he designed a brand-new building to look like a magnificent wreck.\n\nLook closely at the colonnade and you'll catch the detail that gives the game away. On top of the columns are large urns, and around them, women carved with their backs turned outward, leaning over as if weeping into the planters. Maybeck meant them as a meditation on the sadness of life without art. A fake ruin, built to mourn.\n\nAnd here's the lovely twist. The whole fair was meant to be torn down when it ended, and almost all of it was. But San Franciscans loved this melancholy ruin so much they couldn't bear to lose it. It was patched and propped up for decades, and finally, in the 1960s, completely rebuilt in permanent materials so it would last. A building designed to look like it was crumbling refused to actually crumble, because the city wouldn't let it.\n\nSo walk the colonnade, sit by the lagoon with the swans and the wedding photographers, and enjoy the strangeness of it. You're standing in a deliberate illusion — a hundred-year-old monument to the idea of ruins, made to look ancient, built to be temporary, and saved out of pure affection. It's the most sincere fake in San Francisco, and one of the most beautiful spots in the city to do nothing at all."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 37.8029,
+      "centroidLongitude": -122.4484,
+      "city": "San Francisco",
+      "primaryCategory": "architecture",
+      "tags": [
+        "palace of fine arts",
+        "bernard maybeck",
+        "1915",
+        "panama-pacific exposition",
+        "rotunda",
+        "lagoon"
+      ],
+      "priceUSD": 0
     }
   ]
 }
