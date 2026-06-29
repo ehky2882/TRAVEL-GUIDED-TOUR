@@ -35,6 +35,12 @@ it against the DB with `psql`. It's **idempotent** (upsert by id) and
 **transactional** (any bad row rolls the whole apply back). It runs in parallel
 with the gh-pages publish and never blocks it.
 
+> **✅ Verified live (2026-06-28).** The `SUPABASE_DB_URL` secret **is set** and the
+> `Seed catalog into Supabase` job runs green on content merges — confirmed on the
+> "South Bank Mile" merge (the *Apply seed to Supabase* step actually applied, ~71s,
+> not a no-op skip), and the live DB matches `Tours.json` exactly (5 / 371 / 406).
+> No setup action needed; the steps below are kept for reference / disaster recovery.
+
 **Opt-in — the job no-ops until you add one repo secret (one-time, dashboard only):**
 
 1. **Get the connection string** from Supabase → **Connect** (top bar) or
