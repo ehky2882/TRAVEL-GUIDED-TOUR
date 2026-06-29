@@ -19892,6 +19892,110 @@
         "walking tour"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "18e6594c-310c-48c2-9e07-7e8ed0ea2b7b",
+      "title": "North Beach & the Climb to Coit",
+      "shortDescription": "A walk through bohemian, Italian North Beach and up Telegraph Hill's hidden garden stairways to Coit Tower.",
+      "longDescription": "North Beach is San Francisco's Little Italy and the old capital of the Beats — espresso bars, Italian delis, and the bookstore where the Beat Generation found its voice. This five-stop walk starts at City Lights and Kerouac Alley, crosses Washington Square in the shadow of Saints Peter and Paul, then climbs the leafy, half-hidden Filbert and Greenwich Steps up Telegraph Hill to Coit Tower, where the Depression-era murals and a wide view of the bay reward the climb.",
+      "makerId": "b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-north-beach_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-north-beach_stop0.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/city-lights-kerouac-alley_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/washington-square-sf_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-north-beach_stop3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coit-tower_hero.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "73ad0160-31d0-4855-8f54-e38acd83fce6",
+          "order": 0,
+          "title": "Welcome to North Beach",
+          "caption": "NORTH BEACH & THE CLIMB TO COIT — Walk Intro  First, a correction: there is no beach in North Beach.",
+          "latitude": 37.8,
+          "longitude": -122.409,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-north-beach_stop0.mp3",
+          "audioDurationSeconds": 95,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-north-beach_stop0.webp",
+          "transcriptText": "NORTH BEACH & THE CLIMB TO COIT — Walk Intro\n\nFirst, a correction: there is no beach in North Beach.\n\nThere used to be — a real one, on the bay — but the city filled it in more than a century ago, and the name stuck to dry land the way names do. What's here instead is something better: the closest thing San Francisco has to a European village, an Italian neighborhood layered over a bohemian one, wrapped around the base of a steep green hill with a tower on top.\n\nThis walk has a shape to it, and it's worth knowing before you start. We begin at the bottom, in the flat heart of North Beach, where the Beat poets ran a bookstore that went to court for the right to publish, and where the Italian San Francisco of cafés and a twin-spired church still holds on. Then we climb — and I mean climb — up the side of Telegraph Hill, past hidden garden staircases where a flock of wild parrots actually lives, to Coit Tower at the summit and one of the great views in the city.\n\nHere's the honest part. The climb to the top is a real one — steep streets, then steep stairs — and it's the whole point of the walk, the slow rise from the bohemian village to the lookout above it. If your knees would rather not, you have an easy out: the number thirty-nine bus runs from Washington Square right up to Coit Tower, so you can ride up and walk down instead. No shame in it. The parrots don't care how you arrive.\n\nOur first stop is at the bottom, where it all starts. Find the corner of Columbus Avenue and Broadway, and look for a wedge-shaped bookstore with its name running down the side: City Lights. I'll meet you out front."
+        },
+        {
+          "id": "b1a81ddc-a1a1-4b78-be91-6ebd7aaa66e9",
+          "order": 1,
+          "title": "City Lights & Kerouac Alley",
+          "caption": "NORTH BEACH — Stop 1: City Lights & Kerouac Alley  You're standing in front of the bookstore that went to court — and won.",
+          "latitude": 37.7976,
+          "longitude": -122.4065,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-north-beach_stop1.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/city-lights-kerouac-alley_hero.webp",
+          "transcriptText": "NORTH BEACH — Stop 1: City Lights & Kerouac Alley\n\nYou're standing in front of the bookstore that went to court — and won.\n\nThis is City Lights, opened in 1953 by the poet Lawrence Ferlinghetti and a partner, and it was the first bookstore in America to sell nothing but paperbacks. That sounds ordinary now. At the time it was close to radical — paperbacks were considered cheap, throwaway things, and a serious bookshop selling only those, staying open late, and letting people sit and read without buying a thing, was a genuinely new idea about what a bookstore could be.\n\nThen it became something bigger. In 1956, City Lights published a slim book of poetry by Allen Ginsberg called Howl. The poem was raw, furious, and frank about sex and drugs in a way that got Ferlinghetti arrested the next year for selling obscene material. The trial that followed, in 1957, became a landmark: the judge ruled that the poem was not obscene because it carried real social value, and that decision helped clear the way for publishing serious work that earlier could have been banned outright. A bookstore on this corner, in other words, helped widen what Americans were legally allowed to read.\n\nNow look to the side of the building, at the narrow lane running alongside it. That's Jack Kerouac Alley, named for the author of On the Road, who drank and argued just across the way at Vesuvio, the bar still standing on the far side. Lines from Kerouac and other writers are set right into the pavement under your feet, so down here it's worth looking at the ground as much as the walls.\n\n[beat]\n\nThis little corner — a bookstore, an alley, a bar — is where the Beats turned San Francisco into the capital of the American counterculture, a full decade before the hippies took over the Haight. It started with cheap paperbacks and one furious poem.\n\nWhen you're ready, walk up Columbus Avenue a few blocks to the open green of Washington Square, the living room of Italian North Beach, where two white spires are waiting."
+        },
+        {
+          "id": "dcbdca2e-5932-4b84-85fd-21a76b3b0502",
+          "order": 2,
+          "title": "Washington Square",
+          "caption": "NORTH BEACH — Stop 2: Washington Square & Saints Peter and Paul  This is Washington Square, and it's the closest thing North Beach has to a town square — the neighborhood's shared front yard.",
+          "latitude": 37.8006,
+          "longitude": -122.4101,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-north-beach_stop2.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/washington-square-sf_hero.webp",
+          "transcriptText": "NORTH BEACH — Stop 2: Washington Square & Saints Peter and Paul\n\nThis is Washington Square, and it's the closest thing North Beach has to a town square — the neighborhood's shared front yard.\n\nCome in the morning and you'll find people doing tai chi on the grass; come in the afternoon and it's sunbathers, dog walkers, and old men arguing in Italian. But here's the first surprise: the statue in the middle isn't George Washington. It's Benjamin Franklin, donated in the 1870s by a wealthy dentist and temperance crusader who wanted to give San Franciscans something to drink other than alcohol — which is why the base once ran with fountains of free water. A Washington Square with a Franklin standing in it, and the city never bothered to fix the mismatch.\n\nNow look up at the church. Those two white spires belong to Saints Peter and Paul, finished in 1924 and long known as the Italian Cathedral of the West — the spiritual center of North Beach back when this was a dense neighborhood of Italian fishermen and immigrants. The most famous of those Italian sons was the baseball player Joe DiMaggio, who grew up just a few blocks from here. When he married the movie star Marilyn Monroe in 1954, the couple came straight to these steps to be photographed afterward, and you'll still see wedding parties doing exactly the same thing today — which is part of how the place picked up its reputation as a marriage church.\n\n[beat]\n\nStand here a moment and take the measure of it. Down at the bottom, the Beats; up the hill ahead, the parrots and the tower; and right here in the middle, the ordinary Italian village that both of those stories grew up around. This is the everyday heart of the whole thing.\n\nWhen you're ready, we start climbing. Head east, toward the green hill rising in front of you, and find the base of the Filbert Steps, where the sidewalk gives up and turns into a garden staircase. This is where the walk gets wild — in every sense of the word."
+        },
+        {
+          "id": "dc6277ce-503f-4418-a054-70f368392eaf",
+          "order": 3,
+          "title": "Filbert & Greenwich Steps",
+          "caption": "NORTH BEACH — Stop 3: The Filbert & Greenwich Steps  The sidewalk just ended and turned into a staircase.",
+          "latitude": 37.8019,
+          "longitude": -122.4042,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-north-beach_stop3.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sf-north-beach_stop3.webp",
+          "transcriptText": "NORTH BEACH — Stop 3: The Filbert & Greenwich Steps\n\nThe sidewalk just ended and turned into a staircase. You're now climbing the Filbert Steps, and this is one of the strangest, loveliest corners of San Francisco.\n\nTelegraph Hill is steep — too steep, in places, for ordinary streets — so on its eastern face the roads simply give up and become wooden staircases threading up through gardens. As you climb, notice the cottages tucked along the steps, some of them small wooden houses from the 1860s and 70s. They survived the great fire of 1906 for a blunt reason: this hillside was too steep and too awkward for the flames, and for the crews dynamiting buildings to make firebreaks, so a pocket of the old wooden city lived on right here while grander neighborhoods burned to the ground.\n\nThe gardens you're walking through aren't an accident either. For decades much of this slope was a neglected dumping ground, until a woman named Grace Marchant moved in around 1949 and spent the next thirty years clearing the trash and planting by hand, turning the hillside into the lush public garden that still carries her name. You're climbing through one person's stubbornness, basically.\n\nAnd then there's the sound. Listen — and look up. Telegraph Hill is home to a flock of wild parrots, bright green with flashes of red, descended from escaped and released pet birds that found each other, bred, and never left. They're loud, they're fast, and they became famous enough to end up in a documentary. If a squadron of green birds tears overhead screaming, you've just met the locals.\n\nOne more thing, about the name. There's no telegraph up there now, but in the 1850s the hilltop held a signal station with a wooden semaphore that told the city below which kind of ship was sailing in through the Golden Gate. The hill was San Francisco's early-warning system, back when a ship full of news or gold could change everything.\n\n[beat]\n\nCatch your breath here — the view is already good, and it's about to get better.\n\nKeep climbing. The steps deliver you almost to the foot of Coit Tower, the great pale column at the summit, which is our last stop."
+        },
+        {
+          "id": "df94b056-4000-4c79-a4a6-20a73fb93d63",
+          "order": 4,
+          "title": "Coit Tower",
+          "caption": "NORTH BEACH — Stop 4: Coit Tower  You made it.",
+          "latitude": 37.8024,
+          "longitude": -122.4058,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sf-north-beach_stop4.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coit-tower_hero.webp",
+          "transcriptText": "NORTH BEACH — Stop 4: Coit Tower\n\nYou made it. This is Coit Tower — two hundred and ten feet of pale concrete at the top of Telegraph Hill, and one of the most misunderstood landmarks in the city.\n\nHere's the misunderstanding. The money for the tower came from Lillie Hitchcock Coit, a wealthy and famously eccentric San Franciscan who, as a girl, had adored the city's volunteer firefighters — she chased their engines, became a mascot of one of the companies, and signed her name with a little number five, for her beloved Engine Company Number Five, for the rest of her life. So when she left a fortune to beautify the city and this tower went up in 1933, everyone decided it must be built to look like the nozzle of a fire hose, in her honor. It's a wonderful story. It also isn't true — the architects always insisted the shape was simply a clean fluted column, and any resemblance is in the eye of the beholder. But the story is so good the city has never let go of it.\n\nStep inside before you go up, because the ground floor is the real treasure, and it's free. The walls are covered in murals painted in 1934 by dozens of artists put to work by a Depression-era government program. They show California labor — people in the fields, on the docks, in the factories — in a bold, social-realist style, and a few of the details were political enough to cause a small scandal when they were first unveiled. They're some of the finest public murals in the country, and most visitors march straight past them to the elevator.\n\n[beat]\n\nSo go up too, if you like — there's a small fee, and the view from the top is the whole bay at once, both bridges included. But take a second down here first.\n\nThink about what you just climbed through. A bookstore that fought for free speech, an Italian square with the wrong man on its statue, a staircase full of parrots and one woman's garden, and now a tower paid for by a firefighter-obsessed heiress and decorated by out-of-work painters. Not one piece of this was built by the people who usually get monuments. North Beach is a neighborhood that made its own landmarks, on its own terms, all the way up the hill — and you just climbed the whole story. Enjoy the view. You earned it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 585,
+      "walkingDistanceMeters": 1800,
+      "centroidLatitude": 37.8005,
+      "centroidLongitude": -122.40712,
+      "city": "San Francisco",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "north beach",
+        "little italy",
+        "the beats",
+        "city lights",
+        "telegraph hill",
+        "coit tower"
+      ],
+      "priceUSD": 0
     }
   ]
 }
