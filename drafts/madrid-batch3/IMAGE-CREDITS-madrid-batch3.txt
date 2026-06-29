@@ -1,0 +1,40 @@
+Madrid batch 3 — image credits / license log
+=============================================
+The app has NO attribution UI, so non-public-domain images need a credit record
+here. Most batch-3 images are ship-safe (Unsplash/Pexels — no attribution
+required) or owner-supplied. The following carry CC BY / CC BY-SA and require
+crediting the creator + license if ever surfaced.
+
+SHIP-SAFE (no attribution; not listed individually):
+  catedral-de-la-almudena_*  (Unsplash/Pexels)
+  plaza-de-oriente_*         (Unsplash/Pexels)
+  plaza-de-espana_*          (Unsplash/Pexels)
+  circulo-de-bellas-artes_*  (Unsplash/Pexels)
+  palacio-de-cristal_*       (Unsplash/Pexels/Pixabay)
+  fuente-de-neptuno_2.webp   (Unsplash — ship-safe)
+
+OWNER-SUPPLIED (owner's own images; ship as-is):
+  plaza-de-santa-ana_hero.webp   (García Lorca statue + ME Madrid hotel)
+  plaza-de-santa-ana_2.webp      (Teatro Español facade)
+
+CC BY-SA / CC BY — Wikimedia Commons (credit required):
+  fuente-de-neptuno_hero.webp
+      File: File:Fuente de Neptuno (Madrid) 09.jpg
+      Author: Luis García (Zaqarbal)
+      License: CC BY-SA 3.0
+      Source: https://commons.wikimedia.org/wiki/File:Fuente_de_Neptuno_(Madrid)_09.jpg
+  fuente-de-neptuno_3.webp
+      License: CC BY-SA 4.0
+      Source: Wikimedia Commons, Category:Fountain of Neptune, Madrid
+      (exact author to confirm from the file page in that category)
+  caixaforum-madrid_hero.webp
+      License: CC BY-SA 4.0
+      Source: Wikimedia Commons, Category:Plaza of the CaixaForum Madrid
+      (exact author to confirm from the file page in that category)
+  caixaforum-madrid_2.webp
+      License: CC BY-SA 4.0
+      Source: Wikimedia Commons, Category:Plaza of the CaixaForum Madrid
+      (exact author to confirm from the file page in that category)
+
+Owner OK'd CC BY-SA for Fuente de Neptuno + CaixaForum (2026-06-29) — these two
+subjects are thin in ship-safe stock libraries.
