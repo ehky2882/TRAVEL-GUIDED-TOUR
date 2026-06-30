@@ -66,6 +66,16 @@ final class AuthService {
         _ = try await client.auth.signIn(email: email, password: password)
     }
 
+    /// Sign in with Apple. The view performs the native `ASAuthorization` flow
+    /// (passing a SHA256-hashed nonce to Apple) and hands us the resulting
+    /// identity token plus the *raw* nonce; Supabase verifies the token's `iss`
+    /// against the configured Apple client IDs and the nonce against the hash.
+    func signInWithApple(idToken: String, nonce: String) async throws {
+        _ = try await client.auth.signInWithIdToken(
+            credentials: .init(provider: .apple, idToken: idToken, nonce: nonce)
+        )
+    }
+
     /// Sign out everywhere and clear the local session.
     func signOut() async throws {
         try await client.auth.signOut()
