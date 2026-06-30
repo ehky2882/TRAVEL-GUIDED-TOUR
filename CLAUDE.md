@@ -67,7 +67,16 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-06-27)
+## Current State (2026-06-30)
+
+### Tokyo launched — 63 tours + 7th maker Atlas Studio TYO (session 48 — web/PM, content)
+
+**[PR #280](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/280) (`4ab886a`, squash, auto-merged on CI green) launches Tokyo as the 7th city** under a new maker **Atlas Studio TYO** (`be5797bb-8d86-5b3f-99d4-09b2ffac65bd`, 🇯🇵). 63 single-stop, geofenced tours (30 m radius), bilingual `English | 日本語` titles on both tour + stop; owner-supplied audio + images (no image pipeline). **Catalog 406 → 469 tours / 6 → 7 makers / 521 stops; Tokyo = 63.** Validator PASS.
+
+- **Assets-first:** 63 mp3 + 215 webp staged to gh-pages under the lowercase-hyphen slug convention (`<slug>.mp3`, `<slug>_hero.webp`, `<slug>_2.webp`…), mirroring the SFO/HKG pattern; the Sumida Hokusai `.jpg.webp` double-extensions cleaned. Then the 63 entries were assembled into `Tours.json` on a worktree off `origin/main` via an idempotent assembler (deterministic uuid5 ids).
+- **Confirmed live:** after merge, the publish-catalog + Supabase auto-seed workflows ran; polled both live sources until the **Supabase `get_catalog` RPC and the gh-pages mirror each served 7 makers / 469 tours / Tokyo 63** (Supabase ~1 min, gh-pages mirror ~6 min CDN lag), sample asset URLs 200.
+- **3 source-data fixes (geocoded, flagged to owner):** Hōrin-ji folder coord was in **Kyoto** → re-geocoded to the Nichiren 法輪寺 in **Waseda** (`35.70729, 139.71889`); **Edo-Tokyo Open Air Museum** (no coord) → Koganei Park (`35.71637, 139.51274`); **Nanago-Dori Park Toilets** (no coord) → Hatagaya, Shibuya (`35.67902, 139.67477`). All 63 coords sanity-checked inside Greater Tokyo; no other outliers.
+- **Supplied/cleaned Japanese** for 9 folders that lacked it (21_21 DESIGN SIGHT · アサヒビールホール · 宮乃湯 · MoN高輪 · レフレクション・オブ・ミネラル · 渋谷アンティークマーケット · 渋谷スカイ · 新宿ゴールデン街 · 東京銀座資生堂ビル) + fixed a garbled Shibuya Crossing folder name → 渋谷スクランブル交差点. See `archive/HANDOFF-260630.md`.
 
 ### V2 Step 3 begun — auth foundation + email sign-in (session 47 — code)
 
@@ -140,7 +149,7 @@ Docs-only session: refreshed Current State to reality after the Hong Kong + Lond
 
 **Catalog now 362 tours / 5 makers / 381 stops / 4 multi-stop** (live-verified against `Resources/Tours.json`):
 - **NYC 100 · London (LDN) 97 · Lisbon (LIS) 66 · Porto (OPO) 54 · Hong Kong (HKG) 45.** Five cities. **Hong Kong is the newest** — an Asian flagship built 0 → 45 in a few days (PRs #226–#234).
-- **All 45 Hong Kong tours are bilingual** — `English | 中文` title format (both tour and stop titles).
+- **All 52 Hong Kong tours (`English | 中文`) and all 63 Tokyo tours (`English | 日本語`) are bilingual** — on both tour and stop titles.
 - **4 multi-stop tours:** AMNH Four Facades (5 stops, NYC), Fifth Avenue Walk (6, NYC), After the Fire: Wren's City (6, London), Albertopolis (6, London). The two London walks were wired + gallery-fixed during this growth (PRs #232/#233). 3 more London multi-stop walks are drafted on `claude/london-batch3-scripts-260616`, awaiting wiring.
 
 **Remote-catalog era (the workflow change that matters):** since build 46, content ships with **no app build** — PR #209 made the app fetch `Tours.json` from gh-pages at launch (bundled copy = offline seed), and PR #212 auto-publishes `Tours.json` → gh-pages on every content merge to `main`. **Net: merge a content PR → it goes live to build-46+ users with no rebuild and no App Store review.** Realistic latency ≈ **~5 min after merge + an app relaunch** (~1–2 min publish + GitHub Pages CDN propagation; the app shows its cached catalog first, then refreshes in the background — sometimes a second relaunch is needed). **TestFlight 1.0 (46) remains current and is the last content-driven build** — build bumps are now only needed for actual app-code changes (and still go via the short-lived-PR pattern, since the classifier blocks direct-to-main pbxproj pushes).
@@ -603,9 +612,9 @@ PR #61 (mini-player end-of-tour state — `c054a67`) shipped 2026-05-24 pm: kill
 **What's left:** owner-noted chrome shade-mismatch polish → M-qa multi-stop check (AMNH Four Facades on device) → broader design/polish pass.
 
 Key facts:
-- **362 tours, 5 makers, 381 stops** in `Resources/Tours.json` (100 Atlas Studio NYC + 97 Atlas Studio LDN + 66 Atlas Studio LIS + 54 Atlas Studio OPO + 45 Atlas Studio HKG); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
-- **358 single-stop + 4 multi-stop**: "American Museum of Natural History: Four Facades" (5 stops, NYC), "Fifth Avenue Walk" (6 stops, NYC), "After the Fire: Wren's City" (6 stops, London) and "Albertopolis" (6 stops, London) — all geofenced. AMNH unblocks M-qa items 6 + 7.
-- **All 45 Hong Kong (HKG) tours are bilingual** — `English | 中文` title format on both tour and stop titles.
+- **469 tours, 7 makers, 521 stops** in `Resources/Tours.json` (100 Atlas Studio NYC + 99 Atlas Studio LDN + 66 Atlas Studio LIS + 54 Atlas Studio OPO + 52 Atlas Studio HKG + 35 Atlas Studio SFO + 63 Atlas Studio TYO); audio on `gh-pages` at `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/<file>.mp3`. **The catalog is remote-loaded** via `RemoteCatalogLoader`: since **PR #255 (2026-06-27)** the primary source is the **Supabase `get_catalog` RPC** (project "Dozent"), with `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json` as a fallback mirror, then the on-disk cache, then the bundled offline seed. `.github/workflows/publish-catalog.yml` still auto-publishes the gh-pages mirror on every content merge to `main`; **but Supabase is now primary, so content changes must also reach the DB (rerun `backend/seed_from_toursjson.py`)** or the mirror could be newer than the live source. (Shipped in **TestFlight 1.0 (50)**, live 2026-06-27.)
+- **459 single-stop + 10 multi-stop** — the 4 named NYC/London walks ("American Museum of Natural History: Four Facades" (5 stops, NYC), "Fifth Avenue Walk" (6 stops, NYC), "After the Fire: Wren's City" (6 stops, London), "Albertopolis" (6 stops, London)) plus San Francisco's multi-stop walks — all geofenced. AMNH unblocks M-qa items 6 + 7.
+- **All 52 Hong Kong (HKG) tours (`English | 中文`) and all 63 Tokyo (TYO) tours (`English | 日本語`) are bilingual** — on both tour and stop titles.
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
