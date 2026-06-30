@@ -43,6 +43,7 @@ struct SignInView: View {
                     confirmationState(confirmationMessage)
                 } else {
                     appleButton
+                    googleButton
                     orDivider
                     formFields
                     if let errorMessage {
@@ -91,6 +92,25 @@ struct SignInView: View {
         .signInWithAppleButtonStyle(.whiteOutline)
         .frame(height: 48)
         .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+    }
+
+    private var googleButton: some View {
+        Button(action: signInGoogle) {
+            HStack(spacing: AtlasSpacing.sm) {
+                Spacer()
+                Image(systemName: "globe")
+                Text("Sign in with Google").bold()
+                Spacer()
+            }
+            .font(.system(size: 17))
+            .frame(height: 48)
+            .foregroundStyle(AtlasColors.primaryText)
+            .overlay(
+                RoundedRectangle(cornerRadius: AtlasSpacing.sm)
+                    .stroke(AtlasColors.primaryText, lineWidth: 1)
+            )
+        }
+        .disabled(isWorking)
     }
 
     private var orDivider: some View {
@@ -187,6 +207,27 @@ struct SignInView: View {
                     }
                 }
             } catch {
+                errorMessage = error.localizedDescription
+            }
+        }
+    }
+
+    private func signInGoogle() {
+        errorMessage = nil
+        isWorking = true
+        Task {
+            defer { isWorking = false }
+            do {
+                try await authService.signInWithGoogle()
+                dismiss()
+            } catch is CancellationError {
+                // User dismissed the web sheet — not an error.
+            } catch {
+                // ASWebAuthenticationSession cancellation also surfaces here.
+                let ns = error as NSError
+                if ns.domain == "com.apple.AuthenticationServices.WebAuthenticationSession" {
+                    return
+                }
                 errorMessage = error.localizedDescription
             }
         }

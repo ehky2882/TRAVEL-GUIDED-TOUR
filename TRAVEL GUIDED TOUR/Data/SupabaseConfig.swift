@@ -21,6 +21,12 @@ enum SupabaseConfig {
     /// Public anon/publishable key. Client-safe (RLS-gated). Not the secret key.
     static let anonKey = "sb_publishable_KRAiUnT3z6yjhvPmXO9CIQ_OKPdtdKf"
 
+    /// Deep-link the OAuth web flow (Google) redirects back to once the user has
+    /// authenticated. The `dozent` scheme is registered in `Info.plist`
+    /// (`CFBundleURLTypes`) and must also be added to the Supabase dashboard's
+    /// **Authentication → URL Configuration → Redirect URLs** allowlist.
+    static let oauthRedirectURL = URL(string: "dozent://login-callback")!
+
     /// The `get_catalog()` RPC endpoint that returns the full `{makers, tours}`
     /// document in the exact shape `ToursData` decodes.
     static var catalogRPCURL: URL {

@@ -76,6 +76,17 @@ final class AuthService {
         )
     }
 
+    /// Sign in with Google via the OAuth web flow. supabase-swift opens an
+    /// `ASWebAuthenticationSession` to Google, then completes the session when
+    /// Google redirects back to our `dozent://login-callback` deep link. No
+    /// Google SDK needed; the redirect URL must be allow-listed in Supabase.
+    func signInWithGoogle() async throws {
+        _ = try await client.auth.signInWithOAuth(
+            provider: .google,
+            redirectTo: SupabaseConfig.oauthRedirectURL
+        )
+    }
+
     /// Sign out everywhere and clear the local session.
     func signOut() async throws {
         try await client.auth.signOut()
