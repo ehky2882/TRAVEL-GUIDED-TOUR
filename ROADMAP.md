@@ -906,7 +906,7 @@ hosting) can follow.
 **A. App-side — needs a Mac / Xcode session (each gated by `test_sim` + simulator review)**
 - [x] Add `supabase-swift` (first third-party dependency) — **done, PR #262 (2026-06-27)**: SPM 2.48.0, app-target only; used by `AuthService` (the catalog read still uses its own `URLSession` fetcher)
 - [x] Point `RemoteCatalogLoader` at the `get_catalog` RPC (+ `apikey`/anon header) — **done, PR #255 (2026-06-27)**: Supabase-first with gh-pages fallback; `SupabaseCatalogFetcher` + `SupabaseConfig` (client-safe anon key). Live-verified 370 tours from Supabase in-sim
-- [~] Sign-in UI (Apple / email / Google) in the "Me" tab — **email done, PR #262**: `AuthService` + `SignInView` (sign-in/create/confirm), Me-tab account row + sign-out. **Apple + Google pending** (need their dev-console setup, hand-held)
+- [~] Sign-in UI (Apple / email / Google) in the "Me" tab — **email (PR #262) + Apple (PR #274, build 52, device-confirmed) done**: `AuthService` + `SignInView` (Apple button + email sign-in/create/confirm), Me-tab account row + sign-out. **Google pending** (needs a GCP OAuth client, hand-held)
 - [ ] Sync a signed-in user's library / saved makers / recents → the `user_*` tables
 - [ ] Maker authoring UI (`Features/Maker/`) — Phase 1 single-stop, then Phase 2 multi-stop
 - [ ] Wire the "Report a concern" overflow action → `reports` table
