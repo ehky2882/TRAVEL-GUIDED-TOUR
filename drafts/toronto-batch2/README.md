@@ -8,13 +8,13 @@ eyeball-verified by owner + montage spot-checks (not the AI gate).
 
 | # | Tour | slug | coord (lat, lon) | category | hero | gallery |
 |---|------|------|------------------|----------|------|---------|
-| 06 | Union Station | `union-station` | 43.6453, -79.3806 | culturalHeritage | US6 (facade) | 3 (_2 Great Hall US1, _3 platforms US3, _4 train-shed US5) |
+| 06 | Union Station | `union-station` | 43.6453, -79.3806 | culturalHeritage | owner colonnade | 4 (_2 owner facade, _3 Great Hall US1, _4 platforms US3, _5 train-shed US5) |
 | 07 | Financial District (TD Centre) | `financial-district` | 43.6480, -79.3812 | architecture | FD2 | 3 (_2 FD6, _3 FD7, _4 FD11) |
 | 08 | Hockey Hall of Fame | `hockey-hall-of-fame` | 43.6473, -79.3773 | culturalHeritage | HH6 (building) | 3 (_2 NHL Zone, _3 Stanley Cup wall, _4 goalie mask) |
 | 09 | St. Lawrence Market | `st-lawrence-market` | 43.6487, -79.3716 | foodAndDrink | SL4 | 5 (_2..._6) |
 
 **Image pick map (owner, 2026-06-30):**
-- Union Station — hero US6 (facade, ship-safe); gallery US1, US3, US5 (all ship-safe)
+- Union Station — hero owner-supplied (colonnade); gallery owner-supplied (facade) + US1, US3, US5 (US shots ship-safe)
 - Financial District — hero FD2; gallery FD6, FD7, FD11 (ship-safe)
 - Hockey Hall of Fame — hero HH6 (building, ship-safe); gallery IN5, IN1, IN6 (Wikimedia)
 - St. Lawrence Market — hero SL4; gallery SL2, SL1, SL6, SL9, SL14 (ship-safe)
