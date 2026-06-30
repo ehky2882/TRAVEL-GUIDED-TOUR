@@ -6,8 +6,21 @@ final class LibraryStore {
     private static let storageKey = "atlas_library"
     private(set) var entries: [LibraryEntry] = []
 
+    /// Fired after any local mutation persists. `SyncService` sets this to
+    /// write the change through to Supabase when a user is signed in. `nil`
+    /// (anonymous) → purely on-device, exactly as before.
+    @ObservationIgnored var onChange: (() -> Void)?
+
     init() {
         loadEntries()
+    }
+
+    /// Replace the full entry set from a sign-in merge and persist, WITHOUT
+    /// firing `onChange` (the sync service pushes the merged state explicitly,
+    /// so we must not trigger a redundant write-through here).
+    func applyMerged(_ newEntries: [LibraryEntry]) {
+        entries = newEntries
+        persist()
     }
 
     func entry(for tourId: UUID) -> LibraryEntry? {
@@ -72,6 +85,11 @@ final class LibraryStore {
     }
 
     private func save() {
+        persist()
+        onChange?()
+    }
+
+    private func persist() {
         if let data = try? JSONEncoder().encode(entries) {
             UserDefaults.standard.set(data, forKey: Self.storageKey)
         }

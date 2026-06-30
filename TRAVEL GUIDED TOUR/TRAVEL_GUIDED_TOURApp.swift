@@ -56,6 +56,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// tour-detail sheet's stack, the player window) and the Library
     /// tab all read + mutate the same instance.
     @State private var savedMakersStore = SavedMakersStore()
+    /// Created once content appears (so it can capture the auth + store
+    /// instances). Syncs a signed-in user's library + saved makers to Supabase;
+    /// retained here for the app's lifetime. See `Data/SyncService.swift`.
+    @State private var syncService: SyncService?
     /// Holds the secondary `UIWindow` that renders the mini-player
     /// + tab bar above any UIKit modal presented in the main
     /// window. Installed once on first appearance.
@@ -96,6 +100,19 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(navState)
                     .environment(savedMakersStore)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
+                    .task {
+                        // Wire up library/saved-makers sync once. Created here
+                        // (not as an inline @State default) so it captures the
+                        // live auth + store instances; it sets the stores'
+                        // write-through hooks and runs the sign-in merge.
+                        if syncService == nil {
+                            syncService = SyncService(
+                                auth: authService,
+                                library: libraryStore,
+                                savedMakers: savedMakersStore
+                            )
+                        }
+                    }
                     .onChange(of: scenePhase) { _, phase in
                         // Returning to the foreground re-pulls the catalog so a
                         // plain relaunch picks up new content. DataService
