@@ -109,7 +109,8 @@ struct TRAVEL_GUIDED_TOURApp: App {
                             syncService = SyncService(
                                 auth: authService,
                                 library: libraryStore,
-                                savedMakers: savedMakersStore
+                                savedMakers: savedMakersStore,
+                                recentlyViewed: recentlyViewed
                             )
                         }
                         // Record listening progress on every pause/end/stop,

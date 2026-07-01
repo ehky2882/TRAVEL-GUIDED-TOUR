@@ -20,6 +20,9 @@ final class SyncServiceMergeTests: XCTestCase {
     private func remoteMaker(_ entry: SavedMakerEntry) -> UserSavedMakerRow {
         UserSavedMakerRow(entry: entry, userId: userId)
     }
+    private func remoteViewed(_ entry: RecentlyViewedEntry) -> UserRecentlyViewedRow {
+        UserRecentlyViewedRow(entry: entry, userId: userId)
+    }
 
     // MARK: - Library
 
@@ -92,5 +95,24 @@ final class SyncServiceMergeTests: XCTestCase {
         XCTAssertEqual(Set(merged.map(\.makerId)), [makerX, makerY])
         XCTAssertEqual(merged.first(where: { $0.makerId == makerX })?.savedAt, early,
                        "Keeps the earliest known save time")
+    }
+
+    // MARK: - Recently viewed
+
+    func test_mergeRecentlyViewed_unionsAndKeepsLatestViewedAt() {
+        let early = Date(timeIntervalSince1970: 1000)
+        let late = Date(timeIntervalSince1970: 2000)
+        // tourA viewed locally more recently; tourB only on the remote device.
+        let local = [RecentlyViewedEntry(tourId: tourA, viewedAt: late)]
+        let remote = [
+            remoteViewed(RecentlyViewedEntry(tourId: tourA, viewedAt: early)),
+            remoteViewed(RecentlyViewedEntry(tourId: tourB, viewedAt: late))
+        ]
+
+        let merged = SyncService.mergeRecentlyViewed(local: local, remote: remote)
+
+        XCTAssertEqual(Set(merged.map(\.tourId)), [tourA, tourB])
+        XCTAssertEqual(merged.first(where: { $0.tourId == tourA })?.viewedAt, late,
+                       "Keeps the most recent view time across devices")
     }
 }
