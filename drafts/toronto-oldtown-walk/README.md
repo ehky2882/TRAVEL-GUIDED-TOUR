@@ -18,7 +18,7 @@ Toronto wire-in).
 | 0 | Intro — Old Town | — (no image; narration only) | 43.6453, -79.3806 (at Union Station) | manual |
 | 1 | Union Station | `union-station` | 43.6453, -79.3806 | geofenced |
 | 2 | Gooderham Flatiron + Berczy Park | `gooderham-building` (+ `berczy-park`) | 43.6479, -79.3745 | geofenced |
-| 3 | St. James Cathedral | `st-james-cathedral` (**new — SJ11**) | 43.6503, -79.3739 | geofenced |
+| 3 | St. James Cathedral | `st-james-cathedral` (**new — owner-supplied**) | 43.6503, -79.3739 | geofenced |
 | 4 | St. Lawrence Market | `st-lawrence-market` | 43.6488, -79.3715 | geofenced |
 | 5 | Distillery District | `distillery-district` | 43.6503, -79.3599 | geofenced |
 
@@ -27,10 +27,10 @@ Toronto wire-in).
 - **Per-stop `additionalImageURLs`** reuse the existing single-stop heroes already live on gh-pages — **no re-upload needed** except St. James:
   - stop 1 → `union-station_hero.webp`
   - stop 2 → `gooderham-building_hero.webp` (Berczy Park's dog fountain also available at `berczy-park_hero.webp`)
-  - stop 3 → `st-james-cathedral_hero.webp` (**NEW this session** — SJ11, ship-safe Unsplash/Pexels)
+  - stop 3 → `st-james-cathedral_hero.webp` (**NEW this session** — owner-supplied shot: full spire + King/Church intersection; ship-safe)
   - stop 4 → `st-lawrence-market_hero.webp`
   - stop 5 → `distillery-district_hero.webp`
-- **Efficiency note:** because 4 of 5 stops are already single-stop tours in the catalog, this walk mostly *reuses* their imagery. Only St. James Cathedral was newly sourced. All reused images are ship-safe/owner; St. James is ship-safe. **No new credits required for this walk.**
+- **Efficiency note:** because 4 of 5 stops are already single-stop tours in the catalog, this walk mostly *reuses* their imagery. Only St. James Cathedral was newly added (owner-supplied). All reused images are ship-safe/owner; St. James is owner-supplied. **No new credits required for this walk.**
 
 ## Narrative callbacks
 The walk is self-referential by design: the Gooderham Flatiron (stop 2) is set up as
