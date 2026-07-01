@@ -59,6 +59,13 @@ final class SyncService {
         savedMakers.onChange = { [weak self] in self?.scheduleMakersPush() }
         recentlyViewed.onChange = { [weak self] in self?.scheduleRecentlyViewedPush() }
 
+        // Flush any pending debounced write-through before a sign-out tears down
+        // the session. Without this, a save/un-save made within the 2s debounce
+        // window is cancelled by `handleSignedOut` and never reaches Supabase —
+        // so it resurrects on the next sign-in via the additive merge. `[weak
+        // self]` keeps this closure (retained by `auth`) from retaining us back.
+        auth.preSignOut = { [weak self] in await self?.flushPendingWrites() }
+
         observeAuth()
         // A restored session (signed in at launch) won't fire an auth change,
         // so kick the initial sync directly if we're already signed in.
@@ -96,6 +103,27 @@ final class SyncService {
         library.applyMerged([])
         savedMakers.applyMerged([])
         recentlyViewed.applyMerged([])
+    }
+
+    // MARK: - Flush (pre-sign-out)
+
+    /// Immediately push the current signed-in state to Supabase, awaiting the
+    /// network write, and cancel the pending debounce Tasks so they don't
+    /// double-fire. Called from `AuthService`'s `preSignOut` hook — i.e. *before*
+    /// `client.auth.signOut()` clears the session — because once signed out
+    /// `auth.user` is nil and every `push*` no-ops on its `guard let uid`. This
+    /// is what makes a save/un-save made within the 2s debounce window survive an
+    /// immediate sign-out (otherwise `handleSignedOut` just cancels the pending
+    /// push). Best-effort: each push's error is swallowed so an offline sign-out
+    /// isn't blocked; when online the writes complete before the session ends.
+    func flushPendingWrites() async {
+        libraryPushTask?.cancel()
+        makersPushTask?.cancel()
+        recentlyViewedPushTask?.cancel()
+        guard auth.isSignedIn else { return }
+        try? await pushLibrary()
+        try? await pushMakers()
+        try? await pushRecentlyViewed()
     }
 
     // MARK: - Initial sign-in sync (pull → merge → push)

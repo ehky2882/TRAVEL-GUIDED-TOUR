@@ -30,6 +30,16 @@ final class AuthService {
     var isSignedIn: Bool { user != nil }
     var email: String? { user?.email }
 
+    /// Async hook invoked *before* the session is torn down in `signOut()`,
+    /// while the access token (and `user`) are still valid. `SyncService`
+    /// registers this to flush any pending debounced write-through — a
+    /// save/un-save made within the 2s debounce window — up to Supabase, so a
+    /// sign-out immediately after a change can't strand it locally (which would
+    /// otherwise "resurrect" the change on next sign-in via the additive merge).
+    /// Stored as a plain closure; `SyncService` captures itself weakly, so this
+    /// creates no retain cycle even though `SyncService` holds `AuthService`.
+    var preSignOut: (() async -> Void)?
+
     private let client: SupabaseClient
     private var observation: Task<Void, Never>?
 
@@ -88,7 +98,15 @@ final class AuthService {
     }
 
     /// Sign out everywhere and clear the local session.
+    ///
+    /// Flushes any pending local writes (`preSignOut`) *first*, while the token
+    /// and `user` id are still valid — `client.auth.signOut()` clears them, and
+    /// `SyncService.handleSignedOut` (which then runs off the auth-state change)
+    /// sees a nil user and can no longer push. So the flush must happen here,
+    /// before the session ends. Best-effort: the hook swallows its own errors,
+    /// so an offline flush never blocks sign-out.
     func signOut() async throws {
+        await preSignOut?()
         try await client.auth.signOut()
     }
 }
