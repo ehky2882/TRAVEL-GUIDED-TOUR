@@ -28,6 +28,10 @@ struct ReportsService {
             reason: reason,
             details: (trimmed?.isEmpty ?? true) ? nil : trimmed
         )
-        try await client.from("reports").insert(row).execute()
+        // `returning: .minimal` is essential: `reports` is admin-read-only, so a
+        // read-back (the default `return=representation`) would trip the SELECT
+        // RLS policy and fail the whole insert for a non-admin reporter. We don't
+        // need the row back anyway.
+        try await client.from("reports").insert(row, returning: .minimal).execute()
     }
 }
