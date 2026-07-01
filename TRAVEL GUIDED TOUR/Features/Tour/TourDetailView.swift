@@ -37,8 +37,8 @@ import MapKit
 ///   - Download → state-aware (idle / downloading / completed / failed),
 ///     gated when another tour is mid-download.
 ///   - Share → `ShareLink` with the tour title + maker line.
-///   - Report a concern → `mailto:` to owner inbox prefilled with tour
-///     title + ID.
+///   - Report a concern → presents `ReportSheet` (reason + details →
+///     Supabase `reports` table; no email address ships in the app).
 ///   - Go to creator → in-stack `NavigationLink` to MakerView, same
 ///     destination as tapping the inline maker row.
 struct TourDetailView: View {
@@ -66,6 +66,7 @@ struct TourDetailView: View {
     /// content closure (iOS would render it as a plain row that
     /// doesn't push), so we drive it through `.navigationDestination`.
     @State private var showingMaker = false
+    @State private var showingReport = false
 
     /// Toggles between the truncated 4-line preview of `longDescription`
     /// and the full text. Apple Music / Podcasts pattern — keeps the
@@ -116,6 +117,9 @@ struct TourDetailView: View {
             if let maker = dataService.maker(for: tour) {
                 MakerView(maker: maker)
             }
+        }
+        .sheet(isPresented: $showingReport) {
+            ReportSheet(target: .tour(tour))
         }
         .onAppear {
             navState.push()
@@ -1063,7 +1067,7 @@ struct TourDetailView: View {
     ///      slot is visible and the feature reads as "planned" rather
     ///      than missing.
     ///   5. Go to creator — pushes MakerView via `.navigationDestination`.
-    ///   6. Report a concern — `mailto:` to owner inbox.
+    ///   6. Report a concern — presents `ReportSheet` (writes to `reports`).
     @ViewBuilder
     private var overflowMenu: some View {
         Menu {
@@ -1102,9 +1106,7 @@ struct TourDetailView: View {
 
             Section {
                 Button(role: .destructive) {
-                    if let url = reportURL {
-                        openURL(url)
-                    }
+                    showingReport = true
                 } label: {
                     Label("Report a concern", systemImage: "exclamationmark.bubble")
                 }
@@ -1166,29 +1168,6 @@ struct TourDetailView: View {
             return "\(tour.title) — by \(maker.displayName) on Atlas"
         }
         return "\(tour.title) on Atlas"
-    }
-
-    /// `mailto:` URL for the Report a concern menu item. Owner is sole
-    /// recipient for V1 (no moderation backend yet). Subject + body
-    /// are URL-encoded; tour ID lets the owner trace the report.
-    private var reportURL: URL? {
-        let to = "eyung@tishman.com"
-        let subject = "Atlas — report concern: \(tour.title)"
-        let body = """
-            Tour: \(tour.title)
-            Tour ID: \(tour.id.uuidString)
-
-            Concern:
-
-            """
-        var components = URLComponents()
-        components.scheme = "mailto"
-        components.path = to
-        components.queryItems = [
-            URLQueryItem(name: "subject", value: subject),
-            URLQueryItem(name: "body", value: body)
-        ]
-        return components.url
     }
 
     // MARK: - Actions

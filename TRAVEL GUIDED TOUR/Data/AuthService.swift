@@ -29,6 +29,9 @@ final class AuthService {
 
     var isSignedIn: Bool { user != nil }
     var email: String? { user?.email }
+    /// The signed-in user's id as a plain `UUID` (nil when anonymous). Lets
+    /// views reference it without importing the Supabase module.
+    var userId: UUID? { user?.id }
 
     /// Async hook invoked *before* the session is torn down in `signOut()`,
     /// while the access token (and `user`) are still valid. `SyncService`
