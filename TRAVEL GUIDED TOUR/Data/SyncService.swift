@@ -26,6 +26,7 @@ final class SyncService {
     private let auth: AuthService
     private let library: LibraryStore
     private let savedMakers: SavedMakersStore
+    private let recentlyViewed: RecentlyViewedStore
     private let client: SupabaseClient
 
     /// Debounce window for write-through pushes — coalesces rapid changes
@@ -38,21 +39,25 @@ final class SyncService {
     private var isInitialSyncing = false
     private var libraryPushTask: Task<Void, Never>?
     private var makersPushTask: Task<Void, Never>?
+    private var recentlyViewedPushTask: Task<Void, Never>?
 
     init(auth: AuthService,
          library: LibraryStore,
          savedMakers: SavedMakersStore,
+         recentlyViewed: RecentlyViewedStore,
          client: SupabaseClient = SupabaseClientProvider.shared,
          pushDebounce: Duration = .seconds(2)) {
         self.auth = auth
         self.library = library
         self.savedMakers = savedMakers
+        self.recentlyViewed = recentlyViewed
         self.client = client
         self.pushDebounce = pushDebounce
 
         // Write-through hooks: a local change, while signed in, pushes up.
         library.onChange = { [weak self] in self?.scheduleLibraryPush() }
         savedMakers.onChange = { [weak self] in self?.scheduleMakersPush() }
+        recentlyViewed.onChange = { [weak self] in self?.scheduleRecentlyViewedPush() }
 
         observeAuth()
         // A restored session (signed in at launch) won't fire an auth change,
@@ -87,8 +92,10 @@ final class SyncService {
     private func handleSignedOut() {
         libraryPushTask?.cancel()
         makersPushTask?.cancel()
+        recentlyViewedPushTask?.cancel()
         library.applyMerged([])
         savedMakers.applyMerged([])
+        recentlyViewed.applyMerged([])
     }
 
     // MARK: - Initial sign-in sync (pull → merge → push)
@@ -103,12 +110,16 @@ final class SyncService {
                 try await client.from("user_library").select().execute().value
             let remoteMakers: [UserSavedMakerRow] =
                 try await client.from("user_saved_makers").select().execute().value
+            let remoteViewed: [UserRecentlyViewedRow] =
+                try await client.from("user_recently_viewed").select().execute().value
 
             library.applyMerged(Self.mergeLibrary(local: library.entries, remote: remoteLibrary))
             savedMakers.applyMerged(Self.mergeSavedMakers(local: savedMakers.entries, remote: remoteMakers))
+            recentlyViewed.applyMerged(Self.mergeRecentlyViewed(local: recentlyViewed.entries, remote: remoteViewed))
 
             try await pushLibrary()
             try await pushMakers()
+            try await pushRecentlyViewed()
         } catch {
             // Best-effort: a failed sync leaves the local stores intact and the
             // user fully functional offline. The next change (or next sign-in)
@@ -135,6 +146,16 @@ final class SyncService {
             try? await Task.sleep(for: pushDebounce)
             guard !Task.isCancelled, let self else { return }
             try? await self.pushMakers()
+        }
+    }
+
+    private func scheduleRecentlyViewedPush() {
+        guard auth.isSignedIn, !isInitialSyncing else { return }
+        recentlyViewedPushTask?.cancel()
+        recentlyViewedPushTask = Task { [weak self, pushDebounce] in
+            try? await Task.sleep(for: pushDebounce)
+            guard !Task.isCancelled, let self else { return }
+            try? await self.pushRecentlyViewed()
         }
     }
 
@@ -167,6 +188,21 @@ final class SyncService {
         try await client.from("user_saved_makers").delete()
             .eq("user_id", value: uid)
             .not("maker_id", operator: .in, value: "(\(keep))")
+            .execute()
+    }
+
+    private func pushRecentlyViewed() async throws {
+        guard let uid = auth.user?.id.uuidString.lowercased() else { return }
+        let rows = recentlyViewed.entries.map { UserRecentlyViewedRow(entry: $0, userId: uid) }
+        if rows.isEmpty {
+            try await client.from("user_recently_viewed").delete().eq("user_id", value: uid).execute()
+            return
+        }
+        try await client.from("user_recently_viewed").upsert(rows, onConflict: "user_id,tour_id").execute()
+        let keep = rows.map(\.tourId).joined(separator: ",")
+        try await client.from("user_recently_viewed").delete()
+            .eq("user_id", value: uid)
+            .not("tour_id", operator: .in, value: "(\(keep))")
             .execute()
     }
 
@@ -213,6 +249,22 @@ final class SyncService {
                 byId[mid] = SavedMakerEntry(makerId: mid, savedAt: min(local.savedAt, row.savedAt))
             } else {
                 byId[mid] = SavedMakerEntry(makerId: mid, savedAt: row.savedAt)
+            }
+        }
+        return Array(byId.values)
+    }
+
+    /// Union local + remote recently-viewed, keeping the latest `viewedAt` per
+    /// tour. Sorting/capping is applied by `RecentlyViewedStore.applyMerged`.
+    nonisolated static func mergeRecentlyViewed(local: [RecentlyViewedEntry], remote: [UserRecentlyViewedRow]) -> [RecentlyViewedEntry] {
+        var byId: [UUID: RecentlyViewedEntry] = [:]
+        for entry in local { byId[entry.tourId] = entry }
+        for row in remote {
+            guard let tid = UUID(uuidString: row.tourId) else { continue }
+            if let local = byId[tid] {
+                byId[tid] = RecentlyViewedEntry(tourId: tid, viewedAt: Swift.max(local.viewedAt, row.viewedAt))
+            } else {
+                byId[tid] = RecentlyViewedEntry(tourId: tid, viewedAt: row.viewedAt)
             }
         }
         return Array(byId.values)
@@ -277,5 +329,24 @@ struct UserSavedMakerRow: Codable {
         self.userId = userId
         self.makerId = entry.makerId.uuidString.lowercased()
         self.savedAt = entry.savedAt
+    }
+}
+
+/// Mirrors a `public.user_recently_viewed` row.
+struct UserRecentlyViewedRow: Codable {
+    let userId: String
+    let tourId: String
+    let viewedAt: Date
+
+    enum CodingKeys: String, CodingKey {
+        case userId = "user_id"
+        case tourId = "tour_id"
+        case viewedAt = "viewed_at"
+    }
+
+    init(entry: RecentlyViewedEntry, userId: String) {
+        self.userId = userId
+        self.tourId = entry.tourId.uuidString.lowercased()
+        self.viewedAt = entry.viewedAt
     }
 }
