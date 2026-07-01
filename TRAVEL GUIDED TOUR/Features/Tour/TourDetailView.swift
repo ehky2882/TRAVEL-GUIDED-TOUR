@@ -1083,7 +1083,11 @@ struct TourDetailView: View {
                 )
             }
 
-            ShareLink(item: shareText, subject: Text(tour.title)) {
+            ShareLink(
+                item: AtlasShareLink.tourURL(for: tour),
+                subject: Text(tour.title),
+                message: Text(shareText)
+            ) {
                 Label("Share", systemImage: "square.and.arrow.up")
             }
 
@@ -1159,10 +1163,9 @@ struct TourDetailView: View {
             && tourDownloader.activeTourId != tour.id
     }
 
-    /// Plain-text payload for `ShareLink`. V1 has no public web
-    /// presence yet so we share a tour-identifying string rather than
-    /// a deep link — the design pass / launch can swap this for a
-    /// universal link without changing the UI.
+    /// Accompanying message text for `ShareLink`. The shared *item* is the
+    /// tour's https Universal Link (`AtlasShareLink.tourURL`) — this line rides
+    /// alongside it to give the recipient context.
     private var shareText: String {
         if let maker = dataService.maker(for: tour) {
             return "\(tour.title) — by \(maker.displayName) on Atlas"

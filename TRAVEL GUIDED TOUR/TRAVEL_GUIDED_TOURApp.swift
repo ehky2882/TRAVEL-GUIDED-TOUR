@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 @main
 struct TRAVEL_GUIDED_TOURApp: App {
@@ -65,6 +66,9 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// window. Installed once on first appearance.
     @State private var bottomModuleWindow = BottomModuleWindowController()
     @State private var isLoading = true
+    /// A tour deep link that arrived during the launch splash (cold launch),
+    /// held until `ContentView` — which hosts the detail presenter — is mounted.
+    @State private var pendingDeepLink: DeepLink?
     /// Mirrors the `@AppStorage` key used by SettingsView's Appearance
     /// picker. Wired here so `.preferredColorScheme` applies app-wide.
     @AppStorage("colorSchemePreference") private var colorSchemePreference: ColorSchemePreference = .system
@@ -84,6 +88,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
                             }
                         }
                     }
+                    // A link that opens the app cold arrives during the splash;
+                    // capture it here so it isn't dropped before ContentView mounts.
+                    .onOpenURL(perform: handleDeepLink)
+                    .onContinueUserActivity(NSUserActivityTypeBrowsingWeb, perform: handleUserActivity)
             } else {
                 ContentView()
                     .environment(dataService)
@@ -124,6 +132,15 @@ struct TRAVEL_GUIDED_TOURApp: App {
                                 listenedSeconds: seconds,
                                 completed: completed
                             )
+                        }
+                        // Present a deep link captured during the launch splash,
+                        // now that ContentView (and its UIKit bottom-layer
+                        // presenter) is on screen. The brief pause lets the
+                        // presenter settle before we drive it.
+                        if let link = pendingDeepLink {
+                            pendingDeepLink = nil
+                            try? await Task.sleep(for: .milliseconds(350))
+                            present(link)
                         }
                     }
                     .onChange(of: scenePhase) { _, phase in
@@ -185,11 +202,49 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .onChange(of: colorSchemePreference) { _, newValue in
                         bottomModuleWindow.apply(preference: newValue)
                     }
+                    // Deep links while the app is already running route straight
+                    // through (catalog is in memory; ContentView is mounted).
+                    .onOpenURL(perform: handleDeepLink)
+                    .onContinueUserActivity(NSUserActivityTypeBrowsingWeb, perform: handleUserActivity)
                     // NOTE: the full player is presented from within the
                     // bottom-module window itself (see `BottomModuleRoot`),
                     // so there's no longer any need to hide/show that
                     // window while the player is up — the cover slides
                     // over the module in the same window.
+            }
+        }
+    }
+
+    // MARK: - Deep linking
+
+    /// Universal Links (`applinks:` https) are delivered as a browsing user
+    /// activity; unwrap the URL and route it like any other deep link.
+    private func handleUserActivity(_ activity: NSUserActivity) {
+        guard activity.activityType == NSUserActivityTypeBrowsingWeb,
+              let url = activity.webpageURL else { return }
+        handleDeepLink(url)
+    }
+
+    /// Entry point for both Universal Links and the `dozent://` custom scheme.
+    /// Parses the URL; presents immediately when running, or stashes it for
+    /// after the launch splash on a cold start. Unrecognized URLs are ignored.
+    private func handleDeepLink(_ url: URL) {
+        guard let link = DeepLinkParser.parse(url) else { return }
+        if isLoading {
+            pendingDeepLink = link
+        } else {
+            present(link)
+        }
+    }
+
+    /// Resolves a parsed link against the loaded catalog and presents it via the
+    /// shared `TourPresenter`. An unknown/invalid id is a no-op — the app just
+    /// opens to Home rather than crashing.
+    private func present(_ link: DeepLink) {
+        switch link {
+        case .tour(let id):
+            if let tour = dataService.tour(by: id) {
+                tourPresenter.present(tour)
             }
         }
     }

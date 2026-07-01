@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["CPC7M72JTP.com.ehky.TRAVEL-GUIDED-TOUR"],
+        "components": [
+          {
+            "/": "/TRAVEL-GUIDED-TOUR/t/*",
+            "comment": "Atlas tour share links open in the app"
+          }
+        ]
+      }
+    ]
+  }
+}
