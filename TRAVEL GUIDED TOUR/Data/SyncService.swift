@@ -339,6 +339,27 @@ struct UserLibraryRow: Codable {
         self.lastListenedAt = entry.lastListenedAt
         self.completedAt = entry.completedAt
     }
+
+    /// Encode the nullable columns as explicit JSON `null` (not omitted).
+    ///
+    /// This is load-bearing for **un-save**: `LibraryStore.toggleSaved` clears
+    /// `savedAt` to nil but KEEPS the entry (it may still hold progress), so the
+    /// row is `upsert`ed — not deleted — on the next push. Swift's *synthesized*
+    /// `Encodable` drops nil optionals (`encodeIfPresent`), so `saved_at` would
+    /// be absent from the payload, and PostgREST's `ON CONFLICT DO UPDATE` then
+    /// leaves the existing column value untouched — the row stays "saved"
+    /// remotely and the tour resurrects on the next sign-in merge. Emitting an
+    /// explicit `null` forces the upsert to actually clear the column.
+    func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: CodingKeys.self)
+        try c.encode(userId, forKey: .userId)
+        try c.encode(tourId, forKey: .tourId)
+        try c.encode(savedAt, forKey: .savedAt)
+        try c.encode(downloadedAt, forKey: .downloadedAt)
+        try c.encode(listenedSeconds, forKey: .listenedSeconds)
+        try c.encode(lastListenedAt, forKey: .lastListenedAt)
+        try c.encode(completedAt, forKey: .completedAt)
+    }
 }
 
 /// Mirrors a `public.user_saved_makers` row.

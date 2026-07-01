@@ -115,4 +115,32 @@ final class SyncServiceMergeTests: XCTestCase {
         XCTAssertEqual(merged.first(where: { $0.tourId == tourA })?.viewedAt, late,
                        "Keeps the most recent view time across devices")
     }
+
+    // MARK: - Row encoding (write-through payload)
+
+    /// Regression for the un-save resurrection bug: an un-saved tour keeps its
+    /// library entry with `savedAt == nil` and is *upserted* (not deleted). The
+    /// upsert payload MUST carry an explicit `"saved_at": null` — if the field
+    /// is omitted (Swift's default `encodeIfPresent` behaviour), PostgREST's
+    /// `ON CONFLICT DO UPDATE` leaves the old value in place and the tour stays
+    /// saved remotely, resurrecting on the next sign-in.
+    func test_libraryRow_encodesNilOptionalsAsExplicitNull() throws {
+        let row = UserLibraryRow(
+            entry: LibraryEntry(tourId: tourA, savedAt: nil, listenedSeconds: 30),
+            userId: userId
+        )
+        let data = try JSONEncoder().encode(row)
+        let json = try XCTUnwrap(
+            JSONSerialization.jsonObject(with: data) as? [String: Any]
+        )
+
+        // The keys must be present with NSNull values, not absent.
+        XCTAssertTrue(json.keys.contains("saved_at"), "saved_at must be sent so the upsert can clear it")
+        XCTAssertTrue(json["saved_at"] is NSNull, "saved_at must be explicit null when un-saved")
+        XCTAssertTrue(json["downloaded_at"] is NSNull)
+        XCTAssertTrue(json["last_listened_at"] is NSNull)
+        XCTAssertTrue(json["completed_at"] is NSNull)
+        // Non-nil fields still round-trip normally.
+        XCTAssertEqual(json["listened_seconds"] as? Int, 30)
+    }
 }
