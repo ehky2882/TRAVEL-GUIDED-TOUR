@@ -112,6 +112,18 @@ struct TRAVEL_GUIDED_TOURApp: App {
                                 savedMakers: savedMakersStore
                             )
                         }
+                        // Record listening progress on every pause/end/stop,
+                        // regardless of which player UI is showing, so the
+                        // Library "Recents" list always updates (it used to be
+                        // recorded only inside the full-screen player).
+                        audioPlayer.onProgressCheckpoint = { sourceId, seconds, completed in
+                            guard let tourId = UUID(uuidString: sourceId) else { return }
+                            libraryStore.updateProgress(
+                                tourId,
+                                listenedSeconds: seconds,
+                                completed: completed
+                            )
+                        }
                     }
                     .onChange(of: scenePhase) { _, phase in
                         // Returning to the foreground re-pulls the catalog so a
