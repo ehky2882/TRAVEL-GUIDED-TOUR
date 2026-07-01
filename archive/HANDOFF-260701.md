@@ -2,7 +2,7 @@
 
 ## Headline
 
-**Fixed the owner's real-device sync bug: while signed in, un-saving a tour then signing out and back in used to resurrect the tour in Saved.** Two PRs (#291 then the real fix #294) + **TestFlight 1.0 (58)** archived. Pending owner Organizer upload + device retest.
+**Fixed the owner's real-device sync bug: while signed in, un-saving a tour then signing out and back in used to resurrect the tour in Saved.** Two PRs (#291 then the real fix #294) + **TestFlight 1.0 (58)** — live and **owner-confirmed fixed on device 2026-07-01**.
 
 ## What happened, in order
 
