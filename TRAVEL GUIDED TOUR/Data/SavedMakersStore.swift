@@ -17,8 +17,19 @@ final class SavedMakersStore {
 
     private(set) var entries: [SavedMakerEntry] = []
 
+    /// Fired after any local mutation persists. `SyncService` uses this to
+    /// write changes through to Supabase when signed in. `nil` → on-device only.
+    @ObservationIgnored var onChange: (() -> Void)?
+
     init() {
         load()
+    }
+
+    /// Replace the full set from a sign-in merge and persist, WITHOUT firing
+    /// `onChange` (the sync service pushes the merged state explicitly).
+    func applyMerged(_ newEntries: [SavedMakerEntry]) {
+        entries = newEntries
+        persist()
     }
 
     /// Saved makers, most-recently-saved first (matches the ordering
@@ -41,6 +52,11 @@ final class SavedMakersStore {
     }
 
     private func save() {
+        persist()
+        onChange?()
+    }
+
+    private func persist() {
         if let data = try? JSONEncoder().encode(entries) {
             UserDefaults.standard.set(data, forKey: Self.storageKey)
         }
