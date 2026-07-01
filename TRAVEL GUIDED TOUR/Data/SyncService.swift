@@ -72,10 +72,23 @@ final class SyncService {
                 guard let self else { return }
                 if self.auth.isSignedIn {
                     await self.initialSync()
+                } else {
+                    self.handleSignedOut()
                 }
                 self.observeAuth() // re-arm for the next change
             }
         }
+    }
+
+    /// On sign-out, clear this account's data from the device. It stays safe in
+    /// Supabase (signing back in restores it via `initialSync`), so this is a
+    /// LOCAL-only wipe — no remote delete. `applyMerged` persists without firing
+    /// the write-through hook, and a signed-out session no-ops any pending push.
+    private func handleSignedOut() {
+        libraryPushTask?.cancel()
+        makersPushTask?.cancel()
+        library.applyMerged([])
+        savedMakers.applyMerged([])
     }
 
     // MARK: - Initial sign-in sync (pull → merge → push)
