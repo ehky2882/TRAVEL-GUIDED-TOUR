@@ -95,21 +95,10 @@ struct PlayerView: View {
             startGeofenceMonitoringIfNeeded()
         }
         .onChange(of: audioPlayer.state, initial: false) { _, newState in
-            // Persist progress to the LibraryStore at meaningful state
-            // transitions. Writing on every periodic-time observation
-            // would be too chatty — pause/end is the natural checkpoint.
-            // V1 simplification: listenedSeconds reflects position within
-            // the *current item* (intro or stop), not aggregated progress
-            // across the whole tour. The "Recently played" rail only
-            // needs `> 0` to surface, so this is functionally enough.
-            // M-launch-content / a polish pass can tighten the math.
-            switch newState {
-            case .paused, .ended:
-                writeProgress()
-            case .playing, .loading, .idle, .failed:
-                break
-            }
-
+            // Progress recording now lives in AudioPlayerService
+            // (`onProgressCheckpoint`), so it fires on pause/end/stop no matter
+            // which player UI is showing — including the mini-player. Here we
+            // only need the end-of-playback handling (intro → stop-0 advance).
             if newState == .ended {
                 handlePlaybackEnded()
             }
@@ -123,9 +112,6 @@ struct PlayerView: View {
             syncStopIndex(from: newStopId)
         }
         .onDisappear {
-            // Also write on dismiss so closing the sheet captures the
-            // last-known position without waiting for a pause event.
-            writeProgress()
             // NB: don't stop geofence monitoring here — audio may
             // continue while the user pockets their phone. Monitoring
             // is torn down only on a new tour's start or explicit stop.
@@ -172,19 +158,6 @@ struct PlayerView: View {
             return
         }
         currentStopIndex = index
-    }
-
-    private func writeProgress() {
-        let secs = Int(audioPlayer.currentTime)
-        guard secs > 0 else { return }
-        // We mark completed=false here. A true "tour completed" flag
-        // is more naturally set when we reach the end of the *last*
-        // stop and the audio ends — leave that refinement for later.
-        libraryStore.updateProgress(
-            tour.id,
-            listenedSeconds: secs,
-            completed: false
-        )
     }
 
     // MARK: - Sections

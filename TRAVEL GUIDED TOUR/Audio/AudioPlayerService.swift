@@ -49,6 +49,14 @@ final class AudioPlayerService {
     /// `AVPlayerItem.error`.
     private(set) var lastError: Error?
 
+    /// Fired at playback checkpoints — pause, end, and stop — with the current
+    /// source's id (the tour UUID string), the listened seconds, and whether
+    /// playback reached the end. Wired at app start to `LibraryStore.updateProgress`
+    /// so the "Recently played" list is recorded **regardless of which player UI
+    /// is on screen** (previously this only happened inside the full-screen
+    /// `PlayerView`, so listening via the mini-player never updated Recents).
+    @ObservationIgnored var onProgressCheckpoint: ((_ sourceId: String, _ seconds: Int, _ completed: Bool) -> Void)?
+
     private let player = AVQueuePlayer()
     private var timeObserverToken: Any?
     private var statusObserver: NSKeyValueObservation?
@@ -200,7 +208,19 @@ final class AudioPlayerService {
         player.pause()
     }
 
+    /// Emit a progress checkpoint for the current source, if any. Guards on
+    /// `seconds > 0` so a not-yet-started item doesn't create a bogus entry.
+    private func recordProgressCheckpoint(completed: Bool) {
+        guard let sourceId = currentSourceId else { return }
+        let seconds = Int(currentTime)
+        guard seconds > 0 else { return }
+        onProgressCheckpoint?(sourceId, seconds, completed)
+    }
+
     func stop() {
+        // Capture progress before we tear the source down (starting a new tour
+        // calls stop() first — this preserves the outgoing tour's checkpoint).
+        recordProgressCheckpoint(completed: false)
         cancelLoadingTimeout()
         itemStatusObserver?.invalidate()
         itemStatusObserver = nil
@@ -254,6 +274,7 @@ final class AudioPlayerService {
             currentTime = duration
             state = .ended
             cancelLoadingTimeout()
+            recordProgressCheckpoint(completed: true)
             updateNowPlayingInfo()
         }
     }
@@ -337,6 +358,7 @@ final class AudioPlayerService {
                     case .playing, .paused:
                         self.state = .paused
                         self.cancelLoadingTimeout()
+                        self.recordProgressCheckpoint(completed: false)
                     }
                 case .waitingToPlayAtSpecifiedRate:
                     // Only treat this as `.loading` from states where
@@ -419,6 +441,7 @@ final class AudioPlayerService {
             queue: .main
         ) { [weak self] _ in
             self?.state = .ended
+            self?.recordProgressCheckpoint(completed: true)
             self?.updateNowPlayingInfo()
         }
     }
@@ -463,6 +486,7 @@ final class AudioPlayerService {
             // `pause()` on the player — that's redundant.
             if state == .playing {
                 state = .paused
+                recordProgressCheckpoint(completed: false)
                 updateNowPlayingInfo()
             }
         case .ended:
