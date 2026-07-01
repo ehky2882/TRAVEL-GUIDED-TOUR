@@ -8,7 +8,7 @@ a per-tour credits line, an in-app attributions screen, or swap for owner-suppli
 shots. Everything NOT listed here is ship-safe (Unsplash/Pexels/Pixabay — no
 attribution) or owner-supplied.
 
-Last updated 2026-06-30 (Toronto build complete).
+Last updated 2026-06-30 (Toronto build complete; all cities audited).
 
 ## Toronto — 14 credit-required images
 
@@ -60,6 +60,34 @@ reuse single-stop stop images. Only two carry a credit, both already listed abov
 - **Immigrant West/Kensington** → Queen West stop = the Drake Hotel (`queen-street-west_hero`, SimonP, CC BY-SA 3.0).
 - Downtown Spine + Old Town = **no credits** (all stop images ship-safe/owner; e.g. the Downtown Spine Hockey Hall stop uses the ship-safe HH6 exterior, not the CC BY-SA interiors).
 
-## Other cities — NOT yet audited
-SF / Madrid / Paris image picks have **not** been run through the same source/license
-audit. SF is already live. TODO: audit those and append any CC BY/BY-SA findings here.
+## All other cities — audited 2026-06-30 (already credited at their own staging)
+
+Audit result: **every other city was credited at build time** in its own per-city
+`IMAGE-CREDITS-*.txt` file. Those files are the **authoritative, file-by-file
+ledgers** (each row: filename → license → author/source URL) and they live on the
+**`gh-pages` branch root** (not in this code branch), because that's where the images
+they describe are hosted. This section is the index + summary; consult the named file
+for the exact per-image list.
+
+| City | Authoritative credit file (on `gh-pages`) | Credit-required images (CC BY / CC BY-SA) |
+|------|-------------------------------------------|-------------------------------------------|
+| **Toronto** | *this file* (`drafts/CREDITS.md`) | 14 (listed above) |
+| **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
+| **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
+| **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
+| **Madrid** | `IMAGE-CREDITS-madrid.txt` + `drafts/madrid-batch3/IMAGE-CREDITS-madrid-batch3.txt` | 5 — Museo Thyssen `_2` (CC BY 2.0); Fuente de Neptuno hero (Luis García/Zaqarbal, CC BY-SA 3.0) + `_3` (CC BY-SA 4.0); CaixaForum hero + `_2` (CC BY-SA 4.0). Mercado de San Miguel `_4` is CC0 (no credit). |
+| **NYC** | `IMAGE-CREDITS-nyc-refresh.txt` | 2 — Riverside Church `_2` + `_3` (Epicgenius, CC BY-SA 4.0). The rest of the NYC catalog is Wikimedia-thumb / Unsplash / Pexels; this file covers only the 2026-06-24 refresh batch. |
+
+**Counts are approximate** for the large ledgers (London/SF) — the per-city file is
+the exact record; CC0 and Public-Domain images are excluded from the counts (they need
+no attribution). Grand total of attribution-obligated images across the whole app is on
+the order of **~120**, concentrated in London and SF.
+
+**Recommendation unchanged:** before any of this ships live, surface the credits (a
+per-tour credits line, or a single in-app attributions screen that ingests these
+files), or swap the CC-licensed shots for owner-supplied/CC0 ones. The per-city files
++ this index together are that ingest list.
+
+**Housekeeping note:** the per-city `IMAGE-CREDITS-*.txt` files should ideally be moved
+off `gh-pages` (a public asset host) into the repo alongside this file so they travel
+with the code. Deferred — they're safe where they are, just not co-located.
