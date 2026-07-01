@@ -8,9 +8,9 @@ a per-tour credits line, an in-app attributions screen, or swap for owner-suppli
 shots. Everything NOT listed here is ship-safe (Unsplash/Pexels/Pixabay — no
 attribution) or owner-supplied.
 
-Last updated 2026-06-30 (Toronto build complete; all cities audited).
+Last updated 2026-06-30 (Toronto build complete incl. batch 10; all cities audited).
 
-## Toronto — 14 credit-required images
+## Toronto — 17 credit-required images
 
 ### Hockey Hall of Fame (single-stop, `drafts/toronto-batch2`)
 | File | Subject | Author | License | Source |
@@ -48,15 +48,20 @@ Last updated 2026-06-30 (Toronto build complete; all cities audited).
 | `aga-khan-museum_5.webp` | lobby / atrium | Canmenwalker | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Aga_Khan_Museum_Lobby_2022.jpg |
 | `aga-khan-museum_6.webp` | gallery of Islamic art | Canmenwalker | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Aga_Khan_Museum_Exhibit_2022.jpg |
 
-### Bata Shoe Museum (Museum Mile walk stop 2, `drafts/toronto-museummile-walk`)
+### Bata Shoe Museum (single-stop, `drafts/toronto-batch10`; also Museum Mile walk stop 2)
 | File | Subject | Author | License | Source |
 |------|---------|--------|---------|--------|
-| `bata-shoe-museum_hero.webp` | the "shoebox" building | Jim.henderson | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Bata_Museum_WCNA_2023_(12).jpg |
+| `bata-shoe-museum_hero.webp` | shoebox building (BT26) | Jim.henderson | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Bata_Museum_WCNA_2023_(13).jpg |
+| `bata-shoe-museum_2.webp` | shoebox angle (BT25) | Jim.henderson | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Bata_Museum_WCNA_2023_(12).jpg |
+| `bata-shoe-museum_3.webp` | + red shoe banner (BT31) | Eberhard J. Wormer | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Bata_Shoe_Museum_2.jpg |
+| `bata-shoe-museum_6.webp` | museum sign (BT28) | Larry Koester | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Bata_Shoe_Museum_(4)_(22934136099).jpg |
+| _(bata-shoe-museum_4 clog wall + _5 mukluks are ship-safe Pexels — no credit)_ | | | | |
+| _(Gardiner Museum, batch 10, is hero-only + owner-supplied — no credit)_ | | | | |
 
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
 reuse single-stop stop images. Only two carry a credit, both already listed above:
-- **Museum Mile** → Bata Shoe Museum (`bata-shoe-museum_hero`, Jim.henderson, CC BY 4.0).
+- **Museum Mile** → Bata Shoe Museum (`bata-shoe-museum_hero` = BT26, Jim.henderson, CC BY 4.0).
 - **Immigrant West/Kensington** → Queen West stop = the Drake Hotel (`queen-street-west_hero`, SimonP, CC BY-SA 3.0).
 - Downtown Spine + Old Town = **no credits** (all stop images ship-safe/owner; e.g. the Downtown Spine Hockey Hall stop uses the ship-safe HH6 exterior, not the CC BY-SA interiors).
 

@@ -17,7 +17,7 @@ YYZ** (create at first Toronto wire-in).
 |---|------|------------------------|------------------|---------|
 | 0 | Intro — Museum Mile | — (narration only) | 43.6677, -79.3948 (ROM, at Bloor/Avenue) | manual |
 | 1 | Royal Ontario Museum (the Crystal) | `royal-ontario-museum` | 43.6677, -79.3948 | geofenced |
-| 2 | Bata Shoe Museum | `bata-shoe-museum` (**new — BT25**) | 43.6674, -79.4003 | geofenced |
+| 2 | Bata Shoe Museum | `bata-shoe-museum` (**BT26**) | 43.6674, -79.4003 | geofenced |
 | 3 | University of Toronto / King's College Circle | `uoft-kings-college-circle` | 43.6629, -79.3957 | geofenced |
 | 4 | Queen's Park (Ontario Legislature) | `queens-park` | 43.6606, -79.3925 | geofenced |
 | 5 | Art Gallery of Ontario | `art-gallery-of-ontario` | 43.6536, -79.3925 | geofenced |
@@ -26,13 +26,13 @@ YYZ** (create at first Toronto wire-in).
 - **Walk hero:** `royal-ontario-museum_hero.webp` (the Crystal — the intro opens "Look up at the Crystal"). Ship-safe.
 - **Per-stop `additionalImageURLs`** — 4 of 5 reuse existing single-stop heroes (no re-upload); only Bata was newly sourced:
   - stop 1 → `royal-ontario-museum_hero.webp` (RM6, ship-safe Pexels)
-  - stop 2 → `bata-shoe-museum_hero.webp` (**NEW — BT25, Wikimedia, CC BY 4.0 → see credits**)
+  - stop 2 → `bata-shoe-museum_hero.webp` (**BT26, Wikimedia, CC BY 4.0 → see credits; Bata is now its own tour in batch 10**)
   - stop 3 → `uoft-kings-college-circle_hero.webp` (UT4, ship-safe Pexels)
   - stop 4 → `queens-park_hero.webp` (QP1, ship-safe Unsplash)
   - stop 5 → `art-gallery-of-ontario_hero.webp` (owner-supplied Dundas facade)
 
 ## Image credits (this walk = ONE new credit)
-- `bata-shoe-museum_hero.webp` — "Bata Museum WCNA 2023 (12)" by Jim.henderson, **CC BY 4.0** — https://commons.wikimedia.org/wiki/File:Bata_Museum_WCNA_2023_(12).jpg
+- `bata-shoe-museum_hero.webp` — "Bata Museum WCNA 2023 (13)" by Jim.henderson, **CC BY 4.0** — https://commons.wikimedia.org/wiki/File:Bata_Museum_WCNA_2023_(13).jpg
 - (The Bata "shoebox" building had no ship-safe/CC0 stock — owner OK'd BT25 for this stop. Every other stop image is ship-safe or owner-supplied — no other credit.)
 
 ## Narrative callbacks
