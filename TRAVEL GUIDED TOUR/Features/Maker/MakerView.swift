@@ -47,7 +47,6 @@ struct MakerView: View {
     @Environment(SavedMakersStore.self) private var savedMakersStore
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(LocationManager.self) private var locationManager
-    @Environment(\.openURL) private var openURL
 
     private let avatarSize: CGFloat = 96
 
@@ -61,6 +60,7 @@ struct MakerView: View {
     @AppStorage("makerListLayout") private var layout: MakerListLayout = .list
     /// Measured width of the grid container — drives square tile sizing.
     @State private var gridContentWidth: CGFloat = 0
+    @State private var showingReport = false
 
     private var isSaved: Bool { savedMakersStore.isSaved(maker.id) }
 
@@ -90,6 +90,9 @@ struct MakerView: View {
         // fell to pure black and mismatched the module. Matches the
         // token TourDetailView / ManageDownloadsView already use.
         .background(AtlasColors.secondaryBackground)
+        .sheet(isPresented: $showingReport) {
+            ReportSheet(target: .maker(maker))
+        }
         // No visible nav-bar title (owner direction): the masthead
         // already shows the maker name. Empty string keeps the bar +
         // back button while dropping the centered title text. The
@@ -435,7 +438,7 @@ struct MakerView: View {
 
             Section {
                 Button(role: .destructive) {
-                    if let url = reportURL { openURL(url) }
+                    showingReport = true
                 } label: {
                     Label("Report a concern", systemImage: "exclamationmark.bubble")
                 }
@@ -448,29 +451,6 @@ struct MakerView: View {
 
     private var shareText: String {
         "\(maker.displayName) on Atlas"
-    }
-
-    /// `mailto:` URL for Report a concern. Owner is sole recipient for
-    /// V1 (no moderation backend yet); maker name + id let the owner
-    /// trace the report. Mirrors `TourDetailView.reportURL`.
-    private var reportURL: URL? {
-        let to = "eyung@tishman.com"
-        let subject = "Atlas — report concern: \(maker.displayName)"
-        let body = """
-            Maker: \(maker.displayName)
-            Maker ID: \(maker.id.uuidString)
-
-            Concern:
-
-            """
-        var components = URLComponents()
-        components.scheme = "mailto"
-        components.path = to
-        components.queryItems = [
-            URLQueryItem(name: "subject", value: subject),
-            URLQueryItem(name: "body", value: body)
-        ]
-        return components.url
     }
 
     // MARK: - Derived

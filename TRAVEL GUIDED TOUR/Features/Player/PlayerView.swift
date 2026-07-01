@@ -22,7 +22,6 @@ struct PlayerView: View {
     let tour: Tour
 
     @Environment(\.dismiss) private var dismiss
-    @Environment(\.openURL) private var openURL
     @Environment(DataService.self) private var dataService
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(LibraryStore.self) private var libraryStore
@@ -48,6 +47,7 @@ struct PlayerView: View {
     /// Drives the overflow menu's "Go to creator" push. The player is
     /// wrapped in its own NavigationStack so MakerView can push over it.
     @State private var showingMaker: Bool = false
+    @State private var showingReport: Bool = false
 
     /// Live downward-drag distance for the interactive drag-to-dismiss.
     /// The player is a full-screen cover (edge-to-edge to the top), so
@@ -121,6 +121,9 @@ struct PlayerView: View {
             if let maker = dataService.maker(for: tour) {
                 MakerView(maker: maker)
             }
+        }
+        .sheet(isPresented: $showingReport) {
+            ReportSheet(target: .tour(tour))
         }
             .offset(y: dragOffset)
             .animation(.interactiveSpring(response: 0.3, dampingFraction: 0.85), value: dragOffset)
@@ -266,9 +269,7 @@ struct PlayerView: View {
 
             Section {
                 Button(role: .destructive) {
-                    if let url = reportURL {
-                        openURL(url)
-                    }
+                    showingReport = true
                 } label: {
                     Label("Report a concern", systemImage: "exclamationmark.bubble")
                 }
@@ -334,26 +335,6 @@ struct PlayerView: View {
             return "\(tour.title) — by \(maker.displayName) on Atlas"
         }
         return "\(tour.title) on Atlas"
-    }
-
-    /// `mailto:` Report-a-concern URL — mirrors the detail sheet.
-    private var reportURL: URL? {
-        let subject = "Atlas — report concern: \(tour.title)"
-        let body = """
-            Tour: \(tour.title)
-            Tour ID: \(tour.id.uuidString)
-
-            Concern:
-
-            """
-        var components = URLComponents()
-        components.scheme = "mailto"
-        components.path = "eyung@tishman.com"
-        components.queryItems = [
-            URLQueryItem(name: "subject", value: subject),
-            URLQueryItem(name: "body", value: body)
-        ]
-        return components.url
     }
 
     /// Now-playing block. Sits directly under the carousel (the old

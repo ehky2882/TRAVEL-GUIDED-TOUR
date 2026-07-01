@@ -29,6 +29,9 @@ final class AuthService {
 
     var isSignedIn: Bool { user != nil }
     var email: String? { user?.email }
+    /// The signed-in user's id as a plain `UUID` (nil when anonymous). Lets
+    /// views reference it without importing the Supabase module.
+    var userId: UUID? { user?.id }
 
     private let client: SupabaseClient
     private var observation: Task<Void, Never>?
