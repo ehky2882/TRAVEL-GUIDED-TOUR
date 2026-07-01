@@ -885,7 +885,7 @@ Backend decided: **Supabase (Postgres)** — see `docs/backend-design.md`.
 |---|---|---|
 | **1. Detach catalog** | App reads the catalog from a URL (`RemoteCatalogLoader`); bundled copy = offline seed | ✅ Shipped — build 46 (PR #209) |
 | **2. Backend foundation** | `makers`/`tours`/`stops` schema, public-read RLS, `get_catalog()` RPC, seed from `Tours.json` | ✅ **DONE (2026-06-27)** — Supabase project "Dozent" live + seeded (5/370/396); **app cutover shipped (PR #255)** — `RemoteCatalogLoader` reads `get_catalog` first, gh-pages fallback. Live in **TestFlight 1.0 (50)** |
-| **3. Accounts & auth** | `profiles`, self-serve makers, per-tour moderation, `reports`, consumer-sync tables; Apple+email+Google | ✅ **DONE — shipped TestFlight 1.0 (56).** Email (#262) + Apple (#274) + Google (#277) sign-in; cross-device sync of library/makers/progress/recently-viewed (#279/#287) with logout-clear (#283); `AuthService` + `SyncService`. Remaining tail: "Report a concern" → `reports` wiring |
+| **3. Accounts & auth** | `profiles`, self-serve makers, per-tour moderation, `reports`, consumer-sync tables; Apple+email+Google | ✅ **DONE — shipped through TestFlight 1.0 (57).** Email (#262) + Apple (#274) + Google (#277) sign-in; cross-device sync of library/makers/progress/recently-viewed (#279/#287) with logout-clear (#283); "Report a concern" → `reports` (#290). `AuthService` + `SyncService`. (Report-email notifications = pending owner Resend setup.) |
 | **4. Maker dashboard** | Phase 1 single-piece creation (record/import audio, pin+radius, photos, transcript, metadata, submit→review), then Phase 2 multi-stop | 🟡 Storage buckets live (PR #222); design done (P1 #222 / P2 #223). Pending: authoring UI (Mac) |
 | **5. Moderation (email-me)** | Owner chose **email notify**, not a queue UI: emailed on submit/report, act via `publish_tour`/`takedown_tour` | 🟡 SQL helpers applied (PR #224). Pending: deploy `notify-moderation` Edge Function + Resend + 2 webhooks (owner) |
 | **6. Paid tours** | Apple IAP; `Tour.priceUSD` goes live; ownership tracking (Tier 2 #4) | ⬜ Not started |
@@ -911,7 +911,7 @@ hosting) can follow.
 - [x] Sign-in UI (Apple / email / Google) in the "Me" tab — **all three done** (email #262 · Apple #274 · Google #277), shipped in builds 51/52/53. `AuthService` + `SignInView` (Apple + Google buttons + email sign-in/create/confirm), Me-tab account row + sign-out.
 - [x] Sync a signed-in user's library / saved makers / recents → the `user_*` tables — **done (#279 library+makers, #287 recently-viewed; #283 logout-clear), builds 54–56.** `Data/SyncService.swift`: pull→merge→push on sign-in + debounced write-through; `user_library` / `user_saved_makers` / `user_recently_viewed`. Cross-device round-trip device-verified by owner.
 - [ ] Maker authoring UI (`Features/Maker/`) — Phase 1 single-stop, then Phase 2 multi-stop
-- [ ] Wire the "Report a concern" overflow action → `reports` table  ← *last Step-3 tail item*
+- [x] Wire the "Report a concern" overflow action → `reports` table — **done, PR #290 (build 57)**: `ReportSheet` + `ReportsService` insert (`returning: .minimal`); email removed from the client. Email notifications pending owner Resend/Edge-Function setup.
 
 **B. Supabase config — owner (dashboard; Apple/Google need their dev consoles)**
 - [ ] Enable auth providers — email (toggle), Apple (Services ID), Google (OAuth client)
