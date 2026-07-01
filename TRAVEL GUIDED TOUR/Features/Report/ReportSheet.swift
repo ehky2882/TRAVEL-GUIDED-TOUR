@@ -50,7 +50,11 @@ struct ReportSheet: View {
 
     let target: Target
 
-    @Environment(AuthService.self) private var authService
+    /// Optional so the sheet never crashes when presented from a surface whose
+    /// environment doesn't carry `AuthService` (the tour-detail + player are
+    /// hosted in UIKit layers that don't propagate it). When absent, the report
+    /// is filed anonymously (nil `reporter_user_id`), which the table allows.
+    @Environment(AuthService.self) private var authService: AuthService?
     @Environment(\.dismiss) private var dismiss
 
     @State private var reason: ReportReason = .inaccurate
@@ -184,7 +188,7 @@ struct ReportSheet: View {
                     tourId: target.tourId,
                     reason: reason.rawValue,
                     details: target.contextPrefix + details,
-                    reporterId: authService.userId
+                    reporterId: authService?.userId
                 )
                 withAnimation { submitted = true }
             } catch {
