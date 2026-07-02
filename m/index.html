@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Atlas — Audio Tours</title>
+  <meta name="description" content="An audio-tour creator on Atlas. Coming soon to the App Store." />
+  <meta property="og:title" id="og-title" content="Atlas — Audio Tours" />
+  <meta property="og:description" id="og-desc" content="An audio-tour creator on Atlas. Coming soon." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #17130F;
+      --surface: #211B15;
+      --surface-2: #2C241C;
+      --text: #F5EFE7;
+      --muted: #B7AC9E;
+      --accent: #B85042;
+      --accent-soft: rgba(184, 80, 66, 0.16);
+      --border: rgba(245, 239, 231, 0.10);
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wrap { width: 100%; max-width: 560px; padding: 20px 20px 48px; }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      font-size: 14px; color: var(--text); margin: 8px 0 22px;
+    }
+    .brand .dot { width: 12px; height: 12px; border-radius: 3px; background: var(--accent); }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 18px; overflow: hidden; padding: 28px 20px 20px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .avatar {
+      width: 96px; height: 96px; border-radius: 50%;
+      background: var(--surface-2); margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px; overflow: hidden;
+    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .eyebrow {
+      display: block; text-align: center; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+      margin-bottom: 8px;
+    }
+    h1 { font-size: 24px; line-height: 1.22; margin: 0 0 6px; font-weight: 700; text-align: center; }
+    .count { text-align: center; font-size: 14px; color: var(--muted); margin: 0 0 16px; }
+    .bio { font-size: 15px; color: var(--text); opacity: 0.92; margin: 0 0 22px; text-align: center; }
+    .cta {
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 14px; padding: 18px; text-align: center;
+    }
+    .cta .soon { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+    .cta .soon-sub { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+    .notify {
+      display: inline-block; text-decoration: none; font-weight: 600; font-size: 15px;
+      color: #fff; background: var(--accent); padding: 12px 22px; border-radius: 999px;
+    }
+    .notify:active { opacity: 0.85; }
+    .foot { text-align: center; font-size: 12px; color: var(--muted); margin-top: 26px; opacity: 0.8; }
+    .center-state { text-align: center; padding: 60px 10px; }
+    .center-state h1 { font-size: 22px; }
+    .center-state p { color: var(--muted); }
+    .skeleton { animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> Atlas</div>
+    <div id="root">
+      <div class="card skeleton">
+        <div class="avatar"></div>
+        <span class="eyebrow">Loading…</span>
+        <h1>&nbsp;</h1>
+      </div>
+    </div>
+    <div class="foot">Atlas — GPS-anchored audio tours. Coming soon to the App Store.</div>
+  </div>
+
+  <script>
+    var CATALOG_URL = "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json";
+    var NOTIFY_EMAIL = "edward.yung@gmail.com";
+
+    function qid() {
+      var p = new URLSearchParams(window.location.search);
+      var id = p.get("id");
+      return id ? id.trim().toLowerCase() : null;
+    }
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    function notFound() {
+      document.getElementById("root").innerHTML =
+        '<div class="center-state">' +
+          '<h1>Creator not found</h1>' +
+          '<p>This link may be out of date. Atlas has audio-tour creators across seven cities — coming soon to the App Store.</p>' +
+          '<div class="cta" style="margin-top:22px">' +
+            '<p class="soon">Coming soon to the App Store</p>' +
+            '<p class="soon-sub">Be the first to know when Atlas launches.</p>' +
+            '<a class="notify" href="mailto:' + esc(NOTIFY_EMAIL) + '?subject=Notify%20me%20about%20Atlas">Notify me</a>' +
+          '</div>' +
+        '</div>';
+    }
+
+    function render(maker, tourCount) {
+      var name = maker.displayName || "Atlas creator";
+      document.title = name + " — Atlas";
+      var ogT = document.getElementById("og-title"); if (ogT) ogT.setAttribute("content", name + " — Atlas");
+      var ogD = document.getElementById("og-desc"); if (ogD && maker.bio) ogD.setAttribute("content", maker.bio);
+
+      var avatarInner = maker.avatarEmoji
+        ? esc(maker.avatarEmoji)
+        : (maker.avatarURL ? '<img src="' + esc(maker.avatarURL) + '" alt="' + esc(name) + '" />' : "🎧");
+
+      var countText = tourCount === 1 ? "1 audio tour on Atlas" : (tourCount + " audio tours on Atlas");
+
+      document.getElementById("root").innerHTML =
+        '<div class="card">' +
+          '<div class="avatar">' + avatarInner + '</div>' +
+          '<span class="eyebrow">Creator</span>' +
+          '<h1>' + esc(name) + '</h1>' +
+          '<p class="count">' + esc(countText) + '</p>' +
+          (maker.bio ? '<p class="bio">' + esc(maker.bio) + '</p>' : '') +
+          '<div class="cta">' +
+            '<p class="soon">Coming soon to the App Store</p>' +
+            '<p class="soon-sub">Atlas isn’t out yet. Leave your email and we’ll let you know the moment it launches — then this link will open this creator right in the app.</p>' +
+            '<a class="notify" href="mailto:' + esc(NOTIFY_EMAIL) +
+              '?subject=' + encodeURIComponent("Notify me about Atlas") +
+              '&body=' + encodeURIComponent('I’d love to know when Atlas launches. (Creator: ' + name + ')') +
+              '">Notify me</a>' +
+          '</div>' +
+        '</div>';
+    }
+
+    (function () {
+      var id = qid();
+      if (!id) { notFound(); return; }
+      fetch(CATALOG_URL, { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error("catalog " + r.status); return r.json(); })
+        .then(function (data) {
+          var tours = (data && data.tours) || [];
+          var makers = (data && data.makers) || [];
+          var maker = null;
+          for (var i = 0; i < makers.length; i++) {
+            if (makers[i].id && String(makers[i].id).toLowerCase() === id) { maker = makers[i]; break; }
+          }
+          if (!maker) { notFound(); return; }
+          var count = 0;
+          for (var j = 0; j < tours.length; j++) { if (tours[j].makerId === maker.id) count++; }
+          render(maker, count);
+        })
+        .catch(function () { notFound(); });
+    })();
+  </script>
+</body>
+</html>
