@@ -421,10 +421,11 @@ struct MakerView: View {
                 )
             }
 
+            // Single link bubble in Messages (no separate text bubble) — the
+            // card's title/image come from the landing page's Open Graph tags.
             ShareLink(
                 item: AtlasShareLink.makerURL(for: maker),
-                subject: Text(maker.displayName),
-                message: Text(shareText)
+                subject: Text(maker.displayName)
             ) {
                 Label("Share", systemImage: "square.and.arrow.up")
             }
@@ -453,11 +454,6 @@ struct MakerView: View {
         }
     }
 
-    /// Accompanying message for `ShareLink` — the shared *item* is the maker's
-    /// https Universal Link (`AtlasShareLink.makerURL`); this rides alongside it.
-    private var shareText: String {
-        "Check out this creator on Atlas: \(maker.displayName) 🎧"
-    }
 
     // MARK: - Derived
 

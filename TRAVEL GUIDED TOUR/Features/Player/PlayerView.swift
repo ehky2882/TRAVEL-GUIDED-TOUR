@@ -247,10 +247,11 @@ struct PlayerView: View {
                 )
             }
 
+            // Single link bubble in Messages (no separate text bubble) — the
+            // card's title/image come from the landing page's Open Graph tags.
             ShareLink(
                 item: AtlasShareLink.tourURL(for: tour),
-                subject: Text(tour.title),
-                message: Text(shareText)
+                subject: Text(tour.title)
             ) {
                 Label("Share", systemImage: "square.and.arrow.up")
             }
@@ -330,13 +331,6 @@ struct PlayerView: View {
     private var menuDownloadDisabled: Bool {
         tourDownloader.activeTourId != nil
             && tourDownloader.activeTourId != tour.id
-    }
-
-    /// Accompanying message text for `ShareLink` — mirrors the detail sheet.
-    /// The shared *item* is the tour's https Universal Link
-    /// (`AtlasShareLink.tourURL`); this line rides alongside it for context.
-    private var shareText: String {
-        "Check out this audio tour on Atlas: \(tour.title) 🎧"
     }
 
     /// Now-playing block. Sits directly under the carousel (the old
