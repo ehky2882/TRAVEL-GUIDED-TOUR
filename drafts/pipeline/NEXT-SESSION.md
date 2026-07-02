@@ -5,21 +5,20 @@ branch **`claude/dreamy-wozniak-nM6a4`**; images are on **gh-pages**. `/tmp` is 
 re-fetch candidates as needed; pipeline scripts are in this folder (`drafts/pipeline/`).
 
 ## Immediate next action (LA)
-**LA batches 1 (×8), 2 (×4), 3 (×4), 4 (×4) ALL image-COMPLETE — 20 tours staged.** Batch 4 (`drafts/la-batch4/`)
-= 10 Little Tokyo, 11 Last Bookstore, 14 Dolby Theatre, 16 Capitol Records — pushed 2026-07-02 (`e71ed38`).
-- **10 Little Tokyo:** thin/noisy (stock returns Chinatown / Tokyo Japan / El Capitan) — 3 verified ship-safe.
-- **11 Last Bookstore:** deep clean ship-safe (book tunnel/vortex/banking hall). 14 Dolby: owner-supplied facade hero + ship-safe gallery (clean facades were all CC).
-- **16 Capitol Records:** owner rejected first stock set (a *different* round tower); correct = P53 hero (Public Domain) + P20 (Pexels), both ship-safe. "Capitol" mis-matches CA/US Capitols + a WV music hall.
-- **Batch 4 = zero credit obligations** (all ship-safe / PD / owner-supplied).
-- **Sourcing lesson (batches 2–4):** hidden/generic/ambiguously-named subjects mis-match badly — verify pixels; owner-paste or CC-flag when ship-safe stock is wrong or absent.
+**LA batches 1–5 ALL image-COMPLETE — 24 tours staged.** Batch 5 (`drafts/la-batch5/`)
+= 21 Academy Museum, 22 Petersen, 25 Griffith Park/Greek Theatre, 29 Third Street Promenade — pushed 2026-07-02 (`336b527` for 21/22/25, `0f01128` for 29).
+- **21 Academy Museum:** Renzo Piano sphere (Y5, ship-safe) hero; gold cylinder not in stock. Y40 gallery = CC BY-SA.
+- **22 Petersen:** unmistakable red+silver ribbon building, deep ship-safe.
+- **25 Griffith Park & Greek Theatre:** Greek Theatre building NOT in ship-safe stock (stock returns the Hollywood Bowl!); hero = Griffith Park vista (R11, ship-safe) + 2 CC BY-SA Greek Theatre shots (owner-OK'd).
+- **29 Third Street Promenade:** first stock set owner-doubted → re-sourced (dropped car-streets/pier/beach); owner then supplied 2 own photos (hero + wide street) + Q3/Q16 stock. No credit.
+- **Sourcing lesson (batches 2–5):** hidden/generic/ambiguously-named subjects mis-match badly (Greek Theatre→Hollywood Bowl, Capitol→CA/US Capitols, MOCA→The Broad) — verify pixels; owner-paste or CC-flag when ship-safe stock is wrong/absent.
 **Next LA work:** wait for the owner to send more LA scripts (gaps below), then image-stage per PROCESS.md.
 
 ## LA status
-- **Scripts received:** b1 = 01,02,04,08,09,12,13,15; b2 = 19,20,24,28; b3 = 03,05,06,07; b4 = 10,11,14,16 (`drafts/la-batch1..4/`).
-- **Images DONE + pushed:** ALL 20 received tours (b1 ×8, b2 ×4, b3 ×4, b4 ×4).
-- **Gaps not yet sent:** LA tours 17, 18, 21, 22, 23, 25, 26, 27 (+ beyond). Owner sends more.
-- **LA credits so far (5, unchanged):** `walt-disney-concert-hall_6` (CC BY 2.0), `la-brea-tar-pits_hero` (CC BY-SA 4.0),
-  `moca-grand-avenue_hero`+`_2`+`_3` (CC BY-SA 3.0 / CC BY 2.0 / CC BY-SA 4.0). Batch 4 added none. See `drafts/CREDITS.md`.
+- **Scripts received:** b1 = 01,02,04,08,09,12,13,15; b2 = 19,20,24,28; b3 = 03,05,06,07; b4 = 10,11,14,16; b5 = 21,22,25,29 (`drafts/la-batch1..5/`).
+- **Images DONE + pushed:** ALL 24 received tours (b1 ×8, b2 ×4, b3 ×4, b4 ×4, b5 ×4).
+- **Gaps not yet sent:** LA tours 17, 18, 23, 26, 27 (+ beyond). Owner sends more.
+- **LA credits so far (8):** WD53 (CC BY 2.0), La Brea hero (CC BY-SA 4.0), MOCA ×3 (b3), Academy Y40 (CC BY-SA 4.0, author TBD) + Greek RG3 (CC BY-SA 3.0) + RG1 (CC BY-SA 4.0). See `drafts/CREDITS.md`.
 - **Maker:** create **Atlas Studio LAX** at first LA wire-in.
 - **API keys loaded this session:** Unsplash, Pexels, Pixabay all provided + verified (paste fresh next session).
 

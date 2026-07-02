@@ -58,7 +58,7 @@ Last updated 2026-07-02 (Toronto complete; LA batch 1 in progress).
 | _(bata-shoe-museum_4 clog wall + _5 mukluks are ship-safe Pexels — no credit)_ | | | | |
 | _(Gardiner Museum, batch 10, is hero-only + owner-supplied — no credit)_ | | | | |
 
-### Los Angeles (batch 1 `drafts/la-batch1` + batch 2 `drafts/la-batch2` + batch 3 `drafts/la-batch3`)
+### Los Angeles (batches 1–5, `drafts/la-batch1..5`)
 | File | Subject | Author | License | Source |
 |------|---------|--------|---------|--------|
 | `walt-disney-concert-hall_6.webp` | the "french-fry organ" (WD53) | Daniel Hartwig | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Disney_Concert_Hall_(10920404614).jpg |
@@ -68,7 +68,12 @@ Last updated 2026-07-02 (Toronto complete; LA batch 1 in progress).
 | `moca-grand-avenue_3.webp` | MOCA building + plaza + sculpture (M31) | Dietmar Rabich | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Los_Angeles_(California,_USA),_South_Olive_Street_--_2012_--_8.jpg |
 | _(batch 1: Disney concert room WD67 = CC0; Chinese Theatre CT38 + The Broad TB240 = PD/CC0; El Pueblo 09 = owner-supplied; all other batch-1 picks = Unsplash/Pexels — no credit.)_ | | | | |
 | _(batch 2: Griffith 24 + Santa Monica 28 = Unsplash/Pexels — no credit. La Brea 20 is hero-only. LACMA 19 hero = owner-supplied Geffen photos, gallery L25/L27 = Pexels — no credit.)_ | | | | |
+| `academy-museum_4.webp` | Academy Museum sphere + May Co. bldg (Y40) | _to confirm_ | CC BY-SA 4.0 | Wikimedia Commons (author TBD at ship) |
+| `greek-theatre_3.webp` | Greek Theatre seating/stage (RG3) | User:Godfinger | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Greek_Theater_2007.JPG |
+| `greek-theatre_4.webp` | Greek Theatre night concert (RG1) | Amhernandez8754 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:The_Greek_Theatre.jpg |
 | _(batch 3: Angels Flight 05 + Bradbury 06 + City Hall 07 = Unsplash/Pexels — no credit. MOCA 03 = all 3 CC-licensed, above.)_ | | | | |
+| _(batch 4: Little Tokyo 10 + Last Bookstore 11 + Dolby 14 + Capitol 16 = all ship-safe/PD/owner — no credit.)_ | | | | |
+| _(batch 5: Academy 21 gallery Y40 + Griffith/Greek 25 gallery RG3/RG1 = credit-required, above. Petersen 22 + Third St Promenade 29 = ship-safe/owner — no credit.)_ | | | | |
 
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
@@ -89,7 +94,7 @@ for the exact per-image list.
 | City | Authoritative credit file (on `gh-pages`) | Credit-required images (CC BY / CC BY-SA) |
 |------|-------------------------------------------|-------------------------------------------|
 | **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
-| **Los Angeles** | *this file* (below) | 5 so far (WD53 b1; La Brea hero b2; MOCA hero+2 gallery b3) |
+| **Los Angeles** | *this file* (below) | 8 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5) |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
