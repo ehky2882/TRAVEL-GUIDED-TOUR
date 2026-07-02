@@ -5,21 +5,21 @@ branch **`claude/dreamy-wozniak-nM6a4`**; images are on **gh-pages**. `/tmp` is 
 re-fetch candidates as needed; pipeline scripts are in this folder (`drafts/pipeline/`).
 
 ## Immediate next action (LA)
-**LA batches 1 (8 tours), 2 (4 tours), 3 (4 tours) ALL image-COMPLETE.** Batch 3 (`drafts/la-batch3/`)
-= 03 MOCA Grand Ave, 05 Angels Flight, 06 Bradbury, 07 City Hall — all image-staged + pushed 2026-07-02 (`103c448`).
-- **03 MOCA:** owner-OK'd CC BY-SA (M32 hero + M28/M31 gallery — all credit-logged). Isozaki building
-  is deliberately hidden → not in ship-safe stock (returns The Broad/Disney/Moab); only Wikimedia CC had it.
-- **05 Angels Flight / 06 Bradbury / 07 City Hall:** deep clean ship-safe stock. Bradbury hero = interior atrium.
-- **La Brea / MOCA sourcing lesson:** low/hidden or generic-looking subjects mis-match badly in stock
-  (wrong museums, neighbor buildings, desert "Moab") — verify pixels; iconic shots often only exist as CC BY-SA.
+**LA batches 1 (×8), 2 (×4), 3 (×4), 4 (×4) ALL image-COMPLETE — 20 tours staged.** Batch 4 (`drafts/la-batch4/`)
+= 10 Little Tokyo, 11 Last Bookstore, 14 Dolby Theatre, 16 Capitol Records — pushed 2026-07-02 (`e71ed38`).
+- **10 Little Tokyo:** thin/noisy (stock returns Chinatown / Tokyo Japan / El Capitan) — 3 verified ship-safe.
+- **11 Last Bookstore:** deep clean ship-safe (book tunnel/vortex/banking hall). 14 Dolby: owner-supplied facade hero + ship-safe gallery (clean facades were all CC).
+- **16 Capitol Records:** owner rejected first stock set (a *different* round tower); correct = P53 hero (Public Domain) + P20 (Pexels), both ship-safe. "Capitol" mis-matches CA/US Capitols + a WV music hall.
+- **Batch 4 = zero credit obligations** (all ship-safe / PD / owner-supplied).
+- **Sourcing lesson (batches 2–4):** hidden/generic/ambiguously-named subjects mis-match badly — verify pixels; owner-paste or CC-flag when ship-safe stock is wrong or absent.
 **Next LA work:** wait for the owner to send more LA scripts (gaps below), then image-stage per PROCESS.md.
 
 ## LA status
-- **Scripts received:** batch 1 = 01,02,04,08,09,12,13,15; batch 2 = 19,20,24,28; batch 3 = 03,05,06,07 (`drafts/la-batch1..3/`).
-- **Images DONE + pushed:** ALL 16 received tours (batch 1 ×8, batch 2 ×4, batch 3 ×4).
-- **Gaps not yet sent:** LA tours 10, 11, 14, 16, 17, 18, 21–23, 25–27 (+ beyond). Owner sends more.
-- **LA credits so far (5):** `walt-disney-concert-hall_6` (CC BY 2.0), `la-brea-tar-pits_hero` (CC BY-SA 4.0),
-  `moca-grand-avenue_hero`+`_2`+`_3` (CC BY-SA 3.0 / CC BY 2.0 / CC BY-SA 4.0). See `drafts/CREDITS.md`.
+- **Scripts received:** b1 = 01,02,04,08,09,12,13,15; b2 = 19,20,24,28; b3 = 03,05,06,07; b4 = 10,11,14,16 (`drafts/la-batch1..4/`).
+- **Images DONE + pushed:** ALL 20 received tours (b1 ×8, b2 ×4, b3 ×4, b4 ×4).
+- **Gaps not yet sent:** LA tours 17, 18, 21, 22, 23, 25, 26, 27 (+ beyond). Owner sends more.
+- **LA credits so far (5, unchanged):** `walt-disney-concert-hall_6` (CC BY 2.0), `la-brea-tar-pits_hero` (CC BY-SA 4.0),
+  `moca-grand-avenue_hero`+`_2`+`_3` (CC BY-SA 3.0 / CC BY 2.0 / CC BY-SA 4.0). Batch 4 added none. See `drafts/CREDITS.md`.
 - **Maker:** create **Atlas Studio LAX** at first LA wire-in.
 - **API keys loaded this session:** Unsplash, Pexels, Pixabay all provided + verified (paste fresh next session).
 
