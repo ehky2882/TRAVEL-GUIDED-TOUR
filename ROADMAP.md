@@ -887,7 +887,7 @@ Backend decided: **Supabase (Postgres)** — see `docs/backend-design.md`.
 | **2. Backend foundation** | `makers`/`tours`/`stops` schema, public-read RLS, `get_catalog()` RPC, seed from `Tours.json` | ✅ **DONE (2026-06-27)** — Supabase project "Dozent" live + seeded (5/370/396); **app cutover shipped (PR #255)** — `RemoteCatalogLoader` reads `get_catalog` first, gh-pages fallback. Live in **TestFlight 1.0 (50)** |
 | **3. Accounts & auth** | `profiles`, self-serve makers, per-tour moderation, `reports`, consumer-sync tables; Apple+email+Google | ✅ **DONE — shipped through TestFlight 1.0 (57).** Email (#262) + Apple (#274) + Google (#277) sign-in; cross-device sync of library/makers/progress/recently-viewed (#279/#287) with logout-clear (#283); "Report a concern" → `reports` (#290). `AuthService` + `SyncService`. (Report-email notifications = pending owner Resend setup.) |
 | **4. Maker dashboard** | Phase 1 single-piece creation (record/import audio, pin+radius, photos, transcript, metadata, submit→review), then Phase 2 multi-stop | 🟡 Storage buckets live (PR #222); design done (P1 #222 / P2 #223). Pending: authoring UI (Mac) |
-| **5. Moderation (email-me)** | Owner chose **email notify**, not a queue UI: emailed on submit/report, act via `publish_tour`/`takedown_tour` | 🟡 SQL helpers applied (PR #224). Pending: deploy `notify-moderation` Edge Function + Resend + 2 webhooks (owner) |
+| **5. Moderation (email-me)** | Owner chose **email notify**, not a queue UI: emailed on submit/report, act via `publish_tour`/`takedown_tour` | ✅ **Report emails LIVE (2026-07-01).** SQL helpers (PR #224) + `notify-moderation` Edge Function deployed + Resend secrets + `reports` INSERT webhook — owner-confirmed end-to-end. Optional `tours` UPDATE→in_review webhook deferred to maker authoring. |
 | **6. Paid tours** | Apple IAP; `Tour.priceUSD` goes live; ownership tracking (Tier 2 #4) | ⬜ Not started |
 | **7. Maker payouts** | Stripe Connect (Tier 2 #5) | ⬜ Not started |
 | **8. Consumer richness** | Follow-a-maker push, in-app search, share links (sign-in/sync already in Step 3) | ⬜ Partially pulled forward |
@@ -915,7 +915,7 @@ hosting) can follow.
 
 **B. Supabase config — owner (dashboard; Apple/Google need their dev consoles)**
 - [ ] Enable auth providers — email (toggle), Apple (Services ID), Google (OAuth client)
-- [ ] Deploy `notify-moderation` Edge Function + set Resend key + add 2 DB webhooks (tours UPDATE, reports INSERT)
+- [x] Deploy `notify-moderation` Edge Function + set Resend secrets + add `reports` INSERT DB webhook — **done 2026-07-01**, owner-confirmed email delivery. (Optional `tours` UPDATE→in_review webhook deferred until maker authoring ships.)
 - [ ] Make yourself admin: `update profiles set is_admin = true where id = '<your auth uid>';` (once you have a signed-in account)
 
 **C. Needs owner decisions, then design**
