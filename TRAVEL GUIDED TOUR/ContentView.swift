@@ -263,7 +263,7 @@ struct ContentView: View {
         switch appShared.selectedTab {
         case .home:    HomeView(sheetDetent: $homeSheetDetent)
         case .library: LibraryView()
-        case .me:      SettingsView()
+        case .me:      ProfileView()
         }
     }
 
