@@ -5,20 +5,19 @@ branch **`claude/dreamy-wozniak-nM6a4`**; images are on **gh-pages**. `/tmp` is 
 re-fetch candidates as needed; pipeline scripts are in this folder (`drafts/pipeline/`).
 
 ## Immediate next action (LA)
-**LA batches 1–5 ALL image-COMPLETE — 24 tours staged.** Batch 5 (`drafts/la-batch5/`)
-= 21 Academy Museum, 22 Petersen, 25 Griffith Park/Greek Theatre, 29 Third Street Promenade — pushed 2026-07-02 (`336b527` for 21/22/25, `0f01128` for 29).
-- **21 Academy Museum:** Renzo Piano sphere (Y5, ship-safe) hero; gold cylinder not in stock. Y40 gallery = CC BY-SA.
-- **22 Petersen:** unmistakable red+silver ribbon building, deep ship-safe.
-- **25 Griffith Park & Greek Theatre:** Greek Theatre building NOT in ship-safe stock (stock returns the Hollywood Bowl!); hero = Griffith Park vista (R11, ship-safe) + 2 CC BY-SA Greek Theatre shots (owner-OK'd).
-- **29 Third Street Promenade:** first stock set owner-doubted → re-sourced (dropped car-streets/pier/beach); owner then supplied 2 own photos (hero + wide street) + Q3/Q16 stock. No credit.
-- **Sourcing lesson (batches 2–5):** hidden/generic/ambiguously-named subjects mis-match badly (Greek Theatre→Hollywood Bowl, Capitol→CA/US Capitols, MOCA→The Broad) — verify pixels; owner-paste or CC-flag when ship-safe stock is wrong/absent.
+**LA batches 1–6 ALL image-COMPLETE — 28 tours staged.** Batch 6 (`drafts/la-batch6/`)
+= 30 Venice Boardwalk, 31 Venice Canals, 34 Science Center/Endeavour, 35 Natural History Museum — pushed 2026-07-02 (`c1cf0fb` for 30/31, `c47375f` for 34/35). **All ship-safe — 0 new credits.**
+- **30/31 Venice:** deep clean ship-safe (verified CA not Italy).
+- **34 Science Center/Endeavour:** Endeavour horizontal-display hero; new 2024 vertical config not in stock. "Science Center" stock noisy (Griffith Obs, Palm Springs museum, TX science center).
+- **35 Natural History Museum:** "dueling dinosaurs" hero; NHM exterior thin in stock (dome→Griffith Obs). "Natural History Museum" mis-matches London NHM/British Museum.
+- **Sourcing lesson (batches 2–6):** hidden/generic/ambiguously-named subjects mis-match badly (Greek Theatre→Hollywood Bowl, Capitol→CA/US Capitols, MOCA→The Broad, Science Center→Griffith Obs, NHM→London NHM) — verify pixels; owner-paste or CC-flag when ship-safe stock is wrong/absent.
 **Next LA work:** wait for the owner to send more LA scripts (gaps below), then image-stage per PROCESS.md.
 
 ## LA status
-- **Scripts received:** b1 = 01,02,04,08,09,12,13,15; b2 = 19,20,24,28; b3 = 03,05,06,07; b4 = 10,11,14,16; b5 = 21,22,25,29 (`drafts/la-batch1..5/`).
-- **Images DONE + pushed:** ALL 24 received tours (b1 ×8, b2 ×4, b3 ×4, b4 ×4, b5 ×4).
-- **Gaps not yet sent:** LA tours 17, 18, 23, 26, 27 (+ beyond). Owner sends more.
-- **LA credits so far (8):** WD53 (CC BY 2.0), La Brea hero (CC BY-SA 4.0), MOCA ×3 (b3), Academy Y40 (CC BY-SA 4.0, author TBD) + Greek RG3 (CC BY-SA 3.0) + RG1 (CC BY-SA 4.0). See `drafts/CREDITS.md`.
+- **Scripts received:** b1 = 01,02,04,08,09,12,13,15; b2 = 19,20,24,28; b3 = 03,05,06,07; b4 = 10,11,14,16; b5 = 21,22,25,29; b6 = 30,31,34,35 (`drafts/la-batch1..6/`).
+- **Images DONE + pushed:** ALL 28 received tours (b1 ×8, b2 ×4, b3 ×4, b4 ×4, b5 ×4, b6 ×4).
+- **Gaps not yet sent:** LA tours 17, 18, 23, 26, 27, 32, 33 (+ beyond). Owner sends more.
+- **LA credits so far (8, unchanged — b6 added none):** WD53 (CC BY 2.0), La Brea hero (CC BY-SA 4.0), MOCA ×3 (b3), Academy Y40 (CC BY-SA 4.0, author TBD) + Greek RG3 (CC BY-SA 3.0) + RG1 (CC BY-SA 4.0). See `drafts/CREDITS.md`.
 - **Maker:** create **Atlas Studio LAX** at first LA wire-in.
 - **API keys loaded this session:** Unsplash, Pexels, Pixabay all provided + verified (paste fresh next session).
 
