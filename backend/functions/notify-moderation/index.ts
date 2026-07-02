@@ -25,6 +25,28 @@ const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY") ?? "";
 const TO = Deno.env.get("MODERATION_EMAIL") ?? "";
 const FROM = Deno.env.get("FROM_EMAIL") ?? "Atlas <moderation@atlas.app>";
 
+// Auto-injected into every Supabase Edge Function — used to look up the tour
+// title for a report (the `reports` row only stores `tour_id`). The service
+// role key bypasses RLS, so titles resolve for any tour status.
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL") ?? "";
+const SERVICE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
+
+/// Resolve a tour id to its human-readable title (null if missing/not found).
+async function tourTitle(tourId: unknown): Promise<string | null> {
+  if (!tourId || !SUPABASE_URL || !SERVICE_KEY) return null;
+  try {
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/tours?id=eq.${tourId}&select=title`,
+      { headers: { apikey: SERVICE_KEY, Authorization: `Bearer ${SERVICE_KEY}` } },
+    );
+    if (!res.ok) return null;
+    const rows = await res.json();
+    return Array.isArray(rows) && rows[0]?.title ? String(rows[0].title) : null;
+  } catch {
+    return null;
+  }
+}
+
 async function sendEmail(subject: string, html: string): Promise<void> {
   if (!RESEND_API_KEY || !TO) {
     console.error("missing RESEND_API_KEY or MODERATION_EMAIL");
@@ -72,12 +94,14 @@ Deno.serve(async (req: Request): Promise<Response> => {
   // New report filed against a tour.
   if (p.table === "reports" && p.type === "INSERT" && p.record) {
     const r = p.record;
+    const title = await tourTitle(r.tour_id);
     await sendEmail(
-      `Atlas: tour reported — ${r.reason}`,
-      `<p>A tour was reported.</p>
+      title ? `Atlas: “${title}” reported — ${r.reason}` : `Atlas: tour reported — ${r.reason}`,
+      `<p><strong>${title ?? "A tour"}</strong> was reported.</p>
        <p>Reason: ${r.reason}<br>
           Details: ${r.details ?? "—"}<br>
-          Tour id: <code>${r.tour_id}</code></p>
+          Tour: ${title ?? "—"}<br>
+          Tour id: <code>${r.tour_id ?? "—"}</code></p>
        <p>Triage in the <code>reports</code> table (status: open → reviewed / actioned / dismissed).</p>`,
     );
   }
