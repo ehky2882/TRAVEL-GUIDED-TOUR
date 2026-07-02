@@ -7,6 +7,10 @@
           {
             "/": "/TRAVEL-GUIDED-TOUR/t/*",
             "comment": "Atlas tour share links open in the app"
+          },
+          {
+            "/": "/TRAVEL-GUIDED-TOUR/m/*",
+            "comment": "Atlas maker share links open in the app"
           }
         ]
       }

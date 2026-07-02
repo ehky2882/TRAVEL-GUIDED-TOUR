@@ -7,6 +7,7 @@ import XCTest
 final class DeepLinkParsingTests: XCTestCase {
 
     private let sampleID = UUID(uuidString: "17050c9f-27a2-45e2-9e69-3ae9528c66c9")!
+    private let makerID = UUID(uuidString: "00000000-0000-0000-0000-000000000001")!
 
     // MARK: - Universal Links (https)
 
@@ -37,16 +38,39 @@ final class DeepLinkParsingTests: XCTestCase {
         XCTAssertEqual(DeepLinkParser.parse(url), .tour(sampleID))
     }
 
+    // MARK: - Maker links
+
+    func test_parses_maker_universalLink_queryForm() {
+        let url = URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/m/?id=00000000-0000-0000-0000-000000000001")!
+        XCTAssertEqual(DeepLinkParser.parse(url), .maker(makerID))
+    }
+
+    func test_parses_maker_universalLink_pathForm() {
+        let url = URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/m/00000000-0000-0000-0000-000000000001")!
+        XCTAssertEqual(DeepLinkParser.parse(url), .maker(makerID))
+    }
+
+    func test_parses_maker_customScheme() {
+        XCTAssertEqual(
+            DeepLinkParser.parse(URL(string: "dozent://maker/00000000-0000-0000-0000-000000000001")!),
+            .maker(makerID)
+        )
+        XCTAssertEqual(
+            DeepLinkParser.parse(URL(string: "dozent://maker?id=00000000-0000-0000-0000-000000000001")!),
+            .maker(makerID)
+        )
+    }
+
     // MARK: - Rejections (must NOT route)
 
     func test_ignores_oauthCallback() {
-        // The Google sign-in callback must never be treated as a tour link.
+        // The Google sign-in callback must never be treated as a deep link.
         let url = URL(string: "dozent://login-callback#access_token=abc")!
         XCTAssertNil(DeepLinkParser.parse(url))
     }
 
     func test_ignores_customScheme_wrongHost() {
-        XCTAssertNil(DeepLinkParser.parse(URL(string: "dozent://maker/17050c9f-27a2-45e2-9e69-3ae9528c66c9")!))
+        XCTAssertNil(DeepLinkParser.parse(URL(string: "dozent://profile/17050c9f-27a2-45e2-9e69-3ae9528c66c9")!))
     }
 
     func test_ignores_https_nonTourPath() {
@@ -85,5 +109,17 @@ final class DeepLinkParsingTests: XCTestCase {
         // A link we generate must parse back to the same tour id.
         let url = AtlasShareLink.tourURL(id: sampleID)
         XCTAssertEqual(DeepLinkParser.parse(url), .tour(sampleID))
+    }
+
+    func test_makerShareURL_hasExpectedShape() {
+        XCTAssertEqual(
+            AtlasShareLink.makerURL(id: makerID).absoluteString,
+            "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/m/?id=00000000-0000-0000-0000-000000000001"
+        )
+    }
+
+    func test_makerShareURL_roundTripsThroughParser() {
+        let url = AtlasShareLink.makerURL(id: makerID)
+        XCTAssertEqual(DeepLinkParser.parse(url), .maker(makerID))
     }
 }

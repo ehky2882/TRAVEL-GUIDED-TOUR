@@ -421,7 +421,11 @@ struct MakerView: View {
                 )
             }
 
-            ShareLink(item: shareText, subject: Text(maker.displayName)) {
+            ShareLink(
+                item: AtlasShareLink.makerURL(for: maker),
+                subject: Text(maker.displayName),
+                message: Text(shareText)
+            ) {
                 Label("Share", systemImage: "square.and.arrow.up")
             }
 
@@ -449,8 +453,10 @@ struct MakerView: View {
         }
     }
 
+    /// Accompanying message for `ShareLink` — the shared *item* is the maker's
+    /// https Universal Link (`AtlasShareLink.makerURL`); this rides alongside it.
     private var shareText: String {
-        "\(maker.displayName) on Atlas"
+        "Check out this creator on Atlas: \(maker.displayName) 🎧"
     }
 
     // MARK: - Derived

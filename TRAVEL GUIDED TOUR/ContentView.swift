@@ -29,6 +29,7 @@ struct ContentView: View {
     @Environment(TourDownloader.self) private var tourDownloader
     @Environment(AppSharedState.self) private var appShared
     @Environment(TourPresenter.self) private var tourPresenter
+    @Environment(MakerPresenter.self) private var makerPresenter
     @Environment(SavedMakersStore.self) private var savedMakersStore
 
     /// `.onAppear` fires every time the view re-attaches (tab switch,
@@ -130,6 +131,28 @@ struct ContentView: View {
         .ignoresSafeArea(.container, edges: .bottom)
         .environment(navState)
         .environment(homeSharedState)
+        // Maker deep links (a shared maker link) have no nav stack to push
+        // onto, so present the maker page as a sheet driven by MakerPresenter.
+        // Re-inject the environment the maker subtree needs (a tour tapped
+        // inside slides up over this sheet via the bottom-layer presenter,
+        // which targets the topmost view controller).
+        .sheet(item: Bindable(makerPresenter).presentedMaker) { maker in
+            NavigationStack {
+                MakerView(maker: maker)
+            }
+            .environment(dataService)
+            .environment(tourPresenter)
+            .environment(makerPresenter)
+            .environment(libraryStore)
+            .environment(savedMakersStore)
+            .environment(audioPlayer)
+            .environment(locationManager)
+            .environment(recentlyViewedStore)
+            .environment(proximityMonitor)
+            .environment(tourDownloader)
+            .environment(appShared)
+            .environment(navState)
+        }
         // NOTE: the full PlayerView is presented from `BottomModuleRoot`
         // (the secondary top window), NOT here — so the cover physically
         // slides up over the mini-player + tab bar in the same window,

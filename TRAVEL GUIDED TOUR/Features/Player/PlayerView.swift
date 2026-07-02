@@ -336,10 +336,7 @@ struct PlayerView: View {
     /// The shared *item* is the tour's https Universal Link
     /// (`AtlasShareLink.tourURL`); this line rides alongside it for context.
     private var shareText: String {
-        if let maker = dataService.maker(for: tour) {
-            return "\(tour.title) — by \(maker.displayName) on Atlas"
-        }
-        return "\(tour.title) on Atlas"
+        "Check out this audio tour on Atlas: \(tour.title) 🎧"
     }
 
     /// Now-playing block. Sits directly under the carousel (the old

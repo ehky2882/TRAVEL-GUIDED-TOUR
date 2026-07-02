@@ -1167,10 +1167,7 @@ struct TourDetailView: View {
     /// tour's https Universal Link (`AtlasShareLink.tourURL`) — this line rides
     /// alongside it to give the recipient context.
     private var shareText: String {
-        if let maker = dataService.maker(for: tour) {
-            return "\(tour.title) — by \(maker.displayName) on Atlas"
-        }
-        return "\(tour.title) on Atlas"
+        "Check out this audio tour on Atlas: \(tour.title) 🎧"
     }
 
     // MARK: - Actions

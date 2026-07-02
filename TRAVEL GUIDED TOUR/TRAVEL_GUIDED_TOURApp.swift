@@ -42,6 +42,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// switches between floating-island and full-edge based on
     /// whether a detail is up).
     @State private var tourPresenter = TourPresenter()
+    /// App-wide channel for presenting a maker page from a deep link (a shared
+    /// maker link). Makers are otherwise only *pushed* onto local nav stacks;
+    /// this drives a `.sheet` in `ContentView`. See `MakerPresenter`.
+    @State private var makerPresenter = MakerPresenter()
     /// Tracks how many pushed detail screens are on top of any tab's
     /// nav stack. Promoted from `ContentView` to the App level so the
     /// bottom-module window (a separate `UIWindow`) can read it too:
@@ -105,6 +109,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(tourDownloader)
                     .environment(appShared)
                     .environment(tourPresenter)
+                    .environment(makerPresenter)
                     .environment(navState)
                     .environment(savedMakersStore)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
@@ -176,6 +181,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                                 .environment(tourDownloader)
                                 .environment(appShared)
                                 .environment(tourPresenter)
+                                .environment(makerPresenter)
                                 .environment(navState)
                                 .environment(savedMakersStore)
                             // No `.preferredColorScheme(...)` here:
@@ -245,6 +251,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
         case .tour(let id):
             if let tour = dataService.tour(by: id) {
                 tourPresenter.present(tour)
+            }
+        case .maker(let id):
+            if let maker = dataService.maker(by: id) {
+                makerPresenter.present(maker)
             }
         }
     }
