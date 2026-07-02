@@ -33,20 +33,49 @@ private enum MakerListLayout: String {
     case list, grid
 }
 
+/// How a `MakerView` is being shown.
+///
+/// A maker page and the signed-in user's own profile are the SAME
+/// screen (owner direction, 2026-07-01: "each maker should be thought
+/// of like a user too"). The mode only toggles the chrome around the
+/// shared header + tour feed:
+///  • `.publicMaker` — someone else's page (default; unchanged): a
+///    bookmark + a `…` overflow menu (Share / Follow / Report), and it
+///    registers as a pushed detail (`navState.push()`).
+///  • `.ownProfile` — the Me tab's own profile: a gear that opens
+///    Settings, and a `+` add-a-tour affordance in the feed. It's a
+///    TAB ROOT, so it does NOT register as a pushed detail.
+enum MakerViewMode {
+    case publicMaker
+    case ownProfile
+}
+
 /// Maker page — spec § Key screens #5 / roadmap M-maker.
 ///
 /// Replaces the stub that landed in M-tour-detail. Shows the maker's
 /// avatar, display name, bio, optional website link, and the full
 /// list of their tours. Each tour row pushes `TourDetailView` onto
 /// the navigation stack.
+///
+/// Also serves as the signed-in user's own profile (the Me tab) via
+/// `mode: .ownProfile` — see `MakerViewMode`.
 struct MakerView: View {
     let maker: Maker
+    /// Public maker page vs. the user's own profile. Defaults to
+    /// `.publicMaker` so every existing call site is unchanged.
+    var mode: MakerViewMode = .publicMaker
 
     @Environment(DataService.self) private var dataService
     @Environment(AtlasNavigationState.self) private var navState
     @Environment(SavedMakersStore.self) private var savedMakersStore
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(LocationManager.self) private var locationManager
+    // Optional: the public maker page can be reached via the
+    // UIKit-backed tour-detail layer, whose environment does NOT inject
+    // AuthService — a required lookup would crash there (same class of
+    // bug as the old ReportSheet crash). Only `.ownProfile` (a tab root
+    // that always carries the app environment) reads it.
+    @Environment(AuthService.self) private var authService: AuthService?
 
     private let avatarSize: CGFloat = 96
 
@@ -61,8 +90,13 @@ struct MakerView: View {
     /// Measured width of the grid container — drives square tile sizing.
     @State private var gridContentWidth: CGFloat = 0
     @State private var showingReport = false
+    /// Own-profile only: Settings sheet (behind the gear) + the
+    /// create-a-tour placeholder (behind the `+`).
+    @State private var showingSettings = false
+    @State private var showingCreate = false
 
     private var isSaved: Bool { savedMakersStore.isSaved(maker.id) }
+    private var isOwnProfile: Bool { mode == .ownProfile }
 
     var body: some View {
         ScrollView {
@@ -93,6 +127,12 @@ struct MakerView: View {
         .sheet(isPresented: $showingReport) {
             ReportSheet(target: .maker(maker))
         }
+        .sheet(isPresented: $showingSettings) {
+            SettingsView()
+        }
+        .sheet(isPresented: $showingCreate) {
+            CreateTourPlaceholderView()
+        }
         // No visible nav-bar title (owner direction): the masthead
         // already shows the maker name. Empty string keeps the bar +
         // back button while dropping the centered title text. The
@@ -100,21 +140,33 @@ struct MakerView: View {
         // masthead name in the body.
         .navigationTitle("")
         .inlineNavigationBarTitle()
-        // Trailing nav-bar controls mirror the tour-detail sheet:
-        // a bookmark (toggles this maker as saved) + a `…` overflow
-        // menu (Save · Share · Follow [disabled] · Report).
+        // Trailing nav-bar controls.
+        //  • Own profile: a gear that opens Settings (Settings moved
+        //    inside the profile — owner direction, 2026-07-01).
+        //  • Public maker: a bookmark (save this maker) + a `…` overflow
+        //    menu (Save · Share · Follow [disabled] · Report), mirroring
+        //    the tour-detail sheet.
         .toolbar {
             ToolbarItemGroup(placement: .topBarTrailing) {
-                Button {
-                    savedMakersStore.toggleSaved(maker.id)
-                } label: {
-                    Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
-                }
-                .accessibilityLabel(isSaved
-                    ? "Remove \(maker.displayName) from saved"
-                    : "Save \(maker.displayName)")
+                if isOwnProfile {
+                    Button {
+                        showingSettings = true
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                    .accessibilityLabel("Settings")
+                } else {
+                    Button {
+                        savedMakersStore.toggleSaved(maker.id)
+                    } label: {
+                        Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
+                    }
+                    .accessibilityLabel(isSaved
+                        ? "Remove \(maker.displayName) from saved"
+                        : "Save \(maker.displayName)")
 
-                overflowMenu
+                    overflowMenu
+                }
             }
         }
         // Reserve room at the bottom for the mini-player + tab bar
@@ -122,11 +174,14 @@ struct MakerView: View {
         .safeAreaInset(edge: .bottom, spacing: 0) {
             Color.clear.frame(height: AtlasBottomModule.height())
         }
-        // Mark this surface as a pushed detail screen so the bottom
-        // module switches to full-edge while it's on top — even
-        // when reached from Home.
-        .onAppear { navState.push() }
-        .onDisappear { navState.pop() }
+        // Public maker pages register as a pushed detail so the bottom
+        // module switches to full-edge while they're on top — even when
+        // reached from Home. The own profile is a TAB ROOT (the Me tab),
+        // whose full-edge geometry already comes from `selectedTab != .home`,
+        // so it must NOT push (that would leak into the Home drawer's
+        // isShowingDetail logic).
+        .onAppear { if !isOwnProfile { navState.push() } }
+        .onDisappear { if !isOwnProfile { navState.pop() } }
     }
 
     // MARK: - Sections
@@ -223,7 +278,10 @@ struct MakerView: View {
             }
             .padding(.top, AtlasSpacing.md)
 
-            if makerTours.isEmpty {
+            // Own profile always shows the feed so the `+` add-a-tour
+            // affordance is present even with zero tours. Public pages
+            // keep the plain "No tours yet." empty state.
+            if makerTours.isEmpty && !isOwnProfile {
                 Text("No tours yet.")
                     .font(AtlasTypography.body)
                     .foregroundStyle(AtlasColors.secondaryText)
@@ -258,6 +316,11 @@ struct MakerView: View {
 
     private var toursList: some View {
         LazyVStack(alignment: .leading, spacing: 0) {
+            if isOwnProfile {
+                addTourRow
+                if !makerTours.isEmpty { Divider() }
+            }
+
             ForEach(makerTours) { tour in
                 tourOpen(tour) { tourRow(tour) }
 
@@ -266,6 +329,59 @@ struct MakerView: View {
                 }
             }
         }
+    }
+
+    /// Own-profile "+" row that starts a new tour. Mirrors `tourRow`'s
+    /// layout (square 64pt leading tile) so it sits flush with the feed.
+    private var addTourRow: some View {
+        Button {
+            showingCreate = true
+        } label: {
+            HStack(alignment: .center, spacing: AtlasSpacing.md) {
+                ZStack {
+                    Rectangle()
+                        .fill(AtlasColors.placeholderWarm.opacity(0.35))
+                    Image(systemName: "plus")
+                        .font(AtlasTypography.body)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                }
+                .frame(width: 64, height: 64)
+
+                Text("ADD A TOUR")
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+
+                Spacer()
+
+                Image(systemName: "chevron.right")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.tertiaryText)
+            }
+            .padding(.vertical, AtlasSpacing.sm)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Add a tour")
+    }
+
+    /// Own-profile "+" grid tile — a square dashed cell that starts a
+    /// new tour, sized to match the photo tiles beside it.
+    private func addTourTile(side: CGFloat) -> some View {
+        Button {
+            showingCreate = true
+        } label: {
+            ZStack {
+                Rectangle()
+                    .fill(AtlasColors.placeholderWarm.opacity(0.35))
+                Image(systemName: "plus")
+                    .font(.system(size: max(18, side * 0.28)))
+                    .foregroundStyle(AtlasColors.secondaryText)
+            }
+            .frame(width: side, height: side)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Add a tour")
     }
 
     /// Instagram-style 3-column square photo grid (image only). Shows
@@ -277,6 +393,9 @@ struct MakerView: View {
         let columns = Array(repeating: GridItem(.flexible(), spacing: spacing), count: 3)
         let side = max(0, (gridContentWidth - spacing * 2) / 3)
         return LazyVGrid(columns: columns, spacing: spacing) {
+            if isOwnProfile {
+                addTourTile(side: side)
+            }
             ForEach(makerTours) { tour in
                 tourOpen(tour) {
                     HeroImageView(
