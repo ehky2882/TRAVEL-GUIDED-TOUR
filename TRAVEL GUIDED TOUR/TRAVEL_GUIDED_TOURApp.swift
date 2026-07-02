@@ -20,10 +20,19 @@ struct TRAVEL_GUIDED_TOURApp: App {
             memoryCapacity: 50_000_000,
             diskCapacity: 200_000_000
         )
+        // AuthService is shared by MakerProfileService (and SyncService, created
+        // later in .task), so build it here and hand the same instance in.
+        let auth = AuthService()
+        _authService = State(initialValue: auth)
+        _makerProfileService = State(initialValue: MakerProfileService(auth: auth))
     }
 
     @State private var dataService = DataService()
-    @State private var authService = AuthService()
+    @State private var authService: AuthService
+    /// The signed-in user's own creator profile (their `makers` row). Loaded by
+    /// the Profile tab; created/edited via the profile editor. See
+    /// `Data/MakerProfileService.swift`.
+    @State private var makerProfileService: MakerProfileService
     @State private var libraryStore = LibraryStore()
     @State private var locationManager = LocationManager()
     @State private var audioPlayer = AudioPlayerService()
@@ -100,6 +109,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 ContentView()
                     .environment(dataService)
                     .environment(authService)
+                    .environment(makerProfileService)
                     .environment(libraryStore)
                     .environment(locationManager)
                     .environment(audioPlayer)

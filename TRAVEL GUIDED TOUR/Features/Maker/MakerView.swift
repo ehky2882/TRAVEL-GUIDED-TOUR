@@ -87,6 +87,9 @@ struct MakerView: View {
     // via the bottom layer, which injects it explicitly) uses this — for
     // its X close. Pushed / own-profile contexts don't.
     @Environment(MakerPresenter.self) private var makerPresenter: MakerPresenter?
+    // Optional: only `.ownProfile` (the Me tab, which carries it via the
+    // ContentView environment) uses this — to edit/create the profile.
+    @Environment(MakerProfileService.self) private var makerProfileService: MakerProfileService?
 
     private let avatarSize: CGFloat = 96
 
@@ -102,9 +105,11 @@ struct MakerView: View {
     @State private var gridContentWidth: CGFloat = 0
     @State private var showingReport = false
     /// Own-profile only: Settings sheet (behind the gear) + the
-    /// create-a-tour placeholder (behind the `+`).
+    /// create-a-tour placeholder (behind the `+`) + the profile editor
+    /// (behind "Edit Profile").
     @State private var showingSettings = false
     @State private var showingCreate = false
+    @State private var showingEditProfile = false
 
     private var isSaved: Bool { savedMakersStore.isSaved(maker.id) }
     private var isOwnProfile: Bool { mode == .ownProfile }
@@ -144,6 +149,9 @@ struct MakerView: View {
         }
         .sheet(isPresented: $showingCreate) {
             CreateTourPlaceholderView()
+        }
+        .sheet(isPresented: $showingEditProfile) {
+            ProfileEditorView(currentMaker: maker)
         }
         // No visible nav-bar title (owner direction): the masthead
         // already shows the maker name. Empty string keeps the bar +
@@ -226,7 +234,30 @@ struct MakerView: View {
                 .foregroundStyle(AtlasColors.secondaryText)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
+
+            if isOwnProfile {
+                editProfileButton
+            }
         }
+    }
+
+    /// Own-profile "Edit Profile" pill — opens the profile editor, which
+    /// creates the maker row the first time and edits it after.
+    private var editProfileButton: some View {
+        Button {
+            showingEditProfile = true
+        } label: {
+            Text("Edit Profile")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.primaryText)
+                .padding(.horizontal, AtlasSpacing.lg)
+                .padding(.vertical, AtlasSpacing.sm)
+                .overlay(
+                    Capsule().stroke(AtlasColors.secondaryText.opacity(0.4), lineWidth: 1)
+                )
+        }
+        .buttonStyle(.plain)
+        .padding(.top, AtlasSpacing.xs)
     }
 
     private var avatar: some View {
