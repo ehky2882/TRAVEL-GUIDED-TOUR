@@ -1,20 +1,21 @@
 import SwiftUI
 
-/// App-wide channel for presenting a maker page from outside the normal
-/// navigation flow — specifically incoming deep links (a shared maker link).
+/// App-wide channel for presenting a public maker page as its **own
+/// top-level screen** — the maker twin of `TourPresenter`.
 ///
-/// Makers are normally *pushed* onto a local navigation stack (from a tour
-/// detail, search result, etc.), so unlike tours there was no app-level way to
-/// bring one up on demand. A deep link arrives at the App level with no stack
-/// to push onto, so this presenter drives a `.sheet` in `ContentView`.
+/// `ContentView` drives a UIKit bottom-layer slide-up off `presentedMaker`
+/// (the same treatment tours get), so a creator page opens consistently from
+/// anywhere, **including with no navigation context**: an incoming deep link
+/// (a shared maker link, even on cold launch), a Search result, or a
+/// saved-maker row. `MakerView(mode: .publicStandalone)` shows an X close
+/// wired to `dismiss()`.
 ///
-/// (Tours have the richer `TourPresenter` + UIKit bottom-layer slide-up; a
-/// maker deep link is rare enough that a standard sheet is the right, low-risk
-/// fit. A tour tapped inside the presented maker still slides up over it via
-/// the bottom layer, which presents from the topmost view controller.)
+/// The contextual "Go to creator" from a tour / the player deliberately stays
+/// an in-stack push (back returns to the tour) rather than routing here.
 @Observable
 final class MakerPresenter {
-    /// The maker to present as a sheet; nil means nothing is presented.
+    /// The maker to present; nil means nothing is presented. Drives the
+    /// maker bottom-layer in `ContentView`.
     var presentedMaker: Maker? = nil
 
     func present(_ maker: Maker) {

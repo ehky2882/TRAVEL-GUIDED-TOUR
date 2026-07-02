@@ -23,6 +23,7 @@ struct LibraryView: View {
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(TourDownloader.self) private var tourDownloader
     @Environment(TourPresenter.self) private var tourPresenter
+    @Environment(MakerPresenter.self) private var makerPresenter
     @Environment(SavedMakersStore.self) private var savedMakersStore
 
     @State private var selectedSection: Section = .saved
@@ -150,8 +151,8 @@ struct LibraryView: View {
             LazyVStack(alignment: .leading, spacing: 0) {
                 librarySectionHeader("Makers")
                 ForEach(savedMakers) { maker in
-                    NavigationLink {
-                        MakerView(maker: maker)
+                    Button {
+                        makerPresenter.present(maker)
                     } label: {
                         makerRow(maker)
                     }
