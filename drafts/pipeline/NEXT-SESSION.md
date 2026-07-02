@@ -5,24 +5,20 @@ branch **`claude/dreamy-wozniak-nM6a4`**; images are on **gh-pages**. `/tmp` is 
 re-fetch candidates as needed; pipeline scripts are in this folder (`drafts/pipeline/`).
 
 ## Immediate next action (LA)
-**LA batch 1 COMPLETE (8 tours). Batch 2 in progress — 3 of 4 done.** Batch 2 (`drafts/la-batch2/`)
-= tours 19 LACMA, 20 La Brea, 24 Griffith, 28 Santa Monica.
-- **DONE + pushed to gh-pages (`ea793bb`, 2026-07-02):** 24 Griffith (hero G1 + 5 gallery),
-  28 Santa Monica Pier (hero S14 + 5 gallery), 20 La Brea Tar Pits (**hero-only**, W8 CC BY-SA 4.0).
-- **PENDING — 19 LACMA / David Geffen Galleries:** the new Peter Zumthor building (opened 2026)
-  is NOT in the free/stock/Wikimedia pool yet (only a construction shot exists), so **the owner is
-  pasting their own finished-building photos** for the hero. Owner pre-picked **L25 + L27** (Urban
-  Light night, Pexels) for the gallery. **Action next session: extract owner's pasted Geffen photos
-  from transcript → crop hero → crop L25/L27 gallery from stock (re-fetch: query "LACMA Urban Light"
-  on Unsplash/Pexels) → push → update `drafts/la-batch2/README.md`.**
+**LA batch 1 COMPLETE (8 tours). LA batch 2 COMPLETE (4 tours).** Batch 2 (`drafts/la-batch2/`)
+= 19 LACMA, 20 La Brea, 24 Griffith, 28 Santa Monica — all image-staged + pushed 2026-07-02
+(`ea793bb` Griffith/SantaMonica/LaBrea-hero, `72c0176` LACMA).
+- **19 LACMA:** owner pasted 2 photos of the finished Zumthor David Geffen Galleries (hero = ribbon
+  across Wilshire + Urban Light; `_2` = concrete-underside detail) + L25/L27 Urban Light stock gallery.
+- **20 La Brea:** hero-only, W8 CC BY-SA 4.0 (owner-OK'd; credit logged).
+- **24 Griffith / 28 Santa Monica:** deep clean stock, hero + 5 gallery each.
 - **La Brea sourcing lesson (logged in batch-2 README):** stock "La Brea Tar Pits" returns WRONG
   museums (mammoth skeletons look alike) — verify pixels; the good iconic shots are all CC BY-SA.
-**Next LA work:** finish 19 (owner pastes), then wait for remaining LA scripts (gaps below).
+**Next LA work:** wait for the owner to send more LA scripts (gaps below), then image-stage per PROCESS.md.
 
 ## LA status
 - **Scripts received:** batch 1 = 01,02,04,08,09,12,13,15 (`drafts/la-batch1/`); batch 2 = 19,20,24,28 (`drafts/la-batch2/`).
-- **Images DONE + pushed:** batch 1 all 8; batch 2 = 24 Griffith, 28 Santa Monica, 20 La Brea (hero only).
-- **Images PENDING:** 19 LACMA (owner pasting Geffen building photos; L25/L27 stock gallery to crop).
+- **Images DONE + pushed:** batch 1 all 8; batch 2 all 4 (19 LACMA, 20 La Brea hero-only, 24 Griffith, 28 Santa Monica).
 - **Gaps not yet sent:** LA tours 03, 05, 06, 07, 10, 11, 14, 16, 17, 18, 21–23, 25–27 (+ beyond). Owner sends more.
 - **LA credit so far:** `walt-disney-concert-hall_6.webp` (WD53, CC BY 2.0) + `la-brea-tar-pits_hero.webp`
   (Downtowngal, CC BY-SA 4.0). See `drafts/CREDITS.md`.
