@@ -1083,7 +1083,14 @@ struct TourDetailView: View {
                 )
             }
 
-            ShareLink(item: shareText, subject: Text(tour.title)) {
+            // Share only the tour's https Universal Link — no accompanying
+            // message text, so iMessage shows a single rich link bubble (not a
+            // link bubble + a separate text bubble). The card's title/image
+            // come from the landing page's Open Graph tags.
+            ShareLink(
+                item: AtlasShareLink.tourURL(for: tour),
+                subject: Text(tour.title)
+            ) {
                 Label("Share", systemImage: "square.and.arrow.up")
             }
 
@@ -1157,17 +1164,6 @@ struct TourDetailView: View {
     private var menuDownloadDisabled: Bool {
         tourDownloader.activeTourId != nil
             && tourDownloader.activeTourId != tour.id
-    }
-
-    /// Plain-text payload for `ShareLink`. V1 has no public web
-    /// presence yet so we share a tour-identifying string rather than
-    /// a deep link — the design pass / launch can swap this for a
-    /// universal link without changing the UI.
-    private var shareText: String {
-        if let maker = dataService.maker(for: tour) {
-            return "\(tour.title) — by \(maker.displayName) on Atlas"
-        }
-        return "\(tour.title) on Atlas"
     }
 
     // MARK: - Actions
