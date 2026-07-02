@@ -8,7 +8,7 @@ a per-tour credits line, an in-app attributions screen, or swap for owner-suppli
 shots. Everything NOT listed here is ship-safe (Unsplash/Pexels/Pixabay — no
 attribution) or owner-supplied.
 
-Last updated 2026-06-30 (Toronto build complete incl. batch 10; all cities audited).
+Last updated 2026-07-02 (Toronto complete; LA batch 1 in progress).
 
 ## Toronto — 17 credit-required images
 
@@ -58,6 +58,12 @@ Last updated 2026-06-30 (Toronto build complete incl. batch 10; all cities audit
 | _(bata-shoe-museum_4 clog wall + _5 mukluks are ship-safe Pexels — no credit)_ | | | | |
 | _(Gardiner Museum, batch 10, is hero-only + owner-supplied — no credit)_ | | | | |
 
+### Los Angeles (batch 1 in progress, `drafts/la-batch1`)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `walt-disney-concert-hall_6.webp` | the "french-fry organ" (WD53) | Daniel Hartwig | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Disney_Concert_Hall_(10920404614).jpg |
+| _(Disney concert room WD67 = CC0; Chinese Theatre CT38 + The Broad TB240 = PD/CC0; all other LA batch-1 picks = Unsplash/Pexels — no credit. El Pueblo 09 = owner-supplied, pending.)_ | | | | |
+
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
 reuse single-stop stop images. Only two carry a credit, both already listed above:
@@ -76,7 +82,8 @@ for the exact per-image list.
 
 | City | Authoritative credit file (on `gh-pages`) | Credit-required images (CC BY / CC BY-SA) |
 |------|-------------------------------------------|-------------------------------------------|
-| **Toronto** | *this file* (`drafts/CREDITS.md`) | 14 (listed above) |
+| **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
+| **Los Angeles** | *this file* (below) | 1 so far (WD53, batch 1 in progress) |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
