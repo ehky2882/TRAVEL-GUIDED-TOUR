@@ -4,22 +4,19 @@ Fresh session? Read this first, then `PROCESS.md`. Everything below is committed
 branch **`claude/dreamy-wozniak-nM6a4`**; images are on **gh-pages**. `/tmp` is gone —
 re-fetch candidates as needed; pipeline scripts are in this folder (`drafts/pipeline/`).
 
-## Immediate next action (LA tour 09)
-**El Pueblo / Olvera Street** is the one unfinished LA tour. The owner is pasting their
-OWN Olvera Street photos and wants **one of the street shots as the hero**. At the moment
-of the previous session's end, those pastes hadn't flushed to disk yet (paste lag) AND the
-image-read API had degraded. To finish it:
-1. Extract the owner's latest pasted images from the transcript (see PROCESS.md "Owner-pasted
-   images"); wait a turn if the distinct-count hasn't risen.
-2. Read to confirm they're Olvera Street; pick the street one as hero.
-3. `crop.py` → `el-pueblo-olvera-street_hero.webp` + `_2..`; push to gh-pages.
-4. Update `drafts/la-batch1/README.md` (mark 09 done) — owner-supplied = no credit.
+## Immediate next action (LA)
+**LA batch 1 image-staging is COMPLETE (all 8 tours).** Tour 09 (El Pueblo / Olvera Street)
+was finished 2026-07-02: owner pasted 3 of their own photos; hero = the colorful vendor-stall
+street alley (owner: "one of the streets as the hero"), `_2` = willow market street, `_3` =
+La Placita plaza church. Cropped 1200×900 WebP, pushed to gh-pages (`718d3c7`). Owner-supplied
+= no credit.
+**Next LA work:** wait for the owner to send scripts for the remaining LA tours (gaps below),
+then image-stage each per PROCESS.md.
 
 ## LA status
 - **Scripts received:** 01, 02, 04, 08, 09, 12, 13, 15 — all staged in `drafts/la-batch1/`.
-- **Images DONE + pushed:** 01 Disney Hall, 02 The Broad, 04 Grand Central Market,
-  08 Union Station, 12 Walk of Fame, 13 Chinese Theatre, 15 Hollywood Sign.
-- **Pending images:** 09 El Pueblo (above).
+- **Images DONE + pushed (ALL 8):** 01 Disney Hall, 02 The Broad, 04 Grand Central Market,
+  08 Union Station, 09 El Pueblo/Olvera Street, 12 Walk of Fame, 13 Chinese Theatre, 15 Hollywood Sign.
 - **Gaps not yet sent:** LA tours 03, 05, 06, 07, 10, 11, 14 (+ beyond). Owner will send more.
 - **LA credit so far:** only `walt-disney-concert-hall_6.webp` (WD53 organ, Daniel Hartwig,
   CC BY 2.0). See `drafts/CREDITS.md`.
