@@ -5,23 +5,21 @@ branch **`claude/dreamy-wozniak-nM6a4`**; images are on **gh-pages**. `/tmp` is 
 re-fetch candidates as needed; pipeline scripts are in this folder (`drafts/pipeline/`).
 
 ## Immediate next action (LA)
-**LA batch 1 COMPLETE (8 tours). LA batch 2 COMPLETE (4 tours).** Batch 2 (`drafts/la-batch2/`)
-= 19 LACMA, 20 La Brea, 24 Griffith, 28 Santa Monica — all image-staged + pushed 2026-07-02
-(`ea793bb` Griffith/SantaMonica/LaBrea-hero, `72c0176` LACMA).
-- **19 LACMA:** owner pasted 2 photos of the finished Zumthor David Geffen Galleries (hero = ribbon
-  across Wilshire + Urban Light; `_2` = concrete-underside detail) + L25/L27 Urban Light stock gallery.
-- **20 La Brea:** hero-only, W8 CC BY-SA 4.0 (owner-OK'd; credit logged).
-- **24 Griffith / 28 Santa Monica:** deep clean stock, hero + 5 gallery each.
-- **La Brea sourcing lesson (logged in batch-2 README):** stock "La Brea Tar Pits" returns WRONG
-  museums (mammoth skeletons look alike) — verify pixels; the good iconic shots are all CC BY-SA.
+**LA batches 1 (8 tours), 2 (4 tours), 3 (4 tours) ALL image-COMPLETE.** Batch 3 (`drafts/la-batch3/`)
+= 03 MOCA Grand Ave, 05 Angels Flight, 06 Bradbury, 07 City Hall — all image-staged + pushed 2026-07-02 (`103c448`).
+- **03 MOCA:** owner-OK'd CC BY-SA (M32 hero + M28/M31 gallery — all credit-logged). Isozaki building
+  is deliberately hidden → not in ship-safe stock (returns The Broad/Disney/Moab); only Wikimedia CC had it.
+- **05 Angels Flight / 06 Bradbury / 07 City Hall:** deep clean ship-safe stock. Bradbury hero = interior atrium.
+- **La Brea / MOCA sourcing lesson:** low/hidden or generic-looking subjects mis-match badly in stock
+  (wrong museums, neighbor buildings, desert "Moab") — verify pixels; iconic shots often only exist as CC BY-SA.
 **Next LA work:** wait for the owner to send more LA scripts (gaps below), then image-stage per PROCESS.md.
 
 ## LA status
-- **Scripts received:** batch 1 = 01,02,04,08,09,12,13,15 (`drafts/la-batch1/`); batch 2 = 19,20,24,28 (`drafts/la-batch2/`).
-- **Images DONE + pushed:** batch 1 all 8; batch 2 all 4 (19 LACMA, 20 La Brea hero-only, 24 Griffith, 28 Santa Monica).
-- **Gaps not yet sent:** LA tours 03, 05, 06, 07, 10, 11, 14, 16, 17, 18, 21–23, 25–27 (+ beyond). Owner sends more.
-- **LA credit so far:** `walt-disney-concert-hall_6.webp` (WD53, CC BY 2.0) + `la-brea-tar-pits_hero.webp`
-  (Downtowngal, CC BY-SA 4.0). See `drafts/CREDITS.md`.
+- **Scripts received:** batch 1 = 01,02,04,08,09,12,13,15; batch 2 = 19,20,24,28; batch 3 = 03,05,06,07 (`drafts/la-batch1..3/`).
+- **Images DONE + pushed:** ALL 16 received tours (batch 1 ×8, batch 2 ×4, batch 3 ×4).
+- **Gaps not yet sent:** LA tours 10, 11, 14, 16, 17, 18, 21–23, 25–27 (+ beyond). Owner sends more.
+- **LA credits so far (5):** `walt-disney-concert-hall_6` (CC BY 2.0), `la-brea-tar-pits_hero` (CC BY-SA 4.0),
+  `moca-grand-avenue_hero`+`_2`+`_3` (CC BY-SA 3.0 / CC BY 2.0 / CC BY-SA 4.0). See `drafts/CREDITS.md`.
 - **Maker:** create **Atlas Studio LAX** at first LA wire-in.
 - **API keys loaded this session:** Unsplash, Pexels, Pixabay all provided + verified (paste fresh next session).
 
