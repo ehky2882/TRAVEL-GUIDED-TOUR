@@ -5,22 +5,29 @@ branch **`claude/dreamy-wozniak-nM6a4`**; images are on **gh-pages**. `/tmp` is 
 re-fetch candidates as needed; pipeline scripts are in this folder (`drafts/pipeline/`).
 
 ## Immediate next action (LA)
-**LA batch 1 image-staging is COMPLETE (all 8 tours).** Tour 09 (El Pueblo / Olvera Street)
-was finished 2026-07-02: owner pasted 3 of their own photos; hero = the colorful vendor-stall
-street alley (owner: "one of the streets as the hero"), `_2` = willow market street, `_3` =
-La Placita plaza church. Cropped 1200×900 WebP, pushed to gh-pages (`718d3c7`). Owner-supplied
-= no credit.
-**Next LA work:** wait for the owner to send scripts for the remaining LA tours (gaps below),
-then image-stage each per PROCESS.md.
+**LA batch 1 COMPLETE (8 tours). Batch 2 in progress — 3 of 4 done.** Batch 2 (`drafts/la-batch2/`)
+= tours 19 LACMA, 20 La Brea, 24 Griffith, 28 Santa Monica.
+- **DONE + pushed to gh-pages (`ea793bb`, 2026-07-02):** 24 Griffith (hero G1 + 5 gallery),
+  28 Santa Monica Pier (hero S14 + 5 gallery), 20 La Brea Tar Pits (**hero-only**, W8 CC BY-SA 4.0).
+- **PENDING — 19 LACMA / David Geffen Galleries:** the new Peter Zumthor building (opened 2026)
+  is NOT in the free/stock/Wikimedia pool yet (only a construction shot exists), so **the owner is
+  pasting their own finished-building photos** for the hero. Owner pre-picked **L25 + L27** (Urban
+  Light night, Pexels) for the gallery. **Action next session: extract owner's pasted Geffen photos
+  from transcript → crop hero → crop L25/L27 gallery from stock (re-fetch: query "LACMA Urban Light"
+  on Unsplash/Pexels) → push → update `drafts/la-batch2/README.md`.**
+- **La Brea sourcing lesson (logged in batch-2 README):** stock "La Brea Tar Pits" returns WRONG
+  museums (mammoth skeletons look alike) — verify pixels; the good iconic shots are all CC BY-SA.
+**Next LA work:** finish 19 (owner pastes), then wait for remaining LA scripts (gaps below).
 
 ## LA status
-- **Scripts received:** 01, 02, 04, 08, 09, 12, 13, 15 — all staged in `drafts/la-batch1/`.
-- **Images DONE + pushed (ALL 8):** 01 Disney Hall, 02 The Broad, 04 Grand Central Market,
-  08 Union Station, 09 El Pueblo/Olvera Street, 12 Walk of Fame, 13 Chinese Theatre, 15 Hollywood Sign.
-- **Gaps not yet sent:** LA tours 03, 05, 06, 07, 10, 11, 14 (+ beyond). Owner will send more.
-- **LA credit so far:** only `walt-disney-concert-hall_6.webp` (WD53 organ, Daniel Hartwig,
-  CC BY 2.0). See `drafts/CREDITS.md`.
+- **Scripts received:** batch 1 = 01,02,04,08,09,12,13,15 (`drafts/la-batch1/`); batch 2 = 19,20,24,28 (`drafts/la-batch2/`).
+- **Images DONE + pushed:** batch 1 all 8; batch 2 = 24 Griffith, 28 Santa Monica, 20 La Brea (hero only).
+- **Images PENDING:** 19 LACMA (owner pasting Geffen building photos; L25/L27 stock gallery to crop).
+- **Gaps not yet sent:** LA tours 03, 05, 06, 07, 10, 11, 14, 16, 17, 18, 21–23, 25–27 (+ beyond). Owner sends more.
+- **LA credit so far:** `walt-disney-concert-hall_6.webp` (WD53, CC BY 2.0) + `la-brea-tar-pits_hero.webp`
+  (Downtowngal, CC BY-SA 4.0). See `drafts/CREDITS.md`.
 - **Maker:** create **Atlas Studio LAX** at first LA wire-in.
+- **API keys loaded this session:** Unsplash, Pexels, Pixabay all provided + verified (paste fresh next session).
 
 ## Whole-app state (all audio-pending unless noted)
 - **LIVE (have audio):** NYC, London, Lisbon, Porto, Hong Kong, San Francisco.
