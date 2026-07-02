@@ -55,6 +55,14 @@
       "avatarEmoji": "🇯🇵",
       "bio": "Atlas Studio's Tokyo bureau — audio tours of the city's temples, towers, backstreets, and design landmarks.",
       "websiteURL": null
+    },
+    {
+      "id": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "displayName": "Atlas Studio YYZ",
+      "avatarURL": null,
+      "avatarEmoji": "🇨🇦",
+      "bio": "Atlas Studio's Toronto bureau — audio tours of the city's towers, markets, waterfront, and neighbourhoods.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -22897,6 +22905,497 @@
         "suspension roof",
         "yoshikatsu tsuboi",
         "pritzker prize"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e39a0068-04b9-521b-9f24-db0dfb46f3df",
+      "createdAt": "2026-07-02",
+      "title": "CN Tower",
+      "shortDescription": "The tower Toronto built to fix its television reception — 553 metres of self-climbing concrete that held the world height record for 32 years.",
+      "longDescription": "Standing at the base of the CN Tower, looking up the tapering concrete shaft to the pod and antenna. Finished in 1976 as the tallest free-standing structure on earth, it held that title until 2007 — no guy-wires, just concrete balanced on a Y-shaped footing. The strange part: it was never meant as a monument. Canadian National put up an antenna tall enough to clear downtown's new towers and fix the city's scrambled radio and TV signals, and Toronto ended up loving the fix.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cn-tower_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cn-tower_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cn-tower_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cn-tower_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cn-tower_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cn-tower_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cn-tower_7.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cn-tower_8.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "89f12e0e-0f80-53a9-8a15-35e75e5184c7",
+          "order": 0,
+          "title": "CN Tower",
+          "caption": "Stand near the base on the south side and follow the three curved legs up the tapering shaft to the pod.",
+          "latitude": 43.6426,
+          "longitude": -79.3871,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cn-tower.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Here's the part that never makes the postcard: this was built to fix the television.\n\nYou're standing near the base, on the south side, with your neck already starting to complain. Look for the three curved legs at the bottom — the whole thing rests on a wide concrete Y — and follow the shaft up as it tapers to the round pod near the top, with a thin needle of antenna above that. Five hundred and fifty-three metres, from the sidewalk to the tip.\n\nStart with that number, because it held a record for a long time. When it was finished in 1976, this was the tallest free-standing structure in the world, and it stayed that way for thirty-two years, until Dubai's Burj Khalifa passed it in 2007. \"Free-standing\" is the phrase that matters: no guy-wires, no cables holding it up — just concrete and its own weight, balanced on a footing that reaches only about fifteen metres into the ground.\n\nAnd the way that concrete went up is the gift here. The shaft was poured into a mould that slowly climbed itself, hydraulic jacks lifting the form roughly six metres a day as the concrete below it set, the form shrinking as it rose to give the tower that taper. Over the full height, it leans away from true vertical by less than three centimetres — the length of your hand, across more than half a kilometre.\n\nNow, the reason it's here at all. By the 1960s, downtown Toronto was finally growing tall, and all those new towers were bouncing radio and television signals around, scattering them before they reached anyone's set. Canadian National — the railway — owned a wide stretch of empty rail land right here, and put up an antenna tall enough to clear every roofline in the city. That's the \"CN.\" Not a monument. A very large fix for a fairly boring problem.\n\nWhich is the quiet joke of the place. The city never set out to build a symbol — it set out to get a clearer picture on the evening news, and ended up with the thing it now puts on every souvenir, every skyline shot, every \"we made it\" photo. An accident of engineering the whole city decided to love. It takes around seventy-five lightning strikes a year, and barely notices.\n\nStay a moment, and look up once more before you head in. Worth the sore neck."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6426,
+      "centroidLongitude": -79.3871,
+      "city": "Toronto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "cn tower",
+        "1976",
+        "engineering",
+        "skyline",
+        "downtown",
+        "landmark",
+        "concrete"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7e365c4e-9a84-59db-9874-7eacb70ae5d7",
+      "createdAt": "2026-07-02",
+      "title": "Rogers Centre (SkyDome)",
+      "shortDescription": "The first stadium in the world with a retractable roof that actually moved — the SkyDome, still called that by everyone.",
+      "longDescription": "Beside the CN Tower sits a low, pale dome that, from above, looks like a tortoise shell. When it opened in 1989 as SkyDome, it was the first stadium anywhere with a fully retractable roof that worked — four panels weighing some 10,000 tonnes sliding open to the sky in about twenty minutes. A public naming contest picked 'SkyDome'; the winner reportedly still holds her lifetime seats even after it became Rogers Centre in 2005.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rogers-centre_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rogers-centre_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rogers-centre_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rogers-centre_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rogers-centre_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fdcdd086-a3bf-5354-97ff-238f397ac759",
+          "order": 0,
+          "title": "Rogers Centre (SkyDome)",
+          "caption": "Stand beside the stadium in the shadow of the CN Tower and look up at the low, pale, four-panel roof.",
+          "latitude": 43.6414,
+          "longitude": -79.3894,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rogers-centre.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Look at the roof. That's the whole reason this building mattered.\n\nYou're standing beside it, in the shadow of the CN Tower — a low, pale dome that, from the tower above, looks like a tortoise shell set down beside all that glass. When it opened in 1989, it was the first stadium anywhere with a fully retractable roof that actually moved. Not a dome you sat under. A roof that slid open to the sky in about twenty minutes, and closed again when the weather turned — which, this being Toronto, it reliably does.\n\nThe engineering is the gift here. Four enormous panels, three of them rolling along rails until they nest behind the fourth, the whole assembly weighing something like ten thousand tonnes and held together with a quarter of a million bolts. When it's open, almost every seat sits under open sky — and from the observation deck of the tower next door, you can look straight down into the game.\n\nThe name is pure Toronto. They held a public contest to name it, took in thousands of entries, and settled on \"SkyDome.\" The woman who suggested it won lifetime seats, which she reportedly still holds, even though the place was sold and renamed Rogers Centre in 2005. Most people here call it the SkyDome anyway.\n\nIt's worth remembering how strange this once was. The summer it opened, they slid the roof shut in the middle of a ball game for the first time — and that became the first game in the sport's history to start outdoors and finish indoors. It felt like a postcard from the future. Now retractable roofs are everywhere, from Miami to Seattle, and nobody blinks. This is the one that went first.\n\nWhen you move on, glance up at that roofline once more, and picture it splitting open down the middle."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6414,
+      "centroidLongitude": -79.3894,
+      "city": "Toronto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "skydome",
+        "rogers centre",
+        "1989",
+        "retractable roof",
+        "baseball",
+        "blue jays",
+        "engineering"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cafa79ed-4c0f-5f19-b4f2-b9901523eddf",
+      "createdAt": "2026-07-02",
+      "title": "Ripley's Aquarium of Canada",
+      "shortDescription": "Canada's largest aquarium at the foot of the CN Tower — home to the longest underwater shark tunnel in North America.",
+      "longDescription": "Tucked under the CN Tower is a building full of sharks: nearly six million litres of marine and freshwater life, from British Columbia kelp forests to tropical reefs. The Dangerous Lagoon carries you on a slow walkway through a 96-metre glass tunnel — the longest in North America — while sand tiger sharks and sea turtles glide overhead. It was meant for Niagara Falls; when that deal fell through it landed here on old railway land at the base of the city's tallest landmark.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ripleys-aquarium_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ripleys-aquarium_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ripleys-aquarium_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ripleys-aquarium_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ripleys-aquarium_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ripleys-aquarium_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d20ad46d-58f2-5d75-97e5-41f9e3f86d85",
+          "order": 0,
+          "title": "Ripley's Aquarium of Canada",
+          "caption": "Find the long, low roofline at the foot of the CN Tower, shaped like a slab of earth lifted to show the water beneath.",
+          "latitude": 43.6424,
+          "longitude": -79.386,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ripleys-aquarium.mp3",
+          "audioDurationSeconds": 98,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Right at the foot of the tower, tucked under all that height, is a building full of sharks.\n\nFrom outside it's easy to miss — a long, low roofline beside the CN Tower, shaped to look like a slab of earth lifted up to show the water underneath. Inside is Canada's largest aquarium: nearly six million litres of it, marine and freshwater, from the cold Pacific kelp off British Columbia to the reefs of the tropics.\n\nThe thing everyone comes for is the Dangerous Lagoon. You step onto a slow-moving walkway, and it carries you through a glass tunnel laid along the floor of the biggest tank — around ninety-six metres of it, the longest underwater viewing tunnel in North America — while sand tiger sharks, sawfish and sea turtles slide by overhead and on either side. You don't really walk through it so much as get gently delivered, standing still while the ocean moves around you.\n\nHere's the small twist. None of this was meant for Toronto. The plan, back in the 2000s, was to build it up at Niagara Falls, among the wax museums and the haunted houses — the natural habitat for a Ripley's attraction. That deal fell through, and the aquarium landed here instead, at the base of the city's tallest landmark, on a slice of old railway land.\n\nWhich tells you something about this corner of downtown. Inside one short block you've got the tallest tower, the stadium with the roof that opens, and a tunnel full of sharks — the city's biggest crowd-pleasers, stacked together at the water's edge where the trains used to run. It would be easy to be a bit sniffy about all of it. Easier, honestly, to just enjoy it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 98,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6424,
+      "centroidLongitude": -79.386,
+      "city": "Toronto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "ripleys aquarium",
+        "sharks",
+        "dangerous lagoon",
+        "family",
+        "downtown",
+        "railway lands"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "080d1ed4-e942-55fd-8b1e-68c9cf929170",
+      "createdAt": "2026-07-02",
+      "title": "Harbourfront / Queens Quay",
+      "shortDescription": "The lakefront Toronto ignored for a century behind rail and industry — then deliberately reclaimed for the public.",
+      "longDescription": "At the railing on Queens Quay (spelled 'quay,' said 'key'), with the boardwalk, boat slips, and the brick Power Plant gallery in view. Everything south of Front Street is landfill; for most of a century the waterfront was a working edge walled off behind trains and warehouses. In 1972 the federal government bought about a hundred acres and set out to hand it back — the old power station became an art gallery, a 1927 cold-storage warehouse became shops and a dance theatre. A quiet link to the tower: in 1975 the CN Tower's antenna tip rested down here while schoolchildren signed it.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harbourfront_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harbourfront_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harbourfront_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harbourfront_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/harbourfront_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1c0d8dbf-5c54-536a-a49f-dff00ec6ba09",
+          "order": 0,
+          "title": "Harbourfront / Queens Quay",
+          "caption": "Stand at the railing on Queens Quay — boardwalk and boat slips in front, the brick Power Plant gallery off to one side.",
+          "latitude": 43.6386,
+          "longitude": -79.3812,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/harbourfront.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Stand at the railing and look out at the lake — then notice how much work it took to let you do that.\n\nYou're on Queens Quay — spelled \"quay,\" said \"key\" — the promenade along the water's edge, with the boardwalk and the boat slips in front of you and the squat brick box of the Power Plant gallery off to one side. Behind you, an elevated expressway hums. That expressway, and the rail tracks beside it, are the whole point of this stop.\n\nFor most of a century, Toronto turned its back on its own lake. The original shoreline ran blocks north of here, up around Front Street — everything south of that is landfill, pushed out into the water to make room for railways, grain silos and warehouses. The waterfront became a working edge of the city: walled off behind trains and industry, the kind of place you didn't stroll. You shipped things from it.\n\nThen, in 1972, the federal government bought up about a hundred acres of that industrial harbour and set out to hand it back to the public — partly inspired by Granville Island, over in Vancouver. The old power station became a contemporary art gallery. A vast 1927 cold-storage warehouse, which in its day held the world — walnuts from Spain, coffee from Sri Lanka, figs from Algeria — was turned into shops and condominiums and a dance theatre.\n\nAnd there's a quiet thread back to where you started today. In 1975, while the CN Tower was going up, the very top section of its antenna sat down here at Harbourfront before it was flown into place — and the city invited schoolchildren to come and sign it. So somewhere above your earlier view, thousands of kids' names are riding the top of the tower.\n\nLinger at the water a while. Watch a streetcar slide past on the grass tracks behind you, and a sailboat cross in front. This is the lake the city spent a hundred years ignoring, and then decided, deliberately, to come back to."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6386,
+      "centroidLongitude": -79.3812,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "harbourfront",
+        "queens quay",
+        "waterfront",
+        "lake ontario",
+        "power plant",
+        "1972",
+        "streetcar"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e826724c-bb63-5a7a-b38f-6eb9e34dbac0",
+      "createdAt": "2026-07-02",
+      "title": "Toronto Islands",
+      "shortDescription": "A fifteen-minute ferry to the largest car-free urban community in North America — and the fight that saved it.",
+      "longDescription": "Step off the ferry onto Ward's Island and the first thing you notice is no cars — just the lake and the skyline across the water. About 260 homes make this the largest car-free urban community in North America, reached on foot or by bike. In the 1950s the city began bulldozing the cottages for parkland; the last residents refused to leave, and on a rainy July morning in 1980 a crowd turned the sheriff back at the bridge. The next year the province let them stay. A single sandy peninsula until an 1858 storm tore it loose, the islands were long known to the Mississaugas as a place you crossed over to.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/toronto-islands_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/toronto-islands_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/toronto-islands_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/toronto-islands_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/toronto-islands_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/toronto-islands_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "40ddd203-b120-5d8b-8403-3dce434570b9",
+          "order": 0,
+          "title": "Toronto Islands",
+          "caption": "Stand on Ward's Island near the boardwalk — wooden cottages behind you, the downtown skyline across the water.",
+          "latitude": 43.6228,
+          "longitude": -79.3817,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-islands.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "First thing you notice, stepping off the ferry: no cars. None. You can hear the lake, and your own footsteps, and not much else — which, fifteen minutes from one of the busiest downtowns in the country, is a genuinely strange feeling.\n\nStand on Ward's Island, near the boardwalk, with the little wooden cottages behind you and the skyline laid out across the water. This is the largest urban car-free community in North America: about two hundred and sixty homes, reached on foot or by bike, groceries hauled up from the dock in wagons. People actually live here, year-round.\n\nThat they live here at all is the story worth knowing. Back in the 1950s the city decided the islands would make better parkland than neighbourhood, and started clearing the cottages — bulldozers, year after year, until more than three hundred homes were gone. The residents of the last two hundred and fifty, on Ward's and neighbouring Algonquin Island, simply refused to leave.\n\nIt came to a head on a July morning in 1980. The city sent a sheriff across with eviction notices, and the islanders were ready for him — a siren went up, a phone chain ran through the community, and by the time he reached the bridge to Algonquin Island a crowd was standing there in the rain, waiting. They talked him into turning around. The next year the province passed a law letting them stay, and the leases now run decades into the future.\n\nThere's a longer memory here too. This was a single sandy peninsula until a storm tore it loose from the mainland in 1858, and long before that the Mississaugas knew it as a place of trees standing out of the water — somewhere you crossed over to, deliberately, leaving the shore behind. Which is more or less what you've just done.\n\nSo look back at those towers, close enough to count the floors, and then turn around and look at the cottages. That gap — fifteen minutes of water and a whole different idea of how to live — is the thing people fought to keep. Stay on this side of it a while."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6228,
+      "centroidLongitude": -79.3817,
+      "city": "Toronto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "toronto islands",
+        "wards island",
+        "car-free",
+        "ferry",
+        "lake ontario",
+        "1980",
+        "cottages"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e7b135f9-f4d8-51a5-93d5-6c17f4367682",
+      "createdAt": "2026-07-02",
+      "title": "Union Station",
+      "shortDescription": "A railway cathedral finished in 1927 — just as the automobile arrived — with the whole country carved around its Great Hall.",
+      "longDescription": "Facing the long stone front on Front Street, a colonnade of twenty-two columns runs longer than a city block. Inside, the Great Hall lifts a barrel-vaulted ceiling about 26 metres over Tennessee marble, light pouring through four-storey windows at either end. Carved along the top of the walls is a list of every town the railway reached, Maritimes to Pacific — the whole country engraved in one room. Raised to the railway just as the car and the Depression arrived, the temple outlasted the prophecy: some 65 million people a year now move through it, more than any other transit hub in the country.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-station_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-station_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-station_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-station_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-station_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b33ca31f-8845-55df-b47f-3995d9b5890c",
+          "order": 0,
+          "title": "Union Station",
+          "caption": "Stand on Front Street facing the colonnade of twenty-two columns, then step inside to the Great Hall.",
+          "latitude": 43.6453,
+          "longitude": -79.3806,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/union-station.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "They finished this place in 1927 — just in time, more or less, for everyone to start driving.\n\nStand out on Front Street, facing the long stone front, and look at the row of columns running almost the width of the block. There are twenty-two of them, each about twelve metres tall and weighing something like seventy-five tonnes — a single colonnade longer than a city block, built to make you feel small in a useful way. Now step inside, into the Great Hall.\n\nThis is the room. A barrel-vaulted ceiling about twenty-six metres up, light pouring in through four-storey windows at either end, the floor laid in Tennessee marble. It took the better part of fourteen years to build, slowed by a world war and a shortage of stone, and when the Prince of Wales opened it with a pair of gold scissors, he is said to have remarked that Canada built its train stations the way Britain built its cathedrals. He wasn't wrong. That was the idea.\n\nHere's the gift, and it's easy to walk straight past. Run your eye along the top of the walls, just below the ceiling — carved into the stone is a long list of place names. Those are the towns and cities the railway reached, from the Maritimes out to the Pacific, spelled around the room in order. The whole country, engraved in a single hall. To arrive here was to step into the middle of a map.\n\nAnd the timing is the quiet tragedy of it. This was a temple raised to the railway at the precise moment the railway began to fade — the cars were coming, the Depression was about to empty the trains, and within a few decades this hall full of cathedral light was, for a long stretch, mostly a place people hurried through on the way to a hamburger counter.\n\nBut here's the turn. Around sixty-five million people now move through Union Station every year, more than any other transit hub in the country — most of them commuters, on the very trains the city eventually came back to. The temple outlasted the prophecy. Stand in the middle of the hall a moment, look up, and let everyone flow around you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6453,
+      "centroidLongitude": -79.3806,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "union station",
+        "1927",
+        "beaux-arts",
+        "great hall",
+        "railway",
+        "transit",
+        "colonnade"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "28d56cd8-4c93-5a94-a247-ae0a9024b3ed",
+      "createdAt": "2026-07-02",
+      "title": "Financial District (TD Centre)",
+      "shortDescription": "Mies van der Rohe's black towers on the priciest ground in Canada — with a herd of bronze cows and a hidden city underneath.",
+      "longDescription": "On the granite plaza of the Toronto-Dominion Centre at King and Bay, ringed by flat-topped black towers — Mies van der Rohe's 'less is more' in steel and bronze-tinted glass. The first tower (1967) was the country's tallest and one of the last things Mies designed. Seven life-size bronze cows lie on the plaza, a quiet joke about all that open space on the most expensive real estate in Canada. Beneath your feet runs the PATH: roughly 30 km of underground walkways linking more than seventy buildings, moving over 200,000 people a day.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/financial-district_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/financial-district_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/financial-district_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/financial-district_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "52a4ea54-7e5e-529f-b4c3-24283d83ed32",
+          "order": 0,
+          "title": "Financial District (TD Centre)",
+          "caption": "Stand at King and Bay on the open granite plaza of the TD Centre, the black towers set back around you.",
+          "latitude": 43.648,
+          "longitude": -79.3812,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/financial-district.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "You're standing on the most expensive piece of ground in Canada — and somebody decided to leave most of it empty.\n\nYou should be at the corner of King and Bay Streets, on the open granite plaza of the Toronto-Dominion Centre, in the heart of the Financial District. Around you, a cluster of tall black towers — flat-topped, dark, set back from the sidewalk on that wide stone plaza. The low glass box on the corner is the banking pavilion. And under your feet, though you can't see it yet, there's a second city.\n\nStart with the towers.\n\nThese are the work of Mies van der Rohe, the German-American architect whose whole philosophy fit into three words: less is more. No stone gargoyles, no carved entrances, no decoration of any kind — just black-painted steel, bronze-tinted glass, and a grid so strict that everything you can see lines up with everything else. The first tower went up in 1967, and at the time it was the tallest building in the country. It was one of the last things Mies ever designed; he died two years later.\n\nNow look down at the grass. There's a small herd of seven life-size bronze cows lying on the plaza. That's not an accident — it's a quiet joke about all this open space sitting on the priciest real estate in Canada.\n\nTo build it, the city cleared more than a hundred older buildings, including an ornate 1913 bank that had stood right here. Its stone face wasn't destroyed — it was taken apart and rebuilt in a park out in Scarborough, where you can still visit it. Stone temple, swapped for a glass box.\n\nAnd the second city? It's beneath you. The PATH — a network of underground walkways that began with a single department-store tunnel in 1900, and grew, tower by tower, into roughly thirty kilometres of passages linking more than seventy buildings. More than two hundred thousand people move through it every day, most of them never coming up for air in winter.\n\nThe towers and the tunnels come from the same idea: that the weather, and even the street itself, were things Toronto could simply improve upon.\n\nStand here on a cold morning and you'll feel both at once — the plaza above, empty and severe, and below you, warm and crowded and humming. Two ideas of a city, stacked one on top of the other."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.648,
+      "centroidLongitude": -79.3812,
+      "city": "Toronto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "financial district",
+        "td centre",
+        "mies van der rohe",
+        "modernism",
+        "path",
+        "bronze cows",
+        "king and bay"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cc8e6a8e-5aae-50e6-b3c2-d30d2f5981e7",
+      "createdAt": "2026-07-02",
+      "title": "Hockey Hall of Fame",
+      "shortDescription": "The Stanley Cup, kept in a real bank vault inside an 1885 Bank of Montreal that survived the Great Fire of 1904.",
+      "longDescription": "At Yonge and Front stands a grand old stone bank — arched windows, a domed rounded corner — tucked into a modern glass complex, with bronze players leaping over the boards out front. Built in 1885 as the Bank of Montreal's head office, it is one of the few buildings here to survive the Great Fire of 1904; inside, a stained-glass dome hangs about 14 metres over the old banking hall. The museum moved in in 1993, and the original Stanley Cup lives in the building's actual bank vault — one temple traded for another, and they kept the vault.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hockey-hall-of-fame_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hockey-hall-of-fame_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hockey-hall-of-fame_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hockey-hall-of-fame_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3203671e-269a-541c-9ff0-504786a6ad35",
+          "order": 0,
+          "title": "Hockey Hall of Fame",
+          "caption": "Stand at Yonge and Front, looking up at the domed stone bank tucked into the glass complex, the players sculpture out front.",
+          "latitude": 43.6473,
+          "longitude": -79.3773,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hockey-hall-of-fame.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Of all the places to keep the most sacred trophy in the country, somebody chose a bank vault. And it turns out that's exactly right.\n\nYou should be standing at the corner of Yonge and Front Streets, looking up at a grand old stone building — arched windows, carved detailing, a rounded corner crowned with a dome — tucked into the base of a modern glass complex that grew up around it. Out front, there's a bronze sculpture of players leaping over the boards. This is the Hockey Hall of Fame, but it's the old building that's worth slowing down for.\n\nLook at the stone first, before you think about what's inside.\n\nIt was built in 1885 as the head office of the Bank of Montreal, back when banking was about the most important business in a young country, and a bank wanted you to feel that the moment you walked in. It's one of the very few buildings in this part of downtown to survive the Great Fire of 1904, which flattened most of the blocks around it. Step inside and you'll find the old banking hall topped by a stained-glass dome about fourteen metres up, full of mythological figures and provincial emblems — built to glorify money, now hanging over a collection of trophies.\n\nBecause the museum moved in here in 1993, and its centrepiece is the Stanley Cup. The original Cup, along with the oldest trophies in the sport, is kept in the building's actual bank vault — a small alcove off the great hall. The vault that once guarded a bank's gold now guards the game's most coveted object.\n\nThere's even a resident ghost, by reputation — a former teller named Dorothy, said to turn up in an upstairs window.\n\nA building made to impress you with the weight of money, quietly repurposed to carry the weight of a game. Same instinct, really — both are about what a culture decides is worth locking away and lining up to see. Stand under that old dome a moment, whether or not you follow the sport, and notice the trade the city made: one kind of temple for another, and they kept the vault."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6473,
+      "centroidLongitude": -79.3773,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "hockey hall of fame",
+        "stanley cup",
+        "bank of montreal",
+        "1885",
+        "great fire",
+        "hockey",
+        "vault"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "98de4ef7-9179-5379-890e-e6945de96eac",
+      "createdAt": "2026-07-02",
+      "title": "St. Lawrence Market",
+      "shortDescription": "A market on the same spot since 1803 — with the old city hall, and a jail, sitting right above the food stalls.",
+      "longDescription": "Between the two market halls on Front Street East: the yellow-brick South Market with its tall arched windows, and the rebuilt North Market opposite. The 1845 South building was never only a market — its upper floor was Toronto's city hall for more than half a century, above the police offices and jail, so government sat directly over the groceries. Downstairs, 120-plus vendors; the thing to eat is the local peameal bacon sandwich. Every Saturday since 1803 farmers have brought produce to this corner — the city's oldest continuous ritual.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-lawrence-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-lawrence-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-lawrence-market_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-lawrence-market_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-lawrence-market_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-lawrence-market_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2db9e3bd-6cdf-57be-90a3-9a7bce5737f1",
+          "order": 0,
+          "title": "St. Lawrence Market",
+          "caption": "Stand on Front Street East between the two market halls, the yellow-brick South Market on one side.",
+          "latitude": 43.6487,
+          "longitude": -79.3716,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-lawrence-market.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "This block has been a market for longer than there's been a Canada. Since 1803 — same spot, same purpose, while everything around it changed.\n\nYou should be standing on Front Street East, between the two market buildings. On the south side, the big yellow-brick hall with the tall arched windows and the high roof — that's the South Market. Across the street, the newer building with the glass-and-orange front is the North Market, only just rebuilt. Head toward the doors of the south building.\n\nGo inside — but keep the upstairs in mind.\n\nBecause this 1845 building was never only a market. The upper floor was Toronto's city hall; the council met up there for more than half a century. The same building held the city's police offices and its jail. You can still climb to the old council chamber — it's kept as a small gallery now. So the room where the young city governed itself sat directly above the stalls where it bought its dinner. Government and groceries, under one roof.\n\nThen come back down for the food. More than a hundred and twenty vendors fill the hall — cheesemongers, butchers, bakers, fishmongers. The thing to eat is the peameal bacon sandwich, a genuinely local invention built on a cure you won't find done quite this way anywhere else. And if you want a sense of the market's reputation, National Geographic once called it the best food market in the world. Take that with a grain of salt — but notice that the claim gets made about a place where you buy your lunch.\n\nNow cross to the North Market. Every Saturday since 1803, farmers have brought produce to this exact corner — the oldest continuous market day in the city. The building they used was torn down and rebuilt, and in 2025 the farmers came home to it. New shell, identical ritual.\n\nMost of a city's great buildings ask you to look up — at domes, at columns, at spires. This one asks you to look down at a table. The oldest institution Toronto has is also its most ordinary: a place to buy a chicken and a loaf of bread. Pick up something small, find a corner to eat it in, and you're taking part in the single longest-running habit the city has."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6487,
+      "centroidLongitude": -79.3716,
+      "city": "Toronto",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "st lawrence market",
+        "1803",
+        "peameal bacon",
+        "food market",
+        "old town",
+        "city hall",
+        "farmers market"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "113af879-1b18-54d5-a4d2-d04395162052",
+      "createdAt": "2026-07-02",
+      "title": "Gooderham Building (Flatiron)",
+      "shortDescription": "Toronto's flatiron — a red-brick wedge built a full decade before New York's, shaped by a shoreline that's no longer there.",
+      "longDescription": "Where Front and Wellington Streets meet stands a narrow red-brick wedge rounded into a slim tower — the Gooderham Building, Toronto's flatiron. It is triangular because the lot is, and the lot is triangular because Front Street once ran along the Lake Ontario shoreline; the wedge is the ghost of a buried coastline. Built in 1892 for whisky magnate George Gooderham — a decade before New York's Flatiron — for about $18,000. Around the back, a famous 1980 trompe-l'oeil mural makes the whole wall appear to peel up in the wind.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gooderham-building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gooderham-building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gooderham-building_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "07ca5b1e-a4cf-5b89-88fb-11b8d8475a0e",
+          "order": 0,
+          "title": "Gooderham Building (Flatiron)",
+          "caption": "Stand on Front Street East looking west to where Front and Wellington meet at the rounded brick wedge.",
+          "latitude": 43.6488,
+          "longitude": -79.3745,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/gooderham-building.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "New York gets the credit for the flatiron building. Toronto built one first — a full decade earlier — and it's right in front of you.\n\nYou should be standing on Front Street East, looking west to where Front and Wellington Streets come together. Right at that junction sits a narrow red-brick building shaped like a wedge, its front rounded into a slim tower that comes to a point. This is the Gooderham Building — Toronto's flatiron.\n\nStart with the shape, because the shape is the whole story.\n\nIt's triangular because the lot is triangular, and the lot is triangular because of the lake. Front Street once ran right along the shoreline of Lake Ontario, and the early town's grid was bent to follow the curve of the water. Where that bent street met a straight one, it left this odd sliver of land. So the building's famous wedge isn't a clever design flourish — it's the ghost of a coastline that now sits buried, several blocks inland.\n\nIt went up in 1892, built for George Gooderham, who ran the city's enormous whisky distillery, as offices for the company — with his own perched at the top of that rounded tower, looking out over the neighbourhood. The much taller, much more famous Flatiron in New York came ten years afterward. This one cost about eighteen thousand dollars and had one of the first manually operated elevators in the city.\n\nNow walk around to the back — the west wall, the one facing the little park. There's an enormous painted mural there, a trick of the eye: it copies the windows of the building across the street, then makes the whole surface appear to peel up at the corners, like a giant sheet caught in the wind. It was painted in 1980, and it's become one of the most photographed walls in Toronto.\n\nLook at the building straight on from the east and you get the picture everyone takes home: a Victorian brick wedge with a wall of glass towers rising behind it — the old shoreline and the modern skyline in a single frame. Most people photograph it by accident, on their way somewhere else. Stay a second longer, and notice it was shaped by water that isn't there anymore."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6488,
+      "centroidLongitude": -79.3745,
+      "city": "Toronto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "gooderham building",
+        "flatiron",
+        "1892",
+        "george gooderham",
+        "old town",
+        "mural",
+        "victorian"
       ],
       "priceUSD": 0
     }
