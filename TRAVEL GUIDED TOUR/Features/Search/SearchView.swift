@@ -17,6 +17,7 @@ struct SearchView: View {
     @Environment(RecentSearchStore.self) private var recentSearchStore
     @Environment(AtlasNavigationState.self) private var navState
     @Environment(TourPresenter.self) private var tourPresenter
+    @Environment(MakerPresenter.self) private var makerPresenter
     // Shared with the Home map so tapping a place result can fly the
     // camera there. Injected at the `ContentView` ZStack level, so it
     // reaches this pushed screen too. `dismiss` pops back to Home.
@@ -256,15 +257,15 @@ struct SearchView: View {
                     }
                 }
 
-                // Makers section — maker entries that deep-link to the
-                // maker page (owner direction 2026-06-06). Pushed onto
-                // the host nav stack via NavigationLink, the same way
-                // "Go to creator" pushes MakerView from TourDetailView.
+                // Makers section — maker entries open the creator page as
+                // its own top-level screen via `MakerPresenter` (the maker
+                // twin of tapping a tour result → tourPresenter), so a
+                // creator is a first-class destination, not a child push.
                 if !filteredMakers.isEmpty {
                     if showHeaders { sectionHeader("Makers") }
                     ForEach(filteredMakers) { maker in
-                        NavigationLink {
-                            MakerView(maker: maker)
+                        Button {
+                            makerPresenter.present(maker)
                         } label: {
                             makerRow(maker)
                         }

@@ -39,14 +39,21 @@ private enum MakerListLayout: String {
 /// screen (owner direction, 2026-07-01: "each maker should be thought
 /// of like a user too"). The mode only toggles the chrome around the
 /// shared header + tour feed:
-///  • `.publicMaker` — someone else's page (default; unchanged): a
-///    bookmark + a `…` overflow menu (Share / Follow / Report), and it
-///    registers as a pushed detail (`navState.push()`).
+///  • `.publicMaker` — someone else's page, **pushed** onto an existing
+///    nav stack (e.g. a tour's "Go to creator", back returns to the
+///    tour): a bookmark + a `…` overflow menu (Share / Follow / Report),
+///    a back chevron for close, registers as a pushed detail.
+///  • `.publicStandalone` — someone else's page presented as **its own
+///    top-level screen** via `MakerPresenter` (a shared deep link, a
+///    Search result, a saved-maker row) — the same UIKit slide-up
+///    treatment tours get. Same trailing controls as `.publicMaker`,
+///    but with an **X** close (no back stack to pop to).
 ///  • `.ownProfile` — the Me tab's own profile: a gear that opens
 ///    Settings, and a `+` add-a-tour affordance in the feed. It's a
 ///    TAB ROOT, so it does NOT register as a pushed detail.
 enum MakerViewMode {
     case publicMaker
+    case publicStandalone
     case ownProfile
 }
 
@@ -76,6 +83,10 @@ struct MakerView: View {
     // bug as the old ReportSheet crash). Only `.ownProfile` (a tab root
     // that always carries the app environment) reads it.
     @Environment(AuthService.self) private var authService: AuthService?
+    // Optional for the same reason: only `.publicStandalone` (presented
+    // via the bottom layer, which injects it explicitly) uses this — for
+    // its X close. Pushed / own-profile contexts don't.
+    @Environment(MakerPresenter.self) private var makerPresenter: MakerPresenter?
 
     private let avatarSize: CGFloat = 96
 
@@ -97,6 +108,7 @@ struct MakerView: View {
 
     private var isSaved: Bool { savedMakersStore.isSaved(maker.id) }
     private var isOwnProfile: Bool { mode == .ownProfile }
+    private var isStandalone: Bool { mode == .publicStandalone }
 
     var body: some View {
         ScrollView {
@@ -140,13 +152,26 @@ struct MakerView: View {
         // masthead name in the body.
         .navigationTitle("")
         .inlineNavigationBarTitle()
-        // Trailing nav-bar controls.
-        //  • Own profile: a gear that opens Settings (Settings moved
-        //    inside the profile — owner direction, 2026-07-01).
-        //  • Public maker: a bookmark (save this maker) + a `…` overflow
-        //    menu (Save · Share · Follow [disabled] · Report), mirroring
-        //    the tour-detail sheet.
+        // Nav-bar controls.
+        //  • Leading: an X close, only when presented standalone (via
+        //    MakerPresenter) — there's no back stack to pop to. Pushed
+        //    pages keep the system back chevron.
+        //  • Trailing — own profile: a gear that opens Settings (Settings
+        //    moved inside the profile, owner direction 2026-07-01).
+        //    Public (pushed or standalone): a bookmark (save this maker)
+        //    + a `…` overflow menu (Save · Share · Follow [disabled] ·
+        //    Report), mirroring the tour-detail sheet.
         .toolbar {
+            if isStandalone {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        makerPresenter?.dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                    }
+                    .accessibilityLabel("Close")
+                }
+            }
             ToolbarItemGroup(placement: .topBarTrailing) {
                 if isOwnProfile {
                     Button {

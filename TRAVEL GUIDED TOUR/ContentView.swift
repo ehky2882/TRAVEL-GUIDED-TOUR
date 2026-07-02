@@ -66,6 +66,16 @@ struct ContentView: View {
         bottomInset: AtlasBottomModule.height()
     )
 
+    /// Second UIKit slide-up layer, for presenting a public maker page
+    /// as its own top-level screen (via `MakerPresenter`) — a shared
+    /// deep link, a Search result, or a saved-maker row. Separate from
+    /// `bottomLayer` so a maker can, if needed, stack over a tour (each
+    /// controller tracks its own presented VC). Gives makers the same
+    /// treatment tours get, replacing the earlier `.sheet` stopgap.
+    @State private var makerLayer = BottomLayerController(
+        bottomInset: AtlasBottomModule.height()
+    )
+
     /// True while the tour-detail layer is up (or animating) having
     /// been presented from the Home ROOT — i.e. the drawer was
     /// visible underneath when it came up. While true, the drawer
@@ -131,28 +141,6 @@ struct ContentView: View {
         .ignoresSafeArea(.container, edges: .bottom)
         .environment(navState)
         .environment(homeSharedState)
-        // Maker deep links (a shared maker link) have no nav stack to push
-        // onto, so present the maker page as a sheet driven by MakerPresenter.
-        // Re-inject the environment the maker subtree needs (a tour tapped
-        // inside slides up over this sheet via the bottom-layer presenter,
-        // which targets the topmost view controller).
-        .sheet(item: Bindable(makerPresenter).presentedMaker) { maker in
-            NavigationStack {
-                MakerView(maker: maker)
-            }
-            .environment(dataService)
-            .environment(tourPresenter)
-            .environment(makerPresenter)
-            .environment(libraryStore)
-            .environment(savedMakersStore)
-            .environment(audioPlayer)
-            .environment(locationManager)
-            .environment(recentlyViewedStore)
-            .environment(proximityMonitor)
-            .environment(tourDownloader)
-            .environment(appShared)
-            .environment(navState)
-        }
         // NOTE: the full PlayerView is presented from `BottomModuleRoot`
         // (the secondary top window), NOT here — so the cover physically
         // slides up over the mini-player + tab bar in the same window,
@@ -180,6 +168,9 @@ struct ContentView: View {
             if tourPresenter.presentedTour != nil {
                 tourPresenter.dismiss()
             }
+            if makerPresenter.presentedMaker != nil {
+                makerPresenter.dismiss()
+            }
         }
         // Opening the full player makes it the now-playing surface, so
         // drop any detail sheet underneath it. Otherwise retracting the
@@ -189,6 +180,9 @@ struct ContentView: View {
         .onChange(of: appShared.showingFullPlayer) { _, isUp in
             if isUp && tourPresenter.presentedTour != nil {
                 tourPresenter.dismiss()
+            }
+            if isUp && makerPresenter.presentedMaker != nil {
+                makerPresenter.dismiss()
             }
         }
         // Bridge geofence-triggered stop playback into shared state
@@ -235,6 +229,38 @@ struct ContentView: View {
                 bottomLayer.dismiss {
                     tourLayerCoversDrawer = false
                 }
+            }
+        }
+        // Present a public maker page as its own top-level screen off the
+        // presenter's `presentedMaker` — the maker twin of the tour block
+        // above. Reached from a shared deep link, a Search result, or a
+        // saved-maker row. Uses `.publicStandalone` so MakerView shows an X
+        // (there's no back stack to pop). A tour tapped inside slides up
+        // over it (topmost-VC presentation); the environment is re-injected
+        // here since the UIKit layer doesn't inherit the SwiftUI chain.
+        .onChange(of: makerPresenter.presentedMaker?.id) { _, _ in
+            if let maker = makerPresenter.presentedMaker {
+                makerLayer.present(
+                    NavigationStack {
+                        MakerView(maker: maker, mode: .publicStandalone)
+                    }
+                    .environment(navState)
+                    .environment(homeSharedState)
+                    .environment(tourPresenter)
+                    .environment(makerPresenter)
+                    .environment(dataService)
+                    .environment(locationManager)
+                    .environment(audioPlayer)
+                    .environment(libraryStore)
+                    .environment(recentlyViewedStore)
+                    .environment(proximityMonitor)
+                    .environment(tourDownloader)
+                    .environment(appShared)
+                    .environment(savedMakersStore),
+                    onDismiss: { makerPresenter.dismiss() }
+                )
+            } else {
+                makerLayer.dismiss()
             }
         }
         // Resolve the current tour's maker avatar into lock-screen /
