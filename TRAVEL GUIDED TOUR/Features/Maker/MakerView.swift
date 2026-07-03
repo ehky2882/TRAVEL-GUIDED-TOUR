@@ -363,7 +363,13 @@ struct MakerView: View {
     ///    we don't double-stack a second layer; X still dismisses it.
     @ViewBuilder
     private func tourOpen<Label: View>(_ tour: Tour, @ViewBuilder label: () -> Label) -> some View {
-        if tourPresenter.presentedTour == nil {
+        if isOwnProfile {
+            // Own tours open the authoring EDITOR (add audio / photos /
+            // transcript / submit), pushed within the Me tab's nav stack —
+            // not the public read-only detail.
+            NavigationLink { TourAuthoringView(tourId: tour.id) } label: { label() }
+                .buttonStyle(.plain)
+        } else if tourPresenter.presentedTour == nil {
             Button { tourPresenter.present(tour) } label: { label() }
                 .buttonStyle(.plain)
         } else {

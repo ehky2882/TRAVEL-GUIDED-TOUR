@@ -36,6 +36,41 @@ final class MakerTourService {
     /// Clear when signed out or when the profile has no maker row yet.
     func clear() { myTours = [] }
 
+    /// Upload audio for a draft tour's single stop and patch its `audio_url` +
+    /// duration (and the tour's total duration). Stored at
+    /// `tour-audio/{maker_id}/{tour_id}/{filename}` — the leading maker-id
+    /// segment satisfies the storage RLS (`owns_maker`). Reloads `myTours` so
+    /// the feed reflects the new duration.
+    func attachAudio(
+        to tour: Tour,
+        data: Data,
+        filename: String,
+        contentType: String,
+        durationSeconds: Int
+    ) async throws {
+        let makerId = tour.makerId.uuidString.lowercased()
+        let tourId = tour.id.uuidString.lowercased()
+        let path = "\(makerId)/\(tourId)/\(filename)"
+
+        _ = try await client.storage
+            .from("tour-audio")
+            .upload(path, data: data, options: FileOptions(contentType: contentType, upsert: true))
+        let publicURL = try client.storage.from("tour-audio").getPublicURL(path: path).absoluteString
+
+        // Patch the stop (single-stop draft → order 0) and the tour duration.
+        try await client.from("stops")
+            .update(StopAudioPatch(audioURL: publicURL, audioDurationSeconds: durationSeconds))
+            .eq("tour_id", value: tourId)
+            .eq("order", value: 0)
+            .execute()
+        try await client.from("tours")
+            .update(TourDurationPatch(totalDurationSeconds: durationSeconds))
+            .eq("id", value: tourId)
+            .execute()
+
+        await loadMyTours(makerId: tour.makerId)
+    }
+
     /// Load the maker's own tours (all statuses). Owner-scoped by RLS
     /// (`tours_owner_select`), filtered to this maker. A failure leaves the
     /// current list unchanged.
@@ -166,6 +201,24 @@ private struct NewTourRow: Encodable {
     }
 
     private var category: TourCategory { .hiddenGems }
+}
+
+/// Update payload: set a stop's audio.
+private struct StopAudioPatch: Encodable {
+    let audioURL: String
+    let audioDurationSeconds: Int
+    enum CodingKeys: String, CodingKey {
+        case audioURL = "audio_url"
+        case audioDurationSeconds = "audio_duration_seconds"
+    }
+}
+
+/// Update payload: set a tour's total duration.
+private struct TourDurationPatch: Encodable {
+    let totalDurationSeconds: Int
+    enum CodingKeys: String, CodingKey {
+        case totalDurationSeconds = "total_duration_seconds"
+    }
 }
 
 /// Insert payload for a new `stops` row (snake_case columns).
