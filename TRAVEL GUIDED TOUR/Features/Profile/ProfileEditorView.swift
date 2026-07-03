@@ -29,6 +29,7 @@ struct ProfileEditorView: View {
     @State private var pickedImageData: Data?        // cropped square JPEG, pre-upload
     @State private var cropImage: UIImage?           // photo awaiting the crop sheet
     @State private var showingCrop = false
+    @State private var showingDiscardConfirm = false
     @State private var isSaving = false
     @State private var errorMessage: String?
     @FocusState private var focused: Field?
@@ -54,6 +55,20 @@ struct ProfileEditorView: View {
     /// initials-on-colour mode).
     private var usingPhoto: Bool {
         pickedImageData != nil || (avatarURL?.isEmpty == false)
+    }
+
+    /// True when any field differs from the loaded profile — drives the
+    /// "discard changes?" prompt on Close and blocks swipe-to-dismiss.
+    private var hasChanges: Bool {
+        displayName != currentMaker.displayName
+            || bio != currentMaker.bio
+            || website != (currentMaker.websiteURL ?? "")
+            || link2 != (currentMaker.link2URL ?? "")
+            || link3 != (currentMaker.link3URL ?? "")
+            || avatarInitials != (currentMaker.avatarInitials ?? "")
+            || avatarColorHex != currentMaker.avatarColor
+            || avatarURL != currentMaker.avatarURL
+            || pickedImageData != nil
     }
 
     private var trimmedName: String {
@@ -116,6 +131,19 @@ struct ProfileEditorView: View {
                     }
                 }
             }
+            // Block swipe-to-dismiss while dirty so the discard prompt can't be
+            // bypassed; Close routes through the same prompt.
+            .interactiveDismissDisabled(hasChanges)
+            .confirmationDialog(
+                "Discard changes?",
+                isPresented: $showingDiscardConfirm,
+                titleVisibility: .visible
+            ) {
+                Button("Discard changes", role: .destructive) { dismiss() }
+                Button("Keep editing", role: .cancel) {}
+            } message: {
+                Text("Your edits won't be saved.")
+            }
             .navigationTitle("")
             .inlineNavigationBarTitle()
             .toolbar {
@@ -125,7 +153,7 @@ struct ProfileEditorView: View {
                         .foregroundStyle(AtlasColors.primaryText)
                 }
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Close") { dismiss() }
+                    Button("Close") { attemptClose() }
                         .font(AtlasTypography.caption)
                         .tint(AtlasColors.primaryText)
                 }
@@ -290,6 +318,16 @@ struct ProfileEditorView: View {
             .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
         }
         .disabled(!canSave)
+    }
+
+    /// Close, prompting to discard if there are unsaved edits.
+    private func attemptClose() {
+        focused = nil
+        if hasChanges {
+            showingDiscardConfirm = true
+        } else {
+            dismiss()
+        }
     }
 
     private func save() {
