@@ -16,6 +16,7 @@ struct TourAuthoringView: View {
 
     @Environment(MakerTourService.self) private var makerTourService
     @Environment(AtlasNavigationState.self) private var navState
+    @Environment(\.dismiss) private var dismiss
 
     @State private var importingAudio = false
     @State private var showingRecorder = false
@@ -25,6 +26,8 @@ struct TourAuthoringView: View {
     @State private var transcriptText = ""
     @State private var isSavingTranscript = false
     @State private var isSubmitting = false
+    @State private var showingDeleteConfirm = false
+    @State private var isDeleting = false
     @State private var errorMessage: String?
 
     /// Live lookup so the view refreshes after an upload reloads `myTours`.
@@ -42,6 +45,7 @@ struct TourAuthoringView: View {
                     photosSection(makerTour.tour)
                     transcriptSection
                     submitSection(makerTour)
+                    deleteSection(makerTour.tour)
                 } else {
                     Text("This tour is no longer available.")
                         .font(AtlasTypography.caption)
@@ -82,6 +86,58 @@ struct TourAuthoringView: View {
         }
         .task(id: tourId) {
             transcriptText = await makerTourService.stopTranscript(tourId: tourId)
+        }
+        .confirmationDialog(
+            "Delete this tour?",
+            isPresented: $showingDeleteConfirm,
+            titleVisibility: .visible
+        ) {
+            Button("Delete tour", role: .destructive) {
+                if let tour = makerTour?.tour { delete(tour) }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This can't be undone.")
+        }
+    }
+
+    private func deleteSection(_ tour: Tour) -> some View {
+        Button(role: .destructive) {
+            showingDeleteConfirm = true
+        } label: {
+            HStack {
+                Spacer()
+                if isDeleting {
+                    ProgressView()
+                } else {
+                    Label("Delete tour", systemImage: "trash")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.accent)
+                }
+                Spacer()
+            }
+            .padding(.vertical, AtlasSpacing.md)
+            .overlay(
+                RoundedRectangle(cornerRadius: AtlasSpacing.sm)
+                    .stroke(AtlasColors.accent.opacity(0.5), lineWidth: 1)
+            )
+        }
+        .buttonStyle(.plain)
+        .disabled(isDeleting)
+        .padding(.top, AtlasSpacing.md)
+    }
+
+    private func delete(_ tour: Tour) {
+        errorMessage = nil
+        isDeleting = true
+        Task {
+            defer { isDeleting = false }
+            do {
+                try await makerTourService.deleteTour(tour)
+                dismiss()
+            } catch {
+                errorMessage = error.localizedDescription
+            }
         }
     }
 

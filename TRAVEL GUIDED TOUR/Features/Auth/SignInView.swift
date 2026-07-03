@@ -59,6 +59,13 @@ struct SignInView: View {
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
                     .frame(maxWidth: .infinity)
+
+                    if mode == .signIn {
+                        Button("Forgot password?") { forgotPassword() }
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                            .frame(maxWidth: .infinity)
+                    }
                 }
                 Spacer()
             }
@@ -205,6 +212,28 @@ struct SignInView: View {
                                 "We sent a confirmation link to \(email). Tap it, then come back and sign in."
                         }
                     }
+                }
+            } catch {
+                errorMessage = error.localizedDescription
+            }
+        }
+    }
+
+    private func forgotPassword() {
+        guard email.contains("@") else {
+            errorMessage = "Enter your email above, then tap Forgot password?"
+            return
+        }
+        focused = nil
+        errorMessage = nil
+        isWorking = true
+        Task {
+            defer { isWorking = false }
+            do {
+                try await authService.resetPassword(email: email)
+                withAnimation {
+                    confirmationMessage =
+                        "We sent a password reset link to \(email). Tap it to set a new password."
                 }
             } catch {
                 errorMessage = error.localizedDescription

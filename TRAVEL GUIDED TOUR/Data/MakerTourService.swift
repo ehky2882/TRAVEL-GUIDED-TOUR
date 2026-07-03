@@ -219,6 +219,19 @@ final class MakerTourService {
             .execute()
         await loadMyTours(makerId: tour.makerId)
     }
+
+    /// Delete one of the maker's tours (its stops cascade via the FK). RLS
+    /// `tours_owner_delete` scopes this to the owner. Removes it from `myTours`.
+    /// (Uploaded audio/photos in Storage are left as orphans for now — a later
+    /// cleanup can prune `tour-audio`/`tour-images` under the tour's folder.)
+    func deleteTour(_ tour: Tour) async throws {
+        try await client
+            .from("tours")
+            .delete()
+            .eq("id", value: tour.id.uuidString.lowercased())
+            .execute()
+        myTours.removeAll { $0.id == tour.id }
+    }
 }
 
 // MARK: - DTOs
