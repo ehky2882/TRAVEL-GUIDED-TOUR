@@ -27,6 +27,9 @@ struct ProfileEditorView: View {
     @State private var avatarColorHex: String?
     @State private var pickedItem: PhotosPickerItem?
     @State private var pickedImageData: Data?        // cropped square JPEG, pre-upload
+    @State private var cropImage: UIImage?           // photo awaiting the crop sheet
+    @State private var showingCrop = false
+    @State private var showingDiscardConfirm = false
     @State private var isSaving = false
     @State private var errorMessage: String?
     @FocusState private var focused: Field?
@@ -52,6 +55,20 @@ struct ProfileEditorView: View {
     /// initials-on-colour mode).
     private var usingPhoto: Bool {
         pickedImageData != nil || (avatarURL?.isEmpty == false)
+    }
+
+    /// True when any field differs from the loaded profile — drives the
+    /// "discard changes?" prompt on Close and blocks swipe-to-dismiss.
+    private var hasChanges: Bool {
+        displayName != currentMaker.displayName
+            || bio != currentMaker.bio
+            || website != (currentMaker.websiteURL ?? "")
+            || link2 != (currentMaker.link2URL ?? "")
+            || link3 != (currentMaker.link3URL ?? "")
+            || avatarInitials != (currentMaker.avatarInitials ?? "")
+            || avatarColorHex != currentMaker.avatarColor
+            || avatarURL != currentMaker.avatarURL
+            || pickedImageData != nil
     }
 
     private var trimmedName: String {
@@ -99,8 +116,34 @@ struct ProfileEditorView: View {
                 }
                 .padding(AtlasSpacing.lg)
             }
+            // Reserve space for the mini-player + tab bar (a separate, higher
+            // window that overlays even this sheet) so the Save button at the
+            // bottom of the form scrolls clear of it and stays tappable.
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Color.clear.frame(height: AtlasBottomModule.height())
+            }
             .background(AtlasColors.secondaryBackground)
             .scrollDismissesKeyboard(.interactively)
+            .sheet(isPresented: $showingCrop) {
+                if let cropImage {
+                    AvatarCropSheet(image: cropImage) { data in
+                        pickedImageData = data
+                    }
+                }
+            }
+            // Block swipe-to-dismiss while dirty so the discard prompt can't be
+            // bypassed; Close routes through the same prompt.
+            .interactiveDismissDisabled(hasChanges)
+            .confirmationDialog(
+                "Discard changes?",
+                isPresented: $showingDiscardConfirm,
+                titleVisibility: .visible
+            ) {
+                Button("Discard changes", role: .destructive) { dismiss() }
+                Button("Keep editing", role: .cancel) {}
+            } message: {
+                Text("Your edits won't be saved.")
+            }
             .navigationTitle("")
             .inlineNavigationBarTitle()
             .toolbar {
@@ -110,7 +153,7 @@ struct ProfileEditorView: View {
                         .foregroundStyle(AtlasColors.primaryText)
                 }
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("Close") { dismiss() }
+                    Button("Close") { attemptClose() }
                         .font(AtlasTypography.caption)
                         .tint(AtlasColors.primaryText)
                 }
@@ -212,13 +255,16 @@ struct ProfileEditorView: View {
         }
     }
 
-    /// Load the picked photo → square-crop → hold as `pickedImageData` (uploaded
-    /// on Save). Switching to a photo drops the initials/colour choice.
+    /// Load the picked photo → open the crop sheet (pinch/drag to frame). The
+    /// sheet hands back the final square JPEG. Switching to a photo drops the
+    /// initials/colour choice.
     private func loadPicked(_ item: PhotosPickerItem?) async {
         guard let item else { return }
         do {
-            guard let data = try await item.loadTransferable(type: Data.self) else { return }
-            pickedImageData = Self.squareJPEG(data)
+            guard let data = try await item.loadTransferable(type: Data.self),
+                  let ui = UIImage(data: data) else { return }
+            cropImage = ui
+            showingCrop = true
         } catch {
             errorMessage = error.localizedDescription
         }
@@ -228,19 +274,6 @@ struct ProfileEditorView: View {
         pickedImageData = nil
         avatarURL = nil
         pickedItem = nil
-    }
-
-    /// Aspect-fill crop to a centred square JPEG for the avatar.
-    private static func squareJPEG(_ data: Data, side: CGFloat = 512) -> Data? {
-        guard let img = UIImage(data: data) else { return nil }
-        let size = CGSize(width: side, height: side)
-        let out = UIGraphicsImageRenderer(size: size).image { _ in
-            let scale = max(side / img.size.width, side / img.size.height)
-            let w = img.size.width * scale
-            let h = img.size.height * scale
-            img.draw(in: CGRect(x: (side - w) / 2, y: (side - h) / 2, width: w, height: h))
-        }
-        return out.jpegData(compressionQuality: 0.85)
     }
 
     private func fieldLabel(_ text: String) -> some View {
@@ -285,6 +318,16 @@ struct ProfileEditorView: View {
             .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
         }
         .disabled(!canSave)
+    }
+
+    /// Close, prompting to discard if there are unsaved edits.
+    private func attemptClose() {
+        focused = nil
+        if hasChanges {
+            showingDiscardConfirm = true
+        } else {
+            dismiss()
+        }
     }
 
     private func save() {

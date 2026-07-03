@@ -112,6 +112,11 @@ struct MakerView: View {
     @State private var showingSettings = false
     @State private var showingCreate = false
     @State private var showingEditProfile = false
+    /// Set when a new draft is created, to push its editor (step 2) as the
+    /// create sheet dismisses. `pendingDraftId` holds the id until the sheet is
+    /// fully gone, then `draftToEdit` fires the push (avoids a dismiss↔push race).
+    @State private var draftToEdit: EditingDraft?
+    @State private var pendingDraftId: UUID?
 
     private var isSaved: Bool { savedMakersStore.isSaved(maker.id) }
     private var isOwnProfile: Bool { mode == .ownProfile }
@@ -145,7 +150,20 @@ struct MakerView: View {
             SettingsView()
         }
         .sheet(isPresented: $showingCreate) {
-            CreateTourView()
+            CreateTourView { newId in
+                pendingDraftId = newId
+            }
+        }
+        // Once the create sheet is fully dismissed, push the new draft's editor
+        // (step 2) so "Save draft & continue" lands there instead of the profile.
+        .onChange(of: showingCreate) { _, showing in
+            if !showing, let id = pendingDraftId {
+                pendingDraftId = nil
+                draftToEdit = EditingDraft(id: id)
+            }
+        }
+        .navigationDestination(item: $draftToEdit) { draft in
+            TourAuthoringView(tourId: draft.id)
         }
         .sheet(isPresented: $showingEditProfile) {
             ProfileEditorView(currentMaker: maker)
@@ -715,4 +733,10 @@ struct MakerView: View {
     private func formattedDuration(_ seconds: Int) -> String {
         AtlasFormatters.duration(seconds: seconds)
     }
+}
+
+/// Identifiable wrapper so a newly-created draft's id can drive
+/// `navigationDestination(item:)` (UUID isn't Identifiable on its own).
+private struct EditingDraft: Identifiable, Hashable {
+    let id: UUID
 }
