@@ -9,8 +9,8 @@ short/long descriptions). Place-type-from-title, Style, and Architect are fairly
 reliable; Theme nuance, the `Notable Building` fall-through, and the editorial
 Experience tags (`Iconic Landmark`, `Free to Visit`, `After Dark`) need eyeballing.
 
-This is a REFRESH of the original 243-tour seeder for the current 469-tour /
-7-maker catalog (adds Tokyo, Hong Kong, San Francisco). New facet tags and
+This is a REFRESH of the original 243-tour seeder for the current 509-tour /
+9-maker catalog (adds Tokyo, Kyoto, Hong Kong, San Francisco, Toronto). New facet tags and
 architects were added for those cities — see docs/tag-taxonomy-v2.md.
 
 Run:    python3 scripts/seed_tags.py
@@ -29,6 +29,8 @@ MAKER_METRO = {
     'ae9eeb8a-9dc4-45ed-a39a-cdbb091e9382': 'HKG',
     'b7e4d2a1-9c3f-4e85-a6d2-1f0c8b5e3a70': 'SFO',
     'be5797bb-8d86-5b3f-99d4-09b2ffac65bd': 'TYO',
+    '50b53af5-68ac-5e6e-8185-ae367326632d': 'KYO',
+    'caa0cba1-9fc2-5993-b5cc-4f3380470bd1': 'YYZ',
 }
 
 # ---------------------------------------------------------------------------
@@ -195,7 +197,7 @@ def main():
 
     out = []
     out.append("# Tag migration — auto-seed review (FIRST PASS, needs human correction)\n")
-    out.append(f"_{len(T)} tours / 7 makers. Heuristic seed from title + old primaryCategory + curated "
+    out.append(f"_{len(T)} tours / 9 makers. Heuristic seed from title + old primaryCategory + curated "
                "existing tags + descriptions. Place-from-title, Style, and Architect are fairly reliable; "
                "Theme nuance, the `Notable Building` fall-through, and the editorial Experience tags "
                "(`Iconic Landmark`, `Free to Visit`, `After Dark`) are 0 by design and need human authoring._\n")
@@ -207,9 +209,10 @@ def main():
     # Per-city review pack — the owner skims one maker at a time (decision D10).
     # ⚠️ flags a tour that needs a human look: place resolved only to the
     # Notable Building catch-all, or an implausibly wide place-type guess.
-    METRO_ORDER = ["NYC", "LDN", "LIS", "OPO", "HKG", "SFO", "TYO", "?"]
+    METRO_ORDER = ["NYC", "LDN", "LIS", "OPO", "HKG", "SFO", "TYO", "KYO", "YYZ", "?"]
     METRO_NAME = {"NYC": "New York", "LDN": "London", "LIS": "Lisbon", "OPO": "Porto",
-                  "HKG": "Hong Kong", "SFO": "San Francisco", "TYO": "Tokyo", "?": "Unknown maker"}
+                  "HKG": "Hong Kong", "SFO": "San Francisco", "TYO": "Tokyo",
+                  "KYO": "Kyoto", "YYZ": "Toronto", "?": "Unknown maker"}
     out.append("\n\n## Per-tour proposals — grouped by city (skim one at a time)\n")
     out.append("Each city lists its flag count so you know where the review effort is. "
                "⚠️ = needs a human look (place resolved only to `Notable Building`, or an over-wide guess).\n")

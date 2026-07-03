@@ -7,9 +7,9 @@ out incrementally.
 
 ---
 
-## 1 · The tour → tags mapping plan (how 469 tours get retagged)
+## 1 · The tour → tags mapping plan (how 509 tours get retagged)
 
-**First pass is automated.** `scripts/seed_tags.py` (refreshed for 469 tours /
+**First pass is automated.** `scripts/seed_tags.py` (refreshed for 509 tours /
 7 makers) assigns a faceted tag set to every tour from: title → old
 `primaryCategory` → curated existing `tags` → short/long descriptions. Output:
 `docs/tag-migration-review.md` (per-tour proposal + coverage). Average **6.4
@@ -144,7 +144,7 @@ Content is live and Supabase-backed, so **big-bang is avoidable**. Proposed
 three-phase flip (**D9**: incremental vs big-bang):
 
 - **Phase 1 — tags alongside categories (additive, no user-visible change).**
-  Land the normalized `tags` on all 469 tours (column already exists), keep
+  Land the normalized `tags` on all 509 tours (column already exists), keep
   `primaryCategory`. App still reads categories. Auto-seed + validator learn the
   vocabulary. *Fully reversible; nothing user-facing.* **Tooling is built and
   dry-run-verified** — `scripts/apply_tags.py` (safe by default; `--write` to
@@ -192,7 +192,7 @@ The important part — these drive whether/how we build it.
   facets to expose as filters vs keep as metadata (e.g. Architect + Style as
   metadata only)?
 - **D9 · Rollout: incremental 3-phase (recommended) vs big-bang.**
-- **D10 · Manual re-tag review depth.** Full 469-tour human review, spot-check
+- **D10 · Manual re-tag review depth.** Full 509-tour human review, spot-check
   by city, or trust the seed for Place/Style/Architect and only hand-author
   Theme + the editorial Experience tags?
 - **D11 · Free-form tags.** Discard the 2,006 unnormalized tags entirely, or

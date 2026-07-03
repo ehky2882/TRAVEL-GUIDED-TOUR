@@ -1,4 +1,4 @@
-# Atlas tag taxonomy — v2 (refreshed for the 469-tour catalog)
+# Atlas tag taxonomy — v2 (refreshed for the 509-tour catalog)
 
 **Status:** proposed / awaiting owner approval (2026-07-01). Supersedes the
 2026-06-12 draft (`docs/tag-taxonomy.md` on branch
@@ -15,25 +15,25 @@ forward): **tags-only** (drop `primaryCategory`), **Architect is its own facet**
 
 | | June draft | Now |
 |---|---|---|
-| Catalog | 243 tours, ~4 cities | **469 tours, 7 makers** (NYC 100 · LDN 99 · LIS 66 · OPO 54 · HKG 52 · SFO 35 · TYO 63) |
-| New cities not in the analysis | — | **Tokyo, Hong Kong, San Francisco** — temples/shrines, design/flagship landmarks, the Tokyo Toilet project, colonial-era HK, SF Victorians/Mission |
+| Catalog | 243 tours, ~4 cities | **509 tours, 9 makers** (NYC 100 · LDN 99 · LIS 66 · OPO 54 · HKG 52 · SFO 35 · TYO 63 · KYO 30 · YYZ 10) |
+| New cities not in the analysis | — | **Tokyo, Kyoto, Hong Kong, San Francisco, Toronto** — temples/shrines, design/flagship landmarks, the Tokyo Toilet project, colonial-era HK, SF Victorians/Mission, Kyoto machiya/zen gardens |
 | Backend | gh-pages `Tours.json` only | **Supabase-backed** — `get_catalog` RPC + gh-pages mirror + CI auto-seed; `tours.tags text[]` column already exists |
 
 ### The catch-all got worse
 The old enum is now more lopsided than when the problem was first flagged.
-Current `primaryCategory` distribution over 469 tours:
+Current `primaryCategory` distribution over 509 tours:
 
 | category | count | | category | count |
 |---|---|---|---|---|
-| **culturalHeritage** | **115** | | visualArt | 34 |
-| architecture | 112 | | foodAndDrink | 21 |
+| **culturalHeritage** | **122** | | visualArt | 38 |
+| architecture | 121 | | foodAndDrink | 32 |
 | history | 68 | | musicAndPerformance | 13 |
-| natureAndParks | 43 | | hiddenGems | 12 |
-| sacredSites | 43 | | literature | 8 |
+| sacredSites | 49 | | hiddenGems | 12 |
+| natureAndParks | 46 | | literature | 8 |
 
 `culturalHeritage` is now the **single largest bucket** — a meaningless
 catch-all absorbing 25% of the catalog. The free-form `tags` field has degraded
-too: **3,093 uses across 2,006 unique tags, 1,582 used exactly once**,
+too: **~3,300 uses across 2,183 unique tags, most used exactly once**,
 unnormalized (`azulejo`/`azulejos`, `siza vieira`/`siza`). Neither field is
 doing organizing work. This taxonomy replaces both.
 
@@ -41,7 +41,7 @@ doing organizing work. This taxonomy replaces both.
 
 A tour is described by tags drawn from five facets. **Place type** and **Theme**
 are required (≥1 each); the rest are applied where they fit. New v2 tags are
-**bold**. Counts in parentheses are from the refreshed auto-seed over the 469
+**bold**. Counts in parentheses are from the refreshed auto-seed over the 509
 tours (`scripts/seed_tags.py` → `docs/tag-migration-review.md`) — a first-pass
 signal, not a final count.
 

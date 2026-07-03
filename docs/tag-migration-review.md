@@ -1,59 +1,59 @@
 # Tag migration — auto-seed review (FIRST PASS, needs human correction)
 
-_469 tours / 7 makers. Heuristic seed from title + old primaryCategory + curated existing tags + descriptions. Place-from-title, Style, and Architect are fairly reliable; Theme nuance, the `Notable Building` fall-through, and the editorial Experience tags (`Iconic Landmark`, `Free to Visit`, `After Dark`) are 0 by design and need human authoring._
+_509 tours / 9 makers. Heuristic seed from title + old primaryCategory + curated existing tags + descriptions. Place-from-title, Style, and Architect are fairly reliable; Theme nuance, the `Notable Building` fall-through, and the editorial Experience tags (`Iconic Landmark`, `Free to Visit`, `After Dark`) are 0 by design and need human authoring._
 
 ## Coverage — tours per proposed tag
 
 
 **Place type**
 
-- `Religious Building` — 60
-- `Museum & Gallery` — 68
-- `Park & Garden` — 62
+- `Religious Building` — 66
+- `Museum & Gallery` — 71
+- `Park & Garden` — 65
 - `Public Square` — 22
-- `Tower & Skyscraper` — 29
+- `Tower & Skyscraper` — 31
 - `Bridge` — 13
 - `Monument & Memorial` — 19
-- `Market & Arcade` — 26
-- `Theatre & Venue` — 35
+- `Market & Arcade` — 27
+- `Theatre & Venue` — 38
 - `Library` — 7
-- `Street & District` — 88
-- `Civic & Government` — 25
-- `Waterfront` — 24
+- `Street & District` — 96
+- `Civic & Government` — 27
+- `Waterfront` — 26
 - `Shop & Flagship` — 5
-- `Notable Building` — 86
+- `Notable Building` — 99
 
 **Theme**
 
-- `Architecture & Design` — 287
-- `History` — 257
-- `Art` — 145
+- `Architecture & Design` — 305
+- `History` — 270
+- `Art` — 156
 - `Literature` — 54
-- `Music & Performance` — 104
-- `Food & Drink` — 96
-- `Faith & Spirituality` — 129
-- `Power & Politics` — 130
-- `Money & Trade` — 103
-- `Immigration & Community` — 58
+- `Music & Performance` — 109
+- `Food & Drink` — 110
+- `Faith & Spirituality` — 146
+- `Power & Politics` — 136
+- `Money & Trade` — 108
+- `Immigration & Community` — 60
 - `Crime & Scandal` — 25
-- `Death & Remembrance` — 55
-- `Engineering & Innovation` — 125
-- `War & Conflict` — 71
-- `Maritime` — 72
-- `Fashion & Retail` — 46
+- `Death & Remembrance` — 57
+- `Engineering & Innovation` — 132
+- `War & Conflict` — 74
+- `Maritime` — 74
+- `Fashion & Retail` — 52
 
 **Style & era**
 
-- `Medieval / Gothic` — 49
+- `Medieval / Gothic` — 50
 - `Baroque` — 20
 - `Georgian / Neoclassical` — 23
-- `Beaux-Arts` — 15
-- `Victorian` — 31
+- `Beaux-Arts` — 17
+- `Victorian` — 32
 - `Art Deco` — 15
-- `Modernist` — 28
+- `Modernist` — 29
 - `Metabolist` — 0
 - `Brutalist` — 6
-- `Contemporary` — 34
+- `Contemporary` — 37
 - `Gilded Age` — 5
 - `Colonial` — 23
 - `Mission / Spanish Revival` — 1
@@ -61,13 +61,13 @@ _469 tours / 7 makers. Heuristic seed from title + old primaryCategory + curated
 **Experience**
 
 - `Iconic Landmark` — 0
-- `Hidden Gem` — 33
-- `Viewpoint & Panorama` — 77
-- `Green Escape` — 118
+- `Hidden Gem` — 36
+- `Viewpoint & Panorama` — 82
+- `Green Escape` — 124
 - `Free to Visit` — 0
 - `After Dark` — 0
-- `Public Art` — 33
-- `Designed by a Master` — 99
+- `Public Art` — 34
+- `Designed by a Master` — 102
 
 **Architect**
 
@@ -90,7 +90,7 @@ _469 tours / 7 makers. Heuristic seed from title + old primaryCategory + curated
 - `Luís Pedro Silva` — 1
 - `Kengo Kuma` — 8
 - `Kenzō Tange` — 4
-- `Tadao Ando` — 2
+- `Tadao Ando` — 4
 - `SANAA` — 2
 - `Toyo Ito` — 1
 - `Fumihiko Maki` — 2
@@ -98,7 +98,7 @@ _469 tours / 7 makers. Heuristic seed from title + old primaryCategory + curated
 - `Sou Fujimoto` — 1
 - `Kisho Kurokawa` — 2
 - `I. M. Pei` — 3
-- `Mies van der Rohe` — 3
+- `Mies van der Rohe` — 4
 - `Le Corbusier` — 3
 - `Philip Johnson` — 3
 - `William Van Alen` — 1
@@ -618,3 +618,53 @@ Each city lists its flag count so you know where the review effort is. ⚠️ = 
 | Tsukiji Outer Market / 築地場外市場 | foodAndDrink | Market & Arcade, Engineering & Innovation, Fashion & Retail, Food & Drink, History, Money & Trade, Viewpoint & Panorama |
 | Yoyogi Fukamachi Mini Park / 代々木深町小公園 | architecture | Park & Garden, Architecture & Design, Engineering & Innovation, Contemporary, Designed by a Master, Green Escape, Public Art, Viewpoint & Panorama, Shigeru Ban |
 | Yoyogi National Stadium / 国立代々木競技場 第一体育館 | architecture | Theatre & Venue, Architecture & Design, Engineering & Innovation, Faith & Spirituality, Contemporary, Designed by a Master, Kenzō Tange |
+
+### Kyoto (KYO) — 30 tours · 11 flagged ⚠️
+
+| Tour | Old category | Proposed tags |
+|------|--------------|---------------|
+| A-POC ABLE ISSEY MIYAKE / A-POC ABLE ISSEY MIYAKE KYOTO | architecture | Notable Building, Architecture & Design, Fashion & Retail, History, Money & Trade, War & Conflict ⚠️ place=NotableBuilding-only? |
+| Ao Onigiri / 青おにぎり | foodAndDrink | Notable Building, Architecture & Design, Faith & Spirituality, Food & Drink ⚠️ place=NotableBuilding-only? |
+| Ark Building / アークビル | architecture | Notable Building, Architecture & Design, Art ⚠️ place=NotableBuilding-only? |
+| Blue Bottle Coffee - Kyoto Cafe / ブルーボトルコーヒー京都カフェ | foodAndDrink | Notable Building, Architecture & Design, Faith & Spirituality, Food & Drink ⚠️ place=NotableBuilding-only? |
+| Cavalier / キャバリエ | foodAndDrink | Notable Building, Food & Drink, Music & Performance ⚠️ place=NotableBuilding-only? |
+| Face House / フェイスハウス | architecture | Notable Building, Architecture & Design, Art, Engineering & Innovation ⚠️ place=NotableBuilding-only? |
+| Gion / 祇園 | culturalHeritage | Notable Building, Art, Engineering & Innovation, Faith & Spirituality, Food & Drink, History, Music & Performance ⚠️ place=NotableBuilding-only? |
+| HARIO CAFE / ハリオカフェ | foodAndDrink | Notable Building, Food & Drink ⚠️ place=NotableBuilding-only? |
+| Kibune River Dining Hirobun / ひろ文 | foodAndDrink | Notable Building, Faith & Spirituality, Food & Drink, History ⚠️ place=NotableBuilding-only? |
+| Le Labo Cafe Kyoto Machiya / ル ラボ カフェ 京都町家 | architecture | Notable Building, Architecture & Design, Fashion & Retail, Food & Drink, History ⚠️ place=NotableBuilding-only? |
+| lisn Kyoto / リスン 京都 | culturalHeritage | Notable Building, Fashion & Retail, Music & Performance, Contemporary ⚠️ place=NotableBuilding-only? |
+| APFR Kyoto / エーピーエフアール京都 | culturalHeritage | Street & District, Fashion & Retail, History, Money & Trade, Power & Politics |
+| Arashiyama Bamboo Forest / 嵐山竹林の小径 | natureAndParks | Park & Garden, History, Green Escape |
+| Asahi Group Ōyamazaki Villa Museum of Art / アサヒグループ大山崎山荘美術館 | visualArt | Museum & Gallery, Architecture & Design, Art, Designed by a Master, Tadao Ando |
+| Blend Kyoto / ブレンド京都 | foodAndDrink | Street & District, Food & Drink, Viewpoint & Panorama |
+| Byōdo-in Temple / 平等院 | sacredSites | Religious Building, Faith & Spirituality, Viewpoint & Panorama |
+| Enkōji / 圓光寺 | sacredSites | Religious Building, Architecture & Design, Art, Death & Remembrance, Faith & Spirituality, History, War & Conflict, Green Escape |
+| Fushimi Inari Taisha / 伏見稲荷大社 | sacredSites | Religious Building, Faith & Spirituality |
+| Garden of Fine Arts Kyoto / 京都府立陶板名画の庭 | visualArt | Park & Garden, Architecture & Design, Art, Designed by a Master, Green Escape, Tadao Ando |
+| Ginkaku-ji / 銀閣寺 | sacredSites | Religious Building, Faith & Spirituality, War & Conflict, Viewpoint & Panorama |
+| Giōji Temple / 祇王寺 | sacredSites | Religious Building, Faith & Spirituality, Green Escape |
+| Heisei Chishinkan Wing, Kyoto National Museum / 平成知新館 | visualArt | Museum & Gallery, Architecture & Design, Art, Faith & Spirituality, History, Beaux-Arts, Medieval / Gothic |
+| Ippodo Tea Kyoto / 一保堂茶舗 京都本店 | foodAndDrink | Street & District, Architecture & Design, Faith & Spirituality, Food & Drink, History, Money & Trade, Power & Politics |
+| KYO AMAHARE / 居雨:KYO | foodAndDrink | Civic & Government, Theatre & Venue, Fashion & Retail, Food & Drink, Contemporary |
+| Kibune River Dining / 貴船 水源の森 天山 | foodAndDrink | Street & District, Faith & Spirituality, Food & Drink, History, Money & Trade |
+| Kinkaku-ji / 金閣寺 | sacredSites | Religious Building, Architecture & Design, Art, Faith & Spirituality |
+| Kyoto City KYOCERA Museum of Art / 京都市京セラ美術館 | visualArt | Museum & Gallery, Architecture & Design, Art, Faith & Spirituality, Food & Drink, History, Music & Performance, Power & Politics, Contemporary |
+| Kyukyodo / 京都鳩居堂 本店 | culturalHeritage | Street & District, Faith & Spirituality, Immigration & Community, Power & Politics, Hidden Gem |
+| La Collina Ōmi-Hachiman / ラ コリーナ近江八幡 | architecture | Street & District, Architecture & Design, Engineering & Innovation, Fashion & Retail, History, Green Escape |
+| d-matcha Kyoto / d:matcha Kyoto | foodAndDrink | Street & District, Food & Drink |
+
+### Toronto (YYZ) — 10 tours · 1 flagged ⚠️
+
+| Tour | Old category | Proposed tags |
+|------|--------------|---------------|
+| Union Station | culturalHeritage | Notable Building, Faith & Spirituality, Maritime, Beaux-Arts ⚠️ place=NotableBuilding-only? |
+| CN Tower | architecture | Tower & Skyscraper, Architecture & Design, Engineering & Innovation, Viewpoint & Panorama |
+| Financial District (TD Centre) | architecture | Street & District, Architecture & Design, Modernist, Designed by a Master, Mies van der Rohe |
+| Gooderham Building (Flatiron) | architecture | Notable Building, Tower & Skyscraper, Architecture & Design, Art, Death & Remembrance, Victorian, Public Art |
+| Harbourfront / Queens Quay | culturalHeritage | Waterfront, Art, Engineering & Innovation, Maritime, Music & Performance, Power & Politics |
+| Hockey Hall of Fame | culturalHeritage | Civic & Government, Theatre & Venue, Engineering & Innovation, Faith & Spirituality, Money & Trade, Hidden Gem |
+| Ripley's Aquarium of Canada | natureAndParks | Park & Garden, History, Green Escape, Hidden Gem |
+| Rogers Centre (SkyDome) | architecture | Theatre & Venue, Architecture & Design, Engineering & Innovation |
+| St. Lawrence Market | foodAndDrink | Market & Arcade, Food & Drink, Power & Politics |
+| Toronto Islands | natureAndParks | Waterfront, Immigration & Community, Viewpoint & Panorama |

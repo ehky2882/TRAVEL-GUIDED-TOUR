@@ -10,10 +10,10 @@ full plan + locked decisions) first. Owner decisions are locked; only **D7**
 
 ## What Phase 1 is (plain)
 
-Quietly write the new controlled tags onto all 469 tours, **alongside** the
+Quietly write the new controlled tags onto all 509 tours, **alongside** the
 existing category. Nothing changes for users — the app still reads
 `primaryCategory` and shows today's rails/chips. It's **additive and
-reversible**: we're only replacing the messy free-form `tags` field (2,006
+reversible**: we're only replacing the messy free-form `tags` field (2,183
 unique, mostly used once) with a clean 85-tag controlled vocabulary. The UI flip
 (Phase 2) and dropping the old category (Phase 3) come later, in their own
 sessions.
@@ -33,9 +33,9 @@ and writes nothing unless you pass `--write`.
 Dry-run result (2026-07-02):
 
 ```
-tours:                469
-tours whose tags change: 469
-unique tags before:   2006  (free-form)
+tours:                509
+tours whose tags change: 509
+unique tags before:   2183  (free-form)
 unique tags after:    85    (controlled vocabulary)
 avg tags/tour:        6.5
 missing Place type:   0     (must be 0)
