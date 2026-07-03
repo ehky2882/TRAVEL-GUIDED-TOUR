@@ -99,6 +99,12 @@ struct ProfileEditorView: View {
                 }
                 .padding(AtlasSpacing.lg)
             }
+            // Reserve space for the mini-player + tab bar (a separate, higher
+            // window that overlays even this sheet) so the Save button at the
+            // bottom of the form scrolls clear of it and stays tappable.
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Color.clear.frame(height: AtlasBottomModule.height())
+            }
             .background(AtlasColors.secondaryBackground)
             .scrollDismissesKeyboard(.interactively)
             .navigationTitle("")
