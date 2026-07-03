@@ -27,6 +27,8 @@ struct ProfileEditorView: View {
     @State private var avatarColorHex: String?
     @State private var pickedItem: PhotosPickerItem?
     @State private var pickedImageData: Data?        // cropped square JPEG, pre-upload
+    @State private var cropImage: UIImage?           // photo awaiting the crop sheet
+    @State private var showingCrop = false
     @State private var isSaving = false
     @State private var errorMessage: String?
     @FocusState private var focused: Field?
@@ -107,6 +109,13 @@ struct ProfileEditorView: View {
             }
             .background(AtlasColors.secondaryBackground)
             .scrollDismissesKeyboard(.interactively)
+            .sheet(isPresented: $showingCrop) {
+                if let cropImage {
+                    AvatarCropSheet(image: cropImage) { data in
+                        pickedImageData = data
+                    }
+                }
+            }
             .navigationTitle("")
             .inlineNavigationBarTitle()
             .toolbar {
@@ -218,13 +227,16 @@ struct ProfileEditorView: View {
         }
     }
 
-    /// Load the picked photo → square-crop → hold as `pickedImageData` (uploaded
-    /// on Save). Switching to a photo drops the initials/colour choice.
+    /// Load the picked photo → open the crop sheet (pinch/drag to frame). The
+    /// sheet hands back the final square JPEG. Switching to a photo drops the
+    /// initials/colour choice.
     private func loadPicked(_ item: PhotosPickerItem?) async {
         guard let item else { return }
         do {
-            guard let data = try await item.loadTransferable(type: Data.self) else { return }
-            pickedImageData = Self.squareJPEG(data)
+            guard let data = try await item.loadTransferable(type: Data.self),
+                  let ui = UIImage(data: data) else { return }
+            cropImage = ui
+            showingCrop = true
         } catch {
             errorMessage = error.localizedDescription
         }
@@ -234,19 +246,6 @@ struct ProfileEditorView: View {
         pickedImageData = nil
         avatarURL = nil
         pickedItem = nil
-    }
-
-    /// Aspect-fill crop to a centred square JPEG for the avatar.
-    private static func squareJPEG(_ data: Data, side: CGFloat = 512) -> Data? {
-        guard let img = UIImage(data: data) else { return nil }
-        let size = CGSize(width: side, height: side)
-        let out = UIGraphicsImageRenderer(size: size).image { _ in
-            let scale = max(side / img.size.width, side / img.size.height)
-            let w = img.size.width * scale
-            let h = img.size.height * scale
-            img.draw(in: CGRect(x: (side - w) / 2, y: (side - h) / 2, width: w, height: h))
-        }
-        return out.jpegData(compressionQuality: 0.85)
     }
 
     private func fieldLabel(_ text: String) -> some View {
