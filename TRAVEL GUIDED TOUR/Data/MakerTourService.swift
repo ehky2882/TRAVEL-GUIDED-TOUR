@@ -36,6 +36,77 @@ final class MakerTourService {
     /// Clear when signed out or when the profile has no maker row yet.
     func clear() { myTours = [] }
 
+    /// Upload audio for a draft tour's single stop and patch its `audio_url` +
+    /// duration (and the tour's total duration). Stored at
+    /// `tour-audio/{maker_id}/{tour_id}/{filename}` — the leading maker-id
+    /// segment satisfies the storage RLS (`owns_maker`). Reloads `myTours` so
+    /// the feed reflects the new duration.
+    func attachAudio(
+        to tour: Tour,
+        data: Data,
+        filename: String,
+        contentType: String,
+        durationSeconds: Int
+    ) async throws {
+        let makerId = tour.makerId.uuidString.lowercased()
+        let tourId = tour.id.uuidString.lowercased()
+        let path = "\(makerId)/\(tourId)/\(filename)"
+
+        _ = try await client.storage
+            .from("tour-audio")
+            .upload(path, data: data, options: FileOptions(contentType: contentType, upsert: true))
+        let publicURL = try client.storage.from("tour-audio").getPublicURL(path: path).absoluteString
+
+        // Patch the stop (single-stop draft → order 0) and the tour duration.
+        try await client.from("stops")
+            .update(StopAudioPatch(audioURL: publicURL, audioDurationSeconds: durationSeconds))
+            .eq("tour_id", value: tourId)
+            .eq("order", value: 0)
+            .execute()
+        try await client.from("tours")
+            .update(TourDurationPatch(totalDurationSeconds: durationSeconds))
+            .eq("id", value: tourId)
+            .execute()
+
+        await loadMyTours(makerId: tour.makerId)
+    }
+
+    /// Upload photos (already cropped to 1200×900 JPEG) for a draft tour and
+    /// patch `hero_image_url` + `additional_image_urls`. The first photo becomes
+    /// the cover when the tour has none yet; the rest append to the gallery.
+    /// Stored at `tour-images/{maker_id}/{tour_id}/{filename}`.
+    func attachPhotos(to tour: Tour, images: [Data]) async throws {
+        guard !images.isEmpty else { return }
+        let makerId = tour.makerId.uuidString.lowercased()
+        let tourId = tour.id.uuidString.lowercased()
+
+        var uploaded: [String] = []
+        for data in images {
+            let path = "\(makerId)/\(tourId)/photo-\(UUID().uuidString).jpg"
+            _ = try await client.storage
+                .from("tour-images")
+                .upload(path, data: data, options: FileOptions(contentType: "image/jpeg", upsert: true))
+            uploaded.append(try client.storage.from("tour-images").getPublicURL(path: path).absoluteString)
+        }
+
+        let existingHero = tour.heroImageURL.isEmpty ? nil : tour.heroImageURL
+        var hero = existingHero
+        var additional = tour.additionalImageURLs ?? []
+        if existingHero == nil {
+            hero = uploaded.first
+            additional += Array(uploaded.dropFirst())
+        } else {
+            additional += uploaded
+        }
+
+        try await client.from("tours")
+            .update(TourImagesPatch(heroImageURL: hero ?? "", additionalImageURLs: additional))
+            .eq("id", value: tourId)
+            .execute()
+
+        await loadMyTours(makerId: tour.makerId)
+    }
+
     /// Load the maker's own tours (all statuses). Owner-scoped by RLS
     /// (`tours_owner_select`), filtered to this maker. A failure leaves the
     /// current list unchanged.
@@ -108,6 +179,46 @@ final class MakerTourService {
         myTours.insert(MakerTour(tour: tour, status: .draft), at: 0)
         return tourId
     }
+
+    /// Current transcript text for a tour's single stop ("" if none).
+    func stopTranscript(tourId: UUID) async -> String {
+        do {
+            let rows: [StopTranscriptRow] = try await client
+                .from("stops")
+                .select("transcript_text")
+                .eq("tour_id", value: tourId.uuidString.lowercased())
+                .eq("order", value: 0)
+                .limit(1)
+                .execute()
+                .value
+            return rows.first?.transcriptText ?? ""
+        } catch {
+            return ""
+        }
+    }
+
+    /// Save the transcript onto the tour's single stop.
+    func setTranscript(tourId: UUID, text: String) async throws {
+        try await client
+            .from("stops")
+            .update(StopTranscriptPatch(transcriptText: text))
+            .eq("tour_id", value: tourId.uuidString.lowercased())
+            .eq("order", value: 0)
+            .execute()
+    }
+
+    /// Submit a draft for moderation: flip `status` draft → in_review. Saves the
+    /// transcript first so a just-typed transcript isn't lost. Reloads `myTours`
+    /// so the badge updates. (A DB webhook on tours UPDATE emails the admin.)
+    func submitForReview(tour: Tour, transcript: String) async throws {
+        try await setTranscript(tourId: tour.id, text: transcript)
+        try await client
+            .from("tours")
+            .update(TourStatusPatch(status: TourStatus.inReview.rawValue))
+            .eq("id", value: tour.id.uuidString.lowercased())
+            .execute()
+        await loadMyTours(makerId: tour.makerId)
+    }
 }
 
 // MARK: - DTOs
@@ -166,6 +277,47 @@ private struct NewTourRow: Encodable {
     }
 
     private var category: TourCategory { .hiddenGems }
+}
+
+/// Update payload: set a stop's audio.
+private struct StopAudioPatch: Encodable {
+    let audioURL: String
+    let audioDurationSeconds: Int
+    enum CodingKeys: String, CodingKey {
+        case audioURL = "audio_url"
+        case audioDurationSeconds = "audio_duration_seconds"
+    }
+}
+
+/// Update payload: set a tour's total duration.
+private struct TourDurationPatch: Encodable {
+    let totalDurationSeconds: Int
+    enum CodingKeys: String, CodingKey {
+        case totalDurationSeconds = "total_duration_seconds"
+    }
+}
+
+/// Update payload: set a tour's hero + gallery image URLs.
+private struct TourImagesPatch: Encodable {
+    let heroImageURL: String
+    let additionalImageURLs: [String]
+    enum CodingKeys: String, CodingKey {
+        case heroImageURL = "hero_image_url"
+        case additionalImageURLs = "additional_image_urls"
+    }
+}
+
+/// Read/update payloads for a stop's transcript + a tour's status.
+private struct StopTranscriptRow: Decodable {
+    let transcriptText: String?
+    enum CodingKeys: String, CodingKey { case transcriptText = "transcript_text" }
+}
+private struct StopTranscriptPatch: Encodable {
+    let transcriptText: String
+    enum CodingKeys: String, CodingKey { case transcriptText = "transcript_text" }
+}
+private struct TourStatusPatch: Encodable {
+    let status: String
 }
 
 /// Insert payload for a new `stops` row (snake_case columns).
