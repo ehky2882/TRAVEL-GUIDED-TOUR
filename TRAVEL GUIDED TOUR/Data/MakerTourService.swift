@@ -58,10 +58,14 @@ final class MakerTourService {
         let publicURL = try client.storage.from("tour-audio").getPublicURL(path: path).absoluteString
 
         // Patch the stop (single-stop draft → order 0) and the tour duration.
+        // Filter by tour_id only. The stop column is literally named "order",
+        // which collides with PostgREST's reserved `order` (sort) query
+        // parameter — `.eq("order", …)` sends `order=eq.0` and PostgREST tries
+        // to parse it as a sort spec ("failed to parse order (eq.0)"). A
+        // Phase-1 draft has exactly one stop, so tour_id alone is unambiguous.
         try await client.from("stops")
             .update(StopAudioPatch(audioURL: publicURL, audioDurationSeconds: durationSeconds))
             .eq("tour_id", value: tourId)
-            .eq("order", value: 0)
             .execute()
         try await client.from("tours")
             .update(TourDurationPatch(totalDurationSeconds: durationSeconds))
@@ -183,11 +187,12 @@ final class MakerTourService {
     /// Current transcript text for a tour's single stop ("" if none).
     func stopTranscript(tourId: UUID) async -> String {
         do {
+            // Single-stop draft → filter by tour_id only. (The "order" column
+            // collides with PostgREST's reserved sort param — see attachAudio.)
             let rows: [StopTranscriptRow] = try await client
                 .from("stops")
                 .select("transcript_text")
                 .eq("tour_id", value: tourId.uuidString.lowercased())
-                .eq("order", value: 0)
                 .limit(1)
                 .execute()
                 .value
@@ -199,11 +204,12 @@ final class MakerTourService {
 
     /// Save the transcript onto the tour's single stop.
     func setTranscript(tourId: UUID, text: String) async throws {
+        // Single-stop draft → filter by tour_id only. (The "order" column
+        // collides with PostgREST's reserved sort param — see attachAudio.)
         try await client
             .from("stops")
             .update(StopTranscriptPatch(transcriptText: text))
             .eq("tour_id", value: tourId.uuidString.lowercased())
-            .eq("order", value: 0)
             .execute()
     }
 
