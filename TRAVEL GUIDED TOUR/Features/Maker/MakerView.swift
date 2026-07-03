@@ -88,8 +88,10 @@ struct MakerView: View {
     // its X close. Pushed / own-profile contexts don't.
     @Environment(MakerPresenter.self) private var makerPresenter: MakerPresenter?
     // Optional: only `.ownProfile` (the Me tab, which carries it via the
-    // ContentView environment) uses this — to edit/create the profile.
+    // ContentView environment) uses these — to edit/create the profile and to
+    // show the user's own tours (all statuses, incl. drafts).
     @Environment(MakerProfileService.self) private var makerProfileService: MakerProfileService?
+    @Environment(MakerTourService.self) private var makerTourService: MakerTourService?
 
     private let avatarSize: CGFloat = 96
 
@@ -148,7 +150,7 @@ struct MakerView: View {
             SettingsView()
         }
         .sheet(isPresented: $showingCreate) {
-            CreateTourPlaceholderView()
+            CreateTourView()
         }
         .sheet(isPresented: $showingEditProfile) {
             ProfileEditorView(currentMaker: maker)
@@ -461,6 +463,12 @@ struct MakerView: View {
                         category: tour.primaryCategory
                     )
                     .clipped()
+                    .overlay(alignment: .bottomLeading) {
+                        if let status = status(for: tour), status.showsBadge {
+                            statusBadge(status)
+                                .padding(AtlasSpacing.xs)
+                        }
+                    }
                     .contentShape(Rectangle())
                 }
             }
@@ -569,6 +577,10 @@ struct MakerView: View {
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
                     .lineLimit(1)
+
+                if let status = status(for: tour), status.showsBadge {
+                    statusBadge(status)
+                }
             }
 
             Spacer()
@@ -578,6 +590,18 @@ struct MakerView: View {
                 .foregroundStyle(AtlasColors.tertiaryText)
         }
         .padding(.vertical, AtlasSpacing.sm)
+    }
+
+    /// Small status pill for the own-profile feed (Draft / In review / Taken
+    /// down). Published tours carry no badge.
+    private func statusBadge(_ status: TourStatus) -> some View {
+        Text(status.label.uppercased())
+            .font(.system(size: 9, weight: .semibold))
+            .foregroundStyle(AtlasColors.background)
+            .padding(.horizontal, 6)
+            .padding(.vertical, 2)
+            .background(status.badgeColor)
+            .clipShape(Capsule())
     }
 
     // MARK: - Nav-bar overflow
@@ -632,8 +656,25 @@ struct MakerView: View {
 
     // MARK: - Derived
 
+    /// The feed's source tours. Own profile shows the user's OWN tours across
+    /// all statuses (drafts + in-review + published) from `MakerTourService`;
+    /// public pages show the maker's published catalog tours.
+    private var feedTours: [Tour] {
+        if isOwnProfile {
+            return makerTourService?.myTours.map(\.tour) ?? []
+        }
+        return dataService.tours(by: maker)
+    }
+
+    /// Status for a tour on the own-profile feed (nil on public pages / for
+    /// tours not owned) — drives the badge.
+    private func status(for tour: Tour) -> TourStatus? {
+        guard isOwnProfile else { return nil }
+        return makerTourService?.myTours.first(where: { $0.id == tour.id })?.status
+    }
+
     private var makerTours: [Tour] {
-        let tours = dataService.tours(by: maker)
+        let tours = feedTours
         let asc = sortAscending
         switch sortCriterion {
         case .name:
@@ -686,7 +727,7 @@ struct MakerView: View {
     }
 
     private var tourCountText: String {
-        let count = dataService.tours(by: maker).count
+        let count = feedTours.count
         return count == 1 ? "1 tour" : "\(count) tours"
     }
 

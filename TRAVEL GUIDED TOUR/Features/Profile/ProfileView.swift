@@ -16,16 +16,22 @@ import SwiftUI
 struct ProfileView: View {
     @Environment(AuthService.self) private var authService
     @Environment(MakerProfileService.self) private var makerProfileService
+    @Environment(MakerTourService.self) private var makerTourService
 
     var body: some View {
         if authService.isSignedIn {
             NavigationStack {
                 MakerView(maker: ownMaker, mode: .ownProfile)
             }
-            // Load (or clear) the real maker row on sign-in / sign-out.
-            // `.task(id:)` re-fires when the user id changes.
+            // Load (or clear) the real maker row + the user's own tours on
+            // sign-in / sign-out. `.task(id:)` re-fires when the user id changes.
             .task(id: authService.userId) {
                 await makerProfileService.loadMyMaker()
+                if let makerId = makerProfileService.myMaker?.id {
+                    await makerTourService.loadMyTours(makerId: makerId)
+                } else {
+                    makerTourService.clear()
+                }
             }
         } else {
             SignedOutProfileView()
