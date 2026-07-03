@@ -142,10 +142,17 @@ def seed(t):
     cat = t.get('primaryCategory')
     out = {f: set() for f in VOCAB}
 
-    # PLACE TYPE — title first, then old-category fallback, then Notable Building
+    # PLACE TYPE — title first; then old-category fallback; then a *specific*-only
+    # scan of the short description (skips the broad Notable Building pattern, the
+    # last TITLE_PLACE entry, so descriptions resolve to a real type instead of the
+    # catch-all); then Notable Building as the final fallback.
     for pat, pt in TITLE_PLACE:
         if re.search(pat, title): out["Place type"].add(pt)
     if not out["Place type"] and cat in CAT_PLACE: out["Place type"].add(CAT_PLACE[cat])
+    if not out["Place type"]:
+        short = (t.get('shortDescription') or '').lower()
+        for pat, pt in TITLE_PLACE[:-1]:      # specific patterns only, not Notable Building
+            if re.search(pat, short): out["Place type"].add(pt)
     if not out["Place type"]: out["Place type"].add("Notable Building")
 
     # THEME — old-category lead + keyword scan
@@ -197,16 +204,30 @@ def main():
         out.append(f"\n**{facet}**\n")
         for tag in taglist:
             out.append(f"- `{tag}` — {cov.get(tag, 0)}")
-    out.append("\n\n## Per-tour proposals\n")
-    out.append("| # | Tour | City | Old category | Proposed tags |")
-    out.append("|---|------|------|--------------|---------------|")
-    for i, (t, s, m, flags) in enumerate(rows, 1):
-        allt = []
-        for f in VOCAB:
-            allt += sorted(s[f])
-        fl = (" ⚠️ " + ",".join(flags)) if flags else ""
-        title = (t.get('title') or '').replace("|", "/")
-        out.append(f"| {i} | {title} | {m} | {t.get('primaryCategory','')} | {', '.join(allt)}{fl} |")
+    # Per-city review pack — the owner skims one maker at a time (decision D10).
+    # ⚠️ flags a tour that needs a human look: place resolved only to the
+    # Notable Building catch-all, or an implausibly wide place-type guess.
+    METRO_ORDER = ["NYC", "LDN", "LIS", "OPO", "HKG", "SFO", "TYO", "?"]
+    METRO_NAME = {"NYC": "New York", "LDN": "London", "LIS": "Lisbon", "OPO": "Porto",
+                  "HKG": "Hong Kong", "SFO": "San Francisco", "TYO": "Tokyo", "?": "Unknown maker"}
+    out.append("\n\n## Per-tour proposals — grouped by city (skim one at a time)\n")
+    out.append("Each city lists its flag count so you know where the review effort is. "
+               "⚠️ = needs a human look (place resolved only to `Notable Building`, or an over-wide guess).\n")
+    for m in METRO_ORDER:
+        mrows = [(t, s, fl) for (t, s, mm, fl) in rows if mm == m]
+        if not mrows:
+            continue
+        flagged = sum(1 for _, _, fl in mrows if fl)
+        out.append(f"\n### {METRO_NAME[m]} ({m}) — {len(mrows)} tours · {flagged} flagged ⚠️\n")
+        out.append("| Tour | Old category | Proposed tags |")
+        out.append("|------|--------------|---------------|")
+        for t, s, flags in sorted(mrows, key=lambda r: (bool(not r[2]), (r[0].get('title') or ''))):
+            allt = []
+            for f in VOCAB:
+                allt += sorted(s[f])
+            fl = (" ⚠️ " + ",".join(flags)) if flags else ""
+            title = (t.get('title') or '').replace("|", "/")
+            out.append(f"| {title} | {t.get('primaryCategory','')} | {', '.join(allt)}{fl} |")
 
     os.makedirs(os.path.join(ROOT, 'docs'), exist_ok=True)
     rp = os.path.join(ROOT, 'docs', 'tag-migration-review.md')

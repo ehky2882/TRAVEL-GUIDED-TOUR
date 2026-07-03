@@ -19,19 +19,23 @@ tags/tour**; every tour gets ≥1 Place type and ≥1 Theme (the required minimu
 
 | Facet | Auto-pass quality | Human effort |
 |---|---|---|
-| Place type | Good from title; **but 162 tours default to `Notable Building` only** | **High** — the main review cost; resolve each to a truer type |
+| Place type | Good from title + description; **85 tours still resolve to `Notable Building` only** (was 162 before the description scan) | **Medium** — the main review cost; the 85 are flagged ⚠️ and sorted to the top of each city section |
 | Theme | Lead theme reliable; secondary themes over-fire on keywords | Medium — prune false positives |
 | Style & era | Reliable when the era is named | Low |
 | Architect | Reliable names, but a *mention* ≠ the subject | Medium — confirm the tour is actually *about* that architect |
 | Experience | `Iconic Landmark` / `Free to Visit` / `After Dark` are **editorial, seed = 0** | Medium — hand-author the 3 editorial tags |
 
-**Review workflow:** seed → owner/editor corrects `docs/tag-migration-review.md`
-(or a spreadsheet export) → apply approved tags to `Tours.json` → validate →
-ship. **Effort estimate:** ~469 tours × ~1–2 min each to eyeball/correct ≈
-**8–14 focused hours**, best chunked by city (each maker is internally
-consistent). The `Notable Building` fall-through and the 3 editorial Experience
-tags are where the time goes. Can be parallelized per-city or assisted by a
-second LLM pass over full transcripts.
+**Review workflow (owner chose spot-check-by-city, D10):** seed → owner skims
+`docs/tag-migration-review.md` **one city at a time** (the review is now grouped
+per maker: NYC 100 · LDN 99 · LIS 66 · OPO 54 · HKG 52 · SFO 35 · TYO 63, each
+with its ⚠️ flag count and the flagged tours sorted to the top) → fix the
+obvious misses → apply approved tags to `Tours.json` → validate → ship.
+**Effort estimate:** only **85 tours** carry a place-type ⚠️ flag and the 3
+editorial Experience tags (`Iconic Landmark` / `Free to Visit` / `After Dark`)
+are hand-authored; a spot-check pass is realistically **~3–5 focused hours**
+(a full eyeball-every-tour pass would be ~8–14h). Best done city by city — each
+maker is internally consistent — or assisted by a second LLM pass over full
+transcripts.
 
 ---
 

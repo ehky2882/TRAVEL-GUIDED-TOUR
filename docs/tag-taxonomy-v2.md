@@ -62,13 +62,13 @@ signal, not a final count.
 | `Civic & Government` (16) | Town/city hall, court, bank, exchange, parliament, guild, **Diet**. |
 | `Waterfront` (16) | Pier, beach, harbour, quay, dock, bay, riverside/seafront walk (Victoria Harbour, the Bund, Embarcadero). |
 | **`Shop & Flagship`** (3*) | **Architect-designed flagship store / department store / showroom (Prada Aoyama, Dior Omotesando, Ginza flagships).** *Title-only seed under-counts; see decision D1 — may fold into `Notable Building`.* |
-| `Notable Building` (174) | Architecturally notable building not covered above (station, cinema, residence, factory, pavilion, **public toilet**…). **Catch-all — see note.** |
+| `Notable Building` (86) | Architecturally notable building not covered above (station, cinema, residence, factory, pavilion, **public toilet**…). **Catch-all — see note.** |
 
-> **`Notable Building` is the new catch-all risk.** The auto-seed dumps 174
-> tours here (162 as the *only* place type) because a title alone often doesn't
-> reveal the building type. This is the facet that most needs human review —
-> most of these resolve to a truer type (Civic, Theatre, Tower…) on a read of
-> the description. Tracked as review effort, not a taxonomy flaw.
+> **`Notable Building` is the new catch-all risk.** After the seeder learned to
+> read the short description (not just the title), the fall-through dropped from
+> 174 → **86** tours, of which **85** resolve *only* to Notable Building and are
+> the ones that need a human look. Those 85 are sorted to the top of each city's
+> table in `docs/tag-migration-review.md`. Review effort, not a taxonomy flaw.
 
 ### 2 · Theme — *what the story is about* (pick 1–3, required)
 The meaning layer that replaces the old category.
