@@ -33,6 +33,9 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// the Profile tab; created/edited via the profile editor. See
     /// `Data/MakerProfileService.swift`.
     @State private var makerProfileService: MakerProfileService
+    /// The signed-in user's own tours (all statuses) + draft creation. Loaded by
+    /// the Profile tab. See `Data/MakerTourService.swift`.
+    @State private var makerTourService = MakerTourService()
     @State private var libraryStore = LibraryStore()
     @State private var locationManager = LocationManager()
     @State private var audioPlayer = AudioPlayerService()
@@ -110,6 +113,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(dataService)
                     .environment(authService)
                     .environment(makerProfileService)
+                    .environment(makerTourService)
                     .environment(libraryStore)
                     .environment(locationManager)
                     .environment(audioPlayer)

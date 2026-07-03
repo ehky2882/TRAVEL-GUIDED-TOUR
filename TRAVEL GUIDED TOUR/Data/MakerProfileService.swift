@@ -78,6 +78,20 @@ final class MakerProfileService {
         myMaker = row.asMaker
     }
 
+    /// Ensure a maker row exists for the current user, returning its id.
+    /// Creating a tour needs a `maker_id`; if the user hasn't explicitly set up
+    /// their profile yet, this creates one with a sensible default name (the
+    /// email local-part) — editable later via Edit Profile. Matches the owner's
+    /// "profile fills as you create tours" model.
+    func ensureMaker() async throws -> UUID {
+        if let existing = myMaker { return existing.id }
+        let defaultName = auth.user?.email?
+            .split(separator: "@").first.map(String.init) ?? "Me"
+        try await saveProfile(displayName: defaultName, bio: "", websiteURL: nil)
+        guard let id = myMaker?.id else { throw MakerProfileError.notSignedIn }
+        return id
+    }
+
     enum MakerProfileError: LocalizedError {
         case notSignedIn
         var errorDescription: String? {
