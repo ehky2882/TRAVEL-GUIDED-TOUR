@@ -146,7 +146,10 @@ three-phase flip (**D9**: incremental vs big-bang):
 - **Phase 1 — tags alongside categories (additive, no user-visible change).**
   Land the normalized `tags` on all 469 tours (column already exists), keep
   `primaryCategory`. App still reads categories. Auto-seed + validator learn the
-  vocabulary. *Fully reversible; nothing user-facing.*
+  vocabulary. *Fully reversible; nothing user-facing.* **Tooling is built and
+  dry-run-verified** — `scripts/apply_tags.py` (safe by default; `--write` to
+  apply) turns 2,006 free-form tags into the 85-tag controlled set. Step-by-step
+  runbook + copy-paste kickoff prompt in `docs/tag-phase1-kickoff.md`.
 - **Phase 2 — flip the UI to tags (app build).** Rails + chips derive from tags;
   `primaryCategory` still emitted by the RPC for older builds but unused by the
   new build. Ship as a normal TestFlight build. *Old builds keep working off the
