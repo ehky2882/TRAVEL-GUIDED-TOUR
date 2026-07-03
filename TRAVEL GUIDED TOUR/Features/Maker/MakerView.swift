@@ -314,65 +314,26 @@ struct MakerView: View {
 
     private var toursSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            if isOwnProfile && makerTours.isEmpty {
-                // Instagram-style empty own profile: a single soft box that
-                // invites the first tour (no count / toggle / sort — nothing
-                // to sort yet).
-                ownEmptyState
-            } else {
-                HStack(spacing: AtlasSpacing.md) {
-                    Text(tourCountText)
-                        .font(AtlasTypography.caption)
-                        .textCase(.uppercase)
-                        .foregroundStyle(AtlasColors.tertiaryText)
-                    Spacer()
-                    layoutToggle
-                    sortMenu
-                }
-                .padding(.top, AtlasSpacing.md)
-
-                if makerTours.isEmpty {
-                    // Public page with no tours.
-                    Text("No tours yet.")
-                        .font(AtlasTypography.body)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                        .padding(.vertical, AtlasSpacing.md)
-                } else if layout == .grid {
-                    toursGrid
-                } else {
-                    toursList
-                }
-            }
-        }
-    }
-
-    /// Instagram-style empty state for the signed-in user's own profile — a
-    /// single dashed box that starts the first tour.
-    private var ownEmptyState: some View {
-        Button {
-            showingCreate = true
-        } label: {
-            VStack(spacing: AtlasSpacing.md) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: AtlasSpacing.sm)
-                        .strokeBorder(
-                            style: StrokeStyle(lineWidth: 1.5, dash: [6])
-                        )
-                        .foregroundStyle(AtlasColors.tertiaryText)
-                        .frame(width: 104, height: 104)
-                    Image(systemName: "plus")
-                        .font(.system(size: 34))
-                        .foregroundStyle(AtlasColors.secondaryText)
-                }
-                Text("Create your first tour")
+            HStack(spacing: AtlasSpacing.md) {
+                Text(tourCountText)
                     .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
+                    .textCase(.uppercase)
+                    .foregroundStyle(AtlasColors.tertiaryText)
+                Spacer()
+                layoutToggle
+                sortMenu
             }
-            .frame(maxWidth: .infinity)
-            .padding(.top, AtlasSpacing.xl)
+            .padding(.top, AtlasSpacing.md)
+
+            // Own profile always shows the feed (with the `+` add affordance).
+            // A public page with no tours shows a single empty placeholder box
+            // in the first slot (grid/list) instead of a "No tours yet." line.
+            if layout == .grid {
+                toursGrid
+            } else {
+                toursList
+            }
         }
-        .buttonStyle(.plain)
-        .accessibilityLabel("Create your first tour")
     }
 
     /// Wraps a tour's tappable content with the correct open behavior.
@@ -406,6 +367,9 @@ struct MakerView: View {
             if isOwnProfile {
                 addTourRow
                 if !makerTours.isEmpty { Divider() }
+            } else if makerTours.isEmpty {
+                // Public page, no tours — a single empty placeholder row.
+                emptyPlaceholderRow
             }
 
             ForEach(makerTours) { tour in
@@ -471,6 +435,15 @@ struct MakerView: View {
         .accessibilityLabel("Add a tour")
     }
 
+    /// Empty placeholder row for a public maker page with no tours — a single
+    /// blank square in the first slot (mirrors the list's leading thumbnail).
+    private var emptyPlaceholderRow: some View {
+        Rectangle()
+            .fill(AtlasColors.placeholderWarm.opacity(0.35))
+            .frame(width: 64, height: 64)
+            .padding(.vertical, AtlasSpacing.sm)
+    }
+
     /// Instagram-style 3-column square photo grid (image only). Shows
     /// the same sorted `makerTours`; tap a tile to open the tour. Tile
     /// side is derived from the measured grid width so tiles stay
@@ -482,6 +455,11 @@ struct MakerView: View {
         return LazyVGrid(columns: columns, spacing: spacing) {
             if isOwnProfile {
                 addTourTile(side: side)
+            } else if makerTours.isEmpty {
+                // Public page, no tours — a single empty placeholder tile.
+                Rectangle()
+                    .fill(AtlasColors.placeholderWarm.opacity(0.35))
+                    .frame(width: side, height: side)
             }
             ForEach(makerTours) { tour in
                 tourOpen(tour) {
