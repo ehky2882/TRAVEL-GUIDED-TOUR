@@ -235,16 +235,18 @@ struct MakerView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            // Website as inline blue link text under the bio (not a box).
-            if let urlString = maker.websiteURL,
-               let url = URL(string: urlString) {
-                Link(destination: url) {
-                    Text(displayLink(url))
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(Color.blue)
-                        .multilineTextAlignment(.center)
+            // Up to 3 profile links as inline blue link text under the bio
+            // (not boxes). Owner direction 2026-07-03: "Allow up to 3 links."
+            ForEach(maker.links, id: \.self) { urlString in
+                if let url = URL(string: urlString) {
+                    Link(destination: url) {
+                        Text(displayLink(url))
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(Color.blue)
+                            .multilineTextAlignment(.center)
+                    }
+                    .accessibilityLabel("Open \(maker.displayName) link \(displayLink(url))")
                 }
-                .accessibilityLabel("Open \(maker.displayName) website")
             }
 
             if isOwnProfile {
@@ -279,37 +281,9 @@ struct MakerView: View {
     }
 
     private var avatar: some View {
-        Group {
-            if let emoji = maker.avatarEmoji, !emoji.isEmpty {
-                // Single-glyph brand mark (e.g. the Atlas Studio NYC
-                // red apple) rendered inside a muted circular plate.
-                // MiniPlayerBar.authorIcon uses the same resolution
-                // order at a smaller frame.
-                ZStack {
-                    Circle().fill(AtlasColors.placeholderWarm)
-                    Text(emoji)
-                        .font(.system(size: avatarSize * 0.6))
-                }
-            } else if let urlString = maker.avatarURL,
-                      let url = URL(string: urlString) {
-                AsyncImage(url: url) { phase in
-                    switch phase {
-                    case .success(let image):
-                        image.resizable().scaledToFill()
-                    default:
-                        Circle().fill(AtlasColors.placeholderWarm)
-                    }
-                }
-            } else {
-                // No remote avatar or emoji — fall back to the bundled
-                // Atlas Studio brand asset.
-                Image("AtlasStudioAvatar")
-                    .resizable()
-                    .scaledToFill()
-            }
-        }
-        .frame(width: avatarSize, height: avatarSize)
-        .clipShape(Circle())
+        // Shared resolution: photo → emoji → custom initials+colour →
+        // display-name monogram. See Components/MakerAvatarView.
+        MakerAvatarView(maker: maker, size: avatarSize)
     }
 
     private var toursSection: some View {

@@ -318,18 +318,8 @@ struct SearchView: View {
     /// rows; everything else is caption.
     private func makerRow(_ maker: Maker) -> some View {
         HStack(alignment: .center, spacing: AtlasSpacing.md) {
-            ZStack {
-                Circle().fill(AtlasColors.secondaryBackground)
-                if let emoji = maker.avatarEmoji {
-                    Text(emoji)
-                        .font(.system(size: 28))
-                } else {
-                    Image(systemName: "person.crop.circle.fill")
-                        .font(.system(size: 32))
-                        .foregroundStyle(AtlasColors.secondaryText)
-                }
-            }
-            .frame(width: 56, height: 56)
+            // Shared avatar (photo → emoji → custom initials+colour → monogram).
+            MakerAvatarView(maker: maker, size: 56)
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 Text(maker.displayName)

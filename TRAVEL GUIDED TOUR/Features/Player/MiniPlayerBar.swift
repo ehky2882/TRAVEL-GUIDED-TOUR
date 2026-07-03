@@ -232,40 +232,23 @@ struct MiniPlayerBar: View {
         }
     }
 
-    /// Circular avatar of the tour's maker. Resolution order:
-    ///   1. `maker.avatarEmoji` — a single glyph rendered inside a
-    ///      muted circular plate (the Atlas Studio NYC red apple).
-    ///   2. `maker.avatarURL` — async-loaded remote image.
-    ///   3. The bundled `AtlasStudioAvatar` asset, as the last-resort
-    ///      brand fallback.
-    /// `MakerView`'s avatar uses the same resolution order at a larger
-    /// frame so the two surfaces stay in sync.
+    /// Circular avatar of the tour's maker. Goes through the shared
+    /// `MakerAvatarView` (photo → emoji → custom initials+colour →
+    /// display-name monogram) so it stays in sync with the profile /
+    /// maker page. Falls back to the bundled brand asset only when no
+    /// maker is loaded at all.
     private var authorIcon: some View {
         Group {
-            if let emoji = maker?.avatarEmoji, !emoji.isEmpty {
-                ZStack {
-                    Circle().fill(AtlasColors.placeholderWarm)
-                    Text(emoji)
-                        .font(.system(size: Self.iconSize * 0.6))
-                }
-            } else if let urlString = maker?.avatarURL,
-                      let url = URL(string: urlString) {
-                AsyncImage(url: url) { phase in
-                    switch phase {
-                    case .success(let image):
-                        image.resizable().scaledToFill()
-                    default:
-                        Circle().fill(AtlasColors.placeholderWarm)
-                    }
-                }
+            if let maker {
+                MakerAvatarView(maker: maker, size: Self.iconSize)
             } else {
                 Image("AtlasStudioAvatar")
                     .resizable()
                     .scaledToFill()
+                    .frame(width: Self.iconSize, height: Self.iconSize)
+                    .clipShape(Circle())
             }
         }
-        .frame(width: Self.iconSize, height: Self.iconSize)
-        .clipShape(Circle())
     }
 
     /// Circular muted placeholder — headphones glyph in the same

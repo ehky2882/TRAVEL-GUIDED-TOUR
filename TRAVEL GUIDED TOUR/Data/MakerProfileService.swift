@@ -56,26 +56,59 @@ final class MakerProfileService {
     /// the existing row's id when present so the unique-per-user constraint holds
     /// and any tours already pointing at it stay linked; generates a fresh id on
     /// first creation. Updates `myMaker` on success.
-    func saveProfile(displayName: String, bio: String, websiteURL: String?) async throws {
+    func saveProfile(
+        displayName: String,
+        bio: String,
+        websiteURL: String?,
+        link2URL: String? = nil,
+        link3URL: String? = nil,
+        avatarURL: String? = nil,
+        avatarInitials: String? = nil,
+        avatarColor: String? = nil
+    ) async throws {
         guard let uid = auth.user?.id.uuidString.lowercased() else {
             throw MakerProfileError.notSignedIn
         }
         let id = myMaker?.id ?? UUID()
-        let trimmedWebsite = websiteURL?.trimmingCharacters(in: .whitespacesAndNewlines)
+        func clean(_ s: String?) -> String? {
+            let t = s?.trimmingCharacters(in: .whitespacesAndNewlines)
+            return (t?.isEmpty ?? true) ? nil : t
+        }
         let row = MakerRow(
             id: id,
             userId: uid,
             displayName: displayName.trimmingCharacters(in: .whitespacesAndNewlines),
-            avatarUrl: myMaker?.avatarURL,
+            avatarUrl: clean(avatarURL),
+            // Emoji is a seed-studio brand mark; users don't set it. Preserve
+            // whatever's there rather than clearing it on a profile save.
             avatarEmoji: myMaker?.avatarEmoji,
             bio: bio.trimmingCharacters(in: .whitespacesAndNewlines),
-            websiteUrl: (trimmedWebsite?.isEmpty ?? true) ? nil : trimmedWebsite
+            websiteUrl: clean(websiteURL),
+            link2Url: clean(link2URL),
+            link3Url: clean(link3URL),
+            avatarInitials: clean(avatarInitials),
+            avatarColor: clean(avatarColor)
         )
         try await client
             .from("makers")
             .upsert(row, onConflict: "id")
             .execute()
         myMaker = row.asMaker
+    }
+
+    /// Upload a square avatar JPEG to Storage and return its public URL. The
+    /// path is `tour-images/{maker_id}/avatar-{uuid}.jpg` — the leading maker-id
+    /// segment satisfies the storage RLS (`owns_maker`), and the unique filename
+    /// dodges CDN caching of a previous avatar. Ensures a maker row exists first
+    /// (so there's an id to own the path). The caller then persists the returned
+    /// URL via `saveProfile(avatarURL:)`.
+    func uploadAvatar(_ jpeg: Data) async throws -> String {
+        let makerId = try await ensureMaker()
+        let path = "\(makerId.uuidString.lowercased())/avatar-\(UUID().uuidString).jpg"
+        _ = try await client.storage
+            .from("tour-images")
+            .upload(path, data: jpeg, options: FileOptions(contentType: "image/jpeg", upsert: true))
+        return try client.storage.from("tour-images").getPublicURL(path: path).absoluteString
     }
 
     /// Ensure a maker row exists for the current user, returning its id.
@@ -110,8 +143,38 @@ struct MakerRow: Codable {
     let displayName: String
     let avatarUrl: String?
     let avatarEmoji: String?
+    let avatarInitials: String?
+    let avatarColor: String?
     let bio: String
     let websiteUrl: String?
+    let link2Url: String?
+    let link3Url: String?
+
+    init(
+        id: UUID,
+        userId: String,
+        displayName: String,
+        avatarUrl: String?,
+        avatarEmoji: String?,
+        bio: String,
+        websiteUrl: String?,
+        link2Url: String? = nil,
+        link3Url: String? = nil,
+        avatarInitials: String? = nil,
+        avatarColor: String? = nil
+    ) {
+        self.id = id
+        self.userId = userId
+        self.displayName = displayName
+        self.avatarUrl = avatarUrl
+        self.avatarEmoji = avatarEmoji
+        self.avatarInitials = avatarInitials
+        self.avatarColor = avatarColor
+        self.bio = bio
+        self.websiteUrl = websiteUrl
+        self.link2Url = link2Url
+        self.link3Url = link3Url
+    }
 
     enum CodingKeys: String, CodingKey {
         case id, bio
@@ -119,7 +182,32 @@ struct MakerRow: Codable {
         case displayName = "display_name"
         case avatarUrl = "avatar_url"
         case avatarEmoji = "avatar_emoji"
+        case avatarInitials = "avatar_initials"
+        case avatarColor = "avatar_color"
         case websiteUrl = "website_url"
+        case link2Url = "link_2_url"
+        case link3Url = "link_3_url"
+    }
+
+    /// Custom encode so the nullable link columns are written as explicit JSON
+    /// `null` when cleared. Swift's synthesized encoder uses `encodeIfPresent`
+    /// for optionals, which OMITS nil keys — and PostgREST's upsert
+    /// `ON CONFLICT DO UPDATE` then leaves the old value in place, so a
+    /// removed link would silently resurrect. (Same fix as `UserLibraryRow`;
+    /// memory `reference-supabase-upsert-null-omission`.)
+    func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: CodingKeys.self)
+        try c.encode(id, forKey: .id)
+        try c.encode(userId, forKey: .userId)
+        try c.encode(displayName, forKey: .displayName)
+        try c.encode(bio, forKey: .bio)
+        try c.encode(avatarUrl, forKey: .avatarUrl)         // explicit null when nil
+        try c.encode(avatarEmoji, forKey: .avatarEmoji)
+        try c.encode(avatarInitials, forKey: .avatarInitials)
+        try c.encode(avatarColor, forKey: .avatarColor)
+        try c.encode(websiteUrl, forKey: .websiteUrl)
+        try c.encode(link2Url, forKey: .link2Url)
+        try c.encode(link3Url, forKey: .link3Url)
     }
 
     var asMaker: Maker {
@@ -129,7 +217,11 @@ struct MakerRow: Codable {
             avatarURL: avatarUrl,
             avatarEmoji: avatarEmoji,
             bio: bio,
-            websiteURL: websiteUrl
+            websiteURL: websiteUrl,
+            link2URL: link2Url,
+            link3URL: link3Url,
+            avatarInitials: avatarInitials,
+            avatarColor: avatarColor
         )
     }
 }
