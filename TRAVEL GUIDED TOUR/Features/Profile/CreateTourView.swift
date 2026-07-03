@@ -12,6 +12,11 @@ struct CreateTourView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(\.dismiss) private var dismiss
 
+    /// Called with the new draft's id after it's saved, so the presenter can
+    /// open the tour editor (step 2 — audio / photos / transcript) instead of
+    /// dropping the user back on the profile.
+    var onCreated: ((UUID) -> Void)? = nil
+
     @State private var title = ""
     @State private var shortDescription = ""
     @State private var longDescription = ""
@@ -79,10 +84,20 @@ struct CreateTourView: View {
                             .foregroundStyle(AtlasColors.mapPin)
                     }
 
-                    saveButton
+                    // Set the expectation that saving is step 1 of 2.
+                    Text("Step 1 of 2. Next, you'll add audio, photos, and a transcript.")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
                         .padding(.top, AtlasSpacing.sm)
+
+                    saveButton
                 }
                 .padding(AtlasSpacing.lg)
+            }
+            // Reserve space for the mini-player + tab bar (a separate, higher
+            // window) so the save button clears it and stays tappable.
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Color.clear.frame(height: AtlasBottomModule.height())
             }
             .background(AtlasColors.secondaryBackground)
             .scrollDismissesKeyboard(.interactively)
@@ -162,7 +177,7 @@ struct CreateTourView: View {
                 if isSaving {
                     ProgressView().tint(AtlasColors.background)
                 } else {
-                    Text("Save draft").font(AtlasTypography.caption)
+                    Text("Save draft & continue").font(AtlasTypography.caption)
                 }
                 Spacer()
             }
@@ -212,7 +227,7 @@ struct CreateTourView: View {
                 // Ensure the user has a maker row (creates one with a default
                 // name if this is their very first authoring action).
                 let makerId = try await makerProfileService.ensureMaker()
-                try await makerTourService.createDraftTour(
+                let tourId = try await makerTourService.createDraftTour(
                     makerId: makerId,
                     title: title,
                     shortDescription: shortDescription,
@@ -222,6 +237,9 @@ struct CreateTourView: View {
                     coordinate: coordinate,
                     radiusMeters: Int(radius)
                 )
+                // Hand the new draft to the presenter, which opens the editor
+                // (step 2) as this sheet dismisses.
+                onCreated?(tourId)
                 dismiss()
             } catch {
                 errorMessage = error.localizedDescription
