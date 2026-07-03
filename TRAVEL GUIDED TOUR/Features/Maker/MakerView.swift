@@ -235,16 +235,18 @@ struct MakerView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            // Website as inline blue link text under the bio (not a box).
-            if let urlString = maker.websiteURL,
-               let url = URL(string: urlString) {
-                Link(destination: url) {
-                    Text(displayLink(url))
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(Color.blue)
-                        .multilineTextAlignment(.center)
+            // Up to 3 profile links as inline blue link text under the bio
+            // (not boxes). Owner direction 2026-07-03: "Allow up to 3 links."
+            ForEach(maker.links, id: \.self) { urlString in
+                if let url = URL(string: urlString) {
+                    Link(destination: url) {
+                        Text(displayLink(url))
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(Color.blue)
+                            .multilineTextAlignment(.center)
+                    }
+                    .accessibilityLabel("Open \(maker.displayName) link \(displayLink(url))")
                 }
-                .accessibilityLabel("Open \(maker.displayName) website")
             }
 
             if isOwnProfile {

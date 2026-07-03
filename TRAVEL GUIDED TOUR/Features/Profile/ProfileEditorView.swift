@@ -17,11 +17,13 @@ struct ProfileEditorView: View {
     @State private var displayName: String
     @State private var bio: String
     @State private var website: String
+    @State private var link2: String
+    @State private var link3: String
     @State private var isSaving = false
     @State private var errorMessage: String?
     @FocusState private var focused: Field?
 
-    private enum Field { case name, bio, website }
+    private enum Field { case name, bio, website, link2, link3 }
 
     /// Max display-name length (owner direction 2026-07-03).
     private static let nameLimit = 40
@@ -31,6 +33,8 @@ struct ProfileEditorView: View {
         _displayName = State(initialValue: currentMaker.displayName)
         _bio = State(initialValue: currentMaker.bio)
         _website = State(initialValue: currentMaker.websiteURL ?? "")
+        _link2 = State(initialValue: currentMaker.link2URL ?? "")
+        _link3 = State(initialValue: currentMaker.link3URL ?? "")
     }
 
     private var trimmedName: String {
@@ -60,15 +64,10 @@ struct ProfileEditorView: View {
                         .focused($focused, equals: .bio)
                         .fieldStyle()
 
-                    fieldLabel("WEBSITE (OPTIONAL)")
-                    TextField("https://…", text: $website)
-                        .textContentType(.URL)
-                        .keyboardType(.URL)
-                        .textInputAutocapitalization(.never)
-                        .autocorrectionDisabled()
-                        .focused($focused, equals: .website)
-                        .submitLabel(.done)
-                        .fieldStyle()
+                    fieldLabel("LINKS (OPTIONAL — UP TO 3)")
+                    linkField("https://…", text: $website, field: .website, next: .link2)
+                    linkField("https://…", text: $link2, field: .link2, next: .link3)
+                    linkField("https://…", text: $link3, field: .link3, next: nil)
 
                     if let errorMessage {
                         Text(errorMessage)
@@ -106,6 +105,25 @@ struct ProfileEditorView: View {
             .foregroundStyle(AtlasColors.secondaryText)
     }
 
+    /// A URL text field for one of the up-to-3 profile links. `next` focuses the
+    /// following link field on return (nil = last field → dismiss keyboard).
+    private func linkField(
+        _ placeholder: String,
+        text: Binding<String>,
+        field: Field,
+        next: Field?
+    ) -> some View {
+        TextField(placeholder, text: text)
+            .textContentType(.URL)
+            .keyboardType(.URL)
+            .textInputAutocapitalization(.never)
+            .autocorrectionDisabled()
+            .focused($focused, equals: field)
+            .submitLabel(next == nil ? .done : .next)
+            .onSubmit { focused = next }
+            .fieldStyle()
+    }
+
     private var saveButton: some View {
         Button(action: save) {
             HStack {
@@ -135,7 +153,9 @@ struct ProfileEditorView: View {
                 try await service.saveProfile(
                     displayName: displayName,
                     bio: bio,
-                    websiteURL: website
+                    websiteURL: website,
+                    link2URL: link2,
+                    link3URL: link3
                 )
                 dismiss()
             } catch {

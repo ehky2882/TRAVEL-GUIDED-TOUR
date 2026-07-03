@@ -12,5 +12,40 @@ struct Maker: Codable, Identifiable, Hashable {
     /// Atlas Studio NYC red apple).
     let avatarEmoji: String?
     let bio: String
+    /// Primary link (a.k.a. "link 1"). Kept as `websiteURL` for backward
+    /// compatibility with the seed studios + the catalog payload.
     let websiteURL: String?
+    /// Optional second / third profile links (owner direction 2026-07-03:
+    /// "Allow up to 3 links"). Optional so decoding older payloads that
+    /// predate these keys (the bundled seed / gh-pages mirror) doesn't fail.
+    let link2URL: String?
+    let link3URL: String?
+
+    init(
+        id: UUID,
+        displayName: String,
+        avatarURL: String?,
+        avatarEmoji: String?,
+        bio: String,
+        websiteURL: String?,
+        link2URL: String? = nil,
+        link3URL: String? = nil
+    ) {
+        self.id = id
+        self.displayName = displayName
+        self.avatarURL = avatarURL
+        self.avatarEmoji = avatarEmoji
+        self.bio = bio
+        self.websiteURL = websiteURL
+        self.link2URL = link2URL
+        self.link3URL = link3URL
+    }
+
+    /// The maker's links in display order (link 1 → 3), dropping any that are
+    /// nil/blank. Drives the inline blue links under the bio.
+    var links: [String] {
+        [websiteURL, link2URL, link3URL]
+            .compactMap { $0?.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+    }
 }

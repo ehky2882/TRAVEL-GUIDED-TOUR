@@ -48,8 +48,12 @@ create table if not exists public.makers (
     display_name  text not null,
     avatar_url    text,
     avatar_emoji  text,
+    avatar_initials text,
+    avatar_color  text,
     bio           text not null,
     website_url   text,
+    link_2_url    text,
+    link_3_url    text,
     -- forward-design (maker platform): the auth user who owns this maker.
     -- NULL for the current Atlas-owned studios.
     user_id       uuid references auth.users (id) on delete set null,
@@ -154,12 +158,16 @@ as $$
     'makers', coalesce((
       select jsonb_agg(
         jsonb_build_object(
-          'id',           m.id,
-          'displayName',  m.display_name,
-          'avatarURL',    m.avatar_url,
-          'avatarEmoji',  m.avatar_emoji,
-          'bio',          m.bio,
-          'websiteURL',   m.website_url
+          'id',             m.id,
+          'displayName',    m.display_name,
+          'avatarURL',      m.avatar_url,
+          'avatarEmoji',    m.avatar_emoji,
+          'avatarInitials', m.avatar_initials,
+          'avatarColor',    m.avatar_color,
+          'bio',            m.bio,
+          'websiteURL',     m.website_url,
+          'link2URL',       m.link_2_url,
+          'link3URL',       m.link_3_url
         ) order by m.display_name
       )
       from public.makers m
