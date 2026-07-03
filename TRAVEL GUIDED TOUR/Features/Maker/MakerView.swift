@@ -124,11 +124,6 @@ struct MakerView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.top, AtlasSpacing.lg)
 
-                if let urlString = maker.websiteURL,
-                   let url = URL(string: urlString) {
-                    websiteLink(url: url)
-                }
-
                 toursSection
             }
             .padding(.horizontal, AtlasSpacing.lg)
@@ -225,22 +220,43 @@ struct MakerView: View {
         VStack(spacing: AtlasSpacing.md) {
             avatar
 
+            // Display name — preserve the maker's own casing (no forced
+            // ALL CAPS; owner direction 2026-07-03).
             Text(maker.displayName)
                 .font(AtlasTypography.caption)
-                .textCase(.uppercase)
                 .foregroundStyle(AtlasColors.primaryText)
                 .multilineTextAlignment(.center)
 
-            Text(maker.bio)
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
+            if !maker.bio.isEmpty {
+                Text(maker.bio)
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            // Website as inline blue link text under the bio (not a box).
+            if let urlString = maker.websiteURL,
+               let url = URL(string: urlString) {
+                Link(destination: url) {
+                    Text(displayLink(url))
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(Color.blue)
+                        .multilineTextAlignment(.center)
+                }
+                .accessibilityLabel("Open \(maker.displayName) website")
+            }
 
             if isOwnProfile {
                 editProfileButton
             }
         }
+    }
+
+    /// Compact link label — host without the leading `www.` (falls back to the
+    /// full string).
+    private func displayLink(_ url: URL) -> String {
+        (url.host ?? url.absoluteString).replacingOccurrences(of: "www.", with: "")
     }
 
     /// Own-profile "Edit Profile" pill — opens the profile editor, which
@@ -296,33 +312,6 @@ struct MakerView: View {
         .clipShape(Circle())
     }
 
-    private func websiteLink(url: URL) -> some View {
-        Link(destination: url) {
-            HStack(spacing: AtlasSpacing.sm) {
-                Image(systemName: "link")
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                Text(url.host ?? url.absoluteString)
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(1)
-                Spacer()
-                Image(systemName: "arrow.up.right")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-            }
-            .padding(.horizontal, AtlasSpacing.md)
-            .padding(.vertical, AtlasSpacing.sm)
-            .background(AtlasColors.secondaryBackground)
-            .overlay(
-                RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius)
-                    .stroke(AtlasColors.secondaryText.opacity(0.15), lineWidth: 1)
-            )
-            .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
-        }
-        .accessibilityLabel("Open \(maker.displayName) website")
-    }
-
     private var toursSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
             HStack(spacing: AtlasSpacing.md) {
@@ -336,15 +325,10 @@ struct MakerView: View {
             }
             .padding(.top, AtlasSpacing.md)
 
-            // Own profile always shows the feed so the `+` add-a-tour
-            // affordance is present even with zero tours. Public pages
-            // keep the plain "No tours yet." empty state.
-            if makerTours.isEmpty && !isOwnProfile {
-                Text("No tours yet.")
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .padding(.vertical, AtlasSpacing.md)
-            } else if layout == .grid {
+            // Own profile always shows the feed (with the `+` add affordance).
+            // A public page with no tours shows a single empty placeholder box
+            // in the first slot (grid/list) instead of a "No tours yet." line.
+            if layout == .grid {
                 toursGrid
             } else {
                 toursList
@@ -383,6 +367,9 @@ struct MakerView: View {
             if isOwnProfile {
                 addTourRow
                 if !makerTours.isEmpty { Divider() }
+            } else if makerTours.isEmpty {
+                // Public page, no tours — a single empty placeholder row.
+                emptyPlaceholderRow
             }
 
             ForEach(makerTours) { tour in
@@ -448,6 +435,15 @@ struct MakerView: View {
         .accessibilityLabel("Add a tour")
     }
 
+    /// Empty placeholder row for a public maker page with no tours — a single
+    /// blank square in the first slot (mirrors the list's leading thumbnail).
+    private var emptyPlaceholderRow: some View {
+        Rectangle()
+            .fill(AtlasColors.placeholderWarm.opacity(0.35))
+            .frame(width: 64, height: 64)
+            .padding(.vertical, AtlasSpacing.sm)
+    }
+
     /// Instagram-style 3-column square photo grid (image only). Shows
     /// the same sorted `makerTours`; tap a tile to open the tour. Tile
     /// side is derived from the measured grid width so tiles stay
@@ -459,6 +455,11 @@ struct MakerView: View {
         return LazyVGrid(columns: columns, spacing: spacing) {
             if isOwnProfile {
                 addTourTile(side: side)
+            } else if makerTours.isEmpty {
+                // Public page, no tours — a single empty placeholder tile.
+                Rectangle()
+                    .fill(AtlasColors.placeholderWarm.opacity(0.35))
+                    .frame(width: side, height: side)
             }
             ForEach(makerTours) { tour in
                 tourOpen(tour) {

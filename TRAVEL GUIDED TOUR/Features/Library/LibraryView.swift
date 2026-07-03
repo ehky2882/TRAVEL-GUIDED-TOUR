@@ -148,21 +148,10 @@ struct LibraryView: View {
         if savedMakers.isEmpty {
             tourList(tours: savedTours, empty: SavedEmptyState())
         } else {
+            // Tours first — saved makers live below (owner direction
+            // 2026-07-03: prioritize individual tours; makers/friends will
+            // also have their own home in the follow system).
             LazyVStack(alignment: .leading, spacing: 0) {
-                librarySectionHeader("Makers")
-                ForEach(savedMakers) { maker in
-                    Button {
-                        makerPresenter.present(maker)
-                    } label: {
-                        makerRow(maker)
-                    }
-                    .buttonStyle(.plain)
-
-                    if maker.id != savedMakers.last?.id {
-                        Divider().padding(.horizontal, AtlasSpacing.lg)
-                    }
-                }
-
                 if !savedTours.isEmpty {
                     librarySectionHeader("Tours")
                     ForEach(savedTours) { tour in
@@ -176,6 +165,20 @@ struct LibraryView: View {
                         if tour.id != savedTours.last?.id {
                             Divider().padding(.horizontal, AtlasSpacing.lg)
                         }
+                    }
+                }
+
+                librarySectionHeader("Makers")
+                ForEach(savedMakers) { maker in
+                    Button {
+                        makerPresenter.present(maker)
+                    } label: {
+                        makerRow(maker)
+                    }
+                    .buttonStyle(.plain)
+
+                    if maker.id != savedMakers.last?.id {
+                        Divider().padding(.horizontal, AtlasSpacing.lg)
                     }
                 }
             }
