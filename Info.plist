@@ -2,17 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLName</key>
-			<string>com.ehky.TRAVEL-GUIDED-TOUR.oauth</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>dozent</string>
-			</array>
-		</dict>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -27,6 +16,17 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.ehky.TRAVEL-GUIDED-TOUR.oauth</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>dozent</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -37,6 +37,8 @@
 	<string>Atlas uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Atlas uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Atlas uses the microphone so you can record narration for the audio tours you create.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

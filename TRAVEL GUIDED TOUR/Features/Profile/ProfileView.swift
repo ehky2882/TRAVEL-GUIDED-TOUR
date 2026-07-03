@@ -15,23 +15,39 @@ import SwiftUI
 /// reachable via the gear).
 struct ProfileView: View {
     @Environment(AuthService.self) private var authService
+    @Environment(MakerProfileService.self) private var makerProfileService
+    @Environment(MakerTourService.self) private var makerTourService
 
     var body: some View {
         if authService.isSignedIn {
             NavigationStack {
                 MakerView(maker: ownMaker, mode: .ownProfile)
             }
+            // Load (or clear) the real maker row + the user's own tours on
+            // sign-in / sign-out. `.task(id:)` re-fires when the user id changes.
+            .task(id: authService.userId) {
+                await makerProfileService.loadMyMaker()
+                if let makerId = makerProfileService.myMaker?.id {
+                    await makerTourService.loadMyTours(makerId: makerId)
+                } else {
+                    makerTourService.clear()
+                }
+            }
         } else {
             SignedOutProfileView()
         }
     }
 
-    /// The signed-in user rendered as a `Maker` so the profile can reuse
-    /// `MakerView`. Increment 1: synthesized from the auth account
-    /// (id = user id, name = the email's local-part). `DataService`
-    /// finds no catalog tours owned by this id yet, so the feed is empty
-    /// until the create flow (next increment) adds tours under this user.
+    /// The maker rendered on the profile. Once the user's real `makers` row
+    /// is loaded (or just saved) it's used directly; until then — before the
+    /// profile has ever been created — a placeholder synthesized from the
+    /// auth account (name = the email's local-part) stands in, so the header
+    /// isn't blank and "Edit Profile" prefills something sensible.
     private var ownMaker: Maker {
+        makerProfileService.myMaker ?? placeholderMaker
+    }
+
+    private var placeholderMaker: Maker {
         Maker(
             id: authService.userId ?? Self.placeholderId,
             displayName: displayName,
