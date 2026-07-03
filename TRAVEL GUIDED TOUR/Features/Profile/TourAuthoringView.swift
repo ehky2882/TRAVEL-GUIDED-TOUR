@@ -14,6 +14,7 @@ struct TourAuthoringView: View {
     @Environment(AtlasNavigationState.self) private var navState
 
     @State private var importingAudio = false
+    @State private var showingRecorder = false
     @State private var isUploading = false
     @State private var errorMessage: String?
 
@@ -62,6 +63,32 @@ struct TourAuthoringView: View {
         ) { result in
             handleImport(result)
         }
+        .sheet(isPresented: $showingRecorder) {
+            AudioRecordSheet { url in
+                if let tour = makerTour?.tour { uploadAudio(from: url, tour: tour) }
+            }
+        }
+    }
+
+    /// Styled audio-action button — a filled primary (record) or a bordered
+    /// secondary (import).
+    private func audioButton(_ title: String, systemImage: String, primary: Bool) -> some View {
+        HStack {
+            Spacer()
+            Label(title, systemImage: systemImage)
+                .font(AtlasTypography.caption)
+            Spacer()
+        }
+        .padding(.vertical, AtlasSpacing.md)
+        .foregroundStyle(primary ? AtlasColors.background : AtlasColors.primaryText)
+        .background(primary ? AtlasColors.mapPin : Color.clear)
+        .overlay {
+            if !primary {
+                RoundedRectangle(cornerRadius: AtlasSpacing.sm)
+                    .stroke(AtlasColors.secondaryText.opacity(0.4), lineWidth: 1)
+            }
+        }
+        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
     }
 
     // MARK: - Sections
@@ -98,28 +125,24 @@ struct TourAuthoringView: View {
                 }
             }
 
-            Button {
-                importingAudio = true
-            } label: {
-                HStack {
-                    Spacer()
-                    if isUploading {
-                        ProgressView().tint(AtlasColors.background)
-                    } else {
-                        Label(hasAudio ? "Replace audio" : "Import audio",
-                              systemImage: "square.and.arrow.down")
-                            .font(AtlasTypography.caption)
-                    }
-                    Spacer()
+            if isUploading {
+                HStack { Spacer(); ProgressView(); Spacer() }
+                    .padding(.vertical, AtlasSpacing.md)
+            } else {
+                Button { showingRecorder = true } label: {
+                    audioButton(hasAudio ? "Re-record audio" : "Record audio",
+                                systemImage: "mic.fill", primary: true)
                 }
-                .padding(.vertical, AtlasSpacing.md)
-                .background(AtlasColors.mapPin)
-                .foregroundStyle(AtlasColors.background)
-                .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
-            }
-            .disabled(isUploading)
+                .buttonStyle(.plain)
 
-            Text("Recording in the app is coming next; for now, import an audio file (m4a, mp3, wav).")
+                Button { importingAudio = true } label: {
+                    audioButton(hasAudio ? "Replace with a file" : "Import a file",
+                                systemImage: "square.and.arrow.down", primary: false)
+                }
+                .buttonStyle(.plain)
+            }
+
+            Text("Record narration here, or import an audio file (m4a, mp3, wav).")
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.tertiaryText)
 
