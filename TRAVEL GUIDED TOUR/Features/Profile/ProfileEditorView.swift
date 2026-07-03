@@ -23,6 +23,9 @@ struct ProfileEditorView: View {
 
     private enum Field { case name, bio, website }
 
+    /// Max display-name length (owner direction 2026-07-03).
+    private static let nameLimit = 40
+
     init(currentMaker: Maker) {
         self.currentMaker = currentMaker
         _displayName = State(initialValue: currentMaker.displayName)
@@ -44,6 +47,11 @@ struct ProfileEditorView: View {
                         .focused($focused, equals: .name)
                         .submitLabel(.next)
                         .onSubmit { focused = .bio }
+                        .onChange(of: displayName) { _, new in
+                            if new.count > Self.nameLimit {
+                                displayName = String(new.prefix(Self.nameLimit))
+                            }
+                        }
                         .fieldStyle()
 
                     fieldLabel("BIO")

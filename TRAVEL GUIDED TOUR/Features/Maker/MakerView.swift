@@ -124,11 +124,6 @@ struct MakerView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.top, AtlasSpacing.lg)
 
-                if let urlString = maker.websiteURL,
-                   let url = URL(string: urlString) {
-                    websiteLink(url: url)
-                }
-
                 toursSection
             }
             .padding(.horizontal, AtlasSpacing.lg)
@@ -225,22 +220,43 @@ struct MakerView: View {
         VStack(spacing: AtlasSpacing.md) {
             avatar
 
+            // Display name — preserve the maker's own casing (no forced
+            // ALL CAPS; owner direction 2026-07-03).
             Text(maker.displayName)
                 .font(AtlasTypography.caption)
-                .textCase(.uppercase)
                 .foregroundStyle(AtlasColors.primaryText)
                 .multilineTextAlignment(.center)
 
-            Text(maker.bio)
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
+            if !maker.bio.isEmpty {
+                Text(maker.bio)
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            // Website as inline blue link text under the bio (not a box).
+            if let urlString = maker.websiteURL,
+               let url = URL(string: urlString) {
+                Link(destination: url) {
+                    Text(displayLink(url))
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(Color.blue)
+                        .multilineTextAlignment(.center)
+                }
+                .accessibilityLabel("Open \(maker.displayName) website")
+            }
 
             if isOwnProfile {
                 editProfileButton
             }
         }
+    }
+
+    /// Compact link label — host without the leading `www.` (falls back to the
+    /// full string).
+    private func displayLink(_ url: URL) -> String {
+        (url.host ?? url.absoluteString).replacingOccurrences(of: "www.", with: "")
     }
 
     /// Own-profile "Edit Profile" pill — opens the profile editor, which
@@ -296,60 +312,67 @@ struct MakerView: View {
         .clipShape(Circle())
     }
 
-    private func websiteLink(url: URL) -> some View {
-        Link(destination: url) {
-            HStack(spacing: AtlasSpacing.sm) {
-                Image(systemName: "link")
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                Text(url.host ?? url.absoluteString)
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(1)
-                Spacer()
-                Image(systemName: "arrow.up.right")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-            }
-            .padding(.horizontal, AtlasSpacing.md)
-            .padding(.vertical, AtlasSpacing.sm)
-            .background(AtlasColors.secondaryBackground)
-            .overlay(
-                RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius)
-                    .stroke(AtlasColors.secondaryText.opacity(0.15), lineWidth: 1)
-            )
-            .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius))
-        }
-        .accessibilityLabel("Open \(maker.displayName) website")
-    }
-
     private var toursSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            HStack(spacing: AtlasSpacing.md) {
-                Text(tourCountText)
-                    .font(AtlasTypography.caption)
-                    .textCase(.uppercase)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-                Spacer()
-                layoutToggle
-                sortMenu
-            }
-            .padding(.top, AtlasSpacing.md)
-
-            // Own profile always shows the feed so the `+` add-a-tour
-            // affordance is present even with zero tours. Public pages
-            // keep the plain "No tours yet." empty state.
-            if makerTours.isEmpty && !isOwnProfile {
-                Text("No tours yet.")
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .padding(.vertical, AtlasSpacing.md)
-            } else if layout == .grid {
-                toursGrid
+            if isOwnProfile && makerTours.isEmpty {
+                // Instagram-style empty own profile: a single soft box that
+                // invites the first tour (no count / toggle / sort — nothing
+                // to sort yet).
+                ownEmptyState
             } else {
-                toursList
+                HStack(spacing: AtlasSpacing.md) {
+                    Text(tourCountText)
+                        .font(AtlasTypography.caption)
+                        .textCase(.uppercase)
+                        .foregroundStyle(AtlasColors.tertiaryText)
+                    Spacer()
+                    layoutToggle
+                    sortMenu
+                }
+                .padding(.top, AtlasSpacing.md)
+
+                if makerTours.isEmpty {
+                    // Public page with no tours.
+                    Text("No tours yet.")
+                        .font(AtlasTypography.body)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                        .padding(.vertical, AtlasSpacing.md)
+                } else if layout == .grid {
+                    toursGrid
+                } else {
+                    toursList
+                }
             }
         }
+    }
+
+    /// Instagram-style empty state for the signed-in user's own profile — a
+    /// single dashed box that starts the first tour.
+    private var ownEmptyState: some View {
+        Button {
+            showingCreate = true
+        } label: {
+            VStack(spacing: AtlasSpacing.md) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: AtlasSpacing.sm)
+                        .strokeBorder(
+                            style: StrokeStyle(lineWidth: 1.5, dash: [6])
+                        )
+                        .foregroundStyle(AtlasColors.tertiaryText)
+                        .frame(width: 104, height: 104)
+                    Image(systemName: "plus")
+                        .font(.system(size: 34))
+                        .foregroundStyle(AtlasColors.secondaryText)
+                }
+                Text("Create your first tour")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+            }
+            .frame(maxWidth: .infinity)
+            .padding(.top, AtlasSpacing.xl)
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Create your first tour")
     }
 
     /// Wraps a tour's tappable content with the correct open behavior.
