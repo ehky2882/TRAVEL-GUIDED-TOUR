@@ -22,6 +22,9 @@ struct TourAuthoringView: View {
     @State private var isUploading = false
     @State private var photoItems: [PhotosPickerItem] = []
     @State private var isUploadingPhotos = false
+    @State private var transcriptText = ""
+    @State private var isSavingTranscript = false
+    @State private var isSubmitting = false
     @State private var errorMessage: String?
 
     /// Live lookup so the view refreshes after an upload reloads `myTours`.
@@ -37,8 +40,8 @@ struct TourAuthoringView: View {
                     header(makerTour)
                     audioSection
                     photosSection(makerTour.tour)
-                    comingNextRow("Transcript", systemImage: "text.alignleft")
-                    comingNextRow("Submit for review", systemImage: "paperplane")
+                    transcriptSection
+                    submitSection(makerTour)
                 } else {
                     Text("This tour is no longer available.")
                         .font(AtlasTypography.caption)
@@ -76,6 +79,65 @@ struct TourAuthoringView: View {
         }
         .onChange(of: photoItems) { _, items in
             handlePhotoSelection(items)
+        }
+        .task(id: tourId) {
+            transcriptText = await makerTourService.stopTranscript(tourId: tourId)
+        }
+    }
+
+    private var transcriptSection: some View {
+        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            Text("TRANSCRIPT")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+
+            TextField("The words spoken in the audio", text: $transcriptText, axis: .vertical)
+                .lineLimit(4...12)
+                .font(AtlasTypography.caption)
+                .padding(AtlasSpacing.md)
+                .background(AtlasColors.background)
+                .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+
+            Button { saveTranscript() } label: {
+                audioButton(isSavingTranscript ? "Saving…" : "Save transcript",
+                            systemImage: "checkmark", primary: false)
+            }
+            .disabled(isSavingTranscript)
+        }
+    }
+
+    private func submitSection(_ makerTour: MakerTour) -> some View {
+        let hasAudio = makerTour.tour.totalDurationSeconds > 0
+        let hasHero = !makerTour.tour.heroImageURL.isEmpty
+        let isDraft = makerTour.status == .draft
+        let canSubmit = hasAudio && hasHero && isDraft && !isSubmitting
+        return VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            Text("SUBMIT")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+
+            if isDraft {
+                Button { submit(makerTour.tour) } label: {
+                    audioButton(isSubmitting ? "Submitting…" : "Submit for review",
+                                systemImage: "paperplane.fill", primary: true)
+                }
+                .disabled(!canSubmit)
+                .opacity(canSubmit ? 1 : 0.5)
+
+                if !(hasAudio && hasHero) {
+                    Text("Add audio and at least one photo before submitting.")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.tertiaryText)
+                }
+            } else {
+                HStack(spacing: AtlasSpacing.sm) {
+                    Image(systemName: "clock.badge.checkmark")
+                        .foregroundStyle(AtlasColors.mapPin)
+                    Text("Submitted — \(makerTour.status.label). We'll review it and publish it.")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.primaryText)
+                }
+            }
         }
     }
 
@@ -213,18 +275,30 @@ struct TourAuthoringView: View {
         }
     }
 
-    /// A disabled row for a step that lands in a later increment.
-    private func comingNextRow(_ title: String, systemImage: String) -> some View {
-        HStack {
-            Label(title, systemImage: systemImage)
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
-            Spacer()
-            Text("COMING NEXT")
-                .font(.system(size: 9, weight: .semibold))
-                .foregroundStyle(AtlasColors.tertiaryText)
+    private func saveTranscript() {
+        errorMessage = nil
+        isSavingTranscript = true
+        Task {
+            defer { isSavingTranscript = false }
+            do {
+                try await makerTourService.setTranscript(tourId: tourId, text: transcriptText)
+            } catch {
+                errorMessage = error.localizedDescription
+            }
         }
-        .padding(.vertical, AtlasSpacing.sm)
+    }
+
+    private func submit(_ tour: Tour) {
+        errorMessage = nil
+        isSubmitting = true
+        Task {
+            defer { isSubmitting = false }
+            do {
+                try await makerTourService.submitForReview(tour: tour, transcript: transcriptText)
+            } catch {
+                errorMessage = error.localizedDescription
+            }
+        }
     }
 
     // MARK: - Import

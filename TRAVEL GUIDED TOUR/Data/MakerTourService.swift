@@ -179,6 +179,46 @@ final class MakerTourService {
         myTours.insert(MakerTour(tour: tour, status: .draft), at: 0)
         return tourId
     }
+
+    /// Current transcript text for a tour's single stop ("" if none).
+    func stopTranscript(tourId: UUID) async -> String {
+        do {
+            let rows: [StopTranscriptRow] = try await client
+                .from("stops")
+                .select("transcript_text")
+                .eq("tour_id", value: tourId.uuidString.lowercased())
+                .eq("order", value: 0)
+                .limit(1)
+                .execute()
+                .value
+            return rows.first?.transcriptText ?? ""
+        } catch {
+            return ""
+        }
+    }
+
+    /// Save the transcript onto the tour's single stop.
+    func setTranscript(tourId: UUID, text: String) async throws {
+        try await client
+            .from("stops")
+            .update(StopTranscriptPatch(transcriptText: text))
+            .eq("tour_id", value: tourId.uuidString.lowercased())
+            .eq("order", value: 0)
+            .execute()
+    }
+
+    /// Submit a draft for moderation: flip `status` draft → in_review. Saves the
+    /// transcript first so a just-typed transcript isn't lost. Reloads `myTours`
+    /// so the badge updates. (A DB webhook on tours UPDATE emails the admin.)
+    func submitForReview(tour: Tour, transcript: String) async throws {
+        try await setTranscript(tourId: tour.id, text: transcript)
+        try await client
+            .from("tours")
+            .update(TourStatusPatch(status: TourStatus.inReview.rawValue))
+            .eq("id", value: tour.id.uuidString.lowercased())
+            .execute()
+        await loadMyTours(makerId: tour.makerId)
+    }
 }
 
 // MARK: - DTOs
@@ -265,6 +305,19 @@ private struct TourImagesPatch: Encodable {
         case heroImageURL = "hero_image_url"
         case additionalImageURLs = "additional_image_urls"
     }
+}
+
+/// Read/update payloads for a stop's transcript + a tour's status.
+private struct StopTranscriptRow: Decodable {
+    let transcriptText: String?
+    enum CodingKeys: String, CodingKey { case transcriptText = "transcript_text" }
+}
+private struct StopTranscriptPatch: Encodable {
+    let transcriptText: String
+    enum CodingKeys: String, CodingKey { case transcriptText = "transcript_text" }
+}
+private struct TourStatusPatch: Encodable {
+    let status: String
 }
 
 /// Insert payload for a new `stops` row (snake_case columns).
