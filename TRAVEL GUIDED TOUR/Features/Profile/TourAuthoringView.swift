@@ -1,6 +1,10 @@
 import SwiftUI
 import AVFoundation
 import UniformTypeIdentifiers
+import PhotosUI
+#if canImport(UIKit)
+import UIKit
+#endif
 
 /// The authoring editor for one of the maker's own tours (V2 Step 4, increment
 /// 2c). Reached by tapping an owned tour on the profile feed. This increment
@@ -16,6 +20,8 @@ struct TourAuthoringView: View {
     @State private var importingAudio = false
     @State private var showingRecorder = false
     @State private var isUploading = false
+    @State private var photoItems: [PhotosPickerItem] = []
+    @State private var isUploadingPhotos = false
     @State private var errorMessage: String?
 
     /// Live lookup so the view refreshes after an upload reloads `myTours`.
@@ -30,7 +36,7 @@ struct TourAuthoringView: View {
                 if let makerTour {
                     header(makerTour)
                     audioSection
-                    comingNextRow("Photos", systemImage: "photo.on.rectangle")
+                    photosSection(makerTour.tour)
                     comingNextRow("Transcript", systemImage: "text.alignleft")
                     comingNextRow("Submit for review", systemImage: "paperplane")
                 } else {
@@ -67,6 +73,59 @@ struct TourAuthoringView: View {
             AudioRecordSheet { url in
                 if let tour = makerTour?.tour { uploadAudio(from: url, tour: tour) }
             }
+        }
+        .onChange(of: photoItems) { _, items in
+            handlePhotoSelection(items)
+        }
+    }
+
+    private func photosSection(_ tour: Tour) -> some View {
+        let all = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
+            .filter { !$0.isEmpty }
+        return VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            Text("PHOTOS")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+
+            if !all.isEmpty {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: AtlasSpacing.sm) {
+                        ForEach(Array(all.enumerated()), id: \.offset) { idx, url in
+                            HeroImageView(imageName: url, height: 84,
+                                          cornerRadius: 0, category: tour.primaryCategory)
+                                .frame(width: 112)
+                                .overlay(alignment: .bottomLeading) {
+                                    if idx == 0 {
+                                        Text("COVER")
+                                            .font(.system(size: 9, weight: .semibold))
+                                            .foregroundStyle(AtlasColors.background)
+                                            .padding(.horizontal, 5).padding(.vertical, 2)
+                                            .background(AtlasColors.mapPin)
+                                            .padding(AtlasSpacing.xs)
+                                    }
+                                }
+                        }
+                    }
+                }
+            }
+
+            if isUploadingPhotos {
+                HStack { Spacer(); ProgressView(); Spacer() }
+                    .padding(.vertical, AtlasSpacing.md)
+            } else {
+                PhotosPicker(
+                    selection: $photoItems,
+                    maxSelectionCount: 5,
+                    matching: .images
+                ) {
+                    audioButton(all.isEmpty ? "Add photos" : "Add more photos",
+                                systemImage: "photo.badge.plus", primary: all.isEmpty)
+                }
+            }
+
+            Text("Photos are cropped to 1200×900. The first is the cover.")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.tertiaryText)
         }
     }
 
@@ -169,6 +228,53 @@ struct TourAuthoringView: View {
     }
 
     // MARK: - Import
+
+    // MARK: - Photos
+
+    private func handlePhotoSelection(_ items: [PhotosPickerItem]) {
+        guard !items.isEmpty, let tour = makerTour?.tour else { return }
+        errorMessage = nil
+        isUploadingPhotos = true
+        Task {
+            defer { isUploadingPhotos = false; photoItems = [] }
+            do {
+                var datas: [Data] = []
+                for item in items {
+                    guard let raw = try await item.loadTransferable(type: Data.self),
+                          let cropped = Self.cropTo1200x900(raw) else { continue }
+                    datas.append(cropped)
+                }
+                if !datas.isEmpty {
+                    try await makerTourService.attachPhotos(to: tour, images: datas)
+                }
+            } catch {
+                errorMessage = error.localizedDescription
+            }
+        }
+    }
+
+    /// Aspect-fill crop + resize to 1200×900, re-encoded as JPEG. Returns nil on
+    /// non-UIKit platforms or undecodable data.
+    nonisolated private static func cropTo1200x900(_ data: Data) -> Data? {
+        #if canImport(UIKit)
+        guard let image = UIImage(data: data) else { return nil }
+        let target = CGSize(width: 1200, height: 900)
+        let scale = max(target.width / image.size.width, target.height / image.size.height)
+        let scaled = CGSize(width: image.size.width * scale, height: image.size.height * scale)
+        let origin = CGPoint(x: (target.width - scaled.width) / 2,
+                             y: (target.height - scaled.height) / 2)
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1
+        let rendered = UIGraphicsImageRenderer(size: target, format: format).image { _ in
+            image.draw(in: CGRect(origin: origin, size: scaled))
+        }
+        return rendered.jpegData(compressionQuality: 0.82)
+        #else
+        return nil
+        #endif
+    }
+
+    // MARK: - Audio import
 
     private func handleImport(_ result: Result<[URL], Error>) {
         switch result {
