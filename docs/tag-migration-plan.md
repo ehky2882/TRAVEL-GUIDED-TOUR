@@ -113,6 +113,27 @@ constraints to unwind.
 
 ---
 
+## 2.5 · Owner decisions (locked 2026-07-02)
+
+| # | Decision | Choice |
+|---|---|---|
+| D1 | `Shop & Flagship` place type | **Fold** into `Notable Building` + `Fashion & Retail` theme |
+| D2 | Thin style tags (`Metabolist`, `Mission / Spanish Revival`) | **Drop** |
+| D3 | Split `Temple & Shrine` | **No** — keep one `Religious Building` for now |
+| D4 | Tag storage shape | **Flat `[String]` + app-side facet map** (no schema change) |
+| D5 | Keep a lightweight primary? | **Yes — derive one primary tag** (map pin + one-label spots stay untouched) |
+| D6 | Multi-select semantics | **OR-within-facet, AND-across-facet** (standard) |
+| D7 | Rails: curated vs popularity | **Deferred** — decide during Phase 2 UI (not needed until then) |
+| D8 | Filter UI | **Simple multi-select chip row** (upgrade to a faceted sheet later if wanted) |
+| D9 | Rollout | **Incremental 3-phase** |
+| D10 | Retag review depth | **Spot-check by city** (auto-seed first pass, owner skims per city) |
+| D11 | Free-form tags | **Discard**; optionally salvage neighbourhood names as a separate location layer later |
+
+Only **D7 (home rails: curated vs popularity)** is still open, and it isn't
+needed until the Phase 2 UI build. The § 4 menu below is retained for context.
+
+---
+
 ## 3 · Rollout — incremental, to de-risk live content
 
 Content is live and Supabase-backed, so **big-bang is avoidable**. Proposed
