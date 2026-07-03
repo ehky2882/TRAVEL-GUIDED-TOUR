@@ -61,7 +61,10 @@ final class MakerProfileService {
         bio: String,
         websiteURL: String?,
         link2URL: String? = nil,
-        link3URL: String? = nil
+        link3URL: String? = nil,
+        avatarURL: String? = nil,
+        avatarInitials: String? = nil,
+        avatarColor: String? = nil
     ) async throws {
         guard let uid = auth.user?.id.uuidString.lowercased() else {
             throw MakerProfileError.notSignedIn
@@ -75,18 +78,37 @@ final class MakerProfileService {
             id: id,
             userId: uid,
             displayName: displayName.trimmingCharacters(in: .whitespacesAndNewlines),
-            avatarUrl: myMaker?.avatarURL,
+            avatarUrl: clean(avatarURL),
+            // Emoji is a seed-studio brand mark; users don't set it. Preserve
+            // whatever's there rather than clearing it on a profile save.
             avatarEmoji: myMaker?.avatarEmoji,
             bio: bio.trimmingCharacters(in: .whitespacesAndNewlines),
             websiteUrl: clean(websiteURL),
             link2Url: clean(link2URL),
-            link3Url: clean(link3URL)
+            link3Url: clean(link3URL),
+            avatarInitials: clean(avatarInitials),
+            avatarColor: clean(avatarColor)
         )
         try await client
             .from("makers")
             .upsert(row, onConflict: "id")
             .execute()
         myMaker = row.asMaker
+    }
+
+    /// Upload a square avatar JPEG to Storage and return its public URL. The
+    /// path is `tour-images/{maker_id}/avatar-{uuid}.jpg` — the leading maker-id
+    /// segment satisfies the storage RLS (`owns_maker`), and the unique filename
+    /// dodges CDN caching of a previous avatar. Ensures a maker row exists first
+    /// (so there's an id to own the path). The caller then persists the returned
+    /// URL via `saveProfile(avatarURL:)`.
+    func uploadAvatar(_ jpeg: Data) async throws -> String {
+        let makerId = try await ensureMaker()
+        let path = "\(makerId.uuidString.lowercased())/avatar-\(UUID().uuidString).jpg"
+        _ = try await client.storage
+            .from("tour-images")
+            .upload(path, data: jpeg, options: FileOptions(contentType: "image/jpeg", upsert: true))
+        return try client.storage.from("tour-images").getPublicURL(path: path).absoluteString
     }
 
     /// Ensure a maker row exists for the current user, returning its id.
@@ -121,6 +143,8 @@ struct MakerRow: Codable {
     let displayName: String
     let avatarUrl: String?
     let avatarEmoji: String?
+    let avatarInitials: String?
+    let avatarColor: String?
     let bio: String
     let websiteUrl: String?
     let link2Url: String?
@@ -135,13 +159,17 @@ struct MakerRow: Codable {
         bio: String,
         websiteUrl: String?,
         link2Url: String? = nil,
-        link3Url: String? = nil
+        link3Url: String? = nil,
+        avatarInitials: String? = nil,
+        avatarColor: String? = nil
     ) {
         self.id = id
         self.userId = userId
         self.displayName = displayName
         self.avatarUrl = avatarUrl
         self.avatarEmoji = avatarEmoji
+        self.avatarInitials = avatarInitials
+        self.avatarColor = avatarColor
         self.bio = bio
         self.websiteUrl = websiteUrl
         self.link2Url = link2Url
@@ -154,6 +182,8 @@ struct MakerRow: Codable {
         case displayName = "display_name"
         case avatarUrl = "avatar_url"
         case avatarEmoji = "avatar_emoji"
+        case avatarInitials = "avatar_initials"
+        case avatarColor = "avatar_color"
         case websiteUrl = "website_url"
         case link2Url = "link_2_url"
         case link3Url = "link_3_url"
@@ -173,6 +203,8 @@ struct MakerRow: Codable {
         try c.encode(bio, forKey: .bio)
         try c.encode(avatarUrl, forKey: .avatarUrl)         // explicit null when nil
         try c.encode(avatarEmoji, forKey: .avatarEmoji)
+        try c.encode(avatarInitials, forKey: .avatarInitials)
+        try c.encode(avatarColor, forKey: .avatarColor)
         try c.encode(websiteUrl, forKey: .websiteUrl)
         try c.encode(link2Url, forKey: .link2Url)
         try c.encode(link3Url, forKey: .link3Url)
@@ -187,7 +219,9 @@ struct MakerRow: Codable {
             bio: bio,
             websiteURL: websiteUrl,
             link2URL: link2Url,
-            link3URL: link3Url
+            link3URL: link3Url,
+            avatarInitials: avatarInitials,
+            avatarColor: avatarColor
         )
     }
 }

@@ -281,37 +281,9 @@ struct MakerView: View {
     }
 
     private var avatar: some View {
-        Group {
-            if let emoji = maker.avatarEmoji, !emoji.isEmpty {
-                // Single-glyph brand mark (e.g. the Atlas Studio NYC
-                // red apple) rendered inside a muted circular plate.
-                // MiniPlayerBar.authorIcon uses the same resolution
-                // order at a smaller frame.
-                ZStack {
-                    Circle().fill(AtlasColors.placeholderWarm)
-                    Text(emoji)
-                        .font(.system(size: avatarSize * 0.6))
-                }
-            } else if let urlString = maker.avatarURL,
-                      let url = URL(string: urlString) {
-                AsyncImage(url: url) { phase in
-                    switch phase {
-                    case .success(let image):
-                        image.resizable().scaledToFill()
-                    default:
-                        Circle().fill(AtlasColors.placeholderWarm)
-                    }
-                }
-            } else {
-                // No remote avatar or emoji — fall back to the bundled
-                // Atlas Studio brand asset.
-                Image("AtlasStudioAvatar")
-                    .resizable()
-                    .scaledToFill()
-            }
-        }
-        .frame(width: avatarSize, height: avatarSize)
-        .clipShape(Circle())
+        // Shared resolution: photo → emoji → custom initials+colour →
+        // display-name monogram. See Components/MakerAvatarView.
+        MakerAvatarView(maker: maker, size: avatarSize)
     }
 
     private var toursSection: some View {
