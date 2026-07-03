@@ -203,6 +203,17 @@ struct LibraryView: View {
                 Circle().fill(AtlasColors.placeholderWarm)
                 if let emoji = maker.avatarEmoji, !emoji.isEmpty {
                     Text(emoji).font(.system(size: 28))
+                } else if let urlString = maker.avatarURL,
+                          let url = URL(string: urlString) {
+                    AsyncImage(url: url) { phase in
+                        if case .success(let image) = phase {
+                            image.resizable().scaledToFill()
+                        } else {
+                            Image(systemName: "person.crop.circle.fill")
+                                .font(.system(size: 32))
+                                .foregroundStyle(AtlasColors.secondaryText)
+                        }
+                    }
                 } else {
                     Image(systemName: "person.crop.circle.fill")
                         .font(.system(size: 32))
@@ -210,6 +221,7 @@ struct LibraryView: View {
                 }
             }
             .frame(width: 56, height: 56)
+            .clipShape(Circle())
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 Text(maker.displayName)

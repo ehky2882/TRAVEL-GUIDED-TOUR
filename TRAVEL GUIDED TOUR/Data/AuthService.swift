@@ -100,6 +100,16 @@ final class AuthService {
         )
     }
 
+    /// Send a password-reset email. Supabase emails a recovery link; opening it
+    /// returns to the app (`dozent://login-callback`) with a recovery session so
+    /// the user can set a new password.
+    func resetPassword(email: String) async throws {
+        try await client.auth.resetPasswordForEmail(
+            email,
+            redirectTo: SupabaseConfig.oauthRedirectURL
+        )
+    }
+
     /// Sign out everywhere and clear the local session.
     ///
     /// Flushes any pending local writes (`preSignOut`) *first*, while the token
