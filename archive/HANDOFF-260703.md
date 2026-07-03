@@ -22,10 +22,10 @@
 
 Every Supabase **write** (profile save, draft create, audio/photo upload, transcript, submit) is **owner-device-verified only** — the simulator can't hold a real signed-in session (Google/Apple are device features; email-confirm is on). So the sim work verifies UI + graceful failure; the live round-trips are confirmed on the owner's device. This mirrors all of Step 3 (auth/sync).
 
-## Remaining to fully close Step 4 (both small, next session)
+## Remaining to fully close Step 4
 
-1. **Submit EMAIL** — owner Supabase Database Webhook on **`public.tours` UPDATE** → the existing `notify-moderation` Edge Function (the **twin of the reports webhook** already done in session 50; the function already handles the `in_review` branch). Hand-hold click-by-click (owner is non-technical on Supabase). Submit works without it; the email just won't fire.
-2. **Admin Publish** — after review, `publish_tour(<tour_id>)` (or `status`→`published`, `published_at=now()`) in the SQL Editor pushes a submitted tour into the public catalog. Wire a simpler app/admin path later.
+1. ✅ **Submit EMAIL — DONE (2026-07-03, owner-confirmed).** Added the Database Webhook `tour-submit-notify` on **`public.tours` UPDATE** → the `notify-moderation` Edge Function (twin of the session-50 reports webhook; reuses the same Resend secrets). The function guards the draft→`in_review` transition so it emails only on submission, not on later edits. Verified via a throwaway-draft SQL test → email delivered.
+2. **Admin Publish** (only step left) — after review, `select publish_tour('<tour_id>')` (or `status`→`published`, `published_at=now()`) in the SQL Editor pushes a submitted tour into the public catalog. Wire a simpler app/admin path later.
 3. **Phase 2 — multi-stop authoring** — needs no backend change (`stops.order`/`kind`/`intro_audio_url` already exist). Future.
 
 ## Tribal knowledge / notes
