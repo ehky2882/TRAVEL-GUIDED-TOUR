@@ -44,7 +44,7 @@ VOCAB = {
  "Theme": ["Architecture","History","Art","Literature","Performance",
    "Food","Faith","Power","Commerce",
    "Immigration","Crime","Remembrance",
-   "Engineering","War","Maritime","Fashion"],
+   "Engineering","War","Maritime","Fashion","LGBTQ+"],
  "Style & era": ["Gothic","Baroque","Neoclassical","Beaux-Arts",
    "Victorian","Art Deco","Modernist","Brutalist","Contemporary","Gilded Age","Colonial"],
  "Experience": ["Iconic Landmark","Hidden Gem","Viewpoint","Green Escape",
@@ -105,6 +105,7 @@ THEME_KW = {"Commerce":[r"finance",r"wall street",r"\btrade",r"\bbank",r"exchang
  "Performance":[r"music",r"concert",r"theatre",r"theater",r"opera",r"\bjazz",r"performance",r"\bband\b",r"\bstage",r"kabuki"],
  "Art":[r"\bart\b",r"gallery",r"galleries",r"sculpture",r"mural",r"painting",r"exhibition",r"artist",r"teamlab"],
  "Fashion":[r"flagship",r"boutique",r"fashion",r"luxury",r"department store",r"shopping",r"prada",r"dior",r"ginza"],
+ "LGBTQ+":[r"stonewall",r"lgbtq",r"harvey milk",r"old compton"],
  "History":[r"histor",r"medieval",r"ancient",r"heritage",r"founded in",r"dating from",r"centuries",r"edo"],
  "Architecture":[r"architect",r"architectur",r"facade",r"modernis",r"brutalis",r"baroque",r"gothic",r"art deco",r"designed by",r"design"]}
 

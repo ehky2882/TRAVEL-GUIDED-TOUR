@@ -90,6 +90,7 @@ The meaning layer that replaces the old category.
 | `War` (71) | War, the Blitz, fortresses, wartime history. |
 | `Maritime` (72) | Docks, harbours, ships, the sea and the port — junk boats, the Bund. |
 | **`Fashion`** (46) | **Fashion, luxury retail, department-store culture, the flagship-as-architecture story (Ginza, Omotesando, Fifth Avenue).** |
+| **`LGBTQ+`** (4) | **LGBTQ+ history and culture — Stonewall, Harvey Milk & the Castro, Soho's Old Compton Street. Hand-applied (owner-added 2026-07-04), backed by precise seeder keywords.** |
 
 ### 3 · Style & era — *for built things* (pick 0–2)
 `Gothic` (49) · `Baroque` (20) · `Neoclassical` (23)
