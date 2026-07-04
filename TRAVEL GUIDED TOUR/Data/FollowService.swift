@@ -17,6 +17,14 @@ struct FollowState: Decodable, Equatable {
     )
 }
 
+/// A pending follow request: the requester's profile plus their user id (the
+/// `follows.follower_id` needed to approve/decline the edge).
+struct FollowRequest: Identifiable {
+    let follower: Maker
+    let followerUserId: String
+    var id: UUID { follower.id }
+}
+
 /// The follow graph (V2 batch D). A signed-in user follows a maker (profile);
 /// public makers auto-accept, private makers turn the follow into a pending
 /// request (the DB trigger decides). Counts + lists come from SECURITY DEFINER
@@ -64,6 +72,73 @@ final class FollowService {
             .from("follows")
             .delete()
             .eq("follower_id", value: uid)
+            .eq("followee_id", value: makerId.uuidString.lowercased())
+            .execute()
+    }
+
+    /// The profiles following this maker. The `list_followers` RPC enforces the
+    /// visibility rule (a private account's list is only returned to its owner);
+    /// returns `[]` on error or when hidden.
+    func followers(of makerId: UUID) async -> [Maker] {
+        await makerList("list_followers", makerId)
+    }
+
+    /// The makers this profile follows. Same visibility rule via `list_following`.
+    func following(of makerId: UUID) async -> [Maker] {
+        await makerList("list_following", makerId)
+    }
+
+    private func makerList(_ rpc: String, _ makerId: UUID) async -> [Maker] {
+        do {
+            let rows: [MakerRow] = try await client
+                .rpc(rpc, params: ["m": makerId.uuidString.lowercased()])
+                .execute()
+                .value
+            return rows.map { $0.asMaker }
+        } catch {
+            return []
+        }
+    }
+
+    /// Pending follow requests waiting for the signed-in user (across the
+    /// maker(s) they own). The `list_follow_requests` RPC returns each requester's
+    /// maker profile; we keep the requester's `user_id` alongside so approve /
+    /// decline can target the `follows` edge. `[]` on error.
+    func pendingRequests() async -> [FollowRequest] {
+        do {
+            let rows: [MakerRow] = try await client
+                .rpc("list_follow_requests")
+                .execute()
+                .value
+            return rows.compactMap { row in
+                // A requester is always a user (has a maker row with a user_id);
+                // skip the impossible null case rather than crash.
+                guard let uid = row.userId else { return nil }
+                return FollowRequest(follower: row.asMaker, followerUserId: uid)
+            }
+        } catch {
+            return []
+        }
+    }
+
+    /// Approve a pending request: flip the edge to `accepted`. RLS
+    /// (`follows_update_owner`) restricts this to followees the caller owns.
+    func approveRequest(follower followerUserId: String, on makerId: UUID) async throws {
+        try await client
+            .from("follows")
+            .update(["status": "accepted"])
+            .eq("follower_id", value: followerUserId)
+            .eq("followee_id", value: makerId.uuidString.lowercased())
+            .execute()
+    }
+
+    /// Decline a pending request: delete the edge. RLS (`follows_delete`)
+    /// restricts this to followees the caller owns.
+    func declineRequest(follower followerUserId: String, on makerId: UUID) async throws {
+        try await client
+            .from("follows")
+            .delete()
+            .eq("follower_id", value: followerUserId)
             .eq("followee_id", value: makerId.uuidString.lowercased())
             .execute()
     }
