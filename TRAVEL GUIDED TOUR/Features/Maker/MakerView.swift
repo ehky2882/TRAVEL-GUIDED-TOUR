@@ -276,6 +276,7 @@ struct MakerView: View {
             followCounts
 
             if isOwnProfile {
+                if followState.pendingRequests > 0 { followRequestsButton }
                 editProfileButton
             } else {
                 followButton
@@ -371,6 +372,32 @@ struct MakerView: View {
     /// full string).
     private func displayLink(_ url: URL) -> String {
         (url.host ?? url.absoluteString).replacingOccurrences(of: "www.", with: "")
+    }
+
+    /// Own-profile entry to the pending follow-requests screen (private
+    /// accounts). Only shown when there are requests waiting. Pushes
+    /// `FollowRequestsView`; approving/declining refreshes the header count.
+    private var followRequestsButton: some View {
+        NavigationLink {
+            FollowRequestsView(makerId: maker.id) {
+                Task {
+                    if let followService {
+                        followState = await followService.state(for: maker.id)
+                    }
+                }
+            }
+        } label: {
+            HStack(spacing: AtlasSpacing.xs) {
+                Image(systemName: "person.crop.circle.badge.checkmark")
+                Text(followState.pendingRequests == 1
+                     ? "1 follow request"
+                     : "\(followState.pendingRequests) follow requests")
+            }
+            .font(AtlasTypography.caption)
+            .foregroundStyle(AtlasColors.mapPin)
+        }
+        .buttonStyle(.plain)
+        .padding(.top, AtlasSpacing.xs)
     }
 
     /// Own-profile "Edit Profile" pill — opens the profile editor, which
