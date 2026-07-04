@@ -14527,18 +14527,14 @@
       "city": "Hong Kong",
       "primaryCategory": "architecture",
       "tags": [
-        "Civic",
         "Tower",
         "Architecture",
-        "Immigration",
-        "Maritime",
         "Commerce",
         "Power",
         "Modernist",
         "Designed by a Master",
         "Viewpoint",
-        "I. M. Pei",
-        "Norman Foster"
+        "I. M. Pei"
       ],
       "priceUSD": 0
     },
@@ -14623,9 +14619,8 @@
       "city": "Hong Kong",
       "primaryCategory": "architecture",
       "tags": [
-        "Notable Building",
+        "Tower",
         "Architecture",
-        "Maritime",
         "Commerce",
         "Modernist",
         "Designed by a Master",
@@ -14675,10 +14670,7 @@
         "Museum",
         "Architecture",
         "Art",
-        "History",
-        "Immigration",
-        "Maritime",
-        "Power"
+        "History"
       ],
       "priceUSD": 0
     },
@@ -14722,8 +14714,6 @@
         "Museum",
         "Architecture",
         "Art",
-        "Immigration",
-        "Maritime",
         "Contemporary",
         "Designed by a Master",
         "Viewpoint",
@@ -14813,12 +14803,7 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "District",
-        "Architecture",
-        "Crime",
         "History",
-        "Immigration",
-        "Commerce",
-        "War",
         "Colonial",
         "Hidden Gem"
       ],
@@ -14862,14 +14847,11 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "District",
+        "Notable Building",
         "Tower",
-        "Crime",
         "Fashion",
-        "Food",
         "History",
         "Maritime",
-        "Power",
         "War",
         "Colonial",
         "Victorian"
@@ -14915,13 +14897,9 @@
       "tags": [
         "Market",
         "District",
-        "Architecture",
-        "Remembrance",
-        "Engineering",
-        "Food",
         "Commerce",
-        "War",
-        "Modernist"
+        "Immigration",
+        "Engineering"
       ],
       "priceUSD": 0
     },
@@ -14961,9 +14939,8 @@
       "city": "Hong Kong",
       "primaryCategory": "architecture",
       "tags": [
-        "Monument",
+        "Civic",
         "Public Square",
-        "District",
         "Architecture",
         "Power",
         "Colonial",
@@ -15053,14 +15030,12 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Engineering",
         "Faith",
         "History",
         "Power",
         "War",
         "Colonial",
-        "Neoclassical",
-        "Victorian"
+        "Neoclassical"
       ],
       "priceUSD": 0
     },
@@ -15100,11 +15075,10 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Notable Building",
+        "Venue",
         "Architecture",
         "Art",
         "History",
-        "Commerce",
         "Performance",
         "Colonial",
         "Victorian"
@@ -15236,10 +15210,8 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum",
         "History",
-        "War",
-        "Green Escape"
+        "Engineering"
       ],
       "priceUSD": 0
     },
@@ -15364,10 +15336,7 @@
       "tags": [
         "Notable Building",
         "Food",
-        "History",
-        "Maritime",
-        "Performance",
-        "Power"
+        "History"
       ],
       "priceUSD": 0
     },
@@ -15455,11 +15424,9 @@
         "Religious Building",
         "Faith",
         "History",
-        "Immigration",
-        "Commerce",
         "Power",
         "War",
-        "Colonial"
+        "Literature"
       ],
       "priceUSD": 0
     },
@@ -15587,11 +15554,9 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Art",
+        "Engineering",
         "History",
-        "Immigration",
         "Colonial",
-        "Green Escape",
         "Viewpoint"
       ],
       "priceUSD": 0
@@ -15636,9 +15601,7 @@
         "Architecture",
         "Art",
         "History",
-        "Immigration",
-        "Power",
-        "War"
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -15722,11 +15685,9 @@
       "city": "Hong Kong",
       "primaryCategory": "hiddenGems",
       "tags": [
-        "Notable Building",
-        "Faith",
+        "Waterfront",
         "History",
         "Maritime",
-        "Green Escape",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -15768,11 +15729,10 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Notable Building",
+        "Waterfront",
         "History",
         "Maritime",
         "Commerce",
-        "Power",
         "Viewpoint"
       ],
       "priceUSD": 0
@@ -15814,11 +15774,9 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Waterfront",
-        "Crime",
         "History",
         "Maritime",
         "Commerce",
-        "Green Escape",
         "Viewpoint"
       ],
       "priceUSD": 0
@@ -15864,17 +15822,15 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "District",
-        "Tower",
         "Architecture",
         "Art",
         "Crime",
         "History",
-        "Literature",
         "Performance",
         "Contemporary",
-        "Victorian",
         "Designed by a Master",
-        "Herzog & de Meuron"
+        "Herzog & de Meuron",
+        "Victorian"
       ],
       "priceUSD": 0
     },
@@ -15915,11 +15871,9 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Market",
-        "Religious Building",
         "District",
         "Faith",
         "Food",
-        "Maritime",
         "Performance"
       ],
       "priceUSD": 0
@@ -15966,8 +15920,6 @@
         "History",
         "Commerce",
         "Designed by a Master",
-        "I. M. Pei",
-        "Norman Foster",
         "Zaha Hadid"
       ],
       "priceUSD": 0
@@ -16141,11 +16093,8 @@
       "tags": [
         "Market",
         "Fashion",
-        "Food",
         "History",
-        "Maritime",
-        "Commerce",
-        "Performance"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -16369,11 +16318,7 @@
         "Faith",
         "History",
         "Immigration",
-        "Maritime",
-        "Commerce",
-        "Power",
-        "War",
-        "Colonial"
+        "Maritime"
       ],
       "priceUSD": 0
     },
@@ -16460,9 +16405,7 @@
       "tags": [
         "Notable Building",
         "Food",
-        "Immigration",
-        "Power",
-        "Viewpoint"
+        "Immigration"
       ],
       "priceUSD": 0
     },
@@ -16506,12 +16449,9 @@
         "District",
         "Art",
         "Crime",
-        "Faith",
-        "Food",
         "History",
         "Immigration",
-        "Maritime",
-        "Colonial"
+        "Maritime"
       ],
       "priceUSD": 0
     },
@@ -16549,12 +16489,8 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Public Square",
-        "Religious Building",
-        "Architecture",
+        "District",
         "Art",
-        "Remembrance",
-        "Faith",
         "History",
         "Commerce"
       ],
@@ -17758,12 +17694,8 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Architecture",
         "Art",
-        "Faith",
         "History",
-        "Performance",
-        "Power",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -17848,13 +17780,9 @@
       "city": "Hong Kong",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Religious Building",
         "District",
-        "Faith",
         "Food",
-        "Immigration",
-        "War",
-        "Green Escape"
+        "History"
       ],
       "priceUSD": 0
     },
@@ -17944,11 +17872,8 @@
         "District",
         "Food",
         "History",
-        "Immigration",
         "Maritime",
         "Commerce",
-        "Performance",
-        "Power",
         "Viewpoint"
       ],
       "priceUSD": 0
