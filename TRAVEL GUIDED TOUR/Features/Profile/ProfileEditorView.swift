@@ -30,6 +30,7 @@ struct ProfileEditorView: View {
     @State private var cropImage: UIImage?           // photo awaiting the crop sheet
     @State private var showingCrop = false
     @State private var showingDiscardConfirm = false
+    @State private var isPrivate: Bool
     @State private var isSaving = false
     @State private var errorMessage: String?
     @FocusState private var focused: Field?
@@ -51,6 +52,7 @@ struct ProfileEditorView: View {
         _avatarURL = State(initialValue: currentMaker.avatarURL)
         _avatarInitials = State(initialValue: currentMaker.avatarInitials ?? "")
         _avatarColorHex = State(initialValue: currentMaker.avatarColor)
+        _isPrivate = State(initialValue: currentMaker.isPrivateAccount)
     }
 
     /// True while an uploaded/kept photo is the active avatar (vs. the
@@ -71,6 +73,7 @@ struct ProfileEditorView: View {
             || avatarColorHex != currentMaker.avatarColor
             || avatarURL != currentMaker.avatarURL
             || pickedImageData != nil
+            || isPrivate != currentMaker.isPrivateAccount
     }
 
     private var trimmedName: String {
@@ -116,6 +119,20 @@ struct ProfileEditorView: View {
                         linkField("https://…", text: $website, field: .website, next: .link2)
                         linkField("https://…", text: $link2, field: .link2, next: .link3)
                         linkField("https://…", text: $link3, field: .link3, next: nil)
+                    }
+
+                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                        Toggle(isOn: $isPrivate) {
+                            Text("PRIVATE ACCOUNT")
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.secondaryText)
+                        }
+                        .tint(AtlasColors.mapPin)
+                        Text(isPrivate
+                             ? "New followers need your approval."
+                             : "Anyone can follow you.")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.tertiaryText)
                     }
 
                     if let errorMessage {
@@ -375,7 +392,8 @@ struct ProfileEditorView: View {
                     link3URL: link3,
                     avatarURL: hasPhoto ? finalAvatarURL : nil,
                     avatarInitials: hasPhoto ? nil : avatarInitials,
-                    avatarColor: hasPhoto ? nil : avatarColorHex
+                    avatarColor: hasPhoto ? nil : avatarColorHex,
+                    isPrivate: isPrivate
                 )
                 dismiss()
             } catch {

@@ -92,6 +92,12 @@ struct MakerView: View {
     // show the user's own tours (all statuses, incl. drafts).
     @Environment(MakerProfileService.self) private var makerProfileService: MakerProfileService?
     @Environment(MakerTourService.self) private var makerTourService: MakerTourService?
+    @Environment(FollowService.self) private var followService: FollowService?
+
+    /// Follower/following counts + this viewer's relationship to the maker.
+    /// Loaded on appear; refreshed after a follow/unfollow.
+    @State private var followState: FollowState = .empty
+    @State private var isTogglingFollow = false
 
     private let avatarSize: CGFloat = 96
 
@@ -267,8 +273,86 @@ struct MakerView: View {
                 }
             }
 
+            followCounts
+
             if isOwnProfile {
                 editProfileButton
+            } else {
+                followButton
+            }
+        }
+        .task(id: maker.id) {
+            if let followService { followState = await followService.state(for: maker.id) }
+        }
+    }
+
+    /// Follower + Following counts (tappable list screens land in D2).
+    private var followCounts: some View {
+        HStack(spacing: AtlasSpacing.lg) {
+            countPill(followState.followers, "followers")
+            countPill(followState.following, "following")
+        }
+        .padding(.top, AtlasSpacing.xs)
+    }
+
+    private func countPill(_ n: Int, _ label: String) -> some View {
+        HStack(spacing: 4) {
+            Text("\(n)")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.primaryText)
+            Text(label)
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+        }
+    }
+
+    /// Follow / Following / Requested. Shown on other people's pages when signed
+    /// in (following needs an account). Private makers turn a follow into a
+    /// pending request — the label reflects that.
+    @ViewBuilder
+    private var followButton: some View {
+        if authService?.isSignedIn == true {
+            Button { toggleFollow() } label: {
+                Text(followLabel)
+                    .font(AtlasTypography.caption)
+                    .padding(.horizontal, AtlasSpacing.lg)
+                    .frame(height: 44)
+                    .background(followState.isFollowing || followState.isPending
+                                ? Color.clear : AtlasColors.mapPin)
+                    .foregroundStyle(followState.isFollowing || followState.isPending
+                                     ? AtlasColors.primaryText : AtlasColors.background)
+                    .overlay(
+                        Capsule().stroke(AtlasColors.secondaryText.opacity(0.4),
+                                         lineWidth: followState.isFollowing || followState.isPending ? 1 : 0)
+                    )
+                    .clipShape(Capsule())
+            }
+            .buttonStyle(.plain)
+            .disabled(isTogglingFollow)
+            .padding(.top, AtlasSpacing.xs)
+        }
+    }
+
+    private var followLabel: String {
+        if followState.isFollowing { return "Following" }
+        if followState.isPending { return "Requested" }
+        return "Follow"
+    }
+
+    private func toggleFollow() {
+        guard let followService else { return }
+        isTogglingFollow = true
+        Task {
+            defer { isTogglingFollow = false }
+            do {
+                if followState.isFollowing || followState.isPending {
+                    try await followService.unfollow(maker.id)
+                } else {
+                    try await followService.follow(maker.id)
+                }
+                followState = await followService.state(for: maker.id)
+            } catch {
+                // Leave the current state; a transient failure shouldn't lie.
             }
         }
     }
