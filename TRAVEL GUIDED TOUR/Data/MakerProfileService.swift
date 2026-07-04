@@ -142,7 +142,9 @@ final class MakerProfileService {
 /// columns returned by the DB (created_at / updated_at) are ignored on decode.
 struct MakerRow: Codable {
     let id: UUID
-    let userId: String
+    /// Optional: seed studios have a null `user_id`, and the follow list RPCs
+    /// (`list_following`) can return them. The owner's own row always has one.
+    let userId: String?
     let displayName: String
     let avatarUrl: String?
     let avatarEmoji: String?

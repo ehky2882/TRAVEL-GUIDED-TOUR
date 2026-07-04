@@ -286,13 +286,23 @@ struct MakerView: View {
         }
     }
 
-    /// Follower + Following counts (tappable list screens land in D2).
+    /// Follower + Following counts — each taps through to the list screen
+    /// (`FollowListView`, batch D2).
     private var followCounts: some View {
         HStack(spacing: AtlasSpacing.lg) {
-            countPill(followState.followers, "followers")
-            countPill(followState.following, "following")
+            countLink(followState.followers, "followers", .followers)
+            countLink(followState.following, "following", .following)
         }
         .padding(.top, AtlasSpacing.xs)
+    }
+
+    private func countLink(_ n: Int, _ label: String, _ kind: FollowListView.Kind) -> some View {
+        NavigationLink {
+            FollowListView(makerId: maker.id, kind: kind)
+        } label: {
+            countPill(n, label)
+        }
+        .buttonStyle(.plain)
     }
 
     private func countPill(_ n: Int, _ label: String) -> some View {

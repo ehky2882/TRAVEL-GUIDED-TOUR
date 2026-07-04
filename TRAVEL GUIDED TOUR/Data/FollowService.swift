@@ -68,6 +68,30 @@ final class FollowService {
             .execute()
     }
 
+    /// The profiles following this maker. The `list_followers` RPC enforces the
+    /// visibility rule (a private account's list is only returned to its owner);
+    /// returns `[]` on error or when hidden.
+    func followers(of makerId: UUID) async -> [Maker] {
+        await makerList("list_followers", makerId)
+    }
+
+    /// The makers this profile follows. Same visibility rule via `list_following`.
+    func following(of makerId: UUID) async -> [Maker] {
+        await makerList("list_following", makerId)
+    }
+
+    private func makerList(_ rpc: String, _ makerId: UUID) async -> [Maker] {
+        do {
+            let rows: [MakerRow] = try await client
+                .rpc(rpc, params: ["m": makerId.uuidString.lowercased()])
+                .execute()
+                .value
+            return rows.map { $0.asMaker }
+        } catch {
+            return []
+        }
+    }
+
     enum FollowError: LocalizedError {
         case notSignedIn
         var errorDescription: String? {
