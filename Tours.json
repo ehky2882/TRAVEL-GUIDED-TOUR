@@ -112,9 +112,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Beaux-Arts"
       ],
       "priceUSD": 0
@@ -158,7 +158,7 @@
       "tags": [
         "Public Square",
         "History",
-        "Music & Performance"
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -195,12 +195,12 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Street & District",
+        "District",
         "Waterfront",
-        "Food & Drink",
+        "Food",
         "History",
         "Maritime",
-        "Money & Trade"
+        "Commerce"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -249,12 +249,12 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Tower & Skyscraper",
-        "Architecture & Design",
+        "Tower",
+        "Architecture",
         "Art",
-        "Food & Drink",
+        "Food",
         "History",
-        "Power & Politics",
+        "Power",
         "Art Deco"
       ],
       "priceUSD": 0
@@ -298,12 +298,12 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Monument & Memorial",
+        "Monument",
         "Waterfront",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Maritime"
       ],
       "priceUSD": 0
@@ -348,11 +348,11 @@
       "primaryCategory": "history",
       "tags": [
         "Bridge",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "History",
         "Maritime",
-        "Power & Politics"
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -394,11 +394,11 @@
       "primaryCategory": "history",
       "tags": [
         "Public Square",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Food & Drink",
+        "Food",
         "History",
-        "Music & Performance",
+        "Performance",
         "Art Deco"
       ],
       "priceUSD": 0
@@ -440,14 +440,14 @@
       "city": "New York",
       "primaryCategory": "architecture",
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History",
         "Beaux-Arts",
-        "Medieval / Gothic",
+        "Gothic",
         "Designed by a Master",
         "McKim, Mead & White"
       ],
@@ -490,10 +490,10 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Public Square",
-        "Architecture & Design",
-        "Music & Performance",
+        "Architecture",
+        "Performance",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -530,12 +530,12 @@
       "city": "New York",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Monument & Memorial",
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Money & Trade",
-        "War & Conflict"
+        "Monument",
+        "Tower",
+        "Architecture",
+        "Remembrance",
+        "Commerce",
+        "War"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -577,10 +577,10 @@
       "city": "New York",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Power & Politics",
+        "Power",
         "Beaux-Arts",
         "Designed by a Master",
         "McKim, Mead & White"
@@ -624,12 +624,12 @@
       "city": "Porto",
       "primaryCategory": "architecture",
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Music & Performance",
+        "Civic",
+        "Venue",
+        "Architecture",
+        "Performance",
         "Contemporary",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -666,13 +666,13 @@
       "city": "New York",
       "primaryCategory": "architecture",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History",
         "Maritime",
-        "War & Conflict",
+        "War",
         "Brutalist",
         "Designed by a Master",
         "Renzo Piano"
@@ -719,10 +719,10 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Fashion & Retail",
+        "Museum",
+        "Architecture",
+        "Remembrance",
+        "Fashion",
         "History",
         "Beaux-Arts",
         "Green Escape"
@@ -772,14 +772,14 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Bridge",
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "Literature",
         "Maritime",
-        "Music & Performance",
+        "Performance",
         "Designed by a Master",
         "Green Escape",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Jean Nouvel"
       ],
       "priceUSD": 0
@@ -823,11 +823,11 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Tower & Skyscraper",
-        "Architecture & Design",
+        "Tower",
+        "Architecture",
         "Art",
-        "Money & Trade",
-        "Power & Politics",
+        "Commerce",
+        "Power",
         "Art Deco",
         "Designed by a Master",
         "Hidden Gem",
@@ -870,9 +870,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Fashion & Retail",
+        "Tower",
+        "Architecture",
+        "Fashion",
         "Designed by a Master",
         "Daniel Burnham"
       ],
@@ -917,11 +917,11 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Waterfront",
-        "Crime & Scandal",
+        "Crime",
         "History",
         "Maritime",
-        "War & Conflict",
-        "Viewpoint & Panorama"
+        "War",
+        "Viewpoint"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -968,12 +968,12 @@
       "city": "New York",
       "primaryCategory": "architecture",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Music & Performance",
+        "Performance",
         "Designed by a Master",
         "Frank Lloyd Wright"
       ],
@@ -1012,10 +1012,10 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "History",
         "Maritime",
-        "War & Conflict"
+        "War"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -1057,14 +1057,14 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Waterfront",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "History",
         "Maritime",
-        "Music & Performance",
+        "Performance",
         "Designed by a Master",
         "Green Escape",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Thomas Heatherwick"
       ],
       "priceUSD": 0,
@@ -1109,9 +1109,9 @@
       "primaryCategory": "history",
       "tags": [
         "Bridge",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Fashion & Retail",
+        "Architecture",
+        "Engineering",
+        "Fashion",
         "History",
         "Beaux-Arts"
       ],
@@ -1154,12 +1154,12 @@
       "city": "New York",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "History",
-        "Immigration & Community",
-        "Power & Politics",
+        "Immigration",
+        "Power",
         "Colonial"
       ],
       "priceUSD": 0,
@@ -1204,7 +1204,7 @@
         "Library",
         "Art",
         "Literature",
-        "Power & Politics",
+        "Power",
         "Beaux-Arts",
         "Public Art"
       ],
@@ -1252,10 +1252,10 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Money & Trade",
+        "Engineering",
+        "Commerce",
         "Designed by a Master",
         "Santiago Calatrava"
       ],
@@ -1299,12 +1299,12 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Immigration & Community",
-        "Power & Politics",
-        "War & Conflict",
-        "Medieval / Gothic"
+        "Architecture",
+        "Faith",
+        "Immigration",
+        "Power",
+        "War",
+        "Gothic"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -1345,8 +1345,8 @@
       "city": "New York",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "Art",
         "History",
         "Designed by a Master",
@@ -1396,13 +1396,13 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "District",
+        "Architecture",
+        "Faith",
+        "Food",
         "History",
-        "Money & Trade",
-        "Georgian / Neoclassical"
+        "Commerce",
+        "Neoclassical"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -1450,15 +1450,15 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Park & Garden",
+        "Park",
         "Public Square",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Fashion & Retail",
+        "Architecture",
+        "Remembrance",
+        "Fashion",
         "History",
         "Literature",
-        "Money & Trade",
-        "Music & Performance",
+        "Commerce",
+        "Performance",
         "Designed by a Master",
         "Green Escape",
         "Hidden Gem",
@@ -1499,12 +1499,12 @@
       "city": "New York",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Power & Politics",
-        "Georgian / Neoclassical",
+        "Engineering",
+        "Power",
+        "Neoclassical",
         "Gilded Age"
       ],
       "priceUSD": 0,
@@ -1545,11 +1545,11 @@
       "city": "New York",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Contemporary"
       ],
       "priceUSD": 0
@@ -1587,8 +1587,8 @@
       "city": "New York",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "History",
         "Beaux-Arts",
@@ -1636,12 +1636,12 @@
       "city": "New York",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Food & Drink",
-        "Money & Trade",
-        "War & Conflict"
+        "Food",
+        "Commerce",
+        "War"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -1683,10 +1683,10 @@
       "city": "New York",
       "primaryCategory": "architecture",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Food & Drink",
+        "Food",
         "Literature",
         "Contemporary"
       ],
@@ -1728,11 +1728,11 @@
       "city": "New York",
       "primaryCategory": "architecture",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Food & Drink",
-        "Money & Trade",
+        "Food",
+        "Commerce",
         "Contemporary",
         "Designed by a Master",
         "SANAA"
@@ -1773,11 +1773,11 @@
       "primaryCategory": "literature",
       "tags": [
         "Library",
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "Literature",
-        "Georgian / Neoclassical",
+        "Neoclassical",
         "Designed by a Master",
         "McKim, Mead & White",
         "Renzo Piano"
@@ -1824,13 +1824,13 @@
       "city": "New York",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Fashion & Retail",
+        "Engineering",
+        "Fashion",
         "Maritime",
-        "Music & Performance",
+        "Performance",
         "Public Art"
       ],
       "priceUSD": 0,
@@ -1871,10 +1871,10 @@
       "city": "New York",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Music & Performance",
+        "Performance",
         "Contemporary",
         "Public Art"
       ],
@@ -1974,9 +1974,9 @@
       "city": "New York",
       "primaryCategory": "architecture",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Museum",
+        "Architecture",
+        "Faith",
         "History",
         "Beaux-Arts",
         "Green Escape"
@@ -2020,10 +2020,10 @@
       "primaryCategory": "architecture",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Faith & Spirituality",
-        "Fashion & Retail",
+        "Architecture",
+        "Remembrance",
+        "Faith",
+        "Fashion",
         "History"
       ],
       "priceUSD": 0
@@ -2066,9 +2066,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Money & Trade",
+        "Architecture",
+        "Engineering",
+        "Commerce",
         "Contemporary",
         "Designed by a Master",
         "Eduardo Souto de Moura"
@@ -2117,9 +2117,9 @@
       "city": "Leça da Palmeira",
       "primaryCategory": "architecture",
       "tags": [
-        "Monument & Memorial",
-        "Architecture & Design",
-        "Food & Drink",
+        "Monument",
+        "Architecture",
+        "Food",
         "Contemporary",
         "Modernist",
         "Designed by a Master",
@@ -2165,7 +2165,7 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
+        "Faith",
         "History",
         "Baroque"
       ],
@@ -2213,10 +2213,10 @@
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "History",
-        "Immigration & Community",
-        "Power & Politics",
+        "Immigration",
+        "Power",
         "Modernist",
         "Designed by a Master",
         "Álvaro Siza"
@@ -2262,11 +2262,11 @@
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Faith",
+        "Food",
         "History",
-        "Power & Politics",
-        "War & Conflict",
+        "Power",
+        "War",
         "Colonial"
       ],
       "priceUSD": 0
@@ -2307,8 +2307,8 @@
       "city": "New York City",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "History",
         "Public Art"
@@ -2351,8 +2351,8 @@
       "city": "New York City",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "Literature",
         "Green Escape"
@@ -2398,13 +2398,13 @@
       "city": "New York City",
       "primaryCategory": "history",
       "tags": [
-        "Monument & Memorial",
+        "Monument",
         "Art",
-        "Food & Drink",
+        "Food",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Literature",
-        "Money & Trade",
+        "Commerce",
         "Green Escape",
         "Public Art"
       ],
@@ -2447,11 +2447,11 @@
       "city": "New York City",
       "primaryCategory": "history",
       "tags": [
-        "Theatre & Venue",
+        "Venue",
         "Art",
         "History",
         "Literature",
-        "War & Conflict",
+        "War",
         "Green Escape",
         "Public Art"
       ],
@@ -2470,9 +2470,9 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Braga_Stadium_4.webp"
       ],
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Venue",
+        "Architecture",
+        "Engineering",
         "Contemporary",
         "Designed by a Master",
         "Eduardo Souto de Moura"
@@ -2523,8 +2523,8 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Money & Trade",
+        "Architecture",
+        "Commerce",
         "Contemporary",
         "Designed by a Master",
         "Álvaro Siza"
@@ -2573,7 +2573,7 @@
       ],
       "tags": [
         "Waterfront",
-        "Architecture & Design",
+        "Architecture",
         "History",
         "Contemporary",
         "Designed by a Master",
@@ -2636,10 +2636,10 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Contemporary",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Eduardo Souto de Moura",
         "Álvaro Siza"
       ],
@@ -2684,10 +2684,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Casa_das_Historias_Paula_Rego_5.webp"
       ],
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
-        "Food & Drink",
-        "Power & Politics",
+        "Museum",
+        "Architecture",
+        "Food",
+        "Power",
         "Contemporary",
         "Designed by a Master",
         "Eduardo Souto de Moura"
@@ -2733,12 +2733,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Edificio_Burgo_5.webp"
       ],
       "tags": [
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Tower",
+        "Architecture",
+        "Engineering",
         "Contemporary",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Eduardo Souto de Moura"
       ],
       "stops": [
@@ -2780,8 +2780,8 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "Contemporary",
         "Designed by a Master",
         "Eduardo Souto de Moura"
@@ -2828,12 +2828,12 @@
       ],
       "tags": [
         "Waterfront",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "History",
         "Maritime",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Luís Pedro Silva"
       ],
       "stops": [
@@ -2876,10 +2876,10 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
         "Literature",
-        "Power & Politics"
+        "Power"
       ],
       "stops": [
         {
@@ -2923,9 +2923,9 @@
       ],
       "tags": [
         "Waterfront",
-        "Architecture & Design",
-        "Money & Trade",
-        "Music & Performance",
+        "Architecture",
+        "Commerce",
+        "Performance",
         "Contemporary",
         "Modernist",
         "Designed by a Master",
@@ -2971,13 +2971,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/apollo-theater_4.webp"
       ],
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
+        "Venue",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
-        "Immigration & Community",
-        "Music & Performance",
-        "Power & Politics",
+        "Faith",
+        "Immigration",
+        "Performance",
+        "Power",
         "Art Deco"
       ],
       "stops": [
@@ -3021,11 +3021,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnegie-hall_5.webp"
       ],
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Music & Performance"
+        "Civic",
+        "Venue",
+        "Architecture",
+        "Engineering",
+        "Performance"
       ],
       "stops": [
         {
@@ -3069,14 +3069,14 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cloisters_6.webp"
       ],
       "tags": [
-        "Park & Garden",
+        "Park",
         "Religious Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History",
         "Maritime",
-        "Medieval / Gothic",
+        "Gothic",
         "Green Escape"
       ],
       "stops": [
@@ -3118,11 +3118,11 @@
         "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/150919_003_Lincoln_Center_-_Revson_Fountain%2C_Koch_Theater%2C_Metropolitan_Opera_%2821223352214%29.jpg/1280px-150919_003_Lincoln_Center_-_Revson_Fountain%2C_Koch_Theater%2C_Metropolitan_Opera_%2821223352214%29.jpg"
       ],
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Crime & Scandal",
-        "Immigration & Community",
-        "Music & Performance",
+        "Venue",
+        "Architecture",
+        "Crime",
+        "Immigration",
+        "Performance",
         "Designed by a Master",
         "Philip Johnson"
       ],
@@ -3167,12 +3167,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-inn_4.webp"
       ],
       "tags": [
-        "Monument & Memorial",
-        "Street & District",
-        "Architecture & Design",
+        "Monument",
+        "District",
+        "Architecture",
         "Art",
         "History",
-        "Music & Performance",
+        "Performance",
         "Green Escape"
       ],
       "stops": [
@@ -3215,16 +3215,16 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Bolhao_Market_4.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Architecture & Design",
+        "Market",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "Engineering",
+        "Food",
         "History",
-        "Money & Trade",
-        "Power & Politics",
+        "Commerce",
+        "Power",
         "Beaux-Arts",
-        "Georgian / Neoclassical"
+        "Neoclassical"
       ],
       "stops": [
         {
@@ -3269,8 +3269,8 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Serralves_Museum_7.webp"
       ],
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "Art Deco",
         "Contemporary",
@@ -3319,12 +3319,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beacon-theatre_4.webp"
       ],
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
+        "Venue",
+        "Architecture",
         "Art",
-        "Food & Drink",
-        "Music & Performance",
-        "Power & Politics",
+        "Food",
+        "Performance",
+        "Power",
         "Art Deco",
         "Baroque",
         "Public Art"
@@ -3368,10 +3368,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-market_3.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Architecture & Design",
-        "Food & Drink",
-        "Music & Performance"
+        "Market",
+        "Architecture",
+        "Food",
+        "Performance"
       ],
       "stops": [
         {
@@ -3414,12 +3414,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/radio-city-music-hall_5.webp"
       ],
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Architecture & Design",
+        "Civic",
+        "Venue",
+        "Architecture",
         "Art",
         "History",
-        "Music & Performance",
+        "Performance",
         "Art Deco"
       ],
       "stops": [
@@ -3458,11 +3458,11 @@
       "heroImageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_Tenement_Museum_%2851624759160%29.jpg/1280px-The_Tenement_Museum_%2851624759160%29.jpg",
       "additionalImageURLs": [],
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "History",
-        "Immigration & Community",
-        "Music & Performance",
-        "War & Conflict"
+        "Immigration",
+        "Performance",
+        "War"
       ],
       "stops": [
         {
@@ -3503,15 +3503,15 @@
       ],
       "tags": [
         "Notable Building",
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Fashion & Retail",
-        "Money & Trade",
-        "Power & Politics",
-        "Medieval / Gothic",
+        "Tower",
+        "Architecture",
+        "Faith",
+        "Fashion",
+        "Commerce",
+        "Power",
+        "Gothic",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Cass Gilbert"
       ],
       "stops": [
@@ -3552,11 +3552,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dakota_2.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Fashion & Retail",
-        "Immigration & Community",
+        "Park",
+        "Architecture",
+        "Remembrance",
+        "Fashion",
+        "Immigration",
         "Green Escape"
       ],
       "stops": [
@@ -3599,11 +3599,11 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Money & Trade",
+        "Architecture",
+        "Commerce",
         "Modernist",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "stops": [
         {
@@ -3644,14 +3644,14 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Modernist",
         "Designed by a Master",
         "Green Escape",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Mies van der Rohe",
         "Philip Johnson"
       ],
@@ -3693,11 +3693,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/stonewall-national-monument_hero.webp"
       ],
       "tags": [
-        "Monument & Memorial",
-        "Architecture & Design",
+        "Monument",
+        "Architecture",
         "Art",
         "History",
-        "Music & Performance",
+        "Performance",
         "Green Escape",
         "Hidden Gem"
       ],
@@ -3744,12 +3744,12 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Fashion & Retail",
-        "Food & Drink",
+        "Architecture",
+        "Fashion",
+        "Food",
         "History",
-        "Money & Trade",
-        "Music & Performance"
+        "Commerce",
+        "Performance"
       ],
       "stops": [
         {
@@ -3791,8 +3791,8 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bethesda-terrace_4.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "Art",
         "Green Escape",
         "Public Art"
@@ -3837,11 +3837,11 @@
       ],
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Faith & Spirituality",
-        "War & Conflict",
-        "Medieval / Gothic"
+        "Architecture",
+        "Remembrance",
+        "Faith",
+        "War",
+        "Gothic"
       ],
       "stops": [
         {
@@ -3882,8 +3882,8 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/astor-place-cube_3.webp"
       ],
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "Public Art"
       ],
@@ -3928,9 +3928,9 @@
       "tags": [
         "Notable Building",
         "Public Square",
-        "Architecture & Design",
-        "Food & Drink",
-        "Music & Performance",
+        "Architecture",
+        "Food",
+        "Performance",
         "Gilded Age"
       ],
       "stops": [
@@ -3972,12 +3972,12 @@
       ],
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Faith & Spirituality",
-        "Money & Trade",
+        "Architecture",
+        "Remembrance",
+        "Faith",
+        "Commerce",
         "Colonial",
-        "Medieval / Gothic",
+        "Gothic",
         "Hidden Gem"
       ],
       "stops": [
@@ -4028,12 +4028,12 @@
       "city": "Brooklyn",
       "primaryCategory": "history",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "History",
-        "Music & Performance",
+        "Performance",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0,
       "stops": [
@@ -4073,10 +4073,10 @@
       "city": "Bronx",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Power & Politics",
-        "War & Conflict",
+        "Park",
+        "Architecture",
+        "Power",
+        "War",
         "Green Escape"
       ],
       "priceUSD": 0,
@@ -4117,9 +4117,9 @@
       "city": "Queens",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0,
       "stops": [
@@ -4160,8 +4160,8 @@
       "city": "Queens",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art"
       ],
       "priceUSD": 0,
@@ -4204,15 +4204,15 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Waterfront",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Immigration & Community",
+        "Engineering",
+        "Immigration",
         "Maritime",
-        "Money & Trade",
-        "Music & Performance",
+        "Commerce",
+        "Performance",
         "Contemporary",
-        "Georgian / Neoclassical",
+        "Neoclassical",
         "Green Escape"
       ],
       "priceUSD": 0,
@@ -4255,10 +4255,10 @@
       "city": "Bronx",
       "primaryCategory": "history",
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
+        "Venue",
+        "Architecture",
         "History",
-        "Money & Trade"
+        "Commerce"
       ],
       "priceUSD": 0,
       "stops": [
@@ -4295,8 +4295,8 @@
       "city": "Queens",
       "primaryCategory": "history",
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
+        "Venue",
+        "Architecture",
         "History",
         "Green Escape"
       ],
@@ -4346,11 +4346,11 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Park & Garden",
+        "Park",
         "Public Square",
-        "Architecture & Design",
+        "Architecture",
         "History",
-        "Music & Performance",
+        "Performance",
         "Beaux-Arts",
         "Designed by a Master",
         "Green Escape",
@@ -4397,10 +4397,10 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Immigration & Community",
-        "Medieval / Gothic"
+        "Architecture",
+        "Faith",
+        "Immigration",
+        "Gothic"
       ],
       "priceUSD": 0,
       "stops": [
@@ -4441,12 +4441,12 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Engineering & Innovation",
+        "Tower",
+        "Architecture",
+        "Remembrance",
+        "Engineering",
         "History",
-        "Money & Trade"
+        "Commerce"
       ],
       "priceUSD": 0,
       "stops": [
@@ -4478,11 +4478,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Porto_Tram_Museum_3.webp"
       ],
       "tags": [
-        "Museum & Gallery",
-        "Engineering & Innovation",
+        "Museum",
+        "Engineering",
         "History",
-        "Money & Trade",
-        "Viewpoint & Panorama"
+        "Commerce",
+        "Viewpoint"
       ],
       "stops": [
         {
@@ -4528,9 +4528,9 @@
       ],
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Architecture",
+        "Engineering",
+        "Faith",
         "Literature",
         "Modernist",
         "Designed by a Master",
@@ -4579,14 +4579,14 @@
       ],
       "tags": [
         "Religious Building",
-        "Street & District",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "District",
+        "Architecture",
+        "Engineering",
+        "Faith",
         "History",
         "Literature",
-        "War & Conflict",
-        "Medieval / Gothic",
+        "War",
+        "Gothic",
         "Designed by a Master",
         "Hidden Gem",
         "Álvaro Siza"
@@ -4632,12 +4632,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Livraria_Lello_5.webp"
       ],
       "tags": [
-        "Shop & Flagship",
-        "Architecture & Design",
+        "Notable Building",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "Literature",
-        "Music & Performance"
+        "Performance"
       ],
       "stops": [
         {
@@ -4679,11 +4679,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Parque_de_Sao_Roque_4.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Fashion & Retail",
-        "Food & Drink",
+        "Park",
+        "Architecture",
+        "Faith",
+        "Fashion",
+        "Food",
         "Literature",
         "Maritime",
         "Green Escape"
@@ -4727,10 +4727,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Multiusos_de_Gondomar_3.webp"
       ],
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Music & Performance",
+        "Venue",
+        "Architecture",
+        "Engineering",
+        "Performance",
         "Designed by a Master",
         "Álvaro Siza"
       ],
@@ -4799,12 +4799,12 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Civic",
+        "Venue",
+        "Architecture",
+        "Engineering",
         "History",
-        "Power & Politics",
+        "Power",
         "Beaux-Arts",
         "Colonial"
       ],
@@ -4851,16 +4851,16 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Architecture",
+        "Remembrance",
+        "Engineering",
+        "Faith",
         "History",
-        "Money & Trade",
-        "Music & Performance",
-        "War & Conflict",
+        "Commerce",
+        "Performance",
+        "War",
         "Colonial",
-        "Georgian / Neoclassical"
+        "Neoclassical"
       ],
       "priceUSD": 0
     },
@@ -4904,12 +4904,12 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Crime & Scandal",
+        "Architecture",
+        "Crime",
         "History",
-        "Music & Performance",
+        "Performance",
         "Beaux-Arts",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -4951,14 +4951,14 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Crime & Scandal",
-        "Fashion & Retail",
+        "Crime",
+        "Fashion",
         "History",
         "Literature",
-        "Music & Performance",
-        "Medieval / Gothic",
+        "Performance",
+        "Gothic",
         "Victorian"
       ],
       "priceUSD": 0
@@ -4999,14 +4999,14 @@
       "city": "New York",
       "primaryCategory": "architecture",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "Art",
         "History",
-        "Music & Performance",
-        "War & Conflict",
+        "Performance",
+        "War",
         "Gilded Age",
-        "Medieval / Gothic",
+        "Gothic",
         "Designed by a Master",
         "Green Escape",
         "Public Art",
@@ -5027,13 +5027,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Batalha_Centro_de_Cinema_3.webp"
       ],
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
+        "Venue",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History",
-        "Music & Performance",
-        "Power & Politics",
+        "Performance",
+        "Power",
         "Art Deco",
         "Public Art"
       ],
@@ -5077,11 +5077,11 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Money & Trade",
+        "Architecture",
+        "Engineering",
+        "Commerce",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Eduardo Souto de Moura"
       ],
       "stops": [
@@ -5125,12 +5125,12 @@
       ],
       "tags": [
         "Religious Building",
-        "Death & Remembrance",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Remembrance",
+        "Engineering",
+        "Faith",
+        "Food",
         "History",
-        "Money & Trade"
+        "Commerce"
       ],
       "stops": [
         {
@@ -5170,17 +5170,17 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Teatro_Rivoli_2.webp"
       ],
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
+        "Venue",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History",
-        "Money & Trade",
-        "Music & Performance",
-        "Power & Politics",
+        "Commerce",
+        "Performance",
+        "Power",
         "Art Deco",
         "Baroque",
-        "Georgian / Neoclassical"
+        "Neoclassical"
       ],
       "stops": [
         {
@@ -5223,11 +5223,11 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Power & Politics",
+        "Power",
         "Baroque",
         "Designed by a Master",
         "Public Art",
@@ -5276,10 +5276,10 @@
       ],
       "tags": [
         "Notable Building",
-        "Street & District",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Viewpoint & Panorama"
+        "District",
+        "Architecture",
+        "Engineering",
+        "Viewpoint"
       ],
       "stops": [
         {
@@ -5323,8 +5323,8 @@
       ],
       "tags": [
         "Library",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "Literature",
         "Designed by a Master",
         "Eduardo Souto de Moura",
@@ -5372,11 +5372,11 @@
       ],
       "tags": [
         "Library",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Architecture",
+        "Faith",
         "History",
         "Literature",
-        "Power & Politics",
+        "Power",
         "Contemporary",
         "Designed by a Master",
         "Inês Lobo",
@@ -5421,12 +5421,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Adega_Mayor_3.jpg"
       ],
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "District",
+        "Architecture",
+        "Engineering",
+        "Food",
         "History",
-        "Power & Politics",
+        "Power",
         "Designed by a Master",
         "Álvaro Siza"
       ],
@@ -5472,11 +5472,11 @@
       "tags": [
         "Notable Building",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History",
         "Maritime",
-        "Power & Politics",
-        "Medieval / Gothic"
+        "Power",
+        "Gothic"
       ],
       "stops": [
         {
@@ -5520,9 +5520,9 @@
       ],
       "tags": [
         "Religious Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "Designed by a Master",
         "Public Art",
         "Álvaro Siza"
@@ -5587,13 +5587,13 @@
       "city": "New York",
       "primaryCategory": "architecture",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Death & Remembrance",
+        "Park",
+        "Architecture",
+        "Remembrance",
         "History",
         "Modernist",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -5635,11 +5635,11 @@
       "city": "Brooklyn",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Death & Remembrance",
+        "Park",
+        "Architecture",
+        "Remembrance",
         "History",
-        "Medieval / Gothic",
+        "Gothic",
         "Green Escape"
       ],
       "priceUSD": 0,
@@ -5682,10 +5682,10 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Monument & Memorial",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Monument",
+        "Architecture",
+        "Remembrance",
+        "Faith",
         "History",
         "Colonial"
       ],
@@ -5728,8 +5728,8 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Music & Performance"
+        "Architecture",
+        "Performance"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -5769,11 +5769,11 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Park & Garden",
+        "Park",
         "Public Square",
-        "Death & Remembrance",
+        "Remembrance",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Green Escape"
       ],
       "priceUSD": 0,
@@ -5814,12 +5814,12 @@
       "city": "New York",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Food & Drink",
+        "Food",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Contemporary",
         "Modernist",
         "Designed by a Master",
@@ -5869,12 +5869,12 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Crime & Scandal",
+        "Park",
+        "Architecture",
+        "Crime",
         "History",
         "Literature",
-        "Power & Politics",
+        "Power",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -5983,10 +5983,10 @@
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
-        "Faith & Spirituality",
-        "Fashion & Retail",
+        "Faith",
+        "Fashion",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Gilded Age"
       ],
       "priceUSD": 0,
@@ -6036,13 +6036,13 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Faith & Spirituality",
+        "Civic",
+        "Venue",
+        "Faith",
         "History",
-        "Money & Trade",
-        "Power & Politics",
-        "Georgian / Neoclassical"
+        "Commerce",
+        "Power",
+        "Neoclassical"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -6083,14 +6083,14 @@
       "city": "New York",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Park & Garden",
-        "Street & District",
-        "Architecture & Design",
-        "Crime & Scandal",
+        "Park",
+        "District",
+        "Architecture",
+        "Crime",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Literature",
-        "Music & Performance",
+        "Performance",
         "Green Escape"
       ],
       "priceUSD": 0,
@@ -6133,9 +6133,9 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "History",
-        "Immigration & Community"
+        "Immigration"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -6178,7 +6178,7 @@
         "Waterfront",
         "History",
         "Maritime",
-        "Music & Performance",
+        "Performance",
         "Green Escape"
       ],
       "priceUSD": 0,
@@ -6225,12 +6225,12 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Street & District",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Immigration & Community",
-        "Medieval / Gothic",
-        "Viewpoint & Panorama"
+        "District",
+        "Architecture",
+        "Faith",
+        "Immigration",
+        "Gothic",
+        "Viewpoint"
       ],
       "priceUSD": 0,
       "additionalImageURLs": [
@@ -6271,11 +6271,11 @@
       "primaryCategory": "architecture",
       "tags": [
         "Public Square",
-        "Architecture & Design",
-        "Death & Remembrance",
+        "Architecture",
+        "Remembrance",
         "Maritime",
-        "Power & Politics",
-        "War & Conflict",
+        "Power",
+        "War",
         "Beaux-Arts",
         "Green Escape"
       ],
@@ -6319,10 +6319,10 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Immigration & Community",
+        "Engineering",
+        "Immigration",
         "Art Deco"
       ],
       "priceUSD": 0,
@@ -6364,13 +6364,13 @@
       "city": "New York",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Fashion & Retail",
+        "District",
+        "Architecture",
+        "Fashion",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Colonial",
-        "Georgian / Neoclassical",
+        "Neoclassical",
         "Designed by a Master",
         "McKim, Mead & White"
       ],
@@ -6410,9 +6410,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Music & Performance",
+        "Architecture",
+        "Faith",
+        "Performance",
         "Designed by a Master",
         "Frank Gehry"
       ],
@@ -6457,12 +6457,12 @@
       "city": "New York",
       "primaryCategory": "literature",
       "tags": [
-        "Shop & Flagship",
-        "Food & Drink",
-        "Immigration & Community",
+        "Notable Building",
+        "Food",
+        "Immigration",
         "Literature",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -6504,13 +6504,13 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Architecture",
+        "Faith",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Baroque",
         "Colonial",
-        "Medieval / Gothic"
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -6553,9 +6553,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Bridge",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Power & Politics"
+        "Architecture",
+        "Engineering",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -6596,13 +6596,13 @@
       "city": "Porto",
       "primaryCategory": "architecture",
       "tags": [
-        "Civic & Government",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Civic",
+        "Architecture",
+        "Engineering",
         "Maritime",
-        "Money & Trade",
-        "Power & Politics",
-        "War & Conflict"
+        "Commerce",
+        "Power",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -6648,13 +6648,13 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Architecture",
+        "Faith",
+        "Food",
         "History",
-        "War & Conflict",
+        "War",
         "Baroque",
-        "Medieval / Gothic"
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -6697,13 +6697,13 @@
       "city": "Porto",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Food & Drink",
+        "District",
+        "Architecture",
+        "Food",
         "History",
         "Maritime",
-        "Money & Trade",
-        "Medieval / Gothic"
+        "Commerce",
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -6745,13 +6745,13 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Music & Performance",
-        "Power & Politics",
-        "War & Conflict",
+        "Performance",
+        "Power",
+        "War",
         "Beaux-Arts",
         "Public Art"
       ],
@@ -6795,16 +6795,16 @@
       "city": "Porto",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "District",
+        "Tower",
+        "Architecture",
+        "Remembrance",
+        "Faith",
         "History",
         "Maritime",
-        "Power & Politics",
+        "Power",
         "Baroque",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -6823,7 +6823,7 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Modernist",
         "Green Escape"
       ],
@@ -6866,14 +6866,14 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tudor-city-greens_3.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Crime & Scandal",
-        "Immigration & Community",
-        "Music & Performance",
-        "Medieval / Gothic",
+        "Park",
+        "Architecture",
+        "Crime",
+        "Immigration",
+        "Performance",
+        "Gothic",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "stops": [
         {
@@ -6916,11 +6916,11 @@
       ],
       "tags": [
         "Notable Building",
-        "Street & District",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Immigration & Community",
-        "War & Conflict",
+        "District",
+        "Architecture",
+        "Engineering",
+        "Immigration",
+        "War",
         "Modernist",
         "Designed by a Master",
         "Green Escape",
@@ -6991,14 +6991,14 @@
       "city": "Porto",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
-        "Fashion & Retail",
-        "Power & Politics",
+        "Faith",
+        "Fashion",
+        "Power",
         "Beaux-Arts",
-        "Georgian / Neoclassical",
+        "Neoclassical",
         "Designed by a Master",
         "Green Escape",
         "Eduardo Souto de Moura",
@@ -7043,11 +7043,11 @@
       "city": "Porto",
       "primaryCategory": "history",
       "tags": [
-        "Civic & Government",
-        "Faith & Spirituality",
+        "Civic",
+        "Faith",
         "History",
-        "Power & Politics",
-        "Medieval / Gothic"
+        "Power",
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -7088,13 +7088,13 @@
       "city": "Porto",
       "primaryCategory": "history",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "Engineering",
+        "Food",
         "History",
-        "War & Conflict"
+        "War"
       ],
       "priceUSD": 0
     },
@@ -7135,11 +7135,11 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Crime & Scandal",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Crime",
+        "Remembrance",
+        "Faith",
         "History",
         "Baroque",
         "Public Art"
@@ -7183,12 +7183,12 @@
       "primaryCategory": "architecture",
       "tags": [
         "Bridge",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "History",
         "Literature",
-        "Money & Trade",
-        "Music & Performance"
+        "Commerce",
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -7228,19 +7228,19 @@
       "city": "Porto",
       "primaryCategory": "architecture",
       "tags": [
-        "Civic & Government",
-        "Market & Arcade",
-        "Theatre & Venue",
-        "Architecture & Design",
+        "Civic",
+        "Market",
+        "Venue",
+        "Architecture",
         "Art",
-        "Food & Drink",
+        "Food",
         "History",
-        "Immigration & Community",
-        "Money & Trade",
-        "Music & Performance",
-        "Power & Politics",
+        "Immigration",
+        "Commerce",
+        "Performance",
+        "Power",
         "Contemporary",
-        "Medieval / Gothic"
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -7281,11 +7281,11 @@
       "city": "Porto",
       "primaryCategory": "history",
       "tags": [
-        "Street & District",
+        "District",
         "Art",
         "History",
-        "War & Conflict",
-        "Medieval / Gothic",
+        "War",
+        "Gothic",
         "Public Art"
       ],
       "priceUSD": 0
@@ -7304,11 +7304,11 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History",
-        "War & Conflict",
+        "War",
         "Brutalist",
         "Modernist",
         "Designed by a Master",
@@ -7358,15 +7358,15 @@
       ],
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Architecture",
+        "Engineering",
+        "Faith",
         "History",
-        "War & Conflict",
+        "War",
         "Baroque",
-        "Medieval / Gothic",
+        "Gothic",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Christopher Wren"
       ],
       "stops": [
@@ -7409,13 +7409,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-monument_4.webp"
       ],
       "tags": [
-        "Monument & Memorial",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Monument",
+        "Architecture",
+        "Faith",
         "History",
         "Literature",
-        "Power & Politics",
-        "Medieval / Gothic",
+        "Power",
+        "Gothic",
         "Designed by a Master",
         "Christopher Wren"
       ],
@@ -7460,11 +7460,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tower-of-london_5.webp"
       ],
       "tags": [
-        "Tower & Skyscraper",
-        "Crime & Scandal",
+        "Tower",
+        "Crime",
         "History",
-        "Power & Politics",
-        "War & Conflict"
+        "Power",
+        "War"
       ],
       "stops": [
         {
@@ -7508,13 +7508,13 @@
       ],
       "tags": [
         "Bridge",
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Tower",
+        "Architecture",
+        "Engineering",
         "History",
         "Maritime",
-        "Music & Performance",
-        "Medieval / Gothic",
+        "Performance",
+        "Gothic",
         "Victorian"
       ],
       "stops": [
@@ -7558,15 +7558,15 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/leadenhall-market_5.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Market",
+        "Venue",
+        "Architecture",
+        "Faith",
+        "Food",
         "History",
-        "Money & Trade",
-        "War & Conflict",
-        "Medieval / Gothic",
+        "Commerce",
+        "War",
+        "Gothic",
         "Victorian"
       ],
       "stops": [
@@ -7611,12 +7611,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gherkin_6.webp"
       ],
       "tags": [
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Money & Trade",
-        "War & Conflict",
+        "Tower",
+        "Architecture",
+        "Commerce",
+        "War",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Norman Foster"
       ],
       "stops": [
@@ -7659,11 +7659,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lloyds-of-london_4.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Street & District",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "Market",
+        "District",
+        "Architecture",
+        "Engineering",
+        "Food",
         "History",
         "Maritime"
       ],
@@ -7708,14 +7708,14 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bank-junction_5.webp"
       ],
       "tags": [
-        "Civic & Government",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Fashion & Retail",
+        "Civic",
+        "Architecture",
+        "Faith",
+        "Fashion",
         "History",
-        "Money & Trade",
-        "Power & Politics",
-        "War & Conflict"
+        "Commerce",
+        "Power",
+        "War"
       ],
       "stops": [
         {
@@ -7758,11 +7758,11 @@
       ],
       "tags": [
         "Religious Building",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Engineering",
+        "Faith",
         "Designed by a Master",
         "Hidden Gem",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Christopher Wren"
       ],
       "stops": [
@@ -7804,13 +7804,13 @@
       ],
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
+        "Faith",
         "History",
         "Literature",
-        "War & Conflict",
-        "Medieval / Gothic",
+        "War",
+        "Gothic",
         "Hidden Gem",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "stops": [
         {
@@ -7851,15 +7851,15 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/smithfield-market_3.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Market",
+        "Architecture",
+        "Remembrance",
+        "Faith",
+        "Food",
         "History",
-        "Money & Trade",
-        "Power & Politics",
-        "Medieval / Gothic",
+        "Commerce",
+        "Power",
+        "Gothic",
         "Victorian"
       ],
       "stops": [
@@ -7900,10 +7900,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/postmans-park_2.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
+        "Remembrance",
         "History",
         "Victorian",
         "Green Escape",
@@ -7951,11 +7951,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barbican_6.webp"
       ],
       "tags": [
-        "Tower & Skyscraper",
-        "Architecture & Design",
+        "Tower",
+        "Architecture",
         "Art",
-        "Music & Performance",
-        "War & Conflict",
+        "Performance",
+        "War",
         "Brutalist"
       ],
       "stops": [
@@ -7996,16 +7996,16 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/guildhall_2.webp"
       ],
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Architecture & Design",
+        "Civic",
+        "Venue",
+        "Architecture",
         "Art",
         "History",
-        "Money & Trade",
-        "Music & Performance",
-        "Power & Politics",
-        "War & Conflict",
-        "Medieval / Gothic"
+        "Commerce",
+        "Performance",
+        "Power",
+        "War",
+        "Gothic"
       ],
       "stops": [
         {
@@ -8046,11 +8046,11 @@
       ],
       "tags": [
         "Religious Building",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Faith",
         "History",
-        "Money & Trade",
-        "Medieval / Gothic",
+        "Commerce",
+        "Gothic",
         "Hidden Gem"
       ],
       "stops": [
@@ -8096,14 +8096,14 @@
       ],
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Architecture",
+        "Remembrance",
+        "Faith",
         "History",
         "Literature",
-        "Music & Performance",
-        "Power & Politics",
-        "Medieval / Gothic"
+        "Performance",
+        "Power",
+        "Gothic"
       ],
       "stops": [
         {
@@ -8147,13 +8147,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/houses-of-parliament_6.webp"
       ],
       "tags": [
-        "Civic & Government",
+        "Civic",
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "History",
-        "Power & Politics",
-        "Medieval / Gothic",
+        "Power",
+        "Gothic",
         "Victorian"
       ],
       "stops": [
@@ -8195,13 +8195,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-hall_3.webp"
       ],
       "tags": [
-        "Civic & Government",
+        "Civic",
         "Religious Building",
-        "Theatre & Venue",
-        "Engineering & Innovation",
+        "Venue",
+        "Engineering",
         "History",
-        "Power & Politics",
-        "Medieval / Gothic",
+        "Power",
+        "Gothic",
         "Victorian"
       ],
       "stops": [
@@ -8248,9 +8248,9 @@
         "Public Square",
         "Art",
         "Maritime",
-        "Music & Performance",
-        "Power & Politics",
-        "War & Conflict"
+        "Performance",
+        "Power",
+        "War"
       ],
       "stops": [
         {
@@ -8293,13 +8293,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-gallery_5.webp"
       ],
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History",
-        "War & Conflict",
-        "Medieval / Gothic"
+        "War",
+        "Gothic"
       ],
       "stops": [
         {
@@ -8341,14 +8341,14 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_4.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Park",
+        "Architecture",
+        "Faith",
         "History",
-        "Music & Performance",
+        "Performance",
         "Colonial",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "stops": [
         {
@@ -8390,14 +8390,14 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Money & Trade",
-        "Power & Politics",
-        "War & Conflict",
-        "Georgian / Neoclassical",
+        "Commerce",
+        "Power",
+        "War",
+        "Neoclassical",
         "Designed by a Master",
         "Inigo Jones"
       ],
@@ -8441,13 +8441,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-cenotaph_4.webp"
       ],
       "tags": [
-        "Monument & Memorial",
-        "Architecture & Design",
+        "Monument",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
+        "Remembrance",
         "History",
-        "Power & Politics",
-        "War & Conflict",
+        "Power",
+        "War",
         "Victorian",
         "Hidden Gem"
       ],
@@ -8491,10 +8491,10 @@
       ],
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Power & Politics",
-        "War & Conflict",
+        "Power",
+        "War",
         "Hidden Gem"
       ],
       "stops": [
@@ -8538,12 +8538,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/parliament-square_5.webp"
       ],
       "tags": [
-        "Civic & Government",
+        "Civic",
         "Public Square",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Power & Politics",
-        "War & Conflict"
+        "Power",
+        "War"
       ],
       "stops": [
         {
@@ -8608,12 +8608,12 @@
       "city": "Porto",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "History",
-        "Power & Politics",
+        "Power",
         "Contemporary",
-        "Medieval / Gothic"
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -8654,13 +8654,13 @@
       "city": "Porto",
       "primaryCategory": "history",
       "tags": [
-        "Museum & Gallery",
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "Museum",
+        "Venue",
+        "Architecture",
+        "Engineering",
+        "Food",
         "History",
-        "Money & Trade"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -8700,13 +8700,13 @@
       "city": "Vila Nova de Gaia",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "District",
+        "Faith",
+        "Food",
         "History",
         "Maritime",
-        "Money & Trade",
-        "Viewpoint & Panorama"
+        "Commerce",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -8751,13 +8751,13 @@
       "primaryCategory": "architecture",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
-        "Music & Performance",
+        "Faith",
+        "Performance",
         "Brutalist",
         "Modernist",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -8798,11 +8798,11 @@
       "city": "Porto",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "History",
         "Literature",
-        "Power & Politics",
+        "Power",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -8844,17 +8844,17 @@
       "city": "Porto",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Engineering",
+        "Faith",
         "History",
-        "Music & Performance",
-        "Power & Politics",
+        "Performance",
+        "Power",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -8896,7 +8896,7 @@
       "tags": [
         "Waterfront",
         "Art",
-        "Food & Drink",
+        "Food",
         "History",
         "Maritime"
       ],
@@ -8939,17 +8939,17 @@
       "city": "Matosinhos",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Civic & Government",
-        "Market & Arcade",
-        "Monument & Memorial",
-        "Theatre & Venue",
-        "Architecture & Design",
+        "Civic",
+        "Market",
+        "Monument",
+        "Venue",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "Engineering",
+        "Food",
         "History",
-        "Music & Performance",
-        "War & Conflict",
+        "Performance",
+        "War",
         "Modernist"
       ],
       "priceUSD": 0
@@ -8991,9 +8991,9 @@
       "city": "Porto",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History",
         "Literature",
         "Public Art"
@@ -9038,9 +9038,9 @@
       "city": "Porto",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Park",
+        "Architecture",
+        "Engineering",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -9081,10 +9081,10 @@
       "city": "Lisbon",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "District",
+        "Architecture",
+        "Engineering",
+        "Food",
         "History",
         "Designed by a Master",
         "Eduardo Souto de Moura"
@@ -9130,10 +9130,10 @@
       "tags": [
         "Public Square",
         "Art",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Faith",
+        "Food",
         "History",
-        "Immigration & Community"
+        "Immigration"
       ],
       "priceUSD": 0
     },
@@ -9175,13 +9175,13 @@
       "city": "Lisbon",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "Art",
         "History",
-        "Power & Politics",
-        "Georgian / Neoclassical",
-        "Viewpoint & Panorama"
+        "Power",
+        "Neoclassical",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -9221,12 +9221,12 @@
       "city": "Lisbon",
       "primaryCategory": "history",
       "tags": [
-        "Tower & Skyscraper",
+        "Tower",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History",
         "Maritime",
-        "War & Conflict"
+        "War"
       ],
       "priceUSD": 0
     },
@@ -9267,14 +9267,14 @@
       "city": "Lisbon",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Engineering",
+        "Faith",
         "History",
-        "Medieval / Gothic"
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -9317,10 +9317,10 @@
       "tags": [
         "Notable Building",
         "History",
-        "Power & Politics",
-        "War & Conflict",
-        "Medieval / Gothic",
-        "Viewpoint & Panorama"
+        "Power",
+        "War",
+        "Gothic",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -9364,9 +9364,9 @@
       "city": "Lisbon",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art",
-        "War & Conflict",
+        "War",
         "Contemporary",
         "Designed by a Master",
         "Kengo Kuma"
@@ -9410,11 +9410,11 @@
       "city": "Lisbon",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
+        "District",
         "Waterfront",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Architecture",
+        "Engineering",
+        "Faith",
         "Contemporary"
       ],
       "priceUSD": 0
@@ -9456,10 +9456,10 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "History",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -9501,13 +9501,13 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Power & Politics",
+        "Park",
+        "Architecture",
+        "Engineering",
+        "Power",
         "Baroque",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -9548,11 +9548,11 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Music & Performance",
-        "Power & Politics",
+        "Park",
+        "Performance",
+        "Power",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -9595,14 +9595,14 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Faith",
         "Literature",
         "Maritime",
-        "Money & Trade",
-        "Power & Politics"
+        "Commerce",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -9645,10 +9645,10 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Fashion & Retail",
-        "Food & Drink",
+        "Fashion",
+        "Food",
         "History",
         "Literature"
       ],
@@ -9693,11 +9693,11 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Architecture",
+        "Faith",
         "History",
         "Baroque",
-        "Medieval / Gothic"
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -9741,12 +9741,12 @@
       "city": "Lisbon",
       "primaryCategory": "architecture",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Money & Trade",
-        "Viewpoint & Panorama"
+        "Engineering",
+        "Commerce",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -9787,13 +9787,13 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Park",
+        "Remembrance",
+        "Faith",
         "History",
-        "War & Conflict",
+        "War",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -9834,11 +9834,11 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Food & Drink",
+        "Park",
+        "Food",
         "Maritime",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -9880,11 +9880,11 @@
       "city": "Lisbon",
       "primaryCategory": "architecture",
       "tags": [
-        "Civic & Government",
-        "Monument & Memorial",
-        "Architecture & Design",
+        "Civic",
+        "Monument",
+        "Architecture",
         "Literature",
-        "Power & Politics",
+        "Power",
         "Contemporary",
         "Modernist"
       ],
@@ -9928,10 +9928,10 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Faith",
+        "Food",
         "History",
-        "Money & Trade"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -9974,8 +9974,8 @@
       "city": "Loures",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -10018,12 +10018,12 @@
       "primaryCategory": "history",
       "tags": [
         "Public Square",
-        "Architecture & Design",
+        "Architecture",
         "History",
-        "Music & Performance",
-        "Power & Politics",
-        "Georgian / Neoclassical",
-        "Medieval / Gothic"
+        "Performance",
+        "Power",
+        "Neoclassical",
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -10067,12 +10067,12 @@
       "primaryCategory": "history",
       "tags": [
         "Public Square",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "History",
-        "Money & Trade",
-        "Power & Politics",
-        "Georgian / Neoclassical"
+        "Commerce",
+        "Power",
+        "Neoclassical"
       ],
       "priceUSD": 0
     },
@@ -10113,9 +10113,9 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Waterfront",
-        "Crime & Scandal",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "Crime",
+        "Engineering",
+        "Food",
         "Maritime"
       ],
       "priceUSD": 0
@@ -10159,12 +10159,12 @@
       "city": "Lisbon",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "District",
+        "Architecture",
+        "Engineering",
         "Literature",
-        "Music & Performance",
-        "Medieval / Gothic"
+        "Performance",
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -10204,11 +10204,11 @@
       "city": "Lisbon",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Market & Arcade",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Food & Drink",
-        "Money & Trade",
+        "Market",
+        "Architecture",
+        "Engineering",
+        "Food",
+        "Commerce",
         "Victorian",
         "Green Escape"
       ],
@@ -10250,11 +10250,11 @@
       "city": "Lisbon",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Tower & Skyscraper",
-        "Architecture & Design",
+        "District",
+        "Tower",
+        "Architecture",
         "History",
-        "Medieval / Gothic",
+        "Gothic",
         "Modernist"
       ],
       "priceUSD": 0
@@ -10272,11 +10272,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/buckingham-palace_4.webp"
       ],
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Music & Performance",
-        "Power & Politics"
+        "District",
+        "Architecture",
+        "Remembrance",
+        "Performance",
+        "Power"
       ],
       "stops": [
         {
@@ -10319,10 +10319,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-jamess-park_5.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Engineering & Innovation",
-        "Music & Performance",
-        "Power & Politics",
+        "Park",
+        "Engineering",
+        "Performance",
+        "Power",
         "Green Escape"
       ],
       "stops": [
@@ -10365,10 +10365,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-mall-admiralty-arch_4.webp"
       ],
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Fashion & Retail",
-        "Power & Politics"
+        "District",
+        "Architecture",
+        "Fashion",
+        "Power"
       ],
       "stops": [
         {
@@ -10408,9 +10408,9 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burlington-arcade_2.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Crime & Scandal",
-        "Fashion & Retail"
+        "Market",
+        "Crime",
+        "Fashion"
       ],
       "stops": [
         {
@@ -10450,11 +10450,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-academy_2.webp"
       ],
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History",
-        "Power & Politics"
+        "Power"
       ],
       "stops": [
         {
@@ -10498,7 +10498,7 @@
       "tags": [
         "Public Square",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Green Escape"
       ],
       "stops": [
@@ -10539,13 +10539,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shepherd-market_2.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Architecture & Design",
-        "Crime & Scandal",
-        "Food & Drink",
+        "Market",
+        "Architecture",
+        "Crime",
+        "Food",
         "History",
-        "Money & Trade",
-        "Music & Performance",
+        "Commerce",
+        "Performance",
         "Hidden Gem"
       ],
       "stops": [
@@ -10591,12 +10591,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_7.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Park",
+        "Faith",
+        "Food",
         "History",
-        "Money & Trade",
-        "Music & Performance",
+        "Commerce",
+        "Performance",
         "Designed by a Master",
         "Green Escape",
         "Inigo Jones"
@@ -10641,9 +10641,9 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/seven-dials_4.webp"
       ],
       "tags": [
-        "Street & District",
-        "Crime & Scandal",
-        "Fashion & Retail",
+        "District",
+        "Crime",
+        "Fashion",
         "History",
         "Literature",
         "Green Escape"
@@ -10689,7 +10689,7 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/neals-yard_5.webp"
       ],
       "tags": [
-        "Street & District",
+        "District",
         "History",
         "Green Escape",
         "Hidden Gem"
@@ -10736,11 +10736,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/soho_6.webp"
       ],
       "tags": [
-        "Street & District",
-        "Crime & Scandal",
+        "District",
+        "Crime",
         "History",
-        "Immigration & Community",
-        "Music & Performance"
+        "Immigration",
+        "Performance"
       ],
       "stops": [
         {
@@ -10785,13 +10785,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown_7.webp"
       ],
       "tags": [
-        "Street & District",
-        "Crime & Scandal",
-        "Food & Drink",
-        "Immigration & Community",
+        "District",
+        "Crime",
+        "Food",
+        "Immigration",
         "Maritime",
-        "Money & Trade",
-        "War & Conflict"
+        "Commerce",
+        "War"
       ],
       "stops": [
         {
@@ -10831,10 +10831,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/denmark-street_2.webp"
       ],
       "tags": [
-        "Street & District",
+        "District",
         "History",
         "Literature",
-        "Music & Performance"
+        "Performance"
       ],
       "stops": [
         {
@@ -10878,12 +10878,12 @@
       ],
       "tags": [
         "Public Square",
-        "Food & Drink",
+        "Food",
         "History",
         "Literature",
-        "Music & Performance",
+        "Performance",
         "Victorian",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "stops": [
         {
@@ -10925,10 +10925,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnaby-street_4.webp"
       ],
       "tags": [
-        "Street & District",
-        "Fashion & Retail",
+        "District",
+        "Fashion",
         "History",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "stops": [
         {
@@ -10973,11 +10973,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/british-museum_7.webp"
       ],
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Power & Politics",
+        "Power",
         "Designed by a Master",
         "Norman Foster"
       ],
@@ -11067,12 +11067,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sir-john-soanes-museum_3.webp"
       ],
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
-        "Money & Trade",
-        "Power & Politics"
+        "Faith",
+        "Commerce",
+        "Power"
       ],
       "stops": [
         {
@@ -11112,10 +11112,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lincolns-inn-fields_2.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Death & Remembrance",
+        "Park",
+        "Remembrance",
         "History",
-        "Power & Politics",
+        "Power",
         "Green Escape"
       ],
       "stops": [
@@ -11156,11 +11156,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/foundling-museum_2.webp"
       ],
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art",
         "History",
-        "Music & Performance",
-        "Power & Politics",
+        "Performance",
+        "Power",
         "Public Art"
       ],
       "stops": [
@@ -11201,10 +11201,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/charles-dickens-museum_2.webp"
       ],
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Literature",
-        "Georgian / Neoclassical",
-        "Viewpoint & Panorama"
+        "Neoclassical",
+        "Viewpoint"
       ],
       "stops": [
         {
@@ -11244,13 +11244,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/senate-house_2.webp"
       ],
       "tags": [
-        "Civic & Government",
+        "Civic",
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
         "History",
         "Literature",
-        "War & Conflict",
+        "War",
         "Art Deco",
         "Designed by a Master",
         "Charles Holden"
@@ -11291,14 +11291,14 @@
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hatton-garden_hero.webp",
       "additionalImageURLs": [],
       "tags": [
-        "Park & Garden",
-        "Street & District",
-        "Crime & Scandal",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Park",
+        "District",
+        "Crime",
+        "Engineering",
+        "Faith",
         "History",
-        "Immigration & Community",
-        "Money & Trade",
+        "Immigration",
+        "Commerce",
         "Green Escape"
       ],
       "stops": [
@@ -11344,12 +11344,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tate-modern_7.webp"
       ],
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
-        "Money & Trade",
+        "Engineering",
+        "Faith",
+        "Commerce",
         "Designed by a Master",
         "Public Art",
         "Giles Gilbert Scott",
@@ -11394,11 +11394,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shakespeares-globe_3.webp"
       ],
       "tags": [
-        "Theatre & Venue",
+        "Venue",
         "History",
         "Literature",
-        "Money & Trade",
-        "Music & Performance"
+        "Commerce",
+        "Performance"
       ],
       "stops": [
         {
@@ -11441,10 +11441,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/borough-market_5.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Food & Drink",
+        "Market",
+        "Food",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Victorian"
       ],
       "stops": [
@@ -11487,13 +11487,13 @@
       ],
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Architecture",
+        "Remembrance",
+        "Faith",
+        "Food",
         "History",
         "Literature",
-        "Medieval / Gothic"
+        "Gothic"
       ],
       "stops": [
         {
@@ -11537,8 +11537,8 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-shard_6.webp"
       ],
       "tags": [
-        "Tower & Skyscraper",
-        "Architecture & Design",
+        "Tower",
+        "Architecture",
         "Art",
         "History",
         "Maritime",
@@ -11585,12 +11585,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-theatre_4.webp"
       ],
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Fashion & Retail",
-        "Money & Trade",
-        "Music & Performance",
+        "Venue",
+        "Architecture",
+        "Engineering",
+        "Fashion",
+        "Commerce",
+        "Performance",
         "Brutalist",
         "Designed by a Master",
         "Denys Lasdun"
@@ -11631,14 +11631,14 @@
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-festival-hall_hero.webp",
       "additionalImageURLs": [],
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Money & Trade",
-        "Music & Performance",
-        "Power & Politics",
-        "War & Conflict",
+        "Civic",
+        "Venue",
+        "Architecture",
+        "Engineering",
+        "Commerce",
+        "Performance",
+        "Power",
+        "War",
         "Modernist"
       ],
       "stops": [
@@ -11684,10 +11684,10 @@
       ],
       "tags": [
         "Bridge",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
-        "Money & Trade",
+        "Architecture",
+        "Engineering",
+        "Faith",
+        "Commerce",
         "Designed by a Master",
         "Norman Foster"
       ],
@@ -11730,14 +11730,14 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cross-bones-graveyard_3.webp"
       ],
       "tags": [
-        "Monument & Memorial",
-        "Park & Garden",
-        "Street & District",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Monument",
+        "Park",
+        "District",
+        "Remembrance",
+        "Faith",
         "History",
         "Literature",
-        "Medieval / Gothic",
+        "Gothic",
         "Green Escape",
         "Hidden Gem"
       ],
@@ -11782,10 +11782,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-operating-theatre_5.webp"
       ],
       "tags": [
-        "Theatre & Venue",
-        "Faith & Spirituality",
+        "Venue",
+        "Faith",
         "History",
-        "Music & Performance"
+        "Performance"
       ],
       "stops": [
         {
@@ -11852,8 +11852,8 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "Engineering",
+        "Food",
         "Maritime",
         "Victorian"
       ],
@@ -11899,8 +11899,8 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Architecture",
+        "Faith",
         "Maritime",
         "Baroque"
       ],
@@ -11943,13 +11943,13 @@
       "city": "Lisbon",
       "primaryCategory": "hiddenGems",
       "tags": [
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Fashion & Retail",
+        "Tower",
+        "Architecture",
+        "Fashion",
         "History",
         "Modernist",
         "Hidden Gem",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -11989,9 +11989,9 @@
       "city": "Lisbon",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Viewpoint & Panorama"
+        "District",
+        "Architecture",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -12033,12 +12033,12 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Architecture",
+        "Remembrance",
+        "Faith",
         "History",
-        "Power & Politics",
-        "War & Conflict"
+        "Power",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -12079,11 +12079,11 @@
       "primaryCategory": "literature",
       "tags": [
         "Library",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "Literature",
-        "Music & Performance",
-        "War & Conflict"
+        "Performance",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -12126,11 +12126,11 @@
       "city": "Lisbon",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Fashion & Retail",
-        "Money & Trade",
+        "Fashion",
+        "Commerce",
         "Colonial"
       ],
       "priceUSD": 0
@@ -12173,15 +12173,15 @@
       "city": "Lisbon",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Engineering",
+        "Faith",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Baroque",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -12222,13 +12222,13 @@
       "city": "Lisbon",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
-        "Immigration & Community",
-        "Music & Performance",
-        "Power & Politics",
+        "Faith",
+        "Immigration",
+        "Performance",
+        "Power",
         "Contemporary",
         "Modernist"
       ],
@@ -12272,11 +12272,11 @@
       "city": "Lisbon",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "Maritime",
-        "Money & Trade"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -12317,14 +12317,14 @@
       "city": "Lisbon",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
-        "Fashion & Retail",
+        "Engineering",
+        "Faith",
+        "Fashion",
         "History",
-        "Money & Trade",
-        "Power & Politics",
+        "Commerce",
+        "Power",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -12366,12 +12366,12 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Architecture",
+        "Remembrance",
+        "Engineering",
+        "Faith",
         "Literature",
-        "Power & Politics",
+        "Power",
         "Baroque"
       ],
       "priceUSD": 0
@@ -12415,13 +12415,13 @@
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Engineering",
+        "Faith",
         "History",
-        "Power & Politics",
-        "War & Conflict",
+        "Power",
+        "War",
         "Contemporary",
-        "Georgian / Neoclassical"
+        "Neoclassical"
       ],
       "priceUSD": 0
     },
@@ -12459,9 +12459,9 @@
       "city": "Lisbon",
       "primaryCategory": "hiddenGems",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Food & Drink",
+        "District",
+        "Architecture",
+        "Food",
         "History",
         "Maritime",
         "Hidden Gem"
@@ -12506,11 +12506,11 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
+        "Park",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Power & Politics",
+        "Power",
         "Colonial",
         "Green Escape",
         "Hidden Gem"
@@ -12555,10 +12555,10 @@
       "city": "Lisbon",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Park & Garden",
-        "Death & Remembrance",
-        "Fashion & Retail",
-        "Money & Trade",
+        "Park",
+        "Remembrance",
+        "Fashion",
+        "Commerce",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -12602,12 +12602,12 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
-        "Power & Politics",
-        "Viewpoint & Panorama"
+        "Architecture",
+        "Remembrance",
+        "Engineering",
+        "Faith",
+        "Power",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -12648,13 +12648,13 @@
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "History",
         "Literature",
-        "Money & Trade",
-        "Music & Performance",
-        "Power & Politics"
+        "Commerce",
+        "Performance",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -12694,10 +12694,10 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
+        "Park",
         "History",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -12738,13 +12738,13 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Park",
+        "Architecture",
+        "Remembrance",
+        "Engineering",
+        "Faith",
         "Literature",
-        "Music & Performance",
+        "Performance",
         "Victorian",
         "Green Escape"
       ],
@@ -12787,14 +12787,14 @@
       "city": "Lisbon",
       "primaryCategory": "history",
       "tags": [
-        "Monument & Memorial",
-        "Park & Garden",
-        "Architecture & Design",
+        "Monument",
+        "Park",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Faith",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -12836,10 +12836,10 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Money & Trade",
+        "Park",
+        "Commerce",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -12879,15 +12879,15 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Crime & Scandal",
-        "Faith & Spirituality",
+        "Park",
+        "Crime",
+        "Faith",
         "History",
         "Maritime",
-        "Power & Politics",
-        "Medieval / Gothic",
+        "Power",
+        "Gothic",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -12928,13 +12928,13 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Food & Drink",
+        "Park",
+        "Food",
         "Maritime",
-        "Money & Trade",
-        "Music & Performance",
+        "Commerce",
+        "Performance",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -12975,13 +12975,13 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Engineering & Innovation",
+        "Park",
+        "Engineering",
         "History",
-        "Power & Politics",
-        "Medieval / Gothic",
+        "Power",
+        "Gothic",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -13021,12 +13021,12 @@
       "city": "Lisbon",
       "primaryCategory": "history",
       "tags": [
-        "Monument & Memorial",
+        "Monument",
         "Art",
         "History",
         "Literature",
-        "Music & Performance",
-        "Power & Politics"
+        "Performance",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -13067,11 +13067,11 @@
       "city": "Lisbon",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Museum",
+        "Architecture",
+        "Engineering",
         "History",
-        "Power & Politics",
+        "Power",
         "Baroque"
       ],
       "priceUSD": 0
@@ -13112,12 +13112,12 @@
       "city": "Lisbon",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "History",
         "Maritime",
-        "Music & Performance",
-        "Power & Politics"
+        "Performance",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -13158,13 +13158,13 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "Engineering",
+        "Food",
         "History",
         "Maritime",
-        "Music & Performance",
+        "Performance",
         "Public Art"
       ],
       "priceUSD": 0
@@ -13182,12 +13182,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victoria-and-albert-museum_4.webp"
       ],
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Fashion & Retail",
-        "Food & Drink",
-        "Power & Politics"
+        "Fashion",
+        "Food",
+        "Power"
       ],
       "stops": [
         {
@@ -13232,9 +13232,9 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/natural-history-museum_7.webp"
       ],
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Museum",
+        "Architecture",
+        "Faith",
         "History"
       ],
       "stops": [
@@ -13278,7 +13278,7 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/science-museum_5.webp"
       ],
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art"
       ],
       "stops": [
@@ -13323,11 +13323,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-albert-hall_6.webp"
       ],
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Engineering & Innovation",
-        "Music & Performance",
-        "Power & Politics"
+        "Civic",
+        "Venue",
+        "Engineering",
+        "Performance",
+        "Power"
       ],
       "stops": [
         {
@@ -13370,14 +13370,14 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albert-memorial_5.webp"
       ],
       "tags": [
-        "Monument & Memorial",
-        "Tower & Skyscraper",
-        "Architecture & Design",
+        "Monument",
+        "Tower",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Faith",
         "History",
-        "Medieval / Gothic",
+        "Gothic",
         "Designed by a Master",
         "Green Escape",
         "Giles Gilbert Scott"
@@ -13423,10 +13423,10 @@
       ],
       "tags": [
         "Bridge",
-        "Shop & Flagship",
-        "Architecture & Design",
-        "Fashion & Retail",
-        "Power & Politics"
+        "Notable Building",
+        "Architecture",
+        "Fashion",
+        "Power"
       ],
       "stops": [
         {
@@ -13471,10 +13471,10 @@
       ],
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
-        "Immigration & Community",
+        "Architecture",
+        "Engineering",
+        "Faith",
+        "Immigration",
         "Baroque",
         "Victorian"
       ],
@@ -13520,8 +13520,8 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chelsea-physic-garden_6.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Faith & Spirituality",
+        "Park",
+        "Faith",
         "History",
         "Green Escape"
       ],
@@ -13569,7 +13569,7 @@
         "Notable Building",
         "History",
         "Maritime",
-        "Power & Politics",
+        "Power",
         "Green Escape"
       ],
       "stops": [
@@ -13658,14 +13658,14 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-royal-naval-college_6.webp"
       ],
       "tags": [
-        "Civic & Government",
+        "Civic",
         "Religious Building",
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Venue",
+        "Architecture",
+        "Engineering",
+        "Faith",
         "Maritime",
-        "Power & Politics",
+        "Power",
         "Baroque",
         "Designed by a Master",
         "Green Escape",
@@ -13711,8 +13711,8 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Georgian / Neoclassical",
+        "Architecture",
+        "Neoclassical",
         "Designed by a Master",
         "Green Escape",
         "Inigo Jones"
@@ -13758,9 +13758,9 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/national-maritime-museum_5.webp"
       ],
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Maritime",
-        "Power & Politics",
+        "Power",
         "Green Escape"
       ],
       "stops": [
@@ -13803,9 +13803,9 @@
       ],
       "tags": [
         "Notable Building",
-        "Engineering & Innovation",
+        "Engineering",
         "Maritime",
-        "Money & Trade",
+        "Commerce",
         "Victorian",
         "Green Escape",
         "Hidden Gem"
@@ -13848,11 +13848,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/christ-church-spitalfields_2.webp"
       ],
       "tags": [
-        "Park & Garden",
+        "Park",
         "Religious Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Immigration & Community",
+        "Architecture",
+        "Faith",
+        "Immigration",
         "Baroque",
         "Green Escape"
       ],
@@ -13898,10 +13898,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/brick-lane_6.webp"
       ],
       "tags": [
-        "Street & District",
+        "District",
         "Art",
-        "Food & Drink",
-        "Immigration & Community"
+        "Food",
+        "Immigration"
       ],
       "stops": [
         {
@@ -13941,12 +13941,12 @@
       "tags": [
         "Notable Building",
         "Art",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Faith",
+        "Food",
         "History",
-        "Immigration & Community",
-        "Music & Performance",
-        "Georgian / Neoclassical",
+        "Immigration",
+        "Performance",
+        "Neoclassical",
         "Hidden Gem"
       ],
       "stops": [
@@ -13990,11 +13990,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-spitalfields-market_5.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Park & Garden",
-        "Food & Drink",
+        "Market",
+        "Park",
+        "Food",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Victorian",
         "Green Escape"
       ],
@@ -14038,9 +14038,9 @@
       ],
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Hidden Gem"
       ],
       "stops": [
@@ -14083,11 +14083,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/columbia-road_4.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Street & District",
+        "Market",
+        "District",
         "Art",
-        "Food & Drink",
-        "Money & Trade",
+        "Food",
+        "Commerce",
         "Victorian",
         "Green Escape"
       ],
@@ -14130,11 +14130,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/whitechapel-gallery_3.webp"
       ],
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Religious Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History"
       ],
       "stops": [
@@ -14177,9 +14177,9 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wiltons-music-hall_4.webp"
       ],
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Music & Performance",
+        "Civic",
+        "Venue",
+        "Performance",
         "Victorian"
       ],
       "stops": [
@@ -14246,9 +14246,9 @@
       "city": "Lisbon",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "District",
+        "Architecture",
+        "Faith",
         "History",
         "Maritime"
       ],
@@ -14291,14 +14291,14 @@
       "city": "Lisbon",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "District",
+        "Architecture",
+        "Engineering",
+        "Food",
         "History",
-        "Music & Performance",
+        "Performance",
         "Contemporary",
-        "Georgian / Neoclassical",
+        "Neoclassical",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -14340,9 +14340,9 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Park",
+        "Architecture",
+        "Engineering",
         "History",
         "Maritime",
         "Green Escape"
@@ -14387,13 +14387,13 @@
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History",
-        "Music & Performance",
-        "Power & Politics",
-        "War & Conflict",
+        "Performance",
+        "Power",
+        "War",
         "Baroque"
       ],
       "priceUSD": 0
@@ -14435,10 +14435,10 @@
       "primaryCategory": "architecture",
       "tags": [
         "Bridge",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Power & Politics",
+        "Engineering",
+        "Power",
         "Art Deco"
       ],
       "priceUSD": 0
@@ -14480,10 +14480,10 @@
       "primaryCategory": "architecture",
       "tags": [
         "Bridge",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Money & Trade",
-        "Music & Performance"
+        "Architecture",
+        "Engineering",
+        "Commerce",
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -14524,16 +14524,16 @@
       "city": "Hong Kong",
       "primaryCategory": "architecture",
       "tags": [
-        "Civic & Government",
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Immigration & Community",
+        "Civic",
+        "Tower",
+        "Architecture",
+        "Immigration",
         "Maritime",
-        "Money & Trade",
-        "Power & Politics",
+        "Commerce",
+        "Power",
         "Modernist",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "I. M. Pei",
         "Norman Foster"
       ],
@@ -14575,8 +14575,8 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "War & Conflict",
+        "District",
+        "War",
         "Victorian",
         "Hidden Gem"
       ],
@@ -14621,9 +14621,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Maritime",
-        "Money & Trade",
+        "Commerce",
         "Modernist",
         "Designed by a Master",
         "Norman Foster"
@@ -14669,13 +14669,13 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Maritime",
-        "Power & Politics"
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -14716,14 +14716,14 @@
       "city": "Hong Kong",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Immigration & Community",
+        "Immigration",
         "Maritime",
         "Contemporary",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Herzog & de Meuron"
       ],
       "priceUSD": 0
@@ -14766,10 +14766,10 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Power & Politics",
+        "Architecture",
+        "Power",
         "Modernist",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -14809,13 +14809,13 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Crime & Scandal",
+        "District",
+        "Architecture",
+        "Crime",
         "History",
-        "Immigration & Community",
-        "Money & Trade",
-        "War & Conflict",
+        "Immigration",
+        "Commerce",
+        "War",
         "Colonial",
         "Hidden Gem"
       ],
@@ -14859,15 +14859,15 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Tower & Skyscraper",
-        "Crime & Scandal",
-        "Fashion & Retail",
-        "Food & Drink",
+        "District",
+        "Tower",
+        "Crime",
+        "Fashion",
+        "Food",
         "History",
         "Maritime",
-        "Power & Politics",
-        "War & Conflict",
+        "Power",
+        "War",
         "Colonial",
         "Victorian"
       ],
@@ -14910,14 +14910,14 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Market & Arcade",
-        "Street & District",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Engineering & Innovation",
-        "Food & Drink",
-        "Money & Trade",
-        "War & Conflict",
+        "Market",
+        "District",
+        "Architecture",
+        "Remembrance",
+        "Engineering",
+        "Food",
+        "Commerce",
+        "War",
         "Modernist"
       ],
       "priceUSD": 0
@@ -14958,13 +14958,13 @@
       "city": "Hong Kong",
       "primaryCategory": "architecture",
       "tags": [
-        "Monument & Memorial",
+        "Monument",
         "Public Square",
-        "Street & District",
-        "Architecture & Design",
-        "Power & Politics",
+        "District",
+        "Architecture",
+        "Power",
         "Colonial",
-        "Georgian / Neoclassical"
+        "Neoclassical"
       ],
       "priceUSD": 0
     },
@@ -15004,11 +15004,11 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Market & Arcade",
-        "Food & Drink",
-        "Money & Trade",
+        "Market",
+        "Food",
+        "Commerce",
         "Colonial",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -15049,14 +15049,14 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Architecture",
+        "Engineering",
+        "Faith",
         "History",
-        "Power & Politics",
-        "War & Conflict",
+        "Power",
+        "War",
         "Colonial",
-        "Georgian / Neoclassical",
+        "Neoclassical",
         "Victorian"
       ],
       "priceUSD": 0
@@ -15098,11 +15098,11 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
         "History",
-        "Money & Trade",
-        "Music & Performance",
+        "Commerce",
+        "Performance",
         "Colonial",
         "Victorian"
       ],
@@ -15144,9 +15144,9 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Food & Drink",
-        "Money & Trade"
+        "District",
+        "Food",
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -15186,9 +15186,9 @@
       "city": "Hong Kong",
       "primaryCategory": "history",
       "tags": [
-        "Street & District",
-        "Death & Remembrance",
-        "Food & Drink",
+        "District",
+        "Remembrance",
+        "Food",
         "History",
         "Colonial",
         "Victorian"
@@ -15233,9 +15233,9 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "History",
-        "War & Conflict",
+        "War",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -15276,9 +15276,9 @@
       "city": "Hong Kong",
       "primaryCategory": "history",
       "tags": [
-        "Tower & Skyscraper",
+        "Tower",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "History"
       ],
       "priceUSD": 0
@@ -15317,11 +15317,11 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Market & Arcade",
-        "Food & Drink",
+        "Market",
+        "Food",
         "Literature",
-        "Money & Trade",
-        "Power & Politics"
+        "Commerce",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -15360,11 +15360,11 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
-        "Food & Drink",
+        "Food",
         "History",
         "Maritime",
-        "Music & Performance",
-        "Power & Politics"
+        "Performance",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -15406,7 +15406,7 @@
       "tags": [
         "Notable Building",
         "Art",
-        "Food & Drink",
+        "Food",
         "History",
         "Literature"
       ],
@@ -15450,12 +15450,12 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Immigration & Community",
-        "Money & Trade",
-        "Power & Politics",
-        "War & Conflict",
+        "Immigration",
+        "Commerce",
+        "Power",
+        "War",
         "Colonial"
       ],
       "priceUSD": 0
@@ -15497,8 +15497,8 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Money & Trade",
+        "Architecture",
+        "Commerce",
         "Brutalist"
       ],
       "priceUSD": 0
@@ -15538,8 +15538,8 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Waterfront",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Engineering",
+        "Faith",
         "History"
       ],
       "priceUSD": 0
@@ -15586,10 +15586,10 @@
         "Notable Building",
         "Art",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Colonial",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -15629,13 +15629,13 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "Art",
         "History",
-        "Immigration & Community",
-        "Power & Politics",
-        "War & Conflict"
+        "Immigration",
+        "Power",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -15677,7 +15677,7 @@
       "tags": [
         "Religious Building",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History",
         "Public Art"
       ],
@@ -15720,7 +15720,7 @@
       "primaryCategory": "hiddenGems",
       "tags": [
         "Notable Building",
-        "Faith & Spirituality",
+        "Faith",
         "History",
         "Maritime",
         "Green Escape",
@@ -15768,9 +15768,9 @@
         "Notable Building",
         "History",
         "Maritime",
-        "Money & Trade",
-        "Power & Politics",
-        "Viewpoint & Panorama"
+        "Commerce",
+        "Power",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -15811,12 +15811,12 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Waterfront",
-        "Crime & Scandal",
+        "Crime",
         "History",
         "Maritime",
-        "Money & Trade",
+        "Commerce",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -15860,14 +15860,14 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Tower & Skyscraper",
-        "Architecture & Design",
+        "District",
+        "Tower",
+        "Architecture",
         "Art",
-        "Crime & Scandal",
+        "Crime",
         "History",
         "Literature",
-        "Music & Performance",
+        "Performance",
         "Contemporary",
         "Victorian",
         "Designed by a Master",
@@ -15911,13 +15911,13 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Market & Arcade",
+        "Market",
         "Religious Building",
-        "Street & District",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "District",
+        "Faith",
+        "Food",
         "Maritime",
-        "Music & Performance"
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -15958,10 +15958,10 @@
       "city": "Hong Kong",
       "primaryCategory": "architecture",
       "tags": [
-        "Tower & Skyscraper",
-        "Architecture & Design",
+        "Tower",
+        "Architecture",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Designed by a Master",
         "I. M. Pei",
         "Norman Foster",
@@ -16007,7 +16007,7 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith & Spirituality"
+        "Faith"
       ],
       "priceUSD": 0
     },
@@ -16047,9 +16047,9 @@
       "tags": [
         "Waterfront",
         "Maritime",
-        "Money & Trade",
+        "Commerce",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "I. M. Pei"
       ],
       "priceUSD": 0
@@ -16091,12 +16091,12 @@
       "city": "Hong Kong",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
+        "Park",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Maritime",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -16136,13 +16136,13 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Market & Arcade",
-        "Fashion & Retail",
-        "Food & Drink",
+        "Market",
+        "Fashion",
+        "Food",
         "History",
         "Maritime",
-        "Money & Trade",
-        "Music & Performance"
+        "Commerce",
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -16183,11 +16183,11 @@
       "city": "Hong Kong",
       "primaryCategory": "musicAndPerformance",
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
+        "Venue",
+        "Architecture",
         "Art",
-        "Immigration & Community",
-        "Music & Performance"
+        "Immigration",
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -16228,9 +16228,9 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Park & Garden",
-        "Street & District",
-        "Food & Drink",
+        "Park",
+        "District",
+        "Food",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -16271,10 +16271,10 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
+        "District",
         "Waterfront",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "Engineering",
+        "Food",
         "History"
       ],
       "priceUSD": 0
@@ -16318,9 +16318,9 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Maritime"
       ],
       "priceUSD": 0
@@ -16363,13 +16363,13 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Maritime",
-        "Money & Trade",
-        "Power & Politics",
-        "War & Conflict",
+        "Commerce",
+        "Power",
+        "War",
         "Colonial"
       ],
       "priceUSD": 0
@@ -16412,9 +16412,9 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Waterfront",
-        "Food & Drink",
+        "Food",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Maritime"
       ],
       "priceUSD": 0
@@ -16456,10 +16456,10 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
-        "Food & Drink",
-        "Immigration & Community",
-        "Power & Politics",
-        "Viewpoint & Panorama"
+        "Food",
+        "Immigration",
+        "Power",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -16499,14 +16499,14 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Market & Arcade",
-        "Street & District",
+        "Market",
+        "District",
         "Art",
-        "Crime & Scandal",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Crime",
+        "Faith",
+        "Food",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Maritime",
         "Colonial"
       ],
@@ -16548,12 +16548,12 @@
       "tags": [
         "Public Square",
         "Religious Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Faith",
         "History",
-        "Money & Trade"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -16577,11 +16577,11 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Fashion & Retail",
+        "Architecture",
+        "Engineering",
+        "Fashion",
         "Literature",
-        "Medieval / Gothic",
+        "Gothic",
         "Victorian",
         "Designed by a Master",
         "Giles Gilbert Scott"
@@ -16626,8 +16626,8 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coal-drops-yard_4.webp"
       ],
       "tags": [
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "History",
         "Victorian",
         "Designed by a Master",
@@ -16673,11 +16673,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/regents-park_4.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "Art",
-        "Music & Performance",
-        "Power & Politics",
+        "Performance",
+        "Power",
         "Green Escape"
       ],
       "kind": "single",
@@ -16722,12 +16722,12 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/primrose-hill_6.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Engineering & Innovation",
+        "Park",
+        "Engineering",
         "History",
         "Literature",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "kind": "single",
       "stops": [
@@ -16769,8 +16769,8 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/london-zoo_4.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "History",
         "Modernist",
         "Green Escape"
@@ -16816,11 +16816,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/camden-market_5.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Food & Drink",
-        "Money & Trade",
-        "Music & Performance",
-        "Georgian / Neoclassical"
+        "Market",
+        "Food",
+        "Commerce",
+        "Performance",
+        "Neoclassical"
       ],
       "kind": "single",
       "stops": [
@@ -16865,11 +16865,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/highgate-cemetery_7.webp"
       ],
       "tags": [
-        "Park & Garden",
-        "Death & Remembrance",
-        "Faith & Spirituality",
-        "Fashion & Retail",
-        "Music & Performance",
+        "Park",
+        "Remembrance",
+        "Faith",
+        "Fashion",
+        "Performance",
         "Victorian",
         "Green Escape"
       ],
@@ -16957,7 +16957,7 @@
       ],
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
+        "Faith",
         "History"
       ],
       "kind": "single",
@@ -17004,7 +17004,7 @@
         "Notable Building",
         "Art",
         "History",
-        "Power & Politics"
+        "Power"
       ],
       "kind": "single",
       "stops": [
@@ -17052,11 +17052,11 @@
       ],
       "tags": [
         "Religious Building",
-        "Death & Remembrance",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Engineering",
+        "Faith",
         "History",
-        "Power & Politics",
+        "Power",
         "Green Escape"
       ],
       "kind": "single",
@@ -17100,11 +17100,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/portobello-road_5.webp"
       ],
       "tags": [
-        "Market & Arcade",
-        "Street & District",
-        "Food & Drink",
-        "Immigration & Community",
-        "War & Conflict"
+        "Market",
+        "District",
+        "Food",
+        "Immigration",
+        "War"
       ],
       "kind": "single",
       "stops": [
@@ -17147,8 +17147,8 @@
       "tags": [
         "Notable Building",
         "Art",
-        "Engineering & Innovation",
-        "Power & Politics",
+        "Engineering",
+        "Power",
         "Victorian"
       ],
       "kind": "single",
@@ -17192,10 +17192,10 @@
       ],
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Engineering",
+        "Faith",
         "Art Deco",
         "Designed by a Master",
         "Giles Gilbert Scott"
@@ -17241,8 +17241,8 @@
       ],
       "tags": [
         "Notable Building",
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "History",
         "Maritime",
         "Victorian",
@@ -17290,13 +17290,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/after-the-fire-wrens-city_stop5.webp"
       ],
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "District",
+        "Architecture",
+        "Faith",
         "History",
         "Baroque",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Christopher Wren"
       ],
       "stops": [
@@ -17412,17 +17412,17 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albert-memorial_hero.webp"
       ],
       "tags": [
-        "Civic & Government",
-        "Monument & Memorial",
-        "Museum & Gallery",
-        "Street & District",
-        "Theatre & Venue",
-        "Tower & Skyscraper",
+        "Civic",
+        "Monument",
+        "Museum",
+        "District",
+        "Venue",
+        "Tower",
         "Art",
-        "Death & Remembrance",
+        "Remembrance",
         "History",
-        "Music & Performance",
-        "Power & Politics"
+        "Performance",
+        "Power"
       ],
       "stops": [
         {
@@ -17540,12 +17540,12 @@
       ],
       "tags": [
         "Religious Building",
-        "Theatre & Venue",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Venue",
+        "Remembrance",
+        "Faith",
         "History",
         "Maritime",
-        "Power & Politics"
+        "Power"
       ],
       "stops": [
         {
@@ -17709,11 +17709,11 @@
       "city": "Hong Kong",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art",
-        "Death & Remembrance",
+        "Remembrance",
         "History",
-        "Immigration & Community"
+        "Immigration"
       ],
       "priceUSD": 0
     },
@@ -17755,12 +17755,12 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History",
-        "Music & Performance",
-        "Power & Politics",
+        "Performance",
+        "Power",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -17801,10 +17801,10 @@
       "city": "Hong Kong",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Street & District",
-        "Fashion & Retail",
-        "Food & Drink",
-        "Power & Politics"
+        "District",
+        "Fashion",
+        "Food",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -17846,11 +17846,11 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Religious Building",
-        "Street & District",
-        "Faith & Spirituality",
-        "Food & Drink",
-        "Immigration & Community",
-        "War & Conflict",
+        "District",
+        "Faith",
+        "Food",
+        "Immigration",
+        "War",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -17891,12 +17891,12 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Death & Remembrance",
-        "Engineering & Innovation",
-        "Food & Drink",
+        "District",
+        "Remembrance",
+        "Engineering",
+        "Food",
         "History",
-        "Immigration & Community"
+        "Immigration"
       ],
       "priceUSD": 0
     },
@@ -17938,15 +17938,15 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Food & Drink",
+        "District",
+        "Food",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Maritime",
-        "Money & Trade",
-        "Music & Performance",
-        "Power & Politics",
-        "Viewpoint & Panorama"
+        "Commerce",
+        "Performance",
+        "Power",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -17987,12 +17987,12 @@
       "city": "Hong Kong",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art",
         "History",
-        "Immigration & Community",
+        "Immigration",
         "Literature",
-        "Power & Politics"
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -18015,13 +18015,13 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-south-bank-mile_stop9.webp"
       ],
       "tags": [
-        "Civic & Government",
-        "Food & Drink",
+        "Civic",
+        "Food",
         "Literature",
         "Maritime",
-        "Money & Trade",
-        "Music & Performance",
-        "Power & Politics",
+        "Commerce",
+        "Performance",
+        "Power",
         "Green Escape"
       ],
       "stops": [
@@ -18216,8 +18216,8 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Engineering & Innovation",
-        "Food & Drink"
+        "Engineering",
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -18260,7 +18260,7 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Waterfront",
-        "Engineering & Innovation",
+        "Engineering",
         "Maritime"
       ],
       "priceUSD": 0
@@ -18303,12 +18303,12 @@
       "city": "San Francisco",
       "primaryCategory": "history",
       "tags": [
-        "Park & Garden",
-        "Street & District",
+        "Park",
+        "District",
         "Waterfront",
-        "Crime & Scandal",
+        "Crime",
         "History",
-        "War & Conflict",
+        "War",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -18350,11 +18350,11 @@
       "city": "San Francisco",
       "primaryCategory": "architecture",
       "tags": [
-        "Tower & Skyscraper",
-        "Architecture & Design",
+        "Tower",
+        "Architecture",
         "Art",
-        "Money & Trade",
-        "Power & Politics",
+        "Commerce",
+        "Power",
         "Art Deco",
         "Green Escape",
         "Public Art"
@@ -18399,9 +18399,9 @@
       "city": "San Francisco",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Engineering & Innovation",
-        "Immigration & Community",
+        "District",
+        "Engineering",
+        "Immigration",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -18444,9 +18444,9 @@
       "city": "San Francisco",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Theatre & Venue",
+        "Venue",
         "History",
-        "Music & Performance"
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -18488,9 +18488,9 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Medieval / Gothic"
+        "Architecture",
+        "Faith",
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -18532,7 +18532,7 @@
       "city": "San Francisco",
       "primaryCategory": "hiddenGems",
       "tags": [
-        "Street & District",
+        "District",
         "History",
         "Green Escape",
         "Hidden Gem"
@@ -18575,10 +18575,10 @@
       "primaryCategory": "architecture",
       "tags": [
         "Public Square",
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "Victorian",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -18618,9 +18618,9 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Death & Remembrance",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Engineering",
+        "Faith",
         "History"
       ],
       "priceUSD": 0
@@ -18662,8 +18662,8 @@
       "city": "San Francisco",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Money & Trade",
+        "District",
+        "Commerce",
         "Victorian"
       ],
       "priceUSD": 0
@@ -18705,10 +18705,10 @@
       "city": "San Francisco",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
+        "Park",
         "History",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -18748,10 +18748,10 @@
       "city": "San Francisco",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "History",
-        "Power & Politics",
+        "Power",
         "Designed by a Master",
         "Green Escape",
         "Renzo Piano"
@@ -18837,9 +18837,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Bridge",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "Art Deco"
       ],
       "priceUSD": 0
@@ -18882,9 +18882,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Power & Politics",
+        "Architecture",
+        "Engineering",
+        "Power",
         "Designed by a Master",
         "Bernard Maybeck"
       ],
@@ -18969,7 +18969,7 @@
       "city": "San Francisco",
       "primaryCategory": "history",
       "tags": [
-        "Street & District",
+        "District",
         "Waterfront",
         "History",
         "Maritime",
@@ -19012,7 +19012,7 @@
       "city": "San Francisco",
       "primaryCategory": "literature",
       "tags": [
-        "Street & District",
+        "District",
         "Literature"
       ],
       "priceUSD": 0
@@ -19054,8 +19054,8 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Public Square",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Architecture",
+        "Faith",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -19098,9 +19098,9 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Religious Building",
-        "Street & District",
-        "Faith & Spirituality",
-        "Immigration & Community"
+        "District",
+        "Faith",
+        "Immigration"
       ],
       "priceUSD": 0
     },
@@ -19141,8 +19141,8 @@
       "city": "San Francisco",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Immigration & Community"
+        "District",
+        "Immigration"
       ],
       "priceUSD": 0
     },
@@ -19183,8 +19183,8 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Viewpoint & Panorama"
+        "Architecture",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -19225,9 +19225,9 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Public Square",
-        "Fashion & Retail",
-        "Power & Politics",
-        "War & Conflict"
+        "Fashion",
+        "Power",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -19267,9 +19267,9 @@
       "city": "San Francisco",
       "primaryCategory": "history",
       "tags": [
-        "Street & District",
+        "District",
         "History",
-        "Power & Politics"
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -19312,7 +19312,7 @@
       "city": "San Francisco",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
+        "Museum",
         "Art"
       ],
       "priceUSD": 0
@@ -19353,10 +19353,10 @@
       "city": "San Francisco",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Music & Performance",
+        "Park",
+        "Performance",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -19397,10 +19397,9 @@
       "city": "San Francisco",
       "primaryCategory": "visualArt",
       "tags": [
-        "Street & District",
+        "District",
         "Art",
-        "Power & Politics",
-        "Mission / Spanish Revival",
+        "Power",
         "Public Art"
       ],
       "priceUSD": 0
@@ -19442,11 +19441,11 @@
       "city": "San Francisco",
       "primaryCategory": "musicAndPerformance",
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Music & Performance",
-        "Power & Politics",
+        "Venue",
+        "Architecture",
+        "Engineering",
+        "Performance",
+        "Power",
         "Colonial"
       ],
       "priceUSD": 0
@@ -19531,13 +19530,13 @@
       "city": "San Francisco",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "Designed by a Master",
         "Green Escape",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Herzog & de Meuron"
       ],
       "priceUSD": 0
@@ -19637,10 +19636,10 @@
       "city": "San Francisco",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Immigration & Community"
+        "District",
+        "Architecture",
+        "Engineering",
+        "Immigration"
       ],
       "priceUSD": 0
     },
@@ -19754,8 +19753,8 @@
       "city": "San Francisco",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Music & Performance",
+        "Park",
+        "Performance",
         "Designed by a Master",
         "Green Escape",
         "Renzo Piano"
@@ -19857,9 +19856,9 @@
       "city": "San Francisco",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
+        "District",
         "Art",
-        "Power & Politics",
+        "Power",
         "Public Art"
       ],
       "priceUSD": 0
@@ -19961,7 +19960,7 @@
       "tags": [
         "Waterfront",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "Green Escape",
         "Public Art"
       ],
@@ -20004,12 +20003,12 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Museum & Gallery",
-        "Park & Garden",
-        "Architecture & Design",
+        "Museum",
+        "Park",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
-        "Fashion & Retail",
+        "Remembrance",
+        "Fashion",
         "Designed by a Master",
         "Green Escape",
         "Tadao Ando"
@@ -20053,13 +20052,13 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Food & Drink",
+        "Civic",
+        "Venue",
+        "Architecture",
+        "Food",
         "Maritime",
-        "Money & Trade",
-        "Power & Politics"
+        "Commerce",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -20100,11 +20099,11 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Tower & Skyscraper",
+        "Tower",
         "Waterfront",
-        "Architecture & Design",
-        "Food & Drink",
-        "Viewpoint & Panorama"
+        "Architecture",
+        "Food",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -20145,13 +20144,13 @@
       "city": "Tokyo",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
-        "War & Conflict",
+        "Faith",
+        "War",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -20192,9 +20191,9 @@
       "city": "Tokyo",
       "primaryCategory": "hiddenGems",
       "tags": [
-        "Street & District",
-        "Fashion & Retail",
-        "Food & Drink",
+        "District",
+        "Fashion",
+        "Food",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -20240,10 +20239,10 @@
       "tags": [
         "Bridge",
         "Library",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Fashion & Retail",
+        "Engineering",
+        "Fashion",
         "Literature",
         "Designed by a Master",
         "Kengo Kuma"
@@ -20286,10 +20285,10 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Shop & Flagship",
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Fashion & Retail",
+        "Notable Building",
+        "Tower",
+        "Architecture",
+        "Fashion",
         "Designed by a Master",
         "Kengo Kuma"
       ],
@@ -20333,9 +20332,9 @@
       "city": "Tokyo",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Museum",
+        "Architecture",
+        "Engineering",
         "History",
         "Modernist",
         "Green Escape"
@@ -20379,13 +20378,13 @@
       "city": "Tokyo",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Market & Arcade",
-        "Engineering & Innovation",
-        "Fashion & Retail",
-        "Food & Drink",
+        "Market",
+        "Engineering",
+        "Fashion",
+        "Food",
         "History",
-        "Money & Trade",
-        "Viewpoint & Panorama"
+        "Commerce",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -20427,7 +20426,7 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Contemporary",
         "Designed by a Master",
         "Kenzō Tange",
@@ -20474,14 +20473,14 @@
       "city": "Tokyo",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "History",
-        "Music & Performance",
-        "Medieval / Gothic",
+        "Performance",
+        "Gothic",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -20523,8 +20522,8 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Faith",
         "History"
       ],
       "priceUSD": 0
@@ -20566,8 +20565,8 @@
       "city": "Tokyo",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Monument & Memorial",
-        "War & Conflict"
+        "Monument",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -20609,10 +20608,10 @@
       "city": "Tokyo",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Civic & Government",
-        "Food & Drink",
+        "Civic",
+        "Food",
         "History",
-        "Money & Trade"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -20655,8 +20654,8 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Architecture",
+        "Faith",
         "History"
       ],
       "priceUSD": 0
@@ -20698,10 +20697,10 @@
       "primaryCategory": "history",
       "tags": [
         "Bridge",
-        "Tower & Skyscraper",
+        "Tower",
         "History",
-        "Power & Politics",
-        "War & Conflict"
+        "Power",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -20742,10 +20741,10 @@
       "city": "Tokyo",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Faith & Spirituality",
+        "Park",
+        "Faith",
         "History",
-        "Music & Performance",
+        "Performance",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -20790,10 +20789,10 @@
       "city": "Tokyo",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Fashion & Retail",
-        "Food & Drink",
+        "District",
+        "Architecture",
+        "Fashion",
+        "Food",
         "Designed by a Master",
         "Kengo Kuma"
       ],
@@ -20838,10 +20837,10 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Architecture",
+        "Faith",
         "History",
-        "Power & Politics"
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -20884,10 +20883,10 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Money & Trade",
-        "Power & Politics",
+        "Architecture",
+        "Engineering",
+        "Commerce",
+        "Power",
         "Designed by a Master",
         "Green Escape",
         "Fumihiko Maki"
@@ -20931,10 +20930,10 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "Art",
-        "Fashion & Retail",
+        "Fashion",
         "History"
       ],
       "priceUSD": 0
@@ -20979,8 +20978,8 @@
       "tags": [
         "Notable Building",
         "Art",
-        "Food & Drink",
-        "Immigration & Community",
+        "Food",
+        "Immigration",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -21024,9 +21023,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Fashion & Retail",
+        "Architecture",
+        "Engineering",
+        "Fashion",
         "Designed by a Master",
         "Renzo Piano"
       ],
@@ -21072,11 +21071,11 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Death & Remembrance",
-        "Faith & Spirituality",
-        "Food & Drink",
-        "War & Conflict"
+        "Architecture",
+        "Remembrance",
+        "Faith",
+        "Food",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -21117,10 +21116,10 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Music & Performance",
+        "Performance",
         "Designed by a Master",
         "Kengo Kuma"
       ],
@@ -21166,9 +21165,9 @@
       "tags": [
         "Notable Building",
         "History",
-        "Music & Performance",
-        "Power & Politics",
-        "War & Conflict"
+        "Performance",
+        "Power",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -21210,10 +21209,10 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Park & Garden",
-        "Street & District",
-        "Architecture & Design",
-        "Music & Performance",
+        "Park",
+        "District",
+        "Architecture",
+        "Performance",
         "Designed by a Master",
         "Green Escape",
         "Public Art",
@@ -21262,10 +21261,10 @@
       "city": "Tokyo",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
+        "Remembrance",
         "History",
         "Designed by a Master",
         "Green Escape",
@@ -21310,7 +21309,7 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Contemporary",
         "Designed by a Master",
         "Public Art",
@@ -21356,9 +21355,9 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Food & Drink",
+        "Food",
         "Public Art"
       ],
       "priceUSD": 0
@@ -21401,9 +21400,9 @@
       "city": "Tokyo",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Market & Arcade",
-        "Fashion & Retail",
-        "Food & Drink",
+        "Market",
+        "Fashion",
+        "Food",
         "History"
       ],
       "priceUSD": 0
@@ -21447,8 +21446,8 @@
       "city": "Tokyo",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Market & Arcade",
-        "Food & Drink"
+        "Market",
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -21491,10 +21490,10 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Shop & Flagship",
-        "Architecture & Design",
-        "Fashion & Retail",
-        "Money & Trade",
+        "Notable Building",
+        "Architecture",
+        "Fashion",
+        "Commerce",
         "Designed by a Master",
         "Herzog & de Meuron"
       ],
@@ -21535,7 +21534,7 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design"
+        "Architecture"
       ],
       "priceUSD": 0
     },
@@ -21577,9 +21576,9 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Architecture",
+        "Engineering",
+        "Faith",
         "History"
       ],
       "priceUSD": 0
@@ -21623,8 +21622,8 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Religious Building",
-        "Street & District",
-        "Faith & Spirituality",
+        "District",
+        "Faith",
         "History"
       ],
       "priceUSD": 0
@@ -21669,7 +21668,7 @@
       "tags": [
         "Notable Building",
         "Art",
-        "War & Conflict",
+        "War",
         "Contemporary"
       ],
       "priceUSD": 0
@@ -21712,8 +21711,8 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Faith",
+        "Food",
         "History"
       ],
       "priceUSD": 0
@@ -21752,11 +21751,11 @@
       "city": "Tokyo",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Market & Arcade",
-        "Street & District",
-        "Food & Drink",
+        "Market",
+        "District",
+        "Food",
         "History",
-        "Money & Trade"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -21797,7 +21796,7 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Public Square",
-        "Street & District",
+        "District",
         "History"
       ],
       "priceUSD": 0
@@ -21839,10 +21838,10 @@
       "city": "Tokyo",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Market & Arcade",
-        "Street & District",
-        "Death & Remembrance",
-        "Food & Drink",
+        "Market",
+        "District",
+        "Remembrance",
+        "Food",
         "History"
       ],
       "priceUSD": 0
@@ -21883,10 +21882,10 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Power & Politics",
-        "Viewpoint & Panorama"
+        "District",
+        "Architecture",
+        "Power",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -21927,12 +21926,12 @@
       "city": "Tokyo",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Street & District",
-        "Crime & Scandal",
-        "Food & Drink",
+        "District",
+        "Crime",
+        "Food",
         "Literature",
-        "Music & Performance",
-        "War & Conflict"
+        "Performance",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -21974,11 +21973,11 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation",
-        "Fashion & Retail",
-        "Music & Performance"
+        "Engineering",
+        "Fashion",
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -22022,10 +22021,10 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Architecture",
+        "Faith",
         "History",
-        "Medieval / Gothic",
+        "Gothic",
         "Modernist",
         "Designed by a Master",
         "Kenzō Tange"
@@ -22069,12 +22068,12 @@
       "city": "Tokyo",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Engineering & Innovation",
+        "Park",
+        "Engineering",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Green Escape",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -22117,10 +22116,10 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Fashion & Retail",
+        "Tower",
+        "Architecture",
+        "Faith",
+        "Fashion",
         "History",
         "Designed by a Master",
         "Kengo Kuma"
@@ -22166,9 +22165,9 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
-        "Food & Drink",
-        "Power & Politics",
-        "War & Conflict"
+        "Food",
+        "Power",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -22211,13 +22210,13 @@
       "city": "Tokyo",
       "primaryCategory": "visualArt",
       "tags": [
-        "Monument & Memorial",
-        "Museum & Gallery",
-        "Tower & Skyscraper",
-        "Architecture & Design",
+        "Monument",
+        "Museum",
+        "Tower",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
-        "War & Conflict",
+        "Remembrance",
+        "War",
         "Designed by a Master",
         "Green Escape",
         "Public Art",
@@ -22262,8 +22261,8 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Faith",
         "History",
         "Literature"
       ],
@@ -22305,10 +22304,10 @@
       "city": "Tokyo",
       "primaryCategory": "hiddenGems",
       "tags": [
-        "Street & District",
-        "Engineering & Innovation",
+        "District",
+        "Engineering",
         "Hidden Gem",
-        "Viewpoint & Panorama"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -22349,10 +22348,10 @@
       "city": "Tokyo",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Food & Drink",
+        "Food",
         "Modernist",
         "Designed by a Master",
         "Kisho Kurokawa"
@@ -22397,11 +22396,11 @@
       "city": "Tokyo",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "History",
-        "War & Conflict",
+        "War",
         "Modernist",
         "Designed by a Master",
         "Green Escape",
@@ -22447,10 +22446,10 @@
       "city": "Tokyo",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Food & Drink",
+        "Food",
         "Designed by a Master",
         "SANAA"
       ],
@@ -22494,9 +22493,9 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Fashion & Retail"
+        "District",
+        "Architecture",
+        "Fashion"
       ],
       "priceUSD": 0
     },
@@ -22538,11 +22537,11 @@
       "city": "Tokyo",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Park",
+        "Remembrance",
+        "Faith",
         "History",
-        "Money & Trade",
+        "Commerce",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -22586,11 +22585,11 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Architecture",
+        "Engineering",
         "Maritime",
-        "Music & Performance",
-        "Power & Politics"
+        "Performance",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -22631,13 +22630,13 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Crime & Scandal",
-        "Faith & Spirituality",
-        "Power & Politics",
-        "Medieval / Gothic",
+        "Architecture",
+        "Crime",
+        "Faith",
+        "Power",
+        "Gothic",
         "Designed by a Master",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Kenzō Tange"
       ],
       "priceUSD": 0
@@ -22680,13 +22679,13 @@
       "city": "Tokyo",
       "primaryCategory": "history",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Museum",
+        "Architecture",
+        "Engineering",
+        "Faith",
         "History",
-        "Power & Politics",
-        "Georgian / Neoclassical"
+        "Power",
+        "Neoclassical"
       ],
       "priceUSD": 0
     },
@@ -22727,8 +22726,8 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
+        "Architecture",
+        "Faith",
         "Green Escape",
         "Hidden Gem",
         "Public Art"
@@ -22775,7 +22774,7 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
         "History",
         "Designed by a Master",
@@ -22820,14 +22819,14 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
-        "Engineering & Innovation",
+        "Park",
+        "Architecture",
+        "Engineering",
         "Contemporary",
         "Designed by a Master",
         "Green Escape",
         "Public Art",
-        "Viewpoint & Panorama",
+        "Viewpoint",
         "Shigeru Ban"
       ],
       "priceUSD": 0
@@ -22870,10 +22869,10 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
+        "Venue",
+        "Architecture",
+        "Engineering",
+        "Faith",
         "Contemporary",
         "Designed by a Master",
         "Kenzō Tange"
@@ -22922,10 +22921,10 @@
       "city": "Toronto",
       "primaryCategory": "architecture",
       "tags": [
-        "Tower & Skyscraper",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Viewpoint & Panorama"
+        "Tower",
+        "Architecture",
+        "Engineering",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -22968,9 +22967,9 @@
       "city": "Toronto",
       "primaryCategory": "architecture",
       "tags": [
-        "Theatre & Venue",
-        "Architecture & Design",
-        "Engineering & Innovation"
+        "Venue",
+        "Architecture",
+        "Engineering"
       ],
       "priceUSD": 0
     },
@@ -23014,7 +23013,7 @@
       "city": "Toronto",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
+        "Park",
         "History",
         "Green Escape",
         "Hidden Gem"
@@ -23062,10 +23061,10 @@
       "tags": [
         "Waterfront",
         "Art",
-        "Engineering & Innovation",
+        "Engineering",
         "Maritime",
-        "Music & Performance",
-        "Power & Politics"
+        "Performance",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -23110,8 +23109,8 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Waterfront",
-        "Immigration & Community",
-        "Viewpoint & Panorama"
+        "Immigration",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -23155,7 +23154,7 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Faith & Spirituality",
+        "Faith",
         "Maritime",
         "Beaux-Arts"
       ],
@@ -23199,8 +23198,8 @@
       "city": "Toronto",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
+        "District",
+        "Architecture",
         "Modernist",
         "Designed by a Master",
         "Mies van der Rohe"
@@ -23245,11 +23244,11 @@
       "city": "Toronto",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
-        "Money & Trade",
+        "Civic",
+        "Venue",
+        "Engineering",
+        "Faith",
+        "Commerce",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -23294,9 +23293,9 @@
       "city": "Toronto",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Market & Arcade",
-        "Food & Drink",
-        "Power & Politics"
+        "Market",
+        "Food",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -23338,10 +23337,10 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Tower & Skyscraper",
-        "Architecture & Design",
+        "Tower",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
+        "Remembrance",
         "Victorian",
         "Public Art"
       ],
@@ -23384,11 +23383,11 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Fashion & Retail",
+        "Architecture",
+        "Fashion",
         "History",
-        "Money & Trade",
-        "War & Conflict"
+        "Commerce",
+        "War"
       ],
       "priceUSD": 0
     },
@@ -23429,11 +23428,11 @@
       "city": "Kyoto",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Fashion & Retail",
+        "District",
+        "Fashion",
         "History",
-        "Money & Trade",
-        "Power & Politics"
+        "Commerce",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -23477,9 +23476,9 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Food & Drink"
+        "Architecture",
+        "Faith",
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -23517,7 +23516,7 @@
       "city": "Kyoto",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park & Garden",
+        "Park",
         "History",
         "Green Escape"
       ],
@@ -23562,7 +23561,7 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art"
       ],
       "priceUSD": 0
@@ -23607,8 +23606,8 @@
       "city": "Ōyamazaki",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
         "Designed by a Master",
         "Tadao Ando"
@@ -23651,9 +23650,9 @@
       "city": "Kyoto",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Street & District",
-        "Food & Drink",
-        "Viewpoint & Panorama"
+        "District",
+        "Food",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -23695,9 +23694,9 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Food & Drink"
+        "Architecture",
+        "Faith",
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -23738,8 +23737,8 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
-        "Viewpoint & Panorama"
+        "Faith",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -23783,8 +23782,8 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
-        "Food & Drink",
-        "Music & Performance"
+        "Food",
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -23829,12 +23828,12 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Death & Remembrance",
-        "Faith & Spirituality",
+        "Remembrance",
+        "Faith",
         "History",
-        "War & Conflict",
+        "War",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -23877,9 +23876,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Engineering & Innovation"
+        "Engineering"
       ],
       "priceUSD": 0
     },
@@ -23922,7 +23921,7 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith & Spirituality"
+        "Faith"
       ],
       "priceUSD": 0
     },
@@ -23964,8 +23963,8 @@
       "city": "Kyoto",
       "primaryCategory": "visualArt",
       "tags": [
-        "Park & Garden",
-        "Architecture & Design",
+        "Park",
+        "Architecture",
         "Art",
         "Designed by a Master",
         "Green Escape",
@@ -24012,9 +24011,9 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
-        "War & Conflict",
-        "Viewpoint & Panorama"
+        "Faith",
+        "War",
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -24057,11 +24056,11 @@
       "tags": [
         "Notable Building",
         "Art",
-        "Engineering & Innovation",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Engineering",
+        "Faith",
+        "Food",
         "History",
-        "Music & Performance"
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -24104,7 +24103,7 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith & Spirituality",
+        "Faith",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -24147,7 +24146,7 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
-        "Food & Drink"
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -24189,13 +24188,13 @@
       "city": "Kyoto",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
+        "Faith",
         "History",
         "Beaux-Arts",
-        "Medieval / Gothic"
+        "Gothic"
       ],
       "priceUSD": 0
     },
@@ -24237,13 +24236,13 @@
       "city": "Kyoto",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "District",
+        "Architecture",
+        "Faith",
+        "Food",
         "History",
-        "Money & Trade",
-        "Power & Politics"
+        "Commerce",
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -24286,10 +24285,10 @@
       "city": "Kyoto",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Civic & Government",
-        "Theatre & Venue",
-        "Fashion & Retail",
-        "Food & Drink",
+        "Civic",
+        "Venue",
+        "Fashion",
+        "Food",
         "Contemporary"
       ],
       "priceUSD": 0
@@ -24332,8 +24331,8 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Faith",
+        "Food",
         "History"
       ],
       "priceUSD": 0
@@ -24375,11 +24374,11 @@
       "city": "Kibune",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Street & District",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "District",
+        "Faith",
+        "Food",
         "History",
-        "Money & Trade"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -24423,9 +24422,9 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture & Design",
+        "Architecture",
         "Art",
-        "Faith & Spirituality"
+        "Faith"
       ],
       "priceUSD": 0
     },
@@ -24465,14 +24464,14 @@
       "city": "Kyoto",
       "primaryCategory": "visualArt",
       "tags": [
-        "Museum & Gallery",
-        "Architecture & Design",
+        "Museum",
+        "Architecture",
         "Art",
-        "Faith & Spirituality",
-        "Food & Drink",
+        "Faith",
+        "Food",
         "History",
-        "Music & Performance",
-        "Power & Politics",
+        "Performance",
+        "Power",
         "Contemporary"
       ],
       "priceUSD": 0
@@ -24515,10 +24514,10 @@
       "city": "Kyoto",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Street & District",
-        "Faith & Spirituality",
-        "Immigration & Community",
-        "Power & Politics",
+        "District",
+        "Faith",
+        "Immigration",
+        "Power",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -24562,10 +24561,10 @@
       "city": "Ōmi-Hachiman",
       "primaryCategory": "architecture",
       "tags": [
-        "Street & District",
-        "Architecture & Design",
-        "Engineering & Innovation",
-        "Fashion & Retail",
+        "District",
+        "Architecture",
+        "Engineering",
+        "Fashion",
         "History",
         "Green Escape"
       ],
@@ -24612,9 +24611,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Architecture & Design",
-        "Fashion & Retail",
-        "Food & Drink",
+        "Architecture",
+        "Fashion",
+        "Food",
         "History"
       ],
       "priceUSD": 0
@@ -24657,8 +24656,8 @@
       "city": "Wazuka",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Street & District",
-        "Food & Drink"
+        "District",
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -24699,8 +24698,8 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Fashion & Retail",
-        "Music & Performance",
+        "Fashion",
+        "Performance",
         "Contemporary"
       ],
       "priceUSD": 0
