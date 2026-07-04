@@ -26,6 +26,10 @@ struct Maker: Codable, Identifiable, Hashable {
     /// predate these keys (the bundled seed / gh-pages mirror) doesn't fail.
     let link2URL: String?
     let link3URL: String?
+    /// Private-account flag (batch D). Optional so older payloads decode fine;
+    /// `isPrivateAccount` reads it with a `false` default. Public = follows
+    /// auto-accept; private = follows land as pending requests.
+    let isPrivate: Bool?
 
     init(
         id: UUID,
@@ -37,7 +41,8 @@ struct Maker: Codable, Identifiable, Hashable {
         link2URL: String? = nil,
         link3URL: String? = nil,
         avatarInitials: String? = nil,
-        avatarColor: String? = nil
+        avatarColor: String? = nil,
+        isPrivate: Bool? = nil
     ) {
         self.id = id
         self.displayName = displayName
@@ -49,7 +54,11 @@ struct Maker: Codable, Identifiable, Hashable {
         self.websiteURL = websiteURL
         self.link2URL = link2URL
         self.link3URL = link3URL
+        self.isPrivate = isPrivate
     }
+
+    /// Whether this profile is private (defaults to public when unset).
+    var isPrivateAccount: Bool { isPrivate ?? false }
 
     /// The maker's links in display order (link 1 → 3), dropping any that are
     /// nil/blank. Drives the inline blue links under the bio.

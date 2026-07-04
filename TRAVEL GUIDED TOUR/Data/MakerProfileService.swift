@@ -64,7 +64,8 @@ final class MakerProfileService {
         link3URL: String? = nil,
         avatarURL: String? = nil,
         avatarInitials: String? = nil,
-        avatarColor: String? = nil
+        avatarColor: String? = nil,
+        isPrivate: Bool? = nil
     ) async throws {
         guard let uid = auth.user?.id.uuidString.lowercased() else {
             throw MakerProfileError.notSignedIn
@@ -87,7 +88,9 @@ final class MakerProfileService {
             link2Url: clean(link2URL),
             link3Url: clean(link3URL),
             avatarInitials: clean(avatarInitials),
-            avatarColor: clean(avatarColor)
+            avatarColor: clean(avatarColor),
+            // Keep the existing privacy setting unless the caller changes it.
+            isPrivate: isPrivate ?? myMaker?.isPrivateAccount ?? false
         )
         try await client
             .from("makers")
@@ -149,6 +152,7 @@ struct MakerRow: Codable {
     let websiteUrl: String?
     let link2Url: String?
     let link3Url: String?
+    let isPrivate: Bool?
 
     init(
         id: UUID,
@@ -161,7 +165,8 @@ struct MakerRow: Codable {
         link2Url: String? = nil,
         link3Url: String? = nil,
         avatarInitials: String? = nil,
-        avatarColor: String? = nil
+        avatarColor: String? = nil,
+        isPrivate: Bool? = nil
     ) {
         self.id = id
         self.userId = userId
@@ -174,6 +179,7 @@ struct MakerRow: Codable {
         self.websiteUrl = websiteUrl
         self.link2Url = link2Url
         self.link3Url = link3Url
+        self.isPrivate = isPrivate
     }
 
     enum CodingKeys: String, CodingKey {
@@ -187,6 +193,7 @@ struct MakerRow: Codable {
         case websiteUrl = "website_url"
         case link2Url = "link_2_url"
         case link3Url = "link_3_url"
+        case isPrivate = "is_private"
     }
 
     /// Custom encode so the nullable link columns are written as explicit JSON
@@ -208,6 +215,7 @@ struct MakerRow: Codable {
         try c.encode(websiteUrl, forKey: .websiteUrl)
         try c.encode(link2Url, forKey: .link2Url)
         try c.encode(link3Url, forKey: .link3Url)
+        try c.encode(isPrivate ?? false, forKey: .isPrivate)
     }
 
     var asMaker: Maker {
@@ -221,7 +229,8 @@ struct MakerRow: Codable {
             link2URL: link2Url,
             link3URL: link3Url,
             avatarInitials: avatarInitials,
-            avatarColor: avatarColor
+            avatarColor: avatarColor,
+            isPrivate: isPrivate
         )
     }
 }

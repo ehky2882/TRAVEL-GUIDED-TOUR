@@ -25,6 +25,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
         let auth = AuthService()
         _authService = State(initialValue: auth)
         _makerProfileService = State(initialValue: MakerProfileService(auth: auth))
+        _followService = State(initialValue: FollowService(auth: auth))
     }
 
     @State private var dataService = DataService()
@@ -33,6 +34,8 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// the Profile tab; created/edited via the profile editor. See
     /// `Data/MakerProfileService.swift`.
     @State private var makerProfileService: MakerProfileService
+    /// The follow graph (batch D): follow/unfollow + counts. Shares `AuthService`.
+    @State private var followService: FollowService
     /// The signed-in user's own tours (all statuses) + draft creation. Loaded by
     /// the Profile tab. See `Data/MakerTourService.swift`.
     @State private var makerTourService = MakerTourService()
@@ -113,6 +116,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(dataService)
                     .environment(authService)
                     .environment(makerProfileService)
+                    .environment(followService)
                     .environment(makerTourService)
                     .environment(libraryStore)
                     .environment(locationManager)
