@@ -51,6 +51,11 @@ multi-stop food walks.
 - **Build touch:** `HomeSharedState` gains a `walksOnly: Bool` (or folds into the
   filter state); `displayedTours` / the shelf filter adds `kind == .multiStop`
   when active. Trivial on top of the multi-select filter work.
+- **Future (owner note 2026-07-03):** once multi-stop content grows (e.g. a
+  handful of walks per city — today it's only 10 total), promote "Walks" from a
+  filter to its own curated **"Walks" row** in the shelf list. Same `kind` data;
+  no new plumbing — just add it to the curated shelf set (§3) when there's
+  enough to fill a row.
 
 ---
 
