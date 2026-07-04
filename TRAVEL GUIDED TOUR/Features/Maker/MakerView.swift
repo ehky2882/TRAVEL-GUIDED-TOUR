@@ -712,15 +712,11 @@ struct MakerView: View {
                 Label("Share", systemImage: "square.and.arrow.up")
             }
 
+            // Follow lives on the header button here; the menu item echoes it
+            // for parity with the tour-detail / player menus (self-hides when
+            // signed out).
             Section {
-                // Disabled in V1 — the follow graph (a social feature)
-                // isn't built. Saving (above) is a separate local
-                // bookmark, not a follow. Kept visible to surface the
-                // upcoming feature, matching the tour-detail menu.
-                Button {} label: {
-                    Label("Follow creator", systemImage: "person.badge.plus")
-                }
-                .disabled(true)
+                FollowMenuButton(makerId: maker.id)
             }
 
             Section {

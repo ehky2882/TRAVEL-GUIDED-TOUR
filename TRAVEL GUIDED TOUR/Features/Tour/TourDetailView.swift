@@ -1095,14 +1095,7 @@ struct TourDetailView: View {
             }
 
             Section {
-                Button {
-                    // No-op — kept as a disabled item to surface the
-                    // upcoming "Follow" feature without delivering the
-                    // (unbuilt) follow graph.
-                } label: {
-                    Label("Follow creator", systemImage: "person.badge.plus")
-                }
-                .disabled(true)
+                FollowMenuButton(makerId: tour.makerId)
 
                 Button {
                     showingMaker = true

@@ -257,13 +257,7 @@ struct PlayerView: View {
             }
 
             Section {
-                Button {
-                    // Disabled placeholder — surfaces the planned
-                    // "Follow" feature without the (unbuilt) follow graph.
-                } label: {
-                    Label("Follow creator", systemImage: "person.badge.plus")
-                }
-                .disabled(true)
+                FollowMenuButton(makerId: tour.makerId)
 
                 Button {
                     showingMaker = true
