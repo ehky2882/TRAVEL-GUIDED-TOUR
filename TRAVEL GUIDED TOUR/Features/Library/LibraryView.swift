@@ -371,6 +371,8 @@ private struct EmptyStateLayout: View {
                 .foregroundStyle(AtlasColors.secondaryText)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
+            // Signed-out only (self-hiding): encourage creating an account.
+            JoinDozentPrompt(showIcon: false)
         }
     }
 }

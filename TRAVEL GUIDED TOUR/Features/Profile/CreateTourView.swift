@@ -31,6 +31,11 @@ struct CreateTourView: View {
 
     private enum Field { case title, short, long, tags }
 
+    // Max lengths, with a live "N left" countdown by each field.
+    private static let titleLimit = 60
+    private static let shortLimit = 100
+    private static let longLimit = 600
+
     private var trimmedTitle: String {
         title.trimmingCharacters(in: .whitespacesAndNewlines)
     }
@@ -44,39 +49,62 @@ struct CreateTourView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
-                    fieldLabel("TITLE")
-                    TextField("e.g. The Old Custom House", text: $title)
-                        .focused($focused, equals: .title)
-                        .fieldStyle()
+                VStack(alignment: .leading, spacing: AtlasSpacing.md) {
+                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                        fieldLabel("TITLE", remaining: Self.titleLimit - title.count)
+                        TextField("e.g. The Old Custom House", text: $title)
+                            .focused($focused, equals: .title)
+                            .onChange(of: title) { _, new in
+                                if new.count > Self.titleLimit { title = String(new.prefix(Self.titleLimit)) }
+                            }
+                            .fieldStyle()
+                    }
 
-                    fieldLabel("SHORT DESCRIPTION")
-                    TextField("One line shown on cards", text: $shortDescription)
-                        .focused($focused, equals: .short)
-                        .fieldStyle()
+                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                        fieldLabel("SHORT DESCRIPTION", remaining: Self.shortLimit - shortDescription.count)
+                        TextField("One line shown on cards", text: $shortDescription)
+                            .focused($focused, equals: .short)
+                            .onChange(of: shortDescription) { _, new in
+                                if new.count > Self.shortLimit { shortDescription = String(new.prefix(Self.shortLimit)) }
+                            }
+                            .fieldStyle()
+                    }
 
-                    fieldLabel("DESCRIPTION")
-                    TextField("What this tour is about", text: $longDescription, axis: .vertical)
-                        .lineLimit(3...8)
-                        .focused($focused, equals: .long)
-                        .fieldStyle()
+                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                        fieldLabel("DESCRIPTION", remaining: Self.longLimit - longDescription.count)
+                        TextField("What this tour is about", text: $longDescription, axis: .vertical)
+                            .lineLimit(3...6)
+                            .focused($focused, equals: .long)
+                            .onChange(of: longDescription) { _, new in
+                                if new.count > Self.longLimit { longDescription = String(new.prefix(Self.longLimit)) }
+                            }
+                            .fieldStyle()
+                    }
 
-                    fieldLabel("CATEGORY")
-                    categoryPicker
+                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                        fieldLabel("CATEGORY")
+                        categoryPicker
+                    }
 
-                    fieldLabel("TAGS (COMMA-SEPARATED, OPTIONAL)")
-                    TextField("history, waterfront", text: $tagsText)
-                        .textInputAutocapitalization(.never)
-                        .autocorrectionDisabled()
-                        .focused($focused, equals: .tags)
-                        .fieldStyle()
+                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                        fieldLabel("TAGS (COMMA-SEPARATED, OPTIONAL)")
+                        TextField("history, waterfront", text: $tagsText)
+                            .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
+                            .focused($focused, equals: .tags)
+                            .fieldStyle()
+                    }
 
-                    fieldLabel("LOCATION — PAN TO PLACE THE PIN")
-                    mapSection
+                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                        fieldLabel("LOCATION — PAN TO PLACE THE PIN")
+                        mapSection
+                    }
 
-                    fieldLabel("TRIGGER RADIUS — \(Int(radius)) m")
-                    Slider(value: $radius, in: 20...200, step: 5)
-                        .tint(AtlasColors.mapPin)
+                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                        fieldLabel("TRIGGER RADIUS — \(Int(radius)) m")
+                        Slider(value: $radius, in: 20...200, step: 5)
+                            .tint(AtlasColors.mapPin)
+                    }
 
                     if let errorMessage {
                         Text(errorMessage)
@@ -189,10 +217,20 @@ struct CreateTourView: View {
         .disabled(!canSave)
     }
 
-    private func fieldLabel(_ text: String) -> some View {
-        Text(text)
-            .font(AtlasTypography.caption)
-            .foregroundStyle(AtlasColors.secondaryText)
+    /// A field label, optionally with a right-aligned "N left" countdown that
+    /// turns red as the limit approaches.
+    private func fieldLabel(_ text: String, remaining: Int? = nil) -> some View {
+        HStack {
+            Text(text)
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+            if let remaining {
+                Spacer()
+                Text("\(max(0, remaining)) left")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(remaining <= 8 ? AtlasColors.mapPin : AtlasColors.tertiaryText)
+            }
+        }
     }
 
     // MARK: - Actions

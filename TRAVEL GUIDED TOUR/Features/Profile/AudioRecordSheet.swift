@@ -12,6 +12,7 @@ struct AudioRecordSheet: View {
 
     @Environment(\.dismiss) private var dismiss
     @State private var recorder = AudioRecorder()
+    @State private var review = RecordingReviewPlayer()
     @State private var recordedURL: URL?
     @State private var permissionDenied = false
 
@@ -36,7 +37,24 @@ struct AudioRecordSheet: View {
                 recordButton
 
                 if recordedURL != nil && !recorder.isRecording {
+                    // Review the take before keeping it.
                     Button {
+                        if let url = recordedURL { review.toggle(url: url) }
+                    } label: {
+                        HStack(spacing: AtlasSpacing.sm) {
+                            Image(systemName: review.isPlaying ? "pause.fill" : "play.fill")
+                            Text(review.isPlaying ? "Playing…" : "Play recording")
+                        }
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.primaryText)
+                        .padding(.horizontal, AtlasSpacing.xl)
+                        .padding(.vertical, AtlasSpacing.md)
+                        .overlay(Capsule().stroke(AtlasColors.secondaryText.opacity(0.5), lineWidth: 1))
+                    }
+                    .buttonStyle(.plain)
+
+                    Button {
+                        review.stop()
                         if let url = recordedURL { onFinish(url); dismiss() }
                     } label: {
                         Text("Use recording")
@@ -48,6 +66,12 @@ struct AudioRecordSheet: View {
                             .clipShape(Capsule())
                     }
                     .buttonStyle(.plain)
+
+                    Text("Not happy with it? Tap the record button to try again.")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, AtlasSpacing.xl)
                 }
 
                 Spacer()
@@ -64,6 +88,7 @@ struct AudioRecordSheet: View {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Close") {
                         _ = recorder.stop()
+                        review.stop()
                         dismiss()
                     }
                     .font(AtlasTypography.caption)
@@ -78,6 +103,7 @@ struct AudioRecordSheet: View {
             if recorder.isRecording {
                 recordedURL = recorder.stop()
             } else {
+                review.stop()   // stop any review playback before a new take
                 Task {
                     let ok = await recorder.start()
                     permissionDenied = !ok
@@ -107,6 +133,53 @@ struct AudioRecordSheet: View {
     private func timeString(_ t: TimeInterval) -> String {
         let s = Int(t)
         return String(format: "%02d:%02d", s / 60, s % 60)
+    }
+}
+
+/// Plays back the just-recorded file so the user can review a take before
+/// keeping it. Separate from the app's `AudioPlayerService` (which is for tour
+/// playback) — this only touches the temp recording inside the record sheet.
+@MainActor
+@Observable
+final class RecordingReviewPlayer: NSObject, AVAudioPlayerDelegate {
+    private(set) var isPlaying = false
+    private var player: AVAudioPlayer?
+
+    func toggle(url: URL) {
+        if isPlaying { pause() } else { play(url: url) }
+    }
+
+    private func play(url: URL) {
+        do {
+            let session = AVAudioSession.sharedInstance()
+            try session.setCategory(.playback, mode: .default)
+            try session.setActive(true)
+            if player?.url != url {
+                player = try AVAudioPlayer(contentsOf: url)
+                player?.delegate = self
+            }
+            player?.play()
+            isPlaying = true
+        } catch {
+            isPlaying = false
+        }
+    }
+
+    func pause() {
+        player?.pause()
+        isPlaying = false
+    }
+
+    /// Stop and release the session — call on re-record, keep, or dismiss.
+    func stop() {
+        player?.stop()
+        player = nil
+        isPlaying = false
+        try? AVAudioSession.sharedInstance().setActive(false)
+    }
+
+    nonisolated func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        Task { @MainActor in self.isPlaying = false }
     }
 }
 

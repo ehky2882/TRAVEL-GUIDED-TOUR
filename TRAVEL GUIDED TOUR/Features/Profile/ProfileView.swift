@@ -17,6 +17,7 @@ struct ProfileView: View {
     @Environment(AuthService.self) private var authService
     @Environment(MakerProfileService.self) private var makerProfileService
     @Environment(MakerTourService.self) private var makerTourService
+    @Environment(DataService.self) private var dataService
 
     var body: some View {
         if authService.isSignedIn {
@@ -32,6 +33,12 @@ struct ProfileView: View {
                 } else {
                     makerTourService.clear()
                 }
+            }
+            // Mirror the live maker row into the in-memory catalog so a
+            // just-saved profile edit shows on the public maker page right
+            // away, instead of waiting for the next catalog refresh.
+            .onChange(of: makerProfileService.myMaker) { _, maker in
+                if let maker { dataService.applyLocalMaker(maker) }
             }
         } else {
             SignedOutProfileView()
@@ -75,42 +82,13 @@ struct ProfileView: View {
 /// doesn't exist until they do), with the gear still opening Settings so
 /// appearance / location / downloads stay reachable while signed out.
 private struct SignedOutProfileView: View {
-    @State private var showingSignIn = false
     @State private var showingSettings = false
 
     var body: some View {
         NavigationStack {
-            VStack(spacing: AtlasSpacing.lg) {
+            VStack(spacing: AtlasSpacing.md) {
                 Spacer()
-
-                Image(systemName: "person.crop.circle")
-                    .font(.system(size: 72))
-                    .foregroundStyle(AtlasColors.secondaryText)
-
-                Text("YOUR PROFILE")
-                    .font(AtlasTypography.body)
-                    .textCase(.uppercase)
-                    .foregroundStyle(AtlasColors.primaryText)
-
-                Text("Sign in to create your profile and publish audio tours.")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, AtlasSpacing.xl)
-
-                Button {
-                    showingSignIn = true
-                } label: {
-                    Text("Sign in")
-                        .font(AtlasTypography.body)
-                        .padding(.horizontal, AtlasSpacing.xl)
-                        .padding(.vertical, AtlasSpacing.md)
-                        .background(AtlasColors.mapPin)
-                        .foregroundStyle(AtlasColors.background)
-                        .clipShape(Capsule())
-                }
-                .buttonStyle(.plain)
-
+                JoinDozentPrompt(showIcon: true)
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -130,7 +108,6 @@ private struct SignedOutProfileView: View {
                     .accessibilityLabel("Settings")
                 }
             }
-            .sheet(isPresented: $showingSignIn) { SignInView() }
             .sheet(isPresented: $showingSettings) { SettingsView() }
         }
     }
