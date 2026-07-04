@@ -1,4 +1,7 @@
 import SwiftUI
+#if canImport(UIKit)
+import UIKit
+#endif
 
 /// The single source of truth for how a maker's avatar renders everywhere —
 /// profile header, mini-player, Library saved list, Search rows, share sheets.
@@ -17,33 +20,91 @@ struct MakerAvatarView: View {
     let maker: Maker
     var size: CGFloat
 
+    #if canImport(UIKit)
+    @State private var cachedImage: UIImage?
+    #endif
+
+    init(maker: Maker, size: CGFloat) {
+        self.maker = maker
+        self.size = size
+        #if canImport(UIKit)
+        // Pre-populate from the in-memory cache so a previously-loaded avatar
+        // renders on the first frame with no placeholder flash (e.g. when the
+        // Library re-appears on a tab switch). Same pattern as HeroImageView.
+        let cached = photoURL.flatMap { ImageCache.shared.image(for: $0) }
+        _cachedImage = State(initialValue: cached)
+        #endif
+    }
+
+    /// The uploaded-photo URL, if any (non-empty).
+    private var photoURL: URL? {
+        guard let s = maker.avatarURL, !s.isEmpty else { return nil }
+        return URL(string: s)
+    }
+
     var body: some View {
         Group {
-            if let urlString = maker.avatarURL,
-               !urlString.isEmpty,
-               let url = URL(string: urlString) {
+            #if canImport(UIKit)
+            if let img = cachedImage {
+                Image(uiImage: img).resizable().scaledToFill()
+            } else if photoURL != nil {
+                // Photo not yet loaded — show the monogram until it arrives
+                // (first load only; cache hits skip this via init).
+                initialsCircle
+            } else if let emoji = maker.avatarEmoji, !emoji.isEmpty {
+                emojiPlate(emoji)
+            } else {
+                initialsCircle
+            }
+            #else
+            if let url = photoURL {
                 AsyncImage(url: url) { phase in
-                    switch phase {
-                    case .success(let image):
+                    if case .success(let image) = phase {
                         image.resizable().scaledToFill()
-                    default:
-                        // While loading / on failure, show the monogram rather
-                        // than a blank plate.
+                    } else {
                         initialsCircle
                     }
                 }
             } else if let emoji = maker.avatarEmoji, !emoji.isEmpty {
-                ZStack {
-                    Circle().fill(AtlasColors.placeholderWarm)
-                    Text(emoji).font(.system(size: size * 0.6))
-                }
+                emojiPlate(emoji)
             } else {
                 initialsCircle
             }
+            #endif
         }
         .frame(width: size, height: size)
         .clipShape(Circle())
+        #if canImport(UIKit)
+        .task(id: maker.avatarURL) { await loadPhotoIfNeeded() }
+        #endif
     }
+
+    private func emojiPlate(_ emoji: String) -> some View {
+        ZStack {
+            Circle().fill(AtlasColors.placeholderWarm)
+            Text(emoji).font(.system(size: size * 0.6))
+        }
+    }
+
+    #if canImport(UIKit)
+    /// Load the avatar photo into the shared cache (once), then show it. A cache
+    /// hit was already applied in init, so this only does work on a miss.
+    private func loadPhotoIfNeeded() async {
+        guard let url = photoURL else { return }
+        if let hit = ImageCache.shared.image(for: url) {
+            if cachedImage == nil { cachedImage = hit }
+            return
+        }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            guard let ui = UIImage(data: data) else { return }
+            ImageCache.shared.store(ui, for: url)
+            cachedImage = ui
+        } catch {
+            // Leave the monogram placeholder on failure.
+        }
+    }
+    #endif
 
     private var initialsCircle: some View {
         ZStack {
