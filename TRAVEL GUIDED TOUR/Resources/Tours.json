@@ -23017,9 +23017,8 @@
       "city": "Toronto",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park",
+        "Museum",
         "History",
-        "Green Escape",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -23158,8 +23157,6 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Faith",
-        "Maritime",
         "Beaux-Arts"
       ],
       "priceUSD": 0
@@ -23248,10 +23245,9 @@
       "city": "Toronto",
       "primaryCategory": "culturalHeritage",
       "tags": [
+        "Museum",
         "Civic",
-        "Venue",
         "Engineering",
-        "Faith",
         "Commerce",
         "Hidden Gem"
       ],
@@ -23344,7 +23340,6 @@
         "Tower",
         "Architecture",
         "Art",
-        "Remembrance",
         "Victorian",
         "Public Art"
       ],
