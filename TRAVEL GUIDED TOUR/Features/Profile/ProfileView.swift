@@ -82,49 +82,13 @@ struct ProfileView: View {
 /// doesn't exist until they do), with the gear still opening Settings so
 /// appearance / location / downloads stay reachable while signed out.
 private struct SignedOutProfileView: View {
-    @State private var showingSignIn = false
     @State private var showingSettings = false
-
-    /// The app's standard control diameter — map recenter / map-type buttons,
-    /// tour-detail action buttons, search bar all use 44pt (also the iOS HIG
-    /// minimum touch target). The icon + Sign-in button match it.
-    private static let controlSize: CGFloat = 44
 
     var body: some View {
         NavigationStack {
             VStack(spacing: AtlasSpacing.md) {
                 Spacer()
-
-                Image(systemName: "person.crop.circle")
-                    .font(.system(size: Self.controlSize))
-                    .foregroundStyle(AtlasColors.secondaryText)
-
-                Text("JOIN DOZENT")
-                    .font(AtlasTypography.body)
-                    .textCase(.uppercase)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .padding(.top, AtlasSpacing.xs)
-
-                Text("Save tours, pick up on any device, and publish your own audio guides — free.")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, AtlasSpacing.xl)
-
-                Button {
-                    showingSignIn = true
-                } label: {
-                    Text("Sign in")
-                        .font(AtlasTypography.body)
-                        .frame(height: Self.controlSize)
-                        .padding(.horizontal, AtlasSpacing.xl)
-                        .background(AtlasColors.mapPin)
-                        .foregroundStyle(AtlasColors.background)
-                        .clipShape(Capsule())
-                }
-                .buttonStyle(.plain)
-                .padding(.top, AtlasSpacing.sm)
-
+                JoinDozentPrompt(showIcon: true)
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -144,7 +108,6 @@ private struct SignedOutProfileView: View {
                     .accessibilityLabel("Settings")
                 }
             }
-            .sheet(isPresented: $showingSignIn) { SignInView() }
             .sheet(isPresented: $showingSettings) { SettingsView() }
         }
     }
