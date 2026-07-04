@@ -43,7 +43,7 @@ center to the user's GPS position):
 | Map state | Top location rail | "Near you" | Shelf ordering |
 |---|---|---|---|
 | **Near** — map center within the pan threshold of the user | **Near you** (unchanged) | shown (it *is* the top) | by distance from user (≈ map center) |
-| **Far** — map panned to another area/city (≥ threshold) | **In view** (today it's stuck at *second*) | **hidden** (NYC tours are noise while looking at Tokyo) | **by distance from the map center**, not GPS |
+| **Far** — map panned to another area/city (≥ threshold) | **In view** (today it's stuck at *second*) | **hidden** (owner-confirmed — NYC tours are noise while looking at Tokyo) | **by distance from the map center**, not GPS |
 
 Two concrete changes vs today:
 1. **Swap the top rail when panned far.** Today "Near you" always sits above
@@ -58,8 +58,8 @@ Implementation touch: `HomeRailsViewModel.rails(...)` already receives
 `userLocation` + `visibleRegion`; compute pan distance from them, branch the
 top rail, and change the shelf `viewerLocation` to prefer the **map center**
 (currently prefers `userLocation`). The `inViewPanThresholdMeters` (500 m today)
-is the pan threshold — tune during the sim review. *(Open sub-point: hide vs
-demote "Near you" in far mode — recommend hide; confirm at the sim.)*
+is the pan threshold — tune during the sim review. **"Near you" is hidden in far
+mode (owner-confirmed 2026-07-03), not demoted.**
 
 ---
 
