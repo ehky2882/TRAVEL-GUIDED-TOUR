@@ -69,6 +69,16 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-07-04)
 
+### Batch D — the social layer BEGUN: follow model designed + D1 shipped — TestFlight 1.0 (68) (session 54 — code)
+
+**The last of the owner's 11 profile/maker notes: the social layer.** Designed end-to-end then shipped the foundation (D1).
+
+- **Design (`design(social)` `23b0ef5`):** owner chose the **follow model** (asymmetric, Instagram-style) over symmetric "friends"; **new accounts default public**; **v1 = counts + lists + approve/decline** (a "following" home feed is a later extension, no schema change). One system covers all three notes — public/private + "auto vs manual accept" are the *same switch*, and a "friend request" is just a pending follow on a private account. Full writeup in `docs/social-design.md`; schema in `backend/social.sql`.
+- **Backend (owner-applied, hand-held — 2 SQL blocks, both verified live):** `makers.is_private`; a **`follows`** table (`follower_id`→user, `followee_id`→maker, `status` pending/accepted, PK both); a `set_follow_status` before-insert trigger (blocks self-follow, sets status from the followee's privacy); RLS (you manage your own follows + your own followers); SECURITY-DEFINER RPCs `follow_state` / `list_followers` / `list_following` / `list_follow_requests` with the public/private visibility rule; `get_catalog` now returns `isPrivate`. Verified via curl: `follow_state` returns `{followers,following,isFollowing,isPending,pendingRequests}`, catalog carries `isPrivate`.
+- **D1 app ([PR #329](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/329), squash `2d37add`):** `Maker.isPrivate` (+ `isPrivateAccount`) through `MakerRow`/get_catalog; **`Data/FollowService`** (`follow_state` RPC + `follow`/`unfollow` direct table writes, injected app-wide + into the tour-detail/maker UIKit layers); **MakerView header** shows follower/following **counts** + a **Follow / Following / Requested** button (other people's pages, signed in only; hidden on own profile); **ProfileEditorView** gained a **Private account** toggle writing `makers.is_private`. Sim-verified: counts row + the toggle's live caption ("Anyone can follow you." ↔ "New followers need your approval."). The Follow button + writes are login-only → owner-device-verified.
+- **`test_sim` 140/140.** **TestFlight 1.0 (68)** — bump #330 (admin-merged), archived clean from `main`, binary-verified (`1.0 (68)`, `UIRequiresFullScreen`, Apple + `associated-domains`, Supabase host, no poison). **Owner uploading.**
+- **NEXT — D2:** Followers / Following list screens off the count taps (`list_followers`/`list_following` RPCs, reuse the maker-row). Then **D3:** the `Requested` state + a private-account Requests approve/decline screen (`list_follow_requests`; approve = update status, decline = delete). A "tours from creators you follow" home feed is a later add-on.
+
 ### Device-testing polish batch + moderation-email upgrade — TestFlight 1.0 (67) (session 53 — code)
 
 **Owner ran the full authoring loop on build 66 and fed back a stream of polish comments; eight app fixes shipped in one build ([PR #326](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/326), squash `23c3e40`), plus a server-side moderation-email rewrite (`36fbb19`, deployed live via the Supabase dashboard).**
