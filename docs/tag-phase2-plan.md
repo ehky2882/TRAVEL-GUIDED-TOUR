@@ -33,6 +33,36 @@ Two visible changes on the Home screen, plus one invisible safety piece:
 
 ---
 
+## 1.5 · Location-rail behaviour (owner spec, 2026-07-03)
+
+Refinement to `HomeRailsViewModel`, folded into Phase 2 since it rewrites that
+file. **Everything anchors to the map viewport.** The top location rail is
+*context-aware*, driven by the **pan distance** (distance from the map-view
+center to the user's GPS position):
+
+| Map state | Top location rail | "Near you" | Shelf ordering |
+|---|---|---|---|
+| **Near** — map center within the pan threshold of the user | **Near you** (unchanged) | shown (it *is* the top) | by distance from user (≈ map center) |
+| **Far** — map panned to another area/city (≥ threshold) | **In view** (today it's stuck at *second*) | **hidden** (NYC tours are noise while looking at Tokyo) | **by distance from the map center**, not GPS |
+
+Two concrete changes vs today:
+1. **Swap the top rail when panned far.** Today "Near you" always sits above
+   "In view"; make "In view" the top rail in far mode and drop "Near you" there.
+2. **Anchor every curated shelf to the map center, always.** Today shelves sort
+   by distance from the user's GPS even when browsing elsewhere (so Tokyo tours
+   rank by distance from NYC — meaningless). Sort by the **visible-region center**
+   instead, and prioritise tours inside / near the viewport. In near mode the
+   map center ≈ the user, so this stays correct there too.
+
+Implementation touch: `HomeRailsViewModel.rails(...)` already receives
+`userLocation` + `visibleRegion`; compute pan distance from them, branch the
+top rail, and change the shelf `viewerLocation` to prefer the **map center**
+(currently prefers `userLocation`). The `inViewPanThresholdMeters` (500 m today)
+is the pan threshold — tune during the sim review. *(Open sub-point: hide vs
+demote "Near you" in far mode — recommend hide; confirm at the sim.)*
+
+---
+
 ## 2 · Owner decisions (locked)
 
 | # | Decision | Choice |
