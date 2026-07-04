@@ -18218,7 +18218,8 @@
       "city": "San Francisco",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Notable Building",
+        "Waterfront",
+        "Market",
         "Engineering",
         "Food"
       ],
@@ -18306,13 +18307,11 @@
       "city": "San Francisco",
       "primaryCategory": "history",
       "tags": [
-        "Park",
-        "District",
+        "Notable Building",
         "Waterfront",
         "Crime",
         "History",
-        "War",
-        "Green Escape"
+        "War"
       ],
       "priceUSD": 0
     },
@@ -18402,10 +18401,9 @@
       "city": "San Francisco",
       "primaryCategory": "culturalHeritage",
       "tags": [
+        "Monument",
         "District",
-        "Engineering",
-        "Immigration",
-        "Green Escape"
+        "Immigration"
       ],
       "priceUSD": 0
     },
@@ -18447,9 +18445,8 @@
       "city": "San Francisco",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Venue",
         "History",
-        "Performance"
+        "Engineering"
       ],
       "priceUSD": 0
     },
@@ -18666,8 +18663,8 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "District",
-        "Commerce",
-        "Victorian"
+        "Victorian",
+        "History"
       ],
       "priceUSD": 0
     },
@@ -18751,10 +18748,10 @@
       "city": "San Francisco",
       "primaryCategory": "natureAndParks",
       "tags": [
+        "Museum",
         "Park",
         "Architecture",
         "History",
-        "Power",
         "Designed by a Master",
         "Green Escape",
         "Renzo Piano"
@@ -18798,6 +18795,7 @@
       "city": "San Francisco",
       "primaryCategory": "history",
       "tags": [
+        "Waterfront",
         "Notable Building",
         "History"
       ],
@@ -18887,7 +18885,6 @@
         "Notable Building",
         "Architecture",
         "Engineering",
-        "Power",
         "Designed by a Master",
         "Bernard Maybeck"
       ],
@@ -19185,6 +19182,7 @@
       "city": "San Francisco",
       "primaryCategory": "architecture",
       "tags": [
+        "Tower",
         "Notable Building",
         "Architecture",
         "Viewpoint"
@@ -19448,8 +19446,7 @@
         "Architecture",
         "Engineering",
         "Performance",
-        "Power",
-        "Colonial"
+        "LGBTQ+"
       ],
       "priceUSD": 0
     },
@@ -19962,7 +19959,7 @@
       "city": "San Francisco",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Waterfront",
+        "District",
         "Art",
         "Faith",
         "Green Escape",
@@ -23017,9 +23014,8 @@
       "city": "Toronto",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park",
+        "Museum",
         "History",
-        "Green Escape",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -23158,8 +23154,6 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Faith",
-        "Maritime",
         "Beaux-Arts"
       ],
       "priceUSD": 0
@@ -23248,10 +23242,9 @@
       "city": "Toronto",
       "primaryCategory": "culturalHeritage",
       "tags": [
+        "Museum",
         "Civic",
-        "Venue",
         "Engineering",
-        "Faith",
         "Commerce",
         "Hidden Gem"
       ],
@@ -23344,7 +23337,6 @@
         "Tower",
         "Architecture",
         "Art",
-        "Remembrance",
         "Victorian",
         "Public Art"
       ],
