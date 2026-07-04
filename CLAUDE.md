@@ -69,6 +69,17 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-07-04)
 
+### Batch D COMPLETE — the social layer: D2 follow-lists + D3 requests — TestFlight 1.0 (70) (session 55 — code)
+
+**The batch-D social layer is now fully shipped: D1 foundation → D2 lists → D3 requests.** Both D2 + D3 landed in one PR ([PR #334](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/334), squash `34e1c14`), owner-authorized merge ("merge both and cut the build"). **No new backend** — every RPC + RLS policy was already live from D1's `backend/social.sql`.
+
+- **D2 — Followers / Following lists.** The follower/following **counts** on any maker page (own profile or a public creator) are now **tappable** → a list of those profiles; each row pushes that maker's page. New **`Features/Maker/FollowListView.swift`** (shared `MakerAvatarView` + a compact row: bio, else published-tour count; loading + empty states). `FollowService.followers(of:)` / `following(of:)` call the `list_followers` / `list_following` RPCs (visibility enforced server-side — a private account's list is only returned to its owner). `MakerView` count pills became `NavigationLink`s into it.
+- **D3 — private-account follow requests.** A private account's follows land as `pending`. On the **own profile**, when requests are waiting, a **"N follow requests"** link appears under the counts → new **`Features/Maker/FollowRequestsView.swift`**: requester rows (avatar + name + bio) with **Approve** / **Decline**; actioned rows drop out live, per-row busy guard, and the header count refreshes via an `onChange` closure. `FollowService.pendingRequests()` (→ `list_follow_requests` RPC, keeps each requester's `user_id`) + `approveRequest` / `declineRequest` (direct table writes — approve flips `status→accepted`, decline deletes — gated by the existing `follows_update_owner` / `follows_delete` RLS).
+- **Backend-safety fix:** `MakerRow.userId` made **optional** — `list_following` can return **seed studios** (null `user_id`) that would otherwise fail the `[MakerRow]` decode and silently empty a following-list.
+- **`test_sim` 140/140.** The count-tap navigation is code-verified; the **populated** lists + approve/decline are login-gated → **owner-device-verified** (the sim holds no session; its modal-window tab bar won't drive reliably). Owner confirmed D1 following works on device before D2/D3 began.
+- **TestFlight 1.0 (70)** — bump #338 (admin-merged, metadata-only; identical code already cleared full CI on #334), archived clean from `main` with `-allowProvisioningUpdates` at `/tmp/Atlas-20260704-b70.xcarchive`, binary-verified (`1.0 (70)`, `UIRequiresFullScreen=true`, mic key, `applesignin` + `associated-domains`, Supabase host compiled in, gh-pages fallback present, no `TEMP_LOCAL_DEMO`). **Owner uploading via Organizer.** Build arc this session: 64→65→66→67→68→69 (batches A–D1) → **70** (D2+D3).
+- **NEXT — batch D is done.** A **"tours from creators you follow"** home feed is the natural later add-on (reads the same `follows` table — no schema change). Otherwise the owner's 11 profile/maker notes are all closed; next direction is owner's call (Step 6 payments is the next big V2 design, needs owner decisions).
+
 ### Batch D — the social layer BEGUN: follow model designed + D1 shipped — TestFlight 1.0 (68) (session 54 — code)
 
 **The last of the owner's 11 profile/maker notes: the social layer.** Designed end-to-end then shipped the foundation (D1).
