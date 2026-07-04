@@ -36,8 +36,10 @@ struct ProfileEditorView: View {
 
     private enum Field { case name, bio, website, link2, link3, initials }
 
-    /// Max display-name length (owner direction 2026-07-03).
-    private static let nameLimit = 40
+    /// Max lengths — kept well short of one line (name) / three lines (bio) on
+    /// the narrowest device, with a live "N left" countdown by each field.
+    private static let nameLimit = 24
+    private static let bioLimit = 100
 
     init(currentMaker: Maker) {
         self.currentMaker = currentMaker
@@ -79,31 +81,42 @@ struct ProfileEditorView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
+                VStack(alignment: .leading, spacing: AtlasSpacing.md) {
                     avatarSection
 
-                    fieldLabel("DISPLAY NAME")
-                    TextField("Your creator name", text: $displayName)
-                        .focused($focused, equals: .name)
-                        .submitLabel(.next)
-                        .onSubmit { focused = .bio }
-                        .onChange(of: displayName) { _, new in
-                            if new.count > Self.nameLimit {
-                                displayName = String(new.prefix(Self.nameLimit))
+                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                        fieldLabel("DISPLAY NAME", remaining: Self.nameLimit - displayName.count)
+                        TextField("Your creator name", text: $displayName)
+                            .focused($focused, equals: .name)
+                            .submitLabel(.next)
+                            .onSubmit { focused = .bio }
+                            .onChange(of: displayName) { _, new in
+                                if new.count > Self.nameLimit {
+                                    displayName = String(new.prefix(Self.nameLimit))
+                                }
                             }
-                        }
-                        .fieldStyle()
+                            .fieldStyle()
+                    }
 
-                    fieldLabel("BIO")
-                    TextField("A sentence about you or your tours", text: $bio, axis: .vertical)
-                        .lineLimit(3...6)
-                        .focused($focused, equals: .bio)
-                        .fieldStyle()
+                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                        fieldLabel("BIO", remaining: Self.bioLimit - bio.count)
+                        TextField("A sentence about you or your tours", text: $bio, axis: .vertical)
+                            .lineLimit(2...3)
+                            .focused($focused, equals: .bio)
+                            .onChange(of: bio) { _, new in
+                                if new.count > Self.bioLimit {
+                                    bio = String(new.prefix(Self.bioLimit))
+                                }
+                            }
+                            .fieldStyle()
+                    }
 
-                    fieldLabel("LINKS (OPTIONAL — UP TO 3)")
-                    linkField("https://…", text: $website, field: .website, next: .link2)
-                    linkField("https://…", text: $link2, field: .link2, next: .link3)
-                    linkField("https://…", text: $link3, field: .link3, next: nil)
+                    VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+                        fieldLabel("LINKS (OPTIONAL — UP TO 3)")
+                        linkField("https://…", text: $website, field: .website, next: .link2)
+                        linkField("https://…", text: $link2, field: .link2, next: .link3)
+                        linkField("https://…", text: $link3, field: .link3, next: nil)
+                    }
 
                     if let errorMessage {
                         Text(errorMessage)
@@ -112,7 +125,7 @@ struct ProfileEditorView: View {
                     }
 
                     saveButton
-                        .padding(.top, AtlasSpacing.sm)
+                        .padding(.top, AtlasSpacing.xs)
                 }
                 .padding(AtlasSpacing.lg)
             }
@@ -164,9 +177,9 @@ struct ProfileEditorView: View {
     // MARK: - Avatar
 
     private var avatarSection: some View {
-        VStack(spacing: AtlasSpacing.md) {
+        VStack(spacing: AtlasSpacing.sm) {
             avatarPreview
-                .frame(width: 96, height: 96)
+                .frame(width: 80, height: 80)
 
             PhotosPicker(
                 selection: $pickedItem,
@@ -199,10 +212,10 @@ struct ProfileEditorView: View {
         Group {
             if let data = pickedImageData, let ui = UIImage(data: data) {
                 Image(uiImage: ui).resizable().scaledToFill()
-                    .frame(width: 96, height: 96)
+                    .frame(width: 80, height: 80)
                     .clipShape(Circle())
             } else {
-                MakerAvatarView(maker: previewMaker, size: 96)
+                MakerAvatarView(maker: previewMaker, size: 80)
             }
         }
     }
@@ -276,10 +289,20 @@ struct ProfileEditorView: View {
         pickedItem = nil
     }
 
-    private func fieldLabel(_ text: String) -> some View {
-        Text(text)
-            .font(AtlasTypography.caption)
-            .foregroundStyle(AtlasColors.secondaryText)
+    /// A field label, optionally with a right-aligned "N left" countdown that
+    /// turns red as the limit approaches.
+    private func fieldLabel(_ text: String, remaining: Int? = nil) -> some View {
+        HStack {
+            Text(text)
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+            if let remaining {
+                Spacer()
+                Text("\(max(0, remaining)) left")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(remaining <= 5 ? AtlasColors.mapPin : AtlasColors.tertiaryText)
+            }
+        }
     }
 
     /// A URL text field for one of the up-to-3 profile links. `next` focuses the
