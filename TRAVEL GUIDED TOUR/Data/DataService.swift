@@ -76,6 +76,20 @@ final class DataService {
         await refresh(startedAt: now)
     }
 
+    /// Patch a single maker into the in-memory catalog immediately (replace by
+    /// id, or append if new). Lets a creator's just-saved profile edit show on
+    /// the public maker page right away instead of waiting for the next catalog
+    /// refresh — the persisted `makers` row is already updated, so the next real
+    /// `get_catalog` fetch stays consistent with this.
+    @MainActor
+    func applyLocalMaker(_ maker: Maker) {
+        if let i = makers.firstIndex(where: { $0.id == maker.id }) {
+            makers[i] = maker
+        } else {
+            makers.append(maker)
+        }
+    }
+
     func tour(by id: UUID) -> Tour? {
         tours.first { $0.id == id }
     }

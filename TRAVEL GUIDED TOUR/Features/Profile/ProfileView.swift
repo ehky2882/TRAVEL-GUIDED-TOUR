@@ -17,6 +17,7 @@ struct ProfileView: View {
     @Environment(AuthService.self) private var authService
     @Environment(MakerProfileService.self) private var makerProfileService
     @Environment(MakerTourService.self) private var makerTourService
+    @Environment(DataService.self) private var dataService
 
     var body: some View {
         if authService.isSignedIn {
@@ -32,6 +33,12 @@ struct ProfileView: View {
                 } else {
                     makerTourService.clear()
                 }
+            }
+            // Mirror the live maker row into the in-memory catalog so a
+            // just-saved profile edit shows on the public maker page right
+            // away, instead of waiting for the next catalog refresh.
+            .onChange(of: makerProfileService.myMaker) { _, maker in
+                if let maker { dataService.applyLocalMaker(maker) }
             }
         } else {
             SignedOutProfileView()
