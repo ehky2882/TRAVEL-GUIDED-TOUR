@@ -3173,7 +3173,8 @@
         "Art",
         "History",
         "Performance",
-        "Green Escape"
+        "Green Escape",
+        "LGBTQ+"
       ],
       "stops": [
         {
@@ -3699,7 +3700,8 @@
         "History",
         "Performance",
         "Green Escape",
-        "Hidden Gem"
+        "Hidden Gem",
+        "LGBTQ+"
       ],
       "stops": [
         {
@@ -10740,7 +10742,8 @@
         "Crime",
         "History",
         "Immigration",
-        "Performance"
+        "Performance",
+        "LGBTQ+"
       ],
       "stops": [
         {
@@ -19488,7 +19491,8 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Public Square",
-        "History"
+        "History",
+        "LGBTQ+"
       ],
       "priceUSD": 0
     },
