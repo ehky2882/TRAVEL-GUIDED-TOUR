@@ -33,6 +33,27 @@ Two visible changes on the Home screen, plus one invisible safety piece:
 
 ---
 
+## 1.6 · "Walks" format filter (owner spec, 2026-07-03)
+
+Owner wants **single-stop vs multi-stop** exposed as a **filter** on Home. This
+is a *format* filter (the tour's shape), distinct from the content-tag filters
+(the tour's subject) — but in the simple multi-select chip row it just sits
+alongside the tag chips and **ANDs** with them (D6). e.g. "Walks" + "Food" →
+multi-stop food walks.
+
+- **Data is ready, no cleanup:** every tour has a `kind` field — `single` (499)
+  or `multiStop` (10) — and it agrees with the actual stop count on all 509
+  tours (0 mismatches). Filter = `tour.kind == .multiStop`.
+- **Shape (owner-recommended):** a **single "Walks" chip** that narrows to the
+  10 multi-stop walks — *not* a two-way Single/Multi toggle (≈98% are single, so
+  a "Single stop" filter does nothing useful). Exact chip label + placement
+  finalised at the sim review.
+- **Build touch:** `HomeSharedState` gains a `walksOnly: Bool` (or folds into the
+  filter state); `displayedTours` / the shelf filter adds `kind == .multiStop`
+  when active. Trivial on top of the multi-select filter work.
+
+---
+
 ## 1.5 · Location-rail behaviour (owner spec, 2026-07-03)
 
 Refinement to `HomeRailsViewModel`, folded into Phase 2 since it rewrites that
