@@ -112,15 +112,15 @@ shelves auto-hide (e.g. a city with no tours of that tag).
 | Iconic landmarks | `Iconic Landmark` *(editorial tag)* |
 | Hidden gems | `Hidden Gem` |
 | Designed by a master | `Designed by a Master` |
-| Sacred spaces | `Faith & Spirituality` |
+| Sacred spaces | `Faith` |
 | Art & museums | `Art` |
-| Food & drink | `Food & Drink` |
+| Food & drink | `Food` |
 | Green escapes | `Green Escape` |
-| Viewpoints | `Viewpoint & Panorama` |
-| Architecture & design | `Architecture & Design` |
+| Viewpoints | `Viewpoint` |
+| Architecture & design | `Architecture` |
 | A sense of history | `History` |
 | By the water | `Maritime` |
-| Fashion & retail | `Fashion & Retail` |
+| Fashion & retail | `Fashion` |
 
 The chip row shows the **same curated tags** (so tapping a chip filters to that
 shelf's tag, and multiple chips combine per D6). Whether the chip row exposes a

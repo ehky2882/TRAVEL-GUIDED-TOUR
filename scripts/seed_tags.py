@@ -38,17 +38,16 @@ MAKER_METRO = {
 # Mirror any edit here into docs/tag-taxonomy-v2.md and the validators.
 # ---------------------------------------------------------------------------
 VOCAB = {
- "Place type": ["Religious Building","Museum & Gallery","Park & Garden","Public Square",
-   "Tower & Skyscraper","Bridge","Monument & Memorial","Market & Arcade","Theatre & Venue",
-   "Library","Street & District","Civic & Government","Waterfront","Shop & Flagship","Notable Building"],
- "Theme": ["Architecture & Design","History","Art","Literature","Music & Performance",
-   "Food & Drink","Faith & Spirituality","Power & Politics","Money & Trade",
-   "Immigration & Community","Crime & Scandal","Death & Remembrance",
-   "Engineering & Innovation","War & Conflict","Maritime","Fashion & Retail"],
- "Style & era": ["Medieval / Gothic","Baroque","Georgian / Neoclassical","Beaux-Arts",
-   "Victorian","Art Deco","Modernist","Metabolist","Brutalist","Contemporary","Gilded Age",
-   "Colonial","Mission / Spanish Revival"],
- "Experience": ["Iconic Landmark","Hidden Gem","Viewpoint & Panorama","Green Escape",
+ "Place type": ["Religious Building","Museum","Park","Public Square",
+   "Tower","Bridge","Monument","Market","Venue",
+   "Library","District","Civic","Waterfront","Notable Building"],
+ "Theme": ["Architecture","History","Art","Literature","Performance",
+   "Food","Faith","Power","Commerce",
+   "Immigration","Crime","Remembrance",
+   "Engineering","War","Maritime","Fashion"],
+ "Style & era": ["Gothic","Baroque","Neoclassical","Beaux-Arts",
+   "Victorian","Art Deco","Modernist","Brutalist","Contemporary","Gilded Age","Colonial"],
+ "Experience": ["Iconic Landmark","Hidden Gem","Viewpoint","Green Escape",
    "Free to Visit","After Dark","Public Art","Designed by a Master"],
  "Architect": ["Álvaro Siza","Eduardo Souto de Moura","Fernando Távora","Norman Foster",
    "Renzo Piano","Frank Gehry","Christopher Wren","Charles Holden","Denys Lasdun",
@@ -61,55 +60,53 @@ VOCAB = {
 }
 
 # old primaryCategory -> (lead theme, default place-type hint)
-CAT_THEME = {"architecture":"Architecture & Design","history":"History","culturalHeritage":None,
- "sacredSites":"Faith & Spirituality","natureAndParks":None,"visualArt":"Art",
- "musicAndPerformance":"Music & Performance","literature":"Literature","foodAndDrink":"Food & Drink",
+CAT_THEME = {"architecture":"Architecture","history":"History","culturalHeritage":None,
+ "sacredSites":"Faith","natureAndParks":None,"visualArt":"Art",
+ "musicAndPerformance":"Performance","literature":"Literature","foodAndDrink":"Food",
  "hiddenGems":None}
-CAT_PLACE = {"sacredSites":"Religious Building","natureAndParks":"Park & Garden",
- "visualArt":"Museum & Gallery","musicAndPerformance":"Theatre & Venue","literature":"Library"}
+CAT_PLACE = {"sacredSites":"Religious Building","natureAndParks":"Park",
+ "visualArt":"Museum","musicAndPerformance":"Venue","literature":"Library"}
 
 # title keyword -> place type (precise; title only). Adds CJK/romaji cues for the new cities.
 TITLE_PLACE = [
  (r"cathedral|church|chapel|synagogue|basilica|minster|abbey|priory|temple|shrine|mosque|monaster|jinja|-ji\b|taisha", "Religious Building"),
- (r"museum|gallery", "Museum & Gallery"),
+ (r"museum|gallery", "Museum"),
  (r"library", "Library"),
- (r"\bpark\b|garden|cemeter|graveyard|fields|koen|gyoen", "Park & Garden"),
+ (r"\bpark\b|garden|cemeter|graveyard|fields|koen|gyoen", "Park"),
  (r"square|plaza|piazza|circus|crossing", "Public Square"),
  (r"bridge|ohashi", "Bridge"),
- (r"market|arcade|bazaar|yokocho", "Market & Arcade"),
- (r"theatre|theater|globe|stadium|arena|cinema|opera|rivoli|playhouse|concert|kabuki|hall\b", "Theatre & Venue"),
- (r"memorial|monument|cenotaph|obelisk|statue|liberty|cross bones|peace park", "Monument & Memorial"),
- (r"shard|skyscraper|gherkin|empire state|chrysler|flatiron|one world|woolworth|tower|skytree|mori|hills", "Tower & Skyscraper"),
- (r"flagship|prada|dior|boutique|department store|store\b|omotesando", "Shop & Flagship"),
- (r"\bhall\b|bank|exchange|guildhall|parliament|federal hall|customs|city hall|courthouse|senate|diet", "Civic & Government"),
- (r"street|lane|yard|dials|alley|dori|gai|mall\b|carnaby|soho|chinatown|broadway|hatton|district|quarter|row|ginza|shibuya|shinjuku", "Street & District"),
+ (r"market|arcade|bazaar|yokocho", "Market"),
+ (r"theatre|theater|globe|stadium|arena|cinema|opera|rivoli|playhouse|concert|kabuki|hall\b", "Venue"),
+ (r"memorial|monument|cenotaph|obelisk|statue|liberty|cross bones|peace park", "Monument"),
+ (r"shard|skyscraper|gherkin|empire state|chrysler|flatiron|one world|woolworth|tower|skytree|mori|hills", "Tower"),
+ (r"\bhall\b|bank|exchange|guildhall|parliament|federal hall|customs|city hall|courthouse|senate|diet", "Civic"),
+ (r"street|lane|yard|dials|alley|dori|gai|mall\b|carnaby|soho|chinatown|broadway|hatton|district|quarter|row|ginza|shibuya|shinjuku", "District"),
  (r"pier|beach|harbour|harbor|quay|dock|waterfront|terminal|piscina|wharf|island|bay|bund", "Waterfront"),
  (r"station|metro|house|building|works|headquarters|pavilion|hotel|factory|warehouse|silo|toilet|capsule|forum", "Notable Building"),
 ]
 
-STYLE_KW = {"Medieval / Gothic":[r"\bgothic\b","medieval","romanesque","perpendicular"],"Baroque":["baroque","rococo"],
- "Georgian / Neoclassical":["georgian","neoclassic","palladian","pombaline","greek revival","federal style"],
+STYLE_KW = {"Gothic":[r"\bgothic\b","medieval","romanesque","perpendicular"],"Baroque":["baroque","rococo"],
+ "Neoclassical":["georgian","neoclassic","palladian","pombaline","greek revival","federal style"],
  "Beaux-Arts":["beaux-arts","beaux arts"],"Victorian":["victorian"],"Art Deco":["art deco","art-deco"],
- "Modernist":["modernis","bauhaus","international style"],"Metabolist":["metabolis","nakagin","capsule tower"],
- "Brutalist":["brutalis"],"Gilded Age":["gilded age"],"Contemporary":["contemporary","pritzker","21st-century","21st century"],
- "Colonial":["colonial"],"Mission / Spanish Revival":["mission revival","spanish revival","spanish colonial","mission district"]}
+ "Modernist":["modernis","bauhaus","international style"],"Brutalist":["brutalis"],"Gilded Age":["gilded age"],"Contemporary":["contemporary","pritzker","21st-century","21st century"],
+ "Colonial":["colonial"]}
 
-THEME_KW = {"Money & Trade":[r"finance",r"wall street",r"\btrade",r"\bbank",r"exchange",r"diamond",r"commerce",r"merchant",r"wholesale",r"tycoon"],
- "Power & Politics":[r"royal",r"monarch",r"palace",r"parliament",r"government",r"crown",r"whitehall",r"political",r"city hall",r"mayor",r"diet building",r"imperial"],
- "Immigration & Community":[r"immigran",r"jewish",r"chinese",r"chinatown",r"huguenot",r"harlem",r"community",r"tenement",r"diaspora",r"settled here",r"japantown"],
- "Crime & Scandal":[r"heist",r"burglar",r"\bcrime",r"scandal",r"slum",r"rooker",r"red-light",r"prison",r"gallows",r"murder",r"thieves",r"yakuza"],
- "Death & Remembrance":[r"cemeter",r"graveyard",r"memorial",r"cenotaph",r"tomb",r"burial",r"outcast dead",r"martyr",r"buried",r"atomic"],
- "Engineering & Innovation":[r"engineer",r"\bdome",r"cantilever",r"power station",r"reinforced concrete",r"suspension",r"wobbl",r"structural",r"\bspan",r"feat of",r"earthquake"],
- "War & Conflict":[r"blitz",r"wartime",r"\bwar\b",r"\bbomb",r"churchill",r"battle",r"siege",r"fortress",r"blockade",r"world war"],
+THEME_KW = {"Commerce":[r"finance",r"wall street",r"\btrade",r"\bbank",r"exchange",r"diamond",r"commerce",r"merchant",r"wholesale",r"tycoon"],
+ "Power":[r"royal",r"monarch",r"palace",r"parliament",r"government",r"crown",r"whitehall",r"political",r"city hall",r"mayor",r"diet building",r"imperial"],
+ "Immigration":[r"immigran",r"jewish",r"chinese",r"chinatown",r"huguenot",r"harlem",r"community",r"tenement",r"diaspora",r"settled here",r"japantown"],
+ "Crime":[r"heist",r"burglar",r"\bcrime",r"scandal",r"slum",r"rooker",r"red-light",r"prison",r"gallows",r"murder",r"thieves",r"yakuza"],
+ "Remembrance":[r"cemeter",r"graveyard",r"memorial",r"cenotaph",r"tomb",r"burial",r"outcast dead",r"martyr",r"buried",r"atomic"],
+ "Engineering":[r"engineer",r"\bdome",r"cantilever",r"power station",r"reinforced concrete",r"suspension",r"wobbl",r"structural",r"\bspan",r"feat of",r"earthquake"],
+ "War":[r"blitz",r"wartime",r"\bwar\b",r"\bbomb",r"churchill",r"battle",r"siege",r"fortress",r"blockade",r"world war"],
  "Maritime":[r"maritime",r"\bdock",r"harbour",r"harbor",r"\bport\b",r"\bship",r"naval",r"cruise",r"seafront",r"wharf",r"quay",r"fishing",r"sailors",r"junk boat"],
- "Food & Drink":[r"market",r"\bfood",r"cheese",r"\bwine",r"restaurant",r"oyster",r"brewery",r"coffee",r"culinary",r"foodie",r"ramen",r"izakaya",r"sushi",r"dim sum"],
- "Faith & Spirituality":[r"church",r"cathedral",r"chapel",r"sacred",r"monaster",r"worship",r"saint",r"synagogue",r"priory",r"shrine",r"temple",r"buddhis",r"shinto",r"zen"],
+ "Food":[r"market",r"\bfood",r"cheese",r"\bwine",r"restaurant",r"oyster",r"brewery",r"coffee",r"culinary",r"foodie",r"ramen",r"izakaya",r"sushi",r"dim sum"],
+ "Faith":[r"church",r"cathedral",r"chapel",r"sacred",r"monaster",r"worship",r"saint",r"synagogue",r"priory",r"shrine",r"temple",r"buddhis",r"shinto",r"zen"],
  "Literature":[r"writer",r"novel",r"poet",r"author",r"dickens",r"shakespeare",r"literary",r"manuscript",r"bookshop"],
- "Music & Performance":[r"music",r"concert",r"theatre",r"theater",r"opera",r"\bjazz",r"performance",r"\bband\b",r"\bstage",r"kabuki"],
+ "Performance":[r"music",r"concert",r"theatre",r"theater",r"opera",r"\bjazz",r"performance",r"\bband\b",r"\bstage",r"kabuki"],
  "Art":[r"\bart\b",r"gallery",r"galleries",r"sculpture",r"mural",r"painting",r"exhibition",r"artist",r"teamlab"],
- "Fashion & Retail":[r"flagship",r"boutique",r"fashion",r"luxury",r"department store",r"shopping",r"prada",r"dior",r"ginza"],
+ "Fashion":[r"flagship",r"boutique",r"fashion",r"luxury",r"department store",r"shopping",r"prada",r"dior",r"ginza"],
  "History":[r"histor",r"medieval",r"ancient",r"heritage",r"founded in",r"dating from",r"centuries",r"edo"],
- "Architecture & Design":[r"architect",r"architectur",r"facade",r"modernis",r"brutalis",r"baroque",r"gothic",r"art deco",r"designed by",r"design"]}
+ "Architecture":[r"architect",r"architectur",r"facade",r"modernis",r"brutalis",r"baroque",r"gothic",r"art deco",r"designed by",r"design"]}
 
 EXP_VIEW = ["viewpoint","panorama","skyline","observation","miradouro","vista","overlook","rooftop","peak"]
 EXP_HIDDEN = ["hidden gem","tucked","overlooked","secret","unmarked","easy to miss","backstreet"]
@@ -173,9 +170,9 @@ def seed(t):
         if any(k in ta for k in kws): out["Architect"].add(a)
 
     # EXPERIENCE (editorial tags Iconic Landmark / Free to Visit / After Dark are NOT auto-set)
-    if any(k in ta for k in EXP_VIEW): out["Experience"].add("Viewpoint & Panorama")
+    if any(k in ta for k in EXP_VIEW): out["Experience"].add("Viewpoint")
     if cat == 'hiddenGems' or any(k in ta for k in EXP_HIDDEN): out["Experience"].add("Hidden Gem")
-    if "Park & Garden" in out["Place type"] or any(k in tt for k in EXP_GREEN): out["Experience"].add("Green Escape")
+    if "Park" in out["Place type"] or any(k in tt for k in EXP_GREEN): out["Experience"].add("Green Escape")
     if any(k in ta for k in EXP_ART): out["Experience"].add("Public Art")
     if out["Architect"]: out["Experience"].add("Designed by a Master")
     return out

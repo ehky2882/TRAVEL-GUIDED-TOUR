@@ -49,19 +49,18 @@ signal, not a final count.
 | Tag | Definition |
 |---|---|
 | `Religious Building` (48) | Church, cathedral, chapel, synagogue, monastery — **and Buddhist temple / Shinto shrine / Taoist temple** (Tokyo, HK). |
-| `Museum & Gallery` (60) | Museum, art gallery, or house-museum. |
-| `Park & Garden` (55) | Park, garden square, botanical/Japanese garden, garden cemetery. |
+| `Museum` (60) | Museum, art gallery, or house-museum. |
+| `Park` (55) | Park, garden square, botanical/Japanese garden, garden cemetery. |
 | `Public Square` (16) | Piazza, plaza, civic square, circus — **incl. Shibuya-style crossings**. |
-| `Tower & Skyscraper` (18) | Tall tower / high-rise / observation building (Skytree, Mori, Peak Tower). |
+| `Tower` (18) | Tall tower / high-rise / observation building (Skytree, Mori, Peak Tower). |
 | `Bridge` (9) | A road or foot bridge. |
-| `Monument & Memorial` (11) | Statue, column, obelisk, war/peace memorial, national monument. |
-| `Market & Arcade` (21) | Food market, covered market, shopping arcade, **yokocho alley**. |
-| `Theatre & Venue` (24) | Theatre, concert hall, performance/cultural venue, stadium, **kabuki theatre**. |
+| `Monument` (11) | Statue, column, obelisk, war/peace memorial, national monument. |
+| `Market` (21) | Food market, covered market, shopping arcade, **yokocho alley**. |
+| `Venue` (24) | Theatre, concert hall, performance/cultural venue, stadium, **kabuki theatre**. |
 | `Library` (6) | Public or national library. |
-| `Street & District` (49) | A named street, lane, yard, neighbourhood, quarter (Ginza, Alfama, Chinatown, Mission). |
-| `Civic & Government` (16) | Town/city hall, court, bank, exchange, parliament, guild, **Diet**. |
+| `District` (49) | A named street, lane, yard, neighbourhood, quarter (Ginza, Alfama, Chinatown, Mission). |
+| `Civic` (16) | Town/city hall, court, bank, exchange, parliament, guild, **Diet**. |
 | `Waterfront` (16) | Pier, beach, harbour, quay, dock, bay, riverside/seafront walk (Victoria Harbour, the Bund, Embarcadero). |
-| **`Shop & Flagship`** (3*) | **Architect-designed flagship store / department store / showroom (Prada Aoyama, Dior Omotesando, Ginza flagships).** *Title-only seed under-counts; see decision D1 — may fold into `Notable Building`.* |
 | `Notable Building` (86) | Architecturally notable building not covered above (station, cinema, residence, factory, pavilion, **public toilet**…). **Catch-all — see note.** |
 
 > **`Notable Building` is the new catch-all risk.** After the seeder learned to
@@ -75,38 +74,36 @@ The meaning layer that replaces the old category.
 
 | Tag | Definition |
 |---|---|
-| `Architecture & Design` (287) | The building/design itself is the subject. |
+| `Architecture` (287) | The building/design itself is the subject. |
 | `History` (257) | General historical narrative, eras, origins. |
 | `Art` (145) | Visual art — collections, sculpture, murals, public art, teamLab. |
 | `Literature` (54) | Writers, books, literary associations. |
-| `Music & Performance` (104) | Music, theatre, jazz, recording, the stage, kabuki. |
-| `Food & Drink` (96) | Markets, cuisine, wine, coffee — **ramen, izakaya, sushi, dim sum**. |
-| `Faith & Spirituality` (129) | Religion, worship, the sacred — **Buddhism, Shinto, Zen**. |
-| `Power & Politics` (130) | Monarchy, government, the machinery of state — **imperial Japan, colonial administration**. |
-| `Money & Trade` (103) | Finance, commerce, markets, the Gilded-Age / tycoon wealth story. |
-| `Immigration & Community` (58) | Migrant communities — Chinatown, Harlem, **Japantown**, who settled and why. |
-| `Crime & Scandal` (25) | Heists, slums, the red-light, the disreputable. |
-| `Death & Remembrance` (55) | Cemeteries, memorials, mourning — **atomic/war remembrance**. |
-| `Engineering & Innovation` (125) | Structural feats, domes, spans, **seismic engineering**, technical firsts. |
-| `War & Conflict` (71) | War, the Blitz, fortresses, wartime history. |
+| `Performance` (104) | Music, theatre, jazz, recording, the stage, kabuki. |
+| `Food` (96) | Markets, cuisine, wine, coffee — **ramen, izakaya, sushi, dim sum**. |
+| `Faith` (129) | Religion, worship, the sacred — **Buddhism, Shinto, Zen**. |
+| `Power` (130) | Monarchy, government, the machinery of state — **imperial Japan, colonial administration**. |
+| `Commerce` (103) | Finance, commerce, markets, the Gilded-Age / tycoon wealth story. |
+| `Immigration` (58) | Migrant communities — Chinatown, Harlem, **Japantown**, who settled and why. |
+| `Crime` (25) | Heists, slums, the red-light, the disreputable. |
+| `Remembrance` (55) | Cemeteries, memorials, mourning — **atomic/war remembrance**. |
+| `Engineering` (125) | Structural feats, domes, spans, **seismic engineering**, technical firsts. |
+| `War` (71) | War, the Blitz, fortresses, wartime history. |
 | `Maritime` (72) | Docks, harbours, ships, the sea and the port — junk boats, the Bund. |
-| **`Fashion & Retail`** (46) | **Fashion, luxury retail, department-store culture, the flagship-as-architecture story (Ginza, Omotesando, Fifth Avenue).** |
+| **`Fashion`** (46) | **Fashion, luxury retail, department-store culture, the flagship-as-architecture story (Ginza, Omotesando, Fifth Avenue).** |
 
 ### 3 · Style & era — *for built things* (pick 0–2)
-`Medieval / Gothic` (49) · `Baroque` (20) · `Georgian / Neoclassical` (23)
+`Gothic` (49) · `Baroque` (20) · `Neoclassical` (23)
 *(incl. Pombaline, Federal)* · `Beaux-Arts` (15) · `Victorian` (31) ·
-`Art Deco` (15) · `Modernist` (28) · **`Metabolist`** *(Japanese 1960s —
-Tange, Kurokawa; may be 0 in catalog, see D2)* · `Brutalist` (6) ·
+`Art Deco` (15) · `Modernist` (28) · `Brutalist` (6) ·
 `Contemporary` (34) *(21st-century)* · `Gilded Age` (5) *(NYC c.1870–1910)* ·
-**`Colonial`** (23) *(HK/treaty-port, Portuguese, early-American)* ·
-**`Mission / Spanish Revival`** (1*) *(SF/California — marginal, see D2)*
+**`Colonial`** (23) *(HK/treaty-port, Portuguese, early-American)*
 
 ### 4 · Experience — *how you'll find it* (pick 0–2)
 | Tag | Definition |
 |---|---|
 | `Iconic Landmark` (0†) | A must-see, world-famous. *(editorial — not auto-assigned)* |
 | `Hidden Gem` (33) | Off the beaten path, easily missed, a local secret. |
-| `Viewpoint & Panorama` (77) | A view, skyline, miradouro, observation deck, the Peak. |
+| `Viewpoint` (77) | A view, skyline, miradouro, observation deck, the Peak. |
 | `Green Escape` (117) | A quiet, green place to slow down. |
 | `Free to Visit` (0†) | No ticket required. *(editorial)* |
 | `After Dark` (0†) | Comes alive at night; neon, nightlife. *(editorial)* |
@@ -151,10 +148,10 @@ New architects are appended here first, deliberately, as the catalog grows.
 
 ## Open questions the catalog raised (detailed in the migration plan)
 
-- **D1 — `Shop & Flagship` place type vs `Notable Building` + `Fashion & Retail`
+- **D1 — `Shop & Flagship` place type vs `Notable Building` + `Fashion`
   theme.** Only ~3 tours read as flagship *by title*, but 46 hit the retail
   theme. Is the flagship-store landmark distinct enough to be its own place
-  type, or is `Notable Building` + `Fashion & Retail` enough?
+  type, or is `Notable Building` + `Fashion` enough?
 - **D2 — thin new tags.** `Metabolist` (Nakagin was demolished 2022 — may be 0)
   and `Mission / Spanish Revival` (1) are marginal. Keep for curatorial
   completeness, fold into `Modernist` / `Colonial`, or drop?

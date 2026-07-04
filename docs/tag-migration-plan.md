@@ -121,7 +121,7 @@ constraints to unwind.
 
 | # | Decision | Choice |
 |---|---|---|
-| D1 | `Shop & Flagship` place type | **Fold** into `Notable Building` + `Fashion & Retail` theme |
+| D1 | `Shop & Flagship` place type | **Fold** into `Notable Building` + `Fashion` theme |
 | D2 | Thin style tags (`Metabolist`, `Mission / Spanish Revival`) | **Drop** |
 | D3 | Split `Temple & Shrine` | **No** — keep one `Religious Building` for now |
 | D4 | Tag storage shape | **Flat `[String]` + app-side facet map** (no schema change) |
@@ -174,7 +174,7 @@ phase.
 The important part — these drive whether/how we build it.
 
 - **D1 · `Shop & Flagship` place type?** Add it, or fold flagships into
-  `Notable Building` + the `Fashion & Retail` theme? *(Recommend: fold unless
+  `Notable Building` + the `Fashion` theme? *(Recommend: fold unless
   Tokyo/Ginza retail becomes a named rail.)*
 - **D2 · Thin new style tags.** Keep `Metabolist` (maybe 0 in catalog) and
   `Mission / Spanish Revival` (1) for completeness, or drop/merge?

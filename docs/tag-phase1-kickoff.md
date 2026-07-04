@@ -46,13 +46,13 @@ missing Theme:        0     (must be 0)
 
 | Tour | New flat tags |
 |---|---|
-| **Dior Azabudai Hills** (Tokyo) | `Shop & Flagship`, `Tower & Skyscraper`, `Architecture & Design`, `Fashion & Retail`, `Designed by a Master`, `Kengo Kuma` |
-| **Borough Market** (London) | `Market & Arcade`, `Food & Drink`, `History`, `Money & Trade`, `Victorian` |
-| **Golden Gate Bridge** (SF) | `Bridge`, `Architecture & Design`, `Art`, `Engineering & Innovation`, `Art Deco` |
+| **Dior Azabudai Hills** (Tokyo) | `Shop & Flagship`, `Tower`, `Architecture`, `Fashion`, `Designed by a Master`, `Kengo Kuma` |
+| **Borough Market** (London) | `Market`, `Food`, `History`, `Commerce`, `Victorian` |
+| **Golden Gate Bridge** (SF) | `Bridge`, `Architecture`, `Art`, `Engineering`, `Art Deco` |
 
-The new Tokyo/HK/SF tags (`Shop & Flagship`, `Fashion & Retail`, `Kengo Kuma`,
+The new Tokyo/HK/SF tags (`Shop & Flagship`, `Fashion`, `Kengo Kuma`,
 `I. M. Pei`…) all fire correctly. **But the auto-pass is a first draft** — the
-same run tags Empire State with a stray `Food & Drink`, and Bank of China with
+same run tags Empire State with a stray `Food`, and Bank of China with
 `Norman Foster` (a comparative mention, not the architect — it's I. M. Pei).
 That's exactly what the city-by-city spot-check (D10) is for; see
 `docs/tag-migration-review.md`, flagged tours sorted to the top of each city.
