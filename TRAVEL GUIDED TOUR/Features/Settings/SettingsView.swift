@@ -233,6 +233,14 @@ struct SettingsView: View {
             .sheet(isPresented: $showingSignIn) {
                 SignInView()
             }
+            // Declare the scheme on the sheet itself. The app root sets
+            // `.preferredColorScheme`, but a `.sheet` doesn't reliably pick up
+            // *changes* to a presenter's preference (SwiftUI quirk — the first
+            // toggle applies, the toggle-back gets stuck). Since the theme
+            // picker lives on this sheet, applying it here keyed on the same
+            // `@AppStorage` value makes the sheet re-render to the right scheme
+            // on every toggle.
+            .preferredColorScheme(colorSchemePreference.colorScheme)
         }
     }
 
