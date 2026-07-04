@@ -67,7 +67,23 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-07-03)
+## Current State (2026-07-04)
+
+### Device-testing polish batch + moderation-email upgrade — TestFlight 1.0 (67) (session 53 — code)
+
+**Owner ran the full authoring loop on build 66 and fed back a stream of polish comments; eight app fixes shipped in one build ([PR #326](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/326), squash `23c3e40`), plus a server-side moderation-email rewrite (`36fbb19`, deployed live via the Supabase dashboard).**
+
+- **Public maker page updates instantly after a profile edit.** Own profile reads the live `makers` row; the public page rendered from the cached catalog (`get_catalog` snapshot, refreshes on relaunch/foreground) → edits lagged. `DataService.applyLocalMaker(_:)` upserts a maker into the in-memory catalog; `ProfileView` mirrors `myMaker` into it via `.onChange`. A brand-new maker also appears immediately.
+- **Review your recording** before keeping it — a **Play recording** button (`RecordingReviewPlayer`, an `AVAudioPlayer` wrapper) on `AudioRecordSheet`; stops on re-record/keep/close.
+- **No avatar flash** in Library — `MakerAvatarView` now uses the shared `ImageCache` like `HeroImageView` (init pre-populates → cache hit renders frame-zero, no monogram flash on tab re-appearance).
+- **Audio-write bug** (shipped broken in 62/63): the `stops.order` column collides with PostgREST's reserved `order` sort param — `.eq("order",0)` → HTTP 400. Fixed in build 66 (filter single-stop drafts by `tour_id`). Memory `reference-postgrest-order-column-collision`.
+- **Tighter editors + character countdowns:** the **profile editor** (name cap 24, bio 100 + 3-line bound) and the **New Tour form** (title 60 / short 100 / desc 600) got live "N left" countdowns (red near the limit), tight label+field grouping, so Save sits far higher. New Tour "Save draft" → **"Save draft & continue"** (pushes the editor). Editor Save clears the bottom module (missing `AtlasBottomModule.height()` inset); a **discard-changes** prompt on close (+ `interactiveDismissDisabled`). Avatar **pinch-zoom + drag crop** (`AvatarCropSheet` / `ImageRenderer`) replaced the auto centre-crop.
+- **Settings theme Dark→Light→Dark** stuck light — a `.sheet` doesn't reliably pick up *changes* to the presenter's `.preferredColorScheme`; declared it on `SettingsView` itself (keyed on the same `@AppStorage`). Sim-verified D→L→D returns to dark.
+- **Signed-out page redesign + shared `JoinDozentPrompt`** (`Features/Auth/JoinDozentPrompt.swift`): person icon 72→**20pt** (the empty-state/control glyph size — the app's universal control **diameter is 44pt**: map controls, tour-detail action buttons, search bar), Sign-in button pinned to 44, "YOUR PROFILE"→**"JOIN DOZENT"** in mono `caption` with sign-up copy. The self-hiding prompt is also appended below **all three Library empty states** (Saved/Downloaded/Recents) to encourage signing up.
+- **Moderation email rewrite (server-side, live now):** `notify-moderation` Edge Function now sends a readable review email — **tour title, maker NAME (resolved), city/category/duration, description, the TRANSCRIPT, a ▶ Listen link, and the PHOTOS inline** — with one-click **✓ Approve & publish / Take down** buttons (a GET branch on the same function verifies `MODERATION_TOKEN` and PATCHes the tour via the service role, since `publish_tour`'s `is_admin()` gate fails under the service role). **Owner setup done (hand-held):** pasted the new code + Deploy, turned **Verify JWT OFF**, added secret `MODERATION_TOKEN`. So the moderation loop is now: maker submits → owner gets a rich email → **one-click Approve publishes**.
+- **`test_sim` 140/140** throughout. Each visual fix was sim-verified with the temp-signed-in / default-tab hacks (reverted + grep-clean before every commit/archive). The writes (profile save, avatar upload, recording upload, approve-publish) are owner-device-verified.
+- **TestFlight 1.0 (67)** — bump #327 (admin-merged), archived clean from `main` with `-allowProvisioningUpdates` at `/tmp/Atlas-20260704-b67.xcarchive`, binary-verified (`1.0 (67)`, `UIRequiresFullScreen`, mic key, Apple + `associated-domains`, Supabase host, no `TEMP_LOCAL_DEMO`). **Owner uploading.** Build arc this session: 64 (polish A+B) → 65 (polish C) → 66 (audio-write fix + editor/New-Tour polish) → 67 (this batch).
+- **NEXT — batch D (design-first):** the social layer — follow/followers with counts, public vs private accounts, friend requests (auto vs manual). Needs a `follows` table + RLS + owner decisions.
 
 ### Profile/maker polish + the audio-write bug fix — TestFlight 1.0 (66) (session 53 — code)
 
