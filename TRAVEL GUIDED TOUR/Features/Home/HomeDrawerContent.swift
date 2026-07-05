@@ -72,7 +72,7 @@ struct HomeDrawerContent: View {
                                 noResultsState
                             } else {
                                 ForEach(results) { tour in
-                                    FilterResultRow(tour: tour)
+                                    FilterResultCard(tour: tour)
                                 }
                             }
                         } else {
@@ -296,12 +296,14 @@ struct HomeDrawerContent: View {
     }
 }
 
-// MARK: - Filter result row
+// MARK: - Filter result card
 
-/// One full-width row in the filtered results list (drawer, filter
-/// active). Square thumbnail + title / maker / meta, matching the home
-/// editorial voice, with the same bookmark AFFORDANCE as the rail cards.
-private struct FilterResultRow: View {
+/// One **full-width** card in the filtered results list (drawer, filter
+/// active). Same big 4:3 hero as the rail cards, but the frame spans the
+/// drawer width instead of scrolling in a rail — so filtered results read
+/// as a rich, scannable vertical feed (owner direction 2026-07-05).
+/// Title / maker / meta below, bookmark AFFORDANCE on the hero corner.
+private struct FilterResultCard: View {
     let tour: Tour
 
     @Environment(DataService.self) private var dataService
@@ -313,15 +315,11 @@ private struct FilterResultRow: View {
         Button {
             tourPresenter.present(tour)
         } label: {
-            HStack(spacing: AtlasSpacing.md) {
-                HeroImageView(
-                    imageName: tour.heroImageURL,
-                    height: 64,
-                    cornerRadius: 0,
-                    category: tour.primaryCategory
-                )
-                .frame(width: 64)
+            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+                heroSection
 
+                // Uniform xs between title → maker → meta, matching the
+                // rail card so the two card families read identically.
                 VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                     Text(tour.title)
                         .font(AtlasTypography.body)
@@ -336,44 +334,72 @@ private struct FilterResultRow: View {
                             .lineLimit(1)
                     }
 
-                    Text(metaLine)
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                        .lineLimit(1)
+                    HStack(spacing: AtlasSpacing.xs) {
+                        Image(systemName: "clock")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                        Text(metaLine)
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                            .lineLimit(1)
+                    }
                 }
-
-                Spacer(minLength: 0)
-
-                Button {
-                    libraryStore.toggleSaved(tour.id)
-                } label: {
-                    Image(systemName: libraryStore.isSaved(tour.id) ? "bookmark.fill" : "bookmark")
-                        .font(AtlasTypography.body)
-                        .foregroundStyle(AtlasColors.primaryText)
-                        .frame(width: 36, height: 36)
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel(libraryStore.isSaved(tour.id) ? "Saved" : "Save tour")
+                .padding(.horizontal, AtlasSpacing.xs)
             }
-            .padding(.leading, AtlasSpacing.sm)
-            .padding(.trailing, AtlasSpacing.md)
-            .padding(.vertical, AtlasSpacing.sm)
         }
         .buttonStyle(.plain)
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
+    /// Full-width 4:3 hero with the bookmark AFFORDANCE in the top-right
+    /// corner (same control as the rail card). The inner Button fires
+    /// `toggleSaved`; a tap anywhere else on the card opens the tour.
+    private var heroSection: some View {
+        ZStack(alignment: .topTrailing) {
+            HeroImageView(
+                imageName: tour.heroImageURL,
+                height: Self.heroHeight,
+                cornerRadius: 0,
+                category: tour.primaryCategory
+            )
+
+            Button {
+                libraryStore.toggleSaved(tour.id)
+            } label: {
+                Image(systemName: libraryStore.isSaved(tour.id) ? "bookmark.fill" : "bookmark")
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .frame(width: 36, height: 36)
+                    .background(.regularMaterial, in: Circle())
+            }
+            .buttonStyle(.plain)
+            .padding(AtlasSpacing.sm)
+            .accessibilityLabel(libraryStore.isSaved(tour.id) ? "Saved" : "Save tour")
+        }
+    }
+
+    /// Height for the full-width 4:3 hero — the drawer width (screen −
+    /// the BottomSheet's 8pt side insets − this card's `lg` side pads)
+    /// at a 4:3 aspect, so the catalog's 1200×900 heroes render
+    /// uncropped, same as the rail cards. Falls back to a sensible fixed
+    /// height when there's no active window scene (test / preview).
+    private static var heroHeight: CGFloat {
+        let screenWidth = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first(where: { $0.activationState == .foregroundActive })?
+            .screen.bounds.width
+        let sheetInset: CGFloat = 8 * 2          // BottomSheet.horizontalInset, both sides
+        let cardInset = AtlasSpacing.lg * 2       // this card's horizontal padding
+        let width = (screenWidth ?? 390) - sheetInset - cardInset
+        return width * 3 / 4
+    }
+
     /// "3 min" alone, or "3 min · 1.2 mi away" when the user's location
-    /// is known — the same shape the rail cards + placecard use.
+    /// is known — the same shape the rail cards + placecard use. Walks
+    /// (multi-stop) surface their stop count as a cue.
     private var metaLine: String {
         let duration = AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
-        // Walks (multi-stop) surface their walking distance as a cue.
-        let base: String
-        if tour.kind == .multiStop {
-            base = "\(duration) · \(tour.stops.count) stops"
-        } else {
-            base = duration
-        }
+        let base = tour.kind == .multiStop ? "\(duration) · \(tour.stops.count) stops" : duration
         guard let user = locationManager.userLocation else { return base }
         let away = AtlasFormatters.distanceAway(meters: tour.distance(from: user))
         return "\(base) · \(away)"
