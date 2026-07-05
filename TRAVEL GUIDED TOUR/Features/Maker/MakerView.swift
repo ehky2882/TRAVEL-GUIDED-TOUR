@@ -93,6 +93,7 @@ struct MakerView: View {
     @Environment(MakerProfileService.self) private var makerProfileService: MakerProfileService?
     @Environment(MakerTourService.self) private var makerTourService: MakerTourService?
     @Environment(FollowService.self) private var followService: FollowService?
+    @Environment(ToastCenter.self) private var toastCenter: ToastCenter?
 
     /// Follower/following counts + this viewer's relationship to the maker.
     /// Loaded on appear; refreshed after a follow/unfollow.
@@ -352,6 +353,7 @@ struct MakerView: View {
 
     private func toggleFollow() {
         guard let followService else { return }
+        AtlasHaptics.selection()   // immediate tap feedback (before the network round-trip)
         isTogglingFollow = true
         Task {
             defer { isTogglingFollow = false }
@@ -363,7 +365,9 @@ struct MakerView: View {
                 }
                 followState = await followService.state(for: maker.id)
             } catch {
-                // Leave the current state; a transient failure shouldn't lie.
+                // Leave the current state; a transient failure shouldn't lie —
+                // but tell the user it didn't take.
+                toastCenter?.show("Couldn't update follow. Check your connection.")
             }
         }
     }

@@ -14,18 +14,20 @@ import AppKit
 /// hardcoded `Color.black` / `Color.white` / `Color(white:)`. The
 /// pre-launch swap is then a one-file change.
 enum AtlasColors {
-    /// The brand accent. Mirrors `Assets.xcassets/AccentColor.colorset`
-    /// (terracotta `#B85042` with a lighter dark-mode variant), so
-    /// the asset catalog and code stay in sync — when the design
-    /// pass picks a new accent, the asset gets updated and this
-    /// value picks it up automatically.
+    /// The brand accent — dark gold (brass) `#8B7535`, owner-confirmed
+    /// 2026-07-04. Mirrors `Assets.xcassets/AccentColor.colorset`, so the
+    /// asset catalog and code stay in sync. Deliberately a SINGLE value in
+    /// both light and dark mode (owner: "it is the one that stays
+    /// consistent") — the asset carries no dark-mode variant.
     static let accent = Color.accentColor
     static let accentLight = Color.accentColor.opacity(0.6)
 
-    /// Map pin color — dark gold `#8B7535`. Separate from the brand
-    /// accent so pin styling can diverge from interactive-element
-    /// tinting without a global accent change.
-    static let mapPin = Color(red: 139/255, green: 117/255, blue: 53/255)
+    /// Map pin + interactive-highlight color. Same gold as the brand
+    /// accent since the 2026-07-04 unification (the old terracotta accent
+    /// is gone); kept as its own token name because ~58 call sites read
+    /// `mapPin`, and so pin styling COULD diverge again someday without
+    /// touching them.
+    static let mapPin = accent
 
     /// Three-step text hierarchy. SwiftUI's semantic colors adapt
     /// to color scheme: primary is black in light mode and white

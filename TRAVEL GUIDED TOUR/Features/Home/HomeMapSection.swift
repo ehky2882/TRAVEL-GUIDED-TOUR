@@ -476,7 +476,7 @@ private struct ClusterItem: Identifiable {
 /// optional directional wedge showing which way the device is
 /// facing, and the blue dot itself. All colors are explicit (not
 /// `.tint`-derived) so the dot stays Apple-Maps blue rather than
-/// inheriting the terracotta app accent.
+/// inheriting the gold app accent.
 private struct UserLocationDot: View {
     /// Screen-space rotation for the heading wedge, in degrees
     /// (0 = pointing up). `nil` hides the wedge.

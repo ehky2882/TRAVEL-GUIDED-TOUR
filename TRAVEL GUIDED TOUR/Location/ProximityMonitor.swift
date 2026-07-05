@@ -242,6 +242,9 @@ final class ProximityMonitor: NSObject, CLLocationManagerDelegate {
         let remoteURL = URL(string: stop.audioURL)
 
         if let url = localURL ?? remoteURL {
+            // The app's signature moment: a soft bump when a stop auto-fires,
+            // often felt with the phone pocketed and the screen off.
+            AtlasHaptics.impact(.medium)
             audioPlayer?.play(
                 url: url,
                 title: activeTourTitle,

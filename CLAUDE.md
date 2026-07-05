@@ -762,8 +762,8 @@ Key facts:
 - **All tours have `heroImageURL`.** NYC tours use CC-licensed Wikimedia Commons 1280px thumbs; Porto/Lisbon/Braga tours use owner-supplied webps on `gh-pages` at 1200×900. Tours that received a gallery this session have an `additionalImageURLs` array of webps under the same slug — see catalog for the full list.
 - `MiniPlayerBar` above tab bar at all times: marquee titles, skip-forward-10s, progress ring, idle welcome message
 - `MarqueeText.swift` in `Components/` — scrolls overflow text continuously
-- AppIcon is placeholder (green sphere); AccentColor: terracotta `#B85042` (placeholder)
-- Theme tokens in `Theme/Atlas*.swift` are placeholder values pending design pass
+- AppIcon is placeholder (green sphere); AccentColor: **dark gold (brass) `#8B7535` — owner-confirmed brand color (2026-07-04)**, same value in light + dark deliberately; terracotta is fully removed
+- Theme tokens in `Theme/Atlas*.swift` are placeholder values pending design pass (color is now decided; type/spacing still placeholder)
 - `UIBackgroundModes=audio` now in explicit `Info.plist` (not INFOPLIST_KEY — Xcode ignores that for arrays)
 
 See `ROADMAP.md` for full milestone history. Read latest `archive/HANDOFF-*.md` for mid-flight context.
@@ -882,7 +882,7 @@ Environment services (instantiated once at app entry, injected via SwiftUI Envir
 
 ## Design System
 
-Tokens in `Theme/` are single source of truth; values are placeholders pending deferred design pass. Accent `#B85042` is also placeholder. Build for function first.
+Tokens in `Theme/` are single source of truth. **Brand accent is decided: dark gold (brass) `#8B7535` (owner, 2026-07-04) — one value in both light and dark mode; never re-propose terracotta.** Type/spacing values remain placeholders pending the design pass. Build for function first.
 
 ## Build Config
 
