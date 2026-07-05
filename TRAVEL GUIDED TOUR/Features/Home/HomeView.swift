@@ -26,6 +26,16 @@ struct HomeView: View {
     /// map controls below can read it from the same source.
     @Binding var sheetDetent: BottomSheetDetent
 
+    /// True when Home is the active tab. `ContentView` keeps `HomeView`
+    /// mounted across tab switches (so the map isn't rebuilt on return)
+    /// and passes `false` here while Home is hidden. Used to short-circuit
+    /// camera-change side-effects so a late map settle frame — e.g. a
+    /// recenter animation that finishes just after the user tabs to
+    /// Library — can't retract the drawer or mutate shared map state while
+    /// Home is off-screen. (Gestures are already blocked upstream via
+    /// `allowsHitTesting(false)`; this covers programmatic camera flights.)
+    let isActive: Bool
+
     /// Guards against the map firing camera events during initial
     /// render. Set to true 1 s after the view appears — enough time
     /// for the map's first tile load / settle cycle to complete so
@@ -102,6 +112,7 @@ struct HomeView: View {
                         cameraPosition: $cameraPosition,
                         mapMode: mapMode,
                         onCameraChanged: { region in
+                            guard isActive else { return }
                             sharedState.visibleRegion = region
                             withAnimation(.easeInOut(duration: 0.3)) {
                                 sharedState.isMapMoving = false
@@ -109,7 +120,7 @@ struct HomeView: View {
                             evaluatePlaceArrival(settledRegion: region)
                         },
                         onCameraMoving: {
-                            guard mapInteractionEnabled, !sharedState.isMapMoving else { return }
+                            guard isActive, mapInteractionEnabled, !sharedState.isMapMoving else { return }
                             withAnimation(.spring(response: 0.35, dampingFraction: 0.85)) {
                                 sharedState.isMapMoving = true
                                 if sheetDetent != .peek {

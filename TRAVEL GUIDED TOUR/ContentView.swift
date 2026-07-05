@@ -290,12 +290,38 @@ struct ContentView: View {
         }
     }
 
+    /// Tab content. **Home is kept permanently mounted** (visibility-
+    /// toggled, not `switch`-swapped) so its SwiftUI `Map` — backed by an
+    /// `MKMapView` carrying ~509 clustered stop annotations — isn't torn
+    /// down and rebuilt every time the user returns to Home. That rebuild
+    /// (map re-creation + tile reload + re-adding/re-clustering every
+    /// annotation, plus losing `HomeView`'s `@State` camera position back
+    /// to the NYC default) is the "return-to-Home lag" the owner reported
+    /// on device. Profiling confirmed the Swift-side recompute
+    /// (`filteredTours` ≈0.02 ms, cluster ≈1–3 ms) is negligible — the cost
+    /// is the map's UIKit reconstruction, which staying mounted eliminates.
+    ///
+    /// Library / Me keep their existing mount-on-select lifecycle (cheap to
+    /// build; some refresh-on-return is fine) and render opaque on top of
+    /// the hidden Home, so nothing shows through. While Home is hidden it's
+    /// made inert — `allowsHitTesting(false)` stops all map gestures (so the
+    /// 60 fps camera-change callbacks can't fire) and `isActive: false`
+    /// guards its camera side-effects — so it isn't burning CPU/battery
+    /// off-screen.
     @ViewBuilder
     private var tabContent: some View {
-        switch appShared.selectedTab {
-        case .home:    HomeView(sheetDetent: $homeSheetDetent)
-        case .library: LibraryView()
-        case .me:      ProfileView()
+        let isHome = appShared.selectedTab == .home
+        ZStack {
+            HomeView(sheetDetent: $homeSheetDetent, isActive: isHome)
+                .opacity(isHome ? 1 : 0)
+                .allowsHitTesting(isHome)
+                .accessibilityHidden(!isHome)
+
+            switch appShared.selectedTab {
+            case .home:    EmptyView()
+            case .library: LibraryView()
+            case .me:      ProfileView()
+            }
         }
     }
 
