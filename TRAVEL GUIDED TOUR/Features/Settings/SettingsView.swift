@@ -206,7 +206,7 @@ struct SettingsView: View {
             .contentMargins(.top, 0, for: .scrollContent)
             .listSectionSpacing(AtlasSpacing.sm)
             .environment(\.defaultMinListRowHeight, AtlasSpacing.xl + AtlasSpacing.xs)
-            // No terracotta on this surface: List auto-tints row icons +
+            // No accent gold on this surface: List auto-tints row icons +
             // button labels with the accent, so pin the tint to
             // primaryText instead.
             .tint(AtlasColors.primaryText)

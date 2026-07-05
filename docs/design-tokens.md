@@ -54,9 +54,9 @@ platform-system color so light and dark mode both render correctly.
 
 | Token         | Value                               | Notes                                                                                                                          |
 | ------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `accent`      | `Color.accentColor`                 | Mirrors `Assets.xcassets/AccentColor.colorset` — **terracotta `#B85042`** light mode, lighter variant dark mode. Placeholder. |
+| `accent`      | `Color.accentColor`                 | Mirrors `Assets.xcassets/AccentColor.colorset` — **dark gold (brass) `#8B7535`**, owner-confirmed 2026-07-04. Deliberately the SAME value in light and dark mode (no dark variant). The old terracotta placeholder is gone. |
 | `accentLight` | `Color.accentColor.opacity(0.6)`    | Secondary accent — e.g. disabled accent states.                                                                                |
-| `mapPin`      | `Color(red: 139/255, green: 117/255, blue: 53/255)` | **Dark gold `#8B7535`** — map pin fill. Separate from `accent` so pin styling can diverge from interactive-element tinting without a global accent change. |
+| `mapPin`      | `accent`                            | Same gold as `accent` since the 2026-07-04 unification. Kept as its own token name (~58 call sites) so pin styling could diverge again without touching them. |
 
 ### Text — three-step hierarchy
 

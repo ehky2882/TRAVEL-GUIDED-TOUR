@@ -29,7 +29,10 @@ enum TourStatus: String, Codable, CaseIterable, Hashable {
         case .draft:     return AtlasColors.secondaryText
         case .inReview:  return AtlasColors.mapPin
         case .published: return AtlasColors.secondaryText
-        case .takenDown: return AtlasColors.accent
+        // Red, not accent: since the accent unified with the gold
+        // (2026-07-04) an accent badge would be identical to In
+        // review — and "taken down" is genuinely a warning state.
+        case .takenDown: return Color.red
         }
     }
 }
