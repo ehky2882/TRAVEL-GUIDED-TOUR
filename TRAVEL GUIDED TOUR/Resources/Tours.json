@@ -2621,8 +2621,6 @@
       "tags": [
         "Museum",
         "Architecture",
-        "Food",
-        "Power",
         "Contemporary",
         "Designed by a Master",
         "Eduardo Souto de Moura"
@@ -5293,12 +5291,8 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Adega_Mayor_3.jpg"
       ],
       "tags": [
-        "District",
         "Architecture",
-        "Engineering",
         "Food",
-        "History",
-        "Power",
         "Designed by a Master",
         "Álvaro Siza"
       ],
@@ -5342,12 +5336,9 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Obidos_4.webp"
       ],
       "tags": [
+        "District",
         "Notable Building",
-        "Art",
-        "Engineering",
         "History",
-        "Maritime",
-        "Power",
         "Gothic"
       ],
       "stops": [
@@ -5393,10 +5384,8 @@
       "tags": [
         "Religious Building",
         "Architecture",
-        "Art",
         "Faith",
         "Designed by a Master",
-        "Public Art",
         "Álvaro Siza"
       ],
       "stops": [
@@ -8847,11 +8836,8 @@
       "city": "Lisbon",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "District",
         "Architecture",
-        "Engineering",
         "Food",
-        "History",
         "Designed by a Master",
         "Eduardo Souto de Moura"
       ],
@@ -8941,11 +8927,9 @@
       "city": "Lisbon",
       "primaryCategory": "architecture",
       "tags": [
-        "District",
+        "Monument",
         "Architecture",
-        "Art",
         "History",
-        "Power",
         "Neoclassical",
         "Viewpoint"
       ],
@@ -9035,9 +9019,6 @@
       "tags": [
         "Museum",
         "Architecture",
-        "Art",
-        "Remembrance",
-        "Engineering",
         "Faith",
         "History",
         "Gothic"
@@ -9268,9 +9249,6 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
-        "Architecture",
-        "Engineering",
-        "Power",
         "Baroque",
         "Green Escape",
         "Viewpoint"
@@ -9362,12 +9340,9 @@
       "tags": [
         "Religious Building",
         "Architecture",
-        "Art",
-        "Remembrance",
         "Faith",
-        "Literature",
+        "Remembrance",
         "Maritime",
-        "Commerce",
         "Power"
       ],
       "priceUSD": 0
@@ -9411,12 +9386,9 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Architecture",
         "Art",
         "Fashion",
-        "Food",
-        "History",
-        "Literature"
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -9553,13 +9525,10 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park",
-        "Remembrance",
-        "Faith",
-        "History",
-        "War",
+        "Viewpoint",
         "Green Escape",
-        "Viewpoint"
+        "Faith",
+        "History"
       ],
       "priceUSD": 0
     },
@@ -9647,11 +9616,8 @@
       "primaryCategory": "architecture",
       "tags": [
         "Civic",
-        "Monument",
         "Architecture",
-        "Literature",
         "Power",
-        "Contemporary",
         "Modernist"
       ],
       "priceUSD": 0
@@ -9786,10 +9752,7 @@
         "Public Square",
         "Architecture",
         "History",
-        "Performance",
-        "Power",
-        "Neoclassical",
-        "Gothic"
+        "Neoclassical"
       ],
       "priceUSD": 0
     },
@@ -9834,9 +9797,7 @@
       "tags": [
         "Public Square",
         "Architecture",
-        "Engineering",
         "History",
-        "Commerce",
         "Power",
         "Neoclassical"
       ],
@@ -9971,12 +9932,9 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Market",
-        "Architecture",
-        "Engineering",
         "Food",
         "Commerce",
-        "Victorian",
-        "Green Escape"
+        "Victorian"
       ],
       "priceUSD": 0
     },
@@ -11669,11 +11627,8 @@
       "tags": [
         "Tower",
         "Architecture",
-        "Fashion",
-        "History",
-        "Modernist",
-        "Hidden Gem",
-        "Viewpoint"
+        "Viewpoint",
+        "Modernist"
       ],
       "priceUSD": 0
     },
@@ -11759,10 +11714,7 @@
         "Religious Building",
         "Architecture",
         "Remembrance",
-        "Faith",
-        "History",
-        "Power",
-        "War"
+        "Faith"
       ],
       "priceUSD": 0
     },
@@ -11900,12 +11852,8 @@
         "Museum",
         "Architecture",
         "Art",
-        "Engineering",
         "Faith",
-        "History",
-        "Immigration",
-        "Baroque",
-        "Viewpoint"
+        "Baroque"
       ],
       "priceUSD": 0
     },
@@ -11949,10 +11897,6 @@
         "Museum",
         "Architecture",
         "Art",
-        "Faith",
-        "Immigration",
-        "Performance",
-        "Power",
         "Contemporary",
         "Modernist"
       ],
@@ -12043,13 +11987,8 @@
       "tags": [
         "Museum",
         "Art",
-        "Engineering",
         "Faith",
-        "Fashion",
-        "History",
-        "Commerce",
-        "Power",
-        "Green Escape"
+        "History"
       ],
       "priceUSD": 0
     },
@@ -12092,10 +12031,7 @@
         "Religious Building",
         "Architecture",
         "Remembrance",
-        "Engineering",
         "Faith",
-        "Literature",
-        "Power",
         "Baroque"
       ],
       "priceUSD": 0
@@ -12139,12 +12075,8 @@
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
-        "Engineering",
-        "Faith",
         "History",
         "Power",
-        "War",
-        "Contemporary",
         "Neoclassical"
       ],
       "priceUSD": 0
@@ -12231,10 +12163,7 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
-        "Art",
-        "Faith",
         "History",
-        "Power",
         "Colonial",
         "Green Escape",
         "Hidden Gem"
@@ -12327,10 +12256,7 @@
       "tags": [
         "Religious Building",
         "Architecture",
-        "Remembrance",
-        "Engineering",
         "Faith",
-        "Power",
         "Viewpoint"
       ],
       "priceUSD": 0
@@ -12373,12 +12299,8 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Engineering",
         "History",
-        "Literature",
-        "Commerce",
-        "Performance",
-        "Power"
+        "Literature"
       ],
       "priceUSD": 0
     },
@@ -12463,11 +12385,6 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
-        "Architecture",
-        "Remembrance",
-        "Engineering",
-        "Faith",
-        "Literature",
         "Performance",
         "Victorian",
         "Green Escape"
@@ -12512,13 +12429,9 @@
       "primaryCategory": "history",
       "tags": [
         "Monument",
-        "Park",
         "Architecture",
-        "Art",
         "Remembrance",
         "Faith",
-        "History",
-        "Commerce",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -12603,15 +12516,10 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park",
-        "Crime",
-        "Faith",
-        "History",
-        "Maritime",
-        "Power",
-        "Gothic",
+        "Viewpoint",
         "Green Escape",
-        "Viewpoint"
+        "History",
+        "Maritime"
       ],
       "priceUSD": 0
     },
@@ -12652,13 +12560,10 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park",
-        "Food",
-        "Maritime",
-        "Commerce",
-        "Performance",
+        "Viewpoint",
         "Green Escape",
-        "Viewpoint"
+        "Maritime",
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -12699,13 +12604,9 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
-        "Park",
-        "Engineering",
-        "History",
-        "Power",
-        "Gothic",
+        "Viewpoint",
         "Green Escape",
-        "Viewpoint"
+        "History"
       ],
       "priceUSD": 0
     },
@@ -12882,12 +12783,8 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
-        "Architecture",
         "Art",
-        "Engineering",
         "Food",
-        "History",
-        "Maritime",
         "Performance",
         "Public Art"
       ],
@@ -13100,7 +12997,8 @@
         "Remembrance",
         "Gothic",
         "Green Escape",
-        "Designed by a Master"
+        "Designed by a Master",
+        "George Gilbert Scott"
       ],
       "stops": [
         {
@@ -13989,13 +13887,7 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "District",
-        "Architecture",
-        "Engineering",
-        "Food",
         "History",
-        "Performance",
-        "Contemporary",
-        "Neoclassical",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -14086,12 +13978,8 @@
         "Notable Building",
         "Architecture",
         "Art",
-        "Engineering",
-        "History",
-        "Performance",
-        "Power",
-        "War",
-        "Baroque"
+        "Baroque",
+        "Green Escape"
       ],
       "priceUSD": 0
     },
@@ -16214,7 +16102,9 @@
         "Engineering",
         "Literature",
         "Gothic",
-        "Victorian"
+        "Victorian",
+        "Designed by a Master",
+        "George Gilbert Scott"
       ],
       "kind": "single",
       "stops": [

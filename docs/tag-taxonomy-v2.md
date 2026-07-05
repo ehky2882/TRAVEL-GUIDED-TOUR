@@ -123,6 +123,7 @@ seed flags candidates, the human confirms the subject architect).
 **Carried from v1:** `Álvaro Siza` (15) · `Eduardo Souto de Moura` (11) ·
 `McKim, Mead & White` (7) · `Renzo Piano` (7) · `Herzog & de Meuron` (7) ·
 `Norman Foster` (6) · `Christopher Wren` (5) · `Giles Gilbert Scott` (4) ·
+`George Gilbert Scott` (2) *(the grandfather — Albert Memorial, St Pancras; not Giles, his grandson)* ·
 `Fernando Távora` (3) · `Inigo Jones` (3) · `Frank Gehry` · `Charles Holden` ·
 `Denys Lasdun` · `Frank Lloyd Wright` · `Cass Gilbert` · `Inês Lobo` ·
 `Luís Pedro Silva`.
