@@ -2064,6 +2064,7 @@
       "city": "Leça da Palmeira",
       "primaryCategory": "architecture",
       "tags": [
+        "Notable Building",
         "Architecture",
         "Food",
         "Modernist",
@@ -2507,6 +2508,7 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_da_Quinta_da_Conceicao_7.webp"
       ],
       "tags": [
+        "Notable Building",
         "Architecture",
         "Green Escape",
         "Designed by a Master",
@@ -5227,6 +5229,7 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Adega_Mayor_3.jpg"
       ],
       "tags": [
+        "Notable Building",
         "Architecture",
         "Food",
         "Designed by a Master",
@@ -6828,6 +6831,7 @@
       "city": "Porto",
       "primaryCategory": "history",
       "tags": [
+        "Notable Building",
         "Architecture",
         "History",
         "War",
@@ -8355,6 +8359,7 @@
       "city": "Vila Nova de Gaia",
       "primaryCategory": "culturalHeritage",
       "tags": [
+        "Waterfront",
         "Viewpoint",
         "Maritime",
         "Commerce"
@@ -8714,6 +8719,7 @@
       "city": "Lisbon",
       "primaryCategory": "foodAndDrink",
       "tags": [
+        "Notable Building",
         "Architecture",
         "Food",
         "Designed by a Master",
@@ -9129,6 +9135,7 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
+        "History",
         "Baroque",
         "Green Escape",
         "Viewpoint"
@@ -9406,6 +9413,7 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
+        "Public Square",
         "Viewpoint",
         "Green Escape",
         "Faith",
@@ -12404,6 +12412,7 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
+        "Public Square",
         "Viewpoint",
         "Green Escape",
         "History",
@@ -12448,6 +12457,7 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
+        "Public Square",
         "Viewpoint",
         "Green Escape",
         "Maritime",
@@ -12492,6 +12502,7 @@
       "city": "Lisbon",
       "primaryCategory": "natureAndParks",
       "tags": [
+        "Public Square",
         "Viewpoint",
         "Green Escape",
         "History"
@@ -13300,6 +13311,7 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/greenwich-foot-tunnel_3.webp"
       ],
       "tags": [
+        "Notable Building",
         "Engineering",
         "Maritime",
         "Victorian",
@@ -14681,6 +14693,7 @@
       "city": "Hong Kong",
       "primaryCategory": "culturalHeritage",
       "tags": [
+        "Notable Building",
         "History",
         "Engineering"
       ],
@@ -17825,6 +17838,7 @@
       "city": "San Francisco",
       "primaryCategory": "culturalHeritage",
       "tags": [
+        "Notable Building",
         "History",
         "Engineering",
         "Iconic Landmark"
@@ -22488,6 +22502,7 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Notable Building",
+        "Architecture",
         "Beaux-Arts"
       ],
       "priceUSD": 0
