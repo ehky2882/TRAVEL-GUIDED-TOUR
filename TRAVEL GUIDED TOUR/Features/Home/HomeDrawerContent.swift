@@ -378,21 +378,12 @@ private struct FilterResultCard: View {
         }
     }
 
-    /// Height for the full-width 4:3 hero — the drawer width (screen −
-    /// the BottomSheet's 8pt side insets − this card's `lg` side pads)
-    /// at a 4:3 aspect, so the catalog's 1200×900 heroes render
-    /// uncropped, same as the rail cards. Falls back to a sensible fixed
-    /// height when there's no active window scene (test / preview).
-    private static var heroHeight: CGFloat {
-        let screenWidth = UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .first(where: { $0.activationState == .foregroundActive })?
-            .screen.bounds.width
-        let sheetInset: CGFloat = 8 * 2          // BottomSheet.horizontalInset, both sides
-        let cardInset = AtlasSpacing.lg * 2       // this card's horizontal padding
-        let width = (screenWidth ?? 390) - sheetInset - cardInset
-        return width * 3 / 4
-    }
+    /// Height for the full-width hero. Pinned to the rail card's hero
+    /// height (260pt wide × 3/4 = 195pt) so the filtered cards match the
+    /// rail exactly — a wider-than-4:3 banner, so the 1200×900 heroes are
+    /// lightly cropped top/bottom (vs the full uncropped 4:3 the rail
+    /// gets at its narrower width).
+    private static let heroHeight: CGFloat = 195
 
     /// "3 min" alone, or "3 min · 1.2 mi away" when the user's location
     /// is known — the same shape the rail cards + placecard use. Walks
