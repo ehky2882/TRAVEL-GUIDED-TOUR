@@ -53,6 +53,7 @@ enum TestFixtures {
         makerId: UUID = defaultMakerId,
         kind: TourKind = .single,
         category: TourCategory = .architecture,
+        tags: [String] = [],
         latitude: Double = 40.7484,
         longitude: Double = -73.9857,
         stopCount: Int = 1,
@@ -85,7 +86,7 @@ enum TestFixtures {
             centroidLongitude: longitude,
             city: "Test City",
             primaryCategory: category,
-            tags: [],
+            tags: tags,
             priceUSD: 0,
             createdAt: createdAt
         )

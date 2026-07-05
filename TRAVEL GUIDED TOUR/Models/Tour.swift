@@ -38,6 +38,12 @@ struct Tour: Codable, Identifiable, Hashable {
         CLLocationCoordinate2D(latitude: centroidLatitude, longitude: centroidLongitude)
     }
 
+    /// The lightweight primary tag derived from `tags` (owner decision
+    /// D5), for one-label spots that will migrate off `primaryCategory`
+    /// in Phase 3. `nil` only for a tagless tour. `primaryCategory` is
+    /// still the source of truth for map pins + placeholders in Phase 2.
+    var primaryTag: String? { Tag.derivePrimary(from: tags) }
+
     func distance(from location: CLLocation) -> CLLocationDistance {
         let tourLocation = CLLocation(latitude: centroidLatitude, longitude: centroidLongitude)
         return location.distance(from: tourLocation)
