@@ -2009,9 +2009,6 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Engineering",
-        "Commerce",
-        "Contemporary",
         "Designed by a Master",
         "Eduardo Souto de Moura"
       ],
@@ -2059,13 +2056,10 @@
       "city": "Leça da Palmeira",
       "primaryCategory": "architecture",
       "tags": [
-        "Monument",
         "Architecture",
         "Food",
-        "Contemporary",
         "Modernist",
         "Designed by a Master",
-        "Fernando Távora",
         "Álvaro Siza"
       ],
       "priceUSD": 0
@@ -2157,8 +2151,6 @@
         "Notable Building",
         "Architecture",
         "History",
-        "Immigration",
-        "Power",
         "Modernist",
         "Designed by a Master",
         "Álvaro Siza"
@@ -2507,14 +2499,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/Piscina_da_Quinta_da_Conceicao_7.webp"
       ],
       "tags": [
-        "Waterfront",
         "Architecture",
-        "History",
-        "Contemporary",
-        "Designed by a Master",
         "Green Escape",
-        "Fernando Távora",
-        "Álvaro Siza"
+        "Designed by a Master",
+        "Fernando Távora"
       ],
       "stops": [
         {
@@ -2572,10 +2560,7 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Contemporary",
         "Designed by a Master",
-        "Viewpoint",
-        "Eduardo Souto de Moura",
         "Álvaro Siza"
       ],
       "stops": [
@@ -2670,10 +2655,7 @@
       "tags": [
         "Tower",
         "Architecture",
-        "Engineering",
-        "Contemporary",
         "Designed by a Master",
-        "Viewpoint",
         "Eduardo Souto de Moura"
       ],
       "stops": [
@@ -2765,10 +2747,8 @@
         "Waterfront",
         "Architecture",
         "Engineering",
-        "History",
         "Maritime",
         "Designed by a Master",
-        "Viewpoint",
         "Luís Pedro Silva"
       ],
       "stops": [
@@ -2859,9 +2839,6 @@
       "tags": [
         "Waterfront",
         "Architecture",
-        "Commerce",
-        "Performance",
-        "Contemporary",
         "Modernist",
         "Designed by a Master",
         "Álvaro Siza"
@@ -3144,14 +3121,9 @@
       "tags": [
         "Market",
         "Architecture",
-        "Art",
-        "Engineering",
         "Food",
-        "History",
         "Commerce",
-        "Power",
-        "Beaux-Arts",
-        "Neoclassical"
+        "Beaux-Arts"
       ],
       "stops": [
         {
@@ -3199,9 +3171,6 @@
         "Museum",
         "Architecture",
         "Art",
-        "Art Deco",
-        "Contemporary",
-        "Modernist",
         "Designed by a Master",
         "Green Escape",
         "Álvaro Siza"
@@ -4421,9 +4390,7 @@
       "tags": [
         "Religious Building",
         "Architecture",
-        "Engineering",
         "Faith",
-        "Literature",
         "Modernist",
         "Designed by a Master",
         "Álvaro Siza"
@@ -4471,16 +4438,10 @@
       ],
       "tags": [
         "Religious Building",
-        "District",
         "Architecture",
-        "Engineering",
         "Faith",
-        "History",
-        "Literature",
-        "War",
         "Gothic",
         "Designed by a Master",
-        "Hidden Gem",
         "Álvaro Siza"
       ],
       "stops": [
@@ -4573,11 +4534,6 @@
       "tags": [
         "Park",
         "Architecture",
-        "Faith",
-        "Fashion",
-        "Food",
-        "Literature",
-        "Maritime",
         "Green Escape"
       ],
       "stops": [
@@ -4901,11 +4857,7 @@
       "tags": [
         "Venue",
         "Architecture",
-        "Art",
-        "Engineering",
         "History",
-        "Performance",
-        "Power",
         "Art Deco",
         "Public Art"
       ],
@@ -4950,10 +4902,7 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Engineering",
-        "Commerce",
         "Designed by a Master",
-        "Viewpoint",
         "Eduardo Souto de Moura"
       ],
       "stops": [
@@ -4997,12 +4946,9 @@
       ],
       "tags": [
         "Religious Building",
-        "Remembrance",
-        "Engineering",
         "Faith",
-        "Food",
         "History",
-        "Commerce"
+        "Viewpoint"
       ],
       "stops": [
         {
@@ -5044,15 +4990,8 @@
       "tags": [
         "Venue",
         "Architecture",
-        "Art",
-        "Engineering",
-        "History",
-        "Commerce",
         "Performance",
-        "Power",
-        "Art Deco",
-        "Baroque",
-        "Neoclassical"
+        "Art Deco"
       ],
       "stops": [
         {
@@ -5096,15 +5035,9 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Art",
-        "Faith",
-        "History",
-        "Power",
-        "Baroque",
-        "Designed by a Master",
         "Public Art",
-        "Eduardo Souto de Moura",
-        "Álvaro Siza"
+        "Designed by a Master",
+        "Eduardo Souto de Moura"
       ],
       "stops": [
         {
@@ -5196,11 +5129,8 @@
       "tags": [
         "Library",
         "Architecture",
-        "Engineering",
         "Literature",
         "Designed by a Master",
-        "Eduardo Souto de Moura",
-        "Fernando Távora",
         "Álvaro Siza"
       ],
       "stops": [
@@ -5245,14 +5175,10 @@
       "tags": [
         "Library",
         "Architecture",
-        "Faith",
-        "History",
         "Literature",
-        "Power",
         "Contemporary",
         "Designed by a Master",
-        "Inês Lobo",
-        "Mies van der Rohe"
+        "Inês Lobo"
       ],
       "stops": [
         {
@@ -6353,10 +6279,7 @@
         "Religious Building",
         "Architecture",
         "Faith",
-        "History",
-        "Commerce",
         "Baroque",
-        "Colonial",
         "Gothic"
       ],
       "priceUSD": 0
@@ -6445,11 +6368,8 @@
       "tags": [
         "Civic",
         "Architecture",
-        "Engineering",
-        "Maritime",
         "Commerce",
-        "Power",
-        "War"
+        "Power"
       ],
       "priceUSD": 0
     },
@@ -6497,11 +6417,8 @@
         "Religious Building",
         "Architecture",
         "Faith",
-        "Food",
-        "History",
-        "War",
-        "Baroque",
-        "Gothic"
+        "Gothic",
+        "History"
       ],
       "priceUSD": 0
     },
@@ -6545,12 +6462,9 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "District",
-        "Architecture",
-        "Food",
         "History",
         "Maritime",
-        "Commerce",
-        "Gothic"
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -6594,11 +6508,6 @@
         "Notable Building",
         "Architecture",
         "Art",
-        "Faith",
-        "History",
-        "Performance",
-        "Power",
-        "War",
         "Beaux-Arts",
         "Public Art"
       ],
@@ -6642,14 +6551,9 @@
       "city": "Porto",
       "primaryCategory": "architecture",
       "tags": [
-        "District",
         "Tower",
         "Architecture",
-        "Remembrance",
         "Faith",
-        "History",
-        "Maritime",
-        "Power",
         "Baroque",
         "Viewpoint"
       ],
@@ -6831,14 +6735,9 @@
       "tags": [
         "District",
         "Architecture",
-        "Art",
-        "Faith",
-        "Fashion",
         "Power",
         "Beaux-Arts",
-        "Neoclassical",
         "Designed by a Master",
-        "Green Escape",
         "Eduardo Souto de Moura",
         "Álvaro Siza"
       ],
@@ -6926,13 +6825,10 @@
       "city": "Porto",
       "primaryCategory": "history",
       "tags": [
-        "District",
         "Architecture",
-        "Art",
-        "Engineering",
-        "Food",
         "History",
-        "War"
+        "War",
+        "Maritime"
       ],
       "priceUSD": 0
     },
@@ -6974,11 +6870,7 @@
       "tags": [
         "Religious Building",
         "Architecture",
-        "Art",
-        "Crime",
-        "Remembrance",
         "Faith",
-        "History",
         "Baroque",
         "Public Art"
       ],
@@ -7023,10 +6915,7 @@
         "Bridge",
         "Architecture",
         "Engineering",
-        "History",
-        "Literature",
-        "Commerce",
-        "Performance"
+        "History"
       ],
       "priceUSD": 0
     },
@@ -7066,18 +6955,10 @@
       "city": "Porto",
       "primaryCategory": "architecture",
       "tags": [
-        "Civic",
         "Market",
         "Venue",
         "Architecture",
-        "Art",
-        "Food",
-        "History",
-        "Immigration",
         "Commerce",
-        "Performance",
-        "Power",
-        "Contemporary",
         "Gothic"
       ],
       "priceUSD": 0
@@ -8420,13 +8301,10 @@
       "city": "Porto",
       "primaryCategory": "history",
       "tags": [
-        "Museum",
         "Venue",
+        "Museum",
         "Architecture",
-        "Engineering",
-        "Food",
-        "History",
-        "Commerce"
+        "Engineering"
       ],
       "priceUSD": 0
     },
@@ -8466,13 +8344,9 @@
       "city": "Vila Nova de Gaia",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "District",
-        "Faith",
-        "Food",
-        "History",
+        "Viewpoint",
         "Maritime",
-        "Commerce",
-        "Viewpoint"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -8518,12 +8392,8 @@
       "tags": [
         "Religious Building",
         "Architecture",
-        "Art",
         "Faith",
-        "Performance",
-        "Brutalist",
-        "Modernist",
-        "Viewpoint"
+        "Brutalist"
       ],
       "priceUSD": 0
     },
@@ -8611,16 +8481,9 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
-        "Architecture",
-        "Art",
-        "Remembrance",
-        "Engineering",
-        "Faith",
-        "History",
-        "Performance",
-        "Power",
         "Green Escape",
-        "Viewpoint"
+        "Viewpoint",
+        "Performance"
       ],
       "priceUSD": 0
     },
@@ -8705,17 +8568,10 @@
       "city": "Matosinhos",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Civic",
         "Market",
-        "Monument",
-        "Venue",
         "Architecture",
-        "Art",
         "Engineering",
         "Food",
-        "History",
-        "Performance",
-        "War",
         "Modernist"
       ],
       "priceUSD": 0
