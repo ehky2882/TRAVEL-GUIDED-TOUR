@@ -115,7 +115,8 @@
         "Architecture",
         "History",
         "Commerce",
-        "Beaux-Arts"
+        "Beaux-Arts",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -158,7 +159,8 @@
       "tags": [
         "Public Square",
         "History",
-        "Performance"
+        "Performance",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -253,7 +255,8 @@
         "Architecture",
         "History",
         "Power",
-        "Art Deco"
+        "Art Deco",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -300,7 +303,8 @@
         "Waterfront",
         "Engineering",
         "History",
-        "Immigration"
+        "Immigration",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -348,7 +352,8 @@
         "Engineering",
         "History",
         "Maritime",
-        "Power"
+        "Power",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -393,7 +398,8 @@
         "Architecture",
         "Art",
         "History",
-        "Art Deco"
+        "Art Deco",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -618,7 +624,8 @@
         "Architecture",
         "Performance",
         "Contemporary",
-        "Viewpoint"
+        "Viewpoint",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -805,7 +812,8 @@
         "Architecture",
         "Art Deco",
         "Designed by a Master",
-        "William Van Alen"
+        "William Van Alen",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -4305,7 +4313,8 @@
         "Remembrance",
         "Engineering",
         "History",
-        "Commerce"
+        "Commerce",
+        "Iconic Landmark"
       ],
       "priceUSD": 0,
       "stops": [
@@ -4488,7 +4497,8 @@
         "Art",
         "Engineering",
         "Literature",
-        "Performance"
+        "Performance",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -6314,7 +6324,8 @@
         "Bridge",
         "Architecture",
         "Engineering",
-        "Power"
+        "Power",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -6453,7 +6464,8 @@
         "District",
         "History",
         "Maritime",
-        "Food"
+        "Food",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -6498,7 +6510,8 @@
         "Architecture",
         "Art",
         "Beaux-Arts",
-        "Public Art"
+        "Public Art",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -6544,7 +6557,8 @@
         "Architecture",
         "Faith",
         "Baroque",
-        "Viewpoint"
+        "Viewpoint",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -7065,7 +7079,8 @@
         "War",
         "Baroque",
         "Designed by a Master",
-        "Christopher Wren"
+        "Christopher Wren",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -7112,7 +7127,8 @@
         "History",
         "Viewpoint",
         "Designed by a Master",
-        "Christopher Wren"
+        "Christopher Wren",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -7159,7 +7175,8 @@
         "Crime",
         "History",
         "Power",
-        "War"
+        "War",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -7206,7 +7223,8 @@
         "Architecture",
         "Engineering",
         "Maritime",
-        "Victorian"
+        "Victorian",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -7301,7 +7319,8 @@
         "Architecture",
         "Commerce",
         "Designed by a Master",
-        "Norman Foster"
+        "Norman Foster",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -7760,7 +7779,8 @@
         "Faith",
         "Literature",
         "Power",
-        "Gothic"
+        "Gothic",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -7808,7 +7828,8 @@
         "Architecture",
         "Power",
         "Gothic",
-        "Victorian"
+        "Victorian",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -7901,7 +7922,8 @@
         "Maritime",
         "Performance",
         "Power",
-        "War"
+        "War",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -8832,7 +8854,8 @@
         "Engineering",
         "History",
         "Maritime",
-        "War"
+        "War",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -8923,7 +8946,8 @@
         "Power",
         "War",
         "Gothic",
-        "Viewpoint"
+        "Viewpoint",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -9199,7 +9223,8 @@
         "Faith",
         "Remembrance",
         "Maritime",
-        "Power"
+        "Power",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -9519,7 +9544,8 @@
         "Faith",
         "Food",
         "History",
-        "Commerce"
+        "Commerce",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -9655,7 +9681,8 @@
         "Architecture",
         "History",
         "Power",
-        "Neoclassical"
+        "Neoclassical",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -9835,7 +9862,8 @@
         "Architecture",
         "History",
         "Gothic",
-        "Modernist"
+        "Modernist",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -9856,7 +9884,8 @@
         "Architecture",
         "Remembrance",
         "Performance",
-        "Power"
+        "Power",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -10547,7 +10576,8 @@
         "History",
         "Power",
         "Designed by a Master",
-        "Norman Foster"
+        "Norman Foster",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -10910,7 +10940,8 @@
         "Public Art",
         "Designed by a Master",
         "Giles Gilbert Scott",
-        "Herzog & de Meuron"
+        "Herzog & de Meuron",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -11095,7 +11126,8 @@
         "Architecture",
         "Viewpoint",
         "Designed by a Master",
-        "Renzo Piano"
+        "Renzo Piano",
+        "Iconic Landmark"
       ],
       "stops": [
         {
@@ -13972,7 +14004,8 @@
         "Modernist",
         "Designed by a Master",
         "Viewpoint",
-        "I. M. Pei"
+        "I. M. Pei",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -14995,7 +15028,8 @@
         "Engineering",
         "History",
         "Colonial",
-        "Viewpoint"
+        "Viewpoint",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -15171,7 +15205,8 @@
         "History",
         "Maritime",
         "Commerce",
-        "Viewpoint"
+        "Viewpoint",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -15400,7 +15435,8 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith"
+        "Faith",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -15443,7 +15479,8 @@
         "Commerce",
         "Designed by a Master",
         "Viewpoint",
-        "I. M. Pei"
+        "I. M. Pei",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -15489,7 +15526,8 @@
         "Immigration",
         "Maritime",
         "Green Escape",
-        "Viewpoint"
+        "Viewpoint",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -17560,7 +17598,8 @@
         "Waterfront",
         "Market",
         "Engineering",
-        "Food"
+        "Food",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -17650,7 +17689,8 @@
         "Waterfront",
         "Crime",
         "History",
-        "War"
+        "War",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -17698,7 +17738,8 @@
         "Power",
         "Art Deco",
         "Green Escape",
-        "Public Art"
+        "Public Art",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -17785,7 +17826,8 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "History",
-        "Engineering"
+        "Engineering",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -17874,7 +17916,8 @@
         "District",
         "History",
         "Green Escape",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -17917,7 +17960,8 @@
         "District",
         "Architecture",
         "Victorian",
-        "Viewpoint"
+        "Viewpoint",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -18180,7 +18224,8 @@
         "Architecture",
         "Art",
         "Engineering",
-        "Art Deco"
+        "Art Deco",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -18225,7 +18270,8 @@
         "Architecture",
         "Engineering",
         "Designed by a Master",
-        "Bernard Maybeck"
+        "Bernard Maybeck",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -19893,7 +19939,8 @@
       "primaryCategory": "culturalHeritage",
       "tags": [
         "Monument",
-        "War"
+        "War",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -20027,7 +20074,8 @@
         "Tower",
         "History",
         "Power",
-        "War"
+        "War",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -20397,7 +20445,8 @@
         "Remembrance",
         "Faith",
         "Food",
-        "War"
+        "War",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -21020,7 +21069,8 @@
         "Religious Building",
         "Faith",
         "Food",
-        "History"
+        "History",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -21104,7 +21154,8 @@
       "tags": [
         "Public Square",
         "District",
-        "History"
+        "History",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -21192,7 +21243,8 @@
         "Tower",
         "District",
         "Architecture",
-        "Viewpoint"
+        "Viewpoint",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -22206,7 +22258,8 @@
         "Tower",
         "Architecture",
         "Engineering",
-        "Viewpoint"
+        "Viewpoint",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -22619,7 +22672,8 @@
         "Architecture",
         "Art",
         "Victorian",
-        "Public Art"
+        "Public Art",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -22791,7 +22845,8 @@
       "tags": [
         "Park",
         "History",
-        "Green Escape"
+        "Green Escape",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -23189,7 +23244,8 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Faith"
+        "Faith",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -23280,7 +23336,8 @@
       "tags": [
         "Religious Building",
         "Faith",
-        "Viewpoint"
+        "Viewpoint",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -23325,7 +23382,8 @@
         "Art",
         "Food",
         "History",
-        "Performance"
+        "Performance",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
@@ -23679,7 +23737,8 @@
         "Religious Building",
         "Architecture",
         "Art",
-        "Faith"
+        "Faith",
+        "Iconic Landmark"
       ],
       "priceUSD": 0
     },
