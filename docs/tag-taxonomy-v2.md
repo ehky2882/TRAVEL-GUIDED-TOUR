@@ -102,7 +102,7 @@ The meaning layer that replaces the old category.
 ### 4 · Experience — *how you'll find it* (pick 0–2)
 | Tag | Definition |
 |---|---|
-| `Iconic Landmark` (0†) | A must-see, world-famous. *(editorial — not auto-assigned)* |
+| `Iconic Landmark` (59) | A must-see, world-famous. *(editorial — hand-authored 2026-07-04: ~2–12 per city, the unambiguous icons.)* |
 | `Hidden Gem` (33) | Off the beaten path, easily missed, a local secret. |
 | `Viewpoint` (77) | A view, skyline, miradouro, observation deck, the Peak. |
 | `Green Escape` (117) | A quiet, green place to slow down. |
@@ -111,9 +111,9 @@ The meaning layer that replaces the old category.
 | **`Public Art`** (33) | **Outdoor installation / mural / sculpture / the Tokyo Toilet project — free, in situ.** |
 | `Designed by a Master` (116) | Work of a celebrated architect (auto-set when an Architect tag applies). |
 
-> † `Iconic Landmark`, `Free to Visit`, and `After Dark` are **editorial** — a
-> keyword seed can't judge them, so they read 0 in the auto-pass and are
-> hand-authored during review. Budget for this.
+> † `Free to Visit` and `After Dark` are **editorial** — a keyword seed can't
+> judge them, so they read 0 in the auto-pass and are hand-authored during
+> review. Budget for this. (`Iconic Landmark` was hand-authored 2026-07-04 → 59.)
 
 ### 5 · Architect — *named designer* (pick 0–1, where notable)
 Closed, **append-only** list of architects with real presence in the current
