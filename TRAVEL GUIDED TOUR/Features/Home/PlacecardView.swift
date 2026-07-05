@@ -12,7 +12,7 @@ struct PlacecardView: View {
     let tour: Tour
     let maker: Maker?
     /// Pre-formatted distance string (e.g. "0.8 km away"). Hidden
-    /// when nil — same convention as `TourListCard`.
+    /// when nil.
     let distanceText: String?
     let onTap: () -> Void
 
