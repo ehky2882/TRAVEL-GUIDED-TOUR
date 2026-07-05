@@ -30,7 +30,7 @@ Deleted the long-dead `Features/Home/TourListCard.swift` (unused since the rails
 ## Build 1.0 (71)
 - Bump **70 → 71** via short-lived [PR #351](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/351) (admin-merged; app-target only, test target stays 1).
 - Validator PASS (9 makers / 509 tours / 561 stops); `test_sim` **140/140** on the combined `main`.
-- Archived clean with `-allowProvisioningUpdates` → `/tmp/Atlas-20260705-b71.xcarchive`. Binary-verified: `1.0 (71)`, `UIRequiresFullScreen=true`, mic key, `applesignin`+`associated-domains`, Supabase host (1), gh-pages fallback (2), **no `TEMP_LOCAL_DEMO`**. (Gold hex won't appear in a `strings` grep — colors compile into `Assets.car`, not the Mach-O.) Owner uploading via Organizer.
+- Archived clean with `-allowProvisioningUpdates` → `/tmp/Atlas-20260705-b71.xcarchive`. Binary-verified: `1.0 (71)`, `UIRequiresFullScreen=true`, mic key, `applesignin`+`associated-domains`, Supabase host (1), gh-pages fallback (2), **no `TEMP_LOCAL_DEMO`**. (Gold hex won't appear in a `strings` grep — colors compile into `Assets.car`, not the Mach-O.) **Live on TestFlight 2026-07-05, owner-confirmed.**
 
 ## Also on main (no build needed)
 A stack of **tag spot-check / de-clutter** content PRs (#335–#346) from parallel sessions edited `Tours.json` tags. The catalog is **remote-loaded**, so those reach users automatically — build 71 exists purely for the code above. A `docs/tag-phase2-plan.md` also landed.
