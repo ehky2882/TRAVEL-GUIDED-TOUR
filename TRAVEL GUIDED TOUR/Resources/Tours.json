@@ -7297,14 +7297,10 @@
       "tags": [
         "Religious Building",
         "Architecture",
-        "Engineering",
         "Faith",
-        "History",
         "War",
         "Baroque",
-        "Gothic",
         "Designed by a Master",
-        "Viewpoint",
         "Christopher Wren"
       ],
       "stops": [
@@ -7349,11 +7345,8 @@
       "tags": [
         "Monument",
         "Architecture",
-        "Faith",
         "History",
-        "Literature",
-        "Power",
-        "Gothic",
+        "Viewpoint",
         "Designed by a Master",
         "Christopher Wren"
       ],
@@ -7446,13 +7439,9 @@
       ],
       "tags": [
         "Bridge",
-        "Tower",
         "Architecture",
         "Engineering",
-        "History",
         "Maritime",
-        "Performance",
-        "Gothic",
         "Victorian"
       ],
       "stops": [
@@ -7497,14 +7486,9 @@
       ],
       "tags": [
         "Market",
-        "Venue",
         "Architecture",
-        "Faith",
         "Food",
-        "History",
         "Commerce",
-        "War",
-        "Gothic",
         "Victorian"
       ],
       "stops": [
@@ -7552,9 +7536,7 @@
         "Tower",
         "Architecture",
         "Commerce",
-        "War",
         "Designed by a Master",
-        "Viewpoint",
         "Norman Foster"
       ],
       "stops": [
@@ -7598,11 +7580,8 @@
       ],
       "tags": [
         "Market",
-        "District",
         "Architecture",
         "Engineering",
-        "Food",
-        "History",
         "Maritime"
       ],
       "stops": [
@@ -7648,12 +7627,8 @@
       "tags": [
         "Civic",
         "Architecture",
-        "Faith",
-        "Fashion",
-        "History",
         "Commerce",
-        "Power",
-        "War"
+        "Power"
       ],
       "stops": [
         {
@@ -7696,11 +7671,10 @@
       ],
       "tags": [
         "Religious Building",
-        "Engineering",
         "Faith",
+        "Baroque",
         "Designed by a Master",
         "Hidden Gem",
-        "Viewpoint",
         "Christopher Wren"
       ],
       "stops": [
@@ -7744,11 +7718,8 @@
         "Religious Building",
         "Faith",
         "History",
-        "Literature",
-        "War",
         "Gothic",
-        "Hidden Gem",
-        "Viewpoint"
+        "Hidden Gem"
       ],
       "stops": [
         {
@@ -7792,12 +7763,8 @@
         "Market",
         "Architecture",
         "Remembrance",
-        "Faith",
         "Food",
-        "History",
         "Commerce",
-        "Power",
-        "Gothic",
         "Victorian"
       ],
       "stops": [
@@ -7839,10 +7806,7 @@
       ],
       "tags": [
         "Park",
-        "Architecture",
-        "Art",
         "Remembrance",
-        "History",
         "Victorian",
         "Green Escape",
         "Hidden Gem"
@@ -7935,14 +7899,9 @@
       ],
       "tags": [
         "Civic",
-        "Venue",
         "Architecture",
-        "Art",
         "History",
-        "Commerce",
-        "Performance",
         "Power",
-        "War",
         "Gothic"
       ],
       "stops": [
@@ -7984,10 +7943,8 @@
       ],
       "tags": [
         "Religious Building",
-        "Remembrance",
         "Faith",
         "History",
-        "Commerce",
         "Gothic",
         "Hidden Gem"
       ],
@@ -8037,9 +7994,7 @@
         "Architecture",
         "Remembrance",
         "Faith",
-        "History",
         "Literature",
-        "Performance",
         "Power",
         "Gothic"
       ],
@@ -8086,10 +8041,7 @@
       ],
       "tags": [
         "Civic",
-        "Notable Building",
         "Architecture",
-        "Engineering",
-        "History",
         "Power",
         "Gothic",
         "Victorian"
@@ -8134,13 +8086,10 @@
       ],
       "tags": [
         "Civic",
-        "Religious Building",
-        "Venue",
         "Engineering",
         "History",
         "Power",
-        "Gothic",
-        "Victorian"
+        "Gothic"
       ],
       "stops": [
         {
@@ -8234,10 +8183,7 @@
         "Museum",
         "Architecture",
         "Art",
-        "Engineering",
-        "History",
-        "War",
-        "Gothic"
+        "Neoclassical"
       ],
       "stops": [
         {
@@ -8279,14 +8225,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-martin-in-the-fields_4.webp"
       ],
       "tags": [
-        "Park",
+        "Religious Building",
         "Architecture",
         "Faith",
-        "History",
         "Performance",
-        "Colonial",
-        "Green Escape",
-        "Viewpoint"
+        "Colonial"
       ],
       "stops": [
         {
@@ -8330,11 +8273,7 @@
         "Notable Building",
         "Architecture",
         "Art",
-        "Faith",
-        "History",
-        "Commerce",
         "Power",
-        "War",
         "Neoclassical",
         "Designed by a Master",
         "Inigo Jones"
@@ -8381,13 +8320,8 @@
       "tags": [
         "Monument",
         "Architecture",
-        "Art",
         "Remembrance",
-        "History",
-        "Power",
-        "War",
-        "Victorian",
-        "Hidden Gem"
+        "War"
       ],
       "stops": [
         {
@@ -10478,12 +10412,9 @@
       ],
       "tags": [
         "Market",
-        "Architecture",
         "Crime",
         "Food",
         "History",
-        "Commerce",
-        "Performance",
         "Hidden Gem"
       ],
       "stops": [
@@ -10529,14 +10460,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/covent-garden_7.webp"
       ],
       "tags": [
-        "Park",
-        "Faith",
+        "Public Square",
         "Food",
-        "History",
         "Commerce",
         "Performance",
         "Designed by a Master",
-        "Green Escape",
         "Inigo Jones"
       ],
       "stops": [
@@ -10725,12 +10653,9 @@
       ],
       "tags": [
         "District",
-        "Crime",
         "Food",
         "Immigration",
-        "Maritime",
-        "Commerce",
-        "War"
+        "Commerce"
       ],
       "stops": [
         {
@@ -10819,10 +10744,7 @@
         "Public Square",
         "Food",
         "History",
-        "Literature",
-        "Performance",
-        "Victorian",
-        "Viewpoint"
+        "Performance"
       ],
       "stops": [
         {
@@ -10914,7 +10836,6 @@
       "tags": [
         "Museum",
         "Art",
-        "Faith",
         "History",
         "Power",
         "Designed by a Master",
@@ -11183,11 +11104,8 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/senate-house_2.webp"
       ],
       "tags": [
-        "Civic",
         "Notable Building",
         "Architecture",
-        "Art",
-        "History",
         "Literature",
         "War",
         "Art Deco",
@@ -11230,15 +11148,10 @@
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hatton-garden_hero.webp",
       "additionalImageURLs": [],
       "tags": [
-        "Park",
         "District",
         "Crime",
-        "Engineering",
-        "Faith",
-        "History",
         "Immigration",
-        "Commerce",
-        "Green Escape"
+        "Commerce"
       ],
       "stops": [
         {
@@ -11286,11 +11199,8 @@
         "Museum",
         "Architecture",
         "Art",
-        "Engineering",
-        "Faith",
-        "Commerce",
-        "Designed by a Master",
         "Public Art",
+        "Designed by a Master",
         "Giles Gilbert Scott",
         "Herzog & de Meuron"
       ],
@@ -11427,10 +11337,7 @@
       "tags": [
         "Religious Building",
         "Architecture",
-        "Remembrance",
         "Faith",
-        "Food",
-        "History",
         "Literature",
         "Gothic"
       ],
@@ -11478,9 +11385,7 @@
       "tags": [
         "Tower",
         "Architecture",
-        "Art",
-        "History",
-        "Maritime",
+        "Viewpoint",
         "Designed by a Master",
         "Renzo Piano"
       ],
@@ -11526,9 +11431,6 @@
       "tags": [
         "Venue",
         "Architecture",
-        "Engineering",
-        "Fashion",
-        "Commerce",
         "Performance",
         "Brutalist",
         "Designed by a Master",
@@ -11570,14 +11472,9 @@
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-festival-hall_hero.webp",
       "additionalImageURLs": [],
       "tags": [
-        "Civic",
         "Venue",
         "Architecture",
-        "Engineering",
-        "Commerce",
         "Performance",
-        "Power",
-        "War",
         "Modernist"
       ],
       "stops": [
@@ -11625,8 +11522,6 @@
         "Bridge",
         "Architecture",
         "Engineering",
-        "Faith",
-        "Commerce",
         "Designed by a Master",
         "Norman Foster"
       ],
@@ -11670,13 +11565,9 @@
       ],
       "tags": [
         "Monument",
-        "Park",
-        "District",
         "Remembrance",
         "Faith",
         "History",
-        "Literature",
-        "Gothic",
         "Green Escape",
         "Hidden Gem"
       ],
@@ -13310,16 +13201,12 @@
       ],
       "tags": [
         "Monument",
-        "Tower",
         "Architecture",
         "Art",
         "Remembrance",
-        "Faith",
-        "History",
         "Gothic",
-        "Designed by a Master",
         "Green Escape",
-        "Giles Gilbert Scott"
+        "Designed by a Master"
       ],
       "stops": [
         {
@@ -13411,11 +13298,8 @@
       "tags": [
         "Religious Building",
         "Architecture",
-        "Engineering",
         "Faith",
-        "Immigration",
-        "Baroque",
-        "Victorian"
+        "Baroque"
       ],
       "stops": [
         {
@@ -13598,16 +13482,11 @@
       ],
       "tags": [
         "Civic",
-        "Religious Building",
-        "Venue",
         "Architecture",
-        "Engineering",
-        "Faith",
         "Maritime",
-        "Power",
         "Baroque",
-        "Designed by a Master",
         "Green Escape",
+        "Designed by a Master",
         "Christopher Wren"
       ],
       "stops": [
@@ -13741,12 +13620,9 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/greenwich-foot-tunnel_3.webp"
       ],
       "tags": [
-        "Notable Building",
         "Engineering",
         "Maritime",
-        "Commerce",
         "Victorian",
-        "Green Escape",
         "Hidden Gem"
       ],
       "stops": [
@@ -13787,13 +13663,11 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/christ-church-spitalfields_2.webp"
       ],
       "tags": [
-        "Park",
         "Religious Building",
         "Architecture",
         "Faith",
         "Immigration",
-        "Baroque",
-        "Green Escape"
+        "Baroque"
       ],
       "stops": [
         {
@@ -13880,12 +13754,8 @@
       "tags": [
         "Notable Building",
         "Art",
-        "Faith",
-        "Food",
         "History",
         "Immigration",
-        "Performance",
-        "Neoclassical",
         "Hidden Gem"
       ],
       "stops": [
@@ -13930,12 +13800,9 @@
       ],
       "tags": [
         "Market",
-        "Park",
         "Food",
-        "History",
         "Commerce",
-        "Victorian",
-        "Green Escape"
+        "Victorian"
       ],
       "stops": [
         {
@@ -14023,11 +13890,8 @@
       ],
       "tags": [
         "Market",
-        "District",
-        "Art",
         "Food",
         "Commerce",
-        "Victorian",
         "Green Escape"
       ],
       "stops": [
@@ -16454,12 +16318,9 @@
         "Notable Building",
         "Architecture",
         "Engineering",
-        "Fashion",
         "Literature",
         "Gothic",
-        "Victorian",
-        "Designed by a Master",
-        "Giles Gilbert Scott"
+        "Victorian"
       ],
       "kind": "single",
       "stops": [
@@ -16742,9 +16603,6 @@
       "tags": [
         "Park",
         "Remembrance",
-        "Faith",
-        "Fashion",
-        "Performance",
         "Victorian",
         "Green Escape"
       ],
@@ -16926,10 +16784,8 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-palace_9.webp"
       ],
       "tags": [
-        "Religious Building",
+        "Notable Building",
         "Remembrance",
-        "Engineering",
-        "Faith",
         "History",
         "Power",
         "Green Escape"
@@ -17068,9 +16924,7 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Art",
         "Engineering",
-        "Faith",
         "Art Deco",
         "Designed by a Master",
         "Giles Gilbert Scott"
@@ -17116,10 +16970,7 @@
       ],
       "tags": [
         "Notable Building",
-        "Park",
         "Architecture",
-        "History",
-        "Maritime",
         "Victorian",
         "Green Escape"
       ],
@@ -17171,7 +17022,6 @@
         "History",
         "Baroque",
         "Designed by a Master",
-        "Viewpoint",
         "Christopher Wren"
       ],
       "stops": [
@@ -17287,16 +17137,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/albert-memorial_hero.webp"
       ],
       "tags": [
-        "Civic",
-        "Monument",
-        "Museum",
         "District",
-        "Venue",
-        "Tower",
+        "Museum",
         "Art",
-        "Remembrance",
         "History",
-        "Performance",
         "Power"
       ],
       "stops": [
@@ -17414,13 +17258,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/westminster-abbey_hero.webp"
       ],
       "tags": [
-        "Religious Building",
-        "Venue",
-        "Remembrance",
-        "Faith",
+        "District",
+        "Power",
         "History",
-        "Maritime",
-        "Power"
+        "Remembrance"
       ],
       "stops": [
         {
@@ -17879,13 +17720,10 @@
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-south-bank-mile_stop9.webp"
       ],
       "tags": [
-        "Civic",
+        "District",
         "Food",
-        "Literature",
         "Maritime",
-        "Commerce",
         "Performance",
-        "Power",
         "Green Escape"
       ],
       "stops": [
