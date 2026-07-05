@@ -23307,8 +23307,7 @@
         "Architecture",
         "Fashion",
         "History",
-        "Commerce",
-        "War"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -23352,8 +23351,7 @@
         "District",
         "Fashion",
         "History",
-        "Commerce",
-        "Power"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -23397,8 +23395,6 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
-        "Architecture",
-        "Faith",
         "Food"
       ],
       "priceUSD": 0
@@ -23616,7 +23612,6 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Faith",
         "Food"
       ],
       "priceUSD": 0
@@ -23703,8 +23698,7 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "Notable Building",
-        "Food",
-        "Performance"
+        "Food"
       ],
       "priceUSD": 0
     },
@@ -23749,12 +23743,9 @@
       "primaryCategory": "sacredSites",
       "tags": [
         "Religious Building",
-        "Architecture",
-        "Art",
-        "Remembrance",
         "Faith",
         "History",
-        "War",
+        "Art",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -23933,7 +23924,6 @@
       "tags": [
         "Religious Building",
         "Faith",
-        "War",
         "Viewpoint"
       ],
       "priceUSD": 0
@@ -23975,10 +23965,8 @@
       "city": "Kyoto",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Notable Building",
+        "District",
         "Art",
-        "Engineering",
-        "Faith",
         "Food",
         "History",
         "Performance"
@@ -24112,10 +24100,8 @@
         "Museum",
         "Architecture",
         "Art",
-        "Faith",
         "History",
-        "Beaux-Arts",
-        "Gothic"
+        "Beaux-Arts"
       ],
       "priceUSD": 0
     },
@@ -24158,12 +24144,9 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "District",
-        "Architecture",
-        "Faith",
         "Food",
         "History",
-        "Commerce",
-        "Power"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -24206,9 +24189,7 @@
       "city": "Kyoto",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Civic",
-        "Venue",
-        "Fashion",
+        "Notable Building",
         "Food",
         "Contemporary"
       ],
@@ -24251,8 +24232,7 @@
       "city": "Kibune",
       "primaryCategory": "foodAndDrink",
       "tags": [
-        "Notable Building",
-        "Faith",
+        "Waterfront",
         "Food",
         "History"
       ],
@@ -24296,10 +24276,8 @@
       "primaryCategory": "foodAndDrink",
       "tags": [
         "District",
-        "Faith",
         "Food",
-        "History",
-        "Commerce"
+        "History"
       ],
       "priceUSD": 0
     },
@@ -24388,11 +24366,7 @@
         "Museum",
         "Architecture",
         "Art",
-        "Faith",
-        "Food",
         "History",
-        "Performance",
-        "Power",
         "Contemporary"
       ],
       "priceUSD": 0
@@ -24437,8 +24411,7 @@
       "tags": [
         "District",
         "Faith",
-        "Immigration",
-        "Power",
+        "History",
         "Hidden Gem"
       ],
       "priceUSD": 0
@@ -24484,8 +24457,7 @@
       "tags": [
         "District",
         "Architecture",
-        "Engineering",
-        "Fashion",
+        "Food",
         "History",
         "Green Escape"
       ],
@@ -24620,7 +24592,6 @@
       "tags": [
         "Notable Building",
         "Fashion",
-        "Performance",
         "Contemporary"
       ],
       "priceUSD": 0
