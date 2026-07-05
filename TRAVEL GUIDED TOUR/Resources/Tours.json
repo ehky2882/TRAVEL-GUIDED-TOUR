@@ -19930,11 +19930,8 @@
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
-        "Park",
         "Architecture",
         "Art",
-        "Remembrance",
-        "Fashion",
         "Designed by a Master",
         "Green Escape",
         "Tadao Ando"
@@ -19978,13 +19975,10 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Civic",
-        "Venue",
+        "Notable Building",
         "Architecture",
         "Food",
-        "Maritime",
-        "Commerce",
-        "Power"
+        "Commerce"
       ],
       "priceUSD": 0
     },
@@ -20073,8 +20067,6 @@
         "Museum",
         "Architecture",
         "Art",
-        "Faith",
-        "War",
         "Green Escape",
         "Viewpoint"
       ],
@@ -20163,12 +20155,9 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Bridge",
         "Library",
         "Architecture",
         "Art",
-        "Engineering",
-        "Fashion",
         "Literature",
         "Designed by a Master",
         "Kengo Kuma"
@@ -20352,11 +20341,11 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
+        "Tower",
         "Architecture",
         "Contemporary",
         "Designed by a Master",
-        "Kenzō Tange",
-        "Kisho Kurokawa"
+        "Kenzō Tange"
       ],
       "priceUSD": 0
     },
@@ -20403,8 +20392,6 @@
         "Architecture",
         "Art",
         "History",
-        "Performance",
-        "Gothic",
         "Green Escape",
         "Viewpoint"
       ],
@@ -20717,7 +20704,6 @@
       "tags": [
         "District",
         "Architecture",
-        "Fashion",
         "Food",
         "Designed by a Master",
         "Kengo Kuma"
@@ -20810,12 +20796,8 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Engineering",
-        "Commerce",
-        "Power",
-        "Designed by a Master",
-        "Green Escape",
-        "Fumihiko Maki"
+        "History",
+        "Green Escape"
       ],
       "priceUSD": 0
     },
@@ -21091,9 +21073,7 @@
       "tags": [
         "Notable Building",
         "History",
-        "Performance",
-        "Power",
-        "War"
+        "Green Escape"
       ],
       "priceUSD": 0
     },
@@ -21135,16 +21115,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
-        "Park",
-        "District",
         "Architecture",
-        "Performance",
         "Designed by a Master",
-        "Green Escape",
-        "Public Art",
-        "Kengo Kuma",
-        "Shigeru Ban",
-        "Tadao Ando"
+        "Public Art"
       ],
       "priceUSD": 0
     },
@@ -21190,10 +21163,9 @@
         "Museum",
         "Architecture",
         "Art",
-        "Remembrance",
         "History",
-        "Designed by a Master",
         "Green Escape",
+        "Designed by a Master",
         "Kengo Kuma"
       ],
       "priceUSD": 0
@@ -21238,11 +21210,7 @@
         "Architecture",
         "Contemporary",
         "Designed by a Master",
-        "Public Art",
-        "Fumihiko Maki",
-        "Shigeru Ban",
-        "Sou Fujimoto",
-        "Toyo Ito"
+        "Public Art"
       ],
       "priceUSD": 0
     },
@@ -21547,7 +21515,7 @@
       "city": "Tokyo",
       "primaryCategory": "culturalHeritage",
       "tags": [
-        "Religious Building",
+        "Venue",
         "District",
         "Faith",
         "History"
@@ -21594,7 +21562,6 @@
       "tags": [
         "Notable Building",
         "Art",
-        "War",
         "Contemporary"
       ],
       "priceUSD": 0
@@ -21808,9 +21775,9 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
+        "Tower",
         "District",
         "Architecture",
-        "Power",
         "Viewpoint"
       ],
       "priceUSD": 0
@@ -21901,9 +21868,7 @@
         "Notable Building",
         "Architecture",
         "Art",
-        "Engineering",
-        "Fashion",
-        "Performance"
+        "Fashion"
       ],
       "priceUSD": 0
     },
@@ -21950,7 +21915,6 @@
         "Architecture",
         "Faith",
         "History",
-        "Gothic",
         "Modernist",
         "Designed by a Master",
         "Kenzō Tange"
@@ -22042,10 +22006,9 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Tower",
+        "Notable Building",
         "Architecture",
-        "Faith",
-        "Fashion",
+        "Food",
         "History",
         "Designed by a Master",
         "Kengo Kuma"
@@ -22092,8 +22055,7 @@
       "tags": [
         "Notable Building",
         "Food",
-        "Power",
-        "War"
+        "History"
       ],
       "priceUSD": 0
     },
@@ -22136,17 +22098,12 @@
       "city": "Tokyo",
       "primaryCategory": "visualArt",
       "tags": [
-        "Monument",
         "Museum",
-        "Tower",
         "Architecture",
         "Art",
         "Remembrance",
-        "War",
-        "Designed by a Master",
         "Green Escape",
-        "Public Art",
-        "Le Corbusier"
+        "Public Art"
       ],
       "priceUSD": 0
     },
@@ -22326,10 +22283,9 @@
         "Architecture",
         "Art",
         "History",
-        "War",
         "Modernist",
-        "Designed by a Master",
         "Green Escape",
+        "Designed by a Master",
         "Le Corbusier"
       ],
       "priceUSD": 0
@@ -22464,10 +22420,8 @@
       "primaryCategory": "natureAndParks",
       "tags": [
         "Park",
-        "Remembrance",
         "Faith",
         "History",
-        "Commerce",
         "Green Escape"
       ],
       "priceUSD": 0
@@ -22510,10 +22464,9 @@
       "city": "Tokyo",
       "primaryCategory": "architecture",
       "tags": [
-        "Notable Building",
+        "Venue",
         "Architecture",
         "Engineering",
-        "Maritime",
         "Performance",
         "Power"
       ],
@@ -22556,11 +22509,9 @@
       "primaryCategory": "architecture",
       "tags": [
         "Notable Building",
+        "Tower",
         "Architecture",
-        "Crime",
-        "Faith",
         "Power",
-        "Gothic",
         "Designed by a Master",
         "Viewpoint",
         "Kenzō Tange"
@@ -22608,9 +22559,7 @@
         "Museum",
         "Architecture",
         "Engineering",
-        "Faith",
         "History",
-        "Power",
         "Neoclassical"
       ],
       "priceUSD": 0
@@ -22653,9 +22602,7 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Faith",
-        "Green Escape",
-        "Hidden Gem",
+        "Designed by a Master",
         "Public Art"
       ],
       "priceUSD": 0
@@ -22703,9 +22650,8 @@
         "Architecture",
         "Art",
         "History",
-        "Designed by a Master",
         "Hidden Gem",
-        "Mies van der Rohe"
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -22747,12 +22693,9 @@
       "tags": [
         "Park",
         "Architecture",
-        "Engineering",
-        "Contemporary",
         "Designed by a Master",
         "Green Escape",
         "Public Art",
-        "Viewpoint",
         "Shigeru Ban"
       ],
       "priceUSD": 0
@@ -22798,7 +22741,6 @@
         "Venue",
         "Architecture",
         "Engineering",
-        "Faith",
         "Contemporary",
         "Designed by a Master",
         "Kenzō Tange"
