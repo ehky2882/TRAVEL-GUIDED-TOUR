@@ -76,6 +76,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// tour-detail sheet's stack, the player window) and the Library
     /// tab all read + mutate the same instance.
     @State private var savedMakersStore = SavedMakersStore()
+    /// App-wide transient-toast channel. Injected into both windows; the toast
+    /// itself renders in the bottom-module window (above every modal). See
+    /// `Components/AtlasToast.swift`.
+    @State private var toastCenter = ToastCenter()
     /// Created once content appears (so it can capture the auth + store
     /// instances). Syncs a signed-in user's library + saved makers to Supabase;
     /// retained here for the app's lifetime. See `Data/SyncService.swift`.
@@ -130,6 +134,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(makerPresenter)
                     .environment(navState)
                     .environment(savedMakersStore)
+                    .environment(toastCenter)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
                     .task {
                         // Wire up library/saved-makers sync once. Created here
@@ -202,6 +207,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                                 .environment(makerPresenter)
                                 .environment(navState)
                                 .environment(savedMakersStore)
+                                .environment(toastCenter)
                             // No `.preferredColorScheme(...)` here:
                             // the install closure is evaluated ONCE
                             // and would freeze the host

@@ -9,6 +9,7 @@ struct FollowMenuButton: View {
 
     @Environment(FollowService.self) private var followService: FollowService?
     @Environment(AuthService.self) private var authService: AuthService?
+    @Environment(ToastCenter.self) private var toastCenter: ToastCenter?
     @State private var state: FollowState = .empty
     @State private var busy = false
 
@@ -48,6 +49,7 @@ struct FollowMenuButton: View {
                 state = await service.state(for: makerId)
             } catch {
                 // Leave state as-is; a transient failure shouldn't lie.
+                toastCenter?.show("Couldn't update follow. Check your connection.")
             }
         }
     }

@@ -13,6 +13,7 @@ struct FollowRequestsView: View {
 
     @Environment(AtlasNavigationState.self) private var navState
     @Environment(FollowService.self) private var followService: FollowService?
+    @Environment(ToastCenter.self) private var toastCenter: ToastCenter?
 
     @State private var requests: [FollowRequest] = []
     @State private var loaded = false
@@ -123,6 +124,7 @@ struct FollowRequestsView: View {
                 onChange()
             } catch {
                 // Leave the row in place; a transient failure shouldn't lie.
+                toastCenter?.show("Couldn't \(approve ? "approve" : "decline") the request. Try again.")
             }
         }
     }

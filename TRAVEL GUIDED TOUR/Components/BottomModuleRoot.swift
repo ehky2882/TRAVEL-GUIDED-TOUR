@@ -64,6 +64,9 @@ struct BottomModuleRoot: View {
         // anchored at the bottom of the screen and let the keyboard
         // overlay it.
         .ignoresSafeArea(.all, edges: .bottom)
+        // Toasts render here, in this higher-level window, so they appear above
+        // every UIKit modal (tour/maker layers, sheets) and the main window.
+        .overlay(alignment: .top) { ToastHost() }
         .animation(.spring(response: 0.4, dampingFraction: 0.86), value: nowPlayingTour?.id)
         // Present the full player from THIS window (above the detail
         // modal) so the cover slides up over the mini-player + tab bar
