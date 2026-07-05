@@ -251,8 +251,6 @@
         "Notable Building",
         "Tower",
         "Architecture",
-        "Art",
-        "Food",
         "History",
         "Power",
         "Art Deco"
@@ -441,13 +439,10 @@
       "primaryCategory": "architecture",
       "tags": [
         "Museum",
-        "Notable Building",
         "Architecture",
         "Art",
-        "Faith",
         "History",
         "Beaux-Arts",
-        "Gothic",
         "Designed by a Master",
         "McKim, Mead & White"
       ],
@@ -669,11 +664,7 @@
         "Museum",
         "Architecture",
         "Art",
-        "Engineering",
         "History",
-        "Maritime",
-        "War",
-        "Brutalist",
         "Designed by a Master",
         "Renzo Piano"
       ],
@@ -774,13 +765,10 @@
         "Bridge",
         "Park",
         "Architecture",
-        "Literature",
         "Maritime",
         "Performance",
-        "Designed by a Master",
         "Green Escape",
-        "Viewpoint",
-        "Jean Nouvel"
+        "Viewpoint"
       ],
       "priceUSD": 0
     },
@@ -827,11 +815,8 @@
         "Architecture",
         "Art",
         "Commerce",
-        "Power",
         "Art Deco",
         "Designed by a Master",
-        "Hidden Gem",
-        "Public Art",
         "William Van Alen"
       ],
       "priceUSD": 0
@@ -971,7 +956,6 @@
         "Museum",
         "Architecture",
         "Art",
-        "Faith",
         "History",
         "Performance",
         "Designed by a Master",
@@ -1398,8 +1382,6 @@
       "tags": [
         "District",
         "Architecture",
-        "Faith",
-        "Food",
         "History",
         "Commerce",
         "Neoclassical"
@@ -1452,16 +1434,10 @@
       "tags": [
         "Park",
         "Public Square",
-        "Architecture",
-        "Remembrance",
-        "Fashion",
         "History",
         "Literature",
-        "Commerce",
         "Performance",
-        "Designed by a Master",
         "Green Escape",
-        "Hidden Gem",
         "McKim, Mead & White"
       ],
       "priceUSD": 0
@@ -2262,7 +2238,6 @@
       "primaryCategory": "history",
       "tags": [
         "Notable Building",
-        "Faith",
         "Food",
         "History",
         "Power",
@@ -2400,12 +2375,8 @@
       "tags": [
         "Monument",
         "Art",
-        "Food",
         "History",
-        "Immigration",
-        "Literature",
         "Commerce",
-        "Green Escape",
         "Public Art"
       ],
       "priceUSD": 0
@@ -2447,11 +2418,9 @@
       "city": "New York City",
       "primaryCategory": "history",
       "tags": [
-        "Venue",
+        "Monument",
         "Art",
         "History",
-        "Literature",
-        "War",
         "Green Escape",
         "Public Art"
       ],
@@ -2974,10 +2943,8 @@
         "Venue",
         "Architecture",
         "Art",
-        "Faith",
         "Immigration",
         "Performance",
-        "Power",
         "Art Deco"
       ],
       "stops": [
@@ -3075,7 +3042,6 @@
         "Art",
         "Faith",
         "History",
-        "Maritime",
         "Gothic",
         "Green Escape"
       ],
@@ -3506,8 +3472,6 @@
         "Notable Building",
         "Tower",
         "Architecture",
-        "Faith",
-        "Fashion",
         "Commerce",
         "Power",
         "Gothic",
@@ -4208,12 +4172,9 @@
         "Waterfront",
         "Architecture",
         "Art",
-        "Engineering",
         "Immigration",
         "Maritime",
-        "Commerce",
         "Performance",
-        "Contemporary",
         "Neoclassical",
         "Green Escape"
       ],
@@ -4348,15 +4309,10 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Park",
-        "Public Square",
+        "Venue",
         "Architecture",
         "History",
-        "Performance",
-        "Beaux-Arts",
-        "Designed by a Master",
-        "Green Escape",
-        "McKim, Mead & White"
+        "Performance"
       ],
       "priceUSD": 0,
       "stops": [
@@ -4855,11 +4811,8 @@
         "Religious Building",
         "Architecture",
         "Remembrance",
-        "Engineering",
         "Faith",
         "History",
-        "Commerce",
-        "Performance",
         "War",
         "Colonial",
         "Neoclassical"
@@ -5001,19 +4954,14 @@
       "city": "New York",
       "primaryCategory": "architecture",
       "tags": [
-        "Park",
+        "Notable Building",
         "Architecture",
         "Art",
         "History",
         "Performance",
-        "War",
         "Gilded Age",
-        "Gothic",
         "Designed by a Master",
-        "Green Escape",
-        "Public Art",
-        "Herzog & de Meuron",
-        "McKim, Mead & White"
+        "Herzog & de Meuron"
       ],
       "priceUSD": 0
     },
@@ -5984,8 +5932,7 @@
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
-        "Notable Building",
-        "Faith",
+        "District",
         "Fashion",
         "History",
         "Commerce",
@@ -6039,8 +5986,6 @@
       "primaryCategory": "history",
       "tags": [
         "Civic",
-        "Venue",
-        "Faith",
         "History",
         "Commerce",
         "Power",
@@ -6413,8 +6358,6 @@
       "tags": [
         "Notable Building",
         "Architecture",
-        "Faith",
-        "Performance",
         "Designed by a Master",
         "Frank Gehry"
       ],
@@ -6461,10 +6404,7 @@
       "tags": [
         "Notable Building",
         "Food",
-        "Immigration",
-        "Literature",
-        "Green Escape",
-        "Viewpoint"
+        "Literature"
       ],
       "priceUSD": 0
     },
@@ -7308,14 +7248,10 @@
         "Notable Building",
         "Architecture",
         "Art",
-        "Engineering",
         "History",
-        "War",
         "Brutalist",
         "Modernist",
-        "Designed by a Master",
-        "Herzog & de Meuron",
-        "Renzo Piano"
+        "Designed by a Master"
       ],
       "stops": [
         {
