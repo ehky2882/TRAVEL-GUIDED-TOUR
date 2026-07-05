@@ -69,6 +69,16 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-07-04)
 
+### Perf: Home + map kept alive across tab switches — fixes return-to-Home lag (session 56 — code)
+
+**Fixed the owner's on-device report that returning to Home from Library/Me had a noticeable lag** ([PR #347](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/347), squash `b3441c6`, owner-reviewed on device → "merge it"). **Merged to `main`; NOT yet on TestFlight — needs a build cut** (owner cutting one in a parallel session).
+
+- **Root cause (profiled):** `ContentView.tabContent` used a `switch appShared.selectedTab`, so leaving Home **unmounted `HomeView`** and returning **rebuilt it from scratch** — reloading the SwiftUI `Map` (tiles + re-adding/re-clustering all ~509 stop annotations) and losing the `@State` camera back to the NYC default. **Note:** the map is SwiftUI's **native `Map`, not a `UIViewRepresentable MKMapView`** as the task assumed. Temporary timing logs confirmed the Swift recompute is negligible — `filteredTours` ≈0.02 ms, cluster ≈1–3 ms — so the lag is the map's **UIKit reconstruction on remount**.
+- **Fix (`ContentView.swift` + `Features/Home/HomeView.swift`):** `tabContent` is now a **`ZStack` that keeps `HomeView` permanently mounted** (visibility toggled via `.opacity`/`.allowsHitTesting`/`.accessibilityHidden`), with Library/Me overlaid opaque when active (they keep their mount-on-select lifecycle). Return = re-show, not rebuild; camera preserved. Off-screen Home is inert: `allowsHitTesting(false)` kills the 60 fps gesture callbacks, and a new **`isActive`** param short-circuits `HomeView`'s `onCameraChanged`/`onCameraMoving` so a late programmatic settle frame can't mutate shared state off-screen. Measured-negligible → **no memoization added** (per the task's own conditional).
+- **Preserved:** drawer detent (`homeSheetDetent`), `HomeSharedState`, `TourPresenter`/`MakerPresenter` layers, deep links, `onChange(selectedTab)`; `LocationManager` streams independent of view lifecycle.
+- **`test_sim` 140/140**; CI green. Home renders unchanged + Library/Me overlay opaque (no bleed-through, sim-verified via a temp default-tab override, reverted). The tab-away-and-back **timing** isn't sim-drivable (modal-window tab bar exposes only Home to automation) → owner-device-verified.
+- **Tradeoffs flagged:** keeping Home mounted costs a little memory (one persistent map); an open **Search now persists across a tab-away** instead of resetting (self-consistent, arguably better).
+
 ### Batch D COMPLETE — the social layer: D2 follow-lists + D3 requests — TestFlight 1.0 (70) (session 55 — code)
 
 **The batch-D social layer is now fully shipped: D1 foundation → D2 lists → D3 requests.** Both D2 + D3 landed in one PR ([PR #334](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/334), squash `34e1c14`), owner-authorized merge ("merge both and cut the build"). **No new backend** — every RPC + RLS policy was already live from D1's `backend/social.sql`.
