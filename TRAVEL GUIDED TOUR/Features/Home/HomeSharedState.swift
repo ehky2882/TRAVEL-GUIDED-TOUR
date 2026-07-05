@@ -13,9 +13,20 @@ import MapKit
 /// stay in sync without prop-drilling.
 @Observable
 final class HomeSharedState {
-    /// Active category-chip filter. The map filters its pin set on
-    /// this; the drawer filters and sorts its tour list on it.
-    var selectedCategory: TourCategory? = nil
+    /// Active multi-select tag filter (owner decision D8). Empty = no
+    /// tag filter. Chips combine per D6 (OR within a facet, AND across).
+    /// The map filters its pin set on this; the drawer swaps its curated
+    /// shelves for a flat results list while any filter is active.
+    var selectedTags: Set<String> = []
+
+    /// "Walks" format filter (§1.6) — narrows to multi-stop tours. A
+    /// *format* filter (the tour's shape), distinct from the content-tag
+    /// filters above, but it ANDs with them in the same chip row.
+    var walksOnly: Bool = false
+
+    /// True when any filter (tags or Walks) is active — the drawer reads
+    /// this to decide shelves-vs-results and the header copy.
+    var hasActiveFilters: Bool { !selectedTags.isEmpty || walksOnly }
 
     /// Currently-tapped tour + the coordinate of its tapped stop.
     /// Drives the placecard preview the map renders above the pin,

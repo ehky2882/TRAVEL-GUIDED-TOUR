@@ -194,9 +194,9 @@ struct HomeView: View {
                                 }
                             )
 
-                        CategoryChipRow(
-                            availableCategories: TourCategory.allCases,
-                            selectedCategory: $sharedState.selectedCategory
+                        TagFilterChipRow(
+                            selectedTags: $sharedState.selectedTags,
+                            walksOnly: $sharedState.walksOnly
                         )
                     }
                     .padding(.top, AtlasSpacing.sm)
@@ -547,14 +547,17 @@ struct HomeView: View {
 
     // MARK: - Derived
 
-    /// Tours after the category-chip filter is applied. Fed to the
-    /// map's pin set. The drawer's filtered list is computed in
-    /// `HomeDrawerContent` from the same `sharedState.selectedCategory`.
+    /// Tours after the filter-chip selection is applied. Fed to the
+    /// map's pin set. The drawer's filtered results list is computed in
+    /// `HomeDrawerContent` from the same `sharedState` filter state.
+    /// Combines per D6 (OR within a facet, AND across) plus the "Walks"
+    /// format filter (§1.6).
     private var filteredTours: [Tour] {
-        guard let selectedCategory = sharedState.selectedCategory else {
-            return dataService.tours
+        guard sharedState.hasActiveFilters else { return dataService.tours }
+        return dataService.tours.filter { tour in
+            if sharedState.walksOnly && tour.kind != .multiStop { return false }
+            return Tag.matches(tourTags: Set(tour.tags), selection: sharedState.selectedTags)
         }
-        return dataService.tours.filter { $0.primaryCategory == selectedCategory }
     }
 
     private func distanceText(for tour: Tour) -> String? {

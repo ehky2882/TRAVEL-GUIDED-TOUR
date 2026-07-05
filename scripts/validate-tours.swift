@@ -117,6 +117,48 @@ func isValidURL(_ s: String) -> Bool {
     return u.scheme != nil && u.host != nil
 }
 
+// MARK: - Controlled tag vocabulary (taxonomy v2)
+//
+// Mirrors TRAVEL GUIDED TOUR/Models/Tag.swift + scripts/seed_tags.py's
+// VOCAB. Keep all three in sync. Unknown tags are a hard error; a
+// missing required facet (≥1 Place type, ≥1 Theme) is a warning while
+// the catalog is backfilled — some tours still lack one.
+
+let placeTypeTags: Set<String> = [
+    "Religious Building", "Museum", "Park", "Public Square", "Tower",
+    "Bridge", "Monument", "Market", "Venue", "Library", "District",
+    "Civic", "Waterfront", "Notable Building",
+]
+let themeTags: Set<String> = [
+    "Architecture", "History", "Art", "Literature", "Performance", "Food",
+    "Faith", "Power", "Commerce", "Immigration", "Crime", "Remembrance",
+    "Engineering", "War", "Maritime", "Fashion", "LGBTQ+",
+]
+let styleEraTags: Set<String> = [
+    "Gothic", "Baroque", "Neoclassical", "Beaux-Arts", "Victorian",
+    "Art Deco", "Modernist", "Brutalist", "Contemporary", "Gilded Age",
+    "Colonial",
+]
+let experienceTags: Set<String> = [
+    "Iconic Landmark", "Hidden Gem", "Viewpoint", "Green Escape",
+    "Free to Visit", "After Dark", "Public Art", "Designed by a Master",
+]
+let architectTags: Set<String> = [
+    "Álvaro Siza", "Eduardo Souto de Moura", "Fernando Távora",
+    "Norman Foster", "Renzo Piano", "Frank Gehry", "Christopher Wren",
+    "Charles Holden", "Denys Lasdun", "Inigo Jones", "Giles Gilbert Scott",
+    "George Gilbert Scott", "Herzog & de Meuron", "Frank Lloyd Wright",
+    "Cass Gilbert", "McKim, Mead & White", "Inês Lobo", "Luís Pedro Silva",
+    "Kengo Kuma", "Kenzō Tange", "Tadao Ando", "SANAA", "Toyo Ito",
+    "Fumihiko Maki", "Shigeru Ban", "Sou Fujimoto", "Kisho Kurokawa",
+    "I. M. Pei", "Mies van der Rohe", "Le Corbusier", "Philip Johnson",
+    "William Van Alen", "Thomas Heatherwick", "Santiago Calatrava",
+    "Bernard Maybeck", "Daniel Burnham", "Zaha Hadid", "Jean Nouvel",
+]
+let validTags: Set<String> = placeTypeTags
+    .union(themeTags).union(styleEraTags)
+    .union(experienceTags).union(architectTags)
+
 // MARK: - Load & decode
 
 let defaultPath = "TRAVEL GUIDED TOUR/Resources/Tours.json"
@@ -196,6 +238,19 @@ for (ti, t) in file.tours.enumerated() {
         }
     }
     if let u = t.introAudioURL, !isValidURL(u) { err(tloc, "introAudioURL '\(u)' is not a valid URL") }
+
+    // Tags: closed vocabulary (hard error on anything unknown) + the
+    // required-facet coverage (warnings while the catalog is backfilled).
+    for tag in t.tags where !validTags.contains(tag) {
+        err(tloc, "tag '\(tag)' is not in the controlled vocabulary (see Models/Tag.swift)")
+    }
+    let tagSet = Set(t.tags)
+    if tagSet.isDisjoint(with: placeTypeTags) {
+        warn(tloc, "no Place type tag — every tour should carry ≥1 (Museum, Park, Tower, …)")
+    }
+    if tagSet.isDisjoint(with: themeTags) {
+        warn(tloc, "no Theme tag — every tour should carry ≥1 (History, Architecture, Art, …)")
+    }
 
     if !(-90.0...90.0).contains(t.centroidLatitude) {
         err(tloc, "centroidLatitude \(t.centroidLatitude) out of [-90, 90]")

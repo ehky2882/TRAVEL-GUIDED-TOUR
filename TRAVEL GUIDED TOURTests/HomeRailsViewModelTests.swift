@@ -18,10 +18,10 @@ final class HomeRailsViewModelTests: XCTestCase {
         XCTAssertTrue(rails.isEmpty)
     }
 
-    // MARK: - Category rails
+    // MARK: - Curated shelves (Phase 2)
 
-    func test_singleArchitectureTour_producesArchitectureRail() {
-        let tour = TestFixtures.makeTour(category: .architecture)
+    func test_tourWithShelfTag_producesThatShelf() {
+        let tour = TestFixtures.makeTour(tags: ["Iconic Landmark"])
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
             libraryEntries: [],
@@ -29,11 +29,11 @@ final class HomeRailsViewModelTests: XCTestCase {
             userLocation: nil,
             visibleRegion: nil
         )
-        XCTAssertTrue(rails.contains { $0.id == "category.architecture" })
+        XCTAssertTrue(rails.contains { $0.id == "shelf.Iconic Landmark" })
     }
 
-    func test_emptyCategory_isHidden() {
-        let tour = TestFixtures.makeTour(category: .architecture)
+    func test_shelfWithNoMatchingTours_isHidden() {
+        let tour = TestFixtures.makeTour(tags: ["Iconic Landmark"])
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
             libraryEntries: [],
@@ -41,22 +41,43 @@ final class HomeRailsViewModelTests: XCTestCase {
             userLocation: nil,
             visibleRegion: nil
         )
-        // No tour in .history — that rail should be absent.
-        XCTAssertFalse(rails.contains { $0.id == "category.history" })
+        // No tour tagged Food — that shelf should be absent.
+        XCTAssertFalse(rails.contains { $0.id == "shelf.Food" })
     }
 
-    func test_multipleCategories_producesMultipleRails() {
-        let architectureTour = TestFixtures.makeTour(category: .architecture)
-        let historyTour = TestFixtures.makeTour(category: .history)
+    func test_curatedShelvesFollowEditorialOrder() {
+        // Two tours, one per shelf; assert the shelves render in the
+        // curated order, not tag-alphabetical or insertion order.
+        let iconic = TestFixtures.makeTour(tags: ["Iconic Landmark"])
+        let food = TestFixtures.makeTour(tags: ["Food"])
         let rails = HomeRailsViewModel.rails(
-            tours: [architectureTour, historyTour],
+            tours: [food, iconic],
             libraryEntries: [],
             recentlyViewedIds: [],
             userLocation: nil,
             visibleRegion: nil
         )
-        XCTAssertTrue(rails.contains { $0.id == "category.architecture" })
-        XCTAssertTrue(rails.contains { $0.id == "category.history" })
+        let ids = rails.map(\.id)
+        let iconicIdx = ids.firstIndex(of: "shelf.Iconic Landmark")
+        let foodIdx = ids.firstIndex(of: "shelf.Food")
+        XCTAssertNotNil(iconicIdx)
+        XCTAssertNotNil(foodIdx)
+        XCTAssertLessThan(iconicIdx!, foodIdx!, "Iconic landmarks shelf comes before Food in the curated order")
+    }
+
+    func test_broadTagsAreNotShelves() {
+        // Architecture (56%) + History (44%) were dropped as shelves —
+        // a tour carrying only those tags produces no shelf.
+        let tour = TestFixtures.makeTour(tags: ["Architecture", "History"])
+        let rails = HomeRailsViewModel.rails(
+            tours: [tour],
+            libraryEntries: [],
+            recentlyViewedIds: [],
+            userLocation: nil,
+            visibleRegion: nil
+        )
+        XCTAssertFalse(rails.contains { $0.id == "shelf.Architecture" })
+        XCTAssertFalse(rails.contains { $0.id == "shelf.History" })
     }
 
     // MARK: - Continue listening
@@ -146,7 +167,7 @@ final class HomeRailsViewModelTests: XCTestCase {
         XCTAssertEqual(rail?.tours.first?.id, tour.id)
     }
 
-    // MARK: - Near you
+    // MARK: - Near you / In view (§1.5 location-rail behaviour)
 
     func test_nearYou_requiresUserLocation() {
         let tour = TestFixtures.makeTour()
@@ -160,7 +181,8 @@ final class HomeRailsViewModelTests: XCTestCase {
         XCTAssertFalse(rails.contains { $0.id == "nearYou" })
     }
 
-    func test_nearYou_includesToursWithUserLocation() {
+    func test_nearYou_shownWhenMapOverUser() {
+        // User with no panned region → near mode → Near you shows.
         let tour = TestFixtures.makeTour()
         let rails = HomeRailsViewModel.rails(
             tours: [tour],
@@ -170,9 +192,8 @@ final class HomeRailsViewModelTests: XCTestCase {
             visibleRegion: nil
         )
         XCTAssertTrue(rails.contains { $0.id == "nearYou" })
+        XCTAssertFalse(rails.contains { $0.id == "inView" })
     }
-
-    // MARK: - In view
 
     func test_inView_requiresVisibleRegion() {
         let tour = TestFixtures.makeTour()
@@ -180,14 +201,14 @@ final class HomeRailsViewModelTests: XCTestCase {
             tours: [tour],
             libraryEntries: [],
             recentlyViewedIds: [],
-            userLocation: nil,
+            userLocation: CLLocation(latitude: 40.75, longitude: -73.99),
             visibleRegion: nil
         )
         XCTAssertFalse(rails.contains { $0.id == "inView" })
     }
 
-    func test_inView_hiddenWhenRegionMatchesUserLocation() {
-        // Region centered at the user — "Near you" already covers this.
+    func test_nearMode_regionMatchesUser_showsNearYouNotInView() {
+        // Region centered at the user (within pan threshold) → near mode.
         let userCoord = CLLocationCoordinate2D(latitude: 40.75, longitude: -73.99)
         let tour = TestFixtures.makeTour(
             latitude: userCoord.latitude,
@@ -204,14 +225,13 @@ final class HomeRailsViewModelTests: XCTestCase {
             userLocation: CLLocation(latitude: userCoord.latitude, longitude: userCoord.longitude),
             visibleRegion: region
         )
-        XCTAssertFalse(
-            rails.contains { $0.id == "inView" },
-            "When region center is within the panThreshold of user, inView rail should be hidden"
-        )
+        XCTAssertTrue(rails.contains { $0.id == "nearYou" })
+        XCTAssertFalse(rails.contains { $0.id == "inView" })
     }
 
-    func test_inView_shownWhenPannedAwayFromUser() {
-        // User in NYC; map panned to LA. Tour in LA.
+    func test_farMode_pannedAway_showsInViewAndHidesNearYou() {
+        // User in NYC; map panned to LA. §1.5: "In view" becomes the
+        // top location rail and "Near you" is hidden entirely.
         let tour = TestFixtures.makeTour(latitude: 34.05, longitude: -118.25)
         let region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 34.05, longitude: -118.25),
@@ -224,32 +244,69 @@ final class HomeRailsViewModelTests: XCTestCase {
             userLocation: CLLocation(latitude: 40.75, longitude: -73.99),
             visibleRegion: region
         )
-        XCTAssertTrue(rails.contains { $0.id == "inView" })
+        XCTAssertTrue(rails.contains { $0.id == "inView" }, "In view is the top location rail in far mode")
+        XCTAssertFalse(rails.contains { $0.id == "nearYou" }, "Near you is hidden in far mode")
     }
 
-    // MARK: - Ordering
+    func test_isPannedFar_boundaries() {
+        let user = CLLocation(latitude: 40.75, longitude: -73.99)
+        // No region → not far (near mode).
+        XCTAssertFalse(HomeRailsViewModel.isPannedFar(userLocation: user, visibleRegion: nil))
+        // No user but a region → far (show In view).
+        let region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 34.05, longitude: -118.25),
+            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        )
+        XCTAssertTrue(HomeRailsViewModel.isPannedFar(userLocation: nil, visibleRegion: region))
+        // Region far from user → far.
+        XCTAssertTrue(HomeRailsViewModel.isPannedFar(userLocation: user, visibleRegion: region))
+    }
 
-    func test_railsOrder_personalizedBeforeLocationBeforeCategory() {
-        // Set up state that should produce all rail families.
-        let tour = TestFixtures.makeTour(category: .architecture)
-        let inProgress = LibraryEntry(tourId: tour.id, listenedSeconds: 30)
-        let rails = HomeRailsViewModel.rails(
-            tours: [tour],
-            libraryEntries: [inProgress],
-            recentlyViewedIds: [tour.id],
-            userLocation: CLLocation(latitude: 40.75, longitude: -73.99),
+    // MARK: - Filtered results (§1.6 + D6/D8)
+
+    func test_filteredResults_walksOnly_keepsMultiStop() {
+        let single = TestFixtures.makeTour(kind: .single, stopCount: 1)
+        let walk = TestFixtures.makeTour(kind: .multiStop, stopCount: 4)
+        let results = HomeRailsViewModel.filteredResults(
+            tours: [single, walk],
+            selectedTags: [],
+            walksOnly: true,
+            userLocation: nil,
             visibleRegion: nil
         )
-        let ids = rails.map(\.id)
-        let indexOf: (String) -> Int? = { id in ids.firstIndex(of: id) }
+        XCTAssertEqual(results.map(\.id), [walk.id])
+    }
 
-        if let continueIdx = indexOf("continueListening"),
-           let nearIdx = indexOf("nearYou") {
-            XCTAssertLessThan(continueIdx, nearIdx, "Personalized rails should come before location-anchored")
-        }
-        if let nearIdx = indexOf("nearYou"),
-           let archIdx = indexOf("category.architecture") {
-            XCTAssertLessThan(nearIdx, archIdx, "Location-anchored rails should come before interest-based")
-        }
+    func test_filteredResults_tagFilter_andWalks_combine() {
+        let museumWalk = TestFixtures.makeTour(kind: .multiStop, tags: ["Museum", "Art"], stopCount: 3)
+        let museumSingle = TestFixtures.makeTour(kind: .single, tags: ["Museum", "Art"])
+        let parkWalk = TestFixtures.makeTour(kind: .multiStop, tags: ["Park"], stopCount: 3)
+        let results = HomeRailsViewModel.filteredResults(
+            tours: [museumWalk, museumSingle, parkWalk],
+            selectedTags: ["Museum"],
+            walksOnly: true,
+            userLocation: nil,
+            visibleRegion: nil
+        )
+        XCTAssertEqual(results.map(\.id), [museumWalk.id], "Only the multi-stop Museum tour survives Museum + Walks")
+    }
+
+    func test_filteredResults_sortsByViewportCenter() {
+        // Two tours; the one nearer the visible-region center ranks first.
+        let center = CLLocationCoordinate2D(latitude: 40.0, longitude: -74.0)
+        let near = TestFixtures.makeTour(tags: ["Food"], latitude: 40.01, longitude: -74.0)
+        let far = TestFixtures.makeTour(tags: ["Food"], latitude: 41.0, longitude: -74.0)
+        let region = MKCoordinateRegion(
+            center: center,
+            span: MKCoordinateSpan(latitudeDelta: 3, longitudeDelta: 3)
+        )
+        let results = HomeRailsViewModel.filteredResults(
+            tours: [far, near],
+            selectedTags: ["Food"],
+            walksOnly: false,
+            userLocation: nil,
+            visibleRegion: region
+        )
+        XCTAssertEqual(results.map(\.id), [near.id, far.id])
     }
 }
