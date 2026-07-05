@@ -126,6 +126,43 @@ The chip row shows the **same curated tags** (so tapping a chip filters to that
 shelf's tag, and multiple chips combine per D6). Whether the chip row exposes a
 few more filters than there are shelves is a small design-pass call.
 
+### 3.1 · Data check against the cleaned catalog (2026-07-04, after the per-city spot-check)
+
+Now that every city's tags are hand-de-cluttered ([[project-tag-taxonomy]]), the
+shelf sizes are known. Each shelf should hit a **useful slice** — big enough to
+fill a row, small enough to feel curated (~5–25% of the catalog). Findings:
+
+| Shelf | Tours | % | Verdict |
+|---|---|---|---|
+| Art & museums (`Art`) | 120 | 24% | ✅ strong |
+| Green escapes (`Green Escape`) | 97 | 19% | ✅ strong |
+| Designed by a master (`Designed by a Master`) | 94 | 18% | ✅ strong |
+| Food & drink (`Food`) | 87 | 17% | ✅ strong |
+| Sacred spaces (`Faith`) | 86 | 17% | ✅ strong |
+| Viewpoints (`Viewpoint`) | 62 | 12% | ✅ strong |
+| By the water (`Maritime`) | 50 | 10% | ✅ strong |
+| Fashion & retail (`Fashion`) | 31 | 6% | ✅ ok |
+| Hidden gems (`Hidden Gem`) | 27 | 5% | ✅ ok |
+| **Architecture & design** (`Architecture`) | **283** | **56%** | ❌ **too broad — matches over half the catalog; a shelf of "everything" isn't curated. Recommend DROP** (the architecture story is already carried by "Designed by a master" + the style tags). |
+| **A sense of history** (`History`) | **222** | **44%** | ❌ **too broad — nearly half the catalog. Recommend DROP** (history is everywhere; not a distinguishing shelf). |
+| **Iconic landmarks** (`Iconic Landmark`) | **0** | 0% | ⚠️ **empty — this is an *editorial* tag the seeder can't guess. The headline shelf will not render until the iconic tours are hand-tagged.** Small content task, ~1–3 per city; do it before/with the Phase-2 build. |
+
+**Optional replacements for the two dropped shelves** (both selective enough to be
+good rows, all multi-city): "Modern icons" (`Contemporary`, 24) · "Markets & halls"
+(`Market`, 28) · "Towers & rooftops" (`Tower`, 30) · a rotating **Style** shelf
+(`Art Deco` / `Gothic` / `Modernist`).
+
+**Keep OUT of the filter chip row** (too thin — a chip that finds 5 tours across
+1 city reads as broken): `LGBTQ+` (5), `Library` (7), `Brutalist` (5), `Gilded Age`
+(5), `Art Deco` (14, 1 city), `Crime` (15, 2 cities), `Bridge` (12, 2 cities).
+These stay as **searchable / detail-page tags**, just not promoted to a chip.
+
+**Strong Place-type filters worth adding to the chip row** (place type is the most
+intuitive way to browse, and these span many cities): `Museum` (74), `Religious
+Building` (58), `Park` (46), `Tower` (30), `Market` (28), `Waterfront` (29),
+`Venue` (28), `Public Square` (20). (`Notable Building` 98 and `District` 87 are
+catch-alls — do **not** make them filters.)
+
 ---
 
 ## 4 · Engineering change list (grounded in the app as of 2026-07-03)
