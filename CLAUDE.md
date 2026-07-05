@@ -67,7 +67,19 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-07-04)
+## Current State (2026-07-05)
+
+### Polish pass — identity (gold accent) + haptics + error toasts + home-perf — TestFlight 1.0 (71) (session 56 — code)
+
+**Owner pivoted from features to polishing.** After an honest app assessment (strong execution, but features running ahead of users; core GPS field-experience least-verified; no visual identity yet), the owner chose a directed polish pass. Shipped in **build 71** (bump #351, admin-merged; archived clean, binary-verified `1.0 (71)`, `UIRequiresFullScreen`, mic key, `applesignin`+`associated-domains`, Supabase host, no `TEMP_LOCAL_DEMO`).
+
+- **Brand identity DECIDED — dark gold (brass) `#8B7535`** ([PR #344](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/344), squash `63e9ab4`). Owner confirmed the gold the app already wore is THE brand color (a mis-paste briefly picked terracotta `#B85042`, immediately reverted → memory `project-brand-color-brass-gold`). **Same value in light + dark deliberately** ("the one that stays consistent" — no dark variant). `AccentColor.colorset` → gold; `AtlasColors.mapPin = accent` (one source of truth for ~58 call sites); `TourStatus.takenDown` badge → red (else identical to In-review's gold). **Terracotta fully removed** app + gh-pages share/privacy pages. Visually near-identical (every gold surface pixel-for-pixel the same); sim-verified.
+- **Haptics** (same PR) — new `Components/AtlasHaptics.swift`; fired at save/bookmark toggle, follow/unfollow, approve(success)/decline, download complete(success)/fail(error), and the **geofence stop auto-fire** (medium "you've arrived" bump — the signature moment). No-op in the Simulator → **device-only to feel**.
+- **Error toasts** (same PR) — new `Components/AtlasToast.swift`: a `ToastCenter` injected app-wide + a `ToastHost` rendered in the **bottom-module window** so a toast shows **above every UIKit modal**. Wired to the two genuinely-silent user-action failures — **follow/unfollow** and **approve/decline a request** (before, a bad network just did nothing). Report (inline error) + download (failed-state button) already surfaced failures, left as-is; background catalog refresh stays silent by design. Sim-verified render (top banner, red glyph, auto-dismiss).
+- **Home stays alive across tab switches** ([PR #347](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/347), squash `b3441c6`) — the owner's on-device "return-to-Home lag" fix, from a parallel session, verified + merged here. `ContentView.tabContent` keeps `HomeView` permanently mounted (opacity/`allowsHitTesting`-toggled in a ZStack, not `switch`-swapped) so its `MKMapView` (~509 clustered annotations) isn't torn down + rebuilt on every return; `HomeView(isActive:)` short-circuits camera side-effects while hidden. Sim-verified: Library/Me render opaque (no bleed-through), Home returns instantly with camera + drawer preserved.
+- **Also cleaned:** deleted the long-dead `Features/Home/TourListCard.swift` (unused since the rails pivot).
+- **`test_sim` 140/140** throughout. **NEXT (polish list, owner-directed):** upload-progress in the tour editor (#5), empty-states sweep (#6); known debts — Dynamic Type pinned off on the `body` token, VoiceOver pass on newer screens, multi-stop on-device QA. The **app icon** is still the placeholder green sphere (next identity step; should be gold-led). Bigger picture from the assessment: the highest-value non-polish move is getting real users walking real tours + field-testing the core GPS trigger.
+- **Content note:** a stack of tag spot-check / de-clutter PRs (#335–#346, parallel sessions) also landed on `main` — these are `Tours.json` edits that reach users via the remote catalog with **no build required**; build 71 exists purely for the code above. Catalog: **9 makers / 509 tours / 561 stops** (validator PASS).
 
 ### Batch D COMPLETE — the social layer: D2 follow-lists + D3 requests — TestFlight 1.0 (70) (session 55 — code)
 
