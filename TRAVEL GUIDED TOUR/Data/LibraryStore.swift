@@ -53,6 +53,9 @@ final class LibraryStore {
         upsert(tourId) { entry in
             entry.savedAt = entry.savedAt == nil ? Date() : nil
         }
+        // User-initiated only (sync uses `applyMerged`, never this) — safe to
+        // give a tactile tick.
+        AtlasHaptics.selection()
     }
 
     func markDownloaded(_ tourId: UUID) {

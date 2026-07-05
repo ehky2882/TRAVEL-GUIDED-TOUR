@@ -119,6 +119,7 @@ struct FollowRequestsView: View {
                     try await followService.declineRequest(follower: req.followerUserId, on: makerId)
                 }
                 requests.removeAll { $0.id == req.id }
+                if approve { AtlasHaptics.success() } else { AtlasHaptics.selection() }
                 onChange()
             } catch {
                 // Leave the row in place; a transient failure shouldn't lie.

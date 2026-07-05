@@ -227,6 +227,7 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
     private func finishActiveDownload() {
         guard let tourId = activeTourId else { return }
         states[tourId] = .completed
+        Task { @MainActor in AtlasHaptics.success() }
         resetActiveBookkeeping()
         // Views observing `states[tourId]` are responsible for
         // calling `libraryStore.markDownloaded(tourId)` so the
@@ -237,6 +238,7 @@ final class TourDownloader: NSObject, URLSessionDownloadDelegate {
         guard let tourId = activeTourId else { return }
         cleanUpPartial(tourId: tourId)
         states[tourId] = .failed(message: message)
+        Task { @MainActor in AtlasHaptics.error() }
         resetActiveBookkeeping()
     }
 

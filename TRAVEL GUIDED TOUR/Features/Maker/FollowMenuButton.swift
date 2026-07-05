@@ -35,6 +35,7 @@ struct FollowMenuButton: View {
     }
 
     private func toggle(_ service: FollowService) {
+        AtlasHaptics.selection()
         busy = true
         Task {
             defer { busy = false }

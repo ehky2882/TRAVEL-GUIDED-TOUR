@@ -49,6 +49,8 @@ final class SavedMakersStore {
             entries.append(SavedMakerEntry(makerId: makerId, savedAt: Date()))
         }
         save()
+        // User-initiated only (sync uses `applyMerged`) — safe to tick.
+        AtlasHaptics.selection()
     }
 
     private func save() {

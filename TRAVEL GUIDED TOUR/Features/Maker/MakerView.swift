@@ -352,6 +352,7 @@ struct MakerView: View {
 
     private func toggleFollow() {
         guard let followService else { return }
+        AtlasHaptics.selection()   // immediate tap feedback (before the network round-trip)
         isTogglingFollow = true
         Task {
             defer { isTogglingFollow = false }
