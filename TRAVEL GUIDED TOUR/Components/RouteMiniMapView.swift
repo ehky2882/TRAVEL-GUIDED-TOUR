@@ -32,9 +32,12 @@ struct RouteMiniMapView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: side, height: side)
-                    .clipShape(RoundedRectangle(cornerRadius: 11, style: .continuous))
+                    // Corner radius = the 36pt badge circle's radius (18pt),
+                    // so the thumbnail's rounding matches the download /
+                    // bookmark chips (owner test).
+                    .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 11, style: .continuous)
+                        RoundedRectangle(cornerRadius: 18, style: .continuous)
                             .stroke(.white, lineWidth: 1.5)
                     )
                     .shadow(color: .black.opacity(0.25), radius: 2.5, x: 0, y: 1)
