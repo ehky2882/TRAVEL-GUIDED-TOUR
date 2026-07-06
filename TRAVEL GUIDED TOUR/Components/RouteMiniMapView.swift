@@ -18,8 +18,9 @@ import MapKit
 ///   then fades in.
 struct RouteMiniMapView: View {
     let tour: Tour
-    /// Thumbnail side length in points (~92–100pt per the design).
-    var side: CGFloat = 96
+    /// Thumbnail side length in points. Kept small so it reads as a
+    /// subtle "this is a walk" cue, not a second hero (owner direction).
+    var side: CGFloat = 64
 
     @Environment(\.displayScale) private var displayScale
     @State private var image: UIImage?
@@ -31,12 +32,12 @@ struct RouteMiniMapView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: side, height: side)
-                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .stroke(.white, lineWidth: 2)
+                        RoundedRectangle(cornerRadius: 8, style: .continuous)
+                            .stroke(.white, lineWidth: 1.5)
                     )
-                    .shadow(color: .black.opacity(0.25), radius: 3, x: 0, y: 1)
+                    .shadow(color: .black.opacity(0.25), radius: 2.5, x: 0, y: 1)
                     .transition(.opacity)
             }
         }
@@ -155,7 +156,7 @@ final class RouteSnapshotCache {
 
             // Route polyline: stops connected in order.
             cg.setStrokeColor(routeColor.cgColor)
-            cg.setLineWidth(3)
+            cg.setLineWidth(2.5)
             cg.setLineJoin(.round)
             cg.setLineCap(.round)
             cg.beginPath()
@@ -165,12 +166,12 @@ final class RouteSnapshotCache {
 
             // A dot at each stop: white ring + gold centre.
             for p in points {
-                let outer: CGFloat = 4
+                let outer: CGFloat = 3
                 cg.setFillColor(UIColor.white.cgColor)
                 cg.fillEllipse(in: CGRect(
                     x: p.x - outer, y: p.y - outer, width: outer * 2, height: outer * 2
                 ))
-                let inner: CGFloat = 2.4
+                let inner: CGFloat = 1.8
                 cg.setFillColor(routeColor.cgColor)
                 cg.fillEllipse(in: CGRect(
                     x: p.x - inner, y: p.y - inner, width: inner * 2, height: inner * 2
@@ -185,7 +186,7 @@ final class RouteSnapshotCache {
 /// still exists so the shared card views compile on every platform.
 struct RouteMiniMapView: View {
     let tour: Tour
-    var side: CGFloat = 96
+    var side: CGFloat = 64
     var body: some View { EmptyView() }
 }
 #endif
