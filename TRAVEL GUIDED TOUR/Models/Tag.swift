@@ -81,6 +81,40 @@ enum Tag {
 
     static func facet(for tag: String) -> TagFacet? { facetByTag[tag] }
 
+    /// The tags in a facet, in vocabulary order. For the maker tag picker.
+    static func tags(in facet: TagFacet) -> [String] {
+        vocabulary.first(where: { $0.facet == facet })?.tags ?? []
+    }
+
+    /// A selection sorted into canonical vocabulary order (Place type →
+    /// Theme → Style → Experience → Architect), so authored tags lead
+    /// with the place type like the rest of the catalog.
+    static func ordered(_ selection: Set<String>) -> [String] {
+        vocabulary.flatMap { $0.tags.filter(selection.contains) }
+    }
+
+    // MARK: - Derived category (maker authoring — legacy primaryCategory bridge)
+
+    /// Maps a tour's controlled tags onto the still-required legacy
+    /// `TourCategory` (map pins + placeholders + old builds read it until
+    /// Phase 3). Lets the maker form pick *tags only* and derive the
+    /// category. Ordered most-specific first; falls back to
+    /// `.culturalHeritage` (the historical catch-all).
+    static func deriveCategory(from tags: [String]) -> TourCategory {
+        let s = Set(tags)
+        func any(_ options: String...) -> Bool { !s.isDisjoint(with: Set(options)) }
+        if any("Faith", "Religious Building") { return .sacredSites }
+        if any("Art", "Museum") { return .visualArt }
+        if any("Performance", "Venue") { return .musicAndPerformance }
+        if any("Literature", "Library") { return .literature }
+        if any("Food", "Market") { return .foodAndDrink }
+        if any("Park", "Green Escape", "Waterfront") { return .natureAndParks }
+        if any("Architecture") { return .architecture }
+        if any("History", "Power", "Commerce", "War", "Remembrance", "Maritime") { return .history }
+        if any("Hidden Gem") { return .hiddenGems }
+        return .culturalHeritage
+    }
+
     // MARK: - Curated browse shelves (owner decision D7 — editorial)
 
     /// One shelf = one tag drawn from the whole catalog. Ordered as

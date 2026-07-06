@@ -20,8 +20,8 @@ struct CreateTourView: View {
     @State private var title = ""
     @State private var shortDescription = ""
     @State private var longDescription = ""
-    @State private var category: TourCategory = .history
-    @State private var tagsText = ""
+    @State private var selectedTags: Set<String> = []
+    @State private var architect: String? = nil
     @State private var radius: Double = 30
     @State private var cameraPosition: MapCameraPosition = .automatic
     @State private var centerCoordinate: CLLocationCoordinate2D?
@@ -29,7 +29,7 @@ struct CreateTourView: View {
     @State private var errorMessage: String?
     @FocusState private var focused: Field?
 
-    private enum Field { case title, short, long, tags }
+    private enum Field { case title, short, long }
 
     // Max lengths, with a live "N left" countdown by each field.
     private static let titleLimit = 60
@@ -44,6 +44,13 @@ struct CreateTourView: View {
             && !trimmedTitle.isEmpty
             && !shortDescription.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
             && centerCoordinate != nil
+            && hasRequiredTags
+    }
+
+    /// The vocabulary requires ≥1 Place type and ≥1 Theme tag.
+    private var hasRequiredTags: Bool {
+        !selectedTags.isDisjoint(with: Set(Tag.tags(in: .placeType)))
+            && !selectedTags.isDisjoint(with: Set(Tag.tags(in: .theme)))
     }
 
     var body: some View {
@@ -81,18 +88,9 @@ struct CreateTourView: View {
                             .fieldStyle()
                     }
 
-                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                        fieldLabel("CATEGORY")
-                        categoryPicker
-                    }
-
-                    VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                        fieldLabel("TAGS (COMMA-SEPARATED, OPTIONAL)")
-                        TextField("history, waterfront", text: $tagsText)
-                            .textInputAutocapitalization(.never)
-                            .autocorrectionDisabled()
-                            .focused($focused, equals: .tags)
-                            .fieldStyle()
+                    VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+                        fieldLabel("TAGS — HOW YOUR TOUR IS FOUND")
+                        ControlledTagPicker(selectedTags: $selectedTags, architect: $architect)
                     }
 
                     VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
@@ -148,31 +146,6 @@ struct CreateTourView: View {
     }
 
     // MARK: - Sections
-
-    private var categoryPicker: some View {
-        Menu {
-            ForEach(TourCategory.allCases) { cat in
-                Button {
-                    category = cat
-                } label: {
-                    Label(cat.displayName, systemImage: cat.iconName)
-                }
-            }
-        } label: {
-            HStack {
-                Label(category.displayName, systemImage: category.iconName)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.primaryText)
-                Spacer()
-                Image(systemName: "chevron.up.chevron.down")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-            }
-            .padding(AtlasSpacing.md)
-            .background(AtlasColors.background)
-            .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
-        }
-    }
 
     private var mapSection: some View {
         Map(position: $cameraPosition) {
@@ -247,11 +220,15 @@ struct CreateTourView: View {
         centerCoordinate = coord
     }
 
-    private var parsedTags: [String] {
-        tagsText
-            .split(separator: ",")
-            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
-            .filter { !$0.isEmpty }
+    /// Final tag list, in canonical order, with the architect + its
+    /// implied "Designed by a Master" appended when one is chosen.
+    private var finalTags: [String] {
+        var tags = Tag.ordered(selectedTags)
+        if let architect {
+            tags.append("Designed by a Master")
+            tags.append(architect)
+        }
+        return tags
     }
 
     private func save() {
@@ -265,13 +242,14 @@ struct CreateTourView: View {
                 // Ensure the user has a maker row (creates one with a default
                 // name if this is their very first authoring action).
                 let makerId = try await makerProfileService.ensureMaker()
+                let tags = finalTags
                 let tourId = try await makerTourService.createDraftTour(
                     makerId: makerId,
                     title: title,
                     shortDescription: shortDescription,
                     longDescription: longDescription,
-                    category: category,
-                    tags: parsedTags,
+                    category: Tag.deriveCategory(from: tags),
+                    tags: tags,
                     coordinate: coordinate,
                     radiusMeters: Int(radius)
                 )
