@@ -24025,6 +24025,1847 @@
         "Contemporary"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "567caddc-92ca-5528-948a-ccf1f30cf6f5",
+      "createdAt": "2026-07-05",
+      "title": "Amanohashidate | 天橋立",
+      "shortDescription": "A three-and-a-half-kilometre pine-covered sandbar across Miyazu Bay — one of Japan's three great scenic views, and the fallen heavenly bridge of Shinto myth, best seen upside down through your own legs.",
+      "longDescription": "A continuous corridor of some eight thousand salt-hardy Japanese black pines runs the full three and a half kilometres across Miyazu Bay, from Amanohashidate Station to the shrine on the far shore. Old and weathered, a few have grown into shapes distinctive enough to have earned their own names.\n\nThis is one of the Nihon Sankei, the three views grouped alongside Matsushima and Miyajima by the Confucian scholar Hayashi Gahō in a seventeenth-century text. The land itself is far older: Shinto mythology records the bar as the bridge the deity Izanagi descended from heaven, fallen while he slept into the bay below.\n\nA packed dirt path runs its length — forty-five minutes on foot, fifteen by bicycle — past the Amanohashidate Shrine and the Isoshimizu spring, listed among Japan's finest waters since the Heian period. From the Kasamatsu viewpoint, seen upside down, the sandbar resolves into a single straight line.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/amanohashidate_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "df269d4c-78db-5e5b-8f38-42d0c51cbabe",
+          "order": 0,
+          "title": "Amanohashidate | 天橋立",
+          "caption": "A pine-lined sandbar three and a half kilometres across Miyazu Bay — one of Japan's three great views, and Izanagi's fallen bridge from heaven.",
+          "latitude": 35.55766451922323,
+          "longitude": 135.1847441754645,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/amanohashidate.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Turn around, bend over, and look at the bay through your legs. From that position, the sandbar appears to float free of the water beneath it, rising into the sky like a bridge — which is precisely what the name means, and precisely what has been bringing people up to these viewpoints for over a thousand years.\n\nThe path begins at the southern end of the sandbar, a five-minute walk from Amanohashidate Station along the edge of the bay; you'll know you're in the right place when the trees begin — a continuous corridor of Japanese black pine extending the full three and a half kilometres across Miyazu Bay to the shrine on the far shore. The pines, roughly eight thousand of them, are salt-hardy and old, and some have grown into shapes distinctive enough to earn individual names.\n\nThis is one of Japan's three designated scenic views — Nihon Sankei — a designation that has been attached to Amanohashidate, Matsushima in Miyagi, and Miyajima in Hiroshima since a Confucian scholar named Hayashi Gahō first grouped them together in a seventeenth-century text. The sandbar itself is considerably older than any classification: Shinto mythology records it as the bridge the deity Izanagi descended from heaven, which fell while he slept and landed in Miyazu Bay as the landform you're looking at now.\n\nRunning lengthwise through the pines is a packed dirt path — forty-five minutes on foot, fifteen by bicycle — with white sand beaches along the eastern side in summer, and the Amanohashidate Shrine and a freshwater spring called Isoshimizu partway along, the spring having been listed among Japan's hundred finest waters since the Heian period.\n\n[beat]\n\nThe two hillside viewpoints — Amanohashidate View Land to the south and Kasamatsu Park across the bay to the north — give different perspectives on the sandbar's curve, and it's worth knowing that the matanozoki upside-down viewing tradition originated at Kasamatsu, where the bar appears as a single straight line from the northern angle."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.55766451922323,
+      "centroidLongitude": 135.1847441754645,
+      "city": "Miyazu",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Faith",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0855bf01-1d1f-59ed-9af6-2c384fec45d5",
+      "createdAt": "2026-07-05",
+      "title": "Gionmachi Minamigawa | 祇園町南側",
+      "shortDescription": "The south side of Gion — an Important Traditional Buildings Preservation District of ochaya and machiya, and the last functioning geisha district of what was once a far larger entertainment quarter.",
+      "longDescription": "Gionmachi Minamigawa runs east from Shijo-dori toward the Shirakawa canal, one of the most intact historic streetscapes in Japan. Its wooden-latticed ochaya teahouses and machiya townhouses are protected as an Important Traditional Buildings Preservation District, so their facades cannot legally be substantially altered. Behind them, maiko and geiko are trained, apprenticed and employed.\n\nThe closed ochaya work by introduction only, guests brought by regular patrons who vouch for them. From the street one sees only the edges of an engagement — a geiko walking to an appointment, a maiko adjusting her obi at a gate. The stone-paved Ishibe Kōji, a private lane parallel to the east, quietens after the main thoroughfare.\n\nIn July the Gion Matsuri fills the street with floats maintained by neighbourhood associations for over a thousand years; the rest of the year it earns its own viewing, best in late-afternoon light.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gionmachi-minamigawa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gionmachi-minamigawa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gionmachi-minamigawa_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gionmachi-minamigawa_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d0a6c873-5692-5cea-897c-2f723e1a2e7e",
+          "order": 0,
+          "title": "Gionmachi Minamigawa | 祇園町南側",
+          "caption": "The south side of Gion, running from Shijo-dori to the Shirakawa canal — a protected streetscape of ochaya and machiya, and Kyoto's last working geisha district.",
+          "latitude": 35.003804239522744,
+          "longitude": 135.7750031422845,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/gionmachi-minamigawa.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "In the late afternoon, the light falls along this street at an angle that makes the wooden lattice screens on the facade of every ochaya glow amber. At that hour, on a weekday, with the tourist numbers down and the evening not yet started, Hanamikoji is as close to what Gion looked like a hundred years ago as anything still standing in Japan.\n\nGionmachi Minamigawa — the south side of Gion — is one of the most intact preserved historic streetscapes in the country, running east from Shijo-dori toward the Shirakawa canal. The buildings lining it are traditional ochaya teahouses and machiya townhouses, designated as an Important Traditional Buildings Preservation District, which means that modifications to their exteriors are strictly regulated and that the character of the street cannot legally be substantially altered. Behind these facades, maiko and geiko are trained, apprenticed, and employed in the last functioning geisha district of what was once a much larger entertainment quarter spreading across this entire part of Kyoto.\n\nThe closed ochaya operate on an introduction-only basis — you cannot simply walk in. Guests are brought by regular patrons who vouch for them. What you can observe from the street is the beginning and end of engagements: a geiko emerging in full dress to walk to an appointment, a maiko pausing to adjust her obi before entering a gate. The stone-paved alleyway called Ishibe Kōji, running parallel a little to the east, is a private lane of small restaurants and tea houses that gets considerably quieter after the main thoroughfare.\n\n[beat]\n\nThe Gion Matsuri festival fills this street in July with processions of floats that have been maintained by local neighbourhood associations for over a thousand years. The rest of the year the street earns its own viewing."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.003804239522744,
+      "centroidLongitude": 135.7750031422845,
+      "city": "Kyoto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Performance",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "49a3d308-4a29-5f4f-ab13-e7de83f44638",
+      "createdAt": "2026-07-05",
+      "title": "Hakusa Sonso Hashimoto Kansetsu Garden & Museum | 白沙村荘 橋本関雪記念館",
+      "shortDescription": "The garden and studio the nihonga painter Hashimoto Kansetsu shaped from rice paddy over thirty-two years — ten thousand square metres of pond, tea house, and gathered Buddhist stone, held below Mount Daimonji.",
+      "longDescription": "Hashimoto Kansetsu lived and worked here, between this gate and the Higashiyama mountains, from 1916 until his death in 1945. On what had been rice paddy he built a central pond framing a view of Mount Daimonji, a painting studio lit by northern light off the water, a tea house, and a private Buddhist temple. Buddha statues and stone lanterns from the Heian, Kamakura, and Momoyama periods, gathered on his travels in China and Japan, sit throughout as found objects within a composed landscape.\n\nKansetsu painted in the nihonga tradition — mineral pigments on silk and paper — but his eye was formed equally by Chinese classical literature, the Impressionism he absorbed in Europe in 1921, and more than sixty trips to China. The museum shows his layered ink and colour work in rotation, alongside the East Asian antiques, screens, and ceramics he collected.\n\nDesignated a National Site of Scenic Beauty, it is one of the largest private artist residences in Japan, largely as he left it.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hakusa-sonso-hashimoto-kansetsu-garden-and-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hakusa-sonso-hashimoto-kansetsu-garden-and-museum_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5fe032d8-9578-581f-9680-58d58818f03d",
+          "order": 0,
+          "title": "Hakusa Sonso Hashimoto Kansetsu Garden & Museum | 白沙村荘 橋本関雪記念館",
+          "caption": "The garden and studio of nihonga painter Hashimoto Kansetsu, shaped from rice paddy over thirty-two years below Mount Daimonji, off the Philosopher's Path.",
+          "latitude": 35.02735608640667,
+          "longitude": 135.7938937259686,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hakusa-sonso-hashimoto-kansetsu-garden-and-museum.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The cherry trees along the Philosopher's Path were planted by the person who built this garden. His name was Hashimoto Kansetsu, and he lived and worked here, between this gate and the Higashiyama mountains behind it, from nineteen sixteen until his death in nineteen forty-five.\n\nThe garden in front of you occupies approximately ten thousand square metres of land that was rice paddy when Kansetsu began buying and shaping it. Over thirty-two years he built a central pond with a view of Mount Daimonji, a large painting studio with northern light reflecting off the water, a tea house, a small private Buddhist temple, and several stone structures gathered during his travels in China and Japan — Buddha statues and stone lanterns from the Heian, Kamakura, and Momoyama periods, placed throughout the garden as found objects within a composed landscape. The garden holds the status of a designated National Site of Scenic Beauty. It is one of the largest private artist residences in Japan, and most of it survives as Kansetsu left it.\n\nKansetsu painted in the nihonga tradition — Japanese-style painting using mineral pigments on silk or paper — but his sensibility was formed equally by Chinese classical literature, Western Impressionism absorbed during a visit to Europe in nineteen twenty-one, and more than sixty trips to China, where he gathered materials, observed landscapes, and developed the layered, often melancholy ink and colour works the museum displays in rotating exhibitions. The secondary interest of the collection is his eye as a collector: the East Asian antiques, folding screens, and ceramics he accumulated during those journeys fill the museum rooms, and they constitute a serious collection in their own right.\n\n[beat]\n\nHōnen-in, the temple known for the moss-covered raked sand mounds flanking its thatched gate, is a five-minute walk south along the canal. This is one of the quieter stretches of the Philosopher's Path, and one of the better ones."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.02735608640667,
+      "centroidLongitude": 135.7938937259686,
+      "city": "Kyoto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Museum",
+        "Art",
+        "History",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4f74a6f4-b195-5525-aec4-39b54ce86e8b",
+      "createdAt": "2026-07-05",
+      "title": "Hosen-in | 宝泉院",
+      "shortDescription": "An Ohara temple whose ceiling is made from the blood-stained floorboards of Fushimi Castle, set above a framed garden built around a seven-hundred-year-old pine pruned into the shape of Mount Ōmi-Fuji.",
+      "longDescription": "The boards overhead were once the floors of Fushimi Castle. After the twelve-day Siege of Fushimi in 1600, the garrison under Tokugawa Ieyasu's retainer Torii Mototada committed seppuku rather than surrender, and their blood soaked into the timber. Preserved and set into temple ceilings as a memorial, the stains are honoured by being walked over rather than trodden upon — one of several blood-ceiling temples in Kyoto.\n\nBelow, the tatami room frames a garden called Bankan-en, a view so beautiful it is hard to leave. Its central pine, roughly seven hundred years old, has been pruned across the centuries into the silhouette of Mount Ōmi-Fuji. In one corner of the veranda a bamboo pipe feeds a buried resonating chamber, the suikinkutsu, where dripping water rings underfoot.\n\nAdmission includes a bowl of matcha and a sweet, served at your place while you sit with all of it.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hosen-in_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hosen-in_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hosen-in_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hosen-in_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hosen-in_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hosen-in_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "da2192cf-9709-515d-8fd8-c5e7ba2df1ff",
+          "order": 0,
+          "title": "Hosen-in | 宝泉院",
+          "caption": "An Ohara garden temple with a ceiling of Fushimi Castle's blood-stained floorboards, framing a seven-hundred-year-old pine and a hidden suikinkutsu water chamber.",
+          "latitude": 35.12266934473416,
+          "longitude": 135.8345453357424,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hosen-in.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Look up at the ceiling of the hall before you look at the garden.\n\nThe wooden boards above you were floorboards from Fushimi Castle, removed after the Siege of Fushimi in 1600 and installed as ceiling panels in several temples across Kyoto. At Fushimi Castle, when the forces of the warlord Ishida Mitsunari breached the defences after a twelve-day siege, the garrison — under Tokugawa Ieyasu's retainer Torii Mototada — committed seppuku rather than surrender. Their blood soaked into the wooden floors of the castle. The boards were preserved and placed in temple ceilings as a memorial, the custom being that a ceiling was sacred space and that the dead would be honoured by being walked over rather than trodden upon. This is one of several blood-ceiling temples in Kyoto, and the stains visible above you are those of men who died in a battle that determined the course of Japanese history.\n\nNow look at the garden. The framed view from the tatami room — the garden visible through the space between the pillars, which act as a natural frame — is called Bankan-en, meaning a garden so beautiful it is hard to leave. The pine at the centre is approximately seven hundred years old and has been pruned over centuries into the shape of Mount Ōmi-Fuji. In the right corner of the veranda, a bamboo pipe leads to an underground resonating chamber called suikinkutsu: lean close and listen for the sound of water dripping into the buried vessel beneath your feet.\n\nThe admission fee includes a bowl of matcha and a small sweet, served at your place while you sit with all of this.\n\n[beat]\n\nSanzen-in, the great Ohara garden temple, is a fifteen-minute walk east from here and is the other essential stop in this valley."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.12266934473416,
+      "centroidLongitude": 135.8345453357424,
+      "city": "Ohara",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Remembrance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c1fab569-bb15-5acb-bf16-856a859b136c",
+      "createdAt": "2026-07-05",
+      "title": "Ine no Funaya Houses | 伊根の舟屋",
+      "shortDescription": "A working fishing village of Edo-period boat-houses ringing a sheltered bay — more than two hundred funaya standing inches from the water, boats moored in their open ground floors, families living above.",
+      "longDescription": "Ine sits on a narrow strip of land between mountain and bay, with almost no flat ground for a house, a boat shed and a yard in one place. The Edo-period solution was the funaya: a two-storey building set over the tidal zone, its ground floor open so a boat can be moored directly inside, its upper floor the family's living quarters, the forest slope behind left intact.\n\nMore than two hundred funaya stand in a continuous row around the bay's five kilometres of shoreline. The geometry that makes this possible is the small island of Aoshima at the bay's mouth, which deflects the worst of the Sea of Japan and keeps the water calm enough for tide-level boathouses. That same shelter once made Ine a port on the ancient trade route between China and the Kyoto court.\n\nSince 2005 the village has been an Important Preservation District, and some funaya are now guesthouses — though this remains a working village, its garaged boats in daily use.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ine-no-funaya-houses_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ine-no-funaya-houses_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ine-no-funaya-houses_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0e2eb764-4094-5d10-a635-bb2a73e25ae8",
+          "order": 0,
+          "title": "Ine no Funaya Houses | 伊根の舟屋",
+          "caption": "A working village of Edo-period boat-houses ringing a sheltered bay, sheltered by Aoshima island — boats moored below, families living above.",
+          "latitude": 35.67586882193167,
+          "longitude": 135.2874727760147,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ine-no-funaya-houses.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The problem the people of Ine faced, in building a life on this narrow strip of land between the mountains and the bay, was that there was almost no flat ground — no room between the forest slope and the water's edge for a house, a boat shed, and a yard all in the same place. The solution arrived at during the Edo period was the funaya: a two-storey building set directly over the tidal zone, its ground floor open to the bay so a boat could be moored directly inside, its upper floor serving as the family's living quarters. The mountains behind were left intact.\n\nThe bay curves in front of you, and around its full perimeter — roughly five kilometres of shoreline — more than two hundred funaya stand in a continuous row, their facades inches from the water, the narrow lanes running between them and the foot of the hills. The arrangement looks almost theatrical from a distance, but this is a working fishing village, not a preserved museum site, and the boats moored in the ground-floor garages are in daily use.\n\nThe protected geometry of Ine Bay is what made this architecture possible: a small island called Aoshima sits at the bay's mouth and deflects the worst of the Sea of Japan's weather, keeping the water inside calm enough for low, tide-level boathouses to function without constant wave damage. That same sheltered quality made Ine a significant port on the ancient trade route between mainland China and the Kyoto court, a history that runs considerably deeper than the Edo-period buildings visible today.\n\nSince two thousand and five, the village has been designated an Important Preservation District for Groups of Traditional Buildings, and some funaya have been converted into guesthouses — a visit of a single day never quite captures the scale of the thing as well as staying the night and seeing the bay at dawn.\n\n[beat]\n\nBoat cruises leaving from the pier give a view of the funaya from the water that is difficult to appreciate from the narrow lane, and the fishermen who operate the smaller sea taxis are generally willing to explain as they go."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.67586882193167,
+      "centroidLongitude": 135.2874727760147,
+      "city": "Ine",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "District",
+        "Maritime",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6e73307b-ff6d-5554-9707-69b7c75bff6d",
+      "createdAt": "2026-07-05",
+      "title": "Kawai Kanjiro's House | 河井寛次郎記念館",
+      "shortDescription": "The Kyoto townhouse and studio of potter Kawai Kanjirō, preserved as he left it — a founder of the Mingei movement who declined the country's highest honour on the principle that the work was its only measure.",
+      "longDescription": "In 1964 the government offered Kawai Kanjirō the Order of Cultural Merit, the highest recognition for artists and scholars. He declined it, holding that a genuine craftsman had no business accepting official awards and that the work itself was the only measure that mattered.\n\nHe lived and worked here from 1937 until his death in 1966, and the house survives almost exactly as he left it: a substantial traditional townhouse of heavy beams and tatami, filled with his own ceramics and folk craft gathered from Japan, Korea, China, and Okinawa. Kawai was a central figure of the Mingei movement, founded with the critic Yanagi Sōetsu and the potter Hamada Shōji to recognise anonymous, functional handmade craft as art in its own right.\n\nThe nobori-gama climbing kiln he built and used stands intact in the garden. Throughout the house, his own designs sit undistinguished among the collected objects — an argument about who makes art, made without words.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kawai-kanjiros-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kawai-kanjiros-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kawai-kanjiros-house_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9a048b31-337e-5a8f-8c33-58db97da207b",
+          "order": 0,
+          "title": "Kawai Kanjiro's House | 河井寛次郎記念館",
+          "caption": "The preserved Kyoto house, studio and climbing kiln of Mingei potter Kawai Kanjirō, who declined the Order of Cultural Merit in 1964.",
+          "latitude": 34.99374835995579,
+          "longitude": 135.7744101817833,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kawai-kanjiros-house.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "In 1964, the Japanese government offered Kawai Kanjirō the Order of Cultural Merit — the country's highest recognition for artists and scholars. He declined it. His position was that a genuine craftsman had no business accepting official awards, and that the work itself was the only measure of what mattered. He was seventy-four. The refusal was consistent with the principles he had spent his life articulating.\n\nThe house and studio in front of you is where Kawai lived and worked from 1937 until his death in 1966. It is preserved almost exactly as he left it — a substantial traditional Kyoto townhouse with heavy wooden beams and tatami rooms filled with the objects of a long working life: his own ceramics alongside folk craft pieces he collected from across Japan, Korea, China, and the Okinawan islands. Kawai was one of the central figures of the Mingei movement, which he founded with the critic Yanagi Sōetsu and the potter Hamada Shōji — a campaign to recognise and preserve the tradition of anonymous, functional handmade craft as an art form in its own right, at a time when industrialisation was ending the conditions that had produced it.\n\nThe nobori-gama climbing kiln in the garden is the one he built and used throughout his career, still intact. The workshop beyond it contains his tools.\n\nWalking through the house, the accumulation of objects — pots, wood carvings, old agricultural tools, pieces from weaving traditions, his own designs displayed without distinction from anything else — communicates a view about what art is and who makes it that is more persuasive than any essay on the subject.\n\n[beat]\n\nThe Kyoto National Museum is a fifteen-minute walk north, and contains several Mingei-related works in its folk craft collection."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.99374835995579,
+      "centroidLongitude": 135.7744101817833,
+      "city": "Kyoto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Art",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8d425963-d94b-5f40-8223-51c68ca46dc0",
+      "createdAt": "2026-07-05",
+      "title": "Keage Incline | 蹴上インクライン",
+      "shortDescription": "A 582-metre cable-hauled railway that carried canal boats over a 36-metre drop from 1891 — once the world's longest incline of its kind, now a cherry-lined walking path.",
+      "longDescription": "The Keage Incline runs 582 metres downhill from the Keage Basin, where the Lake Biwa Canal enters Kyoto, to the Nanzenji Basin, dropping 36 metres. When it opened in 1891 it solved a break in the canal: the ground fell too steeply for boats to pass under their own power, so they were loaded onto wheeled trolleys and hauled up or lowered by cable, powered by the Keage hydroelectric station — the first public power station in Japan.\n\nAt its peak the system moved some 220,000 tonnes of cargo a year, then the longest incline railway of its kind in the world. Commercial shipping ceased in 1948 as railways made water transport uneconomical, and the incline has been a walking path since its 1977 restoration.\n\nNinety somei-yoshino cherry trees, planted after the restoration, line both sides; in early April the blossom canopy transforms the slope, though the engineering stays legible beneath. A restored cargo boat of sake barrels sits berthed at the upper end.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/keage-incline_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/keage-incline_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/keage-incline_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6c334f34-e25a-5a90-8727-a93155c401b7",
+          "order": 0,
+          "title": "Keage Incline | 蹴上インクライン",
+          "caption": "An 1891 cable-hauled railway that carried canal boats over a 36-metre drop between the Keage and Nanzenji basins, now a cherry-lined path.",
+          "latitude": 35.010778644134184,
+          "longitude": 135.78885681313767,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/keage-incline.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The rails descend ahead of you at a steady angle, disappearing between the trees, and if you look along their length you'll see that they're not a decoration — the gauge is real, the sleepers are set at working intervals, and a restored cargo boat loaded with sake barrels sits berthed at the upper end, as if a delivery is still expected.\n\nThe tracks begin above the Keage Basin, at the upper end of the Lake Biwa Canal where it enters Kyoto from the east, and run five hundred and eighty-two metres downhill to the Nanzenji Basin, dropping thirty-six metres in elevation. When the incline opened in eighteen ninety-one, it solved a specific logistical problem: the canal that carried goods, water, and passengers between Lake Biwa in Shiga Prefecture and Kyoto had a break in continuity here — the ground dropped too steeply for boats to navigate under their own power, so they were loaded onto wheeled trolleys and hauled up or lowered down the slope by a cable system powered by the Keage hydroelectric station, the first public power station in Japan. At its peak, the system was moving around two hundred and twenty thousand tonnes of cargo annually, at the time the longest incline railway of its kind in the world.\n\nCommercial shipping on the canal stopped in nineteen forty-eight as railways made water transport uneconomical, and the incline has been open as a walking path since its restoration in nineteen seventy-seven. The ninety cherry trees lining both sides — somei yoshino, planted after the restoration — are what most people come for in early April, when the blossom canopy over the tracks turns the whole slope into something rather different from a logistics heritage site, though the engineering remains just as legible underneath.\n\n[beat]\n\nFrom the lower basin, a short walk through the grounds of Nanzenji Temple leads to the brick aqueduct known as the Suirokaku — part of the same canal system, carrying water across the temple precincts on a Roman-arch bridge completed two years before the incline opened."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.010778644134184,
+      "centroidLongitude": 135.78885681313767,
+      "city": "Kyoto",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "Engineering",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b2c1d7e3-4210-5d45-a474-411b43942036",
+      "createdAt": "2026-07-05",
+      "title": "Kifune Shrine | 貴船神社",
+      "shortDescription": "A shrine to the water deity at the head of the Kibune valley, roughly thirteen hundred years old, where the imperial court once prayed for rain to come or to stop — and where fortunes read only when floated on water.",
+      "longDescription": "Kifune Shrine sits at the head of the Kibune valley, reckoned by its priests to be about thirteen hundred years old, though the date of the first structure is not precisely known. The deity is Takaokami-no-kami, god of water, rain, and the flow of seasons. In dry years the imperial court prayed here for rain; in wet years, for the rain to stop. The shrine was the direct line of appeal in both directions.\n\nThat association is made legible in the mizuura mikuji, a paper fortune that appears blank until set on water, when characters written in wet-only ink emerge in your hands.\n\nThe approach from the valley road climbs between two rows of stone lanterns — roughly four hundred and fifty of them — converging at the main torii. Lit on festival evenings, the light on stone and surrounding cedar is genuinely particular. The main shrine stands at the top, with two sub-shrines further up the valley, linked by a forest path.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kifune-shrine_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kifune-shrine_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kifune-shrine_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5f768451-7182-52b8-934c-e305fdf74e03",
+          "order": 0,
+          "title": "Kifune Shrine | 貴船神社",
+          "caption": "A shrine to the water god at the head of the Kibune valley, its lantern-lined approach climbing to a main hall roughly thirteen centuries old.",
+          "latitude": 35.122275218836336,
+          "longitude": 135.76290373675764,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kifune-shrine.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The paper fortune you can buy here only reveals its text when you float it on water. Hold it above the surface and it appears blank; set it on the water and the characters appear, written in an ink visible only when it is wet. The shrine is dedicated to a water deity, and the mizuura mikuji — the water fortune — is a piece of ritual theatre that makes the association between the deity and the element legible in your hands.\n\nKifune Shrine sits at the head of the Kibune valley, approximately a thousand three hundred years old by the reckoning of its priests, though the date of the first structure here is not precisely known. The deity enshrined is Takaokami-no-kami, the god of water, rain, and the flow of seasons — one of the deities who presides over agriculture, drought, and flood. In dry years, prayers for rain were offered here by the imperial court; in wet years, prayers for the rain to stop. The shrine was, in both directions, the direct line of appeal.\n\nThe approach path from the valley road is lined with stone lanterns on both sides, approximately four hundred and fifty of them, ascending the slope in two rows that converge at the main torii gate. On festival evenings they are lit, and the effect of lantern light on the stone and the surrounding cedar trees is, if you catch it at the right hour, genuinely particular.\n\nThe main shrine is at the top of the approach; two smaller sub-shrines extend further up the valley, connected by a walking path through the forest.\n\n[beat]\n\nThe valley below the shrine contains a string of kawadoko riverside restaurants, open in summer, where dining platforms are built over the fast-moving river."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.122275218836336,
+      "centroidLongitude": 135.76290373675764,
+      "city": "Kibune",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a772c45c-deac-5b20-96df-6230e698ce00",
+      "createdAt": "2026-07-05",
+      "title": "Kitano Tenman-gu | 北野天満宮",
+      "shortDescription": "The principal shrine to Sugawara no Michizane, deified as Tenjin the god of learning after his wrathful spirit was blamed for a wave of disasters — its plum gardens and monthly antique market both drawing crowds.",
+      "longDescription": "By 947, Kyoto had endured years of lightning strikes, epidemic, and imperial deaths since the scholar-poet Sugawara no Michizane died in exile on Kyushu, stripped of his court positions by rivals. The court concluded his wrathful spirit was to blame, and resolved to deify him and build this shrine.\n\nKitano Tenman-gū is the most important of the several thousand shrines dedicated to Michizane, now revered as Tenjin, god of learning, scholarship, and calligraphy. Students come before examinations to leave votive plaques asking for success. The plum trees he had loved and written about in exile flower in February and early March, drawing some of the densest crowds of any plum garden in Japan.\n\nOn the twenty-fifth of each month, the Tenjin-ichi flea market fills the forecourt and surrounding streets with dealers in old textiles, ceramics, tools, and clothing until late afternoon.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kitano-tenman-gu_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kitano-tenman-gu_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kitano-tenman-gu_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kitano-tenman-gu_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4cbfedec-e195-5d68-96f3-d9f65a03a9f7",
+          "order": 0,
+          "title": "Kitano Tenman-gu | 北野天満宮",
+          "caption": "The foremost shrine to Sugawara no Michizane, deified as Tenjin the god of learning, with famed plum gardens and a monthly antique market on the twenty-fifth.",
+          "latitude": 35.03132301755666,
+          "longitude": 135.73511729959145,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kitano-tenman-gu.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "It's 947. A great scholar and poet named Sugawara no Michizane died in exile on the island of Kyushu eight years ago, having been stripped of his positions at court by political rivals — and since his death, Kyoto has been experiencing a sequence of disasters: lightning strikes, epidemic, the deaths of several members of the imperial family. The court decides that Michizane's spirit, now wrathful, is responsible for all of it. The solution is to deify him and build him a shrine.\n\nThis is Kitano Tenman-gū, the most important of the several thousand shrines across Japan dedicated to Sugawara no Michizane — now revered as Tenjin, the god of learning, scholarship, and calligraphy. Students visit before examinations to leave votive offerings and wooden plaques inscribed with requests for academic success. The plum trees — Michizane had loved plum blossoms specifically, and had composed poems about them in exile — flower in February and early March, and the shrine's plum garden is one of the most densely visited in Japan during that season.\n\nOn the twenty-fifth of every month, the shrine grounds host Tenjin-ichi, an antique and flea market that spreads across the entire forecourt and surrounding streets. On these days the population of the shrine is substantially different from a regular morning: dealers in old textiles, ceramics, tools, clothing, and anything that might plausibly be described as vintage occupy every available surface and the market runs until late afternoon.\n\n[beat]\n\nThe Tofu Cuisine restaurant within the shrine's precinct serves shōjin ryōri — Buddhist vegetarian cuisine — and is one of the better places in this part of the city to eat in the middle of a long day of temple-visiting."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.03132301755666,
+      "centroidLongitude": 135.73511729959145,
+      "city": "Kyoto",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3b97fb8a-ee14-5925-959c-b9d23cbe2819",
+      "createdAt": "2026-07-05",
+      "title": "Kiyomizu-dera | 清水寺",
+      "shortDescription": "A cliffside temple whose nail-free wooden stage — 139 zelkova pillars, some fifteen metres tall — projects thirteen metres over the hillside toward central Kyoto, above a waterfall that has flowed since before the temple existed.",
+      "longDescription": "Kiyomizu-dera, the Temple of Pure Water, was founded in 778 and takes its name from the Otowa waterfall below, which has flowed continuously from the base of the cliff since before the temple stood. The current main hall, with its celebrated stage, was built in 1633 under Tokugawa patronage and is a UNESCO World Heritage Site, among the most visited buildings in Japan.\n\nThe stage was assembled without a single nail — 139 zelkova pillars, some twelve to fifteen metres tall, locked together by interlocking joints in the kumiage technique to carry a platform extending thirteen metres beyond the cliff. It gave rise to the expression \"to jump from the Kiyomizu stage,\" meaning a bold, irreversible risk; some 234 people are recorded attempting the leap between 1694 and 1864 before it was banned.\n\nThe Otowa waterfall splits into three streams — longevity, love and study — and custom holds that you drink from only one.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kiyomizu-dera_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kiyomizu-dera_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kiyomizu-dera_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kiyomizu-dera_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kiyomizu-dera_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kiyomizu-dera_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kiyomizu-dera_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "34e03fdf-c57f-5d24-88e1-602ad067f2f2",
+          "order": 0,
+          "title": "Kiyomizu-dera | 清水寺",
+          "caption": "A cliffside temple founded in 778 whose nail-free zelkova stage juts thirteen metres over the hillside, above a waterfall said to grant three blessings.",
+          "latitude": 34.994859535925066,
+          "longitude": 135.7847200241095,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kiyomizu-dera.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The wooden stage projecting from the main hall was built without a single nail. One hundred and thirty-nine zelkova pillars, some of them twelve to fifteen metres tall, assembled entirely through interlocking joints — a technique of traditional Japanese carpentry called kumiage — support a platform that extends thirteen metres beyond the cliff face and provides a view across the cedar-covered hillside toward central Kyoto.\n\nKiyomizu-dera — the Temple of Pure Water — was founded in 778, its name derived from the Otowa waterfall below, which has been flowing continuously from the base of the cliff since before the temple existed. The current main hall, which includes the stage, was built in 1633 under the patronage of the Tokugawa shogunate. It is a UNESCO World Heritage Site and one of the most heavily visited buildings in Japan.\n\nThere is a Japanese expression: \"to jump from the Kiyomizu stage\" — which means to take a bold and irreversible risk. The idiom comes from an Edo-period belief that jumping from the stage and surviving would grant a wish. Around two hundred and thirty-four people are recorded to have attempted this between 1694 and 1864. Roughly eighty-five percent survived — the undergrowth at the base is dense — but the practice was eventually banned.\n\nThe Otowa waterfall at the base of the cliff is divided into three separate streams, each said to grant a different blessing: longevity, luck in love, and success in study. The custom is to drink from one only — drinking from all three is considered greedy.\n\n[beat]\n\nThe approach streets — Ninenzaka and Sannenzaka — are lined with shops and are genuine historic preservation zones, their stone-paved lanes and machiya townhouses protected and intact. The walk down from the temple through these streets is most of the reason to visit this part of Kyoto."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.994859535925066,
+      "centroidLongitude": 135.7847200241095,
+      "city": "Kyoto",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Iconic Landmark",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "491090d0-c153-57b7-bd77-0766b31e47be",
+      "createdAt": "2026-07-05",
+      "title": "Kochidani Amida-ji Temple | 古知谷 阿弥陀寺",
+      "shortDescription": "A quiet hill temple above Ohara, founded in 1609, holding in a cave behind its main hall the southernmost known self-mummified monk in Japan — and an eight-hundred-year-old maple that reddens the slope each November.",
+      "longDescription": "Japan's mummified monks are almost all found in the cold northern mountains of Yamagata, where hard winters and low humidity allowed the extreme ascetic practice to preserve the body. The sokushinbutsu enshrined in a cave behind the main hall here, in the hills north of Kyoto, is considered the southernmost known example in the country.\n\nKōchidani Amida-ji was founded in 1609 by the priest Tanzei, who settled in this valley above Ohara after long travels and established a training hall for sutra chanting. In 1613, at sixty-three, he entered a stone cave and died there in an act of voluntary self-mummification; his preserved body remains in a sarcophagus, not open to view.\n\nThe approach climbs through forest, and the distance from Ohara keeps visitor numbers low. In November some three hundred maples turn on the slope, the oldest — a single tree estimated at eight hundred years and designated a natural monument — visible from the path well before the gate.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kochidani-amida-ji-temple_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kochidani-amida-ji-temple_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kochidani-amida-ji-temple_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kochidani-amida-ji-temple_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kochidani-amida-ji-temple_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kochidani-amida-ji-temple_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d4d37e1f-ae58-5ad1-81c6-4955e9f3c656",
+          "order": 0,
+          "title": "Kochidani Amida-ji Temple | 古知谷 阿弥陀寺",
+          "caption": "A secluded 1609 temple above Ohara holding Japan's southernmost self-mummified monk, and an eight-hundred-year-old maple that fires the slope each November.",
+          "latitude": 35.13970401812717,
+          "longitude": 135.82811718976046,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kochidani-amida-ji-temple.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "In most of Japan, the mummified monks are in the Tōhoku region — the cold northern mountains of Yamagata, where the extreme winters and low humidity allowed certain extreme practices of ascetic Buddhism to produce intact preservation. The mummified monk enshrined in a cave behind the main hall here, in the northern hills of Kyoto, is considered to be the southernmost known sokushinbutsu in Japan.\n\nKōchidani Amida-ji was founded in 1609 by a priest named Tanzei, who had travelled extensively before arriving at this valley above the Ohara district and deciding to settle. Tanzei established the temple as a training hall for sutra chanting, planted and tended the grounds, and in 1613 — four years after the temple opened — at the age of sixty-three, entered a stone cave and died there in an act of voluntary self-mummification, the ultimate expression of the Buddhist practice of sokushinbutsu. His preserved body remains in a sarcophagus in the cave, not open to public view but present in the structure of the site.\n\nThe approach path to the temple climbs through forest from the road below. The grounds are quiet in a way that more accessible temples rarely are — the distance from Ohara village, which requires either a long walk or a specific bus connection, keeps casual visitor numbers low. In November, approximately three hundred maple trees on the slope above and around the main hall turn, and the oldest among them — a single maple estimated at eight hundred years old, designated a natural monument by Kyoto City — produces a canopy of red and orange that is visible from the approach path well before you reach the gate.\n\n[beat]\n\nThe main Ohara temple complex, including Sanzen-in and Hōsen-in, is a forty-minute walk south through the forest path and valley road."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.13970401812717,
+      "centroidLongitude": 135.82811718976046,
+      "city": "Ohara",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e3401d1b-447e-5bb0-b4c3-4c4c2ce75f9b",
+      "createdAt": "2026-07-05",
+      "title": "Kōshō-ji Temple | 興聖寺",
+      "shortDescription": "The first Japanese monastery devoted to Sōtō Zen, founded in 1233 by Dōgen on the Uji River — reached by a maple avenue that turns famously red in November.",
+      "longDescription": "Kōshō-ji was founded in 1233 by Dōgen Zenji, the monk who had returned from China with the teachings of Sōtō Zen and established here, on the banks of the Uji River, the first monastery in Japan devoted to that practice. It preceded his move north to Eiheiji, the great training monastery in Fukui he founded in 1244, which remains the school's headquarters.\n\nKōshō-ji was Dōgen's first attempt. The community he built trained in the disciplines he brought back from the Chinese monasteries: seated meditation, ritual, communal agricultural work, and the conviction that enlightenment was present in the act of practice itself. The main hall and hōjō garden are modest and well-proportioned, with a dry stone garden that reads quietly.\n\nThe approach is the drama: an avenue of Japanese maples running several hundred metres above the river, its canopy turning orange and deep red in mid-November. The stone bridge midway is where most photographs are taken. Byōdō-in lies a twenty-minute walk south.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kosho-ji-temple_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kosho-ji-temple_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kosho-ji-temple_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kosho-ji-temple_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a6aee439-9386-5962-b9ec-52d27d11f29e",
+          "order": 0,
+          "title": "Kōshō-ji Temple | 興聖寺",
+          "caption": "The first Japanese monastery of Sōtō Zen, founded in 1233 by Dōgen on the Uji River, reached by a maple avenue that turns deep red in November.",
+          "latitude": 34.89020292969081,
+          "longitude": 135.81367832800765,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kosho-ji-temple.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The avenue leading to the main gate is lined on both sides by Japanese maples and extends for several hundred metres along the course of the Uji River above the road. In November — the peak is usually mid-month — the canopy above the path turns a sequence of orange, yellow, and deep red, the light coming through it at the angle that makes autumn maples in Kyoto look as if they are lit from within. The stone bridge over the stream midway along the avenue is where most of the photographs are taken.\n\nKōshō-ji was founded in 1233 by Dōgen Zenji, the monk who had returned from China with the teachings of Sōtō Zen and who established here, on the banks of the Uji River, the first monastery in Japan devoted to that practice. This was before his move north to what would become Eiheiji — the great training monastery in Fukui that Dōgen founded in 1244 and that remains the headquarters of the Sōtō school. Kōshō-ji was Dōgen's first attempt, and the community he built here trained in the disciplines that he had brought back from the Chinese monasteries: seated meditation, ritual, communal agricultural work, and the conviction that enlightenment was not a distant destination but present in the act of practice itself.\n\nThe main hall and the hōjō garden are modest and well-proportioned, with a dry stone garden that reads quietly after the drama of the avenue approach.\n\n[beat]\n\nByōdo-in — the Phoenix Hall, on the ten-yen coin — is a twenty-minute walk south along the river from here, and completing both in a single afternoon is a natural and unhurried way to spend the Uji valley."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.89020292969081,
+      "centroidLongitude": 135.81367832800765,
+      "city": "Uji",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8cfe0231-9f94-5ae5-a5c6-938ac4dd26a1",
+      "createdAt": "2026-07-05",
+      "title": "Kyoto International Conference Center (ICC Kyoto) | 国立京都国際会館",
+      "shortDescription": "Sachio Otani's 1966 conference centre, won in Japan's first national architecture competition — a Metabolist landmark of inclined trapezoidal geometry where, in 1997, the Kyoto Protocol was brokered in a corridor.",
+      "longDescription": "In 1963, fresh from winning the 1964 Tokyo Olympics, Japan wanted a conference centre to answer the United Nations headquarters in New York. The country's first national architecture competition drew a hundred and ninety-five entries; the commission went to Sachio Otani, a former associate of Kenzo Tange only recently in his own practice.\n\nOpened in 1966, the building sets every element — walls, columns, bridges, walkways — on a repeating trapezoidal grid inclined at twenty-two degrees, reading by turns as the Japanese character for \"person\" or for \"enter.\" It is one of the last remaining examples of Metabolism in Japan, the movement that imagined buildings as living organisms of interchangeable parts.\n\nIts largest moment came in 1997, hosting COP3. With talks stalled, the director moved them into the informal lobby spaces Otani had designed for exactly such gatherings, and the Kyoto Protocol was agreed in a corridor.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyoto-international-conference-center-icc-kyoto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyoto-international-conference-center-icc-kyoto_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyoto-international-conference-center-icc-kyoto_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyoto-international-conference-center-icc-kyoto_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyoto-international-conference-center-icc-kyoto_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyoto-international-conference-center-icc-kyoto_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ff0c21cd-456c-5f06-b424-2becfd0a7738",
+          "order": 0,
+          "title": "Kyoto International Conference Center (ICC Kyoto) | 国立京都国際会館",
+          "caption": "Sachio Otani's 1966 Metabolist conference centre of inclined trapezoidal geometry, where the Kyoto Protocol was brokered in a corridor in 1997.",
+          "latitude": 35.06194879347918,
+          "longitude": 135.78311443569086,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kyoto-international-conference-center-icc-kyoto.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "ICC KYOTO — KYOTO INTERNATIONAL CONFERENCE CENTER\nAtlas Audio Tour\n\nIt's 1963. Japan has just won the right to host the 1964 Tokyo Olympics, and the government wants a building to match that ambition: a major international conference centre — nothing less than Japan's answer to the United Nations headquarters in New York. They hold the country's first national architecture competition, receive a hundred and ninety-five entries, and give the commission to Sachio Otani, a former associate of Kenzo Tange who has only recently set up his own practice.\n\nThe building in front of you is the result. Stand at the entrance and look back at the main facade: that geometry is not accidental. Every element — walls, columns, bridges, walkways — is built on a repeating trapezoidal grid, inclined at twenty-two degrees. The structure reads, depending on your angle, like a Japanese character for \"person\" or for \"enter.\" Otani said both interpretations satisfied him equally.\n\nOpened in 1966, this is one of the last remaining examples of Metabolism in Japan — the movement that imagined buildings as living organisms, made of interchangeable, expandable parts. Its main rival for that distinction, the Nakagin Capsule Tower in Tokyo, was demolished in 2022.\n\nThe building earned its largest moment in 1997, when it hosted COP3 — the United Nations Climate Change Conference. Negotiations between delegations had stalled; the deadline was approaching. Then the director of the conference moved discussions out of the formal meeting rooms and into the open lobby and waiting areas — the informal public spaces Otani had designed for exactly this kind of gathering. The Kyoto Protocol was agreed in a corridor. The document that set binding emissions targets for the first time in history was brokered in a building that its architect had designed specifically for conversations to happen in.\n\n[beat]\n\nThe Japanese garden on the lakeside, designed by Otani alongside the building, is accessible to visitors and offers a view of the whole structure from across Lake Takaragaike — the vantage point Otani used when he first visited the site and decided what kind of building this needed to be."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.06194879347918,
+      "centroidLongitude": 135.78311443569086,
+      "city": "Kyoto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Modernist"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a4310838-e874-5545-a631-1dc941314999",
+      "createdAt": "2026-07-05",
+      "title": "Kyoto Wand | 京都湾処",
+      "shortDescription": "A 2022 machiya renovation named after wand, the term for a quiet river backwater — a corner cafe stripped back to timber by master carpenter Okimoto and returned to its Kyoto townhouse character.",
+      "longDescription": "The Japanese term wand, written 湾処, describes a bay-shaped stretch of riverbank set apart from the main current, where the water flows slowly and nurtures its own small ecosystem. The architects chose the word deliberately, putting the concept into the building's name before they put it into the building.\n\nKYOTOWAND is a machiya renovation completed in 2022, about five minutes from Kiyomizu Gojo Station. The townhouse had been altered so many times its original structure was almost unrecognisable, so the team worked with master carpenter Okimoto to dismantle it back to that structure, then repair, reinforce, and restore the traditional facade.\n\nThe result is a quiet corner cafe and rest space, one side onto a wider road, the other onto a cul-de-sac linking to the Kyoto Round Trail — a place to pause between arriving and leaving, in the slower current.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyoto-wand_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyoto-wand_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyoto-wand_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kyoto-wand_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4080344e-af7a-5e21-ac3a-67f66058dd65",
+          "order": 0,
+          "title": "Kyoto Wand | 京都湾処",
+          "caption": "A 2022 machiya renovation on a Kyoto corner lot, dismantled and rebuilt by master carpenter Okimoto into a quiet cafe named for a slow river backwater.",
+          "latitude": 34.99425802687399,
+          "longitude": 135.77073975098642,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kyoto-wand.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "KYOTOWAND — 京都湾処\nAtlas Audio Tour\n\nThere's a Japanese geographical term — wand, written 湾処 — for a specific kind of place: bay-shaped land on the bank of a river, separated from the main current, where the water flows gently and slowly, a little apart from everything, nurturing its own small ecosystem. The architects who named this building chose that word deliberately. The name is a description of what they wanted it to feel like.\n\nThe building in front of you is KYOTOWAND, a machiya renovation completed in 2022, about five minutes' walk from Kiyomizu Gojo Station. The machiya itself had been renovated several times over its lifetime, to the point where the original structure had become almost unrecognisable. For this project, the team worked with a master carpenter named Okimoto to dismantle the building back down to its existing structure, then repair and reinforce it while restoring the traditional Kyoto townhouse character of the facade.\n\nThe result is a quiet corner cafe and rest space on a corner lot — one side facing a wider road, one side onto a private cul-de-sac that connects eastward to the Kyoto Round Trail. The interior is stripped back to timber and exposed structure; the restored exterior brings the building back into relationship with the neighbouring machiya townscape it had drifted away from.\n\nWhat the name points to is the intended function: a place that is neither origin nor destination, exactly — somewhere to pause between arriving and leaving, to sit for a while in the slower current. The architects put the concept in the building's name before they put it in the building itself.\n\n[beat]\n\nThe Kyoto Round Trail passes close to the east entrance. Kiyomizu-dera Temple, with the main pilgrimage approach, is a twenty-minute walk uphill from here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.99425802687399,
+      "centroidLongitude": 135.77073975098642,
+      "city": "Kyoto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cab524d1-3aa8-58ae-a113-ccbfcc4a112e",
+      "createdAt": "2026-07-05",
+      "title": "Nakamura Tokichi Byodo-in | 中村藤吉平等院店",
+      "shortDescription": "A tea house on the Uji River, set in a preserved former ryokan whose reception hall was named by Japan's first prime minister — matcha and gyokuro from the family's own cultivars, made edible as much as drinkable.",
+      "longDescription": "The building on the Uji River bank was once the Kikuya Manpekiro, a celebrated ryokan whose main reception hall was named Geikakuro by Ito Hirobumi, Japan's first prime minister — a name it still carries outside. Nakamura Tokichi, founded in Uji in 1854, opened this branch in the old inn, a seven-minute walk from Byodoin Temple's Phoenix Hall. The interior is modernised, the old exterior preserved, and the riverside seats are among the better places in Uji to sit with tea.\n\nUji has produced green tea since the Kamakura period, when the Zen priest Eisai brought seeds from China and planted them here. Nakamura Tokichi grows matcha and gyokuro from its own cultivars — Kyo Midori and Uji Hikari — and the café turns them into dessert: a raw tea jelly served in a frozen bamboo tube with matcha ice cream and sweet red bean paste.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nakamura-tokichi-byodo-in_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nakamura-tokichi-byodo-in_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nakamura-tokichi-byodo-in_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nakamura-tokichi-byodo-in_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nakamura-tokichi-byodo-in_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7322e81f-8e86-5942-810e-3c88a5239def",
+          "order": 0,
+          "title": "Nakamura Tokichi Byodo-in | 中村藤吉平等院店",
+          "caption": "A tea house in a preserved Uji River ryokan near Byodoin, serving matcha and gyokuro from the Nakamura family's own cultivars.",
+          "latitude": 34.89161990373997,
+          "longitude": 135.8065149859403,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nakamura-tokichi-byodo-in.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The building on the Uji River bank was once a celebrated ryokan — the Kikuya Manpekiro — loved, according to its own records, by literary figures, artists, politicians, and business people. Japan's first prime minister, Ito Hirobumi, gave the main reception hall the name Geikakuro, the name it still carries on the building's exterior.\n\nNakamura Tokichi was founded in 1854 as a tea merchant in Uji, and this branch, opened in the original Kikuya Manpekiro building, sits on the Uji River approach to Byodoin Temple — the Phoenix Hall, on the ten-yen coin, a seven-minute walk from here. The interior has been modernised while the exterior of the old inn is preserved, and the building's position overlooking the river makes the riverside seats among the better places in Uji to sit with tea.\n\nUji has been producing green tea since the Kamakura period — the leaves introduced to Japan by the Zen priest Eisai, who brought seeds back from China and planted them here, establishing the cultivation methods still in use. Nakamura Tokichi's matcha and gyokuro are grown from varieties developed by the family's own research: Kyo Midori, a gyokuro cultivar, and Uji Hikari, which serves both tencha and gyokuro production. The desserts on the café menu — particularly the raw tea jelly, served in a frozen bamboo tube with matcha ice cream and sweet red bean paste — make these varieties edible rather than just drinkable.\n\n[beat]\n\nByodoin Temple and its museum, the Hoshokan, are a short walk south along the riverside path. The Nakamura Tokichi main store in Uji, a ten-minute walk north, houses a tearoom and stone-mill grinding experience."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.89161990373997,
+      "centroidLongitude": 135.8065149859403,
+      "city": "Uji",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "637ca8db-cb36-501f-9e32-f3bf8d47989a",
+      "createdAt": "2026-07-05",
+      "title": "Ninenzaka | 二寧坂 (二年坂)",
+      "shortDescription": "A stone-paved Higashiyama lane of late-Edo machiya, its paving dating to 807 and its cables buried out of sight — a thousand-year pilgrimage route said to bring two years of misfortune to anyone who stumbles.",
+      "longDescription": "A cautionary proverb holds that stumbling on these stones brings two years of misfortune. The paving dates to 807, which lends the warning a certain authority, and the stones are uneven enough to earn it.\n\nThe lane curves uphill for about a hundred and fifty metres — stone paving, wooden lattice facades, tiled roofs, and glimpses through gates into narrow inner gardens. It runs north from Sannenzaka through the preserved district of southern Higashiyama, linking the approach to Kiyomizudera with the lanes toward Kōdaiji and the Yasaka Pagoda, a route in constant use as pilgrimage and trade path for over a thousand years.\n\nThe houses are machiya in the strict sense — late Edo through Taishō, built tall rather than wide because frontage was taxed. The zone became one of Japan's first Important Preservation Districts in 1976. The painter Yumeji Takehisa lived nearby for about two years from 1917, marked by a small, easily missed stone.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ninenzaka_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ninenzaka_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ninenzaka_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ninenzaka_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7781481d-0df0-5cd8-8a8a-1323a91684eb",
+          "order": 0,
+          "title": "Ninenzaka | 二寧坂 (二年坂)",
+          "caption": "A preserved stone-paved Higashiyama lane of late-Edo machiya, dating to 807, on the thousand-year pilgrimage route between Kiyomizudera and Gion.",
+          "latitude": 34.99819412920751,
+          "longitude": 135.78086584544405,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ninenzaka.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There is a tradition — most likely a cautionary proverb rather than actual prophecy — that stumbling on these stones brings two years of misfortune. The paving dates to 807, which gives the warning a certain authority, if only because the stones are uneven enough to earn it.\n\nThe lane curves ahead of you and slightly uphill, about a hundred and fifty metres from end to end: stone paving, wooden lattice facades, tiled roofs, and the occasional glimpse through gates into narrow inner gardens. Ninenzaka runs north from Sannenzaka as part of the preserved historic district of southern Higashiyama, connecting the approach to Kiyomizudera Temple with the lanes leading toward Kodaiji and the Yasaka Pagoda — a route that has been in constant use as a pilgrimage and trade path for more than a thousand years.\n\nThe houses along both sides are machiya in the strict sense — late Edo through Taisho period, with the cantilevered upper storeys and narrow frontages that were taxed by width, meaning buildings built tall rather than wide to minimise the levy. The entire zone was designated one of Japan's first Important Preservation Districts for Traditional Buildings in nineteen seventy-six, and the absence of overhead cables — relocated underground — is one of the few visible concessions to preservation effort rather than original character.\n\nYumeji Takehisa, the poet and painter of the Taisho era who helped define that period's aesthetic sensibility, spent about two years in the neighbourhood from nineteen seventeen, and a small stone marker records the approximate location of where he lived — easy to pass without noticing, which is perhaps fitting.\n\n[beat]\n\nIshibei Koji — the private stone-paved lane connecting Ninenzaka to Gion — begins a short walk further south and east, and is worth locating: narrower, quieter, and less photographed than the main slope, it's one of the more private corners of this part of the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.99819412920751,
+      "centroidLongitude": 135.78086584544405,
+      "city": "Kyoto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Architecture",
+        "Faith"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "818e9a7d-77ae-5e7f-abb7-1f8de8aee2c1",
+      "createdAt": "2026-07-05",
+      "title": "Nishiki Market | 錦市場",
+      "shortDescription": "Kyoto's Kitchen — a 400-metre covered arcade that has supplied the city with fish, pickles and produce for roughly four hundred years, made possible by cold, clean groundwater.",
+      "longDescription": "Nishiki Market's covered arcade runs about 400 metres from Teramachi Street to Takakura Street, and has been Kyoto's central food supply for roughly four hundred years. Its nickname, Kyoto no Daidokoro — Kyoto's Kitchen — describes function: this was where households, temples and restaurants bought fish, vegetables, pickles, tofu and fresh produce.\n\nWater is the reason it exists. The groundwater beneath this strip holds a steady fifteen to eighteen degrees Celsius year-round — stable, cold and clean. Called Nishiki no Mizu, it served as natural refrigeration, letting fresh fish from Lake Biwa and the coast survive the journey to market, each shop drawing on its own descendible well. The district was officially recognised as Kyoto's fish wholesale quarter in 1615.\n\nWalking east to west, the stalls' specialisation shows: rare tsukemono pickles, live fish, yuba, fu, dried goods, and hand-crafted knives from Aritsugu, founded in 1560. Its roughly 130 shops are owned individually and change slowly. Standing to eat is accepted; walking while eating is not.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nishiki-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nishiki-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nishiki-market_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "387ea6bf-ac4d-52f7-97a5-b1bfd7752ef4",
+          "order": 0,
+          "title": "Nishiki Market | 錦市場",
+          "caption": "A 400-metre covered arcade known as Kyoto's Kitchen, supplying the city's fish, pickles and produce for four centuries on cold, clean groundwater.",
+          "latitude": 35.00518292382546,
+          "longitude": 135.76470037348545,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nishiki-market.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The covered arcade in front of you runs about four hundred metres from Teramachi Street in the east to Takakura Street in the west, and has been the central food supply point for Kyoto for roughly four hundred years. The market's nickname — Kyoto no Daidokoro, \"Kyoto's Kitchen\" — is a description of function rather than a compliment: this was where the city's households, temples, and restaurants came to buy fish, vegetables, pickles, tofu, and fresh produce, and where the city's water infrastructure made it possible.\n\nThat infrastructure is the reason the market exists at all. The groundwater beneath this particular strip of Kyoto maintains a temperature of between fifteen and eighteen degrees Celsius throughout the year — stable, cold, and clean. Called Nishiki no Mizu, \"Nishiki Water,\" it served as natural refrigeration, allowing fresh fish from Lake Biwa and the coast to survive the journey from supplier to customer. Each shop had its own descendible well for the purpose. The market was officially recognised as Kyoto's fish wholesale district in 1615, though markets likely existed here in some form since the Heian period.\n\nWalk from east to west and the specialisation of each stall becomes apparent: pickled vegetables of varieties found almost nowhere else — Kyoto's tsukemono tradition is specific and deep — alongside shops for live fish, yuba, fu, dried goods, and the hand-crafted knives from Aritsugu, founded in 1560. The market's approximately a hundred and thirty shops are owned individually and change slowly.\n\n[beat]\n\nEating while standing at a stall is accepted here. Eating while walking is not. The distinction is taken seriously and the sign at the entrance tells you so in several languages."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.00518292382546,
+      "centroidLongitude": 135.76470037348545,
+      "city": "Kyoto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Food",
+        "History",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6350bcee-b875-582c-aee3-a34fdb0741d4",
+      "createdAt": "2026-07-05",
+      "title": "Nittodo Kyoto Cafe | 日東堂 KYOTO COFFEE",
+      "shortDescription": "A converted two-storey machiya near Sannenzaka, part general store and part coffee stand, whose upstairs window frames the sixth-century Yasaka Pagoda almost as if it were a painting hung on the wall.",
+      "longDescription": "This two-storey machiya, a traditional timber townhouse, has been converted into a shop and café. On the ground floor Nittodo works as a general store of life goods — ceramics, houseware, paper, small tools, stationery — made with attention to form as well as function. Behind the counter, KYOTO COFFEE serves a five-bean house blend of soft bitterness and a faint herbal note, made with milk from Kyoto's Clover Farm.\n\nThe second floor is the reason to linger: a low-ceilinged seating and occasional exhibition space where a window frames the Yasaka Pagoda — one of Kyoto's most recognisable structures, built in the sixth century and rebuilt repeatedly — at exactly the height and distance that makes the view feel like a painting already there when the building was converted.\n\nIt tends to be quieter upstairs than the busy lanes toward Sannenzaka below, particularly in the middle of the day.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nittodo-kyoto-cafe_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nittodo-kyoto-cafe_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nittodo-kyoto-cafe_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a2660c0d-23dd-59ca-ad27-6fa4786054ed",
+          "order": 0,
+          "title": "Nittodo Kyoto Cafe | 日東堂 KYOTO COFFEE",
+          "caption": "A converted machiya near Sannenzaka, general store and coffee stand, whose upstairs window frames the sixth-century Yasaka Pagoda like a painting.",
+          "latitude": 34.99854111949785,
+          "longitude": 135.77918066244575,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nittodo-kyoto-cafe.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The five-storey pagoda you can see from the upper floor of this building is the Yasaka Pagoda — one of the most recognisable structures in Kyoto, built in the sixth century, rebuilt repeatedly, and still standing in the narrow lane below. The view from the second-floor seating here, through a window that frames it almost perfectly, is not accidental.\n\nThe building in front of you is a two-storey machiya, a traditional timber townhouse that was converted and opened as a shop and café. On the ground floor, Nittodo operates as a general store selling life goods in the Japanese sense: ceramics, houseware, paper goods, small tools, stationery — things made with some attention to form as well as function. The coffee stand, KYOTO COFFEE, sits behind the counter on the same floor, serving a five-bean house blend with what the shop describes as soft bitterness and a faint herbal quality, made with milk from Kyoto's Clover Farm, a dairy holding a special certification for integrated production that most commercial dairies do not qualify for.\n\nThe second floor is the reason to linger. It functions as both a seating area and an occasional exhibition space, the ceiling low, the light warm, and the window to the Yasaka Pagoda positioned at exactly the height and distance that makes the view feel like a painting that was already there when the building was converted. It tends to be quieter up there than the street below, particularly in the middle of the day when the lanes approaching Sannenzaka are at their most busy.\n\n[beat]\n\nIshibei Kojii, the private stone-paved lane connecting the Sannenzaka area to the Gion district, begins a short walk downhill from here — one of the more peaceful corners of this heavily visited hillside, and easy to miss if you don't know to look for it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.99854111949785,
+      "centroidLongitude": 135.77918066244575,
+      "city": "Kyoto",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "aad3792e-246c-5953-95ea-9f3bb4484007",
+      "createdAt": "2026-07-05",
+      "title": "Noodle shop Rennosuke | 麺屋 練之助",
+      "shortDescription": "A small counter ramen shop in Fushimi working in Kyoto's lighter register — a soy-seasoned shoyu tare over house-made noodles, restraint offered as precision rather than timidity.",
+      "longDescription": "The best ramen shops in Kyoto share a quality of restraint. The city's version of the dish leans lighter than the rich tonkotsu of Fukuoka or the dense miso of Sapporo — a clear or lightly opaque chicken or pork-bone stock, well-seasoned but not heavy, finished with a measure of tare adjusted for each bowl. At its best this restraint is not timidity but precision.\n\nRennosuke is a small shop in the Fushimi area of southern Kyoto, run from a narrow counter of a modest number of seats. Its broth draws on the shoyu tare tradition, a soy-seasoned stock that lets the quality of the base speak, and the noodles are made in-house to the density of this particular bowl.\n\nThe counter setup matters: a ticket machine at the entrance, a brief exchange about noodle firmness, the bowl assembled and placed in front of you — not theatre, simply how the thing is done.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/noodle-shop-rennosuke_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/noodle-shop-rennosuke_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/noodle-shop-rennosuke_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/noodle-shop-rennosuke_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/noodle-shop-rennosuke_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7b9ae63d-a953-5df0-9f72-f14610dc420f",
+          "order": 0,
+          "title": "Noodle shop Rennosuke | 麺屋 練之助",
+          "caption": "A small counter ramen shop in Fushimi serving a soy-seasoned shoyu broth over house-made noodles, in Kyoto's characteristically restrained register.",
+          "latitude": 35.03391232879155,
+          "longitude": 135.73921923457925,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/noodle-shop-rennosuke.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There's a particular quality that the best ramen shops in Kyoto share: restraint. The city's version of the dish has historically leaned toward a lighter hand than the rich tonkotsu broths of Fukuoka or the dense miso bases of Sapporo — Kyoto ramen is typically a clear or lightly opaque chicken or pork bone stock, well-seasoned but not heavy, finished with a precise measure of tare that the cook adjusts individually for each bowl. At its best, this restraint is not timidity. It is precision.\n\nRennosuke is a small ramen shop in the Fushimi area of southern Kyoto, run from a narrow counter in a room that holds a modest number of seats. The approach to the broth here draws on the shoyu tare tradition — a soy-seasoned stock that allows the quality of the base to speak without masking it — and the noodles are made in-house, calibrated to the specific density of this particular bowl.\n\nThe counter setup is worth noting. Part of the experience of a ramen shop like this one is the proximity to the cook and the small ritual of the order — a ticket machine at the entrance, the brief exchange about noodle firmness, watching the bowl assembled and placed in front of you. This is not a form of theatre; it is simply how the thing is done, and doing it this way communicates something about the relationship between the person making the bowl and the person eating it.\n\n[beat]\n\nFushimi Inari Taisha and its ten-thousand-torii mountain path is a ten-minute walk from here — a reasonable way to justify appetite before arriving."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.03391232879155,
+      "centroidLongitude": 135.73921923457925,
+      "city": "Kyoto",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fe31d151-9f5d-5d28-9052-a47e322f340e",
+      "createdAt": "2026-07-05",
+      "title": "Nunuka Life | ヌヌカ・ライフ",
+      "shortDescription": "A small, appointment-only ceramics shop in quiet Jōdo-ji near the Philosopher's Path — a curated collection of mostly contemporary Japanese work, chosen by point of view rather than market survey.",
+      "longDescription": "Nunuka Life, in the Jōdo-ji neighbourhood of Sakyō Ward, functions less as a retail space than as a proposal — an argument in object form for a way of looking at things. It sits in the residential streets west of Ginkaku-ji, a short walk from the canal and the northern end of the Philosopher's Path. It is not large and keeps no conventional hours: opening days are posted on Instagram, and other visits are by appointment.\n\nWhat you find, timed correctly, is a curated collection of ceramics — mostly Japanese, mostly contemporary, some historical — selected according to a point of view rather than a market survey. The makers tend to work in small quantities with care for material and form, and the shop acts as an editorial filter, showing the selection and letting the objects speak for themselves.\n\nThe surrounding neighbourhood, quieter than the Higashiyama slopes to the south, rewards slow, purposeful walking over any timed itinerary.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nunuka-life_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nunuka-life_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nunuka-life_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nunuka-life_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9f61f01b-35ff-5f61-818b-d683398531c3",
+          "order": 0,
+          "title": "Nunuka Life | ヌヌカ・ライフ",
+          "caption": "A small, appointment-only ceramics shop near the Philosopher's Path, showing mostly contemporary Japanese work chosen by a single editorial eye.",
+          "latitude": 35.026296200986096,
+          "longitude": 135.7962761778244,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nunuka-life.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There's a particular kind of shop that functions less as a retail space than as a proposal — an argument in object form for a way of looking at things. Nunuka Life, in the Jōdo-ji neighbourhood of Sakyō Ward, is that kind of shop.\n\nThe address is in the residential streets west of Ginkaku-ji, a short walk from the canal and the northern end of the Philosopher's Path. The shop is not large, and it does not keep regular hours in the conventional sense — opening days are posted on Instagram, and visits on other days are by appointment. That arrangement is worth mentioning because it shapes the experience: this is not a destination you stumble into mid-morning. It requires a small amount of deliberate attention to find and access.\n\nWhat you find, if you time it correctly, is a curated collection of ceramics — mostly Japanese, mostly contemporary, some historical, selected according to a point of view rather than a market survey. The makers whose work appears here tend to produce things in small quantities with considerable care for material and form, and Nunuka Life functions as a kind of editorial filter for that category: the owner picks, shows the selection in the space, and lets the objects speak for themselves without much apparatus around them.\n\nThe neighbourhood itself — Jōdo-ji, Sakyō Ward — is quieter and less visited than the Higashiyama slopes to the south, and the area around the Philosopher's Path canal has a density of small studios, galleries, and independently operated shops that rewards slow, purposeful walking more than a timed itinerary.\n\n[beat]\n\nAo Onigiri, the made-to-order rice ball counter, is on the same residential streets nearby — a reasonable pairing with a slow morning in this part of the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.026296200986096,
+      "centroidLongitude": 135.7962761778244,
+      "city": "Kyoto",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Art",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ded2513a-9c83-541e-8962-a66d8e3a7a0d",
+      "createdAt": "2026-07-05",
+      "title": "Otagi Nenbutsuji | 愛宕念仏寺",
+      "shortDescription": "A hillside temple in far northwest Arashiyama where twelve hundred moss-covered stone rakan — each carved by an untrained amateur between 1981 and 1991 — sit laughing, drinking, and no two alike.",
+      "longDescription": "The twelve hundred rakan covering this hillside were carved by amateurs — every one of them. Between 1981 and 1991, ordinary people arrived from across Japan with no experience of sculpture and carved their own stone disciple of the Buddha under the guidance of the priest and sculptor Kōchō Nishimura, each figure different, each reflecting the person who made it.\n\nNishimura had been appointed head of Otagi Nenbutsuji in 1955, a temple repeatedly destroyed over its history and most recently damaged by a typhoon in 1950. The original was founded in 766 by Empress Shōtoku elsewhere in Kyoto; reduced by flood, fire and war to three core structures, it was moved here in 1922. The Kamakura-period main hall is the oldest surviving element.\n\nWalk through slowly. Some figures hold sake cups, one a cassette player, several are doubled over laughing — and the moss that now covers many has softened whatever edges the carving left.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/otagi-nenbutsuji_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/otagi-nenbutsuji_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/otagi-nenbutsuji_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/otagi-nenbutsuji_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/otagi-nenbutsuji_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d8d4d996-ed11-5424-81c0-5905904df0aa",
+          "order": 0,
+          "title": "Otagi Nenbutsuji | 愛宕念仏寺",
+          "caption": "A northwest Arashiyama temple where twelve hundred moss-covered stone rakan, each carved by an untrained amateur from 1981 to 1991, sit laughing and drinking.",
+          "latitude": 35.031309665330916,
+          "longitude": 135.66151168951365,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/otagi-nenbutsuji.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The figures surrounding you were carved by amateurs. Every one of them.\n\nOne thousand two hundred rakan — stone representations of the disciples of the historical Buddha — cover the hillside of this temple in the far northwest of Arashiyama, carved between 1981 and 1991 by people who came here with no prior experience of sculpture, under the guidance of a priest and sculptor named Kocho Nishimura. Nishimura had been appointed head of Otagi Nenbutsuji in 1955 — a temple that had suffered repeated destruction across its long history, most recently typhoon damage in 1950 — and his restoration project, when it finally took form, consisted of inviting ordinary people from across Japan to carve their own rakan under his instruction, each one different, each one reflecting the particular person who made it.\n\nThe original temple was founded in 766 by Empress Shotoku, in a different part of Kyoto entirely. Floods, fires, and civil war reduced it to its three core structures, which were moved here in 1922. The main hall, which dates to the Kamakura period, is the oldest surviving element. Everything else around it is recent — but recent in a particular way, made by hands that were learning as they worked.\n\nWalk through slowly. Some figures hold sake cups. One carries what appears to be a cassette player. Several are doubled over laughing. No two expressions are the same, and the moss that now covers many of them has softened whatever edges the original carving left behind.\n\n[beat]\n\nThe Saga-Toriimoto preserved street, lined with traditional merchant buildings and tea houses, runs downhill from the temple gate toward the main Arashiyama district."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.031309665330916,
+      "centroidLongitude": 135.66151168951365,
+      "city": "Kyoto",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ad35fdd1-142c-55c3-bf19-4479ebbfe8f3",
+      "createdAt": "2026-07-05",
+      "title": "POJ Studio | ポージェイ・スタジオ",
+      "shortDescription": "A Fushimi design studio, bookshop and exhibition space working across East Asian typography — named after Pe̍h-ōe-jī, a nineteenth-century romanisation of Taiwanese Hokkien.",
+      "longDescription": "POJ Studio takes its name from Pe̍h-ōe-jī, a romanisation of Taiwanese Hokkien developed by Presbyterian missionaries in the nineteenth century to enable literacy in a spoken language that had no standard written form. The choice is deliberate, positioning the practice at the intersection of cultural preservation, typography, and the relationship between spoken and written identity.\n\nFounded by Julius Hui and Tung-Yu Chen, the studio works across typeface design, book publishing and graphic design, focused on East Asian typographic systems — Chinese, Japanese, Korean and the space between them. Its editions and type releases have earned a following among designers who care about how Chinese characters are translated into digital and print type.\n\nThe space in the Fushimi district functions as studio, bookshop and occasional exhibition venue. The books and printed objects combine the studio's own work with pieces it considers important, selected by editorial judgment rather than commercial availability — many not findable outside specialist channels. The Fushimi Inari approach lies a short walk north.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/poj-studio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/poj-studio_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/poj-studio_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/poj-studio_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/poj-studio_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5b350197-cdc6-5505-9495-c617f0614c86",
+          "order": 0,
+          "title": "POJ Studio | ポージェイ・スタジオ",
+          "caption": "A Fushimi studio, bookshop and exhibition space working across East Asian typography, named after a nineteenth-century romanisation of Taiwanese Hokkien.",
+          "latitude": 34.997859108813614,
+          "longitude": 135.76560465309757,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/poj-studio.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "POJ Studio takes its name from a romanisation system for Taiwanese Hokkien — Pe̍h-ōe-jī, a transcription method developed by Presbyterian missionaries in Taiwan in the nineteenth century to enable literacy in a spoken language that had no standard written form. The choice of that name for a design studio in Kyoto is deliberate: it positions the practice at the intersection of cultural preservation, typography, and the relationship between spoken and written identity — which is precisely where much of their work sits.\n\nThe studio, founded by Julius Hui and Tung-Yu Chen, works across typeface design, book publishing, and graphic design with a focus on East Asian typographic systems — Chinese, Japanese, Korean, and the intersection between them. Their printed editions and type releases have earned a following among designers and typographers who care about the long, complex problem of how Chinese characters are translated into digital and print type systems.\n\nThe space in the Fushimi district functions as studio, bookshop, and occasional exhibition venue. The books and printed objects on the shelves here are a combination of their own publications and work they consider important from elsewhere — a selection made according to rigorous editorial judgment rather than commercial availability. Many items are not findable outside specialist channels.\n\nIf you have any interest in how type design navigates across languages, how editorial books are structured, or how a small studio sustains a very particular practice without compromising it, this is a useful place to spend time. The staff are willing to explain what they make and why.\n\n[beat]\n\nThe Fushimi Inari approach and the adjacent older streets of Fushimi are a short walk north — a neighbourhood worth moving through slowly on the way to or from the studio."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.997859108813614,
+      "centroidLongitude": 135.76560465309757,
+      "city": "Kyoto",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e8851b9c-ce44-555c-97dd-01dff6b0130a",
+      "createdAt": "2026-07-05",
+      "title": "Pharaoh | ファラオ",
+      "shortDescription": "Shin Takamatsu's 1984 corner block of concrete and steel — three chimneys, circular steel-framed windows, a facade the client asked to be built as armour against the noise and intrusion of the city.",
+      "longDescription": "Pharaoh stands at a busy Kyoto intersection, completed in 1984 by Shin Takamatsu, a year after his ARK dental clinic in Fushimi-ku. The client had lived in a wooden house on the site for years and wanted it replaced with something that would shut the city out. Takamatsu answered with a corner block of concrete and steel: three chimneys rising above, circular steel-framed windows in the upper faces, and vertical and horizontal banding across the whole surface. \"The entire architecture became a mask,\" he said.\n\nThe building houses a dental clinic and a residence, its exterior designed to respond to the city while the interior follows only the logic of the person within — two registers in one small structure.\n\nWhere ARK faced its railway line in direct dialogue, Pharaoh faces the street the way a sealed vault faces a crowd: heavy, repetitive, windows too high or small to see through. That indifference is the most unsettling thing about it.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pharaoh_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pharaoh_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pharaoh_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pharaoh_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pharaoh_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pharaoh_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ee9353ed-fe8b-56c4-ac02-0cec42d059a7",
+          "order": 0,
+          "title": "Pharaoh | ファラオ",
+          "caption": "Shin Takamatsu's 1984 corner block of concrete and steel, three chimneys and circular windows — a facade built as a mask against the city.",
+          "latitude": 34.971614382472374,
+          "longitude": 135.74125151737582,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pharaoh.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There's a curious thing about the building on this corner — the man who commissioned it asked for a facade that would defend him against the street.\n\nPharaoh stands at the intersection of two busy streets in Kyoto, completed in nineteen eighty-four by Shin Takamatsu, a year after ARK — his dental clinic in Fushimi-ku. The brief here was different. The client had lived in a wooden house on this site for many years and wanted it replaced with something that would shut the noise and intrusion of the city out. What Takamatsu built in response is a corner block of concrete and steel with three chimneys rising above it, circular steel-framed windows punctuating the upper faces, and vertical and horizontal concrete banding across the whole surface. Hermetic, closed, indifferent to what surrounds it. \"The entire architecture became a mask,\" Takamatsu said. \"The severe and extreme demands of the client permitted me to take unparalleled architectural risks.\"\n\nThe building houses a dental clinic and a residence. Takamatsu's own account of the project describes the exterior as designed to respond to the city while the interior follows only the logic of the person who lives there — two entirely separate registers in the same small structure. The scale is modest, the footprint compact; it sits in a city of wooden townhouses and temple compounds and does not attempt to negotiate with any of them.\n\nWell, this is what separates Pharaoh from ARK: ARK was built in direct dialogue with its site — the locomotive facing the railway line. Pharaoh faces the street the way a sealed vault faces a crowd. Its surfaces are heavy and repetitive, the windows too high or too small to see through from pavement level. The building is rather less interested in you than you are in it, and that indifference is the most unsettling thing about it.\n\n[beat]\n\nNijo Castle is about fifteen minutes' walk north — the one building in this part of Kyoto that deployed defensive architecture for reasons similar to Pharaoh's, though with considerably more ceremony about it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 151,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.971614382472374,
+      "centroidLongitude": 135.74125151737582,
+      "city": "Kyoto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "30f2046b-621d-5358-b436-d12925316d92",
+      "createdAt": "2026-07-05",
+      "title": "Pontocho Alley | 先斗町",
+      "shortDescription": "A five-hundred-metre alley barely wide enough for two, built on reclaimed Kamo River sandbar in 1670 and grown into a geiko and maiko district of teahouses, some eighty restaurants, and white-plover lanterns.",
+      "longDescription": "The alley runs five hundred metres due north, at its narrowest just wide enough for two people to pass. Wooden machiya facades line both sides, hung with paper lanterns bearing the district's white plover emblem, the sound of grilling drifting from interiors invisible from the street.\n\nPontocho began as a sandbar in the Kamo River; the embankment work that created the strip was finished in 1670. By the early eighteenth century it had become an entertainment district of teahouses and inns serving the Takase Canal boatmen, and gradually the geiko and maiko houses that define it now. Geisha were officially permitted here from 1859, and the Kamogawa Odori dance has been staged every May since 1872.\n\nAround eighty restaurants form the visible surface today, but the ochaya teahouses still operate behind them, and in the early evening geiko and maiko move through the alley to their engagements.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pontocho-alley_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pontocho-alley_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pontocho-alley_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d20dfe06-4c67-57e3-b0b4-6bb85a6172e7",
+          "order": 0,
+          "title": "Pontocho Alley | 先斗町",
+          "caption": "A narrow five-hundred-metre alley on reclaimed Kamo River sandbar, a geiko and maiko district of teahouses and some eighty restaurants marked by white-plover lanterns.",
+          "latitude": 35.00410081931624,
+          "longitude": 135.77107609180146,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pontocho-alley.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The alley in front of you runs five hundred metres due north. It is, at its narrowest, just wide enough for two people to pass without turning sideways. On both sides: wooden machiya facades, paper lanterns bearing the white plover emblem of the district, and the sound of grilling from establishments whose interiors are invisible from the street.\n\nPontocho began as a sandbar in the Kamo River. The embankment work that created this strip of land was completed in 1670, and by the early eighteenth century it had become an entertainment district — teahouses, inns serving the boatmen who worked the Takase Canal, and gradually the geiko and maiko houses that give the district its present character. Official permission for geisha to operate here was granted in 1859. The Kamogawa Odori dance performance, first staged in 1872 as part of a Kyoto exhibition programme, has been performed here every May since.\n\nThe visible surface of Pontocho today is restaurants — around eighty of them, ranging from five-hundred-yen yakitori to kaiseki meals that cost considerably more and require the right introduction. But the ochaya teahouses are still operating behind the restaurant facades, and in the early evening, geiko and maiko move through the alley on their way to engagements. The white plover lanterns mark the authentic establishments; the alley's proportions, unchanged since the Edo period, make it impossible to miss the people who belong here from those who are passing through.\n\nFrom May to September, the restaurants on the eastern side construct wooden platforms over the Kamo River, and that is probably the most pleasant way to spend an evening in this part of Kyoto.\n\n[beat]\n\nNishiki Market is a five-minute walk west. Gion, the larger geisha district, is directly across the river."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.00410081931624,
+      "centroidLongitude": 135.77107609180146,
+      "city": "Kyoto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Performance",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "35095d8f-6b81-5b5c-888f-06efe44432e7",
+      "createdAt": "2026-07-05",
+      "title": "Sannenzaka | 産寧坂 (三年坂)",
+      "shortDescription": "A short, much-photographed flagstone slope of wooden shopfronts and old ceramic roof tiles, linking the Kiyomizu-dera approach down to Gion — a Heian-era path preserved as a historic district.",
+      "longDescription": "The stone steps of Sannenzaka are among the most photographed in Japan, for reasons not entirely obvious: no towering gate, no gilded pavilion, just a narrow flagstone path dropping through a preserved district of wooden shopfronts, stone walls and old ceramic roof tiles. The name means either \"three-year slope\" or \"slope of safe delivery,\" and the path has been here since the Heian period.\n\nIt connects the Kiyomizu-dera approach to Gion and Ninenzaka below, and the whole stretch is a designated preservation district, its machiya facades regulated and maintained. The scale surprises: end to end is perhaps a three-minute walk. Its ceramics shops sell Kiyomizuyaki, the pottery tradition specific to this hillside, still fired by kilns in the area; the lacquerware and craft dealers on the side lanes carry work from workshops named in the city's production records for two hundred years.\n\nIshibei Koji, a private stone lane, runs east from the bottom toward Gion.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sannenzaka_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sannenzaka_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sannenzaka_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c990208e-7dac-563a-8607-f3d306eb8c82",
+          "order": 0,
+          "title": "Sannenzaka | 産寧坂 (三年坂)",
+          "caption": "A short, much-photographed Heian-era flagstone slope of preserved machiya and craft shops linking the Kiyomizu-dera approach down to Gion.",
+          "latitude": 34.996862724587785,
+          "longitude": 135.78104339158727,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sannenzaka.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The stone steps descending in front of you are among the most photographed in Japan, and for reasons that are not entirely obvious. There is nothing spectacular here — no towering gate, no gilded pavilion — just a narrow flagstone path dropping through a preserved district of wooden shopfronts, stone walls, and old ceramic roof tiles, lined with shops selling Kyoto crafts, sweets, and ceramics.\n\nSannenzaka — the name means either \"three-year slope\" or \"slope of safe delivery,\" depending on which etymology you follow — connects the Kiyomizudera approach to the Gion and Ninenzaka districts below. The entire stretch, along with Ninenzaka to the north and the streets running between them, is designated as a preservation district of historic buildings, which means that modifications to the facades are regulated and that the townhouses and machiya lining the path have been maintained in their original form. The path itself has been here since the Heian period.\n\nWhat the photographs tend not to convey is the scale: this is a short walk, maybe three minutes end to end. What the photographs also tend not to convey is how the street functions. The ceramics shops on Sannenzaka sell Kiyomizuyaki — the pottery tradition specific to this hillside, developed over centuries by kilns that still operate in the area. The small lacquerware shops and craft dealers on the side lanes carry objects made by workshops whose names appear in the city's production records going back two hundred years.\n\n[beat]\n\nIshibei Koji — a stone-paved private lane connecting these streets to the Gion area — runs east from the bottom of Sannenzaka and is worth locating: it is one of the more private corners of this heavily visited hillside."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.996862724587785,
+      "centroidLongitude": 135.78104339158727,
+      "city": "Kyoto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Commerce",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f6e0dac0-e4ff-57bc-9cdf-12c8d015048c",
+      "createdAt": "2026-07-05",
+      "title": "Sanzen-in Temple | 三千院",
+      "shortDescription": "An eighth-century imperial temple in the Ohara valley, built around a thousand-year-old moss garden of layered green — its low hills studded with old maples and three small round-faced Jizō half-submerged among them.",
+      "longDescription": "The lane to the gate climbs through the Ohara valley past stone walls and shops selling shibazuke, the purple-red pickle of red shiso and aubergine. Twenty kilometres north of central Kyoto, Ohara behaves like somewhere that made its peace with the distance long ago.\n\nSanzen-in was founded in the eighth century as a monzeki temple, headed by an imperial prince, and its Oujōjō-in garden has been cultivated for over a thousand years. It is a moss garden of considerable depth: low rounded hills of several layered species, studded with old maples and cedars, through which a narrow path descends. In rain, or just after, the green reaches a shade photographs cannot reliably convey.\n\nAbout halfway through, three small stone Jizō carved in the Ohara style — small-bodied and round-faced — sit half submerged in the moss as if they had grown there. They are the temple's most recognisable image, though relatively recent; the garden around them is the older achievement.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sanzen-in-temple_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sanzen-in-temple_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sanzen-in-temple_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sanzen-in-temple_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sanzen-in-temple_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sanzen-in-temple_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b833c902-78b6-539c-8f43-834a32fe2124",
+          "order": 0,
+          "title": "Sanzen-in Temple | 三千院",
+          "caption": "An eighth-century imperial temple in Ohara built around a thousand-year-old moss garden, its layered green studded with old maples and three small Jizō figures.",
+          "latitude": 35.119919077765445,
+          "longitude": 135.83442186877775,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sanzen-in-temple.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The path to the gate climbs through the Ohara valley on a narrow stone lane, past stone walls and small shops selling local pickles and shibazuke — the purple-red Kyoto pickle made from red shiso leaves and aubergine — and the atmosphere shifts noticeably from the city below. Ohara is twenty kilometres north of central Kyoto, and it behaves like somewhere that made its peace with the distance long ago.\n\nSanzen-in was founded in the eighth century as a monzeki temple — a temple headed by an imperial prince — and the garden at its centre has been cultivated for over a thousand years. The Oujojo-in garden is what you come for. It is a moss garden of considerable depth and quiet ambition: low, rounded moss hills studded with old maples and cedar trees, through which a narrow path descends. The moss itself is several species layered, and in rain or immediately after it, the density and colour of the surface reaches the shade of green that photographs cannot reliably convey.\n\nAmong the moss, about halfway through the garden, are three small stone figures of the Jizo bodhisattva — carved in a style associated with the craftsmen of Ohara, small-bodied and round-faced, half submerged in the moss as if they have been growing there as long as the trees. They have become the most recognisable image of this temple, though they are relatively recent; the garden around them is the older achievement.\n\n[beat]\n\nHosen-in, the temple known for its blood-stained ceiling from the Siege of Fushimi, is a fifteen-minute walk north through the valley — the two together make a complete afternoon in Ohara."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.119919077765445,
+      "centroidLongitude": 135.83442186877775,
+      "city": "Ohara",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "73a2f77b-ecd3-5486-9d9f-3104b92f9054",
+      "createdAt": "2026-07-05",
+      "title": "Shirakawa Canal | 祇園白川",
+      "shortDescription": "A willow-hung canal along Shimbashi-dori, its banks lined with Edo-form machiya and ochaya — and once the source of the white sand raked across Kyoto's Zen rock gardens.",
+      "longDescription": "For centuries the pale, fine gravel of Kyoto's Zen rock gardens was quarried from this river. Called Shirakawa-suna, the white river sand, it was collected from the upper reaches and spread across temple gardens across the city until extraction was restricted in the late 1950s — the river gave Kyoto's most contemplative spaces their particular colour.\n\nThe canal runs along the north side of Shimbashi-dori, a narrow stone-paved lane flanked by two-storey machiya and ochaya, their facades largely rebuilt after the great Gion fire of 1865 and kept in that Edo-period form since. Willows hang over the water and about forty cherry trees line the banks; the combination in early April is the most photographed scene in the district.\n\nThis stretch of Gion has been a centre of entertainment culture since the Heian period, developing into an officially sanctioned hanamachi where geiko and maiko still pass in the evenings. The small vermilion Tatsumi Daimyojin Shrine, dedicated to Benzaiten, stands beside the most photographed bridge.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shirakawa-canal_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shirakawa-canal_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shirakawa-canal_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d532a3d8-123a-513a-bc7e-946209c1ff36",
+          "order": 0,
+          "title": "Shirakawa Canal | 祇園白川",
+          "caption": "A willow-hung Gion canal lined with Edo-form machiya and ochaya, once the source of the white sand raked across Kyoto's Zen rock gardens.",
+          "latitude": 35.0056412325281,
+          "longitude": 135.77365680442762,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/shirakawa-canal.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The gravel at the bottom of Kyoto's Zen rock gardens — the pale, fine-textured material that holds raked patterns so well — was for centuries quarried from this river. Called Shirakawa-suna, the white river sand, it was collected from the upper reaches of the Shirakawa and spread across temple gardens across the city, until restrictions on its extraction came into effect in the late 1950s and alternatives were sourced elsewhere. The river gave Kyoto's most contemplative spaces their particular colour and character.\n\nThe canal runs along the north side of Shimbashi-dori, which you're either standing on or approaching — a narrow stone-paved lane flanked by two-storey machiya townhouses and ochaya teahouses, the facades largely rebuilt after the great Gion fire of eighteen sixty-five and maintained in that Edo-period form since. Willow trees hang over the water, and about forty cherry trees line the banks — the combination in early April is the single most photographed scene in this district, though the canal earns its own quiet reputation in every other season, particularly in the early evening when the ochaya lanterns are lit.\n\nThis stretch of Gion, between the canal and Shijo-dori to the south, has been a centre of Kyoto's entertainment culture since the Heian period, developing through the Edo period as an officially sanctioned hanamachi — a flower district — where geiko and maiko still pass in the evenings on their way to engagements. The Tatsumi Daimyojin Shrine, a small vermilion shrine beside the most photographed of the canal's stone bridges, is one they visit frequently — dedicated to Benzaiten, the goddess of arts and water, which makes it a natural destination for practitioners of both.\n\n[beat]\n\nThe Shinbashi Preservation District — this street and its immediate surroundings — has been designated an Important Preservation District for Traditional Buildings; the late-evening walk, after the tourist footfall has subsided, gives the most accurate sense of how the street was designed to function."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.0056412325281,
+      "centroidLongitude": 135.77365680442762,
+      "city": "Kyoto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Performance",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2c5c21ae-9be2-5c92-a692-de2cfe8ff406",
+      "createdAt": "2026-07-05",
+      "title": "TOBI-EN | とび園",
+      "shortDescription": "A Uji tea business founded by a German resident, Tobias, working directly with local farmers — offering guided access to the shaded fields and hand-harvests behind the region's rounder, sweeter, first-harvest tea.",
+      "longDescription": "The tea fields of Uji are recognisable before you understand them: long parallel rows of shrubs under taut shade covers of black fabric or bamboo reed, suspended to block direct sunlight in the final weeks before harvest. That shading is what makes Uji tea different — the plant produces more chlorophyll and L-theanine, the amino acid behind sweetness and umami, and fewer of the catechins that cause bitterness, giving a rounder, sweeter, more complex cup.\n\nTOBI-EN takes its name from its founder, Tobias, joined with the character EN, meaning garden. It began as a way for a German resident of Uji to make genuinely good local tea available abroad, working directly with trusted farmers rather than through the distribution chains that dilute traceability. Guided tours reach fields accessible only with a knowledgeable guide, the shade structures, hand-harvest demonstrations, and the chain from leaf to powder.\n\nThe tea here is ichibancha — first harvest, specific cultivars and fields, bought in limited seasonal quantities.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tobi-en_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tobi-en_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0bdbd75f-ea05-5804-af24-f57cc1b4d7dd",
+          "order": 0,
+          "title": "TOBI-EN | とび園",
+          "caption": "A Uji tea business founded by a German resident, offering guided access to the shaded fields and hand-harvests behind the region's first-harvest tea.",
+          "latitude": 34.89229330339156,
+          "longitude": 135.80539026236465,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tobi-en.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The tea fields of Uji are recognisable before you understand what you are looking at: long, low, parallel rows of densely planted shrubs under taut shade covers — black fabric or bamboo reed mat, suspended on frames above the growing tips to block direct sunlight in the final weeks before harvest. That shading is what makes Uji tea different. By blocking light, the plant produces more chlorophyll and L-theanine — the amino acid responsible for sweetness and umami — and less of the catechins that cause bitterness. The result is a tea that is rounder, sweeter, and more complex than the same plant grown in full sun.\n\nTOBI-EN takes its name from its founder: Tobias — Tobi — combined with the Japanese character EN, meaning garden. The business began as a way for a German resident of Uji to make genuinely good local tea accessible to buyers outside Japan, working directly with trusted farmers in the city rather than through the multi-layered distribution chains that aggregate and dilute the traceability of most commercial Japanese tea. The guided tours offered through TOBI-EN take visitors into tea fields accessible only with a knowledgeable guide — into the shade structures, to the hand-harvest demonstrations, and through the tea processing chain from leaf to powder.\n\nThe tea available here represents the first harvest — ichibancha — from specific cultivars in specific fields, bought in limited quantities and available seasonally. This is the opposite of blended commodity tea, and the difference is measurable in the cup.\n\n[beat]\n\nByodoin Temple — the Phoenix Hall, on the ten-yen coin — is a short walk from the Uji riverside. The town of Uji itself, with its matcha shops, is worth a slower look than most visitors give it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.89229330339156,
+      "centroidLongitude": 135.80539026236465,
+      "city": "Uji",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d52a06f2-de0c-57c2-8eb1-1a50ac12eb75",
+      "createdAt": "2026-07-05",
+      "title": "Takase River | 高瀬川",
+      "shortDescription": "An eleven-kilometre canal dug between 1608 and 1611 at the expense of one merchant, Suminokura Ryoi, to give inland Kyoto a water route to Osaka — later the setting of Mori Ogai's story Takasebune.",
+      "longDescription": "One man dug this canal at his own expense between 1608 and 1611, because Kyoto was an inland city with no reliable water route to Osaka. Suminokura Ryoi, a merchant who had made a fortune in the overseas trade with Vietnam, spent much of it on eleven kilometres of navigable waterway that transformed the city's economy for three hundred years.\n\nThe canal follows Kiyamachi Street, its water rarely more than thirty centimetres deep; the flat-bottomed takasebune boats built for that draft carried casks of Fushimi sake and timber. Nine funairi loading docks once punctuated the route at hundred-metre intervals, but only Ichi-no-Funairi survives intact, marked now by a replica cargo boat.\n\nMori Ogai set his 1916 story Takasebune here, in which a criminal bound for exile shows an inexplicable contentment — a meditation on desire and justice that became one of modern Japan's most anthologised works. The canal stopped carrying cargo in 1920.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/takase-river_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/takase-river_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/takase-river_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/takase-river_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b7425593-3fee-5634-b39a-d99dd85afb14",
+          "order": 0,
+          "title": "Takase River | 高瀬川",
+          "caption": "An eleven-kilometre canal dug 1608–1611 by merchant Suminokura Ryoi to link inland Kyoto to Osaka, later the setting of Mori Ogai's 1916 story Takasebune.",
+          "latitude": 34.99528147031571,
+          "longitude": 135.7669263629335,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/takase-river.mp3",
+          "audioDurationSeconds": 165,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "One man dug this canal, at his own expense, in the years between sixteen oh eight and sixteen eleven, because Kyoto was an inland city with no reliable water route to Osaka and no way to get building materials, sake, rice, and charcoal in and finished goods out efficiently. His name was Suminokura Ryoi — a Kyoto merchant who had made a fortune in the overseas trade with Vietnam and spent a substantial portion of it on civic infrastructure — and what he built was eleven kilometres of navigable waterway that transformed the economy of the city for three hundred years.\n\nThe canal follows Kiyamachi Street, running parallel to it on the right as you head south, and you're most likely standing somewhere along the stretch between Sanjo and Shijo where the street is best known today for its cafés and bars. The water is shallow — rarely more than thirty centimetres — and the flat-bottomed boats called takasebune that worked this route were built specifically for that draft, loaded with casks of Fushimi sake and timber, their boatmen calling out as they moved. Nine funairi — loading docks set at right angles to the canal — once punctuated this stretch at roughly hundred-metre intervals; only the first, Ichi-no-Funairi, survives intact, and a replica cargo boat is moored there to mark the site.\n\nMori Ogai, the Meiji-era novelist and army physician, used this canal as the setting for his nineteen sixteen short story Takasebune, in which a criminal being transported by boat to exile displays an inexplicable contentment — a meditation on desire, sufficiency, and justice that became one of the most anthologised stories in modern Japanese literature. The canal stopped carrying cargo in nineteen twenty, after the railways had made it redundant, but it has given Kiyamachi Street its particular character ever since.\n\n[beat]\n\nIchi-no-Funairi is a short walk north on the west bank, just south of Nijo-dori — the replica boat and the preserved dock are the most legible surviving evidence of what this waterway once was."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 165,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.99528147031571,
+      "centroidLongitude": 135.7669263629335,
+      "city": "Kyoto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Engineering",
+        "Literature"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "724dd78b-059b-543d-87e9-17963326a727",
+      "createdAt": "2026-07-05",
+      "title": "Tetsugaku No Michi | 哲学の道",
+      "shortDescription": "A two-kilometre canal-side path beneath Higashiyama, its cherry trees first planted in 1921 — named for the Kyoto University philosophers said to have walked it while they thought.",
+      "longDescription": "The canal beside the path carries water from Lake Biwa in Shiga Prefecture through Meiji-era mountain tunnels, built to supply Kyoto with water for industry, power and irrigation. This branch follows the Higashiyama foothills for roughly two kilometres, between Ginkaku-ji to the north and Nanzen-ji to the south.\n\nThe canal is the reason the cherry trees are here. The route was once an unmade track alongside an irrigation channel, until in 1921 the wife of the painter Hashimoto Kansetsu, who worked nearby at Hakusasonsō, planted the first three hundred cherry trees along it. The name came later, for two Kyoto University philosophers thought to have walked here in the 1910s and 1920s — Nishida Kitarō, working on what became the Kyoto School, and Hajime Tanabe. A stone bearing one of Nishida's poems is set into the western bank.\n\nSeveral temples line the path, among them thatched-gated Hōnen-in and Eikan-dō Zenrin-ji, known for its autumn maples.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tetsugaku-no-michi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tetsugaku-no-michi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tetsugaku-no-michi_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3c73f4e8-e877-5d5c-95ff-6f92f0ced195",
+          "order": 0,
+          "title": "Tetsugaku No Michi | 哲学の道",
+          "caption": "A two-kilometre canal-side path below Higashiyama, its 1921 cherry trees and its name owed to a painter's wife and two walking philosophers.",
+          "latitude": 35.02164644231477,
+          "longitude": 135.79432699265055,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tetsugaku-no-michi.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The canal beneath you brings water from Lake Biwa in Shiga Prefecture, through mountain tunnels built during the Meiji period to supply Kyoto with water for industry, power, and irrigation. This particular branch follows the contours of the Higashiyama foothills, and the path beside it runs for roughly two kilometres between Ginkaku-ji to the north and the neighbourhood of Nanzen-ji to the south.\n\nThe canal itself is the reason the cherry trees are here. The path was originally an unmade track alongside an irrigation channel, and it was only in nineteen twenty-one that the wife of painter Hashimoto Kansetsu — who was living and working at Hakusasonsō, a short walk east — planted the first three hundred cherry trees along its length. Those plantings, and the ones that followed, are why this stretch of canal looks the way it does in early April.\n\nThe path's name came later, and is associated with two philosophers who were teaching at Kyoto University and are thought to have walked this route regularly in the nineteen tens and nineteen twenties — Nishida Kitarō and Hajime Tanabe. Nishida in particular: he was working on what became known as the Kyoto School of philosophy, an attempt to synthesise Buddhist thought with Western philosophical traditions, and found that walking helped him think. A stone bearing one of his poems is set into the bank about halfway along, on the western side of the canal.\n\n[beat]\n\nThe path passes several temples along its length worth noting: Hōnen-in, with its thatched gate and raked sand mounds, accessible via a short lane off the east side; and Eikan-dō Zenrin-ji at the southern end, known for its autumn maples and its Amida statue, which turns its head over one shoulder to look back at those who follow."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.02164644231477,
+      "centroidLongitude": 135.79432699265055,
+      "city": "Kyoto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Park",
+        "History",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1a807502-ece8-5c11-a402-435158a10a6a",
+      "createdAt": "2026-07-05",
+      "title": "The Little Indigo Museum | ちいさな藍美術館",
+      "shortDescription": "An 1796 thatched headman's farmhouse deep in mountain Miyama, where the dyer Hiroyuki Shindo works natural indigo and shows a lifetime's collection of a single colour drawn from across the world.",
+      "longDescription": "Getting here is the work: a thatched farmhouse in Miyama, a mountain village roughly two hours from central Kyoto, so those who arrive have come on purpose. The building dates to 1796, raised on higher ground for the Nakano family, who served for generations as village headman — a status marked by the seven pairs of chestnut chigi cross-beams at the gable peak, which ordinary Miyama farmhouses lacked.\n\nIn 1981 the Kyoto-born artist Hiroyuki Shindo bought the property and moved his family from the city, drawn by groundwater essential for the fermentation vats and by the rural abundance of wood ash. He studied indigo at the Kyoto City University of Arts in the late 1960s and has worked in natural indigo exclusively since.\n\nThe ground floor holds his working studio; the former thatch-storage attic above displays a rotating selection from some three hundred indigo objects — Indonesian ikat, Nigerian resist-dye, Edo work clothing, Chinese Miao costume — thousands of years of one colour.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-little-indigo-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-little-indigo-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-little-indigo-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-little-indigo-museum_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a9742900-ceb4-5b99-bb93-2f6523027cdb",
+          "order": 0,
+          "title": "The Little Indigo Museum | ちいさな藍美術館",
+          "caption": "An 1796 thatched headman's house in mountain Miyama, home to dyer Hiroyuki Shindo's natural-indigo studio and a global collection of a single colour.",
+          "latitude": 35.314099159675216,
+          "longitude": 135.62350483312738,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-little-indigo-museum.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Getting here was the work. The thatched farmhouse in front of you is in Miyama, a village in the mountains of southern Kyoto Prefecture roughly two hours from central Kyoto by train and bus — which means the people who find themselves standing here did so on purpose.\n\nThe building dates to seventeen ninety-six, when it was constructed on raised ground for the Nakano family, who served as the village headman for generations. The seven pairs of chestnut cross-beams decorating the gable peak — called chigi — indicate the family's status; ordinary farmhouses in Miyama did not have them. In nineteen eighty-one, the Kyoto-born artist Hiroyuki Shindo bought the property and moved his family here from the city, drawn by the quality of the groundwater — essential for the fermentation vats used in natural indigo dyeing — and by the availability of wood ash, which the rural setting made possible in quantities that urban dyeing simply could not match.\n\nShindo studied indigo at the Kyoto City University of Arts in the late nineteen sixties and has worked in natural indigo exclusively since then. The ground floor of this building houses his workshop: the floor-set fermentation vats, tools, drying racks, and the evidence of an active practice rather than a preserved one. The second floor, occupying what was once the attic used for storing thatching grass, displays a rotating selection from Shindo's collection of around three hundred indigo objects gathered over a lifetime — Indonesian ikat, Nigerian resist-dyed cloth, Edo-period work clothing, Miao costumes from China, alongside his own work. The collection covers thousands of years of a single colour.\n\n[beat]\n\nKayabuki no Sato, the preserved thatched village surrounding this property, is worth a slow hour on its own — most of the surviving farmhouses are inhabited, and the scale of the place as a working village is unusual even by Japanese preservation standards."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.314099159675216,
+      "centroidLongitude": 135.62350483312738,
+      "city": "Miyama",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Art",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f333c1ff-ea88-5b83-93fd-8889b0f0c118",
+      "createdAt": "2026-07-05",
+      "title": "Tousuiro Kiyamachi Main Shop | 豆水楼 木屋町本店",
+      "shortDescription": "A tofu kaiseki restaurant in a preserved Taisho-era machiya off Kiyamachi-dori, built on Kyoto's exceptionally soft groundwater — its signature the barely-set oboro-dofu.",
+      "longDescription": "Tousuiro — the name means \"house of beans and water\" — draws both ingredients and logic from one source: the exceptionally pure, soft groundwater beneath central Kyoto that has underpinned the city's tofu for as long as tofu has been made here. Tofu arrived from China via Nara, carried by Buddhist monks, and followed the imperial capital to Kyoto; the local water, consistent in temperature and unusually low in mineral content, gives a tofu of particular delicate texture.\n\nThe lantern marks the entrance down a narrow lane off Kiyamachi-dori. The building is a preserved machiya from the Taisho era — gate, tatami and wooden counter dating its setting to the early twentieth century, though the restaurant itself was founded in 1992.\n\nThe signature is oboro-dofu: freshly made, barely set, served cold on crushed ice, more liquid custard than block. Around it a multi-course kaiseki menu builds on yuba, namafu and seasonal vegetables. From May to September, riverside kawayuka seats extend over the Kamo River.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tousuiro-kiyamachi-main-shop_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tousuiro-kiyamachi-main-shop_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tousuiro-kiyamachi-main-shop_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tousuiro-kiyamachi-main-shop_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tousuiro-kiyamachi-main-shop_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a2277a00-5095-54d6-b2c5-fdbfc2f4090f",
+          "order": 0,
+          "title": "Tousuiro Kiyamachi Main Shop | 豆水楼 木屋町本店",
+          "caption": "A tofu kaiseki restaurant in a preserved Taisho-era machiya off Kiyamachi-dori, built on Kyoto's soft groundwater, with kawayuka seating over the Kamo River.",
+          "latitude": 35.01044471934878,
+          "longitude": 135.77112703372615,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tousuiro-kiyamachi-main-shop.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Tousuiro — the name means \"house of beans and water\" — takes its ingredients and its logic from the same source: the exceptionally pure groundwater beneath central Kyoto, which has been the foundation of the city's tofu production for as long as tofu has been made here.\n\nThe lantern marks the entrance, down a narrow lane off Kiyamachi-dori, and the building behind it is a preserved machiya from the Taisho era — its gate, tatami floors, and wooden counter dating the restaurant's physical setting to the early decades of the twentieth century, though the restaurant itself was founded in nineteen ninety-two. Tofu culture arrived in Japan from China via Nara, carried by Buddhist monks for whom it provided both protein and a connection to monastic dietary practice, and when the imperial capital moved to Kyoto the monks followed and brought the tradition with them. Kyoto's water — underground springs at a consistent temperature year-round, unusually soft in mineral content — produces a tofu with a particular delicate texture that is specific to this place.\n\nThe signature preparation is oboro-dofu: freshly made, barely set, served cold in a lacquerware bowl on crushed ice — more liquid custard than firm block, made from one hundred percent domestic soybeans and water, and impossible to replicate with harder water elsewhere. Around it, a kaiseki menu built across multiple courses uses tofu and its derivatives — yuba (the fresh skin from heated soymilk), namafu (wheat gluten), and seasonal vegetables — to build a full meal in which every element is as carefully considered as the bean curd at its centre.\n\nFrom May through September, riverside seats extend over the Kamo River — the kawayuka tradition — making this one of Kyoto's more atmospheric places for summer dining.\n\n[beat]\n\nThe canal view is worth requesting when booking; the rooms that face the Takase River have the better of it, particularly in the evening when the lanterns on the lane outside are lit."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 146,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.01044471934878,
+      "centroidLongitude": 135.77112703372615,
+      "city": "Kyoto",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cad6cc65-f666-5d54-930a-d577c874c239",
+      "createdAt": "2026-07-05",
+      "title": "Uji Kouchakan supported by Mlesna Tea | 宇治紅茶館 サポーテッド バイ ムレスナティー",
+      "shortDescription": "A black tea house on the Uji riverside — a deliberate choice in a matcha city — pouring Sri Lankan Mlesna teas blended for Japanese water, best known for a copper-griddled hotcake with a black-tea reduction sauce.",
+      "longDescription": "Uji has produced shaded, ground matcha for over eight hundred years, and it appears in almost every café window along the approach to Byōdō-in. Uji Kouchakan is not that. It is a black tea house, which in a city so defined by green tea is a deliberate choice.\n\nThe shop sits on the Uji riverside, within walking distance of the Uji Bridge and the Phoenix Hall. The tea is Mlesna, a Sri Lankan brand founded in 1983 by tea taster Anselm Perera, whose company name reverses his own. It sources mainly from the Nuwara Eliya highlands, known for a light, bright, high-altitude character, and the blends here are made for Japanese water and palates — softer mineral content, different extraction than harder European water.\n\nThe café is known for its hotcake, a thick copper-plate griddled pancake with an original black-tea reduction sauce, served alongside a single-estate tea. On Wednesdays and Thursdays a Sri Lankan meal plate appears.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uji-kouchakan-supported-by-mlesna-tea_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uji-kouchakan-supported-by-mlesna-tea_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uji-kouchakan-supported-by-mlesna-tea_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7c375ca8-2f75-5945-adfd-b44c4b807b8c",
+          "order": 0,
+          "title": "Uji Kouchakan supported by Mlesna Tea | 宇治紅茶館 サポーテッド バイ ムレスナティー",
+          "caption": "A black tea house on the Uji riverside pouring Sri Lankan Mlesna blends, best known for a copper-griddled hotcake with black-tea reduction sauce.",
+          "latitude": 34.89183505013292,
+          "longitude": 135.8051929483965,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/uji-kouchakan-supported-by-mlesna-tea.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Most visitors come to Uji for green tea — specifically for matcha, the shaded, ground variety that this city has been producing for over eight hundred years and that appears in some form in almost every café window along the approach to Byōdō-in. This is not that. Uji Kouchakan is a black tea house, which in a city so thoroughly defined by green tea constitutes a deliberate choice.\n\nThe shop is on the Uji riverside, in walking distance of the Uji Bridge and the approaches to the Phoenix Hall. Inside, the tea served is Mlesna — a Sri Lankan brand founded in nineteen eighty-three by a tea taster named Anselm Perera, whose company's name is his own name reversed. Mlesna sources primarily from the Nuwara Eliya growing region in the central highlands of Sri Lanka, known for a light, bright, high-altitude character that suits careful preparation, and the teas available here are blended specifically for Japanese water and Japanese palates — softer mineral content, different extraction behaviour than the harder water of most European brewing traditions.\n\nThe pairing that the café has become known for is the hotcake — a thick, copper-plate griddled pancake served with an original sauce made from black tea reduction alongside one of the single-estate teas. On Wednesdays and Thursdays a Sri Lankan meal plate is available, an unusual step outside either the Uji tea tradition or the standard Kyoto café register.\n\n[beat]\n\nByōdō-in's Phoenix Hall and its museum, the Hōshōkan, are a short walk along the riverside from here. The Ujigami Shrine, the oldest surviving Shinto shrine building in Japan, is across the river — the two form a complete afternoon in Uji for anyone with the time."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.89183505013292,
+      "centroidLongitude": 135.8051929483965,
+      "city": "Uji",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cf1505ee-985f-5b78-80a0-04acc096bea6",
+      "createdAt": "2026-07-05",
+      "title": "Uji Station | 宇治駅",
+      "shortDescription": "The 1995 Keihan Uji Station by Hiroyuki Wakabayashi — an open, circular concrete vault with curving walls and wide light openings, likened to a stargate and awarded a Good Design prize in 1996.",
+      "longDescription": "The concrete arch overhead does something a train station rarely bothers with: it asks to be looked at. This is Keihan Uji Station, redesigned in 1995 by Kyoto architect Hiroyuki Wakabayashi, who had earlier designed the body of the Rapi:t express between Osaka and Kansai International Airport. The terminus sits at the end of a short branch line; the original station opened here in 1913.\n\nWakabayashi's structure is open-concept and circular in plan, with concrete walls that curve overhead and large openings that admit changing angles of daylight. The effect is of spatial expansion — the station does not feel the size it is. One writer called it a stargate: a historic city announced not by a timber torii but by a concrete vault.\n\nIt won the Good Design Award in 1996 and was named among the best hundred stations in the Kinki region in 2000 — both unusual honours for an infrastructure building.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uji-station_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uji-station_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uji-station_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uji-station_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uji-station_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uji-station_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b90bb190-91d1-5f04-a4ce-d59db7c3a519",
+          "order": 0,
+          "title": "Uji Station | 宇治駅",
+          "caption": "The 1995 Keihan Uji Station by Hiroyuki Wakabayashi — a circular concrete vault of curving walls and wide light openings, a Good Design Award winner in 1996.",
+          "latitude": 34.89444944383847,
+          "longitude": 135.8065498197737,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/uji-station.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "UJI STATION (KEIHAN LINE) — UJI, KYOTO PREFECTURE\nAtlas Audio Tour\n\nLook up before you step inside. The concrete arch above you is doing something a train station does not usually bother to do: it is asking to be looked at.\n\nThis is Keihan Uji Station, and the building enclosing the platforms was redesigned in 1995 by a Kyoto architect named Hiroyuki Wakabayashi — who, in an earlier version of himself, had just finished designing the body of the Rapi:t express train between Osaka and Kansai International Airport. The station sits at the end of a short branch line and is the terminus for this stretch of the Keihan Railway. The original station opened here in 1913. What Wakabayashi built over it in 1995 is something considerably more difficult to categorise.\n\nThe structure is open-concept and circular in plan, with concrete walls that curve overhead and large wall openings that admit natural light in changing angles throughout the day. The effect is of spatial expansion — the station does not feel the size it is. One architectural writer described it as a stargate: the entrance to a historic city announced not by a timber torii but by a concrete vault. That description is either exactly right or rather over-serious, depending on your mood.\n\nThe station won the Good Design Award in 1996, in the category of architecture and environmental design. It was selected as one of the best hundred stations in the Kinki region in 2000. Both distinctions are a little unusual for an infrastructure building.\n\n[beat]\n\nThe platform is a five-minute walk from Byodoin Temple — the building depicted on the ten-yen coin, dating to 1053, and one of the oldest surviving examples of Heian-period architecture in Japan. The town of Uji is also the historical centre of Japanese matcha cultivation, which is worth knowing before you reach the main street and find yourself standing in front of twelve shops all selling variations on the same green powder."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.89444944383847,
+      "centroidLongitude": 135.8065498197737,
+      "city": "Uji",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3faade0f-0b3d-515f-9d27-167a150c2e4c",
+      "createdAt": "2026-07-05",
+      "title": "Unagiya Segawa | 鰻屋 瀬がわ",
+      "shortDescription": "An unagi restaurant in a renovated Kyoto townhouse off Shinmachi-dori, grilling live eel the Kansai way — split along the belly, no steaming, over charcoal — so the fish carries the dish rather than the sauce.",
+      "longDescription": "The smell arrives before the building — binchotan charcoal and caramelising tare, the sweet-salt glaze applied and reapplied to freshwater eel as it grills. An alley off Shinmachi-dori leads through a wooden gate into a renovated Kyoto townhouse, where Segawa occupies private and semi-private rooms alongside counter seating.\n\nSegawa uses the Kansai method: the eel is split along the belly rather than the back, skewered and grilled directly over high heat without the initial steaming of Tokyo-style preparation, so the skin crisps decisively and the flesh keeps its natural fat. Live eels are brought in and prepared in-house on the day, without artificial seasonings, so the flavour of the fish itself carries the dish.\n\nThe main formats are unaju — eel over rice in a lacquer box kept warm on a lava stone — and hitsumabushi, the Nagoya-style tub eaten across three courses: plain, then with spring onion and wasabi, then with dashi poured over as ochazuke.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/unagiya-segawa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/unagiya-segawa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/unagiya-segawa_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/unagiya-segawa_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ee4df41d-be43-5343-b99d-57970145f884",
+          "order": 0,
+          "title": "Unagiya Segawa | 鰻屋 瀬がわ",
+          "caption": "An unagi restaurant in a renovated townhouse off Shinmachi-dori, grilling live eel the Kansai way — belly-split, unsteamed, over charcoal.",
+          "latitude": 35.00588065839749,
+          "longitude": 135.7569828020951,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/unagiya-segawa.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The smell arrives before the building does — binchotan charcoal and caramelising tare, the sweet-salt glaze that is applied and reapplied to freshwater eel as it grills, producing the particular deep-brown crust that makes unagi as identifiable by scent as by sight.\n\nThe alley leads off Shinmachi-dori through an interior wooden gate into a renovated Kyoto townhouse, where the restaurant occupies private and semi-private rooms alongside open counter seating. Segawa uses the Kansai method of preparation: the eel is split along the belly rather than the back, skewered, and grilled directly over high heat without the initial steaming used in Tokyo-style preparation. The result is a skin that crisps more decisively, and flesh that retains the eel's natural fat and texture rather than softening it. Live eels are brought in and prepared in-house on the day of service, without artificial seasonings, so the flavour of the fish itself — its richness, the slight earthiness that separates fresh unagi from any substitute — carries the dish rather than the sauce alone.\n\nThe main formats are unaju — eel over rice in a lacquer box, kept warm by a lava stone — and hitsumabushi, the Nagoya-style serving in which a full eel is placed over rice in a small wooden tub and eaten across three progressively transformed courses: plain, then with condiments of spring onion and wasabi, then with dashi broth poured over the remainder and drunk as a kind of ochazuke. The third iteration of hitsumabushi, if you ask me, is the best argument for the format.\n\n[beat]\n\nEel populations in Japan have come under considerable pressure from overfishing, which is reflected in the price and the increasing care serious restaurants take with sourcing. It is worth noting that the higher price for domestically produced and carefully sourced eel is, here, the point."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.00588065839749,
+      "centroidLongitude": 135.7569828020951,
+      "city": "Kyoto",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d224cdd0-ffcc-5962-80e8-5d8c03b0b83e",
+      "createdAt": "2026-07-05",
+      "title": "Uzumasa Kyoto Village | 太秦映画村",
+      "shortDescription": "A working open-air film set in western Kyoto — Japan's Hollywood, recreating an Edo townscape of merchant streets and samurai residences that has supplied period drama since the 1920s, with costumed actors and sword shows through the day.",
+      "longDescription": "The street in front of you is a film set. The wooden shop facades, clay-roofed buildings and stone paths were all built to be filmed, and have been since the studio was established here in the 1920s. Uzumasa is Japan's Hollywood, the production centre for jidaigeki — period drama — for over a century.\n\nKyoto was chosen for the same reason it was the imperial capital for a thousand years: its historic fabric survived where Tokyo's and Osaka's did not, giving production companies the authentic Edo-period locations they needed. The Toei Uzumasa Eigamura is the open-air part of the complex, built to recreate an Edo townscape and opened to the public in 1975.\n\nThe experience is deliberately theatrical — costumed actors roam the streets, ninja shows and sword-fighting run through the day — and the merchant streets, samurai residences and teahouses are detailed enough to remain functional locations, appearing in hundreds of television dramas.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uzumasa-kyoto-village_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uzumasa-kyoto-village_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uzumasa-kyoto-village_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7a8f36cb-5917-5367-a515-408b9977008e",
+          "order": 0,
+          "title": "Uzumasa Kyoto Village | 太秦映画村",
+          "caption": "A working open-air Edo-townscape film set in western Kyoto, Japan's Hollywood for period drama since the 1920s, opened to the public in 1975.",
+          "latitude": 35.01660492877482,
+          "longitude": 135.70820820875508,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/uzumasa-kyoto-village.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The street in front of you is a film set. The wooden shop facades, the clay-roofed buildings, the stone pathways — all of it was constructed to be filmed, and has been filmed continuously since the studio was established in this part of Kyoto in the 1920s. Uzumasa is Japan's Hollywood, and this district in the western part of the city has been the production centre for jidaigeki — period drama — for over a century.\n\nKyoto was chosen for this function for the same reason it was Japan's imperial capital for a thousand years: the city's historic fabric survived intact in ways that Tokyo and Osaka did not. Production companies working on period dramas needed authentic Edo-period locations, and here they found them. The Toei Uzumasa Eigamura — Kyoto Village — is the open-air portion of this studio complex, built specifically to recreate an Edo-period townscape for film and television and opened to the public in 1975.\n\nThe experience is deliberately theatrical. Actors in period costumes roam the streets; ninja shows and sword-fighting demonstrations are performed throughout the day; and the sets themselves — the narrow merchant streets, the samurai residences, the teahouses — are detailed enough to be functional as film locations and have been used as exactly that, appearing in hundreds of television dramas. Many of the jidaigeki series that have dominated Japanese Sunday evening television for decades have been shot on these streets.\n\n[beat]\n\nThe Koryuji Temple, home to Japan's oldest surviving wooden sculpture — the Miroku Bosatsu, carved in the seventh century — is a ten-minute walk east from the studio. The contrast in time periods is rather considerable."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.01660492877482,
+      "centroidLongitude": 135.70820820875508,
+      "city": "Kyoto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "History",
+        "Performance",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "332babec-6289-572e-ba97-b69131cf092b",
+      "createdAt": "2026-07-05",
+      "title": "Waterway Pavilion | 水路閣",
+      "shortDescription": "A red-brick Roman-arcade aqueduct carrying the Lake Biwa Canal through Nanzenji's grounds since 1890 — designed by Tanaka Sakuro at twenty-two, still flowing today.",
+      "longDescription": "When this aqueduct was proposed in 1888, the head abbot of Nanzenji objected: a Western-style red brick viaduct through the grounds of a thirteenth-century Zen temple was, in his view, no appropriate combination. He was overruled, and a hundred and thirty years later its arches — framing temple roofs, brick patinated with moss in the Higashiyama foothills — are among the most photographed structures in Kyoto.\n\nThe arcade rises nine metres high and runs ninety-three metres long, built of red brick and granite by the engineer Tanaka Sakuro, twenty-two years old and on his first major commission. It carries a branch of the Lake Biwa Canal, the Meiji-era waterway that brought freshwater across the mountains into Kyoto, and it still carries water today, feeding the city's agricultural and industrial supply as it has since 1890.\n\nThe canal was a civic rescue: after Kyoto lost capital status to Tokyo in 1869, it restored water, generated hydroelectric power at Keage, and enabled boat transport. You can walk along the top and follow the water still moving in the channel.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waterway-pavilion_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waterway-pavilion_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/waterway-pavilion_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cce10758-23bb-5a06-94ac-c8fb04f852ee",
+          "order": 0,
+          "title": "Waterway Pavilion | 水路閣",
+          "caption": "A red-brick Roman-arcade aqueduct carrying the Lake Biwa Canal through Nanzenji's grounds since 1890, designed by Tanaka Sakuro at twenty-two.",
+          "latitude": 35.010774769479134,
+          "longitude": 135.79391948367805,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/waterway-pavilion.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "When this aqueduct was proposed in eighteen eighty-eight, the head abbot of Nanzenji Temple objected: a Western-style red brick viaduct running through the grounds of a thirteenth-century Zen Buddhist temple was not, in his view, an appropriate combination. He was overruled, the aqueduct was built, and a hundred and thirty years later it has become one of the most photographed structures in Kyoto — its arches framing temple roofs, its brick patinated with age and moss, sitting in the cedar and maple of the Higashiyama foothills as if it had always been part of the composition.\n\nThe arches rise through the trees ahead of you — nine metres high, ninety-three metres long, built of red brick and granite in a Roman arcade form by the engineer Tanaka Sakuro, who was twenty-two years old when he designed it and was working on his first major commission. The aqueduct carries a branch of the Lake Biwa Canal, the Meiji-era waterway that brought freshwater from Japan's largest lake across the mountains into Kyoto — and it is still carrying water today, a trickle flowing continuously in the channel above the arches, supplying the city's agricultural and industrial water system as it has done since eighteen ninety.\n\nThe Lake Biwa Canal project was conceived as a civic rescue operation: Kyoto had lost its status as imperial capital to Tokyo in eighteen sixty-nine, and its economy was contracting. The canal restored water supply, generated hydroelectric power at the Keage station nearby, enabled boat transport, and eventually fed the Philosopher's Path canal and the Keage Incline — all parts of a single interconnected system of which this aqueduct is the most visible survivor.\n\n[beat]\n\nYou can walk along the top of the aqueduct, following the waterway as it continues north through the temple grounds — a short additional path that lets you see the water still moving in the channel, which is, if anything, more satisfying than viewing the arches from below."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.010774769479134,
+      "centroidLongitude": 135.79391948367805,
+      "city": "Kyoto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "91298278-bade-57b1-85a6-b5a2c358d10b",
+      "createdAt": "2026-07-05",
+      "title": "Wife & Husband | ワイフ・アンド・ハズバンド",
+      "shortDescription": "A coffee shop run by the married couple who named it — a converted oden stall near the Kitaoji Bridge that lends out baskets of house-roasted coffee for ninety-minute picnics on the Kamo riverbank.",
+      "longDescription": "A real husband and wife run this coffee shop, and the name is also the explanation. Kyoichi and Ikumi Yoshida met, began roasting coffee together, and in 2015 converted an old oden stall near the Kitaoji Bridge into the space here — a coffee shop made by two people who happen to be married, which turns out to be a very specific kind of place.\n\nThe building is small: a wooden counter, a couple of tables, and a large collection of objects gathered over years of travel — antique furniture, baskets, chairs, hats, curiosities. Bicycles hang from the eaves. The baskets and stools at the front are not decoration but equipment for the shop's other offering, a riverside picnic service.\n\nThe Kamo River runs a short walk east, its long grassy bank used by Kyoto residents for picnics and evenings out. WIFE & HUSBAND will lend a basket — thermos of house-roasted coffee, ceramic cups, tablecloth, rusks — for a ninety-minute stretch on the grass.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wife-and-husband_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wife-and-husband_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wife-and-husband_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wife-and-husband_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fa765794-d5ec-5bed-a6a8-5de19c7cc011",
+          "order": 0,
+          "title": "Wife & Husband | ワイフ・アンド・ハズバンド",
+          "caption": "A coffee shop run by the married couple who named it, a converted oden stall near Kitaoji Bridge lending picnic baskets for the Kamo riverbank.",
+          "latitude": 35.046208034564444,
+          "longitude": 135.7618123555221,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wife-and-husband.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "A real-life husband and wife run this coffee shop. That is the name, and it is also the explanation: Kyoichi and Ikumi Yoshida met, began roasting coffee together, and in 2015 converted an old oden stall near the Kitaoji Bridge into the space in front of you. The name is both description and manifesto — a coffee shop made by two people who happen to be married, which turns out to be a very specific kind of place.\n\nThe building is small. It holds a wooden counter, a couple of tables, and a large collection of objects the owners have gathered over years of travel and looking: antique furniture, old baskets, chairs, hats, and miscellaneous things of interest whose purpose is not always immediately clear. Several bicycles hang from the eaves outside. These are not decorative: the baskets and stools hanging at the front serve as equipment for the shop's other offering, which is a riverside picnic service.\n\nThe Kamo River runs along the east side of Kitaoji Bridge, a short walk from here, and the riverbank is a long, flat grassy space that Kyoto residents use for picnics, cycling, and sitting in the evenings. WIFE & HUSBAND will lend you a basket containing a thermos of their house-roasted coffee, ceramic cups, a tablecloth, and rusks, for a ninety-minute stretch on the grass. This is the service the shop has become best known for, and it is one of the more pleasant ways to spend a slow morning in this part of the city.\n\n[beat]\n\nThe Kyoto Botanical Garden is a ten-minute walk south — Japan's oldest public botanical garden, established in 1924, and worth an hour of any afternoon."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.046208034564444,
+      "centroidLongitude": 135.7618123555221,
+      "city": "Kyoto",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0275501b-6d22-53de-b578-da36b7b9384e",
+      "createdAt": "2026-07-05",
+      "title": "Yasaka Shrine | 八坂神社",
+      "shortDescription": "A shrine established in 656 at the foot of Higashiyama, dedicated to the storm god Susanoo and origin of the Gion Matsuri, begun in 869 to purify the capital during an epidemic.",
+      "longDescription": "The vermilion west gate at the end of Shijō Street is not the main entrance — that faces south, toward Gion below. The west gate exists because Shijō Street does, and because this has been the point where the city meets the foothills, and where Gion meets the shrine that gave it its name, for over a thousand years.\n\nYasaka Shrine was established here in 656, at the base of the Higashiyama range. Its deity, Susanoo no Mikoto, the storm god associated with protection against pestilence, was pointedly relevant to a city periodically devastated by epidemic. The Gion Matsuri began in 869 as a purification ritual during one such outbreak and continues each July, its enormous yamaboko floats moving through the streets in one of Japan's largest processions.\n\nWithin the precinct, the honden and haiden are joined by a covered corridor in an arrangement called gion-zukuri, specific to this shrine, among stone paths lined with granite lanterns donated over the centuries.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yasaka-shrine_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yasaka-shrine_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yasaka-shrine_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yasaka-shrine_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "eb8332e6-c38b-5776-941e-aff077dcf12b",
+          "order": 0,
+          "title": "Yasaka Shrine | 八坂神社",
+          "caption": "A shrine founded in 656 to the storm god Susanoo, source of the Gion Matsuri begun in 869, its inner halls joined in the gion-zukuri style unique to it.",
+          "latitude": 35.00380526308431,
+          "longitude": 135.7785373011288,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/yasaka-shrine.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The west gate in front of you — the large vermilion structure at the end of Shijō Street — is not actually the main entrance. The main entrance to Yasaka Shrine faces south, toward the Gion district below. The west gate exists because Shijō Street exists, and because this has been the point where the city meets the foothills, and where Gion meets the shrine that gave it its name, for well over a thousand years.\n\nYasaka Shrine was established in this location in six fifty-six, on land at the base of the Higashiyama range that the city of Heian-kyō would later grow westward from. The deity enshrined — Susanoo no Mikoto, the Shinto god of storms, associated with protection against pestilence — was particularly relevant to a city that was periodically devastated by epidemic disease, and the shrine's most important annual event, the Gion Matsuri, began in eight sixty-nine as a ritual to purify the capital during one such epidemic. The festival continues each July, the procession of enormous decorated floats called yamaboko moving through the streets in one of the largest of its kind in Japan.\n\nWithin the main sanctuary precinct, behind the gate directly ahead, the honden and haiden — the inner and outer halls — are connected by a covered corridor in an arrangement called a gion-zukuri, specific to this shrine. The granite lanterns lining the stone paths inside are donated by merchants and townspeople across the centuries, and their density gives the precinct a particular quality in the early morning, before the day's visitors arrive.\n\n[beat]\n\nMaruyama Park, Kyoto's most popular cherry blossom site, adjoins the shrine to the northeast — the two are effectively continuous at the boundary, and the weeping cherry at the park's centre is visible from the shrine grounds in spring."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.00380526308431,
+      "centroidLongitude": 135.7785373011288,
+      "city": "Kyoto",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Performance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f5082b4d-3083-50f1-91df-2076a6a64011",
+      "createdAt": "2026-07-05",
+      "title": "Yumekoubou | 夢工房",
+      "shortDescription": "A Gion gallery in a 150-year-old machiya, entered through a woven bamboo gate by Tanabe Chikuunsai IV — where Edo antiques, contemporary art and vintage furniture are arranged to converse across the centuries.",
+      "longDescription": "The bamboo arch at the entrance stops you first: woven from natural bamboo into a rounded gate, installed in 2022 by the sculptor Tanabe Chikuunsai IV, it signals that the categories you arrived with may not apply. Behind it, on Nakano-chō in Gion's antiques quarter, stands a machiya over 150 years old, originally built as an inn and relocated here, its large pillars, exposed beams and mud walls largely preserved.\n\nYumekoubou opened in 2002, founded by two siblings trained at a family antique business in Shiga Prefecture. It began as a Japanese antiques shop and remains one in part, carrying Edo and Meiji ceramics, lacquerware, bronzes and screens. The founders later added contemporary art, then early-twentieth-century vintage furniture, on the principle that excellent work is excellent regardless of when it was made.\n\nThe result is a space where a centuries-old ceramic might sit beside a contemporary bamboo sculpture and a mid-century chair — the arrangement itself the point.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yumekoubou_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yumekoubou_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yumekoubou_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yumekoubou_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yumekoubou_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "aee6353b-79a3-5abc-96d3-12dd9dc1070c",
+          "order": 0,
+          "title": "Yumekoubou | 夢工房",
+          "caption": "A Gion gallery in a 150-year-old machiya, entered through a bamboo gate by Tanabe Chikuunsai IV, where antiques and contemporary art converse.",
+          "latitude": 35.00626750350685,
+          "longitude": 135.77497103427436,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/yumekoubou.mp3",
+          "audioDurationSeconds": 156,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The bamboo arch at the entrance is the first thing that stops you. Woven from natural bamboo into a gently rounded gate — wide enough to pass through, low enough to make you notice — it was installed in twenty twenty-two by the sculptor Tanabe Chikuunsai IV, and it does something rather useful for a gallery: it signals, before you've seen a single object inside, that the categories you came in with might not apply here.\n\nThe building behind the gate, on Nakano-chō in the antiques quarter of Gion, is a machiya — a traditional townhouse with a history of over one hundred and fifty years, originally built as an inn and relocated to this site, with large original pillars, exposed beams, and mud walls that have been largely preserved. Yumekoubou opened here in two thousand and two, founded by two siblings who had trained at a family antique business in Shiga Prefecture, and the building's unhurried atmosphere makes immediate sense as the setting they chose — this is not a white-cube gallery, and the works inside are not displayed as if they need defending from the room.\n\nThe gallery began as a Japanese antiques shop, which it remains in part, carrying pieces from the Edo and Meiji periods: ceramics, lacquerware, bronzes, screens. Then, a few years into its history, the founders began adding contemporary art — not as a departure but as an extension of the same instinct, because, as they've put it, excellent work is excellent work regardless of when it was made. Vintage furniture from the early twentieth century arrived next, for the same reason. The result is a space where a centuries-old ceramic might sit beside a contemporary bamboo sculpture beside a mid-century chair, and the point of the arrangement is the conversation between them rather than any single object's category.\n\n[beat]\n\nThe bamboo gate outside is one of Tanabe Chikuunsai IV's ongoing explorations of bamboo as architectural form — a line of practice the Tanabe family has pursued across four generations since the Meiji period. The gallery handles works from all four generations, which makes this a good place to trace how a craft tradition holds and evolves across a century and a half."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 156,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.00626750350685,
+      "centroidLongitude": 135.77497103427436,
+      "city": "Kyoto",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "History",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2bd80ba8-1682-550a-9da7-17e26b5a36c6",
+      "createdAt": "2026-07-05",
+      "title": "√2 Riverside Takao Kyoto | ルートツーリバーサイド 高雄",
+      "shortDescription": "A riverside dining room in the Takao valley, set on a traditional kawayuka platform above the Kiyotaki River — an old Japanese house serving soba, salads and coffee within earshot of the water.",
+      "longDescription": "The mountains around Takao close in quickly once you leave the city, and this valley — where the Kiyotaki River cuts through cedar and maple about forty minutes northwest of central Kyoto — feels more remote than the transit time suggests. Autumn draws the crowds, the hillsides deep red and orange, but the cool river and dense shade reward a summer visit too.\n\nA few steps down from the road, through a white noren curtain, the building opens onto a kawayuka — a riverside platform of tatami and retro glass-screen shoji overlooking the water from ground level, the river close enough to hear throughout.\n\n√2 Riverside opened in October 2024 as the latest branch of the Kyoto ROOT2 group, whose other locations focus on organic salads and specialty coffee. Set in an old Japanese house, this branch extends the menu toward soba served with a generous seasonal arrangement of condiments — duck and spring onion, grated daikon, mitsuba, pickled ginger.",
+      "makerId": "50b53af5-68ac-5e6e-8185-ae367326632d",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/root-2-riverside-takao-kyoto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/root-2-riverside-takao-kyoto_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/root-2-riverside-takao-kyoto_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/root-2-riverside-takao-kyoto_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/root-2-riverside-takao-kyoto_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/root-2-riverside-takao-kyoto_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "902769c3-9530-5520-b082-9271a862f1e0",
+          "order": 0,
+          "title": "√2 Riverside Takao Kyoto | ルートツーリバーサイド 高雄",
+          "caption": "A riverside dining room on a traditional kawayuka platform above the Kiyotaki River in the Takao valley, serving soba, salads and coffee since October 2024.",
+          "latitude": 35.057575275353685,
+          "longitude": 135.67644183456954,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/root-2-riverside-takao-kyoto.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The mountains around Takao close in quickly once you leave the city — and this valley, where the Kiyotaki River cuts through cedar and maple forest about forty minutes northwest of central Kyoto, feels considerably more remote than the transit time suggests. Autumn is when this area is at its most visited, the hillsides running deep red and orange, but even in summer the cool river and dense shade make the journey worthwhile.\n\nA few steps down from the road, through a white noren curtain, the building opens onto a kawayuka — a riverside platform of traditional Japanese dining, its tatami and retro glass-screen shoji overlooking the water from ground level. The river is close enough that you can hear it clearly, and on warmer days steps lead down to the bank itself.\n\n√2 Riverside opened in October twenty twenty-four as the latest branch of the ROOT2 group, a Kyoto operator whose other locations focus on organic salads and specialty coffee. This branch, set in an old Japanese house of tatami floors and patterned glass, extends the menu toward soba noodles alongside the usual salads and lighter fare — a nod to the location's character as a destination rather than a neighbourhood stop. The soba here comes with a generous arrangement of condiments: duck and spring onion, grated daikon, mitsuba, pickled ginger, depending on the season, with the river audible throughout.\n\nThe wider Takao area has been a destination for Kyoto residents since the Heian period — the three mountain temples of Jingoji, Saimyoji, and Kozanji sit within walking distance, the last of which holds the twelve-and-thirteenth-century ink handscrolls known as Choju-Giga, widely considered among the earliest ancestors of manga, and listed as National Treasures.\n\n[beat]\n\nThe autumn foliage here typically peaks a week or two after the city centre — worth keeping in mind if you're timing a trip for colour."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 35.057575275353685,
+      "centroidLongitude": 135.67644183456954,
+      "city": "Takao",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Waterfront",
+        "Green Escape"
+      ],
+      "priceUSD": 0
     }
   ]
 }
