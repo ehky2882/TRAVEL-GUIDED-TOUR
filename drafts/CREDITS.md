@@ -120,7 +120,7 @@ Palace and De Wallen are entirely ship-safe stock — no credit.**
 | _(`_3` interior — owner picking from verified `westerkerk-int` set; CC BY-SA — credit to be filled when chosen)_ | | | | |
 | _(hero WK34 + `_2` WK11 tower+crown = ship-safe stock — no credit)_ | | | | |
 
-_(Ship-safe stock, NO credit: Dam Square & Royal Palace hero+4, De Wallen hero+5, Canal Ring / Golden Bend hero+5, Nine Streets hero+5, Westerkerk hero+`_2`.)_
+_(Ship-safe stock, NO credit: Dam Square & Royal Palace hero+4, De Wallen hero+5, Canal Ring / Golden Bend hero+5, Nine Streets hero+5, Westerkerk hero+`_2`, Jordaan hero+2, Rijksmuseum hero+3, Van Gogh Museum hero+2, Vondelpark hero+2, De Pijp / Albert Cuyp hero+4 — DP `_5` is Wikimedia **CC0**, still no credit.)_
 
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)

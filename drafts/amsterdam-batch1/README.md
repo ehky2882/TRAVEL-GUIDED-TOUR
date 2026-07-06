@@ -1,8 +1,8 @@
 # Amsterdam — batch 1 (NEW CITY) — images STAGED ✅
 
 Started 2026-07-06. New city **Amsterdam**; new maker **Atlas Studio AMS** (create at first wire-in).
-Owner numbering scheme (gaps expected). **8 scripts sourced + owner-picked + cropped + pushed to
-gh-pages** on 2026-07-06 (waves 1 + 2). Awaiting narration audio → wire into `Tours.json` at that point.
+Owner numbering scheme (gaps expected). **13 scripts sourced + owner-picked + cropped + pushed to
+gh-pages** on 2026-07-06 (waves 1–3). Awaiting narration audio → wire into `Tours.json` at that point.
 
 Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 
@@ -17,8 +17,13 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 11 | Nine Streets | `nine-streets` | `_hero`(NS13 street life) · `_2`(NS17 bridge+houses) · `_3`(NS10 shop street) · `_4`(NS42 bridge) · `_5`(NS9 canal-side) · `_6`(NS20 night) | ship-safe stock, none |
 | 18 | Anne Frank House | `anne-frank-house` | `_hero`(AF26 house + museum entrance) | **CC — see CREDITS.md** |
 | 19 | Westerkerk | `westerkerk` | `_hero`(WK34 tower+crown) · `_2`(WK11 tower over canal) · **_3 interior = owner picking (WKI9/WKI7…), pending** | hero+_2 ship-safe; interior CC |
+| 21 | Jordaan | `jordaan` | `_hero`(JD11 Westertoren+bike) · `_2`(JD7 flowers+canal) · `_3`(JD30 narrow street) | ship-safe stock, none |
+| 24 | Rijksmuseum | `rijksmuseum` | `_hero`(RM5 building+pond sunset) · `_2`(RM2 I amsterdam) · `_3`(RM3 Night Watch interior) · `_4`(RM1 pond) | ship-safe stock, none |
+| 25 | Van Gogh Museum | `van-gogh-museum` | `_hero`(VG16 building+glass wing) · `_2`(VG20 glass entrance) · `_3`(VG15 curved wing) | ship-safe stock, none |
+| 28 | Vondelpark | `vondelpark` | `_hero`(VP12 bandstand island) · `_2`(VP1 pond+houses) · `_3`(VP6 autumn pond) | ship-safe stock, none |
+| 29 | De Pijp / Albert Cuyp | `de-pijp-albert-cuyp` | `_hero`(DP1 market street) · `_2`(DP6 stalls+flag) · `_3`(DP14 food) · `_4`(DP4 food stall) · `_5`(DP56 market wide) | ship-safe (DP56 = CC0), none |
 
-All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked).
+All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked), wave 3 `d8e7300` (21/24/25/28/29).
 
 **⚠️ WK23 rejected:** the stock "Westerkerk interior" pick (WK23) turned out to be a **different Gothic church** (ribbed stone vaults, not the Westerkerk's whitewashed Renaissance barrel vault) — caught on full-size review. Replaced with a Wikimedia-verified Westerkerk interior (owner picking from `westerkerk-int` set).
 
@@ -59,13 +64,20 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
      - Nine Streets (De Negen Straatjes): `52.36940, 4.88680`
      - Anne Frank House (Prinsengracht 263): `52.37520, 4.88400`
      - Westerkerk (Westermarkt): `52.37470, 4.88390`
+     - Jordaan (Bloemgracht/heart): `52.37460, 4.88190`
+     - Rijksmuseum (Museumstraat 1): `52.36000, 4.88530`
+     - Van Gogh Museum (Museumplein 6): `52.35840, 4.88110`
+     - Vondelpark (centre): `52.35810, 4.86860`
+     - De Pijp / Albert Cuyp (Albert Cuypstraat): `52.35570, 4.89230`
    - **Category suggestions (owner's call):** Dam Square → `history`; De Wallen → `culturalHeritage`;
      Oude Kerk → `sacredSites`; Begijnhof → `hiddenGems`; Canal Ring → `culturalHeritage` (or `architecture`);
-     Nine Streets → `hiddenGems` (or `culturalHeritage`); Anne Frank House → `history`; Westerkerk → `sacredSites`.
+     Nine Streets → `hiddenGems` (or `culturalHeritage`); Anne Frank House → `history`; Westerkerk → `sacredSites`;
+     Jordaan → `culturalHeritage`; Rijksmuseum → `culturalHeritage` (or `architecture`); Van Gogh Museum → `culturalHeritage`;
+     Vondelpark → `natureAndParks`; De Pijp / Albert Cuyp → `culturalHeritage`.
 3. `swift scripts/validate-tours.swift` → fix any errors.
 4. Surface the CC credits at ship time (Oude Kerk, Begijnhof, Anne Frank House, Westerkerk interior — per `drafts/CREDITS.md`).
 
 ## Still to come (owner)
-- Amsterdam scripts **02, 05, 06, 07, 12–17, 20+ …** not yet received — source in the next passes.
+- Amsterdam scripts **02, 05, 06, 07, 09, 12–17, 20, 22, 23, 26, 27, 30+ …** not yet received — source in the next passes.
 - Owner to pick the **Westerkerk interior** (`_3`) from the verified `westerkerk-int` options.
-- Narration MP3s for all 8 (nothing goes live until audio + maker exist).
+- Narration MP3s for all 13 (nothing goes live until audio + maker exist).
