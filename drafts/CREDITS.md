@@ -87,6 +87,30 @@ Last updated 2026-07-02 (Toronto complete; LA batch 1 in progress).
 | `farmers-market-grove_4.webp` | The Grove green double-decker trolley (WG1) | Clotee Pridgen Allochuku | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:%22The_Grove%22_Street_Car_-_panoramio.jpg |
 | _(batch 8: Getty 43 + Rodeo 44 = ship-safe — no credit. Egyptian 18 HERO = owner photo, gallery `_2`/`_3`/`_4` above. Farmers Market/Grove 23 hero F1 + `_3` F27 + `_5` GR16 = ship-safe — no credit; `_2`/`_4` above.)_ | | | | |
 
+## Amsterdam — 7 credit-required images (batch 1, `drafts/amsterdam-batch1`)
+
+Stock (Unsplash/Pexels/Pixabay) coverage was too polluted for the Oude Kerk (Delft's
+Oude Kerk, look-alike churches) and the Begijnhof (Belgian beguinages), so those two
+tours use Wikimedia-verified shots — all CC-licensed, logged here. **Dam Square & Royal
+Palace and De Wallen are entirely ship-safe stock — no credit.**
+
+### Oude Kerk (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `oude-kerk_hero.webp` | church exterior + tower from the square | jimmyweee | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(6578772447).jpg |
+| `oude-kerk_2.webp` | brick Gothic exterior | thierrytutin | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(4093683725).jpg |
+| `oude-kerk_3.webp` | interior — wooden vault + gravestone floor | Johan Bakker | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:3990_Oude_Kerk_(2).jpg |
+
+### Begijnhof (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `begijnhof_hero.webp` | courtyard + statue, lawn + gabled houses | Sergey Galyonkin (Berlin) | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(8697235291).jpg |
+| `begijnhof_2.webp` | courtyard + weeping tree | Szilas | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:2019-06-21_Amsterdam_03.jpg |
+| `begijnhof_3.webp` | courtyard lawn + gabled houses | thierrytutin | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(4095056424).jpg |
+| `begijnhof_4.webp` | gabled house facade detail | Fred Romero (Paris) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_-_Begijnhof_(30183600072).jpg |
+
+_(Dam Square & Royal Palace: hero + 4 gallery all ship-safe stock. De Wallen: hero + 5 gallery all ship-safe stock. No credit for either.)_
+
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
 reuse single-stop stop images. Only two carry a credit, both already listed above:
@@ -107,6 +131,7 @@ for the exact per-image list.
 |------|-------------------------------------------|-------------------------------------------|
 | **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
 | **Los Angeles** | *this file* (below) | 17 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7; Egyptian gallery ×3 + Farmers Market/Grove ×2 b8) |
+| **Amsterdam** | *this file* (above) | 7 — Oude Kerk hero/`_2`/`_3` + Begijnhof hero/`_2`/`_3`/`_4` (Wikimedia CC BY / BY-SA). Dam Square + De Wallen = ship-safe stock, no credit. |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
