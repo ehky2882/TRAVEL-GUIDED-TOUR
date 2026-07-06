@@ -4,7 +4,14 @@ Fresh session? Read this first, then `PROCESS.md`. Everything below is committed
 branch **`claude/dreamy-wozniak-nM6a4`**; images are on **gh-pages**. `/tmp` is gone —
 re-fetch candidates as needed; pipeline scripts are in this folder (`drafts/pipeline/`).
 
-## Immediate next action (LA)
+## 🔴 IMMEDIATE — Amsterdam (NEW CITY, in progress; handed off mid-flight 2026-07-06)
+**LA is a WRAP** (38 singles + 3 walks staged, batches 1–8 — see below). Owner moved to a NEW CITY: **Amsterdam** (maker **Atlas Studio AMS**).
+- **4 scripts received + saved** in `drafts/amsterdam-batch1/`: 01 Dam Square & Royal Palace, 03 De Wallen, 04 Oude Kerk, 08 Begijnhof. **Candidates were fetched but NOT picked/pushed** — session hit "request too large" (oversized montages). **Re-source all 4 next session.**
+- **Read `drafts/amsterdam-batch1/README.md`** for per-tour sourcing notes. KEY: De Wallen + Begijnhof have "no residents/windows" rules — **De Wallen = canal quarter + Oude Kerk only, NO red-light windows/workers**; Begijnhof = courtyard architecture only. Oude Kerk pool is polluted with other Amsterdam churches — verify.
+- **MONTAGE-SIZE LESSON:** the "request too large" came from big 7-col ~1600px montage PNGs. Build SMALL montages (<~1200px) or skip contact sheets — go straight to small batches of full-size labeled picks (owner prefers those anyway).
+- Owner will keep sending Amsterdam scripts (02, 05, 06, 07… not yet sent).
+
+## Prior action (LA — COMPLETE)
 **LA batches 1–8 image-COMPLETE — 38 tours staged.** Batch 8 (`drafts/la-batch8/`, in progress)
 = 18 Egyptian Theatre, 23 Farmers Market & The Grove, 32 Muscle Beach, 33 Abbot Kinney, 43 The Getty Center, 44 Rodeo Drive & Beverly Hills. Getty+Rodeo `242a90c` + Muscle Beach/Abbot Kinney `f17641d` (all ship-safe); Egyptian `30bcdcf` (3 CC credits); Farmers Market/Grove `f142455` (2 CC credits).
 - **32 Muscle Beach / 33 Abbot Kinney:** both ship-safe, 0 credits. MB = SM original (MB12 acrobatics hero + MB1 sign). Abbot Kinney is THIN — stock returned Venice-boardwalk sign / Venice Italy / Hollywood / a NYC restaurant; owner took a ship-safe Venice mural street (AK23) hero-only (fully accurate AK gallery needs owner photos; only 1 Wikimedia shot confirms the street).
