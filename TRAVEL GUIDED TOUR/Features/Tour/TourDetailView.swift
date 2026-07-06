@@ -1,5 +1,6 @@
 import SwiftUI
 import MapKit
+import UIKit
 
 /// Tour detail screen — spec § Key screens #4 / roadmap M-tour-detail.
 ///
@@ -91,6 +92,33 @@ struct TourDetailView: View {
     /// back. Pins render immediately; the route line draws when ready.
     @State private var routePolylines: [MKPolyline] = []
 
+    /// Which top-of-sheet visual is showing — the photo *GALLERY* or the
+    /// location *MAP*. Owner-requested experiment (2026-07-06): brings
+    /// the map above the fold so the user doesn't have to scroll past
+    /// the stops list to discover it. The rest of the body (masthead,
+    /// description, stops, nearby tours) is unchanged.
+    @State private var topSectionTab: TopSectionTab = .gallery
+
+    private enum TopSectionTab: String, CaseIterable, Identifiable {
+        case gallery = "Gallery"
+        case map = "Map"
+        var id: String { rawValue }
+    }
+
+    init(tour: Tour) {
+        self.tour = tour
+        // Match LibraryView's segmented-control font (SF Mono 13pt =
+        // AtlasTypography.caption). Duplicated here rather than
+        // trusted from LibraryView's init because a cold launch → tap
+        // a tour would open detail before Library was ever
+        // instantiated, so its appearance setup wouldn't have run yet.
+        // `UISegmentedControl.appearance()` is idempotent — safe to
+        // set from both surfaces.
+        let mono = UIFont.monospacedSystemFont(ofSize: 13, weight: .regular)
+        UISegmentedControl.appearance().setTitleTextAttributes([.font: mono], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.font: mono], for: .selected)
+    }
+
     var body: some View {
         scrollBody
             // `.safeAreaInset(.top)` parks the chromeRow above the
@@ -176,9 +204,12 @@ struct TourDetailView: View {
     private var scrollBody: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
-                // Breathing room between the chrome row and the hero —
-                // without this the image kisses the row.
-                imageSection
+                // Owner-requested experiment (2026-07-06): swap the
+                // hero-only top for a GALLERY / MAP tab pair so the
+                // map is discoverable above the fold. The map's
+                // previous "Location" section below the stops list is
+                // gone (moved into the Map tab).
+                topSection
                     .padding(.top, AtlasSpacing.md)
 
                 VStack(alignment: .leading, spacing: AtlasSpacing.md) {
@@ -191,7 +222,6 @@ struct TourDetailView: View {
                         .padding(.vertical, AtlasSpacing.sm)
                     descriptionSection
                     stopsSection
-                    mapSection
                     nearbyToursSection
                 }
                 .padding(.horizontal, AtlasSpacing.lg)
@@ -202,9 +232,60 @@ struct TourDetailView: View {
                 Color.clear.frame(height: AtlasBottomModule.height())
             }
         }
+        // Pre-fetch the walking route on tour load, so switching to
+        // the Map tab renders the polyline instantly (was on the Map
+        // view itself, which delayed the first tap by an MKDirections
+        // round-trip). No-op on single-stop tours.
+        .task(id: tour.id) {
+            await loadWalkingRoute()
+        }
     }
 
-    // MARK: - Hero image
+    // MARK: - Top section (Gallery / Map tabs)
+
+    /// Owner-requested experiment (2026-07-06). The top of the sheet
+    /// used to be just the hero image / carousel. Now a **Library-style
+    /// segmented picker** (Gallery / Map) sits above the swap zone so
+    /// the map is discoverable without scrolling. The old "Location"
+    /// section below the stops list is removed — the map only lives
+    /// here.
+    ///
+    /// `GET DIRECTIONS` renders **outside** the swap zone (owner ask,
+    /// iteration 2): persistent across both tabs so the layout height
+    /// stays constant when the user toggles between Gallery and Map.
+    ///
+    /// Both tab contents self-manage horizontal padding of `lg` so
+    /// they align with each other and with the hero-height frame.
+    private var topSection: some View {
+        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            topSectionTabRow
+            Group {
+                switch topSectionTab {
+                case .gallery:
+                    imageSection
+                case .map:
+                    mapContent
+                }
+            }
+            getDirectionsLink
+        }
+    }
+
+    /// System segmented `Picker` — same shape as `LibraryView`'s
+    /// Saved / Downloaded / Recents picker, so the two surfaces read
+    /// as one visual system. Font is SF Mono 13pt via the
+    /// `UISegmentedControl.appearance()` setup in `init`.
+    private var topSectionTabRow: some View {
+        Picker("Top section", selection: $topSectionTab) {
+            ForEach(TopSectionTab.allCases) { tab in
+                Text(tab.rawValue).tag(tab)
+            }
+        }
+        .pickerStyle(.segmented)
+        .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    // MARK: - Gallery (photo carousel)
 
     /// Hero area: single image for tours with one photo, paging carousel
     /// for tours that supply `additionalImageURLs`.
@@ -494,25 +575,19 @@ struct TourDetailView: View {
 
     // MARK: - Map preview + directions
 
-    /// Inline pannable map showing every stop on the tour, with a
-    /// walking-route polyline between consecutive stops on multi-stop
-    /// tours. Initial camera frames a tight neighborhood span for a
-    /// single stop, or the bounding box of all stops (+ ~40% padding)
-    /// for a walk. Below the map, a plain "GET DIRECTIONS" text link
-    /// opens Apple Maps with walking directions to the start of the
-    /// tour.
+    /// Map body for the MAP tab. Pannable/zoomable map with every
+    /// stop, a walking-route polyline on multi-stop tours, and the
+    /// user-location dot. Below the map: a `GET DIRECTIONS` menu
+    /// (Apple Maps / Google Maps) that opens walking directions to
+    /// the first stop.
     ///
-    /// The map is interactive (pinch/pan) but the route line and pins
-    /// are decoration — the directions affordance is the text link
-    /// below, not a tap on the map itself, so we don't fight the
-    /// scroll view for vertical gestures inside the inline tile.
-    private var mapSection: some View {
+    /// The old free-standing "Location" header is gone — the tab
+    /// label above already names this surface. The walking route is
+    /// prefetched on tour load by the scrollBody's `.task`, so this
+    /// view doesn't own the async fetch anymore; switching to Map
+    /// renders the polyline immediately if it's ready.
+    private var mapContent: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            Text("Location")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
-                .padding(.top, AtlasSpacing.md)
-
             Map(initialPosition: .region(initialMapRegion)) {
                 // Polylines declared first → drawn under the pins.
                 // MapContent z-order follows declaration order (later
@@ -558,38 +633,45 @@ struct TourDetailView: View {
             // as the same canvas as the home map.
             .mapStyle(.standard(emphasis: .muted, pointsOfInterest: HomeMapSection.tourPOI))
             // Match the hero image's footprint exactly: same height
-            // token, no corner radius (square corners). The inner
-            // VStack already applies `.padding(.horizontal, .lg)`,
-            // so horizontal insets line up with the hero too.
+            // token, no corner radius (square corners). Horizontal
+            // padding is applied to the whole map-tab content below
+            // so the map aligns with the tab row + the gallery.
             .frame(height: AtlasSpacing.heroHeight)
-            .task(id: tour.id) {
-                await loadWalkingRoute()
-            }
-
-            // Menu lets the user pick Apple Maps or Google Maps.
-            // Google route uses the `?api=1` universal link — iOS
-            // routes it to the Google Maps app if installed, falls
-            // back to Safari otherwise. No Info.plist entry needed.
-            Menu {
-                Button {
-                    openInAppleMaps()
-                } label: {
-                    Label("Apple Maps", systemImage: "applelogo")
-                }
-                Button {
-                    openInGoogleMaps()
-                } label: {
-                    Label("Google Maps", systemImage: "globe")
-                }
-            } label: {
-                Text("GET DIRECTIONS")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.mapPin)
-            }
-            .padding(.top, AtlasSpacing.xs)
-            .accessibilityLabel("Get directions")
-            .accessibilityHint("Opens Apple Maps or Google Maps with walking directions to the start of the tour.")
         }
+        .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    /// Persistent `GET DIRECTIONS` affordance — hoisted out of the
+    /// map body so it renders on both tabs. Keeps the layout height
+    /// constant when the user toggles between Gallery and Map (owner
+    /// ask, iteration 2). Semantically map-related, but present on
+    /// Gallery too as the "get me to this tour" affordance.
+    ///
+    /// Uses the `?api=1` universal link for Google Maps so iOS
+    /// routes the tap to the Google Maps app when installed or
+    /// Safari as a fallback — no `LSApplicationQueriesSchemes`
+    /// entry needed.
+    private var getDirectionsLink: some View {
+        Menu {
+            Button {
+                openInAppleMaps()
+            } label: {
+                Label("Apple Maps", systemImage: "applelogo")
+            }
+            Button {
+                openInGoogleMaps()
+            } label: {
+                Label("Google Maps", systemImage: "globe")
+            }
+        } label: {
+            Text("GET DIRECTIONS")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.mapPin)
+        }
+        .padding(.horizontal, AtlasSpacing.lg)
+        .padding(.top, AtlasSpacing.xs)
+        .accessibilityLabel("Get directions")
+        .accessibilityHint("Opens Apple Maps or Google Maps with walking directions to the start of the tour.")
     }
 
     private var sortedStopsForMap: [Stop] {
