@@ -4,7 +4,11 @@ import Supabase
 
 /// Counts + the current viewer's relationship to a maker (from the
 /// `follow_state` RPC). All-zero / not-following by default.
-struct FollowState: Decodable, Equatable {
+///
+/// `Codable` (not just `Decodable`) so `FollowStateStore` can round-trip it
+/// through UserDefaults for the stale-while-revalidate cache. The synthesized
+/// encoding uses the same keys the RPC returns.
+struct FollowState: Codable, Equatable {
     let followers: Int
     let following: Int
     let isFollowing: Bool
@@ -37,21 +41,45 @@ struct FollowRequest: Identifiable {
 final class FollowService {
     private let auth: AuthService
     private let client: SupabaseClient
+    /// Stale-while-revalidate cache so counts render instantly from the
+    /// last-known value while the RPC refreshes in the background.
+    private let store: FollowStateStore
 
-    init(auth: AuthService, client: SupabaseClient = SupabaseClientProvider.shared) {
+    init(auth: AuthService,
+         client: SupabaseClient = SupabaseClientProvider.shared,
+         store: FollowStateStore = FollowStateStore()) {
         self.auth = auth
         self.client = client
+        self.store = store
     }
 
-    /// Counts + this viewer's relationship to `makerId`. `.empty` on failure.
+    /// The current viewer's id for scoping the cache (viewer-specific fields
+    /// must not leak across accounts). `"anon"` when signed out.
+    private var viewerUid: String {
+        auth.user?.id.uuidString.lowercased() ?? "anon"
+    }
+
+    /// The last-known state for `makerId`, synchronously, or `.empty` if never
+    /// fetched. Seed a view with this before awaiting `state(for:)` so the
+    /// counts don't flash 0/blank on open.
+    func cachedState(for makerId: UUID) -> FollowState {
+        store.cachedState(for: makerId, uid: viewerUid)
+    }
+
+    /// Counts + this viewer's relationship to `makerId`, from the network.
+    /// On success the value is cached (write-through). On failure we return the
+    /// **last-known** cached value rather than `.empty`, so a transient network
+    /// blip never clobbers good counts back to zero.
     func state(for makerId: UUID) async -> FollowState {
         do {
-            return try await client
+            let state: FollowState = try await client
                 .rpc("follow_state", params: ["m": makerId.uuidString.lowercased()])
                 .execute()
                 .value
+            store.remember(state, for: makerId, uid: viewerUid)
+            return state
         } catch {
-            return .empty
+            return store.cachedState(for: makerId, uid: viewerUid)
         }
     }
 

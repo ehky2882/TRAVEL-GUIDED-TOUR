@@ -28,10 +28,13 @@ struct MakerAvatarView: View {
         self.maker = maker
         self.size = size
         #if canImport(UIKit)
-        // Pre-populate from the in-memory cache so a previously-loaded avatar
-        // renders on the first frame with no placeholder flash (e.g. when the
-        // Library re-appears on a tab switch). Same pattern as HeroImageView.
-        let cached = photoURL.flatMap { ImageCache.shared.image(for: $0) }
+        // Pre-populate on the first frame so there's no monogram flash before
+        // the async load returns. `diskBackedImage` checks memory first (the
+        // no-flash-on-tab-switch path, #326) then falls back to the on-disk
+        // copy — so an own-profile / Library / Search avatar renders frame-zero
+        // even on a cold launch or after a memory eviction, not just within a
+        // session. Avatars are tiny, so the synchronous disk read is cheap.
+        let cached = photoURL.flatMap { ImageCache.shared.diskBackedImage(for: $0) }
         _cachedImage = State(initialValue: cached)
         #endif
     }
@@ -91,14 +94,16 @@ struct MakerAvatarView: View {
     /// hit was already applied in init, so this only does work on a miss.
     private func loadPhotoIfNeeded() async {
         guard let url = photoURL else { return }
-        if let hit = ImageCache.shared.image(for: url) {
+        if let hit = ImageCache.shared.diskBackedImage(for: url) {
             if cachedImage == nil { cachedImage = hit }
             return
         }
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             guard let ui = UIImage(data: data) else { return }
-            ImageCache.shared.store(ui, for: url)
+            // Persist to disk (with the original bytes) so the next cold launch
+            // is a frame-zero hit and never flashes the monogram.
+            ImageCache.shared.storeToDisk(ui, data: data, for: url)
             cachedImage = ui
         } catch {
             // Leave the monogram placeholder on failure.
