@@ -32,9 +32,9 @@ struct RouteMiniMapView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: side, height: side)
-                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                    .clipShape(RoundedRectangle(cornerRadius: 11, style: .continuous))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 8, style: .continuous)
+                        RoundedRectangle(cornerRadius: 11, style: .continuous)
                             .stroke(.white, lineWidth: 1.5)
                     )
                     .shadow(color: .black.opacity(0.25), radius: 2.5, x: 0, y: 1)
@@ -124,8 +124,13 @@ final class RouteSnapshotCache {
         options.mapRect = padded
         options.size = size
         options.scale = scale
-        options.mapType = .standard
-        options.pointOfInterestFilter = .excludingAll
+        // A MUTED standard map with no POIs, no traffic — labels/details
+        // recede so the gold route is the prominent element (owner
+        // direction: keep the thumbnail about the route, not the map).
+        let config = MKStandardMapConfiguration(elevationStyle: .flat, emphasisStyle: .muted)
+        config.pointOfInterestFilter = .excludingAll
+        config.showsTraffic = false
+        options.preferredConfiguration = config
         options.showsBuildings = false
         // Keep the thumbnail a light map regardless of app appearance so
         // its white border + gold route read consistently.
@@ -156,7 +161,7 @@ final class RouteSnapshotCache {
 
             // Route polyline: stops connected in order.
             cg.setStrokeColor(routeColor.cgColor)
-            cg.setLineWidth(2.5)
+            cg.setLineWidth(4)
             cg.setLineJoin(.round)
             cg.setLineCap(.round)
             cg.beginPath()
@@ -166,12 +171,12 @@ final class RouteSnapshotCache {
 
             // A dot at each stop: white ring + gold centre.
             for p in points {
-                let outer: CGFloat = 3
+                let outer: CGFloat = 3.6
                 cg.setFillColor(UIColor.white.cgColor)
                 cg.fillEllipse(in: CGRect(
                     x: p.x - outer, y: p.y - outer, width: outer * 2, height: outer * 2
                 ))
-                let inner: CGFloat = 1.8
+                let inner: CGFloat = 2.2
                 cg.setFillColor(routeColor.cgColor)
                 cg.fillEllipse(in: CGRect(
                     x: p.x - inner, y: p.y - inner, width: inner * 2, height: inner * 2
