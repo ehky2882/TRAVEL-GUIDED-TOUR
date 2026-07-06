@@ -83,7 +83,9 @@ Last updated 2026-07-02 (Toronto complete; LA batch 1 in progress).
 | `egyptian-theatre_2.webp` | Egyptian Theatre palm forecourt (E14) | Andreas Praefcke | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Egyptian_Theatre_Hollywood_3.jpg |
 | `egyptian-theatre_3.webp` | Egyptian Theatre forecourt at night (E3) | Pop Culture Geek (The Conmunity) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Clone_Wars_screening_-_Egyptian_theater_entryway_(5240103221).jpg |
 | `egyptian-theatre_4.webp` | Egyptian Theatre interior auditorium (E23) | Gb321 | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Grauman%27s_Egyptian_interior_2026.jpg |
-| _(batch 8: Getty 43 + Rodeo 44 = ship-safe — no credit. Egyptian Theatre 18 HERO = owner photo — no credit; gallery `_2`/`_3`/`_4` above.)_ | | | | |
+| `farmers-market-grove_2.webp` | Original Farmers Market clock tower (WF1) | Infernalfox (English Wikipedia) | CC BY 2.5 | https://commons.wikimedia.org/wiki/File:Farmer%27s_Market_2.jpg |
+| `farmers-market-grove_4.webp` | The Grove green double-decker trolley (WG1) | Clotee Pridgen Allochuku | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:%22The_Grove%22_Street_Car_-_panoramio.jpg |
+| _(batch 8: Getty 43 + Rodeo 44 = ship-safe — no credit. Egyptian 18 HERO = owner photo, gallery `_2`/`_3`/`_4` above. Farmers Market/Grove 23 hero F1 + `_3` F27 + `_5` GR16 = ship-safe — no credit; `_2`/`_4` above.)_ | | | | |
 
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
@@ -104,7 +106,7 @@ for the exact per-image list.
 | City | Authoritative credit file (on `gh-pages`) | Credit-required images (CC BY / CC BY-SA) |
 |------|-------------------------------------------|-------------------------------------------|
 | **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
-| **Los Angeles** | *this file* (below) | 15 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7; Egyptian gallery ×3 b8) |
+| **Los Angeles** | *this file* (below) | 17 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7; Egyptian gallery ×3 + Farmers Market/Grove ×2 b8) |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
