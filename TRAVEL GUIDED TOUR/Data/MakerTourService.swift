@@ -5,7 +5,7 @@ import Supabase
 
 /// A tour owned by the signed-in maker, with its lifecycle status — the unit
 /// shown on the own-profile "My tours" feed (drafts + in-review + published).
-struct MakerTour: Identifiable, Hashable {
+struct MakerTour: Codable, Identifiable, Hashable {
     let tour: Tour
     let status: TourStatus
     var id: UUID { tour.id }
@@ -27,13 +27,39 @@ final class MakerTourService {
     /// The signed-in maker's own tours (all statuses), newest first.
     private(set) var myTours: [MakerTour] = []
 
+    private let auth: AuthService
     private let client: SupabaseClient
+    /// Last-known tour list, persisted per user so the Me-tab feed renders on the
+    /// first frame after launch instead of an empty list. See `ProfileSnapshotStore`.
+    private let snapshot: ProfileSnapshotStore<[MakerTour]>
+    private var loadedUid: String?
+    private var didHydrate = false
 
-    init(client: SupabaseClient = SupabaseClientProvider.shared) {
+    init(auth: AuthService,
+         client: SupabaseClient = SupabaseClientProvider.shared,
+         snapshot: ProfileSnapshotStore<[MakerTour]> = ProfileSnapshotStore("myTours")) {
+        self.auth = auth
         self.client = client
+        self.snapshot = snapshot
+        // Hydrate synchronously from the cached snapshot so the feed isn't empty
+        // on the first Me-tab paint after launch.
+        hydrateIfUserChanged()
     }
 
-    /// Clear when signed out or when the profile has no maker row yet.
+    /// Swap `myTours` to the current user's cached snapshot when the active user
+    /// changed (or on first hydrate); a no-op when unchanged, so it never
+    /// clobbers a freshly-loaded list. Call from the Profile tab's `.task`.
+    func hydrateIfUserChanged() {
+        let uid = auth.user?.id.uuidString.lowercased()
+        guard !didHydrate || uid != loadedUid else { return }
+        didHydrate = true
+        loadedUid = uid
+        myTours = snapshot.load(uid: uid) ?? []
+    }
+
+    /// Clear when signed out or when the profile has no maker row yet. Only
+    /// clears the in-memory list — the persisted snapshot is per-user, so it
+    /// stays valid for this account without risking a network-blip wipe.
     func clear() { myTours = [] }
 
     /// Upload audio for a draft tour's single stop and patch its `audio_url` +
@@ -124,6 +150,9 @@ final class MakerTourService {
                 .execute()
                 .value
             myTours = rows.map { $0.asMakerTour }
+            let uid = auth.user?.id.uuidString.lowercased()
+            loadedUid = uid
+            snapshot.save(myTours, uid: uid)
         } catch {
             // Keep whatever we have; the profile still renders.
         }

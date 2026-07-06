@@ -25,6 +25,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
         let auth = AuthService()
         _authService = State(initialValue: auth)
         _makerProfileService = State(initialValue: MakerProfileService(auth: auth))
+        _makerTourService = State(initialValue: MakerTourService(auth: auth))
         _followService = State(initialValue: FollowService(auth: auth))
     }
 
@@ -38,7 +39,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
     @State private var followService: FollowService
     /// The signed-in user's own tours (all statuses) + draft creation. Loaded by
     /// the Profile tab. See `Data/MakerTourService.swift`.
-    @State private var makerTourService = MakerTourService()
+    @State private var makerTourService: MakerTourService
     @State private var libraryStore = LibraryStore()
     @State private var locationManager = LocationManager()
     @State private var audioPlayer = AudioPlayerService()
@@ -137,6 +138,19 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(toastCenter)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
                     .task {
+                        // Pre-warm the Me tab at launch so its data is already
+                        // loaded before the user first opens it — the services
+                        // also hydrate from a cached snapshot at init (instant
+                        // first paint), and this refreshes them now rather than
+                        // waiting for the first Me-tab tap. Non-blocking so it
+                        // doesn't delay sync setup / deep-link handling below.
+                        Task {
+                            guard authService.isSignedIn else { return }
+                            await makerProfileService.loadMyMaker()
+                            if let makerId = makerProfileService.myMaker?.id {
+                                await makerTourService.loadMyTours(makerId: makerId)
+                            }
+                        }
                         // Wire up library/saved-makers sync once. Created here
                         // (not as an inline @State default) so it captures the
                         // live auth + store instances; it sets the stores'
