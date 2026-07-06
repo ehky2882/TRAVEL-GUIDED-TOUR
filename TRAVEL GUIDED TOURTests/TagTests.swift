@@ -100,4 +100,43 @@ final class TagTests: XCTestCase {
         let tags = ["Art", "Museum", "Iconic Landmark", "Contemporary"]
         XCTAssertEqual(Tag.derivePrimary(from: tags), Tag.derivePrimary(from: tags.reversed()))
     }
+
+    // MARK: - tags(in:) + ordered (maker picker)
+
+    func test_tagsInFacet_matchesVocabulary() {
+        XCTAssertEqual(Tag.tags(in: .placeType), Tag.vocabulary.first { $0.facet == .placeType }?.tags)
+        XCTAssertTrue(Tag.tags(in: .theme).contains("Food"))
+    }
+
+    func test_ordered_sortsSelectionIntoVocabularyOrder() {
+        // Theme picked before Place type in the set → Place type leads out.
+        let ordered = Tag.ordered(["Food", "Museum", "Contemporary"])
+        XCTAssertEqual(ordered, ["Museum", "Food", "Contemporary"])
+    }
+
+    func test_ordered_dropsUnknownTags() {
+        XCTAssertEqual(Tag.ordered(["Museum", "NotATag"]), ["Museum"])
+    }
+
+    // MARK: - deriveCategory (legacy primaryCategory bridge)
+
+    func test_deriveCategory_faithWins() {
+        XCTAssertEqual(Tag.deriveCategory(from: ["Religious Building", "Architecture", "History"]), .sacredSites)
+    }
+
+    func test_deriveCategory_artOverArchitecture() {
+        XCTAssertEqual(Tag.deriveCategory(from: ["Museum", "Art", "Architecture"]), .visualArt)
+    }
+
+    func test_deriveCategory_parkGreen() {
+        XCTAssertEqual(Tag.deriveCategory(from: ["Park", "Green Escape"]), .natureAndParks)
+    }
+
+    func test_deriveCategory_architectureWhenNoStrongerSignal() {
+        XCTAssertEqual(Tag.deriveCategory(from: ["Notable Building", "Architecture"]), .architecture)
+    }
+
+    func test_deriveCategory_fallsBackToCulturalHeritage() {
+        XCTAssertEqual(Tag.deriveCategory(from: ["Notable Building", "Immigration"]), .culturalHeritage)
+    }
 }
