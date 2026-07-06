@@ -1,1 +1,5 @@
 .DS_Store
+
+# Session-local image-pipeline run configs carry fresh API keys — never commit
+drafts/pipeline/run_*.py
+drafts/pipeline/__pycache__/
