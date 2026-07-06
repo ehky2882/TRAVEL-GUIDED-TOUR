@@ -5,8 +5,9 @@ branch **`claude/dreamy-wozniak-nM6a4`**; images are on **gh-pages**. `/tmp` is 
 re-fetch candidates as needed; pipeline scripts are in this folder (`drafts/pipeline/`).
 
 ## Immediate next action (LA)
-**LA batches 1–8 image-COMPLETE — 36 tours staged.** Batch 8 (`drafts/la-batch8/`, in progress)
-= 18 Egyptian Theatre, 23 Farmers Market & The Grove, 43 The Getty Center, 44 Rodeo Drive & Beverly Hills. Getty+Rodeo `242a90c` (ship-safe); Egyptian `30bcdcf` (3 CC gallery credits); Farmers Market/Grove `f142455` (2 CC gallery credits).
+**LA batches 1–8 image-COMPLETE — 38 tours staged.** Batch 8 (`drafts/la-batch8/`, in progress)
+= 18 Egyptian Theatre, 23 Farmers Market & The Grove, 32 Muscle Beach, 33 Abbot Kinney, 43 The Getty Center, 44 Rodeo Drive & Beverly Hills. Getty+Rodeo `242a90c` + Muscle Beach/Abbot Kinney `f17641d` (all ship-safe); Egyptian `30bcdcf` (3 CC credits); Farmers Market/Grove `f142455` (2 CC credits).
+- **32 Muscle Beach / 33 Abbot Kinney:** both ship-safe, 0 credits. MB = SM original (MB12 acrobatics hero + MB1 sign). Abbot Kinney is THIN — stock returned Venice-boardwalk sign / Venice Italy / Hollywood / a NYC restaurant; owner took a ship-safe Venice mural street (AK23) hero-only (fully accurate AK gallery needs owner photos; only 1 Wikimedia shot confirms the street).
 - **23 Farmers Market & The Grove:** stock polluted (Seattle Pike Place, Rodeo, Echo Park, Angels Flight, a Lisbon tram). Ship-safe: F1 clock-tower HERO (Unsplash) + F27 stall + GR16 Grove square (Pexels). Green Grove trolley + fountain only under CC → owner took 2 Wikimedia (WF1 tower CC BY 2.5, WG1 trolley CC BY-SA 3.0).
 - **18 Egyptian Theatre:** HARD — **no ship-safe stock** (pools returned real Egyptian temples + every other Hollywood theatre). Sourced the real thing from Wikimedia (`Category:Grauman's Egyptian Theatre`, all CC BY/BY-SA). **Owner pasted own photo for HERO** (ship-safe); gallery = 3 Wikimedia CC (Praefcke CC BY 3.0, Pop Culture Geek CC BY 2.0, Gb321 CC BY 4.0).
 - **43 Getty Center:** "Getty" stock polluted with the Getty **Villa** (Roman colonnades/gardens) + a Barcelona Pavilion + Griffith Obs + Louvre Abu Dhabi — verify pixels. Hero G6 = white travertine Meier campus. NB: the Irwin **Central Garden** is NOT in the shipped set (search returned Villa gardens); add later if wanted.
@@ -27,9 +28,9 @@ Batch 7 (`drafts/la-batch7/`)
 **Next LA work:** wait for the owner to send more LA scripts (gaps below), then image-stage per PROCESS.md.
 
 ## LA status
-- **Scripts received:** b1 = 01,02,04,08,09,12,13,15; b2 = 19,20,24,28; b3 = 03,05,06,07; b4 = 10,11,14,16; b5 = 21,22,25,29; b6 = 30,31,34,35; b7 = 36,39,40,41; b8 = 18,23,43,44 (`drafts/la-batch1..8/`).
-- **Images DONE + pushed:** ALL 36 received tours (b1 ×8, b2 ×4, b3 ×4, b4 ×4, b5 ×4, b6 ×4, b7 ×4, b8 ×4) + the Downtown WALK.
-- **Gaps not yet sent:** LA tours 17, 26, 27, 32, 33, 37, 38, 42 (+ beyond). Owner sends more.
+- **Scripts received:** b1 = 01,02,04,08,09,12,13,15; b2 = 19,20,24,28; b3 = 03,05,06,07; b4 = 10,11,14,16; b5 = 21,22,25,29; b6 = 30,31,34,35; b7 = 36,39,40,41; b8 = 18,23,32,33,43,44 (`drafts/la-batch1..8/`).
+- **Images DONE + pushed:** ALL 38 received tours (b1 ×8, b2 ×4, b3 ×4, b4 ×4, b5 ×4, b6 ×4, b7 ×4, b8 ×6) + Downtown WALK + Museum Row WALK.
+- **Gaps not yet sent:** LA tours 17, 26, 27, 37, 38, 42 (+ beyond). Owner sends more.
 - **LA credits so far (17):** WD53 (CC BY 2.0), La Brea hero (CC BY-SA 4.0), MOCA ×3 (b3), Academy Y40 (CC BY-SA 4.0, author TBD) + Greek RG3 (CC BY-SA 3.0) + RG1 (CC BY-SA 4.0); b7: the-huntington_hero (Matthew Field CC BY-SA 3.0) + gamble-house_hero/_2/_3 (Cullen328 ×2, Codera23); b8: egyptian-theatre_2/_3/_4 (Praefcke CC BY 3.0, Pop Culture Geek CC BY 2.0, Gb321 CC BY 4.0) + **farmers-market-grove_2/_4 (Infernalfox CC BY 2.5, Clotee Pridgen Allochuku CC BY-SA 3.0)** — Egyptian + FM heroes are owner-photo/ship-safe. See `drafts/CREDITS.md`.
 - **Maker:** create **Atlas Studio LAX** at first LA wire-in.
 - **API keys loaded this session:** Unsplash, Pexels, Pixabay all provided + verified (paste fresh next session).
