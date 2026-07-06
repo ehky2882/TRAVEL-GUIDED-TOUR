@@ -177,57 +177,23 @@ struct TRAVEL_GUIDED_TOURApp: App {
                         // debounces this against the cold-launch / last refresh.
                         if phase == .active {
                             Task { await dataService.refreshOnForeground() }
+                            // Recover the bottom-module window if the
+                            // cold-launch `.onAppear` fired before any
+                            // scene reached `.foregroundActive` (a timing
+                            // race that left the mini-player + tab bar
+                            // missing for the whole session). `install()`
+                            // is idempotent, so once the window exists
+                            // this is a permanent no-op.
+                            installBottomModule()
                         }
                     }
                     .onAppear {
-                        // Install the secondary higher-level window
-                        // for the mini-player + tab bar. Captures
-                        // the same `@State` services so the second
-                        // window's content has access to the same
-                        // audio player, data, etc. as `ContentView`.
-                        // `interactiveBottomInset` tells the
-                        // window's hit-test override to pass
-                        // touches above this strip through to the
-                        // main window.
-                        bottomModuleWindow.install(
-                            interactiveBottomInset: AtlasBottomModule.height()
-                        ) {
-                            BottomModuleRoot()
-                                .environment(dataService)
-                                .environment(authService)
-                                .environment(libraryStore)
-                                .environment(locationManager)
-                                .environment(audioPlayer)
-                                .environment(recentlyViewed)
-                                .environment(recentSearches)
-                                .environment(proximityMonitor)
-                                .environment(tourDownloader)
-                                .environment(appShared)
-                                .environment(tourPresenter)
-                                .environment(makerPresenter)
-                                .environment(navState)
-                                .environment(savedMakersStore)
-                                .environment(toastCenter)
-                            // No `.preferredColorScheme(...)` here:
-                            // the install closure is evaluated ONCE
-                            // and would freeze the host
-                            // controller's `overrideUserInterfaceStyle`
-                            // at the install-time value, shadowing
-                            // the window-level override applied
-                            // below. The window override + .onChange
-                            // hook is the single source of truth for
-                            // the second window's trait collection.
-                        }
-                        // SwiftUI's `.preferredColorScheme` doesn't
-                        // propagate into a manually-created
-                        // UIWindow, so bridge the preference
-                        // directly onto the second window's
-                        // `overrideUserInterfaceStyle`. Without
-                        // this, the second window's trait
-                        // collection follows SYSTEM appearance and
-                        // the bars render inverted whenever the
-                        // picker disagrees with the system.
-                        bottomModuleWindow.apply(preference: colorSchemePreference)
+                        // Install the secondary higher-level window for
+                        // the mini-player + tab bar. See
+                        // `installBottomModule()` — factored so this
+                        // call site and the `scenePhase == .active`
+                        // recovery build the window identically.
+                        installBottomModule()
                     }
                     .onChange(of: colorSchemePreference) { _, newValue in
                         bottomModuleWindow.apply(preference: newValue)
@@ -243,6 +209,55 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     // over the module in the same window.
             }
         }
+    }
+
+    // MARK: - Bottom-module window
+
+    /// Installs the secondary higher-level window hosting the
+    /// mini-player + tab bar, injecting the same `@State` services the
+    /// main window's `ContentView` uses so both windows share one
+    /// audio player, data service, etc.
+    ///
+    /// Called from **two** sites — the App body's `.onAppear` and the
+    /// `scenePhase == .active` handler — so the cold-launch race (where
+    /// `.onAppear` fires before any scene is `.foregroundActive`) can
+    /// recover. `install()` is idempotent (`window == nil` guard), so
+    /// only the first successful call builds the window; the rest are
+    /// no-ops. Factoring it here keeps the two call sites' environment
+    /// injection from drifting apart.
+    private func installBottomModule() {
+        bottomModuleWindow.install(
+            interactiveBottomInset: AtlasBottomModule.height()
+        ) {
+            BottomModuleRoot()
+                .environment(dataService)
+                .environment(authService)
+                .environment(libraryStore)
+                .environment(locationManager)
+                .environment(audioPlayer)
+                .environment(recentlyViewed)
+                .environment(recentSearches)
+                .environment(proximityMonitor)
+                .environment(tourDownloader)
+                .environment(appShared)
+                .environment(tourPresenter)
+                .environment(makerPresenter)
+                .environment(navState)
+                .environment(savedMakersStore)
+                .environment(toastCenter)
+            // No `.preferredColorScheme(...)` here: the install closure
+            // is evaluated ONCE and would freeze the host controller's
+            // `overrideUserInterfaceStyle` at the install-time value,
+            // shadowing the window-level override. The window override
+            // (`apply`) + the `.onChange` hook are the single source of
+            // truth for the second window's trait collection.
+        }
+        // SwiftUI's `.preferredColorScheme` doesn't propagate into a
+        // manually-created UIWindow, so bridge the preference directly
+        // onto the second window's `overrideUserInterfaceStyle`.
+        // Without this the second window follows SYSTEM appearance and
+        // the bars render inverted when the picker disagrees with it.
+        bottomModuleWindow.apply(preference: colorSchemePreference)
     }
 
     // MARK: - Deep linking

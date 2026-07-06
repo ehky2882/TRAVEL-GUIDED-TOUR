@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import OSLog
 
 /// State shared between `ContentView` (in the main window) and the
 /// mini-player + tab bar (in a second, higher-level UIWindow). Both
@@ -50,24 +51,95 @@ final class AppSharedState {
 /// injected). The window is retained on this object until app
 /// termination — there's no need to tear it down per
 /// presentation.
+/// What `install()` should do given the current state. Extracted as a
+/// pure value so the cold-launch recovery logic is unit-testable
+/// without a live `UIWindowScene` (see `BottomModuleWindowTests`).
+enum BottomModuleInstallOutcome: Equatable {
+    /// The window already exists — calling again is a no-op.
+    case alreadyInstalled
+    /// A foreground-active scene is available — build the window now.
+    case installNow
+    /// No active scene yet (the cold-launch race) — defer and retry
+    /// once a scene activates instead of silently giving up.
+    case deferUntilActive
+}
+
 @MainActor
 final class BottomModuleWindowController {
     private var window: UIWindow?
+    /// One-shot observer that retries the install when a scene
+    /// activates, for the cold-launch case where `install()` ran
+    /// before any window scene reached `.foregroundActive`. Removed
+    /// as soon as the window is installed.
+    private var activationObserver: NSObjectProtocol?
+    /// The most recent color-scheme preference handed to `apply(...)`.
+    /// Cached so a *deferred* install (which happens after the App's
+    /// `.onAppear` already called `apply`) can re-apply it — otherwise
+    /// the recovered window would be stuck on SYSTEM appearance.
+    private var lastPreference: ColorSchemePreference = .system
 
-    /// Installs the secondary window. Idempotent — calling again is a no-op.
-    /// `rootView` is built lazily so it can capture the latest environment values.
-    /// `interactiveBottomInset` is the height of the bottom strip
-    /// where the window's content actually paints — touches above
-    /// it are passed through to the main window.
+    private static let log = Logger(subsystem: "com.dozent.app", category: "BottomModuleWindow")
+
+    /// Pure decision used by `install()`. Kept separate so the
+    /// recovery branching can be unit-tested deterministically.
+    static func installOutcome(hasWindow: Bool, hasActiveScene: Bool) -> BottomModuleInstallOutcome {
+        if hasWindow { return .alreadyInstalled }
+        return hasActiveScene ? .installNow : .deferUntilActive
+    }
+
+    /// Installs the secondary window. Idempotent — once installed,
+    /// calling again is a no-op (the `window == nil` guard).
+    /// `rootView` is built lazily so it can capture the latest
+    /// environment values. `interactiveBottomInset` is the height of
+    /// the bottom strip where the window's content actually paints —
+    /// touches above it are passed through to the main window.
+    ///
+    /// **Cold-launch recovery.** On some launches the App body's
+    /// `.onAppear` fires *before* the window scene reaches
+    /// `.foregroundActive`. Rather than silently give up (which left
+    /// the mini-player + tab bar missing for the whole session), this
+    /// registers a one-shot `UIScene.didActivateNotification` observer
+    /// that retries with the scene that just activated, then removes
+    /// itself. The App also re-calls `install()` on `scenePhase ==
+    /// .active` (belt-and-suspenders); both paths hit the same guard,
+    /// so the window is created exactly once.
+    ///
+    /// - Returns: `true` if the window is now installed (either this
+    ///   call built it or it already existed); `false` if the install
+    ///   was deferred because no active scene was available yet.
+    @discardableResult
     func install<Root: View>(
         interactiveBottomInset: CGFloat,
-        @ViewBuilder rootView: () -> Root
+        @ViewBuilder rootView: @escaping () -> Root
+    ) -> Bool {
+        let activeScene = Self.foregroundActiveScene()
+        switch Self.installOutcome(hasWindow: window != nil, hasActiveScene: activeScene != nil) {
+        case .alreadyInstalled:
+            return true
+        case .installNow:
+            installWindow(in: activeScene!, interactiveBottomInset: interactiveBottomInset, rootView: rootView)
+            return true
+        case .deferUntilActive:
+            registerActivationRetry(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
+            return false
+        }
+    }
+
+    /// The current foreground-active window scene, if any. On iPad
+    /// multi-scene (`UIApplicationSupportsMultipleScenes`) this picks
+    /// the active one so we never attach to a backgrounded scene.
+    private static func foregroundActiveScene() -> UIWindowScene? {
+        UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first { $0.activationState == .foregroundActive }
+    }
+
+    private func installWindow<Root: View>(
+        in scene: UIWindowScene,
+        interactiveBottomInset: CGFloat,
+        rootView: () -> Root
     ) {
         guard window == nil else { return }
-        guard let scene = UIApplication.shared.connectedScenes
-            .compactMap({ $0 as? UIWindowScene })
-            .first(where: { $0.activationState == .foregroundActive })
-        else { return }
 
         let w = PassThroughWindow(windowScene: scene)
         // One level above .normal so this window sits on top of
@@ -85,6 +157,45 @@ final class BottomModuleWindowController {
 
         w.isHidden = false
         window = w
+        clearActivationRetry()
+        // Re-apply the last-known appearance: a deferred install
+        // happens after the App already called `apply`, so the fresh
+        // window would otherwise be stuck on SYSTEM appearance.
+        apply(preference: lastPreference)
+        Self.log.info("Bottom-module window installed (scene=\(scene.session.persistentIdentifier, privacy: .public))")
+    }
+
+    /// Registers the one-shot scene-activation retry. Safe to call
+    /// repeatedly — only the first registration takes effect.
+    private func registerActivationRetry<Root: View>(
+        interactiveBottomInset: CGFloat,
+        @ViewBuilder rootView: @escaping () -> Root
+    ) {
+        guard activationObserver == nil else { return }
+        Self.log.info("Bottom-module install deferred — no active scene yet; awaiting scene activation.")
+        activationObserver = NotificationCenter.default.addObserver(
+            forName: UIScene.didActivateNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] note in
+            MainActor.assumeIsolated {
+                guard let self, self.window == nil else { return }
+                // Prefer the scene that just activated (correct on
+                // iPad multi-scene); fall back to any active scene.
+                let scene = (note.object as? UIWindowScene).flatMap {
+                    $0.activationState == .foregroundActive ? $0 : nil
+                } ?? Self.foregroundActiveScene()
+                guard let scene else { return }
+                self.installWindow(in: scene, interactiveBottomInset: interactiveBottomInset, rootView: rootView)
+            }
+        }
+    }
+
+    private func clearActivationRetry() {
+        if let activationObserver {
+            NotificationCenter.default.removeObserver(activationObserver)
+            self.activationObserver = nil
+        }
     }
 
     /// Mirrors the app-level color-scheme preference onto the
@@ -98,6 +209,7 @@ final class BottomModuleWindowController {
     /// shade when the user picks an appearance in Settings that
     /// differs from the system.
     func apply(preference: ColorSchemePreference) {
+        lastPreference = preference
         guard let window else { return }
         switch preference {
         case .system: window.overrideUserInterfaceStyle = .unspecified
