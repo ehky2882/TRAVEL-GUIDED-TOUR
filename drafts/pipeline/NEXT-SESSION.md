@@ -10,6 +10,8 @@ re-fetch candidates as needed; pipeline scripts are in this folder (`drafts/pipe
 - **43 Getty Center:** "Getty" stock polluted with the Getty **Villa** (Roman colonnades/gardens) + a Barcelona Pavilion + Griffith Obs + Louvre Abu Dhabi — verify pixels. Hero G6 = white travertine Meier campus. NB: the Irwin **Central Garden** is NOT in the shipped set (search returned Villa gardens); add later if wanted.
 - **44 Rodeo Drive:** hero R2 = iconic corner (green dome + Torso statue). Gallery = Via Rodeo lane (R37) + sign (R7) + Beverly Hills garden sign (R30). Dropped false matches: R28 (Prada = Las Vegas), R8 (Czech storefront).
 
+**LA Downtown WALK** (first LA multi-stop, `drafts/la-downtown-walk/`) image-staged 2026-07-06: `downtown-la-walk` hero = D25 Bunker Hill aerial (Disney Hall + Music Center + towers; ship-safe, `058f2f6`). 7 landmark stops (Disney Hall → Broad → MOCA → Angels Flight → Grand Central Market → Bradbury → El Pueblo) all **reuse existing single-tour heroes** — no new stop images. MOCA hero credit inherited (already in ledger), no new obligations. Blocked on 8 MP3s (intro + 7 stops).
+
 Batch 7 (`drafts/la-batch7/`)
 = 36 LA Memorial Coliseum, 39 The Huntington, 40 Gamble House, 41 Old Pasadena — pushed 2026-07-06 (Coliseum+Gamble `b2f4def`; Huntington `3f9cb1c`; Old Pasadena `275df5c`). **4 new credits (Huntington hero + Gamble ×3 — all CC BY-SA).**
 - **36 Coliseum:** all ship-safe (Pexels); C18 hero + 4 gallery.
