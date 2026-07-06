@@ -43,9 +43,11 @@ struct ContentView: View {
     @State private var didRequestLocationPermission = false
     /// The home drawer's detent, lifted out of `HomeView` so it
     /// survives HomeView being recreated on tab switches. Starts
-    /// expanded on a fresh launch; returning to the Home tab restores
-    /// whatever detent the user last left it at.
-    @State private var homeSheetDetent: BottomSheetDetent = .large
+    /// half-open on a fresh launch so the map (and its pins) is visible
+    /// above the drawer — new users were missing the map when it opened
+    /// fully-expanded; returning to the Home tab restores whatever
+    /// detent the user last left it at.
+    @State private var homeSheetDetent: BottomSheetDetent = .medium
     /// State shared between `HomeView`'s map surface and the home
     /// drawer (which is hosted here in `ContentView` so it can stack
     /// z-order on top of the mini-player + tab bar). Both sides read
