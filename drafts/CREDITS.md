@@ -58,7 +58,7 @@ Last updated 2026-07-02 (Toronto complete; LA batch 1 in progress).
 | _(bata-shoe-museum_4 clog wall + _5 mukluks are ship-safe Pexels — no credit)_ | | | | |
 | _(Gardiner Museum, batch 10, is hero-only + owner-supplied — no credit)_ | | | | |
 
-### Los Angeles (batches 1–5, `drafts/la-batch1..5`)
+### Los Angeles (batches 1–7, `drafts/la-batch1..7`)
 | File | Subject | Author | License | Source |
 |------|---------|--------|---------|--------|
 | `walt-disney-concert-hall_6.webp` | the "french-fry organ" (WD53) | Daniel Hartwig | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Disney_Concert_Hall_(10920404614).jpg |
@@ -74,6 +74,12 @@ Last updated 2026-07-02 (Toronto complete; LA batch 1 in progress).
 | _(batch 3: Angels Flight 05 + Bradbury 06 + City Hall 07 = Unsplash/Pexels — no credit. MOCA 03 = all 3 CC-licensed, above.)_ | | | | |
 | _(batch 4: Little Tokyo 10 + Last Bookstore 11 + Dolby 14 + Capitol 16 = all ship-safe/PD/owner — no credit.)_ | | | | |
 | _(batch 5: Academy 21 gallery Y40 + Griffith/Greek 25 gallery RG3/RG1 = credit-required, above. Petersen 22 + Third St Promenade 29 = ship-safe/owner — no credit.)_ | | | | |
+| _(batch 6: Venice Boardwalk 30 + Venice Canals 31 + Science Center/Endeavour 34 + NHM 35 = all ship-safe (Unsplash/Pexels) — no credit.)_ | | | | |
+| `the-huntington_hero.webp` | Huntington Art Gallery front facade (UW2) | Matthew Field (Mfield) | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Huntington_art_gallery_at_huntington_library_california.jpg |
+| `gamble-house_hero.webp` | Gamble House front elevation (DW20) | Cullen328 | CC BY-SA 3.0 | Wikimedia Commons |
+| `gamble-house_2.webp` | Gamble House (DW8) | Codera23 | CC BY-SA 4.0 | Wikimedia Commons |
+| `gamble-house_3.webp` | Gamble House (DW7) | Cullen328 | CC BY-SA 3.0 | Wikimedia Commons |
+| _(batch 7: Coliseum 36 + Old Pasadena 41 = ship-safe (Pexels/Unsplash) — no credit. The Huntington 39 gallery U6/U9/U8 = Unsplash — no credit; hero above. Gamble House 40 `_4` = Mattnad PD — no credit; hero/`_2`/`_3` above.)_ | | | | |
 
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
@@ -94,7 +100,7 @@ for the exact per-image list.
 | City | Authoritative credit file (on `gh-pages`) | Credit-required images (CC BY / CC BY-SA) |
 |------|-------------------------------------------|-------------------------------------------|
 | **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
-| **Los Angeles** | *this file* (below) | 8 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5) |
+| **Los Angeles** | *this file* (below) | 12 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7) |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
