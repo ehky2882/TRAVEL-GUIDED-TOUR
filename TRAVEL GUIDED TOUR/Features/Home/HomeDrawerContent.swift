@@ -307,7 +307,6 @@ private struct FilterResultCard: View {
     let tour: Tour
 
     @Environment(DataService.self) private var dataService
-    @Environment(LibraryStore.self) private var libraryStore
     @Environment(LocationManager.self) private var locationManager
     @Environment(TourPresenter.self) private var tourPresenter
 
@@ -351,30 +350,25 @@ private struct FilterResultCard: View {
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
-    /// Full-width 4:3 hero with the bookmark AFFORDANCE in the top-right
-    /// corner (same control as the rail card). The inner Button fires
-    /// `toggleSaved`; a tap anywhere else on the card opens the tour.
+    /// Full-width 4:3 hero with the paired download + bookmark
+    /// AFFORDANCES in the top-right corner (shared `CardHeroControls`,
+    /// same control as the rail card) and — for multi-stop tours only —
+    /// a decorative route mini-map in the bottom-right corner. A chip
+    /// fires its own action; a tap anywhere else on the card opens the
+    /// tour. The mini-map has no tap target of its own.
     private var heroSection: some View {
-        ZStack(alignment: .topTrailing) {
-            HeroImageView(
-                imageName: tour.heroImageURL,
-                height: Self.heroHeight,
-                cornerRadius: 0,
-                category: tour.primaryCategory
-            )
-
-            Button {
-                libraryStore.toggleSaved(tour.id)
-            } label: {
-                Image(systemName: libraryStore.isSaved(tour.id) ? "bookmark.fill" : "bookmark")
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .frame(width: 36, height: 36)
-                    .background(.regularMaterial, in: Circle())
-            }
-            .buttonStyle(.plain)
-            .padding(AtlasSpacing.sm)
-            .accessibilityLabel(libraryStore.isSaved(tour.id) ? "Saved" : "Save tour")
+        HeroImageView(
+            imageName: tour.heroImageURL,
+            height: Self.heroHeight,
+            cornerRadius: 0,
+            category: tour.primaryCategory
+        )
+        .overlay(alignment: .bottomTrailing) {
+            RouteMiniMapView(tour: tour)
+                .padding(AtlasSpacing.sm)
+        }
+        .overlay(alignment: .topTrailing) {
+            CardHeroControls(tour: tour)
         }
     }
 
