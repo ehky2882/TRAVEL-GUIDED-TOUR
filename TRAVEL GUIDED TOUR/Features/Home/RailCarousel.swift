@@ -56,7 +56,6 @@ private struct TourCard: View {
     let tour: Tour
 
     @Environment(DataService.self) private var dataService
-    @Environment(LibraryStore.self) private var libraryStore
     @Environment(LocationManager.self) private var locationManager
 
     /// One dominant card per viewport with a peek of the next: 260pt
@@ -108,33 +107,27 @@ private struct TourCard: View {
         .frame(width: cardWidth, alignment: .leading)
     }
 
-    /// Hero image with the bookmark AFFORDANCE in the top-right
-    /// corner — same control as the full-width list card, so saving a
-    /// tour reads identically on the map's rails and in detail. The
-    /// button sits inside the rail card's outer Button; SwiftUI routes
-    /// the tap to the innermost interactive view, so the bookmark
-    /// fires `toggleSaved` while a tap anywhere else opens the tour.
+    /// Hero image with the paired download + bookmark AFFORDANCES in the
+    /// top-right corner (shared `CardHeroControls`, so saving/downloading
+    /// reads identically on the map's rails and in the filtered feed) and
+    /// — for multi-stop tours only — a decorative route mini-map in the
+    /// bottom-right corner. The corner controls sit inside the rail card's
+    /// outer Button; SwiftUI routes the tap to the innermost interactive
+    /// view, so a chip fires its action while a tap anywhere else opens
+    /// the tour. The mini-map has no tap target of its own.
     private var heroSection: some View {
-        ZStack(alignment: .topTrailing) {
-            HeroImageView(
-                imageName: tour.heroImageURL,
-                height: heroHeight,
-                cornerRadius: 0,
-                category: tour.primaryCategory
-            )
-
-            Button {
-                libraryStore.toggleSaved(tour.id)
-            } label: {
-                Image(systemName: libraryStore.isSaved(tour.id) ? "bookmark.fill" : "bookmark")
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .frame(width: 36, height: 36)
-                    .background(.regularMaterial, in: Circle())
-            }
-            .buttonStyle(.plain)
-            .padding(AtlasSpacing.sm)
-            .accessibilityLabel(libraryStore.isSaved(tour.id) ? "Saved" : "Save tour")
+        HeroImageView(
+            imageName: tour.heroImageURL,
+            height: heroHeight,
+            cornerRadius: 0,
+            category: tour.primaryCategory
+        )
+        .overlay(alignment: .bottomTrailing) {
+            RouteMiniMapView(tour: tour)
+                .padding(AtlasSpacing.sm)
+        }
+        .overlay(alignment: .topTrailing) {
+            CardHeroControls(tour: tour)
         }
     }
 
