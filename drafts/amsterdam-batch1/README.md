@@ -1,40 +1,52 @@
 # Amsterdam — batch 1 (NEW CITY) — images STAGED ✅
 
 Started 2026-07-06. New city **Amsterdam**; new maker **Atlas Studio AMS** (create at first wire-in).
-Owner numbering scheme (gaps expected). **All 4 scripts sourced + owner-picked + cropped + pushed to
-gh-pages** on 2026-07-06. Awaiting narration audio → wire into `Tours.json` at that point.
+Owner numbering scheme (gaps expected). **8 scripts sourced + owner-picked + cropped + pushed to
+gh-pages** on 2026-07-06 (waves 1 + 2). Awaiting narration audio → wire into `Tours.json` at that point.
 
 Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 
-## Tours (4) — image staging COMPLETE
+## Tours — image staging status
 | # | Tour | slug | hero + gallery (in order) | credit? |
 |---|------|------|---------------------------|---------|
 | 01 | Dam Square & Royal Palace | `dam-square-royal-palace` | `_hero`(DS7 palace+square) · `_2`(DS29) · `_3`(DS22 aerial) · `_4`(DS2 monument) · `_5`(DS19 palace facade) | ship-safe stock, none |
 | 03 | De Wallen | `de-wallen` | `_hero`(DW3 gabled fronts) · `_2`(DW33) · `_3`(DW34) · `_4`(DW4 sunset) · `_5`(DW1) · `_6`(DW44 autumn) | ship-safe stock, none |
 | 04 | Oude Kerk | `oude-kerk` | `_hero`(OK29 exterior+tower) · `_2`(OK28 exterior) · `_3`(OKW2 interior — wooden vault + gravestone floor) | **CC — see CREDITS.md** |
 | 08 | Begijnhof | `begijnhof` | `_hero`(BGW9 courtyard+statue) · `_2`(BGW2 weeping tree) · `_3`(BGW8 lawn+houses) · `_4`(BGW10 house detail) | **CC — see CREDITS.md** |
+| 10 | Canal Ring / Golden Bend | `canal-ring-golden-bend` | `_hero`(GB3 dusk bend) · `_2`(GB13) · `_3`(GB1 bright) · `_4`(GB31 bridges) · `_5`(GB28 stone bridge) · `_6`(GB6 dancing houses) | ship-safe stock, none |
+| 11 | Nine Streets | `nine-streets` | `_hero`(NS13 street life) · `_2`(NS17 bridge+houses) · `_3`(NS10 shop street) · `_4`(NS42 bridge) · `_5`(NS9 canal-side) · `_6`(NS20 night) | ship-safe stock, none |
+| 18 | Anne Frank House | `anne-frank-house` | `_hero`(AF26 house + museum entrance) | **CC — see CREDITS.md** |
+| 19 | Westerkerk | `westerkerk` | `_hero`(WK34 tower+crown) · `_2`(WK11 tower over canal) · **_3 interior = owner picking (WKI9/WKI7…), pending** | hero+_2 ship-safe; interior CC |
 
-All webp are 1200×900 q82. Committed to gh-pages in `d58e94d`.
+All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked).
+
+**⚠️ WK23 rejected:** the stock "Westerkerk interior" pick (WK23) turned out to be a **different Gothic church** (ribbed stone vaults, not the Westerkerk's whitewashed Renaissance barrel vault) — caught on full-size review. Replaced with a Wikimedia-verified Westerkerk interior (owner picking from `westerkerk-int` set).
 
 ## Sensitivity rules HONORED
 - **De Wallen:** every candidate frame screened; only the daytime/dusk **canal quarter + gabled
   house-fronts + church towers** were used. **No red-light windows/workers** — the one red-glow
   night shot (DW23) was excluded. App-appropriate.
 - **Begijnhof:** courtyard architecture only, no residents/windows.
+- **Anne Frank House:** dignified exteriors only — the plain canal house + museum entrance and the
+  neighbouring Westerkerk. **No interior/annex, nothing sensationalized** (matches the script:
+  "from the outside there is almost nothing to see"). Stock only had generic canals; the real
+  subject came from Wikimedia (CC).
 
 ## Sourcing notes (for the record)
-- **Dam Square + De Wallen:** rich ship-safe stock (Unsplash/Pexels/Pixabay). No credit obligation.
+- **Dam Square, De Wallen, Canal Ring, Nine Streets:** rich ship-safe stock (Unsplash/Pexels/Pixabay). No credit.
+- **Westerkerk:** hero + `_2` (tower + imperial crown) are ship-safe stock — the crown makes the
+  subject unmistakable. **Interior** must be Wikimedia-verified (see WK23 warning above) → CC.
 - **Oude Kerk:** stock pool badly polluted (Delft's Oude Kerk, an alpine town, unrelated roads) →
-  switched to **Wikimedia-verified** images from the correct subcategories
-  (`Interior of Oude Kerk (Amsterdam)`, `Exterior views of the Oude Kerk (Amsterdam)`). CC-licensed.
+  Wikimedia subcategories (`Interior of Oude Kerk (Amsterdam)`, `Exterior views of the Oude Kerk (Amsterdam)`). CC.
 - **Begijnhof:** stock polluted with Belgian beguinages (Bruges/Leuven) + canal houses →
-  Wikimedia `Category:Begijnhof, Amsterdam` (note the comma, not parens). CC-licensed.
-- **NOT captured:** a clean verified shot of Het Houten Huys (#34, black wooden front) or the hidden
-  chapel — offered to the owner; can add later if wanted.
+  Wikimedia `Category:Begijnhof, Amsterdam` (note the comma, not parens). CC.
+- **Anne Frank House:** stock = generic canals only → Wikimedia `Category:Anne Frank House`. CC.
+- **NOT captured:** a clean verified shot of Het Houten Huys (#34, black wooden front) or the
+  Begijnhof hidden chapel — offered to the owner; can add later if wanted.
 
 ## Wire-in checklist (do when audio arrives)
 1. Create maker **Atlas Studio AMS** 🇳🇱 (deterministic uuid5, scheme `atlas-maker:ams`).
-2. Add 4 tour entries to `Resources/Tours.json` (single-stop, geofenced, radius 30m, free).
+2. Add tour entries to `Resources/Tours.json` (single-stop, geofenced, radius 30m, free).
    - Deterministic ids: `atlas-tour:ams:<slug>` / `atlas-stop:ams:<slug>` (uuid5, NAMESPACE_URL).
    - `transcriptText` = verbatim clean narration from each `.txt` here (trim outer whitespace).
    - `heroImageURL` + `additionalImageURLs` per the pick map above.
@@ -43,11 +55,17 @@ All webp are 1200×900 q82. Committed to gh-pages in `d58e94d`.
      - De Wallen: `52.37360, 4.89750`
      - Oude Kerk: `52.37440, 4.89810`
      - Begijnhof: `52.36900, 4.88990`
+     - Canal Ring / Golden Bend (Herengracht bend): `52.36660, 4.89250`
+     - Nine Streets (De Negen Straatjes): `52.36940, 4.88680`
+     - Anne Frank House (Prinsengracht 263): `52.37520, 4.88400`
+     - Westerkerk (Westermarkt): `52.37470, 4.88390`
    - **Category suggestions (owner's call):** Dam Square → `history`; De Wallen → `culturalHeritage`;
-     Oude Kerk → `sacredSites`; Begijnhof → `hiddenGems`.
+     Oude Kerk → `sacredSites`; Begijnhof → `hiddenGems`; Canal Ring → `culturalHeritage` (or `architecture`);
+     Nine Streets → `hiddenGems` (or `culturalHeritage`); Anne Frank House → `history`; Westerkerk → `sacredSites`.
 3. `swift scripts/validate-tours.swift` → fix any errors.
-4. Surface the Oude Kerk + Begijnhof credits at ship time (per `drafts/CREDITS.md`).
+4. Surface the CC credits at ship time (Oude Kerk, Begijnhof, Anne Frank House, Westerkerk interior — per `drafts/CREDITS.md`).
 
 ## Still to come (owner)
-- Amsterdam scripts **02, 05, 06, 07, …** not yet received — source in the next pass.
-- Narration MP3s for these 4 (nothing goes live until audio + maker exist).
+- Amsterdam scripts **02, 05, 06, 07, 12–17, 20+ …** not yet received — source in the next passes.
+- Owner to pick the **Westerkerk interior** (`_3`) from the verified `westerkerk-int` options.
+- Narration MP3s for all 8 (nothing goes live until audio + maker exist).

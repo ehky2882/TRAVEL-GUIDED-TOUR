@@ -109,7 +109,18 @@ Palace and De Wallen are entirely ship-safe stock — no credit.**
 | `begijnhof_3.webp` | courtyard lawn + gabled houses | thierrytutin | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(4095056424).jpg |
 | `begijnhof_4.webp` | gabled house facade detail | Fred Romero (Paris) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_-_Begijnhof_(30183600072).jpg |
 
-_(Dam Square & Royal Palace: hero + 4 gallery all ship-safe stock. De Wallen: hero + 5 gallery all ship-safe stock. No credit for either.)_
+### Anne Frank House (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `anne-frank-house_hero.webp` | the house + museum entrance, Prinsengracht | Dietmar Rabich | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(NL),_Anne-Frank-Huis_--_2015_--_7185.jpg |
+
+### Westerkerk (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| _(`_3` interior — owner picking from verified `westerkerk-int` set; CC BY-SA — credit to be filled when chosen)_ | | | | |
+| _(hero WK34 + `_2` WK11 tower+crown = ship-safe stock — no credit)_ | | | | |
+
+_(Ship-safe stock, NO credit: Dam Square & Royal Palace hero+4, De Wallen hero+5, Canal Ring / Golden Bend hero+5, Nine Streets hero+5, Westerkerk hero+`_2`.)_
 
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
@@ -131,7 +142,7 @@ for the exact per-image list.
 |------|-------------------------------------------|-------------------------------------------|
 | **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
 | **Los Angeles** | *this file* (below) | 17 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7; Egyptian gallery ×3 + Farmers Market/Grove ×2 b8) |
-| **Amsterdam** | *this file* (above) | 7 — Oude Kerk hero/`_2`/`_3` + Begijnhof hero/`_2`/`_3`/`_4` (Wikimedia CC BY / BY-SA). Dam Square + De Wallen = ship-safe stock, no credit. |
+| **Amsterdam** | *this file* (above) | 8 (+1 pending) — Oude Kerk ×3 + Begijnhof ×4 + Anne Frank House hero (Wikimedia CC); Westerkerk interior `_3` pending owner pick. Dam Square / De Wallen / Canal Ring / Nine Streets / Westerkerk tower = ship-safe stock, no credit. |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
