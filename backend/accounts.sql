@@ -38,8 +38,12 @@ create table if not exists public.profiles (
     updated_at   timestamptz not null default now()
 );
 
--- Auto-create a profile row when a new auth user signs up (Apple/email/Google all
--- land in auth.users; their name/avatar arrive in raw_user_meta_data).
+-- Auto-create a profile row AND a maker row when a new auth user signs up
+-- (Apple/email/Google all land in auth.users; their name/avatar arrive in
+-- raw_user_meta_data). One login = one profile = one maker page, so EVERY
+-- account is a maker from signup — even before it publishes a tour. This is
+-- why the Settings "Makers" count (get_catalog returns all maker rows) counts
+-- every account. (Owner decision 2026-07-05.)
 create or replace function public.handle_new_user()
 returns trigger language plpgsql security definer set search_path = public as $$
 begin
@@ -50,6 +54,17 @@ begin
         new.raw_user_meta_data->>'avatar_url'
     )
     on conflict (id) do nothing;
+
+    -- Maker profile for the new account (empty bio; MakerProfileService.ensureMaker
+    -- reuses this row on first edit/authoring thanks to uniq_makers_user_id).
+    insert into public.makers (id, display_name, bio, user_id)
+    select gen_random_uuid(),
+           coalesce(new.raw_user_meta_data->>'full_name',
+                    new.raw_user_meta_data->>'name', 'New Creator'),
+           '',
+           new.id
+    where not exists (select 1 from public.makers where user_id = new.id);
+
     return new;
 end; $$;
 
@@ -57,6 +72,13 @@ drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created
     after insert on auth.users
     for each row execute function public.handle_new_user();
+
+-- One-time backfill: give any pre-existing account (signed up before the maker
+-- auto-create above) a maker row so it counts too. Guarded + idempotent.
+insert into public.makers (id, display_name, bio, user_id)
+select gen_random_uuid(), coalesce(p.display_name, 'New Creator'), '', p.id
+from public.profiles p
+where not exists (select 1 from public.makers m where m.user_id = p.id);
 
 -- Is the current request an admin (the Atlas moderation team)?
 create or replace function public.is_admin()
