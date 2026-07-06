@@ -284,7 +284,13 @@ struct MakerView: View {
             }
         }
         .task(id: maker.id) {
-            if let followService { followState = await followService.state(for: maker.id) }
+            guard let followService else { return }
+            // Stale-while-revalidate: show the last-known counts instantly (no
+            // 0/blank flash on open — most visible on the Me tab), then refresh.
+            // `state(for:)` returns the cached value on failure, so a transient
+            // network blip never clobbers good counts back to zero.
+            followState = followService.cachedState(for: maker.id)
+            followState = await followService.state(for: maker.id)
         }
     }
 
