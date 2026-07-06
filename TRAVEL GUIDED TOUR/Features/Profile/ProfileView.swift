@@ -27,6 +27,10 @@ struct ProfileView: View {
             // Load (or clear) the real maker row + the user's own tours on
             // sign-in / sign-out. `.task(id:)` re-fires when the user id changes.
             .task(id: authService.userId) {
+                // Show the cached profile + tours instantly (swapping to the
+                // right account's snapshot if the user changed), then refresh.
+                makerProfileService.hydrateIfUserChanged()
+                makerTourService.hydrateIfUserChanged()
                 await makerProfileService.loadMyMaker()
                 if let makerId = makerProfileService.myMaker?.id {
                     await makerTourService.loadMyTours(makerId: makerId)

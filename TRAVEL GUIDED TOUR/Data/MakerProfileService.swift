@@ -23,10 +23,37 @@ final class MakerProfileService {
 
     private let auth: AuthService
     private let client: SupabaseClient
+    /// Last-known maker row, persisted per user so the Me tab renders the real
+    /// profile (name / bio / avatar / links) on the first frame after launch
+    /// instead of the synthesized placeholder. See `ProfileSnapshotStore`.
+    private let snapshot: ProfileSnapshotStore<Maker>
+    /// The user id `myMaker` currently reflects — lets `hydrateIfUserChanged()`
+    /// swap to the right cached profile when the account changes (and avoid
+    /// clobbering a freshly-loaded value when it hasn't).
+    private var loadedUid: String?
+    private var didHydrate = false
 
-    init(auth: AuthService, client: SupabaseClient = SupabaseClientProvider.shared) {
+    init(auth: AuthService,
+         client: SupabaseClient = SupabaseClientProvider.shared,
+         snapshot: ProfileSnapshotStore<Maker> = ProfileSnapshotStore("myMaker")) {
         self.auth = auth
         self.client = client
+        self.snapshot = snapshot
+        // Hydrate synchronously from the cached snapshot so the first Me-tab
+        // paint shows the real profile (the session is restored synchronously in
+        // AuthService.init, so the uid is already available here).
+        hydrateIfUserChanged()
+    }
+
+    /// Swap `myMaker` to the current user's cached snapshot when the active user
+    /// changed (or on first hydrate); a no-op when unchanged, so it never
+    /// clobbers a freshly-loaded profile. Call from the Profile tab's `.task`.
+    func hydrateIfUserChanged() {
+        let uid = auth.user?.id.uuidString.lowercased()
+        guard !didHydrate || uid != loadedUid else { return }
+        didHydrate = true
+        loadedUid = uid
+        myMaker = snapshot.load(uid: uid)
     }
 
     /// Load (or clear) the current user's maker row. Safe to call repeatedly —
@@ -46,6 +73,11 @@ final class MakerProfileService {
                 .execute()
                 .value
             myMaker = rows.first?.asMaker
+            loadedUid = uid
+            // Keep the cached snapshot in step with server truth (write-through
+            // on a real row; clear it if the account has no maker row).
+            if let m = myMaker { snapshot.save(m, uid: uid) }
+            else { snapshot.clear(uid: uid) }
         } catch {
             // Leave myMaker as-is; the profile falls back to the synthesized
             // placeholder. Transient failures shouldn't wipe a loaded profile.
@@ -97,6 +129,8 @@ final class MakerProfileService {
             .upsert(row, onConflict: "id")
             .execute()
         myMaker = row.asMaker
+        loadedUid = uid
+        snapshot.save(row.asMaker, uid: uid)
     }
 
     /// Upload a square avatar JPEG to Storage and return its public URL. The
