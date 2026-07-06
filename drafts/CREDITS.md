@@ -58,7 +58,7 @@ Last updated 2026-07-02 (Toronto complete; LA batch 1 in progress).
 | _(bata-shoe-museum_4 clog wall + _5 mukluks are ship-safe Pexels — no credit)_ | | | | |
 | _(Gardiner Museum, batch 10, is hero-only + owner-supplied — no credit)_ | | | | |
 
-### Los Angeles (batches 1–7, `drafts/la-batch1..7`)
+### Los Angeles (batches 1–8, `drafts/la-batch1..8`)
 | File | Subject | Author | License | Source |
 |------|---------|--------|---------|--------|
 | `walt-disney-concert-hall_6.webp` | the "french-fry organ" (WD53) | Daniel Hartwig | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Disney_Concert_Hall_(10920404614).jpg |
@@ -80,6 +80,10 @@ Last updated 2026-07-02 (Toronto complete; LA batch 1 in progress).
 | `gamble-house_2.webp` | Gamble House (DW8) | Codera23 | CC BY-SA 4.0 | Wikimedia Commons |
 | `gamble-house_3.webp` | Gamble House (DW7) | Cullen328 | CC BY-SA 3.0 | Wikimedia Commons |
 | _(batch 7: Coliseum 36 + Old Pasadena 41 = ship-safe (Pexels/Unsplash) — no credit. The Huntington 39 gallery U6/U9/U8 = Unsplash — no credit; hero above. Gamble House 40 `_4` = Mattnad PD — no credit; hero/`_2`/`_3` above.)_ | | | | |
+| `egyptian-theatre_2.webp` | Egyptian Theatre palm forecourt (E14) | Andreas Praefcke | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Egyptian_Theatre_Hollywood_3.jpg |
+| `egyptian-theatre_3.webp` | Egyptian Theatre forecourt at night (E3) | Pop Culture Geek (The Conmunity) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Clone_Wars_screening_-_Egyptian_theater_entryway_(5240103221).jpg |
+| `egyptian-theatre_4.webp` | Egyptian Theatre interior auditorium (E23) | Gb321 | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Grauman%27s_Egyptian_interior_2026.jpg |
+| _(batch 8: Getty 43 + Rodeo 44 = ship-safe — no credit. Egyptian Theatre 18 HERO = owner photo — no credit; gallery `_2`/`_3`/`_4` above.)_ | | | | |
 
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
@@ -100,7 +104,7 @@ for the exact per-image list.
 | City | Authoritative credit file (on `gh-pages`) | Credit-required images (CC BY / CC BY-SA) |
 |------|-------------------------------------------|-------------------------------------------|
 | **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
-| **Los Angeles** | *this file* (below) | 12 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7) |
+| **Los Angeles** | *this file* (below) | 15 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7; Egyptian gallery ×3 b8) |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
