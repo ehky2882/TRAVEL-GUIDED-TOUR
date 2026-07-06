@@ -17,6 +17,8 @@ re-fetch candidates as needed; pipeline scripts are in this folder (`drafts/pipe
 
 **LA Museum Row / Miracle Mile WALK** (second LA multi-stop, `drafts/la-museumrow-walk/`) image-staged 2026-07-06: `museum-row-walk` hero = M32 LACMA Urban Light at dusk (ship-safe, `64ca6a5`). 5 landmark stops (La Brea Tar Pits → LACMA → Academy Museum → Petersen → Original Farmers Market) all **reuse existing single-tour heroes** — no new stop images. La Brea hero credit inherited (already in ledger); no new obligations. NB: a true sweeping Miracle-Mile aerial doesn't exist ship-safe (pool was generic LA/Griffith/downtown) — Urban Light is the chosen icon. Blocked on 6 MP3s (intro + 5 stops).
 
+**LA Beachfront WALK** (third LA multi-stop, `drafts/la-beachfront-walk/`) image-staged 2026-07-06: `beachfront-walk` hero = BF30 Santa Monica Pier + coastline aerial (ship-safe, `e6c2e97`). 5 landmark stops (Santa Monica Pier → Muscle Beach → Venice Boardwalk → Venice Canals → Abbot Kinney) all **reuse existing single-tour heroes** — no new stop images. All reused heroes ship-safe/owner; no new obligations. Blocked on 6 MP3s (intro + 5 stops).
+
 Batch 7 (`drafts/la-batch7/`)
 = 36 LA Memorial Coliseum, 39 The Huntington, 40 Gamble House, 41 Old Pasadena — pushed 2026-07-06 (Coliseum+Gamble `b2f4def`; Huntington `3f9cb1c`; Old Pasadena `275df5c`). **4 new credits (Huntington hero + Gamble ×3 — all CC BY-SA).**
 - **36 Coliseum:** all ship-safe (Pexels); C18 hero + 4 gallery.
