@@ -67,7 +67,18 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-07-05)
+## Current State (2026-07-07)
+
+### Amsterdam content batch STAGED — 33 single-stop + 5 multi-stop walks — awaiting narration MP3s (2026-07-07 — web/PM, content)
+
+**Web/PM content session. No app-code / build / `Tours.json` change** — everything is staged as **drafts on branch `claude/amsterdam-handoff-preserve-hlhyp8`** with images live on `gh-pages`. Wires into `Tours.json` only when the owner delivers narration MP3s. **Full detail: `archive/HANDOFF-260707.md`.**
+
+- **33 single-stop Amsterdam tours** — `drafts/amsterdam-batch1/README.md` is the master pick-map (# / tour / slug / hero+gallery / credit / coord / category). Heroes + galleries pipeline-sourced, cropped 1200×900 WebP, pushed to gh-pages, all 200-verified.
+- **5 multi-stop walks** — each a folder (`drafts/amsterdam-{canalring,oldside,museumquarter,jordaan,jewishquarter}-walk/`) with `00_intro.txt` + per-stop `.txt`/`_TTS.txt` pairs + a README carrying the full wire-in spec. **All reuse live single-stop heroes → zero new image sourcing.** All 5 walk heroes owner-confirmed: Canal Ring=`canal-ring-golden-bend_hero`, Old Side=`oude-kerk_hero`, Museum Quarter=`rijksmuseum_hero`, Jordaan=`westerkerk_hero`, Jewish Quarter=`portuguese-synagogue_hero`.
+- **Credits:** `drafts/CREDITS.md` (Amsterdam) logs all 22 CC-credited images; walks inherit, add none. Unsplash/Pexels/Pixabay/CC0/PD are ship-safe.
+- **Sensitivity (persistent requirement, honored):** memorials/sensitive subjects (De Wallen, Anne Frank House, Portuguese Synagogue, Names Monument, Hollandsche Schouwburg, Homomonument) use dignified exteriors/memorial architecture only — no red-light windows/workers, no graphic Holocaust imagery. Madurodam-miniature look-alike (HM52) caught + rejected.
+- **Wire-in (when MP3s arrive):** new maker **Atlas Studio AMS** 🇳🇱 (10th maker) → **+38 tours** (33 single + 5 `multiStop`). Ids `atlas-tour:ams:<slug>`, `transcriptText` verbatim from `.txt`, durations read from MP3s, coords/centroids/categories per each README; `swift scripts/validate-tours.swift` → merge auto-publishes to gh-pages + Supabase.
+- **TestFlight unchanged: 1.0 (74).**
 
 ### Me-tab lag fully killed — whole-profile snapshot hydration — TestFlight 1.0 (74) (session 58 — code)
 
