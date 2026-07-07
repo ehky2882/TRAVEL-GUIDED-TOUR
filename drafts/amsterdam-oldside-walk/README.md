@@ -27,7 +27,7 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 5 | Our Lord in the Attic | `05_our_lord_in_the_attic` | `our-lord-in-the-attic_hero.webp` | `52.37490, 4.89870` |
 | 6 | Dam Square | `06_dam_square` | `dam-square-royal-palace_hero.webp` | `52.37310, 4.89135` |
 
-- **heroImageURL (walk):** proposed `oude-kerk_hero.webp` (the oldest building — the heart of the old side). Alts: `de-wallen_hero.webp` (the medieval quarter) or `centraal-station_hero.webp` (the start). **Owner to confirm.**
+- **heroImageURL (walk):** `oude-kerk_hero.webp` (the oldest building — the heart of the old side). **Owner-confirmed.**
 - **additionalImageURLs** (6, in stop order): `centraal-station_hero.webp`, `zeedijk-chinatown_hero.webp`, `oude-kerk_hero.webp`, `de-wallen_hero.webp`, `our-lord-in-the-attic_hero.webp`, `dam-square-royal-palace_hero.webp`.
 - **Credit:** Oude Kerk hero + Our Lord in the Attic hero are Wikimedia **CC** (already logged in `drafts/CREDITS.md` from the single-stop tours — inherited, no new credit). The other 4 reused images are ship-safe. Net: this walk inherits 2 existing credits, adds none.
 
