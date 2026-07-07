@@ -23,7 +23,7 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 4 | Museumplein / Concertgebouw | `04_museumplein_concertgebouw` | `museumplein-concertgebouw_hero.webp` | `52.35630, 4.87910` |
 | 5 | Vondelpark | `05_vondelpark` | `vondelpark_hero.webp` | `52.35810, 4.86860` |
 
-- **heroImageURL (walk):** proposed `rijksmuseum_hero.webp` (the Cuypers "cathedral" — the walk's anchor + start). Alts: `museumplein-concertgebouw_hero.webp` or `vondelpark_hero.webp` (the ending). **Owner to confirm.**
+- **heroImageURL (walk):** `rijksmuseum_hero.webp` (the Cuypers "cathedral" — the walk's anchor + start). **Owner-confirmed.**
 - **additionalImageURLs** (5, in stop order): `rijksmuseum_hero.webp`, `van-gogh-museum_hero.webp`, `stedelijk_hero.webp`, `museumplein-concertgebouw_hero.webp`, `vondelpark_hero.webp`.
 - **Credit:** all reused images are ship-safe stock — **no credit obligation** for this walk.
 
