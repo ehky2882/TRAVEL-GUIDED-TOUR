@@ -148,6 +148,27 @@ Palace and De Wallen are entirely ship-safe stock — no credit.**
 
 _(Muntplein/Munttoren, Museumplein/Concertgebouw, Stedelijk = ship-safe stock, no credit.)_
 
+### Waterlooplein / Rembrandt House (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `waterlooplein-rembrandt-house_hero.webp` | Rembrandt House front facade | Usernet123u | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Europe_1979's_03.jpg |
+
+### Portuguese Synagogue (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `portuguese-synagogue_hero.webp` | Esnoga exterior (J.D. Meijerplein) | A. Bakker | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_-_Synagoge_J.D._Meijerplein.JPG |
+
+### National Holocaust Names Monument (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `names-monument_hero.webp` | monument wall + "Namenmonument" | Ceescamel | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2022_Holocaust_Namenmonument,_Asd_(01).jpg |
+| `names-monument_2.webp` | brick name-walls + mirrored steel | Ceescamel | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2022_Holocaust_Namenmonument,_Asd_(03).jpg |
+
+### Hollandsche Schouwburg / Holocaust Museum (single-stop) — **Public Domain, NO credit**
+_(hero facade + `_2` relief both by Andreas Praefcke, released Public Domain.)_
+
+_(Ship-safe stock, NO credit: Hortus Botanicus ×4, EYE/A'DAM/Ferries ×4, Waterlooplein flea-market gallery.)_
+
 ### Nieuwe Kerk (single-stop) — **owner-supplied, NO credit**
 _(hero exterior + `_2` interior both supplied by the owner inline; not CC.)_
 
@@ -173,7 +194,7 @@ for the exact per-image list.
 |------|-------------------------------------------|-------------------------------------------|
 | **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
 | **Los Angeles** | *this file* (below) | 17 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7; Egyptian gallery ×3 + Farmers Market/Grove ×2 b8) |
-| **Amsterdam** | *this file* (above) | 18 — Oude Kerk ×3 + Begijnhof ×4 + Anne Frank House hero + Westerkerk interior ×2 + Our Lord in the Attic ×2 + De Waag `_3` + Homomonument ×2 + Noordermarkt/Brouwersgracht ×2 (Wikimedia CC). Nieuwe Kerk + Leidseplein hero = owner-supplied (no credit). All other Amsterdam images = ship-safe stock / CC0, no credit. |
+| **Amsterdam** | *this file* (above) | 22 — Oude Kerk ×3 + Begijnhof ×4 + Anne Frank House hero + Westerkerk interior ×2 + Our Lord in the Attic ×2 + De Waag `_3` + Homomonument ×2 + Noordermarkt/Brouwersgracht ×2 + Rembrandt House hero + Portuguese Synagogue hero + Names Monument ×2 (Wikimedia CC). Hollandsche Schouwburg ×2 = Public Domain (no credit). Nieuwe Kerk + Leidseplein hero = owner-supplied (no credit). All other Amsterdam images = ship-safe stock / CC0, no credit. |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |

@@ -1,7 +1,7 @@
 # Amsterdam — batch 1 (NEW CITY) — images STAGED ✅
 
 Started 2026-07-06. New city **Amsterdam**; new maker **Atlas Studio AMS** (create at first wire-in).
-Owner numbering scheme (gaps expected). **27 tours image-staged** (owner-picked + cropped + pushed to
+Owner numbering scheme (gaps expected). **33 tours image-staged** (owner-picked + cropped + pushed to
 gh-pages) on 2026-07-06/07. Awaiting narration audio → wire into `Tours.json` at that point.
 
 Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
@@ -26,6 +26,12 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 22 | Noordermarkt / Brouwersgracht | `noordermarkt-brouwersgracht` | `_hero`(NB54 Noorderkerk + square) · `_2`(NB51 Brouwersgracht warehouses) | **CC — see CREDITS.md** |
 | 26 | Stedelijk Museum | `stedelijk` | `_hero`(ST2 the "bathtub" + glass entrance) · `_2`(ST3 1895 brick building at night) · `_3`(ST4 white-cube interior) | ship-safe stock, none |
 | 27 | Museumplein / Concertgebouw | `museumplein-concertgebouw` | `_hero`(MP1 Concertgebouw facade, sunset) · `_2`(MP2 portico) · `_3`(MP12 Museumplein lawn) | ship-safe stock, none |
+| 31 | Waterlooplein / Rembrandt House | `waterlooplein-rembrandt-house` | `_hero`(RHE12 Rembrandt House front facade) | **CC — see CREDITS.md** (⚠️ Pinto House "1606" look-alike dropped) |
+| 32 | Portuguese Synagogue | `portuguese-synagogue` | `_hero`(PS44 Esnoga exterior brick block) | **CC — see CREDITS.md** |
+| 33 | National Holocaust Names Monument | `names-monument` | `_hero`(NM29 wall + "Namenmonument") · `_2`(NM31 brick name-walls + steel) | **CC — see CREDITS.md** |
+| 34 | Hollandsche Schouwburg / Holocaust Museum | `hollandsche-schouwburg-holocaust-museum` | `_hero`(HS46 memorial theatre facade) · `_2`(HS47 pediment relief) | **PD — no credit** |
+| 35 | Hortus Botanicus / Plantage | `hortus-botanicus-plantage` | `_hero`(HB14 glasshouse) · `_2`(HB7 glasshouse+bridge) · `_3`(HB9 garden pond) · `_4`(HB6 pond+greenhouse) | ship-safe stock, none |
+| 39 | EYE / A'DAM Tower / Ferries | `eye-adam-tower-ferries` | `_hero`(EY4 EYE building+water) · `_2`(EY3 EYE angular) · `_3`(EY6 EYE+A'DAM+ferry) · `_4`(EY5 A'DAM+ferry) | ship-safe stock, none |
 | 16 | Rembrandtplein | `rembrandtplein` | `_hero`(RP10 Rembrandt statue + square) · `_2`(RP20 statue close) | ship-safe stock, none |
 | 17 | Magere Brug | `magere-brug` | `_hero`(MB16 white drawbridge) · `_2`(MB27 from the water) · `_3`(MB14 + houseboat) | ship-safe stock, none |
 | 18 | Anne Frank House | `anne-frank-house` | `_hero`(AF26 house + museum entrance) | **CC — see CREDITS.md** |
@@ -37,7 +43,7 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 29 | De Pijp / Albert Cuyp | `de-pijp-albert-cuyp` | `_hero`(DP1 market street) · `_2`(DP6 stalls+flag) · `_3`(DP14 food) · `_4`(DP4 food stall) · `_5`(DP56 market wide) | ship-safe (DP56 = CC0), none |
 | 37 | Centraal Station | `centraal-station` | `_hero`(CS1 facade+water) · `_2`(CS28 facade from IJ) · `_3`(CS3 facade+cyclists) · `_4`(CS13 concourse) · `_5`(CS25 platform+train) | ship-safe stock, none |
 
-All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked), wave 3 `d8e7300` (21/24/25/28/29), wave 4 `0242a95` (37), Nieuwe Kerk `0a327ca` (02, owner-supplied), wave 6 `62b432b` (05/06/07 heroes+gallery), Westerkerk interior `775bdb5` (19 `_3`/`_4`), wave 7 `7488d0b` (14/16/17), Leidseplein `8ed470b` (13, owner theatre + American Hotel), wave 8 `cf705a4` (15/20/22/26/27).
+All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked), wave 3 `d8e7300` (21/24/25/28/29), wave 4 `0242a95` (37), Nieuwe Kerk `0a327ca` (02, owner-supplied), wave 6 `62b432b` (05/06/07 heroes+gallery), Westerkerk interior `775bdb5` (19 `_3`/`_4`), wave 7 `7488d0b` (14/16/17), Leidseplein `8ed470b` (13, owner theatre + American Hotel), wave 8 `cf705a4` (15/20/22/26/27), wave 9 `5d5ac5f` (31/32/33/34/35/39).
 
 **⚠️ WK23 rejected:** the stock "Westerkerk interior" pick (WK23) turned out to be a **different Gothic church** (ribbed stone vaults, not the Westerkerk's whitewashed Renaissance barrel vault) — caught on full-size review. Replaced with a Wikimedia-verified Westerkerk interior (owner picking from `westerkerk-int` set).
 
@@ -50,6 +56,12 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
   neighbouring Westerkerk. **No interior/annex, nothing sensationalized** (matches the script:
   "from the outside there is almost nothing to see"). Stock only had generic canals; the real
   subject came from Wikimedia (CC).
+- **Holocaust / Jewish-heritage sites (Portuguese Synagogue, Names Monument, Hollandsche Schouwburg,
+  Homomonument):** the physical sites only — memorial architecture, the name walls, the synagogue
+  building/candlelit hall, the Dockworker statue. **No graphic or archival wartime imagery.** Stock
+  was heavily polluted with the *Berlin* Holocaust memorial + Auschwitz; all dropped in favour of
+  Wikimedia-verified Amsterdam subjects. The Names Monument set deliberately includes the individual
+  name-brick close-up (the script's "choose one brick"), handled with restraint.
 
 ## Sourcing notes (for the record)
 - **Dam Square, De Wallen, Canal Ring, Nine Streets:** rich ship-safe stock (Unsplash/Pexels/Pixabay). No credit.
@@ -88,6 +100,12 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
      - Noordermarkt / Brouwersgracht: `52.37870, 4.88600`
      - Stedelijk Museum (Museumplein 10): `52.35800, 4.87990`
      - Museumplein / Concertgebouw: `52.35630, 4.87910`
+     - Waterlooplein / Rembrandt House (Jodenbreestraat 4): `52.36940, 4.90140`
+     - Portuguese Synagogue (Mr. Visserplein): `52.36760, 4.90520`
+     - Names Monument (Weesperstraat): `52.36560, 4.90680`
+     - Hollandsche Schouwburg (Plantage Middenlaan): `52.36620, 4.91060`
+     - Hortus Botanicus (Plantage Middenlaan 2a): `52.36680, 4.90880`
+     - EYE / A'DAM Tower / Ferries (IJpromenade, Noord): `52.38430, 4.90090`
      - Magere Brug (Amstel): `52.36530, 4.90180`
      - Anne Frank House (Prinsengracht 263): `52.37520, 4.88400`
      - Westerkerk (Westermarkt): `52.37470, 4.88390`
@@ -99,7 +117,7 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
      - Centraal Station (Stationsplein): `52.37900, 4.90020`
    - **Category suggestions (owner's call):** Dam Square → `history`; Nieuwe Kerk → `sacredSites`; De Wallen → `culturalHeritage`;
      Oude Kerk → `sacredSites`; Our Lord in the Attic → `sacredSites` (or `hiddenGems`); De Waag → `history` (or `architecture`); Zeedijk/Chinatown → `culturalHeritage`; Begijnhof → `hiddenGems`; Canal Ring → `culturalHeritage` (or `architecture`);
-     Nine Streets → `hiddenGems` (or `culturalHeritage`); Leidseplein → `culturalHeritage` (or `musicAndPerformance`); Bloemenmarkt → `culturalHeritage`; Rembrandtplein → `culturalHeritage` (or `history`); Magere Brug → `architecture` (or `hiddenGems`); Muntplein/Munttoren → `history` (or `architecture`); Homomonument → `history`; Noordermarkt/Brouwersgracht → `culturalHeritage`; Stedelijk → `culturalHeritage`; Museumplein/Concertgebouw → `musicAndPerformance` (or `culturalHeritage`); Anne Frank House → `history`; Westerkerk → `sacredSites`;
+     Nine Streets → `hiddenGems` (or `culturalHeritage`); Leidseplein → `culturalHeritage` (or `musicAndPerformance`); Bloemenmarkt → `culturalHeritage`; Rembrandtplein → `culturalHeritage` (or `history`); Magere Brug → `architecture` (or `hiddenGems`); Muntplein/Munttoren → `history` (or `architecture`); Homomonument → `history`; Noordermarkt/Brouwersgracht → `culturalHeritage`; Stedelijk → `culturalHeritage`; Museumplein/Concertgebouw → `musicAndPerformance` (or `culturalHeritage`); Waterlooplein/Rembrandt House → `culturalHeritage`; Portuguese Synagogue → `sacredSites`; Names Monument → `history`; Hollandsche Schouwburg → `history`; Hortus Botanicus → `natureAndParks`; EYE/A'DAM/Ferries → `architecture` (or `culturalHeritage`); Anne Frank House → `history`; Westerkerk → `sacredSites`;
      Jordaan → `culturalHeritage`; Rijksmuseum → `culturalHeritage` (or `architecture`); Van Gogh Museum → `culturalHeritage`;
      Vondelpark → `natureAndParks`; De Pijp / Albert Cuyp → `culturalHeritage`; Centraal Station → `architecture` (or `history`).
 3. `swift scripts/validate-tours.swift` → fix any errors.
