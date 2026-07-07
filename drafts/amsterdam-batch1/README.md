@@ -82,6 +82,7 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
 4. Surface the CC credits at ship time (Oude Kerk, Begijnhof, Anne Frank House, Westerkerk interior — per `drafts/CREDITS.md`).
 
 ## Still to come (owner)
-- Amsterdam scripts **02, 05, 06, 07, 09, 12–17, 20, 22, 23, 26, 27, 30–36, 38+ …** not yet received — source in the next passes.
+- **Awaiting owner picks (already sourced):** 05 Our Lord in the Attic, 06 Nieuwmarkt/De Waag, 07 Zeedijk/Chinatown.
+- Amsterdam scripts **09, 12–17, 20, 22, 23, 26, 27, 30–36, 38+ …** not yet received — source in the next passes.
 - Owner to pick the **Westerkerk interior** (`_3`) from the verified `westerkerk-int` options.
 - Narration MP3s for all 14 (nothing goes live until audio + maker exist).
