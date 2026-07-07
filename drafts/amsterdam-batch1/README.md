@@ -1,7 +1,7 @@
 # Amsterdam — batch 1 (NEW CITY) — images STAGED ✅
 
 Started 2026-07-06. New city **Amsterdam**; new maker **Atlas Studio AMS** (create at first wire-in).
-Owner numbering scheme (gaps expected). **18 tours image-staged** (owner-picked + cropped + pushed to
+Owner numbering scheme (gaps expected). **21 tours image-staged** (owner-picked + cropped + pushed to
 gh-pages) on 2026-07-06/07. Awaiting narration audio → wire into `Tours.json` at that point.
 
 Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
@@ -19,6 +19,9 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 08 | Begijnhof | `begijnhof` | `_hero`(BGW9 courtyard+statue) · `_2`(BGW2 weeping tree) · `_3`(BGW8 lawn+houses) · `_4`(BGW10 house detail) | **CC — see CREDITS.md** |
 | 10 | Canal Ring / Golden Bend | `canal-ring-golden-bend` | `_hero`(GB3 dusk bend) · `_2`(GB13) · `_3`(GB1 bright) · `_4`(GB31 bridges) · `_5`(GB28 stone bridge) · `_6`(GB6 dancing houses) | ship-safe stock, none |
 | 11 | Nine Streets | `nine-streets` | `_hero`(NS13 street life) · `_2`(NS17 bridge+houses) · `_3`(NS10 shop street) · `_4`(NS42 bridge) · `_5`(NS9 canal-side) · `_6`(NS20 night) | ship-safe stock, none |
+| 14 | Bloemenmarkt | `bloemenmarkt` | `_hero`(BM14 floating market from canal) · `_2`(BM3 stalls) · `_3`(BM11 bulb bins) · `_4`(BM18 bulb packets) · `_5`(BM8 bouquets) · `_6`(BM1 tulips) | ship-safe stock, none |
+| 16 | Rembrandtplein | `rembrandtplein` | `_hero`(RP10 Rembrandt statue + square) · `_2`(RP20 statue close) | ship-safe stock, none |
+| 17 | Magere Brug | `magere-brug` | `_hero`(MB16 white drawbridge) · `_2`(MB27 from the water) · `_3`(MB14 + houseboat) | ship-safe stock, none |
 | 18 | Anne Frank House | `anne-frank-house` | `_hero`(AF26 house + museum entrance) | **CC — see CREDITS.md** |
 | 19 | Westerkerk | `westerkerk` | `_hero`(WK34 tower+crown) · `_2`(WK11 tower over canal) · `_3`(WKI9 nave + vault) · `_4`(WKI7 wide interior + organ) | hero+_2 ship-safe; `_3`/`_4` CC |
 | 21 | Jordaan | `jordaan` | `_hero`(JD11 Westertoren+bike) · `_2`(JD7 flowers+canal) · `_3`(JD30 narrow street) | ship-safe stock, none |
@@ -28,7 +31,7 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 29 | De Pijp / Albert Cuyp | `de-pijp-albert-cuyp` | `_hero`(DP1 market street) · `_2`(DP6 stalls+flag) · `_3`(DP14 food) · `_4`(DP4 food stall) · `_5`(DP56 market wide) | ship-safe (DP56 = CC0), none |
 | 37 | Centraal Station | `centraal-station` | `_hero`(CS1 facade+water) · `_2`(CS28 facade from IJ) · `_3`(CS3 facade+cyclists) · `_4`(CS13 concourse) · `_5`(CS25 platform+train) | ship-safe stock, none |
 
-All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked), wave 3 `d8e7300` (21/24/25/28/29), wave 4 `0242a95` (37), Nieuwe Kerk `0a327ca` (02, owner-supplied), wave 6 `62b432b` (05/06/07 heroes+gallery), Westerkerk interior `775bdb5` (19 `_3`/`_4`).
+All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked), wave 3 `d8e7300` (21/24/25/28/29), wave 4 `0242a95` (37), Nieuwe Kerk `0a327ca` (02, owner-supplied), wave 6 `62b432b` (05/06/07 heroes+gallery), Westerkerk interior `775bdb5` (19 `_3`/`_4`), wave 7 `7488d0b` (14/16/17).
 
 **⚠️ WK23 rejected:** the stock "Westerkerk interior" pick (WK23) turned out to be a **different Gothic church** (ribbed stone vaults, not the Westerkerk's whitewashed Renaissance barrel vault) — caught on full-size review. Replaced with a Wikimedia-verified Westerkerk interior (owner picking from `westerkerk-int` set).
 
@@ -71,6 +74,9 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
      - Begijnhof: `52.36900, 4.88990`
      - Canal Ring / Golden Bend (Herengracht bend): `52.36660, 4.89250`
      - Nine Streets (De Negen Straatjes): `52.36940, 4.88680`
+     - Bloemenmarkt (Singel): `52.36700, 4.89150`
+     - Rembrandtplein: `52.36620, 4.89620`
+     - Magere Brug (Amstel): `52.36530, 4.90180`
      - Anne Frank House (Prinsengracht 263): `52.37520, 4.88400`
      - Westerkerk (Westermarkt): `52.37470, 4.88390`
      - Jordaan (Bloemgracht/heart): `52.37460, 4.88190`
@@ -81,7 +87,7 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
      - Centraal Station (Stationsplein): `52.37900, 4.90020`
    - **Category suggestions (owner's call):** Dam Square → `history`; Nieuwe Kerk → `sacredSites`; De Wallen → `culturalHeritage`;
      Oude Kerk → `sacredSites`; Our Lord in the Attic → `sacredSites` (or `hiddenGems`); De Waag → `history` (or `architecture`); Zeedijk/Chinatown → `culturalHeritage`; Begijnhof → `hiddenGems`; Canal Ring → `culturalHeritage` (or `architecture`);
-     Nine Streets → `hiddenGems` (or `culturalHeritage`); Anne Frank House → `history`; Westerkerk → `sacredSites`;
+     Nine Streets → `hiddenGems` (or `culturalHeritage`); Bloemenmarkt → `culturalHeritage`; Rembrandtplein → `culturalHeritage` (or `history`); Magere Brug → `architecture` (or `hiddenGems`); Anne Frank House → `history`; Westerkerk → `sacredSites`;
      Jordaan → `culturalHeritage`; Rijksmuseum → `culturalHeritage` (or `architecture`); Van Gogh Museum → `culturalHeritage`;
      Vondelpark → `natureAndParks`; De Pijp / Albert Cuyp → `culturalHeritage`; Centraal Station → `architecture` (or `history`).
 3. `swift scripts/validate-tours.swift` → fix any errors.
