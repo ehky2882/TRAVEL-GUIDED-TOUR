@@ -117,8 +117,24 @@ Palace and De Wallen are entirely ship-safe stock — no credit.**
 ### Westerkerk (single-stop)
 | File | Subject | Author | License | Source |
 |------|---------|--------|---------|--------|
-| _(`_3` interior — owner picking from verified `westerkerk-int` set; CC BY-SA — credit to be filled when chosen)_ | | | | |
+| `westerkerk_3.webp` | interior — nave + whitewashed vault | Zairon | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_Westerkerk_Innen_Gew%C3%B6lbe.jpg |
+| `westerkerk_4.webp` | wide interior + organ | rene boulay | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_Wester_Kerk_Nef_-_panoramio_(1).jpg |
 | _(hero WK34 + `_2` WK11 tower+crown = ship-safe stock — no credit)_ | | | | |
+
+### Our Lord in the Attic (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `our-lord-in-the-attic_hero.webp` | the hidden attic church + altar | Remi Mathis | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:AMsterdam_-_Museum_Ons%27_Lieve_Heer_op_Solder_-_the_hidden_church.JPG |
+| `our-lord-in-the-attic_2.webp` | attic church — pews + galleries | Remi Mathis | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_-_Museum_Ons%27_Lieve_Heer_op_Solder_-_church_floor.JPG |
+
+### Nieuwmarkt / De Waag (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `nieuwmarkt-de-waag_3.webp` | De Waag + market stalls | Shadowgate (Novara, IT) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(16033384506).jpg |
+| _(hero WG7 + `_2` WG10 = ship-safe stock — no credit)_ | | | | |
+
+### Nieuwe Kerk (single-stop) — **owner-supplied, NO credit**
+_(hero exterior + `_2` interior both supplied by the owner inline; not CC.)_
 
 _(Ship-safe stock, NO credit: Dam Square & Royal Palace hero+4, De Wallen hero+5, Canal Ring / Golden Bend hero+5, Nine Streets hero+5, Westerkerk hero+`_2`, Jordaan hero+2, Rijksmuseum hero+3, Van Gogh Museum hero+2, Vondelpark hero+2, De Pijp / Albert Cuyp hero+4 — DP `_5` is Wikimedia **CC0**, still no credit.)_
 
@@ -142,7 +158,7 @@ for the exact per-image list.
 |------|-------------------------------------------|-------------------------------------------|
 | **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
 | **Los Angeles** | *this file* (below) | 17 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7; Egyptian gallery ×3 + Farmers Market/Grove ×2 b8) |
-| **Amsterdam** | *this file* (above) | 8 (+1 pending) — Oude Kerk ×3 + Begijnhof ×4 + Anne Frank House hero (Wikimedia CC); Westerkerk interior `_3` pending owner pick. Dam Square / De Wallen / Canal Ring / Nine Streets / Westerkerk tower = ship-safe stock, no credit. |
+| **Amsterdam** | *this file* (above) | 14 — Oude Kerk ×3 + Begijnhof ×4 + Anne Frank House hero + Westerkerk interior ×2 + Our Lord in the Attic ×2 + De Waag `_3` (Wikimedia CC). Nieuwe Kerk = owner-supplied (no credit). All other Amsterdam images = ship-safe stock / CC0, no credit. |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
