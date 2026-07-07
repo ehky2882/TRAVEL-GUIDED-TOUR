@@ -29,7 +29,7 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 
 _(Every one of these five single-stop tours (#31–#35 in the batch) already has a live, owner-picked hero — the Jewish Quarter walk simply chains them in walking order.)_
 
-- **heroImageURL (walk):** `portuguese-synagogue_hero.webp` (PS44 — the vast plain-brick Esnoga, the district's enduring landmark and the walk's calm centre). **Alt:** `names-monument_hero.webp` (NM29). _(Owner to confirm.)_
+- **heroImageURL (walk):** `portuguese-synagogue_hero.webp` (PS44 — the vast plain-brick Esnoga, the district's enduring landmark and the walk's calm centre). **Owner-confirmed.** (`names-monument_hero.webp` still serves as stop 3's image.)
 - **additionalImageURLs** (5, in stop order): `waterlooplein-rembrandt-house_hero.webp`, `portuguese-synagogue_hero.webp`, `names-monument_hero.webp`, `hollandsche-schouwburg-holocaust-museum_hero.webp`, `hortus-botanicus-plantage_hero.webp`.
 - **Credit:** inherits **3 existing CC credits** (Waterlooplein/Rembrandt House hero, Portuguese Synagogue hero, Names Monument hero) — already logged in `drafts/CREDITS.md` from the single-stop tours; **adds none**. Hollandsche Schouwburg hero is PD; Hortus hero is ship-safe stock.
 
