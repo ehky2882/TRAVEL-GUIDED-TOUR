@@ -133,6 +133,21 @@ Palace and De Wallen are entirely ship-safe stock — no credit.**
 | `nieuwmarkt-de-waag_3.webp` | De Waag + market stalls | Shadowgate (Novara, IT) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(16033384506).jpg |
 | _(hero WG7 + `_2` WG10 = ship-safe stock — no credit)_ | | | | |
 
+### Homomonument (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `homomonument_hero.webp` | water triangle + flowers + visitor | User:Vmenkov | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_-_Homomonument_-_CIMG0484.JPG |
+| `homomonument_2.webp` | granite triangle stepping to water | La Sequencia (Evanston, IL) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam-Homomonument-05.jpg |
+| _(`_3` HM47 quay sign = Hnapel, **CC0** — no credit. ⚠️ HM52 rejected: it was the Madurodam scale-model, not the real monument.)_ | | | | |
+
+### Noordermarkt / Brouwersgracht (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `noordermarkt-brouwersgracht_hero.webp` | Noorderkerk + square | Arianit Dobroshi | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:ArianitAmsterdam17.jpg |
+| `noordermarkt-brouwersgracht_2.webp` | Brouwersgracht warehouses + houseboats | Shadowgate (Novara, IT) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam(tcaq)_(16059579475).jpg |
+
+_(Muntplein/Munttoren, Museumplein/Concertgebouw, Stedelijk = ship-safe stock, no credit.)_
+
 ### Nieuwe Kerk (single-stop) — **owner-supplied, NO credit**
 _(hero exterior + `_2` interior both supplied by the owner inline; not CC.)_
 
@@ -158,7 +173,7 @@ for the exact per-image list.
 |------|-------------------------------------------|-------------------------------------------|
 | **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
 | **Los Angeles** | *this file* (below) | 17 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7; Egyptian gallery ×3 + Farmers Market/Grove ×2 b8) |
-| **Amsterdam** | *this file* (above) | 14 — Oude Kerk ×3 + Begijnhof ×4 + Anne Frank House hero + Westerkerk interior ×2 + Our Lord in the Attic ×2 + De Waag `_3` (Wikimedia CC). Nieuwe Kerk = owner-supplied (no credit). All other Amsterdam images = ship-safe stock / CC0, no credit. |
+| **Amsterdam** | *this file* (above) | 18 — Oude Kerk ×3 + Begijnhof ×4 + Anne Frank House hero + Westerkerk interior ×2 + Our Lord in the Attic ×2 + De Waag `_3` + Homomonument ×2 + Noordermarkt/Brouwersgracht ×2 (Wikimedia CC). Nieuwe Kerk + Leidseplein hero = owner-supplied (no credit). All other Amsterdam images = ship-safe stock / CC0, no credit. |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |

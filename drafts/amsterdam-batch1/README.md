@@ -1,7 +1,7 @@
 # Amsterdam — batch 1 (NEW CITY) — images STAGED ✅
 
 Started 2026-07-06. New city **Amsterdam**; new maker **Atlas Studio AMS** (create at first wire-in).
-Owner numbering scheme (gaps expected). **22 tours image-staged** (owner-picked + cropped + pushed to
+Owner numbering scheme (gaps expected). **27 tours image-staged** (owner-picked + cropped + pushed to
 gh-pages) on 2026-07-06/07. Awaiting narration audio → wire into `Tours.json` at that point.
 
 Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
@@ -21,6 +21,11 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 11 | Nine Streets | `nine-streets` | `_hero`(NS13 street life) · `_2`(NS17 bridge+houses) · `_3`(NS10 shop street) · `_4`(NS42 bridge) · `_5`(NS9 canal-side) · `_6`(NS20 night) | ship-safe stock, none |
 | 13 | Leidseplein | `leidseplein` | `_hero`(owner — Stadsschouwburg theatre on the square) · `_2`(LB40 American Hotel facade) | owner + CC0, none |
 | 14 | Bloemenmarkt | `bloemenmarkt` | `_hero`(BM14 floating market from canal) · `_2`(BM3 stalls) · `_3`(BM11 bulb bins) · `_4`(BM18 bulb packets) · `_5`(BM8 bouquets) · `_6`(BM1 tulips) | ship-safe stock, none |
+| 15 | Muntplein / Munttoren | `muntplein-munttoren` | `_hero`(MT4 tower+canal+bridge) · `_2`(MT5 tower+boats) · `_3`(MT3 tower over canal) · `_4`(MT8 tower sunset) | ship-safe stock, none |
+| 20 | Homomonument | `homomonument` | `_hero`(HM46 water triangle + flowers) · `_2`(HM44 water triangle) · `_3`(HM47 quay sign) | **CC — see CREDITS.md** (⚠️ HM52 Madurodam miniature rejected) |
+| 22 | Noordermarkt / Brouwersgracht | `noordermarkt-brouwersgracht` | `_hero`(NB54 Noorderkerk + square) · `_2`(NB51 Brouwersgracht warehouses) | **CC — see CREDITS.md** |
+| 26 | Stedelijk Museum | `stedelijk` | `_hero`(ST2 the "bathtub" + glass entrance) · `_2`(ST3 1895 brick building at night) · `_3`(ST4 white-cube interior) | ship-safe stock, none |
+| 27 | Museumplein / Concertgebouw | `museumplein-concertgebouw` | `_hero`(MP1 Concertgebouw facade, sunset) · `_2`(MP2 portico) · `_3`(MP12 Museumplein lawn) | ship-safe stock, none |
 | 16 | Rembrandtplein | `rembrandtplein` | `_hero`(RP10 Rembrandt statue + square) · `_2`(RP20 statue close) | ship-safe stock, none |
 | 17 | Magere Brug | `magere-brug` | `_hero`(MB16 white drawbridge) · `_2`(MB27 from the water) · `_3`(MB14 + houseboat) | ship-safe stock, none |
 | 18 | Anne Frank House | `anne-frank-house` | `_hero`(AF26 house + museum entrance) | **CC — see CREDITS.md** |
@@ -32,7 +37,7 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 29 | De Pijp / Albert Cuyp | `de-pijp-albert-cuyp` | `_hero`(DP1 market street) · `_2`(DP6 stalls+flag) · `_3`(DP14 food) · `_4`(DP4 food stall) · `_5`(DP56 market wide) | ship-safe (DP56 = CC0), none |
 | 37 | Centraal Station | `centraal-station` | `_hero`(CS1 facade+water) · `_2`(CS28 facade from IJ) · `_3`(CS3 facade+cyclists) · `_4`(CS13 concourse) · `_5`(CS25 platform+train) | ship-safe stock, none |
 
-All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked), wave 3 `d8e7300` (21/24/25/28/29), wave 4 `0242a95` (37), Nieuwe Kerk `0a327ca` (02, owner-supplied), wave 6 `62b432b` (05/06/07 heroes+gallery), Westerkerk interior `775bdb5` (19 `_3`/`_4`), wave 7 `7488d0b` (14/16/17), Leidseplein `8ed470b` (13, owner theatre + American Hotel).
+All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked), wave 3 `d8e7300` (21/24/25/28/29), wave 4 `0242a95` (37), Nieuwe Kerk `0a327ca` (02, owner-supplied), wave 6 `62b432b` (05/06/07 heroes+gallery), Westerkerk interior `775bdb5` (19 `_3`/`_4`), wave 7 `7488d0b` (14/16/17), Leidseplein `8ed470b` (13, owner theatre + American Hotel), wave 8 `cf705a4` (15/20/22/26/27).
 
 **⚠️ WK23 rejected:** the stock "Westerkerk interior" pick (WK23) turned out to be a **different Gothic church** (ribbed stone vaults, not the Westerkerk's whitewashed Renaissance barrel vault) — caught on full-size review. Replaced with a Wikimedia-verified Westerkerk interior (owner picking from `westerkerk-int` set).
 
@@ -78,6 +83,11 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
      - Leidseplein: `52.36400, 4.88170`
      - Bloemenmarkt (Singel): `52.36700, 4.89150`
      - Rembrandtplein: `52.36620, 4.89620`
+     - Muntplein / Munttoren: `52.36700, 4.89340`
+     - Homomonument (Westermarkt): `52.37430, 4.88420`
+     - Noordermarkt / Brouwersgracht: `52.37870, 4.88600`
+     - Stedelijk Museum (Museumplein 10): `52.35800, 4.87990`
+     - Museumplein / Concertgebouw: `52.35630, 4.87910`
      - Magere Brug (Amstel): `52.36530, 4.90180`
      - Anne Frank House (Prinsengracht 263): `52.37520, 4.88400`
      - Westerkerk (Westermarkt): `52.37470, 4.88390`
@@ -89,7 +99,7 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
      - Centraal Station (Stationsplein): `52.37900, 4.90020`
    - **Category suggestions (owner's call):** Dam Square → `history`; Nieuwe Kerk → `sacredSites`; De Wallen → `culturalHeritage`;
      Oude Kerk → `sacredSites`; Our Lord in the Attic → `sacredSites` (or `hiddenGems`); De Waag → `history` (or `architecture`); Zeedijk/Chinatown → `culturalHeritage`; Begijnhof → `hiddenGems`; Canal Ring → `culturalHeritage` (or `architecture`);
-     Nine Streets → `hiddenGems` (or `culturalHeritage`); Leidseplein → `culturalHeritage` (or `musicAndPerformance`); Bloemenmarkt → `culturalHeritage`; Rembrandtplein → `culturalHeritage` (or `history`); Magere Brug → `architecture` (or `hiddenGems`); Anne Frank House → `history`; Westerkerk → `sacredSites`;
+     Nine Streets → `hiddenGems` (or `culturalHeritage`); Leidseplein → `culturalHeritage` (or `musicAndPerformance`); Bloemenmarkt → `culturalHeritage`; Rembrandtplein → `culturalHeritage` (or `history`); Magere Brug → `architecture` (or `hiddenGems`); Muntplein/Munttoren → `history` (or `architecture`); Homomonument → `history`; Noordermarkt/Brouwersgracht → `culturalHeritage`; Stedelijk → `culturalHeritage`; Museumplein/Concertgebouw → `musicAndPerformance` (or `culturalHeritage`); Anne Frank House → `history`; Westerkerk → `sacredSites`;
      Jordaan → `culturalHeritage`; Rijksmuseum → `culturalHeritage` (or `architecture`); Van Gogh Museum → `culturalHeritage`;
      Vondelpark → `natureAndParks`; De Pijp / Albert Cuyp → `culturalHeritage`; Centraal Station → `architecture` (or `history`).
 3. `swift scripts/validate-tours.swift` → fix any errors.
