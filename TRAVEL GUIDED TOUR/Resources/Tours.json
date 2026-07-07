@@ -71,6 +71,14 @@
       "avatarEmoji": "🇯🇵",
       "bio": "Atlas Studio's Kyoto bureau — audio tours of the old capital's temples, gardens, machiya, teahouses, and design landmarks.",
       "websiteURL": null
+    },
+    {
+      "id": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "displayName": "Atlas Studio NAO",
+      "avatarURL": null,
+      "avatarEmoji": "🇯🇵",
+      "bio": "Atlas Studio's Naoshima bureau — audio tours of the Seto Inland Sea's art island: its museums, pavilions, and installations.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -25864,6 +25872,606 @@
         "Food",
         "Waterfront",
         "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "16d9eccb-b864-5e12-af60-4cb5ca000f88",
+      "createdAt": "2026-07-07",
+      "title": "Ando Museum | アンドーミュージアム",
+      "shortDescription": "A century-old Honmura house, its timber shell preserved and a raw concrete interior slipped inside — Tadao Ando's museum to his own architecture.",
+      "longDescription": "From the lane this looks like every other traditional house in Honmura — dark-stained timber, a low tiled roof, modest scale. The gap between what it appears to be and what it holds is entirely deliberate. When Ando rebuilt the 1913 house in 2013 he salvaged its original beams, columns, and tiles and reassembled them with traditional joinery, then built the interior wholly from the smooth pale concrete that is the signature of his career. Wood and concrete, past and present, warmth and austerity: those contrasts are the museum's explicit subject.\n\nInside, photographs, sketches, and models trace Ando's work across Naoshima and beyond — Benesse House, Chichu, the Church of the Light in Osaka, later commissions as far as Paris and Texas. The spaces are lit entirely by natural light from a skylight along the roof beam, and the sequence ends in an underground circular chamber barely three metres across, lit by a conical shaft from above.\n\nThe surrounding Honmura district is the hub of Naoshima's Art House Project, converting abandoned homes into installations since 1998.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ando-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ando-museum_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ecc8e956-7112-5fa0-b2eb-f4ff3b092705",
+          "order": 0,
+          "title": "Ando Museum | アンドーミュージアム",
+          "caption": "A traditional Honmura house rebuilt by Tadao Ando in 2013 — salvaged timber outside, poured concrete within.",
+          "latitude": 34.45957120689074,
+          "longitude": 133.99706652409208,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ando-museum.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "It's 1913, and a family in Honmura is building a house. They use local timber, traditional joinery, and tiled roofing in the style of every other house in this quarter of the village — because that is simply what houses look like here, and what they have looked like for centuries. A century later, Tadao Ando disassembled it, inserted a raw concrete structure inside the original shell, and opened it as a museum dedicated to his own architectural practice.\n\nThe building in front of you looks, from the outside, like every other traditional house on this lane — dark-stained timber, low-pitched tiled roof, modest scale. The gap between what it appears to be and what it contains is, of course, entirely deliberate. When Ando rebuilt the house in 2013, he salvaged the original beams, columns, and roof tiles and reassembled them using traditional joinery, while constructing the interior entirely from the smooth pale concrete that has become the signature material of his career. Wood and concrete, past and present, warmth and austerity — these contrasts are the explicit subject of the museum, and also of Ando's wider architectural philosophy.\n\nInside, photographs, sketches, and models trace Ando's projects across Naoshima and the wider world: the Benesse House Museum, the Chichu Art Museum, the Church of the Light in Osaka, and later commissions as far as Paris and Texas. The exhibition spaces are lit entirely by natural light channelled through a skylight running parallel to the roof beam, and the sequence concludes in an underground circular chamber, barely three metres across, lit by a conical shaft from above — a compressed version of the spatial drama Ando creates in his larger buildings.\n\n[beat]\n\nThe Honmura district around you is the hub of Naoshima's Art House Project, which has been transforming abandoned homes into art installations since 1998. James Turrell's Minamidera — a building that appears to be in total darkness but slowly reveals a blue twilight as your eyes adjust — is a short walk east along the same lane."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.45957120689074,
+      "centroidLongitude": 133.99706652409208,
+      "city": "Naoshima",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "Art",
+        "History",
+        "Tadao Ando",
+        "Designed by a Master",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "98988dda-9ee3-5b42-8728-04b075ff1b8a",
+      "createdAt": "2026-07-07",
+      "title": "Benesse House Museum | ベネッセハウス ミュージアム",
+      "shortDescription": "A museum you can sleep in — Tadao Ando's 1992 building half-buried in the headland, its galleries opening onto the Seto Inland Sea.",
+      "longDescription": "When Benesse House opened in 1992 the idea behind it was that art should be part of how you live rather than a cultural obligation — which is why it is at once a museum and a hotel. On the promontory at the island's southern tip, Ando embedded more than half the structure into the hillside so it neither dominates the view nor competes with the sea and sky framed by every opening. The galleries flow between interior rooms and open terraces where works are placed to catch a particular light or angle of water.\n\nThe collection began with Soichiro Fukutake, the collector whose vision remade the island. Warhol hangs near Richard Long's mud paintings; George Segal's plaster figures occupy a stairwell; Hiroshi Sugimoto's seascapes vary in atmosphere in ways that only reveal themselves in front of them. Several works were made for this building and exist nowhere else.\n\nHotel guests have 24-hour access after closing — quieter, differently lit, and the better way to feel the building's bond with its hillside.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-museum_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7d3a6215-a445-511d-ab85-66b6b74fd4cb",
+          "order": 0,
+          "title": "Benesse House Museum | ベネッセハウス ミュージアム",
+          "caption": "Tadao Ando's 1992 museum-and-hotel, sunk into the headland above the Seto Inland Sea.",
+          "latitude": 34.445409112852424,
+          "longitude": 133.99086204612007,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/benesse-house-museum.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "When the Benesse House Museum opened in 1992, the working idea behind it was that art should be experienced not as a cultural obligation but as part of how you live — which is why the building is simultaneously a museum and the hotel you might be sleeping in tonight.\n\nOn the promontory above the Seto Inland Sea, the building occupies the southernmost tip of the island, where Tadao Ando embedded more than half the structure into the hillside so that it would neither dominate the view nor compete with the sea and sky visible through every opening. The concrete is Ando's signature material — smooth, board-marked, precisely cast — and the galleries flow between internal rooms and open terraces where artworks are positioned to catch particular qualities of light or to draw the eye toward particular angles of the water.\n\nThe collection began with Soichiro Fukutake, the businessman and collector whose vision turned this island into what it is, and whose choices over three decades produced a body of work that moves between Western and Japanese contemporary art without obvious hierarchy. Warhol's silkscreens hang beside Richard Long's mud paintings; George Segal's plaster figures occupy a stairwell; Hiroshi Sugimoto's seascape photographs, each one technically identical in exposure time, vary in atmosphere to a degree that requires standing in front of them to understand. Several works were made specifically for this building and cannot be experienced elsewhere.\n\n[beat]\n\nHotel guests have 24-hour access to the museum after closing time, which is — if you can arrange it — the better way to see it: the galleries quieter, the light different, and the sense of the building's relationship to its hillside considerably easier to absorb without other people around. Advance booking is essential and sells out quickly during the Setouchi Triennale years."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.445409112852424,
+      "centroidLongitude": 133.99086204612007,
+      "city": "Naoshima",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Tadao Ando",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "145a8cf7-0ae4-5b17-8058-f25a26fb5fcf",
+      "createdAt": "2026-07-07",
+      "title": "Benesse House Oval | ベネッセハウス オーバル",
+      "shortDescription": "Six rooms wrapped around a sky-open elliptical pool on a hilltop, reached only by cable car — Ando's place apart from the museum below.",
+      "longDescription": "The cable car that brings you here is not merely transport; it is the transition the architecture requires. The Oval sits on a hilltop above the main Benesse House complex, joined to it only by a few minutes suspended over the tree canopy. This is the part meant for sleeping rather than looking at art, and Ando designed it as a place apart.\n\nSix guest rooms wrap around an elliptical inner atrium holding a pool open to the sky — precise oval concrete walls, the water mirroring whatever weather is overhead. Each room opens from the atrium with floor-to-ceiling windows facing out over the Inland Sea. Moving between room and courtyard becomes a daily rhythm of compression and release that is, in its quiet way, the building's real subject. The artworks were chosen for their exact positions, not to decorate.\n\nThe view at night, from the window seat or looking up from the atrium, is the reason to stay rather than visit — and it cannot be had by arriving for the day.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-oval_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-oval_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-oval_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-oval_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-oval_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7d9346ab-0183-5ce1-a361-d4d3088378d8",
+          "order": 0,
+          "title": "Benesse House Oval | ベネッセハウス オーバル",
+          "caption": "A hilltop annexe of six rooms around a sky-open oval pool, reached by cable car — by Tadao Ando.",
+          "latitude": 34.4468281853505,
+          "longitude": 133.99139355164522,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/benesse-house-oval.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The cable car that brought you here is not merely convenient transport — it is the transition the architecture requires. The Oval sits on a hilltop above the main Benesse House complex, connected to it only by that few minutes of suspended movement over the tree canopy, and that separation is deliberate: this is the part of the building meant for sleeping in rather than looking at art, and Tadao Ando designed it as a place apart from the museum below.\n\nThe cable car from Benesse House deposits you at the entrance to a building whose six guest rooms wrap around an elliptical inner atrium containing a pool, open to the sky. The geometry is Ando's — precise oval concrete walls, the water's surface acting as a mirror for whatever light and weather is overhead — and the rooms open from the atrium, each with floor-to-ceiling windows facing outward over the Seto Inland Sea. The ellipse contains the feeling of enclosure the atrium creates; the windows provide the expansion; and the transition between the two, when you move from your room into the interior courtyard, becomes a repeated daily experience of compression and release that is, in its modest way, the central subject of the whole building.\n\nThere are six rooms. Each has the same proportions, the same quality of concrete wall and minimal furniture, the same window seat above the sea. The artworks in the rooms were selected with the same intention as those in the museum below — not to decorate, but to be part of a specific space — and include photography and sculpture made or chosen for these exact positions.\n\n[beat]\n\nThe view at night, from the window seat or the atrium looking up at whatever the sky is doing over the Inland Sea, is the real reason to stay here rather than elsewhere on the island — and it cannot be replicated by arriving for the day."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.4468281853505,
+      "centroidLongitude": 133.99139355164522,
+      "city": "Naoshima",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Art",
+        "Contemporary",
+        "Tadao Ando",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7eac1074-8467-575f-99ae-ab48d00d5adb",
+      "createdAt": "2026-07-07",
+      "title": "Benesse House Park | ベネッセハウス パーク",
+      "shortDescription": "Where the gallery leaks out into the landscape — lawns, clifftops, and paths scattered with sculpture above the sea.",
+      "longDescription": "Naoshima can feel like a gallery that leaked out into the landscape, and the Park area of Benesse House is where that reading is most convincing. Art here doesn't wait inside rooms; it occupies lawns, clifftops, and the space between things. Richard Long's mud-painted stone circle, made on site; Niki de Saint Phalle's coloured figures; Karel Appel's frog and cat, here since 1990 and now weathered into the grass. The outdoor works are free to reach from the Tsutsuji-so bus stop, no ticket required, and the cliff path takes in several without demanding a decision about where to go next.\n\nThe Hiroshi Sugimoto Gallery: Time Corridors, opened in 2022, surveys Sugimoto's photography and sculpture — the seascapes, the Opticks polaroids — in a space he designed himself, with the Glass Tea House Mondrian on the terrace outside.\n\nThe cliff walk south to Kusama's polka-dotted Yellow Pumpkin at the pier takes about fifteen minutes and, in outdoor art per metre, is worth every one.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-park_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/benesse-house-park_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "99476598-4aac-5a22-bc8c-2c9730740c2c",
+          "order": 0,
+          "title": "Benesse House Park | ベネッセハウス パーク",
+          "caption": "Benesse's outdoor art park — sculpture across the lawns and clifftops, plus the Sugimoto gallery.",
+          "latitude": 34.448624112067165,
+          "longitude": 133.9939310472312,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/benesse-house-park.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There's a way to look at Naoshima that makes it feel like a gallery that leaked out into the landscape — and the Park area of Benesse House is probably where that reading is most convincing. Art here doesn't wait inside rooms. It occupies lawns, clifftops, paths, and the space between things.\n\nThe lawns around you spread south and west toward the sea, and the outdoor works distributed across this terrain include sculpture, installation, and pieces that sit somewhere between the two — some monumental, some almost easy to walk past if you're not looking. Richard Long's mud-painted stone circle, made on site; Niki de Saint Phalle's large coloured figures; Karel Appel's frog and cat, which have been here since 1990 and have developed a relationship with the grass and weather around them that newer pieces are still working out. The outdoor works are free to access for anyone who arrives at the Tsutsuji-so bus stop, without a museum ticket, and the path along the cliff edge toward the southern pier takes in several of them without requiring a decision about where to go next.\n\nThe Hiroshi Sugimoto Gallery: Time Corridors, which opened in 2022 in the Park building, offers a comprehensive survey of Sugimoto's photography and sculpture across different periods — including his ongoing seascapes series and the polaroid Opticks works — in a space Sugimoto himself designed, with furniture by his New Material Research Laboratory. The Glass Tea House Mondrian, a Sugimoto work that has previously appeared in Venice and Paris before finding a permanent home here, is on the terrace outside.\n\n[beat]\n\nThe walk from the Park building south along the cliff path to the Yellow Pumpkin pier — Yayoi Kusama's iconic polka-dotted sculpture at the water's edge — takes about fifteen minutes and is, in terms of sheer outdoor art per metre, worth every one of them."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.448624112067165,
+      "centroidLongitude": 133.9939310472312,
+      "city": "Naoshima",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Park",
+        "Art",
+        "Public Art",
+        "Contemporary",
+        "Green Escape",
+        "Architecture"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "540fdc1c-c3cd-5490-8334-50095623c9f9",
+      "createdAt": "2026-07-07",
+      "title": "Chichu Art Museum | 地中美術館",
+      "shortDescription": "A museum buried in a hillside, lit only by the sky — Monet, Turrell, and De Maria in rooms Ando designed around them.",
+      "longDescription": "From ground level the entrance is just a concrete wall rising from a grassy hill: no facade, no signage at scale. Chichu means underground, and the building takes the word seriously — the whole structure is buried in a former salt-harvesting hillside, visible from above only as geometric cuts in the earth. The path from the ticket centre passes a garden of some 150 species drawn from Monet's garden at Giverny.\n\nInside there is no artificial light anywhere; each room changes with the hour, the season, and the weather over the skylights. Ando designed the spaces with the artists rather than after them. The Monet room holds five Water Lilies on white rounded walls, its floor laid in two-centimetre marble tiles to diffuse light upward. Walter De Maria's Time/Timeless/No Time sets a gilded granite sphere beneath an oculus. James Turrell's Open Sky is a roofless room in which the square of sky shifts across a sitting.\n\nA sunset viewing programme for Open Sky runs most evenings — a separate experience, and the better of the two by most accounts.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chichu-art-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chichu-art-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chichu-art-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chichu-art-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chichu-art-museum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chichu-art-museum_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0da10ae6-c9f3-5cdd-bc22-506cd1f207c3",
+          "order": 0,
+          "title": "Chichu Art Museum | 地中美術館",
+          "caption": "An underground museum lit only by daylight, with Monet, Turrell, and De Maria — by Tadao Ando.",
+          "latitude": 34.44796012421047,
+          "longitude": 133.9847261914423,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chichu-art-museum.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "From ground level, the entrance is just a concrete wall rising out of a grassy hill — no facade, no signage at scale, almost nothing to indicate that a museum is here at all. Chichu means \"underground,\" and the building takes the word seriously: the entire structure is buried in a hillside that was once used for salt harvesting, visible from above only as a pattern of geometric cuts and openings in the earth.\n\nThe path from the ticket centre follows a garden of roughly 150 plant species selected from Claude Monet's garden at Giverny — an introduction to one of the three artists inside, and to the museum's central argument about art and nature. Once inside, there is no artificial light anywhere, and the experience of each room changes continuously with the time of day, the season, and the weather passing across the skylights overhead. Ando designed the spaces in collaboration with the artists rather than after them, which means the architecture and the works are inseparable in a way that is unusual even by the standards of site-specific art.\n\nThe Monet room holds five large paintings from the Water Lilies series, its walls white and rounded, its floor laid in two-centimetre marble tiles to diffuse natural light upward — a room that Monet himself specified in his blueprints for the Grandes Décorations in Paris, and that Ando recreated here with those original specifications in mind. Walter De Maria's Time/Timeless/No Time places a gilded granite sphere in a stairwell beneath an oculus, the sphere's weight and the light's movement at deliberate tension with each other. James Turrell's Open Sky is a roofless room in which the square of sky above shifts, across a sitting, from one quality of light to another.\n\n[beat]\n\nA sunset viewing programme for Turrell's Open Sky is available on most evenings — a separate experience from the daytime visit, and the better of the two according to most people who have done both."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.44796012421047,
+      "centroidLongitude": 133.9847261914423,
+      "city": "Naoshima",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Tadao Ando",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1fce2448-3185-5108-82d9-7fb3bb2d717e",
+      "createdAt": "2026-07-07",
+      "title": "Lee Ufan Museum | 李禹煥美術館",
+      "shortDescription": "The world's first museum devoted to Lee Ufan — a semi-buried Ando building where stone rests against steel and the space between things carries the meaning.",
+      "longDescription": "The first museum in the world dedicated to Lee Ufan opened here in 2010 — a surprising fact given his influence on post-war Japanese and Korean art. Born in Korea in 1936, Lee moved to Tokyo in 1956 to study philosophy and became the centre of Mono-ha, the movement that reduced the art object to minimal interventions — stone beside steel, rope beside glass — and asked the space between things to carry as much meaning as the things themselves.\n\nA tall steel column stands in the gravel forecourt as you arrive: Lee's Porte vers l'infini (Gate to Infinity, 2019), a single vertical form as concise a statement of his philosophy as anything inside. The building, designed by Tadao Ando to follow the hillside, is semi-subterranean; a narrow passage opens into an atrium before descending to the galleries.\n\nInside, the work spans five decades — from the early Relatum pieces, where stone and steel simply rest together unfastened, to later canvases of a single deliberate brushstroke, the stroke and the silence around it weighted equally.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lee-ufan-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lee-ufan-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lee-ufan-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lee-ufan-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lee-ufan-museum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lee-ufan-museum_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f82b8c26-b8fa-5e5b-9bce-346bac295ead",
+          "order": 0,
+          "title": "Lee Ufan Museum | 李禹煥美術館",
+          "caption": "The first museum devoted to Lee Ufan — a semi-buried Tadao Ando building above the sea.",
+          "latitude": 34.44869445423067,
+          "longitude": 133.98914648733185,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lee-ufan-museum.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The first museum in the world dedicated to Lee Ufan's work opened here on Naoshima in 2010 — which is, given the scale of his influence on post-war Japanese and Korean contemporary art, a fact that invites a double take. Lee was born in Korea in 1936, moved to Tokyo in 1956 to study philosophy, and became the theoretical and artistic centre of Mono-ha — a movement of the late 1960s and 1970s that reduced the art object to minimal material interventions, placing stone next to steel, or rope next to glass, and asking the space between things to carry as much meaning as the things themselves.\n\nA tall steel column stands in the open gravel forecourt as you arrive — Lee Ufan's Porte vers l'infini (Gate to Infinity, 2019), a single vertical form in a horizontal landscape, generating a tension between the weight of the ground and the openness of the sky that is as concise a statement of Lee's philosophy as anything inside the building. The building itself, designed by Tadao Ando to conform to the hillside's topography, is semi-subterranean, its entrance sequence moving through a narrow passageway that suddenly opens into an atrium before descending into the gallery rooms.\n\nInside, the works span five decades — from the early Relatum series of the 1970s, in which stone and steel plates simply rest against each other without fastening, to later paintings of single deliberate brushstrokes on large white canvas, in which the stroke and the silence around it carry equal weight. Everything in the museum is in conversation with Ando's concrete walls and the quality of light admitted through precisely positioned apertures, in keeping with Lee's description of his practice as \"rather than making an object to be seen, offering a visual opportunity to encounter the world.\"\n\n[beat]\n\nThe walk between this museum and the Chichu Art Museum follows a hillside path with views over the Seto Inland Sea — a fitting transition between two buildings that both insist, in different registers, on the relationship between art, architecture, and landscape."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.44869445423067,
+      "centroidLongitude": 133.98914648733185,
+      "city": "Naoshima",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Tadao Ando",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "855c0a2d-6c62-5bd7-8227-960a7247773c",
+      "createdAt": "2026-07-07",
+      "title": "Naoshima New Museum of Art | 直島新美術館",
+      "shortDescription": "Ando's tenth Naoshima building, opened 2025 — a black-plastered museum descending underground, devoted to Asian contemporary art.",
+      "longDescription": "Tadao Ando's tenth building on Naoshima opened in spring 2025, thirty-seven years after his first work on the island — ten commissions from one client over four decades, a relationship with few parallels in contemporary architecture. The hilltop entrance looks north over the water toward Teshima, and the ground-floor cafe extends that panorama across an open terrace.\n\nThen the building goes down: three floors, two of them subterranean, reached by a staircase descending through a skylit atrium whose walls close in before releasing into a cavernous lower gallery. The exterior breaks from Ando's earlier white concrete — black plaster evoking the charred-cedar yakisugi of island houses, with pebble walls echoing Honmura's stone fencing.\n\nThe collection is defined by a decision: this is the museum for Asian contemporary art, a complement to the Western-leaning holdings of Benesse House and Chichu. The inaugural shows include Cai Guo-Qiang's Head On — ninety-nine wolves leaping through a two-storey gallery — alongside artists from the Philippines, Indonesia, Japan, and Korea.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/naoshima-new-museum-of-art_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/naoshima-new-museum-of-art_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/naoshima-new-museum-of-art_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/naoshima-new-museum-of-art_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d82dd706-d0e6-50aa-a634-ce4e5feb0ed1",
+          "order": 0,
+          "title": "Naoshima New Museum of Art | 直島新美術館",
+          "caption": "Tadao Ando's tenth Naoshima building (2025) — black-plastered, descending underground, for Asian contemporary art.",
+          "latitude": 34.45875262100396,
+          "longitude": 133.9985528043826,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/naoshima-new-museum-of-art.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Tadao Ando's tenth building on Naoshima opened in spring 2025 — thirty-seven years after his first work on the island, a summer camp in 1989. Ten commissions from a single client over four decades, on one small island in the Seto Inland Sea, is a relationship without many parallels in contemporary architecture.\n\nThe hilltop site gives the entrance terrace an immediate view north over the water toward Teshima island, and the café on the ground floor extends that panorama across an open terrace — a deliberate contrast to the enclosed underground galleries below. The building goes down: three floors, two of them subterranean, connected by a staircase that descends through a skylit atrium whose walls close in as you go lower, then release into a cavernous lower gallery at the bottom. The exterior, distinctly different from the white concrete of Ando's earlier Naoshima buildings, uses black plaster evoking the yakisugi — charred cedar — technique used on traditional island houses, with pebble walls that echo the stone fencing of the Honmura district nearby.\n\nThe collection here is defined by a decision: this is the museum for Asian contemporary art, a complement to the Western-dominated holdings of the Benesse House Museum and Chichu. The inaugural exhibitions include Cai Guo-Qiang's Head On — ninety-nine wolves in formation, leaping through a two-storey gallery — alongside works by artists from the Philippines, Indonesia, Japan, and Korea. The shift reflects Soichiro Fukutake's stated conviction that Japanese cultural identity needs to be understood as part of Asia, not apart from it, and the programming is intended to evolve rather than settle.\n\n[beat]\n\nThe Honmura district below the hill, reached on foot via a staircase path, has been the base of the Art House Project since 1998 — old houses converted into art installations, still embedded in the village where people actually live."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.45875262100396,
+      "centroidLongitude": 133.9985528043826,
+      "city": "Naoshima",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Tadao Ando",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "92197c3f-65e2-551d-ab93-7467c7f5f7ec",
+      "createdAt": "2026-07-07",
+      "title": "Naoshima Pavilion | 直島パヴィリオン",
+      "shortDescription": "A white mesh polyhedron at the harbour's edge, designed by Sou Fujimoto in 2017 to be the twenty-ninth island of Naoshima.",
+      "longDescription": "What you see from the ferry dock — a white, irregular polyhedron somewhere between a geodesic dome and a crumpled sheet of paper — was designed by Sou Fujimoto in 2017 with a deliberately odd ambition: to be the twenty-ninth island of Naoshima. His idea was that the town is made of twenty-eight islands, and that this would add one more; not a building in the conventional sense but a spatial condition.\n\nBuilt from white-painted stainless steel in a framework where no two faces share an angle, it stands seven metres tall and open enough that wind passes through while the mesh diffuses light into shifting shadow. You can walk inside and climb across the irregular interior, which Fujimoto shaped for sitting, resting, and looking out — a space neither indoor nor outdoor, neither sculpture nor architecture, and more comfortable than that sounds. At night, internal lighting turns the mesh luminous against the dark water — a lantern rather than a stone.\n\nA three-minute walk leads to the I Love Yu bathhouse and Kusama's Red Pumpkin.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/naoshima-pavilion_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "28cc5581-c32c-5125-8cf6-86bce916935b",
+          "order": 0,
+          "title": "Naoshima Pavilion | 直島パヴィリオン",
+          "caption": "Sou Fujimoto's 2017 white mesh pavilion at the harbour — conceived as Naoshima's twenty-ninth island.",
+          "latitude": 34.456018925001665,
+          "longitude": 133.9754049766758,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/naoshima-pavilion.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "What you can see from the ferry dock — the white, irregular polyhedron resting at the water's edge, somewhere between a geodesic dome and a crumpled piece of paper — was designed by architect Sou Fujimoto in 2017 with a deliberately odd ambition: to be the twenty-ninth island of Naoshima.\n\nThe white mesh structure near the harbour entrance is built from white-painted stainless steel in a framework that is irregular rather than geometrically predictable — no two faces the same angle, the whole thing seven metres tall and open enough that wind passes through freely while the mesh diffuses light and creates shifting patterns of shadow inside. Fujimoto's concept, as he described it, was that Naoshima is a town of twenty-eight islands, and that this structure would add one more — not a building in the conventional sense, but a spatial condition: enclosed enough to feel like somewhere, open enough to remain part of the sea and sky around it.\n\nYou can walk inside and climb across the irregular interior topography, which Fujimoto designed to offer different levels and angles for sitting, resting, and looking out. The effect is of a space that is neither indoor nor outdoor, neither sculpture nor architecture, in a way that turns out to be more comfortable than the description suggests. At night, internal lighting makes the mesh luminous against the dark water, and the structure becomes a different object entirely — a lantern rather than a stone, warm against the harbour rather than white in the daylight.\n\n[beat]\n\nA three-minute walk from here along the harbour leads to the I Love Yu bathhouse — Shinro Ohtake's functioning art sento — and Yayoi Kusama's Red Pumpkin, two works that offer a very different register of public art from the quiet minimalism of Fujimoto's pavilion, but belong to the same island-wide conversation."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.456018925001665,
+      "centroidLongitude": 133.9754049766758,
+      "city": "Naoshima",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Art",
+        "Public Art",
+        "Contemporary",
+        "Sou Fujimoto",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8eae778d-b818-549a-b991-379f947b5eab",
+      "createdAt": "2026-07-07",
+      "title": "Naoshima Public Bath \"I♥湯\" | 直島銭湯「I♥湯」",
+      "shortDescription": "A functioning public bath that is also an artwork — Shinro Ohtake's riotous collage sento near Miyanoura Port, where the name is a pun on hot water.",
+      "longDescription": "This is a working public bath — admission six hundred and sixty yen, towels for sale, soap and shampoo provided — and you are meant to use it, not merely photograph it. The building is the work of artist Shinro Ohtake, who in 2009 converted a former structure near Miyanoura Port into an official sento that is, in every visual detail, an artwork.\n\nThe exterior reads as a riot of collage: fragments of other buildings grafted on, tiles, pipes, signage, a vintage Coca-Cola machine, architectural elements from many periods welded into a surface that is aggressively energetic yet coherent. Ohtake has always worked this way — accumulation as composition, chaos as a deliberate strategy. Inside, a large ceramic elephant presides over the wall dividing the men's and women's baths; the ceiling is painted, the mosaic walls shift between figure and abstraction — and yet the baths work perfectly and the water is hot.\n\nYu means hot water. The name is a pun, and also a statement of intent: this is art you can get into.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/naoshima-public-bath-i-love-yu_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/naoshima-public-bath-i-love-yu_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d82c3635-f91b-5394-a485-3bf1d0d70ece",
+          "order": 0,
+          "title": "Naoshima Public Bath \"I♥湯\" | 直島銭湯「I♥湯」",
+          "caption": "Shinro Ohtake's 2009 art-sento near Miyanoura Port — a functioning bath built as a riot of collage.",
+          "latitude": 34.458690377526736,
+          "longitude": 133.97512655087257,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/naoshima-public-bath-i-love-yu.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "This is a functioning public bath. The admission fee is six hundred and sixty yen, towels are available to purchase, soap and shampoo are provided, and you are expected to use it — not merely to photograph it.\n\nThe building you're facing is the work of artist Shinro Ohtake, who in 2009 converted a former building near Miyanoura Port into what is officially a sento — a Japanese communal bathhouse — but is also, in every visual and sensory detail, an artwork. The exterior reads as a riot of collage: entire fragments of other structures have been grafted onto the original building, with tiles, pipes, signage, a vintage Coca-Cola machine, and architectural elements from various periods welded into a surface that is aggressively energetic without being incoherent. Ohtake's aesthetic across his career has consistently worked this way — accumulation as composition, chaos as a deliberate structural strategy rather than an absence of one.\n\nInside, the division between men's and women's sections is presided over by a large ceramic elephant sculpture that peers from the dividing wall across both baths. The ceiling above the bathing area is painted by Ohtake, the mosaic walls carry imagery that shifts between the figural and the abstract, and the space is alive with pattern and colour in a way that is entirely unlike a conventional sento — and yet the baths themselves work perfectly, the water is hot, and on a full day of walking between museums in all weathers, the logic of ending here rather than at a café becomes increasingly clear.\n\n[beat]\n\nYu, in Japanese, means hot water. The name is a pun, and it is also a statement of intent: this is art you can get into."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.458690377526736,
+      "centroidLongitude": 133.97512655087257,
+      "city": "Naoshima",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Notable Building",
+        "Art",
+        "Public Art",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bdb2a112-10d6-5002-8f94-9014ab7c49c3",
+      "createdAt": "2026-07-07",
+      "title": "Porte vers l'infini (Gate to Infinity) | 李禹煥「無限門」",
+      "shortDescription": "A single tapered steel column in an open gravel forecourt — Lee Ufan's 2019 work, less an object to study than a way of seeing the world around it.",
+      "longDescription": "A single column stands in the open gravel in front of you: steel, roughly the height of a lamp post, tapered toward the top, its surface carrying the marks of its making rather than concealing them. No plinth, no frame, no explanation. The title Lee Ufan gave it when he installed it here in 2019 translates as Gate to Infinity.\n\nIt stands in the forecourt of the Lee Ufan Museum, where visitors arrive before entering — something to pass near rather than to study, changing its relationship to the sea and the hillside depending on where you stand. Lee's practice has been consistent for five decades: rather than making objects that absorb attention, he creates conditions in which the world around the object becomes visible. The column does not try to be more present than the sky behind it.\n\nThe relationship between vertical column and horizontal gravel, manufactured steel and organic hillside, single mark and surrounding silence — that is the argument the work makes, and it takes a minute of standing still to land.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/porte-vers-l-infini_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/porte-vers-l-infini_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/porte-vers-l-infini_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "79881260-80d4-5872-9e16-80620f2dc78b",
+          "order": 0,
+          "title": "Porte vers l'infini (Gate to Infinity) | 李禹煥「無限門」",
+          "caption": "Lee Ufan's 2019 tapered steel column in the museum forecourt — a gate to infinity against sea and sky.",
+          "latitude": 34.44794692453198,
+          "longitude": 133.98869618634103,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/porte-vers-l-infini.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "A single column stands in the open gravel in front of you — steel, roughly the height of a lamp post, tapered toward the top, its surface carrying the marks of fabrication rather than concealing them. No plinth, no frame, no explanation mounted beside it. The title, given by Lee Ufan when he installed it here in 2019, translates as Gate to Infinity.\n\nThe column stands in the open gravel forecourt of the Lee Ufan Museum, placed where visitors arrive before entering the building itself, so that it functions as both an introduction and a preparation — something to pass near rather than to study, something that changes its relationship to the sea and the hillside behind it depending on where you're standing. Lee's practice has been consistent across five decades: rather than making objects that absorb attention entirely, he prefers to create conditions in which the world around the object becomes visible. The column doesn't try to be more present than the sky behind it. In his description of his own work, Lee has said that he aims to offer not an object to be seen but a visual opportunity to encounter the world — and this work is perhaps the most direct expression of that intention anywhere on the island.\n\nThe relationship between the vertical column and the horizontal gravel plain, between the manufactured steel and the organic hillside, between the single mark and the surrounding silence, is the argument the work is making — and it takes a minute or two of standing still for it to fully land.\n\n[beat]\n\nThe Lee Ufan Museum entrance is directly behind this work, and the progression from outdoor column to indoor gallery is worth treating as a continuous sequence rather than two separate visits — the contrast between sky and concrete ceiling, open and enclosed, is part of what the museum is about."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.44794692453198,
+      "centroidLongitude": 133.98869618634103,
+      "city": "Naoshima",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Monument",
+        "Art",
+        "Public Art",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b677b73c-9805-5eb1-98b7-88f67c5d3feb",
+      "createdAt": "2026-07-07",
+      "title": "Red Pumpkin | 「赤かぼちゃ」草間彌生",
+      "shortDescription": "Yayoi Kusama's polka-dotted red pumpkin at Miyanoura Port — big enough to walk inside, where the sculpture becomes an environment.",
+      "longDescription": "Kusama's red pumpkin at Miyanoura Port: the polka dots, the scale, the colour against the sea. There is no shortage of photographs — which is precisely why it is worth knowing what it does that they don't capture. The sculpture at the end of the pier is large enough to walk inside, through one of the oval openings cut into its base.\n\nThe interior is dark and indirectly lit, its walls and ceiling covered in the same black dots as the exterior — but from inside, looking up and out, the relationship inverts. What was an object becomes an environment, the dots around you and the sea visible in slices through the apertures, and Kusama's lifelong repetition — the same mark at every scale, dissolving the boundary between self and world — suddenly makes sense in a way it doesn't from twenty metres away.\n\nKusama placed the Yellow Pumpkin at the southern pier in 1994 and this red one followed in 2006 — a greeting and a departure for the island. The yellow original, damaged by Typhoon Lupit in 2021, was replaced in 2022; the red, set back from the exposed pier, survived.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/red-pumpkin_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5a2d6c4b-3024-5106-8b7b-11ef83b527aa",
+          "order": 0,
+          "title": "Red Pumpkin | 「赤かぼちゃ」草間彌生",
+          "caption": "Yayoi Kusama's 2006 red pumpkin at Miyanoura Port — walk inside and the sculpture becomes an environment.",
+          "latitude": 34.4563425081458,
+          "longitude": 133.9738322188673,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/red-pumpkin.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Yayoi Kusama's red pumpkin at Miyanoura Port. The polka dots. The scale. The colour against the sea. There is no shortage of photographs of this — which is precisely why it's worth also knowing what it does that the photographs don't capture.\n\nThe red sculpture at the end of the pier is large enough to walk inside, through one of the oval openings cut into its base. The interior is dark, lit indirectly, its ceiling and walls covered in the same black polka dot pattern that covers the exterior — but from inside, looking up and out through the openings, the spatial relationship inverts. What was a sculptural object from outside becomes an environment from inside, the dots around you and the sea visible in slices through the apertures, and the logic of Kusama's repetition — the same mark applied at every scale across a lifetime's work as a way of dissolving the boundaries between self and world — suddenly makes sense in a way it doesn't from twenty metres away.\n\nKusama installed the Yellow Pumpkin at the southern pier in 1994, and this red version followed in 2006 — the two forming a kind of greeting and departure for the island, one on the western pier where ferries arrive and one on the southern edge where the Benesse House complex begins. The yellow original was irreparably damaged by Typhoon Lupit in 2021 and replaced by a new version in 2022; the red pumpkin, being inland from the exposed pier, survived.\n\n[beat]\n\nThe walk from the Red Pumpkin to the Naoshima Pavilion and the I Love Yu bathhouse covers the central cluster of the port area in about fifteen minutes — a reasonable orientation circuit if you've just arrived on the island."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.4563425081458,
+      "centroidLongitude": 133.9738322188673,
+      "city": "Naoshima",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Monument",
+        "Art",
+        "Public Art",
+        "Iconic Landmark",
+        "Contemporary",
+        "Waterfront"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7d086c27-bdb6-5cab-b106-ca7a42e760f5",
+      "createdAt": "2026-07-07",
+      "title": "The Naoshima Plan 2019 \"The Water\" | ナオシマ プラン 2019「水」",
+      "shortDescription": "An old Honmura house opened up by Hiroshi Sambuichi around a shallow pool of real groundwater — the artwork is the movement of water, wind, and light.",
+      "longDescription": "What architect Hiroshi Sambuichi was attending to here was the way groundwater moves through Honmura's soil, the way seasonal wind passes between the houses, and the way a traditional north-south room layout aligns those forces into a natural ventilation the village understood without ever naming.\n\nThe old house on this quiet lane has been transformed since 2019 as part of the Benesse Art Site's expansion of the Art House Project, which has been embedding contemporary work into abandoned homes here since 1998. Sambuichi takes the house's original structure as his subject: he exposes the traditional layout, strips back the surfaces, and introduces a shallow pool that runs through the interior and out toward a pier, fed by the groundwater directly beneath.\n\nThe water is real and it moves. Wind through the opened axis creates ripples; light shifts across the surface with the hour and season. The relationship between the water's weight, the lightness of the structure, and the movement of air is the artwork — not any object placed within it. Sambuichi calls his architecture a study of moving materials, and a few minutes here make that feel earned rather than poetic.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-naoshima-plan-the-water_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-naoshima-plan-the-water_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "571329cc-500f-5162-b908-21898c801aaf",
+          "order": 0,
+          "title": "The Naoshima Plan 2019 \"The Water\" | ナオシマ プラン 2019「水」",
+          "caption": "Hiroshi Sambuichi's Honmura house (2019) built around a moving pool of real groundwater.",
+          "latitude": 34.46060751412776,
+          "longitude": 133.99625836336995,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-naoshima-plan-the-water.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Here's what architect Hiroshi Sambuichi was paying attention to when he worked on this building: the way groundwater moves through the soil of Honmura, the way seasonal wind passes between houses in this part of the village, and the way a traditional north-south room layout aligns those forces into a kind of natural ventilation that the people who built this district understood intuitively and never had to name.\n\nThe old house on this quiet Honmura lane has been transformed since 2019 as part of the Benesse Art Site's expansion of the Art House Project — which since 1998 has been converting abandoned homes in this village into permanent art installations, embedding contemporary work into the fabric of where people actually live. Sambuichi's contribution to the project takes the house's original structure as its subject: he exposes the traditional layout, strips back the surfaces, and introduces a shallow pool that extends through the interior and outward toward a pier, fed by the rich groundwater directly beneath the building.\n\nThe water in the pool is real groundwater, and it moves. Wind passing through the opened north-south axis of the house creates ripples; light shifts across the surface depending on time and season; the relationship between the weight of the water, the lightness of the structure overhead, and the movement of air through the space is the artwork, rather than any object placed within it. Sambuichi describes his architecture as a study of \"moving materials\" — water, wind, light — and the experience of standing in this space for a few minutes makes that description feel earned rather than poetic.\n\n[beat]\n\nThe surrounding Honmura lanes are dense with Art House Project sites — Ando Museum, Minamidera, Kadoya, and others — and this one sits quietly among them, easy to walk past if you're not looking for it, which is, after all, in keeping with the building's entire approach."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.46060751412776,
+      "centroidLongitude": 133.99625836336995,
+      "city": "Naoshima",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Art",
+        "Contemporary",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "268affc2-031b-5924-bf6d-41a4234f9f97",
+      "createdAt": "2026-07-07",
+      "title": "Valley Gallery | ヴァレーギャラリー",
+      "shortDescription": "Ando's ninth Naoshima building, where the approach path is the art — hundreds of Kusama's mirrored steel spheres spilling across a valley lake.",
+      "longDescription": "Before you reach the building, the path offers you the artwork — and it is better than anything else on the approach to any gallery on this island. The path to Valley Gallery winds uphill through the valley between the Lee Ufan and Benesse House museums, and along it, across a small lake and up the hillside, are hundreds of polished stainless-steel spheres: Yayoi Kusama's Narcissus Garden, first made in 1966 and permanently installed here since 2022.\n\nEach sphere is about the size of a football, mirror-bright, reflecting a distorted sky and trees and whoever stands near. When wind crosses the water the spheres on its surface click together in a low rhythmic sound unlike anything you expect in an art context. Walking through hundreds of your own distorted reflections, surrounded by that sound, is hard to prepare for.\n\nThe gallery at the top — Tadao Ando's ninth Naoshima commission, opened 2022 — is a semi-open concrete structure with a slit roof channelling daylight in. Inside, an indoor Narcissus Garden sits alongside Tsuyoshi Ozawa's Slag Buddhas: eighty-eight figures made from industrial waste reclaimed from Teshima.",
+      "makerId": "58b5e216-086c-56fb-8367-884edbf23b6a",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/valley-gallery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/valley-gallery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/valley-gallery_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/valley-gallery_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "84456e6f-1cea-5484-a17d-d27a38a8df6a",
+          "order": 0,
+          "title": "Valley Gallery | ヴァレーギャラリー",
+          "caption": "Tadao Ando's 2022 gallery reached through Kusama's Narcissus Garden — hundreds of mirrored spheres across a valley.",
+          "latitude": 34.447833795505126,
+          "longitude": 133.99034410529785,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/valley-gallery.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Before you reach the building, the path offers you the artwork — and the artwork is better than anything else on the approach to any gallery on this island, which is saying something.\n\nThe path that leads to Valley Gallery winds uphill through the valley between the Lee Ufan Museum and the Benesse House Museum, and along it, spilling across a small lake and up the surrounding hillside, are hundreds of polished stainless steel spheres: Yayoi Kusama's Narcissus Garden, first made in 1966 and now permanently installed here since 2022. Each sphere is roughly the diameter of a football, mirror-bright, reflecting a distorted version of the sky and the trees and whatever is standing near it. When the wind moves across the water, the spheres on the lake's surface click together, producing a collective sound that is low, rhythmic, and unlike anything you are likely to have heard in an art context before. The experience of walking through hundreds of your own distorted reflections, surrounded by that sound, in a wooded valley above the Seto Inland Sea, is difficult to prepare for.\n\nThe gallery building at the top, Tadao Ando's ninth commission on Naoshima, opened in 2022 — a semi-open concrete structure with angular walls and a slit roof that channels natural light into the interior. Inside, Kusama's work continues: an indoor component of Narcissus Garden alongside Tsuyoshi Ozawa's Slag Buddha statues, made from industrial waste reclaimed from Teshima island, eighty-eight Buddhas in a form that carries both the island's contamination history and its Buddhist pilgrimage tradition. Entry to Valley Gallery is included in the Benesse House Museum ticket.\n\n[beat]\n\nThe outdoor path between Valley Gallery and Chichu Art Museum continues west through the hillside, and the transition between them — Kusama's reflected multiplicity giving way to Ando's precise geometry — rewards the walk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 34.447833795505126,
+      "centroidLongitude": 133.99034410529785,
+      "city": "Naoshima",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Tadao Ando",
+        "Public Art",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     }
