@@ -1,8 +1,8 @@
 # Amsterdam — batch 1 (NEW CITY) — images STAGED ✅
 
 Started 2026-07-06. New city **Amsterdam**; new maker **Atlas Studio AMS** (create at first wire-in).
-Owner numbering scheme (gaps expected). **14 scripts sourced + owner-picked + cropped + pushed to
-gh-pages** on 2026-07-06 (waves 1–4). Awaiting narration audio → wire into `Tours.json` at that point.
+Owner numbering scheme (gaps expected). **15 tours image-staged** (owner-picked + cropped + pushed to
+gh-pages) on 2026-07-06/07; scripts 05/06/07 sourced + awaiting picks. Awaiting narration audio → wire into `Tours.json` at that point.
 
 Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 
@@ -10,6 +10,7 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | # | Tour | slug | hero + gallery (in order) | credit? |
 |---|------|------|---------------------------|---------|
 | 01 | Dam Square & Royal Palace | `dam-square-royal-palace` | `_hero`(DS7 palace+square) · `_2`(DS29) · `_3`(DS22 aerial) · `_4`(DS2 monument) · `_5`(DS19 palace facade) | ship-safe stock, none |
+| 02 | Nieuwe Kerk | `nieuwe-kerk` | `_hero`(owner exterior — church beside the Palace on Dam Square) · `_2`(owner interior — nave + stained glass + chandelier) | **owner-supplied, none** |
 | 03 | De Wallen | `de-wallen` | `_hero`(DW3 gabled fronts) · `_2`(DW33) · `_3`(DW34) · `_4`(DW4 sunset) · `_5`(DW1) · `_6`(DW44 autumn) | ship-safe stock, none |
 | 04 | Oude Kerk | `oude-kerk` | `_hero`(OK29 exterior+tower) · `_2`(OK28 exterior) · `_3`(OKW2 interior — wooden vault + gravestone floor) | **CC — see CREDITS.md** |
 | 08 | Begijnhof | `begijnhof` | `_hero`(BGW9 courtyard+statue) · `_2`(BGW2 weeping tree) · `_3`(BGW8 lawn+houses) · `_4`(BGW10 house detail) | **CC — see CREDITS.md** |
@@ -24,7 +25,7 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 29 | De Pijp / Albert Cuyp | `de-pijp-albert-cuyp` | `_hero`(DP1 market street) · `_2`(DP6 stalls+flag) · `_3`(DP14 food) · `_4`(DP4 food stall) · `_5`(DP56 market wide) | ship-safe (DP56 = CC0), none |
 | 37 | Centraal Station | `centraal-station` | `_hero`(CS1 facade+water) · `_2`(CS28 facade from IJ) · `_3`(CS3 facade+cyclists) · `_4`(CS13 concourse) · `_5`(CS25 platform+train) | ship-safe stock, none |
 
-All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked), wave 3 `d8e7300` (21/24/25/28/29), wave 4 `0242a95` (37).
+All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked), wave 3 `d8e7300` (21/24/25/28/29), wave 4 `0242a95` (37), Nieuwe Kerk `0a327ca` (02, owner-supplied).
 
 **⚠️ WK23 rejected:** the stock "Westerkerk interior" pick (WK23) turned out to be a **different Gothic church** (ribbed stone vaults, not the Westerkerk's whitewashed Renaissance barrel vault) — caught on full-size review. Replaced with a Wikimedia-verified Westerkerk interior (owner picking from `westerkerk-int` set).
 
@@ -58,6 +59,7 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
    - `heroImageURL` + `additionalImageURLs` per the pick map above.
    - **Coords (approximate — verify against final audio/pin):**
      - Dam Square & Royal Palace: `52.37310, 4.89135`
+     - Nieuwe Kerk (Dam Square): `52.37370, 4.89100`
      - De Wallen: `52.37360, 4.89750`
      - Oude Kerk: `52.37440, 4.89810`
      - Begijnhof: `52.36900, 4.88990`
@@ -71,7 +73,7 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
      - Vondelpark (centre): `52.35810, 4.86860`
      - De Pijp / Albert Cuyp (Albert Cuypstraat): `52.35570, 4.89230`
      - Centraal Station (Stationsplein): `52.37900, 4.90020`
-   - **Category suggestions (owner's call):** Dam Square → `history`; De Wallen → `culturalHeritage`;
+   - **Category suggestions (owner's call):** Dam Square → `history`; Nieuwe Kerk → `sacredSites`; De Wallen → `culturalHeritage`;
      Oude Kerk → `sacredSites`; Begijnhof → `hiddenGems`; Canal Ring → `culturalHeritage` (or `architecture`);
      Nine Streets → `hiddenGems` (or `culturalHeritage`); Anne Frank House → `history`; Westerkerk → `sacredSites`;
      Jordaan → `culturalHeritage`; Rijksmuseum → `culturalHeritage` (or `architecture`); Van Gogh Museum → `culturalHeritage`;
