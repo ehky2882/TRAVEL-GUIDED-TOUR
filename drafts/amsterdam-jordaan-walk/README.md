@@ -27,7 +27,7 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 
 _(Neat fit: single-stop tour #22 "Noordermarkt / Brouwersgracht" has hero = Noorderkerk and `_2` = Brouwersgracht, which split exactly across walk stops 4 and 5.)_
 
-- **heroImageURL (walk):** proposed `jordaan_hero.webp` (JD11 — the Westertoren over a canal with a bike, the quintessential Jordaan; also anchors the walk's start). Alt: `westerkerk_hero.webp` (the tower). **Owner to confirm.**
+- **heroImageURL (walk):** `westerkerk_hero.webp` (WK34 — the Westerkerk tower + imperial crown; the landmark the walk starts under). **Owner-confirmed.** (`jordaan_hero.webp` still serves as stop 3's image.)
 - **additionalImageURLs** (5, in stop order): `westerkerk_hero.webp`, `homomonument_hero.webp`, `jordaan_hero.webp`, `noordermarkt-brouwersgracht_hero.webp`, `noordermarkt-brouwersgracht_2.webp`.
 - **Credit:** inherits **3 existing CC credits** (Homomonument hero, Noordermarkt/Noorderkerk hero, Brouwersgracht `_2`) — already logged in `drafts/CREDITS.md` from the single-stop tours; **adds none**. Westerkerk + Jordaan heroes are ship-safe.
 
