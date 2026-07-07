@@ -1,8 +1,8 @@
 # Amsterdam — batch 1 (NEW CITY) — images STAGED ✅
 
 Started 2026-07-06. New city **Amsterdam**; new maker **Atlas Studio AMS** (create at first wire-in).
-Owner numbering scheme (gaps expected). **13 scripts sourced + owner-picked + cropped + pushed to
-gh-pages** on 2026-07-06 (waves 1–3). Awaiting narration audio → wire into `Tours.json` at that point.
+Owner numbering scheme (gaps expected). **14 scripts sourced + owner-picked + cropped + pushed to
+gh-pages** on 2026-07-06 (waves 1–4). Awaiting narration audio → wire into `Tours.json` at that point.
 
 Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 
@@ -22,8 +22,9 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 25 | Van Gogh Museum | `van-gogh-museum` | `_hero`(VG16 building+glass wing) · `_2`(VG20 glass entrance) · `_3`(VG15 curved wing) | ship-safe stock, none |
 | 28 | Vondelpark | `vondelpark` | `_hero`(VP12 bandstand island) · `_2`(VP1 pond+houses) · `_3`(VP6 autumn pond) | ship-safe stock, none |
 | 29 | De Pijp / Albert Cuyp | `de-pijp-albert-cuyp` | `_hero`(DP1 market street) · `_2`(DP6 stalls+flag) · `_3`(DP14 food) · `_4`(DP4 food stall) · `_5`(DP56 market wide) | ship-safe (DP56 = CC0), none |
+| 37 | Centraal Station | `centraal-station` | `_hero`(CS1 facade+water) · `_2`(CS28 facade from IJ) · `_3`(CS3 facade+cyclists) · `_4`(CS13 concourse) · `_5`(CS25 platform+train) | ship-safe stock, none |
 
-All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked), wave 3 `d8e7300` (21/24/25/28/29).
+All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wave 2 `78c5fd3` (10/11/18/19 — Westerkerk interior `_3` to follow once picked), wave 3 `d8e7300` (21/24/25/28/29), wave 4 `0242a95` (37).
 
 **⚠️ WK23 rejected:** the stock "Westerkerk interior" pick (WK23) turned out to be a **different Gothic church** (ribbed stone vaults, not the Westerkerk's whitewashed Renaissance barrel vault) — caught on full-size review. Replaced with a Wikimedia-verified Westerkerk interior (owner picking from `westerkerk-int` set).
 
@@ -69,15 +70,16 @@ All webp are 1200×900 q82. gh-pages commits: wave 1 `d58e94d` (01/03/04/08), wa
      - Van Gogh Museum (Museumplein 6): `52.35840, 4.88110`
      - Vondelpark (centre): `52.35810, 4.86860`
      - De Pijp / Albert Cuyp (Albert Cuypstraat): `52.35570, 4.89230`
+     - Centraal Station (Stationsplein): `52.37900, 4.90020`
    - **Category suggestions (owner's call):** Dam Square → `history`; De Wallen → `culturalHeritage`;
      Oude Kerk → `sacredSites`; Begijnhof → `hiddenGems`; Canal Ring → `culturalHeritage` (or `architecture`);
      Nine Streets → `hiddenGems` (or `culturalHeritage`); Anne Frank House → `history`; Westerkerk → `sacredSites`;
      Jordaan → `culturalHeritage`; Rijksmuseum → `culturalHeritage` (or `architecture`); Van Gogh Museum → `culturalHeritage`;
-     Vondelpark → `natureAndParks`; De Pijp / Albert Cuyp → `culturalHeritage`.
+     Vondelpark → `natureAndParks`; De Pijp / Albert Cuyp → `culturalHeritage`; Centraal Station → `architecture` (or `history`).
 3. `swift scripts/validate-tours.swift` → fix any errors.
 4. Surface the CC credits at ship time (Oude Kerk, Begijnhof, Anne Frank House, Westerkerk interior — per `drafts/CREDITS.md`).
 
 ## Still to come (owner)
-- Amsterdam scripts **02, 05, 06, 07, 09, 12–17, 20, 22, 23, 26, 27, 30+ …** not yet received — source in the next passes.
+- Amsterdam scripts **02, 05, 06, 07, 09, 12–17, 20, 22, 23, 26, 27, 30–36, 38+ …** not yet received — source in the next passes.
 - Owner to pick the **Westerkerk interior** (`_3`) from the verified `westerkerk-int` options.
-- Narration MP3s for all 13 (nothing goes live until audio + maker exist).
+- Narration MP3s for all 14 (nothing goes live until audio + maker exist).
