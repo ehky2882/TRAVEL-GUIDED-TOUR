@@ -947,6 +947,7 @@ hosting) can follow.
 - [ ] Consumer richness (Step 8): follow-a-maker + notifications, in-app search, share links
 - [ ] Moderation web admin tool — only if volume outgrows the email approach
 - [ ] **Group Listen** (proposed — design ready, awaiting owner green-light): a group listens to a tour in sync, leader-driven; **Nearby** mode (offline MultipeerConnectivity mesh, ≤~8) + **Hosted** mode (Supabase Realtime, large); free "Listen Together" + paid **"Pro Guide"** tier; account-gated. Connects the social layer + monetization. Full production handoff: `docs/group-listen-design.md` (+ `backend/group_sessions.sql` for Hosted mode). App build is Mac-side (device-test-heavy).
+- [ ] **Journeys** (proposed — design ready, awaiting owner green-light): user-curated, ordered, editable collections of whole tours (multi-stop tours kept intact) with per-tour notes; plan-then-follow, offline batch download, shareable (profile + deep link) + savable. Rests on **"anyone can be a Dozent"** (no consumer/maker split — accounts make Tours *and* Journeys). Reuses tours + downloader + deep-links (#297) + profile; near-zero new infra. Discovery flywheel for makers. Handoff: `docs/journeys-design.md` (+ `backend/journeys.sql`). App build Mac-side.
 
 **E. Housekeeping**
 - [ ] Fix 2 dead gallery images (The Oculus, The Charging Bull — Wikimedia 404)
