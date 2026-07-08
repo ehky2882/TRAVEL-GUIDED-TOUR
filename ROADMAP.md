@@ -957,6 +957,12 @@ hosting) can follow.
 
 ## Post-V1 — Future direction (owner takes my lead, reserves right to change)
 
+> **Compass:** the *why* and the *in-what-order* live in **[`docs/product-vision.md`](docs/product-vision.md)**
+> (north-star thesis, the five facets, NYC beachhead, "know your city" retention, the
+> Explorer→Dozent ladder, and the sequenced roadmap). Read it before big product calls.
+> **First domino: make the core NYC walking experience undeniably great** (validate the GPS
+> trigger on the ground) — everything else is downstream of that.
+
 The big arc after V1 is **opening the platform to outside makers.**
 That requires several large pieces of infrastructure, roughly:
 
