@@ -30,10 +30,12 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 | 🇪🇸 Madrid | 35 | 31 single + 4 walks (5/6/5/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (MAD) |
 | 🇳🇱 Amsterdam | 38 | 33 single + 5 walks (5/6/5/5/5 stops) | 64 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio AMS |
 | 🇨🇦 Toronto (remainder) | 32 | 28 single + 4 walks (5 stops each) | 52 | `claude/dreamy-wozniak-nM6a4` | Atlas Studio YYZ (exists) |
+| 🇫🇷 Paris — walks | 5 | 5 multi-stop walks (5/6/5/5/6 stops) | 32 | `claude/dreamy-wozniak-nM6a4` | Atlas Studio PAR (exists) |
 | 🇨🇦 Montreal | 5 | 5 single | 5 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio YUL |
-| **TOTAL PENDING** | **149** | | **233** | | |
+| **TOTAL PENDING** | **154** | | **265** | | |
 
 _(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **went LIVE 2026-07-08, PR #378** — removed from pending. It was the last staged London tour.)_
+_(⚠️ Paris: the **45 single-stop tours are LIVE** (PR #374), but the **5 Paris multi-stop walks are still PENDING** — they were staged separately on `dreamy-wozniak-nM6a4` and need their own narration. Don't assume "Paris = done".)_
 
 ### Per-city detail
 
@@ -55,6 +57,14 @@ _(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **wen
 - 28 single-stop across `drafts/toronto-batch1..10` (minus the 10 live) + 4 walks: `toronto-oldtown-walk`, `toronto-downtownspine-walk`, `toronto-museummile-walk`, `toronto-kensington-walk` (intro + 5 each).
 - Tracking detail in `drafts/toronto-AUDIO-PROGRESS.md`. Wires under existing **Atlas Studio YYZ**.
 
+**🇫🇷 Paris — 5 multi-stop walks** (on `dreamy-wozniak-nM6a4`; wire under the existing **Atlas Studio PAR** maker):
+- `paris-islands` — "Paris Islands" — intro + 5 (Île de la Cité + Île Saint-Louis)
+- `paris-leftbank` — "The Left Bank" (Latin Quarter) — intro + 6
+- `paris-marais` — "Le Marais" — intro + 5
+- `paris-montmartre` — "Montmartre" — intro + 5
+- `paris-triumphalway` — "The Triumphal Way" (Axe historique) — intro + 6
+- Reuse the 45 live single-stop Paris heroes where stops overlap; a few fresh walk images already staged (Îles hero, Marais Musée Picasso — CC credits in `IMAGE-CREDITS-paris-batch1.txt`). READMEs say "create the PAR maker" — **stale**: PAR now exists, so walks wire straight in.
+
 **🇨🇦 Montreal** — `drafts/montreal-batch1` (5 single-stop): Notre-Dame/Place d'Armes, Place Jacques-Cartier/City Hall, Old Port, Pointe-à-Callière, Bonsecours Market+chapel.
 - Images live + credits logged (`drafts/CREDITS.md`, Montreal, 10). New maker **Atlas Studio YUL** 🇨🇦. Batch paused mid-city — more Montreal tours may be added later.
 
@@ -74,7 +84,7 @@ As of 2026-07-08, `origin/main` = **11 makers / 611 tours / 694 stops**. Live ci
 | Lisbon / Porto region | ~60 / ~50 | LIS / OPO | |
 | Hong Kong | 52 | HKG | bilingual EN/中文 |
 | Kyoto region | 52 | KYO | bilingual EN/JP |
-| **Paris** | 45 | **PAR** | **launched 2026-07-08 (PR #374)** — 45 single-stop |
+| **Paris** | 45 | **PAR** | **launched 2026-07-08 (PR #374)** — 45 single-stop. **5 Paris multi-stop walks still PENDING** (above). |
 | San Francisco | 35 | SFO | + 4 multi-stop walks |
 | Naoshima | 15 | NAO | + 2 multi-stop walks |
 | Toronto | 10 | YYZ | batch A; 28 singles + 4 walks still pending (above) |
