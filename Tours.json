@@ -29450,6 +29450,140 @@
         "Iconic Landmark"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "30300459-7c37-5aba-a5c7-b204827f4139",
+      "createdAt": "2026-07-08",
+      "title": "The Triumphal Way",
+      "shortDescription": "Paris's Axe historique — the dead-straight 4 km sightline from the Louvre through the Tuileries, Concorde and Champs-Élysées to the Arc de Triomphe, with a coda out to La Défense.",
+      "longDescription": "One of the most deliberate pieces of urban design on earth: a single straight line, laid down over three centuries, along which Paris arranged its power. This walk follows the Axe historique from the Louvre's glass pyramid, down the Tuileries and across the Place de la Concorde, up the Champs-Élysées to Napoleon's Arc de Triomphe — and then, as a Métro coda, out to the hollow cube of the Grande Arche at La Défense, where the modern city answered the old axis in glass and steel. Power, drawn as a line.",
+      "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop0.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop1.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop6.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "b147c6be-5d47-5bd8-bdc7-c0ab5ed4a2f7",
+          "order": 0,
+          "title": "The Triumphal Way — Introduction",
+          "caption": "Stand in the right spot in Paris and the whole city seems to line up.",
+          "latitude": 48.8611,
+          "longitude": 2.3358,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-triumphalway_stop0.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop0.webp",
+          "transcriptText": "Stand in the right spot in Paris and the whole city seems to line up.\n\nThis walk follows that line. It's called the Axe historique — the historic axis — and it runs dead straight for kilometres, from the courtyard of the Louvre, through a royal garden, across the square where the guillotine once stood, up the most famous avenue in the world, to the great arch on the hill. Five monuments, one sightline, laid down over more than three hundred years by kings, emperors and republics who each wanted their stamp on the same straight road.\n\nIt is, in the most literal sense, power drawn as a line. Every regime that ruled France added to it, pushed it further west, and tried to make the whole city point at whatever it most wanted to be.\n\nA word on the walk itself. This is the long one — about four kilometres from the Louvre to the Arc de Triomphe, more or less flat, almost perfectly straight, and busy the whole way. You can do it comfortably in an afternoon, but it's a real walk, so wear the right shoes. At the end, if you've still got the legs, the line keeps going past the Arc to a giant modern arch out in the business district — we'll point you to it, but that last stretch is a short ride on the Métro, not a walk.\n\nOne thing to carry with you. The line looks ruler-straight, but it isn't quite: the Louvre sits at a slight angle to the rest of it, a few degrees off, and that small kink gets echoed deliberately at the far modern end. Keep it in mind. The axis has a secret bend in it.\n\nStart in the great courtyard of the Louvre, at the glass pyramid. Put the pyramid behind you and look west, the way the line runs."
+        },
+        {
+          "id": "b7c4fd84-d2d9-5e80-b4a5-e17dcb424af5",
+          "order": 1,
+          "title": "Louvre",
+          "caption": "You're in the Cour Napoléon, the great courtyard of the Louvre, standing at the glass pyramid.",
+          "latitude": 48.8611,
+          "longitude": 2.3364,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-triumphalway_stop1.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop1.webp",
+          "transcriptText": "You're in the Cour Napoléon, the great courtyard of the Louvre, standing at the glass pyramid. Before you start down the line, it's worth knowing what you're starting from — because the building wrapped around you on three sides has been almost everything a building can be.\n\nIt began as a fortress. In the 1190s a king threw up a defensive castle here to guard the western edge of Paris, and its foundations are still down there — you can walk around the base of the medieval keep in the basement, beneath the museum. Over the centuries the fortress became a palace, growing wing by wing into the largest royal residence in Europe, until Louis the Fourteenth grew bored of the city, decamped to Versailles in 1682, and left this enormous place half-empty.\n\nThen the Revolution did something pointed with it. In 1793 the palace the kings had abandoned was reopened as a public museum — the nation's art, hung in the nation's house, free for the citizens who'd just got rid of the king. That's still what it is, and it's now the most-visited museum on earth.\n\nThe pyramid is the newest layer: glass and steel, dropped into the centre of all that old stone in 1989, and hated at first for exactly that contrast. It's since become as much a symbol of Paris as anything standing behind it.\n\n*[beat]*\n\nNow turn your back to the pyramid and face west. Through the smaller arch ahead — the pink one, the Arc du Carrousel — a straight line opens up: a path through gardens, a distant obelisk, and, far off, a faint arch on a hill. That's the whole walk, visible in a single glance. The line technically begins right here.\n\nWalk toward that little pink arch and through it into the gardens beyond. That's the Tuileries."
+        },
+        {
+          "id": "f7a21bb5-a760-575f-9f94-441fbc930fe3",
+          "order": 2,
+          "title": "Jardin des Tuileries",
+          "caption": "You've come through the pink arch into the Tuileries — a long formal garden of gravel paths, clipped trees and round ponds, running straight ahead toward the obelisk in the distance.",
+          "latitude": 48.8634,
+          "longitude": 2.3275,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-triumphalway_stop2.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop2.webp",
+          "transcriptText": "You've come through the pink arch into the Tuileries — a long formal garden of gravel paths, clipped trees and round ponds, running straight ahead toward the obelisk in the distance. Keep that obelisk in your sights; you're walking the line now, and this garden is where it was first drawn.\n\nThe man who drew it was André Le Nôtre, in the 1660s — the same gardener who laid out Versailles. He took an older royal garden here and straightened it into this: a central avenue, dead level, pulling the eye west to a vanishing point. That was a new idea about what a garden was for. Not a place to wander and get lost, but a line of sight — a way of standing at the palace and watching your power run, uninterrupted, all the way to the horizon. Everything west of here, right up to the arch on the hill, is Le Nôtre's idea, extended by everyone who came after.\n\nThere's something missing, though, and the gap is the point. For centuries a palace closed off this end of the garden — the Tuileries Palace, where kings and emperors actually lived. It burned during the violent end of the Commune in 1871, and what was left was pulled down. That's why the Louvre behind you now looks out over open sky instead of meeting another building: the home this garden was made for is simply gone, and most people walking here never know it stood.\n\n*[beat]*\n\nThese days the garden belongs to everyone. The green metal chairs scattered round the ponds are free; drag one to the water, point it west, and you're sitting in a king's private view that nobody owns any more.\n\nCarry on toward the obelisk. The garden ends at a wide, busy square wrapped around it — the Place de la Concorde."
+        },
+        {
+          "id": "99f24a15-7b5d-50b9-bd24-01ff43a75598",
+          "order": 3,
+          "title": "Place de la Concorde",
+          "caption": "The garden opens out, and suddenly you're on the edge of a vast, traffic-ringed square with a single tall stone needle at its centre.",
+          "latitude": 48.8656,
+          "longitude": 2.3212,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-triumphalway_stop3.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop3.webp",
+          "transcriptText": "The garden opens out, and suddenly you're on the edge of a vast, traffic-ringed square with a single tall stone needle at its centre. This is the Place de la Concorde, the midpoint of the whole line — and the most loaded ground you'll cross all day.\n\nStart with the needle, because it's the easy part. It's an Egyptian obelisk, around three thousand three hundred years old, that once stood at the temple of Luxor and was given to France in the 1830s. It was raised on this spot in 1836, and much later, in 1998, capped with a thin pyramid of gold. It is, by some distance, the oldest thing you'll see all walk — and it was put here, very deliberately, to fill a space the city wanted to stop thinking about.\n\nBecause this square has worn three names. It opened as the Place Louis the Fifteenth, with a statue of that king at its centre. The Revolution tore the statue down, renamed it the Place of the Revolution, and for a couple of years made it the central stage of the Terror: this is where the guillotine stood, where the king and queen were executed, and where well over a thousand people lost their lives in a matter of months. And then, when it was over, the city renamed it a third time — Concorde, meaning agreement, reconciliation — and eventually planted a neutral, ancient, foreign monument exactly where the blade had been. Not a memorial. The opposite of a memorial: a way of changing the subject.\n\n*[beat]*\n\nIt's worth standing here a moment with that in mind — that the calmest, grandest square in Paris is calm by design, built to let the city forget what happened on it. Whether that's wisdom or evasion, people still argue.\n\nWhen you're ready, turn west again and face the long, rising avenue lined with trees. That's the Champs-Élysées."
+        },
+        {
+          "id": "767c7941-8658-5fec-9895-fbe096ea368a",
+          "order": 4,
+          "title": "Champs-Élysées",
+          "caption": "Now you're at the foot of the Champs-Élysées, looking up a wide avenue that rises gently for almost two kilometres to the arch at the top.",
+          "latitude": 48.8698,
+          "longitude": 2.3079,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-triumphalway_stop4.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop4.webp",
+          "transcriptText": "Now you're at the foot of the Champs-Élysées, looking up a wide avenue that rises gently for almost two kilometres to the arch at the top. This is the stretch everyone has heard of — and the name is grander than you might guess. Champs-Élysées means the Elysian Fields: in Greek myth, the paradise where heroes went after death. Somebody named a Paris street after heaven.\n\nWhat's strange is how little there was here when the name was coined. The lower end, where you're standing, was once marshy open ground and market gardens, well outside the city. Le Nôtre — the same man who drew the garden behind you — simply extended his sightline straight through it in the 1660s, planting a double row of trees to carry the view onward toward the horizon. So the Champs-Élysées was a line on a plan, a direction, long before it was a place. It was a view before it was an address.\n\nYou'll feel the avenue change as you climb. The lower half is still mostly that original idea — trees, gardens, room to breathe. Then it crosses a roundabout and becomes the famous part: the broad upper avenue of glass-fronted shops, café terraces, car showrooms and flagship stores, packed shoulder to shoulder with people from everywhere on earth. The city still calls it the most beautiful avenue in the world. Up close it's also, frankly, a very expensive shopping street — and both of those things are true at once.\n\n*[beat]*\n\nKeep climbing, and keep your eye on the arch. It's been growing in front of you the whole way, and it only really gives up its scale when you're nearly under it.\n\nAt the top, the avenue ends at a vast roundabout with the arch marooned in the middle. That's the Arc de Triomphe."
+        },
+        {
+          "id": "d28b69c0-fb60-5b2e-9e8a-285ac943391d",
+          "order": 5,
+          "title": "Arc de Triomphe",
+          "caption": "You've reached the top: the Arc de Triomphe, standing alone in the middle of a roundabout where twelve avenues meet like the spokes of a star.",
+          "latitude": 48.8738,
+          "longitude": 2.295,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-triumphalway_stop5.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop5.webp",
+          "transcriptText": "You've reached the top: the Arc de Triomphe, standing alone in the middle of a roundabout where twelve avenues meet like the spokes of a star. Don't try to cross to it through the traffic — there's an underpass. But before you go to it, stop and turn around, because this is the best view on the walk. From up here the whole line you've climbed runs back east — avenue, square, obelisk, garden, the distant Louvre — every monument you've passed, strung on one thread. You can see the entire afternoon in a single look.\n\nNow the arch. Napoleon ordered it built in 1806, at the height of his power, to honour his armies after a great victory. It was meant to be the ultimate triumphal gesture — soldiers marching home beneath it. But it was enormous and slow, and it wasn't finished in his lifetime. Napoleon fell, was exiled, and died on a distant island in 1821, with his arch still half-built. It was finally completed in 1836, fifteen years after his death — and the only time he ever passed beneath it was in 1840, as a coffin, when his remains were brought back to Paris and carried under the arch he never saw standing.\n\n*[beat]*\n\nAnd there's a quieter thing underneath it now. After the First World War, an unknown soldier — one unidentified body, standing in for all the missing dead — was buried beneath the arch, and a flame was lit over the grave. It has been relit, by hand, every single evening since. So the monument built to glorify one man's victories now keeps watch, in the end, over a single nameless soldier. The grandest arch in Paris finishes on the most modest possible note.\n\nThat's the end of the walk on foot. But the line doesn't stop here. Look west, past the arch, and on a clear day you'll see another arch far off on the horizon — a vast, square one. To reach it you'll want the Métro. That's La Défense, and the Grande Arche."
+        },
+        {
+          "id": "eff95d9f-b59b-5a61-a5be-5865ee204401",
+          "order": 6,
+          "title": "Grande Arche, La Défense",
+          "caption": "You've come up out of the Métro at La Défense, and the thing in front of you doesn't look like the rest of the walk at all.",
+          "latitude": 48.8926,
+          "longitude": 2.2361,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-triumphalway_stop6.mp3",
+          "audioDurationSeconds": 157,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-triumphalway_stop6.webp",
+          "transcriptText": "You've come up out of the Métro at La Défense, and the thing in front of you doesn't look like the rest of the walk at all. No carved stone, no emperors — just glass towers, open plazas, and one enormous, impossibly clean white cube, hollow in the middle, big enough to see sky straight through. This is the Grande Arche, and it's where the line you've been following finally runs out — on purpose.\n\nFirst, where you are. La Défense is Paris's business district, a forest of towers built from the 1960s onward and kept deliberately outside the historic centre, so the old city could stay low while the offices went high out here. The name is older than the towers: it comes from a statue that once marked where Parisians defended the city in the war of 1870.\n\nNow the cube. It went up in 1989, for the two-hundredth anniversary of the Revolution, designed by a Danish architect as a near-perfect hollow cube — so large that the whole of Notre-Dame, spire and all, could sit inside the opening. And here's where it talks back to everything behind it. The old arch on the hill is a solid block of stone, raised to glorify an army. This one is open — a window, not a wall — and it was dedicated not to a victory but to human brotherhood. A triumphal arch you can see straight through.\n\n*[beat]*\n\nRemember the secret bend, back at the start? The Grande Arche is turned a few degrees off the axis — the very same angle as the Louvre, all those kilometres east. The architects did it on purpose, a quiet nod from the newest end of the line to the oldest. And notice what they didn't do: they didn't close the line off. Stand in the opening and look west, and the axis simply carries on, out past the cube, toward nothing in particular — left open, handed to whatever comes next.\n\nWhich is the right way for this walk to end. You started in a king's courtyard, on a line drawn to make a city point at power, and you finish here, at an open square cube that points at no one and lets the line run on. From a palace to a window. That's most of the story of Paris, in one straight road."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 864,
+      "walkingDistanceMeters": 4000,
+      "centroidLatitude": 48.86963,
+      "centroidLongitude": 2.30856,
+      "city": "Paris",
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Power",
+        "Architecture",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
     }
   ]
 }
