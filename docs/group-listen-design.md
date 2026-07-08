@@ -133,6 +133,14 @@ transport first; the second transport is purely additive.**
 ## 6. Nearby mode — MultipeerConnectivity (offline)
 - Frameworks: `MultipeerConnectivity`. Leader runs `MCNearbyServiceAdvertiser`; joiners run
   `MCNearbyServiceBrowser`; both share an `MCSession`. Service type e.g. `"atlas-tour"`.
+- **Discovery (decided: code/QR).** The advertiser/browser auto-discover nearby app
+  instances over the radios, but joining is confirmed by a short **join code or QR** the
+  leader shares: put the session code in the advertiser's `discoveryInfo`, and have the
+  browser only surface / auto-connect to the session whose code the joiner entered or
+  scanned. Net: radios do the finding, the code makes it intentional + private (no strangers
+  in a crowded museum). QR is the fastest share for co-located people.
+- **Require the tour downloaded first (decided).** Gate starting an offline session on the
+  tour being cached (`TourDownloader`); prompt the group to download before they begin.
 - Send `GroupPlaybackState` as `session.send(data, toPeers:, with: .reliable)` for
   state-change events, `.unreliable` for the position heartbeat (loss-tolerant).
 - **~8 peers** including the leader — enforce/communicate this cap in the UI ("Nearby groups
@@ -220,16 +228,26 @@ Each phase ends in something testable on device.
 - **Device testing is mandatory** — Multipeer and multi-device sync barely work in the
   simulator. Needs **2+ real devices** signed into different accounts.
 
-## 13. Open questions still worth resolving before/while building
-1. **Pro Guide priority** — is it a real near-term thread? If yes, Hosted mode + guide
-   identity may outrank the cozy offline case, and it couples to the Step-6 payments work.
-2. **Do we require the tour be downloaded before an offline Nearby session?** (Strongly
-   recommend yes — otherwise a dead-zone group has no audio to sync.)
-3. **Group discovery in Nearby** — auto-show everyone running the app nearby, or require the
-   leader to share a short code / QR even in Nearby mode (avoids randoms joining)? Leaning:
-   code/QR even for Nearby, for intentionality + privacy.
-4. **What syncs beyond playback?** Just audio (recommended for v1), or also the map view /
-   current-stop highlight? Keep v1 audio-only.
+## 13. Decisions & remaining questions
+
+**Resolved with the owner (2026-07-05):**
+1. **Pro Guide is NOT near-term — ship the free small-group share first.** It is fully
+   **standalone**: offline Multipeer, **no backend, no payments, no Pro work**. Phase 1
+   below is the entire first deliverable; Pro Guide (Hosted transport + `group_sessions`
+   backend + gating) bolts on later without touching it. Small-group share and Pro Guide
+   share the sync *engine* but differ in transport/backend — building one commits to nothing
+   on the other.
+2. **Require the tour be downloaded before an offline Nearby session — YES.** Prompt the
+   group to download the tour first (reuse `TourDownloader`); warn/block if not cached,
+   since a dead-zone group otherwise has no audio to play.
+3. **Discovery = code/QR even in Nearby — DECIDED.** Multipeer auto-finds nearby phones at
+   the radio level, but a short **code or QR** the leader shares confirms *which* session to
+   join. This keeps strangers out, is unambiguous in a crowd, and matches Hosted mode's
+   join-by-code. (The code filters; the radios still do the finding — see §6.)
+
+**Still open (lower-stakes, decide during the build):**
+4. **What syncs beyond audio?** v1 = **audio only** (recommended). Map view / current-stop
+   highlight could follow later.
 
 ## 14. Verification (when built)
 - Two/three real devices, signed-in different accounts.
