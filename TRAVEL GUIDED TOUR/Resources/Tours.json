@@ -29212,6 +29212,125 @@
         "Viewpoint"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "65b6d9fa-9ae0-558e-9de3-e4de825ba97a",
+      "createdAt": "2026-07-08",
+      "title": "Le Marais",
+      "shortDescription": "A walk through the largest surviving piece of old Paris — the marsh that became the aristocrats' address, then a slum, and now the city's living room.",
+      "longDescription": "Le Marais — literally 'the marsh' — is the best-preserved stretch of pre-Revolutionary Paris, spared the boulevards Haussmann drove through the rest of the city. This flat, dense walk threads it together: from the grand Hôtel de Ville and the inside-out Centre Pompidou, through the aristocratic mansions that now hold the Musée Picasso and the Musée Carnavalet, to the perfect symmetry of the Place des Vosges, Paris's oldest planned square. Along the way the Marais tells its whole story — royal quarter, Jewish quarter, faded slum, and today one of the city's most alive neighbourhoods.",
+      "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-marais_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-marais_stop0.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-marais_stop1.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-marais_stop2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-marais_stop3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-marais_stop4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-carnavalet_hero.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "a41b98e5-c562-5178-aab1-9398690b9133",
+          "order": 0,
+          "title": "Le Marais — Introduction",
+          "caption": "The name means the marsh — and that's exactly what this was.",
+          "latitude": 48.858,
+          "longitude": 2.36,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-marais_stop0.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-marais_stop0.webp",
+          "transcriptText": "The name means the marsh — and that's exactly what this was. Wet, low ground on the edge of the river, drained by monks in the Middle Ages, useless for anything grand until, in the 1600s, the kings and nobles decided this was where they wanted to live. They built mansions here, dozens of them, and for a while the Marais was the most fashionable address in Paris.\n\nThen fashion moved on, as it does. The aristocrats drifted off to newer quarters and to Versailles, and the Marais came down in the world — its grand houses carved up into workshops and crowded tenements, a dense, poor, working quarter, and for a long stretch the heart of the city's Jewish community along with many others who'd found their way to cheap rooms in old streets. By the twentieth century, the city looked at the Marais and mostly saw a slum to clear.\n\nHere's the twist that makes this walk worth taking. When Baron Haussmann tore up most of Paris in the 1800s and replaced it with wide straight boulevards, he largely left the Marais alone — too poor, too tangled, not worth the trouble. So the very neglect that brought it low also saved it. This is the largest surviving piece of old Paris: narrow medieval streets and Renaissance mansions that exist precisely because nobody thought them worth knocking down. In the end the city changed its mind, protected the whole quarter, and the Marais came back — not as an aristocrats' enclave this time, but as everyone's. The galleries, the boutiques, the cafés, the crowds: this is the city's living room now.\n\nThe good news for your feet: it's flat, and it's dense, with everything packed close together. We start at the city's grand front door on the river — the Hôtel de Ville."
+        },
+        {
+          "id": "18577eb3-ea18-57d3-b524-36952d43c12d",
+          "order": 1,
+          "title": "Hôtel de Ville",
+          "caption": "You're standing in front of the Hôtel de Ville — the city hall of Paris, and one of the grandest buildings you'll see all day: a long ornate facade bristling with statues and turrets, facing a wide open square by the river.",
+          "latitude": 48.8565,
+          "longitude": 2.3525,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-marais_stop1.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-marais_stop1.webp",
+          "transcriptText": "You're standing in front of the Hôtel de Ville — the city hall of Paris, and one of the grandest buildings you'll see all day: a long ornate facade bristling with statues and turrets, facing a wide open square by the river. It looks like it has stood here, untouched, for five hundred years. It hasn't.\n\nThis has been the seat of the city's government since the 1300s, when the merchants who effectively ran Paris first set up here. But the building you're looking at is younger than it pretends to be. The grand Renaissance city hall that stood on this spot was burned to the ground in 1871, in the violent collapse of the Commune, when much of central Paris went up in flames. Rather than build something new and modern, the city rebuilt its city hall almost exactly as it had been — a careful, slightly grander copy of what the fire had taken. So this is a nineteenth-century replica wearing a sixteenth-century face, and most people walking past never notice.\n\nNow the square in front of it, because there's a word hiding in it. For centuries this was the Place de Grève — grève meaning the strip of sandy ground along the river. It was where men without work came to stand and wait, hoping to be hired for the day. Out of that grew a phrase the whole world now borrows: to be en grève, \"on the strand,\" came to mean to stop work, to strike. Every strike, everywhere, quietly carries the name of this square.\n\n*[beat]*\n\nIt's also, it should be said, a square with a darker past — for a long time the city's public punishments were carried out here, in front of crowds. That's part of its history too.\n\nWhen you're ready, head north, a few streets back from the river, toward a low modern building wrapped in coloured pipes that could not look more out of place. That's the Centre Pompidou."
+        },
+        {
+          "id": "464b6a65-3d80-58ab-9dce-ab911f40cb0d",
+          "order": 2,
+          "title": "Centre Pompidou",
+          "caption": "And here it is — the building that looks like it's still under construction, or has been turned completely inside out.",
+          "latitude": 48.8607,
+          "longitude": 2.3522,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-marais_stop2.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-marais_stop2.webp",
+          "transcriptText": "And here it is — the building that looks like it's still under construction, or has been turned completely inside out. The Centre Pompidou. After streets of old stone, it's a deliberate shock: a great glass-and-steel box with all its skeleton and plumbing on the outside.\n\nThat's the whole idea, and it was radical when it opened in 1977. Two young architects won the competition with a building that wore its insides on its outside — every pipe, duct, beam, even the escalators, bolted onto the exterior, so that the entire interior could be left open and empty, free to be rearranged for any kind of art. And they colour-coded the outside like a diagram, so you can read the building from the street. The blue pipes carry air, the green ones water, the yellow ones electricity, and the red ones are for movement — the escalators that run up the outside, carrying people through it. Stand back and the whole facade explains itself.\n\nIt was hated at first — Parisians thought someone had abandoned a refinery in the middle of their old city — and then, slowly, loved, until it became one of the most visited buildings in the country.\n\n*[beat]*\n\nOne honest note. Right now you can admire it only from out here. The Pompidou closed in 2025 for a deep, years-long renovation and isn't due to reopen until around 2030; its modern-art collection has been scattered to other museums in the meantime, with a good part of it on show over at the Grand Palais. So today this is an architecture stop — the radical idea, read off the facade — rather than a visit inside.\n\nFrom here we walk east, deeper into the old Marais and its narrow streets, to a grand mansion that now holds the work of one man. The Musée Picasso."
+        },
+        {
+          "id": "8f1776e3-dacc-5686-84cb-ca7b37c7f787",
+          "order": 3,
+          "title": "Musée Picasso",
+          "caption": "This is the Hôtel Salé, and it's now the Musée Picasso — and the story of how those two things came together is really a story about taxes, twice over.",
+          "latitude": 48.8598,
+          "longitude": 2.3626,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-marais_stop3.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-marais_stop3.webp",
+          "transcriptText": "This is the Hôtel Salé, and it's now the Musée Picasso — and the story of how those two things came together is really a story about taxes, twice over.\n\nStart with the mansion. It was built in the 1650s for a man who'd grown rich collecting the tax on salt — which in those days was a big, hated tax, since everyone needed salt and the crown squeezed it hard. The house he built with the proceeds was so showy that locals nicknamed it the Hôtel Salé — the \"salted mansion,\" a dig at exactly where the money had come from. So before any Picasso ever hung here, the building itself was already a monument to tax.\n\nNow the art. When Picasso died, his heirs faced an enormous bill in French inheritance tax. France has a clever law that lets you settle a tax debt by handing over works of art instead of cash — and so, rather than money, the state took Picassos. A flood of them: paintings, sculptures, sketches, the artist's own private collection. That windfall is the core of this museum, which holds the largest public collection of his work anywhere. The whole place exists because of a death and a tax bill.\n\n*[beat]*\n\nIf you go in, hunt for a small bronze called the Bull's Head. Look at it once and it's a bull; look again and it's exactly what Picasso built it from — a bicycle seat for the face, the handlebars for the horns, joined together and cast in bronze. He liked the thought that one day someone might find it, not knowing, melt it down, and turn it back into a bicycle.\n\nFrom here it's a short walk south through the lanes to the grandest open space in the quarter — a perfect square of matching rose-brick houses around a garden. The Place des Vosges."
+        },
+        {
+          "id": "defd857a-1c73-5c2a-badb-0a1ff6aba513",
+          "order": 4,
+          "title": "Place des Vosges",
+          "caption": "Step out of the lanes and into the Place des Vosges, and let it open up around you: a large garden square, framed on all four sides by identical houses of rose-coloured brick and pale stone, with covered arcades running along the ground all the way around.",
+          "latitude": 48.8554,
+          "longitude": 2.3655,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-marais_stop4.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-marais_stop4.webp",
+          "transcriptText": "Step out of the lanes and into the Place des Vosges, and let it open up around you: a large garden square, framed on all four sides by identical houses of rose-coloured brick and pale stone, with covered arcades running along the ground all the way around. It's calm, symmetrical and complete in a way nothing else in the Marais is — and that's because it's the original. This is the oldest planned square in Paris, and arguably the model for the elegant city square anywhere.\n\nIt was laid out under Henri IV and inaugurated in 1612 as the Place Royale — royal by name and by intent, a piece of perfect order dropped into the medieval muddle, where the nobility could parade and duel and show themselves off. Every matching house, every arch, was built to a single design. The idea of a square as one unified composition — rather than just a gap where streets happen to meet — more or less starts here, and you can trace its descendants in grand squares right across Europe.\n\nThe name changed later, and it's the third tax story of this walk. After the Revolution, the new Republic needed money, and it renamed this square to honour the Vosges — the region of France that was first to pay its share of a new tax. A perfect aristocratic square, renamed as a gold star for prompt taxpayers.\n\n*[beat]*\n\nOne door is worth knowing: number six, in the corner, was Victor Hugo's home for sixteen years — the years he was writing toward Les Misérables. It's now a small museum, and it's free; you can stand in the rooms where he worked.\n\nOur last stop is just around the corner, a couple of minutes away — the place where this whole quarter keeps its memories. The Musée Carnavalet."
+        },
+        {
+          "id": "5410dbd5-6fff-5641-9d59-143954d75cf7",
+          "order": 5,
+          "title": "Musée Carnavalet",
+          "caption": "Here's our last stop, and the right one to end on: the Musée Carnavalet, the museum of the history of Paris itself, set inside two old Marais mansions joined together.",
+          "latitude": 48.8575,
+          "longitude": 2.3627,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-marais_stop5.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-carnavalet_hero.webp",
+          "transcriptText": "Here's our last stop, and the right one to end on: the Musée Carnavalet, the museum of the history of Paris itself, set inside two old Marais mansions joined together. Before anything else — it's free, always has been, one of the great no-cost pleasures of the city.\n\nEven the name is a little Paris story. It comes from a long-ago owner with a Breton surname that French tongues couldn't be bothered with, so over the years they mangled it into \"Carnavalet.\" The wrong name simply stuck, the way so much in this city did, and now it's the right one.\n\nWhat's inside is the reason it belongs at the end of this walk. This isn't a museum of masterpieces; it's the city's attic. Paris has spent centuries saving bits of itself in here — carved shop signs from streets that no longer exist, whole panelled rooms rescued from mansions before they were demolished, keys and paintings and revolutionary relics, even the actual cork-lined bedroom where the writer Marcel Proust sealed himself away to work. Walk through it and you're walking through the physical leftovers of the city you've spent all afternoon in.\n\n*[beat]*\n\nWhich closes the loop on the Marais. You've spent this walk in the one quarter that survived — the old Paris that escaped the wrecking ball by being overlooked, then was loved back to life. And here at the end is the building where the city deliberately keeps the pieces of everything it didn't manage to save anywhere else. The marsh that became the address, that became the slum, that became the living room — remembering itself, for free, in a borrowed mansion with a mangled name. Take your time in here. It's the whole city, in one house."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 698,
+      "walkingDistanceMeters": 2500,
+      "centroidLatitude": 48.85798,
+      "centroidLongitude": 2.35925,
+      "city": "Paris",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Architecture",
+        "Art",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
     }
   ]
 }
