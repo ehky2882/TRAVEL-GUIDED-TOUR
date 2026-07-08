@@ -31,8 +31,9 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 | 🇳🇱 Amsterdam | 38 | 33 single + 5 walks (5/6/5/5/5 stops) | 64 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio AMS |
 | 🇨🇦 Toronto (remainder) | 32 | 28 single + 4 walks (5 stops each) | 52 | `claude/dreamy-wozniak-nM6a4` | Atlas Studio YYZ (exists) |
 | 🇨🇦 Montreal | 5 | 5 single | 5 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio YUL |
-| 🇬🇧 London — Greenwich walk | 1 | "The Measure of the World" (6 stops) | 7 | `claude/london-batch3-scripts-260616` | Atlas Studio LDN (exists) |
-| **TOTAL PENDING** | **150** | | **240** | | |
+| **TOTAL PENDING** | **149** | | **233** | | |
+
+_(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **went LIVE 2026-07-08, PR #378** — removed from pending. It was the last staged London tour.)_
 
 ### Per-city detail
 
@@ -57,18 +58,17 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 **🇨🇦 Montreal** — `drafts/montreal-batch1` (5 single-stop): Notre-Dame/Place d'Armes, Place Jacques-Cartier/City Hall, Old Port, Pointe-à-Callière, Bonsecours Market+chapel.
 - Images live + credits logged (`drafts/CREDITS.md`, Montreal, 10). New maker **Atlas Studio YUL** 🇨🇦. Batch paused mid-city — more Montreal tours may be added later.
 
-**🇬🇧 London — Greenwich walk** — `drafts/the-measure-of-the-world` (on `london-batch3-scripts-260616`):
-- "The Measure of the World" — intro + 6 stops (Cutty Sark, Old Royal Naval College, Queen's House, National Maritime Museum, Greenwich Park, Royal Observatory). Reuses existing single-stop heroes; only intro + Greenwich Park view + tour hero sourced fresh (all live). Wires under existing **Atlas Studio LDN**. This is the ONLY London item left — batches 3 & 4 (37 singles) already went live.
+_(🇬🇧 London — Greenwich walk "The Measure of the World" **went LIVE 2026-07-08, PR #378**. It was the last staged London tour; London is now fully wired.)_
 
 ---
 
 ## LIVE — done, for reference (do not re-stage)
 
-As of 2026-07-08, `origin/main` = **11 makers / 610 tours / 687 stops**. Live cities:
+As of 2026-07-08, `origin/main` = **11 makers / 611 tours / 694 stops**. Live cities:
 
 | City | Live tours | Maker | Notes |
 |------|-----------:|-------|-------|
-| London | 99 | LDN | + 4 walks (After the Fire, Albertopolis, Spine of Power, South Bank Mile). Greenwich walk still pending (above). |
+| London | 99 | LDN | + **5 walks** (After the Fire, Albertopolis, Spine of Power, South Bank Mile, **The Measure of the World / Greenwich** — added 2026-07-08). London fully wired. |
 | New York | ~96 | NYC | + AMNH Four Facades, Fifth Avenue Walk |
 | Tokyo | 63 | TYO | bilingual EN/JP |
 | Lisbon / Porto region | ~60 / ~50 | LIS / OPO | |
