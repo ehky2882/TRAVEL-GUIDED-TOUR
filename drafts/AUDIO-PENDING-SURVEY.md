@@ -1,0 +1,98 @@
+# Audio-Pending Tour Tracker — the single source of truth for staged content
+
+**Purpose.** Tours are staged (scripts + images) on various branches long before their
+narration MP3s exist. This file is the **authoritative, continually-updated record** of
+what is staged, what is live, and what still needs audio — so no session has to re-survey
+the branches to answer "what's left?".
+
+**⚠️ UPDATE RULE (do this automatically — no prompting):**
+- When a batch of tours is **staged** (scripts + images) → add it to the PENDING table below.
+- When audio arrives and tours are **wired live** (merged to `main`) → move them from PENDING
+  to the LIVE section and update the counts.
+- Always update this file in the same commit/session as the staging or wire-in.
+- The counts here must match reality; if in doubt, re-verify against `origin/main`'s
+  `TRAVEL GUIDED TOUR/Resources/Tours.json` (a tour is LIVE iff it's in that file) and against
+  `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
+  `.mp3` is there).
+
+**Last verified:** 2026-07-08 (cross-checked against `origin/main` + `origin/gh-pages`).
+
+---
+
+## PENDING — staged, awaiting narration audio
+
+Every pending tour below is **image-complete** (heroes + galleries live on gh-pages). The
+**only** missing ingredient is narration MP3s. No draft audio is staged for any of these yet.
+
+| City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
+|------|--------------:|-----------|------------:|----------------|------------------|
+| 🇺🇸 Los Angeles | 39 | 36 single + 3 walks (5/7/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (LA) |
+| 🇪🇸 Madrid | 35 | 31 single + 4 walks (5/6/5/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (MAD) |
+| 🇳🇱 Amsterdam | 38 | 33 single + 5 walks (5/6/5/5/5 stops) | 64 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio AMS |
+| 🇨🇦 Toronto (remainder) | 32 | 28 single + 4 walks (5 stops each) | 52 | `claude/dreamy-wozniak-nM6a4` | Atlas Studio YYZ (exists) |
+| 🇨🇦 Montreal | 5 | 5 single | 5 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio YUL |
+| 🇬🇧 London — Greenwich walk | 1 | "The Measure of the World" (6 stops) | 7 | `claude/london-batch3-scripts-260616` | Atlas Studio LDN (exists) |
+| **TOTAL PENDING** | **150** | | **240** | | |
+
+### Per-city detail
+
+**🇺🇸 Los Angeles** — `drafts/la-batch1..8` (36 single-stop) + 3 walks:
+- `la-beachfront-walk` — intro + 5 (Santa Monica Pier, Muscle Beach, Venice Boardwalk, Venice Canals, Abbot Kinney)
+- `la-downtown-walk` — intro + 7 (Disney Hall, The Broad, MOCA, Angels Flight, Grand Central Market, Bradbury, El Pueblo/Olvera)
+- `la-museumrow-walk` — intro + 5 (La Brea Tar Pits, LACMA/Geffen, Academy Museum, Petersen, Farmers Market)
+- Credits: LA CC images logged in `drafts/CREDITS.md` (Los Angeles row, ~17). New city → new maker.
+
+**🇪🇸 Madrid** — `drafts/madrid-batch1..7` (31 single-stop) + 4 walks:
+- `madrid-austrias` — intro + 5 · `madrid-paseo-del-arte` — intro + 6 (Cibeles, Neptuno, Prado, Thyssen, CaixaForum, Reina Sofía) · `madrid-retiro` — intro + 5 · `madrid-royal` — intro + 5
+- Credits: Madrid CC images logged in `drafts/CREDITS.md` + `drafts/madrid-batch3/IMAGE-CREDITS-madrid-batch3.txt`. New city → new maker.
+
+**🇳🇱 Amsterdam** — `drafts/amsterdam-batch1` (33 single-stop) + 5 walks:
+- `amsterdam-canalring-walk` (intro+5) · `amsterdam-oldside-walk` (intro+6) · `amsterdam-museumquarter-walk` (intro+5) · `amsterdam-jordaan-walk` (intro+5) · `amsterdam-jewishquarter-walk` (intro+5)
+- All walks reuse live single-stop heroes (zero new image work). Full spec in each folder's README + `drafts/amsterdam-batch1/README.md` (master pick-map). Credits: `drafts/CREDITS.md` (Amsterdam, 22). New maker **Atlas Studio AMS** 🇳🇱.
+
+**🇨🇦 Toronto (remainder)** — 10 tours already LIVE (batch A, audio pushed 2026-07-02). Still pending:
+- 28 single-stop across `drafts/toronto-batch1..10` (minus the 10 live) + 4 walks: `toronto-oldtown-walk`, `toronto-downtownspine-walk`, `toronto-museummile-walk`, `toronto-kensington-walk` (intro + 5 each).
+- Tracking detail in `drafts/toronto-AUDIO-PROGRESS.md`. Wires under existing **Atlas Studio YYZ**.
+
+**🇨🇦 Montreal** — `drafts/montreal-batch1` (5 single-stop): Notre-Dame/Place d'Armes, Place Jacques-Cartier/City Hall, Old Port, Pointe-à-Callière, Bonsecours Market+chapel.
+- Images live + credits logged (`drafts/CREDITS.md`, Montreal, 10). New maker **Atlas Studio YUL** 🇨🇦. Batch paused mid-city — more Montreal tours may be added later.
+
+**🇬🇧 London — Greenwich walk** — `drafts/the-measure-of-the-world` (on `london-batch3-scripts-260616`):
+- "The Measure of the World" — intro + 6 stops (Cutty Sark, Old Royal Naval College, Queen's House, National Maritime Museum, Greenwich Park, Royal Observatory). Reuses existing single-stop heroes; only intro + Greenwich Park view + tour hero sourced fresh (all live). Wires under existing **Atlas Studio LDN**. This is the ONLY London item left — batches 3 & 4 (37 singles) already went live.
+
+---
+
+## LIVE — done, for reference (do not re-stage)
+
+As of 2026-07-08, `origin/main` = **11 makers / 610 tours / 687 stops**. Live cities:
+
+| City | Live tours | Maker | Notes |
+|------|-----------:|-------|-------|
+| London | 99 | LDN | + 4 walks (After the Fire, Albertopolis, Spine of Power, South Bank Mile). Greenwich walk still pending (above). |
+| New York | ~96 | NYC | + AMNH Four Facades, Fifth Avenue Walk |
+| Tokyo | 63 | TYO | bilingual EN/JP |
+| Lisbon / Porto region | ~60 / ~50 | LIS / OPO | |
+| Hong Kong | 52 | HKG | bilingual EN/中文 |
+| Kyoto region | 52 | KYO | bilingual EN/JP |
+| **Paris** | 45 | **PAR** | **launched 2026-07-08 (PR #374)** — 45 single-stop |
+| San Francisco | 35 | SFO | + 4 multi-stop walks |
+| Naoshima | 15 | NAO | + 2 multi-stop walks |
+| Toronto | 10 | YYZ | batch A; 28 singles + 4 walks still pending (above) |
+
+---
+
+## Wire-in process (when audio arrives) — reference
+
+1. Owner drops MP3s into chat → they land in `/root/.claude/uploads/<session>/`.
+2. Read durations (`mutagen`), copy each to gh-pages `audio/<slug>.mp3`, push to `gh-pages`.
+3. Build/extend the city's assembler: maker id = `uuid5(NAMESPACE_URL, "atlas-maker:<code>")`,
+   tour id = `uuid5(…, "atlas-tour:<code>:<slug>")`, stop id = `atlas-stop:<code>:<slug>`.
+   Each tour: transcript verbatim from the display `.txt`, geocoded coord, geofenced 30 m,
+   staged image URLs, category + controlled-vocabulary tags (≥1 Place type + ≥1 Theme),
+   authored short/long descriptions. Walks: `kind:multiStop`, stop 0 = intro (manual),
+   stops 1..N geofenced, centroid = avg of stops, `walkingDistanceMeters` set.
+4. **Re-serialize `Tours.json` with `json.dumps(d, ensure_ascii=False, indent=2)` (no trailing
+   newline)** so the diff is additions-only (matches the file's existing formatting exactly).
+5. Validate (`swift scripts/validate-tours.swift`, or the Python mirror when Swift is absent);
+   fix errors. Merge to `main` → auto-publishes to gh-pages + Supabase (live, no app build).
+6. **Update this file** (move the city from PENDING to LIVE).

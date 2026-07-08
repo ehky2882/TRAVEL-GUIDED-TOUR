@@ -31,6 +31,7 @@ These happen **automatically, without the owner asking**.
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
 | 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
 | 8 | New tour added (to `Tours.json`) that lacks images | Run the image pipeline (§ Image Pipeline) automatically — no prompting — and **reply with a numbered, labeled contact sheet of ~12 verified CC0 candidates per tour so the owner can pick hero + gallery by number** (e.g. `"3 hero, 1, 7, 9"`). This is the standard "upload tours without images" flow. **Exception: owner-supplied images (Portugal/Porto/Lisbon tours) — do not run pipeline, use the provided assets.** |
+| 9 | Tours are **staged** (scripts+images) OR **wired live** (audio arrives → merged) | Update **`drafts/AUDIO-PENDING-SURVEY.md`** in the same session — the single source of truth for what's staged vs live vs audio-pending. Move rows PENDING→LIVE on wire-in; add rows on new staging. **Never let it drift** — it exists so no session has to re-survey the branches to answer "what still needs audio?" |
 
 ## Image Pipeline
 
@@ -874,6 +875,7 @@ Every session that ships a milestone, cuts scope, or changes "what's true today"
 |------|---------|
 | `atlas_claude_code_prompt.md` | Canonical product spec |
 | `ROADMAP.md` | Execution plan + milestone history |
+| `drafts/AUDIO-PENDING-SURVEY.md` | **Live tracker of staged vs live vs audio-pending tours across all branches** (keep current — Automation Rule #9) |
 | `docs/authoring-tours.md` | Tour content authoring guide |
 | `docs/cdn-decision.md` | Audio hosting decision |
 | `docs/design-tokens.md` | Typography/color/spacing reference |
