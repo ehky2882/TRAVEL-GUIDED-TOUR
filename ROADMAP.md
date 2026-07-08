@@ -946,6 +946,7 @@ hosting) can follow.
 - [ ] Media hosting decision — gh-pages vs Supabase Storage vs a CDN (owner leans "one place"); see `docs/cdn-decision.md`
 - [ ] Consumer richness (Step 8): follow-a-maker + notifications, in-app search, share links
 - [ ] Moderation web admin tool — only if volume outgrows the email approach
+- [ ] **Group Listen** (proposed — design ready, awaiting owner green-light): a group listens to a tour in sync, leader-driven; **Nearby** mode (offline MultipeerConnectivity mesh, ≤~8) + **Hosted** mode (Supabase Realtime, large); free "Listen Together" + paid **"Pro Guide"** tier; account-gated. Connects the social layer + monetization. Full production handoff: `docs/group-listen-design.md` (+ `backend/group_sessions.sql` for Hosted mode). App build is Mac-side (device-test-heavy).
 
 **E. Housekeeping**
 - [ ] Fix 2 dead gallery images (The Oculus, The Charging Bull — Wikimedia 404)
