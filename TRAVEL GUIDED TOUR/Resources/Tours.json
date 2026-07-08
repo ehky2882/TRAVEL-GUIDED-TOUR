@@ -29331,6 +29331,125 @@
         "Iconic Landmark"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "8e8cfd3d-279e-5d8c-ac59-0134465d123e",
+      "createdAt": "2026-07-08",
+      "title": "Montmartre",
+      "shortDescription": "A climb over the Montmartre hill — from the Art Nouveau métro at Abbesses up to Sacré-Cœur and the painters' square, then down to the Moulin Rouge.",
+      "longDescription": "Montmartre is the village on the hill that Paris never quite absorbed — and the place where modern art and Belle Époque nightlife were both more or less invented. This short, steep walk goes from the Place des Abbesses and its rare Guimard Art Nouveau métro entrance, past the Wall of Love, up to the white basilica of Sacré-Cœur and the crowded painters' square of the Place du Tertre, then back down the hill to the red windmill of the Moulin Rouge. Along the way it weighs the real village against the souvenir of itself.",
+      "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop0.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop1.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop5.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "3cedb110-56a4-56d7-b483-0a22f5e50c05",
+          "order": 0,
+          "title": "Montmartre — Introduction",
+          "caption": "Most of Paris is flat.",
+          "latitude": 48.8845,
+          "longitude": 2.3375,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-montmartre_stop0.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop0.webp",
+          "transcriptText": "Most of Paris is flat. This corner isn't.\n\nMontmartre is a hill — a steep one, the highest ground in the city — and for most of its history it wasn't even part of Paris. It was a separate village up here above the smoke, with windmills turning on top and gypsum mines hollowing out the rock below, close enough to the city to see it but far enough to feel like another world. Paris only swallowed it in 1860. And the name carries something older and darker: the mount of the martyr, after a bishop who, the legend says, was beheaded on this hill and then stood up and walked off carrying his own head.\n\nThis walk is about what happened next — when, around the year 1900, the cheap rents and the village quiet drew the artists up here, and Montmartre became, for a few decades, the most famous bohemia on earth. Painters, poets, dancers, drinkers. That moment is long over, but the hill has been performing it ever since, and the walk moves through both versions at once: the real village that still survives in the side streets, and the souvenir of itself that the crowds come to see.\n\nA warning about the walk. It's short — you stay on and around one hill — but it is genuinely steep, with staircases instead of streets in places. Take it slowly. If your legs object, there's a little funicular that carries you up the worst of the climb to the church at the top.\n\nWe'll start partway up, in a square that's still the real Montmartre, climb to the white church on the summit and the painters' square behind it, and come down the far side to a red windmill at the bottom. Begin at the Place des Abbesses, at the green Métro entrance that looks like something grown rather than built."
+        },
+        {
+          "id": "48528cc5-1117-5b00-9862-ac82a6a7ae13",
+          "order": 1,
+          "title": "Place des Abbesses",
+          "caption": "You're at the Place des Abbesses, and the first thing to look at is the thing you probably just came up through: the Métro entrance.",
+          "latitude": 48.8844,
+          "longitude": 2.338,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-montmartre_stop1.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop1.webp",
+          "transcriptText": "You're at the Place des Abbesses, and the first thing to look at is the thing you probably just came up through: the Métro entrance. That curving green cast-iron canopy, with the word Métropolitain in those strange melting letters and a glass roof like a dragonfly's wing, is the real thing — designed by Hector Guimard around the turn of the twentieth century, when the Métro was new and Paris wanted its entrances to look like the future. Most of his canopies were ripped out over the years. This is one of only two of the fully glass-roofed ones left in the entire city, so you're looking at a genuine survivor.\n\nThere's a reason you arrived a little breathless, too. Abbesses is the deepest station in the Paris Métro — about thirty-six metres down, the depth of a ten-storey building, because the hill above it is solid rock. The spiral staircase is famous, and famously punishing; most people take the easier way up and regret nothing.\n\nThe square's name reaches further back. Abbesses means the abbesses — the women who ran a powerful abbey that once crowned this hill, centuries before any painter showed up. The convent is long gone, but the name stuck to the square.\n\n*[beat]*\n\nStand here a moment and notice what this place is not. No tour groups, no easels, no crush of people — just a café-lined square, someone buying bread, a carousel turning. This is the Montmartre that's still simply a neighbourhood, the village underneath the souvenir. Hold onto that feeling, because once we climb, it gets harder to find.\n\nJust off the square is a small walled garden, and set into it is a wall covered in three words. Head there next — it's the Wall of Love."
+        },
+        {
+          "id": "70830492-aee8-50ba-8e0a-2c8be1cc15c4",
+          "order": 2,
+          "title": "The Wall of Love",
+          "caption": "Here it is — a small garden tucked off the square, and along one side a low wall of dark blue enamelled tiles.",
+          "latitude": 48.8841,
+          "longitude": 2.3383,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-montmartre_stop2.mp3",
+          "audioDurationSeconds": 91,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop2.webp",
+          "transcriptText": "Here it is — a small garden tucked off the square, and along one side a low wall of dark blue enamelled tiles. Step close and you'll see it's covered in the same three words, over and over, in hundreds of different hands and alphabets: I love you. Written here around three hundred times, in roughly two hundred and fifty languages.\n\nIt's not ancient — it went up in the year 2000 — and the story behind it is simple and a little obsessive. A musician named Frédéric Baron spent years going around with notebooks, asking people to write \"I love you\" in their own language, collecting the phrase from strangers, from embassies, from anyone he could find. An artist, Claire Kito, arranged the whole collection onto this wall of lava stone, built to last.\n\nLook for the scattered red shapes among the writing. They're the pieces of a broken heart — the idea being that all these separated fragments of love, in all these languages, add up to one whole.\n\nIt's a small thing next to the basilica you're about to climb to. But that's rather the point of Montmartre: the grand gesture up at the top, and the human-sized one down here in the village.\n\nFrom the garden, turn uphill. You'll see the white domes of Sacré-Cœur floating above the rooftops — and a lot of steps between you and them. That's where we're going."
+        },
+        {
+          "id": "e4f684c1-dfa9-5f88-8469-b91981a09eaf",
+          "order": 3,
+          "title": "Sacré-Cœur",
+          "caption": "You've climbed it, and you're standing under Sacré-Cœur — the great white basilica with its cluster of round pale domes, the building you can see from half of Paris.",
+          "latitude": 48.8867,
+          "longitude": 2.3431,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-montmartre_stop3.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop3.webp",
+          "transcriptText": "You've climbed it, and you're standing under Sacré-Cœur — the great white basilica with its cluster of round pale domes, the building you can see from half of Paris. Catch your breath on the steps and turn around first, because the view is the reward: the whole city spread out below you, flat and grey-gold to the horizon, with the hill you're on as the highest natural point in Paris. People have been coming up here to look down at the city for about as long as there's been a city to look at.\n\nNow the church itself, and two things worth knowing. The first is the colour. It never seems to get dirty, and that's not luck — it's built of a stone that bleaches itself. When it rains, the stone reacts with the water and releases a white mineral, so the building effectively washes itself paler with every shower. While the rest of Paris darkened with soot over the past century, Sacré-Cœur kept turning whiter.\n\nThe second thing is why it's here, and it's heavier than the bright domes suggest. It was begun in 1875, in the aftermath of a disastrous war and a brutal civil uprising — the Commune — that had begun, and been crushed, partly on this very hill. The church was raised as a kind of national penance: an act of atonement for what France had done and suffered. To some, that made it a monument of healing and faith; to others, then and now, it looked like the winners building a giant church on the grave of the losers. Both readings have followed it ever since.\n\n*[beat]*\n\nSo it's a more complicated building than the postcard lets on — beautiful, contested, and permanently, deliberately white.\n\nWhen you're ready, walk around to the back of the basilica, into the small square just behind it. After the crowds on these steps it'll feel tighter and older, packed with easels and painters. That's the Place du Tertre."
+        },
+        {
+          "id": "032ddccf-6067-50fd-8971-6a06bc12f80e",
+          "order": 4,
+          "title": "Place du Tertre",
+          "caption": "This is the Place du Tertre, and it's the strangest stop on the walk — because it manages to be the most authentic and the most fake place on the hill at the same time.",
+          "latitude": 48.8865,
+          "longitude": 2.3406,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-montmartre_stop4.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop4.webp",
+          "transcriptText": "This is the Place du Tertre, and it's the strangest stop on the walk — because it manages to be the most authentic and the most fake place on the hill at the same time. This little square was the real heart of Montmartre when it was a village: the market square, the centre of everything. And around the year 1900, when the artists moved in, this was their neighbourhood square too.\n\nThe real thing happened just steps from here. In a ramshackle building nearby that everyone called the Bateau-Lavoir — the laundry-boat, because that's what it looked like — a young Spaniard named Picasso painted some of the pictures that broke art open, including, around 1907, the one that detonated modern painting. That genuinely happened, right here, on this hill.\n\nBut that was well over a century ago, and what fills the square now is the memory of it, sold by the metre. The painters you see crowded under umbrellas, offering to sketch your portrait in ten minutes, are working a kind of permanent costume drama — Montmartre playing the role of itself. It's easy to be sniffy about it. Try not to be; it's also the genuine descendant of something that was once entirely real.\n\n*[beat]*\n\nWant the proof that this was a true village and not a stage set? Just down the slope on the far side there's a working vineyard — an actual one, still making wine each year, a last green survivor of the orchards and fields that covered this hill before the city climbed up to meet it.\n\nFrom here, the walk goes downhill — a long descent off the front of the hill toward the bright lights at the bottom. Head down, and aim for a red windmill. That's the Moulin Rouge."
+        },
+        {
+          "id": "85db838c-bf5d-52f8-85aa-8cac61e1f008",
+          "order": 5,
+          "title": "Moulin Rouge",
+          "caption": "You've come down off the hill, and here at the bottom, on a busy boulevard, is the red windmill — the Moulin Rouge.",
+          "latitude": 48.8841,
+          "longitude": 2.3322,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-montmartre_stop5.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-montmartre_stop5.webp",
+          "transcriptText": "You've come down off the hill, and here at the bottom, on a busy boulevard, is the red windmill — the Moulin Rouge. Its sails turn in red neon now, but stop and think about that windmill for a second, because it's a clue to everything you just walked through.\n\nIt's fake. It always was — a decorative red windmill bolted to a cabaret roof when the place opened in 1889, the same year the Eiffel Tower went up across the city. But it's a fake of something that was once completely real. This whole hill was once covered in working windmills, dozens of them, grinding grain and pressing grapes back when Montmartre was farmland. By the time the cabaret opened, nearly all of them were gone — so the Moulin Rouge bolted a pretend one onto its roof, a bit of rustic nostalgia for a countryside the city had just paved over. Two of the genuine old windmills still stand a few streets away, if you want to find the real thing later.\n\nWhat opened underneath that fake windmill, though, was brand new. The Moulin Rouge took a rowdy, high-kicking dance and turned it into a spectacle — the cancan as the world now knows it, fast and loud and deliberately scandalous. And a short, sharp-eyed painter named Toulouse-Lautrec sat in the audience night after night and put it all on paper, in posters so good they became the image of Paris nightlife forever.\n\n*[beat]*\n\nSo here's where the walk leaves you, and it's a fitting place. You started at the quiet top of the hill, in the real village under the souvenir, climbed past a white church built out of guilt, through a square performing its own past — and you've come down to a red windmill that was never a windmill, spinning over a dance floor, at the foot of the hill where the city finally caught up with the village. Montmartre, top to bottom: the real thing and the show of it, all on one slope. Stay for the lights coming on. They're worth it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 681,
+      "walkingDistanceMeters": 1800,
+      "centroidLatitude": 48.88505,
+      "centroidLongitude": 2.33828,
+      "city": "Paris",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Art",
+        "Performance",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
     }
   ]
 }
