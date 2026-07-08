@@ -174,6 +174,39 @@ _(hero exterior + `_2` interior both supplied by the owner inline; not CC.)_
 
 _(Ship-safe stock, NO credit: Dam Square & Royal Palace hero+4, De Wallen hero+5, Canal Ring / Golden Bend hero+5, Nine Streets hero+5, Westerkerk hero+`_2`, Jordaan hero+2, Rijksmuseum hero+3, Van Gogh Museum hero+2, Vondelpark hero+2, De Pijp / Albert Cuyp hero+4 — DP `_5` is Wikimedia **CC0**, still no credit.)_
 
+## Montreal — 10 credit-required images (batch 1, `drafts/montreal-batch1`)
+
+Maker at wire-in: **Atlas Studio YUL** 🇨🇦. Old Montreal, 5 single-stop tours. Notre-Dame + Old Port
+heroes/galleries are ship-safe stock (Unsplash/Pexels — NO credit). The three Wikimedia-sourced
+subjects below carry CC credit (two picks within them are CC0/PD — noted, no credit).
+
+### Place Jacques-Cartier / City Hall (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `place-jacques-cartier-city-hall_hero.webp` | Nelson's Column + square | Jean Gagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Monument_Nelson_Montreal_01.jpg |
+| `place-jacques-cartier-city-hall_3.webp` | City Hall from the street | eugene_o | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:20190515_-_Montreal_-_1_(48285153032).jpg |
+| `place-jacques-cartier-city-hall_4.webp` | City Hall front + balcony | Diego Delso | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Ayuntamiento_de_Montreal,_Montreal,_Canad%C3%A1,_2017-08-11,_DD_11.jpg |
+
+_(`place-jacques-cartier-city-hall_2.webp` = Nelson's Column at sunset, Wilfredor, **CC0** — no credit.)_
+
+### Pointe-à-Callière (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `pointe-a-calliere_hero.webp` | Éperon museum building | Jeangagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Eperon_-_Pointe-a-Calliere_10.JPG |
+| `pointe-a-calliere_2.webp` | Éperon museum, side | Jeangagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Eperon_-_Pointe-a-Calliere_08.JPG |
+| `pointe-a-calliere_3.webp` | buried Saint-Pierre river tunnel | Nicolas Leboeuf | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Igp_(224278719).jpeg |
+| `pointe-a-calliere_4.webp` | excavated foundations under glass | Jeangagnon | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Pointe-a-Calliere_-_001.jpg |
+
+### Bonsecours Market + chapel (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `bonsecours-market-chapel_hero.webp` | market across the water | Jiaqian AirplaneFan | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Bonsecours_Market_-_panoramio.jpg |
+| `bonsecours-market-chapel_3.webp` | Bon-Secours chapel tower at night | Jazmin Million | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Chapelle_Notre-Dame-de-Bon-Secours_-_Mus%C3%A9e_Marguerite-Bourgeoys.jpg |
+| `bonsecours-market-chapel_4.webp` | Bon-Secours chapel spire, Rue Saint-Paul | Jean Gagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Chapelle_Notre-Dame-de-Bon-Secours_12.JPG |
+
+_(`bonsecours-market-chapel_2.webp` = silver dome close, Daderot, **Public Domain** — no credit.)_
+_(Ship-safe stock, NO credit: Notre-Dame Basilica hero+4, Old Port hero+4.)_
+
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
 reuse single-stop stop images. Only two carry a credit, both already listed above:
@@ -195,6 +228,7 @@ for the exact per-image list.
 | **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
 | **Los Angeles** | *this file* (below) | 17 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7; Egyptian gallery ×3 + Farmers Market/Grove ×2 b8) |
 | **Amsterdam** | *this file* (above) | 22 — Oude Kerk ×3 + Begijnhof ×4 + Anne Frank House hero + Westerkerk interior ×2 + Our Lord in the Attic ×2 + De Waag `_3` + Homomonument ×2 + Noordermarkt/Brouwersgracht ×2 + Rembrandt House hero + Portuguese Synagogue hero + Names Monument ×2 (Wikimedia CC). Hollandsche Schouwburg ×2 = Public Domain (no credit). Nieuwe Kerk + Leidseplein hero = owner-supplied (no credit). All other Amsterdam images = ship-safe stock / CC0, no credit. |
+| **Montreal** | *this file* (above) | 10 — Place Jacques-Cartier: Nelson's Column hero + City Hall `_3`/`_4` (Nelson `_2` = CC0, no credit); Pointe-à-Callière ×4 (Éperon hero/`_2`, buried-river `_3`, foundations `_4`); Bonsecours: market hero + chapel `_3`/`_4` (market `_2` = PD, no credit). Notre-Dame + Old Port = ship-safe stock, no credit. |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
