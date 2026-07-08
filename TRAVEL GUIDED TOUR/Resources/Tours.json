@@ -28046,6 +28046,1034 @@
     "Free to Visit"
    ],
    "priceUSD": 0
+  },
+  {
+   "id": "8996fb24-7274-5e1f-8033-6f2d2ffd8fd8",
+   "createdAt": "2026-07-08",
+   "title": "Musée d'Orsay",
+   "shortDescription": "A Belle Époque railway station reborn as the world's great museum of Impressionism.",
+   "longDescription": "Built as the Gare d'Orsay for the 1900 Exposition and saved from demolition in the 1970s, this vaulted Beaux-Arts station now holds the national collection of art from 1848 to 1914 — the supreme gathering of Monet, Renoir, Degas, Van Gogh, Cézanne. The great station clock still tells the time above the galleries, and the old train shed makes the perfect naves for painting.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-dorsay_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-dorsay_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-dorsay_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-dorsay_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-dorsay_5.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-dorsay_6.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "f9fa4b39-231b-513b-88da-6322126999a3",
+     "order": 0,
+     "title": "Musée d'Orsay",
+     "caption": "A Belle Époque railway station reborn as the world's great museum of Impressionism.",
+     "latitude": 48.86,
+     "longitude": 2.3266,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/musee-dorsay.mp3",
+     "audioDurationSeconds": 126,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're looking at the Musée d'Orsay, and the first thing to understand is that it was never meant to be a museum at all — it was built to be a railway station. Stand back and you can still read it: the great arched roof, the vast hall meant for platforms, and high on the facade two enormous round clocks that once told travellers when their trains were leaving.\n\nIt went up for the World's Fair of 1900 — the grandest, most central station in Paris, right on the river facing the Louvre. But it had a fatal flaw: its platforms were too short for the longer trains that came later, and within forty years it was effectively useless as a station. For decades it sat half-abandoned, nearly torn down more than once. Then someone had the idea to turn the empty hall into a museum — and it opened, reborn, in 1986.\n\nAnd here's the lovely fit. The art they filled it with is the art of roughly the same moment the station was built: the second half of the eighteen hundreds, the age of the Impressionists. Monet, Manet, Degas, Renoir, Van Gogh, Cézanne — the painters who walked away from grand historical scenes and started painting the modern world instead: train stations, riverbanks, dancers, ordinary afternoons. They painted the railway age, and now they hang inside a monument to it.\n\nSo the building and its contents are the same era talking to each other. The painters captured the new world of steam and leisure; the station was a piece of that new world; and when the trains outgrew it, it became the perfect frame for the pictures.\n\nDon't leave without going up to one of those giant clocks. From behind, the clock face is translucent — you can stand inside the mechanism and look out through the great glass dial at the rooftops of Paris, the city framed inside the very instrument that once governed the timetables. It's the best view in the building, and almost nobody rushes to find it."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 126,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.86,
+   "centroidLongitude": 2.3266,
+   "city": "Paris",
+   "primaryCategory": "visualArt",
+   "tags": [
+    "Museum",
+    "Art",
+    "Beaux-Arts",
+    "Iconic Landmark"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "8587bca7-d0e8-55fe-a2c4-69fc3cf96cc7",
+   "createdAt": "2026-07-08",
+   "title": "Jardin du Luxembourg",
+   "shortDescription": "The Left Bank's beloved garden — sailboats on the basin, green chairs, and a palace now home to the Senate.",
+   "longDescription": "Created by Marie de' Medici in the 1610s around a palace built to recall her native Florence, the Luxembourg is the Left Bank's living room: gravel terraces, statues of French queens, toy sailboats on the octagonal basin, and rows of movable green chairs. The Palais du Luxembourg now houses the French Senate; the garden belongs to everyone.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-du-luxembourg_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-du-luxembourg_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-du-luxembourg_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-du-luxembourg_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-du-luxembourg_5.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "69b0be51-7914-5e22-ac56-c1bae99dc925",
+     "order": 0,
+     "title": "Jardin du Luxembourg",
+     "caption": "The Left Bank's beloved garden — sailboats on the basin, green chairs, and a palace now home to the Senate.",
+     "latitude": 48.84625,
+     "longitude": 2.33652,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jardin-du-luxembourg.mp3",
+     "audioDurationSeconds": 119,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're in the Jardin du Luxembourg, the most beloved garden on the Left Bank, and the surprising thing about it is that it was built out of one woman's homesickness.\n\nLook toward the large palace at the north end — that's the Luxembourg Palace, home today to the French Senate. It was built in the early sixteen hundreds for Marie de Médicis, the Italian-born queen of France. She was from Florence, and after her husband died she was lonely in Paris, missing the city of her childhood. So she had a palace and gardens built deliberately to recall the Florentine ones she'd grown up among — a piece of Tuscany rebuilt on the far bank of the Seine. The garden you're standing in began as a cure for one queen's longing for home.\n\nNow look at how people use it, because it has a quiet genius. There are almost no fixed benches. Instead, scattered everywhere, are hundreds of those green metal chairs — loose, movable, yours to drag wherever you like. Want sun, shade, the edge of the pond, a spot near friends? Move your chair. It sounds small, but it's why the garden feels less like a park you pass through and more like a vast shared living room you arrange to suit yourself.\n\nFind the big octagonal pond in the centre. On weekends, children push old wooden sailboats out across it with long sticks, the same simple pleasure their great-grandparents had here. Off to one side, half-hidden, is the Medici Fountain — a shaded, romantic grotto Marie built to remember Italy, the most Florentine corner of the whole place.\n\nSo this is a homesick queen's Florence, opened up and handed to the city — a private cure for loneliness that became everyone's favourite room. Grab a chair, drag it somewhere that suits you, and stay a while. That's exactly what it's for."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 119,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.84625,
+   "centroidLongitude": 2.33652,
+   "city": "Paris",
+   "primaryCategory": "natureAndParks",
+   "tags": [
+    "Park",
+    "Green Escape",
+    "History",
+    "Free to Visit"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "e1e5e09b-36e0-51ff-bde3-e8b2b7f65187",
+   "createdAt": "2026-07-08",
+   "title": "Saint-Germain-des-Prés",
+   "shortDescription": "The oldest church in Paris, at the heart of the postwar quarter of philosophers, jazz and café intellectuals.",
+   "longDescription": "Its Romanesque bell tower is the oldest in Paris, marking an abbey that dates to the 6th century and was once the most powerful in the city. Around it grew the Saint-Germain-des-Prés of the 20th century — Sartre and de Beauvoir at the Café de Flore and Les Deux Magots, jazz in the cellars, publishing houses on every corner. Faith and philosophy share the same crossroads.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saint-germain-des-pres_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saint-germain-des-pres_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saint-germain-des-pres_3.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "c41843cd-1218-589c-aa86-568cc1f7395a",
+     "order": 0,
+     "title": "Saint-Germain-des-Prés",
+     "caption": "The oldest church in Paris, at the heart of the postwar quarter of philosophers, jazz and café intellectuals.",
+     "latitude": 48.85408,
+     "longitude": 2.3345,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/saint-germain-des-pres.mp3",
+     "audioDurationSeconds": 115,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're standing in front of Saint-Germain-des-Prés — and that stout stone tower ahead of you is, quite possibly, the oldest thing still standing in Paris. There's been an abbey on this spot since the sixth century, and the tower itself goes back about a thousand years, to a time when this was open country outside the city walls — des Prés means \"of the meadows.\" For centuries this was one of the most powerful monasteries in France.\n\nStep inside if it's open; it's plain and ancient and worth a moment. But the strange twist of this place is what happened just outside its doors, much more recently.\n\nIn the years after the Second World War, the cafés on the corner here — two in particular, the Café de Flore and Les Deux Magots, almost next door to each other — became the headquarters of French intellectual life. The philosophers Jean-Paul Sartre and Simone de Beauvoir worked at these tables for hours, day after day; the writer Albert Camus was part of the same circle. They sat and wrote and argued over coffee, and out of that café world came existentialism, the philosophy that defined a generation. Down the side streets, jazz clubs filled the cellars. For a couple of decades, this small corner was the centre of the thinking world.\n\nSo look at what shares this one intersection: a thousand-year-old abbey church, and the café tables where twentieth-century philosophers reinvented what it meant to be free. The sacred and the secular, faith and philosophy, separated by a few metres of street.\n\nThe cafés are still here, still serving — though now you pay handsomely for a coffee at the same tables, and you're more likely to share the room with tourists than philosophers. Sit anyway. The view of that ancient tower, from a café table where modern philosophy was hammered out, is a very Parisian kind of layered."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 115,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.85408,
+   "centroidLongitude": 2.3345,
+   "city": "Paris",
+   "primaryCategory": "sacredSites",
+   "tags": [
+    "Religious Building",
+    "Faith",
+    "History",
+    "Gothic"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "84ea3d03-dcd4-5c1b-8113-0b0d33d654e0",
+   "createdAt": "2026-07-08",
+   "title": "Saint-Sulpice",
+   "shortDescription": "A vast Left Bank church of mismatched towers, Delacroix murals and a brass meridian line across its floor.",
+   "longDescription": "The second-largest church in Paris after Notre-Dame, Saint-Sulpice took over a century to build and shows it — its two west towers never matched. Inside are Delacroix's late murals of 'Jacob Wrestling the Angel', one of the world's great organs, and a brass gnomon line that tracks the sun across the floor, a piece of astronomy embedded in a church.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saint-sulpice_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saint-sulpice_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saint-sulpice_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saint-sulpice_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saint-sulpice_5.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "7ea504d6-abc3-5e61-ad03-a621ab48bc46",
+     "order": 0,
+     "title": "Saint-Sulpice",
+     "caption": "A vast Left Bank church of mismatched towers, Delacroix murals and a brass meridian line across its floor.",
+     "latitude": 48.85107,
+     "longitude": 2.33474,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/saint-sulpice.mp3",
+     "audioDurationSeconds": 133,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're in front of Saint-Sulpice, one of the largest churches in Paris — nearly the size of Notre-Dame. Look up at the two towers on the front and you'll notice they don't match: one is plainer, one more ornate. They were built by different architects, decades apart, and the second was never brought into line with the first. The church simply gave up and left them mismatched.\n\nInside, though, are two genuinely surprising things. The first is set into the floor. Walk toward the north side and you'll find a thin brass strip running across the stone, leading to a tall white marble obelisk. This is a gnomon — an astronomical instrument. A small hole high in a south-facing window lets a single ray of sunlight in, and at noon it falls onto this brass line; where it lands marks the date. The priests built it for a practical reason: to fix the date of Easter each year, which shifts with the sun and the moon. A scientific instrument, built into the floor of a church, to keep the religious calendar honest.\n\nYou may have heard of this brass line for the wrong reason. A hugely popular novel claimed it marked an ancient secret meridian tied to a grand conspiracy — none of which is true, and the parish grew annoyed enough to post a notice inside saying so. It's a sun-clock, nothing more, and that's plenty.\n\nThe second treasure is in a chapel just inside the door on the right: a set of murals by Eugène Delacroix, among the last great works he ever painted. One shows Jacob wrestling the angel — two figures locked together in a struggle, set against real trees. He worked on them at the very end of his life, and you can feel it; they have the urgency of a painter racing the clock.\n\nSo: a machine for tracking the sun set into the floor, and a dying master's final paintings on the wall. Two kinds of light, really — one let in through a pinhole, one mixed on a palette. Stand in the quiet and find them both."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 133,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.85107,
+   "centroidLongitude": 2.33474,
+   "city": "Paris",
+   "primaryCategory": "sacredSites",
+   "tags": [
+    "Religious Building",
+    "Faith",
+    "Art",
+    "Baroque"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "030d8630-4c0a-5965-9758-5243a0074df9",
+   "createdAt": "2026-07-08",
+   "title": "Eiffel Tower",
+   "shortDescription": "The iron tower Paris meant to tear down after twenty years — now the definitive symbol of the city.",
+   "longDescription": "Built by Gustave Eiffel's engineers for the 1889 Exposition marking the Revolution's centenary, the 300-metre tower was the tallest structure on earth and was fiercely denounced by the city's artists as a monstrous iron chimney. Meant to stand for twenty years, it was saved by its usefulness as a radio mast — and became, against every intention, the emblem of Paris itself.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eiffel-tower_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eiffel-tower_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eiffel-tower_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eiffel-tower_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eiffel-tower_5.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eiffel-tower_6.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eiffel-tower_7.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "ce7b59dd-762e-58b6-9841-599639b152db",
+     "order": 0,
+     "title": "Eiffel Tower",
+     "caption": "The iron tower Paris meant to tear down after twenty years — now the definitive symbol of the city.",
+     "latitude": 48.85837,
+     "longitude": 2.29448,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/eiffel-tower.mp3",
+     "audioDurationSeconds": 142,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're at the foot of the Eiffel Tower, looking up through the iron at the most recognisable structure on earth — so here's the thing almost nobody believes: it was supposed to be temporary, and plenty of Parisians wanted it gone.\n\nIt was built for the World's Fair of 1889, to mark a hundred years since the Revolution. Gustave Eiffel's company won the right to put up the tallest structure in the world — three hundred metres of iron, far taller than anything ever made — and the permit ran for twenty years. After that, it was to be taken down and sold for scrap.\n\nAnd the cultured classes of Paris hated it. A group of the city's most famous artists and writers signed a furious public protest while it was still going up, calling it a monstrous iron eyesore that would disgrace the city. There's a story that the novelist Guy de Maupassant ate lunch in the tower's restaurant every day — because it was the one place in Paris from which he couldn't see the tower itself.\n\nSo why is it still here? Not because the city fell in love with it; that came later. It survived because it turned out to be useful. As the twenty-year deadline approached, the tower had become the perfect mount for the brand-new technology of wireless telegraphy — a giant antenna the military didn't want to lose. Radio saved the Eiffel Tower. Sentiment had nothing to do with it; a transmitter on top did.\n\nFor forty years it stayed the tallest structure in the world, until New York's skyscrapers finally passed it. It's repainted by hand every few years, and on a hot day it grows — the iron expands and the whole tower stands a little taller in summer than in winter.\n\nSo look up again. The symbol of Paris, of France, of romance itself, is a temporary structure that the tastemakers despised and a radio aerial rescued. It only became beloved once it was safe — which may be the most human thing about it."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 142,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.85837,
+   "centroidLongitude": 2.29448,
+   "city": "Paris",
+   "primaryCategory": "architecture",
+   "tags": [
+    "Tower",
+    "Engineering",
+    "History",
+    "Iconic Landmark"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "7059efa5-1166-55d6-99e6-903769fecfb8",
+   "createdAt": "2026-07-08",
+   "title": "Trocadéro",
+   "shortDescription": "The great terrace that frames the classic head-on view of the Eiffel Tower across the Seine.",
+   "longDescription": "The Palais de Chaillot, built for the 1937 Exposition in curving Modern-Classical stone, opens onto a wide terrace and cascading gardens that deliver the postcard view of the Eiffel Tower straight across the river. Home to several museums, the terrace is the city's grandest belvedere — and a stage for gatherings and protests as often as photographs.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trocadero_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trocadero_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trocadero_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trocadero_4.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "55cab66b-08bd-5647-9600-378d21b40b53",
+     "order": 0,
+     "title": "Trocadéro",
+     "caption": "The great terrace that frames the classic head-on view of the Eiffel Tower across the Seine.",
+     "latitude": 48.86222,
+     "longitude": 2.28757,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trocadero.mp3",
+     "audioDurationSeconds": 100,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're standing on the Trocadéro terrace, and you came here for one reason: this is the spot. Look across the river and there it is — the Eiffel Tower, head to foot, perfectly framed, the single best place in the whole city to see it whole. This wide stone terrace, with its two great curving wings of a building sweeping away on either side, was practically designed to make you turn your back on it and face the tower.\n\nWhich is the quietly funny thing about Trocadéro: it's a grand building, the Palais de Chaillot, raised for a World's Fair in the nineteen thirties — and in most people's minds it doesn't exist as a building at all. It exists as a viewpoint. People arrive, photograph the tower, and leave, having never once looked at the thing they were standing on. It's a monument defined entirely by what it looks at.\n\nBut it has had its own moments. On this terrace, in 1948, the nations of the world gathered and adopted the Universal Declaration of Human Rights — the founding statement that all people are born free and equal in dignity and rights. There's an inscription here marking it. So the place tourists treat as a photo backdrop is also where one of the most important documents of the modern age was proclaimed to the world.\n\nTake your photograph — everyone does, and the view earns it. But then turn around for a second and look at the building behind you, and the wide plaza under your feet. Just so you can say you actually saw the place, and not only the view across the river."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 100,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.86222,
+   "centroidLongitude": 2.28757,
+   "city": "Paris",
+   "primaryCategory": "architecture",
+   "tags": [
+    "Public Square",
+    "Viewpoint",
+    "Architecture",
+    "Iconic Landmark"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "fb4801db-001c-5a12-a48b-665253b17bfd",
+   "createdAt": "2026-07-08",
+   "title": "Champ de Mars",
+   "shortDescription": "The long green field at the foot of the Eiffel Tower — a former army parade ground turned public lawn.",
+   "longDescription": "Once the drill field of the military school at its far end, the Champ de Mars staged revolutionary festivals and early Expositions before becoming the great open lawn beneath the Eiffel Tower. Today it is where Paris and the world sit on the grass to look up at the tower — a parade ground turned into the city's front garden.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/champ-de-mars_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/champ-de-mars_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/champ-de-mars_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/champ-de-mars_4.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "bd07aa20-2fa4-55be-86cd-3f53ff491e58",
+     "order": 0,
+     "title": "Champ de Mars",
+     "caption": "The long green field at the foot of the Eiffel Tower — a former army parade ground turned public lawn.",
+     "latitude": 48.85601,
+     "longitude": 2.29852,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/champ-de-mars.mp3",
+     "audioDurationSeconds": 110,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're on the Champ de Mars, the long green lawn that runs from the foot of the Eiffel Tower to the elegant old buildings at the far end. Today it's the most relaxed place in Paris — people sprawl on the grass with wine and bread, the tower rising over them. But the name gives away a very different past: Champ de Mars means the Field of Mars, the Roman god of war.\n\nIt was a parade ground. Those grand buildings at the far end are the old military academy, and for centuries this lawn was where soldiers drilled and marched — and among the cadets who once trained here was a young officer named Napoleon Bonaparte. The picnic blanket you might be sitting on is spread over a former field of war.\n\nIt saw the Revolution up close, too. In 1790, on the first anniversary of the fall of the Bastille, a vast crowd — hundreds of thousands of people — gathered here for an enormous festival of national unity, one of the great hopeful moments of the early Revolution. But the very next year the same ground saw bloodshed, when troops fired on a crowd of protesters gathered here. The Field of Mars lived up to its name.\n\nNow it's grass and tourists and the tower's evening sparkle. There's something to that — that a ground named for war, drilled by armies and marked by the Revolution, has ended up as the gentlest lawn in the city, where the only thing anyone points at the sky is a phone camera. Find a clear patch, lie back, and look straight up at the iron."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 110,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.85601,
+   "centroidLongitude": 2.29852,
+   "city": "Paris",
+   "primaryCategory": "natureAndParks",
+   "tags": [
+    "Park",
+    "History",
+    "Green Escape",
+    "Viewpoint",
+    "Free to Visit"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "e218cea4-0041-57b0-8ddf-194dab7f93c7",
+   "createdAt": "2026-07-08",
+   "title": "Les Invalides & Napoleon's Tomb",
+   "shortDescription": "Louis XIV's veterans' hospital, its gold dome now the tomb of Napoleon.",
+   "longDescription": "Built by Louis XIV as a home for wounded and aged soldiers, Les Invalides remains a military complex and museum, its Baroque Dôme church one of the high points of French classical architecture. Beneath the gilded dome, in an open crypt of red porphyry, lies Napoleon — moved here in 1840, nested in six coffins, at the centre of the army he led.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/les-invalides_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/les-invalides_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/les-invalides_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/les-invalides_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/les-invalides_5.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/les-invalides_6.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/les-invalides_7.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "612c685a-1707-55ff-95f8-7dd01582af8e",
+     "order": 0,
+     "title": "Les Invalides & Napoleon's Tomb",
+     "caption": "Louis XIV's veterans' hospital, its gold dome now the tomb of Napoleon.",
+     "latitude": 48.85683,
+     "longitude": 2.31252,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/les-invalides.mp3",
+     "audioDurationSeconds": 136,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're looking at Les Invalides, and the gold dome rising over it is one of the brightest things in the Paris skyline — covered in real gold leaf, it catches the sun from kilometres away. But the gold is the smaller story here. Look at the long, severe buildings spread out beneath it, because that's where this place begins.\n\nLes Invalides was built in the sixteen seventies by Louis the Fourteenth, the Sun King, for a genuinely humane reason: to house and care for soldiers who had been wounded or grown old in his wars. Before this, broken-down veterans often ended up begging in the streets. This was, in effect, one of the first great veterans' homes and hospitals — a place for the men the wars had used up. Parts of it still serve old soldiers today, alongside a vast military museum.\n\nNow, the dome. The golden church beneath it holds the most famous resident of all: Napoleon. After he died in exile on a remote South Atlantic island, France eventually brought his body home, in 1840, in a solemn procession that passed through the Arc de Triomphe and across the city to here. And then they buried him in extraordinary fashion.\n\nGo in and look down into the open circular crypt at the great reddish-brown stone tomb in the centre. Inside that single massive sarcophagus the emperor's body rests not in one coffin but in six, nested one inside another like a set of Russian dolls — tin, mahogany, two of lead, ebony, and oak. A man who spent his life pushing outward, conquering Europe, sealed at the end inside six layers of box beneath a dome of gold.\n\nThere's a hard irony in standing here. The gold dome was raised to shelter the soldiers war had wounded; and at its very centre now lies the general who, more than almost anyone, sent men to be wounded. A home for the broken, watched over by the man who broke so many. Stand at the rail and look down at the tomb a while before you go."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 136,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.85683,
+   "centroidLongitude": 2.31252,
+   "city": "Paris",
+   "primaryCategory": "history",
+   "tags": [
+    "Monument",
+    "History",
+    "War",
+    "Baroque",
+    "Remembrance"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "5167a3d3-dea3-55c9-a471-c5b402ca7472",
+   "createdAt": "2026-07-08",
+   "title": "Musée Rodin",
+   "shortDescription": "The sculptor's works set in the mansion and rose garden where he worked — 'The Thinker' among the trees.",
+   "longDescription": "Rodin gave his work to the French state on condition it be shown in the Hôtel Biron, the elegant 18th-century mansion where he had his studio. The result is a museum as much garden as gallery: 'The Thinker', 'The Gates of Hell' and 'The Burghers of Calais' stand among clipped hedges and roses, sculpture in the open air where the sculptor placed it.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-rodin_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-rodin_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-rodin_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-rodin_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-rodin_5.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-rodin_6.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "cc077477-d124-571b-8964-a28f47e925d5",
+     "order": 0,
+     "title": "Musée Rodin",
+     "caption": "The sculptor's works set in the mansion and rose garden where he worked — 'The Thinker' among the trees.",
+     "latitude": 48.85529,
+     "longitude": 2.31578,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/musee-rodin.mp3",
+     "audioDurationSeconds": 128,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're at the Musée Rodin, and it might be the most pleasant museum in Paris, because a good half of it is outdoors. This was the Hôtel Biron, a graceful eighteenth-century mansion with large gardens, and in his final years the sculptor Auguste Rodin lived and worked here. He struck a deal with the French state: he would give the nation all of his works, on the condition that the mansion become a museum devoted to them. He died in 1917; the museum opened two years later, and it has been here ever since.\n\nGo into the garden first — that's the point of this place. Set among the roses and clipped hedges and gravel paths are Rodin's great bronzes, out in the open air, weathering and catching the light exactly as, in his view, sculpture was meant to. There's something right about meeting them under the sky rather than in a white room.\n\nFind The Thinker. You know the figure — seated, hunched forward, chin on hand, lost in thought. But here's what most people don't know: he wasn't conceived as a standalone everyman. He began as a small figure meant to sit at the very top of an enormous sculpted doorway Rodin laboured over for decades, called The Gates of Hell, based on Dante's Inferno. And the thinker at the top was Dante himself — the poet, looking down over the damned souls writhing in the gates below, contemplating the whole of human suffering. Only later was he enlarged and set on his own pedestal, where he quietly became a symbol of thought itself.\n\nSo the most famous statue of a man thinking is really a poet staring down into Hell. Once you've seen the Gates here in the garden — and you can — you'll never quite see The Thinker the innocent way again.\n\nTake your time among the bronzes. Few museums let you wander the masterpieces with birdsong and open sky around them. This one does, and that's the gift."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 128,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.85529,
+   "centroidLongitude": 2.31578,
+   "city": "Paris",
+   "primaryCategory": "visualArt",
+   "tags": [
+    "Museum",
+    "Art",
+    "Green Escape"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "39e4f325-e903-51dd-8032-aea6bb824ed1",
+   "createdAt": "2026-07-08",
+   "title": "Musée du Quai Branly – Jacques Chirac",
+   "shortDescription": "Jean Nouvel's museum of the arts of Africa, Asia, Oceania and the Americas, wrapped in a living green wall.",
+   "longDescription": "Opened in 2006 near the Eiffel Tower, Jean Nouvel's building dissolves into its garden behind a famous vertical wall of living plants, its galleries a dim, winding path meant to evoke a journey. Inside are the national collections of non-European art — masks, textiles, sculpture from Africa, Asia, Oceania and the Americas — presented as art rather than ethnography, though not without debate.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-du-quai-branly_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-du-quai-branly_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-du-quai-branly_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-du-quai-branly_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/musee-du-quai-branly_5.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "775daeb8-1af2-536a-9fd9-be8e3dd559d3",
+     "order": 0,
+     "title": "Musée du Quai Branly – Jacques Chirac",
+     "caption": "Jean Nouvel's museum of the arts of Africa, Asia, Oceania and the Americas, wrapped in a living green wall.",
+     "latitude": 48.86072,
+     "longitude": 2.2979,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/musee-du-quai-branly.mp3",
+     "audioDurationSeconds": 127,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're outside the Musée du quai Branly, and even before you go in, the building is doing something unusual — it's trying to disappear into a garden. Look at the wall facing the street: a large part of the facade is alive, a vertical garden of thousands of plants growing straight up the side of the building, a green wall climbing several storeys. The architect, Jean Nouvel, wanted the museum to feel less like a stone monument and more like something half-swallowed by nature, glimpsed through trees.\n\nInside is a different kind of departure. Where the Louvre and the Orsay tell the story of European art, the quai Branly is devoted to almost everything else — the arts and cultures of Africa, Asia, Oceania and the Americas. Masks, sculptures, textiles, instruments and sacred objects from across the non-Western world, shown not as curiosities but as great art in their own right. When it opened in 2006, that was a central part of its purpose: to put these works on the same footing as anything hanging in the grand European galleries.\n\nIt also carries a question it doesn't hide from, and neither will we. Many objects in museums like this one left their original homes long ago, in the age of empire, and how they came to be in Paris — bought, gifted, or taken — is a live and sometimes painful debate. In recent years France has begun returning some pieces to the countries they came from. The museum sits squarely in the middle of one of the real open questions of our time: who should hold the cultural treasures of the world, and where do they truly belong?\n\nYou don't have to settle that to be moved by what's inside. Go in, look closely, and let the objects speak for themselves. Then come back out and look at the green wall one more time — a museum slowly being reclaimed by the living world, which feels, somehow, like the right note for everything it holds."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 127,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.86072,
+   "centroidLongitude": 2.2979,
+   "city": "Paris",
+   "primaryCategory": "culturalHeritage",
+   "tags": [
+    "Museum",
+    "Art",
+    "Contemporary",
+    "Jean Nouvel"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "e8630587-812e-583a-9bd4-af283c885a85",
+   "createdAt": "2026-07-08",
+   "title": "Palais Garnier",
+   "shortDescription": "The most opulent opera house ever built — grand staircase, gilded foyers and the myth of the Phantom below.",
+   "longDescription": "Charles Garnier's opera house, opened in 1875, is the definition of Second Empire splendour: a marble grand staircase built for the spectacle of arrival, gold-and-red auditorium under a ceiling later painted by Chagall, mirrored foyers like a palace. A real underground lake beneath the building inspired 'The Phantom of the Opera'. It remains a working stage for ballet and opera.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palais-garnier_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palais-garnier_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palais-garnier_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palais-garnier_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palais-garnier_5.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palais-garnier_6.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palais-garnier_7.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palais-garnier_8.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palais-garnier_9.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "63356788-3176-5cd2-bfa9-8d567b4ec7ac",
+     "order": 0,
+     "title": "Palais Garnier",
+     "caption": "The most opulent opera house ever built — grand staircase, gilded foyers and the myth of the Phantom below.",
+     "latitude": 48.87197,
+     "longitude": 2.33176,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/palais-garnier.mp3",
+     "audioDurationSeconds": 133,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're in front of the Palais Garnier, the great opera house, and from the outside it already looks like it's showing off — gold, marble, columns, statues, a riot of ornament. That's no accident. When the architect Charles Garnier built it in the eighteen seventies, the building wasn't really designed around the opera. It was designed around the audience.\n\nStep inside, if you can, and you'll see it at once. The grand staircase is enormous, a sweep of marble built so that society could descend it — so that ladies in gowns and gentlemen in tails could see and, more to the point, be seen. The foyers glitter like the halls of a palace. For the wealthy of nineteenth-century Paris, a night at the opera was theatre in both directions: there was a performance on the stage, and there was the performance of the audience itself, dressed and arranged across that staircase. The real show, half the time, was the crowd.\n\nNow, the part you've probably heard of. This building is the setting of The Phantom of the Opera — and the eeriest details of that story are real. There genuinely is water beneath the opera house: a large underground reservoir, built because the ground was so wet during construction that the engineers couldn't drain it, so they enclosed it instead. And in 1896, during a performance, one of the great counterweights of the chandelier broke loose and crashed down into the audience, killing a woman. A writer named Gaston Leroux took the underground water and the falling chandelier and spun them into a novel about a phantom haunting the cellars. The legend grew straight out of the facts.\n\nLook up at the ceiling inside, too, if you get the chance — the colourful painting overhead was added in the nineteen sixties by Marc Chagall, a dreamlike modern ceiling floating above all that old gold.\n\nSo: an opera house built mostly so the audience could perform to itself, with a real lake in the basement and a real falling chandelier in its past. The fiction barely had to invent a thing."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 133,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.87197,
+   "centroidLongitude": 2.33176,
+   "city": "Paris",
+   "primaryCategory": "musicAndPerformance",
+   "tags": [
+    "Venue",
+    "Performance",
+    "Architecture",
+    "Beaux-Arts",
+    "Iconic Landmark"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "95988889-a1a8-5223-91f2-4670f26396b5",
+   "createdAt": "2026-07-08",
+   "title": "Galeries Lafayette",
+   "shortDescription": "The Belle Époque department store crowned by a spectacular stained-glass and steel dome.",
+   "longDescription": "Opened in 1912, the flagship Galeries Lafayette is as much monument as shop: its great hall rises through galleried balconies to a soaring neo-Byzantine dome of stained glass and steel, a cathedral of consumption from the golden age of the department store. The rooftop terrace offers one of the best free views over the opera district and the city.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/galeries-lafayette_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/galeries-lafayette_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/galeries-lafayette_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/galeries-lafayette_4.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "c18a5be1-6c76-5f9e-bc50-d4f698e6bc28",
+     "order": 0,
+     "title": "Galeries Lafayette",
+     "caption": "The Belle Époque department store crowned by a spectacular stained-glass and steel dome.",
+     "latitude": 48.87344,
+     "longitude": 2.33219,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/galeries-lafayette.mp3",
+     "audioDurationSeconds": 117,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're inside Galeries Lafayette — and if you've just walked in off the street expecting a department store, stop and look straight up, because you're standing under one of the most beautiful ceilings in Paris. High overhead is an enormous dome of coloured glass and gilded ironwork, glowing like the rose window of a cathedral, with tiers of balconied shopfronts rising all around you toward the light. It's breathtaking — and it's selling handbags.\n\nThat's the whole idea, and it was a radical one when this dome went up in 1912. The department store was still a fairly new invention then — the notion of gathering every kind of merchandise under one roof and making the act of shopping itself a glamorous experience. And the people who built these places understood something: if you want buying to feel important, even sacred, you build it like a temple. So they gave it a dome worthy of a church, a soaring central hall, light pouring down from above — all to make purchasing a scarf feel like a visit to somewhere grand. A cathedral of commerce, quite deliberately.\n\nIt worked. Crowds came as much for the spectacle as the goods, and the great glass dome became one of the sights of the city in its own right — which is why you'll see plenty of people here, like you, just looking up, not shopping at all.\n\nBefore you go, there's a reward most people miss. Head for the rooftop — it's free, and open to anyone. From up there you get a wide, sweeping view across the rooftops of Paris: the opera house just below, and the Eiffel Tower off in the distance. One of the best free views in the city, sitting on top of a shop.\n\nSo look up at the dome, then go up to the roof. The store would love to sell you something in between — but it won't insist."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 117,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.87344,
+   "centroidLongitude": 2.33219,
+   "city": "Paris",
+   "primaryCategory": "architecture",
+   "tags": [
+    "Notable Building",
+    "Commerce",
+    "Architecture",
+    "Beaux-Arts",
+    "Iconic Landmark"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "a4561c4b-07ec-538a-a129-4a03c569ee88",
+   "createdAt": "2026-07-08",
+   "title": "La Madeleine",
+   "shortDescription": "A church that looks exactly like a Greek temple — Napoleon first meant it as a monument to his army.",
+   "longDescription": "Ringed by 52 Corinthian columns and no visible cross, La Madeleine reads as a Roman temple because that is what Napoleon commissioned — a Temple of Glory to his Grande Armée. Only after his fall was it completed as a church. Inside, a single top-lit nave and Rude's sculpture make it one of the strangest and grandest Neoclassical churches in Paris.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-madeleine_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-madeleine_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-madeleine_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-madeleine_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-madeleine_5.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-madeleine_6.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "1da46d93-9a79-5796-8c78-4c6544a7dae0",
+     "order": 0,
+     "title": "La Madeleine",
+     "caption": "A church that looks exactly like a Greek temple — Napoleon first meant it as a monument to his army.",
+     "latitude": 48.87,
+     "longitude": 2.32463,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/la-madeleine.mp3",
+     "audioDurationSeconds": 131,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're in front of La Madeleine, and your first question is probably the right one: is this even a church? It doesn't look like one. No spire, no cross on the front, no visible dome — just a huge rectangular box wrapped on every side by fifty-two towering columns, looking for all the world like a Greek or Roman temple lifted out of the ancient world and set down in the middle of Paris. And yet it is a church, a working Catholic one. The disguise is the whole story.\n\nIt had a famously confused life. Building started, stopped, and started again over the better part of a century, and during that time nobody could agree what it should be. It began as a church. Then Napoleon halted the work and declared it would instead be a Temple of Glory dedicated to his armies — a monument to soldiers, not to God. Plans were even floated, at various points, to turn it into the city's first grand railway station, or a bank, or a library. Only after Napoleon's fall was it finally finished — as a church again, but keeping the pagan-temple shell it had been given along the way.\n\nSo what you're looking at is a building that spent decades unsure whether it honoured a god, an emperor's army, or a train timetable — and ended up a Christian church that looks defiantly like a temple to no god in particular.\n\nClimb the steps and look back the way you came. The Madeleine sits at the head of a straight line that runs across the river to the national parliament — two matching temple-fronts staring at each other across the city, a deliberate piece of grand planning. And inside, behind that severe exterior, it's surprisingly rich and dim and gold; the composer Frédéric Chopin's funeral was held here, with Mozart's Requiem filling the space.\n\nA temple on the outside, a church within, and very nearly a railway station. Only in Paris."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 131,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.87,
+   "centroidLongitude": 2.32463,
+   "city": "Paris",
+   "primaryCategory": "sacredSites",
+   "tags": [
+    "Religious Building",
+    "Faith",
+    "Neoclassical",
+    "History"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "26414503-e43b-53a9-98b8-89ee80def03c",
+   "createdAt": "2026-07-08",
+   "title": "Sacré-Cœur",
+   "shortDescription": "The white domed basilica crowning Montmartre — penance, pilgrimage and the best free view in Paris.",
+   "longDescription": "Rising on the highest point of the city, the Basilica of the Sacré-Cœur was begun in the 1870s as a national act of penance after the trauma of war and the Commune, and its travertine stone whitens with age and rain. Byzantine in style and deliberately unlike Gothic Paris, it draws pilgrims and crowds to its steps for the sweeping view south over the whole city.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sacre-coeur_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sacre-coeur_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sacre-coeur_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sacre-coeur_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sacre-coeur_5.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sacre-coeur_6.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sacre-coeur_7.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sacre-coeur_8.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "e6853e76-71f3-5004-a09a-50123f3dd02d",
+     "order": 0,
+     "title": "Sacré-Cœur",
+     "caption": "The white domed basilica crowning Montmartre — penance, pilgrimage and the best free view in Paris.",
+     "latitude": 48.8867,
+     "longitude": 2.3431,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sacre-coeur.mp3",
+     "audioDurationSeconds": 131,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're at the foot of Sacré-Cœur, the great white domed church crowning the hill of Montmartre, the highest natural point in Paris. It looks ancient and timeless up there against the sky — and it's actually one of the youngest major monuments in the city. Building only began in the eighteen seventies, and it wasn't finished until just before the First World War.\n\nAnd the reason it was built is heavier than its sugar-white domes suggest. In 1870 France suffered a catastrophic defeat in a war with Prussia, and in the bitter aftermath Paris tore itself apart in a brief, bloody civil uprising. Out of that double wound — a humiliating defeat abroad and Parisians turning on Parisians at home — came a movement to raise a great church as an act of national penance: an offering to ask forgiveness, to atone for what its backers saw as the nation's sins. Sacré-Cœur is, in its origins, a monument of guilt and mourning, built on the very hill where some of that internal conflict had begun.\n\nThat history still makes it quietly contested. To some it's a place of peace and pilgrimage; to others it has always been a victor's monument planted over a wound. Both readings live here together, and it's worth carrying both as you climb the steps.\n\nNow, the thing everyone notices and few can explain: why is it so impossibly white, when every other old stone building in Paris is grey? It's a trick of the stone. The basilica is built from a special pale stone that reacts with rainwater and releases a white, chalky substance as it weathers. So instead of darkening with grime over the years like ordinary stone, Sacré-Cœur effectively washes itself whiter every time it rains. The dirtier the air, the harder it scrubs.\n\nTurn around before you go in. From these steps all of Paris spreads out below you, flat and grey and endless, with the white church glowing at your back. The view is free, and it's one of the great ones."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 131,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.8867,
+   "centroidLongitude": 2.3431,
+   "city": "Paris",
+   "primaryCategory": "sacredSites",
+   "tags": [
+    "Religious Building",
+    "Faith",
+    "Viewpoint",
+    "Iconic Landmark"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "c9294bc2-2bb5-5a61-8e10-39835f8f8c03",
+   "createdAt": "2026-07-08",
+   "title": "Place du Tertre",
+   "shortDescription": "The little square at the top of Montmartre where painters still set up their easels among the crowds.",
+   "longDescription": "A few steps from Sacré-Cœur, the Place du Tertre is the last stronghold of the Montmartre of Picasso, Utrillo and Toulouse-Lautrec, when the hill was a cheap village of artists and windmills. Portraitists and landscape painters still work its cramped, café-ringed square — touristy now, but a direct thread back to the neighbourhood that helped invent modern art.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-du-tertre_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-du-tertre_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-du-tertre_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-du-tertre_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-du-tertre_5.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "96b8568a-cb40-5e1c-b477-2d99b6e424be",
+     "order": 0,
+     "title": "Place du Tertre",
+     "caption": "The little square at the top of Montmartre where painters still set up their easels among the crowds.",
+     "latitude": 48.88651,
+     "longitude": 2.3409,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/place-du-tertre.mp3",
+     "audioDurationSeconds": 123,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're in Place du Tertre, a small square at the top of Montmartre, and right now it's probably packed — easels everywhere, artists offering to paint your portrait or snip your silhouette, crowds threading between the café tables. It can feel like a tourist trap, and in a sense it is. But stand still a moment, because the ground under all of this is the real thing.\n\nA little over a century ago, Montmartre wasn't part of the busy city at all. It was a half-rural village on a hill, covered in windmills and vineyards, with cheap rooms and cheaper wine — which is exactly why poor young artists flocked to it. In the years around 1900, some of the most important painters of the modern age lived and worked within a few streets of where you're standing: names that now fill the world's great museums learned their craft up here, when Montmartre was scruffy and affordable and crackling with new ideas. Down the hill, in a ramshackle warren of artists' studios, Picasso painted the picture that cracked European art wide open.\n\nThen fame did what fame does. The artists became famous, the rents climbed, the village was swallowed by the city, and the real bohemia scattered. What's left in this square is, in a way, a performance of that vanished world — painters working for tourists where geniuses once worked for themselves.\n\nBut don't be too cynical about it. They really were here; this really was the place. And if you want proof that it was once countryside, walk a couple of streets over and find it: a small working vineyard still grows on the hillside, rows of vines in the middle of the city, the last green ghost of the rural village Montmartre used to be.\n\nSo enjoy the square for what it is, then go find the vineyard for what it was. Both are true at once."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 123,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.88651,
+   "centroidLongitude": 2.3409,
+   "city": "Paris",
+   "primaryCategory": "culturalHeritage",
+   "tags": [
+    "Public Square",
+    "Art",
+    "History",
+    "Hidden Gem"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "16f26669-acc3-5ab8-9732-1041bf61921f",
+   "createdAt": "2026-07-08",
+   "title": "Moulin Rouge",
+   "shortDescription": "The red windmill at the foot of Montmartre — birthplace of the cancan and the modern cabaret.",
+   "longDescription": "Opened in 1889, the Moulin Rouge and its red windmill made Montmartre the capital of Belle Époque nightlife, birthplace of the frenzied cancan and the subject of Toulouse-Lautrec's posters. It still runs its feathered, sequined revue every night beneath the sails, a survivor of the Pigalle of a century ago trading squarely on its own legend.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/moulin-rouge_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/moulin-rouge_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/moulin-rouge_3.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "286e4f66-7d63-51d5-8cbb-7646e3f73e88",
+     "order": 0,
+     "title": "Moulin Rouge",
+     "caption": "The red windmill at the foot of Montmartre — birthplace of the cancan and the modern cabaret.",
+     "latitude": 48.88414,
+     "longitude": 2.33224,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/moulin-rouge.mp3",
+     "audioDurationSeconds": 113,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're in front of the Moulin Rouge, and the first thing your eye goes to is the red windmill turning on the roof. Here's the thing: it's a fake — a decorative one, built purely for show. But it's a fake with a point, because it's remembering something real.\n\nMontmartre, this whole hill, was once covered in windmills — dozens of real working ones, grinding grain and pressing the grapes from the vineyards that used to blanket the slopes. As the city swallowed the village, the windmills came down one by one. So when this dance hall opened in 1889 — the same year the Eiffel Tower went up across the city — it put a bright red windmill on its roof as a wink to the rural Montmartre that was already disappearing. A monument to the working windmills, in the shape of a glamorous fake one.\n\nAnd inside, it invented a legend. The Moulin Rouge was the birthplace of the modern cancan — that explosive, high-kicking, swirling-skirts dance that scandalised and thrilled Paris in equal measure. It was loud, athletic, a little outrageous, and utterly new, and it turned this place into the most famous cabaret in the world. The painter Toulouse-Lautrec, himself a fixture here, put its dancers and its dazzle into posters that are now as famous as the club itself.\n\nMore than a century on, it's still running, still putting on the spectacle, though the streets around it have slid from bohemian to frankly seedy in places. Look past that to the windmill.\n\nBecause that's the quiet story here: the most famous nightspot on earth wears a counterfeit windmill to honour the real ones it helped replace. Glamour built right on top of a vanished rural world — which is Montmartre in a single rooftop."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 113,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.88414,
+   "centroidLongitude": 2.33224,
+   "city": "Paris",
+   "primaryCategory": "musicAndPerformance",
+   "tags": [
+    "Venue",
+    "Performance",
+    "History",
+    "After Dark"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "554213fa-0593-5e69-b2dd-e95d10940097",
+   "createdAt": "2026-07-08",
+   "title": "Place des Abbesses & the Wall of Love",
+   "shortDescription": "A leafy Montmartre square with a rare Art Nouveau Métro entrance and a wall that says 'I love you' 300 times.",
+   "longDescription": "Reached by one of the last original Guimard Art Nouveau Métro canopies, the Place des Abbesses is the heart of village Montmartre. In the little Square Jehan Rictus beside it, the Wall of Love — 'Le Mur des je t'aime' — spells out 'I love you' in over 300 languages across 40 square metres of dark enamel tiles, a quiet modern pilgrimage.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-des-abbesses_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-des-abbesses_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-des-abbesses_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-des-abbesses_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-des-abbesses_5.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "ea43c254-bc4d-57ef-93d8-6a441da51488",
+     "order": 0,
+     "title": "Place des Abbesses & the Wall of Love",
+     "caption": "A leafy Montmartre square with a rare Art Nouveau Métro entrance and a wall that says 'I love you' 300 times.",
+     "latitude": 48.88472,
+     "longitude": 2.33823,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/place-des-abbesses.mp3",
+     "audioDurationSeconds": 119,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're in Place des Abbesses, and if the rest of Montmartre felt like a crowded postcard, this is where it turns back into a village. Quieter streets, local cafés, a leafy square — this is the Montmartre that Parisians actually live in.\n\nStart with the entrance to the Métro station here, because it's a small treasure. It's one of the original Art Nouveau station entrances designed by Hector Guimard around 1900 — green cast iron curling like plant stems, with a delicate glass canopy overhead shaped like a dragonfly's wing. Most of these were torn out over the decades; only a couple of the fully glass-roofed ones survive in the whole city, and this is one of them. Parisians once mocked them as ugly; now they're protected treasures and a symbol of the era. Down below, by the way, is the deepest station in Paris — a long spiral down into the hill.\n\nNow find the small park just off the square, and in it, a wall: the Wall of Love. It's a panel of dark blue tiles covered in two words — \"I love you\" — handwritten more than three hundred times, in around two hundred and fifty different languages and dialects, from the everyday to the nearly extinct. A calligrapher and a musician collected the phrase from speakers all over the world and laid them out together on this single wall. Find your own language somewhere in the grid; almost everyone can.\n\nThere's something fitting about it sitting up here. Montmartre has spent more than a century being the city's romantic imagination — the hill of artists and lovers and late nights. A wall that says \"I love you\" in nearly every tongue on earth belongs exactly here.\n\nSo linger in this square a while. This is the village the tour groups miss, and it's the best of the hill."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 119,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.88472,
+   "centroidLongitude": 2.33823,
+   "city": "Paris",
+   "primaryCategory": "hiddenGems",
+   "tags": [
+    "Public Square",
+    "Hidden Gem",
+    "Public Art",
+    "Art"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "7138516c-1fdc-549e-a991-cacc60617242",
+   "createdAt": "2026-07-08",
+   "title": "Père Lachaise Cemetery",
+   "shortDescription": "The great garden cemetery of Paris — a hillside city of the dead holding Chopin, Wilde, Piaf and Jim Morrison.",
+   "longDescription": "Opened in 1804 on a wooded hill in the east, Père Lachaise was the first of the grand garden cemeteries and remains the most visited in the world: cobbled avenues of tombs under old trees, drawing pilgrims to Chopin, Oscar Wilde, Édith Piaf, Jim Morrison and the Communards' Wall. It is at once a necropolis, an open-air sculpture park and a strange, beautiful garden.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pere-lachaise_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pere-lachaise_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pere-lachaise_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pere-lachaise_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pere-lachaise_5.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pere-lachaise_6.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pere-lachaise_7.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "87e1a155-8dd4-5276-8284-ea73461abaae",
+     "order": 0,
+     "title": "Père Lachaise Cemetery",
+     "caption": "The great garden cemetery of Paris — a hillside city of the dead holding Chopin, Wilde, Piaf and Jim Morrison.",
+     "latitude": 48.86147,
+     "longitude": 2.39368,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pere-lachaise.mp3",
+     "audioDurationSeconds": 128,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're at the gates of Père Lachaise, the most famous cemetery in the world — and one of the strangest success stories in Paris. It's laid out like a small city: cobbled lanes, street signs, tombs like little houses lining the avenues, all of it spilling across a green hillside. People come from everywhere to wander it. But when it opened, in 1804, almost nobody wanted to be buried here.\n\nThe problem was location. Back then this was well outside the city, and Parisians thought it too remote, too unfashionable, to be caught dead in — literally. The plots weren't selling. So the authorities did something brilliant and slightly absurd: they ran a marketing campaign using celebrities. They dug up the remains of several beloved famous figures — a revered playwright, a famous poet, and a pair of legendary medieval lovers whose tragic romance everyone knew — and reburied them here with great ceremony. The message was clear: if it's good enough for them, it's good enough for you.\n\nIt worked spectacularly. Suddenly a plot in Père Lachaise was the fashionable place to spend eternity, and it has been ever since. Over the years it filled with the famous. The composer Frédéric Chopin lies here; so does the American rock singer Jim Morrison, whose grave still draws quiet crowds; the Irish writer Oscar Wilde, whose tomb was kissed so often, in lipstick, that it had to be shielded behind glass; and Édith Piaf, the beloved singer of the Paris streets. People arrive with maps to find them, the way you'd tour a city's landmarks.\n\nSo as you walk in, remember what you're seeing: not only a graveyard, but a place that became desirable through sheer clever salesmanship — a cemetery that sold itself with stars and never stopped. Take a lane at random and let yourself get a little lost. That's the only way to do it, and the quiet up here, above the city, is its own reward."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 128,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.86147,
+   "centroidLongitude": 2.39368,
+   "city": "Paris",
+   "primaryCategory": "history",
+   "tags": [
+    "Park",
+    "History",
+    "Remembrance",
+    "Green Escape"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "8e862c19-2481-5187-8e77-2dbbf7cbf18a",
+   "createdAt": "2026-07-08",
+   "title": "Place de la Bastille",
+   "shortDescription": "The square where the Revolution began — the prison is gone, its outline traced in the paving.",
+   "longDescription": "Nothing remains of the fortress-prison stormed on 14 July 1789 except its ghost — the Bastille was demolished within a year and its footprint is marked in the paving. At the centre rises the July Column, commemorating a later revolution, that of 1830. Still the natural gathering point for protest and celebration, the square is where Paris comes to make history out loud.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-de-la-bastille_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-de-la-bastille_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-de-la-bastille_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-de-la-bastille_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-de-la-bastille_5.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "2edd0f13-0767-59f4-84d1-9e46963c5aea",
+     "order": 0,
+     "title": "Place de la Bastille",
+     "caption": "The square where the Revolution began — the prison is gone, its outline traced in the paving.",
+     "latitude": 48.8532,
+     "longitude": 2.36921,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/place-de-la-bastille.mp3",
+     "audioDurationSeconds": 137,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're in Place de la Bastille, standing on the most famous spot in the history of the French Revolution — and there is almost nothing here to see. That's the point, and it's worth understanding.\n\nOn the fourteenth of July, 1789, a Paris crowd stormed the Bastille, a great medieval fortress-prison that stood right here. It was the spark of the Revolution, the day France still celebrates as its national holiday. You'd expect the building to be preserved, revered, queued around the block. But it isn't here at all. Within months of being stormed, the Bastille was completely demolished — pulled down stone by stone by the revolutionaries themselves, who wanted every trace of the hated royal prison gone. The stones were carted off; some were even carved into little souvenir models of the fortress and sold. The most famous building of the Revolution was erased by the Revolution.\n\nAll that marks where it stood is a line of paler stones set into the pavement, tracing the old foundations. Look down, and you can walk the outline of the vanished fortress. The birthplace of modern France is, fittingly, an absence — a shape in the ground where a building used to be.\n\nNow look up at the tall bronze column in the centre of the square, with the gilded winged figure leaping from the top. Here's the twist most people get wrong: that column has nothing to do with 1789. It commemorates a completely different revolution — an uprising in 1830, decades later, that toppled another king. So the monument that does stand in Place de la Bastille honours a different revolution entirely, while the one everyone comes here for left no monument at all.\n\nIt's a strange, very French lesson in memory. Stand in the middle, find the outline in the stones, and picture the fortress that isn't there."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 137,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.8532,
+   "centroidLongitude": 2.36921,
+   "city": "Paris",
+   "primaryCategory": "history",
+   "tags": [
+    "Public Square",
+    "History",
+    "Power",
+    "Remembrance"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "a870c3f2-ff99-51f2-af22-0997a048bb4a",
+   "createdAt": "2026-07-08",
+   "title": "Canal Saint-Martin",
+   "shortDescription": "A 19th-century working canal turned into the city's most relaxed waterside — iron footbridges, locks and plane trees.",
+   "longDescription": "Cut in the 1820s to bring clean water and freight into Paris, the Canal Saint-Martin lost its industry and gained a second life: tree-shaded quays, arched iron footbridges and a chain of locks that still lift the barges. Long stretches run underground; where it surfaces it has become the unhurried, faintly bohemian heart of the eastern city, best enjoyed sitting on the bank.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/canal-saint-martin_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/canal-saint-martin_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/canal-saint-martin_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/canal-saint-martin_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/canal-saint-martin_5.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/canal-saint-martin_6.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/canal-saint-martin_7.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "98df6ce5-d510-5536-87f3-5ce7c6bc4c28",
+     "order": 0,
+     "title": "Canal Saint-Martin",
+     "caption": "A 19th-century working canal turned into the city's most relaxed waterside — iron footbridges, locks and plane trees.",
+     "latitude": 48.8713,
+     "longitude": 2.3659,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/canal-saint-martin.mp3",
+     "audioDurationSeconds": 118,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're beside the Canal Saint-Martin, one of the most relaxed and fashionable corners of Paris today — young crowds picnicking on the stone banks, arched iron footbridges crossing the water, leafy trees leaning over the locks. It feels effortlessly cool. But it began as something completely unglamorous: a piece of plumbing.\n\nThe canal was dug in the early eighteen hundreds, under Napoleon, to solve a basic and urgent problem — Paris didn't have enough clean water, and disease spread easily through the crowded city. This waterway was built to carry fresh water in, and later to move goods: grain, building stone and timber, hauled through on barges. It was infrastructure, plain and useful, lined with warehouses and working docks. Not romantic in the slightest.\n\nIt nearly didn't survive. By the middle of the twentieth century the canal was seen as obsolete and in the way, and there were serious plans to pave the whole thing over and run a road along the top. Parts of it were in fact covered. It came surprisingly close to vanishing under traffic altogether — and then the plans stalled, the canal hung on, and slowly the neighbourhood around it became one of the most sought-after in the city.\n\nSo watch the water for a few minutes, and you might catch the best free show here: a boat passing through one of the locks. The gates close, the water level slowly rises or drops several metres to lift or lower the boat to the next stretch, and then the far gates swing open and it glides on. It's a two-hundred-year-old machine, still working exactly as it was designed to.\n\nThat's the charm of the place, once you know it: the coolest spot in Paris is a humble water pipe that was almost buried under a road, saved by delay and good luck, now living its best life. Find a spot on the bank and join in."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 118,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.8713,
+   "centroidLongitude": 2.3659,
+   "city": "Paris",
+   "primaryCategory": "hiddenGems",
+   "tags": [
+    "Waterfront",
+    "Hidden Gem",
+    "History",
+    "Green Escape"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "22f6500a-08a3-5574-8b09-71a7b3844be8",
+   "createdAt": "2026-07-08",
+   "title": "Catacombs of Paris",
+   "shortDescription": "The underground ossuary where the bones of six million Parisians are stacked in tunnels beneath the streets.",
+   "longDescription": "When the city's overflowing cemeteries became a health crisis in the 18th century, Paris moved its dead into the disused limestone quarries beneath it, arranging the remains of some six million people into walls of skulls and long bones along the tunnels. A small, sombre stretch is open to visitors — a quiet, unforgettable descent into the literal foundations of the city.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/catacombs_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/catacombs_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/catacombs_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/catacombs_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/catacombs_5.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "c95a46b5-45a7-5eba-8551-e67a2ad1cadf",
+     "order": 0,
+     "title": "Catacombs of Paris",
+     "caption": "The underground ossuary where the bones of six million Parisians are stacked in tunnels beneath the streets.",
+     "latitude": 48.83386,
+     "longitude": 2.33241,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/catacombs.mp3",
+     "audioDurationSeconds": 128,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're at the entrance to the Catacombs, and what waits below is one of the most extraordinary and sobering places in Paris: the carefully arranged bones of some six million people, stretching through tunnels deep beneath the streets. To understand how they came to be here, you have to know two things about the ground under this city.\n\nFirst, Paris is partly built from itself. For centuries the limestone that makes up so many of the city's buildings was quarried from directly beneath it, leaving a vast honeycomb of tunnels and empty galleries underground. The stone went up to make the city; the holes stayed below.\n\nSecond, by the late seventeen hundreds the city's old cemeteries were catastrophically full — overcrowded for generations, to the point that they had become a genuine danger to public health. The authorities needed somewhere to move the dead of centuries past. And there, conveniently, were the empty quarries. So over many years, working at night, the bones of millions were lifted from the overflowing graveyards and carried down into the old tunnels.\n\nWhat makes it unforgettable is what was done with them. The bones weren't simply piled in heaps. They were stacked and arranged into neat, deliberate walls — long rows of skulls and limb bones set in patterns, lining the passages, turning a mass grave into something solemn and almost architectural. Above the doorway into the main ossuary, a carved inscription warns those who enter that this is the empire of the dead.\n\nIt's quiet down there, and cool, and it asks something of you. This isn't really a spectacle; it's a confrontation — the whole population of a city, anonymous and equal at last, quietly holding up the streets you walked in on. Go down respectfully. Six million people are a great many to stand among."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 128,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.83386,
+   "centroidLongitude": 2.33241,
+   "city": "Paris",
+   "primaryCategory": "history",
+   "tags": [
+    "Monument",
+    "History",
+    "Remembrance",
+    "After Dark"
+   ],
+   "priceUSD": 0
+  },
+  {
+   "id": "389a13e5-48b2-5027-874e-772e193dd158",
+   "createdAt": "2026-07-08",
+   "title": "Tour Montparnasse",
+   "shortDescription": "The lone 1970s skyscraper Parisians love to hate — and the source of the best skyline view, because you can't see it from up there.",
+   "longDescription": "The single black 210-metre tower that broke the Paris skyline in 1973 was so unpopular that the city banned high-rises in the centre soon after. Its saving grace is the observation deck: the finest panorama in Paris, precisely because it is the one viewpoint from which the tower itself is invisible, leaving the Eiffel Tower and the whole low city spread out below.",
+   "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+   "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tour-montparnasse_hero.webp",
+   "additionalImageURLs": [
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tour-montparnasse_2.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tour-montparnasse_3.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tour-montparnasse_4.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tour-montparnasse_5.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tour-montparnasse_6.webp",
+    "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tour-montparnasse_7.webp"
+   ],
+   "kind": "single",
+   "stops": [
+    {
+     "id": "80d72fbc-7c79-53cc-9a49-13c99b5c8c48",
+     "order": 0,
+     "title": "Tour Montparnasse",
+     "caption": "The lone 1970s skyscraper Parisians love to hate — and the source of the best skyline view, because you can't see it from up there.",
+     "latitude": 48.84213,
+     "longitude": 2.3218,
+     "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tour-montparnasse.mp3",
+     "audioDurationSeconds": 118,
+     "triggerMode": "geofenced",
+     "triggerRadiusMeters": 30,
+     "imageURL": null,
+     "transcriptText": "You're looking up at the Tour Montparnasse — a single, stark, dark skyscraper rising more than two hundred metres straight out of a city of low, pale, uniform rooftops. It looks completely out of place, and that is the most important thing about it, because Parisians have never quite forgiven it.\n\nWhen it went up in the early nineteen seventies, it was meant to signal a modern, vertical future for the city. Instead, the reaction was horror. The lone black tower looming over the tender old skyline was so widely disliked that, just a couple of years after it was finished, the city effectively banned any more skyscrapers in the historic centre. So the Tour Montparnasse stands almost alone — not because no one else wanted to build tall, but because this one building made the very idea unthinkable. It's a monument to its own mistake.\n\nBut here's the joke, and it's a good one. Go up to the observation deck at the top, and you get what may be the finest panoramic view in all of Paris — the whole city laid out beneath you, the Eiffel Tower standing proud in the middle distance, the river curling through it all. And the reason it's the best view in the city is gloriously simple: it's the one high place in Paris from which you cannot see the Tour Montparnasse — because you're standing on it.\n\nThat's the line every Parisian will tell you with a perfectly straight face: the best view in Paris is from the top of the Tour Montparnasse, because it's the only spot in the city where the Tour Montparnasse doesn't spoil it.\n\nSo let the unloved building do you a favour. Ride to the top, turn toward the Eiffel Tower, and enjoy the one view of Paris that the tower beneath your feet can't ruin."
+    }
+   ],
+   "introAudioURL": null,
+   "totalDurationSeconds": 118,
+   "walkingDistanceMeters": null,
+   "centroidLatitude": 48.84213,
+   "centroidLongitude": 2.3218,
+   "city": "Paris",
+   "primaryCategory": "architecture",
+   "tags": [
+    "Tower",
+    "Viewpoint",
+    "Modernist",
+    "Architecture"
+   ],
+   "priceUSD": 0
   }
  ]
 }
