@@ -207,6 +207,32 @@ _(`place-jacques-cartier-city-hall_2.webp` = Nelson's Column at sunset, Wilfredo
 _(`bonsecours-market-chapel_2.webp` = silver dome close, Daderot, **Public Domain** — no credit.)_
 _(Ship-safe stock, NO credit: Notre-Dame Basilica hero+4, Old Port hero+4.)_
 
+## Montreal — batch 2 (`06`–`09`, 5 credit-required images)
+
+Same maker (**Atlas Studio YUL** 🇨🇦). Habitat 67 = ship-safe Unsplash (NO credit). The three re-sourced
+Wikimedia subjects below carry CC credit; two picks within McGill are CC0 (noted, no credit).
+
+### Château Ramezay (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `chateau-ramezay_hero.webp` | fieldstone facade, Rue Notre-Dame | Jean Gagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Chateau_Ramezay_02.jpg |
+| `chateau-ramezay_2.webp` | house + Governor's Garden | Jean Gagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Chateau_Ramezay_04.jpg |
+
+### McGill / Golden Square Mile (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `mcgill-golden-square-mile_2.webp` | Roddick Gates | Jeangagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Portail_Roddick_02.jpg |
+
+_(`mcgill-golden-square-mile_hero.webp` = Roddick Gates, D. Benjamin Miller, **CC0** — no credit. `mcgill-golden-square-mile_3.webp` = Arts Building tower, D. Benjamin Miller, **CC0** — no credit.)_
+
+### Christ Church Cathedral (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `christ-church-cathedral_hero.webp` | Gothic church + glass tower | Diego Delso | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Catedral_iglesia_de_Cristo,_Montreal,_Canad%C3%A1,_2017-08-11,_DD_42.jpg |
+| `christ-church-cathedral_2.webp` | spire / facade | ActuaLitté | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Christ_Church_Cathedral_(37829695634).jpg |
+
+_(Ship-safe stock, NO credit: Habitat 67 hero + `_2`–`_6` (all Unsplash).)_
+
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
 reuse single-stop stop images. Only two carry a credit, both already listed above:
@@ -228,7 +254,7 @@ for the exact per-image list.
 | **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
 | **Los Angeles** | *this file* (below) | 17 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7; Egyptian gallery ×3 + Farmers Market/Grove ×2 b8) |
 | **Amsterdam** | *this file* (above) | 22 — Oude Kerk ×3 + Begijnhof ×4 + Anne Frank House hero + Westerkerk interior ×2 + Our Lord in the Attic ×2 + De Waag `_3` + Homomonument ×2 + Noordermarkt/Brouwersgracht ×2 + Rembrandt House hero + Portuguese Synagogue hero + Names Monument ×2 (Wikimedia CC). Hollandsche Schouwburg ×2 = Public Domain (no credit). Nieuwe Kerk + Leidseplein hero = owner-supplied (no credit). All other Amsterdam images = ship-safe stock / CC0, no credit. |
-| **Montreal** | *this file* (above) | 10 — Place Jacques-Cartier: Nelson's Column hero + City Hall `_3`/`_4` (Nelson `_2` = CC0, no credit); Pointe-à-Callière ×4 (Éperon hero/`_2`, buried-river `_3`, foundations `_4`); Bonsecours: market hero + chapel `_3`/`_4` (market `_2` = PD, no credit). Notre-Dame + Old Port = ship-safe stock, no credit. |
+| **Montreal** | *this file* (above) | 15 — **batch 1 (10):** Place Jacques-Cartier: Nelson's Column hero + City Hall `_3`/`_4` (Nelson `_2` = CC0, no credit); Pointe-à-Callière ×4 (Éperon hero/`_2`, buried-river `_3`, foundations `_4`); Bonsecours: market hero + chapel `_3`/`_4` (market `_2` = PD, no credit). Notre-Dame + Old Port = ship-safe stock. **batch 2 (5):** Château Ramezay hero+`_2` (Jean Gagnon CC BY-SA 3.0); McGill `_2` (Jeangagnon CC BY-SA 3.0; hero + `_3` = CC0, no credit); Christ Church hero (Diego Delso CC BY-SA 4.0) + `_2` (ActuaLitté CC BY-SA 2.0). Habitat 67 = ship-safe stock, no credit. |
 | **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
 | **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
 | **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
