@@ -29703,6 +29703,140 @@
         "Iconic Landmark"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "e1c6669c-67b2-5c1c-ac8a-76db540d86bd",
+      "createdAt": "2026-07-09",
+      "title": "The Left Bank",
+      "shortDescription": "A downhill walk through the Latin Quarter — Paris's quarter of the mind — from the Panthéon past Shakespeare and Company and the Luxembourg gardens to the river and the Musée d'Orsay.",
+      "longDescription": "The Left Bank is where Paris goes to think: the Latin Quarter, named for the language its medieval students spoke, still wrapped around the Sorbonne. This ~2 km, mostly-downhill walk runs from the domed Panthéon — the Republic's shrine to its great minds — down through the old sloping streets to the English-language bookshop Shakespeare and Company, across to the Luxembourg gardens and the vast church of Saint-Sulpice, into the café-and-jazz heart of Saint-Germain-des-Prés, and finally to the river and the Impressionist galleries of the Musée d'Orsay. Philosophy, books, gardens and painting, in one line to the Seine.",
+      "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop0.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop1.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saint-germain-des-pres_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop6.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "f204c8bb-e832-5ace-aab6-0b65b7532a48",
+          "order": 0,
+          "title": "The Left Bank — Introduction",
+          "caption": "For roughly eight hundred years, this corner of Paris has been where the city goes to think.",
+          "latitude": 48.8466,
+          "longitude": 2.3459,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-leftbank_stop0.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop0.webp",
+          "transcriptText": "For roughly eight hundred years, this corner of Paris has been where the city goes to think.\n\nYou're starting on the Left Bank — the south side of the river — in the part of town the maps call the fifth and sixth arrondissements and everyone else calls the Latin Quarter. The name isn't decoration. For centuries the students here studied, argued, and swore in Latin, the shared language of the medieval university, and the nickname stuck long after the language faded from daily use. The university in question is the Sorbonne, which has been teaching on these slopes since the Middle Ages, and the streets around it have been thick with students, booksellers and arguments ever since.\n\nSo this walk has a single subject: the life of the mind. Where the rest of Paris was built around power, money, or worship, this quarter grew up around ideas — around reading, teaching, writing, and the long habit of disagreeing in public.\n\nThe good news for your legs is that it's downhill. We begin at the highest point, the Panthéon, on the hill named for Sainte-Geneviève, and the route runs gently down from there — through the old university streets, past a famous bookshop, into a garden a queen built to cure her homesickness, by way of two old churches, and finally to the river, where the walk ends inside a museum that used to be a railway station. A little over two kilometres, easy going, mostly down.\n\nOne thread to carry the whole way: almost everything we'll stop at was built for one purpose and ended up serving another. The quarter has a habit of changing its mind — which, for a place dedicated to thinking, feels about right.\n\n*[beat]*\n\nWhen you're ready, climb to the top of the hill and stand in front of the Panthéon — the enormous domed building that looks like it can't decide whether it's a church or a monument. As it happens, that's exactly the question, and it's where we start."
+        },
+        {
+          "id": "d0228ac2-6833-5f34-b07f-c0f62340346c",
+          "order": 1,
+          "title": "Panthéon",
+          "caption": "You're at the top of the hill now, in front of the Panthéon — that vast, grey, domed building with a long row of columns across the front, looking for all the w",
+          "latitude": 48.8462,
+          "longitude": 2.3464,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-leftbank_stop1.mp3",
+          "audioDurationSeconds": 171,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop1.webp",
+          "transcriptText": "You're at the top of the hill now, in front of the Panthéon — that vast, grey, domed building with a long row of columns across the front, looking for all the world like a Roman temple that wandered into Paris and sat down.\n\nStand back far enough to take in the whole front and read the inscription across the top: it says, in French, that the grateful nation honours its great men. Hold on to that word — honours — because this building has spent its whole life arguing about who, exactly, deserves it.\n\nIt started as a church. A king, Louis the Fifteenth, fell ill, swore that if he recovered he'd build a magnificent church to Sainte-Geneviève, the patron saint of Paris — and he recovered, and he built it. But the work took decades, and by the time it was done the Revolution had arrived, and a building meant for a saint suddenly looked like the perfect home for the nation's heroes instead. So they turned it into a temple to the great dead. Then a later government turned it back into a church. Then back to a temple. Back and forth it went, something like five times, depending on who held power and what they believed.\n\nWhat finally settled the argument is downstairs. Below your feet, in the crypt, lie the people France chose to keep: the writers Voltaire and Rousseau and Victor Hugo, the novelist Émile Zola, and — placed here in 1995, the first woman admitted for her own achievements rather than her husband's — the scientist Marie Curie.\n\nAnd then there's the pendulum. Hanging from the centre of the dome is a long wire with a heavy weight swinging slowly at the end. In 1851 a physicist named Foucault hung one here to prove something nobody could otherwise see: that the Earth turns. The pendulum keeps swinging in a single fixed direction while the floor — and the building, and the city — rotate slowly beneath it. People came to watch the planet move.\n\n*[beat]*\n\nWhich is the whole quarter in one room. A building that couldn't decide whether to worship God or genius, that finally chose its dead by merit, with a piece of pure human reasoning swinging where the altar would have been.\n\nWhen you've looked your fill, head back out and down the hill, north toward the river, into the tangle of old streets below. We're walking into the Latin Quarter itself — and a famous bookshop — next."
+        },
+        {
+          "id": "3033021e-8b2a-5628-aed3-1702fbd95023",
+          "order": 2,
+          "title": "The Latin Quarter & Shakespeare and Company",
+          "caption": "You've come down off the hill into a maze of narrow, sloping streets — some of the oldest in Paris, laid out long before anyone thought to straighten them.",
+          "latitude": 48.8526,
+          "longitude": 2.3471,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-leftbank_stop2.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop2.webp",
+          "transcriptText": "You've come down off the hill into a maze of narrow, sloping streets — some of the oldest in Paris, laid out long before anyone thought to straighten them. You're near the river now, and if you've stopped where I think you have, you're in front of a green shopfront with books stacked in the windows and, more often than not, a small crowd gathered at the door. The sign reads Shakespeare and Company.\n\nFirst, the streets themselves. This is the heart of the Latin Quarter, and the name is a fossil. For centuries the students of the university spoke and studied in Latin — the common tongue that let a scholar from anywhere in Europe argue with a scholar from anywhere else — and the quarter took its name from the language ringing through it. The students are still here; the Latin is long gone. The place is named for something nobody says anymore.\n\nWhich brings us to the bookshop, because it works exactly the same way. This shop — English-language, famous, photographed half to death — was opened in 1951 by an American named George Whitman. But the name over the door isn't original to it. He borrowed it, in 1964, from another shop entirely.\n\nThe first Shakespeare and Company belonged to a woman named Sylvia Beach, who ran it a few streets from here in the years between the wars. It was the clubhouse of the expatriate writers — and in 1922, when no respectable publisher would touch it, Beach herself published James Joyce's novel Ulysses. Her shop closed during the Second World War and never reopened.\n\nSo the shop in front of you is, in a sense, a tribute act: a homage, under a borrowed name, to a place that no longer exists.\n\n*[beat]*\n\nAnd that's the quarter's whole trick. It honours the past by impersonating it — a neighbourhood named for a dead language, anchored by a bookshop named for a vanished shop, both of them thoroughly alive on the strength of the thing they're remembering.\n\nWhen you're ready, walk west a few minutes to the tall iron gates of a garden — the Jardin du Luxembourg. A homesick queen built it, and we'll go in next."
+        },
+        {
+          "id": "55c71ed1-b291-509e-98f4-dccd01392e99",
+          "order": 3,
+          "title": "Jardin du Luxembourg",
+          "caption": "Through the gates and onto the gravel, and the whole garden opens out in front of you — wide paths, clipped trees, a big octagonal pond, and beyond it a grand pale palace.",
+          "latitude": 48.8462,
+          "longitude": 2.3372,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-leftbank_stop3.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop3.webp",
+          "transcriptText": "Through the gates and onto the gravel, and the whole garden opens out in front of you — wide paths, clipped trees, a big octagonal pond, and beyond it a grand pale palace. Before anything else, find a chair. There are hundreds of them, dark green metal, scattered loose across the grounds, and the rule is wonderfully simple: drag one wherever you like and sit. We'll talk for a moment.\n\nThe palace at the far end was not built for the public. It went up in the early 1600s for Marie de Médicis — an Italian, from the great Florentine family, who had married a French king, been widowed, and found herself stranded in a grey northern city she never warmed to. So she built herself a piece of home: a palace modelled on the one she'd grown up around in Florence, heavy Tuscan stonework and all, an attempt to import a little Italy to the banks of the Seine. Today it houses the French Senate, which makes the garden you're sitting in, technically, the Senate's front lawn.\n\nOff to one side, tucked under the trees, she added the thing she missed most — a long, shaded, dripping grotto of a fountain, Italian to its bones. It's called the Medici Fountain, it's the most un-Parisian corner of Paris, and it's the corner that feels most like the woman who ordered it.\n\n*[beat]*\n\nHere's the turn, though. A homesick queen's private consolation has become, four centuries on, the most generous public room in the city — a place where students cram for exams, retirees doze in the sun, children sail toy boats on the pond, and you arrange your own chair exactly where the light is best. The mind needs somewhere to rest as much as somewhere to work, and the quarter put one right in its middle.\n\nWhen you've had your sit, leave by the western side and walk a couple of minutes to a very large church with two mismatched towers — Saint-Sulpice. There's a machine hidden in its floor."
+        },
+        {
+          "id": "c707dedc-403b-5351-9833-baa73c5af5a4",
+          "order": 4,
+          "title": "Saint-Sulpice",
+          "caption": "Into the square, past the big lion-footed fountain, and up to the front of the church — Saint-Sulpice.",
+          "latitude": 48.8511,
+          "longitude": 2.3349,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-leftbank_stop4.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop4.webp",
+          "transcriptText": "Into the square, past the big lion-footed fountain, and up to the front of the church — Saint-Sulpice. Look up at the two towers and you'll see they don't match: one is finished and ornate, the other plainer and slightly shorter, as if the builders ran out of money or patience. They more or less did. Step inside; it's vast, cool and usually quiet.\n\nNow look down at the floor. Running across the church near the front, on your right, is a thin brass strip set into the stone, and at one end of it stands a white marble obelisk. This is a gnomon — an astronomical instrument hidden inside a church. There's a small opening high in a window opposite; at midday, sunlight falls through it and lands somewhere along that brass line, and exactly where it lands depends on the time of year. Built in the 1700s, its real job was severely practical: to fix the date of the spring equinox, and from there the date of Easter, which drifts around the calendar every year. A sun-machine, installed to keep the church's own calendar honest.\n\nYou may have heard a different story. A wildly successful novel, a couple of decades ago — you'll know the one — recast this brass line as an ancient pagan meridian thick with secret meaning. It made such an impression that the parish eventually put up a notice, in plain language, explaining that the line is a piece of eighteenth-century astronomy and nothing occult whatsoever. A church, defending science against a thriller.\n\nBefore you go, step into the first chapel on your right. The murals there are by Eugène Delacroix, and they were among the last things he ever painted — fierce, dark, restless work from the very end of a great career.\n\n*[beat]*\n\nIt's a fitting stop for this quarter: a building that set a scientific experiment into its floor, kept faith and reason under one roof, and then had to stand up for the reasoning when a good story tried to carry it off.\n\nFrom the front of the church, head north a few minutes toward the oldest church in Paris — and the cafés that ended up more famous than it. Saint-Germain-des-Prés is next."
+        },
+        {
+          "id": "e014e5bf-a111-5d74-b334-28b70a5feb1a",
+          "order": 5,
+          "title": "Saint-Germain-des-Prés",
+          "caption": "You're in a small, busy square now, with a stout, square stone tower rising over it — older and plainer than almost anything around it.",
+          "latitude": 48.854,
+          "longitude": 2.3338,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-leftbank_stop5.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saint-germain-des-pres_hero.webp",
+          "transcriptText": "You're in a small, busy square now, with a stout, square stone tower rising over it — older and plainer than almost anything around it. That's the church of Saint-Germain-des-Prés, and it is the oldest church in Paris. There has been an abbey on this spot since the year 558; the tower you're looking at went up around the year 1000, which makes it one of the oldest standing things in the whole city. For most of its life this was a powerful monastery out beyond the old city walls — the name means Saint Germain of the Fields.\n\nNow turn to the two corners across the way, because this is where the story gets quietly funny. On one side sits the Café de Flore; a few steps along, Les Deux Magots. Two perfectly ordinary-looking cafés — and in the middle of the twentieth century they became the most famous thinking-spots in Europe.\n\nThis was the headquarters of the existentialists. The philosopher Jean-Paul Sartre and the writer Simone de Beauvoir more or less worked here, at the tables, for hours, day after day, and Albert Camus and half of literary Paris drifted through. There's a practical reason alongside the romantic one: the cafés were heated and their rooms were not, so the warm café became the office, the salon and the stage all at once.\n\n*[beat]*\n\nWhich is the through-line of this whole walk, sitting on a single corner. A thousand-year-old church, founded by monks who came here to think and pray in silence, quietly out-famoused by two coffee houses where a later set of thinkers did much the same job out loud. Same corner, same impulse, a millennium apart.\n\nWe're nearly at the river now. Walk north to the Seine, and a short way along the bank you'll find a huge old railway station with an enormous glass clock set into its wall. That's the Musée d'Orsay, and it's where we finish."
+        },
+        {
+          "id": "f8042ac6-ba6f-58ac-8afb-f5cc604a4733",
+          "order": 6,
+          "title": "Musée d'Orsay",
+          "caption": "Last stop.",
+          "latitude": 48.86,
+          "longitude": 2.3266,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-leftbank_stop6.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-leftbank_stop6.webp",
+          "transcriptText": "Last stop. Stand in the great main hall and look up: a long, vaulted ceiling of glass and pale iron arching the length of the building, daylight pouring down through it. It doesn't look like a museum, and that's because it wasn't built as one. This was a railway station.\n\nIt's called the Gare d'Orsay, and it was put up in a hurry for the World's Fair of 1900 — a grand, modern terminus right in the centre of the city, all that glass and iron showing off how confident Paris felt about the new century. The trouble was that trains kept getting longer, and by the late 1930s the platforms here were simply too short for them. The station slid into odd, part-time uses, fell half-derelict, and came close to being torn down. Then, in 1986, it reopened as something else entirely: a museum.\n\nAnd look at what they chose to fill it with. The collection here covers roughly the half-century before the First World War — the Impressionists and the painters who came just after: Monet, Renoir, Cézanne, Van Gogh and their whole restless generation. Which means the art on these walls was made at almost exactly the moment this building was going up. The station and the paintings are the same age.\n\nNow find the great clock. High in the wall at the upper end of the hall is an enormous glass clock face, and you can stand right behind it and look out through the numbers at the city beyond — Paris framed inside a timepiece, which is about as on-the-nose as this place is willing to get.\n\n*[beat]*\n\nAnd it's the right place to end. We started at the top of the hill, in a building that couldn't decide what it worshipped; we've come down through a quarter that names itself after a dead language, keeps a borrowed bookshop, and argues with novelists about its own floor. We finish inside a railway station that was nearly demolished and became, instead, a kind of mirror — the era looking back at itself, hung on the walls of its own train shed.\n\nThat's the Left Bank: the part of Paris that goes there to think, and that can't quite stop thinking about itself. Stay a while behind the clock. The view doesn't get old."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 970,
+      "walkingDistanceMeters": 2200,
+      "centroidLatitude": 48.85096,
+      "centroidLongitude": 2.33884,
+      "city": "Paris",
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Literature",
+        "Art",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
     }
   ]
 }
