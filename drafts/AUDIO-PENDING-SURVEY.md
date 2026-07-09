@@ -30,9 +30,8 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 | 🇪🇸 Madrid | 35 | 31 single + 4 walks (5/6/5/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (MAD) |
 | 🇳🇱 Amsterdam | 38 | 33 single + 5 walks (5/6/5/5/5 stops) | 64 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio AMS |
 | 🇨🇦 Toronto (remainder) | 32 | 28 single + 4 walks (5 stops each) | 52 | `claude/dreamy-wozniak-nM6a4` | Atlas Studio YYZ (exists) |
-| 🇫🇷 Paris — walks | 1 | 1 walk (Left Bank, intro + 6 stops) | 7 | `claude/dreamy-wozniak-nM6a4` | Atlas Studio PAR (exists) |
 | 🇨🇦 Montreal | 5 | 5 single | 5 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio YUL |
-| **TOTAL PENDING** | **150** | | **239** | | |
+| **TOTAL PENDING** | **149** | | **232** | | |
 
 _(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **went LIVE 2026-07-08, PR #378** — removed from pending. It was the last staged London tour.)_
 _(⚠️ Paris: the **45 single-stop tours are LIVE** (PR #374), plus 4 walks LIVE — **Le Marais (#379)**, **Montmartre (#380)**, **The Triumphal Way (#381)**, **Paris Islands (#382)**. The **1 remaining Paris walk (The Left Bank) is still PENDING** (staged on `dreamy-wozniak-nM6a4`). Don't assume "Paris = done".)_
@@ -58,11 +57,11 @@ _(⚠️ Paris: the **45 single-stop tours are LIVE** (PR #374), plus 4 walks LI
 - Tracking detail in `drafts/toronto-AUDIO-PROGRESS.md`. Wires under existing **Atlas Studio YYZ**.
 
 **🇫🇷 Paris — 5 multi-stop walks** (on `dreamy-wozniak-nM6a4`; wire under the existing **Atlas Studio PAR** maker):
-- `paris-leftbank` — "The Left Bank" (Latin Quarter) — intro + 6
 - ~~`paris-marais` — "Le Marais"~~ — **LIVE 2026-07-08 (PR #379)**, 6 tracks
 - ~~`paris-montmartre` — "Montmartre"~~ — **LIVE 2026-07-08 (PR #380)**, 6 tracks
 - ~~`paris-triumphalway` — "The Triumphal Way"~~ — **LIVE 2026-07-08 (PR #381)**, 7 tracks
 - ~~`paris-islands` — "Paris Islands"~~ — **LIVE 2026-07-09 (PR #382)**, 6 tracks
+- ~~`paris-leftbank` — "The Left Bank"~~ — **LIVE 2026-07-09 (PR #383)**, 7 tracks — **all 5 Paris walks now live**
 - Reuse the 45 live single-stop Paris heroes where stops overlap; a few fresh walk images already staged (Îles hero, Marais Musée Picasso — CC credits in `IMAGE-CREDITS-paris-batch1.txt`). READMEs say "create the PAR maker" — **stale**: PAR now exists, so walks wire straight in.
 
 **🇨🇦 Montreal** — `drafts/montreal-batch1` (5 single-stop): Notre-Dame/Place d'Armes, Place Jacques-Cartier/City Hall, Old Port, Pointe-à-Callière, Bonsecours Market+chapel.
@@ -74,7 +73,7 @@ _(🇬🇧 London — Greenwich walk "The Measure of the World" **went LIVE 2026
 
 ## LIVE — done, for reference (do not re-stage)
 
-As of 2026-07-08, `origin/main` = **11 makers / 615 tours / 719 stops**. Live cities:
+As of 2026-07-08, `origin/main` = **11 makers / 616 tours / 726 stops**. Live cities:
 
 | City | Live tours | Maker | Notes |
 |------|-----------:|-------|-------|
@@ -84,7 +83,7 @@ As of 2026-07-08, `origin/main` = **11 makers / 615 tours / 719 stops**. Live ci
 | Lisbon / Porto region | ~60 / ~50 | LIS / OPO | |
 | Hong Kong | 52 | HKG | bilingual EN/中文 |
 | Kyoto region | 52 | KYO | bilingual EN/JP |
-| **Paris** | 45 | **PAR** | **launched 2026-07-08 (PR #374)** — 45 single-stop + **4 walks (Le Marais #379, Montmartre #380, Triumphal Way #381, Paris Islands #382)**. **1 more Paris walk (The Left Bank) still PENDING** (above). |
+| **Paris** | 45 | **PAR** | **launched 2026-07-08 (PR #374)** — 45 single-stop + **all 5 walks** (Le Marais #379, Montmartre #380, Triumphal Way #381, Paris Islands #382, Left Bank #383). **Paris fully wired.** (above). |
 | San Francisco | 35 | SFO | + 4 multi-stop walks |
 | Naoshima | 15 | NAO | + 2 multi-stop walks |
 | Toronto | 10 | YYZ | batch A; 28 singles + 4 walks still pending (above) |
