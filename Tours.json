@@ -29584,6 +29584,125 @@
         "Iconic Landmark"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "c5ef9a16-82d1-5366-a9d7-696ddd67b7ad",
+      "createdAt": "2026-07-09",
+      "title": "Paris Islands",
+      "shortDescription": "A walk across the two Seine islands where Paris began — the Île de la Cité, from the Pont Neuf to Notre-Dame, then over to the quiet Île Saint-Louis.",
+      "longDescription": "Paris started on the water. This flat, ~1.4 km walk crosses the two islands in the Seine at the city's heart: the Île de la Cité, where a Celtic tribe first settled and where the medieval city kept its cathedral, palace and prison — the Pont Neuf, the Conciergerie, the stained-glass jewel-box of Sainte-Chapelle, and Notre-Dame itself — then over the little bridge to the Île Saint-Louis, a serene 17th-century island-village left almost untouched. It's the oldest ground in Paris, and the best short introduction to how the city grew.",
+      "makerId": "6d667fb0-736b-5962-995d-df9427c1b8bb",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop0.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop1.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop5.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "865b25fa-1068-5823-911b-602fd36fbc18",
+          "order": 0,
+          "title": "Paris Islands — Introduction",
+          "caption": "Before there was a Paris, there was an island.",
+          "latitude": 48.8566,
+          "longitude": 2.3469,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-islands_stop0.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop0.webp",
+          "transcriptText": "Before there was a Paris, there was an island.\n\nTwo thousand years ago, a tribe called the Parisii settled a teardrop of land in the middle of the Seine — defensible, easy to cross to either bank, impossible to ignore. The Romans took it and called the place Lutetia. Everything you think of as Paris — the boulevards, the towers, the twenty arrondissements spiralling outward — grew from this one island and the river around it.\n\nThis walk stays where the city started. It's short: a little under a kilometre and a half end to end, flat the whole way, along and across two islands that sit in the river one behind the other. You can do it in an afternoon with time to spare.\n\nWe'll begin at the western tip of the Île de la Cité, on the oldest bridge in Paris — which is, confusingly, the one called the New Bridge. From there we walk east along the island: past a medieval palace that became a prison, into a chapel built to hold a crown of thorns, and out to the cathedral that nearly burned down and came back. Then we cross one last short bridge to the Île Saint-Louis — the quiet island, the one where Paris stops performing and just lives.\n\nThe old coat of arms of the city is a ship riding the water, with a motto underneath: tossed by the waves, but never sunk. Stand on these islands long enough and you understand why. The river has flooded them, fire has taken parts of them, revolutions have emptied their palaces — and they're still here, still in the middle of everything.\n\nStart at the Pont Neuf. Find the western point of the island, where the bridge crosses and a king sits on a bronze horse, looking downstream."
+        },
+        {
+          "id": "be676064-9973-523a-8e6e-fcc4a8bd37a1",
+          "order": 1,
+          "title": "Pont Neuf",
+          "caption": "You're standing on the Pont Neuf, the bridge that crosses the western tip of the island in two unequal spans.",
+          "latitude": 48.857,
+          "longitude": 2.3412,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-islands_stop1.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop1.webp",
+          "transcriptText": "You're standing on the Pont Neuf, the bridge that crosses the western tip of the island in two unequal spans. Walk out to the middle, to the point where the two halves meet and a king sits on a bronze horse. That's your spot.\n\nFirst, the name. Pont Neuf means New Bridge — and it's the oldest one in Paris, finished in 1607. The joke writes itself, but stay with why the name stuck: when it opened, it genuinely was new, in a way the city had never seen. Every other bridge in Paris was lined with houses, shops stacked along both sides, so you crossed the river through a kind of tunnel and never saw the water. This one was built bare. No houses — just the span, the open sky, and, for the first time in the city, raised walkways set aside for people on foot, so you could cross without being run down by a cart.\n\nSo Parisians did something they'd never done on a bridge before: they lingered. They strolled out to the middle, watched the river, bought a song or a tooth-pulling from the hawkers who set up along it. The Pont Neuf didn't just cross the Seine — it invented the bridge as a place to be, rather than a thing to get over.\n\nThe king on the horse is Henri IV, who finished it. Look closely and you're looking at a replacement: the original statue was melted down for cannon during the Revolution, and this one was cast in 1818 to put him back where he belonged.\n\n*[beat]*\n\nNow look past him, off the downstream point of the island, where the land narrows to nothing like the bow of a ship. There's a small park down at water level there — the Square du Vert-Galant. That shape, that prow, is the reason the old seal of Paris is a ship riding the current. You're standing at the front of it.\n\nFrom here, turn and walk back onto the island, keeping the river on your left. A few minutes along the northern side brings you to a row of pale round towers rising straight out of the embankment — the Conciergerie. That's next."
+        },
+        {
+          "id": "6110a830-ee5c-54b0-876d-054d31db8525",
+          "order": 2,
+          "title": "Conciergerie",
+          "caption": "The towers are the Conciergerie.",
+          "latitude": 48.8559,
+          "longitude": 2.3458,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-islands_stop2.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop2.webp",
+          "transcriptText": "The towers are the Conciergerie. Stand on the walkway above the river so you can see them straight on — four of them, pale and round and capped with dark cones, rising right out of the embankment, and on the corner a square tower with a clock set into it.\n\nThat clock is the first public clock the city ever had, hung here in the 1370s so ordinary Parisians could tell the time without listening for church bells. But the clock is the gentle part of the story.\n\nFor around four hundred years, this was the centre of France — not a museum, not a courthouse, but the palace where the kings actually lived, the seat of royal power on the island where the city was born. When the kings finally moved out to grander places, they left the machinery of the state behind: courts, offices, and a prison in the lower floors of the old palace.\n\nThen came the Revolution, and the prison became something the building's architects could never have imagined. In the 1790s the Conciergerie was the last address of the condemned — the place where prisoners waited, sometimes for a single night, before the cart came to carry them to the guillotine. Thousands passed through these rooms on that one-way trip. The most famous was the queen, Marie-Antoinette, held here through the autumn of 1793 in a small guarded cell, tried in the building, and taken out to her execution in October. Later, under the kings who returned to power, a chapel was built on the spot where her cell had stood.\n\n*[beat]*\n\nSo hold the whole arc of it in your head, standing here: the same walls that were once the proudest expression of French royalty became the place where French royalty was, quite deliberately, taken apart. Power and the end of power, in one building, on one island.\n\nThere's a single room left from the palace at its medieval height, and you don't have to imagine it — it's just inside, and it leads us to the next stop. Step into the complex behind these towers, among the law courts, and look for the slender spire rising above them. That's the Sainte-Chapelle."
+        },
+        {
+          "id": "f28d72eb-5b86-56fd-91c0-f7a2ee3542b4",
+          "order": 3,
+          "title": "Sainte-Chapelle",
+          "caption": "You found it — that slender spire rising out of the cluster of law-court buildings.",
+          "latitude": 48.8554,
+          "longitude": 2.345,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-islands_stop3.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop3.webp",
+          "transcriptText": "You found it — that slender spire rising out of the cluster of law-court buildings. From the outside the Sainte-Chapelle barely shows itself; it's hemmed in now by the courts that grew up around it. Don't judge it from here. Go in, climb to the upper level, and look up.\n\nWhat you'll be standing in is, in effect, the inside of a jewel. Fifteen windows, each about fifteen metres tall, run almost floor to ceiling all the way around, so the stone seems to vanish and the whole upper chapel becomes a cage of coloured glass — well over a thousand scenes from the Bible, glowing whenever the sun is behind them. On a bright afternoon the light comes through red and blue and lands on the floor in pools.\n\nHere's why it exists. In the 1240s the king — Louis the Ninth, later made a saint — got hold of the most precious object in the Christian world: the Crown of Thorns, the one from the Passion, bought from the emperor in Constantinople, who was short of money. And here's the detail that tells you everything: the relics cost the king far more than this building did. Several times more. The Sainte-Chapelle isn't a church that happens to hold a relic — it's a reliquary you can walk inside, a glass case built around a crown, sized to the thing it was made to protect.\n\n*[beat]*\n\nThink about what that means. A king took a sum that could have paid for fortresses or armies, spent it on a ring of thorns, and then wrapped it in the most beautiful room he could commission — not to hide it behind walls, but to flood it with light. That's not decoration. That's a thirteenth-century argument about what's worth the most, made in stone and glass.\n\nThe crown itself isn't here any more. It was moved long ago to the great cathedral at the other end of the island — and it was carried out of that cathedral by hand, in the dark, the night the building caught fire a few years back. That's where we're going next. Leave the law courts, keep walking east, and aim for the two square towers you'll start to see rising over the rooftops. Notre-Dame."
+        },
+        {
+          "id": "2601141f-b3db-56b4-99a9-c825591abbcb",
+          "order": 4,
+          "title": "Notre-Dame de Paris",
+          "caption": "Two towers, flat-topped and square, with a long row of carved figures across the front and a great round window in the centre.",
+          "latitude": 48.853,
+          "longitude": 2.3499,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-islands_stop4.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop4.webp",
+          "transcriptText": "Two towers, flat-topped and square, with a long row of carved figures across the front and a great round window in the centre. You're on the parvis — the wide open square in front of Notre-Dame. Find a spot where you can take in the whole west front, and let the crowd flow around you.\n\nBefore you look up, look down. Somewhere near the centre of the square, set into the ground, there's a small bronze marker — a star, with an inscription. That's Point Zéro: the exact spot from which every road distance in France is measured. When a sign out in the country tells you Paris is so many kilometres away, this is the point it means. The whole country is measured outward from the front step of this cathedral, on the island where the city began. The centre of France is, officially, right under your feet.\n\nNow the cathedral. They began building it in 1163 and kept at it for the better part of a century — those towers, the rose window, the carved kings across the front. For more than eight hundred years it stood here, the heart of the city, until one evening a few years ago when the world watched it burn. The fire took the spire and tore through the roof — and that roof had a name. They called it the forest: a lattice of oak beams, hundreds of trees felled in the Middle Ages, each one shaped by hand, holding the lead roof above the stone.\n\n*[beat]*\n\nAnd then France did something that wasn't guaranteed. It put the cathedral back. The forest was rebuilt the medieval way, with fresh oak and old tools, the spire went up again, and the stone was scrubbed of centuries of soot in the process. In December 2024 the doors reopened, and what you walk into now is brighter than anything in living memory — a building going on nine hundred years old that came back from the edge of being lost, and somehow looks new.\n\nYou've now walked the length of the older island, from its western point to here. One short bridge remains, just behind the cathedral, and it leads to the other island — the quiet one. Cross it, and the noise drops away. That's the Île Saint-Louis."
+        },
+        {
+          "id": "d034cae0-fa51-5702-b2da-7247c1f601bd",
+          "order": 5,
+          "title": "Île Saint-Louis",
+          "caption": "You've crossed the Pont Saint-Louis, and you can probably feel the difference already.",
+          "latitude": 48.8517,
+          "longitude": 2.357,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paris-islands_stop5.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paris-islands_stop5.webp",
+          "transcriptText": "You've crossed the Pont Saint-Louis, and you can probably feel the difference already. The crowds thin, the noise from the cathedral fades behind you, and you're on a single straight street running the length of a much smaller island. This is the Île Saint-Louis, and it's the quietest famous place in Paris.\n\nHere's what makes it strange. Almost everywhere else in the city grew in layers, century on century. This island didn't. For most of its life it was muddy pasture — two little islets where cows were grazed — until, in the early 1600s, someone had the idea to join them together, throw a grid of streets across the result, and sell the plots. The whole island went up more or less at once, in one style, over a few decades, and then it essentially stopped. The tall pale houses lining this street are the originals.\n\nSo while the rest of Paris was torn up and rebuilt — most dramatically in the 1800s, when Baron Haussmann drove his wide boulevards through the medieval city — the Île Saint-Louis was left almost completely alone. No grand avenue cuts across it. To this day there's no Métro station on the island; you arrive on foot, over a bridge, the way you just did.\n\n*[beat]*\n\nAnd the thing this island is most famous for, after centuries of being a discreet address for people who could afford the quiet, is ice cream. A shop called Berthillon has been making it here since 1954, and on a warm afternoon you'll see the evidence in every direction — people walking the bridges with a cone, in no hurry at all.\n\nWhich is the right note to end on. You started this walk at the prow of the island where Paris was born, among kings and relics and a cathedral that came back from the dead — and you finish it here, on the small island that chose, very deliberately, to be nothing grander than a good place to live. Find a spot on the stone edge above the water, sit down, and watch the river go by. It's been doing that since before there was a city. Tossed by the waves, never sunk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 793,
+      "walkingDistanceMeters": 1400,
+      "centroidLatitude": 48.85493,
+      "centroidLongitude": 2.34763,
+      "city": "Paris",
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Architecture",
+        "Faith",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
     }
   ]
 }
