@@ -31223,6 +31223,124 @@
         "Free to Visit"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "096a3cba-09b6-57e7-8379-2e49f3a7b507",
+      "createdAt": "2026-07-10",
+      "title": "Museum Mile: How Toronto Remade Its Institutions",
+      "shortDescription": "Toronto's knowledge quarter around Queen's Park — two museums, the old university, the legislature, and a great gallery — bookended by rupture (the ROM's glass Crystal) and homecoming (Gehry's AGO).",
+      "longDescription": "The gentlest walk of the set: five stops, north to south, through the leafy museum-and-university cluster around Queen's Park. Every stop is an institution that remade itself — from the Royal Ontario Museum, where a famous outsider drove a glass Crystal through the heritage wall, past the shoebox-shaped Bata Shoe Museum and the quietly reinvented University of Toronto, to Queen's Park (twice reborn from fire), and finally Frank Gehry's Art Gallery of Ontario, the local boy's gentle homecoming in wood and glass. Rupture at one end, homecoming at the other.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-ontario-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-ontario-museum_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bata-shoe-museum_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uoft-kings-college-circle_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queens-park_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-ontario_hero.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "7400ae42-8273-5b54-a1f3-67598caedacd",
+          "order": 0,
+          "title": "Museum Mile — Introduction",
+          "caption": "Start up at Bloor Street and Avenue Road and look up at the ROM's glass Crystal before you begin.",
+          "latitude": 43.6677,
+          "longitude": -79.3948,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-museummile-walk_stop0.mp3",
+          "audioDurationSeconds": 88,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "If the last walk was about money and power, this one is about knowledge — and it runs in a rough line north to south, from a museum full of dinosaurs to a gallery remade by one of the most famous architects who ever lived.\n\nYou're starting up at Bloor Street, in the cluster of museums and university buildings that Toronto has quietly packed into a few leafy blocks around Queen's Park. Five stops: two museums, the provincial legislature, the old university at the heart of it all, and a great art gallery to finish. It's the gentlest walk of the set — flat, shaded, mostly through a university campus that most of the city forgets is even here.\n\nHere's the thread to carry. Almost every building on this walk is an old institution that decided, at some point, to remake itself — and the two that bookend the route show the opposite ways a city can do that. It opens with a museum that had a giant glass crystal smashed into its side by a famous outsider, a building half of Toronto openly hated. It ends with a gallery that a local boy — who first fell in love with art and buildings inside its walls as a child — came home, decades later, to rebuild gently, from the inside, in wood and glass, and that almost everyone adores.\n\nRupture at one end, homecoming at the other. Start with the rupture.\n\nLook up at the Crystal. This is the Royal Ontario Museum."
+        },
+        {
+          "id": "b62ba6b2-d775-51d3-bae6-6f83bdbd3ba9",
+          "order": 1,
+          "title": "Royal Ontario Museum — the Crystal",
+          "caption": "Stand at Bloor and Avenue Road and look at the jagged glass-and-aluminum Crystal bursting from the old stone museum.",
+          "latitude": 43.6677,
+          "longitude": -79.3948,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-museummile-walk_stop1.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-ontario-museum_hero.webp",
+          "transcriptText": "Stand back on the corner of Bloor Street and Avenue Road and look at what's happened to this building. A stately old stone museum — and bursting out of its side, tilting over the sidewalk at angles that look almost dangerous, a huge jagged form of glass and brushed aluminum, like a shard of ice driven into the old stone. That's the Michael Lee-Chin Crystal, and it is probably the most argued-about building in the country.\n\nThe museum behind it is a century old — the Royal Ontario Museum opened in 1914, Canada's largest, with something like eighteen million objects: dinosaurs, meteorites, mummies, and one of the world's great collections of fossils. For most of that century it looked exactly like what it was, a dignified temple of learning. Then, in 2007, came the Crystal.\n\nThe architect was Daniel Libeskind, and the story goes that he sketched the first version on a paper napkin at a wedding held inside the museum — five interlocking crystal forms, inspired, he said, by the gem collection downstairs. When it opened, a great many Torontonians hated it, loudly and at length; one American critic called it the worst building of its decade. Others defended it just as fiercely, and both camps are still going.\n\nHere's the thing to notice, and it's the key to the whole walk. By the time the Crystal went up, museums all over the world had figured out that a wild building could put them on the map overnight — and the ROM wanted in. So it let a famous outsider drive a shard through its heritage wall and dare the city to look away. Nobody has managed to look away yet.\n\nWhatever you make of it, remember the gesture — the loud, deliberate rupture — because the last stop on this walk does the exact opposite.\n\nFor now, walk west along Bloor Street, just a couple of minutes, to a building shaped like a shoebox. That's the Bata Shoe Museum."
+        },
+        {
+          "id": "d5cb0e37-ec57-51ed-be7a-45470cd19e67",
+          "order": 2,
+          "title": "Bata Shoe Museum",
+          "caption": "Walk west to Bloor and St. George; find the low limestone building shaped like a shoebox with its lid set slightly askew.",
+          "latitude": 43.6674,
+          "longitude": -79.4003,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-museummile-walk_stop2.mp3",
+          "audioDurationSeconds": 85,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bata-shoe-museum_hero.webp",
+          "transcriptText": "You've walked a couple of blocks west, to the corner of Bloor and St. George, and here's a very different kind of museum building. Look at its shape: a low box of pale limestone with the roofline tilted, just slightly, as though a lid had been set down on top and not quite pushed flush. That's deliberate. The whole building is designed to look like a shoebox with the lid a little askew.\n\nThis is the Bata Shoe Museum, and the joke of its architecture is also its subject. It holds the largest collection of footwear in the world — something like twelve thousand pieces, spanning four and a half thousand years, from ancient sandals to the shoes of the famous. It grew out of one woman's private collection: Sonja Bata, of the global shoe-making family, who spent decades gathering shoes as a way of reading whole cultures through what they put on their feet.\n\nThe architect, Raymond Moriyama, was one of the finest this country produced, and rather than build a temple, he built a container — even the limestone was chosen because it has the warm, soft look of leather. Where the ROM up the street shouts for your attention, this one makes a quiet, witty little bow: a museum disguised as the most ordinary object in your closet.\n\nFrom here, cross the street and head south, down into the tree-lined heart of the University of Toronto, toward the wide green circle at its centre. That's King's College Circle."
+        },
+        {
+          "id": "714a6313-489c-5ddf-8c12-33b4ece000c3",
+          "order": 3,
+          "title": "University of Toronto — King's College Circle",
+          "caption": "Cross south into King's College Circle, the big oval of lawn at the historic heart of the university.",
+          "latitude": 43.6629,
+          "longitude": -79.3957,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-museummile-walk_stop3.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uoft-kings-college-circle_hero.webp",
+          "transcriptText": "You've come into King's College Circle, a big oval of lawn ringed by old stone buildings, and the first thing to notice is how quiet it is — you're in the geographic centre of downtown, and you can hear birds. This is the historic heart of the University of Toronto, almost two hundred years old, and in a very Toronto way it spends most of its time hiding in plain sight behind the office towers.\n\nNearly everything on this walk grew out of this campus. The university leased the land the provincial legislature now sits on; it ran the ROM in its early years; the whole strip of learning you're walking is, in a sense, the university's overflow. And it has a long habit of remaking itself: University College, the grand building on the west side, burned nearly to the ground in a fire in 1890 and was rebuilt.\n\nIt just did it again, underground. The lawn near you was recently torn up, the cars sent below ground, and in their place the university drilled hundreds of wells straight down into the bedrock — some two hundred and fifty metres deep, half the height of the CN Tower — to build the largest urban geothermal field in the country, quietly heating the century-old buildings around you.\n\nNo shard of glass, no famous name on it — the oldest institution here reinvented itself by digging down and going silent. Beneath it all runs a buried creek the campus is slowly bringing back to the surface, a nod to the older meeting place this land has always been.\n\nNow walk east, out of the circle and across to the pink stone palace at the foot of University Avenue. That's Queen's Park, the Ontario Legislature."
+        },
+        {
+          "id": "b9fe2ecf-c24e-59a3-a739-f3f1e0dd9cd8",
+          "order": 4,
+          "title": "Queen's Park — Ontario Legislature",
+          "caption": "At the foot of University Avenue, look up at the long pink-sandstone legislature closing off the avenue.",
+          "latitude": 43.6606,
+          "longitude": -79.3925,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-museummile-walk_stop4.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queens-park_hero.webp",
+          "transcriptText": "You're standing at the foot of University Avenue, looking up at a long, heavy palace of pink sandstone — turrets, round arches, deep-set windows. This is Queen's Park, home of the Ontario Legislature, and it closes off the top of the avenue like a full stop at the end of a very grand sentence.\n\nIt opened in 1893, built from pink stone quarried west of the city and carved, block by block, right here on the lawn. The style is all rounded arches and rough stone, and at the time plenty of locals grumbled that it looked too American. But the building you see isn't quite the one that opened. On a September afternoon in 1909, a spark from a workman's fire-pot on the roof set the west wing alight; staff formed a human chain at the doors of the legislative chamber and saved it, but the wing and the library behind it — a hundred thousand books — were lost.\n\nThe man brought in to rebuild the west wing was E.J. Lennox, the same architect who left his fingerprints all over Victorian Toronto, including the old courthouse downtown. He rebuilt it a little taller and lined the inside in pale Italian marble — so today, if you climb the grand staircase within, the east wing is dark Victorian oak and the west wing is bright stone, a fire-line running right through the middle of the building.\n\nLike the university behind you, this place burned and rose again — and it's about to be remade one more time: the whole building is due for a deep restoration, with the legislators to be moved, temporarily, somewhere the province has been oddly quiet about naming.\n\nFor the last stop, walk back down the length of University Avenue and turn west onto Dundas Street, to a gallery wrapped in glass and wood. That's the Art Gallery of Ontario."
+        },
+        {
+          "id": "e98a7379-e7a2-5937-84d0-9416213c0cb7",
+          "order": 5,
+          "title": "Art Gallery of Ontario",
+          "caption": "Down University Avenue and west on Dundas to McCaul: step under the long curving wall of glass and warm wood.",
+          "latitude": 43.6536,
+          "longitude": -79.3925,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-museummile-walk_stop5.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-ontario_hero.webp",
+          "transcriptText": "You've come down University Avenue and west along Dundas to the corner of McCaul, and running above you is a long, curving wall of glass and warm wood — like the upturned hull of a wooden boat stretched the length of a city block. Step under it. This is the Art Gallery of Ontario, and it's where the walk's argument lands.\n\nThe gallery grew, more than a century ago, out of a single donated house behind it — the Grange — and has expanded many times since. But the version you're standing in was shaped, in 2008, by Frank Gehry: one of the most famous architects who ever lived, the man behind the wildest, shiniest buildings of his era. This one is different from all of them, for one reason — Frank Gehry was born in Toronto. As a boy he came to this very gallery, and later said it was here he first felt the pull between art and building. This was his first work in his own country: a homecoming.\n\nSo instead of a titanium spectacle, he did something quieter. That wooden gallery over the street is the Galleria Italia — glass and Douglas fir, close to two hundred metres of it — and inside, a sculptural staircase spirals up and bursts through the roof. Critics who braced for Gehry to shout called it, instead, his most relaxed and graceful building: restraint, from the least restrained architect alive.\n\nFrank Gehry died in late 2025, at ninety-six, which leaves this building as a kind of farewell — the local boy's last gift to the city that first showed him what a building could do. And it's the right place to end. The walk began at the ROM with a rupture: a stranger driving a glass shard through an old wall and daring you to look. It ends here with a homecoming: someone remaking the place he loved from the inside, in wood, so gently you could almost miss it. Two ways to keep an old city alive — and Toronto, being Toronto, kept them both, a few blocks apart.\n\nStay a while, and walk back and forth beneath the wood. It's the warmest ceiling in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 633,
+      "walkingDistanceMeters": 2200,
+      "centroidLatitude": 43.66244,
+      "centroidLongitude": -79.39516,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Art",
+        "Architecture",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
     }
   ]
 }
