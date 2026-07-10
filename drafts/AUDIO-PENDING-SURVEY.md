@@ -29,13 +29,12 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 | 🇺🇸 Los Angeles | 39 | 36 single + 3 walks (5/7/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (LA) |
 | 🇪🇸 Madrid | 35 | 31 single + 4 walks (5/6/5/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (MAD) |
 | 🇳🇱 Amsterdam | 38 | 33 single + 5 walks (5/6/5/5/5 stops) | 64 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio AMS |
-| 🇨🇦 Toronto (walks only) | 3 | 3 walks (intro + 5 stops each) | 18 | `claude/dreamy-wozniak-nM6a4` | Atlas Studio YYZ (exists) |
 | 🇨🇦 Montreal | 9 | 9 single | 9 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio YUL |
-| **TOTAL PENDING** | **124** | | **190** | | |
+| **TOTAL PENDING** | **121** | | **172** | | |
 
 _(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **went LIVE 2026-07-08, PR #378** — removed from pending. It was the last staged London tour.)_
 _(✅ Paris = DONE: **45 single-stop tours LIVE** (PR #374) + **all 5 walks LIVE** — Le Marais (#379), Montmartre (#380), The Triumphal Way (#381), Paris Islands (#382), The Left Bank (#383). Nothing Paris pending.)_
-_(🇨🇦 Toronto singles = DONE: all **38 single-stop tours LIVE** — 10 batch A (2026-07-02) + **28 wired 2026-07-10, PR #384**. Only the 4 multi-stop walks remain, each with separate narration.)_
+_(✅ 🇨🇦 Toronto = DONE (2026-07-10): **all 42 tours LIVE** — 38 single-stop (10 batch A + 28 PR #384) + **all 4 walks** (Old Town #385, Museum Mile #386, Downtown Spine #387, Immigrant West/Kensington #388). Nothing Toronto pending.)_
 
 ### Per-city detail
 
@@ -53,9 +52,7 @@ _(🇨🇦 Toronto singles = DONE: all **38 single-stop tours LIVE** — 10 batc
 - `amsterdam-canalring-walk` (intro+5) · `amsterdam-oldside-walk` (intro+6) · `amsterdam-museumquarter-walk` (intro+5) · `amsterdam-jordaan-walk` (intro+5) · `amsterdam-jewishquarter-walk` (intro+5)
 - All walks reuse live single-stop heroes (zero new image work). Full spec in each folder's README + `drafts/amsterdam-batch1/README.md` (master pick-map). Credits: `drafts/CREDITS.md` (Amsterdam, 22). New maker **Atlas Studio AMS** 🇳🇱.
 
-**🇨🇦 Toronto (walks only)** — all **38 single-stop tours LIVE** (10 batch A 2026-07-02 + 28 wired 2026-07-10, PR #384). **Old Town walk LIVE 2026-07-10 (PR #385).** Still pending:
-- 3 walks: `toronto-downtownspine-walk`, `toronto-museummile-walk`, `toronto-kensington-walk` (intro + 5 stops each = 6 MP3s per walk = 18). Walk stops reuse live single-stop images; narration is separate.
-- Tracking detail in `drafts/toronto-AUDIO-PROGRESS.md`. Wires under existing **Atlas Studio YYZ**.
+**🇨🇦 Toronto — ✅ COMPLETE (2026-07-10)** — all **42 tours LIVE** under Atlas Studio YYZ: 38 single-stop (10 batch A + 28 PR #384) + all 4 walks (Old Town #385, Museum Mile #386, Downtown Spine #387, Immigrant West/Kensington #388). Nothing pending.
 
 **🇫🇷 Paris — 5 multi-stop walks** (on `dreamy-wozniak-nM6a4`; wire under the existing **Atlas Studio PAR** maker):
 - ~~`paris-marais` — "Le Marais"~~ — **LIVE 2026-07-08 (PR #379)**, 6 tracks
@@ -89,7 +86,7 @@ As of 2026-07-08, `origin/main` = **11 makers / 616 tours / 726 stops**. Live ci
 | **Paris** | 45 | **PAR** | **launched 2026-07-08 (PR #374)** — 45 single-stop + **all 5 walks** (Le Marais #379, Montmartre #380, Triumphal Way #381, Paris Islands #382, Left Bank #383). **Paris fully wired.** (above). |
 | San Francisco | 35 | SFO | + 4 multi-stop walks |
 | Naoshima | 15 | NAO | + 2 multi-stop walks |
-| Toronto | 39 | YYZ | 10 batch A + 28 singles (PR #384) + Old Town walk (PR #385), wired 2026-07-10; 3 walks still pending (above) |
+| Toronto | 42 | YYZ | ✅ COMPLETE 2026-07-10 — 38 single-stop + 4 walks (PRs #384–#388) |
 
 ---
 
