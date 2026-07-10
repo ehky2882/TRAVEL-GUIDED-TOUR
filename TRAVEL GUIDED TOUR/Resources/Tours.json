@@ -31459,6 +31459,124 @@
         "Free to Visit"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "de8989de-b757-5ffd-82cc-82f6ee3d17f6",
+      "createdAt": "2026-07-10",
+      "title": "Immigrant West: The City That Grew by Addition",
+      "shortDescription": "The 'immigrant west' — the part of Toronto that grew by addition, not replacement: the AGO around a 200-year-old house, Chinatown, Kensington Market, Graffiti Alley, and the ever-westward cool of Queen West.",
+      "longDescription": "A flat, dense, walkable hour through the part of Toronto that grew by addition rather than replacement — wave after wave adding a layer without scraping off the last. From the Art Gallery of Ontario (accreted around the 1817 Grange), west to Chinatown on Spadina (cleared in one place, regrown two blocks over), up into the layered stalls of Kensington Market, down to the ever-repainted murals of Graffiti Alley, and out along Queen West, where 'cool' keeps migrating one block further. Five versions of a single stubborn habit: never quite finished.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-ontario_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-ontario_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-spadina_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-market_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/graffiti-alley_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-street-west_hero.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "861f1604-8957-537d-af2a-4f1e41595a39",
+          "order": 0,
+          "title": "Immigrant West — Introduction",
+          "caption": "Stand on Dundas Street West at McCaul in front of the AGO, downtown at your back and the immigrant west ahead.",
+          "latitude": 43.6536,
+          "longitude": -79.3925,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-kensington-walk_stop0.mp3",
+          "audioDurationSeconds": 100,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Most of downtown Toronto was built the way you'd expect a city to build itself: clear the old thing, put up the new one, and repeat until the skyline looks modern. The stretch you're about to walk did almost the opposite.\n\nYou should be standing on Dundas Street West at the corner of McCaul, with the long, low galleries of the Art Gallery of Ontario in front of you and the office towers of downtown at your back. Everything ahead — west, and a little north — is what the city loosely calls the immigrant west: Chinatown along Spadina, the tangle of Kensington Market, a painted lane below Queen, and the long mile of Queen Street West beyond it.\n\nHere's the thread to hold onto for the next hour. This is the part of Toronto that grew by addition rather than replacement. Wave after wave of newcomers arrived and added a layer without scraping off the one before, so the neighbourhoods out here read less like finished places and more like something still being assembled, layer over layer, in public.\n\nThe good news for your feet: it's flat, dense, and genuinely walkable, maybe forty-five minutes of actual walking, with one short stretch back south in the middle. If you tire, the Queen and Spadina streetcars cover most of it.\n\nWe'll go from the gallery west to Chinatown on Spadina, up into Kensington Market, back down to the lane they call Graffiti Alley, and out onto Queen West to finish.\n\nStart where the habit is easiest to see, with a museum that grew exactly the way the neighbourhoods around it did. Turn to the Art Gallery of Ontario."
+        },
+        {
+          "id": "f6c98a77-d5d3-5f41-a4ed-fde835ffe1e0",
+          "order": 1,
+          "title": "Art Gallery of Ontario — the Grange",
+          "caption": "In front of the AGO's glass-and-wood front, find the old brick Grange house (1817) folded within the galleries.",
+          "latitude": 43.6536,
+          "longitude": -79.3925,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-kensington-walk_stop1.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-ontario_hero.webp",
+          "transcriptText": "You're standing in front of the Art Gallery of Ontario, its entrance set back from Dundas behind a long glass-and-wood front. Most people come for what's inside. For this walk, the interesting thing is how the building got here.\n\nWalk your eye to the older brick house tucked behind and within the complex. That's the Grange, built in 1817, and it's the oldest surviving brick house in Toronto. It was left to the gallery in 1909, and here's the part worth carrying with you: the entire museum grew outward from that one house. Expansion after expansion wrapped around it over more than a century, and rather than tear the old house down, the gallery kept it, folded inside the galleries like a seed still sitting in the fruit.\n\nThe collection was assembled the same way, layer by layer. The gallery holds the most complete collection of the Group of Seven anywhere on earth, the largest collection of Henry Moore's sculpture in the world — Moore chose to send it here himself — and a major gift of Canadian and European art from the Thomson family. There's a dedicated centre where Indigenous and Canadian works are hung to speak to each other. None of it replaced what came before; it was all added to it.\n\nWhich makes this gallery a small model of the walk ahead. It didn't reinvent itself by clearing the ground. It accreted, around one stubborn old house, keeping every layer.\n\nWhen you leave, head west along Dundas for two blocks, until the signage turns to Chinese and the street opens out at Spadina. That's Chinatown."
+        },
+        {
+          "id": "21f9887d-5678-57a1-bb69-1b0d65ffc215",
+          "order": 2,
+          "title": "Chinatown (Spadina)",
+          "caption": "At Dundas and Spadina, streetcars running down the middle and Chinese signage in every direction.",
+          "latitude": 43.6529,
+          "longitude": -79.398,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-kensington-walk_stop2.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-spadina_hero.webp",
+          "transcriptText": "You've reached the corner of Dundas and Spadina — Spadina, when it's the avenue, said spa-dye-na — one of the widest streets downtown, streetcars running down the centre, Chinese signage in every direction.\n\nThis is Chinatown, but it's worth knowing it isn't the first one. Toronto's original Chinatown sat east of here, in the old immigrant district called the Ward, near where City Hall stands today. In the late 1950s and through the 1960s, roughly two-thirds of it was expropriated and cleared to build New City Hall and the square in front of it — the same square you may have crossed earlier on this trip.\n\nThe community did something quietly remarkable: it moved west, to Spadina and Dundas, and rebuilt. And when the city floated plans to clear that too, a restaurateur named Jean Lumb organised the Save Chinatown Committee and fought it to a standstill. Lumb went on to become the first Chinese-Canadian woman appointed to the Order of Canada, in part for that work.\n\nSo the reframe here is almost the whole walk in one story. A neighbourhood was erased in one place and simply re-grew two blocks over — subtraction answered, stubbornly, with addition. It's still changing today, as it always has; newer arrivals, rising rents, the usual pressures of a downtown that everyone wants a piece of. Chinatown has never once stopped being remade.\n\nFrom here, walk north up Spadina and duck west into the narrow streets — Augusta, Baldwin, Kensington Avenue. That's Kensington Market."
+        },
+        {
+          "id": "9dc0eadd-ab6b-57b2-bdff-79eb8340502e",
+          "order": 3,
+          "title": "Kensington Market",
+          "caption": "Duck west off Spadina into the narrow streets — Augusta, Baldwin, Kensington Avenue — as the awnings drop low.",
+          "latitude": 43.6547,
+          "longitude": -79.4005,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-kensington-walk_stop3.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-market_hero.webp",
+          "transcriptText": "You've turned off Spadina into Kensington Market, and you can feel the scale change immediately: the streets narrow, the awnings drop low, and the shops spill their produce and racks and crates straight onto the sidewalk.\n\nRead the market as layers and it opens right up. It began in the early 1900s as a Jewish market — pushcarts and front-room shops — and two synagogues from that era still stand in the streets around you. Then came the Portuguese, then Caribbean, then Vietnamese and Latin American and East African arrivals, each adding a layer of food and shopfronts and language without erasing the one underneath. The fishmonger, the taqueria, the vintage rack, and the cheese shop end up sharing the same half-block, and somehow it works.\n\nTwo things have kept it that way. First, the streets themselves: they were laid out for handcarts and foot traffic, with almost no parking, which makes the market structurally hostile to chain stores and towers — they simply can't fit. Second, people fought for it. In the 1960s a planning proposal called for flattening the small houses and putting up apartment blocks, and the neighbourhood organised and killed it. It was later named a National Historic Site in 2006, and then, in 2025, a Heritage Conservation District — with the city's own plan naming the market's sense of anarchy, inclusivity, and experimentation as the very thing worth protecting.\n\nThere's a lovely contradiction in that: rules written to protect a place whose whole character is that it resists being tidied.\n\nKensington is the purest version of everything on this walk — a neighbourhood made entirely by addition, layer over layer, and never once declared finished.\n\nWhen you've had your fill, make your way back down to Spadina and south toward Queen. Just below Queen, between Spadina and Portland, is a lane that took this same habit and made it literal. They call it Graffiti Alley."
+        },
+        {
+          "id": "27c84d30-ea51-5d80-b671-0e6e46409173",
+          "order": 4,
+          "title": "Graffiti Alley (Rush Lane)",
+          "caption": "Down to Rush Lane just south of Queen, between Spadina and Portland — three blocks of ever-repainted murals.",
+          "latitude": 43.6485,
+          "longitude": -79.398,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-kensington-walk_stop4.mp3",
+          "audioDurationSeconds": 98,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/graffiti-alley_hero.webp",
+          "transcriptText": "You've come down to the lane officially named Rush Lane, running parallel to Queen just south of it. If the subway works around Queen and Spadina have the usual way in blocked off, you'll have come at it from the side, off Richmond — the city has been digging a new line through here, and the access shifts with the construction.\n\nNow look at the walls. Three blocks, about a kilometre, of near-continuous murals, floor to roofline, and the key thing to understand is that almost none of it is permanent. The lane is repainted constantly, new work going up over old, so the wall in front of you didn't look like this a year ago and won't a year from now. One long mural crams the whole city onto a single wall — the tower, the streetcars, the raccoons that treat this place as theirs.\n\nHere's the twist that makes the lane worth the detour. It isn't a legal wall. It's tolerated. For years the city ticketed graffiti here as vandalism, and then, in 2011, it reversed course, designated the lane an area of municipal significance, and set up a program to fund murals outright. The thing the city once fined, it now protects and pays for — a sanctioned wall of the unsanctioned.\n\nWhich is the walk's habit again, only now you can watch it happen in paint: layer over layer, nothing finished, the newest arrival painted right on top of the last.\n\nClimb back up to the daylight of Queen Street West and turn west. The last stop is that same habit stretched thin over a couple of kilometres."
+        },
+        {
+          "id": "a56707ff-b845-5ade-a391-f92f0341e116",
+          "order": 5,
+          "title": "Queen Street West",
+          "caption": "Up on Queen Street West, the streetcar rattling past boutiques, cafés and record shops running west.",
+          "latitude": 43.643,
+          "longitude": -79.413,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-kensington-walk_stop5.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-street-west_hero.webp",
+          "transcriptText": "You're up on Queen Street West now, the streetcar rattling past — the Queen car, one of the longest streetcar routes in North America — with boutiques and cafés and record shops running west as far as you can see.\n\nQueen West runs on one simple, ruthless pattern: cool migrates. A stretch gets discovered, gets interesting, gets expensive, and the genuinely interesting stuff moves one block further west to where the rent is still cheap — and then that block gets discovered, and it happens again. This street has been doing it for decades, block after block, which is how a former garment district ended up being named, at one point, the second-coolest neighbourhood in the world by a fashion magazine — a ranking Toronto accepted with its usual faint embarrassment.\n\nAnd yet it hasn't fully smoothed out. There's a grittiness gentrification keeps failing to scrub off: the live-music dive bars, the stacked vintage shops, the independent bookstore near Trinity Bellwoods holding its ground. The next layer arrives, but the last one doesn't entirely leave.\n\nWhich is the whole walk, in the end. Step back and look at what you've crossed: a museum that grew around a two-hundred-year-old house, a Chinatown that regrew after it was cleared, a market built of stacked newcomers, a lane repainted over and over, and now a street where cool keeps adding the next block west. Five versions of a single stubborn habit.\n\nMost of downtown gets torn down and rebuilt. Out here, the city just keeps getting added to, and you've spent the last hour walking the proof.\n\nSo stay on the corner a moment before you go. Watch the streetcar, watch the street. Whatever it is right now, it isn't finished — and out here, that has always been the point."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 623,
+      "walkingDistanceMeters": 2500,
+      "centroidLatitude": 43.65054,
+      "centroidLongitude": -79.4004,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "Immigration",
+        "Art",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
     }
   ]
 }
