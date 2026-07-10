@@ -31105,6 +31105,124 @@
         "Free to Visit"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "c65f4997-55ed-5ab7-ab20-617e784e2175",
+      "createdAt": "2026-07-10",
+      "title": "Old Town: How Toronto Became a City",
+      "shortDescription": "Toronto's founding core in a square kilometre — a rail cathedral, a market that governed a town, an 1892 flatiron, and the distillery that paid for it all, still standing block by block.",
+      "longDescription": "A five-stop walk through Old Town, east of downtown, tied by a single idea: how a muddy colonial town talked itself into becoming a city. From Union Station's temple front, past the 1892 Gooderham Flatiron and the dog fountain of Berczy Park, up to the Gothic spire of St. James Cathedral, through the two-century-old St. Lawrence Market (once the seat of government), and out to the Victorian Distillery District where the Gooderhams' whisky money began. Flat ground, short blocks, an easy hour — you can usually see the next stop from the last.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-station_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-station_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gooderham-building_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-james-cathedral_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-lawrence-market_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/distillery-district_hero.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "a6eb0d67-21e1-57f2-b6a1-ad29fd9d067c",
+          "order": 0,
+          "title": "Old Town — Introduction",
+          "caption": "Stand on Front Street across from Union Station, on the south side, and look up before you begin.",
+          "latitude": 43.6453,
+          "longitude": -79.3806,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-oldtown-walk_stop0.mp3",
+          "audioDurationSeconds": 79,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Most cities keep their history in a museum. Toronto keeps a good chunk of its founding self out on the sidewalk, in about a square kilometre east of the downtown core — and that's where we're going.\n\nThis is Old Town: the patch of the city where the original street grid, the first market, the first big church, and the industrial engine that paid for a lot of it are all still standing, close enough to walk between in an easy hour or so. The ground is flat, the blocks are short, and unlike some walks that ask you to cross half a city, this one genuinely holds together — you can usually see the next stop from the last one.\n\nHere's the through-line to keep in your head. Everything on this walk was built when Toronto was young and unsure whether it would amount to much, and each stop is the city betting that it would: a railway station built like a temple, a market that doubled as the seat of government, a wedge-shaped office building meant to look modern in 1892, and a whole Victorian distillery that grew into one of the largest of its kind in the world. Read together, block by block, they tell you how a muddy colonial town talked itself into becoming a city.\n\nWe start at the grandest front door it ever built. Head to Union Station, on Front Street — stand across from it on the south side if you can, and look up."
+        },
+        {
+          "id": "54ef8267-8ca1-5853-a907-5f673fead2a3",
+          "order": 1,
+          "title": "Union Station",
+          "caption": "Stand across from Union Station on the south side of Front Street and look up at the long row of single-block limestone pillars.",
+          "latitude": 43.6453,
+          "longitude": -79.3806,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-oldtown-walk_stop1.mp3",
+          "audioDurationSeconds": 87,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/union-station_hero.webp",
+          "transcriptText": "You're looking at a long row of limestone pillars, each one carved from a single block of stone, running the length of Front Street like the front of a Roman temple. That's the point. When Union Station opened in the 1920s, the railway was the thing that made or broke a city, and Toronto wanted anyone stepping off a train to understand immediately that they'd arrived somewhere that mattered.\n\nStep inside if it's open — it's worth it — into the Great Hall: a long, echoing room with a vaulted ceiling far overhead, tall arched windows at each end, and the names of the towns the railways once served carved in stone around the top. The scale is deliberate. This was built to feel like a cathedral, because for a while the train was the closest thing a growing country had to a shared religion.\n\nHere's the quiet irony, though. By the time this opened, the automobile was already coming for the railway's crown — the grand age of rail it was built to celebrate was nearly over before the doors swung open. And yet it never became a relic: it's still the busiest transport hub in the country, moving more people now than it did in its supposed heyday. A temple built at sunset that somehow kept its congregation.\n\nWhen you've had your look, come back out to Front Street and head east, a few short blocks, toward a strange, narrow, wedge-shaped building where the streets come together at an angle. That's the Gooderham Flatiron — and there's a little park at its foot."
+        },
+        {
+          "id": "0534ff0b-8263-5cf9-9080-a2f15853c808",
+          "order": 2,
+          "title": "Gooderham Flatiron & Berczy Park",
+          "caption": "At Front and Wellington, find the wedge-shaped red-brick Flatiron; the dog fountain sits in the little park at its foot.",
+          "latitude": 43.6479,
+          "longitude": -79.3745,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-oldtown-walk_stop2.mp3",
+          "audioDurationSeconds": 97,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gooderham-building_hero.webp",
+          "transcriptText": "Here's the building — five storeys of red brick tapering to a rounded point, wedged into the triangle where Front and Wellington streets meet at an angle. This is the Gooderham Building, though everyone calls it the Flatiron, and it's worth knowing it went up in 1892, which makes it more than a decade older than the far more famous Flatiron in New York. Toronto got there first, and rarely mentions it.\n\nIt was built as the head office of the Gooderham distilling family — hold onto that name, because we'll end this walk at the distillery that made their fortune — and the rounded prow gave the executives on the top floor the best possible view down the street toward their empire.\n\nNow turn and look at the building's flat back wall, the one facing the park. Someone has painted the entire thing as a giant optical illusion — a trompe-l'oeil of windows and a great sail-like facade peeling away from the brick. It's one of the most photographed walls in the city, and it exists for the simple reason that a blank Victorian back wall was too good a canvas to waste.\n\nAnd the park you're standing in, Berczy Park, has a secret of its own: that central fountain is covered in cast-iron dogs — dozens of them, every one a different breed, all gazing up at a single golden bone on top. Look closely and you'll find exactly one cat, pointedly ignoring the whole affair. It's the least serious monument in Old Town, and locals adore it.\n\nWhen you're ready, walk north up Church Street, a block or two uphill, toward the tall Gothic spire you can probably already see. That's St. James Cathedral."
+        },
+        {
+          "id": "9fd2676b-f068-501c-933b-1f04710f328e",
+          "order": 3,
+          "title": "St. James Cathedral",
+          "caption": "Walk north up Church Street toward the tall Gothic spire — the tallest in the old city.",
+          "latitude": 43.6503,
+          "longitude": -79.3739,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-oldtown-walk_stop3.mp3",
+          "audioDurationSeconds": 84,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-james-cathedral_hero.webp",
+          "transcriptText": "This is the Cathedral Church of St. James, and that spire is the tallest in the old city — for a long time the tallest structure in Toronto, full stop, and still one of the tallest church spires in the country. In a town this age, the church steeple was the skyline, the thing you steered by from the lake.\n\nThere's been a church on this corner since the 1790s, though the earlier ones kept burning down; the building you're looking at went up in the 1850s, its great spire finished a couple of decades later, in the confident Gothic style a young colonial city used when it wanted to look permanent. Step inside if the doors are open — it's quieter than you'd expect for a downtown corner, tall stained glass and a hush the traffic outside never quite reaches.\n\nThe thing to notice is where it sits. This was, for the early town, the centre of everything — the church, the market, and the seat of government all within a few minutes of each other, which is more or less the walk you're on right now. Old Town isn't a scatter of separate landmarks; it's the actual core of the original city, still arranged the way it always was.\n\nHead back down toward Front Street and turn east. Two blocks along, at the corner of Front and Jarvis, you'll come to a long grey building with arched windows — and, across the street, a striking new one in glass and orange steel. That's the St. Lawrence Market."
+        },
+        {
+          "id": "fb97a699-673f-562e-99b9-d24ac10835e8",
+          "order": 4,
+          "title": "St. Lawrence Market",
+          "caption": "At Front and Jarvis, find the long grey South Market (once City Hall) and the glass-and-orange-steel North Market across the street.",
+          "latitude": 43.6488,
+          "longitude": -79.3715,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-oldtown-walk_stop4.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-lawrence-market_hero.webp",
+          "transcriptText": "Two buildings, one market, two hundred years of history. Start with the long grey South building, the one with the arched central hall — a market has stood on this spot since 1803, which makes it older than almost anything else you've seen today. But here's the part people miss: this building was once City Hall. The upstairs held the council chamber and the mayor's office; the basement held the city jail. For a stretch of the nineteenth century, Toronto bought its vegetables directly beneath the room where it governed itself, and not far from the cells. Commerce, democracy, and punishment, all under one roof.\n\nInside today it's a food market, six days a week — and if you try one thing, make it a peameal bacon sandwich, a Toronto institution this market is credited with making famous.\n\nNow look across the street at the new building in glass and orange steel. That's the rebuilt North Market, reopened after years of the Saturday farmers' market camping under a tent while it went up — and it was designed by the same British architect behind the famous inside-out Pompidou Centre in Paris, which is why it wears its structure on the outside like that. It also quietly took in the courts that moved out of Old City Hall, so the market's old sideline in civic business isn't entirely gone.\n\nFor the last stop, we leave the old core behind. Walk southeast, about fifteen minutes, toward the lake and Parliament Street, to a cluster of Victorian brick buildings and cobblestone lanes closed to cars. That's the Distillery District."
+        },
+        {
+          "id": "74912d49-9b0b-52be-a108-2e6fba6ab6d0",
+          "order": 5,
+          "title": "Distillery District",
+          "caption": "Southeast toward Parliament Street: a cluster of Victorian brick buildings and cobblestone lanes closed to cars.",
+          "latitude": 43.6503,
+          "longitude": -79.3599,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-oldtown-walk_stop5.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/distillery-district_hero.webp",
+          "transcriptText": "You've arrived at the end of the walk, and at the other end of a story we started an hour ago. Remember the Flatiron — the wedge built as the head office of the Gooderham family? This is where their money came from. Gooderham and Worts began distilling here in 1832, and by the late nineteenth century this was one of the largest distilleries in the world: a small city of brick buildings turning Ontario grain into whisky by the barrel.\n\nLook around at what that left behind — dozens of Victorian industrial buildings, widely called the best-preserved collection of their kind in North America, all in the warm red brick and cobblestone the era ran on. And the reason it survived, when so much of industrial Toronto was flattened, is almost aggressively simple: after the distillery closed, instead of tearing it down, the whole district was handed over to people on foot. No cars, at all. Cobblestone lanes, galleries, cafes, and studios in the old still-houses and warehouses.\n\nIt's a neat closing argument for the whole walk. Toronto spent a long time as a city that knocked down its own past without much sentiment — and Old Town is the counter-example, the founding core that got kept: the rail cathedral, the market that governed a town, the church that marked its centre, and the industrial engine that paid for it, all still here, still legible, block by block.\n\nSo take your time here at the end. Get a coffee, walk the lanes, look up at the brick. You've just walked the length of the city Toronto used to be — from the grandest door it ever built to the works that made it rich — and it's all still standing, which, for this city, is rather the whole point."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 542,
+      "walkingDistanceMeters": 2300,
+      "centroidLatitude": 43.64852,
+      "centroidLongitude": -79.37208,
+      "city": "Toronto",
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Architecture",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
     }
   ]
 }
