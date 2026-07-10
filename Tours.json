@@ -31341,6 +31341,124 @@
         "Free to Visit"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "463962a5-669f-5d58-9c35-7be9a99dfe1b",
+      "createdAt": "2026-07-10",
+      "title": "Downtown Spine: Money, Power, and Two City Halls",
+      "shortDescription": "The money-and-power line north from the lake — the CN Tower, the bank towers and the hidden city beneath them, and the two city halls staring each other down across Bay Street.",
+      "longDescription": "A near-straight walk north from the waterfront through downtown's spine, tied by one Toronto habit: it would rather repurpose a building than lose it. From the CN Tower (an antenna that became the skyline), past a 19th-century bank now sheltering the Stanley Cup under Brookfield Place's ribbed canopy, into Mies van der Rohe's black TD Centre and the underground PATH, out to Nathan Phillips Square's space-age City Hall — and finally Old City Hall, saved from demolition, glaring across Bay Street at its replacement. An easy 20-minute line, mostly flat, with a warm underground twin in winter.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cn-tower_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cn-tower_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hockey-hall-of-fame_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/financial-district_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nathan-phillips-square_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-city-hall_hero.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "b05c931d-a4ae-5083-b624-11c002261ced",
+          "order": 0,
+          "title": "Downtown Spine — Introduction",
+          "caption": "Stand at the foot of the CN Tower and look straight up, then north along the line of the walk.",
+          "latitude": 43.6426,
+          "longitude": -79.3871,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-downtownspine-walk_stop0.mp3",
+          "audioDurationSeconds": 78,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Stand for a second at the foot of the CN Tower and look straight up — then look around. Almost everything on this walk is within sight of where you are now, more or less in a line running north, from the lake toward the old heart of downtown.\n\nThis is the money-and-power walk. It starts at the tower a railway built, runs through the black towers of the banks and the hidden city underneath them, and ends at a place where Toronto keeps both of its city halls — the one it built in 1899, and the one it built to replace it — standing across the street from each other, staring.\n\nThat's the thread to hold onto. Toronto has never been especially good at tearing things down. Some cities clear the past away and build clean; this one tends to keep the old version around, give it a new job, and let it sit next to whatever came after. You'll see it in a bank that became a shrine, and you'll see it most of all at the end, where the two city halls face off across Bay Street like an argument nobody won.\n\nThe route is an easy one: a fairly straight line north, mostly flat, maybe twenty minutes of walking if you don't stop — which you will. And in winter, most of the middle stretch has a warm underground twin you can duck into.\n\nStart where the whole skyline starts. Look up at the CN Tower."
+        },
+        {
+          "id": "c77ccc84-715c-5c47-83bd-568bc2549d8e",
+          "order": 1,
+          "title": "CN Tower",
+          "caption": "Stand at the base of the CN Tower and follow the tapering concrete shaft up to the pod and antenna.",
+          "latitude": 43.6426,
+          "longitude": -79.3871,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-downtownspine-walk_stop1.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cn-tower_hero.webp",
+          "transcriptText": "You're standing at the base of the tallest free-standing structure in the Western Hemisphere, which is a strange thing to build on purpose, and stranger still to build almost by accident.\n\nLook up. It's five hundred and fifty-three metres to the top, and for thirty-two years — from the mid-1970s until 2007, when a tower in Dubai finally passed it — this was the tallest free-standing structure anywhere on earth. It held that title longer than most records survive, and it lost it quietly, the way this city tends to lose things: without much fuss.\n\nHere's the part that usually gets left out. The CN Tower wasn't built to be a landmark. It was built to be an antenna. By the 1970s the downtown office towers had grown tall enough to block television and radio signals, and the railway — Canadian National, the CN in the name — happened to own a vast stretch of emptied-out rail land right here, so it poured the tallest broadcast mast it could into concrete. A fix for bad reception. The fact that it became the thing every postcard and every establishing shot reaches for whenever a film wants you to know you're in Toronto — that was never really the plan.\n\nThe railway sold it years ago, and nobody could bring themselves to change the name, so the CN quietly stopped standing for Canadian National and started standing for, more or less, nothing in particular. It's just the tower now.\n\nFor this walk, think of it as the starting gun. We begin at the highest, most vertical thing in the city — and from here on, everything comes back down to earth, and some of it goes underground.\n\nSo bring your eyes down to street level and walk east along Front Street, toward the corner of Yonge, where a very old bank is quietly keeping the Stanley Cup. That's the Hockey Hall of Fame."
+        },
+        {
+          "id": "9d9fd412-b250-55d1-9d31-a61147d8b70a",
+          "order": 2,
+          "title": "Hockey Hall of Fame (Brookfield Place)",
+          "caption": "At Front and Yonge, step into Brookfield Place and look up at the white glass-and-steel canopy over the old stone bank.",
+          "latitude": 43.6472,
+          "longitude": -79.3777,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-downtownspine-walk_stop2.mp3",
+          "audioDurationSeconds": 90,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hockey-hall-of-fame_hero.webp",
+          "transcriptText": "You've come up to the corner of Front and Yonge, and if you step inside Brookfield Place, look up before you look at anything else. There's a soaring white canopy of glass and curved steel overhead — like the ribcage of some enormous animal, or the nave of a cathedral that decided to skip the stone.\n\nThat canopy is new. What it's sheltering is not. Tucked underneath it, kept whole, is a small, richly carved stone building that used to be a bank — the Bank of Montreal, built in the 1880s, back when a bank wanted to look like a Greek temple so you'd trust it with your savings. Columns, a domed and gilded banking hall, the works. When the developers put up the glass towers around here, they didn't knock the old bank down. They built the entire complex around it, like a pearl forming around a bit of grit.\n\nAnd then they filled it with the Stanley Cup.\n\nThat's the Hockey Hall of Fame, and its grandest room — the old banking hall, all gold leaf and stained glass — is now where people line up to stand beside the holiest object in the national game. A temple to money, quietly converted into a temple to hockey.\n\nHold onto that move, because you'll keep seeing it on this walk: this is a city that would rather repurpose a building than lose it. Give the old thing a new job, and keep it standing.\n\nFrom here, turn north and walk up toward King Street, into the shadow of the black towers. That's the Financial District — and the TD Centre."
+        },
+        {
+          "id": "04010cd2-393f-5591-b6e5-b52ecbd4623d",
+          "order": 3,
+          "title": "Financial District — TD Centre & the PATH",
+          "caption": "At King and Bay, stand under the plain black towers of the Mies van der Rohe TD Centre — the PATH runs beneath your feet.",
+          "latitude": 43.6484,
+          "longitude": -79.3806,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-downtownspine-walk_stop3.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/financial-district_hero.webp",
+          "transcriptText": "Now you're at King and Bay, the actual crossroads of Canadian money, standing under a cluster of plain black towers that look, at first glance, like the most anonymous buildings on the walk. Give them a second.\n\nThese are the towers of the TD Centre, and they were the last great work of Mies van der Rohe — the German-born architect whose entire philosophy fit into three words: less is more. No ornament, no flourish, nothing carved into the stone, because there's barely any stone at all — just black steel, bronze-tinted glass, and proportions so exact it took a genius to make them look like nothing in particular. When they went up in the 1960s, they swept away the older downtown that stood here and announced the modern city. This is the future side of the walk — the part that didn't keep the old thing.\n\nBut look down. Beneath your feet, and beneath most of the blocks around you, runs the PATH: a whole second downtown, underground. Roughly thirty kilometres of climate-controlled tunnels and shopping concourses, linking the towers so that office workers can cross the core in January without ever reaching for a coat. For years it was billed as the largest underground shopping complex in the world — a title it eventually lost, on length, to Montreal's rival network, which is a fact the city has decided not to dwell on.\n\nSo even here, on the future side, the old instinct sneaks back in: the city quietly built a second version of itself and tucked it underneath the first.\n\nKeep heading north up Bay Street toward Queen, until the towers open onto a wide public square with a low, curved concrete city hall at the back of it. That's Nathan Phillips Square."
+        },
+        {
+          "id": "3a861c9d-c366-5017-9c57-dc491b045e18",
+          "order": 4,
+          "title": "Nathan Phillips Square (New City Hall)",
+          "caption": "Walk north up Bay to the open square: the curved concrete City Hall and the 3-D TORONTO sign at its back.",
+          "latitude": 43.6525,
+          "longitude": -79.3838,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-downtownspine-walk_stop4.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nathan-phillips-square_hero.webp",
+          "transcriptText": "You've walked out of the canyon of towers into open air: a big public square, a reflecting pool that turns into a skating rink when it freezes, a run of concrete arches, and that unmistakable three-dimensional sign spelling out the city's name, which half the people here are busy photographing themselves in front of. This is Nathan Phillips Square, and the thing at the back of it is the city hall Toronto built when it wanted to feel modern.\n\nLook at it properly. Two curved towers, one taller than the other, cupped around a low round chamber in the middle — the council chamber, which from above looks a little like an eye held between two parentheses. It's the opposite of everything else on this walk: no columns, no stone temple, nothing pretending to be older than it is. A Finnish architect named Viljo Revell won an international competition to design it, beating out hundreds of entries from around the world, and when it opened in 1965 it was the city announcing, in poured concrete, that it meant to be a serious modern place.\n\nOff to one side of the square is the Spirit Garden, a memorial to the survivors of Canada's residential schools — a quieter, more recent addition to a space that is meant, above all, to belong to everyone.\n\nBecause that's what this square really is. The money on this walk has mostly been private, locked inside towers and vaults, but this ground is public: the city's living room, its skating rink, its protest site, its backdrop.\n\nNow, one last thing — and it's the whole point of the walk.\n\nTurn around, and look across Bay Street. That old sandstone building with the great clock tower, glaring back at this one? That's Old City Hall."
+        },
+        {
+          "id": "989d320c-f526-5744-b789-b77416e6dbe7",
+          "order": 5,
+          "title": "Old City Hall",
+          "caption": "Across Bay Street, take in the rose-sandstone pile and clock tower of Old City Hall, glaring back at the new.",
+          "latitude": 43.6525,
+          "longitude": -79.3817,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/toronto-downtownspine-walk_stop5.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-city-hall_hero.webp",
+          "transcriptText": "Cross Bay Street, or simply stand where you are and take it in from the square: a huge Romanesque pile of rose and brown stone, arched and turreted, with a clock tower rising more than a hundred metres over the street and pointing straight down the length of Bay like it owns the view. Which, for a long time, it did.\n\nThis is Old City Hall, finished in 1899, and when it opened it was one of the largest civic buildings on the continent — the work of an architect named E.J. Lennox, who, after years of fighting the councillors over the building's ballooning cost, took a small revenge in stone: he had his own name carved into the band of stonework running under the eaves, letter by letter, because the city had refused him a plaque. Look closely under the roofline and it's still up there — the architect signing his own building out of spite.\n\nHere's why it's the end of the walk. When the space-age city hall behind you opened in the 1960s, this one was meant to come down. There were real plans to demolish it and drop a shopping centre on the site, keeping perhaps the clock tower as a keepsake. It was saved by a stubborn band of citizens who refused to let it go, and for the next half a century it served as the city's main courthouse.\n\nNow even the courts have moved out — some of them, fittingly, into the rebuilt St. Lawrence Market North a few blocks east — and the building sits empty: a national historic site with no settled job, while the city argues gently about what it ought to become — a museum, perhaps, or a library, or a hall for weddings — and nobody's quite decided.\n\nSo here they stand. The hall the city built to replace this one, and this one, which the city could never quite bring itself to lose — facing each other across a single street, old stone and new concrete, an argument nobody ever really won. That standoff might be the most Toronto thing in the whole downtown: a city that refuses to choose between its past and its future, and makes them share a corner instead, and look each other in the eye.\n\nStay a moment, and let them."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 611,
+      "walkingDistanceMeters": 1500,
+      "centroidLatitude": 43.64864,
+      "centroidLongitude": -79.38218,
+      "city": "Toronto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "Power",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
     }
   ]
 }
