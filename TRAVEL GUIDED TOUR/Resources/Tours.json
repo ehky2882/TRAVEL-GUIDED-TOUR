@@ -29837,6 +29837,1274 @@
         "Iconic Landmark"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "5b7ab228-7c58-5f5b-821b-2f52b37d71c8",
+      "createdAt": "2026-07-10",
+      "title": "Berczy Park",
+      "shortDescription": "A cast-iron fountain crowned with twenty-seven dogs — and one aloof cat — in the shadow of the city's oldest church spire.",
+      "longDescription": "A small triangular green behind the Gooderham flatiron, built around a tiered fountain swarming with dogs all gazing up at a single golden bone. The 2017 design nearly got rejected as too silly — approved only once a lone cat and two birds gave it a story. Two blocks north rises St. James Cathedral, whose 93-metre spire, the tallest church spire in Canada, once greeted every newcomer stepping off the train.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/berczy-park_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d359f458-1149-5c3d-8a47-c5e76784a535",
+          "order": 0,
+          "title": "Berczy Park",
+          "caption": "Stand by the dog fountain and count the pack, then look north up Church Street to the stone spire of St. James Cathedral.",
+          "latitude": 43.6479,
+          "longitude": -79.3745,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/berczy-park.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Within a single block, this neighbourhood keeps both its most solemn thing and its most ridiculous one. And somehow they belong together.\n\nStart in Berczy Park, the small triangular green space tucked right behind the flatiron building. Its centrepiece is a tall, tiered cast-iron fountain covered in dogs — a whole pack of them, every one gazing up at a single golden bone balanced at the very top.\n\nCount the dogs first.\n\nThere are twenty-seven of them, all fixed on that bone. Look a little harder and you'll find a cat who refuses to join in — perched off to the side, staring instead at two birds on a nearby lamppost. That cat is the punchline of the whole design. When the fountain was first proposed, around 2017, the city nearly turned it down — a fountain of dogs seemed far too silly for serious public art — and only approved it once the cat and the birds were added to give it a story. Even the park's name is contested: people argued over it for years, until the city officially settled on \"bear-ski.\" Think of a bear on skis, and you've got it.\n\nNow look north, a couple of blocks up Church Street, to a tall stone spire rising over the rooftops. That's the Cathedral Church of St. James. Its congregation is the oldest in the city — it goes back to 1797, when this was still the town of York. The spire climbs to about ninety-three metres, the tallest church spire in the country, and for decades it was simply the tallest thing in Toronto: the first landmark newcomers saw as they stepped off the train at the old station. The main church opened in 1853; the spire and its ring of bells took another twenty years to finish.\n\nOne block, two ideas of what a place is for. A spire built to make you feel small and reverent, and a fountain built to make you laugh — and yet both of them are exactly the same thing underneath: somewhere people gather and look up together. Sit by the dogs a while, glance north at the spire, and notice the city left room for the sacred and the ridiculous within a two-minute walk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6479,
+      "centroidLongitude": -79.3745,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Park",
+        "Art",
+        "Faith",
+        "Public Art",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "de829d8e-c929-5435-ab5e-b910ef1c859e",
+      "createdAt": "2026-07-10",
+      "title": "Distillery District",
+      "shortDescription": "Once the largest distillery in the British Empire — saved from demolition because, for a while, it was too old to run and too handsome to knock down.",
+      "longDescription": "A pedestrian lane of dark Victorian brick — the Boiler House, the Cooperage — where Gooderham and Worts distilled millions of gallons of whisky and once paid a startling share of the whole country's taxes. Production stopped in 1990; the too-solid, too-old buildings became the busiest film set in Canada, then reopened in 2003 as a chains-free quarter of shops and studios, often called the best-preserved Victorian industrial architecture in North America.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/distillery-district_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/distillery-district_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/distillery-district_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/distillery-district_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/distillery-district_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/distillery-district_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e1c4271a-3dfe-535a-96e8-b367d859504a",
+          "order": 0,
+          "title": "Distillery District",
+          "caption": "Stand at the foot of Trinity Street and look up the cobblestone lane lined with red-brick warehouses — no cars, just brick.",
+          "latitude": 43.6503,
+          "longitude": -79.3597,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/distillery-district.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "This was once the largest distillery in the British Empire. And the reason it's still standing is that, for a while, nobody wanted it.\n\nYou should be standing at the foot of Trinity Street, looking up a cobblestone lane lined on both sides with dark red-brick Victorian buildings — no cars anywhere, just brick underfoot and old warehouses with working names like the Boiler House and the Cooperage. This is the Distillery District.\n\nStart with what this place used to make.\n\nIt was founded in 1832 by two brothers-in-law, Gooderham and Worts — yes, the same Gooderham whose flatiron office still stands a few blocks west. By the 1860s, this was the largest distillery in the world, turning out millions of gallons of whisky a year and shipping it clear across the Empire. At its height, the company paid a genuinely startling share of the entire country's tax revenue — a single business helping to fund the government.\n\nThen it faded. Production wound down through the twentieth century and stopped completely in 1990. And here's the strange part: the place was too solid and too handsome to casually tear down, but far too old-fashioned to keep running. So it just sat — dozens of empty brick buildings — and quietly became the busiest film location in the country, a ready-made Victorian street any time a movie needed to stand in for old New York, or old Chicago, or old anywhere.\n\nIt came back in 2003, reborn as something else entirely: more than forty heritage buildings restored, every lane closed to traffic, and a rule that the spaces could only go to independent shops, galleries and studios — no chains allowed. It's often called the best-preserved collection of Victorian industrial architecture in North America. Even the ground is curated; the brick pavers under your feet were brought in to match the period.\n\nMost old industrial sites get flattened the moment the land underneath is worth more than the buildings on it. This one survived almost by accident — too good to knock down, too useless to run — and it lasted just long enough for the city to realize what it had. The smell of whisky is long gone, but the whole place was built at a scale meant to impress an empire. Wander the lanes slowly, and you can still feel that in the brick."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6503,
+      "centroidLongitude": -79.3597,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Commerce",
+        "Victorian",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ff46e235-9efb-5645-92c5-de3cd8ca9621",
+      "createdAt": "2026-07-10",
+      "title": "Nathan Phillips Square",
+      "shortDescription": "The city held a worldwide contest for a new city hall — then picked the strangest design on the table: two curved towers cupping an eye.",
+      "longDescription": "The big civic plaza off Queen and Bay, framed by Viljo Revell's 1965 City Hall — two curved towers leaning toward a low round council chamber that reads from the air as a single watchful eye. Henry Moore's Archer stands out front, bought by the public after council refused to pay for it. The square keeps rewriting itself: a Peace Garden for Hiroshima, and a 2024 Spirit Garden honouring residential-school survivors.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nathan-phillips-square_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nathan-phillips-square_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nathan-phillips-square_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nathan-phillips-square_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b87a91ab-e69b-5061-9b59-3002a5c6b083",
+          "order": 0,
+          "title": "Nathan Phillips Square",
+          "caption": "Stand in the plaza off Queen and Bay facing the two curved towers of City Hall, the reflecting pool and arches behind you.",
+          "latitude": 43.6525,
+          "longitude": -79.3839,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nathan-phillips-square.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "When Toronto needed a new city hall, it held a contest open to the entire world. And then it picked the strangest design on the table.\n\nYou should be standing in Nathan Phillips Square, the big open plaza off Queen and Bay Streets. Ahead of you is the building everyone photographs: two curved towers of different heights, leaning toward each other, with a low round chamber cupped between them. From street level it's striking. From the air, it reads as an eye — two hands holding a single watchful pupil. That's City Hall. Behind you, a reflecting pool that becomes a skating rink in winter, and a row of tall concrete arches.\n\nStart with the towers.\n\nThey're the work of a Finnish architect, Viljo Revell, whose design beat out hundreds of entries from dozens of countries back in 1958, and opened in 1965. Almost nobody expected it to win — plenty of people wanted something safe and grand and columned. Instead the city got this: curved, spare, and a little alien. It was the moment a cautious place decided, just once, to be bold.\n\nNow look for the lone abstract sculpture out on the plaza — that's The Archer, by Henry Moore. Revell flatly refused to call the building finished without a Moore in front of it. City Council, in turn, refused to pay for it. So the mayor went out and raised the money from the public instead. The residents bought the art their own council had turned down.\n\nAnd the square keeps adding to itself. There's a Peace Garden here for the victims of Hiroshima. And in the southwest corner, opened in 2024, is the Spirit Garden — an Indigenous space honouring the survivors of Canada's residential schools and the children who never came home. At its heart sits a limestone turtle in a quiet reflecting pool, and a wall nearby carries the names of all eighteen residential schools that once operated in Ontario. Take it gently if you walk over.\n\nThe building behind you was 1965's idea of the future. But the square in front of it has never stopped being rewritten — each generation adding what it believes a city should stand for. Skate here in winter, or just stand a while under the arches. This is the city's living room, and it's still being furnished."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6525,
+      "centroidLongitude": -79.3839,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Public Square",
+        "Architecture",
+        "Power",
+        "Modernist",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2d661c75-b147-50ec-ab9d-f0b6e0e4a965",
+      "createdAt": "2026-07-10",
+      "title": "Old City Hall",
+      "shortDescription": "An architect denied his credit carved his own name — and his enemies' faces — into the stone, where they still glare over the door.",
+      "longDescription": "A massive Richardsonian-Romanesque sandstone pile with an off-centre clock tower, the largest civic building in North America when it opened in 1899. Architect E.J. Lennox, snubbed by a council that refused him a plaque, cut his name into the frieze on all four sides — and, the story goes, caricatured the councillors he'd fought as the grotesque faces over the entrance. City seat, then courthouse; the courts left in 2025.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-city-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-city-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-city-hall_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-city-hall_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5ed1ef37-7f52-5954-a572-4ebba6599e8b",
+          "order": 0,
+          "title": "Old City Hall",
+          "caption": "Stand on Queen Street West facing the sandstone clock tower, then come down to the grotesque faces carved over the entrance arch.",
+          "latitude": 43.6525,
+          "longitude": -79.3817,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/old-city-hall.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Look closely at the faces carved over the front entrance, because at least one of them is an insult, set in stone, on purpose.\n\nYou should be standing on Queen Street West, looking up at the great sandstone building across from the modern City Hall — a massive, rough-walled pile with a single off-centre clock tower rising high above the head of Bay Street. This is Old City Hall, and it was built by an architect with a grudge.\n\nStart with the tower, then come down to the door.\n\nWhen it opened in 1899, this was the largest civic building in North America, and that clock tower was the tallest structure in Canada for nearly two decades. The man behind it was E.J. Lennox, and he spent more than a decade wrangling with the city over budgets, materials and credit. When the building was finished, the council refused to put up a plaque naming him as the architect. So Lennox took his revenge in stone: he had his own name and the word \"architect\" carved into the frieze running around all four sides of the building, where you can still find it.\n\nThen there are the faces. Above the entrance arches sits a row of small grotesque carvings — gargoyle-like heads — and the long-told story is that they're caricatures of the councillors Lennox had been fighting with. There's one face carved with a little more dignity than the rest. It's said to be Lennox himself, complete with his handlebar moustache, watching the others squirm for eternity.\n\nThe building served as the city's seat of government, then for decades as a courthouse. The courts moved out in 2025, and the city is now deciding what its next life should be.\n\nIt nearly didn't survive at all. When the new City Hall opened across the street, there were serious plans to tear this one down — and the developers of a shopping mall a few blocks east wanted it gone too. A group of citizens fought to keep it. So the petty, magnificent monument that one stubborn architect built to spite his bosses is still here, outlasting every councillor whose face he mocked. Walk up close and find his signature. He earned it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6525,
+      "centroidLongitude": -79.3817,
+      "city": "Toronto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Victorian",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1b4a12de-2d1a-5292-9cc0-4c0843c615c5",
+      "createdAt": "2026-07-10",
+      "title": "Osgoode Hall",
+      "shortDescription": "The famous 'cow gates' were never about cows — the narrow iron pinch was built to control people, one body at a time.",
+      "longDescription": "A pale, classically symmetric building set behind a lawn and a long iron fence — home of Ontario's law since 1797, its highest courts, and a library some call the country's most beautiful room. The legendary story that the single-file gates kept cattle off the grass is a myth: by the 1860s this was no pasture. The gates slowed crowds, not cows.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osgoode-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osgoode-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osgoode-hall_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/osgoode-hall_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "44ba5a8d-6eac-59c3-9d4b-f6ba39bca120",
+          "order": 0,
+          "title": "Osgoode Hall",
+          "caption": "Stand on Queen Street West at the iron fence and find the narrow 'cow gates' — built so only one person can pass, sideways, at a time.",
+          "latitude": 43.6516,
+          "longitude": -79.3859,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/osgoode-hall.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Everyone will tell you the gates were built to keep the cows out. Everyone is wrong — and the truth is better.\n\nYou should be standing on Queen Street West, at the long iron fence in front of Osgoode Hall — the elegant pale building set back behind a green lawn, with grand porticos and a calm, classical symmetry that feels a world away from the traffic behind you. But look at the fence itself first, and especially at the gates.\n\nThey're narrow. Strangely narrow — built so that only one person can squeeze through at a time, turning sideways through a tight iron pinch. For generations, Torontonians have explained these \"cow gates\" the same way: the lawn was once pasture, and the gates were designed to keep wandering cattle off the grass.\n\nIt's a lovely story. It's also almost certainly a myth. By the time this fence went up, in the 1860s, this was no farm field — the city already had gas lamps, piped water and streetcars. The narrow gates weren't about keeping animals out. They were about controlling people: slowing a crowd to a single file, one body at a time. Students did once try to push a cow through one in the 1950s, just to test the legend. It didn't go well for them.\n\nAnd what they guard is fitting. Osgoode Hall is the home of the law in Ontario — the headquarters of the body that has governed the province's lawyers since 1797, and home to its highest courts and a library some call the most beautiful room in the country. The original wing went up in the early 1830s, when this stood at the very edge of town.\n\nSo here's the quiet joke of the place: a building entirely about the law, ringed by a fence whose famous gates exist to decide, very precisely, who gets to pass and how. Everyone remembers the cows. Almost no one remembers it was really about us. Squeeze through one of the gates yourself — sideways, one at a time, exactly as intended — and you've already understood the building before you reach the door."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6516,
+      "centroidLongitude": -79.3859,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Power",
+        "Neoclassical",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ccae0a31-206a-567e-9ab1-0746546c5a37",
+      "createdAt": "2026-07-10",
+      "title": "Sankofa Square",
+      "shortDescription": "Most squares are named to honour someone. In 2025 this one was renamed to reckon with someone.",
+      "longDescription": "The stepped plaza at Yonge and Dundas, under a wall of glowing screens at one of Canada's busiest crossings. For years it was Yonge-Dundas Square, named for Henry Dundas, whose motion to make abolition 'gradual' still divides historians. After a community review the city adopted an Akan word meaning 'go back and get what you left behind' — a name that is itself still argued over.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sankofa-square_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sankofa-square_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sankofa-square_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sankofa-square_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sankofa-square_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "82af5b1a-7081-5c5a-a781-a7dc59b5ad86",
+          "order": 0,
+          "title": "Sankofa Square",
+          "caption": "Stand near Yonge and Dundas amid the crowds and screens, on the stepped plaza of Sankofa Square.",
+          "latitude": 43.6561,
+          "longitude": -79.3802,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sankofa-square.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Most public squares are named to honour someone. This one was renamed to reckon with someone.\n\nYou should be standing near the corner of Yonge and Dundas Streets — one of the busiest intersections in the country, where the crowds cross in every direction at once beneath a wall of giant glowing screens. The open plaza on the southeast corner, with its stage and stepped paving, is Sankofa Square.\n\nStart with the name, because the name is the whole story.\n\nFor years, this was Yonge-Dundas Square — named for the street, which was named for a man. Henry Dundas was a Scottish politician of the late seventeen hundreds. When Britain was debating an end to its slave trade, Dundas put forward a motion to make abolition gradual rather than immediate. To his critics, that delay kept people enslaved for years longer than necessary. His defenders, including some of his descendants, argue he was being strategic — softening the measure so it could actually pass. Historians still genuinely disagree about his intent.\n\nIn 2025, after years of public petitions and a community review led by Black and Indigenous leaders, the city adopted a new name. Sankofa comes from the Akan people of Ghana, and it means, roughly, \"go back and get what you left behind\" — the idea that you learn from the past in order to move forward. Its symbol is a bird walking ahead while turning to look back over its shoulder.\n\nThe change has been contested from the start. Some see it as an overdue reckoning; others questioned the cost, or the process, or whether renaming a square settles anything at all. And in a way, that argument is the point. A square named for the act of looking back has become, fittingly, a place the city is still arguing about how to look back.\n\nStand in the rush of the crossing, glance up at the screens, and consider that the ground under your feet was renamed to ask a question, not to deliver an answer. Whatever you make of it, it's doing exactly what its name says — making people stop, and reconsider."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6561,
+      "centroidLongitude": -79.3802,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Public Square",
+        "History",
+        "Remembrance",
+        "Contemporary",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d33fac9e-199c-5e13-b028-76e5560d604b",
+      "createdAt": "2026-07-10",
+      "title": "Eaton Centre & Holy Trinity",
+      "shortDescription": "A glass-roofed mall with sixty geese frozen overhead — and an 1847 church behind it the developers could not manage to erase.",
+      "longDescription": "The long galleria of the Eaton Centre, modelled on a grand European arcade, with Michael Snow's Flight Stop — one goose photographed and rescaled sixty times — suspended in the light. Snow sued when the mall tied Christmas ribbons on the birds, and won a landmark artist's-rights case. Out back stands the Church of the Holy Trinity (1847), which the public forced the mall to build around — founded on the rule that its seats stay free forever.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eaton-centre_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eaton-centre_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/eaton-centre_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "58776e0f-ea23-5470-b9e2-6129f712a460",
+          "order": 0,
+          "title": "Eaton Centre & Holy Trinity",
+          "caption": "Stand in the glass-roofed galleria and look up at the flock of geese, then step out the west side to the Gothic church behind the mall.",
+          "latitude": 43.6544,
+          "longitude": -79.3807,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/eaton-centre.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "This is a shopping mall with a flock of sixty geese frozen in the air above your head — and a church nearly two centuries old hiding behind it that the mall could not manage to kill.\n\nYou should be standing in the central galleria of the Eaton Centre, the long glass-roofed arcade that runs north to south through the building. Look straight up: suspended in the light is a flock of Canada geese, wings spread, captured in the act of coming in to land.\n\nStart with the geese.\n\nThe piece is called Flight Stop, by the artist Michael Snow, and it's hung here since 1979. It looks like sixty different birds breaking formation. But here's the trick: it isn't sixty geese. It's one. Snow photographed a single goose, then reproduced it at three different sizes — deliberately making the highest ones smallest, to fake the perspective and trick your eye into thinking the glass ceiling is even higher than it is. The title itself is a pun: a flight, stopped, the way a photograph stops time.\n\nOne Christmas, the mall's decorators tied red ribbons around the geese's necks. Snow was not amused — he compared it to hanging earrings on a famous statue — and he took the mall to court. He won. The case became a landmark in Canadian law on an artist's right to protect their own work, and it's studied in law schools to this day.\n\nNow walk out the west side, behind the mall, into a small quiet square. There's a Gothic church there, built in 1847 — the Church of the Holy Trinity. When this mall was planned in the 1960s, the design would have flattened both this church and much of Old City Hall. The public refused, and the mall was forced to build itself around the church instead. And that church was founded on a single condition: that its seats be free to anyone, forever — no rented pews — at a time when most churches charged you for a place to sit.\n\nThe galleria was modelled on a grand European arcade — a glass cathedral for shopping, with sixty geese where the altar might be. But the real church is the small, stubborn one out back: the building that simply would not move. Stand under the geese a moment, then step outside to it. The mall is what the city built. The church and the geese are what the city refused to let it erase."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 141,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6544,
+      "centroidLongitude": -79.3807,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Commerce",
+        "Art",
+        "Public Art",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0d3e20aa-bd74-524f-a147-6273f94b2355",
+      "createdAt": "2026-07-10",
+      "title": "Royal Ontario Museum",
+      "shortDescription": "A 1914 castle that grew a crashing glass crystal in 2007 — and the seam where they meet is the most honest thing on the block.",
+      "longDescription": "At Bloor and Avenue Road, Canada's largest museum has an argument welded to its corner: dark carved stone from 1914 meets Daniel Libeskind's Michael Lee-Chin Crystal — five interlocking volumes of glass and aluminum with almost no right angles, leaning out over the sidewalk. Hailed as a monument and damned as one of the world's ugliest buildings; it leaked its first winter. The old castle looks better for the company.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-ontario-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-ontario-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-ontario-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-ontario-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-ontario-museum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-ontario-museum_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "894cb8ce-b127-514f-9f63-a4e870577604",
+          "order": 0,
+          "title": "Royal Ontario Museum",
+          "caption": "Stand at Bloor and Avenue Road at the seam where the 1914 stone museum meets the angled glass of the Crystal.",
+          "latitude": 43.6677,
+          "longitude": -79.3948,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/royal-ontario-museum.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Look up at the corner of Bloor Street West and Avenue Road, at the spot where this building seems to be having an argument with itself.\n\nOn one side, dark stone, carved detail, the calm face of a building from 1914 that was meant to look like a castle and largely succeeded. On the other, jammed right into it, a burst of angled glass and brushed aluminum that looks like it crashed in from somewhere else and stuck. That's the Michael Lee-Chin Crystal, and the seam where the two meet is the most honest thing on the block.\n\nStart with the old building. The Royal Ontario Museum opened here in 1914, and for most of a century it did what grand museums did — it kept the world's cultures behind heavy walls and asked you to come in quietly. Today it holds something like six million objects, which makes it the largest museum in the country. For decades it was nicknamed, not always kindly, the castle.\n\nThen, in 2007, the castle grew a crystal. The architect was Daniel Libeskind, chosen from fifty finalists, and his idea was that the addition should echo the gem-and-mineral collection inside — five interlocking volumes, a quarter glass and three-quarters aluminum, almost no right angles, and exactly one vertical wall in the whole thing. The canted walls lean out over the sidewalk and never quite touch the old stone.\n\nHere's the part the city still argues about. When it opened, one major critic called it a monument; another said it raged at the world. Some lists put it among the ugliest buildings anywhere. It leaked that first winter.\n\nMost cities bury the fight over what they should look like. Toronto welded its argument to the corner of Bloor and left it there, in glass, for everyone to take a side.\n\nSo take one. Stand at the seam, where 1914 meets 2007, and notice that the old building looks better for the company — and the Crystal looks better for having something to crash into. Whatever you decide, you're not walking past it. Nobody does."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6677,
+      "centroidLongitude": -79.3948,
+      "city": "Toronto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "History",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4a191d84-138a-5b84-a851-530ab411f77d",
+      "createdAt": "2026-07-10",
+      "title": "Art Gallery of Ontario",
+      "shortDescription": "Frank Gehry came home to remake the gallery he first saw at age eight — and, for once, built restraint instead of spectacle.",
+      "longDescription": "On Dundas West, a 180-metre curve of Douglas fir and glass the critics nicknamed the belly of a whale. Gehry, born a few blocks away, played in the park behind it as a boy; this was his first Canadian building. Inside, a spiral staircase bursts up through a glass roof; a blue-titanium wing leans over the park. Built to hold Ken Thomson's 2,000-work gift, wrapped around the Grange, the gallery's 1817 first home.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-ontario_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-ontario_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-ontario_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-ontario_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-ontario_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "aa412d2a-a81e-5506-bf21-859de9614ab5",
+          "order": 0,
+          "title": "Art Gallery of Ontario",
+          "caption": "Stand on Dundas Street West beneath the long curving wall of timber and glass — the AGO's whale-belly front.",
+          "latitude": 43.6536,
+          "longitude": -79.3925,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/art-gallery-of-ontario.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "You're on Dundas Street West, standing under a wall of glass and wood that curves along the block like the hull of an upturned boat. Find the long timber-and-glass front — that's the Art Gallery of Ontario, and the architect who shaped it grew up a few blocks from where you're standing.\n\nHis name is Frank Gehry. You may know his other work: the titanium swoops of Bilbao, the steel sails of the Walt Disney Concert Hall in Los Angeles — buildings that announce themselves from a mile off. He was born in Toronto, into a Jewish family in a downtown immigrant neighbourhood, played as a kid in the park just behind this building, and first saw real art inside it when he was eight years old. When the gallery asked him to remake it, he called the job an emotional experience. It was his first building in Canada.\n\nEveryone expected a Bilbao. What he built instead was restraint. Run your eye along that front — a corridor of warm Douglas fir and glass, about a hundred and eighty metres long, that the critics nicknamed the belly of a whale. Step inside later and you'll find a spiral staircase that bursts straight up through a glass roof and keeps climbing outside the building. Around the back, a wing clad in blue titanium leans over the park.\n\nThe whole thing was built to hold one extraordinary gift — the collection of Ken Thomson: more than two thousand works, everything from tiny ship models to a rediscovered Rubens. Tucked at the heart of it all is the Grange, an 1817 house that was the gallery's very first home.\n\nHere's the quiet genius of it. The old gallery looked inward, the way museums do, keeping your eyes on the walls. Gehry turned it to face the city — glass everywhere, the rooftops of Chinatown pressing against the windows. He could have built a spectacle. He came home and built something that looks at its hometown instead.\n\nOne last thing, out front: a great bronze by Henry Moore — the same sculptor whose Archer sits over at City Hall. Stand here a moment before you go in. This is the rare landmark more interested in the view out than the view of itself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6536,
+      "centroidLongitude": -79.3925,
+      "city": "Toronto",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Frank Gehry",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f5f19598-1316-5eb7-962e-a0e97c3fd252",
+      "createdAt": "2026-07-10",
+      "title": "Queen's Park (Ontario Legislature)",
+      "shortDescription": "The 'Pink Palace' of Ontario's government — a rose-sandstone pile that began with a competition judge picking his own design.",
+      "longDescription": "The long Richardsonian-Romanesque seat of Ontario's legislature, in rose Credit Valley sandstone, built 1886–92 on land leased from the university next door for a peppercorn. A competition judge, the Buffalo architect Richard Waite, won the commission himself — a scandal, and critics grumbled it looked too American. Ten million prison-made bricks; a west wing rebuilt in pale marble by E.J. Lennox after a 1909 fire. Its Latin motto: hear the other side.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queens-park_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6bef68f3-c00b-5c25-9bec-0f93458aeb41",
+          "order": 0,
+          "title": "Queen's Park (Ontario Legislature)",
+          "caption": "Stand on the south lawn with University Avenue behind you, facing the long rose-pink sandstone front of the legislature.",
+          "latitude": 43.6606,
+          "longitude": -79.3925,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/queens-park.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Stand on the south lawn of Queen's Park, with University Avenue running away behind you, and look north at the long pink building filling the end of the view. Torontonians call it the Pink Palace, after the rose-coloured sandstone hauled in from the Credit Valley. It's the seat of Ontario's government — and it started with a scandal.\n\nThe province ran a competition for the design. One of the judges was an architect named Richard Waite, working out of Buffalo. When the entries came in, the commission went to — Waite. One of the judges. Ontario's architects were furious, and to make it worse, plenty of people complained the winning design looked too American. The building meant to embody the province had a conflict of interest at its foundation and an accent from across the border.\n\nIt went up anyway, between 1886 and 1892, and opened in 1893. Look at the stonework — those unusually large windows are only possible because the whole thing hangs on an iron frame hidden inside. The walls hold something like ten and a half million bricks, and most of them were made by prisoners. And if that heavy, rounded, fortress-like style looks familiar, it should: Old City Hall, a few blocks south, was built in almost exactly this manner six years later.\n\nThen, in 1909, fire gutted the west wing. The man brought in to rebuild it was E.J. Lennox — the same architect who carved his enemies' faces into Old City Hall — and he lined the new interior in pale Italian marble, so the two halves of the building still don't quite match.\n\nNow the detail worth the walk. Carved over the legislative chamber inside, in Latin, is the building's motto: hear the other side. It sits above a room that has spent more than a century as one of the loudest, most partisan in the country.\n\nThe land under your feet, by the way, is leased from the university next door for almost nothing — a peppercorn deal, generations old. Stay a minute. Watch the pink stone go properly rose as the light drops. A building that began in an argument, still standing, still arguing. It suits the place."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6606,
+      "centroidLongitude": -79.3925,
+      "city": "Toronto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Power",
+        "History",
+        "Victorian",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eae0eca2-4d76-565f-9deb-a59ed081580f",
+      "createdAt": "2026-07-10",
+      "title": "University of Toronto — King's College Circle",
+      "shortDescription": "The sleepiest-looking lawn in the city hides a power plant, a $1 insulin patent, and the country's largest urban geothermal field.",
+      "longDescription": "The grand oval at the heart of U of T, faced by University College (1857) and the domed Convocation Hall (1907). Until 2024 it was a car park; the university pulled the cars, restored the lawn, and drilled 372 boreholes for the largest urban geothermal field in Canada beneath it. A stone's throw away, insulin was isolated in 1921–22 and its patent sold to the university for a single dollar.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uoft-kings-college-circle_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uoft-kings-college-circle_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uoft-kings-college-circle_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uoft-kings-college-circle_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/uoft-kings-college-circle_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8497681a-e2ae-5cdc-8769-bcecb2376b24",
+          "order": 0,
+          "title": "University of Toronto — King's College Circle",
+          "caption": "Stand in the middle of the oval lawn, University College to the west, the dome of Convocation Hall to the southwest.",
+          "latitude": 43.6629,
+          "longitude": -79.3957,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/uoft-kings-college-circle.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Walk to the middle of the big oval lawn at the heart of the University of Toronto — King's College Circle, with the grand old face of University College to the west and the round dome of Convocation Hall to the southwest. It looks like the oldest, calmest, most settled patch of ground in the city. It's one of the most deceptive.\n\nStart with what's under you. Until recently this circle was a road full of parked cars. In 2024 the university finished pulling the cars out and turning it back into lawn — and while they were at it, they drilled three hundred and seventy-two boreholes deep into the ground beneath the grass and built the largest urban geothermal field in the country down there. You're standing on a meadow with a power plant under it.\n\nNow look around the edge. University College, to the west, went up in 1857, and it has what locals like to call the most photographed doorway in Toronto — and, if you believe the students, a resident ghost, a stonemason from the building site who never quite left. The domed hall to the southwest is Convocation Hall, from 1907, where essentially every graduate of this university has crossed this very lawn to collect a degree.\n\nBut the best story here is invisible. Within a stone's throw of where you're standing, in the winter of 1921 and 1922, a small team isolated insulin — and then sold the patent to the university for a single dollar, so that no one could ever corner it. A discovery that has kept tens of millions of people alive, given away, right here.\n\nThere's one more thread. The whole university began, two centuries ago, partly as a defensive act — the colonial governor wanted a college to keep the young colony loyal and British, a wall against ideas drifting up from the new republic to the south. Today it's the largest, most international university in the country, which is its own quiet answer to the man who founded it.\n\nAnd near Hart House, just northeast, there's now a dedicated Indigenous landscape on this same ground. Cross the grass the way the graduates do. The prettiest, sleepiest-looking square in Toronto has quietly been one of its most consequential."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6629,
+      "centroidLongitude": -79.3957,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Park",
+        "History",
+        "Engineering",
+        "Free to Visit",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4dcb8d7d-09fa-5af7-833e-36dde63fe750",
+      "createdAt": "2026-07-10",
+      "title": "Bata Shoe Museum",
+      "shortDescription": "A museum shaped like a shoebox — because the architect was struck not by the shoes, but by the boxes that protected them.",
+      "longDescription": "On Bloor at St. George, Raymond Moriyama's pale limestone building wears its lid slightly askew: a literal shoebox, capped in copper that will green with age. Inside, some 15,000 objects across 4,500 years turn on founder Sonja Bata's single observation — that feet are identical the world over, yet what every culture puts on them is different.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bata-shoe-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bata-shoe-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bata-shoe-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bata-shoe-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bata-shoe-museum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bata-shoe-museum_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f5cea3f5-ee16-50a7-86bb-cfd223121054",
+          "order": 0,
+          "title": "Bata Shoe Museum",
+          "caption": "Stand at Bloor and St. George and look up at the limestone box with its copper lid set slightly crooked — on purpose.",
+          "latitude": 43.6674,
+          "longitude": -79.4003,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bata-shoe-museum.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "On the corner of Bloor Street West and St. George Street, look up at the low limestone building that appears to be a box with its lid set on slightly crooked. That's not an accident. The Bata Shoe Museum is a building shaped like a shoebox, and the reason why tells you what the place is really about.\n\nWhen the architect, Raymond Moriyama, first saw the collection back in the late 1970s, what struck him wasn't the shoes — it was the boxes they were stored in, protecting them from light and dust. So he built the museum as a box: pale French limestone chosen because it has the warm tone of raw leather, a copper lid that will slowly turn green, and a glass wedge for a door. The city's zoning capped the height, so he made the constraint the whole idea — a low, lidded box on a busy corner.\n\nInside are something like fifteen thousand objects spanning four thousand five hundred years, only a fraction shown at any one time. But the spine of the place is a single observation, made by its founder, Sonja Bata, who started collecting in the 1940s while travelling the world with her husband's shoe company. Everywhere she went, she noticed the same thing: people's feet are identical the world over — and what they choose to put on them is different in every single culture.\n\nThat's the quiet argument this building makes. The shoe is the most overlooked thing you own and one of the most honest records you leave behind — it knows your climate, your work, your status, your vanity. There's a gentle irony in it, too: she began saving traditional footwear partly because her own family's factories were busy replacing it.\n\nSo before you go in, look down at whatever you've got on your feet. Somewhere in that box behind the crooked lid, there's a pair that tells a story a lot like yours."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6674,
+      "centroidLongitude": -79.4003,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Fashion",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "55231657-7656-5f6a-ab3c-2abb560df819",
+      "createdAt": "2026-07-10",
+      "title": "Gardiner Museum",
+      "shortDescription": "Canada's only museum devoted to ceramics — born because the ROM, across the street, said a polite no.",
+      "longDescription": "A crisp stack of limestone and glass stepping up toward Queen's Park. When the ROM couldn't show George and Helen Gardiner's ceramics, they built their own museum across the road in 1984 — still the only one in Canada devoted to clay. A 2006 glass cube reaches toward the park; a 2025 reopening added a permanent gallery of Indigenous ceramics. Roughly half the collection is on view at once.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gardiner-museum_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8cd1fff2-c89f-5683-8c3b-26e2a4c396c3",
+          "order": 0,
+          "title": "Gardiner Museum",
+          "caption": "Stand across from the ROM facing the stepped limestone-and-glass front of the Gardiner, Queen's Park rising behind it.",
+          "latitude": 43.6682,
+          "longitude": -79.3936,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/gardiner-museum.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "You're across the street from the Royal Ontario Museum, in front of a crisp stack of limestone and glass that steps up toward Queen's Park. This is the Gardiner Museum, and it exists because of a polite no.\n\nIn the early 1980s, a Toronto couple — George and Helen Gardiner — had assembled a remarkable collection of ceramics and hoped to show it inside the ROM, right over there. It didn't come together. So they did the only reasonable thing and built their own museum across the road. It opened in 1984, and it became — and remains — the only museum in Canada devoted entirely to ceramics, and one of very few anywhere in the world.\n\nGeorge Gardiner was a businessman; he once ran the Toronto Stock Exchange, and, in a detail nobody expects, he's the man who brought Kentucky Fried Chicken to Canada. From that, a temple to clay. Inside, the pottery runs from ancient American earthenware through Italian Renaissance majolica to delicate Chinese, Japanese and European porcelain — and, unusually for any museum, close to half the collection is actually on display at once.\n\nThe building grew in stages — a 2006 expansion added that cantilevered glass cube reaching toward the park — and it reopened again in 2025 with something new: the museum's first permanent gallery of Indigenous ceramics, built to make the point that this isn't ancient craft behind glass but a living art, still being made.\n\nThat's the thing about clay. It's the humblest material there is, mud and fire, and the least forgiving. A curator here put it well — ceramics has \"a lot of failure baked into it.\" You shape something, you put it in the kiln, and you simply hope.\n\nSo step in. The grandest museum on the block is right behind you. The one with the best story is the small one in front of you — the one that started with a no."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6682,
+      "centroidLongitude": -79.3936,
+      "city": "Toronto",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "History",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bb96b1b1-04b8-5621-ad20-7cb335d6a4f7",
+      "createdAt": "2026-07-10",
+      "title": "Casa Loma",
+      "shortDescription": "The largest house ever built in Canada — a hilltop castle, and a headstone for the idea that one man should own the light.",
+      "longDescription": "Sir Henry Pellatt's 98-room castle on the ridge, built 1911–14 by E.J. Lennox with secret passages, a stable tunnel, and early full electric wiring. Pellatt made his fortune harnessing Niagara and lighting Toronto — then Ontario decided power that vital shouldn't be one rich man's, and took it public. He lived here under a decade, walked away in 1923, and died with almost nothing.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-loma_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/casa-loma_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "518ecb09-6212-519f-833f-3b04783af929",
+          "order": 0,
+          "title": "Casa Loma",
+          "caption": "Stand below the grey stone towers and battlements of Casa Loma, the largest house ever built in Canada.",
+          "latitude": 43.678,
+          "longitude": -79.4094,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/casa-loma.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Look up. The grey stone towers and battlements above you belong to Casa Loma — Spanish for \"hill house\" — and it is, by any reasonable measure, a castle, dropped onto a ridge in the middle of a North American city. It's the largest house ever built in Canada. It's also a monument to a fortune that was already draining away as the walls went up.\n\nThe man who built it was Sir Henry Pellatt, and you've met his architect already, in a sense: E.J. Lennox, the same man behind Old City Hall and the rebuilt wing of the legislature at Queen's Park. Pellatt handed him a near-blank cheque, and between 1911 and 1914 Lennox spent it — ninety-eight rooms, secret passages, a tunnel running underground to the stables, an oven big enough to roast an ox, and one of the first private homes in the city wired throughout for electric light.\n\nThat last detail is the whole story. Pellatt made his fortune on electricity. He was one of the men who harnessed Niagara Falls and lit up Toronto, and at his peak he was worth something like seventeen million dollars in the money of the day. He poured it into this hill.\n\nThen two things happened. The First World War froze his plans, and the grand basement, with its planned swimming pool, was never finished. And Ontario decided that power this important shouldn't belong to one rich man at all. A public-electricity movement, riding the idea that hydro should be as free as the air, took the private companies into public hands. The thing Pellatt had built his life on became a public utility.\n\nHe lived here less than ten years. The taxes climbed, the debts mounted, and in 1923 he walked away from the castle and auctioned off its contents for a fraction of their worth. He died, years later, with almost nothing.\n\nSo stand here and read it for what it is — not just a rich man's folly, but a kind of headstone for the idea that one person should own the light. The view from up here, out over the city he helped electrify, is still one of the best in Toronto. He just didn't get to keep it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.678,
+      "centroidLongitude": -79.4094,
+      "city": "Toronto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Power",
+        "Gilded Age",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "68e9b649-c481-57c0-b4f7-9365ebf912d7",
+      "createdAt": "2026-07-10",
+      "title": "Spadina Museum",
+      "shortDescription": "Next to the castle, the real thing: a family home frozen in the 1920s and '30s — told from the drawing room and the back stairs alike.",
+      "longDescription": "Behind a garden on the same ancient lake-shore ridge as Casa Loma, the Austin family's brick house was home for over a century (1866–1982), then given to the city intact. Frozen not to one grand era but to the years between the wars, and told from both ends — the family at their leisure and the staff who ran the place. (The house is Spa-dee-na; the street below, Spa-dye-na.)",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spadina-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spadina-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spadina-museum_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "88509db8-8f59-5b85-9965-16cef278c1a3",
+          "order": 0,
+          "title": "Spadina Museum",
+          "caption": "Stand in the garden of Spadina House, the large brick home set back on the ridge just east of Casa Loma.",
+          "latitude": 43.6793,
+          "longitude": -79.4089,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/spadina-museum.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Right next door to the castle, set back behind a garden on the same high ridge, is a large brick house that most visitors walk straight past on their way to Casa Loma. Don't. This is Spadina — and if the castle next door is a fantasy of wealth, this is the real thing.\n\nFirst, the name. Spadina comes from an Anishinaabe word meaning hill, or a sudden rise of land — which is exactly what you're standing on. This ridge is the ancient shoreline of a prehistoric lake, Lake Iroquois, and it runs right under the castle too. There's a quiet bit of Toronto class history buried in how you say it: the grand old house is Spa-dee-na, while the busy street down the hill is Spa-dye-na. Same word, two accents — once a marker of which side of the money you were on.\n\nThe house was home to a single family — the Austins — for well over a century, from 1866 all the way to 1982. James Austin was a banker, and the bank he founded eventually grew into the one whose black towers you'll find downtown today. When the last Austin left, the family gave the house and everything in it to the city, on the condition that it be kept rather than sold off.\n\nSo the city froze it — and not as a museum of one grand era, but specifically in the 1920s and 1930s, the years between the wars. And it's told from both ends of the house: the family in their drawing room, and the staff on the back stairs who actually ran the place.\n\nThat's the gift of Spadina. The castle next door sells you a dream. This house, quietly, shows you how people really lived in one — all of them."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6793,
+      "centroidLongitude": -79.4089,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Commerce",
+        "Victorian",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cd79f428-c7f9-550d-af4d-fa5cef6197b2",
+      "createdAt": "2026-07-10",
+      "title": "The Annex",
+      "shortDescription": "The neighbourhood that invented its own house style — and then stopped an expressway cold.",
+      "longDescription": "North off Bloor, streets of big red-brick houses with deep porches and turrets under old trees — many in the 'Annex style,' a local blend of American Romanesque arches and Queen Anne turrets often credited to E.J. Lennox. Toronto annexed the subdivision in 1887 and the dull word stuck. In the 1960s residents, led by Jane Jacobs, killed the expressway planned straight through it.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-annex_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-annex_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-annex_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c1527c69-1aa8-5749-b5bb-ad05e2946c0c",
+          "order": 0,
+          "title": "The Annex",
+          "caption": "Step off Bloor onto a side street — Admiral, Brunswick, Walmer — and look up at the big brick houses under the trees.",
+          "latitude": 43.669,
+          "longitude": -79.408,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-annex.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Step off the noise of Bloor Street onto one of the side streets running north — Admiral, Brunswick, Walmer — and the city changes in half a block. Big red-brick houses, deep porches, turrets and rounded arches, all under a canopy of old trees. This is the Annex, and it's worth knowing two things about it: it invented a house, and it once saved itself.\n\nStart with the name, which is gloriously unromantic. In 1887 the city of Toronto literally annexed this subdivision — absorbed it across the city limits — and the bureaucratic word just stuck. The developers had gambled that Toronto's rich would pay for big lots on leafy streets away from downtown, and they were right; the Eatons and the Gooderhams built their mansions up here.\n\nNow look at the houses. Many are built in what's actually called the Annex style — a local invention, blending heavy American Romanesque arches with British Queen Anne turrets and big show-off attics. The architect usually credited with starting it is E.J. Lennox — yes, the Old City Hall and Casa Loma man, again. His fingerprints are all over this part of the city.\n\nBut the Annex's real claim is a fight. In the 1960s, the city planned an expressway that would have torn straight through here. The residents organized and stopped it cold — and one of the leaders was Jane Jacobs, the writer who had already beaten a highway through her own neighbourhood in New York before moving to Toronto and doing it all over again. The expressway died. The houses stayed.\n\nThat's the thread that runs through this whole city, once you start looking for it — the market that refused to be replaced, the distillery saved by going quiet, the church the mall had to build around. The Annex is where Toronto got good at saying no. Walk a block further and look up. All of this was supposed to be a highway."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.669,
+      "centroidLongitude": -79.408,
+      "city": "Toronto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "History",
+        "Victorian",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bff6f565-3d2e-5143-979c-ca24e4f775a7",
+      "createdAt": "2026-07-10",
+      "title": "Prince Edward Viaduct",
+      "shortDescription": "A bridge with a hidden second deck built for a subway that didn't exist — and sat empty for 48 years before the trains arrived.",
+      "longDescription": "The 'Bloor Viaduct,' three steel arches carrying Bloor 40 metres over the Don Valley (finished 1918). Works commissioner R.C. Harris ordered a lower deck engineered for a subway the city had repeatedly voted down. It sat empty until 1966, when the Bloor-Danforth line finally ran across it, saving millions. Michael Ondaatje gave the bridge back to its immigrant builders in fiction; the Luminous Veil was added in 2003.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/prince-edward-viaduct_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "40ce1f36-6df6-5765-ad68-1295eea02b66",
+          "order": 0,
+          "title": "Prince Edward Viaduct",
+          "caption": "Stand on the Bloor Viaduct looking down its line of steel arches, the Don Valley green below and the skyline opening south.",
+          "latitude": 43.6772,
+          "longitude": -79.359,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/prince-edward-viaduct.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "You're standing on the Prince Edward Viaduct — most people just call it the Bloor Viaduct — the long steel arch that carries Bloor Street across the Don Valley. Look down the line of the bridge: nearly five hundred metres of three graceful arches, forty metres above the valley floor, the city skyline opening to the south and the ravine running green below you. It's one of the great views in Toronto. It's also a monument to believing in a future nobody else could see.\n\nGo back to when it was built, finished in 1918. The man behind it was the city's commissioner of works, R.C. Harris, and Harris did something that struck a lot of people as madness. He ordered a second deck built underneath the road — a complete lower level, engineered to carry a subway. Toronto had no subway. Voters had rejected the idea at the ballot box, more than once. There were barely any trains, and the land east of the valley was mostly empty fields. People grumbled about spending wartime money on a bridge for trains that didn't exist, to carry people who weren't there yet.\n\nThe lower deck sat empty for forty-eight years. Then, in 1966, the Bloor-Danforth subway finally crossed the Don Valley — running straight along the deck Harris had built half a century earlier, and saving the city millions. The trains you can feel rumbling beneath your feet right now are running on a bet placed before they were invented.\n\nThere's a second layer to this place. In 1987, the writer Michael Ondaatje set part of a novel here — In the Skin of a Lion — and gave the bridge back to the immigrant workers who actually built it, the men whose names the official records never bothered to keep. His idea, roughly, was that a city has to be imagined before it can be seen. This bridge is exactly that.\n\nAnd the fine screen of rods beside you is called the Luminous Veil, added in 2003 — the city's quiet way of looking after the people who cross here. Stand a moment. You're standing on something that was dreamed long before it was ever real."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6772,
+      "centroidLongitude": -79.359,
+      "city": "Toronto",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Bridge",
+        "Engineering",
+        "History",
+        "Viewpoint",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e63c3cda-4b66-5ce1-aced-8fce0ef66743",
+      "createdAt": "2026-07-10",
+      "title": "Kensington Market",
+      "shortDescription": "Nobody ever really built this market — it just kept being handed down, each wave of newcomers painting over the last one's sign.",
+      "longDescription": "Narrow 1880s workers' cottages with their front rooms opened into shops, near Augusta and Baldwin. Jewish, then Portuguese, Italian, Caribbean, Vietnamese, Latin American and East African families each set up in turn. The streets are too narrow for delivery trucks or chains — the awkwardness is the defence. It beat a 1960s tower-block plan and became a National Historic Site in 2006.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kensington-market_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "11d0bdfb-d576-59a6-8031-57d2df44cf2c",
+          "order": 0,
+          "title": "Kensington Market",
+          "caption": "Stand near Augusta and Baldwin with the narrow shopfronts and produce crates pressing in on both sides.",
+          "latitude": 43.6547,
+          "longitude": -79.4005,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kensington-market.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "You can smell this place before you can see it — coffee, incense, fish on ice, someone's lunch three doors down.\n\nStand somewhere near the corner of Augusta Avenue and Baldwin Street, with the narrow shopfronts pressing in on both sides and the produce spilling out onto the sidewalk in crates. Look at the buildings themselves for a second, underneath the murals and the hand-painted signs. They're just houses. Small Victorian workers' cottages, built in the 1880s for Irish and Scottish labourers, with the front rooms knocked out and turned into shops.\n\nThat's the whole trick of Kensington, and it's worth knowing before you wander in. Nobody ever really built this market. It just kept being handed down.\n\nThe first wave were Eastern European Jewish families, in the early 1900s, selling from stalls and front stoops — a couple of their synagogues are still tucked into the side streets. Then Portuguese and Italian families. Then Caribbean, then Vietnamese, then Latin American, then East African. Each one arrived, set up shop, and painted over the last one's sign without quite erasing it. You're standing in the layers right now.\n\nHere's the part that keeps it honest. These streets are narrow — too narrow for a proper delivery truck, nearly impossible to park on. That's not a charming accident; it's the reason the chain stores never moved in, and the reason the rents stayed within reach of someone selling empanadas out of a former living room. The awkwardness is the whole defence.\n\nIt nearly didn't survive. In the 1960s, a city plan proposed levelling these little houses for apartment towers — the same idea that flattened other neighbourhoods downtown. Kensington said no, and in 2006 the country made it official, naming the whole market a National Historic Site — not for any one building, but for being a living record of who kept arriving.\n\nSo take your time. Buy something small from someone who clearly made it themselves. Most cities replace themselves — knock the old thing down, put the new thing up. Kensington just kept adding rooms."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6547,
+      "centroidLongitude": -79.4005,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Immigration",
+        "Food",
+        "Victorian",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "00634a7e-56d0-5f83-b171-afa3bf8efbeb",
+      "createdAt": "2026-07-10",
+      "title": "Chinatown (Spadina)",
+      "shortDescription": "One of North America's largest Chinatowns — rebuilt from the pieces of a first one the city demolished to build its new City Hall.",
+      "longDescription": "Four blocks of Chinese, Vietnamese and Thai signage around Spadina and Dundas, streetcars clanging through. Toronto's first Chinatown grew near Elizabeth Street in the Ward, until the 1950s expropriation flattened it for Nathan Phillips Square. Families moved west into a former Jewish garment district — then, in the 1960s, beat back a second clearance when Jean Lumb helped lead a Save Chinatown campaign.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-spadina_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-spadina_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-spadina_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-spadina_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1c012863-a87f-55d6-829b-3ebd72d628b4",
+          "order": 0,
+          "title": "Chinatown (Spadina)",
+          "caption": "Stand at Spadina and Dundas West amid the signage and sidewalk fruit stalls, a streetcar rattling up the avenue.",
+          "latitude": 43.6529,
+          "longitude": -79.398,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chinatown-spadina.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Listen for the streetcar first. That rattle and clang coming up Spadina Avenue is the sound of this whole neighbourhood, and it's a good place to start.\n\nStand at the corner of Spadina and Dundas Street West, where four blocks of Chinese, Vietnamese and Thai signage crowd every window and the fruit sellers stack lychees and durian out on the sidewalk. This is one of the largest Chinatowns in North America. But the thing worth knowing is that it's in the wrong place — or rather, the second place.\n\nToronto's first Chinatown wasn't here. It grew up in the early 1900s about a kilometre east, around Elizabeth Street, in the crowded immigrant district people called the Ward. Laundries, restaurants, family associations, a couple of thousand people. And in the 1950s, the city expropriated it and knocked most of it flat to build the new City Hall and the square in front of it. If you've stood in Nathan Phillips Square, you've stood on top of the first Chinatown.\n\nThe families who could afford to move came here, west along Dundas to Spadina, into what had been a Jewish garment district as that community moved north. A second Chinatown, rebuilt from the pieces of the first.\n\nAnd then, in the 1960s, the city came back. A plan proposed clearing the rest for office towers. This time the community organised — a restaurateur named Jean Lumb helped lead a Save Chinatown campaign, arguing, simply, that a city this size ought to have a place where newcomers could land among people who spoke their language. This time, the city backed down.\n\nSo this is a neighbourhood that got moved once and refused to be moved twice. Grab something steamed from a window counter, stand in the noise for a minute, and notice that nothing here is trying to be quaint. It's just working — the way it has, in one spot or another, for well over a hundred years."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6529,
+      "centroidLongitude": -79.398,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "Immigration",
+        "Food",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3a0badef-04ff-55cc-8712-0af987dedd98",
+      "createdAt": "2026-07-10",
+      "title": "Graffiti Alley",
+      "shortDescription": "Officially it's Rush Lane. Nobody calls it that — and the city didn't legalize the art so much as agree to stop fighting about it.",
+      "longDescription": "Nearly a kilometre of laneway behind Queen West where every wall, door and drainpipe is painted — and repainted, most of it different next time you come. An unwritten code among artists protects a few long-standing pieces. Ticketed for years as illegal graffiti, the lane was designated in 2011 once the business association argued it had simply become an attraction. Still, technically, not a legal wall.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/graffiti-alley_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/graffiti-alley_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e719c1f0-b55c-58e6-9a4c-73ac391ec678",
+          "order": 0,
+          "title": "Graffiti Alley",
+          "caption": "Duck into the laneway behind Queen Street West between Spadina and Portland and keep walking — every surface is painted.",
+          "latitude": 43.6485,
+          "longitude": -79.398,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/graffiti-alley.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Officially, you're in Rush Lane. Nobody calls it that.\n\nDuck into the alley that runs behind the south side of Queen Street West, somewhere between Spadina Avenue and Portland Street, and keep walking. For about three blocks — close to a kilometre of brick, if you follow every offshoot — every wall, door and drainpipe is painted, and most of it will be different the next time you come.\n\nThat impermanence is the point. Some pieces vanish in a week, painted over by whoever's next. A few have survived for years, left alone by an unwritten code among the artists about what you don't touch. Look for the big tribute wall crammed with local characters — one artist's cheerful yellow bird presiding over a crowd of Toronto in-jokes. If it's still there.\n\nHere's the Toronto part. For years, this was simply illegal — property owners kept getting ticketed for graffiti they hadn't asked for and couldn't keep up with. So the local business association made an argument that only really works in this city: the wall had become an attraction. A comedian was filming his national television rants against these bricks. Tourists were coming to photograph it. In 2011, the city agreed to designate the lane and stop fining people.\n\nNotice what that is, though. The city didn't declare the art legal. It's still, technically, not a legal wall. What happened is more Canadian than that: everyone quietly agreed to stop fighting about it.\n\nSo walk the whole length, slowly. Take a photo of something you like, and know it's a photo of a thing that won't exist much longer. That isn't a flaw in the gallery. It's the only gallery in the city that repaints itself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6485,
+      "centroidLongitude": -79.398,
+      "city": "Toronto",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "District",
+        "Art",
+        "Public Art",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "03de2636-cc5e-5929-997d-3e958acf1396",
+      "createdAt": "2026-07-10",
+      "title": "Queen Street West",
+      "shortDescription": "Vogue once ranked it the second-coolest neighbourhood on earth — a cool that keeps moving west, one rent hike at a time.",
+      "longDescription": "West of Bathurst, boutiques, galleries and cafés mixed with the older, cheaper shops not yet priced out. For decades Toronto's artists and cheap rent migrated together — galleries made a stretch interesting, boutiques followed, rents rose, artists moved on. Queen West became West Queen West became Parkdale. The Drake and Gladstone hotels, faded flophouses reborn as design hotels, mark the turn.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-street-west_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-street-west_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-street-west_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ef845c45-b6e5-5e8e-be94-bb6c21c02a69",
+          "order": 0,
+          "title": "Queen Street West",
+          "caption": "Stand on Queen Street West of Bathurst amid the boutiques, galleries and cafés — the Drake Hotel nearby.",
+          "latitude": 43.643,
+          "longitude": -79.413,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/queen-street-west.mp3",
+          "audioDurationSeconds": 107,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "About a decade ago, Vogue magazine ranked the street you're standing on the second-coolest neighbourhood on earth, behind one in Tokyo. Try not to hold it against the place.\n\nYou're on Queen Street West, west of Bathurst, in the stretch that got relabelled West Queen West once plain Queen West stopped sounding far enough out. Look at the mix along here: a boutique hotel, a vintage shop, a gallery, a café charging real money for coffee, and, somewhere in the gaps, the older, cheaper businesses that haven't been priced out yet.\n\nThat tension is the whole story of this street, and it moves in one direction: west. For decades, Toronto's cheap rent and its artists kept migrating together, one stretch of Queen at a time. The galleries and studios would land somewhere affordable and make it interesting; the interesting would draw the boutiques; the boutiques would lift the rent; and the artists would pack up and move a few blocks further west to do it all again. Queen West became West Queen West became Parkdale.\n\nThe two grand old hotels along here, the Drake and the Gladstone, are the markers of the turn — both faded flophouses reborn as design hotels right about when the magazines started paying attention.\n\nNone of this is unique to Toronto, and it isn't simply good or bad. Something is gained — the street is genuinely alive — and something is lost every time the rent resets. Reasonable people who live here argue about it constantly.\n\nSo enjoy the version you're seeing today, because it's temporary by design. Somewhere a few blocks west, on a cheaper corner you'd walk past without noticing, the next Queen West is quietly being invented right now."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 107,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.643,
+      "centroidLongitude": -79.413,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "Commerce",
+        "Art",
+        "Contemporary",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4f350680-5c39-59d2-9f8a-2581be7644f9",
+      "createdAt": "2026-07-10",
+      "title": "Trinity Bellwoods",
+      "shortDescription": "You've met someone at these gates without asking what they're the gates to — a Gothic college demolished in the 1950s.",
+      "longDescription": "The stone-and-iron gateway on Queen at Strachan opens onto no building: it's nearly all that's left of Trinity College, founded in 1851 by a bishop who thought U of T had gone godless — before Trinity folded into that very university. The park's grassy bowl is the buried ravine of Garrison Creek, filled with spoil from the Bloor subway dig. Watch for a white squirrel.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trinity-bellwoods_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trinity-bellwoods_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trinity-bellwoods_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4ce7f998-032d-5f89-8658-fd87c5a5e1fc",
+          "order": 0,
+          "title": "Trinity Bellwoods",
+          "caption": "Stand at Queen and Strachan before the stone gates, then walk in toward the grassy bowl of the old buried creek.",
+          "latitude": 43.647,
+          "longitude": -79.413,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trinity-bellwoods.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "You've probably arranged to meet someone at these gates without ever asking what they're the gates to.\n\nStand at the top of Strachan Avenue where it meets Queen Street West, in front of the stone-and-iron gateway into the park. There's no building behind it. That's the first ghost. These gates once opened onto Trinity College — a grand Gothic pile that stood here from the 1850s until the city bought the grounds and knocked it down in the 1950s. The gates are pretty much all that's left, and even they're a copy; the original ironwork was carted off to a school east of the city.\n\nThe college has a small, sharp irony buried in it. A bishop named Strachan founded Trinity in 1851 precisely because he thought the new University of Toronto had gone godless and secular. His whole point was to be the anti-university. And within a few generations, Trinity gave up and folded itself into the very university it was built to oppose. It sits on that campus now. Only the gates stayed behind.\n\nNow walk in and look at the big grassy bowl. That dip in the ground is another ghost — it's the old ravine of Garrison Creek, a real river that once ran down to the lake. The creek was buried in a sewer pipe over a century ago, and the ravine was later filled in with the dirt dug out of the Bloor subway tunnel — the same great dig, more or less, that the viaduct across the Don Valley was built to carry.\n\nAnd keep an eye out, while you're here, for a white squirrel. There are a few — pale little things people swear bring good luck. The stories insist there's only one, impossibly old and impossibly fast. There isn't. But in a park built on this many buried things, it's a nice idea to let stand."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.647,
+      "centroidLongitude": -79.413,
+      "city": "Toronto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Green Escape",
+        "Free to Visit",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "69c2ea5d-9ddd-5c25-9433-ca226fde358a",
+      "createdAt": "2026-07-10",
+      "title": "Yorkville",
+      "shortDescription": "The same Victorian houses staged two opposite versions of cool — Canada's Greenwich Village, then its most expensive shopping street.",
+      "longDescription": "North of Bloor, painted Victorian houses now holding boutiques where rents stagger. In the 1960s the cheap, shabby village was Canada's folk-music crucible — Lightfoot, Mitchell, Young, Ian & Sylvia worked it out in the coffee-house basements. Crackdowns cleared the scene; Bloor's edge became the Mink Mile of global luxury. In a Cumberland pocket park sits a 650-tonne slab of billion-year-old Shield granite, trucked in to look native.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yorkville_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yorkville_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a8b54938-316d-5919-8f25-51ef275a167f",
+          "order": 0,
+          "title": "Yorkville",
+          "caption": "Stand on Cumberland or Yorkville Avenue just north of Bloor amid the painted Victorian houses turned boutiques.",
+          "latitude": 43.671,
+          "longitude": -79.3915,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/yorkville.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Stand on Cumberland Street or Yorkville Avenue, just north of Bloor, and look at what's left of the old village: a row of narrow Victorian houses, brightly painted, now holding boutiques and restaurants where the rent would make your eyes water. Hold that picture. Because these exact houses have staged two completely opposite versions of cool.\n\nIn the 1830s this was its own village, founded by a brewer and a sheriff, annexed by Toronto in 1883, and left to quietly age. By the 1960s the Victorian houses had gone cheap and a little shabby — which is exactly why the artists came. Coffee houses opened in the front rooms, all-ages and unlicensed, and for one remarkable decade this was Canada's Greenwich Village. Gordon Lightfoot, Joni Mitchell, Neil Young, Ian and Sylvia, Buffy Sainte-Marie — a whole generation of the Canadian songbook was worked out in these basements, night after night, in front of a hundred people at a time. Neil Young later wrote a song looking back on the Riverboat, the coffee house that outlasted all the others.\n\nIt didn't last. As the crowds and the drugs grew, the city grew alarmed — bylaw crackdowns, curfews, a heavy police presence — and by the end of the 1960s the scene had been cleared out. What moved in was the exact opposite of a coffee house. Bloor Street, along the south edge here, became the Mink Mile: Canada's most expensive stretch of shopping, the one street in the city with its own granite sidewalks, lined end to end with the global luxury names.\n\nSo the neighbourhood that got famous for being cheap and creative is now famous for being neither. But here's the detail I'd send you to see. Tucked into the little park on Cumberland, there's a boulder — six hundred and fifty tonnes of billion-year-old granite, quarried up north on the Canadian Shield, sawn into pieces, trucked down on twenty flatbeds, and reassembled here to look as though it grew out of the ground.\n\nThink about that for a second. In the most expensive neighbourhood in the country, on land where cheap rent once made real art possible, someone decided the missing ingredient was a genuine piece of Canadian wilderness — so they bought one and installed it. Yorkville, in a single rock."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.671,
+      "centroidLongitude": -79.3915,
+      "city": "Toronto",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "Commerce",
+        "Performance",
+        "Victorian",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ac59ae30-52b4-5455-87d5-90bf389c0fc4",
+      "createdAt": "2026-07-10",
+      "title": "Aga Khan Museum",
+      "shortDescription": "A world-class museum of Islamic art on the edge of North York — that exists, essentially, as a compliment to Canada.",
+      "longDescription": "The late Aga Khan first wanted his museum in London; when that collapsed in 2002 he chose Canada, admiring its pluralism. Fumihiko Maki angled the pale building precisely off north so every wall catches sun, a glass courtyard etched to throw shifting geometric shadows — a machine for watching daylight. Inside: over a thousand years of art from Spain to China, and a Persian garden of four green quarters picturing paradise.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aga-khan-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aga-khan-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aga-khan-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aga-khan-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aga-khan-museum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aga-khan-museum_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "03e5fd85-cbd1-5327-9f32-6206454ad2d0",
+          "order": 0,
+          "title": "Aga Khan Museum",
+          "caption": "Stand before the low pale building on its rise, formal gardens around it, out past the Don Valley Parkway.",
+          "latitude": 43.7254,
+          "longitude": -79.3327,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/aga-khan-museum.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "You've come a fair way out to get here — north of downtown, off the Don Valley Parkway, past the office towers and the traffic, to a low pale building set on a rise with formal gardens around it. That distance is worth thinking about, because Toronto very nearly didn't get this at all.\n\nThe man behind it, the late Aga Khan — spiritual leader of the world's Ismaili Muslims — first wanted to build his museum in London, on the Thames, across from Parliament. That plan collapsed in 2002. So he chose Canada instead, and said plainly why: he admired this country's pluralism. Which means there is a world-class museum of Islamic art out here, on the edge of North York, that exists essentially as a compliment.\n\nNow look at the building, designed by the Japanese architect Fumihiko Maki — working, as it happens, with the same Toronto firm behind the Bata Shoe Museum downtown. In a letter, the Aga Khan asked Maki to build the whole thing around a single idea: light. So the structure is angled precisely off north, so that every outer wall catches the sun at some point across the day, and inside, a glass-roofed courtyard is etched with patterns that throw shifting geometric shadows over the floor as the light moves. The building is, in a real sense, a machine for watching daylight.\n\nInside it is more than a thousand years of art from across the Muslim world, from Spain all the way to China — ceramics, textiles, astronomical instruments, and among the manuscripts, one of the oldest surviving copies of Avicenna's great medical encyclopedia, a book European doctors leaned on for centuries.\n\nWhen you've finished inside, go out into the garden — four green quarters and still reflecting pools, a form meant, in this tradition, to picture paradise. It's very quiet out here, deliberately so. You had to leave the city to reach it, which is rather the whole point."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.7254,
+      "centroidLongitude": -79.3327,
+      "city": "Toronto",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Faith",
+        "Fumihiko Maki",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b38236e6-d992-50d6-a4e1-8bca6179d846",
+      "createdAt": "2026-07-10",
+      "title": "High Park",
+      "shortDescription": "A 400-acre gift to the city — with conditions: keep the name, and never, ever sell alcohol.",
+      "longDescription": "The west end's great park was the estate of John Howard, Toronto's first professional architect, given to the city in 1873 'for the free use, benefit and enjoyment of the citizens' — and it must always be called High Park, and stay dry. Every spring the hillside above Grenadier Pond turns pink with sakura, the first sent from Tokyo in the 1950s. Howard's tomb is ringed by iron from Wren's St Paul's, shipped across an ocean.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/high-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/high-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/high-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/high-park_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dc8c7317-4fba-53f5-a094-2cf40d9c7645",
+          "order": 0,
+          "title": "High Park",
+          "caption": "Stand among the woods and ponds of High Park; the Howards' cottage once sat on the hill above the lake.",
+          "latitude": 43.6465,
+          "longitude": -79.4637,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/high-park.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Most big-city parks were bought, or expropriated, or carved out of land nobody else wanted. This one was a gift — and like a lot of gifts, it came with conditions.\n\nYou're in High Park, four hundred acres of woods, ponds and gardens in the west end. It was the country estate of John Howard, Toronto's first professional architect, and his wife Jemima, who built a small cottage on the hill above the lake in the 1830s and named the whole property for its height. In 1873, the Howards handed it to the city, the deed spelling out that it stay \"for the free use, benefit and enjoyment of the citizens of Toronto\" — and that it always be called High Park.\n\nFree, forever. And Howard attached one more condition the city still honours: no alcohol, anywhere in the park. High Park is the last dry patch in Toronto — the café by the pond, more than a century later, still can't sell you a beer. One man's temperance, quietly enforced from beyond the grave.\n\nThen there's a gift laid on top of the gift. Every spring the hillside above Grenadier Pond turns pale pink with cherry blossom — Japanese sakura trees, the first of them sent from the citizens of Tokyo in the 1950s, in thanks for the city taking in Japanese-Canadians who'd been relocated after the war. For a few days each spring the crowds grow so thick the park closes to cars. A gift given in gratitude for a decency that had been a long time coming.\n\nOne last thing, if you walk down to the Howards' tomb near the pond. The ornate iron railing around it isn't Canadian at all — it once stood around St Paul's Cathedral in London, designed by Christopher Wren, and Howard had it shipped across an ocean to fence his own grave. Even in death, the man had taste, and conditions. Stay a while. It's free — he made sure of it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6465,
+      "centroidLongitude": -79.4637,
+      "city": "Toronto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "55dca1cb-63fd-50f0-99bc-3f55e2c8f2aa",
+      "createdAt": "2026-07-10",
+      "title": "Fort York",
+      "shortDescription": "The exact spot where Toronto began — not a market or a meeting hall, but a fort and a military decision.",
+      "longDescription": "Under the Gardiner's concrete legs stand the walls where Britain garrisoned 100 soldiers in 1793 and moved the colonial capital, renaming the place York. In 1813 an American fleet overwhelmed the defenders, who blew their own magazine rather than surrender it — a blast that killed the U.S. commander. The retaliations ran to Washington and the White House. Seven War-of-1812 buildings still stand, the largest such collection in Canada.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fort-york_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fort-york_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fort-york_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fa97309a-0410-50ec-a644-7a037f57676e",
+          "order": 0,
+          "title": "Fort York",
+          "caption": "Stand by the old walls beneath the Gardiner Expressway, on the lakeshore ground where the city began.",
+          "latitude": 43.6386,
+          "longitude": -79.4067,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fort-york.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Stand close to the old walls, with the Gardiner Expressway roaring on its concrete legs just overhead, and you're standing on the exact spot where Toronto began. Not a market, not a meeting hall — a fort. The city started as a military decision.\n\nIn 1793, wary of the new United States next door, the British sent a hundred soldiers to build a garrison here on the lakeshore, and moved the colonial capital to the sheltered harbour behind you. They renamed the place York. The town grew up around the fort, fed by a creek the garrison was named for — Garrison Creek, the same buried stream that shaped the ground under Trinity Bellwoods, up the hill.\n\nTwenty years later, the war they'd feared arrived. In 1813, an American fleet landed to the west and overwhelmed the outnumbered defenders — British regulars, local militia, and Mississauga and Ojibwe warriors fighting alongside them. As they fell back, the garrison did something drastic: they blew up their own gunpowder magazine rather than surrender it. The blast was devastating, and among the many it killed was the American commander. The Americans took the town for a few days, looted it, and burned the parliament buildings of Upper Canada. The next year, the British answered in kind — marching on Washington and burning the White House. A quiet line runs from this muddy fort to that.\n\nThe British rebuilt here at once, and remarkably, seven of those two-hundred-year-old buildings still stand — the largest collection of War of 1812 buildings anywhere in Canada.\n\nWhat almost finished the fort in the end wasn't an army. In the 1950s the city nearly ran the Gardiner straight through it, and Torontonians had to fight to save the place where their city was born. They won. So it sits here still, a green pocket of 1813 pinned beneath the roar of the modern city — the oldest thing in Toronto, hiding under one of the newest."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6386,
+      "centroidLongitude": -79.4067,
+      "city": "Toronto",
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "War",
+        "Colonial",
+        "Remembrance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9a737ba5-95d8-5e77-b3fb-84babc1aa423",
+      "createdAt": "2026-07-10",
+      "title": "The Beaches",
+      "shortDescription": "A resort town that ended up inside a city — with a boardwalk the city bought back, cottage by cottage, for everyone.",
+      "longDescription": "Off the Queen streetcar, a three-kilometre boardwalk along Lake Ontario past the grand old 'palace of purification' waterworks. Four beaches — Woodbine, Kew, Scarboro, Balmy — are why locals can't agree whether it's 'the Beach' or 'the Beaches.' Once a summer cottage colony, the streetcar turned it into a neighbourhood; the city cleared the private shore cottages and opened the whole stretch to the public in 1932.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-beaches_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-beaches_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-beaches_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-beaches_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bdf2442b-f83f-59a3-b812-30321966bc7f",
+          "order": 0,
+          "title": "The Beaches",
+          "caption": "Stand on the boardwalk with Lake Ontario ahead, the Kew Gardens shops behind, the waterworks rising to the east.",
+          "latitude": 43.6712,
+          "longitude": -79.293,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-beaches.mp3",
+          "audioDurationSeconds": 174,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "If you've stepped off the streetcar and you feel, somehow, like you've left Toronto — like the city got smaller and slower and closer to the water — that's the whole point of this place, and it's older than it looks.\n\nStand on the boardwalk itself if you can, with Lake Ontario in front of you and the low run of Kew Gardens and the Queen Street shops at your back. Off to your east, where the sand ends, there's a grand brick building up on the rise: that's the old water treatment plant, which locals call the palace of purification, and it's far grander than a waterworks has any right to be. To your west, the boardwalk keeps going, flat and wooden, for the better part of three kilometres.\n\nStart with the sand.\n\nThere are four beaches here, strung end to end — Woodbine, Kew, Scarboro, and Balmy — and that plural is the entire reason this neighbourhood can't agree on its own name. People have spent well over a century arguing about whether it's \"the Beach\" or \"the Beaches,\" and the local business association once held an actual vote to settle it, which of course settled nothing: both signs still go up, both names still get used, and the safest thing a newcomer can do is simply not have an opinion out loud.\n\nNow, this feels like a resort town that somehow ended up inside a city — and that's almost exactly backwards. A century ago it really was a summer place, all cottages, amusement parks, and day-trippers ferried out from downtown. What turned it into a neighbourhood was the streetcar: once the electric line down Queen Street could get you to the core in under half an hour, people stopped coming for the weekend and started living here, and the cottages gave way to the tidy houses on the side streets you can still walk today. The amusement parks survive now mostly as the names of streets.\n\nAnd the boardwalk, the thing everyone actually comes for, is public for a reason that's easy to miss. For years, private cottages ran the length of this shore, right where the grass meets the sand — and the city bought them up and cleared them, one by one, opening the whole stretch to everyone in 1932. Almost nobody walking it now realises they're on ground that was quietly handed back to the public, house by house.\n\nThat's the quiet trick of the Beaches. It looks like the least planned corner of Toronto — loose, low-rise, more lake than city — but nearly all of it was deliberate: the streetcar that made it, the parkland the city stitched together, the shoreline it decided belonged to everyone rather than to whoever built closest to the water.\n\nSo walk it slowly, and let the lake do the work — the wind, the volleyball nets, the dogs, that long wooden line running off toward the waterworks. It's the closest thing Toronto has to leaving town without actually leaving, and it's been giving people that exact feeling for a hundred years, which is about as permanent as anything gets on a shore that never stops moving."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 174,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.6712,
+      "centroidLongitude": -79.293,
+      "city": "Toronto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Green Escape",
+        "Maritime",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4bf03bb0-01ff-5095-8e57-67ba897af057",
+      "createdAt": "2026-07-10",
+      "title": "Scarborough Bluffs",
+      "shortDescription": "Ninety metres of cliff — the shoreline of a lake that no longer exists — quietly taking itself apart to rebuild the rest of the city's shore.",
+      "longDescription": "Fifteen kilometres of sand-and-clay cliffs up to 90 metres high along the eastern shore: the raised beach of glacial Lake Iroquois, roughly 12,000 years old, its bands recording the ice advancing and retreating. Wind and water chew them away each year — and the lake carries the material west to become the sand of the Beaches and the ground of the Toronto Islands. Named in 1793 when Elizabeth Simcoe thought of Yorkshire's chalk cliffs.",
+      "makerId": "caa0cba1-9fc2-5993-b5cc-4f3380470bd1",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scarborough-bluffs_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scarborough-bluffs_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scarborough-bluffs_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/scarborough-bluffs_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "251291ed-cf14-5690-8676-4b2753eedbc8",
+          "order": 0,
+          "title": "Scarborough Bluffs",
+          "caption": "Stand behind the fence at the cliff edge — do not trust it — with the layered wall of sand and clay dropping to the lake.",
+          "latitude": 43.704,
+          "longitude": -79.233,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/scarborough-bluffs.mp3",
+          "audioDurationSeconds": 196,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Most people don't think of Toronto as a city with cliffs. But you're standing at the edge of nearly ninety metres of them — the height of a twenty-five-storey building — dropping almost straight down to Lake Ontario, and they run for fifteen kilometres along the eastern shore. It's one of the strangest things the city has, and it's giving itself away the whole time.\n\nFind a spot behind the fence — and stay behind it, because this edge is genuinely not to be trusted — where you can see the cliff face falling away below and the lake opening out flat to the horizon. That pale, layered wall of sand and clay is the whole show. If instead you've come down to Bluffers Park at the base, look up: the cliffs rise right over you, and the water along the shore is often a strange milky colour — hold that thought.\n\nStart with what you're standing on.\n\nThese cliffs are the shoreline of a lake that no longer exists. At the end of the last ice age a much larger, higher lake sat here, held in place by a wall of ice damming the St. Lawrence; when that ice gave way, the water dropped by something like thirty metres, and the old underwater edge was left standing in open air. So the cliff in front of you is a beach — a very old one, roughly twelve thousand years old, lifted up and left behind. It's built from loose sand and clay layered over tens of thousands of years, and you can almost read it: those bands record the ice advancing and retreating, again and again, which is why geologists come from around the world to study one of the clearest ice-age cross-sections on the continent.\n\nNow, here's the part that matters. These cliffs are falling down — wind, water, and the lake at their base chew away at them every year, sometimes gently, sometimes in sudden collapses, one of which gave way near a lookout not long ago with a sound like an explosion and a cloud of dust. And all that material doesn't vanish: the lake carries it west along the shore, where it becomes the sand of the Beaches and, further on, the ground the Toronto Islands stand on. The Bluffs are quietly taking themselves apart and rebuilding the rest of the city's shoreline with the pieces — and that milky water at the bottom is simply the cliff, dissolved, on its way there.\n\nEven the name is a bit of an accident. When Elizabeth Simcoe sailed past in 1793, the white cliffs reminded her of the chalk cliffs back home at Scarborough, in Yorkshire, and she noted it in her diary — and that offhand comparison ended up naming not just these cliffs but the entire eastern third of the city. There's a quieter irony at the top, too: the view is so good that people built houses right along the edge, which is exactly what hurries the edge along. The thing that makes the clifftop worth having is the thing that slowly takes the clifftop away.\n\nSo stand here a while — behind the fence — and take it in. It looks like the most permanent thing for kilometres, this great pale wall above the lake, and it's actually the least: you're watching the slowest landslide there is, the floor of a vanished lake going back into the water it came from, one quiet year at a time — and somewhere off to the west, becoming a beach."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 196,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 43.704,
+      "centroidLongitude": -79.233,
+      "city": "Toronto",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Viewpoint",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
     }
   ]
 }
