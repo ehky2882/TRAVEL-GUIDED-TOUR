@@ -29,8 +29,8 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 | 🇺🇸 Los Angeles | 39 | 36 single + 3 walks (5/7/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (LA) |
 | 🇪🇸 Madrid | 35 | 31 single + 4 walks (5/6/5/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (MAD) |
 | 🇳🇱 Amsterdam | 38 | 33 single + 5 walks (5/6/5/5/5 stops) | 64 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio AMS |
-| 🇨🇦 Montreal | 9 | 9 single | 9 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio YUL |
-| **TOTAL PENDING** | **121** | | **172** | | |
+| 🇨🇦 Montreal | 29 | 25 single + 4 walks (intro+5 / intro+4 / intro+4 / intro+4) | 46 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio YUL |
+| **TOTAL PENDING** | **141** | | **209** | | |
 
 _(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **went LIVE 2026-07-08, PR #378** — removed from pending. It was the last staged London tour.)_
 _(✅ Paris = DONE: **45 single-stop tours LIVE** (PR #374) + **all 5 walks LIVE** — Le Marais (#379), Montmartre (#380), The Triumphal Way (#381), Paris Islands (#382), The Left Bank (#383). Nothing Paris pending.)_
@@ -62,10 +62,13 @@ _(✅ 🇨🇦 Toronto = DONE (2026-07-10): **all 42 tours LIVE** — 38 single-
 - ~~`paris-leftbank` — "The Left Bank"~~ — **LIVE 2026-07-09 (PR #383)**, 7 tracks — **all 5 Paris walks now live**
 - Reuse the 45 live single-stop Paris heroes where stops overlap; a few fresh walk images already staged (Îles hero, Marais Musée Picasso — CC credits in `IMAGE-CREDITS-paris-batch1.txt`). READMEs say "create the PAR maker" — **stale**: PAR now exists, so walks wire straight in.
 
-**🇨🇦 Montreal** — `drafts/montreal-batch1` (9 single-stop, batches 1+2):
-- **Batch 1 (Old Montreal, 5):** Notre-Dame/Place d'Armes, Place Jacques-Cartier/City Hall, Old Port, Pointe-à-Callière, Bonsecours Market+chapel.
-- **Batch 2 (4):** Château Ramezay, Habitat 67, McGill/Golden Square Mile (Roddick Gates), Christ Church Cathedral.
-- Images live + credits logged (`drafts/CREDITS.md`, Montreal, 15 = 10 batch 1 + 5 batch 2). New maker **Atlas Studio YUL** 🇨🇦. Master pick-map: `drafts/montreal-batch1/README.md`. Batch may still grow — more Montreal tours may be added later.
+**🇨🇦 Montreal** — **29 tours (25 single-stop + 4 walks)**, new maker **Atlas Studio YUL** 🇨🇦. Complete 2026-07-13 (image-staged; awaiting narration):
+- **Batch 1 (Old Montreal, 5):** Notre-Dame/Place d'Armes, Place Jacques-Cartier/City Hall, Old Port, Pointe-à-Callière, Bonsecours Market+chapel. (`drafts/montreal-batch1/README.md`)
+- **Batch 2 (4):** Château Ramezay, Habitat 67, McGill/Golden Square Mile, Christ Church Cathedral. (`drafts/montreal-batch1/README.md`)
+- **Batch 3 (16):** Mary Queen of the World, Place Ville Marie/RÉSO, Dorchester/Sun Life, Quartier des Spectacles, Chinatown, Mount Royal/Kondiaronk, St Joseph's Oratory, Plateau staircases, Square Saint-Louis, The Main, Mile End, Jean-Talon Market, The Village, Botanical/Biodome, Lachine Canal, Atwater Market. (`drafts/montreal-batch3/README.md`)
+- **4 walks:** `montreal-oldmontreal-walk` (intro+5) · `montreal-mountroyal-walk` (intro+4) · `montreal-plateaumileend-walk` (intro+4) · `montreal-downtown-walk` (intro+4). Each has its own README wire-in spec; all reuse single-stop heroes except Mount Royal (3 new images: entrance, climb, Cross).
+- **MP3s needed: 46** = 25 singles + 21 walk tracks. Credits: `drafts/CREDITS.md` (Montreal — 15 batch 1-2 + 4 batch 3/walk = 19 CC-credited; almost all batch-3 is owner/ship-safe).
+- **Pending galleries (hero-complete without them):** #10 Mary interior, #11 Place Ville Marie, #22 Square Saint-Louis, #23 The Main.
 
 _(🇬🇧 London — Greenwich walk "The Measure of the World" **went LIVE 2026-07-08, PR #378**. It was the last staged London tour; London is now fully wired.)_
 

@@ -233,6 +233,33 @@ _(`mcgill-golden-square-mile_hero.webp` = Roddick Gates, D. Benjamin Miller, **C
 
 _(Ship-safe stock, NO credit: Habitat 67 hero + `_2`–`_6` (all Unsplash).)_
 
+## Montreal — batch 3 (`10`–`31`, 16 single-stop tours) + Mount Royal walk — 4 credit-required images
+
+Same maker (**Atlas Studio YUL** 🇨🇦). Batch 3 is **almost entirely ship-safe** (owner-supplied
+heroes + Unsplash/Pexels) — only the two Wikimedia picks below need credit. Owner-supplied
+(pasted, ship-safe, no credit): Mary Queen exterior, Place Ville Marie esplanade, Plateau
+(Square-St-Louis Victorians), The Main (Schwartz's + boulevard).
+
+### Batch-3 singles (2 credit-required)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `jean-talon-market_2.webp` | market street + red chairs | Andre Carrotflower | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:20181014_-_23_-_Montreal_(Little_Italy).jpg |
+| `atwater-market_hero.webp` | Art Deco building + clock tower | Colin Rose | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:AtwaterMarket.jpg |
+
+_(All other batch-3 single heroes/galleries = ship-safe (owner / Unsplash / Pexels), no credit. Pending galleries not yet cropped: Mary interiors (Wikimedia CC — will log at pick), PVM, Square Saint-Louis, The Main.)_
+
+### Mount Royal walk (2 credit-required — the 3 new images)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `mount-royal-trail_hero.webp` | forest path (walk entrance) | Matias Garabedian | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Au_bonheur_de_l%27automne_au_parc_Mont-Royal_(15341849438).jpg |
+| `mount-royal-trail_2.webp` | staircase (walk climb) | Yanik Crépeau | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Golden_Square_Mile,_Montreal,_QC,_Canada_-_panoramio_(14).jpg |
+
+_(`mount-royal-cross_hero.webp` = the Cross, Unsplash, **ship-safe**, no credit. Belvedere stop reuses the ship-safe single-stop hero.)_
+
+## Montreal multi-stop walks (4) — credits mostly inherited
+- **Old Montreal** (5 stops), **Plateau & Mile End** (4), **Downtown / Underground City** (4) — reuse single-stop heroes; credits (if any) already listed above (e.g. Jean-Talon isn't in these walks; The Main/Square SL heroes are owner ship-safe). **No new credits.**
+- **Mount Royal** (4 stops) — adds the 2 CC-credited trail images above + the ship-safe Cross.
+
 ## Multi-stop walks — credits are inherited, not new
 The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
 reuse single-stop stop images. Only two carry a credit, both already listed above:
