@@ -15,7 +15,7 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-07-08 (cross-checked against `origin/main` + `origin/gh-pages`).
+**Last verified:** 2026-07-15 (🇮🇹 Rome staged — 25 singles + 5 walks, image-complete on gh-pages).
 
 ---
 
@@ -30,7 +30,8 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 | 🇪🇸 Madrid | 35 | 31 single + 4 walks (5/6/5/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (MAD) |
 | 🇳🇱 Amsterdam | 38 | 33 single + 5 walks (5/6/5/5/5 stops) | 64 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio AMS |
 | 🇨🇦 Montreal | 29 | 25 single + 4 walks (intro+5 / intro+4 / intro+4 / intro+4) | 46 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio YUL |
-| **TOTAL PENDING** | **141** | | **209** | | |
+| 🇮🇹 Rome | 30 | 25 single + 5 walks (intro+5 / intro+5 / intro+5 / intro+4 / intro+4) | 53 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ROM |
+| **TOTAL PENDING** | **171** | | **275** | | |
 
 _(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **went LIVE 2026-07-08, PR #378** — removed from pending. It was the last staged London tour.)_
 _(✅ Paris = DONE: **45 single-stop tours LIVE** (PR #374) + **all 5 walks LIVE** — Le Marais (#379), Montmartre (#380), The Triumphal Way (#381), Paris Islands (#382), The Left Bank (#383). Nothing Paris pending.)_
@@ -68,6 +69,13 @@ _(✅ 🇨🇦 Toronto = DONE (2026-07-10): **all 42 tours LIVE** — 38 single-
 - **Batch 3 (16):** Mary Queen of the World, Place Ville Marie/RÉSO, Dorchester/Sun Life, Quartier des Spectacles, Chinatown, Mount Royal/Kondiaronk, St Joseph's Oratory, Plateau staircases, Square Saint-Louis, The Main, Mile End, Jean-Talon Market, The Village, Botanical/Biodome, Lachine Canal, Atwater Market. (`drafts/montreal-batch3/README.md`)
 - **4 walks:** `montreal-oldmontreal-walk` (intro+5) · `montreal-mountroyal-walk` (intro+4) · `montreal-plateaumileend-walk` (intro+4) · `montreal-downtown-walk` (intro+4). Each has its own README wire-in spec; all reuse single-stop heroes except Mount Royal (3 new images: entrance, climb, Cross).
 - **MP3s needed: 46** = 25 singles + 21 walk tracks. Credits: `drafts/CREDITS.md` (Montreal — 15 batch 1-2 + 4 batch 3/walk = 19 CC-credited; almost all batch-3 is owner/ship-safe).
+
+**🇮🇹 Rome** — **30 tours (25 single-stop + 5 walks)**, new maker **Atlas Studio ROM** 🇮🇹. Complete 2026-07-15 (image-staged; awaiting narration):
+- **Batch 1 (25 single-stop):** Colosseum, Roman Forum, Pantheon, Trevi, Spanish Steps, Piazza Navona, St Peter's Square, Castel Sant'Angelo, Piazza del Popolo, Campo de' Fiori, Campidoglio, Vittoriano, Largo Argentina, Jewish Ghetto, Tiber Island, Santa Maria in Trastevere, Gianicolo, Bocca della Verità, Circus Maximus, Aventine, Baths of Caracalla, Ara Pacis + Mausoleum, Pincio, Piazza Barberini, Arch of Constantine. Master pick-map (slug/coord/category/hero+gallery/credit): `drafts/rome-batch1/README.md`.
+- **5 walks:** `rome-ancientrome-walk` (intro+5) · `rome-baroqueheart-walk` (intro+5) · `rome-ghettotrastevere-walk` (intro+5) · `rome-vaticanborgo-walk` (intro+4) · `rome-aventinetestaccio-walk` (intro+4). Each folder has its own README wire-in spec (per-stop image slug + coord + centroid + walking distance).
+- **Walk images:** almost all stops reuse live single-stop heroes. **5 walk-only new images** staged (Trajan's Column, Ponte Sant'Angelo, Via della Conciliazione, Testaccio/Monte Testaccio, Aventine Keyhole).
+- **Sensitivity:** the Jewish Ghetto (single #14 + Ghetto & Trastevere walk stop 2) uses dignified Portico d'Ottavia / Great Synagogue exteriors only — no graphic imagery.
+- **MP3s needed: 53** = 25 singles + 28 walk tracks. Credits: `drafts/CREDITS.md` (Rome — **6 CC-credited**: Ara Pacis ×3, Piazza Barberini ×2, Testaccio ×1; everything else ship-safe/owner-pasted).
 - **Pending galleries (hero-complete without them):** #10 Mary interior, #11 Place Ville Marie, #22 Square Saint-Louis, #23 The Main.
 
 _(🇬🇧 London — Greenwich walk "The Measure of the World" **went LIVE 2026-07-08, PR #378**. It was the last staged London tour; London is now fully wired.)_

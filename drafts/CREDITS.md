@@ -8,7 +8,25 @@ a per-tour credits line, an in-app attributions screen, or swap for owner-suppli
 shots. Everything NOT listed here is ship-safe (Unsplash/Pexels/Pixabay — no
 attribution) or owner-supplied.
 
-Last updated 2026-07-02 (Toronto complete; LA batch 1 in progress).
+Last updated 2026-07-15 (Rome complete — 25 singles + 5 walks staged; 6 CC images).
+
+## Rome — 6 credit-required images (`drafts/rome-batch1`)
+
+Everything else in the Rome batch is ship-safe (Unsplash/Pexels/Pixabay) or owner-pasted.
+New maker **Atlas Studio ROM** 🇮🇹 at wire-in.
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `ara-pacis_hero.webp` | Ara Pacis museum (dusk) | Palickap | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Roma,_Museo_dell%27Ara_Pacis.jpg |
+| `ara-pacis_2.webp` | Ara Pacis altar (interior) | Joel Bellviure | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Ara_Pacis,_general.jpg |
+| `ara-pacis_3.webp` | Mausoleum of Augustus | Attila (Flickr) | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Dscn1097_(53662807386).jpg |
+| `piazza-barberini_2.webp` | Triton Fountain | Chabe01 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Fontaine_Triton_-_Rome_(IT62)_-_2021-08-30_-_5.jpg |
+| `piazza-barberini_3.webp` | Fountain of the Bees | babizhet | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:%D0%A4%D0%BE%D0%BD%D1%82%D0%B0%D0%BD_%D0%B1%D0%B4%D0%B6%D1%96%D0%BB_%D0%A0%D0%B8%D0%BC.JPG |
+| `testaccio_hero.webp` | Monte Testaccio (hill of shards) | Tyler Bell | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Monte_Testaccio.jpg |
+
+_(Piazza Barberini `_hero`, Baths of Caracalla, Jewish Ghetto, Santa Maria in Trastevere, and
+Bocca della Verità's Cosmedin shot are owner-pasted → ship-safe. The `testaccio_hero` is also the
+Testaccio stop image in the Aventine & Testaccio walk.)_
 
 ## Toronto — 17 credit-required images
 
