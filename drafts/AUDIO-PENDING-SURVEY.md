@@ -15,7 +15,7 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-07-15 (🇮🇹 Rome staged — 25 singles + 5 walks, image-complete on gh-pages).
+**Last verified:** 2026-07-15 (🇺🇸 Los Angeles LIVE — PR #390, 42 tours under Atlas Studio LAX; 🇮🇹 Rome staged, image-complete).
 
 ---
 
@@ -26,24 +26,20 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 
 | City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|------------:|----------------|------------------|
-| 🇺🇸 Los Angeles | 39 | 36 single + 3 walks (5/7/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (LA) |
 | 🇪🇸 Madrid | 35 | 31 single + 4 walks (5/6/5/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (MAD) |
 | 🇳🇱 Amsterdam | 38 | 33 single + 5 walks (5/6/5/5/5 stops) | 64 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio AMS |
 | 🇨🇦 Montreal | 29 | 25 single + 4 walks (intro+5 / intro+4 / intro+4 / intro+4) | 46 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio YUL |
 | 🇮🇹 Rome | 30 | 25 single + 5 walks (intro+5 / intro+5 / intro+5 / intro+4 / intro+4) | 53 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ROM |
-| **TOTAL PENDING** | **171** | | **275** | | |
+| **TOTAL PENDING** | **132** | | **219** | | |
 
+_(✅ 🇺🇸 Los Angeles = DONE (2026-07-15, PR #390): **42 tours LIVE** — 38 single-stop + **4 walks** (Beachfront, Downtown LA, Museum Row, **Hollywood Boulevard**) under new maker **Atlas Studio LAX**. 64 MP3s. Note: LA turned out to be 38 singles + 4 walks (the old "36 + 3" count was low, and a Hollywood walk was added at wire-in). Memorial Coliseum + The Huntington shipped with `transcriptText: null` — scripts never provided as text; trivial backfill when they arrive.)_
 _(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **went LIVE 2026-07-08, PR #378** — removed from pending. It was the last staged London tour.)_
 _(✅ Paris = DONE: **45 single-stop tours LIVE** (PR #374) + **all 5 walks LIVE** — Le Marais (#379), Montmartre (#380), The Triumphal Way (#381), Paris Islands (#382), The Left Bank (#383). Nothing Paris pending.)_
 _(✅ 🇨🇦 Toronto = DONE (2026-07-10): **all 42 tours LIVE** — 38 single-stop (10 batch A + 28 PR #384) + **all 4 walks** (Old Town #385, Museum Mile #386, Downtown Spine #387, Immigrant West/Kensington #388). Nothing Toronto pending.)_
 
 ### Per-city detail
 
-**🇺🇸 Los Angeles** — `drafts/la-batch1..8` (36 single-stop) + 3 walks:
-- `la-beachfront-walk` — intro + 5 (Santa Monica Pier, Muscle Beach, Venice Boardwalk, Venice Canals, Abbot Kinney)
-- `la-downtown-walk` — intro + 7 (Disney Hall, The Broad, MOCA, Angels Flight, Grand Central Market, Bradbury, El Pueblo/Olvera)
-- `la-museumrow-walk` — intro + 5 (La Brea Tar Pits, LACMA/Geffen, Academy Museum, Petersen, Farmers Market)
-- Credits: LA CC images logged in `drafts/CREDITS.md` (Los Angeles row, ~17). New city → new maker.
+**🇺🇸 Los Angeles — ✅ LIVE (2026-07-15, PR #390)** — all **42 tours** under **Atlas Studio LAX**: 38 single-stop + 4 walks (Beachfront, Downtown LA, Museum Row, Hollywood Boulevard). Nothing pending. (Coliseum + Huntington `transcriptText: null` — backfill when scripts arrive; LA CC image credits in `drafts/CREDITS.md`, Los Angeles row.)
 
 **🇪🇸 Madrid** — `drafts/madrid-batch1..7` (31 single-stop) + 4 walks:
 - `madrid-austrias` — intro + 5 · `madrid-paseo-del-arte` — intro + 6 (Cibeles, Neptuno, Prado, Thyssen, CaixaForum, Reina Sofía) · `madrid-retiro` — intro + 5 · `madrid-royal` — intro + 5
@@ -84,7 +80,7 @@ _(🇬🇧 London — Greenwich walk "The Measure of the World" **went LIVE 2026
 
 ## LIVE — done, for reference (do not re-stage)
 
-As of 2026-07-08, `origin/main` = **11 makers / 616 tours / 726 stops**. Live cities:
+As of 2026-07-15, `origin/main` = **13 makers / 733 tours**. Live cities:
 
 | City | Live tours | Maker | Notes |
 |------|-----------:|-------|-------|
@@ -98,6 +94,8 @@ As of 2026-07-08, `origin/main` = **11 makers / 616 tours / 726 stops**. Live ci
 | San Francisco | 35 | SFO | + 4 multi-stop walks |
 | Naoshima | 15 | NAO | + 2 multi-stop walks |
 | Toronto | 42 | YYZ | ✅ COMPLETE 2026-07-10 — 38 single-stop + 4 walks (PRs #384–#388) |
+| Seoul | 43 | SEL | launched 2026-07-15 (PR #389) — 40 single + 3 walks |
+| **Los Angeles** | **42** | **LAX** | ✅ **launched 2026-07-15 (PR #390)** — 38 single-stop + **4 walks** (Beachfront, Downtown LA, Museum Row, Hollywood Boulevard) |
 
 ---
 
