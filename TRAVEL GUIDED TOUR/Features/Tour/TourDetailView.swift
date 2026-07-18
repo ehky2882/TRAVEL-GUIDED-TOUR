@@ -60,6 +60,11 @@ struct TourDetailView: View {
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(AppSharedState.self) private var appShared
     @Environment(\.openURL) private var openURL
+    /// Optional: TourDetailView is hosted in the UIKit slide-up layers, which
+    /// inject `JourneyService` explicitly. Optional so any other presentation
+    /// path can't crash on a missing lookup — the "Add to a Journey" item just
+    /// hides when it's absent.
+    @Environment(JourneyService.self) private var journeyService: JourneyService?
 
     /// Programmatic push for the menu's "Go to creator" item. The
     /// inline maker row uses its own inline `NavigationLink`; the
@@ -68,6 +73,7 @@ struct TourDetailView: View {
     /// doesn't push), so we drive it through `.navigationDestination`.
     @State private var showingMaker = false
     @State private var showingReport = false
+    @State private var showingAddToJourney = false
 
     /// Toggles between the truncated 4-line preview of `longDescription`
     /// and the full text. Apple Music / Podcasts pattern — keeps the
@@ -148,6 +154,9 @@ struct TourDetailView: View {
         }
         .sheet(isPresented: $showingReport) {
             ReportSheet(target: .tour(tour))
+        }
+        .sheet(isPresented: $showingAddToJourney) {
+            AddToJourneySheet(tour: tour)
         }
         .onAppear {
             navState.push()
@@ -1174,6 +1183,14 @@ struct TourDetailView: View {
                 subject: Text(tour.title)
             ) {
                 Label("Share", systemImage: "square.and.arrow.up")
+            }
+
+            if journeyService != nil {
+                Button {
+                    showingAddToJourney = true
+                } label: {
+                    Label("Add to a Journey", systemImage: "text.badge.plus")
+                }
             }
 
             Section {
