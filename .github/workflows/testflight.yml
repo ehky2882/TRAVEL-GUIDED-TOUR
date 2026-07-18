@@ -59,11 +59,14 @@ jobs:
           mkdir -p "$HOME/private_keys"
           printf '%s' "${{ secrets.APP_STORE_CONNECT_API_KEY }}" > "$HOME/private_keys/AuthKey_${KEY_ID}.p8"
 
-      # Give every build a unique, always-increasing number (TestFlight requires
-      # each upload to be higher than the last). A UTC timestamp guarantees that.
-      - name: Compute a unique build number
+      # Clean, always-increasing build number: the workflow's own run counter.
+      # TestFlight requires each upload's number to be higher than the last within
+      # a given marketing version; run_number is monotonic, so it satisfies that.
+      # (Marketing version is 1.1 in the project — the 1.0 timestamp builds live in
+      # a separate version train, so starting fresh here is clean.)
+      - name: Compute a clean build number
         id: bn
-        run: echo "num=$(date -u +%Y%m%d%H%M)" >> "$GITHUB_OUTPUT"
+        run: echo "num=${{ github.run_number }}" >> "$GITHUB_OUTPUT"
 
       # Build + sign the app into an ".xcarchive" (Apple's packaged, signed app).
       # -allowProvisioningUpdates + the API key let Xcode create/download the
