@@ -1,0 +1,108 @@
+# Build a signed app and send it to TestFlight, on demand.
+#
+# WHAT THIS DOES (plain English): when you ask for it, a Mac in GitHub's cloud
+# builds your app, signs it so a real iPhone will trust it, and uploads it to
+# TestFlight — so a testable version just shows up on your phone. No Mac needed
+# from you.
+#
+# HOW YOU TRIGGER IT (two ways):
+#   1. Add the label "build" to any pull request, OR
+#   2. Actions tab -> "TestFlight build" -> "Run workflow".
+# It does NOT run on every push (Mac build minutes are ~10x the cost), only when
+# you ask.
+#
+# ONE-TIME SETUP (owner, in GitHub -> Settings -> Secrets and variables ->
+# Actions). These come from an App Store Connect API key (see docs/testflight-ci.md):
+#   APP_STORE_CONNECT_KEY_ID       - the key's ID (e.g. ABC123XYZ9)
+#   APP_STORE_CONNECT_ISSUER_ID    - the issuer ID (a long uuid)
+#   APP_STORE_CONNECT_API_KEY      - the contents of the downloaded AuthKey_XXXX.p8
+# Until those exist the workflow just fails fast with a clear message — harmless.
+
+name: TestFlight build
+
+on:
+  workflow_dispatch:            # the manual "Run workflow" button
+  pull_request:
+    types: [labeled]            # runs only when a label is added (guarded below)
+
+# If you trigger twice, cancel the older run — no wasted Mac minutes.
+concurrency:
+  group: testflight-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  testflight:
+    # Only proceed for a manual run, or when the label added is exactly "build".
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.label.name == 'build'
+    runs-on: macos-26           # a Mac in the cloud (your other CI already uses this)
+    timeout-minutes: 40
+    env:
+      SCHEME: "TRAVEL GUIDED TOUR"
+      KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+      ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+    steps:
+      - uses: actions/checkout@v6
+
+      # Fail early with a friendly message if the one-time secrets aren't set yet.
+      - name: Check credentials are configured
+        run: |
+          if [ -z "$KEY_ID" ] || [ -z "$ISSUER_ID" ] || [ -z "${{ secrets.APP_STORE_CONNECT_API_KEY }}" ]; then
+            echo "::error::App Store Connect secrets are not set. Add APP_STORE_CONNECT_KEY_ID, APP_STORE_CONNECT_ISSUER_ID, and APP_STORE_CONNECT_API_KEY under Settings -> Secrets and variables -> Actions. See docs/testflight-ci.md."
+            exit 1
+          fi
+
+      # Write Apple's API key (the "pass") to a file the build tools can read.
+      - name: Install App Store Connect API key
+        run: |
+          mkdir -p "$HOME/private_keys"
+          printf '%s' "${{ secrets.APP_STORE_CONNECT_API_KEY }}" > "$HOME/private_keys/AuthKey_${KEY_ID}.p8"
+
+      # Give every build a unique, always-increasing number (TestFlight requires
+      # each upload to be higher than the last). A UTC timestamp guarantees that.
+      - name: Compute a unique build number
+        id: bn
+        run: echo "num=$(date -u +%Y%m%d%H%M)" >> "$GITHUB_OUTPUT"
+
+      # Build + sign the app into an ".xcarchive" (Apple's packaged, signed app).
+      # -allowProvisioningUpdates + the API key let Xcode create/download the
+      # signing certificates automatically — the same automatic signing your
+      # manual Organizer archives already use.
+      - name: Archive (build + sign)
+        run: |
+          xcodebuild archive \
+            -scheme "$SCHEME" \
+            -destination "generic/platform=iOS" \
+            -archivePath "$RUNNER_TEMP/Dozent.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$HOME/private_keys/AuthKey_${KEY_ID}.p8" \
+            -authenticationKeyID "$KEY_ID" \
+            -authenticationKeyIssuerID "$ISSUER_ID" \
+            CURRENT_PROJECT_VERSION=${{ steps.bn.outputs.num }}
+
+      # Export the archive as an ".ipa" and upload it straight to TestFlight.
+      - name: Export + upload to TestFlight
+        run: |
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<'PLIST'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key><string>app-store</string>
+            <key>destination</key><string>upload</string>
+            <key>signingStyle</key><string>automatic</string>
+          </dict>
+          </plist>
+          PLIST
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/Dozent.xcarchive" \
+            -exportPath "$RUNNER_TEMP/export" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$HOME/private_keys/AuthKey_${KEY_ID}.p8" \
+            -authenticationKeyID "$KEY_ID" \
+            -authenticationKeyIssuerID "$ISSUER_ID"
+
+      - name: Done
+        run: echo "Uploaded build ${{ steps.bn.outputs.num }} to TestFlight. It appears on your phone once Apple finishes processing (a few minutes)."
