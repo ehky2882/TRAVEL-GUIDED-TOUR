@@ -33,7 +33,29 @@ User-curated, ordered collections of **whole** tours (multi-stop tours never spl
   loop (create → add → view ordered → play → edit/remove → delete). PR #395 CI green (validator +
   sim build + unit tests); squash-merged.
 
-## Polish backlog (deferred — `docs/journeys-design.md` §14)
+## 3. Group Listen — Phase 1 (code, PR #396 → `main`, squash `2ba2f58`, TestFlight 1.1 (8))
+**Second feature built + shipped from this web session.** Synced group listening — one leader,
+followers mirror. Phase 1 = free **"Listen Together"** over **MultipeerConnectivity** (offline).
+- **New files (`Features/GroupListen/`):** `GroupPlaybackState.swift` (sync protocol), `GroupTransport.swift`
+  (seam), `MultipeerTransport.swift` (offline pipe, join-by-code), `GroupListenCoordinator.swift`
+  (`@MainActor @Observable` engine — leader broadcasts, follower reconciles w/ 1.25s drift threshold;
+  follower geofence OFF), `GroupListenSheet.swift`, `GroupBanner.swift`.
+- **Wiring:** "Listen together" in `TourDetailView` ⋯ menu; coordinator built dependency-free at App
+  init, deps wired via `attach(...)` in `.task`, injected app-wide + both UIKit layers + bottom-module
+  window. `Info.plist`: `NSLocalNetworkUsageDescription` + `NSBonjourServices` (`_atlas-tour`).
+- **Additive** — solo playback/geofence unchanged. **⚠️ Device-only — on-device sync (2+ phones,
+  different accounts) is owner-owned, NOT yet verified**; merged anyway (additive, menu-gated).
+- **Deferred:** leader-handoff/takeover (v1 shows "Leader left" + Leave), QR join, Hosted mode
+  (Supabase Realtime, `backend/group_sessions.sql`), Pro Guide paid tier.
+
+## ⚡ Capability note for ALL sessions — web sessions can now build + ship features
+The old "implementation work needs a local Mac session" rule is **retired** (CLAUDE.md § Session
+workflow updated). Any web/remote session can write app code, push a branch, trigger
+`.github/workflows/testflight.yml` (Actions → Run workflow, or a PR `build` label) for a signed
+device build, and merge on owner OK + green `ci.yml`. Proven twice today (Journeys #395, Group
+Listen #396). Don't tell the owner a feature must wait for a local session.
+
+## Journeys polish backlog (deferred — `docs/journeys-design.md` §14)
 edit-journey-details (v1 is create-only) · drag-reorder · a field to *enter* the per-tour note
 (schema stores `note`, detail shows it, no input yet) · cover images · share (`.journey` deep link +
 web landing) · discover/save others' public journeys (`saved_journeys` unused) · walking-path map ·

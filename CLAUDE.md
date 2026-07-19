@@ -12,8 +12,10 @@ Multi-platform SwiftUI. iOS 26.2 / macOS 26.2 / visionOS 26.2.
 
 ## Session workflow
 
-- **Web sessions** (like this one) are for project management, content uploads, and planning. Code changes happen here only when they're small and self-contained.
-- **Implementation work** (new features, refactors, UI changes) → owner spawns a new session and creates a new branch. This keeps the main project-management session context clean.
+- **⚡ Web/remote sessions CAN now build + ship real app features — no Mac required (since 2026-07-19).** The on-demand signed-TestFlight CI pipeline (`.github/workflows/testflight.yml`) builds + signs + uploads a device-testable TestFlight build from any branch on a cloud Mac. So a Linux web session writes SwiftUI/app code, pushes a branch, triggers a build (Actions → Run workflow, or a PR `build` label), and the owner reviews it on their phone — then merges. **This is proven: Journeys (PR #395) and Group Listen (PR #396) were both built end-to-end in web sessions and shipped this way.** The old rule "implementation work needs a local Mac session" is **retired** — do NOT tell the owner a feature has to wait for a local session. Details: `docs/testflight-ci.md`; § "On-demand signed TestFlight builds" in Current State.
+  - **How a web session ships a feature:** write code on a branch → push → (open a PR so `ci.yml` runs the simulator build + unit tests, the web-session equivalent of `test_sim`) → trigger `testflight.yml` (Actions → Run workflow on the branch, or add the `build` label to the PR) → owner installs the TestFlight build + reviews on device → merge on owner OK + green CI. Repo is **public → Actions minutes are free**, build as often as needed.
+  - Web sessions still can't run `test_sim`/simulator locally (no Mac in-session) — `ci.yml` on the PR is the stand-in. Device-only features (Group Listen sync, GPS geofence) still need the owner's real device(s) to verify.
+- **Web sessions remain great for** project management, content uploads, planning, and now full feature builds. A separate local session is optional (for tight iterative simulator work), not required.
 - Owner does not use Terminal. Claude handles all shell/git work.
 - **Supabase / SQL / backend infra is beyond the owner's technical comfort — hand-hold maximally.** When guiding through Supabase (or any dashboard/SQL/infra) work: give **exact copy-paste-ready SQL blocks** (don't link to repo files — the repo is private and links 404), walk the dashboard **click-by-click**, explain each confirmation prompt (e.g. the "destructive operations" warning is just the `drop … if exists` lines on a fresh DB — safe), and never assume Terminal. The owner runs SQL by pasting into the Supabase **SQL Editor**.
 
@@ -25,11 +27,11 @@ These happen **automatically, without the owner asking**.
 |---|---------|-------------------------------|
 | 1 | Every session start | Run full git/PR health check (§ Session-start ritual) + read latest HANDOFF file — before any other work |
 | 2 | After any edit to `Resources/Tours.json` | Run `swift scripts/validate-tours.swift`; fix errors before continuing |
-| 3 | Before pushing any code PR | Call `test_sim` (XcodeBuildMCP); fix failures before pushing |
+| 3 | Before pushing any code PR | **Local (Mac) session:** call `test_sim` (XcodeBuildMCP); fix failures before pushing. **Web/remote session (no Mac):** open the PR so `ci.yml` runs the simulator build + unit tests (the `test_sim` stand-in); fix any red before merge. |
 | 4 | Doc-only / content-only / asset PR is ready (CI green) | Squash-merge to `main` automatically — no owner approval gate. Resolve merge conflicts in-line. Delete the merged branch. **Code PRs (anything in `*.swift`, `*.xcodeproj`/`*.pbxproj`, `Assets.xcassets/`) wait for explicit owner OK + visual simulator confirmation — see § Merging PRs for the exact boundary.** |
 | 5 | Session ends (touched code or content) | Update `CLAUDE.md` + `ROADMAP.md` in same commit; write `archive/HANDOFF-YYMMDD.md`; update `archive/README.md` |
 | 6 | Stale merged `claude/*` branches detected | Delete them via `git push origin --delete` — no prompting |
-| 7 | Owner asks for a TestFlight build | Bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, then run `xcodebuild archive` (see `docs/testflight.md` § "Archive command"). Owner then does Organizer → Distribute App → Upload (2–3 min). |
+| 7 | Owner asks for a TestFlight build | **Web/remote session (preferred, no Mac):** push the branch, then trigger `.github/workflows/testflight.yml` (Actions → Run workflow on the branch, or add the `build` label to its PR) — CI builds + signs + uploads automatically; build number = `github.run_number` → `1.1 (N)`. See `docs/testflight-ci.md`. **Local (Mac) session:** bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, `xcodebuild archive` (`docs/testflight.md`), owner uploads via Organizer. |
 | 8 | New tour added (to `Tours.json`) that lacks images | Run the image pipeline (§ Image Pipeline) automatically — no prompting — and **reply with a numbered, labeled contact sheet of ~12 verified CC0 candidates per tour so the owner can pick hero + gallery by number** (e.g. `"3 hero, 1, 7, 9"`). This is the standard "upload tours without images" flow. **Exception: owner-supplied images (Portugal/Porto/Lisbon tours) — do not run pipeline, use the provided assets.** |
 
 ## Image Pipeline
@@ -68,6 +70,22 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
 ## Current State (2026-07-19)
+
+### Group Listen Phase 1 shipped — synced group listening, Nearby/offline — built + shipped from a WEB session (session 59 — code)
+
+**Second feature built end-to-end in a web session and shipped via the TestFlight CI pipeline this session** (after Journeys). Designed earlier (`docs/group-listen-design.md`), built + CI-shipped + merged ([PR #396](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/396) → `main`, squash `2ba2f58`; TestFlight **1.1 (8)**).
+
+- **What it is.** Listen to a tour **together, in sync** — one person leads, everyone nearby mirrors their audio (same words at the same moment; stops advance together). **Phase 1 = the free "Listen Together" tier over MultipeerConnectivity** (Bluetooth / peer-Wi-Fi), so it **works offline** — the roaming-averse traveler is the core audience. Hosted mode (Supabase Realtime, large groups) + Pro Guide (paid) are later phases; the transport seam makes them additive.
+- **The leader model** (design §3) dissolves the geofence-vs-sync conflict: the leader's normal playback is the source of truth and it broadcasts; a **follower's geofence monitoring is turned OFF** and it only applies what the leader sends.
+- **App code (all new, `Features/GroupListen/`, auto-compiled via the synced group):**
+  - **`GroupPlaybackState.swift`** — the whole sync protocol (Codable state + `GroupRole` + `Participant`).
+  - **`GroupTransport.swift`** — the transport seam; `MultipeerTransport.swift` — the offline pipe (leader advertises a 5-char join code in `discoveryInfo`; follower joins only the code-matching session; send/receive state, roster, leader-lost).
+  - **`GroupListenCoordinator.swift`** — `@MainActor @Observable` engine: leader samples its player (`AudioPlayerService` + `appShared.currentPlayingStopId`) and broadcasts a ~1s heartbeat + reliably on play/pause/stop-change; follower loads the right stop, seeks, matches play/pause, corrects drift only past **1.25s** (small phone-to-phone differences are inaudible — over-correcting stutters). Built dependency-free at App init; deps wired via `attach(...)` in `.task`.
+  - **`GroupListenSheet.swift`** (start-as-leader shows the shareable code / join-by-code, sign-in gate, offline-download hint) + **`GroupBanner.swift`** (active-session strip above the mini-player: count + role + Leave, rendered in the bottom-module window).
+  - **Entry point** — "Listen together" in `TourDetailView`'s overflow menu. Coordinator injected app-wide + into both UIKit slide-up layers + the bottom-module window.
+  - **`Info.plist`** — added `NSLocalNetworkUsageDescription` + `NSBonjourServices` (`_atlas-tour._tcp`/`._udp`) for Multipeer.
+- **Verification.** TestFlight **1.1 (8)** compiled clean + uploaded via CI; PR #396 CI green (validator + iOS Simulator build + unit tests). **Fully additive** — solo playback + solo geofence auto-trigger are unchanged when not in a session. **⚠️ Device-only feature — on-device sync (2+ real phones, different accounts) is owner-owned and still to be verified;** merged regardless because it's additive and menu-gated.
+- **Deferred follow-ups (design has them):** real leader-handoff/takeover (v1 shows "Leader left" + Leave), QR-code join, **Hosted mode** (Supabase Realtime, `backend/group_sessions.sql`, large groups), **Pro Guide** paid tier (gate on `is_pro_guide` / Step-6 payments).
 
 ### Journeys shipped — user-curated tour collections, built + shipped from a WEB session via the new CI pipeline (session 59 — code)
 
