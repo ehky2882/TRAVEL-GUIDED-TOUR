@@ -2,23 +2,18 @@ import XCTest
 @testable import TRAVEL_GUIDED_TOUR
 
 /// Unit tests for the pure sign-in merge logic in `SyncService` — the part that
-/// decides how a device's local library/saved-makers combine with the user's
+/// decides how a device's local library/recently-viewed combine with the user's
 /// cloud rows. No network; just the value transforms.
 final class SyncServiceMergeTests: XCTestCase {
 
     private let tourA = UUID()
     private let tourB = UUID()
-    private let makerX = UUID()
-    private let makerY = UUID()
     private let userId = UUID().uuidString.lowercased()
 
     /// Build a "remote" library row by wrapping a `LibraryEntry` with the
     /// desired field values (the row init mirrors the entry).
     private func remoteLib(_ entry: LibraryEntry) -> UserLibraryRow {
         UserLibraryRow(entry: entry, userId: userId)
-    }
-    private func remoteMaker(_ entry: SavedMakerEntry) -> UserSavedMakerRow {
-        UserSavedMakerRow(entry: entry, userId: userId)
     }
     private func remoteViewed(_ entry: RecentlyViewedEntry) -> UserRecentlyViewedRow {
         UserRecentlyViewedRow(entry: entry, userId: userId)
@@ -77,24 +72,6 @@ final class SyncServiceMergeTests: XCTestCase {
 
         let merged = SyncService.mergeLibrary(local: local, remote: remote)
         XCTAssertNil(merged.first(where: { $0.tourId == tourA })?.downloadedAt)
-    }
-
-    // MARK: - Saved makers
-
-    func test_mergeSavedMakers_unionsAndKeepsEarliestSavedAt() {
-        let early = Date(timeIntervalSince1970: 1000)
-        let late = Date(timeIntervalSince1970: 2000)
-        let local = [SavedMakerEntry(makerId: makerX, savedAt: late)]
-        let remote = [
-            remoteMaker(SavedMakerEntry(makerId: makerX, savedAt: early)), // same maker, earlier
-            remoteMaker(SavedMakerEntry(makerId: makerY, savedAt: late))   // remote-only
-        ]
-
-        let merged = SyncService.mergeSavedMakers(local: local, remote: remote)
-
-        XCTAssertEqual(Set(merged.map(\.makerId)), [makerX, makerY])
-        XCTAssertEqual(merged.first(where: { $0.makerId == makerX })?.savedAt, early,
-                       "Keeps the earliest known save time")
     }
 
     // MARK: - Recently viewed

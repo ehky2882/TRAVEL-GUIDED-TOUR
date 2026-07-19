@@ -74,7 +74,6 @@ struct MakerView: View {
 
     @Environment(DataService.self) private var dataService
     @Environment(AtlasNavigationState.self) private var navState
-    @Environment(SavedMakersStore.self) private var savedMakersStore
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(LocationManager.self) private var locationManager
     // Optional: the public maker page can be reached via the
@@ -128,7 +127,6 @@ struct MakerView: View {
     @State private var draftToEdit: EditingDraft?
     @State private var pendingDraftId: UUID?
 
-    private var isSaved: Bool { savedMakersStore.isSaved(maker.id) }
     private var isOwnProfile: Bool { mode == .ownProfile }
     private var isStandalone: Bool { mode == .publicStandalone }
 
@@ -195,9 +193,11 @@ struct MakerView: View {
         //    pages keep the system back chevron.
         //  • Trailing — own profile: a gear that opens Settings (Settings
         //    moved inside the profile, owner direction 2026-07-01).
-        //    Public (pushed or standalone): a bookmark (save this maker)
-        //    + a `…` overflow menu (Save · Share · Follow [disabled] ·
-        //    Report), mirroring the tour-detail sheet.
+        //    Public (pushed or standalone): a `…` overflow menu (Share ·
+        //    Follow · Report), mirroring the tour-detail sheet. Follow is
+        //    the single way to keep track of a maker (owner direction
+        //    2026-07-19: the old bookmark/save-maker was redundant with
+        //    Follow and has been removed).
         .toolbar {
             if isStandalone {
                 ToolbarItem(placement: .topBarLeading) {
@@ -218,15 +218,6 @@ struct MakerView: View {
                     }
                     .accessibilityLabel("Settings")
                 } else {
-                    Button {
-                        savedMakersStore.toggleSaved(maker.id)
-                    } label: {
-                        Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
-                    }
-                    .accessibilityLabel(isSaved
-                        ? "Remove \(maker.displayName) from saved"
-                        : "Save \(maker.displayName)")
-
                     overflowMenu
                 }
             }
@@ -777,18 +768,9 @@ struct MakerView: View {
 
     /// Top-trailing `…` overflow menu — mirrors the tour-detail sheet's
     /// menu, minus the tour-only items (Download / Go to creator).
-    /// Order: Save · Share · Follow [disabled] · Report a concern.
+    /// Order: Share · Follow · Report a concern.
     private var overflowMenu: some View {
         Menu {
-            Button {
-                savedMakersStore.toggleSaved(maker.id)
-            } label: {
-                Label(
-                    isSaved ? "Remove from saved" : "Save",
-                    systemImage: isSaved ? "bookmark.fill" : "bookmark"
-                )
-            }
-
             // Single link bubble in Messages (no separate text bubble) — the
             // card's title/image come from the landing page's Open Graph tags.
             ShareLink(
@@ -817,7 +799,6 @@ struct MakerView: View {
                 .accessibilityLabel("More options")
         }
     }
-
 
     // MARK: - Derived
 

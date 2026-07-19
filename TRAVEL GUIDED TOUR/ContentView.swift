@@ -30,7 +30,6 @@ struct ContentView: View {
     @Environment(AppSharedState.self) private var appShared
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(MakerPresenter.self) private var makerPresenter
-    @Environment(SavedMakersStore.self) private var savedMakersStore
     @Environment(FollowService.self) private var followService
     @Environment(AuthService.self) private var authService
     @Environment(JourneyService.self) private var journeyService
@@ -222,7 +221,6 @@ struct ContentView: View {
                     .environment(proximityMonitor)
                     .environment(tourDownloader)
                     .environment(appShared)
-                    .environment(savedMakersStore)
                     .environment(followService)
                     .environment(authService)
                     .environment(journeyService),
@@ -264,7 +262,6 @@ struct ContentView: View {
                     .environment(proximityMonitor)
                     .environment(tourDownloader)
                     .environment(appShared)
-                    .environment(savedMakersStore)
                     .environment(followService)
                     .environment(authService)
                     .environment(journeyService),
