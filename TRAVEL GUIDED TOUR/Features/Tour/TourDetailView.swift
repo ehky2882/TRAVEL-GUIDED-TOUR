@@ -65,6 +65,9 @@ struct TourDetailView: View {
     /// path can't crash on a missing lookup — the "Add to a Journey" item just
     /// hides when it's absent.
     @Environment(JourneyService.self) private var journeyService: JourneyService?
+    /// Optional for the same reason as `journeyService` — injected by the UIKit
+    /// slide-up layers; "Listen together" hides if absent.
+    @Environment(GroupListenCoordinator.self) private var groupListen: GroupListenCoordinator?
 
     /// Programmatic push for the menu's "Go to creator" item. The
     /// inline maker row uses its own inline `NavigationLink`; the
@@ -74,6 +77,7 @@ struct TourDetailView: View {
     @State private var showingMaker = false
     @State private var showingReport = false
     @State private var showingAddToJourney = false
+    @State private var showingGroupListen = false
 
     /// Toggles between the truncated 4-line preview of `longDescription`
     /// and the full text. Apple Music / Podcasts pattern — keeps the
@@ -157,6 +161,9 @@ struct TourDetailView: View {
         }
         .sheet(isPresented: $showingAddToJourney) {
             AddToJourneySheet(tour: tour)
+        }
+        .sheet(isPresented: $showingGroupListen) {
+            GroupListenSheet(tour: tour)
         }
         .onAppear {
             navState.push()
@@ -1190,6 +1197,14 @@ struct TourDetailView: View {
                     showingAddToJourney = true
                 } label: {
                     Label("Add to a Journey", systemImage: "text.badge.plus")
+                }
+            }
+
+            if groupListen != nil {
+                Button {
+                    showingGroupListen = true
+                } label: {
+                    Label("Listen together", systemImage: "person.2.wave.2")
                 }
             }
 

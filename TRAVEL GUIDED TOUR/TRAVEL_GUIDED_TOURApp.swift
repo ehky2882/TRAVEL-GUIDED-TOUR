@@ -56,6 +56,11 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// tab bar in the second window can drive the main window's
     /// tab content. See `Components/BottomModuleWindow.swift`.
     @State private var appShared = AppSharedState()
+    /// Group Listen (SharePlay-style synced group listening). Built here, its
+    /// service dependencies wired in `.task` (so it captures the same live
+    /// `@State` instances); injected app-wide + into the bottom-module window
+    /// (the banner). See `Features/GroupListen/`.
+    @State private var groupListen = GroupListenCoordinator()
     /// App-wide tour-detail presentation channel. Promoted from
     /// `ContentView` to the App level so the bottom-module window
     /// can read it too (the mini-player + tab bar's geometry
@@ -141,6 +146,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(navState)
                     .environment(savedMakersStore)
                     .environment(toastCenter)
+                    .environment(groupListen)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
                     .task {
                         // Pre-warm the Me tab at launch so its data is already
@@ -156,6 +162,17 @@ struct TRAVEL_GUIDED_TOURApp: App {
                                 await makerTourService.loadMyTours(makerId: makerId)
                             }
                         }
+                        // Wire the Group Listen coordinator's dependencies once
+                        // (it's constructed dependency-free so it can be injected
+                        // into the environment before this runs).
+                        groupListen.attach(
+                            audioPlayer: audioPlayer,
+                            appShared: appShared,
+                            dataService: dataService,
+                            tourDownloader: tourDownloader,
+                            proximityMonitor: proximityMonitor,
+                            auth: authService
+                        )
                         // Wire up library/saved-makers sync once. Created here
                         // (not as an inline @State default) so it captures the
                         // live auth + store instances; it sets the stores'
@@ -264,6 +281,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 .environment(navState)
                 .environment(savedMakersStore)
                 .environment(toastCenter)
+                .environment(groupListen)
             // No `.preferredColorScheme(...)` here: the install closure
             // is evaluated ONCE and would freeze the host controller's
             // `overrideUserInterfaceStyle` at the install-time value,

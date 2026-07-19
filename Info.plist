@@ -41,6 +41,13 @@
 	<string>Atlas uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Atlas uses the microphone so you can record narration for the audio tours you create.</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Dozent uses the local network to sync audio with people near you when you listen to a tour together.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_atlas-tour._tcp</string>
+		<string>_atlas-tour._udp</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
