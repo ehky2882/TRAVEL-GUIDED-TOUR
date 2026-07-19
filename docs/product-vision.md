@@ -1,9 +1,15 @@
 # Dozent — product vision & strategy
 
-Status: **living strategy doc** (first written 2026-07-08, from an owner ↔ Claude strategy
-session). This is the *compass* — the "why" and the "in what order." It sits above the
-feature designs (`group-listen-design.md`, `journeys-design.md`) and the `ROADMAP.md`
-execution checklist. When a decision feels unclear, come back here.
+Status: **living strategy doc** (first written 2026-07-08; status refreshed 2026-07-19, from
+an owner ↔ Claude strategy session). This is the *compass* — the "why" and the "in what
+order." It sits above the feature designs (`group-listen-design.md`, `journeys-design.md`)
+and the `ROADMAP.md` execution checklist. When a decision feels unclear, come back here.
+
+> **Since first draft:** the catalog has grown to **~790 pro tours across 14 cities**, and
+> three depth/supply layers have shipped Phase 1 to TestFlight — **Journeys**, **Group
+> Listen**, and the **Social (follow) layer**. The strategy below is unchanged; the "how the
+> features serve the vision" section now reflects what's *shipped* vs *still designed*. **The
+> first domino — a flawless on-the-ground NYC walk — remains un-done and is still the move.**
 
 ---
 
@@ -38,9 +44,11 @@ Army knife.
 
 ## The marketplace truth (why the chicken-and-egg trap doesn't apply)
 Two-sided marketplaces usually die launching **empty on both sides**. Dozent isn't empty:
-- **Supply was seeded by the founder** — ~500+ pro tours across ~9 cities. So Dozent is a
-  **great single-player content app that is *opening* a supply side**, not a marketplace
-  launching from zero. (The Airbnb/OpenTable/DoorDash "do things that don't scale" pattern.)
+- **Supply was seeded by the founder** — ~790 pro tours across 14 cities (NYC, London,
+  Kyoto, Lisbon, Tokyo, Bangkok, Porto, Hong Kong, Paris, Seoul, Toronto, LA, San Francisco,
+  Naoshima). So Dozent is a **great single-player content app that is *opening* a supply
+  side**, not a marketplace launching from zero. (The Airbnb/OpenTable/DoorDash "do things
+  that don't scale" pattern.)
 - Therefore **solve demand first.** A maker's real question is "will anyone hear my tour?" —
   they need an audience. Listeners just need good tours, which already exist. **Build
   listeners on the seeded content, *then* recruit makers by offering them that audience.**
@@ -112,13 +120,21 @@ feel whether the magic is real. If it is, every later layer gets easy. If it isn
 no marketing, makers, or features matter. The founder lives in NYC — this is a *this-weekend*
 move, not a someday move.
 
-## How the designed features serve the vision
-- **Journeys** (`journeys-design.md`) — the curation on-ramp (consumer → creator), a
-  planning workspace, and a shareable growth vector. Serves retention + supply + virality.
-- **Group Listen** (`group-listen-design.md`) — delight + the "Pro Guide" monetization seam;
-  works offline for travelers. Serves depth + money.
-- **Social layer** (designed next) — following = the relationships hook + the discovery feed
-  that makes Journeys and the ladder come alive.
+## How the features serve the vision
+- **Journeys** (`journeys-design.md`) — **✅ Phase 1 shipped** (TestFlight 1.1 (7)): create
+  ordered collections of whole tours, cloud-backed per account. The curation on-ramp
+  (consumer → creator), a planning workspace, and a shareable growth vector. Serves
+  retention + supply + virality. *Still designed, not built:* share-a-journey (deep link +
+  web landing), discover/save others' public journeys, drag-reorder, curator notes (§14).
+- **Group Listen** (`group-listen-design.md`) — **✅ Phase 1 shipped** (TestFlight 1.1 (8)):
+  free "Listen Together" over MultipeerConnectivity, leader-driven, works offline for
+  travelers. Serves depth + money. *Still designed, not built:* Hosted mode (Supabase
+  Realtime, large groups) + **Pro Guide** paid tier — the monetization seam.
+- **Social layer** — **✅ Phase 1 shipped** (follow/followers with counts, public/private
+  accounts, follow requests; builds 68–70). Following = the relationships hook. Reinforced
+  by making **Follow the single way to keep a creator** (maker bookmarking removed). *Still
+  to come:* a "tours from creators you follow" home feed (reads the same `follows` table, no
+  schema change) — the discovery feed that makes Journeys and the ladder come alive.
 - Sequencing of these lives in `ROADMAP.md`; *why* they exist lives here.
 
 ## Open strategic questions (owner)
