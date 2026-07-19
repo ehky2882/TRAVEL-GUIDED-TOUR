@@ -1,12 +1,48 @@
 # Journeys — design & production handoff
 
-Status: **design only, not built** (2026-07-08). Working name **"Journey"** (final name
-TBD — punted by the owner). Produced in a web session for a future **local (Mac/Xcode)
-session**. Backend SQL: [`../backend/journeys.sql`](../backend/journeys.sql).
+Status: **Phase 1 SHIPPED** (2026-07-19, PR #395 → `main`; TestFlight 1.1 (7), owner
+device-verified). Working name **"Journey"** kept. Backend SQL applied to Supabase:
+[`../backend/journeys.sql`](../backend/journeys.sql). The rest of this doc is the original
+design (2026-07-08); §14 below records exactly what shipped and the polish backlog.
 
-> A **proposal awaiting the owner's green-light to build.** Decisions below were made with
-> the owner 2026-07-08. This is the consumer-curation counterpart to the maker platform;
-> it barely invents new infrastructure — it mostly *arranges* pieces already built.
+> This is the consumer-curation counterpart to the maker platform; it barely invents new
+> infrastructure — it mostly *arranges* pieces already built.
+
+---
+
+## 14. Shipped v1 (Phase 1) + polish backlog (2026-07-19)
+
+**Shipped this session** — built in a *web* session through the new on-demand TestFlight CI
+pipeline (first feature to ship that way), owner-tested on device, merged via PR #395:
+- **`Models/Journey.swift`** — `Journey` + `JourneyItem` value types.
+- **`Data/JourneyService.swift`** — `@MainActor @Observable` Supabase CRUD (load my journeys
+  with item counts, list items, membership lookup, create, add/remove tour, delete), mirroring
+  `MakerTourService`.
+- **`Features/Journeys/`** — `JourneysListView` (list + `JourneyEditorSheet` create form),
+  `JourneyDetailView` (ordered tours, tap-to-play, edit-to-remove, delete), `AddToJourneySheet`
+  (toggle a tour's membership across journeys, create-and-add).
+- **Entry points** — a "Journeys" row on the own-profile (`MakerView .ownProfile`) and an
+  "Add to a Journey" item in `TourDetailView`'s overflow menu. `JourneyService` built at App
+  init (shares `AuthService`), injected app-wide + into both UIKit slide-up layers.
+- **Backend** — `journeys` / `journey_items` / `saved_journeys` tables + RLS + `get_journey`
+  RPC applied to the live Supabase project.
+
+**Deliberately deferred — the polish backlog** (each a clean follow-up, none blocking):
+1. **Edit a Journey's details** after creation (title / description / public toggle) — v1 is
+   create-only. (`JourneyEditorSheet` is create-shaped; generalize to edit.)
+2. **Drag-to-reorder** tours within a Journey (set the walking order). Schema has `position`;
+   needs the set-renumber write + an `onMove` list.
+3. **Per-tour curator note** — the "why I picked this" note. `journey_items.note` is stored and
+   *shown* in `JourneyDetailView`, but there's no field to *enter* it yet (§3, §5).
+4. **Cover image** — auto (first tour's hero) vs custom (§12). Rows show a map-icon placeholder now.
+5. **Share a Journey** — add a `.journey(id)` case to `Data/DeepLink.swift` + a web landing page,
+   then a Share action (§7). Dropped from v1 to avoid a dead link.
+6. **Discover / save others' Journeys** — public Journeys on the profile; `saved_journeys` +
+   a `SavedJourneysStore`; surface in Library (§4, §7). Table exists, unused.
+7. **Walking-path map** on the detail screen (§8) — reuse `TourDetailView`'s `MKDirections`.
+8. **Batch offline download** of a Journey's tours (§6) — loop `TourDownloader`.
+
+The sections below are the full original design; items above map to §§3–8, 11–12.
 
 ---
 

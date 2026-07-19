@@ -925,7 +925,7 @@ As of 2026-06-27. **Critical path to "outside makers can publish a tour": B (Sup
 config) → A (Mac app work).** Everything else (payments, consumer extras, media
 hosting) can follow.
 
-**A. App-side — needs a Mac / Xcode session (each gated by `test_sim` + simulator review)**
+**A. App-side** — historically Mac-only; **as of 2026-07-19 a web session can also ship a device-testable build** via the on-demand signed-TestFlight CI (`.github/workflows/testflight.yml`, PR #393; runbook `docs/testflight-ci.md`). Trigger: PR label `build` or Actions → Run workflow. Owner still reviews on-device before merge. (each gated by `test_sim` / CI + review)
 - [x] Add `supabase-swift` (first third-party dependency) — **done, PR #262 (2026-06-27)**: SPM 2.48.0, app-target only; used by `AuthService` (the catalog read still uses its own `URLSession` fetcher)
 - [x] Point `RemoteCatalogLoader` at the `get_catalog` RPC (+ `apikey`/anon header) — **done, PR #255 (2026-06-27)**: Supabase-first with gh-pages fallback; `SupabaseCatalogFetcher` + `SupabaseConfig` (client-safe anon key). Live-verified 370 tours from Supabase in-sim
 - [x] Sign-in UI (Apple / email / Google) in the "Me" tab — **all three done** (email #262 · Apple #274 · Google #277), shipped in builds 51/52/53. `AuthService` + `SignInView` (Apple + Google buttons + email sign-in/create/confirm), Me-tab account row + sign-out.
@@ -947,7 +947,7 @@ hosting) can follow.
 - [ ] Consumer richness (Step 8): follow-a-maker + notifications, in-app search, share links
 - [ ] Moderation web admin tool — only if volume outgrows the email approach
 - [ ] **Group Listen** (proposed — design ready, awaiting owner green-light): a group listens to a tour in sync, leader-driven; **Nearby** mode (offline MultipeerConnectivity mesh, ≤~8) + **Hosted** mode (Supabase Realtime, large); free "Listen Together" + paid **"Pro Guide"** tier; account-gated. Connects the social layer + monetization. Full production handoff: `docs/group-listen-design.md` (+ `backend/group_sessions.sql` for Hosted mode). App build is Mac-side (device-test-heavy).
-- [ ] **Journeys** (proposed — design ready, awaiting owner green-light): user-curated, ordered, editable collections of whole tours (multi-stop tours kept intact) with per-tour notes; plan-then-follow, offline batch download, shareable (profile + deep link) + savable. Rests on **"anyone can be a Dozent"** (no consumer/maker split — accounts make Tours *and* Journeys). Reuses tours + downloader + deep-links (#297) + profile; near-zero new infra. Discovery flywheel for makers. Handoff: `docs/journeys-design.md` (+ `backend/journeys.sql`). App build Mac-side.
+- [~] **Journeys** — **Phase 1 SHIPPED 2026-07-19 ([PR #395](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/395) → `main`, TestFlight 1.1 (7), owner device-verified).** User-curated, ordered collections of whole tours (multi-stop tours kept intact). Built **entirely in a web session** through the new TestFlight CI pipeline (first feature to do so). `Models/Journey`, `Data/JourneyService`, `Features/Journeys/` (list/detail/add-to-journey), profile "Journeys" row + tour-menu "Add to a Journey"; `backend/journeys.sql` applied. **Remaining (polish backlog, `docs/journeys-design.md` §14):** edit-details, drag-reorder, enter per-tour note, cover images, share (`.journey` deep link + landing), discover/save others' (`saved_journeys`), walking-path map, batch offline download.
 
 **E. Housekeeping**
 - [ ] Fix 2 dead gallery images (The Oculus, The Charging Bull — Wikimedia 404)

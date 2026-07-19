@@ -67,7 +67,31 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-07-05)
+## Current State (2026-07-19)
+
+### Journeys shipped — user-curated tour collections, built + shipped from a WEB session via the new CI pipeline (session 59 — code)
+
+**First feature built end-to-end in a web session and shipped to the owner's device without a Mac.** The owner set up an on-demand signed-TestFlight CI pipeline (see below) precisely so web sessions can build reviewable app features; **Journeys is the first to use it.** Designed earlier (`docs/journeys-design.md`), built + tested + merged this session ([PR #395](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/395) → `main`, squash `9fe6149`).
+
+- **What it is.** The "anyone can be a Dozent" curation layer: a signed-in user strings **whole tours** (never split — multi-stop tours stay atomic) into an ordered, optionally-public **Journey** (a "playlist" of tours). Cloud-backed, per-account.
+- **App code (all new, auto-compiled via the synced file group — no pbxproj surgery):**
+  - **`Models/Journey.swift`** — `Journey` + `JourneyItem` value types.
+  - **`Data/JourneyService.swift`** — `@MainActor @Observable` Supabase CRUD (load my journeys w/ embedded item counts, list items, membership lookup, create, add/remove tour, delete), mirroring `MakerTourService`'s DTO/query patterns. Built at App init (shares `AuthService`), injected app-wide + re-injected into both UIKit slide-up layers (the tour/maker `BottomLayerController`s, which don't inherit the SwiftUI env).
+  - **`Features/Journeys/`** — `JourneysListView` (list + `JourneyEditorSheet` create form), `JourneyDetailView` (ordered tours, tap-to-play via `TourPresenter`, Edit-to-remove, Delete), `AddToJourneySheet` (Spotify-style toggle a tour's membership across journeys, create-and-add).
+  - **Entry points** — a **"Journeys" row on the own-profile** (`MakerView .ownProfile`, optional-env-gated) + an **"Add to a Journey"** item in `TourDetailView`'s overflow menu (optional `JourneyService?` env so no non-layer path crashes).
+- **Backend — `backend/journeys.sql` applied to the live Supabase project** (owner-run, hand-held, "Success. No rows returned."): `journeys` / `journey_items` / `saved_journeys` tables + RLS (owner-write, public-read) + `get_journey(uuid)` RPC. The app build is independent of the SQL — the first create surfaced *"Could not find the table 'public.journeys'"* until the owner ran it, then worked (PostgREST schema-cache auto-reloads in seconds). **This is the app's first *consumer* content write beyond the maker profile.**
+- **Verification.** TestFlight **1.1 (7)** compiled clean + uploaded via the CI pipeline (build → sign → upload all green). **Owner device-tested the full loop** — create → add-to-journey → view ordered → play → edit/remove → delete — and confirmed it works. PR #395 CI green (validator + iOS Simulator build + unit tests); squash-merged to `main`.
+- **Polish backlog (deferred, all clean follow-ups — see `docs/journeys-design.md` §14):** edit-journey-details (v1 is create-only), drag-reorder, a field to *enter* the per-tour curator note (schema stores `note`, detail screen shows it, no input yet), cover images, share-a-journey (`.journey` deep link + web landing), discover/save others' public journeys (`saved_journeys` table present, unused), walking-path map, batch offline download.
+- **NEXT (owner's call):** any of the polish items above (each ships the same web-session→CI→device→merge way), or a different feature. **Group Listen** (`docs/group-listen-design.md`, `backend/group_sessions.sql`) is the other designed-but-unbuilt feature.
+
+### On-demand signed TestFlight builds from CI — web sessions can now ship device-testable builds (session 59 — infra)
+
+**The workflow change that unblocks everything above.** New **`.github/workflows/testflight.yml`** ([PR #393](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/393)) builds + signs + uploads a TestFlight build on demand (PR label **`build`** OR Actions → Run workflow) on a `macos-26` runner, using an App Store Connect API key with cloud signing. So a **web (Linux) session with no Mac** can push app code and get a build on the owner's phone to review — closing the old "Claude can only build features back on a local session" gap.
+
+- **One-time owner setup (done, hand-held):** 3 GitHub Actions **secrets** — `APP_STORE_CONNECT_KEY_ID`, `APP_STORE_CONNECT_ISSUER_ID`, `APP_STORE_CONNECT_API_KEY` (the `.p8` contents) — + a `build` label. Runbook: `docs/testflight-ci.md`.
+- **Gotcha codified (cost me 2 debug rounds):** cloud signing needs the API key at **Admin** role (App Manager is *not* enough → *"No profiles for '…' were found"* on export). And the 3 secrets must be in the **Secrets** tab (not Variables), named exactly.
+- **Clean build numbers:** switched from timestamp to **`github.run_number`** and bumped `MARKETING_VERSION` to **1.1** ([PR #394](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/394)), so builds read `1.1 (N)` (the old `1.0 (timestamp)` builds live in a separate version train). **Repo is PUBLIC → Actions minutes are free**, so build as often as needed.
+- **Note:** this is separate from the existing `ci.yml` (simulator build + tests on every PR) and `publish-catalog.yml` (content → gh-pages + Supabase). It does NOT run on every push — on demand only.
 
 ### Me-tab lag fully killed — whole-profile snapshot hydration — TestFlight 1.0 (74) (session 58 — code)
 
