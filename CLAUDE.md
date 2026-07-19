@@ -99,7 +99,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **The docs had drifted badly** — CLAUDE.md's Key facts still read **509 tours / 9 makers / 561 stops** while the live catalog (bundled `Tours.json` == gh-pages mirror, both verified) is **790 tours / 14 makers / 969 stops**. Five cities/bureaus launched since the last sync and were undocumented: **Bangkok (BKK, 57), Paris (PAR, 50), Seoul (SEL, 43), Los Angeles (LAX, 42), Naoshima (NAO, 15)**. Corrected the Key facts block (counts, per-maker breakdown, single/multi-stop split now 760/30, bilingual coverage now spanning `日本語`/`中文`/`한국어`/`ไทย`). Historical Current State entries are dated snapshots and left as-is.
 
-
+### Group Listen Phase 1 shipped — synced group listening, Nearby/offline — built + shipped from a WEB session (session 59 — code)
 
 **Second feature built end-to-end in a web session and shipped via the TestFlight CI pipeline this session** (after Journeys). Designed earlier (`docs/group-listen-design.md`), built + CI-shipped + merged ([PR #396](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/396) → `main`, squash `2ba2f58`; TestFlight **1.1 (8)**).
 
@@ -128,7 +128,7 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 - **Backend — `backend/journeys.sql` applied to the live Supabase project** (owner-run, hand-held, "Success. No rows returned."): `journeys` / `journey_items` / `saved_journeys` tables + RLS (owner-write, public-read) + `get_journey(uuid)` RPC. The app build is independent of the SQL — the first create surfaced *"Could not find the table 'public.journeys'"* until the owner ran it, then worked (PostgREST schema-cache auto-reloads in seconds). **This is the app's first *consumer* content write beyond the maker profile.**
 - **Verification.** TestFlight **1.1 (7)** compiled clean + uploaded via the CI pipeline (build → sign → upload all green). **Owner device-tested the full loop** — create → add-to-journey → view ordered → play → edit/remove → delete — and confirmed it works. PR #395 CI green (validator + iOS Simulator build + unit tests); squash-merged to `main`.
 - **Polish backlog (deferred, all clean follow-ups — see `docs/journeys-design.md` §14):** edit-journey-details (v1 is create-only), drag-reorder, a field to *enter* the per-tour curator note (schema stores `note`, detail screen shows it, no input yet), cover images, share-a-journey (`.journey` deep link + web landing), discover/save others' public journeys (`saved_journeys` table present, unused), walking-path map, batch offline download.
-- **NEXT (owner's call):** any of the polish items above (each ships the same web-session→CI→device→merge way), or a different feature. **Group Listen** (`docs/group-listen-design.md`, `backend/group_sessions.sql`) is the other designed-but-unbuilt feature.
+- **NEXT (owner's call):** any of the polish items above (each ships the same web-session→CI→device→merge way), or a different feature. (**Group Listen** Phase 1 has since shipped — see its block above; its later phases (Hosted mode, Pro Guide) remain.)
 
 ### On-demand signed TestFlight builds from CI — web sessions can now ship device-testable builds (session 59 — infra)
 
