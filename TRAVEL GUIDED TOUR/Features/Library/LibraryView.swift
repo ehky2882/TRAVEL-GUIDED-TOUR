@@ -24,9 +24,17 @@ struct LibraryView: View {
     @Environment(TourDownloader.self) private var tourDownloader
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(MakerPresenter.self) private var makerPresenter
-    @Environment(SavedMakersStore.self) private var savedMakersStore
+    @Environment(FollowService.self) private var followService
+    @Environment(MakerProfileService.self) private var makerProfileService
+    @Environment(AuthService.self) private var authService
 
     @State private var selectedSection: Section = .saved
+    /// Makers the signed-in user follows — shown in the Saved tab below their
+    /// saved tours (owner direction 2026-07-19: Follow replaced the old
+    /// bookmark-a-maker, so the maker list here is now the follow graph, not a
+    /// local bookmark store). Loaded from `FollowService` on appear; empty when
+    /// signed out or before the user has a profile.
+    @State private var followingMakers: [Maker] = []
 
     /// Push the section picker's labels to SF Mono caption (13pt
     /// monospaced regular) — matches the editorial voice carried by
@@ -86,6 +94,13 @@ struct LibraryView: View {
             .safeAreaInset(edge: .bottom, spacing: 0) {
                 Color.clear.frame(height: AtlasBottomModule.height())
             }
+            // Load the follow list on appear + whenever the account changes.
+            // Library is switch-swapped (rebuilt on each tab entry), so this
+            // also refreshes the list each time the tab is opened — picking up
+            // follows/unfollows made on a maker page.
+            .task(id: authService.userId) {
+                await loadFollowing()
+            }
         }
     }
 
@@ -139,18 +154,17 @@ struct LibraryView: View {
         }
     }
 
-    /// The Saved tab: a "Makers" section (saved makers) above the
-    /// saved tours. When no makers are saved this falls through to the
-    /// original tour-only list + empty state, so the common case is
-    /// unchanged.
+    /// The Saved tab: saved tours, with a "Following" section (the makers the
+    /// user follows) below them. When the user follows no one this falls
+    /// through to the original tour-only list + empty state, so the common
+    /// case is unchanged.
     @ViewBuilder
     private var savedContent: some View {
-        if savedMakers.isEmpty {
+        if followingMakers.isEmpty {
             tourList(tours: savedTours, empty: SavedEmptyState())
         } else {
-            // Tours first — saved makers live below (owner direction
-            // 2026-07-03: prioritize individual tours; makers/friends will
-            // also have their own home in the follow system).
+            // Tours first — followed makers live below (owner direction
+            // 2026-07-03: prioritize individual tours).
             LazyVStack(alignment: .leading, spacing: 0) {
                 if !savedTours.isEmpty {
                     librarySectionHeader("Tours")
@@ -168,8 +182,8 @@ struct LibraryView: View {
                     }
                 }
 
-                librarySectionHeader("Makers")
-                ForEach(savedMakers) { maker in
+                librarySectionHeader("Following")
+                ForEach(followingMakers) { maker in
                     Button {
                         makerPresenter.present(maker)
                     } label: {
@@ -177,7 +191,7 @@ struct LibraryView: View {
                     }
                     .buttonStyle(.plain)
 
-                    if maker.id != savedMakers.last?.id {
+                    if maker.id != followingMakers.last?.id {
                         Divider().padding(.horizontal, AtlasSpacing.lg)
                     }
                 }
@@ -198,7 +212,7 @@ struct LibraryView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 
-    /// Saved-maker row — circular emoji avatar, BODY all-caps name,
+    /// Followed-maker row — circular emoji avatar, BODY all-caps name,
     /// caption tour-count subtitle. Mirrors the Search makers rows.
     private func makerRow(_ maker: Maker) -> some View {
         HStack(alignment: .center, spacing: AtlasSpacing.md) {
@@ -290,12 +304,26 @@ struct LibraryView: View {
         }
     }
 
-    /// Saved makers, most-recently-saved first. Makers no longer in
-    /// the catalog are dropped silently (mirrors `savedTours`).
-    private var savedMakers: [Maker] {
-        savedMakersStore.savedEntries.compactMap { entry in
-            dataService.maker(by: entry.makerId)
+    /// Fetch the signed-in user's followed makers. Keyed by the user's own
+    /// maker id (the follow graph resolves maker → owner), so it needs a loaded
+    /// profile — the same requirement as the profile's own "Following" list.
+    /// Signed out, or before a profile exists, this stays empty and the Saved
+    /// tab shows tours only.
+    private func loadFollowing() async {
+        guard authService.isSignedIn else {
+            followingMakers = []
+            return
         }
+        // Ensure the user's own maker row is loaded (it's pre-warmed at launch,
+        // but Library may open before that lands or after a fresh sign-in).
+        if makerProfileService.myMaker == nil {
+            await makerProfileService.loadMyMaker()
+        }
+        guard let myMakerId = makerProfileService.myMaker?.id else {
+            followingMakers = []
+            return
+        }
+        followingMakers = await followService.following(of: myMakerId)
     }
 
     private func makerTourCountText(_ maker: Maker) -> String {
@@ -327,7 +355,7 @@ private struct SavedEmptyState: View {
         EmptyStateLayout(
             icon: "bookmark",
             title: "Nothing saved yet",
-            message: "Tap the bookmark on any tour or maker to save it for later."
+            message: "Tap the bookmark on any tour to save it for later, or follow a creator to see them here."
         )
     }
 }

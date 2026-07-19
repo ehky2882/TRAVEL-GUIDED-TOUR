@@ -3,8 +3,8 @@ import Observation
 import Supabase
 
 /// Syncs a signed-in user's **library** (saved tours + listening progress +
-/// completed) and **saved makers** to the Supabase `user_library` /
-/// `user_saved_makers` tables, so their data follows them across devices.
+/// completed) and **recently-viewed** to the Supabase `user_library` /
+/// `user_recently_viewed` tables, so their data follows them across devices.
 ///
 /// Model:
 /// - **On sign-in:** pull the user's remote rows, MERGE them into the local
@@ -25,7 +25,6 @@ import Supabase
 final class SyncService {
     private let auth: AuthService
     private let library: LibraryStore
-    private let savedMakers: SavedMakersStore
     private let recentlyViewed: RecentlyViewedStore
     private let client: SupabaseClient
 
@@ -38,25 +37,21 @@ final class SyncService {
     /// before we've pushed the merged state ourselves.
     private var isInitialSyncing = false
     private var libraryPushTask: Task<Void, Never>?
-    private var makersPushTask: Task<Void, Never>?
     private var recentlyViewedPushTask: Task<Void, Never>?
 
     init(auth: AuthService,
          library: LibraryStore,
-         savedMakers: SavedMakersStore,
          recentlyViewed: RecentlyViewedStore,
          client: SupabaseClient = SupabaseClientProvider.shared,
          pushDebounce: Duration = .seconds(2)) {
         self.auth = auth
         self.library = library
-        self.savedMakers = savedMakers
         self.recentlyViewed = recentlyViewed
         self.client = client
         self.pushDebounce = pushDebounce
 
         // Write-through hooks: a local change, while signed in, pushes up.
         library.onChange = { [weak self] in self?.scheduleLibraryPush() }
-        savedMakers.onChange = { [weak self] in self?.scheduleMakersPush() }
         recentlyViewed.onChange = { [weak self] in self?.scheduleRecentlyViewedPush() }
 
         // Flush any pending debounced write-through before a sign-out tears down
@@ -98,10 +93,8 @@ final class SyncService {
     /// the write-through hook, and a signed-out session no-ops any pending push.
     private func handleSignedOut() {
         libraryPushTask?.cancel()
-        makersPushTask?.cancel()
         recentlyViewedPushTask?.cancel()
         library.applyMerged([])
-        savedMakers.applyMerged([])
         recentlyViewed.applyMerged([])
     }
 
@@ -118,11 +111,9 @@ final class SyncService {
     /// isn't blocked; when online the writes complete before the session ends.
     func flushPendingWrites() async {
         libraryPushTask?.cancel()
-        makersPushTask?.cancel()
         recentlyViewedPushTask?.cancel()
         guard auth.isSignedIn else { return }
         try? await pushLibrary()
-        try? await pushMakers()
         try? await pushRecentlyViewed()
     }
 
@@ -136,17 +127,13 @@ final class SyncService {
         do {
             let remoteLibrary: [UserLibraryRow] =
                 try await client.from("user_library").select().execute().value
-            let remoteMakers: [UserSavedMakerRow] =
-                try await client.from("user_saved_makers").select().execute().value
             let remoteViewed: [UserRecentlyViewedRow] =
                 try await client.from("user_recently_viewed").select().execute().value
 
             library.applyMerged(Self.mergeLibrary(local: library.entries, remote: remoteLibrary))
-            savedMakers.applyMerged(Self.mergeSavedMakers(local: savedMakers.entries, remote: remoteMakers))
             recentlyViewed.applyMerged(Self.mergeRecentlyViewed(local: recentlyViewed.entries, remote: remoteViewed))
 
             try await pushLibrary()
-            try await pushMakers()
             try await pushRecentlyViewed()
         } catch {
             // Best-effort: a failed sync leaves the local stores intact and the
@@ -164,16 +151,6 @@ final class SyncService {
             try? await Task.sleep(for: pushDebounce)
             guard !Task.isCancelled, let self else { return }
             try? await self.pushLibrary()
-        }
-    }
-
-    private func scheduleMakersPush() {
-        guard auth.isSignedIn, !isInitialSyncing else { return }
-        makersPushTask?.cancel()
-        makersPushTask = Task { [weak self, pushDebounce] in
-            try? await Task.sleep(for: pushDebounce)
-            guard !Task.isCancelled, let self else { return }
-            try? await self.pushMakers()
         }
     }
 
@@ -201,21 +178,6 @@ final class SyncService {
         try await client.from("user_library").delete()
             .eq("user_id", value: uid)
             .not("tour_id", operator: .in, value: "(\(keep))")
-            .execute()
-    }
-
-    private func pushMakers() async throws {
-        guard let uid = auth.user?.id.uuidString.lowercased() else { return }
-        let rows = savedMakers.entries.map { UserSavedMakerRow(entry: $0, userId: uid) }
-        if rows.isEmpty {
-            try await client.from("user_saved_makers").delete().eq("user_id", value: uid).execute()
-            return
-        }
-        try await client.from("user_saved_makers").upsert(rows, onConflict: "user_id,maker_id").execute()
-        let keep = rows.map(\.makerId).joined(separator: ",")
-        try await client.from("user_saved_makers").delete()
-            .eq("user_id", value: uid)
-            .not("maker_id", operator: .in, value: "(\(keep))")
             .execute()
     }
 
@@ -262,21 +224,6 @@ final class SyncService {
                     lastListenedAt: row.lastListenedAt,
                     completedAt: row.completedAt
                 )
-            }
-        }
-        return Array(byId.values)
-    }
-
-    /// Union local + remote saved makers, keeping the earliest known `savedAt`.
-    nonisolated static func mergeSavedMakers(local: [SavedMakerEntry], remote: [UserSavedMakerRow]) -> [SavedMakerEntry] {
-        var byId: [UUID: SavedMakerEntry] = [:]
-        for entry in local { byId[entry.makerId] = entry }
-        for row in remote {
-            guard let mid = UUID(uuidString: row.makerId) else { continue }
-            if let local = byId[mid] {
-                byId[mid] = SavedMakerEntry(makerId: mid, savedAt: min(local.savedAt, row.savedAt))
-            } else {
-                byId[mid] = SavedMakerEntry(makerId: mid, savedAt: row.savedAt)
             }
         }
         return Array(byId.values)
@@ -359,25 +306,6 @@ struct UserLibraryRow: Codable {
         try c.encode(listenedSeconds, forKey: .listenedSeconds)
         try c.encode(lastListenedAt, forKey: .lastListenedAt)
         try c.encode(completedAt, forKey: .completedAt)
-    }
-}
-
-/// Mirrors a `public.user_saved_makers` row.
-struct UserSavedMakerRow: Codable {
-    let userId: String
-    let makerId: String
-    let savedAt: Date
-
-    enum CodingKeys: String, CodingKey {
-        case userId = "user_id"
-        case makerId = "maker_id"
-        case savedAt = "saved_at"
-    }
-
-    init(entry: SavedMakerEntry, userId: String) {
-        self.userId = userId
-        self.makerId = entry.makerId.uuidString.lowercased()
-        self.savedAt = entry.savedAt
     }
 }
 

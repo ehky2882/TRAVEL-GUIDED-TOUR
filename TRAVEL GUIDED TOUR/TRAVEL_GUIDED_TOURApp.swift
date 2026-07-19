@@ -81,17 +81,12 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// `tourPresenter.presentedTour == nil`, so this counter is the
     /// only signal that flips the chrome to full-edge for them.
     @State private var navState = AtlasNavigationState()
-    /// On-device "saved makers" bookmark store. App-level so every
-    /// surface that can reach a maker (Home/Search push, the
-    /// tour-detail sheet's stack, the player window) and the Library
-    /// tab all read + mutate the same instance.
-    @State private var savedMakersStore = SavedMakersStore()
     /// App-wide transient-toast channel. Injected into both windows; the toast
     /// itself renders in the bottom-module window (above every modal). See
     /// `Components/AtlasToast.swift`.
     @State private var toastCenter = ToastCenter()
     /// Created once content appears (so it can capture the auth + store
-    /// instances). Syncs a signed-in user's library + saved makers to Supabase;
+    /// instances). Syncs a signed-in user's library to Supabase;
     /// retained here for the app's lifetime. See `Data/SyncService.swift`.
     @State private var syncService: SyncService?
     /// Holds the secondary `UIWindow` that renders the mini-player
@@ -144,7 +139,6 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(tourPresenter)
                     .environment(makerPresenter)
                     .environment(navState)
-                    .environment(savedMakersStore)
                     .environment(toastCenter)
                     .environment(groupListen)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
@@ -181,7 +175,6 @@ struct TRAVEL_GUIDED_TOURApp: App {
                             syncService = SyncService(
                                 auth: authService,
                                 library: libraryStore,
-                                savedMakers: savedMakersStore,
                                 recentlyViewed: recentlyViewed
                             )
                         }
@@ -279,7 +272,6 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 .environment(tourPresenter)
                 .environment(makerPresenter)
                 .environment(navState)
-                .environment(savedMakersStore)
                 .environment(toastCenter)
                 .environment(groupListen)
             // No `.preferredColorScheme(...)` here: the install closure
