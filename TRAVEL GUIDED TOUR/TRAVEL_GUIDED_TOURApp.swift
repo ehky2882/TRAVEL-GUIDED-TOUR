@@ -27,6 +27,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
         _makerProfileService = State(initialValue: MakerProfileService(auth: auth))
         _makerTourService = State(initialValue: MakerTourService(auth: auth))
         _followService = State(initialValue: FollowService(auth: auth))
+        _journeyService = State(initialValue: JourneyService(auth: auth))
     }
 
     @State private var dataService = DataService()
@@ -40,6 +41,9 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// The signed-in user's own tours (all statuses) + draft creation. Loaded by
     /// the Profile tab. See `Data/MakerTourService.swift`.
     @State private var makerTourService: MakerTourService
+    /// The signed-in user's Journeys — curated, ordered collections of whole
+    /// tours. Shares `AuthService`. See `Data/JourneyService.swift`.
+    @State private var journeyService: JourneyService
     @State private var libraryStore = LibraryStore()
     @State private var locationManager = LocationManager()
     @State private var audioPlayer = AudioPlayerService()
@@ -123,6 +127,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(makerProfileService)
                     .environment(followService)
                     .environment(makerTourService)
+                    .environment(journeyService)
                     .environment(libraryStore)
                     .environment(locationManager)
                     .environment(audioPlayer)
