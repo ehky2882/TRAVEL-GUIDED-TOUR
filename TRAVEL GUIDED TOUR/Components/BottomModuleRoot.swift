@@ -44,6 +44,10 @@ struct BottomModuleRoot: View {
             || tourPresenter.presentedTour != nil
         return VStack(spacing: 0) {
             Spacer(minLength: 0)
+            // Group Listen session strip — sits just above the mini-player when
+            // a session is active; self-hides otherwise.
+            GroupBanner()
+                .padding(.bottom, AtlasSpacing.xs)
             MiniPlayerBar(
                 tour: nowPlayingTour,
                 maker: nowPlayingTour.flatMap { dataService.maker(for: $0) },

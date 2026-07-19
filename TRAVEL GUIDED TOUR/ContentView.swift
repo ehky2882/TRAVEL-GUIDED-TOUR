@@ -34,6 +34,7 @@ struct ContentView: View {
     @Environment(FollowService.self) private var followService
     @Environment(AuthService.self) private var authService
     @Environment(JourneyService.self) private var journeyService
+    @Environment(GroupListenCoordinator.self) private var groupListen
 
     /// `.onAppear` fires every time the view re-attaches (tab switch,
     /// returning from background, etc.). Request location permission
@@ -225,7 +226,8 @@ struct ContentView: View {
                     .environment(savedMakersStore)
                     .environment(followService)
                     .environment(authService)
-                    .environment(journeyService),
+                    .environment(journeyService)
+                    .environment(groupListen),
                     onDismiss: { tourPresenter.dismiss() }
                 )
             } else {
@@ -267,7 +269,8 @@ struct ContentView: View {
                     .environment(savedMakersStore)
                     .environment(followService)
                     .environment(authService)
-                    .environment(journeyService),
+                    .environment(journeyService)
+                    .environment(groupListen),
                     onDismiss: { makerPresenter.dismiss() }
                 )
             } else {
