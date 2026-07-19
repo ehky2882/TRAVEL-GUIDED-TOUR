@@ -248,10 +248,11 @@ struct HomeDrawerContent: View {
                 Text(String(repeating: ".", count: tick))
             }
         } else {
-            switch toursInViewCount {
+            let count = toursInViewCount
+            switch count {
             case 0: Text("NO TOURS IN VIEW")
             case 1: Text("1 TOUR IN VIEW")
-            default: Text("\(toursInViewCount) TOURS IN VIEW")
+            default: Text("\(count) TOURS IN VIEW")
             }
         }
     }
