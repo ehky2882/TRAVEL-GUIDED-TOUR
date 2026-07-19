@@ -22,6 +22,11 @@ name: TestFlight build
 
 on:
   workflow_dispatch:            # the manual "Run workflow" button
+    inputs:
+      notes:
+        description: "Build notes — What changed + What to test (required; never ship a mystery build)"
+        required: false
+        type: string
   pull_request:
     types: [labeled]            # runs only when a label is added (guarded below)
 
@@ -44,6 +49,25 @@ jobs:
       ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
     steps:
       - uses: actions/checkout@v6
+
+      # Record the build notes (What changed / What to test) into the run's job
+      # summary so every build is self-documenting — never a mystery build.
+      # For a PR-label trigger there's no notes input; point at the PR instead.
+      - name: Record build notes
+        env:
+          NOTES: ${{ github.event.inputs.notes }}
+        run: |
+          {
+            echo "## Build notes"
+            if [ -n "$NOTES" ]; then
+              echo "$NOTES"
+            elif [ "${{ github.event_name }}" = "pull_request" ]; then
+              echo "_Triggered by the \`build\` label on PR #${{ github.event.pull_request.number }} — see the PR for what changed + what to test._"
+            else
+              echo "::warning::No build notes were provided. Per CLAUDE.md rule #9, every build should carry What-changed / What-to-test notes."
+              echo "_No notes provided._"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
 
       # Fail early with a friendly message if the one-time secrets aren't set yet.
       - name: Check credentials are configured
@@ -108,4 +132,9 @@ jobs:
             -authenticationKeyIssuerID "$ISSUER_ID"
 
       - name: Done
-        run: echo "Uploaded build ${{ steps.bn.outputs.num }} to TestFlight. It appears on your phone once Apple finishes processing (a few minutes)."
+        env:
+          NOTES: ${{ github.event.inputs.notes }}
+        run: |
+          echo "Uploaded build ${{ steps.bn.outputs.num }} to TestFlight. It appears on your phone once Apple finishes processing (a few minutes)."
+          echo "Build 1.1 (${{ steps.bn.outputs.num }}) — notes:"
+          echo "${NOTES:-<none provided>}"

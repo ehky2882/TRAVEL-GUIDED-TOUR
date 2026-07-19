@@ -37,10 +37,28 @@ three times:
 Repo → **Issues** or **Pull requests** → **Labels** → **New label** → name it exactly
 **`build`**. (Or it's created automatically the first time you apply it.)
 
+## Build notes are required (never ship a mystery build)
+Every build must carry notes so the owner knows what it is and what to try. When you
+**Run workflow**, fill the **Build notes** box with two short sections:
+
+```
+What changed:
+- <feature / fix in this build, plain English>
+
+What to test:
+- <concrete on-device step>
+- <anything device-only, e.g. "needs 2 phones for group sync">
+```
+
+The notes show in the Actions run's **job summary** and the final log line. Claude also
+posts them in chat and (if a PR exists) in the PR body. This is CLAUDE.md automation rule #9.
+_(Future enhancement: push these straight into TestFlight's "What to Test" field via the App
+Store Connect API — needs a validation build to wire up.)_
+
 ## How to get a build after that
 Either:
-- Add the **`build`** label to any pull request, **or**
-- **Actions** tab → **TestFlight build** → **Run workflow**.
+- Add the **`build`** label to any pull request (notes come from the PR body), **or**
+- **Actions** tab → **TestFlight build** → **Run workflow** → fill **Build notes** → Run.
 
 Then wait: the build takes ~10–15 min, then Apple processes it for a few more minutes, and
 it appears in the **TestFlight** app on your phone (you're an internal tester, so no beta
