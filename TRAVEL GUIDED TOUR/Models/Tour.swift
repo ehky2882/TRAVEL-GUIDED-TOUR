@@ -14,6 +14,13 @@ struct Tour: Codable, Identifiable, Hashable {
     let makerId: UUID
     let heroImageURL: String
     let additionalImageURLs: [String]?
+    /// Optional gallery videos (hosted as `.mp4` on gh-pages, same
+    /// pipeline as images/audio). Rendered as extra swipeable pages at
+    /// the end of the tour-detail / player photo carousel, after the
+    /// images. `nil` (the common case) or empty → the carousel is
+    /// image-only exactly as before. Additive + backward-compatible:
+    /// a catalog without this key decodes to `nil`.
+    let videoURLs: [String]?
     let kind: TourKind
     let stops: [Stop]
     let introAudioURL: String?

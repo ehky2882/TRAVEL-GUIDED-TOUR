@@ -111,6 +111,58 @@ final class ToursDataDecodingTests: XCTestCase {
         let tour = try JSONDecoder().decode(Tour.self, from: json)
         XCTAssertEqual(tour.additionalImageURLs?.count, 2)
         XCTAssertEqual(tour.additionalImageURLs?.first, "https://example.test/2.jpg")
+        // videoURLs is optional; a catalog without the key decodes as nil.
+        XCTAssertNil(tour.videoURLs)
+    }
+
+    func test_decodesVideoURLs_whenPresent() throws {
+        let json = Data(#"""
+        {
+          "id": "44444444-4444-4444-4444-444444444444",
+          "title": "Video Tour",
+          "shortDescription": "Short",
+          "longDescription": "Long",
+          "makerId": "11111111-1111-1111-1111-111111111111",
+          "heroImageURL": "https://example.test/hero.jpg",
+          "additionalImageURLs": ["https://example.test/2.jpg"],
+          "videoURLs": [
+            "https://example.test/clip-1.mp4",
+            "https://example.test/clip-2.mp4"
+          ],
+          "kind": "single",
+          "stops": [
+            {
+              "id": "55555555-5555-5555-5555-555555555555",
+              "order": 0,
+              "title": "Stop",
+              "caption": null,
+              "latitude": 40.7,
+              "longitude": -74.0,
+              "audioURL": "https://example.test/audio.mp3",
+              "audioDurationSeconds": 120,
+              "triggerMode": "manual",
+              "triggerRadiusMeters": 30,
+              "imageURL": null,
+              "transcriptText": null
+            }
+          ],
+          "introAudioURL": null,
+          "totalDurationSeconds": 120,
+          "walkingDistanceMeters": null,
+          "centroidLatitude": 40.7,
+          "centroidLongitude": -74.0,
+          "city": null,
+          "primaryCategory": "architecture",
+          "tags": [],
+          "priceUSD": 0
+        }
+        """#.utf8)
+
+        let tour = try JSONDecoder().decode(Tour.self, from: json)
+        XCTAssertEqual(tour.videoURLs?.count, 2)
+        XCTAssertEqual(tour.videoURLs?.first, "https://example.test/clip-1.mp4")
+        // Images are unaffected by the new field.
+        XCTAssertEqual(tour.additionalImageURLs?.count, 1)
     }
 
     func test_decodesEmptyArrays() throws {

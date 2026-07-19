@@ -68,6 +68,7 @@ struct Tour: Codable {
     let makerId: UUID
     let heroImageURL: String
     let additionalImageURLs: [String]?
+    let videoURLs: [String]?
     let kind: TourKind
     let stops: [Stop]
     let introAudioURL: String?
@@ -234,6 +235,16 @@ for (ti, t) in file.tours.enumerated() {
         for (i, u) in extras.enumerated() {
             if !isValidURL(u) {
                 err(tloc, "additionalImageURLs[\(i)] '\(u)' is not a valid URL")
+            }
+        }
+    }
+    if let videos = t.videoURLs {
+        let videoExts = [".mp4", ".mov", ".m4v"]
+        for (i, u) in videos.enumerated() {
+            if !isValidURL(u) {
+                err(tloc, "videoURLs[\(i)] '\(u)' is not a valid URL")
+            } else if !videoExts.contains(where: { u.lowercased().hasSuffix($0) }) {
+                warn(tloc, "videoURLs[\(i)] '\(u)' doesn't end in a known video extension (.mp4/.mov/.m4v) — sanity check?")
             }
         }
     }

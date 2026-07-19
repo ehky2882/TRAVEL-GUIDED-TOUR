@@ -196,36 +196,20 @@ struct PlayerView: View {
             .accessibilityLabel("Drag down to close")
     }
 
-    /// Hero carousel — mirrors `TourDetailView.imageSection` exactly:
-    /// square-cornered (no `clipShape` / `cornerRadius`), pinch-to-zoom
-    /// enabled, and load crossfade disabled. Page dots match.
-    @ViewBuilder
+    /// Hero carousel — shares `TourMediaCarousel` with
+    /// `TourDetailView.imageSection` so the two stay identical:
+    /// square-cornered, pinch-to-zoom on photos, load crossfade
+    /// disabled, matching page dots. Videos from `videoURLs` render as
+    /// extra pages after the photos.
     private var imageSection: some View {
-        let allImages = [tour.heroImageURL] + (tour.additionalImageURLs ?? [])
-        if allImages.count > 1 {
-            TabView {
-                ForEach(allImages, id: \.self) { url in
-                    HeroImageView(
-                        imageName: url,
-                        height: AtlasSpacing.heroHeight,
-                        zoomable: true,
-                        disableLoadAnimation: true
-                    )
-                }
-            }
-            .tabViewStyle(.page(indexDisplayMode: .always))
-            .frame(height: AtlasSpacing.heroHeight)
-            .padding(.horizontal, AtlasSpacing.lg)
-        } else {
-            HeroImageView(
-                imageName: tour.heroImageURL,
-                height: AtlasSpacing.heroHeight,
-                category: tour.primaryCategory,
-                zoomable: true,
-                disableLoadAnimation: true
-            )
-            .padding(.horizontal, AtlasSpacing.lg)
-        }
+        TourMediaCarousel(
+            heroImageURL: tour.heroImageURL,
+            additionalImageURLs: tour.additionalImageURLs,
+            videoURLs: tour.videoURLs,
+            height: AtlasSpacing.heroHeight,
+            category: tour.primaryCategory
+        )
+        .padding(.horizontal, AtlasSpacing.lg)
     }
 
     // MARK: - Overflow menu

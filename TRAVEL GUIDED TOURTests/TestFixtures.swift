@@ -77,6 +77,7 @@ enum TestFixtures {
             makerId: makerId,
             heroImageURL: "https://example.test/hero.jpg",
             additionalImageURLs: nil,
+            videoURLs: nil,
             kind: kind,
             stops: stops,
             introAudioURL: nil,
