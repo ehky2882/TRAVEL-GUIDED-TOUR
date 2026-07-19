@@ -117,9 +117,23 @@ enum HomeRailsViewModel {
         return userLocation
     }
 
+    /// Sort by distance from `viewer`, computing each tour's distance
+    /// exactly **once** (decorate → sort → undecorate) rather than on
+    /// every comparison. `Array.sorted`'s comparator runs O(n log n)
+    /// times, and `Tour.distance(from:)` allocates a fresh `CLLocation`
+    /// and runs a geodesic calc each call — so the naïve
+    /// `sorted { $0.distance < $1.distance }` did ~n·log n such
+    /// allocations per shelf. Over 13 shelves × ~790 tours that was
+    /// ~100k allocations per map-settle (the visible hitch on pan
+    /// release once the catalog spans many cities). This makes it n
+    /// distance computations per shelf. Result order is identical (same
+    /// comparator, ties unspecified in both).
     private static func sortedByDistance(_ tours: [Tour], from viewer: CLLocation?) -> [Tour] {
         guard let viewer else { return tours }
-        return tours.sorted { $0.distance(from: viewer) < $1.distance(from: viewer) }
+        return tours
+            .map { (tour: $0, distance: $0.distance(from: viewer)) }
+            .sorted { $0.distance < $1.distance }
+            .map(\.tour)
     }
 
     /// True when the map has been panned far enough from the user that
@@ -182,9 +196,7 @@ enum HomeRailsViewModel {
         userLocation: CLLocation?
     ) -> HomeRail? {
         guard let userLocation else { return nil }
-        let sorted = tours
-            .sorted { $0.distance(from: userLocation) < $1.distance(from: userLocation) }
-            .prefix(maxPerRail)
+        let sorted = sortedByDistance(tours, from: userLocation).prefix(maxPerRail)
         guard !sorted.isEmpty else { return nil }
         return HomeRail(id: "nearYou", title: "Near you", tours: Array(sorted))
     }
@@ -198,9 +210,10 @@ enum HomeRailsViewModel {
             latitude: visibleRegion.center.latitude,
             longitude: visibleRegion.center.longitude
         )
-        let matching = tours
-            .filter { visibleRegion.contains($0.coordinate) }
-            .sorted { $0.distance(from: center) < $1.distance(from: center) }
+        let matching = sortedByDistance(
+            tours.filter { visibleRegion.contains($0.coordinate) },
+            from: center
+        )
         guard !matching.isEmpty else { return nil }
         return HomeRail(
             id: "inView",

@@ -283,9 +283,55 @@ struct HomeMapSection: View {
         return (span / unit).rounded() * unit
     }
 
+    /// Above this span (in degrees) the viewport cull is switched off:
+    /// the expanded window would approach global, so culling saves
+    /// nothing and clustering already collapses the set at that zoom.
+    private static let cullDisableSpan: Double = 30
+    /// Viewports of margin added on every side of the visible region
+    /// before culling. 1.0 = keep a 3×-wide / 3×-tall window (one full
+    /// viewport of buffer beyond every edge), so a marker is already in
+    /// the annotation set long before it pans on-screen — the cull is
+    /// invisible under normal panning.
+    private static let cullMarginViewports: Double = 1.0
+
+    /// The visible region grown by `byViewports` viewports on every
+    /// side. Used to decide which markers are close enough to the
+    /// viewport to bother building an annotation for.
+    private static func expandedWindow(_ region: MKCoordinateRegion, byViewports v: Double) -> MKCoordinateRegion {
+        let factor = 1 + 2 * v
+        return MKCoordinateRegion(
+            center: region.center,
+            span: MKCoordinateSpan(
+                latitudeDelta: min(180, region.span.latitudeDelta * factor),
+                longitudeDelta: min(360, region.span.longitudeDelta * factor)
+            )
+        )
+    }
+
     private static func cluster(markers: [StopMarker], in region: MKCoordinateRegion?) -> [ClusterItem] {
         guard let region else {
             return markers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
+        }
+
+        // Viewport cull. Drop markers that are far outside the visible
+        // region before doing any bucketing so the annotation set the
+        // map builds/diffs scales with what's near the viewport, not
+        // with the whole (multi-city, ~1,000-stop) catalog. MapKit
+        // already culls off-screen annotations from *drawing*, but
+        // SwiftUI still builds + diffs an annotation for every one on
+        // each recompute — wasted work once the catalog spans continents.
+        // The margin (see `cullMarginViewports`) keeps a generous ring of
+        // off-screen markers so pins never visibly "pop in" at the edges
+        // during a normal pan. Bucketing uses an absolute grid origin
+        // (below), so culling never changes a surviving marker's bucket
+        // key — cluster IDs stay stable and pans still update in place.
+        let visibleMarkers: [StopMarker]
+        if region.span.latitudeDelta < cullDisableSpan,
+           region.span.longitudeDelta < cullDisableSpan {
+            let window = expandedWindow(region, byViewports: cullMarginViewports)
+            visibleMarkers = markers.filter { window.contains($0.coordinate) }
+        } else {
+            visibleMarkers = markers
         }
 
         // 20 cells across the visible region. Finer grid than the
@@ -306,7 +352,7 @@ struct HomeMapSection: View {
         let cellSpanLat = snappedLatSpan / cellsAcross
         let cellSpanLon = snappedLonSpan / cellsAcross
         guard cellSpanLat > 0, cellSpanLon > 0 else {
-            return markers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
+            return visibleMarkers.map { ClusterItem(coordinate: $0.coordinate, kind: .single($0)) }
         }
 
         // Bucket by an ABSOLUTE (lat=0, lon=0) grid origin rather
@@ -322,7 +368,7 @@ struct HomeMapSection: View {
         // the existing annotation in place instead of removing +
         // re-adding it.
         var buckets: [BucketKey: [StopMarker]] = [:]
-        for marker in markers {
+        for marker in visibleMarkers {
             let row = Int(floor(marker.coordinate.latitude / cellSpanLat))
             let col = Int(floor(marker.coordinate.longitude / cellSpanLon))
             buckets[BucketKey(row: row, col: col), default: []].append(marker)
