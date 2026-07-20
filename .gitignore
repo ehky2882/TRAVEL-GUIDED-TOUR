@@ -1,1 +1,4 @@
 .DS_Store
+
+# Claude Code background-agent worktrees (transient; auto-cleaned)
+.claude/worktrees/
