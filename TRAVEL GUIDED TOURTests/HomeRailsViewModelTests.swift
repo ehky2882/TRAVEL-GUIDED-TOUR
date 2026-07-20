@@ -291,6 +291,50 @@ final class HomeRailsViewModelTests: XCTestCase {
         XCTAssertEqual(results.map(\.id), [museumWalk.id], "Only the multi-stop Museum tour survives Museum + Walks")
     }
 
+    func test_filteredResults_userInView_sortsByUserLocationNotViewportCenter() {
+        // User is on screen. The tour nearest the *user* ranks first even
+        // though a different tour sits nearer the region center — the
+        // owner's rule: rank by distance to you when you're in view.
+        let user = CLLocationCoordinate2D(latitude: 40.0, longitude: -74.0)
+        let regionCenter = CLLocationCoordinate2D(latitude: 40.2, longitude: -74.0)
+        let nearUser = TestFixtures.makeTour(tags: ["Food"], latitude: 40.01, longitude: -74.0)
+        let nearCenter = TestFixtures.makeTour(tags: ["Food"], latitude: 40.2, longitude: -74.0)
+        // Region spans the user (center 40.2 ± 1.5° covers 40.0).
+        let region = MKCoordinateRegion(
+            center: regionCenter,
+            span: MKCoordinateSpan(latitudeDelta: 3, longitudeDelta: 3)
+        )
+        let results = HomeRailsViewModel.filteredResults(
+            tours: [nearCenter, nearUser],
+            selectedTags: ["Food"],
+            walksOnly: false,
+            userLocation: CLLocation(latitude: user.latitude, longitude: user.longitude),
+            visibleRegion: region
+        )
+        XCTAssertEqual(results.map(\.id), [nearUser.id, nearCenter.id])
+    }
+
+    func test_filteredResults_userOffScreen_sortsByViewportCenter() {
+        // User has panned far away (not contained in the region) → fall
+        // back to ranking by the viewport center.
+        let user = CLLocationCoordinate2D(latitude: 40.75, longitude: -73.99) // NYC
+        let center = CLLocationCoordinate2D(latitude: 34.05, longitude: -118.25) // LA
+        let nearCenter = TestFixtures.makeTour(tags: ["Food"], latitude: 34.06, longitude: -118.25)
+        let nearUser = TestFixtures.makeTour(tags: ["Food"], latitude: 40.74, longitude: -73.99)
+        let region = MKCoordinateRegion(
+            center: center,
+            span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+        )
+        let results = HomeRailsViewModel.filteredResults(
+            tours: [nearUser, nearCenter],
+            selectedTags: ["Food"],
+            walksOnly: false,
+            userLocation: CLLocation(latitude: user.latitude, longitude: user.longitude),
+            visibleRegion: region
+        )
+        XCTAssertEqual(results.map(\.id), [nearCenter.id, nearUser.id])
+    }
+
     func test_filteredResults_sortsByViewportCenter() {
         // Two tours; the one nearer the visible-region center ranks first.
         let center = CLLocationCoordinate2D(latitude: 40.0, longitude: -74.0)

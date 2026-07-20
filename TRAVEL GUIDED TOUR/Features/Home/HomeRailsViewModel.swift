@@ -58,9 +58,10 @@ enum HomeRailsViewModel {
         // Interest-based — the curated tag shelves (owner decision D7),
         // in editorial order. Hide shelves with zero matching tours.
         // Within each shelf the tours are ordered by distance from the
-        // *map viewport center* (§1.5) so the nearest tours of that
-        // interest surface first — meaningful whether the user is home
-        // or browsing another city.
+        // viewer anchor (see `viewerLocation`): the user's own location
+        // when they're on screen, else the map viewport center when
+        // panned away — so the nearest tours of that interest surface
+        // first whether the user is home or browsing another city.
         let viewer = viewerLocation(userLocation: userLocation, visibleRegion: visibleRegion)
         for shelf in Tag.curatedShelves {
             let matching = tours.filter { $0.tags.contains(shelf.tag) }
@@ -99,22 +100,40 @@ enum HomeRailsViewModel {
 
     // MARK: - Location helpers
 
-    /// The reference point for distance-based ordering: the **map
-    /// viewport center** when known (so shelves rank by what the user is
-    /// looking at — §1.5), falling back to the user's location. `nil`
-    /// only before any camera settle *and* before the first location
-    /// fix, in which case callers keep catalog order.
+    /// The reference point for distance-based ordering. The **user's own
+    /// location is the primary anchor** — owner call (2026-07-20): rails
+    /// should rank by how close a tour is to *you*, especially when
+    /// you're on screen. So we return `userLocation` whenever the user is
+    /// known and either there's no settled region yet or the region
+    /// actually contains the user. Only when the map has been panned away
+    /// to an area that no longer shows the user do we fall back to the
+    /// **map viewport center**, so browsing another city still ranks by
+    /// what's in view (§1.5). `nil` only before any camera settle *and*
+    /// before the first location fix, in which case callers keep catalog
+    /// order.
     private static func viewerLocation(
         userLocation: CLLocation?,
         visibleRegion: MKCoordinateRegion?
     ) -> CLLocation? {
+        if let userLocation {
+            // User on screen (or no region yet) → rank by distance to the
+            // user. Panned away → viewport center.
+            if let visibleRegion, !visibleRegion.contains(userLocation.coordinate) {
+                return CLLocation(
+                    latitude: visibleRegion.center.latitude,
+                    longitude: visibleRegion.center.longitude
+                )
+            }
+            return userLocation
+        }
+        // No user fix — fall back to the viewport center when we have one.
         if let visibleRegion {
             return CLLocation(
                 latitude: visibleRegion.center.latitude,
                 longitude: visibleRegion.center.longitude
             )
         }
-        return userLocation
+        return nil
     }
 
     /// Sort by distance from `viewer`, computing each tour's distance
