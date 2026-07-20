@@ -1013,15 +1013,22 @@ struct TourDetailView: View {
     private var buttonRow: some View {
         HStack(spacing: AtlasSpacing.md) {
             primaryTransportButton
-            Button(action: toggleSaved) {
-                Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
+            // "Listen together" (Group Listen) — the visible entry point.
+            // Replaces the inline Save button, which was redundant with the
+            // bookmark in the top chrome row (owner direction 2026-07-20).
+            // Raises Group Listen's affordance out of the ⋯ overflow menu.
+            Button {
+                showingGroupListen = true
+            } label: {
+                Image(systemName: "person.2.wave.2.fill")
                     .font(.system(size: 20))
                     .foregroundStyle(AtlasColors.mapPin)
                     .frame(width: controlHeight, height: controlHeight)
                     .background(Capsule().fill(AtlasColors.mapPin.opacity(0.15)))
             }
             .buttonStyle(.plain)
-            .accessibilityLabel(isSaved ? "Remove from saved" : "Save tour")
+            .accessibilityLabel("Listen together")
+            .accessibilityHint("Start or join a synced group listening session")
 
             downloadButton
         }
