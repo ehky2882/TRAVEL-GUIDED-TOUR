@@ -44,23 +44,38 @@ final class FollowService {
     /// Stale-while-revalidate cache so counts render instantly from the
     /// last-known value while the RPC refreshes in the background.
     private let store: FollowStateStore
-    /// In-memory stale-while-revalidate cache of follow *lists* (the
-    /// `following(of:)` result), keyed by viewer + subject maker. Lets a
-    /// screen that's rebuilt on every appearance — notably the Library Saved
-    /// tab, which is switch-swapped on each tab entry — render its final
-    /// layout immediately on a warm re-entry instead of flashing the empty
-    /// list and re-formatting a network round-trip later (the "jitter when it
-    /// re-formats" on returning to Library). Per-viewer-scoped so one
-    /// account's graph never shows under another's. In-memory only: a warm
-    /// process kills the repeated-switch reflow; a cold launch fetches once.
-    private var followingCache: [String: [Maker]] = [:]
+    /// Disk-backed stale-while-revalidate cache of follow *lists* (the
+    /// `following(of:)` result). See `followingList` for how it's used.
+    private let followingStore: FollowingListStore
+
+    /// In-memory, observed cache of the current viewer's following lists, keyed
+    /// by subject maker id. Hydrated synchronously from `followingStore` at
+    /// init (and on a viewer change) so the Library **Saved** tab — rebuilt on
+    /// every tab entry, and freshly on a cold launch — renders its final layout
+    /// on the first frame instead of flashing an empty list and re-formatting a
+    /// network round-trip later. Being a stored property on this `@Observable`
+    /// means the async refresh in `following(of:)` re-renders readers in place.
+    private var followingList: [UUID: [Maker]] = [:]
+    /// The viewer id `followingList` is currently hydrated for. Guards reads
+    /// against a viewer change (return empty, never another account's graph)
+    /// and drives lazy re-hydration in the async path.
+    private var followingListUid: String?
 
     init(auth: AuthService,
          client: SupabaseClient = SupabaseClientProvider.shared,
-         store: FollowStateStore = FollowStateStore()) {
+         store: FollowStateStore = FollowStateStore(),
+         followingStore: FollowingListStore = FollowingListStore()) {
         self.auth = auth
         self.client = client
         self.store = store
+        self.followingStore = followingStore
+        // Hydrate the following cache synchronously for the launch viewer
+        // (AuthService restores the session in its own init, so the uid is
+        // available here) — this is what lets a cold Library open render the
+        // last-known follow list on the first frame.
+        let uid = auth.user?.id.uuidString.lowercased() ?? "anon"
+        self.followingList = followingStore.allCached(uid: uid)
+        self.followingListUid = uid
     }
 
     /// The current viewer's id for scoping the cache (viewer-specific fields
@@ -121,32 +136,45 @@ final class FollowService {
         (try? await fetchMakerList("list_followers", makerId)) ?? []
     }
 
-    /// The last-known "following" list for `makerId`, synchronously, or `[]` if
-    /// it hasn't been fetched this session. Read this during a view's `body`
-    /// (rather than assigning to `@State` in `.task`, which lands a frame late)
-    /// so a warm re-entry renders the final layout on the first frame with no
-    /// re-format flash; then call `following(of:)` to refresh it in place.
+    /// The last-known "following" list for `makerId`, synchronously — from the
+    /// disk-hydrated cache — or `[]` if never fetched (or the viewer changed
+    /// since hydration, in which case we return empty rather than risk showing
+    /// another account's graph; the async path re-hydrates). Read this during a
+    /// view's `body` (rather than assigning to `@State` in `.task`, which lands
+    /// a frame late) so a cold or warm entry renders the final layout on the
+    /// first frame with no re-format flash; then call `following(of:)` to
+    /// refresh it in place. Pure read — no mutation — so it's body-safe.
     func cachedFollowing(of makerId: UUID) -> [Maker] {
-        followingCache[followingCacheKey(makerId)] ?? []
+        guard followingListUid == viewerUid else { return [] }
+        return followingList[makerId] ?? []
     }
 
     /// The makers this profile follows. Same visibility rule via `list_following`.
-    /// Write-through on success (including an empty result — genuinely following
-    /// nobody — so an unfollow-to-zero eventually clears the warm list); on a
-    /// network error, returns the last-known cached list rather than `[]`, so a
-    /// transient blip never reflows a good list away.
+    /// Write-through to memory + disk on success (including an empty result —
+    /// genuinely following nobody — so an unfollow-to-zero eventually clears the
+    /// warm list); on a network error, returns the last-known cached list rather
+    /// than `[]`, so a transient blip never reflows a good list away.
     func following(of makerId: UUID) async -> [Maker] {
+        hydrateFollowingIfViewerChanged()
         do {
             let makers = try await fetchMakerList("list_following", makerId)
-            followingCache[followingCacheKey(makerId)] = makers
+            followingList[makerId] = makers
+            followingStore.remember(makers, for: makerId, uid: viewerUid)
             return makers
         } catch {
-            return cachedFollowing(of: makerId)
+            return followingList[makerId] ?? []
         }
     }
 
-    private func followingCacheKey(_ makerId: UUID) -> String {
-        "\(viewerUid)|\(makerId.uuidString.lowercased())"
+    /// Re-point the in-memory following cache at the current viewer's persisted
+    /// blob when the signed-in user changed since it was last hydrated. Called
+    /// only from the async path (never during `body`), so it never mutates
+    /// observed state mid-view-update.
+    private func hydrateFollowingIfViewerChanged() {
+        let uid = viewerUid
+        guard followingListUid != uid else { return }
+        followingList = followingStore.allCached(uid: uid)
+        followingListUid = uid
     }
 
     /// Throwing fetch so callers can tell a real (possibly empty) result apart
