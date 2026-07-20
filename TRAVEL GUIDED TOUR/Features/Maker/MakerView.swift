@@ -275,7 +275,6 @@ struct MakerView: View {
             followCounts
 
             if isOwnProfile {
-                if followState.pendingRequests > 0 { followRequestsButton }
                 editProfileButton
             } else {
                 followButton
@@ -298,13 +297,55 @@ struct MakerView: View {
     }
 
     /// Follower + Following counts — each taps through to the list screen
-    /// (`FollowListView`, batch D2).
+    /// (`FollowListView`, batch D2). On the own profile, a pending follow
+    /// request surfaces as a small heart badge over the followers count
+    /// (tap → the requests screen) instead of a separate line below.
     private var followCounts: some View {
         HStack(spacing: AtlasSpacing.lg) {
             countLink(followState.followers, "followers", .followers)
+                .overlay(alignment: .topTrailing) {
+                    if isOwnProfile && followState.pendingRequests > 0 {
+                        followRequestsBadge
+                    }
+                }
             countLink(followState.following, "following", .following)
         }
         .padding(.top, AtlasSpacing.xs)
+    }
+
+    /// Gold heart badge shown over the followers count when the own profile has
+    /// pending follow requests. Tapping it opens the requests screen — the
+    /// consolidated entry point (was a separate "N follow requests" line).
+    private var followRequestsBadge: some View {
+        NavigationLink {
+            followRequestsDestination
+        } label: {
+            Image(systemName: "heart.fill")
+                .font(.system(size: 9, weight: .bold))
+                .foregroundStyle(AtlasColors.background)
+                .frame(width: 18, height: 18)
+                .background(AtlasColors.mapPin, in: Circle())
+                .overlay(Circle().stroke(AtlasColors.background, lineWidth: 1.5))
+        }
+        .buttonStyle(.plain)
+        // Nudge the badge to sit over the count's top-trailing corner.
+        .offset(x: 10, y: -10)
+        .accessibilityLabel(followState.pendingRequests == 1
+                            ? "1 pending follow request"
+                            : "\(followState.pendingRequests) pending follow requests")
+    }
+
+    /// The pending-requests screen, wired to refresh the header counts + the
+    /// Me-tab badge as requests are approved/declined.
+    private var followRequestsDestination: some View {
+        FollowRequestsView(makerId: maker.id) {
+            Task {
+                if let followService {
+                    followState = await followService.state(for: maker.id)
+                    await followService.refreshOwnPendingRequests(ownMakerId: maker.id)
+                }
+            }
+        }
     }
 
     private func countLink(_ n: Int, _ label: String, _ kind: FollowListView.Kind) -> some View {
@@ -385,32 +426,6 @@ struct MakerView: View {
     /// full string).
     private func displayLink(_ url: URL) -> String {
         (url.host ?? url.absoluteString).replacingOccurrences(of: "www.", with: "")
-    }
-
-    /// Own-profile entry to the pending follow-requests screen (private
-    /// accounts). Only shown when there are requests waiting. Pushes
-    /// `FollowRequestsView`; approving/declining refreshes the header count.
-    private var followRequestsButton: some View {
-        NavigationLink {
-            FollowRequestsView(makerId: maker.id) {
-                Task {
-                    if let followService {
-                        followState = await followService.state(for: maker.id)
-                    }
-                }
-            }
-        } label: {
-            HStack(spacing: AtlasSpacing.xs) {
-                Image(systemName: "person.crop.circle.badge.checkmark")
-                Text(followState.pendingRequests == 1
-                     ? "1 follow request"
-                     : "\(followState.pendingRequests) follow requests")
-            }
-            .font(AtlasTypography.caption)
-            .foregroundStyle(AtlasColors.mapPin)
-        }
-        .buttonStyle(.plain)
-        .padding(.top, AtlasSpacing.xs)
     }
 
     /// Own-profile "Edit Profile" pill — opens the profile editor, which
