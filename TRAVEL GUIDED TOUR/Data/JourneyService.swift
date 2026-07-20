@@ -40,7 +40,7 @@ final class JourneyService {
         do {
             let rows: [JourneyRow] = try await client
                 .from("journeys")
-                .select("id, title, description, cover_image_url, is_public, journey_items(count)")
+                .select("id, title, description, cover_image_url, is_public, journey_items(tour_id, position)")
                 .eq("owner_user_id", value: uid)
                 .order("updated_at", ascending: false)
                 .execute()
@@ -159,6 +159,61 @@ final class JourneyService {
         myJourneys.removeAll { $0.id == journeyId }
     }
 
+    /// Update a journey's editable metadata (title / description / public).
+    /// Updates the in-memory list in place — and moves it to the top, mirroring
+    /// the server's updated-at sort — so the detail + list reflect it at once.
+    func updateJourney(id: UUID, title: String, description: String?, isPublic: Bool) async throws {
+        guard uid != nil else { throw JourneyError.notSignedIn }
+        let clean = title.trimmingCharacters(in: .whitespacesAndNewlines)
+        let desc = description?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let cleanDesc = (desc?.isEmpty ?? true) ? nil : desc
+        let row = JourneyUpdateRow(
+            title: clean,
+            description: cleanDesc,
+            isPublic: isPublic,
+            updatedAt: ISO8601DateFormatter().string(from: Date())
+        )
+        try await client
+            .from("journeys")
+            .update(row)
+            .eq("id", value: id.uuidString.lowercased())
+            .execute()
+        if let idx = myJourneys.firstIndex(where: { $0.id == id }) {
+            var j = myJourneys.remove(at: idx)
+            j.title = clean
+            j.description = cleanDesc
+            j.isPublic = isPublic
+            myJourneys.insert(j, at: 0)
+        }
+    }
+
+    /// Set (or clear, with nil/empty) the curator note on one tour in a journey.
+    func setNote(_ note: String?, for tourId: UUID, in journeyId: UUID) async throws {
+        let clean = note?.trimmingCharacters(in: .whitespacesAndNewlines)
+        try await client
+            .from("journey_items")
+            .update(NoteRow(note: (clean?.isEmpty ?? true) ? nil : clean))
+            .eq("journey_id", value: journeyId.uuidString.lowercased())
+            .eq("tour_id", value: tourId.uuidString.lowercased())
+            .execute()
+        await touch(journeyId)
+    }
+
+    /// Persist a new order for a journey's tours — each item's `position` is set
+    /// to its index in `orderedTourIds`. (No unique constraint on position, so a
+    /// direct per-row assignment is safe.)
+    func reorder(_ orderedTourIds: [UUID], in journeyId: UUID) async throws {
+        for (index, tourId) in orderedTourIds.enumerated() {
+            try await client
+                .from("journey_items")
+                .update(PositionRow(position: index))
+                .eq("journey_id", value: journeyId.uuidString.lowercased())
+                .eq("tour_id", value: tourId.uuidString.lowercased())
+                .execute()
+        }
+        await touch(journeyId)
+    }
+
     // MARK: - Helpers
 
     /// Bump a journey's `updated_at` so it sorts to the top of the list after
@@ -190,16 +245,27 @@ final class JourneyService {
 
 // MARK: - DTOs
 
-/// Read payload for a `journeys` row + its embedded item count.
+/// Read payload for a `journeys` row + its embedded items (tour ids + order).
+/// The item *count* is derived client-side from the embedded rows, and the
+/// first tour (lowest `position`) drives the Journey's cover thumbnail.
 private struct JourneyRow: Decodable {
     let id: UUID
     let title: String
     let description: String?
     let coverImageURL: String?
     let isPublic: Bool
-    let journeyItems: [CountRow]
+    let journeyItems: [ItemRef]
 
-    struct CountRow: Decodable { let count: Int }
+    /// One embedded `journey_items` row: just enough to count and to find the
+    /// first tour for the cover image.
+    struct ItemRef: Decodable {
+        let tourId: UUID
+        let position: Int
+        enum CodingKeys: String, CodingKey {
+            case tourId = "tour_id"
+            case position
+        }
+    }
 
     enum CodingKeys: String, CodingKey {
         case id, title, description
@@ -215,7 +281,8 @@ private struct JourneyRow: Decodable {
             description: description,
             coverImageURL: coverImageURL,
             isPublic: isPublic,
-            itemCount: journeyItems.first?.count ?? 0
+            itemCount: journeyItems.count,
+            firstTourId: journeyItems.min(by: { $0.position < $1.position })?.tourId
         )
     }
 }
@@ -273,4 +340,44 @@ private struct NewJourneyItemRow: Encodable {
 private struct TouchRow: Encodable {
     let updatedAt: String
     enum CodingKeys: String, CodingKey { case updatedAt = "updated_at" }
+}
+
+/// Update payload for a journey's editable metadata. Custom-encodes
+/// `description` as explicit JSON `null` when nil so clearing it actually
+/// clears (Swift's synthesized encoder omits nil optionals, which a PostgREST
+/// update would then leave unchanged — memory `reference-supabase-upsert-null-omission`).
+private struct JourneyUpdateRow: Encodable {
+    let title: String
+    let description: String?
+    let isPublic: Bool
+    let updatedAt: String
+
+    enum CodingKeys: String, CodingKey {
+        case title, description
+        case isPublic = "is_public"
+        case updatedAt = "updated_at"
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: CodingKeys.self)
+        try c.encode(title, forKey: .title)
+        try c.encode(description, forKey: .description)   // explicit null clears it
+        try c.encode(isPublic, forKey: .isPublic)
+        try c.encode(updatedAt, forKey: .updatedAt)
+    }
+}
+
+/// Update payload: a journey item's note (explicit null clears it).
+private struct NoteRow: Encodable {
+    let note: String?
+    enum CodingKeys: String, CodingKey { case note }
+    func encode(to encoder: Encoder) throws {
+        var c = encoder.container(keyedBy: CodingKeys.self)
+        try c.encode(note, forKey: .note)
+    }
+}
+
+/// Update payload: a journey item's position.
+private struct PositionRow: Encodable {
+    let position: Int
 }

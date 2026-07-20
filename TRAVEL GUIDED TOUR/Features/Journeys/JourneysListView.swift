@@ -9,6 +9,7 @@ import SwiftUI
 /// optionally-public collection.
 struct JourneysListView: View {
     @Environment(JourneyService.self) private var journeyService
+    @Environment(DataService.self) private var dataService
 
     @State private var showingCreate = false
 
@@ -85,16 +86,37 @@ struct JourneysListView: View {
         .accessibilityLabel("New Journey")
     }
 
+    /// Cover thumbnail source: an explicit `coverImageURL` if set, else the
+    /// first tour's hero (resolved from the catalog via the cached
+    /// `firstTourId`). `nil` → show the placeholder box.
+    private func coverImageName(for journey: Journey) -> String? {
+        if let url = journey.coverImageURL, !url.isEmpty { return url }
+        if let id = journey.firstTourId { return dataService.tour(by: id)?.heroImageURL }
+        return nil
+    }
+
     private func journeyRow(_ journey: Journey) -> some View {
         HStack(alignment: .center, spacing: AtlasSpacing.md) {
-            ZStack {
-                Rectangle()
-                    .fill(AtlasColors.placeholderWarm.opacity(0.35))
-                Image(systemName: "map")
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.secondaryText)
+            Group {
+                if let name = coverImageName(for: journey) {
+                    HeroImageView(
+                        imageName: name,
+                        height: 56,
+                        cornerRadius: 0,
+                        category: journey.firstTourId.flatMap { dataService.tour(by: $0)?.primaryCategory }
+                    )
+                } else {
+                    ZStack {
+                        Rectangle()
+                            .fill(AtlasColors.placeholderWarm.opacity(0.35))
+                        Image(systemName: "map")
+                            .font(AtlasTypography.body)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                    }
+                }
             }
             .frame(width: 56, height: 56)
+            .clipped()
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 Text(journey.title)
@@ -139,19 +161,30 @@ struct JourneysListView: View {
 }
 
 /// Create/edit sheet for a Journey's metadata (title, description, public
-/// toggle). Used for creation from the list; add-tour flows create inline.
+/// toggle). `editing == nil` creates a new Journey (from the list / add-tour
+/// flows); passing an existing Journey edits it in place.
 struct JourneyEditorSheet: View {
+    /// The Journey being edited, or nil to create a new one.
+    let editing: Journey?
+
     @Environment(JourneyService.self) private var journeyService
     @Environment(\.dismiss) private var dismiss
 
-    @State private var title = ""
-    @State private var description = ""
-    @State private var isPublic = false
+    @State private var title: String
+    @State private var description: String
+    @State private var isPublic: Bool
     @State private var isSaving = false
     @State private var errorText: String?
 
     private let titleLimit = 60
     private let descriptionLimit = 200
+
+    init(editing: Journey? = nil) {
+        self.editing = editing
+        _title = State(initialValue: editing?.title ?? "")
+        _description = State(initialValue: editing?.description ?? "")
+        _isPublic = State(initialValue: editing?.isPublic ?? false)
+    }
 
     var body: some View {
         NavigationStack {
@@ -192,14 +225,14 @@ struct JourneyEditorSheet: View {
                     }
                 }
             }
-            .navigationTitle("New Journey")
+            .navigationTitle(editing == nil ? "New Journey" : "Edit Journey")
             .inlineNavigationBarTitle()
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("Cancel") { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Create") { save() }
+                    Button(editing == nil ? "Create" : "Save") { save() }
                         .disabled(title.trimmingCharacters(in: .whitespaces).isEmpty || isSaving)
                 }
             }
@@ -212,11 +245,20 @@ struct JourneyEditorSheet: View {
         Task {
             defer { isSaving = false }
             do {
-                _ = try await journeyService.createJourney(
-                    title: title,
-                    description: description,
-                    isPublic: isPublic
-                )
+                if let editing {
+                    try await journeyService.updateJourney(
+                        id: editing.id,
+                        title: title,
+                        description: description,
+                        isPublic: isPublic
+                    )
+                } else {
+                    _ = try await journeyService.createJourney(
+                        title: title,
+                        description: description,
+                        isPublic: isPublic
+                    )
+                }
                 dismiss()
             } catch {
                 errorText = error.localizedDescription

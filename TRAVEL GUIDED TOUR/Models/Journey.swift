@@ -18,6 +18,12 @@ struct Journey: Identifiable, Hashable, Codable {
     /// Number of tours in the Journey — filled by the list query's embedded
     /// count so a row can show "3 tours" without loading every item.
     var itemCount: Int
+    /// The tour id of the Journey's first item (lowest `position`), derived by
+    /// the list query's embedded items. Lets a row/detail resolve a cover
+    /// thumbnail from that tour's hero without a per-row network call. `nil` for
+    /// an empty Journey. Defaults to `nil` so hand-built `Journey(...)` sites
+    /// (e.g. `createJourney`) still compile.
+    var firstTourId: UUID? = nil
 }
 
 /// One ordered entry in a Journey — a reference to a whole tour plus an
