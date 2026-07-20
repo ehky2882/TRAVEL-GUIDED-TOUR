@@ -34,6 +34,10 @@ struct AtlasTabBar: View {
     /// the design rule of "buttons identical everywhere" holds.
     var extendsToScreenEdges: Bool = false
 
+    /// Tabs that should show a small gold notification badge on their icon
+    /// (e.g. the Me tab when pending follow requests are waiting).
+    var badgedTabs: Set<AtlasTab> = []
+
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 0) {
@@ -77,6 +81,20 @@ struct AtlasTabBar: View {
             VStack(spacing: 2) {
                 Image(systemName: isSelected ? tab.selectedSystemImage : tab.systemImage)
                     .font(.system(size: 20))
+                    // Gold notification dot — ringed in the bar color so it
+                    // reads as a separate badge floating over the icon.
+                    .overlay(alignment: .topTrailing) {
+                        if badgedTabs.contains(tab) {
+                            Circle()
+                                .fill(AtlasColors.mapPin)
+                                .frame(width: 9, height: 9)
+                                .overlay(
+                                    Circle().stroke(AtlasColors.tabBarBackground, lineWidth: 1.5)
+                                )
+                                .offset(x: 5, y: -3)
+                                .accessibilityHidden(true)
+                        }
+                    }
                 // Uppercased at the display site (not in the enum)
                 // so the .accessibilityLabel(tab.label) below stays
                 // proper-cased — VoiceOver pronounces "Home" as a
@@ -93,6 +111,7 @@ struct AtlasTabBar: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel(tab.label)
+        .accessibilityValue(badgedTabs.contains(tab) ? "New notifications" : "")
         .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 }

@@ -289,6 +289,11 @@ struct MakerView: View {
             // network blip never clobbers good counts back to zero.
             followState = followService.cachedState(for: maker.id)
             followState = await followService.state(for: maker.id)
+            // On the own profile, this refresh is the freshest read of the
+            // pending set — keep the Me-tab notification badge in sync with it.
+            if isOwnProfile {
+                await followService.refreshOwnPendingRequests(ownMakerId: maker.id)
+            }
         }
     }
 

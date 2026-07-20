@@ -130,6 +130,9 @@ struct FollowRequestsView: View {
                 }
                 requests.removeAll { $0.id == req.id }
                 if approve { AtlasHaptics.success() } else { AtlasHaptics.selection() }
+                // Keep the Me-tab notification badge in sync as the pending
+                // set shrinks (makerId is the owner's own maker here).
+                await followService.refreshOwnPendingRequests(ownMakerId: makerId)
                 onChange()
             } catch {
                 // Leave the row in place; a transient failure shouldn't lie.

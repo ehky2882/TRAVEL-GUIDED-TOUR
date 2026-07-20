@@ -16,6 +16,9 @@ struct BottomModuleRoot: View {
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(AppSharedState.self) private var appShared
     @Environment(AtlasNavigationState.self) private var navState
+    @Environment(AuthService.self) private var authService: AuthService?
+    @Environment(FollowService.self) private var followService: FollowService?
+    @Environment(MakerProfileService.self) private var makerProfileService: MakerProfileService?
 
     var body: some View {
         @Bindable var appShared = appShared
@@ -56,8 +59,22 @@ struct BottomModuleRoot: View {
             )
             AtlasTabBar(
                 selected: $appShared.selectedTab,
-                extendsToScreenEdges: extendsToScreenEdges
+                extendsToScreenEdges: extendsToScreenEdges,
+                badgedTabs: (followService?.ownPendingRequests ?? 0) > 0 ? [.me] : []
             )
+        }
+        // Keep the Me-tab notification badge in sync with the pending
+        // follow-request count on the signed-in user's own maker. Re-runs on
+        // sign-in/out and once the user's maker id becomes known after launch
+        // hydration; refreshOwnPendingRequests seeds from cache then corrects
+        // from the network so the badge is right on the first frame.
+        .task(id: ownMakerId) {
+            guard let followService else { return }
+            guard authService?.isSignedIn == true, let ownMakerId else {
+                followService.clearOwnPendingRequests()
+                return
+            }
+            await followService.refreshOwnPendingRequests(ownMakerId: ownMakerId)
         }
         // `.all` covers both the container inset (home-indicator
         // strip — already needed for the floating-island look) AND
@@ -82,6 +99,15 @@ struct BottomModuleRoot: View {
                 PlayerView(tour: tour)
             }
         }
+    }
+
+    /// The signed-in user's own maker id (the followee side of any pending
+    /// request). `nil` when signed out or before the maker profile exists —
+    /// which clears the badge. Doubles as the `.task` id so the refresh re-runs
+    /// when the user (or their maker) changes.
+    private var ownMakerId: UUID? {
+        guard authService?.isSignedIn == true else { return nil }
+        return makerProfileService?.myMaker?.id
     }
 
     private var nowPlayingTour: Tour? {

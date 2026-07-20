@@ -261,6 +261,8 @@ struct TRAVEL_GUIDED_TOURApp: App {
             BottomModuleRoot()
                 .environment(dataService)
                 .environment(authService)
+                .environment(followService)
+                .environment(makerProfileService)
                 .environment(libraryStore)
                 .environment(locationManager)
                 .environment(audioPlayer)
