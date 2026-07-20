@@ -9,6 +9,7 @@ import SwiftUI
 /// optionally-public collection.
 struct JourneysListView: View {
     @Environment(JourneyService.self) private var journeyService
+    @Environment(DataService.self) private var dataService
 
     @State private var showingCreate = false
 
@@ -85,16 +86,37 @@ struct JourneysListView: View {
         .accessibilityLabel("New Journey")
     }
 
+    /// Cover thumbnail source: an explicit `coverImageURL` if set, else the
+    /// first tour's hero (resolved from the catalog via the cached
+    /// `firstTourId`). `nil` → show the placeholder box.
+    private func coverImageName(for journey: Journey) -> String? {
+        if let url = journey.coverImageURL, !url.isEmpty { return url }
+        if let id = journey.firstTourId { return dataService.tour(by: id)?.heroImageURL }
+        return nil
+    }
+
     private func journeyRow(_ journey: Journey) -> some View {
         HStack(alignment: .center, spacing: AtlasSpacing.md) {
-            ZStack {
-                Rectangle()
-                    .fill(AtlasColors.placeholderWarm.opacity(0.35))
-                Image(systemName: "map")
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.secondaryText)
+            Group {
+                if let name = coverImageName(for: journey) {
+                    HeroImageView(
+                        imageName: name,
+                        height: 56,
+                        cornerRadius: 0,
+                        category: journey.firstTourId.flatMap { dataService.tour(by: $0)?.primaryCategory }
+                    )
+                } else {
+                    ZStack {
+                        Rectangle()
+                            .fill(AtlasColors.placeholderWarm.opacity(0.35))
+                        Image(systemName: "map")
+                            .font(AtlasTypography.body)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                    }
+                }
             }
             .frame(width: 56, height: 56)
+            .clipped()
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 Text(journey.title)

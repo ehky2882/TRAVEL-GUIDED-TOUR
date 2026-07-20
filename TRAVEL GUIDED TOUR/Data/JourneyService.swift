@@ -40,7 +40,7 @@ final class JourneyService {
         do {
             let rows: [JourneyRow] = try await client
                 .from("journeys")
-                .select("id, title, description, cover_image_url, is_public, journey_items(count)")
+                .select("id, title, description, cover_image_url, is_public, journey_items(tour_id, position)")
                 .eq("owner_user_id", value: uid)
                 .order("updated_at", ascending: false)
                 .execute()
@@ -245,16 +245,27 @@ final class JourneyService {
 
 // MARK: - DTOs
 
-/// Read payload for a `journeys` row + its embedded item count.
+/// Read payload for a `journeys` row + its embedded items (tour ids + order).
+/// The item *count* is derived client-side from the embedded rows, and the
+/// first tour (lowest `position`) drives the Journey's cover thumbnail.
 private struct JourneyRow: Decodable {
     let id: UUID
     let title: String
     let description: String?
     let coverImageURL: String?
     let isPublic: Bool
-    let journeyItems: [CountRow]
+    let journeyItems: [ItemRef]
 
-    struct CountRow: Decodable { let count: Int }
+    /// One embedded `journey_items` row: just enough to count and to find the
+    /// first tour for the cover image.
+    struct ItemRef: Decodable {
+        let tourId: UUID
+        let position: Int
+        enum CodingKeys: String, CodingKey {
+            case tourId = "tour_id"
+            case position
+        }
+    }
 
     enum CodingKeys: String, CodingKey {
         case id, title, description
@@ -270,7 +281,8 @@ private struct JourneyRow: Decodable {
             description: description,
             coverImageURL: coverImageURL,
             isPublic: isPublic,
-            itemCount: journeyItems.first?.count ?? 0
+            itemCount: journeyItems.count,
+            firstTourId: journeyItems.min(by: { $0.position < $1.position })?.tourId
         )
     }
 }

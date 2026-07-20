@@ -36,9 +36,26 @@ struct JourneyDetailView: View {
         }
     }
 
+    /// Cover image source: an explicit `coverImageURL` if set, else the first
+    /// resolved tour's hero. `nil` (no banner) for an empty Journey with no
+    /// cover set.
+    private var coverImageName: String? {
+        if let url = journey?.coverImageURL, !url.isEmpty { return url }
+        return resolvedTours.first?.tour.heroImageURL
+    }
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: AtlasSpacing.md) {
+                if let coverImageName {
+                    HeroImageView(
+                        imageName: coverImageName,
+                        height: 180,
+                        cornerRadius: 0,
+                        category: resolvedTours.first?.tour.primaryCategory
+                    )
+                }
+
                 header
 
                 if isLoading {
