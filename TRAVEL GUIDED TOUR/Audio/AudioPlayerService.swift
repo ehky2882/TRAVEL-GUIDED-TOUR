@@ -142,6 +142,15 @@ final class AudioPlayerService {
         state = .loading
         isAwaitingFirstPlayTransition = true
 
+        // Take audio focus now, at the moment the user actually starts
+        // tour audio — NOT at app launch. Activating the (non-mixable)
+        // `.playback` session is what interrupts other apps' audio, so
+        // deferring it to here means merely opening the app never stops
+        // the user's Spotify/podcast; only pressing play does.
+        #if os(iOS) || os(visionOS)
+        try? AVAudioSession.sharedInstance().setActive(true)
+        #endif
+
         let item = AVPlayerItem(url: url)
 
         // Observe the new item's status so we catch AVPlayer-reported
@@ -287,10 +296,17 @@ final class AudioPlayerService {
     // MARK: - Configuration
 
     private func configureAudioSession() {
+        // Only *configure* the category here (at app launch / service init).
+        // Setting the category does NOT seize audio focus — it just declares
+        // how this app's audio behaves once it becomes active. Crucially we do
+        // NOT call `setActive(true)` at launch: activating the non-mixable
+        // `.playback` session interrupts other apps' audio, which is why simply
+        // opening the app used to stop the user's Spotify. Activation is
+        // deferred to the moment playback actually starts (see `play(url:...)`
+        // and `play()`), so we only take over audio when the user starts a tour.
         #if os(iOS) || os(visionOS)
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .spokenAudio)
-            try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             #if DEBUG
             print("AudioPlayerService: failed to configure audio session: \(error)")
