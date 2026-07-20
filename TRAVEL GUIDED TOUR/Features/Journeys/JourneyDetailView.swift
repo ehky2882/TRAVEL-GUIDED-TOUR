@@ -19,6 +19,8 @@ struct JourneyDetailView: View {
     @State private var isLoading = true
     @State private var isEditing = false
     @State private var showingDeleteConfirm = false
+    @State private var showingEditDetails = false
+    @State private var noteTarget: NoteTarget?
 
     /// The journey's metadata from the in-memory list (title / public flag).
     private var journey: Journey? {
@@ -68,7 +70,10 @@ struct JourneyDetailView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Menu {
-                    Button(isEditing ? "Done" : "Edit tours", systemImage: "pencil") {
+                    Button("Edit details", systemImage: "square.and.pencil") {
+                        showingEditDetails = true
+                    }
+                    Button(isEditing ? "Done" : "Edit tours", systemImage: "arrow.up.arrow.down") {
                         isEditing.toggle()
                     }
                     Section {
@@ -89,6 +94,19 @@ struct JourneyDetailView: View {
         ) {
             Button("Delete Journey", role: .destructive) { deleteJourney() }
             Button("Cancel", role: .cancel) {}
+        }
+        .sheet(isPresented: $showingEditDetails) {
+            if let journey {
+                JourneyEditorSheet(editing: journey)
+            }
+        }
+        .sheet(item: $noteTarget) { target in
+            JourneyNoteEditorSheet(
+                tourTitle: target.tourTitle,
+                initialNote: target.note
+            ) { newNote in
+                saveNote(newNote, for: target.tourId)
+            }
         }
         .task(id: journeyId) {
             items = await journeyService.items(of: journeyId)
@@ -150,20 +168,25 @@ struct JourneyDetailView: View {
                         .foregroundStyle(AtlasColors.tertiaryText)
                         .lineLimit(2)
                 }
+
+                if isEditing {
+                    Button {
+                        noteTarget = NoteTarget(tourId: tour.id, tourTitle: tour.title, note: note ?? "")
+                    } label: {
+                        Label(note?.isEmpty ?? true ? "Add note" : "Edit note",
+                              systemImage: "text.bubble")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.mapPin)
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.top, 2)
+                }
             }
 
             Spacer()
 
             if isEditing {
-                Button {
-                    remove(tour.id)
-                } label: {
-                    Image(systemName: "minus.circle.fill")
-                        .font(.system(size: 20))
-                        .foregroundStyle(.red)
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("Remove \(tour.title) from Journey")
+                editingControls(for: tour.id, tourTitle: tour.title)
             } else {
                 Image(systemName: "chevron.right")
                     .font(AtlasTypography.caption)
@@ -175,6 +198,40 @@ struct JourneyDetailView: View {
         .onTapGesture {
             guard !isEditing else { return }
             openTour(tour)
+        }
+    }
+
+    /// Trailing per-row controls in edit mode: move up / down (reorder) + remove.
+    private func editingControls(for tourId: UUID, tourTitle: String) -> some View {
+        let idx = items.firstIndex(where: { $0.tourId == tourId })
+        return HStack(spacing: AtlasSpacing.sm) {
+            VStack(spacing: 2) {
+                Button { move(tourId, up: true) } label: {
+                    Image(systemName: "chevron.up").font(.system(size: 14, weight: .semibold))
+                }
+                .buttonStyle(.plain)
+                .disabled(idx == nil || idx == 0)
+                .foregroundStyle(idx == 0 ? AtlasColors.tertiaryText : AtlasColors.secondaryText)
+                .accessibilityLabel("Move \(tourTitle) up")
+
+                Button { move(tourId, up: false) } label: {
+                    Image(systemName: "chevron.down").font(.system(size: 14, weight: .semibold))
+                }
+                .buttonStyle(.plain)
+                .disabled(idx == nil || idx == items.count - 1)
+                .foregroundStyle(idx == items.count - 1 ? AtlasColors.tertiaryText : AtlasColors.secondaryText)
+                .accessibilityLabel("Move \(tourTitle) down")
+            }
+
+            Button {
+                remove(tourId)
+            } label: {
+                Image(systemName: "minus.circle.fill")
+                    .font(.system(size: 20))
+                    .foregroundStyle(.red)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Remove \(tourTitle) from Journey")
         }
     }
 
@@ -210,10 +267,83 @@ struct JourneyDetailView: View {
         }
     }
 
+    /// Move a tour one slot up/down. Reorders `items` optimistically (the list
+    /// follows array order) then persists the new positions.
+    private func move(_ tourId: UUID, up: Bool) {
+        guard let idx = items.firstIndex(where: { $0.tourId == tourId }) else { return }
+        let target = up ? idx - 1 : idx + 1
+        guard items.indices.contains(target) else { return }
+        items.swapAt(idx, target)
+        let ordered = items.map(\.tourId)
+        Task { try? await journeyService.reorder(ordered, in: journeyId) }
+    }
+
+    private func saveNote(_ note: String, for tourId: UUID) {
+        Task {
+            try? await journeyService.setNote(note, for: tourId, in: journeyId)
+            items = await journeyService.items(of: journeyId)
+        }
+    }
+
     private func deleteJourney() {
         Task {
             try? await journeyService.deleteJourney(journeyId)
             dismiss()
+        }
+    }
+}
+
+/// Identifies which tour's note is being edited (drives the note sheet).
+private struct NoteTarget: Identifiable {
+    let tourId: UUID
+    let tourTitle: String
+    let note: String
+    var id: UUID { tourId }
+}
+
+/// Small sheet to add/edit a per-tour curator note ("do this at golden hour").
+struct JourneyNoteEditorSheet: View {
+    let tourTitle: String
+    let initialNote: String
+    let onSave: (String) -> Void
+
+    @Environment(\.dismiss) private var dismiss
+    @State private var text: String
+    private let limit = 140
+
+    init(tourTitle: String, initialNote: String, onSave: @escaping (String) -> Void) {
+        self.tourTitle = tourTitle
+        self.initialNote = initialNote
+        self.onSave = onSave
+        _text = State(initialValue: initialNote)
+    }
+
+    var body: some View {
+        NavigationStack {
+            Form {
+                Section {
+                    TextField("e.g. do this at golden hour", text: $text, axis: .vertical)
+                        .lineLimit(3, reservesSpace: true)
+                        .onChange(of: text) { _, new in
+                            if new.count > limit { text = String(new.prefix(limit)) }
+                        }
+                } header: {
+                    Text("Note for \(tourTitle)")
+                } footer: {
+                    Text("\(limit - text.count) left")
+                        .foregroundStyle(text.count >= limit ? .red : AtlasColors.tertiaryText)
+                }
+            }
+            .navigationTitle("Note")
+            .inlineNavigationBarTitle()
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { dismiss() }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Save") { onSave(text); dismiss() }
+                }
+            }
         }
     }
 }
