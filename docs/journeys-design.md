@@ -27,20 +27,25 @@ pipeline (first feature to ship that way), owner-tested on device, merged via PR
 - **Backend** — `journeys` / `journey_items` / `saved_journeys` tables + RLS + `get_journey`
   RPC applied to the live Supabase project.
 
-**Deliberately deferred — the polish backlog** (each a clean follow-up, none blocking):
-1. **Edit a Journey's details** after creation (title / description / public toggle) — v1 is
-   create-only. (`JourneyEditorSheet` is create-shaped; generalize to edit.)
-2. **Drag-to-reorder** tours within a Journey (set the walking order). Schema has `position`;
-   needs the set-renumber write + an `onMove` list.
-3. **Per-tour curator note** — the "why I picked this" note. `journey_items.note` is stored and
-   *shown* in `JourneyDetailView`, but there's no field to *enter* it yet (§3, §5).
-4. **Cover image** — auto (first tour's hero) vs custom (§12). Rows show a map-icon placeholder now.
+**Polish batch SHIPPED 2026-07-20** (PR #410 → `main`, squash `07e6d52`; TestFlight 1.1 (28)) — four items done:
+1. ✅ **Edit a Journey's details** after creation (title / description / public) — `JourneyEditorSheet`
+   generalized to an `editing:` mode; `JourneyService.updateJourney`.
+2. ✅ **Reorder** tours — up/down controls per row in Edit mode; `JourneyService.reorder` writes
+   `position`. (Up/down rather than drag; a drag `onMove` is a later nicety.)
+3. ✅ **Per-tour curator note** — `JourneyNoteEditorSheet` + `JourneyService.setNote`; "Add/Edit note"
+   under each tour in Edit mode.
+4. ✅ **Cover image** — auto from the first tour's hero (or `coverImageURL` if set): detail-screen
+   banner + list-row thumbnails. `loadMyJourneys` embeds `journey_items(tour_id, position)` →
+   `Journey.firstTourId`. (Custom cover *upload* still deferred — auto only.)
+
+**Still deferred** (each a clean follow-up, none blocking):
 5. **Share a Journey** — add a `.journey(id)` case to `Data/DeepLink.swift` + a web landing page,
    then a Share action (§7). Dropped from v1 to avoid a dead link.
 6. **Discover / save others' Journeys** — public Journeys on the profile; `saved_journeys` +
    a `SavedJourneysStore`; surface in Library (§4, §7). Table exists, unused.
 7. **Walking-path map** on the detail screen (§8) — reuse `TourDetailView`'s `MKDirections`.
 8. **Batch offline download** of a Journey's tours (§6) — loop `TourDownloader`.
+9. **Custom cover upload** + **drag-to-reorder** — nice-to-haves on top of the shipped auto-cover / up-down reorder.
 
 The sections below are the full original design; items above map to §§3–8, 11–12.
 
