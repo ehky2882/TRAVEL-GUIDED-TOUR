@@ -70,7 +70,17 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-07-19)
+## Current State (2026-07-20)
+
+### Drawer rails re-anchored to the user's location — TestFlight 1.1 (16) (session 62 — code)
+
+**Owner: "The primary sort for the rails in the drawer should still be based on distance to the user's location. Especially true if the user's location is within view."** The drawer's curated tag shelves + the filtered-results feed were distance-sorting from the **map viewport center** whenever a region was settled — so tours ranked by wherever the map was centered even when the user was standing right there. Fixed, CI-verified, TestFlight-built, owner-authorized merge ([PR #405](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/405) → `main`, squash `18b96ea`).
+
+- **Only `HomeRailsViewModel.viewerLocation` changed** — the reference point feeding `sortedByDistance` (curated shelves) and `filteredResults`. New rule: the **user's own location is the primary anchor**. Return `userLocation` whenever the user is known and either there's no settled region yet **or** the region contains the user (`MKCoordinateRegion.contains` — the "user in view" case owner called out). Only when panned away to a region that no longer shows the user do we fall back to the **viewport center**, so browsing another city still ranks by what's in view (§1.5).
+- **Untouched:** the `Near you` ↔ `In view` rail *swap* (still on the 500m `isPannedFar` threshold) — this change only affects ordering *within* the shelves + filter feed, not which location rail shows.
+- **Tests:** +2 `HomeRailsViewModelTests` — `test_filteredResults_userInView_sortsByUserLocationNotViewportCenter` (user on screen → nearest-to-user leads even when another tour sits nearer the region center) and `test_filteredResults_userOffScreen_sortsByViewportCenter` (panned away → viewport-center fallback). Existing `test_filteredResults_sortsByViewportCenter` (user `nil`) still holds. `test_sim` can't run from Linux → PR `ci.yml` (iOS Simulator build + **Run unit tests**) is the stand-in; **CI green**.
+- **Verification.** CI #961 green; **TestFlight 1.1 (16)** built+signed+uploaded via `testflight.yml` `workflow_dispatch` on the branch (build notes attached). **Device check owed:** open the drawer while the map is over your location — nearest-to-you tours should lead each tag shelf; pan to another city → shelves re-rank by what's in view there.
+- **Branch cleanup owed:** `claude/rail-drawer-distance-sort-rx65l1` merged; git proxy blocks branch deletion from web sessions (403) → delete in the GitHub UI.
 
 ### Maker bookmark removed — Follow is the single "keep a creator" concept — TestFlight 1.1 (9) (session 61 — code)
 
