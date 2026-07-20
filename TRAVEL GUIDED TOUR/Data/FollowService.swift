@@ -84,6 +84,26 @@ final class FollowService {
         auth.user?.id.uuidString.lowercased() ?? "anon"
     }
 
+    /// Pending follow requests waiting on the signed-in user's OWN maker — the
+    /// source for the Me-tab notification badge. Kept here (not in a view) so
+    /// every surface that changes the pending set (launch pre-warm, opening the
+    /// profile, approve/decline) updates the single badge. 0 when signed out /
+    /// no maker yet.
+    private(set) var ownPendingRequests: Int = 0
+
+    /// Refresh `ownPendingRequests` for the signed-in user's maker. Seeds from
+    /// the stale cache synchronously (so the badge is right on the first frame
+    /// after relaunch), then corrects from the network.
+    func refreshOwnPendingRequests(ownMakerId: UUID) async {
+        ownPendingRequests = cachedState(for: ownMakerId).pendingRequests
+        ownPendingRequests = await state(for: ownMakerId).pendingRequests
+    }
+
+    /// Clear the badge — signing out, or before a maker profile exists.
+    func clearOwnPendingRequests() {
+        ownPendingRequests = 0
+    }
+
     /// The last-known state for `makerId`, synchronously, or `.empty` if never
     /// fetched. Seed a view with this before awaiting `state(for:)` so the
     /// counts don't flash 0/blank on open.

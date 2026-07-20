@@ -275,7 +275,6 @@ struct MakerView: View {
             followCounts
 
             if isOwnProfile {
-                if followState.pendingRequests > 0 { followRequestsButton }
                 editProfileButton
             } else {
                 followButton
@@ -289,17 +288,70 @@ struct MakerView: View {
             // network blip never clobbers good counts back to zero.
             followState = followService.cachedState(for: maker.id)
             followState = await followService.state(for: maker.id)
+            // On the own profile, this refresh is the freshest read of the
+            // pending set — keep the Me-tab notification badge in sync with it.
+            if isOwnProfile {
+                await followService.refreshOwnPendingRequests(ownMakerId: maker.id)
+            }
         }
     }
 
     /// Follower + Following counts — each taps through to the list screen
-    /// (`FollowListView`, batch D2).
+    /// (`FollowListView`, batch D2). On the own profile a pending follow
+    /// request surfaces as a small gold heart badge over the followers count;
+    /// tapping the followers count opens the unified list with the requests
+    /// pinned at the top (there's no separate requests page).
     private var followCounts: some View {
         HStack(spacing: AtlasSpacing.lg) {
-            countLink(followState.followers, "followers", .followers)
+            followersLink
             countLink(followState.following, "following", .following)
         }
         .padding(.top, AtlasSpacing.xs)
+    }
+
+    /// Followers count. On the own profile it links to the unified list
+    /// (requests pinned on top) and carries the pending-request heart badge.
+    private var followersLink: some View {
+        NavigationLink {
+            FollowListView(
+                makerId: maker.id,
+                kind: .followers,
+                showsPendingRequests: isOwnProfile,
+                onRequestsChange: {
+                    Task {
+                        if let followService {
+                            followState = await followService.state(for: maker.id)
+                            await followService.refreshOwnPendingRequests(ownMakerId: maker.id)
+                        }
+                    }
+                }
+            )
+        } label: {
+            countPill(followState.followers, "followers")
+                .overlay(alignment: .topTrailing) {
+                    if isOwnProfile && followState.pendingRequests > 0 {
+                        pendingRequestBadge
+                    }
+                }
+        }
+        .buttonStyle(.plain)
+    }
+
+    /// Decorative gold heart badge reminding the user of pending follow
+    /// requests. The whole followers count is the tap target (it opens the
+    /// list where the requests are actioned), so the badge itself isn't a
+    /// separate button.
+    private var pendingRequestBadge: some View {
+        Image(systemName: "heart.fill")
+            .font(.system(size: 9, weight: .bold))
+            .foregroundStyle(AtlasColors.background)
+            .frame(width: 18, height: 18)
+            .background(AtlasColors.mapPin, in: Circle())
+            .overlay(Circle().stroke(AtlasColors.background, lineWidth: 1.5))
+            .offset(x: 10, y: -10)
+            .accessibilityLabel(followState.pendingRequests == 1
+                                ? "1 pending follow request"
+                                : "\(followState.pendingRequests) pending follow requests")
     }
 
     private func countLink(_ n: Int, _ label: String, _ kind: FollowListView.Kind) -> some View {
@@ -380,32 +432,6 @@ struct MakerView: View {
     /// full string).
     private func displayLink(_ url: URL) -> String {
         (url.host ?? url.absoluteString).replacingOccurrences(of: "www.", with: "")
-    }
-
-    /// Own-profile entry to the pending follow-requests screen (private
-    /// accounts). Only shown when there are requests waiting. Pushes
-    /// `FollowRequestsView`; approving/declining refreshes the header count.
-    private var followRequestsButton: some View {
-        NavigationLink {
-            FollowRequestsView(makerId: maker.id) {
-                Task {
-                    if let followService {
-                        followState = await followService.state(for: maker.id)
-                    }
-                }
-            }
-        } label: {
-            HStack(spacing: AtlasSpacing.xs) {
-                Image(systemName: "person.crop.circle.badge.checkmark")
-                Text(followState.pendingRequests == 1
-                     ? "1 follow request"
-                     : "\(followState.pendingRequests) follow requests")
-            }
-            .font(AtlasTypography.caption)
-            .foregroundStyle(AtlasColors.mapPin)
-        }
-        .buttonStyle(.plain)
-        .padding(.top, AtlasSpacing.xs)
     }
 
     /// Own-profile "Edit Profile" pill — opens the profile editor, which
