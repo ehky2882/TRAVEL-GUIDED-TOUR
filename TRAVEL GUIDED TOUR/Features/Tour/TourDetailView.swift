@@ -303,44 +303,25 @@ struct TourDetailView: View {
 
     // MARK: - Gallery (photo carousel)
 
-    /// Hero area: single image for tours with one photo, paging carousel
-    /// for tours that supply `additionalImageURLs`.
+    /// Hero area: a single image for tours with one photo, or a paging
+    /// carousel for tours that supply `additionalImageURLs` and/or
+    /// `videoURLs` (videos render as extra pages after the photos).
+    /// Shared with `PlayerView` via `TourMediaCarousel` so the two
+    /// surfaces stay identical.
     ///
-    /// `cornerRadius` defaults to 0 on `HeroImageView`, so we pass
-    /// nothing — the hero renders as a square-cornered rectangle with
-    /// its side padding intact. Owner chose this in the detail-sheet
-    /// retool: same shape as before, just no rounded corners.
-    ///
-    /// `disableLoadAnimation: true` keeps the hero from crossfading
-    /// while the detail layer is sliding up (see HeroImageView's
-    /// `disableLoadAnimation` doc for the full reason).
-    @ViewBuilder
+    /// Square corners (HeroImageView's `cornerRadius` defaults to 0) +
+    /// `disableLoadAnimation` (no crossfade while the detail layer
+    /// slides up) are baked into the shared carousel. Horizontal side
+    /// padding stays here so the footprint matches the map tab.
     private var imageSection: some View {
-        let allImages = [tour.heroImageURL] + (tour.additionalImageURLs ?? [])
-        if allImages.count > 1 {
-            TabView {
-                ForEach(allImages, id: \.self) { url in
-                    HeroImageView(
-                        imageName: url,
-                        height: AtlasSpacing.heroHeight,
-                        zoomable: true,
-                        disableLoadAnimation: true
-                    )
-                }
-            }
-            .tabViewStyle(.page(indexDisplayMode: .always))
-            .frame(height: AtlasSpacing.heroHeight)
-            .padding(.horizontal, AtlasSpacing.lg)
-        } else {
-            HeroImageView(
-                imageName: tour.heroImageURL,
-                height: AtlasSpacing.heroHeight,
-                category: tour.primaryCategory,
-                zoomable: true,
-                disableLoadAnimation: true
-            )
-            .padding(.horizontal, AtlasSpacing.lg)
-        }
+        TourMediaCarousel(
+            heroImageURL: tour.heroImageURL,
+            additionalImageURLs: tour.additionalImageURLs,
+            videoURLs: tour.videoURLs,
+            height: AtlasSpacing.heroHeight,
+            category: tour.primaryCategory
+        )
+        .padding(.horizontal, AtlasSpacing.lg)
     }
 
     // MARK: - Masthead
