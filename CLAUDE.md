@@ -72,6 +72,16 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-07-20)
 
+### App no longer stops your other audio at launch — audio focus deferred to first play — TestFlight 1.1 (27) (session 65 — code)
+
+**Owner: "If I'm listening to Spotify and I start the app, it automatically stops what I'm listening to. I don't like that. Replace the audio only if I start audio in my app."** Real and reproducible from the code. `AudioPlayerService` is instantiated once at app launch (`@State` in `TRAVEL_GUIDED_TOURApp`), and its `init()` → `configureAudioSession()` called `AVAudioSession.setActive(true)` on the non-mixable `.playback` category. **Activating that session is what seizes audio focus**, so merely opening the app took over audio and stopped Spotify/podcasts — before any tour was started. Fixed, CI-verified, owner-device-confirmed on TestFlight, merged ([PR #411](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/411) → `main`, squash `65ea273`).
+
+- **Split configuration from activation** (`Audio/AudioPlayerService.swift`, the only file changed). `configureAudioSession()` (run at init) now **only sets the category** (`setCategory(.playback, mode: .spokenAudio)`) — declaring how the app's audio behaves does **not** interrupt other apps' audio. `setActive(true)` is **deferred to the moment playback actually starts**: added to `play(url:...)`; the resume `play()` already activated. So the app only takes audio focus when the user starts a tour.
+- **Side benefit:** `play(url:...)` is now self-sufficient — it re-activates the session before each play instead of relying on a possibly-stale launch-time activation (more robust after interruptions/backgrounding).
+- **Ripple check (all playback-start paths still activate correctly):** tour detail, player, mini-player, geofence auto-trigger (`ProximityMonitor`), Group Listen (leader + follower), interruption-resume, gallery-video resume — all funnel through `play(url:)`/`play()`. **No API, data-model, or mixing-behavior change; no performance impact** (one fewer `setActive` call at launch). A **running** tour still interrupts other audio at each geofenced stop — intended, because a tour is active.
+- **Verification.** PR CI green (iOS Simulator build + Run unit tests + validator). **TestFlight 1.1 (27)** built+signed+uploaded via `testflight.yml` on the branch (no cert snag this run); **owner device-confirmed** — launching with Spotify playing no longer stops it, and starting a tour still takes over.
+- **Branch cleanup owed:** `claude/spotify-auto-detection-88jdjb` merged; git proxy blocks branch deletion from web sessions (403) → delete in the GitHub UI.
+
 ### Follow-request UX polish — caption title, ✓/✗ actions, Me-tab dot, heart badge, unified followers list — TestFlight 1.1 (25) (session 64 — code)
 
 **Owner-driven batch of five follow-request tweaks, built + shipped from a web session** ([PR #409](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/409) → `main`, squash `f0e77d1`; CI green — Build/Validator/Unit-tests all pass — TestFlight **1.1 (25)** built+signed+uploaded via `testflight.yml` on the branch, owner device-reviewed → merged). All in the batch-D social layer; no backend/schema change.
