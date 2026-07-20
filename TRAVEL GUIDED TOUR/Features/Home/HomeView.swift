@@ -271,10 +271,12 @@ struct HomeView: View {
                 // — MKMapView's tile streaming starves SwiftUI layer
                 // compositing there. On device (Metal compositor) it
                 // shows promptly; verify on a real device / TestFlight.
-                .overlay(alignment: .top) {
+                .overlay(alignment: .center) {
                     if showNoToursOverlay {
+                        // Centered vertically on screen (owner request) so
+                        // the hint reads as the focal point over the empty
+                        // map, rather than tucked under the search bar.
                         noToursOverlay
-                            .padding(.top, geo.size.height * 0.16)
                             .allowsHitTesting(false)
                     }
                 }
