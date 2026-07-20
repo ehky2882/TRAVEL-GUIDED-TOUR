@@ -29,12 +29,6 @@ struct LibraryView: View {
     @Environment(AuthService.self) private var authService
 
     @State private var selectedSection: Section = .saved
-    /// Makers the signed-in user follows — shown in the Saved tab below their
-    /// saved tours (owner direction 2026-07-19: Follow replaced the old
-    /// bookmark-a-maker, so the maker list here is now the follow graph, not a
-    /// local bookmark store). Loaded from `FollowService` on appear; empty when
-    /// signed out or before the user has a profile.
-    @State private var followingMakers: [Maker] = []
 
     /// Push the section picker's labels to SF Mono caption (13pt
     /// monospaced regular) — matches the editorial voice carried by
@@ -304,26 +298,39 @@ struct LibraryView: View {
         }
     }
 
-    /// Fetch the signed-in user's followed makers. Keyed by the user's own
-    /// maker id (the follow graph resolves maker → owner), so it needs a loaded
-    /// profile — the same requirement as the profile's own "Following" list.
-    /// Signed out, or before a profile exists, this stays empty and the Saved
-    /// tab shows tours only.
+    /// Makers the signed-in user follows — shown in the Saved tab below their
+    /// saved tours (owner direction 2026-07-19: Follow replaced the old
+    /// bookmark-a-maker, so the maker list here is now the follow graph, not a
+    /// local bookmark store).
+    ///
+    /// Read synchronously from `FollowService`'s in-memory cache during `body`
+    /// (rather than an async-loaded `@State`, which lands a frame after the tab
+    /// re-mounts and made the Saved tab re-format on every entry). On a warm
+    /// re-entry the cache is already populated, so the final layout renders on
+    /// the first frame with no jitter; `loadFollowing()` refreshes it in place.
+    /// Empty when signed out or before the user has a maker profile — the Saved
+    /// tab then falls back to tours-only.
+    private var followingMakers: [Maker] {
+        guard let myMakerId = makerProfileService.myMaker?.id else { return [] }
+        return followService.cachedFollowing(of: myMakerId)
+    }
+
+    /// Refresh the signed-in user's followed makers into the shared cache.
+    /// Keyed by the user's own maker id (the follow graph resolves maker →
+    /// owner), so it needs a loaded profile — the same requirement as the
+    /// profile's own "Following" list. Signed out, or before a profile exists,
+    /// there's nothing to refresh and the computed `followingMakers` stays empty.
     private func loadFollowing() async {
-        guard authService.isSignedIn else {
-            followingMakers = []
-            return
-        }
+        guard authService.isSignedIn else { return }
         // Ensure the user's own maker row is loaded (it's pre-warmed at launch,
         // but Library may open before that lands or after a fresh sign-in).
         if makerProfileService.myMaker == nil {
             await makerProfileService.loadMyMaker()
         }
-        guard let myMakerId = makerProfileService.myMaker?.id else {
-            followingMakers = []
-            return
-        }
-        followingMakers = await followService.following(of: myMakerId)
+        guard let myMakerId = makerProfileService.myMaker?.id else { return }
+        // Write-through into FollowService's cache; the computed property above
+        // observes it, so the view updates in place if the list changed.
+        _ = await followService.following(of: myMakerId)
     }
 
     private func makerTourCountText(_ maker: Maker) -> String {
