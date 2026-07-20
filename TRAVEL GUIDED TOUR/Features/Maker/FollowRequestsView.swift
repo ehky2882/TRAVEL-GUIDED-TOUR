@@ -45,6 +45,16 @@ struct FollowRequestsView: View {
         .background(AtlasColors.secondaryBackground)
         .navigationTitle("Follow Requests")
         .inlineNavigationBarTitle()
+        // Render the nav-bar title ourselves so it carries the caption
+        // token in ALL CAPS. `.navigationTitle` is kept for the
+        // accessibility label; the principal item replaces it visually.
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("FOLLOW REQUESTS")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.primaryText)
+            }
+        }
         .safeAreaInset(edge: .bottom, spacing: 0) {
             Color.clear.frame(height: AtlasBottomModule.height())
         }
@@ -79,29 +89,28 @@ struct FollowRequestsView: View {
 
             Spacer(minLength: AtlasSpacing.sm)
 
-            HStack(spacing: AtlasSpacing.sm) {
+            HStack(spacing: AtlasSpacing.md) {
                 Button { act(req, approve: true) } label: {
-                    Text("Approve")
-                        .font(AtlasTypography.caption)
-                        .padding(.horizontal, AtlasSpacing.sm)
-                        .frame(height: 32)
-                        .background(AtlasColors.mapPin)
-                        .foregroundStyle(AtlasColors.background)
-                        .clipShape(Capsule())
+                    Image(systemName: "checkmark")
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundStyle(Color.green)
+                        .frame(width: 36, height: 36)
+                        .background(Color.green.opacity(0.15))
+                        .clipShape(Circle())
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Approve")
 
                 Button { act(req, approve: false) } label: {
-                    Text("Decline")
-                        .font(AtlasTypography.caption)
-                        .padding(.horizontal, AtlasSpacing.sm)
-                        .frame(height: 32)
-                        .foregroundStyle(AtlasColors.primaryText)
-                        .overlay(
-                            Capsule().stroke(AtlasColors.secondaryText.opacity(0.4), lineWidth: 1)
-                        )
+                    Image(systemName: "xmark")
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundStyle(Color.red)
+                        .frame(width: 36, height: 36)
+                        .background(Color.red.opacity(0.15))
+                        .clipShape(Circle())
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel("Decline")
             }
             .disabled(busyIds.contains(req.id))
         }
