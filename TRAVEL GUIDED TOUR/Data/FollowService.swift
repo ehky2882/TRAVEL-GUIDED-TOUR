@@ -44,6 +44,16 @@ final class FollowService {
     /// Stale-while-revalidate cache so counts render instantly from the
     /// last-known value while the RPC refreshes in the background.
     private let store: FollowStateStore
+    /// In-memory stale-while-revalidate cache of follow *lists* (the
+    /// `following(of:)` result), keyed by viewer + subject maker. Lets a
+    /// screen that's rebuilt on every appearance — notably the Library Saved
+    /// tab, which is switch-swapped on each tab entry — render its final
+    /// layout immediately on a warm re-entry instead of flashing the empty
+    /// list and re-formatting a network round-trip later (the "jitter when it
+    /// re-formats" on returning to Library). Per-viewer-scoped so one
+    /// account's graph never shows under another's. In-memory only: a warm
+    /// process kills the repeated-switch reflow; a cold launch fetches once.
+    private var followingCache: [String: [Maker]] = [:]
 
     init(auth: AuthService,
          client: SupabaseClient = SupabaseClientProvider.shared,
@@ -108,24 +118,46 @@ final class FollowService {
     /// visibility rule (a private account's list is only returned to its owner);
     /// returns `[]` on error or when hidden.
     func followers(of makerId: UUID) async -> [Maker] {
-        await makerList("list_followers", makerId)
+        (try? await fetchMakerList("list_followers", makerId)) ?? []
+    }
+
+    /// The last-known "following" list for `makerId`, synchronously, or `[]` if
+    /// it hasn't been fetched this session. Read this during a view's `body`
+    /// (rather than assigning to `@State` in `.task`, which lands a frame late)
+    /// so a warm re-entry renders the final layout on the first frame with no
+    /// re-format flash; then call `following(of:)` to refresh it in place.
+    func cachedFollowing(of makerId: UUID) -> [Maker] {
+        followingCache[followingCacheKey(makerId)] ?? []
     }
 
     /// The makers this profile follows. Same visibility rule via `list_following`.
+    /// Write-through on success (including an empty result — genuinely following
+    /// nobody — so an unfollow-to-zero eventually clears the warm list); on a
+    /// network error, returns the last-known cached list rather than `[]`, so a
+    /// transient blip never reflows a good list away.
     func following(of makerId: UUID) async -> [Maker] {
-        await makerList("list_following", makerId)
+        do {
+            let makers = try await fetchMakerList("list_following", makerId)
+            followingCache[followingCacheKey(makerId)] = makers
+            return makers
+        } catch {
+            return cachedFollowing(of: makerId)
+        }
     }
 
-    private func makerList(_ rpc: String, _ makerId: UUID) async -> [Maker] {
-        do {
-            let rows: [MakerRow] = try await client
-                .rpc(rpc, params: ["m": makerId.uuidString.lowercased()])
-                .execute()
-                .value
-            return rows.map { $0.asMaker }
-        } catch {
-            return []
-        }
+    private func followingCacheKey(_ makerId: UUID) -> String {
+        "\(viewerUid)|\(makerId.uuidString.lowercased())"
+    }
+
+    /// Throwing fetch so callers can tell a real (possibly empty) result apart
+    /// from a network error — the caching path in `following(of:)` depends on
+    /// that distinction.
+    private func fetchMakerList(_ rpc: String, _ makerId: UUID) async throws -> [Maker] {
+        let rows: [MakerRow] = try await client
+            .rpc(rpc, params: ["m": makerId.uuidString.lowercased()])
+            .execute()
+            .value
+        return rows.map { $0.asMaker }
     }
 
     /// Pending follow requests waiting for the signed-in user (across the
