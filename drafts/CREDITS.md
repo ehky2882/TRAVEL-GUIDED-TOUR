@@ -319,3 +319,43 @@ files), or swap the CC-licensed shots for owner-supplied/CC0 ones. The per-city 
 **Housekeeping note:** the per-city `IMAGE-CREDITS-*.txt` files should ideally be moved
 off `gh-pages` (a public asset host) into the repo alongside this file so they travel
 with the code. Deferred — they're safe where they are, just not co-located.
+
+## Berlin — credit-required images (`drafts/berlin-batch1` + the 5 walk folders)
+
+New maker **Atlas Studio BER** 🇩🇪 at wire-in. Everything else in the Berlin batch is ship-safe
+(Unsplash/Pexels/Pixabay) or owner-pasted (Bernauer Strasse). CC0 / Public-domain rows below carry
+**no** obligation and are listed only for provenance. Wikimedia used where no PD/CC0 image of the exact
+subject existed (niche stations, memorials, courtyards) or the subject demanded a dignified exact match.
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `bebelplatz_3.webp` | Bebelplatz book-burning memorial (night) | Robyn Fleming | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Bebelplatz_at_night.jpg |
+| `bebelplatz_4.webp` | Empty Library / book-burning memorial | Daniel Neugebauer | CC BY-SA 2.5 | https://commons.wikimedia.org/wiki/File:Berlin_DenkmalBuecherverbrennung_BookBurningMemorial_Bebelplatz.jpg |
+| `topography-of-terror_hero.webp` | Topography of Terror site | Fred Romero | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Berlin_-_Topographie_des_Terrors_%284%29.jpg |
+| `topography-of-terror_2.webp` | Documentation centre + Wall | Avishai Teicher (Avi1111) | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Topographie_des_Terrors_museum.jpg |
+| `topography-of-terror_3.webp` | Wall along Niederkirchnerstraße | JoJan | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Berlin.Gestapo_Museum_001.JPG |
+| `topography-of-terror_4.webp` | Wall + excavated trench | EliziR | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Topographie_des_Terrors%2C_Berl%C3%ADn_%28mar%C3%A7_2013%29_-_panoramio_%281%29.jpg |
+| `topography-of-terror_5.webp` | Wall + outdoor exhibition | Manfred Brückels | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Topographie_des_Terrors_2.jpg |
+| `hackesche-hoefe_hero.webp` | Hackesche Höfe first courtyard (Endell) | Tuxyso | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Hackesche_H%C3%B6fe-2023.jpg |
+| `hackesche-hoefe_2.webp` | Hackesche Höfe street entrance | Jörg Zägel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berlin%2C_Mitte%2C_Hackescher_Markt%2C_Hackesche_Hoefe.jpg |
+| `hackesche-hoefe_3.webp` | Hackesche Höfe courtyard | Dosseman | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Hackesche_H%C3%B6fe_7920.jpg |
+| `neue-synagoge_hero.webp` | Neue Synagoge facade + gilded dome | Mark Ahsmann | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:200806_Berlin_470.JPG |
+| `neue-synagoge_2.webp` | Neue Synagoge gilded dome | Taxiarchos228 | FAL (Free Art License) | https://commons.wikimedia.org/wiki/File:Berlin_-_Neue_Synagoge3.jpg |
+| `neue-synagoge_3.webp` | Neue Synagoge facade | Kurt Kaiser | CC0 (ship-clean, no obligation) | https://commons.wikimedia.org/wiki/File:Berlin_Neue_Synagoge_2019.jpg |
+| `traenenpalast_hero.webp` | Tränenpalast (Palace of Tears) pavilion | Paul Korecky | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:2018-08-09_DE_Berlin-Mitte%2C_Tr%C3%A4nenpalast_%2849923409376%29.jpg |
+| `traenenpalast_2.webp` | Tränenpalast pavilion entrance | Sir James | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2024-11-02_Berlin_Traenenpalast_Eingang_IMG_1595.JPEG |
+| `traenenpalast_3.webp` | Tränenpalast pavilion (setting) | Sir James | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2024-11-02_Berlin_Traenenpalast_Lage_IMG_1599.JPEG |
+| `neue-wache_hero.webp` | Neue Wache (Schinkel temple front) | Ansgar Koreng | CC BY 3.0 (DE) | https://commons.wikimedia.org/wiki/File:150214_Neue_Wache_Berlin.jpg |
+| `neue-wache_2.webp` | Kollwitz Pietà under the oculus | Daniel Schwen | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:B_Neue_Wache_interior_1.jpg |
+| `neue-wache_3.webp` | Kollwitz Pietà (Mother with dead son) | Marek Mróz | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:2015-10_Berlin-Mitte_%2833%29.jpg |
+| `karl-marx-allee_hero.webp` | Frankfurter Tor twin towers | H. Helmlechner | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_Frankfurter_Tor_02.jpg |
+| `kollwitzplatz_hero.webp` | Käthe Kollwitz statue (Kollwitzplatz) | Jens Cederskjold | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:K%C3%A4the_Kollwitz%2C_Kollwitzplatz%2C_Prenzlauer_Berg_-_panoramio.jpg |
+| `kollwitzplatz_2.webp` | Wasserturm (Prenzlauer Berg) | Norbert Aepli | Public domain (ship-clean, no obligation) | https://commons.wikimedia.org/wiki/File:2009-04-10_Berlin_715.jpg |
+| `nollendorfplatz_hero.webp` | Nollendorfplatz station + rainbow flag | Fridolin freudenfett | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Sch%C3%B6neberg_Nollendorfplatz_Regenbogenfahne.jpg |
+| `[walk] ghostline_stop1.webp` | Nordbahnhof (ghost station) | Ansgar Koreng | CC BY 3.0 (DE) | https://commons.wikimedia.org/wiki/File:150501_Berlin_Nordbahnhof.jpg |
+| `[walk] ghostline_stop2.webp` | Wall Memorial — line of steel rods | Andrzej Otrębski | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_Miejsce_Pamieci_Muru_Berlinskiego_10.jpg |
+| `[walk] ghostline_stop3.webp` | Chapel of Reconciliation | Laima Gūtmane (simka) | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berlin_Church_of_Reconciliation_-_panoramio.jpg |
+| `[walk] ghostline_stop4.webp + ghostline_hero.webp` | Preserved Wall (Bernauer Str) | Mark Ahsmann | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:200806_Berlin_717.JPG |
+| `[walk] scheunenviertel_stop2.webp` | Haus Schwarzenberg courtyard | Soluvo | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_2012_%28106%29.jpg |
+| `[walk] scheunenviertel_stop3.webp` | Große Hamburger — deportation memorial (Will Lammert) | Jochen Teufel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Skulptur_Juedische_Opfer_des_Faschismus_%28Foto_2008%29.jpg |
+| `[walk] riverborder_stop3.webp` | East Side Park riverbank | Robot8A | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_Dec_2021_10_35_06_336000.jpeg |
