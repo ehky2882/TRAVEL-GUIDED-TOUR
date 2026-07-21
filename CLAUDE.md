@@ -70,7 +70,17 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-07-20)
+## Current State (2026-07-21)
+
+### Maker tour list + grid now flag multi-stop walks — brass WALK pill + stop count — TestFlight 1.1 (29)/(30) (session 66 — code)
+
+**Owner: "In the maker page the tour list doesn't distinguish between single stops and multi stops … the icons are so small."** Real and reproducible: two same-named "The Jordaan" tours — a 2m single stop and a 12m multi-stop walk — were indistinguishable in the maker tour list; only the duration differed. Owner reviewed an HTML mock and picked "words over tiny glyphs." Shipped in two owner-authorized PRs, both CI-green + TestFlight-built from this web session, merged to `main`.
+
+- **List view ([PR #413](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/413) → `main`, squash `ac6e421`; TestFlight 1.1 (29)).** In `MakerView.tourRow`, each multi-stop row now shows a **brass `WALK` pill** (new `walkPill` — reuses the `statusBadge` shape in `AtlasColors.accent` `#8B7535`, pill text = `AtlasColors.background` so it flips with the theme) inline before the subtitle, plus the **stop count leading the subtitle** (`6 stops · 12m 39s · 1.2 mi away`). `subtitleText` prepends `"N stops"` only for `.multiStop`; single-stop rows are byte-for-byte unchanged (`2m 43s · 1.2 mi away`). The pill is `fixedSize()` so the subtitle `Text` truncates tail-first — the pill + count always survive on long titles.
+- **Grid view ([PR #414](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/414) → `main`, squash `ed4daa9`; TestFlight 1.1 (30)).** The Instagram-style tiles are image-only, so a multi-stop walk was invisible there. Added the same `walkPill` as a **top-leading** corner badge on each multi-stop tile (clear of the existing bottom-leading Draft/In-review `statusBadge`), with a soft shadow (`.black.opacity(0.25)`) to lift it off busy photos. Single-stop tiles carry no pill.
+- **No data-model / API / backend change** — reads `tour.kind` + `tour.stops.count`, which the catalog already carries. One file touched both times: `Features/Maker/MakerView.swift`. Same component + "absence = single stop" logic across both views, so list and grid read as one system.
+- **Verification.** Both PRs green on `ci.yml` (validator + iOS Simulator build + unit tests — the `test_sim` stand-in for a Linux web session); `testflight.yml` built+signed+uploaded **1.1 (29)** (list) and **1.1 (30)** (list+grid) cleanly, no cert-cap snag this run. Owner authorized both merges. **Device-eyeball owed:** grid-pill legibility over real photos in light + dark.
+- **Branch note + cleanup owed:** after #413 merged, the branch was restarted fresh off `main` (force-with-lease) for the #414 follow-up per the merged-branch rule — never stacked on merged history. `claude/tour-list-stop-distinction-kyk2xr` is now merged — git proxy blocks branch deletion from web sessions → delete in the GitHub UI.
 
 ### App no longer stops your other audio at launch — audio focus deferred to first play — TestFlight 1.1 (27) (session 65 — code)
 
