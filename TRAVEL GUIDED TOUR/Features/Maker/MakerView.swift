@@ -649,6 +649,17 @@ struct MakerView: View {
                         category: tour.primaryCategory
                     )
                     .clipped()
+                    // Multi-stop walks get the same brass WALK pill as the
+                    // list rows, top-leading so it stays clear of the
+                    // bottom-leading status badge. A soft shadow lifts it
+                    // off busy photos. Single stops carry no pill.
+                    .overlay(alignment: .topLeading) {
+                        if tour.kind == .multiStop {
+                            walkPill
+                                .shadow(color: .black.opacity(0.25), radius: 2, y: 1)
+                                .padding(AtlasSpacing.xs)
+                        }
+                    }
                     .overlay(alignment: .bottomLeading) {
                         if let status = status(for: tour), status.showsBadge {
                             statusBadge(status)
