@@ -756,13 +756,24 @@ struct MakerView: View {
                     .lineLimit(1)
                     .truncationMode(.tail)
 
-                // Subtitle: duration, then distance-away when there's a
-                // location fix (e.g. "2m 15s · 1.2 mi away"); duration
-                // only otherwise. One line.
-                Text(subtitleText(tour))
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .lineLimit(1)
+                // Subtitle: for a multi-stop walk, a brass WALK pill +
+                // leading stop count distinguish it from a single stop at
+                // a glance (owner ask, 2026-07-21); then duration, then
+                // distance-away when there's a location fix
+                // (e.g. "6 stops · 12m 39s · 1.2 mi away"). Single stops
+                // show no pill and read "2m 15s · 1.2 mi away". One line;
+                // the distance truncates off the end first, so the pill +
+                // count always stay visible.
+                HStack(spacing: AtlasSpacing.xs) {
+                    if tour.kind == .multiStop {
+                        walkPill
+                    }
+                    Text(subtitleText(tour))
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                }
 
                 if let status = status(for: tour), status.showsBadge {
                     statusBadge(status)
@@ -788,6 +799,24 @@ struct MakerView: View {
             .padding(.vertical, 2)
             .background(status.badgeColor)
             .clipShape(Capsule())
+    }
+
+    /// Brass "WALK" pill shown on multi-stop tour rows — the scannable
+    /// at-a-glance cue that a row is a multi-stop walk, not a single
+    /// stop (owner ask, 2026-07-21). Mirrors `statusBadge`'s shape but
+    /// in the brand accent so walks stand out down a long list; single
+    /// stops carry no pill, so its absence reads too. Fixed-size so the
+    /// adjacent subtitle text is the one that truncates.
+    private var walkPill: some View {
+        Text("WALK")
+            .font(.system(size: 9, weight: .semibold))
+            .foregroundStyle(AtlasColors.background)
+            .padding(.horizontal, 6)
+            .padding(.vertical, 2)
+            .background(AtlasColors.accent)
+            .clipShape(Capsule())
+            .fixedSize()
+            .accessibilityLabel("Multi-stop walk")
     }
 
     // MARK: - Nav-bar overflow
@@ -892,10 +921,19 @@ struct MakerView: View {
     /// Subtitle: duration, plus "· N away" when a location fix exists
     /// (e.g. "2m 15s · 1.2 mi away"); duration only otherwise.
     private func subtitleText(_ tour: Tour) -> String {
-        let duration = formattedDuration(tour.totalDurationSeconds)
-        guard let location = locationManager.userLocation else { return duration }
-        let distance = AtlasFormatters.distanceAway(meters: tour.distance(from: location))
-        return "\(duration) · \(distance)"
+        var parts: [String] = []
+        // Multi-stop walks lead with the stop count (the WALK pill sits
+        // just before this text); single stops omit it and read exactly
+        // as before.
+        if tour.kind == .multiStop {
+            let count = tour.stops.count
+            parts.append("\(count) \(count == 1 ? "stop" : "stops")")
+        }
+        parts.append(formattedDuration(tour.totalDurationSeconds))
+        if let location = locationManager.userLocation {
+            parts.append(AtlasFormatters.distanceAway(meters: tour.distance(from: location)))
+        }
+        return parts.joined(separator: " · ")
     }
 
     private var tourCountText: String {
