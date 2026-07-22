@@ -118,6 +118,22 @@ func isValidURL(_ s: String) -> Bool {
     return u.scheme != nil && u.host != nil
 }
 
+// Word set + Jaccard similarity, used to catch near-duplicate transcripts
+// between two stops in the same tour (the signature of the Amsterdam
+// transcript scramble, where each stop's clean script was interleaved with
+// a phonetic TTS twin). Legit distinct stops top out around 0.29 across the
+// whole catalog; a duplicated/phonetic twin scores ~0.85+, so 0.6 is a safe
+// error threshold.
+func wordSet(_ s: String) -> Set<String> {
+    Set(s.lowercased().split { !$0.isLetter && !$0.isNumber }.map(String.init))
+}
+func jaccard(_ a: String, _ b: String) -> Double {
+    let A = wordSet(a), B = wordSet(b)
+    if A.isEmpty || B.isEmpty { return 0 }
+    return Double(A.intersection(B).count) / Double(A.union(B).count)
+}
+let transcriptDupThreshold = 0.6
+
 // MARK: - Controlled tag vocabulary (taxonomy v2)
 //
 // Mirrors TRAVEL GUIDED TOUR/Models/Tag.swift + scripts/seed_tags.py's
@@ -237,6 +253,15 @@ for (ti, t) in file.tours.enumerated() {
                 err(tloc, "additionalImageURLs[\(i)] '\(u)' is not a valid URL")
             }
         }
+        // Gallery integrity: the carousel renders hero → additionalImageURLs,
+        // so the hero must not reappear in the list and the list must not
+        // repeat itself (the Amsterdam gallery bug showed the same image 2–3×).
+        if Set(extras).count != extras.count {
+            err(tloc, "additionalImageURLs contains duplicate URLs — the gallery would show the same image twice")
+        }
+        if extras.contains(t.heroImageURL) {
+            warn(tloc, "heroImageURL also appears in additionalImageURLs — the gallery repeats the hero (aim for one distinct image per stop, hero shown once)")
+        }
     }
     if let videos = t.videoURLs {
         let videoExts = [".mp4", ".mov", ".m4v"]
@@ -331,6 +356,33 @@ for (ti, t) in file.tours.enumerated() {
             err(sloc, "triggerRadiusMeters must be positive, got \(s.triggerRadiusMeters)")
         } else if s.triggerRadiusMeters < 5 || s.triggerRadiusMeters > 500 {
             warn(sloc, "triggerRadiusMeters \(s.triggerRadiusMeters) is outside the typical 5–500m range — sanity check?")
+        }
+
+        // Transcript integrity. transcriptText should be clean, user-facing
+        // prose — never a production artifact. This catches the Amsterdam
+        // incident, where "SEGMENT NN" script headers leaked into the field,
+        // and flags stops that shipped with no transcript at all.
+        if let tx = s.transcriptText, isNonEmpty(tx) {
+            if tx.range(of: "SEGMENT[ ]+[0-9]", options: .regularExpression) != nil {
+                err(sloc, "transcriptText contains a 'SEGMENT NN' production header — strip it")
+            }
+        } else {
+            warn(sloc, "stop has audio but no transcriptText (accessibility gap — backfill when possible)")
+        }
+    }
+
+    // Near-duplicate transcripts between two stops in the same tour: the
+    // signature of a scrambled/duplicated transcript (e.g. a clean script
+    // and its phonetic TTS twin landing on different stops).
+    for i in 0..<t.stops.count {
+        for j in (i + 1)..<t.stops.count {
+            guard let a = t.stops[i].transcriptText, isNonEmpty(a),
+                  let b = t.stops[j].transcriptText, isNonEmpty(b) else { continue }
+            let r = jaccard(a, b)
+            if r >= transcriptDupThreshold {
+                let msg = String(format: "%.2f", r)
+                err(tloc, "stops order \(t.stops[i].order) and \(t.stops[j].order) have near-identical transcripts (Jaccard \(msg)) — likely a scrambled or duplicated transcript")
+            }
         }
     }
 
