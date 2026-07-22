@@ -260,7 +260,7 @@ for (ti, t) in file.tours.enumerated() {
             err(tloc, "additionalImageURLs contains duplicate URLs — the gallery would show the same image twice")
         }
         if extras.contains(t.heroImageURL) {
-            warn(tloc, "heroImageURL also appears in additionalImageURLs — the gallery repeats the hero (aim for one distinct image per stop, hero shown once)")
+            err(tloc, "heroImageURL also appears in additionalImageURLs — the gallery repeats the hero (list one distinct image per stop; the hero renders first on its own)")
         }
     }
     if let videos = t.videoURLs {
@@ -365,6 +365,9 @@ for (ti, t) in file.tours.enumerated() {
         if let tx = s.transcriptText, isNonEmpty(tx) {
             if tx.range(of: "SEGMENT[ ]+[0-9]", options: .regularExpression) != nil {
                 err(sloc, "transcriptText contains a 'SEGMENT NN' production header — strip it")
+            }
+            if tx.range(of: "\\[[A-Za-z]", options: .regularExpression) != nil {
+                err(sloc, "transcriptText contains a bracketed stage direction (e.g. '[beat]') — strip production markers")
             }
         } else {
             warn(sloc, "stop has audio but no transcriptText (accessibility gap — backfill when possible)")
