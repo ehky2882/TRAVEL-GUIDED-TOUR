@@ -4,7 +4,7 @@
 
 ## What we're building, in one paragraph
 
-Dozents (makers) can mark a tour as **paid** at one of three price tiers. Tourists buy it in-app through **Apple In-App Purchase**. Every sale is recorded in **Supabase** (which tour, which maker, which buyer — Apple never knows tours exist), which both unlocks the tour for the buyer and accrues earnings for the maker. Once a month, **Stripe Connect** deposits each maker's share into their bank account. Atlas keeps a platform fee.
+Dozents (makers) can mark a tour as **paid** at one of ten price tiers. Tourists buy it in-app through **Apple In-App Purchase**. Every sale is recorded in **Supabase** (which tour, which maker, which buyer — Apple never knows tours exist), which both unlocks the tour for the buyer and accrues earnings for the maker. Once a month, **Stripe Connect** deposits each maker's share into their bank account. Atlas keeps a platform fee.
 
 ## The money flow (example: one $2.99 sale)
 
@@ -21,14 +21,14 @@ Apple pays Atlas ~30–45 days after month end, so maker payouts run on the same
 ## Decisions of record
 
 1. **Sales model: à la carte** — each tour bought individually. No subscription/bundles in v1.
-2. **Pricing: maker picks from 3 curated tiers** — $1.99 / $2.99 / $4.99. (Apple offers ~900 price points; we can widen the menu later without schema change.)
+2. **Pricing: maker picks from 10 curated tiers** — $0.99 / $1.99 / $2.99 / $3.99 / $4.99 / $6.99 / $8.99 / $9.99 / $14.99 / $19.99 (owner widened from the original 3, 2026-07-24, low-end-dense spread). Apple offers ~900 price points; the menu can widen further without schema change.
 3. **Platform fee: 20%** of the post-Apple amount. Adjustable for future makers.
 4. **Payment rails: Apple IAP only in v1** (StoreKit 2). Rationale: works worldwide (external-link route is US/EU-storefront only and legally unstable post-Dec-2025 appeal), best impulse-buy conversion, single flow. A web-portal channel (Stripe checkout on a website, same Supabase entitlements) is a possible later hybrid for trip-planning purchases — deliberately deferred.
-5. **IAP product mapping: 3 reusable tier products**, NOT one product per tour. Apple products are created once, by hand, in App Store Connect (`tour.tier.199` / `tour.tier.299` / `tour.tier.499`). Apple cannot create products at runtime; a maker flipping "Paid" only points their tour at an existing tier. **Consequence: the Supabase `purchases` table is the source of truth for entitlements AND payouts** — Apple's data cannot rebuild it. Treat it as financial data (verified writes, backups, monthly reconciliation vs Apple's per-tier unit counts).
+5. **IAP product mapping: 10 reusable tier products**, NOT one product per tour. Apple products are created once, by hand, in App Store Connect (`tour.tier.099`, `tour.tier.199`, `tour.tier.299`, `tour.tier.399`, `tour.tier.499`, `tour.tier.699`, `tour.tier.899`, `tour.tier.999`, `tour.tier.1499`, `tour.tier.1999` — the ID suffix is the USD price × 100). Apple cannot create products at runtime; a maker flipping "Paid" only points their tour at an existing tier. **Consequence: the Supabase `purchases` table is the source of truth for entitlements AND payouts** — Apple's data cannot rebuild it. Treat it as financial data (verified writes, backups, monthly reconciliation vs Apple's per-tier unit counts).
 6. **Payouts: Stripe Connect Express**, monthly. Stripe hosts maker onboarding (bank + tax details — Atlas never touches them) and issues tax forms. Payout = Stripe Transfer of each maker's accrued balance.
 7. **Free tours stay free.** Paid is opt-in per tour. Existing catalog unaffected.
 
-## How attribution works (the 3-product design's key mechanism)
+## How attribution works (the reusable-tier design's key mechanism)
 
 At purchase time the app knows which tour is on screen. After Apple's payment sheet succeeds, the app sends the signed StoreKit transaction **plus the tour id** to a Supabase Edge Function, which:
 
@@ -44,8 +44,8 @@ Entitlements are keyed to the Supabase account, so a new phone restores purchase
 **Phase 0 — Paperwork (owner, ~1–2 wks elapsed; hand-held click-by-click). ✅ DONE 2026-07-24.**
 Apple Paid Apps agreement + banking/tax in App Store Connect (all Active as of Jul 24, 2026) · Small Business Program enrolled (15% not 30%) · Stripe account created, platform-oriented ("build a platform"), in **sandbox** mode. Two items deliberately deferred, neither blocks building: **Stripe live activation** (waits on the entity decision — verifying as individual then re-verifying as LLC would be duplicate work) and the **LLC decision** (owner to consult an accountant; sole proprietor is workable to start).
 
-**Phase 1 — Apple products (owner + Claude, ~30 min).**
-Create the 3 tier products in App Store Connect.
+**Phase 1 — Apple products (owner + Claude, ~30 min). ✅ DONE 2026-07-24.**
+All **10** tier products created in App Store Connect (Claude drove the owner's Chrome; owner picked the 10-tier low-end-dense menu during the session). Each is **Non-Consumable**, reference name `Tour Tier <price>`, product ID `tour.tier.<price×100>`, base price set (US base, Apple auto-priced all 175 regions), and one **English (U.S.)** localization — display name **"Premium Audio Tour"**, description **"Unlocks this audio tour"** (identical across tiers by design; the payment sheet also shows the price). All 10 sit in **"Prepare for Submission"** — that's the correct resting state: sandbox purchases (Phase 3/6) work from here. Left deliberately undone until go-live: the per-product **review screenshot** and **"Add for Review"** (the first non-consumable IAP must be submitted together with an app version).
 
 **Phase 2 — Backend (Claude, 1 session).**
 `purchases` table + RLS · `tours.price_tier` (nullable = free) · earnings/payouts ledger · `makers.stripe_account_id` · Edge Function: verify Apple transaction + insert purchase · App Store Server Notifications endpoint (refunds) · `get_catalog` emits price tier. All owner SQL is copy-paste blocks per house style.
