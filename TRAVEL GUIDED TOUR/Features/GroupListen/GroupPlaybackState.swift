@@ -13,7 +13,7 @@ enum GroupRole: String, Codable, Sendable {
 /// existed, a denied Local Network permission (or simply no peer in range) left
 /// both phones showing a code/roster forever with no feedback — the #1 reason
 /// the feature "did nothing."
-enum GroupConnectionStatus: Equatable, Sendable {
+nonisolated enum GroupConnectionStatus: Equatable, Sendable {
     /// Not in a session (or torn down).
     case idle
     /// Advertising (leader) / browsing (follower) — radios up, no peer yet.
@@ -37,7 +37,7 @@ struct Participant: Identifiable, Codable, Hashable, Sendable {
 /// play/pause/seek/stop-change and as a periodic heartbeat while playing; each
 /// follower applies it (design: `docs/group-listen-design.md` §4). Tiny (a few
 /// hundred bytes), transport-agnostic (Multipeer now, Supabase Realtime later).
-struct GroupPlaybackState: Codable, Equatable, Sendable {
+nonisolated struct GroupPlaybackState: Codable, Equatable, Sendable {
     /// Which tour the group is listening to (followers resolve it via `DataService`).
     let tourId: UUID
     /// Index into the tour's stops (sorted by `order`) — the current stop.

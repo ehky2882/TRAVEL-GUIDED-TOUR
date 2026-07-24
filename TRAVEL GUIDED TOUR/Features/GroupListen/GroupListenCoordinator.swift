@@ -321,13 +321,18 @@ final class GroupListenCoordinator {
     }
 
     // MARK: - Pure sync decisions (unit-tested; no player/transport needed)
+    //
+    // `nonisolated` because the enclosing class is @MainActor-isolated (this
+    // module defaults to main-actor isolation): these are pure functions with
+    // no main-actor state, and the tests (a nonisolated context) call them
+    // synchronously.
 
     /// Sentinel `appliedStopIndex` for the tour's intro clip (no stop owns it).
-    static let introIndex = -1
+    nonisolated static let introIndex = -1
 
     /// A follower adopts state whose epoch is ≥ its own; a lower epoch is a
     /// stale leader and is ignored.
-    static func shouldApply(incomingEpoch: Int, localEpoch: Int) -> Bool {
+    nonisolated static func shouldApply(incomingEpoch: Int, localEpoch: Int) -> Bool {
         incomingEpoch >= localEpoch
     }
 
@@ -335,7 +340,7 @@ final class GroupListenCoordinator {
     /// intro, a valid stop index, or `nil` when the broadcast can't be mapped
     /// (unknown stop / an intro flag on a tour that has none) so the caller
     /// bails rather than plays the wrong thing.
-    static func resolvedTargetIndex(state: GroupPlaybackState, stopCount: Int, hasIntro: Bool) -> Int? {
+    nonisolated static func resolvedTargetIndex(state: GroupPlaybackState, stopCount: Int, hasIntro: Bool) -> Int? {
         if state.isIntro {
             return hasIntro ? introIndex : nil
         }
@@ -344,7 +349,7 @@ final class GroupListenCoordinator {
 
     /// Correct drift only past the threshold — small phone-to-phone differences
     /// are inaudible and re-seeking them just stutters (design §4).
-    static func shouldCorrectDrift(current: Double, target: Double, threshold: Double) -> Bool {
+    nonisolated static func shouldCorrectDrift(current: Double, target: Double, threshold: Double) -> Bool {
         abs(current - target) > threshold
     }
 
@@ -359,12 +364,12 @@ final class GroupListenCoordinator {
 
     /// A short, read-aloud-friendly join code from an unambiguous alphabet
     /// (no O/0/I/1). e.g. "K7QP2".
-    static func makeCode() -> String {
+    nonisolated static func makeCode() -> String {
         return String((0..<codeLength).map { _ in codeAlphabet.randomElement()! })
     }
 
     /// The join-code alphabet — deliberately excludes O/0 and I/1 so a code
     /// read aloud in a noisy museum can't be mistyped.
-    static let codeAlphabet = Array("ABCDEFGHJKLMNPQRSTUVWXYZ23456789")
-    static let codeLength = 5
+    nonisolated static let codeAlphabet = Array("ABCDEFGHJKLMNPQRSTUVWXYZ23456789")
+    nonisolated static let codeLength = 5
 }
