@@ -10,7 +10,7 @@ struct GroupBanner: View {
     var body: some View {
         if let coordinator, coordinator.isActive {
             HStack(spacing: AtlasSpacing.sm) {
-                Image(systemName: coordinator.leaderLost ? "person.fill.questionmark" : "person.2.wave.2.fill")
+                Image(systemName: iconName(coordinator))
                     .font(.system(size: 14))
                     .foregroundStyle(AtlasColors.background)
 
@@ -38,7 +38,7 @@ struct GroupBanner: View {
             .padding(.horizontal, AtlasSpacing.md)
             .padding(.vertical, AtlasSpacing.sm)
             .frame(maxWidth: .infinity)
-            .background(coordinator.leaderLost ? Color.red.opacity(0.85) : AtlasColors.mapPin)
+            .background(isAlarm(coordinator) ? Color.red.opacity(0.85) : AtlasColors.mapPin)
             .clipShape(Capsule())
             .padding(.horizontal, AtlasSpacing.md)
             .accessibilityElement(children: .combine)
@@ -47,9 +47,30 @@ struct GroupBanner: View {
 
     private func label(_ c: GroupListenCoordinator) -> String {
         if c.leaderLost { return "Leader left — tap Leave to exit" }
+        if case .failed = c.connectionStatus {
+            return "Can't find nearby devices — check Local Network in Settings"
+        }
         let count = c.participantCount
+        // No peer yet: say we're still trying, not "just you", so an empty room
+        // reads as in-progress rather than done.
+        if case .searching = c.connectionStatus, count == 1 {
+            return c.isLeader ? "Leading · waiting for people to join…" : "Connecting to the leader…"
+        }
         let people = count == 1 ? "just you" : "\(count) listening"
         if c.isLeader { return "Leading · \(people)" }
         return "Following \(c.leaderName ?? "leader") · \(people)"
+    }
+
+    /// Red (attention) styling for a lost leader or a discovery failure.
+    private func isAlarm(_ c: GroupListenCoordinator) -> Bool {
+        if c.leaderLost { return true }
+        if case .failed = c.connectionStatus { return true }
+        return false
+    }
+
+    private func iconName(_ c: GroupListenCoordinator) -> String {
+        if c.leaderLost { return "person.fill.questionmark" }
+        if case .failed = c.connectionStatus { return "wifi.exclamationmark" }
+        return "person.2.wave.2.fill"
     }
 }
