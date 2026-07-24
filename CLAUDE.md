@@ -70,7 +70,17 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-07-22)
+## Current State (2026-07-24)
+
+### Paid tours Phase 1 DONE — 10 IAP tier products created in App Store Connect (session 69 — infra, no code)
+
+**V2 Step 6 (paid tours) moved from design to execution.** The design doc landed on `main` ([PR #422](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/422), `c154807` — read `docs/paid-tours-design.md` before touching anything monetization-related), and **Phase 1 is complete**: all tier IAP products exist in App Store Connect (app "Atlas Audio Tours", id 6771030927 → Distribution → In-App Purchases, "Drafts (10)").
+
+- **Owner decision (this session): 10 tiers, not the original 3** — $0.99 / 1.99 / 2.99 / 3.99 / 4.99 / 6.99 / 8.99 / 9.99 / 14.99 / 19.99 (low-end-dense spread; owner confirmed tiers are effectively unlimited — each is just one more reusable product). Product IDs `tour.tier.<price×100>`: `tour.tier.099` … `tour.tier.1999`.
+- **Each product:** Non-Consumable · reference name `Tour Tier <price>` · US base price with Apple auto-pricing all 175 regions · en-US localization "Premium Audio Tour" / "Unlocks this audio tour" (deliberately identical across tiers — the payment sheet shows the price). Status **"Prepare for Submission" = correct resting state**; sandbox purchasing works from here.
+- **Deferred to go-live (Phase 6):** per-product review screenshot + "Add for Review" — ASC warns the **first non-consumable IAP must be submitted with a new app version**.
+- **How it was done:** Claude drove the owner's real Chrome (Claude-in-Chrome) through ASC — first use of that path for owner-dashboard work; it handles ASC's React forms well (element refs + typed keystrokes; `form_input` works on selects but NOT on ASC textboxes — click + type instead).
+- **NEXT — Phase 2 (backend, 1 session):** `purchases` table + RLS · `tours.price_tier` (nullable = free) · earnings ledger · `makers.stripe_account_id` · Edge Function verifying Apple JWS + recording purchases · App Store Server Notifications endpoint (refunds) · `get_catalog` emits price tier. Then Phase 3 buyer UI (StoreKit 2), Phase 4 maker UI, Phase 5 payouts, Phase 6 dress rehearsal. Stripe stays in sandbox until the owner's LLC/entity decision (deliberate, non-blocking).
 
 ### Ho Chi Minh City launched — 43 tours + 16th maker Atlas Studio SGN (session 68 — web/PM, content)
 
