@@ -50,10 +50,15 @@ What to test:
 - <anything device-only, e.g. "needs 2 phones for group sync">
 ```
 
-The notes show in the Actions run's **job summary** and the final log line. Claude also
-posts them in chat and (if a PR exists) in the PR body. This is CLAUDE.md automation rule #9.
-_(Future enhancement: push these straight into TestFlight's "What to Test" field via the App
-Store Connect API — needs a validation build to wire up.)_
+**The notes are attached to the build in TestFlight itself** (since 2026-07-24): after the
+upload, the workflow waits for Apple to finish processing and writes the notes into the
+build's **"What to Test"** field via the App Store Connect API (fastlane `set_changelog`,
+same API key). So in the TestFlight app on your phone, tap any build and the description of
+what changed + what to test is right there — no more mystery builds. If no notes were typed
+into the Run-workflow box, the workflow falls back to the **PR title + body** (label
+trigger), then to the commit subject, so the field is never blank. Notes also show in the
+Actions run's **job summary** and the final log line, and Claude posts them in chat and (if
+a PR exists) in the PR body. This is CLAUDE.md automation rule #9.
 
 ## How to get a build after that
 Either:
@@ -71,7 +76,11 @@ freely (one at a time per phone).
 - **First run may need a small fix.** iOS signing-in-CI is finicky; if the first build
   fails, the error in the Actions log usually points right at it (often a signing/role
   detail), and it's a quick tweak.
-- **Which build is which:** builds are numbered by timestamp (`1.0 (2026…)`). Labelling each
-  build with its PR number in the TestFlight "What to Test" notes is an easy follow-up (needs
-  a small extra upload step / fastlane) — not in v1.
+- **Which build is which:** every build carries its notes in TestFlight's "What to Test"
+  field (see the Build-notes section above) — tap the build in the TestFlight app to read
+  what's in it. Label-triggered builds are stamped with their PR number automatically.
+- **The notes step can take a while:** after the upload, the workflow polls up to ~25 min
+  for Apple to finish processing the build before it can attach the notes. If it gives up
+  (rare), the run still succeeds with a warning — the build is fine, and the notes remain
+  in the job summary / chat / PR.
 - The existing simulator CI (`ci.yml`) is unchanged; this is a separate, opt-in workflow.
