@@ -28,6 +28,9 @@ final class GroupListenCoordinator {
     private(set) var activeTour: Tour?
     /// Set when the leader drops (follower side) — the banner shows "Leader left".
     private(set) var leaderLost = false
+    /// Discovery/connection status, surfaced to the sheet + banner so a session
+    /// can't silently dead-end (e.g. Local Network permission denied).
+    private(set) var connectionStatus: GroupConnectionStatus = .idle
 
     var isActive: Bool { role != nil }
     var isLeader: Bool { role == .leader }
@@ -104,6 +107,7 @@ final class GroupListenCoordinator {
         code = newCode
         activeTour = tour
         leaderLost = false
+        connectionStatus = .searching
 
         let mp = MultipeerTransport(
             role: .leader, code: newCode, me: me,
@@ -127,7 +131,12 @@ final class GroupListenCoordinator {
         role = .follower
         code = joinCode
         leaderLost = false
+        connectionStatus = .searching
         appliedStopIndex = nil
+        // A follower carries no standing epoch — it adopts the leader's. Reset
+        // to 0 so a device that previously *led* sessions (epoch bumped) can't
+        // out-number a fresh leader's epoch and silently ignore every broadcast.
+        sessionEpoch = 0
         // A follower must not let its own geofence drive playback — it only
         // mirrors the leader (design §3).
         proximityMonitor?.stopMonitoring()
@@ -153,8 +162,13 @@ final class GroupListenCoordinator {
         leaderName = nil
         activeTour = nil
         leaderLost = false
+        connectionStatus = .idle
         lastSent = nil
         appliedStopIndex = nil
+        // Epoch is per-session, not a monotonic per-device counter — reset it so
+        // it never leaks across role switches (a former leader joining as a
+        // follower would otherwise ignore a lower-epoch leader forever).
+        sessionEpoch = 0
         me = nil
     }
 
@@ -175,6 +189,10 @@ final class GroupListenCoordinator {
             guard let self, self.role == .follower else { return }
             self.leaderLost = true
             self.audioPlayer?.pause()
+        }
+        transport.onStatus = { [weak self] status in
+            guard let self, self.isActive else { return }
+            self.connectionStatus = status
         }
     }
 
@@ -200,8 +218,14 @@ final class GroupListenCoordinator {
         // otherwise report a paused stop 0 so followers park cleanly.
         let onThisTour = audioPlayer.currentSourceId == tour.id.uuidString
         let stops = tour.stops.sorted { $0.order < $1.order }
+        // The tour's intro clip belongs to no stop — `Start Tour` plays it with
+        // `currentPlayingStopId == nil`. Flag it so followers load the intro
+        // audio, not stop 0's, over the leader's intro.
+        let isIntro = onThisTour
+            && appShared.currentPlayingStopId == nil
+            && tour.introAudioURL != nil
         let stopIndex: Int = {
-            guard onThisTour, let sid = appShared.currentPlayingStopId,
+            guard onThisTour, !isIntro, let sid = appShared.currentPlayingStopId,
                   let idx = stops.firstIndex(where: { $0.id == sid }) else { return 0 }
             return idx
         }()
@@ -209,6 +233,7 @@ final class GroupListenCoordinator {
         let state = GroupPlaybackState(
             tourId: tour.id,
             stopIndex: stopIndex,
+            isIntro: isIntro,
             isPlaying: onThisTour && audioPlayer.state == .playing,
             positionSeconds: onThisTour ? audioPlayer.currentTime : 0,
             rate: audioPlayer.rate,
@@ -221,6 +246,7 @@ final class GroupListenCoordinator {
         // unreliable for the position-only heartbeat (loss-tolerant).
         let changed = lastSent.map {
             $0.stopIndex != state.stopIndex ||
+            $0.isIntro != state.isIntro ||
             $0.isPlaying != state.isPlaying ||
             $0.rate != state.rate
         } ?? true
@@ -233,7 +259,7 @@ final class GroupListenCoordinator {
     private func applyFromLeader(_ state: GroupPlaybackState) {
         guard role == .follower, let audioPlayer, let dataService else { return }
         // Ignore a stale leader (lower epoch); adopt a newer one.
-        if state.sessionEpoch < sessionEpoch { return }
+        guard Self.shouldApply(incomingEpoch: state.sessionEpoch, localEpoch: sessionEpoch) else { return }
         sessionEpoch = state.sessionEpoch
         leaderLost = false
 
@@ -244,38 +270,82 @@ final class GroupListenCoordinator {
         }
         guard let tour = activeTour else { return }
         let stops = tour.stops.sorted { $0.order < $1.order }
-        guard stops.indices.contains(state.stopIndex) else { return }
-        let stop = stops[state.stopIndex]
 
-        let needsLoad = appliedStopIndex != state.stopIndex
+        // Resolve what audio the leader is on — the intro clip (belongs to no
+        // stop, tracked as the `introIndex` sentinel) or a specific stop.
+        guard let targetIndex = Self.resolvedTargetIndex(
+            state: state, stopCount: stops.count, hasIntro: tour.introAudioURL != nil
+        ) else { return }
+
+        let audioURL: URL?
+        let stopId: UUID?
+        if targetIndex == Self.introIndex, let introString = tour.introAudioURL {
+            audioURL = tourDownloader?.localURL(forIntroOf: tour) ?? URL(string: introString)
+            stopId = nil
+        } else {
+            let stop = stops[targetIndex]
+            audioURL = tourDownloader?.localURL(forStop: stop, in: tour) ?? URL(string: stop.audioURL)
+            stopId = stop.id
+        }
+
+        let needsLoad = appliedStopIndex != targetIndex
             || audioPlayer.currentSourceId != tour.id.uuidString
 
         if needsLoad {
-            let remote = URL(string: stop.audioURL)
-            guard let url = tourDownloader?.localURL(forStop: stop, in: tour) ?? remote else { return }
+            guard let url = audioURL else { return }
             let maker = dataService.maker(for: tour)
             audioPlayer.play(url: url, title: tour.title, artist: maker?.displayName,
                              sourceId: tour.id.uuidString)
-            appShared?.currentPlayingStopId = stop.id
-            appliedStopIndex = state.stopIndex
+            appShared?.currentPlayingStopId = stopId
+            appliedStopIndex = targetIndex
             audioPlayer.seek(to: state.positionSeconds)
             if !state.isPlaying { audioPlayer.pause() }
         } else {
-            // Same stop already loaded — match transport + correct drift.
+            // Same audio already loaded — match transport + correct drift.
             if state.isPlaying, audioPlayer.state != .playing {
                 audioPlayer.play()
             } else if !state.isPlaying, audioPlayer.state == .playing {
                 audioPlayer.pause()
             }
-            if state.isPlaying, audioPlayer.duration > 0 {
-                let drift = abs(audioPlayer.currentTime - state.positionSeconds)
-                if drift > driftThreshold { audioPlayer.seek(to: state.positionSeconds) }
+            if state.isPlaying, audioPlayer.duration > 0,
+               Self.shouldCorrectDrift(current: audioPlayer.currentTime,
+                                       target: state.positionSeconds,
+                                       threshold: driftThreshold) {
+                audioPlayer.seek(to: state.positionSeconds)
             }
         }
 
         if audioPlayer.rate != state.rate {
             audioPlayer.setPlaybackRate(state.rate)
         }
+    }
+
+    // MARK: - Pure sync decisions (unit-tested; no player/transport needed)
+
+    /// Sentinel `appliedStopIndex` for the tour's intro clip (no stop owns it).
+    static let introIndex = -1
+
+    /// A follower adopts state whose epoch is ≥ its own; a lower epoch is a
+    /// stale leader and is ignored.
+    static func shouldApply(incomingEpoch: Int, localEpoch: Int) -> Bool {
+        incomingEpoch >= localEpoch
+    }
+
+    /// Which audio the follower should be on for `state`: `introIndex` for the
+    /// intro, a valid stop index, or `nil` when the broadcast can't be mapped
+    /// (unknown stop / an intro flag on a tour that has none) so the caller
+    /// bails rather than plays the wrong thing.
+    static func resolvedTargetIndex(state: GroupPlaybackState, stopCount: Int, hasIntro: Bool) -> Int? {
+        if state.isIntro {
+            return hasIntro ? introIndex : nil
+        }
+        return (0..<stopCount).contains(state.stopIndex) ? state.stopIndex : nil
+    }
+
+    /// Correct drift only past the threshold — small phone-to-phone differences
+    /// are inaudible and re-seeking them just stutters (design §4).
+    static func shouldCorrectDrift(current: Double, target: Double, threshold: Double) -> Bool {
+        abs(current - target) > threshold
     }
 
     // MARK: - Helpers
@@ -289,8 +359,12 @@ final class GroupListenCoordinator {
 
     /// A short, read-aloud-friendly join code from an unambiguous alphabet
     /// (no O/0/I/1). e.g. "K7QP2".
-    private static func makeCode() -> String {
-        let alphabet = Array("ABCDEFGHJKLMNPQRSTUVWXYZ23456789")
-        return String((0..<5).map { _ in alphabet.randomElement()! })
+    static func makeCode() -> String {
+        return String((0..<codeLength).map { _ in codeAlphabet.randomElement()! })
     }
+
+    /// The join-code alphabet — deliberately excludes O/0 and I/1 so a code
+    /// read aloud in a noisy museum can't be mistyped.
+    static let codeAlphabet = Array("ABCDEFGHJKLMNPQRSTUVWXYZ23456789")
+    static let codeLength = 5
 }

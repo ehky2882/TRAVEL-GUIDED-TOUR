@@ -14,6 +14,7 @@ final class MultipeerTransport: NSObject, GroupTransport {
     var onState: (@MainActor (GroupPlaybackState) -> Void)?
     var onRoster: (@MainActor ([Participant]) -> Void)?
     var onLeaderLost: (@MainActor () -> Void)?
+    var onStatus: (@MainActor (GroupConnectionStatus) -> Void)?
 
     /// Bonjour service type: ≤15 chars, lowercase letters / digits / hyphen.
     /// Must match `NSBonjourServices` in Info.plist (`_atlas-tour._tcp/._udp`).
@@ -32,7 +33,16 @@ final class MultipeerTransport: NSObject, GroupTransport {
 
     /// Stable `Participant` per connected peer (keyed by peer display name) so
     /// roster rows don't churn ids across updates. Ephemeral to the session.
+    /// Guarded by `lock` — MultipeerConnectivity delivers session/browser
+    /// callbacks on its own arbitrary queues, so mutating this plain Dictionary
+    /// from them unsynchronized was a data race (crash / corrupt roster).
     private var peerParticipants: [String: Participant] = [:]
+    private let lock = NSLock()
+
+    /// Follower side: whether we ever reached `.connected`. Leader-lost is only
+    /// real *after* a real connection — the initial handshake churn (a peer
+    /// going `.connecting` → `.notConnected`) must not read as "leader left".
+    private var everConnected = false
 
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
@@ -54,6 +64,7 @@ final class MultipeerTransport: NSObject, GroupTransport {
     }
 
     func start() {
+        emitStatus(.searching)
         switch role {
         case .leader:
             var info: [String: String] = ["code": code]
@@ -88,8 +99,9 @@ final class MultipeerTransport: NSObject, GroupTransport {
         session.disconnect()
     }
 
-    // MARK: - Roster
+    // MARK: - Roster / status
 
+    /// Serialized under `lock` — called only from `emitRoster()`.
     private func participant(for peer: MCPeerID) -> Participant {
         if let existing = peerParticipants[peer.displayName] { return existing }
         let p = Participant(id: UUID(), displayName: peer.displayName)
@@ -98,8 +110,14 @@ final class MultipeerTransport: NSObject, GroupTransport {
     }
 
     private func emitRoster() {
+        lock.lock()
         let others = session.connectedPeers.map { participant(for: $0) }
+        lock.unlock()
         Task { @MainActor in self.onRoster?(others) }
+    }
+
+    private func emitStatus(_ status: GroupConnectionStatus) {
+        Task { @MainActor in self.onStatus?(status) }
     }
 }
 
@@ -108,10 +126,22 @@ final class MultipeerTransport: NSObject, GroupTransport {
 extension MultipeerTransport: MCSessionDelegate {
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
         emitRoster()
-        // Follower only ever connects to the leader; losing all peers means the
-        // leader dropped → surface a takeover prompt.
-        if role == .follower, state == .notConnected, session.connectedPeers.isEmpty {
-            Task { @MainActor in self.onLeaderLost?() }
+
+        let hasPeers = !session.connectedPeers.isEmpty
+        if state == .connected { everConnected = true }
+
+        if hasPeers {
+            emitStatus(.connected)
+        } else {
+            // No peers right now. For a follower that had *already* connected,
+            // this is a real leader drop → surface the takeover prompt. During
+            // the initial handshake (never connected yet) or for a leader whose
+            // last follower left, we're simply back to searching — not a
+            // failure, so we keep advertising/browsing.
+            emitStatus(.searching)
+            if role == .follower, state == .notConnected, everConnected {
+                Task { @MainActor in self.onLeaderLost?() }
+            }
         }
     }
 
@@ -137,6 +167,14 @@ extension MultipeerTransport: MCNearbyServiceAdvertiserDelegate {
         // by the advertised code), so auto-accept.
         invitationHandler(true, session)
     }
+
+    /// Advertising couldn't start — on iOS this is almost always the Local
+    /// Network permission being denied. Without surfacing this the leader shows
+    /// a code that no one can ever join, with no explanation.
+    func advertiser(_ advertiser: MCNearbyServiceAdvertiser,
+                    didNotStartAdvertisingPeer error: Error) {
+        emitStatus(.failed(Self.discoveryFailureMessage(error)))
+    }
 }
 
 // MARK: - MCNearbyServiceBrowserDelegate (follower)
@@ -152,5 +190,23 @@ extension MultipeerTransport: MCNearbyServiceBrowserDelegate {
 
     func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
         emitRoster()
+    }
+
+    /// Browsing couldn't start — same story as the advertiser: almost always
+    /// the Local Network permission being denied. Surface it so the follower
+    /// isn't left staring at a "Following…" screen that never connects.
+    func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {
+        emitStatus(.failed(Self.discoveryFailureMessage(error)))
+    }
+}
+
+// MARK: - Failure copy
+
+private extension MultipeerTransport {
+    /// User-facing copy for a discovery start failure. iOS reports Local Network
+    /// permission denial here; there's no reliable public pre-flight API, so
+    /// reacting to this callback is the robust way to detect it.
+    static func discoveryFailureMessage(_ error: Error) -> String {
+        "Couldn't find nearby devices. Enable Local Network access for Dozent in Settings › Privacy & Security › Local Network, then try again."
     }
 }
