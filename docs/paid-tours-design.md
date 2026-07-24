@@ -41,8 +41,8 @@ Entitlements are keyed to the Supabase account, so a new phone restores purchase
 
 ## Phased build plan
 
-**Phase 0 — Paperwork (owner, ~1–2 wks elapsed; hand-held click-by-click).**
-Apple Paid Apps agreement + banking/tax in App Store Connect · Small Business Program enrollment (15% not 30%) · Stripe account + enable Connect · (recommended) business entity/LLC. Gates everything; start first.
+**Phase 0 — Paperwork (owner, ~1–2 wks elapsed; hand-held click-by-click). ✅ DONE 2026-07-24.**
+Apple Paid Apps agreement + banking/tax in App Store Connect (all Active as of Jul 24, 2026) · Small Business Program enrolled (15% not 30%) · Stripe account created, platform-oriented ("build a platform"), in **sandbox** mode. Two items deliberately deferred, neither blocks building: **Stripe live activation** (waits on the entity decision — verifying as individual then re-verifying as LLC would be duplicate work) and the **LLC decision** (owner to consult an accountant; sole proprietor is workable to start).
 
 **Phase 1 — Apple products (owner + Claude, ~30 min).**
 Create the 3 tier products in App Store Connect.
