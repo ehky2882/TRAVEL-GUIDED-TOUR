@@ -93,9 +93,21 @@ jobs:
         run: echo "num=${{ github.run_number }}" >> "$GITHUB_OUTPUT"
 
       # Build + sign the app into an ".xcarchive" (Apple's packaged, signed app).
-      # -allowProvisioningUpdates + the API key let Xcode create/download the
-      # signing certificates automatically — the same automatic signing your
-      # manual Organizer archives already use.
+      #
+      # We force the archive to sign with the **Apple Distribution** identity
+      # instead of Apple Development. This is the durable fix for the recurring
+      # "maximum number of certificates" archive failure:
+      #   - Cloud-managed DEVELOPMENT certs are minted PER build machine. Every
+      #     run here is a fresh, throwaway cloud Mac, so each run created a NEW
+      #     development cert until the account hit Apple's cap and archiving
+      #     died ("Choose a certificate to revoke ... No iOS App Development
+      #     provisioning profiles were found").
+      #   - Cloud-managed DISTRIBUTION certs are shared (Apple holds the key), so
+      #     every run reuses the SAME one — nothing piles up, and this is the
+      #     right identity for a TestFlight/App Store build anyway (the export
+      #     step below already signs app-store/distribution).
+      # -allowProvisioningUpdates + the API key let Xcode fetch/create the App
+      # Store provisioning profile for that distribution cert automatically.
       - name: Archive (build + sign)
         run: |
           xcodebuild archive \
@@ -106,6 +118,7 @@ jobs:
             -authenticationKeyPath "$HOME/private_keys/AuthKey_${KEY_ID}.p8" \
             -authenticationKeyID "$KEY_ID" \
             -authenticationKeyIssuerID "$ISSUER_ID" \
+            CODE_SIGN_IDENTITY="Apple Distribution" \
             CURRENT_PROJECT_VERSION=${{ steps.bn.outputs.num }}
 
       # Export the archive as an ".ipa" and upload it straight to TestFlight.
