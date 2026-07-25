@@ -44272,6 +44272,95 @@
         "After Dark"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "a5bf544a-d6ad-5cd9-b985-4c63f4a5819d",
+      "createdAt": "2026-07-25",
+      "title": "Baan Kang Wat | บ้านข้างวัด",
+      "shortDescription": "Ten wooden houses around a shared courtyard near Wat Ram Poeng, built in 2014 as a community of makers first and a shopping destination second.",
+      "longDescription": "In 2012 a small group of artists started talking about what it would look like to live and work in the same place, rather than commuting between the two. Follow the quiet lane near Wat Ram Poeng temple until it opens onto a cluster of ten two-storey wooden houses arranged around a shared courtyard — Baan Kang Wat, a name that translates simply as the house beside the temple.\n\nThe idea belonged to Nattawut Ruckprasit, who wanted somewhere combining the pace of modern city life with something closer to rural neighbourliness, and the village opened properly in 2014 with those ten houses as its core. Each holds a different small business — ceramics, textiles, woodcraft, jewellery — with the emphasis throughout on local, handmade and eco-friendly production rather than anything mass-produced. Workshops run regularly if you want to do more than browse: raku pottery, watercolour, woodcut printing, jewellery-making, most open to walk-in visitors with a bit of notice. On Sundays the whole courtyard turns into an open-air market. What is worth understanding is that this was built as a community first: the businesses collaborate on events and genuinely know each other.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baan-kang-wat_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baan-kang-wat_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baan-kang-wat_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baan-kang-wat_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baan-kang-wat_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "36d537d0-d7d5-589a-9cad-9b8a8e817dc3",
+          "order": 0,
+          "title": "Baan Kang Wat | บ้านข้างวัด",
+          "caption": "A craft village built as a community first and a shopping destination second — the makers here actually know each other.",
+          "latitude": 18.7826639564907,
+          "longitude": 98.94821348821172,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/baan-kang-wat.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "It's 2012, and a small group of artists start talking about what it would look like to live and work in the same place, rather than commuting between the two.\n\nFollow the quiet lane near Wat Ram Poeng temple until it opens onto a cluster of ten two-storey wooden houses arranged around a shared courtyard — that's Baan Kang Wat, a name that translates simply as the house beside the temple.\n\nThe idea belonged to Nattawut Ruckprasit, who wanted somewhere that combined the pace of modern city life with something closer to rural neighbourliness, and the village opened properly in 2014 with those ten houses as its core. Each one holds a different small business — ceramics, textiles, woodcraft, jewellery — but the emphasis throughout is on local, handmade, and eco-friendly production rather than anything mass-produced or imported.\n\nWorkshops run regularly if you want to do more than browse: raku pottery, watercolour, woodcut printing, jewellery-making, most of them open to walk-in visitors with a bit of notice. And if you're here on a Sunday, the whole courtyard turns into an open-air market, craft stalls and food vendors and live music filling the square that sits at the centre of the whole design.\n\nWhat's worth understanding, standing in that courtyard, is that this was built as a community first and a shopping destination second. The businesses here collaborate on events and genuinely know each other, which is a fairly different foundation from most craft villages built purely to sell to passing tourists.\n\nTime your visit for a Sunday if your schedule allows it — the market is when the place is at its fullest and most alive, though the studios themselves are usually quieter, and easier to actually talk to the makers, on an ordinary weekday afternoon."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.7826639564907,
+      "centroidLongitude": 98.94821348821172,
+      "city": "Chiang Mai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b64abb45-ca9f-5d0b-bb7e-707efef29fa7",
+      "createdAt": "2026-07-25",
+      "title": "Cuisine de Garden | คูซีน เดอ การ์เด้น",
+      "shortDescription": "Twelve seats, fifteen courses, and New Nordic philosophy applied faithfully to northern Thai produce rather than imported European ingredients.",
+      "longDescription": "Twelve seats a night, one seasonal tasting menu, and a dining room that looks more like a Scandinavian farmhouse than anything typically associated with Thai fine dining. Cuisine de Garden sits at Moo 11, Nong Kwai, in Hang Dong just outside the city — a rustic, pale-timbered room set among gardens, worth arranging a car for, since it lies well beyond walking distance from central Chiang Mai.\n\nChef Leelawat Mankongtiphan, known to regulars as Chef Nan, taught himself to cook before formal training in Japanese and French technique, and opened the restaurant in 2011 around an idea that had not really been tried in Thailand at the time: New Nordic philosophy — the foraged, hyper-seasonal approach that made Scandinavian restaurants famous — applied entirely to Thai and northern Thai ingredients instead. The tasting menu runs to fifteen courses, changes with the season, and is capped at twelve seats a day, a small enough number that the kitchen can genuinely work with whatever a handful of local farmers have brought in that week. Book well ahead, and clear the evening entirely.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cuisine-de-garden-chiangmai_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cuisine-de-garden-chiangmai_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cuisine-de-garden-chiangmai_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cuisine-de-garden-chiangmai_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7766ce90-2499-52b5-a128-078b520f6837",
+          "order": 0,
+          "title": "Cuisine de Garden | คูซีน เดอ การ์เด้น",
+          "caption": "A worldview borrowed from one hemisphere and applied faithfully to the produce of the other.",
+          "latitude": 18.717306795338857,
+          "longitude": 98.93596618235529,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cuisine-de-garden-chiangmai.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Twelve seats a night, one seasonal tasting menu, and a dining room that looks more like a Scandinavian farmhouse than anything typically associated with Thai fine dining.\n\nMoo 11, Nong Kwai, in Hang Dong just outside the city, is where you'll find it — a rustic, pale-timbered dining room set among gardens, worth arranging a car for, since it sits well beyond walking distance from central Chiang Mai. That's Cuisine de Garden.\n\nChef Leelawat Mankongtiphan, known to regulars as Chef Nan, taught himself to cook before formal training in Japanese and French technique, and opened this restaurant in 2011 around an idea that hadn't really been tried in Thailand at the time: New Nordic philosophy, the foraged, hyper-seasonal approach that made Scandinavian restaurants famous, applied entirely to Thai and northern Thai ingredients instead.\n\nThe tasting menu runs to fifteen courses, changes with the season, and is capped at just twelve seats a day — a small enough number that the kitchen can genuinely work with whatever a handful of local farmers have brought in that particular week, rather than planning months ahead around a fixed supply chain.\n\nWhat's worth sitting with here is the pairing itself. New Nordic cooking was built specifically around Scandinavian foraging and Scandinavian seasons, and transplanting that exact philosophy onto tropical northern Thai produce, rather than importing European ingredients to match the style, is a genuinely odd, interesting decision — cooking that borrows a worldview from one hemisphere and applies it faithfully to the other.\n\nBook well ahead, and clear the evening entirely — with only twelve seats and fifteen courses, this isn't a meal you can slot between other plans."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.717306795338857,
+      "centroidLongitude": 98.93596618235529,
+      "city": "Hang Dong",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
     }
   ]
 }
