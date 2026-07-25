@@ -1463,7 +1463,10 @@ struct TourDetailView: View {
                 let fraction = min(max(value.location.x / barWidth, 0), 1)
                 let target = fraction * audioPlayer.duration
                 primaryScrubTime = target
-                audioPlayer.seek(to: target)
+                // Precise — see PlayerView's scrubber: the default tolerant seek
+                // lands near (not at) the drop point, so the bar settles onto a
+                // slightly different spot after release.
+                audioPlayer.seek(to: target, precise: true)
                 isScrubbingPrimary = false
             }
     }

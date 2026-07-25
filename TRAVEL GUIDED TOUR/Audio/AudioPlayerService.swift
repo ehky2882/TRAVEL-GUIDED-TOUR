@@ -98,6 +98,19 @@ final class AudioPlayerService {
     /// `.playing` transition we trust the observer, so subsequent
     /// scrubs and pause/resume don't fight it.
     private var isAwaitingFirstPlayTransition = false
+    /// True between issuing a seek and that seek actually landing. `player.seek`
+    /// is **asynchronous**, and until it completes the periodic observer keeps
+    /// reporting the *old* position — which would overwrite the position we set
+    /// on the way in and make the scrub bar visibly jump back, then forward again
+    /// once the seek lands. Same class of problem as
+    /// `isAwaitingFirstPlayTransition`, for the seek window instead of the load
+    /// window.
+    private var isSeekInFlight = false
+    /// Bumped per seek so that when seeks supersede one another (a fast scrub, or
+    /// a seek cancelled by loading a new item) only the newest one's completion
+    /// clears `isSeekInFlight` — an older, superseded completion must not
+    /// un-suppress the observer while a newer seek is still in flight.
+    private var seekGeneration = 0
     /// URL handed to the most recent `play(url:title:artist:sourceId:)`.
     /// Retained so callers can re-trigger the same item without
     /// re-deriving the URL from the tour model — used by the
@@ -152,6 +165,11 @@ final class AudioPlayerService {
         lastError = nil
         state = .loading
         isAwaitingFirstPlayTransition = true
+        // Invalidate any in-flight seek against the *previous* item so its late
+        // completion can't un-suppress the observer (or leave it suppressed)
+        // for this new one.
+        seekGeneration += 1
+        isSeekInFlight = false
 
         // Take audio focus now, at the moment the user actually starts
         // tour audio — NOT at app launch. Activating the (non-mixable)
@@ -280,6 +298,8 @@ final class AudioPlayerService {
         lastError = nil
         state = .idle
         isAwaitingFirstPlayTransition = false
+        seekGeneration += 1
+        isSeekInFlight = false
         // Safety net: never let a Group Listen speed trim survive a teardown
         // into subsequent solo playback (the coordinator also clears it on
         // leave, but this guarantees it).
@@ -310,10 +330,26 @@ final class AudioPlayerService {
         // scrub thumb. The periodic time observer takes over from
         // there as AVPlayer resumes reporting time.
         currentTime = time
+
+        // Hold the periodic observer off until the seek lands (see
+        // `isSeekInFlight`) — otherwise a tick fired mid-seek reports the old
+        // position and the bar jumps away from where the thumb was dropped.
+        seekGeneration += 1
+        let generation = seekGeneration
+        isSeekInFlight = true
+        let onSeekComplete: (Bool) -> Void = { [weak self] _ in
+            // AVPlayer may call this off the main thread, and it calls it for
+            // superseded seeks too (with `finished == false`).
+            DispatchQueue.main.async {
+                guard let self, self.seekGeneration == generation else { return }
+                self.isSeekInFlight = false
+            }
+        }
         if precise {
-            player.seek(to: target, toleranceBefore: .zero, toleranceAfter: .zero)
+            player.seek(to: target, toleranceBefore: .zero, toleranceAfter: .zero,
+                        completionHandler: onSeekComplete)
         } else {
-            player.seek(to: target)
+            player.seek(to: target, completionHandler: onSeekComplete)
         }
 
         // Seek-to-end (or beyond) doesn't fire
@@ -397,7 +433,10 @@ final class AudioPlayerService {
             guard let event = event as? MPChangePlaybackPositionCommandEvent else {
                 return .commandFailed
             }
-            self?.seek(to: event.positionTime)
+            // Precise, like the in-app scrubbers: this is a deliberate one-shot
+            // scrub, so land exactly where the user dropped the lock-screen thumb
+            // rather than at a nearby convenient point.
+            self?.seek(to: event.positionTime, precise: true)
             return .success
         }
     }
@@ -487,7 +526,12 @@ final class AudioPlayerService {
             // reports `.playing` for the first time we trust the
             // observer for everything after (scrubs, pause/resume,
             // etc.). Also skip when the item has failed outright.
-            if self.isAwaitingFirstPlayTransition || self.state == .failed { return }
+            // Also ignore reports while a seek is in flight: until it lands,
+            // AVPlayer still reports the pre-seek position, which would clobber
+            // the position the scrubber just committed and make the bar jump.
+            if self.isAwaitingFirstPlayTransition || self.state == .failed || self.isSeekInFlight {
+                return
+            }
             self.currentTime = time.seconds.isFinite ? time.seconds : 0
             if let item = self.player.currentItem {
                 let itemDuration = item.duration

@@ -467,7 +467,11 @@ struct PlayerView: View {
                 let fraction = min(max(value.location.x / barWidth, 0), 1)
                 let target = fraction * audioPlayer.duration
                 scrubTime = target
-                audioPlayer.seek(to: target)
+                // Precise: AVPlayer's default seek is *tolerant*, so it lands at a
+                // convenient nearby point rather than exactly where the thumb was
+                // dropped — and the bar then visibly settles to that spot a moment
+                // later. Only affordable because we seek once, on release.
+                audioPlayer.seek(to: target, precise: true)
                 isScrubbing = false
             }
     }
