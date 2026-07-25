@@ -21,9 +21,13 @@
 //      https://<project>.supabase.co/functions/v1/appstore-notifications
 //      (Version 2 notifications).
 //
-// Always returns 200 quickly (Apple retries non-200s aggressively); failures
-// are logged for manual reconciliation (design doc: monthly reconciliation
-// vs Apple's per-tier unit counts).
+// Response policy: 200 for anything we've finished with (acted on it, or
+// there was nothing to do) — Apple retries non-200s, and a needless retry
+// storm helps nobody. The ONE exception is not being able to reach Apple to
+// confirm the transaction: that returns 500 **on purpose**, because Apple's
+// retry is the only second chance a refund gets, and silently dropping one
+// leaves the sale counted and the maker overpaid. Everything else is logged
+// for the monthly reconciliation against Apple's per-tier unit counts.
 
 import { importPKCS8, SignJWT } from "npm:jose@5";
 
