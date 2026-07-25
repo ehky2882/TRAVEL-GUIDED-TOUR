@@ -258,7 +258,13 @@ struct TRAVEL_GUIDED_TOURApp: App {
         bottomModuleWindow.install(
             interactiveBottomInset: AtlasBottomModule.height()
         ) {
-            BottomModuleRoot()
+            // The install-time inset is only a first guess; the module reports
+            // its real painted height (which grows when the Group Listen banner
+            // appears above the mini-player) so the window claims touches over
+            // all of it. Without this the banner's Leave button was untappable.
+            BottomModuleRoot(onInteractiveHeightChange: { [bottomModuleWindow] height in
+                bottomModuleWindow.setInteractiveBottomInset(height)
+            })
                 .environment(dataService)
                 .environment(authService)
                 .environment(followService)

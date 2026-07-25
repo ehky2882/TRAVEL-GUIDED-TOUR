@@ -11,6 +11,14 @@ import SwiftUI
 /// MiniPlayerBar + AtlasTabBar — just hoisted into its own window so
 /// the UIKit detail-presentation modal slides up *behind* it.
 struct BottomModuleRoot: View {
+    /// Reports the module's real painted height so the hosting window can claim
+    /// exactly that strip for touches. Anything painted outside the claimed
+    /// strip renders but receives no taps — see
+    /// `BottomModuleWindowController.setInteractiveBottomInset(_:)`.
+    /// `@MainActor` because it drives the (main-actor) window controller —
+    /// same pattern as `GroupTransport`'s callbacks.
+    var onInteractiveHeightChange: (@MainActor (CGFloat) -> Void)?
+
     @Environment(DataService.self) private var dataService
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(TourPresenter.self) private var tourPresenter
@@ -47,21 +55,33 @@ struct BottomModuleRoot: View {
             || tourPresenter.presentedTour != nil
         return VStack(spacing: 0) {
             Spacer(minLength: 0)
-            // Group Listen session strip — sits just above the mini-player when
-            // a session is active; self-hides otherwise.
-            GroupBanner()
-                .padding(.bottom, AtlasSpacing.xs)
-            MiniPlayerBar(
-                tour: nowPlayingTour,
-                maker: nowPlayingTour.flatMap { dataService.maker(for: $0) },
-                onExpand: { appShared.showingFullPlayer = true },
-                extendsToScreenEdges: extendsToScreenEdges
-            )
-            AtlasTabBar(
-                selected: $appShared.selectedTab,
-                extendsToScreenEdges: extendsToScreenEdges,
-                badgedTabs: (followService?.ownPendingRequests ?? 0) > 0 ? [.me] : []
-            )
+            // The painted module. Measured as one unit so the window claims a
+            // touch strip that covers everything drawn here — including the
+            // Group Listen banner, which sits ABOVE the mini-player and was
+            // therefore outside the old fixed 126pt strip (visible, but its
+            // Leave button received no taps).
+            VStack(spacing: 0) {
+                // Group Listen session strip — sits just above the mini-player when
+                // a session is active; self-hides otherwise.
+                GroupBanner()
+                    .padding(.bottom, AtlasSpacing.xs)
+                MiniPlayerBar(
+                    tour: nowPlayingTour,
+                    maker: nowPlayingTour.flatMap { dataService.maker(for: $0) },
+                    onExpand: { appShared.showingFullPlayer = true },
+                    extendsToScreenEdges: extendsToScreenEdges
+                )
+                AtlasTabBar(
+                    selected: $appShared.selectedTab,
+                    extendsToScreenEdges: extendsToScreenEdges,
+                    badgedTabs: (followService?.ownPendingRequests ?? 0) > 0 ? [.me] : []
+                )
+            }
+            .onGeometryChange(for: CGFloat.self) { proxy in
+                proxy.size.height
+            } action: { height in
+                onInteractiveHeightChange?(height)
+            }
         }
         // Keep the Me-tab notification badge in sync with the pending
         // follow-request count on the signed-in user's own maker. Re-runs on
