@@ -397,7 +397,10 @@ final class AudioPlayerService {
             guard let event = event as? MPChangePlaybackPositionCommandEvent else {
                 return .commandFailed
             }
-            self?.seek(to: event.positionTime)
+            // Precise, like the in-app scrubbers: this is a deliberate one-shot
+            // scrub, so land exactly where the user dropped the lock-screen thumb
+            // rather than at a nearby convenient point.
+            self?.seek(to: event.positionTime, precise: true)
             return .success
         }
     }
