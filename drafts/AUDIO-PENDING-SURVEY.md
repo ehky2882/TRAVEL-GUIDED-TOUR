@@ -15,7 +15,7 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-07-21 (🇩🇪 Berlin staged — 36 tours (31 single + 5 walks) image-complete on gh-pages, under forthcoming Atlas Studio BER).
+**Last verified:** 2026-07-25 (🇪🇸 Madrid WIRED LIVE — 34 tours under Atlas Studio MAD, PR #435. Pending queue now Montreal + Rome + Berlin).
 
 ---
 
@@ -26,12 +26,12 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 
 | City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|------------:|----------------|------------------|
-| 🇪🇸 Madrid | 35 | 31 single + 4 walks (5/6/5/5 stops) | 56 | `claude/dreamy-wozniak-nM6a4` | **new** (MAD) |
 | 🇨🇦 Montreal | 29 | 25 single + 4 walks (intro+5 / intro+4 / intro+4 / intro+4) | 46 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio YUL |
 | 🇮🇹 Rome | 30 | 25 single + 5 walks (intro+5 / intro+5 / intro+5 / intro+4 / intro+4) | 53 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ROM |
 | 🇩🇪 Berlin | 36 | 31 single + 5 walks (intro+5 / intro+5 / intro+4 / intro+4 / intro+3) | 57 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio BER |
-| **TOTAL PENDING** | **130** | | **212** | | |
+| **TOTAL PENDING** | **95** | | **156** | | |
 
+_(✅ 🇪🇸 Madrid = DONE (2026-07-25, PR #435): **34 tours LIVE** — 30 single-stop + **4 walks** (Madrid de los Austrias, Paseo del Arte, El Retiro, Royal Madrid) under new maker **Atlas Studio MAD**. 55 MP3s. Note: the staged set was **30 singles / 55 MP3s**, not the 31/56 recorded here — the old figure was one over. Owner audio arrived complete, matching the staged drafts 1:1.)_
 _(✅ 🇳🇱 Amsterdam = DONE (2026-07-16, PR #401): **38 tours LIVE** — 33 single-stop + **5 walks** (Canal Ring, Old Side, Museum Quarter, Jordaan, Jewish Quarter) under new maker **Atlas Studio AMS**. 64 MP3s. Sensitivity honored on the Jewish Quarter + De Wallen.)_
 _(✅ 🇺🇸 Los Angeles = DONE (2026-07-15, PR #390): **42 tours LIVE** — 38 single-stop + **4 walks** (Beachfront, Downtown LA, Museum Row, **Hollywood Boulevard**) under new maker **Atlas Studio LAX**. 64 MP3s. Note: LA turned out to be 38 singles + 4 walks (the old "36 + 3" count was low, and a Hollywood walk was added at wire-in). Memorial Coliseum + The Huntington shipped with `transcriptText: null` — scripts never provided as text; trivial backfill when they arrive.)_
 _(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **went LIVE 2026-07-08, PR #378** — removed from pending. It was the last staged London tour.)_
@@ -42,9 +42,7 @@ _(✅ 🇨🇦 Toronto = DONE (2026-07-10): **all 42 tours LIVE** — 38 single-
 
 **🇺🇸 Los Angeles — ✅ LIVE (2026-07-15, PR #390)** — all **42 tours** under **Atlas Studio LAX**: 38 single-stop + 4 walks (Beachfront, Downtown LA, Museum Row, Hollywood Boulevard). Nothing pending. (Coliseum + Huntington `transcriptText: null` — backfill when scripts arrive; LA CC image credits in `drafts/CREDITS.md`, Los Angeles row.)
 
-**🇪🇸 Madrid** — `drafts/madrid-batch1..7` (31 single-stop) + 4 walks:
-- `madrid-austrias` — intro + 5 · `madrid-paseo-del-arte` — intro + 6 (Cibeles, Neptuno, Prado, Thyssen, CaixaForum, Reina Sofía) · `madrid-retiro` — intro + 5 · `madrid-royal` — intro + 5
-- Credits: Madrid CC images logged in `drafts/CREDITS.md` + `drafts/madrid-batch3/IMAGE-CREDITS-madrid-batch3.txt`. New city → new maker.
+**🇪🇸 Madrid — ✅ LIVE (2026-07-25, PR #435)** — all **34 tours** under **Atlas Studio MAD** (`980300bd-fc2c-56cc-8960-bcf90414c206`): 30 single-stop (`drafts/madrid-batch1..7`) + 4 walks — `madrid-austrias` (intro+5, 1.1 km) · `madrid-paseo-del-arte` (intro+6, 1.3 km) · `madrid-retiro` (intro+5, 1.8 km) · `madrid-royal` (intro+5, 1.4 km). 55 MP3s, 6,459 s of narration. Nothing pending. Singles ship geofenced at **30 m** (the catalog-wide city-launch default) rather than the "~40 m" the batch READMEs suggested; walk stops 40 m with a manual intro. Credits: `drafts/CREDITS.md` + `drafts/madrid-batch3/IMAGE-CREDITS-madrid-batch3.txt`.
 
 **🇳🇱 Amsterdam — ✅ LIVE (2026-07-16, PR #401)** — all **38 tours** under **Atlas Studio AMS**: 33 single-stop + 5 walks (Canal Ring, Old Side, Museum Quarter, Jordaan, Jewish Quarter). Nothing pending. Amsterdam CC image credits in `drafts/CREDITS.md`.
 
