@@ -132,8 +132,9 @@ things, in this order** — none of it affects the free catalog:
 1. **SQL** — SQL Editor → paste **all** of `backend/paid_tours.sql` → Run.
    Expect *"Success. No rows returned."* It adds `tours.price_tier` (NULL =
    free, so every existing tour stays free), the `purchases` / `payouts` /
-   `maker_payout_accounts` tables + RLS, the `maker_earnings` view, and
-   rebuilds `get_catalog()` to emit `priceTier`. Idempotent — safe to re-run.
+   `maker_payout_accounts` tables + RLS, the `maker_sales` + `maker_earnings`
+   views, and rebuilds `get_catalog()` to emit `priceTier`. Idempotent — safe
+   to re-run.
    Verify:
    ```sql
    select count(*) from public.purchases;                      -- 0
@@ -162,6 +163,22 @@ then fetches the authoritative record from Apple's App Store Server API under
 our signed key and records *that*. A forged request can't mint an entitlement
 or fake a refund. `purchases.apple_transaction_id` is UNIQUE, so the app can
 safely replay StoreKit history after a dead spot.
+
+**The one check that can't come from Apple:** the tier products are reusable
+across every paid tour, so Apple's receipt says *"someone paid $0.99"* but
+never *which tour*. `record-purchase` therefore requires the tour's
+`price_tier` to equal the tier actually bought (and refuses free tours) —
+without it, a genuine cheap receipt re-sent with a different `tourId` would
+unlock an expensive tour and under-credit its maker. If you edit that
+function, keep that comparison.
+
+**Who can see what:** buyers read their own `purchases` rows (the entitlement
+check). Makers never see buyer identities — they read `maker_sales` /
+`maker_earnings`, which omit `user_id`. `maker_payout_accounts` is read-only
+to clients: `stripe_account_id` decides where money lands, and every signup
+auto-creates a maker row, so a writable policy would let any session redirect
+payouts. Its real write path is Stripe Express onboarding via the service
+role (Phase 5).
 
 **Pricing a tour** (until the Phase 4 maker UI ships, this is the manual path):
 ```sql
