@@ -50,15 +50,22 @@ What to test:
 - <anything device-only, e.g. "needs 2 phones for group sync">
 ```
 
-**The notes are attached to the build in TestFlight itself** (since 2026-07-24): after the
+**The notes are attached to the build in TestFlight itself** (since 2026-07-25): after the
 upload, the workflow waits for Apple to finish processing and writes the notes into the
-build's **"What to Test"** field via the App Store Connect API (fastlane `set_changelog`,
-same API key). So in the TestFlight app on your phone, tap any build and the description of
-what changed + what to test is right there — no more mystery builds. If no notes were typed
-into the Run-workflow box, the workflow falls back to the **PR title + body** (label
-trigger), then to the commit subject, so the field is never blank. Notes also show in the
-Actions run's **job summary** and the final log line, and Claude posts them in chat and (if
-a PR exists) in the PR body. This is CLAUDE.md automation rule #9.
+build's **"What to Test"** field, using fastlane **`upload_to_testflight` with
+`distribute_only: true`** and the same API key. So in the TestFlight app on your phone, tap
+any build and the description of what changed + what to test is right there — no more
+mystery builds. If no notes were typed into the Run-workflow box, the workflow falls back to
+the **PR title + body** (label trigger), then to the commit subject, so the field is never
+blank. Notes also show in the Actions run's **job summary** and the final log line, and
+Claude posts them in chat and (if a PR exists) in the PR body. This is CLAUDE.md automation
+rule #9.
+
+> ⚠️ **Do not switch this to `set_changelog`.** That was the first attempt and it silently
+> did nothing: `set_changelog` targets the *App Store version's* release notes and rejects
+> `build_number` outright (*"Could not find option 'build_number'"*), so it can't address a
+> specific TestFlight build. `upload_to_testflight` with `distribute_only: true` is the
+> documented path for setting What-to-Test on an already-uploaded build.
 
 ## How to get a build after that
 Either:
@@ -96,8 +103,17 @@ freely (one at a time per phone).
 - **Which build is which:** every build carries its notes in TestFlight's "What to Test"
   field (see the Build-notes section above) — tap the build in the TestFlight app to read
   what's in it. Label-triggered builds are stamped with their PR number automatically.
-- **The notes step can take a while:** after the upload, the workflow polls up to ~25 min
-  for Apple to finish processing the build before it can attach the notes. If it gives up
-  (rare), the run still succeeds with a warning — the build is fine, and the notes remain
-  in the job summary / chat / PR.
+- **The notes step can take a while:** after the upload, the workflow polls up to ~20 min
+  for Apple to finish processing the build before it can attach the notes.
+- **If notes ever go missing again, read the run's "Set TestFlight What to Test notes"
+  step.** It now distinguishes the two failure modes instead of blurring them: a
+  *configuration* error (bad parameter, bad credentials, wrong app) **stops immediately**
+  and prints the real fastlane error as a red `::error::` annotation, while only a
+  genuine *"build not processed yet"* condition is retried. The **Done** step then says
+  explicitly whether the notes were attached. The run stays green either way — the build
+  itself is already uploaded and installable — so **a green run does not by itself mean the
+  notes landed**; check the Done line or the job summary.
+  - *This is exactly how the first version failed:* it retried every error for 25 minutes
+    and then blamed "Apple may still be processing," when in fact the very first attempt
+    had failed on a bad parameter. Build 1.1 (36) shipped with no notes because of it.
 - The existing simulator CI (`ci.yml`) is unchanged; this is a separate, opt-in workflow.

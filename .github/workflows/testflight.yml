@@ -205,6 +205,7 @@ jobs:
       # If it still can't attach (rare), that's a warning, not a failure — the
       # build itself is already uploaded and the notes live in the job summary.
       - name: Set TestFlight "What to Test" notes
+        id: tfnotes
         env:
           NOTES: ${{ steps.notes.outputs.notes }}
           BUILD_NUMBER: ${{ steps.bn.outputs.num }}
@@ -220,6 +221,10 @@ jobs:
           echo "Attaching notes to build ${APP_VERSION} (${BUILD_NUMBER})"
 
           mkdir -p "$RUNNER_TEMP/notes/fastlane"
+          # upload_to_testflight with distribute_only:true is the documented way to
+          # set "What to Test" on a build that is ALREADY uploaded — it distributes
+          # rather than re-uploads. (set_changelog does NOT work here: it targets the
+          # App Store version's release notes and rejects build_number outright.)
           cat > "$RUNNER_TEMP/notes/fastlane/Fastfile" <<'RB'
           lane :tf_notes do
             api_key = app_store_connect_api_key(
@@ -227,32 +232,61 @@ jobs:
               issuer_id: ENV.fetch("ISSUER_ID"),
               key_filepath: ENV.fetch("KEY_PATH")
             )
-            set_changelog(
+            upload_to_testflight(
               api_key: api_key,
               app_identifier: "com.ehky.TRAVEL-GUIDED-TOUR",
-              version: ENV.fetch("APP_VERSION"),
+              app_version: ENV.fetch("APP_VERSION"),
               build_number: ENV.fetch("BUILD_NUMBER"),
-              changelog: ENV.fetch("NOTES")
+              changelog: ENV.fetch("NOTES"),
+              distribute_only: true,
+              distribute_external: false
             )
           end
           RB
 
           cd "$RUNNER_TEMP/notes"
-          # Apple's processing usually takes 5-15 min; retry up to ~25 min.
-          for attempt in $(seq 1 25); do
-            if fastlane tf_notes; then
+          LOG="$RUNNER_TEMP/tf_notes.log"
+
+          # Retry ONLY while the build isn't visible to App Store Connect yet
+          # (Apple takes ~5-15 min to process a fresh upload). Any other failure —
+          # bad parameter, bad credentials, wrong app — is permanent, so bail out
+          # immediately and print it. Retrying a permanent error just hides the real
+          # reason behind a 25-minute "still processing" message, which is exactly
+          # how the first version of this step failed silently.
+          for attempt in $(seq 1 20); do
+            if fastlane tf_notes >"$LOG" 2>&1; then
+              cat "$LOG"
+              echo "notes_attached=true" >> "$GITHUB_OUTPUT"
               echo "TestFlight What-to-Test notes set on build ${APP_VERSION} (${BUILD_NUMBER})."
               exit 0
             fi
-            echo "Build not processed yet (attempt ${attempt}/25) — retrying in 60s…"
-            sleep 60
+            cat "$LOG"
+            if grep -qiE "unable to find build|could not find build|no build|still.*process|processing" "$LOG"; then
+              echo "Build not processed by Apple yet (attempt ${attempt}/20) — retrying in 60s…"
+              sleep 60
+              continue
+            fi
+            echo "::error::Could not attach What-to-Test notes — this is a configuration error, not an Apple delay. See the fastlane output above. The build itself uploaded fine."
+            echo "notes_attached=false" >> "$GITHUB_OUTPUT"
+            exit 0
           done
-          echo "::warning::Couldn't attach What-to-Test notes (Apple may still be processing the build). The build itself uploaded fine; notes are in this run's job summary."
+          echo "::error::Apple never finished processing build ${BUILD_NUMBER} within ~20 min, so What-to-Test notes were not attached. The build itself uploaded fine; notes are in this run's job summary."
+          echo "notes_attached=false" >> "$GITHUB_OUTPUT"
 
       - name: Done
         env:
           NOTES: ${{ steps.notes.outputs.notes }}
+          ATTACHED: ${{ steps.tfnotes.outputs.notes_attached }}
         run: |
           echo "Uploaded build ${{ steps.bn.outputs.num }} to TestFlight. It appears on your phone once Apple finishes processing (a few minutes)."
-          echo "Build ${{ steps.bn.outputs.num }} — notes (also attached in TestFlight under What to Test):"
+          if [ "$ATTACHED" = "true" ]; then
+            echo "These notes are attached to the build in TestFlight under \"What to Test\":"
+          else
+            echo "WARNING: the notes could NOT be attached to the build in TestFlight (see the error above)."
+            echo "The build is fine — but you won't see a description in the TestFlight app. Notes:"
+            {
+              echo ""
+              echo "> **Heads-up:** these notes could not be attached to the build in TestFlight — see the error in this run."
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
           echo "$NOTES"
