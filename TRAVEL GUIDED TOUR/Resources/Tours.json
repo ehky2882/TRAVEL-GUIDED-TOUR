@@ -127,6 +127,14 @@
       "avatarEmoji": "🇻🇳",
       "avatarURL": null,
       "websiteURL": null
+    },
+    {
+      "id": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "displayName": "Atlas Studio CNX",
+      "avatarURL": null,
+      "avatarEmoji": "🇹🇭",
+      "bio": "Atlas Studio's Chiang Mai bureau — audio tours of the north: its Lanna temples and mountain forests, its markets and khao soi shops, and the cafés, craft villages and festivals spread across Chiang Mai, Mae Hong Son and Chiang Rai.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -42510,6 +42518,1757 @@
       "tags": [
         "Venue",
         "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e84e44ff-7613-55d5-960d-8092a53eb6df",
+      "createdAt": "2026-07-24",
+      "title": "Angkaew Reservoir | อ่างแก้ว มช.",
+      "shortDescription": "Dug in 1961 to solve a plumbing problem for a brand-new university, Angkaew ended up the prettiest spot on the Chiang Mai University campus.",
+      "longDescription": "The lake on the western edge of the Chiang Mai University campus was never designed to be looked at. It went in around 1961, a straightforward piece of Royal Irrigation Department engineering to supply water to a university that was then brand new, and it carried the flat, functional name Huai Kaew Reservoir. One of the founding committee members, Professor Mom Luang Pin Malakul, decided on something gentler — Ang Kaew, roughly \"glass basin\" — for a place that was quietly turning into the loveliest corner of the campus.\n\nOn a clear morning the whole of Doi Suthep flips upside down and floats on the water. The path circling the lake fills each evening with students out running, couples on mats in the grass, and food carts doing steady business in grilled skewers and iced tea. Come at dusk rather than dawn: the crowd thins considerably, and the light off the water in the last half hour before sunset does something the morning light doesn't quite manage.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/angkaew-reservoir_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/angkaew-reservoir_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/angkaew-reservoir_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "907e78a5-5f7c-5325-a4bf-eed5464e9966",
+          "order": 0,
+          "title": "Angkaew Reservoir | อ่างแก้ว มช.",
+          "caption": "A reservoir built to solve a plumbing problem, now the spot where the whole of Doi Suthep floats upside down on the water each clear morning.",
+          "latitude": 18.806767091100376,
+          "longitude": 98.95177196701319,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/angkaew-reservoir.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "On a clear morning, the whole of Doi Suthep flips upside down and floats on this water.\n\nThe Chiang Mai University campus, western edge, where the road curves around a wide artificial lake — you're standing on the bank of Angkaew Reservoir, water stretching out ahead of you, the mountain rising beyond it on the far side.\n\nThis lake wasn't built to be looked at. It went in around 1961, dug as a straightforward piece of engineering to supply water to a university that was, at the time, brand new. The Royal Irrigation Department gave it the flat, functional name Huai Kaew Reservoir, and that might have been the end of it, if one of the university's founding committee members, Professor Mom Luang Pin Malakul, hadn't decided the name should be something gentler — Ang Kaew, roughly \"glass basin\" — better suited to a place that was quietly turning into the prettiest spot on campus.\n\nThese days, the path circling the water fills each evening with students out for a run, couples spread out on mats in the grass, and food carts doing steady business in grilled skewers and iced tea to whoever wanders past.\n\nThat's really the story worth knowing here. Nobody designed this reservoir to be scenic. It was built to solve a plumbing problem, and only afterwards did it become the place where thousands of students now come to watch the sun come up, the mountain doubled in the still water, the whole scene a kind of accidental postcard nobody planned for.\n\nCome back at dusk if you can, rather than dawn — the crowd thins out considerably, and the light off the water in the last half hour before sunset does something the morning light doesn't quite manage."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.806767091100376,
+      "centroidLongitude": 98.95177196701319,
+      "city": "Chiang Mai",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Engineering",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "758b216b-8d7b-547a-b90a-9e518da7fe21",
+      "createdAt": "2026-07-24",
+      "title": "Aquila | อาควิลา",
+      "shortDescription": "Italian technique held fixed, everything else allowed to be local — a Michelin-listed kitchen in Tha Sala where roughly 80 percent of the menu is original.",
+      "longDescription": "Aquila means eagle in Italian, and the kitchen behind the name has spent a few years quietly rewriting what Italian food is allowed to taste like in northern Thailand. Chef and owner Phubase Chuprakong opened it on Soi Surapol in Tha Sala in August 2021, in a low building wrapped in greenery with an open kitchen visible through the glass. The idea was never to import Italy wholesale: around 80 percent of the menu is original, built by taking classic Italian technique and applying it to whatever is seasonal and local — Thai vegetables, native herbs, ingredients that would never appear on a menu in Rome.\n\nThe truffle gnocchi and the tomahawk steak draw the most attention, and a full vegan menu runs alongside the regular one. Recognition has followed: Michelin listings for several years running, a Thailand Favourite Restaurant nod, and a Green Kitchen award for sourcing. The interesting decision sits behind the menu — most fusion starts from the ingredient and works outward, while this kitchen starts from the technique and lets everything else be unapologetically local. Book ahead, particularly for dinner.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aquila-chiang-mai_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aquila-chiang-mai_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aquila-chiang-mai_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8f3b607a-9134-5ddc-a2c4-f79debc2b33c",
+          "order": 0,
+          "title": "Aquila | อาควิลา",
+          "caption": "An eagle in Italian, and a kitchen that keeps the Italian technique fixed while letting every other ingredient turn northern Thai.",
+          "latitude": 18.770546599060108,
+          "longitude": 99.03397981587327,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/aquila-chiang-mai.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Aquila means eagle in Italian, and the kitchen behind that name has spent a few years quietly rewriting what Italian food is allowed to taste like in northern Thailand.\n\nSoi Surapol, in Tha Sala, early evening — a low building wrapped in greenery just off the lane, warm light spilling from an open kitchen visible through the glass. That's Aquila.\n\nChef and owner Phubase Chuprakong opened the restaurant in August 2021, and the idea from day one was never to import Italy wholesale. Around 80 percent of the menu is original, built by taking classic Italian technique and applying it to whatever's seasonal and local — Thai vegetables, native herbs, ingredients that would never appear on a menu in Rome, cooked the way a Roman kitchen might cook them if it happened to be standing in a Chiang Mai market instead.\n\nThe truffle gnocchi and the tomahawk steak tend to get the most attention, and there's a full vegan menu running alongside the regular one, which is unusual for a restaurant working this seriously with Italian technique. Aquila has picked up a fair run of recognition since opening — Michelin listings for several years running, a Thailand Favourite Restaurant nod, and a Green Kitchen award for its sourcing.\n\nAnd that's really the interesting decision sitting behind the menu. Most fusion restaurants start from the ingredient and work outward. This kitchen starts from the technique — the Italian half of the equation stays fixed, and everything else is allowed to be entirely, unapologetically local.\n\nBook ahead if you can, particularly for dinner — the dining room is small enough that the greenery outside the windows does a lot of the work a bigger restaurant would need extra decoration for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.770546599060108,
+      "centroidLongitude": 99.03397981587327,
+      "city": "Chiang Mai",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "15d75927-2c50-588e-a526-e210c4d5d660",
+      "createdAt": "2026-07-24",
+      "title": "Baan Landai Fine Thai Cuisine | บ้านลันได ฟายน์ไทย ควิซีน",
+      "shortDescription": "A restored old-city townhouse cooking Lamphun family recipes rather than royal court cuisine — Michelin-listed since 2020.",
+      "longDescription": "There is a particular kind of Thai cooking that rarely makes it onto restaurant menus: the food a grandmother in Lamphun might make on an unremarkable Tuesday. That is exactly what this kitchen has built its reputation on. Baan Landai occupies a restored townhouse on Prapokklao Road deep in the old city, behind warm lantern light and a narrow garden frontage that is easy enough to spot once you know the soft glow to look for after dark.\n\nThe recipes come from Lamphun, the smaller province just south of Chiang Mai and once the seat of its own ancient kingdom — family recipes rather than the royal court cuisine most upscale Thai restaurants reach for. Ingredients are fresh, seasonal and grown chemical-free by trusted local farms, which shows most clearly in the miang kham, leaf-wrapped bites of ginger, lime, chilli and toasted coconut meant to be eaten in one go. The khao soi is worth ordering, alongside pork ribs braised in red wine — a rare crossover on an otherwise wholly northern menu. Michelin-listed since 2020, with a Thai SELECT distinction for authenticity. Reserve ahead; the dining room is intimate enough that walk-ins are genuinely hit or miss.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baan-landai-fine-thai-cuisine_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baan-landai-fine-thai-cuisine_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baan-landai-fine-thai-cuisine_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "99862a29-a57b-5262-ae04-c4822c0c8005",
+          "order": 0,
+          "title": "Baan Landai Fine Thai Cuisine | บ้านลันได ฟายน์ไทย ควิซีน",
+          "caption": "Not royal grandeur but somebody's actual kitchen table — Lamphun family recipes, executed with more precision than a Tuesday usually gets.",
+          "latitude": 18.7942007479553,
+          "longitude": 98.98745879584892,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/baan-landai-fine-thai-cuisine.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There's a particular kind of Thai cooking that rarely makes it onto restaurant menus — the food a grandmother in Lamphun might make on an unremarkable Tuesday — and that's exactly what this kitchen has built its reputation on.\n\nA restored townhouse on Prapokklao Road, deep in Chiang Mai's old city, sits behind warm lantern light and a narrow garden frontage. That's Baan Landai, and the entrance is easy enough to spot once you know the soft glow to look for after dark.\n\nThe kitchen draws its recipes from Lamphun, the smaller province just south of Chiang Mai and once the seat of its own ancient kingdom, and the dishes here are built from family recipes rather than the royal court cuisine most upscale Thai restaurants tend to reach for. Ingredients are sourced fresh and seasonal, grown chemical-free by trusted local farms, which shows up most clearly in the miang kham — leaf-wrapped bites of ginger, lime, chilli, and toasted coconut, meant to be eaten in one go, a genuine burst of contrast in a single mouthful.\n\nThe khao soi here is also worth ordering, alongside a dish that sounds almost French on paper: pork ribs braised in red wine, a rare crossover on a menu otherwise built entirely from northern Thai tradition. The restaurant has held a spot in the Michelin Guide since 2020, alongside a Thai SELECT distinction for authenticity of cuisine.\n\nAnd that's what makes a visit here slightly different from most fine dining in this city. The cooking isn't reaching for royal grandeur — it's reaching for somebody's actual kitchen table, just executed with considerably more precision than a Tuesday night usually gets.\n\nReserve ahead, particularly for dinner — the dining room is intimate enough that walk-ins are genuinely hit or miss, and the miang kham in particular tends to be ordered by nearly every table that manages to get one."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.7942007479553,
+      "centroidLongitude": 98.98745879584892,
+      "city": "Chiang Mai",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c8eaf8ef-ffdf-592c-83ed-e2590d1fdf9a",
+      "createdAt": "2026-07-24",
+      "title": "Blackitch Artisan Kitchen | แบล็คคิช อาร์ทิซาน คิทเช่น",
+      "shortDescription": "Three tables, nine courses, no fixed cuisine — a self-taught chef cooking whatever the season and his own curiosity suggest that week.",
+      "longDescription": "There are three tables in this entire restaurant, and getting one of them usually takes real planning. Blackitch sits on Nimmanhaemin Soi 7 behind an unmarked frontage easy to walk straight past, a kitchen small enough that from your seat you can watch every plate finished by hand.\n\nChef Phanuphol Bulsuwan, known simply as Chef Black, trained first as a civil engineer rather than a cook. He left that career behind, drawn back toward food by memories of his grandmother running her own restaurant, and taught himself the rest through years of working the kind of hours a formal apprenticeship would have demanded anyway. There is no fixed cuisine — no Italian night, no strictly Thai menu — just nine courses built fresh around whatever the season and the chef's own curiosity happen to suggest that week. One sitting might lean toward foraged northern Thai ingredients, another toward European technique. It is this scale, more than anything, that explains the reputation: with only three tables to fill each night, Blackitch has ended up on international best-of lists precisely because it never tried to grow past the size that made it interesting. Book weeks ahead, and go in without checking the menu.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/blackitch-artisan-kitchen_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/blackitch-artisan-kitchen_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/blackitch-artisan-kitchen_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/blackitch-artisan-kitchen_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c28777d8-3475-5c91-800a-0356dd13463d",
+          "order": 0,
+          "title": "Blackitch Artisan Kitchen | แบล็คคิช อาร์ทิซาน คิทเช่น",
+          "caption": "Three tables, nine courses, and a chef who trained as a civil engineer — no two visits here look quite the same.",
+          "latitude": 18.798349826476663,
+          "longitude": 98.969567724685,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/blackitch-artisan-kitchen.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There are three tables in this entire restaurant, and getting one of them usually takes real planning.\n\nNimmanhaemin Soi 7, behind an unmarked frontage easy to walk straight past, is where you'll find Blackitch — a kitchen small enough that from your seat, you're close enough to watch every plate finished by hand.\n\nChef Phanuphol Bulsuwan, known simply as Chef Black, trained first as a civil engineer, not a cook. He left that career behind, drawn back toward food by memories of his grandmother running her own restaurant, and taught himself the rest through years of working the kind of hours a formal apprenticeship would have demanded anyway. There's no fixed cuisine here — no Italian night, no strictly Thai menu — just nine courses built fresh around whatever the season and the chef's own curiosity happen to suggest that week.\n\nThat means no two visits to Blackitch look quite the same, even for regulars. One sitting might lean toward foraged northern Thai ingredients, another toward something closer to European technique, and the only constant is Chef Black himself, working a kitchen small enough that there's effectively no distance between him and the table he's cooking for.\n\nIt's this scale, more than anything else, that explains the restaurant's reputation. With only three tables to fill each night, Blackitch has ended up on international best-of lists precisely because it never tried to grow past the size that made it interesting in the first place.\n\nBook weeks ahead if you can manage it, and go in without checking the menu beforehand even if one's been posted anywhere online — half the appeal here is genuinely not knowing what's coming next."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.798349826476663,
+      "centroidLongitude": 98.969567724685,
+      "city": "Chiang Mai",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a540ab1c-f7d8-5f62-b814-75f31afd3044",
+      "createdAt": "2026-07-24",
+      "title": "Blue Temple (Wat Rong Suea Ten) | วัดร่องเสือเต้น",
+      "shortDescription": "A student of the White Temple's creator answered his teacher in the opposite colour — electric cobalt instead of blinding white.",
+      "longDescription": "Tigers, according to local legend, once danced on this exact spot, which is where the temple gets its name. Wat Rong Suea Ten rises in electric cobalt blue just outside Chiang Rai, gold-flecked nagas coiling along the roofline and a huge white Buddha seated at its centre. Worth knowing before you plan: this sits roughly three hours north of Chiang Mai by road, so it is a separate day trip rather than an afternoon stop.\n\nAn older, ruined temple stood on this ground long before the current building, and the local community began talking about replacing it in 1996. Construction did not start until 2005, and the main hall was not finished until 2016 — eleven years for a single building, largely funded and built through community effort rather than an institutional budget. The designer was a Chiang Rai folk artist named Phuttha Kabkaew, who trained under Chalermchai Kositpipat while working on his teacher's far more famous project a few kilometres away. Kabkaew borrowed the exuberant, almost psychedelic style of Buddhist sculpture but flipped the palette entirely. This was not built to compete with the White Temple so much as to answer it. Take your shoes off and go inside; the interior mural work is more intense still.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/blue-temple-wat-rong-suea-ten_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/blue-temple-wat-rong-suea-ten_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/blue-temple-wat-rong-suea-ten_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b353aa70-3d96-5892-9f7f-2e57f01fdab2",
+          "order": 0,
+          "title": "Blue Temple (Wat Rong Suea Ten) | วัดร่องเสือเต้น",
+          "caption": "Tigers once danced here, says the legend. Now a student of the White Temple's creator answers his teacher in cobalt and gold.",
+          "latitude": 19.948569639982242,
+          "longitude": 99.83912693937158,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/blue-temple-wat-rong-suea-ten.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Tigers, according to local legend, once danced on this exact spot — which is where the temple gets its name.\n\nA temple complex in electric cobalt blue rises ahead of you, gold-flecked nagas coiling along the roofline and a huge white Buddha seated at its centre. You're facing Wat Rong Suea Ten, the Blue Temple, just outside Chiang Rai — worth knowing this sits roughly three hours north of Chiang Mai by road, so it's a separate day trip rather than a stop you'll fold into a Chiang Mai afternoon.\n\nAn older, ruined temple stood on this ground long before the current building, and the local community began talking about replacing it back in 1996. Construction didn't actually start until 2005, and the main hall wasn't finished until 2016 — eleven years for a single building, largely funded and built through community effort rather than any big institutional budget.\n\nThe designer was a Chiang Rai folk artist named Phuttha Kabkaew, who trained under Chalermchai Kositpipat while working on his teacher's far more famous project a few kilometres away: the White Temple. Kabkaew borrowed his teacher's exuberant, almost psychedelic style of Buddhist sculpture, but flipped the palette entirely — deep blue instead of blinding white, gold instead of silver mirror-glass.\n\nAnd that's really the thing worth knowing standing here. This wasn't built to compete with the White Temple so much as to answer it — one student, working in the same visual language his teacher invented, choosing the opposite colour on purpose.\n\nTake your shoes off and go inside if you haven't already — the interior mural work is even more intense than the exterior, deep blue walls covered floor to ceiling in the same dense, glowing detail."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.948569639982242,
+      "centroidLongitude": 99.83912693937158,
+      "city": "Chiang Rai",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1e7b6ea3-0e70-5670-83c1-8fadac28286e",
+      "createdAt": "2026-07-24",
+      "title": "CINDER AND SMOKE | ซินเดอร์ แอนด์ สโมค",
+      "shortDescription": "A small-batch perfumery working in old paper, worn leather and smoke rather than the crowd-pleasing florals commercial houses default to.",
+      "longDescription": "Nothing in this shop is edible, though a few of the scents are designed to smell close enough to convince you otherwise. Cinder and Smoke is a small shopfront, more perfumery than boutique — glass bottles along open shelving, the low hum of something burning slowly near the counter — easy enough to mistake for a café from the pavement until the smell reaches you first.\n\nThis is a home fragrance and perfume studio built entirely around small batches, the kind of operation where a scent might exist in a run of a few dozen bottles rather than a few thousand. Everything is handcrafted on-site with a vintage-inspired sensibility running through the collection: notes leaning toward old paper, worn leather and smoke rather than the bright florals most commercial houses default to. Where a big perfume house builds a scent to sell in duty-free worldwide, a niche studio like this builds one to tell a single, sometimes odd story, and accepts it will not be for everyone. Ask whoever is behind the counter about the story; there usually is one. Ask to try something you would not normally choose — the whole point of a shop this size is that it can afford to be a little strange.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cinder-and-smoke_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cinder-and-smoke_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cinder-and-smoke_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "66195c33-1f4c-512d-ab90-a7e523ac82ce",
+          "order": 0,
+          "title": "CINDER AND SMOKE | ซินเดอร์ แอนด์ สโมค",
+          "caption": "A perfumery that treats scent the way a wine region treats terroir — small-batch, single-vision, and deliberately a little strange.",
+          "latitude": 18.792482951574602,
+          "longitude": 98.95591003862444,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cinder-and-smoke.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Nothing in this shop is edible, though a few of the scents are designed to smell close enough to convince you otherwise.\n\nA small shopfront, more perfumery than boutique, glass bottles arranged along open shelving and the low hum of something burning slowly somewhere near the counter — that's Cinder and Smoke, easy enough to mistake for a cafe from the pavement outside until the smell reaches you first.\n\nThis is a home fragrance and perfume studio built entirely around small batches, the kind of operation where a scent might exist in a run of a few dozen bottles rather than a few thousand. Everything is handcrafted on-site, with a vintage-inspired sensibility running through the whole collection — notes that lean toward old paper, worn leather, and smoke rather than the bright, crowd-pleasing florals most commercial fragrance houses default to.\n\nThat word, niche, is doing real work here. Where a big perfume house builds a scent to sell in duty-free shops worldwide, a niche studio like this one builds a scent to tell one specific, sometimes odd, story — and accepts that it won't be for everyone. Ask whoever's behind the counter about the story behind whatever you're smelling; there's usually one, and it's rarely as simple as \"it smells nice.\"\n\nIt's part of a small but growing pattern across the city's creative scene. Specialty coffee treated the bean the way a wine region treats its terroir, and shops like this one are doing roughly the same thing with scent — small-batch, single-vision, worth talking about rather than just wearing.\n\nAsk to try something you wouldn't normally choose, rather than reaching straight for whatever smells most familiar — the whole point of a shop this size is that it can afford to be a little strange."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.792482951574602,
+      "centroidLongitude": 98.95591003862444,
+      "city": "Chiang Mai",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "75465485-c50b-5659-ad83-3963890882d5",
+      "createdAt": "2026-07-24",
+      "title": "Doi Inthanon National Park | อุทยานแห่งชาติดอยอินทนนท์",
+      "shortDescription": "Thailand's highest point, where a king asked to be buried at the summit so nobody would ever have an excuse to cut the forest down.",
+      "longDescription": "The summit platform sits 2,565 metres above sea level, the highest point in Thailand, mist drifting through the trees most mornings even when the rest of the country is baking far below. The peak was known for generations as Doi Luang, the Great Mountain, sacred ground for the Karen and Hmong communities who have lived across these slopes for centuries.\n\nIts modern name comes from King Inthawichayanon, one of the last rulers of an independent Chiang Mai before it was fully absorbed into Siam, who spent the late 1800s pushing back against the logging already stripping northern Thailand's forests. When he died, his remains were brought up here and placed at the summit exactly as he had asked — a ruler turning his own burial into a permanent argument against ever touching these trees again. The mountain became Thailand's first national park in 1954, expanded through the 1970s, and picked up the nickname the Roof of Thailand along the way. Two stupas lower down, dedicated to King Bhumibol and Queen Sirikit, echo the same idea a century later. If the summit is crowded, walk the short boardwalk trail through the cloud forest just below instead — fewer people, permanently damp and hung with moss.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/doi-inthanon-national-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/doi-inthanon-national-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/doi-inthanon-national-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/doi-inthanon-national-park_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bcfc77ec-0dec-5965-85ad-6ecab60d6f82",
+          "order": 0,
+          "title": "Doi Inthanon National Park | อุทยานแห่งชาติดอยอินทนนท์",
+          "caption": "Conservation here didn't start as policy. It started as one king's grave, and the reluctance of everyone since to disturb it.",
+          "latitude": 18.535824529027124,
+          "longitude": 98.5221453379586,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/doi-inthanon-national-park.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The king buried on this mountain asked to be laid here specifically so nobody would ever have an excuse to cut its forest down.\n\nThe summit platform in front of you sits 2,565 metres above sea level, the highest point in Thailand, mist drifting through the trees most mornings even when the rest of the country is baking in the heat far below.\n\nThis peak was known for generations as Doi Luang, the Great Mountain, sacred ground for the Karen and Hmong communities who've lived across these slopes for centuries. Its modern name comes from King Inthawichayanon, one of the last rulers of an independent Chiang Mai before it was fully absorbed into Siam, who spent the late 1800s pushing back against the logging and clearing that was already stripping northern Thailand's forests. When he died, his remains were brought up here and placed at the summit, exactly as he'd asked — a ruler turning his own burial into a permanent argument against ever touching these trees again.\n\nThe mountain and its surrounding forest became Thailand's first national park in 1954, expanded to its current boundaries through the 1970s, and picked up the nickname the Roof of Thailand somewhere along the way. Two stupas lower down the mountain, dedicated to King Bhumibol and Queen Sirikit, echo the same idea a century later — royal monuments doing the quiet work of keeping a forest protected.\n\nAnd that's the pattern worth noticing across this whole park. Conservation here didn't start as policy. It started as one king's grave, and the reluctance of everyone since to disturb it.\n\nIf the summit's crowded, walk the short boardwalk trail through the cloud forest just below it instead — fewer people, and it's arguably the more atmospheric stretch of the whole mountain, permanently damp and hung with moss."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.535824529027124,
+      "centroidLongitude": 98.5221453379586,
+      "city": "Chom Thong",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Green Escape",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2e0198e7-55ff-5f65-a197-6c1be6d7319a",
+      "createdAt": "2026-07-24",
+      "title": "GRAPH X | กราฟ เอ็กซ์",
+      "shortDescription": "After fifteen years of pushing coffee toward novelty, Graph opened a shop built on the opposite instinct: a roaster, a scale, and very good espresso.",
+      "longDescription": "For seventeen years this coffee company has been getting steadily more experimental, and this particular shop is where it decided to go back to basics instead. Graph X occupies the Matana Building on Chang Moi Road — a compact, unfussy espresso bar behind glass, no elaborate syrups or coffee cocktails on the counter, just a roaster, a scale and a short list of single-origin beans.\n\nGraph Coffee Co. has operated in Chiang Mai since 2009 and has built a small constellation of shops around the city, each with its own concept: an original café near Sriphoom, a contemporary space by the river, a roastery-driven outpost, a spot inside the Nimman shopping district. The original Graph Cafe became known for playful, elaborate coffee-cocktail drinks — rose water cold brews and the like — built to surprise rather than simply satisfy. Graph X takes the opposite approach. Beans are roasted in-house on German Probat machines, and the drinks list stays close to straightforward espresso, black or with milk, letting the beans carry the interest. Ask what is currently on the single-origin list and where it is from; the roastery rotates stock often enough that the answer changes month to month.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/graph-x_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/graph-x_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/graph-x_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/graph-x_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d0e10554-db85-5e9d-baf5-3ce437b05ba9",
+          "order": 0,
+          "title": "GRAPH X | กราฟ เอ็กซ์",
+          "caption": "A brand known for reinvention choosing, deliberately, to just make a very good espresso.",
+          "latitude": 18.790203040183766,
+          "longitude": 98.995853886507,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/graph-x.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "For seventeen years, this coffee company has been getting steadily more experimental — and this particular shop is where it decided to go back to basics instead.\n\nThe Matana Building on Chang Moi Road houses a compact, unfussy espresso bar behind glass — no elaborate syrups or coffee cocktails on the counter here, just a roaster, a scale, and a short list of single-origin beans. That's Graph X.\n\nGraph Coffee Co. has been operating in Chiang Mai since 2009, and over the years it's built a small constellation of different shops around the city, each with its own concept — an original cafe near Sriphoom, a contemporary space by the river, a roastery-driven outpost, a spot inside the Nimman shopping district. The original Graph Cafe became known specifically for playful, elaborate \"coffee cocktail\" style drinks, rose water cold brews and the like, the kind of menu built to surprise rather than simply satisfy.\n\nGraph X takes the opposite approach. The beans are roasted in-house on German Probat machines, the same equipment used by serious roasteries worldwide, and the drinks list stays close to straightforward espresso, black or with milk, letting the beans themselves carry the interest rather than the syrup.\n\nAnd that's really what's worth understanding about this particular branch. After more than a decade and a half of pushing coffee toward novelty, the same company opened a shop built around the opposite instinct — proof that a brand known for reinvention can still choose, deliberately, to just make a very good espresso.\n\nAsk what's currently on the single-origin list and where it's from — the roastery rotates stock often enough that the answer changes month to month, and the staff generally know the farm behind whatever's in the hopper that week."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.790203040183766,
+      "centroidLongitude": 98.995853886507,
+      "city": "Chiang Mai",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "08dd1a13-c05d-56e0-97e1-ddc68f31c8be",
+      "createdAt": "2026-07-24",
+      "title": "Golden Triangle Hang Dong | โกลเด้น ไทรแองเกิ้ล หางดง",
+      "shortDescription": "A refinishing workshop that outgrew its own purpose — now the region's largest antique and reclaimed-teak operation, spread across two hectares.",
+      "longDescription": "Half of what is for sale in this building used to be something else entirely — a door, a boat, a temple beam, repurposed rather than replaced. Golden Triangle occupies a sprawling two-hectare site in Hang Dong, its buildings arranged around courtyards and shaded walkways more like a small village than a shop, and it is Chiang Mai's largest single source of antique furniture under one roof.\n\nThe business started small in 1995, as a refinishing workshop for a Chicago-based antiques dealer that happened to share the same name. Over three decades it grew into a sourcing and restoration operation pulling furniture from across the region and beyond — China, Thailand, British colonial Burma, India, Pakistan, even Central Europe — all repaired, refinished and resold from this one site. The workshop side is worth seeking out: rather than only selling what is found, the team builds new furniture from reclaimed teak salvaged from old houses, boats and temple structures too damaged to save whole, joined using the same traditional techniques that built the originals. A newer section houses a gallery dedicated to local artists. The whole operation grew backwards from its original purpose — restoration outgrowing the retail it was meant to support.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-triangle-hangdong_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-triangle-hangdong_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-triangle-hangdong_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-triangle-hangdong_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-triangle-hangdong_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "166cffcb-1449-53d8-82f5-a8c3c07ad7f7",
+          "order": 0,
+          "title": "Golden Triangle Hang Dong | โกลเด้น ไทรแองเกิ้ล หางดง",
+          "caption": "A repair shop for somebody else's antiques that ended up the region's biggest reclamation business in its own right.",
+          "latitude": 18.699029607885358,
+          "longitude": 98.92553144550229,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/golden-triangle-hangdong.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Half of what's for sale in this building used to be something else entirely — a door, a boat, a temple beam, repurposed rather than replaced.\n\nA sprawling two-hectare site in Hang Dong, buildings arranged around courtyards and shaded walkways more like a small village than a shop — that's Golden Triangle, Chiang Mai's largest single source of antique furniture under one roof.\n\nThe business started small, in 1995, as a refinishing workshop for a Chicago-based antiques dealer that happened to share the same name. Over three decades it grew into something considerably bigger: a sourcing and restoration operation pulling furniture from across the region and beyond — China, Thailand, British colonial Burma, India, Pakistan, even Central Europe — all of it repaired, refinished, and resold from this one sprawling site.\n\nThe workshop side of the business is worth seeking out specifically. Rather than only selling what's found, the team here builds new furniture from reclaimed teak, salvaged from old houses and boats and temple structures too damaged to save whole, joined using the same traditional techniques that built the originals a century or more ago. A newer section of the site, added more recently, houses contemporary buildings including a gallery dedicated to local artists — a modern counterpoint to everything else on the property.\n\nWhat's worth noticing, walking between the courtyards, is how the whole operation grew backwards from its original purpose. A repair shop for somebody else's antiques ended up becoming the region's biggest reclamation business in its own right, restoration outgrowing the retail it was originally meant to support.\n\nAsk staff to point you toward whatever's newest in the reclaimed-teak workshop rather than the antique showroom first — it's the part of the business that's grown the most, and the part most visitors walk straight past."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.699029607885358,
+      "centroidLongitude": 98.92553144550229,
+      "city": "Hang Dong",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "948f004c-cd0f-5649-8375-2a6d0b62ab5b",
+      "createdAt": "2026-07-24",
+      "title": "Ho Kham Luang Royal Pavilion | หอคำหลวง",
+      "shortDescription": "Raised for an exhibition that ran less than five months, and still standing two decades later at the centre of Royal Park Rajapruek.",
+      "longDescription": "This building was raised for an exhibition that ran for less than five months, and it is still standing two decades later. Inside Royal Park Rajapruek, at the top of a long formal approach, a soaring Lanna-style pavilion rises in dark teak and gold, steep multi-tiered roofs stacking upward toward a central spire.\n\nThe park was built in 2006 to host the Royal Flora Ratchaphruek International Horticultural Exposition, staged to mark King Bhumibol Adulyadej's sixtieth year on the throne and his eightieth birthday in the same year. Once the exposition closed, rather than dismantle the grounds the way most world's-fair sites eventually are, the city preserved the whole two-hundred-acre park permanently — themed gardens representing more than 30 countries still laid out exactly as they were for visiting delegations. The pavilion itself is built entirely in traditional Lanna style, its ornate woodwork and gold detailing drawing on the architectural language of the old northern kingdoms rather than anything from Bangkok. Inside, exhibitions trace King Bhumibol's development philosophy, and the upper level opens onto a genuinely wide view. Climb to that upper level before exploring the gardens below; getting your bearings from above makes the layout far easier to navigate on foot.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ho-kham-luang-royal-pavilion_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ho-kham-luang-royal-pavilion_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ho-kham-luang-royal-pavilion_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ho-kham-luang-royal-pavilion_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5eeb39e5-075d-5ae2-a1ed-c1eba3a7cd4d",
+          "order": 0,
+          "title": "Ho Kham Luang Royal Pavilion | หอคำหลวง",
+          "caption": "The park takes its name from Thailand's national tree — meaning the whole site is one long tribute built in the shape of a flower.",
+          "latitude": 18.755932034120416,
+          "longitude": 98.92274854484546,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ho-kham-luang-royal-pavilion.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "This building was raised for an exhibition that ran for less than five months, and it's still standing two decades later.\n\nInside Royal Park Rajapruek, at the top of a long formal approach, a soaring Lanna-style pavilion rises in dark teak and gold, steep, multi-tiered roofs stacking upward toward a central spire. That's Ho Kham Luang, the Royal Pavilion.\n\nThe whole park around you was built in 2006 to host the Royal Flora Ratchaphruek International Horticultural Exposition, staged to mark King Bhumibol Adulyadej's sixtieth year on the throne and his eightieth birthday in the same year. Once the exposition closed, rather than dismantle the grounds the way most world's-fair-style sites eventually are, the city preserved the whole two-hundred-acre park permanently, themed gardens representing more than 30 countries still laid out exactly as they were for visiting delegations back in 2006.\n\nThe pavilion itself is built entirely in traditional Lanna style, the ornate woodwork and gold detailing drawing on the architectural language of the old northern Thai kingdoms rather than anything from Bangkok. Inside, exhibitions trace King Bhumibol's development philosophy and his rural royal projects, and the upper level opens onto a genuinely wide view across the whole park.\n\nThe park takes its name from the golden shower tree, Thailand's national tree, chosen specifically as a symbol of unity and prosperity — meaning the entire site, gardens and pavilion together, is essentially one long tribute built in the shape of a flower.\n\nClimb to the pavilion's upper level before you explore the gardens below — getting your bearings from above first makes the layout of all thirty-odd international gardens considerably easier to navigate on foot afterward."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.755932034120416,
+      "centroidLongitude": 98.92274854484546,
+      "city": "Chiang Mai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Power"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "37bb55bd-56ec-5e79-8fbf-d5a6be4bf7d7",
+      "createdAt": "2026-07-24",
+      "title": "KLĀY cafe | เคลย์ คาเฟ่",
+      "shortDescription": "Part café, part wine bar, part ceramics studio — the bowl your breakfast arrives on might well be for sale a few feet away.",
+      "longDescription": "There is a curious thing about this café: it is not really sure it is a café at all, and that is rather the point. KLĀY sits on Nimmanhaemin Soi 5, one of the quieter side streets branching off Chiang Mai's most fashionable strip, behind a facade built almost entirely from natural materials — timber, raw plaster, earthy tones that feel deliberately unfinished. It moved to this spot in September 2024, and the calm, uncluttered interior is very much intentional: this is as much a wine bar and homeware brand as somewhere to get breakfast.\n\nThe menu runs Thai and Western side by side without much fuss — eggs on toast with bacon or ham sits comfortably next to more local plates, and the French toast has developed a small reputation of its own. The pickled lychee drink is worth trying too, a genuinely unusual pairing of sweet and sharp. What makes KLĀY worth lingering in is that it does not stop at food and drink: the space regularly hosts ceramics workshops, and the handcrafted homeware sold here is designed and made under the same name. If a workshop happens to be running, it is worth pausing to watch.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/klay-cafe_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/klay-cafe_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/klay-cafe_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f3d6396e-a288-54d2-a699-51995f377cad",
+          "order": 0,
+          "title": "KLĀY cafe | เคลย์ คาเฟ่",
+          "caption": "A café that isn't quite sure it's a café — the same materials-first thinking shapes the room and what people are making in it.",
+          "latitude": 18.798719626161244,
+          "longitude": 98.96856938465609,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/klay-cafe.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There's a curious thing about this cafe — it isn't really sure it's a cafe at all, and that's rather the point.\n\nYou're on Nimmanhaemin Soi 5, one of the quieter side streets branching off Chiang Mai's most fashionable strip, and KLĀY sits behind a facade built almost entirely from natural materials — timber, raw plaster, earthy tones that feel deliberately unfinished. It moved to this particular spot in September 2024, and the calm, uncluttered interior is very much intentional: this is as much a wine bar and homeware brand as it is somewhere to get breakfast.\n\nThe menu runs Thai and Western side by side without much fuss about it — eggs on toast with bacon or ham sits comfortably next to more local plates, and the French toast has developed a small reputation of its own. Worth trying too is the pickled lychee drink, a genuinely unusual pairing of sweet and sharp that you won't find on most brunch menus in the city.\n\nWhat makes KLĀY worth lingering in, rather than just passing through, is that it doesn't stop at food and drink. The same space regularly hosts ceramics workshops, and the handcrafted homeware sold here — cups, plates, small objects — is designed and made under the same KLĀY name, meaning the bowl your breakfast arrives on might well be for sale on a shelf a few feet away.\n\nIf a workshop happens to be running while you're there, it's worth pausing to watch — the same unhurried, materials-first thinking that shapes the room shapes what people are making in it too."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.798719626161244,
+      "centroidLongitude": 98.96856938465609,
+      "city": "Chiang Mai",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b1d84c0d-aeab-5041-9eed-5305b4dcf0ed",
+      "createdAt": "2026-07-24",
+      "title": "Kalm Village Chiang Mai | คาล์ม วิลเลจ เชียงใหม่",
+      "shortDescription": "Seven buildings around one courtyard — gallery, museum, library, workshops — and not a single shop pushing you to buy anything.",
+      "longDescription": "Seven buildings, one shared courtyard, and not a single shop pushing you to buy anything the moment you walk in. Kalm Village sits on Phra Pok Klao Road, Soi 4, in the Phra Sing area of the old city: a cluster of low buildings set back from the lane around a garden courtyard strung with hammocks and low seating.\n\nEach of the seven buildings holds something different — a studio space, a gallery, a small museum given over to local makers, a handful of shops, and a combined restaurant, café and library arranged around the same central garden. The coffee house in particular is built around an older Thai idea: the traditional coffeehouse as a place where a neighbourhood actually gathers to talk. The design throughout blends modern lines with traditional Thai and Japanese elements, and the library holds a genuinely useful collection on craft, art, and Thai culture and history. Regular workshops in weaving, pottery and wood carving run through the week, most open to visitors with a little advance notice. What sets Kalm apart from the city's other craft complexes is the pace it insists on. Find a hammock and stay a while; the whole design only makes sense once you have slowed down enough to notice it.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kalm-village-chiang-mai_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kalm-village-chiang-mai_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kalm-village-chiang-mai_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kalm-village-chiang-mai_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kalm-village-chiang-mai_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kalm-village-chiang-mai_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d1e3b6e8-dbc8-5dc2-8c05-0a983acc84d8",
+          "order": 0,
+          "title": "Kalm Village Chiang Mai | คาล์ม วิลเลจ เชียงใหม่",
+          "caption": "No stalls competing loudly for attention — just a courtyard built for lingering, which is precisely the point.",
+          "latitude": 18.783567902073827,
+          "longitude": 98.98649355767195,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kalm-village-chiang-mai.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Seven buildings, one shared courtyard, and not a single shop pushing you to buy anything the moment you walk in.\n\nPhra Pok Klao Road, Soi 4, in the Phra Sing area of the old city, is where you'll find it — a cluster of low buildings set back from the lane around a garden courtyard strung with hammocks and low seating. That's Kalm Village.\n\nEach of the seven buildings holds something different: a studio space, a gallery, a small museum given over to local makers, a handful of shops, and a combined restaurant, cafe, and library arranged around the same central garden. The coffee house in particular is built around an older Thai idea — the traditional coffeehouse as a place where a neighbourhood actually gathers to talk, rather than simply somewhere to collect a drink and leave.\n\nThe design throughout blends modern lines with traditional Thai and Japanese elements, and the library holds a genuinely useful collection on craft, art, and Thai culture and history, the kind of space that rewards an hour of just sitting and reading rather than rushing through. Regular workshops in weaving, pottery, and wood carving run through the week, most of them open to visitors with a bit of advance notice.\n\nWhat sets Kalm apart from most of the city's other craft complexes is the pace it insists on. There's no real pressure to buy anything, no stalls competing loudly for attention — just a courtyard built for lingering, which is precisely why it's become one of the highest-rated spots of its kind in the old city.\n\nFind a hammock in the courtyard and stay a while, even if you came for something specific — the whole design only really makes sense once you've slowed down enough to notice it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.783567902073827,
+      "centroidLongitude": 98.98649355767195,
+      "city": "Chiang Mai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Art",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a693cefc-48fe-578e-a55a-61bdf2e61379",
+      "createdAt": "2026-07-24",
+      "title": "Khao Soi Maesai | ร้านข้าวซอยแม่สาย",
+      "shortDescription": "A Bib Gourmand khao soi shop in Santitham that sells out by one o'clock — consistency, not ambition, is the whole reputation.",
+      "longDescription": "By one o'clock most afternoons this shop has already sold out and gone quiet, which tells you most of what you need to know before you have even ordered. Duck into the narrow alley off the main road in Santitham and follow the smell of curry broth to a simple open-air shopfront with a handful of tables.\n\nKhao soi is northern Thailand's signature noodle soup: a rich, faintly sweet curry broth over soft egg noodles, topped with a tangle of crispy fried noodles, finished with lime, chopped shallots and pickled mustard greens on the side to cut the richness. Choose chicken or pork; the kitchen moves fast enough that the wait rarely stretches past a few minutes even with a queue. The shop has picked up recognition in the Michelin Guide across multiple years along with a Bib Gourmand award, the guide's marker for excellent food at a modest price. The setting matches entirely — open-air, plastic stools, no pretence. Chiang Mai has no shortage of khao soi shops and most locals have a strong opinion about which does it best. What sets this one apart is not ambition but consistency. Come before noon; this is a shop that runs out, not one that closes on a schedule.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/khao-soi-maesai_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/khao-soi-maesai_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/khao-soi-maesai_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/khao-soi-maesai_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d33a94a6-00a0-5e41-9fb3-2049f6b46857",
+          "order": 0,
+          "title": "Khao Soi Maesai | ร้านข้าวซอยแม่สาย",
+          "caption": "The same bowl done exactly right, day after day, until doing one thing well became the whole reputation.",
+          "latitude": 18.799712244455556,
+          "longitude": 98.9751986846456,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/khao-soi-maesai.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "By one o'clock most afternoons, this shop has already sold out and gone quiet — which tells you most of what you need to know before you've even ordered.\n\nDuck into the narrow alley off the main road in Santitham, and follow the smell of curry broth to a simple open-air shopfront with a handful of tables. That's Khao Soi Maesai.\n\nKhao soi is northern Thailand's signature noodle soup — a rich, faintly sweet curry broth over soft egg noodles, topped with a tangle of crispy fried noodles on top, and finished with a squeeze of lime, chopped shallots, and pickled mustard greens on the side to cut through the richness. Choose chicken or pork, and the kitchen here moves fast enough that the wait rarely stretches past a few minutes, even with a queue.\n\nThe shop has picked up recognition in the Michelin Guide across multiple years, along with a Bib Gourmand award, the guide's specific marker for excellent food at a modest price rather than any kind of formal fine dining. The setting matches that entirely: open-air, plastic stools, no pretence, service that's fast because the menu is short and the kitchen has clearly made this exact dish thousands of times before.\n\nChiang Mai has no shortage of khao soi shops, and most locals have a strong opinion about which one does it best. What sets this one apart isn't ambition — it's consistency, the same bowl done exactly right, day after day, until doing one thing well became the whole reputation.\n\nCome before noon if you can manage it. This is a shop that runs out, not one that closes on a schedule, and getting there early is the only reliable way to guarantee the bowl you came for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.799712244455556,
+      "centroidLongitude": 98.9751986846456,
+      "city": "Chiang Mai",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b9de3016-05ae-546e-ab49-1323f3b8f0a9",
+      "createdAt": "2026-07-24",
+      "title": "La Petita | ลา เปติต้า",
+      "shortDescription": "A family-run Spanish paella house in a wooden house among the rice fields of Mae Rim, cooking every pan from scratch to order.",
+      "longDescription": "Good paella takes patience, and a restaurant that makes you wait for it properly is usually a restaurant worth trusting. La Petita is a Spanish kitchen tucked into a wooden house well outside the centre of town, out in the Mae Rim district north of Chiang Mai proper.\n\nThere is no sprawling menu — just paellas and fideuà, the noodle-based cousin of paella, made the traditional way from scratch for each table rather than kept warm in a pan somewhere out of sight. That is precisely why every dish takes around twenty-five minutes to arrive, and why booking a day ahead is genuinely necessary rather than a polite suggestion. The black squid-ink paella is the dish most people come specifically for, its rice stained a deep, glossy black and built around fresh seafood, though the seafood-and-chicken fideuà runs it close for regulars who have worked through most of the short menu. Both are cooked with the kind of attention that only comes from a kitchen with very few dishes to get right rather than dozens. A proper Spanish paella house sitting among rice fields on the edge of Chiang Mai is a slightly unlikely find, and that mismatch is part of the charm.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-petita_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-petita_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-petita_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "41dd9cb3-c296-5cc9-a5da-e0254581285d",
+          "order": 0,
+          "title": "La Petita | ลา เปติต้า",
+          "caption": "The pan arriving at the table, still audibly sizzling, is worth the twenty-five minutes.",
+          "latitude": 18.97019119007624,
+          "longitude": 98.92260729312211,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/la-petita.mp3",
+          "audioDurationSeconds": 97,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Good paella takes patience, and a restaurant that makes you wait for it properly is usually a restaurant worth trusting.\n\nYou're at La Petita, a Spanish kitchen tucked into a wooden house well outside the centre of town, out in the Mae Rim district north of Chiang Mai proper. There's no sprawling menu here — just paellas and fideuà, the noodle-based cousin of paella, made the traditional way from scratch for each table rather than kept warm in a pan somewhere out of sight. That's precisely why every dish takes around twenty-five minutes to arrive, and why booking a day ahead is genuinely necessary rather than a polite suggestion.\n\nThe black squid-ink paella is the dish most people come specifically for, its rice stained a deep, glossy black and built around fresh seafood, though the seafood-and-chicken fideuà runs it close for regulars who've worked through most of the short menu. Both are cooked over the kind of attention that only comes from a kitchen with very few dishes to get right rather than dozens.\n\nIt's a slightly unlikely find — a proper Spanish paella house, family-run, sitting among rice fields and quiet lanes on the edge of Chiang Mai rather than in any obvious dining district — and that mismatch between setting and cuisine is part of the charm.\n\nBook ahead, arrive a little hungry, and treat the wait for your paella as part of the experience rather than an inconvenience — the pan arriving at the table, still audibly sizzling, is worth the twenty-five minutes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 97,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.97019119007624,
+      "centroidLongitude": 98.92260729312211,
+      "city": "Mae Rim",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bed12af2-22bf-5b5d-8707-74d68b71bc17",
+      "createdAt": "2026-07-24",
+      "title": "Lung Khajohn Wat Ket | ลุงขจรวัดเกต",
+      "shortDescription": "A folding table, two steaming pots and two dishes — a Michelin-listed street stall near Wat Ket Karam that's usually gone by mid-morning.",
+      "longDescription": "Six in the morning, a folding table, two steaming pots, and a queue that is usually gone before most of the city's cafés have opened. Lung Khajohn Wat Ket is a street stall on Charoen Rajadamnoen Road near Wat Ket Karam temple, on the eastern side of the river from the old city.\n\nThere is no seating to speak of and no menu beyond two things, both wrapped in banana leaf and sold by the box: khao kriap pak mo, delicate steamed rice dumplings folded around a savoury filling, and sacoo sai moo, translucent tapioca dumplings stuffed with pork and peanut. Both are made fresh in front of you, the dough rolled thin enough to see through, twenty baht a box for either. What has earned the stall a spot in the Michelin Guide year after year is not ambition but texture — get the timing right and the rice dumpling wrapper comes out soft without turning gluey, thin without tearing, wrapped around a filling generous with garlic and pork. Vendors like this are a genuine institution in Chiang Mai's old neighbourhoods. Get there before mid-morning; the stall runs out rather than closing at a fixed hour, and it does not open at all on Sundays.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lung-khajohn-wat-ket_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lung-khajohn-wat-ket_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c210f801-20c8-5ddd-bd56-21e179296e17",
+          "order": 0,
+          "title": "Lung Khajohn Wat Ket | ลุงขจรวัดเกต",
+          "caption": "Two dishes, one folding table, and a stall regulars simply call by the owner's name rather than anything on a sign.",
+          "latitude": 18.792506220418407,
+          "longitude": 99.00220612468488,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lung-khajohn-wat-ket.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Six in the morning, a folding table, two steaming pots — and a queue that's usually gone before most of the city's cafés have opened.\n\nThat's Lung Khajohn Wat Ket, a street stall on Charoen Rajadamnoen Road near Wat Ket Karam temple, on the eastern side of the river from the old city. There's no seating to speak of and no menu beyond two things, both wrapped in banana leaf and sold by the box: khao kriap pak mo, delicate steamed rice dumplings folded around a savoury filling, and sacoo sai moo, translucent tapioca dumplings stuffed with pork and peanut. Both are made fresh in front of you, the dough rolled thin enough to see through, twenty baht a box for either.\n\nWhat's earned this stall a spot in the Michelin Guide, year after year, isn't ambition — it's the texture. Get the timing right, and the rice dumpling wrapper comes out soft without turning gluey, thin without tearing, wrapped around a filling generous with garlic and pork in a way that's easy to underestimate until you've actually had one.\n\nVendors like this one are a genuine institution in Chiang Mai's old neighbourhoods, and this particular stall has been doing the exact same two dishes, at the exact same spot, for long enough that regulars simply call it by the owner's name rather than anything on a sign.\n\nGet there before mid-morning if you possibly can — this is a stall that runs out rather than one that closes at a fixed hour, and it doesn't open at all on Sundays."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 101,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.792506220418407,
+      "centroidLongitude": 99.00220612468488,
+      "city": "Chiang Mai",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "309a9711-10f6-513b-ac4a-93ba8f359e02",
+      "createdAt": "2026-07-24",
+      "title": "MAIIAM Contemporary Art Museum | หอศิลป์ใหม่เอี่ยม",
+      "shortDescription": "A thirty-year private family collection opened to the public in 2016, behind a facade of thousands of mirrored tiles borrowed from Lanna temples.",
+      "longDescription": "Read the museum's name forwards or backwards and it comes out exactly the same — a small joke worth knowing before you walk in, because it tells you something about the family who built the place. MAIIAM sits on the edge of San Kamphaeng district outside central Chiang Mai, a private contemporary art museum that opened in July 2016.\n\nIt was founded by Jean-Michel Beurdeley, a Paris-born gallerist who moved to Thailand with his wife Patsri Bunnag, together with their son Eric Bunnag Booth. The private collection filling these galleries was built up over some thirty years before the family decided to open it to the public. The name is the palindrome: \"Mai,\" as in Chiang Mai, meaning new, combined with \"Iam,\" a reference to Jao Jom Iam, a royal consort to King Rama the Fifth and a relative of the founding family — new and old folded into a single word. Inside, the focus sits squarely on Thai and Southeast Asian contemporary art engaging with the region's recent social and political history. The building's exterior is covered in thousands of small mirrored tiles, a nod to traditional Lanna temple decoration reworked at the scale of a gallery wall. Check the exhibition schedule before you go.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maiiam-contemporary-art-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maiiam-contemporary-art-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maiiam-contemporary-art-museum_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "23a3a947-e67d-5798-8362-7014e0053aec",
+          "order": 0,
+          "title": "MAIIAM Contemporary Art Museum | หอศิลป์ใหม่เอี่ยม",
+          "caption": "A private family collection, rooted in northern Thai tradition, turned outward and made to reflect the wider region back at whoever's looking.",
+          "latitude": 18.764916065708736,
+          "longitude": 99.09421412274146,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/maiiam-contemporary-art-museum.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Read the museum's name forwards or backwards and it comes out exactly the same — a small joke worth knowing before you walk in, because it tells you something about the family who built the place.\n\nYou're at MAIIAM, on the edge of San Kamphaeng district outside central Chiang Mai, a private contemporary art museum that opened in July 2016. It was founded by Jean-Michel Beurdeley, a Paris-born gallerist who moved to Thailand with his wife Patsri Bunnag, together with their son Eric Bunnag Booth — the family behind the private art collection that fills these galleries, built up over some thirty years before they decided to open it to the public rather than keep it behind private doors.\n\nThe name itself is the palindrome: \"Mai,\" as in Chiang Mai, meaning new, combined with \"Iam,\" a reference to Jao Jom Iam, a royal consort to King Rama the Fifth and a relative of the founding family. Put together, it reads the same in both directions — new and old folded into a single word.\n\nInside, the focus sits squarely on Thai and Southeast Asian contemporary art, work that engages directly with the region's recent social and political history rather than art made purely for decoration. The building itself is worth a moment too — its exterior is covered in thousands of small mirrored tiles, a nod to the traditional decoration found on Lanna temples, reworked here at the scale of an entire gallery wall.\n\nThat mirrored facade is a fairly good summary of the whole place: a private family collection, rooted in northern Thai tradition, turned outward and made to reflect the wider region back at whoever's looking.\n\nCheck the current exhibition schedule before you go, since MAIIAM rotates its shows regularly, and it's worth allowing at least an hour if a major touring exhibition happens to be on."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.764916065708736,
+      "centroidLongitude": 99.09421412274146,
+      "city": "San Kamphaeng",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7f0f68ca-f589-578a-98a7-033f26fa77f5",
+      "createdAt": "2026-07-24",
+      "title": "Mae Kampong Village | หมู่บ้านแม่กำปอง",
+      "shortDescription": "A hillside tea village founded over a century ago, run as resident-led ecotourism since 1990 — around twenty of its 130 houses take overnight guests.",
+      "longDescription": "Wooden houses on stilts, a stream running straight through the middle of the settlement, and mist that rarely fully lifts — this is a mountain village that has kept its shape for well over a century. Mae Kampong sits roughly forty-five kilometres east of Chiang Mai city and over a thousand metres up, founded more than a hundred years ago by farming families who moved here from the Doi Saket lowlands after realising the cool, wet climate suited tea.\n\nThat original economy — tea, along with coffee and miang, fermented tea leaf chewed rather than brewed — is still visible on the steep hillsides today. The village is compact enough to walk in twenty minutes: timber houses connected by narrow concrete paths, a stream cutting through the centre with small wooden bridges every few dozen metres, and a waterfall a short walk up the hill. Around 130 houses stand here in total, home to some hundred and twenty families. What sets Mae Kampong apart from villages simply preserved for visitors is that it has been consciously run as an ecotourism destination since 1990, and the homestay programme remains genuinely resident-led. If you can manage an overnight stay rather than a quick visit, take it.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mae-kampong-village_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mae-kampong-village_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mae-kampong-village_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mae-kampong-village_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e55da1f1-82bd-59a6-8de2-a8a1b9d19379",
+          "order": 0,
+          "title": "Mae Kampong Village | หมู่บ้านแม่กำปอง",
+          "caption": "The village changes character entirely after the day-trip crowds head back down, when the stream is about the only thing left.",
+          "latitude": 18.873471717464287,
+          "longitude": 99.34926798209457,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mae-kampong-village.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Wooden houses on stilts, a stream running straight through the middle of the settlement, and mist that rarely fully lifts — this is a mountain village that's kept its shape for well over a century.\n\nYou're in Mae Kampong, a hillside settlement roughly forty-five kilometres east of Chiang Mai city and over a thousand metres up, founded more than a hundred years ago by farming families who moved here from the Doi Saket lowlands after realising the cool, wet climate suited tea. That original economy — tea, along with coffee and miang, fermented tea leaf chewed rather than brewed — is still visible on the steep hillsides surrounding the village today.\n\nThe village itself is compact enough to walk in twenty minutes: timber houses connected by narrow concrete paths, a stream cutting straight through the centre with small wooden bridges crossing it every few dozen metres, and a waterfall a short walk up the hill that most visitors make time for. Around 130 houses stand here in total, home to some hundred and twenty families.\n\nWhat sets Mae Kampong apart from villages simply preserved for visitors is that it's been consciously run as an ecotourism destination since 1990, and the homestay programme that grew out of that decision, starting properly in the early 2000s, remains genuinely resident-led — about twenty of those houses now take overnight guests, cooking, farming and living alongside them rather than performing village life for a day trip.\n\nIf you can manage an overnight stay rather than a quick visit, take it — the village changes character entirely after the day-trip crowds head back down the mountain, when the sound of the stream is about the only thing left."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.873471717464287,
+      "centroidLongitude": 99.34926798209457,
+      "city": "Mae On",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e5811244-9b0a-5453-82be-a31e84832dfe",
+      "createdAt": "2026-07-24",
+      "title": "Mae Ping River Cruise | แม่ปิง ริเวอร์ ครุ้ยส์ เชียงใหม่",
+      "shortDescription": "Flat-bottomed Thai boats leaving hourly from Wat Chai Mongkol, with a stop at a riverside organic herb farm halfway through.",
+      "longDescription": "The Ping River built Chiang Mai long before any road did, and there is still no better way to understand the city's shape than from the water. Flat-bottomed, open-sided Thai-style boats leave roughly on the hour from the pier beside Wat Chai Mongkol. Being open on all sides rather than glassed in, every seat gets more or less the same view, and that view changes character fairly quickly — the first stretch runs past riverside cafés, hotels and houses backing straight onto the water, before the city thins out and the banks turn properly green and quiet.\n\nAround halfway through the roughly two-and-a-half-hour round trip, the boat pulls in at a small riverside farm, where a short walk through an organic herb garden shows many of the plants that end up in the food back in the city — lemongrass, galangal, holy basil, laid out in rows rather than on a plate. Lunch is served here too, and the khao soi tends to get singled out by regulars. It is a slower, more domestic side of Chiang Mai than most itineraries make time for: houses on stilts, fishing lines, children waving from the bank.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mae-ping-river-cruise_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bfba7a7f-7695-5112-af4d-7b17aba4728f",
+          "order": 0,
+          "title": "Mae Ping River Cruise | แม่ปิง ริเวอร์ ครุ้ยส์ เชียงใหม่",
+          "caption": "The ordinary riverside life that's easy to miss entirely if you never leave the streets of the old city.",
+          "latitude": 18.780890140120047,
+          "longitude": 99.00476918465732,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mae-ping-river-cruise.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The Ping River built Chiang Mai long before any road did, and there's still no better way to understand the city's shape than from the water.\n\nYou're at the pier beside Wat Chai Mongkol, where flat-bottomed, open-sided Thai-style boats leave roughly on the hour for a leisurely run along the Ping. Being open on all sides rather than glassed in, every seat gets more or less the same view, and that view changes character fairly quickly — the first stretch runs past riverside cafés, hotels and houses backing straight onto the water, before the city thins out and the banks turn properly green and quiet.\n\nAround halfway through the roughly two-and-a-half-hour round trip, the boat pulls in at a small riverside farm, where a short walk through an organic herb garden shows you many of the plants that end up in the food back in the city — lemongrass, galangal, holy basil, the building blocks of a lot of Thai cooking laid out in rows rather than on a plate. Lunch is served here too, and the khao soi in particular tends to get singled out by regulars.\n\nIt's a slower, more domestic side of Chiang Mai than most itineraries make time for — houses on stilts, fishing lines, children waving from the bank — the kind of ordinary riverside life that's easy to miss entirely if you never leave the streets of the old city.\n\nTake a window seat if the boat's arrangement allows it, and keep your camera ready for the stretch just past the farm stop, where the river narrows and the jungle closes in properly on both banks."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 102,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.780890140120047,
+      "centroidLongitude": 99.00476918465732,
+      "city": "Chiang Mai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Waterfront",
+        "Maritime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7408fa68-1c64-5c19-8923-2111426118f6",
+      "createdAt": "2026-07-24",
+      "title": "Mae Wang National Park | อุทยานแห่งชาติแม่วาง",
+      "shortDescription": "Bamboo rafting, elephant camps and overlooked waterfalls, in a valley where roadside restaurants lower lunch down cliffs on pulleys.",
+      "longDescription": "Somewhere below you, a restaurant is lowering someone's lunch down a cable, over a cliff, into the middle of a river. That is genuinely how a fair few of the roadside restaurants along the Mae Wang valley operate, about forty-five minutes south of Chiang Mai city — perched above steep drops to the water, with pulley systems rigging food and drinks down to platforms where people sit and bathe in the shallows. It is a fairly good introduction to how this whole area works: practical, a little improvised, built entirely around the river running through it.\n\nThe park's best-known activity is bamboo rafting — long rafts lashed together from whole bamboo poles, poled down a stretch of rapids while the current does most of the work. Elephants are the other major draw, though there is a real range in how camps operate: some still offer riding, while a growing number have shifted toward sanctuary-style visits, meeting rescued elephants and walking alongside them rather than riding. It is worth choosing deliberately rather than booking whichever camp comes up first. Beyond both, the park holds waterfalls and trekking routes largely overlooked by visitors who never walk further than the car park.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mae-wang-national-park_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "93689be1-96b4-5cca-8e96-002b4a95f8ad",
+          "order": 0,
+          "title": "Mae Wang National Park | อุทยานแห่งชาติแม่วาง",
+          "caption": "Practical, a little improvised, and built entirely around the river running through it.",
+          "latitude": 18.53339640482068,
+          "longitude": 98.75345279314634,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mae-wang-national-park.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Somewhere below you, a restaurant is lowering someone's lunch down a cable, over a cliff, into the middle of a river.\n\nThat's genuinely how a fair few of the roadside restaurants along the Mae Wang valley operate, about forty-five minutes south of Chiang Mai city — perched above steep drops down to the water, with pulley systems rigging food and drinks down to platforms where people sit and bathe in the shallows below. It's a fairly good introduction to how this whole area works: practical, a little improvised, built entirely around the river running through it.\n\nThe park's best-known activity is bamboo rafting — long rafts lashed together from whole bamboo poles, poled or paddled down a stretch of rapids, dodging boulders as the current does most of the work. You can hire a guide to steer, or, if you fancy the challenge, take the pole yourself and find out how much harder it looks than it is.\n\nElephants are the other major draw here, though it's worth knowing there's a real range in how camps operate — some still offer riding, while a growing number have shifted toward sanctuary-style visits, meeting rescued elephants, feeding them, walking alongside them through the forest rather than riding them. It's worth choosing deliberately rather than booking whichever camp comes up first.\n\nBeyond the rafting and the elephants, the park itself holds waterfalls and trekking routes through genuine jungle, largely overlooked by visitors who come only for the two headline activities and never walk further than the car park.\n\nIf you've time for only one extra stop, make it a waterfall rather than a second raft trip — the ones further into the park see a fraction of the crowds and are worth the short extra walk."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.53339640482068,
+      "centroidLongitude": 98.75345279314634,
+      "city": "Mae Wang",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Commerce",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ff7f458d-87c4-5648-8bd9-6abd493cfc95",
+      "createdAt": "2026-07-24",
+      "title": "Magokoro Teahouse | มาโกโคโระ ทีเฮาส์ (มีใจให้มัทฉะ)",
+      "shortDescription": "Tea sourced direct from an award-winning Japanese farm, with a wagashi service the teahouse claims is the only proper one in the city.",
+      "longDescription": "There is a curious thing about good matcha: it has almost nothing in common with the sweet, slightly artificial version most cafés serve under that name, and this is one of the few places in the city set up to show you the difference. Magokoro sits on Sridonchai Road behind a facade that leans firmly into traditional Japanese design, with a small garden attached that you are welcome to wander through rather than rush past.\n\nThe tea is sourced directly from an award-winning farm in Japan, and the range goes well beyond matcha alone — gyokuro, sencha, hojicha and genmaicha all feature, each brewed to its own method rather than treated as interchangeable green tea. The signature order is the Magokoro latte, ceremonial-grade matcha whisked into properly frothed milk, though the real draw for anyone serious about tea is the wagashi service: traditional Japanese sweets served alongside in the manner of a formal ceremony, something Magokoro claims to be the only place in Chiang Mai doing properly. The matcha kakigori is worth the visit on its own in the afternoon heat. Go slowly, and let staff talk you through the tea before you drink it.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/magokoro-teahouse_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/magokoro-teahouse_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/magokoro-teahouse_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/magokoro-teahouse_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c294c14e-7bf6-5f0e-a43f-5219053a5ffb",
+          "order": 0,
+          "title": "Magokoro Teahouse | มาโกโคโระ ทีเฮาส์ (มีใจให้มัทฉะ)",
+          "caption": "The tea comes first here, and everything else is built to support it rather than distract from it.",
+          "latitude": 18.783840780023805,
+          "longitude": 99.00104263862444,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/magokoro-teahouse.mp3",
+          "audioDurationSeconds": 111,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "There's a curious thing about good matcha — it has almost nothing in common with the sweet, slightly artificial version most cafés serve under that name, and this is one of the few places in the city set up to show you the difference.\n\nYou're on Sridonchai Road, and Magokoro sits behind a facade that leans firmly into traditional Japanese design, with a small garden attached that you're welcome to wander through before or after your tea rather than rush past. The tea itself is sourced directly from an award-winning farm in Japan, and the range goes well beyond matcha alone — gyokuro, sencha, hojicha and genmaicha all feature, each brewed to its own method rather than treated as interchangeable green tea.\n\nThe signature order is the Magokoro latte, rich ceremonial-grade matcha whisked into properly frothed milk, though the real draw for anyone who takes their tea seriously is the wagashi service — traditional Japanese sweets served alongside the tea in the same manner as a formal ceremony in Japan, something Magokoro claims to be the only place in Chiang Mai doing properly. The matcha kakigori, a mountain of shaved ice topped with green tea syrup, red bean paste, mochi and jelly, is worth the visit on its own in the heat of the afternoon.\n\nWhat separates Magokoro from the city's many other matcha-branded cafés is that the tea comes first here, and everything else — the garden, the wagashi, the ceremony-adjacent service — is built to support it rather than distract from it.\n\nGo slowly if you can, and let staff talk you through the tea you've ordered before you drink it — the difference between a rushed matcha and one you've actually been told how to taste is considerable."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 111,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.783840780023805,
+      "centroidLongitude": 99.00104263862444,
+      "city": "Chiang Mai",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cfedd417-9b17-5499-8a97-ebec316ad887",
+      "createdAt": "2026-07-24",
+      "title": "Monday Attack | มันเดย์ แอทแทค",
+      "shortDescription": "A Chang Moi café built entirely around 1980s Americana, where the rotating soft-serve and the cheesecake outrank the coffee.",
+      "longDescription": "Somewhere between a New York apartment and a video-store rental shelf circa 1988, this café has landed on a very specific decade and stuck with it. Monday Attack sits in Chang Moi, a district just east of the old city walls that has been quietly filling up with independent cafés and small shops in recent years, and its interior is built entirely around 1980s Americana — bold colour blocking, playful retro graphics, styling that feels lifted straight from an old apartment rather than assembled for the aesthetic alone.\n\nThe coffee menu covers the expected range without much fuss, but it is the desserts people actually come back for: a soft-serve ice cream that rotates through inventive flavours, and a cheesecake with enough of a local reputation to be worth ordering entirely separately from any coffee. None of it takes itself especially seriously, which suits the room. It is also properly pet-friendly, in the sense of dogs actually being welcome to sit with you rather than merely tolerated near the door, which says something about the unhurried pace the whole place is built around. Chang Moi rewards a bit of wandering beyond this one stop.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/monday-attack_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/monday-attack_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/monday-attack_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8ba26d5d-9669-57d4-835f-990622a4c07f",
+          "order": 0,
+          "title": "Monday Attack | มันเดย์ แอทแทค",
+          "caption": "A very specific decade, committed to entirely — and a cheesecake worth ordering with no coffee at all.",
+          "latitude": 18.79056894701471,
+          "longitude": 98.99523062698415,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/monday-attack.mp3",
+          "audioDurationSeconds": 90,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Somewhere between a New York apartment and a video-store rental shelf circa 1988, this cafe has landed on a very specific decade and stuck with it.\n\nYou're in Chang Moi, a district just east of the old city walls that's been quietly filling up with independent cafés and small shops in recent years, and Monday Attack sits among them with an interior built entirely around 1980s Americana — bold colour blocking, playful retro graphics, the kind of styling that feels lifted straight from an old apartment rather than assembled for the aesthetic alone.\n\nThe coffee menu covers the expected range without much fuss, but it's the desserts that people actually come back for — a soft-serve ice cream that rotates through inventive flavours, and a cheesecake that's built up enough of a local reputation to be worth ordering on its own, separate from any coffee at all. None of it takes itself especially seriously, which suits the room.\n\nIt's also properly pet-friendly, in the sense of dogs actually being welcome to sit with you rather than merely tolerated near the door, which says something about the relaxed, unhurried pace the whole place is built around — nobody's rushing you out for the next table.\n\nChang Moi rewards a bit of wandering beyond just this one stop — several similarly independent cafés and small studios have opened along these same streets in the past few years, and most of them are within a five-minute walk from here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 90,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.79056894701471,
+      "centroidLongitude": 98.99523062698415,
+      "city": "Chiang Mai",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d6e8ca26-c945-5631-af40-6e4894cd536f",
+      "createdAt": "2026-07-24",
+      "title": "Nam Lod Cave (Tham Lod) | ถ้ำน้ำลอด",
+      "shortDescription": "A kilometre and a half of cave with a river running through it, crossed by bamboo raft and pressure lamp to a chamber of centuries-old coffins.",
+      "longDescription": "A river runs straight through the middle of this cave, and for well over a kilometre it is the only way through. Tham Lod, sometimes written Nam Lod, sits in Pang Mapha district of Mae Hong Son province, roughly an hour's drive north of Pai along a winding mountain road. The cave runs for around a kilometre and a half underground, its ceiling in places rising fifty metres overhead, divided into three main chambers with names that do most of the describing themselves: the Column Cave, dominated by huge stalagmite formations; the Doll Cave; and, deepest in, the Coffin Cave.\n\nThe way through is by bamboo raft, guided by a local boatman carrying a pressure lamp, poling you through sections of near-total darkness where the lamp becomes the only light on the water. It is an odd, quiet sensation, and it is genuinely the only practical way to reach the final chamber. That chamber is where the cave earns its name — the Coffin Cave holds a scattering of centuries-old wooden coffins, left by a people whose identity remains only partly understood. Visit between November and May if you have any choice in timing.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nam-lod-cave_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nam-lod-cave_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nam-lod-cave_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f7bd5e20-0335-504d-8974-0c39b0f5755f",
+          "order": 0,
+          "title": "Nam Lod Cave (Tham Lod) | ถ้ำน้ำลอด",
+          "caption": "The coffins and formations are exactly where they were found, and the darkness is real darkness, not a lighting effect.",
+          "latitude": 19.593200004554525,
+          "longitude": 98.27369033726771,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nam-lod-cave.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "A river runs straight through the middle of this cave, and for well over a kilometre, it's the only way through.\n\nYou're at Tham Lod, sometimes written Nam Lod, in Pang Mapha district of Mae Hong Son province, roughly an hour's drive north of Pai along a winding mountain road. The cave itself runs for around a kilometre and a half underground, its ceiling in places rising fifty metres overhead, and it's divided into three main chambers with names that do most of the describing themselves: the Column Cave, dominated by huge stalagmite formations; the Doll Cave; and, deepest in, the Coffin Cave.\n\nThe way through is by bamboo raft, guided by a local boatman carrying a pressure lamp, poling you through sections of near-total darkness where the lamp becomes the only light for you and everyone else on the water. It's an odd, quiet sensation, drifting through rock in the dark on a raft made from a handful of bamboo poles lashed together, and it's genuinely the only practical way to reach the final chamber.\n\nThat final chamber is where the cave earns its name — the Coffin Cave holds a scattering of centuries-old wooden coffins, left by a people whose identity remains only partly understood, viewable now only by lamp-light from the raft rather than up close.\n\nNone of this is manufactured for visitors; the coffins and formations are exactly where they were found, and the darkness is real darkness, not a lighting effect. That rawness is precisely what separates Tham Lod from a more polished show-cave experience.\n\nVisit between November and May if you have any choice in timing — outside that window the water level makes the rafting either impossible or considerably less comfortable, depending on the season."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.593200004554525,
+      "centroidLongitude": 98.27369033726771,
+      "city": "Pang Mapha",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bbffa638-d565-57a1-99dd-d10273e07874",
+      "createdAt": "2026-07-24",
+      "title": "One Nimman | วัน นิมมาน",
+      "shortDescription": "A market hall modelled on a fifteenth-century French village, in Newar brickwork from Nepal, filtered through northern Thailand's Lanna tradition.",
+      "longDescription": "The market hall borrows its shape from a French village built in the thirteen hundreds, and the brickwork borrows from Nepal — a fairly unusual pair of references for a shopping complex in northern Thailand. One Nimman sits on Nimmanhaemin Soi 1, a purpose-built lifestyle and cultural complex arranged around a central clocktower and open marketplace in the manner of a traditional village square.\n\nThe wooden-roofed market hall at its centre is modelled specifically on a fifteenth-century hall in Monpazier, in southwest France, while the terracotta brickwork and arched entrances draw on thirteenth-century Newar architecture from Nepal, filtered through the vernacular of northern Thailand's own Lanna building tradition. It sounds unlikely on paper and largely works precisely because none of the references are treated as more important than the others. The name plays on the address: \"Nimman\" shortened from Nimmanhaemin, and \"Soi 1,\" the side street already known locally for arts and crafts decades before any of the current buildings existed. Inside is a mix of design studios, independent shops, restaurants and galleries, with a night market and live music turning the central plaza into a genuine gathering point. Come back after dark if your first visit is by day.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/one-nimman_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/one-nimman_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/one-nimman_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b7f2bcf7-49e7-586e-b662-f6e21f8ce705",
+          "order": 0,
+          "title": "One Nimman | วัน นิมมาน",
+          "caption": "Three architectural traditions borrowed at once, and none of them treated as more important than the others.",
+          "latitude": 18.800247504554147,
+          "longitude": 98.96759949999999,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/one-nimman.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The market hall you're looking at borrows its shape from a French village built in the thirteen hundreds, and the brickwork borrows from Nepal — which is a fairly unusual pair of references for a shopping complex in northern Thailand to reach for.\n\nYou're at One Nimman, on Nimmanhaemin Soi 1, a purpose-built lifestyle and cultural complex arranged around a central clocktower and open marketplace, in the manner of a traditional village square. The wooden-roofed market hall at its centre is modelled specifically on a fifteenth-century hall in Monpazier, in southwest France, while the terracotta brickwork and arched entrances draw on thirteenth-century Newar architecture from Nepal, filtered through the vernacular of northern Thailand's own Lanna building tradition. It sounds like an unlikely combination on paper, and largely works precisely because none of the references are treated as more important than the others.\n\nThe name itself plays on the address: \"Nimman\" shortened from Nimmanhaemin, the road this whole neighbourhood takes its identity from, and \"Soi 1\" — the specific side street that, decades ago, was already known locally for arts and crafts, long before any of the current buildings existed.\n\nWhat's grown up inside that architecture is a mix of design studios, independent shops, restaurants and galleries, with a night market and regular live music turning the central plaza into something closer to a genuine gathering point than a conventional mall. It's less about any single shop and more about the plaza itself as a place people actually linger in rather than pass through.\n\nCome back after dark if your first visit is by day — the lighting across the brick facades and the night market filling the central square give One Nimman a noticeably different character once the sun's gone down."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.800247504554147,
+      "centroidLongitude": 98.96759949999999,
+      "city": "Chiang Mai",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Public Square",
+        "Architecture",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f2861f71-87bc-54dd-98cd-cce1ac84a11f",
+      "createdAt": "2026-07-24",
+      "title": "PAÑPURI WELLNESS SUITE | ปัญญ์ปุริ เวลเนส สวีท",
+      "shortDescription": "A Thai-founded wellness brand building its identity on Lanna craft and local herbal compress work rather than imported spa technique.",
+      "longDescription": "Thai spa culture usually leans on imported ideas — Balinese massage, Swedish technique, French skincare. This particular suite has built its whole identity on doing the opposite. PAÑPURI, a Thai-founded fragrance and wellness brand with an international reputation, occupies the first floor of Zone B at One Nimman, a dedicated wellness suite rather than a standard hotel spa attached to somewhere else.\n\nThe design draws directly on Lanna craftsmanship — terracotta tones, celadon ceramics, textures worked by hand rather than machine-finished, all built to feel grounded and specifically northern Thai rather than generically Asian. Seven treatment rooms sit behind the entrance, a mix of single and couple rooms covering body, facial and foot treatments. What sets the experience apart is the herbal compress work: bundles of local herbs, sourced from farming communities around Chiang Mai and prepared according to traditional Thai and Lanna medicinal principles, steamed and pressed into the skin in a practice that predates the wellness industry by a considerable margin. The fragrance retail up front and the treatment rooms behind it are telling the same story in two formats. Book the herbal compress specifically rather than a generic massage.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/panpuri-wellness-suite_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/panpuri-wellness-suite_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bd62c610-4ea6-5d56-8217-694ea2962e37",
+          "order": 0,
+          "title": "PAÑPURI WELLNESS SUITE | ปัญญ์ปุริ เวลเนส สวีท",
+          "caption": "Ingredients and technique both rooted in this specific region, rather than borrowed wholesale and rebranded.",
+          "latitude": 18.803260479131456,
+          "longitude": 98.9681045455023,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/panpuri-wellness-suite.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Thai spa culture usually leans on imported ideas — Balinese massage, Swedish technique, French skincare. This particular suite has built its whole identity on doing the opposite.\n\nYou're on the first floor of Zone B at One Nimman, where PAÑPURI, a Thai-founded fragrance and wellness brand with an international reputation, has built a dedicated wellness suite rather than a standard hotel spa attached to somewhere else. The design draws directly on Lanna craftsmanship — terracotta tones, celadon ceramics, textures worked by hand rather than machine-finished, all of it built to feel grounded and specifically northern Thai rather than generically \"Asian spa.\"\n\nSeven treatment rooms sit behind that entrance, a mix of single and couple rooms, covering body, facial and foot treatments across the full range you'd expect from a serious spa brand. What sets the experience apart, though, is the herbal compress work — bundles of local herbs, sourced from farming communities around Chiang Mai and prepared according to traditional Thai and Lanna medicinal principles, steamed and pressed into the skin in a practice that predates the wellness industry by a considerable margin.\n\nThat's really the throughline here: ingredients and technique both rooted in this specific region, rather than borrowed wholesale from somewhere else and rebranded for a Thai market. The fragrance retail up front and the treatment rooms behind it are telling the same story in two different formats.\n\nIf your schedule allows it, book the herbal compress treatment specifically rather than a generic massage — it's the one service here that's genuinely difficult to find done properly outside this region."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.803260479131456,
+      "centroidLongitude": 98.9681045455023,
+      "city": "Chiang Mai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3dd39c1b-0183-549c-a698-1e3e029fef7b",
+      "createdAt": "2026-07-24",
+      "title": "Pai Canyon | ปายแคนยอน",
+      "shortDescription": "A maze of knife-edge red sandstone ridges with thirty-metre drops and no railings anywhere — free to enter, eight kilometres south of Pai.",
+      "longDescription": "The path ahead is barely wider than your own shoulders, with a thirty-metre drop on either side, and somehow this is still one of the most relaxed sunset spots in northern Thailand. Pai Canyon, known locally as Kong Lan, sits about eight kilometres south of Pai town along Route 1095.\n\nThis is not a canyon in the grander sense of the word. It is a maze of narrow red sandstone ridges, carved out over decades by erosion into a network of knife-edge trails threading between drops of thirty to fifty metres. There is no entrance fee and no real infrastructure beyond a car park and a short staircase up to the first ridge, roughly a five-minute climb from the road. Once up top the trails fork in several directions across the ridgeline, and most visitors gather at the first main viewpoint for sunset, when the sandstone and surrounding valley turn a genuinely striking gold. Head further along the narrower paths and the crowds thin considerably, simply because fewer people are willing to walk the tighter sections. None of the trails have railings, which is precisely why the place still feels wild rather than managed.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pai-canyon_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pai-canyon_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "82745554-a99c-5583-bc85-c60e137b9722",
+          "order": 0,
+          "title": "Pai Canyon | ปายแคนยอน",
+          "caption": "No railings anywhere — you're trusted to judge the width of the path and your own footing, in a way that would be fenced off almost anywhere else.",
+          "latitude": 19.37222846915853,
+          "longitude": 98.46075534470936,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pai-canyon.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The path ahead of you is barely wider than your own shoulders, with a thirty-metre drop on either side — and somehow this is still one of the most relaxed sunset spots in the whole of northern Thailand.\n\nYou're at Pai Canyon, known locally as Kong Lan, about eight kilometres south of Pai town along Route 1095. This isn't a canyon in the grander sense of the word — it's a maze of narrow red sandstone ridges, carved out over decades by erosion into a network of knife-edge trails threading between drops of thirty to fifty metres. There's no entrance fee and no real infrastructure beyond a car park and a short staircase up to the first ridge, which is roughly a five-minute climb from the road.\n\nOnce you're up top, the trails fork in several directions across the ridgeline, and most visitors gather at the first main viewpoint for sunset, when the red sandstone and the surrounding valley turn a genuinely striking gold. Head a little further along the narrower paths, though, and the crowds thin considerably, even at peak sunset hour, simply because fewer people are willing to walk the tighter sections.\n\nNone of the trails here have railings, which is precisely why the whole place still feels wild rather than managed — you're trusted to judge the width of the path and your own footing for yourself, in a way that would likely be fenced off entirely almost anywhere else.\n\nIf you can, visit in the dry season between March and May — hazy skies from seasonal burning make for genuinely more dramatic, colour-saturated sunsets here than the clearer months earlier in the year."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.37222846915853,
+      "centroidLongitude": 98.46075534470936,
+      "city": "Pai",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "94b43677-45c7-5eb2-a34f-59d057b4a61e",
+      "createdAt": "2026-07-24",
+      "title": "Patongo Ko Neng | ปาท่องโก๋ โกเหน่ง",
+      "shortDescription": "Thirty-five years of frying dough near Warorot Market, latterly shaped into dragons, dinosaurs and cartoon characters to order.",
+      "longDescription": "Fried dough does not usually need to be photogenic, and yet here is a stall that has spent thirty-five years proving it can be. On Praisanee Road, close to Warorot Market on the eastern edge of the old city, this patongko stall has been frying at the same spot since long before \"Instagrammable\" was a word anyone used.\n\nPatongko is Thailand's answer to the Chinese fried dough stick — plain, simple, usually eaten dunked in warm soy milk or Ovaltine for breakfast. For decades that is precisely what this stall sold, in the ordinary straight-stick shape found across the country. Somewhere along the way the idea changed: rather than simply twisting the dough into sticks, the owner began shaping it — dragons, dinosaurs, cartoon characters, entire small sculptures dropped into hot oil and pulled out holding their shape. A plain patongko still costs a couple of baht a piece, while the shaped versions, worked and fried to order, run closer to twenty or thirty baht each and draw a small crowd filming the process. Go early if you want to watch the shaping rather than just eat the results.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/patongo-ko-neng_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "20788acd-e7d8-514f-8dba-5f69627d4dbe",
+          "order": 0,
+          "title": "Patongo Ko Neng | ปาท่องโก๋ โกเหน่ง",
+          "caption": "The shaped patongko are still exactly the same dough, same oil, same technique — just formed with a bit more patience before they go in.",
+          "latitude": 18.790147823265446,
+          "longitude": 99.00178244002868,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/patongo-ko-neng.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Fried dough doesn't usually need to be photogenic, and yet here's a stall that's spent thirty-five years proving it can be.\n\nYou're on Praisanee Road, close to Wororot Market on the eastern edge of the old city, at a patongko stall that's been frying dough at this exact spot since long before \"Instagrammable\" was a word anyone used. Patongko is Thailand's answer to the Chinese fried dough stick — plain, simple, usually eaten dunked in warm soy milk or Ovaltine for breakfast. For decades that's precisely what this stall sold, in the ordinary straight-stick shape found at stalls across the country.\n\nSomewhere along the way, the idea changed: rather than simply twisting the dough into sticks, the owner began shaping it — dragons, dinosaurs, cartoon characters, entire small sculptures dropped into hot oil and pulled out holding their shape. A plain patongko still costs next to nothing here, a couple of baht a piece, but the shaped versions, worked and fried to order, run closer to twenty or thirty baht each and draw a small crowd of people filming the process rather than simply ordering breakfast.\n\nIt's a fairly good example of how a genuinely traditional, humble street food can evolve without losing what made it worth eating in the first place — the shaped patongko are still exactly the same dough, same oil, same technique, just formed with a bit more patience before they go in.\n\nGo early if you want to watch the shaping happen rather than just eat the results — the stall runs a proper breakfast trade, and the more elaborate shapes tend to be made fresh earliest in the morning."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.790147823265446,
+      "centroidLongitude": 99.00178244002868,
+      "city": "Chiang Mai",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "54591ce1-55ef-5135-8bcb-6b3b3e19e045",
+      "createdAt": "2026-07-24",
+      "title": "Sacred Heart Cathedral | อาสนวิหารพระหฤทัย",
+      "shortDescription": "The third church to stand on this site since 1931 — the seat of the Catholic Diocese of Chiang Mai, in a city built around Buddhist temples.",
+      "longDescription": "A Catholic cathedral in a city built almost entirely around Buddhist temples tends to stand out simply by being there at all. Sacred Heart is the principal church of the Catholic Diocese of Chiang Mai, and the large brick building here is actually the third structure to serve that role.\n\nThe first Sacred Heart church dates to 1931, built as a mission outpost in what was, and largely remains, a predominantly Buddhist region. A larger church followed in 1965, the same year the Diocese of Chiang Mai was formally created, and the building standing now was inaugurated in October 1999 — modern, spacious, and deliberately built to serve a growing congregation rather than simply replace what came before. The cathedral still functions as a genuinely active parish, with daily Mass in Thai and an English service on Sundays that draws a noticeably international congregation of missionaries, expatriates and visiting Catholics. A school and kindergarten sit alongside, both dating to 1932, making the site as much an educational institution as a place of worship. What is worth sitting with here is less the architecture, fairly plain by the standards of the temples nearby, than the continuity.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sacred-heart-cathedral-chiang-mai_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sacred-heart-cathedral-chiang-mai_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "401d6a03-a14e-5dd0-bb99-039a3fa926c6",
+          "order": 0,
+          "title": "Sacred Heart Cathedral | อาสนวิหารพระหฤทัย",
+          "caption": "Three successive buildings on one site, serving one small but persistent community for close to a century now.",
+          "latitude": 18.776434257932667,
+          "longitude": 99.00350852274148,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sacred-heart-cathedral-chiang-mai.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "A Catholic cathedral in a city built almost entirely around Buddhist temples tends to stand out simply by being there at all.\n\nYou're outside Sacred Heart Cathedral, the principal church of the Catholic Diocese of Chiang Mai, and the large brick building in front of you is actually the third structure to serve this exact role. The first Sacred Heart church here dates to 1931, built as a mission outpost in what was, and largely remains, a predominantly Buddhist region. A larger church followed in 1965, the same year the Diocese of Chiang Mai itself was formally created, and the building you're looking at now was inaugurated in October 1999 — modern, spacious, and deliberately built to serve a growing congregation rather than simply replace what came before.\n\nThe cathedral still functions as a genuinely active parish, with daily Mass held in Thai and an English service on Sundays that draws a noticeably international congregation — missionaries, expatriates, and visiting Catholics passing through northern Thailand. A school and kindergarten sit alongside the church, both dating back to 1932, making the whole site as much an educational institution as a place of worship.\n\nWhat's worth sitting with here is less the architecture, which is fairly plain by the standards of the temples nearby, and more the fact of its continuity — three successive buildings on one site, serving one small but persistent community for close to a century now.\n\nIf you visit during a service, feel free to sit quietly at the back — visitors are welcome, and the English Mass on Sunday is generally the easiest to follow if you're not fluent in Thai."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.776434257932667,
+      "centroidLongitude": 99.00350852274148,
+      "city": "Chiang Mai",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "824a6e4b-89c5-54ac-bb67-0b33ccb9e2cd",
+      "createdAt": "2026-07-24",
+      "title": "Silver Temple (Wat Sri Suphan) | วัดศรีสุพรรณ (พระอุโบสถเงิน)",
+      "shortDescription": "An ordination hall clad entirely in worked silver, built in 2004 by the Wualai silversmith community whose families have done this for two centuries.",
+      "longDescription": "Every surface here has been worked by hand, by people whose families have been doing exactly this for roughly two hundred years. Wat Sri Suphan on Wualai Road was founded around 1501 during the reign of the Lanna king Phra Muang Kaew, though what draws people today has almost nothing to do with its medieval origins.\n\nThe temple sits at the heart of Wualai, a neighbourhood of silversmiths whose ancestors were brought to Chiang Mai roughly two centuries ago by King Kawila, who invited skilled metalworking families from further west to help rebuild the city after a period of decline. That community has never left, and the temple has remained its spiritual centre ever since. The building's most famous form dates only to 2004, when the abbot decided to rebuild the ubosot — the main ordination hall — using the skills of the local silversmith community rather than standard temple construction. The result is clad entirely in silver, aluminium and zinc worked into elaborate relief panels covering everything from the outer walls to the roofline. One practical note: by long-held tradition, women are not permitted inside the ubosot itself, though the surrounding grounds remain open to everyone.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/silver-temple-wat-sri-suphan_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/silver-temple-wat-sri-suphan_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/silver-temple-wat-sri-suphan_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/silver-temple-wat-sri-suphan_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4879535c-7401-5e71-847c-86ad5267c9a5",
+          "order": 0,
+          "title": "Silver Temple (Wat Sri Suphan) | วัดศรีสุพรรณ (พระอุโบสถเงิน)",
+          "caption": "A medieval temple rebuilt in 2004 by the silversmiths next door — every panel worked by hand, glowing rather than merely shining.",
+          "latitude": 18.779895730537337,
+          "longitude": 98.98364303862442,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/silver-temple-wat-sri-suphan.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Every surface in front of you has been worked by hand, by people whose families have been doing exactly this for roughly two hundred years.\n\nThis is Wat Sri Suphan, on Wualai Road, first founded around 1501 during the reign of the Lanna king Phra Muang Kaew, though what draws people here today has almost nothing to do with its medieval origins. The temple sits at the heart of Wualai, a neighbourhood of silversmiths whose ancestors were brought to Chiang Mai roughly two centuries ago by King Kawila, who invited skilled metalworking families from further west to help rebuild the city after a period of decline. That community has never left, and the temple has remained its spiritual centre ever since.\n\nThe building's current, most famous form dates only to 2004, when the abbot decided to rebuild the ubosot — the main ordination hall — using the exact skills of the local silversmith community rather than standard temple construction techniques. The result is a structure entirely clad in silver, aluminium and zinc worked into elaborate relief panels, covering everything from the outer walls to the roofline, glowing rather than merely shining in direct sun.\n\nThere's one important practical note worth knowing before you go in: by long-held tradition, women are not permitted inside the ubosot itself, though the surrounding temple grounds, and the silversmiths often working in view nearby, remain open to everyone. It's a custom rooted in older Buddhist beliefs rather than anything specific to this particular temple, and it's worth respecting rather than debating on-site.\n\nTake a slow lap of the exterior panels before you leave — many depict scenes from Buddhist teaching stories, and the detail rewards genuinely close, unhurried looking rather than a quick photo from a distance."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.779895730537337,
+      "centroidLongitude": 98.98364303862442,
+      "city": "Chiang Mai",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "aa4cffca-ea34-5706-9b59-2c96da3189be",
+      "createdAt": "2026-07-24",
+      "title": "Su Tong Pae Bridge | สะพานซูตองเป้",
+      "shortDescription": "Five hundred metres of hand-built bamboo walkway across the rice paddies, built by villagers and monks so the dawn alms round could cross the wetland.",
+      "longDescription": "Its name translates roughly to \"successful prayer,\" and there is a story behind that which has nothing to do with tourism. Su Tong Pae is a bamboo walkway stretching over five hundred metres across rice paddies and wetland, connecting the village of Ban Kung Mai Sak to Wat Tham Pha Daeng on the far side. It was built entirely by hand, a joint effort between the villagers and the small community of monks at the temple, and completed in just over two months — a genuinely communal project rather than something contracted out or built for visitors.\n\nThe name comes from the Tai Yai language, and it reflects why the bridge was built in the first place: to give roughly seven monks at Wat Tham Pha Daeng a reliable route across the wetland each morning for tak bat, the traditional alms round, when monks walk out at dawn to receive food offerings from local villagers. That ritual still happens daily, and if you are here early enough you can watch it directly. Beyond the ritual, the walk itself is the draw — bamboo underfoot the whole way, rice fields opening out on either side, water buffalo sometimes grazing below. Aim to arrive around six in the morning.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/su-tong-pae-bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/su-tong-pae-bridge_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7cde424c-93cc-54ce-a458-2e4a067c71c0",
+          "order": 0,
+          "title": "Su Tong Pae Bridge | สะพานซูตองเป้",
+          "caption": "Built by hand in two months by villagers and monks, so that the dawn alms round would have a way across the wetland.",
+          "latitude": 19.432636244790146,
+          "longitude": 97.94863051001265,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/su-tong-pae-bridge.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Its name translates, roughly, to \"successful prayer,\" and there's a story behind that which has nothing to do with tourism.\n\nYou're at one end of Su Tong Pae Bridge, a bamboo walkway stretching over five hundred metres across rice paddies and wetland, connecting the village of Ban Kung Mai Sak to Wat Tham Pha Daeng on the far side. It was built entirely by hand, a joint effort between the villagers and the small community of monks at the temple, and completed in just over two months — a genuinely communal project rather than something contracted out or built for visitors from the start.\n\nThe name comes from the Tai Yai language, and it reflects why the bridge was built in the first place: to give roughly seven monks at Wat Tham Pha Daeng a reliable route across the wetland each morning for tak bat, the traditional alms round, when monks walk out at dawn to receive food offerings from local villagers. That ritual still happens daily, and if you're here early enough, you can watch it directly — soft light, quiet footsteps on bamboo, villagers waiting with rice and offerings as the monks cross.\n\nWhat makes the bridge worth the visit beyond that daily ritual is simply the walk itself — bamboo underfoot the entire way, rice fields opening out on either side, water buffalo sometimes visible grazing below, a slow half-hour or so there and back with very little to rush for.\n\nIf you can manage an early start, aim to arrive around six in the morning — the alms-giving ritual and the low light together make this a genuinely different experience from a midday visit."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.432636244790146,
+      "centroidLongitude": 97.94863051001265,
+      "city": "Mae Hong Son",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Bridge",
+        "Faith"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "98069cd1-d905-5a17-9842-284959b96c13",
+      "createdAt": "2026-07-24",
+      "title": "Tha Pai Hot Spring | น้ำพุร้อนท่าปาย",
+      "shortDescription": "Mineral water emerging at up to a hundred degrees, channelled into a series of forest pools — one hot enough only for boiling eggs.",
+      "longDescription": "Somewhere beneath your feet, water is being heated close to boiling point by rock pushed up through ancient fault lines, and it has been doing that for a very long time. Tha Pai Hot Spring sits eight kilometres south of Pai town inside Huai Nam Dang National Park, one of the larger protected wilderness areas in this part of northern Thailand.\n\nThe water emerges from underground at somewhere between eighty and a hundred degrees Celsius, mineral-rich with silica, sulphur, calcium and magnesium, and the park has channelled that heat into a series of pools rather than one single spring. Each serves a different purpose, and it is worth knowing which is which before you get in. The hottest zone, close to boiling, is used only for boiling eggs, not bathing. Below that sits an observation pool too hot for anything but looking at. The main bathing pools run around thirty-eight to forty-two degrees, warm enough for a proper soak without discomfort, while the lowest pools cool further still. The minerals are the actual draw for most visitors, long credited locally with easing joint pain and improving circulation. Bring a swimsuit; the walk between pools takes you through forest rather than a single paved area.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tha-pai-hot-spring_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1b9a60ea-7dc6-5d1a-bce0-65a1d2ced24a",
+          "order": 0,
+          "title": "Tha Pai Hot Spring | น้ำพุร้อนท่าปาย",
+          "caption": "One pool is for boiling eggs, one is for looking at, and the rest are for a long unhurried soak.",
+          "latitude": 19.346356352080885,
+          "longitude": 98.47066524293787,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tha-pai-hot-spring.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Somewhere beneath your feet, water is being heated to close to boiling point by rock that was pushed up here through ancient fault lines — and it's been doing that for a very long time.\n\nYou're at Tha Pai Hot Spring, eight kilometres south of Pai town and inside Huai Nam Dang National Park, one of the larger protected wilderness areas in this part of northern Thailand. The water emerges from underground at somewhere between eighty and a hundred degrees Celsius, mineral-rich with silica, sulphur, calcium and magnesium, and the park has channelled that heat into a series of pools rather than one single spring.\n\nEach pool serves a different purpose, and it's worth knowing which is which before you get in. The hottest zone, close to boiling, is used only for boiling eggs, not bathing. Below that sits an observation pool too hot for anything but looking at. The main bathing pools run somewhere around thirty-eight to forty-two degrees, warm enough for a proper soak without discomfort, while the lowest pools cool further still, gentle enough for families and longer, unhurried sessions.\n\nThe minerals in the water are the actual draw for most visitors — long attributed locally with easing joint pain, improving circulation, and helping various skin conditions, benefits that geothermal springs like this one have been credited with across cultures for a very long time, even where the science remains somewhat informal.\n\nBring a swimsuit and something to carry your things in, since the walk between the different pools takes you through forest rather than a single paved area — and go later in the afternoon if you'd rather avoid the midday crowds."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.346356352080885,
+      "centroidLongitude": 98.47066524293787,
+      "city": "Pai",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Engineering",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2ca66553-f0da-5ccc-822f-bc737d6054a0",
+      "createdAt": "2026-07-24",
+      "title": "Tha Phae Gate | ประตูท่าแพ",
+      "shortDescription": "The eastern gate through Chiang Mai's 1296 walls, where goods from China, Myanmar and Laos once entered — rebuilt in brick in the 1980s.",
+      "longDescription": "The name means \"raft landing,\" which tells you something the gate itself no longer can: that a river trade route once ended more or less exactly here. Tha Phae Gate is the eastern entrance through the old city walls of Chiang Mai, a city King Mengrai laid out as a fortified square back in 1296. This gate marked the point where goods arriving from the east — silk, silver, spices carried in from China, Myanmar and Laos — were unloaded and brought into the city, making it historically the busiest of the old gates rather than simply the most photographed one today.\n\nWhat you are actually looking at is a twentieth-century reconstruction rather than the original structure. An earlier restoration took place in the mid-1960s, and the version standing now was rebuilt between 1985 and 1987 by the Chiang Mai Municipality alongside the Fine Arts Department, using red brick to approximate the look of the old fortifications without claiming to be a precise historical replica. The open square in front has become the city's default gathering point, used for Loy Krathong, Songkran and more or less any public celebration. Come back after dark; the gate is lit at night.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tha-phae-gate_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tha-phae-gate_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tha-phae-gate_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "fe6f519a-44f6-5677-80f0-7e3b1504a783",
+          "order": 0,
+          "title": "Tha Phae Gate | ประตูท่าแพ",
+          "caption": "Less a historical monument you view quietly, more a public square that happens to have a very old gate in the middle of it.",
+          "latitude": 18.787949872647918,
+          "longitude": 98.99337343857569,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tha-phae-gate.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The name means \"raft landing,\" which tells you something the gate itself no longer can — that a river trade route once ended more or less exactly where you're standing.\n\nYou're at Tha Phae Gate, the eastern entrance through the old city walls of Chiang Mai, a city King Mengrai laid out as a fortified square back in 1296. This gate marked the point where goods arriving from the east — silk, silver, spices carried in from China, Myanmar and Laos — were unloaded and brought into the city, making it historically the busiest of the old gates rather than simply the most photographed one today.\n\nWhat you're actually looking at is a twentieth-century reconstruction rather than the original structure. An earlier restoration took place in the mid-1960s, and the version standing now was rebuilt between 1985 and 1987 by the Chiang Mai Municipality working alongside the Fine Arts Department, using red brick to approximate the look of the old fortifications without claiming to be a precise historical replica.\n\nThe open square in front of the gate has become the city's default gathering point — used for Loy Krathong, Songkran, and more or less any public celebration Chiang Mai puts on, along with a fairly constant stream of street performers and pigeon-feeding tourists on an ordinary evening. It's less a historical monument you view quietly and more a public square that happens to have a very old gate in the middle of it.\n\nCome back after dark if you're only passing through by day — the gate is lit at night, and the square in front of it tends to properly come alive once the heat's gone out of the afternoon."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.787949872647918,
+      "centroidLongitude": 98.99337343857569,
+      "city": "Chiang Mai",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a64371c0-c3ab-5805-ac83-191ba480d234",
+      "createdAt": "2026-07-24",
+      "title": "The Terracotta Garden at Lamphun | สวนไม้ไทยบ้านพ่อเลี้ยงหมื่น",
+      "shortDescription": "A walk-through garden of unglazed terracotta sculpture built over more than a decade by one family, drawing on Khmer and Chinese traditions.",
+      "longDescription": "Everything you can see was fired in a kiln before it was placed here — statues, columns, entire garden features, all of it clay first. The Terracotta Garden is a privately built site around five kilometres outside Lamphun town, the work of the Maiwan family, who run a terracotta arts company under the name Phor Liang Meun. What began as a workshop for their own craft slowly grew, over more than a decade, into a walk-through garden of terracotta sculpture drawing heavily on Khmer and Chinese artistic traditions rather than the Lanna style more typical of temples in this part of Thailand.\n\nThe scale is what tends to surprise first-time visitors: not a handful of decorative pieces scattered around a café garden, but dense rows and courtyards of figures, columns and architectural fragments, all unglazed terracotta in its natural reddish-brown, set against carefully kept greenery that makes the place feel closer to an excavated ruin than a modern private project. That illusion is very much intentional. Because everything was purpose-built rather than inherited from history, the family has been free to lean into an aesthetic of scale and accumulation. There is a café on-site, worth timing your visit around.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/terracotta-garden-lamphun_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/terracotta-garden-lamphun_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/terracotta-garden-lamphun_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/terracotta-garden-lamphun_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/terracotta-garden-lamphun_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b716e603-762f-55f2-9f90-864a7faf184e",
+          "order": 0,
+          "title": "The Terracotta Garden at Lamphun | สวนไม้ไทยบ้านพ่อเลี้ยงหมื่น",
+          "caption": "Hundreds of pieces arranged with the density of a real archaeological complex, but entirely new.",
+          "latitude": 18.60784214956827,
+          "longitude": 98.9719455789614,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/terracotta-garden-lamphun.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Everything you can see was fired in a kiln before it was placed here — statues, columns, entire garden features, all of it clay first.\n\nYou're at the Terracotta Garden, a privately built site around five kilometres outside Lamphun town, the work of the Maiwan family, who run a terracotta arts company under the name Phor Liang Meun. What began as a workshop for their own craft slowly grew, over more than a decade, into this — a walk-through garden of terracotta sculpture, drawing heavily on Khmer and Chinese artistic traditions rather than the Lanna style more typical of temples in this part of Thailand.\n\nThe scale is what tends to surprise first-time visitors: not a handful of decorative pieces scattered around a café garden, but dense rows and courtyards of figures, columns, and architectural fragments, all unglazed terracotta in its natural reddish-brown, set against carefully kept greenery that makes the whole place feel closer to an excavated ruin than a modern private project.\n\nThat illusion is very much intentional. Because everything here was purpose-built rather than inherited from history, the family has been free to lean into an aesthetic of scale and accumulation that a genuine ancient site rarely offers in one place — hundreds of pieces, arranged with the density of a real archaeological complex, but entirely new.\n\nThere's a café on-site as well, worth timing your visit around — it's a genuinely pleasant spot to sit with a drink once you've walked the full garden, rather than something to rush through on the way out."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.60784214956827,
+      "centroidLongitude": 98.9719455789614,
+      "city": "Lamphun",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Park",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3c661511-7d2e-50a0-abbd-d25e2fa38f65",
+      "createdAt": "2026-07-24",
+      "title": "Thung Bua Tong Fields | ทุ่งบัวตองดอยแม่อูคอ",
+      "shortDescription": "Four hundred acres of Mexican sunflower turning a whole mountainside solid yellow for a few short weeks from mid-November.",
+      "longDescription": "None of what covers this mountainside is actually native to Thailand, and yet it has become one of the most distinctly northern Thai sights on the calendar. Doi Mae U Kho, in Khun Yuam district, holds roughly a thousand rai — something close to four hundred acres — of hillside covered in bua tong, Mexican sunflower, a species introduced to this area rather than growing here naturally. Local accounts credit its arrival to reforestation efforts on land once cleared for logging concessions, and whatever the exact story, the flower has taken to these slopes completely at an altitude of around sixteen hundred metres.\n\nThe bloom is strictly seasonal, peaking from around mid-November into December, when the entire mountainside turns a solid, almost unbroken yellow that is genuinely difficult to photograph in a way that captures the scale of it. A hilltop pavilion offers the widest panoramic view, looking out over slope after slope rolling into the surrounding hills, with entry free of charge. Because the bloom window is so narrow, weekends during peak season draw real crowds. Aim for a weekday, and arrive early enough to catch the light before the day's haze sets in.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/thung-bua-tong-fields_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/thung-bua-tong-fields_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0c79ff7b-f410-5b10-b84d-c2e662499ebf",
+          "order": 0,
+          "title": "Thung Bua Tong Fields | ทุ่งบัวตองดอยแม่อูคอ",
+          "caption": "A few short weeks each year when an entire mountainside turns solid, unbroken gold.",
+          "latitude": 18.94406907709185,
+          "longitude": 98.09933414165718,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/thung-bua-tong-fields.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "None of what's covering this mountainside is actually native to Thailand, and yet it's become one of the most distinctly northern Thai sights on the calendar.\n\nYou're at Doi Mae U Kho, in Khun Yuam district, standing above roughly a thousand rai — something close to four hundred acres — of hillside covered in bua tong, Mexican sunflower, a species introduced to this area rather than growing here naturally. Local accounts credit its arrival to reforestation efforts on land once cleared for logging concessions, and whatever the exact story of how it got here, the flower has taken to these slopes completely, at an altitude of around sixteen hundred metres.\n\nThe bloom is strictly seasonal, peaking from around mid-November into December, when the entire mountainside turns a solid, almost unbroken yellow that's genuinely difficult to photograph in a way that captures the actual scale of it. A hilltop pavilion offers the widest panoramic view, looking out over slope after slope of flowers rolling into the surrounding hills, with entry to the site itself free of charge.\n\nBecause the bloom window is so narrow, weekends during peak season draw real crowds — camping is popular here too, and the site has grown facilities to match, tent pitches, showers, parking, all built around what is, at its core, a few short weeks of wildflowers each year.\n\nAim for a weekday if your schedule allows it, and arrive early enough to catch the light before the haze of the day sets in — the gold comes across noticeably richer in the first couple of hours after sunrise."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.94406907709185,
+      "centroidLongitude": 98.09933414165718,
+      "city": "Khun Yuam",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "49b1afd9-3a15-5503-a1e8-98a71d6d60be",
+      "createdAt": "2026-07-24",
+      "title": "Warorot Market | ตลาดวโรรส (กาดหลวง)",
+      "shortDescription": "Chiang Mai's oldest and largest market, developed in 1910 by a royal consort on the site of a relocated royal burial ground.",
+      "longDescription": "A royal cemetery once occupied this ground, and the woman who had it moved is the same one who built what replaced it. Warorot Market, universally known to locals as Kad Luang, or \"Big Market,\" stands on the bank of the Ping River. In 1909, Chao Dara Rasami, a royal consort with genuine influence over the city's development, had the old northern rulers' burial ground relocated to Wat Suan Dok, and the following year developed the cleared land into a market. It has traded continuously ever since, making it the oldest and largest in Chiang Mai by a fair margin.\n\nThe name honours Chao Inthawarorot Suriyawong, the eighth ruler of Chiang Mai, and reflects its riverside position — for decades this was where merchants arriving by boat along the Ping unloaded goods directly into the market. That river trade brought a substantial wave of Yunnanese Chinese merchants into the city from the late nineteenth century onward, and their descendants remain a visible part of the trading community. Unlike the better-known night markets, Warorot runs primarily by day and functions as a genuine local market. Push past the ground floor; the upper level and side streets hold a fair amount most visitors never see.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/warorot-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/warorot-market_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/warorot-market_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "457f5df9-d950-5ece-a451-7d10a52e38f4",
+          "order": 0,
+          "title": "Warorot Market | ตลาดวโรรส (กาดหลวง)",
+          "caption": "Prices set for residents rather than visitors, with several generations of the same families still running individual stalls.",
+          "latitude": 18.79008299451162,
+          "longitude": 99.0009749381769,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/warorot-market.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "A royal cemetery once occupied this ground, and the woman who had it moved is the same one who built what replaced it.\n\nYou're at Warorot Market, universally known to locals as Kad Luang, or \"Big Market,\" on the bank of the Ping River. In 1909, Chao Dara Rasami, a royal consort with genuine influence over the city's development, had the old northern rulers' burial ground relocated to Wat Suan Dok, and the following year, in 1910, she developed the cleared land into a market. It's been trading continuously ever since, making it the oldest and largest market in Chiang Mai by a fair margin.\n\nThe name itself honours Chao Inthawarorot Suriyawong, the eighth ruler of Chiang Mai, and reflects its riverside position — for decades, this was the point where merchants arriving by boat along the Ping unloaded their goods directly into the market. That river trade brought a substantial wave of Yunnanese Chinese merchants into the city from the late nineteenth century onward, and their descendants remain a visible part of the trading community here today.\n\nUnlike Chiang Mai's better-known night markets, Warorot runs primarily by day, and it functions as a genuine local market rather than a tourist-facing one — fresh produce, fabric by the metre, household goods, dried spices, all sold at prices set for residents rather than visitors, with several generations of the same families still running individual stalls.\n\nPush past the ground floor if you've only ever seen the entrance — the upper level and the surrounding side streets hold a fair amount that never makes it into the first five minutes of most people's visit."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.79008299451162,
+      "centroidLongitude": 99.0009749381769,
+      "city": "Chiang Mai",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Commerce",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b719440a-9dc0-5068-8fdd-af13ef102367",
+      "createdAt": "2026-07-24",
+      "title": "Wat Chedi Luang | วัดเจดีย์หลวงวรวิหาร",
+      "shortDescription": "Once eighty metres tall and home to the Emerald Buddha, until a 1545 earthquake took the top thirty metres off and never gave them back.",
+      "longDescription": "What you are looking at is, technically, a ruin — just one that has been a ruin for almost five hundred years and shows no particular sign of minding. Construction of the great chedi at Wat Chedi Luang began in 1391 under King Saen Muang Ma, intended to hold his father's ashes, though the structure was not finished until 1475. At its full height it stood some eighty metres, the tallest structure in the region for the best part of five centuries, and for a time it held the Emerald Buddha itself — now Thailand's most revered religious object, installed here in 1468 and kept in the chedi's eastern niche.\n\nThat arrangement lasted less than eighty years. In 1545 a severe earthquake struck northern Thailand and brought down roughly the top thirty metres, and the Emerald Buddha was subsequently moved on, eventually ending up in Bangkok's Royal Palace. What survives is the lower two-thirds, restored several times, most substantially in the 1990s with funding from UNESCO and the Japanese government. That restoration rebuilt the base to around sixty metres but deliberately stopped short of replacing the missing spire. Walk the full base; the elephant statues and the four Buddha images each face a different direction.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-chedi-luang_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-chedi-luang_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b71cc335-eb3e-5e5d-aea8-ee9814f8b718",
+          "order": 0,
+          "title": "Wat Chedi Luang | วัดเจดีย์หลวงวรวิหาร",
+          "caption": "A restoration that stopped short of replacing the missing spire — arguably more honest than a full reconstruction would have been.",
+          "latitude": 18.787147035549665,
+          "longitude": 98.98659115048899,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wat-chedi-luang.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "What you're looking at is, technically, a ruin — just one that's been a ruin for almost five hundred years and shows no particular sign of minding.\n\nYou're in front of the great chedi at Wat Chedi Luang, construction of which began in 1391 under King Saen Muang Ma, intended to hold his father's ashes, though the structure wasn't actually finished until 1475. At its full height it stood some eighty metres, the tallest structure in the region for the best part of five centuries, and for a time it held the Emerald Buddha itself — now Thailand's most revered religious object, installed here in 1468 and kept in the chedi's eastern niche.\n\nThat arrangement lasted less than eighty years. In 1545, a severe earthquake struck northern Thailand and brought down roughly the top thirty metres of the chedi, and the Emerald Buddha was subsequently moved on, eventually ending up in Bangkok's Royal Palace, where it remains today.\n\nWhat survives is the lower two-thirds, restored several times over the centuries, most substantially in the 1990s with funding from UNESCO and the Japanese government. That restoration rebuilt the base to its current height of around sixty metres but deliberately stopped short of replacing the missing spire, leaving the flat-topped silhouette you're looking at now — a decision that drew some criticism at the time for departing from strict Lanna style, but one that's arguably more honest than a full reconstruction would have been.\n\nWalk the full base if you can — the elephant statues around the lower tier and the four Buddha images set into the sides each face a different direction, and it's easy to see only the one you happen to approach from."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.787147035549665,
+      "centroidLongitude": 98.98659115048899,
+      "city": "Chiang Mai",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6e395e8b-b467-57fe-9ea1-39c8d632aa8d",
+      "createdAt": "2026-07-24",
+      "title": "Wat Lok Moli | วัดโลกโมฬี",
+      "shortDescription": "A royal mausoleum for the Mengrai line, and the one major Chiang Mai chedi never gilded, whitewashed or plastered over.",
+      "longDescription": "Nearly every major chedi in Chiang Mai has been gilded, whitewashed or plastered at some point in its life. This one, deliberately, never has. Wat Lok Moli dates to the fourteenth century, first established when King Kuena, the sixth ruler of the Mengrai dynasty, invited Burmese monks to settle here and help spread Buddhist teaching through the young Lanna kingdom.\n\nWhat dominates the site now is a large, dark brick chedi built in the 1520s by King Ket, the twelfth Lanna king, specifically to hold the ashes of members of the Mengrai royal line — making this, in effect, a royal mausoleum as much as a working temple. That is what makes the bare brick surface worth noticing. Most of Chiang Mai's other major stupas have been resurfaced in gold leaf or white plaster over the centuries; this one has been left largely as built, dark red-brown brick weathered by five hundred years of monsoon seasons, which gives Wat Lok Moli a noticeably more austere presence than its more famous neighbours. The wooden viharn in front is a more recent addition in traditional Lanna style, and functions as the active worship space. The temple tends to be genuinely quiet.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-lok-moli_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-lok-moli_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-lok-moli_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4aa86235-326e-5fcd-9e62-a2c7c44fb776",
+          "order": 0,
+          "title": "Wat Lok Moli | วัดโลกโมฬี",
+          "caption": "Five hundred monsoon seasons of weathering, and not a single layer of gold leaf or plaster over any of it.",
+          "latitude": 18.796542277648676,
+          "longitude": 98.98252458560488,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wat-lok-moli.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "Nearly every major chedi in Chiang Mai has been gilded, whitewashed or plastered at some point in its life. This one, deliberately, never has.\n\nYou're at Wat Lok Moli, a temple dating to the fourteenth century, first established when King Kuena, the sixth ruler of the Mengrai dynasty, invited Burmese monks to settle here and help spread Buddhist teaching through the young Lanna kingdom. What you're looking at now is dominated by a large, dark brick chedi, built in the 1520s by King Ket, the twelfth Lanna king, specifically to hold the ashes of members of the Mengrai royal line — making this, in effect, a royal mausoleum as much as a working temple.\n\nThat's what makes the chedi's bare brick surface worth noticing. Most of Chiang Mai's other major stupas have been resurfaced in gold leaf, white plaster, or some combination of the two over the centuries. This one has been left largely as built, dark red-brown brick weathered by five hundred years of monsoon seasons, which gives Wat Lok Moli a noticeably different, more austere presence than its more famous neighbours nearby.\n\nThe wooden viharn standing in front of the chedi is a more recent addition, rebuilt in traditional Lanna style with sharply pitched roofs and detailed woodcarving, and it functions as the temple's active worship space, in contrast to the older chedi behind it, which reads more as monument than active shrine.\n\nWat Lok Moli tends to be genuinely quiet compared with the more visited temples nearby, which makes it a decent spot to simply sit for a few minutes rather than move straight through — worth building into a slower morning around the old city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.796542277648676,
+      "centroidLongitude": 98.98252458560488,
+      "city": "Chiang Mai",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9c81fe01-c1af-54be-a0aa-5aeed343a983",
+      "createdAt": "2026-07-24",
+      "title": "Wat Phra Singh Woramahawihan | วัดพระสิงห์วรมหาวิหาร",
+      "shortDescription": "Founded in 1345 as Wat Li Chiang, renamed in 1367 for the revered Buddha image that arrived twenty years after the temple itself.",
+      "longDescription": "This temple did not get its name from what it was built for. It got its name from something that arrived twenty years later. Wat Phra Singh was founded in 1345 by King Pha Yu to house the ashes of his father, King Kam Fu, and was originally known simply as Wat Li Chiang — \"city market temple,\" a fairly ordinary name for what would become one of Chiang Mai's most significant sites. That changed in 1367, when the Phra Buddha Sihing, a revered Buddha image with its own legendary history, was brought here and installed, and the temple was renamed in its honour.\n\nThe image carries a layered legend — tradition holds it was cast in Sri Lanka centuries earlier, its name drawn from \"Sinhala\" — and however much of that is verifiable, its status in Thailand today is not in question. Each year during Songkran it is paraded through the streets so the public can pay respects and pour water over it. The complex went through periods of real decline, revived first under King Kawila and then most substantially by the monk Khru Ba Srivichai in the 1920s, whose work shaped much of what stands today. Seek out the Lai Kham chapel specifically for its murals.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-phra-singh_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-phra-singh_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-phra-singh_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "25505814-3b85-52b7-ab10-aad4389d7d0e",
+          "order": 0,
+          "title": "Wat Phra Singh Woramahawihan | วัดพระสิงห์วรมหาวิหาร",
+          "caption": "Named not for what it was built for, but for the Buddha image that turned up twenty years afterwards.",
+          "latitude": 18.790085983893885,
+          "longitude": 98.98167454102047,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wat-phra-singh.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "This temple didn't get its name from what it was built for. It got its name from something that arrived twenty years later.\n\nYou're at Wat Phra Singh, founded in 1345 by King Pha Yu to house the ashes of his father, King Kam Fu, and originally known simply as Wat Li Chiang — \"city market temple,\" a fairly ordinary name for what would become one of Chiang Mai's most significant sites. That changed in 1367, when the Phra Buddha Sihing, a revered Buddha image with its own legendary history, was brought here and installed, and the temple was renamed in its honour.\n\nThe image itself carries a layered legend — tradition holds it was cast in Sri Lanka centuries earlier, its name drawn from \"Sinhala,\" and however much of that story is verifiable, the statue's status in Thailand today is not in question. It remains one of the country's most venerated Buddha images, and each year during Songkran, it's paraded through the streets of Chiang Mai so the wider public can pay respects and pour water over it, in one of the city's most significant annual rituals.\n\nThe temple complex itself went through periods of real decline, revived first under King Kawila and then, most substantially, by the monk Khru Ba Srivichai in the 1920s, whose restoration work shaped much of what you see across the grounds today — the main viharn, the smaller Lai Kham chapel behind it with its notable murals, and the older library building raised on a high base to protect its manuscripts from flooding.\n\nIf you're here outside Songkran, seek out the Lai Kham chapel specifically — its interior murals, depicting local life alongside Buddhist stories, are some of the most detailed painted work surviving anywhere in the old city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.790085983893885,
+      "centroidLongitude": 98.98167454102047,
+      "city": "Chiang Mai",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a535fa20-6e52-5a76-ae00-6e5d595ad2d6",
+      "createdAt": "2026-07-24",
+      "title": "Wat Phra That Doi Kong Mu | วัดพระธาตุดอยกองมู",
+      "shortDescription": "Mae Hong Son's oldest temple, two Shan-style chedis on a hilltop above a valley that fills with mist most mornings.",
+      "longDescription": "The whole of Mae Hong Son sits below you here, laid out in a valley ringed by hills that fill with mist most mornings — reason enough on its own for the climb. Wat Phra That Doi Kong Mu stands on a hilltop directly above the town and is the oldest temple in Mae Hong Son province. It was founded in 1860 by Phya Singhanat Racha, the region's first governor, under the original name Wat Plai Doi, and its architecture reflects the Shan, or Tai Yai, building tradition that shaped much of this province rather than the Lanna style more common further east.\n\nTwo chedis stand side by side at the summit. The larger was built in that same founding year by a Tai Yai merchant named Jong Tong Su, worked in Mon style with stucco patterning across three stacked octagonal tiers. The smaller followed in 1874, commissioned by Phya Singhanat Racha himself to mark his formal appointment as the province's ruler, and it houses relics of Phra Mokkanlana, a senior disciple of the Buddha, brought here from Myanmar. Beyond the chedis, the real draw is the view. Time your visit for early morning or just before sunset.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-phra-that-doi-kong-mu_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-phra-that-doi-kong-mu_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-phra-that-doi-kong-mu_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4853d63c-b378-599f-8cee-d7694a55a097",
+          "order": 0,
+          "title": "Wat Phra That Doi Kong Mu | วัดพระธาตุดอยกองมู",
+          "caption": "Two chedis in the Shan tradition, above a valley that holds a low blanket of mist through much of the cool season.",
+          "latitude": 19.3861300024371,
+          "longitude": 97.9818370982608,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wat-phra-that-doi-kong-mu.mp3",
+          "audioDurationSeconds": 105,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "The whole of Mae Hong Son sits below you here, laid out in a valley ringed by hills that fill with mist most mornings — reason enough on its own for the climb.\n\nYou're at Wat Phra That Doi Kong Mu, on a hilltop directly above the town, the oldest temple in Mae Hong Son province. It was founded in 1860 by Phya Singhanat Racha, the region's first governor, under the original name Wat Plai Doi, and its architecture reflects the Shan, or Tai Yai, building tradition that shaped much of this province rather than the Lanna style more common further east in Chiang Mai.\n\nTwo chedis stand side by side at the summit. The larger was built in that same founding year, 1860, by a Tai Yai merchant named Jong Tong Su, worked in Mon style with stucco patterning across three stacked octagonal tiers. The smaller chedi followed in 1874, commissioned by Phya Singhanat Racha himself to mark his formal appointment as the province's ruler, and it houses relics of Phra Mokkanlana, a senior disciple of the Buddha, brought here from Myanmar.\n\nBeyond the chedis, the real draw for most visitors is simply the view — Mae Hong Son town spread out directly below, ringed by forested hills that hold a low blanket of mist through much of the cool season, particularly striking at sunrise and again as the light drops in the evening.\n\nTime your visit for early morning or just before sunset if you possibly can — the mist and the low light together give the valley a genuinely different character than the flat midday view most visitors end up with."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 105,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.3861300024371,
+      "centroidLongitude": 97.9818370982608,
+      "city": "Mae Hong Son",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5fdd4da6-c43b-5496-9637-4c759ab0b392",
+      "createdAt": "2026-07-24",
+      "title": "Wat Umong Suan Putthatham | วัดอุโมงค์ สวนพุทธธรรม",
+      "shortDescription": "A 1297 forest temple whose brick meditation tunnels were dug, tradition holds, because one monk couldn't find quiet in the new city.",
+      "longDescription": "A king once had tunnels dug into a hillside because one monk could not concentrate, and those tunnels are still here to walk through. Wat Umong Suan Putthatham was founded in 1297 by King Mangrai, the same ruler who established Chiang Mai itself just a year earlier. The name translates directly to \"tunnel temple,\" and it earns that name from a genuine network of brick tunnels and chambers dug into a man-made mound on the grounds — built, according to local tradition, at Mangrai's order specifically for a monk named Thera Chan, who was struggling to find the quiet needed for proper meditation amid the growing noise of the new city.\n\nThe tunnels are still open to walk through today, cool and dim inside, with small niches along the walls that once held Buddha images. Above the mound, a large bell-shaped chedi rises from the same period, weathered and partly overgrown in a way that feels deliberate rather than neglected. Deliberate is the right word for the whole site: Wat Umong sits in genuine forest, and after being abandoned through the fifteenth century was only reopened and restored in 1948. Follow the path past the lake before you leave.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-umong-suan-putthatham_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-umong-suan-putthatham_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wat-umong-suan-putthatham_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "af49ce79-7b96-5271-a588-4ba80f09e11c",
+          "order": 0,
+          "title": "Wat Umong Suan Putthatham | วัดอุโมงค์ สวนพุทธธรรม",
+          "caption": "Tunnels dug for one monk who couldn't concentrate — cool, dim, and still open to walk through seven centuries later.",
+          "latitude": 18.782981440660556,
+          "longitude": 98.95213558346069,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wat-umong-suan-putthatham.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "A king once had tunnels dug into a hillside because one monk couldn't concentrate — and those tunnels are still here to walk through.\n\nYou're at Wat Umong Suan Putthatham, founded in 1297 by King Mangrai, the same ruler who established Chiang Mai itself just a year earlier. The temple's name translates directly to \"tunnel temple,\" and it earns that name from a genuine network of brick tunnels and chambers dug into a man-made mound on the grounds — built, according to local tradition, at Mangrai's order specifically for a monk named Thera Chan, who was struggling to find the quiet needed for proper meditation amid the growing noise of the new city.\n\nThe tunnels themselves are still open to walk through today, cool and dim inside, with small niches along the walls that once held Buddha images and now hold whatever offerings visitors choose to leave. Above the mound, a large bell-shaped chedi rises from the same period, weathered and partly overgrown in a way that feels deliberate rather than neglected.\n\nDeliberate is, in fact, the right word for the whole site. Wat Umong sits in genuine forest rather than an urban temple compound, and after being abandoned through the fifteenth century, it was only reopened and restored in 1948 — since then, the grounds have leaned into that wooded, slightly overgrown character rather than tidying it away, right down to handwritten Buddhist teaching placards nailed to the trees along the walking paths.\n\nFollow the path past the lake at the edge of the grounds before you leave — it's home to a small population of catfish that visitors are encouraged to feed, and it's a fairly peaceful place to sit for a few minutes once you've been through the tunnels."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.782981440660556,
+      "centroidLongitude": 98.95213558346069,
+      "city": "Chiang Mai",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eeafac13-f226-5104-ab84-a6b677649c2a",
+      "createdAt": "2026-07-24",
+      "title": "White Temple (Wat Rong Khun) | วัดร่องขุ่น",
+      "shortDescription": "One artist rebuilding his childhood temple on his own terms and his own money since 1997 — and not expecting to finish until roughly 2070.",
+      "longDescription": "One artist, working almost entirely with his own money, decided an ordinary village temple should look like nothing else in the country, and forty years on he still is not finished. A small local temple has stood on this site in Chiang Rai since the mid-nineteenth century, but by the 1990s the original buildings were in genuine disrepair. In 1997 the artist Chalermchai Kositpipat, born in the surrounding village and trained at Bangkok's Silpakorn University, returned to his childhood temple and began rebuilding it entirely on his own terms, funding the work personally rather than through conventional temple donations.\n\nThe white is deliberate and total — every surface bright white, inlaid with fragments of mirrored glass that catch and scatter the light, chosen to represent the purity of the Buddha's teaching. The approach to the main hall crosses a bridge over a field of upturned hands, representing worldly desire reaching up from below, symbolism blunt by design rather than subtle. Inside, murals place contemporary and pop-cultural imagery alongside traditional Buddhist iconography, drawing both admiration and criticism within Thailand. Damaged by an earthquake in 2014, since repaired and steadily expanded, the project is not expected to be complete until roughly 2070 — long after Chalermchai's own lifetime.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/white-temple-wat-rong-khun_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/white-temple-wat-rong-khun_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/white-temple-wat-rong-khun_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/white-temple-wat-rong-khun_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1b33cb2e-cc60-53de-aad7-c7bfe590441b",
+          "order": 0,
+          "title": "White Temple (Wat Rong Khun) | วัดร่องขุ่น",
+          "caption": "A temple its own creator doesn't expect to see finished — the projected completion date is roughly 2070.",
+          "latitude": 19.88268885422708,
+          "longitude": 99.76820165988872,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/white-temple-wat-rong-khun.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "One artist, working almost entirely with his own money, decided an ordinary village temple should look like nothing else in the country — and forty years on, he still isn't finished.\n\nYou're at Wat Rong Khun, better known simply as the White Temple, in Chiang Rai. A small local temple has stood on this site since the mid-nineteenth century, but by the 1990s the original buildings were in genuine disrepair, roof leaking, structure failing. In 1997, the artist Chalermchai Kositpipat, born in the surrounding village and trained at Bangkok's Silpakorn University, returned to his childhood temple and began rebuilding it entirely on his own terms, funding the work personally rather than through conventional temple donations.\n\nThe white you're looking at is deliberate and total — every surface bright white, inlaid with fragments of mirrored glass that catch and scatter the light, chosen specifically to represent the purity of the Buddha's teaching. The approach to the main hall crosses a bridge over a field of upturned hands, meant to represent worldly desire and suffering reaching up from below, a piece of symbolism that's blunt by design rather than subtle.\n\nInside, Chalermchai's interpretation departs further still from convention — murals that place contemporary and pop-cultural imagery alongside traditional Buddhist iconography, a choice that's drawn both admiration and criticism within Thailand for how far it strays from established temple design. The whole complex was badly damaged by an earthquake in 2014 and has since been repaired and steadily expanded, with Chalermchai himself stating the full project won't be finished until roughly 2070 — long after his own lifetime.\n\nPhotography is restricted inside the main hall, so give yourself a slow lap outside first — the exterior details reward genuinely close looking, and most of what makes the place remarkable is visible before you ever step through the door."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 143,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 19.88268885422708,
+      "centroidLongitude": 99.76820165988872,
+      "city": "Chiang Rai",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b6500b9d-1b3a-5d92-963e-9699dc557e7c",
+      "createdAt": "2026-07-24",
+      "title": "Yi Peng Lantern Festival | ประเพณียี่เป็ง",
+      "shortDescription": "The Lanna sky-lantern festival, celebrated in Chiang Mai alongside Loy Krathong — two distinct traditions doing related things in different elements.",
+      "longDescription": "For one night each November the sky over this city fills with hundreds of small, drifting lights, and almost nobody watching them is a stranger to the ritual. Yi Peng has roots in the old Lanna kingdom that ruled this region from the thirteenth century onward, and it traditionally falls alongside Loy Krathong, the wider Thai festival of water lanterns. In Chiang Mai the two are celebrated together, though they are actually two distinct traditions doing related things in different elements.\n\nLoy Krathong is the water side of it — small floating vessels, usually built from banana leaf and folded flowers, set adrift on the river as an offering and an apology to the water for the year's pollution, or, in other tellings, as a way of releasing bad luck and paying respects to ancestors. Yi Peng is the sky side: khom loi, paper lanterns built around a bamboo frame with a small fuel cell at the base, lit and released to drift upward once the rising heat fills the paper enough to lift it. The meaning attached to a released lantern is fairly consistent — it carries away whatever has been weighing on you, and its slow climb into the dark marks a kind of letting go.",
+      "makerId": "72e33638-9ae5-5fa5-b516-d6870455c92f",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yi-peng-lantern-festival_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yi-peng-lantern-festival_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yi-peng-lantern-festival_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "408e92a3-46be-50f5-bd9b-53bb89329cfd",
+          "order": 0,
+          "title": "Yi Peng Lantern Festival | ประเพณียี่เป็ง",
+          "caption": "Two distinct traditions doing related things in different elements — one on the water, one in the sky.",
+          "latitude": 18.7877575401734,
+          "longitude": 99.004414524695,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/yi-peng-lantern-festival.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": null,
+          "transcriptText": "For one night each November, the sky over this city fills with hundreds of small, drifting lights, and almost nobody watching them is a stranger to the ritual.\n\nYou're somewhere in Chiang Mai's old city or along the Ping River, wherever you happen to be for Yi Peng, a festival with roots in the old Lanna kingdom that ruled this region from the thirteenth century onward. Yi Peng traditionally falls alongside Loy Krathong, the wider Thai festival of water lanterns, and in Chiang Mai the two are celebrated together, though they're actually two distinct traditions doing related things in different elements.\n\nLoy Krathong is the water side of it — small floating vessels, usually built from banana leaf and folded flowers, set adrift on the river as an offering and an apology to the water for the year's pollution, or, in other tellings, as a way of releasing bad luck and paying respects to ancestors. Yi Peng is the sky side: khom loi, paper lanterns built around a bamboo frame with a small fuel cell at the base, lit and released to drift upward once the rising heat fills the paper enough to lift it.\n\nThe meaning attached to a released lantern is fairly consistent across tellings — it carries away whatever's been weighing on you, worry, bad fortune, the difficulties of the year just passed, and its slow climb into the dark is meant to mark a kind of letting go rather than simply a spectacle to watch.\n\nIf you release a lantern yourself, wait for a clear pocket of sky and a moment when the wind has genuinely dropped — a lantern that catches on a building or another lantern on the way up rather spoils the whole point of it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 18.7877575401734,
+      "centroidLongitude": 99.004414524695,
+      "city": "Chiang Mai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
         "After Dark"
       ],
       "priceUSD": 0
