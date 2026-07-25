@@ -61,11 +61,16 @@ blank. Notes also show in the Actions run's **job summary** and the final log li
 Claude posts them in chat and (if a PR exists) in the PR body. This is CLAUDE.md automation
 rule #9.
 
-> ⚠️ **Do not switch this to `set_changelog`.** That was the first attempt and it silently
-> did nothing: `set_changelog` targets the *App Store version's* release notes and rejects
-> `build_number` outright (*"Could not find option 'build_number'"*), so it can't address a
-> specific TestFlight build. `upload_to_testflight` with `distribute_only: true` is the
-> documented path for setting What-to-Test on an already-uploaded build.
+> ⚠️ **Two traps here, both already paid for. Don't re-enter them.**
+>
+> 1. **Do not switch this to `set_changelog`.** It targets the *App Store version's* release
+>    notes and rejects `build_number` outright (*"Could not find option 'build_number'"*), so
+>    it cannot address a specific TestFlight build. `upload_to_testflight` with
+>    `distribute_only: true` is the documented path. (Cost: build 1.1 (36) shipped blank.)
+> 2. **`app_platform: "ios"` is mandatory, not optional.** The docs call it optional, but
+>    without it pilot *prompts* — *"Please enter the app's platform"* — and CI cannot answer,
+>    so it dies instantly with *"Could not retrieve response as fastlane runs in
+>    non-interactive mode."* (Cost: builds 1.1 (39) and (40) shipped blank.)
 
 ## How to get a build after that
 Either:
@@ -113,7 +118,12 @@ freely (one at a time per phone).
   explicitly whether the notes were attached. The run stays green either way — the build
   itself is already uploaded and installable — so **a green run does not by itself mean the
   notes landed**; check the Done line or the job summary.
-  - *This is exactly how the first version failed:* it retried every error for 25 minutes
-    and then blamed "Apple may still be processing," when in fact the very first attempt
-    had failed on a bad parameter. Build 1.1 (36) shipped with no notes because of it.
+  - **The classifier defaults to PERMANENT on purpose.** A wrong "permanent" call costs
+    nothing — the step stops and prints the real error. A wrong "retryable" call hides that
+    error for 20 minutes behind a false "Apple is still processing" message. That mistake
+    has now been made twice: first by retrying *every* error (build 36), then by matching
+    the bare word `processing`, which appears in fastlane's **own option list**
+    (`skip_waiting_for_build_processing`) — so a permanent crash looked transient again
+    (builds 39, 40). Match only on precise phrases; never on a word that can occur in help
+    text.
 - The existing simulator CI (`ci.yml`) is unchanged; this is a separate, opt-in workflow.

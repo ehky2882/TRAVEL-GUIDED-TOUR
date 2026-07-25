@@ -235,6 +235,10 @@ jobs:
             upload_to_testflight(
               api_key: api_key,
               app_identifier: "com.ehky.TRAVEL-GUIDED-TOUR",
+              # Without app_platform, pilot PROMPTS for it ("Please enter the app's
+              # platform") and CI has no way to answer, so it dies instantly with
+              # "Could not retrieve response as fastlane runs in non-interactive mode".
+              app_platform: "ios",
               app_version: ENV.fetch("APP_VERSION"),
               build_number: ENV.fetch("BUILD_NUMBER"),
               changelog: ENV.fetch("NOTES"),
@@ -261,12 +265,27 @@ jobs:
               exit 0
             fi
             cat "$LOG"
-            if grep -qiE "unable to find build|could not find build|no build|still.*process|processing" "$LOG"; then
+
+            # Classify the failure. Order matters, and the DEFAULT IS PERMANENT:
+            # a wrong "permanent" guess costs nothing (we stop and print the real
+            # error), while a wrong "retryable" guess hides it for 20 minutes.
+            #
+            # Both earlier versions of this step got that backwards and buried a
+            # config error behind a bogus "Apple is still processing" message. The
+            # second time, a loose 'processing' match hit fastlane's OWN option list
+            # (skip_waiting_for_build_processing) — so match only on precise phrases,
+            # never on a bare word that can appear in help text.
+            if grep -qiE "non-interactive mode|could not find option|invalid parameters|invalid.*api key|not authorized|401 |403 " "$LOG"; then
+              echo "::error::Could not attach What-to-Test notes — CONFIGURATION error (fastlane could not run as given), not an Apple delay. See the fastlane output above. The build itself uploaded fine."
+              echo "notes_attached=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            if grep -qiE "could not find build|unable to find build|no build with|still in processing|is still processing|waiting for the build" "$LOG"; then
               echo "Build not processed by Apple yet (attempt ${attempt}/20) — retrying in 60s…"
               sleep 60
               continue
             fi
-            echo "::error::Could not attach What-to-Test notes — this is a configuration error, not an Apple delay. See the fastlane output above. The build itself uploaded fine."
+            echo "::error::Could not attach What-to-Test notes — unrecognized failure (treated as permanent so it cannot hide). See the fastlane output above. The build itself uploaded fine."
             echo "notes_attached=false" >> "$GITHUB_OUTPUT"
             exit 0
           done
