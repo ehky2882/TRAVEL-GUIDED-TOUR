@@ -70,7 +70,18 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-07-24)
+## Current State (2026-07-25)
+
+### Build notes now land in TestFlight's "What to Test" — no more mystery builds (session 70 — CI/docs)
+
+**Owner: "i need to know what new features are added when we cut new builds. can that description be added somewhere so i know what im looking at."** Now it is — **inside the TestFlight app**. [PR #425](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/425) (squash `4c20bd3` → `main`, CI/docs auto-merge class, all three checks green) makes `testflight.yml` write the build notes into the build's **"What to Test"** field after upload, so the owner taps a build on their phone and reads what changed + what to try. This closes the "future enhancement" note that was already sitting in `docs/testflight-ci.md`.
+
+- **How** — a new post-upload step runs fastlane **`set_changelog`** (preinstalled on `macos-26` runners) against the **App Store Connect API key already in secrets**. **No new secrets, no owner setup.** The Fastfile is written to `$RUNNER_TEMP` at run time — nothing added to the repo.
+- **Notes are never blank** — the resolve step now feeds a step output as well as the job summary, with a fallback chain: `workflow_dispatch` *Build notes* input → **PR title + body** (for `build`-label triggers) → the commit subject. Capped at TestFlight's **4000-char** limit.
+- **The Apple-processing wait is the crux.** A freshly uploaded build isn't attachable for ~5–15 min, so the step **retries 25× at 60s** (~25 min ceiling); if it still can't attach it emits a **`::warning::` and exits 0** — deliberately not a failure, since the build itself is already up and the notes remain in the job summary / chat / PR. Job `timeout-minutes` raised **40 → 70** to cover the wait.
+- **Marketing version is grepped from the pbxproj**, not hardcoded — the project carries both `1.0` (test target) and `1.1` (app target), so the step takes the highest (`sort -uV | tail -1`) and won't rot at the next bump.
+- **Docs synced in the same commit:** `docs/testflight-ci.md` (build-notes section rewritten; the stale "builds are numbered by timestamp / labelling is an easy follow-up" gotcha replaced; polling-time caveat added) + **automation rule #9** above.
+- **Verify on the next build cut:** tap the build in TestFlight → "What to Test" should be populated (may land a few minutes after the build appears — that's Apple processing, not a bug). **Branch cleanup owed:** `claude/build-release-notes-f1samw` merged; git proxy blocks branch deletion from web sessions → delete in the GitHub UI.
 
 ### Paid tours Phase 1 DONE — 10 IAP tier products created in App Store Connect (session 69 — infra, no code)
 
