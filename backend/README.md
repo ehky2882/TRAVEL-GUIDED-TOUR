@@ -123,6 +123,60 @@ De-risked rollout: first keep the live app on gh-pages while a job exports
 `get_catalog()` → `Tours.json` → gh-pages (proves the DB end-to-end with zero
 app change), then ship the app's URL swap. See the design doc.
 
+## Paid tours (V2 Step 6, Phase 2) — `paid_tours.sql` + two Edge Functions
+
+Design: `docs/paid-tours-design.md`. Phase 1 (the 10 IAP tier products in App
+Store Connect) is already done. This is the backend half. **Owner runs three
+things, in this order** — none of it affects the free catalog:
+
+1. **SQL** — SQL Editor → paste **all** of `backend/paid_tours.sql` → Run.
+   Expect *"Success. No rows returned."* It adds `tours.price_tier` (NULL =
+   free, so every existing tour stays free), the `purchases` / `payouts` /
+   `maker_payout_accounts` tables + RLS, the `maker_earnings` view, and
+   rebuilds `get_catalog()` to emit `priceTier`. Idempotent — safe to re-run.
+   Verify:
+   ```sql
+   select count(*) from public.purchases;                      -- 0
+   select get_catalog() -> 'tours' -> 0 ? 'priceTier';          -- true
+   ```
+2. **App Store API key** — App Store Connect → Users and Access → Integrations
+   → In-App Purchase → generate a key. **The `.p8` downloads once** — keep it
+   safe. Note the Key ID and Issuer ID.
+3. **Edge Functions** — deploy both from `backend/functions/`:
+   | Function | Verify JWT | Why |
+   |---|---|---|
+   | `record-purchase` | **ON** | called by the signed-in app; the user's JWT identifies the buyer |
+   | `appstore-notifications` | **OFF** | Apple posts here and carries no Supabase JWT |
+
+   Both read the same four secrets (Edge Functions → Secrets, set once):
+   `APPSTORE_IAP_KEY` (full `.p8` contents), `APPSTORE_IAP_KEY_ID`,
+   `APPSTORE_ISSUER_ID`, `APPSTORE_BUNDLE_ID` (`com.ehky.TRAVEL-GUIDED-TOUR`).
+   Then App Store Connect → the app → App Information → **App Store Server
+   Notifications** → set the **Production and Sandbox** URLs to
+   `https://<project>.supabase.co/functions/v1/appstore-notifications`
+   (Version 2).
+
+**Trust model worth knowing:** neither function trusts what the client (or a
+POST claiming to be Apple) says happened. Each extracts only a transaction id,
+then fetches the authoritative record from Apple's App Store Server API under
+our signed key and records *that*. A forged request can't mint an entitlement
+or fake a refund. `purchases.apple_transaction_id` is UNIQUE, so the app can
+safely replay StoreKit history after a dead spot.
+
+**Pricing a tour** (until the Phase 4 maker UI ships, this is the manual path):
+```sql
+update public.tours set price_tier = 299 where id = '<tour-uuid>';  -- $2.99
+update public.tours set price_tier = null where id = '<tour-uuid>'; -- back to free
+```
+Allowed values are the 10 ASC tiers: 99, 199, 299, 399, 499, 699, 899, 999,
+1499, 1999. A tier outside that list is rejected by a CHECK constraint —
+widening the menu means creating the ASC product first, then extending the
+constraint in `paid_tours.sql`.
+
+**`price_tier` survives content re-seeds.** `seed_from_toursjson.py`
+deliberately omits it from both the column list and the upsert's `DO UPDATE`,
+because price lives in the DB (maker-set), not in `Tours.json`. Don't add it.
+
 ## Notes
 - The schema/seed can't be executed on the Linux web session (no Postgres) —
   run them against Supabase per the steps above.

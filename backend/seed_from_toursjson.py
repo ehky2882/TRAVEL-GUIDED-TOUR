@@ -94,6 +94,11 @@ def emit(data, out):
             "website_url = excluded.website_url, updated_at = now();\n"
         )
 
+    # NOTE (paid tours, V2 Step 6): price_tier is deliberately absent from
+    # both the column list and the DO UPDATE set. It is set per tour by the
+    # maker in the app, not carried in Tours.json — so a content re-seed must
+    # leave an existing tour's price untouched, and a brand-new tour defaults
+    # to NULL (= free). Do not add it here.
     w("\n-- tours\n")
     for t in tours:
         w(

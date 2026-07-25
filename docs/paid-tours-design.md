@@ -47,8 +47,14 @@ Apple Paid Apps agreement + banking/tax in App Store Connect (all Active as of J
 **Phase 1 — Apple products (owner + Claude, ~30 min). ✅ DONE 2026-07-24.**
 All **10** tier products created in App Store Connect (Claude drove the owner's Chrome; owner picked the 10-tier low-end-dense menu during the session). Each is **Non-Consumable**, reference name `Tour Tier <price>`, product ID `tour.tier.<price×100>`, base price set (US base, Apple auto-priced all 175 regions), and one **English (U.S.)** localization — display name **"Premium Audio Tour"**, description **"Unlocks this audio tour"** (identical across tiers by design; the payment sheet also shows the price). All 10 sit in **"Prepare for Submission"** — that's the correct resting state: sandbox purchases (Phase 3/6) work from here. Left deliberately undone until go-live: the per-product **review screenshot** and **"Add for Review"** (the first non-consumable IAP must be submitted together with an app version).
 
-**Phase 2 — Backend (Claude, 1 session).**
-`purchases` table + RLS · `tours.price_tier` (nullable = free) · earnings/payouts ledger · `makers.stripe_account_id` · Edge Function: verify Apple transaction + insert purchase · App Store Server Notifications endpoint (refunds) · `get_catalog` emits price tier. All owner SQL is copy-paste blocks per house style.
+**Phase 2 — Backend (Claude, 1 session). ✅ WRITTEN 2026-07-25 — owner still to apply.**
+Shipped as `backend/paid_tours.sql` + two Edge Functions (`backend/functions/record-purchase`, `backend/functions/appstore-notifications`); runbook in `backend/README.md` § "Paid tours". Contents: `tours.price_tier` (NULL = free, CHECK-constrained to the 10 ASC tiers) · `purchases` table + RLS (buyer reads own, maker reads their sales, admin reads all; **no client writes** — the Edge Function inserts via the service role) · `payouts` ledger · `maker_earnings` view · `get_catalog()` rebuilt to emit `priceTier`.
+
+Two deliberate deviations from the sketch above:
+- **`maker_payout_accounts` table, not `makers.stripe_account_id`.** `makers` carries a public-read RLS policy, so a column there would expose every maker's Stripe account id to any client. The separate table is owner + admin only.
+- **Neither function trusts the caller's payload.** Each extracts only a transaction id, then fetches the authoritative record from Apple's App Store Server API under our signed ES256 key and records *that* — so a forged POST can neither mint an entitlement nor fake a refund. Requires an App Store Connect **In-App Purchase API key** (`.p8`, downloads once) in four shared Edge secrets.
+
+`price_tier` is deliberately absent from `seed_from_toursjson.py` (price lives in the DB, maker-set; a content re-seed must not reset it).
 
 **Phase 3 — Buyer side in app (Claude, 1–2 sessions).**
 Price badge on paid tours · Buy button → StoreKit 2 `purchase()` → record to backend · locked/unlocked playback gating · entitlement check on launch/sign-in · transaction-history replay. Ships via ci.yml → testflight.yml; owner tests with Apple sandbox (fake money).
