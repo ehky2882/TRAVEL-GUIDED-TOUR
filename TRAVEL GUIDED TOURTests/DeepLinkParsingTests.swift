@@ -122,4 +122,60 @@ final class DeepLinkParsingTests: XCTestCase {
         let url = AtlasShareLink.makerURL(id: makerID)
         XCTAssertEqual(DeepLinkParser.parse(url), .maker(makerID))
     }
+
+    // MARK: - Group Listen join links (QR codes)
+
+    func test_groupJoinURL_hasExpectedShape() {
+        XCTAssertEqual(
+            AtlasShareLink.groupJoinURL(code: "K7QP2").absoluteString,
+            "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/g/?code=K7QP2"
+        )
+    }
+
+    func test_groupJoinURL_roundTripsThroughParser() {
+        XCTAssertEqual(DeepLinkParser.parse(AtlasShareLink.groupJoinURL(code: "K7QP2")), .group("K7QP2"))
+    }
+
+    func test_groupJoinURL_upperCasesCode() {
+        XCTAssertEqual(DeepLinkParser.parse(AtlasShareLink.groupJoinURL(code: "k7qp2")), .group("K7QP2"))
+    }
+
+    func test_customSchemeGroupLink_parses() {
+        XCTAssertEqual(DeepLinkParser.parse(URL(string: "dozent://group?code=K7QP2")!), .group("K7QP2"))
+        XCTAssertEqual(DeepLinkParser.parse(URL(string: "dozent://group/K7QP2")!), .group("K7QP2"))
+    }
+
+    func test_groupLink_rejectsMalformedCodes() {
+        // Wrong length, or characters outside the unambiguous alphabet (O/0/I/1),
+        // must not start a session that could never connect.
+        XCTAssertNil(DeepLinkParser.parse(URL(string: "dozent://group?code=K7QP")!))
+        XCTAssertNil(DeepLinkParser.parse(URL(string: "dozent://group?code=K7QP23")!))
+        XCTAssertNil(DeepLinkParser.parse(URL(string: "dozent://group?code=K7QP0")!))
+        XCTAssertNil(DeepLinkParser.parse(URL(string: "dozent://group?code=")!))
+    }
+
+    // MARK: - Scanned payloads
+
+    func test_scannedPayload_acceptsLinkForm() {
+        let link = AtlasShareLink.groupJoinURL(code: "K7QP2").absoluteString
+        XCTAssertEqual(DeepLinkParser.groupCode(fromScannedPayload: link), "K7QP2")
+    }
+
+    func test_scannedPayload_acceptsBareCode() {
+        // A code shared as plain text (or by a future/older QR) still works.
+        XCTAssertEqual(DeepLinkParser.groupCode(fromScannedPayload: "k7qp2"), "K7QP2")
+        XCTAssertEqual(DeepLinkParser.groupCode(fromScannedPayload: " K7QP2 "), "K7QP2")
+    }
+
+    func test_scannedPayload_rejectsUnrelatedQRContent() {
+        // Pointing the camera at some other QR code must do nothing.
+        XCTAssertNil(DeepLinkParser.groupCode(fromScannedPayload: "https://example.com"))
+        XCTAssertNil(DeepLinkParser.groupCode(fromScannedPayload: "hello world"))
+        XCTAssertNil(DeepLinkParser.groupCode(fromScannedPayload: ""))
+    }
+
+    func test_scannedPayload_rejectsTourLink() {
+        // A tour share QR is a valid deep link but not a join code.
+        XCTAssertNil(DeepLinkParser.groupCode(fromScannedPayload: AtlasShareLink.tourURL(id: sampleID).absoluteString))
+    }
 }

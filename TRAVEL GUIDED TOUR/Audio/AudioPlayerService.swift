@@ -33,7 +33,18 @@ final class AudioPlayerService {
     /// without relying on title equality — which broke when two
     /// tours shared a title (audit P1-3).
     private(set) var currentSourceId: String?
+    /// The user's chosen playback speed (what the speed menu shows). This is
+    /// NOT necessarily what AVPlayer is running at — see `syncTrim`.
     private(set) var rate: Float = 1.0
+    /// Group Listen only: a tiny multiplier on `rate` used to glide a follower
+    /// back into alignment with the leader (e.g. 1.02 = play 2% faster until
+    /// caught up). Deliberately separate from `rate` so the user-visible speed
+    /// never changes and the speed menu stays truthful. 1.0 = no trim, which is
+    /// always the case for solo playback, so `effectiveRate` == `rate` there and
+    /// nothing about normal playback changes.
+    private(set) var syncTrim: Float = 1.0
+    /// What AVPlayer should actually run at.
+    private var effectiveRate: Float { rate * syncTrim }
     #if canImport(UIKit)
     /// Lock-screen / Control-Center artwork for the current item —
     /// the tour maker's avatar. Resolved off the main UI (the maker
@@ -174,12 +185,7 @@ final class AudioPlayerService {
         player.play()
         // Restore the user's chosen rate. AVPlayer.play() resets rate to 1.0,
         // so we re-apply on the next runloop tick after play() takes effect.
-        if rate != 1.0 {
-            DispatchQueue.main.async { [weak self] in
-                guard let self else { return }
-                self.player.rate = self.rate
-            }
-        }
+        reapplyRateAfterPlay()
 
         startLoadingTimeout()
         updateNowPlayingInfo()
@@ -197,21 +203,50 @@ final class AudioPlayerService {
         player.play()
         // Same rate-restore as play(url:title:artist:) — resume should
         // honor the user's last speed selection.
-        if rate != 1.0 {
-            DispatchQueue.main.async { [weak self] in
-                guard let self else { return }
-                self.player.rate = self.rate
-            }
+        reapplyRateAfterPlay()
+    }
+
+    /// AVPlayer.play() resets rate to 1.0, so re-apply the effective rate on the
+    /// next runloop tick once play() has taken effect. No-op when the user is at
+    /// 1× with no sync trim (the overwhelmingly common solo case).
+    private func reapplyRateAfterPlay() {
+        guard effectiveRate != 1.0 else { return }
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.player.rate = self.effectiveRate
         }
     }
 
     func setPlaybackRate(_ newRate: Float) {
         rate = newRate
         if state == .playing {
-            player.rate = newRate
+            player.rate = effectiveRate
         }
         updateNowPlayingInfo()
     }
+
+    /// Group Listen (follower) only: apply a small speed trim so playback drifts
+    /// back into alignment with the leader instead of being yanked there by a
+    /// seek — a seek is audible (a hiccup / repeated syllable), a 1–3% speed
+    /// change is not. Clamped to a deliberately narrow band. Pass 1.0 to clear.
+    /// Never call this for solo playback; `rate` (the user-facing speed) is
+    /// untouched either way.
+    func setSyncTrim(_ trim: Float) {
+        let clamped = min(max(trim, Self.minSyncTrim), Self.maxSyncTrim)
+        guard clamped != syncTrim else { return }
+        syncTrim = clamped
+        if state == .playing {
+            player.rate = effectiveRate
+        }
+    }
+
+    /// Bounds on the sync trim. ±3% is inaudible on speech but still closes a
+    /// second of drift in well under a minute; anything wider starts to sound
+    /// like a chipmunk / slow-mo artifact. `nonisolated` so the pure drift math
+    /// in `GroupListenCoordinator.correction(...)` (and its tests) can read them
+    /// without hopping to the main actor.
+    nonisolated static let minSyncTrim: Float = 0.97
+    nonisolated static let maxSyncTrim: Float = 1.03
 
     func pause() {
         player.pause()
@@ -245,6 +280,10 @@ final class AudioPlayerService {
         lastError = nil
         state = .idle
         isAwaitingFirstPlayTransition = false
+        // Safety net: never let a Group Listen speed trim survive a teardown
+        // into subsequent solo playback (the coordinator also clears it on
+        // leave, but this guarantees it).
+        syncTrim = 1.0
         updateNowPlayingInfo()
     }
 
@@ -259,14 +298,23 @@ final class AudioPlayerService {
         play(url: url, title: currentTitle, artist: currentArtist, sourceId: currentSourceId)
     }
 
-    func seek(to time: TimeInterval) {
+    /// Seek to `time`. `precise` requests a sample-accurate seek (zero
+    /// tolerance) — needed for Group Listen, where AVPlayer's default tolerance
+    /// can land a few hundred milliseconds off and silently re-introduce the
+    /// drift the correction was meant to remove. Scrubbing keeps the default
+    /// (tolerant, faster) behaviour.
+    func seek(to time: TimeInterval, precise: Bool = false) {
         let target = CMTime(seconds: time, preferredTimescale: 600)
         // Update the published currentTime immediately so the UI
         // snaps to the new position the moment the user releases the
         // scrub thumb. The periodic time observer takes over from
         // there as AVPlayer resumes reporting time.
         currentTime = time
-        player.seek(to: target)
+        if precise {
+            player.seek(to: target, toleranceBefore: .zero, toleranceAfter: .zero)
+        } else {
+            player.seek(to: target)
+        }
 
         // Seek-to-end (or beyond) doesn't fire
         // `AVPlayerItem.didPlayToEndTime` — that notification only

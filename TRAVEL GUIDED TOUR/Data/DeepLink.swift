@@ -5,6 +5,10 @@ import Foundation
 enum DeepLink: Equatable {
     case tour(UUID)
     case maker(UUID)
+    /// Join a Group Listen session by its short code. Carried by the QR code a
+    /// leader shows, so a joiner can scan instead of typing five characters.
+    /// No tour id is needed — the leader broadcasts which tour the group is on.
+    case group(String)
 }
 
 /// Parses incoming URLs — Universal Links (https) and the `dozent://` custom
@@ -30,12 +34,15 @@ enum DeepLinkParser {
     static let tourPathMarker = "t"
     /// Web path segment marking a maker share link.
     static let makerPathMarker = "m"
+    /// Web path segment marking a Group Listen join link (QR codes).
+    static let groupPathMarker = "g"
 
     static func parse(_ url: URL) -> DeepLink? {
         guard let scheme = url.scheme?.lowercased() else { return nil }
         switch scheme {
         case "https", "http":
-            // Universal Link. Route only the tour (…/t/…) and maker (…/m/…) paths.
+            // Universal Link. Route the tour (…/t/…), maker (…/m/…) and Group
+            // Listen join (…/g/…) paths.
             let segments = url.pathComponents
             if segments.contains(tourPathMarker) {
                 return id(in: url, marker: tourPathMarker).map(DeepLink.tour)
@@ -43,17 +50,60 @@ enum DeepLinkParser {
             if segments.contains(makerPathMarker) {
                 return id(in: url, marker: makerPathMarker).map(DeepLink.maker)
             }
+            if segments.contains(groupPathMarker) {
+                return groupCode(in: url, marker: groupPathMarker).map(DeepLink.group)
+            }
             return nil
         case "dozent":
-            // Custom-scheme fallback — only the `tour` / `maker` hosts.
+            // Custom-scheme fallback — the `tour` / `maker` / `group` hosts.
             switch url.host?.lowercased() {
             case "tour":  return id(in: url, marker: tourPathMarker).map(DeepLink.tour)
             case "maker": return id(in: url, marker: makerPathMarker).map(DeepLink.maker)
+            case "group": return groupCode(in: url, marker: groupPathMarker).map(DeepLink.group)
             default:      return nil
             }
         default:
             return nil
         }
+    }
+
+    /// Extracts a Group Listen join code from the `code` query item, falling back
+    /// to the last path component. Normalised to upper case and validated against
+    /// the canonical code format, so a malformed or truncated scan is rejected
+    /// rather than starting a session that can never connect.
+    static func groupCode(in url: URL, marker: String) -> String? {
+        let candidate: String? = {
+            if let components = URLComponents(url: url, resolvingAgainstBaseURL: false),
+               let value = components.queryItems?.first(where: { $0.name == "code" })?.value {
+                return value
+            }
+            return url.pathComponents.filter { $0 != "/" && $0 != marker }.last
+        }()
+        guard let raw = candidate else { return nil }
+        return normalizedGroupCode(raw)
+    }
+
+    /// Resolves whatever a QR scan produced into a join code. Accepts both the
+    /// link form we generate (`…/g/?code=XXXXX`, `dozent://group?code=XXXXX`) and
+    /// a bare code, so a code shared as plain text still works — and so QR codes
+    /// produced by older or future builds both scan correctly.
+    static func groupCode(fromScannedPayload raw: String) -> String? {
+        if let url = URL(string: raw), let link = parse(url), case .group(let code) = link {
+            return code
+        }
+        return normalizedGroupCode(raw)
+    }
+
+    /// Upper-cases and validates a scanned/typed join code. Returns nil unless it
+    /// is exactly the expected length and drawn entirely from the code alphabet
+    /// (which excludes look-alike glyphs). Shared by the QR scanner so both
+    /// entry paths agree on what a valid code is.
+    static func normalizedGroupCode(_ raw: String) -> String? {
+        let upper = raw.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+        guard upper.count == GroupListenCoordinator.codeLength else { return nil }
+        let allowed = Set(GroupListenCoordinator.codeAlphabet)
+        guard upper.allSatisfy({ allowed.contains($0) }) else { return nil }
+        return upper
     }
 
     /// Extracts a UUID from the `id` query item, falling back to the last path
@@ -97,6 +147,20 @@ enum AtlasShareLink {
 
     static func makerURL(for maker: Maker) -> URL {
         makerURL(id: maker.id)
+    }
+
+    /// `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/g/?code=K7QP2` — the payload
+    /// encoded into a leader's join QR code. Deliberately the https (Universal
+    /// Link) form, not `dozent://`: pointed at with the system Camera app it can
+    /// open the app directly, and if the app isn't installed it degrades to the
+    /// web page instead of a dead custom-scheme prompt.
+    static func groupJoinURL(code: String) -> URL {
+        var components = URLComponents(
+            url: webBase.appendingPathComponent("\(DeepLinkParser.groupPathMarker)/"),
+            resolvingAgainstBaseURL: false
+        )!
+        components.queryItems = [URLQueryItem(name: "code", value: code.uppercased())]
+        return components.url!
     }
 
     private static func shareURL(marker: String, id: UUID) -> URL {

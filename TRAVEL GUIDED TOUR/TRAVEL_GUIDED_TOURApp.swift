@@ -258,7 +258,13 @@ struct TRAVEL_GUIDED_TOURApp: App {
         bottomModuleWindow.install(
             interactiveBottomInset: AtlasBottomModule.height()
         ) {
-            BottomModuleRoot()
+            // The install-time inset is only a first guess; the module reports
+            // its real painted height (which grows when the Group Listen banner
+            // appears above the mini-player) so the window claims touches over
+            // all of it. Without this the banner's Leave button was untappable.
+            BottomModuleRoot(onInteractiveHeightChange: { [bottomModuleWindow] height in
+                bottomModuleWindow.setInteractiveBottomInset(height)
+            })
                 .environment(dataService)
                 .environment(authService)
                 .environment(followService)
@@ -325,6 +331,18 @@ struct TRAVEL_GUIDED_TOURApp: App {
         case .maker(let id):
             if let maker = dataService.maker(by: id) {
                 makerPresenter.present(maker)
+            }
+        case .group(let code):
+            // A join QR scanned with the system Camera app lands here. No tour
+            // id is needed — the leader broadcasts what the group is playing,
+            // and the session banner provides the confirmation. Joining is
+            // account-gated, so say something when it can't proceed rather than
+            // appearing to do nothing.
+            if groupListen.join(code: code) == false {
+                toastCenter.show(
+                    "Sign in to listen together with a group.",
+                    style: .error
+                )
             }
         }
     }

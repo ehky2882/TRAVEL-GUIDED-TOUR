@@ -8,6 +8,21 @@ enum GroupRole: String, Codable, Sendable {
     case follower
 }
 
+/// What a follower should do about the gap between where its audio actually is
+/// and where the leader says it should be. Computed by
+/// `GroupListenCoordinator.correction(...)`; see the drift-correction tuning
+/// notes there for why correction is tiered rather than a single seek threshold.
+nonisolated enum GroupDriftCorrection: Equatable {
+    /// Close enough — leave playback alone. (Named `inSync` rather than `none`
+    /// so it can never be confused with `Optional.none` during inference.)
+    case inSync
+    /// Multiply playback speed by this (e.g. 1.02) to glide back into alignment
+    /// without an audible jump.
+    case trim(Float)
+    /// Too far out to glide — snap to the leader's position.
+    case seek
+}
+
 /// Discovery / connection status for a Group Listen session, surfaced from the
 /// transport up to the UI so a session can never silently dead-end. Before this
 /// existed, a denied Local Network permission (or simply no peer in range) left

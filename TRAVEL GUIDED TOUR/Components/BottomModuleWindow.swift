@@ -77,8 +77,23 @@ final class BottomModuleWindowController {
     /// `.onAppear` already called `apply`) can re-apply it — otherwise
     /// the recovered window would be stuck on SYSTEM appearance.
     private var lastPreference: ColorSchemePreference = .system
+    /// The most recent interactive-strip height. Cached for the same reason as
+    /// `lastPreference`: a *deferred* install must not lose an update that
+    /// arrived before the window existed.
+    private var lastInteractiveBottomInset: CGFloat?
 
     private static let log = Logger(subsystem: "com.dozent.app", category: "BottomModuleWindow")
+
+    /// Update the height of the bottom strip in which this window claims
+    /// touches. **Must** track the module's real painted height, not a constant:
+    /// content can appear *above* the mini-player (the Group Listen banner), and
+    /// anything outside the claimed strip is visible but completely untappable —
+    /// which is exactly how the banner's "Leave" button ended up dead.
+    func setInteractiveBottomInset(_ inset: CGFloat) {
+        guard inset > 0, inset != lastInteractiveBottomInset else { return }
+        lastInteractiveBottomInset = inset
+        (window as? PassThroughWindow)?.interactiveBottomInset = inset
+    }
 
     /// Pure decision used by `install()`. Kept separate so the
     /// recovery branching can be unit-tested deterministically.
@@ -149,7 +164,8 @@ final class BottomModuleWindowController {
         w.windowLevel = UIWindow.Level(UIWindow.Level.normal.rawValue + 1)
         w.backgroundColor = .clear
         w.isOpaque = false
-        w.interactiveBottomInset = interactiveBottomInset
+        // Prefer a measured height if one already arrived (deferred install).
+        w.interactiveBottomInset = lastInteractiveBottomInset ?? interactiveBottomInset
 
         let host = UIHostingController(rootView: rootView())
         host.view.backgroundColor = .clear
