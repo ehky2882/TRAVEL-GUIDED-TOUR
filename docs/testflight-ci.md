@@ -68,6 +68,23 @@ freely (one at a time per phone).
 ## Notes / gotchas
 - **Cost:** Mac build minutes bill ~10× Linux, so builds run **on demand only**, never on
   every push.
+- **Apple certificate cap — now handled automatically (no owner action).** Archives used to
+  fail fast (~40s) with *"Your account has reached the maximum number of certificates … No
+  profiles for 'com.ehky.TRAVEL-GUIDED-TOUR' were found"*, and the owner had to manually
+  revoke **Apple Development** certs in the developer portal before every few builds. Cause:
+  cloud signing mints a **new Apple Development cert per build machine**, and every CI run is
+  a fresh throwaway cloud Mac — so they accumulated to Apple's cap. The workflow now has a
+  **"Free up Apple Development certificate slots"** step that uses the same App Store Connect
+  API key to revoke DEVELOPMENT certs before archiving; automatic signing then regenerates
+  just the one it needs. Distribution certs (the App Store upload identity) are never touched,
+  and the step is `continue-on-error` so an API hiccup can't block a build. **Verified
+  2026-07-24:** two archives had failed at the cap; with this step the next archive signed and
+  uploaded cleanly (build 1.1 (35)).
+  - *Dead end for reference:* forcing `CODE_SIGN_IDENTITY="Apple Distribution"` on the archive
+    does **not** work — the project uses automatic signing, so Xcode errors with *"conflicting
+    provisioning settings … switch to manual signing"* (and SPM deps then demand a dev team).
+    Manual signing would require storing a cert + profile as secrets; the auto-revoke step
+    achieves the same durability with no stored credentials.
 - **First run may need a small fix.** iOS signing-in-CI is finicky; if the first build
   fails, the error in the Actions log usually points right at it (often a signing/role
   detail), and it's a quick tweak.
