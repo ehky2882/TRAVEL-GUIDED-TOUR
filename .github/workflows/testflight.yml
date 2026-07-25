@@ -42,7 +42,8 @@ jobs:
       github.event_name == 'workflow_dispatch' ||
       github.event.label.name == 'build'
     runs-on: macos-26           # a Mac in the cloud (your other CI already uses this)
-    timeout-minutes: 40
+    timeout-minutes: 70         # build ~15 min + waiting for Apple to process the
+                                # upload so the notes step can attach "What to Test"
     env:
       SCHEME: "TRAVEL GUIDED TOUR"
       KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
@@ -50,23 +51,37 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      # Record the build notes (What changed / What to test) into the run's job
-      # summary so every build is self-documenting — never a mystery build.
-      # For a PR-label trigger there's no notes input; point at the PR instead.
-      - name: Record build notes
+      # Resolve the build notes (What changed / What to test) that describe this
+      # build. They go into the run's job summary here, and — after the upload —
+      # into TestFlight's "What to Test" field, so the description shows up right
+      # under the build in the TestFlight app on your phone. Never a mystery build.
+      # Fallback order: the Run-workflow notes box -> the PR title + body (label
+      # trigger) -> the commit subject.
+      - name: Resolve + record build notes
+        id: notes
         env:
           NOTES: ${{ github.event.inputs.notes }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
         run: |
+          if [ -z "$NOTES" ] && [ "${{ github.event_name }}" = "pull_request" ]; then
+            NOTES="PR #${PR_NUMBER}: ${PR_TITLE}"$'\n\n'"${PR_BODY}"
+          fi
+          if [ -z "$NOTES" ]; then
+            echo "::warning::No build notes were provided. Per CLAUDE.md rule #9, every build should carry What-changed / What-to-test notes. Falling back to the commit subject."
+            NOTES="Built from commit: $(git log -1 --pretty=%s)"
+          fi
+          # TestFlight's What-to-Test field caps at 4000 characters.
+          NOTES="${NOTES:0:4000}"
+          {
+            echo "notes<<NOTES_EOF"
+            echo "$NOTES"
+            echo "NOTES_EOF"
+          } >> "$GITHUB_OUTPUT"
           {
             echo "## Build notes"
-            if [ -n "$NOTES" ]; then
-              echo "$NOTES"
-            elif [ "${{ github.event_name }}" = "pull_request" ]; then
-              echo "_Triggered by the \`build\` label on PR #${{ github.event.pull_request.number }} — see the PR for what changed + what to test._"
-            else
-              echo "::warning::No build notes were provided. Per CLAUDE.md rule #9, every build should carry What-changed / What-to-test notes."
-              echo "_No notes provided._"
-            fi
+            echo "$NOTES"
           } >> "$GITHUB_STEP_SUMMARY"
 
       # Fail early with a friendly message if the one-time secrets aren't set yet.
@@ -131,10 +146,63 @@ jobs:
             -authenticationKeyID "$KEY_ID" \
             -authenticationKeyIssuerID "$ISSUER_ID"
 
+      # Attach the build notes to the build in TestFlight itself ("What to Test"),
+      # so the owner sees what's in the build right in the TestFlight app — tap the
+      # build, and the What-changed / What-to-test description is there. Uses
+      # fastlane's set_changelog (preinstalled on GitHub Mac runners) with the same
+      # App Store Connect API key. Apple takes a few minutes to process a fresh
+      # upload before the build exists to attach notes to, so this retries.
+      # If it still can't attach (rare), that's a warning, not a failure — the
+      # build itself is already uploaded and the notes live in the job summary.
+      - name: Set TestFlight "What to Test" notes
+        env:
+          NOTES: ${{ steps.notes.outputs.notes }}
+          BUILD_NUMBER: ${{ steps.bn.outputs.num }}
+          FASTLANE_SKIP_UPDATE_CHECK: "1"
+          FASTLANE_OPT_OUT_USAGE: "1"
+          FASTLANE_DISABLE_COLORS: "1"
+        run: |
+          # The app target's marketing version (test target stays pinned lower, so
+          # take the highest value in the project file).
+          APP_VERSION=$(grep -o 'MARKETING_VERSION = [0-9.]*' "TRAVEL GUIDED TOUR.xcodeproj/project.pbxproj" | grep -o '[0-9.]*$' | sort -uV | tail -1)
+          export APP_VERSION
+          export KEY_PATH="$HOME/private_keys/AuthKey_${KEY_ID}.p8"
+          echo "Attaching notes to build ${APP_VERSION} (${BUILD_NUMBER})"
+
+          mkdir -p "$RUNNER_TEMP/notes/fastlane"
+          cat > "$RUNNER_TEMP/notes/fastlane/Fastfile" <<'RB'
+          lane :tf_notes do
+            api_key = app_store_connect_api_key(
+              key_id: ENV.fetch("KEY_ID"),
+              issuer_id: ENV.fetch("ISSUER_ID"),
+              key_filepath: ENV.fetch("KEY_PATH")
+            )
+            set_changelog(
+              api_key: api_key,
+              app_identifier: "com.ehky.TRAVEL-GUIDED-TOUR",
+              version: ENV.fetch("APP_VERSION"),
+              build_number: ENV.fetch("BUILD_NUMBER"),
+              changelog: ENV.fetch("NOTES")
+            )
+          end
+          RB
+
+          cd "$RUNNER_TEMP/notes"
+          # Apple's processing usually takes 5-15 min; retry up to ~25 min.
+          for attempt in $(seq 1 25); do
+            if fastlane tf_notes; then
+              echo "TestFlight What-to-Test notes set on build ${APP_VERSION} (${BUILD_NUMBER})."
+              exit 0
+            fi
+            echo "Build not processed yet (attempt ${attempt}/25) — retrying in 60s…"
+            sleep 60
+          done
+          echo "::warning::Couldn't attach What-to-Test notes (Apple may still be processing the build). The build itself uploaded fine; notes are in this run's job summary."
+
       - name: Done
         env:
-          NOTES: ${{ github.event.inputs.notes }}
+          NOTES: ${{ steps.notes.outputs.notes }}
         run: |
           echo "Uploaded build ${{ steps.bn.outputs.num }} to TestFlight. It appears on your phone once Apple finishes processing (a few minutes)."
-          echo "Build 1.1 (${{ steps.bn.outputs.num }}) — notes:"
-          echo "${NOTES:-<none provided>}"
+          echo "Build ${{ steps.bn.outputs.num }} — notes (also attached in TestFlight under What to Test):"
+          echo "$NOTES"
