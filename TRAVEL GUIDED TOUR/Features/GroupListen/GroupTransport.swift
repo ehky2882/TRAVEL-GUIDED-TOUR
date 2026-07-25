@@ -14,8 +14,14 @@ protocol GroupTransport: AnyObject {
     /// The roster changed (someone joined/left). Includes everyone currently
     /// connected, self excluded (the coordinator adds self).
     var onRoster: (@MainActor ([Participant]) -> Void)? { get set }
-    /// The leader disappeared (follower side) — a peer disconnect / timeout.
+    /// The leader disappeared (follower side) — a peer that was **connected**
+    /// dropped. Not fired for the initial handshake churn (a peer that never
+    /// connected going `.notConnected`), so a slow join never looks like a
+    /// leader who left.
     var onLeaderLost: (@MainActor () -> Void)? { get set }
+    /// Discovery/connection status changed. Lets the UI show "searching",
+    /// "connected", or an actionable failure (Local Network permission).
+    var onStatus: (@MainActor (GroupConnectionStatus) -> Void)? { get set }
 
     /// Begin advertising (leader) or browsing+joining (follower).
     func start()

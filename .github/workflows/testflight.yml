@@ -98,6 +98,55 @@ jobs:
           mkdir -p "$HOME/private_keys"
           printf '%s' "${{ secrets.APP_STORE_CONNECT_API_KEY }}" > "$HOME/private_keys/AuthKey_${KEY_ID}.p8"
 
+      # Keep the account under Apple's certificate cap automatically — the
+      # durable fix for the recurring "Your account has reached the maximum
+      # number of certificates" archive failure. Cloud signing mints a fresh
+      # "Apple Development" certificate on each throwaway build machine, so
+      # without cleanup they accumulate until archiving dies. Using the same App
+      # Store Connect API key, we revoke existing DEVELOPMENT certs before the
+      # archive; automatic signing then regenerates exactly the one it needs, so
+      # the account never fills up and no manual revoking is ever required.
+      # DISTRIBUTION certs (used to sign the App Store upload) are left untouched.
+      # Best-effort (continue-on-error): an API hiccup here must never block a build.
+      - name: Free up Apple Development certificate slots
+        continue-on-error: true
+        run: |
+          python3 -m pip install --quiet --disable-pip-version-check "PyJWT>=2" cryptography \
+            || python3 -m pip install --quiet --break-system-packages "PyJWT>=2" cryptography
+          python3 - <<'PY'
+          import glob, json, os, time, urllib.request, urllib.error
+          import jwt  # PyJWT
+
+          key_id = os.environ["KEY_ID"]
+          issuer = os.environ["ISSUER_ID"]
+          p8 = open(glob.glob(os.path.expanduser("~/private_keys/AuthKey_*.p8"))[0]).read()
+          now = int(time.time())
+          token = jwt.encode(
+              {"iss": issuer, "iat": now, "exp": now + 600, "aud": "appstoreconnect-v1"},
+              p8, algorithm="ES256", headers={"kid": key_id, "typ": "JWT"},
+          )
+          base = "https://api.appstoreconnect.apple.com/v1/certificates"
+
+          def api(url, method="GET"):
+              req = urllib.request.Request(
+                  url, method=method, headers={"Authorization": f"Bearer {token}"})
+              try:
+                  with urllib.request.urlopen(req) as r:
+                      raw = r.read()
+                      return r.status, (json.loads(raw) if raw else {})
+              except urllib.error.HTTPError as e:
+                  return e.code, {}
+
+          status, body = api(f"{base}?filter[certificateType]=DEVELOPMENT&limit=200")
+          certs = body.get("data", []) if status == 200 else []
+          print(f"List DEVELOPMENT certs: HTTP {status}, {len(certs)} found")
+          for c in certs:
+              cid = c["id"]
+              s, _ = api(f"{base}/{cid}", method="DELETE")
+              print(f"  revoke {cid}: HTTP {s}")
+          print("Done freeing certificate slots.")
+          PY
+
       # Clean, always-increasing build number: the workflow's own run counter.
       # TestFlight requires each upload's number to be higher than the last within
       # a given marketing version; run_number is monotonic, so it satisfies that.
@@ -110,7 +159,8 @@ jobs:
       # Build + sign the app into an ".xcarchive" (Apple's packaged, signed app).
       # -allowProvisioningUpdates + the API key let Xcode create/download the
       # signing certificates automatically — the same automatic signing your
-      # manual Organizer archives already use.
+      # manual Organizer archives already use. The "Free up ... certificate
+      # slots" step above keeps this from ever hitting Apple's cert cap.
       - name: Archive (build + sign)
         run: |
           xcodebuild archive \

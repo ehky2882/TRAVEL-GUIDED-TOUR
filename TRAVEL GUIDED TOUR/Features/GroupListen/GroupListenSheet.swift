@@ -54,7 +54,7 @@ struct GroupListenSheet: View {
                     .font(AtlasTypography.body)
                     .foregroundStyle(AtlasColors.primaryText)
                     .multilineTextAlignment(.center)
-                Text("One person leads; everyone nearby hears the same words at the same moment. Works offline over Bluetooth.")
+                Text("One person leads; everyone nearby hears the same words at the same moment, over Bluetooth or Wi‑Fi. To listen with no internet, download the tour on each phone first.")
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
                     .multilineTextAlignment(.center)
@@ -199,12 +199,7 @@ struct GroupListenSheet: View {
                 .padding(.top, AtlasSpacing.xl)
             }
 
-            Label(coordinator.participantCount == 1
-                  ? "Just you so far"
-                  : "\(coordinator.participantCount) listening",
-                  systemImage: "person.3.fill")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
+            statusRow(coordinator)
 
             Button {
                 coordinator.leave()
@@ -223,6 +218,37 @@ struct GroupListenSheet: View {
             Spacer()
         }
         .padding(.horizontal, AtlasSpacing.lg)
+    }
+
+    /// Connection/permission state so an active session can never look "stuck".
+    /// A denied Local Network permission or an empty room now says so, instead
+    /// of a silent screen.
+    @ViewBuilder
+    private func statusRow(_ coordinator: GroupListenCoordinator) -> some View {
+        switch coordinator.connectionStatus {
+        case .failed(let message):
+            VStack(spacing: AtlasSpacing.xs) {
+                Label(message, systemImage: "wifi.exclamationmark")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(.red)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        case .searching:
+            HStack(spacing: AtlasSpacing.sm) {
+                ProgressView().controlSize(.small)
+                Text(coordinator.isLeader ? "Waiting for people to join…" : "Connecting to the leader…")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+            }
+        case .connected, .idle:
+            Label(coordinator.participantCount == 1
+                  ? "Just you so far"
+                  : "\(coordinator.participantCount) listening",
+                  systemImage: "person.3.fill")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+        }
     }
 
     // MARK: - Signed out
