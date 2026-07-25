@@ -51,7 +51,7 @@ struct GroupListenSheet: View {
     private var chooser: some View {
         VStack(spacing: AtlasSpacing.lg) {
             VStack(spacing: AtlasSpacing.sm) {
-                Image(systemName: "person.2.wave.2.fill")
+                Image(systemName: "shareplay")
                     .font(.system(size: 40))
                     .foregroundStyle(AtlasColors.mapPin)
                 Text("Listen to this tour together, in sync.")
@@ -205,7 +205,7 @@ struct GroupListenSheet: View {
                 .padding(.top, AtlasSpacing.xl)
             } else {
                 VStack(spacing: AtlasSpacing.sm) {
-                    Image(systemName: coordinator.leaderLost ? "person.fill.questionmark" : "person.2.wave.2.fill")
+                    Image(systemName: coordinator.leaderLost ? "person.fill.questionmark" : "shareplay")
                         .font(.system(size: 40))
                         .foregroundStyle(AtlasColors.mapPin)
                     Text(coordinator.leaderLost

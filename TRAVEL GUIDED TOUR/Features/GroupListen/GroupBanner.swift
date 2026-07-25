@@ -71,6 +71,6 @@ struct GroupBanner: View {
     private func iconName(_ c: GroupListenCoordinator) -> String {
         if c.leaderLost { return "person.fill.questionmark" }
         if case .failed = c.connectionStatus { return "wifi.exclamationmark" }
-        return "person.2.wave.2.fill"
+        return "shareplay"
     }
 }

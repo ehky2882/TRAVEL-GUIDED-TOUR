@@ -1001,7 +1001,7 @@ struct TourDetailView: View {
             Button {
                 showingGroupListen = true
             } label: {
-                Image(systemName: "person.2.wave.2.fill")
+                Image(systemName: "shareplay")
                     .font(.system(size: 20))
                     .foregroundStyle(AtlasColors.mapPin)
                     .frame(width: controlHeight, height: controlHeight)
@@ -1192,7 +1192,7 @@ struct TourDetailView: View {
                 Button {
                     showingGroupListen = true
                 } label: {
-                    Label("Listen together", systemImage: "person.2.wave.2")
+                    Label("Listen together", systemImage: "shareplay")
                 }
             }
 
