@@ -86,15 +86,65 @@ final class GroupListenSyncTests: XCTestCase {
         XCTAssertTrue(GroupListenCoordinator.introIndex < 0)
     }
 
-    // MARK: - Drift correction
+    // MARK: - Drift correction (two-tier: ignore / glide / snap)
 
-    func test_shouldCorrectDrift_onlyBeyondThreshold() {
-        let t = 1.25
-        XCTAssertFalse(GroupListenCoordinator.shouldCorrectDrift(current: 10.0, target: 10.0, threshold: t))
-        XCTAssertFalse(GroupListenCoordinator.shouldCorrectDrift(current: 10.0, target: 11.0, threshold: t)) // 1.0 < 1.25
-        XCTAssertFalse(GroupListenCoordinator.shouldCorrectDrift(current: 10.0, target: 11.25, threshold: t)) // exactly at → no
-        XCTAssertTrue(GroupListenCoordinator.shouldCorrectDrift(current: 10.0, target: 12.0, threshold: t))  // 2.0 > 1.25
-        XCTAssertTrue(GroupListenCoordinator.shouldCorrectDrift(current: 20.0, target: 10.0, threshold: t))  // symmetric
+    private func correction(current: Double, target: Double) -> GroupDriftCorrection {
+        GroupListenCoordinator.correction(
+            current: current, target: target,
+            deadZone: 0.15, hardSeekThreshold: 2.0, fullTrimDrift: 1.0
+        )
+    }
+
+    func test_correction_insideDeadZone_doesNothing() {
+        XCTAssertEqual(correction(current: 10.0, target: 10.0), .inSync)
+        XCTAssertEqual(correction(current: 10.0, target: 10.1), .inSync)   // behind by 0.1
+        XCTAssertEqual(correction(current: 10.0, target: 9.9), .inSync)    // ahead by 0.1
+    }
+
+    func test_correction_largeDrift_snaps() {
+        XCTAssertEqual(correction(current: 10.0, target: 12.0), .seek)   // exactly at threshold
+        XCTAssertEqual(correction(current: 10.0, target: 20.0), .seek)
+        XCTAssertEqual(correction(current: 20.0, target: 10.0), .seek)   // symmetric
+    }
+
+    func test_correction_behindLeader_speedsUp() {
+        guard case .trim(let m) = correction(current: 10.0, target: 10.5) else {
+            return XCTFail("expected a trim")
+        }
+        XCTAssertGreaterThan(m, 1.0, "behind the leader → must play faster to catch up")
+        XCTAssertLessThanOrEqual(m, AudioPlayerService.maxSyncTrim)
+    }
+
+    func test_correction_aheadOfLeader_slowsDown() {
+        guard case .trim(let m) = correction(current: 10.5, target: 10.0) else {
+            return XCTFail("expected a trim")
+        }
+        XCTAssertLessThan(m, 1.0, "ahead of the leader → must play slower to fall back")
+        XCTAssertGreaterThanOrEqual(m, AudioPlayerService.minSyncTrim)
+    }
+
+    func test_correction_trimScalesWithDrift_andStaysInAudibleBounds() {
+        guard case .trim(let small) = correction(current: 10.0, target: 10.3),
+              case .trim(let large) = correction(current: 10.0, target: 11.0) else {
+            return XCTFail("expected trims")
+        }
+        XCTAssertLessThan(small, large, "a bigger gap should pull harder")
+        // Never exceed the inaudible band, in either direction.
+        for target in stride(from: 8.2, through: 11.8, by: 0.2) {
+            if case .trim(let m) = correction(current: 10.0, target: target) {
+                XCTAssertGreaterThanOrEqual(m, AudioPlayerService.minSyncTrim)
+                XCTAssertLessThanOrEqual(m, AudioPlayerService.maxSyncTrim)
+            }
+        }
+    }
+
+    func test_syncTrimBounds_areNarrowEnoughToBeInaudible() {
+        // Guards the tuning itself: a trim beyond ~5% is audible on speech.
+        XCTAssertLessThanOrEqual(AudioPlayerService.maxSyncTrim, 1.05)
+        XCTAssertGreaterThanOrEqual(AudioPlayerService.minSyncTrim, 0.95)
+        // Symmetric around 1.0 so catching up and falling back feel the same.
+        XCTAssertEqual(AudioPlayerService.maxSyncTrim - 1.0,
+                       1.0 - AudioPlayerService.minSyncTrim, accuracy: 0.0001)
     }
 
     // MARK: - Join code

@@ -58,11 +58,31 @@ final class GroupListenCoordinator {
     /// Follower: the stop index currently loaded, to avoid reloading each heartbeat.
     private var appliedStopIndex: Int?
 
-    /// Drift beyond this (seconds) triggers a corrective seek on a follower.
-    /// Below it, small phone-to-phone differences are inaudible — don't
-    /// over-correct (causes stutter). Design §4.
-    private let driftThreshold: Double = 1.25
-    private let heartbeatSeconds: Double = 1.0
+    // MARK: - Drift correction tuning
+    //
+    // v1 used a single 1.25s tolerance and a hard seek past it. That's ~3–4
+    // spoken words of slack, which is exactly the "works, but not quite in
+    // sync" echo you hear with two phones side by side — and the threshold
+    // couldn't simply be lowered, because every correction was a seek, and
+    // seeks are audible. So correction is now two-tier (see `correction(...)`):
+    //
+    //   |drift| < deadZone          → do nothing (already tight enough)
+    //   deadZone ≤ |drift| < hard   → trim the speed 1–3%, gliding back into
+    //                                 alignment inaudibly
+    //   |drift| ≥ hard              → hard (precise) seek; something real
+    //                                 happened — a stall, or a late joiner
+    //
+    /// Below this we're aligned; correcting would be pointless churn.
+    private let driftDeadZone: Double = 0.15
+    /// At or beyond this, glide-correcting would take too long — snap instead.
+    private let hardSeekThreshold: Double = 2.0
+    /// Drift (seconds) that maps to the maximum speed trim; drift between the
+    /// dead zone and this scales proportionally, so small gaps get gentle
+    /// nudges and large ones the full 3%.
+    private let fullTrimDrift: Double = 1.0
+    /// Position heartbeat interval. Twice as often as v1 (payload is a few
+    /// hundred bytes) so a follower converges in a couple of seconds, not ten.
+    private let heartbeatSeconds: Double = 0.5
 
     init() {}
 
@@ -156,6 +176,9 @@ final class GroupListenCoordinator {
         broadcastTask = nil
         transport?.leave()
         transport = nil
+        // Drop any follower speed trim — from here on this is solo playback and
+        // must run at exactly the speed the user picked.
+        audioPlayer?.setSyncTrim(1.0)
         role = nil
         code = nil
         participants = []
@@ -298,7 +321,10 @@ final class GroupListenCoordinator {
                              sourceId: tour.id.uuidString)
             appShared?.currentPlayingStopId = stopId
             appliedStopIndex = targetIndex
-            audioPlayer.seek(to: state.positionSeconds)
+            // Land on the leader's position exactly — a tolerant seek here can
+            // start us a few hundred ms out, which is audible from the first word.
+            audioPlayer.seek(to: state.positionSeconds, precise: true)
+            audioPlayer.setSyncTrim(1.0)
             if !state.isPlaying { audioPlayer.pause() }
         } else {
             // Same audio already loaded — match transport + correct drift.
@@ -307,11 +333,26 @@ final class GroupListenCoordinator {
             } else if !state.isPlaying, audioPlayer.state == .playing {
                 audioPlayer.pause()
             }
-            if state.isPlaying, audioPlayer.duration > 0,
-               Self.shouldCorrectDrift(current: audioPlayer.currentTime,
-                                       target: state.positionSeconds,
-                                       threshold: driftThreshold) {
-                audioPlayer.seek(to: state.positionSeconds)
+            if state.isPlaying, audioPlayer.duration > 0 {
+                switch Self.correction(
+                    current: audioPlayer.currentTime,
+                    target: state.positionSeconds,
+                    deadZone: driftDeadZone,
+                    hardSeekThreshold: hardSeekThreshold,
+                    fullTrimDrift: fullTrimDrift
+                ) {
+                case .inSync:
+                    audioPlayer.setSyncTrim(1.0)
+                case .trim(let multiplier):
+                    audioPlayer.setSyncTrim(multiplier)
+                case .seek:
+                    audioPlayer.setSyncTrim(1.0)
+                    audioPlayer.seek(to: state.positionSeconds, precise: true)
+                }
+            } else if !state.isPlaying {
+                // Paused: no drift to chase, and a trim must not persist into
+                // the next resume.
+                audioPlayer.setSyncTrim(1.0)
             }
         }
 
@@ -347,10 +388,31 @@ final class GroupListenCoordinator {
         return (0..<stopCount).contains(state.stopIndex) ? state.stopIndex : nil
     }
 
-    /// Correct drift only past the threshold — small phone-to-phone differences
-    /// are inaudible and re-seeking them just stutters (design §4).
-    nonisolated static func shouldCorrectDrift(current: Double, target: Double, threshold: Double) -> Bool {
-        abs(current - target) > threshold
+    /// Two-tier drift correction. `current`/`target` are seconds within the
+    /// current audio; positive drift means the follower is BEHIND the leader
+    /// (target ahead of us) and must speed up.
+    ///
+    /// The trim scales with how far out we are, so a 200 ms gap gets a barely-
+    /// there nudge and a 1 s gap gets the full 3% — closing a second of drift in
+    /// roughly half a minute of listening, with nothing audible happening.
+    nonisolated static func correction(
+        current: Double,
+        target: Double,
+        deadZone: Double,
+        hardSeekThreshold: Double,
+        fullTrimDrift: Double
+    ) -> GroupDriftCorrection {
+        let drift = target - current
+        let magnitude = abs(drift)
+        if magnitude < deadZone { return .inSync }
+        if magnitude >= hardSeekThreshold { return .seek }
+
+        // Scale 0…1 across the glide band, then map onto the trim bounds.
+        let span = max(fullTrimDrift, deadZone + .ulpOfOne)
+        let scaled = min(magnitude / span, 1.0)
+        let maxDelta = Double(AudioPlayerService.maxSyncTrim - 1.0)
+        let delta = maxDelta * scaled
+        return .trim(Float(1.0 + (drift > 0 ? delta : -delta)))
     }
 
     // MARK: - Helpers
