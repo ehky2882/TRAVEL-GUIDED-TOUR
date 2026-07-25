@@ -39,6 +39,8 @@
 	<string>Atlas uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Atlas uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Dozent uses the camera to scan a friend's code so you can join their group and listen to a tour together.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Atlas uses the microphone so you can record narration for the audio tours you create.</string>
 	<key>NSLocalNetworkUsageDescription</key>

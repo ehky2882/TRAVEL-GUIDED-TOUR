@@ -18,6 +18,7 @@ struct GroupListenSheet: View {
     /// this the button was a dead tap — the same silent-failure pattern that
     /// made this feature look broken in the first place.
     @State private var actionError: String?
+    @State private var showingScanner = false
 
     private var isSignedIn: Bool { authService?.isSignedIn == true }
 
@@ -41,6 +42,13 @@ struct GroupListenSheet: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
+                }
+            }
+            .sheet(isPresented: $showingScanner) {
+                QRScannerView { scannedCode in
+                    // The scanner only ever hands back an already-validated code.
+                    codeEntry = scannedCode
+                    joinGroup()
                 }
             }
         }
@@ -131,10 +139,21 @@ struct GroupListenSheet: View {
 
     private var joinForm: some View {
         VStack(spacing: AtlasSpacing.lg) {
-            Text("Enter the leader's code")
+            Text("Scan the leader's code")
                 .font(AtlasTypography.body)
                 .foregroundStyle(AtlasColors.primaryText)
                 .padding(.top, AtlasSpacing.xl)
+
+            Button {
+                showingScanner = true
+            } label: {
+                actionLabel("Scan QR code", subtitle: "Fastest", systemImage: "qrcode.viewfinder", filled: true)
+            }
+            .buttonStyle(.plain)
+
+            Text("or type it")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
 
             TextField("Code", text: $codeEntry)
                 .disableAutocorrection(true)
@@ -190,17 +209,25 @@ struct GroupListenSheet: View {
                     Text("YOU'RE LEADING")
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
-                    Text("Share this code")
+                    Text("Let them scan this")
                         .font(AtlasTypography.body)
                         .foregroundStyle(AtlasColors.primaryText)
+
+                    // Scanning beats reading five characters aloud in a busy
+                    // museum; the code stays visible right below as the fallback.
+                    if let code = coordinator.code {
+                        QRCodeView(content: AtlasShareLink.groupJoinURL(code: code).absoluteString)
+                    }
+
                     Text(coordinator.code ?? "—")
-                        .font(.system(size: 44, weight: .bold, design: .monospaced))
+                        .font(.system(size: 36, weight: .bold, design: .monospaced))
                         .foregroundStyle(AtlasColors.mapPin)
                         .textSelection(.enabled)
-                    Text("Others: ⋯ → Listen together → Join → enter this code.")
+                    Text("They can scan the code above, or tap Join and type these characters.")
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
                         .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
                 }
                 .padding(.top, AtlasSpacing.xl)
             } else {

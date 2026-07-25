@@ -332,6 +332,18 @@ struct TRAVEL_GUIDED_TOURApp: App {
             if let maker = dataService.maker(by: id) {
                 makerPresenter.present(maker)
             }
+        case .group(let code):
+            // A join QR scanned with the system Camera app lands here. No tour
+            // id is needed — the leader broadcasts what the group is playing,
+            // and the session banner provides the confirmation. Joining is
+            // account-gated, so say something when it can't proceed rather than
+            // appearing to do nothing.
+            if groupListen.join(code: code) == false {
+                toastCenter.show(
+                    "Sign in to listen together with a group.",
+                    style: .error
+                )
+            }
         }
     }
 }
