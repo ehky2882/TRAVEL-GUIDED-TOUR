@@ -14,6 +14,10 @@ struct GroupListenSheet: View {
     @State private var joining = false
     @State private var codeEntry = ""
     @State private var showDownloadWarning = false
+    /// Set when Start/Join couldn't even begin (a precondition failed). Without
+    /// this the button was a dead tap — the same silent-failure pattern that
+    /// made this feature look broken in the first place.
+    @State private var actionError: String?
 
     private var isSignedIn: Bool { authService?.isSignedIn == true }
 
@@ -78,8 +82,17 @@ struct GroupListenSheet: View {
                 .buttonStyle(.plain)
             }
 
+            if let actionError {
+                Label(actionError, systemImage: "exclamationmark.triangle")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(.red)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, AtlasSpacing.sm)
+            }
+
             if let coordinator, !coordinator.isTourDownloaded(tour) {
-                Label("For a reliable offline session, download this tour first (⋯ → Download).",
+                Label("Everyone streams the audio themselves, so for a session with no signal, each phone should download this tour first (⋯ → Download).",
                       systemImage: "wifi.slash")
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
@@ -135,7 +148,7 @@ struct GroupListenSheet: View {
                 }
 
             Button {
-                coordinator?.join(code: codeEntry)
+                joinGroup()
             } label: {
                 Text("Join")
                     .font(AtlasTypography.body)
@@ -148,7 +161,18 @@ struct GroupListenSheet: View {
             .buttonStyle(.plain)
             .disabled(codeEntry.count != 5)
 
-            Button("Back") { joining = false }
+            if let actionError {
+                Label(actionError, systemImage: "exclamationmark.triangle")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(.red)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Button("Back") {
+                joining = false
+                actionError = nil
+            }
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
 
@@ -234,6 +258,15 @@ struct GroupListenSheet: View {
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
+        case .connected where coordinator.followerAudioFailed:
+            // Connected to the leader, but our own audio never loaded — the
+            // giveaway that this tour isn't downloaded and there's no signal.
+            Label("Connected, but this tour's audio couldn't load. Download it (⋯ → Download) or move somewhere with signal.",
+                  systemImage: "exclamationmark.triangle")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(.red)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
         case .searching:
             HStack(spacing: AtlasSpacing.sm) {
                 ProgressView().controlSize(.small)
@@ -242,12 +275,24 @@ struct GroupListenSheet: View {
                     .foregroundStyle(AtlasColors.secondaryText)
             }
         case .connected, .idle:
-            Label(coordinator.participantCount == 1
-                  ? "Just you so far"
-                  : "\(coordinator.participantCount) listening",
-                  systemImage: "person.3.fill")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
+            VStack(spacing: AtlasSpacing.xs) {
+                Label(coordinator.participantCount == 1
+                      ? "Just you so far"
+                      : "\(coordinator.participantCount) listening",
+                      systemImage: "person.3.fill")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+
+                // The mesh radios cap out around 8; say so rather than letting
+                // the next person silently fail to connect (design §6).
+                if coordinator.isAtParticipantCap {
+                    Text("A nearby group holds about \(GroupListenCoordinator.maxNearbyParticipants) people — anyone else may not be able to join.")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
         }
     }
 
@@ -264,6 +309,23 @@ struct GroupListenSheet: View {
     // MARK: - Actions
 
     private func startLeading() {
-        _ = coordinator?.startAsLeader(tour: tour)
+        actionError = nil
+        // nil covers both "no coordinator in the environment" and "the
+        // coordinator refused" (signed out / not yet wired).
+        if coordinator?.startAsLeader(tour: tour) == nil {
+            actionError = Self.cantStartMessage
+        }
     }
+
+    private func joinGroup() {
+        actionError = nil
+        if coordinator?.join(code: codeEntry) != true {
+            actionError = Self.cantStartMessage
+        }
+    }
+
+    /// Both failure paths have the same cause (we're not signed in, or the app
+    /// hasn't finished wiring up), so they share one actionable message.
+    private static let cantStartMessage =
+        "Couldn't start a group. Make sure you're signed in, then try again."
 }

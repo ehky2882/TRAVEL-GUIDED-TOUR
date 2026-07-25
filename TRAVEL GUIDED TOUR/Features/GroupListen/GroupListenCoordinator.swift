@@ -37,6 +37,23 @@ final class GroupListenCoordinator {
     /// Total people in the session, including self.
     var participantCount: Int { participants.count + (isActive ? 1 : 0) }
 
+    /// Practical ceiling for a Nearby (Multipeer) session — a hard property of
+    /// the mesh radios, not a policy we chose. Design §6 requires communicating
+    /// it rather than letting the 9th person silently fail to connect.
+    /// `nonisolated` so UI copy and tests can read it off the main actor.
+    nonisolated static let maxNearbyParticipants = 8
+    /// True once the session is at (or over) the mesh limit, so the UI can say so.
+    var isAtParticipantCap: Bool { participantCount >= Self.maxNearbyParticipants }
+
+    /// Follower only: the leader told us what to play, but our audio didn't load.
+    /// Group Listen sends *state*, not audio — each follower fetches the MP3
+    /// itself — so a follower with no signal on a tour it hasn't downloaded ends
+    /// up connected-but-silent. Without surfacing this, that reads as "the
+    /// feature is broken" rather than "download the tour first".
+    var followerAudioFailed: Bool {
+        role == .follower && audioPlayer?.state == .failed
+    }
+
     // MARK: - Dependencies (wired via attach)
 
     private var audioPlayer: AudioPlayerService?
@@ -143,8 +160,11 @@ final class GroupListenCoordinator {
 
     /// Join an existing session by code as a follower. The tour is resolved from
     /// the leader's first broadcast, so this needs only the code.
-    func join(code joinCode: String) {
-        guard configured, let me = currentUser() else { return }
+    /// Returns false if we couldn't even start (not configured / signed out) so
+    /// the caller can say so instead of leaving the user on a dead form.
+    @discardableResult
+    func join(code joinCode: String) -> Bool {
+        guard configured, let me = currentUser() else { return false }
         leave()
 
         self.me = me
@@ -167,6 +187,7 @@ final class GroupListenCoordinator {
         wire(mp)
         mp.start()
         transport = mp
+        return true
     }
 
     /// Leave the session and reset. Solo playback/geofencing resume as normal on

@@ -147,6 +147,14 @@ final class GroupListenSyncTests: XCTestCase {
                        1.0 - AudioPlayerService.minSyncTrim, accuracy: 0.0001)
     }
 
+    // MARK: - Nearby participant cap
+
+    func test_maxNearbyParticipants_matchesMeshReality() {
+        // Multipeer's practical ceiling is ~8 including the leader. If this ever
+        // changes, the UI copy that quotes the number changes with it.
+        XCTAssertEqual(GroupListenCoordinator.maxNearbyParticipants, 8)
+    }
+
     // MARK: - Join code
 
     func test_makeCode_hasFixedLengthFromUnambiguousAlphabet() {
