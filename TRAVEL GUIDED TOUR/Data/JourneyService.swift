@@ -18,8 +18,25 @@ final class JourneyService {
     /// The signed-in user's own journeys, newest-updated first.
     private(set) var myJourneys: [Journey] = []
 
+    /// Which tours sit in which of the user's lists — `journeyId → tourIds`.
+    /// Built from the same embedded rows `loadMyJourneys()` already fetches, so
+    /// it costs no extra query, and kept in step by every mutation below.
+    private(set) var membership: [UUID: Set<UUID>] = [:]
+
+    /// Every tour in *any* of the user's lists, cached as a flat set.
+    ///
+    /// This is read by `isSaved` on every card in every rail, so it has to be an
+    /// O(1) local lookup — a per-tour query would put a network round-trip
+    /// behind every bookmark glyph on screen. Recomputed only when membership
+    /// changes (a load or a mutation), which is rare by comparison.
+    private(set) var allListedTourIds: Set<UUID> = []
+
     private let auth: AuthService
     private let client: SupabaseClient
+
+    /// The uid the current cache belongs to, so a different account never sees
+    /// the previous one's lists (the service isn't torn down on sign-out).
+    private var loadedUid: String?
 
     init(auth: AuthService, client: SupabaseClient = SupabaseClientProvider.shared) {
         self.auth = auth
@@ -28,15 +45,42 @@ final class JourneyService {
 
     private var uid: String? { auth.user?.id.uuidString.lowercased() }
 
-    /// Clear the in-memory list (e.g. on sign-out).
-    func clear() { myJourneys = [] }
+    /// Clear all cached state (e.g. on sign-out).
+    func clear() {
+        myJourneys = []
+        membership = [:]
+        allListedTourIds = []
+        loadedUid = nil
+    }
+
+    /// Drop cached state if the signed-in user changed since it was loaded.
+    /// Called at the start of every load so a sign-out or account switch can't
+    /// leave the previous user's lists on screen.
+    func clearIfUserChanged() {
+        if loadedUid != uid { clear() }
+    }
+
+    /// Rebuild the flat set after `membership` changes.
+    private func rebuildAllListed() {
+        allListedTourIds = membership.values.reduce(into: Set<UUID>()) { $0.formUnion($1) }
+    }
+
+    /// The user's lists that currently contain `tourId`, read from the cache.
+    ///
+    /// Synchronous on purpose: the membership sheet and the bookmark controls
+    /// both need this while deciding what to draw, and the data already arrived
+    /// with `loadMyJourneys()`.
+    func listsContaining(tourId: UUID) -> Set<UUID> {
+        Set(membership.filter { $0.value.contains(tourId) }.keys)
+    }
 
     // MARK: - Load
 
     /// Load the current user's journeys with each one's tour count. A failure
     /// leaves the current list unchanged; signed-out clears it.
     func loadMyJourneys() async {
-        guard let uid else { myJourneys = []; return }
+        clearIfUserChanged()
+        guard let uid else { clear(); return }
         do {
             let rows: [JourneyRow] = try await client
                 .from("journeys")
@@ -46,6 +90,13 @@ final class JourneyService {
                 .execute()
                 .value
             myJourneys = rows.map(\.asJourney)
+            // The embed already carries every item's tour id, so membership
+            // comes free with the list query — no second round-trip.
+            membership = Dictionary(
+                uniqueKeysWithValues: rows.map { ($0.id, Set($0.journeyItems.map(\.tourId))) }
+            )
+            rebuildAllListed()
+            loadedUid = uid
         } catch {
             // Keep whatever we have; the screen still renders.
         }
@@ -112,6 +163,7 @@ final class JourneyService {
             itemCount: 0
         )
         myJourneys.insert(journey, at: 0)
+        membership[id] = []
         return journey
     }
 
@@ -133,6 +185,8 @@ final class JourneyService {
         try await client.from("journey_items").insert(row, returning: .minimal).execute()
         await touch(journeyId)
         adjustCount(journeyId, by: 1)
+        membership[journeyId, default: []].insert(tourId)
+        rebuildAllListed()
     }
 
     /// Remove a tour from a journey. Leaves the remaining positions as-is
@@ -146,6 +200,8 @@ final class JourneyService {
             .execute()
         await touch(journeyId)
         adjustCount(journeyId, by: -1)
+        membership[journeyId]?.remove(tourId)
+        rebuildAllListed()
     }
 
     /// Delete a journey (its items cascade via the FK). Removes it from the
@@ -157,6 +213,8 @@ final class JourneyService {
             .eq("id", value: journeyId.uuidString.lowercased())
             .execute()
         myJourneys.removeAll { $0.id == journeyId }
+        membership[journeyId] = nil
+        rebuildAllListed()
     }
 
     /// Update a journey's editable metadata (title / description / public).

@@ -23,25 +23,37 @@ struct CardHeroControls: View {
     }
 }
 
-/// The bookmark chip — identical behaviour to the inline button the
-/// cards used to carry, now shared so it always matches the download
-/// chip's size/treatment.
+/// The bookmark chip — the shortcut into the one save concept
+/// (`SaveState`): a tap on an unsaved tour drops it into **Liked**, the
+/// default list. If the tour already sits in several lists a tap opens the
+/// membership sheet instead of guessing which one the user meant to remove
+/// it from.
 private struct CardBookmarkButton: View {
     let tour: Tour
     @Environment(LibraryStore.self) private var libraryStore
+    @Environment(JourneyService.self) private var journeyService: JourneyService?
+
+    @State private var showingLists = false
+
+    private var actions: TourSaveActions {
+        TourSaveActions(libraryStore: libraryStore, journeyService: journeyService)
+    }
 
     var body: some View {
         Button {
-            libraryStore.toggleSaved(tour.id)
+            showingLists = actions.handleTap(tour.id)
         } label: {
-            Image(systemName: libraryStore.isSaved(tour.id) ? "bookmark.fill" : "bookmark")
+            Image(systemName: actions.isSaved(tour.id) ? "bookmark.fill" : "bookmark")
                 .font(AtlasTypography.body)
                 .foregroundStyle(AtlasColors.primaryText)
                 .frame(width: CardHeroControlMetrics.diameter, height: CardHeroControlMetrics.diameter)
                 .background(.regularMaterial, in: Circle())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(libraryStore.isSaved(tour.id) ? "Saved" : "Save tour")
+        .accessibilityLabel(actions.accessibilityLabel(tour.id))
+        .sheet(isPresented: $showingLists) {
+            TourListMembershipSheet(tour: tour)
+        }
     }
 }
 
