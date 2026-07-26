@@ -34,6 +34,10 @@ struct ContentView: View {
     @Environment(AuthService.self) private var authService
     @Environment(JourneyService.self) private var journeyService
     @Environment(GroupListenCoordinator.self) private var groupListen
+    /// Optional so previews and any host that doesn't build the secondary window
+    /// still render. When present and not installed, the bottom module is drawn
+    /// inline as a fallback — see the render site in `body`.
+    @Environment(BottomModuleWindowController.self) private var bottomModuleWindow: BottomModuleWindowController?
 
     /// `.onAppear` fires every time the view re-attaches (tab switch,
     /// returning from background, etc.). Request location permission
@@ -141,6 +145,24 @@ struct ContentView: View {
                         sheetDetent: $homeSheetDetent
                     )
                 }
+            }
+            // Fallback mini-player + tab bar, rendered in THIS (main) window
+            // whenever the secondary higher-level window isn't installed.
+            //
+            // The bars normally live only in that window, so any failure to
+            // install it left the app with no tab bar at all for the whole
+            // session — repeatedly reported on the first launch after installing
+            // a TestFlight build. Successive fixes there were all bets on scene
+            // lifecycle timing, and the symptom kept coming back. This makes the
+            // bars unconditional: an ordinary part of the SwiftUI hierarchy,
+            // which cannot fail for scene-lifecycle reasons.
+            //
+            // The retry chain still promotes to the real window within seconds,
+            // at which point this disappears (`isInstalled` is observed). While
+            // it is showing, the only thing missing is z-order above UIKit
+            // modals — a much better failure than an app you can't navigate.
+            if let bottomModuleWindow, !bottomModuleWindow.isInstalled {
+                BottomModuleRoot()
             }
         }
         .ignoresSafeArea(.container, edges: .bottom)

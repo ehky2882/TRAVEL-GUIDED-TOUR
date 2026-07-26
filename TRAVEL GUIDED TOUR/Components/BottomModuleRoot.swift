@@ -17,11 +17,16 @@ struct BottomModuleRoot: View {
     /// `BottomModuleWindowController.setInteractiveBottomInset(_:)`.
     /// `@MainActor` because it drives the (main-actor) window controller —
     /// same pattern as `GroupTransport`'s callbacks.
-    var onInteractiveHeightChange: (@MainActor (CGFloat) -> Void)?
+    /// Explicit `= nil` so `BottomModuleRoot()` is unambiguously valid: the
+    /// inline fallback in `ContentView` renders it without a window to measure.
+    var onInteractiveHeightChange: (@MainActor (CGFloat) -> Void)? = nil
 
     @Environment(DataService.self) private var dataService
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(TourPresenter.self) private var tourPresenter
+    /// Needed here, not just in `ContentView`, so a tab tap can close a presented
+    /// maker page from this window — see `tabSelection`.
+    @Environment(MakerPresenter.self) private var makerPresenter: MakerPresenter?
     @Environment(AppSharedState.self) private var appShared
     @Environment(AtlasNavigationState.self) private var navState
     @Environment(AuthService.self) private var authService: AuthService?
@@ -68,7 +73,7 @@ struct BottomModuleRoot: View {
                     extendsToScreenEdges: extendsToScreenEdges
                 )
                 AtlasTabBar(
-                    selected: $appShared.selectedTab,
+                    selected: tabSelection,
                     extendsToScreenEdges: extendsToScreenEdges,
                     badgedTabs: (followService?.ownPendingRequests ?? 0) > 0 ? [.me] : []
                 )
@@ -124,6 +129,38 @@ struct BottomModuleRoot: View {
     private var ownMakerId: UUID? {
         guard authService?.isSignedIn == true else { return nil }
         return makerProfileService?.myMaker?.id
+    }
+
+    /// Tab-bar binding that closes any presented detail layer **as part of the
+    /// tap**, then switches tab.
+    ///
+    /// `ContentView` has an `.onChange(of: selectedTab)` that does the same, and
+    /// it is kept as a backstop — but it cannot be relied on alone. It lives in
+    /// the MAIN window, which is entirely covered by the UIKit tour-detail modal
+    /// at the moment of the tap, and SwiftUI can stop delivering updates to a
+    /// hierarchy hidden behind a modal presentation. When that happens the tap
+    /// still flips `selectedTab` (so the tab icon highlights) while nothing
+    /// dismisses the layer, and the new tab's content swaps in *behind* the
+    /// detail — the user sees a tab bar that appears dead. Reported on 1.1 (44)
+    /// after joining a group, with the tour page still open.
+    ///
+    /// This binding runs in the secondary window, which is never covered, so the
+    /// dismissal is not conditional on the main window still being live.
+    private var tabSelection: Binding<AtlasTab> {
+        Binding(
+            get: { appShared.selectedTab },
+            set: { newTab in
+                if newTab != appShared.selectedTab {
+                    if tourPresenter.presentedTour != nil {
+                        tourPresenter.dismiss()
+                    }
+                    if makerPresenter?.presentedMaker != nil {
+                        makerPresenter?.dismiss()
+                    }
+                }
+                appShared.selectedTab = newTab
+            }
+        )
     }
 
     private var nowPlayingTour: Tour? {

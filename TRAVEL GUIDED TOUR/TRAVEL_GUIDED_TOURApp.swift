@@ -141,6 +141,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(navState)
                     .environment(toastCenter)
                     .environment(groupListen)
+                    // So ContentView can render the mini-player + tab bar inline
+                    // while the secondary window isn't installed. Without that
+                    // fallback, a failed install means no bars for the session.
+                    .environment(bottomModuleWindow)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
                     .task {
                         // Pre-warm the Me tab at launch so its data is already
@@ -222,6 +226,19 @@ struct TRAVEL_GUIDED_TOURApp: App {
                         // `installBottomModule()` — factored so this
                         // call site and the `scenePhase == .active`
                         // recovery build the window identically.
+                        installBottomModule()
+                    }
+                    // Level-triggered backstop. Every other install trigger is
+                    // edge-driven (a single `.onAppear`, a `scenePhase`
+                    // *change*, a one-shot activation notification), so a
+                    // launch that misses all of them left the mini-player + tab
+                    // bar missing for the whole session. This re-checks the
+                    // actual state a beat after mount; `install()` is
+                    // idempotent, so it's a no-op in the normal case.
+                    .task {
+                        guard !bottomModuleWindow.isInstalled else { return }
+                        try? await Task.sleep(for: .milliseconds(500))
+                        guard !bottomModuleWindow.isInstalled else { return }
                         installBottomModule()
                     }
                     .onChange(of: colorSchemePreference) { _, newValue in

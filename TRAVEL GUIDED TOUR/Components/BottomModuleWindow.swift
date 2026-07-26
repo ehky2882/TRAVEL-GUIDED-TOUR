@@ -64,7 +64,11 @@ enum BottomModuleInstallOutcome: Equatable {
     case deferUntilActive
 }
 
+/// `@Observable` so the main window can watch `isInstalled` and render the
+/// mini-player + tab bar inline whenever this secondary window is absent. That
+/// fallback is what makes the bars unconditional — see `isInstalled`.
 @MainActor
+@Observable
 final class BottomModuleWindowController {
     private var window: UIWindow?
     /// One-shot observer that retries the install when a scene
@@ -81,18 +85,67 @@ final class BottomModuleWindowController {
     /// `lastPreference`: a *deferred* install must not lose an update that
     /// arrived before the window existed.
     private var lastInteractiveBottomInset: CGFloat?
+    /// Pending self-heal retry, so only one chain is ever in flight.
+    private var retryWorkItem: DispatchWorkItem?
+    /// How many self-heal retries have been scheduled so far.
+    private var retryAttempt = 0
 
     private static let log = Logger(subsystem: "com.dozent.app", category: "BottomModuleWindow")
+
+    /// Delay before self-heal retry number `attempt` (0-based), or `nil` once
+    /// we've exhausted the schedule.
+    ///
+    /// **Why a retry chain at all, when there are already two triggers?** Every
+    /// existing trigger is *edge*-driven: `ContentView`'s `.onAppear` (fires
+    /// once, ~2s after launch when the splash swaps out), a `scenePhase`
+    /// *change* to `.active`, and a one-shot `UIScene.didActivateNotification`.
+    /// If the scene isn't `.foregroundActive` at the `.onAppear` moment AND no
+    /// later edge arrives — the app launched straight into `.foregroundActive`
+    /// so `scenePhase` never *changes*, and the activation notification already
+    /// fired before we were listening — nothing tries again, and the
+    /// mini-player + tab bar are missing **for the entire session** until the
+    /// user force-quits. That matches the reported symptom exactly (missing on
+    /// first launch after installing a build; fine after a relaunch).
+    ///
+    /// A level-triggered retry closes that hole without needing to know which
+    /// edge was missed. `install()` is idempotent and cheap, so retrying costs
+    /// nothing once the window exists.
+    static func retryDelay(forAttempt attempt: Int) -> Double? {
+        let schedule: [Double] = [0.15, 0.4, 1.0, 2.0, 4.0]
+        guard attempt >= 0, attempt < schedule.count else { return nil }
+        return schedule[attempt]
+    }
+
+    /// Whether the secondary window currently exists.
+    ///
+    /// Read by `ContentView`, which renders the mini-player + tab bar **inline in
+    /// the main window** while this is `false`. That fallback exists because
+    /// every previous fix here was a bet on scene timing, and the bars kept
+    /// going missing anyway: they lived *only* in this window, so any failure to
+    /// install meant no bars at all, with nothing to fall back to. Rendering
+    /// them in the ordinary SwiftUI hierarchy can't fail for scene-lifecycle
+    /// reasons. The only thing lost in fallback mode is z-order above UIKit
+    /// modals, which is a far better failure than an app with no tab bar.
+    var isInstalled: Bool { window != nil }
 
     /// Update the height of the bottom strip in which this window claims
     /// touches. **Must** track the module's real painted height, not a constant:
     /// content can appear *above* the mini-player (the Group Listen banner), and
     /// anything outside the claimed strip is visible but completely untappable —
     /// which is exactly how the banner's "Leave" button ended up dead.
+    /// Never shrinks below `AtlasBottomModule.height()`. The measurement can
+    /// legitimately be *larger* than that constant (content above the
+    /// mini-player), which is the whole reason it's measured — but it must never
+    /// come in smaller, because a transient value mid-animation (the module
+    /// animates on `nowPlayingTour` changes, and `onGeometryChange` reports
+    /// intermediate frames) would shrink the touch strip and leave part of the
+    /// painted bars visible but dead. Clamping makes an under-measurement
+    /// harmless instead of turning it into an untappable tab bar.
     func setInteractiveBottomInset(_ inset: CGFloat) {
-        guard inset > 0, inset != lastInteractiveBottomInset else { return }
-        lastInteractiveBottomInset = inset
-        (window as? PassThroughWindow)?.interactiveBottomInset = inset
+        let clamped = max(inset, AtlasBottomModule.height())
+        guard clamped > 0, clamped != lastInteractiveBottomInset else { return }
+        lastInteractiveBottomInset = clamped
+        (window as? PassThroughWindow)?.interactiveBottomInset = clamped
     }
 
     /// Pure decision used by `install()`. Kept separate so the
@@ -136,17 +189,58 @@ final class BottomModuleWindowController {
             return true
         case .deferUntilActive:
             registerActivationRetry(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
+            scheduleSelfHealRetry(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
             return false
         }
+    }
+
+    /// Schedules the next level-triggered retry (see `retryDelay(forAttempt:)`
+    /// for why the edge-triggered paths aren't sufficient on their own). Only
+    /// one chain runs at a time, and it stops as soon as the window exists or
+    /// the schedule is exhausted.
+    private func scheduleSelfHealRetry<Root: View>(
+        interactiveBottomInset: CGFloat,
+        @ViewBuilder rootView: @escaping () -> Root
+    ) {
+        guard retryWorkItem == nil else { return }
+        guard let delay = Self.retryDelay(forAttempt: retryAttempt) else {
+            Self.log.error("Bottom-module install still deferred after all retries — no active scene.")
+            return
+        }
+        retryAttempt += 1
+        let item = DispatchWorkItem { [weak self] in
+            MainActor.assumeIsolated {
+                guard let self else { return }
+                self.retryWorkItem = nil
+                guard self.window == nil else { return }
+                // Re-entering install() either succeeds or schedules the next
+                // retry, so the chain continues without special-casing here.
+                self.install(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
+            }
+        }
+        retryWorkItem = item
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: item)
+    }
+
+    private func cancelSelfHealRetry() {
+        retryWorkItem?.cancel()
+        retryWorkItem = nil
     }
 
     /// The current foreground-active window scene, if any. On iPad
     /// multi-scene (`UIApplicationSupportsMultipleScenes`) this picks
     /// the active one so we never attach to a backgrounded scene.
+    ///
+    /// **Zero-size scenes don't count.** A scene can report
+    /// `.foregroundActive` before its geometry is configured, and a window
+    /// attached to one is zero-sized — invisible, and untappable too, since
+    /// `PassThroughWindow.hitTest` measures from `bounds.height`. Treating that
+    /// as "no scene yet" sends it down the retry path instead of installing a
+    /// window that can never be seen.
     private static func foregroundActiveScene() -> UIWindowScene? {
         UIApplication.shared.connectedScenes
             .compactMap { $0 as? UIWindowScene }
-            .first { $0.activationState == .foregroundActive }
+            .first { $0.activationState == .foregroundActive && !$0.coordinateSpace.bounds.isEmpty }
     }
 
     private func installWindow<Root: View>(
@@ -157,6 +251,14 @@ final class BottomModuleWindowController {
         guard window == nil else { return }
 
         let w = PassThroughWindow(windowScene: scene)
+        // NOTE: deliberately no explicit `frame` assignment. An earlier revision
+        // set `w.frame = scene.coordinateSpace.bounds` as "harmless insurance",
+        // which was a mistake twice over: it pins a snapshot of the geometry (so
+        // the window stops tracking the scene across rotation), and if the scene
+        // wasn't configured yet it pins *zero* — the exact invisible-window
+        // failure it was meant to prevent. `UIWindow(windowScene:)` adopts and
+        // tracks the scene's geometry on its own; readiness is now checked in
+        // `foregroundActiveScene()` instead.
         // One level above .normal so this window sits on top of
         // every modal presentation (UIKit modals default to .normal
         // level). The level is a `CGFloat`, so we add a small
@@ -174,6 +276,7 @@ final class BottomModuleWindowController {
         w.isHidden = false
         window = w
         clearActivationRetry()
+        cancelSelfHealRetry()
         // Re-apply the last-known appearance: a deferred install
         // happens after the App already called `apply`, so the fresh
         // window would otherwise be stuck on SYSTEM appearance.

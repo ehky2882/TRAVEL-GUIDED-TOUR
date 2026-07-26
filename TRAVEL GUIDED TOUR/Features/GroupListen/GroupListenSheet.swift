@@ -22,26 +22,73 @@ struct GroupListenSheet: View {
 
     private var isSignedIn: Bool { authService?.isSignedIn == true }
 
+    /// Matches the Group Listen glyph in `TourDetailView`'s action row, so the
+    /// icon you tapped and the icon on the sheet it opens are the same weight
+    /// (owner call). Was 40pt here, which dominated the half-height sheet.
+    private static let glyphSize: CGFloat = 16
+
+    /// Well down from the component's 170pt default. The QR is the only tall
+    /// element on the leader screen, so it sets that screen's height almost on
+    /// its own, and at 140 the Leave button still ended up jammed against the
+    /// mini-player. 110 clears it.
+    ///
+    /// **This is the floor.** The payload is a ~58-character https link, so the
+    /// code is around 33–37 modules wide; at 110pt that's roughly 3pt per module,
+    /// which scans fine at normal phone-to-phone distance but is where it stops
+    /// having margin. If this screen ever needs more room again, open it at a
+    /// taller detent instead of shrinking this further — an unscannable QR
+    /// defeats the entire feature.
+    private static let qrSize: CGFloat = 110
+
     var body: some View {
         NavigationStack {
-            Group {
-                if !isSignedIn {
-                    signedOut
-                } else if let coordinator, coordinator.isActive {
-                    activeSession(coordinator)
-                } else if joining {
-                    joinForm
-                } else {
-                    chooser
+            // A ScrollView, not a fixed frame. With a fixed frame, content taller
+            // than the detent overflowed *upwards* and drew straight through the
+            // navigation bar — which is how "YOU'RE LEADING" ended up printed on
+            // top of the "LISTEN TOGETHER" title. Scrolling makes overflow
+            // impossible to render out of bounds, on any device size or Dynamic
+            // Type setting; `.basedOnSize` keeps it from bouncing when, as
+            // intended, everything already fits.
+            ScrollView {
+                Group {
+                    if !isSignedIn {
+                        signedOut
+                    } else if let coordinator, coordinator.isActive {
+                        activeSession(coordinator)
+                    } else if joining {
+                        joinForm
+                    } else {
+                        chooser
+                    }
                 }
+                .frame(maxWidth: .infinity)
             }
+            .scrollBounceBehavior(.basedOnSize)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            // The mini-player + tab bar live in a higher-level window, so they
+            // paint OVER the bottom of this sheet. Without reserving their
+            // height, the last line of the sheet (the download hint) sat
+            // underneath them and looked cut off. Same inset every other
+            // scrollable surface in the app applies.
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Color.clear.frame(height: AtlasBottomModule.height())
+            }
             .background(AtlasColors.secondaryBackground)
             .navigationTitle("Listen together")
             .inlineNavigationBarTitle()
+            // Render the nav-bar title ourselves so it carries the caption
+            // token (13pt SF Mono) in ALL CAPS, matching Settings / Follow
+            // Requests / the other pushed screens. `.navigationTitle` is kept
+            // above purely for the accessibility label.
             .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("LISTEN TOGETHER")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.primaryText)
+                }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Done") { dismiss() }
+                        .font(AtlasTypography.caption)
                 }
             }
             .sheet(isPresented: $showingScanner) {
@@ -52,43 +99,62 @@ struct GroupListenSheet: View {
                 }
             }
         }
+        // Half-height by default — the chooser is two buttons and a line of
+        // copy, so a full-screen sheet was mostly empty space. `.large` stays
+        // available by drag, because the leader's QR code wants the extra room.
+        // Declared on the NavigationStack (the presented root) so it applies to
+        // THIS sheet and not the nested scanner sheet above.
+        .presentationDetents([.medium, .large])
     }
 
     // MARK: - Chooser
 
     private var chooser: some View {
-        VStack(spacing: AtlasSpacing.lg) {
+        VStack(spacing: AtlasSpacing.md) {
             VStack(spacing: AtlasSpacing.sm) {
                 Image(systemName: "person.2.wave.2.fill")
-                    .font(.system(size: 40))
+                    .font(.system(size: Self.glyphSize))
                     .foregroundStyle(AtlasColors.mapPin)
-                Text("Listen to this tour together, in sync.")
-                    .font(AtlasTypography.body)
+                // One line each. The old copy explained the transport
+                // (Bluetooth/Wi‑Fi) and the download caveat up front — detail
+                // nobody needs before choosing which button to press. The
+                // download caveat still appears below, but only when this tour
+                // actually isn't downloaded.
+                Text("Hear this tour together, in sync.")
+                    .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.primaryText)
                     .multilineTextAlignment(.center)
-                Text("One person leads; everyone nearby hears the same words at the same moment, over Bluetooth or Wi‑Fi. To listen with no internet, download the tour on each phone first.")
+                Text("One person leads. Everyone nearby follows.")
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(.top, AtlasSpacing.xl)
+            .padding(.top, AtlasSpacing.md)
 
-            VStack(spacing: AtlasSpacing.md) {
+            // Side by side: two equal cards, so the choice reads as one
+            // decision rather than a primary action with an afterthought
+            // beneath it. The labels are self-explanatory, so there's no
+            // subtitle — the old "You lead" / "Scan a code" second lines made
+            // each card twice as tall for no information (owner call).
+            HStack(spacing: AtlasSpacing.md) {
                 Button {
                     startLeading()
                 } label: {
-                    actionLabel("Start a group", subtitle: "You lead", systemImage: "play.circle.fill", filled: true)
+                    actionLabel("LEAD A TOUR", systemImage: "play.circle.fill", filled: true)
                 }
                 .buttonStyle(.plain)
 
                 Button {
                     joining = true
                 } label: {
-                    actionLabel("Join a group", subtitle: "Enter a code", systemImage: "arrow.right.circle", filled: false)
+                    actionLabel("JOIN A TOUR", systemImage: "arrow.right.circle", filled: false)
                 }
                 .buttonStyle(.plain)
             }
+            // Equal heights even if one title wraps and the other doesn't: the
+            // cards stretch to the row, the row takes its ideal height.
+            .fixedSize(horizontal: false, vertical: true)
 
             if let actionError {
                 Label(actionError, systemImage: "exclamationmark.triangle")
@@ -96,36 +162,38 @@ struct GroupListenSheet: View {
                     .foregroundStyle(.red)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(.top, AtlasSpacing.sm)
             }
 
             if let coordinator, !coordinator.isTourDownloaded(tour) {
-                Label("Everyone streams the audio themselves, so for a session with no signal, each phone should download this tour first (⋯ → Download).",
+                // Trimmed, but the load-bearing fact stays: audio is NOT sent
+                // peer-to-peer, so "connected" with no signal means silence.
+                // That honesty fix is why this line exists at all.
+                Label("Each phone streams its own audio — with no signal, download this tour on both first.",
                       systemImage: "wifi.slash")
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
                     .multilineTextAlignment(.leading)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(.top, AtlasSpacing.sm)
             }
 
-            Spacer()
         }
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
-    private func actionLabel(_ title: String, subtitle: String, systemImage: String, filled: Bool) -> some View {
-        HStack(spacing: AtlasSpacing.md) {
-            Image(systemName: systemImage).font(.system(size: 22))
-            VStack(alignment: .leading, spacing: 2) {
-                Text(title).font(AtlasTypography.body)
-                Text(subtitle).font(AtlasTypography.caption)
-                    .foregroundStyle(filled ? AtlasColors.background.opacity(0.8) : AtlasColors.secondaryText)
-            }
-            Spacer()
+    /// One of the two side-by-side choice cards: glyph beside the label, on one
+    /// line, so the pair stays short enough for everything on the sheet to be
+    /// visible at the half-height detent without dragging.
+    private func actionLabel(_ title: String, systemImage: String, filled: Bool) -> some View {
+        HStack(spacing: AtlasSpacing.xs) {
+            Image(systemName: systemImage).font(.system(size: Self.glyphSize))
+            Text(title)
+                .font(AtlasTypography.caption)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
-        .padding(AtlasSpacing.md)
-        .frame(maxWidth: .infinity)
+        .padding(.vertical, AtlasSpacing.md)
+        .padding(.horizontal, AtlasSpacing.sm)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
         .background(filled ? AtlasColors.mapPin : Color.clear)
         .overlay(
@@ -138,47 +206,61 @@ struct GroupListenSheet: View {
     // MARK: - Join form
 
     private var joinForm: some View {
-        VStack(spacing: AtlasSpacing.lg) {
-            Text("Scan the leader's code")
-                .font(AtlasTypography.body)
-                .foregroundStyle(AtlasColors.primaryText)
-                .padding(.top, AtlasSpacing.xl)
-
-            Button {
-                showingScanner = true
-            } label: {
-                actionLabel("Scan QR code", subtitle: "Fastest", systemImage: "qrcode.viewfinder", filled: true)
-            }
-            .buttonStyle(.plain)
-
-            Text("or type it")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
-
-            TextField("Code", text: $codeEntry)
-                .disableAutocorrection(true)
-                .multilineTextAlignment(.center)
-                .font(.system(.title2, design: .monospaced))
-                .padding(AtlasSpacing.md)
-                .background(AtlasColors.placeholderWarm.opacity(0.35))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                .onChange(of: codeEntry) { _, new in
-                    codeEntry = String(new.uppercased().prefix(5))
+        // Scan and type-a-code sit SIDE BY SIDE, mirroring the leader screen.
+        // Stacked full-width (button, "or type it", field, Join, Back) they ran
+        // past the half detent and pushed Back under the mini-player. They're
+        // two ways to do one thing, not sequential steps, so columns fit the
+        // meaning as well as the space. Each column labels itself, which also
+        // retires the separate header and the "or type it" divider.
+        VStack(spacing: AtlasSpacing.md) {
+            HStack(alignment: .top, spacing: AtlasSpacing.md) {
+                Button {
+                    showingScanner = true
+                } label: {
+                    actionLabel("SCAN TO JOIN", systemImage: "qrcode.viewfinder", filled: true)
                 }
+                .buttonStyle(.plain)
 
-            Button {
-                joinGroup()
-            } label: {
-                Text("Join")
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.background)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 48)
-                    .background(codeEntry.count == 5 ? AtlasColors.mapPin : AtlasColors.tertiaryText)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                    Text("OR ENTER CODE TO JOIN")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    // Deliberately still monospaced and larger than caption: you
+                    // check this while someone reads a code aloud, so legibility
+                    // beats compactness. Padding gives up the height instead.
+                    TextField("Code", text: $codeEntry)
+                        .disableAutocorrection(true)
+                        .multilineTextAlignment(.center)
+                        .font(.system(.title3, design: .monospaced))
+                        .padding(.vertical, AtlasSpacing.sm)
+                        .padding(.horizontal, AtlasSpacing.sm)
+                        .background(AtlasColors.placeholderWarm.opacity(0.35))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .onChange(of: codeEntry) { _, new in
+                            codeEntry = String(new.uppercased().prefix(5))
+                        }
+
+                    Button {
+                        joinGroup()
+                    } label: {
+                        Text("JOIN")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.background)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 40)
+                            .background(codeEntry.count == 5 ? AtlasColors.mapPin : AtlasColors.tertiaryText)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(codeEntry.count != 5)
+                }
+                .frame(maxWidth: .infinity)
             }
-            .buttonStyle(.plain)
-            .disabled(codeEntry.count != 5)
+            // The scan card stretches to the typed-code column's height, and the
+            // row takes its ideal height rather than filling the sheet.
+            .fixedSize(horizontal: false, vertical: true)
 
             if let actionError {
                 Label(actionError, systemImage: "exclamationmark.triangle")
@@ -194,60 +276,78 @@ struct GroupListenSheet: View {
             }
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
-
-            Spacer()
         }
+        .padding(.top, AtlasSpacing.md)
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
     // MARK: - Active session
 
     private func activeSession(_ coordinator: GroupListenCoordinator) -> some View {
-        VStack(spacing: AtlasSpacing.lg) {
+        // Tighter than the old `lg` spacing / `xl` top padding: the sheet opens
+        // at half height now, and the leader's QR code is the tallest content in
+        // it, so every spare point matters for fitting without a drag.
+        VStack(spacing: AtlasSpacing.sm) {
             if coordinator.isLeader {
-                VStack(spacing: AtlasSpacing.sm) {
-                    Text("YOU'RE LEADING")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                    Text("Let them scan this")
-                        .font(AtlasTypography.body)
-                        .foregroundStyle(AtlasColors.primaryText)
+                // Two equal columns, each captioned at the top so the captions
+                // land on the SAME line. Previously "SCAN TO JOIN" was a centred
+                // header over the whole row while "OR ENTER CODE" sat
+                // vertically centred beside the QR, which made the two read as a
+                // heading plus an afterthought rather than two equivalent ways in
+                // (owner call). Both captions are short enough to stay on one
+                // line at half width, which is what keeps them aligned.
+                HStack(alignment: .top, spacing: AtlasSpacing.md) {
+                    VStack(spacing: AtlasSpacing.xs) {
+                        Text("SCAN TO JOIN")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.primaryText)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
 
-                    // Scanning beats reading five characters aloud in a busy
-                    // museum; the code stays visible right below as the fallback.
-                    if let code = coordinator.code {
-                        QRCodeView(content: AtlasShareLink.groupJoinURL(code: code).absoluteString)
+                        if let code = coordinator.code {
+                            QRCodeView(
+                                content: AtlasShareLink.groupJoinURL(code: code).absoluteString,
+                                size: Self.qrSize
+                            )
+                        }
                     }
+                    .frame(maxWidth: .infinity)
 
-                    Text(coordinator.code ?? "—")
-                        .font(.system(size: 36, weight: .bold, design: .monospaced))
-                        .foregroundStyle(AtlasColors.mapPin)
-                        .textSelection(.enabled)
-                    Text("They can scan the code above, or tap Join and type these characters.")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
+                    VStack(spacing: AtlasSpacing.xs) {
+                        Text("OR ENTER CODE")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.primaryText)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+
+                        Text(coordinator.code ?? "—")
+                            .font(.system(size: 26, weight: .bold, design: .monospaced))
+                            .foregroundStyle(AtlasColors.mapPin)
+                            .textSelection(.enabled)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
+                    }
+                    .frame(maxWidth: .infinity)
                 }
-                .padding(.top, AtlasSpacing.xl)
+                .padding(.top, AtlasSpacing.xs)
             } else {
                 VStack(spacing: AtlasSpacing.sm) {
                     Image(systemName: coordinator.leaderLost ? "person.fill.questionmark" : "person.2.wave.2.fill")
-                        .font(.system(size: 40))
+                        .font(.system(size: Self.glyphSize))
                         .foregroundStyle(AtlasColors.mapPin)
                     Text(coordinator.leaderLost
                          ? "Leader left"
                          : "Following \(coordinator.leaderName ?? "the leader")")
-                        .font(AtlasTypography.body)
+                        .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.primaryText)
                     Text(coordinator.leaderLost
-                         ? "Playback paused. Leave and rejoin, or start your own group."
-                         : "Your audio mirrors the leader — sit back and listen.")
+                         ? "Playback paused. Leave and rejoin, or start your own."
+                         : "Your audio mirrors the leader.")
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
                         .multilineTextAlignment(.center)
                 }
-                .padding(.top, AtlasSpacing.xl)
+                .padding(.top, AtlasSpacing.md)
             }
 
             statusRow(coordinator)
@@ -256,17 +356,16 @@ struct GroupListenSheet: View {
                 coordinator.leave()
                 dismiss()
             } label: {
-                Text("Leave group")
-                    .font(AtlasTypography.body)
+                Text("LEAVE GROUP")
+                    .font(AtlasTypography.caption)
                     .foregroundStyle(.red)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 48)
+                    .frame(height: 44)
                     .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.red.opacity(0.5), lineWidth: 1))
             }
             .buttonStyle(.plain)
             .padding(.top, AtlasSpacing.sm)
 
-            Spacer()
         }
         .padding(.horizontal, AtlasSpacing.lg)
     }
@@ -288,7 +387,7 @@ struct GroupListenSheet: View {
         case .connected where coordinator.followerAudioFailed:
             // Connected to the leader, but our own audio never loaded — the
             // giveaway that this tour isn't downloaded and there's no signal.
-            Label("Connected, but this tour's audio couldn't load. Download it (⋯ → Download) or move somewhere with signal.",
+            Label("Connected, but the audio couldn't load. Download this tour, or move somewhere with signal.",
                   systemImage: "exclamationmark.triangle")
                 .font(AtlasTypography.caption)
                 .foregroundStyle(.red)
@@ -326,11 +425,12 @@ struct GroupListenSheet: View {
     // MARK: - Signed out
 
     private var signedOut: some View {
+        // Spacers would collapse to nothing inside the enclosing ScrollView, so
+        // this pads instead of centring — otherwise the prompt hugged the nav bar.
         VStack(spacing: AtlasSpacing.md) {
-            Spacer()
             JoinDozentPrompt(showIcon: true)
-            Spacer()
         }
+        .padding(.top, AtlasSpacing.xl)
     }
 
     // MARK: - Actions
