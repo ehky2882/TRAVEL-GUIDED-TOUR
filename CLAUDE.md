@@ -70,7 +70,22 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-07-25)
+## Current State (2026-07-26)
+
+### Saving CONSOLIDATED — one save action, "Liked" is the default list (session 74 — code, IN REVIEW)
+
+**Owner: "the whole point is to consolidate so that there's only one way to save tours, rather than different ways to do it and different repositories."** There were **two** ways to keep a tour, with two stores and no knowledge of each other: the **bookmark** (`LibraryStore.savedAt` → the Library Saved tab) and **"Add to a Journey"** (a `journey_items` row). A tour in "Lisbon Weekend" was **not** bookmarked and never showed in Saved; a bookmarked tour belonged to no list. Same redundancy killed for makers in PR #398 (bookmark-a-maker deleted in favour of Follow). **[PR #447](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/447)** — code, so it waits for owner OK + device review.
+
+- **The model.** **Saved = in at least one list**; there is no separate saved flag. **Liked is the default list** — where a tour lands when the user doesn't pick somewhere. Filing a tour into a named list puts it *there*, **not also in Liked**; nothing is ever moved implicitly (owner decision: *"if the user doesn't specify, there should always be a default 'liked' folder that things are saved into"*).
+- **Bookmark tap, by context** (owner's own UX call): in **nothing** → adds to Liked · in **exactly one** list → removes it, so a second tap always undoes the first · in **several** → opens the membership sheet showing everywhere it lives, ticked, and the user unticks what they want it out of — rather than guessing which list to pull it from.
+- **⚠️ The constraint that shaped the whole design: bookmarking works SIGNED OUT** (`LibraryStore` is UserDefaults, no auth check anywhere) **while lists are cloud-only** (`JourneyService` throws `notSignedIn`, RLS enforces `owner_user_id = auth.uid()`). So **Liked stays backed by `LibraryStore`** and named lists stay in Supabase — one concept, two backends, no seam the user sees, anonymous saving preserved. **Making Liked a real server row would have gated bookmarking behind an account — don't.**
+- **`LibraryStore` and `SyncService` are NOT modified.** The existing `user_library` sync — including the explicit-null `encode` that makes an un-save clear remotely (the session-49 bug) — keeps working untouched. **No backend change, no migration, nothing for the owner to run.**
+- **New:** `Data/SaveState.swift` (the rules as pure functions — unit-tested without either store) + `Data/TourSaveActions.swift` (binds them to the stores, shared by the cards / tour detail / player so they can't drift). `AddToJourneySheet` → **`TourListMembershipSheet`** (removes as well as adds; leads with **Liked**, so it's useful signed out instead of a sign-in wall).
+- **Library is now the single home** for kept things: **Liked** tours, **your lists** (incl. "New list"), and followed creators. The **profile's Journeys row is gone** rather than left as a second door into the same lists; **`JourneysListView` deleted**, `JourneyEditorSheet` split into its own file.
+- **Perf gotcha handled:** `isSaved` is read by **every card in every rail**, so per-tour membership queries were not viable. **`loadMyJourneys()` already embeds every item's `tour_id`**, so the new `allListedTourIds` cache is free — no new network calls.
+- **Fixed in passing:** `JourneyService` never cleared `myJourneys` on sign-out (`clear()` existed but was **never called**), so a stale list could survive an account switch.
+- **⚠️ Naming is still open.** User-facing copy now says **"list"**; the Swift types and Supabase tables are still `Journey` / `journeys` (renaming is cosmetic, needs no migration). The owner flagged "Journey" as cumbersome — it breaks on the default bucket ("Liked" is not a journey) and collides with **Walk**, the app's name for a multi-stop tour, so a collection of them reads as "a journey of journeys". `docs/journeys-design.md` §3 had punted the name from the start.
+- **⚠️ Device check owed (the sim can't prove it):** bookmark while **signed out** → lands in Liked; sign in → syncs and is still there. Then: add a tour straight to a named list → bookmark reads filled and it is **not** in Liked; a tour in two lists → tap opens the sheet showing both; untick one → still saved; untick both → unsaved.
 
 ### Madrid launched — 34 tours + 18th maker Atlas Studio MAD; the first staged city wired from owner audio (session 73 — content)
 

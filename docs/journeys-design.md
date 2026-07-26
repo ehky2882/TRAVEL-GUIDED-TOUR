@@ -38,6 +38,32 @@ pipeline (first feature to ship that way), owner-tested on device, merged via PR
    banner + list-row thumbnails. `loadMyJourneys` embeds `journey_items(tour_id, position)` →
    `Journey.firstTourId`. (Custom cover *upload* still deferred — auto only.)
 
+**Saving CONSOLIDATED 2026-07-26** (PR [#447](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/447)) — the
+bookmark and "Add to a Journey" were two ways to keep a tour, with two stores behind them and no
+knowledge of each other. They are now **one concept**, on the same principle that removed
+bookmark-a-maker in favour of Follow (PR #398):
+
+- **Saved = in at least one list.** No separate saved flag beside list membership.
+- **Liked is the default list** — where a tour lands when the user doesn't pick somewhere. Filing a
+  tour into a named list puts it *there*, not also in Liked. Nothing moves implicitly.
+- **Bookmark tap:** in nothing → adds to Liked · in exactly one list → removes it (a second tap
+  always undoes the first) · in several → opens the membership sheet rather than guessing.
+- **Liked stays backed by `LibraryStore`** so bookmarking still works **signed out**; named lists
+  stay in Supabase and still need an account. One concept, two backends, no seam the user sees.
+  `LibraryStore` and `SyncService` are untouched — **no backend change, no migration.**
+- `SaveState` holds the rules as pure functions (unit-tested); `TourSaveActions` binds them to the
+  stores so the cards, tour detail and player can't drift. `AddToJourneySheet` →
+  `TourListMembershipSheet` (removes as well as adds, leads with Liked).
+- **Library is now the single home** for kept things — Liked tours, your lists (incl. New list), and
+  followed creators. The profile's Journeys row is **gone** rather than left as a second door;
+  `JourneysListView` deleted, `JourneyEditorSheet` split into its own file.
+- **`isSaved` costs no network call** — `loadMyJourneys()` already embeds every item's tour id, so
+  the new `allListedTourIds` cache is free. This matters because every card in every rail reads it.
+- Fixed in passing: `JourneyService` never cleared `myJourneys` on sign-out (`clear()` existed,
+  was never called), so a stale list could survive an account switch.
+- **Naming:** user-facing copy now says **"list"**; the Swift types and Supabase tables are still
+  `Journey` / `journeys`. Renaming those is cosmetic and needs no migration — owner's call.
+
 **Still deferred** (each a clean follow-up, none blocking):
 5. **Share a Journey** — add a `.journey(id)` case to `Data/DeepLink.swift` + a web landing page,
    then a Share action (§7). Dropped from v1 to avoid a dead link.
