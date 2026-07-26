@@ -5,6 +5,11 @@ on:
     branches: [main]
   push:
     branches: [main]
+  # Manual run, on any branch. Needed because a web/remote session's pushes
+  # don't always produce a `synchronize` event on an open PR, which leaves
+  # later commits unverified — and CI is the only build + test check a Linux
+  # session has (no Mac in-session, so no `test_sim`).
+  workflow_dispatch:
 
 jobs:
   validate-content:
