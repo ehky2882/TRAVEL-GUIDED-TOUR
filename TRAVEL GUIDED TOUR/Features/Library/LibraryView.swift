@@ -177,7 +177,10 @@ struct LibraryView: View {
             // 2026-07-03: prioritize individual tours).
             LazyVStack(alignment: .leading, spacing: 0) {
                 if !savedTours.isEmpty {
-                    librarySectionHeader("Tours")
+                    // "Liked", not "Tours" — this section IS the Liked list's
+                    // contents, and labelling it as a sibling of "Lists" made
+                    // it read as though these tours belonged to no list at all.
+                    librarySectionHeader("Liked")
                     ForEach(savedTours) { tour in
                         Button {
                             tourPresenter.present(tour)

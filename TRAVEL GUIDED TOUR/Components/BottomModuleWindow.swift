@@ -72,6 +72,9 @@ final class BottomModuleWindowController {
     /// before any window scene reached `.foregroundActive`. Removed
     /// as soon as the window is installed.
     private var activationObserver: NSObjectProtocol?
+    /// Watches for our own scene disconnecting, so an orphaned window is
+    /// rebuilt at once instead of on the next foreground.
+    private var disconnectObserver: NSObjectProtocol?
     /// The most recent color-scheme preference handed to `apply(...)`.
     /// Cached so a *deferred* install (which happens after the App's
     /// `.onAppear` already called `apply`) can re-apply it — otherwise
@@ -102,6 +105,36 @@ final class BottomModuleWindowController {
         return hasActiveScene ? .installNow : .deferUntilActive
     }
 
+    /// Whether a window we already built has to be thrown away and rebuilt.
+    ///
+    /// **The hole this closes.** `install()` is idempotent via `window == nil`,
+    /// which assumes that once built, the window stays valid. It doesn't: a
+    /// window belongs to the `UIWindowScene` it was created in, and if that
+    /// scene is torn down (seen on hand-off launches — opening the build from
+    /// TestFlight, where the scene can churn during the transition) the window
+    /// object survives, retained by this controller, but renders nothing. The
+    /// `window == nil` guard then makes every later `install()` a no-op, so the
+    /// mini-player + tab bar stay missing for the **whole session** — exactly
+    /// the reported symptom, and why the one-shot activation retry added for
+    /// the cold-launch race doesn't cover this: that retry only ever fires
+    /// while `window == nil`.
+    ///
+    /// Pure so the branching is unit-testable without a live scene.
+    static func needsRebuild(hasWindow: Bool, isAttachedToLiveScene: Bool) -> Bool {
+        hasWindow && !isAttachedToLiveScene
+    }
+
+    /// Is `window` still attached to a scene that is connected and in the
+    /// foreground? A normal background → foreground cycle keeps the same live
+    /// scene, so this stays true and nothing is rebuilt. `foregroundInactive`
+    /// counts as alive so a mid-transition check can't cause a spurious rebuild.
+    private static func isAttachedToLiveScene(_ window: UIWindow?) -> Bool {
+        guard let scene = window?.windowScene else { return false }
+        guard UIApplication.shared.connectedScenes.contains(scene) else { return false }
+        return scene.activationState == .foregroundActive
+            || scene.activationState == .foregroundInactive
+    }
+
     /// Installs the secondary window. Idempotent — once installed,
     /// calling again is a no-op (the `window == nil` guard).
     /// `rootView` is built lazily so it can capture the latest
@@ -127,6 +160,17 @@ final class BottomModuleWindowController {
         interactiveBottomInset: CGFloat,
         @ViewBuilder rootView: @escaping () -> Root
     ) -> Bool {
+        // Self-heal first: if the window we're holding belongs to a scene that
+        // no longer exists, drop it so the guard below can rebuild. Without
+        // this the `window == nil` idempotence guard makes the module missing
+        // for the entire session. Runs on every install() call, and install()
+        // is called on every foreground, so recovery needs no extra observer.
+        if Self.needsRebuild(hasWindow: window != nil,
+                             isAttachedToLiveScene: Self.isAttachedToLiveScene(window)) {
+            Self.log.info("Bottom-module window orphaned (its scene is gone) — rebuilding.")
+            discardWindow()
+        }
+
         let activeScene = Self.foregroundActiveScene()
         switch Self.installOutcome(hasWindow: window != nil, hasActiveScene: activeScene != nil) {
         case .alreadyInstalled:
@@ -152,7 +196,7 @@ final class BottomModuleWindowController {
     private func installWindow<Root: View>(
         in scene: UIWindowScene,
         interactiveBottomInset: CGFloat,
-        rootView: () -> Root
+        rootView: @escaping () -> Root
     ) {
         guard window == nil else { return }
 
@@ -174,6 +218,7 @@ final class BottomModuleWindowController {
         w.isHidden = false
         window = w
         clearActivationRetry()
+        observeSceneDisconnect(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
         // Re-apply the last-known appearance: a deferred install
         // happens after the App already called `apply`, so the fresh
         // window would otherwise be stuck on SYSTEM appearance.
@@ -205,6 +250,49 @@ final class BottomModuleWindowController {
                 self.installWindow(in: scene, interactiveBottomInset: interactiveBottomInset, rootView: rootView)
             }
         }
+    }
+
+    /// Rebuild immediately if our scene disconnects, rather than waiting for
+    /// the next foreground. Without this the module would stay missing until
+    /// the user happened to background and reopen the app — technically
+    /// self-healing, but they'd see it broken first.
+    private func observeSceneDisconnect<Root: View>(
+        interactiveBottomInset: CGFloat,
+        rootView: @escaping () -> Root
+    ) {
+        if let disconnectObserver {
+            NotificationCenter.default.removeObserver(disconnectObserver)
+        }
+        disconnectObserver = NotificationCenter.default.addObserver(
+            forName: UIScene.didDisconnectNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] note in
+            MainActor.assumeIsolated {
+                guard let self, let window = self.window else { return }
+                // Only react to *our* scene going away. `windowScene` is
+                // already nil by the time some disconnects are delivered, so
+                // treat that as ours too.
+                let isOurs = (note.object as? UIWindowScene) === window.windowScene
+                    || window.windowScene == nil
+                guard isOurs else { return }
+                Self.log.info("Bottom-module window's scene disconnected — rebuilding.")
+                self.discardWindow()
+                // Reinstalls now if another scene is already active, else
+                // registers the activation retry and recovers when one is.
+                self.install(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
+            }
+        }
+    }
+
+    /// Release an orphaned window so a fresh one can be built. Deliberately
+    /// keeps `lastInteractiveBottomInset` and `lastPreference` — the
+    /// replacement window is constructed with the last measured strip height
+    /// and re-applies the appearance, so it doesn't have to wait for the new
+    /// root to re-report them.
+    private func discardWindow() {
+        window?.isHidden = true
+        window = nil
     }
 
     private func clearActivationRetry() {
