@@ -171,6 +171,13 @@ struct LibraryView: View {
         LazyVStack(alignment: .leading, spacing: 0) {
             librarySectionHeader("Lists")
 
+            // Create sits at the very top — it's an action, not a list, so it
+            // shouldn't be buried among them (owner direction).
+            if canUseLists {
+                newListRow
+                Divider().padding(.horizontal, AtlasSpacing.lg)
+            }
+
             NavigationLink {
                 LikedListView()
             } label: {
@@ -179,9 +186,6 @@ struct LibraryView: View {
             .buttonStyle(.plain)
 
             if canUseLists {
-                Divider().padding(.horizontal, AtlasSpacing.lg)
-                newListRow
-
                 ForEach(myLists) { list in
                     Divider().padding(.horizontal, AtlasSpacing.lg)
 
