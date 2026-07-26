@@ -201,55 +201,61 @@ struct GroupListenSheet: View {
     // MARK: - Join form
 
     private var joinForm: some View {
-        // `md` spacing, not `lg`: six stacked elements at 24pt apart overflowed
-        // the half-height detent on their own, before any element was even
-        // measured. Same reasoning as the chooser and the leader screen.
+        // Scan and type-a-code sit SIDE BY SIDE, mirroring the leader screen.
+        // Stacked full-width (button, "or type it", field, Join, Back) they ran
+        // past the half detent and pushed Back under the mini-player. They're
+        // two ways to do one thing, not sequential steps, so columns fit the
+        // meaning as well as the space. Each column labels itself, which also
+        // retires the separate header and the "or type it" divider.
         VStack(spacing: AtlasSpacing.md) {
-            Text("SCAN THE LEADER'S CODE")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.primaryText)
-                .padding(.top, AtlasSpacing.sm)
-
-            Button {
-                showingScanner = true
-            } label: {
-                actionLabel("SCAN QR CODE", systemImage: "qrcode.viewfinder", filled: true)
-            }
-            .buttonStyle(.plain)
-            .fixedSize(horizontal: false, vertical: true)
-
-            Text("or type it")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
-
-            // Deliberately still large + monospaced: you check this while typing
-            // a code someone is reading out, so legibility beats compactness. The
-            // vertical padding is trimmed instead.
-            TextField("Code", text: $codeEntry)
-                .disableAutocorrection(true)
-                .multilineTextAlignment(.center)
-                .font(.system(.title3, design: .monospaced))
-                .padding(.vertical, AtlasSpacing.sm)
-                .padding(.horizontal, AtlasSpacing.md)
-                .background(AtlasColors.placeholderWarm.opacity(0.35))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                .onChange(of: codeEntry) { _, new in
-                    codeEntry = String(new.uppercased().prefix(5))
+            HStack(alignment: .top, spacing: AtlasSpacing.md) {
+                Button {
+                    showingScanner = true
+                } label: {
+                    actionLabel("SCAN TO JOIN", systemImage: "qrcode.viewfinder", filled: true)
                 }
+                .buttonStyle(.plain)
 
-            Button {
-                joinGroup()
-            } label: {
-                Text("JOIN")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.background)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 44)
-                    .background(codeEntry.count == 5 ? AtlasColors.mapPin : AtlasColors.tertiaryText)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                    Text("OR ENTER CODE TO JOIN")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    // Deliberately still monospaced and larger than caption: you
+                    // check this while someone reads a code aloud, so legibility
+                    // beats compactness. Padding gives up the height instead.
+                    TextField("Code", text: $codeEntry)
+                        .disableAutocorrection(true)
+                        .multilineTextAlignment(.center)
+                        .font(.system(.title3, design: .monospaced))
+                        .padding(.vertical, AtlasSpacing.sm)
+                        .padding(.horizontal, AtlasSpacing.sm)
+                        .background(AtlasColors.placeholderWarm.opacity(0.35))
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .onChange(of: codeEntry) { _, new in
+                            codeEntry = String(new.uppercased().prefix(5))
+                        }
+
+                    Button {
+                        joinGroup()
+                    } label: {
+                        Text("JOIN")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.background)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 40)
+                            .background(codeEntry.count == 5 ? AtlasColors.mapPin : AtlasColors.tertiaryText)
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(codeEntry.count != 5)
+                }
+                .frame(maxWidth: .infinity)
             }
-            .buttonStyle(.plain)
-            .disabled(codeEntry.count != 5)
+            // The scan card stretches to the typed-code column's height, and the
+            // row takes its ideal height rather than filling the sheet.
+            .fixedSize(horizontal: false, vertical: true)
 
             if let actionError {
                 Label(actionError, systemImage: "exclamationmark.triangle")
@@ -266,6 +272,7 @@ struct GroupListenSheet: View {
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
         }
+        .padding(.top, AtlasSpacing.md)
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
