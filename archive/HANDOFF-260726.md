@@ -157,13 +157,56 @@ code further, because an unscannable QR defeats the feature.
 - **Two-phone Group Listen sync** — still never run end-to-end since the fixes.
   Owner has confirmed QR join, sheet layout, Leave, and the tab bar, but not
   actual synced playback across two devices.
-- **Branch cleanup** (git proxy blocks deletion from web sessions — delete in the
-  GitHub UI): `claude/shareplay-feature-bug-7chszc`,
-  `claude/group-listen-icon-size`, `claude/group-listen-active-icon`,
-  `claude/bottom-module-install-retry`, `claude/docs-group-listen-banner-removal`,
-  `claude/group-listen-sheet-compact`.
+- **Branch cleanup** — see the verified table in the section below. The git proxy
+  blocks branch deletion from web sessions, so this needs the GitHub UI or a
+  local session.
 - **If the bars ever go missing again**, the inline fallback should make it
   impossible — if it still happens, that points somewhere new entirely, and the
   next step is a visible diagnostic rather than more hardening.
 - Still open from before: real leader handoff, Hosted mode (Supabase Realtime),
   Pro Guide tier, anonymous followers, paid tours Phase 3 (StoreKit 2 buyer UI).
+
+## Branch cleanup — verified list (2026-07-26)
+
+**Read the gotcha first.** Every branch below was **squash-merged**, so its
+commits are *not* ancestors of `main`. `git branch --merged main` will **not**
+list them, and `git branch -d` will **refuse** them. That is expected and does
+not mean work is unmerged — the content is in `main` under a single squash
+commit. Confirm with `git log --oneline main -- <a file the branch touched>` or
+by the PR link, then use `-D` / `push --delete`.
+
+**Safe to delete — squash-merged, content is on `main`:**
+
+| branch | landed as |
+|---|---|
+| `claude/shareplay-feature-bug-7chszc` | #423 `3e9a6d9`, #428 `18ba375` |
+| `claude/docs-group-listen-banner-removal` | #442 `2cb77f1` |
+| `claude/bottom-module-install-retry` | folded into #443 `bf9f98e` (its own PR #444 was closed, not merged — the commits went onto #443's branch) |
+| `claude/group-listen-sheet-compact` | #443 `bf9f98e` |
+| `claude/handoff-260726` | #445 — **only after that PR merges** |
+
+```bash
+# From a local Mac session, after confirming main has the content:
+for b in claude/shareplay-feature-bug-7chszc \
+         claude/docs-group-listen-banner-removal \
+         claude/bottom-module-install-retry \
+         claude/group-listen-sheet-compact; do
+  git push origin --delete "$b"
+done
+```
+
+**DO NOT DELETE — these hold unmerged work:**
+
+| branch | why it exists |
+|---|---|
+| `claude/amsterdam-handoff-preserve-hlhyp8` | holds `drafts/AUDIO-PENDING-SURVEY.md` — the audio-pending queue tracker (Montreal 29 / Rome 30 / Berlin 36) |
+| `claude/london-batch3-scripts-260616` | staged London batch 4 + 5 multi-stop walks, awaiting narration |
+| `claude/dreamy-wozniak-tags-260612` | tag taxonomy proposal, never merged |
+| `claude/paris-scripts-260622` | **status unclear** — Paris has since launched (50 tours), so this may be spent, but that was not verified here. Check before deleting. |
+
+**Corrections to earlier notes:** previous handoffs listed
+`claude/group-listen-icon-size` and `claude/group-listen-active-icon` as cleanup
+owed. **Both are already gone from the remote** — deleted since. Any list that
+still names them is stale; the table above was verified against
+`list_branches` on 2026-07-26.
+
