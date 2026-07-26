@@ -17,7 +17,9 @@ struct BottomModuleRoot: View {
     /// `BottomModuleWindowController.setInteractiveBottomInset(_:)`.
     /// `@MainActor` because it drives the (main-actor) window controller —
     /// same pattern as `GroupTransport`'s callbacks.
-    var onInteractiveHeightChange: (@MainActor (CGFloat) -> Void)?
+    /// Explicit `= nil` so `BottomModuleRoot()` is unambiguously valid: the
+    /// inline fallback in `ContentView` renders it without a window to measure.
+    var onInteractiveHeightChange: (@MainActor (CGFloat) -> Void)? = nil
 
     @Environment(DataService.self) private var dataService
     @Environment(AudioPlayerService.self) private var audioPlayer

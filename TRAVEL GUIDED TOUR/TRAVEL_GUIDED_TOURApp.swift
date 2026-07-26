@@ -141,6 +141,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(navState)
                     .environment(toastCenter)
                     .environment(groupListen)
+                    // So ContentView can render the mini-player + tab bar inline
+                    // while the secondary window isn't installed. Without that
+                    // fallback, a failed install means no bars for the session.
+                    .environment(bottomModuleWindow)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
                     .task {
                         // Pre-warm the Me tab at launch so its data is already

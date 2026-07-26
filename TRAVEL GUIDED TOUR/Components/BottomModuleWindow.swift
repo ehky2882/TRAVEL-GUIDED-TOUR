@@ -64,7 +64,11 @@ enum BottomModuleInstallOutcome: Equatable {
     case deferUntilActive
 }
 
+/// `@Observable` so the main window can watch `isInstalled` and render the
+/// mini-player + tab bar inline whenever this secondary window is absent. That
+/// fallback is what makes the bars unconditional — see `isInstalled`.
 @MainActor
+@Observable
 final class BottomModuleWindowController {
     private var window: UIWindow?
     /// One-shot observer that retries the install when a scene
@@ -112,8 +116,16 @@ final class BottomModuleWindowController {
         return schedule[attempt]
     }
 
-    /// Whether the secondary window currently exists. Used by the App to decide
-    /// whether a launch-time re-check is still needed.
+    /// Whether the secondary window currently exists.
+    ///
+    /// Read by `ContentView`, which renders the mini-player + tab bar **inline in
+    /// the main window** while this is `false`. That fallback exists because
+    /// every previous fix here was a bet on scene timing, and the bars kept
+    /// going missing anyway: they lived *only* in this window, so any failure to
+    /// install meant no bars at all, with nothing to fall back to. Rendering
+    /// them in the ordinary SwiftUI hierarchy can't fail for scene-lifecycle
+    /// reasons. The only thing lost in fallback mode is z-order above UIKit
+    /// modals, which is a far better failure than an app with no tab bar.
     var isInstalled: Bool { window != nil }
 
     /// Update the height of the bottom strip in which this window claims
@@ -209,10 +221,17 @@ final class BottomModuleWindowController {
     /// The current foreground-active window scene, if any. On iPad
     /// multi-scene (`UIApplicationSupportsMultipleScenes`) this picks
     /// the active one so we never attach to a backgrounded scene.
+    ///
+    /// **Zero-size scenes don't count.** A scene can report
+    /// `.foregroundActive` before its geometry is configured, and a window
+    /// attached to one is zero-sized — invisible, and untappable too, since
+    /// `PassThroughWindow.hitTest` measures from `bounds.height`. Treating that
+    /// as "no scene yet" sends it down the retry path instead of installing a
+    /// window that can never be seen.
     private static func foregroundActiveScene() -> UIWindowScene? {
         UIApplication.shared.connectedScenes
             .compactMap { $0 as? UIWindowScene }
-            .first { $0.activationState == .foregroundActive }
+            .first { $0.activationState == .foregroundActive && !$0.coordinateSpace.bounds.isEmpty }
     }
 
     private func installWindow<Root: View>(
@@ -223,12 +242,14 @@ final class BottomModuleWindowController {
         guard window == nil else { return }
 
         let w = PassThroughWindow(windowScene: scene)
-        // Size it explicitly to the scene. `UIWindow(windowScene:)` is
-        // *documented* to adopt the scene's geometry, but a window that ends up
-        // zero-height would be invisible in exactly the way being debugged here
-        // — and hit-testing reads `bounds.height`, so a bad frame would also
-        // silently kill every tap. One assignment removes the whole question.
-        w.frame = scene.coordinateSpace.bounds
+        // NOTE: deliberately no explicit `frame` assignment. An earlier revision
+        // set `w.frame = scene.coordinateSpace.bounds` as "harmless insurance",
+        // which was a mistake twice over: it pins a snapshot of the geometry (so
+        // the window stops tracking the scene across rotation), and if the scene
+        // wasn't configured yet it pins *zero* — the exact invisible-window
+        // failure it was meant to prevent. `UIWindow(windowScene:)` adopts and
+        // tracks the scene's geometry on its own; readiness is now checked in
+        // `foregroundActiveScene()` instead.
         // One level above .normal so this window sits on top of
         // every modal presentation (UIKit modals default to .normal
         // level). The level is a `CGFloat`, so we add a small
