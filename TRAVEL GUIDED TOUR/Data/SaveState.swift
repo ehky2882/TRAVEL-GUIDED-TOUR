@@ -24,12 +24,11 @@ enum SaveState {
     enum TapAction: Equatable {
         /// Not saved anywhere → drop it into the default list.
         case addToLiked
-        /// Saved in Liked and nowhere else → un-save it.
-        case removeFromLiked
-        /// Saved in exactly one named list → take it out of that list.
-        case removeFromList(UUID)
-        /// In more than one place → show the user everywhere it lives and let
-        /// them untick what they want it out of.
+        /// Already saved → show everywhere it lives and let the user file it or
+        /// untick it. **Never un-saves on the spot** (owner direction, matching
+        /// Spotify's "Add to playlist"): a second tap is far more likely to mean
+        /// "put this somewhere" than "throw it away", and silently discarding a
+        /// save is the one outcome the user can't easily undo.
         case chooseLists
     }
 
@@ -46,22 +45,15 @@ enum SaveState {
         (isLiked ? 1 : 0) + listIds.count
     }
 
-    /// The 0 / 1 / many rule:
-    /// - in nothing → save it to Liked
-    /// - in exactly one place → remove it from that place, so a second tap
-    ///   always undoes the first
-    /// - in several → don't guess which one the user meant; open the sheet
+    /// The rule:
+    /// - saved nowhere → save it to Liked, no questions asked
+    /// - saved anywhere → open the sheet
+    ///
+    /// The tap is **add-only**; removing is always a deliberate choice in the
+    /// sheet. That holds even when the tour is in exactly one list, where
+    /// "just undo it" is tempting — the tap is the same gesture that filed it,
+    /// and making it also destroy the save is how people lose things.
     static func tapAction(isLiked: Bool, listIds: Set<UUID>) -> TapAction {
-        switch placeCount(isLiked: isLiked, listIds: listIds) {
-        case 0:
-            return .addToLiked
-        case 1:
-            if isLiked { return .removeFromLiked }
-            // placeCount == 1 && !isLiked ⇒ exactly one list id.
-            guard let only = listIds.first else { return .addToLiked }
-            return .removeFromList(only)
-        default:
-            return .chooseLists
-        }
+        isSaved(isLiked: isLiked, listIds: listIds) ? .chooseLists : .addToLiked
     }
 }

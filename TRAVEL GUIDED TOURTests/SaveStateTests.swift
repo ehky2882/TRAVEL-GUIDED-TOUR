@@ -41,42 +41,52 @@ final class SaveStateTests: XCTestCase {
     }
 
     // MARK: - tapAction
+    //
+    // The tap is ADD-ONLY. It saves into Liked when the tour is in nothing,
+    // and otherwise opens the sheet — it never un-saves, even from a single
+    // list, because the same gesture that filed a tour shouldn't also be the
+    // one that throws it away.
 
     func test_tap_onUnsavedTour_savesIntoLiked() {
         XCTAssertEqual(SaveState.tapAction(isLiked: false, listIds: []), .addToLiked)
     }
 
-    func test_tap_whenOnlyInLiked_unsaves() {
-        XCTAssertEqual(SaveState.tapAction(isLiked: true, listIds: []), .removeFromLiked)
+    func test_tap_whenOnlyInLiked_opensTheSheetRatherThanUnsaving() {
+        XCTAssertEqual(SaveState.tapAction(isLiked: true, listIds: []), .chooseLists)
     }
 
-    /// A second tap always undoes the first, wherever the tour actually lives.
-    func test_tap_whenInExactlyOneNamedList_removesFromThatList() {
-        XCTAssertEqual(SaveState.tapAction(isLiked: false, listIds: [listA]), .removeFromList(listA))
+    func test_tap_whenInExactlyOneNamedList_opensTheSheetRatherThanRemoving() {
+        XCTAssertEqual(SaveState.tapAction(isLiked: false, listIds: [listA]), .chooseLists)
     }
 
-    /// Liked + one named list is still "several places" — don't guess.
     func test_tap_whenInLikedAndAList_opensTheSheet() {
         XCTAssertEqual(SaveState.tapAction(isLiked: true, listIds: [listA]), .chooseLists)
-    }
-
-    func test_tap_whenInTwoNamedLists_opensTheSheet() {
-        XCTAssertEqual(SaveState.tapAction(isLiked: false, listIds: [listA, listB]), .chooseLists)
     }
 
     func test_tap_whenInManyPlaces_opensTheSheet() {
         XCTAssertEqual(SaveState.tapAction(isLiked: true, listIds: [listA, listB]), .chooseLists)
     }
 
+    /// A tap can never be the thing that removes a save.
+    func test_tap_neverUnsaves() {
+        let saved: [(Bool, Set<UUID>)] = [
+            (true, []), (false, [listA]), (true, [listA]), (false, [listA, listB]),
+        ]
+        for (liked, lists) in saved {
+            XCTAssertEqual(SaveState.tapAction(isLiked: liked, listIds: lists), .chooseLists)
+        }
+    }
+
     // MARK: - Signed-out parity
 
-    /// Signed out there are no named lists, so the whole rule collapses to the
-    /// Liked toggle bookmarking has always been — no account required.
-    func test_signedOut_behavesExactlyLikeAPlainBookmarkToggle() {
+    /// Signed out there are no named lists, so saving still works with no
+    /// account: the first tap files into Liked. The second opens the sheet,
+    /// where Liked is the only row — so un-saving stays possible offline.
+    func test_signedOut_firstTapSavesToLiked_secondOpensTheSheet() {
         XCTAssertFalse(SaveState.isSaved(isLiked: false, listIds: []))
         XCTAssertEqual(SaveState.tapAction(isLiked: false, listIds: []), .addToLiked)
 
         XCTAssertTrue(SaveState.isSaved(isLiked: true, listIds: []))
-        XCTAssertEqual(SaveState.tapAction(isLiked: true, listIds: []), .removeFromLiked)
+        XCTAssertEqual(SaveState.tapAction(isLiked: true, listIds: []), .chooseLists)
     }
 }

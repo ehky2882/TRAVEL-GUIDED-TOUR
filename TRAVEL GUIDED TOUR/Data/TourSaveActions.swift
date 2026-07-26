@@ -44,19 +44,13 @@ struct TourSaveActions {
 
     /// Apply a bookmark tap.
     ///
-    /// - Returns: `true` when the tour is in several lists and the caller should
-    ///   present the membership sheet instead of having guessed for the user.
+    /// - Returns: `true` when the tour is already saved and the caller should
+    ///   present the membership sheet. A tap never un-saves.
     @discardableResult
     func handleTap(_ tourId: UUID) -> Bool {
         switch SaveState.tapAction(isLiked: isLiked(tourId), listIds: lists(for: tourId)) {
-        case .addToLiked, .removeFromLiked:
+        case .addToLiked:
             libraryStore.toggleSaved(tourId)
-            return false
-        case .removeFromList(let listId):
-            // Un-saving the last place it lived. Haptic here so the feedback
-            // matches the Liked path, which gets one inside `toggleSaved`.
-            AtlasHaptics.selection()
-            Task { try? await journeyService?.removeTour(tourId, from: listId) }
             return false
         case .chooseLists:
             return true
@@ -66,7 +60,6 @@ struct TourSaveActions {
     /// The label a bookmark control should carry, for VoiceOver and for the
     /// overflow-menu item that spells the action out in words.
     func accessibilityLabel(_ tourId: UUID) -> String {
-        guard isSaved(tourId) else { return "Save tour" }
-        return placeCount(tourId) > 1 ? "Saved in several lists. Choose where to keep it" : "Saved"
+        isSaved(tourId) ? "Saved. Choose where to keep it" : "Save tour"
     }
 }
