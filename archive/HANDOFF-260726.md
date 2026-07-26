@@ -40,14 +40,17 @@ bookmark-a-maker was **deleted** rather than kept beside Follow.
   Owner's ruling: *"if the user doesn't specify, there should always be a default 'liked' folder
   that things are saved into."* Filing a tour into a named list puts it **there, not also in
   Liked**. Nothing is ever moved implicitly.
-- **Bookmark tap, by context** — the owner's own UX call, and better than the blunt
-  "remove from everything?" confirm that was proposed first:
+- **The bookmark tap is ADD-ONLY** (final form, after two revisions):
 
   | Tour is in | Tap does |
   |---|---|
-  | nothing | adds to Liked |
-  | exactly one list | removes it from that list — a second tap always undoes the first |
-  | two or more | opens the membership sheet, everything ticked; user unticks what they want out |
+  | nothing | saves it into Liked |
+  | anything at all | opens the membership sheet — it **never un-saves** |
+
+  Removing is always deliberate: untick it in the sheet. The first version un-saved a tour that
+  was in exactly one list ("a second tap undoes the first"). The owner rejected that, correctly:
+  the gesture that files a tour must not also be the one that destroys it, and a save lost that
+  way is easy to miss and annoying to rebuild. Spotify's "Add to playlist" behaves the same.
 
 ## The constraint that shaped everything
 
@@ -105,9 +108,10 @@ cleared whenever the signed-in uid differs from the one the cache was loaded und
 - **Dropping the profile's lists row** — done here on the consolidation argument (Library =
   what you collected). One-line restore if the owner disagrees.
 
-## ⚠️ Device check owed — the simulator cannot prove this
+## Device-verified on TestFlight 1.1 (50)
 
-The signed-out path is the whole design constraint and there's no session in the sim:
+Owner: *"things in 50 are good"* — including the signed-out path, which was the whole design
+constraint and which the simulator can never exercise (it holds no session). What was checked:
 
 1. **Signed out**, bookmark a tour → it lands in **Liked**.
 2. Sign in → it syncs and is still there.
@@ -116,10 +120,26 @@ The signed-out path is the whole design constraint and there's no session in the
 5. Untick one → still saved. Untick both → unsaved.
 6. Regression: browse, play, download, and list create/reorder/delete unchanged.
 
+## Two other things this session, both worth remembering
+
+**The missing tab bar was LATE, not absent.** Two fixes were built on the theory that the
+secondary window failed to install permanently; both missed. The owner's one-line clarification —
+*"it's only not there momentarily after launch of a new build... but long enough to look like a
+mistake"* — identified it immediately: the window can only attach once a scene is
+foreground-active, which on a hand-off launch happens *after* the content is drawn. `ContentView`
+now renders the module inline until the real window attaches. **Ask for the shape of a symptom
+(when, how long, does it recover) before theorising about the cause.**
+
+**CI was only ever running on the first commit of a PR.** A web session's pushes didn't reliably
+produce a `synchronize` event, so every later commit went unbuilt while the PR still showed green
+checks. Added `workflow_dispatch:` to `ci.yml`; the very first manual run caught a compile error
+that would otherwise have burned a TestFlight build. **Green checks on a PR may only reflect its
+first commit.**
+
 ## State at session end
 
-- PR #447 open. Validator job **green**; the iOS Simulator build + unit tests were still running
-  when this was written — **confirm both before merge** (code PRs need owner OK + device review
-  regardless).
+- PR #447 — all three CI jobs green on `7eba02f`; owner-verified on TestFlight 1.1 (50).
 - Branch `claude/journey-bookmarks-default-folder-c8ur85`.
 - Catalog untouched: 948 tours / 18 makers / 1174 stops.
+- **Open, owner's call:** rename `Journey` → `List` in the Swift types + Supabase tables (cosmetic,
+  no migration); add **search** / **Clear all** to the membership sheet once list counts grow.
