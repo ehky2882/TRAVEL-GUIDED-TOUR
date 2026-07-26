@@ -27,13 +27,18 @@ struct GroupListenSheet: View {
     /// (owner call). Was 40pt here, which dominated the half-height sheet.
     private static let glyphSize: CGFloat = 16
 
-    /// Down from the component's 170pt default so the leader's screen — header,
-    /// QR, join code, status line and Leave button — fits the half-height detent
-    /// with Leave visible and no scrolling. Now that the code sits BESIDE the QR
-    /// rather than under it, this is the only tall element left, so it sets the
-    /// screen's height almost on its own. Kept as large as that allows: shrinking
-    /// it further costs scan reliability, which is the entire point of showing it.
-    private static let qrSize: CGFloat = 140
+    /// Well down from the component's 170pt default. The QR is the only tall
+    /// element on the leader screen, so it sets that screen's height almost on
+    /// its own, and at 140 the Leave button still ended up jammed against the
+    /// mini-player. 110 clears it.
+    ///
+    /// **This is the floor.** The payload is a ~58-character https link, so the
+    /// code is around 33–37 modules wide; at 110pt that's roughly 3pt per module,
+    /// which scans fine at normal phone-to-phone distance but is where it stops
+    /// having margin. If this screen ever needs more room again, open it at a
+    /// taller detent instead of shrinking this further — an unscannable QR
+    /// defeats the entire feature.
+    private static let qrSize: CGFloat = 110
 
     var body: some View {
         NavigationStack {
@@ -284,41 +289,47 @@ struct GroupListenSheet: View {
         // it, so every spare point matters for fitting without a drag.
         VStack(spacing: AtlasSpacing.sm) {
             if coordinator.isLeader {
-                VStack(spacing: AtlasSpacing.sm) {
-                    Text("SCAN TO JOIN")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.primaryText)
+                // Two equal columns, each captioned at the top so the captions
+                // land on the SAME line. Previously "SCAN TO JOIN" was a centred
+                // header over the whole row while "OR ENTER CODE" sat
+                // vertically centred beside the QR, which made the two read as a
+                // heading plus an afterthought rather than two equivalent ways in
+                // (owner call). Both captions are short enough to stay on one
+                // line at half width, which is what keeps them aligned.
+                HStack(alignment: .top, spacing: AtlasSpacing.md) {
+                    VStack(spacing: AtlasSpacing.xs) {
+                        Text("SCAN TO JOIN")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.primaryText)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
 
-                    // QR and the typed code sit SIDE BY SIDE rather than stacked.
-                    // Stacked, the two of them plus their captions were most of
-                    // the sheet's height and pushed Leave below the fold; beside
-                    // each other they cost only the height of the QR itself
-                    // (owner call). They're alternatives, not steps, so reading
-                    // left-to-right also suits them better than top-to-bottom.
-                    HStack(alignment: .center, spacing: AtlasSpacing.md) {
                         if let code = coordinator.code {
                             QRCodeView(
                                 content: AtlasShareLink.groupJoinURL(code: code).absoluteString,
                                 size: Self.qrSize
                             )
                         }
-
-                        VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                            Text("OR ENTER CODE TO JOIN")
-                                .font(AtlasTypography.caption)
-                                .foregroundStyle(AtlasColors.secondaryText)
-                                .fixedSize(horizontal: false, vertical: true)
-                            Text(coordinator.code ?? "—")
-                                .font(.system(size: 26, weight: .bold, design: .monospaced))
-                                .foregroundStyle(AtlasColors.mapPin)
-                                .textSelection(.enabled)
-                                .lineLimit(1)
-                                .minimumScaleFactor(0.7)
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
                     }
+                    .frame(maxWidth: .infinity)
+
+                    VStack(spacing: AtlasSpacing.xs) {
+                        Text("OR ENTER CODE")
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.primaryText)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+
+                        Text(coordinator.code ?? "—")
+                            .font(.system(size: 26, weight: .bold, design: .monospaced))
+                            .foregroundStyle(AtlasColors.mapPin)
+                            .textSelection(.enabled)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
+                    }
+                    .frame(maxWidth: .infinity)
                 }
-                .padding(.top, AtlasSpacing.sm)
+                .padding(.top, AtlasSpacing.xs)
             } else {
                 VStack(spacing: AtlasSpacing.sm) {
                     Image(systemName: coordinator.leaderLost ? "person.fill.questionmark" : "person.2.wave.2.fill")
