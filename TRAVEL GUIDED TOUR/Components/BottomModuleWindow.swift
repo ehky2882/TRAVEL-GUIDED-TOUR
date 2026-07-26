@@ -69,11 +69,14 @@ enum BottomModuleInstallOutcome: Equatable {
 final class BottomModuleWindowController {
     /// Whether the secondary window is currently up and rendering.
     ///
-    /// Observed by the App so it can fall back to rendering the module inline
-    /// in the main window. **Navigation must never depend on this window
-    /// succeeding** — the tab bar is the app's only way to change tabs, so if
-    /// the window can't be installed the user is stranded on Home with no way
-    /// out. Whatever the scene-timing cause, the fallback bounds the damage.
+    /// Observed by the App so it can render the module inline in the main
+    /// window while this is false. **The window is often late, not absent** —
+    /// it can only attach once a scene is foreground-active, and on a hand-off
+    /// launch (opening the build from TestFlight) that happens *after* the
+    /// content is already on screen. The result is a second or two of app with
+    /// no mini-player and no tab bar, which reads as a bug. The inline
+    /// fallback covers exactly that gap, and swaps out the instant the real
+    /// window attaches.
     private(set) var isInstalled = false
 
     @ObservationIgnored private var window: UIWindow?
@@ -94,6 +97,8 @@ final class BottomModuleWindowController {
     /// `lastPreference`: a *deferred* install must not lose an update that
     /// arrived before the window existed.
     private var lastInteractiveBottomInset: CGFloat?
+    /// Budget for the "active scene, no bounds yet" retries.
+    private var layoutRetriesRemaining = 10
 
     private static let log = Logger(subsystem: "com.dozent.app", category: "BottomModuleWindow")
 
@@ -117,17 +122,16 @@ final class BottomModuleWindowController {
 
     /// Whether a window we already built has to be thrown away and rebuilt.
     ///
-    /// **The hole this closes.** `install()` is idempotent via `window == nil`,
-    /// which assumes that once built, the window stays valid. It doesn't: a
-    /// window belongs to the `UIWindowScene` it was created in, and if that
-    /// scene is torn down (seen on hand-off launches — opening the build from
-    /// TestFlight, where the scene can churn during the transition) the window
-    /// object survives, retained by this controller, but renders nothing. The
-    /// `window == nil` guard then makes every later `install()` a no-op, so the
-    /// mini-player + tab bar stay missing for the **whole session** — exactly
-    /// the reported symptom, and why the one-shot activation retry added for
-    /// the cold-launch race doesn't cover this: that retry only ever fires
-    /// while `window == nil`.
+    /// `install()` is idempotent via `window == nil`, which assumes that once
+    /// built, the window stays valid. It doesn't: a window belongs to the
+    /// `UIWindowScene` it was created in, and if that scene is torn down the
+    /// window object survives, retained here, but renders nothing — and the
+    /// `window == nil` guard then makes every later `install()` a no-op.
+    ///
+    /// NOTE: this is a real hole, but it is **not** the cause of the
+    /// missing-tab-bar report — that turned out to be a late install, not a
+    /// dead one (see `isInstalled`). Kept because an orphaned window would be
+    /// unrecoverable, and it costs one comparison per install.
     ///
     /// Pure so the branching is unit-testable without a live scene.
     static func needsRebuild(hasWindow: Bool, isAttachedToLiveScene: Bool) -> Bool {
@@ -189,9 +193,12 @@ final class BottomModuleWindowController {
             if installWindow(in: activeScene!, interactiveBottomInset: interactiveBottomInset, rootView: rootView) {
                 return true
             }
-            // The scene was active but not yet laid out — retry on the next
-            // activation rather than silently giving up.
+            // The scene was active but not laid out yet. An activation retry
+            // alone isn't enough here — the scene is *already* active, so
+            // another activation may never come. Try again on the next few
+            // runloop turns, by which point layout has happened.
             registerActivationRetry(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
+            retryAfterLayout(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
             return false
         case .deferUntilActive:
             registerActivationRetry(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
@@ -254,6 +261,22 @@ final class BottomModuleWindowController {
         apply(preference: lastPreference)
         Self.log.info("Bottom-module window installed (scene=\(scene.session.persistentIdentifier, privacy: .public))")
         return true
+    }
+
+    /// Retry shortly, for the "scene is active but has no bounds yet" case
+    /// where no further activation notification is coming. Bounded so a scene
+    /// that never lays out can't spin — the inline fallback carries the module
+    /// in that case anyway.
+    private func retryAfterLayout<Root: View>(
+        interactiveBottomInset: CGFloat,
+        rootView: @escaping () -> Root
+    ) {
+        guard layoutRetriesRemaining > 0 else { return }
+        layoutRetriesRemaining -= 1
+        DispatchQueue.main.async { [weak self] in
+            guard let self, self.window == nil else { return }
+            self.install(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
+        }
     }
 
     /// Registers the one-shot scene-activation retry. Safe to call

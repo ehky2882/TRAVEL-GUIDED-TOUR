@@ -122,18 +122,19 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .onContinueUserActivity(NSUserActivityTypeBrowsingWeb, perform: handleUserActivity)
             } else {
                 ContentView()
-                    // Safety net: the mini-player + tab bar normally live in a
-                    // secondary window so UIKit modals slide up *behind* them.
-                    // If that window can't be installed — a scene-timing case
-                    // that has recurred and that no fix has fully pinned down —
-                    // the tab bar is the app's ONLY way to change tabs, so the
-                    // user would be stranded on Home for the whole session.
-                    // Render the module inline instead. It sits under UIKit
-                    // modals rather than above them, which is a small cosmetic
-                    // loss and an enormous usability win over having no
-                    // navigation at all. Swaps back out the moment the window
-                    // does come up. Attached BEFORE the `.environment` calls so
-                    // the overlay inherits all of them.
+                    // Covers the launch gap. The mini-player + tab bar live in a
+                    // secondary window so UIKit modals slide up *behind* them,
+                    // but that window can only attach once a scene is
+                    // foreground-active — and on a hand-off launch (opening the
+                    // build from TestFlight) that lands *after* this content is
+                    // already on screen. The owner saw the result: a second or
+                    // two of app with no bars, long enough to read as a bug.
+                    // Render the module inline until the real window is up; it
+                    // swaps out the instant that happens. Inline it sits under
+                    // UIKit modals rather than above them, which only matters
+                    // in the rare case the window never attaches at all.
+                    // Attached BEFORE the `.environment` calls so the overlay
+                    // inherits all of them.
                     .overlay(alignment: .bottom) {
                         if !bottomModuleWindow.isInstalled {
                             BottomModuleRoot(onInteractiveHeightChange: nil)
