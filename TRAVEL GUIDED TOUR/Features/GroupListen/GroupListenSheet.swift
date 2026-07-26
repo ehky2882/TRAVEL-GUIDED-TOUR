@@ -27,19 +27,37 @@ struct GroupListenSheet: View {
     /// (owner call). Was 40pt here, which dominated the half-height sheet.
     private static let glyphSize: CGFloat = 16
 
+    /// Down from the component's 170pt default so the leader's screen — header,
+    /// QR, join code, hint, status line and Leave button — fits the half-height
+    /// detent. Still comfortably scannable at arm's length; shrinking it much
+    /// further would start to cost scan reliability, which is the whole point of
+    /// showing it.
+    private static let qrSize: CGFloat = 132
+
     var body: some View {
         NavigationStack {
-            Group {
-                if !isSignedIn {
-                    signedOut
-                } else if let coordinator, coordinator.isActive {
-                    activeSession(coordinator)
-                } else if joining {
-                    joinForm
-                } else {
-                    chooser
+            // A ScrollView, not a fixed frame. With a fixed frame, content taller
+            // than the detent overflowed *upwards* and drew straight through the
+            // navigation bar — which is how "YOU'RE LEADING" ended up printed on
+            // top of the "LISTEN TOGETHER" title. Scrolling makes overflow
+            // impossible to render out of bounds, on any device size or Dynamic
+            // Type setting; `.basedOnSize` keeps it from bouncing when, as
+            // intended, everything already fits.
+            ScrollView {
+                Group {
+                    if !isSignedIn {
+                        signedOut
+                    } else if let coordinator, coordinator.isActive {
+                        activeSession(coordinator)
+                    } else if joining {
+                        joinForm
+                    } else {
+                        chooser
+                    }
                 }
+                .frame(maxWidth: .infinity)
             }
+            .scrollBounceBehavior(.basedOnSize)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             // The mini-player + tab bar live in a higher-level window, so they
             // paint OVER the bottom of this sheet. Without reserving their
@@ -152,7 +170,6 @@ struct GroupListenSheet: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            Spacer()
         }
         .padding(.horizontal, AtlasSpacing.lg)
     }
@@ -219,7 +236,7 @@ struct GroupListenSheet: View {
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.background)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 48)
+                    .frame(height: 44)
                     .background(codeEntry.count == 5 ? AtlasColors.mapPin : AtlasColors.tertiaryText)
                     .clipShape(RoundedRectangle(cornerRadius: 12))
             }
@@ -241,7 +258,6 @@ struct GroupListenSheet: View {
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
 
-            Spacer()
         }
         .padding(.horizontal, AtlasSpacing.lg)
     }
@@ -252,33 +268,37 @@ struct GroupListenSheet: View {
         // Tighter than the old `lg` spacing / `xl` top padding: the sheet opens
         // at half height now, and the leader's QR code is the tallest content in
         // it, so every spare point matters for fitting without a drag.
-        VStack(spacing: AtlasSpacing.md) {
+        VStack(spacing: AtlasSpacing.sm) {
             if coordinator.isLeader {
                 VStack(spacing: AtlasSpacing.sm) {
-                    Text("YOU'RE LEADING")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                    Text("Let them scan this")
+                    // "YOU'RE LEADING" was dropped: the nav title already says
+                    // Listen Together, and a QR code plus a join code can only
+                    // mean you're the one being joined. It cost a line of height
+                    // on the tightest screen in the sheet.
+                    Text("LET THEM SCAN THIS")
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.primaryText)
 
                     // Scanning beats reading five characters aloud in a busy
                     // museum; the code stays visible right below as the fallback.
                     if let code = coordinator.code {
-                        QRCodeView(content: AtlasShareLink.groupJoinURL(code: code).absoluteString)
+                        QRCodeView(
+                            content: AtlasShareLink.groupJoinURL(code: code).absoluteString,
+                            size: Self.qrSize
+                        )
                     }
 
                     Text(coordinator.code ?? "—")
-                        .font(.system(size: 36, weight: .bold, design: .monospaced))
+                        .font(.system(size: 26, weight: .bold, design: .monospaced))
                         .foregroundStyle(AtlasColors.mapPin)
                         .textSelection(.enabled)
-                    Text("Or they can tap Join and type it.")
+                    Text("Or tap Join and type it.")
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
                 }
-                .padding(.top, AtlasSpacing.md)
+                .padding(.top, AtlasSpacing.sm)
             } else {
                 VStack(spacing: AtlasSpacing.sm) {
                     Image(systemName: coordinator.leaderLost ? "person.fill.questionmark" : "person.2.wave.2.fill")
@@ -309,13 +329,12 @@ struct GroupListenSheet: View {
                     .font(AtlasTypography.caption)
                     .foregroundStyle(.red)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 48)
+                    .frame(height: 44)
                     .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color.red.opacity(0.5), lineWidth: 1))
             }
             .buttonStyle(.plain)
             .padding(.top, AtlasSpacing.sm)
 
-            Spacer()
         }
         .padding(.horizontal, AtlasSpacing.lg)
     }
@@ -375,11 +394,12 @@ struct GroupListenSheet: View {
     // MARK: - Signed out
 
     private var signedOut: some View {
+        // Spacers would collapse to nothing inside the enclosing ScrollView, so
+        // this pads instead of centring — otherwise the prompt hugged the nav bar.
         VStack(spacing: AtlasSpacing.md) {
-            Spacer()
             JoinDozentPrompt(showIcon: true)
-            Spacer()
         }
+        .padding(.top, AtlasSpacing.xl)
     }
 
     // MARK: - Actions
