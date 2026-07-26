@@ -5,17 +5,30 @@ import Combine
 
 /// One video page inside the tour-detail / player photo carousel.
 ///
-/// Videos live alongside images in the gallery (owner decision,
-/// 2026-07-19): a tour's `videoURLs` render as extra swipeable pages
-/// after the photos. This view is the per-page renderer — a system
-/// `VideoPlayer` (AVKit) with its standard transport controls, sized
-/// to the same hero frame as `HeroImageView` and letterboxed on black
-/// (aspect-fit, so video is never cropped the way a fill-scaled photo
-/// would be).
+/// Videos live alongside images in the gallery. Since 2026-07-26 a
+/// tour's `videoURLs` render **first**, so a tour that has a video opens
+/// on it — see `TourMediaCarousel`. This view is the per-page renderer:
+/// the video sized to the same hero frame as `HeroImageView` and
+/// letterboxed on black (aspect-fit, so video is never cropped the way
+/// a fill-scaled photo would be).
 ///
-/// **No autoplay.** The user taps the play button to start — this is an
-/// *audio*-tour app, so a video that starts itself would fight the
-/// narration.
+/// **Custom controls, deliberately** (owner decision, 2026-07-26). This
+/// used to be AVKit's `VideoPlayer`, whose built-in transport bar
+/// installs a pan recognizer across the whole video surface. Inside a
+/// paged `TabView` that recognizer **swallows horizontal swipes** — it
+/// scrubs instead of paging — so once a video was on screen the user
+/// could not swipe to the photos at all. Verified in the simulator: with
+/// the video leading, both flicks and slow drags scrubbed and the
+/// carousel never advanced. We therefore host `AVPlayerViewController`
+/// with `showsPlaybackControls = false` and supply our own tap-to-play
+/// affordance. With no built-in recognizer the drag falls through to the
+/// TabView and paging works; the trade-off the owner accepted is that
+/// gallery videos have no scrubber and no fullscreen button — they
+/// behave like a tappable moving photo, which is the right register for
+/// short b-roll.
+///
+/// **No autoplay.** The user taps to start — this is an *audio*-tour
+/// app, so a video that starts itself would fight the narration.
 ///
 /// **Audio interaction — "take over, then resume"** (owner decision,
 /// 2026-07-19):
@@ -54,34 +67,56 @@ struct GalleryVideoView: View {
     /// know to resume it (and don't resume a tour the user had paused
     /// themselves).
     @State private var didPauseNarration = false
+    /// Drives the play affordance. Mirrors `timeControlStatus` rather
+    /// than being set by the tap, so it stays honest if playback stalls
+    /// or ends on its own.
+    @State private var isPlaying = false
 
     var body: some View {
-        Group {
+        ZStack {
+            Color.black
             if let player {
-                VideoPlayer(player: player)
+                VideoSurface(player: player)
                     .onReceive(player.publisher(for: \.timeControlStatus)) { status in
                         switch status {
                         case .playing:
+                            isPlaying = true
                             pauseNarrationIfNeeded()
                         case .paused:
                             // Fires on user-pause and on reaching the end
                             // (AVPlayer stops → .paused). Either way, hand
                             // the audio back to the narration.
+                            isPlaying = false
                             resumeNarrationIfNeeded()
                         default:
                             break // .waitingToPlayAtSpecifiedRate (buffering)
                         }
                     }
-            } else {
-                // Brief black placeholder before the player is built —
-                // matches the letterbox background so there's no flash.
-                Rectangle().fill(Color.black)
+                    .onReceive(
+                        NotificationCenter.default.publisher(
+                            for: AVPlayerItem.didPlayToEndTimeNotification,
+                            object: player.currentItem
+                        )
+                    ) { _ in
+                        // Rewind so the next tap replays instead of
+                        // sitting on the last frame doing nothing.
+                        player.seek(to: .zero)
+                        isPlaying = false
+                    }
             }
+            playAffordance
         }
         .frame(maxWidth: .infinity)
         .frame(height: height)
         .background(Color.black)
         .clipped()
+        // Tap anywhere to pause while playing. A tap gesture (unlike
+        // AVKit's transport bar) doesn't claim the horizontal drag, so
+        // the carousel can still page. Starting playback goes through
+        // the explicit button below rather than this, so there's a real
+        // control in the accessibility tree.
+        .contentShape(Rectangle())
+        .onTapGesture { if isPlaying { player?.pause() } }
         .task(id: urlString) {
             await prepare()
         }
@@ -94,6 +129,29 @@ struct GalleryVideoView: View {
         .onDisappear {
             player?.pause()
             resumeNarrationIfNeeded()
+        }
+    }
+
+    /// The only control: a play button while paused. Hidden during
+    /// playback so nothing sits over the picture. A real `Button` (not a
+    /// bare glyph + surface tap) so it lands in the accessibility tree
+    /// as a control — VoiceOver reaches it, and it's a definite hit
+    /// target rather than relying on the whole surface.
+    @ViewBuilder
+    private var playAffordance: some View {
+        if !isPlaying {
+            Button {
+                player?.play()
+            } label: {
+                Image(systemName: "play.circle.fill")
+                    .font(.system(size: 52))
+                    .symbolRenderingMode(.palette)
+                    .foregroundStyle(.white, .black.opacity(0.35))
+                    .shadow(color: .black.opacity(0.35), radius: 6)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Play video")
+            .transition(.opacity)
         }
     }
 
@@ -127,5 +185,33 @@ struct GalleryVideoView: View {
         guard didPauseNarration else { return }
         didPauseNarration = false
         audioPlayer?.play()
+    }
+}
+
+/// Bare video surface — `AVPlayerViewController` with its transport bar
+/// switched off. See `GalleryVideoView`'s note: the built-in controls
+/// install a pan recognizer that steals the carousel's paging swipe, so
+/// we render picture only and drive playback ourselves.
+private struct VideoSurface: UIViewControllerRepresentable {
+    let player: AVPlayer
+
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
+        let controller = AVPlayerViewController()
+        controller.player = player
+        controller.showsPlaybackControls = false
+        controller.videoGravity = .resizeAspect
+        controller.allowsPictureInPicturePlayback = false
+        // The tour narration owns the lock screen. Without this, AVKit
+        // overwrites the now-playing info with the (untitled) clip.
+        controller.updatesNowPlayingInfoCenter = false
+        controller.view.backgroundColor = .black
+        controller.view.isUserInteractionEnabled = false
+        return controller
+    }
+
+    func updateUIViewController(_ controller: AVPlayerViewController, context: Context) {
+        if controller.player !== player {
+            controller.player = player
+        }
     }
 }
