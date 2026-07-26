@@ -1,8 +1,8 @@
 # HANDOFF 2026-07-26 (session 74) — saving consolidated: one save action, "Liked" is the default list
 
 **Type:** code (web/remote session, Linux — no Mac). One PR:
-**[#447](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/447)**, open for owner review.
-No content, asset-catalog, or backend changes.
+**[#447](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/447)** — CI green, owner-verified on
+TestFlight 1.1 (50). No content, asset-catalog, or backend changes.
 
 ## What the owner asked for
 
@@ -69,7 +69,7 @@ keeps working untouched. **No backend change, no migration, nothing for the owne
 ## What changed
 
 - **`Data/SaveState.swift`** (new) — the rules as pure functions, unit-tested without either
-  store: `isSaved`, `placeCount`, and the 0/1/many `tapAction`.
+  store: `isSaved`, `placeCount`, and the add-only `tapAction`.
 - **`Data/TourSaveActions.swift`** (new) — binds those rules to the two stores; shared by the
   cards, tour detail and the player so they can't drift. Deliberately **not** `@MainActor`,
   matching how the existing journeys sheet already reaches into `JourneyService` from view
@@ -78,10 +78,12 @@ keeps working untouched. **No backend change, no migration, nothing for the owne
   from the embed `loadMyJourneys()` already fetches; kept in step by every mutation.
 - **`TourListMembershipSheet.swift`** replaces `AddToJourneySheet` — removes as well as adds,
   and **leads with Liked** so a signed-out user gets a working sheet instead of a sign-in wall.
-- **`LibraryView`** — Saved tab becomes **Liked** and is the single home for kept things: Liked
-  tours, your lists (incl. "New list"), followed creators.
+- **`LibraryView`** — the Saved tab becomes **Lists**, the single home for kept things:
+  **New list → Liked → your named lists → Following**. Liked is a *row*, not a section of its own
+  — it opens into the new `LikedListView` like any other list.
 - **`MakerView`** — the profile's Journeys row **removed** rather than left as a second door.
-  `JourneysListView` deleted; `JourneyEditorSheet` split into its own file.
+  `JourneysListView` deleted; `JourneyEditorSheet`, `LibraryTourRow` and `LikedListView` split
+  into their own files.
 - **`SaveStateTests`** — 12 cases incl. signed-out parity with a plain bookmark toggle.
 
 ## Two things worth remembering
