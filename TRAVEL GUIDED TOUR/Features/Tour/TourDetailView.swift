@@ -976,6 +976,20 @@ struct TourDetailView: View {
     /// baseline.
     private let controlHeight: CGFloat = 44
 
+    /// True while a group listening session is running (leading or following).
+    private var isGroupSessionActive: Bool { groupListen?.isActive == true }
+
+    /// The Group Listen button turns **green** for the duration of a session —
+    /// the app's only persistent "you're in a group" signal since the bottom
+    /// banner was removed (owner call, 2026-07-26). Same rationale as the
+    /// download button's completed state: "active/success = green" is a strong
+    /// enough convention to override the brass accent, and it reads instantly
+    /// against every other control on this row. `M-polish-theme` can promote
+    /// both to an `AtlasColors.success` token later.
+    private var groupListenTint: Color {
+        isGroupSessionActive ? .green : AtlasColors.mapPin
+    }
+
     /// Inline button row — sits above the description so users can
     /// act without scrolling. Order: Start Tour (primary, full
     /// width) · Save · Download. Buttons are rendered as custom
@@ -1001,21 +1015,23 @@ struct TourDetailView: View {
             Button {
                 showingGroupListen = true
             } label: {
-                // 17pt, not the 20 used by its neighbours. SF Symbol point size
+                // 16pt, not the 20 used by its neighbours. SF Symbol point size
                 // sets cap height, not drawn area: `person.2.wave.2.fill` is a
                 // wide, multi-element *filled* glyph, so at a matched 20 it reads
                 // noticeably larger and heavier than the enclosed, stroked
                 // `arrow.down.circle` beside it. Sized down to balance them
-                // optically (owner call, 2026-07-25).
+                // optically — 20 → 17 → 16, each step an owner call on device.
                 Image(systemName: "person.2.wave.2.fill")
-                    .font(.system(size: 17))
-                    .foregroundStyle(AtlasColors.mapPin)
+                    .font(.system(size: 16))
+                    .foregroundStyle(groupListenTint)
                     .frame(width: controlHeight, height: controlHeight)
-                    .background(Capsule().fill(AtlasColors.mapPin.opacity(0.15)))
+                    .background(Capsule().fill(groupListenTint.opacity(0.15)))
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Listen together")
-            .accessibilityHint("Start or join a synced group listening session")
+            .accessibilityLabel(isGroupSessionActive ? "Group session active" : "Listen together")
+            .accessibilityHint(isGroupSessionActive
+                               ? "Opens the group session — shows who's listening and lets you leave"
+                               : "Start or join a synced group listening session")
 
             downloadButton
         }
