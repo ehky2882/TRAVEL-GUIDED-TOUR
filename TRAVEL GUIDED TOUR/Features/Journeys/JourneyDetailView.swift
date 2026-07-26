@@ -79,7 +79,7 @@ struct JourneyDetailView: View {
             .padding(.top, AtlasSpacing.md)
         }
         .background(AtlasColors.secondaryBackground)
-        .navigationTitle(journey?.title ?? "Journey")
+        .navigationTitle(journey?.title ?? "List")
         .inlineNavigationBarTitle()
         .safeAreaInset(edge: .bottom, spacing: 0) {
             Color.clear.frame(height: AtlasBottomModule.height())
@@ -94,22 +94,22 @@ struct JourneyDetailView: View {
                         isEditing.toggle()
                     }
                     Section {
-                        Button("Delete Journey", systemImage: "trash", role: .destructive) {
+                        Button("Delete list", systemImage: "trash", role: .destructive) {
                             showingDeleteConfirm = true
                         }
                     }
                 } label: {
                     Image(systemName: "ellipsis.circle")
-                        .accessibilityLabel("Journey options")
+                        .accessibilityLabel("List options")
                 }
             }
         }
         .confirmationDialog(
-            "Delete this Journey? This can't be undone.",
+            "Delete this list? This can't be undone.",
             isPresented: $showingDeleteConfirm,
             titleVisibility: .visible
         ) {
-            Button("Delete Journey", role: .destructive) { deleteJourney() }
+            Button("Delete list", role: .destructive) { deleteJourney() }
             Button("Cancel", role: .cancel) {}
         }
         .sheet(isPresented: $showingEditDetails) {
@@ -248,7 +248,7 @@ struct JourneyDetailView: View {
                     .foregroundStyle(.red)
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Remove \(tourTitle) from Journey")
+            .accessibilityLabel("Remove \(tourTitle) from list")
         }
     }
 
@@ -257,7 +257,7 @@ struct JourneyDetailView: View {
             Text("No tours yet")
                 .font(AtlasTypography.body)
                 .foregroundStyle(AtlasColors.primaryText)
-            Text("Open any tour and use “Add to a Journey” to build this collection.")
+            Text("Open any tour, tap Save to…, and pick this list.")
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
                 .multilineTextAlignment(.center)

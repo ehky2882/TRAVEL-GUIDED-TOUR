@@ -93,9 +93,6 @@ struct MakerView: View {
     @Environment(MakerTourService.self) private var makerTourService: MakerTourService?
     @Environment(FollowService.self) private var followService: FollowService?
     @Environment(ToastCenter.self) private var toastCenter: ToastCenter?
-    // Optional: only `.ownProfile` (the Me tab, which carries it via the
-    // ContentView environment) uses this — to enter the user's Journeys.
-    @Environment(JourneyService.self) private var journeyService: JourneyService?
 
     /// Follower/following counts + this viewer's relationship to the maker.
     /// Loaded on appear; refreshed after a follow/unfollow.
@@ -137,10 +134,10 @@ struct MakerView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.top, AtlasSpacing.lg)
 
-                if isOwnProfile && journeyService != nil {
-                    journeysSection
-                }
-
+                // Your own lists live in Library now — "what you collected" —
+                // alongside Liked and the creators you follow. The profile is
+                // "what you made", so a second door into the same lists here
+                // was the redundancy this consolidation removes.
                 toursSection
             }
             .padding(.horizontal, AtlasSpacing.lg)
@@ -457,38 +454,6 @@ struct MakerView: View {
         // Shared resolution: photo → emoji → custom initials+colour →
         // display-name monogram. See Components/MakerAvatarView.
         MakerAvatarView(maker: maker, size: avatarSize)
-    }
-
-    /// Own-profile entry into the user's Journeys (curated tour collections).
-    /// A single row that pushes `JourneysListView` — the full create / view /
-    /// edit surface lives there.
-    private var journeysSection: some View {
-        NavigationLink {
-            JourneysListView()
-        } label: {
-            HStack(spacing: AtlasSpacing.md) {
-                Image(systemName: "map")
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.mapPin)
-                    .frame(width: 28)
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("JOURNEYS")
-                        .font(AtlasTypography.body)
-                        .foregroundStyle(AtlasColors.primaryText)
-                    Text("Your curated tour collections")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                }
-                Spacer()
-                Image(systemName: "chevron.right")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-            }
-            .padding(.vertical, AtlasSpacing.sm)
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-        .accessibilityLabel("Journeys, your curated tour collections")
     }
 
     private var toursSection: some View {

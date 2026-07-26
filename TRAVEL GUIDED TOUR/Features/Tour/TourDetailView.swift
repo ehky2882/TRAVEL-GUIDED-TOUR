@@ -76,7 +76,7 @@ struct TourDetailView: View {
     /// doesn't push), so we drive it through `.navigationDestination`.
     @State private var showingMaker = false
     @State private var showingReport = false
-    @State private var showingAddToJourney = false
+    @State private var showingLists = false
     @State private var showingGroupListen = false
 
     /// Toggles between the truncated 4-line preview of `longDescription`
@@ -159,8 +159,8 @@ struct TourDetailView: View {
         .sheet(isPresented: $showingReport) {
             ReportSheet(target: .tour(tour))
         }
-        .sheet(isPresented: $showingAddToJourney) {
-            AddToJourneySheet(tour: tour)
+        .sheet(isPresented: $showingLists) {
+            TourListMembershipSheet(tour: tour)
         }
         .sheet(isPresented: $showingGroupListen) {
             GroupListenSheet(tour: tour)
@@ -208,7 +208,7 @@ struct TourDetailView: View {
                 chromeCapsule(isSaved ? "bookmark.fill" : "bookmark")
             }
             .buttonStyle(.plain)
-            .accessibilityLabel(isSaved ? "Remove from saved" : "Save tour")
+            .accessibilityLabel(saveActions.accessibilityLabel(tour.id))
 
             overflowMenu
         }
@@ -1184,9 +1184,14 @@ struct TourDetailView: View {
             }
             .disabled(menuDownloadDisabled)
 
-            Button(action: toggleSaved) {
+            // One save entry, not two. The quick toggle lives on the chrome-row
+            // bookmark; this opens the membership sheet so the user can pick
+            // exactly where the tour is kept (Liked, or any named list).
+            Button {
+                showingLists = true
+            } label: {
                 Label(
-                    isSaved ? "Remove from saved" : "Save",
+                    isSaved ? "Saved — change where" : "Save to…",
                     systemImage: isSaved ? "bookmark.fill" : "bookmark"
                 )
             }
@@ -1200,14 +1205,6 @@ struct TourDetailView: View {
                 subject: Text(tour.title)
             ) {
                 Label("Share", systemImage: "square.and.arrow.up")
-            }
-
-            if journeyService != nil {
-                Button {
-                    showingAddToJourney = true
-                } label: {
-                    Label("Add to a Journey", systemImage: "text.badge.plus")
-                }
             }
 
             if groupListen != nil {
@@ -1370,12 +1367,20 @@ struct TourDetailView: View {
             && (audioPlayer.state == .playing || audioPlayer.state == .loading)
     }
 
+    /// Saving is one concept now — see `SaveState`. A tap saves into **Liked**
+    /// (the default list), un-saves when the tour lives in exactly one place,
+    /// and opens the membership sheet when it's in several rather than guessing
+    /// which one to pull it out of.
+    private var saveActions: TourSaveActions {
+        TourSaveActions(libraryStore: libraryStore, journeyService: journeyService)
+    }
+
     private func toggleSaved() {
-        libraryStore.toggleSaved(tour.id)
+        showingLists = saveActions.handleTap(tour.id)
     }
 
     private var isSaved: Bool {
-        libraryStore.isSaved(tour.id)
+        saveActions.isSaved(tour.id)
     }
 
     // MARK: - Audio state derivations

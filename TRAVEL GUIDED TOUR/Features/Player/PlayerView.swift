@@ -29,6 +29,10 @@ struct PlayerView: View {
     @Environment(ProximityMonitor.self) private var proximityMonitor
     @Environment(TourDownloader.self) private var tourDownloader
     @Environment(AppSharedState.self) private var appShared
+    /// Optional: the player is presented from the bottom-module window, which
+    /// only carries the services that window's root injects. Absent → Liked
+    /// only, which is also what a signed-out user gets.
+    @Environment(JourneyService.self) private var journeyService: JourneyService?
 
     /// -1 means the tour's intro audio is playing (only valid when
     /// the tour has an `introAudioURL`). 0...n indexes `sortedStops`.
@@ -48,6 +52,7 @@ struct PlayerView: View {
     /// wrapped in its own NavigationStack so MakerView can push over it.
     @State private var showingMaker: Bool = false
     @State private var showingReport: Bool = false
+    @State private var showingLists: Bool = false
 
     /// Live downward-drag distance for the interactive drag-to-dismiss.
     /// The player is a full-screen cover (edge-to-edge to the top), so
@@ -124,6 +129,9 @@ struct PlayerView: View {
         }
         .sheet(isPresented: $showingReport) {
             ReportSheet(target: .tour(tour))
+        }
+        .sheet(isPresented: $showingLists) {
+            TourListMembershipSheet(tour: tour)
         }
             .offset(y: dragOffset)
             .animation(.interactiveSpring(response: 0.3, dampingFraction: 0.85), value: dragOffset)
@@ -224,9 +232,11 @@ struct PlayerView: View {
             }
             .disabled(menuDownloadDisabled)
 
-            Button(action: toggleSaved) {
+            Button {
+                showingLists = true
+            } label: {
                 Label(
-                    isSaved ? "Remove from saved" : "Save",
+                    isSaved ? "Saved — change where" : "Save to…",
                     systemImage: isSaved ? "bookmark.fill" : "bookmark"
                 )
             }
@@ -280,12 +290,13 @@ struct PlayerView: View {
         }
     }
 
-    private var isSaved: Bool {
-        libraryStore.isSaved(tour.id)
+    /// Saving is one concept — see `SaveState`.
+    private var saveActions: TourSaveActions {
+        TourSaveActions(libraryStore: libraryStore, journeyService: journeyService)
     }
 
-    private func toggleSaved() {
-        libraryStore.toggleSaved(tour.id)
+    private var isSaved: Bool {
+        saveActions.isSaved(tour.id)
     }
 
     private var menuDownloadLabel: String {

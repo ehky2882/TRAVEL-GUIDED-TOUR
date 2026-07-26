@@ -4,7 +4,8 @@ import UIKit
 /// Library tab — spec section Flow 3: Library / roadmap M-library.
 ///
 /// Three sections accessed via a segmented picker at the top:
-///   - Saved (bookmarked tours)
+///   - Lists (every list the user has — **Liked**, the default list, plus
+///     any they named — followed by the creators they follow)
 ///   - Downloaded (audio cached on device — populated by M-offline)
 ///   - Recently played (resume listening — populated by PlayerView's
 ///     progress writes)
@@ -21,14 +22,17 @@ import UIKit
 struct LibraryView: View {
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
-    @Environment(TourDownloader.self) private var tourDownloader
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(MakerPresenter.self) private var makerPresenter
     @Environment(FollowService.self) private var followService
     @Environment(MakerProfileService.self) private var makerProfileService
     @Environment(AuthService.self) private var authService
+    /// Optional so Library still renders if the service isn't injected on some
+    /// path; signed-out users have no named lists anyway.
+    @Environment(JourneyService.self) private var journeyService: JourneyService?
 
     @State private var selectedSection: Section = .saved
+    @State private var showingCreateList = false
 
     /// Push the section picker's labels to SF Mono caption (13pt
     /// monospaced regular) — matches the editorial voice carried by
@@ -44,8 +48,11 @@ struct LibraryView: View {
         UISegmentedControl.appearance().setTitleTextAttributes([.font: mono], for: .selected)
     }
 
+    /// Library is the one home for everything the user has kept. **Liked is
+    /// not a separate section** — it's the default list (`SaveState`) and sits
+    /// in the Lists section as its first row, so every list looks like a list.
     enum Section: String, CaseIterable, Identifiable {
-        case saved = "Saved"
+        case saved = "Lists"
         case downloaded = "Downloaded"
         case recentlyPlayed = "Recents"
 
@@ -94,6 +101,12 @@ struct LibraryView: View {
             // follows/unfollows made on a maker page.
             .task(id: authService.userId) {
                 await loadFollowing()
+                // Named lists live in Supabase; keyed on the account so a
+                // sign-out or switch can't leave the previous user's on screen.
+                await journeyService?.loadMyJourneys()
+            }
+            .sheet(isPresented: $showingCreateList) {
+                JourneyEditorSheet()
             }
         }
     }
@@ -113,7 +126,7 @@ struct LibraryView: View {
     private var sectionContent: some View {
         switch selectedSection {
         case .saved:
-            savedContent
+            listsContent
         case .downloaded:
             tourList(tours: downloadedTours, empty: DownloadedEmptyState())
         case .recentlyPlayed:
@@ -134,7 +147,7 @@ struct LibraryView: View {
                     Button {
                         tourPresenter.present(tour)
                     } label: {
-                        tourRow(tour)
+                        LibraryTourRow(tour: tour)
                     }
                     .buttonStyle(.plain)
 
@@ -148,34 +161,44 @@ struct LibraryView: View {
         }
     }
 
-    /// The Saved tab: saved tours, with a "Following" section (the makers the
-    /// user follows) below them. When the user follows no one this falls
-    /// through to the original tour-only list + empty state, so the common
-    /// case is unchanged.
+    /// The Lists tab — every list the user has, Liked included.
+    ///
+    /// **Liked gets no section of its own.** It's the default list, so it's the
+    /// first row of Lists and opens like any other; a list is a list. Followed
+    /// creators sit below in their own section.
     @ViewBuilder
-    private var savedContent: some View {
-        if followingMakers.isEmpty {
-            tourList(tours: savedTours, empty: SavedEmptyState())
-        } else {
-            // Tours first — followed makers live below (owner direction
-            // 2026-07-03: prioritize individual tours).
-            LazyVStack(alignment: .leading, spacing: 0) {
-                if !savedTours.isEmpty {
-                    librarySectionHeader("Tours")
-                    ForEach(savedTours) { tour in
-                        Button {
-                            tourPresenter.present(tour)
-                        } label: {
-                            tourRow(tour)
-                        }
-                        .buttonStyle(.plain)
+    private var listsContent: some View {
+        LazyVStack(alignment: .leading, spacing: 0) {
+            librarySectionHeader("Lists")
 
-                        if tour.id != savedTours.last?.id {
-                            Divider().padding(.horizontal, AtlasSpacing.lg)
-                        }
+            // Create sits at the very top — it's an action, not a list, so it
+            // shouldn't be buried among them (owner direction).
+            if canUseLists {
+                newListRow
+                Divider().padding(.horizontal, AtlasSpacing.lg)
+            }
+
+            NavigationLink {
+                LikedListView()
+            } label: {
+                likedRow
+            }
+            .buttonStyle(.plain)
+
+            if canUseLists {
+                ForEach(myLists) { list in
+                    Divider().padding(.horizontal, AtlasSpacing.lg)
+
+                    NavigationLink {
+                        JourneyDetailView(journeyId: list.id)
+                    } label: {
+                        listRow(list)
                     }
+                    .buttonStyle(.plain)
                 }
+            }
 
+            if !followingMakers.isEmpty {
                 librarySectionHeader("Following")
                 ForEach(followingMakers) { maker in
                     Button {
@@ -191,6 +214,142 @@ struct LibraryView: View {
                 }
             }
         }
+    }
+
+    /// Liked — the default list, styled exactly like a named list so it reads
+    /// as one of them. Cover is the most recently liked tour's hero; the
+    /// bookmark glyph stands in while it's empty.
+    private var likedRow: some View {
+        HStack(alignment: .center, spacing: AtlasSpacing.md) {
+            Group {
+                if let cover = savedTours.first?.heroImageURL {
+                    HeroImageView(
+                        imageName: cover,
+                        height: 56,
+                        cornerRadius: 0,
+                        category: savedTours.first?.primaryCategory
+                    )
+                } else {
+                    ZStack {
+                        Rectangle()
+                            .fill(AtlasColors.placeholderWarm.opacity(0.35))
+                        Image(systemName: "bookmark.fill")
+                            .font(AtlasTypography.body)
+                            .foregroundStyle(AtlasColors.mapPin)
+                    }
+                }
+            }
+            .frame(width: 56, height: 56)
+            .clipped()
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                Text("LIKED")
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(1)
+
+                Text(savedTours.count == 1 ? "1 tour" : "\(savedTours.count) tours")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .lineLimit(1)
+            }
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+        }
+        .padding(.horizontal, AtlasSpacing.lg)
+        .padding(.vertical, AtlasSpacing.sm)
+    }
+
+    /// Create a new list. Lives here because Library is now the single home for
+    /// the user's own lists — the profile no longer carries a second door into
+    /// the same thing.
+    private var newListRow: some View {
+        Button {
+            showingCreateList = true
+        } label: {
+            HStack(alignment: .center, spacing: AtlasSpacing.md) {
+                ZStack {
+                    Rectangle()
+                        .fill(AtlasColors.placeholderWarm.opacity(0.35))
+                    Image(systemName: "plus")
+                        .font(AtlasTypography.body)
+                        .foregroundStyle(AtlasColors.mapPin)
+                }
+                .frame(width: 56, height: 56)
+
+                Text("New list")
+                    .font(AtlasTypography.body)
+                    .textCase(.uppercase)
+                    .foregroundStyle(AtlasColors.primaryText)
+
+                Spacer()
+            }
+            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.vertical, AtlasSpacing.sm)
+            .contentShape(Rectangle())
+        }
+        .buttonStyle(.plain)
+    }
+
+    /// A named list row — cover thumbnail (explicit, else the first tour's
+    /// hero), title, tour count. Matches the maker row's 56pt metrics so the
+    /// two sections below the tours read as one system.
+    private func listRow(_ list: Journey) -> some View {
+        HStack(alignment: .center, spacing: AtlasSpacing.md) {
+            // Same cover treatment as the lists screen's own rows.
+            Group {
+                if let name = listCoverImageName(for: list) {
+                    HeroImageView(
+                        imageName: name,
+                        height: 56,
+                        cornerRadius: 0,
+                        category: list.firstTourId.flatMap { dataService.tour(by: $0)?.primaryCategory }
+                    )
+                } else {
+                    ZStack {
+                        Rectangle()
+                            .fill(AtlasColors.placeholderWarm.opacity(0.35))
+                        Image(systemName: "map")
+                            .font(AtlasTypography.body)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                    }
+                }
+            }
+            .frame(width: 56, height: 56)
+            .clipped()
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                Text(list.title)
+                    .font(AtlasTypography.body)
+                    .textCase(.uppercase)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+
+                Text(list.itemCount == 1 ? "1 tour" : "\(list.itemCount) tours")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .lineLimit(1)
+            }
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+        }
+        .padding(.horizontal, AtlasSpacing.lg)
+        .padding(.vertical, AtlasSpacing.sm)
+    }
+
+    private func listCoverImageName(for list: Journey) -> String? {
+        if let explicit = list.coverImageURL, !explicit.isEmpty { return explicit }
+        guard let firstTourId = list.firstTourId else { return nil }
+        return dataService.tour(by: firstTourId)?.heroImageURL
     }
 
     /// Caption all-caps section divider — matches the Search view's
@@ -237,57 +396,6 @@ struct LibraryView: View {
         .padding(.vertical, AtlasSpacing.sm)
     }
 
-    private func tourRow(_ tour: Tour) -> some View {
-        HStack(alignment: .top, spacing: AtlasSpacing.md) {
-            HeroImageView(
-                imageName: tour.heroImageURL,
-                height: 64,
-                cornerRadius: 0,
-                category: tour.primaryCategory
-            )
-            .frame(width: 64)
-
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                Text(tour.title.uppercased())
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(1)
-                    .truncationMode(.tail)
-
-                if let maker = dataService.maker(for: tour) {
-                    Text(maker.displayName)
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                }
-
-                HStack(spacing: AtlasSpacing.xs) {
-                    Text(formattedDuration(tour.totalDurationSeconds))
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-
-                    // Small download badge so users scanning Saved /
-                    // Recents can see which tours are already cached
-                    // for offline listening.
-                    if tourDownloader.isDownloaded(tourId: tour.id) {
-                        Image(systemName: "arrow.down.circle.fill")
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                            .padding(.leading, AtlasSpacing.xs)
-                            .accessibilityLabel("Downloaded for offline")
-                    }
-                }
-            }
-
-            Spacer()
-
-            Image(systemName: "chevron.right")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
-        }
-        .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.vertical, AtlasSpacing.sm)
-    }
-
     // MARK: - Derived
 
     /// LibraryEntry rows → Tour rows. Tours that no longer exist in
@@ -314,6 +422,19 @@ struct LibraryView: View {
         guard let myMakerId = makerProfileService.myMaker?.id else { return [] }
         return followService.cachedFollowing(of: myMakerId)
     }
+
+    /// The user's named lists. Empty signed out — Liked is the only list an
+    /// anonymous user has, and it *is* this tab.
+    private var myLists: [Journey] {
+        journeyService?.myJourneys ?? []
+    }
+
+    /// Named lists need an account. When the user has one the Lists section
+    /// always shows — including with zero lists — so "New list" is reachable.
+    private var canUseLists: Bool {
+        authService.isSignedIn && journeyService != nil
+    }
+
 
     /// Refresh the signed-in user's followed makers into the shared cache.
     /// Keyed by the user's own maker id (the follow graph resolves maker →
@@ -350,22 +471,10 @@ struct LibraryView: View {
         }
     }
 
-    private func formattedDuration(_ seconds: Int) -> String {
-        AtlasFormatters.duration(seconds: seconds)
-    }
 }
 
 // MARK: - Empty states
 
-private struct SavedEmptyState: View {
-    var body: some View {
-        EmptyStateLayout(
-            icon: "bookmark",
-            title: "Nothing saved yet",
-            message: "Tap the bookmark on any tour to save it for later, or follow a creator to see them here."
-        )
-    }
-}
 
 private struct DownloadedEmptyState: View {
     var body: some View {
@@ -387,7 +496,9 @@ private struct RecentlyPlayedEmptyState: View {
     }
 }
 
-private struct EmptyStateLayout: View {
+/// Internal, not fileprivate: `LikedEmptyState` lives in `LikedListView.swift`
+/// so the Liked list screen can show it too.
+struct EmptyStateLayout: View {
     let icon: String
     let title: String
     let message: String
