@@ -56,15 +56,11 @@ struct BottomModuleRoot: View {
         return VStack(spacing: 0) {
             Spacer(minLength: 0)
             // The painted module. Measured as one unit so the window claims a
-            // touch strip that covers everything drawn here — including the
-            // Group Listen banner, which sits ABOVE the mini-player and was
-            // therefore outside the old fixed 126pt strip (visible, but its
-            // Leave button received no taps).
+            // touch strip that covers exactly what's drawn here — rather than a
+            // fixed constant. Anything added ABOVE the mini-player is therefore
+            // tappable automatically; the old fixed 126pt strip left such a view
+            // visible but untouchable.
             VStack(spacing: 0) {
-                // Group Listen session strip — sits just above the mini-player when
-                // a session is active; self-hides otherwise.
-                GroupBanner()
-                    .padding(.bottom, AtlasSpacing.xs)
                 MiniPlayerBar(
                     tour: nowPlayingTour,
                     maker: nowPlayingTour.flatMap { dataService.maker(for: $0) },
