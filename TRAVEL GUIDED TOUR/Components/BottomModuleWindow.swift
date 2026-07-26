@@ -81,8 +81,40 @@ final class BottomModuleWindowController {
     /// `lastPreference`: a *deferred* install must not lose an update that
     /// arrived before the window existed.
     private var lastInteractiveBottomInset: CGFloat?
+    /// Pending self-heal retry, so only one chain is ever in flight.
+    private var retryWorkItem: DispatchWorkItem?
+    /// How many self-heal retries have been scheduled so far.
+    private var retryAttempt = 0
 
     private static let log = Logger(subsystem: "com.dozent.app", category: "BottomModuleWindow")
+
+    /// Delay before self-heal retry number `attempt` (0-based), or `nil` once
+    /// we've exhausted the schedule.
+    ///
+    /// **Why a retry chain at all, when there are already two triggers?** Every
+    /// existing trigger is *edge*-driven: `ContentView`'s `.onAppear` (fires
+    /// once, ~2s after launch when the splash swaps out), a `scenePhase`
+    /// *change* to `.active`, and a one-shot `UIScene.didActivateNotification`.
+    /// If the scene isn't `.foregroundActive` at the `.onAppear` moment AND no
+    /// later edge arrives — the app launched straight into `.foregroundActive`
+    /// so `scenePhase` never *changes*, and the activation notification already
+    /// fired before we were listening — nothing tries again, and the
+    /// mini-player + tab bar are missing **for the entire session** until the
+    /// user force-quits. That matches the reported symptom exactly (missing on
+    /// first launch after installing a build; fine after a relaunch).
+    ///
+    /// A level-triggered retry closes that hole without needing to know which
+    /// edge was missed. `install()` is idempotent and cheap, so retrying costs
+    /// nothing once the window exists.
+    static func retryDelay(forAttempt attempt: Int) -> Double? {
+        let schedule: [Double] = [0.15, 0.4, 1.0, 2.0, 4.0]
+        guard attempt >= 0, attempt < schedule.count else { return nil }
+        return schedule[attempt]
+    }
+
+    /// Whether the secondary window currently exists. Used by the App to decide
+    /// whether a launch-time re-check is still needed.
+    var isInstalled: Bool { window != nil }
 
     /// Update the height of the bottom strip in which this window claims
     /// touches. **Must** track the module's real painted height, not a constant:
@@ -136,8 +168,42 @@ final class BottomModuleWindowController {
             return true
         case .deferUntilActive:
             registerActivationRetry(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
+            scheduleSelfHealRetry(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
             return false
         }
+    }
+
+    /// Schedules the next level-triggered retry (see `retryDelay(forAttempt:)`
+    /// for why the edge-triggered paths aren't sufficient on their own). Only
+    /// one chain runs at a time, and it stops as soon as the window exists or
+    /// the schedule is exhausted.
+    private func scheduleSelfHealRetry<Root: View>(
+        interactiveBottomInset: CGFloat,
+        @ViewBuilder rootView: @escaping () -> Root
+    ) {
+        guard retryWorkItem == nil else { return }
+        guard let delay = Self.retryDelay(forAttempt: retryAttempt) else {
+            Self.log.error("Bottom-module install still deferred after all retries — no active scene.")
+            return
+        }
+        retryAttempt += 1
+        let item = DispatchWorkItem { [weak self] in
+            MainActor.assumeIsolated {
+                guard let self else { return }
+                self.retryWorkItem = nil
+                guard self.window == nil else { return }
+                // Re-entering install() either succeeds or schedules the next
+                // retry, so the chain continues without special-casing here.
+                self.install(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
+            }
+        }
+        retryWorkItem = item
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: item)
+    }
+
+    private func cancelSelfHealRetry() {
+        retryWorkItem?.cancel()
+        retryWorkItem = nil
     }
 
     /// The current foreground-active window scene, if any. On iPad
@@ -157,6 +223,12 @@ final class BottomModuleWindowController {
         guard window == nil else { return }
 
         let w = PassThroughWindow(windowScene: scene)
+        // Size it explicitly to the scene. `UIWindow(windowScene:)` is
+        // *documented* to adopt the scene's geometry, but a window that ends up
+        // zero-height would be invisible in exactly the way being debugged here
+        // — and hit-testing reads `bounds.height`, so a bad frame would also
+        // silently kill every tap. One assignment removes the whole question.
+        w.frame = scene.coordinateSpace.bounds
         // One level above .normal so this window sits on top of
         // every modal presentation (UIKit modals default to .normal
         // level). The level is a `CGFloat`, so we add a small
@@ -174,6 +246,7 @@ final class BottomModuleWindowController {
         w.isHidden = false
         window = w
         clearActivationRetry()
+        cancelSelfHealRetry()
         // Re-apply the last-known appearance: a deferred install
         // happens after the App already called `apply`, so the fresh
         // window would otherwise be stuck on SYSTEM appearance.
