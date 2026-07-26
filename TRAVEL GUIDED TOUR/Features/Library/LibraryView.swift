@@ -492,7 +492,9 @@ private struct RecentlyPlayedEmptyState: View {
     }
 }
 
-private struct EmptyStateLayout: View {
+/// Internal, not fileprivate: `LikedEmptyState` lives in `LikedListView.swift`
+/// so the Liked list screen can show it too.
+struct EmptyStateLayout: View {
     let icon: String
     let title: String
     let message: String
