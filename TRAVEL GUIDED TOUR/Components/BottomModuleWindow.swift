@@ -133,10 +133,19 @@ final class BottomModuleWindowController {
     /// content can appear *above* the mini-player (the Group Listen banner), and
     /// anything outside the claimed strip is visible but completely untappable —
     /// which is exactly how the banner's "Leave" button ended up dead.
+    /// Never shrinks below `AtlasBottomModule.height()`. The measurement can
+    /// legitimately be *larger* than that constant (content above the
+    /// mini-player), which is the whole reason it's measured — but it must never
+    /// come in smaller, because a transient value mid-animation (the module
+    /// animates on `nowPlayingTour` changes, and `onGeometryChange` reports
+    /// intermediate frames) would shrink the touch strip and leave part of the
+    /// painted bars visible but dead. Clamping makes an under-measurement
+    /// harmless instead of turning it into an untappable tab bar.
     func setInteractiveBottomInset(_ inset: CGFloat) {
-        guard inset > 0, inset != lastInteractiveBottomInset else { return }
-        lastInteractiveBottomInset = inset
-        (window as? PassThroughWindow)?.interactiveBottomInset = inset
+        let clamped = max(inset, AtlasBottomModule.height())
+        guard clamped > 0, clamped != lastInteractiveBottomInset else { return }
+        lastInteractiveBottomInset = clamped
+        (window as? PassThroughWindow)?.interactiveBottomInset = clamped
     }
 
     /// Pure decision used by `install()`. Kept separate so the

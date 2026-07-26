@@ -28,11 +28,12 @@ struct GroupListenSheet: View {
     private static let glyphSize: CGFloat = 16
 
     /// Down from the component's 170pt default so the leader's screen — header,
-    /// QR, join code, hint, status line and Leave button — fits the half-height
-    /// detent. Still comfortably scannable at arm's length; shrinking it much
-    /// further would start to cost scan reliability, which is the whole point of
-    /// showing it.
-    private static let qrSize: CGFloat = 132
+    /// QR, join code, status line and Leave button — fits the half-height detent
+    /// with Leave visible and no scrolling. Now that the code sits BESIDE the QR
+    /// rather than under it, this is the only tall element left, so it sets the
+    /// screen's height almost on its own. Kept as large as that allows: shrinking
+    /// it further costs scan reliability, which is the entire point of showing it.
+    private static let qrSize: CGFloat = 140
 
     var body: some View {
         NavigationStack {
@@ -277,32 +278,38 @@ struct GroupListenSheet: View {
         VStack(spacing: AtlasSpacing.sm) {
             if coordinator.isLeader {
                 VStack(spacing: AtlasSpacing.sm) {
-                    // "YOU'RE LEADING" was dropped: the nav title already says
-                    // Listen Together, and a QR code plus a join code can only
-                    // mean you're the one being joined. It cost a line of height
-                    // on the tightest screen in the sheet.
-                    Text("LET THEM SCAN THIS")
+                    Text("SCAN TO JOIN")
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.primaryText)
 
-                    // Scanning beats reading five characters aloud in a busy
-                    // museum; the code stays visible right below as the fallback.
-                    if let code = coordinator.code {
-                        QRCodeView(
-                            content: AtlasShareLink.groupJoinURL(code: code).absoluteString,
-                            size: Self.qrSize
-                        )
-                    }
+                    // QR and the typed code sit SIDE BY SIDE rather than stacked.
+                    // Stacked, the two of them plus their captions were most of
+                    // the sheet's height and pushed Leave below the fold; beside
+                    // each other they cost only the height of the QR itself
+                    // (owner call). They're alternatives, not steps, so reading
+                    // left-to-right also suits them better than top-to-bottom.
+                    HStack(alignment: .center, spacing: AtlasSpacing.md) {
+                        if let code = coordinator.code {
+                            QRCodeView(
+                                content: AtlasShareLink.groupJoinURL(code: code).absoluteString,
+                                size: Self.qrSize
+                            )
+                        }
 
-                    Text(coordinator.code ?? "—")
-                        .font(.system(size: 26, weight: .bold, design: .monospaced))
-                        .foregroundStyle(AtlasColors.mapPin)
-                        .textSelection(.enabled)
-                    Text("Or tap Join and type it.")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
+                        VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                            Text("OR ENTER CODE TO JOIN")
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.secondaryText)
+                                .fixedSize(horizontal: false, vertical: true)
+                            Text(coordinator.code ?? "—")
+                                .font(.system(size: 26, weight: .bold, design: .monospaced))
+                                .foregroundStyle(AtlasColors.mapPin)
+                                .textSelection(.enabled)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.7)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    }
                 }
                 .padding(.top, AtlasSpacing.sm)
             } else {
