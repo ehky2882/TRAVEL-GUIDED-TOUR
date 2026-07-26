@@ -1015,14 +1015,14 @@ struct TourDetailView: View {
             Button {
                 showingGroupListen = true
             } label: {
-                // 17pt, not the 20 used by its neighbours. SF Symbol point size
+                // 16pt, not the 20 used by its neighbours. SF Symbol point size
                 // sets cap height, not drawn area: `person.2.wave.2.fill` is a
                 // wide, multi-element *filled* glyph, so at a matched 20 it reads
                 // noticeably larger and heavier than the enclosed, stroked
                 // `arrow.down.circle` beside it. Sized down to balance them
-                // optically (owner call, 2026-07-25).
+                // optically — 20 → 17 → 16, each step an owner call on device.
                 Image(systemName: "person.2.wave.2.fill")
-                    .font(.system(size: 17))
+                    .font(.system(size: 16))
                     .foregroundStyle(groupListenTint)
                     .frame(width: controlHeight, height: controlHeight)
                     .background(Capsule().fill(groupListenTint.opacity(0.15)))
