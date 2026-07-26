@@ -42,38 +42,61 @@ final class BottomModuleWindowTests: XCTestCase {
         )
     }
 
-    // MARK: - Orphaned-window rebuild
+    // MARK: - Self-heal retry schedule
     //
-    // The idempotence above is correct only while the window is still usable.
-    // A window belongs to the scene it was built in; if that scene is torn
-    // down (seen on hand-off launches, e.g. opening the build from TestFlight)
-    // the window object survives but renders nothing — and `alreadyInstalled`
-    // then makes every recovery path a no-op, leaving the mini-player + tab
-    // bar missing for the whole session. `needsRebuild` is what breaks that.
+    // The deferred branch above only helps if something actually retries. The
+    // edge-triggered paths (one `.onAppear`, a `scenePhase` change, a one-shot
+    // activation notification) can all be missed by a single launch, which is
+    // how the module went missing for a whole session. These pin the
+    // level-triggered chain that closes that hole.
 
-    func test_rebuilds_whenWindowsSceneIsGone() {
-        XCTAssertTrue(
-            BottomModuleWindowController.needsRebuild(hasWindow: true, isAttachedToLiveScene: false)
-        )
+    // The chain must start almost immediately — a user staring at a missing tab
+    // bar shouldn't wait seconds for the first attempt.
+    func test_firstRetryIsPrompt() throws {
+        let first = try XCTUnwrap(BottomModuleWindowController.retryDelay(forAttempt: 0))
+        XCTAssertLessThanOrEqual(first, 0.25)
+        XCTAssertGreaterThan(first, 0)
     }
 
-    // A normal background → foreground cycle keeps the same live scene, so the
-    // window must survive it. Rebuilding here would tear down and recreate the
-    // module on every foreground.
-    func test_doesNotRebuild_whenSceneStillLive() {
-        XCTAssertFalse(
-            BottomModuleWindowController.needsRebuild(hasWindow: true, isAttachedToLiveScene: true)
-        )
+    // Delays must increase, so a genuinely scene-less launch doesn't spin.
+    func test_retryDelaysIncreaseMonotonically() {
+        var attempt = 0
+        var previous = 0.0
+        while let delay = BottomModuleWindowController.retryDelay(forAttempt: attempt) {
+            XCTAssertGreaterThan(delay, previous, "attempt \(attempt) did not back off")
+            previous = delay
+            attempt += 1
+        }
+        XCTAssertGreaterThan(attempt, 1, "expected a multi-step retry schedule")
     }
 
-    // Nothing to rebuild before the first install — that path is
-    // `installOutcome`'s job, not this one.
-    func test_doesNotRebuild_whenNoWindowYet() {
-        XCTAssertFalse(
-            BottomModuleWindowController.needsRebuild(hasWindow: false, isAttachedToLiveScene: false)
-        )
-        XCTAssertFalse(
-            BottomModuleWindowController.needsRebuild(hasWindow: false, isAttachedToLiveScene: true)
-        )
+    // The chain is bounded — it must terminate rather than retry forever.
+    func test_retryScheduleTerminates() {
+        var attempt = 0
+        while BottomModuleWindowController.retryDelay(forAttempt: attempt) != nil {
+            attempt += 1
+            if attempt > 100 { break }
+        }
+        XCTAssertLessThanOrEqual(attempt, 100, "retry schedule never terminates")
+        XCTAssertNil(BottomModuleWindowController.retryDelay(forAttempt: attempt))
+    }
+
+    // Total coverage should outlast a slow cold launch; a chain that gives up
+    // in half a second would be no better than the single `.onAppear` it
+    // replaces.
+    func test_retryScheduleCoversSeveralSeconds() {
+        var attempt = 0
+        var total = 0.0
+        while let delay = BottomModuleWindowController.retryDelay(forAttempt: attempt) {
+            total += delay
+            attempt += 1
+        }
+        XCTAssertGreaterThanOrEqual(total, 5.0)
+    }
+
+    // Out-of-range attempts are nil, not a crash or a negative delay.
+    func test_retryDelayRejectsOutOfRangeAttempts() {
+        XCTAssertNil(BottomModuleWindowController.retryDelay(forAttempt: -1))
+        XCTAssertNil(BottomModuleWindowController.retryDelay(forAttempt: 9_999))
     }
 }

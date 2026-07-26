@@ -122,24 +122,6 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .onContinueUserActivity(NSUserActivityTypeBrowsingWeb, perform: handleUserActivity)
             } else {
                 ContentView()
-                    // Covers the launch gap. The mini-player + tab bar live in a
-                    // secondary window so UIKit modals slide up *behind* them,
-                    // but that window can only attach once a scene is
-                    // foreground-active — and on a hand-off launch (opening the
-                    // build from TestFlight) that lands *after* this content is
-                    // already on screen. The owner saw the result: a second or
-                    // two of app with no bars, long enough to read as a bug.
-                    // Render the module inline until the real window is up; it
-                    // swaps out the instant that happens. Inline it sits under
-                    // UIKit modals rather than above them, which only matters
-                    // in the rare case the window never attaches at all.
-                    // Attached BEFORE the `.environment` calls so the overlay
-                    // inherits all of them.
-                    .overlay(alignment: .bottom) {
-                        if !bottomModuleWindow.isInstalled {
-                            BottomModuleRoot(onInteractiveHeightChange: nil)
-                        }
-                    }
                     .environment(dataService)
                     .environment(authService)
                     .environment(makerProfileService)
@@ -159,6 +141,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(navState)
                     .environment(toastCenter)
                     .environment(groupListen)
+                    // So ContentView can render the mini-player + tab bar inline
+                    // while the secondary window isn't installed. Without that
+                    // fallback, a failed install means no bars for the session.
+                    .environment(bottomModuleWindow)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
                     .task {
                         // Pre-warm the Me tab at launch so its data is already
@@ -240,6 +226,19 @@ struct TRAVEL_GUIDED_TOURApp: App {
                         // `installBottomModule()` — factored so this
                         // call site and the `scenePhase == .active`
                         // recovery build the window identically.
+                        installBottomModule()
+                    }
+                    // Level-triggered backstop. Every other install trigger is
+                    // edge-driven (a single `.onAppear`, a `scenePhase`
+                    // *change*, a one-shot activation notification), so a
+                    // launch that misses all of them left the mini-player + tab
+                    // bar missing for the whole session. This re-checks the
+                    // actual state a beat after mount; `install()` is
+                    // idempotent, so it's a no-op in the normal case.
+                    .task {
+                        guard !bottomModuleWindow.isInstalled else { return }
+                        try? await Task.sleep(for: .milliseconds(500))
+                        guard !bottomModuleWindow.isInstalled else { return }
                         installBottomModule()
                     }
                     .onChange(of: colorSchemePreference) { _, newValue in

@@ -1,147 +1,212 @@
-# HANDOFF 2026-07-26 (session 74) — saving consolidated: one save action, "Liked" is the default list
+# HANDOFF — 2026-07-26 (session 74, code/web)
 
-**Type:** code (web/remote session, Linux — no Mac). One PR:
-**[#447](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/447)** — CI green, owner-verified on
-TestFlight 1.1 (50). No content, asset-catalog, or backend changes.
+Group Listen polish driven turn-by-turn off owner screenshots on real
+TestFlight builds, plus **two real bugs the polish surfaced** — one of which had
+nothing to do with Group Listen at all.
 
-## What the owner asked for
+Merged: **[PR #441](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/441)**
+(`57095f0`), **[PR #443](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/443)**
+(`bf9f98e`), **[PR #442](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/442)**
+(`2cb77f1`, docs). **[PR #444](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/444)**
+was closed as superseded — its commits went onto #443's branch so one build
+could carry everything. Builds cut: **1.1 (42) → (43) → (44) → (45) → (46)**,
+all owner-reviewed on device.
 
-It started as *"every bookmarked tour should default into a default journey's folder like a
-simple 'liked' playlist,"* but the owner sharpened it mid-session and that sharpening is the
-whole point:
+## The green icon replaced the bottom banner (#441)
 
-> "the whole point is to consolidate so that there's only one way to save tours, rather than
-> different ways to do it and different repositories. it's about consolidating. similar to what
-> we did with makers — consolidating saving and following."
+Owner, on the gold session strip above the mini-player: *"rather than that
+banner … just make the group icon green when group play is active so when a
+user clicks on it it takes them to the group play sheet."*
 
-That reframe mattered. The first plan written this session only merged the *views* — it renamed
-the Saved tab and pinned a Liked row, while leaving the bookmark and "Add to a Journey" writing
-to two different tables. That would have shipped the exact redundancy the owner was trying to
-remove. Worth remembering: **"add a default folder" and "consolidate saving" are different
-briefs**, and only the second one is what was built.
+`GroupBanner.swift` deleted; the tour page's Group Listen button turns **green**
+while `groupListen.isActive` and opens the sheet, whose active-session view
+already carried Leave. Retires the deferred "banner overlaps page content" item.
 
-## The problem
+- **`BottomModuleRoot`'s `onGeometryChange` height measurement STAYS.** It was
+  added to fix the banner's untappable Leave button, but it is the general fix
+  that makes anything above the mini-player tappable. Reverting it to a constant
+  would re-arm that trap.
+- **Accepted consequence:** the indicator now lives only on the tour page, so
+  navigating away leaves no on-screen sign a session is running, and Leave means
+  going back. If that bites, the cheap fix is a tint/dot on the mini-player, not
+  bringing the strip back.
+- Glyph also went 17 → 16pt (owner call, on-device).
 
-Two unrelated ways to keep a tour, two stores, no knowledge of each other:
+## 🐛 The tab bar that looked dead — NOT group-specific (#443)
 
-| | Wrote to | Surfaced in |
-|---|---|---|
-| Bookmark | `LibraryStore.savedAt` (UserDefaults → `user_library`) | Library "Saved" tab |
-| "Add to a Journey" | a `journey_items` row | that journey |
+Owner: *"once I've joined a tour now the tab bar no longer works."* Two
+follow-up details cracked it: **the icons highlight** and **the tour page is
+still open**.
 
-A tour in "Lisbon Weekend" was **not** bookmarked and never appeared in Saved; a bookmarked tour
-belonged to no list. Precisely the redundancy removed for makers in PR #398, where
-bookmark-a-maker was **deleted** rather than kept beside Follow.
+So the tab bar was never broken. The tap registered and flipped `selectedTab`
+(hence the highlight); what failed was **dismissing the tour-detail layer**, so
+the new tab's content loaded *behind* it. The original session-8 design note
+predicted this exact symptom: *"icon updates, content doesn't."*
 
-## The model now
+**Why the existing auto-dismiss missed:** it lives in `ContentView`'s
+`.onChange(of: selectedTab)` — in the **main window**, which is entirely covered
+by the UIKit detail modal at the moment of the tap, and **SwiftUI can stop
+delivering updates to a hierarchy hidden behind a modal presentation**. The
+write lands; the observer never runs.
 
-- **Saved = in at least one list.** No separate saved flag alongside membership.
-- **Liked is the default list** — where a tour lands when the user doesn't pick somewhere.
-  Owner's ruling: *"if the user doesn't specify, there should always be a default 'liked' folder
-  that things are saved into."* Filing a tour into a named list puts it **there, not also in
-  Liked**. Nothing is ever moved implicitly.
-- **The bookmark tap is ADD-ONLY** (final form, after two revisions):
+**Fix:** `AtlasTabBar`'s binding dismisses `tourPresenter`/`makerPresenter` as
+part of the tap, from the **secondary window**, which is never covered.
+`ContentView`'s `.onChange` stays as a backstop for paths that change tabs
+without a tap.
 
-  | Tour is in | Tap does |
-  |---|---|
-  | nothing | saves it into Liked |
-  | anything at all | opens the membership sheet — it **never un-saves** |
+**Durable lesson: don't put a side effect that must run in a window that a modal
+can cover.** Joining a group was just a reliable way to end up on a tour page —
+this was reachable any time a detail layer was open.
 
-  Removing is always deliberate: untick it in the sheet. The first version un-saved a tour that
-  was in exactly one list ("a second tap undoes the first"). The owner rejected that, correctly:
-  the gesture that files a tour must not also be the one that destroys it, and a save lost that
-  way is easy to miss and annoying to rebuild. Spotify's "Add to playlist" behaves the same.
+## 🐛 Missing mini-player + tab bar — third attempt, different strategy (#443)
 
-## The constraint that shaped everything
+Reported again on 1.1 (43) *and* (44), specifically **launching from TestFlight's
+"What to Test" screen**. The screenshot proved the layout was fine (drawer
+reserved the space, map visible in the gap), so the secondary window simply
+never installed.
 
-**Bookmarking works signed out** (`LibraryStore` is UserDefaults, no auth check anywhere) while
-**lists are cloud-only** (`JourneyService` throws `notSignedIn`; RLS enforces
-`owner_user_id = auth.uid()`).
+**The design flaw:** the bars existed **only** in that window — `ContentView`
+never rendered them — so any failed install meant no bars for the whole session
+with nothing to fall back to. Every earlier fix was a bet on scene timing:
 
-So **Liked stays backed by `LibraryStore`** and named lists stay in Supabase — one concept, two
-backends, no seam the user sees, anonymous saving preserved. **Making Liked a real server row
-would have gated bookmarking behind an account. Don't.**
+| trigger | how it's missed |
+|---|---|
+| `ContentView.onAppear` | fires once, ~2s in; defers if the scene isn't `.foregroundActive` then |
+| `scenePhase` → `.active` | `.onChange` fires only on a *change*; a launch already active never fires it |
+| `UIScene.didActivateNotification` | one-shot, useless if activation preceded registration |
+| retry chain (added this session) | helped, but still assumed the window was the only way to get bars |
 
-`LibraryStore` and `SyncService` are **not modified**. The existing `user_library` sync,
-including the explicit-null `encode` that makes an un-save clear remotely (the session-49 bug),
-keeps working untouched. **No backend change, no migration, nothing for the owner to run.**
+**Fix that finally holds:** `ContentView` renders `BottomModuleRoot` **inline in
+the main window** whenever `bottomModuleWindow.isInstalled` is false (controller
+is now `@Observable`). Ordinary SwiftUI, so it cannot fail for scene-lifecycle
+reasons. The retry chain still promotes to the real window within seconds, at
+which point the inline copy disappears. In fallback mode the only loss is
+z-order above UIKit modals.
 
-## What changed
+> ⚠️ **A mistake I made and had to undo.** I added
+> `w.frame = scene.coordinateSpace.bounds` and described it to the owner as
+> harmless insurance. It is wrong twice over: it pins a geometry snapshot so the
+> window stops tracking the scene across rotation, and if the scene isn't
+> configured yet it pins **zero** — creating exactly the invisible window it was
+> meant to prevent. It may have been making 1.1 (44) worse. Reverted;
+> `UIWindow(windowScene:)` tracks scene geometry itself. Readiness now lives in
+> `foregroundActiveScene()`, which rejects a scene whose coordinate space is
+> still empty.
 
-- **`Data/SaveState.swift`** (new) — the rules as pure functions, unit-tested without either
-  store: `isSaved`, `placeCount`, and the add-only `tapAction`.
-- **`Data/TourSaveActions.swift`** (new) — binds those rules to the two stores; shared by the
-  cards, tour detail and the player so they can't drift. Deliberately **not** `@MainActor`,
-  matching how the existing journeys sheet already reaches into `JourneyService` from view
-  bodies and button actions.
-- **`Data/JourneyService.swift`** — `membership` map + flat `allListedTourIds`, both derived
-  from the embed `loadMyJourneys()` already fetches; kept in step by every mutation.
-- **`TourListMembershipSheet.swift`** replaces `AddToJourneySheet` — removes as well as adds,
-  and **leads with Liked** so a signed-out user gets a working sheet instead of a sign-in wall.
-- **`LibraryView`** — the Saved tab becomes **Lists**, the single home for kept things:
-  **New list → Liked → your named lists → Following**. Liked is a *row*, not a section of its own
-  — it opens into the new `LikedListView` like any other list.
-- **`MakerView`** — the profile's Journeys row **removed** rather than left as a second door.
-  `JourneysListView` deleted; `JourneyEditorSheet`, `LibraryTourRow` and `LikedListView` split
-  into their own files.
-- **`SaveStateTests`** — 12 cases incl. signed-out parity with a plain bookmark toggle.
+Also: `setInteractiveBottomInset` now clamps to at least
+`AtlasBottomModule.height()`. The measurement may legitimately be *larger* (that's
+why it's measured) but must never arrive smaller — the module animates on
+`nowPlayingTour` changes and `onGeometryChange` reports intermediate frames, so a
+transient under-measurement could shrink the touch strip and leave painted bars
+visible but dead.
 
-## Two things worth remembering
+## The Group Listen sheet, iterated on device (#443)
 
-**`isSaved` is on the hot path.** It's read by every card in every rail (`CardHeroControls` via
-`RailCarousel` and `FilterResultCard`), so per-tour membership queries were never viable.
-`loadMyJourneys()`'s `journey_items(tour_id, position)` embed **already returns every tour id in
-every list**, so `allListedTourIds` is free. If membership ever needs to be fresher than
-"since the last list load," don't reach for a per-tour query — reload the list.
+Five rounds of owner screenshots. Final state:
 
-**Fixed in passing:** `JourneyService.clear()` existed but was **never called anywhere**, and
-`myJourneys` wasn't cleared on sign-out, so a stale list could survive an account switch. Now
-cleared whenever the signed-in uid differs from the one the cache was loaded under.
+- **Type:** everything is `AtlasTypography.caption`, including the nav title
+  (principal item, ALL CAPS, matching Settings). The **5-character join code and
+  the code entry field deliberately stay large and monospaced** — read across a
+  room and checked while typing, so legibility beats compactness.
+- **`.presentationDetents([.medium, .large])`** — opens half height, drags to full.
+- **Glyph 40 → 16pt**, matching the tour action row via one shared constant.
+- **All three screens are two aligned columns:** chooser `LEAD A TOUR` /
+  `JOIN A TOUR`; leader `SCAN TO JOIN` (QR) beside `OR ENTER CODE` (characters),
+  captions on the **same line** so the options read as equals; join screen scan
+  card beside the code field.
+- Copy roughly halved. The download line survives only when the tour isn't
+  downloaded, and still says **each phone streams its own audio** — the honesty
+  fix that line exists for.
 
-## Open — owner's call
+### Two layout causes worth separating
 
-- **The name.** User-facing copy now says **"list"**; the Swift types and Supabase tables are
-  still `Journey` / `journeys` (cosmetic, no migration). The owner raised "Journey" as
-  cumbersome and the diagnosis held up: it **breaks on the default bucket** ("Liked" is not a
-  journey) and it **collides with Walk**, the app's own name for a multi-stop tour — so a
-  collection of them reads as "a journey of journeys." `docs/journeys-design.md` §3 had punted
-  the name from the start, so this decides rather than overturns. Rename measured at ~20
-  user-facing strings across 9 files.
-- **Dropping the profile's lists row** — done here on the consolidation argument (Library =
-  what you collected). One-line restore if the owner disagrees.
+1. **Content overlapped the nav bar** ("YOU'RE LEADING" printed on the
+   "LISTEN TOGETHER" title). Not padding: the content sat in a fixed
+   `maxHeight: .infinity` frame, so anything taller than the detent overflowed
+   **upwards** through the navigation bar. Now a `ScrollView`, so out-of-bounds
+   rendering is impossible at any device size or Dynamic Type setting.
+2. **Content cut off at the bottom** was separate: the mini-player + tab bar
+   render in a *higher-level window* and paint over the sheet. The sheet now
+   reserves `AtlasBottomModule.height()`.
 
-## Device-verified on TestFlight 1.1 (50)
+### ⚠️ QR size floor: 110pt
 
-Owner: *"things in 50 are good"* — including the signed-out path, which was the whole design
-constraint and which the simulator can never exercise (it holds no session). What was checked:
+`qrSize` went 170 → 132 → 140 → **110**. The payload is a ~58-character https
+link (~33–37 modules), so 110pt is ~3pt per module. **Owner device-verified as
+still scanning well ("works, not too small") — treat 110 as the floor.** If that
+screen ever needs more room, open it at a taller detent; do **not** shrink the
+code further, because an unscannable QR defeats the feature.
 
-1. **Signed out**, bookmark a tour → it lands in **Liked**.
-2. Sign in → it syncs and is still there.
-3. Add a tour **straight to a named list** → its bookmark reads filled, and it is **not** in Liked.
-4. A tour in **two** lists → tapping the bookmark opens the sheet showing both.
-5. Untick one → still saved. Untick both → unsaved.
-6. Regression: browse, play, download, and list create/reorder/delete unchanged.
+## Process lessons from a bad CI day
 
-## Two other things this session, both worth remembering
+- **GitHub Actions was badly degraded for hours.** A step that normally takes
+  2½ minutes ran 33+. **Cancel and re-run before theorising** — that cleared it
+  every time. I waited ~40 minutes and built two wrong theories first.
+- **Don't trust a single in-flight API reading.** I reported an upload as
+  "running long" when it had already finished; the job-state responses lag.
+- **I broke my own "never build before the simulator build is green" rule once,
+  deliberately**, on a merge of two branches touching disjoint files that had each
+  compiled green. It was fine (archive passed, CI confirmed after), but state the
+  reasoning when doing it.
+- **When a device-only symptom resists a fix, get one more fact before writing
+  code.** Asking "do the icons highlight?" and "is the detail page still open?"
+  solved the tab bar instantly after the join-path read found nothing.
 
-**The missing tab bar was LATE, not absent.** Two fixes were built on the theory that the
-secondary window failed to install permanently; both missed. The owner's one-line clarification —
-*"it's only not there momentarily after launch of a new build... but long enough to look like a
-mistake"* — identified it immediately: the window can only attach once a scene is
-foreground-active, which on a hand-off launch happens *after* the content is drawn. `ContentView`
-now renders the module inline until the real window attaches. **Ask for the shape of a symptom
-(when, how long, does it recover) before theorising about the cause.**
+## Owed / deferred
 
-**CI was only ever running on the first commit of a PR.** A web session's pushes didn't reliably
-produce a `synchronize` event, so every later commit went unbuilt while the PR still showed green
-checks. Added `workflow_dispatch:` to `ci.yml`; the very first manual run caught a compile error
-that would otherwise have burned a TestFlight build. **Green checks on a PR may only reflect its
-first commit.**
+- **Two-phone Group Listen sync** — still never run end-to-end since the fixes.
+  Owner has confirmed QR join, sheet layout, Leave, and the tab bar, but not
+  actual synced playback across two devices.
+- **Branch cleanup** — see the verified table in the section below. The git proxy
+  blocks branch deletion from web sessions, so this needs the GitHub UI or a
+  local session.
+- **If the bars ever go missing again**, the inline fallback should make it
+  impossible — if it still happens, that points somewhere new entirely, and the
+  next step is a visible diagnostic rather than more hardening.
+- Still open from before: real leader handoff, Hosted mode (Supabase Realtime),
+  Pro Guide tier, anonymous followers, paid tours Phase 3 (StoreKit 2 buyer UI).
 
-## State at session end
+## Branch cleanup — verified list (2026-07-26)
 
-- PR #447 — all three CI jobs green on `7eba02f`; owner-verified on TestFlight 1.1 (50).
-- Branch `claude/journey-bookmarks-default-folder-c8ur85`.
-- Catalog untouched: 948 tours / 18 makers / 1174 stops.
-- **Open, owner's call:** rename `Journey` → `List` in the Swift types + Supabase tables (cosmetic,
-  no migration); add **search** / **Clear all** to the membership sheet once list counts grow.
+**Read the gotcha first.** Every branch below was **squash-merged**, so its
+commits are *not* ancestors of `main`. `git branch --merged main` will **not**
+list them, and `git branch -d` will **refuse** them. That is expected and does
+not mean work is unmerged — the content is in `main` under a single squash
+commit. Confirm with `git log --oneline main -- <a file the branch touched>` or
+by the PR link, then use `-D` / `push --delete`.
+
+**Safe to delete — squash-merged, content is on `main`:**
+
+| branch | landed as |
+|---|---|
+| `claude/shareplay-feature-bug-7chszc` | #423 `3e9a6d9`, #428 `18ba375` |
+| `claude/docs-group-listen-banner-removal` | #442 `2cb77f1` |
+| `claude/bottom-module-install-retry` | folded into #443 `bf9f98e` (its own PR #444 was closed, not merged — the commits went onto #443's branch) |
+| `claude/group-listen-sheet-compact` | #443 `bf9f98e` |
+| `claude/handoff-260726` | #445 — **only after that PR merges** |
+
+```bash
+# From a local Mac session, after confirming main has the content:
+for b in claude/shareplay-feature-bug-7chszc \
+         claude/docs-group-listen-banner-removal \
+         claude/bottom-module-install-retry \
+         claude/group-listen-sheet-compact; do
+  git push origin --delete "$b"
+done
+```
+
+**DO NOT DELETE — these hold unmerged work:**
+
+| branch | why it exists |
+|---|---|
+| `claude/amsterdam-handoff-preserve-hlhyp8` | holds `drafts/AUDIO-PENDING-SURVEY.md` — the audio-pending queue tracker (Montreal 29 / Rome 30 / Berlin 36) |
+| `claude/london-batch3-scripts-260616` | staged London batch 4 + 5 multi-stop walks, awaiting narration |
+| `claude/dreamy-wozniak-tags-260612` | tag taxonomy proposal, never merged |
+| `claude/paris-scripts-260622` | **status unclear** — Paris has since launched (50 tours), so this may be spent, but that was not verified here. Check before deleting. |
+
+**Corrections to earlier notes:** previous handoffs listed
+`claude/group-listen-icon-size` and `claude/group-listen-active-icon` as cleanup
+owed. **Both are already gone from the remote** — deleted since. Any list that
+still names them is stale; the table above was verified against
+`list_branches` on 2026-07-26.
+
