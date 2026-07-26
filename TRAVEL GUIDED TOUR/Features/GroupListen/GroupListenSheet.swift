@@ -22,6 +22,11 @@ struct GroupListenSheet: View {
 
     private var isSignedIn: Bool { authService?.isSignedIn == true }
 
+    /// Matches the Group Listen glyph in `TourDetailView`'s action row, so the
+    /// icon you tapped and the icon on the sheet it opens are the same weight
+    /// (owner call). Was 40pt here, which dominated the half-height sheet.
+    private static let glyphSize: CGFloat = 16
+
     var body: some View {
         NavigationStack {
             Group {
@@ -36,6 +41,14 @@ struct GroupListenSheet: View {
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            // The mini-player + tab bar live in a higher-level window, so they
+            // paint OVER the bottom of this sheet. Without reserving their
+            // height, the last line of the sheet (the download hint) sat
+            // underneath them and looked cut off. Same inset every other
+            // scrollable surface in the app applies.
+            .safeAreaInset(edge: .bottom, spacing: 0) {
+                Color.clear.frame(height: AtlasBottomModule.height())
+            }
             .background(AtlasColors.secondaryBackground)
             .navigationTitle("Listen together")
             .inlineNavigationBarTitle()
@@ -73,10 +86,10 @@ struct GroupListenSheet: View {
     // MARK: - Chooser
 
     private var chooser: some View {
-        VStack(spacing: AtlasSpacing.lg) {
+        VStack(spacing: AtlasSpacing.md) {
             VStack(spacing: AtlasSpacing.sm) {
                 Image(systemName: "person.2.wave.2.fill")
-                    .font(.system(size: 40))
+                    .font(.system(size: Self.glyphSize))
                     .foregroundStyle(AtlasColors.mapPin)
                 // One line each. The old copy explained the transport
                 // (Bluetooth/Wi‑Fi) and the download caveat up front — detail
@@ -93,28 +106,30 @@ struct GroupListenSheet: View {
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(.top, AtlasSpacing.lg)
+            .padding(.top, AtlasSpacing.md)
 
             // Side by side: two equal cards, so the choice reads as one
             // decision rather than a primary action with an afterthought
-            // beneath it.
+            // beneath it. The labels are self-explanatory, so there's no
+            // subtitle — the old "You lead" / "Scan a code" second lines made
+            // each card twice as tall for no information (owner call).
             HStack(spacing: AtlasSpacing.md) {
                 Button {
                     startLeading()
                 } label: {
-                    actionLabel("START", subtitle: "You lead", systemImage: "play.circle.fill", filled: true)
+                    actionLabel("LEAD A TOUR", systemImage: "play.circle.fill", filled: true)
                 }
                 .buttonStyle(.plain)
 
                 Button {
                     joining = true
                 } label: {
-                    actionLabel("JOIN", subtitle: "Scan a code", systemImage: "arrow.right.circle", filled: false)
+                    actionLabel("JOIN A TOUR", systemImage: "arrow.right.circle", filled: false)
                 }
                 .buttonStyle(.plain)
             }
-            // Equal heights even if one subtitle wraps and the other doesn't:
-            // the cards stretch to the row, the row takes its ideal height.
+            // Equal heights even if one title wraps and the other doesn't: the
+            // cards stretch to the row, the row takes its ideal height.
             .fixedSize(horizontal: false, vertical: true)
 
             if let actionError {
@@ -142,21 +157,19 @@ struct GroupListenSheet: View {
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
-    /// One of the two side-by-side choice cards. Stacked vertically (glyph over
-    /// label) rather than the old full-width icon-beside-text row, so both fit
-    /// half the width without truncating.
-    private func actionLabel(_ title: String, subtitle: String, systemImage: String, filled: Bool) -> some View {
-        VStack(spacing: AtlasSpacing.xs) {
-            Image(systemName: systemImage).font(.system(size: 22))
+    /// One of the two side-by-side choice cards: glyph beside the label, on one
+    /// line, so the pair stays short enough for everything on the sheet to be
+    /// visible at the half-height detent without dragging.
+    private func actionLabel(_ title: String, systemImage: String, filled: Bool) -> some View {
+        HStack(spacing: AtlasSpacing.xs) {
+            Image(systemName: systemImage).font(.system(size: Self.glyphSize))
             Text(title)
                 .font(AtlasTypography.caption)
-            Text(subtitle)
-                .font(AtlasTypography.caption)
-                .foregroundStyle(filled ? AtlasColors.background.opacity(0.8) : AtlasColors.secondaryText)
-                .multilineTextAlignment(.center)
-                .fixedSize(horizontal: false, vertical: true)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
         }
-        .padding(AtlasSpacing.md)
+        .padding(.vertical, AtlasSpacing.md)
+        .padding(.horizontal, AtlasSpacing.sm)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
         .background(filled ? AtlasColors.mapPin : Color.clear)
@@ -179,7 +192,7 @@ struct GroupListenSheet: View {
             Button {
                 showingScanner = true
             } label: {
-                actionLabel("SCAN QR CODE", subtitle: "Fastest", systemImage: "qrcode.viewfinder", filled: true)
+                actionLabel("SCAN QR CODE", systemImage: "qrcode.viewfinder", filled: true)
             }
             .buttonStyle(.plain)
             .fixedSize(horizontal: false, vertical: true)
@@ -236,7 +249,10 @@ struct GroupListenSheet: View {
     // MARK: - Active session
 
     private func activeSession(_ coordinator: GroupListenCoordinator) -> some View {
-        VStack(spacing: AtlasSpacing.lg) {
+        // Tighter than the old `lg` spacing / `xl` top padding: the sheet opens
+        // at half height now, and the leader's QR code is the tallest content in
+        // it, so every spare point matters for fitting without a drag.
+        VStack(spacing: AtlasSpacing.md) {
             if coordinator.isLeader {
                 VStack(spacing: AtlasSpacing.sm) {
                     Text("YOU'RE LEADING")
@@ -262,11 +278,11 @@ struct GroupListenSheet: View {
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
                 }
-                .padding(.top, AtlasSpacing.xl)
+                .padding(.top, AtlasSpacing.md)
             } else {
                 VStack(spacing: AtlasSpacing.sm) {
                     Image(systemName: coordinator.leaderLost ? "person.fill.questionmark" : "person.2.wave.2.fill")
-                        .font(.system(size: 40))
+                        .font(.system(size: Self.glyphSize))
                         .foregroundStyle(AtlasColors.mapPin)
                     Text(coordinator.leaderLost
                          ? "Leader left"
@@ -280,7 +296,7 @@ struct GroupListenSheet: View {
                         .foregroundStyle(AtlasColors.secondaryText)
                         .multilineTextAlignment(.center)
                 }
-                .padding(.top, AtlasSpacing.xl)
+                .padding(.top, AtlasSpacing.md)
             }
 
             statusRow(coordinator)
