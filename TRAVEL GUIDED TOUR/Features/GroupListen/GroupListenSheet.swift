@@ -200,11 +200,14 @@ struct GroupListenSheet: View {
     // MARK: - Join form
 
     private var joinForm: some View {
-        VStack(spacing: AtlasSpacing.lg) {
+        // `md` spacing, not `lg`: six stacked elements at 24pt apart overflowed
+        // the half-height detent on their own, before any element was even
+        // measured. Same reasoning as the chooser and the leader screen.
+        VStack(spacing: AtlasSpacing.md) {
             Text("SCAN THE LEADER'S CODE")
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.primaryText)
-                .padding(.top, AtlasSpacing.lg)
+                .padding(.top, AtlasSpacing.sm)
 
             Button {
                 showingScanner = true
@@ -218,11 +221,15 @@ struct GroupListenSheet: View {
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
 
+            // Deliberately still large + monospaced: you check this while typing
+            // a code someone is reading out, so legibility beats compactness. The
+            // vertical padding is trimmed instead.
             TextField("Code", text: $codeEntry)
                 .disableAutocorrection(true)
                 .multilineTextAlignment(.center)
-                .font(.system(.title2, design: .monospaced))
-                .padding(AtlasSpacing.md)
+                .font(.system(.title3, design: .monospaced))
+                .padding(.vertical, AtlasSpacing.sm)
+                .padding(.horizontal, AtlasSpacing.md)
                 .background(AtlasColors.placeholderWarm.opacity(0.35))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .onChange(of: codeEntry) { _, new in
@@ -257,7 +264,6 @@ struct GroupListenSheet: View {
             }
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
-
         }
         .padding(.horizontal, AtlasSpacing.lg)
     }
