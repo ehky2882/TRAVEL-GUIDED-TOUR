@@ -65,8 +65,18 @@ enum BottomModuleInstallOutcome: Equatable {
 }
 
 @MainActor
+@Observable
 final class BottomModuleWindowController {
-    private var window: UIWindow?
+    /// Whether the secondary window is currently up and rendering.
+    ///
+    /// Observed by the App so it can fall back to rendering the module inline
+    /// in the main window. **Navigation must never depend on this window
+    /// succeeding** — the tab bar is the app's only way to change tabs, so if
+    /// the window can't be installed the user is stranded on Home with no way
+    /// out. Whatever the scene-timing cause, the fallback bounds the damage.
+    private(set) var isInstalled = false
+
+    @ObservationIgnored private var window: UIWindow?
     /// One-shot observer that retries the install when a scene
     /// activates, for the cold-launch case where `install()` ran
     /// before any window scene reached `.foregroundActive`. Removed
@@ -176,8 +186,13 @@ final class BottomModuleWindowController {
         case .alreadyInstalled:
             return true
         case .installNow:
-            installWindow(in: activeScene!, interactiveBottomInset: interactiveBottomInset, rootView: rootView)
-            return true
+            if installWindow(in: activeScene!, interactiveBottomInset: interactiveBottomInset, rootView: rootView) {
+                return true
+            }
+            // The scene was active but not yet laid out — retry on the next
+            // activation rather than silently giving up.
+            registerActivationRetry(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
+            return false
         case .deferUntilActive:
             registerActivationRetry(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
             return false
@@ -193,14 +208,27 @@ final class BottomModuleWindowController {
             .first { $0.activationState == .foregroundActive }
     }
 
+    /// - Returns: `true` if the window is now up.
+    @discardableResult
     private func installWindow<Root: View>(
         in scene: UIWindowScene,
         interactiveBottomInset: CGFloat,
         rootView: @escaping () -> Root
-    ) {
-        guard window == nil else { return }
+    ) -> Bool {
+        guard window == nil else { return true }
+
+        // A window created before its scene has real bounds gets a zero frame
+        // and then renders nothing, forever — nothing re-lays-out a manually
+        // created window whose scene never "resizes". Bail rather than install
+        // an invisible window; the activation retry will come back.
+        let bounds = scene.coordinateSpace.bounds
+        guard !bounds.isEmpty else {
+            Self.log.error("Scene has empty bounds — deferring rather than installing a zero-size window.")
+            return false
+        }
 
         let w = PassThroughWindow(windowScene: scene)
+        w.frame = bounds
         // One level above .normal so this window sits on top of
         // every modal presentation (UIKit modals default to .normal
         // level). The level is a `CGFloat`, so we add a small
@@ -217,6 +245,7 @@ final class BottomModuleWindowController {
 
         w.isHidden = false
         window = w
+        isInstalled = true
         clearActivationRetry()
         observeSceneDisconnect(interactiveBottomInset: interactiveBottomInset, rootView: rootView)
         // Re-apply the last-known appearance: a deferred install
@@ -224,6 +253,7 @@ final class BottomModuleWindowController {
         // window would otherwise be stuck on SYSTEM appearance.
         apply(preference: lastPreference)
         Self.log.info("Bottom-module window installed (scene=\(scene.session.persistentIdentifier, privacy: .public))")
+        return true
     }
 
     /// Registers the one-shot scene-activation retry. Safe to call
@@ -293,6 +323,7 @@ final class BottomModuleWindowController {
     private func discardWindow() {
         window?.isHidden = true
         window = nil
+        isInstalled = false
     }
 
     private func clearActivationRetry() {
