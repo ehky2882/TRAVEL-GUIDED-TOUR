@@ -83,6 +83,11 @@ review). Every build stacks up under **Previous Builds** — install/switch betw
 freely (one at a time per phone).
 
 ## Notes / gotchas
+- **⚠️ A build uses the workflow file from the branch you build FROM, not from `main`.**
+  "Run workflow" on branch X runs **X's copy** of `testflight.yml`. So a fix merged to `main`
+  has **no effect** on a build cut from a feature branch until that branch merges `main` in.
+  **Build from `main`, or merge `main` into the branch first.** This is what made the
+  build-notes fix look broken across several builds in July 2026.
 - **Cost:** Mac build minutes bill ~10× Linux, so builds run **on demand only**, never on
   every push.
 - **Apple certificate cap — now handled automatically (no owner action).** Archives used to

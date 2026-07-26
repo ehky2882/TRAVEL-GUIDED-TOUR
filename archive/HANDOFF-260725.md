@@ -2,79 +2,95 @@
 
 ## What happened
 
-**One owner ask, fully shipped:** *"i need to know what new features are added when we cut
-new builds. can that description be added somewhere so i know what im looking at"*
+**One owner ask, shipped and owner-confirmed:** *"i need to know what new features are added
+when we cut new builds. can that description be added somewhere so i know what im looking
+at"*
 
-Answer shipped in [PR #425](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/425)
-(squash `4c20bd3` → `main`, CI/docs auto-merge class, all three checks green): the build
-notes are now written **into the build itself in TestFlight**, in the **"What to Test"**
-field. The owner taps a build in the TestFlight app and reads what changed + what to try —
-no GitHub, no chat scrollback.
+The build notes now write into the build's **"What to Test"** field in TestFlight. The owner
+taps a build in the TestFlight app and reads what changed + what to try — no GitHub, no chat
+scrollback. **Confirmed working on a build cut from `main`.**
 
-This was already flagged as a planned enhancement in `docs/testflight-ci.md`
-("_Future enhancement: push these straight into TestFlight's 'What to Test' field via the
-App Store Connect API_"). It's now done.
+It took **three PRs and three blank builds**. The debugging is the valuable part of this
+handoff, so it's recorded honestly below.
 
-## How it works
+## Final working mechanism
 
-`.github/workflows/testflight.yml`, three changes:
+`.github/workflows/testflight.yml`:
 
-1. **`Resolve + record build notes`** (was `Record build notes`) — now resolves the notes to
-   a step output (`steps.notes.outputs.notes`) as well as the job summary, with a fallback
-   chain so the field is **never blank**:
-   `workflow_dispatch` *Build notes* input → **PR title + body** (for `build`-label
-   triggers) → the commit subject. Truncated to TestFlight's **4000-char** cap.
-2. **`Set TestFlight "What to Test" notes`** (new, after the upload) — fastlane
-   `set_changelog` (preinstalled on GitHub `macos-26` runners) against the **same App Store
-   Connect API key already in secrets**. No new secrets, no new owner setup. Writes a tiny
-   throwaway Fastfile into `$RUNNER_TEMP` — nothing added to the repo.
-3. **`Done`** — echoes the resolved notes (previously echoed the raw input, which was blank
-   on label triggers).
+1. **`Resolve + record build notes`** — resolves notes to a step output *and* the job
+   summary, with a fallback chain so the field is never blank: `workflow_dispatch` *Build
+   notes* input → **PR title + body** (label triggers) → the commit subject. Capped at
+   TestFlight's **4000-char** limit.
+2. **`Set TestFlight "What to Test" notes`** (after the upload) — fastlane
+   **`upload_to_testflight`** with **`distribute_only: true`** (distributes an
+   already-uploaded build rather than re-uploading) and **`app_platform: "ios"`**, using the
+   **App Store Connect key already in secrets**. No new secrets, no owner setup. The Fastfile
+   is written to `$RUNNER_TEMP` at run time — nothing added to the repo.
+3. **`Done`** — states explicitly whether the notes attached.
 
-Plus: job `timeout-minutes` **40 → 70**, because the notes step has to wait out Apple's
-processing.
+Job `timeout-minutes` 40 → 70 to cover Apple's processing wait. Marketing version is grepped
+from the pbxproj (highest `MARKETING_VERSION`, so the test target's pinned `1.0` is ignored
+and it survives the next bump).
 
-### Two details worth remembering
+## The three failures, and what each one teaches
 
-- **Apple's processing delay is the whole difficulty here.** A freshly uploaded build does
-  not exist in App Store Connect as an attachable object for ~5–15 min. The step therefore
-  **retries `set_changelog` up to 25× at 60s intervals** (~25 min ceiling). If it still
-  can't attach, it emits a **`::warning::` and exits 0** — deliberately *not* a failure,
-  because the build is already uploaded and fine; the notes still live in the job summary,
-  chat, and the PR.
-- **Marketing version is read from the pbxproj, not hardcoded.** `set_changelog` needs the
-  version the build belongs to. The project file carries **both** `1.0` (test target) and
-  `1.1` (app target), so the step greps all `MARKETING_VERSION` values and takes the
-  highest (`sort -uV | tail -1`). Hardcoding `1.1` would silently rot at the next bump.
+### 1. `set_changelog` cannot target a TestFlight build — build 1.1 (36) shipped blank
+It sets the **App Store version's** release notes and rejects `build_number` outright:
+`[!] Could not find option 'build_number' in the list of available options: api_key_path,
+api_key, app_identifier, username, version, changelog, team_id, team_name, platform`.
+Every attempt failed on the first call. **`upload_to_testflight` with `distribute_only: true`
+is the documented path** for an already-uploaded build.
 
-## Docs updated in the same commit
+### 2. pilot PROMPTS for the platform — builds 1.1 (39) + (40) shipped blank
+`[20:35:18]: Please enter the app's platform (appletvos, ios, osx, xros):` → `[!] Could not
+retrieve response as fastlane runs in non-interactive mode`. The docs list **`app_platform`**
+as *optional*; it is, interactively. **In CI it is mandatory.** Died at 0 seconds each time.
 
-- **`docs/testflight-ci.md`** — the "Build notes are required" section now describes the
-  live TestFlight attachment + the fallback chain (replacing the "future enhancement"
-  note); the "Which build is which" gotcha rewritten (it claimed timestamp build numbers
-  and called this an unbuilt follow-up — both stale); added a gotcha about the notes step's
-  polling time.
-- **`CLAUDE.md` rule #9** — records that input (b) now auto-attaches to TestFlight.
+### 3. ⚠️ The real lesson: the retry classifier hid both of them
+Neither failure was visible, because the retry loop treated **every** error as "Apple is
+still processing" and buried the actual message for 20–25 minutes before reporting a
+confidently wrong reason. The second version was meant to fix exactly that and still failed:
+it grepped for the bare word **`processing`**, which appears in fastlane's **own option
+list** (`skip_waiting_for_build_processing`) — so a permanent crash matched the "transient"
+pattern and got retried 20 more times.
+
+The classifier now:
+- checks **permanent** signatures first (non-interactive crash, bad option, bad credentials),
+- retries **only** on precise build-not-ready phrases,
+- and **defaults to permanent**.
+
+That default is the point: **a wrong "permanent" call costs nothing** (the step stops and
+prints the real error), **while a wrong "retryable" call hides it for 20 minutes.** Never
+classify on a bare word that can occur in help text. Both classifiers were verified against
+the real failing log from run 40 before shipping.
+
+### 4. ⚠️ `workflow_dispatch` uses the workflow file from the branch you build FROM
+Not from `main`. Builds were being cut from `claude/shareplay-feature-bug-7chszc`, so fixes
+merged to `main` had no effect until that branch merged `main` in. **Build from `main`, or
+merge `main` into the branch first.** This is why the fix appeared not to work for several
+builds, and it's now documented in `docs/testflight-ci.md`.
+
+## Things worth knowing about this step
+
+- **A green run does NOT mean the notes attached.** The step exits 0 on failure by design —
+  the build itself is already uploaded and installable, so failing the job would misrepresent
+  it — but emits a red `::error::`. **Read the `Done` line**, not the run's colour.
+- **Apple takes ~5–15 min** to process a fresh upload before the build is attachable; the
+  step polls up to ~20 min for genuine not-ready conditions only.
+- **If notes go missing again, open the `Set TestFlight "What to Test" notes` step.** It now
+  stops on the first real failure and prints the actual fastlane error.
 
 ## State at session end
 
-- `main` carries the change. Working tree clean.
-- **Nothing to verify until the next build is cut** — the notes step only exercises on a
-  real `testflight.yml` run. **On the next build, check the TestFlight app: tap the build,
-  confirm "What to Test" is populated.** It may land a few minutes after the build appears
-  (Apple processing) — that's expected, not a bug.
-- If `set_changelog` ever turns out to be unavailable on the runner image, the fallback is
-  a direct App Store Connect API call (`PATCH /v1/betaBuildLocalizations`) — same key, same
-  place in the workflow.
-
-## Branch cleanup owed
-
-`claude/build-release-notes-f1samw` is merged. The git proxy blocks branch deletion from
-web sessions → **delete it in the GitHub UI**.
+- `main` carries everything; working tree clean. Docs (`CLAUDE.md` rule #9 + Current State,
+  `ROADMAP.md`, `docs/testflight-ci.md`) all corrected to the **final** mechanism — earlier
+  revisions of these docs described `set_changelog` as working, which it never did.
+- **Branch cleanup owed:** `claude/build-release-notes-f1samw` is merged. The git proxy
+  blocks branch deletion from web sessions → **delete it in the GitHub UI.**
 
 ## NEXT
 
 Owner's call. The standing thread from session 69 is **paid tours Phase 2 (backend)** —
-`purchases` table + RLS, `tours.price_tier`, earnings ledger, `makers.stripe_account_id`,
-the Apple-JWS-verifying Edge Function, the App Store Server Notifications refund endpoint,
-and `get_catalog` emitting the price tier. Read `docs/paid-tours-design.md` first.
+`purchases` table + RLS, `tours.price_tier`, earnings ledger, `makers.stripe_account_id`, the
+Apple-JWS-verifying Edge Function, the App Store Server Notifications refund endpoint, and
+`get_catalog` emitting the price tier. Read `docs/paid-tours-design.md` first.
