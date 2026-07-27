@@ -2,3 +2,6 @@
 
 # Claude Code background-agent worktrees (transient; auto-cleaned)
 .claude/worktrees/
+
+# duplicate-image check download cache (scripts/check-image-duplicates.py)
+.cache/
