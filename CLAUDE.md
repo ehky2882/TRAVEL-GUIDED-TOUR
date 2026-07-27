@@ -97,6 +97,48 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 - **Device review, riskiest first — Library and tour detail are shipped screens that were NOT broken**, and the strip conversion is the only real regression risk: Library sections still switch with no doubled divider · tour detail Gallery/Map switches, map still pans in the scrolling body, pins + user dot still render after the copies were deleted · Home map clusters identically · Me tab's three tabs, Map **clusters on first open** · another creator's page shows two tabs without crashing (the optional-environment path) · light **and** dark.
 - **Deferred:** saved tours layered on the map (treatment approved — **solid brass dot vs hollow ring**, so it survives greyscale and colour-blindness; only timing deferred, and three candidate "saved" colours are in the mockup with teal recommended) · whether Library's Lists tab shrinks now that lists are on the profile · the strip's **full-bleed** rule vs insetting it · **the rest of the owner's "lots to do" maker-page list, which has not been described yet.**
 
+#### ⚠️ "Private should hide everything" — owner decision, and it is bigger than it sounds (2026-07-27)
+
+Owner, on being told a private account's tours are still visible to everyone:
+**"Yes — private should hide everything."** Their model, in their words: *"if a
+profile is public… their lists should show. if a profile is private, then i wont
+be able to see their lists or tours or anything."*
+
+**⚠️ This collides with the catalog's whole architecture, so scope it before
+building it.** `Tours.json` / `get_catalog()` is **one public payload with no
+viewer** — every phone fetches the same bytes, caches them on disk, and falls
+back to a gh-pages mirror and a bundled seed. Hiding a private maker's tours
+means the payload has to differ per person, which that design cannot do.
+
+Three ways out, and the third is almost certainly right:
+
+1. **Drop private makers' tours from the catalog entirely.** Trivial, but their
+   own accepted followers can't see them either — which isn't what the owner
+   described.
+2. **Per-viewer catalog** via an authenticated RPC. Correct, and it **destroys
+   the anonymous + offline path**: no signed-out browsing, no gh-pages fallback,
+   auth required on every cold launch. Do not do this.
+3. **Hybrid.** The public catalog excludes private makers; a second
+   authenticated call fetches tours from the private makers you follow, merged
+   client-side. Keeps the cache, the mirror and anonymous browsing; costs one
+   extra call for signed-in users.
+
+Also note the **maker row itself** is emitted by `get_catalog()` for everyone, so
+"hide everything" means hiding the profile from search and the map too, not just
+its tours. **This is its own project — do not bolt it onto the lists work.**
+
+**Sequencing agreed with the owner:** public lists on other people's maker pages
+ship **next** (one `get_catalog` line emitting `user_id` + a `Maker.userId` field
++ `publicLists(ofUser:)`), together with the Shared / Only-me model, since both
+need the same SQL trip. Private-hides-everything comes after, scoped separately.
+
+**⚠️ A correction worth carrying:** the owner believed the per-list private
+marking wasn't built. **It is** — `TourListEditorSheet` has a Public toggle and
+`journeys.is_public` **defaults to false**, so every list today is already
+private. Once public reads work, a stranger sees an empty Lists tab until the
+owner toggles something on. Say that up front next time rather than describing
+the plumbing.
+
 ### Wrong hero shipped for a month — root-caused, fixed, and the whole catalog swept clean of duplicate images (session 76 — content + tooling)
 
 **Owner: "These tour heroes are duplicated. Thyssen borne is incorrect."** The Museo Thyssen-Bornemisza hero was **byte-identical** to `museo-reina-sofia_hero.webp` — a wrong building on a live tour since 25 June. Fixed, then the same bug class was hunted across all 985 tours: **14 more duplicate groups found and resolved, catalog now 0 errors across 3,615 images.** Merged: **[PR #453](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/453)** (`7b5762c`) + **[PR #455](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/455)** (`7c1d48b`). Content + tooling only; reaches users over the air, no build.
