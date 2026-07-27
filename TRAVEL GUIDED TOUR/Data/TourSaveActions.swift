@@ -4,17 +4,17 @@ import Foundation
 /// surface — the home cards, tour detail, the player — shares one
 /// implementation of "is this saved" and "what does a tap do."
 ///
-/// `journeyService` is optional on purpose. Tour detail and the player are
+/// `listService` is optional on purpose. Tour detail and the player are
 /// hosted in UIKit slide-up layers that only receive the services `ContentView`
-/// explicitly injects, so a surface can legitimately have no journeys service.
+/// explicitly injects, so a surface can legitimately have no lists service.
 /// When it's absent this degrades to Liked-only — which is also exactly what a
 /// signed-out user gets, since named lists need an account.
 /// Deliberately *not* `@MainActor`-annotated: it's constructed inside view
-/// bodies and button actions, matching how the existing journeys sheet already
-/// reaches into `JourneyService` from those contexts.
+/// bodies and button actions, matching how the existing membership sheet already
+/// reaches into `TourListService` from those contexts.
 struct TourSaveActions {
     let libraryStore: LibraryStore
-    let journeyService: JourneyService?
+    let listService: TourListService?
 
     /// Is this tour in Liked?
     func isLiked(_ tourId: UUID) -> Bool {
@@ -24,7 +24,7 @@ struct TourSaveActions {
     /// The named lists containing this tour. O(number of lists) — only called
     /// on a tap, never while drawing a card.
     func lists(for tourId: UUID) -> Set<UUID> {
-        journeyService?.listsContaining(tourId: tourId) ?? []
+        listService?.listsContaining(tourId: tourId) ?? []
     }
 
     /// Saved = in at least one list, Liked included.
@@ -34,7 +34,7 @@ struct TourSaveActions {
     /// an O(1) lookup.
     func isSaved(_ tourId: UUID) -> Bool {
         if libraryStore.isSaved(tourId) { return true }
-        return journeyService?.allListedTourIds.contains(tourId) ?? false
+        return listService?.allListedTourIds.contains(tourId) ?? false
     }
 
     /// How many lists this tour is in, Liked included.

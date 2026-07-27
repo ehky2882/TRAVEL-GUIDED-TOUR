@@ -4,14 +4,14 @@ import SwiftUI
 /// `editing == nil` creates a new list (from Library or the membership sheet);
 /// passing an existing one edits it in place.
 ///
-/// Naming note: the type and the Supabase tables are still `Journey` —
+/// Naming note: the type and the Supabase tables are still `TourList` —
 /// user-facing copy says "list" (owner direction). Renaming the symbols and
 /// tables is a separate, purely cosmetic change.
-struct JourneyEditorSheet: View {
+struct TourListEditorSheet: View {
     /// The list being edited, or nil to create a new one.
-    let editing: Journey?
+    let editing: TourList?
 
-    @Environment(JourneyService.self) private var journeyService
+    @Environment(TourListService.self) private var listService
     @Environment(\.dismiss) private var dismiss
 
     @State private var title: String
@@ -23,7 +23,7 @@ struct JourneyEditorSheet: View {
     private let titleLimit = 60
     private let descriptionLimit = 200
 
-    init(editing: Journey? = nil) {
+    init(editing: TourList? = nil) {
         self.editing = editing
         _title = State(initialValue: editing?.title ?? "")
         _description = State(initialValue: editing?.description ?? "")
@@ -90,14 +90,14 @@ struct JourneyEditorSheet: View {
             defer { isSaving = false }
             do {
                 if let editing {
-                    try await journeyService.updateJourney(
+                    try await listService.updateList(
                         id: editing.id,
                         title: title,
                         description: description,
                         isPublic: isPublic
                     )
                 } else {
-                    _ = try await journeyService.createJourney(
+                    _ = try await listService.createList(
                         title: title,
                         description: description,
                         isPublic: isPublic

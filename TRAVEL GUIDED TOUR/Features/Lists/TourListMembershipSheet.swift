@@ -17,7 +17,7 @@ struct TourListMembershipSheet: View {
     let tour: Tour
 
     @Environment(LibraryStore.self) private var libraryStore
-    @Environment(JourneyService.self) private var journeyService: JourneyService?
+    @Environment(TourListService.self) private var listService: TourListService?
     @Environment(AuthService.self) private var authService: AuthService?
     @Environment(\.dismiss) private var dismiss
 
@@ -28,7 +28,7 @@ struct TourListMembershipSheet: View {
     @State private var showingCreate = false
 
     private var isSignedIn: Bool { authService?.isSignedIn == true }
-    private var lists: [Journey] { journeyService?.myJourneys ?? [] }
+    private var lists: [TourList] { listService?.myLists ?? [] }
 
     var body: some View {
         NavigationStack {
@@ -42,7 +42,7 @@ struct TourListMembershipSheet: View {
                     }
                 }
                 .sheet(isPresented: $showingCreate, onDismiss: reload) {
-                    JourneyEditorSheet()
+                    TourListEditorSheet()
                 }
         }
         .task { await load() }
@@ -55,7 +55,7 @@ struct TourListMembershipSheet: View {
                 likedRow
                 Divider()
 
-                if isSignedIn, journeyService != nil {
+                if isSignedIn, listService != nil {
                     newListRow
 
                     if isLoading {
@@ -131,7 +131,7 @@ struct TourListMembershipSheet: View {
         .buttonStyle(.plain)
     }
 
-    private func listRow(_ list: Journey) -> some View {
+    private func listRow(_ list: TourList) -> some View {
         Button {
             toggle(list)
         } label: {
@@ -182,9 +182,9 @@ struct TourListMembershipSheet: View {
     // MARK: - Data
 
     private func load() async {
-        guard isSignedIn, let journeyService else { isLoading = false; return }
-        await journeyService.loadMyJourneys()
-        member = journeyService.listsContaining(tourId: tour.id)
+        guard isSignedIn, let listService else { isLoading = false; return }
+        await listService.loadMyLists()
+        member = listService.listsContaining(tourId: tour.id)
         isLoading = false
     }
 
@@ -192,17 +192,17 @@ struct TourListMembershipSheet: View {
         Task { await load() }
     }
 
-    private func toggle(_ list: Journey) {
-        guard let journeyService else { return }
+    private func toggle(_ list: TourList) {
+        guard let listService else { return }
         busyList = list.id
         Task {
             defer { busyList = nil }
             do {
                 if member.contains(list.id) {
-                    try await journeyService.removeTour(tour.id, from: list.id)
+                    try await listService.removeTour(tour.id, from: list.id)
                     member.remove(list.id)
                 } else {
-                    try await journeyService.addTour(tour.id, to: list.id)
+                    try await listService.addTour(tour.id, to: list.id)
                     member.insert(list.id)
                 }
             } catch {

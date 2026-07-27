@@ -2,24 +2,24 @@ import Foundation
 import Observation
 import Supabase
 
-/// Cloud CRUD for the signed-in user's **Journeys** — user-curated, ordered
-/// collections of whole tours (design: `docs/journeys-design.md`; schema:
+/// Cloud CRUD for the signed-in user's **lists** — user-curated, ordered
+/// collections of whole tours (design: `docs/lists-design.md`; schema:
 /// `backend/journeys.sql`). Mirrors the shape of `MakerTourService`: a
 /// `@MainActor @Observable` service over supabase-swift, holding the user's
-/// own journeys in memory and writing through on every mutation.
+/// own lists in memory and writing through on every mutation.
 ///
 /// RLS (already in `journeys.sql`): a user reads/writes only their own
-/// journeys (public ones are world-readable, but this service is scoped to the
+/// lists (public ones are world-readable, but this service is scoped to the
 /// signed-in owner via `owner_user_id`). Every write requires an authenticated
 /// session — anonymous users see an empty list.
 @MainActor
 @Observable
-final class JourneyService {
-    /// The signed-in user's own journeys, newest-updated first.
-    private(set) var myJourneys: [Journey] = []
+final class TourListService {
+    /// The signed-in user's own lists, newest-updated first.
+    private(set) var myLists: [TourList] = []
 
-    /// Which tours sit in which of the user's lists — `journeyId → tourIds`.
-    /// Built from the same embedded rows `loadMyJourneys()` already fetches, so
+    /// Which tours sit in which of the user's lists — `listId → tourIds`.
+    /// Built from the same embedded rows `loadMyLists()` already fetches, so
     /// it costs no extra query, and kept in step by every mutation below.
     private(set) var membership: [UUID: Set<UUID>] = [:]
 
@@ -47,7 +47,7 @@ final class JourneyService {
 
     /// Clear all cached state (e.g. on sign-out).
     func clear() {
-        myJourneys = []
+        myLists = []
         membership = [:]
         allListedTourIds = []
         loadedUid = nil
@@ -69,31 +69,31 @@ final class JourneyService {
     ///
     /// Synchronous on purpose: the membership sheet and the bookmark controls
     /// both need this while deciding what to draw, and the data already arrived
-    /// with `loadMyJourneys()`.
+    /// with `loadMyLists()`.
     func listsContaining(tourId: UUID) -> Set<UUID> {
         Set(membership.filter { $0.value.contains(tourId) }.keys)
     }
 
     // MARK: - Load
 
-    /// Load the current user's journeys with each one's tour count. A failure
+    /// Load the current user's lists with each one's tour count. A failure
     /// leaves the current list unchanged; signed-out clears it.
-    func loadMyJourneys() async {
+    func loadMyLists() async {
         clearIfUserChanged()
         guard let uid else { clear(); return }
         do {
-            let rows: [JourneyRow] = try await client
+            let rows: [TourListRow] = try await client
                 .from("journeys")
                 .select("id, title, description, cover_image_url, is_public, journey_items(tour_id, position)")
                 .eq("owner_user_id", value: uid)
                 .order("updated_at", ascending: false)
                 .execute()
                 .value
-            myJourneys = rows.map(\.asJourney)
+            myLists = rows.map(\.asTourList)
             // The embed already carries every item's tour id, so membership
             // comes free with the list query — no second round-trip.
             membership = Dictionary(
-                uniqueKeysWithValues: rows.map { ($0.id, Set($0.journeyItems.map(\.tourId))) }
+                uniqueKeysWithValues: rows.map { ($0.id, Set($0.itemRefs.map(\.tourId))) }
             )
             rebuildAllListed()
             loadedUid = uid
@@ -102,13 +102,13 @@ final class JourneyService {
         }
     }
 
-    /// The ordered items (tour ids + notes) of one journey.
-    func items(of journeyId: UUID) async -> [JourneyItem] {
+    /// The ordered items (tour ids + notes) of one list.
+    func items(of listId: UUID) async -> [TourListItem] {
         do {
-            let rows: [JourneyItemRow] = try await client
+            let rows: [TourListItemRow] = try await client
                 .from("journey_items")
                 .select("tour_id, position, note")
-                .eq("journey_id", value: journeyId.uuidString.lowercased())
+                .eq("journey_id", value: listId.uuidString.lowercased())
                 .order("position", ascending: true)
                 .execute()
                 .value
@@ -118,11 +118,11 @@ final class JourneyService {
         }
     }
 
-    /// The set of *my* journey ids that already contain `tourId` — drives the
-    /// checkmarks in the "Add to a Journey" sheet. Filtered to the user's own
-    /// journeys (RLS also returns public ones containing the tour).
-    func journeyIdsContaining(tourId: UUID) async -> Set<UUID> {
-        let mine = Set(myJourneys.map(\.id))
+    /// The set of *my* list ids that already contain `tourId` — drives the
+    /// checkmarks in the "Save to…" sheet. Filtered to the user's own
+    /// lists (RLS also returns public ones containing the tour).
+    func listIdsContaining(tourId: UUID) async -> Set<UUID> {
+        let mine = Set(myLists.map(\.id))
         do {
             let rows: [MembershipRow] = try await client
                 .from("journey_items")
@@ -130,7 +130,7 @@ final class JourneyService {
                 .eq("tour_id", value: tourId.uuidString.lowercased())
                 .execute()
                 .value
-            return Set(rows.compactMap { UUID(uuidString: $0.journeyId) }).intersection(mine)
+            return Set(rows.compactMap { UUID(uuidString: $0.listId) }).intersection(mine)
         } catch {
             return []
         }
@@ -138,15 +138,15 @@ final class JourneyService {
 
     // MARK: - Mutations
 
-    /// Create a new journey owned by the current user. Generates the id
-    /// client-side (like `MakerTourService`) and prepends it to `myJourneys`.
+    /// Create a new list owned by the current user. Generates the id
+    /// client-side (like `MakerTourService`) and prepends it to `myLists`.
     @discardableResult
-    func createJourney(title: String, description: String?, isPublic: Bool) async throws -> Journey {
-        guard let uid else { throw JourneyError.notSignedIn }
+    func createList(title: String, description: String?, isPublic: Bool) async throws -> TourList {
+        guard let uid else { throw TourListError.notSignedIn }
         let id = UUID()
         let clean = title.trimmingCharacters(in: .whitespacesAndNewlines)
         let desc = description?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let row = NewJourneyRow(
+        let row = NewTourListRow(
             id: id.uuidString.lowercased(),
             ownerUserId: uid,
             title: clean,
@@ -154,7 +154,7 @@ final class JourneyService {
             isPublic: isPublic
         )
         try await client.from("journeys").insert(row, returning: .minimal).execute()
-        let journey = Journey(
+        let journey = TourList(
             id: id,
             title: clean,
             description: (desc?.isEmpty ?? true) ? nil : desc,
@@ -162,70 +162,70 @@ final class JourneyService {
             isPublic: isPublic,
             itemCount: 0
         )
-        myJourneys.insert(journey, at: 0)
+        myLists.insert(journey, at: 0)
         membership[id] = []
         return journey
     }
 
-    /// Add a tour to the end of a journey. Positions are the current item
+    /// Add a tour to the end of a list. Positions are the current item
     /// count (0-based, append). Uses upsert so re-adding the same tour is a
     /// no-op rather than a primary-key error. Bumps the local `itemCount`.
-    func addTour(_ tourId: UUID, to journeyId: UUID, note: String? = nil) async throws {
-        let existing = await items(of: journeyId)
+    func addTour(_ tourId: UUID, to listId: UUID, note: String? = nil) async throws {
+        let existing = await items(of: listId)
         // Already present → nothing to do (keep its position + note).
         guard !existing.contains(where: { $0.tourId == tourId }) else { return }
         let position = (existing.map(\.position).max() ?? -1) + 1
         let cleanNote = note?.trimmingCharacters(in: .whitespacesAndNewlines)
-        let row = NewJourneyItemRow(
-            journeyId: journeyId.uuidString.lowercased(),
+        let row = NewTourListItemRow(
+            listId: listId.uuidString.lowercased(),
             tourId: tourId.uuidString.lowercased(),
             position: position,
             note: (cleanNote?.isEmpty ?? true) ? nil : cleanNote
         )
         try await client.from("journey_items").insert(row, returning: .minimal).execute()
-        await touch(journeyId)
-        adjustCount(journeyId, by: 1)
-        membership[journeyId, default: []].insert(tourId)
+        await touch(listId)
+        adjustCount(listId, by: 1)
+        membership[listId, default: []].insert(tourId)
         rebuildAllListed()
     }
 
-    /// Remove a tour from a journey. Leaves the remaining positions as-is
+    /// Remove a tour from a list. Leaves the remaining positions as-is
     /// (gaps are harmless — ordering is by `position`, not contiguity).
-    func removeTour(_ tourId: UUID, from journeyId: UUID) async throws {
+    func removeTour(_ tourId: UUID, from listId: UUID) async throws {
         try await client
             .from("journey_items")
             .delete()
-            .eq("journey_id", value: journeyId.uuidString.lowercased())
+            .eq("journey_id", value: listId.uuidString.lowercased())
             .eq("tour_id", value: tourId.uuidString.lowercased())
             .execute()
-        await touch(journeyId)
-        adjustCount(journeyId, by: -1)
-        membership[journeyId]?.remove(tourId)
+        await touch(listId)
+        adjustCount(listId, by: -1)
+        membership[listId]?.remove(tourId)
         rebuildAllListed()
     }
 
-    /// Delete a journey (its items cascade via the FK). Removes it from the
+    /// Delete a list (its items cascade via the FK). Removes it from the
     /// in-memory list.
-    func deleteJourney(_ journeyId: UUID) async throws {
+    func deleteList(_ listId: UUID) async throws {
         try await client
             .from("journeys")
             .delete()
-            .eq("id", value: journeyId.uuidString.lowercased())
+            .eq("id", value: listId.uuidString.lowercased())
             .execute()
-        myJourneys.removeAll { $0.id == journeyId }
-        membership[journeyId] = nil
+        myLists.removeAll { $0.id == listId }
+        membership[listId] = nil
         rebuildAllListed()
     }
 
-    /// Update a journey's editable metadata (title / description / public).
+    /// Update a list's editable metadata (title / description / public).
     /// Updates the in-memory list in place — and moves it to the top, mirroring
     /// the server's updated-at sort — so the detail + list reflect it at once.
-    func updateJourney(id: UUID, title: String, description: String?, isPublic: Bool) async throws {
-        guard uid != nil else { throw JourneyError.notSignedIn }
+    func updateList(id: UUID, title: String, description: String?, isPublic: Bool) async throws {
+        guard uid != nil else { throw TourListError.notSignedIn }
         let clean = title.trimmingCharacters(in: .whitespacesAndNewlines)
         let desc = description?.trimmingCharacters(in: .whitespacesAndNewlines)
         let cleanDesc = (desc?.isEmpty ?? true) ? nil : desc
-        let row = JourneyUpdateRow(
+        let row = TourListUpdateRow(
             title: clean,
             description: cleanDesc,
             isPublic: isPublic,
@@ -236,66 +236,66 @@ final class JourneyService {
             .update(row)
             .eq("id", value: id.uuidString.lowercased())
             .execute()
-        if let idx = myJourneys.firstIndex(where: { $0.id == id }) {
-            var j = myJourneys.remove(at: idx)
+        if let idx = myLists.firstIndex(where: { $0.id == id }) {
+            var j = myLists.remove(at: idx)
             j.title = clean
             j.description = cleanDesc
             j.isPublic = isPublic
-            myJourneys.insert(j, at: 0)
+            myLists.insert(j, at: 0)
         }
     }
 
-    /// Set (or clear, with nil/empty) the curator note on one tour in a journey.
-    func setNote(_ note: String?, for tourId: UUID, in journeyId: UUID) async throws {
+    /// Set (or clear, with nil/empty) the curator note on one tour in a list.
+    func setNote(_ note: String?, for tourId: UUID, in listId: UUID) async throws {
         let clean = note?.trimmingCharacters(in: .whitespacesAndNewlines)
         try await client
             .from("journey_items")
             .update(NoteRow(note: (clean?.isEmpty ?? true) ? nil : clean))
-            .eq("journey_id", value: journeyId.uuidString.lowercased())
+            .eq("journey_id", value: listId.uuidString.lowercased())
             .eq("tour_id", value: tourId.uuidString.lowercased())
             .execute()
-        await touch(journeyId)
+        await touch(listId)
     }
 
-    /// Persist a new order for a journey's tours — each item's `position` is set
+    /// Persist a new order for a list's tours — each item's `position` is set
     /// to its index in `orderedTourIds`. (No unique constraint on position, so a
     /// direct per-row assignment is safe.)
-    func reorder(_ orderedTourIds: [UUID], in journeyId: UUID) async throws {
+    func reorder(_ orderedTourIds: [UUID], in listId: UUID) async throws {
         for (index, tourId) in orderedTourIds.enumerated() {
             try await client
                 .from("journey_items")
                 .update(PositionRow(position: index))
-                .eq("journey_id", value: journeyId.uuidString.lowercased())
+                .eq("journey_id", value: listId.uuidString.lowercased())
                 .eq("tour_id", value: tourId.uuidString.lowercased())
                 .execute()
         }
-        await touch(journeyId)
+        await touch(listId)
     }
 
     // MARK: - Helpers
 
-    /// Bump a journey's `updated_at` so it sorts to the top of the list after
+    /// Bump a list's `updated_at` so it sorts to the top of the list after
     /// an edit. Best-effort — a failure doesn't block the mutation.
-    private func touch(_ journeyId: UUID) async {
+    private func touch(_ listId: UUID) async {
         try? await client
             .from("journeys")
             .update(TouchRow(updatedAt: ISO8601DateFormatter().string(from: Date())))
-            .eq("id", value: journeyId.uuidString.lowercased())
+            .eq("id", value: listId.uuidString.lowercased())
             .execute()
     }
 
-    /// Adjust the cached item count for a journey (keeps the list row's
+    /// Adjust the cached item count for a list (keeps the list row's
     /// "N tours" in step without a reload).
-    private func adjustCount(_ journeyId: UUID, by delta: Int) {
-        guard let idx = myJourneys.firstIndex(where: { $0.id == journeyId }) else { return }
-        myJourneys[idx].itemCount = max(0, myJourneys[idx].itemCount + delta)
+    private func adjustCount(_ listId: UUID, by delta: Int) {
+        guard let idx = myLists.firstIndex(where: { $0.id == listId }) else { return }
+        myLists[idx].itemCount = max(0, myLists[idx].itemCount + delta)
     }
 
-    enum JourneyError: LocalizedError {
+    enum TourListError: LocalizedError {
         case notSignedIn
         var errorDescription: String? {
             switch self {
-            case .notSignedIn: return "You need to be signed in to make a Journey."
+            case .notSignedIn: return "You need to be signed in to make a list."
             }
         }
     }
@@ -303,16 +303,16 @@ final class JourneyService {
 
 // MARK: - DTOs
 
-/// Read payload for a `journeys` row + its embedded items (tour ids + order).
+/// Read payload for a `lists` row + its embedded items (tour ids + order).
 /// The item *count* is derived client-side from the embedded rows, and the
-/// first tour (lowest `position`) drives the Journey's cover thumbnail.
-private struct JourneyRow: Decodable {
+/// first tour (lowest `position`) drives the TourList's cover thumbnail.
+private struct TourListRow: Decodable {
     let id: UUID
     let title: String
     let description: String?
     let coverImageURL: String?
     let isPublic: Bool
-    let journeyItems: [ItemRef]
+    let itemRefs: [ItemRef]
 
     /// One embedded `journey_items` row: just enough to count and to find the
     /// first tour for the cover image.
@@ -329,24 +329,24 @@ private struct JourneyRow: Decodable {
         case id, title, description
         case coverImageURL = "cover_image_url"
         case isPublic = "is_public"
-        case journeyItems = "journey_items"
+        case itemRefs = "journey_items"
     }
 
-    var asJourney: Journey {
-        Journey(
+    var asTourList: TourList {
+        TourList(
             id: id,
             title: title,
             description: description,
             coverImageURL: coverImageURL,
             isPublic: isPublic,
-            itemCount: journeyItems.count,
-            firstTourId: journeyItems.min(by: { $0.position < $1.position })?.tourId
+            itemCount: itemRefs.count,
+            firstTourId: itemRefs.min(by: { $0.position < $1.position })?.tourId
         )
     }
 }
 
 /// Read payload for a `journey_items` row.
-private struct JourneyItemRow: Decodable {
+private struct TourListItemRow: Decodable {
     let tourId: UUID
     let position: Int
     let note: String?
@@ -356,17 +356,17 @@ private struct JourneyItemRow: Decodable {
         case position, note
     }
 
-    var asItem: JourneyItem { JourneyItem(tourId: tourId, position: position, note: note) }
+    var asItem: TourListItem { TourListItem(tourId: tourId, position: position, note: note) }
 }
 
 /// Read payload: just the journey_id (membership lookup).
 private struct MembershipRow: Decodable {
-    let journeyId: String
-    enum CodingKeys: String, CodingKey { case journeyId = "journey_id" }
+    let listId: String
+    enum CodingKeys: String, CodingKey { case listId = "journey_id" }
 }
 
-/// Insert payload for a new `journeys` row (snake_case columns).
-private struct NewJourneyRow: Encodable {
+/// Insert payload for a new `lists` row (snake_case columns).
+private struct NewTourListRow: Encodable {
     let id: String
     let ownerUserId: String
     let title: String
@@ -381,14 +381,14 @@ private struct NewJourneyRow: Encodable {
 }
 
 /// Insert payload for a new `journey_items` row.
-private struct NewJourneyItemRow: Encodable {
-    let journeyId: String
+private struct NewTourListItemRow: Encodable {
+    let listId: String
     let tourId: String
     let position: Int
     let note: String?
 
     enum CodingKeys: String, CodingKey {
-        case journeyId = "journey_id"
+        case listId = "journey_id"
         case tourId = "tour_id"
         case position, note
     }
@@ -400,11 +400,11 @@ private struct TouchRow: Encodable {
     enum CodingKeys: String, CodingKey { case updatedAt = "updated_at" }
 }
 
-/// Update payload for a journey's editable metadata. Custom-encodes
+/// Update payload for a list's editable metadata. Custom-encodes
 /// `description` as explicit JSON `null` when nil so clearing it actually
 /// clears (Swift's synthesized encoder omits nil optionals, which a PostgREST
 /// update would then leave unchanged — memory `reference-supabase-upsert-null-omission`).
-private struct JourneyUpdateRow: Encodable {
+private struct TourListUpdateRow: Encodable {
     let title: String
     let description: String?
     let isPublic: Bool
@@ -425,7 +425,7 @@ private struct JourneyUpdateRow: Encodable {
     }
 }
 
-/// Update payload: a journey item's note (explicit null clears it).
+/// Update payload: a list item's note (explicit null clears it).
 private struct NoteRow: Encodable {
     let note: String?
     enum CodingKeys: String, CodingKey { case note }
@@ -435,7 +435,7 @@ private struct NoteRow: Encodable {
     }
 }
 
-/// Update payload: a journey item's position.
+/// Update payload: a list item's position.
 private struct PositionRow: Encodable {
     let position: Int
 }

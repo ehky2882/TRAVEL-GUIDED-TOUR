@@ -4,7 +4,7 @@ import Foundation
 ///
 /// Saving is **one** concept: a tour is saved when it belongs to at least one
 /// list. There is no separate saved flag living alongside list membership —
-/// that split (bookmark → `LibraryStore.savedAt`, "Add to a Journey" →
+/// that split (bookmark → `LibraryStore.savedAt`, "Save to…" →
 /// `journey_items`) is exactly what this replaces. It mirrors the maker
 /// consolidation in PR #398, where saving a maker was deleted outright rather
 /// than kept beside Follow.
@@ -13,7 +13,7 @@ import Foundation
 /// pick somewhere. Filing a tour into a named list puts it *there*, not also in
 /// Liked. Liked stays backed by `LibraryStore` (local, already synced by
 /// `SyncService`) so it keeps working signed out; named lists live in Supabase
-/// via `JourneyService` and need an account, which was already true.
+/// via `TourListService` and need an account, which was already true.
 ///
 /// The rules live here as pure functions so every bookmark surface — the home
 /// cards, tour detail, the player — shares one implementation, and so they can

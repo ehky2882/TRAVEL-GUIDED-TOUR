@@ -1,4 +1,11 @@
-# Journeys — design & production handoff
+# Lists — design & production handoff
+
+> **Renamed 2026-07-26: "Journey" → "list".** The Swift types are now `TourList` /
+> `TourListItem` / `TourListService`, and the UI says "list" throughout. **The
+> Supabase tables are deliberately still `journeys` / `journey_items` / `journey_id`**
+> — renaming them would need a migration and would break every build already on a
+> tester's phone, for a name no user ever sees. Historical text below still says
+> "Journey"; it is left as written.
 
 Status: **Phase 1 SHIPPED** (2026-07-19, PR #395 → `main`; TestFlight 1.1 (7), owner
 device-verified). Working name **"Journey"** kept. Backend SQL applied to Supabase:

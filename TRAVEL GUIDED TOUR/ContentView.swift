@@ -32,7 +32,7 @@ struct ContentView: View {
     @Environment(MakerPresenter.self) private var makerPresenter
     @Environment(FollowService.self) private var followService
     @Environment(AuthService.self) private var authService
-    @Environment(JourneyService.self) private var journeyService
+    @Environment(TourListService.self) private var listService
     @Environment(GroupListenCoordinator.self) private var groupListen
     /// Optional so previews and any host that doesn't build the secondary window
     /// still render. When present and not installed, the bottom module is drawn
@@ -246,7 +246,7 @@ struct ContentView: View {
                     .environment(appShared)
                     .environment(followService)
                     .environment(authService)
-                    .environment(journeyService)
+                    .environment(listService)
                     .environment(groupListen),
                     onDismiss: { tourPresenter.dismiss() }
                 )
@@ -288,7 +288,7 @@ struct ContentView: View {
                     .environment(appShared)
                     .environment(followService)
                     .environment(authService)
-                    .environment(journeyService)
+                    .environment(listService)
                     .environment(groupListen),
                     onDismiss: { makerPresenter.dismiss() }
                 )

@@ -31,12 +31,12 @@ struct CardHeroControls: View {
 private struct CardBookmarkButton: View {
     let tour: Tour
     @Environment(LibraryStore.self) private var libraryStore
-    @Environment(JourneyService.self) private var journeyService: JourneyService?
+    @Environment(TourListService.self) private var listService: TourListService?
 
     @State private var showingLists = false
 
     private var actions: TourSaveActions {
-        TourSaveActions(libraryStore: libraryStore, journeyService: journeyService)
+        TourSaveActions(libraryStore: libraryStore, listService: listService)
     }
 
     var body: some View {
