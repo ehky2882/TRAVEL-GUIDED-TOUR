@@ -159,7 +159,6 @@ struct MakerView: View {
     /// MAP tab camera. Framed once to fit this maker's whole body of
     /// work, then left alone so a pan survives a tab switch.
     @State private var mapCamera: MapCameraPosition = .automatic
-    @State private var didFrameMap = false
     @State private var selectedMapTourId: UUID?
 
     private var isOwnProfile: Bool { mode == .ownProfile }
@@ -598,8 +597,10 @@ struct MakerView: View {
                     .textCase(.uppercase)
                     .foregroundStyle(AtlasColors.tertiaryText)
                 Spacer()
-                if didFrameMap {
-                    Button("Show all") { frameWholeMap(animated: true) }
+                // Re-frame after panning away. Borrowed from tour
+                // detail, where GET DIRECTIONS sits in this same slot.
+                if !makerTours.isEmpty {
+                    Button("Show all") { frameWholeMap() }
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.mapPin)
                 }
@@ -619,6 +620,10 @@ struct MakerView: View {
                     userLocation: locationManager.userLocation,
                     selectedTourId: selectedMapTourId,
                     cameraPosition: $mapCamera,
+                    // The map frames itself on first appear — it has to
+                    // set the camera and its clustering region in the
+                    // same breath, so it owns both.
+                    initialRegion: MakerMapSection.initialRegion(for: makerTours),
                     onPinTapped: { tourId, _ in
                         selectedMapTourId = tourId
                         openTourFromMap(tourId)
@@ -627,10 +632,6 @@ struct MakerView: View {
                 )
                 // Same footprint as the gallery / map on tour detail.
                 .frame(height: AtlasSpacing.heroHeight)
-                .task {
-                    guard !didFrameMap else { return }
-                    frameWholeMap(animated: false)
-                }
             }
         }
     }
@@ -643,14 +644,13 @@ struct MakerView: View {
     /// Frame every tour this maker has made. A maker working across
     /// continents gets a world view, which is the honest picture of them
     /// (owner direction 2026-07-27).
-    private func frameWholeMap(animated: Bool) {
+    ///
+    /// Only used by "Show all" — the first framing is the map's own job.
+    /// The clustering region catches up here via `onMapCameraChange`,
+    /// which fires when this animation settles.
+    private func frameWholeMap() {
         guard let region = MakerMapSection.initialRegion(for: makerTours) else { return }
-        didFrameMap = true
-        if animated {
-            withAnimation(.easeInOut(duration: 0.35)) { mapCamera = .region(region) }
-        } else {
-            mapCamera = .region(region)
-        }
+        withAnimation(.easeInOut(duration: 0.35)) { mapCamera = .region(region) }
     }
 
     /// Open a tour tapped on the map, matching `tourOpen`'s routing: own

@@ -25,6 +25,11 @@ struct MakerMapSection: View {
     /// Highlighted pin — thicker ring, larger dot.
     let selectedTourId: UUID?
     @Binding var cameraPosition: MapCameraPosition
+    /// Where to open. Framed to fit every tour this maker has made — see
+    /// `initialRegion(for:)`. Applied to both the camera *and* the
+    /// clustering region on first appear; see the `.task` below for why
+    /// those must happen together.
+    let initialRegion: MKCoordinateRegion?
     let onPinTapped: (UUID, CLLocationCoordinate2D) -> Void
     let onMapTapped: () -> Void
 
@@ -70,11 +75,25 @@ struct MakerMapSection: View {
         .onMapCameraChange(frequency: .onEnd) { context in
             currentRegion = context.region
         }
-        // Seed the region from the initial camera so pins cluster on the
-        // very first render — `.onEnd` doesn't fire until the user moves
-        // the map, and on this screen they may never move it at all.
+        // Frame the map AND seed the clustering region together, in one
+        // place, on first appear.
+        //
+        // ⚠️ These must happen together. `currentRegion` is what
+        // clustering buckets against, and `.onEnd` doesn't fire until
+        // the user moves the map — which on this screen they may never
+        // do. An earlier version had the parent set the camera in its
+        // own `.task` while this view seeded `currentRegion` from
+        // `cameraPosition.region` in another: whichever ran first, the
+        // camera was still `.automatic` (region `nil`) when the seed
+        // read it, so `currentRegion` stayed nil and every pin rendered
+        // unclustered until the first pan. A maker with 40 tours in one
+        // city would open to a pile of overlapping dots.
         .task {
-            if currentRegion == nil {
+            guard currentRegion == nil else { return }
+            if let initialRegion {
+                cameraPosition = .region(initialRegion)
+                currentRegion = initialRegion
+            } else {
                 currentRegion = cameraPosition.region
             }
         }
