@@ -143,6 +143,14 @@
       "avatarEmoji": "🇪🇸",
       "bio": "Atlas Studio's Madrid bureau — audio tours of the Spanish capital: its Habsburg old town and royal palace, the golden triangle of art along the Paseo del Prado, and the markets, plazas and neighbourhoods where the city actually spends its evenings.",
       "websiteURL": null
+    },
+    {
+      "id": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "displayName": "Atlas Studio ROM",
+      "avatarURL": null,
+      "avatarEmoji": "🇮🇹",
+      "bio": "Atlas Studio's Rome bureau — audio tours of a city that never demolishes so much as re-uses: imperial ruins turned quarries turned churches, Baroque squares built over stadiums, and the piazzas, river islands and hilltop terraces where Romans still spend their evenings.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -46210,6 +46218,1682 @@
       "centroidLatitude": 40.4191,
       "centroidLongitude": -3.71426,
       "introAudioURL": null
+    },
+    {
+      "id": "9c40bfd5-5e9c-55c4-a38a-c16bd38ccbf8",
+      "createdAt": "2026-07-27",
+      "title": "The Colosseum",
+      "shortDescription": "The holes in the wall are a thousand-year ledger of Rome eating itself.",
+      "longDescription": "The Colosseum's travertine is pocked with thousands of square holes — the sockets of some three hundred tonnes of iron clamps, mined out by a medieval city hungry for metal. Stand on the north side, where the outer ring still rises nearly fifty metres, and the building tells you how Rome actually treats its past: not by preserving it, but by reusing it, continuously, until past and present are the same building.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b7728ddd-325a-575f-a9b5-71fb43e7c921",
+          "order": 0,
+          "title": "The Colosseum",
+          "caption": "Start with the holes. Look at the great curved wall in front of you — the tall side, where the Colosseum still stands four storeys high.",
+          "latitude": 41.8902,
+          "longitude": 12.4922,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-colosseum.mp3",
+          "audioDurationSeconds": 150,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_hero.webp",
+          "transcriptText": "Start with the holes.\n\nLook at the great curved wall in front of you — the tall side, where the Colosseum still stands four storeys high. The stone is pocked with thousands of small square holes, row after row, as if the whole building had been sprayed with something. Those holes are where the iron used to be. The Romans raised this wall without mortar, pinning the travertine blocks together with iron clamps — around three hundred tonnes of them — and in the Middle Ages the city mined every clamp it could reach for the metal. What looks like damage is actually a ledger: the record of a thousand years of Rome feeding on itself.\n\nYou should be standing on the north side, between the amphitheatre and the end of Via dei Fori Imperiali, looking at the outer ring where it survives at full height — nearly fifty metres. Walk a quarter of the way around and the building drops abruptly: an earthquake in 1349 brought down the southern half of the outer wall, which is why the Colosseum looks whole from one angle and broken from the other.\n\nIt opened in the year 80, built by the emperor Vespasian and his son Titus on the drained lake of Nero's private palace — a shrewd piece of politics, turning a tyrant's pleasure garden into an arena for the public. Some fifty thousand people could get in and out through eighty numbered arches, with a ticketing system a modern stadium would recognise. The name isn't even Roman: officially this was the Flavian Amphitheatre, and \"Colosseum\" came later, borrowed from a colossal bronze statue of Nero that once stood nearby and has vanished so completely that only the nickname survives.\n\nAnd the missing stone didn't vanish — it moved. For centuries the Colosseum served as fortress, chapel, workshop, and above all quarry: its travertine turns up in palaces across the city, and some of it is in St. Peter's. That's the thing to hold onto here, because you'll see it all over Rome — this city doesn't exactly preserve its past. It reuses it, continuously, until the past and the present become the same building.\n\nStay on the tall side a moment. Two thousand years of earthquakes, popes, and scavengers, and the wall is still doing precisely what it was engineered to do — standing on its own."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 150,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8902,
+      "centroidLongitude": 12.4922,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Engineering",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a647ecd6-b8bd-5b5d-abb5-2d06cb7f765a",
+      "createdAt": "2026-07-27",
+      "title": "The Roman Forum",
+      "shortDescription": "The best free view of ancient Rome, from a terrace behind the city hall.",
+      "longDescription": "From a small balcony behind Rome's city hall, the Forum opens up beneath you — the Arch of Septimius Severus, the Via Sacra, the treasury columns of the Temple of Saturn, and the lone Column of Phocas, the last monument ancient Rome ever raised here. It is free, never closed, and the single best view of the place that called itself the centre of the world.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/roman-forum-overlook_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/roman-forum-overlook_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/roman-forum-overlook_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/roman-forum-overlook_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/roman-forum-overlook_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/roman-forum-overlook_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f13434f6-1c53-5655-8b2c-270b6c7294bb",
+          "order": 0,
+          "title": "The Roman Forum",
+          "caption": "Below you: the centre of the world. That was the claim, anyway — and for roughly eight hundred years it was close to true.",
+          "latitude": 41.8925,
+          "longitude": 12.4853,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/roman-forum-overlook.mp3",
+          "audioDurationSeconds": 155,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/roman-forum-overlook_hero.webp",
+          "transcriptText": "Below you: the centre of the world. That was the claim, anyway — and for roughly eight hundred years it was close to true.\n\nYou should be on the small terrace tucked behind Rome's city hall. From Piazza del Campidoglio, take the lane down the right-hand side of the central palace — Via del Campidoglio — and it opens onto a balcony with the Roman Forum spread out beneath you. It's free, it's never closed, and it is the best single view of ancient Rome there is.\n\nStart with the arch directly below you, the massive one with three openings — the Arch of Septimius Severus, from the year 203, still crisp enough to read. The road passing beside it, paved in those huge flat stones, is the Via Sacra, the sacred way, the street victorious generals paraded down for a thousand years. To your right, the eight grey columns standing closest to the terrace belong to the Temple of Saturn, which doubled as the state treasury — Rome kept its money in the basement of a god. And out in the open ground, one column standing entirely alone: the Column of Phocas, raised in 608 for a Byzantine emperor, on a second-hand shaft. It was the last monument ancient Rome ever put up in its Forum, and a thousand-year habit ended there, quietly, with recycled stone.\n\nThen comes the strangest chapter, the one this view doesn't show. When the empire fell away, the Forum didn't collapse so much as sink — flood silt and rubble buried it metres deep, and for centuries the place carried another name entirely: the Campo Vaccino. The cow field. Cattle grazed here; column tops poked out of the grass like fence posts; artists came to sketch the ruins with the herds drifting through. The centre of the world became a pasture, and Rome, busy elsewhere, barely noticed. Nearly everything below you was dug back out within the last two hundred years.\n\nThat's the real subject from up here — not how the Forum died, but how long its afterlife has run. Longer now, by a comfortable margin, than the life.\n\nIf you can manage it, come back after dark. The ruins are floodlit, the terrace is nearly empty, and the cows, at long last, are gone."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 155,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8925,
+      "centroidLongitude": 12.4853,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Power",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "137146d0-0398-5074-8c5c-484d1244172d",
+      "createdAt": "2026-07-27",
+      "title": "The Pantheon",
+      "shortDescription": "Two thousand years of visitors have been thanking the wrong Roman.",
+      "longDescription": "The inscription credits Agrippa, but Agrippa's building burned — twice. What stands is Hadrian's complete rebuild, finished around 125, with the old name kept on the front and his own left off entirely. Inside is the reason the building matters: the largest unreinforced concrete dome ever built, as high as it is wide, open to the sky through an oculus that has been draining into a sloped marble floor since the beginning.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-pantheon_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-pantheon_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-pantheon_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-pantheon_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-pantheon_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-pantheon_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d3a9bf64-a15a-5a57-a64b-3566802e55ae",
+          "order": 0,
+          "title": "The Pantheon",
+          "caption": "The inscription over the entrance is a very generous credit.",
+          "latitude": 41.8986,
+          "longitude": 12.4769,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-pantheon.mp3",
+          "audioDurationSeconds": 150,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-pantheon_hero.webp",
+          "transcriptText": "The inscription over the entrance is a very generous credit. \"Marcus Agrippa, son of Lucius, made this,\" it says — but Agrippa's building burned, twice, and what you're looking at is a complete rebuild by the emperor Hadrian, finished around the year 125. Hadrian kept the old name on the front and left his own off entirely, and two thousand years of visitors have been thanking the wrong Roman ever since.\n\nYou should be in Piazza della Rotonda, facing the portico — sixteen columns of grey and rose granite, each one a single piece of stone, quarried in Egypt and shipped across the Mediterranean because Rome wanted columns that the world's biggest empire couldn't produce at home.\n\nBut the portico is a curtain-raiser. Go inside when you can, because the room behind it is the reason this building matters: the dome is over forty-three metres across, still the largest unreinforced concrete dome ever built, and it is exactly as high as it is wide — a perfect sphere would fit inside the space, resting on the floor and touching the top. The engineering is Roman pragmatism at its best: the concrete gets lighter as it climbs, finishing in featherweight volcanic stone around the oculus, the open eye at the crown. And it is genuinely open. Rain falls straight into the building, onto a marble floor that has sloped, from the beginning, toward twenty-two discreet drains. The Romans didn't fight the sky; they plumbed for it.\n\nThe Pantheon is the best-preserved ancient building in Rome, and the reason is hiding in plain sight: it never closed. It became a church in 609 — Santa Maria ad Martyres, still active, still holding Mass — and a building in continuous use for two thousand years never gets quarried, never gets forgotten, never sinks under the silt. Raphael understood; he chose to be buried here, and here he is. The Pantheon isn't preserved, exactly. It's just still open.\n\nIf you're lucky enough to be here in the rain, don't take shelter — go in. Watching a column of weather fall through the roof of a Roman temple, onto drains cut by Roman plumbers, is one of the quietest astonishments this city has to offer."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 150,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8986,
+      "centroidLongitude": 12.4769,
+      "city": "Rome",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Religious Building",
+        "Architecture",
+        "Engineering",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1ea2031e-cb40-5845-980f-1d1f85222c57",
+      "createdAt": "2026-07-27",
+      "title": "The Trevi Fountain",
+      "shortDescription": "Rome's grandest monument is, before anything else, the end of a pipe.",
+      "longDescription": "The Trevi is the theatrical mouth of the Aqua Virgo, an aqueduct built under Augustus and still feeding the fountain today. Nicola Salvi won the competition in the 1730s and died before the water was turned on. The giant in the central arch isn't Neptune but Oceanus, his chariot drawn by one calm sea horse and one thrashing — the whole sea described in two animals.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d9463681-b0bf-5659-8d98-dd7e2ace9086",
+          "order": 0,
+          "title": "The Trevi Fountain",
+          "caption": "What you're looking at is the end of a pipe. A glorious end, admittedly — but the Trevi Fountain is, before anything else, the theatrical mouth of an aqueduct.",
+          "latitude": 41.9009,
+          "longitude": 12.4833,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trevi-fountain.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_hero.webp",
+          "transcriptText": "What you're looking at is the end of a pipe.\n\nA glorious end, admittedly — but the Trevi Fountain is, before anything else, the theatrical mouth of an aqueduct. The Aqua Virgo was built under the emperor Augustus, more than two thousand years ago, to carry spring water into the centre of Rome, and a descendant of that same channel still feeds the fountain in front of you. Romans built triumphal arches for their generals; this is something rarer — a triumphal arch for their plumbing.\n\nYou should be in the small piazza facing the fountain, which fills one entire side of the square and climbs the full face of the palace behind it. That's the trick of the Trevi: it isn't a fountain in front of a building, it's a building dissolving into water. The design is by Nicola Salvi, who won the competition in the 1730s and spent the rest of his life on it; he died before the water was turned on, and the fountain was finished in 1762.\n\nThe giant in the central arch is not Neptune, though nearly everyone assumes so — he's Oceanus, the older, stranger god of all the world's water. His chariot is drawn by two sea horses, one calm and one thrashing, which is the whole sea described in two animals. And the rockwork spilling toward you isn't a pedestal; it's carved to look as though the palace is breaking open and the water is escaping.\n\nAbout the coins. The story goes that one coin thrown over your left shoulder brings you back to Rome — a legend, but a productive one, because the city collects the money for charity, and the fountain quietly raises well over a million euros a year for people who need it. These days access to the water's edge is metered, with a small ticket in daytime hours; the view from the piazza is free, always, and after the barriers open at night you can walk down for nothing.\n\nIf you can, come back late, after the crowds thin. The floodlights turn the travertine gold, the water is the loudest thing in the square, and the end of a Roman pipe becomes, briefly, the most beautiful place in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.9009,
+      "centroidLongitude": 12.4833,
+      "city": "Rome",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Monument",
+        "Architecture",
+        "Baroque",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "408e3ea7-5407-5498-a692-ffbc300c451d",
+      "createdAt": "2026-07-27",
+      "title": "The Spanish Steps",
+      "shortDescription": "Nothing about the Spanish Steps is Spanish.",
+      "longDescription": "French money, a French church at the top, an Italian architect — and a Spanish embassy in the square below that quietly lent its name to the lot. At the bottom sits the Barcaccia, Pietro Bernini's half-sunken boat, shaped that way because the aqueduct feeding the square arrives with almost no pressure. A plumbing problem became the most relaxed fountain in Rome.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spanish-steps_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spanish-steps_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spanish-steps_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3cac6530-d5fc-5326-94f1-aca450edb92b",
+          "order": 0,
+          "title": "The Spanish Steps",
+          "caption": "Nothing about the Spanish Steps is Spanish. The money was French — a diplomat's bequest, left specifically to build a grand stairway up the hill.",
+          "latitude": 41.9058,
+          "longitude": 12.4823,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/spanish-steps.mp3",
+          "audioDurationSeconds": 153,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spanish-steps_hero.webp",
+          "transcriptText": "Nothing about the Spanish Steps is Spanish.\n\nThe money was French — a diplomat's bequest, left specifically to build a grand stairway up the hill. The church at the top, Trinità dei Monti, is French too, and still is. The design is by an Italian, Francesco de Sanctis, who built the great sweep in the 1720s. The only Spanish thing here was the Spanish embassy, which happened to sit in the square below and quietly lent its name to the whole ensemble. One of the most famous landmarks in Italy is, on inspection, a Franco-Spanish diplomatic misunderstanding — and it works anyway.\n\nYou should be at the bottom, in Piazza di Spagna, beside the low fountain shaped like a sinking boat. That's the Barcaccia, and it's by Gian Lorenzo Bernini's father, Pietro. The sunken design isn't a whim — the aqueduct feeding this square arrives with almost no pressure, so a conventional fountain would barely have dribbled. He carved a half-submerged barge instead, and turned a plumbing problem into the most relaxed fountain in Rome. There's a story that a real boat washed up here in a great flood and inspired the shape; it's a legend, but Romans are fond of it.\n\nNow look up at the staircase itself: a hundred and thirty-odd steps in warm travertine, splitting and rejoining around terraces like a slow waterfall in stone. It was built as urban theatre — a place to loiter, promenade, be seen — and for three centuries that's exactly what people did, until the city, deciding the steps were being loved to death, banned sitting on them. So the steps have ended up as pure sculpture: a grandstand you can't sit in, and somehow still the best people-watching in the city.\n\nOne quieter thing. The rose-coloured house at the bottom right of the steps is where the poet John Keats came hoping the Roman climate would heal his lungs. It didn't; he died there in 1821, at twenty-five, in a small room overlooking all of this. The house is now a museum to him, in the middle of the least melancholy square in Rome.\n\nClimb to the first terrace and turn around. The view down Via dei Condotti — that straight canyon of shopfronts — is the same axis travellers have admired for three hundred years. The steps were always a stage. You're on it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 153,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.9058,
+      "centroidLongitude": 12.4823,
+      "city": "Rome",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Public Square",
+        "History",
+        "Baroque",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "20f2428b-aff3-54f6-af9c-bf6d60fdfe98",
+      "createdAt": "2026-07-27",
+      "title": "Piazza Navona",
+      "shortDescription": "You aren't standing on the site of a stadium. You're standing in one.",
+      "longDescription": "Piazza Navona is the exact footprint of the Stadium of Domitian, built in 86 for Greek-style athletics; the buildings around you sit on its grandstands, and even the name is worn down from agones, the games. At the centre is Bernini at full volume — the Fountain of the Four Rivers, its obelisk balanced over a hollowed crag on almost nothing at all, and holding for four centuries.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-navona_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-navona_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-navona_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-navona_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-navona_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-navona_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "63946c88-1652-5675-a794-14b83f45371c",
+          "order": 0,
+          "title": "Piazza Navona",
+          "caption": "You're standing in a stadium. Not on the site of one — in one.",
+          "latitude": 41.8992,
+          "longitude": 12.4731,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/piazza-navona.mp3",
+          "audioDurationSeconds": 172,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-navona_hero.webp",
+          "transcriptText": "You're standing in a stadium.\n\nNot on the site of one — in one. The long oval of Piazza Navona is the exact footprint of the Stadium of Domitian, built in the year 86 for Greek-style athletics, and the buildings around you stand directly on the foundations of its grandstands. Thirty thousand Romans once sat where the restaurants are. Even the name remembers it: the games were called agones, which fifteen centuries of Roman mouths slowly wore down into \"Navona.\" The stones went the way all Roman stones go, but the empty space — the shape of the arena itself — has survived for nearly two thousand years. In Rome, even the voids are ancient.\n\nYou should be near the centre of the square, at the Fountain of the Four Rivers. This is Gian Lorenzo Bernini at full volume, from 1651: four colossal marble figures for the great rivers of four continents — the Danube, the Ganges, the Nile, the Plate — arranged around a hollowed-out crag of rock with an Egyptian-style obelisk balanced on top. Look at how little stone actually holds that obelisk up; the void underneath was Bernini showing off, and it has held for close to four centuries.\n\nYou may hear that the Nile figure covers his head in horror at the church behind him, Sant'Agnese, built by Bernini's great rival Borromini — and that one of the other figures raises a hand to shield himself in case the facade collapses. It's a wonderful story, and it's a legend: the fountain was finished before Borromini's facade went up. The rivalry was real; the insult is folklore. The Nile hides his face because, at the time, nobody knew where the Nile began.\n\nOne more picture to hold in your mind. For about two hundred years, on August weekends, the city plugged the fountain drains and flooded the whole centre of the square, turning it into a shallow lake. Carriages drove through the water; the nobility circled in the spray; the poor waded. A stadium, then a lake, now a piazza — the same oval, endlessly recast.\n\nWalk the perimeter once before you leave, following the curve of the buildings at the northern end. That bend in the architecture is the bend of the grandstand behind it. You're doing a lap."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 172,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8992,
+      "centroidLongitude": 12.4731,
+      "city": "Rome",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Public Square",
+        "Architecture",
+        "Baroque",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "54bf1d1a-5468-578f-bbbf-13616836c322",
+      "createdAt": "2026-07-27",
+      "title": "St Peter's Square",
+      "shortDescription": "You crossed an international border a few steps back, and nothing marked it.",
+      "longDescription": "A shallow line of white stone in the paving is where Italy ends and Vatican City begins. Bernini laid out the square in the 1650s and described the colonnades exactly as they look — arms, reaching out to gather people in. Find the plain round stone between the obelisk and a fountain, stand on it, and four rows of columns snap into a single file. He built the illusion in and never signposted it.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e2d97845-f356-5f16-9bf6-f75d72228411",
+          "order": 0,
+          "title": "St Peter's Square",
+          "caption": "You crossed an international border a few steps back, and nothing marked it — no gate, no checkpoint, just a shallow line of white stone in the paving where Italy ends and Vatican City begins.",
+          "latitude": 41.9022,
+          "longitude": 12.4568,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-peters-square.mp3",
+          "audioDurationSeconds": 152,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_hero.webp",
+          "transcriptText": "You crossed an international border a few steps back, and nothing marked it — no gate, no checkpoint, just a shallow line of white stone in the paving where Italy ends and Vatican City begins. This is St. Peter's Square, the front porch of the smallest country on earth.\n\nStand anywhere along the centre of the square, facing the basilica, with the obelisk between you and the dome. On either side of you, two enormous curved colonnades sweep out from the church like a pair of open arms.\n\nStart with those arms, because the embrace is not a guidebook metaphor — it's the design brief. Gian Lorenzo Bernini laid out the square in the 1650s and 1660s and described the colonnades as exactly that: arms, reaching out to gather people in. Four rows of columns deep, nearly three hundred columns in all, with a hundred and forty stone saints keeping watch from the top.\n\nNow find the trick hidden in the paving. Between the obelisk and each fountain sits a plain round stone, easy to miss. Stand on one, look at the nearest colonnade, and the four rows of columns snap into a single file — every shaft hiding perfectly behind the one in front. Bernini built the illusion in and never signposted it.\n\nThe obelisk itself is the oldest thing here by a distance. Egyptian granite, shipped to Rome under Caligula, it stood for centuries in the circus where, by tradition, Peter was executed — a reverent piece of ground long before any church rose on it. In 1586 it was hauled to the centre of the square with an army of men, horses and winches, and of all the ancient obelisks in this city, this one — by most accounts — is the only one that never fell.\n\nNow turn around. The straight boulevard running from the square to the river is Via della Conciliazione, cut through a medieval quarter under Mussolini's regime in the 1930s. Before it existed, pilgrims threaded narrow streets and burst without warning into all this light — the surprise Bernini was counting on. The regime built the grand approach; the city absorbed it; the surprise never quite came back.\n\nBefore you move on, look down and find that border line again. You're standing inside the arms of one country, a step away from another — and the architecture was built so you'd never feel the seam."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 152,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.9022,
+      "centroidLongitude": 12.4568,
+      "city": "Rome",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Baroque",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7ed84c6e-2698-572e-901f-4fc13969845a",
+      "createdAt": "2026-07-27",
+      "title": "Castel Sant'Angelo",
+      "shortDescription": "An emperor's tomb that Rome refused to let retire.",
+      "longDescription": "Hadrian built it as a mausoleum for himself and his family. Rome then made it a fortress, a papal stronghold, a prison, and finally a museum — with a raised stone corridor running to the Vatican so popes in trouble could flee along the top of a wall. More than one did. Ten Bernini-designed angels line the bridge in front of it; the two he carved himself were judged too beautiful to leave out in the weather.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castel-santangelo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castel-santangelo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castel-santangelo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castel-santangelo_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castel-santangelo_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castel-santangelo_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "02d7e2d0-18ad-5452-836a-f681ec740cd6",
+          "order": 0,
+          "title": "Castel Sant'Angelo",
+          "caption": "The bridge under your feet has been carrying people toward that round fortress for nearly nineteen hundred years — and for most of that time, both of them have been busy being something else.",
+          "latitude": 41.9031,
+          "longitude": 12.4663,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/castel-santangelo.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castel-santangelo_hero.webp",
+          "transcriptText": "The bridge under your feet has been carrying people toward that round fortress for nearly nineteen hundred years — and for most of that time, both of them have been busy being something else.\n\nStand at the middle of Ponte Sant'Angelo, facing the great drum-shaped building across the river. Along both balustrades, ten marble angels line your path, each holding something aloft. The river below is the Tiber; the three arches at the centre of the bridge are the Roman originals, laid down in the 130s AD.\n\nThe building first, because its résumé is the whole point. It began as the emperor Hadrian's tomb — a mausoleum for himself and his family. Then Rome, being Rome, refused to let a good building retire: it became a fortress, then a papal stronghold, then a prison, and today a museum. There's even a raised stone corridor — the Passetto — running from the castle to the Vatican, built so that popes in trouble could flee along the top of a wall. More than one did. This city doesn't just reuse its old stones; here it reassigned an entire imperial tomb.\n\nNow the angels. In the late 1660s, Bernini — by then an old man — designed all ten, each carrying an instrument of the Passion, turning the bridge into a procession. He carved two of them himself, and the pope judged those two too beautiful to leave out in the weather. So copies took their place on the balustrade, and the originals ended up in a small church near the Spanish Steps, where they still stand today — masterpieces that never met the rain.\n\nThe name comes from a story. In 590, with plague moving through the city, Pope Gregory is said to have seen the archangel Michael standing on top of the mausoleum, sheathing his sword — a sign the dying was over. It's legend, not record, but the bronze angel crowning the castle is still sheathing that sword today.\n\nOne more thing. On the far side of the castle, past the gardens, you may spot hoarding and cranes: Rome is digging a metro station down there, and like the others along that line, it will double as a museum for whatever the digging turns up. A tomb that became a fortress, a bridge that became a gallery — and underneath it all, the city is still adding layers."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.9031,
+      "centroidLongitude": 12.4663,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Power",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c15de21e-c8e2-5e35-8fea-c389b51ad4c2",
+      "createdAt": "2026-07-27",
+      "title": "Piazza del Popolo",
+      "shortDescription": "For centuries, this square was Rome's front door.",
+      "longDescription": "Travellers from the north entered through the gate on the far side, and this piazza was the first thing the city showed them — arranged entirely with that in mind. At the centre stands the obelisk carved for Ramses II over three thousand years ago and hauled here by Augustus: the first obelisk ever brought to Rome, and the start of a collection that now outnumbers the ones still standing in Egypt.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-del-popolo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-del-popolo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-del-popolo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-del-popolo_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-del-popolo_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3a8349ce-e509-5cbf-b70a-332acc303783",
+          "order": 0,
+          "title": "Piazza del Popolo",
+          "caption": "For centuries, this was the front door. Travellers coming down from the north — pilgrims, painters, poets, everyone on the road from Florence and beyond — entered Rome through the gate on the far side of this square, the Porta del Popolo, and this piazza was the first thing the city showed them.",
+          "latitude": 41.9109,
+          "longitude": 12.4763,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/piazza-del-popolo.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-del-popolo_hero.webp",
+          "transcriptText": "For centuries, this was the front door.\n\nTravellers coming down from the north — pilgrims, painters, poets, everyone on the road from Florence and beyond — entered Rome through the gate on the far side of this square, the Porta del Popolo, and this piazza was the first thing the city showed them. Everything you're looking at was arranged with that in mind. Rome has always understood first impressions, and this square is the city dressing for the door.\n\nYou should be near the obelisk at the centre — and start with it, because it has the longest résumé of any object in the square. It was carved for Ramses the Second in Egypt more than three thousand years ago, hauled to Rome by the emperor Augustus after Egypt fell, and it was the first obelisk ever brought here. Rome developed a taste for them: by most counts the city now has more ancient obelisks standing than anywhere else on earth — more than remain upright in all of Egypt. This one started the collection, and a pope moved it here in 1589 to be the pin at the centre of the arriving traveller's view.\n\nNow look south, at the two churches framing the three streets that fan into the city. They read as perfect twins — matching domes, matching porticoes — and they are not. The plots are different sizes, so the architect gave one church a round dome and the other an oval one, tuned so that from where you're standing the two look identical. It's a stage set: symmetry as illusion, built for exactly one viewpoint, and you're on it.\n\nAnd in the corner by the gate, easy to miss, sits Santa Maria del Popolo — a modest front hiding one of the best small art collections in Rome, including two Caravaggios you can see for the price of walking in. The church's origin story says it was built to settle the ghost of Nero, who was buried on this spot and haunted a walnut tree here; that's a legend, faithfully retold for nine centuries.\n\nBefore you leave, walk to the gate itself and stand in the opening, facing into the square. This is the view that ended a thousand journeys — the moment the road stopped being the road, and became Rome."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.9109,
+      "centroidLongitude": 12.4763,
+      "city": "Rome",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Public Square",
+        "History",
+        "Neoclassical",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6b12c6ef-e8f9-574e-87bf-2e46f2008238",
+      "createdAt": "2026-07-27",
+      "title": "Campo de' Fiori",
+      "shortDescription": "Every great square in central Rome has a church. Except this one.",
+      "longDescription": "Campo de' Fiori never got a church, a basilica, or even a chapel. What it got is a hooded bronze figure in the middle, facing the Vatican: Giordano Bruno, the philosopher burned here in 1600 for arguing that the universe was infinite. The market has run in this square since 1869 and still sets up every morning but Sunday, in a piazza that has never heard church bells of its own.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campo-de-fiori_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campo-de-fiori_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campo-de-fiori_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campo-de-fiori_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campo-de-fiori_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campo-de-fiori_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "13ba0eb8-57cf-5b2d-9c58-dfb6d0f3fafd",
+          "order": 0,
+          "title": "Campo de' Fiori",
+          "caption": "Every great square in central Rome has a church on it — except, famously, this one.",
+          "latitude": 41.8955,
+          "longitude": 12.4722,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/campo-de-fiori.mp3",
+          "audioDurationSeconds": 148,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campo-de-fiori_hero.webp",
+          "transcriptText": "Every great square in central Rome has a church on it — except, famously, this one. Campo de' Fiori never got a church, never got a basilica, never even got a chapel. What it got instead is standing in the middle of the square, in a dark hood, facing the Vatican.\n\nStand near the centre, by the statue. If it's morning, you're surrounded by market stalls — flowers, fruit, spices — and you'll have to weave a little. If it's evening, the stalls are gone and the square belongs to the bars around its edges. Either way, the hooded bronze figure on the pedestal is your landmark.\n\nThe name means field of flowers, and it's literal: this was a meadow into the 1400s, and it's been feeding the neighbourhood ever since it was paved. The market has run here since 1869, when it moved over from Piazza Navona, and it still sets up every morning except Sunday — one of the oldest daily rhythms in the city, in a square that has never once heard church bells of its own.\n\nNow the statue. The figure is Giordano Bruno — philosopher, former friar, and one of the most dangerous thinkers of his century. He argued that the universe was infinite, that the stars were other suns, that other worlds might circle them. For his ideas he was tried for heresy, and in 1600, on this spot, he was executed.\n\nLook at the base. The statue went up in 1889, paid for largely by university students, over the fierce objections of the Church — and the sculptor aimed Bruno's gaze deliberately, straight toward St. Peter's. Around the pedestal run medallions of other persecuted thinkers, and the inscription reads, in part: to Bruno, from the century he foresaw.\n\nThat's this square in a single frame. The city gave its most secular piazza its most defiant monument — Rome's longest argument with itself, held quietly in the middle of a produce market, with oranges and cut flowers stacked at the feet of a man who wouldn't recant.\n\nStay a moment before you go. The vendors shout, the tourists photograph the tomatoes, and Bruno keeps looking west over all of it — patient, hooded, unmoved. The century he foresaw shows up every morning and sells him flowers."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 148,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8955,
+      "centroidLongitude": 12.4722,
+      "city": "Rome",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Commerce",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "595609f3-77f0-5c4e-8168-3ba0fd34b228",
+      "createdAt": "2026-07-27",
+      "title": "The Campidoglio",
+      "shortDescription": "Michelangelo's mind, laid out in stone — and finished long after his death.",
+      "longDescription": "In 1536 Rome had an emperor coming to visit and nothing fit to receive him on its most sacred hill, so the pope handed the problem to Michelangelo. He designed the ramp, the oval paving and the three framing facades; the city kept following his drawings for centuries after he died. At the centre stands Marcus Aurelius — the only bronze equestrian statue of a pre-Christian emperor to survive, and it survived by mistake.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campidoglio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campidoglio_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campidoglio_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campidoglio_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campidoglio_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campidoglio_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d19e9238-9cd7-56e1-a035-cffdf106441e",
+          "order": 0,
+          "title": "The Campidoglio",
+          "caption": "In 1536, Rome had an emperor coming to visit and nowhere fit to receive him.",
+          "latitude": 41.8933,
+          "longitude": 12.4828,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/campidoglio.mp3",
+          "audioDurationSeconds": 153,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campidoglio_hero.webp",
+          "transcriptText": "In 1536, Rome had an emperor coming to visit and nowhere fit to receive him. Charles the Fifth was on his way, the most sacred hill of the ancient world was a muddy jumble of medieval brick, and Pope Paul the Third — mortified — handed the problem to Michelangelo. This square is the result. It took so long to build that Michelangelo saw almost none of it finished, but the city kept following his drawings for centuries after his death, and what you're standing in is essentially his mind, laid out in stone.\n\nYou should arrive the way he intended: up the Cordonata, the long shallow ramp from the street below, pitched gently enough to be climbed on horseback, with the giant statues of Castor and Pollux waiting at the top. Ahead of you, three palace facades frame the square around an oval of patterned paving, with a bronze horseman at the centre.\n\nThe horseman is Marcus Aurelius, the philosopher-emperor, and this is the only bronze equestrian statue of a pre-Christian emperor to survive from antiquity. It survived by mistake: in the Middle Ages, when pagan bronzes were melted down by the score, everyone believed this one showed Constantine, the first Christian emperor, and so it was spared. What stands out here now is a replica from 1981 — the original lives protected inside the Capitoline Museums, in the palace to your right, whose founding collection was a gift to the Roman people in 1471, which by most reckonings makes it the oldest public museum in the world.\n\nNow the pavement. The twelve-pointed star was Michelangelo's design, and for four centuries it existed only on paper — the popes never laid it, perhaps uneasy about its whiff of pagan geometry. Rome finally paved it in 1940, faithful to the drawing.\n\nAnd here is the quiet radicalism of the square: it faces the wrong way. For two thousand years this hill looked down on the Forum, the centre of the ancient world. Michelangelo turned the whole composition around, toward the living city and St. Peter's beyond it. The Renaissance didn't restore Rome's centre of gravity — it moved it, and this square is the pivot.\n\nThe palace straight ahead is still Rome's city hall, and the government inside still signs itself with the four letters the republic used: SPQR. The senate and people of Rome — technically, still in session."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 153,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8933,
+      "centroidLongitude": 12.4828,
+      "city": "Rome",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Public Square",
+        "Architecture",
+        "Power",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c9611436-6e6a-526c-ad3d-e34b9bfe6117",
+      "createdAt": "2026-07-27",
+      "title": "The Vittoriano",
+      "shortDescription": "Romans have never quite forgiven this building.",
+      "longDescription": "The wedding cake, the typewriter, the set of false teeth — the insults are part of the story, because the Vittoriano was designed to be impossible to ignore. Built between 1885 and 1927 for the first king of a united Italy, in northern marble so white it glows against a city of honey-coloured stone. That was a choice: northern stone for a northern king, planted in the middle of ancient Rome.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vittoriano_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vittoriano_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vittoriano_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vittoriano_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vittoriano_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vittoriano_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1ebb08c9-a07d-551f-b3ed-0bb1310f2023",
+          "order": 0,
+          "title": "The Vittoriano",
+          "caption": "Romans have never quite forgiven this building. Since the day it opened they've called it the wedding cake, the typewriter, the set of false teeth — and the insults are part of its story, because the Vittoriano was designed to be impossible to ignore.",
+          "latitude": 41.8955,
+          "longitude": 12.4828,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/vittoriano.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/vittoriano_hero.webp",
+          "transcriptText": "Romans have never quite forgiven this building. Since the day it opened they've called it the wedding cake, the typewriter, the set of false teeth — and the insults are part of its story, because the Vittoriano was designed to be impossible to ignore. It commemorates Victor Emmanuel the Second, the first king of a united Italy, and it rose between 1885 and 1927 in marble so aggressively white that it glows against a city built of warm, honey-coloured stone. That was a choice. The marble is Botticino, brought down from the north near Brescia — northern stone for a northern king, planted in the middle of ancient Rome.\n\nYou should be at the edge of Piazza Venezia, facing the monument — and you'll have noticed the square itself is a construction site. Rome is digging a metro station here, and it's worth knowing what's behind the hoarding: retaining walls sunk eighty-five metres down, the deepest in Europe, for a station that will double as an underground museum displaying whatever the excavation turns up. It has already turned up plenty — including a lecture hall built by the emperor Hadrian that nobody knew was there. In Rome you cannot build the future without excavating the past, and this square is where the city is doing both at once.\n\nNow look up the steps to the centre of the monument. The bronze horseman is Victor Emmanuel himself, at a scale that refuses to be read from down here: the statue is so large that in 1911, before it was hoisted into place, a formal dinner was served to a party of about twenty inside the belly of the horse. There are photographs.\n\nBelow him, flanked by two sentries who are always present, burns the flame of the Tomb of the Unknown Soldier. An unidentified soldier of the First World War lies there; his coffin was chosen in 1921 by Maria Bergamas, a mother whose own son never came home. Whatever Romans say about the building, nobody jokes about this part of it.\n\nThere's a lift around the side that rises to the roof terrace, where the view runs from the Colosseum to St. Peter's. Take it if you have the time — the building everyone loves to insult happens to be the one spot in central Rome from which you can't see it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8955,
+      "centroidLongitude": 12.4828,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Power",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "18696d8a-c775-51c5-b9d8-4129ed1ff1a1",
+      "createdAt": "2026-07-27",
+      "title": "Largo di Torre Argentina",
+      "shortDescription": "Four republican temples, several metres below the modern street.",
+      "longDescription": "The gap between the railing and the ruins is the whole story — twenty centuries of Rome stacked up until the street simply rose above its own past. Nobody ever settled which gods most of these temples served, so they go by letters: A, B, C and D. Behind them ran the Curia of Pompey, where the Senate was sitting on the Ides of March, 44 BC, when Caesar was killed.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/largo-argentina_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/largo-argentina_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/largo-argentina_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/largo-argentina_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "eeb1f0b1-a92f-5b32-9a89-cc9f785555ec",
+          "order": 0,
+          "title": "Largo di Torre Argentina",
+          "caption": "Look down. The sunken square below the railing sits several metres beneath the one you're standing on, and that gap is the whole story — twenty centuries of Rome stacked layer on layer, until the modern street simply rose above its own past.",
+          "latitude": 41.8955,
+          "longitude": 12.4768,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/largo-argentina.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/largo-argentina_hero.webp",
+          "transcriptText": "Look down. The sunken square below the railing sits several metres beneath the one you're standing on, and that gap is the whole story — twenty centuries of Rome stacked layer on layer, until the modern street simply rose above its own past.\n\nThis is Largo di Torre Argentina. You should be at the railing of a busy square — buses, trams, taxis circling — looking down into a field of ruins: column stumps, temple platforms, umbrella pines at the corners. Four temples stand side by side down there, and the oldest goes back well over two thousand years, to a Rome that was still a republic with something to prove.\n\nFind the round one first, the ring of columns near the middle. Archaeologists never fully settled which gods most of these temples served, so they go by letters instead of names: A, B, C and D. And behind them, at the far edge of the excavation, ran the great hall of Pompey's theatre complex — the Curia of Pompey, where the Senate was meeting on the Ides of March, 44 BC, when Julius Caesar was assassinated. The most consequential political killing in Roman history happened just there, behind those temple platforms, in what is now the middle of a traffic interchange.\n\nThe name, by the way, has nothing to do with Argentina. It comes from the tower on the corner — the Torre — built for a papal courtier from Strasbourg, a city whose Latin name was Argentoratum. The silver city, hiding in plain sight on the bus map.\n\nAll of this only surfaced in the 1920s, when whole blocks were demolished and the temples emerged blinking into the modern city. For nearly a century afterwards you could only peer down from up here, sharing the view with the residents who moved in when the builders moved out — a colony of cats, hundreds of them over the years, with a sanctuary of their own among the ruins. Then, in 2023, the city built a walkway down into the excavation, and for a small ticket you can descend and stand at the level Caesar knew.\n\nThat is Rome's oldest habit, and this square is the clearest place to watch it work: the past here doesn't sit behind glass. It surfaces — into a tram stop, a cat colony, a lunchtime shortcut — and the city folds it in and carries on."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 151,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8955,
+      "centroidLongitude": 12.4768,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "10cfabca-e222-5c06-bd29-1fa00c6fcbe5",
+      "createdAt": "2026-07-27",
+      "title": "The Jewish Ghetto",
+      "shortDescription": "The street smells of fried artichokes, and that matters more than it seems.",
+      "longDescription": "Via del Portico d'Ottavia runs past a broken imperial gateway that Augustus dedicated to his sister, patched in brick after a fire and then used as the city's fish market for the better part of a thousand years. In 1555 a papal decree walled these few streets in and ordered every Jew in Rome to live inside. The quarter's cooking — and its endurance — is what the walk is really about.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jewish-ghetto_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jewish-ghetto_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "aad19683-e910-5262-87fd-e178de123d51",
+          "order": 0,
+          "title": "The Jewish Ghetto",
+          "caption": "The street ahead of you smells of fried artichokes. Hold that thought — it matters more than it seems.",
+          "latitude": 41.8919,
+          "longitude": 12.4779,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jewish-ghetto.mp3",
+          "audioDurationSeconds": 173,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jewish-ghetto_hero.webp",
+          "transcriptText": "The street ahead of you smells of fried artichokes. Hold that thought — it matters more than it seems.\n\nYou should be on Via del Portico d'Ottavia, the main street of Rome's Jewish quarter, facing the ancient ruin that gives the street its name: a great broken pediment on grey columns, patched with brick, standing where the restaurant terraces end.\n\nWalk toward the columns. Augustus built this portico in the twenties BC and dedicated it to his sister Octavia — the grand entrance to a precinct that once held two temples and a pair of libraries. What stands today is mostly a repair from 203 AD, after a fire; even emperors patched in brick. Then, for the better part of a thousand years, this imperial gateway served as the city's fish market. The little church built into the ruin is still called Sant'Angelo in Pescheria — Saint Angelo at the fish market — and a stone once set the rule here that the head of any fish longer than the slab itself belonged to the city's magistrates.\n\nIn 1555, a papal decree walled in this handful of streets and ordered every Jew in Rome to live inside — gates locked at night, trades restricted, on low ground the river flooded at will. The community was even made to pay for the wall that enclosed it. That lasted more than three centuries, until Italian unification brought emancipation; the walls came down in 1888, and in 1904 the Great Synagogue rose by the river. Look for its dome above the rooftops — the one square dome on a skyline of round ones, and that was precisely the point.\n\nAs you walk here, look down now and then. Small brass cobbles sit in front of doorways, each carrying a name — the stumbling stones. They mark the homes of people taken away at dawn on 16 October 1943 and deported; almost none returned. The neighbourhood keeps their names at its feet.\n\nBy most reckonings this is the oldest Jewish community in Europe — present in Rome since before the emperors. And that is the real monument on this street. Not the portico: the continuity. The community outlasted the empire that built the gate, the papacy that built the wall, and the occupiers who came at dawn.\n\nSo order the artichokes — carciofi alla giudia, Jewish-style, invented inside these walls when constraint had to become cuisine. The street is loud, crowded and alive, and that is exactly the point of it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 173,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8919,
+      "centroidLongitude": 12.4779,
+      "city": "Rome",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Remembrance",
+        "Faith"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1d8dc722-af59-5950-b48f-53d36ef4e22f",
+      "createdAt": "2026-07-27",
+      "title": "Tiber Island",
+      "shortDescription": "Rome once turned an entire island into a ship, then gave it a cargo.",
+      "longDescription": "Ancient Rome faced the banks in travertine to sharpen the prow and raised an obelisk in the middle for a mast. Reach it across Ponte Fabricio — the oldest bridge in Rome still standing in its original form, built in 62 BC and signed, more than once, by the man who paid for it. The island's cargo has been healing ever since: a temple, then a hospice, then a hospital that is still running.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tiber-island_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tiber-island_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tiber-island_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tiber-island_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tiber-island_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0385c04a-c497-5860-acfc-4807ea80e642",
+          "order": 0,
+          "title": "Tiber Island",
+          "caption": "The island you're about to walk onto is shaped like a ship — and that's not the river's doing.",
+          "latitude": 41.8901,
+          "longitude": 12.4779,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tiber-island.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tiber-island_hero.webp",
+          "transcriptText": "The island you're about to walk onto is shaped like a ship — and that's not the river's doing. Ancient Rome faced its banks with travertine to sharpen the prow, and raised an obelisk in the middle for a mast. This city once turned an entire island into a vessel, and then gave it a cargo it has carried ever since.\n\nCross Ponte Fabricio to get there — the footbridge from the east bank, the one with the worn stone faces on its parapet. Pause halfway. This is the oldest bridge in Rome still standing in its original form, built in 62 BC, and the man who commissioned it, Lucius Fabricius, had his name carved into the arches — more than once — the Roman equivalent of signing your work. Every step you take is on his two-thousand-year-old guarantee.\n\nNow the cargo. The story goes that during a plague, Rome sent a ship to Greece to fetch help from the god of healing, and a sacred snake slithered ashore exactly here — so the temple went up on the spot the snake chose. That's legend, told the way Romans liked to tell it. What's not legend is what followed: a temple of healing, then a medieval hospice, then a hospital founded in the 1580s that is still admitting patients today, its wards filling half the island. In a city that reassigns everything — tombs into fortresses, stadiums into piazzas — this little ship has held the same job for more than two thousand years.\n\nAnd once, that job took courage. In 1943, when German forces raided the Jewish community just across the water, doctors here invented a diagnosis — a fearsome, fictional, highly contagious disease — and filled their wards with \"patients\" the occupiers were too frightened to inspect. People survived because this island kept doing what it has always done: taking people in.\n\nBefore you leave, take the steps down to the embankment and walk the island's rim at water level. From down there you can see the old travertine at the downstream tip — the last of the ship's prow, still cutting the Tiber into two streams, the way it has since the Republic."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8901,
+      "centroidLongitude": 12.4779,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0201b5ce-14e6-5d66-8924-5c55e6f24d55",
+      "createdAt": "2026-07-27",
+      "title": "Santa Maria in Trastevere",
+      "shortDescription": "If Trastevere has a living room, this is it.",
+      "longDescription": "The piazza, the fountain and the golden facade are where the neighbourhood has gathered for centuries — and at dusk, when the mosaics catch the light, it is obvious why nobody wanted to meet anywhere else. The fountain was already on a map of Rome in 1472. Across the facade, Mary and ten women with lamps have been lit for eight hundred years.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/santa-maria-trastevere_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "747dc108-b615-5437-9613-4cf70251e252",
+          "order": 0,
+          "title": "Santa Maria in Trastevere",
+          "caption": "If Trastevere has a living room, you're standing in it. The piazza, the fountain, the church with the golden face — this is where the neighbourhood has gathered for centuries, and at dusk, when the lights come up and the mosaics catch fire, you can see why nobody ever wanted to meet anywhere else.",
+          "latitude": 41.8894,
+          "longitude": 12.4696,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/santa-maria-trastevere.mp3",
+          "audioDurationSeconds": 149,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/santa-maria-trastevere_hero.webp",
+          "transcriptText": "If Trastevere has a living room, you're standing in it. The piazza, the fountain, the church with the golden face — this is where the neighbourhood has gathered for centuries, and at dusk, when the lights come up and the mosaics catch fire, you can see why nobody ever wanted to meet anywhere else.\n\nStand by the fountain in the middle of the square, facing the church. Those steps you're probably sharing with a dozen other people ring a basin that was already on a map of Rome in 1472 — by most reckonings one of the oldest fountains in the city, patched and polished by centuries of architects and still doing its original job as the neighbourhood's front porch.\n\nLook at the facade before you go in. Across the top runs a band of mosaic: Mary at the centre, flanked by ten women carrying lamps, most still lit after eight hundred years. This church claims — in an inscription carved inside — to be the first in Rome dedicated to Mary. Another basilica across town disputes the title, and the argument has been running for centuries. What's beyond dispute is that Christians were gathering here before it was even legal to be one.\n\nNow step inside, and look at the columns holding up the nave. All twenty-two of them are older than the church — hauled here in the 1140s from the ruins of the Baths of Caracalla. An emperor's bathhouse, dismantled to hold up a church: this city doesn't preserve its past so much as put it back to work.\n\nThen walk up toward the glow. The apse mosaic, from those same 1140s, shows Christ and Mary enthroned side by side — his arm resting around her shoulders, an image of plain human tenderness that has been glowing up there for nearly nine hundred years. Below it, a strip of smaller scenes from her life, laid in gold in 1291 by Pietro Cavallini, a Roman pushing mosaic toward something new: real beds, real drapery, real space — painting's future, arriving in glass.\n\nWhen you come back out, the square will still be doing what it does — kids, guitars, spritzes, pilgrims. The gold face above them has watched versions of this exact evening since the Middle Ages. Find a step. Join the room."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 149,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8894,
+      "centroidLongitude": 12.4696,
+      "city": "Rome",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Art",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "34ee1c47-2571-56ff-becb-d719f43c3efc",
+      "createdAt": "2026-07-27",
+      "title": "The Janiculum Terrace",
+      "shortDescription": "Once a day at noon, this hill fires a cannon at the city below.",
+      "longDescription": "A blank shot, ordered up in the 1840s so every church in Rome could set its bells to the same minute. The bells went electric long ago; the cannon never stopped. From Piazzale Garibaldi the whole city lies out like a map that got up and walked — and it was here, in 1849, that a young Roman republic made its last stand against a French army sent to restore the pope.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gianicolo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gianicolo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gianicolo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gianicolo_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bf69536e-a5fd-50a5-bdf2-fa8731b1fc82",
+          "order": 0,
+          "title": "The Janiculum Terrace",
+          "caption": "Once a day, at noon exactly, this hill fires a cannon at the city below.",
+          "latitude": 41.8917,
+          "longitude": 12.4617,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/gianicolo.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gianicolo_hero.webp",
+          "transcriptText": "Once a day, at noon exactly, this hill fires a cannon at the city below. It's been doing it since the 1840s — a blank shot, ordered up so that every church in Rome could set its bells to the same minute. The bells have long since gone electric. The cannon never stopped.\n\nYou're on the terrace at Piazzale Garibaldi, the top of the Gianicolo, with Rome spread out below you like a map that got up and became a city. Take the view first. The great pale dome floating to your left is St. Peter's. Straight ahead, the shallow saucer of domes and rooftops is the historic centre — you can pick out the flat grey disc of the Pantheon's dome, the white bulk of the Vittoriano, and behind them, the hills where the whole thing started.\n\nFrom up here Rome looks eternal — finished, settled, permanent. So it's worth knowing that this hill is where the newest chapter was nearly strangled at birth. In 1849, a young republic declared in Rome made its stand on the Gianicolo against a French army sent to restore the pope, and the defence, led by Giuseppe Garibaldi, held out here for weeks before falling. The equestrian statue behind you is his; the stone busts lining the promenade are the men who fought beside him. Italy as a country was, in part, argued into existence on this ground.\n\nNow walk a few minutes down the road toward the city and you'll meet the Fontanone — the Big Fountain — a wall of white marble arches with water thundering through it. Rome has a habit of raising triumphal arches to its own plumbing, and this is the grandest of them all: the finish line of an ancient aqueduct restored in the early 1600s, dressed in marble taken from the Roman Forum and granite columns salvaged from the original St. Peter's. Read the proud Latin inscription with sympathy — it credits the wrong aqueduct, and nobody ever corrected it.\n\nIf you can, be back up here for the last hour of light, when the domes go gold and the swifts come out. Or come at noon, and wait for it. The whole city still flinches, together, on schedule."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8917,
+      "centroidLongitude": 12.4617,
+      "city": "Rome",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Viewpoint",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cb10c8c2-243d-5646-ba30-446a006d4703",
+      "createdAt": "2026-07-27",
+      "title": "The Mouth of Truth",
+      "shortDescription": "The most photographed face in Rome is, in all likelihood, a drain cover.",
+      "longDescription": "The Mouth of Truth is an ancient marble disc nearly two metres across, most likely a drain that once swallowed rainwater in the cattle market that filled this square. Some time in the Middle Ages it picked up a better job and a legend: put your hand in and tell a lie, and the mouth bites it off. Folklore, not history — but a 1953 scene in Roman Holiday sent it around the world.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bocca-della-verita_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bocca-della-verita_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bocca-della-verita_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6744ae38-ce4c-5dd2-a35b-1283de46b742",
+          "order": 0,
+          "title": "The Mouth of Truth",
+          "caption": "The most photographed face in Rome is, in all likelihood, a drain cover.",
+          "latitude": 41.888,
+          "longitude": 12.4813,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bocca-della-verita.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bocca-della-verita_hero.webp",
+          "transcriptText": "The most photographed face in Rome is, in all likelihood, a drain cover. That's the leading theory, anyway — and somehow it makes the whole thing better.\n\nYou're in Piazza della Bocca della Verità, on the flat ground between the Tiber and the Circus Maximus. The medieval church with the tall, elegant bell tower is Santa Maria in Cosmedin, and the queue along its porch is waiting for the Mouth of Truth — a great marble disc, nearly two metres across, carved with the face of a bearded god, mouth open.\n\nThe mask first. It's ancient — most scholars read the face as Oceanus, god of the sea — and it probably began life flat on the ground, swallowing rainwater in the cattle market that once filled this square. Some time in the Middle Ages it picked up a better job and a legend to go with it: put your hand in the mouth and tell a lie, and the mouth bites it off. That's folklore, not history — a story medieval Rome told itself — but it stuck, and in 1953 a scene in Roman Holiday sent it around the world. The disc has been propped in this porch since 1632, taking hands ever since.\n\nWhile the queue shuffles, look at what's around you, because this square is a survivor's gallery. The little round temple by the river — the one that looks like a Greek postcard — is the Temple of Hercules Victor, one of the oldest marble buildings in the city, standing more or less intact since the Republic. Its rectangular neighbour, the Temple of Portunus, has done nearly as well. This was the Forum Boarium, Rome's riverside cattle market, and its working buildings simply never stopped standing.\n\nHere's the thing worth carrying away. Rome is a city where a piece of ancient plumbing can become a global celebrity, while two of the best-preserved temples of the ancient world stand quietly across the road, unphotographed, keeping their own counsel. Test the legend if you like — the line moves fast, and the church behind it, cool and dim and eight hundred years old, is the reward almost nobody stays for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.888,
+      "centroidLongitude": 12.4813,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Religious Building",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b7505267-48e7-5ad6-8924-a1e347750012",
+      "createdAt": "2026-07-27",
+      "title": "The Circus Maximus",
+      "shortDescription": "The largest venue for live entertainment ever built. Today it's a field.",
+      "longDescription": "Put the stadium back as you look: a hundred and fifty thousand people packed into the valley, twelve chariots coming off the line in a wall of dust, four colour-coded teams and a crowd screaming for them. The grass banks were tiers of stone and timber; down the middle ran a spine of lap counters, shrines and two Egyptian obelisks — one of which now stands in Piazza del Popolo.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/circus-maximus_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/circus-maximus_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/circus-maximus_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/circus-maximus_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/circus-maximus_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a9d4ae77-0709-5b18-ad5b-52f8da5ca3fa",
+          "order": 0,
+          "title": "The Circus Maximus",
+          "caption": "It's race day, sometime in the second century. A hundred and fifty thousand people — some say a quarter of a million — are packed into the valley you're looking at, screaming for one of four colour-coded teams, while twelve chariots come off the line at the far end in a wall of dust and noise.",
+          "latitude": 41.8859,
+          "longitude": 12.4853,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/circus-maximus.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/circus-maximus_hero.webp",
+          "transcriptText": "It's race day, sometime in the second century. A hundred and fifty thousand people — some say a quarter of a million — are packed into the valley you're looking at, screaming for one of four colour-coded teams, while twelve chariots come off the line at the far end in a wall of dust and noise. This was the largest venue for live entertainment ever built by anyone, anywhere. And today it's a field.\n\nStand at the rail above the long grassy basin, anywhere along Via del Circo Massimo, with the umbrella pines of the Palatine Hill rising on the far side. The shape below you is the whole show: a flattened U, six hundred metres long, its curved end to your right.\n\nNow put the stadium back. The grass banks you're looking at were tiers of stone and timber seating, wrapping the whole valley. Down the middle ran a long spine crowded with monuments — lap counters shaped like eggs and dolphins, shrines, and a pair of Egyptian obelisks. Here's the connection worth having: one of those obelisks is the one now standing in Piazza del Popolo — the first obelisk ever brought to Rome. Before it presided over a piazza, it spent fifteen centuries watching chariots take the turn at full speed, right about where the joggers are now.\n\nThe emptiness, oddly, is the exhibit. Almost every other ancient monument in Rome survives as a ruin you look at; the Circus survives as a space you can use. Romans run laps in it, walk dogs across it, fill it for concerts and championship celebrations — a quarter of a million people still turn up on the big nights, which is exactly what the valley was built for. The seating went into other buildings centuries ago, but the shape, the scale, the purpose — those never left.\n\nBefore you go, walk down onto the grass and along the centre line, where the spine ran. Palatine on one side, Aventine on the other, the roar long gone. It's the rarest kind of ancient site: one that's still doing its job, just more quietly."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8859,
+      "centroidLongitude": 12.4853,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Park",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fd4761f2-de44-5088-b631-42d5b85fc9ba",
+      "createdAt": "2026-07-27",
+      "title": "The Aventine Orange Garden",
+      "shortDescription": "Rome with the volume turned down — and two carefully engineered views.",
+      "longDescription": "The Orange Garden was laid out in the 1930s inside the ramparts of a medieval fortress, deliberately planned as the city's third great belvedere alongside the Pincio and the Gianicolo. Walk the central avenue toward the terrace with your eye on the dome of St Peter's: it appears to shrink as you approach, a trick of the framing pines that works every time, on everyone.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aventine_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aventine_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aventine_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5365e2be-dc34-5888-91c4-406de97acbf4",
+          "order": 0,
+          "title": "The Aventine Orange Garden",
+          "caption": "After the crowds down the hill, the quiet up here feels almost suspicious.",
+          "latitude": 41.8842,
+          "longitude": 12.4797,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/aventine.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aventine_hero.webp",
+          "transcriptText": "After the crowds down the hill, the quiet up here feels almost suspicious. The Aventine is Rome with the volume turned down — gardens, monasteries, embassies, birdsong — and it holds two of the most carefully engineered views in the city. Nothing you're about to see is an accident.\n\nBegin under the orange trees. The walled garden at the top of the hill is the Giardino degli Aranci — the Orange Garden — laid out in the 1930s inside the surviving ramparts of a medieval family fortress, deliberately planned as the city's third great belvedere, alongside the Pincio and the Gianicolo. Walk the central avenue toward the terrace and keep your eye on the dome of St. Peter's floating dead ahead. Watch it as you go: the dome appears to shrink as you approach — a trick of the framing pines that works every single time, on everyone.\n\nThe terrace itself gives you the river, the rooftops, and the whole city arranged for inspection. And just outside the garden gate stands Santa Sabina, a basilica from the 400s that still looks and feels like the 400s — plain, luminous, and largely untouched. Its carved wooden doors are original: sixteen centuries old and still on their hinges.\n\nNow walk a few minutes along the crest to a small piazza decorated with obelisks and coats of arms, and find the tall green door. This is the priory of the Knights of Malta, and set into the door is the most famous keyhole in the world. Lean in. Down a tunnel of clipped hedges, perfectly centred, sits the dome of St. Peter's — and the alignment is deliberate, designed in the 1760s by Piranesi when he rebuilt this corner of the hill. One more thing to know while your eye is at the brass: the garden belongs to the Knights, a sovereign order; the hill is Italy; the dome is Vatican City. Three countries, one keyhole.\n\nLegend says Remus stood on this hill watching for omens while his brother watched from the Palatine — and Remus, famously, lost. His hill got the better deal. The Palatine got the emperors. The Aventine got the peace."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8842,
+      "centroidLongitude": 12.4797,
+      "city": "Rome",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Viewpoint",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d6359d60-1698-564f-8c3e-e97d68eba791",
+      "createdAt": "2026-07-27",
+      "title": "The Baths of Caracalla",
+      "shortDescription": "Not a palace. Not a temple. A place where ordinary people came to get clean.",
+      "longDescription": "Caracalla opened these baths in 216 AD across more than eleven hectares, holding sixteen hundred Romans at a time: hot rooms, cold rooms, a swimming pool, exercise yards, gardens and lecture halls, cheap enough that nearly everyone came. If you want to know what Rome thought power was for, it's this — the emperors didn't just conquer the world, they heated the water. In the 500s invaders cut the aqueducts, and it simply went dry.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baths-of-caracalla_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baths-of-caracalla_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baths-of-caracalla_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "45cea8fb-8c80-5b2e-8d41-da2fca8a63ed",
+          "order": 0,
+          "title": "The Baths of Caracalla",
+          "caption": "Take in the scale before anything else. Those brick walls rising out of the gardens ahead of you were the changing rooms and plunge pools of a public bath — a bath that could hold sixteen hundred Romans at once, in a complex covering more than eleven hectares.",
+          "latitude": 41.879,
+          "longitude": 12.4924,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/baths-of-caracalla.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/baths-of-caracalla_hero.webp",
+          "transcriptText": "Take in the scale before anything else. Those brick walls rising out of the gardens ahead of you were the changing rooms and plunge pools of a public bath — a bath that could hold sixteen hundred Romans at once, in a complex covering more than eleven hectares. Not a palace. Not a temple. A place where ordinary people came to get clean.\n\nYou're outside the Baths of Caracalla, on the southern edge of the ancient city, and even as a ruin it's one of the biggest things Rome ever built. The emperor Caracalla opened it in 216 AD, and for three centuries it ran as something between a spa, a gym, a library and a social club: hot rooms, cold rooms, a swimming pool, exercise yards, gardens, lecture halls — an entire civic afternoon under one mosaic-floored roof, and cheap enough that nearly everyone came. If you want to understand what Rome thought power was for, it's this: the emperors didn't just conquer the world; they heated the water.\n\nThen, in the 500s, invading armies cut the aqueducts — and that was that. A building this size didn't burn or fall; it simply went dry. The day the water stopped, the greatest bathhouse in the world became, almost instantly, a quarry.\n\nAnd here's the part you've already seen without knowing it. When medieval Rome went shopping for building material, it came here. The twenty-two granite columns holding up Santa Maria in Trastevere, across the river, were carried out of these halls in the 1140s. The baths didn't vanish — they dispersed, one church and palace at a time, into the city that outlived them.\n\nThe walls got a second act, though. On summer nights, opera is staged inside the ruins — arias rising where the steam used to — and the caldarium turns out to have the acoustics of a very good theatre. Sixteen hundred bathers, then a quarry, now a stage. If you're here in season and the lights are on behind those walls, that's not a ruin you're hearing. It's a venue."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 146,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.879,
+      "centroidLongitude": 12.4924,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Engineering"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "de735b9e-65ed-53f7-bb75-db34d5d660de",
+      "createdAt": "2026-07-27",
+      "title": "The Ara Pacis and the Mausoleum of Augustus",
+      "shortDescription": "Augustus wrote his own obituary. These are the monuments that enforced it.",
+      "longDescription": "Thirty-five chapters of everything he wanted remembered — and two buildings to make sure the remembering happened. The Ara Pacis, consecrated in 9 BC, carries some of the finest carving Rome ever produced, buried under four metres of Tiber silt until engineers froze the waterlogged ground solid in 1937 to cut the last pieces free. Across the square, the vast brick circle is the tomb he built for himself.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ara-pacis_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ara-pacis_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ara-pacis_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "55e8258c-adc8-5ef0-9cab-c3b2f2086bb1",
+          "order": 0,
+          "title": "The Ara Pacis and the Mausoleum of Augustus",
+          "caption": "Augustus wrote his own obituary — thirty-five chapters of everything he wanted remembered, in his own words — and this square holds the two monuments he built to make sure the remembering happened.",
+          "latitude": 41.9061,
+          "longitude": 12.4753,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ara-pacis.mp3",
+          "audioDurationSeconds": 182,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ara-pacis_hero.webp",
+          "transcriptText": "Augustus wrote his own obituary — thirty-five chapters of everything he wanted remembered, in his own words — and this square holds the two monuments he built to make sure the remembering happened.\n\nYou should be in Piazza Augusto Imperatore, freshly relaid, between a long glass-and-travertine museum on the river side and a vast circle of brick and cypress in the middle of the square. The glass box holds the Ara Pacis, the Altar of Augustan Peace. The circle is the Mausoleum of Augustus, the tomb he built for himself and his family.\n\nNow. The altar first. Consecrated in 9 BC to celebrate the peace Augustus brought home from his campaigns, it carries some of the finest carving Rome ever produced — a marble procession of the imperial family, children tugging at togas included. Then the Tiber buried it under four metres of silt. Fragments kept surfacing beneath a palazzo from the 1500s onwards, and in 1937 engineers froze seventy cubic metres of waterlogged ground solid just to cut the last pieces free.\n\nIt was reassembled here in 1938, on the two-thousandth anniversary of Augustus's birth — the centrepiece of the fascist government's remaking of this entire square, which levelled whole blocks to stage the ancient empire as backdrop for a modern one. That layer is still legible in the stern buildings around you, and in the obituary itself — the Res Gestae, recopied in that era onto a wall that survives beside the museum. The glass pavilion over the altar came in 2006, the first major new building in Rome's historic centre since the fascist years, and Romans have argued about it ever since; some still want it gone.\n\nThe mausoleum opposite is older than all of it — 28 BC, roughly ninety metres across, by most reckonings the largest circular tomb ever built. It held the ashes of Augustus and his dynasty, then spent the centuries as fortress, garden, bullring and concert hall, and is now deep in the final act of a restoration years in the making. You can't go inside yet. Two obelisks once flanked its door; one of them stands today on the Quirinal Hill.\n\nAugustus understood before anyone that power is partly memory management. Two thousand years of popes, dictators, architects and restorers have been re-curating him ever since — and the emperor is still under restoration, which he might have taken as a compliment. It means Rome is still deciding how to remember him."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 182,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.9061,
+      "centroidLongitude": 12.4753,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History",
+        "Power"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "69d08739-f300-56b7-8c41-67f1e08b745b",
+      "createdAt": "2026-07-27",
+      "title": "The Pincio Terrace",
+      "shortDescription": "Half of Rome drifts up here on a clear evening without ever agreeing to.",
+      "longDescription": "The Pincio overlook faces west across Piazza del Popolo, the obelisk and the twin-domed churches, with the dome of St Peter's lined up on the horizon almost as if someone planned it. Someone did — the terrace and the square below were laid out together in the early 1800s as a single composition, and the Pincio opened as Rome's first public garden at a time when nearly every park in Europe still belonged to somebody.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pincio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pincio_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "74401c12-416a-5de9-9ae0-254b584094c7",
+          "order": 0,
+          "title": "The Pincio Terrace",
+          "caption": "On a clear evening, half of Rome seems to drift up here without ever agreeing to — and then just stands still, facing west.",
+          "latitude": 41.9105,
+          "longitude": 12.4785,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pincio.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pincio_hero.webp",
+          "transcriptText": "On a clear evening, half of Rome seems to drift up here without ever agreeing to — and then just stands still, facing west.\n\nThis is the Pincio Terrace, on the edge of the Villa Borghese gardens. You should be on a broad paved overlook with a stone balustrade, umbrella pines behind you and the city falling away in front. Directly below sits the great oval of Piazza del Popolo — the twin-domed churches, the obelisk at the centre, maybe the spot where you stood earlier — and beyond it, on the horizon, the dome of St Peter's, lined up with the terrace almost as if someone planned the view. Someone did.\n\nWalk to the balustrade. Two thousand years ago this hillside held the terraced gardens of Lucullus — a Roman general so famous for his banquets that his name still means luxurious living. For centuries the view from up here belonged to whoever owned the hill. Then, in the early 1800s, the terrace and the square below were laid out together as one composition — ramps, oval, overlook — and the Pincio opened as Rome's first public garden, at a time when nearly every park in the city was still some aristocrat's back lawn. The best view in Rome, handed to everyone.\n\nThe promenade behind you kept adding furniture to the idea. Stone busts line the paths — a couple of hundred of them, an open-air hall of fame of Italian poets, scientists and patriots, gathering since the mid-1800s. And a few minutes' walk into the gardens stands one of the city's oddest treasures: a water clock, built by a Dominican friar in 1867, ticking away on its own little island — a grandfather clock run entirely on falling water, and still keeping time.\n\nRome planned its three great balconies deliberately — this one, the Gianicolo across the river, the Orange Garden on the Aventine — and this is the original of the trio.\n\nLucullus threw the most exclusive dinner parties in Roman history on this slope. Now anyone with an evening to spare gets his view for nothing — which might be the quietest, most complete victory the public ever won over a rich man. Stay for the light. It's the whole point."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 143,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.9105,
+      "centroidLongitude": 12.4785,
+      "city": "Rome",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Viewpoint",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "81cd2cae-8115-5bd1-b9cc-bda95a7a8320",
+      "createdAt": "2026-07-27",
+      "title": "Piazza Barberini",
+      "shortDescription": "Look for the bees. Once you spot the first three, you'll see them everywhere.",
+      "longDescription": "At the centre of the square, Bernini's Triton kneels on an open scallop shell blowing water from a conch — carved not in marble but in travertine, the rough stone Rome is built from, so the god looks like he grew out of the city. Four dolphins hold the shell up, and between their tails sits the papal crest with three bees: the emblem of the Barberini, and a family signature you will now find all over Rome.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-barberini_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-barberini_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-barberini_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "22cefaa1-ad1f-5be6-8983-032b5a649502",
+          "order": 0,
+          "title": "Piazza Barberini",
+          "caption": "Look for the bees. Once you spot the first three, you'll start seeing them everywhere — and that's exactly what the family who put them there intended.",
+          "latitude": 41.9037,
+          "longitude": 12.4885,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/piazza-barberini.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-barberini_hero.webp",
+          "transcriptText": "Look for the bees. Once you spot the first three, you'll start seeing them everywhere — and that's exactly what the family who put them there intended.\n\nThis is Piazza Barberini, a busy, traffic-ringed square at the foot of the Quirinal Hill, and at its centre a muscular figure of weathered stone kneels on an open scallop shell, head tilted back, blowing a jet of water out of a conch. That's the Triton Fountain — Bernini, 1643 — carved not in marble but in travertine, the rough, pitted stone Rome is built from, so the sea god looks like he grew out of the city rather than being placed in it. Below him, four dolphins hold the shell aloft, and between their tails sits the papal crest with three bees. The water he's blowing skyward, incidentally, arrived by aqueduct — Rome never stopped throwing parades for its plumbing.\n\nLook at the Triton first, then find the small fountain at the corner of Via Veneto: a shell opening like a book, with bees crawling down to drink. The Fountain of the Bees, Bernini again, a year later.\n\nThe bees were the emblem of the Barberini, the family of Pope Urban VIII, and this whole corner of Rome was effectively their front garden. Their palace stands just up the slope — and inside it, the great rivalry of the Roman Baroque shares a single building. When the original architect died in 1629, the job went to Bernini, then a young sculptor-prodigy, over the older man's assistant — a prickly, brilliant draughtsman named Borromini, who stayed on anyway. Each left a staircase. Bernini's is grand, square and made to impress; Borromini's, across the courtyard, is an oval spiral that seems to turn itself upward like a shell — with tiny bees carved into its columns. Same palace, same patron, two irreconcilable souls. Keep that pair in mind; this story finishes one hill over.\n\nThe family took as freely as it gave. When bronze was stripped from the Pantheon's porch in their era, Romans pinned it on them with a shrug that became a proverb: what the barbarians didn't do, the Barberini did.\n\nPower fades, but branding is forever. The popes' names wear off the guidebooks — the bees are still drinking at the fountain."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.9037,
+      "centroidLongitude": 12.4885,
+      "city": "Rome",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Public Square",
+        "Architecture",
+        "Baroque",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4e9a4a35-8415-576c-a828-fbf0d4adb3b6",
+      "createdAt": "2026-07-27",
+      "title": "The Arch of Constantine",
+      "shortDescription": "The most carefully hedged sentence in ancient Rome is carved at the top.",
+      "longDescription": "The largest Roman triumphal arch still standing, dedicated in 315 for Constantine's victory at the Milvian Bridge — and built very largely out of other emperors' sculpture. The hunting medallions were carved for Hadrian, the figures along the top are captives from Trajan's wars, the attic panels honoured Marcus Aurelius, and the earlier emperors' faces were recut. Even Rome's triumphs were assembled from spare parts.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arch-of-constantine_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arch-of-constantine_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arch-of-constantine_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arch-of-constantine_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arch-of-constantine_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arch-of-constantine_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9c0bbf3d-842a-57d9-a39c-fb384872a714",
+          "order": 0,
+          "title": "The Arch of Constantine",
+          "caption": "There's a phrase carved at the top of this arch that may be the most carefully hedged sentence in ancient Rome.",
+          "latitude": 41.8898,
+          "longitude": 12.4906,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/arch-of-constantine.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arch-of-constantine_hero.webp",
+          "transcriptText": "There's a phrase carved at the top of this arch that may be the most carefully hedged sentence in ancient Rome. We'll get to it.\n\nYou should be standing on the open ground between the Colosseum and the Palatine Hill, facing the great three-bayed marble arch. Step back far enough to see the whole face: the columns, the round medallions, the row of standing figures along the top, and the long inscription in the centre of the attic.\n\nStart with the basics. This is the largest Roman triumphal arch still standing — twenty-one metres tall, dedicated in 315 by the Senate to celebrate Constantine's victory over his rival Maxentius at the Milvian Bridge, the battle that made him master of the West. It stands where it does because this was the triumphal route: victorious armies marched right through the spot you're occupying.\n\nNow the twist. Very little of the sculpture was made for Constantine. The hunting medallions were carved for Hadrian; the figures along the top are captives from Trajan's wars; the attic panels honoured Marcus Aurelius — and the faces of those earlier emperors were recut into Constantine's. A brand-new ruler from the military frontier, wrapping himself in an anthology of better centuries. Scholars still argue whether that was propaganda or simply the best sculpture available. In Rome, it could comfortably be both.\n\nAnd then the inscription. It credits the victory to \"the inspiration of the divinity\" — and it never says which divinity. This was the moment Constantine was turning toward Christianity while most of Rome still held to the old gods, and the Senate, needing to please everyone, chose a phrase each side could read its own way. An empire changing its religion, hedging its bets in marble.\n\nThe arch survived the Middle Ages the Roman way — by being useful: a powerful family absorbed it into their fortress, and the fortress kept it standing.\n\nBefore you go, look once more at the faces in the medallions and panels, and remember whose heads they used to be. Nothing here is quite what it says it is — which may be the most Roman thing about it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8898,
+      "centroidLongitude": 12.4906,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Power",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
+      "createdAt": "2026-07-27",
+      "title": "Ancient Rome",
+      "shortDescription": "A kilometre and a half, and roughly a thousand years.",
+      "longDescription": "From the largest building the Romans ever raised to the hill where their city was born — by way of a triumphal arch, the Forum, and a column carved like a comic strip. The route makes one argument over and over: Rome doesn't preserve its past so much as reuse it, relabel it, and keep it in service. Flat until a gentle climb at the end; give it an hour and a half at a stroll.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_6.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "43f22941-083b-5eed-96b9-62a3bb5f8097",
+          "order": 0,
+          "title": "Introduction",
+          "caption": "This walk covers about a kilometre and a half, and roughly a thousand years.",
+          "latitude": 41.8902,
+          "longitude": 12.4922,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ancientrome-walk_stop0.mp3",
+          "audioDurationSeconds": 79,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "This walk covers about a kilometre and a half, and roughly a thousand years. It begins at the largest building the Romans ever put up and ends on the hill where their city was born — and along the way, it makes one argument over and over: Rome doesn't preserve its past so much as reuse it, relabel it, and keep it in service.\n\nThe route is simple. From the Colosseum you'll round its flank to a marble arch, then walk the long straight boulevard called Via dei Fori Imperiali, with the Roman Forum opening up beside you, to a column carved like a comic strip — and finish with a climb up a ramped staircase to the top of the Capitoline Hill. The ground is flat until that final climb, and the climb is gentle. One honest note: the boulevard still carries buses and taxis along part of its length, so use the crossings; the pavements on both sides are wide, and the walking is easy.\n\nGive it an hour and a half at a stroll, longer if the Forum railings catch you — they usually do.\n\nStart on the north side of the Colosseum, the side facing the Metro station, far enough back that you can see the full curve of the wall. That's where we begin: with the building every stadium on earth is still quietly copying."
+        },
+        {
+          "id": "79a1a747-d7c2-59b7-9113-9cf978fc0061",
+          "order": 1,
+          "title": "The Colosseum",
+          "caption": "You should be on the north side of the Colosseum, the flat open stretch between the amphitheatre and the Metro station, looking at the great outer wall where it still rises to its full height.",
+          "latitude": 41.8902,
+          "longitude": 12.4922,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ancientrome-walk_stop1.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-colosseum_hero.webp",
+          "transcriptText": "You should be on the north side of the Colosseum, the flat open stretch between the amphitheatre and the Metro station, looking at the great outer wall where it still rises to its full height.\n\nLook above the ground-level arches. Carved over each one, if you find the right stretch of wall, is a Roman numeral — XXIII, XXIV, XXV, still legible after nineteen centuries. Those are gate numbers. The building had eighty entrances, seventy-six of them numbered, and your ticket — a shard of pottery or bone — told you which gate, which staircase, which level. Some fifty thousand people could find their seats in minutes and empty out even faster, through passages the architects called vomitoria, which meant exactly what it sounds like: the building disgorging its crowd.\n\nThat's the thing to hold onto here, because everyone talks about what the Colosseum staged and almost no one talks about how it worked. This was crowd engineering, solved in the first century — the numbered gates, the ticketing that matched them, the one-way circulation — and it worked so well that when the modern world started building stadiums again, it didn't improve on the system. It copied it. The arena you last watched football in is running Roman software.\n\nAnd it was fast. The whole thing went up in less than a decade, opened in 80 AD, and stayed in business for the better part of four hundred years — longer than most countries have existed.\n\nBefore you move on, look at the wall one more time and find a numbered arch for yourself. It's a small thing, a gate number carved in travertine — and somehow more transporting than the whole silhouette.\n\nNow walk to your right, keeping the Colosseum on your left, and round its flank. In a couple of minutes a three-bayed marble arch appears on the open ground just beyond — the Arch of Constantine. That's our next stop."
+        },
+        {
+          "id": "ce583219-5e9a-5a70-9133-0c2749ec6f1d",
+          "order": 2,
+          "title": "The Arch of Constantine",
+          "caption": "The arch in front of you is the largest Roman triumphal arch still standing — twenty-one metres of marble, three bays, raised by the Senate in 315 to celebrate the emperor Constantine's victory over his rival at the Milvian Bridge.",
+          "latitude": 41.8898,
+          "longitude": 12.4906,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ancientrome-walk_stop2.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arch-of-constantine_hero.webp",
+          "transcriptText": "The arch in front of you is the largest Roman triumphal arch still standing — twenty-one metres of marble, three bays, raised by the Senate in 315 to celebrate the emperor Constantine's victory over his rival at the Milvian Bridge. Stand back far enough to take in the whole face of it.\n\nHere's what the Senate didn't advertise: most of what you're looking at is second-hand. The round hunting medallions were carved for Hadrian, two hundred years earlier. The statues of captive Dacians along the top were lifted from a monument to Trajan. The big rectangular panels up on the attic came from a monument to Marcus Aurelius. And on nearly all of them, the sculptors did one small, remarkable thing — they recut the emperor's face. Look closely at the figures and you're watching Hadrian and Marcus Aurelius wear Constantine's head.\n\nOnly the thin horizontal frieze above the smaller arches was carved new, and you can see the difference: the older panels are deep, muscular, alive; the new band is flatter, stiffer, more like a diagram. Historians have argued for centuries about why — whether the great workshops had declined, or whether a new emperor from the frontier was deliberately dressing himself in the wardrobe of the good emperors everyone still trusted. Both can be true at once. Either way, this is the boldest piece of recycling in a city built on it: legitimacy, cut and pasted.\n\nOne more thing this arch has seen. In 1960, the Olympic marathon finished right here, under floodlights — and an Ethiopian runner named Abebe Bikila crossed the line barefoot, the first Black African to win Olympic gold — in the capital of the country whose armies had occupied his own only a generation before.\n\nWhen you're ready, put the arch at your back and walk toward the wide boulevard that runs away from the Colosseum in a dead straight line. That's Via dei Fori Imperiali — and the next stretch of this walk happens along it, with the Roman Forum opening up on your left."
+        },
+        {
+          "id": "83949fcd-de27-5c0f-8985-0476f0151d61",
+          "order": 3,
+          "title": "The Roman Forum",
+          "caption": "You're walking now, up the long straight boulevard with the Colosseum shrinking behind you.",
+          "latitude": 41.8925,
+          "longitude": 12.4853,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ancientrome-walk_stop3.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/roman-forum-overlook_hero.webp",
+          "transcriptText": "You're walking now, up the long straight boulevard with the Colosseum shrinking behind you. Keep to the left-hand side, and take this one slowly — the railings along here are the best free view in Rome.\n\nBelow you on the left, the Roman Forum unrolls: the three great vaults of the Basilica of Maxentius, the Arch of Titus up the slope, and beyond them the columns and broken floors of what was, for centuries, the centre of the known world. You saw it — or will see it — from the terrace on the Capitoline; from down here at the railing it's less a panorama and more a neighbour, close enough to read.\n\nNow, the street you're standing on. It looks eternal. It's not even a hundred years old. In 1932, Mussolini carved this boulevard through the middle of the ancient city so his parades could run from his balcony to the Colosseum in one straight line — flattening a hill, erasing a whole packed neighbourhood, and burying parts of four imperial forums under the asphalt you're walking on. Romans have never stopped arguing about it, and the argument has finally turned into action: the city is now, piece by piece, handing the road back to walkers. You're strolling down the middle of an open question.\n\nWhile you walk, look down as well as around. The iron drain covers underfoot are stamped SPQR — the Senate and People of Rome, the same four letters the legions carried. The republic fell about two thousand years ago. The plumbing didn't get the memo.\n\nUp ahead, where the boulevard opens out toward Piazza Venezia, a single white column rises across the street on your right, a spiral of carvings winding up it like a ribbon. That's Trajan's Column — cross at the crossing, walk to the railing nearest it, and I'll meet you there."
+        },
+        {
+          "id": "2abf516d-2e0e-5a3e-a5c8-a709de4e1966",
+          "order": 4,
+          "title": "Trajan's Column",
+          "caption": "You're at the railing now, looking at the column — and behind it, climbing the hillside in a curve of brick, a honeycomb of arched openings stacked three storeys high.",
+          "latitude": 41.8958,
+          "longitude": 12.4837,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ancientrome-walk_stop4.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trajans-column_hero.webp",
+          "transcriptText": "You're at the railing now, looking at the column — and behind it, climbing the hillside in a curve of brick, a honeycomb of arched openings stacked three storeys high.\n\nThe column marks the centre of what was once the grandest of all the imperial forums, built by Trajan in the early hundreds with the loot of his wars. The spiral ribbon of carving that winds to the top tells the story of those wars in more than a hundred and fifty scenes — but you had, or will have, a longer look at that on its own. What this walk wants you to see is the brick curve behind it.\n\nThat's Trajan's Markets: a multi-level complex of shops, offices and halls, terraced into the hill, often called — with a wink and an asterisk — the world's first shopping centre. Whatever you call it, it's nineteen hundred years old and structurally sound enough that you can still walk its corridors today. The emperor built his forum for glory; his architect quietly built the thing next door for errands. Guess which one stayed in one piece.\n\nNow for the finale. Face away from the column, cross back over the boulevard, and walk toward the enormous white marble monument ahead — you can't miss it; it's the size of a hillside. Skirt around its left flank, and just behind it you'll find a long, gently ramped staircase rising between two stone lions. That ramp is called the cordonata, and at the top of it is Piazza del Campidoglio — the summit of the Capitoline Hill, and the end of our walk."
+        },
+        {
+          "id": "bc7f93dc-6b34-5549-9fae-1a546a139ed2",
+          "order": 5,
+          "title": "The Campidoglio",
+          "caption": "Take the cordonata slowly — it was designed to be climbed slowly, a ramp rather than a staircase, wide enough for a procession.",
+          "latitude": 41.8933,
+          "longitude": 12.4828,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ancientrome-walk_stop5.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/campidoglio_hero.webp",
+          "transcriptText": "Take the cordonata slowly — it was designed to be climbed slowly, a ramp rather than a staircase, wide enough for a procession. At the top, between the two colossal marble horsemen, step into the piazza and stop.\n\nYou're standing on the summit of the Capitoline Hill, in a square designed by Michelangelo, on the spot where Rome kept its most important temple for a thousand years. And here's the thing worth knowing at the end of this walk rather than the beginning: you've just retraced, more or less, the last stretch of a Roman triumph. When a victorious general paraded into the city, the route ran past where the Colosseum now stands, through the Forum along the Sacred Way, and ended up here — on this hill, at the temple of Jupiter, where the parade stopped and the sacrifice was made. Emperors walked the mile you just walked, in the other direction of history.\n\nNow cross the piazza, keeping the trapezoid of Michelangelo's paving underfoot, and find the gap to the left of the palace at the back — a narrow lane called Via del Campidoglio. Thirty seconds down it, the city falls away.\n\nThere it is: the Roman Forum, from above this time, and beyond it, at the far end of everything, the Colosseum where you started. The whole walk, in one frame.\n\nA kilometre and a half, and look what it held — a stadium the modern world still copies, an arch built from older arches, a dictator's road being handed back to walkers, a shopping centre nineteen centuries old, and a hilltop where the parades ended. None of it preserved under glass; all of it reused, relabelled, still in service. That's been the argument of this walk, and it's the one thing about Rome worth carrying home: this city doesn't keep its past. It keeps using it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 691,
+      "walkingDistanceMeters": 1500,
+      "centroidLatitude": 41.89232,
+      "centroidLongitude": 12.48692,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Power",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "675cff67-7f73-543a-8339-61b55d4a8ec8",
+      "createdAt": "2026-07-27",
+      "title": "The Baroque Heart",
+      "shortDescription": "The century Rome spent turning itself into a show.",
+      "longDescription": "The empire was ancient history and the banking fortunes had moved north, so the popes commissioned the one thing Rome could still do better than anywhere on earth: spectacle. This walk links five of the showpieces — Piazza del Popolo, the Spanish Steps, the Trevi Fountain, the Pantheon and Piazza Navona. A bit over two kilometres, flat nearly the whole way, and busy: treat the crowds as part of the design.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_5.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "e871cf1e-77a6-5e91-bfa6-a13f8d666cdb",
+          "order": 0,
+          "title": "Introduction",
+          "caption": "Rome spent the seventeenth century turning itself into a show.",
+          "latitude": 41.9109,
+          "longitude": 12.4763,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-baroqueheart-walk_stop0.mp3",
+          "audioDurationSeconds": 93,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Rome spent the seventeenth century turning itself into a show. The empire was ancient history, the banking fortunes had moved north, and the popes who ran this city understood that what Rome could still do better than anywhere on earth was spectacle — so they hired the best architects alive, pointed them at the medieval tangle, and commissioned wonder: fountains the size of palaces, staircases that pour downhill like water, squares built less for traffic than for applause.\n\nThis walk links five of those showpieces. We start at Piazza del Popolo, climb through Piazza di Spagna and the Spanish Steps, squeeze through the lanes to the Trevi Fountain, cross to the Pantheon, and finish in Piazza Navona. It's a bit over two kilometres, flat almost the whole way, on cobbles and busy shopping streets — and these are some of the most visited places in Europe, so treat the crowds as part of the scenery. Early morning and evening are gentler, but the route works at any hour.\n\nOne thing to listen for as we go: very little on this walk is quite what it claims to be. A Spanish square that turns out to be French. A fountain that's really the wall of a palace. A temple signed by the wrong man. Baroque Rome was theatre, and theatre runs on illusion — and the trick is that knowing how it's done makes it better, not worse.\n\nHead for Piazza del Popolo, and make for the obelisk at its centre."
+        },
+        {
+          "id": "e7b322ec-e3bc-58bb-ae4e-fbfde119ddc5",
+          "order": 1,
+          "title": "Piazza del Popolo",
+          "caption": "Stand near the obelisk and face away from the city gate, so the two domed churches are ahead of you across the square.",
+          "latitude": 41.9109,
+          "longitude": 12.4763,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-baroqueheart-walk_stop1.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-del-popolo_hero.webp",
+          "transcriptText": "Stand near the obelisk and face away from the city gate, so the two domed churches are ahead of you across the square. Between them and beside them, three straight streets run off into the city.\n\nThat view is the whole reason this piazza exists.\n\nThe gate behind you is the Porta del Popolo, where the main road from the north — the old Via Flaminia — entered Rome, which meant that for centuries almost everyone who reached the city overland arrived exactly here: pilgrims, merchants, ambassadors, painters, and eventually the Grand Tourists with their sketchbooks. Rome had one front door, and this was it.\n\nNow look at the three streets. The one on the far left leads toward the Spanish Steps. The one on the right runs down toward the river. And the one in the middle, Via del Corso, drives straight as a ruler for a kilometre and a half into the heart of the city. Together they're known as the Trident, and they turn this square into something much cleverer than a grand entrance — they make it a sorting machine. Rome received you in one magnificent oval room, gave you a moment to be impressed, and then dispatched you down the correct corridor for wherever you were going. We remember the Baroque city for its drama, but underneath the marble it was crowd management: the popes were handling the largest visitor flows in Europe centuries before anyone invented the term, and they did it with architecture instead of barriers.\n\nThe obelisk you're standing beside, for the record, is Egyptian — carved for a pharaoh, shipped here by an emperor, and older than the city around it.\n\nTake the left-hand street of the Trident, Via del Babuino. It's about ten minutes of straight, well-dressed walking, and it delivers you to the foot of the Spanish Steps."
+        },
+        {
+          "id": "e7115835-2851-5243-b72f-af6eaa691ce7",
+          "order": 2,
+          "title": "The Spanish Steps",
+          "caption": "Via del Babuino ends and the space opens out — this is Piazza di Spagna, and the staircase rising in tiers to your left, up to the church with the two bell towers, is the one you know from a thousand photographs.",
+          "latitude": 41.9058,
+          "longitude": 12.4823,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-baroqueheart-walk_stop2.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spanish-steps_hero.webp",
+          "transcriptText": "Via del Babuino ends and the space opens out — this is Piazza di Spagna, and the staircase rising in tiers to your left, up to the church with the two bell towers, is the one you know from a thousand photographs. Work your way toward the sinking-boat fountain at its foot and find somewhere to stand.\n\nStart with the name. The Spanish Steps are, in fact, French. The square is named for Spain — the Spanish embassy to the pope has stood here for some four hundred years — but the staircase was paid for with French money, left in the will of a French diplomat, and it climbs to a French church: Trinità dei Monti, up there behind the obelisk. And for decades the French wanted more. The plan was to crown this hillside with a statue of the King of France on horseback, gazing down over the city — and the popes, who had no intention of hosting a foreign monarch above their own rooftops, kept refusing. The staircase, finished in the 1720s, was the eventual compromise: all the sweep and grandeur of a royal monument, with nobody on top. What reads as pure romance is really one of the most elegant diplomatic settlements in Europe — two rival powers, one slope, and the whole argument resolved in travertine.\n\nNotice, too, how the thing behaves. It splits, curves, gathers itself at terraces and spills on again — a staircase designed less for climbing than for lingering. Which makes the modern rule a quiet irony: to protect the stone, sitting on the steps is now banned, so the world's most famous place to sit is standing room only.\n\nThe next showpiece hides in the alleys about ten minutes south of here: the Trevi Fountain. Take your time through the shopping streets — it will announce itself."
+        },
+        {
+          "id": "e80c92fd-b5dd-5196-a33e-05418f75d6cd",
+          "order": 3,
+          "title": "The Trevi Fountain",
+          "caption": "You hear it before you see it. Somewhere in these last narrow streets the sound begins — a low, steady roar underneath the crowd noise — and it thickens with every corner until you take one final turn and the whole end of the street is water, rock and marble.",
+          "latitude": 41.9009,
+          "longitude": 12.4833,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-baroqueheart-walk_stop3.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trevi-fountain_hero.webp",
+          "transcriptText": "You hear it before you see it. Somewhere in these last narrow streets the sound begins — a low, steady roar underneath the crowd noise — and it thickens with every corner until you take one final turn and the whole end of the street is water, rock and marble.\n\nStop wherever you first get a clear look, and consider what you're actually looking at. The Trevi is not a fountain standing in a square. It's the front wall of a palace — Palazzo Poli — seized top to bottom and turned into a cliff: sculpted boulders spilling forward into the basin, a screen of columns rising the full height of the building, and striding out of the centre of it all, the sea god Oceanus, his chariot hauled through the spray by winged horses. The fountain doesn't stand in front of the architecture; it is the architecture, nearly as tall as the palace whose face it borrowed.\n\nAnd the little square was never enlarged to give it room — which, by accident or by design, is the secret of the whole performance. There is no long view of the Trevi, no gradual approach. It's always too big for the space it's in, always arriving all at once, a colossus kept in too small a room. The Baroque understood something every theatre director knows: surprise isn't about the object. It's about the framing.\n\nThese days, a small ticket gets you down the steps to the water's edge in daytime hours; the view from street level, where you're standing, costs nothing at any hour.\n\nWhen you manage to pull yourself away, the next stop is the Pantheon — ten minutes or so west through the lanes. Watch for a grey wall of ancient brick rising over the rooftops as you get close."
+        },
+        {
+          "id": "cb2dce79-9d63-51bb-a7b3-21c0f4539243",
+          "order": 4,
+          "title": "The Pantheon",
+          "caption": "Nineteen hundred years, give or take, and nobody has ever built a bigger dome out of plain, unreinforced concrete.",
+          "latitude": 41.8986,
+          "longitude": 12.4769,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-baroqueheart-walk_stop4.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rome-pantheon_hero.webp",
+          "transcriptText": "Nineteen hundred years, give or take, and nobody has ever built a bigger dome out of plain, unreinforced concrete. Not the Renaissance, not the industrial age, not us. The record holder is in front of you, behind a porch of granite columns — wearing a name that isn't its builder's.\n\nWalk up to where you can read the bronze letters across the front. M. AGRIPPA, they begin — Marcus Agrippa, son of Lucius, three times consul, made this. It's the most famous inscription in Rome, and it isn't true — or rather, it's out of date by about a hundred and fifty years. Agrippa did build a temple on this spot, but it burned. What you're looking at is a complete rebuild from the early second century, under the emperor Hadrian — new porch, new rotunda, new dome, the whole miracle — and when it was finished, Hadrian put the old name back on the front.\n\nHe did this all over Rome: rebuilt other men's monuments and kept their names on them. It's worth pausing on, because Hadrian did not lack ego. He seems to have grasped something subtler — that in this city, authority came from continuity, and a name two centuries old carried more weight than a fresh one ever could. It's the same instinct you meet everywhere in Rome, where nothing old is discarded and everything gets kept in service; here, what was reused was the signature itself. The most influential building in the history of western architecture, copied by domes from Florence to Washington, is signed by the wrong man — on purpose.\n\nThere's a ticket to go inside these days; the porch and the square are free. If you do go in, look at nothing until you've looked up.\n\nOur last stop is the easiest walk of the day: Piazza Navona, five minutes west. Head that way and let the lanes funnel you in."
+        },
+        {
+          "id": "40345eaa-3f0f-575c-80ca-ea07b770fc14",
+          "order": 5,
+          "title": "Piazza Navona",
+          "caption": "It's a Saturday in August, sometime in the 1700s, and the square you're about to enter is underwater.",
+          "latitude": 41.8992,
+          "longitude": 12.4731,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-baroqueheart-walk_stop5.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-navona_hero.webp",
+          "transcriptText": "It's a Saturday in August, sometime in the 1700s, and the square you're about to enter is underwater. The fountain drains have been stopped, the piazza has flooded from end to end, and the carriages of the Roman nobility are wheeling slowly through the shallows while half the city leans out of windows to watch, cheer, and be seen.\n\nCome into the square and find a spot near the great fountain at its centre.\n\nFor more than two centuries — from 1652 until 1866 — that was the August ritual here: on summer weekends, Piazza Navona became a lake, part cooling-off, part carnival, part rolling display of who mattered in Rome. And it tells you what this square was built to be. The long oval you're standing in follows the footprint of an ancient Roman stadium buried beneath your feet, and when the Pamphilj family produced a pope in the 1640s, they rebuilt the whole space as their personal showcase — palace, church and fountains — then threw it open as the city's grandest room. The centrepiece is the Fountain of the Four Rivers, Bernini's marble mountain, four colossal figures for the four continents then known, with an obelisk balanced improbably over the hollow grotto between them; the church rising behind it, Sant'Agnese, wears a facade by Borromini. And around them, the square carries on much as it always has — painters, buskers, café tables, Romans cutting through — the cast changes daily, but the run is permanent.\n\nThis is where the walk ends, and it's the right place to end it. Everything we've passed today was built to persuade: a sorting machine dressed as a piazza, a treaty dressed as a staircase, a palace wall dressed as the sea, a signature borrowed for the ages. Illusion, all of it — and none of it any less true. So stay a while. Find a coffee at the edge of the oval, watch the water, and enjoy being exactly what this square has always wanted: an audience."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 705,
+      "walkingDistanceMeters": 2000,
+      "centroidLatitude": 41.90308,
+      "centroidLongitude": 12.47838,
+      "city": "Rome",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Public Square",
+        "Architecture",
+        "Baroque",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b898ab3b-374b-50bd-a53b-dbbacf55a12e",
+      "createdAt": "2026-07-27",
+      "title": "The Ghetto and Trastevere",
+      "shortDescription": "Rome exists because of its river — and hides it completely.",
+      "longDescription": "You can spend a whole day in the centre without seeing the Tiber once. That vanishing act was deliberate, and this walk undoes it: south from Largo Argentina into the old Jewish Ghetto, across the oldest bridge in the city, onto the island in midstream, ashore in Trastevere, and up to the Janiculum to look down on all of it. Two and a half kilometres, flat until the climb at the end.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/santa-maria-trastevere_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "fa74a652-8786-582f-94ff-e1aafda12a6b",
+          "order": 0,
+          "title": "Introduction",
+          "caption": "Rome exists because of its river — and you can spend an entire day in the centre of the city without seeing it once.",
+          "latitude": 41.8955,
+          "longitude": 12.4768,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ghettotrastevere-walk_stop0.mp3",
+          "audioDurationSeconds": 80,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Rome exists because of its river — and you can spend an entire day in the centre of the city without seeing it once. That vanishing act is real, it was deliberate, and this walk is about undoing it.\n\nWe're going to the water. From Largo di Torre Argentina we head south into the old Jewish Ghetto, cross the Tiber on the oldest bridge in the city, pause on the island in midstream, come ashore in Trastevere — the neighbourhood whose whole name means \"across the river\" — and finish on the Janiculum terrace, looking down on everything we've just walked. Along the way, keep an eye out for the massive stone walls that hold the river in its channel. They're the reason you never see the Tiber until you're standing on top of it, and by the end of the walk you'll know their story too.\n\nPractical notes: it's about two and a half kilometres, flat and easy until the very end — the last stretch climbs the Janiculum hill, a stiff fifteen to twenty minutes uphill, and there's no shame in taking a taxi up from Trastevere instead. The route crosses two bridges; the second carries a little traffic, so keep to the side. Otherwise it's lanes, squares and riverbank all the way.\n\nStart at Largo di Torre Argentina, and make for the railing overlooking the ruins."
+        },
+        {
+          "id": "9831af07-6734-5a54-b88f-2ec90d6e8d32",
+          "order": 1,
+          "title": "Largo di Torre Argentina",
+          "caption": "Come to the railing and look down. The temples at the bottom of that pit stand on the ground level of the Roman republic — several metres below your shoes.",
+          "latitude": 41.8955,
+          "longitude": 12.4768,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ghettotrastevere-walk_stop1.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/largo-argentina_hero.webp",
+          "transcriptText": "Come to the railing and look down. The temples at the bottom of that pit stand on the ground level of the Roman republic — several metres below your shoes. The oldest of them was already ancient when the empire began; the four of them together are among the oldest things you can see anywhere in this city, and to see them, you look down. Always down.\n\nIt's worth asking why. Part of the answer is ordinary: cities rise on their own rubble, and Rome has been rebuilding on top of itself for longer than almost anywhere. But here there's another culprit, and it's the one this walk is about. You're standing in the ancient flood plain of the Tiber, and for two thousand years, every time the river rose — which was often — it left behind a layer of silt and debris when it fell. Flood by flood, century by century, the river quietly raised the street. The Rome of the republic didn't sink. The city grew up over it, on ground the Tiber helped deliver.\n\nSo this sunken square makes a fitting first stop: we're setting off to find a river you can already see the fingerprints of, several metres deep, right here in the middle of town. The temples, for the record, are so old that nobody has ever settled which gods most of them belonged to — they're lettered A to D, like exhibits — and they only came back to light in the demolitions of the 1920s, when a modern square was cut through and the republic turned up underneath.\n\nNow let's go find the culprit. Walk south, away from the tram stops, and in a few minutes the lanes will bring you to Via del Portico d'Ottavia — the main street of the old Jewish Ghetto."
+        },
+        {
+          "id": "f4117584-a7f0-59ce-8d6f-cc3976ceebdd",
+          "order": 2,
+          "title": "The Jewish Ghetto",
+          "caption": "For more than three centuries, the people of this street were locked in at night.",
+          "latitude": 41.8919,
+          "longitude": 12.4779,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ghettotrastevere-walk_stop2.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jewish-ghetto_hero.webp",
+          "transcriptText": "For more than three centuries, the people of this street were locked in at night.\n\nWalk Via del Portico d'Ottavia slowly, toward the river. In 1555, a papal decree confined Rome's Jewish community — one of the oldest communities of any kind in Europe, present in this city since before the Caesars — to a few walled hectares right here, with gates that closed at dusk. And the ground chosen for the ghetto was not neutral ground. This was the lowest land in Rome, hard against the Tiber, and in the centuries before the flood walls the river came calling almost every winter — into the streets, into the lower rooms of the crowded houses, sometimes storeys deep. The walls kept people in; nothing kept the water out. Poverty was policy here, and the river was part of the sentence.\n\nThe gates and walls finally came down in the 1880s — the same decade, as it happens, that the city began raising the great embankments that would end the floods for good. One set of walls fell as the other rose.\n\nOne thing more, and it asks for a quieter voice. The community that lives on this street has prayed in this city for more than two thousand years, and it endured its darkest morning in October 1943, when the occupying German forces came here for its people. It is still here. Carry that fact gently as you look around you now — because what you're walking through today is not a memorial but a living neighbourhood, loud with restaurant tables, bakeries and kids on bikes, and its persistence is the point.\n\nAt the end of the street, by the synagogue, turn toward the river. The small stone bridge ahead of you is the oldest in Rome, and it's ours: we cross here, to the island."
+        },
+        {
+          "id": "a87b24e9-72d6-59ab-82d4-025774875f59",
+          "order": 3,
+          "title": "Tiber Island",
+          "caption": "Sixty-two years before the birth of Christ, a Roman official named Lucius Fabricius built this bridge — and carved his name into it, more than once, so that nobody would ever forget who was responsible.",
+          "latitude": 41.8901,
+          "longitude": 12.4779,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ghettotrastevere-walk_stop3.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tiber-island_hero.webp",
+          "transcriptText": "Sixty-two years before the birth of Christ, a Roman official named Lucius Fabricius built this bridge — and carved his name into it, more than once, so that nobody would ever forget who was responsible. Two thousand years of feet have crossed it since, and yours are next.\n\nWalk it slowly. Halfway across, stop at the parapet and look at the river — your first proper sight of it all day. The island splits the Tiber into two narrow channels, and that, more than anything else, is why there's a city here at all. A wide river is a wall; a river split by an island is a doorway. Long before Rome had a name, the trade paths of central Italy — salt from the coast, herds and goods from the hills — funnelled toward this one easy crossing, and the settlement that controlled it never looked back. Emperors, forums, basilicas: all of it downstream, historically speaking, of the simple fact that this is where you could get across.\n\nTwo details before you move on. On the upstream face of the bridge's central pier there's a small arched opening — a flood vent, cut by builders who knew this river's temper and built for it, which is no small part of why the bridge is still here. And the weathered stone heads on the parapet — faces worn almost to nothing — have been watching crossings since antiquity.\n\nOn the island itself, most of what you see today is a working hospital; the little piazza by the church is a good place to stand a moment with water on both sides of you. Then take the second bridge, Ponte Cestio — rebuilt in the 1880s when the flood walls went in, so mind the occasional car — and come ashore in Trastevere. The piazza we want, Santa Maria in Trastevere, is a few minutes into the lanes."
+        },
+        {
+          "id": "78b0eca4-9f75-51e4-810a-8c9f72afbc1c",
+          "order": 4,
+          "title": "Trastevere",
+          "caption": "Trastevere means, literally, \"across the Tiber\" — and the name has always been less an address than an attitude.",
+          "latitude": 41.8894,
+          "longitude": 12.4696,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ghettotrastevere-walk_stop4.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/santa-maria-trastevere_hero.webp",
+          "transcriptText": "Trastevere means, literally, \"across the Tiber\" — and the name has always been less an address than an attitude.\n\nCome into the piazza and find a spot near the fountain, which has been marked on maps of this city since the 1400s. In ancient times this bank was the workers' side of the river — sailors, dockers, millers, migrants from every port the empire traded with — and it has kept a stubborn sense of itself ever since: its own accent, its own swagger, its own conviction that the real Rome lives over here, and that everything across the water is merely the city. The locals even have a word for it. Every July, this neighbourhood throws itself a festival called the Festa de' Noantri — the feast of \"we others\" — which is about as clear as an identity gets: one week a year, officially, Trastevere celebrates not being the rest of Rome.\n\nAnd the festival's centrepiece belongs to this walk. Its patroness is a statue of the Madonna known as the Fiumarola — \"of the river\" — because, as the story goes, fishermen found her floating at the Tiber's mouth after a storm, some five centuries back, and brought her home to Trastevere. Take the legend as a legend, but notice what it says: even the neighbourhood's miracle came out of the water. On this side of Rome, the river was never scenery. It was the employer, the road, and occasionally the deliverer of small wonders.\n\nThe church on the piazza, Santa Maria in Trastevere, is one of the oldest in the city, and its golden facade mosaics are the square's evening entertainment — they catch fire when the light goes low. It's been said that if Trastevere were a town on its own hill somewhere, this would be its cathedral square, and standing here, that's exactly how it feels.\n\nNow for the climb. Take Via della Paglia out of the piazza and follow the signs uphill toward the Gianicolo — fifteen to twenty minutes of switchbacks, or a quick taxi — and meet me at the terrace on top."
+        },
+        {
+          "id": "273a9df4-c563-5c1d-b2f0-e31df2e2d7f5",
+          "order": 5,
+          "title": "The Janiculum Terrace",
+          "caption": "However you got up here — on foot, by taxi, breathing hard or not — take a moment at the balustrade before you look at anything in particular.",
+          "latitude": 41.8917,
+          "longitude": 12.4617,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-ghettotrastevere-walk_stop5.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gianicolo_hero.webp",
+          "transcriptText": "However you got up here — on foot, by taxi, breathing hard or not — take a moment at the balustrade before you look at anything in particular. This is the widest view in Rome: the whole city laid out below you, dome by dome, hill by hill, all the way to the mountains on a clear day.\n\nNow try something. Find the river.\n\nGo ahead — you've just spent the afternoon walking to it, along it and across it, so you know roughly where it runs. And yet from up here the Tiber is nearly invisible: no glint of water, just a winding line of plane trees threading through the rooftops. A city built by a river has managed to hide it — and that was a choice. In December 1870, weeks after Rome became the capital of a newly united Italy, the Tiber rose into one of the worst floods anyone could remember, drowning the streets of the young capital metres deep. The new state answered with the biggest public works project the city had seen since antiquity: the muraglioni, the great embankment walls, kilometres of them, high and sheer. They worked. The floods that had tormented Rome for twenty-five centuries — that raised the streets at Largo Argentina, that ran through the lower rooms of the Ghetto — simply stopped.\n\nBut the cure had a cost. The walls that saved the city also severed it from the water: the ports, the boatmen, the floating mills, the whole riverside world that Trastevere lived off — gone within a generation, and the river sank out of Rome's daily sight, down between its stone banks. Nobody misses the floods. Some Romans, to this day, miss the river.\n\nSo stay a while, up here where you can see both truths at once — the safe, dry, magnificent city, and the thin green line it owes everything to and no longer looks at. If it's coming up on noon, don't let the cannon below the terrace startle you; it fires once a day, on schedule. Otherwise there's nothing you need to do but watch the light move across Rome — and keep the river company a little longer. Today, you're one of the few who did."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 702,
+      "walkingDistanceMeters": 2500,
+      "centroidLatitude": 41.89172,
+      "centroidLongitude": 12.47278,
+      "city": "Rome",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Faith",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9ce70403-81e1-566e-8288-349f2be37e9c",
+      "createdAt": "2026-07-27",
+      "title": "The Vatican and the Borgo",
+      "shortDescription": "A walk that runs between two tombs.",
+      "longDescription": "At one end, the drum-shaped fortress built eighteen centuries ago as the emperor Hadrian's mausoleum. At the other, the largest church on earth, raised over what tradition holds to be the grave of a Galilean fisherman. Between them: a bridge lined with marble angels, a castle, and a single straight street that pilgrims have finished their journeys along for centuries. About a kilometre and a quarter, flat throughout.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_6.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "2dc138db-bcbf-57a8-a468-e809d3d6c78f",
+          "order": 0,
+          "title": "Introduction",
+          "caption": "This walk runs between two tombs. At one end stands the drum-shaped fortress across the river — built eighteen centuries ago as the mausoleum of the emperor Hadrian.",
+          "latitude": 41.9016,
+          "longitude": 12.4664,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-vaticanborgo-walk_stop0.mp3",
+          "audioDurationSeconds": 80,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "This walk runs between two tombs.\n\nAt one end stands the drum-shaped fortress across the river — built eighteen centuries ago as the mausoleum of the emperor Hadrian. At the other, out of sight for now, rises the largest church on earth by most measures, raised over what tradition holds to be the grave of a Galilean fisherman. Between the two: a bridge, a castle, and a single straight street. Rome has been walking this line for most of its history, and pilgrims by the million have finished their journeys along it.\n\nYou should be standing at the southern end of Ponte Sant'Angelo, on the city side of the Tiber, with the bridge and its white marble angels stretching away toward the round castle on the far bank. The full route is only about a kilometre and a quarter, flat the whole way — and since the traffic in front of the castle was sent underground, you can now walk it end to end without crossing a single road.\n\nThis is a walk about faith and fear, and about what each of them builds: an emperor's tomb turned fortress, a hidden corridor for popes in flight, a grand avenue for arrivals — and at the end of it all, an embrace.\n\nWalk out onto the bridge, and stop when you reach the middle."
+        },
+        {
+          "id": "a1fb1438-0021-55d5-a534-feba0365e5ca",
+          "order": 1,
+          "title": "Ponte Sant'Angelo",
+          "caption": "Look down the line of angels. Ten of them, five to a side, each caught mid-gesture on the parapet — and each carrying something: a crown of thorns, a handful of nails, a lance, a sponge raised on a reed.",
+          "latitude": 41.9016,
+          "longitude": 12.4664,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-vaticanborgo-walk_stop1.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ponte-santangelo_hero.webp",
+          "transcriptText": "Look down the line of angels.\n\nTen of them, five to a side, each caught mid-gesture on the parapet — and each carrying something: a crown of thorns, a handful of nails, a lance, a sponge raised on a reed. These are the instruments of the Passion, the objects of the crucifixion story, and Gian Lorenzo Bernini designed the series in the late 1660s so that crossing this bridge became a kind of procession. Pilgrims bound for St. Peter's walked the story, object by object, on the last stretch of their journey — the bridge doesn't just deliver you to the basilica, it prepares you for it.\n\nThe bridge itself is far older than its angels. Hadrian built it as the approach to his own mausoleum — the round fortress ahead of you — and the three arches beneath the middle of the span are still the Roman originals. For most of the centuries since, this was the main crossing for anyone bound for St. Peter's: the last bridge of a thousand pilgrim roads.\n\nThe bridgehead behind you, where you stepped onto the span, was for centuries one of the city's places of public execution. The name Rome remembers most is Beatrice Cenci — a young noblewoman put to death here in 1599, condemned with her family for the killing of her violent father, after a trial the whole city argued over. The verdict has never stopped being argued, and her story has been carried ever since in paintings, plays and Roman legend.\n\nAn emperor's approach road, a gallery of Baroque devotion, a place of punishment — this bridge has carried nearly every mood the city has ever had. Cross the rest of it now, and come off onto the wide open square in front of the fortress. Castel Sant'Angelo, up close, is next."
+        },
+        {
+          "id": "1bbb9ee3-cbdf-5aa4-9e47-bb446cbf4545",
+          "order": 2,
+          "title": "Castel Sant'Angelo",
+          "caption": "No building in Rome has changed jobs more often than the one in front of you.",
+          "latitude": 41.9031,
+          "longitude": 12.4663,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-vaticanborgo-walk_stop2.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/castel-santangelo_hero.webp",
+          "transcriptText": "No building in Rome has changed jobs more often than the one in front of you.\n\nYou should be off the bridge now, standing on the broad square before the castle entrance, the river at your back. This building began as a tomb: the mausoleum of the emperor Hadrian, a marble-clad drum crowned in its first life with cypress trees and a bronze chariot. Then the city's emergencies got hold of it. It was walled into Rome's defences and became a fortress; then a prison, a barracks, a treasury, and a papal residence with frescoed apartments sitting almost directly above the cells — and finally the museum it is today. Eighteen centuries of Roman history, stacked inside a single round building.\n\nNow look to the right of the castle. A stretch of old wall runs away toward the Vatican, higher than the rooftops in places. Inside it is a corridor — the Passetto — a protected passage linking the Vatican palaces to this fortress, and it existed for exactly the reason you'd guess. In 1527, when an imperial army sacked Rome, Pope Clement the Seventh fled down its full length and held out behind these walls until the worst had passed. This castle is what faith kept in reserve: the place the papacy went when prayer needed ramparts.\n\nAlong the gardens on the castle's far side you may notice fencing and site hoarding — a new metro station is being built there, a project measured in years rather than months.\n\nOne more thing, about the ground you're standing on. This square, Piazza Pia, is newer than it looks: until 2024 it was a traffic junction moving thousands of cars an hour, and the walk you're taking today was cut in two by it. The cars now pass through a tunnel beneath your feet. So cross the square the way pilgrims always meant to — on foot, without stopping — and turn onto the long straight street ahead. Via della Conciliazione."
+        },
+        {
+          "id": "2737a800-1c6f-5914-8710-fc7a56d7457f",
+          "order": 3,
+          "title": "Via della Conciliazione",
+          "caption": "The name of this street means \"reconciliation\" — and the street itself is the youngest thing on this walk.",
+          "latitude": 41.9022,
+          "longitude": 12.461,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-vaticanborgo-walk_stop3.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/via-della-conciliazione_hero.webp",
+          "transcriptText": "The name of this street means \"reconciliation\" — and the street itself is the youngest thing on this walk.\n\nStand at its eastern end, the castle at your back. Ahead of you, framed dead centre above the rooflines, is the dome of St. Peter's, and you'll have it in view the whole way down.\n\nIn 1929, Italy and the papacy signed the Lateran Pacts, ending a standoff that had lasted since Italian troops took the city from the popes six decades earlier. This street commemorates that peace — but it was built by demolition. Until the 1930s, the space you're looking down was filled by the spina di Borgo, a wedge of medieval streets and houses running from here toward the basilica. The regime levelled it in 1936 and 1937 to cut a ceremonial approach it judged worthy of a capital newly reconciled with its church, and the paving wasn't finished until 1950.\n\nRome gained a vista and lost a neighbourhood, and which mattered more is an argument the city has never quite finished.\n\nAs you walk, look at the buildings flanking the street. A few of the palaces are centuries older than the road they now stand on — Renaissance survivors of the old Borgo, some left on their original ground, at least one taken down stone by stone and rebuilt to fit the new alignment. The avenue looks all of a piece; it isn't. Pieces of the old quarter are hiding in plain sight along it.\n\nWalk toward the dome. The street runs about five hundred metres, flat the whole way, and when the buildings finally stop and the space opens wide around you, you've arrived. St. Peter's Square is next — and last."
+        },
+        {
+          "id": "c2f97b00-b453-5748-9fa2-24c04a131842",
+          "order": 4,
+          "title": "St Peter's Square",
+          "caption": "Let the street release you into the square, and stop just inside it.",
+          "latitude": 41.9022,
+          "longitude": 12.4568,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-vaticanborgo-walk_stop4.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-peters-square_hero.webp",
+          "transcriptText": "Let the street release you into the square, and stop just inside it.\n\nAhead is the facade of the basilica, the dome rising behind it; sweeping out to either side of you, two curved colonnades, four columns deep, carrying a parade of stone saints along their roofline. Depending on the day, barriers may channel the space — go as far toward the middle as they allow, and then turn slowly, all the way around.\n\nBernini, who built the colonnades in the mid-seventeenth century, described them himself as arms — reaching out from the church to gather people in. Stand still and you can feel the idea working. The great buildings of Rome tend to confront you; this one surrounds you. The square is less a forecourt than an embrace, scaled for crowds of hundreds of thousands and somehow not unkind to a crowd of one.\n\nAt the centre stands an Egyptian obelisk that has been on this spot since the 1580s. And beneath it all — under the high altar, deep below the dome — lies what tradition holds to be the grave of Peter: a Galilean fisherman, executed in Rome in the first century, whose tomb this entire church was built to crown.\n\nWhich closes the circle of this walk. You began at an emperor's tomb, and you've ended at a fisherman's. Hadrian's monument had to become a fortress to survive; Peter's became the largest church on earth, its arms open to whoever walks up the street.\n\nStay inside the colonnade a while. Pilgrims have been finishing journeys on this spot for something like two thousand years, most of them on foot, many of them along the exact line you walked today. However you arrived, and whatever you came for, the square holds room for you too."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 533,
+      "walkingDistanceMeters": 1250,
+      "centroidLatitude": 41.902275,
+      "centroidLongitude": 12.462625,
+      "city": "Rome",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Baroque",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c7d6db46-7c8a-59a3-92af-7f3429d719df",
+      "createdAt": "2026-07-27",
+      "title": "The Aventine and Testaccio",
+      "shortDescription": "What Rome built for itself, rather than for show.",
+      "longDescription": "A racetrack for its days off, a hilltop for its quiet, and at the end a working neighbourhood with a hill made entirely by hand out of broken amphorae. No triumphal arches on this route and no domes until one appears through a keyhole. Two and a half kilometres: flat along the Circus Maximus, one steady ten-minute climb up the Aventine, then gently downhill into Testaccio. Bring an appetite.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aventine_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aventine_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aventine_3.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "f86166e8-5897-5000-b987-19264a12aac2",
+          "order": 0,
+          "title": "Introduction",
+          "caption": "Every other walk in this city shows you what emperors and popes built for show.",
+          "latitude": 41.8859,
+          "longitude": 12.4853,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-aventinetestaccio-walk_stop0.mp3",
+          "audioDurationSeconds": 68,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Every other walk in this city shows you what emperors and popes built for show. This one shows you what Rome built for itself.\n\nA racetrack for its days off. A hilltop for its quiet. And at the end, a neighbourhood that fed the whole operation — with a hill made entirely by working hands. No triumphal arches on this route, no domes until one appears through a keyhole. Just the ordinary city, which in Rome is never ordinary for long.\n\nYou should be standing near the Circo Massimo metro station, at the southeastern end of a long green valley stretching away in front of you. That valley is the Circus Maximus, and it's our first stop. The full route runs about two and a half kilometres: flat along the valley, then one steady climb of about ten minutes up the Aventine Hill, and gently downhill the rest of the way into Testaccio. Wear comfortable shoes and bring an appetite — the finish line has some of the best food in Rome.\n\nWalk along the edge of the valley until you have a clear view down its whole length, and stop there. The Circus Maximus first."
+        },
+        {
+          "id": "68f674d6-d543-5243-8566-e694e34e26ba",
+          "order": 1,
+          "title": "The Circus Maximus",
+          "caption": "For centuries, this was where Rome came to scream. It looks like a long grassy valley now — more than half a kilometre of it, with a raised ridge running down the middle and slopes rising on either side.",
+          "latitude": 41.8859,
+          "longitude": 12.4853,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-aventinetestaccio-walk_stop1.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/circus-maximus_hero.webp",
+          "transcriptText": "For centuries, this was where Rome came to scream.\n\nIt looks like a long grassy valley now — more than half a kilometre of it, with a raised ridge running down the middle and slopes rising on either side. Read it as a racetrack, because that's what it was: the ridge marks the spina, the central barrier the chariots thundered around, and the slopes held tier upon tier of seating. On race days, a crowd far larger than the Colosseum ever held packed into this valley to watch teams of four horses take the turns at full gallop.\n\nAnd they didn't just watch — they belonged. Every racegoer followed one of four factions, known by their colours: the Blues, the Greens, the Reds and the Whites. People were born into a colour, married within it, rioted for it. Emperors were known to favour one team and to sulk when it lost. Star drivers, many of them born enslaved, earned fortunes that scandalized Rome's poets. If modern sport has an ancestor — the merchandise, the transfers, the heartbreak — it was invented in this valley.\n\nThe marble and the seating went the way most Roman marble went, into other buildings, and the valley returned to what it had always been underneath: a space in the middle of a city. Depending on the season, you may find a stage and banks of temporary seating filling one end — the valley hosts opera and concerts on summer nights, so don't be surprised to share it with a crew building something.\n\nNow for the quiet after the roar. With the valley on your left, find the road that climbs the hill behind you — the Aventine — and take your time on the way up. In about ten minutes you'll come to a walled garden full of orange trees. That's our next stop: the Giardino degli Aranci."
+        },
+        {
+          "id": "31f29498-a631-5bdf-9abf-7572f90aec34",
+          "order": 2,
+          "title": "The Orange Garden",
+          "caption": "Breathe in as you come through the gate. Depending on the month, the air in here carries bitter orange — blossom in spring, fruit in winter — and either way it's the Aventine's calling card.",
+          "latitude": 41.8842,
+          "longitude": 12.4797,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-aventinetestaccio-walk_stop2.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aventine_hero.webp",
+          "transcriptText": "Breathe in as you come through the gate. Depending on the month, the air in here carries bitter orange — blossom in spring, fruit in winter — and either way it's the Aventine's calling card.\n\nYou're in the Giardino degli Aranci, the Garden of the Oranges, a walled square of green laid out inside the remains of a medieval fortress — the walls around you belonged to the Savelli family, who held this hilltop when holding hilltops was how power worked. The orange trees have their own story: the first of them, so the story goes, was planted by Saint Dominic himself, from a cutting he carried from Spain eight centuries ago. A descendant of that tree is still tended in the monastery next door. Take the legend as a legend — but the monks take it seriously.\n\nWalk to the terrace at the far end when you're ready. The whole city opens up below you in one sweep, from the river bending at your feet to the domes stacked up on the horizon.\n\nHere's the thing worth knowing about this hill while you look. The Aventine was, for most of ancient history, the outsiders' hill. It stood beyond the pomerium — Rome's oldest sacred boundary — so it collected everyone and everything the official city kept at arm's length: traders, foreign cults, and the plebeians, the common citizens, who by tradition staged their great political walkouts up here when the powerful pushed too far. The hill of the people with the best view in Rome. It took the modern city a few thousand years to catch on, and now the outsiders' hill is the quietest, most coveted address in the centre.\n\nWhen you've had your fill of the view, come back through the trees and out the gate, and turn right along the quiet street — Via di Santa Sabina. Three minutes of flat walking brings you to a small piazza with decorated walls, and a green door with a crowd in front of it. That's the Keyhole."
+        },
+        {
+          "id": "587d3951-f9d3-5eca-b897-d1f60e359df8",
+          "order": 3,
+          "title": "The Knights of Malta Keyhole",
+          "caption": "At the far corner of this quiet piazza, a small crowd gathers at a green door, taking turns to press one eye against it.",
+          "latitude": 41.8836,
+          "longitude": 12.4802,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-aventinetestaccio-walk_stop3.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/aventine-keyhole_hero.webp",
+          "transcriptText": "At the far corner of this quiet piazza, a small crowd gathers at a green door, taking turns to press one eye against it.\n\nJoin them. It's free, it moves quickly, and what's on the other side is worth the wait: through the keyhole, a long tunnel of clipped hedges runs away from you, and floating at the end of it, perfectly framed, is the dome of St. Peter's — kilometres away and seemingly close enough to touch.\n\nThe door belongs to the priory of the Knights of Malta, an order of knights founded during the Crusades and still going, and the square you're standing in was designed for them in the eighteenth century by Piranesi — an architect better known for drawing buildings than building them. He decorated these walls with trophies and emblems and built the whole piazza around an old idea of the Aventine as a sacred ship, ready to sail: the hedges beyond the door read as rigging, the hilltop as a deck.\n\nWhether anyone planned the view through the keyhole is another matter. The tidy story says it was composed deliberately, hedge by hedge; the honest answer is that nobody knows who first lined it up, or when. Take the tidy story as a story. The dome doesn't mind either way.\n\nWhen you've had your turn, take the street that drops downhill from the piazza and keep descending toward the river flats. Ten minutes or so brings you down into a grid of ordinary streets that smells faintly of coffee and frying. That's Testaccio — the last stop, and the reason you saved your appetite."
+        },
+        {
+          "id": "d5d04663-a6df-56fa-be8f-9a564649e346",
+          "order": 4,
+          "title": "Testaccio",
+          "caption": "The hill rising at the edge of this neighbourhood was made entirely by hand — and nobody who made it ever thought of it as a monument.",
+          "latitude": 41.876,
+          "longitude": 12.4757,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rome-aventinetestaccio-walk_stop4.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/testaccio_hero.webp",
+          "transcriptText": "The hill rising at the edge of this neighbourhood was made entirely by hand — and nobody who made it ever thought of it as a monument.\n\nMake your way toward it through the grid of streets, or start at the covered market if you're hungry; either works, and the neighbourhood is small enough that you can't really go wrong. Testaccio sits on the flats where ancient Rome kept its river port — the Emporium — and behind the docks stood warehouse after warehouse, holding the grain and wine and olive oil that fed a city of a million people. The oil arrived in big clay jars, and here's the catch: an oil jar can't be reused. The residue turns rancid. So for around three centuries, the dockworkers broke the empties and stacked the pieces — neatly, in terraces, dusted with lime — until the pile of broken jars was a hill more than thirty metres high. Monte Testaccio: the paperwork of an empire, filed in clay.\n\nThe neighbourhood around it has been Rome's working stomach ever since it was built for labourers' families in the late nineteenth century, and it never really stopped cooking. In the covered market — mornings are its best hours — you can eat as well as anywhere in the city while standing up. And beneath the market floor, excavations have uncovered one of those ancient warehouses itself, broken jars still in place, the whole story of this quarter sitting a few metres under the fruit stalls.\n\nSo here's where this walk has been heading. Uphill, emperors and popes built for eternity and mostly got it. Down here, working Rome just got on with the job — racing, unloading, breaking empties — and its leavings piled into the only hill in Rome that ordinary people made. It might be the most honest monument in the city.\n\nStay for lunch. Order whatever the person next to you is having. This neighbourhood has been feeding Rome for two thousand years, and it's very good at it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 533,
+      "walkingDistanceMeters": 2500,
+      "centroidLatitude": 41.882425,
+      "centroidLongitude": 12.480225,
+      "city": "Rome",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Viewpoint",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
     }
   ]
 }
