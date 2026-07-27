@@ -47893,6 +47893,307 @@
         "Hidden Gem"
       ],
       "priceUSD": 0
+    },
+    {
+      "id": "422ef78c-4407-5609-aeca-6e885ae727b7",
+      "createdAt": "2026-07-27",
+      "title": "Piazza del Quirinale",
+      "shortDescription": "Same palace, three different countries — popes, then kings, then presidents.",
+      "longDescription": "For four and a half centuries whoever ran Rome has lived on this hill. The fountain at the centre is the city in miniature: two Roman copies of Greek horse-tamers that once stood at the Baths of Constantine, a granite basin that spent centuries as a cattle trough in the Forum, and an obelisk taken from the door of the Mausoleum of Augustus — a bath ornament, a trough and a dead emperor's doorpost, reassembled into one of the most elegant compositions in Rome.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-quirinale_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-quirinale_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0b95dd02-a035-53a5-af68-e0a454c3b805",
+          "order": 0,
+          "title": "Piazza del Quirinale",
+          "caption": "For four and a half centuries, whoever ran Rome has lived on this hill — first the popes, then the kings, now the presidents.",
+          "latitude": 41.8997,
+          "longitude": 12.4869,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/piazza-quirinale.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piazza-quirinale_hero.webp",
+          "transcriptText": "For four and a half centuries, whoever ran Rome has lived on this hill — first the popes, then the kings, now the presidents. Same palace, three different countries.\n\nThis is Piazza del Quirinale, the flat, open summit of the highest of Rome's hills. You should be in a wide, quiet square: a long, austere palace on one side, uniformed guards at its door, and at the centre a fountain crowned by an obelisk and two colossal marble men holding rearing horses. Behind you, past the balustrade, the rooftops run all the way to the dome of St Peter's.\n\nSo. The fountain group first — because almost nothing in it was made for this square. The two giants are Castor and Pollux, the horse-taming twins, Roman copies of Greek originals that once stood at the Baths of Constantine nearby. The granite basin at their feet spent centuries down in the Roman Forum as a watering trough for cattle, back when the Forum was pasture. And the obelisk between them once stood at the door of the Mausoleum of Augustus — it's the one from the tomb, raised here in 1786. A bath ornament, a cattle trough and a dead emperor's doorpost, reassembled into one of the most elegant compositions in Rome: this city furnishes its present entirely from its past, and here the habit is the whole monument.\n\nThe palace began in the 1570s as a papal summer retreat — high ground, cooler air — and grew into one of the largest palaces in Europe. When Italy united, the kings moved in; when Italy voted the monarchy out, the presidents did. In the afternoons the guard changes at the gate, and you're welcome to watch.\n\nOne more thing. Walk a few minutes along Via del Quirinale, beside the palace, and you'll settle the rivalry from Piazza Barberini yourself: on this street, Bernini and Borromini each built a small church. Bernini's Sant'Andrea is a warm oval of rose marble he considered his most perfect work; Borromini's San Carlino, just up the road, is a rippling, restless miracle small enough to fit inside a single pier of St Peter's. Two geniuses, one street, no truce.\n\nPopes, kings, presidents — the tenants keep changing, and the twins keep holding their horses. On this hill, that passes for constancy."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 151,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8997,
+      "centroidLongitude": 12.4869,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Public Square",
+        "Power",
+        "History",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7e2bd166-68ce-5b9e-88b1-3c5ed9b6d445",
+      "createdAt": "2026-07-27",
+      "title": "Monti",
+      "shortDescription": "Julius Caesar grew up a few streets from here — in the noisy part of town.",
+      "longDescription": "This was the Suburra, the densest and loudest quarter of ancient Rome, downhill from the Forum in every sense; the young Caesar lived in it. Today Monti is the city's oldest living room — Rione number one, the first on Rome's ancient list of districts — with a Giacomo della Porta fountain from the 1580s still serving as the village well, and half the neighbourhood on its steps most evenings. Nothing to book, nothing to wait for.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/monti_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/monti_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5fe631a4-0e7f-5b32-b580-3868cafffe3a",
+          "order": 0,
+          "title": "Monti",
+          "caption": "Julius Caesar grew up a few streets from here — not in a palace, but in a crowded, noisy, slightly disreputable neighbourhood called the Suburra.",
+          "latitude": 41.8942,
+          "longitude": 12.4904,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/monti.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/monti_hero.webp",
+          "transcriptText": "Julius Caesar grew up a few streets from here — not in a palace, but in a crowded, noisy, slightly disreputable neighbourhood called the Suburra. You're standing in what became of it.\n\nThis is Monti, and your anchor is Piazza della Madonna dei Monti: a small, easy square with a stone fountain at its centre, café tables at the edges, ivy down the walls, and — most evenings — half the neighbourhood sitting on the fountain steps with a drink. There's nothing to book here, nothing to wait for. That's rather the point.\n\nThe fountain came first. It was set up in the 1580s by Giacomo della Porta, the same hand behind half the fountains in central Rome, and it has served ever since as the village well of a district that has always behaved like a village. Around you runs Rione Monti — number one, the first on Rome's ancient list of districts, named for the hills it climbs.\n\nIn antiquity this was the Suburra: the densest, loudest quarter of the ancient city, packed with tenement blocks, taverns and washing lines, downhill from the Forum in every sense. Emperors were carried past it; ordinary Rome actually lived in it — and so, famously, did the young Caesar, in a modest family house, long before anyone imagined a month would carry his name. When the empire fell and the aqueducts were cut, the crowds followed the water down to the river, and for centuries Monti dozed — vineyards, convents, quiet lanes — a country town hiding inside the city walls.\n\nThe lanes woke up again. Artisans and their workshops lined these street fronts through the last century; lately the workshops have been turning into wine bars, vintage shops and boutiques, and Romans argue — here as everywhere — about what that trade has gained and lost. The streets themselves haven't moved: Via del Boschetto, Via Urbana and Via dei Serpenti still run where the ancient ones did.\n\nEvery other stop on this route shows you what Rome built to be admired. Monti shows you where Rome went home in the evening — twenty-one centuries of it, from Caesar's neighbours to the people sharing the fountain steps beside you. Take a seat. You're in the oldest living room in the city."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8942,
+      "centroidLongitude": 12.4904,
+      "city": "Rome",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Free to Visit",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b22666df-064a-58ae-9bd2-9e1d6d1a566f",
+      "createdAt": "2026-07-27",
+      "title": "Santa Maria Maggiore",
+      "shortDescription": "Every August, white petals fall from the ceiling onto whoever is standing below.",
+      "longDescription": "Legend says the Virgin marked this hilltop with snow on an August night in the fourth century; the church keeps the story with petals rather than insisting it be true. What is documented is stranger — a basilica consecrated in 434 that, alone among Rome's great churches, has never been torn down and rebuilt. The nave mosaics are the originals, some fifteen hundred years old, and Pope Francis chose to be buried here beneath a slab carrying one word.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/santa-maria-maggiore_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/santa-maria-maggiore_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "58fe075e-902b-50dd-b38f-4b4dc30dda5a",
+          "order": 0,
+          "title": "Santa Maria Maggiore",
+          "caption": "Every year on the fifth of August, white flower petals fall from the ceiling of this church — thousands of them, drifting down through the nave onto whoever happens to be standing underneath.",
+          "latitude": 41.8976,
+          "longitude": 12.4986,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/santa-maria-maggiore.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/santa-maria-maggiore_hero.webp",
+          "transcriptText": "Every year on the fifth of August, white flower petals fall from the ceiling of this church — thousands of them, drifting down through the nave onto whoever happens to be standing underneath. Rome has been keeping that appointment, in one form or another, for centuries.\n\nYou should be standing in Piazza di Santa Maria Maggiore, facing the broad eighteenth-century facade with its loggia above the doors. Rising behind it, the tallest bell tower in Rome. And in front of you, a single marble column carrying a bronze Virgin and Child.\n\nBegin with the column. It wasn't made for this square. It stood for more than a thousand years in the ruins of a vast Roman basilica down by the Forum — the only column of that building left upright — until a pope had it hauled up the hill in 1614 and gave it a new job. In this city, even the monuments are second-hand.\n\nNow, the legend. The story goes that one August night in the fourth century, the Virgin appeared to a pope in a dream and promised to mark the site of her church with snow — and the next morning, in the heat of a Roman summer, this hilltop was white. It is a legend, and the church treats it as one; the petals are the city's way of keeping the story without insisting it be true.\n\nWhat's documented is almost stranger. Behind that facade stands a church consecrated in the year 434 — and unlike every other great basilica in Rome, it has never been torn down and rebuilt. The mosaics along the nave are the originals, some fifteen hundred years old, and the columns beneath them were lifted from older Roman buildings back when the western empire was still breathing. It calls itself the first church in Rome dedicated to Mary — a title Santa Maria in Trastevere also claims, across the river, and after fifteen centuries neither side has blinked.\n\nIn 2025, Pope Francis chose to be buried here — the first pope in more than a century to rest outside the Vatican — beneath a plain marble slab carrying one word: Franciscus.\n\nRome's other churches changed costume with every era that passed through them. This one let the eras pass, and simply stayed — which is the quiet astonishment of the place: not that it's grand, but that underneath everything, it is still the same room."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 151,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8976,
+      "centroidLongitude": 12.4986,
+      "city": "Rome",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Art",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fb9c16a1-8a99-585a-abee-c5869052f50f",
+      "createdAt": "2026-07-27",
+      "title": "San Giovanni in Laterano",
+      "shortDescription": "The cathedral of Rome is not St Peter's. It's this church, and it says so.",
+      "longDescription": "The inscription calls it the mother and head of all the churches of the city and of the world — and it has the seniority to mean it. Consecrated in 324, barely a decade after Constantine legalised the faith, it is by most reckonings the oldest church in the West, and the popes lived here for a thousand years before the Vatican. Its bronze doors were taken from the Roman Senate house; across the street, pilgrims still climb twenty-eight marble steps on their knees.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/san-giovanni-laterano_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/san-giovanni-laterano_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2de59f2d-5a01-56c5-9f49-b60bc550c9a6",
+          "order": 0,
+          "title": "San Giovanni in Laterano",
+          "caption": "The cathedral of Rome is not St. Peter's. It's this church — and the inscription on its front says so plainly: the mother and head of all the churches of the city and of the world.",
+          "latitude": 41.8858,
+          "longitude": 12.5061,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/san-giovanni-laterano.mp3",
+          "audioDurationSeconds": 156,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/san-giovanni-laterano_hero.webp",
+          "transcriptText": "The cathedral of Rome is not St. Peter's. It's this church — and the inscription on its front says so plainly: the mother and head of all the churches of the city and of the world.\n\nYou should be standing in the piazza in front of San Giovanni in Laterano, facing the great east facade. Along the roofline, fifteen colossal statues — Christ at the centre, seven metres tall, saints to either side — look out over the rooftops. To one side of the basilica rises the tallest obelisk in Rome. And in the plain building across the street behind you is a staircase people climb only on their knees.\n\nTake the roofline first. That facade went up in 1735, but it's the newest thing here by a wide margin. The church behind it was consecrated in 324, barely a decade after Constantine legalised the faith — which makes this, by most reckonings, the oldest church in the West. For a thousand years the popes lived here, not at the Vatican; when the first Jubilee in history was proclaimed in the year 1300, this is where the pilgrims came. And the great bronze doors at the centre of the porch were taken from the Roman Senate house down in the Forum — Roman senators walked through them centuries before any pope did.\n\nThe obelisk is older than all of it: cut in Egypt some three and a half thousand years ago, shipped over in the fourth century to decorate the racetrack at the Circus Maximus, then dug out of the mud and set up here in 1588. Thirty-two metres of granite — by most accounts the tallest of its kind still standing anywhere.\n\nFinally, the staircase across the street. Twenty-eight marble steps — by tradition, the stairs of Pilate's palace in Jerusalem, the ones climbed on the day of the trial. Pilgrims ascend them only on their knees, one step at a time, and have for centuries; the marble is sheathed in wood because devotion was slowly wearing it away. Whatever you make of where the steps began, what happens on them is real, and it is quietly moving to watch.\n\nSt. Peter's is where the world looks. But every new pope still comes here to take possession of this church — because before he is anything else, he is the bishop of Rome, and this has been his cathedral for seventeen centuries."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 156,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8858,
+      "centroidLongitude": 12.5061,
+      "city": "Rome",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a19d7ab7-46cf-58f0-8045-f022d9574533",
+      "createdAt": "2026-07-27",
+      "title": "Trajan's Column",
+      "shortDescription": "A war memorial with no dead soldiers on it.",
+      "longDescription": "A hundred and fifty-five carved scenes spiral up the shaft, more than two and a half thousand figures, the emperor appearing fifty-eight times — and in the entire frieze not one Roman lies dead. The legions build bridges, cut roads and harvest crops; the fighting is almost a sideline. It is the empire exactly as the empire wished to be seen. It is also a tomb, and — because the Dacians left so little of themselves behind — the main place their faces survive, carved by the power that destroyed them.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trajans-column_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trajans-column_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2251f5fe-1f84-574e-b6a5-bcd4513059eb",
+          "order": 0,
+          "title": "Trajan's Column",
+          "caption": "This is a war memorial with no dead soldiers on it. Two hundred metres of carved storytelling spiral up the shaft in front of you — a hundred and fifty-five scenes, more than two and a half thousand figures, the emperor Trajan appearing fifty-eight times — and in the entire frieze, not one Roman lies dead.",
+          "latitude": 41.8958,
+          "longitude": 12.4837,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/trajans-column.mp3",
+          "audioDurationSeconds": 152,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/trajans-column_hero.webp",
+          "transcriptText": "This is a war memorial with no dead soldiers on it. Two hundred metres of carved storytelling spiral up the shaft in front of you — a hundred and fifty-five scenes, more than two and a half thousand figures, the emperor Trajan appearing fifty-eight times — and in the entire frieze, not one Roman lies dead. The legions build bridges, cut roads, harvest crops, hold ceremonies; the fighting is almost a sideline. It is the empire exactly as the empire wished to be seen.\n\nYou should be at the edge of Trajan's Forum, just off Via dei Fori Imperiali at the Piazza Venezia end, looking at the great marble column that stands between two domed churches. It went up in the year 113 to celebrate Trajan's conquest of Dacia — roughly modern Romania — and it's built from about twenty colossal drums of Carrara marble, stacked with a spiral staircase already carved inside them. The frieze winds around the shaft twenty-three times, and it was designed to be read: the band grows wider toward the top, so the figures hold their size against the distance.\n\nTwo details worth carrying away. First, the column is a tomb — Trajan's ashes were placed in a chamber in the base, making him one of the very few Romans buried inside the sacred boundary of his own city. Second, the inscription over the door records something remarkable: the column stands as tall as the hillside that was cleared away to build this forum. It's a monument that doubles as a measuring stick for a piece of landscape that no longer exists. As for the figure on top, that was Trajan once — a pope swapped him for Saint Peter in the fifteen eighties, and Peter has kept the best view in Rome ever since.\n\nAnd here is the strange power of the thing: it's propaganda, and it became the historical record anyway. The Dacians left almost nothing of themselves behind, so this victory column — carved by the power that destroyed their kingdom — is one of the main places their faces survive. Romanians still come here to study their ancestors on their conqueror's monument.\n\nGet close to the base and follow the first turn of the spiral with your eyes. In the opening scenes, the army is crossing the Danube on a bridge of boats — the whole story begins with men walking over water."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 152,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.8958,
+      "centroidLongitude": 12.4837,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "War",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "26bb0963-34af-5b7e-8590-74a85653f996",
+      "createdAt": "2026-07-27",
+      "title": "Porta San Sebastiano",
+      "shortDescription": "Rome didn't have walls when it was strong.",
+      "longDescription": "For its first great centuries the city sprawled undefended, because the empire itself was the wall. Then in the 270s, with invaders reaching Italy, Aurelian threw nineteen kilometres of brick around Rome in a frantic hurry. These walls are not a symbol of Roman power — they are the moment Rome admitted it was mortal. Porta San Sebastiano is the grandest gate left in that circuit, and it kept collecting history for seventeen centuries: a medieval battle carving, hooks that held garlands for Charles V, and a Fascist official's apartment in its towers.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/porta-san-sebastiano_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/porta-san-sebastiano_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "523a6cdf-ea6e-5d19-8175-a62fa345416a",
+          "order": 0,
+          "title": "Porta San Sebastiano",
+          "caption": "Rome didn't have walls when it was strong. That's the detail that reframes everything you're looking at.",
+          "latitude": 41.873,
+          "longitude": 12.5017,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/porta-san-sebastiano.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/porta-san-sebastiano_hero.webp",
+          "transcriptText": "Rome didn't have walls when it was strong. That's the detail that reframes everything you're looking at. For its first great centuries the city sprawled undefended, because the empire itself was the wall — the frontier was a thousand kilometres away in every direction. Then, in the 270s AD, with invaders suddenly reaching Italy, the emperor Aurelian threw nineteen kilometres of brick around the city in a frantic hurry. These walls aren't a symbol of Roman power. They're the moment Rome admitted it was mortal.\n\nYou're at Porta San Sebastiano, and it is the grandest surviving gate in that whole circuit — two massive marble-based towers flanking a single arch, still doing duty as a city gate with traffic passing underneath. It was born as the Porta Appia, because the road running through it is the Via Appia — the queen of roads, the empire's first great highway, heading out through this arch toward the tombs, the catacombs and, eventually, the sea.\n\nNow, the gate itself, because it kept collecting history for seventeen centuries. Step close to the archway: scratched into the stone inside is a small medieval figure of the archangel Michael slaying a dragon, carved to commemorate a battle fought at this gate in 1327, when Romans beat back an invading army — an inscription beside it names the day. In 1536, the gate was dressed up as a triumphal arch for the entry of Emperor Charles V; the decorations are long gone, but the iron hooks that held the garlands are still up there under the cornice. And in the 1940s, the Fascist regime converted the towers into a private apartment for one of its own officials — the regime moved in, the city, in time, absorbed it, and today the gate houses a small free museum of the walls themselves.\n\nWalk through the arch and out the other side, and you're standing on the first metres of the Appia Antica — the road south, running straight as an argument, two thousand three hundred years old. The wall was built out of fear. The road was built out of confidence. This gate is where the two ideas pass through each other."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.873,
+      "centroidLongitude": 12.5017,
+      "city": "Rome",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Engineering",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "07d68f3a-b722-5402-8bcf-f44c5992eff5",
+      "createdAt": "2026-07-27",
+      "title": "Testaccio",
+      "shortDescription": "The hill in front of you is a fake — and every piece of it is a broken jar.",
+      "longDescription": "Monte Testaccio is thirty-five metres of man-made mountain: by the standard estimate the remains of some fifty-three million olive-oil amphorae, smashed, carried up and laid in tidy terraced rows by ancient Rome's dockworkers for about three hundred years. It is the ancient world's largest landfill and one of its most eloquent monuments — a hill raised to the Roman appetite. The neighbourhood at its feet has never stopped feeding people.",
+      "makerId": "d5939cce-c156-5316-984a-6259aadd8be2",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/testaccio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/testaccio_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "712cb9a7-ce67-51fd-b9be-bad2267ce472",
+          "order": 0,
+          "title": "Testaccio",
+          "caption": "The hill in front of you is a fake. Thirty-five metres high, a kilometre around, covered in scrub and grass — and every cubic metre of it is man-made.",
+          "latitude": 41.876,
+          "longitude": 12.4757,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/testaccio.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/testaccio_hero.webp",
+          "transcriptText": "The hill in front of you is a fake. Thirty-five metres high, a kilometre around, covered in scrub and grass — and every cubic metre of it is man-made. Monte Testaccio is a mountain of broken pottery: by the standard estimate, the remains of some fifty-three million olive-oil jars, stacked here, piece by piece, by ancient Rome's sanitation department.\n\nStand anywhere along the streets that ring the hill — Via Zabaglia or Via Galvani work well — and look at the fenced green slope. Then let the numbers do their work. This district was the Emporium, ancient Rome's river port, where the food supply for a million people came ashore. Olive oil arrived in huge clay amphorae that couldn't be reused — the oil soaked in and went rancid — so the empire's dockworkers smashed them, carried the pieces up, laid them in tidy terraced rows, and dusted the layers with lime to keep the smell down. For about three hundred years. The result is the ancient world's largest landfill, and one of its most eloquent monuments: not a temple to the gods, but a hill raised to the Roman appetite.\n\nThe neighbourhood at its feet has never stopped feeding people. Testaccio was built up in the late 1800s as a working-class quarter around the city's slaughterhouse, and out of that slaughterhouse came Rome's boldest cooking — the quinto quarto, the \"fifth quarter\", the cuts the workers took home as part of their pay and turned into dishes Romans now queue for. The slaughterhouse itself closed in the 1970s and has been reborn as an arts and university complex; the covered market a couple of blocks away is one of the best places in the city to eat like a Roman on a budget. Even the hill still works: cellars and clubs are burrowed into its base, keeping wine cool against two-thousand-year-old potsherds.\n\nEvery city is built on its own past. Testaccio just makes it literal — a hill you can walk around in twenty minutes, made entirely of lunch."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 146,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 41.876,
+      "centroidLongitude": 12.4757,
+      "city": "Rome",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
     }
   ]
 }
