@@ -22,12 +22,15 @@ WHAT IT DOES
 Downloads every image the catalog references, groups them by SHA-256, and
 classifies each group of identical files:
 
-  ERROR  two images under the same asset slug   (a tour duplicating its own
-         image, e.g. estacion-de-atocha_6 == _7)
-  ERROR  two different single-stop tours' images  (the Thyssen/Reina Sofía bug)
-  INFO   a multi-stop walk reusing a single-stop tour's image — the documented
-         convention (walk stops reuse single-stop heroes already on gh-pages),
-         so this is expected and never fails the run.
+  ERROR  two gallery slides of one tour are identical — a dead swipe
+         (estacion-de-atocha_6 == _7)
+  ERROR  two different tours share an image — the Thyssen/Reina Sofía bug, OR
+         one photo that genuinely shows two adjacent landmarks (Millennium
+         Bridge and St Paul's). No script can tell those apart, so this is a
+         flag for human eyes, not an assertion of wrongness.
+  INFO   a multi-stop walk reusing a single-stop tour's image, or a tour's hero
+         also appearing in its own gallery. Both are documented conventions and
+         never fail the run.
 
 Exit codes: 0 = no errors (INFO reuse is fine), 1 = duplicates that look wrong,
 2 = file/network error.
@@ -92,9 +95,17 @@ def tour_slug(tour):
 
 
 def build_index(catalog, maker_code=None):
-    """-> (urls, slug_kind) for the selected tours."""
+    """-> (urls, slug_kind, walk_stop_urls) for the selected tours.
+
+    walk_stop_urls are images used as a *stop* image of a multi-stop walk.
+    That is the documented reuse slot — walk stops reuse imagery that already
+    exists for the single-stop tour of the same landmark — and it is what makes
+    a shared file expected rather than suspicious. Deliberately narrower than
+    "any image on a walk": a walk's own gallery sharing bytes with a single-stop
+    tour's hero is exactly the Thyssen bug, and must still be caught.
+    """
     makers = {m["id"]: m for m in catalog["makers"]}
-    slug_kind, urls = {}, set()
+    slug_kind, urls, walk_stop_urls = {}, set(), set()
 
     for tour in catalog["tours"]:
         maker = makers.get(tour.get("makerId")) or {}
@@ -107,7 +118,9 @@ def build_index(catalog, maker_code=None):
         for stop in tour.get("stops") or []:
             if stop.get("imageURL"):
                 urls.add(stop["imageURL"])
-    return sorted(urls), slug_kind
+                if tour.get("kind") == "multiStop":
+                    walk_stop_urls.add(stop["imageURL"])
+    return sorted(urls), slug_kind, walk_stop_urls
 
 
 def fetch_hash(url):
@@ -126,9 +139,12 @@ def fetch_hash(url):
     return url, digest, None
 
 
-def classify(group, slug_kind):
+def classify(group, slug_kind, walk_stop_urls=frozenset()):
     """Classify one set of byte-identical URLs -> ('error'|'info', reason)."""
     slugs = [asset_slug(u) for u in group]
+
+    if any(u in walk_stop_urls for u in group):
+        return "info", "image also serves a multi-stop walk's stop (expected convention)"
 
     if len(set(slugs)) == 1:
         # All one tour's own assets. A hero that repeats one of the tour's own
@@ -148,12 +164,12 @@ def classify(group, slug_kind):
     return "error", "two tours share an identical image — confirm it depicts both, else one is mis-staged"
 
 
-def report(groups, slug_kind):
+def report(groups, slug_kind, walk_stop_urls=frozenset()):
     errors = 0
     for digest, group in sorted(groups.items()):
         if len(group) < 2:
             continue
-        level, reason = classify(sorted(group), slug_kind)
+        level, reason = classify(sorted(group), slug_kind, walk_stop_urls)
         if level == "error":
             errors += 1
         print(f"{level.upper():5}  {reason}")
@@ -192,9 +208,14 @@ def selftest():
         # compound _stopN_hero role must still resolve to the walk's slug
         (["the-ancient-city_stop0_hero.webp", "the-ancient-city_stop5_2.webp"], "info"),
     ]
+    # A file named after a landmark, used as a walk's stop image, shares bytes
+    # with that landmark's own gallery slide. Expected — but only reachable via
+    # walk_stop_urls, since "ponte-santangelo" is a stop, not a tour slug.
+    walk_stops = {"ponte-santangelo_hero.webp"}
+    cases.append((["castel-santangelo_3.webp", "ponte-santangelo_hero.webp"], "info"))
     failures = 0
     for group, expected in cases:
-        got, reason = classify(group, slug_kind)
+        got, reason = classify(group, slug_kind, walk_stops if "ponte-santangelo_hero.webp" in group else frozenset())
         ok = got == expected
         failures += 0 if ok else 1
         print(f"  {'PASS' if ok else 'FAIL'}  expected {expected:5} got {got:5}  {' == '.join(group)}")
@@ -227,7 +248,7 @@ def main():
         print(f"cannot read {args.file}: {exc}", file=sys.stderr)
         sys.exit(2)
 
-    urls, slug_kind = build_index(catalog, args.maker)
+    urls, slug_kind, walk_stop_urls = build_index(catalog, args.maker)
     if not urls:
         print(f"no images found{' for maker ' + args.maker if args.maker else ''}")
         sys.exit(2)
@@ -248,7 +269,7 @@ def main():
     if failed:
         print()
 
-    errors = report(groups, slug_kind)
+    errors = report(groups, slug_kind, walk_stop_urls)
     dupes = sum(1 for g in groups.values() if len(g) > 1)
 
     if errors:
