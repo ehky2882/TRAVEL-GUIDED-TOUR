@@ -1,9 +1,8 @@
 import SwiftUI
-import UIKit
 
 /// Library tab — spec section Flow 3: Library / roadmap M-library.
 ///
-/// Three sections accessed via a segmented picker at the top:
+/// Three sections accessed via an `AtlasTabStrip` at the top:
 ///   - Lists (every list the user has — **Liked**, the default list, plus
 ///     any they named — followed by the creators they follow)
 ///   - Downloaded (audio cached on device — populated by M-offline)
@@ -34,20 +33,6 @@ struct LibraryView: View {
     @State private var selectedSection: Section = .saved
     @State private var showingCreateList = false
 
-    /// Push the section picker's labels to SF Mono caption (13pt
-    /// monospaced regular) — matches the editorial voice carried by
-    /// every other small auxiliary label on home + detail. SwiftUI
-    /// doesn't expose a font modifier on a segmented `Picker`, so we
-    /// reach down to UIKit's appearance proxy. Set globally because
-    /// Library is the only place a segmented control appears in the
-    /// app today; if another segmented control lands later it'll
-    /// inherit the same SF Mono treatment automatically.
-    init() {
-        let mono = UIFont.monospacedSystemFont(ofSize: 13, weight: .regular)
-        UISegmentedControl.appearance().setTitleTextAttributes([.font: mono], for: .normal)
-        UISegmentedControl.appearance().setTitleTextAttributes([.font: mono], for: .selected)
-    }
-
     /// Library is the one home for everything the user has kept. **Liked is
     /// not a separate section** — it's the default list (`SaveState`) and sits
     /// in the Lists section as its first row, so every list looks like a list.
@@ -62,11 +47,10 @@ struct LibraryView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
+                // Full-bleed: the strip carries its own hairline, so it
+                // takes no horizontal padding and needs no `Divider()`
+                // beneath it.
                 sectionPicker
-                    .padding(.horizontal, AtlasSpacing.lg)
-                    .padding(.vertical, AtlasSpacing.sm)
-
-                Divider()
 
                 ScrollView {
                     sectionContent
@@ -114,12 +98,7 @@ struct LibraryView: View {
     // MARK: - Sections
 
     private var sectionPicker: some View {
-        Picker("Library section", selection: $selectedSection) {
-            ForEach(Section.allCases) { section in
-                Text(section.rawValue).tag(section)
-            }
-        }
-        .pickerStyle(.segmented)
+        AtlasTabStrip(tabs: Section.allCases, selection: $selectedSection)
     }
 
     @ViewBuilder
@@ -174,14 +153,18 @@ struct LibraryView: View {
             // Create sits at the very top — it's an action, not a list, so it
             // shouldn't be buried among them (owner direction).
             if canUseLists {
-                newListRow
+                NewListRow { showingCreateList = true }
                 Divider().padding(.horizontal, AtlasSpacing.lg)
             }
 
             NavigationLink {
                 LikedListView()
             } label: {
-                likedRow
+                LikedListRow(
+                    count: savedTours.count,
+                    coverImageName: savedTours.first?.heroImageURL,
+                    coverCategory: savedTours.first?.primaryCategory
+                )
             }
             .buttonStyle(.plain)
 
@@ -192,7 +175,11 @@ struct LibraryView: View {
                     NavigationLink {
                         TourListDetailView(listId: list.id)
                     } label: {
-                        listRow(list)
+                        NamedListRow(
+                            list: list,
+                            coverImageName: TourListCover.imageName(for: list, in: dataService),
+                            coverCategory: TourListCover.category(for: list, in: dataService)
+                        )
                     }
                     .buttonStyle(.plain)
                 }
@@ -214,142 +201,6 @@ struct LibraryView: View {
                 }
             }
         }
-    }
-
-    /// Liked — the default list, styled exactly like a named list so it reads
-    /// as one of them. Cover is the most recently liked tour's hero; the
-    /// bookmark glyph stands in while it's empty.
-    private var likedRow: some View {
-        HStack(alignment: .center, spacing: AtlasSpacing.md) {
-            Group {
-                if let cover = savedTours.first?.heroImageURL {
-                    HeroImageView(
-                        imageName: cover,
-                        height: 56,
-                        cornerRadius: 0,
-                        category: savedTours.first?.primaryCategory
-                    )
-                } else {
-                    ZStack {
-                        Rectangle()
-                            .fill(AtlasColors.placeholderWarm.opacity(0.35))
-                        Image(systemName: "bookmark.fill")
-                            .font(AtlasTypography.body)
-                            .foregroundStyle(AtlasColors.mapPin)
-                    }
-                }
-            }
-            .frame(width: 56, height: 56)
-            .clipped()
-
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                Text("LIKED")
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(1)
-
-                Text(savedTours.count == 1 ? "1 tour" : "\(savedTours.count) tours")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .lineLimit(1)
-            }
-
-            Spacer()
-
-            Image(systemName: "chevron.right")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
-        }
-        .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.vertical, AtlasSpacing.sm)
-    }
-
-    /// Create a new list. Lives here because Library is now the single home for
-    /// the user's own lists — the profile no longer carries a second door into
-    /// the same thing.
-    private var newListRow: some View {
-        Button {
-            showingCreateList = true
-        } label: {
-            HStack(alignment: .center, spacing: AtlasSpacing.md) {
-                ZStack {
-                    Rectangle()
-                        .fill(AtlasColors.placeholderWarm.opacity(0.35))
-                    Image(systemName: "plus")
-                        .font(AtlasTypography.body)
-                        .foregroundStyle(AtlasColors.mapPin)
-                }
-                .frame(width: 56, height: 56)
-
-                Text("New list")
-                    .font(AtlasTypography.body)
-                    .textCase(.uppercase)
-                    .foregroundStyle(AtlasColors.primaryText)
-
-                Spacer()
-            }
-            .padding(.horizontal, AtlasSpacing.lg)
-            .padding(.vertical, AtlasSpacing.sm)
-            .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
-    }
-
-    /// A named list row — cover thumbnail (explicit, else the first tour's
-    /// hero), title, tour count. Matches the maker row's 56pt metrics so the
-    /// two sections below the tours read as one system.
-    private func listRow(_ list: TourList) -> some View {
-        HStack(alignment: .center, spacing: AtlasSpacing.md) {
-            // Same cover treatment as the lists screen's own rows.
-            Group {
-                if let name = listCoverImageName(for: list) {
-                    HeroImageView(
-                        imageName: name,
-                        height: 56,
-                        cornerRadius: 0,
-                        category: list.firstTourId.flatMap { dataService.tour(by: $0)?.primaryCategory }
-                    )
-                } else {
-                    ZStack {
-                        Rectangle()
-                            .fill(AtlasColors.placeholderWarm.opacity(0.35))
-                        Image(systemName: "map")
-                            .font(AtlasTypography.body)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                    }
-                }
-            }
-            .frame(width: 56, height: 56)
-            .clipped()
-
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                Text(list.title)
-                    .font(AtlasTypography.body)
-                    .textCase(.uppercase)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(1)
-                    .truncationMode(.tail)
-
-                Text(list.itemCount == 1 ? "1 tour" : "\(list.itemCount) tours")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .lineLimit(1)
-            }
-
-            Spacer()
-
-            Image(systemName: "chevron.right")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
-        }
-        .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.vertical, AtlasSpacing.sm)
-    }
-
-    private func listCoverImageName(for list: TourList) -> String? {
-        if let explicit = list.coverImageURL, !explicit.isEmpty { return explicit }
-        guard let firstTourId = list.firstTourId else { return nil }
-        return dataService.tour(by: firstTourId)?.heroImageURL
     }
 
     /// Caption all-caps section divider — matches the Search view's

@@ -1,0 +1,136 @@
+import SwiftUI
+
+/// The app's map pin vocabulary, shared by every map surface.
+///
+/// These lived `private` inside `HomeMapSection` until 2026-07-27, and
+/// the cost of that was already on the books: `TourDetailView`'s inline
+/// map had reimplemented `StopPin` and `UserLocationDot` by hand, with a
+/// comment saying it had to because the originals were unreachable — and
+/// the copies had drifted (a 14pt dot there against Home's 16pt). The
+/// maker page's map would have been the third copy.
+///
+/// Anything drawing a pin on a map should use these. If a surface needs
+/// a different size or treatment, add a parameter here rather than a
+/// local copy.
+
+// MARK: - Stop pin
+
+/// Small filled circle, accent-tinted. Selected state thickens the
+/// ring and bumps the radius so the active pin pops above its
+/// neighbors without changing pin density elsewhere.
+struct StopPin: View {
+    let isSelected: Bool
+
+    init(isSelected: Bool = false) {
+        self.isSelected = isSelected
+    }
+
+    var body: some View {
+        Circle()
+            .fill(AtlasColors.mapPin)
+            .frame(width: diameter, height: diameter)
+            .overlay(
+                Circle().stroke(Color.white, lineWidth: isSelected ? 3 : 1.5)
+            )
+            .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
+    }
+
+    private var diameter: CGFloat { isSelected ? 20 : 16 }
+}
+
+// MARK: - Cluster pin
+
+/// Cluster badge: a larger circle with a count, in the accent color
+/// so it reads as the same family as the individual pins.
+struct ClusterPin: View {
+    let count: Int
+
+    var body: some View {
+        ZStack {
+            Circle()
+                .fill(AtlasColors.mapPin.opacity(0.25))
+                .frame(width: outerDiameter, height: outerDiameter)
+            Circle()
+                .fill(AtlasColors.mapPin)
+                .frame(width: innerDiameter, height: innerDiameter)
+                .overlay(Circle().stroke(Color.white, lineWidth: 1.5))
+            Text("\(count)")
+                .font(.system(size: 12, weight: .regular, design: .monospaced))
+                .foregroundStyle(.white)
+        }
+        .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
+    }
+
+    private var innerDiameter: CGFloat {
+        switch count {
+        case ..<10: return 26
+        case ..<100: return 30
+        default: return 34
+        }
+    }
+
+    private var outerDiameter: CGFloat { innerDiameter + 10 }
+}
+
+// MARK: - User location
+
+/// iOS-Maps-style user-location indicator: a soft accuracy halo, an
+/// optional directional wedge showing which way the device is
+/// facing, and the blue dot itself. All colors are explicit (not
+/// `.tint`-derived) so the dot stays Apple-Maps blue rather than
+/// inheriting the gold app accent.
+struct UserLocationDot: View {
+    /// Screen-space rotation for the heading wedge, in degrees
+    /// (0 = pointing up). `nil` hides the wedge.
+    let headingDegrees: Double?
+
+    init(headingDegrees: Double? = nil) {
+        self.headingDegrees = headingDegrees
+    }
+
+    var body: some View {
+        ZStack {
+            Circle()
+                .fill(Color.blue.opacity(0.15))
+                .frame(width: 46, height: 46)
+
+            if let headingDegrees {
+                HeadingWedge()
+                    .fill(
+                        LinearGradient(
+                            colors: [Color.blue.opacity(0.55), Color.blue.opacity(0)],
+                            startPoint: .bottom,
+                            endPoint: .top
+                        )
+                    )
+                    .frame(width: 34, height: 26)
+                    .offset(y: -16)
+                    .rotationEffect(.degrees(headingDegrees))
+            }
+
+            Circle()
+                .fill(Color.blue)
+                .frame(width: 16, height: 16)
+                .overlay(Circle().stroke(Color.white, lineWidth: 3))
+                .shadow(color: Color.black.opacity(0.25), radius: 1.5)
+        }
+        .frame(width: 46, height: 46)
+    }
+}
+
+/// A fan/cone — apex at bottom-center (over the dot), spreading
+/// toward the top. Rotated by the device heading so it points the
+/// way the user is facing.
+struct HeadingWedge: Shape {
+    nonisolated func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: rect.midX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
+        path.addQuadCurve(
+            to: CGPoint(x: rect.maxX, y: rect.minY),
+            control: CGPoint(x: rect.midX, y: rect.minY + rect.height * 0.55)
+        )
+        path.closeSubpath()
+        return path
+    }
+}
