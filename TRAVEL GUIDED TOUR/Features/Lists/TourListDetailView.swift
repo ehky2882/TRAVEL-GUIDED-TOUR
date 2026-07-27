@@ -1,35 +1,35 @@
 import SwiftUI
 
-/// A single Journey: its title/description + the ordered list of tours in it.
+/// A single TourList: its title/description + the ordered list of tours in it.
 /// Tapping a tour opens it (via the shared `TourPresenter` when no detail
 /// layer is up, else a push within the current stack). Editing (remove tours,
-/// delete the Journey) lives behind an Edit toggle.
+/// delete the TourList) lives behind an Edit toggle.
 ///
-/// Tours are resolved from `DataService` by id — a Journey stores only tour
-/// references, never duplicated content (design: `docs/journeys-design.md`).
-struct JourneyDetailView: View {
-    let journeyId: UUID
+/// Tours are resolved from `DataService` by id — a TourList stores only tour
+/// references, never duplicated content (design: `docs/lists-design.md`).
+struct TourListDetailView: View {
+    let listId: UUID
 
-    @Environment(JourneyService.self) private var journeyService
+    @Environment(TourListService.self) private var listService
     @Environment(DataService.self) private var dataService
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(\.dismiss) private var dismiss
 
-    @State private var items: [JourneyItem] = []
+    @State private var items: [TourListItem] = []
     @State private var isLoading = true
     @State private var isEditing = false
     @State private var showingDeleteConfirm = false
     @State private var showingEditDetails = false
     @State private var noteTarget: NoteTarget?
 
-    /// The journey's metadata from the in-memory list (title / public flag).
-    private var journey: Journey? {
-        journeyService.myJourneys.first(where: { $0.id == journeyId })
+    /// The list's metadata from the in-memory list (title / public flag).
+    private var journey: TourList? {
+        listService.myLists.first(where: { $0.id == listId })
     }
 
-    /// Resolved (tour, note) pairs in Journey order — dropping any tour id no
+    /// Resolved (tour, note) pairs in TourList order — dropping any tour id no
     /// longer in the catalog.
-    private var resolvedTours: [(item: JourneyItem, tour: Tour)] {
+    private var resolvedTours: [(item: TourListItem, tour: Tour)] {
         items.compactMap { item in
             guard let tour = dataService.tour(by: item.tourId) else { return nil }
             return (item, tour)
@@ -37,7 +37,7 @@ struct JourneyDetailView: View {
     }
 
     /// Cover image source: an explicit `coverImageURL` if set, else the first
-    /// resolved tour's hero. `nil` (no banner) for an empty Journey with no
+    /// resolved tour's hero. `nil` (no banner) for an empty TourList with no
     /// cover set.
     private var coverImageName: String? {
         if let url = journey?.coverImageURL, !url.isEmpty { return url }
@@ -109,24 +109,24 @@ struct JourneyDetailView: View {
             isPresented: $showingDeleteConfirm,
             titleVisibility: .visible
         ) {
-            Button("Delete list", role: .destructive) { deleteJourney() }
+            Button("Delete list", role: .destructive) { deleteList() }
             Button("Cancel", role: .cancel) {}
         }
         .sheet(isPresented: $showingEditDetails) {
             if let journey {
-                JourneyEditorSheet(editing: journey)
+                TourListEditorSheet(editing: journey)
             }
         }
         .sheet(item: $noteTarget) { target in
-            JourneyNoteEditorSheet(
+            TourListNoteEditorSheet(
                 tourTitle: target.tourTitle,
                 initialNote: target.note
             ) { newNote in
                 saveNote(newNote, for: target.tourId)
             }
         }
-        .task(id: journeyId) {
-            items = await journeyService.items(of: journeyId)
+        .task(id: listId) {
+            items = await listService.items(of: listId)
             isLoading = false
         }
     }
@@ -279,8 +279,8 @@ struct JourneyDetailView: View {
 
     private func remove(_ tourId: UUID) {
         Task {
-            try? await journeyService.removeTour(tourId, from: journeyId)
-            items = await journeyService.items(of: journeyId)
+            try? await listService.removeTour(tourId, from: listId)
+            items = await listService.items(of: listId)
         }
     }
 
@@ -292,19 +292,19 @@ struct JourneyDetailView: View {
         guard items.indices.contains(target) else { return }
         items.swapAt(idx, target)
         let ordered = items.map(\.tourId)
-        Task { try? await journeyService.reorder(ordered, in: journeyId) }
+        Task { try? await listService.reorder(ordered, in: listId) }
     }
 
     private func saveNote(_ note: String, for tourId: UUID) {
         Task {
-            try? await journeyService.setNote(note, for: tourId, in: journeyId)
-            items = await journeyService.items(of: journeyId)
+            try? await listService.setNote(note, for: tourId, in: listId)
+            items = await listService.items(of: listId)
         }
     }
 
-    private func deleteJourney() {
+    private func deleteList() {
         Task {
-            try? await journeyService.deleteJourney(journeyId)
+            try? await listService.deleteList(listId)
             dismiss()
         }
     }
@@ -319,7 +319,7 @@ private struct NoteTarget: Identifiable {
 }
 
 /// Small sheet to add/edit a per-tour curator note ("do this at golden hour").
-struct JourneyNoteEditorSheet: View {
+struct TourListNoteEditorSheet: View {
     let tourTitle: String
     let initialNote: String
     let onSave: (String) -> Void

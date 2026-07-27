@@ -61,11 +61,11 @@ struct TourDetailView: View {
     @Environment(AppSharedState.self) private var appShared
     @Environment(\.openURL) private var openURL
     /// Optional: TourDetailView is hosted in the UIKit slide-up layers, which
-    /// inject `JourneyService` explicitly. Optional so any other presentation
-    /// path can't crash on a missing lookup — the "Add to a Journey" item just
+    /// inject `TourListService` explicitly. Optional so any other presentation
+    /// path can't crash on a missing lookup — the "Save to…" item just
     /// hides when it's absent.
-    @Environment(JourneyService.self) private var journeyService: JourneyService?
-    /// Optional for the same reason as `journeyService` — injected by the UIKit
+    @Environment(TourListService.self) private var listService: TourListService?
+    /// Optional for the same reason as `listService` — injected by the UIKit
     /// slide-up layers; "Listen together" hides if absent.
     @Environment(GroupListenCoordinator.self) private var groupListen: GroupListenCoordinator?
 
@@ -1372,7 +1372,7 @@ struct TourDetailView: View {
     /// and opens the membership sheet when it's in several rather than guessing
     /// which one to pull it out of.
     private var saveActions: TourSaveActions {
-        TourSaveActions(libraryStore: libraryStore, journeyService: journeyService)
+        TourSaveActions(libraryStore: libraryStore, listService: listService)
     }
 
     private func toggleSaved() {

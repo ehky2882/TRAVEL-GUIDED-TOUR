@@ -29,7 +29,7 @@ struct LibraryView: View {
     @Environment(AuthService.self) private var authService
     /// Optional so Library still renders if the service isn't injected on some
     /// path; signed-out users have no named lists anyway.
-    @Environment(JourneyService.self) private var journeyService: JourneyService?
+    @Environment(TourListService.self) private var listService: TourListService?
 
     @State private var selectedSection: Section = .saved
     @State private var showingCreateList = false
@@ -103,10 +103,10 @@ struct LibraryView: View {
                 await loadFollowing()
                 // Named lists live in Supabase; keyed on the account so a
                 // sign-out or switch can't leave the previous user's on screen.
-                await journeyService?.loadMyJourneys()
+                await listService?.loadMyLists()
             }
             .sheet(isPresented: $showingCreateList) {
-                JourneyEditorSheet()
+                TourListEditorSheet()
             }
         }
     }
@@ -190,7 +190,7 @@ struct LibraryView: View {
                     Divider().padding(.horizontal, AtlasSpacing.lg)
 
                     NavigationLink {
-                        JourneyDetailView(journeyId: list.id)
+                        TourListDetailView(listId: list.id)
                     } label: {
                         listRow(list)
                     }
@@ -298,7 +298,7 @@ struct LibraryView: View {
     /// A named list row — cover thumbnail (explicit, else the first tour's
     /// hero), title, tour count. Matches the maker row's 56pt metrics so the
     /// two sections below the tours read as one system.
-    private func listRow(_ list: Journey) -> some View {
+    private func listRow(_ list: TourList) -> some View {
         HStack(alignment: .center, spacing: AtlasSpacing.md) {
             // Same cover treatment as the lists screen's own rows.
             Group {
@@ -346,7 +346,7 @@ struct LibraryView: View {
         .padding(.vertical, AtlasSpacing.sm)
     }
 
-    private func listCoverImageName(for list: Journey) -> String? {
+    private func listCoverImageName(for list: TourList) -> String? {
         if let explicit = list.coverImageURL, !explicit.isEmpty { return explicit }
         guard let firstTourId = list.firstTourId else { return nil }
         return dataService.tour(by: firstTourId)?.heroImageURL
@@ -425,14 +425,14 @@ struct LibraryView: View {
 
     /// The user's named lists. Empty signed out — Liked is the only list an
     /// anonymous user has, and it *is* this tab.
-    private var myLists: [Journey] {
-        journeyService?.myJourneys ?? []
+    private var myLists: [TourList] {
+        listService?.myLists ?? []
     }
 
     /// Named lists need an account. When the user has one the Lists section
     /// always shows — including with zero lists — so "New list" is reachable.
     private var canUseLists: Bool {
-        authService.isSignedIn && journeyService != nil
+        authService.isSignedIn && listService != nil
     }
 
 

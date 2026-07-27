@@ -32,7 +32,7 @@ struct PlayerView: View {
     /// Optional: the player is presented from the bottom-module window, which
     /// only carries the services that window's root injects. Absent → Liked
     /// only, which is also what a signed-out user gets.
-    @Environment(JourneyService.self) private var journeyService: JourneyService?
+    @Environment(TourListService.self) private var listService: TourListService?
 
     /// -1 means the tour's intro audio is playing (only valid when
     /// the tour has an `introAudioURL`). 0...n indexes `sortedStops`.
@@ -292,7 +292,7 @@ struct PlayerView: View {
 
     /// Saving is one concept — see `SaveState`.
     private var saveActions: TourSaveActions {
-        TourSaveActions(libraryStore: libraryStore, journeyService: journeyService)
+        TourSaveActions(libraryStore: libraryStore, listService: listService)
     }
 
     private var isSaved: Bool {
