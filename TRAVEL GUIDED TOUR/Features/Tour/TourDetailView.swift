@@ -283,10 +283,9 @@ struct TourDetailView: View {
     /// `AtlasTabStrip` — the same switcher `LibraryView` and the maker
     /// page use, so every in-page switch in Atlas reads as one system.
     ///
-    /// Full-bleed by design: the strip's hairline runs the full width
-    /// while the gallery / map below stay inset `AtlasSpacing.lg`, so
-    /// the rule reads as page structure rather than a list separator.
-    /// Hence no horizontal padding here.
+    /// The strip insets itself by `AtlasSpacing.lg`, matching the
+    /// gallery / map below, so its rule lines up with them. No padding
+    /// from here.
     private var topSectionTabRow: some View {
         AtlasTabStrip(tabs: TopSectionTab.allCases, selection: $topSectionTab)
     }

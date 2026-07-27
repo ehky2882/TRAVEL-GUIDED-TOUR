@@ -23,16 +23,23 @@ import SwiftUI
 /// ones inside system sheets. This component styles its own text, so
 /// nothing global is touched.
 ///
-/// The strip renders **full-bleed**: its hairline runs the full width
-/// even where the content below is inset, so the rule reads as page
-/// structure rather than as a list separator. Callers therefore apply
-/// no horizontal padding to it.
+/// The strip is **inset**, not full-bleed: its hairline starts and ends
+/// level with the row content beneath it. Shipped full-bleed first and
+/// the owner called it on device (TestFlight 1.1 (52)): *"definitely
+/// prefer inset on the strips."*
+///
+/// The inset lives here rather than at the three call sites so all three
+/// screens are guaranteed to match — a caller can still override it, but
+/// nothing has to remember to.
 struct AtlasTabStrip<Tab: Hashable>: View {
     let tabs: [Tab]
     @Binding var selection: Tab
     /// Display label for a tab. Rendered ALL CAPS in
     /// `AtlasTypography.caption`, so pass the plain name.
     let title: (Tab) -> String
+    /// Gutter either side. Defaults to the page gutter every consumer
+    /// uses for its own content, so the rule lines up with it.
+    var horizontalInset: CGFloat = AtlasSpacing.lg
 
     /// Honour Reduce Motion: the underline jumps instead of sliding.
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -49,12 +56,15 @@ struct AtlasTabStrip<Tab: Hashable>: View {
             }
         }
         // Behind the buttons, so a selected tab's underline draws *over*
-        // the hairline rather than under it.
+        // the hairline rather than under it. Applied BEFORE the padding
+        // below, so the hairline insets along with the buttons instead
+        // of running edge to edge behind them.
         .background(alignment: .bottom) {
             Rectangle()
                 .fill(AtlasColors.divider)
                 .frame(height: 1)
         }
+        .padding(.horizontal, horizontalInset)
         .accessibilityElement(children: .contain)
     }
 
@@ -100,8 +110,17 @@ struct AtlasTabStrip<Tab: Hashable>: View {
 extension AtlasTabStrip where Tab: RawRepresentable, Tab.RawValue == String {
     /// The common case: a `String`-backed enum whose raw value is
     /// already the display label (`case gallery = "Gallery"`).
-    init(tabs: [Tab], selection: Binding<Tab>) {
-        self.init(tabs: tabs, selection: selection) { $0.rawValue }
+    init(
+        tabs: [Tab],
+        selection: Binding<Tab>,
+        horizontalInset: CGFloat = AtlasSpacing.lg
+    ) {
+        self.init(
+            tabs: tabs,
+            selection: selection,
+            title: { $0.rawValue },
+            horizontalInset: horizontalInset
+        )
     }
 }
 

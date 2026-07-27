@@ -47,9 +47,8 @@ struct LibraryView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                // Full-bleed: the strip carries its own hairline, so it
-                // takes no horizontal padding and needs no `Divider()`
-                // beneath it.
+                // The strip carries its own inset hairline, so it needs
+                // no padding from here and no `Divider()` beneath it.
                 sectionPicker
 
                 ScrollView {

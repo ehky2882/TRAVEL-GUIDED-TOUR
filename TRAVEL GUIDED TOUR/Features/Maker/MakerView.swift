@@ -179,10 +179,9 @@ struct MakerView: View {
                     .padding(.top, AtlasSpacing.lg)
                     .padding(.horizontal, AtlasSpacing.lg)
 
-                // Full-bleed on purpose: the strip's hairline runs the
-                // whole width while everything below stays inset, so the
-                // rule reads as the divide between the person and their
-                // work rather than as a list separator.
+                // The strip insets itself, so its rule lines up with the
+                // rows below rather than running edge to edge (owner
+                // direction on device, TestFlight 1.1 (52)).
                 AtlasTabStrip(tabs: availableTabs, selection: $profileTab)
 
                 // Each tab owns its own horizontal inset — the list rows
