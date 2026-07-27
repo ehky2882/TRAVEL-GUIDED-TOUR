@@ -15,7 +15,7 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-07-27 (🇮🇹 Rome WIRED LIVE — 30 tours under Atlas Studio ROM. Pending queue now Montreal + Berlin).
+**Last verified:** 2026-07-27 (🇮🇹 Rome COMPLETE — all 37 tours live under Atlas Studio ROM. Pending queue now Montreal + Berlin only).
 
 ---
 
@@ -72,19 +72,11 @@ _(✅ 🇨🇦 Toronto = DONE (2026-07-10): **all 42 tours LIVE** — 38 single-
 
 **🇮🇹 Rome — ✅ LIVE (2026-07-27)** — all **30 staged tours** under **Atlas Studio ROM** (`d5939cce-c156-5316-984a-6259aadd8be2`): 25 single-stop (geofenced 30 m) + 5 walks — `rome-ancientrome-walk` (intro+5, 1.5 km) · `rome-baroqueheart-walk` (intro+5, 2.0 km) · `rome-ghettotrastevere-walk` (intro+5, 2.5 km) · `rome-vaticanborgo-walk` (intro+4, 1.25 km) · `rome-aventinetestaccio-walk` (intro+4, 2.5 km). 53 MP3s, 6,866 s narration. Credits: `drafts/CREDITS.md` (Rome — 6 CC-credited: Ara Pacis ×3, Piazza Barberini ×2, Testaccio ×1).
 
-**🇮🇹 Rome — 7 EXTRA singles still pending (audio ONLY, no scripts, no images).** Delivered with the narration batch but never staged; master list numbers 25–31:
+**🇮🇹 Rome — ✅ the 7 extras are LIVE too (2026-07-27, PR #452).** Piazza del Quirinale · Monti · Santa Maria Maggiore · San Giovanni in Laterano · Trajan's Column · Porta San Sebastiano · Testaccio — all single-stop, geofenced 30 m, 1,041 s of narration. **Rome total: 37 tours (32 single + 5 walks). Nothing Rome pending.**
 
-| # | Tour | banked audio slug | has hero image? | script? |
-|---|------|-------------------|-----------------|---------|
-| 25 | Piazza del Quirinale | `piazza-quirinale` | ✗ | ✗ |
-| 26 | Monti — Piazza della Madonna dei Monti | `monti` | ✗ | ✗ |
-| 27 | Santa Maria Maggiore | `santa-maria-maggiore` | ✗ | ✗ |
-| 28 | San Giovanni in Laterano & Scala Santa | `san-giovanni-laterano` | ✗ | ✗ |
-| 29 | Trajan's Column & Imperial Forums | `trajans-column` | ✓ (walk-only hero, no gallery) | ✗ |
-| 30 | Via Appia Antica — Porta San Sebastiano | `porta-san-sebastiano` | ✗ | ✗ |
-| 31 | Testaccio & Monte Testaccio | `testaccio` | ✓ (walk-only hero, no gallery) | ✗ |
+**How the gap happened (worth knowing — it can recur):** the scripts existed all along. Rome script-sessions 3 and 4 (14–15 July) produced stops 25–31, and the session-4 handoff states "Singles: ALL 33 non-gated complete." But the **image-staging session was only ever handed 01–24 plus the late-added #46** — its README says so directly ("gaps 25–45 were never uploaded as singles") — so images were chosen only for what it received. **The break was in the handoff between the scriptwriting chats and the staging chat, not in the writing.** When a city's scripts and its image staging happen in different sessions, reconcile the master list against what staging actually received *before* staging closes.
 
-**To wire these:** (a) obtain the display scripts (they exist — the audio was narrated from something — but were not in the Dropbox delivery, which carried only MP3s + handoff/master-list `.md` files); (b) run the image pipeline for the 5 with no hero, and add galleries for all 7; (c) assemble as singles, geofenced 30 m. The audio is already hosted, so nothing needs re-uploading.
+**Images:** 3 heroes owner-supplied (Monti, Trajan's Column, Porta San Sebastiano); the rest sourced. ⚠️ `trajans-column_hero.webp` and `testaccio_hero.webp` were **overwritten** — they were walk-only images, so the Ancient Rome and Aventine/Testaccio walk stop images changed too (deliberate; both improvements).
 
 
 **🇩🇪 Berlin** — **36 tours (31 single-stop + 5 walks)**, new maker **Atlas Studio BER** 🇩🇪. Complete 2026-07-21 (image-staged; awaiting narration):
