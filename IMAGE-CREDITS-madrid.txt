@@ -4,3 +4,6 @@ mercado-de-san-miguel_4.webp	CC0	Wikimedia Commons
 
 # Madrid batch 2 (2026-06-24) — Wikimedia CC BY/BY-SA
 museo-thyssen-bornemisza_2.webp	CC BY 2.0	Wikimedia Commons (gallery interior)
+
+# Madrid — Austrias walk hero (2026-07-27)
+madrid-austrias_hero.webp	CC0	Wikimedia Commons (Plaza Mayor, Philip III statue)
