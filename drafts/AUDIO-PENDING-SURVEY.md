@@ -15,7 +15,7 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-07-25 (🇪🇸 Madrid WIRED LIVE — 34 tours under Atlas Studio MAD, PR #435. Pending queue now Montreal + Rome + Berlin).
+**Last verified:** 2026-07-27 (🇮🇹 Rome COMPLETE — all 37 tours live under Atlas Studio ROM. Pending queue now Montreal + Berlin only).
 
 ---
 
@@ -27,11 +27,11 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 | City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|------------:|----------------|------------------|
 | 🇨🇦 Montreal | 29 | 25 single + 4 walks (intro+5 / intro+4 / intro+4 / intro+4) | 46 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio YUL |
-| 🇮🇹 Rome | 30 | 25 single + 5 walks (intro+5 / intro+5 / intro+5 / intro+4 / intro+4) | 53 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ROM |
 | 🇩🇪 Berlin | 36 | 31 single + 5 walks (intro+5 / intro+5 / intro+4 / intro+4 / intro+3) | 57 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio BER |
-| **TOTAL PENDING** | **95** | | **156** | | |
+| **TOTAL PENDING** | **65** | | **103** | | |
 
 _(✅ 🇪🇸 Madrid = DONE (2026-07-25, PR #435): **34 tours LIVE** — 30 single-stop + **4 walks** (Madrid de los Austrias, Paseo del Arte, El Retiro, Royal Madrid) under new maker **Atlas Studio MAD**. 55 MP3s. Note: the staged set was **30 singles / 55 MP3s**, not the 31/56 recorded here — the old figure was one over. Owner audio arrived complete, matching the staged drafts 1:1.)_
+_(✅ 🇮🇹 Rome = DONE (2026-07-27): **30 tours LIVE** — 25 single-stop + **5 walks** (Ancient Rome, The Baroque Heart, The Ghetto and Trastevere, The Vatican and the Borgo, The Aventine and Testaccio) under new maker **Atlas Studio ROM**. 53 MP3s, 6,866 s narration. The delivery also contained **7 extra singles (25–31)** narrated after the image-staging session — Piazza del Quirinale, Monti, Santa Maria Maggiore, San Giovanni in Laterano, Trajan's Column, Porta San Sebastiano, Testaccio. They have **no scripts and no staged images** (Trajan's Column + Testaccio have a walk-only hero and nothing else), so they were NOT wired. Their audio is banked on gh-pages under its eventual slug (`piazza-quirinale.mp3`, `monti.mp3`, `santa-maria-maggiore.mp3`, `san-giovanni-laterano.mp3`, `trajans-column.mp3`, `porta-san-sebastiano.mp3`, `testaccio.mp3`) — see the new PENDING row below.)_
 _(✅ 🇳🇱 Amsterdam = DONE (2026-07-16, PR #401): **38 tours LIVE** — 33 single-stop + **5 walks** (Canal Ring, Old Side, Museum Quarter, Jordaan, Jewish Quarter) under new maker **Atlas Studio AMS**. 64 MP3s. Sensitivity honored on the Jewish Quarter + De Wallen.)_
 _(✅ 🇺🇸 Los Angeles = DONE (2026-07-15, PR #390): **42 tours LIVE** — 38 single-stop + **4 walks** (Beachfront, Downtown LA, Museum Row, **Hollywood Boulevard**) under new maker **Atlas Studio LAX**. 64 MP3s. Note: LA turned out to be 38 singles + 4 walks (the old "36 + 3" count was low, and a Hollywood walk was added at wire-in). Memorial Coliseum + The Huntington shipped with `transcriptText: null` — scripts never provided as text; trivial backfill when they arrive.)_
 _(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **went LIVE 2026-07-08, PR #378** — removed from pending. It was the last staged London tour.)_
@@ -70,13 +70,14 @@ _(✅ 🇨🇦 Toronto = DONE (2026-07-10): **all 42 tours LIVE** — 38 single-
 - **4 walks:** `montreal-oldmontreal-walk` (intro+5) · `montreal-mountroyal-walk` (intro+4) · `montreal-plateaumileend-walk` (intro+4) · `montreal-downtown-walk` (intro+4). Each has its own README wire-in spec; all reuse single-stop heroes except Mount Royal (3 new images: entrance, climb, Cross).
 - **MP3s needed: 46** = 25 singles + 21 walk tracks. Credits: `drafts/CREDITS.md` (Montreal — 15 batch 1-2 + 4 batch 3/walk = 19 CC-credited; almost all batch-3 is owner/ship-safe).
 
-**🇮🇹 Rome** — **30 tours (25 single-stop + 5 walks)**, new maker **Atlas Studio ROM** 🇮🇹. Complete 2026-07-15 (image-staged; awaiting narration):
-- **Batch 1 (25 single-stop):** Colosseum, Roman Forum, Pantheon, Trevi, Spanish Steps, Piazza Navona, St Peter's Square, Castel Sant'Angelo, Piazza del Popolo, Campo de' Fiori, Campidoglio, Vittoriano, Largo Argentina, Jewish Ghetto, Tiber Island, Santa Maria in Trastevere, Gianicolo, Bocca della Verità, Circus Maximus, Aventine, Baths of Caracalla, Ara Pacis + Mausoleum, Pincio, Piazza Barberini, Arch of Constantine. Master pick-map (slug/coord/category/hero+gallery/credit): `drafts/rome-batch1/README.md`.
-- **5 walks:** `rome-ancientrome-walk` (intro+5) · `rome-baroqueheart-walk` (intro+5) · `rome-ghettotrastevere-walk` (intro+5) · `rome-vaticanborgo-walk` (intro+4) · `rome-aventinetestaccio-walk` (intro+4). Each folder has its own README wire-in spec (per-stop image slug + coord + centroid + walking distance).
-- **Walk images:** almost all stops reuse live single-stop heroes. **5 walk-only new images** staged (Trajan's Column, Ponte Sant'Angelo, Via della Conciliazione, Testaccio/Monte Testaccio, Aventine Keyhole).
-- **Sensitivity:** the Jewish Ghetto (single #14 + Ghetto & Trastevere walk stop 2) uses dignified Portico d'Ottavia / Great Synagogue exteriors only — no graphic imagery.
-- **MP3s needed: 53** = 25 singles + 28 walk tracks. Credits: `drafts/CREDITS.md` (Rome — **6 CC-credited**: Ara Pacis ×3, Piazza Barberini ×2, Testaccio ×1; everything else ship-safe/owner-pasted).
-- **Pending galleries (hero-complete without them):** #10 Mary interior, #11 Place Ville Marie, #22 Square Saint-Louis, #23 The Main.
+**🇮🇹 Rome — ✅ LIVE (2026-07-27)** — all **30 staged tours** under **Atlas Studio ROM** (`d5939cce-c156-5316-984a-6259aadd8be2`): 25 single-stop (geofenced 30 m) + 5 walks — `rome-ancientrome-walk` (intro+5, 1.5 km) · `rome-baroqueheart-walk` (intro+5, 2.0 km) · `rome-ghettotrastevere-walk` (intro+5, 2.5 km) · `rome-vaticanborgo-walk` (intro+4, 1.25 km) · `rome-aventinetestaccio-walk` (intro+4, 2.5 km). 53 MP3s, 6,866 s narration. Credits: `drafts/CREDITS.md` (Rome — 6 CC-credited: Ara Pacis ×3, Piazza Barberini ×2, Testaccio ×1).
+
+**🇮🇹 Rome — ✅ the 7 extras are LIVE too (2026-07-27, PR #452).** Piazza del Quirinale · Monti · Santa Maria Maggiore · San Giovanni in Laterano · Trajan's Column · Porta San Sebastiano · Testaccio — all single-stop, geofenced 30 m, 1,041 s of narration. **Rome total: 37 tours (32 single + 5 walks). Nothing Rome pending.**
+
+**How the gap happened (worth knowing — it can recur):** the scripts existed all along. Rome script-sessions 3 and 4 (14–15 July) produced stops 25–31, and the session-4 handoff states "Singles: ALL 33 non-gated complete." But the **image-staging session was only ever handed 01–24 plus the late-added #46** — its README says so directly ("gaps 25–45 were never uploaded as singles") — so images were chosen only for what it received. **The break was in the handoff between the scriptwriting chats and the staging chat, not in the writing.** When a city's scripts and its image staging happen in different sessions, reconcile the master list against what staging actually received *before* staging closes.
+
+**Images:** 3 heroes owner-supplied (Monti, Trajan's Column, Porta San Sebastiano); the rest sourced. ⚠️ `trajans-column_hero.webp` and `testaccio_hero.webp` were **overwritten** — they were walk-only images, so the Ancient Rome and Aventine/Testaccio walk stop images changed too (deliberate; both improvements).
+
 
 **🇩🇪 Berlin** — **36 tours (31 single-stop + 5 walks)**, new maker **Atlas Studio BER** 🇩🇪. Complete 2026-07-21 (image-staged; awaiting narration):
 - **Batch 1 (31 single-stop):** Brandenburg Gate, Reichstag, Holocaust Memorial, Bebelplatz, Museum Island, Humboldt Forum, Alexanderplatz, Gendarmenmarkt, Checkpoint Charlie, Bernauer Strasse, East Side Gallery, Potsdamer Platz, Oberbaumbrücke, Topography of Terror, Gedächtniskirche, Tiergarten/Siegessäule, Hackesche Höfe, Neue Synagoge, Nikolaiviertel, Tränenpalast, Neue Wache, Karl-Marx-Allee, Kollwitzplatz/Wasserturm, Mauerpark, Tempelhofer Feld, Charlottenburg, Kulturforum, Band des Bundes, Treptower Park, Landwehrkanal/Maybachufer, Nollendorfplatz. Master pick-map (slug/coord/category/hero+gallery/credit): `drafts/berlin-batch1/README.md`.
