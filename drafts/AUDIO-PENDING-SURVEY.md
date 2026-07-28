@@ -56,6 +56,36 @@ _(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **wen
 _(✅ Paris = DONE: **45 single-stop tours LIVE** (PR #374) + **all 5 walks LIVE** — Le Marais (#379), Montmartre (#380), The Triumphal Way (#381), Paris Islands (#382), The Left Bank (#383). Nothing Paris pending.)_
 _(✅ 🇨🇦 Toronto = DONE (2026-07-10): **all 42 tours LIVE** — 38 single-stop (10 batch A + 28 PR #384) + **all 4 walks** (Old Town #385, Museum Mile #386, Downtown Spine #387, Immigrant West/Kensington #388). Nothing Toronto pending.)_
 
+### 🖼️ Image attribution ledger — `drafts/CREDITS.md`
+
+**This file now lives on `main`, alongside this one.** It did not until 2026-07-28: the ledger
+recording every attribution obligation on **already-shipped** images existed *only* on a staging
+branch, while this tracker referenced it nine times. Any session working from `main` — which is
+what the UPDATE RULE above now tells every session to do — followed those references to a file
+that was not there. Same failure mode as the staged-tours drift, on the file with legal
+obligations attached. **Both files are on `main`; keep them there and edit them from `origin/main`.**
+
+**Audited 2026-07-28 — 115 rows, 111 verified, 4 failed.** Every row was machine-checked by
+comparing the published `gh-pages` image against the Commons file the row names. The failures are
+recorded in full at the top of `CREDITS.md`; two are on **live** cities:
+
+- **`waterlooplein-rembrandt-house_hero.webp` (Amsterdam — LIVE)** — credits a photograph that is
+  demonstrably not the one shipping; no Commons file matches the published image, which points to
+  ship-safe stock. The row was asserting an obligation that probably does not exist.
+- **`testaccio_hero.webp` (Rome — LIVE)** — the image was overwritten at the Rome-extras wire-in
+  and the credit row was not moved with it, so it describes a superseded picture.
+- **`ghostline_stop4` / `ghostline_hero`, `kollwitzplatz_2` (Berlin — staged)** — the first is
+  unidentified (fetch log says CC0, so likely no obligation); the second was off by two frames in
+  the same public-domain series and is corrected.
+
+**Root cause, and the rule that follows from it:** those attributions were gathered by matching
+image *dimensions* against a Commons category listing, which silently picks the wrong file whenever
+two images in a category share a size. **Never attribute by dimension match. Hash the local
+original and query `list=allimages&aisha1=<sha1>`** — exact file identity, not a guess.
+
+**And: overwriting a published image filename silently invalidates its credit row.** Rome proves it.
+If you replace an image under an existing name, update `CREDITS.md` in the same commit.
+
 ### Per-city detail
 
 **🇺🇸 Los Angeles — ✅ LIVE (2026-07-15, PR #390)** — all **42 tours** under **Atlas Studio LAX**: 38 single-stop + 4 walks (Beachfront, Downtown LA, Museum Row, Hollywood Boulevard). Nothing pending. (Coliseum + Huntington `transcriptText: null` — backfill when scripts arrive; LA CC image credits in `drafts/CREDITS.md`, Los Angeles row.)
