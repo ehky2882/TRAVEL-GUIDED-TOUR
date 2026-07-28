@@ -8,7 +8,7 @@ a per-tour credits line, an in-app attributions screen, or swap for owner-suppli
 shots. Everything NOT listed here is ship-safe (Unsplash/Pexels/Pixabay — no
 attribution) or owner-supplied.
 
-Last updated 2026-07-15 (Rome complete — 25 singles + 5 walks staged; 6 CC images).
+Last updated 2026-07-28 (Dubai staged — 11 CC images; Berlin attributions re-verified by SHA-1 and 9 rows corrected).
 
 ## Rome — 6 credit-required images (`drafts/rome-batch1`)
 
@@ -327,15 +327,18 @@ New maker **Atlas Studio BER** 🇩🇪 at wire-in. Everything else in the Berli
 **no** obligation and are listed only for provenance. Wikimedia used where no PD/CC0 image of the exact
 subject existed (niche stations, memorials, courtyards) or the subject demanded a dignified exact match.
 
+
+> **Re-verified 2026-07-28 by SHA-1 reverse-lookup** against the Commons `allimages` API (exact file identity). The original attributions here were produced by matching image *dimensions* against a Commons category listing — that method silently picks the wrong file when two images in a category share a size, and **9 of these rows were wrong** (all five Topography of Terror rows, the two Tränenpalast subjects swapped, the Nordbahnhof file, and the East Side Park riverbank). They are corrected below. Three rows could not be SHA-1 matched because the pipeline downloaded a Commons *thumbnail* rather than the original — `bebelplatz_3`, `bebelplatz_4` and `ghostline_stop4`/`ghostline_hero`; all three were corroborated by exact pixel dimensions plus the licence recorded at fetch time, and are left as-is. **Do not use dimension matching for attribution again — SHA-1 the local file.**
+
 | File | Subject | Author | License | Source |
 |------|---------|--------|---------|--------|
 | `bebelplatz_3.webp` | Bebelplatz book-burning memorial (night) | Robyn Fleming | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Bebelplatz_at_night.jpg |
 | `bebelplatz_4.webp` | Empty Library / book-burning memorial | Daniel Neugebauer | CC BY-SA 2.5 | https://commons.wikimedia.org/wiki/File:Berlin_DenkmalBuecherverbrennung_BookBurningMemorial_Bebelplatz.jpg |
-| `topography-of-terror_hero.webp` | Topography of Terror site | Fred Romero | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Berlin_-_Topographie_des_Terrors_%284%29.jpg |
-| `topography-of-terror_2.webp` | Documentation centre + Wall | Avishai Teicher (Avi1111) | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Topographie_des_Terrors_museum.jpg |
-| `topography-of-terror_3.webp` | Wall along Niederkirchnerstraße | JoJan | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Berlin.Gestapo_Museum_001.JPG |
-| `topography-of-terror_4.webp` | Wall + excavated trench | EliziR | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Topographie_des_Terrors%2C_Berl%C3%ADn_%28mar%C3%A7_2013%29_-_panoramio_%281%29.jpg |
-| `topography-of-terror_5.webp` | Wall + outdoor exhibition | Manfred Brückels | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Topographie_des_Terrors_2.jpg |
+| `topography-of-terror_hero.webp` | Topography of Terror — Wall + outdoor exhibition | Marco van Oel | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Topo_1309w.jpg |
+| `topography-of-terror_2.webp` | Topography of Terror site | Marco van Oel | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Topo_1285w.jpg |
+| `topography-of-terror_3.webp` | Wall along Niederkirchnerstraße | BrokenSphere | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berlin_Wall_at_Niederkirchnerstrasse_2.JPG |
+| `topography-of-terror_4.webp` | Wall + Mauermuseum outdoor panels | Wici | Public domain (ship-clean, no obligation) | https://commons.wikimedia.org/wiki/File:Mauermuseum.1.jpg |
+| `topography-of-terror_5.webp` | Berlin Wall documentation, Niederkirchnerstraße | Jorge Royan | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berlin-_The_Berlin_Wall_Museum_-_2879.jpg |
 | `hackesche-hoefe_hero.webp` | Hackesche Höfe first courtyard (Endell) | Tuxyso | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Hackesche_H%C3%B6fe-2023.jpg |
 | `hackesche-hoefe_2.webp` | Hackesche Höfe street entrance | Jörg Zägel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berlin%2C_Mitte%2C_Hackescher_Markt%2C_Hackesche_Hoefe.jpg |
 | `hackesche-hoefe_3.webp` | Hackesche Höfe courtyard | Dosseman | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Hackesche_H%C3%B6fe_7920.jpg |
@@ -343,8 +346,8 @@ subject existed (niche stations, memorials, courtyards) or the subject demanded 
 | `neue-synagoge_2.webp` | Neue Synagoge gilded dome | Taxiarchos228 | FAL (Free Art License) | https://commons.wikimedia.org/wiki/File:Berlin_-_Neue_Synagoge3.jpg |
 | `neue-synagoge_3.webp` | Neue Synagoge facade | Kurt Kaiser | CC0 (ship-clean, no obligation) | https://commons.wikimedia.org/wiki/File:Berlin_Neue_Synagoge_2019.jpg |
 | `traenenpalast_hero.webp` | Tränenpalast (Palace of Tears) pavilion | Paul Korecky | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:2018-08-09_DE_Berlin-Mitte%2C_Tr%C3%A4nenpalast_%2849923409376%29.jpg |
-| `traenenpalast_2.webp` | Tränenpalast pavilion entrance | Sir James | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2024-11-02_Berlin_Traenenpalast_Eingang_IMG_1595.JPEG |
-| `traenenpalast_3.webp` | Tränenpalast pavilion (setting) | Sir James | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2024-11-02_Berlin_Traenenpalast_Lage_IMG_1599.JPEG |
+| `traenenpalast_2.webp` | Tränenpalast pavilion (setting) | Sir James | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2024-11-02_Berlin_Traenenpalast_Lage_IMG_1599.JPEG |
+| `traenenpalast_3.webp` | Tränenpalast pavilion entrance | Sir James | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2024-11-02_Berlin_Traenenpalast_Eingang_IMG_1595.JPEG |
 | `neue-wache_hero.webp` | Neue Wache (Schinkel temple front) | Ansgar Koreng | CC BY 3.0 (DE) | https://commons.wikimedia.org/wiki/File:150214_Neue_Wache_Berlin.jpg |
 | `neue-wache_2.webp` | Kollwitz Pietà under the oculus | Daniel Schwen | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:B_Neue_Wache_interior_1.jpg |
 | `neue-wache_3.webp` | Kollwitz Pietà (Mother with dead son) | Marek Mróz | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:2015-10_Berlin-Mitte_%2833%29.jpg |
@@ -352,10 +355,39 @@ subject existed (niche stations, memorials, courtyards) or the subject demanded 
 | `kollwitzplatz_hero.webp` | Käthe Kollwitz statue (Kollwitzplatz) | Jens Cederskjold | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:K%C3%A4the_Kollwitz%2C_Kollwitzplatz%2C_Prenzlauer_Berg_-_panoramio.jpg |
 | `kollwitzplatz_2.webp` | Wasserturm (Prenzlauer Berg) | Norbert Aepli | Public domain (ship-clean, no obligation) | https://commons.wikimedia.org/wiki/File:2009-04-10_Berlin_715.jpg |
 | `nollendorfplatz_hero.webp` | Nollendorfplatz station + rainbow flag | Fridolin freudenfett | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Sch%C3%B6neberg_Nollendorfplatz_Regenbogenfahne.jpg |
-| `[walk] ghostline_stop1.webp` | Nordbahnhof (ghost station) | Ansgar Koreng | CC BY 3.0 (DE) | https://commons.wikimedia.org/wiki/File:150501_Berlin_Nordbahnhof.jpg |
+| `[walk] ghostline_stop1.webp` | Nordbahnhof (ghost station) entrance | Ansgar Koreng | CC BY 3.0 (DE) | https://commons.wikimedia.org/wiki/File:150501_Berlin_Nordbahnhof_Eingang.jpg |
 | `[walk] ghostline_stop2.webp` | Wall Memorial — line of steel rods | Andrzej Otrębski | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_Miejsce_Pamieci_Muru_Berlinskiego_10.jpg |
 | `[walk] ghostline_stop3.webp` | Chapel of Reconciliation | Laima Gūtmane (simka) | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berlin_Church_of_Reconciliation_-_panoramio.jpg |
 | `[walk] ghostline_stop4.webp + ghostline_hero.webp` | Preserved Wall (Bernauer Str) | Mark Ahsmann | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:200806_Berlin_717.JPG |
 | `[walk] scheunenviertel_stop2.webp` | Haus Schwarzenberg courtyard | Soluvo | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_2012_%28106%29.jpg |
 | `[walk] scheunenviertel_stop3.webp` | Große Hamburger — deportation memorial (Will Lammert) | Jochen Teufel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Skulptur_Juedische_Opfer_des_Faschismus_%28Foto_2008%29.jpg |
-| `[walk] riverborder_stop3.webp` | East Side Park riverbank | Robot8A | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_Dec_2021_10_35_06_336000.jpeg |
+| `[walk] riverborder_stop3.webp` | East Side Gallery — bank of the Spree | Indrajit Das | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:East_Side_Gallery_-_Bank_of_River_Spree_01.jpg |
+
+## Dubai — 11 credit-required images (`drafts/dubai-batch1`)
+
+Everything else in the Dubai batch is ship-safe (Unsplash / Pexels / Pixabay / CC0)
+or owner-supplied. New maker **Atlas Studio DXB** 🇦🇪 at wire-in. Attributions below
+were resolved by **SHA-1 reverse-lookup** against the Commons `allimages` API (exact
+file identity), not by dimension matching.
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `gold-souk_hero.webp` | Dubai Gold Souk arcade | Rob Young | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Dubai_Gold_Souk_(8668422526).jpg |
+| `gold-souk_3.webp` | Al Ras / Gold Souk quarter, Deira | Imre Solt | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Al_Ras_on_26_December_2007_Pict_3.jpg |
+| `jumeirah-mosque_hero.webp` | Jumeirah Mosque (exterior) | Bgabel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Dub-jum-mos2.jpg |
+| `jumeirah-mosque_2.webp` | Jumeirah Mosque | Aidas U. | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Jumeirah_Mosque_-_panoramio_(4).jpg |
+| `jumeirah-mosque_3.webp` | Jumeirah Mosque, Jumeira 1 | ianpudsey | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Jumeira_1_-_Dubai_-_United_Arab_Emirates_-_panoramio.jpg |
+| `etihad-museum_2.webp` | Etihad Museum with UAE flag | Lxs | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:UAE_flat_with_Etihad_Museum_in_background,_Dubai,_UAE.jpg |
+| `textile-souk_hero.webp` | Textile Souk sikka (alleyway) | Chris Waits | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Dubai_Textile_Souk_Sikka_(Alleyway).jpg |
+| `al-shindagha_2.webp` | Shindagha historic village | A.Savin | **FAL** (Free Art License) | https://commons.wikimedia.org/wiki/File:UAE_Dubai_Shindagha_village_img1_asv2018-01.jpg |
+| `al-fahidi-fort_hero.webp` | Al Fahidi Fort / Dubai Museum (rear) | أمين علوان | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Al_Fahidi_Fort_(Dubai_Fort)_(Dubai_Museum)_Back_view.jpg |
+| `al-fahidi-fort_2.webp` | Al Fahidi Fort / Dubai Museum | Jasonbalaba | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Al_Fahidi_Fort_(Dubai_Museum).jpg |
+| `al-fahidi-fort_3.webp` | Al Fahidi Fort (Dubai Fort) | Rye jb23 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Al_Fahidi_Fort_(also_known_as_Dubai_Fort)_DSC_8954.jpg |
+
+**Note — `al-shindagha_2.webp` is FAL, not CC.** The Free Art License is copyleft:
+attribution *and* share-alike. It is not more permissive than CC BY-SA; treat it the
+same way at ship time.
+
+**No credit required:** `alserkal-avenue_hero.webp` is Wikimedia **CC0**, and the
+`al-shindagha_hero.webp` / `difc-gate_hero.webp` heroes are owner-supplied (both
+carry provenance flags — see `drafts/dubai-batch1/README.md`).
