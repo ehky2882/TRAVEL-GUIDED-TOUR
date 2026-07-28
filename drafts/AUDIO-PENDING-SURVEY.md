@@ -10,6 +10,22 @@ the branches to answer "what's left?".
 - When audio arrives and tours are **wired live** (merged to `main`) → move them from PENDING
   to the LIVE section and update the counts.
 - Always update this file in the same commit/session as the staging or wire-in.
+- **🔴 THIS FILE LIVES ON `main`. Read it — and write it — from `origin/main`, never from a
+  staging branch.** Staged drafts (`drafts/<city>-batch*`, `drafts/<city>-*-walk`) stay on their
+  branch and **never reach `main`**, so this tracker is the *only* cross-session signal that a
+  staged city exists at all. A staging branch can sit 100+ commits behind `main` for weeks, and
+  its copy of this file will be stale and will contradict reality (this happened 2026-07-28: a
+  branch copy still listed Rome as pending two days after Rome went live).
+  - **Read at session start:** `git show origin/main:drafts/AUDIO-PENDING-SURVEY.md`
+  - **Write as soon as a batch is staged** — a docs-only PR straight off `origin/main`
+    (auto-merge class, ~2 min). Do **not** wait until the whole city is finished, and never let
+    the row exist only on the staging branch.
+  - **Check `gh pr list --state open` immediately before editing this file, not just at session
+    start.** Frequent small edits collide: on 2026-07-28 two sessions opened PRs 8 minutes apart
+    (#463 Montreal wire-in, #464 Dubai staging row) that both touched this file *and* `CLAUDE.md`,
+    neither aware of the other. If another PR is already touching it, let the **content wire-in
+    land first**, then rebase the docs PR onto it — a wire-in carries `Tours.json` and is by far
+    the more expensive thing to re-resolve.
 - The counts here must match reality; if in doubt, re-verify against `origin/main`'s
   `TRAVEL GUIDED TOUR/Resources/Tours.json` (a tour is LIVE iff it's in that file) and against
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
@@ -96,6 +112,9 @@ _(✅ 🇨🇦 Toronto = DONE (2026-07-10): **all 42 tours LIVE** — 38 single-
 - **Images:** ~32 pushed to `gh-pages` on 2026-07-27 across 9 commits (`35dc58e`, `47ef5ad`, `df2aff4`, `8a2bc43`, `e1c0451`, `788e719`, `d0cea4e`, `0d69d76`, `0a94484`), plus `dubai-fountain_*` staged earlier. Two walk-only stop images exist (`downtown_stop3` = Souk Al Bahar, `marinajbr_stop2` = the seam).
 - **⚠️ Dubai has NO master pick-map README**, unlike every other staged city (Montreal, Berlin, Madrid, Rome all have one per batch folder). **So slug↔coord↔category↔hero/gallery assignments are not written down anywhere.** A wire-in session will have to reconstruct them from the scripts and the gh-pages filenames, or the staging session needs to write the README first. **Verify per-tour image coverage before promising a launch** — it has not been audited here.
 
+- **⚠️ transcriptText gotcha:** singles **#17, #20, #21, #22** and **all four walks'** scripts carry a leading title line (`DUBAI NN — …` / `ATLAS — DUBAI / Walk Wn: …`). Strip it when extracting `transcriptText`; the other singles have none.
+- **⚠️ Provenance flags (owner-directed, decide before ship):** `al-shindagha_hero` came from a googleusercontent URL — **license unverifiable**, and upscaled ~1.6× from 1200×550 so it is soft. `difc-gate_hero` is owner-supplied and shows garbled signage text, i.e. likely AI-generated rather than a photograph. Both were shipped at the owner's explicit direction after being flagged.
+- **Credits (to write into `drafts/CREDITS.md` at the staging pass):** Wikimedia CC on Gold Souk ×4, Jumeirah Mosque ×3, Al Fahidi Fort ×3, Textile Souk hero, Etihad Museum ×1, DIFC gallery, Al Shindagha gallery. Alserkal hero is **CC0** (no credit). Everything else ship-safe stock or owner-supplied.
 **🇩🇪 Berlin** — **36 tours (31 single-stop + 5 walks)**, new maker **Atlas Studio BER** 🇩🇪. Complete 2026-07-21 (image-staged; awaiting narration):
 - **Batch 1 (31 single-stop):** Brandenburg Gate, Reichstag, Holocaust Memorial, Bebelplatz, Museum Island, Humboldt Forum, Alexanderplatz, Gendarmenmarkt, Checkpoint Charlie, Bernauer Strasse, East Side Gallery, Potsdamer Platz, Oberbaumbrücke, Topography of Terror, Gedächtniskirche, Tiergarten/Siegessäule, Hackesche Höfe, Neue Synagoge, Nikolaiviertel, Tränenpalast, Neue Wache, Karl-Marx-Allee, Kollwitzplatz/Wasserturm, Mauerpark, Tempelhofer Feld, Charlottenburg, Kulturforum, Band des Bundes, Treptower Park, Landwehrkanal/Maybachufer, Nollendorfplatz. Master pick-map (slug/coord/category/hero+gallery/credit): `drafts/berlin-batch1/README.md`.
 - **5 walks:** `berlin-imperialspine-walk` (intro+5, Unter den Linden) · `berlin-ghostline-walk` (intro+5, Bernauer Strasse Wall line) · `berlin-coldwarcentre-walk` (intro+4) · `berlin-scheunenviertel-walk` (intro+4) · `berlin-riverborder-walk` (intro+3). Each folder has its own README wire-in spec (per-stop image + coord + centroid + walking distance).
