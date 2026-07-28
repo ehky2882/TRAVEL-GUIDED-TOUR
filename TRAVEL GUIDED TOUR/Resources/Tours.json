@@ -151,6 +151,14 @@
       "avatarEmoji": "🇮🇹",
       "bio": "Atlas Studio's Rome bureau — audio tours of a city that never demolishes so much as re-uses: imperial ruins turned quarries turned churches, Baroque squares built over stadiums, and the piazzas, river islands and hilltop terraces where Romans still spend their evenings.",
       "websiteURL": null
+    },
+    {
+      "id": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "displayName": "Atlas Studio YUL",
+      "avatarURL": null,
+      "avatarEmoji": "🇨🇦",
+      "bio": "Atlas Studio's Montreal bureau — audio tours of a city built on a traffic jam in the river: French and English staring at each other across a boulevard, a mountain that gave the place its name, and the outdoor staircases Montrealers chose as their own truest symbol.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -48180,6 +48188,1122 @@
         "History",
         "Food",
         "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "602d0b82-1817-593c-a3fa-6dc962a73faf",
+      "createdAt": "2026-07-28",
+      "title": "Notre-Dame Basilica and Place d'Armes",
+      "shortDescription": "Faith on one side of the square, money on the other, staring each other down since 1847.",
+      "longDescription": "Place d'Armes holds Montreal's whole argument in one cobbled circle: the Gothic front of Notre-Dame Basilica on one side, the Roman portico of the Bank of Montreal directly opposite, and Maisonneuve, who founded the city in 1642, on a pedestal between them. The basilica was built in 1829 by James O'Donnell, an Irish-born Protestant from New York who converted at the end of his life and lies in the crypt — the only person who does. Inside, Victor Bourgeau's midnight-blue vault is scattered with thousands of gold stars. For a century the church was winning the argument; then, in a single generation, Quebec became one of the most secular societies in North America.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/notre-dame-basilica_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/notre-dame-basilica_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/notre-dame-basilica_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/notre-dame-basilica_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/notre-dame-basilica_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7663745c-af32-50b1-a239-0553cc5adc8f",
+          "order": 0,
+          "title": "Notre-Dame Basilica and Place d'Armes",
+          "caption": "Stand in the centre of Place d'Armes and turn a slow circle.",
+          "latitude": 45.50451,
+          "longitude": -73.55627,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/notre-dame-basilica.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/notre-dame-basilica_hero.webp",
+          "transcriptText": "Stand in the centre of Place d'Armes and turn a slow circle. Almost everything this city has ever cared about is looking back at you.\n\nYou should be in the cobbled square at the heart of Old Montreal. On the south side, two flat-topped stone towers rise over a grand Gothic front — that's Notre-Dame Basilica. Directly opposite, a domed building with a Roman temple portico: the head office of the Bank of Montreal, built in 1847. And in the centre of the square, a bronze founder on a pedestal — Paul de Chomedey de Maisonneuve, who started all of this in 1642.\n\nBegin with the basilica. It went up in 1829, and the architect was a surprise: James O'Donnell, an Irish-born Protestant working out of New York, hired by Catholic Montreal to build the largest church on the continent at the time. The commission changed him. He converted to Catholicism at the end of his life, and he's buried in the crypt beneath the church — the only person who is. The two towers have names, Perseverance and Temperance, and the western one carries the Gros Bourdon, one of the largest bells in North America. When it rings, you feel it in the pavement.\n\nInside — and it's worth the ticket — the vault is deep midnight blue, scattered with thousands of gold stars, the whole interior carved and gilded like the inside of a jewel box. Most of that is the later work of Victor Bourgeau, and it's the reason people gasp at the door.\n\nNow turn around. Faith on one side of the square, money on the other, staring at each other since 1847 — and for a century, the church was winning. It ran the schools, the hospitals, the rhythm of the week. Then, in a single generation starting in the 1960s, Quebec became one of the most secular societies in North America. The pews emptied, but the building endures — as a monument, a concert hall, an evening light show.\n\nThat arc — from a city the church built to a city that keeps its churches the way you keep love letters — is the deep story of modern Quebec, and you'll see it told all over Montreal. Here is where it's easiest to read. Go in and look up. The stars are still there."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.50451,
+      "centroidLongitude": -73.55627,
+      "city": "Montreal",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Power",
+        "Gothic",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "577ddcb8-422a-5c37-9529-ba4845900f84",
+      "createdAt": "2026-07-28",
+      "title": "Place Jacques-Cartier and City Hall",
+      "shortDescription": "Canada's oldest war monument honours a British admiral — in a city that speaks French.",
+      "longDescription": "A grey column at the top of Place Jacques-Cartier carries Horatio Nelson, hero of Trafalgar, and it went up in 1809 — more than thirty years before the famous one in London. The twist is who paid: Napoleon was no hero in Catholic Quebec, so when news of Trafalgar reached Montreal, English and French merchants subscribed together. The peace didn't hold. Someone tried to dynamite the column in the 1890s, and francophone Montreal pushed back again in 1930. Behind it stands the green-roofed City Hall, from whose balcony a French president once shouted five words that detonated a diplomatic crisis.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-jacques-cartier-city-hall_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-jacques-cartier-city-hall_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-jacques-cartier-city-hall_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-jacques-cartier-city-hall_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "319f7ab0-6865-50f4-8f18-f5d0aad26208",
+          "order": 0,
+          "title": "Place Jacques-Cartier and City Hall",
+          "caption": "The oldest war monument in Canada honours a British admiral — in a city that speaks French.",
+          "latitude": 45.50789,
+          "longitude": -73.55283,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/place-jacques-cartier-city-hall.mp3",
+          "audioDurationSeconds": 152,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-jacques-cartier-city-hall_hero.webp",
+          "transcriptText": "The oldest war monument in Canada honours a British admiral — in a city that speaks French.\n\nYou should be on Place Jacques-Cartier, the wide cobbled square sloping downhill from Rue Notre-Dame toward the river, lined with terraces and street performers. At the top of the slope stands a grey stone column with a figure at its summit: Horatio Nelson, hero of Trafalgar. Behind him, across the street, the grand green-roofed building with the clock tower is City Hall.\n\nThe column went up in 1809, more than thirty years before the famous one in London — and here's the twist: French Montrealers helped pay for it. Napoleon was no hero in Catholic Quebec, and when news of Trafalgar arrived by messenger from New York, interrupting a New Year's ball, English and French merchants subscribed together. The peace didn't hold. In the 1890s someone tried to dynamite the column, and in 1930 francophone Montrealers answered its presence by raising a statue of Jean Vauquelin, a French naval officer, in the small square directly across the street. Look north and you can find him. Two admirals from opposite sides of an old war, facing each other over Rue Notre-Dame — the city's long argument, conducted in bronze, at a polite distance. As recently as 1997, a proposal to move Nelson elsewhere was defeated. He stays. So does Vauquelin. That, in one intersection, is Montreal.\n\nOne small secret: the figure on the column today is a replica. The original, after nearly two centuries of winters, was moved indoors in 1997 to save it.\n\nNow City Hall. Built in the 1870s, gutted by fire in 1922, then rebuilt inside its own surviving stone shell — and it's free to walk into. But its history turns on a single balcony, the one facing you. In July 1967, French President Charles de Gaulle stepped onto it before an enormous crowd and ended his speech with four words: \"Vive le Québec libre.\" Long live free Quebec. It thrilled the crowd, scandalized Ottawa, and people here still debate what he meant and what it set in motion.\n\nWalk down the slope when you're ready. Buskers, caricaturists, terraces charging a little too much — this square has been selling something since it was a market in the early 1800s. These days, mostly, it sells the pleasure of being exactly here."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 152,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.50789,
+      "centroidLongitude": -73.55283,
+      "city": "Montreal",
+      "primaryCategory": "history",
+      "tags": [
+        "Public Square",
+        "History",
+        "Power",
+        "Victorian",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "00d8049c-5d23-56ce-a057-1ebe16e51a29",
+      "createdAt": "2026-07-28",
+      "title": "The Old Port",
+      "shortDescription": "The city is, at its root, a traffic jam that got rich.",
+      "longDescription": "Everything along this waterfront exists because of white water you cannot see. Upstream, the St. Lawrence breaks into the Lachine Rapids, and for three centuries ships coming up from the Atlantic simply could not pass — so furs, grain, timber and immigrants all had to stop here, unload here, and change hands here. The pale Clock Tower at the end of its pier reads as ornament but is a memorial to the sailors lost at sea in the First World War. The port that made the city has since been handed back to it as a promenade.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-port_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-port_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-port_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-port_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-port_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "99e99d7e-1c51-5c75-a1b1-dfb1ab28f139",
+          "order": 0,
+          "title": "The Old Port",
+          "caption": "Everything in front of you exists because of a stretch of white water you can't see.",
+          "latitude": 45.5063,
+          "longitude": -73.5478,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/old-port.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/old-port_hero.webp",
+          "transcriptText": "Everything in front of you exists because of a stretch of white water you can't see.\n\nYou should be on the waterfront promenade of the Old Port, the St. Lawrence spread out ahead, the low stone skyline of Old Montreal at your back. Somewhere off to your right, upstream, the river breaks into the Lachine Rapids — and for three centuries, that white water was the whole point of Montreal. Ships coming up from the Atlantic simply could not go any further. Everything — furs, grain, timber, immigrants — had to stop here, unload here, change hands here. The city is, at its root, a traffic jam that got rich.\n\nLook left along the water and you'll find the Clock Tower at the end of its pier, pale and slender. It reads as ornamental, but it's a war memorial, raised in the early 1920s for the sailors lost at sea in the First World War. This harbour ran on their work, in both directions.\n\nAcross the basin to the south, that improbable stack of concrete cubes, piled like a child's blocks, is Habitat 67 — a housing experiment left over from Expo 67, which people either love instantly or need a minute with. It gets better the longer you look.\n\nAnd notice what's missing: ships. In 1959 the St. Lawrence Seaway opened — locks and channels that finally let ocean freighters climb past the rapids — and the working port moved east down the river. The old harbour fell quiet, nearly derelict, until the city did something genuinely unusual. Instead of selling its waterfront, it turned the whole thing into public space: quays, lawns, a beach, a Ferris wheel turning slowly over the water.\n\nSo this is what you're standing in — the reason the city exists, retired. The rapids still churn upstream and the river still carries the country's grain, just not from here. What remains is one of the rarest things a port city can own: a working waterfront handed back to the public, with nothing to sell you but the view. Find a bench facing the water. It has been earning its keep for nearly four centuries."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5063,
+      "centroidLongitude": -73.5478,
+      "city": "Montreal",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Maritime",
+        "Commerce",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "95bc2eb4-7431-565d-ba80-ee6ef77e97d0",
+      "createdAt": "2026-07-28",
+      "title": "Pointe-à-Callière",
+      "shortDescription": "There's a river running under your feet — and the city began on its bank.",
+      "longDescription": "Place Royale sits on a narrow tongue of land between the St. Lawrence and a much smaller river, the Saint-Pierre, now buried beneath the pavement. That little river is precisely why Montreal is here: on 17 May 1642 a small party of French colonists came ashore and founded Ville-Marie, led by Paul de Chomedey de Maisonneuve and the nurse Jeanne Mance, now formally recognised as a founder of the city. The modern museum above it is built directly over the excavated foundations, so you descend through the layers and walk the buried river's channel.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pointe-a-calliere_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pointe-a-calliere_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pointe-a-calliere_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pointe-a-calliere_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "736948b2-6171-5247-bc3d-a450768b3391",
+          "order": 0,
+          "title": "Pointe-à-Callière",
+          "caption": "There's a river running under your feet. You should be at Place Royale, on the western edge of Old Montreal, beside the sharply modern museum building with the angled tower — Pointe-à-Callière.",
+          "latitude": 45.50201,
+          "longitude": -73.55418,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pointe-a-calliere.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pointe-a-calliere_hero.webp",
+          "transcriptText": "There's a river running under your feet.\n\nYou should be at Place Royale, on the western edge of Old Montreal, beside the sharply modern museum building with the angled tower — Pointe-à-Callière. The name means Callière's Point, after a governor who built his residence here in the 1690s, but the point itself came first: a narrow tongue of land between the St. Lawrence and a much smaller river, the Saint-Pierre, which flowed into it right about where you're standing.\n\nThat little river is why this is the exact spot where Montreal began. On the seventeenth of May, 1642, a small party of French colonists came ashore on this point and founded a mission settlement they called Ville-Marie. Two names to hold onto: Paul de Chomedey de Maisonneuve, the soldier who led them, and Jeanne Mance, the nurse who arrived with them, founded the colony's hospital, and is now formally recognized as the city's co-founder. And they were not the first. People had been living, meeting and trading on this ground for well over a thousand years before any European saw it — the island was a crossroads long before it was a colony, and the museum beneath you takes that longer history seriously.\n\nAs for the Saint-Pierre, the city it created eventually swallowed it. By 1832 the little river had become an open drain, so Montreal buried it inside a great stone tunnel — one of the first works of its kind in Canada. It's still down there. Inside the museum you can descend below street level and walk through it: a river turned into architecture, running through the dark beneath the birthplace of the city.\n\nMost cities keep their founding site under glass, or under a plaque in a parking lot. Montreal's is under your shoes, layered like strata: an Indigenous crossroads, a French mission, a governor's house, a buried river, a museum — each one built directly on top of the last. Go inside and you can stand on glass floors above the actual foundations. Or simply stay here a moment and consider the ground. Very few street corners anywhere are carrying this much."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.50201,
+      "centroidLongitude": -73.55418,
+      "city": "Montreal",
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History",
+        "Remembrance",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1bf7e134-20d8-545e-a00d-7791ebdadd13",
+      "createdAt": "2026-07-28",
+      "title": "Bonsecours Market and the Sailors' Chapel",
+      "shortDescription": "Sailors knew they had reached Montreal when they saw a silver dome and a lady facing the water.",
+      "longDescription": "Bonsecours Market was finished in 1847 to announce that Montreal was a serious city, and for a stretch it practically was the city — housing City Hall for twenty-five years and staging banquets upstairs while produce sold on the ground floor. That dome was never about keeping rain off vegetables; it was advertising. Beside it stands the older, smaller Notre-Dame-de-Bon-Secours, the sailors' chapel, with a copper Virgin on the roof holding her arms open to the river and model ships hanging inside, left by crews who made it home.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bonsecours-market-chapel_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bonsecours-market-chapel_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bonsecours-market-chapel_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bonsecours-market-chapel_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5754ff9a-8acb-5cde-82c4-2bbd4038a120",
+          "order": 0,
+          "title": "Bonsecours Market and the Sailors' Chapel",
+          "caption": "For a hundred years, sailors coming up the St. Lawrence knew they had reached Montreal when they saw two things: a silver dome, and a lady with her arms open to the water.",
+          "latitude": 45.5082,
+          "longitude": -73.5515,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bonsecours-market-chapel.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bonsecours-market-chapel_hero.webp",
+          "transcriptText": "For a hundred years, sailors coming up the St. Lawrence knew they had reached Montreal when they saw two things: a silver dome, and a lady with her arms open to the water.\n\nYou should be on Rue Saint-Paul, one of the oldest streets in the city, near its eastern end. The long grey neoclassical building crowned with the shining dome is Bonsecours Market. Just beside it, the small stone church with the copper statue on its roof is Notre-Dame-de-Bon-Secours — the sailors' chapel.\n\nTake the market first. Finished in 1847, it was built to announce to every arriving ship that Montreal was a serious city, and for a stretch it practically was the city: it housed City Hall for a quarter of a century, staged concerts and grand banquets upstairs, and sold produce on the ground floor the entire time. That dome was never about keeping rain off vegetables. It was advertising.\n\nThe chapel is older, smaller, and the better story. Marguerite Bourgeoys, the colony's first schoolteacher, had it founded in 1655; the building you're looking at dates from 1771 and stands on the foundations of the first stone chapel. Beneath it, archaeologists found traces of an Indigenous camp some two thousand four hundred years old — this small rise above the water has been drawing people for a very long time. Bourgeoys herself went on to become Canada's first female saint, and she rests inside, in the chapel she began.\n\nStep in if it's open. Hanging from the ceiling you'll see little wooden ships — votive models, left by sailors giving thanks for surviving the crossing. This was the first stop after the docks: up from the harbour, through the doors, a candle lit. And on the roof stands the statue you spotted from the street, known as Our Lady of the Harbour — arms wide, facing the river rather than the city. She's there for the ships, not for us.\n\nIf she sounds familiar, it may be because Leonard Cohen wove her into \"Suzanne,\" one of the most famous songs ever written about this city — he walked this waterfront, and the chapel drifted into the verses. His trail runs all through Montreal. For now, the lady keeps her watch, the little ships hang quietly, and the harbour she blesses has softened into a park."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5082,
+      "centroidLongitude": -73.5515,
+      "city": "Montreal",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Religious Building",
+        "Commerce",
+        "Maritime",
+        "Neoclassical"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d4462a43-b84b-58b2-9e03-fa8626f62ac9",
+      "createdAt": "2026-07-28",
+      "title": "Château Ramezay",
+      "shortDescription": "A low fieldstone house that has been French, British and, for one winter, American.",
+      "longDescription": "Built in 1705 as the residence of Claude de Ramezay, governor of Montreal, this long fieldstone house with its steep silver roof is one of the last true pieces of New France left in the old city — and looks almost humble beside the civic grandeur around it. Its résumé is what makes it remarkable: after the Ramezay family, a French fur-trading company ran its empire from these rooms; British governors moved in after the Conquest; and in 1775 an American revolutionary army made it their headquarters, with Benjamin Franklin himself arriving to argue Montreal into joining the revolution.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chateau-ramezay_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chateau-ramezay_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "70cead12-d031-54d9-a8b4-d8c6ee47c16a",
+          "order": 0,
+          "title": "Château Ramezay",
+          "caption": "The governor who built this house called it the most beautiful in all of Canada.",
+          "latitude": 45.50852,
+          "longitude": -73.55381,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chateau-ramezay.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chateau-ramezay_hero.webp",
+          "transcriptText": "The governor who built this house called it the most beautiful in all of Canada. He was biased. He also wasn't entirely wrong.\n\nYou should be on Rue Notre-Dame Est, directly across from City Hall, looking at a long, low fieldstone house with a steep silver roof and dormer windows — Château Ramezay. Next to the grand civic architecture all around it, it looks almost humble. It's older than nearly everything in sight: built in 1705 as the residence of Claude de Ramezay, governor of Montreal, and one of the last true pieces of New France still standing in the old city.\n\nWhat makes this house remarkable is its résumé. After the Ramezay family, a French fur-trading company ran its empire from these rooms. When Britain took Canada, British governors moved in. And in 1775 an American revolutionary army occupied Montreal and made this building its headquarters — which is how, in the spring of 1776, Benjamin Franklin came to stay here, sent north to charm Canada into joining the revolution as a fourteenth colony. Montreal heard him out and declined. Franklin went home; the printer he brought along stayed, and the newspaper that printer founded evolved into the Gazette, which is still publishing.\n\nBy the 1890s the house had run out of empires to serve and was headed for demolition, until a society of local citizens stepped in, bought its future, and opened it as a museum in 1895. It later became the first building in Quebec ever classified as a historic monument — the province literally invented its heritage protection starting here.\n\nThat's the quiet power of this place: French governors, fur barons, British administrators and American generals all used this house and moved on, and the house outlasted every one of them. Three empires came through these doors; the doors are still here. Inside you'll find period rooms and the story of the city told at human scale — and behind the building, the Governor's Garden, a recreated New France garden of orchards, vegetables and medicinal herbs, free to enter. If the day is warm, that garden is one of the best-kept secrets in Old Montreal. Go sit under the pear trees for a moment. The eighteenth century keeps them pruned."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.50852,
+      "centroidLongitude": -73.55381,
+      "city": "Montreal",
+      "primaryCategory": "history",
+      "tags": [
+        "Notable Building",
+        "History",
+        "Power",
+        "Colonial",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4e86f35d-f610-5cee-9645-d417cf1c0247",
+      "createdAt": "2026-07-28",
+      "title": "Habitat 67",
+      "shortDescription": "Every architecture student has a thesis their professors talk them out of. This one got built.",
+      "longDescription": "Three hundred and fifty-four concrete boxes stacked twelve storeys high, as if a giant had been interrupted mid-game. Habitat 67 began as a master's thesis at McGill by Moshe Safdie, an architecture student in his early twenties who worked out his first models in Lego — an attempt to rescue density from the apartment tower by giving every unit its own garden and sky. Built for Expo 67, it was meant to be mass-produced and cheap, and turned out to be neither; the prototype for affordable housing became some of the most sought-after addresses in Montreal.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/habitat-67_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/habitat-67_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/habitat-67_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/habitat-67_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/habitat-67_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/habitat-67_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "be977091-b94c-5d8c-a615-9dffa0d869fe",
+          "order": 0,
+          "title": "Habitat 67",
+          "caption": "Every architecture student has a thesis project their professors gently talk them out of.",
+          "latitude": 45.49664,
+          "longitude": -73.5426,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/habitat-67.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/habitat-67_hero.webp",
+          "transcriptText": "Every architecture student has a thesis project their professors gently talk them out of. This one got built.\n\nYou should be on Cité du Havre, the long artificial peninsula between the Old Port and the river, near the foot of Avenue Pierre-Dupuy — though plenty of people meet this building first from across the water, where it reads as a mirage. Up close it resolves into what it actually is: three connected pyramids of concrete boxes, three hundred and fifty-four of them, stacked twelve storeys high as if a giant had been interrupted mid-game. This is Habitat 67.\n\nIt began as a master's thesis at McGill by an architecture student in his early twenties named Moshe Safdie, who worked out his early models in Lego bricks. His idea was to rescue density from the apartment tower: stack identical factory-made modules so that every home gets light on multiple sides, its own front door, and a private garden — each terrace sitting on the roof of the home below. For everyone, a garden, as Safdie framed it. When Montreal won the 1967 world's fair and made housing one of its themes, the student project became a national pavilion — the only structure at Expo 67 built to be permanent, and its official legacy today. Even the ground under your feet belongs to the same dream: this peninsula was raised partly with rock excavated for the city's brand-new métro.\n\nThen came the honest part of the story. The system was meant to make good housing cheap, but building the prototype cost a fortune, the modular revolution never scaled, and the great experiment in affordable living slowly became some of the most coveted real estate in Montreal — the residents themselves bought the complex in 1985. As housing policy, it failed.\n\nAs an argument, it won. Look at any new development with stepped terraces, rooftop gardens and prefabricated parts, and you're looking at Habitat's descendants. Safdie went on to build landmarks on three continents, but he kept his penthouse here, restored it, and gave it to McGill — and in season you can see it on a guided tour, booked ahead online; the rest is private homes, so the walkways aren't open to wanderers. From out here, though, the view is free. Stand back and squint. It still looks like the future — a future now pushing sixty."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.49664,
+      "centroidLongitude": -73.5426,
+      "city": "Montreal",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "Brutalist",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "80079cd6-dd95-5ea0-a3c5-b48c58492f67",
+      "createdAt": "2026-07-28",
+      "title": "McGill and the Golden Square Mile",
+      "shortDescription": "For a century, the money in Canada lived on this hillside.",
+      "longDescription": "From the 1840s to the 1930s the merchants who ran Canada's banks, railways, shipping lines and fur companies built their mansions on the slope between downtown and the mountain — and locals still repeat the claim that this one square mile held nearly seventy percent of the country's wealth. Take the number with salt; take the greystone seriously. The university came first, endowed by the Scottish merchant James McGill, and its campus climbs the lower slope of Mount Royal from the Roddick Gates on Sherbrooke Street.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mcgill-golden-square-mile_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mcgill-golden-square-mile_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mcgill-golden-square-mile_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "70b9817a-2fbf-5fdd-b16e-9bd0a699b9a3",
+          "order": 0,
+          "title": "McGill and the Golden Square Mile",
+          "caption": "For the better part of a century, the money in Canada lived on this hillside.",
+          "latitude": 45.50455,
+          "longitude": -73.57478,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mcgill-golden-square-mile.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mcgill-golden-square-mile_hero.webp",
+          "transcriptText": "For the better part of a century, the money in Canada lived on this hillside. From the 1840s to the 1930s, the merchants who ran the country's banks, railways, shipping lines, and fur companies built their mansions on the slope between downtown and the mountain — and locals still repeat the claim that the families of this one square mile controlled nearly seventy percent of Canada's wealth. Take the number with a grain of salt; take the greystone evidence around you seriously.\n\nStand at the Roddick Gates, on Sherbrooke Street, looking into McGill University. The campus runs uphill from here, its buildings climbing the lower slope of Mount Royal, and behind you McGill College Avenue frames the view back down toward the glass towers.\n\nThe university came first. James McGill was a Scottish fur trader who made his fortune here and, when he died in 1813, left his estate and his country orchard for a college — which opened its doors in 1821 and never stopped growing. What it grew into, oddly enough, was the neighbourhood itself: as the great families faded after the First World War, their mansions proved too vast to heat and too costly to keep, and roughly a third of what survives now houses university faculties and institutes. The fortune built the college, and then the college absorbed the fortune's houses.\n\nOne more thing about the name. Nobody in the neighbourhood's heyday called it the Golden Square Mile — the \"Golden\" was added in the 1950s, by real estate developers polishing the past to sell the present. Even the nostalgia here was a business decision.\n\nAnd beneath all of it lies something far older. Somewhere on or near this ground stood Hochelaga, the Iroquoian village of perhaps a few thousand people that Jacques Cartier visited in 1535 — centuries before any fur fortune. A boulder on the lower campus marks the general spot. The oldest address in Montreal has no house on it at all.\n\nBefore you move on, look up McGill College Avenue and hold the frame a moment: the mountain at one end, the towers at the other, and this green campus in between — the hinge where the city's old money quietly turned into its institutions."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.50455,
+      "centroidLongitude": -73.57478,
+      "city": "Montreal",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Commerce",
+        "Victorian",
+        "Gilded Age"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "98f0406d-f7fa-531f-8db0-540bcb932621",
+      "createdAt": "2026-07-28",
+      "title": "Christ Church Cathedral",
+      "shortDescription": "In 1987, this cathedral spent months standing on stilts.",
+      "longDescription": "A Gothic Revival church modelled on the medieval parish churches of the English countryside, with a thirty-four-storey glass tower rising directly behind it — and the two are far more entangled than they look. Finished in 1859 on ground so soft the district was called the Marshes, its thousand-tonne stone tower began sinking almost at once, leaning over a metre off true by 1920. The eventual fix was extraordinary: in the 1980s the cathedral was underpinned and held up while a shopping concourse and office tower were excavated beneath and behind it, the developer paying for the rescue in exchange for the air rights.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/christ-church-cathedral_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/christ-church-cathedral_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "658ffc64-cd21-5daa-89da-e73bc76f9819",
+          "order": 0,
+          "title": "Christ Church Cathedral",
+          "caption": "In 1987, the cathedral in front of you spent months standing on stilts.",
+          "latitude": 45.50387,
+          "longitude": -73.56952,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/christ-church-cathedral.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/christ-church-cathedral_hero.webp",
+          "transcriptText": "In 1987, the cathedral in front of you spent months standing on stilts.\n\nThat's not a figure of speech. You're looking at Christ Church Cathedral, on Sainte-Catherine Street — a proper Gothic Revival church, modelled on the medieval parish churches of the English countryside, pointed arches and gargoyles and a dark spire, with a thirty-four-storey glass tower rising directly behind it. Hold that pairing in your eye, because the two buildings are more entangled than they look.\n\nThe trouble started with the ground. When the cathedral was finished in 1859, it sat on land so soft the district was known as the Marshes, and the stone tower — well over a thousand tonnes of it — began to sink and tilt almost immediately. By 1920 the steeple leaned more than a metre off true. The fix, in 1940, was quietly brilliant: the stone spire came down and an aluminum replica went up, cast to look exactly like its predecessor. The spire you see is a lightweight impostor, and almost nobody walking past has any idea.\n\nThen came the bolder operation. In 1987, engineers excavated the entire block beneath the church, holding the building aloft on concrete pillars sunk to bedrock while they built a shopping mall underneath it — the Promenades Cathédrale, whose corridors also stitched together the eastern and western halves of Montreal's underground city. Montrealers called it the floating church. Today the cathedral literally rests on the mall's columns, and the lease on the ground below helps keep the congregation's lights on.\n\nSo look again at the postcard contrast — old church, new tower. It isn't a contrast at all. The skyscraper, the mall, and the cathedral are one interlocking structure, and the deal that built them is the reason the church still stands. This city's landmarks survive less by being protected than by being useful.\n\nIf the doors are open, step inside — entry is free, and the quiet up here runs directly above the food court. Somewhere under your feet, someone is buying socks beneath a Gothic cathedral, and neither of you will hear the other at all."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.50387,
+      "centroidLongitude": -73.56952,
+      "city": "Montreal",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Engineering",
+        "Gothic",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4a6363c2-3748-5954-a34a-b0abedbb9dc8",
+      "createdAt": "2026-07-28",
+      "title": "Mary, Queen of the World Cathedral",
+      "shortDescription": "St. Peter's Basilica, rebuilt at a quarter scale on a downtown corner.",
+      "longDescription": "The copy is faithful right down to the colonnaded portico, the great green dome, and a twisting gold-and-copper canopy over the altar modelled on Bernini's baldachin. But the roofline is where the copy quietly becomes a Montreal original: where St. Peter's carries the apostles, the thirteen figures up here are the patron saints of the Montreal parishes that paid for them. Building a Roman basilica in the heart of the city's Protestant, English-speaking commercial district was not an accident of taste — it was an argument in stone about who this city belonged to.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mary-queen-cathedral_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8d3e8bc9-e6d6-5f64-8538-f6ea4235b203",
+          "order": 0,
+          "title": "Mary, Queen of the World Cathedral",
+          "caption": "If this building looks familiar, that's entirely deliberate.",
+          "latitude": 45.4995,
+          "longitude": -73.5695,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mary-queen-cathedral.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mary-queen-cathedral_hero.webp",
+          "transcriptText": "If this building looks familiar, that's entirely deliberate. You are looking at St. Peter's Basilica — Rome's, the Vatican's — rebuilt at a quarter of the size on a downtown corner in Montreal.\n\nThis is Mary, Queen of the World Cathedral, the seat of the city's Catholic archdiocese, facing Dorchester Square. The copy is faithful right down to the details: the colonnaded portico, the great green dome, and inside, over the main altar, a twisting gold-and-copper canopy modelled on Bernini's baldachin in Rome.\n\nStart with the roofline, though, because that's where the copy quietly becomes a Montreal original. On St. Peter's, the statues along the facade are the apostles. Up here, the thirteen figures are the patron saints of the Montreal parishes that paid for them — Saint Patrick for the Irish parish, Saint John the Baptist for the French, and on down the line. It's a donor wall in copper, hiding in plain sight, and a fair portrait of who this church actually answered to.\n\nNow the reason it exists. After the old Catholic cathedral burned in 1852, Bishop Ignace Bourget decided its replacement would be a miniature St. Peter's — and he decided to plant it here, in what was then the city's Protestant, English-speaking west end, about as far from his French Catholic parishioners as he could get. His own architect, Victor Bourgeau — the man who shaped the interior of Notre-Dame — studied the original and refused, saying it couldn't be scaled down. Bourget simply sent a priest to Rome to secretly measure the basilica and build a model, and construction went ahead anyway. The building was never just a church; it was a flag.\n\nIt's worth standing here with that in mind, because the world that flag announced has gone. Within a lifetime of its consecration in 1894, Quebec's Quiet Revolution moved schools, hospitals, and daily life out of the Church's hands — one of the fastest secularizations anywhere — and the cathedral now sits ringed by office towers, a quarter-scale Rome in a city that quietly stopped reporting to it.\n\nStep inside if it's open. The marble slabs carry names in gold leaf, the dome hushes the traffic, and the whole argument of the nineteenth century stands there in miniature — magnificent, and complete."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.4995,
+      "centroidLongitude": -73.5695,
+      "city": "Montreal",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Power",
+        "Baroque",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "633f2be3-5724-5904-8678-ee9ac9786a2c",
+      "createdAt": "2026-07-28",
+      "title": "Place Ville Marie and the Underground City",
+      "shortDescription": "Half a million people cross downtown without going outside. You're standing on their roof.",
+      "longDescription": "Until the late 1950s this spot was a smoking open trench — the rail cut where trains dove into the tunnel under Mount Royal, a wound through the middle of downtown. The developers didn't fill it so much as build over it: a cruciform tower designed by the firm of I. M. Pei, finished in 1962, with shopping concourses below the plaza and the trains still running deeper down. The tower is the visible half of the idea. The other half is the RÉSO, the network of tunnels and concourses that grew out from underneath it — some thirty kilometres of it, a second city Montreal built to survive its own winter.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-ville-marie_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "eb9fdd0f-e039-5373-9f14-f0b923f7af8b",
+          "order": 0,
+          "title": "Place Ville Marie and the Underground City",
+          "caption": "On a hard winter day, half a million people cross downtown Montreal without ever going outside.",
+          "latitude": 45.5017,
+          "longitude": -73.5686,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/place-ville-marie.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/place-ville-marie_hero.webp",
+          "transcriptText": "On a hard winter day, half a million people cross downtown Montreal without ever going outside. You're standing on the roof of their city.\n\nThis is the esplanade of Place Ville Marie, under the cross-shaped tower that changed everything. Until the late 1950s, this exact spot was a smoking open trench — the rail cut where trains dove into the tunnel under Mount Royal — a wound running straight through the middle of downtown. The developers didn't fill it in so much as build over it: a forty-plus-storey cruciform skyscraper, designed by the firm of I.M. Pei, finished in 1962, with shopping concourses below the plaza where the trains still run deeper down. At night, the beacon on its roof sweeps the sky like a lighthouse that lost its ocean.\n\nBut the tower is the visible half of the idea. Below your feet, those concourses kept connecting — to the train station, to hotels, to office towers, then to the métro when it opened in 1966 — and grew into the RÉSO: more than thirty kilometres of corridors linking metro stations, universities, museums, a hockey arena, and thousands of shops, with well over a hundred doors down from the street. Toronto's PATH network held the world record for years; in 2023 the title quietly moved here — Toronto kept the record for underground shopping, Montreal took it for sheer length. Neither city talks about it much, which is very Canadian of them both.\n\nThis is also where you should meet the man whose fingerprints are all over modern Montreal. Jean Drapeau was mayor, on and off, for nearly three decades, and he governed like a showman with a drafting table: the métro, the 1967 world's fair, the Olympics — projects sized for a city he insisted on seeing as a world capital. The underground city grew up around his métro like roots around a water line. Keep his name in your pocket; this city will hand it back to you more than once.\n\nMontreal never beat its winter. It conceded the surface for five months a year and built a second city underneath — and then made the second city pleasant enough that people use it in July. Find a door, and go down."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5017,
+      "centroidLongitude": -73.5686,
+      "city": "Montreal",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Engineering",
+        "Modernist",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "697e4008-1260-5ea6-8d61-107a45d725e9",
+      "createdAt": "2026-07-28",
+      "title": "Dorchester Square and the Sun Life Building",
+      "shortDescription": "The most valuable basement in the history of the British Empire is under this square.",
+      "longDescription": "The Sun Life Building rises in granite tiers behind four-storey Corinthian columns, and when its final phase was finished in 1931 it was the largest building by floor space anywhere in the British Empire. It was used with matching confidence. In the summer of 1940, with Britain facing invasion, crates began arriving in Montreal marked with a single word — fish. Inside was a staggering share of Britain's negotiable wealth, shipped in secret across a submarine-infested Atlantic and stored in the vault beneath this building, guarded by a handful of people who knew what they were sitting on.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dorchester-sun-life_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dorchester-sun-life_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dorchester-sun-life_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1401ddf3-17b4-5827-a2d5-6fbf0773ad84",
+          "order": 0,
+          "title": "Dorchester Square and the Sun Life Building",
+          "caption": "The most valuable basement in the history of the British Empire sits under the building on the east side of this square.",
+          "latitude": 45.4997,
+          "longitude": -73.571,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dorchester-sun-life.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dorchester-sun-life_hero.webp",
+          "transcriptText": "The most valuable basement in the history of the British Empire sits under the building on the east side of this square.\n\nYou're in Dorchester Square, a green rectangle in the middle of downtown, and the building to look at is the one that resembles a granite mountain range: the Sun Life Building, rising in tiers behind four-storey Corinthian columns. When its final phase was finished in 1931, it was the largest building by floor space anywhere in the British Empire — an insurance company's headquarters built with the confidence of a state.\n\nWhich is roughly how it was used. In the summer of 1940, with Britain facing invasion, crates began arriving in Montreal marked with one word: fish. Inside was a staggering share of Britain's negotiable wealth — securities shipped in secret across a U-boat-hunted Atlantic — and it went into a vault built in a hurry three storeys beneath this building, guarded around the clock by the Mounties. From that basement, a secret office quietly sold Britain's holdings on the New York Stock Exchange for years to pay for the war. The building's five thousand employees never knew. And the rumour you may have heard — that the Crown Jewels were down there too — was a legend, but a manufactured one: the story was deliberately spread around Montreal to explain all the unusual activity. The cover story outlived the secret.\n\nThe square has a buried history of its own, and an older one. Before it was a park, this ground was a Catholic cemetery, filled during the cholera epidemics of the nineteenth century; most of the graves were moved to the mountain in the 1850s, though not all, and the city has walked gently over the rest ever since.\n\nSo take the square's measure. A park over a cemetery, facing a vault that once held an empire's fortune, in a downtown that streams past on its way to somewhere louder. The most consequential places here have never once asked for attention.\n\nFind a bench for a minute before you go. Above you, the office floors hum along as they have for nearly a century — and every person inside is working, as it were, over the fish."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.4997,
+      "centroidLongitude": -73.571,
+      "city": "Montreal",
+      "primaryCategory": "history",
+      "tags": [
+        "Public Square",
+        "History",
+        "War",
+        "Beaux-Arts",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c6f68ec9-3486-599b-9be5-e4379b9d2b4e",
+      "createdAt": "2026-07-28",
+      "title": "Quartier des Spectacles",
+      "shortDescription": "Thirty performance halls and forty festivals inside one square kilometre.",
+      "longDescription": "Around Place des Festivals, some thirty halls hold close to twenty-eight thousand seats, and the district stages roughly forty festivals a year — including the Montreal International Jazz Festival, among the largest on earth. The fountain set into the plaza floor, with 235 in-ground jets, is the largest interactive fountain in Canada. After dark, dots of red light glow underfoot along the Luminous Pathway, and the colour is not decorative: this was the Red Light District for decades, and the city chose to remember rather than erase it.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/quartier-des-spectacles_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/quartier-des-spectacles_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "81186af5-2f2b-5e09-be91-95b8a9930014",
+          "order": 0,
+          "title": "Quartier des Spectacles",
+          "caption": "After dark, look down. Set into the pavement around this district, dots of red light glow underfoot — a trail of them, running past theatres and concert halls.",
+          "latitude": 45.5088,
+          "longitude": -73.5678,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/quartier-des-spectacles.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/quartier-des-spectacles_hero.webp",
+          "transcriptText": "After dark, look down. Set into the pavement around this district, dots of red light glow underfoot — a trail of them, running past theatres and concert halls. The neighbourhood calls it the Luminous Pathway. Keep the colour in mind; we'll come back to it.\n\nYou're in the Quartier des Spectacles — the \"district of shows\" — centred on Place des Festivals, the big open plaza facing the Place des Arts complex. The numbers behind the calm are startling: packed into roughly one square kilometre are some thirty performance halls holding close to twenty-eight thousand seats, and through the year the district hosts around forty festivals. The fountain built into the plaza floor, with its two hundred and thirty-five in-ground jets, is the largest interactive fountain in Canada — in summer it soaks delighted children, and in festival season it makes way for stages.\n\nThe biggest of those festivals owns this ground each summer: the Montreal International Jazz Festival, certified by Guinness as the largest jazz festival in the world, with millions of visits and hundreds of concerts — a huge share of them outdoors and free. That's not an accident of programming; it's the city's oldest entertainment instinct. When Prohibition dried out the United States in the 1920s, Montreal stayed defiantly wet, and Americans poured north to a city of clubs and cabarets — the era that put jazz in Montreal's bloodstream and gave a young Oscar Peterson his first stages.\n\nAnd where did all that nightlife concentrate? Right here. These blocks were Montreal's Red Light district — for decades the most notorious stretch in Canada. When the city rebuilt the area into a cultural district in the 2000s, it chose, of all colours, red as its signature — the glowing dots, the red banners, the red-washed facades at night. Officially it's branding. But most cities scrub that kind of history off the map; this one turned the red light into the logo.\n\nIf a festival is on, you already know what to do. If it's a quiet night, follow the red dots for a block or two anyway — the district shows off best when it's lit and half-empty, humming to itself between shows."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5088,
+      "centroidLongitude": -73.5678,
+      "city": "Montreal",
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "District",
+        "Performance",
+        "Contemporary",
+        "After Dark",
+        "Public Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dbafb537-42ea-5a0f-968e-53a99c04b701",
+      "createdAt": "2026-07-28",
+      "title": "Chinatown",
+      "shortDescription": "Four monumental gates, one square block. That ratio tells you nearly everything.",
+      "longDescription": "Montreal has more paifang — grand ceremonial arches — than any Chinatown in Canada: four of them, guarding a territory you can cross in about five minutes. The community is far older than its gates. The first Chinese immigrants reached Montreal in 1877, many after brutal years building the country's railways, and by the 1890s these blocks held their laundries, groceries and clan associations. Canada's 1923 Exclusion Act then shut the door for a generation, stranding men here without their families. The district that survived all of that is now squeezed by the towers pressing in on every side.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/montreal-chinatown_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/montreal-chinatown_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/montreal-chinatown_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ddb5fd8b-f7c3-533b-9855-8f7fc8fbba81",
+          "order": 0,
+          "title": "Chinatown",
+          "caption": "Four monumental gates, one square block. That ratio tells you nearly everything about this neighbourhood.",
+          "latitude": 45.5075,
+          "longitude": -73.5605,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/montreal-chinatown.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/montreal-chinatown_hero.webp",
+          "transcriptText": "Four monumental gates, one square block. That ratio tells you nearly everything about this neighbourhood.\n\nYou're in Montreal's Chinatown, best experienced from the pedestrian stretch of La Gauchetière Street, which runs gate to gate through the heart of it. The ornate arches at the district's corners are called paifang, and Montreal has more of them than any Chinatown in Canada — four grand ceremonial entrances guarding a territory you can walk across in about five minutes.\n\nThe community is far older than the gates. The first Chinese immigrants reached Montreal in 1877, many after brutal years building the country's railways, and by the 1890s these blocks held their laundries, groceries, and clan associations. In 1923, Canada's Exclusion Act shut the door on Chinese immigration for a generation — a plain fact of this district's story, worth knowing as you stand in it. And in the layered Montreal manner, the ground remembers earlier tenants too: before Chinatown, these same streets were the heart of the city's Yiddish-speaking Jewish quarter.\n\nThen, for half a century, the city built against it. A convention centre rose on one flank, a federal office complex on another, expressways and redevelopment carved away streets, and the neighbourhood that once stretched blocks further was compressed to the square you see — while towers and rising rents pressed on what remained. Which makes what happened in 2022 remarkable: Quebec granted Chinatown formal heritage protection, the first Chinatown in the province — indeed in Eastern Canada — to be written into law that way. After a century of being built around, the neighbourhood finally got walls the developers can't move.\n\nThe gates, in other words, aren't decoration. They're a boundary a community fought to hold, and the smallest neighbourhood in this city may be the one with the strongest sense of exactly where it begins and ends.\n\nNow do the thing the district actually wants you to do: eat. Duck into a bakery or a dumpling counter on La Gauchetière, take it outside, and stroll the car-free stretch — a five-minute neighbourhood that takes a whole afternoon if you do it properly."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5075,
+      "centroidLongitude": -73.5605,
+      "city": "Montreal",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "Immigration",
+        "Food",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1cb640f5-ae62-5600-957b-e209ababd7a9",
+      "createdAt": "2026-07-28",
+      "title": "Mount Royal and the Kondiaronk Belvedere",
+      "shortDescription": "The city is named after the ground you're standing on.",
+      "longDescription": "In 1535 Jacques Cartier climbed this hill with hosts from Hochelaga, the Iroquoian village at its base, and named the place Mont Royal. Say that quickly for five hundred years and you get Montreal. The park is younger and very deliberate: it opened in 1876 to a design by Frederick Law Olmsted, of Central Park, who insisted the mountain should be revealed rather than landscaped into submission — paths that climb gradually, planting that works with the slope. The belvedere is named for Kondiaronk, the Wendat chief whose diplomacy helped secure the Great Peace of Montreal in 1701.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mount-royal-belvedere_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mount-royal-belvedere_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mount-royal-belvedere_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mount-royal-belvedere_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "50c83161-1c7a-50f4-8665-da079d1d5343",
+          "order": 0,
+          "title": "Mount Royal and the Kondiaronk Belvedere",
+          "caption": "However you made it up here — the stairs from Peel, the long winding paths — you've just done the thing that named a city.",
+          "latitude": 45.5044,
+          "longitude": -73.5875,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mount-royal-belvedere.mp3",
+          "audioDurationSeconds": 155,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mount-royal-belvedere_hero.webp",
+          "transcriptText": "However you made it up here — the stairs from Peel, the long winding paths — you've just done the thing that named a city.\n\nYou should be on the broad stone terrace in front of the chalet, at the Kondiaronk Belvedere, with Montreal spread out below you and the St. Lawrence glinting beyond the towers. In 1535, Jacques Cartier climbed this hill with hosts from Hochelaga, the Iroquoian village that stood near its base, looked out at some version of this view, and named the place Mont Royal. Say it quickly for five hundred years and you get Montreal. The city is named after the ground you're standing on.\n\nThe park itself is younger and very deliberate. It opened in 1876, designed by Frederick Law Olmsted — the man behind New York's Central Park — who insisted the paths climb so gently that the mountain would reveal itself gradually, as an experience rather than an obstacle. If the walk up felt unhurried, that was the design working.\n\nNow the name of this terrace, because it's the best-chosen name in the city. Kondiaronk was a Wendat chief and one of the great diplomats this continent has produced. In 1701, on the ground below you, he helped negotiate the Great Peace of Montreal — dozens of Indigenous nations and New France, ending decades of war. He fell ill and died during the gathering itself, and was buried with full honours. Long before any of that, this island already had a name in Kanien'kéha, the Mohawk language: Tiohtià:ke — often translated as \"where the group divides,\" a place of meeting and parting where the waters split around the island. A gathering place, in other words, for a very long time before it was a city.\n\nLook at the skyline again, and notice something easy to miss: none of the towers stand taller than where you are. That's law, not accident — Montreal decided long ago that no building may rise above its mountain. The skyline defers to the hill. One single building has ever been granted an exception, and it isn't a bank tower; it waits on the mountain's far slope, and it has its own story.\n\nTo the east along the ridge stands the great illuminated cross, marking — so the story goes — a wooden one carried up by the city's founder in 1643. Find it after dark, from anywhere in the east end. Then find this terrace again in your memory. The mountain is small, as mountains go. The city just agreed never to look down on it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 155,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5044,
+      "centroidLongitude": -73.5875,
+      "city": "Montreal",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Viewpoint",
+        "Green Escape",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f96868b2-2502-5add-961f-a19245b0fdfa",
+      "createdAt": "2026-07-28",
+      "title": "Saint Joseph's Oratory",
+      "shortDescription": "The largest church in Canada was started by a doorman.",
+      "longDescription": "A green copper dome — one of the largest anywhere in the world — rides the shoulder of Mount Royal, and the whole improbable mass of it traces back to one small, frail man. Alfred Bessette, Brother André once he took his vows, spent some forty years as the porter at the college across the street, answering the door and sitting with the sick. People began saying that those he prayed with recovered. He always waved the credit to Saint Joseph, and in 1904 he put up a tiny wooden chapel on the mountainside. The basilica grew around it. He was canonised in 2010.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-joseph-oratory_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-joseph-oratory_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-joseph-oratory_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c230a880-505d-5dca-bf16-bc9a147ed957",
+          "order": 0,
+          "title": "Saint Joseph's Oratory",
+          "caption": "The largest church in Canada was started by a doorman. You should be at the foot of the grand stairway off Queen Mary Road, looking up — a long way up — at a green copper dome riding the shoulder of Mount Royal, one of the largest church domes anywhere in the world.",
+          "latitude": 45.4923,
+          "longitude": -73.6176,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/st-joseph-oratory.mp3",
+          "audioDurationSeconds": 150,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/st-joseph-oratory_hero.webp",
+          "transcriptText": "The largest church in Canada was started by a doorman.\n\nYou should be at the foot of the grand stairway off Queen Mary Road, looking up — a long way up — at a green copper dome riding the shoulder of Mount Royal, one of the largest church domes anywhere in the world. This is Saint Joseph's Oratory, and the whole improbable mass of it traces back to one small, frail man.\n\nHis name was Alfred Bessette — Brother André, once he took his vows — and for some forty years he worked as the porter at the college across the street: answering the door, greeting visitors, sitting with the sick. People began to say that the sick he prayed with got better. He always waved the credit away, insisting it was the work of Saint Joseph, and in 1904 he put up a tiny wooden chapel on the mountainside — paid for, the story goes, partly with the nickels he earned cutting students' hair. Pilgrims came. Then more pilgrims. The chapel grew into a church, the church into a basilica begun in 1924 and not finished for another four decades. Brother André died in 1937, at ninety-one, long before it was done. A million people filed past his coffin in the January cold.\n\nLook at the centre of the stairway ahead of you: three flights climb to the church, and the middle one, in wood, is reserved for pilgrims who ascend on their knees, pausing to pray on each of its ninety-nine steps. On most days you'll see someone making that climb.\n\nTwo more things. Montreal, as a rule, allows no building to rise higher than Mount Royal — the skyline bows to the mountain, with exactly one exception granted in the city's history, and you're looking at it. The cross on this dome is the highest point in Montreal. Not a bank, not a tower of condominiums — the doorman's church. And inside, in the votive chapel, walls of canes and crutches left behind by pilgrims hang beside thousands of candles; Brother André's heart, preserved at his own request to watch over the basilica, rests upstairs in the museum. It was stolen in 1973 and returned a year later after an anonymous tip — even the crime ended gently here.\n\nIn a province that walked away from the church in a single generation, this is the place where the old faith is still visibly, unmistakably alive. Climb at whatever pace suits you. The man this mountain of granite remembers took sixty years; you can take twenty minutes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 150,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.4923,
+      "centroidLongitude": -73.6176,
+      "city": "Montreal",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Remembrance",
+        "Viewpoint",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c32859a4-4e86-5315-943a-1b52b2dc8fb4",
+      "createdAt": "2026-07-28",
+      "title": "The Plateau Staircases",
+      "shortDescription": "Asked to vote on the symbol of their city, Montrealers chose the outdoor staircase.",
+      "longDescription": "In 2012 a museum asked the city to choose the symbol that best represented it. The Olympic Stadium was on the ballot, along with the Canadiens, Old Montreal and the cross on the mountain. Every one of them lost to the outdoor staircase — and the museum that ran the poll was Pointe-à-Callière, built over the very ground where Montreal was founded. Even the institution guarding the city's birthplace concluded that the truest thing about it is bolted to the front of its houses. The wrought-iron spirals spilling from Plateau duplexes were a practical dodge, and became the city's signature.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/plateau-staircases_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "009b355a-1b9e-5b3a-ad2d-00e798e3e94f",
+          "order": 0,
+          "title": "The Plateau Staircases",
+          "caption": "In 2012, a Montreal museum asked the city to vote on the symbol that best represents it.",
+          "latitude": 45.523,
+          "longitude": -73.581,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/plateau-staircases.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/plateau-staircases_hero.webp",
+          "transcriptText": "In 2012, a Montreal museum asked the city to vote on the symbol that best represents it. The Olympic Stadium was on the ballot, and so were the Canadiens, Old Montreal, and the cross on top of Mount Royal. Every one of them lost — to the outdoor staircase. And the museum that ran the poll was Pointe-à-Callière, the one built over the very ground where the city was founded. Even the institution guarding Montreal's birthplace concluded that the truest thing about this city is bolted to the front of its houses.\n\nYou're standing in the heart of staircase country. Pick any residential street on the Plateau and look down the row: duplexes and triplexes shoulder to shoulder, and spilling from their upper floors, wrought-iron staircases twisting their way to the sidewalk — some straight, some curled like an S, some splitting partway down like the branches of a tree.\n\nThe reason, of all things, is regulation. In the decades around 1900, Montreal's population was exploding, and the city wrote rules to manage the boom: buildings had to stand back from the street to leave room for a strip of green, and firewalls had to break up the rows every twenty-five feet. Builders, squeezed for interior space, moved the staircases outside — which also meant no hallways to heat through a Montreal winter, and a full ground-floor flat left over for the landlord. The city's ironworkers did the rest, bending metal into loops and scrolls and leaves, so that each staircase carries its maker's signature.\n\nThere's also a story that the Catholic clergy favoured outdoor stairs to keep temptation out of shared hallways. It's a legend — repeated for a century, never proven — but the fact that Montrealers keep telling it says something about who they believe ran this city back then.\n\nNone of this was designed to be beautiful. The staircases are a workaround — a building code answered by craftsmen who couldn't help themselves. Montreal chose as its symbol not a monument built to impress anyone, but the accidental poetry of people solving a problem.\n\nEvery first of July, when the city's leases turn over all at once, entire households come winding down these spirals — mattresses, dressers, refrigerators, all of it. If a staircase could hold a job, that's the day it clocks in."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.523,
+      "centroidLongitude": -73.581,
+      "city": "Montreal",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "Architecture",
+        "History",
+        "Victorian",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "05c51585-2ac1-5f1d-8b90-8ef8a4dcc09b",
+      "createdAt": "2026-07-28",
+      "title": "Square Saint-Louis",
+      "shortDescription": "The most romantic square in Montreal was a real estate play from the very beginning.",
+      "longDescription": "It is named for neither a king nor a saint, but for the Saint-Louis brothers, the businessmen who developed the blocks around it. Rows of 1880s Victorian houses face a leafy rectangle of park — greystones dressed with turrets and gingerbread and painted in colours no committee would approve — around a cast-iron fountain ordered, in the practical Victorian manner, from a foundry catalogue. The square became the address for Quebec's writers and poets, above all Émile Nelligan, the brilliant, doomed young poet who lived here and whose verse Quebec still knows by heart.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/square-saint-louis_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "be8e7f3c-8f03-5d73-be03-e7ce3ce6cbba",
+          "order": 0,
+          "title": "Square Saint-Louis",
+          "caption": "Square Saint-Louis is not named for a king, and not for a saint.",
+          "latitude": 45.5165,
+          "longitude": -73.5665,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/square-saint-louis.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/square-saint-louis_hero.webp",
+          "transcriptText": "Square Saint-Louis is not named for a king, and not for a saint. It's named for two developers — the Saint-Louis brothers, businessmen who built up the blocks around it. Hold onto that: the most romantic square in Montreal was a real estate play from the very beginning.\n\nYou'll know you're in the right place by the houses. Around a leafy rectangle of park off Saint-Denis Street stand rows of Victorian homes from the 1880s — greystones dressed up with turrets, gingerbread trim, and paint in colours no committee would ever approve: pink, mauve, sea green. In the middle, under the big maples, a cast-iron fountain — ordered, in the practical Victorian manner, from a foundry catalogue, and moved here from another square entirely.\n\nThe square opened in 1876 on the site of an old city reservoir, and the houses that rose around it belonged to the French-Canadian upper middle class — the francophone answer, in miniature, to the anglophone money piling up a kilometre west on the other side of the mountain's slope. But what the square became is more interesting than what it was built to be. Writers and artists moved in as the money moved out, and the roll call of the surrounding streets reads like a syllabus: the playwright Michel Tremblay, the poet Gaston Miron, the poet-politician Gérald Godin and the singer Pauline Julien, and above all Émile Nelligan, who lived just there, on Laval Avenue facing the park.\n\nNelligan is worth a moment. A prodigy who wrote some hundred and seventy poems, sonnets, and songs before the age of twenty, he suffered a breakdown at nineteen and spent the remaining four decades of his life in institutions — his entire body of work already complete. Quebec never stopped reading him. His bust stands in the square's corner, facing the street where he lived, and people still leave flowers.\n\nThe Golden Square Mile turned its wealth into universities and museums. This square turned its own into literature.\n\nTake a bench near the fountain before you go — preferably with something to read. It's the local custom, a century and a half running, and the square seems to expect it of you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5165,
+      "centroidLongitude": -73.5665,
+      "city": "Montreal",
+      "primaryCategory": "literature",
+      "tags": [
+        "Public Square",
+        "Literature",
+        "Victorian",
+        "Green Escape",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "726dd205-306e-5e7c-a54b-64e2118a967a",
+      "createdAt": "2026-07-28",
+      "title": "The Main — Boulevard Saint-Laurent",
+      "shortDescription": "Every east and west in Montreal is measured from this pavement.",
+      "longDescription": "Boulevard Saint-Laurent is the zero point of the city's addresses, and for generations it was the zero point of something heavier: French Montreal to the east, English Montreal to the west, each with its own schools, banks and newspapers — two cities on one island. The boulevard itself became the seam where neither side ruled, and so where everyone else landed. Jewish, Portuguese, Greek, Italian, Chinese and Latin American Montreal all made their first streets here, which is why the Main is where the city eats, and why Schwartz's still has a queue down the block.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-main-saint-laurent_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b2b2c599-072a-587f-b556-7cba59a5919c",
+          "order": 0,
+          "title": "The Main — Boulevard Saint-Laurent",
+          "caption": "Check any street sign in Montreal — Sainte-Catherine East, Sherbrooke West — and every one of those easts and wests is measured from the pavement under your feet.",
+          "latitude": 45.5155,
+          "longitude": -73.572,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-main-saint-laurent.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-main-saint-laurent_hero.webp",
+          "transcriptText": "Check any street sign in Montreal — Sainte-Catherine East, Sherbrooke West — and every one of those easts and wests is measured from the pavement under your feet. This is Boulevard Saint-Laurent. The whole city counts from here. Montrealers just call it the Main.\n\nZero point of the addresses, and for a very long time, the zero point of something heavier. You've already met the divide, down in the old city, where a British admiral and a French one still stand a square apart. Here is where that divide was drawn on the map: for generations, the city east of this boulevard spoke French, the city west of it spoke English, and the two halves ran their own schools, banks, newspapers, and lives. Two cities on one island — a novelist here famously called it two solitudes — with this street as the border between them.\n\nAnd then the border did something no one planned: it filled up with everyone else. From the 1890s on, the Main was where new arrivals stepped off the boats and started climbing — first the Yiddish-speaking Jewish community, whose garment factories made this street hum and whose language was for a time among the most spoken in Montreal, then Chinese, Italian, Greek, Portuguese, Hungarian, Haitian, wave after wave settling directly on the line, belonging fully to neither side and eventually to both. In 2002, Canada declared the boulevard a National Historic Site — not for a building, but for that story: six kilometres of arrival.\n\nThe proof is edible. Schwartz's, a few steps along, has been brining its smoked meat for ten days at a stretch since 1928, founded by a Romanian Jewish immigrant, and the lineup outside now speaks every language the city has. The border became the seam — the one place the two solitudes had no choice but to meet, over a sandwich if nothing else. The divide today is mostly symbolic; the street that marked it is what stitched the city together.\n\nWalk a few blocks north when you're ready — no destination required. The Main changes languages faster than you can walk, and eavesdropping is, on this street, a form of sightseeing."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5155,
+      "centroidLongitude": -73.572,
+      "city": "Montreal",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "Immigration",
+        "Food",
+        "Commerce",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2640a6a2-f530-5d3b-932e-77dc8fcea7a7",
+      "createdAt": "2026-07-28",
+      "title": "Mile End",
+      "shortDescription": "A neighbourhood that runs on two rival wood-fired ovens that have scarcely cooled since 1957.",
+      "longDescription": "On Saint-Viateur Street the storefront with the perpetual queue is St-Viateur Bagel, rolling and boiling and baking since 1957 — founded by Myer Lewkowicz, a survivor of Buchenwald who arrived in Montreal with almost nothing and said later that in the camp, bread was the thing he had dreamed of. A few blocks south on Fairmount Avenue stands the older rival, Fairmount Bagel, founded in 1919 and open around the clock. The Montreal bagel is its own creature: hand-rolled, boiled in honey water, baked in wood — thinner, sweeter and denser than its New York cousin, and the subject of a rivalry nobody intends to settle.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mile-end_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mile-end_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "16f49e00-e19c-5fcb-a2a5-4178ffda37f3",
+          "order": 0,
+          "title": "Mile End",
+          "caption": "Breathe in. If the wind is doing its job, somewhere on this street there's wood smoke and warm sesame in the air, because Mile End runs on two rival wood-fired ovens that have scarcely cooled since the middle of the last century.",
+          "latitude": 45.523,
+          "longitude": -73.601,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mile-end.mp3",
+          "audioDurationSeconds": 152,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mile-end_hero.webp",
+          "transcriptText": "Breathe in. If the wind is doing its job, somewhere on this street there's wood smoke and warm sesame in the air, because Mile End runs on two rival wood-fired ovens that have scarcely cooled since the middle of the last century.\n\nYou should be on Saint-Viateur Street, in the blocks around Saint-Urbain. The storefront with the perpetual line is St-Viateur Bagel, rolling and boiling and baking here since 1957 — founded by Myer Lewkowicz, a survivor of Buchenwald who arrived in Montreal with almost nothing and later said that in the camp, bread was the thing he had dreamed of. A few blocks south, on Fairmount Avenue, stands the older rival: Fairmount Bagel, founded in 1919, open twenty-four hours a day, and — this is true — the first bagel bakery to send its product into orbit, when an astronaut nephew of the owner carried a batch to the International Space Station in 2008. Montrealers divide into camps over which one is better. The correct answer is whichever is warm in your hand.\n\nNow find the dome. At Saint-Viateur and Saint-Urbain rises a church modelled on Hagia Sophia in Istanbul — a great Byzantine dome beside a tower shaped like a minaret. It was built in 1914 and 1915 by Irish Catholics, and there are still shamrocks carved into the facade; today it's the heart of Polish Catholic Montreal, and every July an Italian saint is paraded past its doors along this very street. One building, four communities, and nobody ever felt the need to start over.\n\nThat, in one corner, is how Mile End works. The Irish built here, then the Jewish community — Mordecai Richler grew up a few streets over on Saint-Urbain — then Greeks, Poles, Italians, Portuguese, and lately the musicians, artists, and studios. Most neighbourhoods erase their previous tenants; this one keeps everything running under new management.\n\nAnd the songwriter you met down at the sailors' chapel — Leonard Cohen — lived a short walk south of here for more than forty years, in a plain grey house facing Parc du Portugal, just off the Main. He bought his bagels on this street, and he and the owner of St-Viateur were friends. The city let him be a neighbour instead of a monument, and he stayed for it.\n\nJoin the line. Order a sesame straight from the oven and eat it on the sidewalk while it's still too hot to hold — the way this neighbourhood has done since long before anyone called it cool."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 152,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.523,
+      "centroidLongitude": -73.601,
+      "city": "Montreal",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "District",
+        "Food",
+        "Immigration",
+        "Free to Visit",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8c2f7aeb-a7e3-5a7b-903e-12efb2e01657",
+      "createdAt": "2026-07-28",
+      "title": "Jean-Talon Market",
+      "shortDescription": "Built on an old lacrosse field in 1933 to keep a Depression city fed.",
+      "longDescription": "With the Depression tightening its grip, Montreal's answer was a market where farmers from the Quebec countryside could sell directly to the people who needed to eat. They built it on a field where an Irish sports club called the Shamrocks had played lacrosse, and called it the Market of the North. It is now one of the largest open-air markets in North America and never closes for the season — it simply changes shape, spilling outdoors from late spring, then putting up its walls and pulling indoors when winter comes.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jean-talon-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jean-talon-market_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "dee1bb41-4f47-597f-b003-1c97bfad7bb7",
+          "order": 0,
+          "title": "Jean-Talon Market",
+          "caption": "It's 1933. The Depression has its grip on Montreal, the city is struggling to keep food affordable, and the answer it lands on is a market — a place where farmers from the Quebec countryside can sell directly to the people who need to eat.",
+          "latitude": 45.5365,
+          "longitude": -73.6145,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jean-talon-market.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jean-talon-market_hero.webp",
+          "transcriptText": "It's 1933. The Depression has its grip on Montreal, the city is struggling to keep food affordable, and the answer it lands on is a market — a place where farmers from the Quebec countryside can sell directly to the people who need to eat. They build it on an old lacrosse field in the north end, where an Irish sports club called the Shamrocks used to play, and they call it the Market of the North. You're standing in it.\n\nWalk the aisles. Jean-Talon is one of the largest open-air markets in North America, and it never closes for the season — it just changes shape. From late spring the stalls spill outdoors, and on summer weekends the lanes go car-free; when winter comes, the market puts up its walls and pulls itself indoors, trading strawberries and corn for cheese, game, and root vegetables. Locals will tell you what's piled on these tables is a better calendar than a calendar: the market always knows the month.\n\nThe name came later. For fifty years this was simply the Marché du Nord; in 1983 the city renamed it for Jean Talon, the first intendant of New France — the seventeenth-century administrator who conducted what's often called the first census in North America, counting every household, farm, and cow in the colony back in 1666. There's something fitting in that: the man whose job was knowing exactly what this land could produce now has his name over the place where the land shows up in person, every morning, to prove it.\n\nAnd notice where you are. The market sits in the middle of Little Italy, and the neighbourhood soaked into it long ago — which is why, between the Quebec farm stalls, you'll find espresso counters, fresh pasta, and produce sellers who can give you three ways to cook an eggplant without writing anything down.\n\nNearly a century on, this place is still doing precisely the job it was built for in one of the hardest years the city ever had: putting the countryside and the city face to face, and letting them work it out over a pile of tomatoes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5365,
+      "centroidLongitude": -73.6145,
+      "city": "Montreal",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Food",
+        "Commerce",
+        "Immigration",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "644601ae-7ac1-5bce-a72c-dd56ee51d24a",
+      "createdAt": "2026-07-28",
+      "title": "The Village",
+      "shortDescription": "For five months a year, a kilometre of Sainte-Catherine belongs entirely to people on foot.",
+      "longDescription": "One of the largest LGBTQ+ neighbourhoods in North America runs along Sainte-Catherine East between Berri and Papineau, and from late spring into fall the street closes to cars entirely: terraces spill from every doorway, installations hang overhead, and the Village becomes something between a promenade and a five-month party. The welcome starts at the métro — Beaudry station wears the rainbow as permanent architecture. The ground has a harder history: this was working-class Centre-Sud, hollowed out by expropriations, and the community that moved into the cheap rents built the neighbourhood while under regular police raids.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-village_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-village_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-village_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f4da9ad0-a8e7-5eab-b7ee-8a6ec3b3f253",
+          "order": 0,
+          "title": "The Village",
+          "caption": "Every summer, for a kilometre, this street belongs entirely to people on foot.",
+          "latitude": 45.5205,
+          "longitude": -73.5595,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-village.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-village_hero.webp",
+          "transcriptText": "Every summer, for a kilometre, this street belongs entirely to people on foot. Sainte-Catherine East closes to cars from late spring into fall, terraces spill out of every doorway, installations hang overhead, and the Village turns into something between a promenade and a party that lasts five months.\n\nYou're in Montreal's Village — one of the largest LGBTQ+ neighbourhoods in North America, stretching along Sainte-Catherine East roughly between Berri and Papineau. If you arrived by métro, you may have noticed the welcome already: the Beaudry station entrance wears the rainbow right on its architecture, a city transit stop flying the flag as permanent infrastructure.\n\nIt's worth knowing what this ground was before. This is Centre-Sud, for a century one of the city's hardest-working and poorest francophone districts — factory workers, big families, parish churches on every few corners. The gay community began putting down roots here in the 1970s and 80s, pushed east out of downtown, and built the bars, institutions, and eventually the political weight that made this one of the most established queer districts anywhere. Fierté, the city's Pride festival, now ranks among the largest gatherings of its kind on the continent.\n\nAnd one block tells the whole Montreal story in miniature. The church of Saint-Pierre-Apôtre, a parish church of the old working-class east end, holds within it the Chapel of Hope — dedicated in the 1990s to the memory of those lost to AIDS. A nineteenth-century Catholic chapel, tending the grief of the community around it. You've seen this city hand its churches new congregations before; nowhere did it happen with more tenderness than here.\n\nThat's the Village's quiet accomplishment. The street stayed; the meaning changed; nothing needed to be torn down for the neighbourhood to become itself.\n\nDo what the street is designed for. Pick a terrace, order something cold, and watch the promenade go by — on a summer evening, this is one of the easiest places in Montreal to be exactly who you are, which was, of course, the whole idea."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5205,
+      "centroidLongitude": -73.5595,
+      "city": "Montreal",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "LGBTQ+",
+        "Remembrance",
+        "After Dark",
+        "Public Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "525a7b02-4293-50da-bd48-0214e64c918f",
+      "createdAt": "2026-07-28",
+      "title": "The Botanical Garden and Biodome",
+      "shortDescription": "One of the finest rainforests in Canada lives inside a bicycle stadium.",
+      "longDescription": "In 1976 the swooping building beside the Olympic Stadium was the velodrome, built for track cycling and judo. When the Games moved on, Montreal did something quietly brilliant with it: in 1992 it reopened as a walk-through world of five ecosystems of the Americas — tropical forest, maple forest, the Gulf of Saint Lawrence, and a sub-Antarctic cold end where penguins now live in a velodrome. Next door, the Botanical Garden is among the largest on earth, with some twenty thematic gardens including a Japanese garden and a Chinese garden built by artisans sent from Shanghai.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/botanical-garden-biodome_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/botanical-garden-biodome_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/botanical-garden-biodome_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/botanical-garden-biodome_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "777b2cfe-488f-5227-b8e5-a5ad1a912520",
+          "order": 0,
+          "title": "The Botanical Garden and Biodome",
+          "caption": "One of the finest rainforests in Canada lives inside a bicycle stadium.",
+          "latitude": 45.5595,
+          "longitude": -73.5525,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/botanical-garden-biodome.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/botanical-garden-biodome_hero.webp",
+          "transcriptText": "One of the finest rainforests in Canada lives inside a bicycle stadium.\n\nYou're at Olympic Park, and the building in question is the Biodome — the swooping structure beside the stadium. In 1976 it was the Olympic velodrome, built for track cycling and judo, its riders whirring around a banked wooden oval. When the Games moved on, Montreal did something quietly brilliant with it: in 1992 the velodrome reopened as a walk-through world, five living ecosystems of the Americas under one roof. You pass from a humid tropical forest — capybaras, golden lion tamarins, a river you can smell — through a maple forest and the Gulf of Saint Lawrence, down to the sub-Antarctic, where penguins now occupy the building's cold end. Penguins, in a velodrome. It remains one of the best afternoons in the city, especially in January.\n\nAcross Sherbrooke Street spreads the other half of the visit: the Botanical Garden, founded in the depths of the Depression in 1931, largely through the vision of a botanist monk, Brother Marie-Victorin. It has grown into one of the great botanical gardens of the world — a Chinese garden built with artisans from Shanghai, a serene Japanese garden, and a First Nations Garden that walks you through the trees and plants this island's first peoples knew long before any of the rest.\n\nYou can't miss the tower leaning over everything — the tallest inclined tower of its kind in the world, tilted at an angle no straight tower would dare. It and the stadium below it were the grand gestures of the mayor you met downtown, the one who dreamed in world's fairs and Olympiads. But notice where the life actually is. The park built for two weeks of Games found its permanence in the quieter tenants — the gardens, the greenhouse worlds, the penguins. Montreal's Olympic legacy turned out greenest exactly where it's least Olympic.\n\nGive the Biodome its hour and the garden its two, and take the seasons in whatever order pleases you — this is the one corner of Montreal where January and the Amazon are separated by a door."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.5595,
+      "centroidLongitude": -73.5525,
+      "city": "Montreal",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Museum",
+        "Engineering",
+        "Green Escape",
+        "Modernist"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ace15aaf-3519-5a1f-bae3-e9563d269486",
+      "createdAt": "2026-07-28",
+      "title": "The Lachine Canal",
+      "shortDescription": "Fourteen kilometres dug by hand to defeat the rapids that made the city.",
+      "longDescription": "Montreal exists because the Lachine Rapids forced every ship to stop. The canal is what happened when the city finally refused to accept that — fourteen and a half kilometres of hand-dug waterway, opened in 1825, with a staircase of locks lifting vessels the height of a four-storey building. Then came the twist nobody fully planned: the water could turn wheels. Factories crowded its banks for power, and the canal became the cradle of industrial Canada, ringed by the working-class districts that fed it. The St. Lawrence Seaway made it redundant in 1959; it reopened in 2002 as a park and a paddling route.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lachine-canal_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lachine-canal_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lachine-canal_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "68e157ab-28e7-57ab-9525-55fb2da69d8a",
+          "order": 0,
+          "title": "The Lachine Canal",
+          "caption": "Remember the rapids. Down at the Old Port, you learned that Montreal exists because furious white water forced every canoe and every ship to stop here, whether they liked it or not.",
+          "latitude": 45.479,
+          "longitude": -73.587,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lachine-canal.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lachine-canal_hero.webp",
+          "transcriptText": "Remember the rapids. Down at the Old Port, you learned that Montreal exists because furious white water forced every canoe and every ship to stop here, whether they liked it or not. The calm ribbon of water in front of you is what happened when the city finally refused to accept that.\n\nThis is the Lachine Canal — fourteen and a half kilometres of hand-dug waterway, opened in 1825 to slip boats past the Lachine rapids at last. Thousands of labourers cut it with picks and shovels, and a staircase of locks lifted vessels the height of a four-storey building between the harbour and the lake upstream.\n\nThen came the twist nobody fully planned. The canal's water didn't just carry boats — it could turn wheels. Factories crowded onto its banks to drink the hydraulic power, and within a couple of generations this corridor held the most diversified concentration of industry in the country: sugar refineries, textile mills, machine works, foundries. If Canada's industrial revolution has a birthplace, you're walking through it. The neighbourhoods around you — Saint-Henri, Little Burgundy, Griffintown — were all built to house the hands.\n\nIt ended fast. The Saint Lawrence Seaway opened in 1959 and made the canal obsolete almost overnight; by 1970 it closed to shipping entirely, and the corridor spent decades rusting. The comeback took just as long as the decline: Parks Canada took the site over, the corridor was named a National Historic Site, and in 2002 the locks opened again — this time for kayaks and pleasure boats. The bike path along the banks is now among the most celebrated urban rides anywhere, and the old mills have been reborn as lofts, their painted ghost-signs still fading on the brick.\n\nSo the rapids made this city twice. First they stopped the boats, and a trading post became Montreal; then they forced this canal, and Montreal became an industrial capital. And when the water finally retired from working life, the city did the most Montreal thing imaginable — it learned to play in it.\n\nWalk a stretch of the path, whichever direction tempts you. The water that built the country now mostly carries paddleboards, and it seems entirely at peace with the demotion."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.479,
+      "centroidLongitude": -73.587,
+      "city": "Montreal",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Waterfront",
+        "Engineering",
+        "Commerce",
+        "History",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d31d09f5-83bb-5c1b-8029-d92f7d66b996",
+      "createdAt": "2026-07-28",
+      "title": "Atwater Market",
+      "shortDescription": "The most elegant building anyone ever put up to sell carrots.",
+      "longDescription": "Montreal opened two great public markets in 1933, the worst year of the Depression, to keep the city fed. This is the one on the bank of the Lachine Canal, built as a relief-era public works project on the site of an old lumberyard, and the architect Ludger Lemieux gave a food hall the full Art Deco treatment — a long brick pavilion under a clock tower that has become the signature landmark of the whole canal. Boaters navigate by it, cyclists measure their rides against it, and its butchers and cheesemongers have traded here for ninety years.",
+      "makerId": "4f7241f0-9392-54a4-8807-24fd959e61fe",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atwater-market_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atwater-market_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0c10b009-28a5-5e29-a966-0005007825ce",
+          "order": 0,
+          "title": "Atwater Market",
+          "caption": "In 1933, in the worst year of the Depression, Montreal opened two great public markets to keep the city fed.",
+          "latitude": 45.4795,
+          "longitude": -73.5775,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/atwater-market.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atwater-market_hero.webp",
+          "transcriptText": "In 1933, in the worst year of the Depression, Montreal opened two great public markets to keep the city fed. One went up beside Little Italy in the north end. The other is the one whose clock tower is rising in front of you.\n\nThis is Atwater Market, on the bank of the Lachine Canal, and its building is the most elegant thing anyone ever put up to sell carrots. The city built it as a relief-era public works project on the site of an old lumberyard, and the architect, Ludger Lemieux, gave a food hall the full Art Deco treatment — a long, dignified brick pavilion with a clock tower that has become the signature landmark of the entire canal. Boaters navigate by it; cyclists measure their rides against it; photographers can't leave it alone.\n\nThe arrangement inside has a pleasing logic. The hall itself belongs to the serious trades — butchers of long standing, a fromagerie dense with Quebec cheeses, bakers — while the flower and produce stalls ring the outside, swelling in summer and huddling in winter. It's smaller and more concentrated than its northern sibling: less a wander, more a mission.\n\nBut the market's best trick is where it stands. When it opened, the canal out front was a working artery — barges, freight, factory whistles — and the market fed the industrial neighbourhoods packed around it. The factories closed, the canal fell silent, and Atwater could easily have gone down with them. Instead it held on, and when the canal came back to life as a park and a waterway for pleasure boats, the market found itself perfectly placed for a job nobody designed it for: provisioning the picnics. The grass banks where cargo once queued are now covered, on any warm weekend, with people eating things they bought fifty metres away.\n\nA Depression relief project that outlived its harbour and inherited a better one — the canal district's whole story, told in one building with a clock on top.\n\nDo the local thing properly: bread, cheese, strawberries, something from the butcher if you've got a grill waiting. Then cross to the water, claim a patch of grass, and let the clock tower keep the time for you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 45.4795,
+      "centroidLongitude": -73.5775,
+      "city": "Montreal",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Market",
+        "Food",
+        "Commerce",
+        "Art Deco",
+        "Free to Visit"
       ],
       "priceUSD": 0
     }
