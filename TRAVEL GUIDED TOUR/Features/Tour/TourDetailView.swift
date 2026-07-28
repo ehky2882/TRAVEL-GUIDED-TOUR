@@ -1,6 +1,5 @@
 import SwiftUI
 import MapKit
-import UIKit
 
 /// Tour detail screen — spec § Key screens #4 / roadmap M-tour-detail.
 ///
@@ -115,19 +114,13 @@ struct TourDetailView: View {
         var id: String { rawValue }
     }
 
-    init(tour: Tour) {
-        self.tour = tour
-        // Match LibraryView's segmented-control font (SF Mono 13pt =
-        // AtlasTypography.caption). Duplicated here rather than
-        // trusted from LibraryView's init because a cold launch → tap
-        // a tour would open detail before Library was ever
-        // instantiated, so its appearance setup wouldn't have run yet.
-        // `UISegmentedControl.appearance()` is idempotent — safe to
-        // set from both surfaces.
-        let mono = UIFont.monospacedSystemFont(ofSize: 13, weight: .regular)
-        UISegmentedControl.appearance().setTitleTextAttributes([.font: mono], for: .normal)
-        UISegmentedControl.appearance().setTitleTextAttributes([.font: mono], for: .selected)
-    }
+    // No custom `init` — the memberwise `TourDetailView(tour:)` is
+    // enough. The old one existed solely to push SF Mono onto a
+    // segmented control via `UISegmentedControl.appearance()`, which
+    // also had to be duplicated in `LibraryView.init` because a cold
+    // launch straight into a tour would render before Library ever
+    // ran. `AtlasTabStrip` styles its own text, so both the hack and
+    // the ordering bug it worked around are gone.
 
     var body: some View {
         scrollBody
@@ -287,18 +280,14 @@ struct TourDetailView: View {
         }
     }
 
-    /// System segmented `Picker` — same shape as `LibraryView`'s
-    /// Saved / Downloaded / Recents picker, so the two surfaces read
-    /// as one visual system. Font is SF Mono 13pt via the
-    /// `UISegmentedControl.appearance()` setup in `init`.
+    /// `AtlasTabStrip` — the same switcher `LibraryView` and the maker
+    /// page use, so every in-page switch in Atlas reads as one system.
+    ///
+    /// The strip insets itself by `AtlasSpacing.lg`, matching the
+    /// gallery / map below, so its rule lines up with them. No padding
+    /// from here.
     private var topSectionTabRow: some View {
-        Picker("Top section", selection: $topSectionTab) {
-            ForEach(TopSectionTab.allCases) { tab in
-                Text(tab.rawValue).tag(tab)
-            }
-        }
-        .pickerStyle(.segmented)
-        .padding(.horizontal, AtlasSpacing.lg)
+        AtlasTabStrip(tabs: TopSectionTab.allCases, selection: $topSectionTab)
     }
 
     // MARK: - Gallery (photo carousel)
@@ -609,15 +598,13 @@ struct TourDetailView: View {
                 // to the tour.
                 //
                 // System `UserAnnotation()` would inherit the app's
-                // terracotta `AccentColor` and render orange — same
-                // issue HomeMapSection.UserLocationDot's doc comment
-                // calls out. We paint an explicit Apple-Maps-blue
-                // dot here for the same reason; heading wedge isn't
-                // needed in this static preview, so this is just the
-                // halo + dot, not the full home `UserLocationDot`.
+                // gold `AccentColor` and render the dot in brass — the
+                // shared `UserLocationDot` paints explicit Apple-Maps
+                // blue instead. No heading passed: this preview is
+                // static, so the compass wedge would be noise.
                 if let userLocation = locationManager.userLocation {
                     Annotation("My location", coordinate: userLocation.coordinate, anchor: .center) {
-                        userLocationDot
+                        UserLocationDot(headingDegrees: nil)
                     }
                     .annotationTitles(.hidden)
                 }
@@ -705,14 +692,19 @@ struct TourDetailView: View {
         var id: String { "\(coordinate.latitude),\(coordinate.longitude)" }
     }
 
-    /// Stop pin for the inline preview. On single-stop tours we
-    /// render the same small 14pt gold dot as the home map's
-    /// `StopPin` (which is `private` to HomeMapSection so it can't
-    /// be reused directly). On multi-stop tours we render a numbered
-    /// gold badge — Capsule-shaped so it can stretch horizontally
-    /// when multiple stops share a coordinate (label becomes e.g.
-    /// `1,2` instead of layering pins on top of each other). Numbers
-    /// are stop `order + 1`, matching the numbered stops list above.
+    /// Stop pin for the inline preview.
+    ///
+    /// Single-stop tours use the shared `StopPin` — the same one the
+    /// home map draws. Until 2026-07-27 this file carried its own copy,
+    /// because `StopPin` was `private` to `HomeMapSection`; the copies
+    /// had drifted to a 14pt dot against Home's 16pt. Both now come from
+    /// `Components/MapPins.swift`, so they cannot diverge again.
+    ///
+    /// Multi-stop tours keep a local numbered gold badge — genuinely
+    /// specific to this screen. It's Capsule-shaped so it can stretch
+    /// when several stops share a coordinate (the label becomes e.g.
+    /// `1,2` rather than layering pins). Numbers are stop `order + 1`,
+    /// matching the numbered stops list above.
     @ViewBuilder
     private func mapStopPin(for group: StopGroup) -> some View {
         if tour.kind == .multiStop {
@@ -728,34 +720,8 @@ struct TourDetailView: View {
                 .overlay(Capsule().stroke(Color.white, lineWidth: 2))
                 .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
         } else {
-            Circle()
-                .fill(AtlasColors.mapPin)
-                .frame(width: 14, height: 14)
-                .overlay(
-                    Circle().stroke(Color.white, lineWidth: 1.5)
-                )
-                .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
+            StopPin()
         }
-    }
-
-    /// Apple-Maps-style user-location dot for the inline preview:
-    /// soft blue accuracy halo + solid blue dot with a white ring.
-    /// Mirrors HomeMapSection's `UserLocationDot` *without* the
-    /// heading wedge (this preview is static, no compass needed)
-    /// and with all colors explicit so the dot stays blue instead
-    /// of inheriting the terracotta app accent.
-    private var userLocationDot: some View {
-        ZStack {
-            Circle()
-                .fill(Color.blue.opacity(0.15))
-                .frame(width: 46, height: 46)
-            Circle()
-                .fill(Color.blue)
-                .frame(width: 16, height: 16)
-                .overlay(Circle().stroke(Color.white, lineWidth: 3))
-                .shadow(color: Color.black.opacity(0.25), radius: 1.5)
-        }
-        .frame(width: 46, height: 46)
     }
 
     /// Single stop → tight neighborhood span (~0.005°, matches the

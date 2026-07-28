@@ -1,4 +1,26 @@
+import MapKit
 import SwiftUI
+
+/// The three views of a maker: what they made, what they collected, and
+/// where in the world their work is.
+///
+/// Owner direction 2026-07-27, with Instagram and AllTrails as the north
+/// stars — both put secondary profile content behind a tab strip under
+/// the header, and AllTrails' profile carries a literal Lists tab.
+///
+/// **LISTS is own-profile only for now.** Showing another creator's
+/// public lists needs their `auth.users` id to query `journeys`, and the
+/// catalog's `get_catalog()` doesn't emit one — `Maker` has no `userId`.
+/// That's a backend change, and it belongs with the visibility model
+/// (shared / only-me, follower-aware) rather than ahead of it. See
+/// `docs/lists-design.md`.
+enum ProfileTab: String, CaseIterable, Identifiable {
+    case tours = "Tours"
+    case lists = "Lists"
+    case map = "Map"
+
+    var id: String { rawValue }
+}
 
 /// Sort criteria for a maker's tour list. All reversible — the menu
 /// shows a direction-specific label so the active sort reads in plain
@@ -93,6 +115,12 @@ struct MakerView: View {
     @Environment(MakerTourService.self) private var makerTourService: MakerTourService?
     @Environment(FollowService.self) private var followService: FollowService?
     @Environment(ToastCenter.self) private var toastCenter: ToastCenter?
+    /// Optional for the same reason as the services above — the UIKit
+    /// maker layer doesn't inject them. Only `.ownProfile` reads these:
+    /// `listService` for named lists, `libraryStore` for Liked (which is
+    /// local, not server-backed, so it works signed out).
+    @Environment(TourListService.self) private var listService: TourListService?
+    @Environment(LibraryStore.self) private var libraryStore: LibraryStore?
 
     /// Follower/following counts + this viewer's relationship to the maker.
     /// Loaded on appear; refreshed after a follow/unfollow.
@@ -124,8 +152,24 @@ struct MakerView: View {
     @State private var draftToEdit: EditingDraft?
     @State private var pendingDraftId: UUID?
 
+    /// Which of TOURS / LISTS / MAP is showing.
+    @State private var profileTab: ProfileTab = .tours
+    /// Create-a-list sheet, reached from the LISTS tab.
+    @State private var showingCreateList = false
+    /// MAP tab camera. Framed once to fit this maker's whole body of
+    /// work, then left alone so a pan survives a tab switch.
+    @State private var mapCamera: MapCameraPosition = .automatic
+    @State private var selectedMapTourId: UUID?
+
     private var isOwnProfile: Bool { mode == .ownProfile }
     private var isStandalone: Bool { mode == .publicStandalone }
+
+    /// LISTS only appears on your own profile — see `ProfileTab`.
+    private var availableTabs: [ProfileTab] {
+        isOwnProfile && listService != nil
+            ? ProfileTab.allCases
+            : [.tours, .map]
+    }
 
     var body: some View {
         ScrollView {
@@ -133,14 +177,19 @@ struct MakerView: View {
                 header
                     .frame(maxWidth: .infinity)
                     .padding(.top, AtlasSpacing.lg)
+                    .padding(.horizontal, AtlasSpacing.lg)
 
-                // Your own lists live in Library now — "what you collected" —
-                // alongside Liked and the creators you follow. The profile is
-                // "what you made", so a second door into the same lists here
-                // was the redundancy this consolidation removes.
-                toursSection
+                // The strip insets itself, so its rule lines up with the
+                // rows below rather than running edge to edge (owner
+                // direction on device, TestFlight 1.1 (52)).
+                AtlasTabStrip(tabs: availableTabs, selection: $profileTab)
+
+                // Each tab owns its own horizontal inset — the list rows
+                // carry theirs internally (they're shared with Library,
+                // which isn't pre-padded), so a blanket padding here
+                // would double it to 48pt.
+                tabContent
             }
-            .padding(.horizontal, AtlasSpacing.lg)
             .padding(.bottom, AtlasSpacing.xl)
         }
         // `secondaryBackground` (a fixed RGB, not the level-sensitive
@@ -176,6 +225,23 @@ struct MakerView: View {
         }
         .sheet(isPresented: $showingEditProfile) {
             ProfileEditorView(currentMaker: maker)
+        }
+        .sheet(isPresented: $showingCreateList) {
+            TourListEditorSheet()
+        }
+        // Named lists live in Supabase, keyed on the account, so a
+        // sign-out or switch can't leave the previous user's on screen.
+        // Mirrors LibraryView's load.
+        // `?? nil` flattens the double optional (`authService` is itself
+        // optional here) so the task identity is a plain `UUID?`.
+        .task(id: authService?.userId ?? nil) {
+            guard isOwnProfile else { return }
+            await listService?.loadMyLists()
+        }
+        // If the account loses access to lists mid-session (sign-out),
+        // don't strand the user on a tab that no longer exists.
+        .onChange(of: availableTabs) { _, tabs in
+            if !tabs.contains(profileTab) { profileTab = .tours }
         }
         // No visible nav-bar title (owner direction): the masthead
         // already shows the maker name. Empty string keeps the bar +
@@ -455,6 +521,163 @@ struct MakerView: View {
         // display-name monogram. See Components/MakerAvatarView.
         MakerAvatarView(maker: maker, size: avatarSize)
     }
+
+    /// The body below the tab strip.
+    @ViewBuilder
+    private var tabContent: some View {
+        switch profileTab {
+        case .tours:
+            toursSection
+                .padding(.horizontal, AtlasSpacing.lg)
+        case .lists:
+            listsSection
+        case .map:
+            mapSection
+                .padding(.horizontal, AtlasSpacing.lg)
+        }
+    }
+
+    // MARK: - Lists tab
+
+    /// The user's own lists — Liked first, then anything they've named.
+    ///
+    /// Rows come from `Features/Library/TourListRows.swift`, shared with
+    /// Library so the two surfaces can't drift. Liked is deliberately
+    /// styled as just another list: it's the default one, not a special
+    /// case.
+    private var listsSection: some View {
+        LazyVStack(alignment: .leading, spacing: 0) {
+            NewListRow { showingCreateList = true }
+            Divider().padding(.horizontal, AtlasSpacing.lg)
+
+            NavigationLink {
+                LikedListView()
+            } label: {
+                LikedListRow(
+                    count: likedTours.count,
+                    coverImageName: likedTours.first?.heroImageURL,
+                    coverCategory: likedTours.first?.primaryCategory
+                )
+            }
+            .buttonStyle(.plain)
+
+            ForEach(myLists) { list in
+                Divider().padding(.horizontal, AtlasSpacing.lg)
+
+                NavigationLink {
+                    TourListDetailView(listId: list.id)
+                } label: {
+                    NamedListRow(
+                        list: list,
+                        coverImageName: TourListCover.imageName(for: list, in: dataService),
+                        coverCategory: TourListCover.category(for: list, in: dataService)
+                    )
+                }
+                .buttonStyle(.plain)
+            }
+        }
+    }
+
+    // MARK: - Map tab
+
+    /// Where this maker's tours are in the world.
+    ///
+    /// Treatment copied from `TourDetailView.mapContent` (owner
+    /// direction): `heroHeight` tall, square corners, inset `lg` by the
+    /// caller so the gutters either side stay available for scrolling
+    /// the page. That inset is load-bearing — without it a drag on the
+    /// map has nowhere else to land and the page can't be scrolled.
+    @ViewBuilder
+    private var mapSection: some View {
+        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            HStack(spacing: AtlasSpacing.md) {
+                Text(mapCountText)
+                    .font(AtlasTypography.caption)
+                    .textCase(.uppercase)
+                    .foregroundStyle(AtlasColors.tertiaryText)
+                Spacer()
+                // Re-frame after panning away. Borrowed from tour
+                // detail, where GET DIRECTIONS sits in this same slot.
+                if !makerTours.isEmpty {
+                    Button("Show all") { frameWholeMap() }
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.mapPin)
+                }
+            }
+            .padding(.top, AtlasSpacing.md)
+
+            if makerTours.isEmpty {
+                // Nothing to plot — a placeholder box, matching the
+                // empty tour feed rather than inventing a new empty state.
+                Rectangle()
+                    .fill(AtlasColors.placeholderWarm.opacity(0.35))
+                    .frame(height: AtlasSpacing.heroHeight)
+                    .accessibilityLabel("No tours to show on the map")
+            } else {
+                MakerMapSection(
+                    tours: makerTours,
+                    userLocation: locationManager.userLocation,
+                    selectedTourId: selectedMapTourId,
+                    cameraPosition: $mapCamera,
+                    // The map frames itself on first appear — it has to
+                    // set the camera and its clustering region in the
+                    // same breath, so it owns both.
+                    initialRegion: MakerMapSection.initialRegion(for: makerTours),
+                    onPinTapped: { tourId, _ in
+                        selectedMapTourId = tourId
+                        openTourFromMap(tourId)
+                    },
+                    onMapTapped: { selectedMapTourId = nil }
+                )
+                // Same footprint as the gallery / map on tour detail.
+                .frame(height: AtlasSpacing.heroHeight)
+            }
+        }
+    }
+
+    private var mapCountText: String {
+        let count = makerTours.count
+        return count == 1 ? "1 tour on the map" : "\(count) tours on the map"
+    }
+
+    /// Frame every tour this maker has made. A maker working across
+    /// continents gets a world view, which is the honest picture of them
+    /// (owner direction 2026-07-27).
+    ///
+    /// Only used by "Show all" — the first framing is the map's own job.
+    /// The clustering region catches up here via `onMapCameraChange`,
+    /// which fires when this animation settles.
+    private func frameWholeMap() {
+        guard let region = MakerMapSection.initialRegion(for: makerTours) else { return }
+        withAnimation(.easeInOut(duration: 0.35)) { mapCamera = .region(region) }
+    }
+
+    /// Open a tour tapped on the map, matching `tourOpen`'s routing: own
+    /// tours go to the authoring editor (via the `navigationDestination`
+    /// the create flow already installs), everyone else's slides up as a
+    /// tour.
+    private func openTourFromMap(_ tourId: UUID) {
+        if isOwnProfile {
+            draftToEdit = EditingDraft(id: tourId)
+        } else if let tour = makerTours.first(where: { $0.id == tourId }) {
+            tourPresenter.present(tour)
+        }
+    }
+
+    /// Tours in Liked, newest-saved first — the same source
+    /// `LikedListView` renders.
+    private var likedTours: [Tour] {
+        guard let libraryStore else { return [] }
+        return libraryStore.savedEntries.compactMap { dataService.tour(by: $0.tourId) }
+    }
+
+    /// The user's named lists. Empty signed out — Liked is the only list
+    /// an anonymous user has.
+    private var myLists: [TourList] {
+        listService?.myLists ?? []
+    }
+
+    // MARK: - Tours tab
 
     private var toursSection: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {

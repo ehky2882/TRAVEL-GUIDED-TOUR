@@ -81,6 +81,64 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-07-27)
 
+### Maker page gains TOURS / LISTS / MAP; the app now has ONE in-page switcher (session 77b — code)
+
+**Owner: "i want to work on the maker page. lots to do. one of the things is to find a home for the playlists."** Then, unprompted: **"take a look at instagram and alltrails profile pages as your north star"** and **"are you able to mock something up for me to see and review?"** — so the whole session ran through **four rounds of HTML mockup reviewed on device**, each decision made by looking rather than arguing. **[PR #461](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/461)** — code only, **no `Tours.json`, no SQL, nothing for the owner to run**. Net **−249 lines** (+293/−542). **Owner device-reviewed on TestFlight 1.1 (52) and (53) — Library, tour detail, the Me tab, light/dark and the inset all confirmed fine — then merged.** Mockup: `https://claude.ai/code/artifact/0e18d154-d076-42d6-8b85-0e1a25849381`.
+
+- **The shape.** A tab strip under the maker-page header — **TOURS · LISTS · MAP**. Tours keeps its feed, layout toggle and sort untouched. Map is a pannable, clustering map of that maker's tours with a `SHOW ALL` re-frame; a pin routes exactly like a row (own tours → authoring editor, others → `TourPresenter`). **Library and tour detail now wear the same strip**, at the owner's request: *"for visual consistency i would also like other current instances of 'segmented control' to change to strip."*
+- **⚠️ The owner corrected me on the central design question and was right — remember the procedure, not just the answer.** I argued a pannable map can't live inside a `ScrollView` because the map and page fight for the drag. They replied: *"this is somewhat consistent with the map in my tour detail view."* **`TourDetailView.mapContent` has shipped exactly that for months** — 320pt (`AtlasSpacing.heroHeight`), inset 24pt (`AtlasSpacing.lg`), square corners, inside the scrolling body. **The 24pt gutters either side ARE the mechanism**: they're where a drag scrolls the page instead of panning the map. That inset is load-bearing, not decoration. **Check whether the codebase already solved a problem before reasoning about whether it can be solved.**
+- **Five new shared files, each replacing something duplicated or unreachable:** `Components/AtlasTabStrip.swift` · `Components/MapPins.swift` · `Components/MapClustering.swift` · `Features/Library/TourListRows.swift` · `Features/Maker/MakerMapSection.swift` (6 parameters against `HomeMapSection`'s 12 — the maker page has no drawer, compass or map-mode picker to serve).
+- **The pin extraction fixed a live drift.** `StopPin` / `ClusterPin` / `UserLocationDot` were `private` to `HomeMapSection`, so **`TourDetailView` had hand-reimplemented two of them** — with a comment saying it had to — and the copies had already diverged: **a 14pt dot there against Home's 16pt**. The maker map would have been the third copy. **Durable rule: a `private` view another screen visibly needs is a latent duplicate.**
+- **Deleting the segmented controls deleted more than expected.** Both call sites reached into **`UISegmentedControl.appearance()`** — a **global** proxy mutation that was restyling every segmented control the app could ever show, including inside system sheets, to serve two pickers. Both gone. **`TourDetailView.init(tour:)` went with them**: it existed only to run that hack, and had to duplicate `LibraryView.init`'s copy because a cold launch straight into a tour would otherwise render before Library was instantiated. No proxy, no ordering bug, no init.
+- **`cellsAcross` is now a parameter** (default 20; maker map passes 12). It counts cells across the **region**, not the screen — at 320pt tall the same 20 cells span far fewer points and visually adjacent pins refuse to merge.
+- **🐛 A bug CI could not catch, found by re-reading after the build went green.** The camera and the clustering region were seeded in **two different `.task` blocks**; whichever ran first read a camera still at `.automatic` (region `nil`), so `currentRegion` stayed nil. Clustering falls back to all-singles with no region and `.onEnd` doesn't fire until the user moves the map — **a maker with 40 tours in one city would have opened to a pile of overlapping dots and stayed that way.** Fixed in `6f31c7a` (`MakerMapSection` takes `initialRegion` and sets both together). **Two `.task` blocks that must agree are a race.**
+- **⚠️ Scope NOT delivered as asked: LISTS is own-profile only.** The owner asked for all three tabs on every maker page. Reading another creator's public lists means querying `journeys` by `owner_user_id` — an `auth.users` id — and **`get_catalog()` never emits `makers.user_id`**, so the client `Maker` model has no `userId`. **I had told the owner this needed no backend work; that was wrong** — `userId` came from an exploration report describing `MakerRow`, the private Supabase DTO in `MakerProfileService`, not the `Maker` the app renders. Corrected before code depended on it. `availableTabs` narrows the strip; an `onChange` moves the user off a tab that disappears.
+- **Owner's list-visibility model — DECIDED and designed, not built.** *"if a maker is public then everything is public. if maker is private but you are friends then you should be able to see your friend's list. unlike there is a subset of private lists that even your friend's can't see."* → **A list is Shared or Only me**; who "Shared" reaches is decided by the **account** (public → anyone; private → accepted followers); "Only me" hides from followers too. Two states on the list; the existing account switch does the rest. **⚠️ Two schema traps recorded now:** `follows.followee_id` is a **MAKER** id while `journeys.owner_user_id` is an **AUTH USER** id — the bridge `makers.user_id` is unique only via a **partial** index (`accounts.sql:118-120`) and the 19 Atlas studios are all `NULL`, so a careless join **matches every seed studio at once**; and `makers.user_id` is `on delete set null` while `journeys.owner_user_id` is `on delete cascade`, so a deleted user's lists vanish but their maker row is orphaned (treat "no maker row" as not-private). No helper answers "can viewer X see maker Y's content" today — `list_followers` / `list_following` inline a *strictly-owner* rule that ignores `follows` entirely, copy-pasted twice.
+- **Device review, riskiest first — Library and tour detail are shipped screens that were NOT broken**, and the strip conversion is the only real regression risk: Library sections still switch with no doubled divider · tour detail Gallery/Map switches, map still pans in the scrolling body, pins + user dot still render after the copies were deleted · Home map clusters identically · Me tab's three tabs, Map **clusters on first open** · another creator's page shows two tabs without crashing (the optional-environment path) · light **and** dark.
+- **Deferred:** saved tours layered on the map (treatment approved — **solid brass dot vs hollow ring**, so it survives greyscale and colour-blindness; only timing deferred, and three candidate "saved" colours are in the mockup with teal recommended) · whether Library's Lists tab shrinks now that lists are on the profile · the strip's **full-bleed** rule vs insetting it · **the rest of the owner's "lots to do" maker-page list, which has not been described yet.**
+
+#### ⚠️ "Private should hide everything" — owner decision, and it is bigger than it sounds (2026-07-27)
+
+Owner, on being told a private account's tours are still visible to everyone:
+**"Yes — private should hide everything."** Their model, in their words: *"if a
+profile is public… their lists should show. if a profile is private, then i wont
+be able to see their lists or tours or anything."*
+
+**⚠️ This collides with the catalog's whole architecture, so scope it before
+building it.** `Tours.json` / `get_catalog()` is **one public payload with no
+viewer** — every phone fetches the same bytes, caches them on disk, and falls
+back to a gh-pages mirror and a bundled seed. Hiding a private maker's tours
+means the payload has to differ per person, which that design cannot do.
+
+Three ways out, and the third is almost certainly right:
+
+1. **Drop private makers' tours from the catalog entirely.** Trivial, but their
+   own accepted followers can't see them either — which isn't what the owner
+   described.
+2. **Per-viewer catalog** via an authenticated RPC. Correct, and it **destroys
+   the anonymous + offline path**: no signed-out browsing, no gh-pages fallback,
+   auth required on every cold launch. Do not do this.
+3. **Hybrid.** The public catalog excludes private makers; a second
+   authenticated call fetches tours from the private makers you follow, merged
+   client-side. Keeps the cache, the mirror and anonymous browsing; costs one
+   extra call for signed-in users.
+
+Also note the **maker row itself** is emitted by `get_catalog()` for everyone, so
+"hide everything" means hiding the profile from search and the map too, not just
+its tours. **This is its own project — do not bolt it onto the lists work.**
+
+**Sequencing agreed with the owner:** public lists on other people's maker pages
+ship **next** (one `get_catalog` line emitting `user_id` + a `Maker.userId` field
++ `publicLists(ofUser:)`), together with the Shared / Only-me model, since both
+need the same SQL trip. Private-hides-everything comes after, scoped separately.
+
+**⚠️ A correction worth carrying:** the owner believed the per-list private
+marking wasn't built. **It is** — `TourListEditorSheet` has a Public toggle and
+`journeys.is_public` **defaults to false**, so every list today is already
+private. Once public reads work, a stranger sees an empty Lists tab until the
+owner toggles something on. Say that up front next time rather than describing
+the plumbing.
+
 ### `Journey` is now `TourList` in Swift — and a merge shipped a combination nobody had tested (session 77 — code + docs)
 
 Two PRs closing out the saving consolidation: **[#457](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/457)** (`8f29626`, docs) and **[#458](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/458)** (`370b9f0`, the rename). No build cut — nothing here changes behaviour. Detail: `archive/HANDOFF-260727-3.md`.
