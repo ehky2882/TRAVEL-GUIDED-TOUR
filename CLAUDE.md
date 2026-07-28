@@ -1243,9 +1243,21 @@ See `ROADMAP.md` for full milestone history. Read latest `archive/HANDOFF-*.md` 
 ```bash
 git fetch && git status && git branch --show-current && git log origin/main..HEAD && gh pr list --state open
 ls archive/HANDOFF-*.md | tail -1   # then read that file
+
+# What is staged but not yet live? ALWAYS read this from origin/main, never from your branch:
+git show origin/main:drafts/AUDIO-PENDING-SURVEY.md
 ```
 
 Run before any substantive work. Investigate uncommitted changes before acting on them.
+
+**⚠️ Read the audio-pending tracker from `origin/main`, not from your checkout.** Staged drafts
+(`drafts/<city>-batch*`, `drafts/<city>-*-walk`) live only on their staging branch and **never
+reach `main`** — so `drafts/AUDIO-PENDING-SURVEY.md` on `main` is the *only* cross-session signal
+that a staged city exists. Long-lived staging branches drift 100+ commits behind `main`, and their
+copy of the tracker goes stale and contradicts reality (2026-07-28: a branch copy still listed Rome
+as pending two days after Rome shipped). Same rule when writing: land a city's tracker row on `main`
+via a docs-only PR **as soon as the batch is staged** — not at the end of the city, and never only
+on the staging branch.
 
 ## Merging PRs
 
