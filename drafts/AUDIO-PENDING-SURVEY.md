@@ -15,7 +15,9 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-07-28 (🇨🇦 Montreal COMPLETE — all 29 tours live under Atlas Studio YUL. Pending queue now **Berlin only**).
+**Last verified:** 2026-07-28 (🇨🇦 Montreal COMPLETE — all 29 tours live under Atlas Studio YUL. Pending queue: **Berlin + Dubai**).
+
+> ⚠️ **This file went stale within a day and told a session the wrong thing.** On 2026-07-28 it said the queue was "Montreal + Berlin only"; **Dubai had been script- and image-staged on 2026-07-27** by a parallel session that added its drafts to `claude/amsterdam-handoff-preserve-hlhyp8` and pushed ~32 images to `gh-pages` **without updating this file**. A session then reported "queue is down to Berlin only" to the owner, who corrected it. **The UPDATE RULE above is not optional, and it binds the *staging* session as much as the wire-in session.** When in doubt, re-derive rather than trust the table: `git ls-tree -r --name-only origin/claude/amsterdam-handoff-preserve-hlhyp8 -- drafts/` and compare against the makers in `origin/main`'s `Tours.json`.
 
 ---
 
@@ -27,7 +29,8 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 | City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|------------:|----------------|------------------|
 | 🇩🇪 Berlin | 36 | 31 single + 5 walks (intro+5 / intro+5 / intro+4 / intro+4 / intro+3) | 57 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio BER |
-| **TOTAL PENDING** | **36** | | **57** | | |
+| 🇦🇪 Dubai | 26 | 22 single + 4 walks (intro+4 / intro+4 / intro+3 / intro+3) | 40 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio DXB |
+| **TOTAL PENDING** | **62** | | **97** | | |
 
 _(✅ 🇪🇸 Madrid = DONE (2026-07-25, PR #435): **34 tours LIVE** — 30 single-stop + **4 walks** (Madrid de los Austrias, Paseo del Arte, El Retiro, Royal Madrid) under new maker **Atlas Studio MAD**. 55 MP3s. Note: the staged set was **30 singles / 55 MP3s**, not the 31/56 recorded here — the old figure was one over. Owner audio arrived complete, matching the staged drafts 1:1.)_
 _(✅ 🇮🇹 Rome = DONE (2026-07-27): **30 tours LIVE** — 25 single-stop + **5 walks** (Ancient Rome, The Baroque Heart, The Ghetto and Trastevere, The Vatican and the Borgo, The Aventine and Testaccio) under new maker **Atlas Studio ROM**. 53 MP3s, 6,866 s narration. The delivery also contained **7 extra singles (25–31)** narrated after the image-staging session — Piazza del Quirinale, Monti, Santa Maria Maggiore, San Giovanni in Laterano, Trajan's Column, Porta San Sebastiano, Testaccio. They have **no scripts and no staged images** (Trajan's Column + Testaccio have a walk-only hero and nothing else), so they were NOT wired. Their audio is banked on gh-pages under its eventual slug (`piazza-quirinale.mp3`, `monti.mp3`, `santa-maria-maggiore.mp3`, `san-giovanni-laterano.mp3`, `trajans-column.mp3`, `porta-san-sebastiano.mp3`, `testaccio.mp3`) — see the new PENDING row below.)_
@@ -86,6 +89,12 @@ _(✅ 🇨🇦 Toronto = DONE (2026-07-10): **all 42 tours LIVE** — 38 single-
 
 **Images:** 3 heroes owner-supplied (Monti, Trajan's Column, Porta San Sebastiano); the rest sourced. ⚠️ `trajans-column_hero.webp` and `testaccio_hero.webp` were **overwritten** — they were walk-only images, so the Ancient Rome and Aventine/Testaccio walk stop images changed too (deliberate; both improvements).
 
+
+**🇦🇪 Dubai** — **26 tours (22 single-stop + 4 walks)**, new maker **Atlas Studio DXB** 🇦🇪. Staged 2026-07-27 (scripts + images; awaiting narration). **MP3s needed: 40** = 22 singles + 18 walk tracks.
+- **Batch 1 (22 single-stop)**, `drafts/dubai-batch1/`, in the owner's script order: Al Fahidi · Abra Crossing · Gold Souk · Spice Souk · Al Seef · Burj Khalifa · Dubai Fountain · Museum of the Future · Jumeirah Mosque · Etihad Museum · Textile Souk · Al Shindagha · Al Fahidi Fort · Dhow Wharfage · Dubai Frame · DIFC Gate · Alserkal Avenue · Kite Beach · Madinat Jumeirah · Marina Walk · JBR The Beach · Palm West Beach.
+- **4 walks:** `dubai-creekcrossing-walk` (intro+4: textile souk, abra crossing, spice souk, gold souk) · `dubai-oldquarter-walk` (intro+4: Al Shindagha, Al Fahidi Fort, Al Fahidi lanes, Al Seef) · `dubai-downtown-walk` (intro+3: Burj Park, Dubai Fountain, Souk Al Bahar bridge) · `dubai-marinajbr-walk` (intro+3: Marina Walk, the seam, JBR The Beach).
+- **Images:** ~32 pushed to `gh-pages` on 2026-07-27 across 9 commits (`35dc58e`, `47ef5ad`, `df2aff4`, `8a2bc43`, `e1c0451`, `788e719`, `d0cea4e`, `0d69d76`, `0a94484`), plus `dubai-fountain_*` staged earlier. Two walk-only stop images exist (`downtown_stop3` = Souk Al Bahar, `marinajbr_stop2` = the seam).
+- **⚠️ Dubai has NO master pick-map README**, unlike every other staged city (Montreal, Berlin, Madrid, Rome all have one per batch folder). **So slug↔coord↔category↔hero/gallery assignments are not written down anywhere.** A wire-in session will have to reconstruct them from the scripts and the gh-pages filenames, or the staging session needs to write the README first. **Verify per-tour image coverage before promising a launch** — it has not been audited here.
 
 **🇩🇪 Berlin** — **36 tours (31 single-stop + 5 walks)**, new maker **Atlas Studio BER** 🇩🇪. Complete 2026-07-21 (image-staged; awaiting narration):
 - **Batch 1 (31 single-stop):** Brandenburg Gate, Reichstag, Holocaust Memorial, Bebelplatz, Museum Island, Humboldt Forum, Alexanderplatz, Gendarmenmarkt, Checkpoint Charlie, Bernauer Strasse, East Side Gallery, Potsdamer Platz, Oberbaumbrücke, Topography of Terror, Gedächtniskirche, Tiergarten/Siegessäule, Hackesche Höfe, Neue Synagoge, Nikolaiviertel, Tränenpalast, Neue Wache, Karl-Marx-Allee, Kollwitzplatz/Wasserturm, Mauerpark, Tempelhofer Feld, Charlottenburg, Kulturforum, Band des Bundes, Treptower Park, Landwehrkanal/Maybachufer, Nollendorfplatz. Master pick-map (slug/coord/category/hero+gallery/credit): `drafts/berlin-batch1/README.md`.
