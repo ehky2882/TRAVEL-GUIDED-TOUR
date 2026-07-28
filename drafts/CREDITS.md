@@ -1,0 +1,423 @@
+# Image credits — attribution ledger
+
+Master list of every staged image that carries an attribution obligation (CC BY /
+CC BY-SA). **These MUST be surfaced before the images ship live** — Atlas has no
+attribution UI today, so per the standing PD-only policy these were owner-approved
+only where no PD/CC0 version of the exact subject existed. Options at ship time:
+a per-tour credits line, an in-app attributions screen, or swap for owner-supplied
+shots. Everything NOT listed here is ship-safe (Unsplash/Pexels/Pixabay — no
+attribution) or owner-supplied.
+
+Last updated 2026-07-28 (Dubai staged — 11 CC images; Berlin attributions re-verified by SHA-1 and 9 rows corrected).
+
+> ### ⚠️ Ledger audit, 2026-07-28 — read this before relying on any row
+>
+> Every row in this file was machine-checked: the published `gh-pages` image was compared
+> against the Commons file the row names. **115 rows checked, 111 verified, 4 failed.** The
+> original attributions were gathered by matching image *dimensions* against a Commons
+> category listing, which silently picks the wrong file whenever two images in a category
+> share a size. **Attribute by SHA-1 instead** — hash the local original and query
+> `list=allimages&aisha1=<sha1>`; that is exact file identity, not a guess.
+>
+> The four failures, in severity order:
+>
+> 1. **`waterlooplein-rembrandt-house_hero.webp` (Amsterdam — LIVE).** The row claimed
+>    Usernet123u / CC BY-SA 4.0 via `File:Europe 1979's 03.jpg`. Side-by-side, that is a
+>    *different photograph* of the same building (a 1979 close-up of the doorway vs. the
+>    published wide facade shot). No Commons file in the Rembrandt House / Jodenbreestraat
+>    categories matches the published image, which points to **ship-safe stock** — i.e. the
+>    row was asserting an obligation that probably does not exist. **Re-confirm provenance;
+>    the current credit line is wrong either way.**
+> 2. **`testaccio_hero.webp` (Rome — LIVE).** The image was **overwritten** at the Rome-extras
+>    wire-in (the tracker records this). The row below still describes the *superseded*
+>    picture (Tyler Bell / CC BY 2.0), not what is shipping. **Re-confirm the current image's
+>    provenance.** General lesson: overwriting a published filename silently invalidates its
+>    credit row — update the ledger in the same commit.
+> 3. **`ghostline_stop4.webp` + `ghostline_hero.webp` (Berlin — staged, not live).** The named
+>    file is a different photograph of the same stretch of Wall. The fetch log recorded this
+>    candidate as **CC0**, so the real obligation is probably *none*, but the exact file is
+>    unidentified. **Re-verify or re-source before Berlin ships.**
+> 4. **`kollwitzplatz_2.webp` (Berlin — staged).** Off by two frames in the same photo series;
+>    author and licence were always right and it is public domain. **Corrected below.**
+
+## Rome — 6 credit-required images (`drafts/rome-batch1`)
+
+Everything else in the Rome batch is ship-safe (Unsplash/Pexels/Pixabay) or owner-pasted.
+New maker **Atlas Studio ROM** 🇮🇹 at wire-in.
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `ara-pacis_hero.webp` | Ara Pacis museum (dusk) | Palickap | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Roma,_Museo_dell%27Ara_Pacis.jpg |
+| `ara-pacis_2.webp` | Ara Pacis altar (interior) | Joel Bellviure | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Ara_Pacis,_general.jpg |
+| `ara-pacis_3.webp` | Mausoleum of Augustus | Attila (Flickr) | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Dscn1097_(53662807386).jpg |
+| `piazza-barberini_2.webp` | Triton Fountain | Chabe01 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Fontaine_Triton_-_Rome_(IT62)_-_2021-08-30_-_5.jpg |
+| `piazza-barberini_3.webp` | Fountain of the Bees | babizhet | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:%D0%A4%D0%BE%D0%BD%D1%82%D0%B0%D0%BD_%D0%B1%D0%B4%D0%B6%D1%96%D0%BB_%D0%A0%D0%B8%D0%BC.JPG |
+| ~~`testaccio_hero.webp`~~ **(SUPERSEDED — see note)** | Monte Testaccio (hill of shards) | Tyler Bell | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Monte_Testaccio.jpg |
+
+_(Piazza Barberini `_hero`, Baths of Caracalla, Jewish Ghetto, Santa Maria in Trastevere, and
+Bocca della Verità's Cosmedin shot are owner-pasted → ship-safe. The `testaccio_hero` is also the
+Testaccio stop image in the Aventine & Testaccio walk.)_
+
+## Toronto — 17 credit-required images
+
+### Hockey Hall of Fame (single-stop, `drafts/toronto-batch2`)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `hockey-hall-of-fame_2.webp` | NHL Zone (interior) | Christopher Amrich | CC BY-SA 2.0 | Wikimedia Commons |
+| `hockey-hall-of-fame_4.webp` | goalie-mask exhibit | Christopher Amrich | CC BY-SA 2.0 | Wikimedia Commons |
+| _(hockey-hall-of-fame_3 / IN1 is CC0 — no credit; hero HH6 is ship-safe)_ | | | | |
+
+### Queen Street West (single-stop, `drafts/toronto-batch7`)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `queen-street-west_hero.webp` | The Drake Hotel | SimonP | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Drake_Hotel.jpg |
+| _(also reused as stop 5 of the Immigrant West/Kensington walk — same credit)_ | | | | |
+
+### Trinity Bellwoods (single-stop, `drafts/toronto-batch7`)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `trinity-bellwoods_hero.webp` | the gates (Queen & Strachan) | SimonP | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Trinity_Bellwoods_Gates.jpg |
+| `trinity-bellwoods_2.webp` | cherry blossom | Canmenwalker | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Trinity_Bellwoods_Park_Cherry_blossom_2022.jpg |
+| `trinity-bellwoods_3.webp` | CN Tower from the park | Haaron755 | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:CN_Tower_DSCN4373.JPG |
+
+### Yorkville / Mink Mile (single-stop, `drafts/toronto-batch8`)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `yorkville_hero.webp` | Cumberland Street | Enoch Leung | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Cumberland_Street,_Yorkville_(32676257228).jpg |
+| _(yorkville_2 boulder is owner-supplied — no credit)_ | | | | |
+
+### Aga Khan Museum (single-stop, `drafts/toronto-batch8`) — all 6 CC-licensed
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `aga-khan-museum_hero.webp` | building + reflecting pool | Canmenwalker | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Aga_Khan_Museum_2022.jpg |
+| `aga-khan-museum_2.webp` | inner courtyard | Canmenwalker | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Aga_Khan_Museum_Courtyard.jpg |
+| `aga-khan-museum_3.webp` | night / char-bagh garden | Faisal Anwar | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:01SensoryGardenCharBagh.jpg |
+| `aga-khan-museum_4.webp` | exterior + name | JohnOyston | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Aga_Khan_Museum_in_Toronto-_Exterior.jpg |
+| `aga-khan-museum_5.webp` | lobby / atrium | Canmenwalker | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Aga_Khan_Museum_Lobby_2022.jpg |
+| `aga-khan-museum_6.webp` | gallery of Islamic art | Canmenwalker | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Aga_Khan_Museum_Exhibit_2022.jpg |
+
+### Bata Shoe Museum (single-stop, `drafts/toronto-batch10`; also Museum Mile walk stop 2)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `bata-shoe-museum_hero.webp` | shoebox building (BT26) | Jim.henderson | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Bata_Museum_WCNA_2023_(13).jpg |
+| `bata-shoe-museum_2.webp` | shoebox angle (BT25) | Jim.henderson | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Bata_Museum_WCNA_2023_(12).jpg |
+| `bata-shoe-museum_3.webp` | + red shoe banner (BT31) | Eberhard J. Wormer | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Bata_Shoe_Museum_2.jpg |
+| `bata-shoe-museum_6.webp` | museum sign (BT28) | Larry Koester | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Bata_Shoe_Museum_(4)_(22934136099).jpg |
+| _(bata-shoe-museum_4 clog wall + _5 mukluks are ship-safe Pexels — no credit)_ | | | | |
+| _(Gardiner Museum, batch 10, is hero-only + owner-supplied — no credit)_ | | | | |
+
+### Los Angeles (batches 1–8, `drafts/la-batch1..8`)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `walt-disney-concert-hall_6.webp` | the "french-fry organ" (WD53) | Daniel Hartwig | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Disney_Concert_Hall_(10920404614).jpg |
+| `la-brea-tar-pits_hero.webp` | La Brea Lake Pit + mammoth family (W8) | Downtowngal | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:La_Brea_Tar_Pits_January_2021.jpg |
+| `moca-grand-avenue_hero.webp` | MOCA Grand Ave entrance (M32) | Minnaert | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:MOCA_LA_04.jpg |
+| `moca-grand-avenue_2.webp` | Nancy Rubins sculpture on red wall (M28) | vasse nicolas, antoine | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:2013-07-26_MOCA_Los_Angeles_Nancy_Rubins.jpg |
+| `moca-grand-avenue_3.webp` | MOCA building + plaza + sculpture (M31) | Dietmar Rabich | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Los_Angeles_(California,_USA),_South_Olive_Street_--_2012_--_8.jpg |
+| _(batch 1: Disney concert room WD67 = CC0; Chinese Theatre CT38 + The Broad TB240 = PD/CC0; El Pueblo 09 = owner-supplied; all other batch-1 picks = Unsplash/Pexels — no credit.)_ | | | | |
+| _(batch 2: Griffith 24 + Santa Monica 28 = Unsplash/Pexels — no credit. La Brea 20 is hero-only. LACMA 19 hero = owner-supplied Geffen photos, gallery L25/L27 = Pexels — no credit.)_ | | | | |
+| `academy-museum_4.webp` | Academy Museum sphere + May Co. bldg (Y40) | _to confirm_ | CC BY-SA 4.0 | Wikimedia Commons (author TBD at ship) |
+| `greek-theatre_3.webp` | Greek Theatre seating/stage (RG3) | User:Godfinger | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Greek_Theater_2007.JPG |
+| `greek-theatre_4.webp` | Greek Theatre night concert (RG1) | Amhernandez8754 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:The_Greek_Theatre.jpg |
+| _(batch 3: Angels Flight 05 + Bradbury 06 + City Hall 07 = Unsplash/Pexels — no credit. MOCA 03 = all 3 CC-licensed, above.)_ | | | | |
+| _(batch 4: Little Tokyo 10 + Last Bookstore 11 + Dolby 14 + Capitol 16 = all ship-safe/PD/owner — no credit.)_ | | | | |
+| _(batch 5: Academy 21 gallery Y40 + Griffith/Greek 25 gallery RG3/RG1 = credit-required, above. Petersen 22 + Third St Promenade 29 = ship-safe/owner — no credit.)_ | | | | |
+| _(batch 6: Venice Boardwalk 30 + Venice Canals 31 + Science Center/Endeavour 34 + NHM 35 = all ship-safe (Unsplash/Pexels) — no credit.)_ | | | | |
+| `the-huntington_hero.webp` | Huntington Art Gallery front facade (UW2) | Matthew Field (Mfield) | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Huntington_art_gallery_at_huntington_library_california.jpg |
+| `gamble-house_hero.webp` | Gamble House front elevation (DW20) | Cullen328 | CC BY-SA 3.0 | Wikimedia Commons |
+| `gamble-house_2.webp` | Gamble House (DW8) | Codera23 | CC BY-SA 4.0 | Wikimedia Commons |
+| `gamble-house_3.webp` | Gamble House (DW7) | Cullen328 | CC BY-SA 3.0 | Wikimedia Commons |
+| _(batch 7: Coliseum 36 + Old Pasadena 41 = ship-safe (Pexels/Unsplash) — no credit. The Huntington 39 gallery U6/U9/U8 = Unsplash — no credit; hero above. Gamble House 40 `_4` = Mattnad PD — no credit; hero/`_2`/`_3` above.)_ | | | | |
+| `egyptian-theatre_2.webp` | Egyptian Theatre palm forecourt (E14) | Andreas Praefcke | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Egyptian_Theatre_Hollywood_3.jpg |
+| `egyptian-theatre_3.webp` | Egyptian Theatre forecourt at night (E3) | Pop Culture Geek (The Conmunity) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Clone_Wars_screening_-_Egyptian_theater_entryway_(5240103221).jpg |
+| `egyptian-theatre_4.webp` | Egyptian Theatre interior auditorium (E23) | Gb321 | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Grauman%27s_Egyptian_interior_2026.jpg |
+| `farmers-market-grove_2.webp` | Original Farmers Market clock tower (WF1) | Infernalfox (English Wikipedia) | CC BY 2.5 | https://commons.wikimedia.org/wiki/File:Farmer%27s_Market_2.jpg |
+| `farmers-market-grove_4.webp` | The Grove green double-decker trolley (WG1) | Clotee Pridgen Allochuku | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:%22The_Grove%22_Street_Car_-_panoramio.jpg |
+| _(batch 8: Getty 43 + Rodeo 44 = ship-safe — no credit. Egyptian 18 HERO = owner photo, gallery `_2`/`_3`/`_4` above. Farmers Market/Grove 23 hero F1 + `_3` F27 + `_5` GR16 = ship-safe — no credit; `_2`/`_4` above.)_ | | | | |
+
+## Amsterdam — 7 credit-required images (batch 1, `drafts/amsterdam-batch1`)
+
+Stock (Unsplash/Pexels/Pixabay) coverage was too polluted for the Oude Kerk (Delft's
+Oude Kerk, look-alike churches) and the Begijnhof (Belgian beguinages), so those two
+tours use Wikimedia-verified shots — all CC-licensed, logged here. **Dam Square & Royal
+Palace and De Wallen are entirely ship-safe stock — no credit.**
+
+### Oude Kerk (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `oude-kerk_hero.webp` | church exterior + tower from the square | jimmyweee | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(6578772447).jpg |
+| `oude-kerk_2.webp` | brick Gothic exterior | thierrytutin | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(4093683725).jpg |
+| `oude-kerk_3.webp` | interior — wooden vault + gravestone floor | Johan Bakker | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:3990_Oude_Kerk_(2).jpg |
+
+### Begijnhof (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `begijnhof_hero.webp` | courtyard + statue, lawn + gabled houses | Sergey Galyonkin (Berlin) | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(8697235291).jpg |
+| `begijnhof_2.webp` | courtyard + weeping tree | Szilas | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:2019-06-21_Amsterdam_03.jpg |
+| `begijnhof_3.webp` | courtyard lawn + gabled houses | thierrytutin | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(4095056424).jpg |
+| `begijnhof_4.webp` | gabled house facade detail | Fred Romero (Paris) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_-_Begijnhof_(30183600072).jpg |
+
+### Anne Frank House (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `anne-frank-house_hero.webp` | the house + museum entrance, Prinsengracht | Dietmar Rabich | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(NL),_Anne-Frank-Huis_--_2015_--_7185.jpg |
+
+### Westerkerk (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `westerkerk_3.webp` | interior — nave + whitewashed vault | Zairon | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_Westerkerk_Innen_Gew%C3%B6lbe.jpg |
+| `westerkerk_4.webp` | wide interior + organ | rene boulay | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_Wester_Kerk_Nef_-_panoramio_(1).jpg |
+| _(hero WK34 + `_2` WK11 tower+crown = ship-safe stock — no credit)_ | | | | |
+
+### Our Lord in the Attic (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `our-lord-in-the-attic_hero.webp` | the hidden attic church + altar | Remi Mathis | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:AMsterdam_-_Museum_Ons%27_Lieve_Heer_op_Solder_-_the_hidden_church.JPG |
+| `our-lord-in-the-attic_2.webp` | attic church — pews + galleries | Remi Mathis | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_-_Museum_Ons%27_Lieve_Heer_op_Solder_-_church_floor.JPG |
+
+### Nieuwmarkt / De Waag (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `nieuwmarkt-de-waag_3.webp` | De Waag + market stalls | Shadowgate (Novara, IT) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_(16033384506).jpg |
+| _(hero WG7 + `_2` WG10 = ship-safe stock — no credit)_ | | | | |
+
+### Homomonument (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `homomonument_hero.webp` | water triangle + flowers + visitor | User:Vmenkov | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_-_Homomonument_-_CIMG0484.JPG |
+| `homomonument_2.webp` | granite triangle stepping to water | La Sequencia (Evanston, IL) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam-Homomonument-05.jpg |
+| _(`_3` HM47 quay sign = Hnapel, **CC0** — no credit. ⚠️ HM52 rejected: it was the Madurodam scale-model, not the real monument.)_ | | | | |
+
+### Noordermarkt / Brouwersgracht (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `noordermarkt-brouwersgracht_hero.webp` | Noorderkerk + square | Arianit Dobroshi | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:ArianitAmsterdam17.jpg |
+| `noordermarkt-brouwersgracht_2.webp` | Brouwersgracht warehouses + houseboats | Shadowgate (Novara, IT) | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Amsterdam(tcaq)_(16059579475).jpg |
+
+_(Muntplein/Munttoren, Museumplein/Concertgebouw, Stedelijk = ship-safe stock, no credit.)_
+
+### Waterlooplein / Rembrandt House (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `waterlooplein-rembrandt-house_hero.webp` | Rembrandt House front facade | **UNRESOLVED — see note** | **UNRESOLVED** (likely ship-safe stock) | ~~File:Europe 1979's 03.jpg~~ — **disproven, different photograph** |
+
+### Portuguese Synagogue (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `portuguese-synagogue_hero.webp` | Esnoga exterior (J.D. Meijerplein) | A. Bakker | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Amsterdam_-_Synagoge_J.D._Meijerplein.JPG |
+
+### National Holocaust Names Monument (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `names-monument_hero.webp` | monument wall + "Namenmonument" | Ceescamel | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2022_Holocaust_Namenmonument,_Asd_(01).jpg |
+| `names-monument_2.webp` | brick name-walls + mirrored steel | Ceescamel | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2022_Holocaust_Namenmonument,_Asd_(03).jpg |
+
+### Hollandsche Schouwburg / Holocaust Museum (single-stop) — **Public Domain, NO credit**
+_(hero facade + `_2` relief both by Andreas Praefcke, released Public Domain.)_
+
+_(Ship-safe stock, NO credit: Hortus Botanicus ×4, EYE/A'DAM/Ferries ×4, Waterlooplein flea-market gallery.)_
+
+### Nieuwe Kerk (single-stop) — **owner-supplied, NO credit**
+_(hero exterior + `_2` interior both supplied by the owner inline; not CC.)_
+
+_(Ship-safe stock, NO credit: Dam Square & Royal Palace hero+4, De Wallen hero+5, Canal Ring / Golden Bend hero+5, Nine Streets hero+5, Westerkerk hero+`_2`, Jordaan hero+2, Rijksmuseum hero+3, Van Gogh Museum hero+2, Vondelpark hero+2, De Pijp / Albert Cuyp hero+4 — DP `_5` is Wikimedia **CC0**, still no credit.)_
+
+## Montreal — 10 credit-required images (batch 1, `drafts/montreal-batch1`)
+
+Maker at wire-in: **Atlas Studio YUL** 🇨🇦. Old Montreal, 5 single-stop tours. Notre-Dame + Old Port
+heroes/galleries are ship-safe stock (Unsplash/Pexels — NO credit). The three Wikimedia-sourced
+subjects below carry CC credit (two picks within them are CC0/PD — noted, no credit).
+
+### Place Jacques-Cartier / City Hall (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `place-jacques-cartier-city-hall_hero.webp` | Nelson's Column + square | Jean Gagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Monument_Nelson_Montreal_01.jpg |
+| `place-jacques-cartier-city-hall_3.webp` | City Hall from the street | eugene_o | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:20190515_-_Montreal_-_1_(48285153032).jpg |
+| `place-jacques-cartier-city-hall_4.webp` | City Hall front + balcony | Diego Delso | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Ayuntamiento_de_Montreal,_Montreal,_Canad%C3%A1,_2017-08-11,_DD_11.jpg |
+
+_(`place-jacques-cartier-city-hall_2.webp` = Nelson's Column at sunset, Wilfredor, **CC0** — no credit.)_
+
+### Pointe-à-Callière (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `pointe-a-calliere_hero.webp` | Éperon museum building | Jeangagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Eperon_-_Pointe-a-Calliere_10.JPG |
+| `pointe-a-calliere_2.webp` | Éperon museum, side | Jeangagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Eperon_-_Pointe-a-Calliere_08.JPG |
+| `pointe-a-calliere_3.webp` | buried Saint-Pierre river tunnel | Nicolas Leboeuf | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Igp_(224278719).jpeg |
+| `pointe-a-calliere_4.webp` | excavated foundations under glass | Jeangagnon | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Pointe-a-Calliere_-_001.jpg |
+
+### Bonsecours Market + chapel (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `bonsecours-market-chapel_hero.webp` | market across the water | Jiaqian AirplaneFan | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Bonsecours_Market_-_panoramio.jpg |
+| `bonsecours-market-chapel_3.webp` | Bon-Secours chapel tower at night | Jazmin Million | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Chapelle_Notre-Dame-de-Bon-Secours_-_Mus%C3%A9e_Marguerite-Bourgeoys.jpg |
+| `bonsecours-market-chapel_4.webp` | Bon-Secours chapel spire, Rue Saint-Paul | Jean Gagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Chapelle_Notre-Dame-de-Bon-Secours_12.JPG |
+
+_(`bonsecours-market-chapel_2.webp` = silver dome close, Daderot, **Public Domain** — no credit.)_
+_(Ship-safe stock, NO credit: Notre-Dame Basilica hero+4, Old Port hero+4.)_
+
+## Montreal — batch 2 (`06`–`09`, 5 credit-required images)
+
+Same maker (**Atlas Studio YUL** 🇨🇦). Habitat 67 = ship-safe Unsplash (NO credit). The three re-sourced
+Wikimedia subjects below carry CC credit; two picks within McGill are CC0 (noted, no credit).
+
+### Château Ramezay (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `chateau-ramezay_hero.webp` | fieldstone facade, Rue Notre-Dame | Jean Gagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Chateau_Ramezay_02.jpg |
+| `chateau-ramezay_2.webp` | house + Governor's Garden | Jean Gagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Chateau_Ramezay_04.jpg |
+
+### McGill / Golden Square Mile (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `mcgill-golden-square-mile_2.webp` | Roddick Gates | Jeangagnon | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Portail_Roddick_02.jpg |
+
+_(`mcgill-golden-square-mile_hero.webp` = Roddick Gates, D. Benjamin Miller, **CC0** — no credit. `mcgill-golden-square-mile_3.webp` = Arts Building tower, D. Benjamin Miller, **CC0** — no credit.)_
+
+### Christ Church Cathedral (single-stop)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `christ-church-cathedral_hero.webp` | Gothic church + glass tower | Diego Delso | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Catedral_iglesia_de_Cristo,_Montreal,_Canad%C3%A1,_2017-08-11,_DD_42.jpg |
+| `christ-church-cathedral_2.webp` | spire / facade | ActuaLitté | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Christ_Church_Cathedral_(37829695634).jpg |
+
+_(Ship-safe stock, NO credit: Habitat 67 hero + `_2`–`_6` (all Unsplash).)_
+
+## Montreal — batch 3 (`10`–`31`, 16 single-stop tours) + Mount Royal walk — 4 credit-required images
+
+Same maker (**Atlas Studio YUL** 🇨🇦). Batch 3 is **almost entirely ship-safe** (owner-supplied
+heroes + Unsplash/Pexels) — only the two Wikimedia picks below need credit. Owner-supplied
+(pasted, ship-safe, no credit): Mary Queen exterior, Place Ville Marie esplanade, Plateau
+(Square-St-Louis Victorians), The Main (Schwartz's + boulevard).
+
+### Batch-3 singles (2 credit-required)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `jean-talon-market_2.webp` | market street + red chairs | Andre Carrotflower | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:20181014_-_23_-_Montreal_(Little_Italy).jpg |
+| `atwater-market_hero.webp` | Art Deco building + clock tower | Colin Rose | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:AtwaterMarket.jpg |
+
+_(All other batch-3 single heroes/galleries = ship-safe (owner / Unsplash / Pexels), no credit. Pending galleries not yet cropped: Mary interiors (Wikimedia CC — will log at pick), PVM, Square Saint-Louis, The Main.)_
+
+### Mount Royal walk (2 credit-required — the 3 new images)
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `mount-royal-trail_hero.webp` | forest path (walk entrance) | Matias Garabedian | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Au_bonheur_de_l%27automne_au_parc_Mont-Royal_(15341849438).jpg |
+| `mount-royal-trail_2.webp` | staircase (walk climb) | Yanik Crépeau | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Golden_Square_Mile,_Montreal,_QC,_Canada_-_panoramio_(14).jpg |
+
+_(`mount-royal-cross_hero.webp` = the Cross, Unsplash, **ship-safe**, no credit. Belvedere stop reuses the ship-safe single-stop hero.)_
+
+## Montreal multi-stop walks (4) — credits mostly inherited
+- **Old Montreal** (5 stops), **Plateau & Mile End** (4), **Downtown / Underground City** (4) — reuse single-stop heroes; credits (if any) already listed above (e.g. Jean-Talon isn't in these walks; The Main/Square SL heroes are owner ship-safe). **No new credits.**
+- **Mount Royal** (4 stops) — adds the 2 CC-credited trail images above + the ship-safe Cross.
+
+## Multi-stop walks — credits are inherited, not new
+The four Toronto walks (Old Town, Downtown Spine, Museum Mile, Immigrant West/Kensington)
+reuse single-stop stop images. Only two carry a credit, both already listed above:
+- **Museum Mile** → Bata Shoe Museum (`bata-shoe-museum_hero` = BT26, Jim.henderson, CC BY 4.0).
+- **Immigrant West/Kensington** → Queen West stop = the Drake Hotel (`queen-street-west_hero`, SimonP, CC BY-SA 3.0).
+- Downtown Spine + Old Town = **no credits** (all stop images ship-safe/owner; e.g. the Downtown Spine Hockey Hall stop uses the ship-safe HH6 exterior, not the CC BY-SA interiors).
+
+## All other cities — audited 2026-06-30 (already credited at their own staging)
+
+Audit result: **every other city was credited at build time** in its own per-city
+`IMAGE-CREDITS-*.txt` file. Those files are the **authoritative, file-by-file
+ledgers** (each row: filename → license → author/source URL) and they live on the
+**`gh-pages` branch root** (not in this code branch), because that's where the images
+they describe are hosted. This section is the index + summary; consult the named file
+for the exact per-image list.
+
+| City | Authoritative credit file (on `gh-pages`) | Credit-required images (CC BY / CC BY-SA) |
+|------|-------------------------------------------|-------------------------------------------|
+| **Toronto** | *this file* (`drafts/CREDITS.md`) | 17 (listed above) |
+| **Los Angeles** | *this file* (below) | 17 so far (WD53 b1; La Brea b2; MOCA ×3 b3; Academy Y40 + Greek RG3/RG1 b5; Huntington hero + Gamble ×3 b7; Egyptian gallery ×3 + Farmers Market/Grove ×2 b8) |
+| **Amsterdam** | *this file* (above) | 22 — Oude Kerk ×3 + Begijnhof ×4 + Anne Frank House hero + Westerkerk interior ×2 + Our Lord in the Attic ×2 + De Waag `_3` + Homomonument ×2 + Noordermarkt/Brouwersgracht ×2 + Rembrandt House hero + Portuguese Synagogue hero + Names Monument ×2 (Wikimedia CC). Hollandsche Schouwburg ×2 = Public Domain (no credit). Nieuwe Kerk + Leidseplein hero = owner-supplied (no credit). All other Amsterdam images = ship-safe stock / CC0, no credit. |
+| **Montreal** | *this file* (above) | 15 — **batch 1 (10):** Place Jacques-Cartier: Nelson's Column hero + City Hall `_3`/`_4` (Nelson `_2` = CC0, no credit); Pointe-à-Callière ×4 (Éperon hero/`_2`, buried-river `_3`, foundations `_4`); Bonsecours: market hero + chapel `_3`/`_4` (market `_2` = PD, no credit). Notre-Dame + Old Port = ship-safe stock. **batch 2 (5):** Château Ramezay hero+`_2` (Jean Gagnon CC BY-SA 3.0); McGill `_2` (Jeangagnon CC BY-SA 3.0; hero + `_3` = CC0, no credit); Christ Church hero (Diego Delso CC BY-SA 4.0) + `_2` (ActuaLitté CC BY-SA 2.0). Habitat 67 = ship-safe stock, no credit. |
+| **San Francisco** | `IMAGE-CREDITS-sf.txt` | ~27 — Fisherman's Wharf, Hyde St Pier, City Lights, Washington Square SF, Waverly Place, Ross Alley, Union Square SF, SFMOMA, Nob Hill, Castro Theatre, Harvey Milk, de Young (Mission Dolores hero owner / _2 PD — logged in `IMAGE-CREDITS-nyc-refresh.txt`) |
+| **London** | `IMAGE-CREDITS-london-batch3.txt` | ~55 — Brompton Oratory, Science Museum, Columbia Road, Whitechapel Gallery, Bevis Marks, Wilton's Music Hall, Dennis Severs', Royal Observatory, Coal Drops Yard, Abbey Road, Lord's, Kenwood, London Zoo, Highgate, Leighton House + walk stops (After the Fire, Spine of Power, South Bank Mile, Albertopolis, Measure of the World) |
+| **Paris** | `IMAGE-CREDITS-paris-batch1.txt` | ~15 — Palais-Royal, Place des Vosges, Quai Branly, La Madeleine galleries + walk stops (Îles hero = David.Monniaux CC BY-SA 3.0; Marais stop 3 Musée Picasso = LPLT CC BY-SA 3.0). All other Paris walk stops ship-safe. |
+| **Madrid** | `IMAGE-CREDITS-madrid.txt` + `drafts/madrid-batch3/IMAGE-CREDITS-madrid-batch3.txt` | 5 — Museo Thyssen `_2` (CC BY 2.0); Fuente de Neptuno hero (Luis García/Zaqarbal, CC BY-SA 3.0) + `_3` (CC BY-SA 4.0); CaixaForum hero + `_2` (CC BY-SA 4.0). Mercado de San Miguel `_4` is CC0 (no credit). |
+| **NYC** | `IMAGE-CREDITS-nyc-refresh.txt` | 2 — Riverside Church `_2` + `_3` (Epicgenius, CC BY-SA 4.0). The rest of the NYC catalog is Wikimedia-thumb / Unsplash / Pexels; this file covers only the 2026-06-24 refresh batch. |
+
+**Counts are approximate** for the large ledgers (London/SF) — the per-city file is
+the exact record; CC0 and Public-Domain images are excluded from the counts (they need
+no attribution). Grand total of attribution-obligated images across the whole app is on
+the order of **~120**, concentrated in London and SF.
+
+**Recommendation unchanged:** before any of this ships live, surface the credits (a
+per-tour credits line, or a single in-app attributions screen that ingests these
+files), or swap the CC-licensed shots for owner-supplied/CC0 ones. The per-city files
++ this index together are that ingest list.
+
+**Housekeeping note:** the per-city `IMAGE-CREDITS-*.txt` files should ideally be moved
+off `gh-pages` (a public asset host) into the repo alongside this file so they travel
+with the code. Deferred — they're safe where they are, just not co-located.
+
+## Berlin — credit-required images (`drafts/berlin-batch1` + the 5 walk folders)
+
+New maker **Atlas Studio BER** 🇩🇪 at wire-in. Everything else in the Berlin batch is ship-safe
+(Unsplash/Pexels/Pixabay) or owner-pasted (Bernauer Strasse). CC0 / Public-domain rows below carry
+**no** obligation and are listed only for provenance. Wikimedia used where no PD/CC0 image of the exact
+subject existed (niche stations, memorials, courtyards) or the subject demanded a dignified exact match.
+
+
+> **Re-verified 2026-07-28 by SHA-1 reverse-lookup** against the Commons `allimages` API (exact file identity). The original attributions here were produced by matching image *dimensions* against a Commons category listing — that method silently picks the wrong file when two images in a category share a size, and **9 of these rows were wrong** (all five Topography of Terror rows, the two Tränenpalast subjects swapped, the Nordbahnhof file, and the East Side Park riverbank). They are corrected below. Three rows could not be SHA-1 matched because the pipeline downloaded a Commons *thumbnail* rather than the original — `bebelplatz_3`, `bebelplatz_4` and `ghostline_stop4`/`ghostline_hero`; all three were corroborated by exact pixel dimensions plus the licence recorded at fetch time, and are left as-is. **Do not use dimension matching for attribution again — SHA-1 the local file.**
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `bebelplatz_3.webp` | Bebelplatz book-burning memorial (night) | Robyn Fleming | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Bebelplatz_at_night.jpg |
+| `bebelplatz_4.webp` | Empty Library / book-burning memorial | Daniel Neugebauer | CC BY-SA 2.5 | https://commons.wikimedia.org/wiki/File:Berlin_DenkmalBuecherverbrennung_BookBurningMemorial_Bebelplatz.jpg |
+| `topography-of-terror_hero.webp` | Topography of Terror — Wall + outdoor exhibition | Marco van Oel | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Topo_1309w.jpg |
+| `topography-of-terror_2.webp` | Topography of Terror site | Marco van Oel | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Topo_1285w.jpg |
+| `topography-of-terror_3.webp` | Wall along Niederkirchnerstraße | BrokenSphere | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berlin_Wall_at_Niederkirchnerstrasse_2.JPG |
+| `topography-of-terror_4.webp` | Wall + Mauermuseum outdoor panels | Wici | Public domain (ship-clean, no obligation) | https://commons.wikimedia.org/wiki/File:Mauermuseum.1.jpg |
+| `topography-of-terror_5.webp` | Berlin Wall documentation, Niederkirchnerstraße | Jorge Royan | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berlin-_The_Berlin_Wall_Museum_-_2879.jpg |
+| `hackesche-hoefe_hero.webp` | Hackesche Höfe first courtyard (Endell) | Tuxyso | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Hackesche_H%C3%B6fe-2023.jpg |
+| `hackesche-hoefe_2.webp` | Hackesche Höfe street entrance | Jörg Zägel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berlin%2C_Mitte%2C_Hackescher_Markt%2C_Hackesche_Hoefe.jpg |
+| `hackesche-hoefe_3.webp` | Hackesche Höfe courtyard | Dosseman | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Hackesche_H%C3%B6fe_7920.jpg |
+| `neue-synagoge_hero.webp` | Neue Synagoge facade + gilded dome | Mark Ahsmann | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:200806_Berlin_470.JPG |
+| `neue-synagoge_2.webp` | Neue Synagoge gilded dome | Taxiarchos228 | FAL (Free Art License) | https://commons.wikimedia.org/wiki/File:Berlin_-_Neue_Synagoge3.jpg |
+| `neue-synagoge_3.webp` | Neue Synagoge facade | Kurt Kaiser | CC0 (ship-clean, no obligation) | https://commons.wikimedia.org/wiki/File:Berlin_Neue_Synagoge_2019.jpg |
+| `traenenpalast_hero.webp` | Tränenpalast (Palace of Tears) pavilion | Paul Korecky | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:2018-08-09_DE_Berlin-Mitte%2C_Tr%C3%A4nenpalast_%2849923409376%29.jpg |
+| `traenenpalast_2.webp` | Tränenpalast pavilion (setting) | Sir James | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2024-11-02_Berlin_Traenenpalast_Lage_IMG_1599.JPEG |
+| `traenenpalast_3.webp` | Tränenpalast pavilion entrance | Sir James | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:2024-11-02_Berlin_Traenenpalast_Eingang_IMG_1595.JPEG |
+| `neue-wache_hero.webp` | Neue Wache (Schinkel temple front) | Ansgar Koreng | CC BY 3.0 (DE) | https://commons.wikimedia.org/wiki/File:150214_Neue_Wache_Berlin.jpg |
+| `neue-wache_2.webp` | Kollwitz Pietà under the oculus | Daniel Schwen | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:B_Neue_Wache_interior_1.jpg |
+| `neue-wache_3.webp` | Kollwitz Pietà (Mother with dead son) | Marek Mróz | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:2015-10_Berlin-Mitte_%2833%29.jpg |
+| `karl-marx-allee_hero.webp` | Frankfurter Tor twin towers | H. Helmlechner | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_Frankfurter_Tor_02.jpg |
+| `kollwitzplatz_hero.webp` | Käthe Kollwitz statue (Kollwitzplatz) | Jens Cederskjold | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:K%C3%A4the_Kollwitz%2C_Kollwitzplatz%2C_Prenzlauer_Berg_-_panoramio.jpg |
+| `kollwitzplatz_2.webp` | Wasserturm (Prenzlauer Berg) | Norbert Aepli, Switzerland (User:Noebu) | Public domain (ship-clean, no obligation) | https://commons.wikimedia.org/wiki/File:2009-04-10_Berlin_717.jpg |
+| `nollendorfplatz_hero.webp` | Nollendorfplatz station + rainbow flag | Fridolin freudenfett | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Sch%C3%B6neberg_Nollendorfplatz_Regenbogenfahne.jpg |
+| `[walk] ghostline_stop1.webp` | Nordbahnhof (ghost station) entrance | Ansgar Koreng | CC BY 3.0 (DE) | https://commons.wikimedia.org/wiki/File:150501_Berlin_Nordbahnhof_Eingang.jpg |
+| `[walk] ghostline_stop2.webp` | Wall Memorial — line of steel rods | Andrzej Otrębski | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_Miejsce_Pamieci_Muru_Berlinskiego_10.jpg |
+| `[walk] ghostline_stop3.webp` | Chapel of Reconciliation | Laima Gūtmane (simka) | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berlin_Church_of_Reconciliation_-_panoramio.jpg |
+| `[walk] ghostline_stop4.webp + ghostline_hero.webp` | Preserved Wall (Bernauer Str) | **UNRESOLVED — see note** | **UNRESOLVED** (fetch log recorded CC0) | ~~File:200806 Berlin 717.JPG~~ — **disproven, different photograph** |
+| `[walk] scheunenviertel_stop2.webp` | Haus Schwarzenberg courtyard | Soluvo | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_2012_%28106%29.jpg |
+| `[walk] scheunenviertel_stop3.webp` | Große Hamburger — deportation memorial (Will Lammert) | Jochen Teufel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Skulptur_Juedische_Opfer_des_Faschismus_%28Foto_2008%29.jpg |
+| `[walk] riverborder_stop3.webp` | East Side Gallery — bank of the Spree | Indrajit Das | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:East_Side_Gallery_-_Bank_of_River_Spree_01.jpg |
+
+## Dubai — 11 credit-required images (`drafts/dubai-batch1`)
+
+Everything else in the Dubai batch is ship-safe (Unsplash / Pexels / Pixabay / CC0)
+or owner-supplied. New maker **Atlas Studio DXB** 🇦🇪 at wire-in. Attributions below
+were resolved by **SHA-1 reverse-lookup** against the Commons `allimages` API (exact
+file identity), not by dimension matching.
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `gold-souk_hero.webp` | Dubai Gold Souk arcade | Rob Young | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Dubai_Gold_Souk_(8668422526).jpg |
+| `gold-souk_3.webp` | Al Ras / Gold Souk quarter, Deira | Imre Solt | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Al_Ras_on_26_December_2007_Pict_3.jpg |
+| `jumeirah-mosque_hero.webp` | Jumeirah Mosque (exterior) | Bgabel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Dub-jum-mos2.jpg |
+| `jumeirah-mosque_2.webp` | Jumeirah Mosque | Aidas U. | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Jumeirah_Mosque_-_panoramio_(4).jpg |
+| `jumeirah-mosque_3.webp` | Jumeirah Mosque, Jumeira 1 | ianpudsey | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Jumeira_1_-_Dubai_-_United_Arab_Emirates_-_panoramio.jpg |
+| `etihad-museum_2.webp` | Etihad Museum with UAE flag | Lxs | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:UAE_flat_with_Etihad_Museum_in_background,_Dubai,_UAE.jpg |
+| `textile-souk_hero.webp` | Textile Souk sikka (alleyway) | Chris Waits | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Dubai_Textile_Souk_Sikka_(Alleyway).jpg |
+| `al-shindagha_2.webp` | Shindagha historic village | A.Savin | **FAL** (Free Art License) | https://commons.wikimedia.org/wiki/File:UAE_Dubai_Shindagha_village_img1_asv2018-01.jpg |
+| `al-fahidi-fort_hero.webp` | Al Fahidi Fort / Dubai Museum (rear) | أمين علوان | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Al_Fahidi_Fort_(Dubai_Fort)_(Dubai_Museum)_Back_view.jpg |
+| `al-fahidi-fort_2.webp` | Al Fahidi Fort / Dubai Museum | Jasonbalaba | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Al_Fahidi_Fort_(Dubai_Museum).jpg |
+| `al-fahidi-fort_3.webp` | Al Fahidi Fort (Dubai Fort) | Rye jb23 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Al_Fahidi_Fort_(also_known_as_Dubai_Fort)_DSC_8954.jpg |
+
+**Note — `al-shindagha_2.webp` is FAL, not CC.** The Free Art License is copyleft:
+attribution *and* share-alike. It is not more permissive than CC BY-SA; treat it the
+same way at ship time.
+
+**No credit required:** `alserkal-avenue_hero.webp` is Wikimedia **CC0**, and the
+`al-shindagha_hero.webp` / `difc-gate_hero.webp` heroes are owner-supplied (both
+carry provenance flags — see `drafts/dubai-batch1/README.md`).
