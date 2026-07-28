@@ -56,6 +56,31 @@ _(🇬🇧 London — "The Measure of the World" (Greenwich, 7-track walk) **wen
 _(✅ Paris = DONE: **45 single-stop tours LIVE** (PR #374) + **all 5 walks LIVE** — Le Marais (#379), Montmartre (#380), The Triumphal Way (#381), Paris Islands (#382), The Left Bank (#383). Nothing Paris pending.)_
 _(✅ 🇨🇦 Toronto = DONE (2026-07-10): **all 42 tours LIVE** — 38 single-stop (10 batch A + 28 PR #384) + **all 4 walks** (Old Town #385, Museum Mile #386, Downtown Spine #387, Immigrant West/Kensington #388). Nothing Toronto pending.)_
 
+### 📍 Where the paths in this file actually live
+
+**Every `drafts/<city>-batch*/README.md` and `drafts/<city>-*-walk/README.md` cited below is on that
+city's staging branch, NOT on `main`.** Only this tracker and `drafts/CREDITS.md` are on `main`
+(`drafts/` on `main` contains exactly those two files). Checked 2026-07-28: **14 of the paths this
+file and `CLAUDE.md` name do not resolve on `main`.** That is expected for the pick-maps — but it
+means you cannot open them from a `main` checkout, and a session that tries will conclude the
+staging does not exist. It does; you are on the wrong ref.
+
+To read one without switching branches (the branch is in the PENDING table's branch column):
+
+```bash
+git show origin/<branch>:drafts/berlin-batch1/README.md
+git ls-tree -r --name-only origin/<branch> -- drafts/    # what is staged on that branch
+```
+
+**Open question for the owner:** the pick-map READMEs are exactly what a wire-in session needs, and
+keeping them off `main` is what makes staged work invisible. Promoting just the `README.md` files to
+`main` (leaving the `.txt` scripts on their branches) would remove this whole class of confusion.
+Not done unilaterally — it changes the "drafts stay on branches" convention.
+
+**Two genuinely stale references, unrelated to staging:** `drafts/pending-tours.json` (`CLAUDE.md`,
+`ROADMAP.md`) and `scripts/add-tour.swift` (`ROADMAP.md`) name files that exist nowhere. Both are
+leftovers from the pre-2026 staging workflow; delete the references next time those docs are touched.
+
 ### 🖼️ Image attribution ledger — `drafts/CREDITS.md`
 
 **This file now lives on `main`, alongside this one.** It did not until 2026-07-28: the ledger
