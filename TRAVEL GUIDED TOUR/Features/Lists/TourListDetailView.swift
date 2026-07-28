@@ -9,6 +9,13 @@ import SwiftUI
 /// references, never duplicated content (design: `docs/lists-design.md`).
 struct TourListDetailView: View {
     let listId: UUID
+    /// Metadata for a list the viewer does **not** own, passed in by the
+    /// screen that already fetched it (a creator's maker page).
+    ///
+    /// Without this the title would be blank: metadata used to be looked up in
+    /// `listService.myLists`, which by definition never contains someone
+    /// else's list. Passing it beats re-fetching — the caller has it already.
+    var preloaded: TourList? = nil
 
     @Environment(TourListService.self) private var listService
     @Environment(DataService.self) private var dataService
@@ -22,9 +29,18 @@ struct TourListDetailView: View {
     @State private var showingEditDetails = false
     @State private var noteTarget: NoteTarget?
 
-    /// The list's metadata from the in-memory list (title / public flag).
+    /// The list's metadata — yours from the service, someone else's from
+    /// whoever pushed this screen.
     private var journey: TourList? {
-        listService.myLists.first(where: { $0.id == listId })
+        listService.myLists.first(where: { $0.id == listId }) ?? preloaded
+    }
+
+    /// Whether the viewer owns this list. Drives every editing affordance:
+    /// the server would reject the writes anyway (RLS is the real gate), but
+    /// offering a Delete button that silently fails is worse than not offering
+    /// it.
+    private var isOwner: Bool {
+        listService.myLists.contains { $0.id == listId }
     }
 
     /// Resolved (tour, note) pairs in TourList order — dropping any tour id no
@@ -85,22 +101,26 @@ struct TourListDetailView: View {
             Color.clear.frame(height: AtlasBottomModule.height())
         }
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                Menu {
-                    Button("Edit details", systemImage: "square.and.pencil") {
-                        showingEditDetails = true
-                    }
-                    Button(isEditing ? "Done" : "Edit tours", systemImage: "arrow.up.arrow.down") {
-                        isEditing.toggle()
-                    }
-                    Section {
-                        Button("Delete list", systemImage: "trash", role: .destructive) {
-                            showingDeleteConfirm = true
+            // Someone else's list is read-only — no menu at all, rather than a
+            // menu whose every item fails.
+            if isOwner {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        Button("Edit details", systemImage: "square.and.pencil") {
+                            showingEditDetails = true
                         }
+                        Button(isEditing ? "Done" : "Edit tours", systemImage: "arrow.up.arrow.down") {
+                            isEditing.toggle()
+                        }
+                        Section {
+                            Button("Delete list", systemImage: "trash", role: .destructive) {
+                                showingDeleteConfirm = true
+                            }
+                        }
+                    } label: {
+                        Image(systemName: "ellipsis.circle")
+                            .accessibilityLabel("List options")
                     }
-                } label: {
-                    Image(systemName: "ellipsis.circle")
-                        .accessibilityLabel("List options")
                 }
             }
         }
@@ -141,9 +161,13 @@ struct TourListDetailView: View {
             }
             HStack(spacing: AtlasSpacing.xs) {
                 Text(resolvedTours.count == 1 ? "1 tour" : "\(resolvedTours.count) tours")
-                if let journey {
+                // Only flag the exception. Visible is the normal state now, so
+                // labelling it says nothing; "Only me" is the fact worth
+                // knowing. And on someone else's list it's redundant either
+                // way — you can only be here because you can see it.
+                if isOwner, journey?.isPublic == false {
                     Text("·")
-                    Text(journey.isPublic ? "Public" : "Private")
+                    Text("Only me")
                 }
             }
             .font(AtlasTypography.caption)

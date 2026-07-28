@@ -266,7 +266,10 @@ struct MakerRow: Codable {
             link3URL: link3Url,
             avatarInitials: avatarInitials,
             avatarColor: avatarColor,
-            isPrivate: isPrivate
+            isPrivate: isPrivate,
+            // The DTO carries it as a string; `Maker` wants the real type.
+            // Nil for the Atlas studios, which nobody logs in as.
+            userId: userId.flatMap(UUID.init(uuidString:))
         )
     }
 }

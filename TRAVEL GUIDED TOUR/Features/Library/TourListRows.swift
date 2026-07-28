@@ -64,6 +64,26 @@ private struct ListRowLayout<Cover: View>: View {
     }
 }
 
+/// Corner badge marking a list only its owner can see.
+///
+/// Sits on the cover rather than beside the title so it reads at a glance down
+/// a column of rows, the same job the `WALK` pill does on the maker feed. Only
+/// ever appears on your own lists — on someone else's page a hidden list simply
+/// isn't there, so there is nothing to mark.
+private struct OnlyMeBadge: View {
+    var body: some View {
+        Image(systemName: "key.fill")
+            .font(.system(size: 8, weight: .semibold))
+            .foregroundStyle(AtlasColors.background)
+            .padding(4)
+            .background(Circle().fill(AtlasColors.accent))
+            // Lifts it off a busy photo, same as the grid's status badges.
+            .shadow(color: .black.opacity(0.25), radius: 1.5, y: 1)
+            .padding(3)
+            .accessibilityLabel("Only you can see this list")
+    }
+}
+
 /// Square placeholder used when a list has no cover to show yet.
 private struct ListCoverPlaceholder: View {
     let systemImage: String
@@ -114,15 +134,22 @@ struct NamedListRow: View {
 
     var body: some View {
         ListRowLayout(title: list.title, subtitle: countText) {
-            if let coverImageName {
-                HeroImageView(
-                    imageName: coverImageName,
-                    height: 56,
-                    cornerRadius: 0,
-                    category: coverCategory
-                )
-            } else {
-                ListCoverPlaceholder(systemImage: "map")
+            Group {
+                if let coverImageName {
+                    HeroImageView(
+                        imageName: coverImageName,
+                        height: 56,
+                        cornerRadius: 0,
+                        category: coverCategory
+                    )
+                } else {
+                    ListCoverPlaceholder(systemImage: "map")
+                }
+            }
+            // No condition on "is this mine" — a list you can see that is
+            // marked private is by definition your own.
+            .overlay(alignment: .topTrailing) {
+                if !list.isPublic { OnlyMeBadge() }
             }
         }
     }

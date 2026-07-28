@@ -30,6 +30,18 @@ struct Maker: Codable, Identifiable, Hashable {
     /// `isPrivateAccount` reads it with a `false` default. Public = follows
     /// auto-accept; private = follows land as pending requests.
     let isPrivate: Bool?
+    /// The maker's **auth account** id — not their maker id.
+    ///
+    /// Needed to look up that person's lists: `journeys.owner_user_id` is an
+    /// `auth.users` id, so without this the app cannot name whose lists it is
+    /// asking for. Emitted by `get_catalog()` since `backend/public_lists.sql`.
+    ///
+    /// **Optional, and that is load-bearing in two ways.** The gh-pages mirror
+    /// and the bundled offline seed are generated from `Tours.json`, which has
+    /// no such field, so both must keep decoding. And the 19 Atlas studios
+    /// genuinely have `user_id = NULL` — nobody logs in as them. A nil id means
+    /// "no lists to show", which is correct in both cases.
+    let userId: UUID?
 
     init(
         id: UUID,
@@ -42,7 +54,8 @@ struct Maker: Codable, Identifiable, Hashable {
         link3URL: String? = nil,
         avatarInitials: String? = nil,
         avatarColor: String? = nil,
-        isPrivate: Bool? = nil
+        isPrivate: Bool? = nil,
+        userId: UUID? = nil
     ) {
         self.id = id
         self.displayName = displayName
@@ -55,6 +68,7 @@ struct Maker: Codable, Identifiable, Hashable {
         self.link2URL = link2URL
         self.link3URL = link3URL
         self.isPrivate = isPrivate
+        self.userId = userId
     }
 
     /// Whether this profile is private (defaults to public when unset).

@@ -26,10 +26,11 @@ struct MakerMapSection: View {
     let selectedTourId: UUID?
     @Binding var cameraPosition: MapCameraPosition
     /// Where to open. Framed to fit every tour this maker has made — see
-    /// `initialRegion(for:)`. Applied to both the camera *and* the
+    /// `initialRegion(for:)`, which falls back to a world view when there
+    /// is nothing to frame. Applied to both the camera *and* the
     /// clustering region on first appear; see the `.task` below for why
     /// those must happen together.
-    let initialRegion: MKCoordinateRegion?
+    let initialRegion: MKCoordinateRegion
     let onPinTapped: (UUID, CLLocationCoordinate2D) -> Void
     let onMapTapped: () -> Void
 
@@ -90,12 +91,8 @@ struct MakerMapSection: View {
         // city would open to a pile of overlapping dots.
         .task {
             guard currentRegion == nil else { return }
-            if let initialRegion {
-                cameraPosition = .region(initialRegion)
-                currentRegion = initialRegion
-            } else {
-                currentRegion = cameraPosition.region
-            }
+            cameraPosition = .region(initialRegion)
+            currentRegion = initialRegion
         }
     }
 
@@ -169,19 +166,34 @@ struct MakerMapSection: View {
 // MARK: - Framing a maker's whole body of work
 
 extension MakerMapSection {
+    /// The whole world, centred on the Atlantic — what a maker with no
+    /// tours yet opens to (owner direction 2026-07-27: "if a user doesn't
+    /// have any tours, we should still show a map… zoomed out as far as
+    /// possible, centered on atlantic ocean").
+    ///
+    /// The Atlantic centre is what puts the Americas, Europe and Africa on
+    /// screen at once, so the map reads as *the world* rather than as one
+    /// continent someone forgot to move away from. The span is deliberately
+    /// past what Mercator can draw; MapKit clamps it to fully zoomed out.
+    static let worldRegion = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 20, longitude: -30),
+        span: MKCoordinateSpan(latitudeDelta: 150, longitudeDelta: 360)
+    )
+
     /// Region that frames every tour this maker has made.
     ///
     /// A maker working across continents gets a world-scale region, and
     /// that is the correct picture of them (owner direction 2026-07-27:
     /// "some users might have made tours all over the world, which will
-    /// make the map very small, which is ok too"). Returns `nil` when
-    /// there is nothing to frame, so the caller can hide the tab.
-    static func initialRegion(for tours: [Tour]) -> MKCoordinateRegion? {
+    /// make the map very small, which is ok too"). A maker with nothing
+    /// yet gets `worldRegion` — the tab still shows a real, pannable map
+    /// rather than a grey box.
+    static func initialRegion(for tours: [Tour]) -> MKCoordinateRegion {
         let coordinates = tours.flatMap { tour in
             tour.stops
                 .filter { tour.kind == .single || $0.order == 0 }
                 .map(\.coordinate)
         }
-        return MapClustering.region(containing: coordinates)
+        return MapClustering.region(containing: coordinates) ?? worldRegion
     }
 }

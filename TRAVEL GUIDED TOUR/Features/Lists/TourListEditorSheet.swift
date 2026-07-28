@@ -27,7 +27,17 @@ struct TourListEditorSheet: View {
         self.editing = editing
         _title = State(initialValue: editing?.title ?? "")
         _description = State(initialValue: editing?.description ?? "")
-        _isPublic = State(initialValue: editing?.isPublic ?? false)
+        // A new list is VISIBLE by default (owner direction 2026-07-27: lists
+        // show unless marked otherwise). The database default matches — see
+        // `backend/public_lists.sql`.
+        _isPublic = State(initialValue: editing?.isPublic ?? true)
+    }
+
+    /// The toggle is phrased the way people think about it — "Only me", off by
+    /// default — rather than "Public", which asks them to opt in to the normal
+    /// case. Same stored field, inverted for display.
+    private var isOnlyMe: Binding<Bool> {
+        Binding(get: { !isPublic }, set: { isPublic = !$0 })
     }
 
     var body: some View {
@@ -56,11 +66,14 @@ struct TourListEditorSheet: View {
                 }
 
                 Section {
-                    Toggle("Public", isOn: $isPublic)
+                    Toggle("Only me", isOn: isOnlyMe)
                 } footer: {
+                    // No "with the link" — there is no share link yet, and
+                    // promising one that doesn't exist is worse than saying
+                    // plainly where the list shows up.
                     Text(isPublic
-                         ? "Anyone with the link can view this list."
-                         : "Only you can see this list.")
+                         ? "Shown on your profile."
+                         : "Hidden from everyone but you.")
                 }
 
                 if let errorText {

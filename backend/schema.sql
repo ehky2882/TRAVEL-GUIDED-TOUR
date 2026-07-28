@@ -168,7 +168,12 @@ as $$
           'bio',            m.bio,
           'websiteURL',     m.website_url,
           'link2URL',       m.link_2_url,
-          'link3URL',       m.link_3_url
+          'link3URL',       m.link_3_url,
+          -- The maker's auth user id, or NULL for the Atlas-owned studios.
+          -- Needed to look up that person's lists: `journeys.owner_user_id`
+          -- is an auth.users id, and without this the client has no way to
+          -- name whose lists it is asking for.
+          'userId',         m.user_id
         ) order by m.display_name
       )
       from public.makers m

@@ -65,7 +65,8 @@ struct ProfileView: View {
             avatarURL: nil,
             avatarEmoji: nil,
             bio: "",
-            websiteURL: nil
+            websiteURL: nil,
+            userId: authService.userId
         )
     }
 
