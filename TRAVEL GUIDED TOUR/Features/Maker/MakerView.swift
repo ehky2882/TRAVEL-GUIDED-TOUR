@@ -164,17 +164,23 @@ struct MakerView: View {
     /// `TourListService` so they can't be mistaken for the viewer's own —
     /// they belong to whichever page is open and die with it.
     @State private var theirLists: [TourList] = []
+    /// The tours this maker has saved — their Liked. Same lifetime as
+    /// `theirLists`: belongs to the open page, not to the viewer.
+    @State private var theirLikedTourIds: [UUID] = []
 
     private var isOwnProfile: Bool { mode == .ownProfile }
     private var isStandalone: Bool { mode == .publicStandalone }
 
-    /// LISTS shows on your own profile, and on anyone whose account we can
-    /// name. `Maker.userId` is nil for the 19 Atlas studios — nobody logs in
-    /// as them, so they have no lists and the tab would only ever be empty.
+    /// **Every profile gets all three tabs.** Owner direction 2026-07-27:
+    /// *"an atlas studio should be treated as a regular user … we should always
+    /// treat atlas studio as a regular person."*
+    ///
+    /// The 19 Atlas studios have no account behind them (`userId` is nil), so
+    /// their LISTS tab shows an empty Liked and nothing else — structurally the
+    /// same as a real creator who has saved nothing, which is the point. It
+    /// fills in on its own once those accounts are backfilled; no code change.
     private var availableTabs: [ProfileTab] {
-        guard listService != nil else { return [.tours, .map] }
-        if isOwnProfile { return ProfileTab.allCases }
-        return maker.userId != nil ? ProfileTab.allCases : [.tours, .map]
+        listService == nil ? [.tours, .map] : ProfileTab.allCases
     }
 
     var body: some View {
@@ -244,14 +250,19 @@ struct MakerView: View {
             guard isOwnProfile else { return }
             await listService?.loadMyLists()
         }
-        // Someone else's visible lists. Keyed on the maker so opening a
-        // second creator's page replaces them rather than showing the first's.
+        // Someone else's visible lists + their Liked. Keyed on the maker so
+        // opening a second creator's page replaces them rather than showing
+        // the first's.
         .task(id: maker.id) {
             guard !isOwnProfile, let ownerUserId = maker.userId else {
+                // No account behind this maker (every Atlas studio). Their
+                // LISTS tab still appears — it just holds an empty Liked.
                 theirLists = []
+                theirLikedTourIds = []
                 return
             }
             theirLists = await listService?.publicLists(ofUser: ownerUserId) ?? []
+            theirLikedTourIds = await listService?.likedTourIds(ofUser: ownerUserId) ?? []
         }
         // If the account loses access to lists mid-session (sign-out),
         // don't strand the user on a tab that no longer exists.
@@ -567,40 +578,49 @@ struct MakerView: View {
         }
     }
 
-    /// Another creator's lists. **New list and Liked are absent by design** —
-    /// creating belongs to whoever owns the page, and Liked is local to this
-    /// device (`LibraryStore`), so it means nothing on someone else's profile.
-    @ViewBuilder
+    /// Another creator's lists.
+    ///
+    /// **Liked leads, exactly as it does on your own profile** — owner
+    /// direction 2026-07-27: *"each user should have a default 'LIKED' list,
+    /// even if it's empty."* It is the one list everybody has, so a page
+    /// without it reads as broken rather than as empty.
+    ///
+    /// **New list is absent**, and that is the only difference from your own:
+    /// creating belongs to whoever owns the page.
     private var theirListsSection: some View {
-        if theirLists.isEmpty {
-            // Same treatment as a public page with no tours: a quiet
-            // placeholder rather than a sentence explaining an absence.
-            Rectangle()
-                .fill(AtlasColors.placeholderWarm.opacity(0.35))
-                .frame(width: 56, height: 56)
-                .padding(.horizontal, AtlasSpacing.lg)
-                .padding(.vertical, AtlasSpacing.sm)
-                .accessibilityLabel("No lists yet")
-        } else {
-            LazyVStack(alignment: .leading, spacing: 0) {
-                ForEach(theirLists) { list in
-                    NavigationLink {
-                        TourListDetailView(listId: list.id, preloaded: list)
-                    } label: {
-                        NamedListRow(
-                            list: list,
-                            coverImageName: TourListCover.imageName(for: list, in: dataService),
-                            coverCategory: TourListCover.category(for: list, in: dataService)
-                        )
-                    }
-                    .buttonStyle(.plain)
+        LazyVStack(alignment: .leading, spacing: 0) {
+            NavigationLink {
+                LikedListView(tourIds: theirLikedTourIds, ownerName: maker.displayName)
+            } label: {
+                LikedListRow(
+                    count: theirLikedTours.count,
+                    coverImageName: theirLikedTours.first?.heroImageURL,
+                    coverCategory: theirLikedTours.first?.primaryCategory
+                )
+            }
+            .buttonStyle(.plain)
 
-                    if list.id != theirLists.last?.id {
-                        Divider().padding(.horizontal, AtlasSpacing.lg)
-                    }
+            ForEach(theirLists) { list in
+                Divider().padding(.horizontal, AtlasSpacing.lg)
+
+                NavigationLink {
+                    TourListDetailView(listId: list.id, preloaded: list)
+                } label: {
+                    NamedListRow(
+                        list: list,
+                        coverImageName: TourListCover.imageName(for: list, in: dataService),
+                        coverCategory: TourListCover.category(for: list, in: dataService)
+                    )
                 }
+                .buttonStyle(.plain)
             }
         }
+    }
+
+    /// Their saved tours, resolved against the catalog. Ids that no longer
+    /// match a published tour just drop out.
+    private var theirLikedTours: [Tour] {
+        theirLikedTourIds.compactMap { dataService.tour(by: $0) }
     }
 
     /// Liked first, then anything you've named. Liked is deliberately styled
@@ -666,38 +686,37 @@ struct MakerView: View {
             }
             .padding(.top, AtlasSpacing.md)
 
-            if makerTours.isEmpty {
-                // Nothing to plot — a placeholder box, matching the
-                // empty tour feed rather than inventing a new empty state.
-                Rectangle()
-                    .fill(AtlasColors.placeholderWarm.opacity(0.35))
-                    .frame(height: AtlasSpacing.heroHeight)
-                    .accessibilityLabel("No tours to show on the map")
-            } else {
-                MakerMapSection(
-                    tours: makerTours,
-                    userLocation: locationManager.userLocation,
-                    selectedTourId: selectedMapTourId,
-                    cameraPosition: $mapCamera,
-                    // The map frames itself on first appear — it has to
-                    // set the camera and its clustering region in the
-                    // same breath, so it owns both.
-                    initialRegion: MakerMapSection.initialRegion(for: makerTours),
-                    onPinTapped: { tourId, _ in
-                        selectedMapTourId = tourId
-                        openTourFromMap(tourId)
-                    },
-                    onMapTapped: { selectedMapTourId = nil }
-                )
-                // Same footprint as the gallery / map on tour detail.
-                .frame(height: AtlasSpacing.heroHeight)
-            }
+            // Rendered even with nothing to plot: a maker with no tours
+            // yet opens to the world, centred on the Atlantic (owner
+            // direction 2026-07-27). A real map reads as "nothing here
+            // yet" far better than a grey box does, and it's the same
+            // map they'll see once they publish something.
+            MakerMapSection(
+                tours: makerTours,
+                userLocation: locationManager.userLocation,
+                selectedTourId: selectedMapTourId,
+                cameraPosition: $mapCamera,
+                // The map frames itself on first appear — it has to
+                // set the camera and its clustering region in the
+                // same breath, so it owns both.
+                initialRegion: MakerMapSection.initialRegion(for: makerTours),
+                onPinTapped: { tourId, _ in
+                    selectedMapTourId = tourId
+                    openTourFromMap(tourId)
+                },
+                onMapTapped: { selectedMapTourId = nil }
+            )
+            // Same footprint as the gallery / map on tour detail.
+            .frame(height: AtlasSpacing.heroHeight)
         }
     }
 
     private var mapCountText: String {
-        let count = makerTours.count
-        return count == 1 ? "1 tour on the map" : "\(count) tours on the map"
+        switch makerTours.count {
+        case 0: return "No tours on the map yet"
+        case 1: return "1 tour on the map"
+        case let count: return "\(count) tours on the map"
+        }
     }
 
     /// Frame every tour this maker has made. A maker working across
@@ -708,7 +727,7 @@ struct MakerView: View {
     /// The clustering region catches up here via `onMapCameraChange`,
     /// which fires when this animation settles.
     private func frameWholeMap() {
-        guard let region = MakerMapSection.initialRegion(for: makerTours) else { return }
+        let region = MakerMapSection.initialRegion(for: makerTours)
         withAnimation(.easeInOut(duration: 0.35)) { mapCamera = .region(region) }
     }
 

@@ -131,6 +131,29 @@ final class TourListService {
         }
     }
 
+    /// The tours another person has saved — their Liked list, newest first.
+    ///
+    /// Liked is normally backed by the on-device `LibraryStore`, which is what
+    /// lets saving work signed out. That store only ever holds *your* saves, so
+    /// reading someone else's needs the server copy (`user_library`, kept in
+    /// sync by `SyncService`) via the `liked_tour_ids` function — see
+    /// `backend/public_liked.sql`.
+    ///
+    /// Returns empty on any failure, which renders as an empty Liked list. That
+    /// is the right failure: a creator who has saved nothing and a creator we
+    /// couldn't reach should both look like "nothing here", not an error.
+    func likedTourIds(ofUser ownerUserId: UUID) async -> [UUID] {
+        do {
+            let ids: [UUID] = try await client
+                .rpc("liked_tour_ids", params: ["p_user": ownerUserId.uuidString.lowercased()])
+                .execute()
+                .value
+            return ids
+        } catch {
+            return []
+        }
+    }
+
     /// The ordered items (tour ids + notes) of one list.
     func items(of listId: UUID) async -> [TourListItem] {
         do {
