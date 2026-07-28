@@ -10,6 +10,36 @@ attribution) or owner-supplied.
 
 Last updated 2026-07-28 (Dubai staged — 11 CC images; Berlin attributions re-verified by SHA-1 and 9 rows corrected).
 
+> ### ⚠️ Ledger audit, 2026-07-28 — read this before relying on any row
+>
+> Every row in this file was machine-checked: the published `gh-pages` image was compared
+> against the Commons file the row names. **115 rows checked, 111 verified, 4 failed.** The
+> original attributions were gathered by matching image *dimensions* against a Commons
+> category listing, which silently picks the wrong file whenever two images in a category
+> share a size. **Attribute by SHA-1 instead** — hash the local original and query
+> `list=allimages&aisha1=<sha1>`; that is exact file identity, not a guess.
+>
+> The four failures, in severity order:
+>
+> 1. **`waterlooplein-rembrandt-house_hero.webp` (Amsterdam — LIVE).** The row claimed
+>    Usernet123u / CC BY-SA 4.0 via `File:Europe 1979's 03.jpg`. Side-by-side, that is a
+>    *different photograph* of the same building (a 1979 close-up of the doorway vs. the
+>    published wide facade shot). No Commons file in the Rembrandt House / Jodenbreestraat
+>    categories matches the published image, which points to **ship-safe stock** — i.e. the
+>    row was asserting an obligation that probably does not exist. **Re-confirm provenance;
+>    the current credit line is wrong either way.**
+> 2. **`testaccio_hero.webp` (Rome — LIVE).** The image was **overwritten** at the Rome-extras
+>    wire-in (the tracker records this). The row below still describes the *superseded*
+>    picture (Tyler Bell / CC BY 2.0), not what is shipping. **Re-confirm the current image's
+>    provenance.** General lesson: overwriting a published filename silently invalidates its
+>    credit row — update the ledger in the same commit.
+> 3. **`ghostline_stop4.webp` + `ghostline_hero.webp` (Berlin — staged, not live).** The named
+>    file is a different photograph of the same stretch of Wall. The fetch log recorded this
+>    candidate as **CC0**, so the real obligation is probably *none*, but the exact file is
+>    unidentified. **Re-verify or re-source before Berlin ships.**
+> 4. **`kollwitzplatz_2.webp` (Berlin — staged).** Off by two frames in the same photo series;
+>    author and licence were always right and it is public domain. **Corrected below.**
+
 ## Rome — 6 credit-required images (`drafts/rome-batch1`)
 
 Everything else in the Rome batch is ship-safe (Unsplash/Pexels/Pixabay) or owner-pasted.
@@ -22,7 +52,7 @@ New maker **Atlas Studio ROM** 🇮🇹 at wire-in.
 | `ara-pacis_3.webp` | Mausoleum of Augustus | Attila (Flickr) | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Dscn1097_(53662807386).jpg |
 | `piazza-barberini_2.webp` | Triton Fountain | Chabe01 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Fontaine_Triton_-_Rome_(IT62)_-_2021-08-30_-_5.jpg |
 | `piazza-barberini_3.webp` | Fountain of the Bees | babizhet | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:%D0%A4%D0%BE%D0%BD%D1%82%D0%B0%D0%BD_%D0%B1%D0%B4%D0%B6%D1%96%D0%BB_%D0%A0%D0%B8%D0%BC.JPG |
-| `testaccio_hero.webp` | Monte Testaccio (hill of shards) | Tyler Bell | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Monte_Testaccio.jpg |
+| ~~`testaccio_hero.webp`~~ **(SUPERSEDED — see note)** | Monte Testaccio (hill of shards) | Tyler Bell | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Monte_Testaccio.jpg |
 
 _(Piazza Barberini `_hero`, Baths of Caracalla, Jewish Ghetto, Santa Maria in Trastevere, and
 Bocca della Verità's Cosmedin shot are owner-pasted → ship-safe. The `testaccio_hero` is also the
@@ -169,7 +199,7 @@ _(Muntplein/Munttoren, Museumplein/Concertgebouw, Stedelijk = ship-safe stock, n
 ### Waterlooplein / Rembrandt House (single-stop)
 | File | Subject | Author | License | Source |
 |------|---------|--------|---------|--------|
-| `waterlooplein-rembrandt-house_hero.webp` | Rembrandt House front facade | Usernet123u | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Europe_1979's_03.jpg |
+| `waterlooplein-rembrandt-house_hero.webp` | Rembrandt House front facade | **UNRESOLVED — see note** | **UNRESOLVED** (likely ship-safe stock) | ~~File:Europe 1979's 03.jpg~~ — **disproven, different photograph** |
 
 ### Portuguese Synagogue (single-stop)
 | File | Subject | Author | License | Source |
@@ -353,12 +383,12 @@ subject existed (niche stations, memorials, courtyards) or the subject demanded 
 | `neue-wache_3.webp` | Kollwitz Pietà (Mother with dead son) | Marek Mróz | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:2015-10_Berlin-Mitte_%2833%29.jpg |
 | `karl-marx-allee_hero.webp` | Frankfurter Tor twin towers | H. Helmlechner | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_Frankfurter_Tor_02.jpg |
 | `kollwitzplatz_hero.webp` | Käthe Kollwitz statue (Kollwitzplatz) | Jens Cederskjold | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:K%C3%A4the_Kollwitz%2C_Kollwitzplatz%2C_Prenzlauer_Berg_-_panoramio.jpg |
-| `kollwitzplatz_2.webp` | Wasserturm (Prenzlauer Berg) | Norbert Aepli | Public domain (ship-clean, no obligation) | https://commons.wikimedia.org/wiki/File:2009-04-10_Berlin_715.jpg |
+| `kollwitzplatz_2.webp` | Wasserturm (Prenzlauer Berg) | Norbert Aepli, Switzerland (User:Noebu) | Public domain (ship-clean, no obligation) | https://commons.wikimedia.org/wiki/File:2009-04-10_Berlin_717.jpg |
 | `nollendorfplatz_hero.webp` | Nollendorfplatz station + rainbow flag | Fridolin freudenfett | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Sch%C3%B6neberg_Nollendorfplatz_Regenbogenfahne.jpg |
 | `[walk] ghostline_stop1.webp` | Nordbahnhof (ghost station) entrance | Ansgar Koreng | CC BY 3.0 (DE) | https://commons.wikimedia.org/wiki/File:150501_Berlin_Nordbahnhof_Eingang.jpg |
 | `[walk] ghostline_stop2.webp` | Wall Memorial — line of steel rods | Andrzej Otrębski | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_Miejsce_Pamieci_Muru_Berlinskiego_10.jpg |
 | `[walk] ghostline_stop3.webp` | Chapel of Reconciliation | Laima Gūtmane (simka) | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berlin_Church_of_Reconciliation_-_panoramio.jpg |
-| `[walk] ghostline_stop4.webp + ghostline_hero.webp` | Preserved Wall (Bernauer Str) | Mark Ahsmann | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:200806_Berlin_717.JPG |
+| `[walk] ghostline_stop4.webp + ghostline_hero.webp` | Preserved Wall (Bernauer Str) | **UNRESOLVED — see note** | **UNRESOLVED** (fetch log recorded CC0) | ~~File:200806 Berlin 717.JPG~~ — **disproven, different photograph** |
 | `[walk] scheunenviertel_stop2.webp` | Haus Schwarzenberg courtyard | Soluvo | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_2012_%28106%29.jpg |
 | `[walk] scheunenviertel_stop3.webp` | Große Hamburger — deportation memorial (Will Lammert) | Jochen Teufel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Skulptur_Juedische_Opfer_des_Faschismus_%28Foto_2008%29.jpg |
 | `[walk] riverborder_stop3.webp` | East Side Gallery — bank of the Spree | Indrajit Das | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:East_Side_Gallery_-_Bank_of_River_Spree_01.jpg |
