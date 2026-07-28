@@ -20,7 +20,11 @@ create table if not exists public.journeys (
     title           text not null,
     description     text,
     cover_image_url text,                              -- optional; can default to first tour's hero
-    is_public       boolean not null default false,
+    -- Visible unless the owner marks it otherwise (owner direction 2026-07-27:
+    -- "if a profile is public … their lists should show unless they've marked
+    -- it as private"). Was `default false`; existing databases are moved over by
+    -- `public_lists.sql`.
+    is_public       boolean not null default true,
     created_at      timestamptz not null default now(),
     updated_at      timestamptz not null default now()
 );

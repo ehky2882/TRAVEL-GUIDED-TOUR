@@ -160,15 +160,21 @@ struct MakerView: View {
     /// work, then left alone so a pan survives a tab switch.
     @State private var mapCamera: MapCameraPosition = .automatic
     @State private var selectedMapTourId: UUID?
+    /// Another maker's visible lists. Kept here rather than in
+    /// `TourListService` so they can't be mistaken for the viewer's own —
+    /// they belong to whichever page is open and die with it.
+    @State private var theirLists: [TourList] = []
 
     private var isOwnProfile: Bool { mode == .ownProfile }
     private var isStandalone: Bool { mode == .publicStandalone }
 
-    /// LISTS only appears on your own profile — see `ProfileTab`.
+    /// LISTS shows on your own profile, and on anyone whose account we can
+    /// name. `Maker.userId` is nil for the 19 Atlas studios — nobody logs in
+    /// as them, so they have no lists and the tab would only ever be empty.
     private var availableTabs: [ProfileTab] {
-        isOwnProfile && listService != nil
-            ? ProfileTab.allCases
-            : [.tours, .map]
+        guard listService != nil else { return [.tours, .map] }
+        if isOwnProfile { return ProfileTab.allCases }
+        return maker.userId != nil ? ProfileTab.allCases : [.tours, .map]
     }
 
     var body: some View {
@@ -237,6 +243,15 @@ struct MakerView: View {
         .task(id: authService?.userId ?? nil) {
             guard isOwnProfile else { return }
             await listService?.loadMyLists()
+        }
+        // Someone else's visible lists. Keyed on the maker so opening a
+        // second creator's page replaces them rather than showing the first's.
+        .task(id: maker.id) {
+            guard !isOwnProfile, let ownerUserId = maker.userId else {
+                theirLists = []
+                return
+            }
+            theirLists = await listService?.publicLists(ofUser: ownerUserId) ?? []
         }
         // If the account loses access to lists mid-session (sign-out),
         // don't strand the user on a tab that no longer exists.
@@ -539,13 +554,58 @@ struct MakerView: View {
 
     // MARK: - Lists tab
 
-    /// The user's own lists — Liked first, then anything they've named.
+    /// Your own lists, or someone else's visible ones.
     ///
     /// Rows come from `Features/Library/TourListRows.swift`, shared with
-    /// Library so the two surfaces can't drift. Liked is deliberately
-    /// styled as just another list: it's the default one, not a special
-    /// case.
+    /// Library so the two surfaces can't drift.
+    @ViewBuilder
     private var listsSection: some View {
+        if isOwnProfile {
+            ownListsSection
+        } else {
+            theirListsSection
+        }
+    }
+
+    /// Another creator's lists. **New list and Liked are absent by design** —
+    /// creating belongs to whoever owns the page, and Liked is local to this
+    /// device (`LibraryStore`), so it means nothing on someone else's profile.
+    @ViewBuilder
+    private var theirListsSection: some View {
+        if theirLists.isEmpty {
+            // Same treatment as a public page with no tours: a quiet
+            // placeholder rather than a sentence explaining an absence.
+            Rectangle()
+                .fill(AtlasColors.placeholderWarm.opacity(0.35))
+                .frame(width: 56, height: 56)
+                .padding(.horizontal, AtlasSpacing.lg)
+                .padding(.vertical, AtlasSpacing.sm)
+                .accessibilityLabel("No lists yet")
+        } else {
+            LazyVStack(alignment: .leading, spacing: 0) {
+                ForEach(theirLists) { list in
+                    NavigationLink {
+                        TourListDetailView(listId: list.id, preloaded: list)
+                    } label: {
+                        NamedListRow(
+                            list: list,
+                            coverImageName: TourListCover.imageName(for: list, in: dataService),
+                            coverCategory: TourListCover.category(for: list, in: dataService)
+                        )
+                    }
+                    .buttonStyle(.plain)
+
+                    if list.id != theirLists.last?.id {
+                        Divider().padding(.horizontal, AtlasSpacing.lg)
+                    }
+                }
+            }
+        }
+    }
+
+    /// Liked first, then anything you've named. Liked is deliberately styled
+    /// as just another list: it's the default one, not a special case.
+    private var ownListsSection: some View {
         LazyVStack(alignment: .leading, spacing: 0) {
             NewListRow { showingCreateList = true }
             Divider().padding(.horizontal, AtlasSpacing.lg)

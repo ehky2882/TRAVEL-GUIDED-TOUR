@@ -102,6 +102,35 @@ final class TourListService {
         }
     }
 
+    /// Another person's visible lists, for their maker page.
+    ///
+    /// Takes an **auth account id**, not a maker id — `journeys.owner_user_id`
+    /// is an `auth.users` id. `Maker.userId` carries it; nil (every Atlas
+    /// studio) means there is nobody to ask about, so return nothing.
+    ///
+    /// Deliberately **not** stored in `myLists`. Foreign lists are throwaway
+    /// view state belonging to whichever page is open; keeping them out of the
+    /// service's own-lists cache is what stops one person's lists appearing
+    /// under another's name, or surviving a sign-out.
+    ///
+    /// `is_public` is filtered here as well as by RLS. The server is the real
+    /// gate; this just avoids relying on it for a rule the UI also states.
+    func publicLists(ofUser ownerUserId: UUID) async -> [TourList] {
+        do {
+            let rows: [TourListRow] = try await client
+                .from("journeys")
+                .select("id, title, description, cover_image_url, is_public, journey_items(tour_id, position)")
+                .eq("owner_user_id", value: ownerUserId.uuidString.lowercased())
+                .eq("is_public", value: true)
+                .order("updated_at", ascending: false)
+                .execute()
+                .value
+            return rows.map(\.asTourList)
+        } catch {
+            return []
+        }
+    }
+
     /// The ordered items (tour ids + notes) of one list.
     func items(of listId: UUID) async -> [TourListItem] {
         do {
