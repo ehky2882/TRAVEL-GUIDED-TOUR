@@ -52,7 +52,7 @@ New maker **Atlas Studio ROM** 🇮🇹 at wire-in.
 | `ara-pacis_3.webp` | Mausoleum of Augustus | Attila (Flickr) | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Dscn1097_(53662807386).jpg |
 | `piazza-barberini_2.webp` | Triton Fountain | Chabe01 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Fontaine_Triton_-_Rome_(IT62)_-_2021-08-30_-_5.jpg |
 | `piazza-barberini_3.webp` | Fountain of the Bees | babizhet | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:%D0%A4%D0%BE%D0%BD%D1%82%D0%B0%D0%BD_%D0%B1%D0%B4%D0%B6%D1%96%D0%BB_%D0%A0%D0%B8%D0%BC.JPG |
-| ~~`testaccio_hero.webp`~~ **(SUPERSEDED — see note)** | Monte Testaccio (hill of shards) | Tyler Bell | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Monte_Testaccio.jpg |
+| `testaccio_hero.webp` | Monte Testaccio (hill of shards) | **UNIDENTIFIED** — see §Unidentified | **Wikimedia CC, sub-licence unknown** | ~~File:Monte Testaccio.jpg~~ (Tyler Bell, CC BY 2.0) — **that was the ORIGINAL image, overwritten at the Rome-extras wire-in** |
 
 _(Piazza Barberini `_hero`, Baths of Caracalla, Jewish Ghetto, Santa Maria in Trastevere, and
 Bocca della Verità's Cosmedin shot are owner-pasted → ship-safe. The `testaccio_hero` is also the
@@ -199,7 +199,7 @@ _(Muntplein/Munttoren, Museumplein/Concertgebouw, Stedelijk = ship-safe stock, n
 ### Waterlooplein / Rembrandt House (single-stop)
 | File | Subject | Author | License | Source |
 |------|---------|--------|---------|--------|
-| `waterlooplein-rembrandt-house_hero.webp` | Rembrandt House front facade | **UNRESOLVED — see note** | **UNRESOLVED** (likely ship-safe stock) | ~~File:Europe 1979's 03.jpg~~ — **disproven, different photograph** |
+| `waterlooplein-rembrandt-house_hero.webp` | Rembrandt House front facade | **UNIDENTIFIED** — see §Unidentified | **Wikimedia CC, sub-licence unknown** | ~~File:Europe 1979's 03.jpg~~ — **disproven** (different photograph) |
 
 ### Portuguese Synagogue (single-stop)
 | File | Subject | Author | License | Source |
@@ -392,6 +392,59 @@ subject existed (niche stations, memorials, courtyards) or the subject demanded 
 | `[walk] scheunenviertel_stop2.webp` | Haus Schwarzenberg courtyard | Soluvo | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_2012_%28106%29.jpg |
 | `[walk] scheunenviertel_stop3.webp` | Große Hamburger — deportation memorial (Will Lammert) | Jochen Teufel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Skulptur_Juedische_Opfer_des_Faschismus_%28Foto_2008%29.jpg |
 | `[walk] riverborder_stop3.webp` | East Side Gallery — bank of the Spree | Indrajit Das | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:East_Side_Gallery_-_Bank_of_River_Spree_01.jpg |
+
+
+## Unidentified provenance — 2 live images
+
+Two shipped images cannot be attributed. Both name a Commons file that a side-by-side comparison
+**disproves** — the named file is a genuinely different photograph of the same subject — and four
+independent identification passes then failed to find the real source. Recorded here rather than
+left asserting something false.
+
+| Image | Tours affected | What the row claimed | Why it's wrong |
+|---|---|---|---|
+| `waterlooplein-rembrandt-house_hero.webp` | 🇳🇱 *Waterlooplein & the Rembrandt House* (hero) · *The Jewish Quarter* walk (stop image) | Usernet123u / CC BY-SA 4.0 / `File:Europe 1979's 03.jpg` | Named file is a **1979 close-up of the doorway**; the published image is a **modern wide shot of the facade**. |
+| `testaccio_hero.webp` | 🇮🇹 *Testaccio* (hero + stop image) · *The Aventine and Testaccio* walk (stop image) | Tyler Bell / CC BY 2.0 / `File:Monte Testaccio.jpg` | That was correct for the **original** image, which was **overwritten at the Rome-extras wire-in**. The published file is now a street-level shot along the base of the mound. |
+
+**Search effort (identity threshold ≈ mae < 14; a true match scores ~0.1):**
+
+| Method | Rembrandt House | Testaccio |
+|---|---|---|
+| Commons category search | 11 files ≥1200×900, best **34.8** | best **33.5** |
+| Commons geosearch (200 m / 400 m) | 252 geolocated files, best **34.2** | 285 geolocated files, best **37.5** |
+| Unsplash + Pexels + Pixabay, 5 queries each | 317 candidates, best **24.7** | 252 candidates, best **34.8** |
+| Fresh pipeline fetch (stock + wiki) | 39 candidates, best **28.9** | 37 candidates, best **33.5** |
+
+**What can still be said with confidence.** The stock pools demonstrably do **not** contain these
+subjects — a Rembrandt House query returns canal scenes, the Rembrandt*plein* statue and a
+Rijksmuseum interior; a Testaccio query returns the Colosseum and St Peter's. Both published images
+*are* genuine, specific views of their subject. So both are near-certainly **Wikimedia CC**, which
+matches what each staging README recorded at the time (`drafts/amsterdam-batch1/README.md` says
+"CC"; `drafts/rome-batch1/README.md` says "Wikimedia CC BY 2.0"). The licence *family* is credible.
+The exact file, author and sub-licence are lost.
+
+**How exposed is this, actually?** Not very, today: **Atlas has no attribution UI**, so *no* CC image
+in this ledger is currently being credited in the shipped app. These two are not uniquely
+mis-credited — they are uniquely *un-creditable*. The exposure lands the day an attributions screen
+ships, or a credits line appears on a tour.
+
+**So the action is:** before any attribution surface ships, either identify these two or replace them
+with images of known provenance. Replacement is cheap and needs no `Tours.json` change or app build —
+both are referenced purely by URL (3 references each), so overwriting the file on `gh-pages` updates
+every reference at once. Verified substitutes, should you want them:
+
+- **Rembrandt House** — ✅ **RESOLVED: the owner supplied a replacement (2026-07-29).** A clear,
+  correctly-lit wide shot of Jodenbreestraat 4 with the museum wing and Rembrandt Corner either side.
+  **Owner-supplied ⇒ ship-safe, no attribution owed**, so this row leaves the credit-required table
+  once the file is pushed. (Prior fallbacks, now unnecessary: `Amsterdam - Rembrandthuis
+  (29670034014).jpg` — Fred Romero, CC BY 2.0; `Maison Rembrandt - Amsterdam (NL32) - 2024-11-25 -
+  1.jpg` — Chabe01, CC BY-SA 4.0. No PD/CC0 exterior surfaced, and stock has none at all.)
+- **Testaccio** — the superseded `File:Monte Testaccio.jpg` (Tyler Bell, CC BY 2.0) is still a valid,
+  fully-attributable image of the subject and could simply be restored.
+
+**Not done unilaterally** — swapping a live hero on four tours is a content decision, and heroes are
+picked by the owner. Candidates are staged and labelled; say the word and it's a single push.
+
 
 ## Dubai — 11 credit-required images (`drafts/dubai-batch1`)
 

@@ -50,8 +50,11 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/` · **aud
 
 ## ⚠️ Provenance flags (raised at staging, shipped at the owner's explicit direction)
 
+> **One of the two flags below has since been withdrawn as mistaken — see the DIFC entry.**
+
 - **`al-shindagha_hero.webp`** — owner-supplied from a `googleusercontent.com` link. Source resolution was **1200×550**, so reaching 1200×900 required ~1.6× vertical upscale; it will look softer than every other hero. The link also carries no resolvable licence. Flagged at the time; the owner reviewed and reaffirmed this image over the sourced alternative (SHN12). **Swap is one line if it reads badly on device.**
-- **`difc-gate_hero.webp`** — owner-supplied. The signage lettering in the image is garbled, which usually means the picture is AI-generated rather than a photograph of the actual Gate Building. Flagged; owner chose it knowingly. `difc-gate_2.webp` (DIG31) is a verified photograph of the real Gate and can be promoted to hero.
+- **`difc-gate_hero.webp`** — owner-supplied. **This was previously flagged here as "likely AI-generated". That flag was WRONG and is withdrawn (2026-07-29).** Re-examined at full size: the architecture is the DIFC Gate Building exactly and specifically — the trabeated arch, the lattice glazing in the opening, Gate Avenue's parterre hedges, and the Sheikh Zayed Road towers behind — and the Arabic on the advertising banner (*اتخذ قرارات استثمارية صائبة*) is crisply and correctly formed, which generative models reliably mangle. The "garbled lettering" that prompted the flag is a ~150-px wayfinding pillar, illegible purely because of resolution. **It is a genuine photograph of the correct subject; nothing needs changing.** (`difc-gate_2.webp` / DIG31 remains a good gallery shot.)
+- **Lesson:** judge a supplied image at full size before calling it synthetic. A cropped corner of any photograph looks like nothing in particular, and small signage is illegible in every real photo too.
 
 ## Notes
 
