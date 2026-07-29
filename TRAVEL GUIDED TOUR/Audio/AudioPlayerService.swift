@@ -33,6 +33,29 @@ final class AudioPlayerService {
     /// without relying on title equality — which broke when two
     /// tours shared a title (audit P1-3).
     private(set) var currentSourceId: String?
+
+    /// Seconds of audio a listener may hear before playback stops itself,
+    /// or `nil` for unlimited (every free tour — the whole catalog today).
+    ///
+    /// Set by the paid-tours layer when starting a tour the signed-in user
+    /// hasn't bought. Enforced in the periodic time observer rather than by
+    /// trimming the asset, so the preview is exact regardless of how the
+    /// item was loaded (stream or downloaded file) and survives scrubbing —
+    /// dragging past the limit still stops.
+    private(set) var previewLimit: TimeInterval?
+
+    /// True once a preview has run out. The UI watches this to swap the
+    /// transport for a Buy prompt. Cleared whenever new audio is loaded or
+    /// the limit is lifted (i.e. the moment a purchase lands).
+    private(set) var didReachPreviewLimit = false
+
+    /// Apply (or clear) a preview cap for whatever is currently loaded.
+    /// Passing `nil` lifts the cap and clears the "ran out" flag, which is
+    /// exactly what should happen the instant a purchase completes.
+    func setPreviewLimit(_ seconds: TimeInterval?) {
+        previewLimit = seconds
+        if seconds == nil { didReachPreviewLimit = false }
+    }
     /// The user's chosen playback speed (what the speed menu shows). This is
     /// NOT necessarily what AVPlayer is running at — see `syncTrim`.
     private(set) var rate: Float = 1.0
@@ -162,6 +185,11 @@ final class AudioPlayerService {
         lastPlayedURL = url
         currentTime = 0
         duration = 0
+        // New audio: clear any spent preview flag. The *limit* itself is
+        // left alone — the caller sets it for this specific source right
+        // after calling play, and clearing it here would open a window
+        // where an unbought tour streams unrestricted.
+        didReachPreviewLimit = false
         lastError = nil
         state = .loading
         isAwaitingFirstPlayTransition = true
@@ -533,6 +561,18 @@ final class AudioPlayerService {
                 return
             }
             self.currentTime = time.seconds.isFinite ? time.seconds : 0
+
+            // Preview cap for an unbought paid tour. Checked here (not by
+            // trimming the asset) so it holds for streamed *and* downloaded
+            // audio, and so scrubbing past the limit still stops rather than
+            // handing over the rest of the tour.
+            if let limit = self.previewLimit, self.currentTime >= limit {
+                if self.state == .playing || self.state == .loading {
+                    self.pause()
+                }
+                self.didReachPreviewLimit = true
+                return
+            }
             if let item = self.player.currentItem {
                 let itemDuration = item.duration
                 if itemDuration.isNumeric {

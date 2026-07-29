@@ -28,6 +28,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
         _makerTourService = State(initialValue: MakerTourService(auth: auth))
         _followService = State(initialValue: FollowService(auth: auth))
         _listService = State(initialValue: TourListService(auth: auth))
+        _purchaseService = State(initialValue: PurchaseService(auth: auth))
     }
 
     @State private var dataService = DataService()
@@ -38,6 +39,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
     @State private var makerProfileService: MakerProfileService
     /// The follow graph (batch D): follow/unfollow + counts. Shares `AuthService`.
     @State private var followService: FollowService
+    /// Paid tours (V2 Step 6): StoreKit purchases + which tours this account
+    /// owns. Shares `AuthService` because entitlements are per-account — that
+    /// is what lets a purchase follow the user to a new phone.
+    @State private var purchaseService: PurchaseService
     /// The signed-in user's own tours (all statuses) + draft creation. Loaded by
     /// the Profile tab. See `Data/MakerTourService.swift`.
     @State private var makerTourService: MakerTourService
@@ -126,6 +131,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(authService)
                     .environment(makerProfileService)
                     .environment(followService)
+                    .environment(purchaseService)
                     .environment(makerTourService)
                     .environment(listService)
                     .environment(libraryStore)
@@ -285,6 +291,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 .environment(dataService)
                 .environment(authService)
                 .environment(followService)
+                .environment(purchaseService)
                 .environment(makerProfileService)
                 .environment(libraryStore)
                 .environment(locationManager)

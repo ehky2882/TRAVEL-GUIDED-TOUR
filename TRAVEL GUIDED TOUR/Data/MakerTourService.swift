@@ -321,6 +321,7 @@ private struct NewTourRow: Encodable {
             primaryCategory: TourCategory(rawValue: primaryCategory) ?? category,
             tags: tags,
             priceUSD: 0,
+            priceTier: nil,
             createdAt: nil
         )
     }
@@ -447,6 +448,7 @@ private struct TourRow: Decodable {
             primaryCategory: TourCategory(rawValue: primaryCategory) ?? .hiddenGems,
             tags: tags,
             priceUSD: 0,
+            priceTier: nil,
             createdAt: createdAt.map { String($0.prefix(10)) }
         )
         return MakerTour(tour: tour, status: TourStatus(rawValue: status) ?? .draft)
