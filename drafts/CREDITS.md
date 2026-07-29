@@ -8,7 +8,7 @@ a per-tour credits line, an in-app attributions screen, or swap for owner-suppli
 shots. Everything NOT listed here is ship-safe (Unsplash/Pexels/Pixabay — no
 attribution) or owner-supplied.
 
-Last updated 2026-07-29 (all 4 audit failures closed: both live images replaced with owner-supplied photographs; Berlin attributions re-verified by SHA-1 and 9 rows corrected; Dubai staged — 11 CC images).
+Last updated 2026-07-29 (🇺🇸 Chicago batch 1 staging in progress — 2 CC images so far; all 4 audit failures closed: both live images replaced with owner-supplied photographs; Berlin attributions re-verified by SHA-1 and 9 rows corrected; Dubai staged — 11 CC images).
 
 > ### ⚠️ Ledger audit, 2026-07-28 — read this before relying on any row
 >
@@ -457,6 +457,22 @@ matching image **dimensions** against a Commons category listing. Verify by **SH
 named file **side by side** before trusting the row. A row that names a plausible file is not evidence
 that it names the right one.
 
+
+
+## Chicago — 2 credit-required images (`drafts/chicago-batch1`)
+
+New maker **Atlas Studio ORD** 🇺🇸 at wire-in. **Everything else in the Chicago batch is
+ship-safe** (Unsplash / Pexels / Pixabay) or owner-supplied — only these two carry an obligation.
+Attributions resolved by **SHA-1 reverse-lookup** against the Commons `allimages` API (exact file
+identity), never by dimension match.
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `historic-water-tower_2.webp` | Water Tower, looking up at the turrets | Ed Schipul | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_Water_Tower_-_Schipul.jpg |
+| `historic-water-tower_3.webp` | Water Tower at dusk, illuminated | Joi Ito | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Chicago-20080523.jpg |
+
+**Owner-supplied (no credit owed):** `art-institute_3.webp` — the Modern Wing (Renzo Piano, 2009),
+Monroe Street front.
 
 ## Dubai — 11 credit-required images (`drafts/dubai-batch1`)
 
