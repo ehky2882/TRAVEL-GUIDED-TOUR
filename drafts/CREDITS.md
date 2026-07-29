@@ -459,7 +459,7 @@ that it names the right one.
 
 
 
-## Chicago — 2 credit-required images (`drafts/chicago-batch1`)
+## Chicago — 6 credit-required images (`drafts/chicago-batch1`)
 
 New maker **Atlas Studio ORD** 🇺🇸 at wire-in. **Everything else in the Chicago batch is
 ship-safe** (Unsplash / Pexels / Pixabay) or owner-supplied — only these two carry an obligation.
@@ -470,9 +470,22 @@ identity), never by dimension match.
 |------|---------|--------|---------|--------|
 | `historic-water-tower_2.webp` | Water Tower, looking up at the turrets | Ed Schipul | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_Water_Tower_-_Schipul.jpg |
 | `historic-water-tower_3.webp` | Water Tower at dusk, illuminated | Joi Ito | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Chicago-20080523.jpg |
+| `the-rookery_2.webp` | Rookery light court (Wright remodel) | w_lemay | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Atrium,_Rookery_Building,_LaSalle_Street_and_Adams_Street,_Chicago,_IL_-_52900630177.jpg |
+| `the-rookery_3.webp` | Rookery light court, glass roof | w_lemay | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Atrium,_Rookery_Building,_LaSalle_Street_and_Adams_Street,_Chicago,_IL_-_52901590335.jpg |
+| `the-rookery_4.webp` | Rookery marble staircase (Wright) | Onasill – Bill Badzo | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_IL_~_Rookery_Building_~_Stair_Case_-_Frank_Lloyd_Wright_(51092884753).jpg |
+| `the-rookery_5.webp` | Rookery exterior, S LaSalle Street | HaSt | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Chicago_-_S_LaSalle_St_-_Rookery_-_01.jpg |
 
 **Owner-supplied (no credit owed):** `art-institute_3.webp` — the Modern Wing (Renzo Piano, 2009),
 Monroe Street front.
+
+**⏳ `the-rookery_hero.webp` is NOT YET STAGED.** The owner is supplying it directly — the Commons
+pool is almost entirely Wright's interior light court and has no good LaSalle-front exterior showing
+the carved rooks the script opens on. Gallery numbering deliberately starts at `_2` so the hero drops
+in without renumbering. **Ask the owner for it before Chicago wires in.**
+
+**Public-domain Rookery extras available, not yet picked** (no credit owed if used): the 1870s
+engraving *The Book Room in the Old Water Tank* — the post-fire temporary city hall whose resident
+crows gave the building its name — and the HABS measured elevation of the LaSalle front.
 
 ## Dubai — 11 credit-required images (`drafts/dubai-batch1`)
 
