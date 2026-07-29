@@ -459,7 +459,7 @@ that it names the right one.
 
 
 
-## Chicago — 6 credit-required images (`drafts/chicago-batch1`)
+## Chicago — 8 credit-required images (`drafts/chicago-batch1`)
 
 New maker **Atlas Studio ORD** 🇺🇸 at wire-in. **Everything else in the Chicago batch is
 ship-safe** (Unsplash / Pexels / Pixabay) or owner-supplied — only these two carry an obligation.
@@ -474,6 +474,8 @@ identity), never by dimension match.
 | `the-rookery_3.webp` | Rookery light court, glass roof | w_lemay | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Atrium,_Rookery_Building,_LaSalle_Street_and_Adams_Street,_Chicago,_IL_-_52901590335.jpg |
 | `the-rookery_4.webp` | Rookery marble staircase (Wright) | Onasill – Bill Badzo | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_IL_~_Rookery_Building_~_Stair_Case_-_Frank_Lloyd_Wright_(51092884753).jpg |
 | `the-rookery_5.webp` | Rookery exterior, S LaSalle Street | HaSt | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Chicago_-_S_LaSalle_St_-_Rookery_-_01.jpg |
+| `daley-plaza-picasso_hero.webp` | The Chicago Picasso, Daley Plaza | Dan DeLuca | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Downtown-chicago-picasso-sculpture_(6360678643).jpg |
+| `daley-plaza-picasso_2.webp` | Daley Plaza in civic use, Picasso behind | 5ukhotskaya | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:2017_Tax_Day_March_in_Chicago_12.jpg |
 
 **Owner-supplied (no credit owed):** `art-institute_3.webp` — the Modern Wing (Renzo Piano, 2009),
 Monroe Street front.
@@ -482,6 +484,16 @@ Monroe Street front.
 corner: dark red brick and terra cotta, the deep arched entrance, the fortress base. It fills a gap
 the Commons pool could not — Rookery coverage there is almost entirely Wright's interior light court,
 with no usable exterior of the front the script opens on.
+
+**⚖️ The Chicago Picasso sculpture is PUBLIC DOMAIN in the US** — *Letter Edged in Black Press, Inc.
+v. Public Building Commission of Chicago* (1970) held that its design was published without a
+copyright notice under the 1909 Act. Commons carries a `{{ChicagoPicasso}}` template recording this.
+So photographs of it are **not** encumbered derivative works, and the only licence that attaches is
+the photographer's own — the two rows above. This is a documented exception: the US has no freedom
+of panorama for artworks, so the general rule would have gone the other way. **Verified, not assumed.**
+
+**⏳ `monadnock-building_2.webp` pending** — owner is supplying a second image; hero (`MND1`, the
+storefront lettering) is staged.
 
 **Public-domain Rookery extras available, not yet picked** (no credit owed if used): the 1870s
 engraving *The Book Room in the Old Water Tank* — the post-fire temporary city hall whose resident
