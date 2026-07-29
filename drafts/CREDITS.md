@@ -478,10 +478,10 @@ identity), never by dimension match.
 **Owner-supplied (no credit owed):** `art-institute_3.webp` — the Modern Wing (Renzo Piano, 2009),
 Monroe Street front.
 
-**⏳ `the-rookery_hero.webp` is NOT YET STAGED.** The owner is supplying it directly — the Commons
-pool is almost entirely Wright's interior light court and has no good LaSalle-front exterior showing
-the carved rooks the script opens on. Gallery numbering deliberately starts at `_2` so the hero drops
-in without renumbering. **Ask the owner for it before Chicago wires in.**
+**✅ `the-rookery_hero.webp` — owner-supplied (2026-07-29), no credit owed.** The LaSalle and Adams
+corner: dark red brick and terra cotta, the deep arched entrance, the fortress base. It fills a gap
+the Commons pool could not — Rookery coverage there is almost entirely Wright's interior light court,
+with no usable exterior of the front the script opens on.
 
 **Public-domain Rookery extras available, not yet picked** (no credit owed if used): the 1870s
 engraving *The Book Room in the Old Water Tank* — the post-fire temporary city hall whose resident
