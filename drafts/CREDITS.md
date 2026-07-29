@@ -8,7 +8,7 @@ a per-tour credits line, an in-app attributions screen, or swap for owner-suppli
 shots. Everything NOT listed here is ship-safe (Unsplash/Pexels/Pixabay — no
 attribution) or owner-supplied.
 
-Last updated 2026-07-28 (Dubai staged — 11 CC images; Berlin attributions re-verified by SHA-1 and 9 rows corrected).
+Last updated 2026-07-29 (all 4 audit failures closed: both live images replaced with owner-supplied photographs; Berlin attributions re-verified by SHA-1 and 9 rows corrected; Dubai staged — 11 CC images).
 
 > ### ⚠️ Ledger audit, 2026-07-28 — read this before relying on any row
 >
@@ -19,7 +19,9 @@ Last updated 2026-07-28 (Dubai staged — 11 CC images; Berlin attributions re-v
 > share a size. **Attribute by SHA-1 instead** — hash the local original and query
 > `list=allimages&aisha1=<sha1>`; that is exact file identity, not a guess.
 >
-> The four failures, in severity order:
+> **Update 2026-07-29: all four are now closed** — the two live ones were replaced with
+> owner-supplied photographs (no attribution owed), and the two Berlin ones are corrected or
+> scoped below. The four failures, as found:
 >
 > 1. **`waterlooplein-rembrandt-house_hero.webp` (Amsterdam — LIVE).** The row claimed
 >    Usernet123u / CC BY-SA 4.0 via `File:Europe 1979's 03.jpg`. Side-by-side, that is a
@@ -52,7 +54,7 @@ New maker **Atlas Studio ROM** 🇮🇹 at wire-in.
 | `ara-pacis_3.webp` | Mausoleum of Augustus | Attila (Flickr) | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Dscn1097_(53662807386).jpg |
 | `piazza-barberini_2.webp` | Triton Fountain | Chabe01 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Fontaine_Triton_-_Rome_(IT62)_-_2021-08-30_-_5.jpg |
 | `piazza-barberini_3.webp` | Fountain of the Bees | babizhet | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:%D0%A4%D0%BE%D0%BD%D1%82%D0%B0%D0%BD_%D0%B1%D0%B4%D0%B6%D1%96%D0%BB_%D0%A0%D0%B8%D0%BC.JPG |
-| `testaccio_hero.webp` | Monte Testaccio (hill of shards) | **UNIDENTIFIED** — see §Unidentified | **Wikimedia CC, sub-licence unknown** | ~~File:Monte Testaccio.jpg~~ (Tyler Bell, CC BY 2.0) — **that was the ORIGINAL image, overwritten at the Rome-extras wire-in** |
+| ~~`testaccio_hero.webp`~~ | Monte Testaccio (hill of shards) | — | **owner-supplied, no credit owed** | ✅ **REPLACED 2026-07-29** — row retired |
 
 _(Piazza Barberini `_hero`, Baths of Caracalla, Jewish Ghetto, Santa Maria in Trastevere, and
 Bocca della Verità's Cosmedin shot are owner-pasted → ship-safe. The `testaccio_hero` is also the
@@ -199,7 +201,7 @@ _(Muntplein/Munttoren, Museumplein/Concertgebouw, Stedelijk = ship-safe stock, n
 ### Waterlooplein / Rembrandt House (single-stop)
 | File | Subject | Author | License | Source |
 |------|---------|--------|---------|--------|
-| `waterlooplein-rembrandt-house_hero.webp` | Rembrandt House front facade | **UNIDENTIFIED** — see §Unidentified | **Wikimedia CC, sub-licence unknown** | ~~File:Europe 1979's 03.jpg~~ — **disproven** (different photograph) |
+| ~~`waterlooplein-rembrandt-house_hero.webp`~~ | Rembrandt House front facade | — | **owner-supplied, no credit owed** | ✅ **REPLACED 2026-07-29** — row retired |
 
 ### Portuguese Synagogue (single-stop)
 | File | Subject | Author | License | Source |
@@ -394,7 +396,13 @@ subject existed (niche stations, memorials, courtyards) or the subject demanded 
 | `[walk] riverborder_stop3.webp` | East Side Gallery — bank of the Spree | Indrajit Das | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:East_Side_Gallery_-_Bank_of_River_Spree_01.jpg |
 
 
-## Unidentified provenance — 2 live images
+## ✅ RESOLVED — the 2 unattributable live images were replaced (2026-07-29)
+
+> **Both images below have been replaced with owner-supplied photographs and now owe no
+> attribution at all.** New files are live on `gh-pages` at the same URLs, cropped 1200×900 from
+> 2000×1493 with no upscale — so all six references (three each, across two tours apiece) picked
+> up the change with **no `Tours.json` edit and no app build**. The investigation is kept below
+> because the method is reusable and the failure mode recurs.
 
 Two shipped images cannot be attributed. Both name a Commons file that a side-by-side comparison
 **disproves** — the named file is a genuinely different photograph of the same subject — and four
@@ -428,22 +436,26 @@ in this ledger is currently being credited in the shipped app. These two are not
 mis-credited — they are uniquely *un-creditable*. The exposure lands the day an attributions screen
 ships, or a credits line appears on a tour.
 
-**So the action is:** before any attribution surface ships, either identify these two or replace them
-with images of known provenance. Replacement is cheap and needs no `Tours.json` change or app build —
-both are referenced purely by URL (3 references each), so overwriting the file on `gh-pages` updates
-every reference at once. Verified substitutes, should you want them:
+**What was done:** the owner supplied replacement photographs for both, which is the cleanest
+possible outcome — owner-supplied images owe no attribution, so the question of *which* CC licence
+applied simply stops existing. Superseded options are kept below for the record.
 
-- **Rembrandt House** — ✅ **RESOLVED: the owner supplied a replacement (2026-07-29).** A clear,
-  correctly-lit wide shot of Jodenbreestraat 4 with the museum wing and Rembrandt Corner either side.
-  **Owner-supplied ⇒ ship-safe, no attribution owed**, so this row leaves the credit-required table
-  once the file is pushed. (Prior fallbacks, now unnecessary: `Amsterdam - Rembrandthuis
+- **Rembrandt House** — replaced with an owner-supplied wide shot of Jodenbreestraat 4, the museum
+  wing and Rembrandt Corner either side. *(Superseded fallbacks: `Amsterdam - Rembrandthuis
   (29670034014).jpg` — Fred Romero, CC BY 2.0; `Maison Rembrandt - Amsterdam (NL32) - 2024-11-25 -
-  1.jpg` — Chabe01, CC BY-SA 4.0. No PD/CC0 exterior surfaced, and stock has none at all.)
-- **Testaccio** — the superseded `File:Monte Testaccio.jpg` (Tyler Bell, CC BY 2.0) is still a valid,
-  fully-attributable image of the subject and could simply be restored.
+  1.jpg` — Chabe01, CC BY-SA 4.0. No PD/CC0 exterior surfaced; stock has none at all.)*
+- **Testaccio** — replaced with an owner-supplied view from the piazzale: the mound itself and the
+  cut-into-the-hill frontage beneath it. *(Superseded fallback: `File:Monte Testaccio.jpg` — Tyler
+  Bell, CC BY 2.0.)*
 
-**Not done unilaterally** — swapping a live hero on four tours is a content decision, and heroes are
-picked by the owner. Candidates are staged and labelled; say the word and it's a single push.
+**Why it wasn't done unilaterally:** swapping a live hero on four tours is a content decision, and
+heroes are the owner's pick. The owner supplied both directly, which settled it.
+
+**The reusable lesson.** Two attributions were wrong *and undetectable* because they were produced by
+matching image **dimensions** against a Commons category listing. Verify by **SHA-1** instead —
+`list=allimages&aisha1=<sha1>` — and when a hash lookup fails, compare the published image against the
+named file **side by side** before trusting the row. A row that names a plausible file is not evidence
+that it names the right one.
 
 
 ## Dubai — 11 credit-required images (`drafts/dubai-batch1`)
