@@ -1262,6 +1262,8 @@ ls archive/HANDOFF-*.md | tail -1   # then read that file
 
 # What is staged but not yet live? ALWAYS read this from origin/main, never from your branch:
 git show origin/main:drafts/AUDIO-PENDING-SURVEY.md
+# Wire-in spec for any staged city (slug/coord/category/hero+gallery) — also on main:
+# ls drafts/*/README.md   ·   index: drafts/README.md
 ```
 
 Run before any substantive work. Investigate uncommitted changes before acting on them.
