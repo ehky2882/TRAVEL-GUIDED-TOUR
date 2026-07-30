@@ -522,6 +522,44 @@ storefront lettering) is staged.
 engraving *The Book Room in the Old Water Tank* — the post-fire temporary city hall whose resident
 crows gave the building its name — and the HABS measured elevation of the LaSalle front.
 
+## Chicago walk 5 (Pilsen) — 2 credit-required images + 2 UNRESOLVED mural rights
+
+`drafts/chicago-pilsen-walk`. Both photographer attributions resolved by **SHA-1 reverse-lookup**
+against the Commons `allimages` API.
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `chicago-pilsen_stop3.webp` | 18th Street station platform | Eric Allix Rogers | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:18th_Street_Pink_Line.jpg |
+| `chicago-pilsen_stop4.webp` | National Museum of Mexican Art entrance | Skvader | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:National_Museum_of_Mexican_Art_entrance.jpg |
+
+**Hero and stop 2 reuse live owner images** (`pilsen-18th-street_2.webp` and
+`pilsen-18th-street_hero.webp`) — no obligation. **Stop 1 is owner-supplied** — no *photographer*
+obligation.
+
+### ⚠️ UNRESOLVED — two in-copyright murals are principal subjects, shipped at owner direction
+
+The rows above cover the **photographers only**. Two of these images also depict copyrighted
+**murals**, which is a separate right the photographer cannot license:
+
+| File | Mural | Artist(s) | Status |
+|------|-------|-----------|--------|
+| `chicago-pilsen_stop1.webp` | *Hay Cultura en Nuestra Comunidad*, Casa Aztlan | Ray Patlan (d. 2024); 2017 repaint with Roberto Valadez (living) | **no permission sought** |
+| `chicago-pilsen_stop3.webp` | 18th Street station platform murals incl. the Aztec sun stone | Francisco Mendoza (d. 2012) and students | **no permission sought** |
+
+The US has **no freedom of panorama for artworks** — 17 USC §120 exempts *architectural works*
+only — so a photograph of a mural is a derivative work. In both images the mural is a **principal
+subject, not incidental**: the AZTLAN arch, portraits and butterfly fill the lower third of stop 1,
+and the sun stone dominates the right of stop 3. Neither would pass a de minimis test.
+
+This was **flagged in advance and shipped at the owner's explicit direction** (2026-07-30) after
+the buildings-only option was offered and priced. Recorded here so the obligation is visible rather
+than lost. **Note the trap for future sessions: an owner-supplied photo does NOT clear this** — it
+clears the photographer, never the muralist. Contrast the Chicago Picasso (tour 14), which really
+is public domain by a 1970 court ruling; do not reason from one case to the other.
+
+**Casa Aztlan has no photograph on Wikimedia Commons at all** — zero files, which is likely this
+same rule operating upstream.
+
 ## Dubai — 11 credit-required images (`drafts/dubai-batch1`)
 
 Everything else in the Dubai batch is ship-safe (Unsplash / Pexels / Pixabay / CC0)
