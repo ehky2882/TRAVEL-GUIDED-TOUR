@@ -46,7 +46,7 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 |------|--------------:|-----------|------------:|----------------|------------------|
 | 🇩🇪 Berlin | 36 | 31 single + 5 walks (intro+5 / intro+5 / intro+4 / intro+4 / intro+3) | 57 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio BER |
 | 🇦🇪 Dubai | 26 | 22 single + 4 walks (intro+4 / intro+4 / intro+3 / intro+3) | 40 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio DXB |
-| 🇺🇸 Chicago | 28 | 25 single + 3 walks (intro+5 × 3) | 43 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ORD |
+| 🇺🇸 Chicago | 29 | 25 single + 4 walks (intro+5 × 3, intro+4 × 1) | 48 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ORD |
 | **TOTAL PENDING** | **90** | | **140** | | |
 
 _(✅ 🇪🇸 Madrid = DONE (2026-07-25, PR #435): **34 tours LIVE** — 30 single-stop + **4 walks** (Madrid de los Austrias, Paseo del Arte, El Retiro, Royal Madrid) under new maker **Atlas Studio MAD**. 55 MP3s. Note: the staged set was **30 singles / 55 MP3s**, not the 31/56 recorded here — the old figure was one over. Owner audio arrived complete, matching the staged drafts 1:1.)_
@@ -180,9 +180,9 @@ If you replace an image under an existing name, update `CREDITS.md` in the same 
 - **⚠️ transcriptText gotcha:** singles **#17, #20, #21, #22** and **all four walks'** scripts carry a leading title line (`DUBAI NN — …` / `ATLAS — DUBAI / Walk Wn: …`). Strip it when extracting `transcriptText`; the other singles have none.
 - **⚠️ Provenance flags (owner-directed, decide before ship):** `al-shindagha_hero` came from a googleusercontent URL — **license unverifiable**, and upscaled ~1.6× from 1200×550 so it is soft. `difc-gate_hero` is owner-supplied and shows garbled signage text, i.e. likely AI-generated rather than a photograph. Both were shipped at the owner's explicit direction after being flagged.
 - **✅ Credits WRITTEN 2026-07-28 — `drafts/CREDITS.md`, Dubai section: 11 credit-required images** (Gold Souk ×2 — not ×4, the other two are stock; Jumeirah Mosque ×3; Al Fahidi Fort ×3; Textile Souk hero; Etihad Museum ×1; Al Shindagha gallery). The DIFC gallery image is **Pexels, ship-safe** — not CC as guessed here. Alserkal hero is **CC0** (no credit). **`al-shindagha_2` is FAL (Free Art License), not CC** — copyleft, same obligation as BY-SA; do not treat it as more permissive. Attributions were resolved by **SHA-1 reverse-lookup** against the Commons `allimages` API, i.e. exact file identity.
-**🇺🇸 Chicago** — **28 tours (25 single-stop + 3 walks)**, new maker **Atlas Studio ORD** 🇺🇸 — the **21st maker**.
+**🇺🇸 Chicago** — **29 tours (25 single-stop + 4 walks)**, new maker **Atlas Studio ORD** 🇺🇸 — the **21st maker**.
 Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. Staged 2026-07-29/30.
-**MP3s needed: 43** = 25 singles + 18 walk tracks.
+**MP3s needed: 48** = 25 singles + 23 walk tracks (three walks of intro+5, one of intro+4).
 
 - **Master pick-map: `drafts/chicago-batch1/README.md`** — all 25 singles with slug, script, category, coordinate,
   image count, tags and credit, tag-validated against the controlled vocabulary. **Written as staging went, not
@@ -191,7 +191,7 @@ Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. S
 - **⚠️ The script numbering is NOT contiguous: 01–17, 20, 21, 23, 24, 25, 28, 29, 30. Numbers 18, 19, 22, 26 and 27
   were never delivered.** Recorded so nobody assumes a gap means a lost file — the Rome failure, written down in
   advance. If those five exist they are a second batch.
-- **3 walks**, each intro + 5 stops:
+- **4 walks** — three of intro + 5 stops, one (the Magnificent Mile) of intro + 4:
   - `chicago-loopskyscraper-walk` — *Where the Skyscraper Was Born*. **COMPLETE.** 3 new images (hero, stop 1, stop 4);
     stops 2, 3, 5 reuse live single heroes.
   - `chicago-lakefront-walk` — *Millennium Park to Museum Campus*. **COMPLETE.** 1 new image (hero only); **all five
@@ -202,7 +202,13 @@ Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. S
     six scripts carry an extra `SENSITIVITY:` / `DEVICE PAYOFF:` line), so start `transcriptText` after the `---`
     rule rather than counting header lines. Three stop coords **geofence where the listener stands, not the subject**
     — do not "correct" them to the landmark.
-- **Chicago image-staging is finished end to end** — 25 singles + all 3 walks, every pick-map written.
+  - `chicago-magmile-walk` — *The Magnificent Mile*. **COMPLETE.** Intro + **4** stops (not 5). 2 new images (hero,
+    stop 3); stops 1, 2 and 4 reuse live single heroes. **No credits.** Flags a **fourth transcript header format** —
+    the fourth line is `Vantage:` not `Voice:`, and **the `_TTS.txt` files carry no header block at all**. The intro
+    and stop 1 share an identical coordinate **on purpose**, so the listener is already inside stop 1's geofence when
+    the intro ends — the AMNH case `ProximityMonitor` already handles (PR #251). **Not a data bug; do not separate
+    them.**
+- **Chicago image-staging is finished end to end** — 25 singles + all 4 walks, every pick-map written.
 - **⚠️ Sensitivity — two subjects:**
   - **Tour 02** is pointedly critical of the **Fort Dearborn relief** on the DuSable Bridge, whose 1920s sculptors
     "treated the removal of the Potawatomi from this land as an adventure story." **That relief must not be used as
@@ -226,6 +232,17 @@ Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. S
   Chess Pavilion, Thalia Hall ×2, the Obama Center ×2, the 1885 Home Insurance Building). **The pattern is
   consistent: when a script points at something specific and locally known, stock and Commons both fail and an owner
   photograph resolves it faster than more searching.**
+
+**🔴 A REUSE RULE, learned the hard way on Chicago walk 4 — it applies to EVERY walk pick-map in `drafts/`:**
+
+**Verify a reused hero by OPENING THE IMAGE. Never by matching the slug to the stop title.** Walk 4's stop 3 was
+about to reuse `michigan-avenue-streetwall_hero` — the slug matches the stop perfectly. The file is an **aerial of
+SOUTH Michigan Avenue across Grant Park with Buckingham Fountain in it**, a mile and a half from the stop, on the
+wrong half of the street. Nothing but opening it would have caught that; the coordinate on the single (`41.88090` vs
+the stop's `41.89305`) confirms it after the fact. **Slugs describe the single's subject, not the walk stop's
+vantage.** Every walk in `drafts/` leans on reuse — Berlin's Imperial Spine and Cold War Centre are *entirely*
+reuse, and Chicago's Lakefront is all five stops — so **an open-every-reused-hero pass is owed before any of them
+ships.**
 
 **🔴 TWO TOOLING DEFECTS FOUND WHILE STAGING CHICAGO — they affect every city, not just this one:**
 
