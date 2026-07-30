@@ -459,7 +459,7 @@ that it names the right one.
 
 
 
-## Chicago — 17 credit-required images (`drafts/chicago-batch1`)
+## Chicago — 18 credit-required images (`drafts/chicago-batch1`)
 
 New maker **Atlas Studio ORD** 🇺🇸 at wire-in. **Everything else in the Chicago batch is
 ship-safe** (Unsplash / Pexels / Pixabay) or owner-supplied — only these two carry an obligation.
@@ -486,6 +486,13 @@ identity), never by dimension match.
 | `old-town-st-michaels_3.webp` | St Michael's steeple over the rooftops | Victor Grigas | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:St.Michaels_Church,_Chicago_in_Old_Town_in_2015.jpg |
 | `old-town-st-michaels_4.webp` | Old Town buildings | Victor Grigas | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Buildings_in_Old_Town,_Chicago_2015-18.jpg |
 | `old-town-st-michaels_5.webp` | Lincoln Avenue Rowhouse District | Thshriver | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Lincoln_Avenue_Rowhouse_District_3.JPG |
+| `[walk] chicago-loopskyscraper_stop4.webp` | Federal Plaza — Mies post office + towers | Chris Rycroft | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Looking_west_from_Federal_Plaza_toward_the_Clark_Adams_Building_(52041873550).jpg |
+
+**⚖️ Calder's *Flamingo* (Federal Plaza, walk 2 stop 4) is IN COPYRIGHT — no exception applies.** Calder died in
+1976 and the US has no freedom of panorama for artworks, so a photograph centred on it is an encumbered
+derivative work. **This is the opposite of the Chicago Picasso**, which a 1970 ruling put in the public domain —
+do not reason from one to the other. **12 of the 22 files in `Category:Federal Center (Chicago)` are
+Calder-dominant**, so the obvious grab is the wrong one; the staged image is Mies buildings and granite plaza only.
 
 **⚠️ Tour 21's wooden cottages were never found.** The script's second half is about the small
 wooden houses built inside the two-and-a-half-year window before the 1874 city-wide ban. `_4` and
