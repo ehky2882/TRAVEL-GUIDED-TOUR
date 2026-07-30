@@ -8,7 +8,7 @@ a per-tour credits line, an in-app attributions screen, or swap for owner-suppli
 shots. Everything NOT listed here is ship-safe (Unsplash/Pexels/Pixabay — no
 attribution) or owner-supplied.
 
-Last updated 2026-07-28 (Dubai staged — 11 CC images; Berlin attributions re-verified by SHA-1 and 9 rows corrected).
+Last updated 2026-07-29 (🇺🇸 Chicago batch 1 staging in progress — 2 CC images so far; all 4 audit failures closed: both live images replaced with owner-supplied photographs; Berlin attributions re-verified by SHA-1 and 9 rows corrected; Dubai staged — 11 CC images).
 
 > ### ⚠️ Ledger audit, 2026-07-28 — read this before relying on any row
 >
@@ -19,7 +19,9 @@ Last updated 2026-07-28 (Dubai staged — 11 CC images; Berlin attributions re-v
 > share a size. **Attribute by SHA-1 instead** — hash the local original and query
 > `list=allimages&aisha1=<sha1>`; that is exact file identity, not a guess.
 >
-> The four failures, in severity order:
+> **Update 2026-07-29: all four are now closed** — the two live ones were replaced with
+> owner-supplied photographs (no attribution owed), and the two Berlin ones are corrected or
+> scoped below. The four failures, as found:
 >
 > 1. **`waterlooplein-rembrandt-house_hero.webp` (Amsterdam — LIVE).** The row claimed
 >    Usernet123u / CC BY-SA 4.0 via `File:Europe 1979's 03.jpg`. Side-by-side, that is a
@@ -52,7 +54,7 @@ New maker **Atlas Studio ROM** 🇮🇹 at wire-in.
 | `ara-pacis_3.webp` | Mausoleum of Augustus | Attila (Flickr) | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Dscn1097_(53662807386).jpg |
 | `piazza-barberini_2.webp` | Triton Fountain | Chabe01 | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Fontaine_Triton_-_Rome_(IT62)_-_2021-08-30_-_5.jpg |
 | `piazza-barberini_3.webp` | Fountain of the Bees | babizhet | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:%D0%A4%D0%BE%D0%BD%D1%82%D0%B0%D0%BD_%D0%B1%D0%B4%D0%B6%D1%96%D0%BB_%D0%A0%D0%B8%D0%BC.JPG |
-| ~~`testaccio_hero.webp`~~ **(SUPERSEDED — see note)** | Monte Testaccio (hill of shards) | Tyler Bell | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Monte_Testaccio.jpg |
+| ~~`testaccio_hero.webp`~~ | Monte Testaccio (hill of shards) | — | **owner-supplied, no credit owed** | ✅ **REPLACED 2026-07-29** — row retired |
 
 _(Piazza Barberini `_hero`, Baths of Caracalla, Jewish Ghetto, Santa Maria in Trastevere, and
 Bocca della Verità's Cosmedin shot are owner-pasted → ship-safe. The `testaccio_hero` is also the
@@ -199,7 +201,7 @@ _(Muntplein/Munttoren, Museumplein/Concertgebouw, Stedelijk = ship-safe stock, n
 ### Waterlooplein / Rembrandt House (single-stop)
 | File | Subject | Author | License | Source |
 |------|---------|--------|---------|--------|
-| `waterlooplein-rembrandt-house_hero.webp` | Rembrandt House front facade | **UNRESOLVED — see note** | **UNRESOLVED** (likely ship-safe stock) | ~~File:Europe 1979's 03.jpg~~ — **disproven, different photograph** |
+| ~~`waterlooplein-rembrandt-house_hero.webp`~~ | Rembrandt House front facade | — | **owner-supplied, no credit owed** | ✅ **REPLACED 2026-07-29** — row retired |
 
 ### Portuguese Synagogue (single-stop)
 | File | Subject | Author | License | Source |
@@ -392,6 +394,133 @@ subject existed (niche stations, memorials, courtyards) or the subject demanded 
 | `[walk] scheunenviertel_stop2.webp` | Haus Schwarzenberg courtyard | Soluvo | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Berlin_2012_%28106%29.jpg |
 | `[walk] scheunenviertel_stop3.webp` | Große Hamburger — deportation memorial (Will Lammert) | Jochen Teufel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Skulptur_Juedische_Opfer_des_Faschismus_%28Foto_2008%29.jpg |
 | `[walk] riverborder_stop3.webp` | East Side Gallery — bank of the Spree | Indrajit Das | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:East_Side_Gallery_-_Bank_of_River_Spree_01.jpg |
+
+
+## ✅ RESOLVED — the 2 unattributable live images were replaced (2026-07-29)
+
+> **Both images below have been replaced with owner-supplied photographs and now owe no
+> attribution at all.** New files are live on `gh-pages` at the same URLs, cropped 1200×900 from
+> 2000×1493 with no upscale — so all six references (three each, across two tours apiece) picked
+> up the change with **no `Tours.json` edit and no app build**. The investigation is kept below
+> because the method is reusable and the failure mode recurs.
+
+Two shipped images cannot be attributed. Both name a Commons file that a side-by-side comparison
+**disproves** — the named file is a genuinely different photograph of the same subject — and four
+independent identification passes then failed to find the real source. Recorded here rather than
+left asserting something false.
+
+| Image | Tours affected | What the row claimed | Why it's wrong |
+|---|---|---|---|
+| `waterlooplein-rembrandt-house_hero.webp` | 🇳🇱 *Waterlooplein & the Rembrandt House* (hero) · *The Jewish Quarter* walk (stop image) | Usernet123u / CC BY-SA 4.0 / `File:Europe 1979's 03.jpg` | Named file is a **1979 close-up of the doorway**; the published image is a **modern wide shot of the facade**. |
+| `testaccio_hero.webp` | 🇮🇹 *Testaccio* (hero + stop image) · *The Aventine and Testaccio* walk (stop image) | Tyler Bell / CC BY 2.0 / `File:Monte Testaccio.jpg` | That was correct for the **original** image, which was **overwritten at the Rome-extras wire-in**. The published file is now a street-level shot along the base of the mound. |
+
+**Search effort (identity threshold ≈ mae < 14; a true match scores ~0.1):**
+
+| Method | Rembrandt House | Testaccio |
+|---|---|---|
+| Commons category search | 11 files ≥1200×900, best **34.8** | best **33.5** |
+| Commons geosearch (200 m / 400 m) | 252 geolocated files, best **34.2** | 285 geolocated files, best **37.5** |
+| Unsplash + Pexels + Pixabay, 5 queries each | 317 candidates, best **24.7** | 252 candidates, best **34.8** |
+| Fresh pipeline fetch (stock + wiki) | 39 candidates, best **28.9** | 37 candidates, best **33.5** |
+
+**What can still be said with confidence.** The stock pools demonstrably do **not** contain these
+subjects — a Rembrandt House query returns canal scenes, the Rembrandt*plein* statue and a
+Rijksmuseum interior; a Testaccio query returns the Colosseum and St Peter's. Both published images
+*are* genuine, specific views of their subject. So both are near-certainly **Wikimedia CC**, which
+matches what each staging README recorded at the time (`drafts/amsterdam-batch1/README.md` says
+"CC"; `drafts/rome-batch1/README.md` says "Wikimedia CC BY 2.0"). The licence *family* is credible.
+The exact file, author and sub-licence are lost.
+
+**How exposed is this, actually?** Not very, today: **Atlas has no attribution UI**, so *no* CC image
+in this ledger is currently being credited in the shipped app. These two are not uniquely
+mis-credited — they are uniquely *un-creditable*. The exposure lands the day an attributions screen
+ships, or a credits line appears on a tour.
+
+**What was done:** the owner supplied replacement photographs for both, which is the cleanest
+possible outcome — owner-supplied images owe no attribution, so the question of *which* CC licence
+applied simply stops existing. Superseded options are kept below for the record.
+
+- **Rembrandt House** — replaced with an owner-supplied wide shot of Jodenbreestraat 4, the museum
+  wing and Rembrandt Corner either side. *(Superseded fallbacks: `Amsterdam - Rembrandthuis
+  (29670034014).jpg` — Fred Romero, CC BY 2.0; `Maison Rembrandt - Amsterdam (NL32) - 2024-11-25 -
+  1.jpg` — Chabe01, CC BY-SA 4.0. No PD/CC0 exterior surfaced; stock has none at all.)*
+- **Testaccio** — replaced with an owner-supplied view from the piazzale: the mound itself and the
+  cut-into-the-hill frontage beneath it. *(Superseded fallback: `File:Monte Testaccio.jpg` — Tyler
+  Bell, CC BY 2.0.)*
+
+**Why it wasn't done unilaterally:** swapping a live hero on four tours is a content decision, and
+heroes are the owner's pick. The owner supplied both directly, which settled it.
+
+**The reusable lesson.** Two attributions were wrong *and undetectable* because they were produced by
+matching image **dimensions** against a Commons category listing. Verify by **SHA-1** instead —
+`list=allimages&aisha1=<sha1>` — and when a hash lookup fails, compare the published image against the
+named file **side by side** before trusting the row. A row that names a plausible file is not evidence
+that it names the right one.
+
+
+
+## Chicago — 18 credit-required images (`drafts/chicago-batch1`)
+
+New maker **Atlas Studio ORD** 🇺🇸 at wire-in. **Everything else in the Chicago batch is
+ship-safe** (Unsplash / Pexels / Pixabay) or owner-supplied — only these two carry an obligation.
+Attributions resolved by **SHA-1 reverse-lookup** against the Commons `allimages` API (exact file
+identity), never by dimension match.
+
+| File | Subject | Author | License | Source |
+|------|---------|--------|---------|--------|
+| `historic-water-tower_2.webp` | Water Tower, looking up at the turrets | Ed Schipul | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_Water_Tower_-_Schipul.jpg |
+| `historic-water-tower_3.webp` | Water Tower at dusk, illuminated | Joi Ito | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Chicago-20080523.jpg |
+| `the-rookery_2.webp` | Rookery light court (Wright remodel) | w_lemay | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Atrium,_Rookery_Building,_LaSalle_Street_and_Adams_Street,_Chicago,_IL_-_52900630177.jpg |
+| `the-rookery_3.webp` | Rookery light court, glass roof | w_lemay | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Atrium,_Rookery_Building,_LaSalle_Street_and_Adams_Street,_Chicago,_IL_-_52901590335.jpg |
+| `the-rookery_4.webp` | Rookery marble staircase (Wright) | Onasill – Bill Badzo | CC BY-SA 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_IL_~_Rookery_Building_~_Stair_Case_-_Frank_Lloyd_Wright_(51092884753).jpg |
+| `the-rookery_5.webp` | Rookery exterior, S LaSalle Street | HaSt | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Chicago_-_S_LaSalle_St_-_Rookery_-_01.jpg |
+| `daley-plaza-picasso_hero.webp` | The Chicago Picasso, Daley Plaza | Dan DeLuca | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Downtown-chicago-picasso-sculpture_(6360678643).jpg |
+| `daley-plaza-picasso_2.webp` | Daley Plaza in civic use, Picasso behind | 5ukhotskaya | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:2017_Tax_Day_March_in_Chicago_12.jpg |
+| `chinatown-ping-tom_hero.webp` | Pui Tak Center / Chinatown at night | Daniel Schwen | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Chicago_Chinatown_night.jpg |
+| `chinatown-ping-tom_2.webp` | Chinatown, Chicago | Paul R. Burley | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Chinatown_Chicago_Illinois-0574_10.jpg |
+| `robie-house_hero.webp` | Robie House exterior (Wright, 1910) | Sailko | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Chicago,_robie_house_di_frank_lloyd_wright,_1908-1910,_esterno_01.jpg |
+| `robie-house_2.webp` | Robie House, Hyde Park | erikccooper | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_Hyde_Park_(28896861434).jpg |
+| `robie-house_3.webp` | Robie House, Hyde Park | erikccooper | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_Hyde_Park_(29232014870).jpg |
+| `old-town-st-michaels_hero.webp` | St Michael's front, Old Town | Victorgrigas | **Public domain** (no obligation) | https://commons.wikimedia.org/wiki/File:St._Michael_Old_Town,_2.jpg |
+| `old-town-st-michaels_2.webp` | St Michael's interior | Victorgrigas | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:St_Michaels_Church_in_Chicago_2018.jpg |
+| `old-town-st-michaels_3.webp` | St Michael's steeple over the rooftops | Victor Grigas | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:St.Michaels_Church,_Chicago_in_Old_Town_in_2015.jpg |
+| `old-town-st-michaels_4.webp` | Old Town buildings | Victor Grigas | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Buildings_in_Old_Town,_Chicago_2015-18.jpg |
+| `old-town-st-michaels_5.webp` | Lincoln Avenue Rowhouse District | Thshriver | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Lincoln_Avenue_Rowhouse_District_3.JPG |
+| `[walk] chicago-loopskyscraper_stop4.webp` | Federal Plaza — Mies post office + towers | Chris Rycroft | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Looking_west_from_Federal_Plaza_toward_the_Clark_Adams_Building_(52041873550).jpg |
+
+**⚖️ Calder's *Flamingo* (Federal Plaza, walk 2 stop 4) is IN COPYRIGHT — no exception applies.** Calder died in
+1976 and the US has no freedom of panorama for artworks, so a photograph centred on it is an encumbered
+derivative work. **This is the opposite of the Chicago Picasso**, which a 1970 ruling put in the public domain —
+do not reason from one to the other. **12 of the 22 files in `Category:Federal Center (Chicago)` are
+Calder-dominant**, so the obvious grab is the wrong one; the staged image is Mies buildings and granite plaza only.
+
+**⚠️ Tour 21's wooden cottages were never found.** The script's second half is about the small
+wooden houses built inside the two-and-a-half-year window before the 1874 city-wide ban. `_4` and
+`_5` are **brick Victorian rowhouses**, not those cottages — flagged to the owner and picked
+knowingly. A first pass also mis-identified a different Gothic church as St Michael's; the owner
+caught it and the set was re-sourced from `Saint Michael's Church, Old Town, Chicago`.
+
+**Owner-supplied (no credit owed):** `art-institute_3.webp` — the Modern Wing (Renzo Piano, 2009),
+Monroe Street front.
+
+**✅ `the-rookery_hero.webp` — owner-supplied (2026-07-29), no credit owed.** The LaSalle and Adams
+corner: dark red brick and terra cotta, the deep arched entrance, the fortress base. It fills a gap
+the Commons pool could not — Rookery coverage there is almost entirely Wright's interior light court,
+with no usable exterior of the front the script opens on.
+
+**⚖️ The Chicago Picasso sculpture is PUBLIC DOMAIN in the US** — *Letter Edged in Black Press, Inc.
+v. Public Building Commission of Chicago* (1970) held that its design was published without a
+copyright notice under the 1909 Act. Commons carries a `{{ChicagoPicasso}}` template recording this.
+So photographs of it are **not** encumbered derivative works, and the only licence that attaches is
+the photographer's own — the two rows above. This is a documented exception: the US has no freedom
+of panorama for artworks, so the general rule would have gone the other way. **Verified, not assumed.**
+
+**⏳ `monadnock-building_2.webp` pending** — owner is supplying a second image; hero (`MND1`, the
+storefront lettering) is staged.
+
+**Public-domain Rookery extras available, not yet picked** (no credit owed if used): the 1870s
+engraving *The Book Room in the Old Water Tank* — the post-fire temporary city hall whose resident
+crows gave the building its name — and the HABS measured elevation of the LaSalle front.
 
 ## Dubai — 11 credit-required images (`drafts/dubai-batch1`)
 

@@ -15,7 +15,13 @@ git ls-tree -r --name-only origin/<branch> -- drafts/<folder>/
 
 ---
 
-## Index (40 pick-maps)
+## Index (43 pick-maps)
+
+### 🇺🇸 Chicago — **PENDING — awaiting narration audio**
+
+- [`chicago-batch1/`](./chicago-batch1/README.md)
+- [`chicago-loopskyscraper-walk/`](./chicago-loopskyscraper-walk/README.md)
+- [`chicago-lakefront-walk/`](./chicago-lakefront-walk/README.md)
 
 ### 🇩🇪 Berlin — **PENDING — awaiting narration audio**
 
