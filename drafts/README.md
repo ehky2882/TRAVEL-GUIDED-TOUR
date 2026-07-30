@@ -15,7 +15,7 @@ git ls-tree -r --name-only origin/<branch> -- drafts/<folder>/
 
 ---
 
-## Index (43 pick-maps)
+## Index (44 pick-maps)
 
 ### 🇺🇸 Chicago — **PENDING — awaiting narration audio**
 
@@ -23,6 +23,7 @@ git ls-tree -r --name-only origin/<branch> -- drafts/<folder>/
 - [`chicago-loopskyscraper-walk/`](./chicago-loopskyscraper-walk/README.md)
 - [`chicago-lakefront-walk/`](./chicago-lakefront-walk/README.md)
 - [`chicago-riverwalk-walk/`](./chicago-riverwalk-walk/README.md)
+- [`chicago-magmile-walk/`](./chicago-magmile-walk/README.md)
 
 ### 🇩🇪 Berlin — **PENDING — awaiting narration audio**
 
