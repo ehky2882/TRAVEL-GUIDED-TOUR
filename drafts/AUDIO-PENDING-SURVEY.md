@@ -46,7 +46,8 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 |------|--------------:|-----------|------------:|----------------|------------------|
 | 🇩🇪 Berlin | 36 | 31 single + 5 walks (intro+5 / intro+5 / intro+4 / intro+4 / intro+3) | 57 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio BER |
 | 🇦🇪 Dubai | 26 | 22 single + 4 walks (intro+4 / intro+4 / intro+3 / intro+3) | 40 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio DXB |
-| **TOTAL PENDING** | **62** | | **97** | | |
+| 🇺🇸 Chicago | 28 | 25 single + 3 walks (intro+5 × 3) | 43 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ORD |
+| **TOTAL PENDING** | **90** | | **140** | | |
 
 _(✅ 🇪🇸 Madrid = DONE (2026-07-25, PR #435): **34 tours LIVE** — 30 single-stop + **4 walks** (Madrid de los Austrias, Paseo del Arte, El Retiro, Royal Madrid) under new maker **Atlas Studio MAD**. 55 MP3s. Note: the staged set was **30 singles / 55 MP3s**, not the 31/56 recorded here — the old figure was one over. Owner audio arrived complete, matching the staged drafts 1:1.)_
 _(✅ 🇮🇹 Rome = DONE (2026-07-27): **30 tours LIVE** — 25 single-stop + **5 walks** (Ancient Rome, The Baroque Heart, The Ghetto and Trastevere, The Vatican and the Borgo, The Aventine and Testaccio) under new maker **Atlas Studio ROM**. 53 MP3s, 6,866 s narration. The delivery also contained **7 extra singles (25–31)** narrated after the image-staging session — Piazza del Quirinale, Monti, Santa Maria Maggiore, San Giovanni in Laterano, Trajan's Column, Porta San Sebastiano, Testaccio. They have **no scripts and no staged images** (Trajan's Column + Testaccio have a walk-only hero and nothing else), so they were NOT wired. Their audio is banked on gh-pages under its eventual slug (`piazza-quirinale.mp3`, `monti.mp3`, `santa-maria-maggiore.mp3`, `san-giovanni-laterano.mp3`, `trajans-column.mp3`, `porta-san-sebastiano.mp3`, `testaccio.mp3`) — see the new PENDING row below.)_
@@ -179,6 +180,62 @@ If you replace an image under an existing name, update `CREDITS.md` in the same 
 - **⚠️ transcriptText gotcha:** singles **#17, #20, #21, #22** and **all four walks'** scripts carry a leading title line (`DUBAI NN — …` / `ATLAS — DUBAI / Walk Wn: …`). Strip it when extracting `transcriptText`; the other singles have none.
 - **⚠️ Provenance flags (owner-directed, decide before ship):** `al-shindagha_hero` came from a googleusercontent URL — **license unverifiable**, and upscaled ~1.6× from 1200×550 so it is soft. `difc-gate_hero` is owner-supplied and shows garbled signage text, i.e. likely AI-generated rather than a photograph. Both were shipped at the owner's explicit direction after being flagged.
 - **✅ Credits WRITTEN 2026-07-28 — `drafts/CREDITS.md`, Dubai section: 11 credit-required images** (Gold Souk ×2 — not ×4, the other two are stock; Jumeirah Mosque ×3; Al Fahidi Fort ×3; Textile Souk hero; Etihad Museum ×1; Al Shindagha gallery). The DIFC gallery image is **Pexels, ship-safe** — not CC as guessed here. Alserkal hero is **CC0** (no credit). **`al-shindagha_2` is FAL (Free Art License), not CC** — copyleft, same obligation as BY-SA; do not treat it as more permissive. Attributions were resolved by **SHA-1 reverse-lookup** against the Commons `allimages` API, i.e. exact file identity.
+**🇺🇸 Chicago** — **28 tours (25 single-stop + 3 walks)**, new maker **Atlas Studio ORD** 🇺🇸 — the **21st maker**.
+Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. Staged 2026-07-29/30.
+**MP3s needed: 43** = 25 singles + 18 walk tracks.
+
+- **Master pick-map: `drafts/chicago-batch1/README.md`** — all 25 singles with slug, script, category, coordinate,
+  image count, tags and credit, tag-validated against the controlled vocabulary. **Written as staging went, not
+  after** — the lesson from Dubai.
+- **Singles: image staging COMPLETE and audited** — 84 files, every hero present, every gallery contiguous from `_2`.
+- **⚠️ The script numbering is NOT contiguous: 01–17, 20, 21, 23, 24, 25, 28, 29, 30. Numbers 18, 19, 22, 26 and 27
+  were never delivered.** Recorded so nobody assumes a gap means a lost file — the Rome failure, written down in
+  advance. If those five exist they are a second batch.
+- **3 walks**, each intro + 5 stops:
+  - `chicago-loopskyscraper-walk` — *Where the Skyscraper Was Born*. **COMPLETE.** 3 new images (hero, stop 1, stop 4);
+    stops 2, 3, 5 reuse live single heroes.
+  - `chicago-lakefront-walk` — *Millennium Park to Museum Campus*. **COMPLETE.** 1 new image (hero only); **all five
+    stops reuse live single heroes**, so it adds no stop images and no credits.
+  - `chicago-riverwalk-walk` — *The Riverwalk*. **⏳ IMAGES OUTSTANDING.** Stops 3 (Marina City) and 4 (DuSable
+    Bridge) reuse live heroes; **stops 1 (Wolf Point & the Mart), 2 (the Eastland) and 5 (the harbor lock) still need
+    images, as does the walk hero.**
+- **⚠️ Sensitivity — two subjects:**
+  - **Tour 02** is pointedly critical of the **Fort Dearborn relief** on the DuSable Bridge, whose 1920s sculptors
+    "treated the removal of the Potawatomi from this land as an adventure story." **That relief must not be used as
+    an image.**
+  - **Riverwalk stop 2 is the Eastland disaster site** — 844 people died there in 1915. Memorial subject; dignified
+    treatment only, same standard as Berlin's memorials and Amsterdam's Jewish Quarter.
+- **⚖️ Two sculpture-copyright cases that point OPPOSITE ways — do not reason from one to the other:**
+  - **The Chicago Picasso (tour 14) is PUBLIC DOMAIN** in the US — *Letter Edged in Black Press, Inc. v. Public
+    Building Commission of Chicago* (1970). Photographs are usable; only the photographer is credited.
+  - **Calder's *Flamingo* (Federal Plaza, Loop walk stop 4) is IN COPYRIGHT** with no such exception. **12 of the 22
+    files in `Category:Federal Center (Chicago)` are Calder-dominant**, so the obvious grab is the wrong one.
+  - **Pilsen's murals (tour 25) are also in copyright.** That tour is built entirely from buildings, which the US
+    architectural exemption covers. Keep it that way.
+- **Credits: 18 rows / 17 real obligations** (one is public domain) across 88 images — `drafts/CREDITS.md`, Chicago
+  section. All resolved by **SHA-1 reverse-lookup**, never dimension matching.
+- **8 owner-supplied images across 6 tours** (Modern Wing, Rookery front, Monadnock, the North Avenue Beach house +
+  Chess Pavilion, Thalia Hall ×2, the Obama Center ×2, the 1885 Home Insurance Building). **The pattern is
+  consistent: when a script points at something specific and locally known, stock and Commons both fail and an owner
+  photograph resolves it faster than more searching.**
+
+**🔴 TWO TOOLING DEFECTS FOUND WHILE STAGING CHICAGO — they affect every city, not just this one:**
+
+1. **`wiki_grab.run(..., landscape=True)` silently DROPS PORTRAIT IMAGES.** For a tall subject that discards nearly
+   everything. It produced a confident, wrong "no images of this exist" answer for the Obama Center, where **6 of the
+   10 usable files were portrait, including the two best.** **Any city where a pool was reported as thin deserves
+   re-checking on this basis — tall subjects especially.**
+2. **`crop43` CENTRE-CROPS portrait sources**, taking an equal band off top and bottom. On a tower that decapitates
+   the building; it cut straight through the Obama Center's carved lettering panel. **A top-biased crop is the right
+   default for tall subjects.** This has been applied silently to every portrait source. **Berlin's Water Tower and
+   Willis Tower are the likely casualties — check before Berlin ships.**
+
+**Sourcing lessons (full list in the pick-map):** search for the Commons category name, never guess it — five wasted
+fetches, including a bare `Monadnock Building` which is **San Francisco's**; **enumerate subcategories**, since the
+Obama Center parent holds 8 logo files while a subcategory holds the real photographs; and verify the pixels, never
+the result title — rejected this batch were Mexico City's Palacio de Bellas Artes (six times), the White House (seven
+times), Fallingwater, the Guggenheim, Brooklyn's Barclays Center, and literal rookeries with egrets in them.
+
 **🇩🇪 Berlin** — **36 tours (31 single-stop + 5 walks)**, new maker **Atlas Studio BER** 🇩🇪. Complete 2026-07-21 (image-staged; awaiting narration):
 - **Batch 1 (31 single-stop):** Brandenburg Gate, Reichstag, Holocaust Memorial, Bebelplatz, Museum Island, Humboldt Forum, Alexanderplatz, Gendarmenmarkt, Checkpoint Charlie, Bernauer Strasse, East Side Gallery, Potsdamer Platz, Oberbaumbrücke, Topography of Terror, Gedächtniskirche, Tiergarten/Siegessäule, Hackesche Höfe, Neue Synagoge, Nikolaiviertel, Tränenpalast, Neue Wache, Karl-Marx-Allee, Kollwitzplatz/Wasserturm, Mauerpark, Tempelhofer Feld, Charlottenburg, Kulturforum, Band des Bundes, Treptower Park, Landwehrkanal/Maybachufer, Nollendorfplatz. Master pick-map (slug/coord/category/hero+gallery/credit): `drafts/berlin-batch1/README.md`.
 - **5 walks:** `berlin-imperialspine-walk` (intro+5, Unter den Linden) · `berlin-ghostline-walk` (intro+5, Bernauer Strasse Wall line) · `berlin-coldwarcentre-walk` (intro+4) · `berlin-scheunenviertel-walk` (intro+4) · `berlin-riverborder-walk` (intro+3). Each folder has its own README wire-in spec (per-stop image + coord + centroid + walking distance).
