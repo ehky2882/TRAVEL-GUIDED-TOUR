@@ -46,8 +46,8 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 |------|--------------:|-----------|------------:|----------------|------------------|
 | 🇩🇪 Berlin | 36 | 31 single + 5 walks (intro+5 / intro+5 / intro+4 / intro+4 / intro+3) | 57 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio BER |
 | 🇦🇪 Dubai | 26 | 22 single + 4 walks (intro+4 / intro+4 / intro+3 / intro+3) | 40 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio DXB |
-| 🇺🇸 Chicago | 29 | 25 single + 4 walks (intro+5 × 3, intro+4 × 1) | 48 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ORD |
-| **TOTAL PENDING** | **90** | | **140** | | |
+| 🇺🇸 Chicago | 30 | 25 single + 5 walks (intro+5 × 3, intro+4 × 2) | 53 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ORD |
+| **TOTAL PENDING** | **92** | | **150** | | |
 
 _(✅ 🇪🇸 Madrid = DONE (2026-07-25, PR #435): **34 tours LIVE** — 30 single-stop + **4 walks** (Madrid de los Austrias, Paseo del Arte, El Retiro, Royal Madrid) under new maker **Atlas Studio MAD**. 55 MP3s. Note: the staged set was **30 singles / 55 MP3s**, not the 31/56 recorded here — the old figure was one over. Owner audio arrived complete, matching the staged drafts 1:1.)_
 _(✅ 🇮🇹 Rome = DONE (2026-07-27): **30 tours LIVE** — 25 single-stop + **5 walks** (Ancient Rome, The Baroque Heart, The Ghetto and Trastevere, The Vatican and the Borgo, The Aventine and Testaccio) under new maker **Atlas Studio ROM**. 53 MP3s, 6,866 s narration. The delivery also contained **7 extra singles (25–31)** narrated after the image-staging session — Piazza del Quirinale, Monti, Santa Maria Maggiore, San Giovanni in Laterano, Trajan's Column, Porta San Sebastiano, Testaccio. They have **no scripts and no staged images** (Trajan's Column + Testaccio have a walk-only hero and nothing else), so they were NOT wired. Their audio is banked on gh-pages under its eventual slug (`piazza-quirinale.mp3`, `monti.mp3`, `santa-maria-maggiore.mp3`, `san-giovanni-laterano.mp3`, `trajans-column.mp3`, `porta-san-sebastiano.mp3`, `testaccio.mp3`) — see the new PENDING row below.)_
@@ -180,9 +180,9 @@ If you replace an image under an existing name, update `CREDITS.md` in the same 
 - **⚠️ transcriptText gotcha:** singles **#17, #20, #21, #22** and **all four walks'** scripts carry a leading title line (`DUBAI NN — …` / `ATLAS — DUBAI / Walk Wn: …`). Strip it when extracting `transcriptText`; the other singles have none.
 - **⚠️ Provenance flags (owner-directed, decide before ship):** `al-shindagha_hero` came from a googleusercontent URL — **license unverifiable**, and upscaled ~1.6× from 1200×550 so it is soft. `difc-gate_hero` is owner-supplied and shows garbled signage text, i.e. likely AI-generated rather than a photograph. Both were shipped at the owner's explicit direction after being flagged.
 - **✅ Credits WRITTEN 2026-07-28 — `drafts/CREDITS.md`, Dubai section: 11 credit-required images** (Gold Souk ×2 — not ×4, the other two are stock; Jumeirah Mosque ×3; Al Fahidi Fort ×3; Textile Souk hero; Etihad Museum ×1; Al Shindagha gallery). The DIFC gallery image is **Pexels, ship-safe** — not CC as guessed here. Alserkal hero is **CC0** (no credit). **`al-shindagha_2` is FAL (Free Art License), not CC** — copyleft, same obligation as BY-SA; do not treat it as more permissive. Attributions were resolved by **SHA-1 reverse-lookup** against the Commons `allimages` API, i.e. exact file identity.
-**🇺🇸 Chicago** — **29 tours (25 single-stop + 4 walks)**, new maker **Atlas Studio ORD** 🇺🇸 — the **21st maker**.
+**🇺🇸 Chicago** — **30 tours (25 single-stop + 5 walks)**, new maker **Atlas Studio ORD** 🇺🇸 — the **21st maker**.
 Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. Staged 2026-07-29/30.
-**MP3s needed: 48** = 25 singles + 23 walk tracks (three walks of intro+5, one of intro+4).
+**MP3s needed: 53** = 25 singles + 28 walk tracks (three walks of intro+5, two of intro+4).
 
 - **Master pick-map: `drafts/chicago-batch1/README.md`** — all 25 singles with slug, script, category, coordinate,
   image count, tags and credit, tag-validated against the controlled vocabulary. **Written as staging went, not
@@ -191,7 +191,7 @@ Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. S
 - **⚠️ The script numbering is NOT contiguous: 01–17, 20, 21, 23, 24, 25, 28, 29, 30. Numbers 18, 19, 22, 26 and 27
   were never delivered.** Recorded so nobody assumes a gap means a lost file — the Rome failure, written down in
   advance. If those five exist they are a second batch.
-- **4 walks** — three of intro + 5 stops, one (the Magnificent Mile) of intro + 4:
+- **5 walks** — three of intro + 5 stops, two (the Magnificent Mile, Pilsen) of intro + 4:
   - `chicago-loopskyscraper-walk` — *Where the Skyscraper Was Born*. **COMPLETE.** 3 new images (hero, stop 1, stop 4);
     stops 2, 3, 5 reuse live single heroes.
   - `chicago-lakefront-walk` — *Millennium Park to Museum Campus*. **COMPLETE.** 1 new image (hero only); **all five
@@ -208,7 +208,21 @@ Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. S
     and stop 1 share an identical coordinate **on purpose**, so the listener is already inside stop 1's geofence when
     the intro ends — the AMNH case `ProximityMonitor` already handles (PR #251). **Not a data bug; do not separate
     them.**
-- **Chicago image-staging is finished end to end** — 25 singles + all 4 walks, every pick-map written.
+  - `chicago-pilsen-walk` — *Pilsen: Eighteenth Street, East to West*. **COMPLETE.** Intro + **4** stops. 3 new
+    images (stops 1, 3, 4); **hero and stop 2 reuse the two live owner images from single tour 25, crossed over** —
+    `pilsen-18th-street_2` (spire + hall) is the walk hero, `pilsen-18th-street_hero` (Thalia Hall) is stop 2. Flags a
+    **fifth transcript header format** (`Position:`, bare `[beat]` with no asterisks, TTS files heavily phoneticised —
+    `transcriptText` MUST come from the clean `.txt`). **Pilsen is a stock desert: 95 images sourced across 4 pools,
+    1 usable** — reach for an owner photograph early here. Two Commons traps: a `Pilsen, Chicago` category that
+    returns **Plzen, Bohemia**, and **Casa Aztlan has zero files on Commons**.
+  - **🔴 `chicago-pilsen-walk` stops 1 and 3 ship with UNRESOLVED MURAL RIGHTS** — the only such case in the whole
+    corpus, at the owner's explicit direction after a buildings-only alternative was offered and declined
+    (2026-07-30). Stop 1 is Patlan/Valadez's Casa Aztlan mural; stop 3 is Mendoza's station murals incl. the Aztec
+    sun stone. In both, the mural is a **principal subject**, so de minimis does not apply. Logged as OPEN in
+    `drafts/CREDITS.md`. **Two traps: an owner-supplied photo clears the photographer but NEVER the muralist; and the
+    Chicago Picasso's public-domain ruling is a narrow exception that does not generalise.** Single tour 25 stays
+    clean (buildings only) — keep it that way.
+- **Chicago image-staging is finished end to end** — 25 singles + all 5 walks, every pick-map written.
 - **⚠️ Sensitivity — two subjects:**
   - **Tour 02** is pointedly critical of the **Fort Dearborn relief** on the DuSable Bridge, whose 1920s sculptors
     "treated the removal of the Potawatomi from this land as an adventure story." **That relief must not be used as
