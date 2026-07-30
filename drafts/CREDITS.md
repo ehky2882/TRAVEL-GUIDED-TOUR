@@ -459,7 +459,7 @@ that it names the right one.
 
 
 
-## Chicago — 8 credit-required images (`drafts/chicago-batch1`)
+## Chicago — 13 credit-required images (`drafts/chicago-batch1`)
 
 New maker **Atlas Studio ORD** 🇺🇸 at wire-in. **Everything else in the Chicago batch is
 ship-safe** (Unsplash / Pexels / Pixabay) or owner-supplied — only these two carry an obligation.
@@ -476,6 +476,11 @@ identity), never by dimension match.
 | `the-rookery_5.webp` | Rookery exterior, S LaSalle Street | HaSt | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Chicago_-_S_LaSalle_St_-_Rookery_-_01.jpg |
 | `daley-plaza-picasso_hero.webp` | The Chicago Picasso, Daley Plaza | Dan DeLuca | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Downtown-chicago-picasso-sculpture_(6360678643).jpg |
 | `daley-plaza-picasso_2.webp` | Daley Plaza in civic use, Picasso behind | 5ukhotskaya | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:2017_Tax_Day_March_in_Chicago_12.jpg |
+| `chinatown-ping-tom_hero.webp` | Pui Tak Center / Chinatown at night | Daniel Schwen | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Chicago_Chinatown_night.jpg |
+| `chinatown-ping-tom_2.webp` | Chinatown, Chicago | Paul R. Burley | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Chinatown_Chicago_Illinois-0574_10.jpg |
+| `robie-house_hero.webp` | Robie House exterior (Wright, 1910) | Sailko | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Chicago,_robie_house_di_frank_lloyd_wright,_1908-1910,_esterno_01.jpg |
+| `robie-house_2.webp` | Robie House, Hyde Park | erikccooper | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_Hyde_Park_(28896861434).jpg |
+| `robie-house_3.webp` | Robie House, Hyde Park | erikccooper | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_Hyde_Park_(29232014870).jpg |
 
 **Owner-supplied (no credit owed):** `art-institute_3.webp` — the Modern Wing (Renzo Piano, 2009),
 Monroe Street front.
