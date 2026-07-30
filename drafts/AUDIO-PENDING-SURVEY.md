@@ -196,15 +196,23 @@ Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. S
     stops 2, 3, 5 reuse live single heroes.
   - `chicago-lakefront-walk` — *Millennium Park to Museum Campus*. **COMPLETE.** 1 new image (hero only); **all five
     stops reuse live single heroes**, so it adds no stop images and no credits.
-  - `chicago-riverwalk-walk` — *The Riverwalk*. **⏳ IMAGES OUTSTANDING.** Stops 3 (Marina City) and 4 (DuSable
-    Bridge) reuse live heroes; **stops 1 (Wolf Point & the Mart), 2 (the Eastland) and 5 (the harbor lock) still need
-    images, as does the walk hero.**
+  - `chicago-riverwalk-walk` — *The Riverwalk*. **COMPLETE.** 4 new images (hero, stops 1, 2, 5); stops 3 (Marina
+    City) and 4 (DuSable Bridge) reuse live single heroes. **No credits** — Unsplash, Pexels, and one US Coast Guard
+    public-domain file. Its README flags a **third transcript header format with a *variable* line count** (two of the
+    six scripts carry an extra `SENSITIVITY:` / `DEVICE PAYOFF:` line), so start `transcriptText` after the `---`
+    rule rather than counting header lines. Three stop coords **geofence where the listener stands, not the subject**
+    — do not "correct" them to the landmark.
+- **Chicago image-staging is finished end to end** — 25 singles + all 3 walks, every pick-map written.
 - **⚠️ Sensitivity — two subjects:**
   - **Tour 02** is pointedly critical of the **Fort Dearborn relief** on the DuSable Bridge, whose 1920s sculptors
     "treated the removal of the Potawatomi from this land as an adventure story." **That relief must not be used as
     an image.**
   - **Riverwalk stop 2 is the Eastland disaster site** — 844 people died there in 1915. Memorial subject; dignified
-    treatment only, same standard as Berlin's memorials and Amsterdam's Jewish Quarter.
+    treatment only, same standard as Berlin's memorials and Amsterdam's Jewish Quarter. The script itself carries
+    `SENSITIVITY: … NO mortality figure. No method detail.` — **honor that in the tour description and stop title too,
+    not just the transcript.** The staged image is a Coast Guard wreath-laying from Commons `Category:Eastland
+    disaster memorials`, chosen **deliberately over** `Category:Eastland disaster`, which holds 1915 press
+    photographs of the recovery including the dead. **Do not re-source that stop from the latter.**
 - **⚖️ Two sculpture-copyright cases that point OPPOSITE ways — do not reason from one to the other:**
   - **The Chicago Picasso (tour 14) is PUBLIC DOMAIN** in the US — *Letter Edged in Black Press, Inc. v. Public
     Building Commission of Chicago* (1970). Photographs are usable; only the photographer is credited.

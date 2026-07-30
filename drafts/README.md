@@ -22,6 +22,7 @@ git ls-tree -r --name-only origin/<branch> -- drafts/<folder>/
 - [`chicago-batch1/`](./chicago-batch1/README.md)
 - [`chicago-loopskyscraper-walk/`](./chicago-loopskyscraper-walk/README.md)
 - [`chicago-lakefront-walk/`](./chicago-lakefront-walk/README.md)
+- [`chicago-riverwalk-walk/`](./chicago-riverwalk-walk/README.md)
 
 ### 🇩🇪 Berlin — **PENDING — awaiting narration audio**
 
