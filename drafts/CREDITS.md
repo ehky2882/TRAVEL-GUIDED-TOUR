@@ -459,7 +459,7 @@ that it names the right one.
 
 
 
-## Chicago — 13 credit-required images (`drafts/chicago-batch1`)
+## Chicago — 17 credit-required images (`drafts/chicago-batch1`)
 
 New maker **Atlas Studio ORD** 🇺🇸 at wire-in. **Everything else in the Chicago batch is
 ship-safe** (Unsplash / Pexels / Pixabay) or owner-supplied — only these two carry an obligation.
@@ -481,6 +481,17 @@ identity), never by dimension match.
 | `robie-house_hero.webp` | Robie House exterior (Wright, 1910) | Sailko | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Chicago,_robie_house_di_frank_lloyd_wright,_1908-1910,_esterno_01.jpg |
 | `robie-house_2.webp` | Robie House, Hyde Park | erikccooper | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_Hyde_Park_(28896861434).jpg |
 | `robie-house_3.webp` | Robie House, Hyde Park | erikccooper | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Chicago_Hyde_Park_(29232014870).jpg |
+| `old-town-st-michaels_hero.webp` | St Michael's front, Old Town | Victorgrigas | **Public domain** (no obligation) | https://commons.wikimedia.org/wiki/File:St._Michael_Old_Town,_2.jpg |
+| `old-town-st-michaels_2.webp` | St Michael's interior | Victorgrigas | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:St_Michaels_Church_in_Chicago_2018.jpg |
+| `old-town-st-michaels_3.webp` | St Michael's steeple over the rooftops | Victor Grigas | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:St.Michaels_Church,_Chicago_in_Old_Town_in_2015.jpg |
+| `old-town-st-michaels_4.webp` | Old Town buildings | Victor Grigas | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Buildings_in_Old_Town,_Chicago_2015-18.jpg |
+| `old-town-st-michaels_5.webp` | Lincoln Avenue Rowhouse District | Thshriver | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Lincoln_Avenue_Rowhouse_District_3.JPG |
+
+**⚠️ Tour 21's wooden cottages were never found.** The script's second half is about the small
+wooden houses built inside the two-and-a-half-year window before the 1874 city-wide ban. `_4` and
+`_5` are **brick Victorian rowhouses**, not those cottages — flagged to the owner and picked
+knowingly. A first pass also mis-identified a different Gothic church as St Michael's; the owner
+caught it and the set was re-sourced from `Saint Michael's Church, Old Town, Chicago`.
 
 **Owner-supplied (no credit owed):** `art-institute_3.webp` — the Modern Wing (Renzo Piano, 2009),
 Monroe Street front.
