@@ -159,6 +159,14 @@
       "avatarEmoji": "🇨🇦",
       "bio": "Atlas Studio's Montreal bureau — audio tours of a city built on a traffic jam in the river: French and English staring at each other across a boulevard, a mountain that gave the place its name, and the outdoor staircases Montrealers chose as their own truest symbol.",
       "websiteURL": null
+    },
+    {
+      "id": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "displayName": "Atlas Studio DXB",
+      "avatarURL": null,
+      "avatarEmoji": "🇦🇪",
+      "bio": "Atlas's Dubai bureau. Wind towers and wharfage, souks and skyline — the city that built its harbour before the trade arrived, and never stopped building ahead of the need.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -49727,6 +49735,1334 @@
         "Engineering",
         "Commerce",
         "Modernist"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2b5b06c9-9464-5f87-89fb-fcf76f101068",
+      "createdAt": "2026-07-31",
+      "title": "Al Fahidi Historical Neighbourhood",
+      "shortDescription": "One of the loudest cities on earth is right behind you, and in here you cannot hear it.",
+      "longDescription": "Al Fahidi swallows noise the way it swallows heat — walls a metre thick and lanes too narrow for the sun to get a grip. The narrow passages have their own name, sikka, and drifting through them is the whole point. Above the rooflines stand the barjeel, the wind towers that were the Gulf's original air conditioning: open on all four sides, catching whatever breeze is moving and funnelling it down into the room below, with no electricity and no moving parts. Merchants from across the water built these coral-stone and gypsum houses in the late eighteen hundreds and competed over the height of their towers — a skyline race a century before the famous one. Much of the old quarter was cleared for offices and car parks as the city boomed; this is the portion that survived long enough for Dubai to change its mind, and it was restored house by house rather than rebuilt.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a7628140-c6aa-561e-9412-f9f43285cb7c",
+          "order": 0,
+          "title": "Al Fahidi Historical Neighbourhood",
+          "caption": "Listen for a moment. Somewhere behind you is one of the loudest, fastest cities on earth — and you can't hear it.",
+          "latitude": 25.2637,
+          "longitude": 55.2979,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/al-fahidi.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi_hero.webp",
+          "transcriptText": "Listen for a moment. Somewhere behind you is one of the loudest, fastest cities on earth — and you can't hear it. Al Fahidi swallows noise the way it swallows heat: with walls a metre thick and lanes too narrow for the sun to get a proper grip.\n\nYou should be inside the old quarter, in one of its sand-coloured alleyways, with rough plaster walls rising either side and square towers standing above the rooflines. These lanes have a name worth keeping: sikka — the word for the narrow passages that thread the district. Pick any of them and drift. Getting slightly lost is the whole point here.\n\nStart with the towers above you. Each one is a barjeel, a wind tower — the Gulf's original air conditioning. Open on all four sides, it catches whatever breeze is moving, no matter the direction, and funnels it down into the room below. On a still day it works in reverse, drawing warm air up and out. No electricity, no moving parts, and it made summer on this coast survivable for centuries. Merchants from across the water built these houses in the late eighteen hundreds, out of coral stone and gypsum, and competed with each other in the height of their towers — a skyline race, a century before the famous one.\n\nNow the part that isn't obvious: this district nearly vanished. As the city boomed, much of the old quarter was cleared for offices and car parks, and what you're walking through is the portion that survived long enough for Dubai to change its mind. It was restored, house by house, and filled with small galleries, museums and courtyard cafés.\n\nThat decision is worth standing still for. This is a city famous for demolishing its past on the way to its future — and here, quietly, it chose not to. Al Fahidi isn't a theme park version of old Dubai. It's the real thing, kept.\n\nFind a courtyard café before you leave, order a karak tea, and sit under a wind tower for ten minutes. You'll be using the building exactly as designed — and better than any thermostat could manage."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.2637,
+      "centroidLongitude": 55.2979,
+      "city": "Dubai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "366e4512-e924-5735-8b34-d373d4462d97",
+      "createdAt": "2026-07-31",
+      "title": "The Abra Crossing",
+      "shortDescription": "A coin buys five minutes, a wooden bench, and the best view of the old city.",
+      "longDescription": "Low wooden boats swing in and out of the dock beside the Textile Souk, each carrying about twenty passengers seated back to back on a single bench, open to the water on all sides. There is no timetable — an abra leaves when its bench is full, which at busy hours means every minute or two, and you pay the driver directly, coins passed hand to hand once the boat is moving. This is public transport older than every road in the city, running on a system that has never needed improving: turn up, sit down, cross. Out on the water you can see both halves of the original town, Deira on one bank and Bur Dubai on the other, facing each other across the reason either of them exists. The creek is a safe anchorage on a harsh coast, deep enough for trading boats — and every tower, highway and man-made island for fifty kilometres is downstream of it.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abra-crossing_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abra-crossing_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abra-crossing_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abra-crossing_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ef69fa7e-dfed-5687-ae88-5d7489c43990",
+          "order": 0,
+          "title": "The Abra Crossing",
+          "caption": "The best purchase in Dubai is not in a mall. It costs a coin or two, lasts about five minutes, and comes with a wooden bench, a diesel heartbeat and the best view of the old city that money can buy — because almost no money is involved.",
+          "latitude": 25.264,
+          "longitude": 55.2947,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/abra-crossing.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abra-crossing_hero.webp",
+          "transcriptText": "The best purchase in Dubai is not in a mall. It costs a coin or two, lasts about five minutes, and comes with a wooden bench, a diesel heartbeat and the best view of the old city that money can buy — because almost no money is involved.\n\nYou should be at the abra station on the Bur Dubai bank of the creek, beside the Textile Souk, watching low wooden boats swing in and out of the dock. Each abra carries about twenty passengers, seated back to back on a single bench down the middle, open to the water on all sides.\n\nWatch the boats work first. There's no timetable — an abra leaves when its bench is full, which at busy hours means every minute or two. You pay the driver directly, coins passed hand to hand once the boat is moving, while he steers with one arm draped over the tiller. This is public transport older than every road in the city, and it operates on a system that has never needed improving: turn up, sit down, cross.\n\nOut on the water, look both ways. Deira on one bank, Bur Dubai on the other — the two halves of the original town, facing each other across the reason either of them exists. This creek is why there's a city here at all: a safe anchorage on a harsh coast, deep enough for trading boats, defensible, fishable. Everything you can see from the middle of this crossing — and everything you can't, every tower and highway and man-made island for fifty kilometres — is downstream of this water.\n\nThat's what you're really buying for your coin. Not a ferry ride; a seat at the city's point of origin, on a boat that has outlasted every skyline built around it.\n\nWhen you land on the far side, the souks of Deira are waiting. But there's no law that says you have to be going anywhere. Some people ride back and forth a few times just to stay on the water — and honestly, they've understood the place better than most."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.264,
+      "centroidLongitude": 55.2947,
+      "city": "Dubai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Waterfront",
+        "Maritime",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c091e10f-9135-5432-bc1a-32ba5095c3ff",
+      "createdAt": "2026-07-31",
+      "title": "The Gold Souk",
+      "shortDescription": "The gold is priced by weight at the day's rate. What you haggle over is the craftsmanship.",
+      "longDescription": "Under a latticed timber roof on the Deira side, a covered arcade runs deep into the block past shopfront after shopfront of yellow metal, window glass packed floor to ceiling. A few doors in sits the Najmat Taiba, the Star of Taiba — sixty-four kilograms of twenty-one carat gold worked by fifty-five goldsmiths over forty-five days, with its Guinness certificate propped beside it. It has never been for sale; it exists purely to be looked at, which in this market counts as honest work. Beneath the theatre is a quiet fact: the gold itself is priced by weight at the day's rate, and that rate is the same in every window — posted, public, and not up for discussion. What you negotiate is the making charge laid on top, which makes this a commodities market wearing a bazaar's clothes. Dubai was moving gold to Iran and India long before the oil, and earned the name City of Gold decades before there was a skyline to hang it on.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gold-souk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gold-souk_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gold-souk_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gold-souk_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e5eedb99-90bd-5939-9e95-8c8a1f01bccf",
+          "order": 0,
+          "title": "The Gold Souk",
+          "caption": "There's a gold ring in a window near the main gate that weighs more than most of the people photographing it.",
+          "latitude": 25.2714,
+          "longitude": 55.2975,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/gold-souk.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gold-souk_hero.webp",
+          "transcriptText": "There's a gold ring in a window near the main gate that weighs more than most of the people photographing it.\n\nYou should be standing at the wooden entrance arch on the Deira side of the market, where the sign overhead reads Dubai City of Gold. Ahead of you, a covered arcade runs deep into the block — a latticed timber roof, ceiling fans turning, and beneath them shopfront after shopfront of yellow metal, window glass packed floor to ceiling.\n\nFind the ring first. A few doors in, at a shop called Kanz Jewels, the Najmat Taiba — the Star of Taiba — sits behind glass with its Guinness certificate propped beside it. Sixty-four kilograms of twenty-one carat gold, worked by fifty-five goldsmiths over forty-five days, and it has never been for sale. It exists purely to be looked at, which in this market counts as honest work.\n\nNow look at everything else. The windows hold necklaces built like armour, bangles stacked by the hundred, chains sold off the spool by length, bridal sets heavy enough to anchor a rowing boat. But here is the quiet fact underneath the sparkle: the gold itself is priced by weight, at the day's rate, and the rate is the same in every window — posted, public, not up for discussion. What you negotiate is the making charge, the craftsmanship laid on top. For all the theatre, this is a commodities market wearing a bazaar's clothes.\n\nAnd the trade is older than the skyline. Dubai was moving gold across the sea — to Iran, to India — long before the oil and the towers, and it earned the name City of Gold decades before there was a skyline to hang it on. Lately the city has made the nickname official: this whole quarter is now branded the Dubai Gold District, with plans announced for a street finished in real gold. You could call that investment, or you could call it costume — the market underneath carries on either way.\n\nCome back at dusk if you can. That's when the arcade fills, the windows blaze, and the whole lane turns the colour of the thing it sells."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.2714,
+      "centroidLongitude": 55.2975,
+      "city": "Dubai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "55d37f26-3733-5f7d-9e7a-672e0dbd7552",
+      "createdAt": "2026-07-31",
+      "title": "The Spice Souk",
+      "shortDescription": "You'll smell this market before you can see it.",
+      "longDescription": "The smallest of the old markets works hardest on your senses: sacks rolled open at the mouth, wooden scoops standing upright in powders the colour of rust and brick and mustard. The sweet smoke underneath everything is frankincense — hardened tears of tree resin from Oman, just along the coast, sold by the scoop and burned at home on charcoal, with the paler and cleaner tears being the finer grade. Look for the black limes, small and dark and wrinkled as walnuts: whole limes boiled in brine and dried in the sun, called loomi, dropped into stews and rice across the Gulf for a sour, smoky depth nothing else quite manages. Around them sit rose petals by the sack, cinnamon in whole rolled bark, saffron in tins behind the counter. Nearly all of it still arrives the old way, by boat from Iran and India and East Africa, and much is sold to restaurants and households before a visitor walks in.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spice-souk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spice-souk_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spice-souk_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spice-souk_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6f35bf5a-b12a-5ff2-b74d-2685cf1181ee",
+          "order": 0,
+          "title": "The Spice Souk",
+          "caption": "You'll smell this market before you can see it. You should be on the Deira side of the creek, a short walk in from the abra station, where the lanes narrow and the shopfronts start spilling over — sacks rolled open at the mouth, wooden scoops standing upright in powders the colour of rust and brick and mustard.",
+          "latitude": 25.2681,
+          "longitude": 55.2961,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/spice-souk.mp3",
+          "audioDurationSeconds": 149,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spice-souk_hero.webp",
+          "transcriptText": "You'll smell this market before you can see it.\n\nYou should be on the Deira side of the creek, a short walk in from the abra station, where the lanes narrow and the shopfronts start spilling over — sacks rolled open at the mouth, wooden scoops standing upright in powders the colour of rust and brick and mustard. This is the Spice Souk, the smallest of the old markets and the one that works hardest on your senses.\n\nFollow your nose down the first lane. The sweet smoke underneath everything is frankincense — hardened tears of tree resin from Oman, just along the coast, sold by the scoop and burned at home on charcoal. Look closely at the trays: the paler and cleaner the tear, the finer the grade, and most merchants will burn a piece so you can smell the difference for yourself. That's the house style here — everything is offered to your nose first, and nobody hurries you.\n\nNow find the black limes. They look like something that went wrong: small, dark, hollow, wrinkled as walnuts. In fact they're whole limes boiled in brine and dried in the sun, and dropped into stews and rice across the Gulf they give a sour, smoky depth that nothing else quite manages. Loomi, they're called. Buy three — they weigh almost nothing, and they'll outlast your luggage.\n\nAround them, the rest of the inventory: rose petals by the sack, cinnamon in whole rolled bark, saffron in small tins kept behind the counter, dried chillies strung up like decorations. Nearly all of it still arrives the old way, by boat, from Iran and India and East Africa, and much of it is sold to restaurants and households before a single visitor walks in.\n\nSo here is what this little grid of lanes really is: the oldest retail idea the city owns — goods off a boat, sold within smelling distance of the water — and every enormous glass mall Dubai has built since is this souk scaled up and chilled down. The malls got the size. The souk kept the smell.\n\nBefore you go, let a merchant burn a little frankincense for you, even if you buy nothing. Some cities hand out maps. This one hands out smoke."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 149,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.2681,
+      "centroidLongitude": 55.2961,
+      "city": "Dubai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dd678be5-73e4-53f7-af37-e183d897243f",
+      "createdAt": "2026-07-31",
+      "title": "Al Seef",
+      "shortDescription": "The old-looking half was built in 2017, a few hundred metres from the real thing.",
+      "longDescription": "Walk fifty metres along this creek-side promenade and the calendar changes under your feet: wind towers and rough plaster one moment, glass and steel the next. Al Seef is built exactly on that seam. The heritage half looks like the old town — coral-toned walls, timber beams, crooked lanes — while the other half is unapologetically contemporary, all clean lines and plate glass. Same developer, same decade, two costumes. The honest part matters: the old-looking half is not old. It was built in 2017 and aged on purpose, its plaster distressed by hand, its timber pre-weathered, its wind towers decorating rather than ventilating, while the genuinely old district sits next door. You are allowed to mind that, but consider the stranger truth first — building here has never been a way of recording what the city was, but of declaring what it intends to be, and Al Seef is that instinct pointed backwards.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-seef_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-seef_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cdf69513-d94b-51b6-a0ba-5a678be35d36",
+          "order": 0,
+          "title": "Al Seef",
+          "caption": "Walk fifty metres along this waterfront and the calendar changes under your feet.",
+          "latitude": 25.2605,
+          "longitude": 55.2997,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/al-seef.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-seef_hero.webp",
+          "transcriptText": "Walk fifty metres along this waterfront and the calendar changes under your feet. One moment you're among wind towers and rough plaster; the next, glass and steel. Al Seef is built exactly on that seam — and the seam is the attraction.\n\nYou should be on the creek-side promenade, with the water on one side and a run of low, sand-coloured buildings on the other. Boats tie up along the quay; the far bank is a wall of Deira's mid-rise city.\n\nStand at the seam for a minute and let the two halves declare themselves. The heritage half, toward Al Fahidi, looks like the old town: coral-toned walls, timber beams, wind towers, crooked lanes. The other half is unapologetically contemporary — clean lines, shipping-container shops, plate glass. Same developer, same decade, two costumes.\n\nBecause here is the honest part, and it matters: the old-looking half of Al Seef is not old. It was built in 2017, aged on purpose — plaster distressed by hand, timber pre-weathered, wind towers that decorate rather than ventilate. The genuinely old district is next door. This is a replica, sitting a few hundred metres from the original.\n\nYou're allowed to mind that. But consider the stranger truth before you do. Dubai has never treated building as a way of recording what it was — building here has always been a way of declaring what it intends to be. The towers downtown were that. The islands offshore were that. Al Seef is the same instinct pointed backwards: a city so fluent in construction that it can build its own memory, convincingly, at full scale. Whether that's a tribute or a stage set is a question the promenade leaves open — and watching the crowds drift happily across the seam, you suspect the question bothers visitors more than it bothers Dubai.\n\nEither way, the water doesn't care. The creek out there is the water that started everything, and it treats both halves the same, throwing the same evening light at the replica and the real thing alike.\n\nCome at dusk if you can. When the lanterns come on and the dhows light up, the seam all but disappears — which may be the point."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.2605,
+      "centroidLongitude": 55.2997,
+      "city": "Dubai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Waterfront",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4fe35064-260a-595a-bc69-979a9ea08d37",
+      "createdAt": "2026-07-31",
+      "title": "Burj Khalifa",
+      "shortDescription": "Eight hundred and twenty-eight metres, and the spiral is not decoration — it is an argument with the wind.",
+      "longDescription": "From Burj Park, the island of green in the middle of Downtown's lake, you are close enough to feel the scale and far enough back to see all of it at once. The tower rises in a spiral of setbacks on a three-lobed plan modelled loosely on a desert flower, narrowing as it goes. At that height the wind organises itself into rhythmic gusts strong enough to shake a building, so the shape keeps changing to confuse it. It opened in 2010 and has held the world title since, and the record will pass eventually because records do. What won't pass is the idea underneath, which is older than the tower: in the late nineteen fifties, before the oil money, Sheikh Rashid borrowed heavily to dredge the creek deeper than the day's trade required, betting the trade would come. It came. Build the thing before it is needed and the need arrives — a doctrine that runs through the port, the airline and the islands.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burj-khalifa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burj-khalifa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burj-khalifa_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burj-khalifa_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cdebbcde-69f6-5414-a3b9-545234a69740",
+          "order": 0,
+          "title": "Burj Khalifa",
+          "caption": "The tallest structure human beings have ever built is directly ahead of you — and the strange part is how your eye keeps losing the top of it.",
+          "latitude": 25.1972,
+          "longitude": 55.2744,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/burj-khalifa.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burj-khalifa_hero.webp",
+          "transcriptText": "The tallest structure human beings have ever built is directly ahead of you — and the strange part is how your eye keeps losing the top of it.\n\nYou should be in Burj Park, the small island of green in the middle of Downtown's lake, with the water between you and the base of the Burj Khalifa. This is the vantage the photographers use, because it's one of the few places close enough to feel the scale and still far enough back to see all of it at once.\n\nLet your eye climb it. The tower rises in a spiral of setbacks — a three-lobed plan, modelled loosely on a desert flower, that narrows as it goes. Eight hundred and twenty-eight metres, opened in 2010, and the spiral is not decoration: at that height the wind will organise itself into rhythmic gusts strong enough to shake a building, so the shape keeps changing to confuse it. The tower is, quite literally, arguing with the sky.\n\nIt has held the world title since 2010, and a taller one is perpetually promised somewhere — one is rising across the peninsula now. The record will pass eventually, because records do. What won't pass is the idea underneath, and the idea is older than the tower. In the late nineteen fifties, before the oil money, the ruler Sheikh Rashid borrowed heavily to dredge the creek — to make the harbour deeper than the day's trade required, betting the trade would come. It came. Build the thing before it's needed, and the need arrives: that doctrine has run through the port, the airline, and the islands ever since, and it reached its full height here, in a tower planned before anyone was asking for it.\n\nAnd notice the water you're standing beside. On the creek, the water came first and the city grew out of it. Here, the city came first and built itself the water. The order reversed; the bet, exactly the same.\n\nBefore you leave, find the very top one more time — the spire, where the building finally lets go of the ground. It's a hard tower to finish looking at. That may be the point."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 141,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.1972,
+      "centroidLongitude": 55.2744,
+      "city": "Dubai",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f0298daa-cbd3-5ebe-8bab-ac64ecfc3f0a",
+      "createdAt": "2026-07-31",
+      "title": "The Dubai Fountain",
+      "shortDescription": "The best five minutes in Downtown are free, public, and repeated all evening.",
+      "longDescription": "The lake between the mall and the tower looks ornamental. It is an instrument — one of the largest choreographed fountain systems anywhere — resting between performances, and it covers about twelve hectares of what was open desert within living memory. Arcs of nozzles run its length, sending columns of water as high as one hundred and fifty metres, timed to music and wrapped in light. Each performance lasts about five minutes and in the evening they come every half hour, choreographed differently each time: Arabic classics, opera, film scores. The studio behind it is the same Californian team that made the fountains at the Bellagio, and this was the bigger commission. The engineering is theatrical on purpose — the tallest shots are launched with compressed air, so the water moves faster than the eye expects, which is why a crowd gasps before it has decided to. In a city that sells tickets to nearly everything, this is free.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-fountain_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-fountain_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-fountain_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-fountain_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c4555923-62f2-553f-a4a9-e483f1a43d04",
+          "order": 0,
+          "title": "The Dubai Fountain",
+          "caption": "Every half hour after dark, this lake goes to work. You should be on the waterfront promenade between the mall and the water, with the Burj Khalifa rising on the far side and the lake spread flat in front of you.",
+          "latitude": 25.1954,
+          "longitude": 55.2746,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-fountain.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-fountain_hero.webp",
+          "transcriptText": "Every half hour after dark, this lake goes to work.\n\nYou should be on the waterfront promenade between the mall and the water, with the Burj Khalifa rising on the far side and the lake spread flat in front of you. It looks ornamental. It's an instrument — one of the largest choreographed fountain systems anywhere, resting between performances — and the lake itself covers about twelve hectares of what was open desert within living memory.\n\nFace the water. Under the surface, arcs of nozzles run the length of the lake, and when the show starts they send columns of water as high as one hundred and fifty metres — higher than most towers in most cities — timed to music and wrapped in light. Each performance lasts about five minutes, and in the evening they come every half hour, each one choreographed differently: Arabic classics, opera, film scores. If you don't like the programme, wait thirty minutes. There are a couple of afternoon performances as well, but the fountain is a nocturnal creature — the show is water and light in equal measure, and it needs the dark to do its full work.\n\nThe studio behind it is the same Californian team that made the fountains at the Bellagio in Las Vegas — and this was the bigger commission. The engineering is theatrical on purpose: the tallest shots are launched with compressed air, so the water moves faster than the eye expects water to move, which is why a crowd gasps before it has decided to.\n\nNow look away from the lake for a moment and look at the railing. Every language on the promenade is standing at it. In a city that sells tickets to nearly everything — the tower behind the lake included — the best five minutes in Downtown are free, public, and repeated all evening. That's rarer here than it sounds, and the crowd is the proof: for the length of one song, several thousand strangers are watching exactly the same thing, and nobody paid.\n\nStay for two shows if you can. The water is the same and the choreography never is — and the second time through, you'll know to watch the crowd as much as the lake."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.1954,
+      "centroidLongitude": 55.2746,
+      "city": "Dubai",
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Public Square",
+        "Performance",
+        "After Dark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "39f7c17f-f07d-5454-99be-49a2cee96a2c",
+      "createdAt": "2026-07-31",
+      "title": "Museum of the Future",
+      "shortDescription": "Most buildings you look at. This one you can read.",
+      "longDescription": "A silver ring stands on a green hill beside Sheikh Zayed Road — an oval of polished steel seventy-seven metres high with seven storeys' worth of empty space in the middle, its whole surface flowing with Arabic calligraphy. It refuses to read as a tower; it reads as an object, set down. It is a torus with no columns holding it up, the steel skin itself the structure, carrying the curve on a hidden lattice. The hole in the middle is deliberate: the building stands for what we know and the void for what we haven't imagined yet. The calligraphy is not applied to the windows — it is the windows, the letters cut straight through the steel so daylight enters the building through its own sentences. The lines are by Sheikh Mohammed, the ruler of Dubai, on his favourite theme: that the future belongs to the people who can imagine, design and build it. After dark the message runs in silver light.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-the-future_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-the-future_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-the-future_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-the-future_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9ab46e5f-edfb-58e1-baa2-a64b0730fd9e",
+          "order": 0,
+          "title": "Museum of the Future",
+          "caption": "Most buildings you look at. This one you can read. You should be on the raised walkway along Sheikh Zayed Road, near the Emirates Towers, looking at a silver ring standing on a green hill — an oval of polished steel with seven storeys' worth of empty space in the middle, its whole surface flowing with Arabic calligraphy.",
+          "latitude": 25.2193,
+          "longitude": 55.2821,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/museum-of-the-future.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-the-future_hero.webp",
+          "transcriptText": "Most buildings you look at. This one you can read.\n\nYou should be on the raised walkway along Sheikh Zayed Road, near the Emirates Towers, looking at a silver ring standing on a green hill — an oval of polished steel with seven storeys' worth of empty space in the middle, its whole surface flowing with Arabic calligraphy. This is the Museum of the Future, and it is its own first exhibit.\n\nTake the shape in first. The whole thing stands seventy-seven metres high, though it refuses to read as a tower; it reads as an object, set down. It's a torus — a ring — with no columns holding it up; the steel skin is the structure, a hidden lattice carrying the whole curve. And the hole in the middle is deliberate. The designers were plain about what it means: the building stands for what we know, and the void stands for what we haven't imagined yet. Dubai built a monument with the future left blank on purpose.\n\nNow the writing. The calligraphy isn't applied to the windows — it is the windows. The letters are cut straight through the steel, and daylight enters the building through its own sentences. The lines are by Sheikh Mohammed, the ruler of Dubai, on his favourite theme — that the future belongs to the people who can imagine it, design it and build it, and that it doesn't wait around for anyone. After dark the building glows through the script, and the message runs in silver light.\n\nThere's an old rhyme in this, if you know the city. Dubai's first great buildings were engineered around air — wind towers above the creek, built to catch a breeze and pull it down into the rooms. Its newest landmark is engineered around emptiness. The technology changed completely; the habit of building an idea, rather than just a building, did not.\n\nYou can circle the whole thing from out here, and outside is honestly where the architecture lives. Come at dusk if you can, when the sky goes violet and the sentences light up stroke by stroke — a building reading itself aloud to the motorway."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.2193,
+      "centroidLongitude": 55.2821,
+      "city": "Dubai",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Contemporary",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "82627f41-5c54-57b9-b236-c34eb22de667",
+      "createdAt": "2026-07-31",
+      "title": "Jumeirah Mosque",
+      "shortDescription": "Most mosques in this city you admire from the outside. This one holds the door open.",
+      "longDescription": "Pale sand-coloured stone, a central dome, two tall minarets, and carving as fine as lace across nearly every surface — one of the city's best-loved buildings, and one of very few mosques in Dubai that welcomes non-Muslim visitors inside. The style is borrowed from medieval Cairo, the great mosque tradition of the Fatimid era, which is why it photographs like something six centuries old; in fact it was finished in 1979, and the stonework is the giveaway, too crisp and too perfect for anything genuinely medieval. Sheikh Rashid commissioned it as a gift to his son Sheikh Mohammed, who rules the city now. The visitor programme runs under a motto worth taking at face value — Open Doors, Open Minds — beginning in the majlis with coffee and dates and ending in the prayer hall, where the format is simply questions, and the guides prefer the hard ones to the polite ones.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jumeirah-mosque_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jumeirah-mosque_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jumeirah-mosque_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "66ba4267-769e-5f0c-88db-925ed2b4b4e0",
+          "order": 0,
+          "title": "Jumeirah Mosque",
+          "caption": "Most mosques in this city you admire from the outside. This one holds the door open.",
+          "latitude": 25.2335,
+          "longitude": 55.2658,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jumeirah-mosque.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jumeirah-mosque_hero.webp",
+          "transcriptText": "Most mosques in this city you admire from the outside. This one holds the door open.\n\nYou should be on the Jumeirah Beach Road side, looking at a building of pale, sand-coloured stone — a central dome, two tall minarets, and carving that covers nearly every surface, fine as lace. This is the Jumeirah Mosque, one of the city's best-loved buildings and one of the very few mosques in Dubai that welcomes non-Muslim visitors inside.\n\nStart with the stone. The style is borrowed from medieval Cairo — the great mosque tradition of the Fatimid era — which is why it photographs like something six centuries old. It was finished in 1979. The minarets are the giveaway if you look closely — the stonework is too crisp, the geometry too perfect, for anything genuinely medieval. It was commissioned by Sheikh Rashid, the ruler who dredged the creek, as a gift to his son Sheikh Mohammed, who rules the city now, and it has become the face of Islam that most visitors to Dubai actually meet.\n\nThat meeting is the point. The mosque anchors a programme run under a motto worth taking at face value: Open Doors, Open Minds. Visits begin in the majlis with coffee and dates, move past the fountains where worshippers wash before prayer, and end in the prayer hall itself, under the dome, where the format is simply questions. You are invited — genuinely — to ask anything, and the guides have heard it all and prefer the hard questions to the polite ones. Photography is welcome. Modest dress is asked for, a head scarf for women, and the reward is a room most cities in the region keep closed.\n\nHere's what makes this stop unusual, and it isn't the architecture. Nearly everything a visitor learns about this culture arrives second-hand — a guidebook, a screen, a paraphrase. This is the one room in Dubai where the culture explains itself, in its own house, in person, and takes questions afterwards.\n\nIf the doors aren't open when you're here, stay a moment anyway. In the early morning and again at dusk, the stone goes gold and the carving catches shadows — and the building does its quiet work from the outside too."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.2335,
+      "centroidLongitude": 55.2658,
+      "city": "Dubai",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Faith",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "131b9799-bedf-5962-8553-28533a05b88f",
+      "createdAt": "2026-07-31",
+      "title": "Etihad Museum",
+      "shortDescription": "Nations usually begin with a war. This one began with a signature.",
+      "longDescription": "A white pavilion curves out of the ground like a sheet of paper caught mid-fold, seven golden columns leaning out of it, an enormous flag flying beyond — and beside it the modest round building that is the reason all of this exists. The flagpole stands one hundred and twenty-three metres and marks where the first flag of the United Arab Emirates was raised. On the second of December 1971, as Britain wound up its treaties in the Gulf, the rulers of six emirates sat at a round table in the Union House and signed the declaration that made them one country; the seventh, Ras Al Khaimah, joined soon after. The room has been restored to exactly how it looked that morning, down to the chairs. The newer building is written in plain symbolism: the curved roof is the manuscript unfurled, the seven leaning columns are the pens. The country you are standing in is younger than the Boeing 747.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etihad-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etihad-museum_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f147972a-8370-5064-b891-794c487747e8",
+          "order": 0,
+          "title": "Etihad Museum",
+          "caption": "Nations usually begin with a war. This one began with a signature — and you're standing a few steps from where the pen came down.",
+          "latitude": 25.2396,
+          "longitude": 55.2827,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/etihad-museum.mp3",
+          "audioDurationSeconds": 148,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/etihad-museum_hero.webp",
+          "transcriptText": "Nations usually begin with a war. This one began with a signature — and you're standing a few steps from where the pen came down.\n\nYou should be at the western end of Jumeirah's beach road, where a white pavilion curves out of the ground like a sheet of paper caught mid-fold, with seven golden columns leaning out of it and an enormous flag flying beyond. The modest round building beside the pavilion is the reason all of this exists.\n\nFind the flagpole first. It stands one hundred and twenty-three metres tall, and it marks the spot where the first flag of the United Arab Emirates was raised. On the second of December, 1971, as Britain wound up its treaties in the Gulf, the rulers of six emirates sat at a round table in that circular building — the Union House — and signed the declaration that made them one country. The seventh, Ras Al Khaimah, joined soon after. The room has been restored to exactly how it looked that morning, down to the chairs, and even the shoreline and gardens around you were relandscaped to match photographs from that day.\n\nNow read the architecture of the newer building, because it's written in plain symbolism. The curved roof is the manuscript — the agreement itself, unfurled. The seven leaning columns are the pens that signed it. And most of the museum is underground, beneath the lawn: the story kept below, the signature celebrated above. As national monuments go, it's unusually literal, and better for it — and the gold catches the light differently every hour, so the manuscript appears to move.\n\nHere's the thing to carry away, and it reframes every other stop in this city. The country you're standing in is younger than the Boeing 747. Everything you've seen or will see here — every tower, every man-made island, the entire skyline — postdates the piece of paper signed in that round room. Nineteen seventy-one is the hinge the whole place swings on: before it, a coastline of small trading towns; after it, this.\n\nWalk over to the Union House before you leave, even just to stand outside it. It's small, white, round, and quiet — and it out-ranks everything taller."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 148,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.2396,
+      "centroidLongitude": 55.2827,
+      "city": "Dubai",
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "296d2093-704e-5892-a8c6-ee614a63cd4a",
+      "createdAt": "2026-07-31",
+      "title": "The Textile Souk",
+      "shortDescription": "A street engineered so strangers from different ends of the sea can reach a price.",
+      "longDescription": "Under a restored wooden arcade running back from the abra station — high timber roof, carved brackets, a straight shaded street — small shops spill their goods out to meet you: silk, cotton, pashmina, sequinned fabric by the bolt, scarves in every colour that exists and several that shouldn't. The shopkeepers will greet you, and that is not pressure but the format. Commerce here is conversational and always has been: touch the cloth, ask the price, look unconvinced, hear a better one. The haggle is not a trick played on tourists, it is the original price mechanism of every port on this ocean, still running. For generations wooden dhows crossed from India and beyond with cloth in their holds, and this arcade is where that cargo met its customers — the retail end of a trade route measured in monsoons. The goods have changed with the centuries; the geometry hasn't. Boats at one end, bargaining at the other, shade over everything.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/textile-souk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/textile-souk_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/textile-souk_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "10c78bf2-95a8-5e90-9e4e-f5a963ebf120",
+          "order": 0,
+          "title": "The Textile Souk",
+          "caption": "Every city used to shop like this — under one long roof, in the shade, at talking distance.",
+          "latitude": 25.263,
+          "longitude": 55.2961,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/textile-souk.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/textile-souk_hero.webp",
+          "transcriptText": "Every city used to shop like this — under one long roof, in the shade, at talking distance. Most cities stopped. This one kept the arcade and simply built the malls elsewhere.\n\nYou should be in the Textile Souk in Bur Dubai, under the restored wooden arcade that runs back from the abra station. High timber roof, carved brackets, a straight shaded street of small shops with their goods spilling out to meet you: silk, cotton, pashmina, sequinned fabric by the bolt, scarves in every colour that exists and several that shouldn't.\n\nStep in under the roof and slow down to souk pace. The shopkeepers will greet you — that's not pressure, that's the format. Commerce here is conversational and always has been: you're expected to touch the cloth, ask the price, look unconvinced, and hear a better one. Nobody is offended by a polite no. The haggle isn't a trick played on tourists; it's the original price mechanism of every port on this ocean, still running.\n\nAnd a port is exactly what you're standing in. For generations, wooden dhows crossed from India and beyond with cloth in their holds, and this arcade is where that cargo met its customers — the retail end of a trade route measured in monsoons. The tailors in the surrounding streets are part of the same system: buy the fabric here in the morning, collect the finished garment before your ship — or these days, your flight — leaves. The goods on the shelves have changed with the centuries. The geometry hasn't: boats at one end, bargaining at the other, shade over everything.\n\nThat's what a souk really is, and why the word doesn't quite translate to \"market.\" It's infrastructure for conversation — a street engineered so that strangers from different ends of the sea can stand comfortably in the shade long enough to reach a price.\n\nWalk the arcade end to end once without buying anything, just to learn its length. Then, if a bolt of blue silk has been quietly following you the whole way — and one usually has — go back and begin the conversation."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.263,
+      "centroidLongitude": 55.2961,
+      "city": "Dubai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "32130aa0-c428-5cb8-bf65-49d780ad4d02",
+      "createdAt": "2026-07-31",
+      "title": "Al Shindagha",
+      "shortDescription": "Until 1958 the ruler of Dubai lived here, close enough to the water to count the boats coming in.",
+      "longDescription": "The low quarter where the creek meets the open sea is the oldest address in Dubai's story — the neighbourhood where the ruling family settled, now an open-air museum of more than twenty restored coral-and-gypsum houses with wind towers. The grandest is Sheikh Saeed Al Maktoum's, built in 1896, home of the ruler who led Dubai from 1912 to 1958 and grandfather of the ruler who built the skyline visible far upriver on a clear day: one house, two horizons. Nearby stands the Perfume House, once home to a sheikha of the family who was a renowned perfumer. But the story this quarter really keeps is the one that made and nearly unmade the town. For centuries the wealth of this coast came up from the seabed on held breath — pearls, gathered by divers working long seasons in debt to the boats that carried them — until cultured pearls from Japan ended the trade almost entirely, and the town had to invent a different future.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-shindagha_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-shindagha_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2ef65de6-652d-5228-b592-c3c69b051baf",
+          "order": 0,
+          "title": "Al Shindagha",
+          "caption": "Until 1958, the ruler of Dubai lived here — not in a palace on a hill, but in a coral-stone house at the mouth of the creek, close enough to the water to count the boats coming in.",
+          "latitude": 25.268,
+          "longitude": 55.2901,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/al-shindagha.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-shindagha_hero.webp",
+          "transcriptText": "Until 1958, the ruler of Dubai lived here — not in a palace on a hill, but in a coral-stone house at the mouth of the creek, close enough to the water to count the boats coming in. In this town, that was the throne room: a view of the harbour.\n\nYou should be in Al Shindagha, the low quarter where the creek meets the open sea, among restored coral-and-gypsum houses with wind towers. This is the oldest address in Dubai's story — the neighbourhood where the ruling family settled, and today an open-air museum of more than twenty restored houses.\n\nBegin at the water's edge, then work inward. The grandest house is Sheikh Saeed Al Maktoum's, built in 1896 — home of the ruler who led Dubai from 1912 to 1958, and grandfather of the ruler who built the skyline you can see rising far upriver on a clear day. One house, two horizons. Nearby is the Perfume House, once the home of a sheikha of the family who was a renowned perfumer; part of the collection inside was hers, and the rooms explain why fragrance runs so deep here that the whole city still trails oud through its lobbies and lanes.\n\nBut the story this quarter really keeps is the one that made and nearly unmade the town. For centuries, the wealth of this coast came up from the seabed on held breath — pearls, gathered by divers who worked long seasons in debt to the boats that carried them, in one of the hardest livelihoods the sea has ever asked of anyone. Then, within a few short years, cultured pearls from Japan ended the trade almost entirely, and the town at the creek mouth was left to invent a different future.\n\nWhich, standing here, you can see it did. The family bet everything on the creek — on trade, on the harbour, on staying open to the sea in every sense. Al Shindagha is where that decision was made, in rooms you can now walk through.\n\nTake the waterfront path before you leave, where the creek widens toward open water. The town has been watching arrivals from this exact spot for a very long time. Add yourself to the record."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.268,
+      "centroidLongitude": 55.2901,
+      "city": "Dubai",
+      "primaryCategory": "history",
+      "tags": [
+        "District",
+        "History",
+        "Maritime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "985991d9-89c3-58b7-9a9d-61dfa39f61c7",
+      "createdAt": "2026-07-31",
+      "title": "Al Fahidi Fort (Dubai Museum)",
+      "shortDescription": "Built in 1787 — and for most of its life it wasn't a fort so much as the entire state.",
+      "longDescription": "The oldest building in this city of towers went up eleven years after the United States declared independence, and about two centuries before almost everything else around it. One honest note: the Dubai Museum housed inside has been closed for a long restoration with no confirmed reopening date, so today the walls are the exhibit. They are a good one. The fort is built largely of coral stone, blocks cut from the seabed itself and bound with gypsum — the same materials as the merchant houses nearby, but stacked for defence rather than comfort, and on any weathered patch you can still make out the coral's texture. For most of its life this was not a fort the way Europe means the word. It was ruler's residence, garrison, armoury, storehouse and jail inside one walled square you can walk around in a couple of minutes. When this was everything Dubai had, everything Dubai was fit inside it.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi-fort_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi-fort_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi-fort_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3838231b-b0f5-51b5-8eef-4ba4d2526642",
+          "order": 0,
+          "title": "Al Fahidi Fort (Dubai Museum)",
+          "caption": "The oldest building in this city of towers went up in 1787 — eleven years after the United States declared independence, and about two centuries before almost everything else you've seen today.",
+          "latitude": 25.2635,
+          "longitude": 55.2972,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/al-fahidi-fort.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi-fort_hero.webp",
+          "transcriptText": "The oldest building in this city of towers went up in 1787 — eleven years after the United States declared independence, and about two centuries before almost everything else you've seen today.\n\nYou should be outside Al Fahidi Fort, a low, sand-coloured stronghold with rounded and squared corner towers, old cannons resting by the walls, and a traditional wooden dhow displayed nearby. One honest note before anything else: the Dubai Museum housed inside has been closed for a long restoration, with no confirmed reopening date — so today, the walls are the exhibit. As it happens, they're a good one.\n\nCircle it slowly. The fort is built largely of coral stone — blocks cut from the seabed itself, bound with gypsum, the same materials as the merchant houses nearby but stacked for defence rather than comfort. Look closely at any weathered patch of wall and you can sometimes make out the texture of the coral. This building is the sea, rearranged.\n\nThen consider what it held. For most of its life, Al Fahidi Fort wasn't a fort the way Europe means the word — one military installation among a state's many buildings. It was the state. Ruler's residence at times, garrison, armoury, storehouse and jail, all inside one walled square you can walk around in a couple of minutes. When this was everything Dubai had, everything Dubai was fit inside it. The government of a town of a few thousand people, in one building smaller than a modern supermarket.\n\nThat's the measurement worth taking away. Stand at any corner of the fort and look up: somewhere beyond the rooftops is a skyline with the tallest structure on earth in it. The entire distance between that and this — between a coral-walled square and a city of millions — was covered in a handful of generations. Most cities take a thousand years to grow that far. This one did it inside living memory, and a few of the people who remember the fort as the edge of town are still around to say so.\n\nWhen the museum inside reopens, it will be worth your time. Until then, the outside tells the story well enough: small walls, enormous distance."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.2635,
+      "centroidLongitude": 55.2972,
+      "city": "Dubai",
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "83422af8-6a3c-576b-906f-ee15aa52e658",
+      "createdAt": "2026-07-31",
+      "title": "The Dhow Wharfage",
+      "shortDescription": "The city's oldest business model still runs on wood and rope, within sight of the metro line.",
+      "longDescription": "On the Deira bank of the creek the water is lined for hundreds of metres with wooden cargo dhows, moored two and three deep, hulls painted blue and white and rust-red, sterns rising high and square. The quay in front of them is stacked with freight in the open air: shrink-wrapped appliances, towers of tyres, boxed televisions, sacks and crates addressed in three alphabets. Watch one boat load, by hand and by small crane, cargo walked up a plank and lashed down in layers until the deck disappears. The crews live aboard and the boats say so — laundry rigged from the mast, cooking pots by the wheelhouse. Some hulls are decades old, built by shipwrights working from memory rather than blueprints, and they run to Iran, Oman, India and East Africa, carrying flat-screens where the pearls and dates used to go. None of it is staged: there is no ticket booth and no interpretive panel, because the trade simply hasn't stopped.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dhow-wharfage_hero.webp",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c899b8b8-eee6-5a1e-8212-a85dae2ca821",
+          "order": 0,
+          "title": "The Dhow Wharfage",
+          "caption": "Somewhere on this quay, a refrigerator is waiting to cross the sea on a wooden boat.",
+          "latitude": 25.2663,
+          "longitude": 55.3063,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dhow-wharfage.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dhow-wharfage_hero.webp",
+          "transcriptText": "Somewhere on this quay, a refrigerator is waiting to cross the sea on a wooden boat.\n\nYou should be on Baniyas Road, on the Deira bank of the creek, where the water is lined for hundreds of metres with wooden cargo dhows — moored two and three deep in places, hulls painted blue and white and rust-red, sterns rising high and square like sideboards. The quay in front of them is stacked with freight in the open air: shrink-wrapped appliances, towers of tyres, boxed televisions, sacks and crates addressed in three alphabets.\n\nPick one boat and stay with it. Watch how it loads — by hand and by small crane, cargo walked up a plank and lashed down in layers until the deck disappears. The crews live aboard, and the boats say so: laundry drying on a line rigged from the mast, cooking pots by the wheelhouse, a man asleep in the one patch of shade. Some of these hulls are decades old, built by shipwrights working from memory rather than blueprints, and they run to Iran, to Oman, down to India and East Africa — the same short-sea routes this creek has served for well over a century, now carrying flat-screens where the pearls and the dates used to go.\n\nAnd notice that none of it is staged for you. There is no ticket booth and no interpretive panel, because the trade simply hasn't stopped. The largest dhows moved years ago to a bigger facility near the creek mouth, and the quay under your feet has been freshly rebuilt — the city keeps investing in a business some people assumed it would quietly outgrow.\n\nHere's what's worth standing still for. Everything the creek started — the ports, the towers, the man-made islands — grew up and moved out. This stretch is the part that never left. The city's oldest business model, buy it here and sail it there, still runs on wood and rope within sight of the metro line.\n\nStay for one departure if you can. A loaded dhow easing out into the channel, riding low, is the old city leaving for work — the way it has every working day since long before anyone thought to watch."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.2663,
+      "centroidLongitude": 55.3063,
+      "city": "Dubai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Waterfront",
+        "Maritime",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8cb1ee17-9758-5597-ae23-55308c3457f4",
+      "createdAt": "2026-07-31",
+      "title": "Dubai Frame",
+      "shortDescription": "Every other monument here was built to be looked at. This one was built for looking.",
+      "longDescription": "Two gold towers joined by a bridge across the top form a picture frame fifteen storeys tall — one hundred and fifty metres, faced in roughly fifteen thousand square metres of gold-toned steel, and holding the official record as the largest picture frame in the world. The frame is aimed. Look through it toward the north and the rectangle holds the old city: Deira, the creek quarters, the low rooftops where everything started. Walk around and look the other way and it holds the new one, the towers of Sheikh Zayed Road marching off toward the Burj Khalifa. It was placed on this exact spot to hang both halves of Dubai on the same wall, in the same size window, with no favourite. You can ride to the top, where a glass-floored bridge runs between the towers, but the object works from the ground — plenty of structures give you a view, and very few compose one.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-frame_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-frame_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-frame_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-frame_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-frame_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8da37e2f-6b7e-5be0-b579-bf1632a81883",
+          "order": 0,
+          "title": "Dubai Frame",
+          "caption": "From where you're standing, the whole argument of this city fits inside one rectangle.",
+          "latitude": 25.2352,
+          "longitude": 55.3004,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-frame.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-frame_hero.webp",
+          "transcriptText": "From where you're standing, the whole argument of this city fits inside one rectangle.\n\nYou should be in Zabeel Park, looking up at two gold towers joined by a bridge across the top — a picture frame fifteen storeys tall, one hundred and fifty metres, faced in roughly fifteen thousand square metres of gold-toned steel. It holds the official record as the largest picture frame in the world, which is the most Dubai sentence in this entire tour.\n\nLine up the view first, because the frame is aimed. Stand so you're looking through it toward the north, and the rectangle holds the old city — Deira, the creek quarters, the low rooftops where everything started. Walk around and look through it the other way, and it holds the new one: the towers of Sheikh Zayed Road marching off toward the Burj Khalifa. The structure was placed on this exact spot to do that — to hang both halves of Dubai on the same wall, in the same size window, with no favourite.\n\nYou can ride to the top, where a glass-floored bridge runs between the towers and the view does both directions at once. But the object works from the ground, which is rarer than it sounds — plenty of structures give you a view, and very few compose one.\n\nOne more layer, quietly. The design began as the winning entry in an international competition, and the architect who won it spent years afterwards in dispute over whether the built version was still rightfully his — a question the gold cladding declines to answer.\n\nHere's what makes the Frame worth the detour, though. Every other monument in this city was built to be looked at. This is the only one built for looking — a viewing device the size of a tower block, pointed at the city that made it. Dubai spent fifty years constructing a skyline, and then built itself a way to see the whole thing at once.\n\nCome in the last hour of daylight if you can choose your moment. The cladding goes from gold to fire, and for a few minutes the frame outshines everything it frames."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.2352,
+      "centroidLongitude": 55.3004,
+      "city": "Dubai",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3166a9a3-1bcf-57e5-b493-6cd2345895d7",
+      "createdAt": "2026-07-31",
+      "title": "The DIFC Gate",
+      "shortDescription": "A triumphal arch borrowed for finance — and behind it, an unreasonable amount of art.",
+      "longDescription": "The Gate is a grey stone building shaped like a monumental arch, standing at the head of the financial district's main axis with the Emirates Towers lined up beyond it. It opened in 2004 as the front door of the Dubai International Financial Centre, and the shape does exactly what you suspect: a triumphal arch, the form Rome used for victories, borrowed for finance. The real architecture, though, is invisible. Cross into this district and the legal system changes — the DIFC runs its own courts, in English, on common law, separate from the rest of the city. It is a jurisdiction wearing a business suit. Behind the arch lies Gate Village, a cluster of low stone buildings threaded with lanes and the district's art quarter: Christie's and Sotheby's both keep rooms here, sculpture stands in the open as part of what the district calls the country's largest public art collection, and twice a year the lanes turn into a free open-air art festival.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/difc-gate_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/difc-gate_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b4f04259-c19b-5f36-8929-189ad16ff52b",
+          "order": 0,
+          "title": "The DIFC Gate",
+          "caption": "This district runs on its own laws, its own courts, and an unreasonable amount of art.",
+          "latitude": 25.2089,
+          "longitude": 55.2817,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/difc-gate.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/difc-gate_hero.webp",
+          "transcriptText": "This district runs on its own laws, its own courts, and an unreasonable amount of art.\n\nYou should be at the foot of The Gate — the grey stone building shaped like a monumental arch, standing at the head of the financial district's main axis with the Emirates Towers lined up beyond it. Office floors above, a void through the middle, and a straight ceremonial line drawn through the centre of the money.\n\nStart with the arch. It opened in 2004 as the front door of the Dubai International Financial Centre, and the shape is doing exactly what you suspect: a triumphal arch, the form Rome used for victories, borrowed for finance. But the real architecture here is invisible. Cross into this district and the legal system changes — the DIFC runs its own courts, in English, on common law, separate from the rest of the city. It's a jurisdiction wearing a business suit: a legal island drawn onto the map so that international money could operate under rules it already knew.\n\nNow walk behind the Gate into Gate Village — a cluster of low stone buildings threaded with lanes, and the reason you're really here. This is the district's art quarter. Christie's and Sotheby's both keep rooms in these buildings, alongside international galleries and regional ones — auction houses selling old masters in a district younger than most of the art. Sculpture stands in the open between the buildings, part of what the district calls the country's largest public art collection, and twice a year the lanes turn into an open-air art festival that anyone can wander into for free.\n\nEvery banking capital eventually buys itself a culture. Florence did it, Amsterdam did it, London did it — the money arrives first and the art follows, partly as ornament, partly as sincere appetite, and history has never fully separated the two. Dubai simply ran the sequence faster than anyone, and put the collection outdoors where you can audit it yourself.\n\nCome in the early evening, when the galleries light up and the towers empty out. The district is at its best at the hour the money goes home and the art stays."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.2089,
+      "centroidLongitude": 55.2817,
+      "city": "Dubai",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "da4f0595-0607-58c2-9996-676b1734b626",
+      "createdAt": "2026-07-31",
+      "title": "Alserkal Avenue",
+      "shortDescription": "An industrial estate in Al Quoz, hiding one of the region's most serious concentrations of contemporary art.",
+      "longDescription": "Your map has not made a mistake. This is marble cutters, car workshops and tyre shops — the working back-of-house of a city that mostly shows you its front — and folded into the middle of it, behind gates that barely announce themselves, sits a remarkable density of galleries. In the central courtyard they call The Yard, the gallery names are small, the doors are big, and nothing outside tells you what any building holds. Picking a door and going through it is the entire method. Behind one warehouse front is a white-walled gallery; behind the next, Cinema Akil, one of the first arthouse cinemas anywhere in the Gulf; behind a third, a design studio or a chocolate maker. The compound belonged to the Alserkal family's industrial businesses, and from 2008 they began handing warehouses to galleries one lease at a time. Look for the building wearing curtains — that is Concrete, rebuilt by OMA as Rem Koolhaas's practice's first building in Dubai.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alserkal-avenue_hero.webp",
+      "additionalImageURLs": null,
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f1c90d85-12cc-512e-a5a5-f652f2c80211",
+          "order": 0,
+          "title": "Alserkal Avenue",
+          "caption": "Your map has not made a mistake. This is an industrial estate — marble cutters, car workshops, tyre shops, the working back-of-house of a city that mostly shows you its front.",
+          "latitude": 25.1436,
+          "longitude": 55.2275,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/alserkal-avenue.mp3",
+          "audioDurationSeconds": 158,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/alserkal-avenue_hero.webp",
+          "transcriptText": "Your map has not made a mistake. This is an industrial estate — marble cutters, car workshops, tyre shops, the working back-of-house of a city that mostly shows you its front. And folded into the middle of it, behind gates that barely announce themselves, sits one of the most serious concentrations of contemporary art anywhere in the region.\n\nYou should be inside Alserkal Avenue, in Al Quoz, standing in the central courtyard they call The Yard — a wide open clearing between rows of corrugated warehouses. The gallery names are small, the doors are big, and nothing out here tells you what any building holds.\n\nPick a door and go through it. That is the entire method of this place. Behind one warehouse front is a white-walled gallery showing painters from three continents; behind the next, an independent cinema — Cinema Akil, one of the first arthouse cinemas anywhere in the Gulf; behind a third, a design studio or a chocolate maker or a climbing wall. The compound belonged to the Alserkal family's industrial businesses, and from 2008 they began handing warehouses over to galleries, one lease at a time, until the district reached critical mass.\n\nLook for the building that appears to be wearing curtains. That is Concrete — a warehouse rebuilt by OMA, the Dutch practice founded by Rem Koolhaas, as its first building in Dubai. Its façade panels slide apart like stage drapery, and the biggest exhibitions on the Avenue happen inside it.\n\nNow the thing that makes this district the other half of a story. Downtown, in the financial centre, the art arrived where the money already was — sculpture lining a corridor between banks. Out here the order ran in reverse: the galleries came first, renting warehouses because warehouses were cheap, and the money now has to drive out from the towers to find them. Nothing here is distressed for effect or staged for your camera. The paint peels because it peels.\n\nTake your time, and do not skip the unpromising doors — the reward structure of this place is inverted, and the plainest façades tend to hide the best rooms. The city out there sells you the view. This district asks you to open things."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 158,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.1436,
+      "centroidLongitude": 55.2275,
+      "city": "Dubai",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "District",
+        "Art",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9b06ec4a-8e0d-59af-af1c-3a8cf6870342",
+      "createdAt": "2026-07-31",
+      "title": "Kite Beach",
+      "shortDescription": "The best seat for Dubai's most private building is its most public beach.",
+      "longDescription": "From the sand at Umm Suqeim, with the running track and food kiosks behind you and kites carving over the water, the sail of the Burj Al Arab stands alone against the sky down the shoreline. The hotel rises from its own man-made island a few hundred metres offshore, connected by a private causeway, finished in the late nineteen nineties with one explicit job: to put Dubai on the world's map. It worked. The shape is a sail at full stretch, a deliberate echo of the dhows that built the coast's first fortunes, and the famous seven-star label was coined by a visiting journalist — the hotel has never once claimed it. The beach itself is the real subject here. The track behind you runs some fourteen kilometres along the coast and is busy from first light; the wind steadies in the afternoon, which is when the kitesurfers own the water. No ticket, no gate.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kite-beach_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kite-beach_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kite-beach_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kite-beach_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5853790e-7d58-52d4-83b6-fbeda8be968e",
+          "order": 0,
+          "title": "Kite Beach",
+          "caption": "One of the most photographed buildings on earth is best seen, free of charge, from a towel.",
+          "latitude": 25.1815,
+          "longitude": 55.2203,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kite-beach.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kite-beach_hero.webp",
+          "transcriptText": "One of the most photographed buildings on earth is best seen, free of charge, from a towel.\n\nYou should be on the sand at Kite Beach in Umm Suqeim, with the running track and the food kiosks behind you, kites carving over the water — and away down the shoreline, standing alone against the sky, the sail of the Burj Al Arab.\n\nWalk to the waterline. The hotel rises from its own man-made island a few hundred metres offshore, connected to the coast by a private causeway, and it was finished in the late nineteen nineties with one explicit job: to put Dubai on the world's map. It worked. The shape is a sail at full stretch — a deliberate echo of the dhows that built the coast's first fortunes — and the famous \"seven-star\" label was coined by a visiting journalist. The hotel has never once claimed it, and has spent decades politely declining to. What it will own is the tennis court: the helipad near the top once hosted an exhibition match between two of the sport's greats, several hundred metres above the sea.\n\nNow turn around and take in the beach itself, because this stop is really about the ground you're standing on. The track behind you runs some fourteen kilometres along the coast, and it's busy from first light — runners, cyclists, the whole city in trainers. The wind steadies in the afternoon, which is when the kitesurfers own the water. Food trucks, volleyball, showers, no ticket, no gate — this is where the city actually exercises. The light is kindest early and late, and so is the temperature.\n\nAnd that's the quiet point of the place. This city runs a thriving trade in exclusive shorelines — beach clubs, resort sand, day passes. Yet its single most exclusive silhouette, the hotel most people will never enter, belongs visually to anyone with a towel and an afternoon. The best seat for Dubai's most private building is its most public beach.\n\nStay for the end of the day if you can. The kites come down, the runners come out, and the sail turns to silhouette — the famous view, at no charge."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.1815,
+      "centroidLongitude": 55.2203,
+      "city": "Dubai",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Maritime",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f4949b91-77a7-5ada-a1ce-e4b6e89895d1",
+      "createdAt": "2026-07-31",
+      "title": "Madinat Jumeirah",
+      "shortDescription": "The Burj Al Arab is free to look at. What this place sells is the foreground.",
+      "longDescription": "Stone walkways, arched bridges, palm shade and wooden boats sliding along canals, with the sail of the Burj Al Arab rising at the end of the water. The view down the canal is not an accident: the whole resort was built in the early two thousands as a piece of old Arabia at luxury scale, and its waterways were dug and aimed so that walkway after walkway, bridge after bridge, frames the hotel down a long reflective channel. Even the bridges arch higher than foot traffic strictly needs, because a higher bridge makes a better frame. The hotel next door is the icon; this place is the tripod. The boats gliding past are abras, the same wooden craft the creek has used as a water bus for a century, re-employed here as gondolas — the most honest borrowing in the resort and somehow the most surreal. Dubai understood early that a view is a product with two halves, and that you can build the other one.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madinat-jumeirah_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madinat-jumeirah_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madinat-jumeirah_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madinat-jumeirah_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "60eadc3f-674e-5770-976d-965bb589a995",
+          "order": 0,
+          "title": "Madinat Jumeirah",
+          "caption": "This is the best seat in Dubai for looking at a building you're probably not staying in.",
+          "latitude": 25.134,
+          "longitude": 55.1849,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/madinat-jumeirah.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madinat-jumeirah_hero.webp",
+          "transcriptText": "This is the best seat in Dubai for looking at a building you're probably not staying in.\n\nYou should be inside Madinat Jumeirah, among the waterways — stone walkways, arched bridges, palm shade, wooden boats sliding along canals — with the sail of the Burj Al Arab rising at the end of the water.\n\nFind a bridge and stop in the middle. The view down the canal is not an accident: the whole resort was built in the early two thousands as a piece of old Arabia at luxury scale — lanes, lanterns, wind towers — and its waterways were dug and aimed so that walkway after walkway, bridge after bridge, frames the Burj Al Arab down a long reflective channel. The hotel next door is the icon. This place is the tripod. Even the bridges arch higher than foot traffic strictly needs, because a higher bridge makes a better frame.\n\nWander into the souk when you're ready — dozens of small shops under carved wooden ceilings, lantern light, waterfront cafés — and watch the boats as you go. They're abras, the same wooden craft the creek has used as a water bus for a century, re-employed here as gondolas: slower, scripted, and gliding past dinner tables instead of dhow cargo. It's the most honest borrowing in the resort, and somehow the most surreal. Prices run resort-grade and nobody pretends otherwise; you are paying for the setting, which at least has the virtue of being spectacular.\n\nHere's the thing to notice, though, and it's the reason this stop earns its place. The Burj Al Arab is free to look at — from the public beach up the coast, from the road, from half the city. What Madinat sells is the foreground: the water, the arches, the palm fronds, the composed shot. Dubai understood earlier than most cities that a view is a product with two halves — and that if the icon already exists, you can build the other half, and charge for the table beside it.\n\nCome towards evening if you can choose. The lanterns come on, the canals go gold, and the sail catches the last light — a postcard assembling itself around you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.134,
+      "centroidLongitude": 55.1849,
+      "city": "Dubai",
+      "primaryCategory": "architecture",
+      "tags": [
+        "District",
+        "Architecture",
+        "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c84a6965-b12e-5238-8ffc-93258015d57f",
+      "createdAt": "2026-07-31",
+      "title": "The Marina Walk",
+      "shortDescription": "At the turn of this century there was no water here. Everything you are standing beside was dug.",
+      "longDescription": "The canal in front of you is the Gulf, invited inland. In the early two thousands engineers cut a channel some three and a half kilometres long through open desert and then let the sea flow in to fill it, borrowing the idea from a waterfront district in Vancouver of all places — a cold-water model rebuilt at desert temperature. The promenade now loops the whole basin, roughly seven kilometres if you follow it all the way around, with residential towers rising close behind and a second wall of them facing across the water, so the district reads as a canyon with a harbour at the bottom. On the far side, one skyscraper turns as it rises, a full ninety degrees between ground and roof, each floor rotated a fraction over the one below: that is Cayan Tower, and the corkscrew is not a flourish — turning the building softens the wind that strikes it. The water came first; the towers arrived afterwards.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marina-walk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marina-walk_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marina-walk_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a227366e-7b44-5171-82ac-819c7c6e93df",
+          "order": 0,
+          "title": "The Marina Walk",
+          "caption": "At the turn of this century, there was no water here. No canal, no yachts, no reflections for the towers to admire themselves in — just a strip of flat desert between the coast road and the sea.",
+          "latitude": 25.0811,
+          "longitude": 55.1406,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/marina-walk.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marina-walk_hero.webp",
+          "transcriptText": "At the turn of this century, there was no water here. No canal, no yachts, no reflections for the towers to admire themselves in — just a strip of flat desert between the coast road and the sea. Everything you are standing beside was dug.\n\nYou should be on Marina Walk, the waterfront promenade, with the canal directly in front of you and residential towers rising close behind. Moored yachts, café terraces at the railing, and across the water a second wall of towers facing this one, so the whole district reads as a canyon with a harbour at the bottom.\n\nIgnore the towers for a moment — look at the water. It is the Gulf, invited inland. In the early two thousands, engineers cut a channel some three and a half kilometres long through open ground and then let the sea flow in to fill it. The designers borrowed the idea from a waterfront district in Vancouver, of all places — a cold-water model, rebuilt at desert temperature — and the promenade under your feet now loops the whole basin, roughly seven kilometres if you follow it all the way around.\n\nNow find the tower that twists. On the far side of the marina, one skyscraper turns as it rises — a full ninety degrees between the ground and the roof, each floor rotated a fraction over the one below. That is Cayan Tower, and the corkscrew is not a flourish: turning the building softens the wind that strikes it. Around it stand some of the tallest residential buildings ever constructed, most of them raced upward within a single decade.\n\nHere is the part worth carrying home. The marina was excavated before there was a district to need it — the water came first, and the towers arrived afterwards, ring after ring, around a harbour that was briefly the emptiest address in the city. If you have stood downtown, you have met this habit already: building the thing before the need, then watching the need arrive. It is the city's oldest trick, run one more time in salt water.\n\nStay by the railing a while. In the evening the towers hand their light down to the water, and the whole dug canyon glows — and it becomes genuinely hard to remember that within living memory this was dry sand, and that somebody looked at that sand and saw this."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0811,
+      "centroidLongitude": 55.1406,
+      "city": "Dubai",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Waterfront",
+        "Architecture",
+        "Contemporary",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0088f787-a41e-57be-98d6-159905160fb7",
+      "createdAt": "2026-07-31",
+      "title": "JBR — The Beach",
+      "shortDescription": "The beach below is a holiday. The balconies above are a Tuesday.",
+      "longDescription": "Look past the umbrellas and up at the towers and you will spot the detail that changes this beach: balconies, hundreds of them, stacked forty storeys high, with plants and deck chairs and towels drying over the railings. People live here — the postcard has tenants. Jumeirah Beach Residence sets the Gulf on one side against a curved wall of around forty residential towers on the other, with a great white observation wheel offshore on its own island. Running behind the towers is The Walk, a street of shops and cafés nearly two kilometres long and one of Dubai's earliest experiments in having a street at all: a city assembled around highways and interiors deciding, for once, to build somewhere you stroll. The sand is free, lifeguarded, groomed daily, and parts of it never really close. The wheel is Ain Dubai, two hundred and fifty metres to the top and the tallest ever built.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jbr-the-beach_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jbr-the-beach_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jbr-the-beach_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jbr-the-beach_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0b4cdbab-3735-5819-9a01-d1df04e64ac9",
+          "order": 0,
+          "title": "JBR — The Beach",
+          "caption": "Look past the umbrellas and up at the towers, and you will spot the detail that changes this beach: balconies.",
+          "latitude": 25.0774,
+          "longitude": 55.1321,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jbr-the-beach.mp3",
+          "audioDurationSeconds": 140,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jbr-the-beach_hero.webp",
+          "transcriptText": "Look past the umbrellas and up at the towers, and you will spot the detail that changes this beach: balconies. Hundreds of them, stacked forty storeys high, with plants and deck chairs and towels drying over the railings. People live here. The postcard has tenants.\n\nYou should be on the sand or the seafront promenade at JBR — Jumeirah Beach Residence — with the Gulf on one side and a curved wall of around forty residential towers on the other. Offshore, on its own man-made island, stands a great white observation wheel. And running behind the towers is The Walk, a street of shops and cafés nearly two kilometres long.\n\nTurn your back to the sea for a moment. The Walk was one of Dubai's earliest experiments in having a street at all — a city assembled around highways and interiors deciding, for once, to build somewhere you stroll, window-shop, and sit outside watching other people do the same. Between the street and the sand sits The Beach, an open-air cluster that works like a mall with the roof left off: dozens of restaurants and shops arranged around lawns and an outdoor cinema screen.\n\nNow the sand itself. It is free, it is lifeguarded, it is groomed daily, and parts of it never really close — you can swim under floodlights long after dark. The wheel offshore is Ain Dubai, two hundred and fifty metres to the top, the tallest observation wheel ever built. Whether it happens to be turning on the day you visit has become one of the city's small lotteries, but as an object on the horizon it earns its place.\n\nWhen these towers went up in the two thousands, this was among the largest residential projects ever attempted in a single go — an entire seafront neighbourhood delivered as one gesture. Kite Beach, up the coast, is where the city goes to play. This is where a slice of the city actually lives, and the difference is visible: the beach below is a holiday, but the balconies above are a Tuesday.\n\nFind a spot where you can hold both in view — the swimmers on the sand and the deck chairs in the sky. Most cities keep their postcards and their addresses separate. This one stacked them."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 140,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.0774,
+      "centroidLongitude": 55.1321,
+      "city": "Dubai",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Commerce",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8227f7ec-2125-5a11-becc-7272eb008d39",
+      "createdAt": "2026-07-31",
+      "title": "Palm West Beach",
+      "shortDescription": "You are standing on one of the most recognisable shapes ever built — and from here you cannot see it.",
+      "longDescription": "No frond, no crescent, no trunk. At ground level the Palm is a beach, a boardwalk and a row of palm trees doing their best; the famous silhouette exists only from the air. Facing open water along the western edge of the Palm's trunk, you get the view Dubai Marina can never have of itself — its whole cluster of towers gathered into a single object, close enough to read and far enough to take in whole, and one of the best free vantages in the city. Then consider what is under your feet. There is no steel frame and no concrete shell holding this island together: the Palm is made of sand dredged from the floor of the Gulf and rock brought down from the Hajar Mountains, and the sand was compacted by vibration, machines shaking the ground section by section until it stood firm enough to carry towers. An eleven-kilometre crescent of rock shelters all of it, a breakwater finished before the island it protects.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palm-west-beach_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palm-west-beach_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palm-west-beach_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3cd5d3e6-cc54-57dc-9bd0-40cbbc535c7f",
+          "order": 0,
+          "title": "Palm West Beach",
+          "caption": "You are standing on one of the most recognisable shapes human beings have ever built — and from here, you cannot see it.",
+          "latitude": 25.1117,
+          "longitude": 55.1371,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/palm-west-beach.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/palm-west-beach_hero.webp",
+          "transcriptText": "You are standing on one of the most recognisable shapes human beings have ever built — and from here, you cannot see it. No frond, no crescent, no trunk. At ground level, the Palm is a beach, a boardwalk, and a row of palm trees doing their best. The famous silhouette exists only from the air.\n\nYou should be on Palm West Beach, the boardwalk and sand along the western edge of the Palm's trunk, facing open water. Across the strait, the towers of Dubai Marina stand shoulder to shoulder, and off to their right a white observation wheel rests on its own island. Behind you, a monorail slides along the spine of the Palm.\n\nStart with the skyline across the water. This is the view the Marina can never have of itself — its whole cluster of towers gathered into a single object, close enough to read, far enough to take in whole. It is one of the best free vantages in the city, and you reach it from a beach towel.\n\nNow consider what is under your feet. There is no steel frame and no concrete shell holding this island together. The Palm is made of sand dredged up from the floor of the Gulf and rock brought down from the Hajar Mountains, and the sand was compacted by vibration — machines shaking the ground, section by section, until it stood firm enough to carry towers. Out at sea, an eleven-kilometre crescent of rock shelters all of it, a breakwater finished before the island it protects.\n\nThat is the strange double life of this place. The shape was drawn to be photographed from above — a logo the size of a district, begun in 2001, settled by its first residents within the decade. Yet at ground level the aerial icon lands as something almost modest: joggers, dog-walkers, families waiting out the afternoon. The most extravagant landform of its era works best as a pleasant place to take a walk.\n\nStay for the light if you can. This beach faces the sunset, and as the water goes copper the skyline across the strait turns to silhouette — and for a few minutes the Palm stops being a shape on a map and becomes, simply, the shore you happen to be standing on."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 25.1117,
+      "centroidLongitude": 55.1371,
+      "city": "Dubai",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Engineering",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "22bd261c-2628-5e99-813a-58065f05d116",
+      "createdAt": "2026-07-31",
+      "title": "The Creek Crossing",
+      "shortDescription": "Costs about a dirham and ends at gold.",
+      "longDescription": "Four stops and a boat, climbing the value chain of the old economy one commodity at a time: cloth on the Bur Dubai bank, then the crossing itself, then spice, then gold — in roughly ascending order of what a kilogram is worth. The route runs the length of the restored Textile Souk arcade, crosses Dubai Creek on a wooden abra for the price of a coin, and lands on the Deira side where the Spice Souk and the Gold Souk sit almost door to door. About 1.2 kilometres on foot plus the boat, level throughout. Traders have run this exact circuit for well over a century, in both directions and in every season; you are simply running it for pleasure instead of profit.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abra-crossing_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/textile-souk_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spice-souk_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gold-souk_hero.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "99ddd971-3315-5e4a-9ba0-7b57896119ab",
+          "order": 0,
+          "title": "The Creek Crossing — the shape of it",
+          "caption": "This walk costs about a dirham and ends at gold. You should be in Bur Dubai, at the entrance to the Textile Souk — the long wooden arcade set a few steps back from the water, close to the abra station.",
+          "latitude": 25.263,
+          "longitude": 55.2961,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-creekcrossing-walk_stop0.mp3",
+          "audioDurationSeconds": 82,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "This walk costs about a dirham and ends at gold.\n\nYou should be in Bur Dubai, at the entrance to the Textile Souk — the long wooden arcade set a few steps back from the water, close to the abra station. Over the next hour or so, you'll walk the length of the arcade, cross Dubai Creek on a wooden boat, and land on the Deira side, where the Spice Souk and the Gold Souk sit almost door to door.\n\nHere is the shape of the thing. This route climbs the value chain of the old economy one commodity at a time: cloth on this bank, then the crossing itself, then spice, then gold — in roughly ascending order of what a kilogram is worth. Traders have run this exact circuit for well over a century, in both directions, in every season. You are simply running it for pleasure instead of profit.\n\nA few honest notes before you start. The souks at either end are covered, so you'll be in shade for most of the walking. The crossing in the middle is open water with a breeze on it, and it lasts around five minutes. The total distance on foot is under two kilometres, and the lanes on the Deira side are narrow and busy — which is not a warning, it's the point.\n\nStart inside the Textile Souk, straight ahead. We'll work our way through the arcade to the water."
+        },
+        {
+          "id": "8efdd6cd-ca1b-5d2c-bb7b-9cebebf7c8f4",
+          "order": 1,
+          "title": "The Textile Souk",
+          "caption": "You're under the wooden roof now — a high arcade with shopfronts pressed together on both sides, and bolts of cloth stacked to the ceiling in every one of them.",
+          "latitude": 25.263,
+          "longitude": 55.2961,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-creekcrossing-walk_stop1.mp3",
+          "audioDurationSeconds": 96,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/textile-souk_hero.webp",
+          "transcriptText": "You're under the wooden roof now — a high arcade with shopfronts pressed together on both sides, and bolts of cloth stacked to the ceiling in every one of them.\n\nThis is the bottom rung of the ladder, and don't let that sound like an insult. Cloth is the trade that moves the most and costs the least — silk and cotton and synthetics shipped across the ocean from India, Pakistan, and points east, sold by the metre to anyone who walks in. For generations this arcade was where the city dressed itself: fabric bought on this side of the creek, carried home, and cut by a tailor who could copy any garment you handed him. Many of them still can, and several of them are within fifty metres of where you're standing.\n\nWalk slowly and let the shopkeepers make their case. Pashminas will be draped over your shoulder before you've agreed to anything — that's not pressure, that's the choreography, and it has been rehearsed here for a hundred years. Notice, too, that almost nothing in these shops was made in this city. That's the quiet lesson of the first rung: Dubai's oldest talent was never manufacturing. It was moving things — buying where things are cheap, selling where they're wanted, and living on the difference.\n\nKeep that in your pocket. You're about to watch the same idea performed with a boat.\n\nFollow the arcade toward the water, and where it opens out you'll find the abra station — floating docks, wooden boats, and a crowd that knows exactly what it's doing. That crossing is our next stop."
+        },
+        {
+          "id": "17b90c65-d2a7-5b5e-91d7-4c93071a27f8",
+          "order": 2,
+          "title": "The Abra Crossing",
+          "caption": "Step down onto the floating dock and take the next boat with space on the bench.",
+          "latitude": 25.264,
+          "longitude": 55.2947,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-creekcrossing-walk_stop2.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/abra-crossing_hero.webp",
+          "transcriptText": "Step down onto the floating dock and take the next boat with space on the bench. There's no ticket, no timetable, and no ceremony — an abra leaves when it's full, which at this station is usually about a minute after it arrives.\n\nYou'll be sitting on a wooden bench that runs around a diesel engine, knee to knee with roughly twenty strangers. The fare is a dirham — sometimes two, depending on the boat — passed hand to hand down the bench to the driver once you're moving. The word abra comes from the Arabic for \"to cross.\" Not to sail, not to voyage. To cross. The boat is named for the errand.\n\nNow, while the engine settles into its note, look down the water. Both banks at once — the wharves and minarets of Deira on one side, Bur Dubai behind you, dhows moored in the distance. For most of this city's existence, what you can see from this bench was the entire city: two banks, and the water working between them. The pearl fleets left from here. The trade boats came home to here. Every fortune this coast made or lost for a century passed across this water in a hull.\n\nHere is the thing to understand mid-crossing, because you'll never understand it better than now. Everything Dubai has done since — the ports, the airline, the towers full of traders, the man-made islands — is a larger version of what you are doing at this exact moment: crossing water to reach the trade on the other side. The ports are this boat, scaled up. The airline is this boat with wings. The city never outgrew the creek. It just kept rebuilding it, bigger, in steel and concrete and flight paths, all over the world.\n\nThe boat is slowing now. That's Deira Old Souk Station ahead — step off carefully, the dock moves. The Spice Souk starts almost at the water's edge, and that's where we're headed next."
+        },
+        {
+          "id": "7881e8c1-9fe4-565e-a3fb-27e3ed6514bb",
+          "order": 3,
+          "title": "The Spice Souk",
+          "caption": "From the dock, the Spice Souk begins almost immediately — a covered lane just up from the water, announced by open sacks crowding every doorway.",
+          "latitude": 25.2681,
+          "longitude": 55.2961,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-creekcrossing-walk_stop3.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/spice-souk_hero.webp",
+          "transcriptText": "From the dock, the Spice Souk begins almost immediately — a covered lane just up from the water, announced by open sacks crowding every doorway.\n\nBefore you go in, register the geography, because it is the whole story of this stop. You are standing between the boats and the shelves. For most of the souk's history, the cargo in these lanes travelled less than a hundred metres from ship to shop — sacks hauled off wooden hulls at the wharf you just passed and stacked straight into these doorways. This wasn't a market that happened to be near a port. It was the port's front room.\n\nWalk the lane and read the labels, because the labels are a map. Cinnamon from Sri Lanka, cardamom from the hills of India, dried limes from across the water in Oman, frankincense from the south of Arabia. Every sack names a coastline, and taken together the shelves of this souk sketch the entire trading world the creek once served — you can stand in one narrow lane and survey five hundred years of routes without moving your feet.\n\nOne rung up from cloth, notice what changed: the goods got lighter, and the margins got better. A sack of saffron is worth carrying a lot further than a sack of cotton. The old traders understood weight-to-value the way pilots understand fuel, and this souk is where that arithmetic lived.\n\nThe top of the ladder is a few minutes further on. Follow the lane away from the water and let the shops make the turn for you — when fabric and spice give way to glass windows full of yellow metal, you've arrived. The Gold Souk is our last stop."
+        },
+        {
+          "id": "8b39c43e-3434-5931-87c1-517aaba14aff",
+          "order": 4,
+          "title": "The Gold Souk",
+          "caption": "You'll know you've arrived without being told: the light changes.",
+          "latitude": 25.2714,
+          "longitude": 55.2975,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-creekcrossing-walk_stop4.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gold-souk_hero.webp",
+          "transcriptText": "You'll know you've arrived without being told: the light changes. Under the covered arcade, window after window burns yellow — necklaces the size of armour, bangles stacked by the hundred, whole shopfronts glowing like open furnaces.\n\nThis is the top of the ladder, and the arrival deserves a moment. You started this walk an hour ago in front of cotton sold by the metre. You've climbed through spice, worth its weight in careful handling, and arrived at the one commodity that ends the game — the cargo so dense with value that a trader could carry a fortune in a coat pocket. Cloth fills a warehouse. Gold fills a fist.\n\nLook closer at any window and you'll find the souk's real secret, which is that very little haggling here is about gold at all. Gold sells by weight, at the day's world price, posted for everyone to see — the metal costs what the metal costs, in this lane and in London alike. What you negotiate is the workmanship: the making of the thing, not the substance of it. It is one of the most honest markets you will ever walk through, dressed up as one of the most theatrical.\n\nOne last thing before the walk lets you go. You crossed the creek for a coin, and you're finishing in front of the most expensive thing the old city sells. Every trader who ever ran this circuit was attempting the same climb you just made for fun — cargo by cargo, cloth to spice to gold, each rung funding the next. Enough of them succeeded that the city eventually built itself a skyline on the proceeds, ten kilometres down the coast.\n\nBut the circuit itself never closed. This evening, when the lights come on in these windows and the abras keep shuttling behind you, it will still be running — with you or without you. Stay as long as you like. The ladder doesn't mind being admired."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 526,
+      "walkingDistanceMeters": 1200,
+      "centroidLatitude": 25.26663,
+      "centroidLongitude": 55.2961,
+      "city": "Dubai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Market",
+        "Commerce",
+        "Maritime",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cb214a2c-ae60-5242-a96c-a27e21e76523",
+      "createdAt": "2026-07-31",
+      "title": "The Old Quarter",
+      "shortDescription": "In a city this young, “old” is a complicated word.",
+      "longDescription": "Four stops through the ground Dubai actually started on, beginning at Al Shindagha where the creek meets the open sea — the neighbourhood where the ruling family settled and where the ruler still lived in a coral-stone house until 1958. From there the route runs south along the pedestrianised waterfront to Al Fahidi Fort, the oldest building in the city, then inland into the wind-tower lanes of the old quarter, and out again at Al Seef, where a heritage district built in 2017 sits a few hundred metres from the real thing. About two kilometres, level throughout. The walk is really one long argument about what counts as old here, and it deliberately leaves the question open.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-shindagha_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi-fort_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-seef_hero.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "ce94ce61-0a10-5613-a250-70daefe65400",
+          "order": 0,
+          "title": "The Old Quarter — the shape of it",
+          "caption": "In a city this young, \"old\" is a complicated word — and this walk is going to show you every meaning it has.",
+          "latitude": 25.268,
+          "longitude": 55.2901,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-oldquarter-walk_stop0.mp3",
+          "audioDurationSeconds": 91,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "In a city this young, \"old\" is a complicated word — and this walk is going to show you every meaning it has.\n\nYou should be in Al Shindagha, at the mouth of Dubai Creek, where the water opens out toward the sea. From here we'll follow the waterfront south along the creek — pedestrianised the whole way, with the water on your left — to Al Fahidi Fort, then turn inland into the lanes of the old quarter, and finish at Al Seef, back on the water. Allow a couple of hours if you linger, and you should linger.\n\nHere is the frame to carry with you. You're about to walk through three kinds of old. The restored: Shindagha's merchant houses, rebuilt as museums on their original footprints. The genuine: the fort and the lanes behind it, the oldest built fabric the city has. And the invented: Al Seef, a heritage district constructed new within the last decade. Most cities have all three and hope you won't notice the difference. This one lays them out in a row, a half-hour apart, and lets you compare.\n\nOne honest note: the waterfront stretch is open to the sky, so the light and the temperature are kindest toward the ends of the day — and the creek at sunset is the best free show in this half of the city.\n\nStart where the city started. The ruler's house and the watchtower are just ahead, at the water's edge."
+        },
+        {
+          "id": "1364e111-a36f-5dcb-aa94-5b37bd00d9d1",
+          "order": 1,
+          "title": "Al Shindagha",
+          "caption": "Stand where the promenade meets the creek mouth, with the museum houses behind you and the open water ahead.",
+          "latitude": 25.268,
+          "longitude": 55.2901,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-oldquarter-walk_stop1.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-shindagha_hero.webp",
+          "transcriptText": "Stand where the promenade meets the creek mouth, with the museum houses behind you and the open water ahead. This is the hinge of the whole geography: on one side of you, the creek runs inland past the souks and the wharves; on the other, it lets go into the Gulf.\n\nThe low coral-and-gypsum houses at your back are Shindagha's merchant quarter, rebuilt as a museum district on the original footprints — more than twenty houses you can wander between, including the residence of the ruling family itself. The rulers of Dubai lived here, at the mouth, for a reason that has nothing to do with scenery: whoever holds the mouth of a trading creek sees every boat that enters and every boat that leaves. This wasn't a palace location. It was a checkpoint with bedrooms.\n\nNow find the watchtower — squat, round-shouldered, standing alone near the water. That's Shindagha Tower, one of only two of the city's original defensive watchtowers still standing, and look closely at its face: two slit windows and a buttress between them, arranged so the tower itself seems to be watching the sea. The guards are a century gone. The expression stayed.\n\nEvery city keeps a founding document somewhere — a charter under glass, a stone with a date on it. Dubai's founding document is liquid, and you have reached the exact point where it is signed. Everything this city has ever built — the ports, the towers, the islands, the airline — walked out of this water. And this, where you're standing, is where the water itself walks out. The mouth of the creek is the mouth of the story.\n\nWhen you're ready, put the open sea at your back and follow the waterfront promenade south, keeping the creek on your left. In about twenty minutes of easy, flat walking you'll reach a square fortress of coral stone — Al Fahidi Fort, the oldest building in the city, and our next stop."
+        },
+        {
+          "id": "201cab85-0392-5b35-969f-f5113a1e0471",
+          "order": 2,
+          "title": "Al Fahidi Fort",
+          "caption": "The square fortress ahead of you, with the round tower on its corner, has stood on this spot since 1787.",
+          "latitude": 25.2635,
+          "longitude": 55.2972,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-oldquarter-walk_stop2.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi-fort_hero.webp",
+          "transcriptText": "The square fortress ahead of you, with the round tower on its corner, has stood on this spot since 1787. Nothing else built in this city comes close.\n\nWalk its perimeter slowly — it doesn't take long, and the outside is the visit for now. The fort has been closed for a long restoration, and until it reopens, what you're circling is the exhibit: walls of coral stone and gypsum, cut from the seabed and the shore, because in a land without timber or quarries the sea was the only builder's yard available. There are wooden dhows and cannon displayed around the base, and the contrast is instructive — the whole military establishment of old Dubai, visible in ninety seconds of strolling.\n\nHere's the walk-sized way to understand it. Elsewhere on this creek you can see the trade itself — the souks, the boats, the gold. This is what made the trade possible. A market is only as good as its protection, and this small square of stone was the guarantee behind every deal struck on the creek — garrison, arsenal, ruler's refuge, and later the city's jail, all in one building the size of a school gymnasium. The second kind of old on this walk is the genuine kind, and it comes with a lesson attached: genuine old, in Dubai, is small. Wealth here didn't build cathedrals. It built protection, and it kept the rest liquid.\n\nNow go around behind the fort and cross into the lanes — narrow, sand-coloured, with square towers rising above flat roofs. That's the Al Fahidi Historical Neighbourhood, the quarter the locals long knew as Bastakiya, and it's our next stop."
+        },
+        {
+          "id": "006a2142-309d-5bdf-9469-b5119b70c74e",
+          "order": 3,
+          "title": "The Al Fahidi lanes",
+          "caption": "Inside the lanes now, the city goes quiet. Walls close to shoulder height on either side, sand-coloured plaster, and above the rooflines, the square towers this quarter is famous for — wind towers, the old architecture of catching a breeze.",
+          "latitude": 25.2637,
+          "longitude": 55.2979,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-oldquarter-walk_stop3.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-fahidi_hero.webp",
+          "transcriptText": "Inside the lanes now, the city goes quiet. Walls close to shoulder height on either side, sand-coloured plaster, and above the rooflines, the square towers this quarter is famous for — wind towers, the old architecture of catching a breeze.\n\nThe name is the story here. Before this was the Al Fahidi Historical Neighbourhood, everyone called it Bastakiya — after Bastak, a town across the water in Persia. The merchants who built these houses a century ago came from there, drawn by a ruler who had abolished trade taxes and was openly collecting other cities' businessmen. They arrived with capital, built in the style of home, and gave the quarter its name, its towers, and its courtyards. What you're walking through is not just old Dubai. It's the built evidence that this city was recruiting immigrants before it had electricity.\n\nWander without a plan — the lanes are short and you can't stay lost for long. The houses hold small galleries, cafés, and cultural centres now, and most doorways are open; step into any courtyard and you'll find the same arrangement of shade, still air, and rooms turned inward around it. Notice how few windows face the lane. Wealth here looked inward. The street got a wall; the family got the sky.\n\nThis is the genuine old at its most complete — a whole quarter of it, kept. Hold the texture of these lanes in your mind, because you're about to see the same architecture again, ten minutes away, with one profound difference.\n\nFollow any lane south and downhill toward the water, and when you emerge onto the waterfront, turn right. The promenade ahead, with its wind towers and timber balconies, is Al Seef — our last stop."
+        },
+        {
+          "id": "679b5c21-f40f-544f-bc2b-71e5fe3a9ed7",
+          "order": 4,
+          "title": "Al Seef",
+          "caption": "Here are the wind towers again — the same sand-coloured walls, the same timber shutters, the same lanes you just left.",
+          "latitude": 25.2605,
+          "longitude": 55.2997,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-oldquarter-walk_stop4.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/al-seef_hero.webp",
+          "transcriptText": "Here are the wind towers again — the same sand-coloured walls, the same timber shutters, the same lanes you just left. Except every stone of this was built in the last ten years.\n\nYou're on the Al Seef waterfront, the third kind of old, and the walk's final exhibit. Look closely and the tells emerge: the plaster is distressed with suspicious evenness, the \"weathering\" repeats, and behind one heritage façade you'll find a coffee chain with a menu in six languages. The buildings were designed aged — constructed new and antiqued by design, the way a furniture maker distresses a table. Then look up the promenade and let the view argue back: dhows on the water, towers behind, families out walking in the evening. As a piece of city, whatever else it is, it works.\n\nSo finish the walk by settling the question it has been asking since Shindagha. You've now seen the restored, the genuine, and the invented, all inside two hours. The restored teaches. The genuine survives. The invented — this — is the strangest and maybe the most honest of the three, because it admits something the other two can't: that this city loves its past the way it loves everything else, as a project. Old Dubai isn't a place that was left behind here. It's a place the city keeps actively deciding to have.\n\nFind a seat by the water. The creek in front of you is the same water you stood over at the mouth this morning, still working, still carrying boats. Three kinds of old on one bank — and out there, the original article, older than all of them, not pretending to be anything.\n\nThat's the walk. Stay for the light."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 574,
+      "walkingDistanceMeters": 2000,
+      "centroidLatitude": 25.26393,
+      "centroidLongitude": 55.29622,
+      "city": "Dubai",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Maritime",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c20b21e7-09b4-5f09-9574-4250fe445dd3",
+      "createdAt": "2026-07-31",
+      "title": "The Downtown Loop",
+      "shortDescription": "Three places to stand, and one thing to look at.",
+      "longDescription": "A lawn that gives you distance, a stretch of water that gives you a reason to stay after dark, and a bridge that gives you height — three vantages on the same subject, the tallest structure human beings have ever built. The loop starts on the mall side of Burj Lake and crosses the footbridge to Burj Park, the island of green that photographers use because it is close enough to feel the scale and far enough back to see all of it at once; then along the fountain promenade, where one of the largest choreographed fountain systems anywhere performs every half hour after dark; then up onto the Souk Al Bahar bridge for the elevation. Under two kilometres, level and step-free, with no shade at all — which is why the last hours of daylight are the version that works.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burj-khalifa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-fountain_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-downtown_stop3.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "ccd41e04-3004-5a2e-88af-b9491f43e71a",
+          "order": 0,
+          "title": "The Downtown Loop — the shape of it",
+          "caption": "Try not to look up. It won't work — there's a building here that makes a fool of anyone who decides to be casual about it, and the district knows it.",
+          "latitude": 25.1968,
+          "longitude": 55.2751,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-downtown-walk_stop0.mp3",
+          "audioDurationSeconds": 90,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "Try not to look up. It won't work — there's a building here that makes a fool of anyone who decides to be casual about it, and the district knows it.\n\nWhich is the frame for this walk. Downtown Dubai isn't really a neighbourhood. It's a room, and it has been furnished around a single object. The lake, the lawns, the terraces, the long curve of the boulevard — all of it exists to give people somewhere to stand while they look at one tower. We're going to use three of those places, in the order that makes the most sense of them: a lawn that gives you distance, a stretch of water that gives you a reason to stay after dark, and a bridge that gives you height. Three stops, one subject — unusual for a walk, and entirely appropriate here.\n\nPractical matters first. The loop is short — comfortably under two kilometres, level, paved, and you can avoid every set of steps if you want to. What it doesn't have is shade. This is a district of open sky and pale stone, and the last hours of daylight are the version of this walk that works best, which happens to be when the fountain wakes up anyway.\n\nStart on the mall side of the lake and look for the footbridge running out to the low green island in front of the tower. Cross it.\n\nThat's Burj Park, and it's where we begin."
+        },
+        {
+          "id": "f523f505-c814-5a13-9afb-c6b299674f8a",
+          "order": 1,
+          "title": "Burj Park",
+          "caption": "Find a spot near the middle of the grass and turn around to face the tower.",
+          "latitude": 25.1972,
+          "longitude": 55.2721,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-downtown-walk_stop1.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/burj-khalifa_hero.webp",
+          "transcriptText": "Find a spot near the middle of the grass and turn around to face the tower.\n\nDistance is the whole point of this stop. At the base, the Burj Khalifa is unreadable — too close, too steep, a wall of glass leaving the ground faster than your eye can follow it. Out here, with a few hundred metres of lawn and water in between, the building finally holds still long enough to show you its shape.\n\nAnd the shape rewards a proper look. Three wings meet at a central spine, and the tower steps inward as it climbs — wing by wing, setback by setback, spiralling upward until there's nothing left at the top but the spire. The plan came from a desert flower, the spider lily, petals arranged around a centre. Which sounds like something invented afterwards for a brochure, except that the geometry is doing work: each setback breaks up the wind before it can settle into a rhythm and start pushing the building around. The flower is also a wind strategy.\n\nWhich is what a lawn is doing at the foot of the tallest building on earth. A park here isn't decoration; it's viewing distance, landscaped — an island of grass at roughly the remove a person needs in order to take in eight hundred and twenty-eight metres in a single glance, and then handed over for nothing. The good positions in this district usually cost something. This one is grass and a footbridge.\n\nStay as long as you like. It's the only stop on this walk where sitting down is an option, and the tower is better company from a seated position than most buildings are from any position at all.\n\nWhen you're ready, cross back over the footbridge and follow the water's edge towards the mall, until the lake opens out wide in front of you. That's the Dubai Fountain."
+        },
+        {
+          "id": "dd8e7da2-bdde-5391-bb48-03e46de238f4",
+          "order": 2,
+          "title": "The Dubai Fountain",
+          "caption": "Settle in anywhere along the railing. Then, when the water starts, do something slightly contrary: watch the people instead.",
+          "latitude": 25.1954,
+          "longitude": 55.2746,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-downtown-walk_stop2.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-fountain_hero.webp",
+          "transcriptText": "Settle in anywhere along the railing. Then, when the water starts, do something slightly contrary: watch the people instead.\n\nThe whole promenade turns at once. Conversations stop mid-sentence, phones go up along the rail in a slow wave, children get lifted onto shoulders, and for about five minutes several thousand strangers stand facing the same direction wearing more or less the same expression. Then the last column drops, the lake goes flat, and the arrangement dissolves almost as quickly as it assembled.\n\nThe water deserves your attention too, obviously. Jets set into the floor of the lake, choreographed to music and light, throwing columns high enough to clear most of what's standing around you — one of the largest systems of its kind built anywhere. If you have the time, stay for a second show. The playlist rotates: an Arabic standard, then something operatic, then something off the charts, and the choreography is rebuilt around each piece. So is the crowd. The one you were just standing in will have almost entirely gone.\n\nAnd that's the thing worth taking away from this stretch of railing. Dubai is a city that mostly meets indoors, behind glass, in cooled air, by appointment — and this is its outdoor public square, which happens to be made of water, and which fills and empties over and over after dark without anyone being organised into anything. Nobody sells you the assembly. It simply occurs, and you can be inside it or not.\n\nWhen it's finished, don't follow everyone back into the mall. Turn instead towards the wide walkway crossing the lake to the low, sand-coloured buildings on the far side — the bridge to Souk Al Bahar. That's the last stop, and it's the best one."
+        },
+        {
+          "id": "e7b4374a-3506-5914-9edc-630eb1bbf829",
+          "order": 3,
+          "title": "Souk Al Bahar bridge",
+          "caption": "Walk up onto the bridge and stop wherever the rail is free. The advantage this spot has over the promenade you just left is roughly the height of a short staircase.",
+          "latitude": 25.1962,
+          "longitude": 55.2734,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-downtown-walk_stop3.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-downtown_stop3.webp",
+          "transcriptText": "Walk up onto the bridge and stop wherever the rail is free.\n\nThe advantage this spot has over the promenade you just left is roughly the height of a short staircase. That's all it is. And it's enough to rearrange everything: you're above the crowd rather than inside it, the lake reads wider from up here, the tower runs uninterrupted from spire to waterline, and the entire geometry of the district lines itself up in front of you at once. Look along the water to your left and you can pick out the green edge of Burj Park, where this walk started. The whole loop, in one frame.\n\nThe low buildings at the far end are Souk Al Bahar — market of the sailor, in Arabic — an arcade of stone corridors, arches and lanterns that opened in 2008, on an island, in an artificial lake, nowhere near the sea.\n\nNow the part worth noticing about where you're standing. This is the best free position in Downtown Dubai, and nobody designed it as a position at all. It's a crossing. Its job is to move people from a mall to a souk without sending them the long way round the water. Every deliberate viewpoint in this district — the terraces, the decks, the reserved tables, the ticketed floors — was planned, priced and sold. The best of them turned out to be a piece of pedestrian infrastructure that came free with the plumbing.\n\nWhich is a fitting place to end a walk through a room built around one object. The tower will run its light show again before long, the water will assemble another audience below you, and there'll be a steady drift of people crossing behind your shoulders on their way to dinner. You don't have to move for any of it. This bridge was built to be walked over. Standing still on it is the small, free, entirely permitted luxury at the end of the loop."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 437,
+      "walkingDistanceMeters": 1800,
+      "centroidLatitude": 25.19627,
+      "centroidLongitude": 55.27337,
+      "city": "Dubai",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Tower",
+        "Architecture",
+        "Contemporary",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "54206005-4cd6-52f9-8cbc-965ee288e59d",
+      "createdAt": "2026-07-31",
+      "title": "Marina & JBR — An Evening in Two Waters",
+      "shortDescription": "A canal the city dug for itself, and the sea it was given.",
+      "longDescription": "Two waterfronts a few hundred metres apart, and the walk between them is the point. It begins on the marina's western bank, beside a channel cut through open desert in the early two thousands and then filled by letting the Gulf in — the towers arrived afterwards, ring after ring, around a harbour that was briefly the emptiest address in the city. From there the route crosses the seam of footbridges at the marina's mouth, where the dug water meets the given water, and comes out on the beachfront boulevard at Jumeirah Beach Residence, where forty residential towers stand over free, lifeguarded, floodlit sand. About 3.2 kilometres, level and step-free. Come for the last hour of light, when the towers hand their glow down to the water.",
+      "makerId": "e94b8814-2c31-5113-963c-1743e6c86b4b",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marina-walk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-marinajbr_stop2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jbr-the-beach_hero.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "28c1dcad-88bb-57b2-bad7-b0d41ef8b8e9",
+          "order": 0,
+          "title": "Two Waters — the shape of it",
+          "caption": "This walk has a correct time of day. Come at the end of it — the last hour of light, when the towers start switching on and the whole district comes outside.",
+          "latitude": 25.0811,
+          "longitude": 55.1406,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-marinajbr-walk_stop0.mp3",
+          "audioDurationSeconds": 86,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": null,
+          "transcriptText": "This walk has a correct time of day. Come at the end of it — the last hour of light, when the towers start switching on and the whole district comes outside.\n\nHere's the idea. Within a few hundred metres of where you're standing, Dubai keeps two entirely different waterfronts. One is a canal the city dug for itself — still, inward-facing, lined on both banks with towers and dinner tables, water that behaves like a mirror. The other is the sea it was given — open, outward-facing, with sand and waves and a horizon. The first is where the district promenades; the second is where it breathes. They meet at a seam of footbridges near the marina's mouth, and crossing from one to the other in a single evening is, quietly, one of the best things you can do on foot in this city.\n\nThe practicalities are kind. The route is level and paved the whole way — a stretch of the marina's western bank, the crossing, then the beachfront boulevard — a little over three kilometres in total, no steps you can't avoid, and by the hour I've suggested, the heat has mostly gone off duty. Water on at least one side of you the entire time.\n\nFind the promenade at the water's edge on the marina's western bank, anywhere near the towers, and face the canal.\n\nThat's Marina Walk. Start there."
+        },
+        {
+          "id": "37f5749b-406b-56e2-9ca8-b20d58ab097b",
+          "order": 1,
+          "title": "The Marina Walk",
+          "caption": "Notice the water first: it isn't doing anything. No waves, no current you can see, barely a ripple unless a boat is moving through.",
+          "latitude": 25.0811,
+          "longitude": 55.1406,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-marinajbr-walk_stop1.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marina-walk_hero.webp",
+          "transcriptText": "Notice the water first: it isn't doing anything. No waves, no current you can see, barely a ripple unless a boat is moving through. This is a canal wearing a coastline's clothes, and its stillness is what makes everything else here work — the towers stand twice, once in the air and once on the surface, and after dark the reflection is honestly the better of the two.\n\nNow watch the promenade itself, because this is the stop where the subject is the ritual, not the architecture. Every evening, the walkway fills with the same unhurried traffic: runners threading through families, families trailing children on scooters, couples pacing out the water's edge, tables filling along the rail. Nobody is going anywhere. The whole loop — around seven kilometres if you commit to all of it — is a circuit, which means the walking is the destination. In a region where the corniche stroll is an old and serious institution, this is Dubai's high-rise version of it: the evening paseo, conducted at the foot of some of the tallest residential towers anywhere.\n\nAnd that's the quiet surprise of the marina. The towers photograph as spectacle, and the district gets filed under skylines. But stand here for ten minutes at this hour and what you're actually watching is a neighbourhood — thousands of people who live in those towers, down at the waterline, doing the least spectacular thing imaginable: taking a walk before dinner. The canal was an engineering feat. What grew along its banks is a habit.\n\nFollow the promenade towards the marina's mouth, keeping the water on your left, until you reach the footbridges near the tram stations. Cross there — we're going through the seam, to JBR."
+        },
+        {
+          "id": "2d374038-7a79-5b21-8f9f-058f1b9fccc8",
+          "order": 2,
+          "title": "The seam",
+          "caption": "Somewhere on this short crossing, the city changes its mind.",
+          "latitude": 25.078,
+          "longitude": 55.1353,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-marinajbr-walk_stop2.mp3",
+          "audioDurationSeconds": 88,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dubai-marinajbr_stop2.webp",
+          "transcriptText": "Somewhere on this short crossing, the city changes its mind.\n\nYou can track it as you walk. Behind you, the marina: enclosed water, vertical living, the hum of a district arranged around its own reflection. Ahead, through the gap between the buildings, the light is different — flatter, wider, with that particular brightness air only has when there's open sea behind it. The buildings themselves make the same turn. The marina towers face inward, towards the canal they were built around. The row rising ahead of you faces out, towards the horizon.\n\nThis seam is only a few minutes wide — footbridges, a tram line, a couple of streets — and it's easy to cross it without registering that you've moved between two different theories of a waterfront. One is manufactured and inward, a world the city made and then furnished. The other simply runs along the edge of the Gulf, taking what was already there and lining it with balconies. Almost nowhere else in Dubai are the made and the given stood this close together, close enough to walk from one into the other before your drink goes warm.\n\nKeep going until the street opens and you can see sand. The long row of towers above you is Jumeirah Beach Residence — JBR — and the boulevard running along its base, between the buildings and the beach, is where this walk ends. Head for the water."
+        },
+        {
+          "id": "fad39ba1-7151-526b-8429-785c5135c7c5",
+          "order": 3,
+          "title": "JBR — The Beach",
+          "caption": "Listen for a moment before you look. Under the music and the conversation, there's a sound the marina didn't have: water arriving.",
+          "latitude": 25.0774,
+          "longitude": 55.1321,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dubai-marinajbr-walk_stop3.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jbr-the-beach_hero.webp",
+          "transcriptText": "Listen for a moment before you look. Under the music and the conversation, there's a sound the marina didn't have: water arriving. Small waves, on sand, on their own schedule. After an hour beside a canal that holds perfectly still, the sea sounds almost busy.\n\nWalk the boulevard a little and take the inventory of an evening here. Nearly two kilometres of promenade between the towers and the sand, and it runs everything at once — restaurants spilling onto terraces, pop-up stalls, street performers claiming their patches, an open-air cinema, and along the roadway behind you, the nightly slow parade of engines: supercars idling past at walking pace, being seen rather than driven. Out on the sand, the last swimmers of the day, and beyond them, on its own island offshore, the great wheel standing over the water. This is the crowded, commercial, unembarrassed version of a seafront — closer to a boardwalk than a beach retreat — and it isn't pretending otherwise.\n\nHere's what arriving on foot has given you that arriving by car never could. You've felt the difference between Dubai's two waters — walked one, crossed the seam, and come out at the other — and so you know something the photographs flatten: the canal is where this district performs its calm, and the sea is where it performs its appetite. Same city, same evening, two entirely different ideas of what water is for.\n\nStay for the last of the light. Kick your shoes off if you like — after three kilometres of smooth paved promenade, the sand is the point. The city spent a fortune building water it could control. You've finished the walk at the water it couldn't, and there's something quietly right about ending there."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 428,
+      "walkingDistanceMeters": 3200,
+      "centroidLatitude": 25.07883,
+      "centroidLongitude": 55.136,
+      "city": "Dubai",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Waterfront",
+        "Architecture",
+        "Engineering",
+        "Contemporary"
       ],
       "priceUSD": 0
     }
