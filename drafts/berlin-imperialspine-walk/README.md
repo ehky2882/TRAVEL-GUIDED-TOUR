@@ -19,11 +19,11 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
 | 1 | Brandenburg Gate | `01_brandenburg_gate` | `brandenburg-gate_hero.webp` | — | `52.51630, 13.37770` |
 | 2 | Bebelplatz | `02_bebelplatz` | `bebelplatz_hero.webp` | — | `52.51380, 13.39400` |
 | 3 | Neue Wache | `03_neue_wache` | `neue-wache_hero.webp` | (hero is CC — see CREDITS) | `52.51760, 13.39690` |
-| 4 | Lustgarten (Museum Island) | `04_lustgarten` | `museum-island_hero.webp` | — | `52.51860, 13.39850` |
+| 4 | Lustgarten (Museum Island) | `04_lustgarten` | `museum-island_3.webp` | — | `52.51860, 13.39850` |
 | 5 | Humboldt Forum | `05_humboldt_forum` | `humboldt-forum_hero.webp` | — | `52.51740, 13.40280` |
 
 - **heroImageURL (walk):** `brandenburg-gate_hero.webp` — the front door / start of the boulevard.
-- **additionalImageURLs** (5, in stop order): `brandenburg-gate_hero.webp`, `bebelplatz_hero.webp`, `neue-wache_hero.webp`, `museum-island_hero.webp`, `humboldt-forum_hero.webp`.
+- **additionalImageURLs** (5, in stop order): `brandenburg-gate_hero.webp`, `bebelplatz_hero.webp`, `neue-wache_hero.webp`, `museum-island_3.webp`, `humboldt-forum_hero.webp`.
 
 ## Wire-in checklist (when audio arrives)
 1. Under maker **Atlas Studio BER** 🇩🇪, add ONE tour, `kind: multiStop`.
@@ -37,3 +37,18 @@ Image URL base: `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/`
    - `centroid` (avg of the 5 geofenced stops): **`52.51674, 13.39398`**.
    - Category: `history`; `priceUSD: 0`; `city: "Berlin"`.
 2. Credit-required stop images are logged in `drafts/CREDITS.md` (Berlin section) — surface before ship.
+
+## ⚠️ Stop 4 uses `museum-island_3`, NOT `museum-island_hero` — corrected 2026-07-30
+
+The stop originally pointed at `museum-island_hero.webp`, which is the **Bode Museum at the north
+tip of the island** — a building the script never mentions, roughly 600 m north of where the
+listener stands and not visible from the Lustgarten. The slug matched the stop title; the picture
+did not match the stop.
+
+The script names exactly three things in view: *"a colonnade of eighteen columns: the Altes Museum
+… to your right, the great bulk of the Berliner Dom … behind you, across the road, the palace
+facade."* **`museum-island_3.webp` is that view** — the Altes Museum colonnade seen across the
+Lustgarten lawn with the fountain. Same single, gallery slot 3, already staged and ship-safe, so
+the fix costs nothing and adds no credit.
+
+**Do not "restore" the hero here.** Verify a reused image by opening it, never by matching the slug.
