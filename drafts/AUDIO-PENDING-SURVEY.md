@@ -31,7 +31,7 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-07-31 (🇦🇪 **Dubai COMPLETE** — all 26 tours live under Atlas Studio DXB, the 21st maker; catalog 1040 tours / 1320 stops. Pending queue: **Berlin + Chicago** = 66 tours / 110 MP3s).
+**Last verified:** 2026-08-04 (🇧🇷 **São Paulo COMPLETE** — 42 tours live under Atlas Studio SAO, the 23rd maker; catalog 1128 tours / 1414 stops. **Pending queue unchanged: Berlin + Chicago = 66 tours / 110 MP3s** — neither Rio nor São Paulo came from it.)
 
 > ⚠️ **This file went stale within a day and told a session the wrong thing.** On 2026-07-28 it said the queue was "Montreal + Berlin only"; **Dubai had been script- and image-staged on 2026-07-27** by a parallel session that added its drafts to `claude/amsterdam-handoff-preserve-hlhyp8` and pushed ~32 images to `gh-pages` **without updating this file**. A session then reported "queue is down to Berlin only" to the owner, who corrected it. **The UPDATE RULE above is not optional, and it binds the *staging* session as much as the wire-in session.** When in doubt, re-derive rather than trust the table: `git ls-tree -r --name-only origin/claude/amsterdam-handoff-preserve-hlhyp8 -- drafts/` and compare against the makers in `origin/main`'s `Tours.json`.
 
@@ -48,6 +48,8 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 | 🇺🇸 Chicago | 30 | 25 single + 5 walks (intro+5 × 3, intro+4 × 2) | 53 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ORD |
 | **TOTAL PENDING** | **66** | | **110** | | |
 
+_(✅ 🇧🇷 **São Paulo = DONE (2026-08-04): 42 tours LIVE** — 41 single-stop (geofenced 30 m) + **1 walk** (`sao-ibirapuera-walk` "Ibirapuera Park", manual intro + 6 stops at 40 m, 3.0 km) under new maker **Atlas Studio SAO** (`b366d042-881b-5226-aaa8-1dce36c7a2cb`) — the **23rd maker**, and Brazil's second bureau. 48 MP3s, 5,279 s narration. **Never in the PENDING table** — it arrived complete (audio + scripts + images in one Dropbox `/scl/fo/` drop) and was wired the same day, exactly like Rio. All 173 images arrived already 1200×900, so no image work was needed. ⚠️ Mercado Municipal de Campinas ships with `city: "Campinas"` (~90 km away); MAC USP appears twice by design (single-stop museum tour + walk stop 6 rooftop).)_
+_(✅ 🇧🇷 Rio de Janeiro = DONE (2026-08-01): **46 single-stop tours LIVE** under **Atlas Studio RIO** — the 22nd maker. 46 MP3s, 5,102 s. Also never in the PENDING table; arrived complete and wired the same day.)_
 _(✅ 🇦🇪 Dubai = DONE (2026-07-31): **26 tours LIVE** — 22 single-stop + **4 walks** (The Creek Crossing, The Old Quarter, The Downtown Loop, Marina & JBR) under new maker **Atlas Studio DXB** — the **21st maker**. 40 MP3s, 5,012 s narration. The delivery matched the staging exactly: 22 singles + 18 walk tracks, nothing spare, nothing missing. Detail in the LIVE section below.)_
 
 _(✅ 🇪🇸 Madrid = DONE (2026-07-25, PR #435): **34 tours LIVE** — 30 single-stop + **4 walks** (Madrid de los Austrias, Paseo del Arte, El Retiro, Royal Madrid) under new maker **Atlas Studio MAD**. 55 MP3s. Note: the staged set was **30 singles / 55 MP3s**, not the 31/56 recorded here — the old figure was one over. Owner audio arrived complete, matching the staged drafts 1:1.)_
