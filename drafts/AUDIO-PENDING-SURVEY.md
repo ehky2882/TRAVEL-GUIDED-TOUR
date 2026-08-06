@@ -31,7 +31,7 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-08-04 (🇧🇷 **São Paulo COMPLETE** — 42 tours live under Atlas Studio SAO, the 23rd maker; catalog 1128 tours / 1414 stops. **Pending queue unchanged: Berlin + Chicago = 66 tours / 110 MP3s** — neither Rio nor São Paulo came from it.)
+**Last verified:** 2026-08-06 (🇩🇪 **Berlin COMPLETE** — 36 tours live under Atlas Studio BER, the 24th maker; catalog 1164 tours / 1471 stops. **Pending queue is now Chicago alone: 30 tours / 53 MP3s.** Berlin is the first drain from this table since Montreal — Rio, São Paulo and Dubai all arrived complete and jumped the queue.)
 
 > ⚠️ **This file went stale within a day and told a session the wrong thing.** On 2026-07-28 it said the queue was "Montreal + Berlin only"; **Dubai had been script- and image-staged on 2026-07-27** by a parallel session that added its drafts to `claude/amsterdam-handoff-preserve-hlhyp8` and pushed ~32 images to `gh-pages` **without updating this file**. A session then reported "queue is down to Berlin only" to the owner, who corrected it. **The UPDATE RULE above is not optional, and it binds the *staging* session as much as the wire-in session.** When in doubt, re-derive rather than trust the table: `git ls-tree -r --name-only origin/claude/amsterdam-handoff-preserve-hlhyp8 -- drafts/` and compare against the makers in `origin/main`'s `Tours.json`.
 
@@ -44,9 +44,10 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 
 | City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|------------:|----------------|------------------|
-| 🇩🇪 Berlin | 36 | 31 single + 5 walks (intro+5 / intro+5 / intro+4 / intro+4 / intro+3) | 57 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio BER |
 | 🇺🇸 Chicago | 30 | 25 single + 5 walks (intro+5 × 3, intro+4 × 2) | 53 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ORD |
-| **TOTAL PENDING** | **66** | | **110** | | |
+| **TOTAL PENDING** | **30** | | **53** | | |
+
+_(✅ 🇩🇪 **Berlin = DONE (2026-08-06): 36 tours LIVE** — 31 single-stop (geofenced 30 m) + **5 walks** (The Imperial Spine, The Ghost Line, Cold War Centre, The Scheunenviertel, The River Border) under new maker **Atlas Studio BER** (`a0717b10-a295-5ab5-a875-d5a9587d0274`) — the **24th maker**. 57 MP3s, 7,489 s (~2h05m), the largest narration drop to date. **This one DID come from this table** — the first queue drain since Montreal, since Rio/São Paulo/Dubai all arrived complete and jumped it. Delivery matched the staging exactly: 57 MP3s, 1:1 with the scripts, nothing spare or missing, via a Dropbox `/scl/fo/` folder link that downloaded first try. Detail in the per-city section below.)_
 
 _(✅ 🇧🇷 **São Paulo = DONE (2026-08-04): 42 tours LIVE** — 41 single-stop (geofenced 30 m) + **1 walk** (`sao-ibirapuera-walk` "Ibirapuera Park", manual intro + 6 stops at 40 m, 3.0 km) under new maker **Atlas Studio SAO** (`b366d042-881b-5226-aaa8-1dce36c7a2cb`) — the **23rd maker**, and Brazil's second bureau. 48 MP3s, 5,279 s narration. **Never in the PENDING table** — it arrived complete (audio + scripts + images in one Dropbox `/scl/fo/` drop) and was wired the same day, exactly like Rio. All 173 images arrived already 1200×900, so no image work was needed. ⚠️ Mercado Municipal de Campinas ships with `city: "Campinas"` (~90 km away); MAC USP appears twice by design (single-stop museum tour + walk stop 6 rooftop).)_
 _(✅ 🇧🇷 Rio de Janeiro = DONE (2026-08-01): **46 single-stop tours LIVE** under **Atlas Studio RIO** — the 22nd maker. 46 MP3s, 5,102 s. Also never in the PENDING table; arrived complete and wired the same day.)_
@@ -281,6 +282,20 @@ Obama Center parent holds 8 logo files while a subcategory holds the real photog
 the result title — rejected this batch were Mexico City's Palacio de Bellas Artes (six times), the White House (seven
 times), Fallingwater, the Guggenheim, Brooklyn's Barclays Center, and literal rookeries with egrets in them.
 
+**🇩🇪 Berlin — ✅ LIVE (2026-08-06)** — all **36 staged tours** under **Atlas Studio BER** (`a0717b10-a295-5ab5-a875-d5a9587d0274` = uuid5 `atlas-maker:ber`), the **24th maker**: 31 single-stop (geofenced 30 m) + 5 walks — `berlin-imperialspine-walk` (intro+5, 1.5 km, history) · `berlin-ghostline-walk` (intro+5, 2.0 km, history) · `berlin-coldwarcentre-walk` (intro+4, 2.0 km, history) · `berlin-scheunenviertel-walk` (intro+4, 0.8 km, culturalHeritage) · `berlin-riverborder-walk` (intro+3, 2.0 km, culturalHeritage). **57 MP3s, 7,489 s (~2h05m)** — the largest narration drop to date. Catalog 1128 → 1164 tours / 1414 → 1471 stops. Nothing Berlin pending.
+
+⚠️ **Three deviations from the staged READMEs were applied at wire-in — fix the READMEs before Chicago repeats the first two.** (1) Singles set `stop0.imageURL` to the tour hero, not `null`. (2) Walk galleries omit whichever stop image is also the walk hero, or the validator hard-errors. **Both are the exact errors flagged in the Dubai section below, still unfixed, and they duly recurred.** (3) **`ghostline_hero.webp` and `ghostline_stop4.webp` are byte-identical** (sha256-verified on the live URLs), so `ghostline_stop4` was dropped from the Ghost Line gallery — otherwise the carousel shows the same photo as cover and as slide 4. **The validator cannot catch that class: the URLs differ and both 200.** Only `check-image-duplicates.py` or a manual byte check finds it.
+
+⚠️ **Imperial Spine stop 4 (Lustgarten) shipped with `museum-island_3.webp`, not the staged `museum-island_hero.webp`** — the hero is the **Bode Museum from the water**, 600 m north, while the script names the Altes Museum colonnade, the Dom and the palace facade. Same finding as [PR #475](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/475)'s 94-image reuse audit (still open at wire-in), verified independently by opening the file. **All 21 Berlin walk-stop images were opened and checked against their scripts; the other 20 are correct.** ⚠️ The **single-stop `museum-island` hero is still that Bode photograph** — defensible as a tour cover, but `museum-island_3` is already in its gallery if the owner would rather promote it.
+
+⚠️ **`east-side-gallery_hero` is Vrubel's Brezhnev–Honecker mural**, in copyright, carried on **German freedom of panorama** (§59 UrhG), which does cover permanently-sited public artworks — a different footing from the Chicago Pilsen murals, where the US has no such provision.
+
+⚠️ **2 tours ship hero-only** (Mauerpark, Nollendorfplatz); 4 more have hero + 1 (Bernauer Strasse, Karl-Marx-Allee, Kollwitzplatz, Treptower Park). Backfillable without touching audio.
+
+✅ **The `crop43` portrait-decapitation scare was checked and cleared** — the Wasserturm (`kollwitzplatz_2`) was named as a likely casualty; it is intact base to chimney.
+
+<details><summary>(staging detail — for reference)</summary>
+
 **🇩🇪 Berlin** — **36 tours (31 single-stop + 5 walks)**, new maker **Atlas Studio BER** 🇩🇪. Complete 2026-07-21 (image-staged; awaiting narration):
 - **Batch 1 (31 single-stop):** Brandenburg Gate, Reichstag, Holocaust Memorial, Bebelplatz, Museum Island, Humboldt Forum, Alexanderplatz, Gendarmenmarkt, Checkpoint Charlie, Bernauer Strasse, East Side Gallery, Potsdamer Platz, Oberbaumbrücke, Topography of Terror, Gedächtniskirche, Tiergarten/Siegessäule, Hackesche Höfe, Neue Synagoge, Nikolaiviertel, Tränenpalast, Neue Wache, Karl-Marx-Allee, Kollwitzplatz/Wasserturm, Mauerpark, Tempelhofer Feld, Charlottenburg, Kulturforum, Band des Bundes, Treptower Park, Landwehrkanal/Maybachufer, Nollendorfplatz. Master pick-map (slug/coord/category/hero+gallery/credit): `drafts/berlin-batch1/README.md`.
 - **5 walks:** `berlin-imperialspine-walk` (intro+5, Unter den Linden) · `berlin-ghostline-walk` (intro+5, Bernauer Strasse Wall line) · `berlin-coldwarcentre-walk` (intro+4) · `berlin-scheunenviertel-walk` (intro+4) · `berlin-riverborder-walk` (intro+3). Each folder has its own README wire-in spec (per-stop image + coord + centroid + walking distance).
@@ -288,6 +303,8 @@ times), Fallingwater, the Guggenheim, Brooklyn's Barclays Center, and literal ro
 - **Sensitivity honored (dignified only, no graphic imagery):** Holocaust Memorial, Bebelplatz book-burning memorial, Topography of Terror (documentary, no swastika close-ups), Neue Synagoge (exteriors/dome), Große Hamburger deportation memorial, Neue Wache (Kollwitz Pietà), Treptower Park Soviet memorial (soldier/child + banners, no swastika close-ups), Nollendorfplatz pink-triangle history, Bernauer Strasse (owner-pasted).
 - **MP3s needed: 57** = 31 singles + 26 walk tracks. Credits: `drafts/CREDITS.md` (Berlin — **~26 CC-credited** across Topography ×5, Neue Wache ×3, Hackesche ×3, Neue Synagoge ×2, Tränenpalast ×3, Bebelplatz ×2, + Karl-Marx-Allee, Kollwitz, Nollendorfplatz heroes, and the 7 walk-only images; everything else ship-safe/owner-pasted).
 - **⚠️ Berlin image attributions were WRONG and were corrected 2026-07-28.** They had been produced by matching image *dimensions* against a Wikimedia category listing, which silently picks the wrong file whenever two images in a category share a size. Re-verified by **SHA-1 reverse-lookup** (exact file identity): **9 of the rows were wrong** — all five Topography of Terror rows (wrong author throughout, and `_4` is actually **public domain**, not CC BY-SA), the two Tränenpalast subjects swapped, the Nordbahnhof walk image, and the East Side Park riverbank (credited to the wrong photographer entirely). `drafts/CREDITS.md` now holds the corrected table. **Never attribute by dimension match again — SHA-1 the local file against `list=allimages&aisha1=…`.** Any other city whose credits were gathered the same way is suspect and worth a re-verify pass.
+
+</details>
 
 _(🇬🇧 London — Greenwich walk "The Measure of the World" **went LIVE 2026-07-08, PR #378**. It was the last staged London tour; London is now fully wired.)_
 
