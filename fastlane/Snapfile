@@ -11,13 +11,14 @@ scheme "Atlas Screenshots"
 # 6.9" iPhone, plus a 13" iPad because this app ships for iPad too
 # (TARGETED_DEVICE_FAMILY = "1,2,7").
 #
-# ⚠️ These are simulator NAMES and they change with Xcode versions. If a run
-# fails with "No simulator found", list what the machine actually has:
-#     xcrun simctl list devicetypes | grep -i ipad
-# and edit the names here.
+# ⚠️ These are simulator NAMES and they change with every Xcode release — the
+# iPad was "(M4)" and is now "(M5)". If a run fails with
+#     Error setting value '[...]' for option 'devices'
+# read the "List available simulators" step in that same workflow run: it
+# prints exactly what the machine has, in the job summary. Then edit here.
 devices([
   "iPhone 17 Pro Max",
-  "iPad Pro 13-inch (M4)"
+  "iPad Pro 13-inch (M5)"
 ])
 
 languages([
