@@ -1,3 +1,4 @@
+import CoreLocation
 import XCTest
 
 /// Captures the App Store screenshots.
@@ -11,9 +12,8 @@ import XCTest
 /// A UI test navigates by finding elements on screen, so it breaks whenever the
 /// UI moves. A screenshot run that crashes halfway is worse than useless, so
 /// every step after the first is *optional*: if an element cannot be found, the
-/// step is skipped with a logged note and the run continues. The result is that
-/// a UI change costs you one missing screenshot, not a red build and no
-/// screenshots at all.
+/// step is skipped with a logged note and the run continues. A UI change costs
+/// one missing screenshot, not a red build and no screenshots at all.
 ///
 /// If a screenshot goes missing, read the test log for the "SCREENSHOT SKIPPED"
 /// line — it names the step that could not be reached.
@@ -30,15 +30,31 @@ final class ScreenshotUITests: XCTestCase {
     /// How long to wait for a screen to appear before giving up on it.
     private let timeout: TimeInterval = 20
 
+    /// Where the phone pretends to be: 34th & Fifth, outside the Empire State
+    /// Building.
+    ///
+    /// ⚠️ THIS IS WHAT FRAMES THE MAP, and it replaced an earlier approach that
+    /// looked reasonable and produced bad screenshots. Declining the location
+    /// permission was reproducible — the app falls back to a fixed region — but
+    /// that region centres on the Hudson, so the hero screenshot showed
+    /// suburban New Jersey with Manhattan shoved into a corner. Simulating a
+    /// real location is just as reproducible AND lands the map on the densest
+    /// part of the catalogue.
+    private let simulatedLocation = CLLocation(latitude: 40.7484, longitude: -73.9857)
+
     func testCaptureAppStoreScreenshots() throws {
         // A failed step should not abort the whole run — see the design note.
         continueAfterFailure = true
 
         app = XCUIApplication()
         setupSnapshot(app)
-        app.launch()
 
-        dismissSystemAlerts()
+        // Must be set before the app asks, so the very first camera move is
+        // already centred on Midtown.
+        XCUIDevice.shared.location = XCUILocation(location: simulatedLocation)
+
+        app.launch()
+        allowLocationPermission()
 
         // 1. The map. This is the one screenshot that must always work, so it
         //    is taken first and is the only step that fails the test.
@@ -46,16 +62,19 @@ final class ScreenshotUITests: XCTestCase {
             waitForAppToSettle(),
             "The app never reached its main screen — screenshots cannot be captured."
         )
+        // The map streams tiles and the mini-player's title scrolls; give both a
+        // moment to come to rest so nothing is captured mid-animation.
+        settle(seconds: 4)
         snapshot("01-Home-Map")
 
-        // 2. The drawer of nearby tours, pulled up over the map.
+        // 2. The drawer of tours, raised over the map.
         if raiseDrawer() {
             snapshot("02-Browse-Tours")
         } else {
             skipped("the tour drawer")
         }
 
-        // 3. A tour's own page: hero image, description, stops.
+        // 3. A tour's own page: hero image, description, stops, nearby tours.
         if openFirstTour() {
             snapshot("03-Tour-Detail")
 
@@ -86,48 +105,62 @@ final class ScreenshotUITests: XCTestCase {
         // present on every tab and outlives any transient loading state.
         if app.buttons["HOME"].firstMatch.waitForExistence(timeout: timeout) { return true }
 
-        // Fall back to the map itself, in case the tab labels are restyled.
         return app.maps.firstMatch.waitForExistence(timeout: timeout)
             || app.otherElements["Home"].waitForExistence(timeout: 5)
     }
 
-    /// Drags the bottom sheet up so the tour list fills the screen.
+    /// Raises the bottom sheet so the tour list fills more of the screen.
+    ///
+    /// Drags from the sheet's grab handle rather than from an arbitrary point:
+    /// starting the drag inside the scrolling list just scrolls the list, which
+    /// is how an earlier version produced a near-duplicate of screenshot 01
+    /// with a half-cut card row across the top.
     private func raiseDrawer() -> Bool {
         guard app.maps.firstMatch.exists else { return false }
 
-        // Drag from low on the screen towards the top — the drawer's grab area
-        // sits at the bottom, above the mini player.
-        let start = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.82))
-        let end = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.25))
-        start.press(forDuration: 0.1, thenDragTo: end)
+        // The handle sits at the top edge of the sheet, a little under halfway
+        // down the screen.
+        let handle = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.42))
+        let target = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.12))
+        handle.press(forDuration: 0.25, thenDragTo: target, withVelocity: .slow,
+                     thenHoldForDuration: 0.2)
 
-        return settle()
+        settle(seconds: 3)
+        return true
     }
 
-    /// Opens the first tour it can find in the drawer.
+    /// Opens the first tour card in the drawer.
+    ///
+    /// Card buttons are found by shape rather than by label: the drawer also
+    /// contains the search field and the category chips, which are buttons too.
+    /// A tour card is large and sits in the lower half of the screen, so that is
+    /// what we look for. Matching on a tour's title would tie these screenshots
+    /// to whatever happens to be nearest, which changes with the catalogue.
     private func openFirstTour() -> Bool {
-        // Tour cards are buttons; the first few elements are chrome (search,
-        // category chips), so prefer a cell-like element when one exists.
-        let candidates: [XCUIElement] = [
-            app.buttons.matching(identifier: "TourCard").firstMatch,
-            app.cells.firstMatch,
-            app.scrollViews.buttons.element(boundBy: 0)
-        ]
+        let screen = app.frame
 
-        for candidate in candidates where candidate.exists && candidate.isHittable {
-            candidate.tap()
-            return settle()
+        let card = app.buttons.allElementsBoundByIndex.first { button in
+            guard button.exists, button.isHittable else { return false }
+            let frame = button.frame
+            return frame.height > 120
+                && frame.width > 120
+                && frame.minY > screen.height * 0.35
         }
-        return false
+
+        guard let card else { return false }
+        card.tap()
+        settle(seconds: 3)
+        return true
     }
 
     /// Presses the button that begins a tour.
     private func startPlayback() -> Bool {
-        for label in ["Start Tour", "START TOUR", "Start"] {
+        for label in ["Start Tour", "START TOUR", "Start", "Play"] {
             let button = app.buttons[label].firstMatch
             if button.waitForExistence(timeout: 3) && button.isHittable {
                 button.tap()
-                return settle()
+                settle(seconds: 3)
+                return true
             }
         }
         return false
@@ -139,11 +172,10 @@ final class ScreenshotUITests: XCTestCase {
             let button = app.buttons[label].firstMatch
             if button.exists && button.isHittable {
                 button.tap()
-                _ = settle()
+                settle(seconds: 2)
                 return
             }
         }
-        // Nothing to close, or it dismisses by a swipe we do not need here.
     }
 
     /// Switches to a bottom tab. Tab labels render in capitals.
@@ -152,7 +184,8 @@ final class ScreenshotUITests: XCTestCase {
             let tab = app.buttons[label].firstMatch
             if tab.exists && tab.isHittable {
                 tab.tap()
-                return settle()
+                settle(seconds: 2)
+                return true
             }
         }
         return false
@@ -160,23 +193,26 @@ final class ScreenshotUITests: XCTestCase {
 
     // MARK: - Helpers
 
-    /// Dismisses the location permission dialog if the system shows one.
+    /// Grants the location permission if the system asks.
     ///
-    /// We deliberately DECLINE location. It sounds backwards, but it is what
-    /// makes screenshots reproducible: with no location fix the map falls back
-    /// to a fixed New York region, which is both the densest part of the
-    /// catalogue and identical on every run and every machine. Allowing
-    /// location would frame the map on wherever the simulator happens to think
-    /// it is that day.
-    private func dismissSystemAlerts() {
+    /// We ALLOW it, paired with the simulated location above, so the map opens
+    /// on Midtown Manhattan. See the note on `simulatedLocation` for why
+    /// declining — the obvious way to get a reproducible screenshot — produced
+    /// a worse one.
+    private func allowLocationPermission() {
         let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
-        let preferred = ["Don't Allow", "Dont Allow", "Allow Once", "OK", "Continue"]
+        let preferred = [
+            "Allow While Using App",
+            "Allow Once",
+            "Allow",
+            "OK",
+            "Continue"
+        ]
 
-        // Permission dialogs can appear a beat after launch, and there may be
-        // more than one (location, then notifications).
+        // Dialogs can appear a beat after launch, and there may be more than one.
         for _ in 0..<3 {
             let alert = springboard.alerts.firstMatch
-            guard alert.waitForExistence(timeout: 3) else { return }
+            guard alert.waitForExistence(timeout: 4) else { return }
 
             let tapped = preferred.contains { title in
                 let button = alert.buttons[title]
@@ -188,13 +224,12 @@ final class ScreenshotUITests: XCTestCase {
         }
     }
 
-    /// Lets an animation or transition finish. Screenshots taken mid-animation
-    /// look like bugs, which is a fast way to fail App Store review.
-    @discardableResult
-    private func settle() -> Bool {
+    /// Lets animations, map tiles and the scrolling mini-player title come to
+    /// rest. Screenshots caught mid-animation look like bugs, which is a fast
+    /// way to fail App Store review.
+    private func settle(seconds: TimeInterval = 2) {
         _ = app.wait(for: .runningForeground, timeout: 5)
-        Thread.sleep(forTimeInterval: 1.5)
-        return true
+        Thread.sleep(forTimeInterval: seconds)
     }
 
     private func skipped(_ what: String) {
