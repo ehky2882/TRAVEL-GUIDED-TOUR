@@ -1,7 +1,7 @@
-Thank you for reviewing Atlas.
+Thank you for reviewing Dozent.
 
 WHAT THE APP DOES
-Atlas is a catalogue of narrated walking tours of city landmarks. Each tour is
+Dozent is a catalogue of narrated walking tours of city landmarks. Each tour is
 tied to a real-world location. When you physically arrive at a stop, the audio
 for that stop begins automatically.
 

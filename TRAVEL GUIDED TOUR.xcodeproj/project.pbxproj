@@ -447,8 +447,8 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Atlas uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Atlas uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Dozent uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Dozent uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -497,8 +497,8 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Atlas uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Atlas uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Dozent uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Dozent uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

@@ -60,20 +60,28 @@ path, so a problem now is much cheaper than a problem during submission.
 
 ## Phase B — Two decisions
 
-### Step 2 — Decide the app's name
+### Step 2 — Decide the app's name ✅ *decided 2026-08-07: **Dozent***
 
-**Who:** you.
+**Owner decision:** the app is called **Dozent**, consistently, everywhere.
 
-The app has **two different names**. Both confirmed against App Store Connect
-on 2026-08-07:
+Applied to all of it:
 
-| Where | Name |
+| Where | Now |
 |---|---|
-| App Store Connect (verified live) | Atlas Audio Tours |
-| On the home screen under the icon (`CFBundleDisplayName`) | Dozent |
+| App Store Connect app name | Dozent |
+| Home screen under the icon (`CFBundleDisplayName`) | Dozent |
+| Store description and review notes | Dozent |
+| **Location + microphone permission dialogs** | Dozent |
 
-Only the home-screen name is in dispute — the store side is settled, and the
-listing copy already says Atlas throughout.
+That last row is easy to miss and users see it at first launch — the strings
+lived in both `Info.plist` and the Xcode project and both said "Atlas".
+
+⚠️ **Still called Atlas, deliberately, and NOT covered by this decision:** the 24
+in-app creator studios (*Atlas Studio NYC*, *Atlas Studio LDN*, …) in
+`Tours.json`. Renaming those is a content and backend job, not an app-name
+change — the studio IDs are derived from strings like `atlas-maker:nyc`, they
+exist as rows in Supabase, and every tour references them. **If you want the
+studios renamed too, say so and it gets scoped separately.**
 
 A customer would find you under one name and then have a different word on their
 phone. It also splits your search ranking. Pick one:

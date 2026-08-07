@@ -1,4 +1,4 @@
-Atlas turns a walk into a guided tour. The audio starts on its own the moment you reach a stop — no fumbling for the right track, no staring at a screen while the building is right there in front of you.
+Dozent turns a walk into a guided tour. The audio starts on its own the moment you reach a stop — no fumbling for the right track, no staring at a screen while the building is right there in front of you.
 
 WHAT'S INSIDE
 More than 1,100 tours across 24 cities — New York, London, Paris, Tokyo, Kyoto, Rome, Madrid, Amsterdam, Berlin, Hong Kong, Seoul, Rio de Janeiro and more. Every stop carries photographs and a full transcript, if you would rather read than listen.
@@ -14,7 +14,7 @@ WHAT YOU'LL FIND
 • Food and drink, parks, sacred sites, and the corners only locals know
 
 HOW IT WORKS
-Open the map, find something near you, press start, and put your phone in your pocket. Atlas watches for the moment you arrive at each stop and begins the audio then. Keep walking; it keeps up.
+Open the map, find something near you, press start, and put your phone in your pocket. Dozent watches for the moment you arrive at each stop and begins the audio then. Keep walking; it keeps up.
 
 WORKS WITHOUT SIGNAL
 Download a tour before you set off and it plays with no connection at all — no roaming charges abroad, and no dead air underground.
