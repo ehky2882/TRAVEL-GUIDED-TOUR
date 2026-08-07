@@ -31,7 +31,7 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-08-06 (🇩🇪 **Berlin COMPLETE** — 36 tours live under Atlas Studio BER, the 24th maker; catalog 1164 tours / 1471 stops. **Pending queue is now Chicago alone: 30 tours / 53 MP3s.** Berlin is the first drain from this table since Montreal — Rio, São Paulo and Dubai all arrived complete and jumped the queue.)
+**Last verified:** 2026-08-07 (🇲🇦 **Marrakech COMPLETE** — 26 tours live under Atlas Studio RAK, the 25th maker and the first African city; catalog 1190 tours / 1497 stops. **Never in this table** — it arrived complete (audio + scripts + images in one Dropbox `/scl/fo/` drop) and was wired the same day, like Rio/São Paulo. **Pending queue is unchanged: Chicago alone, 30 tours / 53 MP3s.**)
 
 > ⚠️ **This file went stale within a day and told a session the wrong thing.** On 2026-07-28 it said the queue was "Montreal + Berlin only"; **Dubai had been script- and image-staged on 2026-07-27** by a parallel session that added its drafts to `claude/amsterdam-handoff-preserve-hlhyp8` and pushed ~32 images to `gh-pages` **without updating this file**. A session then reported "queue is down to Berlin only" to the owner, who corrected it. **The UPDATE RULE above is not optional, and it binds the *staging* session as much as the wire-in session.** When in doubt, re-derive rather than trust the table: `git ls-tree -r --name-only origin/claude/amsterdam-handoff-preserve-hlhyp8 -- drafts/` and compare against the makers in `origin/main`'s `Tours.json`.
 
@@ -46,6 +46,8 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 |------|--------------:|-----------|------------:|----------------|------------------|
 | 🇺🇸 Chicago | 30 | 25 single + 5 walks (intro+5 × 3, intro+4 × 2) | 53 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ORD |
 | **TOTAL PENDING** | **30** | | **53** | | |
+
+_(✅ 🇲🇦 **Marrakech = DONE (2026-08-07): 26 tours LIVE** — 26 single-stop (geofenced 30 m), no walks, under new maker **Atlas Studio RAK** (`c4e51efc-846e-5e78-b699-67e7f9d203e8`) — the **25th maker and the first African city**. 26 MP3s, 3,093 s (~51.5m). **Never in this table** — arrived complete (audio + scripts + 109 already-1200×900 images in one Dropbox `/scl/fo/` drop) and wired the same day. First Arabic-script city (bilingual `English | العربية` on 18 of 26). ⚠️ Aït Benhaddou ships with `city: "Aït Benhaddou"` (~180 km southeast, near Ouarzazate).)_
 
 _(✅ 🇩🇪 **Berlin = DONE (2026-08-06): 36 tours LIVE** — 31 single-stop (geofenced 30 m) + **5 walks** (The Imperial Spine, The Ghost Line, Cold War Centre, The Scheunenviertel, The River Border) under new maker **Atlas Studio BER** (`a0717b10-a295-5ab5-a875-d5a9587d0274`) — the **24th maker**. 57 MP3s, 7,489 s (~2h05m), the largest narration drop to date. **This one DID come from this table** — the first queue drain since Montreal, since Rio/São Paulo/Dubai all arrived complete and jumped it. Delivery matched the staging exactly: 57 MP3s, 1:1 with the scripts, nothing spare or missing, via a Dropbox `/scl/fo/` folder link that downloaded first try. Detail in the per-city section below.)_
 
