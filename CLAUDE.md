@@ -79,6 +79,130 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
+## Current State (2026-08-07)
+
+### The release process is fastlane now — TestFlight, screenshots, metadata and the App Store submission are all lanes (session 84 — infra)
+
+**Owner: "I want to launch using Fastlane... I definitely want Fastlane to handle everything, generating screenshots, etcetera."** So the whole
+release path moved into `fastlane/`, and the App Store launch — which had no
+automation at all — got built out end to end. Branch `claude/fastlane-launch`.
+**Read `docs/launch-runbook.md` before doing any launch work; it is the numbered
+walkthrough. `docs/fastlane.md` is the reference.**
+
+- **The lanes.** `beta` (build → sign → TestFlight → attach What-to-Test notes) ·
+  `screenshots` (capture, upload nothing) · `metadata` (the store text) ·
+  `upload_screenshots` · `release` (build + upload + submit for review, phased) ·
+  `test` · `certificates` (match — **deliberately not wired in**, see below).
+  Three workflows drive them: `testflight.yml` (rewritten), `screenshots.yml`
+  and `release.yml` (both new).
+- **`beta` replaced ~120 lines of inline shell with one lane, and killed the
+  retry loop.** The old workflow uploaded via `xcodebuild -exportArchive`, then
+  ran a SECOND fastlane invocation with `distribute_only: true` to attach the
+  notes, wrapped in a 20-attempt retry with a hand-written permanent-vs-retryable
+  error classifier. `upload_to_testflight` with
+  `skip_waiting_for_build_processing: false` does upload, wait, and set the
+  changelog in one call. **The two traps that classifier existed to survive are
+  preserved as comments in the Fastfile — `app_platform: "ios"` is still
+  mandatory (without it pilot prompts and CI dies), and `set_changelog` still
+  cannot do this job.**
+- **⚠️ Adding the UI test target would have silently slowed every PR, and the
+  fix is the reason two shared schemes are now committed.** The project had **no
+  shared schemes at all** — Xcode autocreated them per machine, and an
+  autocreated app scheme picks up every test target aimed at that app. Since
+  `ci.yml` runs `xcodebuild test -scheme "TRAVEL GUIDED TOUR"`, the screenshot UI
+  tests would have joined every pull request's test run. `TRAVEL GUIDED
+  TOUR.xcscheme` now pins Testables to the unit bundle only; `Atlas
+  Screenshots.xcscheme` is the one that runs the UI tests. **Schemes are
+  behaviour, not preference — keep them in version control.**
+- **The UI test target was added to a `objectVersion = 77` project by hand**, via
+  `scratchpad/add_uitest_target.py`-style anchored insertions where every anchor
+  is asserted to match exactly once. Object IDs carry the prefix `FA57` so
+  anything added is greppable. It uses a `PBXFileSystemSynchronizedRootGroup`
+  like the other targets, so new `.swift` files in the folder need no further
+  project surgery. Verified with `plutil -lint`, `xcodebuild -list`, and a real
+  `build-for-testing` — **`** TEST BUILD SUCCEEDED **`**.
+- **🐛 SnapshotHelper is `@MainActor`, and that broke the first build** (6 errors:
+  "call to main actor-isolated global function ... in a synchronous nonisolated
+  context"). Fixed by marking the test class `@MainActor` **and moving setup out
+  of `setUpWithError()` into the test method** — overriding an XCTestCase method
+  from a `@MainActor` class is an actor-isolation mismatch, so the obvious fix
+  does not compile.
+- **The screenshot test DECLINES the location permission on purpose.** With no
+  fix the map falls back to a fixed New York region — the densest part of the
+  catalogue and identical on every run. Allowing location would frame the map on
+  wherever the simulator thinks it is that day.
+- **The UI test is written to degrade, not fail.** Only the first screenshot
+  (Home) is a hard assertion; every later step is guarded and logs `SCREENSHOT
+  SKIPPED: could not reach <x>` if the UI moved. A rename costs one screenshot,
+  not a red build and zero screenshots.
+- **`screenshots.yml` uploads NOTHING to Apple** — it attaches the PNGs to the
+  run as an artifact for the owner to eyeball. `release.yml` requires typing
+  `RELEASE` and refuses to run off `main`.
+- **⚠️ Two owner decisions block launch, both in the runbook.** (1) **The app has
+  two names** — App Store Connect says *Atlas Audio Tours*, `CFBundleDisplayName`
+  says *Dozent*. `name.txt` currently matches ASC so pushing metadata is a no-op,
+  but this must be reconciled. (2) **Version is 1.1**, because the old TestFlight
+  train used 1.0; a debut labelled 1.1 reads oddly.
+- **⚠️ `match` is deliberately NOT wired in.** It would retire the
+  revoke-all-development-certificates workaround (now `scripts/revoke-dev-certs.py`,
+  ported unchanged from the workflow), but match uses **manual** signing, and
+  forcing manual signing on this project has already failed once ("conflicting
+  provisioning settings"). It is a post-launch cleanup, and the `certificates`
+  lane says so in a comment.
+- **What fastlane cannot do, recorded so nobody hunts for it:** the App Privacy
+  questionnaire, tax/banking agreements, and attaching in-app purchases to the
+  first submission are all manual in App Store Connect. Apple requires the first
+  non-consumable IAP to be reviewed alongside a new app version.
+- **⚠️ NOT YET PROVEN END TO END.** The UI test target compiles and everything is
+  syntax-checked, but no lane has run in CI — verification is Step 1 of the
+  runbook: cut one TestFlight build the new way before trusting the rest.
+
+### The App Store listing was stale and is now updated — and fastlane cannot run on this Mac (session 84b — infra)
+
+**The listing is live and correct as of 2026-08-07.** Description, keywords,
+subtitle, promotional text and support URL now match `fastlane/metadata/`,
+verified by reading back from Apple. The previous listing is backed up.
+
+- **⚠️ fastlane CANNOT be installed on a stock Mac, and pinning gems does not
+  rescue it.** macOS ships Ruby 2.6; `gem install fastlane` dies on
+  `multi_json requires Ruby >= 3.2`, and pre-installing an older multi_json just
+  moves the error to `domain_name requires Ruby >= 2.7.0`. **Do not repeat the
+  whack-a-mole.** There is no Homebrew on this machine either, so a newer Ruby
+  needs the owner's password. Lanes therefore run in **GitHub Actions**, and
+  metadata has a Ruby-free local path: **`scripts/push-appstore-metadata.py`**,
+  which reads the same `fastlane/metadata/` files and makes the same REST calls
+  `deliver` makes underneath, so the two cannot drift.
+- **⚠️ The old store copy was factually wrong in a way that risked review.** It
+  claimed *"No account required. Nothing leaves your phone."* — untrue since
+  Supabase accounts and cross-device sync shipped, and it would have contradicted
+  the App Privacy questionnaire. It also described a New-York-only early-access
+  catalogue (reality: 1,164 tours / 24 cities). The replacement keeps the good
+  parts of the old copy — the no-ads/no-tracking line, the single-vs-walk
+  explanation, platform support — with accurate framing. **Mac was dropped from
+  the platform list**: `TARGETED_DEVICE_FAMILY = "1,2,7"` is iPhone/iPad/Vision
+  Pro, so the old "Mac support" claim was not true of this binary.
+- **⚠️ Two metadata traps, both paid for.** (1) **"What's New" cannot be set on a
+  first release** — Apple returns `409 STATE_ERROR: Attribute 'whatsNew' cannot
+  be edited at this time`, because there is no prior version for it to be new
+  against. `release_notes.txt` was therefore **deleted from the repo** and should
+  be added at 1.1. (2) **The version update is ATOMIC** — that single rejected
+  field took description, keywords, promotional text and support URL down with
+  it. A non-200 means nothing landed.
+- **The version question is now answered by the data: App Store Connect already
+  holds an editable version 1.0** (`PREPARE_FOR_SUBMISSION`) while the project
+  says `MARKETING_VERSION = 1.1`. Metadata belongs to a *version record*, so the
+  listing copy now sits on 1.0. Aligning the project to 1.0 is the cheap path;
+  staying on 1.1 means creating a new version record and re-pushing.
+- **The store name is confirmed `Atlas Audio Tours`** (read live), so only
+  `CFBundleDisplayName = Dozent` is still inconsistent.
+- **⚠️ All 10 paid-tour IAPs are `MISSING_METADATA`** — none can be submitted
+  until each has a description and a review screenshot. Previously recorded as
+  merely "Prepare for Submission", which understated the work.
+- **Two working App Store Connect keys sit in `~/Downloads`** (`5W4PB6B3W9`,
+  `FAA58W4G25`); both authenticate and both see the app. Issuer
+  `f34324bd-aa34-4de0-8acb-2537b0e9325e`. They are **not** in the repo and must
+  stay out (`*.p8` is gitignored).
+
 ## Current State (2026-08-06)
 
 ### Berlin launched — 36 tours + 24th maker Atlas Studio BER; the audio-pending queue finally moves (session 83 — content)
@@ -1394,6 +1518,9 @@ Every session that ships a milestone, cuts scope, or changes "what's true today"
 | `docs/authoring-tours.md` | Tour content authoring guide |
 | `docs/cdn-decision.md` | Audio hosting decision |
 | `docs/design-tokens.md` | Typography/color/spacing reference |
+| `docs/launch-runbook.md` | **Step-by-step App Store launch walkthrough — start here to ship** |
+| `docs/fastlane.md` | How the release automation works (lanes, metadata, screenshots) |
+| `fastlane/` | The release toolchain: lanes, App Store metadata, screenshot config |
 | `docs/testflight.md` | Per-release upload runbook (~10 min) |
 | `docs/troubleshooting.md` | Xcode + git landmines from real incidents |
 | `scripts/validate-tours.swift` | Validates `Tours.json`; run: `swift scripts/validate-tours.swift` |

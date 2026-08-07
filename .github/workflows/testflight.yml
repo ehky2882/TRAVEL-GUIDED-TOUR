@@ -11,8 +11,17 @@
 # It does NOT run on every push (Mac build minutes are ~10x the cost), only when
 # you ask.
 #
+# ⚠️ A build uses the workflow file from the branch you build FROM, not from
+# main. So a fix merged to main has no effect on a build cut from a feature
+# branch until that branch merges main in. Build from main, or merge main first.
+#
+# THE ACTUAL BUILD STEPS LIVE IN fastlane/Fastfile (the `beta` lane), not here.
+# This file only decides WHEN to build and hands over the credentials. That way
+# the identical build can be run from a Mac with:
+#     bundle exec fastlane beta
+#
 # ONE-TIME SETUP (owner, in GitHub -> Settings -> Secrets and variables ->
-# Actions). These come from an App Store Connect API key (see docs/testflight-ci.md):
+# Actions). These come from an App Store Connect API key (see docs/fastlane.md):
 #   APP_STORE_CONNECT_KEY_ID       - the key's ID (e.g. ABC123XYZ9)
 #   APP_STORE_CONNECT_ISSUER_ID    - the issuer ID (a long uuid)
 #   APP_STORE_CONNECT_API_KEY      - the contents of the downloaded AuthKey_XXXX.p8
@@ -43,11 +52,16 @@ jobs:
       github.event.label.name == 'build'
     runs-on: macos-26           # a Mac in the cloud (your other CI already uses this)
     timeout-minutes: 70         # build ~15 min + waiting for Apple to process the
-                                # upload so the notes step can attach "What to Test"
+                                # upload so the notes can be attached
     env:
-      SCHEME: "TRAVEL GUIDED TOUR"
-      KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
-      ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+      APP_STORE_CONNECT_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+      APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+      APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+      FASTLANE_SKIP_UPDATE_CHECK: "1"
+      FASTLANE_OPT_OUT_USAGE: "1"
+      FASTLANE_DISABLE_COLORS: "1"
+      LANG: en_US.UTF-8
+      LC_ALL: en_US.UTF-8
     steps:
       - uses: actions/checkout@v6
 
@@ -87,225 +101,35 @@ jobs:
       # Fail early with a friendly message if the one-time secrets aren't set yet.
       - name: Check credentials are configured
         run: |
-          if [ -z "$KEY_ID" ] || [ -z "$ISSUER_ID" ] || [ -z "${{ secrets.APP_STORE_CONNECT_API_KEY }}" ]; then
-            echo "::error::App Store Connect secrets are not set. Add APP_STORE_CONNECT_KEY_ID, APP_STORE_CONNECT_ISSUER_ID, and APP_STORE_CONNECT_API_KEY under Settings -> Secrets and variables -> Actions. See docs/testflight-ci.md."
+          if [ -z "$APP_STORE_CONNECT_KEY_ID" ] || [ -z "$APP_STORE_CONNECT_ISSUER_ID" ] || [ -z "$APP_STORE_CONNECT_API_KEY" ]; then
+            echo "::error::App Store Connect secrets are not set. Add APP_STORE_CONNECT_KEY_ID, APP_STORE_CONNECT_ISSUER_ID, and APP_STORE_CONNECT_API_KEY under Settings -> Secrets and variables -> Actions. See docs/fastlane.md."
             exit 1
           fi
 
-      # Write Apple's API key (the "pass") to a file the build tools can read.
-      - name: Install App Store Connect API key
-        run: |
-          mkdir -p "$HOME/private_keys"
-          printf '%s' "${{ secrets.APP_STORE_CONNECT_API_KEY }}" > "$HOME/private_keys/AuthKey_${KEY_ID}.p8"
+      # Install the exact fastlane pinned in the Gemfile, with the gems cached
+      # between runs so this is seconds rather than minutes.
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
 
-      # Keep the account under Apple's certificate cap automatically — the
-      # durable fix for the recurring "Your account has reached the maximum
-      # number of certificates" archive failure. Cloud signing mints a fresh
-      # "Apple Development" certificate on each throwaway build machine, so
-      # without cleanup they accumulate until archiving dies. Using the same App
-      # Store Connect API key, we revoke existing DEVELOPMENT certs before the
-      # archive; automatic signing then regenerates exactly the one it needs, so
-      # the account never fills up and no manual revoking is ever required.
-      # DISTRIBUTION certs (used to sign the App Store upload) are left untouched.
-      # Best-effort (continue-on-error): an API hiccup here must never block a build.
-      - name: Free up Apple Development certificate slots
-        continue-on-error: true
+      # Used by scripts/revoke-dev-certs.py to talk to Apple's API.
+      - name: Install certificate-cleanup dependencies
         run: |
           python3 -m pip install --quiet --disable-pip-version-check "PyJWT>=2" cryptography \
             || python3 -m pip install --quiet --break-system-packages "PyJWT>=2" cryptography
-          python3 - <<'PY'
-          import glob, json, os, time, urllib.request, urllib.error
-          import jwt  # PyJWT
 
-          key_id = os.environ["KEY_ID"]
-          issuer = os.environ["ISSUER_ID"]
-          p8 = open(glob.glob(os.path.expanduser("~/private_keys/AuthKey_*.p8"))[0]).read()
-          now = int(time.time())
-          token = jwt.encode(
-              {"iss": issuer, "iat": now, "exp": now + 600, "aud": "appstoreconnect-v1"},
-              p8, algorithm="ES256", headers={"kid": key_id, "typ": "JWT"},
-          )
-          base = "https://api.appstoreconnect.apple.com/v1/certificates"
-
-          def api(url, method="GET"):
-              req = urllib.request.Request(
-                  url, method=method, headers={"Authorization": f"Bearer {token}"})
-              try:
-                  with urllib.request.urlopen(req) as r:
-                      raw = r.read()
-                      return r.status, (json.loads(raw) if raw else {})
-              except urllib.error.HTTPError as e:
-                  return e.code, {}
-
-          status, body = api(f"{base}?filter[certificateType]=DEVELOPMENT&limit=200")
-          certs = body.get("data", []) if status == 200 else []
-          print(f"List DEVELOPMENT certs: HTTP {status}, {len(certs)} found")
-          for c in certs:
-              cid = c["id"]
-              s, _ = api(f"{base}/{cid}", method="DELETE")
-              print(f"  revoke {cid}: HTTP {s}")
-          print("Done freeing certificate slots.")
-          PY
-
-      # Clean, always-increasing build number: the workflow's own run counter.
-      # TestFlight requires each upload's number to be higher than the last within
-      # a given marketing version; run_number is monotonic, so it satisfies that.
-      # (Marketing version is 1.1 in the project — the 1.0 timestamp builds live in
-      # a separate version train, so starting fresh here is clean.)
-      - name: Compute a clean build number
-        id: bn
-        run: echo "num=${{ github.run_number }}" >> "$GITHUB_OUTPUT"
-
-      # Build + sign the app into an ".xcarchive" (Apple's packaged, signed app).
-      # -allowProvisioningUpdates + the API key let Xcode create/download the
-      # signing certificates automatically — the same automatic signing your
-      # manual Organizer archives already use. The "Free up ... certificate
-      # slots" step above keeps this from ever hitting Apple's cert cap.
-      - name: Archive (build + sign)
-        run: |
-          xcodebuild archive \
-            -scheme "$SCHEME" \
-            -destination "generic/platform=iOS" \
-            -archivePath "$RUNNER_TEMP/Dozent.xcarchive" \
-            -allowProvisioningUpdates \
-            -authenticationKeyPath "$HOME/private_keys/AuthKey_${KEY_ID}.p8" \
-            -authenticationKeyID "$KEY_ID" \
-            -authenticationKeyIssuerID "$ISSUER_ID" \
-            CURRENT_PROJECT_VERSION=${{ steps.bn.outputs.num }}
-
-      # Export the archive as an ".ipa" and upload it straight to TestFlight.
-      - name: Export + upload to TestFlight
-        run: |
-          cat > "$RUNNER_TEMP/ExportOptions.plist" <<'PLIST'
-          <?xml version="1.0" encoding="UTF-8"?>
-          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-          <plist version="1.0">
-          <dict>
-            <key>method</key><string>app-store</string>
-            <key>destination</key><string>upload</string>
-            <key>signingStyle</key><string>automatic</string>
-          </dict>
-          </plist>
-          PLIST
-          xcodebuild -exportArchive \
-            -archivePath "$RUNNER_TEMP/Dozent.xcarchive" \
-            -exportPath "$RUNNER_TEMP/export" \
-            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
-            -allowProvisioningUpdates \
-            -authenticationKeyPath "$HOME/private_keys/AuthKey_${KEY_ID}.p8" \
-            -authenticationKeyID "$KEY_ID" \
-            -authenticationKeyIssuerID "$ISSUER_ID"
-
-      # Attach the build notes to the build in TestFlight itself ("What to Test"),
-      # so the owner sees what's in the build right in the TestFlight app — tap the
-      # build, and the What-changed / What-to-test description is there. Uses
-      # fastlane's set_changelog (preinstalled on GitHub Mac runners) with the same
-      # App Store Connect API key. Apple takes a few minutes to process a fresh
-      # upload before the build exists to attach notes to, so this retries.
-      # If it still can't attach (rare), that's a warning, not a failure — the
-      # build itself is already uploaded and the notes live in the job summary.
-      - name: Set TestFlight "What to Test" notes
-        id: tfnotes
+      # Everything that actually builds, signs, uploads, and attaches the notes
+      # lives in the `beta` lane. Build number = this run's counter, which always
+      # increases — exactly what TestFlight requires.
+      - name: Build and upload to TestFlight
         env:
-          NOTES: ${{ steps.notes.outputs.notes }}
-          BUILD_NUMBER: ${{ steps.bn.outputs.num }}
-          FASTLANE_SKIP_UPDATE_CHECK: "1"
-          FASTLANE_OPT_OUT_USAGE: "1"
-          FASTLANE_DISABLE_COLORS: "1"
-        run: |
-          # The app target's marketing version (test target stays pinned lower, so
-          # take the highest value in the project file).
-          APP_VERSION=$(grep -o 'MARKETING_VERSION = [0-9.]*' "TRAVEL GUIDED TOUR.xcodeproj/project.pbxproj" | grep -o '[0-9.]*$' | sort -uV | tail -1)
-          export APP_VERSION
-          export KEY_PATH="$HOME/private_keys/AuthKey_${KEY_ID}.p8"
-          echo "Attaching notes to build ${APP_VERSION} (${BUILD_NUMBER})"
-
-          mkdir -p "$RUNNER_TEMP/notes/fastlane"
-          # upload_to_testflight with distribute_only:true is the documented way to
-          # set "What to Test" on a build that is ALREADY uploaded — it distributes
-          # rather than re-uploads. (set_changelog does NOT work here: it targets the
-          # App Store version's release notes and rejects build_number outright.)
-          cat > "$RUNNER_TEMP/notes/fastlane/Fastfile" <<'RB'
-          lane :tf_notes do
-            api_key = app_store_connect_api_key(
-              key_id: ENV.fetch("KEY_ID"),
-              issuer_id: ENV.fetch("ISSUER_ID"),
-              key_filepath: ENV.fetch("KEY_PATH")
-            )
-            upload_to_testflight(
-              api_key: api_key,
-              app_identifier: "com.ehky.TRAVEL-GUIDED-TOUR",
-              # Without app_platform, pilot PROMPTS for it ("Please enter the app's
-              # platform") and CI has no way to answer, so it dies instantly with
-              # "Could not retrieve response as fastlane runs in non-interactive mode".
-              app_platform: "ios",
-              app_version: ENV.fetch("APP_VERSION"),
-              build_number: ENV.fetch("BUILD_NUMBER"),
-              changelog: ENV.fetch("NOTES"),
-              distribute_only: true,
-              distribute_external: false
-            )
-          end
-          RB
-
-          cd "$RUNNER_TEMP/notes"
-          LOG="$RUNNER_TEMP/tf_notes.log"
-
-          # Retry ONLY while the build isn't visible to App Store Connect yet
-          # (Apple takes ~5-15 min to process a fresh upload). Any other failure —
-          # bad parameter, bad credentials, wrong app — is permanent, so bail out
-          # immediately and print it. Retrying a permanent error just hides the real
-          # reason behind a 25-minute "still processing" message, which is exactly
-          # how the first version of this step failed silently.
-          for attempt in $(seq 1 20); do
-            if fastlane tf_notes >"$LOG" 2>&1; then
-              cat "$LOG"
-              echo "notes_attached=true" >> "$GITHUB_OUTPUT"
-              echo "TestFlight What-to-Test notes set on build ${APP_VERSION} (${BUILD_NUMBER})."
-              exit 0
-            fi
-            cat "$LOG"
-
-            # Classify the failure. Order matters, and the DEFAULT IS PERMANENT:
-            # a wrong "permanent" guess costs nothing (we stop and print the real
-            # error), while a wrong "retryable" guess hides it for 20 minutes.
-            #
-            # Both earlier versions of this step got that backwards and buried a
-            # config error behind a bogus "Apple is still processing" message. The
-            # second time, a loose 'processing' match hit fastlane's OWN option list
-            # (skip_waiting_for_build_processing) — so match only on precise phrases,
-            # never on a bare word that can appear in help text.
-            if grep -qiE "non-interactive mode|could not find option|invalid parameters|invalid.*api key|not authorized|401 |403 " "$LOG"; then
-              echo "::error::Could not attach What-to-Test notes — CONFIGURATION error (fastlane could not run as given), not an Apple delay. See the fastlane output above. The build itself uploaded fine."
-              echo "notes_attached=false" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
-            if grep -qiE "could not find build|unable to find build|no build with|still in processing|is still processing|waiting for the build" "$LOG"; then
-              echo "Build not processed by Apple yet (attempt ${attempt}/20) — retrying in 60s…"
-              sleep 60
-              continue
-            fi
-            echo "::error::Could not attach What-to-Test notes — unrecognized failure (treated as permanent so it cannot hide). See the fastlane output above. The build itself uploaded fine."
-            echo "notes_attached=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          done
-          echo "::error::Apple never finished processing build ${BUILD_NUMBER} within ~20 min, so What-to-Test notes were not attached. The build itself uploaded fine; notes are in this run's job summary."
-          echo "notes_attached=false" >> "$GITHUB_OUTPUT"
+          BUILD_NUMBER: ${{ github.run_number }}
+          BUILD_NOTES: ${{ steps.notes.outputs.notes }}
+        run: bundle exec fastlane beta
 
       - name: Done
         env:
           NOTES: ${{ steps.notes.outputs.notes }}
-          ATTACHED: ${{ steps.tfnotes.outputs.notes_attached }}
         run: |
-          echo "Uploaded build ${{ steps.bn.outputs.num }} to TestFlight. It appears on your phone once Apple finishes processing (a few minutes)."
-          if [ "$ATTACHED" = "true" ]; then
-            echo "These notes are attached to the build in TestFlight under \"What to Test\":"
-          else
-            echo "WARNING: the notes could NOT be attached to the build in TestFlight (see the error above)."
-            echo "The build is fine — but you won't see a description in the TestFlight app. Notes:"
-            {
-              echo ""
-              echo "> **Heads-up:** these notes could not be attached to the build in TestFlight — see the error in this run."
-            } >> "$GITHUB_STEP_SUMMARY"
-          fi
+          echo "Uploaded build ${{ github.run_number }} to TestFlight, with these notes attached under \"What to Test\":"
           echo "$NOTES"

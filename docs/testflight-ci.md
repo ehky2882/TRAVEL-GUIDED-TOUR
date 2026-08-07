@@ -7,6 +7,29 @@ features that you then review on-device.
 
 The automation lives in [`.github/workflows/testflight.yml`](../.github/workflows/testflight.yml).
 
+> ⚠️ **The build STEPS moved to fastlane (2026-08-07).** `testflight.yml` still decides
+> *when* to build and supplies the credentials, but the build/sign/upload/attach-notes
+> work now lives in the `beta` lane in [`fastlane/Fastfile`](../fastlane/Fastfile).
+> See **[docs/fastlane.md](fastlane.md)** for the lanes, and
+> **[docs/launch-runbook.md](launch-runbook.md)** for shipping to the App Store.
+>
+> What that changed, and what it did not:
+>
+> * **Unchanged and still accurate below:** the one-time secrets setup, the `build`
+>   label trigger, the "build from `main`, not a stale branch" warning, the Apple
+>   certificate-cap explanation, and the reasons `set_changelog` and a missing
+>   `app_platform` do not work. Those two traps are now recorded as comments in the
+>   Fastfile so they cannot be re-entered.
+> * **Superseded:** the description of notes being attached by a *second*, separate
+>   `distribute_only: true` invocation wrapped in a 20-attempt retry loop with an
+>   error classifier. A single `upload_to_testflight` call now uploads, waits for
+>   Apple to finish processing, and sets "What to Test" — so the classifier and its
+>   retry loop are gone. The consequence is that a **green run now does mean the
+>   notes landed**: if setting them fails, the step fails rather than warning.
+> * **Also superseded:** the certificate-revocation step is no longer inline Python
+>   in the workflow; it is [`scripts/revoke-dev-certs.py`](../scripts/revoke-dev-certs.py),
+>   called by the lane. Same behaviour.
+
 ## One-time setup (owner — ~10 minutes, dashboard only)
 
 ### Part A — create Apple's "pass" (App Store Connect API key)

@@ -5,3 +5,30 @@
 
 # duplicate-image check download cache (scripts/check-image-duplicates.py)
 .cache/
+
+# --- release toolchain (fastlane) ---
+# Signing keys must never be committed.
+*.p8
+.env
+.env.*
+
+# Build output.
+build/
+*.ipa
+*.xcarchive
+*.dSYM.zip
+
+# fastlane run artefacts.
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/test_output/
+fastlane/README.md
+
+# Captured screenshots are regenerated on demand and are large binaries; the
+# reviewed set is uploaded to App Store Connect rather than stored in git.
+fastlane/screenshots/**/*.png
+fastlane/screenshots/**/*.jpg
+
+# Python bytecode from repo scripts
+__pycache__/
+*.pyc

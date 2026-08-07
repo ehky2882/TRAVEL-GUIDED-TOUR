@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "2660"
+   version = "1.7">
+   <!--
+        The everyday scheme: build the app, run the UNIT tests.
+
+        This used to be created automatically by Xcode on each machine. It is
+        now checked in so every machine and every CI run agree on what "test"
+        means. Its Testables list holds ONLY the unit test bundle, so the
+        screenshot UI tests never join a normal test run and add ten minutes to
+        CI. Screenshots have their own scheme.
+   -->
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "078299C72F5926C900D5EB03"
+               BuildableName = "TRAVEL GUIDED TOUR.app"
+               BlueprintName = "TRAVEL GUIDED TOUR"
+               ReferencedContainer = "container:TRAVEL GUIDED TOUR.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0741DB0F2FBC017A00EE9C95"
+               BuildableName = "TRAVEL GUIDED TOURTests.xctest"
+               BlueprintName = "TRAVEL GUIDED TOURTests"
+               ReferencedContainer = "container:TRAVEL GUIDED TOUR.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "078299C72F5926C900D5EB03"
+            BuildableName = "TRAVEL GUIDED TOUR.app"
+            BlueprintName = "TRAVEL GUIDED TOUR"
+            ReferencedContainer = "container:TRAVEL GUIDED TOUR.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "078299C72F5926C900D5EB03"
+            BuildableName = "TRAVEL GUIDED TOUR.app"
+            BlueprintName = "TRAVEL GUIDED TOUR"
+            ReferencedContainer = "container:TRAVEL GUIDED TOUR.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

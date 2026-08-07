@@ -18,16 +18,25 @@
 			remoteGlobalIDString = 078299C72F5926C900D5EB03;
 			remoteInfo = "TRAVEL GUIDED TOUR";
 		};
+		FA5700000000000000000007 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 078299C02F5926C900D5EB03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 078299C72F5926C900D5EB03;
+			remoteInfo = "TRAVEL GUIDED TOUR";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0741DB102FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TRAVEL GUIDED TOURTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		078299C82F5926C900D5EB03 /* TRAVEL GUIDED TOUR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TRAVEL GUIDED TOUR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5700000000000000000002 /* TRAVEL GUIDED TOURUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TRAVEL GUIDED TOURUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0741DB112FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = "TRAVEL GUIDED TOURTests"; sourceTree = "<group>"; };
 		078299CA2F5926C900D5EB03 /* TRAVEL GUIDED TOUR */ = {isa = PBXFileSystemSynchronizedRootGroup; path = "TRAVEL GUIDED TOUR"; sourceTree = "<group>"; };
+		FA5700000000000000000003 /* TRAVEL GUIDED TOURUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; path = "TRAVEL GUIDED TOURUITests"; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +55,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA5700000000000000000005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -54,6 +70,7 @@
 			children = (
 				078299CA2F5926C900D5EB03 /* TRAVEL GUIDED TOUR */,
 				0741DB112FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests */,
+				FA5700000000000000000003 /* TRAVEL GUIDED TOURUITests */,
 				078299C92F5926C900D5EB03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +80,7 @@
 			children = (
 				078299C82F5926C900D5EB03 /* TRAVEL GUIDED TOUR.app */,
 				0741DB102FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests.xctest */,
+				FA5700000000000000000002 /* TRAVEL GUIDED TOURUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +134,29 @@
 			productReference = 078299C82F5926C900D5EB03 /* TRAVEL GUIDED TOUR.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FA5700000000000000000001 /* TRAVEL GUIDED TOURUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA5700000000000000000009 /* Build configuration list for PBXNativeTarget "TRAVEL GUIDED TOURUITests" */;
+			buildPhases = (
+				FA5700000000000000000004 /* Sources */,
+				FA5700000000000000000005 /* Frameworks */,
+				FA5700000000000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA5700000000000000000008 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FA5700000000000000000003 /* TRAVEL GUIDED TOURUITests */,
+			);
+			name = "TRAVEL GUIDED TOURUITests";
+			packageProductDependencies = (
+			);
+			productName = "TRAVEL GUIDED TOURUITests";
+			productReference = FA5700000000000000000002 /* TRAVEL GUIDED TOURUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -128,6 +169,10 @@
 				TargetAttributes = {
 					0741DB0F2FBC017A00EE9C95 = {
 						CreatedOnToolsVersion = 26.5;
+						TestTargetID = 078299C72F5926C900D5EB03;
+					};
+					FA5700000000000000000001 = {
+						CreatedOnToolsVersion = 26.6;
 						TestTargetID = 078299C72F5926C900D5EB03;
 					};
 					078299C72F5926C900D5EB03 = {
@@ -154,6 +199,7 @@
 			targets = (
 				078299C72F5926C900D5EB03 /* TRAVEL GUIDED TOUR */,
 				0741DB0F2FBC017A00EE9C95 /* TRAVEL GUIDED TOURTests */,
+				FA5700000000000000000001 /* TRAVEL GUIDED TOURUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -167,6 +213,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		078299C62F5926C900D5EB03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA5700000000000000000006 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,6 +243,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA5700000000000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -197,6 +257,11 @@
 			isa = PBXTargetDependency;
 			target = 078299C72F5926C900D5EB03 /* TRAVEL GUIDED TOUR */;
 			targetProxy = 0741DB142FBC017A00EE9C95 /* PBXContainerItemProxy */;
+		};
+		FA5700000000000000000008 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 078299C72F5926C900D5EB03 /* TRAVEL GUIDED TOUR */;
+			targetProxy = FA5700000000000000000007 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -382,8 +447,8 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Atlas uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Atlas uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Dozent uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Dozent uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -432,8 +497,8 @@
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Atlas uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Atlas uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Dozent uses your location while the app is in the background so tour stops can trigger automatically as you walk between them.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Dozent uses your location to surface audio tours near you and trigger stop-by-stop audio when you arrive at a stop.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -466,6 +531,53 @@
 			};
 			name = Release;
 		};
+		FA570000000000000000000A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CPC7M72JTP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ehky.TRAVEL-GUIDED-TOURUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TRAVEL GUIDED TOUR";
+			};
+			name = Debug;
+		};
+		FA570000000000000000000B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CPC7M72JTP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ehky.TRAVEL-GUIDED-TOURUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "TRAVEL GUIDED TOUR";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -492,6 +604,15 @@
 			buildConfigurations = (
 				078299D42F5926CB00D5EB03 /* Debug */,
 				078299D52F5926CB00D5EB03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA5700000000000000000009 /* Build configuration list for PBXNativeTarget "TRAVEL GUIDED TOURUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA570000000000000000000A /* Debug */,
+				FA570000000000000000000B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
