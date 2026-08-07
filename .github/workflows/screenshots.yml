@@ -42,6 +42,19 @@ jobs:
         with:
           bundler-cache: true
 
+      # Simulator names change between Xcode versions, and snapshot fails with
+      # "Error setting value ... for option 'devices'" if a name in Snapfile is
+      # not present on this machine. Print what is actually here, so a failure
+      # tells you the answer instead of just the problem.
+      - name: List available simulators
+        run: |
+          echo "## Simulators on this runner" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          xcrun simctl list devices available | grep -iE "iphone|ipad" | sed 's/^ *//' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          echo "--- available devices ---"
+          xcrun simctl list devices available | grep -iE "iphone|ipad" | sed 's/^ *//'
+
       # No App Store Connect credentials needed here: capturing screenshots is
       # entirely local to the simulators and never talks to Apple.
       - name: Capture screenshots
