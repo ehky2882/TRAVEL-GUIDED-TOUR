@@ -67,6 +67,17 @@ struct TourDetailView: View {
     /// Optional for the same reason as `listService` — injected by the UIKit
     /// slide-up layers; "Listen together" hides if absent.
     @Environment(GroupListenCoordinator.self) private var groupListen: GroupListenCoordinator?
+    /// Paid tours. **Optional on purpose**: this view is hosted inside the
+    /// UIKit slide-up layers, which don't inherit the SwiftUI environment —
+    /// a required lookup here crashed `ReportSheet` once for exactly that
+    /// reason. It *is* injected at both layer sites in `ContentView`; the
+    /// optionality is a seatbelt, not a shrug. If the Buy button ever goes
+    /// missing on device, a dropped injection is the first thing to check
+    /// (that was the batch-D Follow-button bug, build 68→69).
+    @Environment(PurchaseService.self) private var purchaseService: PurchaseService?
+    @Environment(AuthService.self) private var detailAuth: AuthService?
+    @State private var showingPurchaseSignIn = false
+    @State private var purchaseErrorMessage: String?
 
     /// Programmatic push for the menu's "Go to creator" item. The
     /// inline maker row uses its own inline `NavigationLink`; the
@@ -157,6 +168,22 @@ struct TourDetailView: View {
         }
         .sheet(isPresented: $showingGroupListen) {
             GroupListenSheet(tour: tour)
+        }
+        // Sign-in is a prerequisite for buying, not an error state — the
+        // purchase has to attach to an account or it can't be restored.
+        .sheet(isPresented: $showingPurchaseSignIn) {
+            SignInView()
+        }
+        .alert(
+            "Purchase",
+            isPresented: Binding(
+                get: { purchaseErrorMessage != nil },
+                set: { if !$0 { purchaseErrorMessage = nil } }
+            )
+        ) {
+            Button("OK", role: .cancel) { purchaseErrorMessage = nil }
+        } message: {
+            Text(purchaseErrorMessage ?? "")
         }
         .onAppear {
             navState.push()
@@ -971,9 +998,33 @@ struct TourDetailView: View {
     /// track behind). Same ring math, same visual identity — the
     /// detail-sheet button and the persistent mini-player read as one
     /// surface.
+    /// True when this tour costs money and the current account hasn't bought
+    /// it. Free tours — the entire catalog today — are never locked, and a
+    /// missing `PurchaseService` also reads as unlocked so a wiring slip can
+    /// never paywall free content.
+    private var isLockedPaid: Bool {
+        guard tour.isPaid, let purchaseService else { return false }
+        return !purchaseService.isUnlocked(tour)
+    }
+
+    /// Seconds of preview to allow for the current state — `nil` (unlimited)
+    /// for anything the user may hear in full.
+    private var activePreviewLimit: TimeInterval? {
+        isLockedPaid ? PurchaseService.previewSeconds : nil
+    }
+
     private var buttonRow: some View {
         HStack(spacing: AtlasSpacing.md) {
             primaryTransportButton
+
+            if isLockedPaid {
+                // A locked tour shows Buy and nothing else. Group Listen and
+                // Download are deliberately withheld: you can't sync a tour
+                // you can't play, and downloading one you haven't bought
+                // would put unplayable audio on the device and imply
+                // ownership. Both return the moment the purchase lands.
+                buyButton
+            } else {
             // "Listen together" (Group Listen) — the visible entry point.
             // Replaces the inline Save button, which was redundant with the
             // bookmark in the top chrome row (owner direction 2026-07-20).
@@ -1000,8 +1051,67 @@ struct TourDetailView: View {
                                : "Start or join a synced group listening session")
 
             downloadButton
+            }
         }
         .frame(maxWidth: .infinity)
+    }
+
+    /// Buy this tour. Gold fill so it reads as the primary action once the
+    /// transport beside it is only good for a 30-second sample.
+    ///
+    /// Signed-out users get the sign-in sheet first, not an error: the
+    /// entitlement is keyed to the account, so buying anonymously would
+    /// strand the purchase on one device with no way to restore it.
+    private var buyButton: some View {
+        Button {
+            guard let purchaseService else { return }
+            if detailAuth?.isSignedIn == true {
+                Task { await runPurchase(purchaseService) }
+            } else {
+                showingPurchaseSignIn = true
+            }
+        } label: {
+            Group {
+                if purchaseService?.isPurchasing(tour) == true {
+                    ProgressView().tint(AtlasColors.background)
+                } else {
+                    Text(buyButtonTitle)
+                        .font(AtlasTypography.caption)
+                        .fontWeight(.semibold)
+                        .lineLimit(1)
+                        .fixedSize()
+                }
+            }
+            .foregroundStyle(AtlasColors.background)
+            .padding(.horizontal, AtlasSpacing.md)
+            .frame(height: controlHeight)
+            .background(Capsule().fill(AtlasColors.mapPin))
+        }
+        .buttonStyle(.plain)
+        .disabled(purchaseService?.isPurchasing(tour) == true)
+        .accessibilityLabel(buyButtonTitle)
+        .accessibilityHint("Buys this tour and unlocks the full audio")
+    }
+
+    private var buyButtonTitle: String {
+        let price = purchaseService?.displayPrice(for: tour) ?? tour.fallbackPriceText
+        return price.map { "Buy \($0)" } ?? "Buy"
+    }
+
+    private func runPurchase(_ service: PurchaseService) async {
+        do {
+            let outcome = try await service.purchase(tour)
+            if outcome == .purchased || outcome == .alreadyOwned {
+                // Lift the sample cap immediately so the tour is playable in
+                // full without reopening anything.
+                audioPlayer.setPreviewLimit(nil)
+                AtlasHaptics.success()
+            }
+        } catch {
+            purchaseErrorMessage = (error as? LocalizedError)?.errorDescription
+                ?? "Something went wrong. You have not been charged."
+            AtlasHaptics.error()
+        }
     }
 
     /// Composite primary transport surface — gold Capsule with three
@@ -1269,6 +1379,16 @@ struct TourDetailView: View {
     /// auto-advance survives without `PlayerView` on screen. Single-
     /// stop tours and geofenced multi-stop tours are unaffected.
     private func handlePrimaryAction() {
+        // Re-assert the sample cap on every start/resume. Doing it here (not
+        // once at load) means a purchase completed mid-listen lifts the cap
+        // on the next tap, and a sign-out mid-listen re-applies it.
+        audioPlayer.setPreviewLimit(activePreviewLimit)
+        // A spent preview restarts from the top rather than resuming at the
+        // cut-off — resuming would just re-trigger the limit and read as a
+        // dead button.
+        if isLockedPaid, audioPlayer.didReachPreviewLimit {
+            audioPlayer.seek(to: 0)
+        }
         // If this tour's audio is already loaded, toggle pause/resume
         // in place — the button now doubles as the tour-level
         // transport control on the detail sheet (owner-confirmed,

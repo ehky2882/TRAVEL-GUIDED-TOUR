@@ -31,6 +31,7 @@ struct ContentView: View {
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(MakerPresenter.self) private var makerPresenter
     @Environment(FollowService.self) private var followService
+    @Environment(PurchaseService.self) private var purchaseService
     @Environment(AuthService.self) private var authService
     @Environment(TourListService.self) private var listService
     @Environment(GroupListenCoordinator.self) private var groupListen
@@ -178,6 +179,26 @@ struct ContentView: View {
             didRequestLocationPermission = true
             locationManager.requestPermission()
         }
+        // Paid tours: keep entitlements in step with whoever is signed in.
+        // Keyed on `userId` so it re-runs on sign-in, sign-out AND an account
+        // switch — the last of which must never leave one account holding the
+        // other's unlocks. `handleSignedIn` hydrates from that user's on-disk
+        // cache first (so an owned tour is playable offline on the first
+        // frame), then confirms against the server and drains any purchase
+        // that was paid for but never recorded.
+        .task(id: authService.userId) {
+            if authService.isSignedIn {
+                await purchaseService.handleSignedIn()
+            } else {
+                purchaseService.handleSignedOut()
+            }
+        }
+        // Load StoreKit products for whichever tiers the catalog uses, so
+        // badges can show the buyer's *local* price rather than a USD
+        // approximation. Re-runs when the catalog does.
+        .task(id: dataService.tours.count) {
+            await purchaseService.loadProducts(for: dataService.tours)
+        }
         // Drive the UIKit-backed slide-up modal off the presenter's
         // `presentedTour`. When a tour appears: build the SwiftUI
         // root view (with every environment value the detail
@@ -246,6 +267,7 @@ struct ContentView: View {
                     .environment(appShared)
                     .environment(followService)
                     .environment(authService)
+                    .environment(purchaseService)
                     .environment(listService)
                     .environment(groupListen),
                     onDismiss: { tourPresenter.dismiss() }
@@ -288,6 +310,7 @@ struct ContentView: View {
                     .environment(appShared)
                     .environment(followService)
                     .environment(authService)
+                    .environment(purchaseService)
                     .environment(listService)
                     .environment(groupListen),
                     onDismiss: { makerPresenter.dismiss() }

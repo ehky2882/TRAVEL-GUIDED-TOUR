@@ -32,6 +32,18 @@ struct Tour: Codable, Identifiable, Hashable {
     let primaryCategory: TourCategory
     let tags: [String]
     let priceUSD: Decimal
+    /// The tour's price in **US cents**, or `nil` for free — which is the
+    /// entire catalog today. One of the ten App Store tiers created in
+    /// Phase 1 (99, 199, 299, 399, 499, 699, 899, 999, 1499, 1999).
+    ///
+    /// **Not the authority on what was paid.** `paid_tours.sql` CHECK-
+    /// constrains the same closed set, and `record-purchase` re-checks the
+    /// tier against the receipt server-side before granting anything. This
+    /// value drives display + which StoreKit product to buy, nothing more.
+    ///
+    /// Optional so a catalog without the key (or an older cached copy)
+    /// still decodes — absent means free, which is the safe default.
+    let priceTier: Int?
     /// Catalog-added date as an ISO `"YYYY-MM-DD"` string — the day this
     /// tour first appeared in `Tours.json` (derived from git history).
     /// Powers the maker page's Newest / Oldest sort. Stored as a String
@@ -50,6 +62,32 @@ struct Tour: Codable, Identifiable, Hashable {
     /// in Phase 3. `nil` only for a tagless tour. `primaryCategory` is
     /// still the source of truth for map pins + placeholders in Phase 2.
     var primaryTag: String? { Tag.derivePrimary(from: tags) }
+
+    /// True when this tour must be bought before its audio will play.
+    /// A `nil` or non-positive tier means free — the whole catalog today.
+    var isPaid: Bool { (priceTier ?? 0) > 0 }
+
+    /// The App Store product id backing this tour's tier, e.g. 299 →
+    /// `"tour.tier.299"` and 99 → `"tour.tier.099"`. Zero-padded to **at
+    /// least** three digits so it matches the products created by hand in
+    /// App Store Connect (`tour.tier.099` … `tour.tier.1999`); four-digit
+    /// tiers are already wide enough and pass through unpadded.
+    ///
+    /// `nil` for a free tour — there is nothing to buy.
+    var storeProductId: String? {
+        guard let tier = priceTier, tier > 0 else { return nil }
+        return "tour.tier." + String(format: "%03d", tier)
+    }
+
+    /// Fallback price string (`"$2.99"`) for the rare moment before
+    /// StoreKit's localized `displayPrice` is available. **Prefer
+    /// `PurchaseService.displayPrice(for:)`** — this one is always USD, so
+    /// it would misstate the price to a non-US storefront if it were the
+    /// primary source.
+    var fallbackPriceText: String? {
+        guard let tier = priceTier, tier > 0 else { return nil }
+        return String(format: "$%.2f", Double(tier) / 100)
+    }
 
     func distance(from location: CLLocation) -> CLLocationDistance {
         let tourLocation = CLLocation(latitude: centroidLatitude, longitude: centroidLongitude)
