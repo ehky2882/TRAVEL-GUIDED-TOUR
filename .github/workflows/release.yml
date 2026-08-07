@@ -67,6 +67,10 @@ jobs:
             exit 1
           fi
 
+      # Ruby version comes from the repo's .ruby-version file — one source of
+      # truth for every workflow and for anyone running the lanes locally.
+      # Without it setup-ruby fails: "input ruby-version needs to be specified
+      # if no .ruby-version or .tool-versions file exists".
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true

@@ -191,6 +191,7 @@ python3 scripts/push-appstore-metadata.py --apply   # writes
 
 | Path | Purpose |
 |---|---|
+| `.ruby-version` | The Ruby the lanes run on (3.3). Every workflow reads it |
 | `Gemfile` | Pins fastlane so every machine runs the same version |
 | `fastlane/Appfile` | Which app, which Apple team |
 | `fastlane/Fastfile` | The lanes — the actual release logic |
