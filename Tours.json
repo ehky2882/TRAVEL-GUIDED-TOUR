@@ -191,6 +191,14 @@
       "avatarEmoji": "🇩🇪",
       "bio": "Atlas Studio's Berlin bureau — audio tours of a city that keeps its scars where you can read them: a parliament that preserved its conquerors' graffiti, a double line of cobblestones tracing the Wall through squares and traffic, memorials that refuse to console, and an old border strip that the city filled with flea markets and Sunday singing.",
       "websiteURL": null
+    },
+    {
+      "id": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "displayName": "Atlas Studio RAK",
+      "avatarURL": null,
+      "avatarEmoji": "🇲🇦",
+      "bio": "Atlas Studio's Marrakech bureau — audio tours of the red city: a minaret nothing is allowed to rise above, palaces stripped bare by the dynasties that followed, a square UNESCO protects for what happens in it rather than what stands on it, and the gardens, rooftops and open kitchens where the city actually lives.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -57039,6 +57047,1189 @@
         "Bridge",
         "Public Art",
         "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4189cda7-0db5-5bb9-8fbd-294fdc16d42f",
+      "createdAt": "2026-08-07",
+      "title": "Aït Benhaddou | آيت بن حدّو",
+      "shortDescription": "Africa's most-filmed hillside is a thousand-year-old village built entirely of earth.",
+      "longDescription": "The ksar of Aït Benhaddou climbs its hillside above the Ounila river in tiers of red pisé — earth, straw and lime rammed into moulds and baked by the sun, with no wooden frame and no fired brick, standing for the better part of a thousand years. Crenellated corner towers cap each cluster of houses, carrying the geometric patterns found on kasbahs across Morocco's south. More than eighty films and television series have shot here — more than at any other single location in Africa: Lawrence of Arabia opened with these walls, Ridley Scott turned them into Gladiator's Zucchabar, and Game of Thrones cast them as Yunkai. UNESCO listed the ksar in 1987, though most families long ago moved across the river; a handful still hold on among the towers, and their washing lines strung between fortified turrets are the most honest detail in the scene.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ait-benhaddou_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ait-benhaddou_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ait-benhaddou_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c39d382b-92b7-50ea-860d-72df811e0548",
+          "order": 0,
+          "title": "Aït Benhaddou | آيت بن حدّو",
+          "caption": "More than eighty films and television series have been shot on the hillside in front of you — more than at any other single location in Africa.",
+          "latitude": 31.048219582937108,
+          "longitude": -7.131899605543994,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ait-benhaddou.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ait-benhaddou_hero.webp",
+          "transcriptText": "More than eighty films and television series have been shot on the hillside in front of you — more than at any other single location in Africa.\n\nAcross the Ounila river, the ksar of Aït Benhaddou climbs the hillside in tiers of red pisé, packed earth built up in layers and left to bake in the sun. Corner towers cap each cluster of houses, crenellated like a fortress, and the walls carry the same geometric patterns you'll find on kasbahs right across the south. A line of palm trees marks the riverbank ahead of you, and behind the ksar, the ochre foothills of the High Atlas roll away toward the mountains proper.\n\nHave a look at how it's built first. Pisé has no wooden frame and no fired brick — just earth, straw and lime, rammed into wooden moulds and stacked course by course — and it has kept these walls standing for the better part of a thousand years, with each generation patching and rebuilding as the winter rains wear the towers down.\n\nRidley Scott shot Gladiator here, turning the ksar into the slave city of Zucchabar; the Game of Thrones crew came back across two seasons and cast it as Yunkai, one of the slave cities of Slaver's Bay; and decades before either, Lawrence of Arabia opened with these same walls on screen. Few places on the continent have stood in for so many different centuries and countries at once.\n\nAnd here's the thing worth sitting with: almost nobody actually lives inside the ksar any more. Most families moved across the river to the newer village decades ago, once running water and electricity made the old earthen houses hard to justify, and what remains inside the walls today is maintained largely for visitors and film crews rather than daily life. Aït Benhaddou earned its UNESCO listing in 1987 not as a living village exactly, but as proof of how that village once worked.\n\nA handful of families still hold on inside the walls, running small shops and guest rooms among the towers, and their washing lines strung between fortified turrets are, if anything, the most honest detail in the whole scene."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.048219582937108,
+      "centroidLongitude": -7.131899605543994,
+      "city": "Aït Benhaddou",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Monument",
+        "History",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8cfb136f-f30d-5a57-afc1-0426417bd62d",
+      "createdAt": "2026-08-07",
+      "title": "Almoravid Koubba | قبة المرابطين",
+      "shortDescription": "The only Almoravid building left standing in Morocco — and the root of everything built after it.",
+      "longDescription": "Sunken several metres below street level beside the Ben Youssef Mosque, this small domed pavilion is the only Almoravid building still standing anywhere in Morocco. Ali ibn Yusuf built it around 1125 as an ablutions pavilion, and the city simply rose around it — nine centuries of rebuilding stacked layer on layer until it vanished beneath an unremarkable outbuilding, where excavators found it again in 1952. Inside, the ribbed dome is carved with interlocking arches radiating like a stone starburst, ringed by pine cones, palm fronds and acanthus leaves that historians treat as the starting point for almost every Moroccan decorative style that followed. The horseshoe arch on its western face is the earliest dated example in the country; every riad doorway in the medina descends from it, however roundabout the route.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/almoravid-koubba_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/almoravid-koubba_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "83b1a371-368e-5313-90b2-06e8d1515d0e",
+          "order": 0,
+          "title": "Almoravid Koubba | قبة المرابطين",
+          "caption": "The dome in front of you is the only Almoravid building left standing anywhere in Morocco.",
+          "latitude": 31.631633277865863,
+          "longitude": -7.987138974897335,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/almoravid-koubba.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/almoravid-koubba_hero.webp",
+          "transcriptText": "The dome in front of you is the only Almoravid building left standing anywhere in Morocco.\n\nThe Almoravid Koubba sits several metres below the level of the street, in a sunken excavation just off the Ben Youssef Mosque. The gap isn't an accident of design — the ground around it has simply risen through nine centuries of rebuilding, layer stacked on layer, the way it has right across the old city. Look down from the railing and you'll see a single small stone structure, roughly cube-shaped, topped with a ribbed dome pierced by star-shaped windows, with rubble and foundation walls scattered around it — the remains of later buildings that were cleared away to reveal it.\n\nHave a look at the dome first. It's carved on the inside with a pattern of interlocking arches that radiate out from the centre like a stone starburst, and around the base runs a band of motifs — pine cones, palm fronds, acanthus leaves — that architectural historians treat as the starting point for almost every decorative style that followed in Morocco.\n\nIt was built around 1125 by the Almoravid ruler Ali ibn Yusuf as an ablutions pavilion attached to the mosque next door, and it disappeared for centuries under later rebuilding, before excavators finally uncovered it in 1952, buried beneath an outbuilding nobody had thought twice about.\n\nWhat's worth knowing, standing here, is that this small, slightly awkward building sitting in its pit is effectively the root of Moroccan architecture: the arches, the star windows and the carved foliage all reappear later, larger and grander, in the Almohad and Marinid buildings across the city, but they start here first.\n\nLook for the horseshoe arch on its western face before you move on. It's the earliest dated example of the shape in the country, and every riad doorway in the medina behind you descends from it, however roundabout the route."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.631633277865863,
+      "centroidLongitude": -7.987138974897335,
+      "city": "Marrakech",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Monument",
+        "Architecture",
+        "History",
+        "Faith"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f32394d2-99f3-5931-b2a3-ac19b77bd377",
+      "createdAt": "2026-08-07",
+      "title": "Bacha Coffee | مقهى الباشا",
+      "shortDescription": "Churchill, Chaplin and Roosevelt all took coffee in these rooms — and the house pours on as if the century never turned.",
+      "longDescription": "Bacha Coffee occupies the ground-floor reception rooms of Dar el Bacha — the House of the Pasha — a palace built in the early 1900s for Thami El Glaoui, the Pasha of Marrakech. From 1910 the coffee house drew the era's power brokers, and the guest list reads like a rollcall of the century: Winston Churchill, Charlie Chaplin and Franklin Roosevelt all took coffee within these walls. After the Second World War the palace closed and sat shut for more than sixty years, reopening as a museum in 2017; two years later, at the invitation of King Mohammed the Sixth, the coffee house was revived inside it. The revival is a deliberate period piece — staff in gold-trimmed 1910 uniforms and fez caps, over a hundred single-origin coffees poured tableside from silver pots, and a queue that runs the length of the palm courtyard by mid-morning.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bacha-coffee_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bacha-coffee_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bacha-coffee_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bacha-coffee_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9253df49-de7b-537d-b017-7695446866b7",
+          "order": 0,
+          "title": "Bacha Coffee | مقهى الباشا",
+          "caption": "Beyond the marble entrance hall, past a courtyard lined with palms and studded with zellij tilework, sits a coffee house dressed as if the twentieth century had never quite finished with it.",
+          "latitude": 31.63130678356549,
+          "longitude": -7.992454317225968,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bacha-coffee.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bacha-coffee_hero.webp",
+          "transcriptText": "Beyond the marble entrance hall, past a courtyard lined with palms and studded with zellij tilework, sits a coffee house dressed as if the twentieth century had never quite finished with it.\n\nBacha Coffee occupies the ground floor of Dar el Bacha — the House of the Pasha — a grand palace built in the early 1900s for Thami El Glaoui, the regional governor known as the Pasha of Marrakech. You're standing in what were once his reception rooms: carved cedar ceilings overhead, marble underfoot, and a covered courtyard garden with soaring palms just beyond the counter.\n\nThe coffee house itself dates to 1910, when the palace became a meeting place for the era's power brokers, and the guest list over the following decades reads like a rollcall of the century: Winston Churchill, Charlie Chaplin and Franklin Roosevelt all took coffee within these walls.\n\nAfter the Second World War, the palace shut its doors, and for more than sixty years it sat closed to the public. It reopened as a museum in 2017, and two years later, at the invitation of King Mohammed the Sixth, the coffee house was revived inside it — the same address, the same trade, picking up more or less where it left off.\n\nAnd here's the thing that makes it worth the visit rather than just the coffee: the whole production is a period piece. Staff dress in gold-trimmed uniforms and fez caps modelled on 1910, the menu runs to well over a hundred single-origin coffees poured tableside from silver pots, and the entire ritual is staged, deliberately, as though Marrakech's belle époque had simply been paused rather than ended.\n\nThe queue tends to run the length of the courtyard by mid-morning, which tells you the revival worked rather better than anyone expected."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.63130678356549,
+      "centroidLongitude": -7.992454317225968,
+      "city": "Marrakech",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "History",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c1527e30-a7bb-5a4d-92ec-cfc3242a372f",
+      "createdAt": "2026-08-07",
+      "title": "Bahia Palace | قصر الباهية",
+      "shortDescription": "Two grand viziers spent forty years building 'the brilliant one' — and rivals ransacked it within days of the second one's death.",
+      "longDescription": "Bahia Palace covers roughly eight hectares of courtyards, gardens and private apartments, built in two waves: begun in the 1860s by Si Moussa, grand vizier to Sultan Moulay Hassan the First, then dramatically expanded by his son Bou Ahmed, who kept enlarging it until his death in 1900. Bou Ahmed named it Bahia — 'the brilliant one' — after his favourite wife, and built a private apartment for each of his four wives and twenty-four concubines, the painted cedar ceilings growing more elaborate with the status of each room. The Grand Courtyard is paved in white and green marble, some imported from Italy. None of it lasted: within days of Bou Ahmed's death the palace was ransacked by rivals and his fortune seized by the sultan's court. In the small riad garden, orange trees and jasmine still grow in the pattern his gardeners planted, quietly outlasting everyone who fought over the place.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bahia-palace_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bahia-palace_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bahia-palace_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bahia-palace_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cf207b11-6c31-530c-b865-206c9e7e145e",
+          "order": 0,
+          "title": "Bahia Palace | قصر الباهية",
+          "caption": "Count the courtyards as you go — Bahia Palace has more than you'll be able to hold in your head by the time you reach the end.",
+          "latitude": 31.621907660956442,
+          "longitude": -7.981958089684428,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bahia-palace.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bahia-palace_hero.webp",
+          "transcriptText": "Count the courtyards as you go — Bahia Palace has more than you'll be able to hold in your head by the time you reach the end.\n\nStep through the horseshoe arch into the Grand Courtyard, its floor paved entirely in white and green marble, some of it imported from Italy. Cypress trees stand in each corner, and the surrounding gallery is carried on slender columns topped with carved stucco.\n\nThe palace as a whole covers roughly eight hectares of courtyards, gardens and private apartments, and it was built in two waves: first by Si Moussa, grand vizier to Sultan Moulay Hassan the First, starting in the 1860s, and then dramatically expanded by his son, Bou Ahmed, who succeeded him as grand vizier and kept enlarging the place until his death in 1900.\n\nBou Ahmed named it Bahia — \"the brilliant one\" — after his favourite wife, and had a private apartment built for each of his four wives and twenty-four concubines, each one slightly different in its tilework and its light, as if the household's private rivalries were built directly into the floor plan. Look up as you move between the rooms: the painted cedar ceilings change pattern from space to space, and the more elaborate the paintwork overhead, the more status the room once carried.\n\nAnd here's the twist worth knowing: none of it lasted. Within days of Bou Ahmed's death, the palace was ransacked by rivals, his household turned out, and his fortune seized by the sultan's court. The most lavish private residence built in Marrakech in a century stood empty and picked over almost as soon as it was finished.\n\nFrom the small riad garden at the palace's western end, orange trees and jasmine still grow in more or less the pattern Bou Ahmed's gardeners planted, quietly outlasting every single person who once fought over the place."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.621907660956442,
+      "centroidLongitude": -7.981958089684428,
+      "city": "Marrakech",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Power",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e22d016c-8f54-5600-a12b-8bf341649795",
+      "createdAt": "2026-08-07",
+      "title": "Baromètre",
+      "shortDescription": "An unmarked door in Guéliz, a staircase down, and one of the top ten bars in the Middle East and North Africa.",
+      "longDescription": "Behind an unmarked door inside the Résidence Al Houda on Rue Moulay Ali, a staircase leads down to a basement that was one of the first rooms in Marrakech built entirely around mixology. Apothecary jars, brass fittings and low light give Baromètre the feel of a spice shop crossed with an alchemist's laboratory — the name borrowed from the antique barometers and apothecary scales dotted around the room — and the bartenders work through their ingredients at the counter rather than out of sight. The kitchen alongside runs a short, considered menu: duck leg confit, a risotto built around clams and mhamssa, the small hand-rolled Moroccan pasta. The city's drinking culture traditionally lived in hotel bars and riad terraces; Baromètre treated cocktails as a craft worth an entire evening, and in 2023 the Tales of the Cocktail Spirited Awards named it among the top ten bars in the Middle East and North Africa.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barometre-marrakech_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barometre-marrakech_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barometre-marrakech_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barometre-marrakech_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7fad5407-1867-5982-8c59-3b8432d7260d",
+          "order": 0,
+          "title": "Baromètre",
+          "caption": "There's a curious thing about the ground floor here — it gives nothing away at all.",
+          "latitude": 31.63802991058345,
+          "longitude": -8.01398372037141,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/barometre-marrakech.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barometre-marrakech_hero.webp",
+          "transcriptText": "There's a curious thing about the ground floor here — it gives nothing away at all.\n\nRue Moulay Ali, Guéliz, behind an unmarked door inside the Résidence Al Houda. No sign, no lit window, nothing to suggest anything sits behind it — you go in, find the staircase, and head down into the basement.\n\nDown there, Baromètre was one of the first places in the city built entirely around mixology, and the room plays up the secrecy: apothecary jars, brass fittings and low light give it the feel of a spice shop crossed with an alchemist's laboratory, which is more or less the idea — bartenders work through ingredients at the counter in front of you rather than out of sight. The name itself nods to the same instinct, borrowed from the antique barometers and apothecary scales dotted around the room, part of a styling that runs right down to the menus.\n\nThe kitchen runs alongside the bar with a short, considered menu — duck leg confit, a risotto built around clams and mhamssa, the small hand-rolled Moroccan pasta — so this isn't a bar with food as an afterthought so much as a restaurant that happens to take its cocktails just as seriously.\n\nAnd that's really the point of the place: Marrakech's drinking culture has traditionally lived in hotel bars and riad terraces, built for tourists rather than locals with an interest in a well-made drink. Baromètre was one of the first rooms in the city to treat cocktails as a craft worth building an entire evening around, and in 2023 it was named among the top ten bars in the whole Middle East and North Africa region at the Tales of the Cocktail Spirited Awards.\n\nMost people walking Rue Moulay Ali above you have no idea any of this is underfoot, which is rather the whole point of a door with nothing written on it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.63802991058345,
+      "centroidLongitude": -8.01398372037141,
+      "city": "Marrakech",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f6d23796-5e22-56fd-9717-4c93464ac8fe",
+      "createdAt": "2026-08-07",
+      "title": "Dar Si Said Museum | متحف دار السي سعيد",
+      "shortDescription": "A vizier's brother built the palace; since 1930 it has held the everyday craft of the Moroccan south.",
+      "longDescription": "Dar Si Said was commissioned in the mid-1800s by Si Said ibn Moussa, brother to the powerful grand vizier Bou Ahmed, and shares Bahia Palace's taste for scale and craftsmanship on a smaller, more intimate footing — carved cedar eaves, geometric zellij floors, and stucco cut so finely it reads as lace. In 1930, French administrators cataloguing Morocco's craft traditions chose this palace to hold the collection, and that has been its job ever since. The woodwork gallery upstairs keeps carved cedar panels and painted ceilings lifted from Marrakech palaces that didn't survive, alongside doors and chests inlaid with bone and silver; Berber jewellery, hand-knotted carpets and ceramics are shown here precisely because they were made to be used — worn, sat on, eaten from — rather than admired behind glass. An Andalusian courtyard garden and a roof terrace, where the geometry reads as one continuous pattern, close the visit.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dar-si-said-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dar-si-said-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dar-si-said-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dar-si-said-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dar-si-said-museum_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7b5fb49a-2b3b-5141-9b44-4958637a44db",
+          "order": 0,
+          "title": "Dar Si Said Museum | متحف دار السي سعيد",
+          "caption": "It's 1930. French administrators are cataloguing Morocco's craft traditions, and they choose this exact palace to hold the collection.",
+          "latitude": 31.62328441524113,
+          "longitude": -7.983836184750585,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dar-si-said-museum.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dar-si-said-museum_hero.webp",
+          "transcriptText": "It's 1930. French administrators are cataloguing Morocco's craft traditions, and they choose this exact palace to hold the collection.\n\nInside the palace of Dar Si Said, the entrance courtyard alone does most of the persuading: carved cedar eaves overhead, a floor of geometric zellij tile, and doorways framed in stucco cut so finely it looks more like lace than plaster.\n\nThe building was commissioned in the mid-1800s by Si Said ibn Moussa, brother to the powerful grand vizier Bou Ahmed, and it shares the same taste for scale and craftsmanship you'll find at Bahia Palace nearby, if on a smaller and — some say — more intimate footing.\n\nHave a look at the woodwork gallery upstairs first. Carved cedar panels and painted ceilings, some lifted from other Marrakech palaces that didn't survive, sit alongside doors and chests inlaid with bone and silver from craftsmen working right across the south of Morocco. Beyond it, a small courtyard garden laid out in the Andalusian style — citrus trees, a central fountain, beds sunk slightly below the surrounding paths — offers a quieter counterpoint to all that carved detail indoors.\n\nAnd here's the thing about the collection itself: it isn't really about any single dazzling object. Berber silver jewellery, hand-knotted carpets, ceramics and carved wood are displayed here specifically because they were made to be used — worn, sat on, eaten from — rather than admired behind glass, and the museum's whole point, since it opened in 1930, has been treating everyday craftsmanship as seriously as royal architecture.\n\nTake the stairs up to the roof terrace before you leave. From there, the courtyard's geometry reads as one continuous pattern, rather than the sum of its parts."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.62328441524113,
+      "centroidLongitude": -7.983836184750585,
+      "city": "Marrakech",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9663707a-0d1a-5f10-b78c-71aaf2d26123",
+      "createdAt": "2026-08-07",
+      "title": "El Badi Palace | قصر البديع",
+      "shortDescription": "'The Incomparable' had 360 rooms, Italian marble and Sudanese gold — a century later another sultan stripped it to the bone.",
+      "longDescription": "Sultan Ahmad al-Mansur commissioned El Badi — 'the Incomparable', one of the ninety-nine names of God — in 1578, paid for with the war reparations Portugal handed over after its catastrophic defeat at the Battle of the Three Kings. Twenty-five years in the building, it ran to some 360 rooms dressed in Italian marble, gold carried up from Sudan and onyx shipped from India. Barely a century later, Sultan Moulay Ismail stripped it almost bare, hauling marble, cedar and gold off to his new capital at Meknes; what stands today is the skeleton — vast pisé walls around four sunken orange-grove gardens and a huge reflecting pool. One treasure came back: the Koutoubia Minbar, the pulpit inlaid with ivory and silver by Córdoba craftsmen in 1137, sits in a pavilion off the main court. Storks nest along the wall-tops in their dozens, and their clattering bills are most days the loudest sound on the site.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/el-badi-palace_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/el-badi-palace_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/el-badi-palace_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/el-badi-palace_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/el-badi-palace_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/el-badi-palace_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "996b56e4-4de8-5c67-af33-41bdcf509e68",
+          "order": 0,
+          "title": "El Badi Palace | قصر البديع",
+          "caption": "The ninety-nine names of God include \"the Incomparable\" — and that's the name the Saadian sultans gave to the palace whose ruins surround you.",
+          "latitude": 31.618501350834592,
+          "longitude": -7.985905215342683,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/el-badi-palace.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/el-badi-palace_hero.webp",
+          "transcriptText": "The ninety-nine names of God include \"the Incomparable\" — and that's the name the Saadian sultans gave to the palace whose ruins surround you.\n\nWalk to the edge of the sunken garden and look across: what's left standing is a vast rectangular enclosure of pisé walls, punctuated by four sunken orange-grove gardens and a huge reflecting pool at the centre, all of it scaled for a building that once had 360 rooms.\n\nSultan Ahmad al-Mansur commissioned El Badi in 1578, paid for with the war reparations Portugal handed over after its catastrophic defeat at the Battle of the Three Kings, and it took roughly twenty-five years to finish: Italian marble for the floors, gold leaf carried up from Sudan, onyx shipped in from India — the full inventory of what an early modern superpower could afford.\n\nNone of that survives. Barely a century after it was finished, Sultan Moulay Ismail had the palace stripped almost bare — marble, cedar, gold, all of it hauled off to build his new capital at Meknes — and what you're looking at now is essentially the building's skeleton, the plaster and stone left behind because they weren't worth moving.\n\nOne genuine treasure did make its way back, though. In a pavilion off the main courtyard sits the Koutoubia Minbar, the carved wooden pulpit made for the Koutoubia Mosque across town, inlaid with ivory and silver by craftsmen in Córdoba in 1137 and eight years in the making — centuries older than El Badi itself, and one of the finest surviving pieces of woodwork anywhere in the Islamic world.\n\nAnd here's what makes the ruin worth the visit rather than just a curiosity: it's a monument to a specific kind of confidence, the sort that assumes an empire's wealth will always be there to be spent, and it stands today as evidence of exactly how quickly that assumption can be proven wrong.\n\nStorks nest along the tops of the walls in their dozens, and their clattering bills are, most days, the loudest sound anywhere on the site."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.618501350834592,
+      "centroidLongitude": -7.985905215342683,
+      "city": "Marrakech",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Power",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "54d5d8d5-5224-54fd-be0c-597bf44d7480",
+      "createdAt": "2026-08-07",
+      "title": "El Fenn Boutique",
+      "shortDescription": "Vanessa Branson signed for one crumbling riad and got five — the shop by the courtyard is the whole hotel's eye, distilled.",
+      "longDescription": "El Fenn means 'the art' in Arabic — and 'the hip thing' in local slang, which tells you most of what you need to know. Vanessa Branson, art collector and sister of Richard Branson, bought what she thought was one crumbling house in 2002 with her business partner Howell James, discovering on signing that it came with four adjoining buildings attached; the boutique hotel that opened in 2004 was five houses knitted into one. The ground-floor boutique, put together by the actress and long-time Marrakech resident Marisa Berenson, lays out Moroccan-made textiles, ceramics, jewellery and leather babouches from workshops the hotel works with directly, priced to reflect the maker rather than the location. Branson founded the Marrakech Biennale and ran it from El Fenn for six editions, and the rotating exhibitions still treat the building as a gallery that happens to rent rooms — half the pieces on display aren't for sale at all, and working out which is which is part of the fun.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/el-fenn-boutique_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/el-fenn-boutique_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/el-fenn-boutique_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f4be6a81-c67a-5a91-91c3-57fecf0eb615",
+          "order": 0,
+          "title": "El Fenn Boutique",
+          "caption": "This is El Fenn — \"the art,\" in Arabic, and \"the hip thing,\" in local slang, which tells you most of what you need to know before you've even stepped inside.",
+          "latitude": 31.62706034322683,
+          "longitude": -7.993493290299676,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/el-fenn-boutique.mp3",
+          "audioDurationSeconds": 112,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/el-fenn-boutique_hero.webp",
+          "transcriptText": "This is El Fenn — \"the art,\" in Arabic, and \"the hip thing,\" in local slang, which tells you most of what you need to know before you've even stepped inside.\n\nEl Fenn's boutique occupies the ground floor of the riad, just off the entrance courtyard, where local craft, fashion and jewellery are laid out among a jumble of colour and pattern — less a shop shelf than a curated corner of the whole hotel's aesthetic.\n\nThe riad itself began in 2002, when Vanessa Branson — sister of Richard Branson, and an art collector in her own right — bought what she thought was one crumbling house with her business partner Howell James, only to discover on signing the contract that it came with four adjoining buildings attached. What opened in 2004 as a single boutique hotel was, from day one, really five houses knitted into one.\n\nThe boutique's own look was put together by Marisa Berenson, the actress and long-time Marrakech resident, and what's on the shelves changes constantly: textiles, ceramics and jewellery made by Moroccan designers and craftspeople, alongside pieces from Branson's own collecting eye. Look out for the leather babouches and hand-loomed textiles from workshops the hotel works with directly, priced to reflect the maker rather than simply the location.\n\nWhat's worth knowing, standing here, is that this was never meant to be simply a hotel with a gift shop attached. Branson founded the Marrakech Biennale and ran it from El Fenn for six editions, and the rotating exhibitions of photography and sculpture around the property still treat the building as a gallery that happens to also rent out rooms.\n\nHalf the pieces on display in the boutique aren't actually for sale — they're simply part of the collection, which makes working out which is which part of the fun."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 112,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.62706034322683,
+      "centroidLongitude": -7.993493290299676,
+      "city": "Marrakech",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Venue",
+        "Art",
+        "Commerce",
+        "Fashion",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cc3542a7-ad8d-5acc-ba5e-978138a2fc17",
+      "createdAt": "2026-08-07",
+      "title": "Jajjah by Hassan Hajjaj",
+      "shortDescription": "The 'Andy Warhol of Marrakech' built a warehouse where his photographs, tea tins and tagines all hang in one frame.",
+      "longDescription": "In Sidi Ghanem, Marrakech's industrial design quarter, a converted warehouse fitted out in emerald tiles, yellow walls, bronze chandeliers and cabinets built from repurposed tea tins and oil cans holds Jajjah — the name is owner Hassan Hajjaj's own, simply reversed. The Moroccan-British artist, often nicknamed the Andy Warhol of Marrakech for turning consumer packaging and street style into pop portraiture, runs the space as three things at once: a gallery rotating shows by young Moroccan photographers he champions personally, a boutique of tea blends, clothing and objects of his own design, and a restaurant where an all-female kitchen cooks tagines and couscous the traditional way in a room that looks nothing like tradition. His portraits — models in printed djellabas framed by grids of tin cans — hang throughout, so sitting down to eat, you're inside one of his photographs rather than just looking at one.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jajjah-hassan-hajjaj_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jajjah-hassan-hajjaj_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jajjah-hassan-hajjaj_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "38a812dc-da10-5a5e-8b65-acc383183632",
+          "order": 0,
+          "title": "Jajjah by Hassan Hajjaj",
+          "caption": "Every surface in this room is doing something — colour, pattern, or both — and none of it is accidental.",
+          "latitude": 31.669129375322964,
+          "longitude": -8.041975625229547,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jajjah-hassan-hajjaj.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jajjah-hassan-hajjaj_hero.webp",
+          "transcriptText": "Every surface in this room is doing something — colour, pattern, or both — and none of it is accidental.\n\nSidi Ghanem, Marrakech's industrial design quarter, inside a converted warehouse space fitted out in emerald tiles, yellow-painted walls, bronze chandeliers and cabinets built from repurposed metal packaging — tea tins, oil cans, that sort of thing, turned into furniture and display cases.\n\nThis is Jajjah, named for its owner Hassan Hajjaj — his own name, simply reversed — a Moroccan-British artist and designer often nicknamed the Andy Warhol of Marrakech for the way he turns consumer packaging and street style into pop portraiture. Jajjah is his second act in the city: a bigger, more layered version of his original medina space, Riad Yima.\n\nThe building works as three things at once: a gallery rotating exhibitions by young Moroccan photographers Hajjaj champions personally, a boutique selling tea blends, clothing and handcrafted objects he's designed himself, and a restaurant, where an all-female kitchen team cooks tagines and couscous the traditional way, in a room that looks nothing like tradition at all. Hajjaj's own photographic portraits hang throughout — models draped in printed djellabas, framed by his signature grids of tin cans and bottle caps — so the walls double as a running index of the visual language on display everywhere else in the room.\n\nAnd that's really the point of Jajjah: Hajjaj's whole body of work has been about taking things Morocco already had — mint tea, market colour, the visual noise of a souk stall — and reframing them as fine art rather than background. Sitting down to eat here, you're inside one of his photographs rather than just looking at one.\n\nThe gallery walls change with each new show, but the tin-can light fittings overhead stay exactly where they are, season after season."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.669129375322964,
+      "centroidLongitude": -8.041975625229547,
+      "city": "Marrakech",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Food",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "749410f9-a828-5d13-a57f-955dc119287b",
+      "createdAt": "2026-08-07",
+      "title": "Jardin Majorelle | حديقة ماجوريل",
+      "shortDescription": "A painter spent a lifetime building this garden and patented its blue — Yves Saint Laurent saved it from the bulldozers.",
+      "longDescription": "The French painter Jacques Majorelle came to Marrakech to recover from illness, bought this plot in 1923, and spent decades filling it: cactus gardens, bamboo groves, lily ponds, a Cubist villa by the architect Paul Sinoir in 1931, and — by the time he opened the gates to the public in 1947 — more than a hundred and thirty-five plant species from as far afield as Mexico and Madagascar. The saturated ultramarine covering nearly every hard surface is his own invention, mixed in 1937 and patented under his name; it's still called Majorelle Blue. A costly divorce forced him to sell in the 1950s, and the garden had fallen into ruin and was slated for a housing development when Yves Saint Laurent and Pierre Bergé stepped in to buy and restore it, nearly doubling the collection to some three hundred species. A memorial to Saint Laurent stands in the rose garden, where his ashes were scattered in 2008.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-majorelle_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-majorelle_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-majorelle_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-majorelle_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-majorelle_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-majorelle_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "55a04124-d61e-5b08-87ba-2954b1cafd96",
+          "order": 0,
+          "title": "Jardin Majorelle | حديقة ماجوريل",
+          "caption": "Cobalt walls, bamboo forty feet overhead, and somewhere beneath it all, several hundred species of plant gathered from five continents.",
+          "latitude": 31.64134844707811,
+          "longitude": -8.003203400951744,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jardin-majorelle.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jardin-majorelle_hero.webp",
+          "transcriptText": "Cobalt walls, bamboo forty feet overhead, and somewhere beneath it all, several hundred species of plant gathered from five continents.\n\nJardin Majorelle sits behind these electric-blue walls exactly as its painter-owner left them: narrow paths threading through cactus gardens, bamboo groves and lily ponds, with the villa's cobalt trim reappearing at every turn — planters, window frames, the pergola over your head.\n\nThe garden began in 1923, when the French painter Jacques Majorelle, who'd come to Marrakech six years earlier to recover from illness, bought this plot and started planting. In 1931 he added a Cubist villa designed by the architect Paul Sinoir, and by the time he opened the garden to the public in 1947, he'd gathered more than a hundred and thirty-five plant species from as far afield as Mexico and Madagascar.\n\nHave a look at the shade of blue covering nearly every hard surface. Majorelle mixed it himself in 1937, a saturated ultramarine unlike anything used in local building at the time, and he liked it enough to patent it under his own name — it's still called Majorelle Blue today, and you won't find it used quite this way anywhere else in the city.\n\nAnd here's the twist: Majorelle didn't get to enjoy his own garden for long. A costly divorce in the 1950s forced him to sell it, and by the following decade it had fallen into ruin and was slated for a housing development. Yves Saint Laurent and his partner Pierre Bergé, who'd visited years earlier, stepped in to buy and restore it, eventually nearly doubling the plant collection to some three hundred species.\n\nA memorial to Saint Laurent stands in the rose garden, where his ashes were scattered after his death in 2008 — a quieter corner than the blue walls, but the one the garden's second owner chose for himself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.64134844707811,
+      "centroidLongitude": -8.003203400951744,
+      "city": "Marrakech",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Art",
+        "Iconic Landmark",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c9eb87c3-d8d6-5a8b-9ef1-e959a7495d30",
+      "createdAt": "2026-08-07",
+      "title": "Jemaa el-Fna | جامع الفنا",
+      "shortDescription": "UNESCO's first-ever listing to protect what happens in a place rather than what's built on it.",
+      "longDescription": "Marrakech's great square dates to the eleventh century and the Almoravid dynasty that first laid out the city, and nobody agrees on what the name means — 'the mosque at the end of the world', 'the assembly of the dead', or simply the courtyard of a mosque that no longer exists. Orange-juice carts line up through the day; by early evening dozens of numbered food stalls appear from nowhere, and storytellers, musicians and henna artists work the crowd as they have for centuries. In 2001 UNESCO proclaimed the square a Masterpiece of the Oral and Intangible Heritage of Humanity — the first time it had protected a place for what happens in it rather than what's built on it, a campaign pushed through partly by the writer Juan Goytisolo, who fought off a glass tower on the square's edge. Nothing here is roped off: the performers are the heritage, and the square stays what it is only for as long as people keep showing up.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jemaa-el-fna_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jemaa-el-fna_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5e78b7eb-2a98-5f15-a4bf-7be63a961914",
+          "order": 0,
+          "title": "Jemaa el-Fna | جامع الفنا",
+          "caption": "You probably think you already know this square from a hundred postcards.",
+          "latitude": 31.62596016419466,
+          "longitude": -7.989095450688799,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/jemaa-el-fna.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/jemaa-el-fna_hero.webp",
+          "transcriptText": "You probably think you already know this square from a hundred postcards. Give it another few minutes before you decide.\n\nStand anywhere near the centre of Jemaa el-Fna and turn slowly: the Koutoubia's minaret anchors the skyline to the southwest, orange-juice carts line up in neat rows through the day, and by early evening, dozens of numbered food stalls will have appeared from nowhere to fill the open ground around you.\n\nNobody agrees on what the name actually means. Jemaa can mean \"mosque\" or \"assembly\"; fna can mean \"courtyard,\" or more darkly, \"death\" — so depending on who you ask, you're standing in \"the mosque at the end of the world,\" \"the assembly of the dead,\" referencing public executions once held here, or simply an open square in front of a mosque that no longer exists. The square itself dates back to the eleventh century, to the Almoravid dynasty that first laid out Marrakech.\n\nIn 2001, UNESCO proclaimed the square a Masterpiece of the Oral and Intangible Heritage of Humanity, later folded into its wider Intangible Cultural Heritage list in 2008 — the first time the organisation had ever protected a place for what happens in it rather than what's built on it. The campaign was pushed through partly by the writer Juan Goytisolo, a longtime Marrakech resident who fought off a plan to put a glass tower on the square's edge.\n\nAnd that's the interesting bit: Jemaa el-Fna isn't preserved the way a monument is preserved. Nothing here is roped off. The storytellers, musicians and henna artists working the crowd right now are themselves the heritage, which means the square only stays what it is for as long as people keep showing up to perform in it.\n\nBy nightfall the smoke from the food stalls will drift up past the minaret, and the whole square will sound completely different from how it sounds right now."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.62596016419466,
+      "centroidLongitude": -7.989095450688799,
+      "city": "Marrakech",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Public Square",
+        "History",
+        "Performance",
+        "Food",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9f48ffaf-5128-5c14-b945-630978f6e185",
+      "createdAt": "2026-08-07",
+      "title": "Kabana Rooftop | كابانا مطعم و مشروبات",
+      "shortDescription": "Sunset over the medina, the Koutoubia on the rail, and a menu that refuses to pick one continent.",
+      "longDescription": "A short walk from Jemaa el-Fna, Kabana's terrace sits high enough above the medina that the view runs clean across the flat rooftops to the Koutoubia's minaret and, on a clear evening, out to the silhouette of the Atlas Mountains. The kitchen, run by the Spanish chef Luisma, doesn't pin itself to one cuisine — sushi rolls next to ceviche, shareable plates crossing Mediterranean, Latin American and Asian references — and the cocktail list runs just as wide. The space steps down over several levels dressed in tile, greenery and lantern light, so no seat sits far from the rail, and come evening it turns into something closer to a club, with DJ sets and rotating live jazz, salsa and electro timed to pick up as the light fades. Rooftops like this have made the skyline above the square a destination in its own right; the seats with the clearest line to the Koutoubia go first, every single evening.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kabana-rooftop_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kabana-rooftop_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kabana-rooftop_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4082b7e8-62e8-5fb5-a212-6e78418b097f",
+          "order": 0,
+          "title": "Kabana Rooftop | كابانا مطعم و مشروبات",
+          "caption": "There's a reason everyone times their arrival here for the twenty minutes before sunset.",
+          "latitude": 31.626329338319376,
+          "longitude": -7.9930491405722295,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kabana-rooftop.mp3",
+          "audioDurationSeconds": 104,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kabana-rooftop_hero.webp",
+          "transcriptText": "There's a reason everyone times their arrival here for the twenty minutes before sunset.\n\nKabana sits on a rooftop terrace just a short walk from Jemaa el-Fna, high enough above the medina that the view runs clean across the flat rooftops to the Koutoubia's minaret, and on a clear evening, out further still to the silhouette of the Atlas Mountains.\n\nThe kitchen is run by the Spanish chef Luisma, and the menu doesn't try to pin itself to one cuisine: sushi rolls sit next to ceviche, shareable plates cross Mediterranean, Latin American and Asian references without much concern for tradition, and the cocktail list runs just as wide.\n\nThe space itself is laid out over several levels, dressed in tile, greenery and low lantern light, so that no seat feels too far from the rail — a deliberate response to how quickly the terrace fills once the sun starts dropping. Come evening, it turns into something closer to a club than a restaurant, with DJ sets most nights and a rotating run of live jazz, salsa and electro sets through the week, timed so the music picks up roughly as the light fades.\n\nWhat's worth knowing is that Kabana is part of a fairly recent shift in how this part of the medina works. Rooftops like this one have turned the skyline above Jemaa el-Fna into as much of a destination as the square itself, and the view you get for the price of a cocktail here would once have belonged only to whoever owned the building.\n\nBook ahead if you want a table on the rail — the seats with the clearest line to the Koutoubia go first, every single evening."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 104,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.626329338319376,
+      "centroidLongitude": -7.9930491405722295,
+      "city": "Marrakech",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c4221e02-c6ca-53ae-a205-a9ef9733d55c",
+      "createdAt": "2026-08-07",
+      "title": "Koutoubia | جامع الكتبية",
+      "shortDescription": "The tower every minaret in Marrakech is measured against — and the template for Seville's Giralda.",
+      "longDescription": "The Koutoubia's pink sandstone minaret rises in a single square shaft above the gardens at its base, banded into five stages that narrow as they climb, each face carved with a different geometric pattern. The Almohad caliph Abd al-Mu'min laid the foundations in 1147; his grandson Yaqub al-Mansur finished the tower before the century was out. The name comes from the Arabic for bookseller — more than a hundred manuscript merchants once traded in its shadow. This tower became the template: its proportions were copied almost exactly for the Giralda in Seville and the unfinished Hassan Tower in Rabat, setting the visual standard for Almohad architecture across two continents. At the top, three gilded copper spheres are said to have been paid for by a sultan's wife who melted down her jewellery in penance for breaking a fast — and Marrakech still allows nothing taller anywhere in the city, so wherever you go, the Koutoubia stays on the skyline.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/koutoubia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/koutoubia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/koutoubia_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/koutoubia_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f839769b-5010-5f37-889e-ec41c0b4226d",
+          "order": 0,
+          "title": "Koutoubia | جامع الكتبية",
+          "caption": "This is the Koutoubia — the building every other minaret in Marrakech is measured against, and the reason nothing else in the city is allowed to rise above it.",
+          "latitude": 31.623948905399118,
+          "longitude": -7.993608884174299,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/koutoubia.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/koutoubia_hero.webp",
+          "transcriptText": "This is the Koutoubia — the building every other minaret in Marrakech is measured against, and the reason nothing else in the city is allowed to rise above it.\n\nYou should be standing in the gardens at the mosque's base, where the pink sandstone tower rises in a single square shaft above the trees, banded into five stages that narrow slightly as they climb, each face carved with a different geometric pattern.\n\nConstruction began in 1147, when the Almohad caliph Abd al-Mu'min laid the foundations, and the tower itself was finished decades later under his grandson, Yaqub al-Mansur, sometime before the century was out.\n\nThe name Koutoubia comes from the Arabic word for bookseller. More than a hundred manuscript and book merchants once traded from stalls in the tower's shadow, and the name stuck to the whole mosque long after the booksellers moved on.\n\nAnd here's what makes it more than just a very old minaret: this tower became the template. Its proportions and decorative style were copied almost exactly for the Giralda in Seville, completed in 1198, and again for the unfinished Hassan Tower in Rabat — which means the silhouette in front of you effectively set the visual standard for Almohad architecture across two continents.\n\nLook up at the very top before you move on. The tower is crowned by a lantern and three gilded copper spheres, each smaller than the one below it, and legend has it they were paid for by a sultan's wife who melted down her own jewellery in penance after breaking a fast during Ramadan. True or invented, the story has attached itself to minarets all over Morocco, and the Koutoubia's spheres are the ones most often credited as the original.\n\nMarrakech still keeps nothing taller than this tower anywhere in the city, so wherever you go from here, the Koutoubia stays on the skyline behind you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.623948905399118,
+      "centroidLongitude": -7.993608884174299,
+      "city": "Marrakech",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Tower",
+        "Architecture",
+        "History",
+        "Faith",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "db2e2f9a-1d23-56ec-ace9-62f578f2d998",
+      "createdAt": "2026-08-07",
+      "title": "La Grande Table Marocaine",
+      "shortDescription": "Hélène Darroze's kitchen sends scouts across Morocco every year to bring courtly recipes back from the brink.",
+      "longDescription": "Inside the Royal Mansour, La Grande Table Marocaine is arranged as a series of intimate dining rooms dressed in the hotel's signature handcrafted plasterwork, zellij and carved cedar — the work of hundreds of Moroccan craftsmen in traditional guild trades. Since opening in 2008 the restaurant has kept one founding habit alive: sending the team across Morocco every year to track down historic courtly recipes and home cooking that might otherwise disappear, writing them down, testing them, and putting them back into circulation. The kitchen has been run since early 2024 by the French chef Hélène Darroze alongside executive chef Karim Ben Baba, and the menu moves in the traditional order — sh'hiwates first, then pigeon pastilla dusted with sugar and cinnamon, once reserved for sultans, then a Berber tagine of chestnuts and Atlas black truffle, sometimes a méchoui of slow-roasted lamb shoulder. Less nostalgia cooking than an act of preservation you can order.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-table-marocaine_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-table-marocaine_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-table-marocaine_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-table-marocaine_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-table-marocaine_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5425c38e-fdac-563f-9366-cf9a3686a3b7",
+          "order": 0,
+          "title": "La Grande Table Marocaine",
+          "caption": "Pigeon pastilla, dusted in sugar and cinnamon, was once reserved for sultans — here, it's simply the second course.",
+          "latitude": 31.62548329175866,
+          "longitude": -7.998260747911599,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/la-grande-table-marocaine.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/la-grande-table-marocaine_hero.webp",
+          "transcriptText": "Pigeon pastilla, dusted in sugar and cinnamon, was once reserved for sultans — here, it's simply the second course.\n\nLa Grande Table Marocaine sits inside the Royal Mansour, arranged around a series of intimate dining rooms rather than one large hall, each dressed in the hotel's signature handcrafted plasterwork, zellij and carved cedar.\n\nThe kitchen has been run since early 2024 by the French chef Hélène Darroze, working alongside executive chef Karim Ben Baba, and together they've kept the restaurant's founding habit alive since it opened in 2008: sending the team out across Morocco every year to track down historic courtly recipes and home cooking that might otherwise disappear.\n\nThe menu moves in the traditional order — small shared plates called sh'hiwates first, among them zaalouk with almonds and cinnamon-spiked honey, then pigeon pastilla scented with ras el hanout, and finally a Berber tagine built around chestnuts and Atlas black truffle, sometimes followed by a méchoui of slow-roasted lamb shoulder, a dish more commonly cooked outdoors over embers for a whole village than plated individually in a dining room.\n\nThe Royal Mansour as a whole was built by hundreds of Moroccan craftsmen working in traditional guild trades, and that same attention shows in this room, from the hand-cut zellij underfoot to the carved cedar overhead.\n\nWhat's worth knowing is that this isn't nostalgia cooking. The research trips aren't decorative — dishes that would otherwise survive only in family kitchens and palace archives get written down, tested, and put back into circulation on a menu, which makes the restaurant as much an act of preservation as a place to eat.\n\nFrom here, the rest of the Royal Mansour unfolds outward in the same handcrafted detail — gardens, riads, courtyards — all built by the same craftsmen who worked this room."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.62548329175866,
+      "centroidLongitude": -7.998260747911599,
+      "city": "Marrakech",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "History",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b02f556e-21ef-5df9-a073-031e85b1a650",
+      "createdAt": "2026-08-07",
+      "title": "Le Jardin Secret | الحديقة السرية",
+      "shortDescription": "Two gardens, a chamberlain's private paradise, and a four-hundred-year-old water channel still running underneath.",
+      "longDescription": "Behind blank walls in the Mouassine district run two gardens off a shared entrance: an Exotic Garden dense with plants from South Africa, Madagascar, Australia and Latin America, and an Islamic Garden laid out in the strict geometric quarters of a sixteenth-century Saadian design, its citrus rows still following the original irrigation channels. The site goes back to the late 1500s under Sultan Moulay Abdallah, but what stands today is largely the work of Muhammad Loukrissi, chamberlain to a later sultan, who bought the ruined plot in 1912 and spent until his death in 1934 filling it with pavilions, a tower and these gardens. The estate then splintered among more than a hundred and thirty heirs and sat neglected until an eight-year restoration reopened it in 2016. Underneath, the team found a khettara — an underground channel that once carried Atlas mountain water into the city — cleared it, and reconnected it, so the water in the Islamic Garden follows the same route it did four hundred years ago.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-jardin-secret_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-jardin-secret_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-jardin-secret_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-jardin-secret_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-jardin-secret_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "afd9a1d1-6e68-5644-898f-b15a33ee5e8a",
+          "order": 0,
+          "title": "Le Jardin Secret | الحديقة السرية",
+          "caption": "It's 1912, and a palace chamberlain named Muhammad Loukrissi is about to spend the next twenty years turning this plot into his private paradise.",
+          "latitude": 31.630855024517537,
+          "longitude": -7.989509373311069,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/le-jardin-secret.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-jardin-secret_hero.webp",
+          "transcriptText": "It's 1912, and a palace chamberlain named Muhammad Loukrissi is about to spend the next twenty years turning this plot into his private paradise.\n\nMouassine district, behind walls that give away nothing from the street. Inside, two gardens run off a shared entrance: to one side, the Exotic Garden, dense with plants gathered from South Africa, Madagascar, Australia and Latin America; to the other, the Islamic Garden, laid out in the strict geometric quarters of a sixteenth-century Saadian design, its beds sunk below the paths and its citrus trees planted in rows that still follow the original irrigation channels.\n\nThe site itself goes back to the Saadian dynasty, laid out in the late 1500s under Sultan Moulay Abdallah, though that original palace was gone within a century. What you're standing in today is largely the work of Muhammad Loukrissi, chamberlain to a later sultan, who bought the ruined plot in 1912 and spent until his death in 1934 filling it with pavilions, a tower, and these two gardens.\n\nAfter Loukrissi's death, the estate splintered among more than a hundred and thirty heirs and sat neglected for decades, until two Marrakech restaurateurs bought it, negotiated the inheritance, and began an eight-year restoration that reopened the gardens to the public in 2016.\n\nAnd here's the detail that makes the restoration more than cosmetic: buried under the site was a khettara, an underground channel that once carried water from the Atlas Mountains into the city's palace gardens. The restoration team found it, cleared it, and reconnected it to a well on site, so the water running through the Islamic Garden today follows the same route it did four hundred years ago.\n\nClimb the tower at the garden's edge before you leave. From the top, the whole medina spreads out in flat rooftops, with the Koutoubia's minaret marking the skyline beyond."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.630855024517537,
+      "centroidLongitude": -7.989509373311069,
+      "city": "Marrakech",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Engineering",
+        "Hidden Gem",
+        "Viewpoint",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "973a0cd9-c5dd-5865-8e4c-f6fd41570c0f",
+      "createdAt": "2026-08-07",
+      "title": "Le MAP — Monde des Arts de la Parure",
+      "shortDescription": "Seven thousand pieces of adornment from fifty countries — including full ceremonial jewellery made for horses.",
+      "longDescription": "Le MAP — the Monde des Arts de la Parure, the world of the arts of adornment — descends from one private obsession: the Swiss collectors Marlène and Paolo Gallone spent decades gathering more than seven thousand pieces of jewellery, ceremonial dress and adornment from over fifty countries, and when the museum opened in 2022, about three thousand went on permanent display. The building climbs three levels of terracotta brick and cedar beam, deliberately echoing the Ben Youssef madrasa across the medina, up to a rooftop garden facing the Atlas. Inside, heavy Berber silver and amber sit near goldwork from sub-Saharan Africa and ceremonial costume from across Asia, with textiles hung beside the exact jewellery they were worn with — and cases of full ceremonial saddles and headdresses made for horses rather than people. The argument throughout: how people decorate themselves is as serious a form of craft and identity as any painting, and deserves the same kind of museum.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-map_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-map_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-map_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-map_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a93c57cd-96a9-5a0d-bd38-30917c17266a",
+          "order": 0,
+          "title": "Le MAP — Monde des Arts de la Parure",
+          "caption": "Look for the horse first — somewhere in this collection is a full ceremonial saddle and headdress, jewellery made for an animal rather than a person.",
+          "latitude": 31.618845034334527,
+          "longitude": -7.988049576747506,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/le-map.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/le-map_hero.webp",
+          "transcriptText": "Look for the horse first — somewhere in this collection is a full ceremonial saddle and headdress, jewellery made for an animal rather than a person.\n\nWork your way up through the three levels of terracotta brick and cedar beam, a structure deliberately built to echo the Ben Youssef madrasa across the medina, until you reach the rooftop garden at the top, looking out toward the Atlas Mountains.\n\nThe whole museum descends from one private obsession: Swiss collectors Marlène and Paolo Gallone spent decades gathering more than seven thousand pieces of jewellery, ceremonial dress and adornment from over fifty countries, and when Le MAP opened in 2022, about three thousand of those pieces went on permanent display.\n\nWalk the galleries and the geography keeps shifting under your feet: heavy silver and amber worn by Berber women in the south sit near goldwork from sub-Saharan Africa, beadwork from further south still, and ceremonial costume from across Asia — with the textiles hung next to the exact jewellery they were originally worn with, rather than separated by material the way most museums do it. Tiaras, brooches and necklaces worn by both men and women share cases with pieces made for horses rather than people, full ceremonial saddles and headdresses designed to carry as much status as anything worn by their riders.\n\nAnd that's really the point being made here: adornment gets treated as a footnote in most collections, jewellery in one case, clothing in another, the connection between them lost. Le MAP argues the opposite — that how people decorate themselves is as serious a form of craft and identity as any painting or sculpture, and deserves the same kind of museum.\n\nFinish on the rooftop. The café up there serves virgin mojitos with a straight sightline to the mountains, which is as good a place as any to let the collection settle."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.618845034334527,
+      "centroidLongitude": -7.988049576747506,
+      "city": "Marrakech",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "Art",
+        "Fashion",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bed29367-f66d-5c87-a96c-b2264bacefba",
+      "createdAt": "2026-08-07",
+      "title": "L'mida | مطعم الميدة",
+      "shortDescription": "Berber gnocchi is the manifesto: Moroccan technique, set loose on whatever the season delivers.",
+      "longDescription": "In a traditional Marrakchi house just off the medina's lanes — white marble tables, mustard-and-green banquettes, rattan chairs — chef Narjisse Benkabbou cooks under what the restaurant calls a Modern Nomad philosophy: dishes built on Moroccan technique and flavour, but free to borrow wherever the ingredient list leads. The signature Berber gnocchi, Italian potato dumplings folded into distinctly Moroccan spicing, says most of it in a single dish. The menu is served family style and changes with the seasons; the lamb tagine, slow-cooked the way it has been for generations and updated only in the plating, is the dish regulars ask for by name no matter what else has moved on. Moroccan restaurants aimed at visitors tend to freeze the cuisine at its most traditional, all brass trays and set menus — L'mida treats tradition as raw material for something that keeps moving, a much harder trick to pull off convincingly.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lmida_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lmida_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lmida_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0ef93c3c-6c91-5cfc-8315-2493597a1651",
+          "order": 0,
+          "title": "L'mida | مطعم الميدة",
+          "caption": "There's a small rebellion happening on the menu here, and it starts with a plate of gnocchi.",
+          "latitude": 31.629418479049683,
+          "longitude": -7.9864696154359525,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lmida.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lmida_hero.webp",
+          "transcriptText": "There's a small rebellion happening on the menu here, and it starts with a plate of gnocchi.\n\nL'mida occupies a traditional Marrakchi house just off the medina's lanes, spread across two floors and mixing white marble tables with mustard-and-green banquettes and rattan chairs — a look that splits the difference between heritage riad and industrial café.\n\nThe kitchen is led by chef Narjisse Benkabbou, who works under what the restaurant calls a Modern Nomad philosophy: dishes built on Moroccan technique and flavour, but free to borrow from wherever the ingredient list takes them. The signature is Berber gnocchi — Italian potato dumplings folded into distinctly Moroccan spicing — which tells you most of what the kitchen is trying to do in a single dish.\n\nMost of the menu is served family style, meant for the table rather than the individual plate, and it changes with the seasons, built around whatever's fresh rather than a fixed set of classics — the lamb tagine is the one dish regulars ask for by name no matter what else has changed. It leans on the same slow-cooked technique passed down through generations, updated only in how it's plated rather than how it's actually made, which is proof the kitchen isn't chasing novelty for its own sake.\n\nAnd here's what makes L'mida worth the detour: Moroccan restaurants aimed at visitors tend to freeze the cuisine at its most traditional, all brass trays and set menus. L'mida does the opposite, treating tradition as raw material for something that keeps moving, which is a much harder trick to pull off convincingly.\n\nThe two floors fill in a particular order — ground floor first, then the upper room — so arriving early gets you the pick of the marble tables downstairs."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 108,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.629418479049683,
+      "centroidLongitude": -7.9864696154359525,
+      "city": "Marrakech",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e72dfc80-fade-564e-8e01-653c9ab15cd1",
+      "createdAt": "2026-08-07",
+      "title": "MACAAL",
+      "shortDescription": "One family spent forty years collecting African art before the market caught up — then built a museum and opened it to the city.",
+      "longDescription": "Out past the golf courses and villas of Al Maaden, MACAAL's galleries wrap around open courtyards and a sculpture garden, holding one of the most serious contemporary African art collections anywhere on the continent — more than two thousand five hundred works by roughly three hundred artists. It grew from one family's private collecting: Alami Lazraq and his son Othman spent forty years buying work by African artists, largely before the international market caught up, and set up a foundation in 2016 to make the collection public. MACAAL opened in 2018 as the first museum in Marrakech dedicated entirely to contemporary art, representing artists from all fifty-four African countries across painting, sculpture, photography, textiles, video and installation. The 2023 earthquake closed it for nearly two years; when it reopened in 2025, the collection went on permanent view rather than returning to occasional shows — contemporary African art treated as a fixture, not a rotating guest.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/macaal_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/macaal_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/macaal_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/macaal_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/macaal_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/macaal_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cb1841d5-3d14-5209-bf8c-5dde51e40979",
+          "order": 0,
+          "title": "MACAAL",
+          "caption": "Out past the golf courses and villas of Al Maaden, in a district that barely existed twenty years ago, sits one of the most serious contemporary African art collections anywhere on the continent.",
+          "latitude": 31.60076214170949,
+          "longitude": -7.950191647971016,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/macaal.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/macaal_hero.webp",
+          "transcriptText": "Out past the golf courses and villas of Al Maaden, in a district that barely existed twenty years ago, sits one of the most serious contemporary African art collections anywhere on the continent.\n\nMACAAL's galleries wrap around a series of open courtyards and a sculpture garden, purpose-built for rotating exhibitions rather than a fixed permanent hang, with the collection drawn from more than two thousand five hundred works by roughly three hundred artists.\n\nThe whole museum grew out of one family's private collecting: Alami Lazraq and his son Othman spent forty years buying work by African artists, largely before the international art market had caught up with what they were doing, and in 2016 they set up a foundation to eventually make that collection public.\n\nMACAAL opened in 2018 as the first museum in Marrakech dedicated entirely to contemporary art, representing artists from all fifty-four African countries, and its holdings run from painting and sculpture through photography, textiles, video and installation. Exhibitions rotate on a theme rather than a fixed chronology, so the same walls might carry a show built around migration one season and one built around craft traditions the next.\n\nAnd here's what makes the museum's story worth knowing: the 2023 earthquake closed MACAAL for nearly two years while the building was structurally assessed and refitted, and when it reopened in 2025, the collection went back on permanent view rather than returning to occasional exhibitions — a decision to treat contemporary African art as a fixture here, not a rotating guest.\n\nWorks by three Moroccan artists usually anchor the collection wherever it's hung — Hassan El Glaoui, Said Afifi and Saad Hassani — a reminder that the museum's reach is continental, but its roots are local."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.60076214170949,
+      "centroidLongitude": -7.950191647971016,
+      "city": "Marrakech",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "541fae7e-562a-575c-b355-70205840f800",
+      "createdAt": "2026-08-07",
+      "title": "Madrasah Ben Youssef | مدرسة ابن يوسف",
+      "shortDescription": "Nine hundred students once lived in the cells above North Africa's largest Islamic college.",
+      "longDescription": "The Madrasah Ben Youssef centres on a rectangular courtyard with a long reflecting pool, the walls rising in tier after tier of carved stucco, zellij tile and cedar lattice — with rows of small student cells stacked above the arcades. Founded in the mid-1300s by the Marinid sultan Abu Inan Faris and named for the Almoravid ruler Ali ibn Yusuf, it became the largest Islamic college in North Africa, drawing as many as nine hundred students at a time to study theology, law and the sciences. What stands today is mostly a Saadian rebuild: Sultan Abdallah al-Ghalib reconstructed and expanded the complex in the 1560s, finishing the courtyard essentially as it survives. The calligraphy running through the carved cedar eaves spells out Quranic verses worked so finely they read as pure pattern. And the plain cells upstairs are the point — this was built as housing for real students doing real coursework, and the view down into the courtyard from a student's window is a different building entirely.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madrasah-ben-youssef_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madrasah-ben-youssef_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madrasah-ben-youssef_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madrasah-ben-youssef_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madrasah-ben-youssef_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madrasah-ben-youssef_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9e3864bf-46f5-56ea-9088-31b23cb30128",
+          "order": 0,
+          "title": "Madrasah Ben Youssef | مدرسة ابن يوسف",
+          "caption": "Nine hundred students once lived and studied within these walls at once — more than any other Islamic school in North Africa.",
+          "latitude": 31.63225584876621,
+          "longitude": -7.986303655914914,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/madrasah-ben-youssef.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/madrasah-ben-youssef_hero.webp",
+          "transcriptText": "Nine hundred students once lived and studied within these walls at once — more than any other Islamic school in North Africa.\n\nThe Madrasah Ben Youssef centres on a rectangular courtyard with a long reflecting pool down the middle, the walls rising around it in tier after tier of carved stucco, zellij tile and cedar lattice, with rows of small student cells stacked above the arcades on either side.\n\nThe school was founded in the mid-1300s by the Marinid sultan Abu Inan Faris, and named after Ali ibn Yusuf, the Almoravid ruler under whom Marrakech had first flourished two centuries earlier. It became the largest Islamic college in North Africa, drawing students from across the Muslim world to study theology, law and the sciences.\n\nWhat you're standing in now, though, is mostly a Saadian rebuild: Sultan Abdallah al-Ghalib had the whole complex reconstructed and expanded in the 1560s, adding the student dormitories and finishing the courtyard's decoration essentially as it survives today. Look up at the carved cedar eaves ringing the courtyard before moving on — the calligraphy running through the woodwork spells out verses of the Quran, worked so finely it reads as pure pattern until you're close enough to make out the letters.\n\nAnd here's what's easy to miss walking through: this wasn't built as a monument, it was built as housing. Those small, plain cells upstairs, barely large enough for a bed and a shelf of books, held real students doing real coursework for centuries — the elaborate courtyard downstairs was the shared space they came home to, not the point of the building.\n\nClimb up to the cells on the upper floor before you leave. The view down into the courtyard from a student's actual window is a different building entirely from the one at ground level."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.63225584876621,
+      "centroidLongitude": -7.986303655914914,
+      "city": "Marrakech",
+      "primaryCategory": "sacredSites",
+      "tags": [
+        "Religious Building",
+        "Architecture",
+        "History",
+        "Faith",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "54fd0804-2858-5002-82f4-8f27a02b24fe",
+      "createdAt": "2026-08-07",
+      "title": "Marrakech Museum | متحف مراكش الاثري",
+      "shortDescription": "A defence minister's palace, seized while he was away collecting a medal from Queen Victoria — later the city's first girls' school.",
+      "longDescription": "Dar Mnebhi was built at the end of the 1800s for Mehdi Mnebhi, defence minister under Sultan Moulay Abdelaziz, and its history turned sharply while he was abroad: travelling to receive a medal from Queen Victoria, he returned to find his palace seized by the regional governor Pasha Glaoui, part of the manoeuvring that eventually opened Morocco to European colonisation. After independence the state took the building over and turned it, in 1965, into Marrakech's first school for girls — decades before the Omar Benjelloun Foundation restored it and reopened it in 1997 as the Marrakech Museum. Behind an unassuming door, a grand Andalusian courtyard opens up — central fountain, patterned tile climbing every wall — hung with rotating shows of modern Moroccan painting alongside a permanent collection of Moroccan Jewish, Berber and Arab art and craft. The old hammam survives intact off a side courtyard, tiled and empty, one of the few rooms never repurposed at all.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marrakech-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marrakech-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marrakech-museum_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1f112088-1c5b-5550-8003-72a348c41971",
+          "order": 0,
+          "title": "Marrakech Museum | متحف مراكش الاثري",
+          "caption": "This is Dar Mnebhi — a palace, a girls' school, and now a museum, in that order.",
+          "latitude": 31.631850293632986,
+          "longitude": -7.986232308037167,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/marrakech-museum.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/marrakech-museum_hero.webp",
+          "transcriptText": "This is Dar Mnebhi — a palace, a girls' school, and now a museum, in that order.\n\nThe Kasbah quarter, behind an unassuming door that opens onto a grand Andalusian courtyard: a central fountain, patterned tile rising up every wall, and covered galleries running around all four sides at ground level, hung today with rotating shows of modern Moroccan painting alongside the permanent collection.\n\nThe palace was built at the end of the 1800s for Mehdi Mnebhi, defence minister under Sultan Moulay Abdelaziz, and its history took a sharp turn while he was away: travelling to receive a medal from Queen Victoria, Mnebhi returned to find his own palace seized by the powerful regional governor Pasha Glaoui, part of the manoeuvring that eventually opened Morocco to European colonisation.\n\nAfter independence, the state took the building over again and turned it, in 1965, into Marrakech's first school for girls — decades before it became a museum. It wasn't restored and reopened in its current form until 1997, under the Omar Benjelloun Foundation, which stripped back later alterations to bring the courtyard's original tilework and carved plaster back into view.\n\nWhat's worth sitting with is how much political history has moved through one building: a minister's home, seized property, a girls' school, and now a gallery of Moroccan Jewish, Berber and Arab art and craft — each phase leaving its own mark rather than erasing the last.\n\nThe old hammam is still intact off one of the side courtyards, tiled and empty, one of the few rooms in the building that never got repurposed at all."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.631850293632986,
+      "centroidLongitude": -7.986232308037167,
+      "city": "Marrakech",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Art",
+        "Power"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c5ca3123-80d5-5539-96ef-2805c72faf61",
+      "createdAt": "2026-08-07",
+      "title": "MCC Gallery",
+      "shortDescription": "Morocco's first gallery dedicated to contemporary photography outgrew the medina — and became an institutional anchor.",
+      "longDescription": "MCC Gallery began in 2018 inside the medina as Dar El Bacha Gallery — the first space in Morocco dedicated specifically to contemporary photography — founded by Fatima-Zohra Bennani Bennis. Within two years she had outgrown the format entirely and relocated to Sidi Ghanem, the city's industrial design district, rebuilding the concept around six hundred square metres of purpose-built white wall space made for large-format work, painting, sculpture and installation as much as the photography that started it all. The roster runs through some of the most closely watched names in Moroccan contemporary art — Amine El Gotaibi, Houda Kabbaj, Malika Sqalli, Mustapha Azeroual and Hamza Kadiri among them — artists MCC has carried to the AKAA fair in Paris and 1-54 in London. Marrakech's gallery scene traditionally leaned toward decorative work aimed at visitors; MCC bet on serious practice and the international fair circuit instead, and the gamble made it one of the city's institutional anchors.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mcc-gallery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mcc-gallery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mcc-gallery_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mcc-gallery_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a2b6a730-3e5f-5ad4-b0c0-003fb63c53f0",
+          "order": 0,
+          "title": "MCC Gallery",
+          "caption": "Six hundred square metres of white wall space, and every inch of it earned by one woman's decision to bet on Moroccan photography before anyone else would.",
+          "latitude": 31.68194068897191,
+          "longitude": -8.03890847631679,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mcc-gallery.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mcc-gallery_hero.webp",
+          "transcriptText": "Six hundred square metres of white wall space, and every inch of it earned by one woman's decision to bet on Moroccan photography before anyone else would.\n\nWalk into the main hall at MCC Gallery, in the Sidi Ghanem design district, and the scale is the first thing that registers — a purpose-built space made for large-format contemporary work rather than a converted riad room.\n\nThe gallery began in 2018 inside the medina, as Dar El Bacha Gallery — the first space in Morocco dedicated specifically to contemporary photography — founded by Fatima-Zohra Bennani Bennis. By 2020 she'd outgrown the format entirely and relocated here, rebuilding the whole concept around a much larger programme, one built for painting, sculpture and installation as much as the photography that started it all.\n\nThe roster runs through some of the most closely watched names in Moroccan contemporary art: Amine El Gotaibi, Houda Kabbaj, Malika Sqalli, Mustapha Azeroual and Hamza Kadiri among them, artists MCC has taken as far as AKAA in Paris and the 1-54 fair in London.\n\nAnd that's the interesting bit: Marrakech's gallery scene has traditionally leaned toward craft and decorative work aimed at visitors passing through. MCC built its reputation the opposite way, betting on serious contemporary practice and an international art-fair circuit rather than the tourist trade, and the gamble is what turned it into one of the city's actual institutional anchors.\n\nThe exhibition programme rotates every few months, so whatever's on the walls today will very likely be gone by your next visit."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.68194068897191,
+      "centroidLongitude": -8.03890847631679,
+      "city": "Marrakech",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "442b859c-5e6b-52cd-87c0-f6861951ee90",
+      "createdAt": "2026-08-07",
+      "title": "Menara Gardens | حدائق المنارة",
+      "shortDescription": "Almohad soldiers trained for the crossing to Spain in this pool — the olive grove around it is still a working farm.",
+      "longDescription": "The Almohad caliph Abd al-Mu'min laid Menara out in 1147, right after taking the city, and by 1157 had the great rectangular pool dug and the surrounding land planted as a working orchard. It wasn't a pleasure garden at first but infrastructure: an agricultural test bed for irrigating a semi-arid city, with the pool doubling as somewhere to train soldiers to swim for the Mediterranean crossing to Andalusia. The Saadian sultan Ahmad al-Mansur expanded the olive groves and irrigation centuries later, and under the Alaouites the green-roofed pavilion of the postcard view was built and rebuilt as a royal retreat, Sultan Sidi Muhammad ibn Abdallah adding the belvedere so his court could take the air above the water. The olive trees stretching away in every direction are still a working grove, harvested every year — one of the few gardens in the city that has never stopped being a farm. Locals come out at sunset, when the pavilion's reflection settles flat and the High Atlas turns pink behind it.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/menara-gardens_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/menara-gardens_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/menara-gardens_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "70770b04-a9a2-52e9-962d-fbd9ed155712",
+          "order": 0,
+          "title": "Menara Gardens | حدائق المنارة",
+          "caption": "Almohad soldiers once trained to swim across this exact pool, rehearsing for the crossing into Spain.",
+          "latitude": 31.61450067002547,
+          "longitude": -8.022499588390984,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/menara-gardens.mp3",
+          "audioDurationSeconds": 110,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/menara-gardens_hero.webp",
+          "transcriptText": "Almohad soldiers once trained to swim across this exact pool, rehearsing for the crossing into Spain.\n\nYou should be standing at the edge of the great rectangular pool, olive trees stretching away behind you in every direction, and across the water, the green-roofed pavilion that gives Menara its postcard view, with the High Atlas rising up behind it on a clear day.\n\nThe Almohad caliph Abd al-Mu'min laid the garden out in 1147, right after he took the city, and by 1157 had the great pool dug and planted the surrounding land as a working orchard — not a pleasure garden at first, but an agricultural test bed for irrigating a semi-arid city, with the pool doubling as somewhere to train soldiers for the Mediterranean crossing to Andalusia.\n\nThe Saadians took an interest centuries later, with Sultan Ahmad al-Mansur expanding the olive groves and irrigation network, and it was under their successors, the Alaouites, that the pavilion you can see now was finally built and rebuilt as a royal retreat rather than a working farm — Sultan Sidi Muhammad ibn Abdallah added the belvedere on top specifically so his court could walk out and take the air above the water.\n\nAnd that's really the arc of the place: Menara started as infrastructure — water storage, food production, military training — and only became a garden for looking at, rather than working, centuries after it was dug. The olive trees around you are still a working grove, harvested every year, which makes this one of the few \"gardens\" in the city that's never actually stopped being a farm.\n\nLocals still come out for evening walks around the pool at sunset, when the pavilion's reflection settles flat across the water and the Atlas turns pink behind it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 110,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.61450067002547,
+      "centroidLongitude": -8.022499588390984,
+      "city": "Marrakech",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Engineering",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dbf20821-651f-5746-a28d-3b74f1212c6a",
+      "createdAt": "2026-08-07",
+      "title": "Nomad Marrakech | نوماد مراكش",
+      "shortDescription": "A 1960s carpet shop turned vertical — four floors up from the spice square to a rooftop the owners call a cultural observatory.",
+      "longDescription": "Nomad rises straight out of a converted 1960s carpet shop on Derb Aarjane, four floors up to a rooftop terrace looking down over the Rahba Kedima spice square on one side — sacks of saffron, indigo and dried roses laid out in the open air, exactly as they have been for centuries — and across to the Koutoubia's minaret and the Atlas on the other. It opened in 2014 with a simple premise: take a landmark piece of the souk's architecture and build up rather than sideways, ending in what the owners describe as a cultural observatory over the medina. The kitchen runs short and seasonal, built around whatever the souk delivers each morning — courgette and feta fritters, a sardine tart, a vegetarian pastilla of goat cheese and tomato confit. Nomad helped kick off the whole wave of rooftop dining above the souk, but it opened before that wave existed. Come the hour before sunset, the call to prayer rolls out from the Koutoubia and the spice square below goes quiet for a few minutes at once.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nomad-marrakech_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nomad-marrakech_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nomad-marrakech_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nomad-marrakech_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nomad-marrakech_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "70bf124a-1fc2-5315-9fdd-93fb7594c9fe",
+          "order": 0,
+          "title": "Nomad Marrakech | نوماد مراكش",
+          "caption": "Four floors below the rooftop terrace, the Rahba Kedima spice square goes about its business exactly as it has for centuries — sacks of saffron, indigo and dried roses laid out in the open air.",
+          "latitude": 31.628794352165475,
+          "longitude": -7.987598174956991,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/nomad-marrakech.mp3",
+          "audioDurationSeconds": 106,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/nomad-marrakech_hero.webp",
+          "transcriptText": "Four floors below the rooftop terrace, the Rahba Kedima spice square goes about its business exactly as it has for centuries — sacks of saffron, indigo and dried roses laid out in the open air.\n\nNomad rises straight up out of a converted 1960s carpet shop on Derb Aarjane, its rooftop terrace looking down over the spice square on one side and across to the Koutoubia's minaret and the Atlas Mountains on the other.\n\nThe restaurant opened in 2014 with a simple premise: take a landmark piece of the souk's architecture and turn it vertical, building four floors up rather than expanding sideways the way most riad restaurants do, ending in a rooftop the owners describe as a kind of cultural observatory over the medina.\n\nThe kitchen runs short and seasonal, built around whatever the souk delivers each morning — courgette and feta fritters are the dish most people remember, alongside a sardine tart and a vegetarian pastilla built with goat cheese and tomato confit rather than the traditional pigeon. Grilled lamb chops and a flourless orange cake tend to close the meal, both simple enough that the produce, rather than the technique, does most of the talking.\n\nAnd here's what's worth noting: Nomad helped kick off a whole wave of rooftop dining across the medina, but it opened before that wave existed, when eating above the souk rather than inside it was still a genuinely new idea rather than the standard playbook it's since become.\n\nTime your visit for the hour before sunset, when the call to prayer rolls out from the Koutoubia and the whole spice square below goes quiet for a few minutes at once."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 106,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.628794352165475,
+      "centroidLongitude": -7.987598174956991,
+      "city": "Marrakech",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7a20a136-83db-5a14-ade0-af10f99c9761",
+      "createdAt": "2026-08-07",
+      "title": "Saadian Tombs | ضريح السعديين",
+      "shortDescription": "A royal necropolis sealed shut by the next dynasty — invisible for two centuries until a 1917 aerial survey gave it away.",
+      "longDescription": "Sultan Ahmad al-Mansur — 'the golden one', for the trade wealth that paid for practically everything here — built this walled burial ground in the late 1500s for the Saadian royal family, and it eventually held some sixty-six princes and more than a hundred wives and chancellors: a genuine royal necropolis rather than a single tomb. In the Hall of the Twelve Columns, Italian marble supports a gilded dome over al-Mansur's own tomb, the stucco carved so densely it barely reads as plaster. When the Alaouite dynasty took power, they didn't destroy the tombs — they simply walled up the entrance and left them, a way of erasing a predecessor without the violence of demolition, and the site sat completely hidden for roughly two centuries until a French aerial survey spotted it in 1917. The narrow passage you enter through today is the only way in, and the corridor connecting the tombs to the mosque next door is the same one the Alaouites once sealed.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saadian-tombs_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saadian-tombs_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saadian-tombs_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saadian-tombs_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saadian-tombs_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "59114c7f-771b-53ef-9fa1-79fd2ead0da1",
+          "order": 0,
+          "title": "Saadian Tombs | ضريح السعديين",
+          "caption": "It's 1917, and a French aerial survey spots something under the walls of the Kasbah mosque that nobody in Marrakech had seen in two hundred years.",
+          "latitude": 31.617533862488017,
+          "longitude": -7.98875044111734,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/saadian-tombs.mp3",
+          "audioDurationSeconds": 103,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/saadian-tombs_hero.webp",
+          "transcriptText": "It's 1917, and a French aerial survey spots something under the walls of the Kasbah mosque that nobody in Marrakech had seen in two hundred years.\n\nThe Saadian Tombs sit in a walled enclosure entered through a narrow passage — deliberately narrow, so the site could be sealed off entirely once it fell out of use — opening onto a garden of scattered headstones surrounding two small mausoleum buildings.\n\nSultan Ahmad al-Mansur built the complex in the late 1500s as a burial ground for the Saadian royal family, and it eventually held the remains of around sixty-six princes and more than a hundred wives and chancellors — a genuine royal necropolis rather than a single tomb. Al-Mansur himself was nicknamed \"the golden one,\" a reference to the trade wealth that flowed through Morocco during his reign and paid for practically everything you're looking at.\n\nHave a look inside the Hall of the Twelve Columns first: Italian marble columns support a gilded dome over the tomb of Ahmad al-Mansur himself, the stucco carved so densely it barely reads as plaster rather than lace.\n\nAnd here's the twist in how it survived: when the Alaouite dynasty took power afterward, they didn't destroy the tombs — they simply sealed the entrance and left them alone, a common way of erasing a predecessor without the violence of demolition. The site sat completely hidden for roughly two centuries until that 1917 aerial survey gave it away.\n\nA single narrow corridor still connects the tombs to the mosque next door — the same access route the Alaouites once walled up, now the only way in."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 103,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.617533862488017,
+      "centroidLongitude": -7.98875044111734,
+      "city": "Marrakech",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Power",
+        "Remembrance",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ba525ef8-4c37-5e53-9baf-35c2b6a7edf8",
+      "createdAt": "2026-08-07",
+      "title": "Sahbi Sahbi",
+      "shortDescription": "Run entirely by women, designed by Studio KO, and the kitchen door stays open on purpose.",
+      "longDescription": "Sit anywhere around the horseshoe counter at the centre of Sahbi Sahbi, in Guéliz, and you're looking straight into the kitchen — no wall, no service hatch, just tagines and pots of couscous steaming a few feet from your table. The name means 'soulmates' in Darija, and the whole concept is built around Dadas, the women who have traditionally cooked in Moroccan households and passed recipes down orally, almost entirely out of public view. The restaurant is staffed and run entirely by women, and the menu is short and rooted in home cooking rather than restaurant invention. The space is by Karl Fournier and Olivier Marty of Studio KO — architects of the Yves Saint Laurent Museum across town — built on two decades of friendship with founders Helena Paraboschi and Pierre Pirajean, its artisanal motifs telling the same story as the cooking. In most Moroccan homes and restaurants alike the kitchen is deliberately hidden; Sahbi Sahbi turns that arrangement inside out on purpose, making the labour itself the centrepiece.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sahbi-sahbi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sahbi-sahbi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sahbi-sahbi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sahbi-sahbi_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sahbi-sahbi_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "56190619-a1a7-5e0e-b883-1c5f8e711914",
+          "order": 0,
+          "title": "Sahbi Sahbi",
+          "caption": "There's a rule broken here that most Moroccan restaurants never touch: the kitchen door stays open.",
+          "latitude": 31.634321741173544,
+          "longitude": -8.01446936140423,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sahbi-sahbi.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sahbi-sahbi_hero.webp",
+          "transcriptText": "There's a rule broken here that most Moroccan restaurants never touch: the kitchen door stays open.\n\nSit anywhere around the horseshoe counter at the centre of Sahbi Sahbi, in Guéliz, and you're looking straight into the kitchen — no wall, no service hatch, just tagines and pots of couscous steaming a few feet from your table.\n\nThe name means \"soulmates\" in Darija, and the whole concept was built around Dadas — the women who have traditionally cooked in Moroccan households and passed recipes down orally, generation to generation, almost entirely out of public view. Sahbi Sahbi is staffed and run entirely by women, putting that usually hidden expertise on full, literal display.\n\nThe menu is short and rooted in home cooking rather than restaurant invention — the kind of dishes a Dada would make for family rather than for show — and the space around it was designed by the architects Karl Fournier and Olivier Marty of Studio KO, built on more than two decades of friendship with the restaurant's founders, Helena Paraboschi and Pierre Pirajean. Their interior leans on the same artisanal motifs the kitchen draws on, so the decor and the cooking feel like they're telling one story rather than two.\n\nWhat's worth knowing, watching the kitchen work, is that this openness is the whole argument. In most Moroccan homes and restaurants alike, the kitchen is deliberately hidden — a private, feminine domain nobody outside the family sees. Sahbi Sahbi turns that arrangement inside out on purpose, making the labour itself the centrepiece rather than something kept out of sight.\n\nThe counter seats fill first, for exactly that view into the kitchen, so arriving without a reservation is a genuine gamble."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.634321741173544,
+      "centroidLongitude": -8.01446936140423,
+      "city": "Marrakech",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9211a356-fa7e-570c-b012-e86b0c646e83",
+      "createdAt": "2026-08-07",
+      "title": "Yves Saint Laurent Museum | متحف إيف سان لوران",
+      "shortDescription": "Terracotta brick laid like woven fabric — the building that made Studio KO's name, opened the same day as its Paris twin.",
+      "longDescription": "The museum's façade is built from thousands of terracotta bricks laid in a pattern that reads from a distance as an intersection of plain cubes — and breaks, up close, into a lace-like texture deliberately echoing woven fabric. Studio KO's Olivier Marty and Karl Fournier spent time in Yves Saint Laurent's archive before drawing a single wall, and the four-thousand-square-metre building that opened on Rue Yves Saint Laurent on the nineteenth of October 2017 answers what they found there: curves running against straight lines, and materials — soft-coloured granite, glazed brick, zellige, oak — treated as couture-grade rather than standard museum finish, down to laurel branches worked into the interior detailing. It opened on exactly the same day as its counterpart at the old fashion house on Avenue Marceau in Paris: a deliberate decision to treat Marrakech as an equal half of how Saint Laurent's legacy gets told, beside the Jardin Majorelle he found first, decades before anyone thought to build a museum next door.",
+      "makerId": "c4e51efc-846e-5e78-b699-67e7f9d203e8",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yves-saint-laurent-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yves-saint-laurent-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yves-saint-laurent-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yves-saint-laurent-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yves-saint-laurent-museum_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yves-saint-laurent-museum_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a1f62fb1-c356-5f9e-981e-71d249ac96a7",
+          "order": 0,
+          "title": "Yves Saint Laurent Museum | متحف إيف سان لوران",
+          "caption": "Rue Yves Saint Laurent, next door to Jardin Majorelle, nineteenth of October, 2017 — the day this building opened its doors for the first time.",
+          "latitude": 31.642742004615744,
+          "longitude": -8.003188590299676,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/yves-saint-laurent-museum.mp3",
+          "audioDurationSeconds": 115,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yves-saint-laurent-museum_hero.webp",
+          "transcriptText": "Rue Yves Saint Laurent, next door to Jardin Majorelle, nineteenth of October, 2017 — the day this building opened its doors for the first time.\n\nThe museum's façade is built from thousands of individual terracotta bricks, laid in a pattern that reads, from a distance, like an intersection of plain cubes — but look closer and the brickwork breaks into a lace-like texture across the surface, deliberately echoing woven fabric.\n\nStudio KO — the architects Olivier Marty and Karl Fournier — designed the whole four-thousand-square-metre building around Saint Laurent's own visual language: they spent time in his archive before drawing a single wall, and the curves running against straight lines throughout the building are a direct response to what they found there. The same pair went on to design several other Marrakech landmarks in the years that followed, but this building is generally regarded as the one that made their name internationally.\n\nInside, the materials keep the same logic going: soft-coloured granite, glazed brick, zellige tile and oak, all treated as couture-grade materials rather than standard museum finishes, right down to laurel branches worked into some of the interior detailing.\n\nAnd here's what's worth knowing about the timing: this museum opened on exactly the same day in 2017 as its counterpart in Paris, at the former Saint Laurent fashion house on Avenue Marceau — a deliberate decision to treat Marrakech not as a secondary outpost but as an equal half of how his legacy gets told.\n\nJardin Majorelle sits directly next door, and the two sites share more than a wall — Saint Laurent found the garden first, decades before anyone thought to build a museum beside it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 115,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": 31.642742004615744,
+      "centroidLongitude": -8.003188590299676,
+      "city": "Marrakech",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Architecture",
+        "Art",
+        "Fashion",
+        "Contemporary",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     }
