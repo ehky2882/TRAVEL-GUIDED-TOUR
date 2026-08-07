@@ -16,9 +16,11 @@ scheme "Atlas Screenshots"
 #     Error setting value '[...]' for option 'devices'
 # read the "List available simulators" step in that same workflow run: it
 # prints exactly what the machine has, in the job summary. Then edit here.
+# iPhone only — iPad screenshots are deliberately not captured (owner decision,
+# 2026-08-07). Apple only requires screenshots for the device families the app
+# actually ships to.
 devices([
-  "iPhone 17 Pro Max",
-  "iPad Pro 13-inch (M5)"
+  "iPhone 17 Pro Max"
 ])
 
 languages([
