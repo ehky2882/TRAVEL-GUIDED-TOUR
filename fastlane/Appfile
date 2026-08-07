@@ -1,0 +1,10 @@
+# Which app, and which Apple team, every lane acts on.
+
+app_identifier("com.ehky.TRAVEL-GUIDED-TOUR")
+team_id("CPC7M72JTP") # Apple Developer Portal team — "EDWARD HO KIU YUNG"
+
+# There is deliberately no Apple ID or password in this file.
+#
+# Every lane authenticates with an App Store Connect API key instead (the .p8
+# file), so no personal Apple login is stored in the repo, on a build machine,
+# or in CI. See docs/fastlane.md § Credentials.

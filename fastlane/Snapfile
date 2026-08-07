@@ -1,0 +1,44 @@
+# How App Store screenshots get captured.
+#
+# fastlane launches the app in each simulator listed below, runs the UI test in
+# "TRAVEL GUIDED TOURUITests", and saves a PNG everywhere that test calls
+# snapshot("..."). Output lands in fastlane/screenshots/.
+
+project "./TRAVEL GUIDED TOUR.xcodeproj"
+scheme "Atlas Screenshots"
+
+# Apple requires one set per screen size it asks for. As of writing that is a
+# 6.9" iPhone, plus a 13" iPad because this app ships for iPad too
+# (TARGETED_DEVICE_FAMILY = "1,2,7").
+#
+# ⚠️ These are simulator NAMES and they change with Xcode versions. If a run
+# fails with "No simulator found", list what the machine actually has:
+#     xcrun simctl list devicetypes | grep -i ipad
+# and edit the names here.
+devices([
+  "iPhone 17 Pro Max",
+  "iPad Pro 13-inch (M4)"
+])
+
+languages([
+  "en-US"
+])
+
+output_directory "./fastlane/screenshots"
+
+# Start every run from a clean slate so a deleted screenshot cannot linger and
+# get uploaded months later.
+clear_previous_screenshots true
+
+# Fake a tidy status bar: 9:41, full battery, full signal, no carrier clutter.
+# This is what makes screenshots look deliberate rather than captured at 3am
+# with 12% battery.
+override_status_bar true
+
+# Stop on the first failure rather than producing a half-set nobody notices is
+# half a set.
+stop_after_first_error true
+
+# One simulator at a time. Parallel simulators are faster but flakier, and this
+# app leans on MapKit + location, which do not enjoy the contention.
+concurrent_simulators false

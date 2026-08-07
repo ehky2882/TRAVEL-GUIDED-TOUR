@@ -1,0 +1,94 @@
+# Submit the app to the App Store.
+#
+# ⚠️ THIS IS THE REAL ONE. It builds the app, uploads it together with the
+# App Store text and screenshots, and puts the version in front of Apple's
+# review team. It is not a drill and it is not TestFlight.
+#
+# Because of that it has a deliberate safety catch: you must type RELEASE into
+# the confirmation box before it will run. A misclick cannot submit your app.
+#
+# WHAT HAPPENS AFTER: Apple usually answers within 24-48 hours. If they approve,
+# the version does NOT go live automatically — you press the button yourself in
+# App Store Connect. It then rolls out over 7 days (phased release) rather than
+# to everyone at once, so a bad bug reaches a fraction of users.
+#
+# The steps live in fastlane/Fastfile (the `release` lane). Read
+# docs/launch-runbook.md before using this for the first time.
+
+name: App Store release
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type RELEASE (in capitals) to confirm you want to submit to Apple"
+        required: true
+        type: string
+
+concurrency:
+  group: release
+  cancel-in-progress: false   # never cancel a submission half-way
+
+jobs:
+  release:
+    runs-on: macos-26
+    timeout-minutes: 90
+    env:
+      APP_STORE_CONNECT_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+      APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+      APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+      FASTLANE_SKIP_UPDATE_CHECK: "1"
+      FASTLANE_OPT_OUT_USAGE: "1"
+      FASTLANE_DISABLE_COLORS: "1"
+      LANG: en_US.UTF-8
+      LC_ALL: en_US.UTF-8
+    steps:
+      - name: Safety catch
+        run: |
+          if [ "${{ github.event.inputs.confirm }}" != "RELEASE" ]; then
+            echo "::error::Confirmation text did not match. Type RELEASE (capitals) to submit. Nothing has been sent to Apple."
+            exit 1
+          fi
+
+      # A release must be reproducible, so it is cut from main and nothing else.
+      - name: Refuse to release from a branch that is not main
+        run: |
+          if [ "${{ github.ref }}" != "refs/heads/main" ]; then
+            echo "::error::Releases must be cut from main. You ran this on ${{ github.ref }}."
+            exit 1
+          fi
+
+      - uses: actions/checkout@v6
+
+      - name: Check credentials are configured
+        run: |
+          if [ -z "$APP_STORE_CONNECT_KEY_ID" ] || [ -z "$APP_STORE_CONNECT_ISSUER_ID" ] || [ -z "$APP_STORE_CONNECT_API_KEY" ]; then
+            echo "::error::App Store Connect secrets are not set. See docs/fastlane.md."
+            exit 1
+          fi
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Install certificate-cleanup dependencies
+        run: |
+          python3 -m pip install --quiet --disable-pip-version-check "PyJWT>=2" cryptography \
+            || python3 -m pip install --quiet --break-system-packages "PyJWT>=2" cryptography
+
+      - name: Build and submit for review
+        env:
+          BUILD_NUMBER: ${{ github.run_number }}
+        run: bundle exec fastlane release
+
+      - name: What happens next
+        run: |
+          {
+            echo "## Submitted for review"
+            echo ""
+            echo "Apple typically responds within 24-48 hours."
+            echo ""
+            echo "- If **approved**, the version waits for you — open App Store Connect and press *Release this version*."
+            echo "- Release is **phased**: once you press it, Apple rolls the update out over 7 days."
+            echo "- If **rejected**, the reason arrives by email and in App Store Connect under *Resolution Center*."
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,261 @@
+# Atlas — release automation.
+#
+# WHAT THIS FILE IS (plain English): a list of named jobs ("lanes"). Each lane
+# is one complete piece of the release process, runnable with one command.
+# The same lane runs identically on your Mac and on a cloud Mac in CI, which is
+# the whole point — releases stop depending on who ran them or from where.
+#
+#   bundle exec fastlane beta         build + send to TestFlight (testers)
+#   bundle exec fastlane screenshots  capture App Store screenshots in simulators
+#   bundle exec fastlane metadata     push the App Store text (no binary)
+#   bundle exec fastlane release      the real App Store submission
+#
+# CREDENTIALS: every lane authenticates with an App Store Connect API key, never
+# an Apple ID + password. Three environment variables carry it:
+#   APP_STORE_CONNECT_KEY_ID, APP_STORE_CONNECT_ISSUER_ID, APP_STORE_CONNECT_API_KEY
+# In CI they come from GitHub secrets (already configured). See docs/fastlane.md.
+
+default_platform(:ios)
+
+APP_IDENTIFIER  = "com.ehky.TRAVEL-GUIDED-TOUR".freeze
+PROJECT         = "TRAVEL GUIDED TOUR.xcodeproj".freeze
+SCHEME          = "TRAVEL GUIDED TOUR".freeze
+SNAPSHOT_SCHEME = "Atlas Screenshots".freeze
+BUILD_DIR       = "build".freeze
+
+platform :ios do
+  # ---------------------------------------------------------------------------
+  # Credentials
+  # ---------------------------------------------------------------------------
+
+  # Write the App Store Connect key (.p8) to disk and return its path.
+  #
+  # Apple's command-line tools want a FILE, but CI can only hand us a secret as
+  # text — so we materialise it once per run. Two details are load-bearing:
+  #   * a key pasted through a web form often arrives with literal "\n" instead
+  #     of real line breaks, which silently fails to parse. We normalise it.
+  #   * mode 0600 so the key is not world-readable on a shared machine.
+  private_lane :key_path do
+    key_id = ENV.fetch("APP_STORE_CONNECT_KEY_ID")
+    dir    = File.expand_path("~/private_keys")
+    path   = File.join(dir, "AuthKey_#{key_id}.p8")
+
+    unless File.exist?(path)
+      contents = ENV.fetch("APP_STORE_CONNECT_API_KEY").gsub('\n', "\n")
+      FileUtils.mkdir_p(dir)
+      File.write(path, contents)
+      File.chmod(0o600, path)
+    end
+
+    path
+  end
+
+  # The same key, as the object fastlane's upload actions expect.
+  private_lane :api_key do
+    app_store_connect_api_key(
+      key_id: ENV.fetch("APP_STORE_CONNECT_KEY_ID"),
+      issuer_id: ENV.fetch("APP_STORE_CONNECT_ISSUER_ID"),
+      key_filepath: key_path,
+      duration: 1200,
+      in_house: false
+    )
+  end
+
+  # Flags that let Xcode's automatic signing create/download what it needs while
+  # nobody is sitting at the machine. This project uses AUTOMATIC signing on
+  # purpose — forcing manual signing has been tried here and fails ("conflicting
+  # provisioning settings"), so do not "simplify" this away.
+  private_lane :signing_args do
+    [
+      "-allowProvisioningUpdates",
+      "-authenticationKeyPath", %("#{key_path}"),
+      "-authenticationKeyID", ENV.fetch("APP_STORE_CONNECT_KEY_ID"),
+      "-authenticationKeyIssuerID", ENV.fetch("APP_STORE_CONNECT_ISSUER_ID")
+    ].join(" ")
+  end
+
+  # ---------------------------------------------------------------------------
+  # Building
+  # ---------------------------------------------------------------------------
+
+  # Build + sign the app into an .ipa, and return where it landed.
+  #
+  # build_number is passed on the command line rather than written into the
+  # project file, so a build never leaves an uncommitted edit behind — a trap
+  # this project has been bitten by before (the TEMP_LOCAL_DEMO incident).
+  private_lane :build_ipa do |options|
+    build_number = options.fetch(:build_number)
+
+    build_app(
+      project: PROJECT,
+      scheme: SCHEME,
+      configuration: "Release",
+      destination: "generic/platform=iOS",
+      export_method: "app-store",
+      output_directory: BUILD_DIR,
+      output_name: "Dozent.ipa",
+      xcargs: "#{signing_args} CURRENT_PROJECT_VERSION=#{build_number}",
+      export_options: {
+        signingStyle: "automatic",
+        teamID: "CPC7M72JTP"
+      },
+      export_xcargs: signing_args
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # Lanes
+  # ---------------------------------------------------------------------------
+
+  desc "Run the unit tests in a simulator."
+  lane :test do
+    run_tests(
+      project: PROJECT,
+      scheme: SCHEME,
+      device: "iPhone 17 Pro",
+      clean: false
+    )
+  end
+
+  desc "Build a signed app and send it to TestFlight."
+  lane :beta do |options|
+    build_number = (options[:build_number] || ENV["BUILD_NUMBER"] ||
+                    Time.now.strftime("%Y%m%d%H%M")).to_s
+    notes = (options[:notes] || ENV["BUILD_NOTES"] || "").strip
+    notes = "Built from #{last_git_commit[:abbreviated_commit_hash]}" if notes.empty?
+
+    # Keep the account under Apple's certificate cap. Every cloud build machine
+    # is a throwaway that mints a fresh Apple Development certificate, and they
+    # accumulate until archiving dies with "reached the maximum number of
+    # certificates". Distribution certificates are never touched.
+    # Best-effort: an Apple API hiccup here must not block a build.
+    begin
+      sh("python3", "../scripts/revoke-dev-certs.py")
+    rescue StandardError => e
+      UI.important("Could not free certificate slots (continuing anyway): #{e.message}")
+    end
+
+    build_ipa(build_number: build_number)
+
+    # One call uploads, waits for Apple to finish processing, and writes the
+    # notes into the build's "What to Test" field.
+    #
+    # app_platform is NOT optional despite what the docs say: without it pilot
+    # PROMPTS for the platform, and CI cannot answer, so it dies instantly with
+    # "Could not retrieve response as fastlane runs in non-interactive mode".
+    # That mistake has already cost this project three blank builds.
+    upload_to_testflight(
+      api_key: api_key,
+      app_identifier: APP_IDENTIFIER,
+      app_platform: "ios",
+      changelog: notes[0, 4000],
+      distribute_external: false,
+      skip_waiting_for_build_processing: false,
+      notify_external_testers: false
+    )
+
+    UI.success("TestFlight build #{build_number} uploaded with notes attached.")
+  end
+
+  desc "Capture App Store screenshots across every required device size."
+  lane :screenshots do
+    # Configuration lives in fastlane/Snapfile (devices, languages, status bar).
+    capture_screenshots
+    UI.success("Screenshots written to fastlane/screenshots/. Review them before uploading.")
+  end
+
+  desc "Push the App Store text (description, keywords, URLs) — no binary, no screenshots."
+  lane :metadata do
+    upload_to_app_store(
+      api_key: api_key,
+      app_identifier: APP_IDENTIFIER,
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      skip_app_version_update: true,
+      force: true, # do not open an HTML preview and wait for a keypress
+      precheck_include_in_app_purchases: false
+    )
+  end
+
+  desc "Upload only the screenshots in fastlane/screenshots/."
+  lane :upload_screenshots do
+    upload_to_app_store(
+      api_key: api_key,
+      app_identifier: APP_IDENTIFIER,
+      skip_binary_upload: true,
+      skip_metadata: true,
+      overwrite_screenshots: true,
+      force: true,
+      precheck_include_in_app_purchases: false
+    )
+  end
+
+  desc "THE REAL ONE: build, upload everything, and submit to Apple for review."
+  lane :release do |options|
+    build_number = (options[:build_number] || ENV["BUILD_NUMBER"] ||
+                    Time.now.strftime("%Y%m%d%H%M")).to_s
+
+    # A release must never be cut from a dirty or unpushed tree — you could not
+    # reproduce afterwards what you actually shipped.
+    ensure_git_status_clean
+    ensure_git_branch(branch: "main")
+
+    begin
+      sh("python3", "../scripts/revoke-dev-certs.py")
+    rescue StandardError => e
+      UI.important("Could not free certificate slots (continuing anyway): #{e.message}")
+    end
+
+    build_ipa(build_number: build_number)
+
+    upload_to_app_store(
+      api_key: api_key,
+      app_identifier: APP_IDENTIFIER,
+      submit_for_review: true,
+      # Apple rolls the update out over 7 days instead of to everyone at once,
+      # so a bad bug reaches a fraction of users rather than all of them.
+      phased_release: true,
+      # You press the final "release" button yourself once review passes.
+      automatic_release: false,
+      overwrite_screenshots: true,
+      force: true,
+      precheck_include_in_app_purchases: false,
+      submission_information: {
+        add_id_info_uses_idfa: false,
+        export_compliance_uses_encryption: false
+      }
+    )
+
+    UI.success("Version submitted for review. Apple typically answers in 24–48h.")
+    UI.important("Paid tours: in-app purchases must be attached to this submission " \
+                 "in App Store Connect by hand — fastlane cannot do it. See docs/fastlane.md.")
+  end
+
+  # ---------------------------------------------------------------------------
+  # Signing (opt-in — NOT used by the lanes above)
+  # ---------------------------------------------------------------------------
+
+  desc "Sync signing certificates via match. NOT wired into any build yet — see docs/fastlane.md."
+  lane :certificates do |options|
+    # `match` keeps one shared set of signing identities in a private git repo,
+    # which would retire the certificate-revocation workaround above entirely.
+    #
+    # It is deliberately NOT part of `beta`/`release` yet: match uses MANUAL
+    # signing, and forcing manual signing on this project has failed before
+    # ("conflicting provisioning settings ... switch to manual signing", and the
+    # Swift package dependencies then demand a development team). Migrating is a
+    # real piece of work and belongs AFTER launch, not before it.
+    match(
+      type: options[:type] || "appstore",
+      app_identifier: APP_IDENTIFIER,
+      api_key: api_key,
+      readonly: is_ci
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+
+  error do |lane, exception|
+    UI.error("Lane '#{lane}' failed: #{exception.message}")
+  end
+end

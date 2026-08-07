@@ -1,0 +1,42 @@
+Thank you for reviewing Atlas.
+
+WHAT THE APP DOES
+Atlas is a catalogue of narrated walking tours of city landmarks. Each tour is
+tied to a real-world location. When you physically arrive at a stop, the audio
+for that stop begins automatically.
+
+HOW TO TEST IT WITHOUT WALKING ANYWHERE
+Because stops are triggered by arriving at a GPS location, waiting for one to
+fire at your desk will not work. Two ways around that:
+
+1. Simply press START on any tour. This begins playback immediately and does
+   not depend on your location at all. This is the quickest way to see the
+   whole experience — audio, photographs, transcript, lock-screen controls.
+
+2. If you would like to see the automatic arrival behaviour, use a simulated
+   location. Most tours in New York are within a short distance of each other;
+   for example the Empire State Building tour is at 40.7484, -73.9857.
+
+PERMISSIONS WE ASK FOR, AND WHY
+• Location — to show tours near you on the map, and to start a stop's audio
+  when you arrive at it. The app is fully usable if you decline: you can still
+  browse, search, and press start on any tour manually.
+• Background location — so a tour keeps advancing while your phone is in your
+  pocket and the screen is off, which is the normal way this app is used.
+• Microphone — only used if you choose to record your own narration when
+  creating a tour. It is never accessed otherwise.
+• Camera — only used to scan a join code when listening in a group with someone
+  else. It is never accessed otherwise.
+
+BACKGROUND AUDIO
+The app declares the audio background mode because a tour is designed to keep
+playing while you walk with the screen locked.
+
+ACCOUNTS
+An account is not required. Browsing, playing, downloading for offline use, and
+saving tours all work signed out. Signing in only adds cross-device sync and
+your own profile.
+
+CONTENT
+All tours are written and produced in-house. Photographs are either supplied by
+us or sourced from public-domain collections.
