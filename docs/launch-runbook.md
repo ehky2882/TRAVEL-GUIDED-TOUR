@@ -94,22 +94,32 @@ phone. It also splits your search ranking. Pick one:
 
 **Tell Claude which**, and it will make the two agree.
 
-### Step 3 — Decide the version number
+### Step 2b — iPad and monetisation ✅ *decided 2026-08-07*
 
-**Who:** you.
+**iPad is dropped from the app entirely.** `TARGETED_DEVICE_FAMILY` went from
+`"1,2,7"` to `"1,7"` — iPhone and Apple Vision Pro. The store description no
+longer claims iPad either.
 
-The Xcode project says **1.1**, because the old TestFlight builds used up 1.0.
-But **App Store Connect already has a version 1.0 open** in *Prepare for
-Submission* — that is the record the listing copy now sits on.
+⚠️ **Consequence:** iPad owners can no longer install Dozent, including anyone
+already running it from TestFlight on an iPad. Reversible by restoring the `2`,
+but anyone who lost the app has to reinstall.
 
-So these disagree, and the submission needs them to match:
+**Creator studios keep the Atlas name** — *Atlas Studio NYC* and the other 23
+stay as they are. They appear in the screenshots and in the app; that is
+accepted, and is a deliberate separation between the app's name and the
+publisher names inside it.
 
-- **Reset the project to 1.0 (recommended)** — aligns with the version record
-  that already exists and already holds your metadata. Cleaner for a debut, and
-  no new version record needed. Claude changes `MARKETING_VERSION`.
-- **Stay on 1.1** — then a *new* 1.1 version record has to be created in App
-  Store Connect and the metadata re-pushed onto it, because metadata belongs to
-  a version rather than to the app.
+**The app launches free, with paid tours as in-app purchases.** That means
+Steps 6 and 13 below are **in scope, not optional** — Apple will not review an
+in-app purchase until the tax and banking agreements are cleared.
+
+### Step 3 — Decide the version number ✅ *decided 2026-08-07: **1.1***
+
+**Owner decision:** stay on **1.1**. The odd-looking debut number is accepted.
+
+App Store Connect's editable version record was renamed 1.0 → **1.1** so it
+matches the Xcode project, which means all the listing copy stayed attached to
+it. No new version record was needed and nothing had to be re-pushed.
 
 ---
 
@@ -138,7 +148,7 @@ than "Get Started".
 Same screen area: the age-rating questionnaire, and price (the app itself is
 free — paid tours are separate in-app purchases).
 
-### Step 6 — Complete tax and banking *(only if you are launching paid tours)*
+### Step 6 — Complete tax and banking ⚠️ *required — start this first*
 
 **Who:** you.
 
@@ -241,7 +251,7 @@ Give it to Claude and it will add it.
 
 ---
 
-## Phase F — In-app purchases *(skip if launching free-only)*
+## Phase F — In-app purchases ⚠️ *required*
 
 ### Step 13 — Attach the purchases to this submission
 
@@ -278,11 +288,11 @@ Run down this list. Everything must be a yes:
 - [ ] The project's version and the App Store version record agree (Step 3)
 - [ ] App Privacy is complete (Step 4)
 - [ ] Age rating and pricing set (Step 5)
-- [ ] Tax and banking cleared, *if launching paid tours* (Step 6)
+- [ ] Tax and banking cleared (Step 6) — **required**
 - [ ] You have personally looked at every screenshot (Step 8)
 - [ ] You have personally read the description (Step 10)
 - [ ] Reviewer phone number added (Step 12)
-- [ ] In-app purchases attached, *if launching paid tours* (Step 13)
+- [ ] In-app purchases attached (Step 13) — **required**
 - [ ] You have installed the current TestFlight build and used it today
 
 ### Step 15 — Submit
