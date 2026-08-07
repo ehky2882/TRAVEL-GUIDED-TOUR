@@ -17,10 +17,18 @@ of it waiting for Apple. Review itself is usually 24–48 hours.
 **What is already true:**
 
 - The app builds, signs and uploads itself to TestFlight from a button in GitHub.
-- The App Store description, keywords and subtitle are written and live in
-  `fastlane/metadata/`.
+- **The App Store listing is already updated and live** (pushed 2026-08-07):
+  description, keywords, subtitle, promotional text and support URL all match
+  `fastlane/metadata/`. Steps 10–11 below are done.
+- App Store Connect already holds an editable **version 1.0** in *Prepare for
+  Submission*, and the store name is **Atlas Audio Tours**.
 - Screenshots can be captured automatically.
 - The release submission is one button with a safety catch on it.
+
+⚠️ **fastlane cannot run on this Mac** — macOS ships Ruby 2.6 and the current
+gem tree needs newer. Lanes run in GitHub Actions instead; metadata can also be
+pushed locally with `scripts/push-appstore-metadata.py`, which needs no Ruby.
+See [docs/fastlane.md](fastlane.md).
 
 **What is not done yet, and why it needs you:**
 
@@ -56,12 +64,16 @@ path, so a problem now is much cheaper than a problem during submission.
 
 **Who:** you.
 
-Right now the app has **two different names**:
+The app has **two different names**. Both confirmed against App Store Connect
+on 2026-08-07:
 
 | Where | Name |
 |---|---|
-| App Store Connect | Atlas Audio Tours |
-| On the home screen under the icon | Dozent |
+| App Store Connect (verified live) | Atlas Audio Tours |
+| On the home screen under the icon (`CFBundleDisplayName`) | Dozent |
+
+Only the home-screen name is in dispute — the store side is settled, and the
+listing copy already says Atlas throughout.
 
 A customer would find you under one name and then have a different word on their
 phone. It also splits your search ranking. Pick one:
@@ -78,11 +90,18 @@ phone. It also splits your search ranking. Pick one:
 
 **Who:** you.
 
-The app is currently version **1.1**, because the old TestFlight builds used up
-1.0. A first public release labelled 1.1 is allowed, but reads oddly as a debut.
+The Xcode project says **1.1**, because the old TestFlight builds used up 1.0.
+But **App Store Connect already has a version 1.0 open** in *Prepare for
+Submission* — that is the record the listing copy now sits on.
 
-- **Reset to 1.0** — cleaner for a launch. Claude changes `MARKETING_VERSION`.
-- **Stay on 1.1** — no work, slightly odd.
+So these disagree, and the submission needs them to match:
+
+- **Reset the project to 1.0 (recommended)** — aligns with the version record
+  that already exists and already holds your metadata. Cleaner for a debut, and
+  no new version record needed. Claude changes `MARKETING_VERSION`.
+- **Stay on 1.1** — then a *new* 1.1 version record has to be created in App
+  Store Connect and the metadata re-pushed onto it, because metadata belongs to
+  a version rather than to the app.
 
 ---
 
@@ -167,9 +186,14 @@ route through the app is code and can be changed.
 
 ## Phase E — The listing
 
-### Step 10 — Read the store text
+### Step 10 — Read the store text ✅ *pushed 2026-08-07, but still read it*
 
 **Who:** you.
+
+The listing has already been updated — the previous copy was inaccurate (it
+described a New-York-only early-access catalogue, and claimed *"Nothing leaves
+your phone"*, which stopped being true when accounts and sync shipped). What is
+live now is exactly what is in `fastlane/metadata/`.
 
 Open [`fastlane/metadata/en-US/description.txt`](../fastlane/metadata/en-US/description.txt)
 and read it as a stranger would. Also worth a look:
@@ -182,12 +206,23 @@ and read it as a stranger would. Also worth a look:
 
 Edit freely, or tell Claude what to change. It is just text.
 
-### Step 11 — Push the listing to Apple
+### Step 11 — Push the listing to Apple ✅ *done 2026-08-07*
 
 **Who:** Claude.
 
-This fills in your App Store page without submitting anything for review. Safe
-and reversible.
+Fills in your App Store page without submitting anything for review. Safe and
+reversible; the previous listing is backed up.
+
+To push again after editing any file in `fastlane/metadata/`:
+
+```bash
+python3 scripts/push-appstore-metadata.py           # shows a diff, sends nothing
+python3 scripts/push-appstore-metadata.py --apply   # writes
+```
+
+⚠️ **Do not add `release_notes.txt` yet.** Apple refuses "What's New" on a first
+release, and because the update is atomic that one rejected field takes the
+description and keywords down with it. Add it at version 1.1.
 
 ### Step 12 — Add the reviewer contact details
 
@@ -204,13 +239,17 @@ Give it to Claude and it will add it.
 
 **Who:** you, hand-held by Claude.
 
-The ten paid-tour products already exist in App Store Connect but sit in
-*Prepare for Submission*. **Apple requires the first non-consumable purchase to
-be reviewed alongside a new app version**, and fastlane cannot attach them — it
-must be done by hand.
+The ten paid-tour products exist in App Store Connect, but **all ten are
+currently in state `MISSING_METADATA`** (verified 2026-08-07):
 
-Each product also needs a **review screenshot** showing where it appears in the
-app.
+```
+tour.tier.099 · 199 · 299 · 399 · 499 · 699 · 899 · 999 · 1499 · 1999
+```
+
+That means none of them can be submitted yet. Each needs a **display name**, a
+**description**, and a **review screenshot** showing where it appears in the
+app. **Apple requires the first non-consumable purchase to be reviewed alongside
+a new app version**, and fastlane cannot attach them — this is by hand.
 
 ⚠️ **A purchase Apple cannot test will be rejected.** Make sure at least one
 tour is actually priced before submitting, or reviewers will find nothing to
@@ -228,6 +267,7 @@ Run down this list. Everything must be a yes:
 
 - [ ] Step 1 produced a working TestFlight build
 - [ ] The app name is consistent (Step 2)
+- [ ] The project's version and the App Store version record agree (Step 3)
 - [ ] App Privacy is complete (Step 4)
 - [ ] Age rating and pricing set (Step 5)
 - [ ] Tax and banking cleared, *if launching paid tours* (Step 6)

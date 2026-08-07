@@ -100,7 +100,7 @@ Your App Store page lives in `fastlane/metadata/`. One file per field:
 | `en-US/description.txt` | The main description | 4000 |
 | `en-US/keywords.txt` | Search keywords, comma-separated | 100 |
 | `en-US/promotional_text.txt` | Editable **without** a review | 170 |
-| `en-US/release_notes.txt` | "What's New" for this version | 4000 |
+| `en-US/release_notes.txt` | "What's New" — **absent on purpose until v1.1**, see below | 4000 |
 | `en-US/support_url.txt`, `privacy_url.txt` | Links | — |
 | `review_information/` | What Apple's reviewer needs | — |
 | `primary_category.txt`, `secondary_category.txt` | Categories | — |
@@ -110,6 +110,19 @@ someone typed into once.
 
 > ⚠️ **An empty file clears the field.** If you do not want to manage a field,
 > delete the file rather than blanking it.
+
+### Two metadata traps already paid for
+
+**"What's New" cannot be set on a first release.** Apple answers `409
+STATE_ERROR — Attribute 'whatsNew' cannot be edited at this time`, because there
+is no previous version for anything to be new against. This is why there is no
+`release_notes.txt` in the repo yet: **add it at version 1.1**, not before.
+
+**The version update is atomic.** All of description, keywords, promotional text
+and support URL go up in a single request, so **one rejected field silently
+takes the whole batch down with it**. That is exactly how the `whatsNew` error
+above also blocked four perfectly valid fields. If a push reports anything other
+than HTTP 200, assume **nothing** landed and read the error before retrying.
 
 ## Decisions and traps recorded here on purpose
 
@@ -142,15 +155,36 @@ automate it.
 not publish. When Apple approves, you press the button yourself, and the rollout
 is then spread over 7 days so a bad bug reaches a fraction of users.
 
-## Running it on your own Mac (optional)
+## Running it on your own Mac
 
-You do not need this — every lane has a button in GitHub Actions. But if you
-want it locally, note that macOS ships Ruby 2.6, which is too old. You would
-need a newer Ruby (via Homebrew) and then:
+⚠️ **fastlane cannot be installed on a stock Mac, and this was confirmed the
+hard way (2026-08-07).** macOS ships Ruby 2.6; the current gem tree needs newer.
+Installing fails, and pinning older dependency versions just moves the error:
+
+```
+multi_json requires Ruby version >= 3.2. The current ruby version is 2.6.10.
+domain_name requires Ruby version >= 2.7.0. The current ruby version is 2.6.10.
+```
+
+That is dependency whack-a-mole with no end. **Do not keep pinning gems.** There
+are three real options:
+
+1. **Use GitHub Actions** — fastlane is preinstalled there and the secrets
+   already exist. This is the intended route and needs no setup.
+2. **Install a newer Ruby** — needs Homebrew, which is not on this Mac and whose
+   installer requires an admin password. Once done: `bundle install && bundle
+   exec fastlane beta`.
+3. **For metadata only**, use [`scripts/push-appstore-metadata.py`](../scripts/push-appstore-metadata.py)
+   — pure Python, no Ruby, reads the same `fastlane/metadata/` files and makes
+   the same REST calls `deliver` makes underneath, so the two cannot drift.
 
 ```bash
-bundle install
-bundle exec fastlane beta
+export APP_STORE_CONNECT_KEY_ID=...
+export APP_STORE_CONNECT_ISSUER_ID=...
+export APP_STORE_CONNECT_API_KEY_PATH=~/private_keys/AuthKey_XXXX.p8
+
+python3 scripts/push-appstore-metadata.py           # dry run — prints a diff
+python3 scripts/push-appstore-metadata.py --apply   # writes
 ```
 
 ## Files
@@ -164,4 +198,5 @@ bundle exec fastlane beta
 | `fastlane/metadata/` | Your App Store page, as text files |
 | `fastlane/screenshots/` | Captured images (generated) |
 | `scripts/revoke-dev-certs.py` | Keeps the account under Apple's certificate cap |
+| `scripts/push-appstore-metadata.py` | Pushes metadata without Ruby, for when fastlane cannot run locally |
 | `TRAVEL GUIDED TOURUITests/` | The UI test that takes the screenshots |

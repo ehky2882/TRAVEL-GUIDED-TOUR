@@ -154,9 +154,54 @@ walkthrough. `docs/fastlane.md` is the reference.**
   first submission are all manual in App Store Connect. Apple requires the first
   non-consumable IAP to be reviewed alongside a new app version.
 - **⚠️ NOT YET PROVEN END TO END.** The UI test target compiles and everything is
-  syntax-checked, but no lane has run in CI — fastlane is not installed locally
-  (macOS ships Ruby 2.6, too old) so verification is Step 1 of the runbook: cut
-  one TestFlight build the new way before trusting the rest.
+  syntax-checked, but no lane has run in CI — verification is Step 1 of the
+  runbook: cut one TestFlight build the new way before trusting the rest.
+
+### The App Store listing was stale and is now updated — and fastlane cannot run on this Mac (session 84b — infra)
+
+**The listing is live and correct as of 2026-08-07.** Description, keywords,
+subtitle, promotional text and support URL now match `fastlane/metadata/`,
+verified by reading back from Apple. The previous listing is backed up.
+
+- **⚠️ fastlane CANNOT be installed on a stock Mac, and pinning gems does not
+  rescue it.** macOS ships Ruby 2.6; `gem install fastlane` dies on
+  `multi_json requires Ruby >= 3.2`, and pre-installing an older multi_json just
+  moves the error to `domain_name requires Ruby >= 2.7.0`. **Do not repeat the
+  whack-a-mole.** There is no Homebrew on this machine either, so a newer Ruby
+  needs the owner's password. Lanes therefore run in **GitHub Actions**, and
+  metadata has a Ruby-free local path: **`scripts/push-appstore-metadata.py`**,
+  which reads the same `fastlane/metadata/` files and makes the same REST calls
+  `deliver` makes underneath, so the two cannot drift.
+- **⚠️ The old store copy was factually wrong in a way that risked review.** It
+  claimed *"No account required. Nothing leaves your phone."* — untrue since
+  Supabase accounts and cross-device sync shipped, and it would have contradicted
+  the App Privacy questionnaire. It also described a New-York-only early-access
+  catalogue (reality: 1,164 tours / 24 cities). The replacement keeps the good
+  parts of the old copy — the no-ads/no-tracking line, the single-vs-walk
+  explanation, platform support — with accurate framing. **Mac was dropped from
+  the platform list**: `TARGETED_DEVICE_FAMILY = "1,2,7"` is iPhone/iPad/Vision
+  Pro, so the old "Mac support" claim was not true of this binary.
+- **⚠️ Two metadata traps, both paid for.** (1) **"What's New" cannot be set on a
+  first release** — Apple returns `409 STATE_ERROR: Attribute 'whatsNew' cannot
+  be edited at this time`, because there is no prior version for it to be new
+  against. `release_notes.txt` was therefore **deleted from the repo** and should
+  be added at 1.1. (2) **The version update is ATOMIC** — that single rejected
+  field took description, keywords, promotional text and support URL down with
+  it. A non-200 means nothing landed.
+- **The version question is now answered by the data: App Store Connect already
+  holds an editable version 1.0** (`PREPARE_FOR_SUBMISSION`) while the project
+  says `MARKETING_VERSION = 1.1`. Metadata belongs to a *version record*, so the
+  listing copy now sits on 1.0. Aligning the project to 1.0 is the cheap path;
+  staying on 1.1 means creating a new version record and re-pushing.
+- **The store name is confirmed `Atlas Audio Tours`** (read live), so only
+  `CFBundleDisplayName = Dozent` is still inconsistent.
+- **⚠️ All 10 paid-tour IAPs are `MISSING_METADATA`** — none can be submitted
+  until each has a description and a review screenshot. Previously recorded as
+  merely "Prepare for Submission", which understated the work.
+- **Two working App Store Connect keys sit in `~/Downloads`** (`5W4PB6B3W9`,
+  `FAA58W4G25`); both authenticate and both see the app. Issuer
+  `f34324bd-aa34-4de0-8acb-2537b0e9325e`. They are **not** in the repo and must
+  stay out (`*.p8` is gitignored).
 
 ## Current State (2026-08-06)
 
