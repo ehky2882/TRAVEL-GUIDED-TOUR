@@ -31,7 +31,9 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-08-07 (🇲🇦 **Marrakech COMPLETE** — 26 tours live under Atlas Studio RAK, the 25th maker and the first African city; catalog 1190 tours / 1497 stops. **Never in this table** — it arrived complete (audio + scripts + images in one Dropbox `/scl/fo/` drop) and was wired the same day, like Rio/São Paulo. **Pending queue is unchanged: Chicago alone, 30 tours / 53 MP3s.**)
+**Last verified:** 2026-08-08 (🇦🇷 **Buenos Aires COMPLETE** — 36 tours live under Atlas Studio BUE, the 26th maker and the first Argentine city; catalog 1226 tours / 1543 stops. **Never in this table** — it arrived complete (audio + scripts + images in one Dropbox `/scl/fo/` drop) and was wired the same day, like Rio/São Paulo/Marrakech. **Pending queue is unchanged: Chicago alone, 30 tours / 53 MP3s.**)
+
+**Previously verified:** 2026-08-07 (🇲🇦 **Marrakech COMPLETE** — 26 tours live under Atlas Studio RAK, the 25th maker and the first African city; catalog 1190 tours / 1497 stops. **Never in this table** — it arrived complete (audio + scripts + images in one Dropbox `/scl/fo/` drop) and was wired the same day, like Rio/São Paulo. **Pending queue is unchanged: Chicago alone, 30 tours / 53 MP3s.**)
 
 > ⚠️ **This file went stale within a day and told a session the wrong thing.** On 2026-07-28 it said the queue was "Montreal + Berlin only"; **Dubai had been script- and image-staged on 2026-07-27** by a parallel session that added its drafts to `claude/amsterdam-handoff-preserve-hlhyp8` and pushed ~32 images to `gh-pages` **without updating this file**. A session then reported "queue is down to Berlin only" to the owner, who corrected it. **The UPDATE RULE above is not optional, and it binds the *staging* session as much as the wire-in session.** When in doubt, re-derive rather than trust the table: `git ls-tree -r --name-only origin/claude/amsterdam-handoff-preserve-hlhyp8 -- drafts/` and compare against the makers in `origin/main`'s `Tours.json`.
 
@@ -46,6 +48,8 @@ Every pending tour below is **image-complete** (heroes + galleries live on gh-pa
 |------|--------------:|-----------|------------:|----------------|------------------|
 | 🇺🇸 Chicago | 30 | 25 single + 5 walks (intro+5 × 3, intro+4 × 2) | 53 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ORD |
 | **TOTAL PENDING** | **30** | | **53** | | |
+
+_(✅ 🇦🇷 **Buenos Aires = DONE (2026-08-08): 36 tours LIVE** — 34 single-stop (geofenced 30 m) + **2 walks** (`bue-uba-walk` "Universidad de Buenos Aires", intro+3, 1.0 km; `bue-tresdefebrero-walk` "Parque Tres de Febrero", intro+7, 4.8 km) under new maker **Atlas Studio BUE** (`64f37bdd-7cb4-5727-b525-6a801162ff9a`) — the **26th maker and the first Argentine city**. 46 MP3s, 6,156 s (~1h43m). **Never in this table** — arrived complete (audio + scripts + 120 already-1200×900 images in one Dropbox `/scl/fo/` drop) and wired the same day; **the first drop with pre-structured walk folders**. ⚠️ Estación de La Plata, Museo de Arte de Tigre and Alo's Bistro ship with their own `city` (La Plata / Tigre / San Isidro). ⚠️ Slug collision dodged: Rio owns `catedral-metropolitana`, so BUE's cathedral is `catedral-metropolitana-bue`.)_
 
 _(✅ 🇲🇦 **Marrakech = DONE (2026-08-07): 26 tours LIVE** — 26 single-stop (geofenced 30 m), no walks, under new maker **Atlas Studio RAK** (`c4e51efc-846e-5e78-b699-67e7f9d203e8`) — the **25th maker and the first African city**. 26 MP3s, 3,093 s (~51.5m). **Never in this table** — arrived complete (audio + scripts + 109 already-1200×900 images in one Dropbox `/scl/fo/` drop) and wired the same day. First Arabic-script city (bilingual `English | العربية` on 18 of 26). ⚠️ Aït Benhaddou ships with `city: "Aït Benhaddou"` (~180 km southeast, near Ouarzazate).)_
 
