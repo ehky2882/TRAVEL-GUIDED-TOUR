@@ -31,7 +31,9 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-08-08 (🇦🇷 **Buenos Aires COMPLETE** — 36 tours live under Atlas Studio BUE, the 26th maker and the first Argentine city; catalog 1226 tours / 1543 stops. **Never in this table** — it arrived complete (audio + scripts + images in one Dropbox `/scl/fo/` drop) and was wired the same day, like Rio/São Paulo/Marrakech. **Pending queue is unchanged: Chicago alone, 30 tours / 53 MP3s.**)
+**Last verified:** 2026-08-09 (🇺🇸 **Chicago COMPLETE** — 30 tours live under Atlas Studio ORD, the 27th maker; catalog 1256 tours / 1596 stops. **The final queue drain: the PENDING table is now EMPTY for the first time since it was created.** Chicago's narration arrived as **53 WAVs** (48 kHz mono — the first non-MP3 delivery; transcoded to the catalog's 44.1 kHz/128 kbps MP3), matching the staged scripts 1:1 including the documented numbering gaps. Detail in the per-city section below.)
+
+**Previously verified:** 2026-08-08 (🇦🇷 **Buenos Aires COMPLETE** — 36 tours live under Atlas Studio BUE, the 26th maker and the first Argentine city; catalog 1226 tours / 1543 stops. **Never in this table** — it arrived complete (audio + scripts + images in one Dropbox `/scl/fo/` drop) and was wired the same day, like Rio/São Paulo/Marrakech.)
 
 **Previously verified:** 2026-08-07 (🇲🇦 **Marrakech COMPLETE** — 26 tours live under Atlas Studio RAK, the 25th maker and the first African city; catalog 1190 tours / 1497 stops. **Never in this table** — it arrived complete (audio + scripts + images in one Dropbox `/scl/fo/` drop) and was wired the same day, like Rio/São Paulo. **Pending queue is unchanged: Chicago alone, 30 tours / 53 MP3s.**)
 
@@ -41,13 +43,17 @@ the branches to answer "what's left?".
 
 ## PENDING — staged, awaiting narration audio
 
-Every pending tour below is **image-complete** (heroes + galleries live on gh-pages). The
-**only** missing ingredient is narration MP3s. No draft audio is staged for any of these yet.
+**🎉 NOTHING IS PENDING. The queue is empty (first time ever, 2026-08-09) — Chicago was the
+last staged city and it is live.** Five singles the Chicago master list marks as drafted
+(18 Wrigley Field, 19 Lincoln Park, 22 Gold Coast/Astor, 26 Wicker Park, 27 The 606) were
+never delivered as scripts, images or audio — **if they ever arrive they are a second batch**
+and get a fresh row here, per the staging rule below.
 
 | City | Pending tours | Breakdown | MP3s needed | Staging branch | Maker at wire-in |
 |------|--------------:|-----------|------------:|----------------|------------------|
-| 🇺🇸 Chicago | 30 | 25 single + 5 walks (intro+5 × 3, intro+4 × 2) | 53 | `claude/amsterdam-handoff-preserve-hlhyp8` | **new** Atlas Studio ORD |
-| **TOTAL PENDING** | **30** | | **53** | | |
+| **TOTAL PENDING** | **0** | | **0** | | |
+
+_(✅ 🇺🇸 **Chicago = DONE (2026-08-09): 30 tours LIVE** — 25 single-stop (geofenced 30 m) + **5 walks** (`chicago-riverwalk-walk` "The Riverwalk", intro+5, 2.0 km; `chicago-loopskyscraper-walk` "The Loop — Where the Skyscraper Was Born", intro+5, 0.55 km; `chicago-lakefront-walk` "The Lakefront — Millennium Park to Museum Campus", intro+5, 2.4 km; `chicago-magmile-walk` "The Magnificent Mile — DuSable Bridge to the Water Tower", intro+4, 0.8 km; `chicago-pilsen-walk` "Pilsen — Eighteenth Street, East to West", intro+4, 1.8 km) under new maker **Atlas Studio ORD** (`f34cd76e-1e41-5c38-865d-d8eccd775cd3`) — the **27th maker**. 53 tracks, 6,238 s (~1h44m). **The first non-MP3 delivery: 53 WAVs at 48 kHz mono**, transcoded to 44.1 kHz/128 kbps MP3 at wire-in. Delivery matched the staging exactly, including the five documented numbering gaps. ⚠️ At wire-in the visual audit found **tour 02's staged hero showed the WRONG BRIDGE** (a LaSalle-area bascule, not the DuSable) — its gallery `_2` was the real DuSable and was promoted; and **riverwalk walk stop 1's staged image looked the wrong direction** (east at the St. Regis, not northwest at Wolf Point/the Mart) — swapped to `merchandise-mart_hero`, shot from the listener's exact spot. Two byte-identical cross-tour pairs deduped. 🔴 Pilsen walk stops 1+3 ship with the documented UNRESOLVED mural rights (owner-directed; `drafts/CREDITS.md`).)_
 
 _(✅ 🇦🇷 **Buenos Aires = DONE (2026-08-08): 36 tours LIVE** — 34 single-stop (geofenced 30 m) + **2 walks** (`bue-uba-walk` "Universidad de Buenos Aires", intro+3, 1.0 km; `bue-tresdefebrero-walk` "Parque Tres de Febrero", intro+7, 4.8 km) under new maker **Atlas Studio BUE** (`64f37bdd-7cb4-5727-b525-6a801162ff9a`) — the **26th maker and the first Argentine city**. 46 MP3s, 6,156 s (~1h43m). **Never in this table** — arrived complete (audio + scripts + 120 already-1200×900 images in one Dropbox `/scl/fo/` drop) and wired the same day; **the first drop with pre-structured walk folders**. ⚠️ Estación de La Plata, Museo de Arte de Tigre and Alo's Bistro ship with their own `city` (La Plata / Tigre / San Isidro). ⚠️ Slug collision dodged: Rio owns `catedral-metropolitana`, so BUE's cathedral is `catedral-metropolitana-bue`.)_
 
@@ -193,7 +199,7 @@ If you replace an image under an existing name, update `CREDITS.md` in the same 
   2. **Walk galleries omit whichever stop image is the tour hero.** Each walk README lists `additionalImageURLs` as *every* stop image in order — but each walk's hero is picked from among those same stop images, so that spec trips the validator's `heroImageURL also appears in additionalImageURLs` error (the carousel renders hero first, then the list, so it would show the same photo twice). Montreal's walks already drop it: 6 stops → 4 gallery entries. Dubai now does the same (5 stops → 3, 4 stops → 2).
 - **⚠️ Provenance flags (owner-directed, decide before ship):** `al-shindagha_hero` came from a googleusercontent URL — **license unverifiable**, and upscaled ~1.6× from 1200×550 so it is soft. `difc-gate_hero` is owner-supplied and shows garbled signage text, i.e. likely AI-generated rather than a photograph. Both were shipped at the owner's explicit direction after being flagged.
 - **✅ Credits WRITTEN 2026-07-28 — `drafts/CREDITS.md`, Dubai section: 11 credit-required images** (Gold Souk ×2 — not ×4, the other two are stock; Jumeirah Mosque ×3; Al Fahidi Fort ×3; Textile Souk hero; Etihad Museum ×1; Al Shindagha gallery). The DIFC gallery image is **Pexels, ship-safe** — not CC as guessed here. Alserkal hero is **CC0** (no credit). **`al-shindagha_2` is FAL (Free Art License), not CC** — copyleft, same obligation as BY-SA; do not treat it as more permissive. Attributions were resolved by **SHA-1 reverse-lookup** against the Commons `allimages` API, i.e. exact file identity.
-**🇺🇸 Chicago** — **30 tours (25 single-stop + 5 walks)**, new maker **Atlas Studio ORD** 🇺🇸 — the **22nd maker** (Dubai's DXB took the 21st slot on 2026-07-31).
+**🇺🇸 Chicago — ✅ LIVE (2026-08-09)** — all **30 tours (25 single-stop + 5 walks)** under new maker **Atlas Studio ORD** 🇺🇸 — the **27th maker** in the end (staging predicted 22nd; five complete-drop cities jumped the queue in between). Everything below is the staging record, kept for provenance; wire-in detail in `archive/HANDOFF-260809.md`.
 Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. Staged 2026-07-29/30.
 **MP3s needed: 53** = 25 singles + 28 walk tracks (three walks of intro+5, two of intro+4).
 
