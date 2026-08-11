@@ -215,6 +215,14 @@
       "avatarEmoji": "🇺🇸",
       "bio": "Atlas Studio's Chicago bureau — audio tours of the city that invented the tall building and kept the receipts: a bean of polished steel, a river running backward on purpose, the block where walls stopped holding buildings up, and a lakefront kept forever open, clear and free by a mail-order man with very good lawyers.",
       "websiteURL": null
+    },
+    {
+      "id": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "displayName": "Atlas Studio MEL",
+      "avatarURL": null,
+      "avatarEmoji": "🇦🇺",
+      "bio": "Atlas Studio's Melbourne bureau — audio tours of a city that does its best work at close range: the clocks everyone still meets under, a square Melbourne argued about and then adopted, unmarked doors hiding some of the world's best bars, gin distilled by amateurs who became the world's best, and the espresso counter that started it all in 1954.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -61671,6 +61679,1687 @@
         "Art",
         "History",
         "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ada17ad9-8c2d-5e74-b104-88c92eec5299",
+      "createdAt": "2026-08-11",
+      "title": "Above Board",
+      "shortDescription": "Sixteen seats above a Collingwood pub, and not a single bottle in sight — that's the whole idea.",
+      "longDescription": "Hayden Lambert's sixteen-seat room above Smith Street hides every bottle on purpose: the spirits are decanted into unmarked crystal and locked into drawers behind the counter, so nobody orders by label or pays extra because a bottle looks expensive. One shared walnut table, no standing, a menu held to around twenty-five drinks known by heart — and the international recognition started arriving soon after the 2016 opening. Most cocktail bars are built to be read, their shelves working like an advertisement; Above Board strips the signalling away and leaves only what actually lands in the glass. From the street you'd never know it was up here, which is exactly how the name works: literally above a board downstairs, and scrupulously above board once you're in.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/above-board_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/above-board_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ec573297-5d4e-54cb-a0d0-1c611ebe6b27",
+          "order": 0,
+          "title": "Above Board",
+          "caption": "There isn't a single bottle on display anywhere in this room, and that's entirely deliberate.",
+          "latitude": -37.79990060597065,
+          "longitude": 144.9845111549152,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/above-board.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/above-board_hero.webp",
+          "transcriptText": "There isn't a single bottle on display anywhere in this room, and that's entirely deliberate.\n\nHead up the stairwell just off Smith Street, through the door beside Beermash, and you'll come out on the first floor above what locals still call Chopper Lane. Inside, it's compact and quietly lit: one shared table in American walnut rather than rows of bar stools, and room for exactly sixteen people at a time. There's no standing permitted, so once you've found a seat, you're staying a while.\n\nLook at the room itself before you look at a drink. There's no back-bar glowing under spotlights, no wall of labels to read while you wait, because the bartender behind all of this, Hayden Lambert, built the place around hiding them. Every spirit gets decanted into unmarked crystal bottles and locked away in a bank of drawers behind the counter, so nobody's ordering off a brand they recognise, or paying more because a bottle happens to look expensive.\n\nThe name plays on that idea twice over: literally above a board, up here on the first floor over the pub downstairs, and scrupulously above board in how the drinks get made. The menu follows the same logic — rather than the enormous cocktail lists you'll find elsewhere in the city, Above Board keeps to around twenty-five drinks, split between house signatures and quietly updated classics, known by heart rather than by recipe card.\n\nAnd here's the thing: most cocktail bars are built to be read, with the shelves working like a kind of advertisement that tells you what you're paying for before you've tasted a thing. Above Board strips all of that signalling away on purpose, which leaves only what actually lands in the glass, and the conversation happening around that one long table, to judge the place by.\n\nIt picked up a small stack of international recognition not long after opening in 2016, and standing inside, that's easy to believe — though from the street, you'd walk straight past without knowing any of it was up here.\n\nIf you come back another night with a friend, the door's easy to miss on purpose: unmarked, tucked beside Beermash's signage, up a narrow stairwell that looks like it leads nowhere in particular."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.79990060597065,
+      "centroidLongitude": 144.9845111549152,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "460ceef0-c1ba-5f88-9bd5-b61dd3296059",
+      "createdAt": "2026-08-11",
+      "title": "Byrdi",
+      "shortDescription": "A World's-50-Best bar that treats the Victorian bush the way other bars treat a spirits cabinet.",
+      "longDescription": "Luke Whearty and Aki Nishikura's corner of Melbourne Central builds its drinks almost entirely from the landscape of Victoria — wattleseed, pepperberry, blackcurrant wood oil — fermented, smoked, spun through a centrifuge, and sometimes set in motion months before you sit down. 'Now and Then' runs Tasmanian wasabi against green apple, fig leaf and nasturtium; 'Fallen Fruit' holds distilled Carolina Reaper and lacto-fermented pineapple in tight, deliberate balance. Within a year of opening in 2019 it had landed on the World's 50 Best Bars list, and the sourcing is the point: while most ambitious bars still look to London or New York for their raw materials, Byrdi built an entire programme from what actually grows in this state. The list turns over completely with the seasons — whatever you drink tonight won't be there when the year turns.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/byrdi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/byrdi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/byrdi_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7f933b73-00fa-5655-b21e-6c092a95ef18",
+          "order": 0,
+          "title": "Byrdi",
+          "caption": "Byrdi's drink list changes with the seasons, and part of what lands in your glass tonight might have been set in motion months ago.",
+          "latitude": -37.81019456544879,
+          "longitude": 144.96196021002265,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/byrdi.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/byrdi_hero.webp",
+          "transcriptText": "Byrdi's drink list changes with the seasons, and part of what lands in your glass tonight might have been set in motion months ago.\n\nInside Melbourne Central, where La Trobe Street meets Elizabeth Street, Byrdi sits tucked into a corner of the ground floor: low light, a long bar, and a kitchen sending out small plates that arrive faintly charred from the grill. Luke Whearty and Aki Nishikura opened it in 2019, and within a year it had already landed on the World's 50 Best Bars list — a rare feat for a venue that young.\n\nStart with what's actually in the glass. Byrdi builds its cocktails almost entirely from the landscape of Victoria: wattleseed, pepperberry, blackcurrant wood oil, and other native ingredients most bar menus in the world wouldn't think to reach for. Nothing here gets treated simply — components arrive fermented, smoked, reconstituted, occasionally spun through a centrifuge, and some of that work began weeks or even months before you sat down.\n\nTwo drinks tend to get talked about most. \"Now and Then\" mixes Tasmanian wasabi with green apple, fig leaf and nasturtium, while \"Fallen Fruit\" pairs distilled Carolina Reaper pepper with lacto-fermented pineapple, island bitters and salted Davidson's plum — heat and sweetness held in a tight, deliberate balance rather than left to fight each other.\n\nWhat's worth knowing, sitting here, is that Byrdi didn't look to London or New York for its raw materials the way most cocktail bars still do. It looked at what actually grows in this state and built an entire bar programme around treating the Victorian bush as seriously as anyone else treats a spirits cabinet.\n\nThe food follows the same instinct — most of it cooked over fire, arriving smoky by design rather than by accident.\n\nThe list turns over completely with the seasons, so whatever you're drinking tonight almost certainly won't be on the menu by the time the year turns — worth remembering if something here catches you off guard enough to want it again."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.81019456544879,
+      "centroidLongitude": 144.96196021002265,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9799b95f-731b-5e77-9f64-3063cec59e39",
+      "createdAt": "2026-08-11",
+      "title": "Caretaker's Cottage",
+      "shortDescription": "A 1914 bluestone cottage behind a church, now one of the World's 50 Best Bars — walk-ins only.",
+      "longDescription": "The cottage on Little Lonsdale Street was built to house exactly one person — the caretaker of Wesley Church next door — and the Fancy Free trio who opened a bar inside it in 2022 kept everything the caretaker would recognise: the original wallpaper, the narrow staircase, former bedrooms folded into a room that seats about fifty at a squeeze. Because it was built for one occupant rather than a crowd, everything still feels domestic — Tasmanian oak behind the bar, vinyl on the decks. The martini arrives properly freezer-cold, built on a gin commissioned specifically for the room, and the boilermaker — a shot and a beer, paired with real precision — is what plenty of regulars call Australia's definitive version. In 2025 the World's 50 Best judges ranked this quiet little service building nineteenth anywhere on earth. No bookings; the queue forms along Little Lonsdale Street, and it's usually worth it.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/caretakers-cottage_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/caretakers-cottage_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/caretakers-cottage_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "efb81f87-9cf0-5df9-a4e2-8094be47cdbb",
+          "order": 0,
+          "title": "Caretaker's Cottage",
+          "caption": "The building in front of you was built to house exactly one person: the caretaker of the church next door.",
+          "latitude": -37.80950155858187,
+          "longitude": 144.96786770229247,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/caretakers-cottage.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/caretakers-cottage_hero.webp",
+          "transcriptText": "The building in front of you was built to house exactly one person: the caretaker of the church next door.\n\nThat bluestone cottage on Little Lonsdale Street, tucked in behind Wesley Church, has stood since 1914 — long before anyone thought to put a bar inside it. Rob, Matt and Ryan, the trio behind the bar group Fancy Free, opened it here in 2022, and they kept almost everything the caretaker would have recognised: the original wallpaper, the narrow staircase, even a couple of former bedrooms, now folded into a room that seats around fifty people at a squeeze.\n\nThe scale is really the whole point. Because the cottage was built for one occupant rather than a crowd, everything inside still feels domestic rather than designed — Tasmanian oak behind the bar, vinyl on the decks, and a warmth that owes more to somebody's front room than to any cocktail bar you'd expect to find behind a church.\n\nTwo things anchor the reputation. The martini arrives properly freezer-cold, built on a custom-commissioned gin made specifically for the room, and it's become the drink most people mention first when they talk about this place afterward. Alongside it sits what plenty of regulars will call Australia's definitive boilermaker: a shot and a beer, paired with the kind of precision that turns a simple order into something worth ordering twice.\n\nThis cottage was built to be quietly functional, a service building nobody was meant to notice, and it's ended up as one of the most talked-about small rooms in the country: in 2025, the World's 50 Best Bars judges ranked it nineteenth anywhere on earth.\n\nThere's no booking system here, walk-ins only.\n\nIf the room's already full when you arrive, the queue tends to form quietly along Little Lonsdale Street — and it's usually worth the wait."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.80950155858187,
+      "centroidLongitude": 144.96786770229247,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cf1036ca-7f9e-56b0-9181-3bb8ae043f46",
+      "createdAt": "2026-08-11",
+      "title": "Carlton Gardens",
+      "shortDescription": "Twenty-six plane trees lined up on purpose, all pointing at the dome Melbourne built to impress the world.",
+      "longDescription": "William Sangster and Joseph Reed laid these gardens out so that every visitor's eye would travel down a single avenue of plane trees to the Royal Exhibition Building's dome — an 1880 announcement that a gold-rush city considered itself ready for the world stage. Josef Hochgurtel's fountain, carved for the exhibition, dresses the idea of trade between nations in Victorian flora and exuberance. The building behind it hosted the first sitting of Australia's Commonwealth Parliament in 1901, served as an emergency influenza hospital in 1919, and staged Olympic weightlifting, wrestling and basketball in 1956 — and unlike almost every other world's-fair hall on earth, it never came down. UNESCO listed building and gardens together in 2004: one of the few places anywhere still doing the job it was built for. The quieter northern half holds a second garden, and the Melbourne Museum beyond it.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carlton-gardens_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carlton-gardens_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "74d6fe7d-1ea5-55f2-8e9c-061dca426fdc",
+          "order": 0,
+          "title": "Carlton Gardens",
+          "caption": "It's 1880, and Melbourne wants to prove something to the rest of the world.",
+          "latitude": -37.80524857195688,
+          "longitude": 144.97142492738658,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/carlton-gardens.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carlton-gardens_hero.webp",
+          "transcriptText": "It's 1880, and Melbourne wants to prove something to the rest of the world.\n\nCarlton Gardens: stand where the long plane-tree avenue meets the fountain at its northern end, facing the dome of the Royal Exhibition Building, and you're standing exactly where the whole layout was designed to point. William Sangster and Joseph Reed planned it that way on purpose, lining twenty-six plane trees up in a single avenue so that every visitor's eye would travel straight down them toward the building at the far end.\n\nHave a look at the fountain first. It was carved by Josef Hochgurtel for the 1880 exhibition, and it represents trade between nations, dressed up in Victorian-era flora and fauna — the kind of confident, slightly over-the-top gesture you'd expect from a city trying to announce its arrival on the world stage.\n\nBehind it, the Royal Exhibition Building has done a lot more than sit still and look grand. It hosted the very first sitting of the Commonwealth Parliament of Australia in 1901, became an emergency influenza hospital during the 1919 pandemic, and even staged Olympic weightlifting, wrestling and basketball when the Games came to Melbourne in 1956.\n\nThe interesting bit is this: almost every other building raised for a nineteenth-century world's fair was meant to be temporary, and most of them came down within a few years of the exhibitions that built them. This one didn't. It's still standing, still hosting exhibitions the way it always has, which is part of why UNESCO listed the building and these gardens together as a World Heritage site in 2004 — one of the few places on earth still doing the job it was built for.\n\nThe gardens run on well past this fountain in both directions.\n\nIf you've got the time, the quieter northern half holds a second garden and the Melbourne Museum beyond it — worth the extra walk, especially once the avenue behind you starts filling up with tour groups."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.80524857195688,
+      "centroidLongitude": 144.97142492738658,
+      "city": "Melbourne",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Victorian",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "07956ee2-9d07-5e0e-b29b-0e796389e7ed",
+      "createdAt": "2026-08-11",
+      "title": "Carnation Canteen",
+      "shortDescription": "Twenty seats, a pink marble bar, and a menu that reinvents itself every single week.",
+      "longDescription": "Behind a peeling, barely-signed shopfront on Gore Street in Fitzroy, chef Audrey Shaw runs one of the neighbourhood's hardest bookings: twenty seats total, fresh flowers against a slab of pink marble, warm lamplight, and a menu rewritten weekly around whatever produce is actually worth cooking. Shaw's pedigree — London's River Cafe, Tedesca Osteria — sits quietly behind every plate without the room ever announcing it, and the wine list is curated to follow the kitchen rather than perform on its own. A dozen dishes that change every week is a far harder trick than a long static list: nowhere to hide a weak plate, nothing to fall back on when a season moves on. Book a few days out, not a few hours — and come back in a month, when the menu will have moved on completely.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnation-canteen_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnation-canteen_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnation-canteen_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnation-canteen_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ed47a709-6fd6-5a68-a3d4-8c463b4d2437",
+          "order": 0,
+          "title": "Carnation Canteen",
+          "caption": "On a quiet backstreet in Fitzroy, behind a shopfront easy to miss entirely, twenty seats and a slab of pink marble make up one of the neighbourhood's most talked-about bookings.",
+          "latitude": -37.80391282938768,
+          "longitude": 144.9820188962073,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/carnation-canteen.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/carnation-canteen_hero.webp",
+          "transcriptText": "On a quiet backstreet in Fitzroy, behind a shopfront easy to miss entirely, twenty seats and a slab of pink marble make up one of the neighbourhood's most talked-about bookings.\n\nFind Gore Street and look for the narrow frontage with the layered, slightly cracking paint — that's Carnation Canteen, and there's rarely much of a sign announcing it. Inside, the room leans modern rustic French bistro: fresh flowers set against that pink marble bar, warm lamplight, and just twenty seats total, which means every table in the place is, in some sense, the good one. With a room this small, the tables tend to book out well ahead of the weekend, so most regulars have learned to plan a few days rather than a few hours in advance.\n\nThe kitchen is where the real story sits. Chef Audrey Shaw curates a menu that changes weekly according to whatever produce is actually worth cooking that week, and she's brought serious pedigree to a genuinely small room — time spent at London's River Cafe and at Tedesca Osteria sits behind every plate that comes out of this kitchen, even though nothing about the space itself tries to announce that.\n\nA menu this size, changing this often, is a much harder trick than a long, static one. There's nowhere to hide a weak dish on a list of a dozen items, and nothing to fall back on once a season's produce moves on, which means the room is essentially reinventing itself every week, quietly, without ever making a show of it. The wine list gets the same care, curated to sit alongside whatever's coming out of the kitchen rather than existing as its own separate performance.\n\nCome back in a month and the menu will have moved on completely.\n\nThat's rather the appeal of a kitchen that refuses to print the same thing twice — worth treating this less as a restaurant you've visited once and more as one you keep circling back to."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.80391282938768,
+      "centroidLongitude": 144.9820188962073,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "cc193f8c-41e8-50d4-bc49-15f88961a1a5",
+      "createdAt": "2026-08-11",
+      "title": "Chin Chin",
+      "shortDescription": "No bookings, communal tables, ten thousand guests a week — the restaurant that democratised dinner in Melbourne.",
+      "longDescription": "When restaurateur Chris Lucas walked into this Flinders Lane building with chefs Andrew Gimber and Ben Cooper in 2011, it was a defunct nightclub that had lost its liquor licence, buried under disco balls and velour carpet. Underneath was, in Lucas's words, simply a beautiful building — and the modern Thai hawker-style room they opened in it has never taken a booking. Everyone queues, everyone sits at communal tables, and a food critic waits like a family passing through on a Tuesday. A custom sound system runs upbeat playlists at genuine volume, rotating artwork covers the walls, and the room reads as a party even at half capacity. Feeding more than ten thousand guests a week, Chin Chin is by some measures the most successful restaurant Australia has produced — and most of the venues its success spawned still run on the same no-reservations rule.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chin-chin_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chin-chin_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chin-chin_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chin-chin_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5f90fb7f-72dd-520f-ae08-1f9c9f655393",
+          "order": 0,
+          "title": "Chin Chin",
+          "caption": "Look at the room around you: the exposed brick, the high ceilings, the artwork crowding almost every wall.",
+          "latitude": -37.8154453587604,
+          "longitude": 144.97037569653,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chin-chin.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chin-chin_hero.webp",
+          "transcriptText": "Look at the room around you: the exposed brick, the high ceilings, the artwork crowding almost every wall. None of it was visible the day this building was found.\n\nYou're on Flinders Lane, at the door where the queue tends to gather, and that's the same entrance chefs Andrew Gimber and Ben Cooper walked through with restaurateur Chris Lucas back in 2011. At the time, the building was a defunct nightclub that had lost its liquor licence, buried under disco balls, velour carpet and boarded-up windows — and underneath all of it, the three of them found what Lucas later called simply a beautiful building.\n\nStart with how the place actually runs. Chin Chin doesn't take bookings, and it never has: everyone queues, everyone sits at communal tables, and nobody gets treated as more important than anyone else in the room, whether that's a food critic or a family passing through on a Tuesday. It's a small, deliberate act of democratising what going out for dinner in this city used to feel like.\n\nThen there's the atmosphere holding it all together: a custom sound system running upbeat playlists at genuine volume, and rotating artwork from both established and emerging artists covering the walls, which is part of why the room reads more like a party than a restaurant, even at half capacity.\n\nThis modern Thai hawker-style menu now feeds more than ten thousand guests a week, by some measures making Chin Chin the most successful restaurant Australia has produced, and its success gave Chris Lucas the platform to open half a dozen more rooms across two cities.\n\nMost of them still don't take bookings.\n\nIf the queue tonight looks too long, Lucas's other venues are scattered within a few minutes' walk in almost every direction, and most of them run on exactly the same no-reservations rule."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.8154453587604,
+      "centroidLongitude": 144.97037569653,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "037b7297-20d3-5fa7-804b-d9b790d08698",
+      "createdAt": "2026-08-11",
+      "title": "CIBI",
+      "shortDescription": "A Japanese breakfast, a Sori Yanagi kettle, and a Collingwood warehouse that ended up opening a branch in Tokyo.",
+      "longDescription": "Meg and Zenta Tanaka named their converted Keele Street garment factory after the Japanese word for a small child — curious, still playing, not yet weighed down by grown-up rules — and split its eight hundred square metres between a café built around traditional Japanese breakfast and a design shop where Hakusan porcelain, Sori Yanagi homewares, Tendo Mokko furniture and Noguchi's paper Akari lights sit on the shelves with no more ceremony than the coffee cups next door. They opened the original, much smaller CIBI on this same street in 2008 and outgrew it entirely. The direction of travel is the real story: most Japanese cafés in Melbourne import a culture that flows one way, but in 2017 the Tanakas opened a second CIBI back in Tokyo — Melbourne, for once, exporting rather than borrowing.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cibi_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cibi_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cibi_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cibi_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b5041723-81ee-5225-814a-a36add44abc9",
+          "order": 0,
+          "title": "CIBI",
+          "caption": "There's a nice bit of wordplay folded into this shop's name, if you know where to look for it.",
+          "latitude": -37.79701164442917,
+          "longitude": 144.98614839790028,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cibi.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cibi_hero.webp",
+          "transcriptText": "There's a nice bit of wordplay folded into this shop's name, if you know where to look for it.\n\nInside a converted warehouse on Keele Street in Collingwood — once a garment factory, now flooded with daylight through its high industrial windows — CIBI splits cleanly into two halves under one roof: a design shop on one side, a café built around Japanese breakfast on the other. Meg and Zenta Tanaka opened the original, much smaller version on this same street back in 2008, and outgrew that first site so thoroughly that they eventually moved the whole operation into this larger, eight-hundred-square-metre space.\n\nThe name itself comes from the Japanese word for a small child: someone curious, still playing, not yet weighed down by grown-up rules, which the Tanakas have said is exactly the spirit they wanted the whole space to carry.\n\nOn the retail side, look for Hakusan porcelain, homewares by the designer Sori Yanagi, furniture from Tendo Mokko, and Noguchi's paper Akari lights sitting among the shelves — genuinely significant pieces of Japanese design, sold with no more ceremony than the coffee cups next door. On the café side, the traditional Japanese breakfast anchors everything: a coffee bar, sake, oden, and workshops that shift with the seasons.\n\nCIBI's success ran in a direction you don't usually see. Most Japanese cafés and design shops in Melbourne are importing a culture that flows one way, but CIBI grew so established in this warehouse that in 2017, the Tanakas opened a second CIBI back in Tokyo — Melbourne, for once, exporting rather than borrowing.\n\nThe retail side turns over often enough to reward a second visit.\n\nZenta and Meg also run a smaller sister space nearby called Mina-no-ie, worth finding if the mood's still Japanese by the time you finish your coffee."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.79701164442917,
+      "centroidLongitude": 144.98614839790028,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e58cf695-db2a-58bb-96aa-106dbe675832",
+      "createdAt": "2026-08-11",
+      "title": "Four Pillars Gin Distillery",
+      "shortDescription": "Three friends who'd never distilled a drop taught themselves gin — and were named the world's best producer three times.",
+      "longDescription": "Matt Jones, Stuart Gregor and Cameron Mackenzie bought a German copper still in 2013 with no distilling experience between them, set up in a former Healesville timber yard on the edge of the Yarra Valley, and opened to the public in 2015. The still — Wilma, named after the head distiller's late mother — works behind portholes alongside the botanicals and a solera of ageing barrels, with the bottling line usually running in view. The flagship Rare Dry Gin was built to give Australian gin its own character rather than copy London; the Bloody Shiraz — cool-climate Yarra Valley shiraz grapes steeped in it for eight weeks, no added sugar — is the one people talk about afterwards, deep ruby until soda flushes it iridescent pink. Named international gin producer of the year three times since opening: precision over volume, from a standing start. Tours run most weekday afternoons, ten guests at a time.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/four-pillars_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/four-pillars_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/four-pillars_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/four-pillars_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "64b24da6-ff0d-57e1-84f4-481514c1004b",
+          "order": 0,
+          "title": "Four Pillars Gin Distillery",
+          "caption": "Three friends bought a copper still from Germany in 2013, and not one of them had ever distilled a drop of gin before.",
+          "latitude": -37.656922047261816,
+          "longitude": 145.509713746319,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/four-pillars.mp3",
+          "audioDurationSeconds": 128,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/four-pillars_hero.webp",
+          "transcriptText": "Three friends bought a copper still from Germany in 2013, and not one of them had ever distilled a drop of gin before.\n\nHealesville, on the edge of the Yarra Valley, in what used to be a timber yard: that's where Matt Jones, Stuart Gregor and Cameron Mackenzie set up shop, and Four Pillars has stayed on this same site since opening its doors to the public in 2015. Sensing a gin boom on the way, the three of them decided to teach themselves the craft from scratch rather than wait for someone else to do it properly.\n\nLook for the portholes along one wall — that's the still itself, nicknamed Wilma after the late mother of the head distiller, and behind it sit the botanicals and a solera of ageing barrels, working their way down toward the bottling line you can usually see running most days.\n\nThe flagship is the Rare Dry Gin, built specifically to give Australian gin its own character rather than copy anything London was already doing. But the drink most people end up talking about afterward is the Bloody Shiraz: cool-climate Yarra Valley shiraz grapes steeped in that Rare Dry Gin for eight weeks with no added sugar, turning a deep ruby that flushes iridescent pink the moment soda hits the glass.\n\nThe founders' stated goal was to help people drink better, not more, and it's paid off well beyond Healesville — Four Pillars has been named international gin producer of the year three times since it opened, proof that starting from zero experience isn't necessarily a disadvantage, provided the ambition is precision rather than volume.\n\nGuided tours run most weekday afternoons, past the stills and down to the bottling line, limited to just ten guests at a time.\n\nIf the timing doesn't suit, ask about the Maker's Session instead — a few hours building and bottling a gin of your own to take home."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 128,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.656922047261816,
+      "centroidLongitude": 145.509713746319,
+      "city": "Healesville",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "67e9b98e-5294-5457-a883-d95cd67ab0f9",
+      "createdAt": "2026-08-11",
+      "title": "France-Soir",
+      "shortDescription": "The same blue neon, the same brasserie, the same owner since 1986 — and a 4,500-bin cellar built bottle by bottle.",
+      "longDescription": "Jean-Paul Prunetti has run the room at 11 Toorak Road more or less unchanged for four decades. He opened it in 1986 with Yvon Vogel, a former professional rugby player who toured Australia, liked Melbourne enough to stay, and simply found a shop for lease; Vogel went home to France for good in 1988, and Prunetti — in hospitality since he was fourteen — has run it alone ever since, refusing every offer to expand or franchise. The service keeps a classic Parisian brasserie rhythm, unhurried and precise, and the wine list runs to roughly four and a half thousand bins, one of the largest attached to any single restaurant in Melbourne — the kind of list you build over decades, bottle by bottle, as a room slowly earns the trust to hold them. Springsteen and Jagger have both eaten here in passing. Go on a weeknight; the list gets the attention it deserves.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/france-soir_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/france-soir_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "29b2702e-4f5f-5b8e-bb07-a8879fd7eb7c",
+          "order": 0,
+          "title": "France-Soir",
+          "caption": "You'll spot France-Soir from down the block by its blue neon sign, glowing over Toorak Road the way it has since 1986.",
+          "latitude": -37.83806384304093,
+          "longitude": 144.98681223690787,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/france-soir.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/france-soir_hero.webp",
+          "transcriptText": "You'll spot France-Soir from down the block by its blue neon sign, glowing over Toorak Road the way it has since 1986.\n\nLook for that sign at number eleven, and you're standing outside a restaurant that's barely changed its address, its menu, or its owner in forty years. Jean-Paul Prunetti opened it with Yvon Vogel, a former professional rugby player who'd been touring Australia, liked Melbourne enough to stay, and simply found a shop for lease on this stretch of road rather than heading home. Their partnership lasted only until 1988, when Vogel returned to France for good, and Prunetti — in hospitality since he was fourteen years old — has run the place alone ever since, refusing every offer to expand or franchise it elsewhere.\n\nInside, the service still follows the rhythm of a classic Parisian brasserie: unhurried, precise, and built around a wine list that runs to roughly four thousand five hundred bins, one of the largest attached to any single restaurant in Melbourne. It's the kind of list you build over decades rather than order in for an opening night, bottle by bottle, as the room itself slowly earns the trust to hold onto them. That combination of food, wine and old-world service has quietly drawn in some unlikely regulars over the years, including Bruce Springsteen and Mick Jagger, both of whom have eaten here while passing through the city.\n\nRestaurants up and down this strip have opened, reinvented themselves and closed again many times over across four decades, but Prunetti never chased any of those trends. He kept the same bistro doing the same thing, and outlasted almost everyone who tried something newer.\n\nThe blue sign still glows every night, exactly where it's always been.\n\nWeeknights tend to be quieter here than weekends, and that's genuinely the better time to visit — the wine list gets the attention it deserves, and so does the room."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 121,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.83806384304093,
+      "centroidLongitude": 144.98681223690787,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "190eca09-0869-5b16-a48a-be2b80814025",
+      "createdAt": "2026-08-11",
+      "title": "Gimlet at Cavendish House",
+      "shortDescription": "Andrew McConnell's grand Art Deco dining room, named — deliberately — after the humblest drink on the list.",
+      "longDescription": "Cavendish House has stood at the corner of Russell Street and Flinders Lane since the 1920s, heritage-listed Art Deco in a Chicago style that was rare for Melbourne, and when Andrew McConnell moved Gimlet into its ground floor in 2020 the Sydney design firm Acme leaned into that history rather than covering it up: chequerboard tiles, deep leather booths, a long curved marble bar, ornate light fixtures hanging above head height. Naming a room this grand after gin-and-cordial is a small, deliberate joke about not taking the grandeur too seriously, and the house martini follows the same instinct — orange-bergamot bitters, drinking looser and rounder than the sharp classic. The roast chicken with vadouvan sauce and fried curry leaves is the dish people name first; the coal-grilled T-bone and half a southern rock lobster round out the signatures. Look up at the lights before you sit down — most of the room's personality sits above eye level.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gimlet_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gimlet_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gimlet_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gimlet_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c2885743-a553-5a57-9a9b-d5fc54f52a7b",
+          "order": 0,
+          "title": "Gimlet at Cavendish House",
+          "caption": "The black-and-white tiled floor under your feet is doing a lot of the talking before a single dish arrives.",
+          "latitude": -37.81570584112748,
+          "longitude": 144.96935650003374,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/gimlet.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gimlet_hero.webp",
+          "transcriptText": "The black-and-white tiled floor under your feet is doing a lot of the talking before a single dish arrives.\n\nCavendish House, at the corner of Russell Street and Flinders Lane, has stood since the 1920s, and Andrew McConnell moved his restaurant Gimlet into its ground floor in 2020 — chequerboard tiles, deep leather booths and all. The building itself is heritage-listed, Art Deco, built in a Chicago style that wasn't common in Melbourne at the time, and the Sydney design firm Acme leaned into that history rather than covering it up: a long, curved marble bar, ornate hanging light fixtures, and a room that channels the glamour of an early twentieth-century European bistro without pretending to actually be one.\n\nGimlet takes its name from one of the simplest cocktails on any bar list, just gin and cordial, and naming a genuinely grand dining room after it is a small, deliberate joke about not taking the grandeur too seriously. The house martini follows the same instinct — built with orange-bergamot bitters, it drinks with the looser, rounder feel of a negroni rather than the sharp, classic version most people expect.\n\nOn the food side, the roast chicken has become the dish people mention first, finished with vadouvan sauce and fried curry leaves, while the T-bone comes grilled over coals with fries and house-made condiments, and half a southern rock lobster shows up often enough to count as a genuine signature rather than a special.\n\nThis room is dressed up properly, marble and brass and all, but it borrowed its name from the humblest drink behind the bar: grandeur, deliberately, without any stuffiness attached to it.\n\nBefore you sit down, look up at the light fixtures over the bar.\n\nMost of this room's personality sits above head height, and it's easy to miss on the way to a table if you're not looking for it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.81570584112748,
+      "centroidLongitude": 144.96935650003374,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Art Deco",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5f50258d-c965-589d-a233-5daa1d2b3daf",
+      "createdAt": "2026-08-11",
+      "title": "Heide Museum of Modern Art",
+      "shortDescription": "The farmhouse where Sidney Nolan painted the Ned Kelly series at the dining table — now fifteen acres of museum.",
+      "longDescription": "John and Sunday Reed bought this Bulleen property on a bend of the Birrarung, the Yarra River, in 1934 and opened their home to a circle of painters that included Sidney Nolan, Joy Hester, Albert Tucker and Arthur Boyd. At the dining table of the farmhouse now called Heide I, between 1946 and 1947, Nolan painted most of his twenty-seven-painting Ned Kelly series amid the books, arguments and general noise of the household. Heide II, commissioned from architect David McGlashan as 'a gallery to be lived in', took the profession's Building of the Year award in 1968 with no real line drawn between home and exhibition space. When Heide finally opened to the public in November 1981, the first exhibition was the Kelly paintings, hung in the same dining room where they were made. Most museums house art made somewhere else entirely; this one brought the art home. The sculpture park runs the full fifteen acres down toward the river, with the Reeds' kitchen garden still planted at the northern end.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/heide-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/heide-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/heide-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/heide-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/heide-museum_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8a6b519a-defd-5170-93a7-d06d9d61d433",
+          "order": 0,
+          "title": "Heide Museum of Modern Art",
+          "caption": "It's 1946, and a circle of friends gathered round a dining table are about to become one of the most influential groups in Australian art.",
+          "latitude": -37.75803880914758,
+          "longitude": 145.08317730655932,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/heide-museum.mp3",
+          "audioDurationSeconds": 137,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/heide-museum_hero.webp",
+          "transcriptText": "It's 1946, and a circle of friends gathered round a dining table are about to become one of the most influential groups in Australian art.\n\nBulleen, on a bend of the Birrarung, the Yarra River: the modest farmhouse now known as Heide I sits at the heart of fifteen acres of parkland, sculpture and heritage kitchen garden, and it was here that John and Sunday Reed, who bought the property in 1934, opened their home to a circle of painters that included Sidney Nolan, Joy Hester, Albert Tucker and Arthur Boyd.\n\nHave a look at the dining room first, if you can. It was at that table, between 1946 and 1947, that Sidney Nolan painted most of his twenty-seven-painting Ned Kelly series, working while surrounded by books, arguments and the general noise of the household, rather than in any studio built for the purpose.\n\nThen there's Heide II, the second house the Reeds commissioned once their first arts venture, the Museum of Modern Art of Australia, had run its course. Architect David McGlashan designed it as, in his words, a gallery to be lived in, and it won Building of the Year from the profession's own institute in 1968 — a home and an exhibition space with no real line drawn between the two.\n\nWhen Heide finally opened to the public in November 1981, the very first exhibition was Nolan's Ned Kelly paintings, hung in the same dining room where he'd painted them thirty-five years earlier. Most museums are built to house art that was made somewhere else entirely. This one brought the art home.\n\nThe sculpture park continues well beyond both houses, scattered across the full fifteen acres down toward the river.\n\nGive yourself time to walk all of it — the kitchen garden at the northern end, planted in the same beds the Reeds once tended themselves, is easy to miss if you only came for the paintings."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 137,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.75803880914758,
+      "centroidLongitude": 145.08317730655932,
+      "city": "Melbourne",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Modernist",
+        "Green Escape",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f584dcc8-d83d-5bc5-b052-138abf1ae766",
+      "createdAt": "2026-08-11",
+      "title": "HER",
+      "shortDescription": "Five floors of one venue, each deliberately unlike the last, stacked inside a century-old CBD building.",
+      "longDescription": "The HQ Group — the team behind Arbory Bar and Arbory Afloat — gutted 270 Lonsdale Street entirely and reopened it in 2022 as a single venue that changes character floor by floor: Italian marble and orange velvet at the ground-floor bar, a stairwell lit specifically for the job by the French lighting designer Hervé Descottes, a dedicated music room and separate dining rooms mid-climb, and a Tamsin Johnson-designed rooftop on level five serving barbecue-driven Thai food with natural wine under art nouveau fixtures. A hundred-year-old shell asked to hold five rooms that deliberately refuse to agree with each other is a strange trick, and HER pulls it off precisely by not trying to reconcile them. Start at the ground-floor bar and work your way up — the mood gets looser and louder as you climb, and the rooftop is at its best just as the sun drops behind the skyline.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/her_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/her_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/her_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4af0b9fc-255f-54c9-a065-5676a66fbdc8",
+          "order": 0,
+          "title": "HER",
+          "caption": "This is HER: five floors of it, stacked on top of a Melbourne CBD building that's been standing for roughly a century.",
+          "latitude": -37.811299326602345,
+          "longitude": 144.9641315922808,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/her.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/her_hero.webp",
+          "transcriptText": "This is HER: five floors of it, stacked on top of a Melbourne CBD building that's been standing for roughly a century.\n\nTwo hundred and seventy Lonsdale Street: the HQ Group, the team behind Arbory Bar and Arbory Afloat, gutted this building entirely and reopened it in 2022 as a single venue that changes completely depending on which floor you're standing on. The ground floor runs as a bar with Italian marble underfoot, orange velvet banquettes and skirted stools borrowed from a Parisian sensibility, while the stairwell connecting every level was lit specifically for the job by the French lighting designer Hervé Descottes.\n\nKeep climbing and the mood shifts each time. Somewhere in the middle sits a dedicated music room, and a handful of separate dining spaces besides, each fitted out with its own colour palette and its own reason for existing, so that moving up through the building feels less like changing floors and more like changing venues entirely. By the time you reach the rooftop on level five, the whole thing opens into an open-air room designed by Tamsin Johnson, dressed in art nouveau fixtures and old-world glamour, serving barbecue-driven Thai food alongside natural wine and fruit-forward cocktails.\n\nA hundred-year-old shell is being asked to hold five entirely different rooms at once, each deliberately unlike the last, rather than one consistent theme repeated floor by floor. It's a strange trick to pull off inside a heritage building, and HER pulls it off simply by not trying to make the floors agree with each other.\n\nThe rooftop is at its best right as the sun starts to drop behind the skyline.\n\nIf you've got the stamina for all five floors, start at the ground floor bar and work your way up — the mood gets looser, and louder, the higher you climb, and the rooftop rewards the patience it takes to get there."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.811299326602345,
+      "centroidLongitude": 144.9641315922808,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary",
+        "Viewpoint",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8c6d2f6c-4417-5ba4-823f-24cdd0f0e414",
+      "createdAt": "2026-08-11",
+      "title": "Lune Croissanterie Fitzroy",
+      "shortDescription": "A former Formula One aerodynamicist applies materials science to butter and flour, in a glass cube inside a warehouse.",
+      "longDescription": "Kate Reid designed airflow for the Williams Formula One team before she ever laminated a croissant, and Lune runs on the same rigour: the kitchen is a climate-controlled glass cube by Studio Esteta, dropped into a crumbling brick Fitzroy shell, with ceiling lights splayed in long lines deliberately modelled on the Millennium Falcon's jump to hyperdrive. She opened a tiny Elwood shop in 2012, then moved here in 2015 with her brother Cam and café operator Nathan Toleman, and in 2016 the New York Times called her croissants some of the finest anywhere in the world. RMIT — the university where she trained as an aerospace engineer — later awarded her an honorary doctorate for the work, which is not a sentence many pastries have earned. Everything in the room is concrete, down to the stools. The queue moves faster than it looks; the better flavours rarely survive past midday.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lune-croissanterie_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lune-croissanterie_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lune-croissanterie_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lune-croissanterie_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lune-croissanterie_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c321231b-73ef-50fe-b567-04a987349a83",
+          "order": 0,
+          "title": "Lune Croissanterie Fitzroy",
+          "caption": "The woman who runs this kitchen used to design the aerodynamics of Formula One cars.",
+          "latitude": -37.79577355099446,
+          "longitude": 144.97983989471348,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lune-croissanterie.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lune-croissanterie_hero.webp",
+          "transcriptText": "The woman who runs this kitchen used to design the aerodynamics of Formula One cars.\n\nThe glass box in the middle of this converted Fitzroy warehouse is the kitchen itself: a climate-controlled cube, designed by the local firm Studio Esteta, that sits inside a crumbling brick shell like something dropped in from outside. Kate Reid trained as an aerospace engineer, worked as an aerodynamicist for the Williams Formula One team in her early twenties, then walked away from it and opened a tiny Elwood shop making croissants in 2012, before moving into this much larger space in 2015 with her brother Cam and the café operator Nathan Toleman.\n\nLook up while you're inside, and you'll notice the ceiling lights run in long splayed lines — deliberately modelled on the blur of stars when the Millennium Falcon jumps to hyperdrive, which gives the whole room the feel of a space station rather than a bakery.\n\nThe engineering habit never really left her. Lamination, temperature, timing — the entire discipline of croissant-making is essentially a materials-science problem, and Reid approaches it with the same rigour she once applied to airflow over a race car, which is part of why the New York Times called her croissants some of the finest anywhere in the world back in 2016. RMIT, the same university where she trained as an aerospace engineer, later awarded her an honorary doctorate for the work, which is an unusual thing for a croissant to earn anyone.\n\nEverything in the room is made of concrete: the counters, the islands, even the stools.\n\nIf the queue looks long, it usually moves faster than it looks — worth staying for, since the better flavours rarely last past midday, and the cabinet empties out well before closing most days."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.79577355099446,
+      "centroidLongitude": 144.97983989471348,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f4125573-632f-567e-beb1-30fc42bccc8f",
+      "createdAt": "2026-08-11",
+      "title": "Matilda 159 Domain",
+      "shortDescription": "Scott Pickett's most personal restaurant — named after his daughter — runs entirely on fire.",
+      "longDescription": "There's no gas burner in Matilda's open kitchen: everything that reaches the table at 159 Domain Road has crossed live coals or open flame — wood-roasted kohlrabi, smoked saltbush lamb rump, barramundi, wagyu, a bone-in rib-eye charred outside and pink through the middle, and a Pink Lady apple tarte tatin finished with smoked yoghurt ice cream. The room plays along: rough-edged timber tables, leather banquettes, glass cabinets packed with botanicals, and the kitchen essentially on display rather than hidden behind a wall. The choice worth noticing is that Pickett put the project carrying his own daughter's name inside someone else's hotel — the ground floor of United Places — rather than a standalone building of his own, and let the fire do the talking. Special-occasion territory, at around a hundred to a hundred and twenty dollars a head; Domain Road runs quiet, and it's a pleasant street to walk while you wait.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/matilda-159-domain_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/matilda-159-domain_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/matilda-159-domain_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "db0e1ba0-a93f-58da-a0e8-d6604d572806",
+          "order": 0,
+          "title": "Matilda 159 Domain",
+          "caption": "Look toward the open kitchen at the back of the room, and you'll notice there's no gas burner in sight — only fire.",
+          "latitude": -37.83405246768096,
+          "longitude": 144.98166427990026,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/matilda-159-domain.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/matilda-159-domain_hero.webp",
+          "transcriptText": "Look toward the open kitchen at the back of the room, and you'll notice there's no gas burner in sight — only fire.\n\nYou're on Domain Road in South Yarra, on the ground floor of the United Places hotel, inside a restaurant chef Scott Pickett named after his own daughter. Even the number in the name is really just the street address, one five nine, folded into the restaurant's own title rather than left on a sign outside. Everything that reaches the table has passed across live coals or open flame at some point: wood-roasted kohlrabi, smoked saltbush lamb rump, bush lamb, barramundi and wagyu, and a rib-eye bone-in charred outside and pink through the middle, finished off with a Pink Lady apple tarte tatin glazed in caramelised toffee and topped with smoked yoghurt ice cream.\n\nThe room itself plays along with the theme — rough-edged wooden tables, leather banquettes, and glass cabinets packed with botanicals, all built around a kitchen that's essentially on display rather than hidden behind a wall.\n\nThe choice worth noticing is putting Pickett's most personal project, the one carrying his own daughter's name, inside someone else's hotel rather than a standalone building of his own. Most chefs save the eponymous project for somewhere entirely theirs; Pickett folded his into someone else's address instead, and let the fire do the talking rather than the room.\n\nWatch the kitchen for a minute before you sit down.\n\nDomain Road runs quiet compared with the main strips nearby, so if you're early for your table, it's a pleasant enough street to walk while you wait, and worth knowing that a meal here tends to run somewhere around a hundred to a hundred and twenty dollars a head — squarely special-occasion territory rather than a casual Tuesday."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.83405246768096,
+      "centroidLongitude": 144.98166427990026,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "11d8ee10-2173-5c9c-8176-a089295becb3",
+      "createdAt": "2026-08-11",
+      "title": "Melbourne Museum",
+      "shortDescription": "A living rainforest behind one glass door, seventeen dinosaurs behind another, and Phar Lap standing in between.",
+      "longDescription": "Museums Victoria's flagship sits in Carlton Gardens next to the Royal Exhibition Building, on the same World Heritage site, holding natural science, cultural history and the state's First Peoples' stories across seven galleries and an IMAX cinema. The Forest Gallery is a genuine cool-temperate rainforest under glass — fifty-five metres long, over a hundred plant species, its own mist and birdsong rising thirty-five metres to the roof. Dinosaur Walk marches a twenty-metre Mamenchisaurus over sixteen other specimens, and the taxidermied Phar Lap stands exactly as he did the day he died — though his famously oversized heart is in Canberra, several hundred kilometres away. Bunjilaka, the museum's Aboriginal Cultural Centre, was built in direct collaboration with the Kulin Nation to tell Victoria's First Peoples' stories on their own terms — worth setting aside real time for, rather than squeezing in on the way to the dinosaurs. It's easy to lose half a day here without reaching the gift shop.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-museum_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6f7c9d05-8a52-57eb-9f0d-c5f9753e5f7a",
+          "order": 0,
+          "title": "Melbourne Museum",
+          "caption": "Behind one set of glass doors in this building, there's an actual rainforest growing.",
+          "latitude": -37.80266264859824,
+          "longitude": 144.97204120702585,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/melbourne-museum.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-museum_hero.webp",
+          "transcriptText": "Behind one set of glass doors in this building, there's an actual rainforest growing. Behind another, seventeen dinosaurs are marching through a gallery.\n\nInside this building, in Carlton Gardens, next door to the Royal Exhibition Building on the same World Heritage site, Melbourne Museum holds the flagship collection of Museums Victoria — natural science, cultural history and the state's own First Peoples' stories, spread across seven separate galleries and its own IMAX cinema, all under one roof.\n\nStart with the Forest Gallery. It's a genuine cool-temperate rainforest under glass, twenty-seven metres wide and fifty-five long, home to over a hundred plant species and around twenty different vertebrates, complete with its own mist and birdsong rising toward a roof thirty-five metres up at its tallest point.\n\nThen there's Dinosaur Walk, where a Mamenchisaurus stretching twenty metres from nose to tail towers over sixteen other specimens, and the taxidermied body of the racehorse Phar Lap, standing exactly as he did the day he died — though his heart, famously oversized, isn't here at all. It's on display in a museum in Canberra, several hundred kilometres away.\n\nThe Bunjilaka Aboriginal Cultural Centre sits within the same building, built in direct collaboration with the Kulin Nation to tell Victoria's First Peoples' stories in their own terms, which makes this one building doing an unusual amount at once: living ecosystem, celebrated legend, and living culture, all under a single roof.\n\nThe giant squid in the Marine Life gallery is twelve metres long, pulled from eight hundred metres down off Tasmania's coast.\n\nBunjilaka is worth setting aside real time for rather than squeezing in on the way to the dinosaurs — it rewards a slower visit than most of the museum around it, and it's easy to lose half a day here without ever reaching the gift shop."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.80266264859824,
+      "centroidLongitude": 144.97204120702585,
+      "city": "Melbourne",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Museum",
+        "History",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "afdfe4a3-a324-559a-9893-ae78c85a3def",
+      "createdAt": "2026-08-11",
+      "title": "Minamishima",
+      "shortDescription": "Twelve seats, one chef, fish flown in from Toyosu — the counter widely called Australia's finest sushi.",
+      "longDescription": "Koichi Minamishima spent two years simply washing rice at a restaurant in Nagoya before anyone let him near the sushi master, then fifteen years running the kitchen at Kenzan in the CBD, before opening this Richmond room under his own name in 2014. The hinoki wood counter seats exactly twelve, and he works its full length himself, plating each piece of nigiri and passing it across without much ceremony. Seatings run as a full omakase of around fifteen courses, or a shorter menu ending in ten courses of nigiri, built from local seafood alongside fish flown in directly from Tokyo's Toyosu market; a private room behind follows the precise geometry of a traditional tatami room. The scarcity is the whole philosophy — twelve seats, one chef, one continuous line of attention, and not a single seat ever added to make it easier. Bookings open weeks ahead and disappear almost as fast; put a date in the diary rather than chancing a walk-in.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/minamishima_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/minamishima_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/minamishima_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/minamishima_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9414d4bd-fe90-5f53-a047-a92846a0391a",
+          "order": 0,
+          "title": "Minamishima",
+          "caption": "There's a rule at this counter that most restaurants would find commercially reckless: only twelve seats, ever.",
+          "latitude": -37.81957044590478,
+          "longitude": 145.00501098227727,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/minamishima.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/minamishima_hero.webp",
+          "transcriptText": "There's a rule at this counter that most restaurants would find commercially reckless: only twelve seats, ever.\n\nThe hinoki wood counter running through this Richmond dining room seats exactly that many, and chef Koichi Minamishima works the whole length of it himself, plating each piece of nigiri and passing it across without much ceremony. Before any of this, he spent two years simply washing rice at a restaurant in Nagoya before anyone let him near the sushi master, then another fifteen years running the kitchen at one of the CBD's most respected Japanese restaurants, Kenzan, before finally opening this place under his own name in 2014.\n\nThe room strips everything back to what matters: dark, moody lighting that puts the spotlight on the chefs rather than the diners, fine timber with a near-perfect grain, and a private dining room built on the precise geometry of a traditional tatami room.\n\nEvery seating is either a full omakase of around fifteen courses, or a shorter menu of shared dishes followed by ten courses of individual nigiri, built from local seafood alongside fish flown in directly from Tokyo's Toyosu Fish Market. Diners choose between that counter, watching every cut made an arm's length away, or the smaller private dining room set aside for larger groups, where the square, tatami-derived geometry does most of the talking instead. The scarcity is really the whole philosophy — twelve seats, one chef, one continuous line of attention, rather than a room built to turn tables quickly.\n\nBookings open weeks ahead and disappear almost as fast.\n\nIf you can't get a seat this trip, it's worth putting a date in the diary for next time rather than trying to walk in — this is not a room that takes chances on passing trade, and Minamishima himself has never seemed inclined to add a single extra seat to make it easier."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.81957044590478,
+      "centroidLongitude": 145.00501098227727,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5f176235-efeb-51f5-b998-91869218965c",
+      "createdAt": "2026-08-11",
+      "title": "MPavilion",
+      "shortDescription": "Tadao Ando's first Australian building — a floating concrete disc that was meant to come down, and didn't.",
+      "longDescription": "Every MPavilion commissioned for Queen Victoria Gardens since 2014 was designed as a season-long architecture pavilion — OMA, Amanda Levete, Studio Mumbai and Glenn Murcutt among the authors — hosting a full programme of free talks, performances and workshops before being dismantled and the site handed back. MPavilion 10, commissioned by the Naomi Milgrom Foundation and opened in November 2023, is the Pritzker Prize-winning Tadao Ando's first built work in Australia: a concrete disc fourteen and a half metres wide resting on a single central column, two seventeen-metre walls with horizontal openings framing the park and the skyline like deliberate photographs, half the plan paved and half given to a still reflecting pool — pure geometry, borrowed from the logic of a traditional Japanese walled garden. It was meant to follow its nine predecessors out; public support kept it standing, and its stay now runs through 2030. Few Ando buildings exist south of the equator — walk the full loop of the walls.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mpavilion_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mpavilion_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mpavilion_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1e05a2e3-ae42-567a-9ab3-745164d85ff1",
+          "order": 0,
+          "title": "MPavilion",
+          "caption": "Every pavilion built in this park since 2014 was designed to come down again within a year or two.",
+          "latitude": -37.82155812322127,
+          "longitude": 144.9704533740583,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mpavilion.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mpavilion_hero.webp",
+          "transcriptText": "Every pavilion built in this park since 2014 was designed to come down again within a year or two. This one wasn't supposed to be the exception, and then it became one anyway.\n\nQueen Victoria Gardens, beneath a concrete disc fourteen and a half metres wide, resting on a single central column: that's MPavilion 10, the first Australian project by the Pritzker Prize-winning architect Tadao Ando, commissioned by the Naomi Milgrom Foundation and opened in November 2023.\n\nLook at the two long concrete walls first, each seventeen metres, with horizontal openings cut through them that frame the park and the city skyline like a pair of deliberate photographs. Ando calls the whole approach pure geometry: a circle and a square working together, with the space between them half paved and half given over to a still reflecting pool, borrowing directly from the logic of a traditional Japanese walled garden.\n\nNine pavilions came and went here before this one — designs by OMA, Amanda Levete, Studio Mumbai and Australia's own Glenn Murcutt among them, with a single year skipped during the pandemic — each one a season-long architecture commission, hosting a full programme of free talks, performances, workshops and installations before it was dismantled and the site handed back. This one was meant to follow the same pattern. Instead, public support for keeping it standing was strong enough that its stay has now been extended all the way through to 2030.\n\nWalk the full loop around the walls before you leave.\n\nThe gardens themselves run right down to the lake beyond the pavilion, and that stretch is worth the extra ten minutes if the weather's on your side, especially given how few of Ando's buildings exist anywhere south of the equator."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.82155812322127,
+      "centroidLongitude": 144.9704533740583,
+      "city": "Melbourne",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Venue",
+        "Architecture",
+        "Contemporary",
+        "Free to Visit",
+        "Tadao Ando"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "19ba1c62-05e0-52dc-ba26-261f7f00dbac",
+      "createdAt": "2026-08-11",
+      "title": "Napier Quarter",
+      "shortDescription": "A two-dollar espresso at the counter by day, a small-producers wine bar by night — same room, same tables.",
+      "longDescription": "Daniel Lewis and Simon Benjamin — cousins-in-law who each live close enough to walk here in under a minute — have run this Fitzroy corner since 2016 on a double identity: an unfussy espresso bar by day, with a strict no-alt-milk, no-takeaway policy and a standing-at-the-counter price it has more or less refused to move off two dollars, becoming a wine bar over the same twenty-odd seats at night without changing staff or moving a table. The anchovy toast — thick house mayonnaise and salsa verde under a scatter of anchovies, boiled egg on rye — is credited with starting a citywide obsession; beyond it the kitchen follows what's genuinely in season, yellow peaches with honey one month, ricotta with native pepperberry and persimmon the next. Venues that run two identities usually feel like two businesses sharing a lease; Napier Quarter simply lets the light change outside. Ask for a wine recommendation — the list moves faster than the printed version.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/napier-quarter_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/napier-quarter_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/napier-quarter_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8d3ba1a5-8e8a-5bc4-8151-fd77b2d1543a",
+          "order": 0,
+          "title": "Napier Quarter",
+          "caption": "Find the espresso bar at the front of the room, and order standing at the counter — it'll cost you two dollars, a price this place has more or less refused to move on.",
+          "latitude": -37.79666337684371,
+          "longitude": 144.98089815392186,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/napier-quarter.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/napier-quarter_hero.webp",
+          "transcriptText": "Find the espresso bar at the front of the room, and order standing at the counter — it'll cost you two dollars, a price this place has more or less refused to move on.\n\nThat's Napier Quarter, on a residential backstreet in Fitzroy, run since 2016 by Daniel Lewis and Simon Benjamin, cousins-in-law who each live close enough to walk here in under a minute. By day it runs as an unfussy espresso bar with a strict no-alt-milk, no-takeaway policy; by evening, the same twenty-odd seats quietly become a wine bar built around small producers, without ever changing staff or moving a single table.\n\nThe dish most people mention first is the anchovy toast: thick house mayonnaise and salsa verde under a scatter of anchovies, finished with a sliced boiled egg on rye, and it's credited with starting something of a citywide obsession when it first appeared on the menu. Beyond that, the kitchen leans hard into whatever's genuinely in season — yellow peaches dressed simply with honey one month, ricotta lifted with native pepperberry and persimmon the next — rather than running a fixed menu year-round.\n\nAnd here's the appeal: most venues that try to run two identities end up feeling like two separate businesses sharing a lease, but Napier Quarter simply lets the light change outside while the room keeps doing what it always does, just with wine glasses instead of coffee cups.\n\nThe wine list leans hard into small, lesser-known producers rather than anything you'd recognise from a bottle shop shelf.\n\nAsk whoever's behind the bar for a recommendation rather than reading the list top to bottom — it changes often enough that the printed version is already a little out of date."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.79666337684371,
+      "centroidLongitude": 144.98089815392186,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1acbaeeb-ba40-5c80-88a2-a7e51c060d10",
+      "createdAt": "2026-08-11",
+      "title": "National Gallery of Victoria",
+      "shortDescription": "Australia's oldest art museum, inside Roy Grounds' bluestone fortress — under the world's largest stained-glass ceiling.",
+      "longDescription": "The National Gallery of Victoria was founded in 1861, which makes it Australia's oldest public art museum and older than Federation itself; Roy Grounds' 1968 building on St Kilda Road — bluestone walls, deep moats, bold and deliberately blunt geometry — is really just the fourth or fifth home for the collection. Visitors arrive through the Waterwall, a continuous sheet of water running down glass at the entrance, and in the Great Hall overhead Leonard French's stained-glass ceiling — four years in the making, sixty point nine metres long — remains the largest work of its kind anywhere in the world, held up by its own forest of slim columns. None of it was decoration added later: Grounds built the sculpture, the ceiling and even the Featherston furniture into the plan from the beginning, so the building and its collection were never really two separate things. Lie down on a Great Hall bench if the room isn't busy — it's the only way to take in the whole ceiling at once.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ngv_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ngv_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ngv_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ngv_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "97356548-859a-5c81-8385-50ce48adf363",
+          "order": 0,
+          "title": "National Gallery of Victoria",
+          "caption": "The ceiling above the Great Hall is so heavy with glass and steel that it needed its own forest of slim columns just to keep it from sagging under its own weight.",
+          "latitude": -37.82245009938868,
+          "longitude": 144.96889561002334,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/ngv.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/ngv_hero.webp",
+          "transcriptText": "The ceiling above the Great Hall is so heavy with glass and steel that it needed its own forest of slim columns just to keep it from sagging under its own weight.\n\nThe Great Hall sits dead centre of the National Gallery of Victoria on St Kilda Road, a building designed by Roy Grounds and opened in 1968, all bluestone walls, deep moats and bold, deliberately blunt geometry. The gallery itself is far older than its building — founded in 1861, it's Australia's oldest public art museum, which means this striking modernist shell is really just the fourth or fifth home for a collection that predates Federation. Overhead, Leonard French's stained-glass ceiling took him and his team four years to build, running sixty point nine metres long and thirteen point seven metres high, and it remains the largest work of its kind anywhere in the world.\n\nOutside, the Waterwall along St Kilda Road does something similarly simple and effective: a continuous sheet of water running down glass at the entrance, so visitors walk straight through it on their way inside, arriving slightly changed before they've seen a single painting.\n\nNone of this was decoration added after the fact. Grounds built the sculpture, the ceiling and even the furniture into the plan from the very beginning — Norma Redpath's coat of arms above the entrance, furniture designed specifically for the space by Grant and Mary Featherston, French's glass overhead — so the building and its collection were never really two separate things to begin with, more one long, continuous artwork that visitors happen to walk through.\n\nLie down on one of the benches in the Great Hall if the room isn't too busy.\n\nIt's the only way to take in the whole ceiling at once, and most visitors walk straight underneath without ever trying it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.82245009938868,
+      "centroidLongitude": 144.96889561002334,
+      "city": "Melbourne",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Modernist",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b57293ab-8421-54c1-b750-580af0a53a30",
+      "createdAt": "2026-08-11",
+      "title": "Pellegrini's Espresso Bar",
+      "shortDescription": "The 1954 espresso bar that taught Melbourne coffee — same curved counter, same red vinyl, seventy years on.",
+      "longDescription": "Leo and Vildo Pellegrini had spent years pouring coffee at Florentino's down the street before opening their own room on Bourke Street in 1954, running one of the first genuine Italian espresso machines in the city — very likely the first inside the CBD, though a handful of Lygon Street cafés still contest the wider title. The room expanded once, in 1958, and has barely needed to change since: red vinyl stools along a long curved counter, mirrored walls, a chequerboard floor, and a short menu of pasta dishes served to a clientele that shifted over the decades from Italian migrants to theatre crowds, writers and tourists working from guidebooks. The National Trust formally listed it in 2014 — really just a certificate for something regulars had decided long before. Order a spaghetti if there's room at the counter, not just a coffee; it's the longest-serving dish and the best evidence of why this room never needed to reinvent itself.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pellegrinis_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8d2431a5-142e-5a30-a3fa-36da346b0b88",
+          "order": 0,
+          "title": "Pellegrini's Espresso Bar",
+          "caption": "Two Italian brothers who'd spent years pouring coffee at a restaurant down the street opened their own room on Bourke Street in 1954, and this city's coffee habit changed not long after.",
+          "latitude": -37.81156576913734,
+          "longitude": 144.97119768162662,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pellegrinis.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pellegrinis_hero.webp",
+          "transcriptText": "Two Italian brothers who'd spent years pouring coffee at a restaurant down the street opened their own room on Bourke Street in 1954, and this city's coffee habit changed not long after.\n\nTake a stool at the counter on Bourke Street if you can find one — red vinyl, set along a long curved bar that's barely moved since the room was built, with mirrored walls and a chequerboard floor doing the rest of the talking. Leo and Vildo Pellegrini had worked at Florentino's nearby before striking out on their own, and Pellegrini's became one of the first places in the city to run a genuine Italian espresso machine, helping kick-start Melbourne's coffee culture in the process. Whether it was truly the very first, ahead of a handful of cafés on Lygon Street doing much the same thing at roughly the same time, is still argued over by historians, though it was very likely the first inside the CBD itself.\n\nThe room expanded once, in 1958, and has barely needed to change since: the same narrow counter, the same handful of pasta dishes, and a clientele that shifted over the decades from Italian migrants to theatre crowds, writers, and eventually tourists working from a guidebook.\n\nThe debate over who really had the first machine matters far less than what's actually still running here — the same counter, doing the same job, more than seventy years on. In 2014 the National Trust formally listed the place, which is really just a certificate for something regulars had already decided long before.\n\nOrder a spaghetti if there's room at the counter, not just a coffee.\n\nIt's the dish that's been on the menu the longest, and it's usually the best evidence of why this room never needed to reinvent itself."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.81156576913734,
+      "centroidLongitude": 144.97119768162662,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "History",
+        "Food",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4973a4ab-cf9e-5ff6-b00b-54d00b18367f",
+      "createdAt": "2026-08-11",
+      "title": "Piccolina Gelateria",
+      "shortDescription": "Third-generation gelato in Hardware Lane, made from scratch on site — down to baking the brownies.",
+      "longDescription": "Sandra Foti learned gelato first from her father, who'd been making his own at home for years, then left a career in graphic design, went to Italy to sharpen the craft properly, and opened her first shop in Hawthorn in 2015. In the Hardware Lane store every batch is still made from scratch on site — no pre-made bases, no shortcuts, down to baking the brownies for the brownie gelato — with a core range of classics (salted caramel, passionfruit, honeycomb, a well-regarded dairy-free pistachio) beside a blackboard of seasonal Victorian produce that regulars check the way other people check the weather. Scaling up usually costs a gelateria its method — most that grow past one shop start buying bases in — but Piccolina kept the from-scratch rule as the stores multiplied, which is presumably part of why Nigella Lawson is said to stop in whenever she's in Melbourne. Ask what's on the blackboard before ordering from the regular menu.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piccolina-gelateria_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piccolina-gelateria_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piccolina-gelateria_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piccolina-gelateria_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piccolina-gelateria_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "435ea38d-208f-5ba7-839c-ab1729f200e1",
+          "order": 0,
+          "title": "Piccolina Gelateria",
+          "caption": "There's a family recipe behind this counter, and it's barely changed in three generations.",
+          "latitude": -37.813409185656816,
+          "longitude": 144.96113285636216,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/piccolina-gelateria.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/piccolina-gelateria_hero.webp",
+          "transcriptText": "There's a family recipe behind this counter, and it's barely changed in three generations.\n\nInside 43 Hardware Lane, one of the narrowest laneways in the CBD, Sandra Foti sells gelato made from a technique she learned first from her father, who'd been making his own at home for years before she ever thought to turn it into a business. She left a career in graphic design, went to Italy to sharpen the craft properly, and came home to open her first shop in Hawthorn in 2015.\n\nEvery batch is still made from scratch on site — no pre-made bases, no shortcuts — right down to baking her own brownies for the brownie gelato rather than buying them in. The core range leans toward the familiar, salted caramel, passionfruit, honeycomb, alongside a genuinely well-regarded pistachio made without dairy, but the flavours lean just as heavily on local, seasonal Victorian produce, and the blackboard changes often enough that regulars check it the way other people check the weather.\n\nNot much got lost in scaling up here. A lot of gelato businesses that grow past one shop start relying on bases made somewhere else entirely, but Piccolina kept the same from-scratch method even as more stores opened, which is presumably part of why it's built a following well beyond the neighbourhood — Nigella Lawson is said to make a point of stopping in whenever she's in Melbourne, a detail regulars bring up almost as often as the flavours themselves.\n\nAsk what's on the blackboard before ordering from the regular menu.\n\nThe rotating flavours are usually where the more interesting combinations turn up, and they don't last long once they're gone — worth checking even if you already know exactly which classic flavour you came in for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.813409185656816,
+      "centroidLongitude": 144.96113285636216,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "23b8d6b5-56f4-5f0d-9460-ef04751d8a73",
+      "createdAt": "2026-08-11",
+      "title": "Pidapipó Laboratorio Fitzroy",
+      "shortDescription": "A gelato laboratory in a former bank, with beehives and a micro-garden on the roof feeding the counter below.",
+      "longDescription": "Lisa Valmorbida trained at Italy's Carpigiani Gelato University before starting Pidapipó as a pop-up in 2013, and the Laboratorio — inside a former 1960s bank at the northern end of Brunswick Street — is the fourth store she runs with her brother Jamie, and by far the most ambitious. The menu is held to eight flavours, deliberately far smaller than the other shops, built around local fruit growers and specialty seasonal ingredients so each flavour gets real attention rather than being one of forty in the same cabinet. The roof carries a working micro-garden of lemon myrtle, figs and wild strawberries, plus custom beehives installed by the urban beekeeping outfit Honey Fingers, whose honey ends up back in the gelato downstairs. A fourth store could easily have been another scoop shop; the siblings built something closer to a research kitchen stacked on a bank vault instead. Ask which flavour uses the rooftop honey that week — it changes with the bees' own schedule.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pidapipo-laboratorio_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pidapipo-laboratorio_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pidapipo-laboratorio_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pidapipo-laboratorio_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "21db374f-6795-5a47-860f-ad259f073b55",
+          "order": 0,
+          "title": "Pidapipó Laboratorio Fitzroy",
+          "caption": "This building used to guard people's money. Now it guards gelato.",
+          "latitude": -37.793945771790916,
+          "longitude": 144.97901908888127,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pidapipo-laboratorio.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pidapipo-laboratorio_hero.webp",
+          "transcriptText": "This building used to guard people's money. Now it guards gelato.\n\nThe Laboratorio sits inside a former 1960s bank on the northern end of Brunswick Street, the fourth and by far the most ambitious store from siblings Lisa and Jamie Valmorbida, who started Pidapipó as a pop-up back in 2013. Lisa trained at the Carpigiani Gelato University in Italy before bringing the technique home, and this flagship location is built specifically to be a working laboratory rather than just another counter — an eight-flavour menu, deliberately kept far smaller than any of the other three stores, built entirely around local fruit growers and specialty seasonal ingredients so that each flavour gets real attention rather than being one of forty crowding the same cabinet.\n\nLook up, if you get the chance, toward the roof. There's a working micro-garden up there growing lemon myrtle, figs and wild strawberries, and a set of custom beehives installed by the urban beekeeping outfit Honey Fingers, producing actual honey that ends up back in the gelato downstairs. None of this was strictly necessary for a fourth store — Pidapipó could easily have opened another straightforward scoop shop and called it a day — but the siblings chose to build something closer to a genuine research kitchen instead.\n\nMost gelato shops buy their specialty ingredients in. This one grows a meaningful share of them on its own roof, which turns the whole building into something closer to a working farm stacked on top of a bank vault than a typical dessert shop.\n\nAsk which flavour uses the rooftop honey that week.\n\nIt changes with the season and the bees' own schedule, so the honey flavour on any given visit is genuinely one-of-a-kind, and it may well be different again the next time you come back to the same counter."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.793945771790916,
+      "centroidLongitude": 144.97901908888127,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f8a2654e-f1c1-59ef-a7c5-0f43514e6b9f",
+      "createdAt": "2026-08-11",
+      "title": "Reine & La Rue",
+      "shortDescription": "Dinner on the floor of Melbourne's original Stock Exchange, under stained glass built for money rather than appetite.",
+      "longDescription": "William Pitt's 1891 Stock Exchange — lavish Free Gothic behind the old ANZ banking chamber at the corner of Queen and Collins — spent its first life moving money: stained glass throwing colour across a mosaic marble floor, towering pillars framing men shouting share prices. The Nomad Group's Al and Rebecca Yazbek spent more than two years working with Heritage Victoria and a pair of specialist architecture firms, negotiating what could be touched and what absolutely couldn't, before opening Reine & La Rue in August 2023 with the grandeur inherited rather than invented. The menu leans French — a baguette with cultured butter, wood-roasted leeks with hazelnut, zucchini flowers stuffed with duck, an eye fillet in café de Paris sauce — and flexes from a glass of Champagne at the bar to a whole table of shared plates under the glass. Look up before you look at the menu; the room fills, and the noise rises to meet the ceiling.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/reine-la-rue_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/reine-la-rue_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/reine-la-rue_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/reine-la-rue_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/reine-la-rue_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3e0b4d14-30ec-5058-8598-936ba56290d1",
+          "order": 0,
+          "title": "Reine & La Rue",
+          "caption": "Before anyone ordered a baguette in this room, people were trading shares in it.",
+          "latitude": -37.81653448928612,
+          "longitude": 144.96196729459834,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/reine-la-rue.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/reine-la-rue_hero.webp",
+          "transcriptText": "Before anyone ordered a baguette in this room, people were trading shares in it.\n\nBehind the old ANZ banking chamber, on the corner of Queen and Collins, Reine and La Rue occupies the heritage-listed shell of Melbourne's original Stock Exchange, a building designed by William Pitt and finished in 1891 in a lavish Free Gothic style. Stained glass windows still throw colour across a mosaic marble floor, and the pillars that once framed men shouting share prices now frame up to a hundred and fifty people eating dinner instead.\n\nIt took the Nomad Group's Al and Rebecca Yazbek more than two years to get here, working alongside Heritage Victoria and a pair of specialist architecture firms to restore the space without smoothing away its history — an approach that opened to the public in August 2023, after months of negotiating what could be touched and what absolutely couldn't.\n\nThe menu leans French: a baguette served simply with cultured butter, wood-roasted leeks with hazelnut, zucchini flowers stuffed with duck, an eye fillet finished in café de Paris sauce. It's built to flex around however you want the night to go — a glass of Champagne and a snack at the bar, a full three courses tucked into a booth, or a whole table's worth of shared plates under that stained glass.\n\nWhat's worth knowing, standing in the middle of all this, is that almost nothing here was built for eating. The mosaic floor, the marble, the towering pillars — every bit of the room's grandeur was designed to move money, not appetite, and the restaurant simply inherited it rather than inventing anything new.\n\nLook up before you look at the menu.\n\nThe stained glass runs the full height of the room, and it's easiest to appreciate before the tables fill and the noise rises to match the ceiling."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.81653448928612,
+      "centroidLongitude": 144.96196729459834,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Gothic",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "af71230e-eb66-5732-831b-f799b735f869",
+      "createdAt": "2026-08-11",
+      "title": "Royal Botanic Gardens Victoria — Melbourne Gardens",
+      "shortDescription": "The gardens where 'picturesque' beat 'scientific' — and the winner's framework still shapes every path.",
+      "longDescription": "Melbourne set this land aside south of the Yarra in March 1846 and gave it first to Ferdinand von Mueller, a serious botanist more interested in cataloguing species than arranging them beautifully. Public pressure eventually pushed him out, and from 1873 William Guilfoyle spent thirty-six years remaking the landscape as a picturesque English park crossed with a subtropical fantasy — bold foliage, sweeping lawns, sightlines engineered to surprise, plant collections chosen as much for drama as for science. Very little you walk through today escaped his hand: the ornamental lake and the great central lawn trace straight back to his opening years as director. The tension between the two men is the whole story of the place — a working scientific institution versus somewhere lovely for a Sunday afternoon — and the public won comprehensively. Guilfoyle's plantings are labelled throughout if you want the science under the scenery, and von Mueller's herbarium survives too, tucked away from the main paths.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-botanic-gardens_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-botanic-gardens_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-botanic-gardens_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-botanic-gardens_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-botanic-gardens_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "82597e90-6c82-537c-89aa-704c40618743",
+          "order": 0,
+          "title": "Royal Botanic Gardens Victoria — Melbourne Gardens",
+          "caption": "In 1873, Melbourne's botanic gardens got a new director for one specific reason: the previous one wasn't picturesque enough.",
+          "latitude": -37.830040896383814,
+          "longitude": 144.98011741002355,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/royal-botanic-gardens.mp3",
+          "audioDurationSeconds": 136,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-botanic-gardens_hero.webp",
+          "transcriptText": "In 1873, Melbourne's botanic gardens got a new director for one specific reason: the previous one wasn't picturesque enough.\n\nSouth of the Yarra, on land set aside for the gardens back in March 1846, the Melbourne Gardens spent their first decades under Ferdinand von Mueller, a serious botanist more interested in cataloguing species than arranging them beautifully. Public pressure eventually pushed him out, and William Guilfoyle took over in 1873 with an entirely different brief: make it beautiful, not just correct.\n\nGuilfoyle spent the next thirty-six years reshaping the landscape into something closer to a picturesque English park crossed with a subtropical fantasy — bold foliage, sweeping lawns, sightlines engineered to surprise, and plant collections chosen as much for drama as for science. Very little of what you're walking through today wasn't touched by his hand at some point between 1873 and 1909.\n\nThe tension between those two directors is really the whole story of this place. Von Mueller wanted a working scientific institution, filled with specimens organised for study, while the public wanted somewhere lovely to walk on a Sunday afternoon, and in the end the public won, comprehensively enough that Guilfoyle's framework still shapes every path and lawn more than a century after he stopped working here. Even the ornamental lake and the sweeping central lawn, the parts most visitors photograph first, trace straight back to decisions Guilfoyle made in his opening years as director.\n\nSomewhere between the ornamental lake and the tree fern gully, both instincts are still quietly at work.\n\nGuilfoyle's plantings are labelled throughout the gardens if you want to hunt down the science underneath the scenery — worth doing, even if it's the scenery that pulled you in first, and von Mueller's original herbarium collection still exists too, just tucked away from the main paths where the crowds rarely wander."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 136,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.830040896383814,
+      "centroidLongitude": 144.98011741002355,
+      "city": "Melbourne",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Victorian",
+        "Iconic Landmark",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4e64ff24-e07b-5ebd-aedf-d562499e0899",
+      "createdAt": "2026-08-11",
+      "title": "Royal Exhibition Building",
+      "shortDescription": "The world's-fair hall that refused to be temporary — and hosted a nation's first parliament for good measure.",
+      "longDescription": "Joseph Reed modelled the dome directly on Florence Cathedral, wrapped the rest in a French Beaux-Arts cross borrowed from half a dozen European traditions at once, and the whole structure went up in eighteen months for the Melbourne International Exhibition of 1880 — a young gold-rush colony arguing it belonged in the same conversation as London, Paris and Vienna. On the twenty-fifth of May 1901, the Great Hall under that dome hosted the opening of the first federal parliament of Australia: a brand-new nation choosing a Victorian exhibition hall, rather than anywhere purpose-built, to mark the moment. Almost every other building raised for a nineteenth-century world's fair was temporary and came down within a few years; this one never did, and it still hosts exhibitions the way it always has — a large part of why UNESCO listed it together with Carlton Gardens in 2004. Step well back at some point: the proportions only make sense from a distance, and the gardens were designed around exactly that long view.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-exhibition-building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-exhibition-building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-exhibition-building_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-exhibition-building_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8d209f0d-b406-5292-83a7-0a99e1b6ff82",
+          "order": 0,
+          "title": "Royal Exhibition Building",
+          "caption": "This building went up in just eighteen months, and it's been standing for well over a century since.",
+          "latitude": -37.804697575235416,
+          "longitude": 144.9715965887573,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/royal-exhibition-building.mp3",
+          "audioDurationSeconds": 119,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/royal-exhibition-building_hero.webp",
+          "transcriptText": "This building went up in just eighteen months, and it's been standing for well over a century since.\n\nStand back far enough to take in the whole dome at once, and you're looking at architect Joseph Reed's answer to Florence Cathedral — he modelled the octagonal roof and dome on it directly, then wrapped the rest of the building in a French Beaux-Arts cross shape borrowed from half a dozen different European traditions at once. Governor George Bowen laid the foundation stone in February 1879, and the whole structure was finished in time for the Melbourne International Exhibition the following year.\n\nThe dome isn't just decoration sitting on top of a warehouse. It crowns a genuine Great Hall, built from brick, timber, steel and slate, and the building as a whole was Reed's attempt to convince the rest of the world that a young gold-rush colony belonged in the same conversation as London, Paris and Vienna, all of whom had already staged their own international exhibitions by then. Reed borrowed freely from Byzantine, Romanesque and Italian Renaissance sources at once, rather than committing to any single tradition, which is part of why the building still reads as slightly unplaceable today.\n\nIt clearly worked well enough, because on the twenty-fifth of May 1901, this same Great Hall hosted the opening of the first federal parliament of Australia — a brand-new nation choosing a Victorian exhibition hall, rather than anywhere purpose-built, to mark the moment officially.\n\nWalk the full width of the building at some point, not just underneath the dome.\n\nThe proportions only really make sense from a distance, and most visitors never step back far enough to see the whole thing in one go — the surrounding gardens, laid out at the same time as the building, were designed with exactly that long view in mind."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 119,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.804697575235416,
+      "centroidLongitude": 144.9715965887573,
+      "city": "Melbourne",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "History",
+        "Victorian",
+        "Iconic Landmark",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6a957f42-148a-5e5d-85a6-a45695c4940d",
+      "createdAt": "2026-08-11",
+      "title": "Shot Tower Museum",
+      "shortDescription": "A nine-storey Victorian shot factory, swallowed whole by a shopping centre under a glass cone.",
+      "longDescription": "Coop's Shot Tower has stood on this spot since 1889, dropping molten lead through a sieve from height to form pellets — up to twenty-five million an hour at full output. It was the tallest structure in Melbourne's CBD until the mid-1940s and kept producing shot commercially until 1961, when tightening firearms regulations finally killed the demand. Saved from the wrecking ball in 1973, it was then absorbed rather than restored: in 1991 Melbourne Central was built around it, with the Japanese architect Kisho Kurokawa's eighty-four-metre conical glass roof — twenty storeys of glazing — enclosing the whole tower above shopfronts that have nothing to do with Victorian industry. The free museum on the tower's second floor keeps the numbers: three hundred and twenty-seven steps, six tonnes of shot a week at peak, and the sheer strangeness of a heritage building surviving because a shopping mall built itself around it rather than through it. Find the seam where the old brickwork meets the modern glass; that join is the whole story.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shot-tower-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shot-tower-museum_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "786c7514-12f1-5c0e-a22c-1deb171d50d6",
+          "order": 0,
+          "title": "Shot Tower Museum",
+          "caption": "Look straight up through the glass, and you'll see a nine-storey brick tower that has no business being inside a shopping centre — and yet here it is.",
+          "latitude": -37.81021734675797,
+          "longitude": 144.9630006118723,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/shot-tower-museum.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shot-tower-museum_hero.webp",
+          "transcriptText": "Look straight up through the glass, and you'll see a nine-storey brick tower that has no business being inside a shopping centre — and yet here it is.\n\nCoop's Shot Tower has stood on this spot since 1889, originally built to manufacture lead shot: molten metal dropped from height through a sieve, cooling into pellets on the way down, at a rate of up to twenty-five million pellets an hour when the tower was at full output. It was the tallest structure in Melbourne's CBD until the mid-1940s, and it kept producing shot commercially right up until 1961, when tightening firearms regulations finally killed the demand.\n\nRather than demolish an obsolete factory in the middle of the city, planners saved it from the wrecking ball in 1973 and, in 1991, built an entire shopping centre around it — enclosing the whole tower beneath an eighty-four-metre conical glass roof designed by the Japanese architect Kisho Kurokawa, twenty storeys of glazing rising above shop fronts that have absolutely nothing to do with lead shot or Victorian industry.\n\nThe museum on the tower's second floor, free to enter, tells the rest of the story: the three hundred and twenty-seven steps to the top, the six tonnes of shot produced weekly at its peak, and the sheer strangeness of a Victorian industrial relic surviving because a shopping mall was willing to build itself around it rather than through it. It's a genuinely unusual piece of adaptive reuse — most heritage buildings get restored and reopened; very few get quietly absorbed into the middle of a food court.\n\nLook for the join where the old brickwork meets the modern glass overhead.\n\nIt's easy to miss while you're shopping, but that seam is really the whole story of the building above you."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.81021734675797,
+      "centroidLongitude": 144.9630006118723,
+      "city": "Melbourne",
+      "primaryCategory": "history",
+      "tags": [
+        "Tower",
+        "History",
+        "Engineering",
+        "Victorian",
+        "Hidden Gem",
+        "Free to Visit",
+        "Kisho Kurokawa"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "eb3aeb11-522a-599c-831b-72336b5b48fd",
+      "createdAt": "2026-08-11",
+      "title": "Shrine of Remembrance",
+      "shortDescription": "Victoria's memorial to the First World War, engineered so that once a year, light falls on a single word.",
+      "longDescription": "The Shrine of Remembrance opened on Armistice Day — the eleventh of November 1934 — before a crowd of three hundred thousand, as Victoria's memorial to the hundred and fourteen thousand men and women of the state who served in the First World War. Architects Phillip Hudson and James Wardrop, both veterans themselves, won the 1922 design competition with a building that borrows the Parthenon's Doric columns for its porticoes and the stepped pyramid roofline of the Mausoleum at Halicarnassus. In the Sanctuary, an aperture in the ceiling is calibrated so that at eleven in the morning on the eleventh of November, a narrow ray of sun crosses the Stone of Remembrance and settles precisely on the word LOVE — the exact hour the Armistice took effect in 1918 — with a quieter daily echo falling at eleven each morning year-round. Outside, the Eternal Flame lit by Queen Elizabeth II in 1954 extends the Shrine's remembrance to the conflicts that came after. The balcony above the Sanctuary looks back over the forecourt and out to the city.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shrine-of-remembrance_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shrine-of-remembrance_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shrine-of-remembrance_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shrine-of-remembrance_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shrine-of-remembrance_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shrine-of-remembrance_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0742d79b-a102-538f-8001-52ce8e266900",
+          "order": 0,
+          "title": "Shrine of Remembrance",
+          "caption": "Once a year, for a matter of seconds, a beam of sunlight finds one specific word carved into the stone in front of you.",
+          "latitude": -37.83034689297905,
+          "longitude": 144.97339971002356,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/shrine-of-remembrance.mp3",
+          "audioDurationSeconds": 114,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/shrine-of-remembrance_hero.webp",
+          "transcriptText": "Once a year, for a matter of seconds, a beam of sunlight finds one specific word carved into the stone in front of you.\n\nThe Stone of Remembrance sits at the heart of the Shrine's Sanctuary, and the Shrine itself was built as Victoria's memorial to the hundred and fourteen thousand men and women who served in the First World War, opened and dedicated on Armistice Day, the eleventh of November 1934, before a crowd of three hundred thousand people. The design came from a public competition held in 1922, drawing eighty-three entries, won by architects Phillip Hudson and James Wardrop, both veterans themselves, whose winning design borrowed the Doric columns of the Parthenon for the north and south porticoes and the stepped pyramid roofline from ancient reconstructions of the Mausoleum at Halicarnassus.\n\nAn aperture in the ceiling above the Stone lets a narrow ray of light through, and at eleven in the morning, on the eleventh day of November, that beam settles precisely on the word LOVE — timed to mark the exact hour the Armistice took effect in 1918.\n\nThe same beam falls at eleven each morning, year-round, as a quieter daily echo of that one calibrated moment.\n\nOutside, in the forecourt added after the Second World War, the Eternal Flame has burned continuously since Queen Elizabeth the Second lit it in February 1954, extending the Shrine's purpose to commemorate the conflicts that came after the one it was first built for.\n\nTake a moment in the Sanctuary before you move on.\n\nThe balcony above offers a view back down over the forecourt and out toward the city — worth the climb, particularly on a clear afternoon."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 114,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.83034689297905,
+      "centroidLongitude": 144.97339971002356,
+      "city": "Melbourne",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Remembrance",
+        "War",
+        "Neoclassical",
+        "Iconic Landmark",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "083cbb18-f3bf-5e0a-be05-dee2abc31a43",
+      "createdAt": "2026-08-11",
+      "title": "Siglo",
+      "shortDescription": "An unmarked door beside The European, a run of chesterfields, and a rooftop built for cigars and slow drinks.",
+      "longDescription": "The door has never had a sign: slip through it beside The European, past a run of worn leather chesterfields, and the stairs bring you out on the roof of the Melbourne Supper Club — a room dressed more like a French bistro than a rooftop bar, white tablecloths and wicker chairs arranged for conversation rather than showing off, with Parliament House and St Patrick's Cathedral both visible from the edge. The real draw sits in a cabinet behind the bar: a proper humidor stocked with Cohiba, Partagás, Upmann and Punch, beside a list built for slow drinking — the Maker's old fashioned gets mentioned most, though the Fijian Old Spice has its own following among regulars who settle in for the evening. Most Melbourne rooftops chase the same formula of big views, loud music and a queue; Siglo trades all of it for something closer to a private members' room in the open air, which is why so many regulars found it by accident, wandering upstairs on a whim. Ask for a seat near the edge, facing the spire.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/siglo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/siglo_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8a3fdbe2-9037-5c2f-91af-325a53ebbd20",
+          "order": 0,
+          "title": "Siglo",
+          "caption": "There's an unmarked door beside one of Bourke Street's best-known restaurants, and it leads somewhere else entirely.",
+          "latitude": -37.810735080745005,
+          "longitude": 144.97254816688104,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/siglo.mp3",
+          "audioDurationSeconds": 109,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/siglo_hero.webp",
+          "transcriptText": "There's an unmarked door beside one of Bourke Street's best-known restaurants, and it leads somewhere else entirely.\n\nSlip through it next to The European, past a run of worn leather chesterfields, and the stairs bring you out on the roof of the Melbourne Supper Club — a room dressed more like a French bistro than a rooftop bar, with white tablecloths, wicker chairs and wooden garden furniture arranged more for conversation than for showing off the view, even with Parliament House and St Patrick's Cathedral both visible from the edge.\n\nThe real draw sits in a cabinet behind the bar: a proper humidor stocked with Cuban cigars, Cohiba, Partagas, Upmann and Punch among them, alongside a drinks list built for slow drinking rather than quick rounds. The old fashioned made with Maker's bourbon gets mentioned most often, though the Fijian Old Spice has its own following among regulars who come specifically for the cigars and settle in for the evening rather than moving on to somewhere else.\n\nMost Melbourne rooftops chase the same formula — big views, loud music, a queue at the door. Siglo does almost none of that on purpose, trading the spectacle for something closer to a private members' room that happens to sit in the open air, which is presumably why the door downstairs was never given a sign, and why so many regulars discovered it entirely by accident, wandering upstairs from the restaurant below on a whim.\n\nAsk for a seat near the edge if the weather's cooperating.\n\nThe view toward St Patrick's spire is better from there than anywhere else on the roof, and it's rarely the seat people think to request first."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 109,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.810735080745005,
+      "centroidLongitude": 144.97254816688104,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem",
+        "Viewpoint",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e0ebb4c0-c775-5ecd-96e4-7b9b728c273f",
+      "createdAt": "2026-08-11",
+      "title": "State Library Victoria",
+      "shortDescription": "The reading room whose concrete dome was, for a moment in 1913, the largest ever poured on earth.",
+      "longDescription": "The La Trobe Reading Room — six storeys of galleries stacked beneath a single octagonal dome — was designed by Norman Peebles to rival the great reading rooms of the British Museum and the Library of Congress, and opened in November 1913 with room for thirty-two thousand books and three hundred and twenty readers. Its reinforced-concrete shell was, briefly, the largest anywhere on the planet. Leaks forced the library to sheet the skylights in copper in 1959, and the room spent four decades under artificial light until a major restoration reopened the glass in July 2003 — a renovation precise enough to order its new linoleum from the same Scottish company that supplied the original ninety years earlier, simply because nobody wanted to be the ones who got it wrong. Stand at the exact centre of the floor and look straight up: the dome only reads as one shape from directly underneath, and most visitors walk the perimeter without ever finding the spot.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/state-library-victoria_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/state-library-victoria_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/state-library-victoria_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/state-library-victoria_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "31b276b7-32a0-543e-bcc0-c7fc853ac29b",
+          "order": 0,
+          "title": "State Library Victoria",
+          "caption": "When this dome went up in 1913, its concrete shell was the largest ever poured anywhere in the world.",
+          "latitude": -37.809564534470276,
+          "longitude": 144.9654536030752,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/state-library-victoria.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/state-library-victoria_hero.webp",
+          "transcriptText": "When this dome went up in 1913, its concrete shell was the largest ever poured anywhere in the world.\n\nThe La Trobe Reading Room, six storeys of it stacked beneath a single octagonal dome, was designed by Norman Peebles to rival the great reading rooms of the British Museum and the Library of Congress, and it opened officially on the fourteenth of November that year, with room enough for thirty-two thousand books and three hundred and twenty readers at once — governor-general Lord Denman performed the honours himself, in front of a crowd that had waited years to see the space finally finished.\n\nLook up at the skylights ringing the dome, because for decades you couldn't actually see them. Leaks forced the library to cover the glass in copper sheeting back in 1959, and it stayed hidden until a major renovation reopened the space in July 2003 under its current name.\n\nThat renovation was almost absurdly precise about getting the details right — the new linoleum flooring, for instance, was ordered from the exact same Scottish company that had supplied the original in 1913, ninety years on, simply because nobody wanted to be the ones who got it wrong. The building itself was designed to house the whole library end to end: a basement, a ground floor, the first-floor reading room, and four further gallery levels rising above it, all wrapped inside what was, for a brief moment, the largest reinforced-concrete structure anywhere on the planet.\n\nStand at the centre of the floor and look straight up.\n\nThe whole dome only really reads as one shape from directly underneath, and most visitors walk the perimeter without ever finding that exact spot."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.809564534470276,
+      "centroidLongitude": 144.9654536030752,
+      "city": "Melbourne",
+      "primaryCategory": "literature",
+      "tags": [
+        "Library",
+        "Literature",
+        "Engineering",
+        "Neoclassical",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "570a5252-ccfe-52c8-8fdc-6c7964e81566",
+      "createdAt": "2026-08-11",
+      "title": "TarraWarra Museum of Art",
+      "shortDescription": "A honeymoon spent driving between European museums became fifty years of collecting — then a museum in a vineyard.",
+      "longDescription": "Eva and Marc Besen began looking at art on their 1950 honeymoon, driving between museums across Europe, and spent the next half-century collecting. In 1979 they bought five hundred hectares of the Yarra Valley — six kilometres of the Birrarung, the Yarra River, running along its edge — and in December 2003 opened TarraWarra as the first significant privately funded, publicly owned art museum in the country, seeded with a donation of a hundred and forty-two works. Allan Powell's crescent-shaped building sits into the landscape rather than announcing itself above it, its earthen-toned walls doing their best to disappear into the hills the way a winery shed might; the later Eva and Marc Besen Centre, by Kerstin Thompson Architects, opens the collection store itself to public view, so visitors see how a museum actually cares for art rather than just the finished hang. None of it began as an institution — just two people's private taste, accumulated for decades until there was enough conviction to give the whole thing away. The vineyards are the same property, built by the same family on the same land.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tarrawarra-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tarrawarra-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tarrawarra-museum_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tarrawarra-museum_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tarrawarra-museum_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7a250ad2-ec95-5dd5-92df-ca3618006fab",
+          "order": 0,
+          "title": "TarraWarra Museum of Art",
+          "caption": "It's 1950, and a young couple on their honeymoon are driving between museums across Europe, with no idea they're about to spend the next fifty years collecting art.",
+          "latitude": -37.659235523756735,
+          "longitude": 145.4692870492102,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tarrawarra-museum.mp3",
+          "audioDurationSeconds": 118,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tarrawarra-museum_hero.webp",
+          "transcriptText": "It's 1950, and a young couple on their honeymoon are driving between museums across Europe, with no idea they're about to spend the next fifty years collecting art.\n\nThat couple, Eva and Marc Besen, bought this stretch of the Yarra Valley in 1979 — five hundred hectares of it, with six kilometres of Birrarung, the Yarra River, running along its edge — and in December 2003 opened TarraWarra as the first significant privately funded, publicly owned art museum in the country, donating a hundred and forty-two works to get it started.\n\nThe original building, a crescent-shaped structure designed by architect Allan Powell, was built to sit into the landscape rather than announce itself above it, its earthen-toned walls doing their best to disappear into the surrounding hills the way a winery shed or a shearing barn might. A newer wing, the Eva and Marc Besen Centre, was added later by Kerstin Thompson Architects, with visible art storage and event spaces that open the collecting process itself up to public view — visitors can see how a museum actually stores and cares for its collection, rather than just the finished result hanging on a wall.\n\nWhat's easy to forget, walking through galleries full of major Australian art from the 1950s onward, is that none of it started as an institution. It started as two people's private taste, accumulated slowly over decades, until eventually there was enough of it, and enough conviction behind it, to simply give the whole thing away.\n\nThe surrounding vineyards are part of the same property, if you fancy extending the visit.\n\nMost visitors treat the museum and the wine separately, but the two were built by the same family, on the same land, more or less at the same time."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 118,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.659235523756735,
+      "centroidLongitude": 145.4692870492102,
+      "city": "Healesville",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Contemporary",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9405f539-2373-5893-9ee5-d2d9e17fed22",
+      "createdAt": "2026-08-11",
+      "title": "The Block Arcade",
+      "shortDescription": "Milan's Galleria, imported tile by tile into a gold-rush city — under the Southern Hemisphere's largest mosaic floor.",
+      "longDescription": "David Askew, of the firm Twentyman and Askew, modelled the Block directly on Milan's Galleria Vittorio Emanuele — glass canopy, wrought iron and all — with the Collins Street entrance opening in February 1892 and the Elizabeth Street wing following in 1893, the two joined at an octagonal junction at the centre. When it was finished, the mosaic floor was reportedly the largest area of tiling ever laid in Australia, and it remains the largest expanse of mosaic tiling in the Southern Hemisphere: a colonial city with more gold-rush money than most of Europe choosing to import the exact aesthetic of a grand Italian arcade rather than invent something of its own. Upstairs, the old office floors keep their quieter details — tessellated tile lobbies, leadlight windows, decorative plasterwork and timber joinery around the original lift entries. Walk the full loop of both wings rather than cutting through: most of the detail sits above eye level, in the ironwork and the skylights, where a hurried walk-through misses almost everything.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-block-arcade_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-block-arcade_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-block-arcade_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-block-arcade_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ae4554e1-1096-5dc2-9592-d8b36302412e",
+          "order": 0,
+          "title": "The Block Arcade",
+          "caption": "The floor under your feet is the largest expanse of mosaic tiling anywhere in the Southern Hemisphere.",
+          "latitude": -37.81544608161066,
+          "longitude": 144.9640059154065,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-block-arcade.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-block-arcade_hero.webp",
+          "transcriptText": "The floor under your feet is the largest expanse of mosaic tiling anywhere in the Southern Hemisphere.\n\nLook down before you look up, and follow those imported European tiles from the Collins Street entrance, opened in February 1892, through to the Elizabeth Street wing that followed in October 1893, the two joined by an octagonal junction at the arcade's centre. Architect David Askew, of the firm Twentyman and Askew, modelled the whole thing directly on Milan's Galleria Vittorio Emanuele, right down to the glass canopy overhead and the wrought iron holding it up, borrowing the shape of a European institution wholesale rather than adapting it loosely.\n\nWhen it was finished, the mosaic floor alone was reportedly the largest area of tiling ever laid in Australia at that point — a genuinely enormous import, tile by tile, from Europe to a city that had only recently struck it rich on gold. Upstairs, the old office spaces keep their own quieter details: tessellated tile lobbies, leadlight windows, decorative plasterwork, and timber joinery worked in carefully around the original lift entries, all of it easy to walk past if you never look up from the shopfronts at ground level.\n\nWhat all of this really represents is a very specific moment: a colonial city with more gold-rush money than most of Europe, choosing to spend a chunk of it importing the exact aesthetic of a grand Italian arcade, tile for tile, rather than inventing something distinctly its own.\n\nWalk the full loop, both wings, rather than cutting straight through.\n\nThe arcade rewards a slow circuit far more than a shortcut — most of the detail sits above eye level, in the ironwork and the skylights, where a hurried walk-through misses almost everything."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.81544608161066,
+      "centroidLongitude": 144.9640059154065,
+      "city": "Melbourne",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Market",
+        "Architecture",
+        "Commerce",
+        "Victorian",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8a48aa66-f0d6-506a-9e91-c1d290210adf",
+      "createdAt": "2026-08-11",
+      "title": "Tipo 00",
+      "shortDescription": "A Vue de Monde chef walks away from fine dining to open the pasta bar he'd happily eat at three nights a week.",
+      "longDescription": "The name on the door is a flour grade — the finely milled 'double zero' the pasta is made from — and the room is forty-two stools wrapped around an open pasta kitchen on Little Bourke Street. Andreas Papadakis spent years as a senior chef at Vue de Monde, one of the most technical, high-concept kitchens in the country, before deciding that what he actually wanted to build was somewhere he'd happily eat two or three nights a week without ceremony; he opened Tipo 00 with front-of-house partner Luke Skidmore in 2014, and head chef Alberto Fava runs the pasta day to day. The fit-out keeps the same unfussy instinct — the pasta machine does more visual work than anything on the walls. That pivot is the whole point: a chef trained in tweezers-and-foam fine dining deliberately opened a neighbourhood canteen built for revisiting rather than saving up, and by 2022 it was being named among the best Italian restaurants anywhere in the world. Osteria Ilaria next door and Figlia in Brunswick East catch the overflow.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tipo-00_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tipo-00_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tipo-00_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "9d1431e7-2998-5321-a47b-19c6cc60b672",
+          "order": 0,
+          "title": "Tipo 00",
+          "caption": "The name on the door is a flour grade, not a slogan. Little Bourke Street, forty-two stools wrapped around an open pasta kitchen: that's Tipo 00, named after the finely milled \"double zero\" flour used to make the pasta itself, opened in 2014 by chef Andreas Papadakis and front-of-house partner Luke Skidmore.",
+          "latitude": -37.81340166510279,
+          "longitude": 144.9620084037539,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/tipo-00.mp3",
+          "audioDurationSeconds": 117,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/tipo-00_hero.webp",
+          "transcriptText": "The name on the door is a flour grade, not a slogan.\n\nLittle Bourke Street, forty-two stools wrapped around an open pasta kitchen: that's Tipo 00, named after the finely milled \"double zero\" flour used to make the pasta itself, opened in 2014 by chef Andreas Papadakis and front-of-house partner Luke Skidmore. Papadakis had spent years as a senior chef at Vue de Monde, one of the most technical, high-concept kitchens in the country, before deciding what he actually wanted to build for himself was somewhere he'd happily eat two or three nights a week without ceremony.\n\nHead chef Alberto Fava, who'd previously worked kitchens at Merchant and Scusa Mi, runs the pasta side day to day, and the fit-out keeps the same unfussy instinct as the food — a room built around watching dough get rolled and cut rather than around any particular decorative statement, with the pasta machine itself doing more of the visual work than any piece of art on the walls.\n\nThat's really the whole pivot worth noting: a chef trained in tweezers-and-foam fine dining chose, quite deliberately, to open something closer to a neighbourhood canteen instead, and it paid off well enough that Tipo 00 was named among the best Italian restaurants anywhere in the world by 2022.\n\nPapadakis has since opened Osteria Ilaria right next door, and a pizzeria, Figlia, out in Brunswick East.\n\nIf there's a wait for a stool here, both are worth knowing about — though regulars tend to agree the pasta bar is still the one they come back to first, precisely because Papadakis built it to be revisited rather than saved for a single special occasion."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 117,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.81340166510279,
+      "centroidLongitude": 144.9620084037539,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "20193c7e-ba9e-587b-89de-84b32d3b78c6",
+      "createdAt": "2026-08-11",
+      "title": "Victor Churchill",
+      "shortDescription": "A 144-year-old butcher's Melbourne flagship, in an Edwardian bank, with a Himalayan salt-brick ageing room.",
+      "longDescription": "Victor Puharich is a fourth-generation butcher, and with his son Anthony he is only the fourth owner across the brand's hundred-and-forty-four-year history. Their Melbourne flagship opened in November 2021 inside a former Edwardian bank on Armadale's High Street, built in 1910, and was designed by Rod Faucheux — working alongside Anthony directly — to match the quieter, village-like feel of the street rather than repeat the flashier original Sydney store. Three timber butcher's blocks work behind curved glass screens just past the door; further back, the dry-ageing room is lined floor to ceiling with salt bricks imported from Pakistan's Himalayan region, and beyond it a horseshoe-shaped bar seats thirteen people who've come simply to drink wine next to hanging meat — glassware and cured sides deliberately sharing the same air. Butchery treated with the theatre most cities reserve for a tasting menu, down to bronze-cast door handles shaped like sausages. Ask to see the ageing room even if you're not buying; staff are generally happy to show it off.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victor-churchill_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victor-churchill_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victor-churchill_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "57e29cfc-b59e-57ef-9222-b6f983564799",
+          "order": 0,
+          "title": "Victor Churchill",
+          "caption": "Somewhere behind that curved glass screen, a wall of Himalayan salt bricks is quietly ageing someone's dinner.",
+          "latitude": -37.855063313820665,
+          "longitude": 145.02003869112255,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/victor-churchill.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/victor-churchill_hero.webp",
+          "transcriptText": "Somewhere behind that curved glass screen, a wall of Himalayan salt bricks is quietly ageing someone's dinner.\n\nThe three timber butcher's block podiums just past the door, each shielded behind a curved glass screen, sit inside a former Edwardian bank on Armadale's High Street, built in 1910 and reopened as Victor Churchill's Melbourne flagship in November 2021. Victor Puharich, a fourth-generation butcher, and his son Anthony are only the fourth owners across the brand's hundred-and-forty-four-year history, and this building was designed by Rod Faucheux, working alongside Anthony directly, to match the quieter, village-like feel of the street outside rather than simply repeating the flashier original Sydney store.\n\nWalk further back and you'll find the dry-ageing room, its walls lined floor to ceiling with salt bricks imported from Pakistan's Himalayan region, and beyond that, a horseshoe-shaped bar with room for thirteen people who've come simply to drink wine next to hanging meat, glassware and cured sides sharing the same air on purpose rather than being kept politely apart.\n\nThe idea here is straightforward, even if the execution isn't: butchery treated with the same theatre most cities reserve for a tasting menu, right down to bronze-cast door handles shaped like sausages, in a room that used to hold nothing more exciting than a teller's counter and a queue of people paying in cheques.\n\nAsk to see the dry-ageing room even if you're not buying anything from it.\n\nStaff are generally happy to show it off, and the salt-brick walls are worth seeing up close rather than glimpsed through glass from the doorway — it's rare to get this close to a working dry-ageing room anywhere outside a professional kitchen."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.855063313820665,
+      "centroidLongitude": 145.02003869112255,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "28e966eb-05c3-5172-af05-770b1d09b188",
+      "createdAt": "2026-08-11",
+      "title": "Yakimono",
+      "shortDescription": "Two storeys of neon, mirrors and fire — one rainy Tokyo night, rebuilt on Collins Street.",
+      "longDescription": "Chris Lucas spent three years living and working in Tokyo before opening Yakimono at 80 Collins Street, and the designers Russell and George built the two-storey room around one specific memory: the look of light bouncing off wet pavement on a rain-soaked Tokyo street — blue, pink and purple across glass walls, in a look the designers themselves compare openly to the futuristic Tokyo of Blade Runner 2049. Head chef Daniel Wilson runs a menu built around fire rather than raw fish: sweet corn tempura finished with Grana Padano, a yaki hot dog with mustard and grilled jalapeño on a milk bun, miso beef tataki lifted with citrus ponzu — volume, colour and heat working together rather than quiet authenticity. Where Chin Chin, from the same restaurateur, trades on democratic communal noise, Yakimono goes maximalist and specific instead: an entire room recreating one remembered evening in a foreign city, rather than a generic idea of 'Japanese'. Look for your own reflection — there's likely more than one.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yakimono_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yakimono_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yakimono_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yakimono_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yakimono_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d7536539-c04c-538c-9b84-eadc7532287f",
+          "order": 0,
+          "title": "Yakimono",
+          "caption": "The rain outside doesn't reach this room, but the designers built it in anyway.",
+          "latitude": -37.813582942118295,
+          "longitude": 144.97088311610656,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/yakimono.mp3",
+          "audioDurationSeconds": 123,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/yakimono_hero.webp",
+          "transcriptText": "The rain outside doesn't reach this room, but the designers built it in anyway.\n\nEighty Collins Street, two storeys of mirrors, lenses and neon: that's Yakimono, Chris Lucas's ode to Tokyo's late-night izakaya scene, designed by Russell and George to recreate the specific look of light bouncing off wet pavement on a rain-soaked Tokyo street. Blue, pink and purple glow across glass walls throughout, in a look the designers themselves have compared openly to the futuristic Tokyo of Blade Runner 2049, with oversized graphic signage doing as much of the work as the actual architecture.\n\nLucas spent three years living and working in Tokyo before opening this, and head chef Daniel Wilson, previously of the burger chain Huxtaburger, runs a menu built around fire rather than raw fish: sweet corn tempura finished with Grana Padano, a yaki hot dog with mustard and grilled jalapeño on a milk bun, miso beef tataki lifted with citrus ponzu. None of it aims for the quiet authenticity of a traditional yakitori counter; the whole point is volume, colour and heat, working together at once.\n\nWhat's different here compared with the rest of Lucas's restaurants around the city is the register. Chin Chin trades on democratic, communal noise; Yakimono goes maximalist and specific instead, building an entire room around recreating one particular memory of a rainy night in a foreign city, rather than inventing a generic idea of \"Japanese\" from scratch.\n\nLook for your own reflection somewhere in the room — there's likely more than one.\n\nThe mirrored surfaces multiply the space in ways that are easy to miss once the tables fill and the noise picks up, which is presumably the entire point of putting so many of them in."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 123,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -37.813582942118295,
+      "centroidLongitude": 144.97088311610656,
+      "city": "Melbourne",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6428989c-e2b1-5c2b-8b4e-f7e017918af6",
+      "createdAt": "2026-08-11",
+      "title": "Federation Square",
+      "shortDescription": "Seven stops through the square Melbourne argued about, then adopted — clocks, plaza, screens, art and the river.",
+      "longDescription": "Melbourne's civic centrepiece opened in 2002 on a deck over the railyards, and this walk crosses it in seven stops. It starts where the city has always actually met — under the 1860s clocks at Flinders Street Station, older than the station that holds them — then crosses into the square: Paul Carter's Nearamnew whorled underfoot across the Main Plaza, nine carved vision texts hiding in the paving; ACMI, treating film, television and games as heritage worth housing as carefully as anything on a gallery wall; the Atrium's five-storey glass laneway and the Deakin Edge amphitheatre at its river end; the Ian Potter Centre, one of the world's only major galleries devoted to a single nation's art, its First Nations collection the most significant thing in the square; the Koorie Heritage Trust, which exists because its founders sued two of Melbourne's biggest institutions for access to their own community's heritage; and Federation Wharf, where the precinct runs out at the one thing on the site nobody designed — the river. About six hundred metres on foot, most of it level, with stairs or a lift down to the wharf at the end.",
+      "makerId": "117eebb3-5e5d-51e9-83cf-8ae0f3747bf0",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop0_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop0_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop0_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop0_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop1_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop1_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop2_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop2_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop2_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop2_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop3_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop3_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop3_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop3_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop3_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop3_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop4_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop4_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop5_hero.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop5_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop5_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop6_hero.webp"
+      ],
+      "kind": "multiStop",
+      "stops": [
+        {
+          "id": "0449d2c4-65c3-5443-a799-8c8c1df0ae02",
+          "order": 0,
+          "title": "Flinders Street Station — Under the Clocks",
+          "caption": "The clocks above you are older than the building holding them up.",
+          "latitude": -37.81773137696145,
+          "longitude": 144.96720065269346,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/melbourne-fedsquare-walk_stop0.mp3",
+          "audioDurationSeconds": 87,
+          "triggerMode": "manual",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop0_hero.webp",
+          "transcriptText": "The clocks above you are older than the building holding them up.\n\nStand facing Flinders Street Station's main dome, at the corner of Flinders and Swanston Streets, and look up at the row of clocks strung along the entrance. They date from the 1860s, imported from England, which makes them roughly fifty years older than the station itself, opened in 1909. Each one shows the departure time and platform for a different line, and for decades an operator changed the hands by hand with a long pole — on a busy shift, that could mean adjusting them as many as nine hundred times before the day was done.\n\nWhen someone eventually proposed swapping them for digital displays, the public reaction was loud enough that the old clocks went straight back up within twenty-four hours.\n\nThe station behind them briefly held the title of busiest railway station in the world back in the 1920s, but it's the clocks people actually remember. \"I'll meet you under the clocks\" became the default answer to where to find someone in this city, long before there was a Federation Square a hundred metres away to compete with it — this was Melbourne's real meeting place first.\n\nCross Flinders Street when the lights allow, and head into the square itself.\n\nThe main plaza is straight ahead, and it's worth looking down as much as up once you're standing on it."
+        },
+        {
+          "id": "6aacc7e1-8d17-5e99-8a38-8022b6eba317",
+          "order": 1,
+          "title": "Nearamnew (The Main Plaza)",
+          "caption": "The ground under your feet is the largest artwork in the square, and most people walk straight across it without ever noticing.",
+          "latitude": -37.817978,
+          "longitude": 144.969074,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/melbourne-fedsquare-walk_stop1.mp3",
+          "audioDurationSeconds": 121,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop1_hero.webp",
+          "transcriptText": "The ground under your feet is the largest artwork in the square, and most people walk straight across it without ever noticing.\n\nThe Main Plaza, Federation Square's central square, is paved edge to edge in pale sandstone that gently rises and falls rather than lying flat, and the whole surface is a single artwork called Nearamnew, made by the artist and writer Paul Carter working alongside the square's architects. The name itself refuses to settle on one meaning: some colonists believed it was their rendering of the local Woiwurrung name for this place, though it also reads in plain English as near, am, new — a small pun sitting quietly inside a word that sounds foreign at first glance.\n\nLook at the pattern of the paving as a whole, and it forms one giant whorl, which Carter has described as something like an eddy from the once-swampy Yarra, or a giant fingerprint pressed into the stone. Scattered across nine separate points in the plaza, carved directly into that paving, sit fragments of historical and fictional voices — nine ground figures, sometimes called vision texts, reflecting on the idea of Federation itself rather than simply commemorating it.\n\nAnd here's the thing worth sitting with: a square built to mark the centenary of Australian Federation has, as its actual floor, an artwork whose own title can't settle on a single language or a single meaning — colonial mishearing and English wordplay, laid into the same stone, underfoot the whole time.\n\nLook for the carved text patches as you walk, rather than only at the pattern.\n\nACMI sits on the corner just ahead, behind the angled glass front facing the plaza."
+        },
+        {
+          "id": "f6a732ca-6ffb-538a-bc0f-c623cd89cd48",
+          "order": 2,
+          "title": "ACMI (Australian Centre for the Moving Image)",
+          "caption": "This museum's collection started in 1946, decades before anyone thought to build it a home like this.",
+          "latitude": -37.817521114143794,
+          "longitude": 144.96867737023567,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/melbourne-fedsquare-walk_stop2.mp3",
+          "audioDurationSeconds": 101,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop2_hero.webp",
+          "transcriptText": "This museum's collection started in 1946, decades before anyone thought to build it a home like this.\n\nInside the corner of the square facing the plaza, behind angled glass, sits ACMI, the Australian Centre for the Moving Image, which traces its roots back to the old State Film Centre of Victoria. It relaunched under its current name in January 2002, moved into this building in October that year, and by November its cinemas were running, equipped to screen an unusually wide spread of formats — Super 8, sixteen and thirty-five millimetre film, even seventy millimetre, alongside video and digital projection.\n\nThe free permanent exhibition inside, The Story of the Moving Image, runs through more than nine hundred objects and interactive installations, tracing a path from Hollywood's silent era all the way to virtual reality games, and it rewards an hour far more readily than a quick walk-through.\n\nMost of the other institutions around this square hold paintings or sculpture behind glass; ACMI does the same thing for film, television and games instead, treating the moving image as a form of heritage that deserves exactly the same careful housing as anything hanging on a gallery wall.\n\nIf you've got the time, the exhibition is worth returning to properly rather than skimming today.\n\nThe Atrium runs along the square's northern edge from here, glass-roofed the whole way down toward the river."
+        },
+        {
+          "id": "6db5b5aa-be5a-5f89-988a-1617c8479956",
+          "order": 3,
+          "title": "The Atrium & Deakin Edge",
+          "caption": "Look up. This laneway is five storeys tall, and every inch of the roof is glass.",
+          "latitude": -37.81728931879116,
+          "longitude": 144.9694155725979,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/melbourne-fedsquare-walk_stop3.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop3_hero.webp",
+          "transcriptText": "Look up. This laneway is five storeys tall, and every inch of the roof is glass.\n\nThe Atrium runs the length of the square's northern edge, roughly ninety metres of glazed walls and glass roofing rising five storeys above the floor, with a suspended ceiling hanging fifteen metres overhead and a cantilevered opening pushing out toward the street. It was built deliberately to echo Melbourne's own laneways — narrow, layered, slightly unpredictable — except sealed under glass and engineered on purpose rather than grown up by accident over a century.\n\nWalk it down toward the river end and you'll reach Deakin Edge, a glass-fronted amphitheatre seating four hundred and fifty people, its interior lined in wood veneer cut into the same triangular geometry running through the rest of the square. It carried a different name for its first decade, known as the BMW Edge until a change in naming rights saw it rebranded Deakin Edge in May 2013.\n\nThe interesting bit is this: Melbourne's actual laneways are famous for being unplanned, the kind of thing that accumulates rather than gets designed. The Atrium takes that same feeling and builds it from scratch, on purpose, under glass — a found space that was never actually found at all.\n\nHave a proper look at the ceiling panels as you walk through, rather than just the floor ahead of you.\n\nThe Ian Potter Centre sits on the square's southern side, a short walk back across the plaza."
+        },
+        {
+          "id": "473c870a-6c5e-5b4a-91b3-c34fc34b12aa",
+          "order": 4,
+          "title": "The Ian Potter Centre: NGV Australia",
+          "caption": "This is one of the only major galleries anywhere in the world built to hold nothing but the art of a single country.",
+          "latitude": -37.81695322483851,
+          "longitude": 144.9697303346535,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/melbourne-fedsquare-walk_stop4.mp3",
+          "audioDurationSeconds": 102,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop4_hero.webp",
+          "transcriptText": "This is one of the only major galleries anywhere in the world built to hold nothing but the art of a single country.\n\nOn the square's southern side, the low sandstone building facing the plaza is the Ian Potter Centre, home to NGV Australia, opened in 2002 and named after the businessman and philanthropist Sir Ian Potter. The collection runs to almost twenty-five thousand works, tracing Australian art from the colonial period through to work being made right now, alongside the separately held Joseph Brown Collection.\n\nThe most significant single holding here is the First Nations collection: more than four thousand seven hundred works from across mainland Australia and the Torres Strait, regarded as globally important, with pieces by Emily Kam Kngwarray, Rover Thomas, Sally Gabori, William Barak and Destiny Deacon among them — a body of work revealing a continuous creative history on this continent that runs back long before European arrival.\n\nWhat's worth knowing, standing here, is that the National Gallery of Victoria's international collection sits across the river in a much older building of its own. Splitting Australian art out into a dedicated home here, rather than folding it into the main collection, was a deliberate statement about what deserved its own address, rather than a corner of somewhere else's.\n\nThe First Nations galleries reward slow walking more than almost anything else in the square.\n\nThe Koorie Heritage Trust, just across the plaza in the Yarra Building, tells a related story from an entirely different angle."
+        },
+        {
+          "id": "0fa44aff-7103-54c2-b02e-52a4a45cb435",
+          "order": 5,
+          "title": "Koorie Heritage Trust",
+          "caption": "In 1985, three men took two of Melbourne's biggest institutions to court, simply to get access to their own community's heritage.",
+          "latitude": -37.818057742207685,
+          "longitude": 144.96912662714317,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/melbourne-fedsquare-walk_stop5.mp3",
+          "audioDurationSeconds": 95,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop5_hero.webp",
+          "transcriptText": "In 1985, three men took two of Melbourne's biggest institutions to court, simply to get access to their own community's heritage.\n\nThe Yarra Building, on the eastern edge of the square, holds the Koorie Heritage Trust across two levels, with a gift shop and exhibition gallery on the ground floor and, upstairs, visible storage of the wider collection alongside public meeting rooms. The Trust was founded that year after Uncle Jim Berg, Ron Castan and Ron Merkel sued the University of Melbourne and the Museum of Victoria, arguing that Koorie communities should have proper access to material that was, by rights, already theirs.\n\nIt moved into this building in June 2015, having spent its earlier decades on King Street, and now holds more than a hundred thousand items altogether — the largest collection of Koorie art and artefacts anywhere in Australia, running from paintings and artefacts through to books, photographs and recorded oral histories.\n\nThis entire collection exists because its founders had to fight for the right to look after it themselves, rather than leave it in the hands of institutions that had held it without real consultation. Self-determination isn't a side note to this place; it's the actual reason it exists.\n\nThe rotating displays change often enough to reward more than one visit.\n\nFrom here, the river is just a short walk further east, down toward Federation Wharf."
+        },
+        {
+          "id": "926ad7fa-3a0c-5a49-a5b3-a63859b908e1",
+          "order": 6,
+          "title": "Federation Wharf",
+          "caption": "The square ends here, at the one thing that was here long before any of it: the river.",
+          "latitude": -37.81873330247103,
+          "longitude": 144.96977154139998,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/melbourne-fedsquare-walk_stop6.mp3",
+          "audioDurationSeconds": 108,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 40,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/melbourne-fedsquare-walk_stop6_hero.webp",
+          "transcriptText": "The square ends here, at the one thing that was here long before any of it: the river.\n\nTake the stairs or the lift down from the square's eastern edge, onto the tree-lined deck running along the water — that's Federation Wharf, opened in 2006 as the newest significant piece of the whole precinct, extending the square right down to the Yarra's edge. Boats leave from here for river cruises heading upstream, past the parklands of Birrarung Marr, under Swan Street Bridge, toward the Botanic Gardens beyond.\n\nJust along the bank sits the Sandridge Bridge, a former railway crossing dating to 1888, built with steel girders rather than iron — an unusually modern choice at the time — by a workforce that, as it happens, included a young engineering student named John Monash. Retired from rail use for decades, it reopened as a pedestrian bridge in 2006, the same year as the wharf, and now carries The Travellers, a line of steel figures representing ten separate waves of migration into Australia.\n\nEverything else on this walk was designed deliberately, right down to the pattern in the paving. The river wasn't. It's the one part of the whole precinct that simply kept doing what it had always done while the rest of the square was built up around it.\n\nWalk out along Sandridge Bridge before you finish, if there's time.\n\nThe view back toward the square from the middle of the river is the one most people never think to look for, and it's worth the extra few minutes."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 716,
+      "walkingDistanceMeters": 550,
+      "centroidLatitude": -37.8177520113448,
+      "centroidLongitude": 144.9689994426748,
+      "city": "Melbourne",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Public Square",
+        "Architecture",
+        "History",
+        "Art",
+        "Contemporary",
+        "Iconic Landmark",
+        "Free to Visit",
+        "Public Art"
       ],
       "priceUSD": 0
     }
