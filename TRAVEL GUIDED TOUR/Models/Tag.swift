@@ -75,6 +75,7 @@ enum Tag {
             "Rem Koolhaas", "Amanda Levete", "Marcel Breuer", "Clorindo Testa",
             "Víctor Meano", "Jørn Utzon", "Roy Grounds", "Dominique Perrault",
             "Hiroshi Sambuichi", "Marc Newson",
+            "Karl Friedrich Schinkel",
         ]),
     ]
 
