@@ -223,6 +223,14 @@
       "avatarEmoji": "🇦🇺",
       "bio": "Atlas Studio's Melbourne bureau — audio tours of a city that does its best work at close range: the clocks everyone still meets under, a square Melbourne argued about and then adopted, unmarked doors hiding some of the world's best bars, gin distilled by amateurs who became the world's best, and the espresso counter that started it all in 1954.",
       "websiteURL": null
+    },
+    {
+      "id": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "displayName": "Atlas Studio SYD",
+      "avatarURL": null,
+      "avatarEmoji": "🇦🇺",
+      "bio": "Atlas Studio's Sydney bureau — audio tours of the harbour city where a Dane's white sails cost him his career, an arch was riveted shut over open water, surfing came ashore on a sugar-pine board, and the neighbourhoods carved their own pools into the ocean's edge.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -63360,6 +63368,1308 @@
         "Iconic Landmark",
         "Free to Visit",
         "Public Art"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0378b836-089d-5f9e-8232-8e2e9afe3e09",
+      "createdAt": "2026-08-11",
+      "title": "Above The Clouds Store",
+      "shortDescription": "Eight metres of trainers and fifteen years of right calls on Surry Hills' most-watched corner.",
+      "longDescription": "Above The Clouds has been in Surry Hills for fifteen years — long before streetwear had a flagship to call home here. Dimitri Calligeros and John Paul Wager built it from a modest first shop into a double-storey, curve-fronted anchor on Crown Street, its ground floor run through by an eight-metre sneaker wall drawn from a collection spanning more than ninety brands: Nike and New Balance beside A Kind of Guise, Andersson Bell and Butter Goods. The fit-out collides hard industrial surfaces — concrete, exposed steel — with soft pastel panels that shouldn't work together and do. A shop built on a point of view rather than whatever's biggest that week, grown slowly, one right call after another.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/above-the-clouds-store_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/above-the-clouds-store_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/above-the-clouds-store_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/above-the-clouds-store_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a640f9ad-3db6-5692-a819-336abae4024c",
+          "order": 0,
+          "title": "Above The Clouds Store",
+          "caption": "Look past the racks to the far wall. That's eight metres of trainers stacked floor to ceiling, and it doesn't sit still for long — restocked, rearranged, half of it gone by the weekend.",
+          "latitude": -33.88074133893778,
+          "longitude": 151.2147001251936,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/above-the-clouds-store.mp3",
+          "audioDurationSeconds": 143,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/above-the-clouds-store_hero.webp",
+          "transcriptText": "Look past the racks to the far wall. That's eight metres of trainers stacked floor to ceiling, and it doesn't sit still for long — restocked, rearranged, half of it gone by the weekend.\n\nShop Eight, two hundred and eighty-five A Crown Street is your mark, right out front of the curved glass frontage — the shopfront bends gently round the corner of the block rather than cutting a straight line, which is part of why people slow down here even when they weren't planning to shop.\n\nHave a look at that sneaker wall first. Eight metres of it, running the length of the ground floor, holding a slice of a collection that spans more than ninety brands. Nike and New Balance sit beside labels most passers-by won't recognise — A Kind of Guise, Andersson Bell, Butter Goods — and that mix is rather the point. This isn't a shop chasing whatever's biggest that week. It's a shop with a point of view.\n\nNotice the fit-out while you're in there, too. Hard, industrial surfaces — concrete, exposed steel — set against soft pastel panels that by rights shouldn't work together and somehow do. It's a deliberate collision, and it tells you something about the two people behind it.\n\nDimitri Calligeros and John Paul Wager were running Above the Clouds long before streetwear had a flagship to call home in Surry Hills — fifteen years of it now, building from a modest first shop into this double-storey space with room to properly breathe.\n\nAnd here's the thing worth sitting with. Fifteen years ago, a shop built entirely around trainers and hard-to-find labels was a niche proposition, tucked away and easy to miss. Now it's this — a glossy, curve-fronted anchor on one of Sydney's most-watched retail strips.\n\nThe wall didn't arrive at eight metres by chasing hype. It got there slowly, one right call after another, for a decade and a half.\n\nBefore you move on, walk Crown Street a little further in either direction — this stretch of Surry Hills shifts character block by block, vintage rails giving way to cafés giving way to design studios, and Above the Clouds is really just the loudest note in a much longer tune."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 143,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.88074133893778,
+      "centroidLongitude": 151.2147001251936,
+      "city": "Sydney",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Commerce",
+        "Fashion",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "72d5ed46-fb94-55db-a377-d1b027f4236d",
+      "createdAt": "2026-08-11",
+      "title": "Anzac Memorial",
+      "shortDescription": "Dellit and Hoff's Art Deco tower of remembrance, mirrored in a still pool at Hyde Park's southern end.",
+      "longDescription": "In 1930, a competition of a hundred and seventeen entries handed Sydney's Great War memorial to a relatively unknown architect in his early thirties, Charles Bruce Dellit. His squared sandstone tower rises from the southern end of Hyde Park above a long reflecting pool, twenty carved figures along its upper walls standing for the arms of the Australian Imperial Force. Dellit worked so closely with the sculptor Rayner Hoff — an English migrant who had served as a map maker in the war he was now memorialising — that it is hard to say where the architecture ends and the sculpture begins. Inside, beneath a white marble dome lit by four amber windows, stands Hoff's most debated work, Sacrifice, which divided opinion sharply when the memorial opened in 1934 and still gets both readings today. A stairway leads down to the quieter Hall of Service, holding soil gathered from the battlefields themselves.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/anzac-memorial_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/anzac-memorial_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/anzac-memorial_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "84f3474f-042c-5b0c-b507-7a160cf03655",
+          "order": 0,
+          "title": "Anzac Memorial",
+          "caption": "It's 1930. A memorial competition for the Great War has just closed — one hundred and seventeen entries in total — and the judges have handed the job to a relatively unknown architect in his early thirties, Charles Bruce Dellit.",
+          "latitude": -33.875540997486006,
+          "longitude": 151.21091950664157,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/anzac-memorial.mp3",
+          "audioDurationSeconds": 165,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/anzac-memorial_hero.webp",
+          "transcriptText": "It's 1930. A memorial competition for the Great War has just closed — one hundred and seventeen entries in total — and the judges have handed the job to a relatively unknown architect in his early thirties, Charles Bruce Dellit.\n\nStand at the southern end of Hyde Park and look up. You're facing the Anzac Memorial: a squared sandstone tower rising from high ground, with a long reflecting pool stretched out below it, mirroring the whole façade back at you on a still day. Twenty carved figures run along the upper walls, representing the different arms of the Australian Imperial Force — army, navy, the flying corps, the medical corps.\n\nFind the two bronze panels first, set above the eastern and western doors. One shows the campaigns fought across the Middle East and Gallipoli; the other, the trenches of the Western Front. Dellit didn't sculpt these himself — he brought in an English migrant sculptor named Rayner Hoff, who'd served as a map maker in the very war he was now being asked to memorialise, and the two of them worked so closely it's hard to say where the architecture ends and the sculpture begins.\n\nGo inside, and the building changes register entirely. The Hall of Memory sits beneath a vast dome, clad floor to ceiling in white marble, lit only by four tall amber windows etched with the same figures you saw outside. It's quiet in a way that feels engineered — because it is.\n\nWhat's worth knowing, before you look down, is this: beneath the dome, in the Hall of Silence, stands Hoff's most debated work — a bronze figure named Sacrifice: a dead soldier laid naked across a shield, carried by his mother, his sister, and his wife nursing their child. When the memorial opened in 1934, the nudity divided opinion sharply — some read it as an honest, unflinching image of loss; others thought it wrong for a war memorial entirely. Both views still get an airing here.\n\nStay a moment in the Hall of Silence before you leave. From there, a stairway leads down to the Hall of Service below — a quieter, less-visited space holding soil gathered from the battlefields themselves, worth the extra few minutes if you have them."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 165,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.875540997486006,
+      "centroidLongitude": 151.21091950664157,
+      "city": "Sydney",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Remembrance",
+        "War",
+        "Art Deco",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "24a3b3ef-9ae7-5d1f-bcc3-e28cb0aa65a2",
+      "createdAt": "2026-08-11",
+      "title": "Art Gallery of New South Wales",
+      "shortDescription": "A sandstone temple and a glass hillside — one gallery arguing with itself across a century.",
+      "longDescription": "The Art Gallery of New South Wales spent a hundred and fifty years growing in one direction, then in 2022 it grew sideways. The original building, now Naala Nura, went up between 1896 and 1909 as the country's oldest freestanding public art gallery — sandstone, columns, a pediment, the full classical grammar of a temple, built where nineteenth-century Sydney decided important art should live. Its new neighbour Naala Badu — Sydney Modern, as most people still call it — was designed by the Japanese architects Kazuyo Sejima and Ryue Nishizawa of SANAA and opened in December 2022: a series of low glass pavilions terraced down the hillside toward the harbour, with a public art garden on the roof that costs nothing to walk into, and a lower level largely given over to First Nations art. Same institution, a hundred and thirteen years apart, quietly arguing about what a gallery is for.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-nsw_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-nsw_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-nsw_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-nsw_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-nsw_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0818f716-e78d-5889-a975-61f8a7e4ebec",
+          "order": 0,
+          "title": "Art Gallery of New South Wales",
+          "caption": "The Art Gallery of New South Wales spent one hundred and fifty years growing in exactly one direction.",
+          "latitude": -33.86869622624191,
+          "longitude": 151.21740215289418,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/art-gallery-of-nsw.mp3",
+          "audioDurationSeconds": 152,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/art-gallery-of-nsw_hero.webp",
+          "transcriptText": "The Art Gallery of New South Wales spent one hundred and fifty years growing in exactly one direction. Then, in 2022, it grew sideways.\n\nArt Gallery Road, the forecourt between two buildings that don't look like they belong to the same institution — that's your spot, with the older, columned building on one side and a long, low, glass-fronted structure stepping down the hill toward the harbour on the other.\n\nStart with the building behind you, now known as Naala Nura. It's the original gallery, built between 1896 and 1909 on this rise overlooking the harbour, and it's the oldest freestanding public art gallery in the country — sandstone, columns, a pediment, all the classical grammar of a temple. Which, in a sense, it was built to be. This was where nineteenth-century Sydney decided important art should live, and the architecture says so from a hundred metres away.\n\nNow turn toward the newer wing, Naala Badu — Sydney Modern, most people still call it. Designed by the Japanese architects Kazuyo Sejima and Ryue Nishizawa, it opened in December 2022 after a build costing three hundred and forty-four million dollars, and it very nearly doubled the gallery's exhibition space. Instead of one grand block, it's a series of low pavilions terraced down the hillside toward the water, with a public art garden on the roof that costs nothing to walk into.\n\nStanding between the two, here's where the point actually lives. The old building was built to look like a temple — tread carefully, important art lives here. The new one does almost the opposite: glass, horizontal lines, a roof you're invited onto without a ticket. Same institution, a hundred and thirteen years apart, quietly arguing with its younger self about what a gallery is actually for.\n\nInside Naala Badu, the lower level is largely given over to First Nations art and a dedicated space built with input from Aboriginal communities — worth seeking out if you go in, since it sits at the harbour-facing end most visitors reach last, once the crowds near the entrance have already thinned."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 152,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.86869622624191,
+      "centroidLongitude": 151.21740215289418,
+      "city": "Sydney",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Neoclassical",
+        "Contemporary",
+        "SANAA",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e8cfceeb-b325-5aef-9031-661a22c931dd",
+      "createdAt": "2026-08-11",
+      "title": "Arthur, Surry Hills",
+      "shortDescription": "A corner terrace where everything on the plate and in your glass is Australian — down to the last prawn.",
+      "longDescription": "Nothing on Arthur's menu, and nothing poured into your glass, is allowed to have come from anywhere but Australia. Owner Tristan Rosier and head chef Juwon Gwak build every dish in this restored Victorian terrace on the corner of Bourke and Nobbs Streets around native ingredients and local produce — the wine list, the pepperberry, the finger lime all telling the same story about where you're sitting. A restaurant built on a rule this strict could easily turn precious; Arthur does the opposite, having swapped its fixed set menu for a looser, walk-in-friendly format, with tables spilling onto both pavements and a late-afternoon Australiano Hour of three-dollar prawns, snacks under ten, and cocktails from ten dollars a glass.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arthur-surry-hills_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arthur-surry-hills_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arthur-surry-hills_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arthur-surry-hills_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2b150268-5226-5e85-a681-778f86c1faa2",
+          "order": 0,
+          "title": "Arthur, Surry Hills",
+          "caption": "There's a curious rule at Arthur — nothing on the menu, and nothing poured into your glass, is allowed to have come from anywhere but Australia.",
+          "latitude": -33.88878460655375,
+          "longitude": 151.2154291918631,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/arthur-surry-hills.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/arthur-surry-hills_hero.webp",
+          "transcriptText": "There's a curious rule at Arthur — nothing on the menu, and nothing poured into your glass, is allowed to have come from anywhere but Australia.\n\nArthur occupies a restored Victorian terrace at five hundred and forty-four Bourke Street, right on the corner where Bourke meets Nobbs — you'll know it by the tables spilling out onto both pavements, an easy, unbuttoned sort of restaurant that doesn't take itself terribly seriously despite what's actually happening in the kitchen.\n\nHave a think about that sourcing rule for a second, because it's stricter than it sounds. Owner Tristan Rosier and head chef Juwon Gwak build every dish around ingredients native to this country and produce grown or made here — nothing flown in, nothing imported for the sake of familiarity. It means the wine list, the native pepperberry, the finger lime on your plate, all of it is telling the same story about where you're sitting.\n\nArthur rebuilt itself not long ago, swapping a fixed set menu for a looser, walk-in-friendly à la carte format — which is where the second thing worth knowing comes in. Late afternoon, the restaurant runs what it calls Australiano Hour: Australian prawns for three dollars each, snacks under ten, cocktails and wines from ten dollars a glass.\n\nA restaurant built entirely around native and local produce could easily turn precious about it — small portions, hushed rooms, prices to match the principle. Arthur does the opposite. The same kitchen sourcing everything from within one country's borders will also sell you a three-dollar prawn on a corner table with the doors thrown open onto the street.\n\nIf you're passing at the right hour, that's the moment to catch it — pull up a chair on the Nobbs Street side, order something off the Australiano list, and watch the terrace fill up as Surry Hills finishes work for the day."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.88878460655375,
+      "centroidLongitude": 151.2154291918631,
+      "city": "Sydney",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "924fb37f-f106-5626-9112-e89b3ececd84",
+      "createdAt": "2026-08-11",
+      "title": "Bar Copains",
+      "shortDescription": "Twenty seats, no sign, Sydney's best wine bar — and it plans on staying exactly this size.",
+      "longDescription": "Sixty-seven Albion Street is a narrow shopfront with barely room to swing a corkscrew — around twenty seats, no sign to speak of, found because someone told you to look for it. Two chefs who cooked at serious kitchens landed somewhere this small on purpose, and the short menu earns every line: the crumbed King George whiting sandwich, the comté tart, leeks gone soft and sweet in brown butter vinaigrette — French technique filtered through an Australian larder. The wine list leans natural and slightly off-beat, balanced with enough familiar names that nobody feels stranded. Bar Copains won Sydney's Best Wine Bar not long after opening and hasn't used it to get bigger, louder or more expensive: success here looked like staying the same size and getting better at the job.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bar-copains_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bar-copains_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bar-copains_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bar-copains_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f34ef0a4-3527-5794-aa1b-66c32926ab18",
+          "order": 0,
+          "title": "Bar Copains",
+          "caption": "It's early evening on Albion Street, the light going gold, and there are maybe twenty people crowded into a room built for about that many.",
+          "latitude": -33.88278821086275,
+          "longitude": 151.21117715593007,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bar-copains.mp3",
+          "audioDurationSeconds": 124,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bar-copains_hero.webp",
+          "transcriptText": "It's early evening on Albion Street, the light going gold, and there are maybe twenty people crowded into a room built for about that many.\n\nSixty-seven Albion Street, Surry Hills, is the address — a narrow shopfront with barely room to swing a corkscrew, somewhere around twenty seats split between the bar and a scatter of small tables. No sign to speak of. You find it because someone told you to look for it.\n\nOrder from the food menu first, since it's smaller than you'd expect and every line on it earns its place. The whiting sandwich turns up again and again in reviews for good reason — crumbed King George whiting, done properly. The comté tart is the other one people mention afterwards, along with leeks cooked slowly in brown butter vinaigrette until they've gone soft and a little sweet. It's French technique filtered through an Australian larder, run by two chefs who've cooked at serious kitchens before landing somewhere this small on purpose.\n\nNow the wine list. It leans natural and slightly off-beat — bottles you won't recognise from producers doing something a bit unconventional — but it's balanced out with enough familiar names that nobody feels stranded. Ask the staff for a steer; recommending well is clearly something they take seriously.\n\nAnd here's what's worth noticing, sitting in a room this size. Bar Copains won Sydney's Best Wine Bar award not long after opening, and it hasn't used that to justify getting bigger, louder, or more expensive. Twenty seats then, twenty seats now — success here looked like staying exactly the same size and just getting better at the job.\n\nIf there's a wait, that's rather the point — stand outside on Albion Street for a few minutes and watch the room fill and empty in real time. It's one of the better free shows in Surry Hills."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 124,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.88278821086275,
+      "centroidLongitude": 151.21117715593007,
+      "city": "Sydney",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "855f3f28-0e8f-5c73-9205-3ddedd081033",
+      "createdAt": "2026-08-11",
+      "title": "Barangaroo Reserve",
+      "shortDescription": "A container wharf engineered back into a headland, block by sandstone block.",
+      "longDescription": "Ten thousand sandstone blocks, seventy-five thousand native plants, and one very deliberate decision to turn a container wharf back into a headland. Every block at Barangaroo Reserve was cut from the site itself during construction, which is why the colour and grain match so precisely, and every plant is a species native to this stretch of harbour — recreating a shoreline that hadn't existed in over a century. The reserve is named for Barangaroo, a Cammeraygal woman who was one of the more forthright figures in early colonial Sydney, on land that belonged to the Gadigal people of the Eora nation, where middens and rock engravings suggest people fished and gathered for around six thousand years. The low 1836 Wall traces the line where the shore genuinely used to end. It looks entirely natural; every part of it was engineered back into existence.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barangaroo-reserve_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7431eb3a-e029-57b7-bfb2-330d11b8a236",
+          "order": 0,
+          "title": "Barangaroo Reserve",
+          "caption": "Ten thousand sandstone blocks. Seventy-five thousand native plants.",
+          "latitude": -33.85704760149979,
+          "longitude": 151.20119526752129,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/barangaroo-reserve.mp3",
+          "audioDurationSeconds": 158,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/barangaroo-reserve_hero.webp",
+          "transcriptText": "Ten thousand sandstone blocks. Seventy-five thousand native plants. One very deliberate decision to turn a container wharf back into a headland. That's Barangaroo Reserve, in three numbers.\n\nWalk to the water's edge, wherever you've entered the reserve, and look down at the rock underfoot. If it's rough-cut sandstone stacked in irregular blocks rather than a neat paved edge, you're in the right spot — that's the reserve's boundary, sitting exactly where a working shipping terminal stood until relatively recently.\n\nHave a look at that sandstone more closely. Every block of it — all ten thousand — was cut from this site during construction, rather than trucked in from elsewhere, which is why the colour and grain match so precisely. Around it, more than seventy-five thousand plants went in, all species native to this stretch of harbour, chosen to recreate a shoreline that hadn't existed here in over a century.\n\nThe place is named for Barangaroo, a Cammeraygal woman who was one of the more forthright figures in early colonial Sydney, unimpressed by much of what she saw and unafraid to say so. Long before her name went on a headland, this land belonged to the Gadigal people of the Eora nation — middens and rock engravings found nearby suggest people were fishing and gathering here for around six thousand years.\n\nFind the low sandstone wall running along the path, roughly waist height. That's known as the 1836 Wall, and it traces the actual line of the shore as it existed before the harbour was filled in for industry — a single stone edge marking where land genuinely used to end.\n\nWorth sitting with, standing here, is this: this headland looks entirely natural — rock, native bush, a coastline that seems to have always been here. It hasn't. Every part of it was engineered back into existence, which makes Barangaroo less a park that survived than one that was deliberately rebuilt.\n\nFollow the shoreline path north toward the old wharf structures still visible near the water — a reminder of the working harbour this stretch used to be, standing right alongside the one it's been made to look like again."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 158,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.85704760149979,
+      "centroidLongitude": 151.20119526752129,
+      "city": "Sydney",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Waterfront",
+        "History",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "dfe62d65-4366-5f74-9c80-a3de14f14a2b",
+      "createdAt": "2026-08-11",
+      "title": "Bella Brutta",
+      "shortDescription": "Beautiful ugly — charred, blistered pizza from a barbecue crew on King Street.",
+      "longDescription": "Bella Brutta is Italian for 'beautiful ugly', and the name is doing rather a lot of work. Behind an unassuming King Street shopfront — you'll spot it by the queue, or the wood smoke — the dough blisters on purpose: charred in patches, thin, ragged at the edges, blended Australian wholegrain and Italian flours giving it a chew a purely soft crust wouldn't have. The clam pizza, seafood against a zesty fermented chilli, is the dish reviewers circle back to most. It comes from the same team as Porteño and LP's Quality Meats — kitchens built around slow-cooked, whole-animal cooking, not pizza dough. Beautiful ugly is what happens when a barbecue crew makes pizza on their own terms.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bella-brutta_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bella-brutta_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bella-brutta_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bella-brutta_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ff84837f-7577-528e-80a7-27ccb5a067f8",
+          "order": 0,
+          "title": "Bella Brutta",
+          "caption": "This is Bella Brutta — Italian for \"beautiful ugly\" — and the name is doing rather a lot of work.",
+          "latitude": -33.893058226703694,
+          "longitude": 151.1837297684889,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bella-brutta.mp3",
+          "audioDurationSeconds": 113,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bella-brutta_hero.webp",
+          "transcriptText": "This is Bella Brutta — Italian for \"beautiful ugly\" — and the name is doing rather a lot of work.\n\nBella Brutta sits at one thirty-five King Street, Newtown, behind a fairly unassuming shopfront. You'll spot it by the queue most evenings, or by the wood smoke drifting out the door once the ovens get going properly.\n\nHave a look through to the back if you can, where the wood-fired oven sits in full view — that's where the pizzaiolo works, and watching the dough go in and out is close to a floor show in its own right. The dough itself is the point of the name. Rather than chasing the neat, uniform discs you'd get at a traditional Neapolitan place, Bella Brutta blisters its crusts on purpose — charred in patches, thin, a bit ragged at the edges. Blended flours, Australian wholegrain alongside imported Italian stock, give it a chew that a purely soft crust wouldn't have.\n\nTry the clam pizza if it's on, since it's the dish reviewers circle back to most. Seafood against a fermented chilli that's zesty rather than fierce — an odd combination on paper that works cleanly on the plate.\n\nAnd here's the thing worth knowing about who's behind it. Bella Brutta comes from the same team as Porteño, the Argentine grill house a few streets over, and LP's Quality Meats — kitchens built around slow-cooked, whole-animal cooking, not pizza dough. Beautiful ugly, in other words, is what happens when a barbecue crew decides to make pizza on their own terms rather than anyone else's.\n\nIf there's a wait for a table, King Street runs both directions from here — Porteño itself is worth the walk, if you fancy seeing where half of Bella Brutta's DNA actually comes from."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 113,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.893058226703694,
+      "centroidLongitude": 151.1837297684889,
+      "city": "Sydney",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d865d08e-350d-5fd0-8a89-9e2bdddb436c",
+      "createdAt": "2026-08-11",
+      "title": "Bondi Beach",
+      "shortDescription": "The crowded, aspirational, everybody's-invited beach — and it's been that way since the 1920s.",
+      "longDescription": "Bondi draws around 2.9 million visitors a year — roughly the population of Perth, passing through one crescent of sand between Ben Buckler and Mackenzies Point. The Cadigal people fished and gathered here for generations before European settlement, and the beach stayed a working place through its early land grants until the first hotel arrived in 1887. The real turning point came in the 1920s, when Bondi became the beach for Sydney's emerging middle class — beach cricket, bodysurfing, crowds nobody had planned for — which is more or less still the scene today. Even the water's particular turquoise has its own name, Bondi blue, borrowed by Apple for the first iMac in 1998. Its reputation as the beach everyone has to see isn't a product of phones and feeds; only the broadcasting technology changed.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-beach_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-beach_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "304a3e2d-177c-5096-8bad-7f79bae11457",
+          "order": 0,
+          "title": "Bondi Beach",
+          "caption": "Bondi Beach gets around 2.9 million visitors a year — roughly the population of Perth, passing through one stretch of sand.",
+          "latitude": -33.891402158802016,
+          "longitude": 151.27540299409563,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bondi-beach.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-beach_hero.webp",
+          "transcriptText": "Bondi Beach gets around 2.9 million visitors a year — roughly the population of Perth, passing through one stretch of sand.\n\nCampbell Parade, the beachfront promenade, somewhere near the middle of the crescent, is your vantage point — sand running out ahead of you, the flagged swimming area between two headlands, Ben Buckler to the north and Mackenzies Point to the south.\n\nThis stretch of coast has been drawing people for a very long time before any of that. The Cadigal people fished and gathered here for generations before European settlement, and the beach carried on being a working, useful place rather than a backdrop for quite a while afterwards — a road builder named William Roberts held the earliest land grant here, and by 1851, most of the beach itself had passed into the hands of two settlers, Edward Smith Hall and Francis O'Brien.\n\nThe beach as you'd recognise it starts properly in 1887, with the first hotel going up nearby, followed steadily by shops and houses. But the real turning point came in the 1920s, when Bondi became the beach for Sydney's emerging middle class — beach cricket, bodysurfing, crowds in numbers nobody had planned for. Which is, more or less, still the scene today.\n\nHere's a small fact worth carrying with you. That particular turquoise the water goes on a bright day has its own name — Bondi blue — and it became famous well beyond this beach when Apple used it for the very first iMac, back in 1998.\n\nThe point worth carrying away is this. Bondi's reputation as the beach everyone has to see feels like a fairly recent phenomenon, driven by phones and feeds. It isn't. This has been the crowded, aspirational, everybody's-invited beach since the 1920s — the technology for broadcasting it just changed.\n\nIf you walk south along the headland path, the crowds thin out fast — worth doing at least as far as the next bay, where Bondi starts to feel considerably smaller and quieter than the postcards suggest."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.891402158802016,
+      "centroidLongitude": 151.27540299409563,
+      "city": "Sydney",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Maritime",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5c3fd907-141d-5d71-97bb-f3c4a542ebc7",
+      "createdAt": "2026-08-11",
+      "title": "Bondi Icebergs Pool",
+      "shortDescription": "The winter swimmers' pool that floods with every big swell, and has since 1929.",
+      "longDescription": "On a big swell the ocean climbs straight over the far wall of the Icebergs pool and washes across the deck, and the swimmers doing laps barely break stride. The club began in 1929, when local lifesavers who wanted to stay fit through winter started in little more than a tin shed — the name described exactly what was expected of members, swimming the cold months by choice. The water is genuine filtered seawater, pumped in and refreshed by the ocean beside it: a fifty-metre lap pool facing the open swell, a smaller sheltered pool behind. The club changed slowly — women weren't admitted until 1955, a proper clubhouse eventually replaced the shed, a junior squad arrived by the 1980s — but the essential arrangement hasn't changed at all: the pool still floods with every large swell, and the people swimming through it treat that as entirely normal.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-icebergs-pool_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-icebergs-pool_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-icebergs-pool_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f3232d84-bd6d-5824-9f4e-4534f058fe69",
+          "order": 0,
+          "title": "Bondi Icebergs Pool",
+          "caption": "Look at the far edge of the pool, the one facing straight out to sea.",
+          "latitude": -33.89477555608126,
+          "longitude": 151.27445472383482,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bondi-icebergs-pool.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-icebergs-pool_hero.webp",
+          "transcriptText": "Look at the far edge of the pool, the one facing straight out to sea. On a big swell, the ocean climbs right over it and washes clean across the deck, and the swimmers doing laps barely break stride.\n\nThe southern end of Bondi Beach, at the base of the headland, is where you'll find the Bondi Icebergs Club and its pool — a long rectangle of blue-green water sitting hard against the ocean's edge, with waves occasionally breaking straight over the far wall.\n\nThis started in 1929, when a group of local lifesavers wanted a way to stay fit through winter without giving up the sea entirely. They began in little more than a tin shed. The name \"Icebergs\" wasn't a marketing flourish — it described exactly what the club expected of its members, swimming through the cold months by choice rather than waiting for summer to come back round.\n\nHave a look at the water itself. It's genuinely seawater, filtered rather than chlorinated, pumped in and refreshed by the ocean right beside it — which is part of why the pool can look so wild on a rough day. There's a fifty-metre lap pool facing the open water, and a smaller, more sheltered pool tucked behind it for anyone who'd rather not swim quite so close to the swell.\n\nThe club changed with the times, if slowly. Women weren't admitted as members until 1955, more than a quarter-century after the club began. A proper clubhouse eventually replaced the tin shed, and by the 1980s the Icebergs had a junior squad of their own, training kids to do exactly what their grandparents had — swim through winter, on purpose.\n\nAnd here's the thing that hasn't changed at all. This pool still floods with every large swell, still empties and refills with the tide, and the people swimming through it treat that as entirely normal — which, after nearly a century, it rather is.\n\nWalk round to the northern side for the view most photographs miss — the pool, the cliff face behind it, and the whole curve of Bondi Beach laid out beyond."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 141,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.89477555608126,
+      "centroidLongitude": 151.27445472383482,
+      "city": "Sydney",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "History",
+        "Maritime",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "98961661-f2c5-5118-957f-7b2ae1f87a97",
+      "createdAt": "2026-08-11",
+      "title": "Bondi to Bronte Coastal Walk",
+      "shortDescription": "Two and a half clifftop kilometres — Bondi's crowds to Bronte's heritage baths on one sandstone coast.",
+      "longDescription": "From the southern end of Bondi Beach near the Icebergs pool, a paved path climbs onto the headland and hugs the sandstone cliffs for about two and a half kilometres — the Pacific on one side, a wall of million-dollar rooftops on the other. Early on it passes the North Bondi Surf Life Saving Club, the first surf lifesaving club anywhere in the world, opened in 1907: surf lifesaving as an organised idea effectively starts on this stretch of coast. The crowds drop away almost immediately — Tamarama, small and glamorous with genuinely strong rips, locals call it Glamarama; quiet Mackenzies Bay; then Bronte, where sandstone cliffs wrap a family beach with the heritage-listed Bronte Sea Baths of 1887 at its edge. Sydney's whole relationship with the ocean, compressed into forty minutes on foot.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-to-bronte-coastal-walk_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-to-bronte-coastal-walk_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-to-bronte-coastal-walk_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-to-bronte-coastal-walk_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2f24a787-8bc2-56df-83c6-af88663811b8",
+          "order": 0,
+          "title": "Bondi to Bronte Coastal Walk",
+          "caption": "The path ahead of you hugs sandstone cliffs the whole way to Bronte, the Pacific on one side and a wall of million-dollar rooftops stacked up on the other.",
+          "latitude": -33.895803635911776,
+          "longitude": 151.27467606752288,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bondi-to-bronte-coastal-walk.mp3",
+          "audioDurationSeconds": 149,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bondi-to-bronte-coastal-walk_hero.webp",
+          "transcriptText": "The path ahead of you hugs sandstone cliffs the whole way to Bronte, the Pacific on one side and a wall of million-dollar rooftops stacked up on the other.\n\nFind the start of the track at the southern end of Bondi Beach, near the Icebergs pool, and follow the paved path as it climbs onto the headland. From here it's a fairly gentle walk of about two and a half kilometres — somewhere between an hour and ninety minutes if you're stopping to look, which you will be.\n\nNot far along, you'll pass the North Bondi Surf Life Saving Club, worth a glance because of what it actually is — the first surf lifesaving club anywhere in the world, opened in 1907. Surf lifesaving as an organised idea effectively starts on this stretch of coast.\n\nKeep walking and the crowds of Bondi drop away almost immediately. Tamarama Beach appears next, small enough to fit a fraction of Bondi's numbers — locals call it Glamarama, half-affectionately, and the rips here are genuinely strong, so admiring it from the path is often the better plan. Round the next headland is Mackenzies Bay, quieter again, easy to miss if you're not looking for it.\n\nThe walk ends at Bronte, and it's worth the full distance to get there. Sandstone cliffs wrap around a beach with two rock pools sitting right at its edges, and the Bronte Sea Baths — heritage-listed, dating back to 1887 — are one of the older ocean pools on this whole coastline.\n\nOver the full walk, here's what's worth registering. In two and a half kilometres, the coastline runs through completely different personalities — Bondi's crowds, Tamarama's danger and glamour, Bronte's quieter, family heritage feel. Sydney's whole relationship with the ocean, more or less, compressed into forty minutes on foot.\n\nOnce you're at Bronte, the walk carries on south toward Clovelly and Coogee if you've still got the legs for it — a longer, wilder stretch of the same sandstone coast, with far fewer people on it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 149,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.895803635911776,
+      "centroidLongitude": 151.27467606752288,
+      "city": "Sydney",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Green Escape",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "27c19d0d-1922-5ab4-8882-719201aa04ed",
+      "createdAt": "2026-08-11",
+      "title": "Camp Cove Beach",
+      "shortDescription": "First tents, marine science, wartime defence — three chapters on two hundred metres of harbour sand.",
+      "longDescription": "On the twenty-first of January 1788, Captain Arthur Phillip sailed out of Botany Bay, rounded the heads, and pitched the first tents of the colony that would become Sydney — most probably on this small, calm beach tucked inside South Head. The expedition didn't stumble onto empty ground: the Birrabirragal people had called this coast home for thousands of years, and middens and rock engravings nearby trace that far longer relationship with the water. The sandstone cottage set back from the sand is the old Marine Biological Station of 1881, built for the Russian scientist Nikolai Miklouho-Maclay; near Green Point are remnants of the anchor for the submarine boom net strung across the harbour entrance in 1942 — a defence one Japanese submarine breached that May, at a cost the harbour still remembers. Three entirely different chapters of a much longer story, on roughly two hundred metres of sand.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/camp-cove-beach_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/camp-cove-beach_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "391ded96-1f6a-534b-b6e5-816e26477068",
+          "order": 0,
+          "title": "Camp Cove Beach",
+          "caption": "It's the twenty-first of January, 1788. Captain Arthur Phillip has just sailed out of Botany Bay, rounded the heads, and pitched the first tents of the colony that would become Sydney — on a beach that was, most probably, this one.",
+          "latitude": -33.8396894,
+          "longitude": 151.2790315,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/camp-cove-beach.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/camp-cove-beach_hero.webp",
+          "transcriptText": "It's the twenty-first of January, 1788. Captain Arthur Phillip has just sailed out of Botany Bay, rounded the heads, and pitched the first tents of the colony that would become Sydney — on a beach that was, most probably, this one.\n\nCamp Cove is the small, gently curving beach in front of you, tucked inside South Head — sand giving way to rock at either end, water almost always calm, since the harbour absorbs most of the ocean swell long before it reaches this far in.\n\nPhillip's expedition didn't stumble onto empty ground. The Birrabirragal people had called this stretch of coast home for thousands of years before 1788, and the evidence is still here if you know where to look — middens and rock engravings nearby, some depicting whales and fish, tracing a relationship with this water that goes back far longer than anything European.\n\nWalk to the small sandstone cottage set back from the sand, and you're looking at the old Marine Biological Station, built in 1881. It was designed for a Russian scientist, Nikolai Miklouho-Maclay, who came here to study marine life up close — a rather serious piece of nineteenth-century science tucked into what still looks, mostly, like a picnic spot.\n\nAt the southern point of the cove, keep an eye out for remnants near Green Point — this was once the anchor for a submarine boom net strung across the harbour entrance in 1942, built to keep Japanese submarines out during the war. It didn't entirely work. A submarine breached the net that May, and the naval ferry it torpedoed went down with the loss of twenty-one servicemen.\n\nAnd here's the thing worth carrying with you off this small beach. First contact, marine science, wartime defence — three entirely different chapters of a much longer story, all playing out on roughly the same two hundred metres of sand.\n\nFrom here, the path continues up to South Head itself — a short climb for a proper view out through the harbour entrance Phillip's ships first sailed through, and the boom net was later built to guard."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.8396894,
+      "centroidLongitude": 151.2790315,
+      "city": "Sydney",
+      "primaryCategory": "history",
+      "tags": [
+        "Waterfront",
+        "History",
+        "War",
+        "Maritime",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "627c44b2-6dca-5e36-888a-b5016d747214",
+      "createdAt": "2026-08-11",
+      "title": "Chinatown Country Club",
+      "shortDescription": "A café on one side, a vintage boutique on the other — a members' club anyone can walk into.",
+      "longDescription": "Half of 222 Clarence Street wants to sell you a flat white, and the other half wants to sell you a secondhand jacket. Inside one room in the CBD just west of Chinatown proper, a curated vintage clothing boutique shares the floor with a café that treats coffee with unusual precision — the Nitro Matcha, or the house-signature Moon River: cold brew under a maple cream float with the faintest hint of orange blossom. The food side is small and deliberate, a provolone and sundried tomato croissant its regular star. The name borrows the language of somewhere exclusive and gated, then applies it to a small, unpretentious room anyone can walk into off the street — a joke, but a deliberate one: the low-key creative vibe is the entire point, not something you earn membership for.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-country-club_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-country-club_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-country-club_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-country-club_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0557a3ea-c43b-50c9-bc1b-bdb994edd767",
+          "order": 0,
+          "title": "Chinatown Country Club",
+          "caption": "There's a curious thing about this corner of Clarence Street — half of it wants to sell you a flat white, and the other half wants to sell you a secondhand jacket.",
+          "latitude": -33.87203613761396,
+          "longitude": 151.20588696752176,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chinatown-country-club.mp3",
+          "audioDurationSeconds": 116,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chinatown-country-club_hero.webp",
+          "transcriptText": "There's a curious thing about this corner of Clarence Street — half of it wants to sell you a flat white, and the other half wants to sell you a secondhand jacket.\n\nTwo twenty-two Clarence Street, in the CBD just west of Chinatown proper, is the address — a shopfront that gives you no obvious clue from outside about which of its two businesses you're actually about to walk into.\n\nGo in anyway, and you'll find both operating in the same room. One half is a vintage and pre-owned clothing boutique, racks curated rather than crammed. The other is a café that treats coffee with more precision than you'd expect from somewhere also selling you a jacket — every step of the process handled with real care. Order the Nitro Matcha if you want something smooth and creamy, or the house signature, the Moon River — cold brew underneath, a maple cream float on top, and the faintest hint of orange blossom running through it.\n\nThe food side is small and deliberate rather than extensive. A provolone and sundried tomato croissant turns up in most reviews, which tells you the kitchen would rather do a handful of things properly than pad out a menu for the sake of it.\n\nAbout that name, here's what's worth sitting with. \"Country Club\" borrows the language of somewhere exclusive, members-only, tucked behind a gate — and then applies it to a small, unpretentious room in the middle of the city that anyone can walk into off Clarence Street. It's a joke, but a fairly deliberate one: the low-key creative vibe here is the entire point, not something you have to earn membership for.\n\nIf you've got time, sit with your coffee rather than taking it away — this stretch of Clarence Street gets surprisingly quiet mid-morning, which is exactly when the room does what it's actually built for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 116,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.87203613761396,
+      "centroidLongitude": 151.20588696752176,
+      "city": "Sydney",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Fashion",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f731ae9a-fc05-5c1d-8756-7ffd416ab826",
+      "createdAt": "2026-08-11",
+      "title": "Cho Cho San",
+      "shortDescription": "An izakaya named for opera's saddest heroine, carrying the name lightly over ponzu and karaage.",
+      "longDescription": "Cho Cho San takes its name from the tragic heroine of Puccini's Madama Butterfly — 'Miss Butterfly' in Japanese — and then does very little with the tragedy. The minimalist, low-lit room on Macleay Street, Potts Point borrows the warmth of the izakaya, the Japanese after-work bar where small plates and drinks arrive steadily rather than in formal sequence. The menu runs wide on purpose: sashimi beside crumbed chicken karaage, wagyu sirloin beside sesame noodles, with the grilled prawns and the ponzu-dressed kingfish the dishes reviewers keep returning to, and a set menu that covers a remarkable amount of the kitchen's range in one sitting. A room that could have leaned moody and self-important about its sad name, and instead — as one local reviewer put it — is 'not a tragic love story' at all.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cho-cho-san_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cho-cho-san_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cho-cho-san_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cho-cho-san_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cho-cho-san_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cho-cho-san_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "048d5e62-980e-55af-9882-e2e50287ceca",
+          "order": 0,
+          "title": "Cho Cho San",
+          "caption": "This is Cho Cho San — named after the tragic heroine of Puccini's Madama Butterfly, a geisha whose story ends about as unhappily as opera stories tend to.",
+          "latitude": -33.869441959786286,
+          "longitude": 151.22537543704505,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cho-cho-san.mp3",
+          "audioDurationSeconds": 127,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cho-cho-san_hero.webp",
+          "transcriptText": "This is Cho Cho San — named after the tragic heroine of Puccini's Madama Butterfly, a geisha whose story ends about as unhappily as opera stories tend to.\n\nMacleay Street, Potts Point, number seventy-three, is the address — a minimalist, low-lit dining room set behind a fairly understated shopfront, easy enough to walk past if you're not already looking for it.\n\nHave a think about that name for a second, because the restaurant does very little with the tragedy. Cho-Cho-San simply means \"Miss Butterfly\" in Japanese, and what's inside borrows the warmth of the character's home country far more than her sad ending — the whole place is built around the izakaya, the Japanese after-work bar where small plates and drinks arrive steadily rather than in a set, formal sequence.\n\nThe menu runs wide on purpose. Sashimi sits alongside crumbed chicken karaage; wagyu sirloin shares space with a bowl of sesame noodles. Reviewers keep coming back to the grilled prawns and a kingfish dressed in ponzu, and the set menu — sixty-five dollars a head — has been called something close to a steal, given how much of the kitchen's range it covers in one sitting.\n\nAnd here's the thing worth noticing, sitting under Cho Cho San's fairly deliberate lighting. Restaurants named after opera tragedies could easily lean into that mood — moody, melancholic, a bit self-important about it. This one doesn't. One local reviewer summed it up rather well, calling it \"not a tragic love story\" at all — just a genuinely enjoyable room that happens to carry a sad name lightly.\n\nIf you've got room left, the sticky date dessert is worth saving space for — a small, sweet contradiction of an ending, given who the restaurant is named after."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 127,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.869441959786286,
+      "centroidLongitude": 151.22537543704505,
+      "city": "Sydney",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4bfcbed3-0d6c-5284-b693-6524fea060de",
+      "createdAt": "2026-08-11",
+      "title": "Fairy Bower Sea Pool",
+      "shortDescription": "Sydney's smallest sea pool, carved by its neighbours in 1929 — and rescued by them twice since.",
+      "longDescription": "At twenty metres end to end, Fairy Bower is the smallest sea pool in Sydney, chiselled and blasted straight out of the rock shelf on Cabbage Tree Bay by local residents in 1929 — one of a string of community-built baths from the era when saltwater bathing became fashionable. The name is older than the pool: a landowner called Charles Hemington named the spot 'the Bower' in 1858 as a picnic stop. The two bronze figures rising from the rock at the pool's edge, the Sea Nymphs or Oceanides, look like they've stood there a century; Helen Leete's ceramic originals were smashed beyond repair by a storm in 2016, and locals raised fifty-seven thousand dollars to recast them in bronze and return them to the rock. Nobody built this pool for you — the neighbourhood carved it, and when the ocean took its sculptures, the neighbourhood paid to bring those back too.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fairy-bower-sea-pool_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "080fd42a-d498-5459-bc27-598eb4c1a1fe",
+          "order": 0,
+          "title": "Fairy Bower Sea Pool",
+          "caption": "Look at the two bronze figures rising out of the rock at the pool's edge.",
+          "latitude": -33.799292818805874,
+          "longitude": 151.29436953492632,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fairy-bower-sea-pool.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fairy-bower-sea-pool_hero.webp",
+          "transcriptText": "Look at the two bronze figures rising out of the rock at the pool's edge. They look like they might have stood there for a century — they've actually only been there a few years.\n\nWalk along Marine Parade until the path narrows and drops toward a small, triangular pool cut into the rock. That's Fairy Bower, and at twenty metres end to end, it's the smallest sea pool anywhere in Sydney.\n\nLocal residents built this pool themselves in 1929, chiselling and blasting it straight out of the rock shelf — one of a string of small, community-built sea baths that popped up along this coast as saltwater bathing became fashionable. The name predates the pool by decades. A landowner called Charles Hemington named the spot \"the Bower\" back in 1858, meaning it as a picnic and refreshment stop for visitors — long before anyone thought to cut a swimming pool into it.\n\nNow look properly at those bronze figures. They're known as the Sea Nymphs, or the Oceanides, made originally in ceramic by the sculptor Helen Leete. A storm destroyed the originals in 2016, smashing them beyond repair — and rather than let the pool lose them, locals and art lovers raised fifty-seven thousand dollars to have them recast in bronze, sturdier this time, and returned to the rock about fifteen months later.\n\nStanding at a pool this small, here's what's worth knowing. Nobody built Fairy Bower for you. Residents carved it out themselves in 1929, and when the storm took its sculptures nearly ninety years later, residents paid to bring them back too. This pool has been rescued by the neighbourhood, twice, rather than by anyone official.\n\nBefore you move on, follow Marine Parade a little further round Cabbage Tree Bay — a protected marine sanctuary where it's genuinely common to spot fish, and occasionally a wobbegong shark, resting in the shallows just off the rocks."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 141,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.799292818805874,
+      "centroidLongitude": 151.29436953492632,
+      "city": "Sydney",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Public Art",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "65087606-b1f8-5989-bb06-f40d0bafd514",
+      "createdAt": "2026-08-11",
+      "title": "Freshwater Rockpool",
+      "shortDescription": "An eight-lane ocean pool beside the sand where Duke Kahanamoku introduced Australia to surfing.",
+      "longDescription": "One board, one Hawaiian swimmer, one afternoon in 1914 — more or less the entire origin story of Australian surfing, and it happened roughly fifty metres from this pool. In December 1914 the Olympic swimming champion Duke Kahanamoku, in Sydney to give swimming demonstrations, was talked into something extra: he shaped his own board from local sugar pine, paddled out at Freshwater, and gave Australia its first proper look at the sport. The original board is still kept at the Freshwater Surf Club, and a statue of the man stands on the beach. The pool beside it, built in 1925, was the first ocean pool on Sydney's north shore — eight lanes, fifty metres, a uniform metre deep, free to swim in and refilled by the ocean. A hundred metres of headland holds a placid family lap pool on one side and the sand where a sport was introduced to a continent on the other.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/freshwater-rockpool_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "babe17e6-df61-5b67-9e39-c857186bfca1",
+          "order": 0,
+          "title": "Freshwater Rockpool",
+          "caption": "One board, one Hawaiian swimmer, one afternoon in 1914 — that's more or less the entire origin story of Australian surfing, and it happened on the sand roughly fifty metres from where you're standing.",
+          "latitude": -33.78141666247436,
+          "longitude": 151.29456030189144,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/freshwater-rockpool.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/freshwater-rockpool_hero.webp",
+          "transcriptText": "One board, one Hawaiian swimmer, one afternoon in 1914 — that's more or less the entire origin story of Australian surfing, and it happened on the sand roughly fifty metres from where you're standing.\n\nYou should be standing on the headland between Curl Curl and Freshwater beaches, looking down at an eight-lane, fifty-metre pool built straight into the rock, with only a low wall separating its calm water from the open surf beyond.\n\nStart with the beach itself, just beside you. In December 1914, an Olympic swimming champion named Duke Kahanamoku came to Sydney to give demonstrations in the pool, and was talked into something extra — a surfing display. He shaped his own board from a plank of local sugar pine, paddled out at Freshwater, and gave Australia its first proper look at the sport. That original board is still kept at the Freshwater Surf Club, just up from the pool, and there's a statue of Kahanamoku on the beach if you'd like to see the man who's credited with popularising surfing here.\n\nNow the pool itself. Built in 1925, it was the first ocean pool constructed anywhere on Sydney's north shore — eight lanes across, a uniform depth of just over a metre from end to end, thick concrete walls doing the work of keeping the swell out. It's free to swim in, refilled by the ocean, and cleaned roughly once a week.\n\nStanding between the two, here's what's worth carrying with you. A hundred metres of headland holds a placid, shallow, family-friendly lap pool on one side, and the exact stretch of sand where an entire sport was introduced to a continent on the other. One rewards stillness. The other exists because someone refused to stay still.\n\nMost people arrive for the pool and never wander over to the surf club to see Kahanamoku's original board — it's worth the five minutes, standing in front of the piece of wood that started all of it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.78141666247436,
+      "centroidLongitude": 151.29456030189144,
+      "city": "Sydney",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5bbef964-305e-5cef-8d27-d03601c445a4",
+      "createdAt": "2026-08-11",
+      "title": "Golden Age Cinema & Bar",
+      "shortDescription": "Paramount's private basement theatrette, still screening to small rooms since 1940.",
+      "longDescription": "In 1940 Paramount Pictures built itself a proper Sydney headquarters on Commonwealth Street, complete with a private cinema in the basement for screening films to critics before anyone else in the country saw them. The little theatrette never really stopped being a room for insiders — trade screenings for exhibitors and executives, sharp-tongued critics, servicemen and women watching newsreels during the Second World War — running quietly until the 1970s. When heritage-listed Paramount House was refurbished in 2013, the new owners kept the format and simply reopened it: fifty-six seats with standing room for seventy more, a forty-two-seat bar alongside, and the building's Art Deco bones still visible in the original lift doors and stairwell detailing. Eighty years ago this room existed so a small, invited audience could see something first. It still does — just with a ticket instead of an invitation.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-age-cinema-bar_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-age-cinema-bar_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-age-cinema-bar_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-age-cinema-bar_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-age-cinema-bar_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-age-cinema-bar_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a3dc27ee-a1c8-54f9-842c-59e446683195",
+          "order": 0,
+          "title": "Golden Age Cinema & Bar",
+          "caption": "It's 1940, and Paramount Pictures has just built itself a proper Sydney headquarters — complete with its own private cinema in the basement, built to screen films to critics before anyone else in the country saw them.",
+          "latitude": -33.879147804784125,
+          "longitude": 151.21108040337597,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/golden-age-cinema-bar.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/golden-age-cinema-bar_hero.webp",
+          "transcriptText": "It's 1940, and Paramount Pictures has just built itself a proper Sydney headquarters — complete with its own private cinema in the basement, built to screen films to critics before anyone else in the country saw them.\n\nLower ground floor, Paramount House, eighty Commonwealth Street, Surry Hills, is where you want to be — down a narrow stair that still feels a bit like sneaking into somewhere you shouldn't.\n\nThis little theatrette has never really stopped being a room for insiders. Through the middle of the twentieth century it hosted trade screenings for exhibitors and studio executives, then critics with famously sharp tongues, then — during the Second World War — servicemen and women brought in to watch newsreels from the front. It kept that use right through to the 1970s, quietly running its own small cinema inside a working film company's offices.\n\nHave a think about that lineage while you're standing here, because it's the whole reason this space still exists. When the building was refurbished in 2013, rather than gut the old theatrette for something else, the new owners kept the format and simply reopened it — fifty-six seats and standing room for another seventy, with a forty-two-seat bar built alongside it.\n\nParamount House itself is heritage-listed, and the rest of the building — the old film vaults, the former offices — has since become a boutique hotel, so the cinema now shares its home with overnight guests rather than film executives.\n\nWhat's worth carrying with you is this: eighty years ago, this room existed so a small, invited audience could see something before the wider public did. It still does exactly that — just with a ticket instead of an invitation.\n\nStay for a drink upstairs at the bar before or after a screening — the building's Art Deco bones are easiest to spot from up there, in the original lift doors and the stairwell detailing that survived every renovation since 1940."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.879147804784125,
+      "centroidLongitude": 151.21108040337597,
+      "city": "Sydney",
+      "primaryCategory": "musicAndPerformance",
+      "tags": [
+        "Venue",
+        "Performance",
+        "History",
+        "Art Deco",
+        "Hidden Gem",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8f22b9f9-0040-5c81-a482-b6690af06479",
+      "createdAt": "2026-08-11",
+      "title": "Luna Park Sydney",
+      "shortDescription": "Nine decades of grinning at the harbour — a pleasure park built to catch the Bridge's crowds.",
+      "longDescription": "Eight different faces have grinned over Luna Park's entrance since 1935 — rebuilt and replaced in 1938, 1939, 1946, 1950, 1973, 1982 and finally 1994, each version reflecting whatever technology and taste the decade allowed, all modelled on Old King Cole and all keeping essentially the same expression. The park borrows its name and format from Coney Island's original of 1903, by way of Melbourne in 1912, and its timing was no accident: it opened in 1935 at Milsons Point to catch the crowds who had come from all over the country to see the newly completed Harbour Bridge. Past the thirty-foot face, the Midway runs down toward Coney Island, the historic fun-house zone, flanked by descendants of the original 1930s Big Dipper, Ghost Train and Rotor. A pleasure park riding the coattails of Sydney's biggest construction story — for nine decades and counting.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/luna-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/luna-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/luna-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/luna-park_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "3955290d-430e-5624-bccb-8d2cc50db7d8",
+          "order": 0,
+          "title": "Luna Park Sydney",
+          "caption": "Eight different faces have grinned over this entrance since 1935.",
+          "latitude": -33.84752937310732,
+          "longitude": 151.20982746752085,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/luna-park.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/luna-park_hero.webp",
+          "transcriptText": "Eight different faces have grinned over this entrance since 1935. The one above you now has only been there since 1994.\n\nLook up at the archway before you walk through it — a giant laughing face, roughly thirty feet wide, built into the front of the park with the name lit up above its head.\n\nThat face is modelled on Old King Cole, and it's been rebuilt, redesigned, and replaced more times than most visitors would guess — 1935, 1938, 1939, 1946, 1950, 1973, 1982, and the current one in 1994, each version reflecting whatever technology and taste the decade allowed. This one's polyurethane, sturdier than anything that came before it, though it's kept the same essential expression the whole way through.\n\nThe park itself borrows its name and format from Coney Island in New York, where the original Luna Park opened in 1903. The idea crossed the Pacific to Melbourne in 1912, and finally reached Sydney in 1935 — timed, rather cannily, to open right as the Harbour Bridge was completed, catching the crowds who'd come from all over the country to see it.\n\nPast the face, the Midway runs straight down toward Coney Island, the park's historic fun-house zone, flanked by rides that trace almost a century of amusement design — descendants of the original Big Dipper, Ghost Train, and Rotor that opened here in the 1930s.\n\nHere's what's worth registering, looking up at the bridge from inside the park. Luna Park didn't just happen to open near an engineering marvel. It was built specifically to catch its shadow — a pleasure park riding on the coattails of Sydney's biggest construction story, and it's been doing exactly that for nine decades.\n\nWalk to the harbourside edge of the park in the evening if you can — the view back across to the Opera House and the bridge, framed by fairground lights, is one most visitors never think to look for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.84752937310732,
+      "centroidLongitude": 151.20982746752085,
+      "city": "Sydney",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Venue",
+        "History",
+        "Iconic Landmark",
+        "After Dark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "121c5e14-92d3-524f-a947-cc7751d93a00",
+      "createdAt": "2026-08-11",
+      "title": "Mona Vale Rockpool",
+      "shortDescription": "A pool on a sand spit with water on more sides than you'd expect — walk out at low tide.",
+      "longDescription": "At low tide you can walk straight out to Mona Vale rockpool across the sand; at high tide the same walk means wading, sometimes waist-deep. The pool sits at the tip of a narrow sand spit between the main beach and Bongin Bongin Bay — not tucked into a headland like most of Sydney's sea pools, but carved from a low rock shelf sitting proud of the open beach, almost alone out on the sand. There are two pools: a thirty-metre main pool and a gentler children's pool alongside. Both were cut during the 1930s under a Depression unemployment relief scheme — men put to work turning exposed rock into something the whole community could use. Much of Sydney's coastal swimming culture was built exactly this way: not as grand civic gesture, but as work found for men who badly needed it, using whatever rock the coastline offered.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mona-vale-rockpool_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mona-vale-rockpool_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "30676d3d-0420-5445-afea-ecc74bedca49",
+          "order": 0,
+          "title": "Mona Vale Rockpool",
+          "caption": "At low tide, you can walk straight out to this pool across the sand.",
+          "latitude": -33.67749531827302,
+          "longitude": 151.3169127264688,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mona-vale-rockpool.mp3",
+          "audioDurationSeconds": 126,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mona-vale-rockpool_hero.webp",
+          "transcriptText": "At low tide, you can walk straight out to this pool across the sand. At high tide, the same walk means wading, sometimes waist-deep, before you get anywhere near the water.\n\nMona Vale rockpool sits right at the tip of a narrow sand spit off Surfview Road, between the main beach and Bongin Bongin Bay — not tucked into a headland like most of Sydney's other sea pools, but sitting almost alone out on open sand, with water on more sides than you'd expect.\n\nThat position is what makes this pool unusual. Most ocean pools shelter behind rock walls or cliffs; this one was carved instead from a low natural rock shelf sitting proud of the beach, which is why the walk out to it changes so much with the tide. There are two pools here — a larger one, thirty metres end to end, and a smaller, gentler pool alongside it for children and less confident swimmers.\n\nBoth were cut during the 1930s, funded through an unemployment relief scheme in the depths of the Depression — men put to work turning a stretch of exposed rock shelf into something the whole community could use. It's free to swim in today, and kept clean partly by council crews, partly by the ocean itself simply washing through it.\n\nWhat's worth sitting with, standing on this spit of sand, is how much of Sydney's coastal swimming culture was built this way. Not as a grand civic gesture, but as work found for men who badly needed it, using whatever rock the coastline happened to offer — in this case, an unusually exposed shelf that nobody would have chosen if the point had only been convenience.\n\nTime your visit around the tide if you can — arriving an hour either side of low water gets you the easiest walk out, and the clearest sense of just how isolated this little pool really is."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 126,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.67749531827302,
+      "centroidLongitude": 151.3169127264688,
+      "city": "Sydney",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "73a7f84f-5eb3-570b-9d0c-ba613f7f2d1d",
+      "createdAt": "2026-08-11",
+      "title": "Museum of Contemporary Art Australia",
+      "shortDescription": "Contemporary art that waited forty-eight years for an address, in an Art Deco block on the Quay.",
+      "longDescription": "The MCA took forty-eight years to open after the money for it was already sitting in a bank account. The expatriate artist J. W. Power left funds and his own work to the University of Sydney in 1943 specifically to establish a museum of contemporary art, and the collection spent decades travelling and sitting in storage while nobody quite knew where to put it. It finally found a home in 1991 in Walter Liberty Vernon's solid Art Deco block on Circular Quay West — built for the Maritime Services Board and finished in 1952, a building that spent four decades managing Sydney's working port rather than showing art, on a site close to where the First Fleet is thought to have made its earliest landing. The 2010–2012 rebuild wrapped a deliberately transparent glass wing around the sandstone-coloured original. An idea funded in 1943 didn't get an address to match its ambition until 2012.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-contemporary-art-australia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-contemporary-art-australia_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-contemporary-art-australia_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f5a8884e-4ceb-555c-b86d-8d08b8bd2a6e",
+          "order": 0,
+          "title": "Museum of Contemporary Art Australia",
+          "caption": "This museum took forty-eight years to open after the money for it was already sitting in a bank account.",
+          "latitude": -33.85976649735619,
+          "longitude": 151.20897585217864,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/museum-of-contemporary-art-australia.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-of-contemporary-art-australia_hero.webp",
+          "transcriptText": "This museum took forty-eight years to open after the money for it was already sitting in a bank account.\n\nFind Circular Quay West, right on the harbour's edge — that's your view: the sandstone-coloured Art Deco block with a glass extension wrapped around part of it, MCA spelled out near the entrance, ferries and the Opera House visible over your shoulder.\n\nThat forty-eight-year gap starts in 1943, when the expatriate Australian artist J. W. Power left money and a body of his own work to the University of Sydney, specifically to establish a museum of contemporary art. Nobody quite knew where to put it. The collection spent decades travelling between exhibitions and sitting in storage across two university buildings, waiting for an actual home.\n\nIt finally found one in 1991, when this building came free — originally built for the Maritime Services Board, the authority that once ran Sydney's working port. Designed by Walter Liberty Vernon and finished in 1952, it's a solid, handsome slab of Art Deco that spent its first four decades managing shipping rather than showing art. The site itself sits close to where the First Fleet is thought to have made its earliest landing in the harbour.\n\nThe museum opened here properly in November 1991, then underwent a major rebuild between 2010 and 2012 — the glass wing you can see wrapped around part of the original block, deliberately transparent so you can still glimpse the old sandstone through it as you walk past.\n\nHere's what's worth carrying away from that long, slow timeline. An idea funded in 1943 didn't get a permanent building until 1991, and didn't get one that properly suited it until 2012. Contemporary art in this country had to wait the better part of seventy years for an address to match its ambition.\n\nIf you're short on time, at least walk the harbourside terrace outside — free to enter, and one of the better places in the city to watch the ferries come and go while you decide whether to go in."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.85976649735619,
+      "centroidLongitude": 151.20897585217864,
+      "city": "Sydney",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Waterfront",
+        "Art",
+        "Art Deco",
+        "Contemporary",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7ad0a010-c31b-5d32-b9ad-9814a41c2239",
+      "createdAt": "2026-08-11",
+      "title": "North Curl Curl Rockpool",
+      "shortDescription": "A headland pool the ocean destroyed once already — rebuilt, and holding its ground since 1957.",
+      "longDescription": "At the far end of the North Curl Curl headland, cut off from the beach at high tide, sits a twenty-five-metre pool that has already been rebuilt once after the ocean simply took it away. A natural rock pool existed here as early as the 1900s; the proper version began in 1937 under a Depression-era Unemployment Relief Fund, workers deepening the basin and walling out the sea. Heavy seas destroyed it in 1947, and it took a full decade before the 1957 rebuild picked up where the relief workers had left off. Since 1962 a winter swimming group called the Cool Cats has met here on cold Sunday mornings, using this exposed pool precisely when most people wouldn't dream of it. A pool in ongoing negotiation with the ocean that built it — deepened, walled, wrecked and rebuilt, never really finished, just holding its ground for now.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/north-curl-curl-rockpool_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/north-curl-curl-rockpool_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/north-curl-curl-rockpool_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c8dfb5a4-f781-57ea-a87d-f23650cd6c41",
+          "order": 0,
+          "title": "North Curl Curl Rockpool",
+          "caption": "At the far end of this headland, cut off from the beach at high tide, sits a pool that's already been rebuilt once after the ocean simply took it away.",
+          "latitude": -33.76623513723783,
+          "longitude": 151.3015754340659,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/north-curl-curl-rockpool.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/north-curl-curl-rockpool_hero.webp",
+          "transcriptText": "At the far end of this headland, cut off from the beach at high tide, sits a pool that's already been rebuilt once after the ocean simply took it away.\n\nFollow the coastal path out along the North Curl Curl headland until it ends at a square, twenty-five-metre pool set straight into the rock — at high tide, this walk is the only way in, since the beach route floods well before you'd reach it.\n\nThere was a natural rock pool here as early as the 1900s, but the version you're looking at properly began in 1937, funded through an Unemployment Relief Fund during the Depression — workers deepened the existing rock basin and built a retaining wall to hold the sea back. A timber walkway went in the following year to make the crossing easier, though it didn't survive long against the conditions out here.\n\nNeither, in the end, did the pool. Heavy seas destroyed it in 1947, and it took a full decade before it was rebuilt in 1957, essentially starting the project over from where the Depression-era workers had left off.\n\nSince 1962, a winter swimming group calling themselves the Cool Cats has met here on cold Sunday mornings, carrying on a tradition of using this exposed pool precisely when most people wouldn't dream of it.\n\nWhat's worth carrying with you, standing on this headland, is that this pool exists in a kind of ongoing negotiation with the ocean that built it. It's been deepened, walled off, wrecked, and rebuilt — proof that a rock pool this exposed is never really finished, just holding its ground for now.\n\nTime your walk out here around low tide for the easiest crossing, and stay for a swim if the Cool Cats happen to be in — regulars are generally happy to explain exactly why anyone would choose to swim here in winter."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.76623513723783,
+      "centroidLongitude": 151.3015754340659,
+      "city": "Sydney",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Maritime",
+        "Hidden Gem",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "d1a5e1a2-6619-52fc-9f47-786cfc951713",
+      "createdAt": "2026-08-11",
+      "title": "Paddington Reservoir Gardens",
+      "shortDescription": "A reservoir, then a petrol station, then the roof fell in — now a sunken garden wearing all three.",
+      "longDescription": "For decades this garden was a car park, and before that it held drinking water for half of Sydney. Edward Bell's reservoir of 1864–66 pumped water up from the Botany Swamps as part of the city's third water supply system, holding roughly two million gallons at a time until a newer reservoir at Centennial Park made it redundant in 1899. Then the story turns properly strange: through the twentieth century the site became a service station, then storage, still selling petrol until 1990 — the year its worn-through roof finally caved in. Rather than patch it up, the City of Sydney spent the 2000s turning it into something new, reopening in 2009 with the original brick, timber and iron deliberately kept and worked around, framing a sunken garden of subtropical planting below street level. Most heritage gardens erase their industrial past; this one left every layer visible.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paddington-reservoir-gardens_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paddington-reservoir-gardens_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paddington-reservoir-gardens_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paddington-reservoir-gardens_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paddington-reservoir-gardens_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8cff68e2-1e23-5ecc-8303-edccabf49221",
+          "order": 0,
+          "title": "Paddington Reservoir Gardens",
+          "caption": "There's a curious thing about this garden — for decades it was a car park, and before that, it held drinking water for half of Sydney.",
+          "latitude": -33.885098906621984,
+          "longitude": 151.2266801557833,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/paddington-reservoir-gardens.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/paddington-reservoir-gardens_hero.webp",
+          "transcriptText": "There's a curious thing about this garden — for decades it was a car park, and before that, it held drinking water for half of Sydney.\n\nCorner of Oxford Street and Oatley Road, Paddington, is where you want to be — a sunken garden set below street level, framed by the original brick and iron of a nineteenth-century reservoir wall still standing on three sides.\n\nStart with what this actually was. Built between 1864 and 1866 to a design by Edward Bell, the reservoir held water pumped up from the Botany Swamps as part of Sydney's third water supply system, holding roughly two million gallons at a time — long enough, and full enough, to matter to a growing city.\n\nBy 1899, a newer reservoir at Centennial Park had made this one redundant, and what followed is where the story turns properly strange. Through the twentieth century the site became a service station, then storage and workshop space, still functioning as a petrol stop until 1990 — the year its roof, unmaintained and worn through, finally caved in.\n\nThat collapse is, in a roundabout way, the reason you're standing in a garden today. Rather than patch the site back up, the City of Sydney spent the 2000s turning it into something new — reopening in 2009 with the original brick, timber, and iron fixtures deliberately kept and worked around, rather than replaced, sitting alongside a sunken garden of subtropical planting.\n\nHere's what's worth carrying away, walking through it. Most heritage gardens try to erase their industrial past. This one didn't — you're standing inside a reservoir, a collapsed service station roof, and a contemporary garden all at once, each layer left visible rather than smoothed over.\n\nWalk down into the lower, sunken section if you haven't already — that's where the old reservoir floor is still exposed underfoot, the clearest single spot to feel exactly how far below street level this whole site sits."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.885098906621984,
+      "centroidLongitude": 151.2266801557833,
+      "city": "Sydney",
+      "primaryCategory": "hiddenGems",
+      "tags": [
+        "Park",
+        "History",
+        "Engineering",
+        "Victorian",
+        "Hidden Gem",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ca135f56-0930-502e-8696-a1e5264741ab",
+      "createdAt": "2026-08-11",
+      "title": "Pellegrino 2000",
+      "shortDescription": "Roman trattoria cooking and a thousand-bottle cellar behind an unglamorous Surry Hills corner.",
+      "longDescription": "Six weeks is roughly the wait for a weekend dinner booking at Pellegrino 2000 — a restaurant with no view, no rooftop, and its best room in the basement. On the corner of Campbell and Foster Streets, in the address that used to house Bar H, Dan Pepperell, Mikey Clift and Andy Tyson — the team behind Bistrot 916 — cook from the trattorias of Rome and Florence rather than anything more polished: a handful of dishes done properly, led by the prawn ravioli in brown butter and sage that most reviewers can't stop mentioning. Downstairs, hidden under the street-level dining room, is a proper wine cellar — bottle-lined walls, white tablecloths, candlelight, something close to a thousand bottles. The whole place relies on remarkably little spectacle: just an already well-regarded team cooking food people will wait over a month for.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pellegrino-2000_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pellegrino-2000_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pellegrino-2000_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pellegrino-2000_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a62457e7-c581-54e9-a0fc-802ae69ea4cb",
+          "order": 0,
+          "title": "Pellegrino 2000",
+          "caption": "Six weeks. That's roughly how long you'll wait for a weekend dinner booking here, at a restaurant with no view, no rooftop, and its best room stuck in the basement.",
+          "latitude": -33.87982280668655,
+          "longitude": 151.20986660336865,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/pellegrino-2000.mp3",
+          "audioDurationSeconds": 125,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/pellegrino-2000_hero.webp",
+          "transcriptText": "Six weeks. That's roughly how long you'll wait for a weekend dinner booking here, at a restaurant with no view, no rooftop, and its best room stuck in the basement.\n\nPellegrino 2000 sits on the corner of Campbell and Foster Streets, Surry Hills, in the address that used to house Bar H — a street-level dining room out front, and a hidden wine cellar underneath it that most first-time visitors don't even know is there.\n\nThe kitchen belongs to Dan Pepperell, Mikey Clift, and Andy Tyson — the same team behind Bistrot 916 — and they've built the menu here around the trattorias of Rome and Florence rather than anything more polished or modern. It's Italian food that leans into simplicity on purpose: a handful of dishes done properly rather than a long list of things done adequately.\n\nOrder the prawn ravioli if it's on, since it's the dish most reviewers can't stop mentioning — pasta in a brown butter and sage sauce, a combination plain enough to sound unremarkable and rich enough to explain the six-week wait on its own.\n\nHead downstairs before you leave, even if you're not drinking. The basement holds a proper wine cellar — bottle-lined walls, white tablecloths, candlelight, something close to a thousand bottles stored around you, a considerably grander room than the corner shopfront above it would ever suggest.\n\nWhat's worth registering here is how little spectacle the whole place actually relies on. No harbour view, no design gimmick, an unglamorous street corner — just an already well-regarded team cooking food people are willing to wait over a month for.\n\nIf you can't get a table, the neighbourhood around Campbell and Foster is worth a wander regardless — several of the same crew's other openings sit within a few minutes' walk, if you fancy tracking down where else they've been busy."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 125,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.87982280668655,
+      "centroidLongitude": 151.20986660336865,
+      "city": "Sydney",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "4f107980-4256-546b-9b85-07a73fa3cc7b",
+      "createdAt": "2026-08-11",
+      "title": "Queen Victoria Building",
+      "shortDescription": "Twenty-one copper domes that survived the 1960s wrecking ball by public argument.",
+      "longDescription": "An entire city block of Romanesque arches and copper domes on George Street, easy to mistake for a cathedral — but built between 1893 and 1898, to a design by the Scottish-born architect George McRae, as a produce and general marketplace timed to mark Queen Victoria's Diamond Jubilee. The scale was the point: a whole block given to a single ornate civic building, twenty-one copper domes along the roofline, stained glass and light-filled atriums, at a time when Sydney wanted its public architecture to say something. That grandeur nearly didn't survive. By the early 1960s, the market use long gone and the building in decay, demolition was seriously on the table — until the Friends of the Queen Victoria Building organised public opposition and stopped it. Restored and reopened as retail space late in the twentieth century, it stands today because enough people argued, loudly, that it shouldn't come down. Look for the two great animated hanging clocks inside, each performing on the hour.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-victoria-building_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-victoria-building_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-victoria-building_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-victoria-building_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-victoria-building_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-victoria-building_6.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-victoria-building_7.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "51056e12-1f51-560d-8e53-6b0b3635725f",
+          "order": 0,
+          "title": "Queen Victoria Building",
+          "caption": "Twenty-one copper domes, one hundred and ninety metres of sandstone, and at least one serious attempt in the 1960s to knock the whole thing down.",
+          "latitude": -33.871547607403166,
+          "longitude": 151.2067429148656,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/queen-victoria-building.mp3",
+          "audioDurationSeconds": 145,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/queen-victoria-building_hero.webp",
+          "transcriptText": "Twenty-one copper domes, one hundred and ninety metres of sandstone, and at least one serious attempt in the 1960s to knock the whole thing down.\n\nGeorge Street, between Market and Druitt — that's your stretch, an entire city block of Romanesque arches and copper domes, easy enough to mistake for a cathedral if you're only glancing at it from across the road.\n\nIt wasn't built as a cathedral, or even as shops in the beginning. Constructed between 1893 and 1898 to a design by the Scottish-born architect George McRae, it opened as a produce and general marketplace, timed to mark Queen Victoria's Diamond Jubilee the year before. The scale was the point — an entire block given over to a single, ornate civic building, at a time when Sydney wanted its public architecture to say something.\n\nHave a look at the roofline while you're here. Twenty-one copper domes run the length of it, sitting over a Romanesque Revival facade that hasn't really been matched anywhere else in the city — stained glass, light-filled atriums, and decoration that owes more to European civic buildings than to anything strictly Australian.\n\nThat grandeur nearly didn't survive. By the early 1960s, the market use long gone and the building fallen into decay, demolition was seriously on the table — until a group calling themselves the Friends of the Queen Victoria Building organised public opposition and stopped it. The building was eventually restored and reopened as retail space in the late twentieth century, which is what you're walking through now.\n\nWhat's worth sitting with is this: nothing about this building's survival was automatic. It stood empty and unloved for long enough that pulling it down looked like the sensible option, and it's still standing today because enough people argued, loudly, that it shouldn't be.\n\nLook for the two large hanging clocks inside — the Royal Clock and the Great Australian Clock — each one animated on the hour, and easy to miss if you're moving through the building rather than stopping to look up."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 145,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.871547607403166,
+      "centroidLongitude": 151.2067429148656,
+      "city": "Sydney",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Commerce",
+        "Victorian",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8598c57b-9c52-5814-a7a2-52c781573a00",
+      "createdAt": "2026-08-11",
+      "title": "Studio GARDNER",
+      "shortDescription": "Collectible vintage from Europe and Japan beside handmade contemporary work — never the same room twice.",
+      "longDescription": "Half the stock at Studio GARDNER has already had one life somewhere else entirely — a chair from Japan, a lamp from Europe — before it ever landed in this light-filled showroom on Bayswater Road, Rushcutters Bay. Opened in 2023, it runs on a specific idea: collectible vintage pieces, personally sourced across Europe and Japan, shown in the same room as contemporary work by local and international artists and makers. Nothing is mass-produced, and even the freshly made pieces are built by hand, one at a time; each object is chosen for what it can tell you about timeless design and quiet craftsmanship. A vintage shop has fixed stock and a gallery has a fixed collection — this is deliberately neither, rotating with each season's finds, with no guarantee the piece you like today will still be there next month.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/studio-gardner_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/studio-gardner_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/studio-gardner_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/studio-gardner_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "e0f7326e-84dc-5a39-bce9-b96240aefd35",
+          "order": 0,
+          "title": "Studio GARDNER",
+          "caption": "There's a curious kind of shop where half the stock has already had one life somewhere else entirely — a chair from Japan, a lamp from Europe — before it ever landed here.",
+          "latitude": -33.875453878065635,
+          "longitude": 151.2250851146812,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/studio-gardner.mp3",
+          "audioDurationSeconds": 122,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/studio-gardner_hero.webp",
+          "transcriptText": "There's a curious kind of shop where half the stock has already had one life somewhere else entirely — a chair from Japan, a lamp from Europe — before it ever landed here.\n\nSixty-five Bayswater Road, Rushcutters Bay, is the address — a light-filled showroom on a fairly quiet stretch of road, easy enough to walk past unless you already know to look for it.\n\nStudio GARDNER only opened in 2023, and it runs on a fairly specific idea: collectible vintage pieces, personally sourced from across Europe and Japan, shown in the same room as contemporary work by local and international artists and makers. Nothing here is mass-produced, and very little of it is new in the strict sense — even the freshly made pieces are built by hand, one at a time.\n\nHave a look at how the room is arranged rather than treating it as a straightforward shop. Each object is chosen, deliberately, for what it can tell you — timeless design, quiet craftsmanship, the kind of piece that carries a sense of where it came from rather than looking interchangeable with anything else on the floor.\n\nWhat's worth knowing, browsing a room like this, is that it never really stays the same twice. A vintage shop has fixed stock; a gallery has a fixed collection. This is neither — vintage finds rotate in from wherever they've been sourced that season, contemporary makers cycle through alongside them, and there's no guarantee the piece you like today will still be here next month.\n\nIf something catches your eye, ask the story behind it rather than just the price — given how personally each piece here has been sourced, there's usually a proper answer."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 122,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.875453878065635,
+      "centroidLongitude": 151.2250851146812,
+      "city": "Sydney",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "03f76815-3768-59f7-a0f6-8c10e25b994e",
+      "createdAt": "2026-08-11",
+      "title": "Sydney Harbour Bridge",
+      "shortDescription": "Six million hand-driven rivets in a single steel arch — nine years to close five hundred metres.",
+      "longDescription": "The single steel curve of the arch is what holds the whole structure up — the deck, the pylons, the traffic are all hanging from it. The idea is older than you'd think: the colonial architect Francis Greenway suggested a harbour crossing as far back as 1815, but it was John Bradfield's 1912 design concept that eventually got built, with construction beginning in 1923. The English firm Dorman Long fabricated every truss, girder and panel in workshops on the northern shore — including six million rivets, each one heated and hand-driven by workers balanced high above the harbour. The two halves of the arch grew out from opposite shores on cables and met in the middle in 1930, a moment that took real nerve to trust; the bridge opened on the nineteenth of March 1932, after just over nine years of work, at a human cost the narration doesn't let you forget.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sydney-harbour-bridge_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sydney-harbour-bridge_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sydney-harbour-bridge_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "626082ac-f3c7-5eff-8ddc-6aaab5e57264",
+          "order": 0,
+          "title": "Sydney Harbour Bridge",
+          "caption": "Stand anywhere along the foreshore with a clear line to the bridge, and look at the arch itself — that single steel curve is what actually holds the whole structure up.",
+          "latitude": -33.8521280502344,
+          "longitude": 151.2107441442134,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sydney-harbour-bridge.mp3",
+          "audioDurationSeconds": 134,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sydney-harbour-bridge_hero.webp",
+          "transcriptText": "Six million rivets, sixteen men who never made it to opening day, and one bridge that took nine years to close a five-hundred-metre gap over water.\n\nStand anywhere along the foreshore with a clear line to the bridge, and look at the arch itself — that single steel curve is what actually holds the whole structure up. Everything else, the deck, the pylons, the traffic — is just hanging from it.\n\nThe idea is older than you'd think. As far back as 1815, the colonial architect Francis Greenway suggested a harbour crossing to Governor Macquarie, though nothing came of it for the best part of a century. It wasn't until 1912 that the engineer John Bradfield put forward the design concept that eventually got built, and construction itself only began in 1923, when workers turned the first sod on the southern side.\n\nThe English firm Dorman Long and Company won the contract and set up their own steel-fabrication workshops on the northern shore, producing every truss, girder, and panel the bridge needed — including six million rivets, each one heated and hand-driven into place by workers balanced high above the harbour.\n\nThe two halves of the arch grew out from opposite shores, supported by cables, and finally met in the middle in 1930 — a moment that must have taken real nerve to trust, given how much steel was hanging in the air with nothing but engineering holding it there. The bridge opened properly on the nineteenth of March, 1932, after just over nine years of work.\n\nWhat's worth carrying with you, standing here, is what that construction cost. Sixteen men died building this bridge — a detail easy to lose against the numbers of rivets and tonnes of steel, but worth remembering every time you watch someone stroll across it without a second thought.\n\nIf you've got a few hours, the climb to the very top of the arch is worth it for the view alone — though even from down here, the pedestrian walkway on the eastern side gets you close enough to hear the rivets creak as trains cross underneath."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 134,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.8521280502344,
+      "centroidLongitude": 151.2107441442134,
+      "city": "Sydney",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Bridge",
+        "Engineering",
+        "History",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "5b61699f-7df4-50bc-92de-d249bb9bd15b",
+      "createdAt": "2026-08-11",
+      "title": "Sydney Opera House",
+      "shortDescription": "A million Swedish tiles on shells their architect never saw finished.",
+      "longDescription": "In 1966 the architect who designed this building resigned and left the country — without ever seeing it finished. Jørn Utzon, a Dane, won the international competition of 1956 with a concept so unconventional that opinion split immediately: white sails catching the light over the harbour, or an engineering headache dressed up as architecture. Both readings turned out to be correct. The shells are clad in more than a million ceramic tiles shipped from Sweden, set in matte and gloss chevrons that catch the light differently depending on where you stand. Construction began in 1959 and ran into exactly the trouble critics predicted — delays, spiralling costs, shell engineering that took years to solve — and in 1966, after a prolonged dispute with the New South Wales Government over money, Utzon resigned and returned to Denmark. The building opened without him in October 1973; only in 1999, working from Denmark, was he brought back to redesign one interior space, now the Utzon Room. The man who imagined it never once stood here to see the finished result.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sydney-opera-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sydney-opera-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sydney-opera-house_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sydney-opera-house_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sydney-opera-house_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7e4d8e1d-df53-576a-a88a-5b775848bf94",
+          "order": 0,
+          "title": "Sydney Opera House",
+          "caption": "It's 1966, and the architect who designed this building has just resigned and left the country — without ever seeing it finished.",
+          "latitude": -33.856597271920656,
+          "longitude": 151.2153503405353,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/sydney-opera-house.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sydney-opera-house_hero.webp",
+          "transcriptText": "It's 1966, and the architect who designed this building has just resigned and left the country — without ever seeing it finished.\n\nBennelong Point, right at the harbour's edge, is your view — the shell-like sails rising in white and cream tile, ferries crossing in front of them, the bridge visible off to one side.\n\nThat architect was Jørn Utzon, a Dane who won an international design competition back in 1956 with a concept so unconventional that opinion split immediately — some saw white sails catching the light over the harbour, others saw an engineering headache dressed up as architecture. Both readings turned out to be correct.\n\nHave a proper look at those shells while you're here. They're clad in more than a million ceramic tiles, shipped from Sweden and set in a pattern designed to catch the light differently depending on where you're standing — matte and gloss chevrons that from a distance just read as gleaming white.\n\nConstruction began in 1959 and quickly ran into exactly the kind of trouble critics of Utzon's design had predicted — delays, spiralling costs, and a design so complex that solving the engineering of the shells took years on its own. By 1966, after a prolonged dispute with the New South Wales Government over money, Utzon resigned from the project entirely and returned to Denmark.\n\nHe never came back to see it completed. The building opened without him on the twentieth of October, 1973, with Queen Elizabeth the Second declaring it open — and it wasn't until 1999, working from Denmark rather than in person, that Utzon was brought back in to help redesign one interior space, later named the Utzon Room in his honour.\n\nWhat's worth carrying with you, standing here, is that the man who imagined this building never once stood where you're standing to see the finished result. He designed something that became one of the most photographed buildings on Earth, and then watched it become famous from another country entirely.\n\nWalk round to the northern forecourt in the late afternoon, when the light catches the tiles at their best — it's the closest thing to seeing the shells the way Utzon originally imagined them, gold rather than simply white."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.856597271920656,
+      "centroidLongitude": 151.2153503405353,
+      "city": "Sydney",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Notable Building",
+        "Architecture",
+        "Performance",
+        "Modernist",
+        "Iconic Landmark",
+        "Designed by a Master"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "f4be2f7b-5cec-58c6-9399-706015043da0",
+      "createdAt": "2026-08-11",
+      "title": "Taronga Zoo Sydney",
+      "shortDescription": "A zoo moved barge-load by barge-load in 1916, for the best view any zoo on Earth ever had.",
+      "longDescription": "Sydney's first public zoo opened in 1883 at Moore Park, on a patch of land known unglamorously as Billy Goat Swamp; by 1905 it was obviously too small, and the search for somewhere bigger settled on this Mosman headland — bigger, better positioned, and considerably harder to reach. When the new zoo opened in 1916 there was no road sturdy enough for the job, so the entire collection — 228 mammals, 552 birds, 64 reptiles — was moved up the harbour by barge, animal by animal. The zoo grew through a 1923 giraffe house (still standing), a 1927 aquarium, Tahr Mountain and tiger pits, then changed course after a major 1967 review pushed it from spectacle toward research, education and conservation, confirmed by a second open-range property inland for breeding endangered species. The harbour view was never incidental: Sydney moved a whole zoo by boat rather than settle for a site without one.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/taronga-zoo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/taronga-zoo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/taronga-zoo_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/taronga-zoo_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/taronga-zoo_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8b068939-c59f-539f-91a3-af468cdbb3d2",
+          "order": 0,
+          "title": "Taronga Zoo Sydney",
+          "caption": "Somewhere in these grounds is a giraffe house that's been standing since 1923 — older than almost every other building most visitors will walk past today.",
+          "latitude": -33.84283439369093,
+          "longitude": 151.24151345772722,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/taronga-zoo.mp3",
+          "audioDurationSeconds": 157,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/taronga-zoo_hero.webp",
+          "transcriptText": "Somewhere in these grounds is a giraffe house that's been standing since 1923 — older than almost every other building most visitors will walk past today.\n\nTaronga Zoo sits on Bradleys Head Road, Mosman, spread across a headland with harbour views most zoos on Earth would never get anywhere near — enclosures on one side, the Opera House and the bridge visible from parts of the grounds on the other.\n\nThat view is precisely why the zoo is here at all. Sydney's first public zoo opened in 1883 at Moore Park, on a modest patch of land known, rather unglamorously, as Billy Goat Swamp. By 1905 it was obvious the site was too small, and the search for somewhere bigger eventually settled on this headland — bigger, better positioned, and considerably harder to reach.\n\nHere's the detail worth sitting with. When the new zoo opened in 1916, there was no road access sturdy enough for the job, so the entire existing collection — 228 mammals, 552 birds, 64 reptiles — had to be moved here by barge, up the harbour from the old site, animal by animal.\n\nThe zoo grew steadily from there: a giraffe house in 1923, an aquarium in 1927, Tahr Mountain in 1932, tiger pits by 1939 — each addition adding another piece to what was, by the mid-twentieth century, a fairly traditional menagerie built for spectacle.\n\nThat changed after a major review in 1967, which pushed the zoo toward research, education, and conservation rather than pure entertainment — a shift confirmed a decade later with the opening of a second, open-range property inland, designed specifically for breeding endangered species in more natural conditions.\n\nWhat's worth carrying with you, walking these harbourside paths, is that the view was never incidental. Sydney moved an entire zoo's worth of animals by boat rather than settle for a site without a harbour outlook — a choice that says as much about the city as it does about the animals.\n\nIf you time it right, catch the ferry across from Circular Quay rather than driving — it's how the very first animals arrived here in 1916, and it's still the best way to see the headland the way the zoo's founders originally chose it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 157,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.84283439369093,
+      "centroidLongitude": 151.24151345772722,
+      "city": "Sydney",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "ba243ad5-a243-5439-851d-91ed7773b2f7",
+      "createdAt": "2026-08-11",
+      "title": "The Rover",
+      "shortDescription": "Oysters and cocktails behind a green door, a British chef's crustacean bistro upstairs.",
+      "longDescription": "Behind a plain green door at the dead end of Campbell Street is a bar that used to have jungle wallpaper and a completely different name. The Wild Rover was a whiskey dive; the rebrand dropped the 'Wild', stripped the jungle print, and rebuilt the room as something considerably more polished — exposed brick, a long brass bar, a plush green velvet booth catching the afternoon light. Downstairs runs as an oyster and cocktail bar, with a lamb sausage roll of genuine local fame and the Gidley burger turning up on Sydney's better-burger lists. Upstairs is where the ambition shows: British-born executive chef Pip Pratt builds the bistro around whatever crustaceans are best that day — whole flathead with garlic and clams, a fisherman's pie of smoked trout, eel pâté with horseradish jelly and a glazed crumpet. Same building, same corner; everything else rebuilt from scratch without moving an inch.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-rover_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-rover_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-rover_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-rover_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "eb704613-4d00-52c2-8a8b-4bb09e3c55e3",
+          "order": 0,
+          "title": "The Rover",
+          "caption": "Behind a plain green door at the end of Campbell Street is a bar that used to have jungle wallpaper and a completely different name.",
+          "latitude": -33.88002382853321,
+          "longitude": 151.2097711018402,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-rover.mp3",
+          "audioDurationSeconds": 129,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-rover_hero.webp",
+          "transcriptText": "Behind a plain green door at the end of Campbell Street is a bar that used to have jungle wallpaper and a completely different name.\n\nSeventy-five Campbell Street, Surry Hills, is the address — look for the green door right at the street's dead end, easy enough to walk straight past if you don't already know it's there.\n\nThis used to be The Wild Rover, a whiskey dive with jungle-print walls and a rougher edge than what's here now. The rebrand dropped the \"Wild,\" stripped out the decor, and turned the space into something considerably more polished — exposed brick, a long brass bar, dark furniture, a plush green velvet booth catching the afternoon light through tall windows.\n\nDownstairs runs as an oyster and cocktail bar — freshly shucked oysters, a lamb sausage roll with a genuine local following, a fish finger sandwich, and the Gidley burger, which turns up on more than one list of Sydney's better burgers despite the venue not really being a burger destination.\n\nUpstairs is where the ambition properly shows. The bistro is run by British-born executive chef Pip Pratt, built around whatever crustaceans are best that day, a whole flathead served with garlic and clams, a fisherman's pie layered with smoked trout and potato gratin, and an eel pâté paired with horseradish jelly and a glazed crumpet — food with real technique behind it, upstairs from a bar that's happy to just sell you oysters and a good drink.\n\nHere's what's worth registering, standing at that green door. Nothing about this address changed — same building, same corner of Campbell Street. Everything else did: the name, the walls, the menu, the entire personality of the room, rebuilt from scratch without ever moving an inch.\n\nBook the upstairs bistro if you're after a proper meal, but don't skip the ground floor bar on your way out — the cocktail list there is doing at least as much work as the kitchen upstairs."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 129,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.88002382853321,
+      "centroidLongitude": 151.2097711018402,
+      "city": "Sydney",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "bb251a04-d582-5fd6-ac92-69bc27f5a38d",
+      "createdAt": "2026-08-11",
+      "title": "WILD LIFE Sydney Zoo",
+      "shortDescription": "The Aussie Big Five — koala, kangaroo, wombat, croc, platypus — wedged between footpath and harbour.",
+      "longDescription": "A slice of the Australian bush fitted into a few city blocks on the Darling Harbour waterfront, sandwiched between the aquarium and Madame Tussauds — the middle of the CBD, not the outback, and that's rather the point. Most of what's inside is built around the Aussie Big Five: koalas, kangaroos, a wombat, a genuinely enormous saltwater crocodile, and a platypus — animals most visitors to Australia never see in the wild no matter how long they stay. The Platypus Pool alone justifies the visit: notoriously shy, largely nocturnal, an egg-laying mammal going about its business up close. Beyond the headliners are Tasmanian devils, a Goodfellow's tree kangaroo and bilbies, species even most Australians have only met in documentaries. The trade-off of a zoo on reclaimed harbourside land is obvious — but for the platypus and the bilby, this compromise is often the only version most people ever get.",
+      "makerId": "e676aade-c4c6-53dd-9141-48c46d3fe743",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wild-life-sydney-zoo_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wild-life-sydney-zoo_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wild-life-sydney-zoo_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bf830941-2142-5752-bba2-3234b33f0ed3",
+          "order": 0,
+          "title": "WILD LIFE Sydney Zoo",
+          "caption": "This zoo fits a slice of the Australian bush into a few city blocks, wedged between a footpath and a working harbour.",
+          "latitude": -33.86919907474741,
+          "longitude": 151.201681738686,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/wild-life-sydney-zoo.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/wild-life-sydney-zoo_hero.webp",
+          "transcriptText": "This zoo fits a slice of the Australian bush into a few city blocks, wedged between a footpath and a working harbour.\n\nLook for the entrance at one to five Wheat Road, right on the Darling Harbour waterfront, sandwiched between the aquarium and Madame Tussauds — you're standing in the middle of the CBD, not the outback, and that's rather the point.\n\nMost of what's inside is built around what staff here call the Aussie Big Five — koalas, kangaroos, a wombat, a genuinely enormous saltwater crocodile, and a platypus, animals most visitors to Australia will never see in the wild no matter how long they stay.\n\nHead for the Platypus Pool if nothing else. Platypus are notoriously shy and largely nocturnal, so seeing one at all, let alone up close, isn't something the wild coastline usually offers casual visitors — here, you can watch one hunting and going about its business, including the odd habits of a mammal that lays eggs rather than giving birth.\n\nBeyond the headline animals, the zoo also holds some of the country's more endangered and rarely seen creatures — Tasmanian devils, a Goodfellow's tree kangaroo, and bilbies, species that even most Australians have never encountered outside a documentary.\n\nHere's what's worth sitting with, walking through a zoo built on reclaimed harbourside land rather than open bush. The trade-off is obvious: this isn't the real Australian outback, dropped into the middle of a city for convenience. But for the platypus and the bilby, convenience is often the only version most people ever get — seeing a compromise, or not seeing the animal at all.\n\nTime your visit around a keeper talk if you can — the koala and kangaroo sessions run several times a day, and they're usually where the staff explain exactly what a native species needs that this small a space genuinely can't provide."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.86919907474741,
+      "centroidLongitude": 151.201681738686,
+      "city": "Sydney",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Commerce"
       ],
       "priceUSD": 0
     }
