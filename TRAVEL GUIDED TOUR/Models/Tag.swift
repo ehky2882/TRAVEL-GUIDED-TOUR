@@ -64,6 +64,17 @@ enum Tag {
             "Le Corbusier", "Philip Johnson", "William Van Alen",
             "Thomas Heatherwick", "Santiago Calatrava", "Bernard Maybeck",
             "Daniel Burnham", "Zaha Hadid", "Jean Nouvel",
+            // Brazil (Rio + São Paulo). Niemeyer, Bo Bardi and Mendes da Rocha
+            // were the catalog's most-represented architects with no tag of
+            // their own; the São Paulo launch made that plain.
+            "Oscar Niemeyer", "Lina Bo Bardi", "Paulo Mendes da Rocha",
+            "Vilanova Artigas", "Ramos de Azevedo", "Rino Levi",
+            "Roberto Burle Marx", "Affonso Eduardo Reidy", "Lúcio Costa",
+            "Christian de Portzamparc",
+            // Buenos Aires, Melbourne, Sydney, Seoul, Naoshima, Tokyo, global.
+            "Rem Koolhaas", "Amanda Levete", "Marcel Breuer", "Clorindo Testa",
+            "Víctor Meano", "Jørn Utzon", "Roy Grounds", "Dominique Perrault",
+            "Hiroshi Sambuichi", "Marc Newson",
         ]),
     ]
 

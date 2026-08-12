@@ -56,7 +56,12 @@ VOCAB = {
    "Kengo Kuma","Kenzō Tange","Tadao Ando","SANAA","Toyo Ito","Fumihiko Maki",
    "Shigeru Ban","Sou Fujimoto","Kisho Kurokawa","I. M. Pei","Mies van der Rohe",
    "Le Corbusier","Philip Johnson","William Van Alen","Thomas Heatherwick",
-   "Santiago Calatrava","Bernard Maybeck","Daniel Burnham","Zaha Hadid","Jean Nouvel"],
+   "Santiago Calatrava","Bernard Maybeck","Daniel Burnham","Zaha Hadid","Jean Nouvel",
+   "Oscar Niemeyer","Lina Bo Bardi","Paulo Mendes da Rocha","Vilanova Artigas",
+   "Ramos de Azevedo","Rino Levi","Roberto Burle Marx","Affonso Eduardo Reidy",
+   "Lúcio Costa","Christian de Portzamparc","Rem Koolhaas","Amanda Levete",
+   "Marcel Breuer","Clorindo Testa","Víctor Meano","Jørn Utzon","Roy Grounds",
+   "Dominique Perrault","Hiroshi Sambuichi","Marc Newson"],
 }
 
 # old primaryCategory -> (lead theme, default place-type hint)
@@ -128,7 +133,17 @@ ARCH_KW = {"Álvaro Siza":["siza"],"Eduardo Souto de Moura":["souto de moura"],"
  "I. M. Pei":["i.m. pei","i. m. pei","ieoh ming pei"],"Mies van der Rohe":["mies van der rohe"],
  "Le Corbusier":["le corbusier"],"Philip Johnson":["philip johnson"],"William Van Alen":["van alen"],
  "Thomas Heatherwick":["heatherwick"],"Santiago Calatrava":["calatrava"],"Bernard Maybeck":["maybeck"],
- "Daniel Burnham":["burnham"],"Zaha Hadid":["zaha hadid"],"Jean Nouvel":["jean nouvel"]}
+ "Daniel Burnham":["burnham"],"Zaha Hadid":["zaha hadid"],"Jean Nouvel":["jean nouvel"],
+ "Oscar Niemeyer":["niemeyer"],"Lina Bo Bardi":["bo bardi"],
+ "Paulo Mendes da Rocha":["mendes da rocha"],"Vilanova Artigas":["vilanova artigas"],
+ "Ramos de Azevedo":["ramos de azevedo"],"Rino Levi":["rino levi"],
+ "Roberto Burle Marx":["burle marx"],"Affonso Eduardo Reidy":["reidy"],
+ "Lúcio Costa":["lúcio costa","lucio costa"],"Christian de Portzamparc":["portzamparc"],
+ "Rem Koolhaas":["koolhaas"],"Amanda Levete":["amanda levete","al_a"],
+ "Marcel Breuer":["breuer"],"Clorindo Testa":["clorindo testa"],
+ "Víctor Meano":["víctor meano","victor meano"],"Jørn Utzon":["utzon"],
+ "Roy Grounds":["roy grounds"],"Dominique Perrault":["dominique perrault"],
+ "Hiroshi Sambuichi":["sambuichi"],"Marc Newson":["marc newson"]}
 
 
 def text(t, longd=True):

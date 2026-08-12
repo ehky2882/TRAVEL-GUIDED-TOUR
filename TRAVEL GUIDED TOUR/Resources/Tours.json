@@ -785,7 +785,8 @@
         "Performance",
         "Contemporary",
         "Viewpoint",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Rem Koolhaas"
       ],
       "priceUSD": 0
     },
@@ -1850,7 +1851,8 @@
         "Art",
         "Contemporary",
         "Designed by a Master",
-        "SANAA"
+        "SANAA",
+        "Rem Koolhaas"
       ],
       "priceUSD": 0
     },
@@ -6831,7 +6833,8 @@
         "Modernist",
         "Power",
         "Designed by a Master",
-        "Le Corbusier"
+        "Le Corbusier",
+        "Oscar Niemeyer"
       ],
       "stops": [
         {
@@ -7191,7 +7194,8 @@
         "Architecture",
         "Art",
         "Brutalist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Marcel Breuer"
       ],
       "stops": [
         {
@@ -9529,7 +9533,8 @@
         "Art",
         "Engineering",
         "Commerce",
-        "Viewpoint"
+        "Viewpoint",
+        "Amanda Levete"
       ],
       "priceUSD": 0
     },
@@ -12753,7 +12758,8 @@
         "Engineering",
         "History",
         "Power",
-        "Baroque"
+        "Baroque",
+        "Paulo Mendes da Rocha"
       ],
       "priceUSD": 0
     },
@@ -20842,7 +20848,8 @@
         "Architecture",
         "Contemporary",
         "Designed by a Master",
-        "Public Art"
+        "Public Art",
+        "Sou Fujimoto"
       ],
       "priceUSD": 0
     },
@@ -22238,7 +22245,8 @@
         "Notable Building",
         "Architecture",
         "Designed by a Master",
-        "Public Art"
+        "Public Art",
+        "Marc Newson"
       ],
       "priceUSD": 0
     },
@@ -26569,7 +26577,8 @@
         "Architecture",
         "Art",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Hiroshi Sambuichi"
       ],
       "priceUSD": 0
     },
@@ -32199,7 +32208,8 @@
         "Notable Building",
         "Architecture",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Dominique Perrault"
       ],
       "priceUSD": 0
     },
@@ -36690,7 +36700,8 @@
         "Architecture",
         "Commerce",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Amanda Levete"
       ],
       "priceUSD": 0
     },
@@ -50533,7 +50544,8 @@
         "District",
         "Art",
         "Contemporary",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Rem Koolhaas"
       ],
       "priceUSD": 0
     },
@@ -51508,7 +51520,8 @@
         "Notable Building",
         "Architecture",
         "Modernist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Oscar Niemeyer"
       ],
       "priceUSD": 0
     },
@@ -51552,7 +51565,8 @@
       "tags": [
         "Museum",
         "Art",
-        "History"
+        "History",
+        "Roberto Burle Marx"
       ],
       "priceUSD": 0
     },
@@ -51732,7 +51746,8 @@
         "Venue",
         "Performance",
         "Architecture",
-        "Contemporary"
+        "Contemporary",
+        "Christian de Portzamparc"
       ],
       "priceUSD": 0
     },
@@ -52034,7 +52049,8 @@
         "Notable Building",
         "Architecture",
         "Modernist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Oscar Niemeyer"
       ],
       "priceUSD": 0
     },
@@ -52169,7 +52185,8 @@
         "Architecture",
         "Modernist",
         "Designed by a Master",
-        "Viewpoint"
+        "Viewpoint",
+        "Oscar Niemeyer"
       ],
       "priceUSD": 0
     },
@@ -52256,7 +52273,8 @@
         "Museum",
         "Art",
         "Architecture",
-        "Modernist"
+        "Modernist",
+        "Affonso Eduardo Reidy"
       ],
       "priceUSD": 0
     },
@@ -52523,7 +52541,8 @@
         "Architecture",
         "Modernist",
         "Designed by a Master",
-        "Le Corbusier"
+        "Le Corbusier",
+        "Lúcio Costa"
       ],
       "priceUSD": 0
     },
@@ -52704,7 +52723,8 @@
         "Notable Building",
         "Architecture",
         "Modernist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Affonso Eduardo Reidy"
       ],
       "priceUSD": 0
     },
@@ -52880,7 +52900,8 @@
         "Performance",
         "Modernist",
         "Designed by a Master",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Oscar Niemeyer"
       ],
       "priceUSD": 0
     },
@@ -53014,7 +53035,8 @@
         "Architecture",
         "Modernist",
         "Designed by a Master",
-        "Free to Visit"
+        "Free to Visit",
+        "Oscar Niemeyer"
       ],
       "priceUSD": 0
     },
@@ -53287,7 +53309,8 @@
         "Notable Building",
         "Architecture",
         "Modernist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Lina Bo Bardi"
       ],
       "priceUSD": 0
     },
@@ -53334,7 +53357,8 @@
         "Architecture",
         "Art",
         "Modernist",
-        "Free to Visit"
+        "Free to Visit",
+        "Rino Levi"
       ],
       "priceUSD": 0
     },
@@ -53517,7 +53541,8 @@
         "Architecture",
         "Modernist",
         "Designed by a Master",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Oscar Niemeyer"
       ],
       "priceUSD": 0
     },
@@ -53653,7 +53678,8 @@
         "Architecture",
         "Modernist",
         "Designed by a Master",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Vilanova Artigas"
       ],
       "priceUSD": 0
     },
@@ -53741,7 +53767,8 @@
         "Art",
         "Architecture",
         "Modernist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Paulo Mendes da Rocha"
       ],
       "priceUSD": 0
     },
@@ -54014,7 +54041,8 @@
         "History",
         "Modernist",
         "Designed by a Master",
-        "Free to Visit"
+        "Free to Visit",
+        "Oscar Niemeyer"
       ],
       "priceUSD": 0
     },
@@ -54145,7 +54173,8 @@
         "Market",
         "Food",
         "Commerce",
-        "History"
+        "History",
+        "Ramos de Azevedo"
       ],
       "priceUSD": 0
     },
@@ -54324,7 +54353,8 @@
       "tags": [
         "Museum",
         "History",
-        "Architecture"
+        "Architecture",
+        "Ramos de Azevedo"
       ],
       "priceUSD": 0
     },
@@ -54370,7 +54400,8 @@
         "Architecture",
         "Modernist",
         "Designed by a Master",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Lina Bo Bardi"
       ],
       "priceUSD": 0
     },
@@ -54417,7 +54448,8 @@
         "Art",
         "Architecture",
         "Modernist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Oscar Niemeyer"
       ],
       "priceUSD": 0
     },
@@ -54593,7 +54625,9 @@
         "Museum",
         "Art",
         "Architecture",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Paulo Mendes da Rocha",
+        "Ramos de Azevedo"
       ],
       "priceUSD": 0
     },
@@ -54636,7 +54670,8 @@
         "Notable Building",
         "Architecture",
         "Modernist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Vilanova Artigas"
       ],
       "priceUSD": 0
     },
@@ -54683,7 +54718,8 @@
         "Architecture",
         "Contemporary",
         "Designed by a Master",
-        "Free to Visit"
+        "Free to Visit",
+        "Paulo Mendes da Rocha"
       ],
       "priceUSD": 0
     },
@@ -54731,7 +54767,8 @@
         "Architecture",
         "Brutalist",
         "Designed by a Master",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Lina Bo Bardi"
       ],
       "priceUSD": 0
     },
@@ -54821,7 +54858,8 @@
         "Performance",
         "Art",
         "Modernist",
-        "Public Art"
+        "Public Art",
+        "Rino Levi"
       ],
       "priceUSD": 0
     },
@@ -54865,7 +54903,8 @@
         "Venue",
         "Performance",
         "Architecture",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Lina Bo Bardi"
       ],
       "priceUSD": 0
     },
@@ -54910,7 +54949,8 @@
         "Performance",
         "Architecture",
         "Beaux-Arts",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Ramos de Azevedo"
       ],
       "priceUSD": 0
     },
@@ -55146,7 +55186,9 @@
         "Designed by a Master",
         "Green Escape",
         "Free to Visit",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Oscar Niemeyer",
+        "Roberto Burle Marx"
       ],
       "priceUSD": 0
     },
@@ -58395,7 +58437,8 @@
         "Commerce",
         "Brutalist",
         "Designed by a Master",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Clorindo Testa"
       ],
       "priceUSD": 0
     },
@@ -58799,7 +58842,8 @@
         "History",
         "Neoclassical",
         "Iconic Landmark",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Víctor Meano"
       ],
       "priceUSD": 0
     },
@@ -59772,7 +59816,8 @@
         "Architecture",
         "Beaux-Arts",
         "Iconic Landmark",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Víctor Meano"
       ],
       "priceUSD": 0
     },
@@ -62527,7 +62572,8 @@
         "Modernist",
         "Iconic Landmark",
         "Free to Visit",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Roy Grounds"
       ],
       "priceUSD": 0
     },
@@ -64536,7 +64582,8 @@
         "Performance",
         "Modernist",
         "Iconic Landmark",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Jørn Utzon"
       ],
       "priceUSD": 0
     },
