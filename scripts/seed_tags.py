@@ -61,7 +61,8 @@ VOCAB = {
    "Ramos de Azevedo","Rino Levi","Roberto Burle Marx","Affonso Eduardo Reidy",
    "Lúcio Costa","Christian de Portzamparc","Rem Koolhaas","Amanda Levete",
    "Marcel Breuer","Clorindo Testa","Víctor Meano","Jørn Utzon","Roy Grounds",
-   "Dominique Perrault","Hiroshi Sambuichi","Marc Newson"],
+   "Dominique Perrault","Hiroshi Sambuichi","Marc Newson",
+   "Karl Friedrich Schinkel"],
 }
 
 # old primaryCategory -> (lead theme, default place-type hint)
@@ -143,7 +144,8 @@ ARCH_KW = {"Álvaro Siza":["siza"],"Eduardo Souto de Moura":["souto de moura"],"
  "Marcel Breuer":["breuer"],"Clorindo Testa":["clorindo testa"],
  "Víctor Meano":["víctor meano","victor meano"],"Jørn Utzon":["utzon"],
  "Roy Grounds":["roy grounds"],"Dominique Perrault":["dominique perrault"],
- "Hiroshi Sambuichi":["sambuichi"],"Marc Newson":["marc newson"]}
+ "Hiroshi Sambuichi":["sambuichi"],"Marc Newson":["marc newson"],
+ "Karl Friedrich Schinkel":["karl friedrich schinkel","schinkel"]}
 
 
 def text(t, longd=True):
