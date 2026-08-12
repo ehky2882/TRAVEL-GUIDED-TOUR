@@ -138,7 +138,33 @@ seed flags candidates, the human confirms the subject architect).
 `Daniel Burnham` (SF) · `William Van Alen` (Chrysler) · `Santiago Calatrava`
 (Oculus) · `Zaha Hadid` · `Jean Nouvel`.
 
+**New for Brazil (Rio + São Paulo):** `Oscar Niemeyer` (11) ·
+`Roberto Burle Marx` (6) · `Lina Bo Bardi` (4) · `Paulo Mendes da Rocha` (4) ·
+`Ramos de Azevedo` (4) · `Affonso Eduardo Reidy` (3) · `Vilanova Artigas` (2) ·
+`Rino Levi` (2) · `Lúcio Costa` · `Christian de Portzamparc`.
+Niemeyer, Bo Bardi and Mendes da Rocha were the three most-represented
+architects in the catalog with no tag of their own; the São Paulo launch,
+where the modernist canon *is* the coverage, made that untenable.
+**`Roberto Burle Marx` is a landscape architect** — tagged where the
+landscape is a defining authorship credit, not merely present.
+
+**New for Buenos Aires / Melbourne / Sydney / Seoul / Naoshima / global:**
+`Rem Koolhaas` (3, incl. OMA) · `Amanda Levete` (2) · `Marcel Breuer` (2) ·
+`Víctor Meano` (2) · `Jørn Utzon` (Sydney Opera House) · `Clorindo Testa` ·
+`Roy Grounds` · `Dominique Perrault` · `Hiroshi Sambuichi` ·
+`Marc Newson` *(industrial designer — Tokyo Toilet)*.
+
 New architects are appended here first, deliberately, as the catalog grows.
+
+**⚠️ A mention is not authorship.** These names are assigned from the tour's
+own text, and the seed's keyword match is a *candidate list*, not an answer.
+Cases deliberately rejected while adding the above: King Power Mahanakhon
+names Ole Scheeren as "once a partner at OMA" (biography, not authorship);
+`MPavilion` lists OMA and Amanda Levete among authors of the *series* while
+the tour's subject is Tadao Ando's MPavilion 10; the Nishi-Sando toilet lists
+four Pritzker laureates before crediting Sou Fujimoto; Nanago-Dori Park
+Toilets names Ando, Kuma and Ban as project participants but was designed by
+Kazoo Sato, who is not in the vocabulary. Read the sentence, not the match.
 
 ## Rules
 
