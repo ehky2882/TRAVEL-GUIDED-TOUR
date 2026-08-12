@@ -138,6 +138,34 @@ seed flags candidates, the human confirms the subject architect).
 `Daniel Burnham` (SF) · `William Van Alen` (Chrysler) · `Santiago Calatrava`
 (Oculus) · `Zaha Hadid` · `Jean Nouvel`.
 
+**New 2026-08-12 — the accumulated backlog, cleared in one pass.** Six cities had
+shipped naming architects the vocabulary did not carry, each falling back to the
+generic `Designed by a Master`:
+`Oscar Niemeyer` (11 tours, 3 cities — the most-represented architect in the
+catalog, and untagged until now) · `Roberto Burle Marx` (6) ·
+`Karl Friedrich Schinkel` (5) · `Lina Bo Bardi` (4) · `Paulo Mendes da Rocha` (4) ·
+`Ramos de Azevedo` (4) · `Diller Scofidio + Renfro` (4) ·
+`Frederick Law Olmsted` (4) · `Affonso Eduardo Reidy` (3) · `Calvert Vaux` (3) ·
+`Nicholas Hawksmoor` (3) · `John Soane` (3) · `Vilanova Artigas` (2) ·
+`Rino Levi` · `Lúcio Costa` · `Christian de Portzamparc` · `Hans Scharoun` ·
+`August Endell` (2) · `Hermann Henselmann` · `Edwin Lutyens` (2) ·
+`Horace Jones` (2) · `Richard Morris Hunt` · `John Russell Pope` (2) ·
+`Eero Saarinen` · `Jeanne Gang` (2) · `Michael Arad` · `Francesco Tamburini` (2) ·
+`Mario Palanti` (2) · `Carlos Thays` · `Clorindo Testa` · `Jørn Utzon` ·
+`Joseph Reed` (2) · `Studio KO` (2) · `Mario Botta` (2) · `Jun Aoki` (2) ·
+`Rocco Yim` · `Bing Thom` · `Philippe Starck` (2) · `Gustave Eiffel` (2).
+
+⚠️ **Three candidates were deliberately rejected, and the reasons generalise.**
+`Louis Sullivan` is named in three Chicago tours but designed **none** of them —
+he is quoted describing other people's buildings. `Kazuyo Sejima` and
+`Stanford White` were dropped as duplicates of `SANAA` and
+`McKim, Mead & White`, which already carry their work; splitting a partner out
+of a firm already in the vocabulary fragments the browse set. **A name appearing
+in a tour's text is not evidence the tour's subject is that person's work** —
+check the sentence before tagging. Gustave Eiffel is the sharpest case: of five
+tours naming him, **three say explicitly that he did *not* design the thing**
+(Dom Luís I Bridge, Saigon Central Post Office, Santa Justa Lift).
+
 New architects are appended here first, deliberately, as the catalog grows.
 
 ## Rules

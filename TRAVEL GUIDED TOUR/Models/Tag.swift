@@ -64,6 +64,34 @@ enum Tag {
             "Le Corbusier", "Philip Johnson", "William Van Alen",
             "Thomas Heatherwick", "Santiago Calatrava", "Bernard Maybeck",
             "Daniel Burnham", "Zaha Hadid", "Jean Nouvel",
+            // Brazil — the modernist canon. Niemeyer is the single
+            // most-represented architect in the catalog (11 tours, 3 cities)
+            // and had no tag until 2026-08-12.
+            "Oscar Niemeyer", "Lina Bo Bardi", "Paulo Mendes da Rocha",
+            "Vilanova Artigas", "Affonso Eduardo Reidy", "Lúcio Costa",
+            "Christian de Portzamparc", "Ramos de Azevedo", "Rino Levi",
+            "Roberto Burle Marx",
+            // Germany — Schinkel recurs through the Berlin scripts as the man
+            // who taught Prussia what calm looks like.
+            // NB: keep quotation marks out of comments inside this array —
+            // the validator, seed_tags.py and the docs are kept in sync by
+            // tools that parse quoted strings out of it.
+            "Karl Friedrich Schinkel", "Hans Scharoun", "August Endell",
+            "Hermann Henselmann",
+            // Britain
+            "Nicholas Hawksmoor", "John Soane", "Edwin Lutyens", "Horace Jones",
+            // United States
+            "Frederick Law Olmsted", "Calvert Vaux", "Richard Morris Hunt",
+            "John Russell Pope", "Eero Saarinen", "Diller Scofidio + Renfro",
+            "Jeanne Gang", "Michael Arad",
+            // Argentina
+            "Francesco Tamburini", "Mario Palanti", "Carlos Thays",
+            "Clorindo Testa",
+            // Australia
+            "Jørn Utzon", "Joseph Reed",
+            // Elsewhere
+            "Studio KO", "Mario Botta", "Jun Aoki", "Rocco Yim", "Bing Thom",
+            "Philippe Starck", "Gustave Eiffel",
         ]),
     ]
 

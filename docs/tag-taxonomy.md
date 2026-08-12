@@ -96,6 +96,11 @@ tours):
 `Frank Lloyd Wright` · `Cass Gilbert` · `Inês Lobo` · `Luís Pedro Silva`
 
 New architects are added to this list as the catalog grows (closed set, append-only).
+The list above is the original 2026-06 set and is **not** current — the facet
+holds **77** architects as of 2026-08-12, after six cities' worth of backlog was
+cleared in one pass. See `docs/tag-taxonomy-v2.md` for the additions and, more
+usefully, for the three names that were **rejected** and why.
+**`Models/Tag.swift` is the authority; this document is commentary.**
 
 ## Rules
 
@@ -104,6 +109,13 @@ New architects are added to this list as the catalog grows (closed set, append-o
 - **Required:** ≥1 `Place type` and ≥1 `Theme`. Others optional.
 - **Typical tour:** ~5–7 tags. (Catalog average from the seeder: 5.5.)
 - **`Designed by a Master`** is implied by any `Architect` tag — keep them in sync.
+  **True of the whole catalog as of 2026-08-12**: it held for only 79% of
+  architect-tagged tours until the vocabulary expansion swept the remainder
+  (75 tours gained the tag). This matches what the maker authoring form has
+  always done — `CreateTourView.finalTags` appends `Designed by a Master`
+  alongside the chosen architect — so hand-authored catalog content now behaves
+  the same way app-authored content does. **Still enforced by nobody:** no code
+  checks it, so a future hand-edit can silently break it again.
 
 ## Data / model change (the code PR, separate)
 

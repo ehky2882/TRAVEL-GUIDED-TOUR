@@ -56,7 +56,16 @@ VOCAB = {
    "Kengo Kuma","Kenzō Tange","Tadao Ando","SANAA","Toyo Ito","Fumihiko Maki",
    "Shigeru Ban","Sou Fujimoto","Kisho Kurokawa","I. M. Pei","Mies van der Rohe",
    "Le Corbusier","Philip Johnson","William Van Alen","Thomas Heatherwick",
-   "Santiago Calatrava","Bernard Maybeck","Daniel Burnham","Zaha Hadid","Jean Nouvel"],
+   "Santiago Calatrava","Bernard Maybeck","Daniel Burnham","Zaha Hadid","Jean Nouvel",
+   "Oscar Niemeyer","Lina Bo Bardi","Paulo Mendes da Rocha","Vilanova Artigas",
+   "Affonso Eduardo Reidy","Lúcio Costa","Christian de Portzamparc","Ramos de Azevedo",
+   "Rino Levi","Roberto Burle Marx","Karl Friedrich Schinkel","Hans Scharoun",
+   "August Endell","Hermann Henselmann","Nicholas Hawksmoor","John Soane",
+   "Edwin Lutyens","Horace Jones","Frederick Law Olmsted","Calvert Vaux",
+   "Richard Morris Hunt","John Russell Pope","Eero Saarinen","Diller Scofidio + Renfro",
+   "Jeanne Gang","Michael Arad","Francesco Tamburini","Mario Palanti","Carlos Thays",
+   "Clorindo Testa","Jørn Utzon","Joseph Reed","Studio KO","Mario Botta","Jun Aoki",
+   "Rocco Yim","Bing Thom","Philippe Starck","Gustave Eiffel"],
 }
 
 # old primaryCategory -> (lead theme, default place-type hint)
@@ -128,7 +137,27 @@ ARCH_KW = {"Álvaro Siza":["siza"],"Eduardo Souto de Moura":["souto de moura"],"
  "I. M. Pei":["i.m. pei","i. m. pei","ieoh ming pei"],"Mies van der Rohe":["mies van der rohe"],
  "Le Corbusier":["le corbusier"],"Philip Johnson":["philip johnson"],"William Van Alen":["van alen"],
  "Thomas Heatherwick":["heatherwick"],"Santiago Calatrava":["calatrava"],"Bernard Maybeck":["maybeck"],
- "Daniel Burnham":["burnham"],"Zaha Hadid":["zaha hadid"],"Jean Nouvel":["jean nouvel"]}
+ "Daniel Burnham":["burnham"],"Zaha Hadid":["zaha hadid"],"Jean Nouvel":["jean nouvel"],
+ "Oscar Niemeyer":["niemeyer"],"Lina Bo Bardi":["bo bardi"],
+ "Paulo Mendes da Rocha":["mendes da rocha"],"Vilanova Artigas":["vilanova artigas"],
+ "Affonso Eduardo Reidy":["reidy"],"Lúcio Costa":["lúcio costa","lucio costa"],
+ "Christian de Portzamparc":["portzamparc"],"Ramos de Azevedo":["ramos de azevedo"],
+ "Rino Levi":["rino levi"],"Roberto Burle Marx":["burle marx"],
+ "Karl Friedrich Schinkel":["schinkel"],"Hans Scharoun":["scharoun"],
+ "August Endell":["august endell"],"Hermann Henselmann":["henselmann"],
+ "Nicholas Hawksmoor":["hawksmoor"],"John Soane":["john soane","soane"],
+ "Edwin Lutyens":["lutyens"],"Horace Jones":["horace jones"],
+ "Frederick Law Olmsted":["olmsted"],"Calvert Vaux":["calvert vaux","vaux"],
+ "Richard Morris Hunt":["richard morris hunt"],"John Russell Pope":["john russell pope"],
+ "Eero Saarinen":["eero saarinen"],
+ "Diller Scofidio + Renfro":["diller scofidio","diller, scofidio"],
+ "Jeanne Gang":["jeanne gang","studio gang"],"Michael Arad":["michael arad"],
+ "Francesco Tamburini":["tamburini"],"Mario Palanti":["palanti"],
+ "Carlos Thays":["carlos thays","thays"],"Clorindo Testa":["clorindo testa"],
+ "Jørn Utzon":["utzon"],"Joseph Reed":["joseph reed"],
+ "Studio KO":["studio ko"],"Mario Botta":["mario botta","botta"],
+ "Jun Aoki":["jun aoki"],"Rocco Yim":["rocco yim"],"Bing Thom":["bing thom"],
+ "Philippe Starck":["philippe starck","starck"],"Gustave Eiffel":["gustave eiffel"]}
 
 
 def text(t, longd=True):
