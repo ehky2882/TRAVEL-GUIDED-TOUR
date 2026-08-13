@@ -31,7 +31,9 @@ the branches to answer "what's left?".
   `git ls-tree -r --name-only origin/gh-pages | grep audio/` (audio staged iff the slug's
   `.mp3` is there).
 
-**Last verified:** 2026-08-11 (🇦🇺 **Sydney COMPLETE** — 29 tours live under Atlas Studio SYD, the 29th maker and Australia's second bureau, wired the same evening Melbourne merged; catalog 1320 tours / 1666 stops. **Never in this table** — the eighth consecutive complete drop (audio + scripts + images in one Dropbox `/scl/fo/` drop, 74 MB, first try; MP3s already 44.1 kHz/128 kbps, images already 1200×900) and wired the same day. **The queue stays EMPTY.**)
+**Last verified:** 2026-08-12 (🇿🇦 **Cape Town COMPLETE** — 30 tours live under Atlas Studio CPT, the 30th maker, the catalog's first South African city and Africa's second bureau after Marrakech; catalog 1350 tours / 1696 stops. **Never in this table** — the ninth consecutive complete drop (audio + scripts + images in one Dropbox `/scl/fo/` drop, 84 MB, first try; MP3s already 44.1 kHz/128 kbps, 98 images already 1200×900, scripts numbered 1–30 with no gaps) and wired the same day. **The queue stays EMPTY.**)
+
+**Previously verified:** 2026-08-11 (🇦🇺 **Sydney COMPLETE** — 29 tours live under Atlas Studio SYD, the 29th maker and Australia's second bureau, wired the same evening Melbourne merged; catalog 1320 tours / 1666 stops. **Never in this table** — the eighth consecutive complete drop (audio + scripts + images in one Dropbox `/scl/fo/` drop, 74 MB, first try; MP3s already 44.1 kHz/128 kbps, images already 1200×900) and wired the same day. **The queue stays EMPTY.**)
 
 **Previously verified:** 2026-08-11 (🇦🇺 **Melbourne COMPLETE** — 35 tours live under Atlas Studio MEL, the 28th maker and the first Australian city; catalog 1291 tours / 1637 stops. **Never in this table** — arrived complete (audio + scripts + images in one Dropbox `/scl/fo/` drop, 100 MB, first try; MP3s already 44.1 kHz/128 kbps, images already 1200×900 — the cleanest drop yet) and was wired the same day, like Rio/São Paulo/Marrakech/Buenos Aires. **The queue stays EMPTY.**)
 
