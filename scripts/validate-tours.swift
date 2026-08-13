@@ -177,13 +177,14 @@ let architectTags: Set<String> = [
     "Roberto Burle Marx", "Karl Friedrich Schinkel", "Hans Scharoun",
     "August Endell", "Hermann Henselmann", "Nicholas Hawksmoor",
     "John Soane", "Edwin Lutyens", "Horace Jones", "Herbert Baker",
-    "Frederick Law Olmsted",
-    "Calvert Vaux", "Richard Morris Hunt", "John Russell Pope",
-    "Eero Saarinen", "Diller Scofidio + Renfro", "Jeanne Gang",
-    "Michael Arad", "Francesco Tamburini", "Mario Palanti", "Carlos Thays",
-    "Clorindo Testa", "Jørn Utzon", "Joseph Reed", "Studio KO",
-    "Mario Botta", "Jun Aoki", "Rocco Yim", "Bing Thom", "Philippe Starck",
-    "Gustave Eiffel",
+    "Amanda Levete", "Frederick Law Olmsted", "Calvert Vaux",
+    "Richard Morris Hunt", "John Russell Pope", "Eero Saarinen",
+    "Diller Scofidio + Renfro", "Jeanne Gang", "Michael Arad",
+    "Marcel Breuer", "Francesco Tamburini", "Mario Palanti", "Carlos Thays",
+    "Clorindo Testa", "Víctor Meano", "Jørn Utzon", "Joseph Reed",
+    "Roy Grounds", "Marc Newson", "Studio KO", "Mario Botta", "Jun Aoki",
+    "Rocco Yim", "Bing Thom", "Philippe Starck", "Gustave Eiffel",
+    "Rem Koolhaas", "Dominique Perrault", "Hiroshi Sambuichi",
 ]
 let validTags: Set<String> = placeTypeTags
     .union(themeTags).union(styleEraTags)

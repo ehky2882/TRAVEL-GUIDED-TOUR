@@ -166,7 +166,31 @@ check the sentence before tagging. Gustave Eiffel is the sharpest case: of five
 tours naming him, **three say explicitly that he did *not* design the thing**
 (Dom Luís I Bridge, Saigon Central Post Office, Santa Justa Lift).
 
+**Also new, merged in from #492/#494:** `Rem Koolhaas` (3, incl. OMA) ·
+`Amanda Levete` (2) · `Marcel Breuer` (2) · `Víctor Meano` (2) ·
+`Roy Grounds` · `Dominique Perrault` · `Hiroshi Sambuichi` ·
+`Marc Newson` *(industrial designer — Tokyo Toilet)*. Those two PRs landed
+while this one was open and grew the same list from the same base, so the
+vocabulary here is the **union** of both — 86 architects.
+(`Jørn Utzon` and `Clorindo Testa` were added by both and are listed above.)
+
+**`Herbert Baker`** joins them for Cape Town's Rhodes Memorial (#495), which
+shipped with the generic fallback because he was absent from every earlier
+pass. His `ARCH_KW` entry deliberately matches the **full name only** — every
+other surname in that map is rare enough to stand alone, but a bare *baker*
+would match bakeries and Baker Street.
+
 New architects are appended here first, deliberately, as the catalog grows.
+
+**⚠️ A mention is not authorship.** These names are assigned from the tour's
+own text, and the seed's keyword match is a *candidate list*, not an answer.
+Cases deliberately rejected while adding the above: King Power Mahanakhon
+names Ole Scheeren as "once a partner at OMA" (biography, not authorship);
+`MPavilion` lists OMA and Amanda Levete among authors of the *series* while
+the tour's subject is Tadao Ando's MPavilion 10; the Nishi-Sando toilet lists
+four Pritzker laureates before crediting Sou Fujimoto; Nanago-Dori Park
+Toilets names Ando, Kuma and Ban as project participants but was designed by
+Kazoo Sato, who is not in the vocabulary. Read the sentence, not the match.
 
 ## Rules
 

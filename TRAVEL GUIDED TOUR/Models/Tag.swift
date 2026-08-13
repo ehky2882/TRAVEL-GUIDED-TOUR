@@ -81,19 +81,20 @@ enum Tag {
             // Britain — Baker built Rhodes Memorial in Cape Town and worked
             // alongside Lutyens on New Delhi.
             "Nicholas Hawksmoor", "John Soane", "Edwin Lutyens", "Horace Jones",
-            "Herbert Baker",
+            "Herbert Baker", "Amanda Levete",
             // United States
             "Frederick Law Olmsted", "Calvert Vaux", "Richard Morris Hunt",
             "John Russell Pope", "Eero Saarinen", "Diller Scofidio + Renfro",
-            "Jeanne Gang", "Michael Arad",
+            "Jeanne Gang", "Michael Arad", "Marcel Breuer",
             // Argentina
             "Francesco Tamburini", "Mario Palanti", "Carlos Thays",
-            "Clorindo Testa",
+            "Clorindo Testa", "Víctor Meano",
             // Australia
-            "Jørn Utzon", "Joseph Reed",
+            "Jørn Utzon", "Joseph Reed", "Roy Grounds", "Marc Newson",
             // Elsewhere
             "Studio KO", "Mario Botta", "Jun Aoki", "Rocco Yim", "Bing Thom",
-            "Philippe Starck", "Gustave Eiffel",
+            "Philippe Starck", "Gustave Eiffel", "Rem Koolhaas",
+            "Dominique Perrault", "Hiroshi Sambuichi",
         ]),
     ]
 

@@ -231,6 +231,14 @@
       "avatarEmoji": "🇦🇺",
       "bio": "Atlas Studio's Sydney bureau — audio tours of the harbour city where a Dane's white sails cost him his career, an arch was riveted shut over open water, surfing came ashore on a sugar-pine board, and the neighbourhoods carved their own pools into the ocean's edge.",
       "websiteURL": null
+    },
+    {
+      "id": "38456828-e395-5fd7-9525-a10329fabb15",
+      "displayName": "Atlas Studio CPT",
+      "avatarURL": null,
+      "avatarEmoji": "🇿🇦",
+      "bio": "Atlas Studio's Cape Town bureau — audio tours of the city under the mountain, where a grain silo was carved into a museum, a garden was planted to stop sailors dying of scurvy, two penguins founded a colony, and a neighbourhood painted itself bright enough to say it was still there.",
+      "websiteURL": null
     }
   ],
   "tours": [
@@ -793,7 +801,9 @@
         "Performance",
         "Contemporary",
         "Viewpoint",
-        "Iconic Landmark"
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Rem Koolhaas"
       ],
       "priceUSD": 0
     },
@@ -1862,7 +1872,8 @@
         "Art",
         "Contemporary",
         "Designed by a Master",
-        "SANAA"
+        "SANAA",
+        "Rem Koolhaas"
       ],
       "priceUSD": 0
     },
@@ -7221,7 +7232,8 @@
         "Architecture",
         "Art",
         "Brutalist",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Marcel Breuer"
       ],
       "stops": [
         {
@@ -9569,7 +9581,9 @@
         "Art",
         "Engineering",
         "Commerce",
-        "Viewpoint"
+        "Viewpoint",
+        "Designed by a Master",
+        "Amanda Levete"
       ],
       "priceUSD": 0
     },
@@ -12798,8 +12812,8 @@
         "History",
         "Power",
         "Baroque",
-        "Designed by a Master",
-        "Paulo Mendes da Rocha"
+        "Paulo Mendes da Rocha",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -20905,7 +20919,8 @@
         "Architecture",
         "Contemporary",
         "Designed by a Master",
-        "Public Art"
+        "Public Art",
+        "Sou Fujimoto"
       ],
       "priceUSD": 0
     },
@@ -22303,7 +22318,8 @@
         "Notable Building",
         "Architecture",
         "Designed by a Master",
-        "Public Art"
+        "Public Art",
+        "Marc Newson"
       ],
       "priceUSD": 0
     },
@@ -26634,7 +26650,8 @@
         "Architecture",
         "Art",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Hiroshi Sambuichi"
       ],
       "priceUSD": 0
     },
@@ -32270,7 +32287,8 @@
         "Notable Building",
         "Architecture",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Dominique Perrault"
       ],
       "priceUSD": 0
     },
@@ -36768,7 +36786,8 @@
         "Architecture",
         "Commerce",
         "Contemporary",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Amanda Levete"
       ],
       "priceUSD": 0
     },
@@ -50614,7 +50633,9 @@
         "District",
         "Art",
         "Contemporary",
-        "Hidden Gem"
+        "Hidden Gem",
+        "Designed by a Master",
+        "Rem Koolhaas"
       ],
       "priceUSD": 0
     },
@@ -51636,8 +51657,8 @@
         "Museum",
         "Art",
         "History",
-        "Designed by a Master",
-        "Roberto Burle Marx"
+        "Roberto Burle Marx",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -51818,8 +51839,8 @@
         "Performance",
         "Architecture",
         "Contemporary",
-        "Designed by a Master",
-        "Christian de Portzamparc"
+        "Christian de Portzamparc",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -52347,8 +52368,8 @@
         "Art",
         "Architecture",
         "Modernist",
-        "Designed by a Master",
         "Affonso Eduardo Reidy",
+        "Designed by a Master",
         "Roberto Burle Marx"
       ],
       "priceUSD": 0
@@ -52618,9 +52639,9 @@
         "Modernist",
         "Designed by a Master",
         "Le Corbusier",
+        "Lúcio Costa",
         "Oscar Niemeyer",
         "Affonso Eduardo Reidy",
-        "Lúcio Costa",
         "Roberto Burle Marx"
       ],
       "priceUSD": 0
@@ -53436,7 +53457,9 @@
         "Architecture",
         "Art",
         "Modernist",
-        "Free to Visit"
+        "Free to Visit",
+        "Designed by a Master",
+        "Rino Levi"
       ],
       "priceUSD": 0
     },
@@ -54254,8 +54277,8 @@
         "Food",
         "Commerce",
         "History",
-        "Designed by a Master",
-        "Ramos de Azevedo"
+        "Ramos de Azevedo",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -54435,8 +54458,8 @@
         "Museum",
         "History",
         "Architecture",
-        "Designed by a Master",
-        "Ramos de Azevedo"
+        "Ramos de Azevedo",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -54941,8 +54964,8 @@
         "Art",
         "Modernist",
         "Public Art",
-        "Designed by a Master",
-        "Rino Levi"
+        "Rino Levi",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -55033,8 +55056,8 @@
         "Architecture",
         "Beaux-Arts",
         "Iconic Landmark",
-        "Designed by a Master",
-        "Ramos de Azevedo"
+        "Ramos de Azevedo",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -55470,10 +55493,10 @@
       "shortDescription": "Five museums, one island, a hundred years of ambition — and a very honest amount of scaffolding.",
       "longDescription": "From the Lustgarten lawn the ensemble reads in one turn: Schinkel's eighteen-column Altes Museum of 1830, one of the first museums in Europe built for the public rather than a court; the heavy green-domed cathedral of 1905 with the Hohenzollern crypt beneath it; the reconstructed palace across the road; and the Spree wrapped around all of it. On the grass sits a polished granite bowl nearly seven metres across, cut from a single glacial boulder, meant for the museum rotunda and found too big for the door — Berliners called it a wonder of the world and left it outside. Four more museums followed over the next century through kingdom, empire, republic and dictatorship. The whole island is World Heritage, permanently under repair, and the Pergamon stays closed until 2027.",
       "makerId": "a0717b10-a295-5ab5-a875-d5a9587d0274",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-island_hero.webp",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-island_3.webp",
       "additionalImageURLs": [
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-island_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-island_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-island_hero.webp",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-island_4.webp"
       ],
       "kind": "single",
@@ -55489,7 +55512,7 @@
           "audioDurationSeconds": 157,
           "triggerMode": "geofenced",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-island_hero.webp",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/museum-island_3.webp",
           "transcriptText": "Five museums, one island, a hundred years of ambition — and, at the moment, a very honest amount of scaffolding.\n\nYou should be standing in the Lustgarten, the big rectangular lawn at the heart of Museum Island. Ahead of you, a long line of columns — that's the Altes Museum. To your right, the heavy green-domed bulk of the Berlin Cathedral. Behind you, across the road, the reconstructed palace. The Spree wraps around all of it; you're on an island, and the island belongs to art.\n\nBegin with the colonnade. Eighteen columns, opened in 1830 — one of the first museums in Europe built for the public rather than for a court, designed by Karl Friedrich Schinkel, Prussia's house architect, whose fingerprints are all over this city. On the lawn in front of it sits a polished granite bowl nearly seven metres across, cut and shined from a single boulder left behind by a glacier. It was meant for the museum's rotunda and turned out too big for the door. Berliners adored it anyway — they called it a wonder of the world and left it outside, where it has sat ever since.\n\nBehind the Altes Museum, four more museums rose over the following century, the last of them, the Pergamon, finished in 1930. The state kept changing around them — kingdom, empire, republic, dictatorship — and the museums kept coming. Today the whole ensemble is World Heritage. And here's the honest part: the island has been under repair, in one corner or another, for most of living memory. The Pergamon is closed for renovation until 2027, its famous altar out of sight, and the cranes move from building to building like gardeners.\n\nThe cathedral on your right is the loudest thing here — imperial swagger from 1905, the Hohenzollern family church, with the dynasty's crypt beneath it, freshly reopened after years of restoration.\n\nPrussia declared this island a sanctuary for art and learning, and Berlin has treated it like a cathedral ever since — never quite finished, permanently tended, handed from one Germany to the next like a duty nobody questions.\n\nClimb a few steps toward the colonnade and turn around: lawn, dome, palace, river. The island is doing what it was built for — giving the city somewhere to stand among beautiful things."
         }
       ],
@@ -55506,8 +55529,8 @@
         "History",
         "Neoclassical",
         "Iconic Landmark",
-        "Designed by a Master",
-        "Karl Friedrich Schinkel"
+        "Karl Friedrich Schinkel",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -55647,8 +55670,8 @@
         "History",
         "Neoclassical",
         "Iconic Landmark",
-        "Designed by a Master",
-        "Karl Friedrich Schinkel"
+        "Karl Friedrich Schinkel",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -56241,8 +56264,8 @@
         "War",
         "Neoclassical",
         "Free to Visit",
-        "Designed by a Master",
-        "Karl Friedrich Schinkel"
+        "Karl Friedrich Schinkel",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -56812,8 +56835,8 @@
         "Neoclassical",
         "Iconic Landmark",
         "Free to Visit",
-        "Designed by a Master",
-        "Karl Friedrich Schinkel"
+        "Karl Friedrich Schinkel",
+        "Designed by a Master"
       ],
       "priceUSD": 0
     },
@@ -58949,7 +58972,8 @@
         "History",
         "Neoclassical",
         "Iconic Landmark",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Víctor Meano"
       ],
       "priceUSD": 0
     },
@@ -59927,6 +59951,7 @@
         "Beaux-Arts",
         "Iconic Landmark",
         "Designed by a Master",
+        "Víctor Meano",
         "Francesco Tamburini"
       ],
       "priceUSD": 0
@@ -62693,7 +62718,8 @@
         "Modernist",
         "Iconic Landmark",
         "Free to Visit",
-        "Designed by a Master"
+        "Designed by a Master",
+        "Roy Grounds"
       ],
       "priceUSD": 0
     },
@@ -64840,6 +64866,1341 @@
         "Venue",
         "Waterfront",
         "Commerce"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "664eb3a1-31fc-5ad4-9ea6-3397fa5bea4d",
+      "createdAt": "2026-08-12",
+      "title": "Battery Park",
+      "shortDescription": "A Dutch gun emplacement, then a colonial prison, now a lawn people cut across on their way to lunch.",
+      "longDescription": "The Dutch built the Amsterdam Battery in 1784 to guard Table Bay, one of several gun emplacements strung along this shoreline. When the British took the Cape they put it to a different use: from 1827 it held prisoners taken in the frontier wars of the Eastern Cape, and it was later remodelled with surplus stone from the Breakwater quarry, worked largely by convict labour. By 1898 the Battery had been disbanded and much of it pulled down for harbour expansion. What happened next inverted the instinct: when this park opened in 2018 the surviving ruins were kept, lightly fenced and folded into a public garden between the city centre and the V&A Waterfront. A wall built to keep people out is now a path that invites them in.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/battery-park_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/battery-park_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/battery-park_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/battery-park_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "5404410a-9a0f-55c3-92de-a107fb80f9e5",
+          "order": 0,
+          "title": "Battery Park",
+          "caption": "The stone walls curving in front of you were doing a very different job two centuries before anyone thought to plant a lawn around them.",
+          "latitude": -33.912897132900035,
+          "longitude": 18.42143409074799,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/battery-park.mp3",
+          "audioDurationSeconds": 160,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/battery-park_hero.webp",
+          "transcriptText": "The stone walls curving in front of you were doing a very different job two centuries before anyone thought to plant a lawn around them.\n\nYou're standing in Battery Park, at the walkway that links the city centre to the V&A Waterfront, where a raised path and a canal-side route meet beside a low run of weathered stone fortification. That's the Amsterdam Battery you're looking at — the thick-walled structure set into the ground, not the newer buildings around it.\n\nThe Dutch built the Amsterdam Battery in 1784 to guard Table Bay against attack, one gun emplacement among several strung along this shoreline to protect the harbour below. When the British took over the Cape, they found a different use for it: from 1827, the Battery held prisoners captured during the frontier wars fought in the Eastern Cape, men shipped hundreds of miles from home and kept behind these walls rather than any battlefield. Over the following decades the British strengthened and remodelled the structure, using surplus stone from the nearby Breakwater quarry — the same quarry, worked largely by convict labour, that helped build much of this harbour.\n\nAnd here's the thing worth sitting with: by 1898 the Battery had been disbanded, and much of it was pulled down to make way for harbour expansion. The fort simply lost its purpose, and the city built over it, the way cities generally do with fortifications they no longer need.\n\nWhat's around you now is the opposite instinct. When this park opened in 2018, the ruins weren't cleared for something newer — they were kept, lightly fenced, and folded into a public garden that people cut through on their way to lunch. A wall built to keep people out has become a path that invites people in.\n\nFollow the canal-side walkway east and it carries you straight through to the harbour basins of the Waterfront — worth doing slowly, since it's one of the few routes in the city where the old fortifications and the working harbour still sit close enough to compare directly."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 160,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.912897132900035,
+      "centroidLongitude": 18.42143409074799,
+      "city": "Cape Town",
+      "primaryCategory": "history",
+      "tags": [
+        "Park",
+        "History",
+        "War",
+        "Colonial",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "8dc9603b-861a-5d3a-8c9f-4de06f18c326",
+      "createdAt": "2026-08-12",
+      "title": "Beau Constantia",
+      "shortDescription": "A glass box at the top of Constantia Nek, in a valley that has been making wine since the 1680s.",
+      "longDescription": "Constantia is one of the oldest wine regions outside Europe, planted not long after the Dutch settled the Cape, and for a stretch its sweet wine travelled to European courts and earned admiring mentions from both Dickens and Jane Austen. Beau Constantia is a far newer arrival on that old hillside — among the highest vineyards in the valley, with a glass-walled tasting room and restaurant built to look forward rather than imitate the whitewashed Cape Dutch farmsteads below. The kitchen runs under the Chef's Warehouse banner: small seasonal plates arranged for sharing and changed with the harvest. Terraced vines fall away toward the valley floor, the Hottentots Holland mountains rise beyond, and on a clear day False Bay shows as a pale strip on the horizon.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beau-constantia_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beau-constantia_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a460aac2-472e-59cc-a30e-5248197a6b28",
+          "order": 0,
+          "title": "Beau Constantia",
+          "caption": "From the deck here, the vineyards fall away in neat terraces, and on a clear day the view runs on past them to the sea.",
+          "latitude": -34.013482106804396,
+          "longitude": 18.406396211550025,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/beau-constantia.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/beau-constantia_hero.webp",
+          "transcriptText": "From the deck here, the vineyards fall away in neat terraces, and on a clear day the view runs on past them to the sea.\n\nStand at the edge of the terrace, with the glass-walled tasting room at your back, and take in the slope in front of you. Rows of vines run down toward the valley floor, the Hottentots Holland mountains rise beyond, and further out again, a pale strip on the horizon is False Bay. This is Beau Constantia, perched at the top of Constantia Nek — among the highest vineyards in a valley that's been growing wine since the 1680s.\n\nThat age matters. Constantia is one of the oldest wine-producing regions outside Europe, planted not long after the Dutch first settled at the Cape, and for a stretch its sweet wine was famous well beyond South Africa — shipped to European courts, and mentioned admiringly by both Dickens and Jane Austen. Beau Constantia itself is a far newer arrival on that old hillside; its glass tasting room and restaurant were built to look forward, rather than mimic the whitewashed Cape Dutch farmhouses further down the valley.\n\nThe restaurant here, run under the Chef's Warehouse banner, leans into that same instinct: small, seasonal plates built for sharing, arranged less like a formal tasting menu and more like a long, unhurried conversation between courses. Order the sharing plates if you can, since the kitchen changes them with the harvest — what lands on the table in autumn won't be what you'd get in spring.\n\nAnd here's what's worth noticing about the whole setup: the wine, the food and the view are all doing the same job, which is slowing you down. Nobody puts a glass box on top of a mountain by accident.\n\nIf you've time before or after your table, walk past the terrace to the lower lawns. The estate's sauvignon blanc vines run right along the edge there, close enough to touch, with the valley opening out beneath you the whole way down."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 151,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -34.013482106804396,
+      "centroidLongitude": 18.406396211550025,
+      "city": "Cape Town",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1210c6e7-d167-53e1-af9b-92ae7215bde3",
+      "createdAt": "2026-08-12",
+      "title": "Belly of the Beast",
+      "shortDescription": "Thirty seats, no menu, no substitutions — you arrive, you sit, and you trust the kitchen.",
+      "longDescription": "A narrow, near-unmarked shopfront on Harrington Street conceals one of the most disciplined dining rooms in Cape Town. All thirty seats are served at once, and everyone eats the same courses, decided that morning by chefs Neil Swart and Anouchka Horn on whatever looked good at the market. There is no ordering and no substituting. What arrives is food most people would not choose off a written list: venison tartare under a shaving of biltong guanciale — dried, cured game standing in for the pork an Italian kitchen would use — cured stumpnose from the local reef, antelope sliced thin and served raw. The kitchen calls itself carnivore-friendly rather than a steakhouse, and sources from small sustainable farms rather than feedlots.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/belly-of-the-beast_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/belly-of-the-beast_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/belly-of-the-beast_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/belly-of-the-beast_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1a65491c-58b6-561c-964c-ac6edbaeb252",
+          "order": 0,
+          "title": "Belly of the Beast",
+          "caption": "There's no menu on the table here — you'll notice that before anything else.",
+          "latitude": -33.92925664213475,
+          "longitude": 18.422706286413742,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/belly-of-the-beast.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/belly-of-the-beast_hero.webp",
+          "transcriptText": "There's no menu on the table here — you'll notice that before anything else.\n\nYou're on Harrington Street, on the eastern edge of the city centre, outside a narrow shopfront with dark paintwork and no obvious signage beyond the name over the door: Belly of the Beast. Look for the low, unfussy frontage between the other Harrington Street eateries — this one gives almost nothing away from outside, which is rather the point.\n\nInside, every one of the thirty seats is filled at the same time, and everyone is served the same dishes, course by course, decided that morning by chefs Neil Swart and Anouchka Horn on what looked good at the market. There's no ordering, no substitutions, no separate menu for the table by the window. You simply arrive, sit, and trust them.\n\nThat trust gets rewarded with things you wouldn't order for yourself if you saw them written down. Venison tartare turns up with a shaving of biltong guanciale on top — dried, cured game meat standing in for the pork an Italian kitchen would normally use, which is a very Cape Town joke hiding inside a very serious dish. Cured stumpnose, a local reef fish, might follow it, then antelope served raw and sliced thin, tataki-style. The restaurant calls itself carnivore-friendly rather than a steakhouse, and the meat is sourced from small, sustainable farms rather than feedlots — a distinction the kitchen clearly cares about, even if you never see it written anywhere.\n\nAnd that's really the thesis of the place: cooking built entirely around what's good right now, with the customer's usual control — the menu, the choosing — handed over completely.\n\nBook ahead if you're planning to come back, since seatings run in two strict sittings and fill quickly. And once you're through the door, resist the urge to ask what's coming next. Not knowing is rather the whole meal."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.92925664213475,
+      "centroidLongitude": 18.422706286413742,
+      "city": "Cape Town",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "9b664129-d7b4-540a-99c5-9f3f469ae70d",
+      "createdAt": "2026-08-12",
+      "title": "Between Us",
+      "shortDescription": "Twin sisters, both self-taught, cooking the way you would for friends you completely trust.",
+      "longDescription": "A Cape heritage building that predates most of its neighbours by the better part of a century, with a first-floor balcony and orange trees in pots beneath it — the sisters who took the site over chose it partly because both were already there. The kitchen is run by self-taught twins, and it shows in the absence of brigade hierarchy: a risotto that shifts with the season but is never fussed with, and avocado on rye that sounds too plain to mention until it arrives and explains why it has stayed on the menu since opening. Seasonality and sustainability work here as operating principles rather than marketing lines — dishes change because the ingredients did. The wine list leans heavily on South African producers.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/between-us_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/between-us_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/between-us_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "53efd089-5089-58c7-b044-919fe8ffa83f",
+          "order": 0,
+          "title": "Between Us",
+          "caption": "This is Between Us, on Bree Street — and the name is a fairly good clue to how the place runs.",
+          "latitude": -33.92475832135184,
+          "longitude": 18.41379269635982,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/between-us.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/between-us_hero.webp",
+          "transcriptText": "This is Between Us, on Bree Street — and the name is a fairly good clue to how the place runs.\n\nYou should be on the pavement outside number 176, looking up at a Cape heritage building with a balcony at first-floor level, flanked by two orange trees in large pots. That balcony belongs to the restaurant. If the trees are in fruit, you'll likely smell them before you see the door.\n\nThe building itself predates most of the restaurants around it by the better part of a century, and the sisters who took it over chose the site partly because that balcony, and the orange trees beneath it, were already sitting there waiting.\n\nThe kitchen is run by twin sisters, both self-taught, which matters more than it might sound. There's no professional hierarchy here in the way a big brigade kitchen would run — instead, the menu reads like the kind of cooking two people who trust each other completely would make for friends: a risotto that changes with the season but is never fussed with, and a plate of avocado on rye that sounds almost too plain to mention until it arrives and you understand why it's stayed on the menu since the place opened.\n\nWhat's worth knowing, standing here, is that Between Us was built around seasonality and sustainability as working principles rather than marketing lines — the kind of restaurant that changes its dishes because the ingredients changed, not because a new menu was due. The wine list follows the same logic, weighted heavily toward South African producers rather than imports.\n\nIf the balcony tables are free, take one. It's a small perch above Bree Street, orange trees on either side, and it's about as good a seat as this stretch of the city centre offers for watching the street below without being part of its noise. Come back at breakfast sometime too — the same care that goes into dinner tends to show up in a very good cup of coffee."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.92475832135184,
+      "centroidLongitude": 18.41379269635982,
+      "city": "Cape Town",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "062d203b-ca32-5993-aa8d-c5c39552b621",
+      "createdAt": "2026-08-12",
+      "title": "Bo-Kaap / Schotsche Kloof",
+      "shortDescription": "Pink, turquoise and mustard terraces on Signal Hill — and the paint is a statement, not a postcard.",
+      "longDescription": "Most of what stands on these cobbled slopes was built between 1760 and 1840, and the people who first lived here had arrived from far outside the Cape's Dutch settler population: enslaved people, political exiles and convicts brought from the Malay Archipelago, some of them, by contemporary accounts, of considerable rank and learning at home. They brought their faith with them, and in 1794 the community built the Auwal Mosque nearby — the first mosque established anywhere in South Africa, and still an active place of worship. Older maps and older residents know this particular pocket as Schotsche Kloof, one of several small districts that merged under the single name visitors use today. This has been a working, lived-in Muslim community for over two centuries, through repeated attempts to move people out of it.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bo-kaap-schotsche-kloof_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bo-kaap-schotsche-kloof_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bo-kaap-schotsche-kloof_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "322cfe76-01dc-52f1-9f5d-7d3139b8520e",
+          "order": 0,
+          "title": "Bo-Kaap / Schotsche Kloof",
+          "caption": "There's a curious detail about this neighbourhood before you even look at a single building: for a long stretch of its history, most of Cape Town simply called it something else.",
+          "latitude": -33.923485,
+          "longitude": 18.414051,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/bo-kaap-schotsche-kloof.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/bo-kaap-schotsche-kloof_hero.webp",
+          "transcriptText": "There's a curious detail about this neighbourhood before you even look at a single building: for a long stretch of its history, most of Cape Town simply called it something else.\n\nStand anywhere along the cobbled streets on the lower slopes of Signal Hill, with brightly painted terraced houses running up the hill in both directions — pink, turquoise, mustard yellow, sometimes three colours on one short row. This is the Bo-Kaap, though older maps and older residents will also know this particular pocket of it as Schotsche Kloof, one of several small districts, alongside the old Malay Quarter, Stadzicht and Schoone Kloof, that eventually merged under the single name most visitors use today.\n\nMost of what you're looking at was built between 1760 and 1840, and the people who first lived here had arrived from far outside Cape Town's Dutch settler population: enslaved people, political exiles and convicts brought from the Malay Archipelago, then known as the East Indies, some of them, by contemporary accounts, of considerable rank and learning back home. They brought their faith with them, and in 1794 that community built the Auwal Mosque nearby — the first mosque established anywhere in South Africa, and still an active place of worship today.\n\nAnd here's what's easy to miss admiring the colours from the street: those colours aren't decorative in the postcard sense. This has been a working, lived-in Muslim community for more than two centuries, through periods when Cape Town's other authorities tried repeatedly to move people out of it. The paint is a statement of who's still here.\n\nWalk slowly rather than snapping photographs from the pavement and moving on — residents live behind these doors, and a slower pace shows it. If you've time, the Bo-Kaap Museum on Wale Street is a short walk downhill and worth the visit, laid out as a real Bo-Kaap home from the nineteenth century."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.923485,
+      "centroidLongitude": 18.414051,
+      "city": "Cape Town",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "District",
+        "History",
+        "Immigration",
+        "Faith",
+        "Colonial"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "130b8289-d095-5823-a4c7-a5c8c4e30c34",
+      "createdAt": "2026-08-12",
+      "title": "Boulders Beach",
+      "shortDescription": "Two breeding pairs turned up in 1982 and stayed. The colony now runs to several thousand.",
+      "longDescription": "Granite boulders scattered across white sand, the sheltered water of False Bay beyond, and African penguins doing distinctly un-penguin-like things among the rocks — waddling, nesting under bushes, braying at each other like small irritated donkeys. The two original pairs that arrived in 1982 found conditions that suited them exactly: sheltered water close inshore, abundant fish, and boulders big enough to break the wind and hide a nest. Within a couple of decades the colony had grown to several thousand birds and Boulders became part of Table Mountain National Park. The species is endangered and colonies along this coast have generally been shrinking; Boulders is one of the exceptions, largely because it sits inside a protected, managed beach. The boardwalks exist so that the two uses of this sand need not collide.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/boulders-beach_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/boulders-beach_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/boulders-beach_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/boulders-beach_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "36217cfa-3ba2-5fb5-a9c4-f22d425e1afd",
+          "order": 0,
+          "title": "Boulders Beach",
+          "caption": "Two penguins. That's how this entire beach earned its fame — just two breeding pairs turned up here in 1982, and decided to stay.",
+          "latitude": -34.19305950129318,
+          "longitude": 18.4501868350003,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/boulders-beach.mp3",
+          "audioDurationSeconds": 139,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/boulders-beach_hero.webp",
+          "transcriptText": "Two penguins. That's how this entire beach earned its fame — just two breeding pairs turned up here in 1982, and decided to stay.\n\nYou should be on the boardwalk above Boulders Beach, granite boulders scattered across white sand below you, with the sheltered water of False Bay beyond. Look down among the rocks and the low bush, and — provided it isn't the middle of a very hot afternoon, when they tend to hide in the shade — you'll spot African penguins doing very un-penguin-like things: waddling between boulders, nesting under bushes, occasionally braying at each other like small, irritated donkeys.\n\nThose two original pairs found something here that suited them perfectly: sheltered water close to the shore, abundant fish in False Bay, and boulders large enough to block the wind and hide a nest from predators. From that pair, the colony grew to several thousand birds within a couple of decades, and Boulders became part of Table Mountain National Park to protect it properly.\n\nHere's the harder fact worth knowing alongside the charm: the African penguin is listed as endangered, and colonies along this coast have generally been shrinking, not growing, as fish stocks shift and change. Boulders is one of the exceptions — a colony that expanded rather than collapsed, largely because it sits inside a protected, managed beach rather than an open, fished coastline.\n\nThat's worth remembering as you watch them: this isn't a zoo enclosure, it's a wild colony that happened to choose a beach people also wanted to swim at, and the boardwalks exist specifically so the two uses don't collide. Stick to the walkways, keep your distance from any penguin on the sand, and take the short path down to the swimming beach further along — you can share the water with them from a respectful distance, which is about as close as anyone's meant to get."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 139,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -34.19305950129318,
+      "centroidLongitude": 18.4501868350003,
+      "city": "Cape Town",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "Park",
+        "Maritime",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "3639686c-3358-56f1-b97e-4f59b74265c2",
+      "createdAt": "2026-08-12",
+      "title": "Cape Point",
+      "shortDescription": "Bartolomeu Dias called it the Cape of Storms in 1488. A king in Lisbon preferred better marketing.",
+      "longDescription": "From the old lighthouse at the top of the headland, roughly two hundred and thirty-eight metres above the sea, there is water on both sides — Atlantic to one hand, False Bay curving in to the other. Dias rounded this point in 1488 in weather bad enough to name it the Cape of Storms; back in Portugal, King John the Second reportedly preferred something more encouraging for crews bound for India, and the Cape of Good Hope is the name that survived. Ships kept wrecking here regardless. The 1859 lighthouse was part of the answer and turned out to be a flawed one: built at the highest point to be seen furthest, it worked perfectly in clear weather and uselessly in the low cloud that gathers here, until a second, lower light took over the real work. And despite appearances, this is not Africa's southernmost point — that is Cape Agulhas, further along the coast.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cape-point_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cape-point_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cape-point_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "b746aa46-7399-5c9f-9ce1-6e8d5b18c90b",
+          "order": 0,
+          "title": "Cape Point",
+          "caption": "It's 1488, and a Portuguese sailor named Bartolomeu Dias has just rounded this headland in weather bad enough that he named it the Cape of Storms.",
+          "latitude": -34.35661548694909,
+          "longitude": 18.496793811639286,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/cape-point.mp3",
+          "audioDurationSeconds": 138,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/cape-point_hero.webp",
+          "transcriptText": "It's 1488, and a Portuguese sailor named Bartolomeu Dias has just rounded this headland in weather bad enough that he named it the Cape of Storms.\n\nYou should be near the old lighthouse, at the highest point of the headland, roughly two hundred and thirty-eight metres above the sea, with water visible on both sides — the Atlantic to your right, the waters of False Bay curving in to your left. That white tower in front of you is the original Cape Point lighthouse, built in 1859 and first lit in 1860.\n\nDias's name for this place didn't stick. Back in Portugal, King John the Second reportedly suggested something more encouraging for sailors heading toward the riches of India — the Cape of Good Hope — and that's the name that survived, even though ships kept wrecking here for centuries afterward regardless of what anyone called it.\n\nThe lighthouse you're standing near was part of the answer to that problem, and it turned out to be a flawed one: built at the very top of the headland to be seen from furthest away, it worked perfectly in clear weather and uselessly in the low cloud that gathers here more often than anyone building it would have liked. A second, lower lighthouse eventually took over the actual warning duties, while this original tower became something more like a landmark than a working light.\n\nHere's the detail most people get wrong on the way down: Cape Point is dramatic, but it isn't the southernmost point of Africa. That title belongs to Cape Agulhas, some way further along the coast — this headland simply looks and feels like the edge of the continent, which is arguably more useful to a place than being technically correct.\n\nIf your knees are willing, the funicular saves the climb back up, but the path down to the new lighthouse is worth walking once, if only to feel the weather change as you drop below the cloud line the old lighthouse could never quite escape."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 138,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -34.35661548694909,
+      "centroidLongitude": 18.496793811639286,
+      "city": "Cape Town",
+      "primaryCategory": "history",
+      "tags": [
+        "Tower",
+        "Maritime",
+        "History",
+        "Iconic Landmark",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "324f1695-9485-5517-ab70-806085a2baed",
+      "createdAt": "2026-08-12",
+      "title": "Chandler House",
+      "shortDescription": "A house lived in for the better part of three centuries, with a gallery in its front room.",
+      "longDescription": "A Cape Georgian house dating from the 1700s, its street-facing front room — the voorkamer, traditionally kept for receiving visitors — now the Voorkamer Gallery, with the working studio upstairs. The artist Michael Chandler opened it in 2013 as a base for his bespoke commissions and large-scale tiled murals, and what began as one person's studio grew more collaborative: other Cape Town makers and artists show alongside him, and the gallery runs a fresh exhibition most months, often built around a single emerging artist rather than a mixed group. The work made and shown here tends to reach back into the same history as the building itself — pattern, colour and craft rooted in Cape Malay design as much as in contemporary practice. Whatever is hanging will likely be gone within the month.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chandler-house_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chandler-house_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chandler-house_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f9dbcb68-fc82-582d-873f-26ac3350b890",
+          "order": 0,
+          "title": "Chandler House",
+          "caption": "The house in front of you has been lived in for the better part of three centuries before anyone thought to turn part of it into a gallery.",
+          "latitude": -33.922682,
+          "longitude": 18.4181163,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/chandler-house.mp3",
+          "audioDurationSeconds": 153,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/chandler-house_hero.webp",
+          "transcriptText": "The house in front of you has been lived in for the better part of three centuries before anyone thought to turn part of it into a gallery.\n\nYou're on Church Street in the Bo-Kaap, outside a Cape Georgian house dating from the 1700s — look for the shuttered windows and the small, street-facing room right at the front, its door usually propped open. That front room is the Voorkamer Gallery; the rest of the house, upstairs, is where the work actually gets made.\n\nThis is Chandler House, opened in 2013 by the artist Michael Chandler as a base for his own bespoke commissions and large-scale tiled murals, in a building whose voorkamer — the traditional Cape front room used for receiving visitors — gave the gallery its name. What started as one artist's studio grew into something more collaborative: other Cape Town makers and artists now show alongside Chandler, and the Voorkamer Gallery runs a fresh exhibition most months, often built around a single emerging artist rather than a mixed group show.\n\nHere's what's worth understanding about a space like this in a neighbourhood like Bo-Kaap: it sits inside one of the oldest, most lived-in parts of the city, in a house built for an ordinary Cape family long before it held any art at all, and the work made and shown here tends to reach back into that same history — pattern, colour and craft rooted in Cape Malay design as much as in contemporary practice.\n\nPush the door open if it's ajar; browsing is welcome even without an appointment for the gallery room, though the studio upstairs, where the tiled murals get made, is usually by arrangement only. Whatever's showing when you visit will likely be gone within the month, which is rather the point of dropping in rather than saving it for next time."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 153,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.922682,
+      "centroidLongitude": 18.4181163,
+      "city": "Cape Town",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Colonial",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "7d7fab04-6091-5c08-b4aa-b454144ee7c7",
+      "createdAt": "2026-08-12",
+      "title": "Clarke's Bookshop",
+      "shortDescription": "Some of the maps inside are older than the country whose coastline they were drawn to chart.",
+      "longDescription": "Anthony Clarke, a former British Army officer, opened this shop on Long Street in 1957 as a general secondhand bookseller. Through the 1970s the stock drifted toward one subject — Africana: books, maps and prints about Southern Africa specifically — and that drift became the whole identity. What began as a shelf of South African titles is now a serious specialist collection including prints and maps dating to the sixteenth century, and in 1995 the International Federation of Library Associations named Clarke's among the world's best dealers in materials on Southern Africa. It has not had an easy run: a lease that was not renewed forced a move within the block in 2012, and the pandemic hit hard enough that the shop auctioned donated work by South African artists to stay open. The Victorian building's wrought-iron balcony has earned this stretch of Long Street comparisons to New Orleans.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/clarkes-bookshop_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/clarkes-bookshop_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/clarkes-bookshop_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "8fc36197-a8a2-513b-8402-85ff42c927c4",
+          "order": 0,
+          "title": "Clarke's Bookshop",
+          "caption": "Some of the maps inside this shop are older than the country whose coastline they were drawn to chart.",
+          "latitude": -33.92484587288818,
+          "longitude": 18.416471572920756,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/clarkes-bookshop.mp3",
+          "audioDurationSeconds": 131,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/clarkes-bookshop_hero.webp",
+          "transcriptText": "Some of the maps inside this shop are older than the country whose coastline they were drawn to chart.\n\nYou should be on Long Street, looking up at a Victorian-era building with an ornate wrought-iron balcony — the kind of ironwork that's earned this stretch of Long Street its occasional comparison to New Orleans. Clarke's Bookshop sits on the corner here, its window stacked with books rather than any grand signage; you'll know it by the crowd of spines visible through the glass long before you read the name above the door.\n\nAnthony Clarke, a former British Army officer, opened this shop in 1957 as a secondhand bookseller, and it might have stayed a general secondhand shop indefinitely if the stock hadn't started drifting, through the 1970s, toward one particular subject: Africana, meaning books, maps and prints about Southern Africa specifically. That drift became the whole identity. What began as one shelf of South African titles is now a genuinely serious specialist collection, including prints and maps dating back to the sixteenth century, the sort of material that gets a shop noticed by people who take this seriously — in 1995, the International Federation of Library Associations named Clarke's among the world's best dealers in materials on Southern Africa.\n\nThe shop hasn't had an easy run of it. A lease that wasn't renewed forced a move to another building within the same block in 2012, and the pandemic in 2020 hit hard enough that the shop ran a fundraising auction of work donated by South African artists just to stay open.\n\nThat it's still trading, on the same street, is worth a moment's thought before you go in. Ask upstairs about the older maps if the front room doesn't have what you're after — Clarke's keeps its rarer Africana material a floor up, away from the browsing tables at street level."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 131,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.92484587288818,
+      "centroidLongitude": 18.416471572920756,
+      "city": "Cape Town",
+      "primaryCategory": "literature",
+      "tags": [
+        "Venue",
+        "Literature",
+        "Commerce",
+        "Victorian"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "508e1b58-8f7b-5b15-ab1b-7c73edc0fd97",
+      "createdAt": "2026-08-12",
+      "title": "Club Kloof",
+      "shortDescription": "Cardinal red walls, a burnt-orange banquette and a courtyard bar the yellow of an Amalfi postcard.",
+      "longDescription": "A restored heritage building on Kloof Street that had been damaged by fire not long before this restaurant existed, now the loudest room in Tamboerskloof and entirely unapologetic about it. The colour scheme nods deliberately to David Hicks, the 1970s interior designer known for exactly this kind of confident clash — strong blocks of colour that should not work together and do. It suits the food, which chef Shayne Shutte and his partner Michael Carter describe, only half joking, as Italian-ish: not pretending to be Italian, but doing a very good version of it on their own terms, for a Cape Town room rather than a Roman one. Sourdough pizzettes rather than Neapolitan pizza, small plates built for sharing, and salads treated as seriously as anything else on the menu.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/club-kloof_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/club-kloof_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/club-kloof_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/club-kloof_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "cb0c5f2a-58f8-5cb8-a127-78a858e584e5",
+          "order": 0,
+          "title": "Club Kloof",
+          "caption": "Cardinal red walls, a burnt-orange banquette, and a courtyard bar painted the yellow of an Amalfi postcard — Club Kloof doesn't do subtle, and it isn't trying to.",
+          "latitude": -33.93294135649915,
+          "longitude": 18.408020082714348,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/club-kloof.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/club-kloof_hero.webp",
+          "transcriptText": "Cardinal red walls, a burnt-orange banquette, and a courtyard bar painted the yellow of an Amalfi postcard — Club Kloof doesn't do subtle, and it isn't trying to.\n\nYou should be outside 84 Kloof Street, in Tamboerskloof, looking at a restored heritage building that, not long before this restaurant existed, had been damaged by fire. Step through to the back and the courtyard opens up around that lemon-yellow bar — the loudest single feature in a restaurant that's fairly loud throughout.\n\nThe colour scheme is a deliberate nod to David Hicks, the 1970s interior designer famous for exactly this kind of confident clash: strong colour blocks that shouldn't work together and somehow do. It's a fitting match for the food, which chef Shayne Shutte and his partner Michael Carter describe, only half joking, as \"Italian-ish.\" As Shutte puts it, they're not pretending to be Italian — they're doing a very good version of Italian, on their own terms, for a Cape Town room rather than a Roman one.\n\nThat shows up on the plates: sourdough pizzettes rather than classic Neapolitan pizza, small plates built for sharing — roasted baby potatoes with hazelnut crème fraîche and fried capers is the one people keep ordering — and salads treated as seriously as anything else on the menu, not as an afterthought before the main event.\n\nAnd here's the thing about the whole project: Club Kloof comes from the same duo behind Our Local, just up the same street, which means this isn't a first attempt at a neighbourhood restaurant — it's a second one, built by people who already knew exactly what this particular stretch of Kloof Street wanted.\n\nIf the dining room's booked out, don't skip the visit — walk-ins are welcome at the bar and in the courtyard, and the yellow bar in particular is worth seeing even over just a drink."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.93294135649915,
+      "centroidLongitude": 18.408020082714348,
+      "city": "Cape Town",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "e29a7aaf-39b8-5ca7-8729-4ffa562addeb",
+      "createdAt": "2026-08-12",
+      "title": "COY",
+      "shortDescription": "A seafood menu that follows the coastline rather than any particular cuisine.",
+      "longDescription": "Tucked into the Waterfront's Scherwyn Pavilion, where the working harbour gives way to Table Mountain behind, COY comes from chef Ryan Cole — also behind Salsify at the Roundhouse out on Camps Bay. The cooking follows the coast rather than a national cuisine: a seafood-led menu built on Southern African ingredients and techniques, served as a set sequence rather than à la carte, running to seven courses at dinner with a shorter two-course version at lunch. Cole built his reputation on quiet, produce-led plating at Salsify, and that restraint carries into a dining room made almost entirely of glass. The seafood changes with what has actually been caught, so the same seven courses in December are not the same seven in June. Vegetarian and plant-based menus run alongside, built with the same care.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coy_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coy_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coy_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "6c1ffe2d-9e80-5365-9823-2a77e31e610e",
+          "order": 0,
+          "title": "COY",
+          "caption": "This is COY, tucked into the Waterfront's Scherwyn Pavilion, right where the working harbour gives way to Table Mountain in the background.",
+          "latitude": -33.90738435281933,
+          "longitude": 18.41969952319332,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/coy.mp3",
+          "audioDurationSeconds": 135,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/coy_hero.webp",
+          "transcriptText": "This is COY, tucked into the Waterfront's Scherwyn Pavilion, right where the working harbour gives way to Table Mountain in the background.\n\nYou should be at the water's edge, on the walkway outside the Pavilion building, with the restaurant's glass frontage in front of you and the mountain rising directly behind it — on a clear day, that view is doing at least half the restaurant's work before a single course arrives.\n\nCOY comes from chef Ryan Cole, also behind Salsify at the Roundhouse out on Camps Bay, and the cooking here follows the coastline rather than any particular cuisine: a seafood-led menu built around Southern African ingredients and techniques, served as a set sequence of courses rather than an à la carte list. Dinner runs to seven courses if you commit to the full menu, though lunch offers something lighter too — a shorter, two-course version built for people who still have somewhere to be that afternoon.\n\nCole built his reputation on quiet, produce-led plating at Salsify, up on Camps Bay's cliffs, and COY carries that same restraint into a dining room built almost entirely of glass.\n\nWhat's worth knowing, standing at that glass front looking in, is that this isn't a menu chasing novelty for its own sake. The seafood changes with what's actually been caught, and the kitchen builds each course around that catch rather than forcing a fixed idea of what the plate should be — which means the same seven courses in December won't be the same seven courses in June.\n\nVegetarian and plant-based versions of the full menu run alongside the seafood one, built with the same care rather than treated as an afterthought — worth knowing if your table's split between eaters who want the catch of the day and those who don't. Either way, ask for a seat by the glass if it's available; the mountain doesn't hold still for long once the cloud starts moving in."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 135,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.90738435281933,
+      "centroidLongitude": 18.41969952319332,
+      "city": "Cape Town",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Waterfront",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c025e132-f7e6-589f-b739-47228a4b6aa2",
+      "createdAt": "2026-08-12",
+      "title": "District Six Museum",
+      "shortDescription": "The floor is a map. Walk across it and you cross the street plan of a neighbourhood that no longer exists.",
+      "longDescription": "From the 1860s District Six was one of the few genuinely mixed inner-city neighbourhoods in Cape Town — freed slaves, immigrants, merchants and artisans living close to the docks, the shops and each other. Under the Group Areas Act of 1966 the apartheid government declared it whites-only, and between 1968 and 1982 more than sixty thousand people were forcibly removed, most sent to new townships on the Cape Flats, while over one thousand seven hundred buildings were pulled down behind them. So little of the physical neighbourhood survived that the museum is built instead from memory: recovered street signs mounted near the entrance, family photographs donated by former residents, recordings of people describing rooms and shopfronts that now exist only in what they can still recall — and a great floor map on which returning residents have written their old street names in marker pen.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/district-six-museum_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/district-six-museum_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/district-six-museum_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "0c332726-c864-5cd0-8467-b7c1d39ebedb",
+          "order": 0,
+          "title": "District Six Museum",
+          "caption": "The floor of this museum is a map — literally. Walk across it and you're walking across the street plan of a neighbourhood that no longer exists.",
+          "latitude": -33.92750856007194,
+          "longitude": 18.423698416597897,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/district-six-museum.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/district-six-museum_hero.webp",
+          "transcriptText": "The floor of this museum is a map — literally. Walk across it and you're walking across the street plan of a neighbourhood that no longer exists.\n\nYou should be just inside the main hall of the District Six Museum, on Buitenkant Street, standing on the large floor map that covers most of the ground floor. Former residents have written the names of their old streets directly onto it in marker pen — Tyne Street, Horstley Street, names that correspond to nothing outside these walls anymore, because the streets themselves were bulldozed decades ago.\n\nDistrict Six was, from the 1860s, one of the few genuinely mixed inner-city neighbourhoods in Cape Town — home to freed slaves, immigrants, merchants and artisans of every background, living close to the docks, the shops and each other. Under the Group Areas Act of 1966, the apartheid government declared it whites-only, and between 1968 and 1982 more than sixty thousand people were forcibly removed, most sent to new townships on the Cape Flats, while over one thousand seven hundred buildings were pulled down behind them.\n\nThe museum exists because so little of the physical neighbourhood survived to tell that story itself. What you're walking through instead is built from memory: recovered street signs mounted near the entrance, family photographs donated by people who once lived here, recordings of former residents describing rooms and shopfronts that exist now only in what they can still recall.\n\nTake your time with the floor map particularly. If you find a street name you recognise from somewhere else in South Africa, it's worth pausing — many were named after places the removed families never got to choose for themselves, in townships built without much say from the people sent to live there.\n\nLook for the recovered street signs near the entrance on your way out, and read the names out loud if you're comfortable doing so. It's a small way of putting them back into use."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.92750856007194,
+      "centroidLongitude": 18.423698416597897,
+      "city": "Cape Town",
+      "primaryCategory": "history",
+      "tags": [
+        "Museum",
+        "History",
+        "Remembrance"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "baeaa4fa-c80e-58b0-b0e9-c2df127af3df",
+      "createdAt": "2026-08-12",
+      "title": "Dylan Lewis Studio & Sculpture Garden",
+      "shortDescription": "More than sixty bronzes set into four kilometres of mountain landscape, none of them on a plinth.",
+      "longDescription": "On the edge of Stellenbosch, where cultivated country gives way to a rougher landscape in which leopard are still occasionally recorded, roughly four kilometres of path run past more than sixty bronze sculptures set directly into the ground rather than arranged in a gallery room. Dylan Lewis came from an unusually artistic family — his father sculpted, his mother and grandmother painted — and trained as a painter himself before turning to sculpture and to the big cats that made his early reputation. His work has shown in Paris, Sydney, Toronto, Houston and San Francisco, and he has held solo auctions at Christie's in London, a rare distinction for a working sculptor. What you notice moving through the garden is the shift from animal forms toward the human figure, work exploring what Lewis calls the wilderness within. The garden began almost by accident in 2009, with an excavator hired to level a play area for his children.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dylan-lewis-sculpture-garden_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dylan-lewis-sculpture-garden_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dylan-lewis-sculpture-garden_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dylan-lewis-sculpture-garden_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dylan-lewis-sculpture-garden_5.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a2d4e799-5122-54b4-abe8-b79f873b2e00",
+          "order": 0,
+          "title": "Dylan Lewis Studio & Sculpture Garden",
+          "caption": "There's a particular kind of animal you're likely to meet more of here than almost anywhere else in the Cape — not the real kind, but bronze.",
+          "latitude": -33.97100941814776,
+          "longitude": 18.87268626937565,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/dylan-lewis-sculpture-garden.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/dylan-lewis-sculpture-garden_hero.webp",
+          "transcriptText": "There's a particular kind of animal you're likely to meet more of here than almost anywhere else in the Cape — not the real kind, but bronze.\n\nYou should be at the start of the path system on the Dylan Lewis Sculpture Garden's grounds outside Stellenbosch, with the cultivated edge of the town behind you and a rougher, wilder mountain landscape ahead — country where leopard, real ones, are still occasionally recorded. Somewhere along the roughly four kilometres of path ahead, you'll come across the first of more than sixty bronze sculptures set directly into the landscape rather than arranged on plinths in a gallery room.\n\nDylan Lewis, who made all of them, comes from an unusually artistic family — his father sculpted, his mother and grandmother painted — and he trained first as a painter himself before turning to sculpture and, specifically, to the big cats that made his early reputation. His work has since travelled to Paris, Sydney, Toronto, Houston and San Francisco, and he's held solo auctions at Christie's in London, a rare distinction for any working sculptor.\n\nWhat's changed over the years, and what you'll notice moving through the garden, is a shift from the animal forms toward the human figure — work that explores what Lewis calls the wilderness within, drawing on the psychologist Carl Jung's idea that the instincts we've tried hardest to civilise out of ourselves haven't actually gone anywhere.\n\nThe garden itself began almost by accident in 2009, when Lewis hired an excavator simply to level a play area for his children on the family farm. It grew, over the years that followed, into this entire landscape.\n\nVisits are by appointment only, so this is one to plan ahead for rather than turn up to on a whim. Once you're in, the small café near the old studio, now a gallery in its own right, is worth the stop midway round — a quiet place to sit before the path takes you back out toward the mountain."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 141,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.97100941814776,
+      "centroidLongitude": 18.87268626937565,
+      "city": "Stellenbosch",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Park",
+        "Art",
+        "Public Art",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "702a293f-7f2f-5544-bc1b-8787ea8a96a9",
+      "createdAt": "2026-08-12",
+      "title": "Fyn Restaurant",
+      "shortDescription": "Said like 'fane'. Named for a plant kingdom found nowhere else on the planet.",
+      "longDescription": "Five floors above Parliament Street, in an intentionally raw dining room of dark surfaces meeting light ones, sits a restaurant that has repeatedly placed among the World's 50 Best — including a run as the highest-ranked restaurant on the African continent. The name comes from fynbos, the extraordinarily biodiverse plant kingdom unique to this part of South Africa: proteas, ericas and restios found nowhere else in this combination. It is a fitting reference for a kitchen built on restraint and season rather than spectacle. Chef founder Peter Tempelhoff and culinary director Ashley Moss borrow their discipline from Japanese cooking, letting a single ingredient's character carry a whole dish instead of pulling it in ten directions at once. Dedicated pescatarian and plant-based menus run the whole way through rather than being bolted on.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fyn-restaurant_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fyn-restaurant_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fyn-restaurant_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "91034167-0130-5e98-9e8c-54a4797fd815",
+          "order": 0,
+          "title": "Fyn Restaurant",
+          "caption": "The name over the door doesn't spell out how it's said, so it's worth getting right before you go in: Fyn, said like \"fane,\" not like the English word \"fin.\"",
+          "latitude": -33.924589387528464,
+          "longitude": 18.421830761277466,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/fyn-restaurant.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/fyn-restaurant_hero.webp",
+          "transcriptText": "The name over the door doesn't spell out how it's said, so it's worth getting right before you go in: Fyn, said like \"fane,\" not like the English word \"fin.\"\n\nYou should be on the fifth floor of Speaker's Corner, on Parliament Street, having come up past the ground-floor entrance and out into a dining room suspended above the city centre — dark surfaces meeting light ones, an intentionally raw, unfussy space for somewhere that's been named among the best restaurants on earth several years running.\n\nThat name, Fyn, comes from fynbos — the extraordinarily biodiverse plant kingdom unique to this part of South Africa, all proteas, ericas and restios, found nowhere else on the planet in this particular combination. It's a fitting reference for a kitchen built around restraint and season rather than spectacle: chef founder Peter Tempelhoff and culinary director Ashley Moss build menus that borrow their discipline from Japanese cooking, letting a single ingredient's character carry a whole dish rather than dressing it up in ten different directions at once.\n\nThe results have travelled. This restaurant has placed among the World's 50 Best more than once, including a run as the highest-ranked restaurant on the entire African continent — the kind of result that tends to follow a kitchen more interested in doing a few things with total precision than trying to do everything. The same group runs Ramenhead and Sushiya elsewhere in the city, but Fyn remains the flagship, the room where that whole philosophy gets its fullest, most considered expression.\n\nIf the tasting menu feels like a commitment, the lunch service runs a shorter version of the same philosophy, and there are dedicated pescatarian and plant-based menus running the whole way through, not bolted on as an afterthought. Ask your server about sommelier Jennifer Hugé's pairing choices too — the wine list here gets as much attention as anything coming out of the kitchen."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 151,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.924589387528464,
+      "centroidLongitude": 18.421830761277466,
+      "city": "Cape Town",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2a80dd91-8d7e-59a4-a684-6d6656e82f89",
+      "createdAt": "2026-08-12",
+      "title": "Gigi Rooftop Restaurant & Bar",
+      "shortDescription": "An emerald pool above the oldest part of the city — and it isn't actually the point of the place.",
+      "longDescription": "A rooftop above the Gorgeous George hotel, reached from St George's Mall below, where a glass-panelled emerald swimming pool sits at the centre of a deck that leans deliberately tropical — blue, green and burnt-orange furnishings, leafy plants crowded along the railings, heritage roofs spreading out beneath toward Table Mountain. The indoor dining room behind is built to feel like an extension of the same outdoor space rather than a retreat from it. Cocktails are where the rooftop takes itself most seriously: in-house mixologist Jody Rahme changes the list often enough that regulars ask what is new rather than repeat an order, and the food runs alongside with the same intent — contemporary dishes built on South African produce, designed for sharing. It opens at half past seven in the morning and runs late, doing breakfast, lunch, sundowners and dinner from one kitchen and one view.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gigi-rooftop_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gigi-rooftop_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gigi-rooftop_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "bd345236-16bd-57a1-9ea2-7f9c069e2c4a",
+          "order": 0,
+          "title": "Gigi Rooftop Restaurant & Bar",
+          "caption": "An emerald-green swimming pool, glass-panelled on every side, sits at the centre of a rooftop that opens onto the oldest part of Cape Town's city centre — that's the first thing most people photograph at Gigi, and it's not actually the point of the place.",
+          "latitude": -33.92345382972591,
+          "longitude": 18.420097911550016,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/gigi-rooftop.mp3",
+          "audioDurationSeconds": 132,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/gigi-rooftop_hero.webp",
+          "transcriptText": "An emerald-green swimming pool, glass-panelled on every side, sits at the centre of a rooftop that opens onto the oldest part of Cape Town's city centre — that's the first thing most people photograph at Gigi, and it's not actually the point of the place.\n\nYou should be on the rooftop terrace above the Gorgeous George hotel, reached from St George's Mall below, with the pool to one side and a run of low, heritage-roofed buildings spreading out beneath you toward Table Mountain. The whole deck leans tropical — blue, green and burnt-orange furnishings, leafy plants crowded along the railings — while the indoor dining room, just behind you, is built to feel like an extension of the same outdoor space rather than a retreat from it.\n\nThe hotel below, Gorgeous George, plays up its own vintage glamour with marble floors and velvet booths, but it's the rooftop, open to the sky, where that theatre properly comes alive.\n\nCocktails are where this rooftop takes itself properly seriously. In-house mixologist Jody Rahme builds the drinks list here, and it changes often enough that regulars tend to ask what's new rather than order the same thing twice. The food menu runs alongside it with the same intent — contemporary dishes built around South African produce, designed to be shared across a table rather than eaten as a solitary main course.\n\nHere's what's worth noticing about Gigi specifically: it opens at half past seven in the morning and runs until late, which makes it one of the few rooftops in the city doing breakfast, lunch, sundowners and a late dinner service all from the same kitchen and the same view.\n\nCome back at golden hour if you can manage the timing — the heritage rooftops below catch the light first, long before the mountain does, and the pool glows properly once the sun's low enough to hit the glass panels directly. It's smart casual and cashless here, worth knowing before you arrive."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 132,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.92345382972591,
+      "centroidLongitude": 18.420097911550016,
+      "city": "Cape Town",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Viewpoint",
+        "After Dark",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "05238c77-9ef3-5138-8a16-774cb27d0267",
+      "createdAt": "2026-08-12",
+      "title": "Hemelhuijs",
+      "shortDescription": "Heaven house, in a Dutch spelling two centuries out of date — and meant as a promise.",
+      "longDescription": "A Waterkant Street shopfront that looks more like an art gallery than a café: pale walls, considered objects on shelves, the sense that everything has been arranged rather than simply furnished. Chef patron Jacques Erasmus opened it in November 2009 and the cooking follows the same instinct as the interior — modern South African dishes built with real technique and served without the stiffness that phrase usually implies. Ricotta and Swiss chard ravioli sits alongside vanilla-baked guava with double cream yoghurt, and breakfast is treated with the seriousness most kitchens reserve for dinner; it is arguably the meal the place is best known for. The ceramics, linens and small design objects scattered through the room are also for sale, many made locally. Erasmus trained as a set and costume designer before he cooked professionally, and it shows: the look and the food were built by the same eye, at the same time, on purpose.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hemelhuijs_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hemelhuijs_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hemelhuijs_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "a1713c75-e06f-534e-97c0-8177609d3798",
+          "order": 0,
+          "title": "Hemelhuijs",
+          "caption": "The name means heaven house, in an old-fashioned Dutch spelling that predates the modern Afrikaans word for house by a couple of centuries — and whoever chose it clearly meant it as a promise, not decoration.",
+          "latitude": -33.91843407491097,
+          "longitude": 18.419868942235397,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/hemelhuijs.mp3",
+          "audioDurationSeconds": 156,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/hemelhuijs_hero.webp",
+          "transcriptText": "The name means heaven house, in an old-fashioned Dutch spelling that predates the modern Afrikaans word for house by a couple of centuries — and whoever chose it clearly meant it as a promise, not decoration.\n\nYou should be on Waterkant Street, just round the corner from Bree Street, outside a shopfront with large windows and a look that's more art gallery than café — pale walls, considered objects on shelves, the sense that somebody has arranged everything rather than simply furnished it. That's Hemelhuijs, and the arranging is entirely the point.\n\nChef patron Jacques Erasmus opened this place in November 2009, and the cooking follows the same instinct as the interior: modern South African dishes built with real technique but served without any of the stiffness that phrase usually implies. Ricotta and Swiss chard ravioli sits comfortably alongside vanilla-baked guava with double cream yoghurt, and breakfast here gets treated with the same seriousness most restaurants reserve for dinner — it's arguably the meal Hemelhuijs is best known for.\n\nLook past the dining room too: Hemelhuijs also sells the ceramics, linens and small design objects scattered around the space, many of them made locally, which means the plate your breakfast arrives on might well be the same plate you can buy on your way out.\n\nHere's what's worth understanding about a place like this: Erasmus trained as a set and costume designer before he ever cooked professionally, and it shows in everything from the plating to the room itself. This isn't a restaurant that happens to look good. The look and the food were built by the same eye, at the same time, on purpose.\n\nIf there's a queue, it's usually short and always worth it — breakfast is when the kitchen is at its most inventive. Take a seat near the window if you can, and don't rush the coffee afterward; this is a place built for lingering, not turning tables."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 156,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.91843407491097,
+      "centroidLongitude": 18.419868942235397,
+      "city": "Cape Town",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "1b7d0be6-3d92-57a3-a364-bb72fe106875",
+      "createdAt": "2026-08-12",
+      "title": "Kirstenbosch National Botanical Garden",
+      "shortDescription": "Before it was a garden it was known for feral pigs wallowing among the fallen acorns.",
+      "longDescription": "Cecil Rhodes bought this neglected estate below Table Mountain in 1895 as part of a vast landholding, and he remains a figure Cape Town argues about — an empire builder whose wealth and whose attitudes toward the people already living on this continent are widely remembered as exploitative. He never saw a garden here. On his death in 1902 the land passed to the government and sat neglected another decade until the botanist Harold Pearson assessed it in 1911 and recommended something entirely different: a garden dedicated purely to the plants native to this part of the world. When Kirstenbosch opened in 1913 that idea was genuinely unusual, at a time when most botanical gardens collected specimens from wherever they could. The avenue of camphor trees and Moreton Bay figs at the entrance was planted in 1898; further in, the curved steel-and-timber Boomslang walkway rises about twelve metres through the arboretum canopy.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kirstenbosch_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kirstenbosch_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kirstenbosch_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kirstenbosch_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "1734f481-883e-5b6d-af7e-d86694ded1ac",
+          "order": 0,
+          "title": "Kirstenbosch National Botanical Garden",
+          "caption": "Feral pigs. That's what this land was known for before it was a garden — a neglected, overgrown estate where wild pigs wallowed in the mud and fed on fallen acorns.",
+          "latitude": -33.98508133979748,
+          "longitude": 18.433236988274928,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/kirstenbosch.mp3",
+          "audioDurationSeconds": 147,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/kirstenbosch_hero.webp",
+          "transcriptText": "Feral pigs. That's what this land was known for before it was a garden — a neglected, overgrown estate where wild pigs wallowed in the mud and fed on fallen acorns.\n\nYou should be near the main entrance, with the avenue of camphor trees and Moreton Bay figs stretching away in front of you, their canopies meeting overhead. Those trees were planted in 1898, and they're one of the few things standing here today that were planted by the land's most famous former owner.\n\nCecil Rhodes bought this estate in 1895, part of the vast landholding he assembled below Table Mountain, and he's a figure Cape Town still argues about: an empire builder whose companies made him immensely wealthy, and whose policies and attitudes toward the people already living on this continent are remembered, by many, as nothing short of exploitative. Rhodes never lived to see a garden here. When he died in 1902, the land passed to the government in his will, and it sat neglected for another decade before the botanist Harold Pearson assessed it in 1911 and recommended it for something entirely different from what Rhodes had used it for: a garden dedicated purely to the plants native to this part of the world.\n\nThat idea, when Kirstenbosch opened in 1913, was genuinely unusual. Most botanical gardens of the era collected specimens from wherever they could get them. This one deliberately grew only what already belonged here, at a time when almost nobody thought that distinction mattered.\n\nFurther into the garden, a curved steel and timber walkway called the Boomslang — Afrikaans for tree snake — rises up through the arboretum canopy to a height of about twelve metres, offering a view down onto the treetops that the garden's original planners could never have imagined visitors wanting.\n\nWalk the camphor avenue slowly on your way in, then follow the path up toward the cultivated slopes below the mountain — the fynbos beds there hold plant families found nowhere else on earth, and most of them are easy to miss if you're moving quickly."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 147,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.98508133979748,
+      "centroidLongitude": 18.433236988274928,
+      "city": "Cape Town",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Green Escape",
+        "Iconic Landmark"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "37fee285-8046-5613-a0db-d1774b58225f",
+      "createdAt": "2026-08-12",
+      "title": "Lion's Head",
+      "shortDescription": "There really were lions here — the last one shot is generally dated to 1802.",
+      "longDescription": "The Dutch arrived in the seventeenth century, looked at this rounded dome and the long ridge trailing from it toward the sea, and saw a crouching lion: Leeuwen Kop for the peak, Leeuwen Staart — the tail — for Signal Hill. The English tried renaming it King James His Mount, a name that never escaped a handful of old maps. The Dutch name stuck, and the resemblance was not only a matter of shape: records suggest lions roamed this peak into the early nineteenth century. The Khoisan people who lived here long before any European mapmaker had their own name for it, tied not to its outline but to its use — a watchman's hill, a lookout over the bay. Every name given to this mountain has really described what it is good for: watching, and being seen. The final stretch to the summit uses chains and ladders bolted into the rock.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lions-head_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lions-head_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lions-head_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "4435d403-d4df-51a3-b7ef-c15faf17f631",
+          "order": 0,
+          "title": "Lion's Head",
+          "caption": "There really were lions here once — which is a fact that tends to surprise people halfway up a hike named after one.",
+          "latitude": -33.936899,
+          "longitude": 18.394841,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/lions-head.mp3",
+          "audioDurationSeconds": 141,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/lions-head_hero.webp",
+          "transcriptText": "There really were lions here once — which is a fact that tends to surprise people halfway up a hike named after one.\n\nYou should be at the base of the path that circles the peak, with the mountain's distinctive rounded dome rising above you and, in the distance behind, the long, lower ridge of Signal Hill trailing off toward the sea. The Dutch, arriving in the seventeenth century, looked at that whole shape — this peak and the ridge running from it — and saw a crouching lion: Leeuwen Kop, or Lion's Head, with Signal Hill as Leeuwen Staart, the tail.\n\nThe English tried renaming it first, with considerably less imagination — King James His Mount, a name that never caught on outside a handful of old maps. The Dutch name stuck instead, and the resemblance to a lion apparently wasn't only a matter of shape. Records suggest actual lions roamed this peak until the early eighteen hundreds; the last one shot here is generally dated to 1802, which means the animal in the name was real for longer than most visitors assume.\n\nHere's the thing worth remembering as you climb: the Khoisan people who lived here long before any Dutch or English mapmaker had their own name for this peak too, tied not to its shape but to its use — a watchman's hill, a lookout point over the bay below. Every name given to this mountain has really just been describing what it's good for: watching, and being seen.\n\nThe final stretch to the summit uses chains and ladders bolted into the rock — not difficult, but worth knowing about before you commit, especially if heights aren't your favourite thing. Time it for early morning or, better still, one of the full moon hikes that draw a steady stream of people up this same path after dark."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 141,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.936899,
+      "centroidLongitude": 18.394841,
+      "city": "Cape Town",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "History",
+        "Viewpoint",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0814a997-e316-59d8-94ea-11074b646413",
+      "createdAt": "2026-08-12",
+      "title": "Maiden's Cove Tidal Pool",
+      "shortDescription": "Two rock pools on a coast otherwise given over to open beach — and to a longer history than the calm suggests.",
+      "longDescription": "On the rocky point between Clifton and Camps Bay, two pools cut into the granite are refreshed by the sea with every tide, with Table Mountain and the Twelve Apostles rising behind and water calm enough for swimmers who would rather not take on Atlantic waves and Atlantic temperatures at once. The history is less placid. During apartheid the beaches at Clifton and Camps Bay were reserved for white residents, and Maiden's Cove was one of the few coastal spots nearby where non-white Capetonians were permitted to swim. It was declared a national monument as early as 1949 and a provincial heritage site again in 1999 — recognition that arrived, in both cases, long after the pools already mattered to the people using them. It also remains one of the better places on the peninsula to see marine life without a boat: dolphins turn up regularly, and whales pass close inshore between June and November.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maidens-cove-tidal-pool_hero.webp",
+      "additionalImageURLs": [],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "f3eff9c6-3725-5e16-862c-de91db49c509",
+          "order": 0,
+          "title": "Maiden's Cove Tidal Pool",
+          "caption": "Two rock pools, tucked between granite boulders on a stretch of coast otherwise given over entirely to open beach — that combination is rarer than it sounds, and it's the whole reason people come here.",
+          "latitude": -33.94484139640502,
+          "longitude": 18.373422485315963,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/maidens-cove-tidal-pool.mp3",
+          "audioDurationSeconds": 133,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/maidens-cove-tidal-pool_hero.webp",
+          "transcriptText": "Two rock pools, tucked between granite boulders on a stretch of coast otherwise given over entirely to open beach — that combination is rarer than it sounds, and it's the whole reason people come here.\n\nYou should be on the rocky point between Clifton and Camps Bay, with the tidal pools visible below you, cut into the granite and refreshed by the sea with every tide. Table Mountain and the line of peaks known as the Twelve Apostles rise behind you, and on a clear day the water itself is startlingly blue, calm enough in the pools for swimmers who'd rather not deal with Atlantic waves and Atlantic temperatures at the same time.\n\nThis particular stretch of coast carries more history than its calm surface suggests. During apartheid, Clifton and Camps Bay's beaches were reserved for white residents only, and Maiden's Cove was one of the few coastal spots nearby where non-white Capetonians were permitted to swim. That history is part of why it was declared a national monument as early as 1949, and a provincial heritage site again in 1999 — recognition that came, in both cases, long after the pools themselves had already mattered to the people who used them.\n\nAnd here's what's worth knowing beyond the history: this remains one of the better places on the peninsula to spot marine life without a boat. Dolphins turn up in the bay fairly often, and between June and November, whales pass close enough to the shore to be visible from exactly where you're standing.\n\nIf the Atlantic feels too cold, which it usually does, stick to the pools rather than the open water — and bring goggles if you have them. The visibility on a calm day, looking down through the rock pools, is better than most people expect from the Cape's chillier side of the peninsula."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 133,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.94484139640502,
+      "centroidLongitude": 18.373422485315963,
+      "city": "Cape Town",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Maritime",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "79d7ab42-15dd-5340-aba4-d9d4e920b2b3",
+      "createdAt": "2026-08-12",
+      "title": "Mount Nelson High Tea",
+      "shortDescription": "Painted pink in 1918 as a gesture toward peace, and kept that colour for over a century.",
+      "longDescription": "A long avenue of palms leads up from the main road, planted to make arriving at the Mount Nelson feel like an occasion rather than a check-in. The pink dates to 1918, applied at the end of the First World War and retained through every renovation and change of ownership since. The land has a longer story than the hotel: granted to a Dutch baron in 1743, turned into a private homestead a century later, and only a hotel from 1899 — since when the Nellie has hosted guests from Arthur Conan Doyle to John Lennon, Marlene Dietrich and the Dalai Lama. Afternoon tea is newer than the building; it moved from a trolley onto the fixed Windsor Table for the first time only in November 1989, and now runs to more than sixty loose-leaf teas, guided if you like by Craig Cupido, one of the country's first professionally trained tea sommeliers.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mount-nelson-high-tea_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mount-nelson-high-tea_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mount-nelson-high-tea_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "10f728ce-a3d1-59b0-9cb7-45ee58732ace",
+          "order": 0,
+          "title": "Mount Nelson High Tea",
+          "caption": "The colour is the first clue that this hotel takes tradition rather lightly: nowhere else in Cape Town paints a hundred-plus-year-old landmark quite this shade of pink, on purpose, and keeps it that way for over a century.",
+          "latitude": -33.93076347785081,
+          "longitude": 18.412925009700327,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/mount-nelson-high-tea.mp3",
+          "audioDurationSeconds": 158,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/mount-nelson-high-tea_hero.webp",
+          "transcriptText": "The colour is the first clue that this hotel takes tradition rather lightly: nowhere else in Cape Town paints a hundred-plus-year-old landmark quite this shade of pink, on purpose, and keeps it that way for over a century.\n\nYou should be in the Lounge of the Mount Nelson Hotel, known locally as the Nellie, seated at or near the long table set for afternoon tea — historically called the Windsor Table — with tiered stands of sandwiches and pastries arriving in careful sequence. The pink you saw outside dates to 1918, painted on at the end of the First World War as a gesture toward peace, and it's stayed that colour ever since, through every renovation and change of ownership.\n\nThe approach itself sets the tone before you've even ordered: a long avenue of palm trees leads up from the main road, planted decades ago specifically to make the arrival feel like an occasion rather than a simple check-in.\n\nThe land itself has a longer story than the hotel does. It was originally granted to a Dutch baron in 1743, turned into a private homestead a century later, and only became a hotel in 1899 — since when it's hosted guests ranging from Arthur Conan Doyle to John Lennon, Marlene Dietrich and the Dalai Lama, a guest list odd enough that it's genuinely difficult to imagine what they'd all have talked about at the same table.\n\nAfternoon tea itself is a newer tradition than the building: it moved from a trolley onto that fixed table for the first time only in November 1989. Today it runs to more than sixty loose-leaf teas, guided if you'd like by Craig Cupido, one of the country's first professionally trained tea sommeliers — proof that this ritual gets taken exactly as seriously as everything else here.\n\nBook ahead, since seatings fill well in advance, and ask your server which tea Cupido would pair with whatever's on the savoury stand that day. Getting talked into something you wouldn't have chosen yourself is rather the point of asking."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 158,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.93076347785081,
+      "centroidLongitude": 18.412925009700327,
+      "city": "Cape Town",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "History",
+        "Colonial"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "0fb3060c-c89f-5b94-9896-5ffbe01905bb",
+      "createdAt": "2026-08-12",
+      "title": "Muizenberg Beach",
+      "shortDescription": "The huts look built for the photograph. They were built so Victorian bathers could change unseen.",
+      "longDescription": "The row of beach huts in reds, yellows, blues and greens dates to the 1920s, put up as changing rooms when swimming costumes and modesty rules made a private place to dress a genuine necessity rather than a decorative choice. Muizenberg had already drawn crowds for over a century by then — Dutch colonists knew this coast from the seventeen hundreds, but it was in the early nineteen hundreds that it became the country's fashionable seaside resort, marketed as so restorative it was nicknamed the cure of all aches. Surfing arrived around the same period, and this gentle, forgiving break has been a beginner's favourite ever since, famous enough to turn up in The Endless Summer in 1966, huts and all. Which is the thing easiest to forget about the postcard version: they were never meant to be looked at, only used, quickly, by ordinary swimmers.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/muizenberg-beach_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/muizenberg-beach_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "84ee152d-aeb7-5efa-9432-9ad77d316a87",
+          "order": 0,
+          "title": "Muizenberg Beach",
+          "caption": "Rows of beach huts in reds, yellows, blues and greens line the sand here, and though they look built purely for the photograph, they were actually built to solve a rather more old-fashioned problem: where Victorian bathers were meant to change without anyone seeing them do it.",
+          "latitude": -34.10799040456145,
+          "longitude": 18.470351744475447,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/muizenberg-beach.mp3",
+          "audioDurationSeconds": 130,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/muizenberg-beach_hero.webp",
+          "transcriptText": "Rows of beach huts in reds, yellows, blues and greens line the sand here, and though they look built purely for the photograph, they were actually built to solve a rather more old-fashioned problem: where Victorian bathers were meant to change without anyone seeing them do it.\n\nYou should be on the promenade above Muizenberg Beach, the huts strung out along the sand below you in their bright, mismatched row, with the curve of the bay and the surf breaking gently beyond them. Those huts date to the 1920s, built as changing rooms at a time when swimming costumes and modesty rules made a private place to dress a genuine necessity rather than a decorative choice.\n\nMuizenberg had already been drawing crowds for over a century by then. Dutch colonists knew this stretch of coast from the seventeen hundreds, but it was in the early nineteen hundreds that it became the country's fashionable seaside resort, marketed at the time as somewhere so restorative it was nicknamed the cure of all aches. Surfing arrived around the same period, and this gentle, forgiving break has stayed a beginner's favourite ever since — good enough, and famous enough, that it turned up in the surf film The Endless Summer in 1966, huts and all, and helped put this particular stretch of sand on the map for good.\n\nHere's what's easy to forget looking at the postcard version of the huts: they were never meant to be looked at. They were meant to be used, quickly, by ordinary swimmers who wanted nowhere in particular to be seen changing.\n\nIf you're new to surfing, this is the beach in Cape Town to actually try it — the waves are slow and forgiving, and most of the surf schools working this stretch cater specifically to complete beginners. Wander the length of the huts at least once; no two are painted quite the same."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 130,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -34.10799040456145,
+      "centroidLongitude": 18.470351744475447,
+      "city": "Cape Town",
+      "primaryCategory": "culturalHeritage",
+      "tags": [
+        "Waterfront",
+        "History",
+        "Maritime",
+        "Iconic Landmark",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "506a89b5-7917-5ddd-a17a-fe97a9e5850a",
+      "createdAt": "2026-08-12",
+      "title": "Norval Foundation Art Museum",
+      "shortDescription": "An art museum built around a wetland rather than in spite of one.",
+      "longDescription": "In Steenberg, with the reeds and open water of an indigenous wetland along one side and the slopes of Table Mountain National Park rising behind, DHK Architects set a structure that sits low and deliberately does not compete with either water or mountain. The museum opened in 2018, founded by Louis Norval, a property investor who spent decades assembling one of South Africa's most significant private collections and concluded the country needed somewhere permanent to show such work publicly, given how little institutional support exists for contemporary African art. The focus is deliberately narrow: twentieth and twenty-first century visual art from the African continent and its diaspora. The family collection forms the backbone of the permanent display, with a rotating loan programme so the walls do not simply repeat it. Outside, works by Yinka Shonibare, William Kentridge and Nandipha Mntambo sit among indigenous planting rather than on plinths.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/norval-foundation_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/norval-foundation_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/norval-foundation_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/norval-foundation_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "c59d8f92-5941-5603-943e-f3a5e60e7108",
+          "order": 0,
+          "title": "Norval Foundation Art Museum",
+          "caption": "A wetland runs right up against the building here, which is unusual for an art museum and entirely deliberate — the architects built around the water rather than in spite of it.",
+          "latitude": -34.07631476800326,
+          "longitude": 18.42877970415124,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/norval-foundation.mp3",
+          "audioDurationSeconds": 151,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/norval-foundation_hero.webp",
+          "transcriptText": "A wetland runs right up against the building here, which is unusual for an art museum and entirely deliberate — the architects built around the water rather than in spite of it.\n\nYou should be at the entrance pavilion of the Norval Foundation, in Steenberg, with the reeds and open water of an indigenous wetland visible along one side of the building and the slopes of Table Mountain National Park rising behind it. The structure itself, designed by DHK Architects, sits low and deliberately doesn't compete with either the water or the mountain for attention.\n\nThis museum is a genuinely recent addition to the city, opened only in 2018 by Louis Norval, a property investor who spent decades building one of South Africa's most significant private art collections and eventually decided the country needed somewhere permanent to show that kind of work publicly, given how little institutional support exists here for contemporary African art. The focus is specifically twentieth and twenty-first century visual art from the African continent and its diaspora — not a general survey collection, but a deliberately narrow, deliberately serious one.\n\nThe Norval family's own collection, built up over some twenty years before the museum existed, forms the backbone of what's on permanent display, though the museum also runs a rotating programme of loan exhibitions specifically so the walls don't simply repeat the same private holdings indefinitely.\n\nStep outside into the sculpture garden and the collection extends past the building entirely: works by Yinka Shonibare, William Kentridge and Nandipha Mntambo sit directly in the landscape, among indigenous planting rather than on museum plinths, which changes how you look at them considerably. A sculpture surrounded by fynbos reads differently than the same piece under gallery lighting.\n\nGive yourself time for both halves of the visit — the indoor galleries and the outdoor sculpture walk are genuinely different experiences of the same collection, and rushing between them defeats the purpose of building the second one at all."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 151,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -34.07631476800326,
+      "centroidLongitude": 18.42877970415124,
+      "city": "Cape Town",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Museum",
+        "Art",
+        "Contemporary",
+        "Green Escape"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c8c3d395-102f-5d60-bbcd-1d3be2d60f0d",
+      "createdAt": "2026-08-12",
+      "title": "Rhodes Memorial",
+      "shortDescription": "Forty-nine granite steps, one for every year of a life South Africa is still arguing about.",
+      "longDescription": "On the slopes of Devil's Peak, a structure in the manner of an ancient Greek temple frames a bronze bust at the head of forty-nine steps — one per year of Cecil John Rhodes's life. The architect Herbert Baker modelled it on the temple at Segesta and built it from Cape granite quarried at the foot of Table Mountain, so the stone honouring Rhodes came from the same mountain his memorial overlooks; it was unveiled in 1912, a decade after his death. Rhodes made an immense fortune in diamonds and gold, became prime minister of the Cape Colony, and pursued a vision of British imperial expansion that dispossessed and subjugated the people already living on the land he claimed. That legacy is genuinely contested here, challenged loudly and often by movements such as Rhodes Must Fall. Below the steps stands George Frederic Watts's bronze Physical Energy — a horse and rider straining forward, arguably the more honest monument: motion with no stated destination.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rhodes-memorial_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rhodes-memorial_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rhodes-memorial_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ce44e7b6-c0aa-5bf1-8881-b18ddedeab62",
+          "order": 0,
+          "title": "Rhodes Memorial",
+          "caption": "Forty-nine steps lead up to the columns in front of you — one for every year of the man's life the memorial commemorates, which is either a fitting tribute or a slightly uncomfortable one, depending on how you feel about that man.",
+          "latitude": -33.952226802430616,
+          "longitude": 18.45913491066883,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rhodes-memorial.mp3",
+          "audioDurationSeconds": 172,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rhodes-memorial_hero.webp",
+          "transcriptText": "Forty-nine steps lead up to the columns in front of you — one for every year of the man's life the memorial commemorates, which is either a fitting tribute or a slightly uncomfortable one, depending on how you feel about that man.\n\nYou should be at the base of the granite staircase on the slopes of Devil's Peak, looking up at a structure built in the style of an ancient Greek temple, its columns framing a bronze bust at the top. This is the Rhodes Memorial, designed by the architect Herbert Baker and unveiled in 1912, a decade after the death of Cecil John Rhodes, the man it honours.\n\nRhodes made an immense fortune from diamond and gold mining, became prime minister of the Cape Colony, and pursued a vision of British imperial expansion across Southern Africa that dispossessed and subjugated the people who already lived on the land he claimed. That legacy is genuinely contested in South Africa today — memorialised here in solid granite, and challenged, loudly and often, by movements like Rhodes Must Fall, which argue that a monument like this has no place celebrating a figure so bound up with colonial exploitation.\n\nBaker built the memorial to resemble the ancient Greek temple at Segesta, using Cape granite quarried from the base of Table Mountain itself, which means the stone honouring Rhodes came from the same mountain his memorial now looks out over.\n\nBelow the steps, and easy to miss if you arrive from the wrong side, stands a large bronze statue of a horse and rider straining forward — a piece called Physical Energy, by the English sculptor George Frederic Watts, cast specifically as a tribute to the restless, expansionist drive that defined Rhodes's career. It's arguably a more honest monument than the temple above it: forward motion with no stated destination.\n\nWhatever you make of the man, the view from the top is worth the climb on its own terms: Devil's Peak behind you, the northern suburbs and Table Bay spread out below. Stand there a moment and decide for yourself what a monument like this is actually for."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 172,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.952226802430616,
+      "centroidLongitude": 18.45913491066883,
+      "city": "Cape Town",
+      "primaryCategory": "history",
+      "tags": [
+        "Monument",
+        "History",
+        "Power",
+        "Remembrance",
+        "Neoclassical",
+        "Viewpoint",
+        "Designed by a Master",
+        "Herbert Baker"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "fe8af15c-f542-5dd2-be52-a39a052052da",
+      "createdAt": "2026-08-12",
+      "title": "Rosetta Roastery Cafe",
+      "shortDescription": "Years spent roasting coffee nobody outside the trade ever tasted, before a single cup was sold here.",
+      "longDescription": "A rustic, unfussy shopfront on Bree Street, which is a little surprising once you know the reputation behind it. Rosetta began as a wholesale roastery supplying other cafés and restaurants for years before opening a counter of its own, so the people running it had already mastered the craft quietly, long before anyone outside the industry knew the name. That wholesale-first approach let them build something unusual for South Africa at the time: a direct-trade supply chain sourcing rare single-origin beans that had simply not been available in the country. The roastery evaluates well over a hundred and fifty coffees a year, chasing specific describable flavours rather than a generic idea of quality — which is why the menu changes with the seasons of growing regions on the other side of the world rather than with the seasons here. The beans now ship internationally, a rare export success for a South African coffee brand.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rosetta-roastery_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rosetta-roastery_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rosetta-roastery_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "038c59c8-a9ac-5704-897e-e17fb7380c58",
+          "order": 0,
+          "title": "Rosetta Roastery Cafe",
+          "caption": "Before this address ever served a single cup to a customer, the people behind it had already spent years roasting coffee nobody outside the trade ever tasted.",
+          "latitude": -33.92100055417233,
+          "longitude": 18.418363674770458,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/rosetta-roastery.mp3",
+          "audioDurationSeconds": 142,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/rosetta-roastery_hero.webp",
+          "transcriptText": "Before this address ever served a single cup to a customer, the people behind it had already spent years roasting coffee nobody outside the trade ever tasted.\n\nYou should be on Bree Street, outside number 101, looking for a rustic, unfussy shopfront rather than anything polished or precious — Rosetta doesn't dress itself up, which is a little surprising once you know its reputation. Step inside and you're standing in one of the cafés that genuinely helped build Cape Town's specialty coffee scene, rather than simply riding a trend that arrived from somewhere else.\n\nRosetta started as a wholesale roastery, supplying other cafés and restaurants for years before opening this counter of its own — which meant the people running it had already mastered the craft, quietly, long before anyone outside the industry knew the name. That wholesale-first approach let them build something unusual for South Africa at the time: a direct-trade supply chain sourcing rare single-origin beans that simply hadn't been available in the country before.\n\nWhat's worth knowing, standing at the counter, is how much testing sits behind whatever's in your cup. The roastery evaluates well over a hundred and fifty different coffees every year, chasing specific, describable flavours rather than a generic idea of quality — which is why the menu changes with the seasons of coffee-growing regions on the other side of the world, not with the seasons here.\n\nWhat started as a small Bree Street operation has since travelled well beyond Cape Town: Rosetta's beans are now shipped and served internationally, a rare export success for a South African coffee brand, though the roastery insists the café itself hasn't changed the way it runs since those early wholesale years.\n\nAsk whoever's on the counter what's brewing as a single-origin filter that day rather than defaulting to the espresso menu — it changes constantly, and it's usually the more interesting cup in the building."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 142,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.92100055417233,
+      "centroidLongitude": 18.418363674770458,
+      "city": "Cape Town",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "Commerce",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "2f131a4b-9fa4-5c6a-a4b4-d9bad038168f",
+      "createdAt": "2026-08-12",
+      "title": "Southern Guild Cape Town",
+      "shortDescription": "Almost nothing here is simply furniture, even when it looks exactly like a chair.",
+      "longDescription": "Trevyn and Julian McGowan founded Southern Guild in 2008, having returned to South Africa from London five years earlier specifically to build a platform for the country's designers and makers. The gallery had no permanent home until 2014 and moved into Silo 5 in the V&A Waterfront's Silo District in 2017, alongside the museum next door — together turning this stretch of harbour into one of the most serious contemporary art and design addresses on the continent. What Southern Guild pioneered, and is still best known for, is collectable design: one-off or very limited pieces by African artists and designers that function as furniture or objects but are collected and priced as art. The results have entered the Metropolitan Museum of Art, the Centre Pompidou and the Vitra Design Museum. Look for Andile Dyalvane's large ceramic vessels, drawing on Xhosa scarification patterns and family firing techniques, and Porky Hefer's woven, nest-like seating.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southern-guild-cape-town_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southern-guild-cape-town_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southern-guild-cape-town_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "ab32dd0a-1131-54b1-9e5c-29271e8f761b",
+          "order": 0,
+          "title": "Southern Guild Cape Town",
+          "caption": "The objects in this gallery are almost never simply furniture, even when, at first glance, they look exactly like a chair.",
+          "latitude": -33.90974604642231,
+          "longitude": 18.42288004297807,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/southern-guild-cape-town.mp3",
+          "audioDurationSeconds": 167,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/southern-guild-cape-town_hero.webp",
+          "transcriptText": "The objects in this gallery are almost never simply furniture, even when, at first glance, they look exactly like a chair.\n\nYou should be inside Silo 5, in the V&A Waterfront's Silo District, in a tall, converted industrial space with concrete surfaces and a ceiling height that immediately tells you this building did something else before it held art. This is Southern Guild, and what's arranged around you sits deliberately between two categories that most galleries keep separate: art, and design.\n\nTrevyn and Julian McGowan founded Southern Guild in 2008, having returned to South Africa from London five years earlier specifically to build a platform for the country's designers and makers. Their gallery didn't get a permanent home until 2014, and it only moved into this particular silo in 2017, alongside the museum next door — together, the two buildings turned this stretch of harbour into what's now genuinely one of the most serious contemporary art and design addresses on the continent.\n\nWhat Southern Guild pioneered, and what it's still best known for, is a category called collectable design: one-off or extremely limited pieces, made by African artists and designers, that function as furniture or objects but are collected and priced the way art is. The results have ended up in the Metropolitan Museum of Art, the Centre Pompidou, and the Vitra Design Museum — proof, if it were needed, that the line between chair and sculpture is considerably blurrier than most furniture shops would have you believe.\n\nLook out particularly for work by Andile Dyalvane, whose large ceramic vessels draw on Xhosa scarification patterns and firing techniques passed down through his family, and Porky Hefer, whose woven, nest-like seating pieces blur the line between sculpture and furniture more literally than almost anything else in the room.\n\nTake your time with the pieces that look most functional. A stool or a cabinet here often carries the same conceptual weight as anything hanging on a gallery wall — it's just built to be sat on too, occasionally, if the artist allows it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 167,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.90974604642231,
+      "centroidLongitude": 18.42288004297807,
+      "city": "Cape Town",
+      "primaryCategory": "visualArt",
+      "tags": [
+        "Venue",
+        "Art",
+        "Waterfront",
+        "Contemporary"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "6bd5fdba-455f-5002-98ec-66388935534f",
+      "createdAt": "2026-08-12",
+      "title": "Table Mountain Aerial Cableway",
+      "shortDescription": "Sixty-five people, one rotating floor, and a full spin of the view before you reach the top.",
+      "longDescription": "Engineers proposed a rack railway up Table Mountain as far back as 1870, an idea that stalled when war broke out and was never revived in that form. It took a Norwegian engineer, Trygve Strømsø, to make it work: his cableway opened on the fourth of October 1929 and has been upgraded three times since, most dramatically in 1997, when the current cars arrived with rotating floors running on a double cable that keeps them stable in the wind this mountain is famous for. The ride takes four to five minutes, during which the floor turns a full circle so nobody is stuck facing the wrong window — one of only three cableways anywhere built to do that. More than twenty-seven million people have been carried to the summit since it opened. Wind can shut the whole operation without warning, which is why checking the live status before committing to the queue is generally worth the minute.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/table-mountain-cableway_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/table-mountain-cableway_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/table-mountain-cableway_3.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "d534cd16-d181-52eb-aba2-6f38aabaeb68",
+          "order": 0,
+          "title": "Table Mountain Aerial Cableway",
+          "caption": "Sixty-five people, one rotating floor, and a full spin of the view before you've even reached the top — this is one of only three cableways anywhere in the world built to do that.",
+          "latitude": -33.947263665216994,
+          "longitude": 18.402678450332687,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/table-mountain-cableway.mp3",
+          "audioDurationSeconds": 146,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/table-mountain-cableway_hero.webp",
+          "transcriptText": "Sixty-five people, one rotating floor, and a full spin of the view before you've even reached the top — this is one of only three cableways anywhere in the world built to do that.\n\nYou should be at the Lower Cable Station, in the queue or on the platform waiting for a car, with the cliff face of Table Mountain rising directly above you and the cable line disappearing up into it. The idea of getting up there by anything other than your own legs is over a century old: engineers proposed a rack railway as far back as 1870, an idea that stalled when war broke out and never got revived in that form.\n\nIt took a Norwegian engineer, Trygve Strømsø, to make it happen properly. His cableway design opened on the fourth of October 1929, and it's been upgraded three times since — most dramatically in 1997, when the current cars arrived with rotating floors, running on a double cable that keeps them stable even in the wind this mountain is famous for. The ride itself now takes four to five minutes, during which the floor turns a full circle, so nobody's stuck facing the wrong window the entire way up.\n\nHere's the number worth sitting with while you wait: this cableway has carried more than twenty-seven million people to the summit since it opened, which makes the queue you're standing in part of a genuinely enormous, nearly hundred-year-old tradition of doing exactly this.\n\nWind is the one thing that can shut the whole operation down without warning; the cableway closes when gusts get strong enough, which happens often enough on this particular mountain that checking the live status online before you commit to the queue is generally worth the extra minute.\n\nIf the queue's long, it's usually moving faster than it looks — cars run every few minutes on a clear day. And once you're up top, walk past the main viewing platforms; the quieter paths further along the summit plateau tend to empty out fast."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 146,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.947263665216994,
+      "centroidLongitude": 18.402678450332687,
+      "city": "Cape Town",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Park",
+        "Engineering",
+        "Iconic Landmark",
+        "Viewpoint"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "17bcdc55-93ab-51b5-8279-43e265b08507",
+      "createdAt": "2026-08-12",
+      "title": "The Company's Garden",
+      "shortDescription": "In 1652 the vegetables planted here were the entire reason Cape Town existed at all.",
+      "longDescription": "This green space at the heart of the city began as a vegetable garden, planted by the Dutch East India Company to resupply ships passing the Cape on the long route to and from the East Indies. The need had been proven a few years earlier when a Dutch ship wrecked nearby and its survivors, waiting months for rescue, reported back how useful a proper refreshment station would be. Jan van Riebeeck arrived in 1652 to establish exactly that, and a master gardener named Hendrik Boom sowed the first seeds on the twenty-ninth of April that year — peas, beans, radishes, spinach, cabbage and wheat, grown purely to keep passing crews from scurvy. Simon van der Stel, governor from 1679, redesigned it with formal canals and water furrows, and the shift from feeding ships to simply being beautiful has continued since. At one corner stands the Iziko Slave Lodge, built to house people enslaved by the very company that planted the garden.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-companys-garden_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-companys-garden_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-companys-garden_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-companys-garden_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2b710d83-985f-54a9-bb68-16bc2b9d092e",
+          "order": 0,
+          "title": "The Company's Garden",
+          "caption": "It's 1652, and the vegetables planted in the ground beneath your feet aren't decoration — they're the entire reason Cape Town exists at all.",
+          "latitude": -33.927603623273136,
+          "longitude": 18.41646699451018,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-companys-garden.mp3",
+          "audioDurationSeconds": 144,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-companys-garden_hero.webp",
+          "transcriptText": "It's 1652, and the vegetables planted in the ground beneath your feet aren't decoration — they're the entire reason Cape Town exists at all.\n\nYou should be somewhere along the shaded, tree-lined avenues at the heart of the Company's Garden, in the middle of the city centre, with formal beds, mature oaks and the odd squirrel or guinea fowl wandering the paths around you. This green space began life as a vegetable garden, planted by the Dutch East India Company specifically to resupply ships passing the Cape on the long route to and from the East Indies.\n\nThe need for it had been proven a few years earlier, when a Dutch ship wrecked nearby and its survivors, waiting months to be rescued, reported back to the company just how useful a proper refreshment station at the Cape would actually be. Jan van Riebeeck arrived in 1652 to establish exactly that, and a master gardener named Hendrik Boom sowed the first seeds on the twenty-ninth of April that same year — peas, beans, radishes, spinach, cabbage, wheat, all of it grown purely to keep passing crews from dying of scurvy.\n\nThe garden you're walking through now is a good deal grander than that first vegetable patch. Simon van der Stel, who became governor in 1679, redesigned it with formal canals and water furrows, turning a working farm into something closer to a proper ornamental garden — and the shift from feeding ships to simply being beautiful has, more or less, continued ever since.\n\nThe garden's edges do some of that storytelling on their own: the Iziko Slave Lodge sits at one corner, originally built to house enslaved people owned by the very company that planted this garden — a reminder of who did the work behind the produce.\n\nLook for the fragments of the old boundary wall as you walk, if you know roughly where to find them — this garden used to be considerably larger, and cutting it down to its current size is really the story of Cape Town growing up around it."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 144,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.927603623273136,
+      "centroidLongitude": 18.41646699451018,
+      "city": "Cape Town",
+      "primaryCategory": "history",
+      "tags": [
+        "Park",
+        "History",
+        "Colonial",
+        "Green Escape",
+        "Free to Visit"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "b41a133c-1564-503f-81e9-4e7fdd31e4d8",
+      "createdAt": "2026-08-12",
+      "title": "The Gin Bar",
+      "shortDescription": "Every gin and tonic on the menu is billed as a cure for something. The room used to be a morgue.",
+      "longDescription": "The way in is through the Honest Chocolate Café on Wale Street, past the chocolate counter and out into a small hidden courtyard — deliberately unmarked, this being Cape Town's original speakeasy-style bar, tucked into what remains of a heritage building whose considerably grimmer former use supplies the theme. Gin has a medicinal backstory that fits neatly: juniper, the botanical that defines the spirit, was used for centuries against everything from digestive trouble to the plague, long before anyone drank it for pleasure. The bar takes that literally. More than a hundred and forty gins sit on the shelves, over seventy of them South African, in a country that has had something of a craft gin boom — driven largely by producers infusing their spirit with fynbos botanicals unique to this part of the world, so a South African gin here tastes distinctly of somewhere rather than nowhere in particular.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gin-bar_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gin-bar_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gin-bar_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gin-bar_4.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "99f28888-41b6-5e3c-b925-6bd7afcc5210",
+          "order": 0,
+          "title": "The Gin Bar",
+          "caption": "There's a detail about this building's past that the drinks list here leans into rather than hides: this room used to be a morgue.",
+          "latitude": -33.922416321403176,
+          "longitude": 18.41713068826344,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/the-gin-bar.mp3",
+          "audioDurationSeconds": 149,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/the-gin-bar_hero.webp",
+          "transcriptText": "There's a detail about this building's past that the drinks list here leans into rather than hides: this room used to be a morgue.\n\nYou should be through the door of the Honest Chocolate Café on Wale Street, past the chocolate counter and out into a small, hidden courtyard — that's the way in, and it's deliberately unmarked, since this is Cape Town's original speakeasy-style bar. The Gin Bar itself is tucked into what remains of a heritage building whose previous, considerably grimmer use gives the whole place its theme.\n\nGin has its own medicinal backstory that fits neatly with that history: juniper, the botanical that defines the spirit, was used for centuries as a treatment for everything from digestive trouble to the plague, long before anyone was drinking it for pleasure. The bar takes that history literally. Every gin and tonic on the menu is billed as a cure for something specific, a wink at both the old morgue downstairs and gin's genuinely medicinal past.\n\nWhat's worth knowing before you order is the scale of the choice you're actually facing: more than a hundred and forty gins on the shelves, over seventy of them South African, in a country that's had something of a craft gin boom over the past decade. That's not a curated shortlist. It's closer to an entire genre laid out for you to work through slowly, one cure at a time.\n\nLook for the bottles from small Karoo and Cape Winelands distilleries in particular — South Africa's gin boom has been driven largely by producers infusing their spirit with fynbos botanicals unique to this part of the world, which means a South African gin here tastes distinctly of somewhere, rather than nowhere in particular.\n\nAsk the bartender to build you something rather than picking blind off the list — with this many options, a good bartender's recommendation, matched to whatever you actually feel like drinking, will save you several rounds of trial and error."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 149,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.922416321403176,
+      "centroidLongitude": 18.41713068826344,
+      "city": "Cape Town",
+      "primaryCategory": "foodAndDrink",
+      "tags": [
+        "Venue",
+        "Food",
+        "After Dark",
+        "Hidden Gem"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "a9fdb5d8-189d-551c-83c2-730376a9f0ae",
+      "createdAt": "2026-08-12",
+      "title": "Two Oceans Aquarium",
+      "shortDescription": "Cold water on one side, warmer on the other, and rather more species in the difference than you'd expect.",
+      "longDescription": "Opened on the thirteenth of November 1995 through a partnership between the V&A Waterfront developers and a marine research organisation that wanted Cape Town to have a serious conservation and education facility rather than a tourist tank. The name refers to the cold Atlantic on the city's western side and the noticeably warmer Indian Ocean current further along the coast — two very different marine environments that both shape what lives in these waters. Over three thousand animals across some three hundred species are housed here as a result, representing both rather than picking one. It is not only fish: the aquarium keeps a colony of African penguins, the same endangered species found at Boulders Beach down the peninsula, specifically so visitors who cannot make it out to Simon's Town still see them up close. Daily feeding shows are posted at the entrance.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/two-oceans-aquarium_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/two-oceans-aquarium_2.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "2691f081-44b5-5e78-adaa-ad462691b03f",
+          "order": 0,
+          "title": "Two Oceans Aquarium",
+          "caption": "Two oceans meet along this stretch of coastline, and the tank in front of you is essentially built to prove it: cold water on one side, warmer water on the other, and rather more species crammed into the difference than most people expect.",
+          "latitude": -33.907844723502926,
+          "longitude": 18.417628548229104,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/two-oceans-aquarium.mp3",
+          "audioDurationSeconds": 120,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/two-oceans-aquarium_hero.webp",
+          "transcriptText": "Two oceans meet along this stretch of coastline, and the tank in front of you is essentially built to prove it: cold water on one side, warmer water on the other, and rather more species crammed into the difference than most people expect.\n\nYou should be inside the main building at the V&A Waterfront, ideally near the large Predator Exhibit or the kelp forest tank, with schools of fish moving through water lit from above in a way that makes the whole tank glow faintly green. This aquarium opened on the thirteenth of November 1995, built through a partnership between the Waterfront developers and a marine research organisation that wanted Cape Town to have a genuinely serious conservation and education facility, not just a tourist tank.\n\nThe name refers to the cold Atlantic on this city's western side and the noticeably warmer Indian Ocean current further along the coast, two very different marine environments that both influence what lives in these waters. Over three thousand animals across some three hundred species are housed here as a result, representing both of those oceans rather than picking one and ignoring the other.\n\nHere's the detail that tends to surprise first-time visitors: this isn't only fish. The aquarium keeps a colony of African penguins too, the same endangered species you'll find at Boulders Beach further down the peninsula, kept here specifically so visitors who can't make it out to Simon's Town still get to see them up close.\n\nTime your visit around one of the daily feeding shows if you can — the schedule's posted at the entrance, and watching divers move calmly through a tank full of ragged-tooth sharks tends to recalibrate most people's idea of what a feeding actually looks like."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 120,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.907844723502926,
+      "centroidLongitude": 18.417628548229104,
+      "city": "Cape Town",
+      "primaryCategory": "natureAndParks",
+      "tags": [
+        "Venue",
+        "Waterfront",
+        "Maritime"
+      ],
+      "priceUSD": 0
+    },
+    {
+      "id": "c022fd6a-83b2-57c3-911c-55cba9e8d884",
+      "createdAt": "2026-08-12",
+      "title": "Zeitz Museum of Contemporary Art Africa (Zeitz MOCAA)",
+      "shortDescription": "Fifty-seven metres, forty-two concrete tubes, and for most of the twentieth century sub-Saharan Africa's tallest building. It was a grain silo.",
+      "longDescription": "Completed in 1924, this silo spent decades doing unglamorous, essential work — grading and holding maize shipped in from across the country, a working node in South Africa's export economy rather than a landmark. Decommissioned in 2001, it stood empty beside the harbour for years, too solid to demolish cheaply and too strange a shape to obviously reuse. The architect Thomas Heatherwick solved that by subtraction rather than addition: instead of building something new around the silo, his studio carved directly into it, cutting an atrium through dozens of the original tubes in the shape of a single grain of corn, magnified enormously, and leaving the surrounding cylinders largely intact to hold gallery floors instead of grain. The result opened in 2017 as the largest museum anywhere dedicated to contemporary art from this continent and its diaspora, spread across nine floors, plus a rooftop sculpture terrace and a hotel at the top.",
+      "makerId": "38456828-e395-5fd7-9525-a10329fabb15",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zeitz-mocaa_hero.webp",
+      "additionalImageURLs": [
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zeitz-mocaa_2.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zeitz-mocaa_3.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zeitz-mocaa_4.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zeitz-mocaa_5.webp",
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zeitz-mocaa_6.webp"
+      ],
+      "kind": "single",
+      "stops": [
+        {
+          "id": "7126bf50-a00b-5296-901a-ea4dc95eea98",
+          "order": 0,
+          "title": "Zeitz Museum of Contemporary Art Africa (Zeitz MOCAA)",
+          "caption": "Fifty-seven metres tall, built from forty-two concrete tubes, and for most of the twentieth century, the tallest building anywhere in sub-Saharan Africa — and it was a grain silo.",
+          "latitude": -33.90822478508058,
+          "longitude": 18.422694040537365,
+          "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/zeitz-mocaa.mp3",
+          "audioDurationSeconds": 161,
+          "triggerMode": "geofenced",
+          "triggerRadiusMeters": 30,
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/zeitz-mocaa_hero.webp",
+          "transcriptText": "Fifty-seven metres tall, built from forty-two concrete tubes, and for most of the twentieth century, the tallest building anywhere in sub-Saharan Africa — and it was a grain silo.\n\nYou should be inside the atrium at the base of the building, looking straight up through a soaring, irregular void carved out of what used to be solid concrete storage tubes. That shape above you was cut deliberately in the form of a single grain of corn, magnified enormously — a direct reference to what this building spent most of its working life actually storing.\n\nThis silo was completed in 1924 and spent decades doing entirely unglamorous, essential work: grading and holding maize shipped in from across the country, a working node in South Africa's export economy rather than any kind of landmark. When the grain trade moved elsewhere, the silo was decommissioned in 2001 and left standing empty beside the harbour for years, too solid to demolish cheaply and too strange a shape to obviously reuse.\n\nThe architect Thomas Heatherwick solved that problem by subtraction rather than addition: rather than building something new around the silo, his studio carved directly into it, cutting that corn-shaped atrium through dozens of the original tubes and leaving the surrounding concrete cylinders mostly untouched, now housing gallery floors instead of grain. The result, which opened in 2017 as the Zeitz Museum of Contemporary Art Africa, is billed as the largest museum anywhere dedicated specifically to contemporary art from this continent and its diaspora.\n\nInside, the museum spreads across nine floors of gallery space carved from those original tubes, plus a rooftop sculpture terrace and a boutique hotel occupying the very top of the silo complex — the whole building repurposed, floor by floor, rather than just the atrium at its heart.\n\nLook up before you look at any of the art. The building itself, and what it used to be, is worth understanding before you start on the collection — knowing you're standing inside a converted grain silo changes how every gallery afterward actually reads."
+        }
+      ],
+      "introAudioURL": null,
+      "totalDurationSeconds": 161,
+      "walkingDistanceMeters": null,
+      "centroidLatitude": -33.90822478508058,
+      "centroidLongitude": 18.422694040537365,
+      "city": "Cape Town",
+      "primaryCategory": "architecture",
+      "tags": [
+        "Museum",
+        "Art",
+        "Architecture",
+        "Contemporary",
+        "Waterfront",
+        "Iconic Landmark",
+        "Designed by a Master",
+        "Thomas Heatherwick"
       ],
       "priceUSD": 0
     }

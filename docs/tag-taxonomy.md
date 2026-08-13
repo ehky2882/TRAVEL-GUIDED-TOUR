@@ -92,8 +92,9 @@ tours):
 `Álvaro Siza` (15) · `Eduardo Souto de Moura` (11) · `McKim, Mead & White` (7) ·
 `Renzo Piano` (4) · `Norman Foster` (3) · `Fernando Távora` (3) ·
 `Herzog & de Meuron` (3) · `Christopher Wren` (3) · `Inigo Jones` (2) ·
-`Frank Gehry` · `Charles Holden` · `Denys Lasdun` · `Giles Gilbert Scott` ·
-`Frank Lloyd Wright` · `Cass Gilbert` · `Inês Lobo` · `Luís Pedro Silva`
+`Karl Friedrich Schinkel` (4) · `Frank Gehry` · `Charles Holden` ·
+`Denys Lasdun` · `Giles Gilbert Scott` · `Frank Lloyd Wright` ·
+`Cass Gilbert` · `Inês Lobo` · `Luís Pedro Silva`
 
 New architects are added to this list as the catalog grows (closed set, append-only).
 The list above is the original 2026-06 set and is **not** current — the facet
@@ -101,6 +102,12 @@ holds **77** architects as of 2026-08-12, after six cities' worth of backlog was
 cleared in one pass. See `docs/tag-taxonomy-v2.md` for the additions and, more
 usefully, for the three names that were **rejected** and why.
 **`Models/Tag.swift` is the authority; this document is commentary.**
+
+⚠️ **This prose list is illustrative and lags the code.** `Models/Tag.swift`
+carries **59** architects today; the names above are a subset. PR #492 added 20
+(Niemeyer, Bo Bardi, Mendes da Rocha, Utzon, Koolhaas…) without updating this
+section. Read the Swift file for the authoritative set — as the banner at the
+top of this document already says.
 
 ## Rules
 
