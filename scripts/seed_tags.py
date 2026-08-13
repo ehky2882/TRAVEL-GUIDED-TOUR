@@ -61,7 +61,7 @@ VOCAB = {
    "Affonso Eduardo Reidy","Lúcio Costa","Christian de Portzamparc","Ramos de Azevedo",
    "Rino Levi","Roberto Burle Marx","Karl Friedrich Schinkel","Hans Scharoun",
    "August Endell","Hermann Henselmann","Nicholas Hawksmoor","John Soane",
-   "Edwin Lutyens","Horace Jones","Frederick Law Olmsted","Calvert Vaux",
+   "Edwin Lutyens","Horace Jones","Herbert Baker","Frederick Law Olmsted","Calvert Vaux",
    "Richard Morris Hunt","John Russell Pope","Eero Saarinen","Diller Scofidio + Renfro",
    "Jeanne Gang","Michael Arad","Francesco Tamburini","Mario Palanti","Carlos Thays",
    "Clorindo Testa","Jørn Utzon","Joseph Reed","Studio KO","Mario Botta","Jun Aoki",
@@ -147,6 +147,8 @@ ARCH_KW = {"Álvaro Siza":["siza"],"Eduardo Souto de Moura":["souto de moura"],"
  "August Endell":["august endell"],"Hermann Henselmann":["henselmann"],
  "Nicholas Hawksmoor":["hawksmoor"],"John Soane":["john soane","soane"],
  "Edwin Lutyens":["lutyens"],"Horace Jones":["horace jones"],
+ # full name only -- bare "baker" would match bakeries and Baker Street
+ "Herbert Baker":["herbert baker"],
  "Frederick Law Olmsted":["olmsted"],"Calvert Vaux":["calvert vaux","vaux"],
  "Richard Morris Hunt":["richard morris hunt"],"John Russell Pope":["john russell pope"],
  "Eero Saarinen":["eero saarinen"],

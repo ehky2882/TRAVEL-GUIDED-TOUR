@@ -78,8 +78,10 @@ enum Tag {
             // tools that parse quoted strings out of it.
             "Karl Friedrich Schinkel", "Hans Scharoun", "August Endell",
             "Hermann Henselmann",
-            // Britain
+            // Britain — Baker built Rhodes Memorial in Cape Town and worked
+            // alongside Lutyens on New Delhi.
             "Nicholas Hawksmoor", "John Soane", "Edwin Lutyens", "Horace Jones",
+            "Herbert Baker",
             // United States
             "Frederick Law Olmsted", "Calvert Vaux", "Richard Morris Hunt",
             "John Russell Pope", "Eero Saarinen", "Diller Scofidio + Renfro",
