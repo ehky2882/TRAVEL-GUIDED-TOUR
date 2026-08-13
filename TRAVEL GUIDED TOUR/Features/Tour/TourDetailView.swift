@@ -1283,7 +1283,16 @@ struct TourDetailView: View {
                 Label("Share", systemImage: "square.and.arrow.up")
             }
 
-            if groupListen != nil {
+            // Hidden on a locked tour, and this is the stronger of the two
+            // paywall gates rather than a tidiness one. Followers each fetch
+            // their own audio (the leader broadcasts state, never sound), and
+            // a follower who never opened the tour locally has no preview
+            // limit set — `play(url:)` deliberately doesn't set one — so a
+            // group would hand the full narration to everyone who hadn't
+            // bought it. The inline row already hides Listen together when
+            // locked; the overflow menu renders the same on every tour, so it
+            // has to be gated here as well.
+            if groupListen != nil, !isLockedPaid {
                 Button {
                     showingGroupListen = true
                 } label: {
@@ -1351,9 +1360,18 @@ struct TourDetailView: View {
         }
     }
 
+    /// Withheld on a locked tour for the same reason the inline button is:
+    /// downloading a tour you haven't bought would put the complete
+    /// narration on disk, where the preview cap — which is enforced on the
+    /// player's clock, not on the file — no longer stands between the
+    /// listener and the audio. The inline row hides its button entirely when
+    /// locked, but this item lives in the overflow menu, which renders
+    /// identically on every tour, so the lock must be checked here too or
+    /// the paywall is bypassable by opening `•••`.
     private var menuDownloadDisabled: Bool {
-        tourDownloader.activeTourId != nil
-            && tourDownloader.activeTourId != tour.id
+        isLockedPaid
+            || (tourDownloader.activeTourId != nil
+                && tourDownloader.activeTourId != tour.id)
     }
 
     // MARK: - Actions

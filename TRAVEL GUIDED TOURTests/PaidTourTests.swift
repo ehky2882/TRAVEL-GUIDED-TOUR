@@ -138,13 +138,13 @@ final class PaidTourTests: XCTestCase {
     func test_pendingQueue_enqueueAndRemove() {
         let queue = makeQueue()
         let tour = UUID()
-        queue.enqueue(transactionId: "txn-1", tourId: tour, signedTransaction: "jws-1")
-        XCTAssertEqual(queue.all().count, 1)
-        XCTAssertEqual(queue.entry(forTransactionId: "txn-1")?.tourId, tour)
-        XCTAssertEqual(queue.entry(forTransactionId: "txn-1")?.signedTransaction, "jws-1")
+        queue.enqueue(transactionId: "txn-1", tourId: tour, signedTransaction: "jws-1", uid: "user-a")
+        XCTAssertEqual(queue.all(uid: "user-a").count, 1)
+        XCTAssertEqual(queue.entry(forTransactionId: "txn-1", uid: "user-a")?.tourId, tour)
+        XCTAssertEqual(queue.entry(forTransactionId: "txn-1", uid: "user-a")?.signedTransaction, "jws-1")
 
-        queue.remove(transactionId: "txn-1")
-        XCTAssertTrue(queue.all().isEmpty)
+        queue.remove(transactionId: "txn-1", uid: "user-a")
+        XCTAssertTrue(queue.all(uid: "user-a").isEmpty)
     }
 
     /// Re-enqueuing the same transaction (a retry) must not duplicate it,
@@ -152,18 +152,54 @@ final class PaidTourTests: XCTestCase {
     func test_pendingQueue_isIdempotentPerTransaction() {
         let queue = makeQueue()
         let tour = UUID()
-        queue.enqueue(transactionId: "txn-1", tourId: tour, signedTransaction: "jws-1")
-        queue.enqueue(transactionId: "txn-1", tourId: tour, signedTransaction: "jws-1")
-        XCTAssertEqual(queue.all().count, 1)
+        queue.enqueue(transactionId: "txn-1", tourId: tour, signedTransaction: "jws-1", uid: "user-a")
+        queue.enqueue(transactionId: "txn-1", tourId: tour, signedTransaction: "jws-1", uid: "user-a")
+        XCTAssertEqual(queue.all(uid: "user-a").count, 1)
     }
 
     func test_pendingQueue_holdsMultipleDistinctPurchases() {
         let queue = makeQueue()
-        queue.enqueue(transactionId: "txn-1", tourId: UUID(), signedTransaction: "a")
-        queue.enqueue(transactionId: "txn-2", tourId: UUID(), signedTransaction: "b")
-        XCTAssertEqual(queue.all().count, 2)
-        queue.remove(transactionId: "txn-1")
-        XCTAssertEqual(queue.all().map(\.transactionId), ["txn-2"])
+        queue.enqueue(transactionId: "txn-1", tourId: UUID(), signedTransaction: "a", uid: "user-a")
+        queue.enqueue(transactionId: "txn-2", tourId: UUID(), signedTransaction: "b", uid: "user-a")
+        XCTAssertEqual(queue.all(uid: "user-a").count, 2)
+        queue.remove(transactionId: "txn-1", uid: "user-a")
+        XCTAssertEqual(queue.all(uid: "user-a").map(\.transactionId), ["txn-2"])
+    }
+
+    /// A queued purchase belongs to the account that made it, and to no
+    /// other. `handleSignedIn()` drains this queue, and `record-purchase`
+    /// attributes the sale to whichever token made the call — so a shared
+    /// key would let A's unrecorded payment be recorded against B, and
+    /// grant B the tour. This is the same isolation `EntitlementStore`
+    /// already promises for the unlock cache.
+    func test_pendingQueue_isScopedPerUser() {
+        let queue = makeQueue()
+        let tourA = UUID()
+        queue.enqueue(transactionId: "txn-a", tourId: tourA, signedTransaction: "jws-a", uid: "user-a")
+
+        XCTAssertTrue(queue.all(uid: "user-b").isEmpty,
+                      "account B must not see account A's pending purchase")
+        XCTAssertNil(queue.entry(forTransactionId: "txn-a", uid: "user-b"))
+        XCTAssertEqual(queue.all(uid: "user-a").count, 1,
+                       "A's own entry must survive B reading the queue")
+    }
+
+    /// B removing a transaction id it doesn't own must not delete A's entry.
+    func test_pendingQueue_removeIsScopedPerUser() {
+        let queue = makeQueue()
+        queue.enqueue(transactionId: "txn-a", tourId: UUID(), signedTransaction: "jws-a", uid: "user-a")
+        queue.remove(transactionId: "txn-a", uid: "user-b")
+        XCTAssertEqual(queue.all(uid: "user-a").count, 1)
+    }
+
+    /// Signed out there is no account to attribute a purchase to, so the
+    /// queue must refuse to store one rather than park it under a blank key
+    /// where the next account to sign in would drain it.
+    func test_pendingQueue_ignoresMissingUid() {
+        let queue = makeQueue()
+        queue.enqueue(transactionId: "txn-1", tourId: UUID(), signedTransaction: "jws", uid: nil)
+        XCTAssertTrue(queue.all(uid: nil).isEmpty)
+        XCTAssertTrue(queue.all(uid: "").isEmpty)
     }
 
     // MARK: - Preview length

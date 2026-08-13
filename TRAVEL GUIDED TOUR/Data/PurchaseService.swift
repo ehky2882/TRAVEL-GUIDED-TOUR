@@ -186,9 +186,9 @@ final class PurchaseService {
             pending.enqueue(
                 transactionId: String(transaction.id),
                 tourId: tour.id,
-                signedTransaction: jws
+                signedTransaction: jws,
+                uid: uid
             )
-            await transaction.finish()
 
             do {
                 try await record(
@@ -197,11 +197,22 @@ final class PurchaseService {
                     signedTransaction: jws
                 )
             } catch {
-                // Paid but unrecorded. Unlock nothing yet — the server is the
-                // authority — but keep the queued entry so the next launch
-                // finishes the job, and tell the user plainly.
+                // Paid but unrecorded. Unlock nothing — the server is the
+                // authority — and deliberately DO NOT finish the transaction.
+                // Finishing tells Apple the content was delivered, after
+                // which it stops re-delivering through `Transaction.updates`;
+                // leaving it unfinished means every launch hands it back to
+                // us until the recording succeeds, which is a second recovery
+                // path alongside the queued entry.
+                //
+                // Residual limit, stated honestly rather than papered over:
+                // if this device's queue is also lost (app deleted before the
+                // replay lands), the sale still cannot be attributed to a
+                // tour, because nothing on Apple's side names one. That needs
+                // a server-side reconciliation, not a client change.
                 throw PurchaseError.recordingFailed
             }
+            await transaction.finish()
             grantLocally(tour.id)
             return .purchased
 
@@ -237,9 +248,16 @@ final class PurchaseService {
         }
         struct Row: Decodable { let tour_id: UUID }
         do {
+            // The `user_id` filter is belt-and-braces: RLS already scopes
+            // `purchases` to the caller's own rows, and that policy is what
+            // actually protects this. Asking for our own rows explicitly
+            // costs nothing and means a future policy change can't quietly
+            // turn this into "every purchase in the table", which would
+            // unlock the whole paid catalog for everyone.
             let rows: [Row] = try await client
                 .from("purchases")
                 .select("tour_id")
+                .eq("user_id", value: uid)
                 .is("refunded_at", value: nil)
                 .execute()
                 .value
@@ -286,7 +304,7 @@ final class PurchaseService {
                 )
             )
         ) { data, _ in data }
-        pending.remove(transactionId: transactionId)
+        pending.remove(transactionId: transactionId, uid: uid)
     }
 
     /// Drain purchases that were paid for but never recorded (dead spot,
@@ -294,7 +312,7 @@ final class PurchaseService {
     /// de-duplicates on Apple's transaction id, so a re-send is a no-op.
     func replayPendingRecords() async {
         guard auth.isSignedIn else { return }
-        for entry in pending.all() {
+        for entry in pending.all(uid: uid) {
             do {
                 try await record(
                     transactionId: entry.transactionId,
@@ -335,16 +353,33 @@ final class PurchaseService {
             for await update in StoreKit.Transaction.updates {
                 guard let self else { return }
                 guard case .verified(let transaction) = update else { continue }
-                await transaction.finish()
                 let id = String(transaction.id)
-                if let entry = self.pending.entry(forTransactionId: id) {
-                    try? await self.record(
+                guard let entry = self.pending.entry(forTransactionId: id, uid: self.uid) else {
+                    // No queued intent, so this transaction can't be tied to a
+                    // tour by anything on this device — Family Sharing, or a
+                    // purchase whose queue entry belongs to a different
+                    // account. Finish it so Apple stops re-delivering, and
+                    // leave the server-side entitlement refresh to reconcile.
+                    await transaction.finish()
+                    continue
+                }
+                do {
+                    try await self.record(
                         transactionId: id,
                         tourId: entry.tourId,
                         signedTransaction: entry.signedTransaction
                     )
-                    self.grantLocally(entry.tourId)
+                } catch {
+                    // Unrecorded: grant nothing and leave it unfinished so
+                    // Apple re-delivers on a later launch. Granting here would
+                    // unlock a tour the server has no row for — no purchase,
+                    // no maker credit — which is exactly what `purchase()`
+                    // and `replayPendingRecords()` both refuse to do.
+                    print("PurchaseService: update-path record failed for \(id) — \(error)")
+                    continue
                 }
+                await transaction.finish()
+                self.grantLocally(entry.tourId)
             }
         }
     }
@@ -356,6 +391,14 @@ final class PurchaseService {
 /// fails, the *only* place the transaction↔tour link survives is here. Lose
 /// this and a paid tour can't be attributed — so it's written to disk before
 /// the network is touched, and cleared only once the server confirms.
+///
+/// **Scoped per signed-in user id, for the same reason `EntitlementStore`
+/// is.** A single shared key would let one account's unrecorded purchase be
+/// replayed under another's session: `handleSignedIn()` drains this queue,
+/// and `record-purchase` attributes the sale to whoever's token made the
+/// call. On a shared phone that credits A's payment to B — and grants B the
+/// tour. Keying by uid means a queued purchase can only ever be replayed by
+/// the account that made it.
 struct PendingPurchaseQueue {
     struct Entry: Codable, Equatable {
         let transactionId: String
@@ -368,21 +411,25 @@ struct PendingPurchaseQueue {
     }
 
     private let defaults: UserDefaults
-    private let key = "atlas.pendingPurchases"
+    private let keyPrefix = "atlas.pendingPurchases."
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
     }
 
-    func all() -> [Entry] {
-        guard let data = defaults.data(forKey: key),
+    private func key(uid: String) -> String { keyPrefix + uid }
+
+    func all(uid: String?) -> [Entry] {
+        guard let uid, !uid.isEmpty,
+              let data = defaults.data(forKey: key(uid: uid)),
               let entries = try? JSONDecoder().decode([Entry].self, from: data)
         else { return [] }
         return entries
     }
 
-    func enqueue(transactionId: String, tourId: UUID, signedTransaction: String) {
-        var entries = all()
+    func enqueue(transactionId: String, tourId: UUID, signedTransaction: String, uid: String?) {
+        guard let uid, !uid.isEmpty else { return }
+        var entries = all(uid: uid)
         guard !entries.contains(where: { $0.transactionId == transactionId }) else { return }
         entries.append(
             Entry(
@@ -391,19 +438,20 @@ struct PendingPurchaseQueue {
                 signedTransaction: signedTransaction
             )
         )
-        persist(entries)
+        persist(entries, uid: uid)
     }
 
-    func entry(forTransactionId id: String) -> Entry? {
-        all().first { $0.transactionId == id }
+    func entry(forTransactionId id: String, uid: String?) -> Entry? {
+        all(uid: uid).first { $0.transactionId == id }
     }
 
-    func remove(transactionId: String) {
-        persist(all().filter { $0.transactionId != transactionId })
+    func remove(transactionId: String, uid: String?) {
+        guard let uid, !uid.isEmpty else { return }
+        persist(all(uid: uid).filter { $0.transactionId != transactionId }, uid: uid)
     }
 
-    private func persist(_ entries: [Entry]) {
+    private func persist(_ entries: [Entry], uid: String) {
         guard let data = try? JSONEncoder().encode(entries) else { return }
-        defaults.set(data, forKey: key)
+        defaults.set(data, forKey: key(uid: uid))
     }
 }
