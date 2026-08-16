@@ -19,7 +19,21 @@ import SwiftUI
 /// tour is a small cosmetic wrinkle; hiding it from someone who hasn't is the
 /// surprise-paywall bug this component exists to prevent.
 struct TourPriceBadge: View {
+    /// Two sizes, because this badge appears in two very different slots.
+    enum Size {
+        /// Small chip, dimensionally identical to `MakerView.walkPill`. For
+        /// inline use on a text line (placecard, search row, maker list) and
+        /// on the maker grid where it sits beside the WALK pill.
+        case chip
+        /// Matches the 36pt `CardHeroControls` chips opposite it on a card
+        /// hero (owner, 2026-08-16: "pill height should match the badges to
+        /// the right"). At `chip` size it read as a stray label next to two
+        /// 36pt circles rather than part of the same control row.
+        case heroControl
+    }
+
     let tour: Tour
+    var size: Size = .chip
 
     @Environment(PurchaseService.self) private var purchaseService: PurchaseService?
 
@@ -36,20 +50,37 @@ struct TourPriceBadge: View {
 
     var body: some View {
         if let priceText {
-            Text(priceText)
-                // Matches `MakerView.walkPill` exactly — same size, weight,
-                // padding and capsule — so a walk showing both a WALK pill
-                // and a price reads as one row of chips rather than two
-                // competing treatments.
-                .font(.system(size: 9, weight: .semibold))
+            label(priceText)
                 .foregroundStyle(AtlasColors.background)
-                .padding(.horizontal, 6)
-                .padding(.vertical, 2)
                 .background(Capsule().fill(AtlasColors.accent))
                 .fixedSize()
                 // Lifts the chip off a busy photo, same as the grid WALK pill.
                 .shadow(color: .black.opacity(0.25), radius: 2, y: 1)
                 .accessibilityLabel("Costs \(priceText)")
+        }
+    }
+
+    @ViewBuilder
+    private func label(_ priceText: String) -> some View {
+        switch size {
+        case .chip:
+            // Dimensionally identical to `MakerView.walkPill` — same size,
+            // weight, padding and capsule — so a walk showing both a WALK
+            // pill and a price reads as one row of chips rather than two
+            // competing treatments.
+            Text(priceText)
+                .font(.system(size: 9, weight: .semibold))
+                .padding(.horizontal, 6)
+                .padding(.vertical, 2)
+        case .heroControl:
+            // Height pinned to the same constant the download/bookmark
+            // chips use, so the three read as one row across the hero
+            // rather than a small label facing two large circles.
+            Text(priceText)
+                .font(AtlasTypography.caption)
+                .fontWeight(.semibold)
+                .padding(.horizontal, AtlasSpacing.sm)
+                .frame(height: CardHeroControlMetrics.diameter)
         }
     }
 }
