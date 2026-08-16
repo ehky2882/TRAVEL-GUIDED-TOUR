@@ -98,8 +98,18 @@ platform :ios do
       export_options: {
         signingStyle: "automatic",
         teamID: "CPC7M72JTP"
-      },
-      export_xcargs: signing_args
+      }
+      # NO `export_xcargs:` here — deliberately. gym appends BOTH
+      # `export_xcargs` and `xcargs` to the -exportArchive invocation, so
+      # setting it duplicated every signing flag and newer xcodebuild
+      # rejects that outright:
+      #     error: option '-authenticationKeyPath' may only be provided once
+      # It used to be tolerated, which is why this worked for months and
+      # then broke with no repo change (2026-08-16, run 31920068145) when
+      # the macOS runner picked up a newer Xcode. `xcargs` alone already
+      # carries the signing flags into the export, so export signing is
+      # unaffected. If a future fastlane stops forwarding `xcargs` to
+      # export, re-add `export_xcargs: signing_args` — but never both.
     )
   end
 
