@@ -126,6 +126,10 @@ private struct TourCard: View {
             RouteMiniMapView(tour: tour)
                 .padding(AtlasSpacing.sm)
         }
+        .overlay(alignment: .topLeading) {
+            TourPriceBadge(tour: tour, size: .heroControl)
+                .padding(AtlasSpacing.sm)
+        }
         .overlay(alignment: .topTrailing) {
             CardHeroControls(tour: tour)
         }

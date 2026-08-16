@@ -433,13 +433,18 @@ struct SearchView: View {
                     .lineLimit(1)
                     .truncationMode(.tail)
 
-                // Subtitle: maker name only (no category), single line.
-                if let maker = makerByTourID[tour.id] {
-                    Text(maker.displayName)
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                        .lineLimit(1)
-                        .truncationMode(.tail)
+                // Subtitle: maker name only (no category), single line —
+                // now led by the price chip when the tour costs money, so a
+                // search result can't hide a paywall behind a tap.
+                HStack(spacing: AtlasSpacing.xs) {
+                    TourPriceBadge(tour: tour)
+                    if let maker = makerByTourID[tour.id] {
+                        Text(maker.displayName)
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                            .lineLimit(1)
+                            .truncationMode(.tail)
+                    }
                 }
             }
 

@@ -47,11 +47,18 @@ struct PlacecardView: View {
                             .lineLimit(1)
                     }
 
-                    if let distanceText {
-                        Text(distanceText)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                            .lineLimit(1)
+                    // Price sits on the meta line rather than over the 64pt
+                    // thumbnail — the thumb is too small to carry a legible
+                    // chip, and the placecard is the map's tap target, so the
+                    // cost has to be visible before the tour is opened.
+                    HStack(spacing: AtlasSpacing.xs) {
+                        TourPriceBadge(tour: tour)
+                        if let distanceText {
+                            Text(distanceText)
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.secondaryText)
+                                .lineLimit(1)
+                        }
                     }
                 }
 
