@@ -180,10 +180,15 @@ auto-creates a maker row, so a writable policy would let any session redirect
 payouts. Its real write path is Stripe Express onboarding via the service
 role (Phase 5).
 
-**LIVE PRICING as of 2026-08-16** (owner-confirmed): **all 66 multi-stop walks
-are `price_tier = 99` ($0.99); everything else is NULL = free.** One sentence,
-no exceptions — the Empire State Building test price was reset to free on
-2026-08-16. ⚠️ **Price lives only in
+**LIVE PRICING as of 2026-08-16 — a snapshot, NOT a rule.** **Pricing is
+per-maker: each maker sets their own price on their own tours.** Today all 66
+multi-stop walks are `price_tier = 99` ($0.99) and everything else is NULL =
+free — but only because the owner is currently the only maker with published
+content and set their own walks uniformly **for testing** while there are no
+real users. Expect this to become non-uniform as soon as another maker prices
+anything; **never hardcode or validate against "walks are $0.99."** (The
+Empire State Building test price was reset to free on 2026-08-16.)
+⚠️ **Price lives only in
 this table** — not in `Tours.json`, not in git — so a change here leaves no
 trace in the repo. Record any pricing change in CLAUDE.md § LIVE PRICING, and
 re-derive the truth with:

@@ -94,9 +94,15 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 | **Every multi-stop walk** | **99 ($0.99)** | **66 / 66** |
 | Everything else (single-stop) | NULL = free | 1284 |
 
-**The rule is exactly one sentence: walks cost $0.99, everything else is free.** No single-stop tour carries a price, and there are no leftover test values — Empire State Building was priced at 299 for the Phase 3 sandbox test and **reset to free on 2026-08-16** (owner request), verified against `get_catalog`.
+**⚠️ This is the CURRENT STATE, not a pricing rule. Read this before writing any pricing code or copy.**
 
-**The walks-are-$0.99 rule is an OWNER DECISION, confirmed 2026-08-15 ("keep it").** It was applied as one blanket statement (66/66, none missed) some time after session 79; the exact date is unrecoverable because Postgres keeps no audit trail for this. Re-derive the truth any time with:
+**Pricing is PER-MAKER. Each maker sets their own price on their own tours** — that is the product model (see `docs/paid-tours-design.md`: "Dozents (makers) can mark a tour as **paid** at one of ten price tiers"). **Nothing in the platform says walks cost $0.99, or that single-stop tours are free.** A maker can price a walk at $4.99, charge for a single-stop tour, or give everything away.
+
+**Why the live data looks uniform:** the owner is currently the only maker with published content, and has set all 66 of their own multi-stop walks to the same $0.99 **for testing convenience while there are no real users yet** (owner, 2026-08-16: *"that's not a rule… for simplicity's sake and for testing's sake I'm just making all my multi-stop tours $0.99"*). It is a snapshot of one maker's choices, and it will stop being uniform the moment a second maker prices anything.
+
+**So: do NOT hardcode, validate, or write UI copy against "walks are $0.99."** Price is a per-tour value read from the catalog; treat any tour as potentially free or paid at any tier. No single-stop tour currently carries a price, and there are no leftover test values — Empire State Building was priced at 299 for the Phase 3 sandbox test and **reset to free on 2026-08-16** (owner request), verified against `get_catalog`.
+
+**The uniform $0.99 was an OWNER SETTING on their own tours, confirmed 2026-08-15 ("keep it") — not a platform rule.** It was applied as one blanket statement (66/66, none missed) some time after session 79; the exact date is unrecoverable because Postgres keeps no audit trail for this. Re-derive the truth any time with:
 ```sql
 select price_tier, kind, count(*) from public.tours
 where price_tier is not null group by 1,2 order by 1;
