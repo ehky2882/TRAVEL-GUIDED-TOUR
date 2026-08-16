@@ -51,4 +51,7 @@ facade."* **`museum-island_3.webp` is that view** — the Altes Museum colonnade
 Lustgarten lawn with the fountain. Same single, gallery slot 3, already staged and ship-safe, so
 the fix costs nothing and adds no credit.
 
+**The live catalog already serves `museum-island_3` here** — verified against gh-pages after the
+audit. The wire-in session chose correctly without this file saying so; only the pick-map was stale.
+
 **Do not "restore" the hero here.** Verify a reused image by opening it, never by matching the slug.

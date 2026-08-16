@@ -252,15 +252,22 @@ Maker id (uuid5 of `atlas-maker:ord`): `f34cd76e-1e41-5c38-865d-d8eccd775cd3`. S
 Every walk pick-map in `drafts/` — Amsterdam 5, Berlin 5, Chicago 5, Dubai 4, Montreal 4, Rome 5 —
 was audited by rendering each reused image beside its stop title and **looking at it**. Result:
 
-| finding | walk | was | now |
+| finding | walk | the pick-map said | the right image |
 |---|---|---|---|
-| **FIXED** | `berlin-imperialspine-walk` stop 4 (Lustgarten) | `museum-island_hero` = the **Bode Museum**, 600 m north and not visible from the stop | `museum-island_3` = the Altes Museum colonnade across the Lustgarten lawn — the exact view the script names |
-| **FIXED earlier same day** | `chicago-magmile-walk` stop 3 | `michigan-avenue-streetwall_hero` = **South** Michigan Ave across Grant Park | owner-supplied North Michigan Ave looking to the Hancock |
+| **pick-map only — live content was already correct** | `berlin-imperialspine-walk` stop 4 (Lustgarten) | `museum-island_hero` = the **Bode Museum**, 600 m north and not visible from the stop | `museum-island_3` = the Altes Museum colonnade across the Lustgarten lawn — the exact view the script names |
+| **caught before wire-in** | `chicago-magmile-walk` stop 3 | `michigan-avenue-streetwall_hero` = **South** Michigan Ave across Grant Park | owner-supplied North Michigan Ave looking to the Hancock |
 
-Both were perfect slug matches and wrong pictures. Both fixes were free — an already-staged gallery
-image in one case, an owner photo in the other — and neither added a credit. **Everything else
-verified correct**, including all the sensitivity-critical ones (Amsterdam's Jewish Quarter and De
-Wallen, Berlin's Große Hamburger memorial, Chicago's Eastland).
+Both were perfect slug matches and wrong pictures, and neither fix cost anything — an already-staged
+gallery image in one case, an owner photo in the other; no new credits.
+
+**⚠️ Berlin shipped correctly regardless.** Checked against the live gh-pages catalog after the
+audit: the Imperial Spine's stop 4 and its gallery entry both already served `museum-island_3`. The
+wire-in session picked the right image on its own; only this pick-map was stale. So that row is a
+**documentation correction, not a content fix** — recorded plainly because the first draft of this
+note claimed otherwise.
+
+**Everything else verified correct**, including all the sensitivity-critical ones (Amsterdam's
+Jewish Quarter and De Wallen, Berlin's Große Hamburger memorial, Chicago's Eastland).
 
 One observation, not a defect: `east-side-gallery_hero` is a Vrubel mural, in copyright, carried on
 **German** freedom of panorama (§59 UrhG), which — unlike the US — does cover permanently-sited
