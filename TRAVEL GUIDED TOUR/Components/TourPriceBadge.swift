@@ -13,6 +13,14 @@ import SwiftUI
 /// or one the viewer already owns — an owned tour behaves like any free one,
 /// so a price on it would just be confusing.
 ///
+/// **There is deliberately no "FREE" badge** (owner-confirmed 2026-08-16).
+/// ~95% of the catalog is free (1284 of 1350), so badging it would put a chip
+/// on nearly every card for no information gain *and* blunt the price badge —
+/// the one thing that actually needs to be noticed. Mark the exception, not
+/// the rule. **Revisit only if the balance flips:** once paid content passes
+/// roughly a third of the catalog, "no badge" stops reading reliably as free,
+/// and the minority is what should carry the mark.
+///
 /// **Fails toward showing a price.** If `PurchaseService` is missing from the
 /// environment we can't know what the viewer owns, so we show the tier price
 /// rather than hiding it. Showing a price to someone who already bought the
