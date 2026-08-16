@@ -244,10 +244,34 @@ description and keywords down with it. Add it at version 1.1.
 
 ### Step 12 — Add the reviewer contact details
 
-**Who:** you.
+**Who:** you, directly in App Store Connect.
 
-Apple needs a phone number for the review contact, which is not in the repo.
-Give it to Claude and it will add it.
+🔴 **Do NOT put the phone number in this repo. This repository is PUBLIC**
+(`gh api repos/… --jq .private` → `false`, and an unauthenticated fetch
+succeeds). Committing a personal phone number would publish it to the open
+internet permanently — a later deletion does not remove it from git history.
+
+**Owner decision, 2026-08-16:** the reviewer phone number is entered **by hand in
+App Store Connect** and deliberately kept out of the repo. A session offered to
+commit it, caught that the repo was public, and stopped before pushing.
+
+**Where to put it:** App Store Connect → the app → the version (1.1) → **App
+Review Information** → *Contact Information* → phone field → Save.
+
+`fastlane/metadata/review_information/` therefore has **no `phone_number.txt`,
+and that absence is intentional** — do not "fix" it. `upload_to_app_store` only
+sends fields it has files for, so the value you type in App Store Connect is
+left alone by the metadata and release lanes.
+
+ℹ️ `email_address.txt` **is** in the repo, and that is not worth undoing: the
+same address is the author on all 631 commits, so it is already public by the
+nature of git. Removing the file would stop the metadata push re-asserting it
+but would not un-publish it.
+
+⚠️ **Why the repo cannot simply be made private:** `gh-pages` in this same
+repository serves every tour's audio and images to the live app. GitHub Pages on
+a private repo requires a paid plan, so flipping visibility would break content
+delivery for the whole catalogue until that is resolved.
 
 ---
 
