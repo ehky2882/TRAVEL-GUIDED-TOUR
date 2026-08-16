@@ -94,9 +94,20 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 | **Every multi-stop walk** | **99 ($0.99)** | **66 / 66** |
 | Everything else (single-stop) | NULL = free | 1284 |
 
-**The rule is exactly one sentence: walks cost $0.99, everything else is free.** No single-stop tour carries a price, and there are no leftover test values — Empire State Building was priced at 299 for the Phase 3 sandbox test and **reset to free on 2026-08-16** (owner request), verified against `get_catalog`.
+There are no leftover test values — Empire State Building was priced at 299 for the Phase 3 sandbox test and **reset to free on 2026-08-16** (owner request), verified against `get_catalog`.
 
-**The walks-are-$0.99 rule is an OWNER DECISION, confirmed 2026-08-15 ("keep it").** It was applied as one blanket statement (66/66, none missed) some time after session 79; the exact date is unrecoverable because Postgres keeps no audit trail for this. Re-derive the truth any time with:
+#### 🔴 $0.99-on-every-walk is NOT A RULE — it is temporary test state
+
+**Owner, 2026-08-16: "that's just for testing… each individual maker sets their own price. i know i dont have any app users yet so for simplicity sake and for testing's sake i'm just making all my mult-stop tours .99$. that's not a rule."**
+
+**The pricing model is: each maker sets the price of their own tours** — what `docs/paid-tours-design.md` describes and what the Phase 4 maker UI will expose. The uniform $0.99 exists only because *one* maker (the owner) currently owns the entire catalog, there are no public users yet, and a single price is the simplest thing to test a payment flow against. It was applied as one blanket `update` some time after session 79; the exact date is unrecoverable because Postgres keeps no audit trail.
+
+- **Do NOT price a new tour because it is a walk.** Kind does not determine price and never has — the walk/paid correlation is an artefact of that one blanket update, not a policy.
+- **Do NOT "restore consistency"** if you find a walk at NULL or a single-stop tour with a price. That may be a deliberate maker choice. Ask.
+- **Do not describe this to the owner as a rule, a tier, or a policy.** It stops being true the moment a second maker prices anything, or the owner picks different prices for different walks.
+- When Phase 4 ships the maker pricing UI, this block becomes **a snapshot of one maker's choices**, not a description of how pricing works.
+
+The table above is a **measurement of the live database on one date**, nothing more. Re-derive it any time with:
 ```sql
 select price_tier, kind, count(*) from public.tours
 where price_tier is not null group by 1,2 order by 1;
