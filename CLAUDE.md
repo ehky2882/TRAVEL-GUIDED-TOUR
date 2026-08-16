@@ -79,7 +79,32 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
-## Current State (2026-08-12)
+## Current State (2026-08-15)
+
+### ⚠️ LIVE PRICING — where it lives, and why you can't grep for it (session 91 — docs)
+
+**Owner, 2026-08-15: "all multi-stop tours are priced at .99 and i cannot find where i made that instruction."** There was nothing to find, and that is by design — **so this block exists to make the live answer discoverable in one place.**
+
+**`price_tier` lives ONLY in the Supabase `tours` table.** It is deliberately absent from `Tours.json` and from `seed_from_toursjson.py` (a comment there says so) precisely so a content re-seed can never wipe pricing. The unavoidable trade-off: **there is no file to grep and no git history for a price change.** A pricing decision made in the SQL Editor leaves no trace in this repo unless someone writes it down here. **If you change pricing, update this block in the same session.**
+
+**Live state, verified against `get_catalog` on 2026-08-15 (1350 tours):**
+
+| Set | Tier | Count |
+|---|---|---|
+| **Every multi-stop walk** | **99 ($0.99)** | **66 / 66** |
+| Empire State Building (`f71ced9c-…`) | 299 ($2.99) | 1 — the Phase 3 sandbox test tour |
+| Everything else (single-stop) | NULL = free | 1283 |
+
+**The walks-are-$0.99 rule is an OWNER DECISION, confirmed 2026-08-15 ("keep it").** It was applied as one blanket statement (66/66, none missed) some time after session 79; the exact date is unrecoverable because Postgres keeps no audit trail for this. Re-derive the truth any time with:
+```sql
+select price_tier, kind, count(*) from public.tours
+where price_tier is not null group by 1,2 order by 1;
+```
+
+**⚠️ Consequences that are live right now:**
+- **Those 66 walks show a Buy button on any build carrying Phase 3** (`9b2c2896`). Older builds ignore `priceTier` entirely and still play them free, and the app has never been publicly released (App Store Connect: "Prepare for Submission"), so exposure is **TestFlight testers only**.
+- **The 10 IAP products are still in "Prepare for Submission"**, which means purchases work **in Apple's sandbox only**. A tester on a recent build who taps Buy cannot complete a real purchase. Submitting them is a Phase 6 / go-live step and must ship *with* an app version.
+- **No price badge on browse cards.** Phase 3 deliberately shipped the paywall on the tour-detail sheet only — reasonable when nothing was priced, **but 66 tours are priced now**, so a user browsing sees no hint of cost until they open a walk. This is the most user-visible gap.
 
 ### Cape Town launched — 30 tours + 30th maker Atlas Studio CPT; the first South African city, and a coordinate 423 m off that would have silently killed a geofence (session 90 — content)
 
