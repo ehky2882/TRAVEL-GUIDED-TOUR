@@ -64,18 +64,37 @@ enum Tag {
             "Le Corbusier", "Philip Johnson", "William Van Alen",
             "Thomas Heatherwick", "Santiago Calatrava", "Bernard Maybeck",
             "Daniel Burnham", "Zaha Hadid", "Jean Nouvel",
-            // Brazil (Rio + São Paulo). Niemeyer, Bo Bardi and Mendes da Rocha
-            // were the catalog's most-represented architects with no tag of
-            // their own; the São Paulo launch made that plain.
+            // Brazil — the modernist canon. Niemeyer is the single
+            // most-represented architect in the catalog (11 tours, 3 cities)
+            // and had no tag until 2026-08-12.
             "Oscar Niemeyer", "Lina Bo Bardi", "Paulo Mendes da Rocha",
-            "Vilanova Artigas", "Ramos de Azevedo", "Rino Levi",
-            "Roberto Burle Marx", "Affonso Eduardo Reidy", "Lúcio Costa",
-            "Christian de Portzamparc",
-            // Buenos Aires, Melbourne, Sydney, Seoul, Naoshima, Tokyo, global.
-            "Rem Koolhaas", "Amanda Levete", "Marcel Breuer", "Clorindo Testa",
-            "Víctor Meano", "Jørn Utzon", "Roy Grounds", "Dominique Perrault",
-            "Hiroshi Sambuichi", "Marc Newson",
-            "Karl Friedrich Schinkel",
+            "Vilanova Artigas", "Affonso Eduardo Reidy", "Lúcio Costa",
+            "Christian de Portzamparc", "Ramos de Azevedo", "Rino Levi",
+            "Roberto Burle Marx",
+            // Germany — Schinkel recurs through the Berlin scripts as the man
+            // who taught Prussia what calm looks like.
+            // NB: keep quotation marks out of comments inside this array —
+            // the validator, seed_tags.py and the docs are kept in sync by
+            // tools that parse quoted strings out of it.
+            "Karl Friedrich Schinkel", "Hans Scharoun", "August Endell",
+            "Hermann Henselmann",
+            // Britain — Baker built Rhodes Memorial in Cape Town and worked
+            // alongside Lutyens on New Delhi.
+            "Nicholas Hawksmoor", "John Soane", "Edwin Lutyens", "Horace Jones",
+            "Herbert Baker", "Amanda Levete",
+            // United States
+            "Frederick Law Olmsted", "Calvert Vaux", "Richard Morris Hunt",
+            "John Russell Pope", "Eero Saarinen", "Diller Scofidio + Renfro",
+            "Jeanne Gang", "Michael Arad", "Marcel Breuer",
+            // Argentina
+            "Francesco Tamburini", "Mario Palanti", "Carlos Thays",
+            "Clorindo Testa", "Víctor Meano",
+            // Australia
+            "Jørn Utzon", "Joseph Reed", "Roy Grounds", "Marc Newson",
+            // Elsewhere
+            "Studio KO", "Mario Botta", "Jun Aoki", "Rocco Yim", "Bing Thom",
+            "Philippe Starck", "Gustave Eiffel", "Rem Koolhaas",
+            "Dominique Perrault", "Hiroshi Sambuichi",
         ]),
     ]
 
