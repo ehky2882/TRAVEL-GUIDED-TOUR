@@ -87,13 +87,14 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **`price_tier` lives ONLY in the Supabase `tours` table.** It is deliberately absent from `Tours.json` and from `seed_from_toursjson.py` (a comment there says so) precisely so a content re-seed can never wipe pricing. The unavoidable trade-off: **there is no file to grep and no git history for a price change.** A pricing decision made in the SQL Editor leaves no trace in this repo unless someone writes it down here. **If you change pricing, update this block in the same session.**
 
-**Live state, verified against `get_catalog` on 2026-08-15 (1350 tours):**
+**Live state, verified against `get_catalog` on 2026-08-16 (1350 tours):**
 
 | Set | Tier | Count |
 |---|---|---|
 | **Every multi-stop walk** | **99 ($0.99)** | **66 / 66** |
-| Empire State Building (`f71ced9c-…`) | 299 ($2.99) | 1 — the Phase 3 sandbox test tour |
-| Everything else (single-stop) | NULL = free | 1283 |
+| Everything else (single-stop) | NULL = free | 1284 |
+
+**The rule is exactly one sentence: walks cost $0.99, everything else is free.** No single-stop tour carries a price, and there are no leftover test values — Empire State Building was priced at 299 for the Phase 3 sandbox test and **reset to free on 2026-08-16** (owner request), verified against `get_catalog`.
 
 **The walks-are-$0.99 rule is an OWNER DECISION, confirmed 2026-08-15 ("keep it").** It was applied as one blanket statement (66/66, none missed) some time after session 79; the exact date is unrecoverable because Postgres keeps no audit trail for this. Re-derive the truth any time with:
 ```sql
