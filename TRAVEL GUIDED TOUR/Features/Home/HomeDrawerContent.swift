@@ -368,6 +368,10 @@ private struct FilterResultCard: View {
             RouteMiniMapView(tour: tour)
                 .padding(AtlasSpacing.sm)
         }
+        .overlay(alignment: .topLeading) {
+            TourPriceBadge(tour: tour)
+                .padding(AtlasSpacing.sm)
+        }
         .overlay(alignment: .topTrailing) {
             CardHeroControls(tour: tour)
         }

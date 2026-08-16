@@ -921,11 +921,18 @@ struct MakerView: View {
                     // bottom-leading status badge. A soft shadow lifts it
                     // off busy photos. Single stops carry no pill.
                     .overlay(alignment: .topLeading) {
-                        if tour.kind == .multiStop {
-                            walkPill
-                                .shadow(color: .black.opacity(0.25), radius: 2, y: 1)
-                                .padding(AtlasSpacing.xs)
+                        // WALK and price share this corner as one chip row.
+                        // Every paid tour today IS a walk, so these two always
+                        // co-occur — pairing them beats letting a price badge
+                        // land on top of the pill.
+                        HStack(spacing: AtlasSpacing.xs) {
+                            if tour.kind == .multiStop {
+                                walkPill
+                                    .shadow(color: .black.opacity(0.25), radius: 2, y: 1)
+                            }
+                            TourPriceBadge(tour: tour)
                         }
+                        .padding(AtlasSpacing.xs)
                     }
                     .overlay(alignment: .bottomLeading) {
                         if let status = status(for: tour), status.showsBadge {
@@ -1046,6 +1053,7 @@ struct MakerView: View {
                     if tour.kind == .multiStop {
                         walkPill
                     }
+                    TourPriceBadge(tour: tour)
                     Text(subtitleText(tour))
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.secondaryText)
