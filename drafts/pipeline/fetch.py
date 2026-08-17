@@ -24,7 +24,7 @@ Usage: edit the run(...) calls at the bottom, then `python3 fetch.py`.
 Size filter: keeps images that can crop to 1200x900 without upscaling
 (min(w,h) >= 900 AND max(w,h) >= 1200), landscape only for Wikimedia.
 """
-import os, json, requests, hashlib
+import os, json, time, requests, hashlib
 from PIL import Image
 from io import BytesIO
 
@@ -79,24 +79,75 @@ def run(slug, prefix, queries, wiki_cats=(), pixabay=False):
                     if ok(im): add(im, "Pix")
             except Exception as e: print("pix", q, e)
     S = requests.Session(); S.headers.update({"User-Agent": UA})
+
+    def wiki_api(params, tries=5):
+        """Commons API with retry. Returns parsed JSON, or None if unreachable.
+
+        Wikimedia intermittently answers with an HTML error page rather than JSON;
+        a bare .json() on that raises and — before this was fixed — the whole
+        category was abandoned silently. Retry, then report."""
+        for a in range(tries):
+            try:
+                r = S.get("https://commons.wikimedia.org/w/api.php", params=params, timeout=30)
+                if r.status_code == 200 and r.text.lstrip().startswith("{"):
+                    return r.json()
+            except Exception:
+                pass
+            time.sleep(2 * (a + 1))
+        return None
+
+    def wiki_download(url, title=""):
+        """Fetch one file, honouring 429. Returns a PIL image or None.
+
+        upload.wikimedia.org rate-limits bursts with HTTP 429 and an HTML body.
+        Handing that body to Image.open raises, which used to be swallowed as
+        'bad image' — so a rate-limited run looked exactly like a thin category."""
+        for a in range(5):
+            try:
+                r = S.get(url, timeout=60)
+                if r.status_code == 429:
+                    wait = min(120, 15 * (a + 1))
+                    print(f"   wiki 429 — backing off {wait}s ({title[:40]})")
+                    time.sleep(wait); continue
+                if r.status_code != 200:
+                    time.sleep(4); continue
+                return Image.open(BytesIO(r.content)).convert("RGB")
+            except Exception:
+                time.sleep(5)
+        print("   wiki give-up:", title[:60])
+        return None
+
     for cat in wiki_cats:
-        try:
-            r = S.get("https://commons.wikimedia.org/w/api.php",
-                params={"action": "query", "list": "categorymembers", "cmtitle": cat,
-                        "cmtype": "file", "cmlimit": "70", "format": "json"}, timeout=20).json()
-            files = [m["title"] for m in r.get("query", {}).get("categorymembers", [])]
-            for i in range(0, len(files), 30):
-                rr = S.get("https://commons.wikimedia.org/w/api.php",
-                    params={"action": "query", "titles": "|".join(files[i:i+30]),
-                            "prop": "imageinfo", "iiprop": "url|size|extmetadata", "format": "json"}, timeout=25).json()
-                for _, p in rr.get("query", {}).get("pages", {}).items():
-                    ii = p.get("imageinfo", [{}])[0]; w = ii.get("width", 0); h = ii.get("height", 0); url = ii.get("url", "")
-                    if not url or w < 1200 or h < 900 or w < h: continue
-                    lic = ii.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "?")
-                    try: im = Image.open(BytesIO(S.get(url, timeout=25).content)).convert("RGB")
-                    except: continue
-                    if ok(im): add(im, f"Wiki:{lic}")
-        except Exception as e: print("wiki", cat, e)
+        if not cat.startswith("Category:"):
+            # The API answers `invalidcategory` for a bare name and returns no
+            # members, which is indistinguishable from an empty category.
+            print(f"   wiki: adding missing 'Category:' prefix to {cat!r}")
+            cat = "Category:" + cat
+        r = wiki_api({"action": "query", "list": "categorymembers", "cmtitle": cat,
+                      "cmtype": "file", "cmlimit": "100", "format": "json"})
+        if r is None:
+            print("   wiki UNREACHABLE (not empty):", cat); continue
+        if "error" in r:
+            print("   wiki API ERROR:", cat, r["error"].get("code")); continue
+        files = [m["title"] for m in r.get("query", {}).get("categorymembers", [])]
+        if not files:
+            print("   wiki: category is genuinely empty:", cat); continue
+        for i in range(0, len(files), 20):
+            rr = wiki_api({"action": "query", "titles": "|".join(files[i:i+20]),
+                           "prop": "imageinfo", "iiprop": "url|size|extmetadata", "format": "json"})
+            if rr is None:
+                print("   wiki UNREACHABLE mid-category:", cat); break
+            for _, p in rr.get("query", {}).get("pages", {}).items():
+                ii = (p.get("imageinfo") or [{}])[0]
+                w = ii.get("width", 0); h = ii.get("height", 0); url = ii.get("url", "")
+                # NB: portrait files are KEPT. They crop fine with crop43(top_bias=...)
+                # and for tall subjects they are usually the best available frame.
+                if not url or min(w, h) < 900 or max(w, h) < 1200: continue
+                lic = ii.get("extmetadata", {}).get("LicenseShortName", {}).get("value", "?")
+                im = wiki_download(url, p.get("title", ""))
+                if im is None: continue
+                if ok(im): add(im, f"Wiki:{lic}")
+                time.sleep(1.5)   # documented spacing for upload.wikimedia.org
     json.dump(items, open(f"{d}/manifest.json", "w")); print(slug, "kept", len(items))
 
 if __name__ == "__main__":
