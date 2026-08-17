@@ -89,50 +89,55 @@ final class ScreenshotUITests: XCTestCase {
         // tour — so prove we are on a clean Home root before shot 1 rather
         // than assuming it.
         returnToHomeRoot()
-        // Drop the sheet to its peek detent so the map runs nearly full-bleed
-        // and the spread of pins is the whole picture.
-        //
-        // ⚠️ PEEK, NOT THE HALF-OPEN DEFAULT, AND THAT IS DELIBERATE. The
-        // middle detent cannot be reached reliably: the sheet snaps to
-        // whichever detent is nearest the drag's *predicted* end, XCTest's
-        // synthesised drags predict far past where the finger stopped, and any
-        // drag that ends above the sheet's own top edge is taken by the MAP
-        // instead — which pans it off Midtown and swaps the "Near you" rail for
-        // "In view". Three runs produced three different framings. Peek is the
-        // floor and large is the ceiling, so both are reachable by dragging in
-        // the safe direction and can be asserted; the middle is a coin toss.
-        // If the half-open framing is wanted back, that is the problem to
-        // solve first.
-        collapseDrawer()
-        // The map streams tiles and remote hero images load over the network;
-        // give both time to land so nothing is captured half-drawn.
-        settle(seconds: 8)
-        XCTAssertTrue(
-            app.maps.firstMatch.exists,
-            "Shot 01 is supposed to be the map, and the map is not on screen."
-        )
-        XCTAssertFalse(
-            isShowingTourLayer,
-            "A tour layer is covering the map — shot 01 would not be the map."
-        )
-        snapshot("01-Home-Map")
 
-        // 2. The drawer raised over the map: curated tag shelves and the
+        // 1. The map at the sheet's half-open default, where the map and the
+        //    first rail of tours both read.
+        if halfOpenDrawer() {
+            // The map streams tiles and remote hero images load over the
+            // network; give both time to land so nothing is captured
+            // half-drawn.
+            settle(seconds: 8)
+            XCTAssertTrue(
+                app.maps.firstMatch.exists,
+                "Shot 01 is supposed to be the map, and the map is not on screen."
+            )
+            XCTAssertFalse(
+                isShowingTourLayer,
+                "A tour layer is covering the map — shot 01 would not be the map."
+            )
+            snapshot("01-Home-Map")
+        } else {
+            // Deliberately NOT captured at whatever detent we happen to be at.
+            // A missing shot is caught by the workflow's filename check; a shot
+            // taken at the wrong detent is not, and would ship silently.
+            skipped("the map with the sheet half open")
+        }
+
+        // 2. The same map with the sheet dropped to its peek detent, so it runs
+        //    nearly full-bleed and the spread of pins is the whole picture.
+        if collapseDrawer() {
+            settle(seconds: 6)
+            snapshot("02-Map-Fullscreen")
+        } else {
+            skipped("the map with the sheet collapsed")
+        }
+
+        // 3. The drawer raised over the map: curated tag shelves and the
         //    filter chips, showing the catalogue's breadth.
         if raiseDrawer() {
             settle(seconds: 5)
-            snapshot("02-Browse-Tours")
+            snapshot("03-Browse-Tours")
         } else {
             skipped("the tour drawer")
         }
 
-        // 3. A tour's own page: hero image, title, play pill, description.
+        // 4. A tour's own page: hero image, title, play pill, description.
         if openTour(matching: featuredTourTitle) {
             settle(seconds: 6)
-            snapshot("03-Tour-Detail")
+            snapshot("04-Tour-Detail")
 
             // Start playback but DON'T capture the full player — the owner
-            // dropped that shot in favour of the full-bleed map above. Playing
+            // dropped that shot in favour of the map shots above. Playing
             // is still worth doing: it puts a real tour in the mini-player for
             // the remaining screenshots, so the app looks in use rather than
             // idle. Nothing is captured here, so a failure costs no image.
@@ -141,28 +146,28 @@ final class ScreenshotUITests: XCTestCase {
             skipped("a tour page")
         }
 
-        // 4. A multi-stop walk — its route map and stop count.
+        // 5. A multi-stop walk — its route map and stop count.
         //    This is what separates Atlas from a single-audio-clip app.
         returnToHomeRoot()
         if openFirstWalk() {
             settle(seconds: 6)
             // Swap the hero carousel for the walk's route map. Without this the
-            // walk screenshot is compositionally identical to shot 03 — same
+            // walk screenshot is compositionally identical to shot 04 — same
             // hero, same title block, same play pill — and two near-duplicate
             // images in a six-shot set is a waste of a slot. The route map is
             // the thing only a multi-stop walk has.
             showWalkRoute()
             settle(seconds: 6)
-            snapshot("04-Walk")
+            snapshot("05-Walk")
         } else {
             skipped("a multi-stop walk")
         }
 
-        // 5. Saved tours — a populated Library, not an empty state.
+        // 6. Saved tours — a populated Library, not an empty state.
         returnToHomeRoot()
         if selectTab("Library") && openLikedList() {
             settle(seconds: 5)
-            snapshot("05-Library")
+            snapshot("06-Library")
         } else {
             skipped("the Library tab")
         }
@@ -240,6 +245,51 @@ final class ScreenshotUITests: XCTestCase {
     /// Drops the drawer to its peek detent, leaving the map nearly full-bleed.
     private func collapseDrawer() -> Bool {
         setDrawer(to: "Collapsed", draggingHandleTo: 0.92)
+    }
+
+    /// Puts the sheet at its half-open middle detent.
+    ///
+    /// ⚠️ THE MIDDLE DETENT CANNOT BE AIMED AT DIRECTLY — approach it from the
+    /// floor, one step at a time. The sheet snaps to whichever detent is
+    /// nearest the drag's *predicted* end, and XCTest's synthesised drags
+    /// predict well past where the finger actually stopped, so a drag aimed at
+    /// the middle from an unknown detent lands on "fully open" about as often
+    /// as it lands right. That is why shot 01 came out at three different
+    /// detents across three runs (CI 31984319195 / 31987640521 and local).
+    ///
+    /// What is reliable, and is what this does:
+    ///   * **collapse first.** Peek is the floor, so a downward drag cannot
+    ///     overshoot past it — that gives a known starting point.
+    ///   * **step up by roughly one detent's worth of height**, not to an
+    ///     absolute position. From peek that lands on the middle every time,
+    ///     because the next detent up is the nearest thing to the predicted
+    ///     end. Sized as a fraction of the screen so it holds on any device.
+    ///   * **if it still overshoots, drop back to the floor and try again**
+    ///     rather than nudging down from the top, which just overshoots the
+    ///     other way.
+    ///   * **assert the detent the sheet publishes** as its accessibility
+    ///     value, so a wrong framing is never captured.
+    ///
+    /// The whole drag stays at or below the sheet's own top edge, which is the
+    /// other rule this gesture has to respect: a drag that ends above it is
+    /// taken by the MAP, panning it off Midtown (see `setDrawer`).
+    private func halfOpenDrawer() -> Bool {
+        let handle = app.buttons["Tour list"].firstMatch
+        guard handle.waitForExistence(timeout: 10) else { return false }
+
+        for _ in 0..<4 {
+            if handle.value as? String == "Half open" { return true }
+            // Always start from the floor: from anywhere else the step below
+            // has no predictable landing detent.
+            if handle.value as? String != "Collapsed" {
+                guard collapseDrawer() else { return false }
+            }
+            let start = handle.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+            let oneDetentUp = CGVector(dx: 0, dy: -(app.frame.height * 0.34))
+            start.press(forDuration: 0.05, thenDragTo: start.withOffset(oneDetentUp))
+            settle(seconds: 3)
+        }
+        return handle.value as? String == "Half open"
     }
 
     /// Drags the sheet's grab handle until it reports the wanted detent.
