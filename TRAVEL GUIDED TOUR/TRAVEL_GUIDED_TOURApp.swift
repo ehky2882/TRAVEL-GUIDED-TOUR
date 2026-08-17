@@ -153,6 +153,14 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(bottomModuleWindow)
                     .preferredColorScheme(colorSchemePreference.colorScheme)
                     .task {
+                        // App Store screenshot run only — no-op in a shipping
+                        // build (gated on a launch argument, see UITestSupport).
+                        // Runs before the sync wiring below so it can never
+                        // write seeded rows through to Supabase.
+                        UITestSupport.seedLibraryIfRequested(
+                            tours: dataService.tours,
+                            into: libraryStore
+                        )
                         // Pre-warm the Me tab at launch so its data is already
                         // loaded before the user first opens it — the services
                         // also hydrate from a cached snapshot at init (instant
