@@ -155,8 +155,16 @@ struct MakerMapSection: View {
         )
     }
 
+    /// Passing the live span keeps a cluster tap from ever *widening*
+    /// the camera — the framing helper floors its span at ~1.1 km, but
+    /// clusters form well below that, so without this a tap on a tight
+    /// cluster zoomed out and re-rendered the same pin.
+    ///
+    /// ⚠️ Unlike the home map, this one has no placecard, so a cluster
+    /// whose members share a coordinate exactly is still a dead tap
+    /// here — see `MapClustering.canSeparateByZoom`.
     private func zoomIn(on stops: [MapClustering.StopMarker]) {
-        guard let region = MapClustering.region(framing: stops) else { return }
+        guard let region = MapClustering.region(framing: stops, within: currentRegion?.span) else { return }
         withAnimation(.easeInOut(duration: 0.35)) {
             cameraPosition = .region(region)
         }

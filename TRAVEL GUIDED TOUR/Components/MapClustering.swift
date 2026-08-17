@@ -109,6 +109,41 @@ enum MapClustering {
     /// invisible under normal panning.
     static let cullMarginViewports: Double = 1.0
 
+    /// Coordinate delta below which two markers are the same point as
+    /// far as any map camera is concerned (~1 cm). This is a
+    /// float-equality epsilon, **not** a UX threshold — it sits far
+    /// below the precision of any coordinate the catalog stores.
+    static let coincidentEpsilon: Double = 1e-7
+
+    // MARK: - Separability
+
+    /// Whether zooming in can ever pull `stops` apart into separate pins.
+    ///
+    /// 🔴 Bucketing is a grid over coordinates, so markers at the *same*
+    /// coordinate share a cell at **every** cell pitch: no camera can
+    /// separate them, and a cluster tap that only zooms is an infinite
+    /// no-op — the pin swallows every tap and neither tour is reachable
+    /// from the map. Callers must offer another way in when this returns
+    /// false (the home map stacks one placecard per tour).
+    ///
+    /// This is not hypothetical: **24 coincident pairs exist in the
+    /// catalog today**, every one a walk whose intro stop is wired at the
+    /// coordinate of the single-stop tour of the same landmark — Dam
+    /// Square, the Colosseum, the CN Tower, Brandenburg Gate, Dorchester
+    /// Square, and so on. That wiring is correct (the walk really does
+    /// begin there); the map is what has to cope.
+    ///
+    /// Returns `true` for fewer than two markers — nothing to separate.
+    static func canSeparateByZoom(_ stops: [StopMarker]) -> Bool {
+        guard stops.count > 1 else { return true }
+        let lats = stops.map(\.coordinate.latitude)
+        let lons = stops.map(\.coordinate.longitude)
+        guard let minLat = lats.min(), let maxLat = lats.max(),
+              let minLon = lons.min(), let maxLon = lons.max() else { return true }
+        return (maxLat - minLat) > coincidentEpsilon
+            || (maxLon - minLon) > coincidentEpsilon
+    }
+
     // MARK: - Geometry helpers
 
     /// Round `span` to two significant figures so MapKit's
@@ -228,7 +263,14 @@ enum MapClustering {
     /// Tighten the camera around a group of markers so a tapped cluster
     /// breaks apart on the next render. Mirrors MKMapView's default
     /// cluster-tap behavior. Returns `nil` for an empty group.
-    static func region(framing stops: [StopMarker]) -> MKCoordinateRegion? {
+    ///
+    /// Pass `within:` — the camera's current span — so the result is
+    /// guaranteed to be a zoom **in**. See the clamp below for why that
+    /// isn't automatic.
+    static func region(
+        framing stops: [StopMarker],
+        within current: MKCoordinateSpan? = nil
+    ) -> MKCoordinateRegion? {
         guard !stops.isEmpty else { return nil }
         let lats = stops.map(\.coordinate.latitude)
         let lons = stops.map(\.coordinate.longitude)
@@ -242,11 +284,32 @@ enum MapClustering {
         // Pad by 2.5x so the cluster doesn't hug the edges, and floor
         // at a span that's roughly neighborhood-level — keeps a single
         // tap from over-zooming into a 1-block view.
-        let span = MKCoordinateSpan(
-            latitudeDelta: max((maxLat - minLat) * 2.5, 0.01),
-            longitudeDelta: max((maxLon - minLon) * 2.5, 0.01)
+        var latDelta = max((maxLat - minLat) * 2.5, 0.01)
+        var lonDelta = max((maxLon - minLon) * 2.5, 0.01)
+
+        // 🔴 A cluster tap must always TIGHTEN the camera. Markers merge
+        // whenever they sit closer together than one cell (span /
+        // cellsAcross), so a cluster can form at a span far below the
+        // 0.01° (~1.1 km) floor above — and framing it then *widened*
+        // the camera. The user tapped a pin, got zoomed out, and saw the
+        // same cluster re-render: indistinguishable from the tap doing
+        // nothing. Clamping to half the current span keeps the floor's
+        // intent (no single tap drops you into a one-block view) while
+        // guaranteeing every tap makes progress.
+        //
+        // The clamp only ever binds when the floor was the thing
+        // widening the camera: a real cluster's bounding box is at most
+        // one cell across, so its padded span is ~span/8 — already well
+        // inside half the current span.
+        if let current, current.latitudeDelta > 0, current.longitudeDelta > 0 {
+            latDelta = min(latDelta, current.latitudeDelta / 2)
+            lonDelta = min(lonDelta, current.longitudeDelta / 2)
+        }
+
+        return MKCoordinateRegion(
+            center: center,
+            span: MKCoordinateSpan(latitudeDelta: latDelta, longitudeDelta: lonDelta)
         )
-        return MKCoordinateRegion(center: center, span: span)
     }
 
     /// Frame an arbitrary set of coordinates — used to open a map

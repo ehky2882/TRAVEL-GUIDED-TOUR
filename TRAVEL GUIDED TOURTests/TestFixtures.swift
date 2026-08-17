@@ -58,15 +58,36 @@ enum TestFixtures {
         longitude: Double = -73.9857,
         stopCount: Int = 1,
         createdAt: String? = nil,
-        priceTier: Int? = nil
+        priceTier: Int? = nil,
+        /// Explicit per-stop coordinates. Overrides `stopCount` +
+        /// `latitude`/`longitude`. Needed for multi-stop tours whose
+        /// stops are genuinely spread out — where the centroid is a
+        /// different point from any stop.
+        stopCoordinates: [(latitude: Double, longitude: Double)]? = nil,
+        /// Centroid override. Defaults to `latitude`/`longitude`, which
+        /// is right for a single-stop tour but not for a walk.
+        centroidLatitude: Double? = nil,
+        centroidLongitude: Double? = nil
     ) -> Tour {
-        let stops = (0..<stopCount).map { i in
-            makeStop(
-                order: i,
-                title: "Stop \(i)",
-                latitude: latitude,
-                longitude: longitude
-            )
+        let stops: [Stop]
+        if let stopCoordinates {
+            stops = stopCoordinates.enumerated().map { index, coordinate in
+                makeStop(
+                    order: index,
+                    title: "Stop \(index)",
+                    latitude: coordinate.latitude,
+                    longitude: coordinate.longitude
+                )
+            }
+        } else {
+            stops = (0..<stopCount).map { i in
+                makeStop(
+                    order: i,
+                    title: "Stop \(i)",
+                    latitude: latitude,
+                    longitude: longitude
+                )
+            }
         }
         let totalDuration = stops.reduce(0) { $0 + $1.audioDurationSeconds }
 
@@ -84,8 +105,8 @@ enum TestFixtures {
             introAudioURL: nil,
             totalDurationSeconds: totalDuration,
             walkingDistanceMeters: kind == .multiStop ? 500 : nil,
-            centroidLatitude: latitude,
-            centroidLongitude: longitude,
+            centroidLatitude: centroidLatitude ?? latitude,
+            centroidLongitude: centroidLongitude ?? longitude,
             city: "Test City",
             primaryCategory: category,
             tags: tags,
