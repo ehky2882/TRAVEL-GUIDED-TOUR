@@ -64,6 +64,14 @@ struct HomeMapSection: View {
     /// the tapped stop's coordinate so the parent can anchor a
     /// placecard above that pin.
     let onPinTapped: (UUID, CLLocationCoordinate2D) -> Void
+    /// Fires when the user taps a cluster that zooming cannot break
+    /// apart — its members sit on the same coordinate, or the camera is
+    /// already at building scale. Carries every tour in the cluster plus
+    /// its anchor coordinate so the parent can stack one placecard per
+    /// tour. Without this the tap is an infinite no-op and the tours
+    /// underneath are unreachable from the map (see
+    /// `MapClustering.canSeparateByZoom`).
+    let onClusterTapped: ([UUID], CLLocationCoordinate2D) -> Void
     /// Fires when the user taps the map outside any pin or the
     /// placecard. Parent uses this to dismiss the placecard.
     let onMapTapped: () -> Void
@@ -196,10 +204,25 @@ struct HomeMapSection: View {
                 .frame(width: 44, height: 44)
                 .contentShape(Circle())
                 .onTapGesture {
-                    zoomIn(on: stops)
+                    handleClusterTap(stops: stops, at: item.coordinate)
                 }
                 .accessibilityLabel("\(count) tours")
                 .accessibilityAddTraits(.isButton)
+        }
+    }
+
+    /// A cluster tap zooms in — unless zooming can't help, in which case
+    /// the cluster goes up to the parent to be disambiguated as a stack
+    /// of placecards.
+    ///
+    /// `MapClustering.needsDisambiguation` owns that judgement, so the
+    /// home map and the maker map can't drift apart on when a tap stops
+    /// being a zoom.
+    private func handleClusterTap(stops: [MapClustering.StopMarker], at coordinate: CLLocationCoordinate2D) {
+        if MapClustering.needsDisambiguation(stops: stops, currentSpan: currentRegion?.span) {
+            onClusterTapped(stops.map(\.tourId), coordinate)
+        } else {
+            zoomIn(on: stops)
         }
     }
 
@@ -275,9 +298,10 @@ struct HomeMapSection: View {
 
     /// Tighten the camera around a cluster's bounding box so it breaks
     /// apart on the next render. Mirrors MKMapView's default
-    /// cluster-tap behavior.
+    /// cluster-tap behavior. Passes the live span so the framing can
+    /// never widen the camera (see `MapClustering.region(framing:within:)`).
     private func zoomIn(on stops: [MapClustering.StopMarker]) {
-        guard let region = MapClustering.region(framing: stops) else { return }
+        guard let region = MapClustering.region(framing: stops, within: currentRegion?.span) else { return }
         withAnimation(.easeInOut(duration: 0.35)) {
             cameraPosition = .region(region)
         }

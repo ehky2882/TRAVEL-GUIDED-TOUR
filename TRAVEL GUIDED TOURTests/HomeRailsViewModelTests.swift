@@ -248,6 +248,87 @@ final class HomeRailsViewModelTests: XCTestCase {
         XCTAssertFalse(rails.contains { $0.id == "nearYou" }, "Near you is hidden in far mode")
     }
 
+    /// The Montreal / Dorchester Square report (2026-08-17): the drawer
+    /// header counts a tour as in view when **any of its stops** is on
+    /// screen, but the In view rail used to filter on the tour's
+    /// centroid. A walk's centroid is the mean of stops that can be a
+    /// kilometre apart, so a walk whose first stop sat under the map —
+    /// but whose centroid didn't — was counted in the header and missing
+    /// from the rail. Header said 2, rail listed 1.
+    func test_inView_includesWalkWhoseStopIsInViewButCentroidIsNot() {
+        // A walk running north-east from Dorchester Square. Its centroid
+        // sits ~200 m away, outside the tight viewport below.
+        let walk = TestFixtures.makeTour(
+            title: "Downtown and the Underground City",
+            kind: .multiStop,
+            stopCoordinates: [
+                (latitude: 45.4997, longitude: -73.5710),
+                (latitude: 45.5039, longitude: -73.5695)
+            ],
+            centroidLatitude: 45.5018,
+            centroidLongitude: -73.5703
+        )
+        let single = TestFixtures.makeTour(
+            title: "Dorchester Square and the Sun Life Building",
+            latitude: 45.4997,
+            longitude: -73.5710
+        )
+        // ~220 m tall: holds the square, not the walk's centroid.
+        let region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 45.4997, longitude: -73.5710),
+            span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)
+        )
+        XCTAssertFalse(
+            region.contains(walk.coordinate),
+            "precondition: the walk's centroid is off screen"
+        )
+
+        let rails = HomeRailsViewModel.rails(
+            tours: [walk, single],
+            libraryEntries: [],
+            recentlyViewedIds: [],
+            userLocation: nil,
+            visibleRegion: region
+        )
+        let inView = rails.first { $0.id == "inView" }
+        XCTAssertEqual(
+            inView?.tours.count, 2,
+            "both tours have a stop in view, so both belong in the rail"
+        )
+        XCTAssertTrue(inView?.tours.contains { $0.id == walk.id } ?? false)
+    }
+
+    /// The flip side: a walk with no stop on screen stays out, even if
+    /// its centroid happens to fall inside the viewport.
+    func test_inView_excludesWalkWithNoStopInView() {
+        let walk = TestFixtures.makeTour(
+            kind: .multiStop,
+            stopCoordinates: [
+                (latitude: 45.4900, longitude: -73.5710),
+                (latitude: 45.5100, longitude: -73.5710)
+            ],
+            centroidLatitude: 45.5000,
+            centroidLongitude: -73.5710
+        )
+        let region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 45.5000, longitude: -73.5710),
+            span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)
+        )
+        XCTAssertTrue(
+            region.contains(walk.coordinate),
+            "precondition: the centroid IS on screen"
+        )
+
+        let rails = HomeRailsViewModel.rails(
+            tours: [walk],
+            libraryEntries: [],
+            recentlyViewedIds: [],
+            userLocation: nil,
+            visibleRegion: region
+        )
+        XCTAssertNil(rails.first { $0.id == "inView" })
+    }
+
     func test_isPannedFar_boundaries() {
         let user = CLLocation(latitude: 40.75, longitude: -73.99)
         // No region → not far (near mode).

@@ -160,6 +160,14 @@ struct MakerView: View {
     /// work, then left alone so a pan survives a tab switch.
     @State private var mapCamera: MapCameraPosition = .automatic
     @State private var selectedMapTourId: UUID?
+    /// Tours behind a tapped pin that zooming can't split, plus where it
+    /// sits. A list because such a pin stands for more than one tour —
+    /// see `mapPlacecardAnchor`. Empty means no place card is showing.
+    @State private var mapPlacecardTours: [Tour] = []
+    @State private var mapPlacecardCoordinate: CLLocationCoordinate2D?
+    /// The span the map was at when the stack opened, so dismissing and
+    /// re-tapping doesn't creep the zoom.
+    @State private var mapSpanBeforePlacecard: MKCoordinateSpan?
     /// Another maker's visible lists. Kept here rather than in
     /// `TourListService` so they can't be mistaken for the viewer's own —
     /// they belong to whichever page is open and die with it.
@@ -701,10 +709,18 @@ struct MakerView: View {
                 // same breath, so it owns both.
                 initialRegion: MakerMapSection.initialRegion(for: makerTours),
                 onPinTapped: { tourId, _ in
+                    dismissMapPlacecard()
                     selectedMapTourId = tourId
                     openTourFromMap(tourId)
                 },
-                onMapTapped: { selectedMapTourId = nil }
+                onClusterTapped: { tourIds, coordinate in
+                    showMapPlacecards(for: tourIds, at: coordinate)
+                },
+                onMapTapped: {
+                    selectedMapTourId = nil
+                    dismissMapPlacecard()
+                },
+                placecard: mapPlacecardAnchor
             )
             // Same footprint as the gallery / map on tour detail.
             .frame(height: AtlasSpacing.heroHeight)
@@ -727,9 +743,105 @@ struct MakerView: View {
     /// The clustering region catches up here via `onMapCameraChange`,
     /// which fires when this animation settles.
     private func frameWholeMap() {
+        // An open stack is anchored to one pin at one zoom; re-framing
+        // the whole map would leave it floating over unrelated ground.
+        dismissMapPlacecard()
         let region = MakerMapSection.initialRegion(for: makerTours)
         withAnimation(.easeInOut(duration: 0.35)) { mapCamera = .region(region) }
     }
+
+    // MARK: - Doubled-up map pins
+
+    /// Show one place card per tour behind a pin that zooming can't
+    /// split — a walk starting at a landmark that also has its own
+    /// single-stop tour, which puts two tours on one coordinate. Owner
+    /// direction 2026-08-17: match the home map's treatment here rather
+    /// than inventing a second idiom.
+    private func showMapPlacecards(for tourIds: [UUID], at coordinate: CLLocationCoordinate2D) {
+        var seen = Set<UUID>()
+        let tours = tourIds
+            .compactMap { tourId in makerTours.first { $0.id == tourId } }
+            .filter { seen.insert($0.id).inserted }
+        guard !tours.isEmpty else { return }
+
+        selectedMapTourId = nil
+        let span = mapSpanBeforePlacecard ?? mapCamera.region?.span ?? Self.placecardFallbackSpan
+        mapSpanBeforePlacecard = span
+
+        withAnimation(.spring(response: 0.35, dampingFraction: 0.82)) {
+            mapPlacecardTours = tours
+            mapPlacecardCoordinate = coordinate
+        }
+        // Sit the pin low in the frame rather than dead centre. This map
+        // is only `heroHeight` tall and a stack of cards is most of it,
+        // so a plain recentre would push the top card off the map.
+        withAnimation(.easeInOut(duration: 0.35)) {
+            mapCamera = .region(
+                MapClustering.region(
+                    anchoring: coordinate,
+                    at: Self.placecardPinFraction,
+                    span: span
+                )
+            )
+        }
+    }
+
+    private func dismissMapPlacecard() {
+        guard !mapPlacecardTours.isEmpty else { return }
+        withAnimation(.easeInOut(duration: 0.2)) {
+            mapPlacecardTours = []
+            mapPlacecardCoordinate = nil
+        }
+        mapSpanBeforePlacecard = nil
+    }
+
+    /// The stack the map renders above the tapped pin. Same component and
+    /// same width as the home map, so the two read as one system.
+    private var mapPlacecardAnchor: PlacecardAnchor? {
+        guard !mapPlacecardTours.isEmpty,
+              let coordinate = mapPlacecardCoordinate else { return nil }
+
+        let tours = Array(mapPlacecardTours.prefix(Self.maxStackedPlacecards))
+        let stack = VStack(spacing: AtlasSpacing.xs) {
+            ForEach(tours) { tour in
+                PlacecardView(
+                    tour: tour,
+                    maker: maker,
+                    distanceText: mapDistanceText(for: tour),
+                    onTap: {
+                        dismissMapPlacecard()
+                        selectedMapTourId = tour.id
+                        openTourFromMap(tour.id)
+                    }
+                )
+            }
+        }
+        .frame(width: PlacecardView.standardWidth)
+        return PlacecardAnchor(coordinate: coordinate, view: AnyView(stack))
+    }
+
+    private func mapDistanceText(for tour: Tour) -> String? {
+        guard let location = locationManager.userLocation else { return nil }
+        return AtlasFormatters.distanceAway(meters: tour.distance(from: location))
+    }
+
+    /// How far down the map the tapped pin sits while its stack is open.
+    /// Two cards plus their gap and the pin clearance come to roughly
+    /// 178pt; at 0.72 of a 320pt map there is ~215pt above the pin, so
+    /// the stack fits with room to spare on the smallest iPhone.
+    private static let placecardPinFraction: Double = 0.72
+
+    /// Span used only if the camera somehow has no region yet — roughly
+    /// neighbourhood level, matching the cluster-framing floor.
+    private static let placecardFallbackSpan = MKCoordinateSpan(
+        latitudeDelta: 0.01,
+        longitudeDelta: 0.01
+    )
+
+    /// Cap on the stack so it can't outgrow the map. The deepest
+    /// coincident group in the catalog is two; more than three on a map
+    /// this size would need a different answer altogether.
+    private static let maxStackedPlacecards = 3
 
     /// Open a tour tapped on the map, matching `tourOpen`'s routing: own
     /// tours go to the authoring editor (via the `navigationDestination`

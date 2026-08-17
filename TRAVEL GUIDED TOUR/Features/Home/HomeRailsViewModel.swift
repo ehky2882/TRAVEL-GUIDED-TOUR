@@ -229,8 +229,20 @@ enum HomeRailsViewModel {
             latitude: visibleRegion.center.latitude,
             longitude: visibleRegion.center.longitude
         )
+        // 🔴 Match the drawer header's definition of "in view": a tour
+        // counts when **any of its stops** is on screen. Filtering on
+        // `tour.coordinate` — the centroid — silently disagreed with the
+        // header for multi-stop walks, because a walk's centroid is the
+        // mean of stops that can be a kilometre apart. Standing at
+        // Dorchester Square the header said "2 TOURS IN VIEW" while this
+        // rail listed one: the Downtown walk's first stop was under the
+        // map, but its centroid sat 197 m away, outside the viewport.
+        // Ordering still uses the centroid, which is the right summary
+        // of where a whole walk is.
         let matching = sortedByDistance(
-            tours.filter { visibleRegion.contains($0.coordinate) },
+            tours.filter { tour in
+                tour.stops.contains { visibleRegion.contains($0.coordinate) }
+            },
             from: center
         )
         guard !matching.isEmpty else { return nil }

@@ -28,11 +28,33 @@ final class HomeSharedState {
     /// this to decide shelves-vs-results and the header copy.
     var hasActiveFilters: Bool { !selectedTags.isEmpty || walksOnly }
 
-    /// Currently-tapped tour + the coordinate of its tapped stop.
-    /// Drives the placecard preview the map renders above the pin,
-    /// and the matching drawer card's `isSelected` highlight.
-    var placecardTour: Tour? = nil
+    /// Tours behind the currently-tapped pin, plus the coordinate of
+    /// that pin. Drives the placecard preview the map renders above it.
+    ///
+    /// A **list**, not one tour, because a pin can stand for more than
+    /// one tour: when two tours share a coordinate exactly, no zoom can
+    /// ever split them apart into separate pins, so tapping shows one
+    /// placecard per tour stacked above the pin. Single-pin taps put
+    /// exactly one tour here, which is the overwhelmingly common case.
+    var placecardTours: [Tour] = []
     var placecardCoordinate: CLLocationCoordinate2D? = nil
+
+    /// True while a placecard (single or stacked) is showing.
+    var isShowingPlacecard: Bool { !placecardTours.isEmpty }
+
+    /// The pin to draw with its selection ring — only when a single
+    /// tour's own pin was tapped. A stack sits above a *cluster* pin,
+    /// which has no selected state, so it deliberately selects nothing.
+    var selectedPinTourId: UUID? {
+        placecardTours.count == 1 ? placecardTours.first?.id : nil
+    }
+
+    /// Clear any open placecard. One edit point so every dismissal path
+    /// (map tap, recenter, place-search fly-to) stays in step.
+    func dismissPlacecard() {
+        placecardTours = []
+        placecardCoordinate = nil
+    }
 
     /// The visible map region (set by the map's settled-camera
     /// callback). The drawer reads this to compute "N tours in view"

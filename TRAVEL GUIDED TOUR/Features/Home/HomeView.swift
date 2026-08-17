@@ -108,7 +108,7 @@ struct HomeView: View {
                         tours: filteredTours,
                         userLocation: locationManager.userLocation,
                         userHeading: locationManager.heading,
-                        selectedTourId: sharedState.placecardTour?.id,
+                        selectedTourId: sharedState.selectedPinTourId,
                         cameraPosition: $cameraPosition,
                         mapMode: mapMode,
                         onCameraChanged: { region in
@@ -138,7 +138,7 @@ struct HomeView: View {
                         onPinTapped: { tourId, coordinate in
                             guard let tour = dataService.tour(by: tourId) else { return }
                             withAnimation(.spring(response: 0.35, dampingFraction: 0.82)) {
-                                sharedState.placecardTour = tour
+                                sharedState.placecardTours = [tour]
                                 sharedState.placecardCoordinate = coordinate
                             }
                             // Recenter the map on the tapped pin's
@@ -156,16 +156,39 @@ struct HomeView: View {
                                 ))
                             }
                         },
+                        onClusterTapped: { tourIds, coordinate in
+                            // A cluster zooming can't break apart — show
+                            // every tour under it as a stack of
+                            // placecards, so both are reachable. Same
+                            // recenter-and-hold-zoom behaviour as a
+                            // single pin tap.
+                            var seen = Set<UUID>()
+                            let tours = tourIds
+                                .compactMap { dataService.tour(by: $0) }
+                                .filter { seen.insert($0.id).inserted }
+                            guard !tours.isEmpty else { return }
+                            withAnimation(.spring(response: 0.35, dampingFraction: 0.82)) {
+                                sharedState.placecardTours = tours
+                                sharedState.placecardCoordinate = coordinate
+                            }
+                            let span = sharedState.visibleRegion?.span
+                                ?? Self.recenterSpan
+                            withAnimation(.easeInOut(duration: 0.35)) {
+                                cameraPosition = .region(MKCoordinateRegion(
+                                    center: coordinate,
+                                    span: span
+                                ))
+                            }
+                        },
                         onMapTapped: {
                             if showNoToursOverlay {
                                 withAnimation(.easeInOut(duration: 0.3)) {
                                     showNoToursOverlay = false
                                 }
                             }
-                            guard sharedState.placecardTour != nil else { return }
+                            guard sharedState.isShowingPlacecard else { return }
                             withAnimation(.easeInOut(duration: 0.2)) {
-                                sharedState.placecardTour = nil
-                                sharedState.placecardCoordinate = nil
+                                sharedState.dismissPlacecard()
                             }
                         },
                         placecard: placecardAnchor
@@ -327,8 +350,7 @@ struct HomeView: View {
     private func flyTo(_ region: MKCoordinateRegion) {
         sharedState.pendingMapMove = nil
         showNoToursOverlay = false
-        sharedState.placecardTour = nil
-        sharedState.placecardCoordinate = nil
+        sharedState.dismissPlacecard()
         if sheetDetent != .peek {
             withAnimation(.easeInOut(duration: 0.25)) { sheetDetent = .peek }
         }
@@ -392,32 +414,44 @@ struct HomeView: View {
         .padding(.horizontal, AtlasSpacing.lg)
     }
 
-    /// Bundles the current placecard tour + its anchor coordinate into
-    /// the value `HomeMapSection` consumes. Erased to `AnyView` to
+    /// Bundles the current placecard tour(s) + their anchor coordinate
+    /// into the value `HomeMapSection` consumes. Erased to `AnyView` to
     /// keep the map section unaware of the concrete placecard type.
+    ///
+    /// Usually one card. When the tapped pin stands for several tours at
+    /// the same coordinate — which no zoom can separate — they stack, so
+    /// each one is still reachable from the map.
     private var placecardAnchor: PlacecardAnchor? {
-        guard let tour = sharedState.placecardTour,
+        guard !sharedState.placecardTours.isEmpty,
               let coordinate = sharedState.placecardCoordinate else {
             return nil
         }
-        // Standardize the placecard at 2/3 of the device's screen
-        // width so the card reads as the same visual proportion of
-        // the map across every iPhone size. Falls back to a sensible
-        // fixed width if no window scene is available (test / preview
-        // contexts). Wider would feel more like an overlay sheet;
-        // narrower would cramp the 64pt hero next to the 2-line
-        // ALL CAPS title.
-        let card = PlacecardView(
-            tour: tour,
-            maker: dataService.maker(for: tour),
-            distanceText: distanceText(for: tour),
-            onTap: {
-                tourPresenter.present(tour)
+        let tours = Array(sharedState.placecardTours.prefix(Self.maxStackedPlacecards))
+        let stack = VStack(spacing: AtlasSpacing.xs) {
+            ForEach(tours) { tour in
+                PlacecardView(
+                    tour: tour,
+                    maker: dataService.maker(for: tour),
+                    distanceText: distanceText(for: tour),
+                    onTap: {
+                        tourPresenter.present(tour)
+                    }
+                )
             }
-        )
-        .frame(width: Self.placecardWidth)
-        return PlacecardAnchor(coordinate: coordinate, view: AnyView(card))
+        }
+        .frame(width: PlacecardView.standardWidth)
+        return PlacecardAnchor(coordinate: coordinate, view: AnyView(stack))
     }
+
+    /// How many stacked placecards fit above a pin before the stack
+    /// would run off the top of the map. Each card is ~88pt, so four
+    /// plus gaps is about the ceiling on the smallest iPhone.
+    ///
+    /// The deepest coincident group in the catalog today is **two**
+    /// tours, so this is a guard rail rather than a live limit — but if
+    /// a landmark ever gathers more than four coincident tours they'd
+    /// need a proper disambiguation sheet, not a taller stack.
+    private static let maxStackedPlacecards = 4
 
     /// Opacity for the floating map controls (map-mode + recenter),
     /// faded against the drawer's rise off peek so they dissolve as
@@ -479,18 +513,9 @@ struct HomeView: View {
         longitudeDelta: 0.1
     )
 
-    /// Standardized placecard width — 2/3 of the active scene's screen
-    /// width so the card reads as the same visual proportion of the
-    /// map across every iPhone size. Falls back to a sensible fixed
-    /// width if there's no active window scene (test / preview
-    /// contexts).
-    private static var placecardWidth: CGFloat {
-        let screenWidth = UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .first(where: { $0.activationState == .foregroundActive })?
-            .screen.bounds.width
-        return (screenWidth ?? 390) * 2.0 / 3.0
-    }
+    // The standardized placecard width moved to `PlacecardView.standardWidth`
+    // when the maker map started showing place cards too — both maps have to
+    // size them the same way.
 
     /// Snap the map back to true north. Builds an explicit north-up
     /// `MapCamera` from the current centre + distance (captured live
