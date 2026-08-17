@@ -89,9 +89,21 @@ final class ScreenshotUITests: XCTestCase {
         // tour — so prove we are on a clean Home root before shot 1 rather
         // than assuming it.
         returnToHomeRoot()
-        // Pin the drawer to its half-open default — the launch detent is not
-        // reliable by this point (see `halfOpenDrawer`).
-        halfOpenDrawer()
+        // Drop the sheet to its peek detent so the map runs nearly full-bleed
+        // and the spread of pins is the whole picture.
+        //
+        // ⚠️ PEEK, NOT THE HALF-OPEN DEFAULT, AND THAT IS DELIBERATE. The
+        // middle detent cannot be reached reliably: the sheet snaps to
+        // whichever detent is nearest the drag's *predicted* end, XCTest's
+        // synthesised drags predict far past where the finger stopped, and any
+        // drag that ends above the sheet's own top edge is taken by the MAP
+        // instead — which pans it off Midtown and swaps the "Near you" rail for
+        // "In view". Three runs produced three different framings. Peek is the
+        // floor and large is the ceiling, so both are reachable by dragging in
+        // the safe direction and can be asserted; the middle is a coin toss.
+        // If the half-open framing is wanted back, that is the problem to
+        // solve first.
+        collapseDrawer()
         // The map streams tiles and remote hero images load over the network;
         // give both time to land so nothing is captured half-drawn.
         settle(seconds: 8)
@@ -105,30 +117,19 @@ final class ScreenshotUITests: XCTestCase {
         )
         snapshot("01-Home-Map")
 
-        // 2. The same map with the drawer dropped to its peek detent, so the
-        //    map runs nearly full-bleed and the spread of pins is the whole
-        //    picture. Sits next to shot 01 on purpose: the pair reads as one
-        //    gesture — drag the sheet down for the map, up for the tours.
-        if collapseDrawer() {
-            settle(seconds: 5)
-            snapshot("02-Map-Fullscreen")
-        } else {
-            skipped("the map with the drawer collapsed")
-        }
-
-        // 3. The drawer raised over the map: curated tag shelves and the
+        // 2. The drawer raised over the map: curated tag shelves and the
         //    filter chips, showing the catalogue's breadth.
         if raiseDrawer() {
             settle(seconds: 5)
-            snapshot("03-Browse-Tours")
+            snapshot("02-Browse-Tours")
         } else {
             skipped("the tour drawer")
         }
 
-        // 4. A tour's own page: hero image, title, play pill, description.
+        // 3. A tour's own page: hero image, title, play pill, description.
         if openTour(matching: featuredTourTitle) {
             settle(seconds: 6)
-            snapshot("04-Tour-Detail")
+            snapshot("03-Tour-Detail")
 
             // Start playback but DON'T capture the full player — the owner
             // dropped that shot in favour of the full-bleed map above. Playing
@@ -140,28 +141,28 @@ final class ScreenshotUITests: XCTestCase {
             skipped("a tour page")
         }
 
-        // 5. A multi-stop walk — its route map and stop count.
+        // 4. A multi-stop walk — its route map and stop count.
         //    This is what separates Atlas from a single-audio-clip app.
         returnToHomeRoot()
         if openFirstWalk() {
             settle(seconds: 6)
             // Swap the hero carousel for the walk's route map. Without this the
-            // walk screenshot is compositionally identical to shot 04 — same
+            // walk screenshot is compositionally identical to shot 03 — same
             // hero, same title block, same play pill — and two near-duplicate
             // images in a six-shot set is a waste of a slot. The route map is
             // the thing only a multi-stop walk has.
             showWalkRoute()
             settle(seconds: 6)
-            snapshot("05-Walk")
+            snapshot("04-Walk")
         } else {
             skipped("a multi-stop walk")
         }
 
-        // 6. Saved tours — a populated Library, not an empty state.
+        // 5. Saved tours — a populated Library, not an empty state.
         returnToHomeRoot()
         if selectTab("Library") && openLikedList() {
             settle(seconds: 5)
-            snapshot("06-Library")
+            snapshot("05-Library")
         } else {
             skipped("the Library tab")
         }
@@ -235,10 +236,6 @@ final class ScreenshotUITests: XCTestCase {
     /// shot 01 has rails in it depends on which finishes first. Two
     /// consecutive local runs produced different framings. A store screenshot
     /// must not be a coin toss.
-    @discardableResult
-    private func halfOpenDrawer() -> Bool {
-        setDrawer(to: "Half open", draggingHandleTo: 0.50)
-    }
 
     /// Drops the drawer to its peek detent, leaving the map nearly full-bleed.
     private func collapseDrawer() -> Bool {

@@ -81,7 +81,7 @@ jobs:
       - name: Verify the expected screenshots
         if: always()
         run: |
-          EXPECTED="01-Home-Map 02-Map-Fullscreen 03-Browse-Tours 04-Tour-Detail 05-Walk 06-Library"
+          EXPECTED="01-Home-Map 02-Browse-Tours 03-Tour-Detail 04-Walk 05-Library"
           MISSING=""
           {
             echo "## Screenshots"
