@@ -53,7 +53,7 @@ final class ScreenshotUITests: XCTestCase {
     /// part of the catalogue.
     private let simulatedLocation = CLLocation(latitude: 40.7484, longitude: -73.9857)
 
-    /// The tour used for the detail + player screenshots. It is the nearest
+    /// The tour used for the detail screenshot. It is the nearest
     /// tour to `simulatedLocation`, so it also leads the "Near you" rail.
     private let featuredTourTitle = "Empire State Building"
 
@@ -105,39 +105,48 @@ final class ScreenshotUITests: XCTestCase {
         )
         snapshot("01-Home-Map")
 
-        // 2. The drawer of tours raised over the map: curated tag shelves and
-        //    the filter chips, showing the catalogue's breadth.
+        // 2. The same map with the drawer dropped to its peek detent, so the
+        //    map runs nearly full-bleed and the spread of pins is the whole
+        //    picture. Sits next to shot 01 on purpose: the pair reads as one
+        //    gesture — drag the sheet down for the map, up for the tours.
+        if collapseDrawer() {
+            settle(seconds: 5)
+            snapshot("02-Map-Fullscreen")
+        } else {
+            skipped("the map with the drawer collapsed")
+        }
+
+        // 3. The drawer raised over the map: curated tag shelves and the
+        //    filter chips, showing the catalogue's breadth.
         if raiseDrawer() {
             settle(seconds: 5)
-            snapshot("02-Browse-Tours")
+            snapshot("03-Browse-Tours")
         } else {
             skipped("the tour drawer")
         }
 
-        // 3. A tour's own page: hero image, title, play pill, description.
+        // 4. A tour's own page: hero image, title, play pill, description.
         if openTour(matching: featuredTourTitle) {
             settle(seconds: 6)
-            snapshot("03-Tour-Detail")
+            snapshot("04-Tour-Detail")
 
-            // 4. The full-screen player, mid-playback.
-            if startPlayback() && openFullPlayer() {
-                settle(seconds: 3)
-                snapshot("04-Player")
-                dismissFullPlayer()
-            } else {
-                skipped("the player")
-            }
+            // Start playback but DON'T capture the full player — the owner
+            // dropped that shot in favour of the full-bleed map above. Playing
+            // is still worth doing: it puts a real tour in the mini-player for
+            // the remaining screenshots, so the app looks in use rather than
+            // idle. Nothing is captured here, so a failure costs no image.
+            _ = startPlayback()
         } else {
             skipped("a tour page")
         }
 
-        // 5. A multi-stop walk — the WALK pill, route mini-map and stop list.
+        // 5. A multi-stop walk — its route map and stop count.
         //    This is what separates Atlas from a single-audio-clip app.
         returnToHomeRoot()
         if openFirstWalk() {
             settle(seconds: 6)
             // Swap the hero carousel for the walk's route map. Without this the
-            // walk screenshot is compositionally identical to shot 03 — same
+            // walk screenshot is compositionally identical to shot 04 — same
             // hero, same title block, same play pill — and two near-duplicate
             // images in a six-shot set is a waste of a slot. The route map is
             // the thing only a multi-stop walk has.
@@ -229,6 +238,11 @@ final class ScreenshotUITests: XCTestCase {
     @discardableResult
     private func halfOpenDrawer() -> Bool {
         setDrawer(to: "Half open", draggingHandleTo: 0.50)
+    }
+
+    /// Drops the drawer to its peek detent, leaving the map nearly full-bleed.
+    private func collapseDrawer() -> Bool {
+        setDrawer(to: "Collapsed", draggingHandleTo: 0.92)
     }
 
     /// Drags the sheet's grab handle until it reports the wanted detent.
@@ -361,25 +375,7 @@ final class ScreenshotUITests: XCTestCase {
         return true
     }
 
-    /// Taps the mini-player to raise the full-screen player. The mini-player is
-    /// only a button while something is loaded, and its label names the tour.
-    private func openFullPlayer() -> Bool {
-        let mini = app.buttons
-            .matching(NSPredicate(format: "label BEGINSWITH 'Now playing'"))
-            .firstMatch
-        guard mini.waitForExistence(timeout: 10) else { return false }
-        tapCentre(of: mini)
-        settle(seconds: 3)
-        return true
-    }
 
-    /// The player is a full-screen cover with a drag-to-dismiss handle.
-    private func dismissFullPlayer() {
-        let top = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.06))
-        let bottom = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.95))
-        top.press(forDuration: 0.1, thenDragTo: bottom, withVelocity: .fast, thenHoldForDuration: 0.1)
-        settle(seconds: 3)
-    }
 
     /// Opens the Liked list, which is where seeded saves land — the Library
     /// root is a list of lists, so the tours themselves live one level in.
