@@ -206,7 +206,13 @@ platform :ios do
       skip_binary_upload: true,
       skip_metadata: true,
       overwrite_screenshots: true,
-      force: true,
+      # This lane uploads PICTURES. Without this flag deliver also writes the
+      # version number from the project onto the App Store version record —
+      # and the project says 1.1 while the editable record in App Store
+      # Connect is 1.0 (see docs/launch-runbook.md Step 3). Uploading images
+      # must not quietly move the listing to a different version.
+      skip_app_version_update: true,
+      force: true, # do not open an HTML preview and wait for a keypress
       precheck_include_in_app_purchases: false
     )
   end
