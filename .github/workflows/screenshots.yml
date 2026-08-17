@@ -69,14 +69,43 @@ jobs:
           path: fastlane/screenshots/
           if-no-files-found: warn
 
-      - name: Summary
+      # ⚠️ THIS STEP EXISTS BECAUSE A SHORT SET ONCE SHIPPED AS A SUCCESS.
+      # Run 31979282815 produced 3 of 5 screenshots and reported success: the
+      # test's own "SCREENSHOT SKIPPED" notes are written with print/NSLog,
+      # and fastlane's log formatter swallows both, so nothing surfaced.
+      #
+      # Checking the produced FILENAMES against the expected set is the one
+      # signal that cannot be swallowed. It runs AFTER the upload above (which
+      # is `if: always()`), so failing here still leaves every captured image
+      # attached to the run for review.
+      - name: Verify the expected screenshots
         if: always()
         run: |
-          echo "## Screenshots" >> "$GITHUB_STEP_SUMMARY"
+          EXPECTED="01-Home-Map 02-Browse-Tours 03-Tour-Detail 04-Player 05-Walk 06-Library"
+          MISSING=""
+          {
+            echo "## Screenshots"
+            echo ""
+            echo "| Shot | Status |"
+            echo "|---|---|"
+          } >> "$GITHUB_STEP_SUMMARY"
+          for name in $EXPECTED; do
+            if find fastlane/screenshots -name "*${name}.png" 2>/dev/null | grep -q .; then
+              echo "| \`${name}\` | ✅ captured |" >> "$GITHUB_STEP_SUMMARY"
+            else
+              echo "| \`${name}\` | ❌ MISSING |" >> "$GITHUB_STEP_SUMMARY"
+              MISSING="${MISSING} ${name}"
+            fi
+          done
           COUNT=$(find fastlane/screenshots -name '*.png' 2>/dev/null | wc -l | tr -d ' ')
-          echo "Captured **${COUNT}** image(s). Download them from the *Artifacts* section of this run." >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "Nothing has been sent to Apple. Review them first." >> "$GITHUB_STEP_SUMMARY"
-          if [ "$COUNT" = "0" ]; then
-            echo "::warning::No screenshots were produced. Check the log for 'SCREENSHOT SKIPPED' lines — the UI has probably moved and ScreenshotUITests.swift needs updating."
+          {
+            echo ""
+            echo "Captured **${COUNT}** image(s). Download them from the *Artifacts* section of this run."
+            echo ""
+            echo "Nothing has been sent to Apple. Review every image before it goes anywhere."
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ -n "$MISSING" ]; then
+            echo "::error::Missing screenshots:${MISSING}. The UI has probably moved — update TRAVEL GUIDED TOURUITests/ScreenshotUITests.swift. Whatever WAS captured is attached to this run."
+            exit 1
           fi
+          echo "All ${COUNT} expected screenshots were captured."

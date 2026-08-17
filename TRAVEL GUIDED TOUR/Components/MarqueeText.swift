@@ -32,6 +32,23 @@ struct MarqueeText: View {
     var speed: Double = 30
 
     var body: some View {
+        // Screenshot mode only: render once, static, and never animate. The
+        // marquee has no rest state, so every App Store screenshot otherwise
+        // caught the title mid-word and read as a rendering bug. Inert unless
+        // `-UITestDisableMarquee` is passed — see `UITestSupport`.
+        if UITestSupport.isMarqueeDisabled {
+            Text(text)
+                .font(font)
+                .foregroundStyle(color)
+                .lineLimit(1)
+                .truncationMode(.tail)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        } else {
+            scrollingBody
+        }
+    }
+
+    private var scrollingBody: some View {
         ViewThatFits(in: .horizontal) {
             // First choice — fits at natural width.
             Text(text)
