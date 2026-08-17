@@ -9,6 +9,24 @@ import SwiftUI
 /// Single form: no mode flags. Caller controls placement (typically
 /// as a `MapContent` annotation anchored above the pin).
 struct PlacecardView: View {
+    /// Standard width — 2/3 of the active scene's screen width, so the
+    /// card reads as the same visual proportion of the map on every
+    /// iPhone size. Falls back to a sensible fixed width when there's no
+    /// active window scene (test / preview contexts).
+    ///
+    /// Lives here rather than on a host view because both maps that show
+    /// place cards need it, and they must agree: wider would feel like an
+    /// overlay sheet, narrower would cramp the 64pt hero next to the
+    /// 2-line ALL CAPS title. It also fits inside the maker map, which is
+    /// the narrower of the two (screen width less two 24pt gutters).
+    static var standardWidth: CGFloat {
+        let screenWidth = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first(where: { $0.activationState == .foregroundActive })?
+            .screen.bounds.width
+        return (screenWidth ?? 390) * 2.0 / 3.0
+    }
+
     let tour: Tour
     let maker: Maker?
     /// Pre-formatted distance string (e.g. "0.8 km away"). Hidden

@@ -32,7 +32,19 @@ struct MakerMapSection: View {
     /// those must happen together.
     let initialRegion: MKCoordinateRegion
     let onPinTapped: (UUID, CLLocationCoordinate2D) -> Void
+    /// Fires when a tapped cluster can't be broken apart by zooming —
+    /// its members share a coordinate, or the camera is already at
+    /// building scale. Carries every tour under the pin so the parent can
+    /// stack a place card per tour, the same answer the home map gives.
+    /// Without it the tap is a dead end and those tours are unreachable
+    /// from this map (see `MapClustering.needsDisambiguation`).
+    let onClusterTapped: ([UUID], CLLocationCoordinate2D) -> Void
     let onMapTapped: () -> Void
+    /// When non-nil, rendered as an annotation anchored above
+    /// `coordinate` so it tracks the map. The parent decides what goes in
+    /// it; this view stays unaware of the concrete place-card type, just
+    /// as `HomeMapSection` does.
+    let placecard: PlacecardAnchor?
 
     /// Region the pins were last clustered against. Updated only when a
     /// gesture settles — see `HomeMapSection` for why re-bucketing
@@ -59,6 +71,17 @@ struct MakerMapSection: View {
                     // No heading wedge: this map has no compass and the
                     // user isn't navigating from it.
                     UserLocationDot(headingDegrees: nil)
+                }
+                .annotationTitles(.hidden)
+            }
+
+            if let placecard {
+                // `.bottom` puts the stack's bottom edge on the pin's
+                // coordinate; the padding lifts it clear of the pin
+                // itself. Identical treatment to the home map.
+                Annotation("Tour preview", coordinate: placecard.coordinate, anchor: .bottom) {
+                    placecard.view
+                        .padding(.bottom, 14)
                 }
                 .annotationTitles(.hidden)
             }
@@ -119,7 +142,11 @@ struct MakerMapSection: View {
                 .frame(width: 44, height: 44)
                 .contentShape(Circle())
                 .onTapGesture {
-                    zoomIn(on: stops)
+                    if MapClustering.needsDisambiguation(stops: stops, currentSpan: currentRegion?.span) {
+                        onClusterTapped(stops.map(\.tourId), item.coordinate)
+                    } else {
+                        zoomIn(on: stops)
+                    }
                 }
                 .accessibilityLabel("\(count) tours")
                 .accessibilityAddTraits(.isButton)
@@ -160,9 +187,8 @@ struct MakerMapSection: View {
     /// clusters form well below that, so without this a tap on a tight
     /// cluster zoomed out and re-rendered the same pin.
     ///
-    /// ⚠️ Unlike the home map, this one has no placecard, so a cluster
-    /// whose members share a coordinate exactly is still a dead tap
-    /// here — see `MapClustering.canSeparateByZoom`.
+    /// Only ordinary clusters reach here — ones zooming can actually
+    /// break apart. The rest go up via `onClusterTapped`.
     private func zoomIn(on stops: [MapClustering.StopMarker]) {
         guard let region = MapClustering.region(framing: stops, within: currentRegion?.span) else { return }
         withAnimation(.easeInOut(duration: 0.35)) {

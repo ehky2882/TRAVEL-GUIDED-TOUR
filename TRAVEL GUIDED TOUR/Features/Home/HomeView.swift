@@ -426,13 +426,6 @@ struct HomeView: View {
               let coordinate = sharedState.placecardCoordinate else {
             return nil
         }
-        // Standardize the placecard at 2/3 of the device's screen
-        // width so the card reads as the same visual proportion of
-        // the map across every iPhone size. Falls back to a sensible
-        // fixed width if no window scene is available (test / preview
-        // contexts). Wider would feel more like an overlay sheet;
-        // narrower would cramp the 64pt hero next to the 2-line
-        // ALL CAPS title.
         let tours = Array(sharedState.placecardTours.prefix(Self.maxStackedPlacecards))
         let stack = VStack(spacing: AtlasSpacing.xs) {
             ForEach(tours) { tour in
@@ -446,7 +439,7 @@ struct HomeView: View {
                 )
             }
         }
-        .frame(width: Self.placecardWidth)
+        .frame(width: PlacecardView.standardWidth)
         return PlacecardAnchor(coordinate: coordinate, view: AnyView(stack))
     }
 
@@ -520,18 +513,9 @@ struct HomeView: View {
         longitudeDelta: 0.1
     )
 
-    /// Standardized placecard width — 2/3 of the active scene's screen
-    /// width so the card reads as the same visual proportion of the
-    /// map across every iPhone size. Falls back to a sensible fixed
-    /// width if there's no active window scene (test / preview
-    /// contexts).
-    private static var placecardWidth: CGFloat {
-        let screenWidth = UIApplication.shared.connectedScenes
-            .compactMap { $0 as? UIWindowScene }
-            .first(where: { $0.activationState == .foregroundActive })?
-            .screen.bounds.width
-        return (screenWidth ?? 390) * 2.0 / 3.0
-    }
+    // The standardized placecard width moved to `PlacecardView.standardWidth`
+    // when the maker map started showing place cards too — both maps have to
+    // size them the same way.
 
     /// Snap the map back to true north. Builds an explicit north-up
     /// `MapCamera` from the current centre + distance (captured live

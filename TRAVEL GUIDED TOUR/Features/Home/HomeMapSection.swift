@@ -215,33 +215,16 @@ struct HomeMapSection: View {
     /// the cluster goes up to the parent to be disambiguated as a stack
     /// of placecards.
     ///
-    /// Two ways zooming can't help:
-    ///  1. The members are **coincident** (a walk's intro pinned at the
-    ///     single-stop tour of the same landmark — 24 such pairs in the
-    ///     catalog). No cell pitch ever separates identical points.
-    ///  2. The camera is already at **building scale**, where asking the
-    ///     user to pinch further to tease apart two pins a metre or two
-    ///     apart is not a reasonable ask.
+    /// `MapClustering.needsDisambiguation` owns that judgement, so the
+    /// home map and the maker map can't drift apart on when a tap stops
+    /// being a zoom.
     private func handleClusterTap(stops: [MapClustering.StopMarker], at coordinate: CLLocationCoordinate2D) {
-        if MapClustering.canSeparateByZoom(stops), !isAtBuildingScale {
-            zoomIn(on: stops)
-        } else {
+        if MapClustering.needsDisambiguation(stops: stops, currentSpan: currentRegion?.span) {
             onClusterTapped(stops.map(\.tourId), coordinate)
+        } else {
+            zoomIn(on: stops)
         }
     }
-
-    /// True once the camera is tight enough that a further zoom is a
-    /// poor tool for separating pins (~65 m across, where the cluster
-    /// grid's cells are only a few metres wide). Backstop for markers
-    /// a metre or two apart; exact ties are caught earlier by
-    /// `MapClustering.canSeparateByZoom`.
-    private var isAtBuildingScale: Bool {
-        guard let span = currentRegion?.span else { return false }
-        return span.latitudeDelta <= Self.buildingScaleSpan
-            && span.longitudeDelta <= Self.buildingScaleSpan
-    }
-
-    private static let buildingScaleSpan: Double = 0.0006
 
     // MARK: - Derived
 
