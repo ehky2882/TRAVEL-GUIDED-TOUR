@@ -87,6 +87,9 @@ struct LibraryView: View {
                 // Named lists live in Supabase; keyed on the account so a
                 // sign-out or switch can't leave the previous user's on screen.
                 await listService?.loadMyLists()
+                // Other people's lists you've kept. Separate query, same
+                // trigger — both are account-scoped and both feed this tab.
+                await listService?.loadSavedLists()
             }
             .sheet(isPresented: $showingCreateList) {
                 TourListEditorSheet()
@@ -184,6 +187,32 @@ struct LibraryView: View {
                 }
             }
 
+            // Other people's lists get their own section rather than being
+            // mixed in above. In a column of identical rows, "delete" and
+            // "remove my save" would be one gesture apart and look the same —
+            // the section is what keeps yours and theirs distinct. Following
+            // already sets that precedent on this screen.
+            if !savedLists.isEmpty {
+                librarySectionHeader("Saved lists")
+                ForEach(savedLists) { list in
+                    NavigationLink {
+                        TourListDetailView(listId: list.id, preloaded: list)
+                    } label: {
+                        SavedListRowView(
+                            list: list,
+                            ownerName: TourListOwner.name(of: list, in: dataService),
+                            coverImageName: TourListCover.imageName(for: list, in: dataService),
+                            coverCategory: TourListCover.category(for: list, in: dataService)
+                        )
+                    }
+                    .buttonStyle(.plain)
+
+                    if list.id != savedLists.last?.id {
+                        Divider().padding(.horizontal, AtlasSpacing.lg)
+                    }
+                }
+            }
+
             if !followingMakers.isEmpty {
                 librarySectionHeader("Following")
                 ForEach(followingMakers) { maker in
@@ -277,6 +306,12 @@ struct LibraryView: View {
     /// anonymous user has, and it *is* this tab.
     private var myLists: [TourList] {
         listService?.myLists ?? []
+    }
+
+    /// Other people's lists the user has saved. Empty signed out — saving a
+    /// list is account-backed, unlike bookmarking a tour.
+    private var savedLists: [TourList] {
+        listService?.savedLists ?? []
     }
 
     /// Named lists need an account. When the user has one the Lists section

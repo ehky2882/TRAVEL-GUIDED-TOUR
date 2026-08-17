@@ -121,6 +121,20 @@ enum TourListCover {
     }
 }
 
+/// Who made a list you saved.
+///
+/// Resolved against the loaded catalog rather than fetched: `Maker.userId` is
+/// the same auth account id `journeys.owner_user_id` holds, and the catalog is
+/// already in memory — so naming the owner costs nothing. Returns nil when
+/// their maker row isn't in the catalog (a brand-new creator whose first tour
+/// hasn't published yet); the row then just shows the tour count.
+enum TourListOwner {
+    static func name(of list: TourList, in dataService: DataService) -> String? {
+        guard let ownerUserId = list.ownerUserId else { return nil }
+        return dataService.makers.first { $0.userId == ownerUserId }?.displayName
+    }
+}
+
 // MARK: - Rows
 
 /// A named list — cover, title, tour count.
@@ -180,6 +194,42 @@ struct LikedListRow: View {
                 ListCoverPlaceholder(systemImage: "bookmark.fill", tint: AtlasColors.mapPin)
             }
         }
+    }
+}
+
+/// Someone else's list that you've saved.
+///
+/// Identical to `NamedListRow` but for the subtitle, which names the owner:
+/// these sit in their own section, so the row doesn't have to work as hard to
+/// say it isn't yours — but "12 tours · Kathy Ng" is what makes it findable
+/// again when you half-remember whose it was.
+///
+/// No key badge: a saved list is by definition one someone chose to share.
+struct SavedListRowView: View {
+    let list: TourList
+    let ownerName: String?
+    let coverImageName: String?
+    let coverCategory: TourCategory?
+
+    var body: some View {
+        ListRowLayout(title: list.title, subtitle: subtitle) {
+            if let coverImageName {
+                HeroImageView(
+                    imageName: coverImageName,
+                    height: 56,
+                    cornerRadius: 0,
+                    category: coverCategory
+                )
+            } else {
+                ListCoverPlaceholder(systemImage: "map")
+            }
+        }
+    }
+
+    private var subtitle: String {
+        let count = list.itemCount == 1 ? "1 tour" : "\(list.itemCount) tours"
+        guard let ownerName, !ownerName.isEmpty else { return count }
+        return "\(count) · \(ownerName)"
     }
 }
 

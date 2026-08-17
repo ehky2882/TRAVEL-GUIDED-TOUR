@@ -257,6 +257,7 @@ struct MakerView: View {
         .task(id: authService?.userId ?? nil) {
             guard isOwnProfile else { return }
             await listService?.loadMyLists()
+            await listService?.loadSavedLists()
         }
         // Someone else's visible lists + their Liked. Keyed on the maker so
         // opening a second creator's page replaces them rather than showing
@@ -663,7 +664,50 @@ struct MakerView: View {
                 }
                 .buttonStyle(.plain)
             }
+
+            // Lists you kept from other people. Their own section, exactly as
+            // in Library — the two surfaces show the same thing and must not
+            // drift. Only ever rendered in `.ownProfile`, so a saved list can
+            // never surface on your public page: a visitor's view is built
+            // from `publicLists(ofUser:)`, which returns only what you own.
+            if !savedLists.isEmpty {
+                profileListsHeader("Saved lists")
+
+                ForEach(savedLists) { list in
+                    NavigationLink {
+                        TourListDetailView(listId: list.id, preloaded: list)
+                    } label: {
+                        SavedListRowView(
+                            list: list,
+                            ownerName: TourListOwner.name(of: list, in: dataService),
+                            coverImageName: TourListCover.imageName(for: list, in: dataService),
+                            coverCategory: TourListCover.category(for: list, in: dataService)
+                        )
+                    }
+                    .buttonStyle(.plain)
+
+                    if list.id != savedLists.last?.id {
+                        Divider().padding(.horizontal, AtlasSpacing.lg)
+                    }
+                }
+            }
         }
+    }
+
+    /// Other people's lists the user has saved. Empty signed out.
+    private var savedLists: [TourList] {
+        listService?.savedLists ?? []
+    }
+
+    /// Same caption divider Library uses between its list groups.
+    private func profileListsHeader(_ title: String) -> some View {
+        Text(title)
+            .font(AtlasTypography.caption)
+            .textCase(.uppercase)
+            .foregroundStyle(AtlasColors.tertiaryText)
+            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.top, AtlasSpacing.md)
+            .padding(.bottom, AtlasSpacing.sm)
     }
 
     // MARK: - Map tab

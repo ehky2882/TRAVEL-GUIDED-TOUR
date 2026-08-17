@@ -20,10 +20,14 @@ struct TourListDetailView: View {
     @Environment(TourListService.self) private var listService
     @Environment(DataService.self) private var dataService
     @Environment(TourPresenter.self) private var tourPresenter
+    /// Optional: this screen is reachable from the UIKit maker layer, which
+    /// doesn't carry every service. A required lookup crashes there.
+    @Environment(AuthService.self) private var authService: AuthService?
     @Environment(\.dismiss) private var dismiss
 
     @State private var items: [TourListItem] = []
     @State private var isLoading = true
+    @State private var isSaving = false
     @State private var isEditing = false
     @State private var showingDeleteConfirm = false
     @State private var showingEditDetails = false
@@ -42,6 +46,16 @@ struct TourListDetailView: View {
     private var isOwner: Bool {
         listService.myLists.contains { $0.id == listId }
     }
+
+    /// Saving is account-backed (`saved_journeys` is keyed on the user), so
+    /// unlike bookmarking a tour it can't work signed out. Hide the control
+    /// rather than offer one that fails — the same choice the Follow button
+    /// makes on a maker page.
+    private var canSave: Bool {
+        !isOwner && authService?.isSignedIn == true
+    }
+
+    private var isSavedList: Bool { listService.isListSaved(listId) }
 
     /// Resolved (tour, note) pairs in TourList order — dropping any tour id no
     /// longer in the catalog.
@@ -101,8 +115,24 @@ struct TourListDetailView: View {
             Color.clear.frame(height: AtlasBottomModule.height())
         }
         .toolbar {
-            // Someone else's list is read-only — no menu at all, rather than a
-            // menu whose every item fails.
+            // Someone else's list is read-only, but it can be kept. The
+            // bookmark is the same gesture and the same glyph as saving a
+            // tour, so there is one idea of "keep this" in the app.
+            if canSave {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        toggleSaved()
+                    } label: {
+                        Image(systemName: isSavedList ? "bookmark.fill" : "bookmark")
+                            .foregroundStyle(isSavedList ? AtlasColors.mapPin : AtlasColors.primaryText)
+                    }
+                    .disabled(isSaving)
+                    .accessibilityLabel(isSavedList ? "Remove from your saved lists" : "Save this list")
+                }
+            }
+
+            // No menu at all on someone else's list, rather than a menu whose
+            // every item fails.
             if isOwner {
                 ToolbarItem(placement: .topBarTrailing) {
                     Menu {
@@ -148,6 +178,12 @@ struct TourListDetailView: View {
         .task(id: listId) {
             items = await listService.items(of: listId)
             isLoading = false
+        }
+        // Only when the bookmark is actually on screen, and only if we don't
+        // already know — Library's load fills this in for the common case.
+        .task(id: canSave) {
+            guard canSave, !listService.hasLoadedSaves else { return }
+            await listService.loadSavedListIds()
         }
     }
 
@@ -323,6 +359,25 @@ struct TourListDetailView: View {
         Task {
             try? await listService.setNote(note, for: tourId, in: listId)
             items = await listService.items(of: listId)
+        }
+    }
+
+    /// Keep or un-keep someone else's list.
+    ///
+    /// Un-saving is deliberate and reversible — it removes a reference, never
+    /// the list — so unlike the tour bookmark it toggles both ways with no
+    /// confirmation. The tour bookmark can't, because there un-saving is the
+    /// only way to lose a save.
+    private func toggleSaved() {
+        guard let journey, !isSaving else { return }
+        isSaving = true
+        Task {
+            if isSavedList {
+                await listService.unsaveList(listId)
+            } else {
+                await listService.saveList(journey)
+            }
+            isSaving = false
         }
     }
 
