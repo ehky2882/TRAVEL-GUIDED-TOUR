@@ -16,6 +16,12 @@ name: App Store screenshots
 
 on:
   workflow_dispatch:
+    inputs:
+      upload_to_app_store:
+        description: "Also upload the captured set to App Store Connect (replaces the current screenshots on the editable version). Leave false to only produce an artifact for review."
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: screenshots-${{ github.ref }}
@@ -68,6 +74,33 @@ jobs:
           name: app-store-screenshots
           path: fastlane/screenshots/
           if-no-files-found: warn
+
+      # Send the reviewed set to App Store Connect. Off by default: capture is
+      # cheap and safe, uploading replaces what Apple currently shows.
+      #
+      # This step exists because `fastlane/screenshots/` is gitignored — the
+      # reviewed set is deliberately NOT stored in git, so a fresh checkout of
+      # the release workflow has an EMPTY screenshots directory and cannot
+      # upload anything. Capture and upload therefore have to happen in the
+      # same job, where the files actually exist.
+      - name: Upload screenshots to App Store Connect
+        if: ${{ inputs.upload_to_app_store }}
+        env:
+          APP_STORE_CONNECT_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+          APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+          APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+        run: |
+          if [ -z "$APP_STORE_CONNECT_KEY_ID" ]; then
+            echo "::error::App Store Connect secrets are not set. See docs/fastlane.md."
+            exit 1
+          fi
+          COUNT=$(find fastlane/screenshots -name '*.png' 2>/dev/null | wc -l | tr -d ' ')
+          if [ "$COUNT" -eq 0 ]; then
+            echo "::error::Refusing to upload: no screenshots were captured. Uploading an empty set would wipe the ones already on App Store Connect."
+            exit 1
+          fi
+          echo "Uploading $COUNT screenshot(s) to App Store Connect."
+          bundle exec fastlane upload_screenshots
 
       # ⚠️ THIS STEP EXISTS BECAUSE A SHORT SET ONCE SHIPPED AS A SUCCESS.
       # Run 31979282815 produced 3 of 5 screenshots and reported success: the
