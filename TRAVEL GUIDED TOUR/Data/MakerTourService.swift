@@ -101,42 +101,6 @@ final class MakerTourService {
         await loadMyTours(makerId: tour.makerId)
     }
 
-    /// Upload photos (already cropped to 1200×900 JPEG) for a draft tour and
-    /// patch `hero_image_url` + `additional_image_urls`. The first photo becomes
-    /// the cover when the tour has none yet; the rest append to the gallery.
-    /// Stored at `tour-images/{maker_id}/{tour_id}/{filename}`.
-    func attachPhotos(to tour: Tour, images: [Data]) async throws {
-        guard !images.isEmpty else { return }
-        let makerId = tour.makerId.uuidString.lowercased()
-        let tourId = tour.id.uuidString.lowercased()
-
-        var uploaded: [String] = []
-        for data in images {
-            let path = "\(makerId)/\(tourId)/photo-\(UUID().uuidString).jpg"
-            _ = try await client.storage
-                .from("tour-images")
-                .upload(path, data: data, options: FileOptions(contentType: "image/jpeg", upsert: true))
-            uploaded.append(try client.storage.from("tour-images").getPublicURL(path: path).absoluteString)
-        }
-
-        let existingHero = tour.heroImageURL.isEmpty ? nil : tour.heroImageURL
-        var hero = existingHero
-        var additional = tour.additionalImageURLs ?? []
-        if existingHero == nil {
-            hero = uploaded.first
-            additional += Array(uploaded.dropFirst())
-        } else {
-            additional += uploaded
-        }
-
-        try await client.from("tours")
-            .update(TourImagesPatch(heroImageURL: hero ?? "", additionalImageURLs: additional))
-            .eq("id", value: tourId)
-            .execute()
-
-        await loadMyTours(makerId: tour.makerId)
-    }
-
     /// Load the maker's own tours (all statuses). Owner-scoped by RLS
     /// (`tours_owner_select`), filtered to this maker. A failure leaves the
     /// current list unchanged.
@@ -277,7 +241,7 @@ final class MakerTourService {
     /// Replace a tour's photo set wholesale, in the given order: the first entry
     /// becomes the cover, the rest the gallery.
     ///
-    /// Deliberately a *replace*, not an append like `attachPhotos` — reordering
+    /// Deliberately a *replace*, not an append — reordering
     /// and removal both need to express "this exact list, in this exact order",
     /// and an append-only API cannot say that. Any file dropped from the list is
     /// also deleted from Storage rather than orphaned, since nothing else will

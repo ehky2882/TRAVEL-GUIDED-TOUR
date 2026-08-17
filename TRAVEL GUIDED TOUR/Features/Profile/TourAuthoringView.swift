@@ -21,14 +21,13 @@ struct TourAuthoringView: View {
     @State private var importingAudio = false
     @State private var showingRecorder = false
     @State private var isUploading = false
-    @State private var photoItems: [PhotosPickerItem] = []
-    @State private var isUploadingPhotos = false
     @State private var transcriptText = ""
     @State private var isSavingTranscript = false
     @State private var isSubmitting = false
     @State private var showingDeleteConfirm = false
     @State private var isDeleting = false
     @State private var showingDetailsEditor = false
+    @State private var showingPhotoManager = false
     @State private var errorMessage: String?
 
     /// Live lookup so the view refreshes after an upload reloads `myTours`.
@@ -88,8 +87,10 @@ struct TourAuthoringView: View {
                 TourDetailsEditorView(tour: makerTour.tour, status: makerTour.status)
             }
         }
-        .onChange(of: photoItems) { _, items in
-            handlePhotoSelection(items)
+        .sheet(isPresented: $showingPhotoManager) {
+            if let makerTour {
+                PhotoManagerView(tour: makerTour.tour)
+            }
         }
         .task(id: tourId) {
             transcriptText = await makerTourService.stopTranscript(tourId: tourId)
@@ -302,21 +303,16 @@ struct TourAuthoringView: View {
                 }
             }
 
-            if isUploadingPhotos {
-                HStack { Spacer(); ProgressView(); Spacer() }
-                    .padding(.vertical, AtlasSpacing.md)
-            } else {
-                PhotosPicker(
-                    selection: $photoItems,
-                    maxSelectionCount: 5,
-                    matching: .images
-                ) {
-                    audioButton(all.isEmpty ? "Add photos" : "Add more photos",
-                                systemImage: "photo.badge.plus", primary: all.isEmpty)
-                }
+            Button { showingPhotoManager = true } label: {
+                audioButton(all.isEmpty ? "Add photos" : "Manage photos",
+                            systemImage: all.isEmpty ? "photo.badge.plus" : "square.grid.2x2",
+                            primary: all.isEmpty)
             }
+            .buttonStyle(.plain)
 
-            Text("Photos are cropped to 1200×900. The first is the cover.")
+            Text(all.isEmpty
+                 ? "Photos are framed to 1200×900. The first is the cover."
+                 : "\(all.count) of \(PhotoManagerView.maxPhotos) · drag to reorder, the first is the cover.")
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.tertiaryText)
         }
@@ -433,51 +429,6 @@ struct TourAuthoringView: View {
     }
 
     // MARK: - Import
-
-    // MARK: - Photos
-
-    private func handlePhotoSelection(_ items: [PhotosPickerItem]) {
-        guard !items.isEmpty, let tour = makerTour?.tour else { return }
-        errorMessage = nil
-        isUploadingPhotos = true
-        Task {
-            defer { isUploadingPhotos = false; photoItems = [] }
-            do {
-                var datas: [Data] = []
-                for item in items {
-                    guard let raw = try await item.loadTransferable(type: Data.self),
-                          let cropped = Self.cropTo1200x900(raw) else { continue }
-                    datas.append(cropped)
-                }
-                if !datas.isEmpty {
-                    try await makerTourService.attachPhotos(to: tour, images: datas)
-                }
-            } catch {
-                errorMessage = AuthoringErrorText.message(for: error)
-            }
-        }
-    }
-
-    /// Aspect-fill crop + resize to 1200×900, re-encoded as JPEG. Returns nil on
-    /// non-UIKit platforms or undecodable data.
-    nonisolated private static func cropTo1200x900(_ data: Data) -> Data? {
-        #if canImport(UIKit)
-        guard let image = UIImage(data: data) else { return nil }
-        let target = CGSize(width: 1200, height: 900)
-        let scale = max(target.width / image.size.width, target.height / image.size.height)
-        let scaled = CGSize(width: image.size.width * scale, height: image.size.height * scale)
-        let origin = CGPoint(x: (target.width - scaled.width) / 2,
-                             y: (target.height - scaled.height) / 2)
-        let format = UIGraphicsImageRendererFormat()
-        format.scale = 1
-        let rendered = UIGraphicsImageRenderer(size: target, format: format).image { _ in
-            image.draw(in: CGRect(origin: origin, size: scaled))
-        }
-        return rendered.jpegData(compressionQuality: 0.82)
-        #else
-        return nil
-        #endif
-    }
 
     // MARK: - Audio import
 
