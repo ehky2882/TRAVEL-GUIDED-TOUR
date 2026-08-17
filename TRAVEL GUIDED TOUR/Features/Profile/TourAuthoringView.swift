@@ -28,6 +28,13 @@ struct TourAuthoringView: View {
     @State private var isDeleting = false
     @State private var showingDetailsEditor = false
     @State private var showingPhotoManager = false
+    @State private var uploadProgress: Double = 0
+    @State private var uploadTotalBytes: Int64 = 0
+    /// A recording that was paid for in effort but didn't reach the server. Kept
+    /// so "try again" is possible — a maker may not be able to record it twice.
+    @State private var failedUpload: FailedAudioUpload?
+    @State private var attachedAudioURL: URL?
+    @State private var audioPreview = AuthoringAudioPreview()
     @State private var errorMessage: String?
 
     /// Live lookup so the view refreshes after an upload reloads `myTours`.
@@ -69,7 +76,7 @@ struct TourAuthoringView: View {
             Color.clear.frame(height: AtlasBottomModule.height())
         }
         .onAppear { navState.push() }
-        .onDisappear { navState.pop() }
+        .onDisappear { navState.pop(); audioPreview.stop() }
         .fileImporter(
             isPresented: $importingAudio,
             allowedContentTypes: [.audio],
@@ -94,6 +101,7 @@ struct TourAuthoringView: View {
         }
         .task(id: tourId) {
             transcriptText = await makerTourService.stopTranscript(tourId: tourId)
+            attachedAudioURL = await makerTourService.stopAudioURL(tourId: tourId)
         }
         .confirmationDialog(
             "Delete this tour?",
@@ -364,18 +372,44 @@ struct TourAuthoringView: View {
                 .foregroundStyle(AtlasColors.secondaryText)
 
             if hasAudio, let seconds = makerTour?.tour.totalDurationSeconds {
-                HStack(spacing: AtlasSpacing.sm) {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(AtlasColors.mapPin)
-                    Text("Audio added · \(AtlasFormatters.duration(seconds: seconds))")
+                // Hear what's attached without re-recording it. Before this the
+                // editor could only tell you audio existed, never play it.
+                HStack(spacing: AtlasSpacing.md) {
+                    Button {
+                        if let url = attachedAudioURL { audioPreview.toggle(url: url) }
+                    } label: {
+                        Image(systemName: audioPreview.isPlaying ? "pause.fill" : "play.fill")
+                            .font(.system(size: 13))
+                            .foregroundStyle(AtlasColors.background)
+                            .frame(width: 36, height: 36)
+                            .background(AtlasColors.mapPin, in: Circle())
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(attachedAudioURL == nil)
+                    .accessibilityLabel(audioPreview.isPlaying ? "Pause preview" : "Play the attached audio")
+
+                    Text(audioPreview.isPlaying
+                         ? AtlasFormatters.duration(seconds: Int(audioPreview.elapsed))
+                         : AtlasFormatters.duration(seconds: seconds))
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.primaryText)
+                        .monospacedDigit()
+
+                    Spacer()
+
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundStyle(AtlasColors.mapPin)
                 }
+                .padding(.horizontal, AtlasSpacing.md)
+                .padding(.vertical, 12)
+                .background(AtlasColors.background)
+                .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
             }
 
             if isUploading {
-                HStack { Spacer(); ProgressView(); Spacer() }
-                    .padding(.vertical, AtlasSpacing.md)
+                uploadProgressCard
+            } else if let failed = failedUpload {
+                failedUploadCard(failed)
             } else {
                 Button { showingRecorder = true } label: {
                     audioButton(hasAudio ? "Re-record audio" : "Record audio",
@@ -388,11 +422,11 @@ struct TourAuthoringView: View {
                                 systemImage: "square.and.arrow.down", primary: false)
                 }
                 .buttonStyle(.plain)
-            }
 
-            Text("Record narration here, or import an audio file (m4a, mp3, wav).")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
+                Text("Record narration here, or import an audio file (m4a, mp3, wav).")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.tertiaryText)
+            }
 
             if let errorMessage {
                 Text(errorMessage)
@@ -401,6 +435,71 @@ struct TourAuthoringView: View {
             }
         }
     }
+
+    /// Real byte progress, not a spinner. Narration is the largest thing this
+    /// app uploads, and an indeterminate spinner can't distinguish "nearly
+    /// there" from "stalled".
+    private var uploadProgressCard: some View {
+        VStack(alignment: .leading, spacing: 9) {
+            HStack {
+                Text("Narration")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.primaryText)
+                Spacer()
+                Text("\(Int(uploadProgress * 100))%")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .monospacedDigit()
+            }
+            ProgressView(value: uploadProgress)
+                .tint(AtlasColors.mapPin)
+            if uploadTotalBytes > 0 {
+                Text("\(AtlasFormatters.fileSize(Int64(Double(uploadTotalBytes) * uploadProgress))) of \(AtlasFormatters.fileSize(uploadTotalBytes))")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.tertiaryText)
+            }
+        }
+        .padding(AtlasSpacing.md)
+        .background(AtlasColors.background)
+        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+    }
+
+    /// A failed upload keeps the file and offers to try again, rather than
+    /// dropping a recording the maker may not be able to make twice.
+    private func failedUploadCard(_ failed: FailedAudioUpload) -> some View {
+        VStack(alignment: .leading, spacing: 9) {
+            Text("Narration didn't upload")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.mapPin)
+            Text(failed.reason)
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+            HStack(spacing: AtlasSpacing.sm) {
+                Button { retryUpload(failed) } label: {
+                    Text("Try again")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.background)
+                        .padding(.horizontal, 12).padding(.vertical, 6)
+                        .background(AtlasColors.mapPin, in: RoundedRectangle(cornerRadius: 6))
+                }
+                .buttonStyle(.plain)
+
+                Button { failedUpload = nil } label: {
+                    Text("Discard")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.primaryText)
+                        .padding(.horizontal, 12).padding(.vertical, 6)
+                        .overlay(RoundedRectangle(cornerRadius: 6)
+                            .stroke(AtlasColors.tertiaryText, lineWidth: 1))
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(AtlasSpacing.md)
+        .background(AtlasColors.background)
+        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+    }
+
 
     private func saveTranscript() {
         errorMessage = nil
@@ -444,7 +543,9 @@ struct TourAuthoringView: View {
 
     private func uploadAudio(from url: URL, tour: Tour) {
         errorMessage = nil
+        failedUpload = nil
         isUploading = true
+        uploadProgress = 0
         Task {
             defer { isUploading = false }
             do {
@@ -459,16 +560,50 @@ struct TourAuthoringView: View {
                 let contentType = UTType(filenameExtension: url.pathExtension)?
                     .preferredMIMEType ?? "audio/mpeg"
 
-                try await makerTourService.attachAudio(
-                    to: tour,
-                    data: data,
-                    filename: filename,
-                    contentType: contentType,
-                    durationSeconds: seconds
-                )
+                uploadTotalBytes = Int64(data.count)
+                try await send(data: data, filename: filename, contentType: contentType,
+                               seconds: seconds, tour: tour)
             } catch {
-                errorMessage = AuthoringErrorText.message(for: error)
+                // Hold on to what we decoded so Try again doesn't need the file
+                // back — an imported file's security-scoped URL may be gone by
+                // then, and a recording may not be repeatable at all.
+                failedUpload = FailedAudioUpload(
+                    sourceURL: url,
+                    reason: AuthoringErrorText.message(for: error)
+                )
             }
         }
     }
+
+    /// Retry a failed upload from the original source.
+    private func retryUpload(_ failed: FailedAudioUpload) {
+        guard let tour = makerTour?.tour else { return }
+        failedUpload = nil
+        uploadAudio(from: failed.sourceURL, tour: tour)
+    }
+
+    /// The upload itself, split out so `uploadAudio` and `retryUpload` share one
+    /// path rather than drifting.
+    private func send(data: Data, filename: String, contentType: String,
+                      seconds: Int, tour: Tour) async throws {
+        try await makerTourService.attachAudio(
+            to: tour,
+            data: data,
+            filename: filename,
+            contentType: contentType,
+            durationSeconds: seconds,
+            onProgress: { fraction in
+                Task { @MainActor in uploadProgress = fraction }
+            }
+        )
+        attachedAudioURL = await makerTourService.stopAudioURL(tourId: tour.id)
+    }
+
+}
+
+/// An audio upload that failed after the file was already in hand.
+struct FailedAudioUpload: Equatable {
+    let sourceURL: URL
+    /// Already human-readable — see `AuthoringErrorText`.
+    let reason: String
 }

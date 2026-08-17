@@ -32,6 +32,9 @@ final class MakerTourService {
     /// Last-known tour list, persisted per user so the Me-tab feed renders on the
     /// first frame after launch instead of an empty list. See `ProfileSnapshotStore`.
     private let snapshot: ProfileSnapshotStore<[MakerTour]>
+    /// Byte-progress uploader, used for audio only. Photos stay on the SDK —
+    /// they're small, and "3 of 5" is the honest unit for a batch anyway.
+    private let uploader = StorageUploader()
     private var loadedUid: String?
     private var didHydrate = false
 
@@ -67,21 +70,31 @@ final class MakerTourService {
     /// `tour-audio/{maker_id}/{tour_id}/{filename}` — the leading maker-id
     /// segment satisfies the storage RLS (`owns_maker`). Reloads `myTours` so
     /// the feed reflects the new duration.
+    /// - Parameter onProgress: fractional upload progress, 0...1. Narration is
+    ///   the largest thing this app uploads, so this path goes through
+    ///   `StorageUploader` rather than the SDK — see that type for why the SDK
+    ///   can't report progress.
     func attachAudio(
         to tour: Tour,
         data: Data,
         filename: String,
         contentType: String,
-        durationSeconds: Int
+        durationSeconds: Int,
+        onProgress: @escaping @Sendable (Double) -> Void = { _ in }
     ) async throws {
         let makerId = tour.makerId.uuidString.lowercased()
         let tourId = tour.id.uuidString.lowercased()
         let path = "\(makerId)/\(tourId)/\(filename)"
 
-        _ = try await client.storage
-            .from("tour-audio")
-            .upload(path, data: data, options: FileOptions(contentType: contentType, upsert: true))
-        let publicURL = try client.storage.from("tour-audio").getPublicURL(path: path).absoluteString
+        let token = try await client.auth.session.accessToken
+        let publicURL = try await uploader.upload(
+            data: data,
+            bucket: "tour-audio",
+            path: path,
+            contentType: contentType,
+            accessToken: token,
+            onProgress: onProgress
+        )
 
         // Patch the stop (single-stop draft → order 0) and the tour duration.
         // Filter by tour_id only. The stop column is literally named "order",
@@ -330,6 +343,28 @@ final class MakerTourService {
         }
     }
 
+    /// The URL of the audio attached to a tour's single stop, if any.
+    ///
+    /// Needed for the same reason as `stopLocation`: `MakerTour` carries no
+    /// stops, so the editor knows a tour *has* audio (from its duration) without
+    /// knowing where that audio is — which is why it could never offer to play
+    /// it back.
+    func stopAudioURL(tourId: UUID) async -> URL? {
+        do {
+            let rows: [StopAudioRow] = try await client
+                .from("stops")
+                .select("audio_url")
+                .eq("tour_id", value: tourId.uuidString.lowercased())
+                .limit(1)
+                .execute()
+                .value
+            guard let raw = rows.first?.audioURL, !raw.isEmpty else { return nil }
+            return URL(string: raw)
+        } catch {
+            return nil
+        }
+    }
+
     /// Current transcript text for a tour's single stop ("" if none).
     func stopTranscript(tourId: UUID) async -> String {
         do {
@@ -483,6 +518,12 @@ private struct TourDetailsPatch: Encodable {
         case centroidLatitude = "centroid_latitude"
         case centroidLongitude = "centroid_longitude"
     }
+}
+
+/// Read payload: a stop's audio URL (see `stopAudioURL`).
+private struct StopAudioRow: Decodable {
+    let audioURL: String?
+    enum CodingKeys: String, CodingKey { case audioURL = "audio_url" }
 }
 
 /// Read payload: a stop's pin + geofence radius (see `stopLocation`).

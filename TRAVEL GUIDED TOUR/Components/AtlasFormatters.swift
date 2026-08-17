@@ -20,6 +20,23 @@ enum AtlasFormatters {
     /// previously a 1m 59s tour read as `"1m"` in the subtitle while
     /// the bar counted down from `1:59`, looking like a bug
     /// (2026-06-03 owner correction).
+    /// Byte counts for upload progress — "4.1 MB of 6.6 MB".
+    ///
+    /// Uses `ByteCountFormatter`'s file convention so the units match what iOS
+    /// shows elsewhere (Settings, Files), rather than inventing our own
+    /// rounding. Bounded at zero: a mid-flight fraction can compute slightly
+    /// negative on the first tick.
+    static func fileSize(_ bytes: Int64) -> String {
+        byteFormatter.string(fromByteCount: max(0, bytes))
+    }
+
+    private static let byteFormatter: ByteCountFormatter = {
+        let f = ByteCountFormatter()
+        f.countStyle = .file
+        f.allowedUnits = [.useKB, .useMB]
+        return f
+    }()
+
     static func duration(seconds: Int) -> String {
         let total = TimeInterval(max(0, seconds))
         if total < 60 {
