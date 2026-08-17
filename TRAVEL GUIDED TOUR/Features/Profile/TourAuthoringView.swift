@@ -28,6 +28,7 @@ struct TourAuthoringView: View {
     @State private var isSubmitting = false
     @State private var showingDeleteConfirm = false
     @State private var isDeleting = false
+    @State private var showingDetailsEditor = false
     @State private var errorMessage: String?
 
     /// Live lookup so the view refreshes after an upload reloads `myTours`.
@@ -41,6 +42,7 @@ struct TourAuthoringView: View {
             VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
                 if let makerTour {
                     header(makerTour)
+                    detailsSection(makerTour)
                     audioSection
                     photosSection(makerTour.tour)
                     transcriptSection
@@ -79,6 +81,11 @@ struct TourAuthoringView: View {
         .sheet(isPresented: $showingRecorder) {
             AudioRecordSheet { url in
                 if let tour = makerTour?.tour { uploadAudio(from: url, tour: tour) }
+            }
+        }
+        .sheet(isPresented: $showingDetailsEditor) {
+            if let makerTour {
+                TourDetailsEditorView(tour: makerTour.tour, status: makerTour.status)
             }
         }
         .onChange(of: photoItems) { _, items in
@@ -136,7 +143,75 @@ struct TourAuthoringView: View {
                 try await makerTourService.deleteTour(tour)
                 dismiss()
             } catch {
-                errorMessage = error.localizedDescription
+                errorMessage = AuthoringErrorText.message(for: error)
+            }
+        }
+    }
+
+    /// The tour's metadata, as tappable rows that open the details editor.
+    ///
+    /// Before this existed, everything shown here was set once on the create
+    /// form and then frozen — a typo in a title could only be fixed by deleting
+    /// the tour, taking its audio and photos with it.
+    private func detailsSection(_ makerTour: MakerTour) -> some View {
+        let tour = makerTour.tour
+        let tagSummary = tour.tags.isEmpty ? "None" : tour.tags.joined(separator: " · ")
+        return VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            HStack {
+                Text("DETAILS")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                Spacer()
+                Text("Edit")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.mapPin)
+            }
+
+            Button { showingDetailsEditor = true } label: {
+                VStack(spacing: 0) {
+                    detailRow("TITLE", tour.title, isLast: false)
+                    detailRow("SHORT DESCRIPTION",
+                              tour.shortDescription.isEmpty ? "Not set" : tour.shortDescription,
+                              isLast: false)
+                    detailRow("TAGS", tagSummary, isLast: false, mono: true)
+                    detailRow("LOCATION",
+                              String(format: "%.4f, %.4f", tour.centroidLatitude, tour.centroidLongitude),
+                              isLast: true, mono: true)
+                }
+                .background(AtlasColors.background)
+                .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Edit tour details")
+            .accessibilityHint("Opens the editor for title, description, tags and location")
+        }
+    }
+
+    private func detailRow(_ key: String, _ value: String, isLast: Bool, mono: Bool = false) -> some View {
+        HStack(alignment: .center, spacing: AtlasSpacing.md) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(key)
+                    .font(.system(size: 11, weight: .regular, design: .monospaced))
+                    .foregroundStyle(AtlasColors.tertiaryText)
+                Text(value)
+                    .font(mono ? AtlasTypography.caption : AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+            }
+            Spacer(minLength: 0)
+            Image(systemName: "chevron.right")
+                .font(.system(size: 13))
+                .foregroundStyle(AtlasColors.tertiaryText)
+        }
+        .padding(.horizontal, AtlasSpacing.md)
+        .padding(.vertical, 13)
+        .overlay(alignment: .bottom) {
+            if !isLast {
+                Rectangle()
+                    .fill(AtlasColors.divider)
+                    .frame(height: 0.5)
+                    .padding(.leading, AtlasSpacing.md)
             }
         }
     }
@@ -339,7 +414,7 @@ struct TourAuthoringView: View {
             do {
                 try await makerTourService.setTranscript(tourId: tourId, text: transcriptText)
             } catch {
-                errorMessage = error.localizedDescription
+                errorMessage = AuthoringErrorText.message(for: error)
             }
         }
     }
@@ -352,7 +427,7 @@ struct TourAuthoringView: View {
             do {
                 try await makerTourService.submitForReview(tour: tour, transcript: transcriptText)
             } catch {
-                errorMessage = error.localizedDescription
+                errorMessage = AuthoringErrorText.message(for: error)
             }
         }
     }
@@ -378,7 +453,7 @@ struct TourAuthoringView: View {
                     try await makerTourService.attachPhotos(to: tour, images: datas)
                 }
             } catch {
-                errorMessage = error.localizedDescription
+                errorMessage = AuthoringErrorText.message(for: error)
             }
         }
     }
@@ -409,7 +484,7 @@ struct TourAuthoringView: View {
     private func handleImport(_ result: Result<[URL], Error>) {
         switch result {
         case .failure(let error):
-            errorMessage = error.localizedDescription
+            errorMessage = AuthoringErrorText.message(for: error)
         case .success(let urls):
             guard let url = urls.first, let tour = makerTour?.tour else { return }
             uploadAudio(from: url, tour: tour)
@@ -441,7 +516,7 @@ struct TourAuthoringView: View {
                     durationSeconds: seconds
                 )
             } catch {
-                errorMessage = error.localizedDescription
+                errorMessage = AuthoringErrorText.message(for: error)
             }
         }
     }
