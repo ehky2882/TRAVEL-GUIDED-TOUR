@@ -42,6 +42,9 @@ struct HomeMapSection: View {
     /// showing). Drives the StopPin's thicker selection ring. Pure
     /// presentation — pin taps go up via `onPinTapped`.
     let selectedTourId: UUID?
+    /// Id of the currently-previewed place, so its pin can show the selected
+    /// ring. Separate from `selectedTourId` because a place pin is not a tour.
+    let selectedPlaceId: UUID?
     @Binding var cameraPosition: MapCameraPosition
     /// Active map type — Standard / Hybrid / Satellite. Lifted to the
     /// parent so the map-mode selector button can cycle it.
@@ -78,9 +81,6 @@ struct HomeMapSection: View {
     /// Fires when the user taps a pin standing for a **place** — a site several
     /// tours describe. Carries the place id and its coordinate.
     let onPlaceTapped: (UUID, CLLocationCoordinate2D) -> Void
-    /// Id of the currently-previewed place, so its pin can show the selected
-    /// ring. Separate from `selectedTourId` because a place pin is not a tour.
-    let selectedPlaceId: UUID?
     /// Fires when the user taps the map outside any pin or the
     /// placecard. Parent uses this to dismiss the placecard.
     let onMapTapped: () -> Void
