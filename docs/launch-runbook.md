@@ -334,9 +334,28 @@ Run down this list. Everything must be a yes:
 
 **Who:** Claude, on your explicit go-ahead.
 
+**Before you run it:** confirm the version page shows the screenshots you
+approved, and only those. This lane **does not upload or repair screenshots** —
+Step 9 is the only thing that puts them there. Whatever the listing holds at
+this moment is what Apple sees.
+
 GitHub → **Actions** → **App Store release** → **Run workflow**, typing
 `RELEASE` in the confirmation box. It refuses to run from any branch but `main`,
 and refuses to run at all if the confirmation does not match exactly.
+
+⚠️ **This lane used to destroy the screenshots at the moment of submission.**
+It passed `overwrite_screenshots: true` — "delete every screenshot on the
+listing, then upload the ones in `fastlane/screenshots`" — against a directory
+that is empty in a fresh CI checkout, because screenshots are gitignored on
+purpose. The delete would have run; the upload would have had nothing to send.
+Fixed on 2026-08-18: the lane now passes `skip_screenshots: true` and leaves
+them alone. Do not reintroduce `overwrite_screenshots` here.
+
+The **App Review contact details** are safe by contrast, and this was checked
+rather than assumed: deliver only writes review-information fields it has a
+non-empty value for, so the reviewer phone number you typed into App Store
+Connect by hand survives this lane even though it is deliberately absent from
+the repo (Step 12).
 
 **You know it worked when:** App Store Connect shows the version as *Waiting for
 Review*.
