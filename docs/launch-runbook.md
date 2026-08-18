@@ -200,6 +200,17 @@ route through the app is code and can be changed.
 
 **Who:** Claude, once you have said they are good.
 
+GitHub → **Actions** → **Upload screenshots to App Store Connect** → **Run
+workflow**, giving it the run ID of the screenshot run you approved. It sends
+those exact images and **submits nothing for review**.
+
+⚠️ **A green run is not proof.** On 2026-08-17 the upload reported
+"Successfully uploaded all screenshots" and left the listing holding **ten**
+images, four of them duplicates: Apple had not finished processing the first
+upload when fastlane re-checked, so it re-sent the four it thought were
+missing. Claude must query App Store Connect afterwards and confirm the exact
+set — see § "App Store screenshots" in `CLAUDE.md` for how.
+
 ---
 
 ## Phase E — The listing
