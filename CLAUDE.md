@@ -1792,6 +1792,9 @@ Key facts:
 - Theme tokens in `Theme/Atlas*.swift` are placeholder values pending design pass (color is now decided; type/spacing still placeholder)
 - `UIBackgroundModes=audio` now in explicit `Info.plist` (not INFOPLIST_KEY — Xcode ignores that for arrays)
 
+- **Public surfaces (as of 2026-08-18):** website **`https://dozent.world`** (Vercel project `dozent-world`, deployed from `site/` on every push to `main`) carrying `/privacy/`, `/terms/` and `/acceptable-use/` · contact **`hello@dozent.world`** (ImprovMX free tier — **forwards to the owner's Gmail, receive-only**; replying as the domain needs a real mailbox). `Theme/AtlasLegalLinks.swift` holds the three URLs for the app, and `fastlane/metadata/en-US/{support,privacy,marketing}_url.txt` for the App Store listing — **all three must agree with the Privacy Policy URL registered in App Store Connect.**
+- **🔴 `dozent.world` and `ehky2882.github.io` are two hosts with two jobs.** The github.io host is the **asset CDN** — every tour's audio and images, and **7,713 absolute URLs in `Tours.json` point at it**. Never attach the custom domain to GitHub Pages; it would redirect all of them.
+
 See `ROADMAP.md` for full milestone history. Read latest `archive/HANDOFF-*.md` for mid-flight context.
 
 ## Session-start ritual (automatic — Claude runs this first, every session)
@@ -1858,6 +1861,7 @@ Every session that ships a milestone, cuts scope, or changes "what's true today"
 | `docs/launch-runbook.md` | **Step-by-step App Store launch walkthrough — start here to ship** |
 | `docs/fastlane.md` | How the release automation works (lanes, metadata, screenshots) |
 | `fastlane/` | The release toolchain: lanes, App Store metadata, screenshot config |
+| `site/` | **The public website, `dozent.world`** — home + privacy/terms/acceptable-use. Deployed by Vercel (project `dozent-world`, Root Directory `site`) on every push to `main`. **Not** the asset CDN |
 | `docs/testflight.md` | Per-release upload runbook (~10 min) |
 | `docs/troubleshooting.md` | Xcode + git landmines from real incidents |
 | `scripts/validate-tours.swift` | Validates `Tours.json`; run: `swift scripts/validate-tours.swift` |
