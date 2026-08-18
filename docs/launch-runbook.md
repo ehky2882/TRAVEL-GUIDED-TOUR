@@ -20,8 +20,9 @@ of it waiting for Apple. Review itself is usually 24–48 hours.
 - **The App Store listing is already updated and live** (pushed 2026-08-07):
   description, keywords, subtitle, promotional text and support URL all match
   `fastlane/metadata/`. Steps 10–11 below are done.
-- App Store Connect already holds an editable **version 1.0** in *Prepare for
-  Submission*, and the store name is **Atlas Audio Tours**.
+- App Store Connect already holds an editable version record in *Prepare for
+  Submission* — **1.1**, matching the project, as of 2026-08-18 (see Step 3).
+  The app's name at Apple is **Dozent**.
 - Screenshots can be captured automatically.
 - The release submission is one button with a safety catch on it.
 
