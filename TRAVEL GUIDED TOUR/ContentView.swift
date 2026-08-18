@@ -267,6 +267,14 @@ struct ContentView: View {
                     .environment(navState)
                     .environment(homeSharedState)
                     .environment(tourPresenter)
+                    // MakerView is pushed in-stack from tour detail, and its
+                    // MAP tab draws place pins. Without this the presenter is
+                    // nil there and tapping a place pin does nothing at all —
+                    // silently, because the lookup is optional to keep this
+                    // layer from crashing. Same shape as the batch-D Follow
+                    // button that went missing for exactly one dropped
+                    // injection (build 68 → 69).
+                    .environment(placePresenter)
                     .environment(dataService)
                     .environment(locationManager)
                     .environment(audioPlayer)
@@ -345,6 +353,7 @@ struct ContentView: View {
                     .environment(homeSharedState)
                     .environment(tourPresenter)
                     .environment(makerPresenter)
+                    .environment(placePresenter)
                     .environment(dataService)
                     .environment(locationManager)
                     .environment(audioPlayer)
