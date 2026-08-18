@@ -84,9 +84,12 @@ struct ClusterPin: View {
 /// **capsule** — different shape, same palette, and it still reads in greyscale
 /// or to someone who can't distinguish the hue.
 ///
-/// ⚠️ Provisional. It resolves the collision without inventing a second colour
-/// (the app has exactly one accent by design), but the pin treatment is an
-/// open design question and this is a defensible default, not a settled answer.
+/// ✅ **Owner-confirmed 2026-08-18** ("i like your capsule"), reviewed on
+/// device in TestFlight 1.1 (68) against a real cluster pin. This closes the
+/// "place pin vs. cluster pin" question the design handoff left open — it is a
+/// decision now, not a placeholder, so don't quietly revert it to a circle for
+/// consistency with the cluster. The differing silhouette IS the point, and it
+/// costs no second colour (the app has exactly one accent by design).
 struct PlacePin: View {
     let count: Int
     var isSelected: Bool = false
