@@ -32,6 +32,9 @@ final class MakerTourService {
     /// Last-known tour list, persisted per user so the Me-tab feed renders on the
     /// first frame after launch instead of an empty list. See `ProfileSnapshotStore`.
     private let snapshot: ProfileSnapshotStore<[MakerTour]>
+    /// Byte-progress uploader, used for audio only. Photos stay on the SDK —
+    /// they're small, and "3 of 5" is the honest unit for a batch anyway.
+    private let uploader = StorageUploader()
     private var loadedUid: String?
     private var didHydrate = false
 
@@ -67,21 +70,31 @@ final class MakerTourService {
     /// `tour-audio/{maker_id}/{tour_id}/{filename}` — the leading maker-id
     /// segment satisfies the storage RLS (`owns_maker`). Reloads `myTours` so
     /// the feed reflects the new duration.
+    /// - Parameter onProgress: fractional upload progress, 0...1. Narration is
+    ///   the largest thing this app uploads, so this path goes through
+    ///   `StorageUploader` rather than the SDK — see that type for why the SDK
+    ///   can't report progress.
     func attachAudio(
         to tour: Tour,
         data: Data,
         filename: String,
         contentType: String,
-        durationSeconds: Int
+        durationSeconds: Int,
+        onProgress: @escaping @Sendable (Double) -> Void = { _ in }
     ) async throws {
         let makerId = tour.makerId.uuidString.lowercased()
         let tourId = tour.id.uuidString.lowercased()
         let path = "\(makerId)/\(tourId)/\(filename)"
 
-        _ = try await client.storage
-            .from("tour-audio")
-            .upload(path, data: data, options: FileOptions(contentType: contentType, upsert: true))
-        let publicURL = try client.storage.from("tour-audio").getPublicURL(path: path).absoluteString
+        let token = try await client.auth.session.accessToken
+        let publicURL = try await uploader.upload(
+            data: data,
+            bucket: "tour-audio",
+            path: path,
+            contentType: contentType,
+            accessToken: token,
+            onProgress: onProgress
+        )
 
         // Patch the stop (single-stop draft → order 0) and the tour duration.
         // Filter by tour_id only. The stop column is literally named "order",
@@ -95,42 +108,6 @@ final class MakerTourService {
             .execute()
         try await client.from("tours")
             .update(TourDurationPatch(totalDurationSeconds: durationSeconds))
-            .eq("id", value: tourId)
-            .execute()
-
-        await loadMyTours(makerId: tour.makerId)
-    }
-
-    /// Upload photos (already cropped to 1200×900 JPEG) for a draft tour and
-    /// patch `hero_image_url` + `additional_image_urls`. The first photo becomes
-    /// the cover when the tour has none yet; the rest append to the gallery.
-    /// Stored at `tour-images/{maker_id}/{tour_id}/{filename}`.
-    func attachPhotos(to tour: Tour, images: [Data]) async throws {
-        guard !images.isEmpty else { return }
-        let makerId = tour.makerId.uuidString.lowercased()
-        let tourId = tour.id.uuidString.lowercased()
-
-        var uploaded: [String] = []
-        for data in images {
-            let path = "\(makerId)/\(tourId)/photo-\(UUID().uuidString).jpg"
-            _ = try await client.storage
-                .from("tour-images")
-                .upload(path, data: data, options: FileOptions(contentType: "image/jpeg", upsert: true))
-            uploaded.append(try client.storage.from("tour-images").getPublicURL(path: path).absoluteString)
-        }
-
-        let existingHero = tour.heroImageURL.isEmpty ? nil : tour.heroImageURL
-        var hero = existingHero
-        var additional = tour.additionalImageURLs ?? []
-        if existingHero == nil {
-            hero = uploaded.first
-            additional += Array(uploaded.dropFirst())
-        } else {
-            additional += uploaded
-        }
-
-        try await client.from("tours")
-            .update(TourImagesPatch(heroImageURL: hero ?? "", additionalImageURLs: additional))
             .eq("id", value: tourId)
             .execute()
 
@@ -211,6 +188,181 @@ final class MakerTourService {
         let tour = tourRow.asTour(stops: [])
         myTours.insert(MakerTour(tour: tour, status: .draft), at: 0)
         return tourId
+    }
+
+    /// Edit a tour's metadata after it was created — title, both descriptions,
+    /// tags, and the stop's pin + geofence radius.
+    ///
+    /// **Why this exists at all:** before it, everything on the create form was
+    /// frozen for the life of the tour. A typo in a title could only be fixed by
+    /// deleting the tour, which also destroyed its audio and photos. This is the
+    /// single biggest gap in the authoring flow.
+    ///
+    /// **A published tour returns to review** (owner decision, 2026-08-17).
+    /// Editing live text is allowed — a maker shouldn't need to ask an admin to
+    /// fix a typo — but it re-enters moderation rather than changing under a
+    /// listener mid-tour. A draft or an already-in-review tour keeps its status.
+    /// Note the tour is patched first and the stop second, mirroring
+    /// `createDraftTour`'s order so the stop's `owns_tour` RLS check always sees
+    /// a row it can match.
+    func updateDetails(
+        tour: Tour,
+        status: TourStatus,
+        title: String,
+        shortDescription: String,
+        longDescription: String,
+        category: TourCategory,
+        tags: [String],
+        coordinate: CLLocationCoordinate2D,
+        radiusMeters: Int
+    ) async throws {
+        let tourId = tour.id.uuidString.lowercased()
+        let cleanTitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        try await client.from("tours")
+            .update(TourDetailsPatch(
+                title: cleanTitle,
+                shortDescription: shortDescription.trimmingCharacters(in: .whitespacesAndNewlines),
+                longDescription: longDescription.trimmingCharacters(in: .whitespacesAndNewlines),
+                primaryCategory: category.rawValue,
+                tags: tags,
+                centroidLatitude: coordinate.latitude,
+                centroidLongitude: coordinate.longitude,
+                // Published edits re-enter moderation; drafts and in-review
+                // tours keep the status they already had.
+                status: status == .published ? TourStatus.inReview.rawValue : status.rawValue
+            ))
+            .eq("id", value: tourId)
+            .execute()
+
+        // Single-stop tours only for now: filter by tour_id alone. The stop
+        // column is literally named "order", which collides with PostgREST's
+        // reserved sort parameter — see `attachAudio`.
+        try await client.from("stops")
+            .update(StopLocationPatch(
+                title: cleanTitle,
+                latitude: coordinate.latitude,
+                longitude: coordinate.longitude,
+                triggerRadiusMeters: radiusMeters
+            ))
+            .eq("tour_id", value: tourId)
+            .execute()
+
+        await loadMyTours(makerId: tour.makerId)
+    }
+
+    /// Replace a tour's photo set wholesale, in the given order: the first entry
+    /// becomes the cover, the rest the gallery.
+    ///
+    /// Deliberately a *replace*, not an append — reordering
+    /// and removal both need to express "this exact list, in this exact order",
+    /// and an append-only API cannot say that. Any file dropped from the list is
+    /// also deleted from Storage rather than orphaned, since nothing else will
+    /// ever reference it. Storage deletion is best-effort: a failure there must
+    /// not block the reorder the user asked for, and the worst case is a stray
+    /// object nothing points at.
+    func setPhotos(for tour: Tour, orderedURLs: [String]) async throws {
+        let previous = Set(([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
+            .filter { !$0.isEmpty })
+        let kept = Set(orderedURLs)
+        let removed = previous.subtracting(kept)
+
+        try await client.from("tours")
+            .update(TourImagesPatch(
+                heroImageURL: orderedURLs.first ?? "",
+                additionalImageURLs: Array(orderedURLs.dropFirst())
+            ))
+            .eq("id", value: tour.id.uuidString.lowercased())
+            .execute()
+
+        for url in removed {
+            guard let path = Self.storagePath(from: url, bucket: "tour-images") else { continue }
+            _ = try? await client.storage.from("tour-images").remove(paths: [path])
+        }
+
+        await loadMyTours(makerId: tour.makerId)
+    }
+
+    /// Upload images (already cropped to 1200×900 JPEG) and return their public
+    /// URLs, without touching the tour row. Split from `setPhotos` so the caller
+    /// can upload, then commit one ordered list — which is what makes "add three
+    /// photos and drag one to the front" a single write instead of three.
+    func uploadPhotos(for tour: Tour, images: [Data]) async throws -> [String] {
+        let makerId = tour.makerId.uuidString.lowercased()
+        let tourId = tour.id.uuidString.lowercased()
+        var uploaded: [String] = []
+        for data in images {
+            let path = "\(makerId)/\(tourId)/photo-\(UUID().uuidString).jpg"
+            _ = try await client.storage
+                .from("tour-images")
+                .upload(path, data: data, options: FileOptions(contentType: "image/jpeg", upsert: true))
+            uploaded.append(try client.storage.from("tour-images").getPublicURL(path: path).absoluteString)
+        }
+        return uploaded
+    }
+
+    /// Recover the storage object path from a public URL, so a removed photo can
+    /// actually be deleted rather than left behind. Public URLs look like
+    /// `…/storage/v1/object/public/<bucket>/<maker>/<tour>/<file>`; everything
+    /// after the bucket segment is the path. Returns nil rather than guessing if
+    /// the URL isn't in that shape — a wrong path would delete nothing, but a
+    /// *plausible* wrong path could delete the wrong object.
+    nonisolated static func storagePath(from urlString: String, bucket: String) -> String? {
+        guard let url = URL(string: urlString) else { return nil }
+        let parts = url.pathComponents.filter { $0 != "/" }
+        guard let bucketIndex = parts.lastIndex(of: bucket),
+              bucketIndex + 1 < parts.count
+        else { return nil }
+        return parts[(bucketIndex + 1)...].joined(separator: "/")
+    }
+
+    /// The tour's single stop as stored — pin and geofence radius.
+    ///
+    /// **Needed because `MakerTour` carries no stops.** `TourRow.asMakerTour`
+    /// builds its `Tour` with `stops: []` (the feed only needs title, status and
+    /// images), so a details editor reading `tour.stops.first` sees nil and
+    /// would silently fall back to a default radius — quietly resetting every
+    /// tour's geofence to 30 m the first time anyone edited its title. Read the
+    /// real values instead.
+    func stopLocation(tourId: UUID) async -> (coordinate: CLLocationCoordinate2D, radiusMeters: Int)? {
+        do {
+            // Single-stop tours: filter by tour_id alone — the "order" column
+            // collides with PostgREST's reserved sort param (see attachAudio).
+            let rows: [StopLocationRow] = try await client
+                .from("stops")
+                .select("latitude,longitude,trigger_radius_meters")
+                .eq("tour_id", value: tourId.uuidString.lowercased())
+                .limit(1)
+                .execute()
+                .value
+            guard let row = rows.first else { return nil }
+            return (CLLocationCoordinate2D(latitude: row.latitude, longitude: row.longitude),
+                    row.triggerRadiusMeters)
+        } catch {
+            return nil
+        }
+    }
+
+    /// The URL of the audio attached to a tour's single stop, if any.
+    ///
+    /// Needed for the same reason as `stopLocation`: `MakerTour` carries no
+    /// stops, so the editor knows a tour *has* audio (from its duration) without
+    /// knowing where that audio is — which is why it could never offer to play
+    /// it back.
+    func stopAudioURL(tourId: UUID) async -> URL? {
+        do {
+            let rows: [StopAudioRow] = try await client
+                .from("stops")
+                .select("audio_url")
+                .eq("tour_id", value: tourId.uuidString.lowercased())
+                .limit(1)
+                .execute()
+                .value
+            guard let raw = rows.first?.audioURL, !raw.isEmpty else { return nil }
+            return URL(string: raw)
+        } catch {
+            return nil
+        }
     }
 
     /// Current transcript text for a tour's single stop ("" if none).
@@ -344,6 +496,57 @@ private struct TourDurationPatch: Encodable {
     let totalDurationSeconds: Int
     enum CodingKeys: String, CodingKey {
         case totalDurationSeconds = "total_duration_seconds"
+    }
+}
+
+/// Update payload: a tour's editable metadata (see `updateDetails`).
+private struct TourDetailsPatch: Encodable {
+    let title: String
+    let shortDescription: String
+    let longDescription: String
+    let primaryCategory: String
+    let tags: [String]
+    let centroidLatitude: Double
+    let centroidLongitude: Double
+    let status: String
+
+    enum CodingKeys: String, CodingKey {
+        case title, tags, status
+        case shortDescription = "short_description"
+        case longDescription = "long_description"
+        case primaryCategory = "primary_category"
+        case centroidLatitude = "centroid_latitude"
+        case centroidLongitude = "centroid_longitude"
+    }
+}
+
+/// Read payload: a stop's audio URL (see `stopAudioURL`).
+private struct StopAudioRow: Decodable {
+    let audioURL: String?
+    enum CodingKeys: String, CodingKey { case audioURL = "audio_url" }
+}
+
+/// Read payload: a stop's pin + geofence radius (see `stopLocation`).
+private struct StopLocationRow: Decodable {
+    let latitude: Double
+    let longitude: Double
+    let triggerRadiusMeters: Int
+    enum CodingKeys: String, CodingKey {
+        case latitude, longitude
+        case triggerRadiusMeters = "trigger_radius_meters"
+    }
+}
+
+/// Update payload: a stop's title + pin + geofence radius.
+private struct StopLocationPatch: Encodable {
+    let title: String
+    let latitude: Double
+    let longitude: Double
+    let triggerRadiusMeters: Int
+
+    enum CodingKeys: String, CodingKey {
+        case title, latitude, longitude
+        case triggerRadiusMeters = "trigger_radius_meters"
     }
 }
 

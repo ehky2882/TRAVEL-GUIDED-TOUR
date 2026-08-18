@@ -21,13 +21,20 @@ struct TourAuthoringView: View {
     @State private var importingAudio = false
     @State private var showingRecorder = false
     @State private var isUploading = false
-    @State private var photoItems: [PhotosPickerItem] = []
-    @State private var isUploadingPhotos = false
     @State private var transcriptText = ""
     @State private var isSavingTranscript = false
     @State private var isSubmitting = false
     @State private var showingDeleteConfirm = false
     @State private var isDeleting = false
+    @State private var showingDetailsEditor = false
+    @State private var showingPhotoManager = false
+    @State private var uploadProgress: Double = 0
+    @State private var uploadTotalBytes: Int64 = 0
+    /// A recording that was paid for in effort but didn't reach the server. Kept
+    /// so "try again" is possible — a maker may not be able to record it twice.
+    @State private var failedUpload: FailedAudioUpload?
+    @State private var attachedAudioURL: URL?
+    @State private var audioPreview = AuthoringAudioPreview()
     @State private var errorMessage: String?
 
     /// Live lookup so the view refreshes after an upload reloads `myTours`.
@@ -41,6 +48,7 @@ struct TourAuthoringView: View {
             VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
                 if let makerTour {
                     header(makerTour)
+                    detailsSection(makerTour)
                     audioSection
                     photosSection(makerTour.tour)
                     transcriptSection
@@ -68,7 +76,7 @@ struct TourAuthoringView: View {
             Color.clear.frame(height: AtlasBottomModule.height())
         }
         .onAppear { navState.push() }
-        .onDisappear { navState.pop() }
+        .onDisappear { navState.pop(); audioPreview.stop() }
         .fileImporter(
             isPresented: $importingAudio,
             allowedContentTypes: [.audio],
@@ -81,11 +89,19 @@ struct TourAuthoringView: View {
                 if let tour = makerTour?.tour { uploadAudio(from: url, tour: tour) }
             }
         }
-        .onChange(of: photoItems) { _, items in
-            handlePhotoSelection(items)
+        .sheet(isPresented: $showingDetailsEditor) {
+            if let makerTour {
+                TourDetailsEditorView(tour: makerTour.tour, status: makerTour.status)
+            }
+        }
+        .sheet(isPresented: $showingPhotoManager) {
+            if let makerTour {
+                PhotoManagerView(tour: makerTour.tour)
+            }
         }
         .task(id: tourId) {
             transcriptText = await makerTourService.stopTranscript(tourId: tourId)
+            attachedAudioURL = await makerTourService.stopAudioURL(tourId: tourId)
         }
         .confirmationDialog(
             "Delete this tour?",
@@ -136,7 +152,75 @@ struct TourAuthoringView: View {
                 try await makerTourService.deleteTour(tour)
                 dismiss()
             } catch {
-                errorMessage = error.localizedDescription
+                errorMessage = AuthoringErrorText.message(for: error)
+            }
+        }
+    }
+
+    /// The tour's metadata, as tappable rows that open the details editor.
+    ///
+    /// Before this existed, everything shown here was set once on the create
+    /// form and then frozen — a typo in a title could only be fixed by deleting
+    /// the tour, taking its audio and photos with it.
+    private func detailsSection(_ makerTour: MakerTour) -> some View {
+        let tour = makerTour.tour
+        let tagSummary = tour.tags.isEmpty ? "None" : tour.tags.joined(separator: " · ")
+        return VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            HStack {
+                Text("DETAILS")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                Spacer()
+                Text("Edit")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.mapPin)
+            }
+
+            Button { showingDetailsEditor = true } label: {
+                VStack(spacing: 0) {
+                    detailRow("TITLE", tour.title, isLast: false)
+                    detailRow("SHORT DESCRIPTION",
+                              tour.shortDescription.isEmpty ? "Not set" : tour.shortDescription,
+                              isLast: false)
+                    detailRow("TAGS", tagSummary, isLast: false, mono: true)
+                    detailRow("LOCATION",
+                              String(format: "%.4f, %.4f", tour.centroidLatitude, tour.centroidLongitude),
+                              isLast: true, mono: true)
+                }
+                .background(AtlasColors.background)
+                .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Edit tour details")
+            .accessibilityHint("Opens the editor for title, description, tags and location")
+        }
+    }
+
+    private func detailRow(_ key: String, _ value: String, isLast: Bool, mono: Bool = false) -> some View {
+        HStack(alignment: .center, spacing: AtlasSpacing.md) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(key)
+                    .font(.system(size: 11, weight: .regular, design: .monospaced))
+                    .foregroundStyle(AtlasColors.tertiaryText)
+                Text(value)
+                    .font(mono ? AtlasTypography.caption : AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+            }
+            Spacer(minLength: 0)
+            Image(systemName: "chevron.right")
+                .font(.system(size: 13))
+                .foregroundStyle(AtlasColors.tertiaryText)
+        }
+        .padding(.horizontal, AtlasSpacing.md)
+        .padding(.vertical, 13)
+        .overlay(alignment: .bottom) {
+            if !isLast {
+                Rectangle()
+                    .fill(AtlasColors.divider)
+                    .frame(height: 0.5)
+                    .padding(.leading, AtlasSpacing.md)
             }
         }
     }
@@ -227,21 +311,16 @@ struct TourAuthoringView: View {
                 }
             }
 
-            if isUploadingPhotos {
-                HStack { Spacer(); ProgressView(); Spacer() }
-                    .padding(.vertical, AtlasSpacing.md)
-            } else {
-                PhotosPicker(
-                    selection: $photoItems,
-                    maxSelectionCount: 5,
-                    matching: .images
-                ) {
-                    audioButton(all.isEmpty ? "Add photos" : "Add more photos",
-                                systemImage: "photo.badge.plus", primary: all.isEmpty)
-                }
+            Button { showingPhotoManager = true } label: {
+                audioButton(all.isEmpty ? "Add photos" : "Manage photos",
+                            systemImage: all.isEmpty ? "photo.badge.plus" : "square.grid.2x2",
+                            primary: all.isEmpty)
             }
+            .buttonStyle(.plain)
 
-            Text("Photos are cropped to 1200×900. The first is the cover.")
+            Text(all.isEmpty
+                 ? "Photos are framed to 1200×900. The first is the cover."
+                 : "\(all.count) of \(PhotoManagerView.maxPhotos) · drag to reorder, the first is the cover.")
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.tertiaryText)
         }
@@ -293,18 +372,44 @@ struct TourAuthoringView: View {
                 .foregroundStyle(AtlasColors.secondaryText)
 
             if hasAudio, let seconds = makerTour?.tour.totalDurationSeconds {
-                HStack(spacing: AtlasSpacing.sm) {
-                    Image(systemName: "checkmark.circle.fill")
-                        .foregroundStyle(AtlasColors.mapPin)
-                    Text("Audio added · \(AtlasFormatters.duration(seconds: seconds))")
+                // Hear what's attached without re-recording it. Before this the
+                // editor could only tell you audio existed, never play it.
+                HStack(spacing: AtlasSpacing.md) {
+                    Button {
+                        if let url = attachedAudioURL { audioPreview.toggle(url: url) }
+                    } label: {
+                        Image(systemName: audioPreview.isPlaying ? "pause.fill" : "play.fill")
+                            .font(.system(size: 13))
+                            .foregroundStyle(AtlasColors.background)
+                            .frame(width: 36, height: 36)
+                            .background(AtlasColors.mapPin, in: Circle())
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(attachedAudioURL == nil)
+                    .accessibilityLabel(audioPreview.isPlaying ? "Pause preview" : "Play the attached audio")
+
+                    Text(audioPreview.isPlaying
+                         ? AtlasFormatters.duration(seconds: Int(audioPreview.elapsed))
+                         : AtlasFormatters.duration(seconds: seconds))
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.primaryText)
+                        .monospacedDigit()
+
+                    Spacer()
+
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundStyle(AtlasColors.mapPin)
                 }
+                .padding(.horizontal, AtlasSpacing.md)
+                .padding(.vertical, 12)
+                .background(AtlasColors.background)
+                .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
             }
 
             if isUploading {
-                HStack { Spacer(); ProgressView(); Spacer() }
-                    .padding(.vertical, AtlasSpacing.md)
+                uploadProgressCard
+            } else if let failed = failedUpload {
+                failedUploadCard(failed)
             } else {
                 Button { showingRecorder = true } label: {
                     audioButton(hasAudio ? "Re-record audio" : "Record audio",
@@ -317,11 +422,11 @@ struct TourAuthoringView: View {
                                 systemImage: "square.and.arrow.down", primary: false)
                 }
                 .buttonStyle(.plain)
-            }
 
-            Text("Record narration here, or import an audio file (m4a, mp3, wav).")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
+                Text("Record narration here, or import an audio file (m4a, mp3, wav).")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.tertiaryText)
+            }
 
             if let errorMessage {
                 Text(errorMessage)
@@ -331,6 +436,71 @@ struct TourAuthoringView: View {
         }
     }
 
+    /// Real byte progress, not a spinner. Narration is the largest thing this
+    /// app uploads, and an indeterminate spinner can't distinguish "nearly
+    /// there" from "stalled".
+    private var uploadProgressCard: some View {
+        VStack(alignment: .leading, spacing: 9) {
+            HStack {
+                Text("Narration")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.primaryText)
+                Spacer()
+                Text("\(Int(uploadProgress * 100))%")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .monospacedDigit()
+            }
+            ProgressView(value: uploadProgress)
+                .tint(AtlasColors.mapPin)
+            if uploadTotalBytes > 0 {
+                Text("\(AtlasFormatters.fileSize(Int64(Double(uploadTotalBytes) * uploadProgress))) of \(AtlasFormatters.fileSize(uploadTotalBytes))")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.tertiaryText)
+            }
+        }
+        .padding(AtlasSpacing.md)
+        .background(AtlasColors.background)
+        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+    }
+
+    /// A failed upload keeps the file and offers to try again, rather than
+    /// dropping a recording the maker may not be able to make twice.
+    private func failedUploadCard(_ failed: FailedAudioUpload) -> some View {
+        VStack(alignment: .leading, spacing: 9) {
+            Text("Narration didn't upload")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.mapPin)
+            Text(failed.reason)
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+            HStack(spacing: AtlasSpacing.sm) {
+                Button { retryUpload(failed) } label: {
+                    Text("Try again")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.background)
+                        .padding(.horizontal, 12).padding(.vertical, 6)
+                        .background(AtlasColors.mapPin, in: RoundedRectangle(cornerRadius: 6))
+                }
+                .buttonStyle(.plain)
+
+                Button { failedUpload = nil } label: {
+                    Text("Discard")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.primaryText)
+                        .padding(.horizontal, 12).padding(.vertical, 6)
+                        .overlay(RoundedRectangle(cornerRadius: 6)
+                            .stroke(AtlasColors.tertiaryText, lineWidth: 1))
+                }
+                .buttonStyle(.plain)
+            }
+        }
+        .padding(AtlasSpacing.md)
+        .background(AtlasColors.background)
+        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+    }
+
+
     private func saveTranscript() {
         errorMessage = nil
         isSavingTranscript = true
@@ -339,7 +509,7 @@ struct TourAuthoringView: View {
             do {
                 try await makerTourService.setTranscript(tourId: tourId, text: transcriptText)
             } catch {
-                errorMessage = error.localizedDescription
+                errorMessage = AuthoringErrorText.message(for: error)
             }
         }
     }
@@ -352,64 +522,19 @@ struct TourAuthoringView: View {
             do {
                 try await makerTourService.submitForReview(tour: tour, transcript: transcriptText)
             } catch {
-                errorMessage = error.localizedDescription
+                errorMessage = AuthoringErrorText.message(for: error)
             }
         }
     }
 
     // MARK: - Import
 
-    // MARK: - Photos
-
-    private func handlePhotoSelection(_ items: [PhotosPickerItem]) {
-        guard !items.isEmpty, let tour = makerTour?.tour else { return }
-        errorMessage = nil
-        isUploadingPhotos = true
-        Task {
-            defer { isUploadingPhotos = false; photoItems = [] }
-            do {
-                var datas: [Data] = []
-                for item in items {
-                    guard let raw = try await item.loadTransferable(type: Data.self),
-                          let cropped = Self.cropTo1200x900(raw) else { continue }
-                    datas.append(cropped)
-                }
-                if !datas.isEmpty {
-                    try await makerTourService.attachPhotos(to: tour, images: datas)
-                }
-            } catch {
-                errorMessage = error.localizedDescription
-            }
-        }
-    }
-
-    /// Aspect-fill crop + resize to 1200×900, re-encoded as JPEG. Returns nil on
-    /// non-UIKit platforms or undecodable data.
-    nonisolated private static func cropTo1200x900(_ data: Data) -> Data? {
-        #if canImport(UIKit)
-        guard let image = UIImage(data: data) else { return nil }
-        let target = CGSize(width: 1200, height: 900)
-        let scale = max(target.width / image.size.width, target.height / image.size.height)
-        let scaled = CGSize(width: image.size.width * scale, height: image.size.height * scale)
-        let origin = CGPoint(x: (target.width - scaled.width) / 2,
-                             y: (target.height - scaled.height) / 2)
-        let format = UIGraphicsImageRendererFormat()
-        format.scale = 1
-        let rendered = UIGraphicsImageRenderer(size: target, format: format).image { _ in
-            image.draw(in: CGRect(origin: origin, size: scaled))
-        }
-        return rendered.jpegData(compressionQuality: 0.82)
-        #else
-        return nil
-        #endif
-    }
-
     // MARK: - Audio import
 
     private func handleImport(_ result: Result<[URL], Error>) {
         switch result {
         case .failure(let error):
-            errorMessage = error.localizedDescription
+            errorMessage = AuthoringErrorText.message(for: error)
         case .success(let urls):
             guard let url = urls.first, let tour = makerTour?.tour else { return }
             uploadAudio(from: url, tour: tour)
@@ -418,7 +543,9 @@ struct TourAuthoringView: View {
 
     private func uploadAudio(from url: URL, tour: Tour) {
         errorMessage = nil
+        failedUpload = nil
         isUploading = true
+        uploadProgress = 0
         Task {
             defer { isUploading = false }
             do {
@@ -433,16 +560,50 @@ struct TourAuthoringView: View {
                 let contentType = UTType(filenameExtension: url.pathExtension)?
                     .preferredMIMEType ?? "audio/mpeg"
 
-                try await makerTourService.attachAudio(
-                    to: tour,
-                    data: data,
-                    filename: filename,
-                    contentType: contentType,
-                    durationSeconds: seconds
-                )
+                uploadTotalBytes = Int64(data.count)
+                try await send(data: data, filename: filename, contentType: contentType,
+                               seconds: seconds, tour: tour)
             } catch {
-                errorMessage = error.localizedDescription
+                // Hold on to what we decoded so Try again doesn't need the file
+                // back — an imported file's security-scoped URL may be gone by
+                // then, and a recording may not be repeatable at all.
+                failedUpload = FailedAudioUpload(
+                    sourceURL: url,
+                    reason: AuthoringErrorText.message(for: error)
+                )
             }
         }
     }
+
+    /// Retry a failed upload from the original source.
+    private func retryUpload(_ failed: FailedAudioUpload) {
+        guard let tour = makerTour?.tour else { return }
+        failedUpload = nil
+        uploadAudio(from: failed.sourceURL, tour: tour)
+    }
+
+    /// The upload itself, split out so `uploadAudio` and `retryUpload` share one
+    /// path rather than drifting.
+    private func send(data: Data, filename: String, contentType: String,
+                      seconds: Int, tour: Tour) async throws {
+        try await makerTourService.attachAudio(
+            to: tour,
+            data: data,
+            filename: filename,
+            contentType: contentType,
+            durationSeconds: seconds,
+            onProgress: { fraction in
+                Task { @MainActor in uploadProgress = fraction }
+            }
+        )
+        attachedAudioURL = await makerTourService.stopAudioURL(tourId: tour.id)
+    }
+
+}
+
+/// An audio upload that failed after the file was already in hand.
+struct FailedAudioUpload: Equatable {
+    let sourceURL: URL
+    /// Already human-readable — see `AuthoringErrorText`.
+    let reason: String
 }
