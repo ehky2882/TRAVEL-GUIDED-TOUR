@@ -19,12 +19,11 @@ import Observation
 /// not. So a toggle is unambiguous here, and the rule it appears to break does
 /// not apply. **If places ever gain lists, this has to be revisited.**
 ///
-/// ⚠️ **This is on-device only.** Saved tours, recently-viewed and playback
-/// progress all sync through `SyncService`; saved places do not yet, so they
-/// stay on the phone that saved them. Wiring sync later is additive — a
-/// `user_saved_places` table and one more push path — and needs no migration of
-/// what is stored here. Storage is `UserDefaults`, which is also what lets
-/// saving work while signed out, exactly as bookmarking a tour does.
+/// Storage is `UserDefaults`, which is what lets saving work while signed out,
+/// exactly as bookmarking a tour does. When the user *is* signed in,
+/// `SyncService` mirrors this to the `user_saved_places` table on the same
+/// terms as saved tours and recently-viewed: pull-merge-push on sign-in,
+/// debounced write-through afterwards, and a local wipe on sign-out.
 @Observable
 final class SavedPlacesStore {
     private static let storageKey = "atlas_saved_places"
@@ -32,8 +31,23 @@ final class SavedPlacesStore {
     /// Newest first — the order the Library list renders in.
     private(set) var entries: [SavedPlaceEntry] = []
 
+    /// Fired after any user-initiated mutation persists. `SyncService` sets
+    /// this to write the change through to Supabase when a user is signed in;
+    /// `nil` (anonymous) means purely on-device, exactly as before.
+    @ObservationIgnored var onChange: (() -> Void)?
+
     init() {
         load()
+    }
+
+    /// Replace the whole set from a sign-in merge and persist, **without**
+    /// firing `onChange` — the sync service pushes the merged state itself, so
+    /// firing here would schedule a redundant second write. Same contract as
+    /// `LibraryStore.applyMerged`.
+    func applyMerged(_ newEntries: [SavedPlaceEntry]) {
+        entries = newEntries.sorted { $0.savedAt > $1.savedAt }
+        idSet = Set(entries.map(\.placeId))
+        persist()
     }
 
     /// Ids only, for the cheap membership test a view body can call per row.
@@ -55,8 +69,9 @@ final class SavedPlacesStore {
             idSet.insert(placeId)
         }
         persist()
-        // User-initiated only — nothing else writes here, so this can't fire
-        // during a background merge the way the tour store's would.
+        onChange?()
+        // User-initiated only — `applyMerged` deliberately doesn't come
+        // through here, so a background sync can never buzz the phone.
         AtlasHaptics.selection()
         return idSet.contains(placeId)
     }

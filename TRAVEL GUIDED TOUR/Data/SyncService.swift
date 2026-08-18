@@ -3,8 +3,9 @@ import Observation
 import Supabase
 
 /// Syncs a signed-in user's **library** (saved tours + listening progress +
-/// completed) and **recently-viewed** to the Supabase `user_library` /
-/// `user_recently_viewed` tables, so their data follows them across devices.
+/// completed), **recently-viewed** and **saved places** to the Supabase
+/// `user_library` / `user_recently_viewed` / `user_saved_places` tables, so
+/// their data follows them across devices.
 ///
 /// Model:
 /// - **On sign-in:** pull the user's remote rows, MERGE them into the local
@@ -26,6 +27,7 @@ final class SyncService {
     private let auth: AuthService
     private let library: LibraryStore
     private let recentlyViewed: RecentlyViewedStore
+    private let savedPlaces: SavedPlacesStore
     private let client: SupabaseClient
 
     /// Debounce window for write-through pushes — coalesces rapid changes
@@ -38,21 +40,25 @@ final class SyncService {
     private var isInitialSyncing = false
     private var libraryPushTask: Task<Void, Never>?
     private var recentlyViewedPushTask: Task<Void, Never>?
+    private var savedPlacesPushTask: Task<Void, Never>?
 
     init(auth: AuthService,
          library: LibraryStore,
          recentlyViewed: RecentlyViewedStore,
+         savedPlaces: SavedPlacesStore,
          client: SupabaseClient = SupabaseClientProvider.shared,
          pushDebounce: Duration = .seconds(2)) {
         self.auth = auth
         self.library = library
         self.recentlyViewed = recentlyViewed
+        self.savedPlaces = savedPlaces
         self.client = client
         self.pushDebounce = pushDebounce
 
         // Write-through hooks: a local change, while signed in, pushes up.
         library.onChange = { [weak self] in self?.scheduleLibraryPush() }
         recentlyViewed.onChange = { [weak self] in self?.scheduleRecentlyViewedPush() }
+        savedPlaces.onChange = { [weak self] in self?.scheduleSavedPlacesPush() }
 
         // Flush any pending debounced write-through before a sign-out tears down
         // the session. Without this, a save/un-save made within the 2s debounce
@@ -94,8 +100,10 @@ final class SyncService {
     private func handleSignedOut() {
         libraryPushTask?.cancel()
         recentlyViewedPushTask?.cancel()
+        savedPlacesPushTask?.cancel()
         library.applyMerged([])
         recentlyViewed.applyMerged([])
+        savedPlaces.applyMerged([])
     }
 
     // MARK: - Flush (pre-sign-out)
@@ -112,9 +120,11 @@ final class SyncService {
     func flushPendingWrites() async {
         libraryPushTask?.cancel()
         recentlyViewedPushTask?.cancel()
+        savedPlacesPushTask?.cancel()
         guard auth.isSignedIn else { return }
         try? await pushLibrary()
         try? await pushRecentlyViewed()
+        try? await pushSavedPlaces()
     }
 
     // MARK: - Initial sign-in sync (pull → merge → push)
@@ -129,12 +139,16 @@ final class SyncService {
                 try await client.from("user_library").select().execute().value
             let remoteViewed: [UserRecentlyViewedRow] =
                 try await client.from("user_recently_viewed").select().execute().value
+            let remotePlaces: [UserSavedPlaceRow] =
+                try await client.from("user_saved_places").select().execute().value
 
             library.applyMerged(Self.mergeLibrary(local: library.entries, remote: remoteLibrary))
             recentlyViewed.applyMerged(Self.mergeRecentlyViewed(local: recentlyViewed.entries, remote: remoteViewed))
+            savedPlaces.applyMerged(Self.mergeSavedPlaces(local: savedPlaces.entries, remote: remotePlaces))
 
             try await pushLibrary()
             try await pushRecentlyViewed()
+            try await pushSavedPlaces()
         } catch {
             // Best-effort: a failed sync leaves the local stores intact and the
             // user fully functional offline. The next change (or next sign-in)
@@ -161,6 +175,16 @@ final class SyncService {
             try? await Task.sleep(for: pushDebounce)
             guard !Task.isCancelled, let self else { return }
             try? await self.pushRecentlyViewed()
+        }
+    }
+
+    private func scheduleSavedPlacesPush() {
+        guard auth.isSignedIn, !isInitialSyncing else { return }
+        savedPlacesPushTask?.cancel()
+        savedPlacesPushTask = Task { [weak self, pushDebounce] in
+            try? await Task.sleep(for: pushDebounce)
+            guard !Task.isCancelled, let self else { return }
+            try? await self.pushSavedPlaces()
         }
     }
 
@@ -193,6 +217,21 @@ final class SyncService {
         try await client.from("user_recently_viewed").delete()
             .eq("user_id", value: uid)
             .not("tour_id", operator: .in, value: "(\(keep))")
+            .execute()
+    }
+
+    private func pushSavedPlaces() async throws {
+        guard let uid = auth.user?.id.uuidString.lowercased() else { return }
+        let rows = savedPlaces.entries.map { UserSavedPlaceRow(entry: $0, userId: uid) }
+        if rows.isEmpty {
+            try await client.from("user_saved_places").delete().eq("user_id", value: uid).execute()
+            return
+        }
+        try await client.from("user_saved_places").upsert(rows, onConflict: "user_id,place_id").execute()
+        let keep = rows.map(\.placeId).joined(separator: ",")
+        try await client.from("user_saved_places").delete()
+            .eq("user_id", value: uid)
+            .not("place_id", operator: .in, value: "(\(keep))")
             .execute()
     }
 
@@ -243,6 +282,24 @@ final class SyncService {
             }
         }
         return Array(byId.values)
+    }
+
+    /// Union local + remote saved places, keeping the EARLIER `savedAt` when
+    /// both sides have one — that is when the user actually first saved it, and
+    /// the Library list is ordered by it. (Recently-viewed takes the later date
+    /// for the opposite reason: there, the newest visit is the true one.)
+    nonisolated static func mergeSavedPlaces(local: [SavedPlaceEntry], remote: [UserSavedPlaceRow]) -> [SavedPlaceEntry] {
+        var byId: [UUID: SavedPlaceEntry] = [:]
+        for entry in local { byId[entry.placeId] = entry }
+        for row in remote {
+            guard let pid = UUID(uuidString: row.placeId) else { continue }
+            if let local = byId[pid] {
+                byId[pid] = SavedPlaceEntry(placeId: pid, savedAt: Swift.min(local.savedAt, row.savedAt))
+            } else {
+                byId[pid] = SavedPlaceEntry(placeId: pid, savedAt: row.savedAt)
+            }
+        }
+        return byId.values.sorted { $0.savedAt > $1.savedAt }
     }
 
     nonisolated private static func laterOf(_ a: Date?, _ b: Date?) -> Date? {
@@ -325,5 +382,26 @@ struct UserRecentlyViewedRow: Codable {
         self.userId = userId
         self.tourId = entry.tourId.uuidString.lowercased()
         self.viewedAt = entry.viewedAt
+    }
+}
+
+/// One row of `user_saved_places`. Mirrors `UserRecentlyViewedRow`; no nullable
+/// columns, so the synthesized encoder is enough — the explicit-null encoding
+/// `UserLibraryRow` needs is only required where a column has to be *cleared*.
+struct UserSavedPlaceRow: Codable {
+    let userId: String
+    let placeId: String
+    let savedAt: Date
+
+    enum CodingKeys: String, CodingKey {
+        case userId = "user_id"
+        case placeId = "place_id"
+        case savedAt = "saved_at"
+    }
+
+    init(entry: SavedPlaceEntry, userId: String) {
+        self.userId = userId
+        self.placeId = entry.placeId.uuidString.lowercased()
+        self.savedAt = entry.savedAt
     }
 }
