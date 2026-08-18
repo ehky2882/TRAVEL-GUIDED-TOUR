@@ -440,13 +440,18 @@ verified by reading back from Apple. The previous listing is backed up.
   be added at 1.1. (2) **The version update is ATOMIC** — that single rejected
   field took description, keywords, promotional text and support URL down with
   it. A non-200 means nothing landed.
-- **The version question is now answered by the data: App Store Connect already
-  holds an editable version 1.0** (`PREPARE_FOR_SUBMISSION`) while the project
-  says `MARKETING_VERSION = 1.1`. Metadata belongs to a *version record*, so the
-  listing copy now sits on 1.0. Aligning the project to 1.0 is the cheap path;
-  staying on 1.1 means creating a new version record and re-pushing.
-- **The store name is confirmed `Atlas Audio Tours`** (read live), so only
-  `CFBundleDisplayName = Dozent` is still inconsistent.
+- **The version question is answered by the data: metadata belongs to a
+  *version record*, not to the app**, so the listing copy sits on whatever
+  number the editable record carries. **Read live at the time: 1.0**
+  (`PREPARE_FOR_SUBMISSION`) while the project said `MARKETING_VERSION = 1.1`.
+  **✅ Resolved since — the record was renamed 1.0 → 1.1 to match the project**
+  (owner decision 2026-08-07, `docs/launch-runbook.md` Step 3), so the copy
+  stayed attached and nothing had to be re-pushed. **Re-verified against the
+  App Store Connect API 2026-08-18: the editable record is 1.1
+  (`PREPARE_FOR_SUBMISSION`).**
+- **The store name was read live here as `Atlas Audio Tours`** — **stale; it is
+  now `Dozent` at Apple** (corrected in [PR #519](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/519)),
+  which agrees with `CFBundleDisplayName = Dozent`.
 - **⚠️ All 10 paid-tour IAPs are `MISSING_METADATA`** — none can be submitted
   until each has a description and a review screenshot. Previously recorded as
   merely "Prepare for Submission", which understated the work.
