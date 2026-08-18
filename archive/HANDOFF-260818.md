@@ -1,107 +1,103 @@
-# HANDOFF — 2026-08-18 (session 94: the tour upload flow got its missing half)
+# HANDOFF — 2026-08-18 (session 95)
 
-## What happened
+**Branch:** `claude/place-layer-step2` · **PR:** [#523](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/523) (open)
+**Catalog:** 1350 tours / 30 makers / 1696 stops / **24 places** — unchanged in count by this session.
 
-**Owner: "i would like to polish my tour upload feature to the point where it's
-comparable to what instagram has in terms for features and ease of use."**
+## What shipped
 
-Shaped by an HTML mockup reviewed on device (the session-77b pattern), built in
-three increments, shipped in **TestFlight 1.1 (62)**, merged as
-[PR #515](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/515) — 9 files, all
-Swift, authoring only.
+The **place layer**, in three passes, plus a polish pass the owner asked for at the end.
 
-The session did **not** start there and spent most of its length elsewhere: the
-owner asked where to find the paid tour, which unspooled into verifying paid
-tours Phase 3 end to end, pricing 66 walks, a pre-merge code review that found a
-paywall bypass, merging #469, and a documentation resync. All of that is written
-up under its own Current State entries. **Worth noting because it recurred:** the
-owner twice had to ask why the thing they originally requested had not been
-built. When a session diverges that far, say so unprompted.
+1. **Step 1 — the data layer** (merged, squash `82c3b33`): `Place`, `places` in `Tours.json`,
+   `DataService` lookups, `backend/places.sql`, validator + seed-script support, 24 places derived
+   from exact coordinate matches.
+2. **Step 2 — the map and the page** (`2de3696`): `MapMarkers` (one pin per tour, place tours
+   collapse), `PlacePin`, `PlacePlacecardView`, `PlaceView`, `PlacePresenter`, the third UIKit
+   slide-up layer.
+3. **Step 3 — polish, save, share** (`1688ea5`): this session's work, below.
 
-## 🐛 The find that mattered: `MakerTour` carries NO stops
+## The polish pass
 
-`TourRow.asMakerTour` builds its `Tour` with `stops: []` — the profile feed only
-needs title, status and images. So a details editor reading `tour.stops.first`
-gets nil and falls back to a 30 m default.
+Owner: *"Let's polish the place page. I want it to be consistent with my other pages such as the
+tour details page. Starting with the image/carousel layout (inset rather than full span)… etc etc.
+Show me visually."*
 
-**Saving that would have quietly reset the geofence radius of every tour anyone
-edited the title of.** No error, no warning, no dead link — the tour would simply
-stop firing where it used to, which is the same failure class as the Cape Town
-coordinate that was 423 m off.
+Answered with an **HTML mockup of three phones side by side** at true 390 pt proportion — tour
+detail (the standard), the place page today, the place page proposed — with numbered pins tying
+each divergence to a table. Same pattern as session 93's option mockup, and again one artifact
+settled what prose had not.
 
-Fixed with `stopLocation(tourId:)`, and the change-detection baseline moves with
-the loaded values so the form does not open claiming an edit nobody made.
+**Nine divergences found by reading `PlaceView.swift` against `TourDetailView.swift`.** Six were
+plainly wrong and were fixed without asking; three were decisions and the owner took all three.
 
-**The same gap explains why playback was impossible**: the editor knew a tour
-*had* audio (from its duration) without knowing where it was. Hence
-`stopAudioURL(tourId:)`.
+| # | Was | Now |
+|---|---|---|
+| 1 | `AtlasColors.background` (pure white/black) | `secondaryBackground`, like every other detail page |
+| 2 | A bare 44 pt **circle** on the photo, 17 pt glyph, no backdrop | Tour detail's `chromeRow`: **capsules**, 20 pt glyph, material bar, `.safeAreaInset(edge: .top)` |
+| 3 | Full-bleed hero, no top padding | Inset `lg`, `.padding(.top, .md)` |
+| 4 | No switcher | `AtlasTabStrip` GALLERY / MAP (owner: yes) |
+| 5 | `HeroImageView` direct, one image | `TourMediaCarousel` — the shared component (owner: yes) |
+| 6 | `secondaryText`, never truncated | `primaryText`, 4-line preview + Read more |
+| 7 | Brass `N TOURS AVAILABLE` | **Kept** (owner: yes) — the one deliberate divergence |
+| 8 | `spacing: 0` stack, every child padding itself | Outer `lg` / inner `md`, one horizontal `lg` |
+| 9 | Hand-rolled 0.5 pt rule | `Divider()` |
 
-**Durable: anything reading `tour.stops` off a `MakerTour` is reading an empty
-array.** It is not a bug in `MakerTour` — the feed does not need stops — but any
-new authoring surface must fetch what it needs.
+## Save and share
 
-## Why audio bypasses the Supabase SDK
+**Save** — new `Data/SavedPlacesStore.swift`, its own `UserDefaults` key.
 
-`supabase-swift` 2.48's `storage.upload` returns only on completion and
-**exposes no progress callback**. Fine for a 200 KB photo; wrong for narration,
-the largest thing this app sends — an indeterminate spinner cannot distinguish
-"nearly there" from "stalled".
+Deliberately **not** folded into `LibraryStore`: every member of that store is tour-keyed, and its
+`onChange` hook has one meaning — *push the tour library to Supabase*. A place write would have
+fired it for data that must not be pushed, and `applyMerged` (which replaces the whole entry list
+on a sign-in merge) would have been a hazard for data it knows nothing about.
 
-`StorageUploader` hits the same REST endpoint over a plain `URLSession` so
-`URLSessionTaskDelegate.didSendBodyData` can report real byte counts. Photos stay
-on the SDK: they are small, and "3 of 5" is the honest unit for a batch.
+A place bookmark is a **plain toggle**, unlike a tour's add-only one. The tour rule exists because a
+tour can be filed into named lists and one tap must never destroy that filing; a place has no lists.
+**If places ever gain lists, revisit this.**
 
-**It is NOT a background session.** Uploads survive moving around inside the app,
-not the app being killed. Stated in the type's own doc comment so nobody assumes
-otherwise.
+Saved places appear in Library's **Lists** tab under a `PLACES` header, between the lists and
+Following.
 
-## Deliberate architecture calls, recorded so they are not "tidied"
+**⚠️ Known gap, deliberate: saved places do not sync across devices.** Saved tours, recently-viewed
+and playback progress all do. Wiring it is additive — a `user_saved_places` table plus one push path
+in `SyncService` — and needs no migration of what is stored now.
 
-- **`AuthoringAudioPreview` is not `AudioPlayerService`.** That is the app's
-  single tour player and owns the mini-player, lock screen, now-playing info and
-  the geofence hand-off. Auditioning a half-finished draft must not put it on the
-  lock screen. It is also **not `AVAudioPlayer`**, which cannot stream a remote
-  URL — attached audio is an https URL on Storage.
-- **`setPhotos` replaces, it does not append.** Reordering and removal both need
-  to express "this exact list, in this exact order", which an append-only API
-  cannot say. Dropped files are deleted from Storage; `storagePath(from:bucket:)`
-  **returns nil rather than guessing**, because a plausible wrong path could
-  delete the wrong object.
-- **Position one IS the cover**, rather than a separate "set as cover" action.
-- **`AuthoringErrorText` does not guess.** An unrecognised failure is reported as
-  unrecognised. Inventing a plausible cause is worse than admitting ignorance,
-  because the maker will act on it.
+**Share** — `DeepLink.place`, path marker `p`, `AtlasShareLink.placeURL`, resolved by the app into
+the place layer. `ReportSheet` gained a `.place` target. A `p/index.html` landing page went to
+**gh-pages** (`ee5c1fb`, verified as exactly one addition and zero deletions before pushing) so a
+shared link degrades to a real page rather than a 404; it replicates `Place.ranked` in JS so the web
+order matches the app's.
 
-## Owner decisions (2026-08-17)
+## Owner action
 
-| Question | Decision |
-|---|---|
-| Editing a published tour | **Allowed, and it re-enters review.** Drafts/in-review keep status. The sheet says so *before* Save. |
-| Photo cap | **8** |
-| Crop step | **Always shown, with a Skip** |
+**One Supabase paste, optional today:** `backend/places_photos.sql` — adds `additional_image_urls`
+to `places` and teaches `catalog_places()` to send it. **The app is correct without it**; the column
+is empty everywhere until step 4 writes place photography. Safe to run twice.
 
-## Process notes
+## Traps worth carrying
 
-- **`get_status` on a PR is useless in this repo** — legacy commit statuses only,
-  so it returns `pending` / `total_count: 0` forever regardless of Actions. Use
-  `get_check_runs`. **But 0 check runs can also mean the PR is conflicted**, so
-  check `mergeable_state` (`dirty` = conflict, `unstable` = checks in flight)
-  before concluding CI simply has not run. That ambiguity cost a wrong read.
-- **Direct `api.github.com` calls are proxy-blocked** (403 "GitHub access is not
-  enabled for this session"). Use the MCP tools; do not build bash pollers.
-- `git diff --stat A B | tail` sorts `web/` last alphabetically — reading only
-  the tail once hid every Swift file and suggested a PR was all website.
-- Three CI runs, one per increment, plus a fourth on the PR against a base that
-  had moved. Worth the wait: `main` took a screenshots PR mid-build.
+- **🔴 Adding a key to `Tours.json` does not put it in front of users.** The app reads Supabase
+  first and only falls back to the bundled catalog offline. This session told the owner "nothing for
+  you to run yet", shipped build 68, and the owner correctly reported it still showed the old
+  behaviour — `places.sql` had never been applied, so the RPC served no `places` key.
+- **🔴 A Python mirror of a Swift validator proves the LOGIC, never the TYPES.** `Place.tourIds` was
+  written `[String]` while the validator keys tours by `UUID`; the mirror keyed by string and passed.
+  Re-reading the Swift found a second error in the same block.
+- **🔴 `key_path` must be called before `scripts/revoke-dev-certs.py` in the fastlane lanes.** The
+  script authenticates by reading the `.p8` from `~/private_keys`, and `key_path` is what writes it
+  there — it is lazy, and had been first reached three steps *after* the revoke since the July
+  rewrite. Build 67 died at the certificate cap with the revoke step reporting a warning nobody read.
+  Fixed in both `beta` and `release`.
+- **A Swift argument-order error can be invisible in the CI log** — xcodebuild's verbose echo buries
+  the `error:` lines beyond log-tail reach. Parse the call site and the declaration and diff the
+  orders instead of reading.
+- **`p`, `t`, `m` are single-letter path markers.** A new share marker must not collide; the parser
+  checks them in order.
 
-## Owed / next
+## Next
 
-1. **Device-verify the radius fix** — edit only a tour's title, confirm the
-   trigger radius survived. The bug was silent; so is a bad fix.
-2. **Drag-to-reorder feel** — it compiles; whether the drop targets land where a
-   thumb expects is unverified.
-3. **True background upload** (survives the app being killed) and **draft
-   autosave on the create form** — both deliberately scoped out, not forgotten.
-4. Still open from the paid-tours work: **`PurchaseOutcome.alreadyOwned` is
-   unwired**, and **Group Listen is withheld on all 66 paid walks** — a product
-   call the owner has not made.
+- Confirm the flow on device, then merge #523.
+- **Step 4 — editorial content:** place names, one-line descriptions, addresses, place heroes (and,
+  now, place galleries).
+- **Step 5 — deferred:** geofence behaviour when two tours overlap ("ask on arrival" vs auto-play the
+  top-ranked one with a switch-guide affordance) · search/browse grouping by place · an "other tours
+  at this place" block on tour detail · saved-places sync.
