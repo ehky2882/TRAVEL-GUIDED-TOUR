@@ -200,6 +200,9 @@ let architectTags: Set<String> = [
     "Roy Grounds", "Marc Newson", "Studio KO", "Mario Botta", "Jun Aoki",
     "Rocco Yim", "Bing Thom", "Philippe Starck", "Gustave Eiffel",
     "Rem Koolhaas", "Dominique Perrault", "Hiroshi Sambuichi",
+    "Antoni Gaudí", "Lluís Domènech i Montaner", "Josep Puig i Cadafalch",
+    "Ricardo Bofill", "Enric Sagnier", "Josep Fontserè",
+    "Antoni Bonet i Castellana", "Josep Maria Subirachs",
 ]
 let validTags: Set<String> = placeTypeTags
     .union(themeTags).union(styleEraTags)
