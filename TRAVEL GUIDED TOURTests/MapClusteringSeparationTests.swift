@@ -58,10 +58,14 @@ final class MapClusteringSeparationTests: XCTestCase {
             span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         )
         // One place holding 2 tours, plus 2 ordinary tours, all in one cell.
+        // ⚠️ Keep these inside a single grid cell. Buckets are keyed off an
+        // ABSOLUTE (lat 0, lon 0) origin, so at this span the row boundary
+        // falls on lat 45.5 exactly — an earlier revision used 45.5001 for the
+        // third marker and it bucketed one row up, making this read 3.
         let markers = [
-            placeMarker(45.4997, -73.5710, tours: 2),
-            marker(45.4999, -73.5712),
-            marker(45.5001, -73.5708)
+            placeMarker(45.4990, -73.5710, tours: 2),
+            marker(45.4992, -73.5712),
+            marker(45.4994, -73.5708)
         ]
         let items = MapClustering.cluster(markers: markers, in: region, cellsAcross: 12)
 
@@ -108,7 +112,7 @@ final class MapClusteringSeparationTests: XCTestCase {
         XCTAssertEqual(places.count, 1, "zoomed in, the place is its own pin again")
     }
 
-    // MARK: - canSeparateByZoom    // MARK: - canSeparateByZoom
+    // MARK: - canSeparateByZoom
 
     /// The real catalog case: a walk's intro stop wired at the exact
     /// coordinate of the single-stop tour of the same landmark.
