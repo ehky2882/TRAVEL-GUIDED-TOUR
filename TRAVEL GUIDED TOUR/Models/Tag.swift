@@ -95,6 +95,13 @@ enum Tag {
             "Studio KO", "Mario Botta", "Jun Aoki", "Rocco Yim", "Bing Thom",
             "Philippe Starck", "Gustave Eiffel", "Rem Koolhaas",
             "Dominique Perrault", "Hiroshi Sambuichi",
+            // Catalonia and Spain. Gaudi alone accounts for 16 tours, which makes
+            // him the most-represented architect in the catalog; all eight shipped
+            // with the generic Designed by a Master fallback until Barcelona landed.
+            "Antoni Gaudí", "Lluís Domènech i Montaner",
+            "Josep Puig i Cadafalch", "Ricardo Bofill", "Enric Sagnier",
+            "Josep Fontserè", "Antoni Bonet i Castellana",
+            "Josep Maria Subirachs",
         ]),
     ]
 

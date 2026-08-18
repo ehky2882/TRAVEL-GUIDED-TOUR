@@ -182,6 +182,23 @@ would match bakeries and Baker Street.
 
 New architects are appended here first, deliberately, as the catalog grows.
 
+**Also new, from Barcelona (#529 follow-up):** `Antoni Gaudí` (18 — the most
+represented architect in the catalog, past `Álvaro Siza`'s 15) ·
+`Lluís Domènech i Montaner` (4) · `Enric Sagnier` (4) · `Ricardo Bofill` (3,
+including Tokyo's Shiseido Building, which had carried no architect tag at all) ·
+`Josep Fontserè` (3) · `Josep Puig i Cadafalch` (2) ·
+`Antoni Bonet i Castellana` · `Josep Maria Subirachs`. All eight had been
+shipping the generic `Designed by a Master` fallback.
+
+The authorship rule bit again here: of 23 tours naming Gaudí, **four are
+mentions rather than his work** — Tokyo's Waseda El Dorado calls its architect
+*the Japanese Gaudi*, Montjuïc's tower merely borrows trencadís, Xavier Corberó
+collected Gaudí *chairs*, and Puig i Cadafalch rescued the MNAC murals without
+designing the Palau Nacional that houses them — the Sullivan case again.
+**Owner decision:** the Cascada and the Dipòsit de les Aigües carry *both*
+`Josep Fontserè` (who designed them) and `Antoni Gaudí` (who worked the
+hydraulics and calculations as a student, his first paid work).
+
 **⚠️ A mention is not authorship.** These names are assigned from the tour's
 own text, and the seed's keyword match is a *candidate list*, not an answer.
 Cases deliberately rejected while adding the above: King Power Mahanakhon
