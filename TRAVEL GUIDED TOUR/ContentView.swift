@@ -24,6 +24,7 @@ struct ContentView: View {
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
+    @Environment(SavedPlacesStore.self) private var savedPlacesStore
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
     @Environment(ProximityMonitor.self) private var proximityMonitor
     @Environment(TourDownloader.self) private var tourDownloader
@@ -270,6 +271,7 @@ struct ContentView: View {
                     .environment(locationManager)
                     .environment(audioPlayer)
                     .environment(libraryStore)
+                    .environment(savedPlacesStore)
                     .environment(recentlyViewedStore)
                     .environment(proximityMonitor)
                     .environment(tourDownloader)
@@ -317,6 +319,7 @@ struct ContentView: View {
                         .environment(locationManager)
                         .environment(audioPlayer)
                         .environment(libraryStore)
+                        .environment(savedPlacesStore)
                         .environment(recentlyViewedStore)
                         .environment(proximityMonitor)
                         .environment(tourDownloader)
@@ -346,6 +349,7 @@ struct ContentView: View {
                     .environment(locationManager)
                     .environment(audioPlayer)
                     .environment(libraryStore)
+                    .environment(savedPlacesStore)
                     .environment(recentlyViewedStore)
                     .environment(proximityMonitor)
                     .environment(tourDownloader)

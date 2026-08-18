@@ -50,6 +50,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// tours. Shares `AuthService`. See `Data/TourListService.swift`.
     @State private var listService: TourListService
     @State private var libraryStore = LibraryStore()
+    @State private var savedPlacesStore = SavedPlacesStore()
     @State private var locationManager = LocationManager()
     @State private var audioPlayer = AudioPlayerService()
     @State private var recentlyViewed = RecentlyViewedStore()
@@ -136,6 +137,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(makerTourService)
                     .environment(listService)
                     .environment(libraryStore)
+                    .environment(savedPlacesStore)
                     .environment(locationManager)
                     .environment(audioPlayer)
                     .environment(recentlyViewed)
@@ -304,6 +306,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 .environment(purchaseService)
                 .environment(makerProfileService)
                 .environment(libraryStore)
+                .environment(savedPlacesStore)
                 .environment(locationManager)
                 .environment(audioPlayer)
                 .environment(recentlyViewed)
@@ -366,6 +369,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
         case .maker(let id):
             if let maker = dataService.maker(by: id) {
                 makerPresenter.present(maker)
+            }
+        case .place(let id):
+            if let place = dataService.place(by: id) {
+                placePresenter.present(place)
             }
         case .group(let code):
             // A join QR scanned with the system Camera app lands here. No tour

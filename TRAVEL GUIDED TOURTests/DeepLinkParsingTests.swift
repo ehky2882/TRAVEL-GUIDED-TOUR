@@ -8,6 +8,7 @@ final class DeepLinkParsingTests: XCTestCase {
 
     private let sampleID = UUID(uuidString: "17050c9f-27a2-45e2-9e69-3ae9528c66c9")!
     private let makerID = UUID(uuidString: "00000000-0000-0000-0000-000000000001")!
+    private let placeID = UUID(uuidString: "00000000-0000-0000-0000-000000000002")!
 
     // MARK: - Universal Links (https)
 
@@ -121,6 +122,39 @@ final class DeepLinkParsingTests: XCTestCase {
     func test_makerShareURL_roundTripsThroughParser() {
         let url = AtlasShareLink.makerURL(id: makerID)
         XCTAssertEqual(DeepLinkParser.parse(url), .maker(makerID))
+    }
+
+    // MARK: - Place links
+
+    func test_placeShareURL_hasExpectedShape() {
+        XCTAssertEqual(
+            AtlasShareLink.placeURL(id: placeID).absoluteString,
+            "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/p/?id=00000000-0000-0000-0000-000000000002"
+        )
+    }
+
+    func test_placeShareURL_roundTripsThroughParser() {
+        let url = AtlasShareLink.placeURL(id: placeID)
+        XCTAssertEqual(DeepLinkParser.parse(url), .place(placeID))
+    }
+
+    func test_parses_placeUniversalLink_pathForm() {
+        let url = URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/p/00000000-0000-0000-0000-000000000002")!
+        XCTAssertEqual(DeepLinkParser.parse(url), .place(placeID))
+    }
+
+    func test_parses_placeCustomScheme() {
+        let url = URL(string: "dozent://place/00000000-0000-0000-0000-000000000002")!
+        XCTAssertEqual(DeepLinkParser.parse(url), .place(placeID))
+    }
+
+    /// The three markers are single letters, so a link must route to exactly
+    /// one of them. `p` must never be mistaken for a tour or a maker.
+    func test_placeLink_doesNotParseAsTourOrMaker() {
+        let url = AtlasShareLink.placeURL(id: placeID)
+        guard case .place = DeepLinkParser.parse(url) else {
+            return XCTFail("place link parsed as something else")
+        }
     }
 
     // MARK: - Group Listen join links (QR codes)

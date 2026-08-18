@@ -29,6 +29,7 @@ final class MapMarkersTests: XCTestCase {
             city: "Montreal",
             address: nil,
             heroImageURL: nil,
+            additionalImageURLs: nil,
             tourIds: tourIds
         )
     }

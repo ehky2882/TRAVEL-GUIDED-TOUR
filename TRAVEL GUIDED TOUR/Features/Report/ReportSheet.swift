@@ -17,22 +17,26 @@ enum ReportReason: String, CaseIterable, Identifiable {
 /// `reports` table (no email address ships in the app). Shows a thank-you state
 /// on success.
 struct ReportSheet: View {
-    /// What's being reported. Tours are captured by `tour_id`; makers have no
-    /// column on `reports`, so their id is carried into `details`.
+    /// What's being reported. Tours are captured by `tour_id`; makers and
+    /// places have no column on `reports`, so their id is carried into
+    /// `details`.
     enum Target {
         case tour(Tour)
         case maker(Maker)
+        case place(Place)
 
         var displayName: String {
             switch self {
             case .tour(let tour): return tour.title
             case .maker(let maker): return maker.displayName
+            case .place(let place): return place.name
             }
         }
         var kindLabel: String {
             switch self {
             case .tour: return "tour"
             case .maker: return "creator"
+            case .place: return "place"
             }
         }
         var tourId: UUID? {
@@ -44,6 +48,7 @@ struct ReportSheet: View {
             switch self {
             case .tour: return ""
             case .maker(let maker): return "[Creator report] \(maker.displayName) (id: \(maker.id.uuidString))\n\n"
+            case .place(let place): return "[Place report] \(place.name) (id: \(place.id.uuidString))\n\n"
             }
         }
     }

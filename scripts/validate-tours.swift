@@ -94,6 +94,7 @@ struct Place: Codable {
     let city: String?
     let address: String?
     let heroImageURL: String?
+    let additionalImageURLs: [String]?
     let tourIds: [UUID]
 }
 
@@ -473,6 +474,13 @@ if let places = file.places {
 
         if let hero = place.heroImageURL, !isValidURL(hero) {
             err(loc, "heroImageURL '\(hero)' is not a valid URL")
+        }
+
+        for (j, url) in (place.additionalImageURLs ?? []).enumerated() {
+            if !isValidURL(url) { err(loc, "additionalImageURLs[\(j)] is not a valid URL: \(url)") }
+            if url == place.heroImageURL {
+                err(loc, "additionalImageURLs[\(j)] repeats the hero — it would show twice in the carousel")
+            }
         }
 
         for tourId in place.tourIds {

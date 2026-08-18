@@ -137,15 +137,19 @@ def emit(data, out):
         for p in places:
             w(
                 "insert into public.places "
-                "(id, name, description, latitude, longitude, city, address, hero_image_url) "
+                "(id, name, description, latitude, longitude, city, address, "
+                "hero_image_url, additional_image_urls) "
                 f"values ({q(p['id'])}, {q(p['name'])}, {q(p.get('description'))}, "
                 f"{p['latitude']}, {p['longitude']}, {q(p.get('city'))}, "
-                f"{q(p.get('address'))}, {q(p.get('heroImageURL'))}) "
+                f"{q(p.get('address'))}, {q(p.get('heroImageURL'))}, "
+                f"{text_array(p.get('additionalImageURLs'))}) "
                 "on conflict (id) do update set "
                 "name = excluded.name, description = excluded.description, "
                 "latitude = excluded.latitude, longitude = excluded.longitude, "
                 "city = excluded.city, address = excluded.address, "
-                "hero_image_url = excluded.hero_image_url, updated_at = now();\n"
+                "hero_image_url = excluded.hero_image_url, "
+                "additional_image_urls = excluded.additional_image_urls, "
+                "updated_at = now();\n"
             )
 
     w("\n-- tours\n")
