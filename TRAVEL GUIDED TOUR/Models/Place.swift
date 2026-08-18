@@ -39,6 +39,12 @@ struct Place: Codable, Identifiable, Hashable {
     /// back to the hero of its top-ranked tour, so a place is never blocked on
     /// a new image being sourced.
     let heroImageURL: String?
+    /// Further photos of the site, shown after the hero in the place page's
+    /// carousel. Empty everywhere today — the field exists so the place page can
+    /// use the **same** `TourMediaCarousel` a tour page and the player use, which
+    /// is what stops the two carousels drifting apart later. With nothing here the
+    /// carousel renders exactly as a single image did.
+    let additionalImageURLs: [String]?
     /// Membership only — **not** display order. Ranking is applied at render
     /// time by `ranked(_:)` so it can change without a content re-seed.
     let tourIds: [UUID]

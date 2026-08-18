@@ -37,10 +37,14 @@ final class HomeSharedState {
     /// placecard per tour stacked above the pin. Single-pin taps put
     /// exactly one tour here, which is the overwhelmingly common case.
     var placecardTours: [Tour] = []
+    /// Set instead of `placecardTours` when the tapped pin stood for a
+    /// **place**. The two are mutually exclusive — a place pin has already
+    /// collapsed its tours, so there is nothing to stack.
+    var placecardPlace: Place? = nil
     var placecardCoordinate: CLLocationCoordinate2D? = nil
 
-    /// True while a placecard (single or stacked) is showing.
-    var isShowingPlacecard: Bool { !placecardTours.isEmpty }
+    /// True while a placecard of either kind is showing.
+    var isShowingPlacecard: Bool { !placecardTours.isEmpty || placecardPlace != nil }
 
     /// The pin to draw with its selection ring — only when a single
     /// tour's own pin was tapped. A stack sits above a *cluster* pin,
@@ -53,6 +57,7 @@ final class HomeSharedState {
     /// (map tap, recenter, place-search fly-to) stays in step.
     func dismissPlacecard() {
         placecardTours = []
+        placecardPlace = nil
         placecardCoordinate = nil
     }
 

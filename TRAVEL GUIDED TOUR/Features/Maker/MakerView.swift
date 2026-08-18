@@ -97,6 +97,11 @@ struct MakerView: View {
     @Environment(DataService.self) private var dataService
     @Environment(AtlasNavigationState.self) private var navState
     @Environment(TourPresenter.self) private var tourPresenter
+    // Optional for the same reason as the services below: this page can be
+    // reached from the tour-detail layer, whose environment does not inject
+    // PlacePresenter — a required lookup would crash there, exactly the class
+    // of bug the old ReportSheet crash was.
+    @Environment(PlacePresenter.self) private var placePresenter: PlacePresenter?
     @Environment(LocationManager.self) private var locationManager
     // Optional: the public maker page can be reached via the
     // UIKit-backed tour-detail layer, whose environment does NOT inject
@@ -701,6 +706,7 @@ struct MakerView: View {
             // map they'll see once they publish something.
             MakerMapSection(
                 tours: makerTours,
+                places: dataService.places,
                 userLocation: locationManager.userLocation,
                 selectedTourId: selectedMapTourId,
                 cameraPosition: $mapCamera,
@@ -712,6 +718,12 @@ struct MakerView: View {
                     dismissMapPlacecard()
                     selectedMapTourId = tourId
                     openTourFromMap(tourId)
+                },
+                onPlaceTapped: { placeId, _ in
+                    guard let place = dataService.place(by: placeId) else { return }
+                    dismissMapPlacecard()
+                    selectedMapTourId = nil
+                    placePresenter?.present(place)
                 },
                 onClusterTapped: { tourIds, coordinate in
                     showMapPlacecards(for: tourIds, at: coordinate)

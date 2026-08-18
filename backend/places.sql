@@ -29,9 +29,18 @@ create table if not exists public.places (
     city           text,
     address        text,
     hero_image_url text,
+    -- Further photos, shown after the hero in the place page's carousel.
+    -- Empty everywhere today; the column exists so step 4's editorial pass has
+    -- somewhere to put them without another migration.
+    additional_image_urls text[],
     created_at     timestamptz not null default now(),
     updated_at     timestamptz not null default now()
 );
+
+-- Idempotent upgrade path: the table shipped before place photos existed, so a
+-- database created by the first version of this file needs the column added.
+-- `if not exists` makes running the whole file safe either way.
+alter table public.places add column if not exists additional_image_urls text[];
 
 -- A tour belongs to at most one place. `on delete set null` so removing a
 -- place never removes tours — the tours are the valuable thing.
@@ -91,6 +100,7 @@ as $$
             pl.city,
             pl.address,
             pl.hero_image_url as "heroImageURL",
+            pl.additional_image_urls as "additionalImageURLs",
             (
                 select coalesce(jsonb_agg(t.id), '[]'::jsonb)
                 from public.tours t

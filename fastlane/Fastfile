@@ -140,6 +140,14 @@ platform :ios do
     # certificates". Distribution certificates are never touched.
     # Best-effort: an Apple API hiccup here must not block a build.
     begin
+      # 🔴 key_path FIRST. The script authenticates by reading the .p8 from
+      # ~/private_keys, and key_path is what writes it there — but key_path is
+      # lazy, first reached from signing_args INSIDE build_ipa. Called in the
+      # other order the script exits immediately with "No key file at ...",
+      # the rescue below logs it as a warning, no slots are freed, and the
+      # archive then dies at "maximum number of certificates" — which is the
+      # exact failure this call exists to prevent. Build 67 failed this way.
+      key_path
       sh("python3", "../scripts/revoke-dev-certs.py")
     rescue StandardError => e
       UI.important("Could not free certificate slots (continuing anyway): #{e.message}")
@@ -229,6 +237,14 @@ platform :ios do
     ensure_git_branch(branch: "main")
 
     begin
+      # 🔴 key_path FIRST. The script authenticates by reading the .p8 from
+      # ~/private_keys, and key_path is what writes it there — but key_path is
+      # lazy, first reached from signing_args INSIDE build_ipa. Called in the
+      # other order the script exits immediately with "No key file at ...",
+      # the rescue below logs it as a warning, no slots are freed, and the
+      # archive then dies at "maximum number of certificates" — which is the
+      # exact failure this call exists to prevent. Build 67 failed this way.
+      key_path
       sh("python3", "../scripts/revoke-dev-certs.py")
     rescue StandardError => e
       UI.important("Could not free certificate slots (continuing anyway): #{e.message}")
