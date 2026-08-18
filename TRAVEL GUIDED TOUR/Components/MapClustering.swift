@@ -279,43 +279,38 @@ enum MapClustering {
         // cluster's ID stable across recomputes: SwiftUI updates
         // the existing annotation in place instead of removing +
         // re-adding it.
-        // 🔴 A PLACE MARKER IS NEVER BUCKETED, and that is load-bearing.
+        // Places bucket like anything else. An earlier revision kept them out
+        // of clustering entirely, on the theory that a clustered place pin was
+        // unreachable — that was wrong. A place sits at a distinct coordinate
+        // from its neighbours (it REPLACES its own tours, so what surrounds it
+        // is other tours elsewhere), which means zooming separates it normally.
+        // The bug that theory was chasing turned out to be a dismissal/
+        // presentation problem in a covered window (#532), not clustering.
         //
-        // A place pin is already a cluster — it says "N tours here" and it is
-        // the only route to the place page. Let it merge into an ordinary
-        // cluster and it renders as a plain count pin whose tap goes to the
-        // cluster handler, which knows only about tours: the place becomes
-        // unreachable, silently. That shipped in 1.1 (69) and (70).
-        //
-        // It bit the maker map first because that map uses a coarser grid (12
-        // cells across) over a region framed to fit a maker's ENTIRE body of
-        // work, so cells are often ~900 m and a downtown place always has a
-        // neighbour. The home map has the same latent bug at low zoom.
-        //
-        // Keeping places single costs nothing: there are 24 in the catalog, so
-        // this can never produce a wall of pins, and a capsule overlapping a
-        // nearby cluster reads far better than a destination you cannot open.
+        // Keeping them out also made the map lie: at continental zoom a lone
+        // "2" capsule floated beside a "100" cluster, reading as though a
+        // whole region held two tours.
         var buckets: [BucketKey: [StopMarker]] = [:]
-        var placeItems: [ClusterItem] = []
         for marker in visibleMarkers {
-            if marker.isPlace {
-                placeItems.append(ClusterItem(coordinate: marker.coordinate, kind: .single(marker)))
-                continue
-            }
             let row = Int(floor(marker.coordinate.latitude / cellSpanLat))
             let col = Int(floor(marker.coordinate.longitude / cellSpanLon))
             buckets[BucketKey(row: row, col: col), default: []].append(marker)
         }
 
-        return placeItems + buckets.map { key, stops in
+        return buckets.map { key, stops in
             if stops.count == 1, let only = stops.first {
                 return ClusterItem(coordinate: only.coordinate, kind: .single(only))
             }
             let avgLat = stops.reduce(0) { $0 + $1.coordinate.latitude } / Double(stops.count)
             let avgLon = stops.reduce(0) { $0 + $1.coordinate.longitude } / Double(stops.count)
+            // Count TOURS, not markers. A place marker stands for every tour
+            // at that site, so counting it as 1 would under-report a region —
+            // the same dishonesty, in the other direction, as leaving places
+            // out of clustering altogether.
+            let tourCount = stops.reduce(0) { $0 + ($1.isPlace ? $1.placeTourCount : 1) }
             return ClusterItem(
                 coordinate: CLLocationCoordinate2D(latitude: avgLat, longitude: avgLon),
-                kind: .cluster(count: stops.count, stops: stops),
+                kind: .cluster(count: tourCount, stops: stops),
                 bucketKey: key
             )
         }
