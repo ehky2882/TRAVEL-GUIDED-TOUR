@@ -364,6 +364,25 @@ struct TRAVEL_GUIDED_TOURApp: App {
             if let maker = dataService.maker(by: id) {
                 makerPresenter.present(maker)
             }
+        case .list(let id):
+            // Unlike a tour or a maker, a list isn't in the catalog — it lives
+            // in Supabase and has to be fetched. RLS decides: a link to an
+            // Only-me list simply returns nothing, and the app opens to Home,
+            // which is the right answer for a link its owner didn't mean to
+            // share.
+            Task { @MainActor in
+                guard let fetched = await listService.list(byId: id) else {
+                    toastCenter.show(
+                        "That list isn't available any more.",
+                        style: .error
+                    )
+                    return
+                }
+                appShared.sharedList = SharedListPresentation(
+                    list: fetched.list,
+                    items: fetched.items
+                )
+            }
         case .group(let code):
             // A join QR scanned with the system Camera app lands here. No tour
             // id is needed — the leader broadcasts what the group is playing,

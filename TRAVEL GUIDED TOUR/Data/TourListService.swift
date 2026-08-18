@@ -156,6 +156,30 @@ final class TourListService {
         }
     }
 
+    /// One list plus its ordered items, by id — for a list arriving from a
+    /// **share link**, where the app has no context at all.
+    ///
+    /// Uses the `get_journey` RPC, which has existed in `backend/journeys.sql`
+    /// since the original Journeys work and had never been called. It runs
+    /// SECURITY INVOKER, so RLS still decides: a link to an Only-me list
+    /// returns nothing to anyone but its owner, which is exactly right.
+    ///
+    /// Returns nil for a list that is gone, hidden, or never existed — the
+    /// three cases are indistinguishable from here on purpose, since telling
+    /// a stranger which one applies would itself leak something.
+    func list(byId listId: UUID) async -> (list: TourList, items: [TourListItem])? {
+        do {
+            let payload: SharedListPayload? = try await client
+                .rpc("get_journey", params: ["p_journey": listId.uuidString.lowercased()])
+                .execute()
+                .value
+            guard let payload else { return nil }
+            return (payload.asTourList, payload.asItems)
+        } catch {
+            return nil
+        }
+    }
+
     // MARK: - Saving someone else's list
 
     /// Is this list one the user has saved? Synchronous — read while drawing.
@@ -547,6 +571,43 @@ private struct SavedListRow: Decodable {
     enum CodingKeys: String, CodingKey {
         case journeyId = "journey_id"
         case journeys
+    }
+}
+
+/// `get_journey` returns the list and its ordered items as one camelCase
+/// object — a different shape from the table selects above, hence its own DTO.
+private struct SharedListPayload: Decodable {
+    let id: UUID
+    let ownerUserId: UUID?
+    let title: String
+    let description: String?
+    let coverImageURL: String?
+    let isPublic: Bool
+    let items: [Item]
+
+    struct Item: Decodable {
+        let tourId: UUID
+        let position: Int
+        let note: String?
+    }
+
+    var asItems: [TourListItem] {
+        items
+            .sorted { $0.position < $1.position }
+            .map { TourListItem(tourId: $0.tourId, position: $0.position, note: $0.note) }
+    }
+
+    var asTourList: TourList {
+        TourList(
+            id: id,
+            title: title,
+            description: description,
+            coverImageURL: coverImageURL,
+            isPublic: isPublic,
+            itemCount: items.count,
+            firstTourId: items.min(by: { $0.position < $1.position })?.tourId,
+            ownerUserId: ownerUserId
+        )
     }
 }
 

@@ -35,6 +35,20 @@ final class AppSharedState {
     /// `TourDetailView.handlePrimaryAction` (Start Tour from the
     /// inline button row).
     var currentPlayingStopId: UUID? = nil
+    /// A list opened from a share link, held until `ContentView` can present
+    /// it. Lives here rather than in `TourListService` because it is view
+    /// state belonging to one incoming link, not part of the user's own
+    /// lists — and because the link arrives at the App, which has no other
+    /// channel into the content window.
+    var sharedList: SharedListPresentation? = nil
+}
+
+/// A list arriving from outside the app, with its items already fetched so the
+/// screen can render without a second round-trip.
+struct SharedListPresentation: Identifiable, Equatable {
+    let list: TourList
+    let items: [TourListItem]
+    var id: UUID { list.id }
 }
 
 /// Installs and tears down the secondary `UIWindow` that hosts the
