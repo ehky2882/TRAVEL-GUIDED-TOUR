@@ -121,10 +121,49 @@ All 24 places now carry copy and an address; 20 carry a photograph of their own.
   Nearby Tours, which now excludes them. Reaching them from the map was the earlier fix; this is
   reaching them from inside a tour, where most people arrive.
 
+## After the merge — four more defects, found on the 1.1 (69) device pass
+
+Merged as `2a99dbc` (PR #526); shipped in **TestFlight 1.1 (70), owner-confirmed live**.
+
+- **🔴 A place pin on a maker page's MAP tab did nothing.** `MakerView` reads `PlacePresenter`
+  **optionally** so it cannot crash on the tour-detail layer — but **neither the maker layer nor the
+  tour layer injected it**, so every maker page reached as a slide-up had a nil presenter and a dead
+  pin, with no error anywhere. Only the Me tab worked, a tab root inheriting the app environment.
+  This is the batch-D Follow button repeating exactly. Both layers now inject it, **and the nil
+  branch trips an `assertionFailure` in debug**. Durable rule: when you make an environment lookup
+  optional for crash-safety, give the nil path a debug assertion, or you have traded a crash for an
+  invisible defect.
+- **🔴 The tab bar had a dead-tap case for as long as the layers have existed.** `tabSelection` only
+  tore the layers down `if newTab != appShared.selectedTab`. Open a tour from Home, then tap Home —
+  the tab has not changed, so nothing was dismissed and the tap did *nothing at all*, with the X the
+  only way out. Reported as "stuck on the tour detail page, bottom tab doesn't even work". Tapping
+  the tab you are already on is iOS's back-to-root gesture. **Pre-existing, not caused by the place
+  layer**, but three layers made it easy to reach.
+- **🔴 The place layer shipped with no line in `tabSelection`**, so a place page stayed on screen
+  while the selection changed behind it. Every slide-up layer needs a line there; there are now
+  three presenters and the list is the kind a fourth gets added without.
+- **🐛 `publish-catalog`'s gh-pages job had been failing since the place layer landed** —
+  `RPC failed; HTTP 500` / `send-pack: unexpected disconnect` on every run, because it checks out all
+  **6,565 files** of gh-pages (4m37s) before pushing. **The Supabase seed is a separate job and kept
+  succeeding, so the app's primary source was right and nothing looked broken;** the stale mirror
+  only surfaces on a shared place link, which reads it. Rewritten to update one file through the
+  **Contents API** with no clone — blob SHA from the root **tree** listing (`GET /contents` refuses a
+  blob over 1 MB and the catalog is ~7 MB), payload built in **python not `jq --arg`** (10 MB of
+  base64 in one argv entry exceeds `ARG_MAX`). A **verify step now asks GitHub what it is serving**
+  and fails on disagreement — the job was green for sixteen hours while the mirror was stale. The
+  mirror was republished by hand at `447e1bd` and confirmed live.
+
+**Not a bug: the images that would not load.** gh-pages content was intact and every file — place
+heroes and tour heroes alike — served 200 at correct byte sizes when re-checked. A window during
+which the whole site 404'd and then recovered. Recorded as unattributed rather than given an
+invented cause.
+
 ## Next
 
-- Confirm the flow on device, then merge #523.
-- **One sourced photograph for Square Saint-Louis**, the last repeated image.
+- **One sourced photograph for Square Saint-Louis** — the last place repeating an image, because it
+  has exactly one photograph in the whole catalog.
+- **Two device-only checks still owed:** sharing a place link to a second phone, and saving a place
+  on one device and seeing it on another under the same account.
 - **Step 5 — deferred:** geofence behaviour when two tours overlap ("ask on arrival" vs auto-play the
   top-ranked one with a switch-guide affordance) · search/browse grouping by place · place galleries
   once photography exists.

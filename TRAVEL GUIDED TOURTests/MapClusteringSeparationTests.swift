@@ -26,6 +26,80 @@ final class MapClusteringSeparationTests: XCTestCase {
         )
     }
 
+    private func placeMarker(
+        _ latitude: Double,
+        _ longitude: Double,
+        tours: Int = 2
+    ) -> MapClustering.StopMarker {
+        let placeId = UUID()
+        return MapClustering.StopMarker(
+            id: placeId,
+            tourId: UUID(),
+            title: "Dorchester Square",
+            coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
+            placeId: placeId,
+            placeTourCount: tours
+        )
+    }
+
+    // MARK: - Places are never clustered
+
+    /// 🔴 The bug this pins, reported on 1.1 (70): a place pin merged into an
+    /// ordinary cluster with its neighbours, rendered as a plain count pin,
+    /// and its tap went to the cluster handler — which only knows how to open
+    /// tours. The place page became unreachable from that map entirely.
+    ///
+    /// Worst on a maker page, whose coarser grid over a whole-city region puts
+    /// a downtown place in the same cell as several of the same maker's tours.
+    func test_placeMarker_isNeverClusteredWithItsNeighbours() {
+        let region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 45.50, longitude: -73.57),
+            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        )
+        // A place and three ordinary tours close enough to share one cell.
+        let markers = [
+            placeMarker(45.4997, -73.5710),
+            marker(45.4999, -73.5712),
+            marker(45.5001, -73.5708),
+            marker(45.4995, -73.5715)
+        ]
+        let items = MapClustering.cluster(markers: markers, in: region, cellsAcross: 12)
+
+        let places = items.compactMap { item -> MapClustering.StopMarker? in
+            if case .single(let m) = item.kind, m.isPlace { return m }
+            return nil
+        }
+        XCTAssertEqual(places.count, 1, "the place must survive as its own tappable pin")
+        XCTAssertEqual(places.first?.placeTourCount, 2)
+
+        // And no cluster may contain it — that is the state that hid it.
+        for item in items {
+            if case .cluster(_, let stops) = item.kind {
+                XCTAssertFalse(stops.contains(where: \.isPlace),
+                               "a place marker must never be bucketed into a cluster")
+            }
+        }
+    }
+
+    /// The ordinary tours around it still cluster — this fix must not turn
+    /// every pin into a single.
+    func test_ordinaryMarkersStillCluster() {
+        let region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 45.50, longitude: -73.57),
+            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        )
+        let markers = [
+            marker(45.4999, -73.5712),
+            marker(45.5001, -73.5708),
+            marker(45.4995, -73.5715)
+        ]
+        let items = MapClustering.cluster(markers: markers, in: region, cellsAcross: 12)
+        XCTAssertTrue(
+            items.contains { if case .cluster = $0.kind { return true } else { return false } },
+            "neighbouring tour pins must still merge"
+        )
+    }
+
     // MARK: - canSeparateByZoom
 
     /// The real catalog case: a walk's intro stop wired at the exact
