@@ -170,6 +170,24 @@ struct SettingsView: View {
                     }
                 }
 
+                // Apple expects an app carrying user-generated content and
+                // in-app purchases to surface its terms in-app, and Stripe's
+                // platform review cites the acceptable use policy. The pages
+                // are canonical on dozent.world so there is one copy to keep
+                // current, rather than a bundled duplicate that silently
+                // drifts out of date.
+                Section(header: sectionHeader("Legal")) {
+                    Link(destination: AtlasLegalLinks.privacy) {
+                        Label("Privacy Policy", systemImage: "hand.raised")
+                    }
+                    Link(destination: AtlasLegalLinks.terms) {
+                        Label("Terms of Service", systemImage: "doc.text")
+                    }
+                    Link(destination: AtlasLegalLinks.acceptableUse) {
+                        Label("Acceptable Use", systemImage: "checkmark.shield")
+                    }
+                }
+
                 Section(header: sectionHeader("About")) {
                     HStack {
                         Label("Tours", systemImage: "headphones")
@@ -183,7 +201,12 @@ struct SettingsView: View {
                         Text("\(dataService.makers.count)")
                             .foregroundStyle(AtlasColors.secondaryText)
                     }
-                    Label("All data stored on device", systemImage: "iphone")
+                    // Was "All data stored on device", which stopped being
+                    // true when accounts and cross-device sync shipped: a
+                    // signed-in user's library, purchases and creator content
+                    // all live on the server. Location genuinely never leaves
+                    // the device, so that is what this row claims now.
+                    Label("Location never leaves this device", systemImage: "location.slash")
                 }
             }
             // Merge the page with the bottom island: hide the List's
