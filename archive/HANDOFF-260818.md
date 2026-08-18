@@ -57,9 +57,11 @@ tour can be filed into named lists and one tap must never destroy that filing; a
 Saved places appear in Library's **Lists** tab under a `PLACES` header, between the lists and
 Following.
 
-**⚠️ Known gap, deliberate: saved places do not sync across devices.** Saved tours, recently-viewed
-and playback progress all do. Wiring it is additive — a `user_saved_places` table plus one push path
-in `SyncService` — and needs no migration of what is stored now.
+**Saved places sync**, added in the same session after being flagged as a gap. Mirrors the
+recently-viewed path exactly. ⚠️ **The merge keeps the EARLIER `savedAt`** — the Library list is
+ordered by it, so taking the later date would reshuffle a list the user never touched; recents take
+the later date for the opposite reason. `applyMerged` fires neither `onChange` nor a haptic, so a
+background sync cannot schedule a redundant write or buzz the phone.
 
 **Share** — `DeepLink.place`, path marker `p`, `AtlasShareLink.placeURL`, resolved by the app into
 the place layer. `ReportSheet` gained a `.place` target. A `p/index.html` landing page went to
@@ -67,11 +69,14 @@ the place layer. `ReportSheet` gained a `.place` target. A `p/index.html` landin
 shared link degrades to a real page rather than a 404; it replicates `Place.ranked` in JS so the web
 order matches the app's.
 
-## Owner action
+## Owner action — two Supabase pastes, both optional today
 
-**One Supabase paste, optional today:** `backend/places_photos.sql` — adds `additional_image_urls`
-to `places` and teaches `catalog_places()` to send it. **The app is correct without it**; the column
-is empty everywhere until step 4 writes place photography. Safe to run twice.
+Both are guarded so a second run is a no-op, and **the app is correct without either**.
+
+- `backend/saved_places.sql` — one table so a saved place follows you between devices. Without it,
+  saving still works; it just stays on the phone that saved it.
+- `backend/places_photos.sql` — adds `additional_image_urls` to `places` so a place can carry a
+  gallery. The column is empty everywhere until place photography is sourced.
 
 ## Traps worth carrying
 
@@ -93,11 +98,33 @@ is empty everywhere until step 4 writes place photography. Safe to run twice.
 - **`p`, `t`, `m` are single-letter path markers.** A new share marker must not collide; the parser
   checks them in order.
 
+## Step 4 — done in this session
+
+All 24 places now carry copy and an address; 20 carry a photograph of their own.
+
+- **Descriptions** describe the site, not either tour, grounded in what the tours say. 11 of 24 run
+  past the 4-line fold, so the Read more is exercised.
+- **⚠️ Addresses are editorial, corroborated by reverse geocoding rather than taken from it.**
+  Nominatim returned a neighbouring shop for Square Saint-Louis and Hackesche Höfe, a side street for
+  Dam Square, a viewpoint for the Circus Maximus. A house number is kept only where the geocode's
+  `name` field proves it landed on the site itself. `GET DIRECTIONS` routes on coordinates, so a soft
+  address cannot misdirect anyone.
+- **🔴 13 of 24 places were showing one photograph three times.** Both tours at such a place carry
+  the same hero file — a walk's intro stop reuses the single tour's photograph — and the place
+  borrowed it again. Fixed for 12 by promoting an image already uploaded and already verified. Every
+  candidate was **opened**; five first picks were rejected as close-ups rather than establishing
+  shots. **4 still borrow:** Waterlooplein and Square Saint-Louis have no second photograph in the
+  catalog at all, the Textile Souk's alternatives are shop interiors rather than the arcade its copy
+  describes, and Al Shindagha's only alternative is the FAL-licensed image the credits ledger flags.
+  **Square Saint-Louis is the one place still repeating an image** and needs one sourced photo.
+- **`Also at <place>` on tour detail** — the other tours at the same site, between the stops and
+  Nearby Tours, which now excludes them. Reaching them from the map was the earlier fix; this is
+  reaching them from inside a tour, where most people arrive.
+
 ## Next
 
 - Confirm the flow on device, then merge #523.
-- **Step 4 — editorial content:** place names, one-line descriptions, addresses, place heroes (and,
-  now, place galleries).
+- **One sourced photograph for Square Saint-Louis**, the last repeated image.
 - **Step 5 — deferred:** geofence behaviour when two tours overlap ("ask on arrival" vs auto-play the
-  top-ranked one with a switch-guide affordance) · search/browse grouping by place · an "other tours
-  at this place" block on tour detail · saved-places sync.
+  top-ranked one with a switch-guide affordance) · search/browse grouping by place · place galleries
+  once photography exists.
