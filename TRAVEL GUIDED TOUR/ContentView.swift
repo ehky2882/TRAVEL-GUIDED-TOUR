@@ -189,6 +189,35 @@ struct ContentView: View {
             didRequestLocationPermission = true
             locationManager.requestPermission()
         }
+        // 🔴 Give each presenter a DIRECT route to take its layer down.
+        //
+        // The `.onChange` blocks below do the presenting and dismissing, and
+        // they run in THIS view — which lives in the main window. While a
+        // layer is up that window is fully covered by a UIKit modal, and
+        // SwiftUI can stop delivering updates to a covered hierarchy: a
+        // `dismiss()` writes its state and the observer never runs, so the
+        // control does nothing at all. That is what made the X on tour detail
+        // and the bottom tab bar both stop working once you had been into a
+        // creator page and back, and it is the same root cause as the dead
+        // place pin (#532) and the dead tab bar of session 74.
+        //
+        // Dismissal needs no view construction, so it can be performed
+        // directly and does not have to wait on an observer. Presentation
+        // still goes through `.onChange` because the environment injection
+        // below has to happen here — a place tapped from inside a layer
+        // therefore still pushes in-stack rather than presenting (see
+        // `MakerView.openPlaceFromMap`).
+        //
+        // The `.onChange` else-branches stay as a backstop; both paths are
+        // idempotent, because `BottomLayerController.dismiss` no-ops when
+        // nothing is presented.
+        .onAppear {
+            tourPresenter.performDismiss = {
+                bottomLayer.dismiss { tourLayerCoversDrawer = false }
+            }
+            makerPresenter.performDismiss = { makerLayer.dismiss() }
+            placePresenter.performDismiss = { placeLayer.dismiss() }
+        }
         // Paid tours: keep entitlements in step with whoever is signed in.
         // Keyed on `userId` so it re-runs on sign-in, sign-out AND an account
         // switch — the last of which must never leave one account holding the
