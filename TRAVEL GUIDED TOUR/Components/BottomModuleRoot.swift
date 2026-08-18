@@ -27,6 +27,9 @@ struct BottomModuleRoot: View {
     /// Needed here, not just in `ContentView`, so a tab tap can close a presented
     /// maker page from this window — see `tabSelection`.
     @Environment(MakerPresenter.self) private var makerPresenter: MakerPresenter?
+    /// Optional for the same reason as `makerPresenter`: the inline fallback
+    /// renders this view without the full app environment.
+    @Environment(PlacePresenter.self) private var placePresenter: PlacePresenter?
     @Environment(AppSharedState.self) private var appShared
     @Environment(AtlasNavigationState.self) private var navState
     @Environment(AuthService.self) private var authService: AuthService?
@@ -151,11 +154,24 @@ struct BottomModuleRoot: View {
             get: { appShared.selectedTab },
             set: { newTab in
                 if newTab != appShared.selectedTab {
+                    // Every slide-up layer has to come down as part of the
+                    // tap, from THIS window — the one the layers can never
+                    // cover. A layer left up sits over the new tab's content
+                    // and the tab bar reads as dead: the icon highlights, the
+                    // screen doesn't change (the session-8 symptom).
+                    //
+                    // 🔴 A NEW LAYER MUST BE ADDED HERE TOO. The place layer
+                    // shipped in 1.1 (69) without this line, so opening a
+                    // place and then tapping a tab changed the selection
+                    // behind a page that stayed on screen.
                     if tourPresenter.presentedTour != nil {
                         tourPresenter.dismiss()
                     }
                     if makerPresenter?.presentedMaker != nil {
                         makerPresenter?.dismiss()
+                    }
+                    if placePresenter?.presentedPlace != nil {
+                        placePresenter?.dismiss()
                     }
                 }
                 appShared.selectedTab = newTab
