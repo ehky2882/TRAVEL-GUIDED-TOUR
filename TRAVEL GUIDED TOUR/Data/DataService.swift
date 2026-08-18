@@ -6,6 +6,14 @@ import CoreLocation
 final class DataService {
     private(set) var tours: [Tour] = []
     private(set) var makers: [Maker] = []
+    /// Sites carrying more than one tour. Empty for any catalog published
+    /// before the place layer, which is why every reader must treat "no place"
+    /// as the normal case rather than an error.
+    private(set) var places: [Place] = []
+    /// Tour id → its place. Built once whenever `places` changes, because the
+    /// map asks this per pin and a linear scan per marker would be quadratic
+    /// over a 1,350-tour catalog.
+    private var placeByTourId: [UUID: Place] = [:]
 
     private let loader: RemoteCatalogLoader
 
@@ -36,6 +44,7 @@ final class DataService {
         if let local = loader.loadLocal() {
             tours = local.tours
             makers = local.makers
+            setPlaces(local.places ?? [])
         }
         // 2. Refresh from the network in the background. On success it
         //    overwrites the cache and updates the published catalog so views
@@ -60,6 +69,7 @@ final class DataService {
         guard let fresh = await loader.refresh() else { return }
         self.tours = fresh.tours
         self.makers = fresh.makers
+        setPlaces(fresh.places ?? [])
     }
 
     /// Re-run the network refresh when the app returns to the foreground.
@@ -88,6 +98,31 @@ final class DataService {
         } else {
             makers.append(maker)
         }
+    }
+
+    private func setPlaces(_ newPlaces: [Place]) {
+        places = newPlaces
+        var index: [UUID: Place] = [:]
+        for place in newPlaces {
+            for tourId in place.tourIds { index[tourId] = place }
+        }
+        placeByTourId = index
+    }
+
+    func place(by id: UUID) -> Place? {
+        places.first { $0.id == id }
+    }
+
+    /// The place a tour belongs to, or nil — which is the ordinary case: only
+    /// tours sharing a coordinate with another tour have one.
+    func place(forTourId id: UUID) -> Place? {
+        placeByTourId[id]
+    }
+
+    /// A place's tours in display order (`Place.ranked`). Silently drops ids
+    /// the catalog no longer carries, so a stale place can't produce a hole.
+    func rankedTours(at place: Place) -> [Tour] {
+        Place.ranked(place.tourIds.compactMap { tour(by: $0) })
     }
 
     func tour(by id: UUID) -> Tour? {

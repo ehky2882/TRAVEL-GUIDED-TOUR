@@ -66204,5 +66204,343 @@
       ],
       "priceUSD": 0
     }
+  ],
+  "places": [
+    {
+      "id": "62188f13-c864-5759-84d6-164a052e951a",
+      "name": "Centraal Station",
+      "description": null,
+      "latitude": 52.379,
+      "longitude": 4.9002,
+      "city": "Amsterdam",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "699295da-c427-522e-9c4a-17c5057f2d3a",
+        "a48cc6fe-7c4b-5a82-a91c-474c9964a648"
+      ]
+    },
+    {
+      "id": "41dd8a45-b3f0-5846-8d5b-b65dd31f89dd",
+      "name": "Dam Square",
+      "description": null,
+      "latitude": 52.3731,
+      "longitude": 4.89135,
+      "city": "Amsterdam",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "80943c5f-f117-59a3-bfcc-e55d8a78b63f",
+        "e816a1e6-2368-55d1-a947-9059c5645bb7"
+      ]
+    },
+    {
+      "id": "73f7a252-3d50-59ce-a5cc-d8d3215fd77e",
+      "name": "Rijksmuseum",
+      "description": null,
+      "latitude": 52.36,
+      "longitude": 4.8853,
+      "city": "Amsterdam",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "35d28cdd-df23-5b4d-99b8-ef54948db57d",
+        "e2e6d14f-aec1-546c-8930-3d2c4a72c6d8"
+      ]
+    },
+    {
+      "id": "e71fe7f3-d16d-578f-94b2-adb21a47055e",
+      "name": "Waterlooplein",
+      "description": null,
+      "latitude": 52.3694,
+      "longitude": 4.9014,
+      "city": "Amsterdam",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "8b127963-bdb4-5e8d-8b89-f7e427e09380",
+        "f10df936-6cc7-52ff-90c4-2a73faebb54a"
+      ]
+    },
+    {
+      "id": "4690687e-da8b-52d8-8a80-c87c6beb1c13",
+      "name": "Westerkerk",
+      "description": null,
+      "latitude": 52.3747,
+      "longitude": 4.8839,
+      "city": "Amsterdam",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "0d0c581a-5e72-5aa4-a1e5-b8a70bf23f0d",
+        "0e0bbe76-3b8d-5ace-934c-991b9c8c3997"
+      ]
+    },
+    {
+      "id": "60270b85-f701-5e6f-8cd0-8118ad672de0",
+      "name": "Brandenburg Gate",
+      "description": null,
+      "latitude": 52.5163,
+      "longitude": 13.3777,
+      "city": "Berlin",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "17b809c4-9de8-564c-ab43-c09a9c9cc2c9",
+        "893d656a-6ec8-5520-b5f8-fd63c60ae4b5"
+      ]
+    },
+    {
+      "id": "49d92f6a-35b9-5b3e-94c1-8a0baa1c74af",
+      "name": "Hackesche Höfe",
+      "description": null,
+      "latitude": 52.5251,
+      "longitude": 13.4024,
+      "city": "Berlin",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "03e5c64c-8ea5-57b5-8d9d-0ec003b4f1ed",
+        "e3f6f384-4168-5656-a35b-1546b03fe0f0"
+      ]
+    },
+    {
+      "id": "0abbc584-b2bb-5caa-8916-8d002a06d1df",
+      "name": "Oberbaumbrücke",
+      "description": null,
+      "latitude": 52.5018,
+      "longitude": 13.4457,
+      "city": "Berlin",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "ad28fb21-7e62-5252-8679-7e2f37b20c66",
+        "dc88f86f-d38c-5344-9c53-26e4ef9f97bf"
+      ]
+    },
+    {
+      "id": "b1032711-ccb5-58d7-8a0d-89c1b53ed1d8",
+      "name": "Potsdamer Platz",
+      "description": null,
+      "latitude": 52.5096,
+      "longitude": 13.3759,
+      "city": "Berlin",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "03c0f1c1-0a74-521c-88b3-87927f33f954",
+        "76127777-fee0-53a2-809c-d00386c0f2fe"
+      ]
+    },
+    {
+      "id": "da072e04-47a9-5f02-a4f6-a31c89df2594",
+      "name": "Al Shindagha",
+      "description": null,
+      "latitude": 25.268,
+      "longitude": 55.2901,
+      "city": "Dubai",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "32130aa0-c428-5cb8-bf65-49d780ad4d02",
+        "cb214a2c-ae60-5242-a96c-a27e21e76523"
+      ]
+    },
+    {
+      "id": "ddaeb5dd-9cfd-554f-9498-792d27b42ef1",
+      "name": "The Marina Walk",
+      "description": null,
+      "latitude": 25.0811,
+      "longitude": 55.1406,
+      "city": "Dubai",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "54206005-4cd6-52f9-8cbc-965ee288e59d",
+        "c84a6965-b12e-5238-8ffc-93258015d57f"
+      ]
+    },
+    {
+      "id": "912c6376-cf5a-5695-9ded-771d564d4b43",
+      "name": "The Textile Souk",
+      "description": null,
+      "latitude": 25.263,
+      "longitude": 55.2961,
+      "city": "Dubai",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "22bd261c-2628-5e99-813a-58065f05d116",
+        "296d2093-704e-5892-a8c6-ee614a63cd4a"
+      ]
+    },
+    {
+      "id": "635ff732-727b-5762-9557-0b7fa65be6fb",
+      "name": "Walt Disney Concert Hall",
+      "description": null,
+      "latitude": 34.0553,
+      "longitude": -118.2498,
+      "city": "Los Angeles",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "9bca06a3-7d7d-571c-a1c3-9e243dd82d6e",
+        "e22f888b-f47f-5f4e-9cfe-cd6842e7d671"
+      ]
+    },
+    {
+      "id": "2cd38ec7-d093-52e6-b957-5088fd3e68f3",
+      "name": "Dorchester Square",
+      "description": null,
+      "latitude": 45.4997,
+      "longitude": -73.571,
+      "city": "Montreal",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "697e4008-1260-5ea6-8d61-107a45d725e9",
+        "fd836835-98e7-5174-b87c-5d4b63fa08e9"
+      ]
+    },
+    {
+      "id": "51e74e21-10a6-5250-a5f3-64525c3b3745",
+      "name": "Notre-Dame Basilica",
+      "description": null,
+      "latitude": 45.50451,
+      "longitude": -73.55627,
+      "city": "Montreal",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "602d0b82-1817-593c-a3fa-6dc962a73faf",
+        "f1299ecf-7c16-56e0-bc2a-d2f6c3c16ebc"
+      ]
+    },
+    {
+      "id": "3d3ee7cd-0e8a-5a56-9aa0-4b4fd1430822",
+      "name": "Square Saint-Louis",
+      "description": null,
+      "latitude": 45.5165,
+      "longitude": -73.5665,
+      "city": "Montreal",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "05c51585-2ac1-5f1d-8b90-8ef8a4dcc09b",
+        "6d3f40c1-6c3a-53e9-a090-d163082c47e2"
+      ]
+    },
+    {
+      "id": "4435887d-53bd-5064-b27c-83c22a14a94e",
+      "name": "Largo di Torre Argentina",
+      "description": null,
+      "latitude": 41.8955,
+      "longitude": 12.4768,
+      "city": "Rome",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "18696d8a-c775-51c5-b9d8-4129ed1ff1a1",
+        "b898ab3b-374b-50bd-a53b-dbbacf55a12e"
+      ]
+    },
+    {
+      "id": "8c87e077-1caf-5005-afea-df268e4ea3b2",
+      "name": "Piazza del Popolo",
+      "description": null,
+      "latitude": 41.9109,
+      "longitude": 12.4763,
+      "city": "Rome",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "675cff67-7f73-543a-8339-61b55d4a8ec8",
+        "c15de21e-c8e2-5e35-8fea-c389b51ad4c2"
+      ]
+    },
+    {
+      "id": "aa7c725d-ab51-5a26-92f1-6349f3fe6fcf",
+      "name": "The Circus Maximus",
+      "description": null,
+      "latitude": 41.8859,
+      "longitude": 12.4853,
+      "city": "Rome",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "b7505267-48e7-5ad6-8924-a1e347750012",
+        "c7d6db46-7c8a-59a3-92af-7f3429d719df"
+      ]
+    },
+    {
+      "id": "7e9e741b-c141-5561-85fa-626deebea2a8",
+      "name": "The Colosseum",
+      "description": null,
+      "latitude": 41.8902,
+      "longitude": 12.4922,
+      "city": "Rome",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "1f0bf5a5-e56d-5648-8b34-be4bc9cd10da",
+        "9c40bfd5-5e9c-55c4-a38a-c16bd38ccbf8"
+      ]
+    },
+    {
+      "id": "2712fd32-85e0-53a8-b35c-7699c3f86a86",
+      "name": "Art Gallery of Ontario",
+      "description": null,
+      "latitude": 43.6536,
+      "longitude": -79.3925,
+      "city": "Toronto",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "4a191d84-138a-5b84-a851-530ab411f77d",
+        "de8989de-b757-5ffd-82cc-82f6ee3d17f6"
+      ]
+    },
+    {
+      "id": "6477a6fa-400d-542c-9765-59b9fb0101c1",
+      "name": "CN Tower",
+      "description": null,
+      "latitude": 43.6426,
+      "longitude": -79.3871,
+      "city": "Toronto",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "463962a5-669f-5d58-9c35-7be9a99dfe1b",
+        "e39a0068-04b9-521b-9f24-db0dfb46f3df"
+      ]
+    },
+    {
+      "id": "7f9a43cb-8b18-55d1-9a05-3ba5cc82ab06",
+      "name": "Royal Ontario Museum",
+      "description": null,
+      "latitude": 43.6677,
+      "longitude": -79.3948,
+      "city": "Toronto",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "096a3cba-09b6-57e7-8379-2e49f3a7b507",
+        "0d3e20aa-bd74-524f-a147-6273f94b2355"
+      ]
+    },
+    {
+      "id": "14774d3b-7bd4-564c-a833-a4e145136bf4",
+      "name": "Union Station",
+      "description": null,
+      "latitude": 43.6453,
+      "longitude": -79.3806,
+      "city": "Toronto",
+      "address": null,
+      "heroImageURL": null,
+      "tourIds": [
+        "c65f4997-55ed-5ab7-ab20-617e784e2175",
+        "e7b135f9-f4d8-51a5-93d5-6c17f4367682"
+      ]
+    }
   ]
 }
