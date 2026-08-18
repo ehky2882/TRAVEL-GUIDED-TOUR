@@ -103,6 +103,19 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 - **🐛 A Python mirror proves the LOGIC, never the TYPES.** The validator's `Place.tourIds` was written `[String]` while the validator keys tours by `UUID`; my Python mirror keyed by string, so it passed. Reading the surrounding Swift found a second error in the same block (`tour.kind == "single"` where `kind` is an enum). **When mirroring a Swift validator in Python, re-read the Swift for type agreement — the mirror cannot see it.**
 - **🐛 A Swift argument-order error was invisible in the CI log** because xcodebuild's verbose echo buried the `error:` lines beyond log-tail reach. Found by **parsing the call site and the declaration and diffing the orders**, not by reading. Worth reaching for whenever a build fails and the log won't show why.
 - **🐛 `revoke-dev-certs.py` had been running BEFORE the key existed since the July fastlane rewrite.** The `beta` lane called the script at step 2, but `key_path` — which writes the `.p8` into `~/private_keys` — is lazy and was first reached at step 5. The script exited instantly finding no key, the `rescue` logged a warning, and no certificate slots were freed; build 67 then died at the cap. **Fixed in both `beta` and `release`: `key_path` is called first, deliberately, with a comment saying why.**
+### Dozent 1.1 IS SUBMITTED — build 66 + `tour.tier.099`, and the five things that only ever surface at the submission itself (session 95 — App Store, no app code)
+
+**Submitted 2026-08-18 03:22 UTC.** Version 1.1 `WAITING_FOR_REVIEW`, `tour.tier.099` `WAITING_FOR_REVIEW` in the same review submission, build 66, `releaseType` **MANUAL** (approval does NOT publish; the owner presses Release), copyright `2026 Dozent`. Store copy rewritten to the two-sided teacher/student framing ([PR #524](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/524)).
+
+- **🔴 THE RELEASE LANE WOULD HAVE SUBMITTED THE APP WITHOUT THE IN-APP PURCHASE.** `deliver/submit_for_review.rb` calls `submission.add_app_store_version_to_review_items(app_store_version_id: version.id)` and **nothing else** — no IAP items, ever. Apple reviews the version and its purchases as ONE submission, so `bundle exec fastlane release` on a paid app ships an approved app whose Buy buttons lead nowhere. The Fastfile's own warning ("attach in-app purchases by hand") is correct but under-sells it: there is nothing to attach by hand *after* fastlane has made its own submission.
+- **🔴 The first non-consumable IAP MUST ride along with an app version.** App Store Connect says so in a banner on the IAP page, and the API agrees: `POST /v1/inAppPurchaseSubmissions` → **409 `STATE_ERROR.INVALID_REQUEST_ENTITY_STATE_INVALID`** while the app has never been released. Once 1.1 is live, further tiers CAN be submitted on their own — no new build, roughly a day's turnaround.
+- **🔴 THERE IS NO API PATH TO PUT AN IAP IN A REVIEW SUBMISSION. It is UI-only, and the control is somewhere you would never look.** `reviewSubmissionItems` has no IAP relationship (`inAppPurchaseV2`, `inAppPurchase`, both → 409 `'…' is not a relationship on the resource`), and `appStoreVersions/{id}/relationships/inAppPurchases` → 404 `The relationship 'inAppPurchases' does not exist`. **Not** on the version page. **Not** on the App Review page (its draft panel offers only Close / the version / Submit for Review). It is on the **IAP's OWN page → the "Add for Review" dropdown → pick the existing draft submission.**
+- **⚠️ A review submission you have created but not submitted CANNOT be undone.** `DELETE` → **403**; `PATCH {canceled: true}` → **409 "Resource is not in cancellable state"** (only *submitted* ones cancel). Adding the version to it also flips the version `PREPARE_FOR_SUBMISSION` → `READY_FOR_REVIEW`. Harmless — it is the same state the UI's "Add for Review" produces — but do not create one speculatively.
+- **🐛 IAP review screenshots must be an EXACT device size — cropping fails.** A cropped 1206×2105 PNG uploaded fine, then came back `assetDeliveryState.state = FAILED`, `IMAGE_INCORRECT_DIMENSIONS`. Native **1320×2868** (iPhone 17 Pro Max) was accepted. So never crop to hide a blemish: relaunch with **`-UITestDisableMarquee`** (`UITestSupport.swift`) to freeze the scrolling mini-player title, which is the thing that makes cropping tempting in the first place.
+- **⚠️ Three required fields were blank, and NOTHING else would ever have told you.** `primaryCategory` unset, `contentRightsDeclaration` null, `copyright` null — invisible in a build, in TestFlight, and on the version page's own checks; they only fail when you try to submit. Now **TRAVEL**, **USES_THIRD_PARTY_CONTENT**, **2026 Dozent**. `releaseType` was also **AFTER_APPROVAL**, silently contradicting the Fastfile's `automatic_release: false`; set to **MANUAL**.
+- **✅ Drive App Store Connect from a script when the browser fails.** Key `~/Downloads/AuthKey_5W4PB6B3W9.p8`, issuer `f34324bd-aa34-4de0-8acb-2537b0e9325e`, ES256 JWT (see the `call()` helper at the top of `scripts/push-appstore-metadata.py`). **IAP resources live on the `/v2` base** (`/v2/inAppPurchases/{id}` and its relationships); everything else is `/v1`. This is how the whole listing was audited and fixed after `read_page` timed out on ASC.
+- **⚠️ Verify ASC UI state with a SCREENSHOT, never a DOM probe.** A scripted `.click()` on "Add for Review" **did** work — it opened the dropdown — but the check looked for `[role="dialog"]`, found none, and read as a no-op. The dropdown is a plain menu with no dialog role. The screenshot showed the truth immediately. (Separately, and still true from session 94: ASC ignores programmatically-set text input *values* — use real keystrokes.)
+- **Nine price tiers remain `MISSING_METADATA`**, each missing only its review screenshot. Deliberate: every multi-stop walk is $0.99 today (§ LIVE PRICING), so a genuine screenshot for, say, `tour.tier.299` cannot exist until a real tour costs $2.99. Do not paste the $0.99 screenshot onto them — the price mismatch is a rejection risk, and it would jeopardise the one tier that matters.
 
 ## Current State (2026-08-17)
 
@@ -465,13 +478,18 @@ verified by reading back from Apple. The previous listing is backed up.
   be added at 1.1. (2) **The version update is ATOMIC** — that single rejected
   field took description, keywords, promotional text and support URL down with
   it. A non-200 means nothing landed.
-- **The version question is now answered by the data: App Store Connect already
-  holds an editable version 1.0** (`PREPARE_FOR_SUBMISSION`) while the project
-  says `MARKETING_VERSION = 1.1`. Metadata belongs to a *version record*, so the
-  listing copy now sits on 1.0. Aligning the project to 1.0 is the cheap path;
-  staying on 1.1 means creating a new version record and re-pushing.
-- **The store name is confirmed `Atlas Audio Tours`** (read live), so only
-  `CFBundleDisplayName = Dozent` is still inconsistent.
+- **The version question is answered by the data: metadata belongs to a
+  *version record*, not to the app**, so the listing copy sits on whatever
+  number the editable record carries. **Read live at the time: 1.0**
+  (`PREPARE_FOR_SUBMISSION`) while the project said `MARKETING_VERSION = 1.1`.
+  **✅ Resolved since — the record was renamed 1.0 → 1.1 to match the project**
+  (owner decision 2026-08-07, `docs/launch-runbook.md` Step 3), so the copy
+  stayed attached and nothing had to be re-pushed. **Re-verified against the
+  App Store Connect API 2026-08-18: the editable record is 1.1
+  (`PREPARE_FOR_SUBMISSION`).**
+- **The store name was read live here as `Atlas Audio Tours`** — **stale; it is
+  now `Dozent` at Apple** (corrected in [PR #519](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/519)),
+  which agrees with `CFBundleDisplayName = Dozent`.
 - **⚠️ All 10 paid-tour IAPs are `MISSING_METADATA`** — none can be submitted
   until each has a description and a review screenshot. Previously recorded as
   merely "Prepare for Submission", which understated the work.
