@@ -85,9 +85,23 @@ struct Tour: Codable {
     let createdAt: String?
 }
 
+struct Place: Codable {
+    let id: String
+    let name: String
+    let description: String?
+    let latitude: Double
+    let longitude: Double
+    let city: String?
+    let address: String?
+    let heroImageURL: String?
+    let tourIds: [String]
+}
+
 struct ToursFile: Codable {
     let makers: [Maker]
     let tours: [Tour]
+    /// Optional — catalogs published before the place layer have no such key.
+    let places: [Place]?
 }
 
 // MARK: - Finding accumulator
@@ -429,6 +443,68 @@ for (ti, t) in file.tours.enumerated() {
     }
 }
 
+// MARK: - Places
+
+// A place is a physical site that more than one tour describes. Identity is
+// EXACT coordinate equality (owner decision 2026-08-18) — a looser proximity
+// rule was measured and rejected because it merged genuinely different sites.
+// These checks exist because nothing else can see a broken place: every URL
+// still resolves and every tour still decodes.
+if let places = file.places {
+    var seenPlaceIds = Set<String>()
+    var tourToPlace: [String: String] = [:]
+    let tourById = Dictionary(file.tours.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
+
+    for (i, place) in places.enumerated() {
+        let loc = "places[\(i)] '\(place.name)'"
+
+        if !isNonEmpty(place.name) { err(loc, "place has an empty name") }
+        if UUID(uuidString: place.id) == nil { err(loc, "place id is not a UUID: \(place.id)") }
+        if !seenPlaceIds.insert(place.id).inserted { err(loc, "duplicate place id \(place.id)") }
+
+        if !(-90...90).contains(place.latitude) || !(-180...180).contains(place.longitude) {
+            err(loc, "coordinate out of range (\(place.latitude), \(place.longitude))")
+        }
+
+        // A place with one tour is not a place — it is just a tour, and it
+        // would render a count badge reading "1".
+        if place.tourIds.count < 2 {
+            err(loc, "a place needs at least 2 tours, found \(place.tourIds.count)")
+        }
+
+        if let hero = place.heroImageURL, URL(string: hero) == nil {
+            err(loc, "heroImageURL is not a valid URL")
+        }
+
+        for tourId in place.tourIds {
+            guard let tour = tourById[tourId] else {
+                err(loc, "tourIds references a tour not in the catalog: \(tourId)")
+                continue
+            }
+            if let other = tourToPlace[tourId] {
+                err(loc, "tour '\(tour.title)' already belongs to place '\(other)'")
+            } else {
+                tourToPlace[tourId] = place.name
+            }
+
+            // The identity rule, enforced: every member must actually sit on
+            // the place's coordinate. The marker a map draws for a tour is its
+            // single stop, or stop 0 of a walk.
+            let marker = tour.stops.first { tour.kind == "single" || $0.order == 0 }
+            guard let marker else {
+                err(loc, "tour '\(tour.title)' has no stop that would draw a map pin")
+                continue
+            }
+            let dLat = abs(marker.latitude - place.latitude)
+            let dLon = abs(marker.longitude - place.longitude)
+            if dLat > 0.0000001 || dLon > 0.0000001 {
+                err(loc, "tour '\(tour.title)' is not at this place's exact coordinate " +
+                         "(\(marker.latitude), \(marker.longitude) vs \(place.latitude), \(place.longitude))")
+            }
+        }
+    }
+}
+
 // MARK: - Report
 
 let errorCount   = findings.filter { $0.severity == .error }.count
@@ -439,6 +515,7 @@ print("Atlas Tours.json validator")
 print("  file:    \(path)")
 print("  makers:  \(file.makers.count)")
 print("  tours:   \(file.tours.count) (\(stopCount) stops total)")
+print("  places:  \(file.places?.count ?? 0)")
 print("")
 
 if findings.isEmpty {
