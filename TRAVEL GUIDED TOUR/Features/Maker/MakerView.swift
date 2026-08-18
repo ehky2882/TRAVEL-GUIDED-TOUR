@@ -165,6 +165,9 @@ struct MakerView: View {
     /// work, then left alone so a pan survives a tab switch.
     @State private var mapCamera: MapCameraPosition = .automatic
     @State private var selectedMapTourId: UUID?
+    /// Set when a place pin is tapped on a maker page that is itself inside a
+    /// detail layer — see `openPlaceFromMap`.
+    @State private var placeToPush: Place?
     /// Tours behind a tapped pin that zooming can't split, plus where it
     /// sits. A list because such a pin stands for more than one tour —
     /// see `mapPlacecardAnchor`. Empty means no place card is showing.
@@ -247,6 +250,12 @@ struct MakerView: View {
         }
         .navigationDestination(item: $draftToEdit) { draft in
             TourAuthoringView(tourId: draft.id)
+        }
+        // A place tapped on the MAP tab while this page is already inside a
+        // detail layer. See `openPlaceFromMap` for why it cannot go through
+        // the presenter from here.
+        .navigationDestination(item: $placeToPush) { place in
+            PlaceView(place: place, onDismiss: { placeToPush = nil })
         }
         .sheet(isPresented: $showingEditProfile) {
             ProfileEditorView(currentMaker: maker)
@@ -723,21 +732,7 @@ struct MakerView: View {
                     guard let place = dataService.place(by: placeId) else { return }
                     dismissMapPlacecard()
                     selectedMapTourId = nil
-                    // The optional keeps this page from crashing on a layer
-                    // that doesn't inject the presenter — but it also turns a
-                    // dropped injection into a pin that does nothing at all,
-                    // with no error anywhere. That shipped in 1.1 (69): every
-                    // maker page reached as a slide-up had a dead place pin.
-                    // Fail loudly in debug so the next dropped injection is
-                    // caught in the simulator instead of on someone's phone.
-                    guard let placePresenter else {
-                        assertionFailure(
-                            "PlacePresenter missing from this MakerView's environment — "
-                            + "the hosting layer in ContentView needs .environment(placePresenter)."
-                        )
-                        return
-                    }
-                    placePresenter.present(place)
+                    openPlaceFromMap(place)
                 },
                 onClusterTapped: { tourIds, coordinate in
                     showMapPlacecards(for: tourIds, at: coordinate)
@@ -873,6 +868,32 @@ struct MakerView: View {
     /// tours go to the authoring editor (via the `navigationDestination`
     /// the create flow already installs), everyone else's slides up as a
     /// tour.
+    /// Open a place tapped on the MAP tab.
+    ///
+    /// 🔴 **A presenter is not enough from here, and that is the whole bug.**
+    /// `PlacePresenter` only sets state; the slide-up is actually performed by
+    /// an `.onChange` in `ContentView` — which lives in the MAIN window. When
+    /// this maker page is itself inside a detail layer (reached from a tour's
+    /// creator row, or as a standalone maker layer), that window is fully
+    /// covered by a UIKit modal, and SwiftUI can stop delivering updates to a
+    /// covered hierarchy: the state is written, the observer never runs, and
+    /// the tap does nothing whatsoever. Reported on 1.1 (69) and again on (70)
+    /// after a dropped-injection fix that was real but treated a symptom.
+    ///
+    /// It is the same lesson as the dead tab bar in session 74: **never put a
+    /// side effect that must run in a window a modal can cover.**
+    ///
+    /// So this mirrors `tourOpen` exactly — presenter when this page is
+    /// top-level, an in-stack push when it is already inside a layer. The push
+    /// depends on no observer at all, so it cannot fail the same way.
+    private func openPlaceFromMap(_ place: Place) {
+        if let placePresenter, tourPresenter.presentedTour == nil, !isStandalone {
+            placePresenter.present(place)
+        } else {
+            placeToPush = place
+        }
+    }
+
     private func openTourFromMap(_ tourId: UUID) {
         if isOwnProfile {
             draftToEdit = EditingDraft(id: tourId)
