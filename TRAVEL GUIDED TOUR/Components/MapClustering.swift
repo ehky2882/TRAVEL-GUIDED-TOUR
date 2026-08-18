@@ -279,14 +279,35 @@ enum MapClustering {
         // cluster's ID stable across recomputes: SwiftUI updates
         // the existing annotation in place instead of removing +
         // re-adding it.
+        // 🔴 A PLACE MARKER IS NEVER BUCKETED, and that is load-bearing.
+        //
+        // A place pin is already a cluster — it says "N tours here" and it is
+        // the only route to the place page. Let it merge into an ordinary
+        // cluster and it renders as a plain count pin whose tap goes to the
+        // cluster handler, which knows only about tours: the place becomes
+        // unreachable, silently. That shipped in 1.1 (69) and (70).
+        //
+        // It bit the maker map first because that map uses a coarser grid (12
+        // cells across) over a region framed to fit a maker's ENTIRE body of
+        // work, so cells are often ~900 m and a downtown place always has a
+        // neighbour. The home map has the same latent bug at low zoom.
+        //
+        // Keeping places single costs nothing: there are 24 in the catalog, so
+        // this can never produce a wall of pins, and a capsule overlapping a
+        // nearby cluster reads far better than a destination you cannot open.
         var buckets: [BucketKey: [StopMarker]] = [:]
+        var placeItems: [ClusterItem] = []
         for marker in visibleMarkers {
+            if marker.isPlace {
+                placeItems.append(ClusterItem(coordinate: marker.coordinate, kind: .single(marker)))
+                continue
+            }
             let row = Int(floor(marker.coordinate.latitude / cellSpanLat))
             let col = Int(floor(marker.coordinate.longitude / cellSpanLon))
             buckets[BucketKey(row: row, col: col), default: []].append(marker)
         }
 
-        return buckets.map { key, stops in
+        return placeItems + buckets.map { key, stops in
             if stops.count == 1, let only = stops.first {
                 return ClusterItem(coordinate: only.coordinate, kind: .single(only))
             }
