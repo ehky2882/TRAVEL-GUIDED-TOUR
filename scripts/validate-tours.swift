@@ -86,7 +86,7 @@ struct Tour: Codable {
 }
 
 struct Place: Codable {
-    let id: String
+    let id: UUID
     let name: String
     let description: String?
     let latitude: Double
@@ -94,7 +94,7 @@ struct Place: Codable {
     let city: String?
     let address: String?
     let heroImageURL: String?
-    let tourIds: [String]
+    let tourIds: [UUID]
 }
 
 struct ToursFile: Codable {
@@ -451,15 +451,14 @@ for (ti, t) in file.tours.enumerated() {
 // These checks exist because nothing else can see a broken place: every URL
 // still resolves and every tour still decodes.
 if let places = file.places {
-    var seenPlaceIds = Set<String>()
-    var tourToPlace: [String: String] = [:]
+    var seenPlaceIds = Set<UUID>()
+    var tourToPlace: [UUID: String] = [:]
     let tourById = Dictionary(file.tours.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
 
     for (i, place) in places.enumerated() {
         let loc = "places[\(i)] '\(place.name)'"
 
         if !isNonEmpty(place.name) { err(loc, "place has an empty name") }
-        if UUID(uuidString: place.id) == nil { err(loc, "place id is not a UUID: \(place.id)") }
         if !seenPlaceIds.insert(place.id).inserted { err(loc, "duplicate place id \(place.id)") }
 
         if !(-90...90).contains(place.latitude) || !(-180...180).contains(place.longitude) {
@@ -472,8 +471,8 @@ if let places = file.places {
             err(loc, "a place needs at least 2 tours, found \(place.tourIds.count)")
         }
 
-        if let hero = place.heroImageURL, URL(string: hero) == nil {
-            err(loc, "heroImageURL is not a valid URL")
+        if let hero = place.heroImageURL, !isValidURL(hero) {
+            err(loc, "heroImageURL '\(hero)' is not a valid URL")
         }
 
         for tourId in place.tourIds {
@@ -490,8 +489,9 @@ if let places = file.places {
             // The identity rule, enforced: every member must actually sit on
             // the place's coordinate. The marker a map draws for a tour is its
             // single stop, or stop 0 of a walk.
-            let marker = tour.stops.first { tour.kind == "single" || $0.order == 0 }
-            guard let marker else {
+            guard let marker = tour.stops.first(where: {
+                tour.kind == .single || $0.order == 0
+            }) else {
                 err(loc, "tour '\(tour.title)' has no stop that would draw a map pin")
                 continue
             }
