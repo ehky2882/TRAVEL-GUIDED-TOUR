@@ -723,7 +723,21 @@ struct MakerView: View {
                     guard let place = dataService.place(by: placeId) else { return }
                     dismissMapPlacecard()
                     selectedMapTourId = nil
-                    placePresenter?.present(place)
+                    // The optional keeps this page from crashing on a layer
+                    // that doesn't inject the presenter — but it also turns a
+                    // dropped injection into a pin that does nothing at all,
+                    // with no error anywhere. That shipped in 1.1 (69): every
+                    // maker page reached as a slide-up had a dead place pin.
+                    // Fail loudly in debug so the next dropped injection is
+                    // caught in the simulator instead of on someone's phone.
+                    guard let placePresenter else {
+                        assertionFailure(
+                            "PlacePresenter missing from this MakerView's environment — "
+                            + "the hosting layer in ContentView needs .environment(placePresenter)."
+                        )
+                        return
+                    }
+                    placePresenter.present(place)
                 },
                 onClusterTapped: { tourIds, coordinate in
                     showMapPlacecards(for: tourIds, at: coordinate)

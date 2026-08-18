@@ -27,6 +27,9 @@ struct BottomModuleRoot: View {
     /// Needed here, not just in `ContentView`, so a tab tap can close a presented
     /// maker page from this window — see `tabSelection`.
     @Environment(MakerPresenter.self) private var makerPresenter: MakerPresenter?
+    /// Optional for the same reason as `makerPresenter`: the inline fallback
+    /// renders this view without the full app environment.
+    @Environment(PlacePresenter.self) private var placePresenter: PlacePresenter?
     @Environment(AppSharedState.self) private var appShared
     @Environment(AtlasNavigationState.self) private var navState
     @Environment(AuthService.self) private var authService: AuthService?
@@ -150,13 +153,32 @@ struct BottomModuleRoot: View {
         Binding(
             get: { appShared.selectedTab },
             set: { newTab in
-                if newTab != appShared.selectedTab {
-                    if tourPresenter.presentedTour != nil {
-                        tourPresenter.dismiss()
-                    }
-                    if makerPresenter?.presentedMaker != nil {
-                        makerPresenter?.dismiss()
-                    }
+                // Every slide-up layer comes down as part of the tap, from
+                // THIS window — the one a layer can never cover. A layer left
+                // up sits over the tab's content and the bar reads as dead:
+                // the icon highlights, the screen doesn't change (the
+                // session-8 symptom).
+                //
+                // 🔴 DELIBERATELY NOT GUARDED ON `newTab != selectedTab`.
+                // It used to be, and that was a real dead-tab bug: open a
+                // tour from Home, then tap Home. The tab hasn't changed, so
+                // nothing was dismissed and the tap did nothing whatsoever,
+                // with the tour still covering the screen and no way out but
+                // the X. Tapping the tab you are already on is iOS's "back to
+                // the root of this tab" gesture, so it has to tear the layers
+                // down as well.
+                //
+                // 🔴 A NEW LAYER MUST BE ADDED HERE. The place layer shipped
+                // in 1.1 (69) without its line, so a place page stayed up
+                // while the selection changed behind it.
+                if tourPresenter.presentedTour != nil {
+                    tourPresenter.dismiss()
+                }
+                if makerPresenter?.presentedMaker != nil {
+                    makerPresenter?.dismiss()
+                }
+                if placePresenter?.presentedPlace != nil {
+                    placePresenter?.dismiss()
                 }
                 appShared.selectedTab = newTab
             }
