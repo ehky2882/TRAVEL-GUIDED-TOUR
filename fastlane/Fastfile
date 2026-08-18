@@ -244,7 +244,20 @@ platform :ios do
       phased_release: true,
       # You press the final "release" button yourself once review passes.
       automatic_release: false,
-      overwrite_screenshots: true,
+      # DO NOT let this lane touch screenshots. It used to pass
+      # overwrite_screenshots: true, which means "delete every screenshot on
+      # the listing, then upload the ones in fastlane/screenshots" — and that
+      # directory is EMPTY here. Screenshots are gitignored on purpose (large
+      # binaries, regenerated on demand), so a fresh CI checkout has none. The
+      # delete would have happened, the upload would have had nothing to send,
+      # and the listing would have gone in front of Apple with no screenshots
+      # at all — at the exact moment of submission, the worst possible time to
+      # find out.
+      #
+      # Screenshots reach Apple through .github/workflows/upload-screenshots.yml,
+      # which uploads a set a human has actually looked at. Take them there and
+      # verify them on the version page BEFORE running this lane.
+      skip_screenshots: true,
       force: true,
       precheck_include_in_app_purchases: false,
       submission_information: {
