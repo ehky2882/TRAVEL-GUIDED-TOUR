@@ -30,6 +30,7 @@ struct ContentView: View {
     @Environment(AppSharedState.self) private var appShared
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(MakerPresenter.self) private var makerPresenter
+    @Environment(PlacePresenter.self) private var placePresenter
     @Environment(FollowService.self) private var followService
     @Environment(PurchaseService.self) private var purchaseService
     @Environment(AuthService.self) private var authService
@@ -83,6 +84,14 @@ struct ContentView: View {
     /// controller tracks its own presented VC). Gives makers the same
     /// treatment tours get, replacing the earlier `.sheet` stopgap.
     @State private var makerLayer = BottomLayerController(
+        bottomInset: AtlasBottomModule.height()
+    )
+
+    /// Third slide-up layer, for a PLACE — a site several tours describe.
+    /// Its own controller for the same reason the maker layer has one: a tour
+    /// tapped inside a place page has to stack over it, and each controller
+    /// tracks its own presented VC.
+    @State private var placeLayer = BottomLayerController(
         bottomInset: AtlasBottomModule.height()
     )
 
@@ -290,6 +299,39 @@ struct ContentView: View {
         // (there's no back stack to pop). A tour tapped inside slides up
         // over it (topmost-VC presentation); the environment is re-injected
         // here since the UIKit layer doesn't inherit the SwiftUI chain.
+        // The place layer: a site several tours describe, reached by tapping a
+        // place pin. Same slide-up treatment as tours and makers so it isn't
+        // the one screen in the app that behaves differently. The environment
+        // is re-injected because the UIKit layer doesn't inherit the SwiftUI
+        // chain.
+        .onChange(of: placePresenter.presentedPlace?.id) { _, _ in
+            if let place = placePresenter.presentedPlace {
+                placeLayer.present(
+                    PlaceView(place: place, onDismiss: { placePresenter.dismiss() })
+                        .environment(navState)
+                        .environment(homeSharedState)
+                        .environment(tourPresenter)
+                        .environment(makerPresenter)
+                        .environment(placePresenter)
+                        .environment(dataService)
+                        .environment(locationManager)
+                        .environment(audioPlayer)
+                        .environment(libraryStore)
+                        .environment(recentlyViewedStore)
+                        .environment(proximityMonitor)
+                        .environment(tourDownloader)
+                        .environment(appShared)
+                        .environment(followService)
+                        .environment(authService)
+                        .environment(purchaseService)
+                        .environment(listService)
+                        .environment(groupListen),
+                    onDismiss: { placePresenter.dismiss() }
+                )
+            } else {
+                placeLayer.dismiss()
+            }
+        }
         .onChange(of: makerPresenter.presentedMaker?.id) { _, _ in
             if let maker = makerPresenter.presentedMaker {
                 makerLayer.present(

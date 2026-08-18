@@ -33,12 +33,29 @@ enum MapClustering {
         let tourId: UUID
         let title: String
         let coordinate: CLLocationCoordinate2D
+        /// Set when this marker stands for a **place** — a site several tours
+        /// describe — rather than a single tour. The map draws a different pin
+        /// and a tap opens the place instead of a tour.
+        let placeId: UUID?
+        /// How many tours the place holds. Zero for an ordinary tour marker.
+        let placeTourCount: Int
 
-        init(id: UUID, tourId: UUID, title: String, coordinate: CLLocationCoordinate2D) {
+        var isPlace: Bool { placeId != nil }
+
+        init(
+            id: UUID,
+            tourId: UUID,
+            title: String,
+            coordinate: CLLocationCoordinate2D,
+            placeId: UUID? = nil,
+            placeTourCount: Int = 0
+        ) {
             self.id = id
             self.tourId = tourId
             self.title = title
             self.coordinate = coordinate
+            self.placeId = placeId
+            self.placeTourCount = placeTourCount
         }
 
         static func == (lhs: StopMarker, rhs: StopMarker) -> Bool { lhs.id == rhs.id }

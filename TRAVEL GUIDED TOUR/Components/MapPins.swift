@@ -72,6 +72,47 @@ struct ClusterPin: View {
     private var outerDiameter: CGFloat { innerDiameter + 10 }
 }
 
+// MARK: - Place pin
+
+/// A site several tours describe — the Met steps, Dorchester Square.
+///
+/// 🔴 **The silhouette is the whole point.** A cluster pin and a place pin both
+/// carry a number in brass, but they mean opposite things: a cluster means
+/// *zoom in, these will separate*, a place means *tap me, this is one spot*.
+/// The design handoff flagged shipping two identical marks for opposite
+/// actions as unresolved. So a cluster stays a **circle** and a place is a
+/// **capsule** — different shape, same palette, and it still reads in greyscale
+/// or to someone who can't distinguish the hue.
+///
+/// ⚠️ Provisional. It resolves the collision without inventing a second colour
+/// (the app has exactly one accent by design), but the pin treatment is an
+/// open design question and this is a defensible default, not a settled answer.
+struct PlacePin: View {
+    let count: Int
+    var isSelected: Bool = false
+
+    var body: some View {
+        HStack(spacing: 3) {
+            Image(systemName: "mappin")
+                .font(.system(size: 10, weight: .semibold))
+            Text("\(count)")
+                .font(.system(size: 12, weight: .regular, design: .monospaced))
+        }
+        .foregroundStyle(.white)
+        .padding(.horizontal, 8)
+        .frame(height: height)
+        .background(
+            Capsule().fill(AtlasColors.mapPin)
+        )
+        .overlay(
+            Capsule().stroke(Color.white, lineWidth: isSelected ? 3 : 1.5)
+        )
+        .shadow(color: Color.black.opacity(0.25), radius: 1.5, y: 1)
+    }
+
+    private var height: CGFloat { isSelected ? 30 : 26 }
+}
+
 // MARK: - User location
 
 /// iOS-Maps-style user-location indicator: a soft accuracy halo, an

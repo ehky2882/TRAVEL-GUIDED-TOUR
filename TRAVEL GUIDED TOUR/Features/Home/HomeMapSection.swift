@@ -31,6 +31,9 @@ struct PlacecardAnchor {
 /// the placecard.
 struct HomeMapSection: View {
     let tours: [Tour]
+    /// Sites whose tours collapse into a single pin. Empty is the ordinary
+    /// case for any catalog published before the place layer.
+    let places: [Place]
     let userLocation: CLLocation?
     /// Device compass heading in degrees (0 = true north). When
     /// present, the user-location dot shows a directional wedge.
@@ -72,6 +75,12 @@ struct HomeMapSection: View {
     /// underneath are unreachable from the map (see
     /// `MapClustering.canSeparateByZoom`).
     let onClusterTapped: ([UUID], CLLocationCoordinate2D) -> Void
+    /// Fires when the user taps a pin standing for a **place** — a site several
+    /// tours describe. Carries the place id and its coordinate.
+    let onPlaceTapped: (UUID, CLLocationCoordinate2D) -> Void
+    /// Id of the currently-previewed place, so its pin can show the selected
+    /// ring. Separate from `selectedTourId` because a place pin is not a tour.
+    let selectedPlaceId: UUID?
     /// Fires when the user taps the map outside any pin or the
     /// placecard. Parent uses this to dismiss the placecard.
     let onMapTapped: () -> Void
@@ -190,14 +199,25 @@ struct HomeMapSection: View {
     private func pinView(for item: MapClustering.ClusterItem) -> some View {
         switch item.kind {
         case .single(let marker):
-            StopPin(isSelected: marker.tourId == selectedTourId)
-                .frame(width: 44, height: 44)
-                .contentShape(Circle())
-                .onTapGesture {
-                    onPinTapped(marker.tourId, marker.coordinate)
-                }
-                .accessibilityLabel(marker.title)
-                .accessibilityAddTraits(.isButton)
+            if let placeId = marker.placeId {
+                PlacePin(count: marker.placeTourCount, isSelected: placeId == selectedPlaceId)
+                    .frame(width: 44, height: 44)
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        onPlaceTapped(placeId, marker.coordinate)
+                    }
+                    .accessibilityLabel("\(marker.title), \(marker.placeTourCount) tours")
+                    .accessibilityAddTraits(.isButton)
+            } else {
+                StopPin(isSelected: marker.tourId == selectedTourId)
+                    .frame(width: 44, height: 44)
+                    .contentShape(Circle())
+                    .onTapGesture {
+                        onPinTapped(marker.tourId, marker.coordinate)
+                    }
+                    .accessibilityLabel(marker.title)
+                    .accessibilityAddTraits(.isButton)
+            }
 
         case .cluster(let count, let stops):
             ClusterPin(count: count)
@@ -236,23 +256,12 @@ struct HomeMapSection: View {
         userHeading
     }
 
-    /// All stops across every tour, flattened into pin descriptors.
-    /// Multi-stop tours show only their first stop (order == 0) on the
-    /// map — the entry point — so the route doesn't scatter multiple
-    /// pins across the city for a single tour.
+    /// The pins this map draws. Built by the shared `MapMarkers` so the home
+    /// map and the maker page can't disagree about what a pin means: one pin
+    /// per tour, except that tours sharing a place collapse into one pin for
+    /// the place.
     private var allStopMarkers: [MapClustering.StopMarker] {
-        tours.flatMap { tour in
-            tour.stops
-                .filter { tour.kind == .single || $0.order == 0 }
-                .map { stop in
-                    MapClustering.StopMarker(
-                        id: stop.id,
-                        tourId: tour.id,
-                        title: stop.title,
-                        coordinate: stop.coordinate
-                    )
-                }
-        }
+        MapMarkers.markers(for: tours, places: places)
     }
 
     /// Bucket markers into the current visible region's grid, collapsing

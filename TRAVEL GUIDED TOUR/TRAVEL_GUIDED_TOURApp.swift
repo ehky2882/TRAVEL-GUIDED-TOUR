@@ -76,6 +76,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// maker link). Makers are otherwise only *pushed* onto local nav stacks;
     /// this drives a `.sheet` in `ContentView`. See `MakerPresenter`.
     @State private var makerPresenter = MakerPresenter()
+    @State private var placePresenter = PlacePresenter()
     /// Tracks how many pushed detail screens are on top of any tab's
     /// nav stack. Promoted from `ContentView` to the App level so the
     /// bottom-module window (a separate `UIWindow`) can read it too:
@@ -144,6 +145,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(appShared)
                     .environment(tourPresenter)
                     .environment(makerPresenter)
+                    .environment(placePresenter)
                     .environment(navState)
                     .environment(toastCenter)
                     .environment(groupListen)
@@ -311,6 +313,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 .environment(appShared)
                 .environment(tourPresenter)
                 .environment(makerPresenter)
+                .environment(placePresenter)
                 .environment(navState)
                 .environment(toastCenter)
                 .environment(groupListen)

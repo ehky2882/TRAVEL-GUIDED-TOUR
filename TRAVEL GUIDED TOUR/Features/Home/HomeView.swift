@@ -20,6 +20,7 @@ struct HomeView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(HomeSharedState.self) private var sharedState
     @Environment(TourPresenter.self) private var tourPresenter
+    @Environment(PlacePresenter.self) private var placePresenter
 
     /// Drawer detent — owned by `ContentView` so it persists across
     /// tab switches and so the drawer (also at `ContentView`) and the
@@ -106,9 +107,11 @@ struct HomeView: View {
                 ZStack(alignment: .top) {
                     HomeMapSection(
                         tours: filteredTours,
+                        places: dataService.places,
                         userLocation: locationManager.userLocation,
                         userHeading: locationManager.heading,
                         selectedTourId: sharedState.selectedPinTourId,
+                        selectedPlaceId: sharedState.placecardPlace?.id,
                         cameraPosition: $cameraPosition,
                         mapMode: mapMode,
                         onCameraChanged: { region in
@@ -138,6 +141,7 @@ struct HomeView: View {
                         onPinTapped: { tourId, coordinate in
                             guard let tour = dataService.tour(by: tourId) else { return }
                             withAnimation(.spring(response: 0.35, dampingFraction: 0.82)) {
+                                sharedState.placecardPlace = nil
                                 sharedState.placecardTours = [tour]
                                 sharedState.placecardCoordinate = coordinate
                             }
@@ -168,11 +172,27 @@ struct HomeView: View {
                                 .filter { seen.insert($0.id).inserted }
                             guard !tours.isEmpty else { return }
                             withAnimation(.spring(response: 0.35, dampingFraction: 0.82)) {
+                                sharedState.placecardPlace = nil
                                 sharedState.placecardTours = tours
                                 sharedState.placecardCoordinate = coordinate
                             }
                             let span = sharedState.visibleRegion?.span
                                 ?? Self.recenterSpan
+                            withAnimation(.easeInOut(duration: 0.35)) {
+                                cameraPosition = .region(MKCoordinateRegion(
+                                    center: coordinate,
+                                    span: span
+                                ))
+                            }
+                        },
+                        onPlaceTapped: { placeId, coordinate in
+                            guard let place = dataService.place(by: placeId) else { return }
+                            withAnimation(.spring(response: 0.35, dampingFraction: 0.82)) {
+                                sharedState.placecardTours = []
+                                sharedState.placecardPlace = place
+                                sharedState.placecardCoordinate = coordinate
+                            }
+                            let span = sharedState.visibleRegion?.span ?? Self.recenterSpan
                             withAnimation(.easeInOut(duration: 0.35)) {
                                 cameraPosition = .region(MKCoordinateRegion(
                                     center: coordinate,
@@ -422,10 +442,25 @@ struct HomeView: View {
     /// the same coordinate — which no zoom can separate — they stack, so
     /// each one is still reachable from the map.
     private var placecardAnchor: PlacecardAnchor? {
-        guard !sharedState.placecardTours.isEmpty,
-              let coordinate = sharedState.placecardCoordinate else {
-            return nil
+        guard let coordinate = sharedState.placecardCoordinate else { return nil }
+
+        // A place preview takes precedence: its pin collapsed several tours
+        // into one, so there is nothing to stack.
+        if let place = sharedState.placecardPlace {
+            let tours = dataService.rankedTours(at: place)
+            let card = PlacePlacecardView(
+                place: place,
+                heroImageURL: place.heroImageURL ?? tours.first?.heroImageURL ?? "",
+                category: tours.first?.primaryCategory ?? .culturalHeritage,
+                tourCount: tours.count,
+                distanceText: placeDistanceText(for: place),
+                onTap: { placePresenter.present(place) }
+            )
+            .frame(width: PlacecardView.standardWidth)
+            return PlacecardAnchor(coordinate: coordinate, view: AnyView(card))
         }
+
+        guard !sharedState.placecardTours.isEmpty else { return nil }
         let tours = Array(sharedState.placecardTours.prefix(Self.maxStackedPlacecards))
         let stack = VStack(spacing: AtlasSpacing.xs) {
             ForEach(tours) { tour in
@@ -585,6 +620,12 @@ struct HomeView: View {
             if sharedState.walksOnly && tour.kind != .multiStop { return false }
             return Tag.matches(tourTags: Set(tour.tags), selection: sharedState.selectedTags)
         }
+    }
+
+    private func placeDistanceText(for place: Place) -> String? {
+        guard let user = locationManager.userLocation else { return nil }
+        let here = CLLocation(latitude: place.latitude, longitude: place.longitude)
+        return AtlasFormatters.distanceAway(meters: here.distance(from: user))
     }
 
     private func distanceText(for tour: Tour) -> String? {
