@@ -1,1 +1,1 @@
-audio tour,walking tour,city guide,travel guide,museum,sightseeing,offline,gps,history,architecture
+audio,tour,walk,city,guide,travel,sightseeing,museum,history,architecture,local,record,offline,gps
