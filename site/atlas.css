@@ -174,19 +174,36 @@ a {
   margin: 0 0 var(--xl);
 }
 
+/* The link row stays on ONE line and only wraps when the window is
+   genuinely too narrow for it.
+
+   Flex with `gap` rather than a margin on each link, so there is no
+   trailing margin pushing the row wider than its contents; `nowrap` on the
+   links so a long label like TERMS OF SERVICE can never break across two
+   lines mid-phrase; and the attribution takes a full row of its own so it
+   always sits beneath the links rather than joining the end of them. */
 footer {
   margin-top: var(--xxl);
   padding-top: var(--md);
   border-top: 1px solid var(--rule);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sm) 12px;
 }
+
+/* Tracked tighter than the headings (0.04em against 0.08em) purely to buy
+   width: five links at heading tracking need ~576px, and the reading column
+   is 560px, which is what pushed CONTACT onto a second row. Tightening here
+   costs nothing legibly and leaves ~40px of headroom, so the row survives a
+   longer label being added later. */
 footer a {
-  display: inline-block;
-  margin-right: var(--md);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 footer .legal {
-  margin: var(--md) 0 0;
+  flex: 0 0 100%;
+  margin: var(--sm) 0 0;
 }
 
 /* ---------------------------------------------------------------
@@ -199,12 +216,17 @@ footer .legal {
    regular, white, tracked 2.
    --------------------------------------------------------------- */
 
+/* The splash carries no prose, so it is not held to the reading column the
+   other pages use. Running full width is what keeps the five footer links on
+   one line — inside a 38rem column they need ~600px and wrap CONTACT onto a
+   second row. */
 body.splash {
   min-height: 100vh;
   min-height: 100dvh;
+  max-width: none;
   display: flex;
   flex-direction: column;
-  padding-top: var(--lg);
+  padding: var(--lg) var(--lg) var(--xxl);
 }
 
 /* The mark and wordmark sit centred in whatever is left after the
@@ -258,12 +280,11 @@ body.splash {
   margin: var(--sm) 0 0;
 }
 
-/* On the splash the footer is a quiet strip at the foot of the page,
-   not a rule under a column of prose. */
+/* On the splash the footer is a quiet centred strip at the foot of the
+   page, not a rule under a column of prose. */
 body.splash footer {
   margin-top: 0;
-  padding-top: var(--md);
   border-top: none;
+  justify-content: center;
   text-align: center;
 }
-body.splash footer a { margin: 0 var(--sm); }
