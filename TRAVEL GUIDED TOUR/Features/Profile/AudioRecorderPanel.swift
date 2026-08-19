@@ -216,7 +216,7 @@ final class AudioRecorder {
     /// The last second or so of input level, newest last, each 0...1. Drives
     /// the visualiser — without it the only sign a recording is happening is a
     /// counter, which ticks along just as happily with a muted mic.
-    private(set) var levels: [CGFloat] = Array(repeating: 0, count: Self.levelCount)
+    private(set) var levels: [CGFloat] = Array(repeating: 0, count: AudioRecorder.levelCount)
     static let levelCount = 28
 
     private var recorder: AVAudioRecorder?
