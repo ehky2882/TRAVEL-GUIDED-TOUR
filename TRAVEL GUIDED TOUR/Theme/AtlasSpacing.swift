@@ -20,7 +20,9 @@ enum AtlasSpacing {
     /// **Square (1:1) — owner decision on device, 2026-08-19**, and it took
     /// three builds to get here: 4:3 in build 79 (*"i dont like it"*), 5:4 in
     /// 80 and 82 (*"keep it at 5:4 for now"*), then, testing 82 in full,
-    /// *"i think i much prefer the square image"*.
+    /// *"i think i much prefer the square image"*. **Confirmed on device in
+    /// build 83** — *"I MUCH PREFER THE SQUARE"* — so this is verified, not
+    /// merely chosen.
     ///
     /// ⚠️ **Square is the most aggressive crop of the three, and that is a
     /// known cost, not an oversight.** The catalogue's photographs are 4:3
