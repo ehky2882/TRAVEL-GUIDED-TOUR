@@ -37,10 +37,15 @@ struct CreateTourWizardView: View {
 
     // Step 1 — location
     @State private var radius: Double = 30
-    /// 🔴 NEVER `.automatic`. `Map(position:)` bound to `.automatic` with no
-    /// content to frame makes MapKit resolve a camera, write back through the
-    /// binding, re-render, and resolve again — a synchronous layout loop that
-    /// the watchdog eventually kills. This screen hits exactly that case on
+    /// 🔴 NEVER `.automatic` OVER EMPTY CONTENT. `Map(position:)` bound to
+    /// `.automatic` with nothing to frame makes MapKit resolve a camera, write
+    /// back through the binding, re-render, and resolve again — a synchronous
+    /// layout loop that the watchdog eventually kills.
+    ///
+    /// ⚠️ `.automatic` itself is fine and is used elsewhere: `TourSetMap` and
+    /// the maker page's map both start there and have never hung, because both
+    /// always have pins, so the automatic frame has an answer and settles. Do
+    /// not "fix" those. The rule is about the empty case. This screen hits exactly that case on
     /// the edit path: `centerOnUser` is skipped for an existing tour, so
     /// nothing set a camera and `centerCoordinate` was still nil (no
     /// `MapCircle`), leaving an automatic camera over empty content until the
