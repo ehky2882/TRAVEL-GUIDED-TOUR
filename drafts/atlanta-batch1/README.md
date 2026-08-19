@@ -63,6 +63,12 @@ written down to prevent. If the other 15 ever arrive they are a **second batch**
 All nine verified live (HTTP 200). **Ponce ships at hero + 1 only** — that is all its pool
 supported; backfill when Commons is reachable, its category holds 26 files.
 
+**⏳ 20 High Museum — hero is OWNER-PENDING.** `high-museum_2.webp` (the Meier porcelain
+panels, the script's exact description) is staged in the **gallery** slot; the owner is
+supplying their own hero. Do not promote `_2` to hero — wait for it. Only one clean exterior
+existed in the whole stock pool; the rest were gallery interiors, which carry their own
+copyright problem since the hung artworks are the subject.
+
 **The other 27 have no usable imagery yet.** See § Sourcing below — this is a solvable
 blocker, not a property of the subjects.
 
