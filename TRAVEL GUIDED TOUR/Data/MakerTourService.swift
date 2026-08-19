@@ -470,6 +470,8 @@ private struct NewTourRow: Encodable {
             centroidLatitude: centroidLatitude,
             centroidLongitude: centroidLongitude,
             city: nil,
+            // Maker-authored tours carry no city, so no country either.
+            country: nil,
             primaryCategory: TourCategory(rawValue: primaryCategory) ?? category,
             tags: tags,
             priceUSD: 0,
@@ -648,6 +650,10 @@ private struct TourRow: Decodable {
             centroidLatitude: centroidLatitude,
             centroidLongitude: centroidLongitude,
             city: city,
+            // The authoring tables hold no country column; a maker picks a
+            // point on a map, not a country. Catalog tours get theirs from
+            // Tours.json / get_catalog instead.
+            country: nil,
             primaryCategory: TourCategory(rawValue: primaryCategory) ?? .hiddenGems,
             tags: tags,
             priceUSD: 0,

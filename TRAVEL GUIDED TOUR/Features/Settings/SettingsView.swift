@@ -210,10 +210,31 @@ struct SettingsView: View {
                             .foregroundStyle(AtlasColors.secondaryText)
                     }
                     HStack {
-                        Label("Makers", systemImage: "person.2")
+                        // "Dozents", not "Makers" (owner, 2026-08-19) —
+                        // the product is named for the people who make the
+                        // tours, so the roster is named after them too.
+                        // The model type is still `Maker`; this is the
+                        // reader-facing word, and the two are allowed to
+                        // differ the way `journeys` stayed `journeys` in
+                        // Postgres after the Swift rename to `TourList`.
+                        Label("Dozents", systemImage: "person.2")
                         Spacer()
                         Text("\(dataService.makers.count)")
                             .foregroundStyle(AtlasColors.secondaryText)
+                    }
+                    HStack {
+                        Label("Cities", systemImage: "building.2")
+                        Spacer()
+                        Text("\(cityCount)")
+                            .foregroundStyle(AtlasColors.secondaryText)
+                    }
+                    if countryCount > 0 {
+                        HStack {
+                            Label("Countries", systemImage: "globe")
+                            Spacer()
+                            Text("\(countryCount)")
+                                .foregroundStyle(AtlasColors.secondaryText)
+                        }
                     }
                     // Was "All data stored on device", which stopped being
                     // true when accounts and cross-device sync shipped: a
@@ -290,6 +311,38 @@ struct SettingsView: View {
         UIApplication.shared.open(url)
     }
     #endif
+
+    /// Distinct cities in the catalog, counted from the live `city` on
+    /// each tour rather than from a list held in the app — a city launch
+    /// merges as content and reaches phones over the air with no build,
+    /// so anything hardcoded here would start understating within days.
+    ///
+    /// Counts the value as authored. That means the four New York
+    /// boroughs authored as `Brooklyn` / `Bronx` / `Queens` /
+    /// `Staten Island` each count separately from `New York`, which is
+    /// a judgement about the data rather than about this row — if the
+    /// intent changes, normalise `city` in the catalog, not here, so
+    /// every surface that reads it agrees.
+    private var cityCount: Int {
+        Set(dataService.tours.compactMap { tour in
+            tour.city?.trimmingCharacters(in: .whitespacesAndNewlines)
+        }.filter { !$0.isEmpty }).count
+    }
+
+    /// Distinct countries in the catalog, counted the same way as
+    /// `cityCount` and from the same authored data.
+    ///
+    /// The row is hidden at zero rather than printed as "0". `country`
+    /// reaches the app from `get_catalog`, and Supabase is the primary
+    /// source — so between this shipping and the column migration being
+    /// applied, the honest answer is "we do not know yet", which is a
+    /// missing row, not a count of none. It appears on its own once the
+    /// catalog serves the key; no build is needed for that.
+    private var countryCount: Int {
+        Set(dataService.tours.compactMap { tour in
+            tour.country?.trimmingCharacters(in: .whitespacesAndNewlines)
+        }.filter { !$0.isEmpty }).count
+    }
 
     /// The running app's version, read from the bundle rather than typed
     /// into the masthead — `Info.plist` fills both keys from the build
