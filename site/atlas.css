@@ -70,7 +70,7 @@
      large is only harmless space at the end of the document. Covers the
      two-row case (links + attribution); the narrow-window override below
      covers three. */
-  --footer-h: 108px;
+  --footer-h: 116px;
 
   /* AtlasSpacing.searchBarHeight — the app's one control size, 44pt. It is
      also the diameter of the splash screen's pulsing mark. */
@@ -250,10 +250,10 @@ footer {
   max-width: 38rem;
   margin: 0 auto;
   background: var(--bg);
-  /* Mirrors the masthead: `--md` against the window edge, `--lg` against the
-     scrolling text, so the breathing room above the links equals the room
-     below the wordmark. Change one and change the other. */
-  padding: var(--lg) var(--lg) var(--md);
+  /* `--lg` above the links (matching the masthead's gap below the wordmark)
+     and `--lg` again beneath the attribution, so the bar is not pressed
+     against the window edge. */
+  padding: var(--lg);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -273,7 +273,7 @@ footer {
    and 144px at 375px, hence 160px here rather than a guess. If a link is
    added or renamed, re-measure both this number and the breakpoint. */
 @media (max-width: 500px) {
-  :root { --footer-h: 168px; }
+  :root { --footer-h: 176px; }
 }
 
 /* Tracked tighter than the headings (0.04em against 0.08em) purely to buy
