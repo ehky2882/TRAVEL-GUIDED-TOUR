@@ -236,6 +236,11 @@ struct CreateTourWizardView: View {
             .scrollDismissesKeyboard(.interactively)
         }
         .safeAreaInset(edge: .bottom, spacing: 0) { footer }
+        // The keyboard rises *over* the footer rather than shoving it up the
+        // screen — otherwise Save progress and Next end up floating in the
+        // middle of the map. Same treatment the mini-player and the home
+        // drawer already get (PR #132).
+        .ignoresSafeArea(.keyboard, edges: .bottom)
     }
 
     /// Five segments, one per step — and on an existing tour they're the way
