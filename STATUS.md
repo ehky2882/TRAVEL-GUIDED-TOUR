@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-19 18:15 UTC
+**Last verified:** 2026-08-19 18:22 UTC
 
 ---
 
@@ -24,8 +24,8 @@ Code PRs cannot merge without a look on device (§ Merging PRs). This is the que
 
 | PR | What it is | Build to install | Also needs |
 |---|---|---|---|
-| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). 19 files, +2646/−1772. Closes the draft-autosave gap. | **84** (in flight) | Watch the **editor** for regressions — it now shares the wizard's audio step |
-| [#544](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/544) | Settings: real wordmark, live version string, Makers→Dozents, city/country counts. | **85** (in flight) | **Paste `backend/add_country.sql`** or the Countries row stays hidden |
+| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). 19 files, +2646/−1772. Closes the draft-autosave gap. | **84** ✅ | Watch the **editor** for regressions — it now shares the wizard's audio step |
+| [#544](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/544) | Settings: real wordmark, live version string, Makers→Dozents, city/country counts. | **85** ✅ | **Paste `backend/add_country.sql`** or the Countries row stays hidden |
 | [#547](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/547) | List page rebuilt on `PlaceView`'s structure; both maps become one shared `TourSetMap`. | **83** | Riskiest check is the **maker MAP tab** — a shipped screen rewired onto a shared component |
 
 ## 2. Blocked on owner — outside the repo
@@ -57,8 +57,8 @@ after dispatching; never promise one in advance.
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| 85 | `settings-dozent-work-mark-r9enu6` | #544 Settings | ⏳ in flight |
-| 84 | `tour-upload-polish-qiliop` | #540 wizard | ⏳ in flight |
+| 85 | `settings-dozent-work-mark-r9enu6` | #544 Settings | ✅ |
+| 84 | `tour-upload-polish-qiliop` | #540 wizard | ✅ |
 | 83 | `list-page-conformance` | #547 list page | ✅ |
 | 82 | `list-page-conformance` | #547 list page | ✅ |
 | 81 | `tour-upload-polish-qiliop` | #540 wizard | ✅ |
