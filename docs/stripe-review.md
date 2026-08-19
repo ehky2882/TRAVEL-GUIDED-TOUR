@@ -113,7 +113,10 @@ miscategorised your business."
 
 ### Website URL
 
-Submitted as-is from the existing site. **⚠️ This is the weak point of the whole file.**
+**Submitted: `https://dozent.world/about/`** — the strongest of the available options,
+since it describes the product in full, and the splash page at the apex does not.
+
+**⚠️ This is the weak point of the whole file.**
 Stripe asked for "an active website link where we can view the products and services that
 you will be processing through your Stripe account," and today:
 
