@@ -6,11 +6,24 @@ card networks expect a platform to publish.
 Deployed to Vercel from this directory (project Root Directory = `site`).
 Plain static HTML — no build step, no framework, no dependencies.
 
-    /                  what Dozent is, how it works, links to the policies
+    /                  the splash — logo, wordmark, "Coming Soon"
+    /about/            what Dozent is, how it works, links to the policies
     /privacy/          Privacy Policy
     /terms/            Terms of Service
     /acceptable-use/   Acceptable Use Policy
-    /atlas.css         the shared stylesheet all four pages link
+    /atlas.css         the shared stylesheet all five pages link
+
+## The front door is the app's load screen
+
+`/` is a port of `TRAVEL GUIDED TOUR/SplashView.swift`, not a design of its
+own: a 44px brass circle pulsing between opacity 1.0 and 0.2 on a 0.8s
+ease-in-out that autoreverses, 16px of space, then "Dozent" in New York
+serif at 15px, white, tracked 2. **If the app's splash changes, change this
+too** — the whole point is that they are the same screen. The wordmark is
+15px rather than the site's 13px caption for that reason, and the pulse is
+suppressed under `prefers-reduced-motion`.
+
+Everything that used to be on the front page now lives at `/about/`.
 
 ## The stylesheet is a port of the app's design tokens
 

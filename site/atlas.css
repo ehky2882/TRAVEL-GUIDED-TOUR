@@ -64,6 +64,10 @@
 
   /* AtlasSpacing.cardCornerRadius. */
   --radius-card: 12px;
+
+  /* AtlasSpacing.searchBarHeight — the app's one control size, 44pt. It is
+     also the diameter of the splash screen's pulsing mark. */
+  --searchbar-height: 44px;
 }
 
 
@@ -184,3 +188,82 @@ footer a {
 footer .legal {
   margin: var(--md) 0 0;
 }
+
+/* ---------------------------------------------------------------
+   The splash homepage — a port of the app's `SplashView.swift`.
+
+   Keep the two in step. The app draws: a black ground, a 44pt circle
+   filled `AtlasColors.mapPin` pulsing between opacity 1.0 and 0.2 on a
+   0.8s ease-in-out that repeats forever and autoreverses, then 16pt of
+   space, then "Dozent" in the New York serif system font at 15pt
+   regular, white, tracked 2.
+   --------------------------------------------------------------- */
+
+body.splash {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--lg);
+}
+
+/* The mark and wordmark sit centred in whatever is left after the
+   footer, so the composition holds at any viewport height. */
+.splash-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--md);            /* the app's VStack(spacing: 16) */
+  padding: var(--xxl) 0;
+}
+
+.splash-mark {
+  width: var(--searchbar-height);   /* 44pt, as the app draws it */
+  height: var(--searchbar-height);
+  border-radius: 50%;
+  background: var(--brass);
+  animation: splash-pulse 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes splash-pulse {
+  from { opacity: 1; }
+  to   { opacity: 0.2; }
+}
+
+/* A pulsing element is exactly what Reduce Motion is for. Hold it at
+   full opacity rather than leaving it mid-fade. */
+@media (prefers-reduced-motion: reduce) {
+  .splash-mark { animation: none; opacity: 1; }
+}
+
+/* Sentence case and tracked 2 — the app does NOT uppercase this one,
+   unlike the wordmark in the page mastheads.
+
+   15px, not the 13px caption everything else on the site uses: the app's
+   splash draws it at `.system(size: 15, design: .serif)`, and the brief was
+   to match the load page exactly. `--size-body` happens to be the same 15,
+   which is why it is reused rather than hardcoded. */
+.splash-wordmark {
+  font-family: var(--font-serif);
+  font-size: var(--size-body);
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.splash-status {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: var(--sm) 0 0;
+}
+
+/* On the splash the footer is a quiet strip at the foot of the page,
+   not a rule under a column of prose. */
+body.splash footer {
+  margin-top: 0;
+  padding-top: var(--md);
+  border-top: none;
+  text-align: center;
+}
+body.splash footer a { margin: 0 var(--sm); }
