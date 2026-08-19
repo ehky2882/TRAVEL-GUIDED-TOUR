@@ -179,18 +179,24 @@ struct CreateTourWizardView: View {
         else { return }
         didLoadExisting = true
 
-        // 🔴 Wait out the sheet's presentation transition before touching ANY
-        // state. Every crash log of the saved-tour hang — builds 77, 81, 84,
-        // 87 — has the main thread inside `_transitionWillBegin:`'s alongside
-        // animations, and the one thing this path does that creating a tour
-        // never does is mutate a screenful of state during exactly that
-        // window. State changes there feed the sheet's own layout pass
-        // (toolbar metrics, safe-area insets, dismiss-disabled preferences —
-        // any relay will do) and it re-runs the layout that triggered them,
-        // synchronously, until the watchdog kills the app. The slide takes
-        // ~0.5s; the fields appearing a beat after the sheet settles is the
-        // visible cost, and it is the whole fix's cheapest part.
-        try? await Task.sleep(for: .milliseconds(650))
+        // 🔴 Nothing may be written to view state until the sheet's
+        // presentation transition is over, and everything is then written in
+        // ONE batch. Every crash log of the saved-tour hang — builds 77, 81,
+        // 84, 87 — is the same picture with a different function on top: the
+        // main thread flushing SwiftUI graph transactions from inside
+        // `_transitionWillBegin:`'s alongside animations, where each of our
+        // state writes forces a re-render whose platform-view update walks
+        // MKMapView's whole subview tree for trait changes. Enough writes in
+        // that window and the 5 s watchdog fires. Creating a tour writes
+        // nothing there, which is why it never hung. So: fetch first (the
+        // network runs while the sheet is still sliding), wait out the
+        // remainder of the transition, then apply the lot as a single
+        // transaction. The four separate batches this used to be — fields,
+        // stop, transcript, signature — were four full map re-walks.
+        let settleDeadline = ContinuousClock.now.advanced(by: .milliseconds(650))
+        let stop = await makerTourService.stopLocation(tourId: existingTourId)
+        let fetchedTranscript = await makerTourService.stopTranscript(tourId: existingTourId)
+        try? await Task.sleep(until: settleDeadline, clock: .continuous)
 
         draftId = existingTourId
 
@@ -215,7 +221,7 @@ struct CreateTourWizardView: View {
         // `MakerTour` carries no stops — the profile feed doesn't need them —
         // so the pin and radius have to be fetched. Reading them off the tour
         // would silently reset every edited tour's geofence to the default.
-        if let stop = await makerTourService.stopLocation(tourId: existingTourId) {
+        if let stop {
             // Clamped into the slider's range. Tours made before today were
             // created with a 20–200 m slider, so a stored radius can sit
             // outside 15–100 — and a Slider handed a value beyond its bounds
@@ -226,7 +232,7 @@ struct CreateTourWizardView: View {
             cameraPosition = .region(MKCoordinateRegion(
                 center: stop.coordinate, latitudinalMeters: 700, longitudinalMeters: 700))
         }
-        transcript = await makerTourService.stopTranscript(tourId: existingTourId)
+        transcript = fetchedTranscript
         savedSignature = currentSignature
     }
 
