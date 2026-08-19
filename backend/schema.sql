@@ -80,6 +80,8 @@ create table if not exists public.tours (
     centroid_latitude       double precision not null,
     centroid_longitude      double precision not null,
     city                    text,
+    -- Denormalised alongside city, exactly as the client model has it.
+    country                 text,
     primary_category        tour_category not null,
     tags                    text[] not null default '{}',
     price_usd               numeric(10,2) not null default 0,
@@ -196,6 +198,7 @@ as $$
           'centroidLatitude',     t.centroid_latitude,
           'centroidLongitude',    t.centroid_longitude,
           'city',                 t.city,
+          'country',              t.country,
           'primaryCategory',      t.primary_category::text,
           'tags',                 to_jsonb(t.tags),
           'priceUSD',             t.price_usd,

@@ -27,7 +27,7 @@ struct TourMediaCarousel: View {
     let heroImageURL: String
     let additionalImageURLs: [String]?
     let videoURLs: [String]?
-    /// nil sizes by the hero ratio (5:4) — see `atlasHeroSizing`. Every full-width
+    /// nil sizes by `AtlasSpacing.heroAspectRatio` — see `atlasHeroSizing`. Every full-width
     /// hero passes nil; the parameter stays for any fixed-size use.
     let height: CGFloat?
     /// Placeholder tint category, used only on the single-image fallback

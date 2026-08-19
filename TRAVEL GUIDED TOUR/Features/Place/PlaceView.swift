@@ -228,7 +228,7 @@ struct PlaceView: View {
             heroImageURL: heroImageURL,
             additionalImageURLs: galleryImageURLs,
             videoURLs: nil,
-            height: nil,   // 5:4 — see AtlasSpacing.heroAspectRatio
+            height: nil,   // takes AtlasSpacing.heroAspectRatio
             category: tours.first?.primaryCategory ?? .culturalHeritage
         )
         .padding(.horizontal, AtlasSpacing.lg)
