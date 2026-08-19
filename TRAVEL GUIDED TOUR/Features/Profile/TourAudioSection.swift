@@ -5,16 +5,13 @@ import UniformTypeIdentifiers
 /// Narration for one tour — record it, import it, watch it upload, play back
 /// what's attached.
 ///
-/// Extracted from `TourAuthoringView` so the create wizard and the editor run
-/// the *same* audio step rather than two implementations that drift apart. That
-/// is the rule the whole authoring redesign rests on: a step is built once and
-/// shown in two places, so a limit or a failure path can only live in one file.
+/// One step of `CreateTourWizardView`, which is the only place a tour is made
+/// or edited. It lives in its own file because the step owns a good deal of
+/// state — an upload in flight, a failure holding on to its data, a preview
+/// player — and burying that in the wizard would make the wizard the thing
+/// nobody wants to touch.
 struct TourAudioSection: View {
     let tour: Tour
-
-    /// Draws the "AUDIO" label. The wizard's step header already says it, so
-    /// the wizard passes false.
-    var showsHeader: Bool = true
 
     /// Reports the upload as it happens, so a host that needs to gate on it
     /// can. The wizard uses this to keep Submit dimmed while narration is
@@ -40,12 +37,6 @@ struct TourAudioSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            if showsHeader {
-                Text("AUDIO")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-            }
-
             if hasAudio {
                 attachedRow
             }

@@ -40,6 +40,8 @@ struct TourWizardState: Equatable {
     /// Whether the draft row exists yet. Steps 3 onward write against a tour
     /// id, so they have nothing to act on until it does.
     var draftExists = false
+    /// A tour already with the moderators has nothing to submit.
+    var isAlreadyInReview = false
 
     var trimmedTitle: String {
         title.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -93,6 +95,9 @@ enum TourWizardRules {
                 : "Record or import the narration."
 
         case .review:
+            if state.isAlreadyInReview {
+                return "Already with us — we'll let you know either way."
+            }
             // Reaching Review mid-upload is fine; submitting is not. The
             // audio can still be in flight while the maker reads the summary.
             switch state.audioUpload {

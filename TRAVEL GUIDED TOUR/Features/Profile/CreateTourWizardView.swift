@@ -19,6 +19,10 @@ import CoreLocation
 /// progress works from the first screen rather than being dimmed on the first
 /// thing a maker ever sees.
 struct CreateTourWizardView: View {
+    /// The tour to open, or nil to start a new one. Passing one makes this the
+    /// *only* way a maker edits their work — there is no second editor screen.
+    var existingTourId: UUID? = nil
+
     @Environment(MakerProfileService.self) private var makerProfileService
     @Environment(MakerTourService.self) private var makerTourService
     @Environment(LocationManager.self) private var locationManager
@@ -26,6 +30,11 @@ struct CreateTourWizardView: View {
 
     @State private var step: TourWizardStep = .location
     @State private var draftId: UUID?
+    /// True once an existing tour's values have been read in, so the load
+    /// can't run twice and clobber an edit in progress.
+    @State private var didLoadExisting = false
+    @State private var showingDeleteConfirm = false
+    @State private var isDeleting = false
 
     // Step 1 — location
     @State private var radius: Double = 30
@@ -119,6 +128,69 @@ struct CreateTourWizardView: View {
             Text("A draft stays in your tours, so you can pick it up where you left off.")
         }
         .onAppear(perform: centerOnUser)
+        .task(id: existingTourId) { await loadExistingTour() }
+        .confirmationDialog("Delete this tour?", isPresented: $showingDeleteConfirm,
+                            titleVisibility: .visible) {
+            Button("Delete tour", role: .destructive) { deleteTour() }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This can't be undone. Its audio and photos go with it.")
+        }
+    }
+
+    /// Read an existing tour into the form. Runs once: a second pass would
+    /// overwrite whatever the maker had already changed.
+    private func loadExistingTour() async {
+        guard let existingTourId, !didLoadExisting,
+              let existing = makerTourService.myTours.first(where: { $0.id == existingTourId })
+        else { return }
+        didLoadExisting = true
+        draftId = existingTourId
+
+        let tour = existing.tour
+        title = tour.title
+        shortDescription = tour.shortDescription
+        longDescription = tour.longDescription
+        city = tour.city
+        cityQuery = tour.city ?? ""
+
+        // Split the stored tags back into what the picker edits. The architect
+        // is stored as a plain tag beside its implied "Designed by a Master";
+        // both are re-derived on save, so both come out here — otherwise saving
+        // twice would accumulate duplicates.
+        let architectTag = tour.tags.first { Tag.facet(for: $0) == .architect }
+        var editable = Set(tour.tags)
+        editable.remove("Designed by a Master")
+        if let architectTag { editable.remove(architectTag) }
+        selectedTags = editable
+        architect = architectTag
+
+        // `MakerTour` carries no stops — the profile feed doesn't need them —
+        // so the pin and radius have to be fetched. Reading them off the tour
+        // would silently reset every edited tour's geofence to the default.
+        if let stop = await makerTourService.stopLocation(tourId: existingTourId) {
+            radius = Double(stop.radiusMeters)
+            centerCoordinate = stop.coordinate
+            cameraPosition = .region(MKCoordinateRegion(
+                center: stop.coordinate, latitudinalMeters: 700, longitudinalMeters: 700))
+        }
+        transcript = await makerTourService.stopTranscript(tourId: existingTourId)
+        savedSignature = currentSignature
+    }
+
+    private func deleteTour() {
+        guard let tour = draft?.tour else { return }
+        errorMessage = nil
+        isDeleting = true
+        Task {
+            defer { isDeleting = false }
+            do {
+                try await makerTourService.deleteTour(tour)
+                dismiss()
+            } catch {
+                errorMessage = AuthoringErrorText.message(for: error)
+            }
+        }
     }
 
     // MARK: - Chrome
@@ -167,20 +239,50 @@ struct CreateTourWizardView: View {
     }
 
     /// Five segments, one per step, filled up to where you are.
+    /// Five segments, one per step — and on an existing tour they're the way
+    /// you move around. Tapping one jumps straight there, so fixing a typo is
+    /// a tap rather than a walk through four screens you didn't come for.
+    /// A new tour can only go back this way; going forward still has to earn
+    /// it, step by step.
     private var progressBar: some View {
         HStack(spacing: 5) {
             ForEach(TourWizardStep.allCases, id: \.rawValue) { s in
-                Capsule()
-                    .fill(s.rawValue <= step.rawValue
-                          ? AtlasColors.mapPin
-                          : AtlasColors.tertiaryText.opacity(0.3))
-                    .frame(height: 3)
+                Button { jump(to: s) } label: {
+                    Capsule()
+                        .fill(s.rawValue <= step.rawValue
+                              ? AtlasColors.mapPin
+                              : AtlasColors.tertiaryText.opacity(0.3))
+                        .frame(height: 3)
+                        .padding(.vertical, 9)      // a 3pt bar is not a tap target
+                        .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .disabled(!canJump(to: s))
+                .accessibilityLabel(s.label.capitalized)
             }
         }
         .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.bottom, AtlasSpacing.sm)
-        .accessibilityElement()
-        .accessibilityLabel("Step \(step.rawValue + 1) of \(TourWizardStep.allCases.count)")
+        .padding(.bottom, 2)
+    }
+
+    /// Any step on a tour that already exists; otherwise only backwards.
+    private func canJump(to target: TourWizardStep) -> Bool {
+        target != step && (existingTourId != nil || target.rawValue < step.rawValue)
+    }
+
+    /// Jumping saves what's on screen first, so moving around can't lose an
+    /// edit the way tapping through would.
+    private func jump(to target: TourWizardStep) {
+        guard canJump(to: target) else { return }
+        focused = nil
+        errorMessage = nil
+        Task {
+            if hasUnsavedChanges, canPersist {
+                do { try await persist() }
+                catch { errorMessage = AuthoringErrorText.message(for: error) ; return }
+            }
+            withAnimation(.easeInOut(duration: 0.2)) { step = target }
+        }
     }
 
     /// Save progress and the primary action, side by side, where neither can
@@ -535,7 +637,7 @@ struct CreateTourWizardView: View {
     private var audioStep: some View {
         if let draft {
             VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                TourAudioSection(tour: draft.tour, showsHeader: false,
+                TourAudioSection(tour: draft.tour,
                                  onUploadStateChange: { audioUpload = $0 })
 
                 VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
@@ -572,14 +674,41 @@ struct CreateTourWizardView: View {
                     summaryRow("TAGS", tour.tags.isEmpty ? "None" : tour.tags.joined(separator: " · "),
                                isLast: false)
                     summaryRow("PHOTOS", photoCount == 0 ? "None" : "\(photoCount)", isLast: false)
-                    summaryRow("AUDIO", audioSummary(tour), isLast: true)
+                    summaryRow("AUDIO", audioSummary(tour), isLast: existingTourId == nil)
+                    if let status = draft?.status, existingTourId != nil {
+                        summaryRow("STATUS", status.label, isLast: true)
+                    }
                 }
                 .background(AtlasColors.background)
                 .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
 
-                Text("We review every tour before it goes live. Most are looked at within a day.")
+                Text(reviewFootnote)
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.tertiaryText)
+
+                if existingTourId != nil {
+                    Button(role: .destructive) { showingDeleteConfirm = true } label: {
+                        HStack {
+                            Spacer()
+                            if isDeleting {
+                                ProgressView()
+                            } else {
+                                Label("Delete tour", systemImage: "trash")
+                                    .font(AtlasTypography.caption)
+                                    .foregroundStyle(AtlasColors.accent)
+                            }
+                            Spacer()
+                        }
+                        .padding(.vertical, AtlasSpacing.md)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: AtlasSpacing.sm)
+                                .stroke(AtlasColors.accent.opacity(0.5), lineWidth: 1)
+                        )
+                    }
+                    .buttonStyle(.plain)
+                    .disabled(isDeleting)
+                    .padding(.top, AtlasSpacing.sm)
+                }
             }
         } else {
             missingDraftNotice
@@ -771,7 +900,8 @@ struct CreateTourWizardView: View {
             hasCoverPhoto: !(draft?.tour.heroImageURL.isEmpty ?? true),
             audioDurationSeconds: draft?.tour.totalDurationSeconds ?? 0,
             audioUpload: audioUpload,
-            draftExists: draft != nil
+            draftExists: draft != nil,
+            isAlreadyInReview: draft?.status == .inReview
         )
     }
 
@@ -785,7 +915,26 @@ struct CreateTourWizardView: View {
     }
 
     private var primaryLabel: String {
-        step == .review ? "Submit for review" : "Next"
+        guard step == .review else { return "Next" }
+        switch draft?.status {
+        case .inReview: return "In review"
+        // Editing something already live is allowed — a maker shouldn't need
+        // an admin to fix a typo — but it re-enters moderation rather than
+        // changing under a listener mid-tour.
+        case .published: return "Submit changes for review"
+        default:        return "Submit for review"
+        }
+    }
+
+    private var reviewFootnote: String {
+        switch draft?.status {
+        case .inReview:
+            return "Already with us. We'll let you know either way."
+        case .published:
+            return "This tour is live. Saving changes sends it back for review before they appear."
+        default:
+            return "We review every tour before it goes live. Most are looked at within a day."
+        }
     }
 
     /// The Audio row on Review, which carries the upload through rather than
@@ -908,7 +1057,7 @@ struct CreateTourWizardView: View {
     }
 
     private func submit() {
-        guard let draft else { return }
+        guard let draft, draft.status != .inReview else { return }
         isSubmitting = true
         Task {
             defer { isSubmitting = false }
@@ -984,7 +1133,7 @@ struct CreateTourWizardView: View {
     }
 
     private func centerOnUser() {
-        guard centerCoordinate == nil,
+        guard existingTourId == nil, centerCoordinate == nil,
               let coord = locationManager.userLocation?.coordinate else { return }
         cameraPosition = .region(
             MKCoordinateRegion(center: coord, latitudinalMeters: 700, longitudinalMeters: 700)

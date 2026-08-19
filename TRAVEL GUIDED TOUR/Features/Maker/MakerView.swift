@@ -151,7 +151,7 @@ struct MakerView: View {
     @State private var showingSettings = false
     @State private var showingCreate = false
     @State private var showingEditProfile = false
-    /// A draft pushed into the editor from elsewhere on this page.
+    /// One of the maker's own tours, opened in the wizard.
     @State private var draftToEdit: EditingDraft?
 
     /// Which of TOURS / LISTS / MAP is showing.
@@ -238,8 +238,8 @@ struct MakerView: View {
         .sheet(isPresented: $showingCreate) {
             CreateTourWizardView()
         }
-        .navigationDestination(item: $draftToEdit) { draft in
-            TourAuthoringView(tourId: draft.id)
+        .sheet(item: $draftToEdit) { draft in
+            CreateTourWizardView(existingTourId: draft.id)
         }
         // A place tapped on the MAP tab while this page is already inside a
         // detail layer. See `openPlaceFromMap` for why it cannot go through
@@ -946,7 +946,7 @@ struct MakerView: View {
             // Own tours open the authoring EDITOR (add audio / photos /
             // transcript / submit), pushed within the Me tab's nav stack —
             // not the public read-only detail.
-            NavigationLink { TourAuthoringView(tourId: tour.id) } label: { label() }
+            Button { draftToEdit = EditingDraft(id: tour.id) } label: { label() }
                 .buttonStyle(.plain)
         } else if tourPresenter.presentedTour == nil {
             Button { tourPresenter.present(tour) } label: { label() }
