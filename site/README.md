@@ -39,9 +39,18 @@ so the website and the app read as one product:
     Browsers give headings a default `em` font-size and `bold` weight, and
     inheriting from `body` does not override them — an earlier revision
     dropped h2's explicit size and it silently rendered at 19.5px. Leave it.
-  * **The wordmark is the one exemption** (owner, 2026-08-19). It is New York
-    serif at 13px tracked out to 6px in brass — exactly how the app draws
-    DOZENT on the Settings masthead. It is a logotype, not a label.
+  * **The wordmark is the one exemption** (owner, 2026-08-19). New York serif
+    at 15px, tracked 2, Title Case — identical to the splash's, so the mark
+    is one mark across the site. Brass on the prose pages, white on the
+    splash, where the brass circle above it already carries the accent.
+  * **The masthead is pinned to the top of the window and the footer to the
+    bottom**, with the page scrolling between them. The masthead is `sticky`;
+    the footer is `fixed`, because a sticky footer sits after the content on
+    a page shorter than the window (which /about/ is, above ~1060px tall) and
+    sticky can only shift an element up, never down. The cost is that the
+    footer's height must be reserved by hand — that is `--footer-h`, with a
+    larger value under 570px where the link row wraps to two lines. If the
+    footer grows a row, grow that token.
   * `--font-body` / `--size-body` still carry `AtlasTypography.body` for
     reference, but nothing on the site uses them.
   * **Dark only, for now** (owner, 2026-08-19). The tokens hold the dark

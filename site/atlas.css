@@ -65,6 +65,13 @@
   /* AtlasSpacing.cardCornerRadius. */
   --radius-card: 12px;
 
+  /* Height reserved at the foot of every page for the fixed footer. Erring
+     generous: too small hides the last line of a long policy behind it, too
+     large is only harmless space at the end of the document. Covers the
+     two-row case (links + attribution); the narrow-window override below
+     covers three. */
+  --footer-h: 100px;
+
   /* AtlasSpacing.searchBarHeight — the app's one control size, 44pt. It is
      also the diameter of the splash screen's pulsing mark. */
   --searchbar-height: 44px;
@@ -96,7 +103,7 @@ body, body * {
 body {
   max-width: 38rem;
   margin: 0 auto;
-  padding: var(--xxl) var(--lg) var(--xxl);
+  padding: 0 var(--lg) var(--footer-h);
   font-family: var(--font-mono);
   font-size: var(--size-caption);
   line-height: 1.7;
@@ -106,14 +113,30 @@ body {
 }
 
 /* The wordmark is the ONE exemption from caption (owner, 2026-08-19).
-   Drawn as the app draws it on the Settings masthead: New York serif at
-   caption size, tracked out to 6px, in brass — a logotype, not a label. */
+
+   Drawn exactly as the SPLASH draws it — New York serif, 15px, tracked 2,
+   Title Case — so the mark is one mark across the site rather than two
+   variants of it. It was uppercase and tracked 6px, which is a logotype
+   convention that only works on capitals; Title Case at that tracking reads
+   as broken.
+
+   It stays BRASS here rather than the splash's white: the splash has a brass
+   circle above it doing that job, and these pages have nothing else on them
+   carrying the accent.
+
+   Pinned to the top of the window, so it is always on screen. It keeps an
+   opaque background because page content scrolls underneath it. */
 .brand {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bg);
   font-family: var(--font-serif);
-  letter-spacing: 6px;
-  text-transform: uppercase;
+  font-size: var(--size-body);
+  letter-spacing: 2px;
   color: var(--brass);
-  margin: 0 0 var(--xl);
+  margin: 0;
+  padding: var(--md) 0 var(--lg);
 }
 .brand a { color: var(--brass); text-decoration: none; }
 
@@ -182,13 +205,41 @@ a {
    links so a long label like TERMS OF SERVICE can never break across two
    lines mid-phrase; and the attribution takes a full row of its own so it
    always sits beneath the links rather than joining the end of them. */
+/* Fixed to the bottom of the window, so the links are always reachable
+   without scrolling to the end of a long policy.
+
+   `fixed` rather than `sticky`: a sticky footer pins correctly while a page
+   scrolls, but on a page SHORTER than the window it just sits after the
+   content — /about/ on a window over ~1060px tall did exactly that. Sticky
+   can only shift an element up to keep it visible, never down.
+
+   The cost of `fixed` is that space has to be reserved by hand, which is
+   what `--footer-h` is for. It is centred with `left/right: 0` plus auto
+   margins and given the same max-width and gutters as the body, so its
+   contents line up with the column above rather than with the window.
+
+   Opaque background and a rule on top, because content scrolls beneath. */
 footer {
-  margin-top: var(--xxl);
-  padding-top: var(--md);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  max-width: 38rem;
+  margin: 0 auto;
+  background: var(--bg);
+  padding: var(--md) var(--lg);
   border-top: 1px solid var(--rule);
   display: flex;
   flex-wrap: wrap;
   gap: var(--sm) 12px;
+}
+
+/* Where the link row wraps to two lines the footer is taller, so reserve
+   more. Matches the ~570px threshold measured for the row itself. */
+@media (max-width: 570px) {
+  :root { --footer-h: 132px; }
 }
 
 /* Tracked tighter than the headings (0.04em against 0.08em) purely to buy
@@ -226,7 +277,7 @@ body.splash {
   max-width: none;
   display: flex;
   flex-direction: column;
-  padding: var(--lg) var(--lg) var(--xxl);
+  padding: var(--lg) var(--lg) var(--footer-h);
 }
 
 /* The mark and wordmark sit centred in whatever is left after the
@@ -283,7 +334,6 @@ body.splash {
 /* On the splash the footer is a quiet centred strip at the foot of the
    page, not a rule under a column of prose. */
 body.splash footer {
-  margin-top: 0;
   border-top: none;
   justify-content: center;
   text-align: center;
