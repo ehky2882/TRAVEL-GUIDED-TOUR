@@ -67,9 +67,10 @@
 
   /* Height reserved at the foot of every page for the fixed footer. Erring
      generous: too small hides the last line of a long policy behind it, too
-     large is only harmless space at the end of the document. Covers the
-     two-row case (links + attribution); the narrow-window override below
-     covers three. */
+     large is only harmless space at the end of the document. Measured
+     heights are 108px wide, 98px under 500px and 93px under 374px, where the
+     footer's type steps down — one value covers all three. Re-measure if a
+     footer link is added or renamed. */
   --footer-h: 116px;
 
   /* Height reserved at the head of every page for the fixed masthead —
@@ -297,12 +298,36 @@ footer {
   box-shadow: 0 var(--xl) 0 0 var(--bg);
 }
 
-/* Where the link row wraps the footer is taller, so reserve more. Measured:
-   the row holds one line down to ~500px, then wraps — 122px tall at 430px
-   and 144px at 375px, hence 160px here rather than a guess. If a link is
-   added or renamed, re-measure both this number and the breakpoint. */
+/* On a phone the row will not fit at 13px, and the owner would rather the
+   text shrank than the row wrapped ("i dont mind making the text smaller to
+   make it all fit"). So below 500px the whole footer scales down, the gutter
+   tightens, and tracking comes off — measured to hold one line all the way
+   down to a 320px iPhone SE.
+
+   `footer, footer *` rather than `footer` alone: the `body, body *` reset at
+   the top of this file sets `font-size` on every element directly, so a
+   footer-only rule would be overridden by it and nothing would inherit. */
 @media (max-width: 500px) {
-  :root { --footer-h: 176px; }
+  footer, footer * {
+    font-size: 10px;
+    letter-spacing: 0.02em;
+  }
+  footer {
+    gap: var(--sm);
+    padding-left: var(--md);
+    padding-right: var(--md);
+  }
+}
+
+/* The smallest phones still in use (iPhone SE, 320px) need one more step
+   down — at 10px the row needs 316px and only 273px is available there. */
+@media (max-width: 374px) {
+  footer, footer * { font-size: 9px; }
+  footer {
+    gap: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 
 /* Tracked tighter than the headings (0.04em against 0.08em) purely to buy
