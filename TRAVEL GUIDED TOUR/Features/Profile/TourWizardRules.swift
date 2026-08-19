@@ -1,4 +1,5 @@
 import Foundation
+import CoreLocation
 
 /// The five steps of making a tour, and the rules for leaving each one.
 ///
@@ -104,5 +105,22 @@ enum TourWizardRules {
                 return state.draftExists ? nil : "Go back to Location and place the pin first."
             }
         }
+    }
+}
+
+extension CLLocationCoordinate2D {
+    /// Whether two coordinates are the same point for our purposes — about a
+    /// centimetre, far below anything a finger can express on a map.
+    ///
+    /// `CLLocationCoordinate2D` deliberately has no `Equatable` conformance,
+    /// which means SwiftUI cannot tell an unchanged write to a coordinate
+    /// `@State` from a real one: every assignment dirties the view. Anywhere a
+    /// coordinate is written from a callback that fires on layout — the map's
+    /// `onMapCameraChange` above all — the write has to be gated on this, or
+    /// layout and rendering feed each other until the watchdog kills the app.
+    func isEssentially(_ other: CLLocationCoordinate2D) -> Bool {
+        let tolerance = 1e-7
+        return abs(latitude - other.latitude) < tolerance
+            && abs(longitude - other.longitude) < tolerance
     }
 }

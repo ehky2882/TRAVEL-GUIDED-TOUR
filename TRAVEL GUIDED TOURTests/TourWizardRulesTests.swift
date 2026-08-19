@@ -1,4 +1,5 @@
 import XCTest
+import CoreLocation
 @testable import TRAVEL_GUIDED_TOUR
 
 /// Pins the create wizard's step gating.
@@ -161,5 +162,27 @@ final class TourWizardRulesTests: XCTestCase {
         XCTAssertNil(TourWizardStep.review.next)
         XCTAssertEqual(TourWizardStep.location.next, .details)
         XCTAssertEqual(TourWizardStep.review.previous, .audio)
+    }
+
+    // MARK: - Coordinate equality
+
+    /// The guard that stops the map's camera callback re-dirtying the view on
+    /// every layout pass. `CLLocationCoordinate2D` has no `Equatable`, so
+    /// without this SwiftUI treats an identical write as a change — and the
+    /// wizard's sheet re-lays out, fires the callback again, and hangs.
+    func test_identicalCoordinatesAreEssentiallyEqual() {
+        let c = CLLocationCoordinate2D(latitude: 41.14961, longitude: -8.61099)
+        XCTAssertTrue(c.isEssentially(c))
+        XCTAssertTrue(c.isEssentially(CLLocationCoordinate2D(latitude: 41.14961,
+                                                             longitude: -8.61099)))
+    }
+
+    func test_aRealPanIsNotEssentiallyEqual() {
+        let c = CLLocationCoordinate2D(latitude: 41.14961, longitude: -8.61099)
+        // ~1 m north, well inside anything a finger can express.
+        XCTAssertFalse(c.isEssentially(CLLocationCoordinate2D(latitude: 41.14962,
+                                                              longitude: -8.61099)))
+        XCTAssertFalse(c.isEssentially(CLLocationCoordinate2D(latitude: 41.14961,
+                                                              longitude: -8.61098)))
     }
 }

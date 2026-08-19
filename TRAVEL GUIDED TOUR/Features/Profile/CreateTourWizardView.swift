@@ -81,6 +81,17 @@ struct CreateTourWizardView: View {
     /// A signature of everything saved so far, so Close can tell whether
     /// there is anything to lose.
     @State private var savedSignature: String?
+    /// 🔴 Whether the swipe-to-dismiss guard is on, held as state rather than
+    /// computed at the root.
+    ///
+    /// `.interactiveDismissDisabled` sits on the outermost view, so whatever
+    /// it reads becomes a dependency of the *whole* `NavigationStack` — and
+    /// reading `hasUnsavedChanges` there made the live map coordinate one.
+    /// Every camera callback then re-evaluated the root body, from inside
+    /// `_sheetLayoutInfoLayout:`, which laid the map out again. That is the
+    /// hang opening a saved tour. A `Bool` is `Equatable`, so an unchanged
+    /// value costs nothing; the `onChange` below keeps it honest.
+    @State private var dismissGuarded = false
     /// Shown briefly under the footer after Save progress.
     @State private var savedConfirmation = false
     @FocusState private var focused: Field?
@@ -121,13 +132,17 @@ struct CreateTourWizardView: View {
             .inlineNavigationBarTitle()
             .toolbar { toolbarContent }
         }
-        // Unsaved work can't be swiped away. SwiftUI's own modifier, applied
-        // in its update cycle — an earlier version of this reached into the
-        // sheet's presentation controller from a representable to *prompt* on
-        // the swipe, and setting `isModalInPresentation` from inside sheet
-        // layout re-triggered that layout, wedging the main thread until the
-        // watchdog killed the app. Close is where the question lives.
-        .interactiveDismissDisabled(outcome == nil && hasUnsavedChanges && canPersist)
+        // Unsaved work can't be swiped away; Close is where the question lives.
+        //
+        // 🔴 This modifier reconfigures `UISheetPresentationController`, so the
+        // value it reads must be cheap AND rarely-changing. Two earlier
+        // versions hung the app here: the first reached into the presentation
+        // controller from a representable to *prompt* on the swipe, setting
+        // `isModalInPresentation` from inside sheet layout; the second passed
+        // `hasUnsavedChanges`, which reads the live map coordinate, so every
+        // camera callback re-ran the root body inside `_sheetLayoutInfoLayout:`
+        // and laid the map out again. Pass plain state, computed elsewhere.
+        .interactiveDismissDisabled(dismissGuarded)
         .confirmationDialog(confirmTitle, isPresented: confirmBinding,
                             titleVisibility: .visible) {
             switch confirming {
@@ -251,6 +266,13 @@ struct CreateTourWizardView: View {
             .scrollDismissesKeyboard(.interactively)
         }
         .safeAreaInset(edge: .bottom, spacing: 0) { footer }
+        // Deliberately here and not at the root — see `dismissGuarded`.
+        .onChange(of: currentSignature, initial: true) { _, signature in
+            dismissGuarded = outcome == nil && savedSignature != signature && canPersist
+        }
+        .onChange(of: savedSignature, initial: true) { _, saved in
+            dismissGuarded = outcome == nil && saved != currentSignature && canPersist
+        }
         // The keyboard rises *over* the footer rather than shoving it up the
         // screen — otherwise Save progress and Next end up floating in the
         // middle of the map. Same treatment the mini-player and the home
@@ -387,6 +409,12 @@ struct CreateTourWizardView: View {
                     .focused($focused, equals: .city)
                     .autocorrectionDisabled()
                     .onChange(of: cityQuery) { _, new in
+                        // Only a person typing opens the dropdown. Loading a
+                        // saved tour fills this field, and `pickCity` rewrites
+                        // it as "Porto, Portugal" — neither is a search, and
+                        // both used to re-open the list and set a completer
+                        // streaming results into a view mid-layout.
+                        guard focused == .city else { return }
                         citySearch.search(new)
                         showingCitySuggestions = true
                         // Typing again after a pick means they're changing
@@ -407,6 +435,7 @@ struct CreateTourWizardView: View {
                     TextField("e.g. The Old Custom House", text: $locationName)
                         .focused($focused, equals: .place)
                         .onChange(of: locationName) { _, new in
+                            guard focused == .place else { return }
                             placeSearch.search(new)
                             showingPlaceSuggestions = true
                         }
@@ -562,7 +591,17 @@ struct CreateTourWizardView: View {
                 .allowsHitTesting(false)
         }
         .onMapCameraChange(frequency: .continuous) { context in
-            centerCoordinate = context.region.center
+            // 🔴 The guard is load-bearing, not an optimisation.
+            // `CLLocationCoordinate2D` is not `Equatable`, so SwiftUI cannot
+            // tell an unchanged write from a real one — *every* callback
+            // dirties this view. MapKit reports a camera change on each layout
+            // pass, so an unguarded write means: layout → callback → dirty →
+            // layout, forever, inside `_sheetLayoutInfoLayout:`. That is the
+            // watchdog kill (0x8BADF00D) opening a saved tour. Assign only
+            // when the pin has genuinely moved.
+            let c = context.region.center
+            if let existing = centerCoordinate, existing.isEssentially(c) { return }
+            centerCoordinate = c
         }
     }
 
@@ -943,7 +982,7 @@ struct CreateTourWizardView: View {
     private var currentSignature: String {
         [
             persistedTitle, shortDescription, longDescription,
-            Tag.ordered(selectedTags).joined(separator: "|"),
+            selectedTags.sorted().joined(separator: "|"),   // plain sort: this is change detection, not display
             architect ?? "", city ?? "", transcript,
             String(format: "%.6f,%.6f,%d",
                    centerCoordinate?.latitude ?? 0,
