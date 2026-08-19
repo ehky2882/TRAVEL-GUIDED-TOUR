@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-19 23:37 UTC
+**Last verified:** 2026-08-19 23:59 UTC
 
 ---
 
@@ -24,47 +24,28 @@ Code PRs cannot merge without a look on device (§ Merging PRs). This is the que
 
 | PR | What it is | Build to install | Also needs |
 |---|---|---|---|
-| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ✅ **90 — installable, untested** | A device pass on the edit path |
+| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ⚠️ **A build of the merge** — see below | Then it is mergeable |
 
-🔴 **SEVEN BUILDS HAVE SHIPPED THIS FREEZE — 76, 77, 81, 84, 87, 88, 89.** Seven device passes.
-Build 89 removed the sheet entirely and it *still* hung, which rules presentation out as the cause.
+✅ **THE SAVED-TOUR HANG IS CLOSED. Build 90 is owner-verified.** Eight builds, seven of which
+shipped the freeze (76, 77, 81, 84, 87, 88, 89), and six wrong diagnoses before it.
 
-**The eighth hypothesis (`eea754b`, unbuilt) is the first that explains the ASYMMETRY, and from a
-line of code rather than from circumstance.** Every previous theory was read off a crash log's top
-frame. This one asks the right question instead — what differs on the edit path in the *first*
-render, before any async work — and finds one thing:
+**The cause:** `Map(position:)` bound to `.automatic` with nothing to frame — on the edit path only,
+because `centerOnUser` guarded on `existingTourId == nil` and so was skipped when editing. MapKit
+resolves a camera, writes back through the binding, re-renders, resolves again. A synchronous spin,
+which is what the watchdog kept killing.
 
-```
-guard existingTourId == nil, ...   // centerOnUser, skipped for an existing tour
-```
+🔴 **The lesson is worth more than the bug, and it is now in `CLAUDE.md`: a crash log is ONE SAMPLE
+of a spin.** Six diagnoses were built from three different top frames of the same loop — toolbar
+bridge, then `PlatformViewChild` walking MKMapView's subtree, then presentation. Every one was a
+real frame and none was the cause. **Diff the working path against the broken one before trusting
+any stack.** Here that meant asking what differs on the edit path in the *first* render, which
+found the guard immediately.
 
-So creating a tour gets a concrete `.region` in `onAppear`, while editing one leaves
-`cameraPosition` at `.automatic` with no content at all until the fetched pin lands. `Map(position:)`
-bound to `.automatic` over empty content makes MapKit resolve a camera, write back through the
-binding, re-render, and resolve again — a synchronous layout loop, which is exactly what the
-watchdog has been killing.
-
-**It also retro-explains build 88**: the deferred load did not help because it kept `.automatic`
-alive 650 ms *longer*. No earlier theory accounted for that, or for why the create path has never
-once hung.
-
-**Build 90 is up and installable, cut from `eea754b` — it carries this fix.** The head has since
-moved twice, to `f5f855e` (comment only) and `c727ac4` (docs only), so 90 is stale by SHA and not
-by substance.
-
-⚠️ **The docs commit now records this as "the actual cause", and that is not yet established.** It
-was written two minutes after build 90 started, so it cannot reflect any device test. The
-diagnosis is the best one yet; it is still a hypothesis until the edit path is opened on a phone.
-
-✅ **That comment commit is worth reading, because it narrows the rule and strengthens the theory.**
-"Never `.automatic`" was an overclaim: `TourSetMap` and the maker page's map both start `.automatic`
-and have never hung — they always have pins, so the automatic frame has an answer and settles. The
-hazard is specifically **`.automatic` over EMPTY content**, which is exactly what the edit path had
-and what those two screens never have.
-
-⚠️ **The escalation still stands as the default.** Seven device passes have gone. If 90 hangs, stop
-building and move to a local Mac session that can reproduce this in the simulator. **The device
-pass remains the only test** — a confident commit message has already been wrong once today.
+⚠️ **BUT BUILD 90 NO LONGER REPRESENTS THIS BRANCH.** `main` was merged in at `a454a219`, with
+conflicts resolved in `CLAUDE.md`, **`MakerTourService.swift`**, and two archive files. That is a
+code merge, so the combination now on the branch — the wizard plus #544, #546 and #547 — **has
+never been built or run.** `CLAUDE.md` already carries this exact trap from PR #447: *when two
+branches fix the same bug, the merge needs its own build.* Cut one before merging.
 
 ## 2. Blocked on owner — outside the repo
 
@@ -96,8 +77,8 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ✅ built — **untested on device** |
-| 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | 🔴 **still hangs** |
+| 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ✅ **owner-verified — hang closed** |
+| 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | 🔴 hung — superseded |
 | 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | 🔴 **still hangs** |
 | 87 | `tour-upload-polish-qiliop` | #540 + a hang fix that did not work | 🔴 **still hangs** |
 | 84 | `tour-upload-polish-qiliop` | #540 wizard | 🔴 hangs on the edit path |
