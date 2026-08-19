@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Atlas — Audio Tours</title>
+  <meta name="description" content="A list of audio tours on Atlas. Coming soon to the App Store." />
+  <meta property="og:title" id="og-title" content="Atlas — Audio Tours" />
+  <meta property="og:description" id="og-desc" content="A list of audio tours on Atlas. Coming soon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlas-icon.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/png" href="https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlas-icon.png" />
+  <link rel="apple-touch-icon" href="https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlas-icon.png" />
+  <style>
+    :root {
+      --bg: #17130F;
+      --surface: #211B15;
+      --surface-2: #2C241C;
+      --text: #F5EFE7;
+      --muted: #B7AC9E;
+      --accent: #8B7535;
+      --accent-soft: rgba(184, 80, 66, 0.16);
+      --border: rgba(245, 239, 231, 0.10);
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wrap { width: 100%; max-width: 560px; padding: 20px 20px 48px; }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      font-size: 14px; color: var(--text); margin: 8px 0 22px;
+    }
+    .brand .dot { width: 12px; height: 12px; border-radius: 3px; background: var(--accent); }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 18px; overflow: hidden; padding: 28px 20px 20px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .avatar {
+      width: 96px; height: 96px; border-radius: 50%;
+      background: var(--surface-2); margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px; overflow: hidden;
+    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .eyebrow {
+      display: block; text-align: center; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+      margin-bottom: 8px;
+    }
+    h1 { font-size: 24px; line-height: 1.22; margin: 0 0 6px; font-weight: 700; text-align: center; }
+    .count { text-align: center; font-size: 14px; color: var(--muted); margin: 0 0 16px; }
+    .bio { font-size: 15px; color: var(--text); opacity: 0.92; margin: 0 0 22px; text-align: center; }
+    .cta {
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 14px; padding: 18px; text-align: center;
+    }
+    .cta .soon { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+    .cta .soon-sub { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+    .notify {
+      display: inline-block; text-decoration: none; font-weight: 600; font-size: 15px;
+      color: #fff; background: var(--accent); padding: 12px 22px; border-radius: 999px;
+    }
+    .notify:active { opacity: 0.85; }
+    .foot { text-align: center; font-size: 12px; color: var(--muted); margin-top: 26px; opacity: 0.8; }
+    .center-state { text-align: center; padding: 60px 10px; }
+    .center-state h1 { font-size: 22px; }
+    .center-state p { color: var(--muted); }
+    .skeleton { animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+  </style>
+  <style>
+    /* List-specific: the tour rundown under the title. */
+    .tours { list-style: none; margin: 18px 0 0; padding: 0; text-align: left; }
+    .tours li {
+      display: flex; gap: 12px; align-items: baseline;
+      padding: 10px 0; border-top: 1px solid var(--border);
+      font-size: 15px;
+    }
+    .tours li .n {
+      color: var(--muted); font-variant-numeric: tabular-nums;
+      min-width: 18px; font-size: 13px;
+    }
+    .tours li .ttl { color: var(--text); }
+    .more { color: var(--muted); font-size: 13px; margin: 12px 0 0; text-align: left; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> Atlas</div>
+    <div id="root">
+      <div class="card skeleton">
+        <div class="avatar"></div>
+        <span class="eyebrow">Loading…</span>
+        <h1>&nbsp;</h1>
+      </div>
+    </div>
+    <div class="foot">Atlas — GPS-anchored audio tours. Coming soon to the App Store.</div>
+  </div>
+
+  <script>
+    // Lists live in Supabase, not in Tours.json — so unlike the tour and
+    // creator pages this one calls the same `get_journey` function the app
+    // calls, with the same public key. Row-level security still applies: a
+    // list its owner keeps to themselves returns nothing here, exactly as it
+    // does in the app.
+    var RPC_URL   = "https://apkcihljybvuyuzpbnqd.supabase.co/rest/v1/rpc/get_journey";
+    var ANON_KEY  = "sb_publishable_KRAiUnT3z6yjhvPmXO9CIQ_OKPdtdKf";
+    var CATALOG_URL = "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json";
+    var NOTIFY_EMAIL = "edward.yung@gmail.com";
+    var MAX_SHOWN = 6;
+
+    function qid() {
+      var p = new URLSearchParams(window.location.search);
+      var id = p.get("id");
+      return id ? id.trim().toLowerCase() : null;
+    }
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    function cta(extra) {
+      return '<div class="cta">' +
+        '<p class="soon">Coming soon to the App Store</p>' +
+        '<p class="soon-sub">Atlas isn\u2019t out yet. Leave your email and we\u2019ll let you know the moment it launches \u2014 then this link will open the list right in the app.</p>' +
+        '<a class="notify" href="mailto:' + esc(NOTIFY_EMAIL) +
+          '?subject=' + encodeURIComponent("Notify me about Atlas") +
+          '&body=' + encodeURIComponent("I\u2019d love to know when Atlas launches." + (extra ? " (List: " + extra + ")" : "")) +
+          '">Notify me</a>' +
+      '</div>';
+    }
+
+    // One message for gone, hidden and never-existed. Telling a stranger
+    // which one applies would itself say something about a private list.
+    function notFound() {
+      document.getElementById("root").innerHTML =
+        '<div class="center-state">' +
+          '<h1>List not available</h1>' +
+          '<p>This link may be out of date, or the list may no longer be shared.</p>' +
+          '<div class="cta" style="margin-top:22px">' +
+            '<p class="soon">Coming soon to the App Store</p>' +
+            '<p class="soon-sub">Be the first to know when Atlas launches.</p>' +
+            '<a class="notify" href="mailto:' + esc(NOTIFY_EMAIL) + '?subject=Notify%20me%20about%20Atlas">Notify me</a>' +
+          '</div>' +
+        '</div>';
+    }
+
+    function render(list, titles) {
+      var name = list.title || "A list on Atlas";
+      document.title = name + " \u2014 Atlas";
+      var ogT = document.getElementById("og-title"); if (ogT) ogT.setAttribute("content", name + " \u2014 Atlas");
+      var ogD = document.getElementById("og-desc");
+      if (ogD) ogD.setAttribute("content", list.description || (titles.length + " audio tours, collected on Atlas."));
+
+      var countText = titles.length === 1 ? "1 audio tour" : (titles.length + " audio tours");
+      var shown = titles.slice(0, MAX_SHOWN);
+      var rows = shown.map(function (t, i) {
+        return '<li><span class="n">' + (i + 1) + '</span><span class="ttl">' + esc(t) + '</span></li>';
+      }).join("");
+      var rest = titles.length - shown.length;
+
+      document.getElementById("root").innerHTML =
+        '<div class="card">' +
+          '<div class="avatar">\uD83D\uDD16</div>' +
+          '<span class="eyebrow">List</span>' +
+          '<h1>' + esc(name) + '</h1>' +
+          '<p class="count">' + esc(countText) + '</p>' +
+          (list.description ? '<p class="bio">' + esc(list.description) + '</p>' : '') +
+          (rows ? '<ul class="tours">' + rows + '</ul>' : '') +
+          (rest > 0 ? '<p class="more">and ' + rest + ' more</p>' : '') +
+          cta(name) +
+        '</div>';
+    }
+
+    (function () {
+      var id = qid();
+      if (!id) { notFound(); return; }
+
+      fetch(RPC_URL, {
+        method: "POST",
+        headers: {
+          "apikey": ANON_KEY,
+          "Authorization": "Bearer " + ANON_KEY,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ p_journey: id })
+      })
+        .then(function (r) { if (!r.ok) throw new Error("rpc " + r.status); return r.json(); })
+        .then(function (list) {
+          if (!list || !list.id) { notFound(); return; }
+          var items = (list.items || []).slice().sort(function (a, b) { return a.position - b.position; });
+          // Resolve tour titles from the public catalog. If it fails the list
+          // still renders \u2014 just without its rundown.
+          return fetch(CATALOG_URL, { cache: "no-store" })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .catch(function () { return null; })
+            .then(function (data) {
+              var byId = {};
+              var tours = (data && data.tours) || [];
+              for (var i = 0; i < tours.length; i++) { byId[String(tours[i].id).toLowerCase()] = tours[i].title; }
+              var titles = [];
+              for (var j = 0; j < items.length; j++) {
+                var t = byId[String(items[j].tourId).toLowerCase()];
+                if (t) titles.push(t);
+              }
+              render(list, titles);
+            });
+        })
+        .catch(function () { notFound(); });
+    })();
+  </script>
+</body>
+</html>
