@@ -225,27 +225,47 @@ struct CreateTourWizardView: View {
 
     // MARK: - Chrome
 
+    /// 🔴 BOTH ITEMS ARE DECLARED UNCONDITIONALLY, AND EVERY CONDITION LIVES
+    /// INSIDE THEIR CONTENT. Do not wrap `ToolbarItem`s in an `if`, and do not
+    /// swap one item for another.
+    ///
+    /// This is what hung the app on opening a saved tour, for four builds.
+    /// A conditional `ToolbarContent` lets the toolbar *restructure*, which
+    /// changes the navigation bar's metrics — and the whole thing was running
+    /// inside `UISheetPresentationController._sheetLayoutInfoLayout:`, where
+    /// changing those metrics re-runs the sheet's layout, which re-renders,
+    /// which restructures the toolbar again. The symbolicated stack is
+    /// `_sheetLayoutInfoLayout:` → `_UIHostingView.layoutSubviews` →
+    /// `ViewGraph.updateOutputs` → `preferencesDidChange` →
+    /// `UIKitToolbarStrategy.updateLocations()`, with **no app frames in it at
+    /// all** — the loop is entirely inside SwiftUI's toolbar bridge.
+    ///
+    /// The old `CreateTourView` had the same two placements and never hung:
+    /// its toolbar had no `if` in it. Only the edit path triggered it, because
+    /// only `loadExistingTour` mutates state *during* the presentation
+    /// transition, which is the window this stack sits in.
     @ToolbarContentBuilder
     private var toolbarContent: some ToolbarContent {
-        if outcome == nil {
-            ToolbarItem(placement: .principal) {
-                Text(step.label)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.primaryText)
-            }
-            ToolbarItem(placement: .cancellationAction) {
+        ToolbarItem(placement: .principal) {
+            Text(outcome == nil ? step.label : "")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.primaryText)
+        }
+        ToolbarItem(placement: .cancellationAction) {
+            Button {
+                if step == .location { closeTapped() } else { goBack() }
+            } label: {
                 if step == .location {
-                    Button("Close") { closeTapped() }
-                        .font(AtlasTypography.caption)
-                        .tint(AtlasColors.primaryText)
+                    Text("Close").font(AtlasTypography.caption)
                 } else {
-                    Button { goBack() } label: {
-                        Image(systemName: "chevron.left")
-                    }
-                    .tint(AtlasColors.primaryText)
-                    .accessibilityLabel("Back")
+                    Image(systemName: "chevron.left")
                 }
             }
+            .tint(AtlasColors.primaryText)
+            .opacity(outcome == nil ? 1 : 0)
+            .disabled(outcome != nil)
+            .accessibilityLabel(step == .location ? "Close" : "Back")
+            .accessibilityHidden(outcome != nil)
         }
     }
 
@@ -334,16 +354,27 @@ struct CreateTourWizardView: View {
     /// a separate, higher window.
     private var footer: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            if savedConfirmation {
-                Label("Draft saved", systemImage: "checkmark.circle.fill")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.mapPin)
-                    .transition(.opacity)
-            } else if let blockingHint {
-                Text(blockingHint)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
+            // ⚠️ The hint line reserves two lines whether or not it has
+            // anything to say. The footer is a `.safeAreaInset`, so its height
+            // is a layout input for everything above it — and this line
+            // appears and disappears exactly when a saved tour finishes
+            // loading, which is *during* the sheet's presentation transition.
+            // A constant height means that can't feed back into the sheet.
+            // Same reason the toolbar above is structurally fixed.
+            Group {
+                if savedConfirmation {
+                    Label("Draft saved", systemImage: "checkmark.circle.fill")
+                        .foregroundStyle(AtlasColors.mapPin)
+                } else if let blockingHint {
+                    Text(blockingHint)
+                        .foregroundStyle(AtlasColors.tertiaryText)
+                } else {
+                    Text(" ")
+                }
             }
+            .font(AtlasTypography.caption)
+            .lineLimit(2, reservesSpace: true)
+            .frame(maxWidth: .infinity, alignment: .leading)
             HStack(spacing: AtlasSpacing.sm) {
                 Button { saveProgress() } label: {
                     pill("Save progress", filled: false)
