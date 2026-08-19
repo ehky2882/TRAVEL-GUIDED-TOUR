@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-19 18:40 UTC
+**Last verified:** 2026-08-19 18:55 UTC
 
 ---
 
@@ -24,9 +24,19 @@ Code PRs cannot merge without a look on device (§ Merging PRs). This is the que
 
 | PR | What it is | Build to install | Also needs |
 |---|---|---|---|
-| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). 19 files, +2646/−1772. Closes the draft-autosave gap. | **84** ✅ | Watch the **editor** for regressions — it now shares the wizard's audio step |
-| [#544](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/544) | Settings: real wordmark, live version string, Makers→Dozents, city/country counts. | **86** ✅ (85 superseded) | **Paste `backend/add_country.sql`** or the Countries row stays hidden |
-| [#547](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/547) | List page rebuilt on `PlaceView`'s structure; both maps become one shared `TourSetMap`. | **83** | Riskiest check is the **maker MAP tab** — a shipped screen rewired onto a shared component |
+| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | 🔴 **None — do not install 84** | A fresh build. See below. |
+
+🔴 **Build 84 hangs on the edit path and must not be reviewed.** Opening an existing tour
+freezes: `loadExistingTour` mutates state during the sheet's presentation transition, and the
+wizard's toolbar had a conditional in it, so SwiftUI's toolbar bridge restructures the toolbar →
+changes nav-bar metrics → re-runs the sheet layout it is already inside → loops. The symbolicated
+build-84 log names it (`UIKitToolbarStrategy.updateLocations`, no app frames in the stack).
+**Fixed on the branch in `517b6b9`, but nothing has been built since** — the branch head moved
+three commits past build 84. Dispatch a build before the next device pass.
+
+⚠️ Three builds were burned on wrong fixes first, because the same build-77 log was re-read three
+times instead of pulling the log of the build that had just failed. **Ask for the failing build's
+own log.**
 
 ## 2. Blocked on owner — outside the repo
 
@@ -44,7 +54,7 @@ Nothing here can be done from a session. Ordered by what blocks the most.
 
 | File | Unlocks | Without it |
 |---|---|---|
-| `backend/add_country.sql` | The Countries row in Settings (#544) | Row hidden, not wrong — nothing breaks |
+| `backend/add_country.sql` | The Countries row in Settings | ⬆️ **More urgent now — #544 is merged**, so the row is in shipped code and stays hidden until this runs |
 | `backend/saved_places.sql` | Saved places syncing across devices | Saving works, stays on one device |
 | `backend/places_photos.sql` | Places serving their own photographs | Optional — the app is correct without it |
 
@@ -56,25 +66,23 @@ after dispatching; never promise one in advance.
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark fix | ✅ **install this** |
-| 85 | `settings-dozent-work-mark-r9enu6` | #544 Settings | ⚠️ superseded by 86 — wordmark rendered white |
-| 84 | `tour-upload-polish-qiliop` | #540 wizard | ✅ |
-| 83 | `list-page-conformance` | #547 list page | ✅ |
-| 82 | `list-page-conformance` | #547 list page | ✅ |
-| 81 | `tour-upload-polish-qiliop` | #540 wizard | ✅ |
-| 80, 79 | `maker-page-playlists-45xqhu` | #517 saved lists | ✅ |
+| 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
+| 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
+| 84 | `tour-upload-polish-qiliop` | #540 wizard | 🔴 **hangs on the edit path — do not install** |
+| 83, 82 | `list-page-conformance` | #547 list page | ✅ **merged to main 18:47** |
+| 81, 77, 76 | `tour-upload-polish-qiliop` | #540, earlier passes | ⚠️ superseded, same hang |
+| 80, 79, 74 | `maker-page-playlists-45xqhu` | #517 saved lists | ✅ merged |
 | 78 | `main` | #543 edge-to-edge bars | ✅ owner-verified |
-| 77, 76 | `tour-upload-polish-qiliop` | #540 wizard | ✅ |
-| 75 | `main` | post-#517 | ✅ |
-| 74 | `maker-page-playlists-45xqhu` | #517 saved lists | ✅ |
+| 75 | `main` | post-#517 | ⚠️ superseded |
+
+⚠️ **No build carries current `main`.** #544, #546 and #547 all merged today; 86 carries only
+#544 and 83 only #547. A build from `main` is the only way to see them together.
 
 ## 4. Branches
 
 | Branch | State |
 |---|---|
 | `claude/tour-upload-polish-qiliop` | Open PR #540 |
-| `claude/settings-dozent-work-mark-r9enu6` | Open PR #544 |
-| `claude/list-page-conformance` | Open PR #547 |
 | `claude/stripe-questions-fjhdo3` | ⚠️ No PR — verify contents before deleting |
 | `claude/amsterdam-handoff-preserve-hlhyp8` | 🔒 Keep — only copy of staging pick-maps |
 | `claude/web-landing-site-preserve` | 🔒 Keep — only copy of the Next.js landing site |
