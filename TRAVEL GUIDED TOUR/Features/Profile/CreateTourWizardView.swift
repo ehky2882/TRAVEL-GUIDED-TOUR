@@ -178,6 +178,20 @@ struct CreateTourWizardView: View {
               let existing = makerTourService.myTours.first(where: { $0.id == existingTourId })
         else { return }
         didLoadExisting = true
+
+        // 🔴 Wait out the sheet's presentation transition before touching ANY
+        // state. Every crash log of the saved-tour hang — builds 77, 81, 84,
+        // 87 — has the main thread inside `_transitionWillBegin:`'s alongside
+        // animations, and the one thing this path does that creating a tour
+        // never does is mutate a screenful of state during exactly that
+        // window. State changes there feed the sheet's own layout pass
+        // (toolbar metrics, safe-area insets, dismiss-disabled preferences —
+        // any relay will do) and it re-runs the layout that triggered them,
+        // synchronously, until the watchdog kills the app. The slide takes
+        // ~0.5s; the fields appearing a beat after the sheet settles is the
+        // visible cost, and it is the whole fix's cheapest part.
+        try? await Task.sleep(for: .milliseconds(650))
+
         draftId = existingTourId
 
         let tour = existing.tour
