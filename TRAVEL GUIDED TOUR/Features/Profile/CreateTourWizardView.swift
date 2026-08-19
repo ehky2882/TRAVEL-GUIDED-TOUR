@@ -177,7 +177,12 @@ struct CreateTourWizardView: View {
         // so the pin and radius have to be fetched. Reading them off the tour
         // would silently reset every edited tour's geofence to the default.
         if let stop = await makerTourService.stopLocation(tourId: existingTourId) {
-            radius = Double(stop.radiusMeters)
+            // Clamped into the slider's range. Tours made before today were
+            // created with a 20–200 m slider, so a stored radius can sit
+            // outside 15–100 — and a Slider handed a value beyond its bounds
+            // is not something to find out about on a device.
+            radius = min(max(Double(stop.radiusMeters), Self.radiusRange.lowerBound),
+                         Self.radiusRange.upperBound)
             centerCoordinate = stop.coordinate
             cameraPosition = .region(MKCoordinateRegion(
                 center: stop.coordinate, latitudinalMeters: 700, longitudinalMeters: 700))
