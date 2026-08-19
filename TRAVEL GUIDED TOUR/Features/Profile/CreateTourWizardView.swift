@@ -267,11 +267,14 @@ struct CreateTourWizardView: View {
         }
         .safeAreaInset(edge: .bottom, spacing: 0) { footer }
         // Deliberately here and not at the root — see `dismissGuarded`.
-        .onChange(of: currentSignature, initial: true) { _, signature in
-            dismissGuarded = outcome == nil && savedSignature != signature && canPersist
+        .onChange(of: currentSignature, initial: true) { _, _ in
+            dismissGuarded = outcome == nil && wouldLoseWork
         }
-        .onChange(of: savedSignature, initial: true) { _, saved in
-            dismissGuarded = outcome == nil && saved != currentSignature && canPersist
+        .onChange(of: savedSignature, initial: true) { _, _ in
+            dismissGuarded = outcome == nil && wouldLoseWork
+        }
+        .onChange(of: draftId) { _, _ in
+            dismissGuarded = outcome == nil && wouldLoseWork
         }
         // The keyboard rises *over* the footer rather than shoving it up the
         // screen — otherwise Save progress and Next end up floating in the
@@ -1011,13 +1014,22 @@ struct CreateTourWizardView: View {
             : "A draft stays in your tours, so you can pick it up where you left off."
     }
 
-    private func closeTapped() {
+    /// Whether closing now would lose something. **The swipe guard and the
+    /// Close button both read this** — they used to test different things, so
+    /// a brand-new tour with nothing typed refused the swipe while Close shut
+    /// it without a word. A blocked gesture with no explanation reads as the
+    /// app being broken.
+    private var wouldLoseWork: Bool {
         let typedSomething = !trimmedTitle.isEmpty
             || !shortDescription.isEmpty
             || !longDescription.isEmpty
             || !selectedTags.isEmpty
             || !locationName.isEmpty
-        if (draftId != nil || typedSomething) && hasUnsavedChanges && canPersist {
+        return (draftId != nil || typedSomething) && hasUnsavedChanges && canPersist
+    }
+
+    private func closeTapped() {
+        if wouldLoseWork {
             confirming = .leaving
         } else {
             dismiss()
