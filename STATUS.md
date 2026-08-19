@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-19 19:18 UTC
+**Last verified:** 2026-08-19 19:42 UTC
 
 ---
 
@@ -24,22 +24,24 @@ Code PRs cannot merge without a look on device (§ Merging PRs). This is the que
 
 | PR | What it is | Build to install | Also needs |
 |---|---|---|---|
-| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ✅ **87** | Nothing — ready for a device pass |
+| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | 🔴 **None — 87 still hangs** | A build off head `e810651` |
 
-**Build 87 carries the hang fix.** Verified rather than assumed: its head SHA is `032b40a`, the
-PR's exact head, which is three commits past build 84 and includes `517b6b9` (the toolbar-bridge
-fix) and `738462e` (swipe guard and Close now agree on what counts as work).
+🔴 **THE HANG HAS NOW SURVIVED FIVE BUILDS.** Opening an existing tour in the wizard freezes.
+Builds **76, 77, 81, 84 and 87** all have it. Build 87 was cut from the commit that claimed to
+fix it and **the freeze survived** — so a commit message claiming a fix is a hypothesis, not a
+verification. Only a device pass settles it.
 
-⚠️ **87 is the wizard branch, not `main`** — it was cut from a base predating the #544 and #547
-merges, so it does *not* contain the new Settings screen or the rebuilt list page. Those need a
-build from `main`.
+**Three further fixes are stacked and unbuilt** (`730b1af`, `a045a5aa`, `e810651`): the toolbar
+and its NavigationStack removed outright, a 650 ms wait before `loadExistingTour` touches state,
+and the load collapsed from four write batches into one with its fetches overlapped. Head is
+`e810651`; no build carries any of them.
 
-🔴 **Builds 84, 81, 77 and 76 all hang on the edit path.** Opening an existing tour froze:
-`loadExistingTour` mutates state during the sheet's presentation transition, and the wizard's
-toolbar had a conditional in it, so SwiftUI's toolbar bridge restructures the toolbar → changes
-nav-bar metrics → re-runs the sheet layout it is already inside → loops. Three builds were burned
-on wrong fixes first, because the same build-77 log was re-read three times instead of pulling the
-log of the build that had just failed. **Ask for the failing build's own log.**
+⚠️ **The diagnosis has moved with every crash log** — toolbar bridge, then `PlatformViewChild`
+walking MKMapView's subtree — which reads as four samples of one busy loop caught at different
+stations. The current theory names the *fuel* rather than a bridge: state writes flushing graph
+transactions from inside the sheet's presentation transition. **Each attempt costs a build and a
+device pass.** Worth asking whether the next one should wait for a local Mac session that can
+reproduce it in the simulator, rather than a sixth round-trip.
 
 ## 2. Blocked on owner — outside the repo
 
@@ -71,10 +73,10 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 87 | `tour-upload-polish-qiliop` | #540 wizard + the hang fix | ✅ **install this** |
-| 84 | `tour-upload-polish-qiliop` | #540 wizard | 🔴 hangs on the edit path — superseded by 87 |
+| 87 | `tour-upload-polish-qiliop` | #540 + a hang fix that did not work | 🔴 **still hangs** |
+| 84 | `tour-upload-polish-qiliop` | #540 wizard | 🔴 hangs on the edit path |
 | 83, 82 | `list-page-conformance` | #547 list page | ✅ **merged to main 18:47** |
-| 81, 77, 76 | `tour-upload-polish-qiliop` | #540, earlier passes | ⚠️ superseded, same hang |
+| 81, 77, 76 | `tour-upload-polish-qiliop` | #540, earlier passes | 🔴 same hang |
 | 80, 79, 74 | `maker-page-playlists-45xqhu` | #517 saved lists | ✅ merged |
 | 78 | `main` | #543 edge-to-edge bars | ✅ owner-verified |
 | 75 | `main` | post-#517 | ⚠️ superseded |
