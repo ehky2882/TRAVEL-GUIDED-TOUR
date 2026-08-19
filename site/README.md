@@ -31,6 +31,12 @@ so the website and the app read as one product:
     DOZENT on the Settings masthead. It is a logotype, not a label.
   * `--font-body` / `--size-body` still carry `AtlasTypography.body` for
     reference, but nothing on the site uses them.
+  * **Dark only, for now** (owner, 2026-08-19). The tokens hold the dark
+    half of each app pair and the page does not answer
+    `prefers-color-scheme` at all — a visitor on a light system still gets
+    black. To restore adaptive behaviour, put the light values back on
+    `:root` and move the dark ones into a `prefers-color-scheme` block;
+    every rule reads tokens only, so nothing else changes.
   * **Brass is `#8b7535` in both light and dark mode.** The app's AccentColor
     asset carries no dark variant on purpose (owner, 2026-07-04: "it is the
     one that stays consistent"). Do not add one here.

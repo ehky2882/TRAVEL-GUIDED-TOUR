@@ -7,10 +7,18 @@
    changes in Swift, change it here in the same session.
 
    Plain CSS, no build step — linked from all four pages.
+
+   DARK ONLY (owner, 2026-08-19: "for now, just put everything in dark
+   mode"). The tokens below hold the DARK half of each app pair and the
+   page no longer answers `prefers-color-scheme` at all — a visitor whose
+   system is set to light still gets this. To restore the adaptive
+   behaviour, put the light values back on `:root` and move these dark ones
+   into a `@media (prefers-color-scheme: dark)` block; every rule beneath
+   reads tokens only, so nothing else has to change.
    --------------------------------------------------------------- */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 
   /* Typography — AtlasTypography.
      body    : 15pt SF Pro regular      (AtlasTypography.body)
@@ -28,23 +36,23 @@
      "it is the one that stays consistent"). Do not add one here. */
   --brass: #8b7535;
 
-  /* Surfaces — AtlasColors.background / .secondaryBackground.
-     secondaryBackground is hardcoded in the app for exactly the
-     reason it is hardcoded here: every painted chrome surface must
-     resolve to the same RGB. */
-  --bg: #ffffff;
-  --bg-secondary: #f2f2f7;
+  /* Surfaces — AtlasColors.background / .secondaryBackground, DARK values.
+     secondaryBackground is hardcoded in the app for exactly the reason it
+     is hardcoded here: every painted chrome surface must resolve to the
+     same RGB. */
+  --bg: #000000;
+  --bg-secondary: #1c1c1e;
 
   /* Text. The site runs on ONE ink (owner, 2026-08-19: "flatten all font
      colour") — the app's `AtlasColors.primaryText`. The secondary and
      tertiary steps are kept named so the mapping to `AtlasColors` stays
      legible, but nothing on the site reaches for them. */
-  --ink: #000000;
-  --ink-secondary: rgba(60, 60, 67, 0.6);
-  --ink-tertiary: rgba(60, 60, 67, 0.36);
+  --ink: #ffffff;
+  --ink-secondary: rgba(235, 235, 245, 0.6);
+  --ink-tertiary: rgba(235, 235, 245, 0.36);
 
-  /* AtlasColors.divider — iOS `separator`. */
-  --rule: rgba(60, 60, 67, 0.29);
+  /* AtlasColors.divider — iOS `separator`, dark. */
+  --rule: rgba(84, 84, 88, 0.65);
 
   /* AtlasSpacing. */
   --xs: 4px;
@@ -58,16 +66,6 @@
   --radius-card: 12px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #000000;           /* systemBackground, dark */
-    --bg-secondary: #1c1c1e; /* AtlasColors.secondaryBackground, dark */
-    --ink: #ffffff;
-    --ink-secondary: rgba(235, 235, 245, 0.6);
-    --ink-tertiary: rgba(235, 235, 245, 0.36);
-    --rule: rgba(84, 84, 88, 0.65);
-  }
-}
 
 * { box-sizing: border-box; }
 
