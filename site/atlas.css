@@ -150,6 +150,14 @@ body {
   color: var(--brass);
   margin: 0;
   padding: var(--md) 0 var(--lg);
+
+  /* The mirror of the footer's trick, and for the same reason: `top: 0` is
+     rounded by fractional device pixel ratios and browser zoom, and on iOS a
+     sticky bar can detach for a frame during momentum scrolling or while the
+     address bar resizes the viewport. Either way a sliver of text shows
+     ABOVE the wordmark. This paints an opaque copy of the box 48px higher,
+     so there is nothing above it to expose. */
+  box-shadow: 0 calc(var(--xxl) * -1) 0 0 var(--bg);
 }
 .brand a { color: var(--brass); text-decoration: none; }
 
