@@ -29,6 +29,29 @@ enum AtlasColors {
     /// touching them.
     static let mapPin = accent
 
+    /// The brass accent as a **literal value**, immune to `.tint`.
+    ///
+    /// `accent` is `Color.accentColor`, which resolves the *environment's*
+    /// accent — so any ancestor `.tint(_:)` silently repaints it. That is
+    /// not hypothetical: `SettingsView` pins `.tint(primaryText)` on its
+    /// List, deliberately, to stop the system auto-tinting every row icon
+    /// and button label gold. The side effect is that everything on that
+    /// screen reading `accent` / `mapPin` comes out white — which is why
+    /// the Settings wordmark rendered white for months while its call site
+    /// plainly said `mapPin` (owner, 2026-08-19: "dozent should be in gold
+    /// color").
+    ///
+    /// Use this for anything that must stay brand-coloured regardless of
+    /// the surface it lands on. Same reasoning as
+    /// `secondaryBackgroundUIColor` below, which is a literal pair for the
+    /// same class of reason.
+    ///
+    /// ⚠️ Duplicates `Assets.xcassets/AccentColor.colorset` by hand —
+    /// there is no way to read an asset colour without going through the
+    /// environment. **Change one, change the other**, and check
+    /// `site/atlas.css` (`--brass`) in the same pass.
+    static let brass = Color(red: 139 / 255, green: 117 / 255, blue: 53 / 255)
+
     /// Three-step text hierarchy. SwiftUI's semantic colors adapt
     /// to color scheme: primary is black in light mode and white
     /// in dark mode; secondary is a muted gray in both.

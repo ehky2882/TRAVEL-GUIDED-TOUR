@@ -29,6 +29,20 @@ struct Tour: Codable, Identifiable, Hashable {
     let centroidLatitude: Double
     let centroidLongitude: Double
     let city: String?
+    /// The city's country, as authored in the catalog.
+    ///
+    /// Denormalised onto the tour exactly as `city` is — there is no city
+    /// entity to hang it off — so it travels with content and reaches
+    /// phones over the air on a catalog merge, with no build. That is the
+    /// point of storing it rather than deriving it from `city` in Swift:
+    /// a city launch ships as content alone, so a lookup table compiled
+    /// into the binary would start understating the moment one landed.
+    ///
+    /// Optional, and load-bearing: the bundled offline seed and the
+    /// gh-pages mirror predate this key until they are republished, and
+    /// maker-authored tours (`MakerTourService`) carry no country at all,
+    /// so every one of those must keep decoding.
+    let country: String?
     let primaryCategory: TourCategory
     let tags: [String]
     let priceUSD: Decimal
