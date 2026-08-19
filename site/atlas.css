@@ -80,6 +80,19 @@
 
 * { box-sizing: border-box; }
 
+/* Always reserve the scrollbar's gutter, whether or not a page scrolls.
+
+   Without this the splash (which fits the window) has no scrollbar while
+   every policy page does, so the centred column — and the fixed footer with
+   it — sat 7px further right on the splash and jumped as you navigated.
+   `overflow-y: scroll` is the fallback for browsers without
+   `scrollbar-gutter`; it reserves the same space by always showing the
+   track. */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
 /* One size, one weight, one colour — everywhere.
 
    This block is load-bearing, not tidiness. Browsers give every heading a
@@ -208,6 +221,12 @@ a {
 /* Fixed to the bottom of the window, so the links are always reachable
    without scrolling to the end of a long policy.
 
+   The markup is BYTE-IDENTICAL on all five pages — same links, same order,
+   including a link to the page you are already on. Each page used to omit
+   its own entry, so the row's width changed from page to page and the whole
+   bar shifted as you navigated. Keep them identical; a page-specific footer
+   reintroduces the jump.
+
    `fixed` rather than `sticky`: a sticky footer pins correctly while a page
    scrolls, but on a page SHORTER than the window it just sits after the
    content — /about/ on a window over ~1060px tall did exactly that. Sticky
@@ -218,7 +237,9 @@ a {
    margins and given the same max-width and gutters as the body, so its
    contents line up with the column above rather than with the window.
 
-   Opaque background and a rule on top, because content scrolls beneath. */
+   No rule on top (owner, 2026-08-19: "there is a thin white line at the top
+   of the footer, i dont want that"). The opaque background alone separates
+   it from the text scrolling beneath. */
 footer {
   position: fixed;
   left: 0;
@@ -230,16 +251,26 @@ footer {
   margin: 0 auto;
   background: var(--bg);
   padding: var(--md) var(--lg);
-  border-top: 1px solid var(--rule);
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--sm) 12px;
+  text-align: center;
+
+  /* An opaque copy of the box painted 32px lower. `bottom: 0` puts the
+     footer's edge on the window's edge in theory, but fractional device
+     pixel ratios and browser zoom round that edge and let a sliver of
+     scrolling text show underneath. This overshoots the window bottom so
+     there is nothing for a rounding error to expose. */
+  box-shadow: 0 var(--xl) 0 0 var(--bg);
 }
 
-/* Where the link row wraps to two lines the footer is taller, so reserve
-   more. Matches the ~570px threshold measured for the row itself. */
-@media (max-width: 570px) {
-  :root { --footer-h: 132px; }
+/* Where the link row wraps the footer is taller, so reserve more. Measured:
+   the row holds one line down to ~500px, then wraps — 122px tall at 430px
+   and 144px at 375px, hence 160px here rather than a guess. If a link is
+   added or renamed, re-measure both this number and the breakpoint. */
+@media (max-width: 500px) {
+  :root { --footer-h: 160px; }
 }
 
 /* Tracked tighter than the headings (0.04em against 0.08em) purely to buy
@@ -329,12 +360,4 @@ body.splash {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin: var(--sm) 0 0;
-}
-
-/* On the splash the footer is a quiet centred strip at the foot of the
-   page, not a rule under a column of prose. */
-body.splash footer {
-  border-top: none;
-  justify-content: center;
-  text-align: center;
 }

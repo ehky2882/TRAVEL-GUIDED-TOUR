@@ -49,8 +49,15 @@ so the website and the app read as one product:
     a page shorter than the window (which /about/ is, above ~1060px tall) and
     sticky can only shift an element up, never down. The cost is that the
     footer's height must be reserved by hand — that is `--footer-h`, with a
-    larger value under 570px where the link row wraps to two lines. If the
-    footer grows a row, grow that token.
+    larger value under 500px where the link row wraps. **If you add or rename
+    a footer link, re-measure both that token and the breakpoint.**
+  * **The footer markup is byte-identical on all five pages** — same links,
+    same order, including a link to the page you are already on. Pages used
+    to omit their own entry, which changed the row's width and made the whole
+    bar shift as you navigated. `html` also carries `scrollbar-gutter:
+    stable` (with `overflow-y: scroll` as fallback), because otherwise the
+    splash — which does not scroll — centred 7px right of the pages that do.
+    Both are there to keep the bar completely still; do not undo either.
   * `--font-body` / `--size-body` still carry `AtlasTypography.body` for
     reference, but nothing on the site uses them.
   * **Dark only, for now** (owner, 2026-08-19). The tokens hold the dark
