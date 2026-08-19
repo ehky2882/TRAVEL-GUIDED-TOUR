@@ -119,19 +119,27 @@ struct CreateTourWizardView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            Group {
-                if let outcome {
-                    outcomeView(outcome)
-                } else {
-                    wizard
-                }
+        // 🔴 NO NavigationStack AND NO .toolbar — deliberately, and the reason
+        // must survive any future tidy-up. Opening a saved tour hung the app
+        // (0x8BADF00D) with the main thread looping in SwiftUI's toolbar
+        // bridge: `_sheetLayoutInfoLayout:` → `_UIHostingView.layoutSubviews`
+        // → `preferencesDidChange` → `UIKitToolbarStrategy.updateLocations()`.
+        // Every toolbar update moves the navigation bar's metrics, and inside
+        // a sheet's own layout pass that re-runs the layout that triggered it.
+        // Making the items structurally constant was tried and did NOT fix it
+        // (build 87) — content changes relay through the same bridge. The
+        // wizard never navigates (no NavigationLink, no navigationDestination
+        // anywhere in its files), so the stack existed only to host the
+        // toolbar. The header below is plain layout: no bridge, no metrics,
+        // nothing for sheet layout to feed back into.
+        Group {
+            if let outcome {
+                outcomeView(outcome)
+            } else {
+                wizard
             }
-            .background(AtlasColors.secondaryBackground)
-            .navigationTitle("")
-            .inlineNavigationBarTitle()
-            .toolbar { toolbarContent }
         }
+        .background(AtlasColors.secondaryBackground)
         // Unsaved work can't be swiped away; Close is where the question lives.
         //
         // 🔴 This modifier reconfigures `UISheetPresentationController`, so the
@@ -225,52 +233,43 @@ struct CreateTourWizardView: View {
 
     // MARK: - Chrome
 
-    /// 🔴 BOTH ITEMS ARE DECLARED UNCONDITIONALLY, AND EVERY CONDITION LIVES
-    /// INSIDE THEIR CONTENT. Do not wrap `ToolbarItem`s in an `if`, and do not
-    /// swap one item for another.
-    ///
-    /// This is what hung the app on opening a saved tour, for four builds.
-    /// A conditional `ToolbarContent` lets the toolbar *restructure*, which
-    /// changes the navigation bar's metrics — and the whole thing was running
-    /// inside `UISheetPresentationController._sheetLayoutInfoLayout:`, where
-    /// changing those metrics re-runs the sheet's layout, which re-renders,
-    /// which restructures the toolbar again. The symbolicated stack is
-    /// `_sheetLayoutInfoLayout:` → `_UIHostingView.layoutSubviews` →
-    /// `ViewGraph.updateOutputs` → `preferencesDidChange` →
-    /// `UIKitToolbarStrategy.updateLocations()`, with **no app frames in it at
-    /// all** — the loop is entirely inside SwiftUI's toolbar bridge.
-    ///
-    /// The old `CreateTourView` had the same two placements and never hung:
-    /// its toolbar had no `if` in it. Only the edit path triggered it, because
-    /// only `loadExistingTour` mutates state *during* the presentation
-    /// transition, which is the window this stack sits in.
-    @ToolbarContentBuilder
-    private var toolbarContent: some ToolbarContent {
-        ToolbarItem(placement: .principal) {
-            Text(outcome == nil ? step.label : "")
+    /// The bar the toolbar used to be: step name centred, Close or back on
+    /// the leading edge. Plain views in a plain HStack — see `body` for why
+    /// this must never become a `.toolbar` again.
+    private var header: some View {
+        ZStack {
+            Text(step.label)
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.primaryText)
-        }
-        ToolbarItem(placement: .cancellationAction) {
-            Button {
-                if step == .location { closeTapped() } else { goBack() }
-            } label: {
-                if step == .location {
-                    Text("Close").font(AtlasTypography.caption)
-                } else {
-                    Image(systemName: "chevron.left")
+            HStack {
+                Button {
+                    if step == .location { closeTapped() } else { goBack() }
+                } label: {
+                    Group {
+                        if step == .location {
+                            Text("Close").font(AtlasTypography.caption)
+                        } else {
+                            Image(systemName: "chevron.left")
+                        }
+                    }
+                    .frame(minWidth: 44, minHeight: 44, alignment: .leading)
+                    .contentShape(Rectangle())
                 }
+                .buttonStyle(.plain)
+                .tint(AtlasColors.primaryText)
+                .foregroundStyle(AtlasColors.primaryText)
+                .accessibilityLabel(step == .location ? "Close" : "Back")
+                Spacer()
             }
-            .tint(AtlasColors.primaryText)
-            .opacity(outcome == nil ? 1 : 0)
-            .disabled(outcome != nil)
-            .accessibilityLabel(step == .location ? "Close" : "Back")
-            .accessibilityHidden(outcome != nil)
         }
+        .padding(.horizontal, AtlasSpacing.lg)
+        .padding(.top, AtlasSpacing.sm)
+        .frame(height: 52)
     }
 
     private var wizard: some View {
         VStack(spacing: 0) {
+            header
             progressBar
             ScrollView {
                 VStack(alignment: .leading, spacing: AtlasSpacing.md) {
