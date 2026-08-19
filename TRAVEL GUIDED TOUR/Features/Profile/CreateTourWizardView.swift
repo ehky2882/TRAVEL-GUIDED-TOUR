@@ -33,7 +33,6 @@ struct CreateTourWizardView: View {
     /// True once an existing tour's values have been read in, so the load
     /// can't run twice and clobber an edit in progress.
     @State private var didLoadExisting = false
-    @State private var showingDeleteConfirm = false
     @State private var isDeleting = false
 
     // Step 1 — location
@@ -71,7 +70,10 @@ struct CreateTourWizardView: View {
     @State private var isPersisting = false
     @State private var isSubmitting = false
     @State private var errorMessage: String?
-    @State private var showingCloseConfirm = false
+    /// Which confirmation is up, if any. Deliberately one modifier driven by
+    /// an enum rather than two `confirmationDialog`s on the same view: stacking
+    /// them makes them fight over a single presentation slot.
+    @State private var confirming: Confirmation?
     @State private var outcome: Outcome?
     /// Where the narration upload has got to. Submit waits on it; walking to
     /// Review does not.
@@ -85,6 +87,10 @@ struct CreateTourWizardView: View {
 
     private enum Field { case city, place, title, short, long }
     private enum Outcome { case submitted, savedDraft }
+    private enum Confirmation: Identifiable {
+        case leaving, deleting
+        var id: Self { self }
+    }
 
     /// The catalogue's own range. Every single-stop tour sits at 30 m and every
     /// walk stop at 40; the old 200 m ceiling was range nobody had ever used,
@@ -118,25 +124,26 @@ struct CreateTourWizardView: View {
         // Swiping the sheet down is the same intent as tapping Close, so it
         // gets the same question rather than silently discarding the work.
         .onDismissAttempt(enabled: outcome == nil && hasUnsavedChanges && canPersist) {
-            showingCloseConfirm = true
+            confirming = .leaving
         }
-        .confirmationDialog("Keep this tour?", isPresented: $showingCloseConfirm,
+        .confirmationDialog(confirmTitle, isPresented: confirmBinding,
                             titleVisibility: .visible) {
-            Button("Save draft & close") { saveAndClose() }
-            Button("Discard", role: .destructive) { dismiss() }
-            Button("Keep editing", role: .cancel) {}
+            switch confirming {
+            case .leaving:
+                Button("Save draft & close") { saveAndClose() }
+                Button("Discard", role: .destructive) { dismiss() }
+                Button("Keep editing", role: .cancel) {}
+            case .deleting:
+                Button("Delete tour", role: .destructive) { deleteTour() }
+                Button("Cancel", role: .cancel) {}
+            case .none:
+                EmptyView()
+            }
         } message: {
-            Text("A draft stays in your tours, so you can pick it up where you left off.")
+            Text(confirmMessage)
         }
         .onAppear(perform: centerOnUser)
         .task(id: existingTourId) { await loadExistingTour() }
-        .confirmationDialog("Delete this tour?", isPresented: $showingDeleteConfirm,
-                            titleVisibility: .visible) {
-            Button("Delete tour", role: .destructive) { deleteTour() }
-            Button("Cancel", role: .cancel) {}
-        } message: {
-            Text("This can't be undone. Its audio and photos go with it.")
-        }
     }
 
     /// Read an existing tour into the form. Runs once: a second pass would
@@ -661,7 +668,7 @@ struct CreateTourWizardView: View {
                     .foregroundStyle(AtlasColors.tertiaryText)
 
                 if existingTourId != nil {
-                    Button(role: .destructive) { showingDeleteConfirm = true } label: {
+                    Button(role: .destructive) { confirming = .deleting } label: {
                         HStack {
                             Spacer()
                             if isDeleting {
@@ -945,6 +952,19 @@ struct CreateTourWizardView: View {
     /// Nothing entered yet, or everything already saved, closes straight
     /// away. Anything else asks — and offers to keep it, which is the whole
     /// point of a five-step flow that can be abandoned four steps in.
+    private var confirmBinding: Binding<Bool> {
+        Binding(get: { confirming != nil },
+                set: { if !$0 { confirming = nil } })
+    }
+    private var confirmTitle: String {
+        confirming == .deleting ? "Delete this tour?" : "Keep this tour?"
+    }
+    private var confirmMessage: String {
+        confirming == .deleting
+            ? "This can't be undone. Its audio and photos go with it."
+            : "A draft stays in your tours, so you can pick it up where you left off."
+    }
+
     private func closeTapped() {
         let typedSomething = !trimmedTitle.isEmpty
             || !shortDescription.isEmpty
@@ -952,7 +972,7 @@ struct CreateTourWizardView: View {
             || !selectedTags.isEmpty
             || !locationName.isEmpty
         if (draftId != nil || typedSomething) && hasUnsavedChanges && canPersist {
-            showingCloseConfirm = true
+            confirming = .leaving
         } else {
             dismiss()
         }

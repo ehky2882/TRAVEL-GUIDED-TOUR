@@ -40,19 +40,26 @@ private struct DismissAttemptGuard: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ controller: UIViewController, context: Context) {
-        context.coordinator.onAttempt = onAttempt
+        let coordinator = context.coordinator
+        coordinator.onAttempt = onAttempt
+        let enabled = isEnabled
         // The sheet's controller is an ancestor of this invisible one, and it
         // isn't in place on the first layout pass — hence the hop to the next
         // runloop turn rather than reading it here.
-        DispatchQueue.main.async {
-            guard let presented = controller.presentedRoot,
+        //
+        // `context` is deliberately NOT captured: it is a transient value that
+        // is not safe to hold past this call. Only the coordinator and a plain
+        // Bool cross the boundary.
+        DispatchQueue.main.async { [weak controller] in
+            guard let controller,
+                  let presented = controller.presentedRoot,
                   let presentation = presented.presentationController else { return }
             // Refusing the swipe is what makes UIKit report the attempt at all.
-            presented.isModalInPresentation = isEnabled
+            presented.isModalInPresentation = enabled
             if !(presentation.delegate is Coordinator) {
-                context.coordinator.previousDelegate = presentation.delegate
+                coordinator.previousDelegate = presentation.delegate
             }
-            presentation.delegate = context.coordinator
+            presentation.delegate = coordinator
         }
     }
 
