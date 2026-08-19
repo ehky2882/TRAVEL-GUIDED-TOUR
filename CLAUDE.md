@@ -81,6 +81,56 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-19)
 
+### Stripe asked twice more, and the third question is the one the written answers cannot fix (session 99 — docs)
+
+Two further rounds of Stripe's **Restricted Businesses** review, on top of the response
+submitted in session 97. All three rounds — questions, submitted answers, and the reasoning
+behind each judgement call — are now recorded in **`docs/stripe-review.md`**. **Read that file
+before answering anything else from Stripe.** No code, no content, no build; catalogue
+untouched at 1418 / 31.
+
+- **🔴 ROUND 1'S SUBMITTED TEXT WAS NEVER SAVED, AND THAT COST REAL TIME HERE.** Only a summary
+  survived in this file, so round 2 had to be written without knowing the exact wording a
+  financial institution already holds — and a follow-up that contradicts the original answer is
+  the single most likely way to turn a review into a shutdown. **Save the submitted text at the
+  moment of submission, every time.** `docs/stripe-review.md` exists for exactly this.
+- **The load-bearing facts, verified against the repo rather than recalled:** Apple is merchant
+  of record for 100% of consumer transactions · Stripe is **Connect Express payouts only** and
+  never sees a cardholder · zero transactions and zero payouts to date · **all 31 makers are
+  first-party Atlas studios and no third-party creator has ever published or been paid** ·
+  every tour is human-reviewed before publication, a gate enforced in the database
+  (`publish_tour()` behind `is_admin()`), not merely in the UI.
+- **⚠️ The strongest answer is NOT the merchant-of-record point.** It is the **pre-publication
+  review gate plus the published Acceptable Use Policy**, whose prohibited list maps almost
+  line-for-line onto Stripe's own Restricted Businesses list. What Stripe screens for on a
+  creator platform is unmoderated content reaching buyers; the answer is that none can. Lead
+  with that next time.
+- **Round 2 ("which products do you sell through Stripe?")** is answered by taking the question
+  literally: **nothing is sold through Stripe.** Target audience was answered
+  *individual end customers* — a genuine judgement call, recorded with its reasoning, because
+  "Other" is arguably more literally true and was rejected as reading evasive on a form where a
+  plain option fits. Physical goods: no.
+- **🔴 ROUND 3 ASKED FOR "AN ACTIVE WEBSITE LINK WHERE WE CAN VIEW THE PRODUCTS AND SERVICES",
+  AND THERE IS NO GOOD ANSWER TODAY.** `dozent.world` is a **COMING SOON** splash; `/about/`
+  describes the product but shows no products; there is no public App Store page because 1.1
+  has never been released. **Owner submitted `/about/`** — the strongest of the three, and note
+  its footer Home link lands a reviewer on the splash. A public catalogue page was proposed and
+  **deliberately deferred (owner decision 2026-08-19)** pending the outcome. **Build it if
+  Stripe returns a fourth time, asks about the website specifically, restricts the account, or
+  third-party creators are about to onboard** — everything needed is already in `Tours.json`
+  and on the CDN, it is website-only work in `site/`, and `docs/stripe-review.md` carries the
+  build notes.
+- **⚠️ A TestFlight build was offered to Stripe's reviewer** in the round-3 text. If they accept,
+  the **unaccepted Apple Developer Program License Agreement** (Account Holder only) has to be
+  cleared first — it is already blocking app updates.
+- **⚠️ Deadline Sep 17.** Impact of missing it is paused payouts, of which there are none.
+- **Process note, unrelated to Stripe but worth recording:** browser control was unavailable in
+  this session, and the owner was certain it had worked from a remote session the day before.
+  Four searches confirmed no such tool was present. **Two explanations I offered for why were
+  guesses and both were wrong.** When a capability is genuinely absent, say so and stop
+  theorising about the cause — the useful move was the 30-second screenshot, and it should have
+  been the first and only suggestion.
+
 ### Keeping and sending a list — the `…` menu, saved lists, and a share link that resolves ([PR #517](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/517), session 94 — code)
 
 **Owner: "for a public profile. i want to be able to save a playlist"**, then, on the mockup: **"think there should be a '...' menu. a playlist should be able to be shared also."** Both shipped together. **TestFlight 1.1 (74)**, notes attached. **No SQL — everything this needs already existed in the database and had never been called.**

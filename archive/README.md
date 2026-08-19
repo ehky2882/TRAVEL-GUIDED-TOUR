@@ -131,7 +131,8 @@ tribal knowledge not yet promoted.
 | `HANDOFF-260518.md` | End-of-day snapshot from the 2026-05-18 session. Historical — superseded by the 5/19 handoff. Kept for context on what shipped that day (AllTrails-style home, unit test target wiring, session-start ritual, P0 audit closure). | 2026-05-18 |
 | `pre-qa-audit-260518.md` | Pre-QA code self-audit (22 findings, P0–P3). Produced under PR #21; most P0 + 2 P1 findings closed by PRs #22 / #23 / #24. Remaining findings tracked as live checklist in `ROADMAP.md` § M-qa. | 2026-05-18 |
 
-- [HANDOFF-260819-2.md](HANDOFF-260819-2.md) — the website restyled to the app's tokens; splash home page, /about/, pinned chrome. **Active handoff.**
+- [HANDOFF-260819-3.md](HANDOFF-260819-3.md) — Stripe's Restricted Businesses review, rounds 2 and 3 answered; `docs/stripe-review.md` created as the durable record. **Active handoff.**
+- [HANDOFF-260819-2.md](HANDOFF-260819-2.md) — the website restyled to the app's tokens; splash home page, /about/, pinned chrome.
 
 When the next handoff is written, name it for the new date
 (`HANDOFF-YYMMDD.md`) and update the entry above to point to the
