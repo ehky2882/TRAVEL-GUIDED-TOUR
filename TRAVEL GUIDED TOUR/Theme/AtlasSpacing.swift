@@ -17,20 +17,31 @@ enum AtlasSpacing {
     /// picture, depending on who was looking. A ratio makes the frame the same
     /// *shape* everywhere and lets the height fall out of the width.
     ///
-    /// **5:4 — owner decision on device, 2026-08-19**, after seeing 4:3 in
-    /// build 79 and rejecting it as too short. The catalogue's photographs are
-    /// 4:3 (1200×900), so 5:4 trims **6% off the sides** in exchange for a
-    /// taller block: 283 pt on a 17 Pro against 4:3's 266. That trade was made
-    /// by looking at both on a real phone, which is the only way this question
-    /// can be settled.
+    /// **Square (1:1) — owner decision on device, 2026-08-19**, and it took
+    /// three builds to get here: 4:3 in build 79 (*"i dont like it"*), 5:4 in
+    /// 80 and 82 (*"keep it at 5:4 for now"*), then, testing 82 in full,
+    /// *"i think i much prefer the square image"*. **Confirmed on device in
+    /// build 83** — *"I MUCH PREFER THE SQUARE"* — so this is verified, not
+    /// merely chosen.
     ///
-    /// For reference, the alternatives measured against the same 4:3 sources:
-    /// 4:3 crops nothing, 5:4 crops 6%, square crops 25%.
+    /// ⚠️ **Square is the most aggressive crop of the three, and that is a
+    /// known cost, not an oversight.** The catalogue's photographs are 4:3
+    /// (1200×900), so against those sources 4:3 crops nothing, 5:4 crops 6%,
+    /// and square crops **25% off the sides**. It is also the tallest block, so
+    /// it pushes what follows further down every page. Both were weighed on a
+    /// real phone — which is the only place this question can be settled, and
+    /// the reason three builds was the cheap outcome rather than the expensive
+    /// one.
     ///
     /// ⚠️ **Whatever shows beside a hero must use the same ratio**, or the page
-    /// changes height when you switch tabs. Tour detail and the place page both
-    /// size their map with it for exactly that reason.
-    static let heroAspectRatio: CGFloat = 5.0 / 4.0
+    /// changes height when you switch tabs. Tour detail, the place page and the
+    /// list page all size their map with it for exactly that reason.
+    ///
+    /// **Read this constant; never restate its value.** Every call site says
+    /// "the hero ratio" rather than naming a number, so changing it here is the
+    /// whole change — that is what stopped five stale `// 5:4` comments from
+    /// becoming five wrong ones.
+    static let heroAspectRatio: CGFloat = 1.0
     static let cardCornerRadius: CGFloat = 12
     static let chipCornerRadius: CGFloat = 20
     /// Used for the home-page floating-island shape so the drawer +
