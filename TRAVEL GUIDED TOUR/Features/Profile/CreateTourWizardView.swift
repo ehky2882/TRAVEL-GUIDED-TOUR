@@ -24,21 +24,7 @@ struct CreateTourWizardView: View {
     @Environment(LocationManager.self) private var locationManager
     @Environment(\.dismiss) private var dismiss
 
-    enum Step: Int, CaseIterable {
-        case location, details, photos, audio, review
-
-        var label: String {
-            switch self {
-            case .location: return "LOCATION"
-            case .details:  return "DETAILS"
-            case .photos:   return "PHOTOS"
-            case .audio:    return "AUDIO"
-            case .review:   return "REVIEW"
-            }
-        }
-    }
-
-    @State private var step: Step = .location
+    @State private var step: TourWizardStep = .location
     @State private var draftId: UUID?
 
     // Step 1 — location
@@ -183,7 +169,7 @@ struct CreateTourWizardView: View {
     /// Five segments, one per step, filled up to where you are.
     private var progressBar: some View {
         HStack(spacing: 5) {
-            ForEach(Step.allCases, id: \.rawValue) { s in
+            ForEach(TourWizardStep.allCases, id: \.rawValue) { s in
                 Capsule()
                     .fill(s.rawValue <= step.rawValue
                           ? AtlasColors.mapPin
@@ -194,7 +180,7 @@ struct CreateTourWizardView: View {
         .padding(.horizontal, AtlasSpacing.lg)
         .padding(.bottom, AtlasSpacing.sm)
         .accessibilityElement()
-        .accessibilityLabel("Step \(step.rawValue + 1) of \(Step.allCases.count)")
+        .accessibilityLabel("Step \(step.rawValue + 1) of \(TourWizardStep.allCases.count)")
     }
 
     /// Save progress and the primary action, side by side, where neither can
@@ -766,11 +752,6 @@ struct CreateTourWizardView: View {
 
     // MARK: - Gating
 
-    /// The vocabulary requires at least one Place type and one Theme.
-    private var hasRequiredTags: Bool {
-        !selectedTags.isDisjoint(with: Set(Tag.tags(in: .placeType)))
-            && !selectedTags.isDisjoint(with: Set(Tag.tags(in: .theme)))
-    }
     private var trimmedTitle: String {
         title.trimmingCharacters(in: .whitespacesAndNewlines)
     }
@@ -778,45 +759,29 @@ struct CreateTourWizardView: View {
     /// hang it on — the title falls back to a placeholder.
     private var canPersist: Bool { centerCoordinate != nil }
 
-    /// Whether the current step is finished enough to leave. Without this a
-    /// maker can tap through five empty screens and arrive at a tour that
-    /// cannot be submitted, which is worse than the form it replaced.
+    /// The view's state flattened for `TourWizardRules`, which owns every
+    /// "can I leave this step?" decision so the rule and the reason it gives
+    /// can never disagree.
+    private var wizardState: TourWizardState {
+        TourWizardState(
+            hasCoordinate: centerCoordinate != nil,
+            title: title,
+            shortDescription: shortDescription,
+            tags: selectedTags,
+            hasCoverPhoto: !(draft?.tour.heroImageURL.isEmpty ?? true),
+            audioDurationSeconds: draft?.tour.totalDurationSeconds ?? 0,
+            audioUpload: audioUpload,
+            draftExists: draft != nil
+        )
+    }
+
     private var canAdvance: Bool {
-        switch step {
-        case .location: return centerCoordinate != nil
-        case .details:
-            return !trimmedTitle.isEmpty
-                && !shortDescription.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-                && hasRequiredTags
-        case .photos: return !(draft?.tour.heroImageURL.isEmpty ?? true)
-        case .audio:  return (draft?.tour.totalDurationSeconds ?? 0) > 0
-        case .review:
-            // You can reach Review mid-upload; you can't submit a tour whose
-            // narration hasn't arrived.
-            return draft != nil && audioUpload == .idle
-        }
+        TourWizardRules.canAdvance(from: step, state: wizardState)
     }
 
     /// Says what's missing rather than leaving a dimmed button unexplained.
     private var blockingHint: String? {
-        guard !canAdvance else { return nil }
-        switch step {
-        case .location: return "Pan the map to put the pin where the tour begins."
-        case .details:
-            if trimmedTitle.isEmpty { return "A title is needed." }
-            if shortDescription.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                return "A short description is needed — it's the line on cards."
-            }
-            return "Pick at least one Place type and one Theme."
-        case .photos: return "Add at least one photo. The first becomes the cover."
-        case .audio:  return "Record or import the narration."
-        case .review:
-            switch audioUpload {
-            case .uploading: return "Waiting for the narration to finish uploading."
-            case .failed:    return "The narration didn't upload. Go back and try again."
-            case .idle:      return nil
-            }
-        }
+        TourWizardRules.blockingReason(for: step, state: wizardState)
     }
 
     private var primaryLabel: String {
@@ -872,7 +837,7 @@ struct CreateTourWizardView: View {
 
     private func goBack() {
         focused = nil
-        guard let previous = Step(rawValue: step.rawValue - 1) else { return }
+        guard let previous = step.previous else { return }
         withAnimation(.easeInOut(duration: 0.2)) { step = previous }
     }
 
@@ -897,7 +862,7 @@ struct CreateTourWizardView: View {
             defer { isPersisting = false }
             do {
                 try await persist()
-                guard let next = Step(rawValue: step.rawValue + 1) else { return }
+                guard let next = step.next else { return }
                 withAnimation(.easeInOut(duration: 0.2)) { step = next }
             } catch {
                 errorMessage = AuthoringErrorText.message(for: error)
