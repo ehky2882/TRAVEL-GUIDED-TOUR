@@ -16,6 +16,12 @@ struct TourAudioSection: View {
     /// the wizard passes false.
     var showsHeader: Bool = true
 
+    /// Reports the upload as it happens, so a host that needs to gate on it
+    /// can. The wizard uses this to keep Submit dimmed while narration is
+    /// still in flight — you can walk on to Review mid-upload, you just
+    /// can't submit a tour whose audio hasn't landed.
+    var onUploadStateChange: ((AudioUploadState) -> Void)? = nil
+
     @Environment(MakerTourService.self) private var makerTourService
 
     @State private var importingAudio = false
@@ -173,7 +179,7 @@ struct TourAudioSection: View {
                 }
                 .buttonStyle(.plain)
 
-                Button { failedUpload = nil } label: {
+                Button { discardFailure() } label: {
                     Text("Discard")
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.primaryText)
@@ -226,6 +232,7 @@ struct TourAudioSection: View {
         failedUpload = nil
         isUploading = true
         uploadProgress = 0
+        onUploadStateChange?(.uploading(0))
         Task {
             defer { isUploading = false }
             do {
@@ -251,6 +258,7 @@ struct TourAudioSection: View {
                     sourceURL: url,
                     reason: AuthoringErrorText.message(for: error)
                 )
+                onUploadStateChange?(.failed)
             }
         }
     }
@@ -258,6 +266,13 @@ struct TourAudioSection: View {
     private func retryUpload(_ failed: FailedAudioUpload) {
         failedUpload = nil
         uploadAudio(from: failed.sourceURL)
+    }
+
+    /// Discarding a failed upload puts the host back to a settled state — it
+    /// should stop reporting a failure nobody is going to retry.
+    private func discardFailure() {
+        failedUpload = nil
+        onUploadStateChange?(.idle)
     }
 
     /// The upload itself, split out so `uploadAudio` and `retryUpload` share one
@@ -271,11 +286,22 @@ struct TourAudioSection: View {
             contentType: contentType,
             durationSeconds: seconds,
             onProgress: { fraction in
-                Task { @MainActor in uploadProgress = fraction }
+                Task { @MainActor in
+                    uploadProgress = fraction
+                    onUploadStateChange?(.uploading(fraction))
+                }
             }
         )
         attachedAudioURL = await makerTourService.stopAudioURL(tourId: tour.id)
+        onUploadStateChange?(.idle)
     }
+}
+
+/// Where an audio upload has got to, for a host that needs to gate on it.
+enum AudioUploadState: Equatable {
+    case idle
+    case uploading(Double)
+    case failed
 }
 
 /// An audio upload that failed after the file was already in hand.

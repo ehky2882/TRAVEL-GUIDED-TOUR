@@ -79,6 +79,14 @@ struct CreateTourWizardView: View {
     @State private var showingPhotoManager = false
     @State private var showingCloseConfirm = false
     @State private var outcome: Outcome?
+    /// Where the narration upload has got to. Submit waits on it; walking to
+    /// Review does not.
+    @State private var audioUpload: AudioUploadState = .idle
+    /// A signature of everything saved so far, so Close can tell whether
+    /// there is anything to lose.
+    @State private var savedSignature: String?
+    /// Shown briefly under the footer after Save progress.
+    @State private var savedConfirmation = false
     @FocusState private var focused: Field?
 
     private enum Field { case city, place, title, short, long }
@@ -116,12 +124,13 @@ struct CreateTourWizardView: View {
         .sheet(isPresented: $showingPhotoManager) {
             if let draft { PhotoManagerView(tour: draft.tour) }
         }
-        .confirmationDialog("Discard this tour?", isPresented: $showingCloseConfirm,
+        .confirmationDialog("Keep this tour?", isPresented: $showingCloseConfirm,
                             titleVisibility: .visible) {
+            Button("Save draft & close") { saveAndClose() }
             Button("Discard", role: .destructive) { dismiss() }
             Button("Keep editing", role: .cancel) {}
         } message: {
-            Text("Nothing has been saved yet. Save progress keeps it as a draft.")
+            Text("A draft stays in your tours, so you can pick it up where you left off.")
         }
         .onAppear(perform: centerOnUser)
     }
@@ -193,7 +202,12 @@ struct CreateTourWizardView: View {
     /// a separate, higher window.
     private var footer: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            if let blockingHint {
+            if savedConfirmation {
+                Label("Draft saved", systemImage: "checkmark.circle.fill")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.mapPin)
+                    .transition(.opacity)
+            } else if let blockingHint {
                 Text(blockingHint)
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.tertiaryText)
@@ -535,7 +549,8 @@ struct CreateTourWizardView: View {
     private var audioStep: some View {
         if let draft {
             VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                TourAudioSection(tour: draft.tour, showsHeader: false)
+                TourAudioSection(tour: draft.tour, showsHeader: false,
+                                 onUploadStateChange: { audioUpload = $0 })
 
                 VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                     fieldLabel("TRANSCRIPT — OPTIONAL")
@@ -559,7 +574,8 @@ struct CreateTourWizardView: View {
             let photoCount = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
                 .filter { !$0.isEmpty }.count
             VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                fieldLabel("REVIEW")
+                fieldLabel("PREVIEW — HOW IT'LL LOOK IN THE APP")
+                previewCard(tour)
                 VStack(spacing: 0) {
                     summaryRow("TITLE", tour.title, isLast: false)
                     summaryRow("WHERE", whereSummary, isLast: false)
@@ -570,11 +586,7 @@ struct CreateTourWizardView: View {
                     summaryRow("TAGS", tour.tags.isEmpty ? "None" : tour.tags.joined(separator: " · "),
                                isLast: false)
                     summaryRow("PHOTOS", photoCount == 0 ? "None" : "\(photoCount)", isLast: false)
-                    summaryRow("AUDIO",
-                               tour.totalDurationSeconds > 0
-                                 ? AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
-                                 : "None",
-                               isLast: true)
+                    summaryRow("AUDIO", audioSummary(tour), isLast: true)
                 }
                 .background(AtlasColors.background)
                 .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
@@ -586,6 +598,110 @@ struct CreateTourWizardView: View {
         } else {
             missingDraftNotice
         }
+    }
+
+    /// A still of the player, so the maker sees what a listener sees before
+    /// committing. Deliberately inert — it is a picture of the app, not a
+    /// second place to play the audio.
+    private func previewCard(_ tour: Tour) -> some View {
+        let images = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
+            .filter { !$0.isEmpty }
+        let blurb = longDescription.isEmpty ? shortDescription : longDescription
+        return VStack(spacing: 0) {
+            ZStack(alignment: .bottom) {
+                if let hero = images.first {
+                    HeroImageView(imageName: hero, height: 200,
+                                  cornerRadius: 0, category: tour.primaryCategory)
+                } else {
+                    Rectangle()
+                        .fill(AtlasColors.secondaryBackground)
+                        .frame(height: 200)
+                        .overlay(
+                            Text("No cover photo yet")
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.tertiaryText)
+                        )
+                }
+                if images.count > 1 {
+                    HStack(spacing: 4) {
+                        ForEach(0..<images.count, id: \.self) { index in
+                            Circle()
+                                .fill(Color.white.opacity(index == 0 ? 1 : 0.5))
+                                .frame(width: 5, height: 5)
+                        }
+                    }
+                    .padding(.bottom, AtlasSpacing.sm)
+                }
+            }
+
+            VStack(spacing: AtlasSpacing.xs) {
+                Text("NOW PLAYING")
+                    .font(.system(size: 11, weight: .regular, design: .monospaced))
+                    .foregroundStyle(AtlasColors.tertiaryText)
+                Text(persistedTitle)
+                    .font(AtlasTypography.body)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                Text(blurb.isEmpty ? "Add a description to see it here." : blurb)
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                    .padding(.bottom, AtlasSpacing.xs)
+
+                Capsule()
+                    .fill(AtlasColors.tertiaryText.opacity(0.3))
+                    .frame(height: 3)
+                    .overlay(alignment: .leading) {
+                        GeometryReader { geo in
+                            Capsule()
+                                .fill(AtlasColors.mapPin)
+                                .frame(width: geo.size.width * 0.06, height: 3)
+                        }
+                        .frame(height: 3)
+                    }
+                HStack {
+                    Text("0:00")
+                    Spacer()
+                    Text(tour.totalDurationSeconds > 0
+                         ? AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
+                         : "—")
+                }
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.tertiaryText)
+                .padding(.bottom, AtlasSpacing.xs)
+
+                HStack {
+                    Text("1x")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.secondaryText)
+                        .padding(.horizontal, 8).padding(.vertical, 3)
+                        .overlay(Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1))
+                    Spacer()
+                    Image(systemName: "gobackward.10")
+                    Spacer()
+                    Image(systemName: "play.fill")
+                        .font(.system(size: 15))
+                        .foregroundStyle(AtlasColors.background)
+                        .frame(width: 44, height: 44)
+                        .background(AtlasColors.mapPin, in: Circle())
+                    Spacer()
+                    Image(systemName: "goforward.10")
+                    Spacer()
+                    Image(systemName: "forward.end.fill")
+                        .foregroundStyle(AtlasColors.tertiaryText)
+                }
+                .font(.system(size: 16))
+                .foregroundStyle(AtlasColors.primaryText)
+            }
+            .padding(AtlasSpacing.md)
+        }
+        .background(AtlasColors.background)
+        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+        .allowsHitTesting(false)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Preview of how this tour will look in the player")
     }
 
     private var missingDraftNotice: some View {
@@ -674,7 +790,10 @@ struct CreateTourWizardView: View {
                 && hasRequiredTags
         case .photos: return !(draft?.tour.heroImageURL.isEmpty ?? true)
         case .audio:  return (draft?.tour.totalDurationSeconds ?? 0) > 0
-        case .review: return draft != nil
+        case .review:
+            // You can reach Review mid-upload; you can't submit a tour whose
+            // narration hasn't arrived.
+            return draft != nil && audioUpload == .idle
         }
     }
 
@@ -691,7 +810,12 @@ struct CreateTourWizardView: View {
             return "Pick at least one Place type and one Theme."
         case .photos: return "Add at least one photo. The first becomes the cover."
         case .audio:  return "Record or import the narration."
-        case .review: return nil
+        case .review:
+            switch audioUpload {
+            case .uploading: return "Waiting for the narration to finish uploading."
+            case .failed:    return "The narration didn't upload. Go back and try again."
+            case .idle:      return nil
+            }
         }
     }
 
@@ -699,14 +823,47 @@ struct CreateTourWizardView: View {
         step == .review ? "Submit for review" : "Next"
     }
 
+    /// The Audio row on Review, which carries the upload through rather than
+    /// leaving the maker to guess whether it finished.
+    private func audioSummary(_ tour: Tour) -> String {
+        switch audioUpload {
+        case .uploading(let fraction): return "Uploading — \(Int(fraction * 100))%"
+        case .failed:                  return "Upload failed"
+        case .idle:
+            return tour.totalDurationSeconds > 0
+                ? AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
+                : "None"
+        }
+    }
+
+    /// Everything currently entered, as one comparable string. Close reads it
+    /// to know whether there is unsaved work worth asking about.
+    private var currentSignature: String {
+        [
+            persistedTitle, shortDescription, longDescription,
+            Tag.ordered(selectedTags).joined(separator: "|"),
+            architect ?? "", city ?? "", transcript,
+            String(format: "%.6f,%.6f,%d",
+                   centerCoordinate?.latitude ?? 0,
+                   centerCoordinate?.longitude ?? 0,
+                   Int(radius)),
+        ].joined(separator: "\u{1}")
+    }
+
+    private var hasUnsavedChanges: Bool { savedSignature != currentSignature }
+
     // MARK: - Actions
 
+    /// Nothing entered yet, or everything already saved, closes straight
+    /// away. Anything else asks — and offers to keep it, which is the whole
+    /// point of a five-step flow that can be abandoned four steps in.
     private func closeTapped() {
         let typedSomething = !trimmedTitle.isEmpty
             || !shortDescription.isEmpty
             || !longDescription.isEmpty
             || !selectedTags.isEmpty
-        if draftId == nil && typedSomething {
+            || !locationName.isEmpty
+        if (draftId != nil || typedSomething) && hasUnsavedChanges && canPersist {
             showingCloseConfirm = true
         } else {
             dismiss()
@@ -748,7 +905,29 @@ struct CreateTourWizardView: View {
         }
     }
 
+    /// Save and stay put. Tapping Save progress mid-flow means "don't lose
+    /// this", not "I'm done" — leaving is Close's job, and Close now offers to
+    /// save on the way out.
     private func saveProgress() {
+        focused = nil
+        errorMessage = nil
+        isPersisting = true
+        Task {
+            defer { isPersisting = false }
+            do {
+                try await persist()
+                withAnimation(.easeInOut(duration: 0.2)) { savedConfirmation = true }
+                try? await Task.sleep(for: .seconds(2.5))
+                withAnimation(.easeInOut(duration: 0.2)) { savedConfirmation = false }
+            } catch {
+                errorMessage = AuthoringErrorText.message(for: error)
+            }
+        }
+    }
+
+    /// Close's "save it first" branch — the same write, then the confirmation
+    /// screen so the maker sees where the draft went.
+    private func saveAndClose() {
         focused = nil
         errorMessage = nil
         isPersisting = true
@@ -818,6 +997,8 @@ struct CreateTourWizardView: View {
            let id = draftId {
             try await makerTourService.setTranscript(tourId: id, text: transcript)
         }
+
+        savedSignature = currentSignature
     }
 
     /// The database won't take a tour without a title, and step 1 doesn't have
