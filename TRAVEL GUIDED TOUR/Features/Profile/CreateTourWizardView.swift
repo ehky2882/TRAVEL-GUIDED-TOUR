@@ -675,8 +675,8 @@ struct CreateTourWizardView: View {
                                isLast: false)
                     summaryRow("PHOTOS", photoCount == 0 ? "None" : "\(photoCount)", isLast: false)
                     summaryRow("AUDIO", audioSummary(tour), isLast: existingTourId == nil)
-                    if let status = draft?.status, existingTourId != nil {
-                        summaryRow("STATUS", status.label, isLast: true)
+                    if existingTourId != nil {
+                        summaryRow("STATUS", draft.status.label, isLast: true)
                     }
                 }
                 .background(AtlasColors.background)
