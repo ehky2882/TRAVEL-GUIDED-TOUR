@@ -8,22 +8,23 @@ final class DeepLinkParsingTests: XCTestCase {
 
     private let sampleID = UUID(uuidString: "17050c9f-27a2-45e2-9e69-3ae9528c66c9")!
     private let makerID = UUID(uuidString: "00000000-0000-0000-0000-000000000001")!
+    private let listID = UUID(uuidString: "00000000-0000-0000-0000-000000000003")!
     private let placeID = UUID(uuidString: "00000000-0000-0000-0000-000000000002")!
 
     // MARK: - Universal Links (https)
 
     func test_parses_universalLink_queryForm() {
-        let url = URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/t/?id=17050c9f-27a2-45e2-9e69-3ae9528c66c9")!
+        let url = URL(string: "https://dozent.world/t/?id=17050c9f-27a2-45e2-9e69-3ae9528c66c9")!
         XCTAssertEqual(DeepLinkParser.parse(url), .tour(sampleID))
     }
 
     func test_parses_universalLink_pathForm() {
-        let url = URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/t/17050c9f-27a2-45e2-9e69-3ae9528c66c9")!
+        let url = URL(string: "https://dozent.world/t/17050c9f-27a2-45e2-9e69-3ae9528c66c9")!
         XCTAssertEqual(DeepLinkParser.parse(url), .tour(sampleID))
     }
 
     func test_parses_universalLink_uppercaseUUID() {
-        let url = URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/t/?id=17050C9F-27A2-45E2-9E69-3AE9528C66C9")!
+        let url = URL(string: "https://dozent.world/t/?id=17050C9F-27A2-45E2-9E69-3AE9528C66C9")!
         XCTAssertEqual(DeepLinkParser.parse(url), .tour(sampleID))
     }
 
@@ -42,12 +43,12 @@ final class DeepLinkParsingTests: XCTestCase {
     // MARK: - Maker links
 
     func test_parses_maker_universalLink_queryForm() {
-        let url = URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/m/?id=00000000-0000-0000-0000-000000000001")!
+        let url = URL(string: "https://dozent.world/m/?id=00000000-0000-0000-0000-000000000001")!
         XCTAssertEqual(DeepLinkParser.parse(url), .maker(makerID))
     }
 
     func test_parses_maker_universalLink_pathForm() {
-        let url = URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/m/00000000-0000-0000-0000-000000000001")!
+        let url = URL(string: "https://dozent.world/m/00000000-0000-0000-0000-000000000001")!
         XCTAssertEqual(DeepLinkParser.parse(url), .maker(makerID))
     }
 
@@ -59,6 +60,64 @@ final class DeepLinkParsingTests: XCTestCase {
         XCTAssertEqual(
             DeepLinkParser.parse(URL(string: "dozent://maker?id=00000000-0000-0000-0000-000000000001")!),
             .maker(makerID)
+        )
+    }
+
+    // MARK: - List links
+
+    func test_parses_list_universalLink_queryForm() {
+        let url = URL(string: "https://dozent.world/l/?id=00000000-0000-0000-0000-000000000003")!
+        XCTAssertEqual(DeepLinkParser.parse(url), .list(listID))
+    }
+
+    func test_parses_list_universalLink_pathForm() {
+        let url = URL(string: "https://dozent.world/l/00000000-0000-0000-0000-000000000003")!
+        XCTAssertEqual(DeepLinkParser.parse(url), .list(listID))
+    }
+
+    func test_parses_list_customScheme() {
+        XCTAssertEqual(
+            DeepLinkParser.parse(URL(string: "dozent://list/00000000-0000-0000-0000-000000000003")!),
+            .list(listID)
+        )
+        XCTAssertEqual(
+            DeepLinkParser.parse(URL(string: "dozent://list?id=00000000-0000-0000-0000-000000000003")!),
+            .list(listID)
+        )
+    }
+
+    /// The three markers are single letters (`t` / `m` / `l`) and the parser
+    /// tests them against whole path components. Pin that: a substring match
+    /// would make every link containing an "l" a list link.
+    func test_listMarker_doesNotCaptureOtherLinks() {
+        XCTAssertEqual(
+            DeepLinkParser.parse(AtlasShareLink.tourURL(id: sampleID)),
+            .tour(sampleID)
+        )
+        XCTAssertEqual(
+            DeepLinkParser.parse(AtlasShareLink.makerURL(id: makerID)),
+            .maker(makerID)
+        )
+    }
+
+    // MARK: - Links shared before the move to dozent.world
+
+    /// Share links used to point at the gh-pages host, and links from those
+    /// builds are already out in the world — in message threads, in notes.
+    /// The parser matches the path marker and ignores the host, so they keep
+    /// resolving. **Do not "tidy" this into a host check.**
+    func test_parses_legacyGitHubPagesLinks() {
+        XCTAssertEqual(
+            DeepLinkParser.parse(URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/t/?id=17050c9f-27a2-45e2-9e69-3ae9528c66c9")!),
+            .tour(sampleID)
+        )
+        XCTAssertEqual(
+            DeepLinkParser.parse(URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/m/?id=00000000-0000-0000-0000-000000000001")!),
+            .maker(makerID)
+        )
+        XCTAssertEqual(
+            DeepLinkParser.parse(URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/l/?id=00000000-0000-0000-0000-000000000003")!),
+            .list(listID)
         )
     }
 
@@ -75,15 +134,15 @@ final class DeepLinkParsingTests: XCTestCase {
     }
 
     func test_ignores_https_nonTourPath() {
-        XCTAssertNil(DeepLinkParser.parse(URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/index.html")!))
+        XCTAssertNil(DeepLinkParser.parse(URL(string: "https://dozent.world/index.html")!))
     }
 
     func test_ignores_tourPath_withInvalidUUID() {
-        XCTAssertNil(DeepLinkParser.parse(URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/t/?id=not-a-uuid")!))
+        XCTAssertNil(DeepLinkParser.parse(URL(string: "https://dozent.world/t/?id=not-a-uuid")!))
     }
 
     func test_ignores_tourPath_missingID() {
-        XCTAssertNil(DeepLinkParser.parse(URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/t/")!))
+        XCTAssertNil(DeepLinkParser.parse(URL(string: "https://dozent.world/t/")!))
     }
 
     func test_ignores_unrelatedScheme() {
@@ -96,7 +155,7 @@ final class DeepLinkParsingTests: XCTestCase {
         let url = AtlasShareLink.tourURL(id: sampleID)
         XCTAssertEqual(
             url.absoluteString,
-            "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/t/?id=17050c9f-27a2-45e2-9e69-3ae9528c66c9"
+            "https://dozent.world/t/?id=17050c9f-27a2-45e2-9e69-3ae9528c66c9"
         )
     }
 
@@ -115,7 +174,7 @@ final class DeepLinkParsingTests: XCTestCase {
     func test_makerShareURL_hasExpectedShape() {
         XCTAssertEqual(
             AtlasShareLink.makerURL(id: makerID).absoluteString,
-            "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/m/?id=00000000-0000-0000-0000-000000000001"
+            "https://dozent.world/m/?id=00000000-0000-0000-0000-000000000001"
         )
     }
 
@@ -124,12 +183,24 @@ final class DeepLinkParsingTests: XCTestCase {
         XCTAssertEqual(DeepLinkParser.parse(url), .maker(makerID))
     }
 
+    func test_listShareURL_hasExpectedShape() {
+        XCTAssertEqual(
+            AtlasShareLink.listURL(id: listID).absoluteString,
+            "https://dozent.world/l/?id=00000000-0000-0000-0000-000000000003"
+        )
+    }
+
+    func test_listShareURL_roundTripsThroughParser() {
+        let url = AtlasShareLink.listURL(id: listID)
+        XCTAssertEqual(DeepLinkParser.parse(url), .list(listID))
+    }
+
     // MARK: - Place links
 
     func test_placeShareURL_hasExpectedShape() {
         XCTAssertEqual(
             AtlasShareLink.placeURL(id: placeID).absoluteString,
-            "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/p/?id=00000000-0000-0000-0000-000000000002"
+            "https://dozent.world/p/?id=00000000-0000-0000-0000-000000000002"
         )
     }
 
@@ -139,7 +210,7 @@ final class DeepLinkParsingTests: XCTestCase {
     }
 
     func test_parses_placeUniversalLink_pathForm() {
-        let url = URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/p/00000000-0000-0000-0000-000000000002")!
+        let url = URL(string: "https://dozent.world/p/00000000-0000-0000-0000-000000000002")!
         XCTAssertEqual(DeepLinkParser.parse(url), .place(placeID))
     }
 
@@ -162,7 +233,7 @@ final class DeepLinkParsingTests: XCTestCase {
     func test_groupJoinURL_hasExpectedShape() {
         XCTAssertEqual(
             AtlasShareLink.groupJoinURL(code: "K7QP2").absoluteString,
-            "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/g/?code=K7QP2"
+            "https://dozent.world/g/?code=K7QP2"
         )
     }
 

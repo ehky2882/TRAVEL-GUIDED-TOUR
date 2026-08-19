@@ -20,10 +20,17 @@ struct TourListDetailView: View {
     @Environment(TourListService.self) private var listService
     @Environment(DataService.self) private var dataService
     @Environment(TourPresenter.self) private var tourPresenter
+    /// Optional: this screen is reachable from the UIKit maker layer, which
+    /// doesn't carry every service. A required lookup crashes there.
+    @Environment(AuthService.self) private var authService: AuthService?
+    /// Optional for the same reason — not every layer injects it.
+    @Environment(MakerPresenter.self) private var makerPresenter: MakerPresenter?
     @Environment(\.dismiss) private var dismiss
 
     @State private var items: [TourListItem] = []
     @State private var isLoading = true
+    @State private var isSaving = false
+    @State private var showingShareVisibilityPrompt = false
     @State private var isEditing = false
     @State private var showingDeleteConfirm = false
     @State private var showingEditDetails = false
@@ -42,6 +49,16 @@ struct TourListDetailView: View {
     private var isOwner: Bool {
         listService.myLists.contains { $0.id == listId }
     }
+
+    /// Saving is account-backed (`saved_journeys` is keyed on the user), so
+    /// unlike bookmarking a tour it can't work signed out. Hide the control
+    /// rather than offer one that fails — the same choice the Follow button
+    /// makes on a maker page.
+    private var canSave: Bool {
+        !isOwner && authService?.isSignedIn == true
+    }
+
+    private var isSavedList: Bool { listService.isListSaved(listId) }
 
     /// Resolved (tour, note) pairs in TourList order — dropping any tour id no
     /// longer in the catalog.
@@ -101,27 +118,8 @@ struct TourListDetailView: View {
             Color.clear.frame(height: AtlasBottomModule.height())
         }
         .toolbar {
-            // Someone else's list is read-only — no menu at all, rather than a
-            // menu whose every item fails.
-            if isOwner {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Menu {
-                        Button("Edit details", systemImage: "square.and.pencil") {
-                            showingEditDetails = true
-                        }
-                        Button(isEditing ? "Done" : "Edit tours", systemImage: "arrow.up.arrow.down") {
-                            isEditing.toggle()
-                        }
-                        Section {
-                            Button("Delete list", systemImage: "trash", role: .destructive) {
-                                showingDeleteConfirm = true
-                            }
-                        }
-                    } label: {
-                        Image(systemName: "ellipsis.circle")
-                            .accessibilityLabel("List options")
-                    }
-                }
+            ToolbarItem(placement: .topBarTrailing) {
+                overflowMenu
             }
         }
         .confirmationDialog(
@@ -130,6 +128,14 @@ struct TourListDetailView: View {
             titleVisibility: .visible
         ) {
             Button("Delete list", role: .destructive) { deleteList() }
+            Button("Cancel", role: .cancel) {}
+        }
+        .confirmationDialog(
+            "Only you can see this list. Anyone you send the link to won't be able to open it.",
+            isPresented: $showingShareVisibilityPrompt,
+            titleVisibility: .visible
+        ) {
+            Button("Make visible on my profile") { makeVisibleForSharing() }
             Button("Cancel", role: .cancel) {}
         }
         .sheet(isPresented: $showingEditDetails) {
@@ -148,6 +154,12 @@ struct TourListDetailView: View {
         .task(id: listId) {
             items = await listService.items(of: listId)
             isLoading = false
+        }
+        // Only when the bookmark is actually on screen, and only if we don't
+        // already know — Library's load fills this in for the common case.
+        .task(id: canSave) {
+            guard canSave, !listService.hasLoadedSaves else { return }
+            await listService.loadSavedListIds()
         }
     }
 
@@ -292,6 +304,110 @@ struct TourListDetailView: View {
         .padding(.horizontal, AtlasSpacing.md)
     }
 
+    /// Top-trailing `…` menu. Same idiom as a tour's, and the same first
+    /// item — Share — because a list is a thing you send someone, which is
+    /// most of the point of making one.
+    ///
+    /// What's below Share depends on whose list it is. Yours gets the editing
+    /// items; someone else's gets Save and a way to their profile. Neither
+    /// menu shows an item that would fail: RLS is the real gate, but offering
+    /// Delete on a list you don't own would be a lie.
+    @ViewBuilder
+    private var overflowMenu: some View {
+        Menu {
+            shareItem
+
+            if isOwner {
+                Section {
+                    Button("Edit details", systemImage: "square.and.pencil") {
+                        showingEditDetails = true
+                    }
+                    Button(isEditing ? "Done" : "Edit tours", systemImage: "arrow.up.arrow.down") {
+                        isEditing.toggle()
+                    }
+                }
+                Section {
+                    Button("Delete list", systemImage: "trash", role: .destructive) {
+                        showingDeleteConfirm = true
+                    }
+                }
+            } else {
+                Section {
+                    if canSave {
+                        Button {
+                            toggleSaved()
+                        } label: {
+                            Label(
+                                isSavedList ? "Saved to your lists" : "Save to your lists",
+                                systemImage: isSavedList ? "bookmark.fill" : "bookmark"
+                            )
+                        }
+                        .disabled(isSaving)
+                    }
+
+                    if let ownerMaker {
+                        Button {
+                            makerPresenter?.present(ownerMaker)
+                        } label: {
+                            Label("Go to creator", systemImage: "person.crop.circle")
+                        }
+                    }
+                }
+            }
+        } label: {
+            Image(systemName: "ellipsis.circle")
+                .accessibilityLabel("List options")
+        }
+    }
+
+    /// Share the list's https link — nothing else, so Messages renders one
+    /// rich link bubble rather than a link plus a stray text bubble. Same
+    /// choice `TourDetailView` makes.
+    ///
+    /// **A list only you can see has nothing to share**, so on one of those
+    /// the item becomes a prompt instead: a link to an Only-me list opens to
+    /// an empty screen for whoever receives it, and shipping a share button
+    /// that quietly produces a dead link is worse than asking first.
+    @ViewBuilder
+    private var shareItem: some View {
+        if let journey {
+            if journey.isPublic {
+                ShareLink(item: AtlasShareLink.listURL(for: journey), subject: Text(journey.title)) {
+                    Label("Share", systemImage: "square.and.arrow.up")
+                }
+            } else if isOwner {
+                Button {
+                    showingShareVisibilityPrompt = true
+                } label: {
+                    Label("Share", systemImage: "square.and.arrow.up")
+                }
+            }
+        }
+    }
+
+    /// The list's owner as a `Maker`, matched through `Maker.userId` against
+    /// the catalog already in memory. Nil for a creator with nothing published
+    /// yet — then there is simply no profile to send anyone to.
+    private var ownerMaker: Maker? {
+        guard let ownerUserId = journey?.ownerUserId else { return nil }
+        return dataService.makers.first { $0.userId == ownerUserId }
+    }
+
+    /// Flip an Only-me list to visible so it can actually be shared. Split out
+    /// because it changes who can see the list — it is a real decision, not a
+    /// step in a share flow, so it is confirmed and then the user shares.
+    private func makeVisibleForSharing() {
+        guard let journey, !journey.isPublic else { return }
+        Task {
+            try? await listService.updateList(
+                id: journey.id,
+                title: journey.title,
+                description: journey.description,
+                isPublic: true
+            )
+        }
+    }
+
     // MARK: - Actions
 
     /// Open a tour. Within a pushed nav stack (this view) with no slide-up
@@ -323,6 +439,25 @@ struct TourListDetailView: View {
         Task {
             try? await listService.setNote(note, for: tourId, in: listId)
             items = await listService.items(of: listId)
+        }
+    }
+
+    /// Keep or un-keep someone else's list.
+    ///
+    /// Un-saving is deliberate and reversible — it removes a reference, never
+    /// the list — so unlike the tour bookmark it toggles both ways with no
+    /// confirmation. The tour bookmark can't, because there un-saving is the
+    /// only way to lose a save.
+    private func toggleSaved() {
+        guard let journey, !isSaving else { return }
+        isSaving = true
+        Task {
+            if isSavedList {
+                await listService.unsaveList(listId)
+            } else {
+                await listService.saveList(journey)
+            }
+            isSaving = false
         }
     }
 

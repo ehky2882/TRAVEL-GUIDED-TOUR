@@ -403,6 +403,28 @@ struct ContentView: View {
                 makerLayer.dismiss()
             }
         }
+        // A list opened from a share link. Presented as an ordinary sheet
+        // rather than the UIKit slide-up layer tours and makers use: this
+        // arrives from outside the app with no screen behind it to slide over,
+        // and it carries its own nav stack so the title and the ... menu work
+        // exactly as they do everywhere else.
+        .sheet(item: $appShared.sharedList) { shared in
+            NavigationStack {
+                TourListDetailView(listId: shared.list.id, preloaded: shared.list)
+                    .toolbar {
+                        ToolbarItem(placement: .topBarLeading) {
+                            Button("Close") { appShared.sharedList = nil }
+                        }
+                    }
+            }
+            .environment(listService)
+            .environment(dataService)
+            .environment(tourPresenter)
+            .environment(makerPresenter)
+            .environment(authService)
+            .environment(libraryStore)
+            .environment(appShared)
+        }
         // Resolve the current tour's maker avatar into lock-screen /
         // Control-Center artwork whenever the loaded source changes.
         // Done here (not in AudioPlayerService) because the avatar

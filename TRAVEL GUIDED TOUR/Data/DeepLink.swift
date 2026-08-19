@@ -5,6 +5,10 @@ import Foundation
 enum DeepLink: Equatable {
     case tour(UUID)
     case maker(UUID)
+    /// A shared list ("playlist"). Only resolvable if the owner has it visible
+    /// — RLS returns nothing for an Only-me list, so a link to one opens the
+    /// app and finds nothing, which is the correct outcome.
+    case list(UUID)
     /// A place — the site page listing every tour about one location.
     case place(UUID)
     /// Join a Group Listen session by its short code. Carried by the QR code a
@@ -19,16 +23,20 @@ enum DeepLink: Equatable {
 ///
 /// Supported shapes:
 ///   Tours:
-///   - `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/t/?id=<uuid>`  (share link)
-///   - `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/t/<uuid>`       (path form)
+///   - `https://dozent.world/t/?id=<uuid>`  (share link)
+///   - `https://dozent.world/t/<uuid>`       (path form)
 ///   - `dozent://tour/<uuid>` · `dozent://tour?id=<uuid>`             (fallback)
 ///   Makers:
-///   - `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/m/?id=<uuid>`
-///   - `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/m/<uuid>`
+///   - `https://dozent.world/m/?id=<uuid>`
+///   - `https://dozent.world/m/<uuid>`
 ///   - `dozent://maker/<uuid>` · `dozent://maker?id=<uuid>`
+///   Lists:
+///   - `https://dozent.world/l/?id=<uuid>`
+///   - `https://dozent.world/l/<uuid>`
+///   - `dozent://list/<uuid>` · `dozent://list?id=<uuid>`
 ///   Places:
-///   - `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/p/?id=<uuid>`
-///   - `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/p/<uuid>`
+///   - `https://dozent.world/p/?id=<uuid>`
+///   - `https://dozent.world/p/<uuid>`
 ///   - `dozent://place/<uuid>` · `dozent://place?id=<uuid>`
 ///
 /// Everything else returns `nil`. Notably `dozent://login-callback` (Google
@@ -40,6 +48,8 @@ enum DeepLinkParser {
     static let tourPathMarker = "t"
     /// Web path segment marking a maker share link.
     static let makerPathMarker = "m"
+    /// Web path segment marking a shared list.
+    static let listPathMarker = "l"
     /// Web path segment marking a place share link.
     static let placePathMarker = "p"
     /// Web path segment marking a Group Listen join link (QR codes).
@@ -58,6 +68,9 @@ enum DeepLinkParser {
             if segments.contains(makerPathMarker) {
                 return id(in: url, marker: makerPathMarker).map(DeepLink.maker)
             }
+            if segments.contains(listPathMarker) {
+                return id(in: url, marker: listPathMarker).map(DeepLink.list)
+            }
             if segments.contains(placePathMarker) {
                 return id(in: url, marker: placePathMarker).map(DeepLink.place)
             }
@@ -70,6 +83,7 @@ enum DeepLinkParser {
             switch url.host?.lowercased() {
             case "tour":  return id(in: url, marker: tourPathMarker).map(DeepLink.tour)
             case "maker": return id(in: url, marker: makerPathMarker).map(DeepLink.maker)
+            case "list":  return id(in: url, marker: listPathMarker).map(DeepLink.list)
             case "place": return id(in: url, marker: placePathMarker).map(DeepLink.place)
             case "group": return groupCode(in: url, marker: groupPathMarker).map(DeepLink.group)
             default:      return nil
@@ -139,10 +153,26 @@ enum DeepLinkParser {
 /// Builds the outward-facing share URLs. The https forms are Universal Links:
 /// they open the app when installed, else the web "coming soon" preview.
 enum AtlasShareLink {
-    /// Root of the project GitHub Pages site that hosts assets + the landing pages.
-    static let webBase = URL(string: "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR")!
+    /// Where a shared link points.
+    ///
+    /// **`dozent.world`, not the gh-pages host, and the reason is Universal
+    /// Links.** iOS only opens the app from a link if the site serves an
+    /// `apple-app-site-association` file **at its domain root**. gh-pages puts
+    /// this project under `ehky2882.github.io/TRAVEL-GUIDED-TOUR/`, and that
+    /// root belongs to the account, not to this repo — so the file can never be
+    /// served where iOS looks, and every share link opened in Safari instead of
+    /// the app. `dozent.world` is a domain we own outright, so it can.
+    ///
+    /// ⚠️ **This is only where links point. Assets did NOT move**: 7,713 audio
+    /// and image URLs in `Tours.json` still resolve to `ehky2882.github.io`,
+    /// and that host must be left exactly as it is. Two hosts, two jobs.
+    ///
+    /// ⚠️ **The gh-pages landing pages stay published** so links already shared
+    /// from earlier builds keep working. They are a permanent legacy surface,
+    /// not a duplicate to tidy away.
+    static let webBase = URL(string: "https://dozent.world")!
 
-    /// `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/t/?id=<uuid>`.
+    /// `https://dozent.world/t/?id=<uuid>`.
     /// The id is lower-cased so the visible link matches the ids in `Tours.json`.
     static func tourURL(id: UUID) -> URL {
         shareURL(marker: DeepLinkParser.tourPathMarker, id: id)
@@ -152,7 +182,7 @@ enum AtlasShareLink {
         tourURL(id: tour.id)
     }
 
-    /// `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/m/?id=<uuid>`.
+    /// `https://dozent.world/m/?id=<uuid>`.
     static func makerURL(id: UUID) -> URL {
         shareURL(marker: DeepLinkParser.makerPathMarker, id: id)
     }
@@ -161,7 +191,18 @@ enum AtlasShareLink {
         makerURL(id: maker.id)
     }
 
-    /// `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/p/?id=<uuid>`.
+    /// `https://dozent.world/l/?id=<uuid>` — a shared
+    /// list. Note the recipient only sees anything if the owner has the list
+    /// visible; `TourListDetailView` handles the empty case.
+    static func listURL(id: UUID) -> URL {
+        shareURL(marker: DeepLinkParser.listPathMarker, id: id)
+    }
+
+    static func listURL(for list: TourList) -> URL {
+        listURL(id: list.id)
+    }
+
+    /// `https://dozent.world/p/?id=<uuid>`.
     static func placeURL(id: UUID) -> URL {
         shareURL(marker: DeepLinkParser.placePathMarker, id: id)
     }
@@ -170,7 +211,7 @@ enum AtlasShareLink {
         placeURL(id: place.id)
     }
 
-    /// `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/g/?code=K7QP2` — the payload
+    /// `https://dozent.world/g/?code=K7QP2` — the payload
     /// encoded into a leader's join QR code. Deliberately the https (Universal
     /// Link) form, not `dozent://`: pointed at with the system Camera app it can
     /// open the app directly, and if the app isn't installed it degrades to the

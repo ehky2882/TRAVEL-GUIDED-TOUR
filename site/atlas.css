@@ -1,0 +1,420 @@
+/* ---------------------------------------------------------------
+   Dozent — web design tokens.
+
+   A direct port of the app's `Theme/Atlas*.swift` tokens so the
+   website and the app read as one product. Every value below has a
+   named counterpart in the app; the comment says which. If a token
+   changes in Swift, change it here in the same session.
+
+   Plain CSS, no build step — linked from all four pages.
+
+   DARK ONLY (owner, 2026-08-19: "for now, just put everything in dark
+   mode"). The tokens below hold the DARK half of each app pair and the
+   page no longer answers `prefers-color-scheme` at all — a visitor whose
+   system is set to light still gets this. To restore the adaptive
+   behaviour, put the light values back on `:root` and move these dark ones
+   into a `@media (prefers-color-scheme: dark)` block; every rule beneath
+   reads tokens only, so nothing else has to change.
+   --------------------------------------------------------------- */
+
+:root {
+  color-scheme: dark;
+
+  /* Typography — AtlasTypography.
+     body    : 15pt SF Pro regular      (AtlasTypography.body)
+     caption : 13pt SF Mono regular     (AtlasTypography.caption)
+     wordmark: 13pt New York serif      (AtlasTypography.wordmark) */
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  --font-serif: ui-serif, "New York", Georgia, "Times New Roman", serif;
+  --size-body: 15px;
+  --size-caption: 13px;
+
+  /* Brand accent — AtlasColors.accent, #8B7535.
+     Deliberately ONE value in both light and dark mode: the app's
+     AccentColor asset carries no dark variant (owner, 2026-07-04,
+     "it is the one that stays consistent"). Do not add one here. */
+  --brass: #8b7535;
+
+  /* Surfaces — AtlasColors.background / .secondaryBackground, DARK values.
+     secondaryBackground is hardcoded in the app for exactly the reason it
+     is hardcoded here: every painted chrome surface must resolve to the
+     same RGB. */
+  --bg: #000000;
+  --bg-secondary: #1c1c1e;
+
+  /* Text. The site runs on ONE ink (owner, 2026-08-19: "flatten all font
+     colour") — the app's `AtlasColors.primaryText`. The secondary and
+     tertiary steps are kept named so the mapping to `AtlasColors` stays
+     legible, but nothing on the site reaches for them. */
+  --ink: #ffffff;
+  --ink-secondary: rgba(235, 235, 245, 0.6);
+  --ink-tertiary: rgba(235, 235, 245, 0.36);
+
+  /* AtlasColors.divider — iOS `separator`, dark. */
+  --rule: rgba(84, 84, 88, 0.65);
+
+  /* AtlasSpacing. */
+  --xs: 4px;
+  --sm: 8px;
+  --md: 16px;
+  --lg: 24px;
+  --xl: 32px;
+  --xxl: 48px;
+
+  /* AtlasSpacing.cardCornerRadius. */
+  --radius-card: 12px;
+
+  /* Height reserved at the foot of every page for the fixed footer. Erring
+     generous: too small hides the last line of a long policy behind it, too
+     large is only harmless space at the end of the document. Measured
+     heights are 108px wide, 98px under 500px and 93px under 374px, where the
+     footer's type steps down — one value covers all three. Re-measure if a
+     footer link is added or renamed. */
+  --footer-h: 116px;
+
+  /* Height reserved at the head of every page for the fixed masthead —
+     16px + the wordmark's 15px/1.7 line box + 24px. Measured, not guessed;
+     re-measure if the wordmark's size, tracking or padding changes. */
+  --masthead-h: 66px;
+
+  /* AtlasSpacing.searchBarHeight — the app's one control size, 44pt. It is
+     also the diameter of the splash screen's pulsing mark. */
+  --searchbar-height: 44px;
+}
+
+
+* { box-sizing: border-box; }
+
+/* Always reserve the scrollbar's gutter, whether or not a page scrolls.
+
+   Without this the splash (which fits the window) has no scrollbar while
+   every policy page does, so the centred column — and the fixed footer with
+   it — sat 7px further right on the splash and jumped as you navigated.
+   `overflow-y: scroll` is the fallback for browsers without
+   `scrollbar-gutter`; it reserves the same space by always showing the
+   track. */
+html {
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+/* One size, one weight, one colour — everywhere.
+
+   This block is load-bearing, not tidiness. Browsers give every heading a
+   default `font-size` in `em` (h1 2em, h2 1.5em, h3 1.17em) and a default
+   `font-weight: bold`. Relying on inheritance from `body` does NOT override
+   them: an earlier revision dropped h2's explicit size and it silently
+   rendered at 19.5px — 1.5 x 13px — while every other line sat at 13px.
+   Declaring it here for every element means a new tag can never arrive
+   carrying a browser default nobody asked for. */
+body, body * {
+  font-size: var(--size-caption);
+  font-weight: 400;
+  color: var(--ink);
+}
+
+/* Everything is caption — SF Mono 13px — as the app's Player and Search
+   surfaces are. Hierarchy comes from case, colour and tracking instead of
+   size, which is how the app distinguishes a nav title from a section
+   header when both sit at 13pt. `--font-body` / `--size-body` stay defined
+   above as the app's tokens, but nothing on the site reaches for them. */
+body {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: var(--masthead-h) var(--lg) var(--footer-h);
+  font-family: var(--font-mono);
+  font-size: var(--size-caption);
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+/* The wordmark is the ONE exemption from caption (owner, 2026-08-19).
+
+   Drawn exactly as the SPLASH draws it — New York serif, 15px, tracked 2,
+   Title Case — so the mark is one mark across the site rather than two
+   variants of it. It was uppercase and tracked 6px, which is a logotype
+   convention that only works on capitals; Title Case at that tracking reads
+   as broken.
+
+   It stays BRASS here rather than the splash's white: the splash has a brass
+   circle above it doing that job, and these pages have nothing else on them
+   carrying the accent.
+
+   Pinned to the top of the window, so it is always on screen. It keeps an
+   opaque background because page content scrolls underneath it. */
+/* `fixed`, exactly like the footer, NOT `sticky`.
+
+   Sticky sticks to its SCROLLPORT, and this stylesheet makes `html` a scroll
+   container (`overflow-y: scroll`, for the gutter). On iOS that scrollport
+   does not track the visible top as the address bar collapses and expands,
+   so the bar drifts and a sliver of text shows above it — reported on a
+   phone twice, while the fixed footer on the same page was fine. Fixed
+   positions against the viewport and has no such gap.
+
+   Its height is reserved by the body's top padding via `--masthead-h`; the
+   same maintenance burden as the footer's, and the same rule applies —
+   change the padding or the wordmark and re-measure the token. */
+.brand {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  max-width: 38rem;
+  margin: 0 auto;
+  background: var(--bg);
+  font-family: var(--font-serif);
+  font-size: var(--size-body);
+  letter-spacing: 2px;
+  color: var(--brass);
+  padding: var(--md) var(--lg) var(--lg);
+
+  /* The mirror of the footer's trick, and for the same reason: `top: 0` is
+     rounded by fractional device pixel ratios and browser zoom, and on iOS a
+     sticky bar can detach for a frame during momentum scrolling or while the
+     address bar resizes the viewport. Either way a sliver of text shows
+     ABOVE the wordmark. This paints an opaque copy of the box 48px higher,
+     so there is nothing above it to expose. */
+  box-shadow: 0 calc(var(--xxl) * -1) 0 0 var(--bg);
+}
+.brand a { color: var(--brass); text-decoration: none; }
+
+/* Page title. The app's nav titles — Settings, Player, Search — are caption
+   ALL CAPS, so that is what a page title is here too. With one size, one
+   weight and one colour across the page, tracking is the only thing left to
+   distinguish it, so it is tracked widest. */
+h1 {
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 var(--sm);
+}
+
+/* Section headers — the app's convention everywhere it draws one (GALLERY,
+   FOLLOWERS, N TOURS IN VIEW): caption, uppercase. Separated from the body
+   copy beneath by case and by the generous space above, not by weight. */
+h2 {
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: var(--xl) 0 var(--sm);
+}
+
+/* Sub-headers: uppercase like the two above, tracked least of the three. */
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: var(--lg) 0 var(--xs);
+}
+
+p { margin: 0 0 var(--md); }
+ul { padding-left: var(--lg); margin: 0 0 var(--md); }
+li { margin-bottom: var(--xs); }
+
+/* Links carry no colour of their own now — the underline is what marks
+   them. Kept thick enough and offset far enough to stay unmistakable. */
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* Effective dates and the footer. Nothing sets them back any more —
+   position and the footer's rule do that work now. */
+
+.meta { margin: 0 0 var(--xl); }
+
+/* Card. The app's cards carry the secondary shade and a 12pt radius,
+   and deliberately no border — the shade is the edge. */
+.card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-card);
+  padding: var(--md);
+  margin: var(--xl) 0;
+}
+
+.lede {
+  margin: 0 0 var(--xl);
+}
+
+/* The link row stays on ONE line and only wraps when the window is
+   genuinely too narrow for it.
+
+   Flex with `gap` rather than a margin on each link, so there is no
+   trailing margin pushing the row wider than its contents; `nowrap` on the
+   links so a long label like TERMS OF SERVICE can never break across two
+   lines mid-phrase; and the attribution takes a full row of its own so it
+   always sits beneath the links rather than joining the end of them. */
+/* Fixed to the bottom of the window, so the links are always reachable
+   without scrolling to the end of a long policy.
+
+   The markup is BYTE-IDENTICAL on all five pages — same links, same order,
+   including a link to the page you are already on. Each page used to omit
+   its own entry, so the row's width changed from page to page and the whole
+   bar shifted as you navigated. Keep them identical; a page-specific footer
+   reintroduces the jump.
+
+   `fixed` rather than `sticky`: a sticky footer pins correctly while a page
+   scrolls, but on a page SHORTER than the window it just sits after the
+   content — /about/ on a window over ~1060px tall did exactly that. Sticky
+   can only shift an element up to keep it visible, never down.
+
+   The cost of `fixed` is that space has to be reserved by hand, which is
+   what `--footer-h` is for. It is centred with `left/right: 0` plus auto
+   margins and given the same max-width and gutters as the body, so its
+   contents line up with the column above rather than with the window.
+
+   No rule on top (owner, 2026-08-19: "there is a thin white line at the top
+   of the footer, i dont want that"). The opaque background alone separates
+   it from the text scrolling beneath. */
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  max-width: 38rem;
+  margin: 0 auto;
+  background: var(--bg);
+  /* `--lg` above the links (matching the masthead's gap below the wordmark)
+     and `--lg` again beneath the attribution, so the bar is not pressed
+     against the window edge. */
+  padding: var(--lg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sm) 12px;
+  text-align: center;
+
+  /* An opaque copy of the box painted 32px lower. `bottom: 0` puts the
+     footer's edge on the window's edge in theory, but fractional device
+     pixel ratios and browser zoom round that edge and let a sliver of
+     scrolling text show underneath. This overshoots the window bottom so
+     there is nothing for a rounding error to expose. */
+  box-shadow: 0 var(--xl) 0 0 var(--bg);
+}
+
+/* On a phone the row will not fit at 13px, and the owner would rather the
+   text shrank than the row wrapped ("i dont mind making the text smaller to
+   make it all fit"). So below 500px the whole footer scales down, the gutter
+   tightens, and tracking comes off — measured to hold one line all the way
+   down to a 320px iPhone SE.
+
+   `footer, footer *` rather than `footer` alone: the `body, body *` reset at
+   the top of this file sets `font-size` on every element directly, so a
+   footer-only rule would be overridden by it and nothing would inherit. */
+@media (max-width: 500px) {
+  footer, footer * {
+    font-size: 10px;
+    letter-spacing: 0.02em;
+  }
+  footer {
+    gap: var(--sm);
+    padding-left: var(--md);
+    padding-right: var(--md);
+  }
+}
+
+/* The smallest phones still in use (iPhone SE, 320px) need one more step
+   down — at 10px the row needs 316px and only 273px is available there. */
+@media (max-width: 374px) {
+  footer, footer * { font-size: 9px; }
+  footer {
+    gap: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+/* Tracked tighter than the headings (0.04em against 0.08em) purely to buy
+   width: five links at heading tracking need ~576px, and the reading column
+   is 560px, which is what pushed CONTACT onto a second row. Tightening here
+   costs nothing legibly and leaves ~40px of headroom, so the row survives a
+   longer label being added later. */
+footer a {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+footer .legal {
+  flex: 0 0 100%;
+  margin: var(--sm) 0 0;
+}
+
+/* ---------------------------------------------------------------
+   The splash homepage — a port of the app's `SplashView.swift`.
+
+   Keep the two in step. The app draws: a black ground, a 44pt circle
+   filled `AtlasColors.mapPin` pulsing between opacity 1.0 and 0.2 on a
+   0.8s ease-in-out that repeats forever and autoreverses, then 16pt of
+   space, then "Dozent" in the New York serif system font at 15pt
+   regular, white, tracked 2.
+   --------------------------------------------------------------- */
+
+/* The splash carries no prose, so it is not held to the reading column the
+   other pages use. Running full width is what keeps the five footer links on
+   one line — inside a 38rem column they need ~600px and wrap CONTACT onto a
+   second row. */
+body.splash {
+  min-height: 100vh;
+  min-height: 100dvh;
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  padding: var(--lg) var(--lg) var(--footer-h);
+}
+
+/* The mark and wordmark sit centred in whatever is left after the
+   footer, so the composition holds at any viewport height. */
+.splash-stage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--md);            /* the app's VStack(spacing: 16) */
+  padding: var(--xxl) 0;
+}
+
+.splash-mark {
+  width: var(--searchbar-height);   /* 44pt, as the app draws it */
+  height: var(--searchbar-height);
+  border-radius: 50%;
+  background: var(--brass);
+  animation: splash-pulse 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes splash-pulse {
+  from { opacity: 1; }
+  to   { opacity: 0.2; }
+}
+
+/* A pulsing element is exactly what Reduce Motion is for. Hold it at
+   full opacity rather than leaving it mid-fade. */
+@media (prefers-reduced-motion: reduce) {
+  .splash-mark { animation: none; opacity: 1; }
+}
+
+/* Sentence case and tracked 2 — the app does NOT uppercase this one,
+   unlike the wordmark in the page mastheads.
+
+   15px, not the 13px caption everything else on the site uses: the app's
+   splash draws it at `.system(size: 15, design: .serif)`, and the brief was
+   to match the load page exactly. `--size-body` happens to be the same 15,
+   which is why it is reused rather than hardcoded. */
+.splash-wordmark {
+  font-family: var(--font-serif);
+  font-size: var(--size-body);
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.splash-status {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: var(--sm) 0 0;
+}

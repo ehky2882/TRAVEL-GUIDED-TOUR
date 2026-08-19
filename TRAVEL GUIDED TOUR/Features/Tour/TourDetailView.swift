@@ -335,7 +335,7 @@ struct TourDetailView: View {
             heroImageURL: tour.heroImageURL,
             additionalImageURLs: tour.additionalImageURLs,
             videoURLs: tour.videoURLs,
-            height: AtlasSpacing.heroHeight,
+            height: nil,   // 5:4 — see AtlasSpacing.heroAspectRatio
             category: tour.primaryCategory
         )
         .padding(.horizontal, AtlasSpacing.lg)
@@ -648,7 +648,9 @@ struct TourDetailView: View {
             // token, no corner radius (square corners). Horizontal
             // padding is applied to the whole map-tab content below
             // so the map aligns with the tab row + the gallery.
-            .frame(height: AtlasSpacing.heroHeight)
+            // Same sizing as the carousel it swaps with, so switching
+            // GALLERY / MAP never changes the page's height.
+            .atlasHeroSizing(nil)
         }
         .padding(.horizontal, AtlasSpacing.lg)
     }

@@ -8,7 +8,29 @@ enum AtlasSpacing {
     static let lg: CGFloat = 24
     static let xl: CGFloat = 32
     static let xxl: CGFloat = 48
-    static let heroHeight: CGFloat = 320
+    /// **The shape every hero photograph is shown in.**
+    ///
+    /// It used to be a fixed 320 pt tall, which made the frame a different
+    /// shape on every device: nearly square on an iPhone SE (327×320) and much
+    /// wider on a Pro Max (392×320), cropping 23% of the photograph off the
+    /// sides on the small phone and 8% on the large one. Same file, different
+    /// picture, depending on who was looking. A ratio makes the frame the same
+    /// *shape* everywhere and lets the height fall out of the width.
+    ///
+    /// **5:4 — owner decision on device, 2026-08-19**, after seeing 4:3 in
+    /// build 79 and rejecting it as too short. The catalogue's photographs are
+    /// 4:3 (1200×900), so 5:4 trims **6% off the sides** in exchange for a
+    /// taller block: 283 pt on a 17 Pro against 4:3's 266. That trade was made
+    /// by looking at both on a real phone, which is the only way this question
+    /// can be settled.
+    ///
+    /// For reference, the alternatives measured against the same 4:3 sources:
+    /// 4:3 crops nothing, 5:4 crops 6%, square crops 25%.
+    ///
+    /// ⚠️ **Whatever shows beside a hero must use the same ratio**, or the page
+    /// changes height when you switch tabs. Tour detail and the place page both
+    /// size their map with it for exactly that reason.
+    static let heroAspectRatio: CGFloat = 5.0 / 4.0
     static let cardCornerRadius: CGFloat = 12
     static let chipCornerRadius: CGFloat = 20
     /// Used for the home-page floating-island shape so the drawer +

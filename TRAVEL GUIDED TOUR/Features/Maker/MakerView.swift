@@ -261,6 +261,7 @@ struct MakerView: View {
         .task(id: authService?.userId ?? nil) {
             guard isOwnProfile else { return }
             await listService?.loadMyLists()
+            await listService?.loadSavedLists()
         }
         // Someone else's visible lists + their Liked. Keyed on the maker so
         // opening a second creator's page replaces them rather than showing
@@ -667,7 +668,50 @@ struct MakerView: View {
                 }
                 .buttonStyle(.plain)
             }
+
+            // Lists you kept from other people. Their own section, exactly as
+            // in Library — the two surfaces show the same thing and must not
+            // drift. Only ever rendered in `.ownProfile`, so a saved list can
+            // never surface on your public page: a visitor's view is built
+            // from `publicLists(ofUser:)`, which returns only what you own.
+            if !savedLists.isEmpty {
+                profileListsHeader("Saved lists")
+
+                ForEach(savedLists) { list in
+                    NavigationLink {
+                        TourListDetailView(listId: list.id, preloaded: list)
+                    } label: {
+                        SavedListRowView(
+                            list: list,
+                            ownerName: TourListOwner.name(of: list, in: dataService),
+                            coverImageName: TourListCover.imageName(for: list, in: dataService),
+                            coverCategory: TourListCover.category(for: list, in: dataService)
+                        )
+                    }
+                    .buttonStyle(.plain)
+
+                    if list.id != savedLists.last?.id {
+                        Divider().padding(.horizontal, AtlasSpacing.lg)
+                    }
+                }
+            }
         }
+    }
+
+    /// Other people's lists the user has saved. Empty signed out.
+    private var savedLists: [TourList] {
+        listService?.savedLists ?? []
+    }
+
+    /// Same caption divider Library uses between its list groups.
+    private func profileListsHeader(_ title: String) -> some View {
+        Text(title)
+            .font(AtlasTypography.caption)
+            .textCase(.uppercase)
+            .foregroundStyle(AtlasColors.tertiaryText)
+            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.top, AtlasSpacing.md)
+            .padding(.bottom, AtlasSpacing.sm)
     }
 
     // MARK: - Map tab
@@ -675,7 +719,7 @@ struct MakerView: View {
     /// Where this maker's tours are in the world.
     ///
     /// Treatment copied from `TourDetailView.mapContent` (owner
-    /// direction): `heroHeight` tall, square corners, inset `lg` by the
+    /// direction): hero-sized, square corners, inset `lg` by the
     /// caller so the gutters either side stay available for scrolling
     /// the page. That inset is load-bearing — without it a drag on the
     /// map has nowhere else to land and the page can't be scrolled.
@@ -734,7 +778,10 @@ struct MakerView: View {
                 placecard: mapPlacecardAnchor
             )
             // Same footprint as the gallery / map on tour detail.
-            .frame(height: AtlasSpacing.heroHeight)
+            // Every hero slot in the app is 4:3, this one included — a map
+            // that is 320 tall here and 266 on tour detail is exactly the
+            // inconsistency this change exists to remove.
+            .atlasHeroSizing(nil)
         }
     }
 
@@ -784,7 +831,7 @@ struct MakerView: View {
             mapPlacecardCoordinate = coordinate
         }
         // Sit the pin low in the frame rather than dead centre. This map
-        // is only `heroHeight` tall and a stack of cards is most of it,
+        // is only hero-sized and a stack of cards is most of it,
         // so a plain recentre would push the top card off the map.
         withAnimation(.easeInOut(duration: 0.35)) {
             mapCamera = .region(

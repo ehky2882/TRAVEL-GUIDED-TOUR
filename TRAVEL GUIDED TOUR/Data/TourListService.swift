@@ -31,6 +31,25 @@ final class TourListService {
     /// changes (a load or a mutation), which is rare by comparison.
     private(set) var allListedTourIds: Set<UUID> = []
 
+    /// Other people's lists this user has saved, newest-saved first.
+    ///
+    /// Kept apart from `myLists` on purpose: these are **references, not
+    /// copies**. The owner still owns the list, so it can gain tours, lose
+    /// them, be renamed, be hidden or be deleted out from under the saver —
+    /// and it must never appear anywhere the user can edit or delete it.
+    private(set) var savedLists: [TourList] = []
+
+    /// Which lists are saved, for an O(1) check while drawing a bookmark.
+    /// Held separately from `savedLists` because a list whose owner has since
+    /// hidden it is still *saved* even though we can no longer render it —
+    /// so the bookmark stays filled and un-saving still works.
+    private(set) var savedListIds: Set<UUID> = []
+
+    /// Whether the saves have been fetched at least once for this account.
+    /// Distinguishes "no saves" from "haven't looked yet", so a list-detail
+    /// screen doesn't re-query on every open just because the set is empty.
+    private(set) var hasLoadedSaves = false
+
     private let auth: AuthService
     private let client: SupabaseClient
 
@@ -50,6 +69,9 @@ final class TourListService {
         myLists = []
         membership = [:]
         allListedTourIds = []
+        savedLists = []
+        savedListIds = []
+        hasLoadedSaves = false
         loadedUid = nil
     }
 
@@ -119,7 +141,10 @@ final class TourListService {
         do {
             let rows: [TourListRow] = try await client
                 .from("journeys")
-                .select("id, title, description, cover_image_url, is_public, journey_items(tour_id, position)")
+                // `owner_user_id` rides along so a list saved straight from
+                // this screen already knows whose it is, and Library can name
+                // the owner without waiting for its own reload.
+                .select("id, title, description, cover_image_url, is_public, owner_user_id, journey_items(tour_id, position)")
                 .eq("owner_user_id", value: ownerUserId.uuidString.lowercased())
                 .eq("is_public", value: true)
                 .order("updated_at", ascending: false)
@@ -128,6 +153,134 @@ final class TourListService {
             return rows.map(\.asTourList)
         } catch {
             return []
+        }
+    }
+
+    /// One list plus its ordered items, by id — for a list arriving from a
+    /// **share link**, where the app has no context at all.
+    ///
+    /// Uses the `get_journey` RPC, which has existed in `backend/journeys.sql`
+    /// since the original Journeys work and had never been called. It runs
+    /// SECURITY INVOKER, so RLS still decides: a link to an Only-me list
+    /// returns nothing to anyone but its owner, which is exactly right.
+    ///
+    /// Returns nil for a list that is gone, hidden, or never existed — the
+    /// three cases are indistinguishable from here on purpose, since telling
+    /// a stranger which one applies would itself leak something.
+    func list(byId listId: UUID) async -> (list: TourList, items: [TourListItem])? {
+        do {
+            let payload: SharedListPayload? = try await client
+                .rpc("get_journey", params: ["p_journey": listId.uuidString.lowercased()])
+                .execute()
+                .value
+            guard let payload else { return nil }
+            return (payload.asTourList, payload.asItems)
+        } catch {
+            return nil
+        }
+    }
+
+    // MARK: - Saving someone else's list
+
+    /// Is this list one the user has saved? Synchronous — read while drawing.
+    func isListSaved(_ listId: UUID) -> Bool { savedListIds.contains(listId) }
+
+    /// Load the lists this user has saved from other people's profiles.
+    ///
+    /// One query: the saves, with each referenced list embedded (and its items,
+    /// so counts and covers come free — same trick as `loadMyLists()`).
+    ///
+    /// **A save whose list is no longer readable is dropped from `savedLists`
+    /// but kept in `savedListIds`.** The owner may have flipped it to Only me,
+    /// in which case RLS returns a null embed. Deleting the save row on their
+    /// behalf would be wrong — if the owner shares it again it should come
+    /// back — so the row stays and simply doesn't render. A list the owner
+    /// actually *deleted* takes the save row with it (`on delete cascade`), so
+    /// that case cleans itself up.
+    func loadSavedLists() async {
+        clearIfUserChanged()
+        guard let uid else { clear(); return }
+        do {
+            let rows: [SavedListRow] = try await client
+                .from("saved_journeys")
+                .select("""
+                    journey_id, saved_at, \
+                    journeys(id, title, description, cover_image_url, is_public, \
+                    owner_user_id, journey_items(tour_id, position))
+                    """)
+                .eq("user_id", value: uid)
+                .order("saved_at", ascending: false)
+                .execute()
+                .value
+            savedLists = rows.compactMap { $0.journeys?.asTourList }
+            // From the save rows, not the embeds — a hidden list is still
+            // saved, so its bookmark must stay filled.
+            savedListIds = Set(rows.map(\.journeyId))
+            hasLoadedSaves = true
+            loadedUid = uid
+        } catch {
+            // Keep whatever we have; the screen still renders.
+        }
+    }
+
+    /// Load just the ids, so a bookmark can render correctly on a list the user
+    /// opens before Library has ever been visited. Cheap — no embed.
+    func loadSavedListIds() async {
+        clearIfUserChanged()
+        guard let uid else { clear(); return }
+        do {
+            let rows: [SavedListIdRow] = try await client
+                .from("saved_journeys")
+                .select("journey_id")
+                .eq("user_id", value: uid)
+                .execute()
+                .value
+            savedListIds = Set(rows.map(\.journeyId))
+            hasLoadedSaves = true
+            loadedUid = uid
+        } catch {
+            // Keep whatever we have.
+        }
+    }
+
+    /// Save someone else's list. No-op when signed out — `saved_journeys` is
+    /// keyed on the account, so there is nowhere to put it.
+    @discardableResult
+    func saveList(_ list: TourList) async -> Bool {
+        guard let uid else { return false }
+        do {
+            try await client
+                .from("saved_journeys")
+                .insert(SavedListInsert(userId: uid, journeyId: list.id.uuidString.lowercased()),
+                        returning: .minimal)
+                .execute()
+            // Patch in place so the bookmark and Library update without a
+            // reload — the same rule the membership cache follows.
+            savedListIds.insert(list.id)
+            if !savedLists.contains(where: { $0.id == list.id }) {
+                savedLists.insert(list, at: 0)
+            }
+            return true
+        } catch {
+            return false
+        }
+    }
+
+    @discardableResult
+    func unsaveList(_ listId: UUID) async -> Bool {
+        guard let uid else { return false }
+        do {
+            try await client
+                .from("saved_journeys")
+                .delete()
+                .eq("user_id", value: uid)
+                .eq("journey_id", value: listId.uuidString.lowercased())
+                .execute()
+            savedListIds.remove(listId)
+            savedLists.removeAll { $0.id == listId }
+            return true
+        } catch {
+            return false
         }
     }
 
@@ -365,6 +518,9 @@ private struct TourListRow: Decodable {
     let coverImageURL: String?
     let isPublic: Bool
     let itemRefs: [ItemRef]
+    /// Only selected where it matters (saved lists). Absent from the
+    /// own-lists query, hence optional.
+    let ownerUserId: UUID?
 
     /// One embedded `journey_items` row: just enough to count and to find the
     /// first tour for the cover image.
@@ -382,6 +538,7 @@ private struct TourListRow: Decodable {
         case coverImageURL = "cover_image_url"
         case isPublic = "is_public"
         case itemRefs = "journey_items"
+        case ownerUserId = "owner_user_id"
     }
 
     var asTourList: TourList {
@@ -392,8 +549,83 @@ private struct TourListRow: Decodable {
             coverImageURL: coverImageURL,
             isPublic: isPublic,
             itemCount: itemRefs.count,
-            firstTourId: itemRefs.min(by: { $0.position < $1.position })?.tourId
+            firstTourId: itemRefs.min(by: { $0.position < $1.position })?.tourId,
+            ownerUserId: ownerUserId
         )
+    }
+}
+
+/// Read payload for a `saved_journeys` row with the list it points at embedded.
+///
+/// `journeys` is optional because RLS decides it separately from
+/// `saved_journeys`: your save row survives the owner flipping their list to
+/// Only me, but the list itself stops being readable — so the embed comes back
+/// null and the row is dropped client-side. That is the correct outcome; see
+/// `loadSavedLists()`.
+private struct SavedListRow: Decodable {
+    /// Always present — this is the save itself.
+    let journeyId: UUID
+    /// The list it points at, or nil if RLS won't return it any more.
+    let journeys: TourListRow?
+
+    enum CodingKeys: String, CodingKey {
+        case journeyId = "journey_id"
+        case journeys
+    }
+}
+
+/// `get_journey` returns the list and its ordered items as one camelCase
+/// object — a different shape from the table selects above, hence its own DTO.
+private struct SharedListPayload: Decodable {
+    let id: UUID
+    let ownerUserId: UUID?
+    let title: String
+    let description: String?
+    let coverImageURL: String?
+    let isPublic: Bool
+    let items: [Item]
+
+    struct Item: Decodable {
+        let tourId: UUID
+        let position: Int
+        let note: String?
+    }
+
+    var asItems: [TourListItem] {
+        items
+            .sorted { $0.position < $1.position }
+            .map { TourListItem(tourId: $0.tourId, position: $0.position, note: $0.note) }
+    }
+
+    var asTourList: TourList {
+        TourList(
+            id: id,
+            title: title,
+            description: description,
+            coverImageURL: coverImageURL,
+            isPublic: isPublic,
+            itemCount: items.count,
+            firstTourId: items.min(by: { $0.position < $1.position })?.tourId,
+            ownerUserId: ownerUserId
+        )
+    }
+}
+
+/// Just the ids, for the cheap "is this saved?" load.
+private struct SavedListIdRow: Decodable {
+    let journeyId: UUID
+    enum CodingKeys: String, CodingKey { case journeyId = "journey_id" }
+}
+
+/// Write payload for a save. String ids because that is what PostgREST wants
+/// on the wire, matching the rest of this service's writes.
+private struct SavedListInsert: Encodable {
+    let userId: String
+    let journeyId: String
+
+    enum CodingKeys: String, CodingKey {
+        case userId = "user_id"
+        case journeyId = "journey_id"
     }
 }
 

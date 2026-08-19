@@ -1,0 +1,21 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["CPC7M72JTP.com.ehky.TRAVEL-GUIDED-TOUR"],
+        "components": [
+          { "/": "/t/",  "comment": "a tour" },
+          { "/": "/t/*", "comment": "a tour, path form" },
+          { "/": "/m/",  "comment": "a creator" },
+          { "/": "/m/*", "comment": "a creator, path form" },
+          { "/": "/l/",  "comment": "a list" },
+          { "/": "/l/*", "comment": "a list, path form" },
+          { "/": "/p/",  "comment": "a place" },
+          { "/": "/p/*", "comment": "a place, path form" },
+          { "/": "/g/",  "comment": "join a group listen" },
+          { "/": "/g/*", "comment": "join a group listen, path form" }
+        ]
+      }
+    ]
+  }
+}
