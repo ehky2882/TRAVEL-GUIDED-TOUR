@@ -879,8 +879,8 @@
           "order": 0,
           "title": "American Museum of Natural History",
           "caption": "Stand at the foot of the grand steps on Central Park West, looking up at the colonnade and the empty pedestal.",
-          "latitude": 40.7813,
-          "longitude": -73.9739,
+          "latitude": 40.78083090443824,
+          "longitude": -73.97279862427825,
           "audioURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/audio/american-museum-natural-history.mp3",
           "audioDurationSeconds": 142,
           "triggerMode": "manual",
@@ -892,8 +892,8 @@
       "introAudioURL": null,
       "totalDurationSeconds": 142,
       "walkingDistanceMeters": null,
-      "centroidLatitude": 40.7813,
-      "centroidLongitude": -73.9739,
+      "centroidLatitude": 40.78083090443824,
+      "centroidLongitude": -73.97279862427825,
       "city": "New York",
       "primaryCategory": "history",
       "tags": [
@@ -69833,6 +69833,21 @@
       "tourIds": [
         "c65f4997-55ed-5ab7-ab20-617e784e2175",
         "e7b135f9-f4d8-51a5-93d5-6c17f4367682"
+      ]
+    },
+    {
+      "id": "a24a28c9-feca-5664-b2f6-62734e691430",
+      "name": "American Museum of Natural History",
+      "description": "One city block on the Upper West Side, with four public faces that were never meant to agree. J. Cleaveland Cady's rough pink Milford granite on 77th Street was the front door for thirty-six years; the Beaux-Arts arch on Central Park West replaced it as a state memorial to Theodore Roosevelt, whose equestrian statue came down in January 2022 and left the pedestal empty. On 81st Street a glass cube holds the Hayden Planetarium's aluminium sphere, and on Columbus Avenue Jeanne Gang's Gilder Center opened in 2023 with almost no straight lines in it. Most visitors only ever see the inside.",
+      "latitude": 40.78083090443824,
+      "longitude": -73.97279862427825,
+      "city": "New York",
+      "address": "200 Central Park West, New York",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/AMNH__Introduction_2.webp",
+      "additionalImageURLs": null,
+      "tourIds": [
+        "fceeb6bf-89a6-40c9-81c4-4b8efc781dcd",
+        "5bb90e3a-a81f-492d-b761-b204fa5dc405"
       ]
     }
   ]
