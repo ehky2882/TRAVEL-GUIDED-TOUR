@@ -133,7 +133,7 @@ tribal knowledge not yet promoted.
 
 - [HANDOFF-260819-2.md](HANDOFF-260819-2.md) — the website restyled to the app's tokens; splash home page, /about/, pinned chrome.
 - [HANDOFF-260819-3.md](HANDOFF-260819-3.md) — AMNH becomes a place (its tour's pin was 107 m off its own script), and the bottom bars stop painting as a floating island under a slide-up layer. TestFlight 1.1 (78), owner-verified.
-- [HANDOFF-260819-4.md](HANDOFF-260819-4.md) — the tour upload becomes a five-step wizard and three screens are deleted; plus the hang it shipped with, which took three builds because `.interactiveDismissDisabled` was reading the live map coordinate and reconfiguring the sheet on every camera frame. TestFlight 1.1 (84), **owner device-verification owed.** **Active handoff.**
+- [HANDOFF-260819-4.md](HANDOFF-260819-4.md) — the tour upload becomes a five-step wizard and three screens are deleted; plus the saved-tour watchdog hang: six builds, five falsified diagnoses, resolved by moving the edit path off `.sheet` onto `.fullScreenCover` (every crash frame ran through sheet layout). TestFlight 1.1 (89), **owner device-verification owed.** **Active handoff.**
 
 When the next handoff is written, name it for the new date
 (`HANDOFF-YYMMDD.md`) and update the entry above to point to the
