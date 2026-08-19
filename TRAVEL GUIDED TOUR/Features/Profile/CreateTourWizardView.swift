@@ -71,7 +71,6 @@ struct CreateTourWizardView: View {
     @State private var isPersisting = false
     @State private var isSubmitting = false
     @State private var errorMessage: String?
-    @State private var showingPhotoManager = false
     @State private var showingCloseConfirm = false
     @State private var outcome: Outcome?
     /// Where the narration upload has got to. Submit waits on it; walking to
@@ -115,9 +114,6 @@ struct CreateTourWizardView: View {
             .navigationTitle("")
             .inlineNavigationBarTitle()
             .toolbar { toolbarContent }
-        }
-        .sheet(isPresented: $showingPhotoManager) {
-            if let draft { PhotoManagerView(tour: draft.tour) }
         }
         // Swiping the sheet down is the same intent as tapping Close, so it
         // gets the same question rather than silently discarding the work.
@@ -599,87 +595,16 @@ struct CreateTourWizardView: View {
     @ViewBuilder
     private var photosStep: some View {
         if let draft {
-            let urls = ([draft.tour.heroImageURL] + (draft.tour.additionalImageURLs ?? []))
-                .filter { !$0.isEmpty }
             VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-                fieldLabel("PHOTOS — UP TO \(PhotoManagerView.maxPhotos), THE FIRST IS THE COVER")
-                photoGrid(urls: urls, category: draft.tour.primaryCategory)
-                Text(urls.isEmpty
-                     ? "Tap a box to add photos. They're framed to 1200×900."
-                     : "\(urls.count) of \(PhotoManagerView.maxPhotos) · tap to add, reorder or remove.")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
+                fieldLabel("PHOTOS — UP TO \(PhotoGridEditor.maxPhotos), THE FIRST IS THE COVER")
+                // Adding, framing, reordering and removing all happen here.
+                // There is no second screen for it — the step is the page.
+                PhotoGridEditor(tour: draft.tour)
+                    .id(draft.tour.id)
             }
         } else {
             missingDraftNotice
         }
-    }
-
-    /// Every slot the tour could hold, so the shape of the finished thing is
-    /// visible from the first photo — how many fit, and which one is the cover.
-    /// A row of thumbnails and an Add button showed neither.
-    ///
-    /// Tapping any slot opens the photo manager, which owns adding, framing,
-    /// reordering and removing. The grid shows; the manager edits. Letting the
-    /// grid add photos too would be a second implementation of the same thing.
-    private func photoGrid(urls: [String], category: TourCategory) -> some View {
-        let columns = Array(repeating: GridItem(.flexible(), spacing: AtlasSpacing.sm), count: 3)
-        return VStack(spacing: AtlasSpacing.sm) {
-            photoSlot(url: urls.first, height: 180,
-                      isCover: true, isNextUp: urls.isEmpty, category: category)
-
-            LazyVGrid(columns: columns, spacing: AtlasSpacing.sm) {
-                ForEach(1..<PhotoManagerView.maxPhotos, id: \.self) { index in
-                    photoSlot(url: index < urls.count ? urls[index] : nil,
-                              height: 74,
-                              isCover: false,
-                              isNextUp: index == urls.count,
-                              category: category)
-                }
-            }
-        }
-    }
-
-    private func photoSlot(url: String?, height: CGFloat, isCover: Bool,
-                           isNextUp: Bool, category: TourCategory) -> some View {
-        Button { showingPhotoManager = true } label: {
-            ZStack {
-                if let url {
-                    HeroImageView(imageName: url, height: height,
-                                  cornerRadius: AtlasSpacing.sm, category: category)
-                } else {
-                    RoundedRectangle(cornerRadius: AtlasSpacing.sm)
-                        .strokeBorder(
-                            isNextUp ? AtlasColors.mapPin : AtlasColors.divider,
-                            style: StrokeStyle(lineWidth: 1, dash: [4, 3])
-                        )
-                        .frame(height: height)
-                        .overlay {
-                            if isNextUp {
-                                Image(systemName: "plus")
-                                    .font(.system(size: isCover ? 20 : 14))
-                                    .foregroundStyle(AtlasColors.mapPin)
-                            }
-                        }
-                }
-
-                if isCover {
-                    Text("COVER")
-                        .font(.system(size: 9, weight: .semibold))
-                        .foregroundStyle(url == nil ? AtlasColors.tertiaryText : AtlasColors.background)
-                        .padding(.horizontal, 5).padding(.vertical, 2)
-                        .background(url == nil ? Color.clear : AtlasColors.mapPin)
-                        .clipShape(RoundedRectangle(cornerRadius: 3))
-                        .frame(maxWidth: .infinity, maxHeight: .infinity,
-                               alignment: .bottomLeading)
-                        .padding(AtlasSpacing.xs)
-                }
-            }
-        }
-        .buttonStyle(.plain)
-        .accessibilityLabel(url == nil
-                            ? (isCover ? "Add a cover photo" : "Add a photo")
-                            : (isCover ? "Cover photo" : "Photo"))
     }
 
     @ViewBuilder
