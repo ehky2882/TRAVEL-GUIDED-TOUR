@@ -132,7 +132,8 @@ tribal knowledge not yet promoted.
 | `pre-qa-audit-260518.md` | Pre-QA code self-audit (22 findings, P0–P3). Produced under PR #21; most P0 + 2 P1 findings closed by PRs #22 / #23 / #24. Remaining findings tracked as live checklist in `ROADMAP.md` § M-qa. | 2026-05-18 |
 
 - [HANDOFF-260819-2.md](HANDOFF-260819-2.md) — the website restyled to the app's tokens; splash home page, /about/, pinned chrome.
-- [HANDOFF-260819-3.md](HANDOFF-260819-3.md) — AMNH becomes a place (its tour's pin was 107 m off its own script), and the bottom bars stop painting as a floating island under a slide-up layer. TestFlight 1.1 (78), owner-verified. **Active handoff.**
+- [HANDOFF-260819-3.md](HANDOFF-260819-3.md) — AMNH becomes a place (its tour's pin was 107 m off its own script), and the bottom bars stop painting as a floating island under a slide-up layer. TestFlight 1.1 (78), owner-verified.
+- [HANDOFF-260819-4.md](HANDOFF-260819-4.md) — Universal Links finally work (gh-pages could never have served the association file — a project path has no root), every hero becomes a **ratio** rather than a fixed height (the old 320pt cropped 8% on one phone and 23% on another), and the list page is rebuilt on the place page with both maps collapsed into one shared `TourSetMap`. TestFlight 1.1 (77)→(81). **Active handoff.**
 
 When the next handoff is written, name it for the new date
 (`HANDOFF-YYMMDD.md`) and update the entry above to point to the
