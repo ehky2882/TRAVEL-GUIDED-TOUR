@@ -34,6 +34,7 @@ These happen **automatically, without the owner asking**.
 | 7 | Owner asks for a TestFlight build | **Web/remote session (preferred, no Mac):** push the branch, then trigger `.github/workflows/testflight.yml` (Actions → Run workflow on the branch, or add the `build` label to its PR) — CI builds + signs + uploads automatically; build number = `github.run_number` → `1.1 (N)`. See `docs/testflight-ci.md`. **Local (Mac) session:** bump `CURRENT_PROJECT_VERSION` in `project.pbxproj`, commit + push, `xcodebuild archive` (`docs/testflight.md`), owner uploads via Organizer. |
 | 8 | New tour added (to `Tours.json`) that lacks images | Run the image pipeline (§ Image Pipeline) automatically — no prompting — and **reply with a numbered, labeled contact sheet of ~12 verified CC0 candidates per tour so the owner can pick hero + gallery by number** (e.g. `"3 hero, 1, 7, 9"`). This is the standard "upload tours without images" flow. **Exception: owner-supplied images (Portugal/Porto/Lisbon tours) — do not run pipeline, use the provided assets.** **Always finish with `python3 scripts/check-image-duplicates.py --maker <CODE>` (§ Image Pipeline step 8) — it is the only thing that catches an image written under the wrong tour's filename.** |
 | 9 | Triggering ANY TestFlight build | **Always attach build notes — never ship a mystery build.** Provide two short sections: **What changed** (the features/fixes in this build) and **What to test** (concrete on-device steps + anything device-only). Put them in **(a)** the reply to the owner in chat, **(b)** the build's `notes` workflow input (Actions → Run workflow → *Build notes*, or the trigger call's inputs) — **the workflow then auto-attaches them to the build's "What to Test" field in TestFlight** (confirmed working 2026-07-25, via fastlane `upload_to_testflight` with `distribute_only: true` + `app_platform: "ios"`; falls back to PR title+body, then commit subject), so the owner reads them right in the TestFlight app — and **(c)** the PR body if a PR exists. Keep it plain-English for a non-technical owner. |
+| 10 | Opening or merging a PR · dispatching a TestFlight build · finding or clearing an owner-blocked item | Update the matching table in **`STATUS.md`** in the same commit — it is the live board of what is in flight across all parallel sessions (open PRs, which build number carries which branch, what is owed by the owner). **Re-derive, never predict:** `gh pr list --state open`, and read the build number back from the Actions run list after dispatching. `STATUS.md` holds only current state; finished work moves to `CLAUDE.md` § Current State. |
 
 ## Image Pipeline
 
@@ -1842,6 +1843,10 @@ See `ROADMAP.md` for full milestone history. Read latest `archive/HANDOFF-*.md` 
 git fetch && git status && git branch --show-current && git log origin/main..HEAD && gh pr list --state open
 ls archive/HANDOFF-*.md | tail -1   # then read that file
 
+# THE LIVE BOARD — read this before anything else. What every other parallel session is
+# mid-flight on: open PRs, which TestFlight build carries which branch, what the owner owes.
+git show origin/main:STATUS.md
+
 # What is staged but not yet live? ALWAYS read this from origin/main, never from your branch:
 git show origin/main:drafts/AUDIO-PENDING-SURVEY.md
 # Wire-in spec for any staged city (slug/coord/category/hero+gallery) — also on main:
@@ -1893,6 +1898,7 @@ Every session that ships a milestone, cuts scope, or changes "what's true today"
 | Path | Purpose |
 |------|---------|
 | `atlas_claude_code_prompt.md` | Canonical product spec |
+| `STATUS.md` | **The live board** — open PRs, build-number → branch map, what is blocked on the owner. Read at session start; update whenever any of those change |
 | `ROADMAP.md` | Execution plan + milestone history |
 | `docs/authoring-tours.md` | Tour content authoring guide |
 | `docs/cdn-decision.md` | Audio hosting decision |
