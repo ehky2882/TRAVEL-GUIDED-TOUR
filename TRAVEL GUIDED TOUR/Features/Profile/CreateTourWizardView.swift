@@ -45,6 +45,22 @@ struct CreateTourWizardView: View {
     @State private var radius: Double = 30
     @State private var cameraPosition: MapCameraPosition = .automatic
     @State private var centerCoordinate: CLLocationCoordinate2D?
+    /// What the maker typed into "city & country", and what they picked.
+    @State private var cityQuery = ""
+    @State private var city: String?
+    @State private var country: String?
+    /// What they typed into "location name". Free text — a tour can be about
+    /// a place MapKit has never heard of, so a suggestion is an offer, not a
+    /// requirement.
+    @State private var locationName = ""
+    /// Whether each field's dropdown is showing. Deliberately not derived
+    /// from focus — tapping a row resigns focus, which would pull the row out
+    /// from under the tap before it registered.
+    @State private var showingCitySuggestions = false
+    @State private var showingPlaceSuggestions = false
+    @State private var isResolvingPlace = false
+    @State private var citySearch = PlaceSearchService.cities()
+    @State private var placeSearch = PlaceSearchService.venues()
 
     // Step 2 — details
     @State private var title = ""
@@ -65,7 +81,7 @@ struct CreateTourWizardView: View {
     @State private var outcome: Outcome?
     @FocusState private var focused: Field?
 
-    private enum Field { case title, short, long }
+    private enum Field { case city, place, title, short, long }
     private enum Outcome { case submitted, savedDraft }
 
     /// The catalogue's own range. Every single-stop tour sits at 30 m and every
@@ -243,6 +259,45 @@ struct CreateTourWizardView: View {
     private var locationStep: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.md) {
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                fieldLabel("CITY & COUNTRY")
+                TextField("e.g. Porto, Portugal", text: $cityQuery)
+                    .focused($focused, equals: .city)
+                    .autocorrectionDisabled()
+                    .onChange(of: cityQuery) { _, new in
+                        citySearch.search(new)
+                        showingCitySuggestions = true
+                        // Typing again after a pick means they're changing
+                        // their mind, so the old choice shouldn't linger.
+                        if new != cityLabel { city = nil; country = nil }
+                    }
+                    .onSubmit { showingCitySuggestions = false }
+                    .wizardFieldStyle()
+
+                if showingCitySuggestions, !citySearch.suggestions.isEmpty {
+                    suggestionList(citySearch.suggestions) { pickCity($0) }
+                }
+            }
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                fieldLabel("LOCATION NAME")
+                HStack(spacing: AtlasSpacing.sm) {
+                    TextField("e.g. The Old Custom House", text: $locationName)
+                        .focused($focused, equals: .place)
+                        .onChange(of: locationName) { _, new in
+                            placeSearch.search(new)
+                            showingPlaceSuggestions = true
+                        }
+                        .onSubmit { showingPlaceSuggestions = false }
+                    if isResolvingPlace { ProgressView() }
+                }
+                .wizardFieldStyle()
+
+                if showingPlaceSuggestions, !placeSearch.suggestions.isEmpty {
+                    suggestionList(placeSearch.suggestions) { pickPlace($0) }
+                }
+            }
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("PAN TO PLACE THE PIN")
                 mapSection
             }
@@ -262,6 +317,106 @@ struct CreateTourWizardView: View {
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.tertiaryText)
         }
+    }
+
+    /// The dropdown under either place field. Deliberately not a `List` —
+    /// it sits inside the step's own scroll view, and a nested scrolling
+    /// list there fights the page for the drag.
+    private func suggestionList(_ suggestions: [PlaceSuggestion],
+                                onPick: @escaping (PlaceSuggestion) -> Void) -> some View {
+        VStack(spacing: 0) {
+            ForEach(Array(suggestions.enumerated()), id: \.element.id) { index, suggestion in
+                Button { onPick(suggestion) } label: {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(suggestion.title)
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.primaryText)
+                        if !suggestion.subtitle.isEmpty {
+                            Text(suggestion.subtitle)
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.tertiaryText)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.horizontal, AtlasSpacing.md)
+                    .padding(.vertical, 11)
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .overlay(alignment: .bottom) {
+                    if index < suggestions.count - 1 {
+                        Rectangle().fill(AtlasColors.divider).frame(height: 0.5)
+                            .padding(.leading, AtlasSpacing.md)
+                    }
+                }
+            }
+        }
+        .background(AtlasColors.background)
+        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+        .shadow(color: .black.opacity(0.12), radius: 8, y: 3)
+    }
+
+    /// Picking a city fills the field, frames the map on it, and biases the
+    /// location-name lookup — so "the old custom house" means the one there,
+    /// not the nearest one to wherever the maker happens to be sitting.
+    private func pickCity(_ suggestion: PlaceSuggestion) {
+        focused = nil
+        showingCitySuggestions = false
+        citySearch.clear()
+        Task {
+            guard let place = await citySearch.resolveDetails(suggestion) else { return }
+            city = place.locality ?? suggestion.title
+            country = place.country
+            cityQuery = cityLabel
+            placeSearch.regionBias = place.region
+            // A new city invalidates the old pin — it would otherwise sit
+            // hundreds of miles away, quietly, on a map framed elsewhere.
+            locationName = ""
+            placeSearch.clear()
+            showingPlaceSuggestions = false
+            cameraPosition = .region(place.region)
+            centerCoordinate = place.coordinate
+        }
+    }
+
+    /// Picking a named place drops the pin on it. The field stays editable
+    /// afterwards: the suggestion is a shortcut, not a commitment.
+    private func pickPlace(_ suggestion: PlaceSuggestion) {
+        focused = nil
+        showingPlaceSuggestions = false
+        locationName = suggestion.title
+        placeSearch.clear()
+        isResolvingPlace = true
+        Task {
+            defer { isResolvingPlace = false }
+            guard let place = await placeSearch.resolveDetails(suggestion) else { return }
+            centerCoordinate = place.coordinate
+            // Frame tightly — the maker is checking the pin is on the right
+            // building, not browsing the neighbourhood.
+            cameraPosition = .region(MKCoordinateRegion(
+                center: place.coordinate,
+                latitudinalMeters: 400,
+                longitudinalMeters: 400
+            ))
+            if city == nil, let locality = place.locality {
+                city = locality
+                country = place.country
+                cityQuery = cityLabel
+            }
+        }
+    }
+
+    /// What the Review step calls the place: the name if one was given, the
+    /// city if not, and an honest "Not named" rather than a blank row.
+    private var whereSummary: String {
+        let parts = [locationName.isEmpty ? nil : locationName,
+                     cityLabel.isEmpty ? nil : cityLabel].compactMap { $0 }
+        return parts.isEmpty ? "Not named" : parts.joined(separator: ", ")
+    }
+
+    /// "Porto, Portugal" — what the field shows once a city is chosen.
+    private var cityLabel: String {
+        [city, country].compactMap { $0 }.joined(separator: ", ")
     }
 
     private var mapSection: some View {
@@ -407,7 +562,8 @@ struct CreateTourWizardView: View {
                 fieldLabel("REVIEW")
                 VStack(spacing: 0) {
                     summaryRow("TITLE", tour.title, isLast: false)
-                    summaryRow("WHERE",
+                    summaryRow("WHERE", whereSummary, isLast: false)
+                    summaryRow("PIN",
                                String(format: "%.4f, %.4f", tour.centroidLatitude, tour.centroidLongitude),
                                isLast: false)
                     summaryRow("GEOFENCE", "\(Int(radius)) m", isLast: false)
@@ -574,6 +730,11 @@ struct CreateTourWizardView: View {
     }
 
     private func advance() {
+        // The place they just named is nearly always what the tour is called.
+        // Offered, not imposed: only when the title is still empty.
+        if step == .location, trimmedTitle.isEmpty, !locationName.isEmpty {
+            title = String(locationName.prefix(Self.titleLimit))
+        }
         isPersisting = true
         Task {
             defer { isPersisting = false }
@@ -635,7 +796,8 @@ struct CreateTourWizardView: View {
                 category: category,
                 tags: tags,
                 coordinate: coordinate,
-                radiusMeters: Int(radius)
+                radiusMeters: Int(radius),
+                city: city
             )
         } else {
             let makerId = try await makerProfileService.ensureMaker()
@@ -647,7 +809,8 @@ struct CreateTourWizardView: View {
                 category: category,
                 tags: tags,
                 coordinate: coordinate,
-                radiusMeters: Int(radius)
+                radiusMeters: Int(radius),
+                city: city
             )
         }
 
