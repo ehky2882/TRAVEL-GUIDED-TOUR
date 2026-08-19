@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-19 21:38 UTC
+**Last verified:** 2026-08-19 22:02 UTC
 
 ---
 
@@ -24,23 +24,26 @@ Code PRs cannot merge without a look on device (§ Merging PRs). This is the que
 
 | PR | What it is | Build to install | Also needs |
 |---|---|---|---|
-| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ✅ **88 — installable, untested** | A device pass — that is the only test |
+| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | 🔴 **None — 88 hung too** | A build off head `0e1edf3` |
 
-**Build 88 is up and installable**, cut from `e810651` — the PR head exactly, so it is not stale. It is the first build carrying
-all three stacked fixes: the toolbar and its NavigationStack removed outright (`730b1af`), a 650 ms
-wait before `loadExistingTour` touches state (`a045a5aa`), and the load collapsed from four write
-batches into one with its fetches overlapped (`e810651`).
+🔴 **SIX BUILDS HAVE NOW SHIPPED THIS FREEZE — 76, 77, 81, 84, 87, 88.** Opening a saved tour in
+the wizard wedges the main thread. Every one of those cost a device pass.
 
-🔴 **Do not read that as fixed.** The freeze has survived **five** builds — 76, 77, 81, 84 and 87 —
-and build 87 was itself cut from a commit claiming to fix it. What is verified here is only what 88
-*contains*. Whether the hang is gone is decided on the device, not in a commit message.
+**The seventh attempt (`0e1edf3`, unbuilt) is different in kind, and that matters.** The first six
+each guessed at a *trigger* inside the sheet — toolbar structure, then state writes, then when
+those writes happen. Build 88 falsified the last of those: the deferred load changed nothing, so
+the writes were never the fuel. A `.task` cannot even begin while the main thread is wedged in a
+synchronous layout call, which is what every stack shows.
 
-⚠️ **The diagnosis has moved with every crash log** — toolbar bridge, then `PlatformViewChild`
-walking MKMapView's subtree — which reads as repeated samples of one busy loop caught at different
-stations. The current theory names the *fuel* rather than any one bridge: state writes flushing
-graph transactions from inside the sheet's presentation transition. If 88 also hangs, that is six
-round-trips through the owner's phone, and the next attempt should wait for a local Mac session
-that can reproduce it in the simulator.
+So this one **removes the arena instead of guessing the trigger**: the edit path now presents as a
+`fullScreenCover` rather than a sheet. Every crash log — 77, 84, 87 — passes through
+`UISheetPresentationController._sheetLayoutInfoLayout:`, a frame only a sheet can produce, and a
+full-screen cover cannot reach it. The history corroborates it: the old editor was *pushed*, never
+sheet-presented, and never hung; the create path has always been a sheet and has never hung either.
+
+⚠️ **Owner decision owed.** This is a structural argument rather than a seventh guess, so it is
+worth a build. But six device passes have gone, and if it hangs as well, the next step is a local
+Mac session that can reproduce it in the simulator — not an eighth trip through the owner's phone.
 
 ## 2. Blocked on owner — outside the repo
 
@@ -72,7 +75,7 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | ✅ built — **untested on device** |
+| 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | 🔴 **still hangs** |
 | 87 | `tour-upload-polish-qiliop` | #540 + a hang fix that did not work | 🔴 **still hangs** |
 | 84 | `tour-upload-polish-qiliop` | #540 wizard | 🔴 hangs on the edit path |
 | 83, 82 | `list-page-conformance` | #547 list page | ✅ **merged to main 18:47** |
