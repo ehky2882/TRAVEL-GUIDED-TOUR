@@ -23,6 +23,8 @@ struct LibraryView: View {
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(MakerPresenter.self) private var makerPresenter
+    @Environment(PlacePresenter.self) private var placePresenter
+    @Environment(SavedPlacesStore.self) private var savedPlacesStore
     @Environment(FollowService.self) private var followService
     @Environment(MakerProfileService.self) private var makerProfileService
     @Environment(AuthService.self) private var authService
@@ -213,6 +215,22 @@ struct LibraryView: View {
                 }
             }
 
+            if !savedPlaces.isEmpty {
+                librarySectionHeader("Places")
+                ForEach(savedPlaces) { place in
+                    Button {
+                        placePresenter.present(place)
+                    } label: {
+                        placeRow(place)
+                    }
+                    .buttonStyle(.plain)
+
+                    if place.id != savedPlaces.last?.id {
+                        Divider().padding(.horizontal, AtlasSpacing.lg)
+                    }
+                }
+            }
+
             if !followingMakers.isEmpty {
                 librarySectionHeader("Following")
                 ForEach(followingMakers) { maker in
@@ -229,6 +247,13 @@ struct LibraryView: View {
                 }
             }
         }
+    }
+
+    /// Saved places, newest first, resolved against the catalog. A saved id
+    /// whose place has since left the catalog simply drops out — the same
+    /// forgiving resolution saved tours get.
+    private var savedPlaces: [Place] {
+        savedPlacesStore.entries.compactMap { dataService.place(by: $0.placeId) }
     }
 
     /// Caption all-caps section divider — matches the Search view's
@@ -273,6 +298,58 @@ struct LibraryView: View {
         }
         .padding(.horizontal, AtlasSpacing.lg)
         .padding(.vertical, AtlasSpacing.sm)
+    }
+
+    /// A saved place. Same 56 pt leading square + two-line stack as the maker
+    /// row above, so the two groups read as one list rather than two designs.
+    private func placeRow(_ place: Place) -> some View {
+        HStack(alignment: .center, spacing: AtlasSpacing.md) {
+            HeroImageView(
+                imageName: placeCoverImageName(place) ?? "",
+                height: 56,
+                cornerRadius: AtlasSpacing.xs,
+                category: placeCoverCategory(place)
+            )
+            .frame(width: 56)
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                Text(place.name)
+                    .font(AtlasTypography.body)
+                    .textCase(.uppercase)
+                    .foregroundStyle(AtlasColors.primaryText)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+
+                Text(placeSubtitle(place))
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .lineLimit(1)
+            }
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+        }
+        .padding(.horizontal, AtlasSpacing.lg)
+        .padding(.vertical, AtlasSpacing.sm)
+    }
+
+    /// Falls back to the top-ranked tour's hero, exactly as the place page
+    /// does, so a place with no editorial photograph still shows a picture.
+    private func placeCoverImageName(_ place: Place) -> String? {
+        place.heroImageURL ?? dataService.rankedTours(at: place).first?.heroImageURL
+    }
+
+    private func placeCoverCategory(_ place: Place) -> TourCategory? {
+        dataService.rankedTours(at: place).first?.primaryCategory
+    }
+
+    private func placeSubtitle(_ place: Place) -> String {
+        let count = dataService.rankedTours(at: place).count
+        let tourWord = count == 1 ? "tour" : "tours"
+        return [place.city, "\(count) \(tourWord)"].compactMap { $0 }.joined(separator: " · ")
     }
 
     // MARK: - Derived

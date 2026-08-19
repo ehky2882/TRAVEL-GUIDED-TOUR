@@ -54,6 +54,31 @@ def text_array(values):
     return f"ARRAY[{inner}]::text[]"
 
 
+def validate_places(data):
+    """Places are optional; when present their membership must resolve.
+
+    Identity is exact-coordinate equality (owner decision 2026-08-18), which
+    the Swift validator enforces. Here we only guard what the SQL cannot: a
+    tourId that names no tour would produce an update touching zero rows and
+    a place that silently loses a member.
+    """
+    places = data.get("places") or []
+    tour_ids = {t["id"] for t in data["tours"]}
+    seen = {}
+    for p in places:
+        if len(p.get("tourIds") or []) < 2:
+            raise SystemExit(f"ERROR: place '{p.get('name')}' has fewer than 2 tours")
+        for tid in p["tourIds"]:
+            if tid not in tour_ids:
+                raise SystemExit(f"ERROR: place '{p['name']}' references unknown tour {tid}")
+            if tid in seen:
+                raise SystemExit(
+                    f"ERROR: tour {tid} is claimed by both '{seen[tid]}' and '{p['name']}'"
+                )
+            seen[tid] = p["name"]
+    return places
+
+
 def validate(data):
     errors = []
     maker_ids = {m["id"] for m in data["makers"]}
@@ -74,6 +99,7 @@ def validate(data):
 
 def emit(data, out):
     makers, tours = data["makers"], data["tours"]
+    places = validate_places(data)
     stop_count = sum(len(t["stops"]) for t in tours)
 
     w = out.write
@@ -99,6 +125,33 @@ def emit(data, out):
     # maker in the app, not carried in Tours.json — so a content re-seed must
     # leave an existing tour's price untouched, and a brand-new tour defaults
     # to NULL (= free). Do not add it here.
+    # Places come before tours: tours.place_id references them.
+    #
+    # NOTE the reset below. place_id lives on the tour row, so a tour that
+    # LEAVES a place has to be actively cleared — an upsert alone would leave
+    # the stale link in place and the tour would keep appearing on a place page
+    # it no longer belongs to. Membership is re-derived from the catalog on
+    # every seed, so clearing first is the only way it can shrink.
+    if places:
+        w("\n-- places\n")
+        for p in places:
+            w(
+                "insert into public.places "
+                "(id, name, description, latitude, longitude, city, address, "
+                "hero_image_url, additional_image_urls) "
+                f"values ({q(p['id'])}, {q(p['name'])}, {q(p.get('description'))}, "
+                f"{p['latitude']}, {p['longitude']}, {q(p.get('city'))}, "
+                f"{q(p.get('address'))}, {q(p.get('heroImageURL'))}, "
+                f"{text_array(p.get('additionalImageURLs'))}) "
+                "on conflict (id) do update set "
+                "name = excluded.name, description = excluded.description, "
+                "latitude = excluded.latitude, longitude = excluded.longitude, "
+                "city = excluded.city, address = excluded.address, "
+                "hero_image_url = excluded.hero_image_url, "
+                "additional_image_urls = excluded.additional_image_urls, "
+                "updated_at = now();\n"
+            )
+
     w("\n-- tours\n")
     for t in tours:
         w(
@@ -130,6 +183,18 @@ def emit(data, out):
             "price_usd = excluded.price_usd, updated_at = now();\n"
         )
 
+    # Membership, re-derived from the catalog on every seed.
+    #
+    # ⚠️ The reset is load-bearing. place_id lives on the TOUR row, so a tour
+    # that leaves a place has to be actively cleared — an upsert alone leaves
+    # the stale link behind and the tour keeps showing on a place page it no
+    # longer belongs to. Clearing first is the only way membership can shrink.
+    w("\n-- place membership\n")
+    w("update public.tours set place_id = null where place_id is not null;\n")
+    for p in places:
+        ids = ", ".join(q(t) for t in p["tourIds"])
+        w(f"update public.tours set place_id = {q(p['id'])} where id in ({ids});\n")
+
     w("\n-- stops (clear then re-insert per tour, in order)\n")
     for t in tours:
         w(f"delete from public.stops where tour_id = {q(t['id'])};\n")
@@ -157,7 +222,8 @@ def emit(data, out):
 
     w("\ncommit;\n")
     sys.stderr.write(
-        f"OK: emitted seed for {len(makers)} makers / {len(tours)} tours / {stop_count} stops\n"
+        f"OK: emitted seed for {len(makers)} makers / {len(tours)} tours / "
+        f"{stop_count} stops / {len(places)} places\n"
     )
 
 

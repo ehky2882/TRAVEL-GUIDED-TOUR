@@ -1,0 +1,102 @@
+# Send already-approved screenshots to App Store Connect. Nothing else.
+#
+# WHAT THIS DOES (plain English): takes the pictures from a screenshot run you
+# have already looked at and approved, and puts them on your App Store page.
+#
+# ⚠️ IT DOES NOT SUBMIT ANYTHING FOR REVIEW. It replaces the screenshots on the
+# editable version record and stops. The listing stays a draft you can keep
+# editing. Submitting is `release.yml`, which makes you type RELEASE first.
+#
+# ⚠️ IT UPLOADS THE IMAGES FROM A RUN YOU NAME — it does not take new ones.
+# That is the point: the whole reason screenshots get reviewed by a human is so
+# that what ships is what was approved. Re-capturing here would upload pictures
+# nobody has seen, which differ from the approved set in map tiles, playback
+# position and image load timing. Pass the run id you approved.
+#
+# The upload itself lives in fastlane/Fastfile (the `upload_screenshots` lane).
+
+name: Upload screenshots to App Store Connect
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "Run ID of the 'App Store screenshots' run whose images you approved"
+        required: true
+        type: string
+
+concurrency:
+  group: upload-screenshots
+  cancel-in-progress: false   # never interrupt a half-finished upload
+
+jobs:
+  upload:
+    runs-on: macos-26
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      actions: read           # needed to read the artifact off the other run
+    env:
+      APP_STORE_CONNECT_KEY_ID: ${{ secrets.APP_STORE_CONNECT_KEY_ID }}
+      APP_STORE_CONNECT_ISSUER_ID: ${{ secrets.APP_STORE_CONNECT_ISSUER_ID }}
+      APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+      FASTLANE_SKIP_UPDATE_CHECK: "1"
+      FASTLANE_OPT_OUT_USAGE: "1"
+      FASTLANE_DISABLE_COLORS: "1"
+      LANG: en_US.UTF-8
+      LC_ALL: en_US.UTF-8
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Check credentials are configured
+        run: |
+          if [ -z "$APP_STORE_CONNECT_KEY_ID" ] || [ -z "$APP_STORE_CONNECT_ISSUER_ID" ] || [ -z "$APP_STORE_CONNECT_API_KEY" ]; then
+            echo "::error::App Store Connect secrets are not set. See docs/fastlane.md."
+            exit 1
+          fi
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      # The artifact's own layout is <locale>/<device>-<name>.png, which is
+      # exactly the shape deliver expects under fastlane/screenshots.
+      - name: Fetch the approved screenshots
+        uses: actions/download-artifact@v4
+        with:
+          name: app-store-screenshots
+          path: fastlane/screenshots
+          run-id: ${{ github.event.inputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Say out loud what is about to reach Apple. An upload that silently sent
+      # the wrong set — or none — is the failure this whole exercise came from.
+      - name: List exactly what will be uploaded
+        run: |
+          COUNT=$(find fastlane/screenshots -name '*.png' | wc -l | tr -d ' ')
+          if [ "$COUNT" = "0" ]; then
+            echo "::error::Run ${{ github.event.inputs.run_id }} produced no screenshots. Nothing has been sent to Apple."
+            exit 1
+          fi
+          {
+            echo "## Uploading ${COUNT} screenshot(s)"
+            echo ""
+            echo "From run [${{ github.event.inputs.run_id }}](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.event.inputs.run_id }})."
+            echo ""
+            echo '```'
+            find fastlane/screenshots -name '*.png' | sort | sed 's|fastlane/screenshots/||'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          find fastlane/screenshots -name '*.png' | sort
+
+      - name: Upload to App Store Connect
+        run: bundle exec fastlane upload_screenshots
+
+      - name: Done
+        run: |
+          {
+            echo ""
+            echo "✅ Uploaded. Check them on the App Store Connect version page."
+            echo ""
+            echo "**Nothing was submitted for review.** The listing is still a draft."
+          } >> "$GITHUB_STEP_SUMMARY"

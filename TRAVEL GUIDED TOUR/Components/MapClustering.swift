@@ -33,12 +33,29 @@ enum MapClustering {
         let tourId: UUID
         let title: String
         let coordinate: CLLocationCoordinate2D
+        /// Set when this marker stands for a **place** — a site several tours
+        /// describe — rather than a single tour. The map draws a different pin
+        /// and a tap opens the place instead of a tour.
+        let placeId: UUID?
+        /// How many tours the place holds. Zero for an ordinary tour marker.
+        let placeTourCount: Int
 
-        init(id: UUID, tourId: UUID, title: String, coordinate: CLLocationCoordinate2D) {
+        var isPlace: Bool { placeId != nil }
+
+        init(
+            id: UUID,
+            tourId: UUID,
+            title: String,
+            coordinate: CLLocationCoordinate2D,
+            placeId: UUID? = nil,
+            placeTourCount: Int = 0
+        ) {
             self.id = id
             self.tourId = tourId
             self.title = title
             self.coordinate = coordinate
+            self.placeId = placeId
+            self.placeTourCount = placeTourCount
         }
 
         static func == (lhs: StopMarker, rhs: StopMarker) -> Bool { lhs.id == rhs.id }
@@ -262,6 +279,17 @@ enum MapClustering {
         // cluster's ID stable across recomputes: SwiftUI updates
         // the existing annotation in place instead of removing +
         // re-adding it.
+        // Places bucket like anything else. An earlier revision kept them out
+        // of clustering entirely, on the theory that a clustered place pin was
+        // unreachable — that was wrong. A place sits at a distinct coordinate
+        // from its neighbours (it REPLACES its own tours, so what surrounds it
+        // is other tours elsewhere), which means zooming separates it normally.
+        // The bug that theory was chasing turned out to be a dismissal/
+        // presentation problem in a covered window (#532), not clustering.
+        //
+        // Keeping them out also made the map lie: at continental zoom a lone
+        // "2" capsule floated beside a "100" cluster, reading as though a
+        // whole region held two tours.
         var buckets: [BucketKey: [StopMarker]] = [:]
         for marker in visibleMarkers {
             let row = Int(floor(marker.coordinate.latitude / cellSpanLat))
@@ -275,9 +303,14 @@ enum MapClustering {
             }
             let avgLat = stops.reduce(0) { $0 + $1.coordinate.latitude } / Double(stops.count)
             let avgLon = stops.reduce(0) { $0 + $1.coordinate.longitude } / Double(stops.count)
+            // Count TOURS, not markers. A place marker stands for every tour
+            // at that site, so counting it as 1 would under-report a region —
+            // the same dishonesty, in the other direction, as leaving places
+            // out of clustering altogether.
+            let tourCount = stops.reduce(0) { $0 + ($1.isPlace ? $1.placeTourCount : 1) }
             return ClusterItem(
                 coordinate: CLLocationCoordinate2D(latitude: avgLat, longitude: avgLon),
-                kind: .cluster(count: stops.count, stops: stops),
+                kind: .cluster(count: tourCount, stops: stops),
                 bucketKey: key
             )
         }

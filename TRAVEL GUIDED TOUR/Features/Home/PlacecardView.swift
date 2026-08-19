@@ -82,15 +82,97 @@ struct PlacecardView: View {
 
                 Spacer(minLength: 0)
             }
+            .placecardChrome()
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("\(tour.title)\(maker.map { ", by \($0.displayName)" } ?? "")")
+        .accessibilityHint("Open tour details")
+    }
+}
+
+// MARK: - Shared chrome
+
+/// The card surface itself. Extracted so the tour card and the place card
+/// cannot drift apart — they sit side by side on the same map and any
+/// difference in padding, radius or shadow would read as a bug.
+private struct PlacecardChrome: ViewModifier {
+    func body(content: Content) -> some View {
+        content
             .padding(AtlasSpacing.sm)
             .background(
                 AtlasColors.secondaryBackground,
                 in: RoundedRectangle(cornerRadius: AtlasSpacing.cardCornerRadius)
             )
             .shadow(color: Color.black.opacity(0.18), radius: 6, y: 2)
+    }
+}
+
+private extension View {
+    func placecardChrome() -> some View { modifier(PlacecardChrome()) }
+}
+
+// MARK: - Place card
+
+/// The placecard for a **place** — a site several tours describe.
+///
+/// Identical to the tour card except on one line: where a tour names its
+/// maker, a place reports **"N tours available"** in brass. That substitution
+/// is the whole pattern. It sits on the line the eye already goes to for
+/// "what is this", and brass because it is the actionable fact on the card —
+/// the reason to tap through rather than a label.
+struct PlacePlacecardView: View {
+    let place: Place
+    /// Already resolved by the caller: the place's editorial hero when it has
+    /// one, otherwise the hero of its top-ranked tour. A place is never
+    /// blocked on new photography being sourced.
+    let heroImageURL: String
+    /// Drives the placeholder when the image can't load.
+    let category: TourCategory
+    let tourCount: Int
+    let distanceText: String?
+    let onTap: () -> Void
+
+    var body: some View {
+        Button(action: onTap) {
+            HStack(spacing: AtlasSpacing.sm) {
+                HeroImageView(
+                    imageName: heroImageURL,
+                    height: 64,
+                    cornerRadius: AtlasSpacing.xs,
+                    category: category
+                )
+                .frame(width: 64)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(place.name.uppercased())
+                        .font(AtlasTypography.body)
+                        .foregroundStyle(AtlasColors.primaryText)
+                        .lineLimit(2)
+                        .multilineTextAlignment(.leading)
+
+                    Text("\(tourCount) tours available")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.accent)
+                        .lineLimit(1)
+
+                    if let distanceText {
+                        Text(distanceText)
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(AtlasColors.secondaryText)
+                            .lineLimit(1)
+                    }
+                }
+
+                Spacer(minLength: 0)
+
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 15, weight: .regular))
+                    .foregroundStyle(AtlasColors.tertiaryText)
+            }
+            .placecardChrome()
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("\(tour.title)\(maker.map { ", by \($0.displayName)" } ?? "")")
-        .accessibilityHint("Open tour details")
+        .accessibilityLabel("\(place.name), \(tourCount) tours available")
+        .accessibilityHint("Open this place")
     }
 }

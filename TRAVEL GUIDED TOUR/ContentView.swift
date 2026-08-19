@@ -24,12 +24,14 @@ struct ContentView: View {
     @Environment(AudioPlayerService.self) private var audioPlayer
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
+    @Environment(SavedPlacesStore.self) private var savedPlacesStore
     @Environment(RecentlyViewedStore.self) private var recentlyViewedStore
     @Environment(ProximityMonitor.self) private var proximityMonitor
     @Environment(TourDownloader.self) private var tourDownloader
     @Environment(AppSharedState.self) private var appShared
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(MakerPresenter.self) private var makerPresenter
+    @Environment(PlacePresenter.self) private var placePresenter
     @Environment(FollowService.self) private var followService
     @Environment(PurchaseService.self) private var purchaseService
     @Environment(AuthService.self) private var authService
@@ -83,6 +85,14 @@ struct ContentView: View {
     /// controller tracks its own presented VC). Gives makers the same
     /// treatment tours get, replacing the earlier `.sheet` stopgap.
     @State private var makerLayer = BottomLayerController(
+        bottomInset: AtlasBottomModule.height()
+    )
+
+    /// Third slide-up layer, for a PLACE — a site several tours describe.
+    /// Its own controller for the same reason the maker layer has one: a tour
+    /// tapped inside a place page has to stack over it, and each controller
+    /// tracks its own presented VC.
+    @State private var placeLayer = BottomLayerController(
         bottomInset: AtlasBottomModule.height()
     )
 
@@ -179,6 +189,35 @@ struct ContentView: View {
             didRequestLocationPermission = true
             locationManager.requestPermission()
         }
+        // 🔴 Give each presenter a DIRECT route to take its layer down.
+        //
+        // The `.onChange` blocks below do the presenting and dismissing, and
+        // they run in THIS view — which lives in the main window. While a
+        // layer is up that window is fully covered by a UIKit modal, and
+        // SwiftUI can stop delivering updates to a covered hierarchy: a
+        // `dismiss()` writes its state and the observer never runs, so the
+        // control does nothing at all. That is what made the X on tour detail
+        // and the bottom tab bar both stop working once you had been into a
+        // creator page and back, and it is the same root cause as the dead
+        // place pin (#532) and the dead tab bar of session 74.
+        //
+        // Dismissal needs no view construction, so it can be performed
+        // directly and does not have to wait on an observer. Presentation
+        // still goes through `.onChange` because the environment injection
+        // below has to happen here — a place tapped from inside a layer
+        // therefore still pushes in-stack rather than presenting (see
+        // `MakerView.openPlaceFromMap`).
+        //
+        // The `.onChange` else-branches stay as a backstop; both paths are
+        // idempotent, because `BottomLayerController.dismiss` no-ops when
+        // nothing is presented.
+        .onAppear {
+            tourPresenter.performDismiss = {
+                bottomLayer.dismiss { tourLayerCoversDrawer = false }
+            }
+            makerPresenter.performDismiss = { makerLayer.dismiss() }
+            placePresenter.performDismiss = { placeLayer.dismiss() }
+        }
         // Paid tours: keep entitlements in step with whoever is signed in.
         // Keyed on `userId` so it re-runs on sign-in, sign-out AND an account
         // switch — the last of which must never leave one account holding the
@@ -257,10 +296,19 @@ struct ContentView: View {
                     .environment(navState)
                     .environment(homeSharedState)
                     .environment(tourPresenter)
+                    // MakerView is pushed in-stack from tour detail, and its
+                    // MAP tab draws place pins. Without this the presenter is
+                    // nil there and tapping a place pin does nothing at all —
+                    // silently, because the lookup is optional to keep this
+                    // layer from crashing. Same shape as the batch-D Follow
+                    // button that went missing for exactly one dropped
+                    // injection (build 68 → 69).
+                    .environment(placePresenter)
                     .environment(dataService)
                     .environment(locationManager)
                     .environment(audioPlayer)
                     .environment(libraryStore)
+                    .environment(savedPlacesStore)
                     .environment(recentlyViewedStore)
                     .environment(proximityMonitor)
                     .environment(tourDownloader)
@@ -290,6 +338,40 @@ struct ContentView: View {
         // (there's no back stack to pop). A tour tapped inside slides up
         // over it (topmost-VC presentation); the environment is re-injected
         // here since the UIKit layer doesn't inherit the SwiftUI chain.
+        // The place layer: a site several tours describe, reached by tapping a
+        // place pin. Same slide-up treatment as tours and makers so it isn't
+        // the one screen in the app that behaves differently. The environment
+        // is re-injected because the UIKit layer doesn't inherit the SwiftUI
+        // chain.
+        .onChange(of: placePresenter.presentedPlace?.id) { _, _ in
+            if let place = placePresenter.presentedPlace {
+                placeLayer.present(
+                    PlaceView(place: place, onDismiss: { placePresenter.dismiss() })
+                        .environment(navState)
+                        .environment(homeSharedState)
+                        .environment(tourPresenter)
+                        .environment(makerPresenter)
+                        .environment(placePresenter)
+                        .environment(dataService)
+                        .environment(locationManager)
+                        .environment(audioPlayer)
+                        .environment(libraryStore)
+                        .environment(savedPlacesStore)
+                        .environment(recentlyViewedStore)
+                        .environment(proximityMonitor)
+                        .environment(tourDownloader)
+                        .environment(appShared)
+                        .environment(followService)
+                        .environment(authService)
+                        .environment(purchaseService)
+                        .environment(listService)
+                        .environment(groupListen),
+                    onDismiss: { placePresenter.dismiss() }
+                )
+            } else {
+                placeLayer.dismiss()
+            }
+        }
         .onChange(of: makerPresenter.presentedMaker?.id) { _, _ in
             if let maker = makerPresenter.presentedMaker {
                 makerLayer.present(
@@ -300,10 +382,12 @@ struct ContentView: View {
                     .environment(homeSharedState)
                     .environment(tourPresenter)
                     .environment(makerPresenter)
+                    .environment(placePresenter)
                     .environment(dataService)
                     .environment(locationManager)
                     .environment(audioPlayer)
                     .environment(libraryStore)
+                    .environment(savedPlacesStore)
                     .environment(recentlyViewedStore)
                     .environment(proximityMonitor)
                     .environment(tourDownloader)

@@ -140,6 +140,14 @@ platform :ios do
     # certificates". Distribution certificates are never touched.
     # Best-effort: an Apple API hiccup here must not block a build.
     begin
+      # 🔴 key_path FIRST. The script authenticates by reading the .p8 from
+      # ~/private_keys, and key_path is what writes it there — but key_path is
+      # lazy, first reached from signing_args INSIDE build_ipa. Called in the
+      # other order the script exits immediately with "No key file at ...",
+      # the rescue below logs it as a warning, no slots are freed, and the
+      # archive then dies at "maximum number of certificates" — which is the
+      # exact failure this call exists to prevent. Build 67 failed this way.
+      key_path
       sh("python3", "../scripts/revoke-dev-certs.py")
     rescue StandardError => e
       UI.important("Could not free certificate slots (continuing anyway): #{e.message}")
@@ -206,7 +214,14 @@ platform :ios do
       skip_binary_upload: true,
       skip_metadata: true,
       overwrite_screenshots: true,
-      force: true,
+      # This lane uploads PICTURES. Without this flag deliver would also write
+      # the project's version number onto whatever version record is currently
+      # editable in App Store Connect (see docs/launch-runbook.md Step 3).
+      # Uploading images must never move the listing to a different version.
+      # Do not re-justify this flag by claiming the two numbers agree today —
+      # they have drifted apart before and the flag is what makes it not matter.
+      skip_app_version_update: true,
+      force: true, # do not open an HTML preview and wait for a keypress
       precheck_include_in_app_purchases: false
     )
   end
@@ -222,6 +237,14 @@ platform :ios do
     ensure_git_branch(branch: "main")
 
     begin
+      # 🔴 key_path FIRST. The script authenticates by reading the .p8 from
+      # ~/private_keys, and key_path is what writes it there — but key_path is
+      # lazy, first reached from signing_args INSIDE build_ipa. Called in the
+      # other order the script exits immediately with "No key file at ...",
+      # the rescue below logs it as a warning, no slots are freed, and the
+      # archive then dies at "maximum number of certificates" — which is the
+      # exact failure this call exists to prevent. Build 67 failed this way.
+      key_path
       sh("python3", "../scripts/revoke-dev-certs.py")
     rescue StandardError => e
       UI.important("Could not free certificate slots (continuing anyway): #{e.message}")
@@ -238,7 +261,20 @@ platform :ios do
       phased_release: true,
       # You press the final "release" button yourself once review passes.
       automatic_release: false,
-      overwrite_screenshots: true,
+      # DO NOT let this lane touch screenshots. It used to pass
+      # overwrite_screenshots: true, which means "delete every screenshot on
+      # the listing, then upload the ones in fastlane/screenshots" — and that
+      # directory is EMPTY here. Screenshots are gitignored on purpose (large
+      # binaries, regenerated on demand), so a fresh CI checkout has none. The
+      # delete would have happened, the upload would have had nothing to send,
+      # and the listing would have gone in front of Apple with no screenshots
+      # at all — at the exact moment of submission, the worst possible time to
+      # find out.
+      #
+      # Screenshots reach Apple through .github/workflows/upload-screenshots.yml,
+      # which uploads a set a human has actually looked at. Take them there and
+      # verify them on the version page BEFORE running this lane.
+      skip_screenshots: true,
       force: true,
       precheck_include_in_app_purchases: false,
       submission_information: {

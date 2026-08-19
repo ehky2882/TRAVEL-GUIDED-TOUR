@@ -9,6 +9,8 @@ enum DeepLink: Equatable {
     /// — RLS returns nothing for an Only-me list, so a link to one opens the
     /// app and finds nothing, which is the correct outcome.
     case list(UUID)
+    /// A place — the site page listing every tour about one location.
+    case place(UUID)
     /// Join a Group Listen session by its short code. Carried by the QR code a
     /// leader shows, so a joiner can scan instead of typing five characters.
     /// No tour id is needed — the leader broadcasts which tour the group is on.
@@ -32,6 +34,10 @@ enum DeepLink: Equatable {
 ///   - `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/l/?id=<uuid>`
 ///   - `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/l/<uuid>`
 ///   - `dozent://list/<uuid>` · `dozent://list?id=<uuid>`
+///   Places:
+///   - `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/p/?id=<uuid>`
+///   - `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/p/<uuid>`
+///   - `dozent://place/<uuid>` · `dozent://place?id=<uuid>`
 ///
 /// Everything else returns `nil`. Notably `dozent://login-callback` (Google
 /// OAuth) is ignored: it never reaches app URL handling in the first place —
@@ -44,6 +50,8 @@ enum DeepLinkParser {
     static let makerPathMarker = "m"
     /// Web path segment marking a shared list.
     static let listPathMarker = "l"
+    /// Web path segment marking a place share link.
+    static let placePathMarker = "p"
     /// Web path segment marking a Group Listen join link (QR codes).
     static let groupPathMarker = "g"
 
@@ -63,6 +71,9 @@ enum DeepLinkParser {
             if segments.contains(listPathMarker) {
                 return id(in: url, marker: listPathMarker).map(DeepLink.list)
             }
+            if segments.contains(placePathMarker) {
+                return id(in: url, marker: placePathMarker).map(DeepLink.place)
+            }
             if segments.contains(groupPathMarker) {
                 return groupCode(in: url, marker: groupPathMarker).map(DeepLink.group)
             }
@@ -73,6 +84,7 @@ enum DeepLinkParser {
             case "tour":  return id(in: url, marker: tourPathMarker).map(DeepLink.tour)
             case "maker": return id(in: url, marker: makerPathMarker).map(DeepLink.maker)
             case "list":  return id(in: url, marker: listPathMarker).map(DeepLink.list)
+            case "place": return id(in: url, marker: placePathMarker).map(DeepLink.place)
             case "group": return groupCode(in: url, marker: groupPathMarker).map(DeepLink.group)
             default:      return nil
             }
@@ -172,6 +184,15 @@ enum AtlasShareLink {
 
     static func listURL(for list: TourList) -> URL {
         listURL(id: list.id)
+    }
+
+    /// `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/p/?id=<uuid>`.
+    static func placeURL(id: UUID) -> URL {
+        shareURL(marker: DeepLinkParser.placePathMarker, id: id)
+    }
+
+    static func placeURL(for place: Place) -> URL {
+        placeURL(id: place.id)
     }
 
     /// `https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/g/?code=K7QP2` — the payload

@@ -20,8 +20,9 @@ of it waiting for Apple. Review itself is usually 24–48 hours.
 - **The App Store listing is already updated and live** (pushed 2026-08-07):
   description, keywords, subtitle, promotional text and support URL all match
   `fastlane/metadata/`. Steps 10–11 below are done.
-- App Store Connect already holds an editable **version 1.0** in *Prepare for
-  Submission*, and the store name is **Atlas Audio Tours**.
+- App Store Connect already holds an editable version record in *Prepare for
+  Submission* — **1.1**, matching the project, as of 2026-08-18 (see Step 3).
+  The app's name at Apple is **Dozent**.
 - Screenshots can be captured automatically.
 - The release submission is one button with a safety catch on it.
 
@@ -200,6 +201,17 @@ route through the app is code and can be changed.
 
 **Who:** Claude, once you have said they are good.
 
+GitHub → **Actions** → **Upload screenshots to App Store Connect** → **Run
+workflow**, giving it the run ID of the screenshot run you approved. It sends
+those exact images and **submits nothing for review**.
+
+⚠️ **A green run is not proof.** On 2026-08-17 the upload reported
+"Successfully uploaded all screenshots" and left the listing holding **ten**
+images, four of them duplicates: Apple had not finished processing the first
+upload when fastlane re-checked, so it re-sent the four it thought were
+missing. Claude must query App Store Connect afterwards and confirm the exact
+set — see § "App Store screenshots" in `CLAUDE.md` for how.
+
 ---
 
 ## Phase E — The listing
@@ -323,9 +335,28 @@ Run down this list. Everything must be a yes:
 
 **Who:** Claude, on your explicit go-ahead.
 
+**Before you run it:** confirm the version page shows the screenshots you
+approved, and only those. This lane **does not upload or repair screenshots** —
+Step 9 is the only thing that puts them there. Whatever the listing holds at
+this moment is what Apple sees.
+
 GitHub → **Actions** → **App Store release** → **Run workflow**, typing
 `RELEASE` in the confirmation box. It refuses to run from any branch but `main`,
 and refuses to run at all if the confirmation does not match exactly.
+
+⚠️ **This lane used to destroy the screenshots at the moment of submission.**
+It passed `overwrite_screenshots: true` — "delete every screenshot on the
+listing, then upload the ones in `fastlane/screenshots`" — against a directory
+that is empty in a fresh CI checkout, because screenshots are gitignored on
+purpose. The delete would have run; the upload would have had nothing to send.
+Fixed on 2026-08-18: the lane now passes `skip_screenshots: true` and leaves
+them alone. Do not reintroduce `overwrite_screenshots` here.
+
+The **App Review contact details** are safe by contrast, and this was checked
+rather than assumed: deliver only writes review-information fields it has a
+non-empty value for, so the reviewer phone number you typed into App Store
+Connect by hand survives this lane even though it is deliberately absent from
+the repo (Step 12).
 
 **You know it worked when:** App Store Connect shows the version as *Waiting for
 Review*.

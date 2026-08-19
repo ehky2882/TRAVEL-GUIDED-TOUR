@@ -258,6 +258,7 @@ struct TourDetailView: View {
                         .padding(.vertical, AtlasSpacing.sm)
                     descriptionSection
                     stopsSection
+                    placeSection
                     nearbyToursSection
                 }
                 .padding(.horizontal, AtlasSpacing.lg)
@@ -903,13 +904,70 @@ struct TourDetailView: View {
     /// distance), excluding self. `dataService.toursNearby` returns
     /// the current tour first (distance 0 to itself), so we ask for
     /// 6 then drop self.
+    /// The site this tour describes, when more than one tour describes it.
+    /// `nil` for the overwhelming majority of tours, which stand alone.
+    private var place: Place? {
+        dataService.place(forTourId: tour.id)
+    }
+
+    /// The *other* tours at this place, in the place page's own order.
+    private var siblingTours: [Tour] {
+        guard let place else { return [] }
+        return dataService.rankedTours(at: place).filter { $0.id != tour.id }
+    }
+
+    /// "Also at Dorchester Square" — the tours that share this exact site.
+    ///
+    /// Closes a real gap. Two tours can sit on one coordinate (a walk that
+    /// begins at a landmark, and the single-stop tour about that landmark),
+    /// and before the place layer the map collapsed them into a pin that
+    /// could not be opened at all. The place page fixed reaching them *from
+    /// the map*; this fixes reaching them from **inside a tour**, which is
+    /// where most people actually arrive.
+    ///
+    /// Deliberately pushes in-stack rather than opening the place layer:
+    /// the maker page does the same from here, because stacking a second
+    /// slide-up layer over the tour layer is a bigger change than the
+    /// destination warrants. X still closes the whole thing; back pops one.
+    @ViewBuilder
+    private var placeSection: some View {
+        let siblings = siblingTours
+        if let place, !siblings.isEmpty {
+            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+                Text("Also at \(place.name)")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                    .padding(.top, AtlasSpacing.md)
+
+                LazyVStack(alignment: .leading, spacing: 0) {
+                    ForEach(siblings) { other in
+                        NavigationLink {
+                            TourDetailView(tour: other)
+                        } label: {
+                            nearbyTourRow(other)
+                        }
+                        .buttonStyle(.plain)
+
+                        if other.id != siblings.last?.id {
+                            Divider()
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     private var nearbyTours: [Tour] {
         let here = CLLocation(
             latitude: tour.centroidLatitude,
             longitude: tour.centroidLongitude
         )
-        return dataService.toursNearby(here, limit: 6)
-            .filter { $0.id != tour.id }
+        // Anything already listed under "Also at …" is excluded, or a tour
+        // sharing this exact coordinate would appear twice on one screen —
+        // it is by definition the nearest thing there is.
+        let alreadyShown = Set(siblingTours.map(\.id))
+        return dataService.toursNearby(here, limit: 8)
+            .filter { $0.id != tour.id && !alreadyShown.contains($0.id) }
             .prefix(5)
             .map { $0 }
     }

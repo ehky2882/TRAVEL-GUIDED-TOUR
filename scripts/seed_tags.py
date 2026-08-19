@@ -73,7 +73,11 @@ VOCAB = {
    "Jørn Utzon", "Joseph Reed", "Roy Grounds", "Marc Newson", "Studio KO",
    "Mario Botta", "Jun Aoki", "Rocco Yim", "Bing Thom", "Philippe Starck",
    "Gustave Eiffel", "Rem Koolhaas", "Dominique Perrault",
-   "Hiroshi Sambuichi"],
+   "Hiroshi Sambuichi",
+   "Antoni Gaudí", "Lluís Domènech i Montaner",
+   "Josep Puig i Cadafalch", "Ricardo Bofill",
+   "Enric Sagnier", "Josep Fontserè",
+   "Antoni Bonet i Castellana", "Josep Maria Subirachs"],
 }
 
 # old primaryCategory -> (lead theme, default place-type hint)
@@ -178,7 +182,15 @@ ARCH_KW = {
  "Rocco Yim":["rocco yim"], "Bing Thom":["bing thom"],
  "Philippe Starck":["philippe starck","starck"], "Gustave Eiffel":["gustave eiffel"],
  "Rem Koolhaas":["koolhaas"], "Dominique Perrault":["dominique perrault"],
- "Hiroshi Sambuichi":["sambuichi"]}
+ "Hiroshi Sambuichi":["sambuichi"],
+ "Antoni Gaudí":["antoni gaudí", "antoni gaudi", "gaudí", "gaudi"],
+ "Lluís Domènech i Montaner":["domènech i montaner", "domenech i montaner"],
+ "Josep Puig i Cadafalch":["puig i cadafalch"],
+ "Ricardo Bofill":["ricardo bofill", "bofill"],
+ "Enric Sagnier":["enric sagnier", "sagnier"],
+ "Josep Fontserè":["josep fontserè", "fontserè", "fontsere"],
+ "Antoni Bonet i Castellana":["bonet i castellana"],
+ "Josep Maria Subirachs":["subirachs"]}
 
 
 def text(t, longd=True):

@@ -26,6 +26,92 @@ final class MapClusteringSeparationTests: XCTestCase {
         )
     }
 
+    private func placeMarker(
+        _ latitude: Double,
+        _ longitude: Double,
+        tours: Int = 2
+    ) -> MapClustering.StopMarker {
+        let placeId = UUID()
+        return MapClustering.StopMarker(
+            id: placeId,
+            tourId: UUID(),
+            title: "Dorchester Square",
+            coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
+            placeId: placeId,
+            placeTourCount: tours
+        )
+    }
+
+    // MARK: - Places inside a cluster
+
+    /// 🔴 The map must not under-report a region. A place marker stands for
+    /// every tour at that site, so a cluster badge that counted it as one
+    /// marker would say "2" where four tours sit.
+    ///
+    /// An earlier revision kept places out of clustering altogether, which
+    /// made the same lie louder: at continental zoom a lone "2" capsule
+    /// floated beside a "100" cluster, reading as though a whole region held
+    /// two tours. Reported from a world-zoom screenshot.
+    func test_clusterCount_countsToursNotMarkers() {
+        let region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 45.50, longitude: -73.57),
+            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        )
+        // One place holding 2 tours, plus 2 ordinary tours, all in one cell.
+        // ⚠️ Keep these inside a single grid cell. Buckets are keyed off an
+        // ABSOLUTE (lat 0, lon 0) origin, so at this span the row boundary
+        // falls on lat 45.5 exactly — an earlier revision used 45.5001 for the
+        // third marker and it bucketed one row up, making this read 3.
+        let markers = [
+            placeMarker(45.4990, -73.5710, tours: 2),
+            marker(45.4992, -73.5712),
+            marker(45.4994, -73.5708)
+        ]
+        let items = MapClustering.cluster(markers: markers, in: region, cellsAcross: 12)
+
+        let counts = items.compactMap { item -> Int? in
+            if case .cluster(let count, _) = item.kind { return count }
+            return nil
+        }
+        XCTAssertEqual(counts, [4], "2 place tours + 2 ordinary tours = 4, not 3 markers")
+    }
+
+    /// A place still clusters like anything else. It sits at a distinct
+    /// coordinate from its neighbours — it REPLACES its own tours, so what
+    /// surrounds it is other tours elsewhere — which means zooming separates
+    /// it normally and it needs no exemption.
+    func test_placeMarker_clustersWithItsNeighbours() {
+        let region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 45.50, longitude: -73.57),
+            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        )
+        let markers = [
+            placeMarker(45.4997, -73.5710),
+            marker(45.4999, -73.5712)
+        ]
+        let items = MapClustering.cluster(markers: markers, in: region, cellsAcross: 12)
+        XCTAssertEqual(items.count, 1, "a place near another pin merges like any other marker")
+    }
+
+    /// …and zooming in pulls it back out as its own tappable capsule, which is
+    /// what makes clustering it safe.
+    func test_placeMarker_separatesOnceZoomedIn() {
+        let tight = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 45.4998, longitude: -73.5711),
+            span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)
+        )
+        let markers = [
+            placeMarker(45.4997, -73.5710),
+            marker(45.4999, -73.5712)
+        ]
+        let items = MapClustering.cluster(markers: markers, in: tight, cellsAcross: 12)
+        let places = items.compactMap { item -> MapClustering.StopMarker? in
+            if case .single(let m) = item.kind, m.isPlace { return m }
+            return nil
+        }
+        XCTAssertEqual(places.count, 1, "zoomed in, the place is its own pin again")
+    }
+
     // MARK: - canSeparateByZoom
 
     /// The real catalog case: a walk's intro stop wired at the exact

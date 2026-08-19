@@ -67,29 +67,80 @@ jobs:
 
       # gh-pages — the publish target. Full branch so the commit preserves
       # audio/, images/, privacy/, etc. (we only stage Tours.json).
-      - name: Checkout gh-pages
-        uses: actions/checkout@v6
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Copy Tours.json to gh-pages root
-        run: cp "main/TRAVEL GUIDED TOUR/Resources/Tours.json" gh-pages/Tours.json
-
-      # Commit + push only when the content actually changed — no empty commits.
-      - name: Commit and push if changed
-        working-directory: gh-pages
+      # ⚠️ DO NOT go back to `actions/checkout` + `git push` here.
+      #
+      # gh-pages carries every audio file and image in the catalog — 6,565
+      # files. Checking it out took 4m37s, and the push then died with
+      #     error: RPC failed; HTTP 500
+      #     send-pack: unexpected disconnect while reading sideband packet
+      # every time, silently leaving the mirror stale while the Supabase seed
+      # (the app's PRIMARY source) succeeded — so nothing looked broken until
+      # someone opened a share link, which reads this file.
+      #
+      # The Contents API updates one file without cloning anything, so the
+      # size of the branch stops mattering. Tours.json is ~7 MB, comfortably
+      # under the API's 100 MB limit but over the 1 MB limit of the *read*
+      # endpoint — hence fetching the existing blob SHA via the Git refs/trees
+      # API rather than `GET /contents`.
+      - name: Publish Tours.json to gh-pages via the Contents API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Tours.json
-          if git diff --cached --quiet; then
+          set -euo pipefail
+          SRC="main/TRAVEL GUIDED TOUR/Resources/Tours.json"
+
+          # The blob SHA git would compute for the new content, and the one
+          # gh-pages currently holds. Equal means there is nothing to publish.
+          NEW_SHA=$(git hash-object "$SRC")
+          # Root tree listing, not GET /contents: the contents endpoint refuses
+          # to return a blob over 1 MB and this catalog is ~7 MB. The root tree
+          # is a dozen entries whatever the branch weighs.
+          OLD_SHA=$(gh api "repos/$GITHUB_REPOSITORY/git/trees/gh-pages" \
+                      --jq '.tree[] | select(.path=="Tours.json") | .sha' 2>/dev/null || echo "")
+
+          if [ "$NEW_SHA" = "$OLD_SHA" ]; then
             echo "gh-pages Tours.json already matches main — nothing to publish."
             exit 0
           fi
-          git commit -m "chore(catalog): publish Tours.json to gh-pages [skip ci]"
-          git push origin gh-pages
+
+          # Built with python, NOT `jq --arg`: the base64 of a 7 MB catalog is
+          # ~10 MB, and a single argv entry that size blows past ARG_MAX.
+          OLD_SHA="$OLD_SHA" python3 - "$SRC" > /tmp/payload.json <<'PYEOF'
+          import base64, json, os, sys
+          src = sys.argv[1]
+          payload = {
+              "message": "chore(catalog): publish Tours.json to gh-pages [skip ci]",
+              "content": base64.b64encode(open(src, "rb").read()).decode(),
+              "branch": "gh-pages",
+          }
+          old = os.environ.get("OLD_SHA", "")
+          if old:                      # omitted entirely when creating the file
+              payload["sha"] = old
+          json.dump(payload, sys.stdout)
+          PYEOF
+
+          gh api -X PUT "repos/$GITHUB_REPOSITORY/contents/Tours.json" \
+            --input /tmp/payload.json --jq .commit.sha
+
           echo "Published Tours.json to gh-pages."
+
+      # Ask GitHub what it is actually serving, rather than trusting the step
+      # exiting 0 — the whole reason
+      # this job was rewritten is that a green-looking pipeline left a stale
+      # mirror for sixteen hours.
+      - name: Verify gh-pages now serves the same catalog
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          NEW_SHA=$(git hash-object "main/TRAVEL GUIDED TOUR/Resources/Tours.json")
+          LIVE_SHA=$(gh api "repos/$GITHUB_REPOSITORY/git/trees/gh-pages" \
+                       --jq '.tree[] | select(.path=="Tours.json") | .sha')
+          if [ "$NEW_SHA" != "$LIVE_SHA" ]; then
+            echo "::error::gh-pages Tours.json is $LIVE_SHA but main is $NEW_SHA — the mirror did not update."
+            exit 1
+          fi
+          echo "gh-pages mirror matches main ($LIVE_SHA)."
 
   # Upsert the same catalog into the live Supabase DB (the app's PRIMARY source
   # since PR #255). Independent of the gh-pages job above — runs in parallel and
