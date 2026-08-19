@@ -238,7 +238,6 @@ struct CreateTourWizardView: View {
         .safeAreaInset(edge: .bottom, spacing: 0) { footer }
     }
 
-    /// Five segments, one per step, filled up to where you are.
     /// Five segments, one per step — and on an existing tour they're the way
     /// you move around. Tapping one jumps straight there, so fixing a typo is
     /// a tap rather than a walk through four screens you didn't come for.
@@ -248,12 +247,12 @@ struct CreateTourWizardView: View {
         HStack(spacing: 5) {
             ForEach(TourWizardStep.allCases, id: \.rawValue) { s in
                 Button { jump(to: s) } label: {
-                    Capsule()
+                    Rectangle()
                         .fill(s.rawValue <= step.rawValue
                               ? AtlasColors.mapPin
-                              : AtlasColors.tertiaryText.opacity(0.3))
-                        .frame(height: 3)
-                        .padding(.vertical, 9)      // a 3pt bar is not a tap target
+                              : AtlasColors.divider)
+                        .frame(height: 0.5)
+                        .padding(.vertical, 10)     // a hairline is not a tap target
                         .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
@@ -320,12 +319,14 @@ struct CreateTourWizardView: View {
         }
         .padding(.horizontal, AtlasSpacing.lg)
         .padding(.top, AtlasSpacing.sm)
-        .padding(.bottom, AtlasSpacing.sm)
+        // The mini-player and tab bar live in a higher window, so the footer
+        // has to clear them itself — and the clearance must be *inside* the
+        // painted background, or the page scrolls visibly through it.
+        .padding(.bottom, AtlasSpacing.sm + AtlasBottomModule.height())
         .background(AtlasColors.secondaryBackground)
         .overlay(alignment: .top) {
             Rectangle().fill(AtlasColors.divider).frame(height: 0.5)
         }
-        .padding(.bottom, AtlasBottomModule.height())
     }
 
     private func pill(_ text: String, filled: Bool, busy: Bool = false) -> some View {
