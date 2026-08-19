@@ -63,7 +63,10 @@ written down to prevent. If the other 15 ever arrive they are a **second batch**
 All nine verified live (HTTP 200). **Ponce ships at hero + 1 only** — that is all its pool
 supported; backfill when Commons is reachable, its category holds 26 files.
 
-**⏳ 20 High Museum — hero is OWNER-PENDING.** `high-museum_2.webp` (the Meier porcelain
+**✅ 20 High Museum — hero is owner-supplied** (`high-museum_hero.webp`): the Meier volumes with
+the incised "High Museum of Art" lettering along the approach wall. `high-museum_2.webp` is the
+stock exterior (HGH2). Superseded note kept for context:
+**~~hero was OWNER-PENDING~~.** `high-museum_2.webp` (the Meier porcelain
 panels, the script's exact description) is staged in the **gallery** slot; the owner is
 supplying their own hero. Do not promote `_2` to hero — wait for it. Only one clean exterior
 existed in the whole stock pool; the rest were gallery interiors, which carry their own
