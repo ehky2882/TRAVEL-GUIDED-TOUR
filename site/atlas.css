@@ -35,9 +35,10 @@
   --bg: #ffffff;
   --bg-secondary: #f2f2f7;
 
-  /* Text — AtlasColors.primaryText / .secondaryText / .tertiaryText.
-     The secondary/tertiary values are iOS `secondaryLabel` and the
-     app's 0.6-opacity step down from it. */
+  /* Text. The site runs on ONE ink (owner, 2026-08-19: "flatten all font
+     colour") — the app's `AtlasColors.primaryText`. The secondary and
+     tertiary steps are kept named so the mapping to `AtlasColors` stays
+     legible, but nothing on the site reaches for them. */
   --ink: #000000;
   --ink-secondary: rgba(60, 60, 67, 0.6);
   --ink-tertiary: rgba(60, 60, 67, 0.36);
@@ -70,6 +71,21 @@
 
 * { box-sizing: border-box; }
 
+/* One size, one weight, one colour — everywhere.
+
+   This block is load-bearing, not tidiness. Browsers give every heading a
+   default `font-size` in `em` (h1 2em, h2 1.5em, h3 1.17em) and a default
+   `font-weight: bold`. Relying on inheritance from `body` does NOT override
+   them: an earlier revision dropped h2's explicit size and it silently
+   rendered at 19.5px — 1.5 x 13px — while every other line sat at 13px.
+   Declaring it here for every element means a new tag can never arrive
+   carrying a browser default nobody asked for. */
+body, body * {
+  font-size: var(--size-caption);
+  font-weight: 400;
+  color: var(--ink);
+}
+
 /* Everything is caption — SF Mono 13px — as the app's Player and Search
    surfaces are. Hierarchy comes from case, colour and tracking instead of
    size, which is how the app distinguishes a nav title from a section
@@ -92,48 +108,38 @@ body {
    caption size, tracked out to 6px, in brass — a logotype, not a label. */
 .brand {
   font-family: var(--font-serif);
-  font-size: var(--size-caption);
   letter-spacing: 6px;
   text-transform: uppercase;
   color: var(--brass);
   margin: 0 0 var(--xl);
 }
-.brand a { color: inherit; text-decoration: none; }
+.brand a { color: var(--brass); text-decoration: none; }
 
 /* Page title. The app's nav titles — Settings, Player, Search — are caption
-   ALL CAPS, so that is what a page title is here too. It reads as a title
-   because it is the only uppercase primary-coloured line above the fold. */
+   ALL CAPS, so that is what a page title is here too. With one size, one
+   weight and one colour across the page, tracking is the only thing left to
+   distinguish it, so it is tracked widest. */
 h1 {
-  font-size: var(--size-caption);
-  font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--ink);
   margin: 0 0 var(--sm);
 }
 
-/* Section headers, exactly as the app writes them everywhere —
-   GALLERY, FOLLOWERS, N TOURS IN VIEW: caption mono, uppercase,
-   secondary. This is the single strongest visual tie to the app. */
+/* Section headers — the app's convention everywhere it draws one (GALLERY,
+   FOLLOWERS, N TOURS IN VIEW): caption, uppercase. Separated from the body
+   copy beneath by case and by the generous space above, not by weight. */
 h2 {
-  font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink-secondary);
   margin: var(--xl) 0 var(--sm);
 }
 
-/* Sub-headers: same face and size, primary colour, no extra tracking —
-   which is what separates them from the secondary h2 above and the tracked
-   h1 at the top. */
+/* Sub-headers: uppercase like the two above, tracked least of the three. */
 h3 {
-  font-size: var(--size-caption);
-  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: var(--ink);
   margin: var(--lg) 0 var(--xs);
 }
 
@@ -141,14 +147,15 @@ p { margin: 0 0 var(--md); }
 ul { padding-left: var(--lg); margin: 0 0 var(--md); }
 li { margin-bottom: var(--xs); }
 
-a { color: var(--brass); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-
-/* Small auxiliary copy — effective dates, the footer. Same face and size
-   as everything else now; only the colour sets them back. */
-.meta,
-footer {
-  color: var(--ink-secondary);
+/* Links carry no colour of their own now — the underline is what marks
+   them. Kept thick enough and offset far enough to stay unmistakable. */
+a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
+
+/* Effective dates and the footer. Nothing sets them back any more —
+   position and the footer's rule do that work now. */
 
 .meta { margin: 0 0 var(--xl); }
 
@@ -160,10 +167,8 @@ footer {
   padding: var(--md);
   margin: var(--xl) 0;
 }
-.card strong { color: var(--ink); }
 
 .lede {
-  color: var(--ink-secondary);
   margin: 0 0 var(--xl);
 }
 
@@ -180,5 +185,4 @@ footer a {
 }
 footer .legal {
   margin: var(--md) 0 0;
-  color: var(--ink-tertiary);
 }

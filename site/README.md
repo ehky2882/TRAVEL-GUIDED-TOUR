@@ -19,9 +19,13 @@ so the website and the app read as one product:
 
   * **Everything is caption** — SF Mono at 13px (`AtlasTypography.caption`),
     the way the app's Player and Search surfaces are flattened to one token.
-    Hierarchy comes from case, colour and tracking rather than size: the page
-    title is uppercase primary and tracked wide, section headers are
-    uppercase secondary, sub-headers uppercase primary, prose sentence case.
+    **One size, one weight, one colour, no exceptions**: hierarchy is carried
+    entirely by case, tracking and spacing. The page title is tracked widest,
+    section headers less, sub-headers least, prose sentence case.
+  * The `body, body *` reset near the top is **load-bearing, not tidiness**.
+    Browsers give headings a default `em` font-size and `bold` weight, and
+    inheriting from `body` does not override them — an earlier revision
+    dropped h2's explicit size and it silently rendered at 19.5px. Leave it.
   * **The wordmark is the one exemption** (owner, 2026-08-19). It is New York
     serif at 13px tracked out to 6px in brass — exactly how the app draws
     DOZENT on the Settings masthead. It is a logotype, not a label.
