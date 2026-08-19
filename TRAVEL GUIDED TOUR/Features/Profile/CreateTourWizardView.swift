@@ -121,11 +121,13 @@ struct CreateTourWizardView: View {
             .inlineNavigationBarTitle()
             .toolbar { toolbarContent }
         }
-        // Swiping the sheet down is the same intent as tapping Close, so it
-        // gets the same question rather than silently discarding the work.
-        .onDismissAttempt(enabled: outcome == nil && hasUnsavedChanges && canPersist) {
-            confirming = .leaving
-        }
+        // Unsaved work can't be swiped away. SwiftUI's own modifier, applied
+        // in its update cycle — an earlier version of this reached into the
+        // sheet's presentation controller from a representable to *prompt* on
+        // the swipe, and setting `isModalInPresentation` from inside sheet
+        // layout re-triggered that layout, wedging the main thread until the
+        // watchdog killed the app. Close is where the question lives.
+        .interactiveDismissDisabled(outcome == nil && hasUnsavedChanges && canPersist)
         .confirmationDialog(confirmTitle, isPresented: confirmBinding,
                             titleVisibility: .visible) {
             switch confirming {
