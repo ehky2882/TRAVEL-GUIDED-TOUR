@@ -24,6 +24,14 @@ struct TourList: Identifiable, Hashable, Codable {
     /// an empty TourList. Defaults to `nil` so hand-built `TourList(...)` sites
     /// (e.g. `createList`) still compile.
     var firstTourId: UUID? = nil
+    /// The **auth account** that owns this list — not a maker id.
+    ///
+    /// Only needed for lists that aren't yours: a saved list has to say whose
+    /// it is, and the name comes from matching this against `Maker.userId` in
+    /// the loaded catalog (no extra query). Optional and defaulted so
+    /// `loadMyLists()` and hand-built lists don't have to supply it — for your
+    /// own lists it's you by definition.
+    var ownerUserId: UUID? = nil
 }
 
 /// One ordered entry in a TourList — a reference to a whole tour plus an
