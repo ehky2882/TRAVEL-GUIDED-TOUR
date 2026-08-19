@@ -72,6 +72,11 @@
      covers three. */
   --footer-h: 116px;
 
+  /* Height reserved at the head of every page for the fixed masthead —
+     16px + the wordmark's 15px/1.7 line box + 24px. Measured, not guessed;
+     re-measure if the wordmark's size, tracking or padding changes. */
+  --masthead-h: 66px;
+
   /* AtlasSpacing.searchBarHeight — the app's one control size, 44pt. It is
      also the diameter of the splash screen's pulsing mark. */
   --searchbar-height: 44px;
@@ -116,7 +121,7 @@ body, body * {
 body {
   max-width: 38rem;
   margin: 0 auto;
-  padding: 0 var(--lg) var(--footer-h);
+  padding: var(--masthead-h) var(--lg) var(--footer-h);
   font-family: var(--font-mono);
   font-size: var(--size-caption);
   line-height: 1.7;
@@ -139,17 +144,33 @@ body {
 
    Pinned to the top of the window, so it is always on screen. It keeps an
    opaque background because page content scrolls underneath it. */
+/* `fixed`, exactly like the footer, NOT `sticky`.
+
+   Sticky sticks to its SCROLLPORT, and this stylesheet makes `html` a scroll
+   container (`overflow-y: scroll`, for the gutter). On iOS that scrollport
+   does not track the visible top as the address bar collapses and expands,
+   so the bar drifts and a sliver of text shows above it — reported on a
+   phone twice, while the fixed footer on the same page was fine. Fixed
+   positions against the viewport and has no such gap.
+
+   Its height is reserved by the body's top padding via `--masthead-h`; the
+   same maintenance burden as the footer's, and the same rule applies —
+   change the padding or the wordmark and re-measure the token. */
 .brand {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 2;
+  width: 100%;
+  max-width: 38rem;
+  margin: 0 auto;
   background: var(--bg);
   font-family: var(--font-serif);
   font-size: var(--size-body);
   letter-spacing: 2px;
   color: var(--brass);
-  margin: 0;
-  padding: var(--md) 0 var(--lg);
+  padding: var(--md) var(--lg) var(--lg);
 
   /* The mirror of the footer's trick, and for the same reason: `top: 0` is
      rounded by fractional device pixel ratios and browser zoom, and on iOS a
