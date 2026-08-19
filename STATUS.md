@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-19 21:15 UTC
+**Last verified:** 2026-08-19 21:38 UTC
 
 ---
 
@@ -24,9 +24,9 @@ Code PRs cannot merge without a look on device (§ Merging PRs). This is the que
 
 | PR | What it is | Build to install | Also needs |
 |---|---|---|---|
-| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ⏳ **88 building** | A device pass — that is the only test |
+| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ✅ **88 — installable, untested** | A device pass — that is the only test |
 
-**Build 88 is in flight**, cut from `e810651`, the current PR head. It is the first build carrying
+**Build 88 is up and installable**, cut from `e810651` — the PR head exactly, so it is not stale. It is the first build carrying
 all three stacked fixes: the toolbar and its NavigationStack removed outright (`730b1af`), a 650 ms
 wait before `loadExistingTour` touches state (`a045a5aa`), and the load collapsed from four write
 batches into one with its fetches overlapped (`e810651`).
@@ -72,7 +72,7 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | ⏳ building — untested |
+| 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | ✅ built — **untested on device** |
 | 87 | `tour-upload-polish-qiliop` | #540 + a hang fix that did not work | 🔴 **still hangs** |
 | 84 | `tour-upload-polish-qiliop` | #540 wizard | 🔴 hangs on the edit path |
 | 83, 82 | `list-page-conformance` | #547 list page | ✅ **merged to main 18:47** |
