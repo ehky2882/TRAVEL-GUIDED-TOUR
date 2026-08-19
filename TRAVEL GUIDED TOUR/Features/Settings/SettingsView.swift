@@ -64,10 +64,18 @@ struct SettingsView: View {
                         //
                         // Keep this in step with SplashView and with
                         // `.brand` / `.splash-wordmark` in site/atlas.css.
+                        // `brass`, NOT `mapPin`/`accent`. Those are
+                        // `Color.accentColor`, which resolves the
+                        // environment's accent — and this List pins
+                        // `.tint(primaryText)` (see the bottom of `body`)
+                        // to stop the system auto-tinting every row icon
+                        // gold. That tint repainted the wordmark white
+                        // too, for months, while this line said `mapPin`.
+                        // The literal token is immune to it.
                         Text("Dozent")
                             .font(AtlasTypography.wordmark)
                             .tracking(2)
-                            .foregroundStyle(AtlasColors.mapPin)
+                            .foregroundStyle(AtlasColors.brass)
                         Text("Audio tours, anchored to places.")
                             .font(AtlasTypography.caption)
                             .foregroundStyle(AtlasColors.secondaryText)
@@ -267,6 +275,12 @@ struct SettingsView: View {
             // No accent gold on this surface: List auto-tints row icons +
             // button labels with the accent, so pin the tint to
             // primaryText instead.
+            //
+            // ⚠️ This also repaints anything on this screen that reads
+            // `AtlasColors.accent` / `.mapPin`, because both are
+            // `Color.accentColor` and resolve against the environment.
+            // Anything here that must stay brand-coloured has to use the
+            // literal `AtlasColors.brass` — the wordmark above does.
             .tint(AtlasColors.primaryText)
             .navigationTitle("Settings")
             .inlineNavigationBarTitle()
