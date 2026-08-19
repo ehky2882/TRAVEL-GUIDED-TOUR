@@ -214,7 +214,7 @@ struct PlayerView: View {
             heroImageURL: tour.heroImageURL,
             additionalImageURLs: tour.additionalImageURLs,
             videoURLs: tour.videoURLs,
-            height: AtlasSpacing.heroHeight,
+            height: nil,   // 4:3 — see AtlasSpacing.heroAspectRatio
             category: tour.primaryCategory
         )
         .padding(.horizontal, AtlasSpacing.lg)

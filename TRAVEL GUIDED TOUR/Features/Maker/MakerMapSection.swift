@@ -13,7 +13,7 @@ import SwiftUI
 /// behaviour can't drift between the two maps.
 ///
 /// **Treatment copied from `TourDetailView.mapContent`** (owner
-/// direction 2026-07-27): a pannable map at `AtlasSpacing.heroHeight`
+/// direction 2026-07-27): a pannable map at the shared hero ratio
 /// with square corners, living inside the page's scroll view. That
 /// screen has shipped this arrangement for months, and its horizontal
 /// inset is what makes it safe — the gutters either side of the map are
@@ -58,7 +58,7 @@ struct MakerMapSection: View {
 
     /// Cells across the visible region. Lower than the home map's 20
     /// because `cellsAcross` counts cells across the **region**, not the
-    /// screen: at `heroHeight` the same 20 cells would span far fewer
+    /// screen: in a hero-sized frame the same 20 cells would span far fewer
     /// points, so visually adjacent pins would refuse to merge.
     private static let cellsAcross: Double = 12
 

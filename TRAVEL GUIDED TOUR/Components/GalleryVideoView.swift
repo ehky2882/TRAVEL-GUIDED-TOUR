@@ -45,7 +45,7 @@ import Combine
 /// had already paused stays paused.
 struct GalleryVideoView: View {
     let urlString: String
-    let height: CGFloat
+    let height: CGFloat?
     /// True when this page is the currently-visible carousel page.
     /// The carousel flips this to `false` when the user swipes away,
     /// so a hidden video doesn't keep playing audio behind another
@@ -107,7 +107,7 @@ struct GalleryVideoView: View {
             playAffordance
         }
         .frame(maxWidth: .infinity)
-        .frame(height: height)
+        .atlasHeroSizing(height)
         .background(Color.black)
         .clipped()
         // Tap anywhere to pause while playing. A tap gesture (unlike
