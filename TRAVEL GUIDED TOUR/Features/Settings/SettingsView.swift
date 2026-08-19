@@ -72,14 +72,16 @@ struct SettingsView: View {
                             .font(AtlasTypography.caption)
                             .foregroundStyle(AtlasColors.secondaryText)
                             .padding(.top, AtlasSpacing.xs)
-                        Text("Version 1.0")
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
+                        if let versionLine {
+                            Text(versionLine)
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.secondaryText)
+                        }
                     }
                     .frame(maxWidth: .infinity)
                     .listRowBackground(Color.clear)
                     // Tight masthead: 4pt row inset + 4pt VStack padding
-                    // = 8pt above Dozent and below Version 1.0.
+                    // = 8pt above Dozent and below the version line.
                     .listRowInsets(EdgeInsets(
                         top: AtlasSpacing.xs, leading: AtlasSpacing.md,
                         bottom: AtlasSpacing.xs, trailing: AtlasSpacing.md))
@@ -288,6 +290,29 @@ struct SettingsView: View {
         UIApplication.shared.open(url)
     }
     #endif
+
+    /// The running app's version, read from the bundle rather than typed
+    /// into the masthead — `Info.plist` fills both keys from the build
+    /// settings (`CFBundleShortVersionString` = `$(MARKETING_VERSION)`,
+    /// `CFBundleVersion` = `$(CURRENT_PROJECT_VERSION)`), so this can
+    /// never disagree with the binary the way a literal did: the label
+    /// still read "Version 1.0" at marketing version 1.1, build 75.
+    ///
+    /// The build number is shown because a marketing version alone
+    /// cannot identify a TestFlight build, and "which build are you on?"
+    /// is the first question asked whenever a tester reports something.
+    ///
+    /// Both keys are declared in `Info.plist`, so nil here means the
+    /// bundle is malformed; the row is dropped rather than printed as a
+    /// placeholder, since a wrong-looking version is worse than none.
+    private var versionLine: String? {
+        let info = Bundle.main.infoDictionary
+        guard let marketing = info?["CFBundleShortVersionString"] as? String,
+              !marketing.isEmpty else { return nil }
+        guard let build = info?["CFBundleVersion"] as? String,
+              !build.isEmpty else { return "Version \(marketing)" }
+        return "Version \(marketing) (\(build))"
+    }
 
     /// Section header styled to match the rest of the screen: caption
     /// mono, ALL CAPS, secondary tint — instead of the system grey
