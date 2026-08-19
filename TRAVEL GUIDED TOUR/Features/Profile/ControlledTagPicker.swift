@@ -2,7 +2,7 @@ import SwiftUI
 
 /// Maker-facing picker for the controlled tag vocabulary (tag Phase 2
 /// fast-follow). Replaces the old free-text tags field + category picker
-/// on `CreateTourView`: makers now pick from the same closed vocabulary
+/// on the create form: makers now pick from the same closed vocabulary
 /// the consumer shelves/filters use, so a new tour is tagged correctly
 /// at creation and flows straight onto the right shelves.
 ///

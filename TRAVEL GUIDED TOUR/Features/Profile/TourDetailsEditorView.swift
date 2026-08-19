@@ -10,7 +10,7 @@ import CoreLocation
 /// only be fixed by deleting the tour, which destroyed its audio and photos with
 /// it. That was the single biggest hole in the authoring flow.
 ///
-/// Deliberately mirrors `CreateTourView`'s field order, limits and map
+/// Deliberately mirrors `CreateTourWizardView`'s field order, limits and map
 /// interaction, so the two read as the same form in two moments rather than two
 /// different forms. **If you change a limit or a field here, change it there
 /// too** — they are separate views because the surrounding chrome differs
@@ -37,7 +37,7 @@ struct TourDetailsEditorView: View {
 
     private enum Field { case title, short, long }
 
-    // Same limits as CreateTourView — keep the two in step.
+    // Same limits as CreateTourWizardView — keep the two in step.
     private static let titleLimit = 60
     private static let shortLimit = 100
     private static let longLimit = 600
@@ -315,7 +315,7 @@ struct TourDetailsEditorView: View {
     }
 
     /// Final tag list, in canonical order, with the architect and its implied
-    /// "Designed by a Master" re-appended — matching `CreateTourView.finalTags`.
+    /// "Designed by a Master" re-appended — matching `CreateTourWizardView.finalTags`.
     private var finalTags: [String] {
         var tags = Tag.ordered(selectedTags)
         if let architect {
@@ -353,8 +353,8 @@ struct TourDetailsEditorView: View {
 }
 
 private extension View {
-    /// Shared field chrome — matches `CreateTourView` / `ProfileEditorView`.
-    /// Named distinctly from `CreateTourView`'s file-private `fieldStyle()` so
+    /// Shared field chrome — matches `CreateTourWizardView` / `ProfileEditorView`.
+    /// Named distinctly from the wizard's file-private `wizardFieldStyle()` so
     /// the two can't be confused for one shared helper when someone changes one.
     func detailsFieldStyle() -> some View {
         self

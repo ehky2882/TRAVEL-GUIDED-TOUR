@@ -151,11 +151,8 @@ struct MakerView: View {
     @State private var showingSettings = false
     @State private var showingCreate = false
     @State private var showingEditProfile = false
-    /// Set when a new draft is created, to push its editor (step 2) as the
-    /// create sheet dismisses. `pendingDraftId` holds the id until the sheet is
-    /// fully gone, then `draftToEdit` fires the push (avoids a dismiss↔push race).
+    /// A draft pushed into the editor from elsewhere on this page.
     @State private var draftToEdit: EditingDraft?
-    @State private var pendingDraftId: UUID?
 
     /// Which of TOURS / LISTS / MAP is showing.
     @State private var profileTab: ProfileTab = .tours
@@ -235,18 +232,11 @@ struct MakerView: View {
         .sheet(isPresented: $showingSettings) {
             SettingsView()
         }
+        // The five-step create wizard. It ends on its own confirmation screen,
+        // so there is nothing to push afterwards — unlike the old two-screen
+        // form, which saved a draft and handed you to the editor.
         .sheet(isPresented: $showingCreate) {
-            CreateTourView { newId in
-                pendingDraftId = newId
-            }
-        }
-        // Once the create sheet is fully dismissed, push the new draft's editor
-        // (step 2) so "Save draft & continue" lands there instead of the profile.
-        .onChange(of: showingCreate) { _, showing in
-            if !showing, let id = pendingDraftId {
-                pendingDraftId = nil
-                draftToEdit = EditingDraft(id: id)
-            }
+            CreateTourWizardView()
         }
         .navigationDestination(item: $draftToEdit) { draft in
             TourAuthoringView(tourId: draft.id)
