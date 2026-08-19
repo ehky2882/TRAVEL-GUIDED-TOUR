@@ -238,7 +238,18 @@ struct MakerView: View {
         .sheet(isPresented: $showingCreate) {
             CreateTourWizardView()
         }
-        .sheet(item: $draftToEdit) { draft in
+        // 🔴 EDITING PRESENTS FULL-SCREEN, NOT AS A SHEET — this is the fix
+        // for the saved-tour watchdog hang (builds 76→88), do not "restore
+        // consistency" with the create sheet above. Every crash log went
+        // through `UISheetPresentationController._sheetLayoutInfoLayout:` —
+        // a frame only a sheet can produce — spinning in a synchronous layout
+        // oscillation during the presentation transition. Five attempts at
+        // the loop's trigger failed (toolbar structure, camera writes,
+        // dismiss preferences, deferred loading); removing the sheet removes
+        // the machinery that loops. The old editor was never a sheet either:
+        // `TourAuthoringView` was pushed. Only the create path — which never
+        // hung — has ever safely lived in one.
+        .fullScreenCover(item: $draftToEdit) { draft in
             CreateTourWizardView(existingTourId: draft.id)
         }
         // A place tapped on the MAP tab while this page is already inside a
