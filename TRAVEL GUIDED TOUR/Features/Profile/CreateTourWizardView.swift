@@ -119,6 +119,11 @@ struct CreateTourWizardView: View {
         .sheet(isPresented: $showingPhotoManager) {
             if let draft { PhotoManagerView(tour: draft.tour) }
         }
+        // Swiping the sheet down is the same intent as tapping Close, so it
+        // gets the same question rather than silently discarding the work.
+        .onDismissAttempt(enabled: outcome == nil && hasUnsavedChanges && canPersist) {
+            showingCloseConfirm = true
+        }
         .confirmationDialog("Keep this tour?", isPresented: $showingCloseConfirm,
                             titleVisibility: .visible) {
             Button("Save draft & close") { saveAndClose() }
