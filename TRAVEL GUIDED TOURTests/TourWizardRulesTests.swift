@@ -66,27 +66,31 @@ final class TourWizardRulesTests: XCTestCase {
         XCTAssertFalse(TourWizardRules.canAdvance(from: .details, state: state))
     }
 
-    func test_details_needsBothAPlaceTypeAndATheme() {
+    /// Tags are NOT required (owner decision, 2026-08-19). They decide where a
+    /// tour surfaces, not whether it works, so an untagged tour must still be
+    /// able to leave this step — it is simply harder to find.
+    func test_details_tagsAreNeverRequired() {
         var state = completeState()
 
+        state.tags = []
+        XCTAssertTrue(TourWizardRules.canAdvance(from: .details, state: state))
+        XCTAssertNil(TourWizardRules.blockingReason(for: .details, state: state))
+
         state.tags = ["Notable Building"]          // place type only
-        XCTAssertFalse(TourWizardRules.canAdvance(from: .details, state: state))
+        XCTAssertTrue(TourWizardRules.canAdvance(from: .details, state: state))
 
         state.tags = ["Commerce"]                  // theme only
-        XCTAssertFalse(TourWizardRules.canAdvance(from: .details, state: state))
-        XCTAssertEqual(TourWizardRules.blockingReason(for: .details, state: state),
-                       "Pick at least one Place type and one Theme.")
+        XCTAssertTrue(TourWizardRules.canAdvance(from: .details, state: state))
 
-        state.tags = ["Notable Building", "Commerce"]
+        state.tags = ["Baroque", "Hidden Gem"]     // optional facets only
         XCTAssertTrue(TourWizardRules.canAdvance(from: .details, state: state))
     }
 
-    /// A tag from an optional facet satisfies neither requirement, however
-    /// many of them are picked.
-    func test_details_optionalFacetsDoNotSatisfyTheRequirement() {
+    /// An untagged tour can be submitted, not merely advanced past.
+    func test_review_untaggedTourCanStillBeSubmitted() {
         var state = completeState()
-        state.tags = ["Baroque", "Hidden Gem", "Viewpoint"]
-        XCTAssertFalse(TourWizardRules.canAdvance(from: .details, state: state))
+        state.tags = []
+        XCTAssertTrue(TourWizardRules.canAdvance(from: .review, state: state))
     }
 
     /// The title rule is reported before the description rule, so the hint
@@ -95,7 +99,6 @@ final class TourWizardRulesTests: XCTestCase {
         var state = completeState()
         state.title = ""
         state.shortDescription = ""
-        state.tags = []
         XCTAssertEqual(TourWizardRules.blockingReason(for: .details, state: state),
                        "A title is needed.")
     }

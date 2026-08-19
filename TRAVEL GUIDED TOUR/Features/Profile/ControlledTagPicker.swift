@@ -9,9 +9,10 @@ import SwiftUI
 /// by scrolling past the taxonomy to reach anything else. Collapsed, each row
 /// says what it is and what you picked; open, it shows its chips.
 ///
-/// **Place type** and **Theme** are required (≥1 each — mirrors the validator
-/// and `docs/tag-taxonomy-v2.md`); Style & era and Experience are optional.
-/// Architect is single-select and carries a search field, because the
+/// **No facet is required** (owner decision, 2026-08-19). Tags decide where a
+/// tour surfaces, not whether it works, and that is the maker's call — the
+/// catalogue's validator treats a missing Place type or Theme as a warning,
+/// never an error, and review is the backstop. Architect is single-select and carries a search field, because the
 /// vocabulary holds 86 names — a chip wall would be worse than the menu it
 /// replaced. Choosing one auto-adds "Designed by a Master" (handled by the
 /// caller). The editorial tags a maker can't self-judge — `Iconic Landmark`,
@@ -32,25 +33,32 @@ struct ControlledTagPicker: View {
         "Iconic Landmark", "Free to Visit", "After Dark", "Designed by a Master",
     ]
 
-    private static let rows: [(facet: TagFacet, label: String, required: Bool)] = [
-        (.placeType,  "PLACE TYPE",  true),
-        (.theme,      "THEME",       true),
-        (.styleEra,   "STYLE & ERA", false),
-        (.experience, "EXPERIENCE",  false),
-        (.architect,  "ARCHITECT",   false),
+    private static let rows: [(facet: TagFacet, label: String)] = [
+        (.placeType,  "PLACE TYPE"),
+        (.theme,      "THEME"),
+        (.styleEra,   "STYLE & ERA"),
+        (.experience, "EXPERIENCE"),
+        (.architect,  "ARCHITECT"),
     ]
 
     var body: some View {
-        VStack(spacing: AtlasSpacing.sm) {
+        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            // Says what tags buy, rather than demanding them. A tour with none
+            // still works — it just waits to be stumbled on.
+            Text("Tags are how people find your tour. Without them it only turns up on the map and in search.")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.tertiaryText)
+                .padding(.bottom, AtlasSpacing.xs)
+
             ForEach(Self.rows, id: \.facet) { row in
-                facetRow(row.facet, label: row.label, required: row.required)
+                facetRow(row.facet, label: row.label)
             }
         }
     }
 
     // MARK: - Rows
 
-    private func facetRow(_ facet: TagFacet, label: String, required: Bool) -> some View {
+    private func facetRow(_ facet: TagFacet, label: String) -> some View {
         let isOpen = expanded == facet
         return VStack(spacing: 0) {
             Button {
@@ -61,16 +69,9 @@ struct ControlledTagPicker: View {
             } label: {
                 HStack(alignment: .center, spacing: AtlasSpacing.md) {
                     VStack(alignment: .leading, spacing: 3) {
-                        HStack(spacing: AtlasSpacing.xs) {
-                            Text(required ? "\(label) — REQUIRED" : label)
-                                .font(.system(size: 11, weight: .regular, design: .monospaced))
-                                .foregroundStyle(AtlasColors.tertiaryText)
-                            if required && isSatisfied(facet) {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .font(.system(size: 11))
-                                    .foregroundStyle(AtlasColors.mapPin)
-                            }
-                        }
+                        Text(label)
+                            .font(.system(size: 11, weight: .regular, design: .monospaced))
+                            .foregroundStyle(AtlasColors.tertiaryText)
                         Text(summary(for: facet))
                             .font(AtlasTypography.caption)
                             .foregroundStyle(hasSelection(facet)
@@ -191,11 +192,9 @@ struct ControlledTagPicker: View {
     }
 
     private func hasSelection(_ facet: TagFacet) -> Bool {
-        facet == .architect ? architect != nil : isSatisfied(facet)
-    }
-
-    private func isSatisfied(_ facet: TagFacet) -> Bool {
-        !selectedTags.isDisjoint(with: Set(Tag.tags(in: facet)))
+        facet == .architect
+            ? architect != nil
+            : !selectedTags.isDisjoint(with: Set(Tag.tags(in: facet)))
     }
 
     private func isSelected(_ tag: String, in facet: TagFacet) -> Bool {

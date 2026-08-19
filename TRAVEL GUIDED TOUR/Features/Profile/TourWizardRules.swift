@@ -49,11 +49,6 @@ struct TourWizardState: Equatable {
     var trimmedShortDescription: String {
         shortDescription.trimmingCharacters(in: .whitespacesAndNewlines)
     }
-    /// The vocabulary requires at least one Place type and one Theme.
-    var hasRequiredTags: Bool {
-        !tags.isDisjoint(with: Set(Tag.tags(in: .placeType)))
-            && !tags.isDisjoint(with: Set(Tag.tags(in: .theme)))
-    }
 }
 
 enum TourWizardRules {
@@ -79,9 +74,12 @@ enum TourWizardRules {
             if state.trimmedShortDescription.isEmpty {
                 return "A short description is needed — it's the line on cards."
             }
-            if !state.hasRequiredTags {
-                return "Pick at least one Place type and one Theme."
-            }
+            // Tags are deliberately NOT required (owner decision, 2026-08-19).
+            // They decide where a tour surfaces, not whether it works — an
+            // untagged tour is simply harder to find, which is the maker's
+            // call to make. The catalogue's own validator agrees: a missing
+            // Place type or Theme is a warning there, never an error. Review
+            // is the backstop if a tour arrives bare.
             return nil
 
         case .photos:
