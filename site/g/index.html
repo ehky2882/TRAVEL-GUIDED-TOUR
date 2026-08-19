@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Join a group listen — Dozent</title>
+  <meta name="description" content="Someone is playing an audio tour and invited you to listen along, in sync." />
+  <meta property="og:title" content="Join a group listen — Dozent" />
+  <meta property="og:description" content="Someone is playing an audio tour and invited you to listen along, in sync." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlas-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/png" href="https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlas-icon.png" />
+  <link rel="apple-touch-icon" href="https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlas-icon.png" />
+  <style>
+    :root {
+      --bg: #17130F;
+      --surface: #211B15;
+      --surface-2: #2C241C;
+      --text: #F5EFE7;
+      --muted: #B7AC9E;
+      --accent: #8B7535;
+      --accent-soft: rgba(184, 80, 66, 0.16);
+      --border: rgba(245, 239, 231, 0.10);
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wrap { width: 100%; max-width: 560px; padding: 20px 20px 48px; }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      font-size: 14px; color: var(--text); margin: 8px 0 22px;
+    }
+    .brand .dot { width: 12px; height: 12px; border-radius: 3px; background: var(--accent); }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 18px; overflow: hidden; padding: 28px 20px 20px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .avatar {
+      width: 96px; height: 96px; border-radius: 50%;
+      background: var(--surface-2); margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px; overflow: hidden;
+    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .eyebrow {
+      display: block; text-align: center; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+      margin-bottom: 8px;
+    }
+    h1 { font-size: 24px; line-height: 1.22; margin: 0 0 6px; font-weight: 700; text-align: center; }
+    .count { text-align: center; font-size: 14px; color: var(--muted); margin: 0 0 16px; }
+    .bio { font-size: 15px; color: var(--text); opacity: 0.92; margin: 0 0 22px; text-align: center; }
+    .cta {
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 14px; padding: 18px; text-align: center;
+    }
+    .cta .soon { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+    .cta .soon-sub { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+    .notify {
+      display: inline-block; text-decoration: none; font-weight: 600; font-size: 15px;
+      color: #fff; background: var(--accent); padding: 12px 22px; border-radius: 999px;
+    }
+    .notify:active { opacity: 0.85; }
+    .foot { text-align: center; font-size: 12px; color: var(--muted); margin-top: 26px; opacity: 0.8; }
+    .center-state { text-align: center; padding: 60px 10px; }
+    .center-state h1 { font-size: 22px; }
+    .center-state p { color: var(--muted); }
+    .skeleton { animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+  </style>
+  <style>
+    /* The join code, big enough to read off someone else's screen. */
+    .code {
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+      font-size: 40px; letter-spacing: .16em; font-weight: 700;
+      color: var(--accent); text-align: center; margin: 8px 0 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> Dozent</div>
+    <div id="root">
+      <div class="card skeleton"><div class="avatar"></div><span class="eyebrow">Loading…</span><h1>&nbsp;</h1></div>
+    </div>
+    <div class="foot">Dozent — GPS-anchored audio tours. Coming soon to the App Store.</div>
+  </div>
+
+  <script>
+    // The QR a leader shows encodes this page's address with the join code in
+    // it. With the app installed, iOS opens the app straight from the code and
+    // this page is never seen. Without it, this is the landing.
+    var NOTIFY_EMAIL = "hello@dozent.world";
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    function code() {
+      var p = new URLSearchParams(window.location.search);
+      var c = p.get("code");
+      if (!c) {
+        var parts = window.location.pathname.split("/").filter(Boolean);
+        c = parts[parts.length - 1];
+        if (c === "g") c = null;
+      }
+      if (!c) return null;
+      c = c.trim().toUpperCase();
+      // Same shape the app accepts: five characters from its code alphabet.
+      return /^[A-Z0-9]{5}$/.test(c) ? c : null;
+    }
+
+    var c = code();
+    document.getElementById("root").innerHTML =
+      '<div class="card">' +
+        '<div class="avatar">\uD83C\uDFA7</div>' +
+        '<span class="eyebrow">Group listen</span>' +
+        '<h1>Listen along, in sync</h1>' +
+        (c
+          ? '<p class="count">Your join code</p><div class="code">' + esc(c) + '</div>'
+          : '<p class="count">You will need the join code from whoever invited you.</p>') +
+        '<p class="bio">One person leads an audio tour and everyone else hears the same words at the same moment. It works over Bluetooth, so it keeps working with no signal.</p>' +
+        '<div class="cta">' +
+          '<p class="soon">Coming soon to the App Store</p>' +
+          '<p class="soon-sub">Dozent isn\u2019t out yet. Once it is, this link will drop you straight into the group.</p>' +
+          '<a class="notify" href="mailto:' + esc(NOTIFY_EMAIL) + '?subject=' +
+            encodeURIComponent("Notify me about Dozent") + '">Notify me</a>' +
+        '</div>' +
+      '</div>';
+  </script>
+</body>
+</html>
