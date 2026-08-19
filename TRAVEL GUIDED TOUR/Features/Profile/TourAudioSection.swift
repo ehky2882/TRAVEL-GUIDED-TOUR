@@ -22,7 +22,9 @@ struct TourAudioSection: View {
     @Environment(MakerTourService.self) private var makerTourService
 
     @State private var importingAudio = false
-    @State private var showingRecorder = false
+    /// While true the step shows the recorder in place of its controls — one
+    /// step, two modes, no sheet.
+    @State private var isRecording = false
     @State private var isUploading = false
     @State private var uploadProgress: Double = 0
     @State private var uploadTotalBytes: Int64 = 0
@@ -37,30 +39,15 @@ struct TourAudioSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            if hasAudio {
-                attachedRow
-            }
-
-            if isUploading {
-                uploadProgressCard
-            } else if let failed = failedUpload {
-                failedUploadCard(failed)
+            if isRecording {
+                AudioRecorderPanel { url in
+                    isRecording = false
+                    uploadAudio(from: url)
+                } onCancel: {
+                    isRecording = false
+                }
             } else {
-                Button { showingRecorder = true } label: {
-                    actionButton(hasAudio ? "Re-record audio" : "Record audio",
-                                 systemImage: "mic.fill", primary: true)
-                }
-                .buttonStyle(.plain)
-
-                Button { importingAudio = true } label: {
-                    actionButton(hasAudio ? "Replace with a file" : "Import a file",
-                                 systemImage: "square.and.arrow.down", primary: false)
-                }
-                .buttonStyle(.plain)
-
-                Text("Record narration here, or import an audio file (m4a, mp3, wav).")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
+                controls
             }
 
             if let errorMessage {
@@ -76,13 +63,41 @@ struct TourAudioSection: View {
         ) { result in
             handleImport(result)
         }
-        .sheet(isPresented: $showingRecorder) {
-            AudioRecordSheet { url in uploadAudio(from: url) }
-        }
         .task(id: tour.id) {
             attachedAudioURL = await makerTourService.stopAudioURL(tourId: tour.id)
         }
         .onDisappear { audioPreview.stop() }
+    }
+
+    @ViewBuilder
+    private var controls: some View {
+        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
+            if hasAudio {
+                attachedRow
+            }
+
+            if isUploading {
+                uploadProgressCard
+            } else if let failed = failedUpload {
+                failedUploadCard(failed)
+            } else {
+                Button { isRecording = true } label: {
+                    actionButton(hasAudio ? "Re-record audio" : "Record audio",
+                                 systemImage: "mic.fill", primary: true)
+                }
+                .buttonStyle(.plain)
+
+                Button { importingAudio = true } label: {
+                    actionButton(hasAudio ? "Replace with a file" : "Import a file",
+                                 systemImage: "square.and.arrow.down", primary: false)
+                }
+                .buttonStyle(.plain)
+
+                Text("Record narration here, or import an audio file (m4a, mp3, wav).")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.tertiaryText)
+            }
+        }
     }
 
     // MARK: - Pieces

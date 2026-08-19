@@ -53,16 +53,20 @@ final class TourWizardRulesTests: XCTestCase {
                        "A title is needed.")
     }
 
-    func test_details_needsAShortDescription() {
+    /// The short description is NOT required (owner decision, 2026-08-19),
+    /// on the same reasoning as tags: it decides how well a tour reads on a
+    /// card, not whether it works.
+    func test_details_shortDescriptionIsNeverRequired() {
         var state = completeState()
         state.shortDescription = ""
-        XCTAssertFalse(TourWizardRules.canAdvance(from: .details, state: state))
+        XCTAssertTrue(TourWizardRules.canAdvance(from: .details, state: state))
+        XCTAssertNil(TourWizardRules.blockingReason(for: .details, state: state))
     }
 
-    /// Whitespace is not a description — the trim is the point.
-    func test_details_whitespaceOnlyFieldsDoNotCount() {
+    /// Whitespace is not a title — the trim is the point.
+    func test_details_whitespaceOnlyTitleDoesNotCount() {
         var state = completeState()
-        state.shortDescription = "\n  \t "
+        state.title = "\n  \t "
         XCTAssertFalse(TourWizardRules.canAdvance(from: .details, state: state))
     }
 
@@ -93,12 +97,12 @@ final class TourWizardRulesTests: XCTestCase {
         XCTAssertTrue(TourWizardRules.canAdvance(from: .review, state: state))
     }
 
-    /// The title rule is reported before the description rule, so the hint
-    /// names the first thing to fix rather than the last.
-    func test_details_reportsTheFirstMissingFieldOnly() {
+    /// A title is the only thing this step asks for.
+    func test_details_onlyTheTitleBlocks() {
         var state = completeState()
         state.title = ""
         state.shortDescription = ""
+        state.tags = []
         XCTAssertEqual(TourWizardRules.blockingReason(for: .details, state: state),
                        "A title is needed.")
     }

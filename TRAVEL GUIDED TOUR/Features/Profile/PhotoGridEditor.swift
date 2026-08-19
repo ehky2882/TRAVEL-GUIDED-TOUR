@@ -21,8 +21,10 @@ import UIKit
 struct PhotoGridEditor: View {
     let tour: Tour
 
-    /// Owner decision, 2026-08-17.
-    static let maxPhotos = 8
+    /// Owner decision, 2026-08-19: seven, not eight. One cover plus six fills
+    /// two clean rows of three underneath it; eight left the last row holding
+    /// a single box.
+    static let maxPhotos = 7
 
     @Environment(MakerTourService.self) private var makerTourService
 

@@ -46,9 +46,6 @@ struct TourWizardState: Equatable {
     var trimmedTitle: String {
         title.trimmingCharacters(in: .whitespacesAndNewlines)
     }
-    var trimmedShortDescription: String {
-        shortDescription.trimmingCharacters(in: .whitespacesAndNewlines)
-    }
 }
 
 enum TourWizardRules {
@@ -70,17 +67,17 @@ enum TourWizardRules {
                 : "Pan the map to put the pin where the tour begins."
 
         case .details:
-            if state.trimmedTitle.isEmpty { return "A title is needed." }
-            if state.trimmedShortDescription.isEmpty {
-                return "A short description is needed — it's the line on cards."
-            }
-            // Tags are deliberately NOT required (owner decision, 2026-08-19).
-            // They decide where a tour surfaces, not whether it works — an
-            // untagged tour is simply harder to find, which is the maker's
-            // call to make. The catalogue's own validator agrees: a missing
-            // Place type or Theme is a warning there, never an error. Review
-            // is the backstop if a tour arrives bare.
-            return nil
+            // A title is the only thing asked for here, and only because a
+            // tour has to be called something — the row it lands on in the
+            // maker's own list would otherwise be blank.
+            //
+            // Neither tags nor the short description are required (owner
+            // decisions, 2026-08-19). They decide how well a tour shows up,
+            // not whether it works, and that is the maker's call: the
+            // catalogue's own validator treats a missing tag as a warning,
+            // never an error, and review is the backstop if a tour arrives
+            // bare.
+            return state.trimmedTitle.isEmpty ? "A title is needed." : nil
 
         case .photos:
             return state.hasCoverPhoto

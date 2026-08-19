@@ -1,22 +1,29 @@
 import SwiftUI
 import AVFoundation
 
-/// Records narration in-app for a tour's audio step (V2 Step 4, increment 2c).
-/// Tap to record → stop → hands the recorded file URL back via `onFinish`, which
-/// the editor uploads through the same `MakerTourService.attachAudio` path as an
-/// imported file. Recording uses the device mic (works partially in the
-/// simulator via the host mic; real capture is device-verified).
-struct AudioRecordSheet: View {
-    /// Called with the recorded m4a file URL when the user keeps a recording.
+/// Recording narration, inline on the Audio step.
+///
+/// **Not a sheet.** The Audio step swaps its controls for this while a take is
+/// in progress, the way the Photos step swaps its grid for framing. Owner:
+/// *"recorder page should be folded into audio page. we should be able to
+/// accomplish everything in that 1 step."*
+///
+/// Tap to record → stop → review the take → keep it, and the step uploads it
+/// through the same `attachAudio` path an imported file takes. Recording uses
+/// the device mic (partially works in the simulator via the host mic; real
+/// capture is device-verified).
+struct AudioRecorderPanel: View {
+    /// Called with the recorded m4a file URL when the maker keeps a take.
     let onFinish: (URL) -> Void
+    /// Called when they back out without keeping anything.
+    let onCancel: () -> Void
 
-    @Environment(\.dismiss) private var dismiss
     @State private var recorder = AudioRecorder()
     @State private var review = RecordingReviewPlayer()
     @State private var recordedURL: URL?
     @State private var permissionDenied = false
 
-    /// Live input level, so the screen answers "is it hearing me?" — a running
+    /// Live input level, so the step answers "is it hearing me?" — a running
     /// counter does not: it ticks along just as happily with a muted mic or a
     /// hand over the microphone, and a maker only finds out afterwards.
     ///
@@ -27,95 +34,89 @@ struct AudioRecordSheet: View {
             ForEach(Array(recorder.levels.enumerated()), id: \.offset) { _, level in
                 Capsule()
                     .fill(recorder.isRecording ? AtlasColors.mapPin : AtlasColors.divider)
-                    .frame(width: 3, height: max(3, level * 48))
+                    .frame(width: 3, height: max(3, level * 44))
             }
         }
-        .frame(height: 48)
+        .frame(height: 44)
         .animation(.linear(duration: 0.05), value: recorder.levels)
         .accessibilityHidden(true)
     }
 
     var body: some View {
-        NavigationStack {
-            VStack(spacing: AtlasSpacing.xl) {
+        VStack(spacing: AtlasSpacing.md) {
+            HStack {
+                Text(recorder.isRecording ? "RECORDING" : (recordedURL == nil ? "RECORD" : "YOUR TAKE"))
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(recorder.isRecording ? AtlasColors.mapPin : AtlasColors.secondaryText)
                 Spacer()
-
-                Text(timeString(recorder.isRecording ? recorder.elapsed : (recordedURL != nil ? recorder.lastDuration : 0)))
-                    .font(.system(size: 44, weight: .light, design: .monospaced))
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .contentTransition(.numericText())
-
-                levelMeter
-
-                if permissionDenied {
-                    Text("Microphone access is off. Enable it in Settings to record.")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.mapPin)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, AtlasSpacing.xl)
+                Button("Cancel") {
+                    _ = recorder.stop()
+                    review.stop()
+                    onCancel()
                 }
+                .font(AtlasTypography.caption)
+                .tint(AtlasColors.primaryText)
+            }
 
-                recordButton
+            Text(timeString(recorder.isRecording ? recorder.elapsed
+                            : (recordedURL != nil ? recorder.lastDuration : 0)))
+                .font(.system(size: 34, weight: .light, design: .monospaced))
+                .foregroundStyle(AtlasColors.primaryText)
+                .contentTransition(.numericText())
 
-                if recordedURL != nil && !recorder.isRecording {
-                    // Review the take before keeping it.
+            levelMeter
+
+            if permissionDenied {
+                Text("Microphone access is off. Enable it in Settings to record.")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.mapPin)
+                    .multilineTextAlignment(.center)
+            }
+
+            recordButton
+
+            if recordedURL != nil && !recorder.isRecording {
+                // Hear the take before keeping it.
+                HStack(spacing: AtlasSpacing.sm) {
                     Button {
                         if let url = recordedURL { review.toggle(url: url) }
                     } label: {
-                        HStack(spacing: AtlasSpacing.sm) {
+                        HStack(spacing: 6) {
                             Image(systemName: review.isPlaying ? "pause.fill" : "play.fill")
-                            Text(review.isPlaying ? "Playing…" : "Play recording")
+                            Text(review.isPlaying ? "Playing…" : "Play")
                         }
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.primaryText)
-                        .padding(.horizontal, AtlasSpacing.xl)
+                        .frame(maxWidth: .infinity)
                         .padding(.vertical, AtlasSpacing.md)
-                        .overlay(Capsule().stroke(AtlasColors.secondaryText.opacity(0.5), lineWidth: 1))
+                        .overlay(Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1))
                     }
                     .buttonStyle(.plain)
 
                     Button {
                         review.stop()
-                        if let url = recordedURL { onFinish(url); dismiss() }
+                        if let url = recordedURL { onFinish(url) }
                     } label: {
                         Text("Use recording")
                             .font(AtlasTypography.caption)
-                            .padding(.horizontal, AtlasSpacing.xl)
-                            .padding(.vertical, AtlasSpacing.md)
-                            .background(AtlasColors.mapPin)
                             .foregroundStyle(AtlasColors.background)
-                            .clipShape(Capsule())
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, AtlasSpacing.md)
+                            .background(AtlasColors.mapPin, in: Capsule())
                     }
                     .buttonStyle(.plain)
-
-                    Text("Not happy with it? Tap the record button to try again.")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, AtlasSpacing.xl)
                 }
 
-                Spacer()
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(AtlasColors.secondaryBackground)
-            .navigationTitle("")
-            .inlineNavigationBarTitle()
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Text("RECORD").font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.primaryText)
-                }
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Close") {
-                        _ = recorder.stop()
-                        review.stop()
-                        dismiss()
-                    }
+                Text("Not happy with it? Tap the record button to try again.")
                     .font(AtlasTypography.caption)
-                    .tint(AtlasColors.primaryText)
-                }
+                    .foregroundStyle(AtlasColors.tertiaryText)
+                    .multilineTextAlignment(.center)
             }
+        }
+        .frame(maxWidth: .infinity)
+        .onDisappear {
+            _ = recorder.stop()
+            review.stop()
         }
     }
 
@@ -135,15 +136,15 @@ struct AudioRecordSheet: View {
             ZStack {
                 Circle()
                     .stroke(AtlasColors.mapPin, lineWidth: 4)
-                    .frame(width: 84, height: 84)
+                    .frame(width: 72, height: 72)
                 if recorder.isRecording {
                     RoundedRectangle(cornerRadius: 6)
                         .fill(AtlasColors.mapPin)
-                        .frame(width: 32, height: 32)
+                        .frame(width: 26, height: 26)
                 } else {
                     Circle()
                         .fill(AtlasColors.mapPin)
-                        .frame(width: 64, height: 64)
+                        .frame(width: 54, height: 54)
                 }
             }
         }
@@ -159,7 +160,7 @@ struct AudioRecordSheet: View {
 
 /// Plays back the just-recorded file so the user can review a take before
 /// keeping it. Separate from the app's `AudioPlayerService` (which is for tour
-/// playback) — this only touches the temp recording inside the record sheet.
+/// playback) — this only touches the temp recording on the Audio step.
 @MainActor
 @Observable
 final class RecordingReviewPlayer: NSObject, AVAudioPlayerDelegate {
@@ -204,7 +205,7 @@ final class RecordingReviewPlayer: NSObject, AVAudioPlayerDelegate {
     }
 }
 
-/// Thin wrapper around `AVAudioRecorder` for the record sheet.
+/// Thin wrapper around `AVAudioRecorder` for the Audio step.
 @MainActor
 @Observable
 final class AudioRecorder {
