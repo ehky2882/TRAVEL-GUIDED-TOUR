@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-19 19:42 UTC
+**Last verified:** 2026-08-19 21:15 UTC
 
 ---
 
@@ -24,24 +24,23 @@ Code PRs cannot merge without a look on device (§ Merging PRs). This is the que
 
 | PR | What it is | Build to install | Also needs |
 |---|---|---|---|
-| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | 🔴 **None — 87 still hangs** | A build off head `e810651` |
+| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ⏳ **88 building** | A device pass — that is the only test |
 
-🔴 **THE HANG HAS NOW SURVIVED FIVE BUILDS.** Opening an existing tour in the wizard freezes.
-Builds **76, 77, 81, 84 and 87** all have it. Build 87 was cut from the commit that claimed to
-fix it and **the freeze survived** — so a commit message claiming a fix is a hypothesis, not a
-verification. Only a device pass settles it.
+**Build 88 is in flight**, cut from `e810651`, the current PR head. It is the first build carrying
+all three stacked fixes: the toolbar and its NavigationStack removed outright (`730b1af`), a 650 ms
+wait before `loadExistingTour` touches state (`a045a5aa`), and the load collapsed from four write
+batches into one with its fetches overlapped (`e810651`).
 
-**Three further fixes are stacked and unbuilt** (`730b1af`, `a045a5aa`, `e810651`): the toolbar
-and its NavigationStack removed outright, a 650 ms wait before `loadExistingTour` touches state,
-and the load collapsed from four write batches into one with its fetches overlapped. Head is
-`e810651`; no build carries any of them.
+🔴 **Do not read that as fixed.** The freeze has survived **five** builds — 76, 77, 81, 84 and 87 —
+and build 87 was itself cut from a commit claiming to fix it. What is verified here is only what 88
+*contains*. Whether the hang is gone is decided on the device, not in a commit message.
 
 ⚠️ **The diagnosis has moved with every crash log** — toolbar bridge, then `PlatformViewChild`
-walking MKMapView's subtree — which reads as four samples of one busy loop caught at different
-stations. The current theory names the *fuel* rather than a bridge: state writes flushing graph
-transactions from inside the sheet's presentation transition. **Each attempt costs a build and a
-device pass.** Worth asking whether the next one should wait for a local Mac session that can
-reproduce it in the simulator, rather than a sixth round-trip.
+walking MKMapView's subtree — which reads as repeated samples of one busy loop caught at different
+stations. The current theory names the *fuel* rather than any one bridge: state writes flushing
+graph transactions from inside the sheet's presentation transition. If 88 also hangs, that is six
+round-trips through the owner's phone, and the next attempt should wait for a local Mac session
+that can reproduce it in the simulator.
 
 ## 2. Blocked on owner — outside the repo
 
@@ -73,6 +72,7 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
+| 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | ⏳ building — untested |
 | 87 | `tour-upload-polish-qiliop` | #540 + a hang fix that did not work | 🔴 **still hangs** |
 | 84 | `tour-upload-polish-qiliop` | #540 wizard | 🔴 hangs on the edit path |
 | 83, 82 | `list-page-conformance` | #547 list page | ✅ **merged to main 18:47** |
