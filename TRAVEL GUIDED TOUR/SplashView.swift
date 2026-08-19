@@ -24,8 +24,14 @@ struct SplashView: View {
 
                 // Wordmark in iOS's New York serif system font —
                 // editorial register matches the gold map-pin palette.
+                //
+                // Reads the shared token rather than hardcoding the face
+                // so this and the Settings masthead cannot drift into two
+                // variants of one logotype; only the colour differs, and
+                // deliberately — the brass circle above carries the accent
+                // here, so the mark itself is white.
                 Text("Dozent")
-                    .font(.system(size: 15, weight: .regular, design: .serif))
+                    .font(AtlasTypography.wordmark)
                     .foregroundStyle(.white)
                     .tracking(2)
             }

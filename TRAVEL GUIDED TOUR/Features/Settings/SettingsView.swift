@@ -47,14 +47,26 @@ struct SettingsView: View {
             List {
                 Section {
                     // Base gap is 4pt; the tagline adds 4pt on top so
-                    // DOZENT↔tagline = 8pt while tagline↔Version = 4pt.
+                    // Dozent↔tagline = 8pt while tagline↔Version = 4pt.
                     VStack(spacing: AtlasSpacing.xs) {
-                        // Wordmark: caption mono but letter-spaced so the
-                        // app name reads as a logotype rather than just
-                        // another 13pt row.
-                        Text("DOZENT")
+                        // Wordmark, drawn EXACTLY as `SplashView` draws it:
+                        // New York serif at 15pt, tracked 2, Title Case. It
+                        // was uppercase and tracked 6, which is a logotype
+                        // convention that only works on capitals — so the
+                        // launch screen and this masthead read as two
+                        // different marks (owner, 2026-08-19).
+                        //
+                        // It stays BRASS here rather than the splash's
+                        // white: the splash has a brass circle above it
+                        // carrying the accent, and this screen has nothing
+                        // else on it that does. Same call the website makes
+                        // for its page mastheads (site/atlas.css `.brand`).
+                        //
+                        // Keep this in step with SplashView and with
+                        // `.brand` / `.splash-wordmark` in site/atlas.css.
+                        Text("Dozent")
                             .font(AtlasTypography.wordmark)
-                            .tracking(6)
+                            .tracking(2)
                             .foregroundStyle(AtlasColors.mapPin)
                         Text("Audio tours, anchored to places.")
                             .font(AtlasTypography.caption)
@@ -67,7 +79,7 @@ struct SettingsView: View {
                     .frame(maxWidth: .infinity)
                     .listRowBackground(Color.clear)
                     // Tight masthead: 4pt row inset + 4pt VStack padding
-                    // = 8pt above DOZENT and below Version 1.0.
+                    // = 8pt above Dozent and below Version 1.0.
                     .listRowInsets(EdgeInsets(
                         top: AtlasSpacing.xs, leading: AtlasSpacing.md,
                         bottom: AtlasSpacing.xs, trailing: AtlasSpacing.md))
