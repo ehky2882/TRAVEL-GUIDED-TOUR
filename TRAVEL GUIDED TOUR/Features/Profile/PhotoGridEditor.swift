@@ -30,8 +30,9 @@ struct PhotoGridEditor: View {
     /// waiting on the network, then written straight through.
     @State private var urls: [String]
     @State private var picked: [PhotosPickerItem] = []
+    /// Photos waiting to be framed. While this isn't empty the step shows the
+    /// framing view in place of the grid — one page, two modes, no sheet.
     @State private var pendingCrop: [UIImage] = []
-    @State private var showingCrop = false
     @State private var isBusy = false
     @State private var busyLabel = ""
     @State private var errorMessage: String?
@@ -48,7 +49,16 @@ struct PhotoGridEditor: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            grid
+            if pendingCrop.isEmpty {
+                grid
+            } else {
+                PhotoFramingView(images: pendingCrop) { datas in
+                    pendingCrop = []
+                    upload(datas)
+                } onCancel: {
+                    pendingCrop = []
+                }
+            }
 
             if isBusy {
                 HStack(spacing: AtlasSpacing.sm) {
@@ -65,19 +75,15 @@ struct PhotoGridEditor: View {
                     .foregroundStyle(AtlasColors.mapPin)
             }
 
-            Text(urls.isEmpty
-                 ? "Tap a box to add photos. They're framed to 1200×900."
-                 : "\(urls.count) of \(Self.maxPhotos) · drag to reorder, the first is the cover.")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
-        }
-        .onChange(of: picked) { _, items in loadPicked(items) }
-        .sheet(isPresented: $showingCrop) {
-            PhotoCropSheet(images: pendingCrop) { datas in
-                pendingCrop = []
-                upload(datas)
+            if pendingCrop.isEmpty {
+                Text(urls.isEmpty
+                     ? "Tap a box to add photos. They're framed to 1200×900."
+                     : "\(urls.count) of \(Self.maxPhotos) · drag to reorder, the first is the cover.")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.tertiaryText)
             }
         }
+        .onChange(of: picked) { _, items in loadPicked(items) }
     }
 
     // MARK: - Grid
@@ -219,7 +225,6 @@ struct PhotoGridEditor: View {
                 return
             }
             pendingCrop = loaded
-            showingCrop = true
         }
     }
 

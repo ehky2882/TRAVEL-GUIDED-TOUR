@@ -16,6 +16,25 @@ struct AudioRecordSheet: View {
     @State private var recordedURL: URL?
     @State private var permissionDenied = false
 
+    /// Live input level, so the screen answers "is it hearing me?" — a running
+    /// counter does not: it ticks along just as happily with a muted mic or a
+    /// hand over the microphone, and a maker only finds out afterwards.
+    ///
+    /// Bars scroll right to left, newest at the right, and sit at a visible
+    /// floor when idle so the meter reads as a meter rather than as nothing.
+    private var levelMeter: some View {
+        HStack(alignment: .center, spacing: 3) {
+            ForEach(Array(recorder.levels.enumerated()), id: \.offset) { _, level in
+                Capsule()
+                    .fill(recorder.isRecording ? AtlasColors.mapPin : AtlasColors.divider)
+                    .frame(width: 3, height: max(3, level * 48))
+            }
+        }
+        .frame(height: 48)
+        .animation(.linear(duration: 0.05), value: recorder.levels)
+        .accessibilityHidden(true)
+    }
+
     var body: some View {
         NavigationStack {
             VStack(spacing: AtlasSpacing.xl) {
@@ -25,6 +44,8 @@ struct AudioRecordSheet: View {
                     .font(.system(size: 44, weight: .light, design: .monospaced))
                     .foregroundStyle(AtlasColors.primaryText)
                     .contentTransition(.numericText())
+
+                levelMeter
 
                 if permissionDenied {
                     Text("Microphone access is off. Enable it in Settings to record.")
@@ -191,6 +212,12 @@ final class AudioRecorder {
     private(set) var elapsed: TimeInterval = 0
     private(set) var lastDuration: TimeInterval = 0
 
+    /// The last second or so of input level, newest last, each 0...1. Drives
+    /// the visualiser — without it the only sign a recording is happening is a
+    /// counter, which ticks along just as happily with a muted mic.
+    private(set) var levels: [CGFloat] = Array(repeating: 0, count: Self.levelCount)
+    static let levelCount = 28
+
     private var recorder: AVAudioRecorder?
     private var url: URL?
     private var tickTask: Task<Void, Never>?
@@ -215,11 +242,13 @@ final class AudioRecorder {
                 AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
             ]
             let rec = try AVAudioRecorder(url: fileURL, settings: settings)
+            rec.isMeteringEnabled = true
             rec.record()
             recorder = rec
             url = fileURL
             isRecording = true
             elapsed = 0
+            levels = Array(repeating: 0, count: Self.levelCount)
             startTimer()
             return true
         } catch {
@@ -236,19 +265,38 @@ final class AudioRecorder {
         tickTask?.cancel()
         tickTask = nil
         isRecording = false
+        levels = Array(repeating: 0, count: Self.levelCount)
         try? AVAudioSession.sharedInstance().setActive(false)
         return url
     }
 
     /// Main-actor async loop that mirrors the recorder's clock into `elapsed`
-    /// (avoids a `Timer` closure crossing the concurrency boundary).
+    /// and its input level into `levels` (avoids a `Timer` closure crossing the
+    /// concurrency boundary). 20 Hz — fast enough that the bars track speech,
+    /// slow enough to cost nothing.
     private func startTimer() {
         tickTask = Task { [weak self] in
             while !Task.isCancelled {
-                try? await Task.sleep(nanoseconds: 100_000_000)
+                try? await Task.sleep(nanoseconds: 50_000_000)
                 guard let self, let rec = self.recorder, rec.isRecording else { break }
                 self.elapsed = rec.currentTime
+                rec.updateMeters()
+                self.levels.removeFirst()
+                self.levels.append(Self.normalised(rec.averagePower(forChannel: 0)))
             }
         }
+    }
+
+    /// Turn decibels into a bar height. `averagePower` runs from about -160 dB
+    /// (silence) to 0 dB (clipping), but speech at a sane distance sits around
+    /// -35 to -10 — so a linear map of the full range would leave every bar
+    /// flat against the floor. This treats -50 as the bottom and curves the
+    /// result so quiet speech still visibly moves.
+    nonisolated static func normalised(_ decibels: Float) -> CGFloat {
+        let floorDB: Float = -50
+        guard decibels.isFinite else { return 0 }
+        let clamped = max(floorDB, min(0, decibels))
+        let linear = (clamped - floorDB) / -floorDB          // 0...1
+        return CGFloat(pow(linear, 1.5))
     }
 }
