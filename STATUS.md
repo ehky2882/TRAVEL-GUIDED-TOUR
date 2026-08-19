@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-19 23:14 UTC
+**Last verified:** 2026-08-19 23:37 UTC
 
 ---
 
@@ -24,7 +24,7 @@ Code PRs cannot merge without a look on device (§ Merging PRs). This is the que
 
 | PR | What it is | Build to install | Also needs |
 |---|---|---|---|
-| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ⏳ **90 building** | A device pass on the edit path |
+| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ✅ **90 — installable, untested** | A device pass on the edit path |
 
 🔴 **SEVEN BUILDS HAVE SHIPPED THIS FREEZE — 76, 77, 81, 84, 87, 88, 89.** Seven device passes.
 Build 89 removed the sheet entirely and it *still* hung, which rules presentation out as the cause.
@@ -48,8 +48,13 @@ watchdog has been killing.
 alive 650 ms *longer*. No earlier theory accounted for that, or for why the create path has never
 once hung.
 
-**Build 90 is in flight, cut from `eea754b` — it carries this fix.** The head has since moved to
-`f5f855e`, a **comment-only** commit, so 90 is stale by SHA and not by substance.
+**Build 90 is up and installable, cut from `eea754b` — it carries this fix.** The head has since
+moved twice, to `f5f855e` (comment only) and `c727ac4` (docs only), so 90 is stale by SHA and not
+by substance.
+
+⚠️ **The docs commit now records this as "the actual cause", and that is not yet established.** It
+was written two minutes after build 90 started, so it cannot reflect any device test. The
+diagnosis is the best one yet; it is still a hypothesis until the edit path is opened on a phone.
 
 ✅ **That comment commit is worth reading, because it narrows the rule and strengthens the theory.**
 "Never `.automatic`" was an overclaim: `TourSetMap` and the maker page's map both start `.automatic`
@@ -91,7 +96,7 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ⏳ building — untested |
+| 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ✅ built — **untested on device** |
 | 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | 🔴 **still hangs** |
 | 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | 🔴 **still hangs** |
 | 87 | `tour-upload-polish-qiliop` | #540 + a hang fix that did not work | 🔴 **still hangs** |
