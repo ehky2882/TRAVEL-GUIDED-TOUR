@@ -105,3 +105,64 @@ required." The tension is reconciled explicitly in the Details box.
   a financial institution as a false statement.
 - **Save the submitted text here, in this file, at the time of submission.** Round 1's
   wording is lost, which made round 2 harder than it needed to be.
+
+## Round 3 — 2026-08-19 ("Additional details needed about your business")
+
+Two fields: a **Website URL**, and an optional box for "if we've misunderstood or
+miscategorised your business."
+
+### Website URL
+
+Submitted as-is from the existing site. **⚠️ This is the weak point of the whole file.**
+Stripe asked for "an active website link where we can view the products and services that
+you will be processing through your Stripe account," and today:
+
+- `dozent.world` is a splash page reading **COMING SOON**
+- `dozent.world/about/` describes the product well but shows **no actual products**
+- there is no public App Store page — 1.1 has never been released
+
+### Optional box — submitted text
+
+> We may be creating confusion by answering as though we process product sales through
+> Stripe, so to be explicit: we do not, and we do not plan to.
+>
+> Dozent's consumer sales happen entirely inside an iOS app through Apple In-App Purchase.
+> Apple is the merchant of record — Apple takes the payment, handles refunds and
+> chargebacks, and remits our share to us. Stripe is not in that path and never sees a
+> cardholder.
+>
+> Our Stripe account exists to do one thing: pay content creators, through Connect
+> Express, out of revenue Apple has already remitted to us. The only money that will ever
+> move through Stripe is an outbound transfer from us to a creator's own connected
+> account. There are no consumer charges to review, no inventory, no shipping and no
+> chargeback exposure to Stripe.
+>
+> Because the app has not yet been publicly released — version 1.1 is in App Store review
+> — the tours are not purchasable anywhere yet, and we have processed no transactions and
+> made no payouts to date.
+>
+> If it would assist your review, we would be glad to provide a TestFlight build so you
+> can see the app and its full catalogue directly.
+
+## Open risk and the trigger for acting on it
+
+**A public catalogue page at `dozent.world/tours/` was proposed and deliberately deferred
+(owner decision, 2026-08-19).** The reasoning for deferring: three rounds in, it is worth
+seeing whether the written answers close the review before investing in the page.
+
+**Build it if any of these happen:**
+
+- Stripe comes back a fourth time, or asks about the website specifically
+- The account is restricted, or payouts are blocked
+- Third-party creators are about to be onboarded (at which point a public catalogue is
+  needed anyway)
+
+Everything required already exists: 1,418 tours with titles, descriptions, cities,
+durations and hero images in `Tours.json` and on the gh-pages CDN. It is website-only work
+in `site/` — no Swift, no app build, no App Store involvement — and the auto-merge class
+under CLAUDE.md § Merging PRs. Match `site/atlas.css`; state pricing in prose ("most tours
+free; paid tours are one-time unlocks from $0.99 to $19.99") rather than per-tour, because
+`price_tier` lives only in Supabase and is not in `Tours.json`.
+
+The other standing offer, if a reviewer says they cannot verify the product: **give them a
+TestFlight build.** It was offered in the round-3 text above.
