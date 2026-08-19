@@ -256,7 +256,7 @@ struct TourListDetailView: View {
             heroImageURL: carouselHero,
             additionalImageURLs: carouselRest,
             videoURLs: nil,
-            height: nil,   // 5:4 — see AtlasSpacing.heroAspectRatio
+            height: nil,   // takes AtlasSpacing.heroAspectRatio
             category: resolvedTours.first?.tour.primaryCategory
         )
         .padding(.horizontal, AtlasSpacing.lg)

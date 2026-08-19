@@ -335,7 +335,7 @@ struct TourDetailView: View {
             heroImageURL: tour.heroImageURL,
             additionalImageURLs: tour.additionalImageURLs,
             videoURLs: tour.videoURLs,
-            height: nil,   // 5:4 — see AtlasSpacing.heroAspectRatio
+            height: nil,   // takes AtlasSpacing.heroAspectRatio
             category: tour.primaryCategory
         )
         .padding(.horizontal, AtlasSpacing.lg)
