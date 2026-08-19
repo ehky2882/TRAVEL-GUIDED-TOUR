@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-19 22:25 UTC
+**Last verified:** 2026-08-19 22:48 UTC
 
 ---
 
@@ -24,30 +24,36 @@ Code PRs cannot merge without a look on device (§ Merging PRs). This is the que
 
 | PR | What it is | Build to install | Also needs |
 |---|---|---|---|
-| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ⏳ **89 building** | A device pass on the edit path |
+| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | 🔴 **None — 89 hung too** | An owner decision, below |
 
-🔴 **SIX BUILDS HAVE NOW SHIPPED THIS FREEZE — 76, 77, 81, 84, 87, 88.** Opening a saved tour in
-the wizard wedges the main thread. Every one of those cost a device pass.
+🔴 **SEVEN BUILDS HAVE SHIPPED THIS FREEZE — 76, 77, 81, 84, 87, 88, 89.** Seven device passes.
+Build 89 removed the sheet entirely and it *still* hung, which rules presentation out as the cause.
 
-**The seventh attempt (`0e1edf3`, unbuilt) is different in kind, and that matters.** The first six
-each guessed at a *trigger* inside the sheet — toolbar structure, then state writes, then when
-those writes happen. Build 88 falsified the last of those: the deferred load changed nothing, so
-the writes were never the fuel. A `.task` cannot even begin while the main thread is wedged in a
-synchronous layout call, which is what every stack shows.
+**The eighth hypothesis (`eea754b`, unbuilt) is the first that explains the ASYMMETRY, and from a
+line of code rather than from circumstance.** Every previous theory was read off a crash log's top
+frame. This one asks the right question instead — what differs on the edit path in the *first*
+render, before any async work — and finds one thing:
 
-So this one **removes the arena instead of guessing the trigger**: the edit path now presents as a
-`fullScreenCover` rather than a sheet. Every crash log — 77, 84, 87 — passes through
-`UISheetPresentationController._sheetLayoutInfoLayout:`, a frame only a sheet can produce, and a
-full-screen cover cannot reach it. The history corroborates it: the old editor was *pushed*, never
-sheet-presented, and never hung; the create path has always been a sheet and has never hung either.
+```
+guard existingTourId == nil, ...   // centerOnUser, skipped for an existing tour
+```
 
-**Build 89 is in flight, cut from `0e1edf3` — it carries this fix.** The branch head has since moved
-to `ab8f584`, but that is a **docs-only** commit recording the falsification chain, so 89 is stale by
-SHA and not by substance. Nothing in the app binary differs.
+So creating a tour gets a concrete `.region` in `onAppear`, while editing one leaves
+`cameraPosition` at `.automatic` with no content at all until the fetched pin lands. `Map(position:)`
+bound to `.automatic` over empty content makes MapKit resolve a camera, write back through the
+binding, re-render, and resolve again — a synchronous layout loop, which is exactly what the
+watchdog has been killing.
 
-⚠️ **The escalation stands.** Six device passes have gone. If 89 hangs as well, the next step is a
-local Mac session that can reproduce it in the simulator — not an eighth trip through the owner's
-phone.
+**It also retro-explains build 88**: the deferred load did not help because it kept `.automatic`
+alive 650 ms *longer*. No earlier theory accounted for that, or for why the create path has never
+once hung.
+
+⚠️ **OWNER DECISION.** The standing escalation says stop building and move to a local Mac session
+that can reproduce this in the simulator — and after seven device passes that remains the safe
+default. But this is the first hypothesis with real explanatory power rather than another guess at
+the trigger, so it is also the most defensible eighth build anyone could ask for. **Either way the
+device pass is still the only test** — a confident commit message has already been wrong once
+today.
 
 ## 2. Blocked on owner — outside the repo
 
@@ -79,7 +85,7 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | ⏳ building — untested |
+| 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | 🔴 **still hangs** |
 | 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | 🔴 **still hangs** |
 | 87 | `tour-upload-polish-qiliop` | #540 + a hang fix that did not work | 🔴 **still hangs** |
 | 84 | `tour-upload-polish-qiliop` | #540 wizard | 🔴 hangs on the edit path |
