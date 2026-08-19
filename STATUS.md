@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-19 22:02 UTC
+**Last verified:** 2026-08-19 22:25 UTC
 
 ---
 
@@ -24,7 +24,7 @@ Code PRs cannot merge without a look on device (§ Merging PRs). This is the que
 
 | PR | What it is | Build to install | Also needs |
 |---|---|---|---|
-| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | 🔴 **None — 88 hung too** | A build off head `0e1edf3` |
+| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ⏳ **89 building** | A device pass on the edit path |
 
 🔴 **SIX BUILDS HAVE NOW SHIPPED THIS FREEZE — 76, 77, 81, 84, 87, 88.** Opening a saved tour in
 the wizard wedges the main thread. Every one of those cost a device pass.
@@ -41,9 +41,13 @@ So this one **removes the arena instead of guessing the trigger**: the edit path
 full-screen cover cannot reach it. The history corroborates it: the old editor was *pushed*, never
 sheet-presented, and never hung; the create path has always been a sheet and has never hung either.
 
-⚠️ **Owner decision owed.** This is a structural argument rather than a seventh guess, so it is
-worth a build. But six device passes have gone, and if it hangs as well, the next step is a local
-Mac session that can reproduce it in the simulator — not an eighth trip through the owner's phone.
+**Build 89 is in flight, cut from `0e1edf3` — it carries this fix.** The branch head has since moved
+to `ab8f584`, but that is a **docs-only** commit recording the falsification chain, so 89 is stale by
+SHA and not by substance. Nothing in the app binary differs.
+
+⚠️ **The escalation stands.** Six device passes have gone. If 89 hangs as well, the next step is a
+local Mac session that can reproduce it in the simulator — not an eighth trip through the owner's
+phone.
 
 ## 2. Blocked on owner — outside the repo
 
@@ -75,6 +79,7 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
+| 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | ⏳ building — untested |
 | 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | 🔴 **still hangs** |
 | 87 | `tour-upload-polish-qiliop` | #540 + a hang fix that did not work | 🔴 **still hangs** |
 | 84 | `tour-upload-polish-qiliop` | #540 wizard | 🔴 hangs on the edit path |
