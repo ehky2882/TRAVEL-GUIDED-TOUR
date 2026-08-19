@@ -37,7 +37,19 @@ struct CreateTourWizardView: View {
 
     // Step 1 — location
     @State private var radius: Double = 30
-    @State private var cameraPosition: MapCameraPosition = .automatic
+    /// 🔴 NEVER `.automatic`. `Map(position:)` bound to `.automatic` with no
+    /// content to frame makes MapKit resolve a camera, write back through the
+    /// binding, re-render, and resolve again — a synchronous layout loop that
+    /// the watchdog eventually kills. This screen hits exactly that case on
+    /// the edit path: `centerOnUser` is skipped for an existing tour, so
+    /// nothing set a camera and `centerCoordinate` was still nil (no
+    /// `MapCircle`), leaving an automatic camera over empty content until the
+    /// fetched pin arrived. Creating a tour never hung because `centerOnUser`
+    /// hands it a concrete region in `onAppear`. Start concrete; every real
+    /// value overwrites this within a frame or two.
+    // (`Self` is rejected in a stored-property initializer — name the type.)
+    @State private var cameraPosition: MapCameraPosition =
+        .region(CreateTourWizardView.fallbackRegion)
     @State private var centerCoordinate: CLLocationCoordinate2D?
     /// What the maker typed into "city & country", and what they picked.
     @State private var cityQuery = ""
@@ -106,6 +118,14 @@ struct CreateTourWizardView: View {
     /// The catalogue's own range. Every single-stop tour sits at 30 m and every
     /// walk stop at 40; the old 200 m ceiling was range nobody had ever used,
     /// and a 200 m circle runs off all four edges of this map.
+    /// Somewhere neutral to point the camera before anything real is known —
+    /// mid-Atlantic, wide enough to read as "no location yet" rather than a
+    /// wrong one. Only ever on screen for a frame or two.
+    private static let fallbackRegion = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 30, longitude: -20),
+        span: MKCoordinateSpan(latitudeDelta: 90, longitudeDelta: 90)
+    )
+
     private static let radiusRange: ClosedRange<Double> = 15...100
     private static let titleLimit = 60
     private static let shortLimit = 100
@@ -1234,12 +1254,20 @@ struct CreateTourWizardView: View {
         return tags
     }
 
+    /// Frames the map on the user before anything else is known.
+    ///
+    /// ⚠️ On an existing tour this moves the CAMERA ONLY. The pin belongs to
+    /// the saved tour and arrives from `loadExistingTour`; dropping the user's
+    /// coordinate into `centerCoordinate` here would invent an edit — it feeds
+    /// `canPersist` and the change signature, so the tour would open already
+    /// claiming unsaved work, on a pin nobody placed.
     private func centerOnUser() {
-        guard existingTourId == nil, centerCoordinate == nil,
-              let coord = locationManager.userLocation?.coordinate else { return }
+        guard let coord = locationManager.userLocation?.coordinate else { return }
+        guard centerCoordinate == nil else { return }
         cameraPosition = .region(
             MKCoordinateRegion(center: coord, latitudinalMeters: 700, longitudinalMeters: 700)
         )
+        guard existingTourId == nil else { return }
         centerCoordinate = coord
     }
 
