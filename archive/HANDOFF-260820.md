@@ -121,3 +121,77 @@ specifically so a test round-trips the real type.
 machine. Building would have tested untouched code. This is already recorded
 from session 97 and it happened again on the very next local session. **Set both
 before the first build of any session.**
+
+## Addendum — the build was cut from a stale branch, and it cost the owner's trust before it cost anything else
+
+**TestFlight 1.1 (92) was built from this branch, which split off `main` on
+2026-08-18.** Everything merged to `main` on the 19th was therefore absent from
+it:
+
+- **#540** — the five-step tour upload wizard
+- **#543** — the bottom bars must not stay in island form under a slide-up layer
+- **#542** Universal Links, **#544 / #546 / #547** the Settings + hero-shape work
+
+The owner opened the tour editor, got no wizard, opened a place page, and saw
+its content peeking out from behind the bars again:
+
+> "i've already fixed this once. SO FRUSTRATING!"
+
+They had. **Neither was a regression** — build 92 simply predated both fixes.
+
+### 🔴 The durable rule
+
+`docs/testflight-ci.md` already warns that a build uses **the workflow file**
+from the branch you build from. The **app code** does too, and that is the more
+expensive half: a branch a day or two behind `main` ships as a pile of
+apparently-reverted features, and the person testing it has no way to tell that
+from a real regression.
+
+> **Merge `main` before cutting any build, and say in the build notes what the
+> build contains.** Build 93's notes lead with exactly that.
+
+### ⚠️ And a second-order mistake worth not repeating
+
+On the place-page report I **started writing a fix from scratch** — extracted
+the geometry rule, wrote tests — before checking `origin/main`, where **#543 had
+already fixed it, arrived at the same way**: one `isAnyLayerPresented` property,
+extracted as a pure static, with tests. The duplicate was discarded and #543's
+implementation is what is on the branch.
+
+> **When the owner says "I already fixed this once", read `origin/main` first.**
+> The fix is probably there and you are looking at a stale build.
+
+## Addendum 2 — `.xcodebuildmcp/config.yaml` was committed, and that was the whole "wrong defaults" mystery
+
+The recurring "`session_show_defaults` points at the Desktop clone and a dead
+simulator" note in sessions 97 and 99 was not a quirk of the tool. **The file is
+tracked in the repo**, and it held:
+
+    projectPath: /Users/EY/Desktop/TRAVEL GUIDED TOUR/TRAVEL GUIDED TOUR.xcodeproj
+    simulatorName: iPhone 16 Pro        # no longer installed; sims are 17-series
+
+So every session inherited it, had to reset both before its first build, and a
+session that forgot **compiled the other clone and believed it had tested the
+change**. It was never a decision — it rode along in **#56**, and
+`archive/HANDOFF-260816.md` line 188 already records it churning as "another
+session's local tool setting".
+
+**Fixed by `git rm --cached` + `.xcodebuildmcp/` in `.gitignore`**, not by
+correcting the path. Correcting it was tried first and rejected: it is only
+right until the next machine or the next `session_set_defaults --persist` —
+which is exactly what dirtied the checkout an hour earlier in this session.
+
+⚠️ **A fresh clone now starts with no defaults and a session must set its own.
+That is the point.** The two failure modes are not symmetric:
+
+| | |
+|---|---|
+| **No defaults** | fails **loudly** — `Unable to find a device matching the provided destination specifier`, on the first build, fixed in one call |
+| **Wrong defaults** | fails **silently** — everything goes green and you report a change as tested that was never compiled |
+
+Nothing reads the file: no reference in the workflows, in `fastlane/`, or in
+`scripts/`.
+
+**Found independently by two parallel sessions on the same day.** Consolidated
+into PR #549 rather than opened as a second PR — the #504/#502 and #516/#514
+precedents.
