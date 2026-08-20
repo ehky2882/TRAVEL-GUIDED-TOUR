@@ -1015,16 +1015,13 @@ struct CreateTourWizardView: View {
 
     /// Tags, on their own step since 2026-08-20 — see `TourWizardStep`.
     ///
-    /// ⚠️ `ControlledTagPicker` is here UNCHANGED, on purpose. Moving it and
-    /// redesigning it are two changes, and only the move was asked for; the
-    /// owner is working through the wizard a step at a time and hasn't reached
-    /// this one. Consequence, stated rather than hidden: **closed it fits
-    /// (382pt into 529), but opening a group still scrolls** — Theme's chips
-    /// are 226pt against the 147 left over. Making that fit is the work of
-    /// step 3, and the mockup already measures what it needs (one-line rows
-    /// buy 80pt, and the open group becomes the elastic element).
+    /// The picker fills the step because its open group is the elastic element,
+    /// the same shape as the map on Location and the description on Details.
+    /// Every group now opens with the page still fitting: the tallest, Theme,
+    /// needs 226pt and gets 242.
     private var tagsStep: some View {
         ControlledTagPicker(selectedTags: $selectedTags, architect: $architect)
+            .frame(maxHeight: .infinity)
     }
 
     @ViewBuilder
@@ -1349,7 +1346,11 @@ struct CreateTourWizardView: View {
             // The owner's rule from 2026-08-19, and not something a screen of
             // empty fields tells you on its own.
             return "Only a title is required."
-        case .tags, .photos, .audio, .review:
+        case .tags:
+            // Was three lines inside the picker, which cost it 55pt. Says what
+            // tags buy rather than demanding them: nothing here is required.
+            return "Tags are how people find your tour."
+        case .photos, .audio, .review:
             return nil
         }
     }
