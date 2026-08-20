@@ -389,15 +389,14 @@ struct ContentView: View {
         // be in (owner direction, 2026-08-20). `preloaded` is passed straight
         // through so the title is on screen from the first frame.
         .onChange(of: listPresenter.presented?.id) { _, _ in
-            if let presentation = listPresenter.presented {
+            if let presentedList = listPresenter.presented {
                 listLayer.present(
                     // Wrapped in its own stack, like the maker layer: "Go to
                     // creator" pushes a maker page here rather than stacking a
                     // second layer over this one.
                     NavigationStack {
                         TourListDetailView(
-                            listId: presentation.id,
-                            preloaded: presentation.preloaded,
+                            target: presentedList,
                             onDismiss: { listPresenter.dismiss() }
                         )
                     }

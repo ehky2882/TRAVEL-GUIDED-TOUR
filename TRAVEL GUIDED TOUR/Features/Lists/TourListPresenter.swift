@@ -12,19 +12,10 @@ import Observation
 /// up from the bottom and close by sliding down).
 @Observable
 final class TourListPresenter {
-    /// What is on screen.
-    ///
-    /// `preloaded` is the row the caller already had in hand — Library and a
-    /// profile both hold the `TourList` before you tap it, and passing it
-    /// means the title and description are drawn on the first frame instead of
-    /// appearing a fetch later. Nil means the view resolves the list itself,
-    /// which is the path a list of your own takes (`listService.myLists`).
-    struct Presentation: Identifiable {
-        let id: UUID
-        let preloaded: TourList?
-    }
-
-    var presented: Presentation? = nil
+    /// What is on screen — a named list or Liked. Both are the same screen
+    /// (`TourListTarget`), so both arrive through this one presenter and get
+    /// the same slide-up layer.
+    var presented: TourListTarget? = nil
 
     /// Performs the real UIKit dismissal, wired once by `ContentView`.
     ///
@@ -37,8 +28,14 @@ final class TourListPresenter {
     /// carries the same note for the same reason.
     @ObservationIgnored var performDismiss: (() -> Void)?
 
+    func present(_ target: TourListTarget) {
+        presented = target
+    }
+
+    /// Convenience for the common case: a named list whose row the caller
+    /// already holds, so the title draws on the first frame.
     func present(listId: UUID, preloaded: TourList? = nil) {
-        presented = Presentation(id: listId, preloaded: preloaded)
+        present(.list(id: listId, preloaded: preloaded))
     }
 
     func dismiss() {
