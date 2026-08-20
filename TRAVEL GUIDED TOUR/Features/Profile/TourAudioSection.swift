@@ -167,23 +167,19 @@ struct TourAudioSection: View {
     private var actionPair: some View {
         if let failed = failedUpload {
             HStack(spacing: AtlasSpacing.sm) {
-                pillButton("Try again", systemImage: "arrow.clockwise", filled: true) {
-                    retryUpload(failed)
-                }
-                pillButton("Discard", systemImage: nil, filled: false) {
-                    discardFailure()
-                }
+                AtlasPillButton(title: "Try again", systemImage: "arrow.clockwise",
+                                filled: true) { retryUpload(failed) }
+                AtlasPillButton(title: "Discard") { discardFailure() }
             }
         } else {
             HStack(spacing: AtlasSpacing.sm) {
-                pillButton(isPlaying ? "Playing…" : "Play",
-                           systemImage: isPlaying ? "pause.fill" : "play.fill",
-                           filled: false,
-                           enabled: playableURL != nil && !recorder.isRecording && !isUploading) {
+                AtlasPillButton(title: isPlaying ? "Playing…" : "Play",
+                                systemImage: isPlaying ? "pause.fill" : "play.fill",
+                                enabled: playableURL != nil && !recorder.isRecording && !isUploading) {
                     togglePlayback()
                 }
-                pillButton("Use recording", systemImage: nil, filled: true,
-                           enabled: recordedURL != nil && !recorder.isRecording && !isUploading) {
+                AtlasPillButton(title: "Use recording", filled: true,
+                                enabled: recordedURL != nil && !recorder.isRecording && !isUploading) {
                     guard let take = recordedURL else { return }
                     takeReview.stop()
                     uploadAudio(from: take)
@@ -215,10 +211,9 @@ struct TourAudioSection: View {
     /// computer shouldn't have to discover the option exists — and for a tour
     /// written in advance, importing is the primary action, not a lesser one.
     private var importButton: some View {
-        pillButton(hasAudio ? "Replace with a file" : "Import audio file",
-                   systemImage: "square.and.arrow.down",
-                   filled: false,
-                   enabled: !recorder.isRecording && !isUploading) {
+        AtlasPillButton(title: hasAudio ? "Replace with a file" : "Import audio file",
+                        systemImage: "square.and.arrow.down",
+                        enabled: !recorder.isRecording && !isUploading) {
             importingAudio = true
         }
     }
@@ -258,32 +253,6 @@ struct TourAudioSection: View {
             return "Uploading narration — \(pct)% · \(sent) of \(total)"
         }
         return nil
-    }
-
-    /// One button shape for the whole step, at the chrome height.
-    private func pillButton(_ title: String, systemImage: String?,
-                            filled: Bool, enabled: Bool = true,
-                            action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            HStack(spacing: 6) {
-                if let systemImage { Image(systemName: systemImage) }
-                Text(title)
-            }
-            .font(AtlasTypography.caption)
-            .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
-            .frame(maxWidth: .infinity)
-            .frame(height: buttonHeight)
-            .background {
-                if filled {
-                    Capsule().fill(AtlasColors.mapPin)
-                } else {
-                    Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1)
-                }
-            }
-        }
-        .buttonStyle(.plain)
-        .disabled(!enabled)
-        .opacity(enabled ? 1 : 0.35)
     }
 
     // MARK: - Recording

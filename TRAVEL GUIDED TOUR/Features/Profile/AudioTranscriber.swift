@@ -192,6 +192,21 @@ final class AudioTranscriber {
             ?? locale.identifier
     }
 
+    /// Just the language, without the region — "Spanish", not "Spanish
+    /// (Spain)".
+    ///
+    /// ⚠️ What the button says, where the full name is what the menu says. Half
+    /// a row is about fifteen characters at 13pt SF Mono, and "Cantonese
+    /// (China)" is seventeen — it would truncate. Dropping the region is the
+    /// right thing to lose: a region mismatch (en_GB against en_US) does not
+    /// produce nonsense, and it is nonsense the name on screen exists to catch.
+    nonisolated static func shortDisplayName(of locale: Locale) -> String {
+        guard let code = locale.language.languageCode?.identifier,
+              let name = Locale.current.localizedString(forLanguageCode: code)
+        else { return displayName(of: locale) }
+        return name.prefix(1).uppercased() + name.dropFirst()
+    }
+
     /// Collapse the runs of whitespace the recogniser leaves between segments.
     ///
     /// `nonisolated` so it can be tested without a main actor — it is pure

@@ -1137,10 +1137,24 @@ struct CreateTourWizardView: View {
                     .onTapGesture { focused = .transcript }
                     .focused($focused, equals: .transcript)
 
+                // The same pair, in the same place, as the Audio step's — two
+                // 44pt buttons, both always drawn, dimmed when they don't
+                // apply. Steps 5 and 6 are the two halves of one job and
+                // should read as siblings rather than as two designs.
+                HStack(spacing: AtlasSpacing.sm) {
+                    languageMenu
+                    AtlasPillButton(title: "Transcribe again",
+                                    systemImage: "arrow.clockwise",
+                                    enabled: lastLocalAudioURL != nil && !transcriber.isWorking) {
+                        retranscribe()
+                    }
+                }
+
                 // Two lines, reserved whether or not there is anything to
-                // say. The note comes and goes as the recogniser works, and a
-                // box that resized each time would jump exactly as the words
-                // landed in it. Same discipline as the footer's hint slot.
+                // say — as on the Audio step, and for the same reason: the
+                // note comes and goes as the recogniser works, and an
+                // unreserved slot would resize the box exactly as the words
+                // landed in it.
                 Text(transcriptNote ?? " ")
                     .font(AtlasTypography.caption)
                     .foregroundStyle(transcriber.phase.isFailure
@@ -1148,8 +1162,6 @@ struct CreateTourWizardView: View {
                                      : AtlasColors.tertiaryText)
                     .lineLimit(2, reservesSpace: true)
                     .frame(maxWidth: .infinity, alignment: .leading)
-
-                languageRow
             }
         } else {
             missingDraftNotice
@@ -1172,40 +1184,24 @@ struct CreateTourWizardView: View {
     /// and then had to ask for again would be a setting pretending to be an
     /// action.
     @ViewBuilder
-    private var languageRow: some View {
-        HStack(spacing: AtlasSpacing.sm) {
-            Menu {
-                // The device's own language leads, so the common case is one
-                // tap back rather than a hunt through forty entries.
-                Button("Match my phone") { chooseLanguage("") }
-                Divider()
-                ForEach(supportedLocales, id: \.identifier) { locale in
-                    Button(AudioTranscriber.displayName(of: locale)) {
-                        chooseLanguage(locale.identifier)
-                    }
+    private var languageMenu: some View {
+        Menu {
+            // The device's own language leads, so the common case is one tap
+            // back rather than a hunt through forty entries.
+            Button("Match my phone") { chooseLanguage("") }
+            Divider()
+            ForEach(supportedLocales, id: \.identifier) { locale in
+                Button(AudioTranscriber.displayName(of: locale)) {
+                    chooseLanguage(locale.identifier)
                 }
-            } label: {
-                HStack(spacing: 4) {
-                    Text(spokenLanguageName)
-                    Image(systemName: "chevron.down").font(.system(size: 9))
-                }
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.mapPin)
             }
-            .disabled(transcriber.isWorking || supportedLocales.isEmpty)
-
-            Spacer(minLength: AtlasSpacing.sm)
-
-            // Only offered when it can be done — the recording has to still be
-            // on this device — and never mid-run.
-            if lastLocalAudioURL != nil, !transcriber.isWorking {
-                Button("Transcribe again") { retranscribe() }
-                    .font(AtlasTypography.caption)
-                    .tint(AtlasColors.secondaryText)
-                    .fixedSize()
-            }
+        } label: {
+            AtlasPillLabel(title: spokenLanguageName,
+                           systemImage: "globe",
+                           trailingImage: "chevron.down")
         }
-        .frame(minHeight: 17)
+        .disabled(transcriber.isWorking || supportedLocales.isEmpty)
+        .opacity(transcriber.isWorking || supportedLocales.isEmpty ? 0.35 : 1)
         .task {
             guard supportedLocales.isEmpty else { return }
             supportedLocales = await AudioTranscriber.supportedLocales()
@@ -1218,10 +1214,12 @@ struct CreateTourWizardView: View {
     /// been chosen — never to a blank or to "Default", either of which would
     /// leave the maker unable to tell what was actually used.
     private var spokenLanguageName: String {
+        // Short form: the button has half a row, and the region is the part
+        // worth losing — see `shortDisplayName`.
         if !transcriptionLocaleID.isEmpty {
-            return AudioTranscriber.displayName(of: Locale(identifier: transcriptionLocaleID))
+            return AudioTranscriber.shortDisplayName(of: Locale(identifier: transcriptionLocaleID))
         }
-        return AudioTranscriber.displayName(of: Locale.current)
+        return AudioTranscriber.shortDisplayName(of: Locale.current)
     }
 
     /// What the step says about where the automatic transcript got to.
