@@ -150,6 +150,20 @@ create policy stops_public_read on public.stops
 -- camelCase keys match the Swift Codable property names. SECURITY INVOKER
 -- (default) so RLS applies — anon sees published tours only.
 -- ---------------------------------------------------------------------------
+-- 🔴 THIS FUNCTION IS WRAPPED IN PRODUCTION. `places_apply.sql` renames it to
+-- `get_catalog_core()` and defines a new `get_catalog()` that appends a
+-- `places` key. So running the statement below AS-IS against a live database
+-- overwrites that wrapper and places vanish from the payload with no error.
+--
+-- That is not hypothetical: `add_country.sql` lifted this body verbatim on
+-- 2026-08-19 and took out `places`, `priceTier` and `isPrivate` at once —
+-- place pages and capsule pins disappeared, every paid walk decoded as free,
+-- and every private account read as public. All three are optional in Swift,
+-- so nothing errored. Fixed by `restore_catalog_keys.sql`.
+--
+-- ⚠️ Every key a later migration adds MUST be added here too, or the next
+-- rebuild drops it again. This body is only canonical if it stays complete.
+-- Run `restore_catalog_keys.sql` after any change to this function.
 create or replace function public.get_catalog()
 returns jsonb
 language sql
@@ -173,7 +187,8 @@ as $$
           -- Needed to look up that person's lists: `journeys.owner_user_id`
           -- is an auth.users id, and without this the client has no way to
           -- name whose lists it is asking for.
-          'userId',         m.user_id
+          'userId',         m.user_id,
+          'isPrivate',      m.is_private
         ) order by m.display_name
       )
       from public.makers m
@@ -199,6 +214,7 @@ as $$
           'primaryCategory',      t.primary_category::text,
           'tags',                 to_jsonb(t.tags),
           'priceUSD',             t.price_usd,
+          'priceTier',            t.price_tier,
           'stops', coalesce((
             select jsonb_agg(
               jsonb_build_object(

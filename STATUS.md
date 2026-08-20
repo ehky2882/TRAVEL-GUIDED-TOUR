@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-20 01:07 UTC
+**Last verified:** 2026-08-20 01:20 UTC
 
 ---
 
@@ -51,6 +51,45 @@ builds, seven of which shipped the freeze (76, 77, 81, 84, 87, 88, 89), six wron
 came from three different top frames of the same loop — toolbar bridge, `PlatformViewChild` walking
 MKMapView's subtree, presentation. Every frame was real; none was the cause. **Diff the working
 path against the broken one before trusting any stack.**
+
+## 1b. 🔴 LIVE REGRESSION — one SQL paste fixes it, no build needed
+
+**Owner on build 91: the place pages and merged capsule pins are gone.** They are. So are two
+other things nobody had noticed.
+
+`add_country.sql` rebuilt `get_catalog()` from `schema.sql`'s body — which is exactly what its PR
+described doing, to avoid drift. But **`schema.sql` has never carried three keys later migrations
+added**, so rebuilding from it dropped them from the live payload:
+
+| Key | Added by | What broke |
+|---|---|---|
+| `places` | `places_apply.sql` | **Place pages and merged capsule pins vanish** — the reported symptom |
+| `priceTier` | `paid_tours.sql` | **All 66 paid walks decode as FREE.** The paywall is off |
+| `isPrivate` | `social.sql` | **Every private account reads as public** |
+
+**Nothing errored.** All three are optional in Swift, so they decode as nil and the features simply
+stop existing. Measured live 2026-08-20: `places` absent at top level, `priceTier` absent on
+1419/1419 tours, `isPrivate` absent on 39/39 makers. `userId`, `videoURLs` and `country` are fine.
+
+✅ **The data is intact — all 25 places are still in the table.** Only the function stopped
+emitting them. **This is not a code fault and build 91 is not at fault**; every place file is
+present on `main`. It is the build-68 failure again: *adding a key to `Tours.json` does not put it
+in front of users — Supabase is primary, and if the RPC does not emit it, nobody sees it.*
+
+### What to run — `backend/restore_catalog_keys.sql`
+
+One idempotent paste into the Supabase SQL Editor (project **Dozent**). It refreshes
+`get_catalog_core()` with the complete key set, then restores the `places` wrapper. Verification
+queries are at the bottom of the file; expect **25 places, 1419 tours, 39 makers, 66 priced**.
+
+🔴 **Do NOT just re-run `places_apply.sql`**, even though that file says to. Its rename step is
+guarded on `get_catalog_core` already existing, so it would rewrap the **stale** core — restoring
+places while dropping `country` straight back out. `restore_catalog_keys.sql` refreshes the core
+first, which is the whole reason it exists.
+
+**Hardened so it cannot recur:** `schema.sql` now carries `priceTier` and `isPrivate`, and a 🔴
+warning that the function is wrapped in production and that every later key must be added there
+too. That file is only canonical if it stays complete.
 
 ## 2. Blocked on owner — outside the repo
 
