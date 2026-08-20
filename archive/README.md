@@ -134,6 +134,7 @@ tribal knowledge not yet promoted.
 - [HANDOFF-260819-2.md](HANDOFF-260819-2.md) — the website restyled to the app's tokens; splash home page, /about/, pinned chrome.
 - [HANDOFF-260819-3.md](HANDOFF-260819-3.md) — AMNH becomes a place (its tour's pin was 107 m off its own script), and the bottom bars stop painting as a floating island under a slide-up layer. TestFlight 1.1 (78), owner-verified.
 - [HANDOFF-260819-4.md](HANDOFF-260819-4.md) — Universal Links finally work (gh-pages could never have served the association file — a project path has no root), every hero becomes a **ratio** rather than a fixed height (the old 320pt cropped 8% on one phone and 23% on another), and the list page is rebuilt on the place page with both maps collapsed into one shared `TourSetMap`. TestFlight 1.1 (77)→(81). **Active handoff.**
+- [HANDOFF-260819-5.md](HANDOFF-260819-5.md) — the tour upload becomes a five-step wizard and three screens are deleted; plus the saved-tour watchdog hang: seven builds, six falsified diagnoses, finally caused by `Map(position:)` sitting on `.automatic` with no content to frame on the edit path only. **A crash log is one sample of a spin — diff the working path against the broken one.** TestFlight 1.1 (90), **owner device-verified — hang closed.** **Active handoff.**
 
 When the next handoff is written, name it for the new date
 (`HANDOFF-YYMMDD.md`) and update the entry above to point to the

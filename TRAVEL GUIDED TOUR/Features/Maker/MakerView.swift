@@ -151,11 +151,8 @@ struct MakerView: View {
     @State private var showingSettings = false
     @State private var showingCreate = false
     @State private var showingEditProfile = false
-    /// Set when a new draft is created, to push its editor (step 2) as the
-    /// create sheet dismisses. `pendingDraftId` holds the id until the sheet is
-    /// fully gone, then `draftToEdit` fires the push (avoids a dismiss↔push race).
+    /// One of the maker's own tours, opened in the wizard.
     @State private var draftToEdit: EditingDraft?
-    @State private var pendingDraftId: UUID?
 
     /// Which of TOURS / LISTS / MAP is showing.
     @State private var profileTab: ProfileTab = .tours
@@ -223,21 +220,25 @@ struct MakerView: View {
         .sheet(isPresented: $showingSettings) {
             SettingsView()
         }
+        // The five-step create wizard. It ends on its own confirmation screen,
+        // so there is nothing to push afterwards — unlike the old two-screen
+        // form, which saved a draft and handed you to the editor.
         .sheet(isPresented: $showingCreate) {
-            CreateTourView { newId in
-                pendingDraftId = newId
-            }
+            CreateTourWizardView()
         }
-        // Once the create sheet is fully dismissed, push the new draft's editor
-        // (step 2) so "Save draft & continue" lands there instead of the profile.
-        .onChange(of: showingCreate) { _, showing in
-            if !showing, let id = pendingDraftId {
-                pendingDraftId = nil
-                draftToEdit = EditingDraft(id: id)
-            }
-        }
-        .navigationDestination(item: $draftToEdit) { draft in
-            TourAuthoringView(tourId: draft.id)
+        // 🔴 EDITING PRESENTS FULL-SCREEN, NOT AS A SHEET — this is the fix
+        // for the saved-tour watchdog hang (builds 76→88), do not "restore
+        // consistency" with the create sheet above. Every crash log went
+        // through `UISheetPresentationController._sheetLayoutInfoLayout:` —
+        // a frame only a sheet can produce — spinning in a synchronous layout
+        // oscillation during the presentation transition. Five attempts at
+        // the loop's trigger failed (toolbar structure, camera writes,
+        // dismiss preferences, deferred loading); removing the sheet removes
+        // the machinery that loops. The old editor was never a sheet either:
+        // `TourAuthoringView` was pushed. Only the create path — which never
+        // hung — has ever safely lived in one.
+        .fullScreenCover(item: $draftToEdit) { draft in
+            CreateTourWizardView(existingTourId: draft.id)
         }
         // A place tapped on the MAP tab while this page is already inside a
         // detail layer. See `openPlaceFromMap` for why it cannot go through
@@ -831,7 +832,7 @@ struct MakerView: View {
             // Own tours open the authoring EDITOR (add audio / photos /
             // transcript / submit), pushed within the Me tab's nav stack —
             // not the public read-only detail.
-            NavigationLink { TourAuthoringView(tourId: tour.id) } label: { label() }
+            Button { draftToEdit = EditingDraft(id: tour.id) } label: { label() }
                 .buttonStyle(.plain)
         } else if tourPresenter.presentedTour == nil {
             Button { tourPresenter.present(tour) } label: { label() }

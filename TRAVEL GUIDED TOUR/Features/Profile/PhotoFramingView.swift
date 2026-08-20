@@ -11,16 +11,21 @@ import UIKit
 /// is why the pipeline notes call for top-biased crops on those. The avatar
 /// editor already solved the interaction; tour photos never got it.
 ///
-/// Walks a queue one photo at a time, so picking five doesn't mean five separate
-/// sheets appearing and dismissing. **Skip is always available** — for the
+/// Walks a queue one photo at a time, so picking five doesn't mean five rounds
+/// of anything appearing and dismissing. **Skip is always available** — for the
 /// common case where the centre is fine, framing shouldn't cost four extra taps
 /// per photo — and it produces exactly the same centre crop the old code did.
-struct PhotoCropSheet: View {
+///
+/// **Not a sheet.** It renders inside the Photos step, which swaps its grid for
+/// this while there are photos waiting to be framed. Owner, on the sheet it
+/// replaced: *"This is yet another additional page. Should be able to
+/// edit/pinch/zoom all from one page."*
+struct PhotoFramingView: View {
     let images: [UIImage]
     /// Called once with every processed photo, in the order they were picked.
     let onFinish: ([Data]) -> Void
-
-    @Environment(\.dismiss) private var dismiss
+    /// Called if the maker backs out — the whole batch is dropped.
+    let onCancel: () -> Void
 
     @State private var index = 0
     @State private var results: [Data] = []
@@ -45,75 +50,62 @@ struct PhotoCropSheet: View {
     }
 
     var body: some View {
-        NavigationStack {
-            GeometryReader { geo in
-                // Viewport is as wide as the sheet allows, at 4:3 — the same
-                // shape as the output, so the preview cannot lie about framing.
-                let width = min(geo.size.width - AtlasSpacing.lg * 2, 420)
-                let height = width * (Self.outputHeight / Self.outputWidth)
-
-                VStack(spacing: AtlasSpacing.lg) {
-                    Spacer()
-
-                    if let current {
-                        imageLayer(current, scale: liveScale, offset: liveOffset)
-                            .frame(width: width, height: height)
-                            .clipped()
-                            .overlay(
-                                Rectangle()
-                                    .stroke(AtlasColors.secondaryText.opacity(0.5), lineWidth: 1)
-                            )
-                            .gesture(SimultaneousGesture(magnify, move))
-                    }
-
-                    VStack(spacing: AtlasSpacing.xs) {
-                        Text("Pinch to zoom · drag to reposition")
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.secondaryText)
-                        if images.count > 1 {
-                            Text("Photo \(index + 1) of \(images.count)")
-                                .font(AtlasTypography.caption)
-                                .foregroundStyle(AtlasColors.tertiaryText)
-                        }
-                    }
-
-                    Button { advance(using: nil) } label: {
-                        Text("Skip — use the centre")
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.primaryText)
-                            .padding(.horizontal, AtlasSpacing.xl)
-                            .padding(.vertical, AtlasSpacing.md)
-                            .overlay(
-                                Capsule().stroke(AtlasColors.secondaryText.opacity(0.5), lineWidth: 1)
-                            )
-                    }
-                    .buttonStyle(.plain)
-
-                    Spacer()
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        VStack(spacing: AtlasSpacing.md) {
+            HStack {
+                Text(images.count > 1 ? "FRAME PHOTO \(index + 1) OF \(images.count)" : "FRAME PHOTO")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.secondaryText)
+                Spacer()
+                Button("Cancel") { onCancel() }
+                    .font(AtlasTypography.caption)
+                    .tint(AtlasColors.primaryText)
             }
-            .background(AtlasColors.secondaryBackground)
-            .navigationTitle("")
-            .inlineNavigationBarTitle()
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Text("FRAME PHOTO")
+
+            GeometryReader { geo in
+                // Viewport at 4:3 — the same shape as the output, so the
+                // preview cannot lie about framing.
+                let width = geo.size.width
+                let height = width * (Self.outputHeight / Self.outputWidth)
+                if let current {
+                    imageLayer(current, scale: liveScale, offset: liveOffset)
+                        .frame(width: width, height: height)
+                        .clipped()
+                        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: AtlasSpacing.sm)
+                                .stroke(AtlasColors.secondaryText.opacity(0.5), lineWidth: 1)
+                        )
+                        .gesture(SimultaneousGesture(magnify, move))
+                }
+            }
+            .aspectRatio(Self.outputWidth / Self.outputHeight, contentMode: .fit)
+
+            Text("Pinch to zoom · drag to reposition")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.tertiaryText)
+
+            HStack(spacing: AtlasSpacing.sm) {
+                Button { advance(using: nil) } label: {
+                    Text("Skip")
                         .font(AtlasTypography.caption)
                         .foregroundStyle(AtlasColors.primaryText)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, AtlasSpacing.md)
+                        .overlay(
+                            Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1)
+                        )
                 }
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel") { dismiss() }
+                .buttonStyle(.plain)
+
+                Button { advance(using: (scale, offset)) } label: {
+                    Text(index == images.count - 1 ? "Use photo" : "Next photo")
                         .font(AtlasTypography.caption)
-                        .tint(AtlasColors.primaryText)
+                        .foregroundStyle(AtlasColors.background)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, AtlasSpacing.md)
+                        .background(AtlasColors.mapPin, in: Capsule())
                 }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button(index == images.count - 1 ? "Use photo" : "Next") {
-                        advance(using: (scale, offset))
-                    }
-                    .font(AtlasTypography.caption)
-                    .tint(AtlasColors.mapPin)
-                }
+                .buttonStyle(.plain)
             }
         }
     }
@@ -164,7 +156,6 @@ struct PhotoCropSheet: View {
             offset = .zero
         } else {
             onFinish(results)
-            dismiss()
         }
     }
 
