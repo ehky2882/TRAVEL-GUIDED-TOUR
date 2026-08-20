@@ -61,9 +61,7 @@ struct TourAudioSection: View {
     @State private var attachedAudioURL: URL?
     @State private var audioPreview = AuthoringAudioPreview()
     @State private var errorMessage: String?
-    /// Removing narration that is already on the server, which is the one
-    /// destructive thing this step can do — hence the confirmation.
-    @State private var confirmingRemoval = false
+    /// Removing narration that is already on the server.
     @State private var isRemoving = false
 
     private var hasAudio: Bool { tour.totalDurationSeconds > 0 }
@@ -133,13 +131,6 @@ struct TourAudioSection: View {
                 .frame(height: buttonHeight)
         }
         .frame(height: buttonHeight)
-        .confirmationDialog("Remove this narration?",
-                            isPresented: $confirmingRemoval, titleVisibility: .visible) {
-            Button("Remove narration", role: .destructive) { removeAttachedAudio() }
-            Button("Keep it", role: .cancel) { }
-        } message: {
-            Text("The uploaded audio is deleted. Your transcript stays.")
-        }
     }
 
     /// A local take is discarded on the spot; attached narration asks first,
@@ -299,11 +290,17 @@ struct TourAudioSection: View {
     }
 
     /// Throw the take away and go back to whatever the tour already had — or,
-    /// when there is no take, offer to remove the narration itself.
+    /// when there is no take, remove the narration itself.
     ///
-    /// A take is discarded without asking: it exists only on this device and
-    /// the maker made it seconds ago. Attached narration was uploaded, may be
-    /// the only copy, and is what the tour plays — so that one is confirmed.
+    /// ⚠️ **No confirmation, on either branch** — owner decision, 2026-08-20,
+    /// on seeing one in the mockup: *"don't need this portion."* I had put one
+    /// on the attached-narration branch because that one deletes an upload,
+    /// and it was the wrong call against this app's own precedent: the ✕ on a
+    /// photo deletes an uploaded photo on the spot with nothing asked, and the
+    /// same owner had already thrown out a confirmation screen on the Photos
+    /// step for being a screen. An "are you sure" on audio and not on photos
+    /// would have made the two steps disagree about how destructive a delete
+    /// is. Re-recording is the undo, the same as re-adding a photo is.
     private func discard() {
         if recordedURL != nil || recorder.isRecording {
             _ = recorder.stop()
@@ -312,7 +309,7 @@ struct TourAudioSection: View {
             return
         }
         guard hasAudio else { return }
-        confirmingRemoval = true
+        removeAttachedAudio()
     }
 
     /// Put the stop back to how `createDraftTour` left it. The transcript is

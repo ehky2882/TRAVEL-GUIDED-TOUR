@@ -110,6 +110,10 @@ struct CreateTourWizardView: View {
     /// The transcript step's label row, measured so the box below it can take
     /// exactly what's left instead of guessing at a font's line height.
     @State private var transcriptLabelHeight: CGFloat = 0
+    /// How tall a step's pinned controls are, when it has any. Zero on the six
+    /// steps that don't, and part of what the keyboard is already standing
+    /// behind — see `keyboardOverlap`.
+    @State private var accessoryHeight: CGFloat = 0
     /// Whether the maker has typed in the transcript box themselves.
     ///
     /// 🔴 The one thing standing between a maker and losing a sentence they
@@ -540,6 +544,26 @@ struct CreateTourWizardView: View {
                 .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { stepAreaHeight = $0 }
             }
         }
+        // 🔴 ITS OWN INSET, AND IT MUST BE APPLIED BEFORE THE FOOTER'S.
+        // Owner, 2026-08-20, on the mockup: *"these should be 'above' the
+        // standard buttons, not added to be part of it."* Inside the footer's
+        // VStack the pair sat on the same panel, under the same divider, in
+        // the same capsule shape as Back · Save · Next — so the row read as a
+        // five-button footer where two of the buttons changed between steps.
+        // The footer is the one part of this screen that never changes; a step
+        // may not add to it.
+        //
+        // Two bottom insets stack outermost-last, so the footer applied after
+        // this one sits below it, and the divider the footer draws along its
+        // own top edge becomes the line between the two. This pair now sits on
+        // the page's ground, above that line: pinned as asked, and plainly not
+        // part of the chrome.
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            stepAccessory
+                .onGeometryChange(for: CGFloat.self) { $0.size.height } action: {
+                    accessoryHeight = $0
+                }
+        }
         .safeAreaInset(edge: .bottom, spacing: 0) {
             // Measured rather than assumed: `keyboardOverlap` needs to know how
             // much of the keyboard the footer is already standing in front of.
@@ -660,13 +684,6 @@ struct CreateTourWizardView: View {
             .font(AtlasTypography.caption)
             .lineLimit(2, reservesSpace: true)
             .frame(maxWidth: .infinity, alignment: .leading)
-
-            // A step may pin its own controls here, directly above the nav row
-            // — today only the transcript step does. ⚠️ This makes the footer
-            // a different height on that one step, which is fine because
-            // `footerHeight` is *measured*; nothing may start assuming it.
-            stepAccessory
-
             // Back · Save · Next — three equal columns, three glyphs
             // (owner, 2026-08-20). Nothing in this row is ever drawn as
             // words; the strings passed in are what VoiceOver reads.
@@ -778,7 +795,7 @@ struct CreateTourWizardView: View {
     /// standing in that space, unmoved, because the wizard ignores the
     /// keyboard's safe area. Only what is left over eats into the step.
     private var keyboardOverlap: CGFloat {
-        max(0, keyboardHeight - footerHeight)
+        max(0, keyboardHeight - footerHeight - accessoryHeight)
     }
 
     /// Any write in flight. Every footer button waits on it — two of them
@@ -1312,6 +1329,11 @@ struct CreateTourWizardView: View {
                     retranscribe()
                 }
             }
+            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.bottom, AtlasSpacing.md)
+            // The page's own ground, not the footer's panel — the whole point
+            // is that this belongs to the step and the bar below does not.
+            .background(AtlasColors.secondaryBackground)
         }
     }
 
