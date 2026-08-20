@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-20 12:30 UTC
+**Last verified:** 2026-08-20 14:40 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -149,6 +149,7 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
+| 95 | `ellipsis-button-consistency-vdorpi` | Follow-up **after #553 merged** (`435436b1`) — conforms `LikedListView`, fixes a `dismiss()` left over from #553. ⚠️ **No PR** | ✅ built 13:12 |
 | 94 | `ellipsis-button-consistency-vdorpi` | #553 list page as a layer (`1d7ed910`) — merge-base `8c1eb4b0`, so **no #549 library fix** | ✅ owner-verified — **#553 merged** |
 | 93 | `library-launch-jitter` | #549 **after merging main** (`c2e8594`) — #549 has since merged, so this is on `main` | ✅ the one that has the Library fix |
 | 92 | `library-launch-jitter` | #549 on an 18 Aug base — **no wizard, no Settings pass** | ⚠️ looked like regressions; it was just old |
@@ -171,8 +172,8 @@ after dispatching; never promise one in advance.
 | Branch | State |
 |---|---|
 | `claude/library-launch-jitter` | Merged (#549 at 03:52) — auto-delete should remove it |
-| `claude/upload-wizard-improvements-ejopz3` | Open — #552, **the only open PR**, unbuilt; merge-base `8c1eb4b0` now predates **two** merges (#549, #553) |
-| `claude/ellipsis-button-consistency-vdorpi` | Merged (#553 at 11:36) — auto-delete should remove it |
+| `claude/upload-wizard-improvements-ejopz3` | Open — #552, **the only open PR**, still unbuilt; head moved to `572c2661` at 14:33; merge-base `8c1eb4b0` predates **two** merges (#549, #553) |
+| `claude/ellipsis-button-consistency-vdorpi` | ⚠️ **Reused after its PR merged.** #553 merged 11:36; new commits landed after and built as 95, with no PR open. CLAUDE.md's rule is that a merged PR is finished and follow-up starts from a fresh branch off `main` |
 | `claude/tour-upload-polish-qiliop` | Merged (#540) — auto-delete should remove it |
 | `claude/stripe-questions-fjhdo3` | ⚠️ No PR — verify contents before deleting |
 | `claude/amsterdam-handoff-preserve-hlhyp8` | 🔒 Keep — only copy of staging pick-maps |
