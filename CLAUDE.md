@@ -123,6 +123,15 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-20)
 
+### Stripe came back a second time — the follow-up asked for a website, and the splash page would have been the wrong answer (2026-08-20 — infra, no code)
+
+**Owner: "another follow up from stripe."** A short form — *"Additional details needed about your business"* — with a required **Website URL** field (*"an active website link where we can view the products and services that you will be processing through your Stripe account"*) and an optional free-text box. Submitted by the owner the same day. **This is the follow-up to the session-97 response; that response's framing still stands and is not superseded.**
+
+- **🔴 THE URL SUBMITTED WAS `https://dozent.world/about/`, NOT THE APEX — and the reason generalises.** `dozent.world/` is the **splash page** (pulsing brass circle, wordmark, COMING SOON, footer links) — a reviewer landing there sees nothing about a product, which is precisely what the field asks for. `/about/` is the page that describes the app, the two-sided creator model, pricing, moderation and the three policies. **Any future "send us your website" request takes `/about/`**; the apex is the brand front door, not evidence of a business. All five pages re-verified 200 before submitting.
+- **The optional box was used rather than left blank**, restating the four facts that decide every reading of the flag: not a travel reservation service (no bookings, dates, seats or supplier inventory; nothing delivered at a future date) · **Apple is merchant of record for 100% of consumer purchases**, so Stripe processes no cardholder payment and carries no chargeback exposure · Stripe's role is **payouts only**, via Connect Express, so Stripe is the regulated party and Dozent is not a money transmitter · **no transactions processed and no payouts made to date**, which is true regardless of activation state (the session-97 lesson — never assert "we are in test mode" from a project note).
+- **⚠️ Flagged to the owner and deliberately left as-is:** `/about/` says *"Tours can be free or paid, and creators set their own prices"* — accurate, and the single sentence most likely to keep a reviewer reading "content creation platform". The optional-box paragraph is what puts it in context; softening the page to dodge the category would misdescribe the product.
+- **⚠️ Stripe's standing still cannot be checked from this environment** (§ READ FIRST). The outcome reaches the owner, not a session. **Do not report Stripe's status from this file.**
+
 ### The list page stops being the odd one out — one `…`, one way in, one way out ([PR #553](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/553), session 100 — code)
 
 **Owner, from a screenshot of the list page: "Why would you suggest this style of '…' button? Consistency please!"** Squash `9c75bbc`, **merged**. **TestFlight 1.1 (94), owner device-verified — "LOOKED AT TESTFLIGHT. LOOKS GOOD."** 8 files, all Swift. No SQL, no catalogue change. Full detail: `archive/HANDOFF-260820-2.md`.
