@@ -120,6 +120,21 @@ enum TourWizardRules {
             if state.isAlreadyInReview {
                 return "Already with us — we'll let you know either way."
             }
+            // 🔴 A TOUR COULD BE SUBMITTED WITH NO AUDIO. The earlier steps
+            // gate *advancing*, but the progress bar lets an existing tour
+            // jump straight to Review — so a maker who jumped here from step 1
+            // found Submit live on a tour with no narration and no cover, and
+            // this case never looked. Review is the last gate and has to
+            // re-ask every question, not just its own.
+            //
+            // The first unfinished step's reason is the one shown: it names
+            // something concrete to go and do, and the progress bar is one tap
+            // from doing it.
+            for earlier in TourWizardStep.allCases where earlier != .review {
+                if let reason = blockingReason(for: earlier, state: state) {
+                    return reason
+                }
+            }
             // Reaching Review mid-upload is fine; submitting is not. The
             // audio can still be in flight while the maker reads the summary.
             switch state.audioUpload {

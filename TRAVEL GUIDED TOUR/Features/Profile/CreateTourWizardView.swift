@@ -901,24 +901,6 @@ struct CreateTourWizardView: View {
                                   longitudinalMeters: 400)
     }
 
-    /// What the Review step calls the place: what was found, then the city
-    /// it's in — and an honest "Not named" rather than a blank row.
-    ///
-    /// The two are collapsed when they'd repeat: searching a city makes the
-    /// place name and the city the same word, and "Porto, Porto, Portugal" is
-    /// how you can tell nobody read the summary.
-    private var whereSummary: String {
-        let named = resolvedPlaceName ?? locationQuery.trimmingCharacters(in: .whitespacesAndNewlines)
-        let parts = [named.isEmpty || named == city ? nil : named,
-                     cityLabel.isEmpty ? nil : cityLabel].compactMap { $0 }
-        return parts.isEmpty ? "Not named" : parts.joined(separator: ", ")
-    }
-
-    /// "Porto, Portugal" — the resolved city, never typed.
-    private var cityLabel: String {
-        [city, country].compactMap { $0 }.joined(separator: ", ")
-    }
-
     /// What the place would call the tour, if the maker hasn't named it.
     /// Offered on the way out of step 1, never imposed.
     ///
@@ -1241,44 +1223,54 @@ struct CreateTourWizardView: View {
     }
 
     @ViewBuilder
-    /// The last look before it goes to a moderator.
+    /// The last look before it goes to a moderator — **the tour's own page**.
     ///
-    /// 🔴 **IT WAS 746pt INTO 529** — by far the worst step in the wizard, half
-    /// again the screen, and 844 when editing a tour that already exists. Two
-    /// things caused that, and both were doing less than their height claimed.
+    /// 🔴 Owner, 2026-08-20: *"why don't you just make the review a preview of
+    /// the tour detail page? this one can be scrollable."* Right on both
+    /// counts, and it replaced two worse answers of mine in a row.
     ///
-    /// A **360pt mock of the player** — a fake scrubber, a fake play button, a
-    /// fake speed pill — that could not be played. It answered "how will it
-    /// look" with a picture of a screen the maker will never see this tour on
-    /// in that state, and cost more room than everything else together.
+    /// First a **360pt hand-built mock of the player** — a fake scrubber, a
+    /// fake play button — which had the flaw every mock has: it goes on saying
+    /// "this is how it will look" long after that has stopped being true. Then
+    /// a **checklist of the six steps**, which was honest and compact but
+    /// answered a different question: whether the form was filled in, not what
+    /// the thing looks like. `TourDetailView` in `.preview` mode answers the
+    /// real one, and cannot drift from the page it is previewing, because it
+    /// *is* that page.
     ///
-    /// And **eight full-width rows restating what the maker had just typed**,
-    /// six screens running. A review screen's job is not to read your own
-    /// answers back to you; it is to say **whether each step is done**, show
-    /// what is missing, and let you go and fix it. So each step gets one line,
-    /// with a mark, a short value, and a tap that jumps there — through the
-    /// same `jump(to:)` the progress bar uses, so it saves before it moves.
+    /// ⚠️ **This is the one step that scrolls, by explicit exception.** The
+    /// rule everywhere else is that a step fits — the whole wizard was rebuilt
+    /// around it. A tour page is as long as its description and its photos,
+    /// which is exactly what a maker has come here to look at; capping it would
+    /// mean previewing a truncation of their tour. The exception is granted for
+    /// this step and stays granted for this step.
     ///
-    /// 405pt for a new tour. See `checklistRow` for what the marks mean.
+    /// ⚠️ What the preview leaves out and why is documented on
+    /// `TourDetailView.Presentation` — chrome, the action row, stops, place and
+    /// nearby, and every side effect. The last matters most: the live page's
+    /// `onAppear` records the tour as recently viewed, which would put an
+    /// unpublished draft in the maker's own Home rail.
     @ViewBuilder
     private var reviewStep: some View {
         if let draft {
             VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                fieldLabel("HOW IT'LL LOOK")
-                previewCard(draft.tour)
-
-                VStack(spacing: 0) {
-                    ForEach(TourWizardStep.allCases.filter { $0 != .review }, id: \.rawValue) { s in
-                        checklistRow(s, isLast: s == .transcript)
-                    }
-                }
-                .background(AtlasColors.background)
-                .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+                // Full-bleed against the step's own padding: the page has its
+                // own gutters and would otherwise sit inside two.
+                // ⚠️ Live, not inert. Swiping the photographs and switching
+                // to the map are the two things a maker has come here to do,
+                // and both are safe — the sections the preview keeps read
+                // nothing but `locationManager` and `openURL`. The only
+                // control that would have taken them out of the wizard, GET
+                // DIRECTIONS, is dropped in preview mode.
+                //
+                // Full-bleed against the step's own padding: the page brings
+                // its own gutters and would otherwise sit inside two.
+                TourDetailView(tour: draft.tour, mode: .preview)
+                    .padding(.horizontal, -AtlasSpacing.lg)
 
                 Text(reviewFootnote)
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.tertiaryText)
-                    .lineLimit(2, reservesSpace: true)
 
                 if existingTourId != nil {
                     AtlasPillButton(title: isDeleting ? "Deleting…" : "Delete tour",
@@ -1291,152 +1283,6 @@ struct CreateTourWizardView: View {
             }
         } else {
             missingDraftNotice
-        }
-    }
-
-    /// The tour as a row in the app, which is where a listener meets it.
-    ///
-    /// ⚠️ It replaces a still of the *player* — a scrubber and transport that
-    /// could not be pressed. This is a shape the app actually draws, at the
-    /// proportion it actually draws it: the hero square, because
-    /// `AtlasSpacing.heroAspectRatio` is 1.0 and a square is what survives
-    /// every hero-shaped surface. So it also shows the crop, one step after
-    /// the photo grid promised it.
-    private func previewCard(_ tour: Tour) -> some View {
-        let images = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
-            .filter { !$0.isEmpty }
-        return HStack(spacing: AtlasSpacing.md) {
-            Group {
-                if let hero = images.first {
-                    HeroImageView(imageName: hero, height: 96,
-                                  cornerRadius: AtlasSpacing.sm,
-                                  category: tour.primaryCategory)
-                } else {
-                    RoundedRectangle(cornerRadius: AtlasSpacing.sm)
-                        .fill(AtlasColors.secondaryBackground)
-                        .overlay {
-                            Image(systemName: "photo")
-                                .foregroundStyle(AtlasColors.tertiaryText)
-                        }
-                }
-            }
-            .frame(width: 96, height: 96)
-            .clipped()
-
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                Text(persistedTitle.isEmpty ? "Untitled tour" : persistedTitle)
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .lineLimit(2)
-                Text(shortDescription.isEmpty ? longDescription : shortDescription)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .lineLimit(2)
-                Text(previewMeta(tour))
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-            }
-            Spacer(minLength: 0)
-        }
-        .padding(AtlasSpacing.md)
-        .background(AtlasColors.background)
-        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
-    }
-
-    private func previewMeta(_ tour: Tour) -> String {
-        var parts: [String] = []
-        if let city = city, !city.isEmpty { parts.append(city) }
-        if tour.totalDurationSeconds > 0 {
-            parts.append(AtlasFormatters.duration(seconds: tour.totalDurationSeconds))
-        }
-        return parts.isEmpty ? "No audio yet" : parts.joined(separator: " · ")
-    }
-
-    /// One step, one line: is it done, what is in it, and a way back to it.
-    ///
-    /// The mark carries the state the footer can only say one of at a time:
-    /// **brass tick** finished · **red warning** required and missing, which is
-    /// why Submit is dim · **grey dash** optional and empty, which is fine.
-    /// Tags and Transcript can only ever be a tick or a dash — they gate
-    /// nothing, by owner decision, and a warning beside them would read as a
-    /// fault where there is none.
-    private func checklistRow(_ s: TourWizardStep, isLast: Bool) -> some View {
-        let blocking = TourWizardRules.blockingReason(for: s, state: wizardState) != nil
-        let value = checklistValue(s)
-        let empty = value == nil
-        return Button { jump(to: s) } label: {
-            HStack(spacing: AtlasSpacing.sm) {
-                Image(systemName: blocking ? "exclamationmark.circle.fill"
-                          : (empty ? "minus.circle" : "checkmark.circle.fill"))
-                    .font(.system(size: 13))
-                    // Red, not brass. A "this is missing" mark in the same
-                    // colour as the ticks beside it reads as another tick.
-                    .foregroundStyle(blocking ? AtlasColors.destructive
-                                     : (empty ? AtlasColors.tertiaryText : AtlasColors.mapPin))
-                Text(s.label)
-                    .font(.system(size: 11, weight: .regular, design: .monospaced))
-                    .foregroundStyle(AtlasColors.tertiaryText)
-                Spacer(minLength: AtlasSpacing.sm)
-                Text(value ?? "None")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(empty ? AtlasColors.tertiaryText : AtlasColors.primaryText)
-                    .lineLimit(1)
-                    .truncationMode(.tail)
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 10))
-                    .foregroundStyle(AtlasColors.tertiaryText)
-            }
-            .padding(.horizontal, AtlasSpacing.md)
-            .padding(.vertical, 9)
-            .contentShape(Rectangle())
-            .overlay(alignment: .bottom) {
-                if !isLast {
-                    Rectangle().fill(AtlasColors.divider).frame(height: 0.5)
-                        .padding(.leading, AtlasSpacing.md)
-                }
-            }
-        }
-        .buttonStyle(.plain)
-        .disabled(!canJump(to: s))
-    }
-
-    /// One line's worth of what is in a step, or nil when it is empty.
-    private func checklistValue(_ s: TourWizardStep) -> String? {
-        switch s {
-        case .location:
-            guard centerCoordinate != nil else { return nil }
-            // `whereSummary` says "Not named" rather than "" when nothing
-            // resolved, so test for that rather than for empty.
-            let place = whereSummary
-            return place == "Not named" ? "\(Int(radius)) m radius"
-                                        : "\(place) · \(Int(radius)) m"
-        case .details:
-            let t = title.trimmingCharacters(in: .whitespacesAndNewlines)
-            return t.isEmpty ? nil : t
-        case .tags:
-            return selectedTags.isEmpty ? nil : "\(selectedTags.count) chosen"
-        case .photos:
-            guard let tour = draft?.tour else { return nil }
-            let n = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
-                .filter { !$0.isEmpty }.count
-            return n == 0 ? nil : "\(n) photo\(n == 1 ? "" : "s")"
-        case .audio:
-            // ⚠️ An upload in flight or a failed one has to be visible HERE,
-            // not only on the Audio step: this is the screen a maker submits
-            // from, and Submit is dimmed while narration is still going up.
-            // Saying only the duration would leave a dim button unexplained.
-            switch audioUpload {
-            case .uploading(let fraction): return "Uploading — \(Int(fraction * 100))%"
-            case .failed:                  return "Upload failed"
-            case .idle:
-                guard let tour = draft?.tour, tour.totalDurationSeconds > 0 else { return nil }
-                return AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
-            }
-        case .transcript:
-            let words = transcript.split(whereSeparator: \.isWhitespace).count
-            return words == 0 ? nil : "\(words) word\(words == 1 ? "" : "s")"
-        case .review:
-            return nil
         }
     }
 

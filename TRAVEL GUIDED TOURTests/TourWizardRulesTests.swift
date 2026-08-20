@@ -235,3 +235,55 @@ final class AudioTranscriberTextTests: XCTestCase {
         XCTAssertEqual(AudioTranscriber.tidied("   \n  "), "")
     }
 }
+
+/// Review is the last gate, so it has to re-ask every earlier question.
+///
+/// The earlier steps gate *advancing*, but the progress bar lets a tour that
+/// already exists jump straight here — so without this a maker could reach
+/// Review from step 1 and submit a tour with no narration.
+final class ReviewGateTests: XCTestCase {
+
+    private func readyState() -> TourWizardState {
+        var s = TourWizardState()
+        s.hasCoordinate = true
+        s.title = "The Old Cathedral"
+        s.hasCoverPhoto = true
+        s.audioDurationSeconds = 163
+        s.draftExists = true
+        return s
+    }
+
+    func test_review_allowsSubmitWhenEverythingRequiredIsThere() {
+        XCTAssertNil(TourWizardRules.blockingReason(for: .review, state: readyState()))
+    }
+
+    func test_review_blocksWhenNarrationIsMissing() {
+        var state = readyState()
+        state.audioDurationSeconds = 0
+        XCTAssertEqual(TourWizardRules.blockingReason(for: .review, state: state),
+                       "Record or import the narration.")
+    }
+
+    func test_review_blocksWhenTheCoverPhotoIsMissing() {
+        var state = readyState()
+        state.hasCoverPhoto = false
+        XCTAssertFalse(TourWizardRules.canAdvance(from: .review, state: state))
+    }
+
+    /// The earliest unfinished step wins, so the reason names the first thing
+    /// to go and do rather than an arbitrary one.
+    func test_review_reportsTheEarliestGap() {
+        var state = readyState()
+        state.hasCoordinate = false
+        state.audioDurationSeconds = 0
+        XCTAssertEqual(TourWizardRules.blockingReason(for: .review, state: state),
+                       "Pan the map to put the pin where the tour begins.")
+    }
+
+    /// Optional steps never block it — tags and the transcript gate nothing.
+    func test_review_ignoresTheOptionalSteps() {
+        var state = readyState()
+        state.tags = []
+        XCTAssertNil(TourWizardRules.blockingReason(for: .review, state: state))
+    }
+}
