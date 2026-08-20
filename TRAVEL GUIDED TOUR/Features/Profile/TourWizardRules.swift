@@ -118,7 +118,10 @@ enum TourWizardRules {
 
         case .review:
             if state.isAlreadyInReview {
-                return "Already with us — we'll let you know either way."
+                // Says why THIS BUTTON won't act. The page's own footnote says
+                // what the state is — they used to say the same sentence twice
+                // on one screen (owner, 2026-08-20).
+                return "Already submitted — there's nothing to send."
             }
             // 🔴 A TOUR COULD BE SUBMITTED WITH NO AUDIO. The earlier steps
             // gate *advancing*, but the progress bar lets an existing tour

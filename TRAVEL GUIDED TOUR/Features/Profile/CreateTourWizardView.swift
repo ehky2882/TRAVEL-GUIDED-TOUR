@@ -104,6 +104,12 @@ struct CreateTourWizardView: View {
     /// step reads it — it outlives both, and a recording that takes a minute to
     /// transcribe must not be cancelled by walking to the next screen.
     @State private var transcriber = AudioTranscriber()
+    /// The scroll viewport's height, so a step that needs to fill it can be
+    /// sized rather than hope. See the ScrollView's `onGeometryChange`.
+    @State private var stepAreaHeight: CGFloat = 0
+    /// The transcript step's label row, measured so the box below it can take
+    /// exactly what's left instead of guessing at a font's line height.
+    @State private var transcriptLabelHeight: CGFloat = 0
     /// Whether the maker has typed in the transcript box themselves.
     ///
     /// 🔴 The one thing standing between a maker and losing a sentence they
@@ -522,6 +528,16 @@ struct CreateTourWizardView: View {
                     .onTapGesture { focused = nil }
                 }
                 .scrollDismissesKeyboard(.interactively)
+                // 🔴 MEASURED, BECAUSE `maxHeight: .infinity` DOES NOT WORK
+                // HERE. A flexible child gets no room from a ScrollView whose
+                // content frame sets only a `minHeight` — the frame stretches
+                // to a screenful and top-aligns while the child stays at its
+                // floor. That was the map on step 1 and the transcript box on
+                // step 6, both showing a screenful of dead space beneath a
+                // control at its minimum. Step 1 was fixed by giving the map a
+                // real shape; a text box has no natural shape, so it takes
+                // this number instead.
+                .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { stepAreaHeight = $0 }
             }
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
@@ -644,6 +660,13 @@ struct CreateTourWizardView: View {
             .font(AtlasTypography.caption)
             .lineLimit(2, reservesSpace: true)
             .frame(maxWidth: .infinity, alignment: .leading)
+
+            // A step may pin its own controls here, directly above the nav row
+            // — today only the transcript step does. ⚠️ This makes the footer
+            // a different height on that one step, which is fine because
+            // `footerHeight` is *measured*; nothing may start assuming it.
+            stepAccessory
+
             // Back · Save · Next — three equal columns, three glyphs
             // (owner, 2026-08-20). Nothing in this row is ever drawn as
             // words; the strings passed in are what VoiceOver reads.
@@ -1200,46 +1223,88 @@ struct CreateTourWizardView: View {
                         ProgressView().controlSize(.small)
                     }
                 }
-
-                TextField("The words spoken in the audio", text: $transcript, axis: .vertical)
-                    .lineLimit(2...200)
-                    .wizardFieldStyle()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                    // A tall field is only tappable on its first line — the
-                    // text sizes to itself and the space under it belongs to
-                    // nothing. Same fix as the description on step 2.
-                    .contentShape(Rectangle())
-                    .onTapGesture { focused = .transcript }
-                    .focused($focused, equals: .transcript)
-
-                // The same pair, in the same place, as the Audio step's — two
-                // 44pt buttons, both always drawn, dimmed when they don't
-                // apply. Steps 5 and 6 are the two halves of one job and
-                // should read as siblings rather than as two designs.
-                HStack(spacing: AtlasSpacing.sm) {
-                    languageMenu
-                    AtlasPillButton(title: "Transcribe again",
-                                    systemImage: "arrow.clockwise",
-                                    enabled: lastLocalAudioURL != nil && !transcriber.isWorking) {
-                        retranscribe()
-                    }
+                .onGeometryChange(for: CGFloat.self) { $0.size.height } action: {
+                    transcriptLabelHeight = $0
                 }
 
-                // Two lines, reserved whether or not there is anything to
-                // say — as on the Audio step, and for the same reason: the
-                // note comes and goes as the recogniser works, and an
-                // unreserved slot would resize the box exactly as the words
-                // landed in it.
-                Text(transcriptNote ?? " ")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(transcriber.phase.isFailure
-                                     ? AtlasColors.secondaryText
-                                     : AtlasColors.tertiaryText)
-                    .lineLimit(2, reservesSpace: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                // 🔴 A BOX, AND IT SCROLLS. Owner, 2026-08-20: *"the
+                // transcription field (like the input fields) need to be
+                // contrasted. that is probably scrollable since the audio may
+                // be long, which is ok."*
+                //
+                // A `TextField(axis: .vertical)` grows to its text and cannot
+                // scroll, so the painted background was drawn tight around two
+                // lines and the `maxHeight: .infinity` that was meant to
+                // stretch it did nothing — a small black rectangle on a nearly
+                // black page, under a screenful of nothing. `TextEditor` has
+                // its own scroller, so the box can be a fixed shape and a
+                // twenty-minute narration still fits inside it.
+                //
+                // ⚠️ It needs `scrollContentBackground(.hidden)` or UIKit's own
+                // fill paints over `wizardFieldStyle`'s, and the inner
+                // `maxHeight: .infinity` is what makes the editor fill the
+                // outer `.frame(height:)` — that one proposes a definite
+                // height, which is exactly what the ScrollView never did.
+                TextEditor(text: $transcript)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .scrollContentBackground(.hidden)
+                    .focused($focused, equals: .transcript)
+                    .overlay(alignment: .topLeading) {
+                        if transcript.isEmpty {
+                            // `TextEditor` has no placeholder of its own.
+                            Text("The words spoken in the audio")
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.tertiaryText)
+                                .padding(.top, 8)
+                                .padding(.leading, 5)
+                                .allowsHitTesting(false)
+                        }
+                    }
+                    .wizardFieldStyle()
+                    .frame(height: transcriptBoxHeight)
+
+                // The language menu and Transcribe again used to sit here.
+                // They are in the footer now, pinned above Back · Save · Next
+                // (owner, 2026-08-20) — so they keep their place while the box
+                // grows, and the box gets the height they were using.
+                //
+                // The recogniser's note went with them, into the footer's hint
+                // slot: it already reserves two lines on every step, and two
+                // separate places for the step to speak was one too many.
             }
         } else {
             missingDraftNotice
+        }
+    }
+
+    /// What's left of the step once the label has taken its line.
+    ///
+    /// The 120pt floor is the safety net for a phone or text size where the
+    /// arithmetic leaves nothing — better a short box that scrolls than a box
+    /// with no height at all.
+    private var transcriptBoxHeight: CGFloat {
+        let usable = stepAreaHeight - keyboardOverlap - AtlasSpacing.lg * 2
+        return max(120, usable - transcriptLabelHeight - AtlasSpacing.xs)
+    }
+
+    /// The transcript step's own controls, pinned in the footer rather than
+    /// left to float at the bottom of a box that changes height.
+    ///
+    /// 🔴 Owner, 2026-08-20: *"the language and transcribe again buttons should
+    /// then reside fixed on the bottom above the back/save/next buttons."*
+    /// Which is right for a step whose one element now scrolls: a control that
+    /// rides on scrolling content is a control that can leave the screen.
+    @ViewBuilder
+    private var stepAccessory: some View {
+        if step == .transcript, draft != nil {
+            HStack(spacing: AtlasSpacing.sm) {
+                languageMenu
+                AtlasPillButton(title: "Transcribe again",
+                                systemImage: "arrow.clockwise",
+                                enabled: lastLocalAudioURL != nil && !transcriber.isWorking) {
+                    retranscribe()
+                }
+            }
         }
     }
 
@@ -1357,7 +1422,7 @@ struct CreateTourWizardView: View {
                 //
                 // Full-bleed against the step's own padding: the page brings
                 // its own gutters and would otherwise sit inside two.
-                TourDetailView(tour: draft.tour, mode: .preview)
+                TourDetailView(tour: previewTour(from: draft.tour), mode: .preview)
                     .padding(.horizontal, -AtlasSpacing.lg)
 
                 Text(reviewFootnote)
@@ -1376,6 +1441,70 @@ struct CreateTourWizardView: View {
         } else {
             missingDraftNotice
         }
+    }
+
+    /// The draft with its stop put back, for the preview only.
+    ///
+    /// 🔴 **`MakerTour` CARRIES NO STOPS, AND ON THIS SCREEN THAT IS VISIBLE.**
+    /// Owner, 2026-08-20: *"doesn't seem like in this preview map view that the
+    /// pin location is recorded."* It is recorded — `TourRow.asMakerTour`
+    /// builds its `Tour` with `stops: []` because the profile feed needs a
+    /// title, a status and an image and nothing more. Everywhere else that
+    /// emptiness is invisible; a page that draws a pin per stop and prints a
+    /// stop count shows it plainly, as an empty map and "0 stops" on a tour
+    /// that has both.
+    ///
+    /// So the preview is handed the stop the wizard is holding anyway. That is
+    /// also the more honest preview: `centerCoordinate` and `radius` are what
+    /// Save is about to write, so the map shows where the tour WILL fire rather
+    /// than where the server last heard it was.
+    ///
+    /// ⚠️ Preview only. This is a display copy — nothing persists from it, and
+    /// the synthesized stop id is a fresh UUID each time it is built, which is
+    /// fine for a map annotation and would be wrong for anything that wrote.
+    /// This is the same gap `stopLocation(tourId:)` and `stopAudioURL(tourId:)`
+    /// exist to close; a third caller needing real stops should fetch, not
+    /// invent.
+    private func previewTour(from tour: Tour) -> Tour {
+        guard tour.stops.isEmpty, let coordinate = centerCoordinate else { return tour }
+        let stop = Stop(
+            id: UUID(),
+            order: 0,
+            title: trimmedTitle.isEmpty ? tour.title : trimmedTitle,
+            caption: nil,
+            latitude: coordinate.latitude,
+            longitude: coordinate.longitude,
+            audioURL: "",
+            audioDurationSeconds: tour.totalDurationSeconds,
+            triggerMode: .geofenced,
+            triggerRadiusMeters: Int(radius),
+            imageURL: tour.heroImageURL.isEmpty ? nil : tour.heroImageURL,
+            transcriptText: transcript.isEmpty ? nil : transcript
+        )
+        return Tour(
+            id: tour.id,
+            title: tour.title,
+            shortDescription: tour.shortDescription,
+            longDescription: tour.longDescription,
+            makerId: tour.makerId,
+            heroImageURL: tour.heroImageURL,
+            additionalImageURLs: tour.additionalImageURLs,
+            videoURLs: tour.videoURLs,
+            kind: tour.kind,
+            stops: [stop],
+            introAudioURL: tour.introAudioURL,
+            totalDurationSeconds: tour.totalDurationSeconds,
+            walkingDistanceMeters: tour.walkingDistanceMeters,
+            centroidLatitude: coordinate.latitude,
+            centroidLongitude: coordinate.longitude,
+            city: tour.city,
+            country: tour.country,
+            primaryCategory: tour.primaryCategory,
+            tags: tour.tags,
+            priceUSD: tour.priceUSD,
+            priceTier: tour.priceTier,
+            createdAt: tour.createdAt
+        )
     }
 
     /// Every step from Details on writes against a tour id, so until the
@@ -1499,9 +1628,12 @@ struct CreateTourWizardView: View {
             // it work."* It worked; nothing said how to start it.
             return "\(count) of \(PhotoGridEditor.maxPhotos) · hold a photo to move it."
         case .transcript:
-            // Says what it is for, since a box that filled itself invites the
-            // question. One line: about 44 characters.
-            return "Read it through — fix anything it misheard."
+            // The recogniser's own note comes first when it has one — it is
+            // the more urgent thing to read, and this is the only slot on the
+            // step that says anything now that the box takes the rest.
+            // Otherwise: what the step is for, since a box that filled itself
+            // invites the question.
+            return transcriptNote ?? "Read it through — fix anything it misheard."
         case .audio, .review:
             return nil
         }
@@ -1537,10 +1669,21 @@ struct CreateTourWizardView: View {
         return draft?.status == .inReview ? "clock" : "paperplane.fill"
     }
 
+    /// ⚠️ **This and the footer's disabled-button reason must not say the same
+    /// thing.** Owner, 2026-08-20, circling both at once: *"what does 'already
+    /// with us, we'll let you know either way' mean? maybe consider
+    /// rephrasing."* Fair on both counts — it appeared twice on one screen, and
+    /// "either way" was standing in for two outcomes it never named.
+    ///
+    /// They have different jobs and now sound like it: this describes the
+    /// tour's state, the footer says why the button won't act. Neither promises
+    /// a message, because nothing sends the maker one — `notify-moderation`
+    /// emails the owner. What a maker can actually observe is the status on
+    /// their profile, so that is what this points at.
     private var reviewFootnote: String {
         switch draft?.status {
         case .inReview:
-            return "Already with us. We'll let you know either way."
+            return "In review. The status on your profile changes once we've looked at it — usually within a day."
         case .published:
             return "This tour is live. Saving changes sends it back for review before they appear."
         default:
@@ -1854,11 +1997,23 @@ struct CreateTourWizardView: View {
 
 private extension View {
     /// Shared field chrome — matches the details editor and profile editor.
+    /// ⚠️ **The border is the contrast, and it is the second attempt.** The
+    /// fill is `AtlasColors.background` — pure black — on a page of `#1C1C1E`,
+    /// an 11% difference that reads as no box at all. Sizing the boxes to their
+    /// character limits was the first lever and wasn't enough: owner,
+    /// 2026-08-20, *"the transcription field (like the input fields) need to be
+    /// contrasted."* A hairline was named at the time as the next lever, so
+    /// this is it, applied to every field at once rather than to the one that
+    /// was complained about.
     func wizardFieldStyle() -> some View {
         self
             .font(AtlasTypography.caption)
             .padding(AtlasSpacing.md)
             .background(AtlasColors.background)
             .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+            .overlay {
+                RoundedRectangle(cornerRadius: AtlasSpacing.sm)
+                    .stroke(AtlasColors.divider, lineWidth: 1)
+            }
     }
 }
