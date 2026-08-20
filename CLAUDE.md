@@ -6,9 +6,51 @@ GPS-anchored audio tour platform. Makers record audio; consumers browse, downloa
 
 **Spec:** `atlas_claude_code_prompt.md` — read before product decisions.
 **Execution plan:** `ROADMAP.md` — read before implementation decisions.
-**V1:** Consumer-side only. No backend, auth, payments, or maker upload.
 
-Multi-platform SwiftUI. iOS 26.2 / macOS 26.2 / visionOS 26.2.
+Multi-platform SwiftUI. iOS 26.2 / macOS 26.2 / visionOS 26.2. Store name **Dozent**; the in-code
+product name is still "Atlas" — legacy, do not "fix" it.
+
+---
+
+# ⚠️ READ FIRST — run this, do not trust this file for anything live
+
+```bash
+bash scripts/session-start.sh
+```
+
+**Many sessions work this repo at once.** They share one checkout, they open PRs against the same
+files, and they finish in an order nobody controls. Nothing written in this file can keep up with
+that, so the script prints the state instead of storing it: whose branch the shared checkout is on,
+what PRs are open right now, which branches are ahead with no PR, whether the site and catalog are
+serving, and what App Store Connect actually says.
+
+**🔴 THE RULE: NEVER REPORT PERISHABLE STATE FROM A DOCUMENT.** This file is excellent at *durable*
+facts — why a bug happened, why a decision was made, how a system works. It is **dangerous** for
+facts that change with no commit, because nothing here updates when they do.
+
+| Perishable — check it, never quote it | How |
+|---|---|
+| Program License Agreement, agreements, tax, banking | No API. A recent build that uploaded and processed = accepted. Otherwise **ask the owner** |
+| App Store version / build / review state | `scripts/session-start.sh` (App Store Connect API) |
+| What is merged, open, or in flight | `scripts/session-start.sh` (never this file's prose) |
+| dozent.world, gh-pages catalog | `scripts/session-start.sh` (HTTP check) |
+| Stripe standing · EU DSA trader declaration | **Cannot be checked from here — ask the owner** |
+
+**If you cannot verify one of these, say you could not.** Do not fall back to what is written here.
+
+**🔴 This has already cost the owner real trust.** On 2026-08-19 they were told by four sessions in
+a row that an agreement they had *already accepted* was unaccepted — each session read one stale
+line here and repeated it as current fact (corrected in #550). The same failure had happened days
+earlier with *"our account is in test mode"*, which was false and nearly went to Stripe. The rule
+*"check the live system, not a project note"* was written after the first one and then not applied
+to the second. **Both were caught by the owner, not by us.**
+
+And the line directly above this block used to read *"V1: Consumer-side only. No backend, auth,
+payments, or maker upload"* — while the app shipped accounts, Supabase sync, ten paid IAP tiers and
+a tour-upload wizard, and sat in App Store review. It was the **third** instance, in the first ten
+lines of the file every session reads.
+
+---
 
 ## Session workflow
 
@@ -25,7 +67,7 @@ These happen **automatically, without the owner asking**.
 
 | # | Trigger | What Claude does automatically |
 |---|---------|-------------------------------|
-| 1 | Every session start | Run full git/PR health check (§ Session-start ritual) + read latest HANDOFF file — before any other work |
+| 1 | Every session start | **Run `bash scripts/session-start.sh`** (§ READ FIRST) + read the latest HANDOFF file — before any other work. It prints live state; this file does not have it. |
 | 2 | After any edit to `Resources/Tours.json` | Run `swift scripts/validate-tours.swift`; fix errors before continuing |
 | 3 | Before pushing any code PR | **Local (Mac) session:** call `test_sim` (XcodeBuildMCP); fix failures before pushing. **Web/remote session (no Mac):** open the PR so `ci.yml` runs the simulator build + unit tests (the `test_sim` stand-in); fix any red before merge. |
 | 4 | Doc-only / content-only / asset PR is ready (CI green) | Squash-merge to `main` automatically — no owner approval gate. Resolve merge conflicts in-line. Delete the merged branch. **Code PRs (anything in `*.swift`, `*.xcodeproj`/`*.pbxproj`, `Assets.xcassets/`) wait for explicit owner OK + visual simulator confirmation — see § Merging PRs for the exact boundary.** |
@@ -1899,6 +1941,18 @@ Key facts:
 See `ROADMAP.md` for full milestone history. Read latest `archive/HANDOFF-*.md` for mid-flight context.
 
 ## Session-start ritual (automatic — Claude runs this first, every session)
+
+```bash
+bash scripts/session-start.sh      # ← this replaces the checks below; it also reports live
+                                   #   external state, which none of them could
+```
+
+It prints: whose branch the shared checkout is on, uncommitted work, open PRs with mergeability,
+branches ahead of main with no PR, recent merges to main, the staged-content tracker read from
+`origin/main`, live HTTP checks, and the App Store version/build state. **Read § READ FIRST at the
+top of this file for why perishable facts must never be quoted from documentation.**
+
+The underlying commands, if you need them individually:
 
 ```bash
 git fetch && git status && git branch --show-current && git log origin/main..HEAD && gh pr list --state open
