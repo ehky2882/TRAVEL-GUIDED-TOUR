@@ -84,9 +84,12 @@ struct TourListDetailView: View {
     }
 
     /// Saving is account-backed (`saved_journeys` is keyed on the user), so
-    /// unlike bookmarking a tour it can't work signed out. Hide the control
-    /// rather than offer one that fails — the same choice the Follow button
-    /// makes on a maker page.
+    /// unlike bookmarking a tour it can't work signed out.
+    ///
+    /// This gates whether the bookmark *works*, not whether it is *drawn* —
+    /// signed out the capsule stays on the row and greys (owner decision,
+    /// 2026-08-20). It also covers your own list, where saving is meaningless
+    /// because the list is already yours; that one is not drawn at all.
     private var canSave: Bool {
         !isOwner && authService?.isSignedIn == true
     }
@@ -177,13 +180,27 @@ struct TourListDetailView: View {
 
             // Saving lives in the menu as well, but a bookmark you can see is
             // worth a capsule of its own — the place page makes the same call.
-            if canSave {
+            //
+            // ⚠️ Signed out it is drawn and greyed, never removed (owner
+            // decision, 2026-08-20). A control that vanishes changes the row's
+            // shape depending on who is looking; a dimmed one says saving
+            // belongs here and isn't available yet. Your own list is the one
+            // case with no bookmark at all — saving a list you already own
+            // means nothing, so there is no disabled state to show.
+            if !isOwner {
                 Button { toggleSaved() } label: {
-                    chromeCapsule(isSavedList ? "bookmark.fill" : "bookmark")
+                    chromeCapsule(
+                        isSavedList ? "bookmark.fill" : "bookmark",
+                        enabled: canSave
+                    )
                 }
                 .buttonStyle(.plain)
-                .disabled(isSaving)
-                .accessibilityLabel(isSavedList ? "Remove from your saved lists" : "Save this list")
+                .disabled(!canSave || isSaving)
+                .accessibilityLabel(
+                    canSave
+                        ? (isSavedList ? "Remove from your saved lists" : "Save this list")
+                        : "Save this list — sign in required"
+                )
             }
 
             overflowMenu
@@ -194,10 +211,16 @@ struct TourListDetailView: View {
 
     /// Identical to tour detail's and the place page's, down to the fill
     /// opacity. Gold is reserved for action controls, so chrome stays neutral.
-    private func chromeCapsule(_ systemName: String) -> some View {
+    ///
+    /// `enabled: false` greys the **glyph only** — the capsule keeps its fill
+    /// and its 44pt frame, so a control that can't act still holds its place
+    /// in the row. The colour has to be stated here rather than left to
+    /// `.disabled()`: the glyph names `primaryText` explicitly, and SwiftUI
+    /// will not dim a colour a view has set for itself.
+    private func chromeCapsule(_ systemName: String, enabled: Bool = true) -> some View {
         Image(systemName: systemName)
             .font(.system(size: 20, weight: .regular))
-            .foregroundStyle(AtlasColors.primaryText)
+            .foregroundStyle(enabled ? AtlasColors.primaryText : AtlasColors.tertiaryText)
             .frame(width: 44, height: 44)
             .background(Capsule().fill(AtlasColors.tertiaryText.opacity(0.18)))
             .contentShape(Capsule())
@@ -595,17 +618,19 @@ struct TourListDetailView: View {
                 }
             } else {
                 Section {
-                    if canSave {
-                        Button {
-                            toggleSaved()
-                        } label: {
-                            Label(
-                                isSavedList ? "Saved to your lists" : "Save to your lists",
-                                systemImage: isSavedList ? "bookmark.fill" : "bookmark"
-                            )
-                        }
-                        .disabled(isSaving)
+                    // Drawn-and-disabled signed out, matching the bookmark
+                    // capsule above it. Showing the capsule greyed while the
+                    // menu simply omitted the same action would be the split
+                    // treatment this row exists to avoid.
+                    Button {
+                        toggleSaved()
+                    } label: {
+                        Label(
+                            isSavedList ? "Saved to your lists" : "Save to your lists",
+                            systemImage: isSavedList ? "bookmark.fill" : "bookmark"
+                        )
                     }
+                    .disabled(!canSave || isSaving)
 
                     if let ownerMaker {
                         Button {
@@ -711,7 +736,9 @@ struct TourListDetailView: View {
     /// confirmation. The tour bookmark can't, because there un-saving is the
     /// only way to lose a save.
     private func toggleSaved() {
-        guard let journey, !isSaving else { return }
+        // `canSave` is checked here as well as on the two controls: both are
+        // drawn signed out now, so the guard is what makes "disabled" mean it.
+        guard let journey, canSave, !isSaving else { return }
         isSaving = true
         Task {
             if isSavedList {
