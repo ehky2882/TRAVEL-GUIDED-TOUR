@@ -512,16 +512,16 @@ struct CreateTourWizardView: View {
             // which would not fit three-across on any phone. The Review
             // step's footnote carries the nuance the button no longer can.
             HStack(spacing: AtlasSpacing.sm) {
-                footerButton("Back",
+                footerButton("Back", icon: "chevron.left",
                              enabled: step.previous != nil && !isBusy,
                              action: goBack)
 
-                footerButton("Save draft",
+                footerButton("Save draft", icon: "doc.fill",
                              enabled: canPersist && !isBusy,
                              busy: isSavingInPlace,
                              action: saveProgress)
 
-                footerButton(primaryLabel,
+                footerButton(primaryLabel, icon: primaryIcon,
                              filled: true,
                              enabled: canAdvance && !isBusy,
                              busy: isSubmitting || (isPersisting && !isSavingInPlace),
@@ -545,45 +545,97 @@ struct CreateTourWizardView: View {
     }
 
     /// One of the footer's three columns.
+    ///
+    /// 🔴 THE THREE ARE ALWAYS EXACTLY THE SAME WIDTH. `maxWidth: .infinity`
+    /// splits the row into thirds and the capsule is painted across the whole
+    /// of its third, so no label can push its own button wider than its
+    /// neighbours — a row of buttons at three different widths is the thing
+    /// that looks wrong (owner, 2026-08-20).
+    ///
+    /// That guarantee needs somewhere for a label to go when a third of the
+    /// row isn't enough, and the answer is the glyph. `ViewThatFits` takes the
+    /// words when the words fit and the icon when they don't, measured against
+    /// the space actually available rather than a character count I guessed at.
+    /// Nothing wraps, nothing truncates, nothing grows.
+    ///
+    /// ⚠️ The order of the modifiers below is the whole trick, and it is easy
+    /// to get backwards. `ViewThatFits` must wrap the LABEL ONLY, with the
+    /// fill applied outside it — put `maxWidth: .infinity` inside and the text
+    /// version always "fits", so it truncates instead of ever becoming the
+    /// icon; put the capsule inside and it is sized to the words, which is the
+    /// three-different-widths problem again. Label measured, capsule filled,
+    /// in that order.
+    ///
+    /// The words stay on the button as its accessibility label either way, so
+    /// an icon-only button is never unlabelled.
     private func footerButton(_ text: String,
+                              icon: String,
                               filled: Bool = false,
                               enabled: Bool,
                               busy: Bool = false,
                               action: @escaping () -> Void) -> some View {
         Button(action: action) {
-            pill(text, filled: filled, busy: busy)
-                .frame(maxWidth: .infinity)
+            ViewThatFits(in: .horizontal) {
+                footerLabel(text: text, icon: nil, filled: filled, busy: busy)
+                footerLabel(text: nil, icon: icon, filled: filled, busy: busy)
+            }
+            .padding(.horizontal, AtlasSpacing.sm)
+            .padding(.vertical, 12)
+            .frame(maxWidth: .infinity)
+            .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
+            .background(filled ? AtlasColors.mapPin : AtlasColors.background)
+            .clipShape(Capsule())
+            .overlay {
+                if !filled {
+                    Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1)
+                }
+            }
         }
         .buttonStyle(.plain)
         .disabled(!enabled)
         // Dimmed rather than hidden — a disabled Back on step 1 shows that
         // going back is a thing this row does, before there is anywhere to go.
         .opacity(enabled ? 1 : 0.4)
+        .accessibilityLabel(text)
     }
 
-    /// The capsule itself. Used by the footer's three columns and by the
-    /// confirmation screen's Done, which is a single natural-width button.
-    private func pill(_ text: String, filled: Bool, busy: Bool = false) -> some View {
+    /// What sits inside a footer button: the spinner, then either the words or
+    /// the glyph. Never both — `ViewThatFits` picks between two of these.
+    private func footerLabel(text: String?,
+                             icon: String?,
+                             filled: Bool,
+                             busy: Bool) -> some View {
         HStack(spacing: 6) {
             if busy {
                 ProgressView()
                     .controlSize(.small)
                     .tint(filled ? AtlasColors.background : AtlasColors.primaryText)
             }
-            Text(text)
-                .font(AtlasTypography.caption)
-                .lineLimit(1)
-        }
-        .padding(.horizontal, AtlasSpacing.md)
-        .padding(.vertical, 12)
-        .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
-        .background(filled ? AtlasColors.mapPin : AtlasColors.background)
-        .clipShape(Capsule())
-        .overlay {
-            if !filled {
-                Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1)
+            if let text {
+                Text(text)
+                    .font(AtlasTypography.caption)
+                    .lineLimit(1)
+                    // Refuses to shrink, so `ViewThatFits` gets an honest
+                    // answer about whether the words really fit rather than a
+                    // truncated one that always says yes.
+                    .fixedSize(horizontal: true, vertical: false)
+            } else if let icon {
+                Image(systemName: icon)
+                    .font(.system(size: 15, weight: .regular))
             }
         }
+    }
+
+    /// A natural-width capsule. The confirmation screen's Done is the only one
+    /// left — the footer's three size themselves against each other instead.
+    private func pill(_ text: String, filled: Bool) -> some View {
+        Text(text)
+            .font(AtlasTypography.caption)
+            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.vertical, 12)
+            .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
+            .background(filled ? AtlasColors.mapPin : AtlasColors.background)
+            .clipShape(Capsule())
     }
 
     /// Any write in flight. Every footer button waits on it — two of them
@@ -1236,6 +1288,12 @@ struct CreateTourWizardView: View {
     private var primaryLabel: String {
         guard step == .review else { return "Next" }
         return draft?.status == .inReview ? "In review" : "Submit"
+    }
+
+    /// The primary's glyph, for when its label can't fit a third of the row.
+    private var primaryIcon: String {
+        guard step == .review else { return "chevron.right" }
+        return draft?.status == .inReview ? "clock" : "paperplane.fill"
     }
 
     private var reviewFootnote: String {
