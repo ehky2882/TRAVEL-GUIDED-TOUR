@@ -65,22 +65,29 @@ struct CreateTourWizardView: View {
     @State private var cameraPosition: MapCameraPosition =
         .region(CreateTourWizardView.fallbackRegion)
     @State private var centerCoordinate: CLLocationCoordinate2D?
-    /// What the maker typed into "city & country", and what they picked.
-    @State private var cityQuery = ""
+    /// 🔴 ONE SEARCH FIELD, NOT TWO (owner, 2026-08-20). This used to be
+    /// "CITY & COUNTRY" above "LOCATION NAME", which was redundant: the job
+    /// here is to get the map onto the right spot, and a maker who types
+    /// "Casa da Música" has said everything the city field was asking for.
+    /// Two labelled fields cost 154pt to say what 46pt says.
+    ///
+    /// `venues()` is what makes one field enough — its completer returns
+    /// addresses *and* points of interest, so "Porto" and "Casa da Música"
+    /// both resolve, and `resolveDetails` hands back the locality and country
+    /// either way. Nothing is asked for twice.
+    @State private var locationQuery = ""
+    @State private var placeSearch = PlaceSearchService.venues()
+    /// Filled from whatever was resolved, never typed. `city` is persisted on
+    /// the tour; `resolvedPlaceName` only names the place on the Review step
+    /// and offers itself as the tour's title.
     @State private var city: String?
     @State private var country: String?
-    /// What they typed into "location name". Free text — a tour can be about
-    /// a place MapKit has never heard of, so a suggestion is an offer, not a
-    /// requirement.
-    @State private var locationName = ""
-    /// Whether each field's dropdown is showing. Deliberately not derived
-    /// from focus — tapping a row resigns focus, which would pull the row out
-    /// from under the tap before it registered.
-    @State private var showingCitySuggestions = false
+    @State private var resolvedPlaceName: String?
+    /// Whether the dropdown is showing. Deliberately not derived from focus —
+    /// tapping a row resigns focus, which would pull the row out from under
+    /// the tap before it registered.
     @State private var showingPlaceSuggestions = false
     @State private var isResolvingPlace = false
-    @State private var citySearch = PlaceSearchService.cities()
-    @State private var placeSearch = PlaceSearchService.venues()
 
     // Step 2 — details
     @State private var title = ""
@@ -122,7 +129,7 @@ struct CreateTourWizardView: View {
     @State private var savedConfirmation = false
     @FocusState private var focused: Field?
 
-    private enum Field { case city, place, title, short, long }
+    private enum Field { case place, title, short, long }
     private enum Outcome { case submitted, savedDraft }
     private enum Confirmation: Identifiable {
         case leaving, deleting
@@ -265,7 +272,10 @@ struct CreateTourWizardView: View {
         shortDescription = tour.shortDescription
         longDescription = tour.longDescription
         city = tour.city
-        cityQuery = tour.city ?? ""
+        // A saved tour keeps its city but not the search phrase that found it,
+        // so the field opens showing the city — enough to recognise, and
+        // re-searching replaces it.
+        locationQuery = tour.city ?? ""
 
         // Split the stored tags back into what the picker edits. The architect
         // is stored as a plain tag beside its implied "Designed by a Master";
@@ -526,51 +536,23 @@ struct CreateTourWizardView: View {
 
     private var locationStep: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                fieldLabel("CITY & COUNTRY")
-                TextField("e.g. Porto, Portugal", text: $cityQuery)
-                    .focused($focused, equals: .city)
-                    .autocorrectionDisabled()
-                    .onChange(of: cityQuery) { _, new in
-                        // Only a person typing opens the dropdown. Loading a
-                        // saved tour fills this field, and `pickCity` rewrites
-                        // it as "Porto, Portugal" — neither is a search, and
-                        // both used to re-open the list and set a completer
-                        // streaming results into a view mid-layout.
-                        guard focused == .city else { return }
-                        citySearch.search(new)
-                        showingCitySuggestions = true
-                        // Typing again after a pick means they're changing
-                        // their mind, so the old choice shouldn't linger.
-                        if new != cityLabel { city = nil; country = nil }
+            // No label. The placeholder says what the field is for — the same
+            // arrangement as the home search bar, which is what the owner
+            // asked this to match.
+            //
+            // The dropdown is an OVERLAY, not the next thing in the stack.
+            // Stacked, three suggestions push the map 150pt down and off the
+            // bottom of the screen, which is how the old two-field version
+            // broke the no-scrolling rule the moment anyone typed. Drawn over
+            // the map instead, it costs no layout at all.
+            locationSearchField
+                .zIndex(1)
+                .overlay(alignment: .topLeading) {
+                    if showingPlaceSuggestions, !placeSearch.suggestions.isEmpty {
+                        suggestionList(placeSearch.suggestions) { pickPlace($0) }
+                            .offset(y: AtlasSpacing.searchBarHeight + AtlasSpacing.xs)
                     }
-                    .onSubmit { showingCitySuggestions = false }
-                    .wizardFieldStyle()
-
-                if showingCitySuggestions, !citySearch.suggestions.isEmpty {
-                    suggestionList(citySearch.suggestions) { pickCity($0) }
                 }
-            }
-
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                fieldLabel("LOCATION NAME")
-                HStack(spacing: AtlasSpacing.sm) {
-                    TextField("e.g. The Old Custom House", text: $locationName)
-                        .focused($focused, equals: .place)
-                        .onChange(of: locationName) { _, new in
-                            guard focused == .place else { return }
-                            placeSearch.search(new)
-                            showingPlaceSuggestions = true
-                        }
-                        .onSubmit { showingPlaceSuggestions = false }
-                    if isResolvingPlace { ProgressView() }
-                }
-                .wizardFieldStyle()
-
-                if showingPlaceSuggestions, !placeSearch.suggestions.isEmpty {
-                    suggestionList(placeSearch.suggestions) { pickPlace($0) }
-                }
-            }
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("PAN TO PLACE THE PIN")
@@ -594,7 +576,62 @@ struct CreateTourWizardView: View {
         }
     }
 
-    /// The dropdown under either place field. Deliberately not a `List` —
+    /// The home search bar's shape — capsule, magnifying glass, placeholder
+    /// inside — made editable.
+    ///
+    /// ⚠️ One deliberate difference from `SearchBar`: the fill is
+    /// `AtlasColors.background`, not `secondaryBackground`. On Home that bar
+    /// floats over the map, so the chrome colour reads against it; here the
+    /// page ground *is* `secondaryBackground`, and a bar in the same colour
+    /// would be invisible. Same shape, the fill the wizard's other fields use.
+    private var locationSearchField: some View {
+        HStack(spacing: AtlasSpacing.sm) {
+            Image(systemName: "magnifyingglass")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+
+            TextField("Search location", text: $locationQuery)
+                .font(AtlasTypography.caption)
+                .focused($focused, equals: .place)
+                .autocorrectionDisabled()
+                .submitLabel(.search)
+                .onChange(of: locationQuery) { _, new in
+                    // Only a person typing opens the dropdown. Loading a saved
+                    // tour fills this field, and `pickPlace` rewrites it —
+                    // neither is a search, and both used to re-open the list
+                    // and set a completer streaming results mid-layout.
+                    guard focused == .place else { return }
+                    placeSearch.search(new)
+                    showingPlaceSuggestions = true
+                    // Typing again after a pick means they are changing their
+                    // mind, so the old resolution shouldn't linger on Review.
+                    if new != resolvedPlaceName { resolvedPlaceName = nil }
+                }
+                .onSubmit { showingPlaceSuggestions = false }
+
+            if isResolvingPlace {
+                ProgressView()
+            } else if !locationQuery.isEmpty {
+                Button {
+                    locationQuery = ""
+                    resolvedPlaceName = nil
+                    placeSearch.clear()
+                    showingPlaceSuggestions = false
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.tertiaryText)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Clear the search")
+            }
+        }
+        .padding(.horizontal, AtlasSpacing.md)
+        .frame(height: AtlasSpacing.searchBarHeight)
+        .background(AtlasColors.background, in: Capsule())
+    }
+
+    /// The dropdown under the place field. Deliberately not a `List` —
     /// it sits inside the step's own scroll view, and a nested scrolling
     /// list there fights the page for the drag.
     private func suggestionList(_ suggestions: [PlaceSuggestion],
@@ -631,67 +668,90 @@ struct CreateTourWizardView: View {
         .shadow(color: .black.opacity(0.12), radius: 8, y: 3)
     }
 
-    /// Picking a city fills the field, frames the map on it, and biases the
-    /// location-name lookup — so "the old custom house" means the one there,
-    /// not the nearest one to wherever the maker happens to be sitting.
-    private func pickCity(_ suggestion: PlaceSuggestion) {
-        focused = nil
-        showingCitySuggestions = false
-        citySearch.clear()
-        Task {
-            guard let place = await citySearch.resolveDetails(suggestion) else { return }
-            city = place.locality ?? suggestion.title
-            country = place.country
-            cityQuery = cityLabel
-            placeSearch.regionBias = place.region
-            // A new city invalidates the old pin — it would otherwise sit
-            // hundreds of miles away, quietly, on a map framed elsewhere.
-            locationName = ""
-            placeSearch.clear()
-            showingPlaceSuggestions = false
-            cameraPosition = .region(place.region)
-            centerCoordinate = place.coordinate
-        }
-    }
-
-    /// Picking a named place drops the pin on it. The field stays editable
-    /// afterwards: the suggestion is a shortcut, not a commitment.
+    /// Picking a suggestion drops the pin on it and fills in everything the
+    /// two fields used to ask for separately.
+    ///
+    /// It handles a city and a building with the same code because
+    /// `resolveDetails` answers the same shape for both: a coordinate to pin,
+    /// a region to frame, and the locality and country underneath it. Search
+    /// "Porto" and you get the city framed with `city` filled; search "Casa da
+    /// Música" and you get the building framed with `city` filled from the
+    /// address it sits at. The maker never types Porto twice.
+    ///
+    /// The field stays editable afterwards — a suggestion is a shortcut, not a
+    /// commitment, and a tour can be about somewhere the map has never heard
+    /// of.
     private func pickPlace(_ suggestion: PlaceSuggestion) {
         focused = nil
         showingPlaceSuggestions = false
-        locationName = suggestion.title
+        locationQuery = suggestion.title
+        resolvedPlaceName = suggestion.title
         placeSearch.clear()
         isResolvingPlace = true
         Task {
             defer { isResolvingPlace = false }
             guard let place = await placeSearch.resolveDetails(suggestion) else { return }
             centerCoordinate = place.coordinate
-            // Frame tightly — the maker is checking the pin is on the right
-            // building, not browsing the neighbourhood.
-            cameraPosition = .region(MKCoordinateRegion(
-                center: place.coordinate,
-                latitudinalMeters: 400,
-                longitudinalMeters: 400
-            ))
-            if city == nil, let locality = place.locality {
-                city = locality
-                country = place.country
-                cityQuery = cityLabel
-            }
+            cameraPosition = .region(Self.framing(place))
+            // Later searches rank near what was just found, so a maker working
+            // through one city doesn't get the other side of the world.
+            placeSearch.regionBias = place.region
+            city = place.locality
+            country = place.country
         }
     }
 
-    /// What the Review step calls the place: the name if one was given, the
-    /// city if not, and an honest "Not named" rather than a blank row.
+    /// How tightly to frame a resolved place.
+    ///
+    /// A specific place gets 400m — the maker is checking the pin is on the
+    /// right door, not browsing. A city or a district keeps the region MapKit
+    /// derived for it, because framing Porto at 400m drops them on one
+    /// arbitrary street with no way of telling which.
+    ///
+    /// ⚠️ The two are told apart by **how big the resolved region is**, not by
+    /// what the placemark calls itself. `locality` is the obvious-looking
+    /// discriminator and it does not work: a resolved city reports its own
+    /// name as the locality exactly as a building in that city does. The
+    /// region does distinguish them — `PlaceSearchService.region(for:)` sizes
+    /// it from the placemark's own radius, so a POI lands on its 1km floor
+    /// while a city comes back several km across.
+    private static func framing(_ place: ResolvedPlace) -> MKCoordinateRegion {
+        let metresAcross = place.region.span.latitudeDelta * 111_000
+        guard metresAcross <= 2_000 else { return place.region }
+        return MKCoordinateRegion(center: place.coordinate,
+                                  latitudinalMeters: 400,
+                                  longitudinalMeters: 400)
+    }
+
+    /// What the Review step calls the place: what was found, then the city
+    /// it's in — and an honest "Not named" rather than a blank row.
+    ///
+    /// The two are collapsed when they'd repeat: searching a city makes the
+    /// place name and the city the same word, and "Porto, Porto, Portugal" is
+    /// how you can tell nobody read the summary.
     private var whereSummary: String {
-        let parts = [locationName.isEmpty ? nil : locationName,
+        let named = resolvedPlaceName ?? locationQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+        let parts = [named.isEmpty || named == city ? nil : named,
                      cityLabel.isEmpty ? nil : cityLabel].compactMap { $0 }
         return parts.isEmpty ? "Not named" : parts.joined(separator: ", ")
     }
 
-    /// "Porto, Portugal" — what the field shows once a city is chosen.
+    /// "Porto, Portugal" — the resolved city, never typed.
     private var cityLabel: String {
         [city, country].compactMap { $0 }.joined(separator: ", ")
+    }
+
+    /// What the place would call the tour, if the maker hasn't named it.
+    /// Offered on the way out of step 1, never imposed.
+    ///
+    /// A typed-but-unpicked phrase counts — someone who typed the building's
+    /// name and then panned to it by hand meant it just as much. A search for
+    /// the *city* does not: "Porto" is where a tour is, not what it is called,
+    /// and a catalogue of tours named after their cities helps nobody.
+    private var suggestedTitle: String {
+        let named = resolvedPlaceName
+            ?? locationQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+        return named == city ? "" : named
     }
 
     private var mapSection: some View {
@@ -702,7 +762,14 @@ struct CreateTourWizardView: View {
                     .stroke(AtlasColors.mapPin, lineWidth: 2)
             }
         }
-        .frame(height: 280)
+        // 300, up from 280 — some of what the one search field gave back.
+        // Deliberately not all of it: the step is still inside the wizard's
+        // ScrollView, so this is a fixed number rather than "whatever is
+        // left", and a fixed number has to survive the smallest screen too.
+        // The map takes the remaining space properly once the container stops
+        // scrolling, which is a change to make after every step is sized —
+        // not while four of them still overflow.
+        .frame(height: 300)
         .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
         .overlay {
             // Fixed centre pin — the map centre IS the chosen coordinate, so
@@ -1144,7 +1211,7 @@ struct CreateTourWizardView: View {
             || !shortDescription.isEmpty
             || !longDescription.isEmpty
             || !selectedTags.isEmpty
-            || !locationName.isEmpty
+            || !locationQuery.isEmpty
         return (draftId != nil || typedSomething) && hasUnsavedChanges && canPersist
     }
 
@@ -1175,8 +1242,8 @@ struct CreateTourWizardView: View {
     private func advance() {
         // The place they just named is nearly always what the tour is called.
         // Offered, not imposed: only when the title is still empty.
-        if step == .location, trimmedTitle.isEmpty, !locationName.isEmpty {
-            title = String(locationName.prefix(Self.titleLimit))
+        if step == .location, trimmedTitle.isEmpty, !suggestedTitle.isEmpty {
+            title = String(suggestedTitle.prefix(Self.titleLimit))
         }
         isPersisting = true
         Task {
@@ -1313,6 +1380,11 @@ struct CreateTourWizardView: View {
     /// claiming unsaved work, on a pin nobody placed.
     private func centerOnUser() {
         guard let coord = locationManager.userLocation?.coordinate else { return }
+        // Rank search results near the maker before they've picked anything.
+        // Without a bias the completer answers from the whole world, so a
+        // maker in Porto searching "cathedral" is offered Cologne.
+        placeSearch.regionBias = MKCoordinateRegion(
+            center: coord, latitudinalMeters: 30_000, longitudinalMeters: 30_000)
         guard centerCoordinate == nil else { return }
         cameraPosition = .region(
             MKCoordinateRegion(center: coord, latitudinalMeters: 700, longitudinalMeters: 700)
