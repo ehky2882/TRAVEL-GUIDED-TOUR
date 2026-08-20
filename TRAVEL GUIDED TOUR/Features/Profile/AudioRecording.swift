@@ -38,26 +38,36 @@ struct AudioLevelMeter: View {
 }
 
 /// The one control that is in the same place in every state of the step.
+///
+/// ⚠️ **44pt, from `AtlasChromeButton.diameter`, not a number of its own.**
+/// Owner, 2026-08-20: *"whatever is the height of the 'x' button at the top
+/// should be the height of all buttons, including the record button."* It was
+/// 72 — half again the height of everything around it, for no reason beyond
+/// being the thing you press most. Reading the constant rather than copying
+/// its value means the day the chrome button changes, this follows.
 struct RecordButton: View {
     let isRecording: Bool
     let action: () -> Void
+
+    private var size: CGFloat { AtlasChromeButton.diameter }
 
     var body: some View {
         Button(action: action) {
             ZStack {
                 Circle()
-                    .stroke(AtlasColors.mapPin, lineWidth: 4)
-                    .frame(width: 72, height: 72)
+                    .stroke(AtlasColors.mapPin, lineWidth: 3)
+                    .frame(width: size, height: size)
                 if isRecording {
-                    RoundedRectangle(cornerRadius: 6)
+                    RoundedRectangle(cornerRadius: 4)
                         .fill(AtlasColors.mapPin)
-                        .frame(width: 26, height: 26)
+                        .frame(width: size * 0.36, height: size * 0.36)
                 } else {
                     Circle()
                         .fill(AtlasColors.mapPin)
-                        .frame(width: 54, height: 54)
+                        .frame(width: size - 12, height: size - 12)
                 }
             }
+            .frame(height: size)
         }
         .buttonStyle(.plain)
         .accessibilityLabel(isRecording ? "Stop recording" : "Start recording")

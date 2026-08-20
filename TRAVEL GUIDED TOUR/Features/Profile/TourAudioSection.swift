@@ -64,6 +64,13 @@ struct TourAudioSection: View {
 
     private var hasAudio: Bool { tour.totalDurationSeconds > 0 }
 
+    /// Every button on this step, and the ✕ in the header, are this tall.
+    ///
+    /// Owner, 2026-08-20: *"whatever is the height of the 'x' button at the top
+    /// should be the height of all buttons, including the record button."* Read
+    /// from `AtlasChromeButton` rather than repeated, so there is one number.
+    private var buttonHeight: CGFloat { AtlasChromeButton.diameter }
+
     var body: some View {
         VStack(spacing: AtlasSpacing.md) {
             statusRow
@@ -72,25 +79,9 @@ struct TourAudioSection: View {
             RecordButton(isRecording: recorder.isRecording, action: toggleRecording)
                 .disabled(isUploading)
                 .opacity(isUploading ? 0.4 : 1)
-
-            // The one row that changes, at a height that doesn't.
-            middleRow
-                .frame(minHeight: 49)
-
+            actionPair
             importButton
-
-            if permissionDenied {
-                Text("Microphone access is off. Enable it in Settings to record.")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.mapPin)
-                    .multilineTextAlignment(.center)
-            }
-            if let errorMessage {
-                Text(errorMessage)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.mapPin)
-                    .multilineTextAlignment(.center)
-            }
+            statusNote
         }
         .frame(maxWidth: .infinity)
         .fileImporter(
@@ -114,7 +105,7 @@ struct TourAudioSection: View {
 
     /// What the step is doing, and the way out of a take.
     ///
-    /// Discard sits here rather than in the middle row so that abandoning a
+    /// Discard sits here rather than in the pair below so that abandoning a
     /// take never competes for the same place as keeping it.
     private var statusRow: some View {
         HStack {
@@ -122,14 +113,17 @@ struct TourAudioSection: View {
                 .font(AtlasTypography.caption)
                 .foregroundStyle(recorder.isRecording ? AtlasColors.mapPin : AtlasColors.secondaryText)
             Spacer()
-            if recordedURL != nil || recorder.isRecording {
-                Button("Discard") { discardTake() }
-                    .font(AtlasTypography.caption)
-                    .tint(AtlasColors.secondaryText)
-            }
+            Button("Discard") { discardTake() }
+                .font(AtlasTypography.caption)
+                .tint(AtlasColors.secondaryText)
+                .disabled(!canDiscard)
+                .opacity(canDiscard ? 1 : 0.35)
+                .frame(height: buttonHeight)
         }
-        .frame(minHeight: 17)
+        .frame(height: buttonHeight)
     }
+
+    private var canDiscard: Bool { recordedURL != nil || recorder.isRecording }
 
     private var statusLabel: String {
         if recorder.isRecording { return "RECORDING" }
@@ -138,8 +132,9 @@ struct TourAudioSection: View {
         return "RECORD"
     }
 
-    /// Always a clock, never blank — it reads 00:00 before there is anything,
-    /// counts while recording, and holds the length afterwards.
+    /// Always a clock, never blank — 00:00 before there is anything, counting
+    /// while recording, the take's length after, the tour's duration once
+    /// attached.
     private var clock: some View {
         Text(timeString(clockSeconds))
             .font(.system(size: 34, weight: .light, design: .monospaced))
@@ -154,68 +149,121 @@ struct TourAudioSection: View {
         return 0
     }
 
-    /// Always present, because a maker who has narration on their computer
-    /// shouldn't have to discover that the option exists. Dimmed rather than
-    /// hidden while it can't be used — hiding it is what moves the layout.
-    private var importButton: some View {
-        Button { importingAudio = true } label: {
-            HStack {
-                Spacer()
-                Label(hasAudio ? "Replace with a file" : "Import audio file",
-                      systemImage: "square.and.arrow.down")
-                    .font(AtlasTypography.caption)
-                Spacer()
-            }
-            .padding(.vertical, AtlasSpacing.md)
-            .foregroundStyle(AtlasColors.primaryText)
-            .overlay {
-                RoundedRectangle(cornerRadius: AtlasSpacing.sm)
-                    .stroke(AtlasColors.secondaryText.opacity(0.4), lineWidth: 1)
-            }
-        }
-        .buttonStyle(.plain)
-        .disabled(recorder.isRecording || isUploading)
-        .opacity(recorder.isRecording || isUploading ? 0.4 : 1)
-    }
+    // MARK: - The pair
 
-    // MARK: - The one row that changes
-
-    /// Reserved height, five contents. In order of what most needs saying.
+    /// 🔴 **TWO BUTTONS, ALWAYS, IN THE SAME PLACE.** Owner, 2026-08-20:
+    /// *"should be more like the 'reviewing a take' screen and 'upload failed'
+    /// screen. disable the buttons that are not relevant at that step."*
+    ///
+    /// The previous attempt reserved this row's *height* and left it empty when
+    /// there was nothing to put in it, which still read as a different screen —
+    /// a gap is as visible as a control. A disabled button says *this becomes
+    /// available*; a blank space says nothing at all.
+    ///
+    /// The failed-upload state is the one that changes both labels, because
+    /// after a failure the two things worth doing genuinely are try again and
+    /// throw it away.
     @ViewBuilder
-    private var middleRow: some View {
-        if isUploading {
-            uploadProgressCard
-        } else if let failed = failedUpload {
-            failedUploadCard(failed)
-        } else if let take = recordedURL, !recorder.isRecording {
+    private var actionPair: some View {
+        if let failed = failedUpload {
             HStack(spacing: AtlasSpacing.sm) {
-                pillButton(takeReview.isPlaying ? "Playing…" : "Play",
-                           systemImage: takeReview.isPlaying ? "pause.fill" : "play.fill",
-                           filled: false) {
-                    takeReview.toggle(url: take)
+                pillButton("Try again", systemImage: "arrow.clockwise", filled: true) {
+                    retryUpload(failed)
                 }
-                pillButton("Use recording", systemImage: nil, filled: true) {
+                pillButton("Discard", systemImage: nil, filled: false) {
+                    discardFailure()
+                }
+            }
+        } else {
+            HStack(spacing: AtlasSpacing.sm) {
+                pillButton(isPlaying ? "Playing…" : "Play",
+                           systemImage: isPlaying ? "pause.fill" : "play.fill",
+                           filled: false,
+                           enabled: playableURL != nil && !recorder.isRecording && !isUploading) {
+                    togglePlayback()
+                }
+                pillButton("Use recording", systemImage: nil, filled: true,
+                           enabled: recordedURL != nil && !recorder.isRecording && !isUploading) {
+                    guard let take = recordedURL else { return }
                     takeReview.stop()
                     uploadAudio(from: take)
                     recordedURL = nil
                 }
             }
-        } else if hasAudio, !recorder.isRecording {
-            // Nothing to keep or throw away — just the tour's own narration,
-            // playable where the take's Play button would be.
-            pillButton(audioPreview.isPlaying ? "Playing…" : "Play narration",
-                       systemImage: audioPreview.isPlaying ? "pause.fill" : "play.fill",
-                       filled: false) {
-                if let url = attachedAudioURL { audioPreview.toggle(url: url) }
-            }
-            .disabled(attachedAudioURL == nil)
         }
-        // Recording, or nothing recorded yet: the row is empty and keeps its
-        // height, so the record button and Import never move.
     }
 
+    /// A fresh take if there is one, otherwise whatever the tour already has.
+    private var playableURL: URL? { recordedURL ?? attachedAudioURL }
+    private var isPlaying: Bool { takeReview.isPlaying || audioPreview.isPlaying }
+
+    /// A take plays through the review player, attached narration through the
+    /// preview — two players because they hold different files, not because
+    /// the button is two buttons.
+    private func togglePlayback() {
+        guard let url = playableURL else { return }
+        if url == recordedURL {
+            audioPreview.stop()
+            takeReview.toggle(url: url)
+        } else {
+            takeReview.stop()
+            audioPreview.toggle(url: url)
+        }
+    }
+
+    /// Always present, because a maker whose narration is already on their
+    /// computer shouldn't have to discover the option exists — and for a tour
+    /// written in advance, importing is the primary action, not a lesser one.
+    private var importButton: some View {
+        pillButton(hasAudio ? "Replace with a file" : "Import audio file",
+                   systemImage: "square.and.arrow.down",
+                   filled: false,
+                   enabled: !recorder.isRecording && !isUploading) {
+            importingAudio = true
+        }
+    }
+
+    /// One reserved place for everything the step has to say: upload progress,
+    /// a failure, a refused microphone. Fixed height, so nothing above it moves
+    /// when it starts or stops speaking.
+    private var statusNote: some View {
+        VStack(spacing: 6) {
+            Text(noteText ?? " ")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(noteIsProblem ? AtlasColors.mapPin : AtlasColors.tertiaryText)
+                .lineLimit(2, reservesSpace: true)
+                .multilineTextAlignment(.center)
+            ProgressView(value: isUploading ? uploadProgress : 0)
+                .tint(AtlasColors.mapPin)
+                .opacity(isUploading ? 1 : 0)
+        }
+        .frame(maxWidth: .infinity)
+    }
+
+    private var noteIsProblem: Bool {
+        permissionDenied || failedUpload != nil || errorMessage != nil
+    }
+
+    private var noteText: String? {
+        if permissionDenied {
+            return "Microphone access is off. Turn it on in Settings to record."
+        }
+        if let errorMessage { return errorMessage }
+        if let failed = failedUpload { return failed.reason }
+        if isUploading {
+            let pct = Int(uploadProgress * 100)
+            guard uploadTotalBytes > 0 else { return "Uploading narration — \(pct)%" }
+            let sent = AtlasFormatters.fileSize(Int64(Double(uploadTotalBytes) * uploadProgress))
+            let total = AtlasFormatters.fileSize(uploadTotalBytes)
+            return "Uploading narration — \(pct)% · \(sent) of \(total)"
+        }
+        return nil
+    }
+
+    /// One button shape for the whole step, at the chrome height.
     private func pillButton(_ title: String, systemImage: String?,
-                            filled: Bool, action: @escaping () -> Void) -> some View {
+                            filled: Bool, enabled: Bool = true,
+                            action: @escaping () -> Void) -> some View {
         Button(action: action) {
             HStack(spacing: 6) {
                 if let systemImage { Image(systemName: systemImage) }
@@ -224,7 +272,7 @@ struct TourAudioSection: View {
             .font(AtlasTypography.caption)
             .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
             .frame(maxWidth: .infinity)
-            .padding(.vertical, AtlasSpacing.md)
+            .frame(height: buttonHeight)
             .background {
                 if filled {
                     Capsule().fill(AtlasColors.mapPin)
@@ -234,6 +282,8 @@ struct TourAudioSection: View {
             }
         }
         .buttonStyle(.plain)
+        .disabled(!enabled)
+        .opacity(enabled ? 1 : 0.35)
     }
 
     // MARK: - Recording
@@ -262,72 +312,6 @@ struct TourAudioSection: View {
     private func timeString(_ t: TimeInterval) -> String {
         let s = Int(t)
         return String(format: "%02d:%02d", s / 60, s % 60)
-    }
-
-    // MARK: - Upload and failure, in the middle row
-
-    /// Real byte progress, not a spinner. Narration is the largest thing this
-    /// app uploads, and an indeterminate spinner can't distinguish "nearly
-    /// there" from "stalled".
-    private var uploadProgressCard: some View {
-        VStack(alignment: .leading, spacing: 9) {
-            HStack {
-                Text("Narration")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.primaryText)
-                Spacer()
-                Text("\(Int(uploadProgress * 100))%")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .monospacedDigit()
-            }
-            ProgressView(value: uploadProgress)
-                .tint(AtlasColors.mapPin)
-            if uploadTotalBytes > 0 {
-                Text("\(AtlasFormatters.fileSize(Int64(Double(uploadTotalBytes) * uploadProgress))) of \(AtlasFormatters.fileSize(uploadTotalBytes))")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-            }
-        }
-        .padding(AtlasSpacing.md)
-        .background(AtlasColors.background)
-        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
-    }
-
-    /// A failed upload keeps the file and offers to try again, rather than
-    /// dropping a recording the maker may not be able to make twice.
-    private func failedUploadCard(_ failed: FailedAudioUpload) -> some View {
-        VStack(alignment: .leading, spacing: 9) {
-            Text("Narration didn't upload")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.mapPin)
-            Text(failed.reason)
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.secondaryText)
-            HStack(spacing: AtlasSpacing.sm) {
-                Button { retryUpload(failed) } label: {
-                    Text("Try again")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.background)
-                        .padding(.horizontal, 12).padding(.vertical, 6)
-                        .background(AtlasColors.mapPin, in: RoundedRectangle(cornerRadius: 6))
-                }
-                .buttonStyle(.plain)
-
-                Button { discardFailure() } label: {
-                    Text("Discard")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.primaryText)
-                        .padding(.horizontal, 12).padding(.vertical, 6)
-                        .overlay(RoundedRectangle(cornerRadius: 6)
-                            .stroke(AtlasColors.tertiaryText, lineWidth: 1))
-                }
-                .buttonStyle(.plain)
-            }
-        }
-        .padding(AtlasSpacing.md)
-        .background(AtlasColors.background)
-        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
     }
 
     // MARK: - Upload
