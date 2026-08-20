@@ -568,6 +568,12 @@ struct TourListDetailView: View {
     /// items; someone else's gets Save and a way to their profile. Neither
     /// menu shows an item that would fail: RLS is the real gate, but offering
     /// Delete on a list you don't own would be a lie.
+    ///
+    /// ⚠️ The label is `chromeCapsule("ellipsis")`, like every other chrome
+    /// control on this row — never a bare `ellipsis.circle`. That glyph draws
+    /// its own ring, so it sits in no 44pt capsule and states no colour, which
+    /// leaves it reading the environment accent and painting gold beside two
+    /// neutral capsules. It shipped that way and the owner caught it on device.
     @ViewBuilder
     private var overflowMenu: some View {
         Menu {
@@ -611,8 +617,8 @@ struct TourListDetailView: View {
                 }
             }
         } label: {
-            Image(systemName: "ellipsis.circle")
-                .accessibilityLabel("List options")
+            chromeCapsule("ellipsis")
+                .accessibilityLabel("More options")
         }
     }
 
