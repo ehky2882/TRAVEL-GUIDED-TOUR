@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-20 00:15 UTC
+**Last verified:** 2026-08-20 01:07 UTC
 
 ---
 
@@ -25,7 +25,13 @@ first time today — #541 through #547 all landed earlier.
 
 | Build | What it carries | State |
 |---|---|---|
-| **91** | **The first build from `main` with everything today together** — the wizard, Settings, the list page, the 5:4 heroes and the place-layer fixes | ⏳ queued at 00:14 |
+| **91** | **The first build from `main` with everything today together** — the wizard, Settings, the list page, the 5:4 heroes and the place-layer fixes | ✅ **on TestFlight, untested** |
+
+**Uploaded 00:58 UTC.** The `Build and upload to TestFlight` step itself passed, which is the evidence
+that matters — the `Done` step is an unconditional echo and proves nothing, while fastlane raises if
+either the upload or the changelog write fails. So the build notes attached. It took **43m41s**,
+longer than 89 (~29m) and 90 (~26m) but well inside the 70-minute timeout, and it finished on its
+own — no re-run needed.
 
 **This is the build that closes the gap the board has been flagging all evening.** Until now no
 build carried `main`: 86 had only #544, 83 only #547, and 90 was the wizard branch cut from a base
@@ -76,7 +82,7 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 91 | `main` (`fd741db`) | **Everything from today, together** — wizard, Settings, list page, 5:4 heroes | ⏳ queued |
+| 91 | `main` (`fd741db`) | **Everything from today, together** — wizard, Settings, list page, 5:4 heroes | ✅ **install this** |
 | 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ✅ owner-verified — hang closed |
 | 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | 🔴 hung — superseded |
 | 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | 🔴 **still hangs** |
