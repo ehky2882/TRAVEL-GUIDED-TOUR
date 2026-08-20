@@ -1153,8 +1153,15 @@ struct CreateTourWizardView: View {
     /// Every group now opens with the page still fitting: the tallest, Theme,
     /// needs 226pt and gets 242.
     private var tagsStep: some View {
+        // ⚠️ No `maxHeight: .infinity` here, and its absence changes nothing —
+        // which is the whole point. It used to ask to stretch and never got
+        // anything (see `wizard` for why), so the picker has always drawn at
+        // its natural height. Unlike the map and the transcript box, that was
+        // never a problem: five rows of tags have a real size of their own,
+        // and a control with a real size doesn't collapse when the stretch
+        // fails. It was three no-op lines and a comment claiming a mechanism
+        // that isn't there.
         ControlledTagPicker(selectedTags: $selectedTags, architect: $architect)
-            .frame(maxHeight: .infinity)
     }
 
     @ViewBuilder

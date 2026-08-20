@@ -82,14 +82,23 @@ struct ControlledTagPicker: View {
     private static let architectResultCap = 8
 
     var body: some View {
-        // Fills its step: the open group is the elastic element, exactly as the
-        // map is on Location and the description is on Details.
+        // ⚠️ **This used to claim the open group was "the elastic element,
+        // exactly as the map is on Location" — and none of that was true.** The
+        // frame asking to stretch got nothing (a flexible child gets no room
+        // from a ScrollView whose content frame sets only a minHeight), so the
+        // picker has always drawn at its natural height and always will.
+        //
+        // Unlike the map and the transcript box, that never showed: five rows
+        // of tags have a real size of their own, and a control with a real
+        // size doesn't collapse when a stretch fails — it just sits at the top
+        // with space beneath it, which is what a list of five rows should do.
+        // What actually keeps this step finite is `architectResultCap` and the
+        // type-to-search on the one row that would otherwise unroll 94 names.
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
             ForEach(Self.rows, id: \.facet) { row in
                 facetRow(row.facet, label: row.label)
             }
         }
-        .frame(maxHeight: .infinity, alignment: .top)
     }
 
     // MARK: - Rows
@@ -134,12 +143,13 @@ struct ControlledTagPicker: View {
                     .fill(AtlasColors.divider)
                     .frame(height: 0.5)
                     .padding(.leading, AtlasSpacing.md)
-                // The one flexible thing on the step. Its infinite max height
-                // makes this row absorb whatever the four closed ones leave,
-                // which is how the tallest group opens without the page
-                // scrolling.
+                // ⚠️ Not flexible, and it never was — see `body`. The chips
+                // are a `FlowLayout` with a genuine height, so this row is as
+                // tall as its own content and the step scrolls if that is more
+                // than fits. The cap on the architect row, not a frame, is
+                // what stops that happening.
                 chips(for: facet)
-                    .frame(maxHeight: .infinity, alignment: .topLeading)
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
             }
         }
         .background(AtlasColors.background)
