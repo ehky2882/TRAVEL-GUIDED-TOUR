@@ -26,6 +26,15 @@ struct CreateTourWizardView: View {
     @Environment(MakerProfileService.self) private var makerProfileService
     @Environment(MakerTourService.self) private var makerTourService
     @Environment(LocationManager.self) private var locationManager
+    /// Only used to put the mini-player and tab bar back on the way out — the
+    /// primary restore lives in `MakerView`, which drives this from its own
+    /// presentation state. This is the second of three backstops, and the one
+    /// that cannot misfire: it runs when this view is genuinely gone.
+    /// Optional so the wizard still renders anywhere the full app environment
+    /// isn't present.
+    @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    @Environment(BottomModuleWindowController.self)
+    private var bottomModuleWindow: BottomModuleWindowController?
     @Environment(\.dismiss) private var dismiss
 
     @State private var step: TourWizardStep = .location
@@ -131,6 +140,27 @@ struct CreateTourWizardView: View {
         span: MKCoordinateSpan(latitudeDelta: 90, longitudeDelta: 90)
     )
 
+    /// 🔴 THE ONE SWITCH. While the wizard is up the mini-player and tab bar
+    /// are withdrawn, which gives every step back the 126pt they occupy.
+    ///
+    /// The rule this serves: **no step of the wizard may scroll** (owner,
+    /// 2026-08-20) — anything that doesn't fit becomes another step instead. A
+    /// quarter of the screen held for controls that do nothing while you are
+    /// making a tour is the cheapest height there is to reclaim, and reclaiming
+    /// it is worth roughly two extra steps we then don't have to add.
+    ///
+    /// **Set this to `false` and the bars come back, with no other edit.** The
+    /// footer's clearance below reads it, the confirmation screen reads it, and
+    /// `MakerView` reads it when deciding whether to withdraw the module at
+    /// all. Nothing else in the app knows about it.
+    static let hidesBottomModule = true
+
+    /// How much room the footer must leave for the mini-player and tab bar —
+    /// their full height, or nothing when they're withdrawn.
+    private static var reservedBottomInset: CGFloat {
+        hidesBottomModule ? 0 : AtlasBottomModule.height()
+    }
+
     private static let radiusRange: ClosedRange<Double> = 15...100
     private static let titleLimit = 60
     private static let shortLimit = 100
@@ -193,6 +223,11 @@ struct CreateTourWizardView: View {
             Text(confirmMessage)
         }
         .onAppear(perform: centerOnUser)
+        .onDisappear {
+            guard Self.hidesBottomModule else { return }
+            appShared?.hidesBottomModule = false
+            bottomModuleWindow?.setHidden(false)
+        }
         .task(id: existingTourId) { await loadExistingTour() }
     }
 
@@ -441,9 +476,13 @@ struct CreateTourWizardView: View {
         .padding(.top, AtlasSpacing.sm)
         // The mini-player and tab bar live in a higher window, so the footer
         // has to clear them itself — and the clearance must be *inside* the
-        // painted background, or the page scrolls visibly through it.
-        .padding(.bottom, AtlasSpacing.sm + AtlasBottomModule.height())
-        .background(AtlasColors.secondaryBackground)
+        // painted background, or the page scrolls visibly through it. Zero
+        // while they're withdrawn; see `hidesBottomModule`.
+        .padding(.bottom, AtlasSpacing.sm + Self.reservedBottomInset)
+        // The fill runs into the home-indicator strip while the content stays
+        // above it. Without the bars underneath, that strip is bare screen —
+        // and the step would be seen scrolling through it.
+        .background { AtlasColors.secondaryBackground.ignoresSafeArea(edges: .bottom) }
         .overlay(alignment: .top) {
             Rectangle().fill(AtlasColors.divider).frame(height: 0.5)
         }
@@ -979,7 +1018,7 @@ struct CreateTourWizardView: View {
 
             Button { dismiss() } label: { pill("Done", filled: true) }
                 .buttonStyle(.plain)
-                .padding(.bottom, AtlasBottomModule.height())
+                .padding(.bottom, Self.reservedBottomInset)
         }
         .frame(maxWidth: .infinity)
     }

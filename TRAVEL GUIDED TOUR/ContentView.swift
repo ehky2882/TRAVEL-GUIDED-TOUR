@@ -172,7 +172,13 @@ struct ContentView: View {
             // at which point this disappears (`isInstalled` is observed). While
             // it is showing, the only thing missing is z-order above UIKit
             // modals — a much better failure than an app you can't navigate.
-            if let bottomModuleWindow, !bottomModuleWindow.isInstalled {
+            //
+            // `hidesBottomModule` withdraws the bars entirely (the tour
+            // wizard, which needs their 126pt). It has to be honoured here as
+            // well as on the window, or hiding one would simply reveal the
+            // other.
+            if let bottomModuleWindow, !bottomModuleWindow.isInstalled,
+               !appShared.hidesBottomModule {
                 BottomModuleRoot()
             }
         }

@@ -96,6 +96,14 @@ struct MakerView: View {
 
     @Environment(DataService.self) private var dataService
     @Environment(AtlasNavigationState.self) private var navState
+    /// Optional because this screen also renders inside the UIKit slide-up
+    /// layers, which carry a narrower environment than a tab root. Only the
+    /// own-profile path presents the wizard, and that path is a tab root.
+    @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    /// The secondary window hosting the mini-player and tab bar, so the wizard
+    /// can withdraw them. Optional for the same reason as `appShared`.
+    @Environment(BottomModuleWindowController.self)
+    private var bottomModuleWindow: BottomModuleWindowController?
     @Environment(TourPresenter.self) private var tourPresenter
     // Optional for the same reason as the services below: this page can be
     // reached from the tour-detail layer, whose environment does not inject
@@ -153,6 +161,10 @@ struct MakerView: View {
     @State private var showingEditProfile = false
     /// One of the maker's own tours, opened in the wizard.
     @State private var draftToEdit: EditingDraft?
+    /// Either route into the wizard — creating or editing. One value so the
+    /// bottom module is withdrawn on both, and restored the moment neither is
+    /// showing.
+    private var isPresentingWizard: Bool { showingCreate || draftToEdit != nil }
 
     /// Which of TOURS / LISTS / MAP is showing.
     @State private var profileTab: ProfileTab = .tours
@@ -239,6 +251,51 @@ struct MakerView: View {
         // hung — has ever safely lived in one.
         .fullScreenCover(item: $draftToEdit) { draft in
             CreateTourWizardView(existingTourId: draft.id)
+        }
+        // 🔴 THE WIZARD'S BARS ARE WITHDRAWN FROM HERE, NOT FROM INSIDE IT.
+        //
+        // While the wizard is up the mini-player and tab bar are hidden, which
+        // buys back the 126pt they occupy — every wizard step has to fit on one
+        // screen without scrolling, and those bars do nothing during authoring.
+        //
+        // The flag is driven by *presentation state on this view*, deliberately,
+        // rather than by the wizard's own `onAppear`/`onDisappear`. This view
+        // outlives the wizard by construction, so `showingCreate` and
+        // `draftToEdit` always resolve back to their empty values however the
+        // wizard goes away — dismissed, swiped, or torn down. A missed
+        // `onDisappear` inside the wizard would leave the app with no tab bar
+        // for the rest of the session, which is a failure this app has already
+        // shipped three times.
+        //
+        // 🔴 And the window is hidden from HERE, not from an observer in
+        // `ContentView`. That view is in the main window, which the wizard
+        // covers completely, and SwiftUI can stop delivering updates to a
+        // covered hierarchy — the same trap that made the tour layer's X and
+        // the tab bar go dead. This `onChange` fires on state owned by this
+        // view, at the instant it flips, while this view is still live: it
+        // cannot be starved. The flag it also sets is only read as a *render*
+        // dependency by `ContentView`'s inline fallback, which re-evaluates
+        // whenever it is on screen.
+        //
+        // `initial: true` makes opening a profile restore the bars, so even a
+        // stuck flag heals itself. `onDisappear` is the third backstop.
+        //
+        // To bring the bars back permanently, set
+        // `CreateTourWizardView.hidesBottomModule` to false — nothing else
+        // needs touching.
+        .onChange(of: isPresentingWizard, initial: true) { _, presenting in
+            let hidden = presenting && CreateTourWizardView.hidesBottomModule
+            appShared?.hidesBottomModule = hidden
+            bottomModuleWindow?.setHidden(hidden)
+        }
+        // ⚠️ Guarded, because presenting a `fullScreenCover` can itself fire
+        // `onDisappear` on the view it covers — unguarded, this would put the
+        // bars straight back on top of the wizard. This is only here for the
+        // case where this page genuinely goes away with no wizard showing.
+        .onDisappear {
+            guard !isPresentingWizard else { return }
+            appShared?.hidesBottomModule = false
+            bottomModuleWindow?.setHidden(false)
         }
         // A place tapped on the MAP tab while this page is already inside a
         // detail layer. See `openPlaceFromMap` for why it cannot go through
