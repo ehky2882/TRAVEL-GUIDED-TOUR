@@ -24,6 +24,7 @@ struct LibraryView: View {
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(MakerPresenter.self) private var makerPresenter
     @Environment(PlacePresenter.self) private var placePresenter
+    @Environment(TourListPresenter.self) private var listPresenter
     @Environment(SavedPlacesStore.self) private var savedPlacesStore
     @Environment(FollowService.self) private var followService
     @Environment(MakerProfileService.self) private var makerProfileService
@@ -85,13 +86,21 @@ struct LibraryView: View {
             // also refreshes the list each time the tab is opened — picking up
             // follows/unfollows made on a maker page.
             .task(id: authService.userId) {
-                await loadFollowing()
+                // Three independent round-trips, run **concurrently**. Awaited
+                // one after another they stacked: the follow list (which may
+                // itself have to load the user's maker row first), then the
+                // named lists, then the saved ones — so the tab kept
+                // re-laying-out as each landed. Nothing here depends on
+                // anything else here, so the tab now settles in the time of
+                // the slowest single query rather than the sum of all three.
+                async let following: Void = loadFollowing()
                 // Named lists live in Supabase; keyed on the account so a
                 // sign-out or switch can't leave the previous user's on screen.
-                await listService?.loadMyLists()
+                async let mine: Void? = listService?.loadMyLists()
                 // Other people's lists you've kept. Separate query, same
                 // trigger — both are account-scoped and both feed this tab.
-                await listService?.loadSavedLists()
+                async let saved: Void? = listService?.loadSavedLists()
+                _ = await (following, mine, saved)
             }
             .sheet(isPresented: $showingCreateList) {
                 TourListEditorSheet()
@@ -149,9 +158,15 @@ struct LibraryView: View {
     /// **Liked gets no section of its own.** It's the default list, so it's the
     /// first row of Lists and opens like any other; a list is a list. Followed
     /// creators sit below in their own section.
-    @ViewBuilder
+    // Not `@ViewBuilder`: it returns one `LazyVStack`, and dropping the
+    // attribute is what lets the body bind `saved` before building it.
     private var listsContent: some View {
-        LazyVStack(alignment: .leading, spacing: 0) {
+        // Resolved once and passed down: the Liked row reads the count, the
+        // cover and the cover's category, and as a computed property that was
+        // three full walks of the saved entries per body evaluation.
+        let saved = savedTours
+
+        return LazyVStack(alignment: .leading, spacing: 0) {
             librarySectionHeader("Lists")
 
             // Create sits at the very top — it's an action, not a list, so it
@@ -161,13 +176,13 @@ struct LibraryView: View {
                 Divider().padding(.horizontal, AtlasSpacing.lg)
             }
 
-            NavigationLink {
-                LikedListView()
+            Button {
+                listPresenter.present(.ownLiked)
             } label: {
                 LikedListRow(
-                    count: savedTours.count,
-                    coverImageName: savedTours.first?.heroImageURL,
-                    coverCategory: savedTours.first?.primaryCategory
+                    count: saved.count,
+                    coverImageName: saved.first?.heroImageURL,
+                    coverCategory: saved.first?.primaryCategory
                 )
             }
             .buttonStyle(.plain)
@@ -176,8 +191,8 @@ struct LibraryView: View {
                 ForEach(myLists) { list in
                     Divider().padding(.horizontal, AtlasSpacing.lg)
 
-                    NavigationLink {
-                        TourListDetailView(listId: list.id)
+                    Button {
+                        listPresenter.present(.list(id: list.id, preloaded: list))
                     } label: {
                         NamedListRow(
                             list: list,
@@ -197,8 +212,8 @@ struct LibraryView: View {
             if !savedLists.isEmpty {
                 librarySectionHeader("Saved lists")
                 ForEach(savedLists) { list in
-                    NavigationLink {
-                        TourListDetailView(listId: list.id, preloaded: list)
+                    Button {
+                        listPresenter.present(.list(id: list.id, preloaded: list))
                     } label: {
                         SavedListRowView(
                             list: list,
@@ -221,7 +236,7 @@ struct LibraryView: View {
                     Button {
                         placePresenter.present(place)
                     } label: {
-                        placeRow(place)
+                        placeRow(place, tours: dataService.rankedTours(at: place))
                     }
                     .buttonStyle(.plain)
 
@@ -302,13 +317,16 @@ struct LibraryView: View {
 
     /// A saved place. Same 56 pt leading square + two-line stack as the maker
     /// row above, so the two groups read as one list rather than two designs.
-    private func placeRow(_ place: Place) -> some View {
+    /// - Parameter tours: the place's ranked tours, resolved once by the
+    ///   caller. Cover, category and subtitle all need them, and each used to
+    ///   re-derive the list for itself.
+    private func placeRow(_ place: Place, tours: [Tour]) -> some View {
         HStack(alignment: .center, spacing: AtlasSpacing.md) {
             HeroImageView(
-                imageName: placeCoverImageName(place) ?? "",
+                imageName: place.heroImageURL ?? tours.first?.heroImageURL ?? "",
                 height: 56,
                 cornerRadius: AtlasSpacing.xs,
-                category: placeCoverCategory(place)
+                category: tours.first?.primaryCategory
             )
             .frame(width: 56)
 
@@ -320,7 +338,7 @@ struct LibraryView: View {
                     .lineLimit(1)
                     .truncationMode(.tail)
 
-                Text(placeSubtitle(place))
+                Text(placeSubtitle(place, tourCount: tours.count))
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
                     .lineLimit(1)
@@ -336,20 +354,9 @@ struct LibraryView: View {
         .padding(.vertical, AtlasSpacing.sm)
     }
 
-    /// Falls back to the top-ranked tour's hero, exactly as the place page
-    /// does, so a place with no editorial photograph still shows a picture.
-    private func placeCoverImageName(_ place: Place) -> String? {
-        place.heroImageURL ?? dataService.rankedTours(at: place).first?.heroImageURL
-    }
-
-    private func placeCoverCategory(_ place: Place) -> TourCategory? {
-        dataService.rankedTours(at: place).first?.primaryCategory
-    }
-
-    private func placeSubtitle(_ place: Place) -> String {
-        let count = dataService.rankedTours(at: place).count
-        let tourWord = count == 1 ? "tour" : "tours"
-        return [place.city, "\(count) \(tourWord)"].compactMap { $0 }.joined(separator: " · ")
+    private func placeSubtitle(_ place: Place, tourCount: Int) -> String {
+        let tourWord = tourCount == 1 ? "tour" : "tours"
+        return [place.city, "\(tourCount) \(tourWord)"].compactMap { $0 }.joined(separator: " · ")
     }
 
     // MARK: - Derived
@@ -458,8 +465,8 @@ private struct RecentlyPlayedEmptyState: View {
     }
 }
 
-/// Internal, not fileprivate: `LikedEmptyState` lives in `LikedListView.swift`
-/// so the Liked list screen can show it too.
+/// Internal, not fileprivate: `LikedEmptyState` is in its own file and uses
+/// this layout, as does the Liked screen's own empty state.
 struct EmptyStateLayout: View {
     let icon: String
     let title: String

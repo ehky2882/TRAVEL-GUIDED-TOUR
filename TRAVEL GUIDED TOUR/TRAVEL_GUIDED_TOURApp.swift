@@ -78,6 +78,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// this drives a `.sheet` in `ContentView`. See `MakerPresenter`.
     @State private var makerPresenter = MakerPresenter()
     @State private var placePresenter = PlacePresenter()
+    @State private var listPresenter = TourListPresenter()
     /// Tracks how many pushed detail screens are on top of any tab's
     /// nav stack. Promoted from `ContentView` to the App level so the
     /// bottom-module window (a separate `UIWindow`) can read it too:
@@ -111,6 +112,23 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// the network refresh (debounced inside `DataService`) so reopening the app
     /// picks up new content with no force-quit. See `DataService.refreshOnForeground`.
     @Environment(\.scenePhase) private var scenePhase
+
+    /// Refresh the signed-in user's own lists (Library's Lists tab).
+    private func refreshLists() async {
+        async let mine: Void = listService.loadMyLists()
+        async let saved: Void = listService.loadSavedLists()
+        _ = await (mine, saved)
+    }
+
+    /// Refresh the signed-in user's creator profile and their own tours (Me
+    /// tab). The tours query needs the maker row's id, so these two stay
+    /// ordered.
+    private func refreshOwnMakerAndTours() async {
+        await makerProfileService.loadMyMaker()
+        if let makerId = makerProfileService.myMaker?.id {
+            await makerTourService.loadMyTours(makerId: makerId)
+        }
+    }
 
     var body: some Scene {
         WindowGroup {
@@ -148,6 +166,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(tourPresenter)
                     .environment(makerPresenter)
                     .environment(placePresenter)
+                    .environment(listPresenter)
                     .environment(navState)
                     .environment(toastCenter)
                     .environment(groupListen)
@@ -173,10 +192,16 @@ struct TRAVEL_GUIDED_TOURApp: App {
                         // doesn't delay sync setup / deep-link handling below.
                         Task {
                             guard authService.isSignedIn else { return }
-                            await makerProfileService.loadMyMaker()
-                            if let makerId = makerProfileService.myMaker?.id {
-                                await makerTourService.loadMyTours(makerId: makerId)
-                            }
+                            // The user's lists back the Library tab, and they
+                            // don't need the maker row — so they refresh
+                            // alongside it rather than behind it. Both services
+                            // hydrate from disk at init, so this only replaces
+                            // a cached shape with a current one; without it the
+                            // first Library tap of a launch is what starts the
+                            // clock, and the tab settles in front of the user.
+                            async let lists: Void = refreshLists()
+                            async let profile: Void = refreshOwnMakerAndTours()
+                            _ = await (lists, profile)
                         }
                         // Wire the Group Listen coordinator's dependencies once
                         // (it's constructed dependency-free so it can be injected
@@ -318,6 +343,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 .environment(tourPresenter)
                 .environment(makerPresenter)
                 .environment(placePresenter)
+                .environment(listPresenter)
                 .environment(navState)
                 .environment(toastCenter)
                 .environment(groupListen)
@@ -385,10 +411,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     )
                     return
                 }
-                appShared.sharedList = SharedListPresentation(
-                    list: fetched.list,
-                    items: fetched.items
-                )
+                // The same slide-up layer every other entry point uses. It
+                // used to be a sheet of its own, which is why a shared list
+                // was the one copy of this screen that closed differently.
+                listPresenter.present(listId: fetched.list.id, preloaded: fetched.list)
             }
         case .place(let id):
             if let place = dataService.place(by: id) {

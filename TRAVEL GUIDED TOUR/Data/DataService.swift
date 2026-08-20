@@ -10,9 +10,34 @@ final class DataService {
     /// before the place layer, which is why every reader must treat "no place"
     /// as the normal case rather than an error.
     private(set) var places: [Place] = []
+
+    // MARK: - Lookup indexes
+    //
+    // Every `by id` accessor below is read **per row, per body evaluation**,
+    // from ~20 call sites — the always-mounted mini-player, the Home drawer's
+    // continue-listening row, and every list row in Library. A linear
+    // `first { $0.id == id }` over a 1,418-tour catalog turns each of those
+    // into thousands of UUID comparisons, and Library alone runs dozens per
+    // frame (`savedTours` is a compactMap of scans, a maker row's tour count
+    // is a full filter, a place row resolves its ranked tours three times).
+    //
+    // These dictionaries make all of it O(1). They are rebuilt only when the
+    // catalog itself changes — a launch, a refresh, or a local maker patch —
+    // so keeping them in step costs nothing on the read path.
+    //
+    // **Anything that mutates `tours` / `makers` / `places` must go through
+    // `applyCatalog`, `applyMakers` or `setPlaces`**, or the indexes go stale
+    // and lookups start returning nil for rows that are plainly on screen.
+    private var tourById: [UUID: Tour] = [:]
+    private var makerById: [UUID: Maker] = [:]
+    private var placeById: [UUID: Place] = [:]
+    /// Maker id → that maker's tours, in catalog order. Backs `tours(by:)`,
+    /// which the maker page renders from and every followed-maker row calls
+    /// just to count.
+    private var toursByMakerId: [UUID: [Tour]] = [:]
     /// Tour id → its place. Built once whenever `places` changes, because the
     /// map asks this per pin and a linear scan per marker would be quadratic
-    /// over a 1,350-tour catalog.
+    /// over a 1,418-tour catalog.
     private var placeByTourId: [UUID: Place] = [:]
 
     private let loader: RemoteCatalogLoader
@@ -42,9 +67,7 @@ final class DataService {
         //    synchronously so the UI has data at first frame and offline works
         //    exactly as before.
         if let local = loader.loadLocal() {
-            tours = local.tours
-            makers = local.makers
-            setPlaces(local.places ?? [])
+            applyCatalog(tours: local.tours, makers: local.makers, places: local.places ?? [])
         }
         // 2. Refresh from the network in the background. On success it
         //    overwrites the cache and updates the published catalog so views
@@ -67,9 +90,7 @@ final class DataService {
         defer { isRefreshing = false }
 
         guard let fresh = await loader.refresh() else { return }
-        self.tours = fresh.tours
-        self.makers = fresh.makers
-        setPlaces(fresh.places ?? [])
+        applyCatalog(tours: fresh.tours, makers: fresh.makers, places: fresh.places ?? [])
     }
 
     /// Re-run the network refresh when the app returns to the foreground.
@@ -93,24 +114,60 @@ final class DataService {
     /// `get_catalog` fetch stays consistent with this.
     @MainActor
     func applyLocalMaker(_ maker: Maker) {
-        if let i = makers.firstIndex(where: { $0.id == maker.id }) {
-            makers[i] = maker
+        var updated = makers
+        if let i = updated.firstIndex(where: { $0.id == maker.id }) {
+            updated[i] = maker
         } else {
-            makers.append(maker)
+            updated.append(maker)
         }
+        applyMakers(updated)
+    }
+
+    // MARK: - Applying catalog state
+
+    /// The one door through which the whole catalog changes. Publishes the new
+    /// arrays and rebuilds every lookup index in the same step, so the two can
+    /// never disagree.
+    private func applyCatalog(tours newTours: [Tour], makers newMakers: [Maker], places newPlaces: [Place]) {
+        tours = newTours
+        var byId: [UUID: Tour] = [:]
+        byId.reserveCapacity(newTours.count)
+        var byMaker: [UUID: [Tour]] = [:]
+        for tour in newTours {
+            byId[tour.id] = tour
+            byMaker[tour.makerId, default: []].append(tour)
+        }
+        tourById = byId
+        toursByMakerId = byMaker
+
+        applyMakers(newMakers)
+        setPlaces(newPlaces)
+    }
+
+    private func applyMakers(_ newMakers: [Maker]) {
+        makers = newMakers
+        var byId: [UUID: Maker] = [:]
+        byId.reserveCapacity(newMakers.count)
+        for maker in newMakers { byId[maker.id] = maker }
+        makerById = byId
     }
 
     private func setPlaces(_ newPlaces: [Place]) {
         places = newPlaces
-        var index: [UUID: Place] = [:]
+        var byId: [UUID: Place] = [:]
+        var byTour: [UUID: Place] = [:]
         for place in newPlaces {
-            for tourId in place.tourIds { index[tourId] = place }
+            byId[place.id] = place
+            for tourId in place.tourIds { byTour[tourId] = place }
         }
-        placeByTourId = index
+        placeById = byId
+        placeByTourId = byTour
     }
 
+    // MARK: - Lookups
+
     func place(by id: UUID) -> Place? {
-        places.first { $0.id == id }
+        placeById[id]
     }
 
     /// The place a tour belongs to, or nil — which is the ordinary case: only
@@ -126,11 +183,11 @@ final class DataService {
     }
 
     func tour(by id: UUID) -> Tour? {
-        tours.first { $0.id == id }
+        tourById[id]
     }
 
     func maker(by id: UUID) -> Maker? {
-        makers.first { $0.id == id }
+        makerById[id]
     }
 
     func maker(for tour: Tour) -> Maker? {
@@ -138,7 +195,7 @@ final class DataService {
     }
 
     func tours(by maker: Maker) -> [Tour] {
-        tours.filter { $0.makerId == maker.id }
+        toursByMakerId[maker.id] ?? []
     }
 
     func tours(in category: TourCategory) -> [Tour] {

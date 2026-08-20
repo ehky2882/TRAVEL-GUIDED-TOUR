@@ -20,6 +20,21 @@ import SwiftUI
 struct AtlasChromeButton: View {
     let systemName: String
 
+    /// Whether the control can act.
+    ///
+    /// ⚠️ **Greys the GLYPH ONLY** — the capsule keeps its fill and its 44pt
+    /// frame, so a control that can't act still holds its place in the row.
+    /// The colour has to be stated here rather than left to `.disabled()`,
+    /// because the glyph names `primaryText` explicitly and SwiftUI will not
+    /// dim a colour a view has set for itself.
+    ///
+    /// Came from `TourListDetailView`, which grew a private copy of this
+    /// button again in order to have it (2026-08-20, merging main into the
+    /// wizard branch). That is the second time this shape has been
+    /// re-privatised to gain one capability; adding the capability here is
+    /// what stops a third.
+    var enabled: Bool = true
+
     /// The app's universal control diameter. Read it rather than writing 44.
     static let diameter: CGFloat = 44
     /// A chrome row's full height: the button plus `AtlasSpacing.sm` above and
@@ -30,14 +45,15 @@ struct AtlasChromeButton: View {
     // property's initializer.)
     static let rowHeight: CGFloat = AtlasChromeButton.diameter + AtlasSpacing.sm * 2
 
-    init(_ systemName: String) {
+    init(_ systemName: String, enabled: Bool = true) {
         self.systemName = systemName
+        self.enabled = enabled
     }
 
     var body: some View {
         Image(systemName: systemName)
             .font(.system(size: 20, weight: .regular))
-            .foregroundStyle(AtlasColors.primaryText)
+            .foregroundStyle(enabled ? AtlasColors.primaryText : AtlasColors.tertiaryText)
             .frame(width: Self.diameter, height: Self.diameter)
             .background(Capsule().fill(AtlasColors.tertiaryText.opacity(0.18)))
             .contentShape(Capsule())
