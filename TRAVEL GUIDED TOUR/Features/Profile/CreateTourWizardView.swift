@@ -1285,6 +1285,14 @@ struct CreateTourWizardView: View {
         }
     }
 
+    /// Every step from Details on writes against a tour id, so until the
+    /// Location step has created the draft there is nothing for them to act on.
+    private var missingDraftNotice: some View {
+        Text("Go back to Location and place the pin first.")
+            .font(AtlasTypography.caption)
+            .foregroundStyle(AtlasColors.secondaryText)
+    }
+
     // MARK: - Outcome
 
     private func outcomeView(_ outcome: Outcome) -> some View {
