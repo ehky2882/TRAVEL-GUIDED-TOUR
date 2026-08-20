@@ -206,6 +206,28 @@ struct CreateTourWizardView: View {
     }
 
     private static let radiusRange: ClosedRange<Double> = 15...100
+    /// How many characters of 13pt SF Mono fit on one line of a wizard field.
+    ///
+    /// 345pt of step width less `AtlasSpacing.md` of field padding each side
+    /// leaves 313pt, and SF Mono advances 0.6em — so 7.8pt a character, and
+    /// forty of them. Used to size each box to the most it will ever hold.
+    private static let charsPerFieldLine = 40
+
+    /// A box tall enough for everything its limit allows.
+    ///
+    /// Owner, 2026-08-20: *"size them to what the maximum text allowed would
+    /// be."* So the box is the limit, drawn — you can see how much room you
+    /// have before you start rather than watching a counter run down, and the
+    /// layout never moves as you type because it was already that tall.
+    ///
+    /// ⚠️ Also what makes the boxes VISIBLE. They were always pure black
+    /// (`AtlasColors.background`) on a `#1C1C1E` page — an 11% difference,
+    /// which at one line tall reads as no box at all. That is what the owner
+    /// saw. A large black area against that ground reads immediately.
+    private static func fieldLines(for limit: Int) -> Int {
+        max(1, Int((Double(limit) / Double(charsPerFieldLine)).rounded(.up)))
+    }
+
     private static let titleLimit = 60
     private static let shortLimit = 100
     private static let longLimit = 600
@@ -589,7 +611,7 @@ struct CreateTourWizardView: View {
                              enabled: step.previous != nil && !isBusy,
                              action: goBack)
 
-                footerButton("Save draft", icon: "tray.and.arrow.down",
+                footerButton("Save draft", icon: "folder",
                              enabled: canPersist && !isBusy,
                              busy: isSavingInPlace,
                              action: saveProgress)
@@ -986,7 +1008,8 @@ struct CreateTourWizardView: View {
         VStack(alignment: .leading, spacing: AtlasSpacing.md) {
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("TITLE", remaining: Self.titleLimit - title.count)
-                TextField("e.g. The Old Custom House", text: $title)
+                TextField("e.g. The Old Custom House", text: $title, axis: .vertical)
+                    .lineLimit(Self.fieldLines(for: Self.titleLimit), reservesSpace: true)
                     .focused($focused, equals: .title)
                     .onChange(of: title) { _, new in
                         if new.count > Self.titleLimit { title = String(new.prefix(Self.titleLimit)) }
@@ -996,7 +1019,8 @@ struct CreateTourWizardView: View {
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("SHORT DESCRIPTION", remaining: Self.shortLimit - shortDescription.count)
-                TextField("One line shown on cards", text: $shortDescription)
+                TextField("One line shown on cards", text: $shortDescription, axis: .vertical)
+                    .lineLimit(Self.fieldLines(for: Self.shortLimit), reservesSpace: true)
                     .focused($focused, equals: .short)
                     .onChange(of: shortDescription) { _, new in
                         if new.count > Self.shortLimit { shortDescription = String(new.prefix(Self.shortLimit)) }
@@ -1028,13 +1052,17 @@ struct CreateTourWizardView: View {
                     // group — and a three-line floor is 83pt of that plus a
                     // label, which is the one combination that would still
                     // have scrolled.
-                    .lineLimit((keyboardHeight > 0 ? 2 : 3)...)
+                    // Sized to the 600-character limit rather than flexible.
+                    // ⚠️ This also retires a `maxHeight: .infinity` that was
+                    // never doing anything — a flexible child gets no room
+                    // from a ScrollView frame that sets only a minHeight.
+                    .lineLimit(Self.fieldLines(for: Self.longLimit), reservesSpace: true)
                     .onChange(of: longDescription) { _, new in
                         if new.count > Self.longLimit { longDescription = String(new.prefix(Self.longLimit)) }
                     }
                     // Top-aligned inside the tall box: text that starts in the
                     // middle of a 344pt field reads as a bug.
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
                     .wizardFieldStyle()
                     // ⚠️ Without this the box is a 344pt target of which only
                     // the first line is tappable — a `TextField` sizes to its
@@ -1043,7 +1071,6 @@ struct CreateTourWizardView: View {
                     .contentShape(Rectangle())
                     .onTapGesture { focused = .long }
             }
-            .frame(maxHeight: .infinity)
         }
     }
 
