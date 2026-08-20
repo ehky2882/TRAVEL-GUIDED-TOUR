@@ -5,11 +5,26 @@ import UniformTypeIdentifiers
 /// Narration for one tour — record it, import it, watch it upload, play back
 /// what's attached.
 ///
+/// 🔴 **ONE SKELETON, IN EVERY STATE.** Owner, 2026-08-20: *"all steps should
+/// look like a version of 'reviewing a take'. it should not differ so much
+/// which step you're on."* Before this the step was four unrelated screens:
+/// two stacked buttons before you had anything, a timer-and-meter panel while
+/// recording, that panel plus two more buttons afterwards, and a playback card
+/// once audio was attached. Nothing kept its place, so every action
+/// reorganised the screen under the maker's thumb.
+///
+/// Now the status line, the clock, the meter, the record button and Import are
+/// **always drawn, always in the same place**. Only one row in the middle
+/// changes, and its height is reserved whether or not it has anything in it —
+/// the same discipline as the wizard's footer hint and the transcript's note.
+/// A control that cannot be used is dimmed rather than removed, because a
+/// disappearing control is what moves everything else.
+///
 /// One step of `CreateTourWizardView`, which is the only place a tour is made
 /// or edited. It lives in its own file because the step owns a good deal of
-/// state — an upload in flight, a failure holding on to its data, a preview
-/// player — and burying that in the wizard would make the wizard the thing
-/// nobody wants to touch.
+/// state — an upload in flight, a failure holding on to its data, a recorder,
+/// two players — and burying that in the wizard would make the wizard the
+/// thing nobody wants to touch.
 struct TourAudioSection: View {
     let tour: Tour
 
@@ -31,9 +46,12 @@ struct TourAudioSection: View {
     @Environment(MakerTourService.self) private var makerTourService
 
     @State private var importingAudio = false
-    /// While true the step shows the recorder in place of its controls — one
-    /// step, two modes, no sheet.
-    @State private var isRecording = false
+    @State private var recorder = AudioRecorder()
+    @State private var takeReview = RecordingReviewPlayer()
+    /// A take that has been made but not yet kept. Distinct from
+    /// `attachedAudioURL`, which is what the tour already has.
+    @State private var recordedURL: URL?
+    @State private var permissionDenied = false
     @State private var isUploading = false
     @State private var uploadProgress: Double = 0
     @State private var uploadTotalBytes: Int64 = 0
@@ -47,24 +65,34 @@ struct TourAudioSection: View {
     private var hasAudio: Bool { tour.totalDurationSeconds > 0 }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            if isRecording {
-                AudioRecorderPanel { url in
-                    isRecording = false
-                    uploadAudio(from: url)
-                } onCancel: {
-                    isRecording = false
-                }
-            } else {
-                controls
-            }
+        VStack(spacing: AtlasSpacing.md) {
+            statusRow
+            clock
+            AudioLevelMeter(levels: recorder.levels, isLive: recorder.isRecording)
+            RecordButton(isRecording: recorder.isRecording, action: toggleRecording)
+                .disabled(isUploading)
+                .opacity(isUploading ? 0.4 : 1)
 
+            // The one row that changes, at a height that doesn't.
+            middleRow
+                .frame(minHeight: 49)
+
+            importButton
+
+            if permissionDenied {
+                Text("Microphone access is off. Enable it in Settings to record.")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.mapPin)
+                    .multilineTextAlignment(.center)
+            }
             if let errorMessage {
                 Text(errorMessage)
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.mapPin)
+                    .multilineTextAlignment(.center)
             }
         }
+        .frame(maxWidth: .infinity)
         .fileImporter(
             isPresented: $importingAudio,
             allowedContentTypes: [.audio],
@@ -75,76 +103,168 @@ struct TourAudioSection: View {
         .task(id: tour.id) {
             attachedAudioURL = await makerTourService.stopAudioURL(tourId: tour.id)
         }
-        .onDisappear { audioPreview.stop() }
-    }
-
-    @ViewBuilder
-    private var controls: some View {
-        VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-            if hasAudio {
-                attachedRow
-            }
-
-            if isUploading {
-                uploadProgressCard
-            } else if let failed = failedUpload {
-                failedUploadCard(failed)
-            } else {
-                Button { isRecording = true } label: {
-                    actionButton(hasAudio ? "Re-record audio" : "Record audio",
-                                 systemImage: "mic.fill", primary: true)
-                }
-                .buttonStyle(.plain)
-
-                Button { importingAudio = true } label: {
-                    actionButton(hasAudio ? "Replace with a file" : "Import a file",
-                                 systemImage: "square.and.arrow.down", primary: false)
-                }
-                .buttonStyle(.plain)
-
-                Text("Record narration here, or import an audio file (m4a, mp3, wav).")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-            }
+        .onDisappear {
+            _ = recorder.stop()
+            takeReview.stop()
+            audioPreview.stop()
         }
     }
 
-    // MARK: - Pieces
+    // MARK: - The fixed parts
 
-    /// Hear what's attached without re-recording it. Before this the editor
-    /// could only tell you audio existed, never play it.
-    private var attachedRow: some View {
-        HStack(spacing: AtlasSpacing.md) {
-            Button {
-                if let url = attachedAudioURL { audioPreview.toggle(url: url) }
-            } label: {
-                Image(systemName: audioPreview.isPlaying ? "pause.fill" : "play.fill")
-                    .font(.system(size: 13))
-                    .foregroundStyle(AtlasColors.background)
-                    .frame(width: 36, height: 36)
-                    .background(AtlasColors.mapPin, in: Circle())
-            }
-            .buttonStyle(.plain)
-            .disabled(attachedAudioURL == nil)
-            .accessibilityLabel(audioPreview.isPlaying ? "Pause preview" : "Play the attached audio")
-
-            Text(audioPreview.isPlaying
-                 ? AtlasFormatters.duration(seconds: Int(audioPreview.elapsed))
-                 : AtlasFormatters.duration(seconds: tour.totalDurationSeconds))
+    /// What the step is doing, and the way out of a take.
+    ///
+    /// Discard sits here rather than in the middle row so that abandoning a
+    /// take never competes for the same place as keeping it.
+    private var statusRow: some View {
+        HStack {
+            Text(statusLabel)
                 .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.primaryText)
-                .monospacedDigit()
-
+                .foregroundStyle(recorder.isRecording ? AtlasColors.mapPin : AtlasColors.secondaryText)
             Spacer()
-
-            Image(systemName: "checkmark.circle.fill")
-                .foregroundStyle(AtlasColors.mapPin)
+            if recordedURL != nil || recorder.isRecording {
+                Button("Discard") { discardTake() }
+                    .font(AtlasTypography.caption)
+                    .tint(AtlasColors.secondaryText)
+            }
         }
-        .padding(.horizontal, AtlasSpacing.md)
-        .padding(.vertical, 12)
-        .background(AtlasColors.background)
-        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+        .frame(minHeight: 17)
     }
+
+    private var statusLabel: String {
+        if recorder.isRecording { return "RECORDING" }
+        if recordedURL != nil    { return "YOUR TAKE" }
+        if hasAudio              { return "NARRATION" }
+        return "RECORD"
+    }
+
+    /// Always a clock, never blank — it reads 00:00 before there is anything,
+    /// counts while recording, and holds the length afterwards.
+    private var clock: some View {
+        Text(timeString(clockSeconds))
+            .font(.system(size: 34, weight: .light, design: .monospaced))
+            .foregroundStyle(AtlasColors.primaryText)
+            .contentTransition(.numericText())
+    }
+
+    private var clockSeconds: TimeInterval {
+        if recorder.isRecording { return recorder.elapsed }
+        if recordedURL != nil    { return recorder.lastDuration }
+        if hasAudio              { return TimeInterval(tour.totalDurationSeconds) }
+        return 0
+    }
+
+    /// Always present, because a maker who has narration on their computer
+    /// shouldn't have to discover that the option exists. Dimmed rather than
+    /// hidden while it can't be used — hiding it is what moves the layout.
+    private var importButton: some View {
+        Button { importingAudio = true } label: {
+            HStack {
+                Spacer()
+                Label(hasAudio ? "Replace with a file" : "Import audio file",
+                      systemImage: "square.and.arrow.down")
+                    .font(AtlasTypography.caption)
+                Spacer()
+            }
+            .padding(.vertical, AtlasSpacing.md)
+            .foregroundStyle(AtlasColors.primaryText)
+            .overlay {
+                RoundedRectangle(cornerRadius: AtlasSpacing.sm)
+                    .stroke(AtlasColors.secondaryText.opacity(0.4), lineWidth: 1)
+            }
+        }
+        .buttonStyle(.plain)
+        .disabled(recorder.isRecording || isUploading)
+        .opacity(recorder.isRecording || isUploading ? 0.4 : 1)
+    }
+
+    // MARK: - The one row that changes
+
+    /// Reserved height, five contents. In order of what most needs saying.
+    @ViewBuilder
+    private var middleRow: some View {
+        if isUploading {
+            uploadProgressCard
+        } else if let failed = failedUpload {
+            failedUploadCard(failed)
+        } else if let take = recordedURL, !recorder.isRecording {
+            HStack(spacing: AtlasSpacing.sm) {
+                pillButton(takeReview.isPlaying ? "Playing…" : "Play",
+                           systemImage: takeReview.isPlaying ? "pause.fill" : "play.fill",
+                           filled: false) {
+                    takeReview.toggle(url: take)
+                }
+                pillButton("Use recording", systemImage: nil, filled: true) {
+                    takeReview.stop()
+                    uploadAudio(from: take)
+                    recordedURL = nil
+                }
+            }
+        } else if hasAudio, !recorder.isRecording {
+            // Nothing to keep or throw away — just the tour's own narration,
+            // playable where the take's Play button would be.
+            pillButton(audioPreview.isPlaying ? "Playing…" : "Play narration",
+                       systemImage: audioPreview.isPlaying ? "pause.fill" : "play.fill",
+                       filled: false) {
+                if let url = attachedAudioURL { audioPreview.toggle(url: url) }
+            }
+            .disabled(attachedAudioURL == nil)
+        }
+        // Recording, or nothing recorded yet: the row is empty and keeps its
+        // height, so the record button and Import never move.
+    }
+
+    private func pillButton(_ title: String, systemImage: String?,
+                            filled: Bool, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            HStack(spacing: 6) {
+                if let systemImage { Image(systemName: systemImage) }
+                Text(title)
+            }
+            .font(AtlasTypography.caption)
+            .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, AtlasSpacing.md)
+            .background {
+                if filled {
+                    Capsule().fill(AtlasColors.mapPin)
+                } else {
+                    Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+    }
+
+    // MARK: - Recording
+
+    private func toggleRecording() {
+        if recorder.isRecording {
+            recordedURL = recorder.stop()
+        } else {
+            takeReview.stop()
+            audioPreview.stop()
+            Task {
+                let ok = await recorder.start()
+                permissionDenied = !ok
+                if ok { recordedURL = nil }
+            }
+        }
+    }
+
+    /// Throw the take away and go back to whatever the tour already had.
+    private func discardTake() {
+        _ = recorder.stop()
+        takeReview.stop()
+        recordedURL = nil
+    }
+
+    private func timeString(_ t: TimeInterval) -> String {
+        let s = Int(t)
+        return String(format: "%02d:%02d", s / 60, s % 60)
+    }
+
+    // MARK: - Upload and failure, in the middle row
 
     /// Real byte progress, not a spinner. Narration is the largest thing this
     /// app uploads, and an indeterminate spinner can't distinguish "nearly
@@ -207,26 +327,6 @@ struct TourAudioSection: View {
         }
         .padding(AtlasSpacing.md)
         .background(AtlasColors.background)
-        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
-    }
-
-    /// A filled primary (record) or a bordered secondary (import).
-    private func actionButton(_ title: String, systemImage: String, primary: Bool) -> some View {
-        HStack {
-            Spacer()
-            Label(title, systemImage: systemImage)
-                .font(AtlasTypography.caption)
-            Spacer()
-        }
-        .padding(.vertical, AtlasSpacing.md)
-        .foregroundStyle(primary ? AtlasColors.background : AtlasColors.primaryText)
-        .background(primary ? AtlasColors.mapPin : Color.clear)
-        .overlay {
-            if !primary {
-                RoundedRectangle(cornerRadius: AtlasSpacing.sm)
-                    .stroke(AtlasColors.secondaryText.opacity(0.4), lineWidth: 1)
-            }
-        }
         .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
     }
 
