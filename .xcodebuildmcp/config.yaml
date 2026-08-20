@@ -1,8 +1,0 @@
-schemaVersion: 1
-sessionDefaults:
-  projectPath: /Users/EY/TRAVEL-GUIDED-TOUR/TRAVEL GUIDED TOUR.xcodeproj
-  scheme: TRAVEL GUIDED TOUR
-  configuration: Debug
-  simulatorName: iPhone 17 Pro
-  useLatestOS: true
-  simulatorPlatform: iOS Simulator

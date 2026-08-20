@@ -46,3 +46,10 @@ web/*.tsbuildinfo
 # Belt-and-braces for any future JS project in the repo.
 node_modules/
 .next/
+
+# XcodeBuildMCP session defaults — machine-local (absolute project path +
+# a simulator name that differs per machine). Committing it means every
+# `session_set_defaults --persist` dirties the shared checkout, and a wrong
+# value is inherited SILENTLY: you build the other clone and believe you
+# tested your change. No defaults fails loudly instead, which is what we want.
+.xcodebuildmcp/
