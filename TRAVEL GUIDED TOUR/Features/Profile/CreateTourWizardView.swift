@@ -116,6 +116,11 @@ struct CreateTourWizardView: View {
     /// the transcript to be made again. Nil for a tour opened for editing —
     /// its audio is on the server and was never here.
     @State private var lastLocalAudioURL: URL?
+    /// Remembered across tours: a maker who narrates ten tours in Spanish
+    /// should say so once, not ten times.
+    @AppStorage("transcriptionLocale") private var transcriptionLocaleID = ""
+    /// The languages the recogniser handles, read once when the step appears.
+    @State private var supportedLocales: [Locale] = []
 
     // Flow
     @State private var isPersisting = false
@@ -1127,30 +1132,91 @@ struct CreateTourWizardView: View {
                     .onTapGesture { focused = .transcript }
                     .focused($focused, equals: .transcript)
 
-                HStack(alignment: .top) {
-                    if let note = transcriptNote {
-                        Text(note)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(transcriber.phase.isFailure
-                                             ? AtlasColors.secondaryText
-                                             : AtlasColors.tertiaryText)
-                            .lineLimit(2)
-                    }
-                    Spacer(minLength: AtlasSpacing.sm)
-                    // Only offered when it can actually be done — the recording
-                    // has to still be on this device — and never mid-run.
-                    if lastLocalAudioURL != nil, !transcriber.isWorking {
-                        Button("Transcribe again") { retranscribe() }
-                            .font(AtlasTypography.caption)
-                            .tint(AtlasColors.mapPin)
-                            .fixedSize()
-                    }
-                }
-                .frame(minHeight: 17)
+                // Two lines, reserved whether or not there is anything to
+                // say. The note comes and goes as the recogniser works, and a
+                // box that resized each time would jump exactly as the words
+                // landed in it. Same discipline as the footer's hint slot.
+                Text(transcriptNote ?? " ")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(transcriber.phase.isFailure
+                                     ? AtlasColors.secondaryText
+                                     : AtlasColors.tertiaryText)
+                    .lineLimit(2, reservesSpace: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                languageRow
             }
         } else {
             missingDraftNotice
         }
+    }
+
+    /// The language the recogniser is listening for, said out loud, with the
+    /// list behind it.
+    ///
+    /// 🔴 STATING IT IS THE POINT; THE MENU IS SECONDARY. The device's language
+    /// is only a guess at the narration's, and tour makers are exactly the
+    /// people for whom the two differ — an English-set phone narrating in
+    /// Spanish is ordinary. Running the wrong model doesn't fail, it returns
+    /// fluent nonsense, so a maker who is never told which language was used
+    /// has no way to know anything went wrong. A button alone wouldn't fix
+    /// that: someone unaware of the problem never presses it. The name on
+    /// screen is what makes the mismatch visible.
+    ///
+    /// Changing it re-transcribes on the spot, because a language you picked
+    /// and then had to ask for again would be a setting pretending to be an
+    /// action.
+    @ViewBuilder
+    private var languageRow: some View {
+        HStack(spacing: AtlasSpacing.sm) {
+            Menu {
+                // The device's own language leads, so the common case is one
+                // tap back rather than a hunt through forty entries.
+                Button("Match my phone") { chooseLanguage("") }
+                Divider()
+                ForEach(supportedLocales, id: \.identifier) { locale in
+                    Button(AudioTranscriber.displayName(of: locale)) {
+                        chooseLanguage(locale.identifier)
+                    }
+                }
+            } label: {
+                HStack(spacing: 4) {
+                    Text(spokenLanguageName)
+                    Image(systemName: "chevron.down").font(.system(size: 9))
+                }
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.mapPin)
+            }
+            .disabled(transcriber.isWorking || supportedLocales.isEmpty)
+
+            Spacer(minLength: AtlasSpacing.sm)
+
+            // Only offered when it can be done — the recording has to still be
+            // on this device — and never mid-run.
+            if lastLocalAudioURL != nil, !transcriber.isWorking {
+                Button("Transcribe again") { retranscribe() }
+                    .font(AtlasTypography.caption)
+                    .tint(AtlasColors.secondaryText)
+                    .fixedSize()
+            }
+        }
+        .frame(minHeight: 17)
+        .task {
+            guard supportedLocales.isEmpty else { return }
+            supportedLocales = await AudioTranscriber.supportedLocales()
+        }
+    }
+
+    /// What to call the language on screen.
+    ///
+    /// Falls back to the phone's own name for its language when nothing has
+    /// been chosen — never to a blank or to "Default", either of which would
+    /// leave the maker unable to tell what was actually used.
+    private var spokenLanguageName: String {
+        if !transcriptionLocaleID.isEmpty {
+            return AudioTranscriber.displayName(of: Locale(identifier: transcriptionLocaleID))
+        }
+        return AudioTranscriber.displayName(of: Locale.current)
     }
 
     /// What the step says about where the automatic transcript got to.
@@ -1692,6 +1758,7 @@ struct CreateTourWizardView: View {
     /// megabytes to redo work already done would be the wrong trade.
     private func startTranscription(of localURL: URL) {
         lastLocalAudioURL = localURL
+        transcriber.preferredLocaleID = transcriptionLocaleID
         // ⚠️ Words already in the box win, even against newer audio. Replacing
         // the narration does make an existing transcript wrong — but it may be
         // a transcript the maker wrote or corrected by hand, and no automatic
@@ -1703,6 +1770,19 @@ struct CreateTourWizardView: View {
     /// Make the transcript again from the recording, discarding what's in the
     /// box. The one path that overwrites a maker's own words, and it exists
     /// precisely so that the automatic path never has to.
+    /// Pick the language the narration is in, and act on it immediately.
+    ///
+    /// Empty means follow the phone. Choosing the language that is already in
+    /// use does nothing — re-running the same model over the same audio to get
+    /// the same words back would only look like an action that failed.
+    private func chooseLanguage(_ identifier: String) {
+        guard identifier != transcriptionLocaleID else { return }
+        transcriptionLocaleID = identifier
+        transcriber.preferredLocaleID = identifier
+        guard lastLocalAudioURL != nil else { return }
+        retranscribe()
+    }
+
     private func retranscribe() {
         guard let url = lastLocalAudioURL else { return }
         transcript = ""

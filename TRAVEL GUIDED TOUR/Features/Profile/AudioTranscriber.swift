@@ -57,6 +57,18 @@ final class AudioTranscriber {
         }
     }
 
+    /// The language to listen for, as a locale identifier — empty means follow
+    /// the device.
+    ///
+    /// 🔴 THE DEVICE'S LANGUAGE IS A GUESS AT THE NARRATION'S, AND OFTEN A
+    /// WRONG ONE. Tour makers are exactly the people whose phone language and
+    /// speaking language differ: an English-set iPhone narrating Barcelona in
+    /// Spanish is an ordinary case, not an exotic one. Running the wrong model
+    /// does not fail — it returns confident nonsense, the same trap that made
+    /// falling back to English unacceptable. So the language is a setting, it
+    /// is stated on screen rather than assumed, and the maker can change it.
+    var preferredLocaleID: String = ""
+
     private(set) var phase: Phase = .idle
     /// The words, as they are recognised. Written straight through so a long
     /// recording fills the box while it works rather than staying blank.
@@ -89,8 +101,8 @@ final class AudioTranscriber {
     private func run(fileURL: URL) async {
         #if canImport(Speech)
         do {
-            guard let locale = await Self.usableLocale() else {
-                phase = .failed("Automatic transcription isn't available for this language. Type it yourself, or leave it blank.")
+            guard let locale = await usableLocale() else {
+                phase = .failed("No transcription for this language. Pick another below, or type it yourself.")
                 return
             }
 
@@ -133,7 +145,7 @@ final class AudioTranscriber {
             try Task.checkCancellation()
             text = Self.tidied(text)
             phase = text.isEmpty
-                ? .failed("Nothing was recognised in the recording. Type the transcript, or leave it blank.")
+                ? .failed("Nothing recognised. Check the language below, or type it yourself.")
                 : .done
         } catch is CancellationError {
             phase = .idle
@@ -153,10 +165,32 @@ final class AudioTranscriber {
     /// English model over Japanese narration doesn't fail — it returns
     /// confident nonsense, which is worse than an empty box, because a maker
     /// might submit it.
-    private static func usableLocale() async -> Locale? {
-        await SpeechTranscriber.supportedLocale(equivalentTo: Locale.current)
+    private func usableLocale() async -> Locale? {
+        if !preferredLocaleID.isEmpty {
+            // An explicit choice is honoured as given. It came from the list of
+            // supported languages, so it needs no equivalence search.
+            return Locale(identifier: preferredLocaleID)
+        }
+        return await SpeechTranscriber.supportedLocale(equivalentTo: Locale.current)
     }
+
+    /// Every language the recogniser can handle, in the reader's own language,
+    /// alphabetically. Read once and cached by the caller — it is a fixed list
+    /// for a given OS, not something that changes while a maker is typing.
+    static func supportedLocales() async -> [Locale] {
+        await SpeechTranscriber.supportedLocales
+            .sorted { displayName(of: $0) < displayName(of: $1) }
+    }
+    #else
+    static func supportedLocales() async -> [Locale] { [] }
     #endif
+
+    /// A language's name as a person reads it — "Spanish (Spain)", not
+    /// "es_ES". Localised into the reader's own language.
+    nonisolated static func displayName(of locale: Locale) -> String {
+        Locale.current.localizedString(forIdentifier: locale.identifier)
+            ?? locale.identifier
+    }
 
     /// Collapse the runs of whitespace the recogniser leaves between segments.
     ///
