@@ -207,17 +207,23 @@ struct TourDetailView: View {
     }
 
     /// Sticky top chrome — X close (leading) · Save · overflow
-    /// (trailing). Renders three discrete `chromeCapsule`-styled
-    /// buttons matching the inline action row's secondary
-    /// (save/download) buttons: 44×44 Capsule with
-    /// `AtlasColors.mapPin.opacity(0.15)` fill + 20pt regular SF
-    /// Symbol in `mapPin` gold. The row sits at the top of the
-    /// body (outside the ScrollView) so it stays put while the
-    /// content scrolls underneath.
+    /// (trailing), each an `AtlasChromeButton`. The row sits at the
+    /// top of the body (outside the ScrollView) so it stays put
+    /// while the content scrolls underneath.
+    ///
+    /// **This row is the app's canonical page chrome** (owner,
+    /// 2026-08-20): the place, list and wizard headers all match it.
+    /// Change the button here and it changes everywhere, which is
+    /// the point of `AtlasChromeButton` — three private copies of it
+    /// used to live in those three files.
+    ///
+    /// (An earlier version of this comment described the buttons as
+    /// gold on a `mapPin.opacity(0.15)` fill. They have never been:
+    /// the glyph is `primaryText` on `tertiaryText.opacity(0.18)`.)
     private var chromeRow: some View {
         HStack(spacing: AtlasSpacing.sm) {
             Button(action: { tourPresenter.dismiss() }) {
-                chromeCapsule("xmark")
+                AtlasChromeButton("xmark")
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Close")
@@ -225,7 +231,7 @@ struct TourDetailView: View {
             Spacer()
 
             Button(action: toggleSaved) {
-                chromeCapsule(isSaved ? "bookmark.fill" : "bookmark")
+                AtlasChromeButton(isSaved ? "bookmark.fill" : "bookmark")
             }
             .buttonStyle(.plain)
             .accessibilityLabel(saveActions.accessibilityLabel(tour.id))
@@ -1378,7 +1384,7 @@ struct TourDetailView: View {
                 }
             }
         } label: {
-            chromeCapsule("ellipsis")
+            AtlasChromeButton("ellipsis")
                 .accessibilityLabel("More options")
         }
     }
@@ -1389,14 +1395,6 @@ struct TourDetailView: View {
     /// reserved for the inline action row so the chrome's "navigate
     /// + manage" controls stay tonally separate from the chrome's
     /// "play this tour" controls (owner correction, 2026-06-03).
-    private func chromeCapsule(_ systemName: String) -> some View {
-        Image(systemName: systemName)
-            .font(.system(size: 20, weight: .regular))
-            .foregroundStyle(AtlasColors.primaryText)
-            .frame(width: 44, height: 44)
-            .background(Capsule().fill(AtlasColors.tertiaryText.opacity(0.18)))
-            .contentShape(Capsule())
-    }
 
     /// Menu-side label for the download item — mirrors the inline
     /// button's state so the menu reads as a parallel control surface.

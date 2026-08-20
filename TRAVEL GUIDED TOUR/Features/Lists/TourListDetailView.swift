@@ -168,7 +168,7 @@ struct TourListDetailView: View {
     private var chromeRow: some View {
         HStack(spacing: AtlasSpacing.sm) {
             Button { dismiss() } label: {
-                chromeCapsule("chevron.left")
+                AtlasChromeButton("chevron.left")
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Back")
@@ -179,7 +179,7 @@ struct TourListDetailView: View {
             // worth a capsule of its own — the place page makes the same call.
             if canSave {
                 Button { toggleSaved() } label: {
-                    chromeCapsule(isSavedList ? "bookmark.fill" : "bookmark")
+                    AtlasChromeButton(isSavedList ? "bookmark.fill" : "bookmark")
                 }
                 .buttonStyle(.plain)
                 .disabled(isSaving)
@@ -194,14 +194,6 @@ struct TourListDetailView: View {
 
     /// Identical to tour detail's and the place page's, down to the fill
     /// opacity. Gold is reserved for action controls, so chrome stays neutral.
-    private func chromeCapsule(_ systemName: String) -> some View {
-        Image(systemName: systemName)
-            .font(.system(size: 20, weight: .regular))
-            .foregroundStyle(AtlasColors.primaryText)
-            .frame(width: 44, height: 44)
-            .background(Capsule().fill(AtlasColors.tertiaryText.opacity(0.18)))
-            .contentShape(Capsule())
-    }
 
     // MARK: - Body
 

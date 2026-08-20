@@ -313,38 +313,44 @@ struct CreateTourWizardView: View {
 
     // MARK: - Chrome
 
-    /// The bar the toolbar used to be: step name centred, Close or back on
+    /// The bar the toolbar used to be: where you are centred, the way out on
     /// the leading edge. Plain views in a plain HStack — see `body` for why
     /// this must never become a `.toolbar` again.
+    ///
+    /// Built from `AtlasChromeButton`, so it is the same control `TourDetailView`
+    /// closes with — that page is the canon for page chrome (owner,
+    /// 2026-08-20). The leading button used to be the word "Close", which was
+    /// the only spelled-out one in the app.
     private var header: some View {
         ZStack {
-            Text(step.label)
+            Text(stepTitle)
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.primaryText)
+                .lineLimit(1)
+                // Clear of the leading button and its mirror on the trailing
+                // side, so a long step name is truncated rather than run under
+                // the glyph.
+                .padding(.horizontal, AtlasChromeButton.diameter + AtlasSpacing.sm)
             HStack {
                 Button {
                     if step == .location { closeTapped() } else { goBack() }
                 } label: {
-                    Group {
-                        if step == .location {
-                            Text("Close").font(AtlasTypography.caption)
-                        } else {
-                            Image(systemName: "chevron.left")
-                        }
-                    }
-                    .frame(minWidth: 44, minHeight: 44, alignment: .leading)
-                    .contentShape(Rectangle())
+                    AtlasChromeButton(step == .location ? "xmark" : "chevron.left")
                 }
                 .buttonStyle(.plain)
-                .tint(AtlasColors.primaryText)
-                .foregroundStyle(AtlasColors.primaryText)
                 .accessibilityLabel(step == .location ? "Close" : "Back")
                 Spacer()
             }
         }
         .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.top, AtlasSpacing.sm)
-        .frame(height: 52)
+        .padding(.vertical, AtlasSpacing.sm)
+        .frame(height: AtlasChromeButton.rowHeight)
+    }
+
+    /// "STEP 2 OF 5 — DETAILS". Counted off `allCases`, so adding or removing
+    /// a step can't leave the header claiming a total nobody has.
+    private var stepTitle: String {
+        "STEP \(step.rawValue + 1) OF \(TourWizardStep.allCases.count) — \(step.label)"
     }
 
     private var wizard: some View {
