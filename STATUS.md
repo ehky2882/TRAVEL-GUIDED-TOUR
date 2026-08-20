@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-20 04:20 UTC
+**Last verified:** 2026-08-20 04:45 UTC
 
 ---
 
@@ -35,7 +35,7 @@ base predates**, and a branch that has not merged `main` recently should merge i
 |---|---|---|---|
 | [#549](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/549) | **Library launch jitter + lookup perf.** Lists were memory-only, so every launch made three sequential round-trips and the tab re-laid-out twice. Now a per-account disk snapshot hydrated at init, loads concurrent. Also replaces linear scans over 1,418 tours with dictionaries. | ✅ **93** | ✅ **MERGED 03:52** — still worth the device pass, but it is on `main` now |
 | [#552](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/552) | **The wizard stops scrolling.** Owner's rule: no step may scroll — if it doesn't fit it becomes another step. Four of five overflowed; step 1 was 596pt into 411pt. Mini-player and tab bar withdraw while the wizard is up (126pt back), step 1 asks where **once** instead of three times, and the map takes the slack. | ⏳ none yet | Owner OK + a look. Steps 2–5 still overflow — next pass |
-| [#553](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/553) | **The list page behaves like every other top-level screen.** Started as the gold ringed `…` the owner flagged — drift, not a choice: it was a bare `ellipsis.circle` that drew its own ring and inherited the accent. Became three changes, ending with the list page **sliding up from the bottom** like tour detail and the place page, with an X instead of a back chevron. Signed out, the bookmark greys rather than vanishing. | ⏳ none yet | Owner OK + a device pass — see below |
+| [#553](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/553) | **The list page behaves like every other top-level screen.** Started as the gold ringed `…` the owner flagged — drift, not a choice: it was a bare `ellipsis.circle` that drew its own ring and inherited the accent. Became three changes, ending with the list page **sliding up from the bottom** like tour detail and the place page, with an X instead of a back chevron. Signed out, the bookmark greys rather than vanishing. | ✅ **94** | Owner OK + a device pass — see below. ⚠️ **94's base predates #549**, so the Library may still jitter on it |
 
 ✅ **Build 93 is the one to install for #549, and it is a proper build.** Cut from `c2e8594`, which
 **merges `main` into the branch** — so it carries the wizard, Settings, list page and Universal
@@ -53,6 +53,13 @@ lists to pop in. Genuinely needs the phone. 🔴 Its risk is **staleness**: a di
 rebuilt when the catalog changes returns nil for a row plainly on screen, reading as missing
 content rather than a bug. All mutations go through `applyCatalog` / `applyMakers` / `setPlaces`
 and tests pin it.
+
+⚠️ **BUILD 94 IS ONE MERGE BEHIND, and it is the merge that landed 40 minutes earlier.** Its branch
+is cut from `8c1eb4b0` (the #551 merge, 03:10) — **not** from `9407727c` (#549's merge, 03:52).
+GitHub reports the PR's base as `9407727c` because that is `main`'s *current tip*; the **merge-base**
+is what a build actually contains, and it is the older one. **So 94 carries the wizard, Settings, the
+list page and Universal Links — but not the Library launch-jitter fix.** If the Lists tab still
+shuffles on 94, that is not a regression — it predates the fix by 42 minutes.
 
 🔴 **#553 touches the slide-up layer machinery, which is where this app's repeat regressions live** —
 the dead tab bar, layers not torn down, bars showing content through the island's gaps. It adds a
@@ -139,15 +146,12 @@ isPrivate restored 2026-08-20).
 dispatched as "the next one" comes back as whatever number the counter reached. Read it back
 after dispatching; never promise one in advance.
 
-**Nothing has been built since 93.** Both open PRs (#552, #553) are unbuilt, and each is a code
-change the owner has to look at — so the next build should carry them, ideally from `main` after
-they merge rather than from either branch.
-
 | Build | Branch | Carries | Result |
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 93 | `library-launch-jitter` | #549 **after merging main** (`c2e8594`) — #549 has since merged, so this is on `main` | ✅ **latest — install this** |
+| 94 | `ellipsis-button-consistency-vdorpi` | #553 list page as a layer (`1d7ed910`) — merge-base `8c1eb4b0`, so **no #549 library fix** | ✅ **latest** |
+| 93 | `library-launch-jitter` | #549 **after merging main** (`c2e8594`) — #549 has since merged, so this is on `main` | ✅ the one that has the Library fix |
 | 92 | `library-launch-jitter` | #549 on an 18 Aug base — **no wizard, no Settings pass** | ⚠️ looked like regressions; it was just old |
 | 91 | `main` (`fd741db`) | **Everything from today, together** — wizard, Settings, list page, 5:4 heroes | ✅ owner-verified |
 | 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ✅ owner-verified — hang closed |
@@ -168,8 +172,8 @@ they merge rather than from either branch.
 | Branch | State |
 |---|---|
 | `claude/library-launch-jitter` | Merged (#549 at 03:52) — auto-delete should remove it |
-| `claude/upload-wizard-improvements-ejopz3` | Open — #552, unbuilt |
-| `claude/ellipsis-button-consistency-vdorpi` | Open — #553, unbuilt |
+| `claude/upload-wizard-improvements-ejopz3` | Open — #552, unbuilt; head moved to `ecce60c5`, merge-base also predates #549 |
+| `claude/ellipsis-button-consistency-vdorpi` | Open — #553, **build 94** |
 | `claude/tour-upload-polish-qiliop` | Merged (#540) — auto-delete should remove it |
 | `claude/stripe-questions-fjhdo3` | ⚠️ No PR — verify contents before deleting |
 | `claude/amsterdam-handoff-preserve-hlhyp8` | 🔒 Keep — only copy of staging pick-maps |
