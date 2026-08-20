@@ -22,6 +22,15 @@ struct AtlasPillLabel: View {
     /// Drawn after the title — the chevron on a menu, and nothing else so far.
     var trailingImage: String? = nil
     var filled: Bool = false
+    /// Destructive actions wear the app's alarm colour rather than its brass,
+    /// outlined rather than filled — a delete that looks like a submit is a
+    /// delete someone presses by mistake.
+    var destructive: Bool = false
+
+    private var ink: Color {
+        if destructive { return AtlasColors.destructive }
+        return filled ? AtlasColors.background : AtlasColors.primaryText
+    }
 
     var body: some View {
         HStack(spacing: 6) {
@@ -33,7 +42,7 @@ struct AtlasPillLabel: View {
             }
         }
         .font(AtlasTypography.caption)
-        .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
+        .foregroundStyle(ink)
         .padding(.horizontal, AtlasSpacing.sm)
         .frame(maxWidth: .infinity)
         .frame(height: AtlasChromeButton.diameter)
@@ -41,7 +50,10 @@ struct AtlasPillLabel: View {
             if filled {
                 Capsule().fill(AtlasColors.mapPin)
             } else {
-                Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1)
+                Capsule().stroke(destructive
+                                 ? AtlasColors.destructive.opacity(0.5)
+                                 : AtlasColors.tertiaryText.opacity(0.5),
+                                 lineWidth: 1)
             }
         }
     }
@@ -57,12 +69,14 @@ struct AtlasPillButton: View {
     let title: String
     var systemImage: String? = nil
     var filled: Bool = false
+    var destructive: Bool = false
     var enabled: Bool = true
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
-            AtlasPillLabel(title: title, systemImage: systemImage, filled: filled)
+            AtlasPillLabel(title: title, systemImage: systemImage,
+                           filled: filled, destructive: destructive)
         }
         .buttonStyle(.plain)
         .disabled(!enabled)

@@ -1241,27 +1241,35 @@ struct CreateTourWizardView: View {
     }
 
     @ViewBuilder
+    /// The last look before it goes to a moderator.
+    ///
+    /// 🔴 **IT WAS 746pt INTO 529** — by far the worst step in the wizard, half
+    /// again the screen, and 844 when editing a tour that already exists. Two
+    /// things caused that, and both were doing less than their height claimed.
+    ///
+    /// A **360pt mock of the player** — a fake scrubber, a fake play button, a
+    /// fake speed pill — that could not be played. It answered "how will it
+    /// look" with a picture of a screen the maker will never see this tour on
+    /// in that state, and cost more room than everything else together.
+    ///
+    /// And **eight full-width rows restating what the maker had just typed**,
+    /// six screens running. A review screen's job is not to read your own
+    /// answers back to you; it is to say **whether each step is done**, show
+    /// what is missing, and let you go and fix it. So each step gets one line,
+    /// with a mark, a short value, and a tap that jumps there — through the
+    /// same `jump(to:)` the progress bar uses, so it saves before it moves.
+    ///
+    /// 405pt for a new tour. See `checklistRow` for what the marks mean.
+    @ViewBuilder
     private var reviewStep: some View {
         if let draft {
-            let tour = draft.tour
-            let photoCount = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
-                .filter { !$0.isEmpty }.count
             VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                fieldLabel("PREVIEW — HOW IT'LL LOOK IN THE APP")
-                previewCard(tour)
+                fieldLabel("HOW IT'LL LOOK")
+                previewCard(draft.tour)
+
                 VStack(spacing: 0) {
-                    summaryRow("TITLE", tour.title, isLast: false)
-                    summaryRow("WHERE", whereSummary, isLast: false)
-                    summaryRow("PIN",
-                               String(format: "%.4f, %.4f", tour.centroidLatitude, tour.centroidLongitude),
-                               isLast: false)
-                    summaryRow("GEOFENCE", "\(Int(radius)) m", isLast: false)
-                    summaryRow("TAGS", tour.tags.isEmpty ? "None" : tour.tags.joined(separator: " · "),
-                               isLast: false)
-                    summaryRow("PHOTOS", photoCount == 0 ? "None" : "\(photoCount)", isLast: false)
-                    summaryRow("AUDIO", audioSummary(tour), isLast: existingTourId == nil)
-                    if existingTourId != nil {
-                        summaryRow("STATUS", draft.status.label, isLast: true)
+                    ForEach(TourWizardStep.allCases.filter { $0 != .review }, id: \.rawValue) { s in
+                        checklistRow(s, isLast: s == .transcript)
                     }
                 }
                 .background(AtlasColors.background)
@@ -1270,29 +1278,15 @@ struct CreateTourWizardView: View {
                 Text(reviewFootnote)
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.tertiaryText)
+                    .lineLimit(2, reservesSpace: true)
 
                 if existingTourId != nil {
-                    Button(role: .destructive) { confirming = .deleting } label: {
-                        HStack {
-                            Spacer()
-                            if isDeleting {
-                                ProgressView()
-                            } else {
-                                Label("Delete tour", systemImage: "trash")
-                                    .font(AtlasTypography.caption)
-                                    .foregroundStyle(AtlasColors.accent)
-                            }
-                            Spacer()
-                        }
-                        .padding(.vertical, AtlasSpacing.md)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: AtlasSpacing.sm)
-                                .stroke(AtlasColors.accent.opacity(0.5), lineWidth: 1)
-                        )
+                    AtlasPillButton(title: isDeleting ? "Deleting…" : "Delete tour",
+                                    systemImage: "trash",
+                                    destructive: true,
+                                    enabled: !isDeleting) {
+                        confirming = .deleting
                     }
-                    .buttonStyle(.plain)
-                    .disabled(isDeleting)
-                    .padding(.top, AtlasSpacing.sm)
                 }
             }
         } else {
@@ -1300,135 +1294,149 @@ struct CreateTourWizardView: View {
         }
     }
 
-    /// A still of the player, so the maker sees what a listener sees before
-    /// committing. Deliberately inert — it is a picture of the app, not a
-    /// second place to play the audio.
+    /// The tour as a row in the app, which is where a listener meets it.
+    ///
+    /// ⚠️ It replaces a still of the *player* — a scrubber and transport that
+    /// could not be pressed. This is a shape the app actually draws, at the
+    /// proportion it actually draws it: the hero square, because
+    /// `AtlasSpacing.heroAspectRatio` is 1.0 and a square is what survives
+    /// every hero-shaped surface. So it also shows the crop, one step after
+    /// the photo grid promised it.
     private func previewCard(_ tour: Tour) -> some View {
         let images = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
             .filter { !$0.isEmpty }
-        let blurb = longDescription.isEmpty ? shortDescription : longDescription
-        return VStack(spacing: 0) {
-            ZStack(alignment: .bottom) {
+        return HStack(spacing: AtlasSpacing.md) {
+            Group {
                 if let hero = images.first {
-                    HeroImageView(imageName: hero, height: 200,
-                                  cornerRadius: 0, category: tour.primaryCategory)
+                    HeroImageView(imageName: hero, height: 96,
+                                  cornerRadius: AtlasSpacing.sm,
+                                  category: tour.primaryCategory)
                 } else {
-                    Rectangle()
+                    RoundedRectangle(cornerRadius: AtlasSpacing.sm)
                         .fill(AtlasColors.secondaryBackground)
-                        .frame(height: 200)
-                        .overlay(
-                            Text("No cover photo yet")
-                                .font(AtlasTypography.caption)
+                        .overlay {
+                            Image(systemName: "photo")
                                 .foregroundStyle(AtlasColors.tertiaryText)
-                        )
-                }
-                if images.count > 1 {
-                    HStack(spacing: 4) {
-                        ForEach(0..<images.count, id: \.self) { index in
-                            Circle()
-                                .fill(Color.white.opacity(index == 0 ? 1 : 0.5))
-                                .frame(width: 5, height: 5)
                         }
-                    }
-                    .padding(.bottom, AtlasSpacing.sm)
                 }
             }
+            .frame(width: 96, height: 96)
+            .clipped()
 
-            VStack(spacing: AtlasSpacing.xs) {
-                Text("NOW PLAYING")
-                    .font(.system(size: 11, weight: .regular, design: .monospaced))
-                    .foregroundStyle(AtlasColors.tertiaryText)
-                Text(persistedTitle)
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                Text(persistedTitle.isEmpty ? "Untitled tour" : persistedTitle)
                     .font(AtlasTypography.body)
                     .foregroundStyle(AtlasColors.primaryText)
-                    .multilineTextAlignment(.center)
                     .lineLimit(2)
-                Text(blurb.isEmpty ? "Add a description to see it here." : blurb)
+                Text(shortDescription.isEmpty ? longDescription : shortDescription)
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.secondaryText)
-                    .multilineTextAlignment(.center)
                     .lineLimit(2)
-                    .padding(.bottom, AtlasSpacing.xs)
-
-                Capsule()
-                    .fill(AtlasColors.tertiaryText.opacity(0.3))
-                    .frame(height: 3)
-                    .overlay(alignment: .leading) {
-                        GeometryReader { geo in
-                            Capsule()
-                                .fill(AtlasColors.mapPin)
-                                .frame(width: geo.size.width * 0.06, height: 3)
-                        }
-                        .frame(height: 3)
-                    }
-                HStack {
-                    Text("0:00")
-                    Spacer()
-                    Text(tour.totalDurationSeconds > 0
-                         ? AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
-                         : "—")
-                }
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
-                .padding(.bottom, AtlasSpacing.xs)
-
-                HStack {
-                    Text("1x")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                        .padding(.horizontal, 8).padding(.vertical, 3)
-                        .overlay(Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1))
-                    Spacer()
-                    Image(systemName: "gobackward.10")
-                    Spacer()
-                    Image(systemName: "play.fill")
-                        .font(.system(size: 15))
-                        .foregroundStyle(AtlasColors.background)
-                        .frame(width: 44, height: 44)
-                        .background(AtlasColors.mapPin, in: Circle())
-                    Spacer()
-                    Image(systemName: "goforward.10")
-                    Spacer()
-                    Image(systemName: "forward.end.fill")
-                        .foregroundStyle(AtlasColors.tertiaryText)
-                }
-                .font(.system(size: 16))
-                .foregroundStyle(AtlasColors.primaryText)
+                Text(previewMeta(tour))
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(AtlasColors.tertiaryText)
             }
-            .padding(AtlasSpacing.md)
+            Spacer(minLength: 0)
         }
+        .padding(AtlasSpacing.md)
         .background(AtlasColors.background)
         .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
-        .allowsHitTesting(false)
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Preview of how this tour will look in the player")
     }
 
-    private var missingDraftNotice: some View {
-        Text("Go back to Location and place the pin first.")
-            .font(AtlasTypography.caption)
-            .foregroundStyle(AtlasColors.secondaryText)
-    }
-
-    private func summaryRow(_ key: String, _ value: String, isLast: Bool) -> some View {
-        HStack(alignment: .top, spacing: AtlasSpacing.md) {
-            Text(key)
-                .font(.system(size: 11, weight: .regular, design: .monospaced))
-                .foregroundStyle(AtlasColors.tertiaryText)
-            Spacer(minLength: 0)
-            Text(value)
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.primaryText)
-                .multilineTextAlignment(.trailing)
-                .lineLimit(3)
+    private func previewMeta(_ tour: Tour) -> String {
+        var parts: [String] = []
+        if let city = city, !city.isEmpty { parts.append(city) }
+        if tour.totalDurationSeconds > 0 {
+            parts.append(AtlasFormatters.duration(seconds: tour.totalDurationSeconds))
         }
-        .padding(.horizontal, AtlasSpacing.md)
-        .padding(.vertical, 12)
-        .overlay(alignment: .bottom) {
-            if !isLast {
-                Rectangle().fill(AtlasColors.divider).frame(height: 0.5)
-                    .padding(.leading, AtlasSpacing.md)
+        return parts.isEmpty ? "No audio yet" : parts.joined(separator: " · ")
+    }
+
+    /// One step, one line: is it done, what is in it, and a way back to it.
+    ///
+    /// The mark carries the state the footer can only say one of at a time:
+    /// **brass tick** finished · **red warning** required and missing, which is
+    /// why Submit is dim · **grey dash** optional and empty, which is fine.
+    /// Tags and Transcript can only ever be a tick or a dash — they gate
+    /// nothing, by owner decision, and a warning beside them would read as a
+    /// fault where there is none.
+    private func checklistRow(_ s: TourWizardStep, isLast: Bool) -> some View {
+        let blocking = TourWizardRules.blockingReason(for: s, state: wizardState) != nil
+        let value = checklistValue(s)
+        let empty = value == nil
+        return Button { jump(to: s) } label: {
+            HStack(spacing: AtlasSpacing.sm) {
+                Image(systemName: blocking ? "exclamationmark.circle.fill"
+                          : (empty ? "minus.circle" : "checkmark.circle.fill"))
+                    .font(.system(size: 13))
+                    // Red, not brass. A "this is missing" mark in the same
+                    // colour as the ticks beside it reads as another tick.
+                    .foregroundStyle(blocking ? AtlasColors.destructive
+                                     : (empty ? AtlasColors.tertiaryText : AtlasColors.mapPin))
+                Text(s.label)
+                    .font(.system(size: 11, weight: .regular, design: .monospaced))
+                    .foregroundStyle(AtlasColors.tertiaryText)
+                Spacer(minLength: AtlasSpacing.sm)
+                Text(value ?? "None")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(empty ? AtlasColors.tertiaryText : AtlasColors.primaryText)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 10))
+                    .foregroundStyle(AtlasColors.tertiaryText)
             }
+            .padding(.horizontal, AtlasSpacing.md)
+            .padding(.vertical, 9)
+            .contentShape(Rectangle())
+            .overlay(alignment: .bottom) {
+                if !isLast {
+                    Rectangle().fill(AtlasColors.divider).frame(height: 0.5)
+                        .padding(.leading, AtlasSpacing.md)
+                }
+            }
+        }
+        .buttonStyle(.plain)
+        .disabled(!canJump(to: s))
+    }
+
+    /// One line's worth of what is in a step, or nil when it is empty.
+    private func checklistValue(_ s: TourWizardStep) -> String? {
+        switch s {
+        case .location:
+            guard centerCoordinate != nil else { return nil }
+            // `whereSummary` says "Not named" rather than "" when nothing
+            // resolved, so test for that rather than for empty.
+            let place = whereSummary
+            return place == "Not named" ? "\(Int(radius)) m radius"
+                                        : "\(place) · \(Int(radius)) m"
+        case .details:
+            let t = title.trimmingCharacters(in: .whitespacesAndNewlines)
+            return t.isEmpty ? nil : t
+        case .tags:
+            return selectedTags.isEmpty ? nil : "\(selectedTags.count) chosen"
+        case .photos:
+            guard let tour = draft?.tour else { return nil }
+            let n = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
+                .filter { !$0.isEmpty }.count
+            return n == 0 ? nil : "\(n) photo\(n == 1 ? "" : "s")"
+        case .audio:
+            // ⚠️ An upload in flight or a failed one has to be visible HERE,
+            // not only on the Audio step: this is the screen a maker submits
+            // from, and Submit is dimmed while narration is still going up.
+            // Saying only the duration would leave a dim button unexplained.
+            switch audioUpload {
+            case .uploading(let fraction): return "Uploading — \(Int(fraction * 100))%"
+            case .failed:                  return "Upload failed"
+            case .idle:
+                guard let tour = draft?.tour, tour.totalDurationSeconds > 0 else { return nil }
+                return AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
+            }
+        case .transcript:
+            let words = transcript.split(whereSeparator: \.isWhitespace).count
+            return words == 0 ? nil : "\(words) word\(words == 1 ? "" : "s")"
+        case .review:
+            return nil
         }
     }
 
@@ -1577,8 +1585,6 @@ struct CreateTourWizardView: View {
         return draft?.status == .inReview ? "clock" : "paperplane.fill"
     }
 
-
-
     private var reviewFootnote: String {
         switch draft?.status {
         case .inReview:
@@ -1592,16 +1598,6 @@ struct CreateTourWizardView: View {
 
     /// The Audio row on Review, which carries the upload through rather than
     /// leaving the maker to guess whether it finished.
-    private func audioSummary(_ tour: Tour) -> String {
-        switch audioUpload {
-        case .uploading(let fraction): return "Uploading — \(Int(fraction * 100))%"
-        case .failed:                  return "Upload failed"
-        case .idle:
-            return tour.totalDurationSeconds > 0
-                ? AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
-                : "None"
-        }
-    }
 
     /// Everything currently entered, as one comparable string. Close reads it
     /// to know whether there is unsaved work worth asking about.
