@@ -287,3 +287,39 @@ final class ReviewGateTests: XCTestCase {
         XCTAssertNil(TourWizardRules.blockingReason(for: .review, state: state))
     }
 }
+
+/// A tour title is one line, whatever the keyboard offers.
+///
+/// Sizing the title box to its 60-character limit required making it a
+/// vertical `TextField`, and those treat Return as a newline rather than as
+/// "done" — so without this a title could carry a line break into the
+/// catalogue, the share card and the lock screen.
+final class WizardOneLineFieldTests: XCTestCase {
+
+    func test_newlineBecomesASpace() {
+        XCTAssertEqual(CreateTourWizardView.oneLine("The Old\nCustom House", limit: 60),
+                       "The Old Custom House")
+    }
+
+    func test_severalNewlinesAllGo() {
+        XCTAssertEqual(CreateTourWizardView.oneLine("a\nb\nc", limit: 60), "a b c")
+    }
+
+    func test_limitStillApplies() {
+        XCTAssertEqual(CreateTourWizardView.oneLine(String(repeating: "x", count: 80), limit: 60).count, 60)
+    }
+
+    /// A newline expands to a space *before* the limit is applied, so the cut
+    /// lands where the maker sees it land.
+    func test_limitIsAppliedAfterFlattening() {
+        let raw = String(repeating: "x", count: 59) + "\n" + "yyy"
+        XCTAssertEqual(CreateTourWizardView.oneLine(raw, limit: 60),
+                       String(repeating: "x", count: 59) + " ")
+    }
+
+    /// Trailing spaces survive — trimming as you type would eat the space you
+    /// just pressed.
+    func test_trailingSpaceIsKept() {
+        XCTAssertEqual(CreateTourWizardView.oneLine("Old ", limit: 60), "Old ")
+    }
+}

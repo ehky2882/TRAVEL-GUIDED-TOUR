@@ -224,6 +224,17 @@ struct CreateTourWizardView: View {
     /// (`AtlasColors.background`) on a `#1C1C1E` page — an 11% difference,
     /// which at one line tall reads as no box at all. That is what the owner
     /// saw. A large black area against that ground reads immediately.
+    /// A field's text with any line breaks taken out and its limit applied.
+    ///
+    /// Newlines become spaces rather than vanishing, so "The Old\nCustom
+    /// House" reads as it was meant to instead of running together. Trimmed
+    /// only at the limit — not at the ends — because trimming as you type
+    /// would eat the space you just pressed.
+    static func oneLine(_ raw: String, limit: Int) -> String {
+        let flattened = raw.replacingOccurrences(of: "\n", with: " ")
+        return flattened.count > limit ? String(flattened.prefix(limit)) : flattened
+    }
+
     private static func fieldLines(for limit: Int) -> Int {
         max(1, Int((Double(limit) / Double(charsPerFieldLine)).rounded(.up)))
     }
@@ -479,6 +490,36 @@ struct CreateTourWizardView: View {
                     // times its minimum, and nothing scrolls.
                     .frame(minHeight: max(0, geo.size.height - keyboardOverlap),
                            alignment: .top)
+                    // 🔴 TAP ANYWHERE THAT ISN'T A CONTROL TO PUT THE KEYBOARD
+                    // AWAY. Owner, 2026-08-20: *"when in the input fields and
+                    // the keyboard is up, it's rather difficult to click out of
+                    // the keyboard."*
+                    //
+                    // It was difficult because the only way out was
+                    // `scrollDismissesKeyboard`, which needs something to
+                    // scroll — and the whole point of this rebuild is that a
+                    // step fits, so on most steps there is nothing to scroll
+                    // and the gesture did nothing at all. Sizing the fields to
+                    // their character limits made it worse again by leaving
+                    // almost no bare screen to tap.
+                    //
+                    // ⚠️ A `.toolbar` "Done" above the keyboard is the usual
+                    // iOS answer and is NOT AVAILABLE HERE — see `body`. The
+                    // toolbar bridge is what hung this screen
+                    // (`UIKitToolbarStrategy.updateLocations()` inside
+                    // `_sheetLayoutInfoLayout:`), which is why the wizard has
+                    // no NavigationStack and no toolbar of any kind. Do not
+                    // reintroduce one for this.
+                    //
+                    // Attached AFTER the frame so the shape covers the whole
+                    // screenful, including the empty space below the content —
+                    // and as a plain `onTapGesture` rather than a simultaneous
+                    // one, so the fields, buttons, slider and map still take
+                    // their own taps first. A simultaneous gesture would fire
+                    // on the tap that focuses a field and dismiss the keyboard
+                    // it had just raised.
+                    .contentShape(Rectangle())
+                    .onTapGesture { focused = nil }
                 }
                 .scrollDismissesKeyboard(.interactively)
             }
@@ -1011,8 +1052,16 @@ struct CreateTourWizardView: View {
                 TextField("e.g. The Old Custom House", text: $title, axis: .vertical)
                     .lineLimit(Self.fieldLines(for: Self.titleLimit), reservesSpace: true)
                     .focused($focused, equals: .title)
+                    // 🔴 NO LINE BREAKS IN A TITLE. Sizing this box to its
+                    // 60-character limit meant making it `axis: .vertical`,
+                    // and a vertical TextField treats Return as a newline
+                    // rather than as "done" — so a title could carry one, and
+                    // then carry it into the catalogue, the share card and the
+                    // lock screen. Same for the one-liner below, which is
+                    // called a one-liner for a reason. Stripped on the way in,
+                    // beside the limit that is already enforced here.
                     .onChange(of: title) { _, new in
-                        if new.count > Self.titleLimit { title = String(new.prefix(Self.titleLimit)) }
+                        title = Self.oneLine(new, limit: Self.titleLimit)
                     }
                     .wizardFieldStyle()
             }
@@ -1023,7 +1072,7 @@ struct CreateTourWizardView: View {
                     .lineLimit(Self.fieldLines(for: Self.shortLimit), reservesSpace: true)
                     .focused($focused, equals: .short)
                     .onChange(of: shortDescription) { _, new in
-                        if new.count > Self.shortLimit { shortDescription = String(new.prefix(Self.shortLimit)) }
+                        shortDescription = Self.oneLine(new, limit: Self.shortLimit)
                     }
                     .wizardFieldStyle()
             }
