@@ -503,25 +503,20 @@ struct CreateTourWizardView: View {
             .font(AtlasTypography.caption)
             .lineLimit(2, reservesSpace: true)
             .frame(maxWidth: .infinity, alignment: .leading)
-            // Back · Save · Next — three equal columns (owner, 2026-08-20).
-            //
-            // Equal widths, not natural ones: a symmetric row is the point,
-            // and it also means the labels have a fixed budget rather than
-            // one that changes with the wording. That budget is what keeps
-            // the primary short — "Submit", not "Submit changes for review",
-            // which would not fit three-across on any phone. The Review
-            // step's footnote carries the nuance the button no longer can.
+            // Back · Save · Next — three equal columns, three glyphs
+            // (owner, 2026-08-20). Nothing in this row is ever drawn as
+            // words; the strings passed in are what VoiceOver reads.
             HStack(spacing: AtlasSpacing.sm) {
-                footerButton("Back", icon: "chevron.left", style: .glyph,
+                footerButton("Back", icon: "chevron.left",
                              enabled: step.previous != nil && !isBusy,
                              action: goBack)
 
-                footerButton("Save draft", icon: "tray.and.arrow.down", style: .words,
+                footerButton("Save draft", icon: "tray.and.arrow.down",
                              enabled: canPersist && !isBusy,
                              busy: isSavingInPlace,
                              action: saveProgress)
 
-                footerButton(primaryLabel, icon: primaryIcon, style: primaryStyle,
+                footerButton(primaryLabel, icon: primaryIcon,
                              filled: true,
                              enabled: canAdvance && !isBusy,
                              busy: isSubmitting || (isPersisting && !isSavingInPlace),
@@ -544,61 +539,45 @@ struct CreateTourWizardView: View {
         }
     }
 
-    /// How a footer button says what it does.
-    private enum FooterLabelStyle {
-        /// Always the glyph. Back and Next are directions, and an arrow says a
-        /// direction better than a word does (owner, 2026-08-20).
-        case glyph
-        /// The words while they fit, the glyph when they don't. For a button
-        /// whose meaning isn't a direction and can't be drawn as one.
-        case words
-    }
-
     /// One of the footer's three columns.
     ///
-    /// 🔴 THE THREE ARE ALWAYS EXACTLY THE SAME WIDTH. `maxWidth: .infinity`
-    /// splits the row into thirds and the capsule is painted across the whole
-    /// of its third, so no label can push its own button wider than its
-    /// neighbours — a row of buttons at three different widths is the thing
-    /// that looks wrong (owner, 2026-08-20).
+    /// 🔴 EVERY BUTTON IN THIS ROW IS A GLYPH, ALWAYS (owner, 2026-08-20).
+    /// Not words-until-they-don't-fit: three icons, every step, so the row
+    /// never changes character between one step and the next.
     ///
-    /// For `.words`, that guarantee needs somewhere for a label to go when a
-    /// third of the row isn't enough, and the answer is the glyph.
-    /// `ViewThatFits` takes the words when the words fit and the icon when they
-    /// don't, measured against the space actually available rather than a
-    /// character count I guessed at. Nothing wraps, truncates or grows.
+    /// That is why there is no `ViewThatFits` here any more, and no measuring.
+    /// An earlier version chose words when words fitted — which, measured,
+    /// they always did on every current iPhone, so the row read as one word
+    /// flanked by two arrows and the fallback glyph was unreachable. A rule
+    /// with no exceptions needs no machinery to decide.
     ///
-    /// ⚠️ The order of the modifiers is the whole trick, and it is easy to get
-    /// backwards. `ViewThatFits` must wrap the LABEL ONLY, with the fill
-    /// applied outside it — put `maxWidth: .infinity` inside and the words
-    /// always "fit", so they truncate and the glyph never appears; put the
-    /// capsule inside and it is sized to the words, which is the
-    /// three-different-widths problem again. Label measured, capsule filled,
-    /// in that order.
+    /// The three are also always the same width: `maxWidth: .infinity` splits
+    /// the row in thirds and the capsule is painted across the whole of its
+    /// third, so no button can be bigger than its neighbours.
     ///
-    /// The words stay on the button as its accessibility label in both styles,
-    /// so a glyph-only button is never unlabelled.
+    /// ⚠️ `text` is still required, and is the accessibility label. A row of
+    /// three unlabelled glyphs is unusable with VoiceOver, so the words have
+    /// to survive even though nothing draws them.
     private func footerButton(_ text: String,
                               icon: String,
-                              style: FooterLabelStyle,
                               filled: Bool = false,
                               enabled: Bool,
                               busy: Bool = false,
                               action: @escaping () -> Void) -> some View {
         Button(action: action) {
             Group {
-                switch style {
-                case .glyph:
-                    footerLabel(text: nil, icon: icon, filled: filled, busy: busy)
-                case .words:
-                    ViewThatFits(in: .horizontal) {
-                        footerLabel(text: text, icon: nil, filled: filled, busy: busy)
-                        footerLabel(text: nil, icon: icon, filled: filled, busy: busy)
-                    }
+                if busy {
+                    // The spinner replaces the glyph rather than joining it —
+                    // two marks in one capsule reads as a mistake.
+                    ProgressView()
+                        .controlSize(.small)
+                        .tint(filled ? AtlasColors.background : AtlasColors.primaryText)
+                } else {
+                    Image(systemName: icon)
+                        .font(.system(size: 17, weight: .regular))
                 }
             }
-            .padding(.horizontal, AtlasSpacing.sm)
-            .padding(.vertical, 12)
+            .padding(.vertical, 13)
             .frame(maxWidth: .infinity)
             .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
             .background(filled ? AtlasColors.mapPin : AtlasColors.background)
@@ -615,35 +594,6 @@ struct CreateTourWizardView: View {
         // going back is a thing this row does, before there is anywhere to go.
         .opacity(enabled ? 1 : 0.4)
         .accessibilityLabel(text)
-    }
-
-    /// What sits inside a footer button: the words, or the glyph, or — while a
-    /// write is in flight — the spinner in place of whichever it would be.
-    /// Never a spinner *beside* a glyph: two marks in a 44pt capsule reads as
-    /// a mistake.
-    private func footerLabel(text: String?,
-                             icon: String?,
-                             filled: Bool,
-                             busy: Bool) -> some View {
-        HStack(spacing: 6) {
-            if busy {
-                ProgressView()
-                    .controlSize(.small)
-                    .tint(filled ? AtlasColors.background : AtlasColors.primaryText)
-            }
-            if let text {
-                Text(text)
-                    .font(AtlasTypography.caption)
-                    .lineLimit(1)
-                    // Refuses to shrink, so `ViewThatFits` gets an honest
-                    // answer about whether the words really fit rather than a
-                    // truncated one that always says yes.
-                    .fixedSize(horizontal: true, vertical: false)
-            } else if let icon, !busy {
-                Image(systemName: icon)
-                    .font(.system(size: 15, weight: .regular))
-            }
-        }
     }
 
     /// A natural-width capsule. The confirmation screen's Done is the only one
@@ -1299,35 +1249,37 @@ struct CreateTourWizardView: View {
         }
     }
 
-    /// Deliberately short. The button is one of three equal columns now, so a
-    /// label has about a third of the row — "Submit changes for review" does
-    /// not fit on any phone. What that longer wording carried is in
-    /// `reviewFootnote`, directly above the button, where there is room to say
-    /// it properly: that editing something already live is allowed, and that
-    /// it re-enters moderation rather than changing under a listener mid-tour.
+    /// What VoiceOver says for the primary button. **Never drawn** — the row
+    /// is glyphs — so it is free to be as long as it needs to be, and it says
+    /// the whole thing rather than the shortest thing that fits a capsule.
+    ///
+    /// Editing something already live is allowed — a maker shouldn't need an
+    /// admin to fix a typo — but it re-enters moderation rather than changing
+    /// under a listener mid-tour, and the label says so.
     private var primaryLabel: String {
         guard step == .review else { return "Next" }
-        return draft?.status == .inReview ? "In review" : "Submit"
+        switch draft?.status {
+        case .inReview:  return "In review"
+        case .published: return "Submit changes for review"
+        default:         return "Submit for review"
+        }
     }
 
     /// The primary's glyph. A chevron on the way through the wizard, matching
     /// Back; something else on Review, where the button stops meaning "next"
     /// and starts meaning "hand this over".
+    ///
+    /// ⚠️ Review's glyph is doing more work than the others, because it is the
+    /// only irreversible-feeling tap in the flow — it puts the tour in front
+    /// of a moderator. A paper plane is the clearest "sent" the symbol set
+    /// has, and `reviewFootnote` sits directly above the row saying in words
+    /// what the row no longer can.
     private var primaryIcon: String {
         guard step == .review else { return "chevron.right" }
         return draft?.status == .inReview ? "clock" : "paperplane.fill"
     }
 
-    /// ⚠️ Review keeps its words; every other step is a bare chevron.
-    ///
-    /// A chevron is a fine way to say "next" and a poor way to say "submit for
-    /// review" — the last one is a commitment, it puts the tour in front of a
-    /// moderator, and it deserves to be read rather than recognised. "Submit"
-    /// and "In review" both fit a third of the row comfortably, so this costs
-    /// nothing; the glyph is still there as the fallback if they ever don't.
-    private var primaryStyle: FooterLabelStyle {
-        step == .review ? .words : .glyph
-    }
+
 
     private var reviewFootnote: String {
         switch draft?.status {
