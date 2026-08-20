@@ -1096,7 +1096,12 @@ struct CreateTourWizardView: View {
                                  // fetched back to be read.
                                  startTranscription(of: localURL)
                              })
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                // Centred, not top-aligned. With the transcript box gone this
+                // step holds one button most of the time, and 75pt of controls
+                // pinned to the top of 529pt of nothing reads as a screen that
+                // failed to load. Centring also keeps the record button in the
+                // same place whether or not audio is already attached.
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         } else {
             missingDraftNotice
         }
