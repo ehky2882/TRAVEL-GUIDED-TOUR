@@ -1491,7 +1491,13 @@ struct CreateTourWizardView: View {
             let count = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
                 .filter { !$0.isEmpty }.count
             guard count > 0 else { return nil }
-            return "\(count) of \(PhotoGridEditor.maxPhotos) · drag to reorder."
+            // ⚠️ "hold", not "drag" — and the word is the fix, not a wording
+            // preference. `.draggable` is a UIKit drag interaction: the tile
+            // lifts after about half a second of pressing, and until it lifts
+            // a drag is just a scroll. Owner, 2026-08-20: *"don't think the
+            // drag to reorder quite works. or at least it's difficult to make
+            // it work."* It worked; nothing said how to start it.
+            return "\(count) of \(PhotoGridEditor.maxPhotos) · hold a photo to move it."
         case .transcript:
             // Says what it is for, since a box that filled itself invites the
             // question. One line: about 44 characters.

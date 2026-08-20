@@ -77,6 +77,10 @@ struct PhotoGridEditor: View {
     @State private var errorMessage: String?
     /// Which tile a dragged photo would land on.
     @State private var dropTarget: String?
+    /// A drag hovering an empty box, which means "put it last". Separate from
+    /// `dropTarget` because the ring belongs on the slot the photo will occupy
+    /// — the next free one — not on whichever empty box the finger is over.
+    @State private var droppingAtEnd = false
     /// The grid's real width, measured once. Slot heights come from it rather
     /// than from constants, so a slot is 4:3 on an SE as well as a 16 Pro —
     /// the trap that cropped the hero photograph 8% on one device and 23% on
@@ -254,6 +258,15 @@ struct PhotoGridEditor: View {
             // Gesture, and Optional isn't one.
             .gesture(SimultaneousGesture(magnify, move), isEnabled: active)
             .onTapGesture { toggleActive(url) }
+            // The cover says so; any other tile, once tapped, offers to become
+            // it. Same corner, same shape — one is a label, one is a button.
+            //
+            // 🔴 THE ROUTE TO THE COVER THAT NEEDS NO DRAG AT ALL. Owner,
+            // 2026-08-20: *"don't think the drag to reorder quite works. or at
+            // least it's difficult to make it work."* Promoting a photo to
+            // cover is nearly all of what reordering is ever asked to do here,
+            // and it should not depend on the one gesture that is hard to
+            // start. Dragging still does everything else.
             .overlay(alignment: .bottomLeading) {
                 if index == 0 {
                     Text("COVER")
@@ -263,6 +276,18 @@ struct PhotoGridEditor: View {
                         .background(AtlasColors.mapPin)
                         .clipShape(RoundedRectangle(cornerRadius: 3))
                         .padding(AtlasSpacing.xs)
+                } else if active {
+                    Button { makeCover(url) } label: {
+                        Text("MAKE COVER")
+                            .font(.system(size: 9, weight: .semibold))
+                            .foregroundStyle(AtlasColors.background)
+                            .padding(.horizontal, 7).padding(.vertical, 5)
+                            .background(AtlasColors.mapPin)
+                            .clipShape(RoundedRectangle(cornerRadius: 3))
+                    }
+                    .buttonStyle(.plain)
+                    .padding(AtlasSpacing.xs)
+                    .accessibilityLabel("Make photo \(index + 1) the cover")
                 }
             }
             .overlay(alignment: .topTrailing) {
@@ -285,7 +310,16 @@ struct PhotoGridEditor: View {
                 }
             }
             // Reordering is the idle gesture. While this photo is being
-            // adjusted its drag means pan, so the drag source goes away.
+            // adjusted its drag means pan, so the payload becomes one that can
+            // never match a slot and the lift goes nowhere.
+            //
+            // ⚠️ **A LIFT NEEDS A PRESS AND HOLD, and that is not a fault to
+            // fix — it is what keeps a reorder apart from a scroll.** `.draggable`
+            // is `UIDragInteraction`: about half a second before the tile comes
+            // up. A drag that started on contact would be indistinguishable
+            // from the page's own scroll, and one of the two would have to lose.
+            // So the footer hint says *hold*, rather than the *drag* it used to
+            // say, and the button above is the route that needs no hold at all.
             .draggable(active ? "" : url) {
                 HeroImageView(imageName: url, height: 60, cornerRadius: 2,
                               category: tour.primaryCategory)
@@ -335,11 +369,54 @@ struct PhotoGridEditor: View {
                     }
                 }
         }
+        .overlay {
+            if droppingAtEnd, isNextUp {
+                RoundedRectangle(cornerRadius: AtlasSpacing.sm)
+                    .stroke(AtlasColors.mapPin, lineWidth: 2)
+                    .allowsHitTesting(false)
+            }
+        }
         .disabled(isBusy || remaining == 0)
         .accessibilityLabel(index == 0 ? "Add a cover photo" : "Add a photo")
+        // An empty box takes a drop as well as a tap, so the target is the whole
+        // grid rather than only the tiles that already hold something — which
+        // is half of why the gesture was hard to land. Dropping past the end
+        // means "put it last", the one destination the filled tiles can't
+        // express: a filled tile can only say *before this one*.
+        .dropDestination(for: String.self) { items, _ in
+            guard let source = items.first,
+                  let from = urls.firstIndex(of: source),
+                  from != urls.count - 1
+            else { return false }
+            withAnimation(.snappy) {
+                let moved = urls.remove(at: from)
+                urls.append(moved)
+            }
+            persist()
+            return true
+        } isTargeted: { droppingAtEnd = $0 }
     }
 
     // MARK: - Actions
+
+    /// Move a photo to the front.
+    ///
+    /// ⚠️ **Reorder first, commit second, and only one of them writes.**
+    /// `commitActive` reads the photo's index at the moment it is called and
+    /// hands the whole ordered list to `setPhotos` when it uploads — so
+    /// committing before the move would capture the old index and write the old
+    /// order, and persisting after an upload has started would race it with a
+    /// list still naming the file that upload is about to replace. `setPhotos`
+    /// deletes anything absent from the list it is given, so that race doesn't
+    /// misorder photos, it deletes one.
+    private func makeCover(_ url: String) {
+        guard let from = urls.firstIndex(of: url), from != 0 else { return }
+        withAnimation(.snappy) {
+            let moved = urls.remove(at: from)
+            urls.insert(moved, at: 0)
+        }
+        if !commitActive() { persist() }
+    }
 
     private func remove(_ url: String) {
         withAnimation(.snappy) { urls.removeAll { $0 == url } }
@@ -442,8 +519,12 @@ struct PhotoGridEditor: View {
     }
 
     /// Render whatever is on screen and put it back, if it changed.
-    private func commitActive() {
-        guard let url = activeURL else { return }
+    ///
+    /// - Returns: `true` when an upload was started, which means this call will
+    ///   write the ordered list itself and the caller must not also persist.
+    @discardableResult
+    private func commitActive() -> Bool {
+        guard let url = activeURL else { return false }
         activeURL = nil
         // An untouched photo is already exactly what is stored. Re-rendering it
         // would cost an upload and a JPEG generation to produce the same
@@ -452,7 +533,7 @@ struct PhotoGridEditor: View {
               let image = originals[url],
               let index = urls.firstIndex(of: url),
               let data = PhotoCrop.render(image, scale: scale, offset: offset)
-        else { return }
+        else { return false }
 
         let wasPristine = pristine.contains(url)
         isBusy = true
@@ -476,6 +557,7 @@ struct PhotoGridEditor: View {
                 errorMessage = AuthoringErrorText.message(for: error)
             }
         }
+        return true
     }
 
     /// Write the order through. Anything dropped is deleted from Storage by
