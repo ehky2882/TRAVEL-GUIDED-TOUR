@@ -250,7 +250,9 @@ struct PhotoGridEditor: View {
             // 🔴 Gestures are attached ONLY while active. Idle, a drag belongs
             // to reordering; active, it belongs to the photograph. One finger,
             // two meanings, and the tap is what chooses between them.
-            .gesture(active ? SimultaneousGesture(magnify, move) : nil)
+            // `isEnabled:` rather than a ternary to nil: `.gesture` takes a
+            // Gesture, and Optional isn't one.
+            .gesture(SimultaneousGesture(magnify, move), isEnabled: active)
             .onTapGesture { toggleActive(url) }
             .overlay(alignment: .bottomLeading) {
                 if index == 0 {
