@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-20 01:32 UTC
+**Last verified:** 2026-08-20 01:50 UTC
 
 ---
 
@@ -54,8 +54,9 @@ path against the broken one before trusting any stack.**
 
 ## 1b. ✅ RESOLVED — the catalog regression, fixed and verified
 
-**Owner ran `backend/restore_catalog_keys.sql` 2026-08-20. Verified against the live RPC, not the
-success message:**
+**Owner ran `backend/restore_catalog_keys.sql` 2026-08-20, and has since confirmed on device that
+the place pages and capsule pins are back.** Verified against the live RPC as well, not just the
+success message:
 
 | | Before | After |
 |---|---|---|
@@ -74,8 +75,25 @@ correctly, by its own design — but `schema.sql` had never carried `places`, `p
 `isPrivate`, all added by later migrations. Nothing errored; all three are optional in Swift, so
 the features silently stopped existing. **Not a code fault, and not build 91's.**
 
-**Hardened:** `schema.sql` now carries both missing keys plus a 🔴 warning that the function is
-wrapped in production and every later key must be added there too.
+**Hardened, two ways.** `schema.sql` now carries both missing keys plus a 🔴 warning that the
+function is wrapped in production and every later key must be added there too. And there is now a
+check that runs whether or not anyone is paying attention:
+
+**`scripts/check-catalog-contract.py`** — queries the live RPC and diffs its key set against the
+Swift models. The expected keys are **parsed out of `Models/Tour.swift`, `Maker.swift` and
+`Place.swift`**, never hardcoded, so adding a field starts requiring it on the next run with no
+edit to the script. A hardcoded list would drift and quietly stop testing anything, which is the
+exact class of bug it exists to catch.
+
+**It works: its first run found a fourth missing key nobody knew about** — `tours[].createdAt`.
+That one is **pre-existing, not a regression** (the RPC has never served it). `Place.ranked` sorts
+NEWEST FIRST on it, so that rule has no dates to sort on and falls through to its tiebreaks.
+⚠️ **Do not "fix" it by emitting `tours.created_at`** — that column is `default now()` and the seed
+never carries the authored date, so it holds *seed* time; most of the catalog shares 2026-06-27,
+the original bulk seed. It would look fixed and rank wrongly. The real fix is to make
+`seed_from_toursjson.py` carry the authored `createdAt` first. Recorded in the script as a **known
+gap**: printed as a warning every run, but not a failure — a check that always fails gets ignored,
+and then it catches nothing.
 
 ## 2. Blocked on owner — outside the repo
 
@@ -91,9 +109,11 @@ Nothing here can be done from a session. Ordered by what blocks the most.
 
 ### SQL pastes owed (Supabase SQL Editor, project **Dozent**)
 
+✅ **Applied:** `add_country.sql` (Countries row live) · `restore_catalog_keys.sql` (places, priceTier,
+isPrivate restored 2026-08-20).
+
 | File | Unlocks | Without it |
 |---|---|---|
-| `backend/add_country.sql` | The Countries row in Settings | ⬆️ **More urgent now — #544 is merged**, so the row is in shipped code and stays hidden until this runs |
 | `backend/saved_places.sql` | Saved places syncing across devices | Saving works, stays on one device |
 | `backend/places_photos.sql` | Places serving their own photographs | Optional — the app is correct without it |
 
