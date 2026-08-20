@@ -14,30 +14,49 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-20 03:13 UTC
+**Last verified:** 2026-08-20 03:43 UTC
 
 ---
 
 ## 1. Awaiting owner — device review
 
+🔴 **READ FIRST — A BRANCH BUILD CARRIES ITS BRANCH'S BASE, NOT `main`.** Build **92** was cut from
+`library-launch-jitter`, which split off `main` on **18 Aug**, so it shipped *without* the upload
+wizard, the bottom-bar island-form fix, Universal Links and the Settings pass. **The owner read the
+missing wizard and the reappearing place-page bar as regressions — which is exactly what they look
+like.** They were not: 92 simply predated them.
+
+**This board told the owner to install 92 without saying that.** The same point had been made
+correctly about build 87 eleven hours earlier ("87 is the wizard branch, cut from a base predating
+those merges") and was not carried forward. **From now on, every branch build's row states what its
+base predates**, and a branch that has not merged `main` recently should merge it before its build.
+
 | PR | What it is | Build | Also needs |
 |---|---|---|---|
-| [#549](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/549) | **Library launch jitter + loading perf.** Lists were memory-only, so every launch made three network round-trips *awaited in sequence* and the tab re-laid-out twice in front of you. Now a per-account disk snapshot hydrated at init, with the three loads concurrent. Also replaces linear scans over 1,418 tours with dictionaries — those `by id` lookups run from ~20 sites per body evaluation. | ✅ **92** (6m22s) | A signed-in device: cold launch → Library → Lists should show its final shape immediately |
+| [#549](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/549) | **Library launch jitter + lookup perf.** Lists were memory-only, so every launch made three sequential round-trips and the tab re-laid-out twice. Now a per-account disk snapshot hydrated at init, loads concurrent. Also replaces linear scans over 1,418 tours with dictionaries. | ✅ **93** | A signed-in device: cold launch → Library → Lists in final shape immediately |
+| [#552](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/552) | **The wizard stops scrolling.** Owner's rule: no step may scroll — if it doesn't fit it becomes another step. Four of five overflowed; step 1 was 596pt into 411pt. Mini-player and tab bar withdraw while the wizard is up (126pt back), step 1 asks where **once** instead of three times, and the map takes the slack. | ⏳ none yet | Owner OK + a look. Steps 2–5 still overflow — next pass |
 
-**Build 92 is the one to install.** Cut from `17fb3fc`, the code commit; the branch has since moved
-to `73d1238`, which is **docs only** — so 92 is stale by SHA and not by substance. The
-`Build and upload to TestFlight` step passed, so the notes attached.
+✅ **Build 93 is the one to install for #549, and it is a proper build.** Cut from `c2e8594`, which
+**merges `main` into the branch** — so it carries the wizard, Settings, list page and Universal
+Links *plus* the library fix. Two commits have landed since and neither touches the binary: one
+untracks `.xcodebuildmcp/config.yaml`, one is docs.
 
-⚠️ **The jitter cannot be reproduced in the simulator** — it holds no session, so there are no lists
-to pop in. This one genuinely needs your phone.
+🐛 **That untracked file is worth knowing about.** `.xcodebuildmcp/config.yaml` was committed and
+named **the other clone** plus `iPhone 16 Pro`, which is no longer installed — so every local
+session had to reset both before its first build, and **one that forgot compiled untouched code and
+believed it had tested the change.** Untracked now rather than corrected: no defaults fails loudly
+on the first build, a wrong path fails silently. Found independently by two sessions today.
 
-🔴 **The risk it introduces is staleness.** An index not rebuilt when the catalog changes returns nil
-for a row plainly on screen, which reads as missing content rather than a bug. Every mutation goes
-through one door (`applyCatalog` / `applyMakers` / `setPlaces`) and new tests pin it — but that is
-the thing to watch for. `test_sim` 346/346.
+⚠️ **#549's jitter cannot be reproduced in the simulator** — it holds no session, so there are no
+lists to pop in. Genuinely needs the phone. 🔴 Its risk is **staleness**: a dictionary index not
+rebuilt when the catalog changes returns nil for a row plainly on screen, reading as missing
+content rather than a bug. All mutations go through `applyCatalog` / `applyMakers` / `setPlaces`
+and tests pin it.
 
-✅ **#548 merged** (docs — the Settings pass and the `.tint` that repainted the wordmark white for
-months). Docs-only, auto-merge class, all four checks green.
+⚠️ **#552 opened deliberately unbuilt** — to get `ci.yml` to compile eight commits that had never
+been built. Its riskiest check is **opening a saved tour**: the map is now sized from a
+`GeometryReader`, which adds a layout dependency to the exact view that hung for seven builds. The
+PR says plainly that its confidence there is reasoning rather than evidence.
 
 ## 1b. ✅ RESOLVED — the catalog regression, fixed and verified
 
@@ -114,7 +133,8 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 92 | `library-launch-jitter` | #549 Library jitter + lookup perf (`17fb3fc`) | ✅ **install this** |
+| 93 | `library-launch-jitter` | #549 **after merging main** (`c2e8594`) | ✅ **install this** |
+| 92 | `library-launch-jitter` | #549 on an 18 Aug base — **no wizard, no Settings pass** | ⚠️ looked like regressions; it was just old |
 | 91 | `main` (`fd741db`) | **Everything from today, together** — wizard, Settings, list page, 5:4 heroes | ✅ owner-verified |
 | 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ✅ owner-verified — hang closed |
 | 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | 🔴 hung — superseded |
