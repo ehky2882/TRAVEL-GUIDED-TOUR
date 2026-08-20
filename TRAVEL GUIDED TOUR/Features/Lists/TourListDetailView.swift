@@ -832,6 +832,7 @@ struct TourListDetailView: View {
     }
 
     private func remove(_ tourId: UUID) {
+        guard let listId else { return }
         Task {
             try? await listService.removeTour(tourId, from: listId)
             items = await listService.items(of: listId)
@@ -841,15 +842,17 @@ struct TourListDetailView: View {
     /// Move a tour one slot up/down. Reorders `items` optimistically (the list
     /// follows array order) then persists the new positions.
     private func move(_ tourId: UUID, up: Bool) {
-        guard let idx = items.firstIndex(where: { $0.tourId == tourId }) else { return }
-        let target = up ? idx - 1 : idx + 1
-        guard items.indices.contains(target) else { return }
-        items.swapAt(idx, target)
+        guard let listId,
+              let idx = items.firstIndex(where: { $0.tourId == tourId }) else { return }
+        let destination = up ? idx - 1 : idx + 1
+        guard items.indices.contains(destination) else { return }
+        items.swapAt(idx, destination)
         let ordered = items.map(\.tourId)
         Task { try? await listService.reorder(ordered, in: listId) }
     }
 
     private func saveNote(_ note: String, for tourId: UUID) {
+        guard let listId else { return }
         Task {
             try? await listService.setNote(note, for: tourId, in: listId)
             items = await listService.items(of: listId)
@@ -875,7 +878,7 @@ struct TourListDetailView: View {
     private func toggleSaved() {
         // `canSave` is checked here as well as on the two controls: both are
         // drawn signed out now, so the guard is what makes "disabled" mean it.
-        guard let journey, canSave, !isSaving else { return }
+        guard let journey, let listId, canSave, !isSaving else { return }
         isSaving = true
         Task {
             if isSavedList {
@@ -888,9 +891,13 @@ struct TourListDetailView: View {
     }
 
     private func deleteList() {
+        guard let listId else { return }
         Task {
             try? await listService.deleteList(listId)
-            dismiss()
+            // `close()`, not `dismiss()`: this screen is a slide-up layer, and
+            // SwiftUI has nothing to dismiss inside a UIKit modal — the layer
+            // would have stayed on screen over a list that no longer exists.
+            close()
         }
     }
 }
