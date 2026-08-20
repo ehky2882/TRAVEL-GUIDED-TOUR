@@ -19,6 +19,15 @@ struct TourAudioSection: View {
     /// can't submit a tour whose audio hasn't landed.
     var onUploadStateChange: ((AudioUploadState) -> Void)? = nil
 
+    /// The file the maker just recorded or picked, while it is still on this
+    /// device. The wizard transcribes from it.
+    ///
+    /// ⚠️ Reported when the audio is *in hand*, not when the upload finishes.
+    /// Transcription is local and has nothing to wait for, and a maker on a
+    /// slow connection would otherwise watch the transcript step stay empty
+    /// for as long as the upload takes.
+    var onAudioReady: ((URL) -> Void)? = nil
+
     @Environment(MakerTourService.self) private var makerTourService
 
     @State private var importingAudio = false
@@ -236,6 +245,7 @@ struct TourAudioSection: View {
     private func uploadAudio(from url: URL) {
         errorMessage = nil
         failedUpload = nil
+        onAudioReady?(url)
         isUploading = true
         uploadProgress = 0
         onUploadStateChange?(.uploading(0))

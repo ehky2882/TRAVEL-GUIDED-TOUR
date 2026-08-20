@@ -157,13 +157,27 @@ final class TourWizardRulesTests: XCTestCase {
 
     func test_stepsRunInOrderAndStopAtBothEnds() {
         XCTAssertEqual(TourWizardStep.allCases,
-                       [.location, .details, .tags, .photos, .audio, .review])
+                       [.location, .details, .tags, .photos, .audio, .transcript, .review])
         XCTAssertNil(TourWizardStep.location.previous)
         XCTAssertNil(TourWizardStep.review.next)
         XCTAssertEqual(TourWizardStep.location.next, .details)
         XCTAssertEqual(TourWizardStep.details.next, .tags)
         XCTAssertEqual(TourWizardStep.tags.next, .photos)
-        XCTAssertEqual(TourWizardStep.review.previous, .audio)
+        XCTAssertEqual(TourWizardStep.audio.next, .transcript)
+        XCTAssertEqual(TourWizardStep.review.previous, .transcript)
+    }
+
+    /// The transcript gates nothing, and for a stronger reason than tags: the
+    /// catalogue has always allowed a null transcript, the step arrives
+    /// pre-filled by the on-device transcriber, and a maker whose language it
+    /// doesn't cover must not be stopped at a box they'd have to type by hand.
+    func test_transcript_neverBlocks() {
+        var state = completeState()
+        XCTAssertTrue(TourWizardRules.canAdvance(from: .transcript, state: state))
+        XCTAssertNil(TourWizardRules.blockingReason(for: .transcript, state: state))
+        // Not even with no audio to transcribe — Audio is where that is caught.
+        state.audioDurationSeconds = 0
+        XCTAssertTrue(TourWizardRules.canAdvance(from: .transcript, state: state))
     }
 
     /// Tags gate nothing. The step exists because the picker is too tall to
@@ -195,5 +209,29 @@ final class TourWizardRulesTests: XCTestCase {
                                                               longitude: -8.61099)))
         XCTAssertFalse(c.isEssentially(CLLocationCoordinate2D(latitude: 41.14961,
                                                               longitude: -8.61098)))
+    }
+}
+
+/// The tidy-up the on-device transcriber runs over what it recognises.
+///
+/// Pure string work, so it is testable without a microphone, a language model
+/// or a device — which is the whole of what can be tested here. Whether
+/// `SpeechAnalyzer` hears the words is a device question.
+final class AudioTranscriberTextTests: XCTestCase {
+
+    func test_tidied_collapsesRunsOfSpaces() {
+        XCTAssertEqual(AudioTranscriber.tidied("the   old   bridge"), "the old bridge")
+    }
+
+    func test_tidied_trimsEnds() {
+        XCTAssertEqual(AudioTranscriber.tidied("  stand here.  "), "stand here.")
+    }
+
+    func test_tidied_keepsLineBreaksButNotThePaddingAroundThem() {
+        XCTAssertEqual(AudioTranscriber.tidied("one line \n  next line"), "one line\nnext line")
+    }
+
+    func test_tidied_emptyStaysEmpty() {
+        XCTAssertEqual(AudioTranscriber.tidied("   \n  "), "")
     }
 }

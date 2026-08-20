@@ -1,7 +1,7 @@
 import Foundation
 import CoreLocation
 
-/// The six steps of making a tour, and the rules for leaving each one.
+/// The seven steps of making a tour, and the rules for leaving each one.
 ///
 /// Tags were split out of Details on 2026-08-20. Details had four things in it
 /// and the fourth was the tag picker at 382pt closed — 691pt of content into a
@@ -18,7 +18,7 @@ import CoreLocation
 /// either way. So the rules are testable without standing up a view, a
 /// service, or a Supabase row.
 enum TourWizardStep: Int, CaseIterable {
-    case location, details, tags, photos, audio, review
+    case location, details, tags, photos, audio, transcript, review
 
     var label: String {
         switch self {
@@ -27,6 +27,7 @@ enum TourWizardStep: Int, CaseIterable {
         case .tags:     return "TAGS"
         case .photos:   return "PHOTOS"
         case .audio:    return "AUDIO"
+        case .transcript: return "TRANSCRIPT"
         case .review:   return "REVIEW"
         }
     }
@@ -105,6 +106,15 @@ enum TourWizardRules {
             return state.audioDurationSeconds > 0
                 ? nil
                 : "Record or import the narration."
+
+        case .transcript:
+            // Optional, like tags — and for a stronger reason than tags. The
+            // catalogue has always allowed a null `transcriptText`, the step
+            // arrives pre-filled by the on-device transcriber, and a maker
+            // whose language the transcriber doesn't cover must not be stopped
+            // at a box they'd have to type by hand. Gating here would make a
+            // convenience into an obstacle.
+            return nil
 
         case .review:
             if state.isAlreadyInReview {

@@ -97,8 +97,25 @@ struct CreateTourWizardView: View {
     @State private var selectedTags: Set<String> = []
     @State private var architect: String?
 
-    // Step 4 — audio
+    // Steps 5 and 6 — audio, then the transcript made from it
     @State private var transcript = ""
+    /// Writes the narration down on device. Lives here rather than in
+    /// `TourAudioSection` because the audio step starts it and the transcript
+    /// step reads it — it outlives both, and a recording that takes a minute to
+    /// transcribe must not be cancelled by walking to the next screen.
+    @State private var transcriber = AudioTranscriber()
+    /// Whether the maker has typed in the transcript box themselves.
+    ///
+    /// 🔴 The one thing standing between a maker and losing a sentence they
+    /// wrote. Transcription of a real tour outlasts the walk from step 5 to
+    /// step 6, so results routinely arrive *while* the box is on screen and
+    /// possibly being edited. Once this is true nothing automatic writes to
+    /// `transcript` again.
+    @State private var transcriptEdited = false
+    /// The recording as it sits on this device, kept so the maker can ask for
+    /// the transcript to be made again. Nil for a tour opened for editing —
+    /// its audio is on the server and was never here.
+    @State private var lastLocalAudioURL: URL?
 
     // Flow
     @State private var isPersisting = false
@@ -144,7 +161,7 @@ struct CreateTourWizardView: View {
     @State private var savedConfirmation = false
     @FocusState private var focused: Field?
 
-    private enum Field { case place, title, short, long }
+    private enum Field { case place, title, short, long, transcript }
     private enum Outcome { case submitted, savedDraft }
     private enum Confirmation: Identifiable {
         case leaving, deleting
@@ -465,6 +482,18 @@ struct CreateTourWizardView: View {
         .onChange(of: draftId) { _, _ in
             dismissGuarded = outcome == nil && wouldLoseWork
         }
+        // The recogniser writes as it goes, so this fires repeatedly while a
+        // recording is being transcribed. `applyTranscript` is what decides
+        // whether the words are welcome.
+        .onChange(of: transcriber.text) { _, words in
+            applyTranscript(words)
+        }
+        // Typing in the box, once, ends automatic writing for good. Compared
+        // against the transcriber's own text so that the writes it makes
+        // through `applyTranscript` don't count as the maker typing.
+        .onChange(of: transcript) { _, typed in
+            if typed != transcriber.text { transcriptEdited = true }
+        }
         // The keyboard rises *over* the footer rather than shoving it up the
         // screen — otherwise Save progress and Next end up floating in the
         // middle of the map. Same treatment the mini-player and the home
@@ -675,6 +704,7 @@ struct CreateTourWizardView: View {
         case .tags:     tagsStep
         case .photos:   photosStep
         case .audio:    audioStep
+        case .transcript: transcriptStep
         case .review:   reviewStep
         }
     }
@@ -1040,25 +1070,104 @@ struct CreateTourWizardView: View {
         }
     }
 
+    /// Recording, and nothing else (owner, 2026-08-20: *"i want everything to
+    /// happen on one page. drop the transcription window."*).
+    ///
+    /// The transcript box used to sit under the recorder, which put each in the
+    /// other's way: you cannot type while recording, and a live level meter is
+    /// poor company for a text field. It also made this the one step with no
+    /// elastic element — every height fixed — so reviewing a take came to 512pt
+    /// against an SE's 417 and ran off the bottom. With the box gone the
+    /// recorder simply takes the step.
     @ViewBuilder
     private var audioStep: some View {
         if let draft {
-            VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                TourAudioSection(tour: draft.tour,
-                                 onUploadStateChange: { audioUpload = $0 })
+            TourAudioSection(tour: draft.tour,
+                             onUploadStateChange: { audioUpload = $0 },
+                             onAudioReady: { localURL in
+                                 // Transcribe the file we still have on disk,
+                                 // not the copy that just went up: it is right
+                                 // here, and the uploaded one would have to be
+                                 // fetched back to be read.
+                                 startTranscription(of: localURL)
+                             })
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+        } else {
+            missingDraftNotice
+        }
+    }
 
-                VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+    /// The words, already written down — a step you correct rather than fill.
+    ///
+    /// ⚠️ **An arriving transcript never overwrites typing.** `applyTranscript`
+    /// is the only writer and it refuses when the box has been edited, because
+    /// a maker who starts typing while the recogniser is still working would
+    /// otherwise watch their sentence be replaced by a machine's. Late results
+    /// are the normal case, not the edge one: transcription of a three-minute
+    /// recording outlives the walk from step 5 to step 6.
+    @ViewBuilder
+    private var transcriptStep: some View {
+        if draft != nil {
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                HStack(spacing: AtlasSpacing.sm) {
                     fieldLabel("TRANSCRIPT — OPTIONAL")
-                    TextField("The words spoken in the audio", text: $transcript, axis: .vertical)
-                        .lineLimit(4...12)
-                        .wizardFieldStyle()
-                    Text("Used for accessibility and search. It is saved when you submit.")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.tertiaryText)
+                    if transcriber.isWorking {
+                        ProgressView().controlSize(.small)
+                    }
                 }
+
+                TextField("The words spoken in the audio", text: $transcript, axis: .vertical)
+                    .lineLimit(2...200)
+                    .wizardFieldStyle()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                    // A tall field is only tappable on its first line — the
+                    // text sizes to itself and the space under it belongs to
+                    // nothing. Same fix as the description on step 2.
+                    .contentShape(Rectangle())
+                    .onTapGesture { focused = .transcript }
+                    .focused($focused, equals: .transcript)
+
+                HStack(alignment: .top) {
+                    if let note = transcriptNote {
+                        Text(note)
+                            .font(AtlasTypography.caption)
+                            .foregroundStyle(transcriber.phase.isFailure
+                                             ? AtlasColors.secondaryText
+                                             : AtlasColors.tertiaryText)
+                            .lineLimit(2)
+                    }
+                    Spacer(minLength: AtlasSpacing.sm)
+                    // Only offered when it can actually be done — the recording
+                    // has to still be on this device — and never mid-run.
+                    if lastLocalAudioURL != nil, !transcriber.isWorking {
+                        Button("Transcribe again") { retranscribe() }
+                            .font(AtlasTypography.caption)
+                            .tint(AtlasColors.mapPin)
+                            .fixedSize()
+                    }
+                }
+                .frame(minHeight: 17)
             }
         } else {
             missingDraftNotice
+        }
+    }
+
+    /// What the step says about where the automatic transcript got to.
+    ///
+    /// A failure is written as an ordinary note in `secondaryText`, not in the
+    /// alarm colour: nothing has gone wrong for the maker — the box works, it
+    /// is simply empty, and the transcript was never required.
+    private var transcriptNote: String? {
+        switch transcriber.phase {
+        case .preparingModel:
+            return "Getting the language ready — first time only."
+        case .transcribing:
+            return "Writing down what you recorded…"
+        case .failed(let why):
+            return why
+        case .done, .idle:
+            return nil
         }
     }
 
@@ -1360,6 +1469,10 @@ struct CreateTourWizardView: View {
                 .filter { !$0.isEmpty }.count
             guard count > 0 else { return nil }
             return "\(count) of \(PhotoGridEditor.maxPhotos) · drag to reorder."
+        case .transcript:
+            // Says what it is for, since a box that filled itself invites the
+            // question. One line: about 44 characters.
+            return "Read it through — fix anything it misheard."
         case .audio, .review:
             return nil
         }
@@ -1568,6 +1681,46 @@ struct CreateTourWizardView: View {
     /// Write what's been entered so far — creating the draft on the first call
     /// and updating it thereafter. Every Next and every Save progress runs
     /// through here, so there is one write path rather than one per step.
+
+    // MARK: - Transcription
+
+    /// Start writing down a recording the maker just made or imported.
+    ///
+    /// Only ever called with a file that is still on this device. A tour opened
+    /// for editing months later has its audio on the server and no local copy,
+    /// so it keeps whatever transcript it was saved with — re-fetching a few
+    /// megabytes to redo work already done would be the wrong trade.
+    private func startTranscription(of localURL: URL) {
+        lastLocalAudioURL = localURL
+        // ⚠️ Words already in the box win, even against newer audio. Replacing
+        // the narration does make an existing transcript wrong — but it may be
+        // a transcript the maker wrote or corrected by hand, and no automatic
+        // process gets to throw that away. `retranscribe()` is how they ask.
+        guard !transcriptEdited else { return }
+        transcriber.transcribe(fileURL: localURL)
+    }
+
+    /// Make the transcript again from the recording, discarding what's in the
+    /// box. The one path that overwrites a maker's own words, and it exists
+    /// precisely so that the automatic path never has to.
+    private func retranscribe() {
+        guard let url = lastLocalAudioURL else { return }
+        transcript = ""
+        transcriptEdited = false
+        transcriber.transcribe(fileURL: url)
+    }
+
+    /// Put recognised words in the box, unless the maker has been typing.
+    ///
+    /// 🔴 The refusal is the point. Transcription outlives the walk from the
+    /// audio step to this one, so results arrive while the box is on screen —
+    /// and a maker who started typing would watch their sentence replaced.
+    /// Automatic text yields to a person, always, and never the other way.
+    private func applyTranscript(_ words: String) {
+        guard !transcriptEdited, !words.isEmpty else { return }
+        transcript = words
+    }
+
     private func persist() async throws {
         guard let coordinate = centerCoordinate else { return }
         let tags = finalTags

@@ -43,6 +43,8 @@
 	<string>Dozent uses the camera to scan a friend's code so you can join their group and listen to a tour together.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Dozent uses the microphone so you can record narration for the audio tours you create.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Dozent turns your recorded narration into a transcript on this device, so you can correct it instead of typing it out. The audio is not sent anywhere.</string>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>Dozent uses the local network to sync audio with people near you when you listen to a tour together.</string>
 	<key>NSBonjourServices</key>
