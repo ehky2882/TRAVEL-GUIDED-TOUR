@@ -1,0 +1,211 @@
+import XCTest
+@testable import TRAVEL_GUIDED_TOUR
+
+/// `DataService`'s `by id` lookups are backed by dictionaries rather than
+/// linear scans, because they are read per row on every body evaluation from
+/// the mini-player, the Home drawer and every list row in Library — over a
+/// 1,400-tour catalog a scan each made those screens visibly slow.
+///
+/// The risk indexing introduces is **staleness**: an index that isn't rebuilt
+/// when the catalog changes returns nil for a row plainly on screen, which
+/// would look like missing content rather than a bug. Most of what follows
+/// pins exactly that — that every path which mutates the catalog rebuilds the
+/// indexes with it.
+@MainActor
+final class DataServiceLookupTests: XCTestCase {
+
+    // MARK: - Helpers
+
+    private var emptyBundle: Bundle { Bundle(for: DataServiceLookupTests.self) }
+
+    private struct StubFetcher: CatalogFetching {
+        let payload: Data?
+        func fetchData(from url: URL) async throws -> Data {
+            guard let payload else { throw URLError(.notConnectedToInternet) }
+            return payload
+        }
+    }
+
+    private func makeTempDir() -> URL {
+        let dir = FileManager.default.temporaryDirectory
+            .appendingPathComponent(UUID().uuidString)
+        try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        return dir
+    }
+
+    /// Builds a `DataService` whose local catalog is `data` and whose network
+    /// refresh returns `remote` (or fails, when nil). `autoRefresh` is off so
+    /// loading stays deterministic — tests call `refresh()` themselves.
+    private func makeService(local: ToursData, remote: ToursData? = nil) throws -> DataService {
+        let dir = makeTempDir()
+        let version = "test-build"
+        try JSONEncoder().encode(local)
+            .write(to: dir.appendingPathComponent("Tours.cache.json"))
+        try version.write(to: dir.appendingPathComponent("Tours.cache.version"),
+                          atomically: true, encoding: .utf8)
+        let payload = try remote.map { try JSONEncoder().encode($0) }
+        let loader = RemoteCatalogLoader(fetcher: StubFetcher(payload: payload),
+                                         bundle: emptyBundle,
+                                         cacheDirectory: dir,
+                                         appVersion: version)
+        return DataService(loader: loader, autoRefresh: false)
+    }
+
+    private func place(named name: String, tourIds: [UUID]) -> Place {
+        Place(id: UUID(),
+              name: name,
+              description: nil,
+              latitude: 40.7484,
+              longitude: -73.9857,
+              city: "New York",
+              address: nil,
+              heroImageURL: nil,
+              additionalImageURLs: nil,
+              tourIds: tourIds)
+    }
+
+    // MARK: - Lookups resolve
+
+    func test_lookups_resolveEveryEntityInTheLoadedCatalog() throws {
+        let maker = TestFixtures.makeMaker(displayName: "Atlas Studio NYC")
+        let a = TestFixtures.makeTour(title: "A", makerId: maker.id)
+        let b = TestFixtures.makeTour(title: "B", makerId: maker.id)
+        let site = place(named: "Dam Square", tourIds: [a.id, b.id])
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [a, b], places: [site])
+        )
+
+        XCTAssertEqual(service.tour(by: a.id)?.title, "A")
+        XCTAssertEqual(service.tour(by: b.id)?.title, "B")
+        XCTAssertEqual(service.maker(by: maker.id)?.displayName, "Atlas Studio NYC")
+        XCTAssertEqual(service.maker(for: a)?.id, maker.id)
+        XCTAssertEqual(service.place(by: site.id)?.name, "Dam Square")
+        // A tour's place still resolves through the tour→place index.
+        XCTAssertEqual(service.place(forTourId: b.id)?.id, site.id)
+    }
+
+    func test_unknownIds_returnNil() throws {
+        let service = try makeService(
+            local: ToursData(makers: [TestFixtures.makeMaker()],
+                             tours: [TestFixtures.makeTour()])
+        )
+
+        XCTAssertNil(service.tour(by: UUID()))
+        XCTAssertNil(service.maker(by: UUID()))
+        XCTAssertNil(service.place(by: UUID()))
+        XCTAssertNil(service.place(forTourId: UUID()))
+    }
+
+    /// `tours(by:)` is read by the maker page and by every followed-maker row
+    /// in Library just to count. It must keep returning **catalog order**, not
+    /// whatever a dictionary happened to hold.
+    func test_toursByMaker_returnsOnlyThatMakersTours_inCatalogOrder() throws {
+        let nyc = TestFixtures.makeMaker(id: UUID(), displayName: "NYC")
+        let ldn = TestFixtures.makeMaker(id: UUID(), displayName: "LDN")
+        let first = TestFixtures.makeTour(title: "First", makerId: nyc.id)
+        let other = TestFixtures.makeTour(title: "Other", makerId: ldn.id)
+        let second = TestFixtures.makeTour(title: "Second", makerId: nyc.id)
+        let service = try makeService(
+            local: ToursData(makers: [nyc, ldn], tours: [first, other, second])
+        )
+
+        XCTAssertEqual(service.tours(by: nyc).map(\.title), ["First", "Second"])
+        XCTAssertEqual(service.tours(by: ldn).map(\.title), ["Other"])
+    }
+
+    func test_toursByMaker_isEmpty_forAMakerWithNoTours() throws {
+        let lonely = TestFixtures.makeMaker(id: UUID(), displayName: "No tours yet")
+        let service = try makeService(
+            local: ToursData(makers: [lonely], tours: [])
+        )
+
+        XCTAssertEqual(service.tours(by: lonely).count, 0)
+    }
+
+    // MARK: - Indexes stay in step with the catalog
+
+    /// The trap indexing introduces: a network refresh replaces the catalog, so
+    /// the indexes must be rebuilt with it. Stale ones would keep answering for
+    /// the *previous* catalog — a tour that has gone would still resolve, and a
+    /// newly published one would read as missing.
+    func test_refresh_rebuildsIndexes_forTheNewCatalog() async throws {
+        let maker = TestFixtures.makeMaker()
+        let old = TestFixtures.makeTour(title: "Old", makerId: maker.id)
+        let new = TestFixtures.makeTour(title: "New", makerId: maker.id)
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [old]),
+            remote: ToursData(makers: [maker], tours: [new])
+        )
+        XCTAssertNotNil(service.tour(by: old.id))
+
+        await service.refresh()
+
+        XCTAssertEqual(service.tour(by: new.id)?.title, "New")
+        XCTAssertNil(service.tour(by: old.id), "a dropped tour must stop resolving")
+        XCTAssertEqual(service.tours(by: maker).map(\.title), ["New"])
+    }
+
+    func test_refresh_rebuildsPlaceIndexes() async throws {
+        let maker = TestFixtures.makeMaker()
+        let a = TestFixtures.makeTour(title: "A", makerId: maker.id)
+        let b = TestFixtures.makeTour(title: "B", makerId: maker.id)
+        let before = place(named: "Before", tourIds: [a.id])
+        let after = place(named: "After", tourIds: [a.id, b.id])
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [a, b], places: [before]),
+            remote: ToursData(makers: [maker], tours: [a, b], places: [after])
+        )
+        XCTAssertNil(service.place(forTourId: b.id))
+
+        await service.refresh()
+
+        XCTAssertNil(service.place(by: before.id))
+        XCTAssertEqual(service.place(by: after.id)?.name, "After")
+        XCTAssertEqual(service.place(forTourId: b.id)?.id, after.id)
+    }
+
+    /// `applyLocalMaker` is how a creator's just-saved profile edit reaches the
+    /// public maker page before the next catalog refresh. It mutates `makers`,
+    /// so it has to refresh the maker index too — otherwise the page would go
+    /// on showing the old name it was patched to replace.
+    func test_applyLocalMaker_updatesAnExistingMakerInTheIndex() throws {
+        let maker = TestFixtures.makeMaker(displayName: "Old name")
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [])
+        )
+
+        service.applyLocalMaker(TestFixtures.makeMaker(id: maker.id, displayName: "New name"))
+
+        XCTAssertEqual(service.maker(by: maker.id)?.displayName, "New name")
+        XCTAssertEqual(service.makers.count, 1)
+    }
+
+    func test_applyLocalMaker_addsABrandNewMakerToTheIndex() throws {
+        let existing = TestFixtures.makeMaker(id: UUID(), displayName: "Existing")
+        let service = try makeService(
+            local: ToursData(makers: [existing], tours: [])
+        )
+        let fresh = TestFixtures.makeMaker(id: UUID(), displayName: "Fresh")
+
+        service.applyLocalMaker(fresh)
+
+        XCTAssertEqual(service.maker(by: fresh.id)?.displayName, "Fresh")
+        XCTAssertEqual(service.maker(by: existing.id)?.displayName, "Existing")
+    }
+
+    /// A failed refresh must leave both the catalog and its indexes untouched —
+    /// the offline case, where the local copy is all the user has.
+    func test_failedRefresh_leavesIndexesIntact() async throws {
+        let maker = TestFixtures.makeMaker()
+        let tour = TestFixtures.makeTour(title: "Local", makerId: maker.id)
+        let service = try makeService(
+            local: ToursData(makers: [maker], tours: [tour]),
+            remote: nil
+        )
+
+        await service.refresh()
+
+        XCTAssertEqual(service.tour(by: tour.id)?.title, "Local")
+        XCTAssertEqual(service.tours(by: maker).count, 1)
+    }
+}

@@ -259,8 +259,11 @@ struct MakerView: View {
         // optional here) so the task identity is a plain `UUID?`.
         .task(id: authService?.userId ?? nil) {
             guard isOwnProfile else { return }
-            await listService?.loadMyLists()
-            await listService?.loadSavedLists()
+            // Concurrent, not stacked: neither query depends on the other, and
+            // awaiting them in turn made the LISTS tab re-lay-out twice.
+            async let mine: Void? = listService?.loadMyLists()
+            async let saved: Void? = listService?.loadSavedLists()
+            _ = await (mine, saved)
         }
         // Someone else's visible lists + their Liked. Keyed on the maker so
         // opening a second creator's page replaces them rather than showing

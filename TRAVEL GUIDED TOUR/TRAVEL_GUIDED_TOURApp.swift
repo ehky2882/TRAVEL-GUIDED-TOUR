@@ -112,6 +112,23 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// picks up new content with no force-quit. See `DataService.refreshOnForeground`.
     @Environment(\.scenePhase) private var scenePhase
 
+    /// Refresh the signed-in user's own lists (Library's Lists tab).
+    private func refreshLists() async {
+        async let mine: Void = listService.loadMyLists()
+        async let saved: Void = listService.loadSavedLists()
+        _ = await (mine, saved)
+    }
+
+    /// Refresh the signed-in user's creator profile and their own tours (Me
+    /// tab). The tours query needs the maker row's id, so these two stay
+    /// ordered.
+    private func refreshOwnMakerAndTours() async {
+        await makerProfileService.loadMyMaker()
+        if let makerId = makerProfileService.myMaker?.id {
+            await makerTourService.loadMyTours(makerId: makerId)
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
             if isLoading {
@@ -173,10 +190,16 @@ struct TRAVEL_GUIDED_TOURApp: App {
                         // doesn't delay sync setup / deep-link handling below.
                         Task {
                             guard authService.isSignedIn else { return }
-                            await makerProfileService.loadMyMaker()
-                            if let makerId = makerProfileService.myMaker?.id {
-                                await makerTourService.loadMyTours(makerId: makerId)
-                            }
+                            // The user's lists back the Library tab, and they
+                            // don't need the maker row — so they refresh
+                            // alongside it rather than behind it. Both services
+                            // hydrate from disk at init, so this only replaces
+                            // a cached shape with a current one; without it the
+                            // first Library tap of a launch is what starts the
+                            // clock, and the tab settles in front of the user.
+                            async let lists: Void = refreshLists()
+                            async let profile: Void = refreshOwnMakerAndTours()
+                            _ = await (lists, profile)
                         }
                         // Wire the Group Listen coordinator's dependencies once
                         // (it's constructed dependency-free so it can be injected
