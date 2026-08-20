@@ -14,43 +14,26 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-20 01:50 UTC
+**Last verified:** 2026-08-20 02:47 UTC
 
 ---
 
 ## 1. Awaiting owner — device review
 
-**No open PRs.** #540 merged at 00:13 UTC (squash `fd741db`), which empties the code queue for the
-first time today — #541 through #547 all landed earlier.
+| PR | What it is | Build | Also needs |
+|---|---|---|---|
+| [#549](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/549) | **Library launch jitter + loading perf.** Lists were memory-only, so every launch made three network round-trips *awaited in sequence* and the tab re-laid-out twice in front of you. Now a per-account disk snapshot hydrated at init, with the three loads concurrent. Also replaces linear scans over 1,418 tours with dictionaries — those `by id` lookups run from ~20 sites per body evaluation. | ⏳ **92** building | A signed-in device: cold launch → Library → Lists should show its final shape immediately |
 
-| Build | What it carries | State |
-|---|---|---|
-| **91** | **The first build from `main` with everything today together** — the wizard, Settings, the list page, the 5:4 heroes and the place-layer fixes | ✅ **on TestFlight, untested** |
+⚠️ **The jitter cannot be reproduced in the simulator** — it holds no session, so there are no lists
+to pop in. This one genuinely needs your phone.
 
-**Uploaded 00:58 UTC.** The `Build and upload to TestFlight` step itself passed, which is the evidence
-that matters — the `Done` step is an unconditional echo and proves nothing, while fastlane raises if
-either the upload or the changelog write fails. So the build notes attached. It took **43m41s**,
-longer than 89 (~29m) and 90 (~26m) but well inside the 70-minute timeout, and it finished on its
-own — no re-run needed.
+🔴 **The risk it introduces is staleness.** An index not rebuilt when the catalog changes returns nil
+for a row plainly on screen, which reads as missing content rather than a bug. Every mutation goes
+through one door (`applyCatalog` / `applyMakers` / `setPlaces`) and new tests pin it — but that is
+the thing to watch for. `test_sim` 346/346.
 
-**This is the build that closes the gap the board has been flagging all evening.** Until now no
-build carried `main`: 86 had only #544, 83 only #547, and 90 was the wizard branch cut from a base
-predating both. 91 is cut from `fd741db` and carries all of it.
-
-⚠️ **So the riskiest thing to check is not the wizard — it is the combination.** The merge resolved
-a real conflict in `MakerTourService.swift`, the file that talks to Supabase, and that resolution
-has never run on a device. CI is green on it (simulator build + unit tests), which proves it
-compiles and passes, not that it behaves.
-
-✅ **The saved-tour hang is closed** — owner-verified on build 90, and 91 carries the fix. Eight
-builds, seven of which shipped the freeze (76, 77, 81, 84, 87, 88, 89), six wrong diagnoses. Cause:
-`Map(position:)` bound to `.automatic` with nothing to frame, on the edit path only, because
-`centerOnUser` guarded on `existingTourId == nil`.
-
-🔴 **The durable lesson, now in `CLAUDE.md`: a crash log is ONE SAMPLE of a spin.** Six diagnoses
-came from three different top frames of the same loop — toolbar bridge, `PlatformViewChild` walking
-MKMapView's subtree, presentation. Every frame was real; none was the cause. **Diff the working
-path against the broken one before trusting any stack.**
+✅ **#548 merged** (docs — the Settings pass and the `.tint` that repainted the wordmark white for
+months). Docs-only, auto-merge class, all four checks green.
 
 ## 1b. ✅ RESOLVED — the catalog regression, fixed and verified
 
@@ -127,7 +110,8 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 91 | `main` (`fd741db`) | **Everything from today, together** — wizard, Settings, list page, 5:4 heroes | ✅ **install this** |
+| 92 | `library-launch-jitter` | #549 Library jitter + lookup perf | ⏳ building |
+| 91 | `main` (`fd741db`) | **Everything from today, together** — wizard, Settings, list page, 5:4 heroes | ✅ owner-verified |
 | 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ✅ owner-verified — hang closed |
 | 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | 🔴 hung — superseded |
 | 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | 🔴 **still hangs** |
