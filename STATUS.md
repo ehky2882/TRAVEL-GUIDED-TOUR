@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-20 14:40 UTC
+**Last verified:** 2026-08-20 18:20 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -39,7 +39,7 @@ base predates**, and a branch that has not merged `main` recently should merge i
 | PR | What it is | Build | Also needs |
 |---|---|---|---|
 | [#549](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/549) | **Library launch jitter + lookup perf.** Lists were memory-only, so every launch made three sequential round-trips and the tab re-laid-out twice. Now a per-account disk snapshot hydrated at init, loads concurrent. Also replaces linear scans over 1,418 tours with dictionaries. | ✅ **93** | ✅ **MERGED 03:52** — still worth the device pass, but it is on `main` now |
-| [#552](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/552) | **The wizard stops scrolling.** Owner's rule: no step may scroll — if it doesn't fit it becomes another step. Four of five overflowed; step 1 was 596pt into 411pt. Mini-player and tab bar withdraw while the wizard is up (126pt back), step 1 asks where **once** instead of three times, and the map takes the slack. | ⏳ none yet | Owner OK + a look. Steps 2–5 still overflow — next pass |
+| [#552](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/552) | **The tour wizard is seven steps, and a step is a screenful** (retitled — it was five). Original problem: Owner's rule: no step may scroll — if it doesn't fit it becomes another step. Four of five overflowed; step 1 was 596pt into 411pt. Mini-player and tab bar withdraw while the wizard is up (126pt back), step 1 asks where **once** instead of three times, and the map takes the slack. | ✅ **96** | Owner OK + a look. ⚠️ **96 predates #549, #553 and #555** — no library fix, no list-as-layer, no shared Liked screen |
 | [#553](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/553) | **The list page behaves like every other top-level screen.** Started as the gold ringed `…` the owner flagged — drift, not a choice: it was a bare `ellipsis.circle` that drew its own ring and inherited the accent. Became three changes, ending with the list page **sliding up from the bottom** like tour detail and the place page, with an X instead of a back chevron. Signed out, the bookmark greys rather than vanishing. | ✅ **94** | ✅ **MERGED 11:36** — owner reviewed it on 94: *"LOOKED AT TESTFLIGHT. LOOKS GOOD."* |
 
 ✅ **Build 93 is the one to install for #549, and it is a proper build.** Cut from `c2e8594`, which
@@ -149,7 +149,8 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 95 | `ellipsis-button-consistency-vdorpi` | Follow-up **after #553 merged** (`435436b1`) — conforms `LikedListView`, fixes a `dismiss()` left over from #553. ⚠️ **No PR** | ✅ built 13:12 |
+| 96 | `upload-wizard-improvements-ejopz3` | #552, the seven-step wizard (`98fd9028`) — merge-base `8c1eb4b0`, so it predates **three** code merges: #549, #553, #555 | ✅ built 18:12 |
+| 95 | `ellipsis-button-consistency-vdorpi` | Became **#555** (`435436b1`) — Liked rendered through the shared list screen | ✅ merged 13:39 |
 | 94 | `ellipsis-button-consistency-vdorpi` | #553 list page as a layer (`1d7ed910`) — merge-base `8c1eb4b0`, so **no #549 library fix** | ✅ owner-verified — **#553 merged** |
 | 93 | `library-launch-jitter` | #549 **after merging main** (`c2e8594`) — #549 has since merged, so this is on `main` | ✅ the one that has the Library fix |
 | 92 | `library-launch-jitter` | #549 on an 18 Aug base — **no wizard, no Settings pass** | ⚠️ looked like regressions; it was just old |
@@ -172,8 +173,8 @@ after dispatching; never promise one in advance.
 | Branch | State |
 |---|---|
 | `claude/library-launch-jitter` | Merged (#549 at 03:52) — auto-delete should remove it |
-| `claude/upload-wizard-improvements-ejopz3` | Open — #552, **the only open PR**, still unbuilt; head moved to `572c2661` at 14:33; merge-base `8c1eb4b0` predates **two** merges (#549, #553) |
-| `claude/ellipsis-button-consistency-vdorpi` | ⚠️ **Reused after its PR merged.** #553 merged 11:36; new commits landed after and built as 95, with no PR open. CLAUDE.md's rule is that a merged PR is finished and follow-up starts from a fresh branch off `main` |
+| `claude/upload-wizard-improvements-ejopz3` | Open — #552, **the only open PR**, head `98fd9028`, built as 96. Merge-base `8c1eb4b0` predates **three** merges |
+| `claude/ellipsis-button-consistency-vdorpi` | Merged twice from one branch (#553 at 11:36, #555 at 13:39). ⚠️ The second stacked on already-merged history, which CLAUDE.md's rule says to avoid — it worked here, but a PR did not exist while build 95 was installable |
 | `claude/tour-upload-polish-qiliop` | Merged (#540) — auto-delete should remove it |
 | `claude/stripe-questions-fjhdo3` | ⚠️ No PR — verify contents before deleting |
 | `claude/amsterdam-handoff-preserve-hlhyp8` | 🔒 Keep — only copy of staging pick-maps |
