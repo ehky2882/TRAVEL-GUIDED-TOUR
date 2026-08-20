@@ -734,11 +734,19 @@ struct CreateTourWizardView: View {
                     }
                 }
 
-            // The map is this step's elastic element — see the container in
-            // `wizard`. Its instruction rides ON it rather than above it,
-            // which is 21pt the map keeps.
+            // 🔴 SQUARE, NOT ELASTIC — and it was never actually elastic.
+            // This asked for `maxHeight: .infinity` inside a ScrollView whose
+            // content frame sets only a `minHeight`, and a flexible child
+            // gets no room from a container sized by its own content: the
+            // frame stretches to the screenful and top-aligns, while the map
+            // sits at its 200pt floor with the rest as dead space. That is
+            // exactly what the owner's screenshot showed.
+            //
+            // Sizing it like every other map in the app fixes the symptom and
+            // removes the dependency at once. Its instruction still rides ON
+            // it rather than above it, which is 21pt the map keeps.
             mapSection
-                .frame(minHeight: 200, maxHeight: .infinity)
+                .atlasHeroSizing(nil)
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("TRIGGER RADIUS — \(Int(radius)) m")
@@ -922,10 +930,19 @@ struct CreateTourWizardView: View {
                     .stroke(AtlasColors.mapPin, lineWidth: 2)
             }
         }
-        // No height here — the caller sizes it, because on this step the map
-        // is what absorbs whatever the screen has left over. That is 400pt on
-        // a 6.3" phone and 288 on an SE, against a flat 280 before.
-        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+        // 🔴 THE SAME FOOTPRINT AS THE MAP ON A TOUR PAGE — square, and square
+        // corners. Owner, 2026-08-20, from a device screenshot: *"Map is too
+        // small. Make it the same size as what would appear on a tour detail,
+        // places, etc page. Square. No rounded corners."*
+        //
+        // `.atlasHeroSizing(nil)` is literally the modifier `TourDetailView`
+        // and `PlaceView` size their maps with, so this cannot drift from
+        // them: it takes `AtlasSpacing.heroAspectRatio`, which is 1.0. No
+        // `clipShape` for the same reason — those maps have square corners,
+        // matching the hero image they swap with.
+        //
+        // ⚠️ This makes the map FIXED rather than elastic, and that is the
+        // point rather than a side effect. See the call site.
         .overlay {
             // Fixed centre pin — the map centre IS the chosen coordinate, so
             // panning the map moves the pin. Tip anchored at the true centre.
