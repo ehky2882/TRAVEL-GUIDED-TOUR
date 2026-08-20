@@ -367,18 +367,41 @@ struct CreateTourWizardView: View {
         VStack(spacing: 0) {
             header
             progressBar
-            ScrollView {
-                VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                    stepContent
-                    if let errorMessage {
-                        Text(errorMessage)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.mapPin)
+            // 🔴 A STEP IS A SCREENFUL, AND ITS ONE ELASTIC ELEMENT TAKES
+            // WHAT'S LEFT. No step may scroll (owner, 2026-08-20) — but a
+            // fixed height is a different height on every phone, which is the
+            // same trap that cropped the hero photograph 8% on one device and
+            // 23% on another. So nothing here is sized in absolute points if
+            // it can be sized by what remains.
+            //
+            // How it works: `minHeight: geo.size.height` makes the content at
+            // least a screenful, which gives the VStack a definite height to
+            // divide up — so a child asking for `maxHeight: .infinity` (the
+            // map, today) genuinely expands instead of collapsing to its ideal
+            // size, which is what happens to a flexible child in a plain
+            // ScrollView.
+            //
+            // ⚠️ The ScrollView stays, deliberately, as a safety valve. It has
+            // nothing to scroll when the step fits, so the rule holds; but a
+            // device or text size nobody anticipated gets a scroll rather than
+            // content silently clipped off the bottom. Given the choice
+            // between breaking the rule and hiding the Next button, break the
+            // rule.
+            GeometryReader { geo in
+                ScrollView {
+                    VStack(alignment: .leading, spacing: AtlasSpacing.md) {
+                        stepContent
+                        if let errorMessage {
+                            Text(errorMessage)
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.mapPin)
+                        }
                     }
+                    .padding(AtlasSpacing.lg)
+                    .frame(minHeight: geo.size.height, alignment: .top)
                 }
-                .padding(AtlasSpacing.lg)
+                .scrollDismissesKeyboard(.interactively)
             }
-            .scrollDismissesKeyboard(.interactively)
         }
         .safeAreaInset(edge: .bottom, spacing: 0) { footer }
         // Deliberately here and not at the root — see `dismissGuarded`.
@@ -462,6 +485,9 @@ struct CreateTourWizardView: View {
                         .foregroundStyle(AtlasColors.mapPin)
                 } else if let blockingHint {
                     Text(blockingHint)
+                        .foregroundStyle(AtlasColors.tertiaryText)
+                } else if let stepGuidance {
+                    Text(stepGuidance)
                         .foregroundStyle(AtlasColors.tertiaryText)
                 } else {
                     Text(" ")
@@ -554,25 +580,23 @@ struct CreateTourWizardView: View {
                     }
                 }
 
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                fieldLabel("PAN TO PLACE THE PIN")
-                mapSection
-            }
+            // The map is this step's elastic element — see the container in
+            // `wizard`. Its instruction rides ON it rather than above it,
+            // which is 21pt the map keeps.
+            mapSection
+                .frame(minHeight: 200, maxHeight: .infinity)
+
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("TRIGGER RADIUS — \(Int(radius)) m")
+                // No "15 m"/"100 m" end caps. The label already carries the
+                // live value, and a slider's ends are self-evident the moment
+                // you drag it — 21pt for something nobody reads twice.
                 Slider(value: $radius, in: Self.radiusRange, step: 5)
                     .tint(AtlasColors.mapPin)
-                HStack {
-                    Text("\(Int(Self.radiusRange.lowerBound)) m")
-                    Spacer()
-                    Text("\(Int(Self.radiusRange.upperBound)) m")
-                }
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
             }
-            Text("The tour fires when a listener walks inside this circle.")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
+            // The line explaining the circle now lives in the footer's hint
+            // slot, which reserves two lines whether or not it has anything to
+            // say — see `stepGuidance`. Free real estate; the map gets it.
         }
     }
 
@@ -762,14 +786,9 @@ struct CreateTourWizardView: View {
                     .stroke(AtlasColors.mapPin, lineWidth: 2)
             }
         }
-        // 300, up from 280 — some of what the one search field gave back.
-        // Deliberately not all of it: the step is still inside the wizard's
-        // ScrollView, so this is a fixed number rather than "whatever is
-        // left", and a fixed number has to survive the smallest screen too.
-        // The map takes the remaining space properly once the container stops
-        // scrolling, which is a change to make after every step is sized —
-        // not while four of them still overflow.
-        .frame(height: 300)
+        // No height here — the caller sizes it, because on this step the map
+        // is what absorbs whatever the screen has left over. That is 400pt on
+        // a 6.3" phone and 288 on an SE, against a flat 280 before.
         .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
         .overlay {
             // Fixed centre pin — the map centre IS the chosen coordinate, so
@@ -778,6 +797,21 @@ struct CreateTourWizardView: View {
                 .font(.title)
                 .foregroundStyle(AtlasColors.mapPin)
                 .offset(y: -11)
+                .allowsHitTesting(false)
+        }
+        .overlay(alignment: .topLeading) {
+            // The instruction, on the map instead of above it. A solid fill
+            // rather than a material: map tiles are busy and light or dark
+            // depending on where in the world the maker is, and the app moved
+            // its chrome off materials for the same reason (PR #76).
+            Text("PAN TO PLACE THE PIN")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.primaryText)
+                .padding(.horizontal, AtlasSpacing.sm)
+                .padding(.vertical, 5)
+                .background(AtlasColors.background.opacity(0.9), in: Capsule())
+                .padding(AtlasSpacing.sm)
+                // Never eat a pan that starts on the label.
                 .allowsHitTesting(false)
         }
         .onMapCameraChange(frequency: .continuous) { context in
@@ -1129,6 +1163,25 @@ struct CreateTourWizardView: View {
     /// Says what's missing rather than leaving a dimmed button unexplained.
     private var blockingHint: String? {
         TourWizardRules.blockingReason(for: step, state: wizardState)
+    }
+
+    /// What the step would like the maker to know, once nothing is blocking.
+    ///
+    /// This is why the hint line reserves two lines whether or not it has
+    /// anything to say: the reservation was already being paid for — it keeps
+    /// the footer's height constant, which the sheet's layout depends on — so
+    /// explanatory copy that used to sit in the step itself now costs nothing.
+    /// Step 1's line about the geofence circle was 41pt of the map's space.
+    ///
+    /// Deliberately ranked *below* `blockingHint`: when something is stopping
+    /// you, that is the more urgent thing to read.
+    private var stepGuidance: String? {
+        switch step {
+        case .location:
+            return "The tour fires when a listener walks inside this circle."
+        case .details, .photos, .audio, .review:
+            return nil
+        }
     }
 
     private var primaryLabel: String {
