@@ -102,6 +102,11 @@ struct CreateTourWizardView: View {
     // Flow
     @State private var isPersisting = false
     @State private var isSubmitting = false
+    /// Whether the write in flight is Save draft rather than Next. Both run
+    /// through `persist()` and both set `isPersisting`, so without this the
+    /// spinner appears on Next when you tapped Save — pointing at the wrong
+    /// button while it works.
+    @State private var isSavingInPlace = false
     @State private var errorMessage: String?
     /// Which confirmation is up, if any. Deliberately one modifier driven by
     /// an enum rather than two `confirmationDialog`s on the same view: stacking
@@ -342,13 +347,15 @@ struct CreateTourWizardView: View {
                 // the glyph.
                 .padding(.horizontal, AtlasChromeButton.diameter + AtlasSpacing.sm)
             HStack {
-                Button {
-                    if step == .location { closeTapped() } else { goBack() }
-                } label: {
-                    AtlasChromeButton(step == .location ? "xmark" : "chevron.left")
+                // X on every step, never a back chevron. Going back is the
+                // footer's job now, so the header means exactly one thing —
+                // get me out of here — which is also what it means on
+                // `TourDetailView`, the canon for page chrome.
+                Button { closeTapped() } label: {
+                    AtlasChromeButton("xmark")
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(step == .location ? "Close" : "Back")
+                .accessibilityLabel("Close")
                 Spacer()
             }
         }
@@ -496,22 +503,29 @@ struct CreateTourWizardView: View {
             .font(AtlasTypography.caption)
             .lineLimit(2, reservesSpace: true)
             .frame(maxWidth: .infinity, alignment: .leading)
+            // Back · Save · Next — three equal columns (owner, 2026-08-20).
+            //
+            // Equal widths, not natural ones: a symmetric row is the point,
+            // and it also means the labels have a fixed budget rather than
+            // one that changes with the wording. That budget is what keeps
+            // the primary short — "Submit", not "Submit changes for review",
+            // which would not fit three-across on any phone. The Review
+            // step's footnote carries the nuance the button no longer can.
             HStack(spacing: AtlasSpacing.sm) {
-                Button { saveProgress() } label: {
-                    pill("Save progress", filled: false)
-                }
-                .buttonStyle(.plain)
-                .disabled(!canPersist || isPersisting || isSubmitting)
-                .opacity(canPersist ? 1 : 0.4)
+                footerButton("Back",
+                             enabled: step.previous != nil && !isBusy,
+                             action: goBack)
 
-                Spacer(minLength: 0)
+                footerButton("Save draft",
+                             enabled: canPersist && !isBusy,
+                             busy: isSavingInPlace,
+                             action: saveProgress)
 
-                Button { primaryTapped() } label: {
-                    pill(primaryLabel, filled: true, busy: isPersisting || isSubmitting)
-                }
-                .buttonStyle(.plain)
-                .disabled(!canAdvance || isPersisting || isSubmitting)
-                .opacity(canAdvance ? 1 : 0.4)
+                footerButton(primaryLabel,
+                             filled: true,
+                             enabled: canAdvance && !isBusy,
+                             busy: isSubmitting || (isPersisting && !isSavingInPlace),
+                             action: primaryTapped)
             }
         }
         .padding(.horizontal, AtlasSpacing.lg)
@@ -530,12 +544,37 @@ struct CreateTourWizardView: View {
         }
     }
 
+    /// One of the footer's three columns.
+    private func footerButton(_ text: String,
+                              filled: Bool = false,
+                              enabled: Bool,
+                              busy: Bool = false,
+                              action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            pill(text, filled: filled, busy: busy)
+                .frame(maxWidth: .infinity)
+        }
+        .buttonStyle(.plain)
+        .disabled(!enabled)
+        // Dimmed rather than hidden — a disabled Back on step 1 shows that
+        // going back is a thing this row does, before there is anywhere to go.
+        .opacity(enabled ? 1 : 0.4)
+    }
+
+    /// The capsule itself. Used by the footer's three columns and by the
+    /// confirmation screen's Done, which is a single natural-width button.
     private func pill(_ text: String, filled: Bool, busy: Bool = false) -> some View {
         HStack(spacing: 6) {
-            if busy { ProgressView().tint(filled ? AtlasColors.background : AtlasColors.primaryText) }
-            Text(text).font(AtlasTypography.caption)
+            if busy {
+                ProgressView()
+                    .controlSize(.small)
+                    .tint(filled ? AtlasColors.background : AtlasColors.primaryText)
+            }
+            Text(text)
+                .font(AtlasTypography.caption)
+                .lineLimit(1)
         }
-        .padding(.horizontal, AtlasSpacing.lg)
+        .padding(.horizontal, AtlasSpacing.md)
         .padding(.vertical, 12)
         .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
         .background(filled ? AtlasColors.mapPin : AtlasColors.background)
@@ -546,6 +585,10 @@ struct CreateTourWizardView: View {
             }
         }
     }
+
+    /// Any write in flight. Every footer button waits on it — two of them
+    /// would otherwise start a second write over the first.
+    private var isBusy: Bool { isPersisting || isSubmitting || isDeleting }
 
     // MARK: - Steps
 
@@ -1184,16 +1227,15 @@ struct CreateTourWizardView: View {
         }
     }
 
+    /// Deliberately short. The button is one of three equal columns now, so a
+    /// label has about a third of the row — "Submit changes for review" does
+    /// not fit on any phone. What that longer wording carried is in
+    /// `reviewFootnote`, directly above the button, where there is room to say
+    /// it properly: that editing something already live is allowed, and that
+    /// it re-enters moderation rather than changing under a listener mid-tour.
     private var primaryLabel: String {
         guard step == .review else { return "Next" }
-        switch draft?.status {
-        case .inReview: return "In review"
-        // Editing something already live is allowed — a maker shouldn't need
-        // an admin to fix a typo — but it re-enters moderation rather than
-        // changing under a listener mid-tour.
-        case .published: return "Submit changes for review"
-        default:        return "Submit for review"
-        }
+        return draft?.status == .inReview ? "In review" : "Submit"
     }
 
     private var reviewFootnote: String {
@@ -1318,8 +1360,9 @@ struct CreateTourWizardView: View {
         focused = nil
         errorMessage = nil
         isPersisting = true
+        isSavingInPlace = true
         Task {
-            defer { isPersisting = false }
+            defer { isPersisting = false; isSavingInPlace = false }
             do {
                 try await persist()
                 withAnimation(.easeInOut(duration: 0.2)) { savedConfirmation = true }
