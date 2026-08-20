@@ -27,13 +27,24 @@ import SwiftUI
 /// anywhere), and the map plots **every tour in the list** rather than one pin.
 struct TourListDetailView: View {
     let listId: UUID
-    /// Metadata for a list the viewer does **not** own, passed in by the
-    /// screen that already fetched it (a creator's maker page).
+    /// Metadata the presenting screen already had in hand.
     ///
-    /// Without this the title would be blank: metadata used to be looked up in
-    /// `listService.myLists`, which by definition never contains someone
-    /// else's list. Passing it beats re-fetching — the caller has it already.
+    /// Load-bearing for a list the viewer does **not** own: metadata is looked
+    /// up in `listService.myLists`, which by definition never contains someone
+    /// else's list, so without this the title would be blank. Library and a
+    /// profile pass it for their own lists too — the row is already resolved
+    /// there, so passing it puts the title on the first frame.
     var preloaded: TourList? = nil
+
+    /// Tears down the slide-up layer this screen is presented in.
+    ///
+    /// ⚠️ `@Environment(\.dismiss)` is not enough here and must not be relied
+    /// on: the layer is a UIKit modal presented by `BottomLayerController`,
+    /// not a sheet or a nav push, so SwiftUI has nothing to dismiss. The
+    /// presenter's own `dismiss()` is what brings the layer down, and it does
+    /// so without depending on an observer in a window the layer covers.
+    /// Nil only in a preview or a test host, where `dismiss()` is right.
+    var onDismiss: (() -> Void)? = nil
 
     @Environment(TourListService.self) private var listService
     @Environment(DataService.self) private var dataService
@@ -41,13 +52,21 @@ struct TourListDetailView: View {
     /// Optional: this screen is reachable from the UIKit maker layer, which
     /// doesn't carry every service. A required lookup crashes there.
     @Environment(AuthService.self) private var authService: AuthService?
-    /// Optional for the same reason — not every layer injects it.
-    @Environment(MakerPresenter.self) private var makerPresenter: MakerPresenter?
     @Environment(\.dismiss) private var dismiss
 
     @State private var items: [TourListItem] = []
     @State private var isLoading = true
     @State private var isSaving = false
+
+    /// The creator whose page "Go to creator" pushes.
+    ///
+    /// ⚠️ Pushed in-stack, deliberately, rather than presented through
+    /// `MakerPresenter`. This screen is a slide-up layer now, and stacking a
+    /// maker layer over it means asking an observer in the covered main window
+    /// to run — the class of bug that made the place pin dead on a maker page
+    /// (#532). Tour detail reaches a creator the same way and for the same
+    /// reason: back returns you to the list you were reading.
+    @State private var makerToPush: Maker?
     @State private var showingShareVisibilityPrompt = false
     @State private var isEditing = false
     @State private var showingDeleteConfirm = false
@@ -84,9 +103,12 @@ struct TourListDetailView: View {
     }
 
     /// Saving is account-backed (`saved_journeys` is keyed on the user), so
-    /// unlike bookmarking a tour it can't work signed out. Hide the control
-    /// rather than offer one that fails — the same choice the Follow button
-    /// makes on a maker page.
+    /// unlike bookmarking a tour it can't work signed out.
+    ///
+    /// This gates whether the bookmark *works*, not whether it is *drawn* —
+    /// signed out the capsule stays on the row and greys (owner decision,
+    /// 2026-08-20). It also covers your own list, where saving is meaningless
+    /// because the list is already yours; that one is not drawn at all.
     private var canSave: Bool {
         !isOwner && authService?.isSignedIn == true
     }
@@ -111,6 +133,9 @@ struct TourListDetailView: View {
             }
             .background(AtlasColors.secondaryBackground)
             .toolbar(.hidden, for: .navigationBar)
+            .navigationDestination(item: $makerToPush) { maker in
+                MakerView(maker: maker)
+            }
             // Kept for VoiceOver: the visible title now lives in the body's
             // masthead, as it does on tour detail and the place page.
             .navigationTitle(journey?.title ?? "List")
@@ -158,32 +183,47 @@ struct TourListDetailView: View {
 
     // MARK: - Chrome
 
-    /// Back or close (leading) · the `…` menu (trailing) — the same capsules,
-    /// in the same places, as tour detail and the place page.
+    /// Close (leading) · bookmark · the `…` menu (trailing) — the same
+    /// capsules, in the same places, as tour detail and the place page.
     ///
-    /// ⚠️ The leading control is a **back chevron**, not an X. Unlike a place,
-    /// this screen is *pushed* onto a nav stack from Library or a profile, so
-    /// there is somewhere to go back to. The shared-link path presents it in a
-    /// sheet with its own Close, which is why `dismiss()` is right either way.
+    /// The leading control is an **X**, matching them. It was a back chevron
+    /// while this screen pushed onto whichever nav stack you came from; it now
+    /// slides up as its own layer from every entry point (owner direction,
+    /// 2026-08-20), so there is no stack behind it to go back to — closing it
+    /// slides it back down.
     private var chromeRow: some View {
         HStack(spacing: AtlasSpacing.sm) {
-            Button { dismiss() } label: {
-                chromeCapsule("chevron.left")
+            Button { close() } label: {
+                chromeCapsule("xmark")
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Back")
+            .accessibilityLabel("Close")
 
             Spacer()
 
             // Saving lives in the menu as well, but a bookmark you can see is
             // worth a capsule of its own — the place page makes the same call.
-            if canSave {
+            //
+            // ⚠️ Signed out it is drawn and greyed, never removed (owner
+            // decision, 2026-08-20). A control that vanishes changes the row's
+            // shape depending on who is looking; a dimmed one says saving
+            // belongs here and isn't available yet. Your own list is the one
+            // case with no bookmark at all — saving a list you already own
+            // means nothing, so there is no disabled state to show.
+            if !isOwner {
                 Button { toggleSaved() } label: {
-                    chromeCapsule(isSavedList ? "bookmark.fill" : "bookmark")
+                    chromeCapsule(
+                        isSavedList ? "bookmark.fill" : "bookmark",
+                        enabled: canSave
+                    )
                 }
                 .buttonStyle(.plain)
-                .disabled(isSaving)
-                .accessibilityLabel(isSavedList ? "Remove from your saved lists" : "Save this list")
+                .disabled(!canSave || isSaving)
+                .accessibilityLabel(
+                    canSave
+                        ? (isSavedList ? "Remove from your saved lists" : "Save this list")
+                        : "Save this list — sign in required"
+                )
             }
 
             overflowMenu
@@ -194,10 +234,16 @@ struct TourListDetailView: View {
 
     /// Identical to tour detail's and the place page's, down to the fill
     /// opacity. Gold is reserved for action controls, so chrome stays neutral.
-    private func chromeCapsule(_ systemName: String) -> some View {
+    ///
+    /// `enabled: false` greys the **glyph only** — the capsule keeps its fill
+    /// and its 44pt frame, so a control that can't act still holds its place
+    /// in the row. The colour has to be stated here rather than left to
+    /// `.disabled()`: the glyph names `primaryText` explicitly, and SwiftUI
+    /// will not dim a colour a view has set for itself.
+    private func chromeCapsule(_ systemName: String, enabled: Bool = true) -> some View {
         Image(systemName: systemName)
             .font(.system(size: 20, weight: .regular))
-            .foregroundStyle(AtlasColors.primaryText)
+            .foregroundStyle(enabled ? AtlasColors.primaryText : AtlasColors.tertiaryText)
             .frame(width: 44, height: 44)
             .background(Capsule().fill(AtlasColors.tertiaryText.opacity(0.18)))
             .contentShape(Capsule())
@@ -568,6 +614,12 @@ struct TourListDetailView: View {
     /// items; someone else's gets Save and a way to their profile. Neither
     /// menu shows an item that would fail: RLS is the real gate, but offering
     /// Delete on a list you don't own would be a lie.
+    ///
+    /// ⚠️ The label is `chromeCapsule("ellipsis")`, like every other chrome
+    /// control on this row — never a bare `ellipsis.circle`. That glyph draws
+    /// its own ring, so it sits in no 44pt capsule and states no colour, which
+    /// leaves it reading the environment accent and painting gold beside two
+    /// neutral capsules. It shipped that way and the owner caught it on device.
     @ViewBuilder
     private var overflowMenu: some View {
         Menu {
@@ -589,21 +641,23 @@ struct TourListDetailView: View {
                 }
             } else {
                 Section {
-                    if canSave {
-                        Button {
-                            toggleSaved()
-                        } label: {
-                            Label(
-                                isSavedList ? "Saved to your lists" : "Save to your lists",
-                                systemImage: isSavedList ? "bookmark.fill" : "bookmark"
-                            )
-                        }
-                        .disabled(isSaving)
+                    // Drawn-and-disabled signed out, matching the bookmark
+                    // capsule above it. Showing the capsule greyed while the
+                    // menu simply omitted the same action would be the split
+                    // treatment this row exists to avoid.
+                    Button {
+                        toggleSaved()
+                    } label: {
+                        Label(
+                            isSavedList ? "Saved to your lists" : "Save to your lists",
+                            systemImage: isSavedList ? "bookmark.fill" : "bookmark"
+                        )
                     }
+                    .disabled(!canSave || isSaving)
 
                     if let ownerMaker {
                         Button {
-                            makerPresenter?.present(ownerMaker)
+                            makerToPush = ownerMaker
                         } label: {
                             Label("Go to creator", systemImage: "person.crop.circle")
                         }
@@ -611,8 +665,8 @@ struct TourListDetailView: View {
                 }
             }
         } label: {
-            Image(systemName: "ellipsis.circle")
-                .accessibilityLabel("List options")
+            chromeCapsule("ellipsis")
+                .accessibilityLabel("More options")
         }
     }
 
@@ -666,9 +720,9 @@ struct TourListDetailView: View {
 
     // MARK: - Actions
 
-    /// Open a tour. Within a pushed nav stack (this view) with no slide-up
-    /// layer active, present via the shared presenter; if a layer is already
-    /// up, that presenter call still swaps its content correctly.
+    /// Open a tour through the shared presenter — the tour layer stacks over
+    /// this one, exactly as it does over the place page, and if a tour is
+    /// already up the presenter swaps its content correctly.
     private func openTour(_ tour: Tour) {
         tourPresenter.present(tour)
     }
@@ -704,8 +758,20 @@ struct TourListDetailView: View {
     /// the list — so unlike the tour bookmark it toggles both ways with no
     /// confirmation. The tour bookmark can't, because there un-saving is the
     /// only way to lose a save.
+    /// Bring the layer down. Falls back to SwiftUI's `dismiss` only where no
+    /// presenter wired us up — a preview or a test host.
+    private func close() {
+        if let onDismiss {
+            onDismiss()
+        } else {
+            dismiss()
+        }
+    }
+
     private func toggleSaved() {
-        guard let journey, !isSaving else { return }
+        // `canSave` is checked here as well as on the two controls: both are
+        // drawn signed out now, so the guard is what makes "disabled" mean it.
+        guard let journey, canSave, !isSaving else { return }
         isSaving = true
         Task {
             if isSavedList {

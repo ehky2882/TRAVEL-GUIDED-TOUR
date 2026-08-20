@@ -30,6 +30,7 @@ struct BottomModuleRoot: View {
     /// Optional for the same reason as `makerPresenter`: the inline fallback
     /// renders this view without the full app environment.
     @Environment(PlacePresenter.self) private var placePresenter: PlacePresenter?
+    @Environment(TourListPresenter.self) private var listPresenter: TourListPresenter?
     @Environment(AppSharedState.self) private var appShared
     @Environment(AtlasNavigationState.self) private var navState
     @Environment(AuthService.self) private var authService: AuthService?
@@ -168,6 +169,7 @@ struct BottomModuleRoot: View {
         tourPresenter.presentedTour != nil
             || makerPresenter?.presentedMaker != nil
             || placePresenter?.presentedPlace != nil
+            || listPresenter?.presented != nil
     }
 
     /// The signed-in user's own maker id (the followee side of any pending
@@ -224,6 +226,9 @@ struct BottomModuleRoot: View {
                 }
                 if placePresenter?.presentedPlace != nil {
                     placePresenter?.dismiss()
+                }
+                if listPresenter?.presented != nil {
+                    listPresenter?.dismiss()
                 }
                 appShared.selectedTab = newTab
             }

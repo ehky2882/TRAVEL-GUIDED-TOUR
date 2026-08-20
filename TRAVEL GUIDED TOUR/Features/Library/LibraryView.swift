@@ -24,6 +24,7 @@ struct LibraryView: View {
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(MakerPresenter.self) private var makerPresenter
     @Environment(PlacePresenter.self) private var placePresenter
+    @Environment(TourListPresenter.self) private var listPresenter
     @Environment(SavedPlacesStore.self) private var savedPlacesStore
     @Environment(FollowService.self) private var followService
     @Environment(MakerProfileService.self) private var makerProfileService
@@ -190,8 +191,8 @@ struct LibraryView: View {
                 ForEach(myLists) { list in
                     Divider().padding(.horizontal, AtlasSpacing.lg)
 
-                    NavigationLink {
-                        TourListDetailView(listId: list.id)
+                    Button {
+                        listPresenter.present(listId: list.id, preloaded: list)
                     } label: {
                         NamedListRow(
                             list: list,
@@ -211,8 +212,8 @@ struct LibraryView: View {
             if !savedLists.isEmpty {
                 librarySectionHeader("Saved lists")
                 ForEach(savedLists) { list in
-                    NavigationLink {
-                        TourListDetailView(listId: list.id, preloaded: list)
+                    Button {
+                        listPresenter.present(listId: list.id, preloaded: list)
                     } label: {
                         SavedListRowView(
                             list: list,
