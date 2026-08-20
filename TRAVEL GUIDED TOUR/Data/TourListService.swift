@@ -57,15 +57,77 @@ final class TourListService {
     /// the previous one's lists (the service isn't torn down on sign-out).
     private var loadedUid: String?
 
+    /// Last-known lists on disk, per account (stale-while-revalidate).
+    ///
+    /// Without this the service started **empty on every launch** and Library's
+    /// Lists tab drew itself three times: Liked alone, then the named lists
+    /// popping in, then a whole `SAVED LISTS` section inserting below them —
+    /// the jitter. The same pattern already backs `MakerProfileService.myMaker`
+    /// and `MakerTourService.myTours` (`ProfileSnapshotStore`), and
+    /// `FollowService`'s counts; lists were the one kept-things surface still
+    /// waiting on the network to know its own shape.
+    ///
+    /// Keyed by uid, so one account can never hydrate another's lists.
+    private let snapshotStore = ProfileSnapshotStore<Snapshot>("lists")
+
+    /// What survives a launch. Deliberately **not** `hasLoadedSaves`: that flag
+    /// is what makes a shared-list screen fetch the save state once per launch
+    /// (`TourListDetailView`), and restoring it true would let a bookmark
+    /// changed on another device stay wrong until Library was opened.
+    /// Internal rather than private so a test can round-trip the real type:
+    /// `membership` is a dictionary keyed by `UUID`, which `JSONEncoder` writes
+    /// as a flat alternating array rather than an object. If that ever stopped
+    /// round-tripping, membership would come back empty and every bookmark
+    /// glyph would read wrong on the first frame after launch — silently.
+    struct Snapshot: Codable {
+        var myLists: [TourList]
+        var membership: [UUID: Set<UUID>]
+        var savedLists: [TourList]
+        var savedListIds: Set<UUID>
+    }
+
     init(auth: AuthService, client: SupabaseClient = SupabaseClientProvider.shared) {
         self.auth = auth
         self.client = client
+        // Synchronous, at init: `AuthService` seeds `user` from the persisted
+        // session in *its* init, so the uid is already known here and the first
+        // frame Library ever draws can be the final layout.
+        hydrateFromSnapshot()
+    }
+
+    /// Load the cached lists for the signed-in account, if any. Silent no-op
+    /// when signed out or nothing has been cached yet.
+    private func hydrateFromSnapshot() {
+        guard let uid, let snapshot = snapshotStore.load(uid: uid) else { return }
+        myLists = snapshot.myLists
+        membership = snapshot.membership
+        savedLists = snapshot.savedLists
+        savedListIds = snapshot.savedListIds
+        rebuildAllListed()
+        loadedUid = uid
+    }
+
+    /// Write the current cache to disk. Called after every load and every
+    /// mutation — **a new write path needs a call too**, or the next launch
+    /// renders a layout the user already changed.
+    private func persistSnapshot() {
+        guard let uid else { return }
+        snapshotStore.save(
+            Snapshot(myLists: myLists,
+                     membership: membership,
+                     savedLists: savedLists,
+                     savedListIds: savedListIds),
+            uid: uid
+        )
     }
 
     private var uid: String? { auth.user?.id.uuidString.lowercased() }
 
     /// Clear all cached state (e.g. on sign-out).
     func clear() {
+        // Drop the account's cached copy too: sign-out wipes synced data from
+        // the device (PR #283), and a list cache left behind would outlive it.
+        snapshotStore.clear(uid: loadedUid)
         myLists = []
         membership = [:]
         allListedTourIds = []
@@ -119,6 +181,7 @@ final class TourListService {
             )
             rebuildAllListed()
             loadedUid = uid
+            persistSnapshot()
         } catch {
             // Keep whatever we have; the screen still renders.
         }
@@ -218,6 +281,7 @@ final class TourListService {
             savedListIds = Set(rows.map(\.journeyId))
             hasLoadedSaves = true
             loadedUid = uid
+            persistSnapshot()
         } catch {
             // Keep whatever we have; the screen still renders.
         }
@@ -238,6 +302,7 @@ final class TourListService {
             savedListIds = Set(rows.map(\.journeyId))
             hasLoadedSaves = true
             loadedUid = uid
+            persistSnapshot()
         } catch {
             // Keep whatever we have.
         }
@@ -260,6 +325,7 @@ final class TourListService {
             if !savedLists.contains(where: { $0.id == list.id }) {
                 savedLists.insert(list, at: 0)
             }
+            persistSnapshot()
             return true
         } catch {
             return false
@@ -278,6 +344,7 @@ final class TourListService {
                 .execute()
             savedListIds.remove(listId)
             savedLists.removeAll { $0.id == listId }
+            persistSnapshot()
             return true
         } catch {
             return false
@@ -369,6 +436,7 @@ final class TourListService {
         )
         myLists.insert(journey, at: 0)
         membership[id] = []
+        persistSnapshot()
         return journey
     }
 
@@ -392,6 +460,7 @@ final class TourListService {
         adjustCount(listId, by: 1)
         membership[listId, default: []].insert(tourId)
         rebuildAllListed()
+        persistSnapshot()
     }
 
     /// Remove a tour from a list. Leaves the remaining positions as-is
@@ -407,6 +476,7 @@ final class TourListService {
         adjustCount(listId, by: -1)
         membership[listId]?.remove(tourId)
         rebuildAllListed()
+        persistSnapshot()
     }
 
     /// Delete a list (its items cascade via the FK). Removes it from the
@@ -420,6 +490,7 @@ final class TourListService {
         myLists.removeAll { $0.id == listId }
         membership[listId] = nil
         rebuildAllListed()
+        persistSnapshot()
     }
 
     /// Update a list's editable metadata (title / description / public).
@@ -447,6 +518,7 @@ final class TourListService {
             j.description = cleanDesc
             j.isPublic = isPublic
             myLists.insert(j, at: 0)
+            persistSnapshot()
         }
     }
 
