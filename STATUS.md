@@ -14,38 +14,37 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-19 23:59 UTC
+**Last verified:** 2026-08-20 00:15 UTC
 
 ---
 
 ## 1. Awaiting owner — device review
 
-Code PRs cannot merge without a look on device (§ Merging PRs). This is the queue.
+**No open PRs.** #540 merged at 00:13 UTC (squash `fd741db`), which empties the code queue for the
+first time today — #541 through #547 all landed earlier.
 
-| PR | What it is | Build to install | Also needs |
-|---|---|---|---|
-| [#540](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/540) | Create-a-tour becomes a five-step wizard (Location → Details → Photos → Audio → Review). Closes the draft-autosave gap. | ⚠️ **A build of the merge** — see below | Then it is mergeable |
+| Build | What it carries | State |
+|---|---|---|
+| **91** | **The first build from `main` with everything today together** — the wizard, Settings, the list page, the 5:4 heroes and the place-layer fixes | ⏳ queued at 00:14 |
 
-✅ **THE SAVED-TOUR HANG IS CLOSED. Build 90 is owner-verified.** Eight builds, seven of which
-shipped the freeze (76, 77, 81, 84, 87, 88, 89), and six wrong diagnoses before it.
+**This is the build that closes the gap the board has been flagging all evening.** Until now no
+build carried `main`: 86 had only #544, 83 only #547, and 90 was the wizard branch cut from a base
+predating both. 91 is cut from `fd741db` and carries all of it.
 
-**The cause:** `Map(position:)` bound to `.automatic` with nothing to frame — on the edit path only,
-because `centerOnUser` guarded on `existingTourId == nil` and so was skipped when editing. MapKit
-resolves a camera, writes back through the binding, re-renders, resolves again. A synchronous spin,
-which is what the watchdog kept killing.
+⚠️ **So the riskiest thing to check is not the wizard — it is the combination.** The merge resolved
+a real conflict in `MakerTourService.swift`, the file that talks to Supabase, and that resolution
+has never run on a device. CI is green on it (simulator build + unit tests), which proves it
+compiles and passes, not that it behaves.
 
-🔴 **The lesson is worth more than the bug, and it is now in `CLAUDE.md`: a crash log is ONE SAMPLE
-of a spin.** Six diagnoses were built from three different top frames of the same loop — toolbar
-bridge, then `PlatformViewChild` walking MKMapView's subtree, then presentation. Every one was a
-real frame and none was the cause. **Diff the working path against the broken one before trusting
-any stack.** Here that meant asking what differs on the edit path in the *first* render, which
-found the guard immediately.
+✅ **The saved-tour hang is closed** — owner-verified on build 90, and 91 carries the fix. Eight
+builds, seven of which shipped the freeze (76, 77, 81, 84, 87, 88, 89), six wrong diagnoses. Cause:
+`Map(position:)` bound to `.automatic` with nothing to frame, on the edit path only, because
+`centerOnUser` guarded on `existingTourId == nil`.
 
-⚠️ **BUT BUILD 90 NO LONGER REPRESENTS THIS BRANCH.** `main` was merged in at `a454a219`, with
-conflicts resolved in `CLAUDE.md`, **`MakerTourService.swift`**, and two archive files. That is a
-code merge, so the combination now on the branch — the wizard plus #544, #546 and #547 — **has
-never been built or run.** `CLAUDE.md` already carries this exact trap from PR #447: *when two
-branches fix the same bug, the merge needs its own build.* Cut one before merging.
+🔴 **The durable lesson, now in `CLAUDE.md`: a crash log is ONE SAMPLE of a spin.** Six diagnoses
+came from three different top frames of the same loop — toolbar bridge, `PlatformViewChild` walking
+MKMapView's subtree, presentation. Every frame was real; none was the cause. **Diff the working
+path against the broken one before trusting any stack.**
 
 ## 2. Blocked on owner — outside the repo
 
@@ -77,7 +76,8 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ✅ **owner-verified — hang closed** |
+| 91 | `main` (`fd741db`) | **Everything from today, together** — wizard, Settings, list page, 5:4 heroes | ⏳ queued |
+| 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ✅ owner-verified — hang closed |
 | 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | 🔴 hung — superseded |
 | 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | 🔴 **still hangs** |
 | 87 | `tour-upload-polish-qiliop` | #540 + a hang fix that did not work | 🔴 **still hangs** |
@@ -88,15 +88,13 @@ after dispatching; never promise one in advance.
 | 78 | `main` | #543 edge-to-edge bars | ✅ owner-verified |
 | 75 | `main` | post-#517 | ⚠️ superseded |
 
-⚠️ **No build carries current `main`.** #544, #546 and #547 all merged today; 86 carries only
-#544, 83 only #547, and 87 is the wizard branch cut from a base predating both. A build from
-`main` is the only way to see them together.
+✅ **Build 91 closes the no-build-carries-main gap** that stood open all evening.
 
 ## 4. Branches
 
 | Branch | State |
 |---|---|
-| `claude/tour-upload-polish-qiliop` | Open PR #540 |
+| `claude/tour-upload-polish-qiliop` | Merged (#540) — auto-delete should remove it |
 | `claude/stripe-questions-fjhdo3` | ⚠️ No PR — verify contents before deleting |
 | `claude/amsterdam-handoff-preserve-hlhyp8` | 🔒 Keep — only copy of staging pick-maps |
 | `claude/web-landing-site-preserve` | 🔒 Keep — only copy of the Next.js landing site |
