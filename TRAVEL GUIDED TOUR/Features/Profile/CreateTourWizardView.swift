@@ -1222,7 +1222,6 @@ struct CreateTourWizardView: View {
         }
     }
 
-    @ViewBuilder
     /// The last look before it goes to a moderator — **the tour's own page**.
     ///
     /// 🔴 Owner, 2026-08-20: *"why don't you just make the review a preview of
