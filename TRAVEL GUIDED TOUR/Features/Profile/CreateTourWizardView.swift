@@ -1334,14 +1334,21 @@ struct CreateTourWizardView: View {
     /// Deliberately ranked *below* `blockingHint`: when something is stopping
     /// you, that is the more urgent thing to read.
     private var stepGuidance: String? {
+        // ⚠️ ONE LINE EACH, AND THAT IS A HARD LIMIT, NOT A STYLE NOTE.
+        // The slot reserves exactly two lines — it has to be a constant height,
+        // or the footer's height becomes a moving layout input for everything
+        // above it — and a *blocking* reason can legitimately need both
+        // ("Pan the map to put the pin where the tour begins." is two).
+        // Guidance therefore gets one: about 44 characters at 13pt SF Mono in
+        // 345pt. Past that it doesn't wrap, it truncates mid-sentence.
         switch step {
         case .location:
-            return "The tour fires when a listener walks inside this circle."
+            // "Plays", not "fires" — a maker is not writing a trigger.
+            return "Plays when someone steps inside the circle."
         case .details:
-            // Says what the dimmed Next is waiting for *before* it is the only
-            // thing left — and that everything else here is optional, which is
-            // the owner's rule and not obvious from a screen of empty fields.
-            return "Only a title is required. The rest you can add any time."
+            // The owner's rule from 2026-08-19, and not something a screen of
+            // empty fields tells you on its own.
+            return "Only a title is required."
         case .tags, .photos, .audio, .review:
             return nil
         }
