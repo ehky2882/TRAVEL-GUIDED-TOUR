@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-20 02:47 UTC
+**Last verified:** 2026-08-20 03:13 UTC
 
 ---
 
@@ -22,7 +22,11 @@ numbers back from the Actions run list — never from what a PR body predicted.
 
 | PR | What it is | Build | Also needs |
 |---|---|---|---|
-| [#549](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/549) | **Library launch jitter + loading perf.** Lists were memory-only, so every launch made three network round-trips *awaited in sequence* and the tab re-laid-out twice in front of you. Now a per-account disk snapshot hydrated at init, with the three loads concurrent. Also replaces linear scans over 1,418 tours with dictionaries — those `by id` lookups run from ~20 sites per body evaluation. | ⏳ **92** building | A signed-in device: cold launch → Library → Lists should show its final shape immediately |
+| [#549](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/549) | **Library launch jitter + loading perf.** Lists were memory-only, so every launch made three network round-trips *awaited in sequence* and the tab re-laid-out twice in front of you. Now a per-account disk snapshot hydrated at init, with the three loads concurrent. Also replaces linear scans over 1,418 tours with dictionaries — those `by id` lookups run from ~20 sites per body evaluation. | ✅ **92** (6m22s) | A signed-in device: cold launch → Library → Lists should show its final shape immediately |
+
+**Build 92 is the one to install.** Cut from `17fb3fc`, the code commit; the branch has since moved
+to `73d1238`, which is **docs only** — so 92 is stale by SHA and not by substance. The
+`Build and upload to TestFlight` step passed, so the notes attached.
 
 ⚠️ **The jitter cannot be reproduced in the simulator** — it holds no session, so there are no lists
 to pop in. This one genuinely needs your phone.
@@ -110,7 +114,7 @@ after dispatching; never promise one in advance.
 |---|---|---|---|
 | 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
 | 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 92 | `library-launch-jitter` | #549 Library jitter + lookup perf | ⏳ building |
+| 92 | `library-launch-jitter` | #549 Library jitter + lookup perf (`17fb3fc`) | ✅ **install this** |
 | 91 | `main` (`fd741db`) | **Everything from today, together** — wizard, Settings, list page, 5:4 heroes | ✅ owner-verified |
 | 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ✅ owner-verified — hang closed |
 | 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | 🔴 hung — superseded |
