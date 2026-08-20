@@ -1,6 +1,7 @@
 import SwiftUI
 import MapKit
 import CoreLocation
+import Combine
 
 /// Making a tour, as five steps instead of one long form — Location, Details,
 /// Photos, Audio, Review — with a progress bar, a Back/Save/Next footer, and a
@@ -26,6 +27,15 @@ struct CreateTourWizardView: View {
     @Environment(MakerProfileService.self) private var makerProfileService
     @Environment(MakerTourService.self) private var makerTourService
     @Environment(LocationManager.self) private var locationManager
+    /// Only used to put the mini-player and tab bar back on the way out — the
+    /// primary restore lives in `MakerView`, which drives this from its own
+    /// presentation state. This is the second of three backstops, and the one
+    /// that cannot misfire: it runs when this view is genuinely gone.
+    /// Optional so the wizard still renders anywhere the full app environment
+    /// isn't present.
+    @Environment(AppSharedState.self) private var appShared: AppSharedState?
+    @Environment(BottomModuleWindowController.self)
+    private var bottomModuleWindow: BottomModuleWindowController?
     @Environment(\.dismiss) private var dismiss
 
     @State private var step: TourWizardStep = .location
@@ -56,22 +66,29 @@ struct CreateTourWizardView: View {
     @State private var cameraPosition: MapCameraPosition =
         .region(CreateTourWizardView.fallbackRegion)
     @State private var centerCoordinate: CLLocationCoordinate2D?
-    /// What the maker typed into "city & country", and what they picked.
-    @State private var cityQuery = ""
+    /// 🔴 ONE SEARCH FIELD, NOT TWO (owner, 2026-08-20). This used to be
+    /// "CITY & COUNTRY" above "LOCATION NAME", which was redundant: the job
+    /// here is to get the map onto the right spot, and a maker who types
+    /// "Casa da Música" has said everything the city field was asking for.
+    /// Two labelled fields cost 154pt to say what 46pt says.
+    ///
+    /// `venues()` is what makes one field enough — its completer returns
+    /// addresses *and* points of interest, so "Porto" and "Casa da Música"
+    /// both resolve, and `resolveDetails` hands back the locality and country
+    /// either way. Nothing is asked for twice.
+    @State private var locationQuery = ""
+    @State private var placeSearch = PlaceSearchService.venues()
+    /// Filled from whatever was resolved, never typed. `city` is persisted on
+    /// the tour; `resolvedPlaceName` only names the place on the Review step
+    /// and offers itself as the tour's title.
     @State private var city: String?
     @State private var country: String?
-    /// What they typed into "location name". Free text — a tour can be about
-    /// a place MapKit has never heard of, so a suggestion is an offer, not a
-    /// requirement.
-    @State private var locationName = ""
-    /// Whether each field's dropdown is showing. Deliberately not derived
-    /// from focus — tapping a row resigns focus, which would pull the row out
-    /// from under the tap before it registered.
-    @State private var showingCitySuggestions = false
+    @State private var resolvedPlaceName: String?
+    /// Whether the dropdown is showing. Deliberately not derived from focus —
+    /// tapping a row resigns focus, which would pull the row out from under
+    /// the tap before it registered.
     @State private var showingPlaceSuggestions = false
     @State private var isResolvingPlace = false
-    @State private var citySearch = PlaceSearchService.cities()
-    @State private var placeSearch = PlaceSearchService.venues()
 
     // Step 2 — details
     @State private var title = ""
@@ -80,12 +97,48 @@ struct CreateTourWizardView: View {
     @State private var selectedTags: Set<String> = []
     @State private var architect: String?
 
-    // Step 4 — audio
+    // Steps 5 and 6 — audio, then the transcript made from it
     @State private var transcript = ""
+    /// Writes the narration down on device. Lives here rather than in
+    /// `TourAudioSection` because the audio step starts it and the transcript
+    /// step reads it — it outlives both, and a recording that takes a minute to
+    /// transcribe must not be cancelled by walking to the next screen.
+    @State private var transcriber = AudioTranscriber()
+    /// Whether the maker has typed in the transcript box themselves.
+    ///
+    /// 🔴 The one thing standing between a maker and losing a sentence they
+    /// wrote. Transcription of a real tour outlasts the walk from step 5 to
+    /// step 6, so results routinely arrive *while* the box is on screen and
+    /// possibly being edited. Once this is true nothing automatic writes to
+    /// `transcript` again.
+    @State private var transcriptEdited = false
+    /// The recording as it sits on this device, kept so the maker can ask for
+    /// the transcript to be made again. Nil for a tour opened for editing —
+    /// its audio is on the server and was never here.
+    @State private var lastLocalAudioURL: URL?
+    /// Remembered across tours: a maker who narrates ten tours in Spanish
+    /// should say so once, not ten times.
+    @AppStorage("transcriptionLocale") private var transcriptionLocaleID = ""
+    /// The languages the recogniser handles, read once when the step appears.
+    @State private var supportedLocales: [Locale] = []
 
     // Flow
     @State private var isPersisting = false
     @State private var isSubmitting = false
+    /// Whether the write in flight is Save draft rather than Next. Both run
+    /// through `persist()` and both set `isPersisting`, so without this the
+    /// spinner appears on Next when you tapped Save — pointing at the wrong
+    /// button while it works.
+    @State private var isSavingInPlace = false
+    /// How tall the keyboard is, tracked by hand.
+    ///
+    /// The wizard sets `.ignoresSafeArea(.keyboard)` so the footer never rides
+    /// up the screen — which also means nothing inside it can learn the
+    /// keyboard's height from the safe area any more. So it listens instead.
+    @State private var keyboardHeight: CGFloat = 0
+    /// The footer's real height, measured. Needed to work out how much of the
+    /// keyboard actually covers the *step* rather than the footer.
+    @State private var footerHeight: CGFloat = 0
     @State private var errorMessage: String?
     /// Which confirmation is up, if any. Deliberately one modifier driven by
     /// an enum rather than two `confirmationDialog`s on the same view: stacking
@@ -113,7 +166,7 @@ struct CreateTourWizardView: View {
     @State private var savedConfirmation = false
     @FocusState private var focused: Field?
 
-    private enum Field { case city, place, title, short, long }
+    private enum Field { case place, title, short, long, transcript }
     private enum Outcome { case submitted, savedDraft }
     private enum Confirmation: Identifiable {
         case leaving, deleting
@@ -130,6 +183,27 @@ struct CreateTourWizardView: View {
         center: CLLocationCoordinate2D(latitude: 30, longitude: -20),
         span: MKCoordinateSpan(latitudeDelta: 90, longitudeDelta: 90)
     )
+
+    /// 🔴 THE ONE SWITCH. While the wizard is up the mini-player and tab bar
+    /// are withdrawn, which gives every step back the 126pt they occupy.
+    ///
+    /// The rule this serves: **no step of the wizard may scroll** (owner,
+    /// 2026-08-20) — anything that doesn't fit becomes another step instead. A
+    /// quarter of the screen held for controls that do nothing while you are
+    /// making a tour is the cheapest height there is to reclaim, and reclaiming
+    /// it is worth roughly two extra steps we then don't have to add.
+    ///
+    /// **Set this to `false` and the bars come back, with no other edit.** The
+    /// footer's clearance below reads it, the confirmation screen reads it, and
+    /// `MakerView` reads it when deciding whether to withdraw the module at
+    /// all. Nothing else in the app knows about it.
+    static let hidesBottomModule = true
+
+    /// How much room the footer must leave for the mini-player and tab bar —
+    /// their full height, or nothing when they're withdrawn.
+    private static var reservedBottomInset: CGFloat {
+        hidesBottomModule ? 0 : AtlasBottomModule.height()
+    }
 
     private static let radiusRange: ClosedRange<Double> = 15...100
     private static let titleLimit = 60
@@ -193,6 +267,11 @@ struct CreateTourWizardView: View {
             Text(confirmMessage)
         }
         .onAppear(perform: centerOnUser)
+        .onDisappear {
+            guard Self.hidesBottomModule else { return }
+            appShared?.hidesBottomModule = false
+            bottomModuleWindow?.setHidden(false)
+        }
         .task(id: existingTourId) { await loadExistingTour() }
     }
 
@@ -230,7 +309,10 @@ struct CreateTourWizardView: View {
         shortDescription = tour.shortDescription
         longDescription = tour.longDescription
         city = tour.city
-        cityQuery = tour.city ?? ""
+        // A saved tour keeps its city but not the search phrase that found it,
+        // so the field opens showing the city — enough to recognise, and
+        // re-searching replaces it.
+        locationQuery = tour.city ?? ""
 
         // Split the stored tags back into what the picker edits. The architect
         // is stored as a plain tag beside its implied "Designed by a Master";
@@ -278,58 +360,123 @@ struct CreateTourWizardView: View {
 
     // MARK: - Chrome
 
-    /// The bar the toolbar used to be: step name centred, Close or back on
+    /// The bar the toolbar used to be: where you are centred, the way out on
     /// the leading edge. Plain views in a plain HStack — see `body` for why
     /// this must never become a `.toolbar` again.
+    ///
+    /// Built from `AtlasChromeButton`, so it is the same control `TourDetailView`
+    /// closes with — that page is the canon for page chrome (owner,
+    /// 2026-08-20). The leading button used to be the word "Close", which was
+    /// the only spelled-out one in the app.
     private var header: some View {
         ZStack {
-            Text(step.label)
+            Text(stepTitle)
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.primaryText)
+                .lineLimit(1)
+                // Clear of the leading button and its mirror on the trailing
+                // side, so a long step name is truncated rather than run under
+                // the glyph.
+                .padding(.horizontal, AtlasChromeButton.diameter + AtlasSpacing.sm)
             HStack {
-                Button {
-                    if step == .location { closeTapped() } else { goBack() }
-                } label: {
-                    Group {
-                        if step == .location {
-                            Text("Close").font(AtlasTypography.caption)
-                        } else {
-                            Image(systemName: "chevron.left")
-                        }
-                    }
-                    .frame(minWidth: 44, minHeight: 44, alignment: .leading)
-                    .contentShape(Rectangle())
+                // X on every step, never a back chevron. Going back is the
+                // footer's job now, so the header means exactly one thing —
+                // get me out of here — which is also what it means on
+                // `TourDetailView`, the canon for page chrome.
+                Button { closeTapped() } label: {
+                    AtlasChromeButton("xmark")
                 }
                 .buttonStyle(.plain)
-                .tint(AtlasColors.primaryText)
-                .foregroundStyle(AtlasColors.primaryText)
-                .accessibilityLabel(step == .location ? "Close" : "Back")
+                .accessibilityLabel("Close")
                 Spacer()
             }
         }
         .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.top, AtlasSpacing.sm)
-        .frame(height: 52)
+        .padding(.vertical, AtlasSpacing.sm)
+        .frame(height: AtlasChromeButton.rowHeight)
+    }
+
+    /// "STEP 2 OF 5 — DETAILS". Counted off `allCases`, so adding or removing
+    /// a step can't leave the header claiming a total nobody has.
+    private var stepTitle: String {
+        "STEP \(step.rawValue + 1) OF \(TourWizardStep.allCases.count) — \(step.label)"
     }
 
     private var wizard: some View {
         VStack(spacing: 0) {
             header
             progressBar
-            ScrollView {
-                VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                    stepContent
-                    if let errorMessage {
-                        Text(errorMessage)
-                            .font(AtlasTypography.caption)
-                            .foregroundStyle(AtlasColors.mapPin)
+            // 🔴 A STEP IS A SCREENFUL, AND ITS ONE ELASTIC ELEMENT TAKES
+            // WHAT'S LEFT. No step may scroll (owner, 2026-08-20) — but a
+            // fixed height is a different height on every phone, which is the
+            // same trap that cropped the hero photograph 8% on one device and
+            // 23% on another. So nothing here is sized in absolute points if
+            // it can be sized by what remains.
+            //
+            // How it works: `minHeight: geo.size.height` makes the content at
+            // least a screenful, which gives the VStack a definite height to
+            // divide up — so a child asking for `maxHeight: .infinity` (the
+            // map, today) genuinely expands instead of collapsing to its ideal
+            // size, which is what happens to a flexible child in a plain
+            // ScrollView.
+            //
+            // ⚠️ The ScrollView stays, deliberately, as a safety valve. It has
+            // nothing to scroll when the step fits, so the rule holds; but a
+            // device or text size nobody anticipated gets a scroll rather than
+            // content silently clipped off the bottom. Given the choice
+            // between breaking the rule and hiding the Next button, break the
+            // rule.
+            GeometryReader { geo in
+                ScrollView {
+                    VStack(alignment: .leading, spacing: AtlasSpacing.md) {
+                        stepContent
+                        if let errorMessage {
+                            Text(errorMessage)
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.mapPin)
+                        }
                     }
+                    .padding(AtlasSpacing.lg)
+                    // 🔴 THE ELASTIC ELEMENT GIVES UP ITS OWN HEIGHT TO THE
+                    // KEYBOARD, rather than hiding behind it (owner decision,
+                    // 2026-08-20).
+                    //
+                    // Step 1 could ignore the keyboard entirely: its only text
+                    // field was the search bar at the top, so a keyboard over
+                    // the bottom half covered nothing anyone was looking at.
+                    // Step 2 is the first step whose tall field is at the
+                    // BOTTOM — and with the layout frozen, tapping into the
+                    // description put the caret behind the keyboard. Not a
+                    // scrolling problem: you could not see what you were
+                    // typing.
+                    //
+                    // Shrinking the region the step is laid out in makes the
+                    // elastic child absorb the loss, exactly as it absorbs the
+                    // difference between one phone and another. Description
+                    // goes 344 → about 140pt with the keyboard up, still four
+                    // times its minimum, and nothing scrolls.
+                    .frame(minHeight: max(0, geo.size.height - keyboardOverlap),
+                           alignment: .top)
                 }
-                .padding(AtlasSpacing.lg)
+                .scrollDismissesKeyboard(.interactively)
             }
-            .scrollDismissesKeyboard(.interactively)
         }
-        .safeAreaInset(edge: .bottom, spacing: 0) { footer }
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            // Measured rather than assumed: `keyboardOverlap` needs to know how
+            // much of the keyboard the footer is already standing in front of.
+            // Constant in practice — the hint line reserves two lines whether
+            // or not it has anything to say — so this settles once.
+            footer.onGeometryChange(for: CGFloat.self) { $0.size.height } action: { footerHeight = $0 }
+        }
+        .onReceive(NotificationCenter.default.publisher(
+            for: UIResponder.keyboardWillShowNotification)) { note in
+            let frame = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
+            withAnimation(.easeOut(duration: 0.22)) { keyboardHeight = frame?.height ?? 0 }
+        }
+        .onReceive(NotificationCenter.default.publisher(
+            for: UIResponder.keyboardWillHideNotification)) { _ in
+            withAnimation(.easeOut(duration: 0.22)) { keyboardHeight = 0 }
+        }
         // Deliberately here and not at the root — see `dismissGuarded`.
         .onChange(of: currentSignature, initial: true) { _, _ in
             dismissGuarded = outcome == nil && wouldLoseWork
@@ -339,6 +486,18 @@ struct CreateTourWizardView: View {
         }
         .onChange(of: draftId) { _, _ in
             dismissGuarded = outcome == nil && wouldLoseWork
+        }
+        // The recogniser writes as it goes, so this fires repeatedly while a
+        // recording is being transcribed. `applyTranscript` is what decides
+        // whether the words are welcome.
+        .onChange(of: transcriber.text) { _, words in
+            applyTranscript(words)
+        }
+        // Typing in the box, once, ends automatic writing for good. Compared
+        // against the transcriber's own text so that the writes it makes
+        // through `applyTranscript` don't count as the maker typing.
+        .onChange(of: transcript) { _, typed in
+            if typed != transcriber.text { transcriptEdited = true }
         }
         // The keyboard rises *over* the footer rather than shoving it up the
         // screen — otherwise Save progress and Next end up floating in the
@@ -412,6 +571,9 @@ struct CreateTourWizardView: View {
                 } else if let blockingHint {
                     Text(blockingHint)
                         .foregroundStyle(AtlasColors.tertiaryText)
+                } else if let stepGuidance {
+                    Text(stepGuidance)
+                        .foregroundStyle(AtlasColors.tertiaryText)
                 } else {
                     Text(" ")
                 }
@@ -419,52 +581,123 @@ struct CreateTourWizardView: View {
             .font(AtlasTypography.caption)
             .lineLimit(2, reservesSpace: true)
             .frame(maxWidth: .infinity, alignment: .leading)
+            // Back · Save · Next — three equal columns, three glyphs
+            // (owner, 2026-08-20). Nothing in this row is ever drawn as
+            // words; the strings passed in are what VoiceOver reads.
             HStack(spacing: AtlasSpacing.sm) {
-                Button { saveProgress() } label: {
-                    pill("Save progress", filled: false)
-                }
-                .buttonStyle(.plain)
-                .disabled(!canPersist || isPersisting || isSubmitting)
-                .opacity(canPersist ? 1 : 0.4)
+                footerButton("Back", icon: "chevron.left",
+                             enabled: step.previous != nil && !isBusy,
+                             action: goBack)
 
-                Spacer(minLength: 0)
+                footerButton("Save draft", icon: "tray.and.arrow.down",
+                             enabled: canPersist && !isBusy,
+                             busy: isSavingInPlace,
+                             action: saveProgress)
 
-                Button { primaryTapped() } label: {
-                    pill(primaryLabel, filled: true, busy: isPersisting || isSubmitting)
-                }
-                .buttonStyle(.plain)
-                .disabled(!canAdvance || isPersisting || isSubmitting)
-                .opacity(canAdvance ? 1 : 0.4)
+                footerButton(primaryLabel, icon: primaryIcon,
+                             filled: true,
+                             enabled: canAdvance && !isBusy,
+                             busy: isSubmitting || (isPersisting && !isSavingInPlace),
+                             action: primaryTapped)
             }
         }
         .padding(.horizontal, AtlasSpacing.lg)
         .padding(.top, AtlasSpacing.sm)
         // The mini-player and tab bar live in a higher window, so the footer
         // has to clear them itself — and the clearance must be *inside* the
-        // painted background, or the page scrolls visibly through it.
-        .padding(.bottom, AtlasSpacing.sm + AtlasBottomModule.height())
-        .background(AtlasColors.secondaryBackground)
+        // painted background, or the page scrolls visibly through it. Zero
+        // while they're withdrawn; see `hidesBottomModule`.
+        .padding(.bottom, AtlasSpacing.sm + Self.reservedBottomInset)
+        // The fill runs into the home-indicator strip while the content stays
+        // above it. Without the bars underneath, that strip is bare screen —
+        // and the step would be seen scrolling through it.
+        .background { AtlasColors.secondaryBackground.ignoresSafeArea(edges: .bottom) }
         .overlay(alignment: .top) {
             Rectangle().fill(AtlasColors.divider).frame(height: 0.5)
         }
     }
 
-    private func pill(_ text: String, filled: Bool, busy: Bool = false) -> some View {
-        HStack(spacing: 6) {
-            if busy { ProgressView().tint(filled ? AtlasColors.background : AtlasColors.primaryText) }
-            Text(text).font(AtlasTypography.caption)
-        }
-        .padding(.horizontal, AtlasSpacing.lg)
-        .padding(.vertical, 12)
-        .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
-        .background(filled ? AtlasColors.mapPin : AtlasColors.background)
-        .clipShape(Capsule())
-        .overlay {
-            if !filled {
-                Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1)
+    /// One of the footer's three columns.
+    ///
+    /// 🔴 EVERY BUTTON IN THIS ROW IS A GLYPH, ALWAYS (owner, 2026-08-20).
+    /// Not words-until-they-don't-fit: three icons, every step, so the row
+    /// never changes character between one step and the next.
+    ///
+    /// That is why there is no `ViewThatFits` here any more, and no measuring.
+    /// An earlier version chose words when words fitted — which, measured,
+    /// they always did on every current iPhone, so the row read as one word
+    /// flanked by two arrows and the fallback glyph was unreachable. A rule
+    /// with no exceptions needs no machinery to decide.
+    ///
+    /// The three are also always the same width: `maxWidth: .infinity` splits
+    /// the row in thirds and the capsule is painted across the whole of its
+    /// third, so no button can be bigger than its neighbours.
+    ///
+    /// ⚠️ `text` is still required, and is the accessibility label. A row of
+    /// three unlabelled glyphs is unusable with VoiceOver, so the words have
+    /// to survive even though nothing draws them.
+    private func footerButton(_ text: String,
+                              icon: String,
+                              filled: Bool = false,
+                              enabled: Bool,
+                              busy: Bool = false,
+                              action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Group {
+                if busy {
+                    // The spinner replaces the glyph rather than joining it —
+                    // two marks in one capsule reads as a mistake.
+                    ProgressView()
+                        .controlSize(.small)
+                        .tint(filled ? AtlasColors.background : AtlasColors.primaryText)
+                } else {
+                    Image(systemName: icon)
+                        .font(.system(size: 17, weight: .regular))
+                }
+            }
+            .padding(.vertical, 13)
+            .frame(maxWidth: .infinity)
+            .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
+            .background(filled ? AtlasColors.mapPin : AtlasColors.background)
+            .clipShape(Capsule())
+            .overlay {
+                if !filled {
+                    Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1)
+                }
             }
         }
+        .buttonStyle(.plain)
+        .disabled(!enabled)
+        // Dimmed rather than hidden — a disabled Back on step 1 shows that
+        // going back is a thing this row does, before there is anywhere to go.
+        .opacity(enabled ? 1 : 0.4)
+        .accessibilityLabel(text)
     }
+
+    /// A natural-width capsule. The confirmation screen's Done is the only one
+    /// left — the footer's three size themselves against each other instead.
+    private func pill(_ text: String, filled: Bool) -> some View {
+        Text(text)
+            .font(AtlasTypography.caption)
+            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.vertical, 12)
+            .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
+            .background(filled ? AtlasColors.mapPin : AtlasColors.background)
+            .clipShape(Capsule())
+    }
+
+    /// How far the keyboard reaches into the step's own area.
+    ///
+    /// The keyboard covers the bottom of the *screen*; the footer is already
+    /// standing in that space, unmoved, because the wizard ignores the
+    /// keyboard's safe area. Only what is left over eats into the step.
+    private var keyboardOverlap: CGFloat {
+        max(0, keyboardHeight - footerHeight)
+    }
+
+    /// Any write in flight. Every footer button waits on it — two of them
+    /// would otherwise start a second write over the first.
+    private var isBusy: Bool { isPersisting || isSubmitting || isDeleting }
 
     // MARK: - Steps
 
@@ -473,83 +706,110 @@ struct CreateTourWizardView: View {
         switch step {
         case .location: locationStep
         case .details:  detailsStep
+        case .tags:     tagsStep
         case .photos:   photosStep
         case .audio:    audioStep
+        case .transcript: transcriptStep
         case .review:   reviewStep
         }
     }
 
     private var locationStep: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                fieldLabel("CITY & COUNTRY")
-                TextField("e.g. Porto, Portugal", text: $cityQuery)
-                    .focused($focused, equals: .city)
-                    .autocorrectionDisabled()
-                    .onChange(of: cityQuery) { _, new in
-                        // Only a person typing opens the dropdown. Loading a
-                        // saved tour fills this field, and `pickCity` rewrites
-                        // it as "Porto, Portugal" — neither is a search, and
-                        // both used to re-open the list and set a completer
-                        // streaming results into a view mid-layout.
-                        guard focused == .city else { return }
-                        citySearch.search(new)
-                        showingCitySuggestions = true
-                        // Typing again after a pick means they're changing
-                        // their mind, so the old choice shouldn't linger.
-                        if new != cityLabel { city = nil; country = nil }
+            // No label. The placeholder says what the field is for — the same
+            // arrangement as the home search bar, which is what the owner
+            // asked this to match.
+            //
+            // The dropdown is an OVERLAY, not the next thing in the stack.
+            // Stacked, three suggestions push the map 150pt down and off the
+            // bottom of the screen, which is how the old two-field version
+            // broke the no-scrolling rule the moment anyone typed. Drawn over
+            // the map instead, it costs no layout at all.
+            locationSearchField
+                .zIndex(1)
+                .overlay(alignment: .topLeading) {
+                    if showingPlaceSuggestions, !placeSearch.suggestions.isEmpty {
+                        suggestionList(placeSearch.suggestions) { pickPlace($0) }
+                            .offset(y: AtlasSpacing.searchBarHeight + AtlasSpacing.xs)
                     }
-                    .onSubmit { showingCitySuggestions = false }
-                    .wizardFieldStyle()
-
-                if showingCitySuggestions, !citySearch.suggestions.isEmpty {
-                    suggestionList(citySearch.suggestions) { pickCity($0) }
                 }
-            }
 
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                fieldLabel("LOCATION NAME")
-                HStack(spacing: AtlasSpacing.sm) {
-                    TextField("e.g. The Old Custom House", text: $locationName)
-                        .focused($focused, equals: .place)
-                        .onChange(of: locationName) { _, new in
-                            guard focused == .place else { return }
-                            placeSearch.search(new)
-                            showingPlaceSuggestions = true
-                        }
-                        .onSubmit { showingPlaceSuggestions = false }
-                    if isResolvingPlace { ProgressView() }
-                }
-                .wizardFieldStyle()
+            // The map is this step's elastic element — see the container in
+            // `wizard`. Its instruction rides ON it rather than above it,
+            // which is 21pt the map keeps.
+            mapSection
+                .frame(minHeight: 200, maxHeight: .infinity)
 
-                if showingPlaceSuggestions, !placeSearch.suggestions.isEmpty {
-                    suggestionList(placeSearch.suggestions) { pickPlace($0) }
-                }
-            }
-
-            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
-                fieldLabel("PAN TO PLACE THE PIN")
-                mapSection
-            }
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("TRIGGER RADIUS — \(Int(radius)) m")
+                // No "15 m"/"100 m" end caps. The label already carries the
+                // live value, and a slider's ends are self-evident the moment
+                // you drag it — 21pt for something nobody reads twice.
                 Slider(value: $radius, in: Self.radiusRange, step: 5)
                     .tint(AtlasColors.mapPin)
-                HStack {
-                    Text("\(Int(Self.radiusRange.lowerBound)) m")
-                    Spacer()
-                    Text("\(Int(Self.radiusRange.upperBound)) m")
-                }
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
             }
-            Text("The tour fires when a listener walks inside this circle.")
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
+            // The line explaining the circle now lives in the footer's hint
+            // slot, which reserves two lines whether or not it has anything to
+            // say — see `stepGuidance`. Free real estate; the map gets it.
         }
     }
 
-    /// The dropdown under either place field. Deliberately not a `List` —
+    /// The home search bar's shape — capsule, magnifying glass, placeholder
+    /// inside — made editable.
+    ///
+    /// ⚠️ One deliberate difference from `SearchBar`: the fill is
+    /// `AtlasColors.background`, not `secondaryBackground`. On Home that bar
+    /// floats over the map, so the chrome colour reads against it; here the
+    /// page ground *is* `secondaryBackground`, and a bar in the same colour
+    /// would be invisible. Same shape, the fill the wizard's other fields use.
+    private var locationSearchField: some View {
+        HStack(spacing: AtlasSpacing.sm) {
+            Image(systemName: "magnifyingglass")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.secondaryText)
+
+            TextField("Search location", text: $locationQuery)
+                .font(AtlasTypography.caption)
+                .focused($focused, equals: .place)
+                .autocorrectionDisabled()
+                .submitLabel(.search)
+                .onChange(of: locationQuery) { _, new in
+                    // Only a person typing opens the dropdown. Loading a saved
+                    // tour fills this field, and `pickPlace` rewrites it —
+                    // neither is a search, and both used to re-open the list
+                    // and set a completer streaming results mid-layout.
+                    guard focused == .place else { return }
+                    placeSearch.search(new)
+                    showingPlaceSuggestions = true
+                    // Typing again after a pick means they are changing their
+                    // mind, so the old resolution shouldn't linger on Review.
+                    if new != resolvedPlaceName { resolvedPlaceName = nil }
+                }
+                .onSubmit { showingPlaceSuggestions = false }
+
+            if isResolvingPlace {
+                ProgressView()
+            } else if !locationQuery.isEmpty {
+                Button {
+                    locationQuery = ""
+                    resolvedPlaceName = nil
+                    placeSearch.clear()
+                    showingPlaceSuggestions = false
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(AtlasTypography.caption)
+                        .foregroundStyle(AtlasColors.tertiaryText)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("Clear the search")
+            }
+        }
+        .padding(.horizontal, AtlasSpacing.md)
+        .frame(height: AtlasSpacing.searchBarHeight)
+        .background(AtlasColors.background, in: Capsule())
+    }
+
+    /// The dropdown under the place field. Deliberately not a `List` —
     /// it sits inside the step's own scroll view, and a nested scrolling
     /// list there fights the page for the drag.
     private func suggestionList(_ suggestions: [PlaceSuggestion],
@@ -586,67 +846,72 @@ struct CreateTourWizardView: View {
         .shadow(color: .black.opacity(0.12), radius: 8, y: 3)
     }
 
-    /// Picking a city fills the field, frames the map on it, and biases the
-    /// location-name lookup — so "the old custom house" means the one there,
-    /// not the nearest one to wherever the maker happens to be sitting.
-    private func pickCity(_ suggestion: PlaceSuggestion) {
-        focused = nil
-        showingCitySuggestions = false
-        citySearch.clear()
-        Task {
-            guard let place = await citySearch.resolveDetails(suggestion) else { return }
-            city = place.locality ?? suggestion.title
-            country = place.country
-            cityQuery = cityLabel
-            placeSearch.regionBias = place.region
-            // A new city invalidates the old pin — it would otherwise sit
-            // hundreds of miles away, quietly, on a map framed elsewhere.
-            locationName = ""
-            placeSearch.clear()
-            showingPlaceSuggestions = false
-            cameraPosition = .region(place.region)
-            centerCoordinate = place.coordinate
-        }
-    }
-
-    /// Picking a named place drops the pin on it. The field stays editable
-    /// afterwards: the suggestion is a shortcut, not a commitment.
+    /// Picking a suggestion drops the pin on it and fills in everything the
+    /// two fields used to ask for separately.
+    ///
+    /// It handles a city and a building with the same code because
+    /// `resolveDetails` answers the same shape for both: a coordinate to pin,
+    /// a region to frame, and the locality and country underneath it. Search
+    /// "Porto" and you get the city framed with `city` filled; search "Casa da
+    /// Música" and you get the building framed with `city` filled from the
+    /// address it sits at. The maker never types Porto twice.
+    ///
+    /// The field stays editable afterwards — a suggestion is a shortcut, not a
+    /// commitment, and a tour can be about somewhere the map has never heard
+    /// of.
     private func pickPlace(_ suggestion: PlaceSuggestion) {
         focused = nil
         showingPlaceSuggestions = false
-        locationName = suggestion.title
+        locationQuery = suggestion.title
+        resolvedPlaceName = suggestion.title
         placeSearch.clear()
         isResolvingPlace = true
         Task {
             defer { isResolvingPlace = false }
             guard let place = await placeSearch.resolveDetails(suggestion) else { return }
             centerCoordinate = place.coordinate
-            // Frame tightly — the maker is checking the pin is on the right
-            // building, not browsing the neighbourhood.
-            cameraPosition = .region(MKCoordinateRegion(
-                center: place.coordinate,
-                latitudinalMeters: 400,
-                longitudinalMeters: 400
-            ))
-            if city == nil, let locality = place.locality {
-                city = locality
-                country = place.country
-                cityQuery = cityLabel
-            }
+            cameraPosition = .region(Self.framing(place))
+            // Later searches rank near what was just found, so a maker working
+            // through one city doesn't get the other side of the world.
+            placeSearch.regionBias = place.region
+            city = place.locality
+            country = place.country
         }
     }
 
-    /// What the Review step calls the place: the name if one was given, the
-    /// city if not, and an honest "Not named" rather than a blank row.
-    private var whereSummary: String {
-        let parts = [locationName.isEmpty ? nil : locationName,
-                     cityLabel.isEmpty ? nil : cityLabel].compactMap { $0 }
-        return parts.isEmpty ? "Not named" : parts.joined(separator: ", ")
+    /// How tightly to frame a resolved place.
+    ///
+    /// A specific place gets 400m — the maker is checking the pin is on the
+    /// right door, not browsing. A city or a district keeps the region MapKit
+    /// derived for it, because framing Porto at 400m drops them on one
+    /// arbitrary street with no way of telling which.
+    ///
+    /// ⚠️ The two are told apart by **how big the resolved region is**, not by
+    /// what the placemark calls itself. `locality` is the obvious-looking
+    /// discriminator and it does not work: a resolved city reports its own
+    /// name as the locality exactly as a building in that city does. The
+    /// region does distinguish them — `PlaceSearchService.region(for:)` sizes
+    /// it from the placemark's own radius, so a POI lands on its 1km floor
+    /// while a city comes back several km across.
+    private static func framing(_ place: ResolvedPlace) -> MKCoordinateRegion {
+        let metresAcross = place.region.span.latitudeDelta * 111_000
+        guard metresAcross <= 2_000 else { return place.region }
+        return MKCoordinateRegion(center: place.coordinate,
+                                  latitudinalMeters: 400,
+                                  longitudinalMeters: 400)
     }
 
-    /// "Porto, Portugal" — what the field shows once a city is chosen.
-    private var cityLabel: String {
-        [city, country].compactMap { $0 }.joined(separator: ", ")
+    /// What the place would call the tour, if the maker hasn't named it.
+    /// Offered on the way out of step 1, never imposed.
+    ///
+    /// A typed-but-unpicked phrase counts — someone who typed the building's
+    /// name and then panned to it by hand meant it just as much. A search for
+    /// the *city* does not: "Porto" is where a tour is, not what it is called,
+    /// and a catalogue of tours named after their cities helps nobody.
+    private var suggestedTitle: String {
+        let named = resolvedPlaceName
+            ?? locationQuery.trimmingCharacters(in: .whitespacesAndNewlines)
+        return named == city ? "" : named
     }
 
     private var mapSection: some View {
@@ -657,7 +922,9 @@ struct CreateTourWizardView: View {
                     .stroke(AtlasColors.mapPin, lineWidth: 2)
             }
         }
-        .frame(height: 280)
+        // No height here — the caller sizes it, because on this step the map
+        // is what absorbs whatever the screen has left over. That is 400pt on
+        // a 6.3" phone and 288 on an SE, against a flat 280 before.
         .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
         .overlay {
             // Fixed centre pin — the map centre IS the chosen coordinate, so
@@ -666,6 +933,21 @@ struct CreateTourWizardView: View {
                 .font(.title)
                 .foregroundStyle(AtlasColors.mapPin)
                 .offset(y: -11)
+                .allowsHitTesting(false)
+        }
+        .overlay(alignment: .topLeading) {
+            // The instruction, on the map instead of above it. A solid fill
+            // rather than a material: map tiles are busy and light or dark
+            // depending on where in the world the maker is, and the app moved
+            // its chrome off materials for the same reason (PR #76).
+            Text("PAN TO PLACE THE PIN")
+                .font(AtlasTypography.caption)
+                .foregroundStyle(AtlasColors.primaryText)
+                .padding(.horizontal, AtlasSpacing.sm)
+                .padding(.vertical, 5)
+                .background(AtlasColors.background.opacity(0.9), in: Capsule())
+                .padding(AtlasSpacing.sm)
+                // Never eat a pan that starts on the label.
                 .allowsHitTesting(false)
         }
         .onMapCameraChange(frequency: .continuous) { context in
@@ -705,114 +987,297 @@ struct CreateTourWizardView: View {
                     .wizardFieldStyle()
             }
 
+            // ⚠️ THE LABELS STAY, and that is a deliberate departure from step
+            // 1, where the label went and the placeholder did its job. That
+            // worked because step 1 had ONE field with an obvious purpose.
+            // Three stacked text boxes are a different problem: a placeholder
+            // disappears the moment you type, so on coming back to the step —
+            // or editing the tour months later — there would be nothing to say
+            // which box is the one-liner and which is the description. The
+            // labels also carry the character countdowns, which have nowhere
+            // else sensible to live.
+
+            // This step's elastic element. The description is the thing a
+            // maker writes most in, so it takes whatever the screen has left:
+            // about 344pt on a 6.3" phone, which holds the entire 600-character
+            // limit without scrolling, and less on a smaller one.
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("DESCRIPTION", remaining: Self.longLimit - longDescription.count)
                 TextField("What this tour is about", text: $longDescription, axis: .vertical)
-                    .lineLimit(3...6)
                     .focused($focused, equals: .long)
+                    // Three lines at rest, two while the keyboard is up. On a
+                    // 6.3" phone there is room for eighteen either way, but an
+                    // SE with the keyboard showing has about 91pt for this
+                    // group — and a three-line floor is 83pt of that plus a
+                    // label, which is the one combination that would still
+                    // have scrolled.
+                    .lineLimit((keyboardHeight > 0 ? 2 : 3)...)
                     .onChange(of: longDescription) { _, new in
                         if new.count > Self.longLimit { longDescription = String(new.prefix(Self.longLimit)) }
                     }
+                    // Top-aligned inside the tall box: text that starts in the
+                    // middle of a 344pt field reads as a bug.
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                     .wizardFieldStyle()
+                    // ⚠️ Without this the box is a 344pt target of which only
+                    // the first line is tappable — a `TextField` sizes to its
+                    // text, so the empty space below it belongs to nothing.
+                    // Tapping anywhere in the painted box starts writing.
+                    .contentShape(Rectangle())
+                    .onTapGesture { focused = .long }
             }
-
-            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-                fieldLabel("TAGS — HOW YOUR TOUR IS FOUND")
-                ControlledTagPicker(selectedTags: $selectedTags, architect: $architect)
-            }
+            .frame(maxHeight: .infinity)
         }
+    }
+
+    /// Tags, on their own step since 2026-08-20 — see `TourWizardStep`.
+    ///
+    /// The picker fills the step because its open group is the elastic element,
+    /// the same shape as the map on Location and the description on Details.
+    /// Every group now opens with the page still fitting: the tallest, Theme,
+    /// needs 226pt and gets 242.
+    private var tagsStep: some View {
+        ControlledTagPicker(selectedTags: $selectedTags, architect: $architect)
+            .frame(maxHeight: .infinity)
     }
 
     @ViewBuilder
     private var photosStep: some View {
         if let draft {
-            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-                fieldLabel("PHOTOS — UP TO \(PhotoGridEditor.maxPhotos), THE FIRST IS THE COVER")
-                // Adding, framing, reordering and removing all happen here.
-                // There is no second screen for it — the step is the page.
-                PhotoGridEditor(tour: draft.tour)
-                    .id(draft.tour.id)
-            }
+            // No label. The header two lines above it already says PHOTOS, and
+            // the rest of what that label said — how many fit, which one is the
+            // cover — is now the COVER badge and the footer's count.
+            //
+            // Adding, framing, reordering and removing all happen here. There
+            // is no second screen for it — the step is the page.
+            PhotoGridEditor(tour: draft.tour)
+                .id(draft.tour.id)
         } else {
             missingDraftNotice
         }
     }
 
+    /// Recording, and nothing else (owner, 2026-08-20: *"i want everything to
+    /// happen on one page. drop the transcription window."*).
+    ///
+    /// The transcript box used to sit under the recorder, which put each in the
+    /// other's way: you cannot type while recording, and a live level meter is
+    /// poor company for a text field. It also made this the one step with no
+    /// elastic element — every height fixed — so reviewing a take came to 512pt
+    /// against an SE's 417 and ran off the bottom. With the box gone the
+    /// recorder simply takes the step.
     @ViewBuilder
     private var audioStep: some View {
         if let draft {
-            VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                TourAudioSection(tour: draft.tour,
-                                 onUploadStateChange: { audioUpload = $0 })
+            TourAudioSection(tour: draft.tour,
+                             onUploadStateChange: { audioUpload = $0 },
+                             onAudioReady: { localURL in
+                                 // Transcribe the file we still have on disk,
+                                 // not the copy that just went up: it is right
+                                 // here, and the uploaded one would have to be
+                                 // fetched back to be read.
+                                 startTranscription(of: localURL)
+                             })
+                // Centred, not top-aligned. With the transcript box gone this
+                // step holds one button most of the time, and 75pt of controls
+                // pinned to the top of 529pt of nothing reads as a screen that
+                // failed to load. Centring also keeps the record button in the
+                // same place whether or not audio is already attached.
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+        } else {
+            missingDraftNotice
+        }
+    }
 
-                VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+    /// The words, already written down — a step you correct rather than fill.
+    ///
+    /// ⚠️ **An arriving transcript never overwrites typing.** `applyTranscript`
+    /// is the only writer and it refuses when the box has been edited, because
+    /// a maker who starts typing while the recogniser is still working would
+    /// otherwise watch their sentence be replaced by a machine's. Late results
+    /// are the normal case, not the edge one: transcription of a three-minute
+    /// recording outlives the walk from step 5 to step 6.
+    @ViewBuilder
+    private var transcriptStep: some View {
+        if draft != nil {
+            VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
+                HStack(spacing: AtlasSpacing.sm) {
                     fieldLabel("TRANSCRIPT — OPTIONAL")
-                    TextField("The words spoken in the audio", text: $transcript, axis: .vertical)
-                        .lineLimit(4...12)
-                        .wizardFieldStyle()
-                    Text("Used for accessibility and search. It is saved when you submit.")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.tertiaryText)
+                    if transcriber.isWorking {
+                        ProgressView().controlSize(.small)
+                    }
                 }
+
+                TextField("The words spoken in the audio", text: $transcript, axis: .vertical)
+                    .lineLimit(2...200)
+                    .wizardFieldStyle()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                    // A tall field is only tappable on its first line — the
+                    // text sizes to itself and the space under it belongs to
+                    // nothing. Same fix as the description on step 2.
+                    .contentShape(Rectangle())
+                    .onTapGesture { focused = .transcript }
+                    .focused($focused, equals: .transcript)
+
+                // The same pair, in the same place, as the Audio step's — two
+                // 44pt buttons, both always drawn, dimmed when they don't
+                // apply. Steps 5 and 6 are the two halves of one job and
+                // should read as siblings rather than as two designs.
+                HStack(spacing: AtlasSpacing.sm) {
+                    languageMenu
+                    AtlasPillButton(title: "Transcribe again",
+                                    systemImage: "arrow.clockwise",
+                                    enabled: lastLocalAudioURL != nil && !transcriber.isWorking) {
+                        retranscribe()
+                    }
+                }
+
+                // Two lines, reserved whether or not there is anything to
+                // say — as on the Audio step, and for the same reason: the
+                // note comes and goes as the recogniser works, and an
+                // unreserved slot would resize the box exactly as the words
+                // landed in it.
+                Text(transcriptNote ?? " ")
+                    .font(AtlasTypography.caption)
+                    .foregroundStyle(transcriber.phase.isFailure
+                                     ? AtlasColors.secondaryText
+                                     : AtlasColors.tertiaryText)
+                    .lineLimit(2, reservesSpace: true)
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
         } else {
             missingDraftNotice
         }
     }
 
+    /// The language the recogniser is listening for, said out loud, with the
+    /// list behind it.
+    ///
+    /// 🔴 STATING IT IS THE POINT; THE MENU IS SECONDARY. The device's language
+    /// is only a guess at the narration's, and tour makers are exactly the
+    /// people for whom the two differ — an English-set phone narrating in
+    /// Spanish is ordinary. Running the wrong model doesn't fail, it returns
+    /// fluent nonsense, so a maker who is never told which language was used
+    /// has no way to know anything went wrong. A button alone wouldn't fix
+    /// that: someone unaware of the problem never presses it. The name on
+    /// screen is what makes the mismatch visible.
+    ///
+    /// Changing it re-transcribes on the spot, because a language you picked
+    /// and then had to ask for again would be a setting pretending to be an
+    /// action.
+    @ViewBuilder
+    private var languageMenu: some View {
+        Menu {
+            // The device's own language leads, so the common case is one tap
+            // back rather than a hunt through forty entries.
+            Button("Match my phone") { chooseLanguage("") }
+            Divider()
+            ForEach(supportedLocales, id: \.identifier) { locale in
+                Button(AudioTranscriber.displayName(of: locale)) {
+                    chooseLanguage(locale.identifier)
+                }
+            }
+        } label: {
+            AtlasPillLabel(title: spokenLanguageName,
+                           systemImage: "globe",
+                           trailingImage: "chevron.down")
+        }
+        .disabled(transcriber.isWorking || supportedLocales.isEmpty)
+        .opacity(transcriber.isWorking || supportedLocales.isEmpty ? 0.35 : 1)
+        .task {
+            guard supportedLocales.isEmpty else { return }
+            supportedLocales = await AudioTranscriber.supportedLocales()
+        }
+    }
+
+    /// What to call the language on screen.
+    ///
+    /// Falls back to the phone's own name for its language when nothing has
+    /// been chosen — never to a blank or to "Default", either of which would
+    /// leave the maker unable to tell what was actually used.
+    private var spokenLanguageName: String {
+        // Short form: the button has half a row, and the region is the part
+        // worth losing — see `shortDisplayName`.
+        if !transcriptionLocaleID.isEmpty {
+            return AudioTranscriber.shortDisplayName(of: Locale(identifier: transcriptionLocaleID))
+        }
+        return AudioTranscriber.shortDisplayName(of: Locale.current)
+    }
+
+    /// What the step says about where the automatic transcript got to.
+    ///
+    /// A failure is written as an ordinary note in `secondaryText`, not in the
+    /// alarm colour: nothing has gone wrong for the maker — the box works, it
+    /// is simply empty, and the transcript was never required.
+    private var transcriptNote: String? {
+        switch transcriber.phase {
+        case .preparingModel:
+            return "Getting the language ready — first time only."
+        case .transcribing:
+            return "Writing down what you recorded…"
+        case .failed(let why):
+            return why
+        case .done, .idle:
+            return nil
+        }
+    }
+
+    /// The last look before it goes to a moderator — **the tour's own page**.
+    ///
+    /// 🔴 Owner, 2026-08-20: *"why don't you just make the review a preview of
+    /// the tour detail page? this one can be scrollable."* Right on both
+    /// counts, and it replaced two worse answers of mine in a row.
+    ///
+    /// First a **360pt hand-built mock of the player** — a fake scrubber, a
+    /// fake play button — which had the flaw every mock has: it goes on saying
+    /// "this is how it will look" long after that has stopped being true. Then
+    /// a **checklist of the six steps**, which was honest and compact but
+    /// answered a different question: whether the form was filled in, not what
+    /// the thing looks like. `TourDetailView` in `.preview` mode answers the
+    /// real one, and cannot drift from the page it is previewing, because it
+    /// *is* that page.
+    ///
+    /// ⚠️ **This is the one step that scrolls, by explicit exception.** The
+    /// rule everywhere else is that a step fits — the whole wizard was rebuilt
+    /// around it. A tour page is as long as its description and its photos,
+    /// which is exactly what a maker has come here to look at; capping it would
+    /// mean previewing a truncation of their tour. The exception is granted for
+    /// this step and stays granted for this step.
+    ///
+    /// ⚠️ What the preview leaves out and why is documented on
+    /// `TourDetailView.Presentation` — chrome, the action row, stops, place and
+    /// nearby, and every side effect. The last matters most: the live page's
+    /// `onAppear` records the tour as recently viewed, which would put an
+    /// unpublished draft in the maker's own Home rail.
     @ViewBuilder
     private var reviewStep: some View {
         if let draft {
-            let tour = draft.tour
-            let photoCount = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
-                .filter { !$0.isEmpty }.count
             VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                fieldLabel("PREVIEW — HOW IT'LL LOOK IN THE APP")
-                previewCard(tour)
-                VStack(spacing: 0) {
-                    summaryRow("TITLE", tour.title, isLast: false)
-                    summaryRow("WHERE", whereSummary, isLast: false)
-                    summaryRow("PIN",
-                               String(format: "%.4f, %.4f", tour.centroidLatitude, tour.centroidLongitude),
-                               isLast: false)
-                    summaryRow("GEOFENCE", "\(Int(radius)) m", isLast: false)
-                    summaryRow("TAGS", tour.tags.isEmpty ? "None" : tour.tags.joined(separator: " · "),
-                               isLast: false)
-                    summaryRow("PHOTOS", photoCount == 0 ? "None" : "\(photoCount)", isLast: false)
-                    summaryRow("AUDIO", audioSummary(tour), isLast: existingTourId == nil)
-                    if existingTourId != nil {
-                        summaryRow("STATUS", draft.status.label, isLast: true)
-                    }
-                }
-                .background(AtlasColors.background)
-                .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+                // Full-bleed against the step's own padding: the page has its
+                // own gutters and would otherwise sit inside two.
+                // ⚠️ Live, not inert. Swiping the photographs and switching
+                // to the map are the two things a maker has come here to do,
+                // and both are safe — the sections the preview keeps read
+                // nothing but `locationManager` and `openURL`. The only
+                // control that would have taken them out of the wizard, GET
+                // DIRECTIONS, is dropped in preview mode.
+                //
+                // Full-bleed against the step's own padding: the page brings
+                // its own gutters and would otherwise sit inside two.
+                TourDetailView(tour: draft.tour, mode: .preview)
+                    .padding(.horizontal, -AtlasSpacing.lg)
 
                 Text(reviewFootnote)
                     .font(AtlasTypography.caption)
                     .foregroundStyle(AtlasColors.tertiaryText)
 
                 if existingTourId != nil {
-                    Button(role: .destructive) { confirming = .deleting } label: {
-                        HStack {
-                            Spacer()
-                            if isDeleting {
-                                ProgressView()
-                            } else {
-                                Label("Delete tour", systemImage: "trash")
-                                    .font(AtlasTypography.caption)
-                                    .foregroundStyle(AtlasColors.accent)
-                            }
-                            Spacer()
-                        }
-                        .padding(.vertical, AtlasSpacing.md)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: AtlasSpacing.sm)
-                                .stroke(AtlasColors.accent.opacity(0.5), lineWidth: 1)
-                        )
+                    AtlasPillButton(title: isDeleting ? "Deleting…" : "Delete tour",
+                                    systemImage: "trash",
+                                    destructive: true,
+                                    enabled: !isDeleting) {
+                        confirming = .deleting
                     }
-                    .buttonStyle(.plain)
-                    .disabled(isDeleting)
-                    .padding(.top, AtlasSpacing.sm)
                 }
             }
         } else {
@@ -820,136 +1285,12 @@ struct CreateTourWizardView: View {
         }
     }
 
-    /// A still of the player, so the maker sees what a listener sees before
-    /// committing. Deliberately inert — it is a picture of the app, not a
-    /// second place to play the audio.
-    private func previewCard(_ tour: Tour) -> some View {
-        let images = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
-            .filter { !$0.isEmpty }
-        let blurb = longDescription.isEmpty ? shortDescription : longDescription
-        return VStack(spacing: 0) {
-            ZStack(alignment: .bottom) {
-                if let hero = images.first {
-                    HeroImageView(imageName: hero, height: 200,
-                                  cornerRadius: 0, category: tour.primaryCategory)
-                } else {
-                    Rectangle()
-                        .fill(AtlasColors.secondaryBackground)
-                        .frame(height: 200)
-                        .overlay(
-                            Text("No cover photo yet")
-                                .font(AtlasTypography.caption)
-                                .foregroundStyle(AtlasColors.tertiaryText)
-                        )
-                }
-                if images.count > 1 {
-                    HStack(spacing: 4) {
-                        ForEach(0..<images.count, id: \.self) { index in
-                            Circle()
-                                .fill(Color.white.opacity(index == 0 ? 1 : 0.5))
-                                .frame(width: 5, height: 5)
-                        }
-                    }
-                    .padding(.bottom, AtlasSpacing.sm)
-                }
-            }
-
-            VStack(spacing: AtlasSpacing.xs) {
-                Text("NOW PLAYING")
-                    .font(.system(size: 11, weight: .regular, design: .monospaced))
-                    .foregroundStyle(AtlasColors.tertiaryText)
-                Text(persistedTitle)
-                    .font(AtlasTypography.body)
-                    .foregroundStyle(AtlasColors.primaryText)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(2)
-                Text(blurb.isEmpty ? "Add a description to see it here." : blurb)
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.secondaryText)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(2)
-                    .padding(.bottom, AtlasSpacing.xs)
-
-                Capsule()
-                    .fill(AtlasColors.tertiaryText.opacity(0.3))
-                    .frame(height: 3)
-                    .overlay(alignment: .leading) {
-                        GeometryReader { geo in
-                            Capsule()
-                                .fill(AtlasColors.mapPin)
-                                .frame(width: geo.size.width * 0.06, height: 3)
-                        }
-                        .frame(height: 3)
-                    }
-                HStack {
-                    Text("0:00")
-                    Spacer()
-                    Text(tour.totalDurationSeconds > 0
-                         ? AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
-                         : "—")
-                }
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.tertiaryText)
-                .padding(.bottom, AtlasSpacing.xs)
-
-                HStack {
-                    Text("1x")
-                        .font(AtlasTypography.caption)
-                        .foregroundStyle(AtlasColors.secondaryText)
-                        .padding(.horizontal, 8).padding(.vertical, 3)
-                        .overlay(Capsule().stroke(AtlasColors.tertiaryText.opacity(0.5), lineWidth: 1))
-                    Spacer()
-                    Image(systemName: "gobackward.10")
-                    Spacer()
-                    Image(systemName: "play.fill")
-                        .font(.system(size: 15))
-                        .foregroundStyle(AtlasColors.background)
-                        .frame(width: 44, height: 44)
-                        .background(AtlasColors.mapPin, in: Circle())
-                    Spacer()
-                    Image(systemName: "goforward.10")
-                    Spacer()
-                    Image(systemName: "forward.end.fill")
-                        .foregroundStyle(AtlasColors.tertiaryText)
-                }
-                .font(.system(size: 16))
-                .foregroundStyle(AtlasColors.primaryText)
-            }
-            .padding(AtlasSpacing.md)
-        }
-        .background(AtlasColors.background)
-        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
-        .allowsHitTesting(false)
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Preview of how this tour will look in the player")
-    }
-
+    /// Every step from Details on writes against a tour id, so until the
+    /// Location step has created the draft there is nothing for them to act on.
     private var missingDraftNotice: some View {
         Text("Go back to Location and place the pin first.")
             .font(AtlasTypography.caption)
             .foregroundStyle(AtlasColors.secondaryText)
-    }
-
-    private func summaryRow(_ key: String, _ value: String, isLast: Bool) -> some View {
-        HStack(alignment: .top, spacing: AtlasSpacing.md) {
-            Text(key)
-                .font(.system(size: 11, weight: .regular, design: .monospaced))
-                .foregroundStyle(AtlasColors.tertiaryText)
-            Spacer(minLength: 0)
-            Text(value)
-                .font(AtlasTypography.caption)
-                .foregroundStyle(AtlasColors.primaryText)
-                .multilineTextAlignment(.trailing)
-                .lineLimit(3)
-        }
-        .padding(.horizontal, AtlasSpacing.md)
-        .padding(.vertical, 12)
-        .overlay(alignment: .bottom) {
-            if !isLast {
-                Rectangle().fill(AtlasColors.divider).frame(height: 0.5)
-                    .padding(.leading, AtlasSpacing.md)
-            }
-        }
     }
 
     // MARK: - Outcome
@@ -979,7 +1320,7 @@ struct CreateTourWizardView: View {
 
             Button { dismiss() } label: { pill("Done", filled: true) }
                 .buttonStyle(.plain)
-                .padding(.bottom, AtlasBottomModule.height())
+                .padding(.bottom, Self.reservedBottomInset)
         }
         .frame(maxWidth: .infinity)
     }
@@ -1019,16 +1360,82 @@ struct CreateTourWizardView: View {
         TourWizardRules.blockingReason(for: step, state: wizardState)
     }
 
+    /// What the step would like the maker to know, once nothing is blocking.
+    ///
+    /// This is why the hint line reserves two lines whether or not it has
+    /// anything to say: the reservation was already being paid for — it keeps
+    /// the footer's height constant, which the sheet's layout depends on — so
+    /// explanatory copy that used to sit in the step itself now costs nothing.
+    /// Step 1's line about the geofence circle was 41pt of the map's space.
+    ///
+    /// Deliberately ranked *below* `blockingHint`: when something is stopping
+    /// you, that is the more urgent thing to read.
+    private var stepGuidance: String? {
+        // ⚠️ ONE LINE EACH, AND THAT IS A HARD LIMIT, NOT A STYLE NOTE.
+        // The slot reserves exactly two lines — it has to be a constant height,
+        // or the footer's height becomes a moving layout input for everything
+        // above it — and a *blocking* reason can legitimately need both
+        // ("Pan the map to put the pin where the tour begins." is two).
+        // Guidance therefore gets one: about 44 characters at 13pt SF Mono in
+        // 345pt. Past that it doesn't wrap, it truncates mid-sentence.
+        switch step {
+        case .location:
+            // "Plays", not "fires" — a maker is not writing a trigger.
+            return "Plays when someone steps inside the circle."
+        case .details:
+            // The owner's rule from 2026-08-19, and not something a screen of
+            // empty fields tells you on its own.
+            return "Only a title is required."
+        case .tags:
+            // Was three lines inside the picker, which cost it 55pt. Says what
+            // tags buy rather than demanding them: nothing here is required.
+            return "Tags are how people find your tour."
+        case .photos:
+            // The count line that used to sit under the grid. Silent while
+            // there are none, because `blockingHint` is saying something more
+            // useful then.
+            guard let tour = draft?.tour else { return nil }
+            let count = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
+                .filter { !$0.isEmpty }.count
+            guard count > 0 else { return nil }
+            return "\(count) of \(PhotoGridEditor.maxPhotos) · drag to reorder."
+        case .transcript:
+            // Says what it is for, since a box that filled itself invites the
+            // question. One line: about 44 characters.
+            return "Read it through — fix anything it misheard."
+        case .audio, .review:
+            return nil
+        }
+    }
+
+    /// What VoiceOver says for the primary button. **Never drawn** — the row
+    /// is glyphs — so it is free to be as long as it needs to be, and it says
+    /// the whole thing rather than the shortest thing that fits a capsule.
+    ///
+    /// Editing something already live is allowed — a maker shouldn't need an
+    /// admin to fix a typo — but it re-enters moderation rather than changing
+    /// under a listener mid-tour, and the label says so.
     private var primaryLabel: String {
         guard step == .review else { return "Next" }
         switch draft?.status {
-        case .inReview: return "In review"
-        // Editing something already live is allowed — a maker shouldn't need
-        // an admin to fix a typo — but it re-enters moderation rather than
-        // changing under a listener mid-tour.
+        case .inReview:  return "In review"
         case .published: return "Submit changes for review"
-        default:        return "Submit for review"
+        default:         return "Submit for review"
         }
+    }
+
+    /// The primary's glyph. A chevron on the way through the wizard, matching
+    /// Back; something else on Review, where the button stops meaning "next"
+    /// and starts meaning "hand this over".
+    ///
+    /// ⚠️ Review's glyph is doing more work than the others, because it is the
+    /// only irreversible-feeling tap in the flow — it puts the tour in front
+    /// of a moderator. A paper plane is the clearest "sent" the symbol set
+    /// has, and `reviewFootnote` sits directly above the row saying in words
+    /// what the row no longer can.
+    private var primaryIcon: String {
+        guard step == .review else { return "chevron.right" }
+        return draft?.status == .inReview ? "clock" : "paperplane.fill"
     }
 
     private var reviewFootnote: String {
@@ -1044,16 +1451,6 @@ struct CreateTourWizardView: View {
 
     /// The Audio row on Review, which carries the upload through rather than
     /// leaving the maker to guess whether it finished.
-    private func audioSummary(_ tour: Tour) -> String {
-        switch audioUpload {
-        case .uploading(let fraction): return "Uploading — \(Int(fraction * 100))%"
-        case .failed:                  return "Upload failed"
-        case .idle:
-            return tour.totalDurationSeconds > 0
-                ? AtlasFormatters.duration(seconds: tour.totalDurationSeconds)
-                : "None"
-        }
-    }
 
     /// Everything currently entered, as one comparable string. Close reads it
     /// to know whether there is unsaved work worth asking about.
@@ -1099,7 +1496,7 @@ struct CreateTourWizardView: View {
             || !shortDescription.isEmpty
             || !longDescription.isEmpty
             || !selectedTags.isEmpty
-            || !locationName.isEmpty
+            || !locationQuery.isEmpty
         return (draftId != nil || typedSomething) && hasUnsavedChanges && canPersist
     }
 
@@ -1130,8 +1527,8 @@ struct CreateTourWizardView: View {
     private func advance() {
         // The place they just named is nearly always what the tour is called.
         // Offered, not imposed: only when the title is still empty.
-        if step == .location, trimmedTitle.isEmpty, !locationName.isEmpty {
-            title = String(locationName.prefix(Self.titleLimit))
+        if step == .location, trimmedTitle.isEmpty, !suggestedTitle.isEmpty {
+            title = String(suggestedTitle.prefix(Self.titleLimit))
         }
         isPersisting = true
         Task {
@@ -1153,8 +1550,9 @@ struct CreateTourWizardView: View {
         focused = nil
         errorMessage = nil
         isPersisting = true
+        isSavingInPlace = true
         Task {
-            defer { isPersisting = false }
+            defer { isPersisting = false; isSavingInPlace = false }
             do {
                 try await persist()
                 withAnimation(.easeInOut(duration: 0.2)) { savedConfirmation = true }
@@ -1201,6 +1599,60 @@ struct CreateTourWizardView: View {
     /// Write what's been entered so far — creating the draft on the first call
     /// and updating it thereafter. Every Next and every Save progress runs
     /// through here, so there is one write path rather than one per step.
+
+    // MARK: - Transcription
+
+    /// Start writing down a recording the maker just made or imported.
+    ///
+    /// Only ever called with a file that is still on this device. A tour opened
+    /// for editing months later has its audio on the server and no local copy,
+    /// so it keeps whatever transcript it was saved with — re-fetching a few
+    /// megabytes to redo work already done would be the wrong trade.
+    private func startTranscription(of localURL: URL) {
+        lastLocalAudioURL = localURL
+        transcriber.preferredLocaleID = transcriptionLocaleID
+        // ⚠️ Words already in the box win, even against newer audio. Replacing
+        // the narration does make an existing transcript wrong — but it may be
+        // a transcript the maker wrote or corrected by hand, and no automatic
+        // process gets to throw that away. `retranscribe()` is how they ask.
+        guard !transcriptEdited else { return }
+        transcriber.transcribe(fileURL: localURL)
+    }
+
+    /// Make the transcript again from the recording, discarding what's in the
+    /// box. The one path that overwrites a maker's own words, and it exists
+    /// precisely so that the automatic path never has to.
+    /// Pick the language the narration is in, and act on it immediately.
+    ///
+    /// Empty means follow the phone. Choosing the language that is already in
+    /// use does nothing — re-running the same model over the same audio to get
+    /// the same words back would only look like an action that failed.
+    private func chooseLanguage(_ identifier: String) {
+        guard identifier != transcriptionLocaleID else { return }
+        transcriptionLocaleID = identifier
+        transcriber.preferredLocaleID = identifier
+        guard lastLocalAudioURL != nil else { return }
+        retranscribe()
+    }
+
+    private func retranscribe() {
+        guard let url = lastLocalAudioURL else { return }
+        transcript = ""
+        transcriptEdited = false
+        transcriber.transcribe(fileURL: url)
+    }
+
+    /// Put recognised words in the box, unless the maker has been typing.
+    ///
+    /// 🔴 The refusal is the point. Transcription outlives the walk from the
+    /// audio step to this one, so results arrive while the box is on screen —
+    /// and a maker who started typing would watch their sentence replaced.
+    /// Automatic text yields to a person, always, and never the other way.
+    private func applyTranscript(_ words: String) {
+        guard !transcriptEdited, !words.isEmpty else { return }
+        transcript = words
+    }
+
     private func persist() async throws {
         guard let coordinate = centerCoordinate else { return }
         let tags = finalTags
@@ -1268,6 +1720,11 @@ struct CreateTourWizardView: View {
     /// claiming unsaved work, on a pin nobody placed.
     private func centerOnUser() {
         guard let coord = locationManager.userLocation?.coordinate else { return }
+        // Rank search results near the maker before they've picked anything.
+        // Without a bias the completer answers from the whole world, so a
+        // maker in Porto searching "cathedral" is offered Cologne.
+        placeSearch.regionBias = MKCoordinateRegion(
+            center: coord, latitudinalMeters: 30_000, longitudinalMeters: 30_000)
         guard centerCoordinate == nil else { return }
         cameraPosition = .region(
             MKCoordinateRegion(center: coord, latitudinalMeters: 700, longitudinalMeters: 700)

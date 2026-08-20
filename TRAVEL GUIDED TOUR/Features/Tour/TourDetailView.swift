@@ -44,6 +44,41 @@ import MapKit
 struct TourDetailView: View {
     let tour: Tour
 
+    /// Whether this is the page itself or the maker's look at it before they
+    /// submit.
+    ///
+    /// 🔴 **THE WIZARD'S REVIEW STEP RENDERS THIS VIEW, NOT A DRAWING OF IT**
+    /// (owner, 2026-08-20: *"why don't you just make the review a preview of
+    /// the tour detail page?"*). It replaced a hand-built mock of the player —
+    /// a fake scrubber and a fake play button — which had the flaw every mock
+    /// has: it could go on saying "this is how it will look" long after it had
+    /// stopped being true. The same code cannot drift from itself.
+    ///
+    /// ⚠️ **`preview` MUST NOT TOUCH THE LIVE ENVIRONMENT.** The wizard is a
+    /// `fullScreenCover` and does not carry the fourteen services this screen
+    /// reads; a non-optional `@Environment` traps on *access*, so the preview
+    /// branch is structural rather than a flag sprinkled through one body — it
+    /// simply never mentions them. The sections it does show
+    /// (`topSection`, `masthead`, `descriptionSection`) were checked one by one
+    /// and read nothing beyond `locationManager` and `openURL`, which any
+    /// SwiftUI ancestor of the wizard has.
+    ///
+    /// What preview drops, and why each one:
+    /// - **chromeRow** — its ✕ calls `tourPresenter.dismiss()`, and there is no
+    ///   layer to dismiss; the wizard has its own header.
+    /// - **buttonRow** — Start tour, Buy, Download, Save. Live controls on an
+    ///   unpublished draft, all of them wrong before the tour exists.
+    /// - **stopsSection**, **placeSection**, **nearbyToursSection** — read
+    ///   `dataService` for a tour the catalogue has never heard of.
+    /// - **`.onAppear`** — 🔴 it calls `recentlyViewedStore.record(tour.id)`,
+    ///   which would put the maker's own unpublished draft in the Home rail,
+    ///   and `navState.push()`, which would leave the app believing a detail
+    ///   page is open after the wizard closes.
+    /// - **the ScrollView** — the wizard supplies its own, and nesting two is
+    ///   how a gesture stops belonging to either.
+    enum Presentation { case live, preview }
+    var mode: Presentation = .live
+
     @Environment(DataService.self) private var dataService
     @Environment(LibraryStore.self) private var libraryStore
     @Environment(AudioPlayerService.self) private var audioPlayer
@@ -134,6 +169,16 @@ struct TourDetailView: View {
     // the ordering bug it worked around are gone.
 
     var body: some View {
+        // Structural, not a flag: the preview branch must never *mention* the
+        // live environment values, because a non-optional `@Environment` traps
+        // when read and the wizard carries almost none of them.
+        switch mode {
+        case .preview: detailContent
+        case .live:    liveBody
+        }
+    }
+
+    private var liveBody: some View {
         scrollBody
             // `.safeAreaInset(.top)` parks the chromeRow above the
             // ScrollView's content area: the row stays anchored at
@@ -207,17 +252,23 @@ struct TourDetailView: View {
     }
 
     /// Sticky top chrome — X close (leading) · Save · overflow
-    /// (trailing). Renders three discrete `chromeCapsule`-styled
-    /// buttons matching the inline action row's secondary
-    /// (save/download) buttons: 44×44 Capsule with
-    /// `AtlasColors.mapPin.opacity(0.15)` fill + 20pt regular SF
-    /// Symbol in `mapPin` gold. The row sits at the top of the
-    /// body (outside the ScrollView) so it stays put while the
-    /// content scrolls underneath.
+    /// (trailing), each an `AtlasChromeButton`. The row sits at the
+    /// top of the body (outside the ScrollView) so it stays put
+    /// while the content scrolls underneath.
+    ///
+    /// **This row is the app's canonical page chrome** (owner,
+    /// 2026-08-20): the place, list and wizard headers all match it.
+    /// Change the button here and it changes everywhere, which is
+    /// the point of `AtlasChromeButton` — three private copies of it
+    /// used to live in those three files.
+    ///
+    /// (An earlier version of this comment described the buttons as
+    /// gold on a `mapPin.opacity(0.15)` fill. They have never been:
+    /// the glyph is `primaryText` on `tertiaryText.opacity(0.18)`.)
     private var chromeRow: some View {
         HStack(spacing: AtlasSpacing.sm) {
             Button(action: { tourPresenter.dismiss() }) {
-                chromeCapsule("xmark")
+                AtlasChromeButton("xmark")
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Close")
@@ -225,7 +276,7 @@ struct TourDetailView: View {
             Spacer()
 
             Button(action: toggleSaved) {
-                chromeCapsule(isSaved ? "bookmark.fill" : "bookmark")
+                AtlasChromeButton(isSaved ? "bookmark.fill" : "bookmark")
             }
             .buttonStyle(.plain)
             .accessibilityLabel(saveActions.accessibilityLabel(tour.id))
@@ -239,35 +290,7 @@ struct TourDetailView: View {
     /// Scrollable body content — everything below the chromeRow.
     private var scrollBody: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
-                // Owner-requested experiment (2026-07-06): swap the
-                // hero-only top for a GALLERY / MAP tab pair so the
-                // map is discoverable above the fold. The map's
-                // previous "Location" section below the stops list is
-                // gone (moved into the Map tab).
-                topSection
-                    .padding(.top, AtlasSpacing.md)
-
-                VStack(alignment: .leading, spacing: AtlasSpacing.md) {
-                    masthead
-                    buttonRow
-                        // VStack `md` (16) + this `sm` (8) on top *and*
-                        // bottom = 24pt visible above and below the
-                        // action row (owner-set, 2026-06-03). Asymmetric
-                        // breath above the row removed.
-                        .padding(.vertical, AtlasSpacing.sm)
-                    descriptionSection
-                    stopsSection
-                    placeSection
-                    nearbyToursSection
-                }
-                .padding(.horizontal, AtlasSpacing.lg)
-
-                // Bottom inset so the last line of content clears the
-                // mini-player + tab bar that float over this view from
-                // the secondary higher-level window.
-                Color.clear.frame(height: AtlasBottomModule.height())
-            }
+            detailContent
         }
         // Pre-fetch the walking route on tour load, so switching to
         // the Map tab renders the polyline instantly (was on the Map
@@ -275,6 +298,50 @@ struct TourDetailView: View {
         // round-trip). No-op on single-stop tours.
         .task(id: tour.id) {
             await loadWalkingRoute()
+        }
+    }
+
+    /// The page's content, without the scroll around it.
+    ///
+    /// Split out so the wizard's review step can render it inside its own
+    /// ScrollView rather than nesting one inside another.
+    private var detailContent: some View {
+        VStack(alignment: .leading, spacing: AtlasSpacing.lg) {
+            // Owner-requested experiment (2026-07-06): swap the
+            // hero-only top for a GALLERY / MAP tab pair so the
+            // map is discoverable above the fold. The map's
+            // previous "Location" section below the stops list is
+            // gone (moved into the Map tab).
+            topSection
+                .padding(.top, AtlasSpacing.md)
+
+            VStack(alignment: .leading, spacing: AtlasSpacing.md) {
+                masthead
+                if mode == .live {
+                    buttonRow
+                        // VStack `md` (16) + this `sm` (8) on top *and*
+                        // bottom = 24pt visible above and below the
+                        // action row (owner-set, 2026-06-03). Asymmetric
+                        // breath above the row removed.
+                        .padding(.vertical, AtlasSpacing.sm)
+                }
+                descriptionSection
+                if mode == .live {
+                    stopsSection
+                    placeSection
+                    nearbyToursSection
+                }
+            }
+            .padding(.horizontal, AtlasSpacing.lg)
+
+            // Bottom inset so the last line of content clears the
+            // mini-player + tab bar that float over this view from
+            // the secondary higher-level window. The wizard hides that
+            // module, so a preview reserving its height would be 126pt
+            // of dead screen.
+            if mode == .live {
+                Color.clear.frame(height: AtlasBottomModule.height())
+            }
         }
     }
 
@@ -304,7 +371,11 @@ struct TourDetailView: View {
                     mapContent
                 }
             }
-            getDirectionsLink
+            // A listener's action, not a maker's. Taking someone out of the
+            // wizard into Maps, mid-submission, is not a preview of anything.
+            if mode == .live {
+                getDirectionsLink
+            }
         }
     }
 
@@ -1378,7 +1449,7 @@ struct TourDetailView: View {
                 }
             }
         } label: {
-            chromeCapsule("ellipsis")
+            AtlasChromeButton("ellipsis")
                 .accessibilityLabel("More options")
         }
     }
@@ -1389,14 +1460,6 @@ struct TourDetailView: View {
     /// reserved for the inline action row so the chrome's "navigate
     /// + manage" controls stay tonally separate from the chrome's
     /// "play this tour" controls (owner correction, 2026-06-03).
-    private func chromeCapsule(_ systemName: String) -> some View {
-        Image(systemName: systemName)
-            .font(.system(size: 20, weight: .regular))
-            .foregroundStyle(AtlasColors.primaryText)
-            .frame(width: 44, height: 44)
-            .background(Capsule().fill(AtlasColors.tertiaryText.opacity(0.18)))
-            .contentShape(Capsule())
-    }
 
     /// Menu-side label for the download item — mirrors the inline
     /// button's state so the menu reads as a parallel control surface.

@@ -270,7 +270,7 @@ struct TourListDetailView: View {
     private var chromeRow: some View {
         HStack(spacing: AtlasSpacing.sm) {
             Button { close() } label: {
-                chromeCapsule("xmark")
+                AtlasChromeButton("xmark")
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Close")
@@ -289,10 +289,8 @@ struct TourListDetailView: View {
             // neither is Liked, which nobody can save. See `showsBookmark`.
             if showsBookmark {
                 Button { toggleSaved() } label: {
-                    chromeCapsule(
-                        isSavedList ? "bookmark.fill" : "bookmark",
-                        enabled: canSave
-                    )
+                    AtlasChromeButton(isSavedList ? "bookmark.fill" : "bookmark",
+                                      enabled: canSave)
                 }
                 .buttonStyle(.plain)
                 .disabled(!canSave || isSaving)
@@ -319,20 +317,6 @@ struct TourListDetailView: View {
 
     /// Identical to tour detail's and the place page's, down to the fill
     /// opacity. Gold is reserved for action controls, so chrome stays neutral.
-    ///
-    /// `enabled: false` greys the **glyph only** — the capsule keeps its fill
-    /// and its 44pt frame, so a control that can't act still holds its place
-    /// in the row. The colour has to be stated here rather than left to
-    /// `.disabled()`: the glyph names `primaryText` explicitly, and SwiftUI
-    /// will not dim a colour a view has set for itself.
-    private func chromeCapsule(_ systemName: String, enabled: Bool = true) -> some View {
-        Image(systemName: systemName)
-            .font(.system(size: 20, weight: .regular))
-            .foregroundStyle(enabled ? AtlasColors.primaryText : AtlasColors.tertiaryText)
-            .frame(width: 44, height: 44)
-            .background(Capsule().fill(AtlasColors.tertiaryText.opacity(0.18)))
-            .contentShape(Capsule())
-    }
 
     // MARK: - Body
 
@@ -719,7 +703,7 @@ struct TourListDetailView: View {
     /// menu shows an item that would fail: RLS is the real gate, but offering
     /// Delete on a list you don't own would be a lie.
     ///
-    /// ⚠️ The label is `chromeCapsule("ellipsis")`, like every other chrome
+    /// ⚠️ The label is `AtlasChromeButton("ellipsis")`, like every other chrome
     /// control on this row — never a bare `ellipsis.circle`. That glyph draws
     /// its own ring, so it sits in no 44pt capsule and states no colour, which
     /// leaves it reading the environment accent and painting gold beside two
@@ -769,7 +753,7 @@ struct TourListDetailView: View {
                 }
             }
         } label: {
-            chromeCapsule("ellipsis")
+            AtlasChromeButton("ellipsis")
                 .accessibilityLabel("More options")
         }
     }

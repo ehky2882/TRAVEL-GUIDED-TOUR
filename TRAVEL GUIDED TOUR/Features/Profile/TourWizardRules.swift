@@ -1,7 +1,13 @@
 import Foundation
 import CoreLocation
 
-/// The five steps of making a tour, and the rules for leaving each one.
+/// The seven steps of making a tour, and the rules for leaving each one.
+///
+/// Tags were split out of Details on 2026-08-20. Details had four things in it
+/// and the fourth was the tag picker at 382pt closed — 691pt of content into a
+/// 529pt screen before anyone opened a group, and 907 after. The line to cut
+/// along was already in the picker's own copy: "tags are how people find your
+/// tour" is a different question from what the tour is.
 ///
 /// The rules live here as pure functions, following `SaveState`: the wizard is
 /// the only screen in the app where "can I go on?" has an answer per step, and
@@ -12,14 +18,16 @@ import CoreLocation
 /// either way. So the rules are testable without standing up a view, a
 /// service, or a Supabase row.
 enum TourWizardStep: Int, CaseIterable {
-    case location, details, photos, audio, review
+    case location, details, tags, photos, audio, transcript, review
 
     var label: String {
         switch self {
         case .location: return "LOCATION"
         case .details:  return "DETAILS"
+        case .tags:     return "TAGS"
         case .photos:   return "PHOTOS"
         case .audio:    return "AUDIO"
+        case .transcript: return "TRANSCRIPT"
         case .review:   return "REVIEW"
         }
     }
@@ -80,6 +88,15 @@ enum TourWizardRules {
             // bare.
             return state.trimmedTitle.isEmpty ? "A title is needed." : nil
 
+        case .tags:
+            // Nothing is required here, and that is the whole character of the
+            // step. Tags decide how well a tour is found, not whether it works
+            // — the catalogue's own validator treats a missing Place type or
+            // Theme as a warning, never an error (owner decision, 2026-08-19).
+            // Tags got a step of their own because the picker is 382pt tall,
+            // not because it earned a gate.
+            return nil
+
         case .photos:
             return state.hasCoverPhoto
                 ? nil
@@ -90,9 +107,33 @@ enum TourWizardRules {
                 ? nil
                 : "Record or import the narration."
 
+        case .transcript:
+            // Optional, like tags — and for a stronger reason than tags. The
+            // catalogue has always allowed a null `transcriptText`, the step
+            // arrives pre-filled by the on-device transcriber, and a maker
+            // whose language the transcriber doesn't cover must not be stopped
+            // at a box they'd have to type by hand. Gating here would make a
+            // convenience into an obstacle.
+            return nil
+
         case .review:
             if state.isAlreadyInReview {
                 return "Already with us — we'll let you know either way."
+            }
+            // 🔴 A TOUR COULD BE SUBMITTED WITH NO AUDIO. The earlier steps
+            // gate *advancing*, but the progress bar lets an existing tour
+            // jump straight to Review — so a maker who jumped here from step 1
+            // found Submit live on a tour with no narration and no cover, and
+            // this case never looked. Review is the last gate and has to
+            // re-ask every question, not just its own.
+            //
+            // The first unfinished step's reason is the one shown: it names
+            // something concrete to go and do, and the progress bar is one tap
+            // from doing it.
+            for earlier in TourWizardStep.allCases where earlier != .review {
+                if let reason = blockingReason(for: earlier, state: state) {
+                    return reason
+                }
             }
             // Reaching Review mid-upload is fine; submitting is not. The
             // audio can still be in flight while the maker reads the summary.

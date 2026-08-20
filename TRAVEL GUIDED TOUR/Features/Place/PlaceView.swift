@@ -106,7 +106,7 @@ struct PlaceView: View {
     private var chromeRow: some View {
         HStack(spacing: AtlasSpacing.sm) {
             Button(action: onDismiss) {
-                chromeCapsule("xmark")
+                AtlasChromeButton("xmark")
             }
             .buttonStyle(.plain)
             .accessibilityLabel("Close")
@@ -116,7 +116,7 @@ struct PlaceView: View {
             Button {
                 savedPlaces.toggleSaved(place.id)
             } label: {
-                chromeCapsule(isSaved ? "bookmark.fill" : "bookmark")
+                AtlasChromeButton(isSaved ? "bookmark.fill" : "bookmark")
             }
             .buttonStyle(.plain)
             .accessibilityLabel(isSaved ? "Remove \(place.name) from saved places" : "Save \(place.name)")
@@ -156,7 +156,7 @@ struct PlaceView: View {
                 }
             }
         } label: {
-            chromeCapsule("ellipsis")
+            AtlasChromeButton("ellipsis")
                 .accessibilityLabel("More options")
         }
     }
@@ -164,14 +164,6 @@ struct PlaceView: View {
     /// Shared visual for every top chrome control — identical to tour
     /// detail's, down to the fill opacity. Gold is reserved for action
     /// controls, so chrome stays neutral.
-    private func chromeCapsule(_ systemName: String) -> some View {
-        Image(systemName: systemName)
-            .font(.system(size: 20, weight: .regular))
-            .foregroundStyle(AtlasColors.primaryText)
-            .frame(width: 44, height: 44)
-            .background(Capsule().fill(AtlasColors.tertiaryText.opacity(0.18)))
-            .contentShape(Capsule())
-    }
 
     // MARK: - Body
 

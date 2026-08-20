@@ -157,11 +157,36 @@ final class TourWizardRulesTests: XCTestCase {
 
     func test_stepsRunInOrderAndStopAtBothEnds() {
         XCTAssertEqual(TourWizardStep.allCases,
-                       [.location, .details, .photos, .audio, .review])
+                       [.location, .details, .tags, .photos, .audio, .transcript, .review])
         XCTAssertNil(TourWizardStep.location.previous)
         XCTAssertNil(TourWizardStep.review.next)
         XCTAssertEqual(TourWizardStep.location.next, .details)
-        XCTAssertEqual(TourWizardStep.review.previous, .audio)
+        XCTAssertEqual(TourWizardStep.details.next, .tags)
+        XCTAssertEqual(TourWizardStep.tags.next, .photos)
+        XCTAssertEqual(TourWizardStep.audio.next, .transcript)
+        XCTAssertEqual(TourWizardStep.review.previous, .transcript)
+    }
+
+    /// The transcript gates nothing, and for a stronger reason than tags: the
+    /// catalogue has always allowed a null transcript, the step arrives
+    /// pre-filled by the on-device transcriber, and a maker whose language it
+    /// doesn't cover must not be stopped at a box they'd have to type by hand.
+    func test_transcript_neverBlocks() {
+        var state = completeState()
+        XCTAssertTrue(TourWizardRules.canAdvance(from: .transcript, state: state))
+        XCTAssertNil(TourWizardRules.blockingReason(for: .transcript, state: state))
+        // Not even with no audio to transcribe — Audio is where that is caught.
+        state.audioDurationSeconds = 0
+        XCTAssertTrue(TourWizardRules.canAdvance(from: .transcript, state: state))
+    }
+
+    /// Tags gate nothing. The step exists because the picker is too tall to
+    /// share a screen, not because a tour needs tags to be made.
+    func test_tags_neverBlocks() {
+        var state = completeState()
+        state.tags = []
+        XCTAssertTrue(TourWizardRules.canAdvance(from: .tags, state: state))
+        XCTAssertNil(TourWizardRules.blockingReason(for: .tags, state: state))
     }
 
     // MARK: - Coordinate equality
@@ -184,5 +209,81 @@ final class TourWizardRulesTests: XCTestCase {
                                                               longitude: -8.61099)))
         XCTAssertFalse(c.isEssentially(CLLocationCoordinate2D(latitude: 41.14961,
                                                               longitude: -8.61098)))
+    }
+}
+
+/// The tidy-up the on-device transcriber runs over what it recognises.
+///
+/// Pure string work, so it is testable without a microphone, a language model
+/// or a device — which is the whole of what can be tested here. Whether
+/// `SpeechAnalyzer` hears the words is a device question.
+final class AudioTranscriberTextTests: XCTestCase {
+
+    func test_tidied_collapsesRunsOfSpaces() {
+        XCTAssertEqual(AudioTranscriber.tidied("the   old   bridge"), "the old bridge")
+    }
+
+    func test_tidied_trimsEnds() {
+        XCTAssertEqual(AudioTranscriber.tidied("  stand here.  "), "stand here.")
+    }
+
+    func test_tidied_keepsLineBreaksButNotThePaddingAroundThem() {
+        XCTAssertEqual(AudioTranscriber.tidied("one line \n  next line"), "one line\nnext line")
+    }
+
+    func test_tidied_emptyStaysEmpty() {
+        XCTAssertEqual(AudioTranscriber.tidied("   \n  "), "")
+    }
+}
+
+/// Review is the last gate, so it has to re-ask every earlier question.
+///
+/// The earlier steps gate *advancing*, but the progress bar lets a tour that
+/// already exists jump straight here — so without this a maker could reach
+/// Review from step 1 and submit a tour with no narration.
+final class ReviewGateTests: XCTestCase {
+
+    private func readyState() -> TourWizardState {
+        var s = TourWizardState()
+        s.hasCoordinate = true
+        s.title = "The Old Cathedral"
+        s.hasCoverPhoto = true
+        s.audioDurationSeconds = 163
+        s.draftExists = true
+        return s
+    }
+
+    func test_review_allowsSubmitWhenEverythingRequiredIsThere() {
+        XCTAssertNil(TourWizardRules.blockingReason(for: .review, state: readyState()))
+    }
+
+    func test_review_blocksWhenNarrationIsMissing() {
+        var state = readyState()
+        state.audioDurationSeconds = 0
+        XCTAssertEqual(TourWizardRules.blockingReason(for: .review, state: state),
+                       "Record or import the narration.")
+    }
+
+    func test_review_blocksWhenTheCoverPhotoIsMissing() {
+        var state = readyState()
+        state.hasCoverPhoto = false
+        XCTAssertFalse(TourWizardRules.canAdvance(from: .review, state: state))
+    }
+
+    /// The earliest unfinished step wins, so the reason names the first thing
+    /// to go and do rather than an arbitrary one.
+    func test_review_reportsTheEarliestGap() {
+        var state = readyState()
+        state.hasCoordinate = false
+        state.audioDurationSeconds = 0
+        XCTAssertEqual(TourWizardRules.blockingReason(for: .review, state: state),
+                       "Pan the map to put the pin where the tour begins.")
+    }
+
+    /// Optional steps never block it — tags and the transcript gate nothing.
+    func test_review_ignoresTheOptionalSteps() {
+        var state = readyState()
+        state.tags = []
+        XCTAssertNil(TourWizardRules.blockingReason(for: .review, state: state))
     }
 }

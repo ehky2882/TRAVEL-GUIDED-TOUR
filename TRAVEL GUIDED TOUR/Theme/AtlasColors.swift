@@ -52,6 +52,22 @@ enum AtlasColors {
     /// `site/atlas.css` (`--brass`) in the same pass.
     static let brass = Color(red: 139 / 255, green: 117 / 255, blue: 53 / 255)
 
+    /// Deleting, failing, going wrong.
+    ///
+    /// ⚠️ **Not the accent.** `accent` is the brass, so a destructive control
+    /// painted with it is indistinguishable from the submit button beside it —
+    /// which is exactly what the wizard's Delete tour was until 2026-08-20: it
+    /// carried `Button(role: .destructive)` and then drew itself in
+    /// `AtlasColors.accent`, so the intent was right and the colour said the
+    /// opposite.
+    ///
+    /// ⚠️ Three older call sites still write `Color.red` by hand —
+    /// `TourStatus.takenDown`, `AtlasToast.error`, and the over-limit character
+    /// counter in `TourListEditorSheet`. Same value, so nothing looks wrong
+    /// today; they should read this token the next time any of them is touched,
+    /// per this file's own rule that no view hardcodes a colour.
+    static let destructive = Color.red
+
     /// Three-step text hierarchy. SwiftUI's semantic colors adapt
     /// to color scheme: primary is black in light mode and white
     /// in dark mode; secondary is a muted gray in both.
