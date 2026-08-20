@@ -40,6 +40,26 @@ struct PhotoGridEditor: View {
     @State private var errorMessage: String?
     /// Which tile a dragged photo would land on.
     @State private var dropTarget: String?
+    /// The grid's real width, measured once. Slot heights come from it rather
+    /// than from constants, so a slot is 4:3 on an SE as well as a 16 Pro —
+    /// the trap that cropped the hero photograph 8% on one device and 23% on
+    /// another. Zero until the first layout; the fallbacks below cover it.
+    @State private var gridWidth: CGFloat = 0
+
+    /// The cover slot, at the ratio photos are actually stored in.
+    ///
+    /// ⚠️ It used to be a flat 180pt, which against a 345pt width is 1.92:1 —
+    /// a shape matching NOTHING. Not what the framing tool produces (4:3), not
+    /// what the app displays (1:1). 180 was a round number.
+    private var coverHeight: CGFloat {
+        gridWidth > 0 ? gridWidth * 3 / 4 : 180
+    }
+
+    /// A thumbnail, three across, same 4:3.
+    private var thumbHeight: CGFloat {
+        guard gridWidth > 0 else { return 74 }
+        return ((gridWidth - AtlasSpacing.sm * 2) / 3) * 3 / 4
+    }
 
     init(tour: Tour) {
         self.tour = tour
@@ -77,13 +97,10 @@ struct PhotoGridEditor: View {
                     .foregroundStyle(AtlasColors.mapPin)
             }
 
-            if pendingCrop.isEmpty {
-                Text(urls.isEmpty
-                     ? "Tap a box to add photos. They're framed to 1200×900."
-                     : "\(urls.count) of \(Self.maxPhotos) · drag to reorder, the first is the cover.")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(AtlasColors.tertiaryText)
-            }
+            // The count-and-reorder line moved to the wizard's footer hint,
+            // which reserves its height whether or not it has anything to say.
+            // "The first is the cover" went with it — the COVER badge on the
+            // first slot teaches that better than a sentence does.
         }
         .onChange(of: picked) { _, items in loadPicked(items) }
     }
@@ -95,13 +112,48 @@ struct PhotoGridEditor: View {
     private var grid: some View {
         let columns = Array(repeating: GridItem(.flexible(), spacing: AtlasSpacing.sm), count: 3)
         return VStack(spacing: AtlasSpacing.sm) {
-            slot(index: 0, height: 180)
+            slot(index: 0, height: coverHeight)
             LazyVGrid(columns: columns, spacing: AtlasSpacing.sm) {
                 ForEach(1..<Self.maxPhotos, id: \.self) { index in
-                    slot(index: index, height: 74)
+                    slot(index: index, height: thumbHeight)
                 }
             }
         }
+        .onGeometryChange(for: CGFloat.self) { $0.size.width } action: { gridWidth = $0 }
+    }
+
+    /// 🔴 WHAT THE APP WILL ACTUALLY SHOW OF THIS PHOTO.
+    ///
+    /// Photos are framed and stored at **1200×900** — the framing tool says so
+    /// — but `AtlasSpacing.heroAspectRatio` is **1.0**, so every hero and every
+    /// carousel page in the app is a square taken from the middle. **25% of the
+    /// width is thrown away**, and until now nothing told the maker: a tower
+    /// comfortably in shot at 4:3 can be half gone in the app, with no error
+    /// and nothing that looks broken. The same shape of failure as the ten
+    /// Barcelona coordinates — correct-looking input, silently wrong output.
+    ///
+    /// So every slot draws the square, not just the cover (owner, 2026-08-20):
+    /// the carousel crops the gallery images exactly as hard as the hero.
+    ///
+    /// This changes nothing about what is stored. The gallery still uses the
+    /// full 4:3; the square is only what survives the hero-shaped surfaces.
+    private func squareGuide(side: CGFloat, labelled: Bool) -> some View {
+        RoundedRectangle(cornerRadius: 3)
+            .strokeBorder(AtlasColors.mapPin.opacity(0.85),
+                          style: StrokeStyle(lineWidth: 1, dash: [4, 3]))
+            .frame(width: side, height: side)
+            .overlay(alignment: .top) {
+                if labelled {
+                    Text("SHOWN IN THE APP")
+                        .font(.system(size: 10, weight: .regular, design: .monospaced))
+                        .foregroundStyle(AtlasColors.mapPin)
+                        .padding(.horizontal, 6)
+                        .padding(.vertical, 2)
+                        .background(AtlasColors.background.opacity(0.85), in: Capsule())
+                        .padding(.top, 5)
+                }
+            }
+            .allowsHitTesting(false)
     }
 
     @ViewBuilder
@@ -116,6 +168,10 @@ struct PhotoGridEditor: View {
     private func filledSlot(url: String, index: Int, height: CGFloat) -> some View {
         HeroImageView(imageName: url, height: height,
                       cornerRadius: AtlasSpacing.sm, category: tour.primaryCategory)
+            // Every slot, not only the cover — the carousel crops a gallery
+            // photo exactly as hard as it crops the hero. Labelled only on the
+            // cover; at thumbnail size the words would be bigger than the box.
+            .overlay { squareGuide(side: height, labelled: index == 0) }
             .overlay(alignment: .bottomLeading) {
                 if index == 0 {
                     Text("COVER")

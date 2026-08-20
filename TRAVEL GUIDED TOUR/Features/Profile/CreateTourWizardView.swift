@@ -1027,13 +1027,14 @@ struct CreateTourWizardView: View {
     @ViewBuilder
     private var photosStep: some View {
         if let draft {
-            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-                fieldLabel("PHOTOS — UP TO \(PhotoGridEditor.maxPhotos), THE FIRST IS THE COVER")
-                // Adding, framing, reordering and removing all happen here.
-                // There is no second screen for it — the step is the page.
-                PhotoGridEditor(tour: draft.tour)
-                    .id(draft.tour.id)
-            }
+            // No label. The header two lines above it already says PHOTOS, and
+            // the rest of what that label said — how many fit, which one is the
+            // cover — is now the COVER badge and the footer's count.
+            //
+            // Adding, framing, reordering and removing all happen here. There
+            // is no second screen for it — the step is the page.
+            PhotoGridEditor(tour: draft.tour)
+                .id(draft.tour.id)
         } else {
             missingDraftNotice
         }
@@ -1350,7 +1351,16 @@ struct CreateTourWizardView: View {
             // Was three lines inside the picker, which cost it 55pt. Says what
             // tags buy rather than demanding them: nothing here is required.
             return "Tags are how people find your tour."
-        case .photos, .audio, .review:
+        case .photos:
+            // The count line that used to sit under the grid. Silent while
+            // there are none, because `blockingHint` is saying something more
+            // useful then.
+            guard let tour = draft?.tour else { return nil }
+            let count = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
+                .filter { !$0.isEmpty }.count
+            guard count > 0 else { return nil }
+            return "\(count) of \(PhotoGridEditor.maxPhotos) · drag to reorder."
+        case .audio, .review:
             return nil
         }
     }
