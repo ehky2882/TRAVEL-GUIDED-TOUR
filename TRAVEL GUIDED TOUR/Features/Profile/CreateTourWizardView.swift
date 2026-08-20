@@ -1,6 +1,7 @@
 import SwiftUI
 import MapKit
 import CoreLocation
+import Combine
 
 /// Making a tour, as five steps instead of one long form — Location, Details,
 /// Photos, Audio, Review — with a progress bar, a Back/Save/Next footer, and a
@@ -107,6 +108,15 @@ struct CreateTourWizardView: View {
     /// spinner appears on Next when you tapped Save — pointing at the wrong
     /// button while it works.
     @State private var isSavingInPlace = false
+    /// How tall the keyboard is, tracked by hand.
+    ///
+    /// The wizard sets `.ignoresSafeArea(.keyboard)` so the footer never rides
+    /// up the screen — which also means nothing inside it can learn the
+    /// keyboard's height from the safe area any more. So it listens instead.
+    @State private var keyboardHeight: CGFloat = 0
+    /// The footer's real height, measured. Needed to work out how much of the
+    /// keyboard actually covers the *step* rather than the footer.
+    @State private var footerHeight: CGFloat = 0
     @State private var errorMessage: String?
     /// Which confirmation is up, if any. Deliberately one modifier driven by
     /// an enum rather than two `confirmationDialog`s on the same view: stacking
@@ -405,12 +415,46 @@ struct CreateTourWizardView: View {
                         }
                     }
                     .padding(AtlasSpacing.lg)
-                    .frame(minHeight: geo.size.height, alignment: .top)
+                    // 🔴 THE ELASTIC ELEMENT GIVES UP ITS OWN HEIGHT TO THE
+                    // KEYBOARD, rather than hiding behind it (owner decision,
+                    // 2026-08-20).
+                    //
+                    // Step 1 could ignore the keyboard entirely: its only text
+                    // field was the search bar at the top, so a keyboard over
+                    // the bottom half covered nothing anyone was looking at.
+                    // Step 2 is the first step whose tall field is at the
+                    // BOTTOM — and with the layout frozen, tapping into the
+                    // description put the caret behind the keyboard. Not a
+                    // scrolling problem: you could not see what you were
+                    // typing.
+                    //
+                    // Shrinking the region the step is laid out in makes the
+                    // elastic child absorb the loss, exactly as it absorbs the
+                    // difference between one phone and another. Description
+                    // goes 344 → about 140pt with the keyboard up, still four
+                    // times its minimum, and nothing scrolls.
+                    .frame(minHeight: max(0, geo.size.height - keyboardOverlap),
+                           alignment: .top)
                 }
                 .scrollDismissesKeyboard(.interactively)
             }
         }
-        .safeAreaInset(edge: .bottom, spacing: 0) { footer }
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            // Measured rather than assumed: `keyboardOverlap` needs to know how
+            // much of the keyboard the footer is already standing in front of.
+            // Constant in practice — the hint line reserves two lines whether
+            // or not it has anything to say — so this settles once.
+            footer.onGeometryChange(for: CGFloat.self) { $0.size.height } action: { footerHeight = $0 }
+        }
+        .onReceive(NotificationCenter.default.publisher(
+            for: UIResponder.keyboardWillShowNotification)) { note in
+            let frame = note.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect
+            withAnimation(.easeOut(duration: 0.22)) { keyboardHeight = frame?.height ?? 0 }
+        }
+        .onReceive(NotificationCenter.default.publisher(
+            for: UIResponder.keyboardWillHideNotification)) { _ in
+            withAnimation(.easeOut(duration: 0.22)) { keyboardHeight = 0 }
+        }
         // Deliberately here and not at the root — see `dismissGuarded`.
         .onChange(of: currentSignature, initial: true) { _, _ in
             dismissGuarded = outcome == nil && wouldLoseWork
@@ -606,6 +650,15 @@ struct CreateTourWizardView: View {
             .foregroundStyle(filled ? AtlasColors.background : AtlasColors.primaryText)
             .background(filled ? AtlasColors.mapPin : AtlasColors.background)
             .clipShape(Capsule())
+    }
+
+    /// How far the keyboard reaches into the step's own area.
+    ///
+    /// The keyboard covers the bottom of the *screen*; the footer is already
+    /// standing in that space, unmoved, because the wizard ignores the
+    /// keyboard's safe area. Only what is left over eats into the step.
+    private var keyboardOverlap: CGFloat {
+        max(0, keyboardHeight - footerHeight)
     }
 
     /// Any write in flight. Every footer button waits on it — two of them
@@ -935,7 +988,13 @@ struct CreateTourWizardView: View {
                 fieldLabel("DESCRIPTION", remaining: Self.longLimit - longDescription.count)
                 TextField("What this tour is about", text: $longDescription, axis: .vertical)
                     .focused($focused, equals: .long)
-                    .lineLimit(3...)
+                    // Three lines at rest, two while the keyboard is up. On a
+                    // 6.3" phone there is room for eighteen either way, but an
+                    // SE with the keyboard showing has about 91pt for this
+                    // group — and a three-line floor is 83pt of that plus a
+                    // label, which is the one combination that would still
+                    // have scrolled.
+                    .lineLimit((keyboardHeight > 0 ? 2 : 3)...)
                     .onChange(of: longDescription) { _, new in
                         if new.count > Self.longLimit { longDescription = String(new.prefix(Self.longLimit)) }
                     }
