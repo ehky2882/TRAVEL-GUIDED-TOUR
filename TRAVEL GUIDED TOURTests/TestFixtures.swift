@@ -108,6 +108,7 @@ enum TestFixtures {
             centroidLatitude: centroidLatitude ?? latitude,
             centroidLongitude: centroidLongitude ?? longitude,
             city: "Test City",
+            country: "Test Country",
             primaryCategory: category,
             tags: tags,
             priceUSD: 0,

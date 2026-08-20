@@ -77,6 +77,9 @@ struct Tour: Codable {
     let centroidLatitude: Double
     let centroidLongitude: Double
     let city: String?
+    /// Mirrors `Tour.country`. Optional so a tour authored before the key
+    /// existed still validates.
+    let country: String?
     let primaryCategory: TourCategory
     let tags: [String]
     let priceUSD: Decimal

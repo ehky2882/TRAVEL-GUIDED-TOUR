@@ -8,7 +8,40 @@ enum AtlasSpacing {
     static let lg: CGFloat = 24
     static let xl: CGFloat = 32
     static let xxl: CGFloat = 48
-    static let heroHeight: CGFloat = 320
+    /// **The shape every hero photograph is shown in.**
+    ///
+    /// It used to be a fixed 320 pt tall, which made the frame a different
+    /// shape on every device: nearly square on an iPhone SE (327×320) and much
+    /// wider on a Pro Max (392×320), cropping 23% of the photograph off the
+    /// sides on the small phone and 8% on the large one. Same file, different
+    /// picture, depending on who was looking. A ratio makes the frame the same
+    /// *shape* everywhere and lets the height fall out of the width.
+    ///
+    /// **Square (1:1) — owner decision on device, 2026-08-19**, and it took
+    /// three builds to get here: 4:3 in build 79 (*"i dont like it"*), 5:4 in
+    /// 80 and 82 (*"keep it at 5:4 for now"*), then, testing 82 in full,
+    /// *"i think i much prefer the square image"*. **Confirmed on device in
+    /// build 83** — *"I MUCH PREFER THE SQUARE"* — so this is verified, not
+    /// merely chosen.
+    ///
+    /// ⚠️ **Square is the most aggressive crop of the three, and that is a
+    /// known cost, not an oversight.** The catalogue's photographs are 4:3
+    /// (1200×900), so against those sources 4:3 crops nothing, 5:4 crops 6%,
+    /// and square crops **25% off the sides**. It is also the tallest block, so
+    /// it pushes what follows further down every page. Both were weighed on a
+    /// real phone — which is the only place this question can be settled, and
+    /// the reason three builds was the cheap outcome rather than the expensive
+    /// one.
+    ///
+    /// ⚠️ **Whatever shows beside a hero must use the same ratio**, or the page
+    /// changes height when you switch tabs. Tour detail, the place page and the
+    /// list page all size their map with it for exactly that reason.
+    ///
+    /// **Read this constant; never restate its value.** Every call site says
+    /// "the hero ratio" rather than naming a number, so changing it here is the
+    /// whole change — that is what stopped five stale `// 5:4` comments from
+    /// becoming five wrong ones.
+    static let heroAspectRatio: CGFloat = 1.0
     static let cardCornerRadius: CGFloat = 12
     static let chipCornerRadius: CGFloat = 20
     /// Used for the home-page floating-island shape so the drawer +

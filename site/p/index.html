@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Atlas — Audio Tours</title>
+  <meta name="description" content="Every audio tour at one place, on Atlas. Coming soon to the App Store." />
+  <!-- Open Graph so the shared link previews nicely in Messages / social -->
+  <meta property="og:title" id="og-title" content="Atlas — Audio Tours" />
+  <meta property="og:description" id="og-desc" content="Every audio tour at one place, on Atlas. Coming soon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlas-icon.png" />
+  <meta property="og:image:width" content="1024" />
+  <meta property="og:image:height" content="1024" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" type="image/png" href="https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlas-icon.png" />
+  <link rel="apple-touch-icon" href="https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/atlas-icon.png" />
+  <style>
+    :root {
+      --bg: #17130F;
+      --surface: #211B15;
+      --surface-2: #2C241C;
+      --text: #F5EFE7;
+      --muted: #B7AC9E;
+      --accent: #8B7535;
+      --accent-soft: rgba(139, 117, 53, 0.16);
+      --border: rgba(245, 239, 231, 0.10);
+    }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wrap { width: 100%; max-width: 560px; padding: 20px 20px 48px; }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+      font-size: 14px; color: var(--text); margin: 8px 0 22px;
+    }
+    .brand .dot { width: 12px; height: 12px; border-radius: 3px; background: var(--accent); }
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 18px; overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+    .hero { width: 100%; aspect-ratio: 4 / 3; background: var(--surface-2); object-fit: cover; display: block; }
+    .body { padding: 20px; }
+    .eyebrow {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent);
+      background: var(--accent-soft); padding: 5px 10px; border-radius: 999px; margin-bottom: 12px;
+    }
+    h1 { font-size: 24px; line-height: 1.22; margin: 0 0 4px; font-weight: 700; }
+    .meta { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
+    .meta .sep { opacity: 0.5; padding: 0 6px; }
+    .desc { font-size: 15px; color: var(--text); opacity: 0.92; margin: 0 0 22px; }
+    /* Tours at this place — the whole reason a place page exists. */
+    .tours-head {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 10px;
+    }
+    .tour {
+      display: flex; gap: 12px; align-items: center;
+      padding: 10px 0; border-top: 1px solid var(--border);
+    }
+    .tour:first-of-type { border-top: 0; }
+    .tour img, .tour .noimg {
+      width: 56px; height: 56px; border-radius: 6px; object-fit: cover;
+      background: var(--surface-2); flex: none;
+    }
+    .tour .t { min-width: 0; }
+    .tour .tt { font-size: 15px; font-weight: 600; margin: 0 0 2px; }
+    .tour .ts { font-size: 13px; color: var(--muted); margin: 0; }
+    .pill {
+      display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      background: var(--accent); color: #17130F; border-radius: 999px;
+      padding: 2px 7px; margin-right: 6px; vertical-align: 1px;
+    }
+    .cta {
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-radius: 14px; padding: 18px; text-align: center; margin-top: 22px;
+    }
+    .cta .soon { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+    .cta .soon-sub { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+    .notify {
+      display: inline-block; text-decoration: none; font-weight: 600; font-size: 15px;
+      color: #fff; background: var(--accent); padding: 12px 22px; border-radius: 999px;
+    }
+    .notify:active { opacity: 0.85; }
+    .foot { text-align: center; font-size: 12px; color: var(--muted); margin-top: 26px; opacity: 0.8; }
+    .center-state { text-align: center; padding: 60px 10px; }
+    .center-state h1 { font-size: 22px; }
+    .center-state p { color: var(--muted); }
+    .skeleton { animation: pulse 1.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.55; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> Atlas</div>
+    <div id="root">
+      <div class="card skeleton">
+        <div class="hero"></div>
+        <div class="body">
+          <span class="eyebrow">Loading…</span>
+          <h1>&nbsp;</h1>
+        </div>
+      </div>
+    </div>
+    <div class="foot">Atlas — GPS-anchored audio tours. Coming soon to the App Store.</div>
+  </div>
+
+  <script>
+    var CATALOG_URL = "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/Tours.json";
+    var NOTIFY_EMAIL = "edward.yung@gmail.com";
+
+    function qid() {
+      var p = new URLSearchParams(window.location.search);
+      var id = p.get("id");
+      if (id) return id.trim().toLowerCase();
+      // Path form: /p/<uuid>
+      var parts = window.location.pathname.split("/").filter(Boolean);
+      var last = parts[parts.length - 1];
+      return last && last !== "p" ? last.trim().toLowerCase() : null;
+    }
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+
+    // Titles are "English | 中文" / "English | 日本語" for some cities; the web
+    // list shows the primary only, to keep rows one line.
+    function primaryTitle(t) {
+      return String(t || "Untitled tour").split(" | ")[0];
+    }
+
+    function duration(seconds) {
+      var s = Number(seconds) || 0;
+      var m = Math.round(s / 60);
+      return m < 1 ? "Under a minute" : m + " min";
+    }
+
+    // Same order the app uses (Place.ranked): newest first, then a single-stop
+    // tour ahead of a walk on a tie, then title. Both tours at a place are
+    // usually published in the same batch, so the tiebreaks do real work.
+    function ranked(tours) {
+      return tours.slice().sort(function (a, b) {
+        var da = a.createdAt || "", db = b.createdAt || "";
+        if (da !== db) return da > db ? -1 : 1;
+        var sa = a.kind === "single", sb = b.kind === "single";
+        if (sa !== sb) return sa ? -1 : 1;
+        return String(a.title).localeCompare(String(b.title));
+      });
+    }
+
+    function notFound() {
+      document.getElementById("root").innerHTML =
+        '<div class="center-state">' +
+          '<h1>Place not found</h1>' +
+          '<p>This link may be out of date. Atlas has thousands of audio tours across thirty cities — coming soon to the App Store.</p>' +
+          '<div class="cta" style="margin-top:22px">' +
+            '<p class="soon">Coming soon to the App Store</p>' +
+            '<p class="soon-sub">Be the first to know when Atlas launches.</p>' +
+            '<a class="notify" href="mailto:' + esc(NOTIFY_EMAIL) + '?subject=Notify%20me%20about%20Atlas">Notify me</a>' +
+          '</div>' +
+        '</div>';
+    }
+
+    function render(place, tours, makersById) {
+      var heroSrc = place.heroImageURL || (tours[0] && tours[0].heroImageURL) || null;
+
+      document.title = place.name + " — Atlas";
+      var ogT = document.getElementById("og-title"); if (ogT) ogT.setAttribute("content", place.name + " — Atlas");
+      var ogD = document.getElementById("og-desc");
+      if (ogD) {
+        ogD.setAttribute("content", place.description ||
+          (tours.length + " audio tour" + (tours.length === 1 ? "" : "s") + " at " + place.name + " on Atlas."));
+      }
+
+      var heroHTML = heroSrc
+        ? '<img class="hero" src="' + esc(heroSrc) + '" alt="' + esc(place.name) + '" />'
+        : '<div class="hero"></div>';
+
+      var metaBits = [];
+      if (place.address) metaBits.push(esc(place.address));
+      if (place.city) metaBits.push(esc(place.city));
+      var meta = metaBits.join('<span class="sep">·</span>');
+
+      var rows = tours.map(function (t) {
+        var makerName = makersById[t.makerId] || "";
+        var bits = [];
+        if (makerName) bits.push(esc(makerName));
+        if (t.kind !== "single" && t.stops) bits.push(t.stops.length + " stops");
+        bits.push(duration(t.totalDurationSeconds));
+        var img = t.heroImageURL
+          ? '<img src="' + esc(t.heroImageURL) + '" alt="" />'
+          : '<div class="noimg"></div>';
+        return '<div class="tour">' + img +
+          '<div class="t">' +
+            '<p class="tt">' + (t.kind !== "single" ? '<span class="pill">WALK</span>' : '') +
+              esc(primaryTitle(t.title)) + '</p>' +
+            '<p class="ts">' + bits.join(" · ") + '</p>' +
+          '</div>' +
+        '</div>';
+      }).join("");
+
+      document.getElementById("root").innerHTML =
+        '<div class="card">' +
+          heroHTML +
+          '<div class="body">' +
+            '<span class="eyebrow">Place</span>' +
+            '<h1>' + esc(place.name) + '</h1>' +
+            (meta ? '<p class="meta">' + meta + '</p>' : '') +
+            (place.description ? '<p class="desc">' + esc(place.description) + '</p>' : '') +
+            '<p class="tours-head">' + tours.length + ' tour' + (tours.length === 1 ? '' : 's') + ' available</p>' +
+            rows +
+            '<div class="cta">' +
+              '<p class="soon">Coming soon to the App Store</p>' +
+              '<p class="soon-sub">Atlas isn’t out yet. Leave your email and we’ll let you know the moment it launches — then this link will open the place right in the app.</p>' +
+              '<a class="notify" href="mailto:' + esc(NOTIFY_EMAIL) +
+                '?subject=' + encodeURIComponent("Notify me about Atlas") +
+                '&body=' + encodeURIComponent('I’d love to know when Atlas launches. (Place: ' + place.name + ')') +
+                '">Notify me</a>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+    }
+
+    (function () {
+      var id = qid();
+      if (!id) { notFound(); return; }
+      fetch(CATALOG_URL, { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error("catalog " + r.status); return r.json(); })
+        .then(function (data) {
+          var places = (data && data.places) || [];
+          var allTours = (data && data.tours) || [];
+          var makers = (data && data.makers) || [];
+
+          var place = null;
+          for (var i = 0; i < places.length; i++) {
+            if (places[i].id && String(places[i].id).toLowerCase() === id) { place = places[i]; break; }
+          }
+          if (!place) { notFound(); return; }
+
+          var wanted = {};
+          (place.tourIds || []).forEach(function (t) { wanted[String(t).toLowerCase()] = true; });
+          var tours = allTours.filter(function (t) { return wanted[String(t.id).toLowerCase()]; });
+
+          var makersById = {};
+          makers.forEach(function (m) { makersById[m.id] = m.displayName; });
+
+          render(place, ranked(tours), makersById);
+        })
+        .catch(function () { notFound(); });
+    })();
+  </script>
+</body>
+</html>

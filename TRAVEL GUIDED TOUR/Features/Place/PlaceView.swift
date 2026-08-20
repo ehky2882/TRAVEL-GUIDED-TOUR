@@ -22,7 +22,7 @@ import MapKit
 ///     capsules on a material bar, content scrolling *under* it.
 ///   - `AtlasTabStrip` (GALLERY / MAP) above a swap zone, with `GET DIRECTIONS`
 ///     *outside* it so the layout height doesn't jump when you toggle.
-///   - `TourMediaCarousel` at `heroHeight`, inset by `lg`, square corners.
+///   - `TourMediaCarousel` at the hero ratio, inset by `lg`, square corners.
 ///   - Outer stack spacing `lg`, inner `md`, one horizontal `lg` on the body.
 ///   - A 4-line description with an inline Read more.
 ///
@@ -228,7 +228,7 @@ struct PlaceView: View {
             heroImageURL: heroImageURL,
             additionalImageURLs: galleryImageURLs,
             videoURLs: nil,
-            height: AtlasSpacing.heroHeight,
+            height: nil,   // takes AtlasSpacing.heroAspectRatio
             category: tours.first?.primaryCategory ?? .culturalHeritage
         )
         .padding(.horizontal, AtlasSpacing.lg)
@@ -257,7 +257,9 @@ struct PlaceView: View {
         .mapStyle(.standard(emphasis: .muted, pointsOfInterest: HomeMapSection.tourPOI))
         // Exactly the hero's footprint, so the page height is identical on
         // both tabs.
-        .frame(height: AtlasSpacing.heroHeight)
+        // Same sizing as the carousel it swaps with, so the page height
+        // is identical on both tabs.
+        .atlasHeroSizing(nil)
         .padding(.horizontal, AtlasSpacing.lg)
     }
 

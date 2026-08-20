@@ -15,6 +15,20 @@ struct PlaceSuggestion: Identifiable {
     let completion: MKLocalSearchCompletion
 }
 
+/// A resolved place — everything a caller might need after a tap: where it
+/// is, how far out to frame it, and what it's called. The Search tab only
+/// wants the region; the create wizard also needs the locality, to fill in
+/// the tour's city without asking the maker to type it twice.
+struct ResolvedPlace {
+    let coordinate: CLLocationCoordinate2D
+    let region: MKCoordinateRegion
+    /// The place's own name, when it has one distinct from the address.
+    let name: String?
+    /// Town or city.
+    let locality: String?
+    let country: String?
+}
+
 /// Search-as-you-type place lookup backed by `MKLocalSearchCompleter`.
 ///
 /// **Why the completer instead of `MKLocalSearch` per keystroke:** the
@@ -44,9 +58,23 @@ final class PlaceSearchService: NSObject, MKLocalSearchCompleterDelegate {
 
     /// Cap on how many place rows we surface, so the Places section
     /// doesn't dwarf the tour/maker results below it.
-    private let maxResults = 4
+    private let maxResults: Int
 
     private let completer = MKLocalSearchCompleter()
+
+    /// Bias results toward a part of the world — used by the create
+    /// wizard, where "the old custom house" means the one in the city the
+    /// maker just chose, not the nearest one to wherever they're sitting.
+    /// Setting it re-runs the current query so the list updates in place.
+    /// Set it before the next query — callers change it when the chosen city
+    /// changes, and clear the field at the same time, so there is nothing
+    /// outstanding to re-run.
+    var regionBias: MKCoordinateRegion? {
+        didSet {
+            guard let regionBias else { return }
+            completer.region = regionBias
+        }
+    }
 
     /// POI categories that count as a "notable place" worth flying the
     /// map to — cultural / civic / nature / venue landmarks. Restaurants,
@@ -69,18 +97,41 @@ final class PlaceSearchService: NSObject, MKLocalSearchCompleterDelegate {
         .university
     ]
 
-    override init() {
+    /// Defaults are the Search tab's behaviour: addresses cover cities /
+    /// neighborhoods / regions ("London", "Brooklyn"), points of interest
+    /// cover named landmarks, and the POI half is narrowed to landmark
+    /// categories so restaurants and shops don't clutter place results.
+    ///
+    /// The create wizard overrides all three — see `.cities` and `.venues`.
+    init(
+        resultTypes: MKLocalSearchCompleter.ResultType = [.address, .pointOfInterest],
+        pointOfInterestFilter: MKPointOfInterestFilter? = nil,
+        maxResults: Int = 4
+    ) {
+        self.maxResults = maxResults
         super.init()
         completer.delegate = self
-        // Addresses cover cities / neighborhoods / regions ("London",
-        // "Brooklyn"); points of interest cover named landmarks. Both
-        // resolve to a place the camera can fly to.
-        completer.resultTypes = [.address, .pointOfInterest]
-        // Restrict the POI half to landmark categories only, so
-        // restaurants / shops / services don't clutter place results.
-        // (Addresses — cities, towns, neighborhoods — are unaffected.)
-        completer.pointOfInterestFilter =
-            MKPointOfInterestFilter(including: Self.landmarkCategories)
+        completer.resultTypes = resultTypes
+        completer.pointOfInterestFilter = pointOfInterestFilter
+            ?? MKPointOfInterestFilter(including: Self.landmarkCategories)
+    }
+
+    /// Towns, cities and regions only — no venues. What the wizard's
+    /// "city & country" field needs.
+    static func cities() -> PlaceSearchService {
+        PlaceSearchService(resultTypes: [.address], maxResults: 5)
+    }
+
+    /// Anywhere a tour could be made about, which is a far wider net than
+    /// the Search tab casts: a third of the catalogue is cafés, bars and
+    /// restaurants, so the landmark-only filter would hide most of what a
+    /// maker is standing in front of.
+    static func venues() -> PlaceSearchService {
+        PlaceSearchService(
+            resultTypes: [.pointOfInterest, .address],
+            pointOfInterestFilter: .includingAll,
+            maxResults: 5
+        )
     }
 
     /// Update the live query. The completer streams matches to the
@@ -100,11 +151,25 @@ final class PlaceSearchService: NSObject, MKLocalSearchCompleterDelegate {
     /// `MKLocalSearch`. Returns nil if the lookup fails or carries no
     /// coordinate.
     func resolve(_ suggestion: PlaceSuggestion) async -> MKCoordinateRegion? {
+        await resolveDetails(suggestion)?.region
+    }
+
+    /// The same lookup, keeping what the place *is* as well as where it is.
+    /// One network call either way — `resolve` is this with the extras
+    /// thrown away.
+    func resolveDetails(_ suggestion: PlaceSuggestion) async -> ResolvedPlace? {
         let request = MKLocalSearch.Request(completion: suggestion.completion)
         guard let item = try? await MKLocalSearch(request: request).start().mapItems.first else {
             return nil
         }
-        return Self.region(for: item)
+        let placemark = item.placemark
+        return ResolvedPlace(
+            coordinate: placemark.coordinate,
+            region: Self.region(for: item),
+            name: item.name,
+            locality: placemark.locality ?? placemark.subAdministrativeArea,
+            country: placemark.country
+        )
     }
 
     /// Drop any pending query + results — e.g. when the user clears the

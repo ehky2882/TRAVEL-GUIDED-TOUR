@@ -27,7 +27,9 @@ struct TourMediaCarousel: View {
     let heroImageURL: String
     let additionalImageURLs: [String]?
     let videoURLs: [String]?
-    let height: CGFloat
+    /// nil sizes by `AtlasSpacing.heroAspectRatio` — see `atlasHeroSizing`. Every full-width
+    /// hero passes nil; the parameter stays for any fixed-size use.
+    let height: CGFloat?
     /// Placeholder tint category, used only on the single-image fallback
     /// (matches the previous `HeroImageView(category:)` call).
     var category: TourCategory? = nil
@@ -78,7 +80,7 @@ struct TourMediaCarousel: View {
         heroImageURL: String,
         additionalImageURLs: [String]?,
         videoURLs: [String]?,
-        height: CGFloat,
+        height: CGFloat?,
         category: TourCategory? = nil
     ) {
         self.heroImageURL = heroImageURL
@@ -106,7 +108,7 @@ struct TourMediaCarousel: View {
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .always))
-            .frame(height: height)
+            .atlasHeroSizing(height)
         } else {
             // Single item — always the hero image (every tour has one).
             HeroImageView(

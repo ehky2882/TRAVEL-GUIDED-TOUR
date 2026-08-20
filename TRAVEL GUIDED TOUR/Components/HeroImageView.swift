@@ -5,7 +5,11 @@ import UIKit
 
 struct HeroImageView: View {
     let imageName: String
-    let height: CGFloat
+    /// Fixed height, or **nil to size by `AtlasSpacing.heroAspectRatio`** —
+    /// the height then follows the width and the whole 4:3 photograph shows.
+    /// Small fixed-size uses (56 pt list thumbnails, rail cards) keep passing a
+    /// number; the full-width heroes pass nil.
+    let height: CGFloat?
     var cornerRadius: CGFloat = 0
     var category: TourCategory? = nil
     var zoomable: Bool = false
@@ -23,7 +27,7 @@ struct HeroImageView: View {
 
     init(
         imageName: String,
-        height: CGFloat,
+        height: CGFloat?,
         cornerRadius: CGFloat = 0,
         category: TourCategory? = nil,
         zoomable: Bool = false,
@@ -59,7 +63,7 @@ struct HeroImageView: View {
             #endif
         }
         .frame(maxWidth: .infinity)
-        .frame(height: height)
+        .atlasHeroSizing(height)
         .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
         #if canImport(UIKit)
         .task(id: imageName) { await fetchIfNeeded() }
@@ -119,7 +123,7 @@ struct HeroImageView: View {
             image
                 .resizable()
                 .scaledToFill()
-                .frame(width: proxy.size.width, height: height)
+                .frame(width: proxy.size.width, height: proxy.size.height)
                 .scaleEffect(zoom)
                 .clipped()
                 .gesture(pinchToZoom)
@@ -127,7 +131,7 @@ struct HeroImageView: View {
             image
                 .resizable()
                 .scaledToFill()
-                .frame(width: proxy.size.width, height: height)
+                .frame(width: proxy.size.width, height: proxy.size.height)
                 .clipped()
         }
     }
@@ -135,7 +139,7 @@ struct HeroImageView: View {
     private func placeholder(proxy: GeometryProxy) -> some View {
         Rectangle()
             .fill(AtlasColors.placeholderWarm)
-            .frame(width: proxy.size.width, height: height)
+            .frame(width: proxy.size.width, height: proxy.size.height)
     }
 
     private var pinchToZoom: some Gesture {

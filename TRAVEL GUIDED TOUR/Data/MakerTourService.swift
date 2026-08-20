@@ -147,7 +147,8 @@ final class MakerTourService {
         category: TourCategory,
         tags: [String],
         coordinate: CLLocationCoordinate2D,
-        radiusMeters: Int
+        radiusMeters: Int,
+        city: String? = nil
     ) async throws -> UUID {
         let tourId = UUID()
         let stopId = UUID()
@@ -166,7 +167,8 @@ final class MakerTourService {
             centroidLongitude: coordinate.longitude,
             primaryCategory: category.rawValue,
             tags: tags,
-            status: TourStatus.draft.rawValue
+            status: TourStatus.draft.rawValue,
+            city: city
         )
         try await client.from("tours").insert(tourRow, returning: .minimal).execute()
 
@@ -214,7 +216,8 @@ final class MakerTourService {
         category: TourCategory,
         tags: [String],
         coordinate: CLLocationCoordinate2D,
-        radiusMeters: Int
+        radiusMeters: Int,
+        city: String? = nil
     ) async throws {
         let tourId = tour.id.uuidString.lowercased()
         let cleanTitle = title.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -228,6 +231,7 @@ final class MakerTourService {
                 tags: tags,
                 centroidLatitude: coordinate.latitude,
                 centroidLongitude: coordinate.longitude,
+                city: city,
                 // Published edits re-enter moderation; drafts and in-review
                 // tours keep the status they already had.
                 status: status == .published ? TourStatus.inReview.rawValue : status.rawValue
@@ -438,9 +442,12 @@ private struct NewTourRow: Encodable {
     let primaryCategory: String
     let tags: [String]
     let status: String
+    /// Nil until the wizard's place lookup supplies one. Optional so it is
+    /// simply absent from the insert rather than written as null.
+    let city: String?
 
     enum CodingKeys: String, CodingKey {
-        case id, title, kind, tags, status
+        case id, title, kind, tags, status, city
         case shortDescription = "short_description"
         case longDescription = "long_description"
         case makerId = "maker_id"
@@ -469,7 +476,11 @@ private struct NewTourRow: Encodable {
             walkingDistanceMeters: nil,
             centroidLatitude: centroidLatitude,
             centroidLongitude: centroidLongitude,
-            city: nil,
+            // The wizard's Location step writes `city`; country is
+            // deliberately not stored — nothing displays it and the
+            // catalogue has never carried one.
+            city: city,
+            country: nil,
             primaryCategory: TourCategory(rawValue: primaryCategory) ?? category,
             tags: tags,
             priceUSD: 0,
@@ -508,10 +519,14 @@ private struct TourDetailsPatch: Encodable {
     let tags: [String]
     let centroidLatitude: Double
     let centroidLongitude: Double
+    /// Optional on purpose. A nil optional encodes as an *absent* key, not a
+    /// null, so a caller that doesn't know about the city — the details
+    /// editor — leaves the column as it found it instead of clearing it.
+    let city: String?
     let status: String
 
     enum CodingKeys: String, CodingKey {
-        case title, tags, status
+        case title, tags, status, city
         case shortDescription = "short_description"
         case longDescription = "long_description"
         case primaryCategory = "primary_category"
@@ -648,6 +663,10 @@ private struct TourRow: Decodable {
             centroidLatitude: centroidLatitude,
             centroidLongitude: centroidLongitude,
             city: city,
+            // The authoring tables hold no country column; a maker picks a
+            // point on a map, not a country. Catalog tours get theirs from
+            // Tours.json / get_catalog instead.
+            country: nil,
             primaryCategory: TourCategory(rawValue: primaryCategory) ?? .hiddenGems,
             tags: tags,
             priceUSD: 0,

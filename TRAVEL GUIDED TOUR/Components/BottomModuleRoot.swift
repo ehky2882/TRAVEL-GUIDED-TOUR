@@ -54,13 +54,22 @@ struct BottomModuleRoot: View {
         // detail (TourDetail, Search, Maker, ManageDownloads) calls
         // push()/pop(), so this catches NavigationLink-pushed screens
         // that stay on the Home tab — e.g. the Search→Maker deep-link —
-        // which the tab check alone misses. `presentedTour != nil` is
-        // kept as belt-and-suspenders for the UIKit-presented tour
-        // sheet so its edge form can't flicker on any push/pop timing
-        // gap.
-        let extendsToScreenEdges = appShared.selectedTab != .home
-            || navState.isShowingDetail
-            || tourPresenter.presentedTour != nil
+        // which the tab check alone misses. `isAnyLayerPresented` is
+        // kept as belt-and-suspenders for the UIKit-presented layers, so
+        // their edge form can't flicker on a push/pop timing gap — and
+        // for the place layer it is the ONLY signal, because `PlaceView`
+        // never calls `navState.push()`.
+        //
+        // 🔴 Getting this wrong is not cosmetic. In island form the bars
+        // leave 8pt gaps and a transparent strip below, which exist so
+        // the MAP can show through on Home — so a full-screen layer's
+        // own content shows through them instead. Reported on 1.1 (73)
+        // with the place page's tour rows visible under the tab bar.
+        let extendsToScreenEdges = Self.extendsToScreenEdges(
+            isHomeTab: appShared.selectedTab == .home,
+            isShowingPushedDetail: navState.isShowingDetail,
+            isAnyLayerPresented: isAnyLayerPresented
+        )
         return VStack(spacing: 0) {
             Spacer(minLength: 0)
             // The painted module. Measured as one unit so the window claims a
@@ -123,6 +132,42 @@ struct BottomModuleRoot: View {
                 PlayerView(tour: tour)
             }
         }
+    }
+
+    /// Should the bars paint edge-to-edge rather than as a floating island?
+    ///
+    /// Pure and static so the rule can be tested without a scene — the same
+    /// treatment `installOutcome(hasWindow:hasActiveScene:)` gets next door.
+    ///
+    /// Island form is ONLY correct on a bare Home tab, where the 8pt side gaps
+    /// and the transparent strip below exist so the map shows through. Any
+    /// screen covering the map — a pushed detail or a slide-up layer — must get
+    /// the edge-to-edge form, or its own content shows through those gaps.
+    static func extendsToScreenEdges(
+        isHomeTab: Bool,
+        isShowingPushedDetail: Bool,
+        isAnyLayerPresented: Bool
+    ) -> Bool {
+        !isHomeTab || isShowingPushedDetail || isAnyLayerPresented
+    }
+
+    /// True while ANY slide-up layer is on screen.
+    ///
+    /// 🔴 TWO separate behaviours depend on knowing this, and a layer missing
+    /// from either one ships a visible defect:
+    ///
+    ///  - `extendsToScreenEdges` — paint the bars edge-to-edge rather than as
+    ///    a floating island, so the layer can't show through the gaps.
+    ///  - `tabSelection` — tear the layer down when a tab is tapped.
+    ///
+    /// The place layer shipped missing from the second in 1.1 (69) and from
+    /// the first in 1.1 (73). This property exists so a new layer is added in
+    /// ONE place and both behaviours pick it up; `tabSelection` still needs
+    /// its own line, because each presenter has to be dismissed individually.
+    private var isAnyLayerPresented: Bool {
+        tourPresenter.presentedTour != nil
+            || makerPresenter?.presentedMaker != nil
+            || placePresenter?.presentedPlace != nil
     }
 
     /// The signed-in user's own maker id (the followee side of any pending

@@ -37,8 +37,16 @@ enum AtlasTypography {
     /// above, which is now monospaced.
     static let captionSerif = Font.caption
     /// Brand wordmark face — **New York** (the serif system design) at
-    /// caption size. Used for the "DOZENT" app name on the Settings
-    /// masthead so the wordmark reads as a logotype, distinct from the
-    /// SF Mono caption used everywhere else on that surface.
-    static let wordmark = Font.system(size: 13, weight: .regular, design: .serif)
+    /// 15pt. Used for the "Dozent" app name on the Settings masthead so
+    /// the wordmark reads as a logotype, distinct from the SF Mono
+    /// caption used everywhere else on that surface.
+    ///
+    /// 15pt, not the 13pt caption, because this is the SAME mark the
+    /// launch screen draws: `SplashView` sets
+    /// `.system(size: 15, design: .serif)` with `.tracking(2)` and
+    /// Title Case, and the two must not drift into two variants of one
+    /// logotype (owner, 2026-08-19). Callers pair this with
+    /// `.tracking(2)`; the site mirrors it in `site/atlas.css`
+    /// (`.brand` / `.splash-wordmark`).
+    static let wordmark = Font.system(size: 15, weight: .regular, design: .serif)
 }
