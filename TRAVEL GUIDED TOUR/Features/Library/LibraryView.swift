@@ -176,8 +176,8 @@ struct LibraryView: View {
                 Divider().padding(.horizontal, AtlasSpacing.lg)
             }
 
-            NavigationLink {
-                LikedListView()
+            Button {
+                listPresenter.present(.ownLiked)
             } label: {
                 LikedListRow(
                     count: saved.count,
@@ -192,7 +192,7 @@ struct LibraryView: View {
                     Divider().padding(.horizontal, AtlasSpacing.lg)
 
                     Button {
-                        listPresenter.present(listId: list.id, preloaded: list)
+                        listPresenter.present(.list(id: list.id, preloaded: list))
                     } label: {
                         NamedListRow(
                             list: list,
@@ -213,7 +213,7 @@ struct LibraryView: View {
                 librarySectionHeader("Saved lists")
                 ForEach(savedLists) { list in
                     Button {
-                        listPresenter.present(listId: list.id, preloaded: list)
+                        listPresenter.present(.list(id: list.id, preloaded: list))
                     } label: {
                         SavedListRowView(
                             list: list,
@@ -465,8 +465,8 @@ private struct RecentlyPlayedEmptyState: View {
     }
 }
 
-/// Internal, not fileprivate: `LikedEmptyState` lives in `LikedListView.swift`
-/// so the Liked list screen can show it too.
+/// Internal, not fileprivate: `LikedEmptyState` is in its own file and uses
+/// this layout, as does the Liked screen's own empty state.
 struct EmptyStateLayout: View {
     let icon: String
     let title: String

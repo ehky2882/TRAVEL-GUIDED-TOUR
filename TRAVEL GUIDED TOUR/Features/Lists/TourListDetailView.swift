@@ -26,7 +26,10 @@ import SwiftUI
 /// photographs of its own), there is **no GET DIRECTIONS** (a list is not
 /// anywhere), and the map plots **every tour in the list** rather than one pin.
 struct TourListDetailView: View {
-    let listId: UUID
+    /// A named list, or Liked. See `TourListTarget` — Liked renders through
+    /// this same view rather than a screen of its own, so the two cannot drift.
+    let target: TourListTarget
+
     /// Metadata the presenting screen already had in hand.
     ///
     /// Load-bearing for a list the viewer does **not** own: metadata is looked
@@ -34,7 +37,22 @@ struct TourListDetailView: View {
     /// else's list, so without this the title would be blank. Library and a
     /// profile pass it for their own lists too — the row is already resolved
     /// there, so passing it puts the title on the first frame.
-    var preloaded: TourList? = nil
+    private var preloaded: TourList? {
+        if case .list(_, let preloaded) = target { return preloaded }
+        return nil
+    }
+
+    /// The list's id, or nil for Liked — which has no `journeys` row at all,
+    /// and is why every `listService` call on this screen is guarded.
+    private var listId: UUID? {
+        if case .list(let id, _) = target { return id }
+        return nil
+    }
+
+    private var isLiked: Bool {
+        if case .liked = target { return true }
+        return false
+    }
 
     /// Tears down the slide-up layer this screen is presented in.
     ///
@@ -48,6 +66,15 @@ struct TourListDetailView: View {
 
     @Environment(TourListService.self) private var listService
     @Environment(DataService.self) private var dataService
+    /// Liked's contents. Not a `journeys` row — that is what makes Liked work
+    /// signed out, and why it can never be renamed, shared or deleted.
+    ///
+    /// Optional because `MakerView` reads it optionally too: not every layer
+    /// that can reach a list injects every service, and a required lookup
+    /// crashes where one is missing. The nil branch asserts in debug so a
+    /// dropped injection fails in the simulator rather than shipping as an
+    /// empty Liked nobody can explain.
+    @Environment(LibraryStore.self) private var libraryStore: LibraryStore?
     @Environment(TourPresenter.self) private var tourPresenter
     /// Optional: this screen is reachable from the UIKit maker layer, which
     /// doesn't carry every service. A required lookup crashes there.
@@ -75,6 +102,11 @@ struct TourListDetailView: View {
     @State private var topSectionTab: TopSectionTab = .gallery
     @State private var isDescriptionExpanded = false
 
+    init(target: TourListTarget, onDismiss: (() -> Void)? = nil) {
+        self.target = target
+        self.onDismiss = onDismiss
+    }
+
     private enum TopSectionTab: String, CaseIterable, Identifiable {
         case gallery = "Gallery"
         case map = "Map"
@@ -91,7 +123,8 @@ struct TourListDetailView: View {
     /// The list's metadata — yours from the service, someone else's from
     /// whoever pushed this screen.
     private var journey: TourList? {
-        listService.myLists.first(where: { $0.id == listId }) ?? preloaded
+        guard let listId else { return nil }
+        return listService.myLists.first(where: { $0.id == listId }) ?? preloaded
     }
 
     /// Whether the viewer owns this list. Drives every editing affordance:
@@ -99,8 +132,18 @@ struct TourListDetailView: View {
     /// offering a Delete button that silently fails is worse than not offering
     /// it.
     private var isOwner: Bool {
-        listService.myLists.contains { $0.id == listId }
+        guard let listId else { return false }
+        return listService.myLists.contains { $0.id == listId }
     }
+
+    /// Whether to draw the bookmark capsule at all.
+    ///
+    /// Absent on your own list (saving a list you own means nothing) and on
+    /// **Liked**, which no one can save: it isn't a `journeys` row, so there is
+    /// nothing to save a reference to — for you or for anyone looking at
+    /// yours. That is a permanent fact about Liked rather than a signed-out
+    /// state, which is why it is absent here rather than drawn and greyed.
+    private var showsBookmark: Bool { !isLiked && !isOwner }
 
     /// Saving is account-backed (`saved_journeys` is keyed on the user), so
     /// unlike bookmarking a tour it can't work signed out.
@@ -110,15 +153,42 @@ struct TourListDetailView: View {
     /// 2026-08-20). It also covers your own list, where saving is meaningless
     /// because the list is already yours; that one is not drawn at all.
     private var canSave: Bool {
-        !isOwner && authService?.isSignedIn == true
+        showsBookmark && authService?.isSignedIn == true
     }
 
-    private var isSavedList: Bool { listService.isListSaved(listId) }
+    private var isSavedList: Bool {
+        guard let listId else { return false }
+        return listService.isListSaved(listId)
+    }
+
+    /// The screen's contents.
+    ///
+    /// A named list holds `items` fetched once; **Liked is read straight from
+    /// the store on every evaluation**, so un-saving a tour anywhere in the app
+    /// removes the row here without a refresh. `TourListItem.id` is the tour
+    /// id, so Liked's synthetic items work everywhere the real ones do — the
+    /// rows, the carousel, the map and the count all stay one code path.
+    private var effectiveItems: [TourListItem] {
+        guard isLiked else { return items }
+        let ids: [UUID]
+        if case .liked(_, let tourIds) = target, let tourIds {
+            ids = tourIds
+        } else {
+            guard let libraryStore else {
+                assertionFailure("Liked opened without a LibraryStore in the environment")
+                return []
+            }
+            // Newest saved first — the order `savedEntries` already applies,
+            // and the one thing about Liked the user cannot rearrange.
+            ids = libraryStore.savedEntries.map(\.tourId)
+        }
+        return ids.enumerated().map { TourListItem(tourId: $0.element, position: $0.offset, note: nil) }
+    }
 
     /// Resolved (tour, note) pairs in TourList order — dropping any tour id no
     /// longer in the catalog.
     private var resolvedTours: [(item: TourListItem, tour: Tour)] {
-        items.compactMap { item in
+        effectiveItems.compactMap { item in
             guard let tour = dataService.tour(by: item.tourId) else { return nil }
             return (item, tour)
         }
@@ -138,7 +208,7 @@ struct TourListDetailView: View {
             }
             // Kept for VoiceOver: the visible title now lives in the body's
             // masthead, as it does on tour detail and the place page.
-            .navigationTitle(journey?.title ?? "List")
+            .navigationTitle(screenTitle)
             .inlineNavigationBarTitle()
             .confirmationDialog(
                 "Delete this list? This can't be undone.",
@@ -161,15 +231,21 @@ struct TourListDetailView: View {
                     TourListEditorSheet(editing: journey)
                 }
             }
-            .sheet(item: $noteTarget) { target in
+            .sheet(item: $noteTarget) { entry in
                 TourListNoteEditorSheet(
-                    tourTitle: target.tourTitle,
-                    initialNote: target.note
+                    tourTitle: entry.tourTitle,
+                    initialNote: entry.note
                 ) { newNote in
-                    saveNote(newNote, for: target.tourId)
+                    saveNote(newNote, for: entry.tourId)
                 }
             }
+            // Liked needs no fetch — it is read from the on-device store — so
+            // it never shows the spinner either.
             .task(id: listId) {
+                guard let listId else {
+                    isLoading = false
+                    return
+                }
                 items = await listService.items(of: listId)
                 isLoading = false
             }
@@ -209,8 +285,9 @@ struct TourListDetailView: View {
             // shape depending on who is looking; a dimmed one says saving
             // belongs here and isn't available yet. Your own list is the one
             // case with no bookmark at all — saving a list you already own
-            // means nothing, so there is no disabled state to show.
-            if !isOwner {
+            // means nothing, so there is no disabled state to show — and
+            // neither is Liked, which nobody can save. See `showsBookmark`.
+            if showsBookmark {
                 Button { toggleSaved() } label: {
                     chromeCapsule(
                         isSavedList ? "bookmark.fill" : "bookmark",
@@ -226,7 +303,15 @@ struct TourListDetailView: View {
                 )
             }
 
-            overflowMenu
+            // ⚠️ Liked carries no `…`, and not as an oversight: every item
+            // the menu holds acts on a `journeys` row Liked does not have.
+            // It cannot be shared (there is no link to send), renamed, made
+            // visible or deleted — Liked is permanent by construction, the
+            // owner's own decision of 2026-07-27. An empty menu, or one of
+            // permanently-greyed items, would say less than no menu does.
+            if !isLiked {
+                overflowMenu
+            }
         }
         .padding(.horizontal, AtlasSpacing.lg)
         .padding(.vertical, AtlasSpacing.sm)
@@ -359,7 +444,7 @@ struct TourListDetailView: View {
 
     private var masthead: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text((journey?.title ?? "List").uppercased())
+            Text(screenTitle.uppercased())
                 .font(AtlasTypography.body)
                 .foregroundStyle(AtlasColors.primaryText)
                 .fixedSize(horizontal: false, vertical: true)
@@ -374,9 +459,17 @@ struct TourListDetailView: View {
         }
     }
 
+    /// The list's name. Liked is called Liked everywhere it appears — in
+    /// Library's row, in the "Save to…" sheet, and here.
+    private var screenTitle: String {
+        if isLiked { return "Liked" }
+        return journey?.title ?? "List"
+    }
+
     /// Whose list this is — only on someone else's, since on your own it would
     /// just be your own name.
     private var ownerName: String? {
+        if case .liked(let owner, _) = target { return owner }
         guard !isOwner, let journey else { return nil }
         return TourListOwner.name(of: journey, in: dataService)
     }
@@ -412,6 +505,17 @@ struct TourListDetailView: View {
                 .accessibilityLabel(isDescriptionExpanded ? "Show less description" : "Read more description")
             }
         }
+    }
+
+    /// Three cases, because an empty screen should say what would fill it —
+    /// and **someone else's empty Liked must not tell you to go save
+    /// something**, which is the one the old screen got right and is kept.
+    private var emptyStateMessage: String {
+        if isLiked {
+            if let ownerName { return "\(ownerName) hasn't saved any tours." }
+            return "Tap the bookmark on any tour and it lands here in Liked. Sign in to sort your tours into your own lists."
+        }
+        return "Open any tour, tap Save to…, and pick this list."
     }
 
     // MARK: - The tours
@@ -592,10 +696,10 @@ struct TourListDetailView: View {
 
     private var emptyState: some View {
         VStack(spacing: AtlasSpacing.sm) {
-            Text("No tours yet")
+            Text(isLiked && ownerName != nil ? "Nothing saved yet" : "No tours yet")
                 .font(AtlasTypography.body)
                 .foregroundStyle(AtlasColors.primaryText)
-            Text("Open any tour, tap Save to…, and pick this list.")
+            Text(emptyStateMessage)
                 .font(AtlasTypography.caption)
                 .foregroundStyle(AtlasColors.secondaryText)
                 .multilineTextAlignment(.center)

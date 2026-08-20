@@ -164,7 +164,7 @@ struct MakerView: View {
     /// Set when a place pin is tapped on a maker page that is itself inside a
     /// detail layer — see `openPlaceFromMap`.
     @State private var placeToPush: Place?
-    @State private var listToPush: TourList?
+    @State private var listToPush: TourListTarget?
     /// Another maker's visible lists. Kept here rather than in
     /// `TourListService` so they can't be mistaken for the viewer's own —
     /// they belong to whichever page is open and die with it.
@@ -247,12 +247,8 @@ struct MakerView: View {
         // A place tapped on the MAP tab while this page is already inside a
         // detail layer. See `openPlaceFromMap` for why it cannot go through
         // the presenter from here.
-        .navigationDestination(item: $listToPush) { list in
-            TourListDetailView(
-                listId: list.id,
-                preloaded: list,
-                onDismiss: { listToPush = nil }
-            )
+        .navigationDestination(item: $listToPush) { target in
+            TourListDetailView(target: target, onDismiss: { listToPush = nil })
         }
         .navigationDestination(item: $placeToPush) { place in
             PlaceView(place: place, onDismiss: { placeToPush = nil })
@@ -615,8 +611,8 @@ struct MakerView: View {
     /// creating belongs to whoever owns the page.
     private var theirListsSection: some View {
         LazyVStack(alignment: .leading, spacing: 0) {
-            NavigationLink {
-                LikedListView(tourIds: theirLikedTourIds, ownerName: maker.displayName)
+            Button {
+                openList(.liked(ownerName: maker.displayName, tourIds: theirLikedTourIds))
             } label: {
                 LikedListRow(
                     count: theirLikedTours.count,
@@ -629,7 +625,7 @@ struct MakerView: View {
             ForEach(theirLists) { list in
                 Divider().padding(.horizontal, AtlasSpacing.lg)
 
-                Button { openList(list) } label: {
+                Button { openList(.list(id: list.id, preloaded: list)) } label: {
                     NamedListRow(
                         list: list,
                         coverImageName: TourListCover.imageName(for: list, in: dataService),
@@ -654,8 +650,8 @@ struct MakerView: View {
             NewListRow { showingCreateList = true }
             Divider().padding(.horizontal, AtlasSpacing.lg)
 
-            NavigationLink {
-                LikedListView()
+            Button {
+                openList(.ownLiked)
             } label: {
                 LikedListRow(
                     count: likedTours.count,
@@ -668,7 +664,7 @@ struct MakerView: View {
             ForEach(myLists) { list in
                 Divider().padding(.horizontal, AtlasSpacing.lg)
 
-                Button { openList(list) } label: {
+                Button { openList(.list(id: list.id, preloaded: list)) } label: {
                     NamedListRow(
                         list: list,
                         coverImageName: TourListCover.imageName(for: list, in: dataService),
@@ -687,7 +683,7 @@ struct MakerView: View {
                 profileListsHeader("Saved lists")
 
                 ForEach(savedLists) { list in
-                    Button { openList(list) } label: {
+                    Button { openList(.list(id: list.id, preloaded: list)) } label: {
                         SavedListRowView(
                             list: list,
                             ownerName: TourListOwner.name(of: list, in: dataService),
@@ -774,11 +770,11 @@ struct MakerView: View {
     /// covered, SwiftUI can stop delivering updates to it, and the row would
     /// simply do nothing. So a list slides up from a tab root and pushes
     /// in-stack from inside a layer.
-    private func openList(_ list: TourList) {
+    private func openList(_ target: TourListTarget) {
         if let listPresenter, tourPresenter.presentedTour == nil, !isStandalone {
-            listPresenter.present(listId: list.id, preloaded: list)
+            listPresenter.present(target)
         } else {
-            listToPush = list
+            listToPush = target
         }
     }
 
@@ -801,8 +797,8 @@ struct MakerView: View {
         }
     }
 
-    /// Tours in Liked, newest-saved first — the same source
-    /// `LikedListView` renders.
+    /// Tours in Liked, newest-saved first — the same source the Liked screen
+    /// (`TourListDetailView` with a `.liked` target) renders.
     private var likedTours: [Tour] {
         guard let libraryStore else { return [] }
         return libraryStore.savedEntries.compactMap { dataService.tour(by: $0.tourId) }
