@@ -14,7 +14,12 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-20 11:55 UTC
+**Last verified:** 2026-08-20 12:30 UTC
+
+**⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
+from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
+tokens a tick — so it is now **on demand** (owner decision, 2026-08-20). It goes stale the moment
+a parallel session merges something. **Re-derive before trusting it**, per the update rule above.
 
 ---
 
