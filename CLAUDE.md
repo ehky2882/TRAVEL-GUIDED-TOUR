@@ -80,6 +80,28 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 **gh-pages worktree:** `/tmp/ghpages` (already set up; `git pull origin gh-pages --rebase` before push if rejected).
 
+## Current State (2026-08-20)
+
+### 🔴 A migration that rebuilt `get_catalog` from `schema.sql` silently deleted three features (session 99 — backend)
+
+**Owner on TestFlight 1.1 (91): *"the place pages and the merged capsule pins that i worked so hard on are not there."*** They weren't — and neither were two things nobody had noticed. **Fixed by one owner paste of `backend/restore_catalog_keys.sql`; verified live, no build involved.**
+
+- **`add_country.sql` rebuilt `public.get_catalog()` from `schema.sql`'s body** — exactly what its PR said it did, *"lifts its RPC body verbatim from `schema.sql` so the migration and the canonical schema cannot drift."* The reasoning was sound and the outcome was a silent triple regression, **because `schema.sql` had never absorbed three later migrations**:
+
+  | Key | Added by | Consequence, live for ~14 hours |
+  |---|---|---|
+  | `places` | `places_apply.sql` | Place pages and merged capsule pins vanish from the app |
+  | `priceTier` | `paid_tours.sql` | **All 66 paid walks decode as free** — the paywall is off |
+  | `isPrivate` | `social.sql` | **Every private account is served as public** |
+
+- **🔴 NOTHING ERRORED, AND THAT IS THE POINT.** All three are **optional** in Swift (`let priceTier: Int?`, `let isPrivate: Bool?`, `places` absent → empty). A missing key decodes as nil and the feature just stops existing. No crash, no log line, no failed check. **The only way to see it is to ask the live RPC what keys it actually returns** — `videoURLs` and `userId` happened to survive because they *had* been folded into `schema.sql`, which is what makes the failure look arbitrary.
+- **⚠️ THE OBVIOUS FIX IS A TRAP.** `places_apply.sql` predicted this precisely — *"if you ever re-run one of those older files, its `create or replace function public.get_catalog()` will overwrite this wrapper and places will quietly vanish. Re-run this file afterwards to restore it."* **Do not.** Its rename step is guarded on `get_catalog_core` already existing, so re-running it rewraps the **stale** core: places come back and **`country` drops straight out again**. `restore_catalog_keys.sql` refreshes the core *first*, then rewraps — that ordering is the whole reason the file exists.
+- **The architecture is right and worth keeping.** `places_apply.sql` deliberately wraps rather than retypes: `get_catalog()` = `get_catalog_core() || jsonb_build_object('places', catalog_places())`. `||` merges at the top level so every core key survives. The flaw was never the wrapper — it was that **`schema.sql` was treated as canonical while being incomplete**.
+- **✅ Hardened:** `schema.sql` now emits `priceTier` and `isPrivate`, and carries a 🔴 header saying the function is **wrapped in production**, that running its body as-is against a live database drops `places`, and that **every key a later migration adds must be added there too**. That file is only canonical if it stays complete.
+- **✅ Verified against the live RPC rather than the SQL Editor's "Success":** places **25**, tours **1419**, makers **39**, `priceTier` on 1419 with **66 priced**, `isPrivate` on **39**, `country` **held at 1418**, `videoURLs`/`userId` intact, and all 25 places carrying ≥2 tours. **The data was never lost** — all 25 places sat in the table throughout; only the function stopped emitting them.
+- **This is the build-68 lesson in a new place:** *adding a key to `Tours.json` does not put it in front of users. Supabase is primary — if the RPC does not emit it, nobody sees it*, no matter what the code or the catalog file says. **Neither the app code nor build 91 was ever at fault.**
+- **⚠️ Durable check, cheap to run:** after ANY migration that touches `get_catalog`, query the RPC and diff its key set against the Swift models — `POST /rest/v1/rpc/get_catalog` with the publishable key, then compare against `Models/Tour.swift`, `Models/Maker.swift`, `Models/Place.swift`. Optional fields make this the only detection that works.
+
 ## Current State (2026-08-19)
 
 ### Keeping and sending a list — the `…` menu, saved lists, and a share link that resolves ([PR #517](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/517), session 94 — code)
