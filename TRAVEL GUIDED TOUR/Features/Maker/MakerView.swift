@@ -102,6 +102,9 @@ struct MakerView: View {
     // PlacePresenter — a required lookup would crash there, exactly the class
     // of bug the old ReportSheet crash was.
     @Environment(PlacePresenter.self) private var placePresenter: PlacePresenter?
+    // Optional for the same reason as `placePresenter`: this page is reachable
+    // from layers that don't inject every presenter.
+    @Environment(TourListPresenter.self) private var listPresenter: TourListPresenter?
     @Environment(LocationManager.self) private var locationManager
     // Optional: the public maker page can be reached via the
     // UIKit-backed tour-detail layer, whose environment does NOT inject
@@ -161,6 +164,7 @@ struct MakerView: View {
     /// Set when a place pin is tapped on a maker page that is itself inside a
     /// detail layer — see `openPlaceFromMap`.
     @State private var placeToPush: Place?
+    @State private var listToPush: TourList?
     /// Another maker's visible lists. Kept here rather than in
     /// `TourListService` so they can't be mistaken for the viewer's own —
     /// they belong to whichever page is open and die with it.
@@ -243,6 +247,13 @@ struct MakerView: View {
         // A place tapped on the MAP tab while this page is already inside a
         // detail layer. See `openPlaceFromMap` for why it cannot go through
         // the presenter from here.
+        .navigationDestination(item: $listToPush) { list in
+            TourListDetailView(
+                listId: list.id,
+                preloaded: list,
+                onDismiss: { listToPush = nil }
+            )
+        }
         .navigationDestination(item: $placeToPush) { place in
             PlaceView(place: place, onDismiss: { placeToPush = nil })
         }
@@ -615,9 +626,7 @@ struct MakerView: View {
             ForEach(theirLists) { list in
                 Divider().padding(.horizontal, AtlasSpacing.lg)
 
-                NavigationLink {
-                    TourListDetailView(listId: list.id, preloaded: list)
-                } label: {
+                Button { openList(list) } label: {
                     NamedListRow(
                         list: list,
                         coverImageName: TourListCover.imageName(for: list, in: dataService),
@@ -656,9 +665,7 @@ struct MakerView: View {
             ForEach(myLists) { list in
                 Divider().padding(.horizontal, AtlasSpacing.lg)
 
-                NavigationLink {
-                    TourListDetailView(listId: list.id)
-                } label: {
+                Button { openList(list) } label: {
                     NamedListRow(
                         list: list,
                         coverImageName: TourListCover.imageName(for: list, in: dataService),
@@ -677,9 +684,7 @@ struct MakerView: View {
                 profileListsHeader("Saved lists")
 
                 ForEach(savedLists) { list in
-                    NavigationLink {
-                        TourListDetailView(listId: list.id, preloaded: list)
-                    } label: {
+                    Button { openList(list) } label: {
                         SavedListRowView(
                             list: list,
                             ownerName: TourListOwner.name(of: list, in: dataService),
@@ -759,6 +764,21 @@ struct MakerView: View {
     /// So this mirrors `tourOpen` exactly — presenter when this page is
     /// top-level, an in-stack push when it is already inside a layer. The push
     /// depends on no observer at all, so it cannot fail the same way.
+    /// Open a list. Routed exactly like `openPlaceFromMap`, and for the same
+    /// reason: the presenter only sets state, and the slide-up itself is
+    /// performed by an `.onChange` in `ContentView` — which lives in the MAIN
+    /// window. Whenever this page is *itself* inside a layer that window is
+    /// covered, SwiftUI can stop delivering updates to it, and the row would
+    /// simply do nothing. So a list slides up from a tab root and pushes
+    /// in-stack from inside a layer.
+    private func openList(_ list: TourList) {
+        if let listPresenter, tourPresenter.presentedTour == nil, !isStandalone {
+            listPresenter.present(listId: list.id, preloaded: list)
+        } else {
+            listToPush = list
+        }
+    }
+
     private func openPlaceFromMap(_ place: Place) {
         if let placePresenter, tourPresenter.presentedTour == nil, !isStandalone {
             placePresenter.present(place)

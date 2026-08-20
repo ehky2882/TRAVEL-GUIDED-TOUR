@@ -78,6 +78,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// this drives a `.sheet` in `ContentView`. See `MakerPresenter`.
     @State private var makerPresenter = MakerPresenter()
     @State private var placePresenter = PlacePresenter()
+    @State private var listPresenter = TourListPresenter()
     /// Tracks how many pushed detail screens are on top of any tab's
     /// nav stack. Promoted from `ContentView` to the App level so the
     /// bottom-module window (a separate `UIWindow`) can read it too:
@@ -148,6 +149,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     .environment(tourPresenter)
                     .environment(makerPresenter)
                     .environment(placePresenter)
+                    .environment(listPresenter)
                     .environment(navState)
                     .environment(toastCenter)
                     .environment(groupListen)
@@ -318,6 +320,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 .environment(tourPresenter)
                 .environment(makerPresenter)
                 .environment(placePresenter)
+                .environment(listPresenter)
                 .environment(navState)
                 .environment(toastCenter)
                 .environment(groupListen)
@@ -385,10 +388,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
                     )
                     return
                 }
-                appShared.sharedList = SharedListPresentation(
-                    list: fetched.list,
-                    items: fetched.items
-                )
+                // The same slide-up layer every other entry point uses. It
+                // used to be a sheet of its own, which is why a shared list
+                // was the one copy of this screen that closed differently.
+                listPresenter.present(listId: fetched.list.id, preloaded: fetched.list)
             }
         case .place(let id):
             if let place = dataService.place(by: id) {

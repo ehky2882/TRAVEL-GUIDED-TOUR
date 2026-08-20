@@ -32,6 +32,7 @@ struct ContentView: View {
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(MakerPresenter.self) private var makerPresenter
     @Environment(PlacePresenter.self) private var placePresenter
+    @Environment(TourListPresenter.self) private var listPresenter
     @Environment(FollowService.self) private var followService
     @Environment(PurchaseService.self) private var purchaseService
     @Environment(AuthService.self) private var authService
@@ -93,6 +94,13 @@ struct ContentView: View {
     /// tapped inside a place page has to stack over it, and each controller
     /// tracks its own presented VC.
     @State private var placeLayer = BottomLayerController(
+        bottomInset: AtlasBottomModule.height()
+    )
+
+    /// Fourth slide-up layer, for a LIST. Its own controller for the same
+    /// reason the others have one: a tour tapped inside a list has to stack
+    /// over it, and each controller tracks its own presented VC.
+    @State private var listLayer = BottomLayerController(
         bottomInset: AtlasBottomModule.height()
     )
 
@@ -217,6 +225,7 @@ struct ContentView: View {
             }
             makerPresenter.performDismiss = { makerLayer.dismiss() }
             placePresenter.performDismiss = { placeLayer.dismiss() }
+            listPresenter.performDismiss = { listLayer.dismiss() }
         }
         // Paid tours: keep entitlements in step with whoever is signed in.
         // Keyed on `userId` so it re-runs on sign-in, sign-out AND an account
@@ -304,6 +313,7 @@ struct ContentView: View {
                     // button that went missing for exactly one dropped
                     // injection (build 68 → 69).
                     .environment(placePresenter)
+                    .environment(listPresenter)
                     .environment(dataService)
                     .environment(locationManager)
                     .environment(audioPlayer)
@@ -352,6 +362,7 @@ struct ContentView: View {
                         .environment(tourPresenter)
                         .environment(makerPresenter)
                         .environment(placePresenter)
+                    .environment(listPresenter)
                         .environment(dataService)
                         .environment(locationManager)
                         .environment(audioPlayer)
@@ -372,6 +383,50 @@ struct ContentView: View {
                 placeLayer.dismiss()
             }
         }
+        // The list layer. A list is a top-level screen wherever you reach it
+        // from — Library, a profile, a shared link — so it slides up like the
+        // other three rather than pushing onto whichever stack you happened to
+        // be in (owner direction, 2026-08-20). `preloaded` is passed straight
+        // through so the title is on screen from the first frame.
+        .onChange(of: listPresenter.presented?.id) { _, _ in
+            if let presentation = listPresenter.presented {
+                listLayer.present(
+                    // Wrapped in its own stack, like the maker layer: "Go to
+                    // creator" pushes a maker page here rather than stacking a
+                    // second layer over this one.
+                    NavigationStack {
+                        TourListDetailView(
+                            listId: presentation.id,
+                            preloaded: presentation.preloaded,
+                            onDismiss: { listPresenter.dismiss() }
+                        )
+                    }
+                        .environment(navState)
+                        .environment(homeSharedState)
+                        .environment(tourPresenter)
+                        .environment(makerPresenter)
+                        .environment(placePresenter)
+                        .environment(listPresenter)
+                        .environment(dataService)
+                        .environment(locationManager)
+                        .environment(audioPlayer)
+                        .environment(libraryStore)
+                        .environment(savedPlacesStore)
+                        .environment(recentlyViewedStore)
+                        .environment(proximityMonitor)
+                        .environment(tourDownloader)
+                        .environment(appShared)
+                        .environment(followService)
+                        .environment(authService)
+                        .environment(purchaseService)
+                        .environment(listService)
+                        .environment(groupListen),
+                    onDismiss: { listPresenter.dismiss() }
+                )
+            } else {
+                listLayer.dismiss()
+            }
+        }
         .onChange(of: makerPresenter.presentedMaker?.id) { _, _ in
             if let maker = makerPresenter.presentedMaker {
                 makerLayer.present(
@@ -383,6 +438,7 @@ struct ContentView: View {
                     .environment(tourPresenter)
                     .environment(makerPresenter)
                     .environment(placePresenter)
+                    .environment(listPresenter)
                     .environment(dataService)
                     .environment(locationManager)
                     .environment(audioPlayer)
@@ -402,28 +458,6 @@ struct ContentView: View {
             } else {
                 makerLayer.dismiss()
             }
-        }
-        // A list opened from a share link. Presented as an ordinary sheet
-        // rather than the UIKit slide-up layer tours and makers use: this
-        // arrives from outside the app with no screen behind it to slide over,
-        // and it carries its own nav stack so the title and the ... menu work
-        // exactly as they do everywhere else.
-        .sheet(item: $appShared.sharedList) { shared in
-            NavigationStack {
-                TourListDetailView(listId: shared.list.id, preloaded: shared.list)
-                    .toolbar {
-                        ToolbarItem(placement: .topBarLeading) {
-                            Button("Close") { appShared.sharedList = nil }
-                        }
-                    }
-            }
-            .environment(listService)
-            .environment(dataService)
-            .environment(tourPresenter)
-            .environment(makerPresenter)
-            .environment(authService)
-            .environment(libraryStore)
-            .environment(appShared)
         }
         // Resolve the current tour's maker avatar into lock-screen /
         // Control-Center artwork whenever the loaded source changes.
