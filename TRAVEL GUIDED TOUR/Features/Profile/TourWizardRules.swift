@@ -1,7 +1,13 @@
 import Foundation
 import CoreLocation
 
-/// The five steps of making a tour, and the rules for leaving each one.
+/// The six steps of making a tour, and the rules for leaving each one.
+///
+/// Tags were split out of Details on 2026-08-20. Details had four things in it
+/// and the fourth was the tag picker at 382pt closed — 691pt of content into a
+/// 529pt screen before anyone opened a group, and 907 after. The line to cut
+/// along was already in the picker's own copy: "tags are how people find your
+/// tour" is a different question from what the tour is.
 ///
 /// The rules live here as pure functions, following `SaveState`: the wizard is
 /// the only screen in the app where "can I go on?" has an answer per step, and
@@ -12,12 +18,13 @@ import CoreLocation
 /// either way. So the rules are testable without standing up a view, a
 /// service, or a Supabase row.
 enum TourWizardStep: Int, CaseIterable {
-    case location, details, photos, audio, review
+    case location, details, tags, photos, audio, review
 
     var label: String {
         switch self {
         case .location: return "LOCATION"
         case .details:  return "DETAILS"
+        case .tags:     return "TAGS"
         case .photos:   return "PHOTOS"
         case .audio:    return "AUDIO"
         case .review:   return "REVIEW"
@@ -79,6 +86,15 @@ enum TourWizardRules {
             // never an error, and review is the backstop if a tour arrives
             // bare.
             return state.trimmedTitle.isEmpty ? "A title is needed." : nil
+
+        case .tags:
+            // Nothing is required here, and that is the whole character of the
+            // step. Tags decide how well a tour is found, not whether it works
+            // — the catalogue's own validator treats a missing Place type or
+            // Theme as a warning, never an error (owner decision, 2026-08-19).
+            // Tags got a step of their own because the picker is 382pt tall,
+            // not because it earned a gate.
+            return nil
 
         case .photos:
             return state.hasCoverPhoto

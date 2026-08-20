@@ -157,11 +157,22 @@ final class TourWizardRulesTests: XCTestCase {
 
     func test_stepsRunInOrderAndStopAtBothEnds() {
         XCTAssertEqual(TourWizardStep.allCases,
-                       [.location, .details, .photos, .audio, .review])
+                       [.location, .details, .tags, .photos, .audio, .review])
         XCTAssertNil(TourWizardStep.location.previous)
         XCTAssertNil(TourWizardStep.review.next)
         XCTAssertEqual(TourWizardStep.location.next, .details)
+        XCTAssertEqual(TourWizardStep.details.next, .tags)
+        XCTAssertEqual(TourWizardStep.tags.next, .photos)
         XCTAssertEqual(TourWizardStep.review.previous, .audio)
+    }
+
+    /// Tags gate nothing. The step exists because the picker is too tall to
+    /// share a screen, not because a tour needs tags to be made.
+    func test_tags_neverBlocks() {
+        var state = completeState()
+        state.tags = []
+        XCTAssertTrue(TourWizardRules.canAdvance(from: .tags, state: state))
+        XCTAssertNil(TourWizardRules.blockingReason(for: .tags, state: state))
     }
 
     // MARK: - Coordinate equality

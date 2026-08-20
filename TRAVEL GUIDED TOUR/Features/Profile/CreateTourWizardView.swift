@@ -619,6 +619,7 @@ struct CreateTourWizardView: View {
         switch step {
         case .location: locationStep
         case .details:  detailsStep
+        case .tags:     tagsStep
         case .photos:   photosStep
         case .audio:    audioStep
         case .review:   reviewStep
@@ -916,22 +917,55 @@ struct CreateTourWizardView: View {
                     .wizardFieldStyle()
             }
 
+            // ⚠️ THE LABELS STAY, and that is a deliberate departure from step
+            // 1, where the label went and the placeholder did its job. That
+            // worked because step 1 had ONE field with an obvious purpose.
+            // Three stacked text boxes are a different problem: a placeholder
+            // disappears the moment you type, so on coming back to the step —
+            // or editing the tour months later — there would be nothing to say
+            // which box is the one-liner and which is the description. The
+            // labels also carry the character countdowns, which have nowhere
+            // else sensible to live.
+
+            // This step's elastic element. The description is the thing a
+            // maker writes most in, so it takes whatever the screen has left:
+            // about 344pt on a 6.3" phone, which holds the entire 600-character
+            // limit without scrolling, and less on a smaller one.
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("DESCRIPTION", remaining: Self.longLimit - longDescription.count)
                 TextField("What this tour is about", text: $longDescription, axis: .vertical)
-                    .lineLimit(3...6)
                     .focused($focused, equals: .long)
+                    .lineLimit(3...)
                     .onChange(of: longDescription) { _, new in
                         if new.count > Self.longLimit { longDescription = String(new.prefix(Self.longLimit)) }
                     }
+                    // Top-aligned inside the tall box: text that starts in the
+                    // middle of a 344pt field reads as a bug.
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                     .wizardFieldStyle()
+                    // ⚠️ Without this the box is a 344pt target of which only
+                    // the first line is tappable — a `TextField` sizes to its
+                    // text, so the empty space below it belongs to nothing.
+                    // Tapping anywhere in the painted box starts writing.
+                    .contentShape(Rectangle())
+                    .onTapGesture { focused = .long }
             }
-
-            VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
-                fieldLabel("TAGS — HOW YOUR TOUR IS FOUND")
-                ControlledTagPicker(selectedTags: $selectedTags, architect: $architect)
-            }
+            .frame(maxHeight: .infinity)
         }
+    }
+
+    /// Tags, on their own step since 2026-08-20 — see `TourWizardStep`.
+    ///
+    /// ⚠️ `ControlledTagPicker` is here UNCHANGED, on purpose. Moving it and
+    /// redesigning it are two changes, and only the move was asked for; the
+    /// owner is working through the wizard a step at a time and hasn't reached
+    /// this one. Consequence, stated rather than hidden: **closed it fits
+    /// (382pt into 529), but opening a group still scrolls** — Theme's chips
+    /// are 226pt against the 147 left over. Making that fit is the work of
+    /// step 3, and the mockup already measures what it needs (one-line rows
+    /// buy 80pt, and the open group becomes the elastic element).
+    private var tagsStep: some View {
+        ControlledTagPicker(selectedTags: $selectedTags, architect: $architect)
     }
 
     @ViewBuilder
@@ -1244,7 +1278,12 @@ struct CreateTourWizardView: View {
         switch step {
         case .location:
             return "The tour fires when a listener walks inside this circle."
-        case .details, .photos, .audio, .review:
+        case .details:
+            // Says what the dimmed Next is waiting for *before* it is the only
+            // thing left — and that everything else here is optional, which is
+            // the owner's rule and not obvious from a screen of empty fields.
+            return "Only a title is required. The rest you can add any time."
+        case .tags, .photos, .audio, .review:
             return nil
         }
     }
