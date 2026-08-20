@@ -512,16 +512,16 @@ struct CreateTourWizardView: View {
             // which would not fit three-across on any phone. The Review
             // step's footnote carries the nuance the button no longer can.
             HStack(spacing: AtlasSpacing.sm) {
-                footerButton("Back", icon: "chevron.left",
+                footerButton("Back", icon: "chevron.left", style: .glyph,
                              enabled: step.previous != nil && !isBusy,
                              action: goBack)
 
-                footerButton("Save draft", icon: "doc.fill",
+                footerButton("Save draft", icon: "tray.and.arrow.down", style: .words,
                              enabled: canPersist && !isBusy,
                              busy: isSavingInPlace,
                              action: saveProgress)
 
-                footerButton(primaryLabel, icon: primaryIcon,
+                footerButton(primaryLabel, icon: primaryIcon, style: primaryStyle,
                              filled: true,
                              enabled: canAdvance && !isBusy,
                              busy: isSubmitting || (isPersisting && !isSavingInPlace),
@@ -544,6 +544,16 @@ struct CreateTourWizardView: View {
         }
     }
 
+    /// How a footer button says what it does.
+    private enum FooterLabelStyle {
+        /// Always the glyph. Back and Next are directions, and an arrow says a
+        /// direction better than a word does (owner, 2026-08-20).
+        case glyph
+        /// The words while they fit, the glyph when they don't. For a button
+        /// whose meaning isn't a direction and can't be drawn as one.
+        case words
+    }
+
     /// One of the footer's three columns.
     ///
     /// 🔴 THE THREE ARE ALWAYS EXACTLY THE SAME WIDTH. `maxWidth: .infinity`
@@ -552,32 +562,40 @@ struct CreateTourWizardView: View {
     /// neighbours — a row of buttons at three different widths is the thing
     /// that looks wrong (owner, 2026-08-20).
     ///
-    /// That guarantee needs somewhere for a label to go when a third of the
-    /// row isn't enough, and the answer is the glyph. `ViewThatFits` takes the
-    /// words when the words fit and the icon when they don't, measured against
-    /// the space actually available rather than a character count I guessed at.
-    /// Nothing wraps, nothing truncates, nothing grows.
+    /// For `.words`, that guarantee needs somewhere for a label to go when a
+    /// third of the row isn't enough, and the answer is the glyph.
+    /// `ViewThatFits` takes the words when the words fit and the icon when they
+    /// don't, measured against the space actually available rather than a
+    /// character count I guessed at. Nothing wraps, truncates or grows.
     ///
-    /// ⚠️ The order of the modifiers below is the whole trick, and it is easy
-    /// to get backwards. `ViewThatFits` must wrap the LABEL ONLY, with the
-    /// fill applied outside it — put `maxWidth: .infinity` inside and the text
-    /// version always "fits", so it truncates instead of ever becoming the
-    /// icon; put the capsule inside and it is sized to the words, which is the
+    /// ⚠️ The order of the modifiers is the whole trick, and it is easy to get
+    /// backwards. `ViewThatFits` must wrap the LABEL ONLY, with the fill
+    /// applied outside it — put `maxWidth: .infinity` inside and the words
+    /// always "fit", so they truncate and the glyph never appears; put the
+    /// capsule inside and it is sized to the words, which is the
     /// three-different-widths problem again. Label measured, capsule filled,
     /// in that order.
     ///
-    /// The words stay on the button as its accessibility label either way, so
-    /// an icon-only button is never unlabelled.
+    /// The words stay on the button as its accessibility label in both styles,
+    /// so a glyph-only button is never unlabelled.
     private func footerButton(_ text: String,
                               icon: String,
+                              style: FooterLabelStyle,
                               filled: Bool = false,
                               enabled: Bool,
                               busy: Bool = false,
                               action: @escaping () -> Void) -> some View {
         Button(action: action) {
-            ViewThatFits(in: .horizontal) {
-                footerLabel(text: text, icon: nil, filled: filled, busy: busy)
-                footerLabel(text: nil, icon: icon, filled: filled, busy: busy)
+            Group {
+                switch style {
+                case .glyph:
+                    footerLabel(text: nil, icon: icon, filled: filled, busy: busy)
+                case .words:
+                    ViewThatFits(in: .horizontal) {
+                        footerLabel(text: text, icon: nil, filled: filled, busy: busy)
+                        footerLabel(text: nil, icon: icon, filled: filled, busy: busy)
+                    }
+                }
             }
             .padding(.horizontal, AtlasSpacing.sm)
             .padding(.vertical, 12)
@@ -599,8 +617,10 @@ struct CreateTourWizardView: View {
         .accessibilityLabel(text)
     }
 
-    /// What sits inside a footer button: the spinner, then either the words or
-    /// the glyph. Never both — `ViewThatFits` picks between two of these.
+    /// What sits inside a footer button: the words, or the glyph, or — while a
+    /// write is in flight — the spinner in place of whichever it would be.
+    /// Never a spinner *beside* a glyph: two marks in a 44pt capsule reads as
+    /// a mistake.
     private func footerLabel(text: String?,
                              icon: String?,
                              filled: Bool,
@@ -619,7 +639,7 @@ struct CreateTourWizardView: View {
                     // answer about whether the words really fit rather than a
                     // truncated one that always says yes.
                     .fixedSize(horizontal: true, vertical: false)
-            } else if let icon {
+            } else if let icon, !busy {
                 Image(systemName: icon)
                     .font(.system(size: 15, weight: .regular))
             }
@@ -1290,10 +1310,23 @@ struct CreateTourWizardView: View {
         return draft?.status == .inReview ? "In review" : "Submit"
     }
 
-    /// The primary's glyph, for when its label can't fit a third of the row.
+    /// The primary's glyph. A chevron on the way through the wizard, matching
+    /// Back; something else on Review, where the button stops meaning "next"
+    /// and starts meaning "hand this over".
     private var primaryIcon: String {
         guard step == .review else { return "chevron.right" }
         return draft?.status == .inReview ? "clock" : "paperplane.fill"
+    }
+
+    /// ⚠️ Review keeps its words; every other step is a bare chevron.
+    ///
+    /// A chevron is a fine way to say "next" and a poor way to say "submit for
+    /// review" — the last one is a commitment, it puts the tour in front of a
+    /// moderator, and it deserves to be read rather than recognised. "Submit"
+    /// and "In review" both fit a third of the row comfortably, so this costs
+    /// nothing; the glyph is still there as the fallback if they ever don't.
+    private var primaryStyle: FooterLabelStyle {
+        step == .review ? .words : .glyph
     }
 
     private var reviewFootnote: String {
