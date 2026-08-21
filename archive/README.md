@@ -142,6 +142,9 @@ tribal knowledge not yet promoted.
 - [HANDOFF-260820-4.md](HANDOFF-260820-4.md) — Liked stops being a screen of its own: `LikedListView` is deleted and Liked renders through `TourListDetailView` with a `.liked` target, because two screens that must look alike will drift. Includes the owner decision that someone else's Liked cannot be bookmarked (Follow already is that), and a `dismiss()` leftover from #553 that left the layer up after deleting a list. TestFlight 1.1 (95), merged.
 - [HANDOFF-260821.md](HANDOFF-260821.md) — the upload wizard's second review round: eleven owner notes across six steps. **`maxHeight: .infinity` inside the wizard's step area has never done anything** — a flexible child gets no room from a ScrollView sized by its own content — which caused three separate complaints; and the symptom only shows where the child has no size of its own, which is why step 3 was fine and reporting it as broken was an overstatement. Also: a TestFlight build that **succeeded and reported failure** because Apple rejected a `✕` in the notes *after* the upload had already processed. TestFlight 1.1 (97)→(98), owner device-verified. **Active handoff.**
 
+**Active handoff: `HANDOFF-260821-2.md`** (session 102 — semantic search,
+step 1: the catalogue embedded offline, no app code yet).
+
 When the next handoff is written, name it for the new date
 (`HANDOFF-YYMMDD.md`) and update the entry above to point to the
 latest one as the "Active handoff." Older handoffs stay as
