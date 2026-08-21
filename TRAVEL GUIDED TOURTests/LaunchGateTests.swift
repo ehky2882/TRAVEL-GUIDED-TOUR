@@ -105,6 +105,19 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertEqual(LaunchBloom.ramp(1.0, delay: 0.2, window: 0.4), 1)
     }
 
+    /// 🔴 Regression: the ramp must return EXACTLY 1, not 0.9999999999999999.
+    ///
+    /// Everything downstream treats 1 as "arrived" — `atlasPinBloom`
+    /// short-circuits on it — so a pin that only approaches 1 keeps a
+    /// fractional scale and opacity for the life of the session. These are the
+    /// inputs that actually produced the inexact result.
+    func test_rampReachesItsEndpointsExactly() {
+        XCTAssertEqual(LaunchBloom.ramp(0.6, delay: 0.2, window: 0.4), 1)
+        XCTAssertEqual(LaunchBloom.ramp(0.9, delay: 0.3, window: 0.6), 1)
+        XCTAssertEqual(LaunchBloom.ramp(1.0, delay: 0.66, window: 0.34), 1)
+        XCTAssertEqual(LaunchBloom.ramp(0.2, delay: 0.2, window: 0.4), 0)
+    }
+
     func test_rampWithNoWindowIsAStep() {
         XCTAssertEqual(LaunchBloom.ramp(0.19, delay: 0.2, window: 0), 0)
         XCTAssertEqual(LaunchBloom.ramp(0.2, delay: 0.2, window: 0), 1)

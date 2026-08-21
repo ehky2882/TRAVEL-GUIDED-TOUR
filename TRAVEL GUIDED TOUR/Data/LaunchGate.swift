@@ -137,7 +137,24 @@ enum LaunchBloom {
     /// both expressed as fractions of the whole. Returns its own 0→1.
     static func ramp(_ progress: Double, delay: Double, window: Double) -> Double {
         guard window > 0 else { return progress >= delay ? 1 : 0 }
-        return min(max((progress - delay) / window, 0), 1)
+        // 🔴 The endpoints are SNAPPED, and on the computed fraction rather
+        // than on `progress` against `delay + window`.
+        //
+        // `(progress - delay) / window` lands on 0.9999999999999999 for plenty
+        // of ordinary inputs, and everything downstream treats 1 as "arrived":
+        // `atlasPinBloom` short-circuits on it, and a pin that never quite gets
+        // there keeps a fractional scale and opacity for the life of the
+        // session. Close enough to look right, wrong in a way nobody would ever
+        // find.
+        //
+        // ⚠️ Comparing `progress >= delay + window` does NOT fix it — that sum
+        // carries its own error (0.2 + 0.4 is 0.6000000000000001, so an exact
+        // 0.6 fails the test and falls through to the inexact division). The
+        // tolerance has to sit on the result.
+        let t = (progress - delay) / window
+        if t <= 0 { return 0 }
+        if t >= 1 - Double.ulpOfOne.squareRoot() { return 1 }
+        return t
     }
 
     // MARK: - Phase fractions
