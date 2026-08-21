@@ -520,6 +520,19 @@ struct ContentView: View {
         }
     }
 
+    // MARK: - Launch
+
+    /// How far down the drawer is parked before its entrance. Larger than any
+    /// iPhone is tall, so the sheet is fully off-screen whatever the device.
+    private static let drawerEntryOffset: CGFloat = 1200
+
+    /// Ask for location permission exactly once per session.
+    private func requestLocationPermissionIfNeeded() {
+        guard !didRequestLocationPermission else { return }
+        didRequestLocationPermission = true
+        locationManager.requestPermission()
+    }
+
     /// Tab content. **Home is kept permanently mounted** (visibility-
     /// toggled, not `switch`-swapped) so its SwiftUI `Map` — backed by an
     /// `MKMapView` carrying ~509 clustered stop annotations — isn't torn
@@ -539,19 +552,6 @@ struct ContentView: View {
     /// guards its camera side-effects — so it isn't burning CPU/battery
     /// off-screen.
     @ViewBuilder
-    // MARK: - Launch
-
-    /// How far down the drawer is parked before its entrance. Larger than any
-    /// iPhone is tall, so the sheet is fully off-screen whatever the device.
-    private static let drawerEntryOffset: CGFloat = 1200
-
-    /// Ask for location permission exactly once per session.
-    private func requestLocationPermissionIfNeeded() {
-        guard !didRequestLocationPermission else { return }
-        didRequestLocationPermission = true
-        locationManager.requestPermission()
-    }
-
     private var tabContent: some View {
         let isHome = appShared.selectedTab == .home
         ZStack {
