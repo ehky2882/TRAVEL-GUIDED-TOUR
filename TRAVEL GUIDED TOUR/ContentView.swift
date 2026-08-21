@@ -116,6 +116,22 @@ struct ContentView: View {
     /// screens; cleared by the dismiss animation's completion.
     @State private var tourLayerCoversDrawer = false
 
+    /// Whether the launch splash is still up. Optional for the same reason
+    /// `HomeView` reads it optionally — nil means "not launching".
+    @Environment(LaunchState.self) private var launchState: LaunchState?
+    /// False until the drawer has played its one entrance of the session.
+    ///
+    /// The drawer used to simply *be* there at `.medium` the moment the app
+    /// appeared, which taught the user nothing about the fact that it moves.
+    /// It now starts off-screen behind the splash and rises once the splash
+    /// clears — the single piece of motion the hand-off keeps, and the only
+    /// hint the home screen gives that the panel is draggable.
+    ///
+    /// ⚠️ Launch only. A tab return must still restore the remembered detent
+    /// instantly; re-playing this every time Home came back would be a tax on
+    /// the most-repeated navigation in the app.
+    @State private var drawerHasEntered = false
+
     var body: some View {
         @Bindable var appShared = appShared
         // NOTE on bindings: deliberately NOT using `@Bindable` for
@@ -164,6 +180,11 @@ struct ContentView: View {
                         sheetDetent: $homeSheetDetent
                     )
                 }
+                // Off-screen until the entrance plays. The sheet lays out
+                // bottom-anchored inside a full-screen frame, so translating
+                // the whole thing down by more than any phone's height parks
+                // it completely out of view without touching its internals.
+                .offset(y: drawerHasEntered ? 0 : Self.drawerEntryOffset)
             }
             // Fallback mini-player + tab bar, rendered in THIS (main) window
             // whenever the secondary higher-level window isn't installed.
@@ -198,10 +219,24 @@ struct ContentView: View {
         // slides up over the mini-player + tab bar in the same window,
         // with no separate hide/show of the module (which used to leave
         // a visible gap during the transition).
+        // Permission is requested after hand-off, not on appear. ContentView
+        // now mounts underneath the splash, and a system alert over a black
+        // screen with a wordmark on it reads as a broken launch. `LaunchGate`
+        // treats `notDetermined` as settled precisely so this delay can't
+        // stall the gate.
+        .onChange(of: launchState?.isSplashVisible ?? false) { _, splashVisible in
+            guard !splashVisible else { return }
+            requestLocationPermissionIfNeeded()
+            withAnimation(.spring(response: 0.5, dampingFraction: 0.82)) {
+                drawerHasEntered = true
+            }
+        }
         .onAppear {
-            guard !didRequestLocationPermission else { return }
-            didRequestLocationPermission = true
-            locationManager.requestPermission()
+            // Backstop for any host that never injects `LaunchState` (previews,
+            // tests): with no splash to wait for, behave exactly as before.
+            guard launchState == nil else { return }
+            requestLocationPermissionIfNeeded()
+            drawerHasEntered = true
         }
         // 🔴 Give each presenter a DIRECT route to take its layer down.
         //
@@ -504,6 +539,19 @@ struct ContentView: View {
     /// guards its camera side-effects — so it isn't burning CPU/battery
     /// off-screen.
     @ViewBuilder
+    // MARK: - Launch
+
+    /// How far down the drawer is parked before its entrance. Larger than any
+    /// iPhone is tall, so the sheet is fully off-screen whatever the device.
+    private static let drawerEntryOffset: CGFloat = 1200
+
+    /// Ask for location permission exactly once per session.
+    private func requestLocationPermissionIfNeeded() {
+        guard !didRequestLocationPermission else { return }
+        didRequestLocationPermission = true
+        locationManager.requestPermission()
+    }
+
     private var tabContent: some View {
         let isHome = appShared.selectedTab == .home
         ZStack {

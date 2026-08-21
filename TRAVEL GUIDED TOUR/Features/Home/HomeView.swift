@@ -21,6 +21,10 @@ struct HomeView: View {
     @Environment(HomeSharedState.self) private var sharedState
     @Environment(TourPresenter.self) private var tourPresenter
     @Environment(PlacePresenter.self) private var placePresenter
+    /// Optional so previews and any host that doesn't inject it still build —
+    /// nil simply means "not launching", which is the right default anywhere
+    /// other than the real app's first seconds.
+    @Environment(LaunchState.self) private var launchState: LaunchState?
 
     /// Drawer detent — owned by `ContentView` so it persists across
     /// tab switches and so the drawer (also at `ContentView`) and the
@@ -357,6 +361,15 @@ struct HomeView: View {
             center: user.coordinate,
             span: Self.initialUserSpan
         )
+        // Behind the splash there is nobody to animate for, and animating
+        // would be worse than pointless: the flight used to finish AFTER the
+        // splash cleared, so the map opened on the fallback region and then
+        // visibly travelled somewhere else. Resolve it instantly instead, and
+        // the user's first frame of the map is already their own city.
+        if launchState?.isSplashVisible == true {
+            cameraPosition = .region(region)
+            return
+        }
         withAnimation(.easeInOut(duration: 0.6)) {
             cameraPosition = .region(region)
         }
