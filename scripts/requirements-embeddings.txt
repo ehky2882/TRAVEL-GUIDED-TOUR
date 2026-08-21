@@ -1,0 +1,12 @@
+# Dependencies for scripts/build-embeddings.py
+#
+# Deliberately NOT sentence-transformers: it pulls PyTorch (~800 MB) to run a
+# 23 MB model. Tokenizer + ONNX Runtime produces the same numbers in a
+# fraction of the footprint, which matters in CI where this runs on every
+# content merge.
+#
+#   pip3 install -r scripts/requirements-embeddings.txt
+
+onnxruntime>=1.17
+tokenizers>=0.15
+numpy>=1.24
