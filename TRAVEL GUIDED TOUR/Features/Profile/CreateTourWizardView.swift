@@ -104,9 +104,13 @@ struct CreateTourWizardView: View {
     /// step reads it — it outlives both, and a recording that takes a minute to
     /// transcribe must not be cancelled by walking to the next screen.
     @State private var transcriber = AudioTranscriber()
-    /// The scroll viewport's height, so a step that needs to fill it can be
+    /// The scroll viewport's size, so a step that needs to fill it can be
     /// sized rather than hope. See the ScrollView's `onGeometryChange`.
-    @State private var stepAreaHeight: CGFloat = 0
+    ///
+    /// ⚠️ The **width** is carried as well as the height, and only for the
+    /// fallback: it is what lets an unmeasured box fall back to a square
+    /// rather than to a number somebody picked.
+    @State private var stepAreaSize: CGSize = .zero
     /// The transcript step's label row, measured so the box below it can take
     /// exactly what's left instead of guessing at a font's line height.
     @State private var transcriptLabelHeight: CGFloat = 0
@@ -541,7 +545,7 @@ struct CreateTourWizardView: View {
                 // control at its minimum. Step 1 was fixed by giving the map a
                 // real shape; a text box has no natural shape, so it takes
                 // this number instead.
-                .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { stepAreaHeight = $0 }
+                .onGeometryChange(for: CGSize.self) { $0.size } action: { stepAreaSize = $0 }
             }
         }
         // 🔴 ITS OWN INSET, AND IT MUST BE APPLIED BEFORE THE FOOTER'S.
@@ -1307,9 +1311,36 @@ struct CreateTourWizardView: View {
     /// arithmetic leaves nothing — better a short box that scrolls than a box
     /// with no height at all.
     private var transcriptBoxHeight: CGFloat {
-        let usable = stepAreaHeight - keyboardOverlap - AtlasSpacing.lg * 2
-        return max(120, usable - transcriptLabelHeight - AtlasSpacing.xs)
+        // Owner, 2026-08-21: *"for transcript box, you can also just make it
+        // square to be safe."* Right about where the risk is, so the square is
+        // the FALLBACK rather than the size.
+        //
+        // ⚠️ A square as the actual size would leave a gap. The box has this
+        // step almost to itself now, so a square comes out ~100pt short of the
+        // room there is on a 6.3" phone — a fifth of the step blank underneath,
+        // which is the complaint step 1 started from. Measured, it fills.
+        //
+        // But a measurement can be missing, and the first frame is exactly
+        // when it is: `onGeometryChange` reports after layout, so the box is
+        // built once before anything has been measured. That frame used to be
+        // a 120pt sliver — the very shape the owner complained about — and it
+        // is a square now, which is the shape this box can always have without
+        // knowing anything about the screen. Same fallback if the measurement
+        // ever returns nonsense.
+        let square = max(Self.transcriptMinHeight,
+                         stepAreaSize.width - AtlasSpacing.lg * 2)
+        guard stepAreaSize.height > 0 else { return square }
+        let usable = stepAreaSize.height - keyboardOverlap - AtlasSpacing.lg * 2
+        // No upper cap: filling the step is the point. The floor stops a small
+        // screen with the keyboard up from collapsing it to nothing.
+        return max(Self.transcriptMinHeight,
+                   usable - transcriptLabelHeight - AtlasSpacing.xs)
     }
+
+    /// The shortest the transcript box may ever be — about four lines, which is
+    /// enough to see that it is a box you type in. Only reachable on a small
+    /// screen with the keyboard up.
+    private static let transcriptMinHeight: CGFloat = 120
 
     /// The transcript step's own controls, pinned in the footer rather than
     /// left to float at the bottom of a box that changes height.
