@@ -255,6 +255,48 @@ final class MakerTourService {
         await loadMyTours(makerId: tour.makerId)
     }
 
+    /// Take a tour's narration back off it, leaving the draft exactly as
+    /// `createDraftTour` left it — empty `audio_url`, zero durations.
+    ///
+    /// **Why this exists:** owner, 2026-08-20, from step 5 on device —
+    /// *"after a recording is accepted there should still be an ability to
+    /// discard it."* Until now Discard could only throw away a take that had
+    /// not been uploaded yet. Once a take was kept, the only route back was to
+    /// record or import something else over the top, so a maker who decided
+    /// their tour should carry no narration at all had no way to say so.
+    ///
+    /// ⚠️ **Empty string, not null.** `stops.audio_url` is `text not null` and
+    /// `audio_duration_seconds` is `int not null` (`backend/schema.sql`), so
+    /// there is no null to write. A fresh draft already stores `""` and `0`,
+    /// and `stopAudioURL` reads an empty string as no audio — this restores
+    /// that exact state rather than inventing a third one.
+    ///
+    /// Storage deletion is best-effort and comes last, for `setPhotos`' reason:
+    /// a failure there must not undo the removal the maker asked for, and the
+    /// worst case is an object nothing points at.
+    func removeAudio(from tour: Tour) async throws {
+        let tourId = tour.id.uuidString.lowercased()
+        let existing = await stopAudioURL(tourId: tour.id)
+
+        // Filter by tour_id only — the stop column is named "order", which
+        // collides with PostgREST's reserved sort param (see attachAudio).
+        try await client.from("stops")
+            .update(StopAudioPatch(audioURL: "", audioDurationSeconds: 0))
+            .eq("tour_id", value: tourId)
+            .execute()
+        try await client.from("tours")
+            .update(TourDurationPatch(totalDurationSeconds: 0))
+            .eq("id", value: tourId)
+            .execute()
+
+        if let existing,
+           let path = Self.storagePath(from: existing.absoluteString, bucket: "tour-audio") {
+            _ = try? await client.storage.from("tour-audio").remove(paths: [path])
+        }
+
+        await loadMyTours(makerId: tour.makerId)
+    }
+
     /// Replace a tour's photo set wholesale, in the given order: the first entry
     /// becomes the cover, the rest the gallery.
     ///

@@ -104,6 +104,16 @@ struct CreateTourWizardView: View {
     /// step reads it — it outlives both, and a recording that takes a minute to
     /// transcribe must not be cancelled by walking to the next screen.
     @State private var transcriber = AudioTranscriber()
+    /// The scroll viewport's height, so a step that needs to fill it can be
+    /// sized rather than hope. See the ScrollView's `onGeometryChange`.
+    @State private var stepAreaHeight: CGFloat = 0
+    /// The transcript step's label row, measured so the box below it can take
+    /// exactly what's left instead of guessing at a font's line height.
+    @State private var transcriptLabelHeight: CGFloat = 0
+    /// How tall a step's pinned controls are, when it has any. Zero on the six
+    /// steps that don't, and part of what the keyboard is already standing
+    /// behind — see `keyboardOverlap`.
+    @State private var accessoryHeight: CGFloat = 0
     /// Whether the maker has typed in the transcript box themselves.
     ///
     /// 🔴 The one thing standing between a maker and losing a sentence they
@@ -206,6 +216,39 @@ struct CreateTourWizardView: View {
     }
 
     private static let radiusRange: ClosedRange<Double> = 15...100
+    /// How many characters of 13pt SF Mono fit on one line of a wizard field.
+    ///
+    /// 345pt of step width less `AtlasSpacing.md` of field padding each side
+    /// leaves 313pt, and SF Mono advances 0.6em — so 7.8pt a character, and
+    /// forty of them. Used to size each box to the most it will ever hold.
+    private static let charsPerFieldLine = 40
+
+    /// A box tall enough for everything its limit allows.
+    ///
+    /// Owner, 2026-08-20: *"size them to what the maximum text allowed would
+    /// be."* So the box is the limit, drawn — you can see how much room you
+    /// have before you start rather than watching a counter run down, and the
+    /// layout never moves as you type because it was already that tall.
+    ///
+    /// ⚠️ Also what makes the boxes VISIBLE. They were always pure black
+    /// (`AtlasColors.background`) on a `#1C1C1E` page — an 11% difference,
+    /// which at one line tall reads as no box at all. That is what the owner
+    /// saw. A large black area against that ground reads immediately.
+    /// A field's text with any line breaks taken out and its limit applied.
+    ///
+    /// Newlines become spaces rather than vanishing, so "The Old\nCustom
+    /// House" reads as it was meant to instead of running together. Trimmed
+    /// only at the limit — not at the ends — because trimming as you type
+    /// would eat the space you just pressed.
+    static func oneLine(_ raw: String, limit: Int) -> String {
+        let flattened = raw.replacingOccurrences(of: "\n", with: " ")
+        return flattened.count > limit ? String(flattened.prefix(limit)) : flattened
+    }
+
+    private static func fieldLines(for limit: Int) -> Int {
+        max(1, Int((Double(limit) / Double(charsPerFieldLine)).rounded(.up)))
+    }
+
     private static let titleLimit = 60
     private static let shortLimit = 100
     private static let longLimit = 600
@@ -457,9 +500,69 @@ struct CreateTourWizardView: View {
                     // times its minimum, and nothing scrolls.
                     .frame(minHeight: max(0, geo.size.height - keyboardOverlap),
                            alignment: .top)
+                    // 🔴 TAP ANYWHERE THAT ISN'T A CONTROL TO PUT THE KEYBOARD
+                    // AWAY. Owner, 2026-08-20: *"when in the input fields and
+                    // the keyboard is up, it's rather difficult to click out of
+                    // the keyboard."*
+                    //
+                    // It was difficult because the only way out was
+                    // `scrollDismissesKeyboard`, which needs something to
+                    // scroll — and the whole point of this rebuild is that a
+                    // step fits, so on most steps there is nothing to scroll
+                    // and the gesture did nothing at all. Sizing the fields to
+                    // their character limits made it worse again by leaving
+                    // almost no bare screen to tap.
+                    //
+                    // ⚠️ A `.toolbar` "Done" above the keyboard is the usual
+                    // iOS answer and is NOT AVAILABLE HERE — see `body`. The
+                    // toolbar bridge is what hung this screen
+                    // (`UIKitToolbarStrategy.updateLocations()` inside
+                    // `_sheetLayoutInfoLayout:`), which is why the wizard has
+                    // no NavigationStack and no toolbar of any kind. Do not
+                    // reintroduce one for this.
+                    //
+                    // Attached AFTER the frame so the shape covers the whole
+                    // screenful, including the empty space below the content —
+                    // and as a plain `onTapGesture` rather than a simultaneous
+                    // one, so the fields, buttons, slider and map still take
+                    // their own taps first. A simultaneous gesture would fire
+                    // on the tap that focuses a field and dismiss the keyboard
+                    // it had just raised.
+                    .contentShape(Rectangle())
+                    .onTapGesture { focused = nil }
                 }
                 .scrollDismissesKeyboard(.interactively)
+                // 🔴 MEASURED, BECAUSE `maxHeight: .infinity` DOES NOT WORK
+                // HERE. A flexible child gets no room from a ScrollView whose
+                // content frame sets only a `minHeight` — the frame stretches
+                // to a screenful and top-aligns while the child stays at its
+                // floor. That was the map on step 1 and the transcript box on
+                // step 6, both showing a screenful of dead space beneath a
+                // control at its minimum. Step 1 was fixed by giving the map a
+                // real shape; a text box has no natural shape, so it takes
+                // this number instead.
+                .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { stepAreaHeight = $0 }
             }
+        }
+        // 🔴 ITS OWN INSET, AND IT MUST BE APPLIED BEFORE THE FOOTER'S.
+        // Owner, 2026-08-20, on the mockup: *"these should be 'above' the
+        // standard buttons, not added to be part of it."* Inside the footer's
+        // VStack the pair sat on the same panel, under the same divider, in
+        // the same capsule shape as Back · Save · Next — so the row read as a
+        // five-button footer where two of the buttons changed between steps.
+        // The footer is the one part of this screen that never changes; a step
+        // may not add to it.
+        //
+        // Two bottom insets stack outermost-last, so the footer applied after
+        // this one sits below it, and the divider the footer draws along its
+        // own top edge becomes the line between the two. This pair now sits on
+        // the page's ground, above that line: pinned as asked, and plainly not
+        // part of the chrome.
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            stepAccessory
+                .onGeometryChange(for: CGFloat.self) { $0.size.height } action: {
+                    accessoryHeight = $0
+                }
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
             // Measured rather than assumed: `keyboardOverlap` needs to know how
@@ -589,7 +692,7 @@ struct CreateTourWizardView: View {
                              enabled: step.previous != nil && !isBusy,
                              action: goBack)
 
-                footerButton("Save draft", icon: "tray.and.arrow.down",
+                footerButton("Save draft", icon: "folder",
                              enabled: canPersist && !isBusy,
                              busy: isSavingInPlace,
                              action: saveProgress)
@@ -692,7 +795,7 @@ struct CreateTourWizardView: View {
     /// standing in that space, unmoved, because the wizard ignores the
     /// keyboard's safe area. Only what is left over eats into the step.
     private var keyboardOverlap: CGFloat {
-        max(0, keyboardHeight - footerHeight)
+        max(0, keyboardHeight - footerHeight - accessoryHeight)
     }
 
     /// Any write in flight. Every footer button waits on it — two of them
@@ -734,11 +837,19 @@ struct CreateTourWizardView: View {
                     }
                 }
 
-            // The map is this step's elastic element — see the container in
-            // `wizard`. Its instruction rides ON it rather than above it,
-            // which is 21pt the map keeps.
+            // 🔴 SQUARE, NOT ELASTIC — and it was never actually elastic.
+            // This asked for `maxHeight: .infinity` inside a ScrollView whose
+            // content frame sets only a `minHeight`, and a flexible child
+            // gets no room from a container sized by its own content: the
+            // frame stretches to the screenful and top-aligns, while the map
+            // sits at its 200pt floor with the rest as dead space. That is
+            // exactly what the owner's screenshot showed.
+            //
+            // Sizing it like every other map in the app fixes the symptom and
+            // removes the dependency at once. Its instruction still rides ON
+            // it rather than above it, which is 21pt the map keeps.
             mapSection
-                .frame(minHeight: 200, maxHeight: .infinity)
+                .atlasHeroSizing(nil)
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("TRIGGER RADIUS — \(Int(radius)) m")
@@ -922,10 +1033,19 @@ struct CreateTourWizardView: View {
                     .stroke(AtlasColors.mapPin, lineWidth: 2)
             }
         }
-        // No height here — the caller sizes it, because on this step the map
-        // is what absorbs whatever the screen has left over. That is 400pt on
-        // a 6.3" phone and 288 on an SE, against a flat 280 before.
-        .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+        // 🔴 THE SAME FOOTPRINT AS THE MAP ON A TOUR PAGE — square, and square
+        // corners. Owner, 2026-08-20, from a device screenshot: *"Map is too
+        // small. Make it the same size as what would appear on a tour detail,
+        // places, etc page. Square. No rounded corners."*
+        //
+        // `.atlasHeroSizing(nil)` is literally the modifier `TourDetailView`
+        // and `PlaceView` size their maps with, so this cannot drift from
+        // them: it takes `AtlasSpacing.heroAspectRatio`, which is 1.0. No
+        // `clipShape` for the same reason — those maps have square corners,
+        // matching the hero image they swap with.
+        //
+        // ⚠️ This makes the map FIXED rather than elastic, and that is the
+        // point rather than a side effect. See the call site.
         .overlay {
             // Fixed centre pin — the map centre IS the chosen coordinate, so
             // panning the map moves the pin. Tip anchored at the true centre.
@@ -969,20 +1089,30 @@ struct CreateTourWizardView: View {
         VStack(alignment: .leading, spacing: AtlasSpacing.md) {
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("TITLE", remaining: Self.titleLimit - title.count)
-                TextField("e.g. The Old Custom House", text: $title)
+                TextField("e.g. The Old Custom House", text: $title, axis: .vertical)
+                    .lineLimit(Self.fieldLines(for: Self.titleLimit), reservesSpace: true)
                     .focused($focused, equals: .title)
+                    // 🔴 NO LINE BREAKS IN A TITLE. Sizing this box to its
+                    // 60-character limit meant making it `axis: .vertical`,
+                    // and a vertical TextField treats Return as a newline
+                    // rather than as "done" — so a title could carry one, and
+                    // then carry it into the catalogue, the share card and the
+                    // lock screen. Same for the one-liner below, which is
+                    // called a one-liner for a reason. Stripped on the way in,
+                    // beside the limit that is already enforced here.
                     .onChange(of: title) { _, new in
-                        if new.count > Self.titleLimit { title = String(new.prefix(Self.titleLimit)) }
+                        title = Self.oneLine(new, limit: Self.titleLimit)
                     }
                     .wizardFieldStyle()
             }
 
             VStack(alignment: .leading, spacing: AtlasSpacing.xs) {
                 fieldLabel("SHORT DESCRIPTION", remaining: Self.shortLimit - shortDescription.count)
-                TextField("One line shown on cards", text: $shortDescription)
+                TextField("One line shown on cards", text: $shortDescription, axis: .vertical)
+                    .lineLimit(Self.fieldLines(for: Self.shortLimit), reservesSpace: true)
                     .focused($focused, equals: .short)
                     .onChange(of: shortDescription) { _, new in
-                        if new.count > Self.shortLimit { shortDescription = String(new.prefix(Self.shortLimit)) }
+                        shortDescription = Self.oneLine(new, limit: Self.shortLimit)
                     }
                     .wizardFieldStyle()
             }
@@ -1011,13 +1141,17 @@ struct CreateTourWizardView: View {
                     // group — and a three-line floor is 83pt of that plus a
                     // label, which is the one combination that would still
                     // have scrolled.
-                    .lineLimit((keyboardHeight > 0 ? 2 : 3)...)
+                    // Sized to the 600-character limit rather than flexible.
+                    // ⚠️ This also retires a `maxHeight: .infinity` that was
+                    // never doing anything — a flexible child gets no room
+                    // from a ScrollView frame that sets only a minHeight.
+                    .lineLimit(Self.fieldLines(for: Self.longLimit), reservesSpace: true)
                     .onChange(of: longDescription) { _, new in
                         if new.count > Self.longLimit { longDescription = String(new.prefix(Self.longLimit)) }
                     }
                     // Top-aligned inside the tall box: text that starts in the
                     // middle of a 344pt field reads as a bug.
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
                     .wizardFieldStyle()
                     // ⚠️ Without this the box is a 344pt target of which only
                     // the first line is tappable — a `TextField` sizes to its
@@ -1026,7 +1160,6 @@ struct CreateTourWizardView: View {
                     .contentShape(Rectangle())
                     .onTapGesture { focused = .long }
             }
-            .frame(maxHeight: .infinity)
         }
     }
 
@@ -1037,8 +1170,15 @@ struct CreateTourWizardView: View {
     /// Every group now opens with the page still fitting: the tallest, Theme,
     /// needs 226pt and gets 242.
     private var tagsStep: some View {
+        // ⚠️ No `maxHeight: .infinity` here, and its absence changes nothing —
+        // which is the whole point. It used to ask to stretch and never got
+        // anything (see `wizard` for why), so the picker has always drawn at
+        // its natural height. Unlike the map and the transcript box, that was
+        // never a problem: five rows of tags have a real size of their own,
+        // and a control with a real size doesn't collapse when the stretch
+        // fails. It was three no-op lines and a comment claiming a mechanism
+        // that isn't there.
         ControlledTagPicker(selectedTags: $selectedTags, architect: $architect)
-            .frame(maxHeight: .infinity)
     }
 
     @ViewBuilder
@@ -1107,46 +1247,93 @@ struct CreateTourWizardView: View {
                         ProgressView().controlSize(.small)
                     }
                 }
-
-                TextField("The words spoken in the audio", text: $transcript, axis: .vertical)
-                    .lineLimit(2...200)
-                    .wizardFieldStyle()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-                    // A tall field is only tappable on its first line — the
-                    // text sizes to itself and the space under it belongs to
-                    // nothing. Same fix as the description on step 2.
-                    .contentShape(Rectangle())
-                    .onTapGesture { focused = .transcript }
-                    .focused($focused, equals: .transcript)
-
-                // The same pair, in the same place, as the Audio step's — two
-                // 44pt buttons, both always drawn, dimmed when they don't
-                // apply. Steps 5 and 6 are the two halves of one job and
-                // should read as siblings rather than as two designs.
-                HStack(spacing: AtlasSpacing.sm) {
-                    languageMenu
-                    AtlasPillButton(title: "Transcribe again",
-                                    systemImage: "arrow.clockwise",
-                                    enabled: lastLocalAudioURL != nil && !transcriber.isWorking) {
-                        retranscribe()
-                    }
+                .onGeometryChange(for: CGFloat.self) { $0.size.height } action: {
+                    transcriptLabelHeight = $0
                 }
 
-                // Two lines, reserved whether or not there is anything to
-                // say — as on the Audio step, and for the same reason: the
-                // note comes and goes as the recogniser works, and an
-                // unreserved slot would resize the box exactly as the words
-                // landed in it.
-                Text(transcriptNote ?? " ")
-                    .font(AtlasTypography.caption)
-                    .foregroundStyle(transcriber.phase.isFailure
-                                     ? AtlasColors.secondaryText
-                                     : AtlasColors.tertiaryText)
-                    .lineLimit(2, reservesSpace: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                // 🔴 A BOX, AND IT SCROLLS. Owner, 2026-08-20: *"the
+                // transcription field (like the input fields) need to be
+                // contrasted. that is probably scrollable since the audio may
+                // be long, which is ok."*
+                //
+                // A `TextField(axis: .vertical)` grows to its text and cannot
+                // scroll, so the painted background was drawn tight around two
+                // lines and the `maxHeight: .infinity` that was meant to
+                // stretch it did nothing — a small black rectangle on a nearly
+                // black page, under a screenful of nothing. `TextEditor` has
+                // its own scroller, so the box can be a fixed shape and a
+                // twenty-minute narration still fits inside it.
+                //
+                // ⚠️ It needs `scrollContentBackground(.hidden)` or UIKit's own
+                // fill paints over `wizardFieldStyle`'s, and the inner
+                // `maxHeight: .infinity` is what makes the editor fill the
+                // outer `.frame(height:)` — that one proposes a definite
+                // height, which is exactly what the ScrollView never did.
+                TextEditor(text: $transcript)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .scrollContentBackground(.hidden)
+                    .focused($focused, equals: .transcript)
+                    .overlay(alignment: .topLeading) {
+                        if transcript.isEmpty {
+                            // `TextEditor` has no placeholder of its own.
+                            Text("The words spoken in the audio")
+                                .font(AtlasTypography.caption)
+                                .foregroundStyle(AtlasColors.tertiaryText)
+                                .padding(.top, 8)
+                                .padding(.leading, 5)
+                                .allowsHitTesting(false)
+                        }
+                    }
+                    .wizardFieldStyle()
+                    .frame(height: transcriptBoxHeight)
+
+                // The language menu and Transcribe again used to sit here.
+                // They are in the footer now, pinned above Back · Save · Next
+                // (owner, 2026-08-20) — so they keep their place while the box
+                // grows, and the box gets the height they were using.
+                //
+                // The recogniser's note went with them, into the footer's hint
+                // slot: it already reserves two lines on every step, and two
+                // separate places for the step to speak was one too many.
             }
         } else {
             missingDraftNotice
+        }
+    }
+
+    /// What's left of the step once the label has taken its line.
+    ///
+    /// The 120pt floor is the safety net for a phone or text size where the
+    /// arithmetic leaves nothing — better a short box that scrolls than a box
+    /// with no height at all.
+    private var transcriptBoxHeight: CGFloat {
+        let usable = stepAreaHeight - keyboardOverlap - AtlasSpacing.lg * 2
+        return max(120, usable - transcriptLabelHeight - AtlasSpacing.xs)
+    }
+
+    /// The transcript step's own controls, pinned in the footer rather than
+    /// left to float at the bottom of a box that changes height.
+    ///
+    /// 🔴 Owner, 2026-08-20: *"the language and transcribe again buttons should
+    /// then reside fixed on the bottom above the back/save/next buttons."*
+    /// Which is right for a step whose one element now scrolls: a control that
+    /// rides on scrolling content is a control that can leave the screen.
+    @ViewBuilder
+    private var stepAccessory: some View {
+        if step == .transcript, draft != nil {
+            HStack(spacing: AtlasSpacing.sm) {
+                languageMenu
+                AtlasPillButton(title: "Transcribe again",
+                                systemImage: "arrow.clockwise",
+                                enabled: lastLocalAudioURL != nil && !transcriber.isWorking) {
+                    retranscribe()
+                }
+            }
+            .padding(.horizontal, AtlasSpacing.lg)
+            .padding(.bottom, AtlasSpacing.md)
+            // The page's own ground, not the footer's panel — the whole point
+            // is that this belongs to the step and the bar below does not.
+            .background(AtlasColors.secondaryBackground)
         }
     }
 
@@ -1264,7 +1451,7 @@ struct CreateTourWizardView: View {
                 //
                 // Full-bleed against the step's own padding: the page brings
                 // its own gutters and would otherwise sit inside two.
-                TourDetailView(tour: draft.tour, mode: .preview)
+                TourDetailView(tour: previewTour(from: draft.tour), mode: .preview)
                     .padding(.horizontal, -AtlasSpacing.lg)
 
                 Text(reviewFootnote)
@@ -1283,6 +1470,70 @@ struct CreateTourWizardView: View {
         } else {
             missingDraftNotice
         }
+    }
+
+    /// The draft with its stop put back, for the preview only.
+    ///
+    /// 🔴 **`MakerTour` CARRIES NO STOPS, AND ON THIS SCREEN THAT IS VISIBLE.**
+    /// Owner, 2026-08-20: *"doesn't seem like in this preview map view that the
+    /// pin location is recorded."* It is recorded — `TourRow.asMakerTour`
+    /// builds its `Tour` with `stops: []` because the profile feed needs a
+    /// title, a status and an image and nothing more. Everywhere else that
+    /// emptiness is invisible; a page that draws a pin per stop and prints a
+    /// stop count shows it plainly, as an empty map and "0 stops" on a tour
+    /// that has both.
+    ///
+    /// So the preview is handed the stop the wizard is holding anyway. That is
+    /// also the more honest preview: `centerCoordinate` and `radius` are what
+    /// Save is about to write, so the map shows where the tour WILL fire rather
+    /// than where the server last heard it was.
+    ///
+    /// ⚠️ Preview only. This is a display copy — nothing persists from it, and
+    /// the synthesized stop id is a fresh UUID each time it is built, which is
+    /// fine for a map annotation and would be wrong for anything that wrote.
+    /// This is the same gap `stopLocation(tourId:)` and `stopAudioURL(tourId:)`
+    /// exist to close; a third caller needing real stops should fetch, not
+    /// invent.
+    private func previewTour(from tour: Tour) -> Tour {
+        guard tour.stops.isEmpty, let coordinate = centerCoordinate else { return tour }
+        let stop = Stop(
+            id: UUID(),
+            order: 0,
+            title: trimmedTitle.isEmpty ? tour.title : trimmedTitle,
+            caption: nil,
+            latitude: coordinate.latitude,
+            longitude: coordinate.longitude,
+            audioURL: "",
+            audioDurationSeconds: tour.totalDurationSeconds,
+            triggerMode: .geofenced,
+            triggerRadiusMeters: Int(radius),
+            imageURL: tour.heroImageURL.isEmpty ? nil : tour.heroImageURL,
+            transcriptText: transcript.isEmpty ? nil : transcript
+        )
+        return Tour(
+            id: tour.id,
+            title: tour.title,
+            shortDescription: tour.shortDescription,
+            longDescription: tour.longDescription,
+            makerId: tour.makerId,
+            heroImageURL: tour.heroImageURL,
+            additionalImageURLs: tour.additionalImageURLs,
+            videoURLs: tour.videoURLs,
+            kind: tour.kind,
+            stops: [stop],
+            introAudioURL: tour.introAudioURL,
+            totalDurationSeconds: tour.totalDurationSeconds,
+            walkingDistanceMeters: tour.walkingDistanceMeters,
+            centroidLatitude: coordinate.latitude,
+            centroidLongitude: coordinate.longitude,
+            city: tour.city,
+            country: tour.country,
+            primaryCategory: tour.primaryCategory,
+            tags: tour.tags,
+            priceUSD: tour.priceUSD,
+            priceTier: tour.priceTier,
+            createdAt: tour.createdAt
+        )
     }
 
     /// Every step from Details on writes against a tour id, so until the
@@ -1398,11 +1649,20 @@ struct CreateTourWizardView: View {
             let count = ([tour.heroImageURL] + (tour.additionalImageURLs ?? []))
                 .filter { !$0.isEmpty }.count
             guard count > 0 else { return nil }
-            return "\(count) of \(PhotoGridEditor.maxPhotos) · drag to reorder."
+            // ⚠️ "hold", not "drag" — and the word is the fix, not a wording
+            // preference. `.draggable` is a UIKit drag interaction: the tile
+            // lifts after about half a second of pressing, and until it lifts
+            // a drag is just a scroll. Owner, 2026-08-20: *"don't think the
+            // drag to reorder quite works. or at least it's difficult to make
+            // it work."* It worked; nothing said how to start it.
+            return "\(count) of \(PhotoGridEditor.maxPhotos) · hold a photo to move it."
         case .transcript:
-            // Says what it is for, since a box that filled itself invites the
-            // question. One line: about 44 characters.
-            return "Read it through — fix anything it misheard."
+            // The recogniser's own note comes first when it has one — it is
+            // the more urgent thing to read, and this is the only slot on the
+            // step that says anything now that the box takes the rest.
+            // Otherwise: what the step is for, since a box that filled itself
+            // invites the question.
+            return transcriptNote ?? "Read it through — fix anything it misheard."
         case .audio, .review:
             return nil
         }
@@ -1438,10 +1698,21 @@ struct CreateTourWizardView: View {
         return draft?.status == .inReview ? "clock" : "paperplane.fill"
     }
 
+    /// ⚠️ **This and the footer's disabled-button reason must not say the same
+    /// thing.** Owner, 2026-08-20, circling both at once: *"what does 'already
+    /// with us, we'll let you know either way' mean? maybe consider
+    /// rephrasing."* Fair on both counts — it appeared twice on one screen, and
+    /// "either way" was standing in for two outcomes it never named.
+    ///
+    /// They have different jobs and now sound like it: this describes the
+    /// tour's state, the footer says why the button won't act. Neither promises
+    /// a message, because nothing sends the maker one — `notify-moderation`
+    /// emails the owner. What a maker can actually observe is the status on
+    /// their profile, so that is what this points at.
     private var reviewFootnote: String {
         switch draft?.status {
         case .inReview:
-            return "Already with us. We'll let you know either way."
+            return "In review. The status on your profile changes once we've looked at it — usually within a day."
         case .published:
             return "This tour is live. Saving changes sends it back for review before they appear."
         default:
@@ -1755,11 +2026,23 @@ struct CreateTourWizardView: View {
 
 private extension View {
     /// Shared field chrome — matches the details editor and profile editor.
+    /// ⚠️ **The border is the contrast, and it is the second attempt.** The
+    /// fill is `AtlasColors.background` — pure black — on a page of `#1C1C1E`,
+    /// an 11% difference that reads as no box at all. Sizing the boxes to their
+    /// character limits was the first lever and wasn't enough: owner,
+    /// 2026-08-20, *"the transcription field (like the input fields) need to be
+    /// contrasted."* A hairline was named at the time as the next lever, so
+    /// this is it, applied to every field at once rather than to the one that
+    /// was complained about.
     func wizardFieldStyle() -> some View {
         self
             .font(AtlasTypography.caption)
             .padding(AtlasSpacing.md)
             .background(AtlasColors.background)
             .clipShape(RoundedRectangle(cornerRadius: AtlasSpacing.sm))
+            .overlay {
+                RoundedRectangle(cornerRadius: AtlasSpacing.sm)
+                    .stroke(AtlasColors.divider, lineWidth: 1)
+            }
     }
 }

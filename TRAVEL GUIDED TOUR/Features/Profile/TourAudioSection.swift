@@ -61,6 +61,8 @@ struct TourAudioSection: View {
     @State private var attachedAudioURL: URL?
     @State private var audioPreview = AuthoringAudioPreview()
     @State private var errorMessage: String?
+    /// Removing narration that is already on the server.
+    @State private var isRemoving = false
 
     private var hasAudio: Bool { tour.totalDurationSeconds > 0 }
 
@@ -77,8 +79,8 @@ struct TourAudioSection: View {
             clock
             AudioLevelMeter(levels: recorder.levels, isLive: recorder.isRecording)
             RecordButton(isRecording: recorder.isRecording, action: toggleRecording)
-                .disabled(isUploading)
-                .opacity(isUploading ? 0.4 : 1)
+                .disabled(isUploading || isRemoving)
+                .opacity(isUploading || isRemoving ? 0.4 : 1)
             actionPair
             importButton
             statusNote
@@ -103,17 +105,25 @@ struct TourAudioSection: View {
 
     // MARK: - The fixed parts
 
-    /// What the step is doing, and the way out of a take.
+    /// What the step is doing, and the way out of whatever it is holding.
     ///
     /// Discard sits here rather than in the pair below so that abandoning a
     /// take never competes for the same place as keeping it.
+    ///
+    /// 🔴 **IT REMOVES ATTACHED NARRATION TOO, NOT ONLY AN UNSAVED TAKE.**
+    /// Owner, 2026-08-20: *"after a recording is accepted there should still be
+    /// an ability to discard it."* Before this it greyed out the moment a take
+    /// was kept — `Use recording` clears `recordedURL`, so the state the maker
+    /// most wanted out of was the one state with no way out. Recording over the
+    /// top was the only route back, which is no route at all for a maker who
+    /// has decided the tour should carry no narration.
     private var statusRow: some View {
         HStack {
             Text(statusLabel)
                 .font(AtlasTypography.caption)
                 .foregroundStyle(recorder.isRecording ? AtlasColors.mapPin : AtlasColors.secondaryText)
             Spacer()
-            Button("Discard") { discardTake() }
+            Button("Discard") { discard() }
                 .font(AtlasTypography.caption)
                 .tint(AtlasColors.secondaryText)
                 .disabled(!canDiscard)
@@ -123,7 +133,12 @@ struct TourAudioSection: View {
         .frame(height: buttonHeight)
     }
 
-    private var canDiscard: Bool { recordedURL != nil || recorder.isRecording }
+    /// A local take is discarded on the spot; attached narration asks first,
+    /// because that one deletes work that has already been uploaded.
+    private var canDiscard: Bool {
+        guard !isUploading, !isRemoving else { return false }
+        return recordedURL != nil || recorder.isRecording || hasAudio
+    }
 
     private var statusLabel: String {
         if recorder.isRecording { return "RECORDING" }
@@ -175,11 +190,13 @@ struct TourAudioSection: View {
             HStack(spacing: AtlasSpacing.sm) {
                 AtlasPillButton(title: isPlaying ? "Playing…" : "Play",
                                 systemImage: isPlaying ? "pause.fill" : "play.fill",
-                                enabled: playableURL != nil && !recorder.isRecording && !isUploading) {
+                                enabled: playableURL != nil && !recorder.isRecording
+                                    && !isUploading && !isRemoving) {
                     togglePlayback()
                 }
                 AtlasPillButton(title: "Use recording", filled: true,
-                                enabled: recordedURL != nil && !recorder.isRecording && !isUploading) {
+                                enabled: recordedURL != nil && !recorder.isRecording
+                                    && !isUploading && !isRemoving) {
                     guard let take = recordedURL else { return }
                     takeReview.stop()
                     uploadAudio(from: take)
@@ -213,7 +230,7 @@ struct TourAudioSection: View {
     private var importButton: some View {
         AtlasPillButton(title: hasAudio ? "Replace with a file" : "Import audio file",
                         systemImage: "square.and.arrow.down",
-                        enabled: !recorder.isRecording && !isUploading) {
+                        enabled: !recorder.isRecording && !isUploading && !isRemoving) {
             importingAudio = true
         }
     }
@@ -244,6 +261,7 @@ struct TourAudioSection: View {
             return "Microphone access is off. Turn it on in Settings to record."
         }
         if let errorMessage { return errorMessage }
+        if isRemoving { return "Removing narration…" }
         if let failed = failedUpload { return failed.reason }
         if isUploading {
             let pct = Int(uploadProgress * 100)
@@ -271,11 +289,49 @@ struct TourAudioSection: View {
         }
     }
 
-    /// Throw the take away and go back to whatever the tour already had.
-    private func discardTake() {
-        _ = recorder.stop()
+    /// Throw the take away and go back to whatever the tour already had — or,
+    /// when there is no take, remove the narration itself.
+    ///
+    /// ⚠️ **No confirmation, on either branch** — owner decision, 2026-08-20,
+    /// on seeing one in the mockup: *"don't need this portion."* I had put one
+    /// on the attached-narration branch because that one deletes an upload,
+    /// and it was the wrong call against this app's own precedent: the ✕ on a
+    /// photo deletes an uploaded photo on the spot with nothing asked, and the
+    /// same owner had already thrown out a confirmation screen on the Photos
+    /// step for being a screen. An "are you sure" on audio and not on photos
+    /// would have made the two steps disagree about how destructive a delete
+    /// is. Re-recording is the undo, the same as re-adding a photo is.
+    private func discard() {
+        if recordedURL != nil || recorder.isRecording {
+            _ = recorder.stop()
+            takeReview.stop()
+            recordedURL = nil
+            return
+        }
+        guard hasAudio else { return }
+        removeAttachedAudio()
+    }
+
+    /// Put the stop back to how `createDraftTour` left it. The transcript is
+    /// deliberately left alone — it is the maker's words, and a maker replacing
+    /// narration they have already corrected the text for should not have to
+    /// type it again.
+    private func removeAttachedAudio() {
+        errorMessage = nil
+        failedUpload = nil
+        audioPreview.stop()
         takeReview.stop()
-        recordedURL = nil
+        isRemoving = true
+        Task {
+            defer { isRemoving = false }
+            do {
+                try await makerTourService.removeAudio(from: tour)
+                attachedAudioURL = nil
+                onUploadStateChange?(.idle)
+            } catch {
+                errorMessage = AuthoringErrorText.message(for: error)
+            }
+        }
     }
 
     private func timeString(_ t: TimeInterval) -> String {
