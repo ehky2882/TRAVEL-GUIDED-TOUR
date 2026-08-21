@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-20 18:20 UTC
+**Last verified:** 2026-08-21 00:30 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -25,54 +25,33 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🔴 **READ FIRST — A BRANCH BUILD CARRIES ITS BRANCH'S BASE, NOT `main`.** Build **92** was cut from
-`library-launch-jitter`, which split off `main` on **18 Aug**, so it shipped *without* the upload
-wizard, the bottom-bar island-form fix, Universal Links and the Settings pass. **The owner read the
-missing wizard and the reappearing place-page bar as regressions — which is exactly what they look
-like.** They were not: 92 simply predated them.
+🟢 **NOTHING IS WAITING ON A REVIEW. Zero open PRs — the first time today.** Everything opened
+today is merged: #549 (Library jitter), #553 (list page as a layer), #555 (Liked on the shared list
+screen), #552 (the seven-step wizard), #558 (wizard round two).
 
-**This board told the owner to install 92 without saying that.** The same point had been made
-correctly about build 87 eleven hours earlier ("87 is the wizard branch, cut from a base predating
-those merges") and was not carried forward. **From now on, every branch build's row states what its
-base predates**, and a branch that has not merged `main` recently should merge it before its build.
+🔴 **BUILD 97 IS INSTALLABLE, ITS CI RUN IS RED, AND IT HAS NO "What to Test" NOTES.** It archived,
+signed, uploaded and finished processing — then the run failed because **Apple rejected a `✕` in the
+build notes**. `upload_to_testflight` writes the changelog *after* the upload, so the rejection lands
+seven minutes and one real build past the mistake, at a step whose failure looks like a build
+failure. **Nothing about that red run says the build is already on your phone.** 97 cannot be given
+notes retroactively (the workflow has no distribute-only path, and a re-run replays the same input).
+Fixed forward by `scripts/ascii-build-notes.py`, which transliterates rather than trusting — known
+typography is *mapped*, not deleted, so a dash stays a dash.
 
-| PR | What it is | Build | Also needs |
-|---|---|---|---|
-| [#549](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/549) | **Library launch jitter + lookup perf.** Lists were memory-only, so every launch made three sequential round-trips and the tab re-laid-out twice. Now a per-account disk snapshot hydrated at init, loads concurrent. Also replaces linear scans over 1,418 tours with dictionaries. | ✅ **93** | ✅ **MERGED 03:52** — still worth the device pass, but it is on `main` now |
-| [#552](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/552) | **The tour wizard is seven steps, and a step is a screenful** (retitled — it was five). Original problem: Owner's rule: no step may scroll — if it doesn't fit it becomes another step. Four of five overflowed; step 1 was 596pt into 411pt. Mini-player and tab bar withdraw while the wizard is up (126pt back), step 1 asks where **once** instead of three times, and the map takes the slack. | ✅ **96** | Owner OK + a look. ⚠️ **96 predates #549, #553 and #555** — no library fix, no list-as-layer, no shared Liked screen |
-| [#553](https://github.com/ehky2882/TRAVEL-GUIDED-TOUR/pull/553) | **The list page behaves like every other top-level screen.** Started as the gold ringed `…` the owner flagged — drift, not a choice: it was a bare `ellipsis.circle` that drew its own ring and inherited the accent. Became three changes, ending with the list page **sliding up from the bottom** like tour detail and the place page, with an X instead of a back chevron. Signed out, the bookmark greys rather than vanishing. | ✅ **94** | ✅ **MERGED 11:36** — owner reviewed it on 94: *"LOOKED AT TESTFLIGHT. LOOKS GOOD."* |
+**Install 98.** It carries the round-two wizard work and, unlike 97, it has its notes.
 
-✅ **Build 93 is the one to install for #549, and it is a proper build.** Cut from `c2e8594`, which
-**merges `main` into the branch** — so it carries the wizard, Settings, list page and Universal
-Links *plus* the library fix. Two commits have landed since and neither touches the binary: one
-untracks `.xcodebuildmcp/config.yaml`, one is docs.
+### Two risks named in #558, neither fixed
 
-🐛 **That untracked file is worth knowing about.** `.xcodebuildmcp/config.yaml` was committed and
-named **the other clone** plus `iPhone 16 Pro`, which is no longer installed — so every local
-session had to reset both before its first build, and **one that forgot compiled untouched code and
-believed it had tested the change.** Untracked now rather than corrected: no defaults fails loudly
-on the first build, a wrong path fails silently. Found independently by two sessions today.
+- ⚠️ **Step 2 now overflows an iPhone SE by ~94pt** and scrolls there. Sizing the text boxes to their
+  character limits is what did it — the no-scroll rule holds on your phone and not on the smallest.
+- ⚠️ **Dynamic Type is still the largest open risk.** `AtlasTypography.body` is pinned fixed-size; with
+  Larger Text every step overflows at once. The ScrollView valve means it degrades rather than
+  breaks, but the premise goes.
+- ⚠️ **`maxHeight: .infinity` is still asked for on step 3's tag group** — dead code (a flexible child
+  gets no room from a ScrollView frame that sets only a minHeight), but harmless there because five
+  rows of tags have a real height. **Do not report it as a defect without checking the child
+  collapses** — that overstatement was made once and caught.
 
-⚠️ **#549's jitter cannot be reproduced in the simulator** — it holds no session, so there are no
-lists to pop in. Genuinely needs the phone. 🔴 Its risk is **staleness**: a dictionary index not
-rebuilt when the catalog changes returns nil for a row plainly on screen, reading as missing
-content rather than a bug. All mutations go through `applyCatalog` / `applyMakers` / `setPlaces`
-and tests pin it.
-
-✅ **#553 is in, and it was the risky one.** It added a **fourth** `BottomLayerController` — the
-machinery behind this app's repeat regressions (the dead tab bar, layers not torn down, bars showing
-content through the island's gaps). The new layer took its line in **both** lists a layer has to
-appear in (`isAnyLayerPresented` and `tabSelection`); the place layer shipped missing from one, then
-the other, in consecutive builds. The owner reviewed it on device.
-
-⚠️ **Build 94's merge-base was `8c1eb4b0`, one behind main at the time**, so it did not carry #549's
-Library launch-jitter fix. That did not block the review — the two are unrelated screens — but it is
-why the Lists tab may still have shuffled on it. **Both are on `main` now.**
-
-⚠️ **#552 opened deliberately unbuilt** — to get `ci.yml` to compile eight commits that had never
-been built. Its riskiest check is **opening a saved tour**: the map is now sized from a
-`GeometryReader`, which adds a layout dependency to the exact view that hung for seven builds. The
-PR says plainly that its confidence there is reasoning rather than evidence.
 
 ## 1b. ✅ RESOLVED — the catalog regression, fixed and verified
 
@@ -141,32 +120,24 @@ isPrivate restored 2026-08-20).
 
 ## 3. Builds — which run number carries what
 
-🔴 **Build numbers are `github.run_number` and are SHARED across every branch.** A build
-dispatched as "the next one" comes back as whatever number the counter reached. Read it back
-after dispatching; never promise one in advance.
+🔴 **Build numbers are `github.run_number` and are SHARED across every branch.** Read them back
+after dispatching; never promise one in advance. And a build carries its branch's **merge-base**,
+not `main` — GitHub reports a PR's base as main's current tip, which is misleading.
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| 86 | `settings-dozent-work-mark-r9enu6` | #544 Settings + gold wordmark | ✅ **merged to main 18:39** |
-| 85 | `settings-dozent-work-mark-r9enu6` | #544, wordmark rendered white | ⚠️ superseded by 86 |
-| 96 | `upload-wizard-improvements-ejopz3` | #552, the seven-step wizard (`98fd9028`) — merge-base `8c1eb4b0`, so it predates **three** code merges: #549, #553, #555 | ✅ built 18:12 |
-| 95 | `ellipsis-button-consistency-vdorpi` | Became **#555** (`435436b1`) — Liked rendered through the shared list screen | ✅ merged 13:39 |
-| 94 | `ellipsis-button-consistency-vdorpi` | #553 list page as a layer (`1d7ed910`) — merge-base `8c1eb4b0`, so **no #549 library fix** | ✅ owner-verified — **#553 merged** |
-| 93 | `library-launch-jitter` | #549 **after merging main** (`c2e8594`) — #549 has since merged, so this is on `main` | ✅ the one that has the Library fix |
-| 92 | `library-launch-jitter` | #549 on an 18 Aug base — **no wizard, no Settings pass** | ⚠️ looked like regressions; it was just old |
-| 91 | `main` (`fd741db`) | **Everything from today, together** — wizard, Settings, list page, 5:4 heroes | ✅ owner-verified |
-| 90 | `tour-upload-polish-qiliop` | #540 + map never starts `.automatic` over empty content (`eea754b`) | ✅ owner-verified — hang closed |
-| 89 | `tour-upload-polish-qiliop` | #540 + edit presents full-screen (`0e1edf3`) | 🔴 hung — superseded |
-| 88 | `tour-upload-polish-qiliop` | #540 + all three stacked fixes (`e810651`) | 🔴 **still hangs** |
-| 87 | `tour-upload-polish-qiliop` | #540 + a hang fix that did not work | 🔴 **still hangs** |
-| 84 | `tour-upload-polish-qiliop` | #540 wizard | 🔴 hangs on the edit path |
-| 83, 82 | `list-page-conformance` | #547 list page | ✅ **merged to main 18:47** |
-| 81, 77, 76 | `tour-upload-polish-qiliop` | #540, earlier passes | 🔴 same hang |
-| 80, 79, 74 | `maker-page-playlists-45xqhu` | #517 saved lists | ✅ merged |
-| 78 | `main` | #543 edge-to-edge bars | ✅ owner-verified |
-| 75 | `main` | post-#517 | ⚠️ superseded |
+| 98 | `wizard-comments-round2` | #558 wizard round two (`e0132c90`) — branch since merged and deleted | ✅ **install this** |
+| 97 | `wizard-comments-round2` | Same work, one commit earlier | 🔴 **Live and installable, run shows RED, no notes** |
+| 96 | `upload-wizard-improvements-ejopz3` | #552 the seven-step wizard | ✅ owner-verified — *"so much better"* |
+| 95 | `ellipsis-button-consistency-vdorpi` | Became #555 — Liked on the shared list screen | ✅ merged |
+| 94 | `ellipsis-button-consistency-vdorpi` | #553 list page as a layer | ✅ owner-verified, merged |
+| 93 | `library-launch-jitter` | #549 Library launch jitter | ✅ merged |
+| 91 | `main` | Wizard, Settings, list page, 5:4 heroes | ✅ owner-verified |
+| 90 | `tour-upload-polish-qiliop` | #540 + the saved-tour hang fix | ✅ owner-verified — hang closed |
 
-✅ **Build 91 closes the no-build-carries-main gap** that stood open all evening.
+✅ **#552 merged `main` in before merging out** (`a9a3b32`, two real conflicts resolved by hand) — so
+the stale-base warning this board carried against build 96 was dealt with by the session itself.
+
 
 ## 4. Branches
 
