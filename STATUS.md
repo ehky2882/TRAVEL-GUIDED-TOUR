@@ -144,8 +144,9 @@ the stale-base warning this board carried against build 96 was dealt with by the
 | Branch | State |
 |---|---|
 | `claude/library-launch-jitter` | Merged (#549 at 03:52) — auto-delete should remove it |
-| `claude/upload-wizard-improvements-ejopz3` | Open — #552, **the only open PR**, head `98fd9028`, built as 96. Merge-base `8c1eb4b0` predates **three** merges |
-| `claude/ellipsis-button-consistency-vdorpi` | Merged twice from one branch (#553 at 11:36, #555 at 13:39). ⚠️ The second stacked on already-merged history, which CLAUDE.md's rule says to avoid — it worked here, but a PR did not exist while build 95 was installable |
+| `claude/upload-wizard-improvements-ejopz3` | Merged (#552 at 19:05) |
+| `claude/wizard-comments-round2` | Merged (#558 at 00:14) and already deleted |
+| `claude/ellipsis-button-consistency-vdorpi` | Merged twice from one branch (#553, #555). ⚠️ The second stacked on already-merged history, which CLAUDE.md says to avoid — it worked, but no PR existed while build 95 was installable |
 | `claude/tour-upload-polish-qiliop` | Merged (#540) — auto-delete should remove it |
 | `claude/stripe-questions-fjhdo3` | ⚠️ No PR — verify contents before deleting |
 | `claude/amsterdam-handoff-preserve-hlhyp8` | 🔒 Keep — only copy of staging pick-maps |
