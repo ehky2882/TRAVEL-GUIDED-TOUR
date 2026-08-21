@@ -66,6 +66,19 @@ struct RailCarousel: View {
             .padding(.horizontal, AtlasSpacing.lg)
         }
     }
+
+    /// How far into its own arrival a card is. Combines this rail's place in
+    /// the drawer with the card's place in the rail, so the stagger reads as
+    /// one wave rather than each rail restarting.
+    private func cardProgress(_ index: Int) -> Double {
+        guard let launchState, launchState.isCovering else { return 1 }
+        let position = launchIndex * 3 + min(index, 2)
+        return LaunchBloom.staggerProgress(
+            handOff: launchState.handOffProgress,
+            index: position,
+            count: max(launchCount * 3, 2)
+        )
+    }
 }
 
 /// One card on a rail. Fixed width so multiple peek in from the right.
@@ -162,18 +175,4 @@ private struct TourCard: View {
         let away = AtlasFormatters.distanceAway(meters: tour.distance(from: user))
         return "\(duration) · \(away)"
     }
-
-    /// How far into its own arrival a card is. Combines this rail's place in
-    /// the drawer with the card's place in the rail, so the stagger reads as
-    /// one wave rather than each rail restarting.
-    private func cardProgress(_ index: Int) -> Double {
-        guard let launchState, launchState.isCovering else { return 1 }
-        let position = launchIndex * 3 + min(index, 2)
-        return LaunchBloom.staggerProgress(
-            handOff: launchState.handOffProgress,
-            index: position,
-            count: max(launchCount * 3, 2)
-        )
-    }
-
 }
