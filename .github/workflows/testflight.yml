@@ -86,6 +86,14 @@ jobs:
             echo "::warning::No build notes were provided. Per CLAUDE.md rule #9, every build should carry What-changed / What-to-test notes. Falling back to the commit subject."
             NOTES="Built from commit: $(git log -1 --pretty=%s)"
           fi
+          # 🔴 APPLE REJECTS NON-ASCII IN "What to Test", AND IT REJECTS IT
+          # *AFTER* THE BUILD IS ALREADY UPLOADED AND PROCESSED. Build 1.1 (97)
+          # went all the way through and then failed the run on
+          #   Could not set changelog: ... contains invalid characters:'[✕]'
+          # so the build was live and installable while the run was red and the
+          # notes were missing. Transliterate rather than trust; see the
+          # script's own header. It self-tests with `--selftest`.
+          NOTES="$(printf '%s' "$NOTES" | python3 scripts/ascii-build-notes.py)"
           # TestFlight's What-to-Test field caps at 4000 characters.
           NOTES="${NOTES:0:4000}"
           {
