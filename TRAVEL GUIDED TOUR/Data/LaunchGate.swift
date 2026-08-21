@@ -77,12 +77,112 @@ enum LaunchGate {
 @MainActor
 @Observable
 final class LaunchState {
-    private(set) var isSplashVisible = true
+    /// Where the launch is up to.
+    enum Phase {
+        /// The splash is resting, the app is being built behind it.
+        case splash
+        /// The hand-off choreography is playing: the mark lands, the pins bloom.
+        case handingOff
+        /// Done. The overlay is gone and nothing launch-related is animating.
+        case settled
+    }
 
-    /// Hand off from the splash to the app. Idempotent — the poll loop and any
-    /// backstop can both call it.
-    func handOff() {
-        guard isSplashVisible else { return }
-        isSplashVisible = false
+    private(set) var phase: Phase = .splash
+
+    /// 0 → 1 across the hand-off. **Every part of the choreography reads this
+    /// one value** — the mark's contraction, the ripple, the pin bloom, the
+    /// rail stagger — each through its own ramp in `LaunchBloom`.
+    ///
+    /// 🔴 It is a stored, animated `Double` rather than a set of `.transition`s
+    /// for one specific reason: the pins are **MapKit annotations**, and MapKit
+    /// rebuilds annotation views as the region changes. An insertion animation
+    /// would re-fire every time the map settled — and this map emits settle
+    /// frames for seconds after any camera move, so the bloom would replay on
+    /// every pan, forever. A rebuilt annotation reading a *value* just picks up
+    /// wherever the number is now, which is nothing at all once it reaches 1.
+    private(set) var handOffProgress: Double = 0
+
+    /// True only while the splash is resting. The launch camera resolves
+    /// without animation and the permission alert is withheld while this holds.
+    var isSplashVisible: Bool { phase == .splash }
+
+    /// True while the overlay is still on screen (resting or handing off).
+    var isCovering: Bool { phase != .settled }
+
+    /// Begin the hand-off. Idempotent — the poll loop and any backstop can both
+    /// call it.
+    func beginHandOff() {
+        guard phase == .splash else { return }
+        phase = .handingOff
+    }
+
+    /// Drive the choreography. Called inside a `withAnimation`.
+    func setHandOffProgress(_ value: Double) {
+        handOffProgress = min(max(value, 0), 1)
+    }
+
+    /// Tear the overlay down once the choreography has finished.
+    func settle() {
+        phase = .settled
+        handOffProgress = 1
+    }
+}
+
+/// The ramps that turn one hand-off progress value into per-element timing.
+///
+/// Pure arithmetic, so the whole choreography's shape is unit-testable without
+/// a simulator — which matters because none of it can be *watched* in CI.
+enum LaunchBloom {
+    /// A sub-animation of the hand-off: starts at `delay`, runs for `window`,
+    /// both expressed as fractions of the whole. Returns its own 0→1.
+    static func ramp(_ progress: Double, delay: Double, window: Double) -> Double {
+        guard window > 0 else { return progress >= delay ? 1 : 0 }
+        return min(max((progress - delay) / window, 0), 1)
+    }
+
+    // MARK: - Phase fractions
+    //
+    // Named rather than inlined so the sequence can be read in one place and
+    // retimed without hunting through four views.
+
+    /// The wordmark lifts away first.
+    static let wordmarkLift = (delay: 0.0, window: 0.28)
+    /// The mark contracts from the splash circle to the location dot.
+    ///
+    /// ⚠️ `delay + window` must equal `arrival.delay` and `bloom.delay`: the
+    /// ripple, the blue dot and the first pin all key off the instant the mark
+    /// touches down. Retime one and retime all four, or the bloom starts before
+    /// the thing it is supposed to be radiating from has arrived.
+    static let markLanding = (delay: 0.05, window: 0.47)
+    /// Ripple + blue dot, from the moment the mark lands.
+    static let arrival = (delay: 0.52, window: 0.34)
+    /// The black ground fades, revealing the map already built underneath.
+    static let groundFade = (delay: 0.28, window: 0.44)
+    /// Pins bloom outward; the furthest starts as the nearest finishes.
+    static let bloom = (delay: 0.52, window: 0.48)
+    /// Rail cards stagger in behind the rising drawer.
+    static let rails = (delay: 0.66, window: 0.34)
+
+    /// Progress of one pin's own arrival.
+    ///
+    /// The bloom travels outward from the user, so a pin's delay is set by how
+    /// far away it is: the nearest starts immediately, the furthest starts last.
+    /// - Parameter normalisedDistance: 0 = at the user, 1 = furthest pin on screen.
+    static func pinProgress(handOff: Double, normalisedDistance: Double) -> Double {
+        let d = min(max(normalisedDistance, 0), 1)
+        // Each pin's own animation is `share` of the bloom window; the rest of
+        // the window is spent waiting its turn.
+        let share = 0.55
+        let lead = bloom.window * (1 - share) * d
+        return ramp(handOff, delay: bloom.delay + lead, window: bloom.window * share)
+    }
+
+    /// Progress of one staggered item in a sequence (rail cards).
+    static func staggerProgress(handOff: Double, index: Int, count: Int) -> Double {
+        guard count > 1 else { return ramp(handOff, delay: rails.delay, window: rails.window) }
+        let d = Double(min(max(index, 0), count - 1)) / Double(count - 1)
+        let share = 0.6
+        let lead = rails.window * (1 - share) * d
+        return ramp(handOff, delay: rails.delay + lead, window: rails.window * share)
     }
 }

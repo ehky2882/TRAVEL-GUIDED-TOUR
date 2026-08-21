@@ -116,6 +116,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// the network refresh (debounced inside `DataService`) so reopening the app
     /// picks up new content with no force-quit. See `DataService.refreshOnForeground`.
     @Environment(\.scenePhase) private var scenePhase
+    /// Honoured by the hand-off: with Reduce Motion on the mark doesn't travel
+    /// and the pins don't bloom — the splash simply cross-dissolves, which is
+    /// what shipped in 1.1 (99) and is already a complete hand-off.
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     /// Refresh the signed-in user's own lists (Library's Lists tab).
     private func refreshLists() async {
@@ -295,9 +299,16 @@ struct TRAVEL_GUIDED_TOURApp: App {
                 // this scene — so `runLaunchGate` keeps that one hidden
                 // until hand-off rather than relying on z-order.
                 .overlay {
-                    if launchState.isSplashVisible {
-                        SplashView()
-                            .transition(.opacity)
+                    if launchState.isCovering {
+                        // No `.transition` — the fade is inside the view, driven
+                        // by `handOffProgress`, so the mark and the ground move
+                        // on different clocks. A transition here would
+                        // cross-fade the whole composition at once and flatten
+                        // the choreography back out.
+                        SplashView(
+                            handOff: launchState.handOffProgress,
+                            reduceMotion: reduceMotion
+                        )
                     }
                 }
                 .task { await runLaunchGate() }
@@ -332,19 +343,56 @@ struct TRAVEL_GUIDED_TOURApp: App {
             if Task.isCancelled { break }
         }
         // Unhide FIRST: the window is already built, so this is just a
-        // visibility flip, and doing it inside the same transaction as the
-        // cross-dissolve means the bars are simply present when the splash
-        // clears rather than arriving after it.
+        // visibility flip, and doing it before the hand-off means the bars are
+        // simply present when the splash clears rather than arriving after it.
         bottomModuleWindow.setHidden(false)
-        withAnimation(.easeInOut(duration: 0.42)) {
-            launchState.handOff()
-        }
+        await playHandOff()
         if let link = pendingDeepLink {
             pendingDeepLink = nil
             try? await Task.sleep(for: .milliseconds(350))
             present(link)
         }
     }
+
+    /// The hand-off: the wordmark lifts, the mark contracts onto the user's
+    /// position and ripples, and the pins bloom outward from it.
+    ///
+    /// One animated value drives all of it (`LaunchState.handOffProgress`) —
+    /// see that property for why it is a value rather than a set of
+    /// transitions. `linear` is deliberate: the shaping lives in the ramps in
+    /// `LaunchBloom`, so an eased driver would ease every sub-animation twice.
+    @MainActor
+    private func playHandOff() async {
+        launchState.beginHandOff()
+
+        // Reduce Motion gets the plain cross-dissolve this replaced. That is
+        // already a complete hand-off, so there is nothing to reintroduce.
+        let duration = reduceMotion ? 0.42 : Self.handOffDuration
+
+        withAnimation(.linear(duration: duration)) {
+            launchState.setHandOffProgress(1)
+        }
+
+        // The bump lands with the MARK, not with the start of the animation.
+        // Deliberately the same soft impact the geofence fires on arriving at a
+        // stop: the app's signature feeling becomes the first thing it does.
+        // Silent in the Simulator — device-only to judge.
+        if reduceMotion {
+            try? await Task.sleep(for: .seconds(duration))
+        } else {
+            let landing = LaunchBloom.markLanding.delay + LaunchBloom.markLanding.window
+            try? await Task.sleep(for: .seconds(duration * landing))
+            AtlasHaptics.impact(.medium)
+            try? await Task.sleep(for: .seconds(duration * (1 - landing)))
+        }
+
+        // Tear the overlay down only once nothing of it is still animating.
+        launchState.settle()
+    }
+
+    /// How long the whole hand-off takes. The floor in `LaunchGate` is what the
+    /// user waits *before* this; together they are the launch's total budget.
+    private static let handOffDuration: Double = 1.05
 
     // MARK: - Bottom-module window
 

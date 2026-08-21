@@ -227,6 +227,13 @@ struct ContentView: View {
         .onChange(of: launchState?.isSplashVisible ?? false) { _, splashVisible in
             guard !splashVisible else { return }
             requestLocationPermissionIfNeeded()
+        }
+        // The drawer rises PART WAY THROUGH the hand-off, not at its start —
+        // after the mark has landed and the pins have begun to bloom, so the
+        // two don't compete for the eye. Driven off the progress value rather
+        // than a timer so it can't drift out of step with the choreography.
+        .onChange(of: launchState?.handOffProgress ?? 1) { _, progress in
+            guard !drawerHasEntered, progress >= Self.drawerEntryProgress else { return }
             withAnimation(.spring(response: 0.5, dampingFraction: 0.82)) {
                 drawerHasEntered = true
             }
@@ -525,6 +532,10 @@ struct ContentView: View {
     /// How far down the drawer is parked before its entrance. Larger than any
     /// iPhone is tall, so the sheet is fully off-screen whatever the device.
     private static let drawerEntryOffset: CGFloat = 1200
+
+    /// How far into the hand-off the drawer starts to rise. Sits just after the
+    /// mark lands (`LaunchBloom.arrival.delay`) so the arrival reads first.
+    private static let drawerEntryProgress: Double = 0.58
 
     /// Ask for location permission exactly once per session.
     private func requestLocationPermissionIfNeeded() {

@@ -96,15 +96,137 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertTrue(LaunchGate.locationSettled(status: .restricted, hasFix: false))
     }
 
+    // MARK: - Choreography ramps
+
+    func test_rampIsZeroBeforeItsDelayAndOneAfterItsWindow() {
+        XCTAssertEqual(LaunchBloom.ramp(0.1, delay: 0.2, window: 0.4), 0)
+        XCTAssertEqual(LaunchBloom.ramp(0.4, delay: 0.2, window: 0.4), 0.5, accuracy: 0.0001)
+        XCTAssertEqual(LaunchBloom.ramp(0.6, delay: 0.2, window: 0.4), 1)
+        XCTAssertEqual(LaunchBloom.ramp(1.0, delay: 0.2, window: 0.4), 1)
+    }
+
+    func test_rampWithNoWindowIsAStep() {
+        XCTAssertEqual(LaunchBloom.ramp(0.19, delay: 0.2, window: 0), 0)
+        XCTAssertEqual(LaunchBloom.ramp(0.2, delay: 0.2, window: 0), 1)
+    }
+
+    /// The bloom travels outward: the nearest pin is always at least as far
+    /// along as one further away.
+    func test_bloomTravelsOutwardFromTheUser() {
+        for step in stride(from: 0.0, through: 1.0, by: 0.05) {
+            let near = LaunchBloom.pinProgress(handOff: step, normalisedDistance: 0)
+            let mid = LaunchBloom.pinProgress(handOff: step, normalisedDistance: 0.5)
+            let far = LaunchBloom.pinProgress(handOff: step, normalisedDistance: 1)
+            XCTAssertGreaterThanOrEqual(near, mid, "at \(step)")
+            XCTAssertGreaterThanOrEqual(mid, far, "at \(step)")
+        }
+    }
+
+    /// 🔴 The one that matters for correctness rather than feel: every pin must
+    /// be fully arrived by the end. A pin left mid-bloom would sit permanently
+    /// scaled-down and semi-transparent on the map.
+    func test_everyPinIsFullyArrivedByTheEnd() {
+        for d in stride(from: 0.0, through: 1.0, by: 0.05) {
+            XCTAssertEqual(LaunchBloom.pinProgress(handOff: 1, normalisedDistance: d), 1, "distance \(d)")
+        }
+    }
+
+    func test_noPinStartsBeforeTheMarkLands() {
+        let landing = LaunchBloom.markLanding.delay + LaunchBloom.markLanding.window
+        for d in stride(from: 0.0, through: 1.0, by: 0.1) {
+            XCTAssertEqual(
+                LaunchBloom.pinProgress(handOff: landing - 0.01, normalisedDistance: d), 0,
+                "distance \(d)"
+            )
+        }
+    }
+
+    func test_pinProgressIsMonotonic() {
+        var previous = 0.0
+        for step in stride(from: 0.0, through: 1.0, by: 0.02) {
+            let value = LaunchBloom.pinProgress(handOff: step, normalisedDistance: 0.4)
+            XCTAssertGreaterThanOrEqual(value, previous)
+            previous = value
+        }
+    }
+
+    func test_outOfRangeDistanceClamps() {
+        XCTAssertEqual(
+            LaunchBloom.pinProgress(handOff: 0.8, normalisedDistance: -5),
+            LaunchBloom.pinProgress(handOff: 0.8, normalisedDistance: 0)
+        )
+        XCTAssertEqual(
+            LaunchBloom.pinProgress(handOff: 0.8, normalisedDistance: 5),
+            LaunchBloom.pinProgress(handOff: 0.8, normalisedDistance: 1)
+        )
+    }
+
+    func test_staggerRunsInOrderAndFinishes() {
+        let count = 6
+        for step in stride(from: 0.0, through: 1.0, by: 0.05) {
+            for i in 1..<count {
+                XCTAssertGreaterThanOrEqual(
+                    LaunchBloom.staggerProgress(handOff: step, index: i - 1, count: count),
+                    LaunchBloom.staggerProgress(handOff: step, index: i, count: count)
+                )
+            }
+        }
+        for i in 0..<count {
+            XCTAssertEqual(LaunchBloom.staggerProgress(handOff: 1, index: i, count: count), 1)
+        }
+    }
+
+    /// A single item has no one to stagger against and must still arrive.
+    func test_staggerHandlesASingleItem() {
+        XCTAssertEqual(LaunchBloom.staggerProgress(handOff: 1, index: 0, count: 1), 1)
+        XCTAssertEqual(LaunchBloom.staggerProgress(handOff: 0, index: 0, count: 1), 0)
+    }
+
+    func test_staggerClampsAnOutOfRangeIndex() {
+        let count = 4
+        XCTAssertEqual(
+            LaunchBloom.staggerProgress(handOff: 0.8, index: 99, count: count),
+            LaunchBloom.staggerProgress(handOff: 0.8, index: count - 1, count: count)
+        )
+    }
+
     // MARK: - LaunchState
 
     @MainActor
-    func test_handOffIsIdempotent() {
+    func test_beginHandOffIsIdempotentAndOnlyLeavesTheSplashOnce() {
         let state = LaunchState()
         XCTAssertTrue(state.isSplashVisible)
-        state.handOff()
-        XCTAssertFalse(state.isSplashVisible)
-        state.handOff()
-        XCTAssertFalse(state.isSplashVisible)
+        XCTAssertTrue(state.isCovering)
+
+        state.beginHandOff()
+        XCTAssertFalse(state.isSplashVisible, "the camera and the permission gate open here")
+        XCTAssertTrue(state.isCovering, "the overlay is still on screen through the choreography")
+
+        state.settle()
+        XCTAssertFalse(state.isCovering)
+
+        // A late backstop call must not drag the overlay back on screen.
+        state.beginHandOff()
+        XCTAssertFalse(state.isCovering)
+    }
+
+    @MainActor
+    func test_settlingLeavesProgressComplete() {
+        let state = LaunchState()
+        state.beginHandOff()
+        state.settle()
+        // Anything still reading the value — a rebuilt map annotation, a rail
+        // card scrolled into view later — must see "fully arrived", never a
+        // frozen mid-animation number.
+        XCTAssertEqual(state.handOffProgress, 1)
+    }
+
+    @MainActor
+    func test_progressClamps() {
+        let state = LaunchState()
+        state.setHandOffProgress(-2)
+        XCTAssertEqual(state.handOffProgress, 0)
+        state.setHandOffProgress(7)
+        XCTAssertEqual(state.handOffProgress, 1)
     }
 }

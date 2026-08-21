@@ -178,3 +178,28 @@ struct HeadingWedge: Shape {
         return path
     }
 }
+
+// MARK: - Launch bloom
+
+extension View {
+    /// The launch hand-off's pin arrival: scale + fade, driven by a plain
+    /// value so it can be applied to a **map annotation**.
+    ///
+    /// 🔴 Deliberately not a `.transition`. MapKit rebuilds annotation views
+    /// whenever the region changes, so an insertion animation replays every
+    /// time the map settles — and the home map emits settle frames for seconds
+    /// after any camera move. A view reading a number simply picks up wherever
+    /// that number currently is.
+    ///
+    /// `progress` defaults to 1 at every call site outside the launch, so the
+    /// maker map, tour detail's inline map and the place layer are untouched.
+    func atlasPinBloom(_ progress: Double) -> some View {
+        let p = min(max(progress, 0), 1)
+        // Overshoot slightly on the way in so the pin lands rather than simply
+        // appearing — the same easing character as the mark's own arrival.
+        let overshoot = sin(p * .pi) * 0.12
+        return self
+            .scaleEffect(p == 1 ? 1 : 0.3 + 0.7 * p + overshoot)
+            .opacity(p)
+    }
+}
