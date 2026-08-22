@@ -124,6 +124,23 @@ Standard process for sourcing hero + gallery images for tours that don't have ow
 
 ## Current State (2026-08-22)
 
+### The same photo twice in one carousel — and the check that structurally could not see it (session 103c — content + tooling)
+
+**Owner, on Milan: *"VELASCA TOWER TOUR - 4 IMAGES IN CAROUSEL, BUT MY APP SHOWS 2 IMAGES, BOTH REPEATED."*** Correct, and the same on **Triennale** (8 shown, 4 real) and **Sidewalk Kitchens** (6 shown, 3 real). Found and fixed within the hour; the checker that should have caught it was rebuilt in the same pass.
+
+- **🔴 THE CAUSE: FOUR MILAN DROP FOLDERS CARRIED EVERY PHOTO TWICE — once as `.jpg` at the outer level and once as `.webp` inside a nested `output …` directory** — and the image collector, which deliberately reads *both* levels (the outer level is where those four folders keep their images at all), took every file it found. So each picture was wired in twice and the carousel read **A A B B**.
+- **🔴 THE DUPLICATE CHECKER COULD NOT HAVE CAUGHT THIS, AND THAT IS THE DURABLE POINT. `check-image-duplicates.py` compares SHA-256 — it compares BYTES — and a JPEG and a WebP of one photograph share no bytes at all.** The Thyssen bug it was built for was a byte-for-byte copy; this is the same *visible* defect with none of the same evidence. **A byte check is not a duplicate check.**
+- **The fix keeps the WebP of each distinct picture and drops the JPEG twins** — also **4.5× smaller** (190 KB vs 867 KB). Three WebP heroes uploaded under clean names; **nothing overwritten** (verified: 3 additions, 0 modifications). Velasca 4→2 images, Triennale 8→4, Sidewalk Kitchens 6→3, every remaining pair confirmed visually distinct against the live URLs.
+- **`check-image-duplicates.py` rebuilt, four changes:**
+  - **Perceptual comparison alongside the byte hash** — a 256-bit average hash, so the same picture in two formats is caught. **Regression-verified against a reconstruction of the broken state: it finds all 9 duplicate pairs.** Two pictures in one tour that look the same are an **ERROR**; across tours, INFO.
+  - **`curl` instead of `urllib`.** urllib fails SSL verification on this Mac — **which is how this script printed *"OK — no suspicious duplicates"* having fetched nothing whatsoever, earlier the same day.**
+  - **Exits 2 with `COULD NOT VERIFY` when >20% of fetches fail.** A checker that cannot reach the network must not be able to return a pass.
+  - **Says loudly when Pillow is absent** that it is comparing bytes only, rather than silently degrading to the weaker check.
+- **🐛 RUNNING THE REBUILT CHECK IMMEDIATELY FOUND A PRE-EXISTING DEFECT NOBODY KNEW ABOUT: The Charging Bull (New York) showed five images that were only three** — its hero repeated at position 2, and its rear view repeated at position 5. Long-lived, invisible to every check we had, and fixed here. **A new class of check finds old bugs; expect that and budget for it.**
+- **⚠️ 49 tours mix `.jpg` and `.webp` in one gallery and that is NOT by itself a fault** — NYC's old tours pair a Wikimedia `.jpg` hero with pipeline `.webp` gallery shots. Format mixing was the *symptom* that led here, not the defect; **the defect is two files showing the same picture**, which only a perceptual comparison can see.
+- **⚠️ The image collector reads both the folder and its parent for a reason** — four Milan folders (Triennale, Velasca, Sidewalk Kitchens, Caffè del Lupo) lack the `output ` prefix and nest an inner directory, with images at the outer level that a non-recursive scan misses entirely. **Do not "fix" that by narrowing the scan; de-duplicate by picture instead.**
+
+
 ### The coordinate fault is diagnosed and measured — it is upstream, it is ~10 m north on every point, and there is now a check that catches it (session 103b — tooling)
 
 **Owner: "fix the coordinate issue at the source."** The generator is outside this repo, so the source could not be patched from here — but it can now be *identified*, *quantified* and *caught*. New **`scripts/check-coordinates.py`**.

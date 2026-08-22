@@ -143,7 +143,7 @@ def perceptual_hash(data):
     if Image is None:
         return None
     try:
-        px = list(Image.open(io.BytesIO(data)).convert("L").resize((16, 16)).getdata())
+        px = list(Image.open(io.BytesIO(data)).convert("L").resize((16, 16)).tobytes())
     except Exception:
         return None
     avg = sum(px) / len(px)
