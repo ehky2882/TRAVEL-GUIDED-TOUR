@@ -134,34 +134,8 @@ final class LaunchGateTests: XCTestCase {
 
 
 
-    func test_staggerRunsInOrderAndFinishes() {
-        let count = 6
-        for step in stride(from: 0.0, through: 1.0, by: 0.05) {
-            for i in 1..<count {
-                XCTAssertGreaterThanOrEqual(
-                    LaunchBloom.staggerProgress(handOff: step, index: i - 1, count: count),
-                    LaunchBloom.staggerProgress(handOff: step, index: i, count: count)
-                )
-            }
-        }
-        for i in 0..<count {
-            XCTAssertEqual(LaunchBloom.staggerProgress(handOff: 1, index: i, count: count), 1)
-        }
-    }
 
-    /// A single item has no one to stagger against and must still arrive.
-    func test_staggerHandlesASingleItem() {
-        XCTAssertEqual(LaunchBloom.staggerProgress(handOff: 1, index: 0, count: 1), 1)
-        XCTAssertEqual(LaunchBloom.staggerProgress(handOff: 0, index: 0, count: 1), 0)
-    }
 
-    func test_staggerClampsAnOutOfRangeIndex() {
-        let count = 4
-        XCTAssertEqual(
-            LaunchBloom.staggerProgress(handOff: 0.8, index: 99, count: count),
-            LaunchBloom.staggerProgress(handOff: 0.8, index: count - 1, count: count)
-        )
-    }
 
 
     // MARK: - Photos
@@ -194,6 +168,40 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertLessThan(LaunchImageWarmup.deadline, LaunchGate.ceiling)
     }
 
+    // MARK: - The opening
+
+    func test_theZoomRunsFromTheFirstFrame() {
+        XCTAssertEqual(LaunchBloom.zoom.delay, 0, "the zoom IS the transition — nothing precedes it")
+        XCTAssertEqual(LaunchBloom.zoomProgress(handOff: 0), 0)
+        XCTAssertEqual(LaunchBloom.zoomProgress(handOff: LaunchBloom.zoom.window), 1)
+    }
+
+    /// The black must clear while the opening is still growing, not after — the
+    /// whole complaint about the old fade was that it lingered over the thing
+    /// it was supposed to reveal.
+    func test_theBlackClearsBeforeTheOpeningFinishes() {
+        XCTAssertLessThan(
+            LaunchBloom.splashCut.delay + LaunchBloom.splashCut.window,
+            LaunchBloom.zoom.delay + LaunchBloom.zoom.window
+        )
+    }
+
+    /// The slide starts only once the opening is well under way, so the two
+    /// read as one gesture continuing rather than two events.
+    func test_theSlideStartsInsideTheZoom() {
+        XCTAssertGreaterThan(LaunchBloom.assembly.delay, LaunchBloom.zoom.delay)
+        XCTAssertLessThan(LaunchBloom.assembly.delay, LaunchBloom.zoom.delay + LaunchBloom.zoom.window)
+    }
+
+    /// 🔴 The haptic fires on the settle, and the settle is the end.
+    ///
+    /// Owner, 2026-08-22: *"the haptic is at the wrong beat, it's not synced
+    /// with the things settling into place."* It used to fire mid-sequence.
+    func test_theSettleIsTheEndOfTheHandOff() {
+        XCTAssertEqual(LaunchBloom.settleFraction, 1.0, accuracy: 1e-9)
+        XCTAssertEqual(LaunchBloom.assemblyProgress(handOff: LaunchBloom.settleFraction), 1)
+    }
+
     // MARK: - The three-edge settle
 
     /// 🔴 THE INVARIANT THIS DESIGN WAS CHOSEN FOR.
@@ -221,19 +229,7 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertEqual(LaunchBloom.assemblyProgress(handOff: settle), 1)
     }
 
-    /// The mark has to land BEFORE the frame settles — the arrival is the
-    /// moment, the assembly is the resolution.
-    func test_theMarkLandsBeforeTheFrameSettles() {
-        XCTAssertLessThan(
-            LaunchBloom.landingFraction,
-            LaunchBloom.assembly.delay + LaunchBloom.assembly.window
-        )
-    }
 
-    /// The ripple, the blue dot and the haptic all key off the landing.
-    func test_arrivalStartsExactlyWhenTheMarkLands() {
-        XCTAssertEqual(LaunchBloom.arrival.delay, LaunchBloom.landingFraction, accuracy: 1e-9)
-    }
 
     /// The splash is a cut, not a dissolve — and it must be gone before the
     /// frame settles, or the black is still up over the thing you're watching.
@@ -245,31 +241,7 @@ final class LaunchGateTests: XCTestCase {
         )
     }
 
-    // MARK: - Framing
 
-    /// 🔴 Centred is what put the location dot behind the drawer. The camera
-    /// centre must sit SOUTH of the user so the user rides UP the screen.
-    func test_launchFramingPutsTheUserAboveCentre() {
-        XCTAssertGreaterThan(LaunchLayout.cameraOffsetFraction, 0)
-        XCTAssertLessThan(LaunchLayout.userScreenFraction, 0.5)
-
-        let user = CLLocationCoordinate2D(latitude: 40.75, longitude: -73.98)
-        let centred = MKCoordinateRegion(
-            center: user,
-            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-        )
-        let framed = HomeView.launchFramed(centred)
-        XCTAssertLessThan(framed.center.latitude, user.latitude, "camera must move south")
-        XCTAssertEqual(framed.center.longitude, user.longitude, accuracy: 1e-9)
-        XCTAssertEqual(framed.span.latitudeDelta, centred.span.latitudeDelta, accuracy: 1e-9)
-    }
-
-    func test_landingPointMatchesTheFramedFraction() {
-        let size = CGSize(width: 390, height: 844)
-        let point = LaunchLayout.landingPoint(in: size)
-        XCTAssertEqual(point.x, 195, accuracy: 0.001)
-        XCTAssertEqual(point.y, 844 * LaunchLayout.userScreenFraction, accuracy: 0.001)
-    }
 
     // MARK: - Photo warm-up selection
 

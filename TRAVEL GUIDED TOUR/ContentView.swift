@@ -119,6 +119,12 @@ struct ContentView: View {
     /// Whether the launch splash is still up. Optional for the same reason
     /// `HomeView` reads it optionally — nil means "not launching".
     @Environment(LaunchState.self) private var launchState: LaunchState?
+    /// The opening's progress, or 1 (fully open) when not launching.
+    private var launchZoomProgress: Double {
+        guard let launchState, launchState.isCovering else { return 1 }
+        return LaunchBloom.zoomProgress(handOff: launchState.handOffProgress)
+    }
+
     /// The drawer's share of the three-edge launch assembly, or 1 when not
     /// launching (so a tab return is instant — the entrance is launch-only).
     private var drawerAssemblyProgress: Double {
@@ -212,6 +218,21 @@ struct ContentView: View {
             }
         }
         .ignoresSafeArea(.container, edges: .bottom)
+        // 🔴 THE ZOOM. The whole app is revealed through a circular opening that
+        // expands from the splash mark — Apple's zoom transition, Material's
+        // container transform. The scale and the blur are what give it depth:
+        // two layers moving reads as fast at a third of a second, where a
+        // cross-dissolve at the same duration reads as sluggish.
+        //
+        // ⚠️ The mask is applied to the MAIN window only. The mini-player and
+        // tab bar live in a separate, higher window that this cannot reach —
+        // which is fine, because they are part of the *slide*, not the zoom,
+        // and arrive from the bottom edge afterwards.
+        //
+        // ⚠️ If this ever janks on an older device, the blur is the first thing
+        // to drop: it is the expensive half, and the scale carries most of the
+        // depth on its own.
+        .modifier(LaunchZoomReveal(progress: launchZoomProgress))
         .environment(navState)
         .environment(homeSharedState)
         // NOTE: the full PlayerView is presented from `BottomModuleRoot`

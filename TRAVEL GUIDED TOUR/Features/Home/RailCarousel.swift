@@ -10,15 +10,6 @@ struct RailCarousel: View {
     let tours: [Tour]
 
     @Environment(TourPresenter.self) private var tourPresenter
-    /// Optional so previews and any other host still build — nil means the
-    /// rail is fully arrived, which is every case except the first second.
-    @Environment(LaunchState.self) private var launchState: LaunchState?
-
-    /// This rail's position among the drawer's rails, so the launch stagger
-    /// runs down the list rather than firing every card at once. Defaults keep
-    /// every existing call site working unchanged.
-    var launchIndex: Int = 0
-    var launchCount: Int = 1
 
     var body: some View {
         VStack(alignment: .leading, spacing: AtlasSpacing.sm) {
@@ -45,21 +36,13 @@ struct RailCarousel: View {
             // instead of sliding edge-to-edge (owner request).
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: AtlasSpacing.md) {
-                    ForEach(Array(tours.enumerated()), id: \.element.id) { index, tour in
+                    ForEach(tours) { tour in
                         Button {
                             tourPresenter.present(tour)
                         } label: {
                             TourCard(tour: tour)
                         }
                         .buttonStyle(.plain)
-                        // Cards ease up behind the rising drawer so the
-                        // hand-off's motion carries through to the end instead
-                        // of stopping the moment the drawer lands. A value,
-                        // not a transition — same reasoning as the map pins,
-                        // and it means a rail scrolled into view later never
-                        // replays this.
-                        .opacity(cardProgress(index))
-                        .offset(y: 10 * (1 - cardProgress(index)))
                     }
                 }
             }
@@ -67,18 +50,6 @@ struct RailCarousel: View {
         }
     }
 
-    /// How far into its own arrival a card is. Combines this rail's place in
-    /// the drawer with the card's place in the rail, so the stagger reads as
-    /// one wave rather than each rail restarting.
-    private func cardProgress(_ index: Int) -> Double {
-        guard let launchState, launchState.isCovering else { return 1 }
-        let position = launchIndex * 3 + min(index, 2)
-        return LaunchBloom.staggerProgress(
-            handOff: launchState.handOffProgress,
-            index: position,
-            count: max(launchCount * 3, 2)
-        )
-    }
 }
 
 /// One card on a rail. Fixed width so multiple peek in from the right.

@@ -30,10 +30,6 @@ struct PlacecardAnchor {
 /// placecard invokes `onMapTapped`, which the parent uses to dismiss
 /// the placecard.
 struct HomeMapSection: View {
-    /// Optional so previews and any host that doesn't inject it still build —
-    /// nil means "not launching", which leaves every pin fully arrived.
-    @Environment(LaunchState.self) private var launchState: LaunchState?
-
     let tours: [Tour]
     /// Sites whose tours collapse into a single pin. Empty is the ordinary
     /// case for any catalog published before the place layer.
@@ -160,12 +156,7 @@ struct HomeMapSection: View {
 
             if let userLocation {
                 Annotation("My location", coordinate: userLocation.coordinate, anchor: .center) {
-                    // Fades in underneath the launch mark as it lands, so the
-                    // brass circle visibly becomes the user's position rather
-                    // than disappearing and being replaced. Fully opaque any
-                    // time other than that first second.
                     UserLocationDot(headingDegrees: wedgeRotationDegrees)
-                        .opacity(userDotOpacity)
                 }
                 .annotationTitles(.hidden)
             }
@@ -195,20 +186,6 @@ struct HomeMapSection: View {
         case .hybrid:   map.mapStyle(.hybrid)
         case .imagery:  map.mapStyle(.imagery)
         }
-    }
-
-    // MARK: - Launch arrival
-
-    /// The blue location dot fades in as the launch mark lands on it, so the
-    /// brass circle visibly BECOMES the user's position rather than vanishing
-    /// and being replaced. Fully opaque at any other time.
-    private var userDotOpacity: Double {
-        guard let launchState, launchState.isCovering else { return 1 }
-        return LaunchBloom.ramp(
-            launchState.handOffProgress,
-            delay: LaunchBloom.arrival.delay,
-            window: LaunchBloom.arrival.window * 0.7
-        )
     }
 
     // MARK: - Pin rendering

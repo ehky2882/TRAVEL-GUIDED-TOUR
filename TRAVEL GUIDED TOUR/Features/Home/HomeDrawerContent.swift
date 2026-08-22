@@ -88,14 +88,9 @@ struct HomeDrawerContent: View {
                             if railList.isEmpty {
                                 emptyState
                             } else {
-                                ForEach(Array(railList.enumerated()), id: \.element.id) { index, rail in
-                                    RailCarousel(
-                                        title: rail.title,
-                                        tours: rail.tours,
-                                        launchIndex: index,
-                                        launchCount: railList.count
-                                    )
-                                    .id(rail.id)
+                                ForEach(railList) { rail in
+                                    RailCarousel(title: rail.title, tours: rail.tours)
+                                        .id(rail.id)
                                 }
                             }
                         }

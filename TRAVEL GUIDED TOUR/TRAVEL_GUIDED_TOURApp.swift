@@ -381,32 +381,32 @@ struct TRAVEL_GUIDED_TOURApp: App {
 
         // Reduce Motion gets the plain cross-dissolve this replaced. That is
         // already a complete hand-off, so there is nothing to reintroduce.
-        let duration = reduceMotion ? 0.42 : Self.handOffDuration
+        let duration = reduceMotion ? 0.28 : Self.handOffDuration
 
         withAnimation(.linear(duration: duration)) {
             launchState.setHandOffProgress(1)
         }
 
-        // The bump lands with the MARK, not with the start of the animation.
-        // Deliberately the same soft impact the geofence fires on arriving at a
-        // stop: the app's signature feeling becomes the first thing it does.
-        // Silent in the Simulator — device-only to judge.
-        if reduceMotion {
-            try? await Task.sleep(for: .seconds(duration))
-        } else {
-            let landing = LaunchBloom.landingFraction
-            try? await Task.sleep(for: .seconds(duration * landing))
-            AtlasHaptics.impact(.medium)
-            try? await Task.sleep(for: .seconds(duration * (1 - landing)))
-        }
+        // 🔴 The bump lands ON THE SETTLE — the instant the module, the search
+        // bar and the drawer come to rest together. It used to fire mid-sequence
+        // when the mark landed, which the owner heard immediately: *"the haptic
+        // is at the wrong beat, it's not synced with the things settling into
+        // place."* Deliberately the same soft impact the geofence fires on
+        // arriving at a stop. Silent in the Simulator — device-only to judge.
+        try? await Task.sleep(for: .seconds(duration * LaunchBloom.settleFraction))
+        if !reduceMotion { AtlasHaptics.impact(.medium) }
 
         // Tear the overlay down only once nothing of it is still animating.
         launchState.settle()
     }
 
-    /// How long the whole hand-off takes. The floor in `LaunchGate` is what the
-    /// user waits *before* this; together they are the launch's total budget.
-    private static let handOffDuration: Double = 1.05
+    /// How long the whole hand-off takes: the zoom, then the slide.
+    ///
+    /// Was 1.05s, then 0.9s, now 0.42s. The earlier versions were not slow
+    /// because of their duration — they were slow because the destination did
+    /// not exist yet when they ended, so the user sat watching furniture
+    /// arrive. The zoom reveals a screen that is already built.
+    private static let handOffDuration: Double = 0.42
 
     // MARK: - Bottom-module window
 

@@ -67,30 +67,30 @@ enum LaunchGate {
     }
 }
 
-/// Where the launch frames the user on the map.
+/// Where the zoom opens from.
 ///
-/// 🔴 **Not decoration.** The launch camera used to centre on the user, which
-/// puts the location dot at the middle of the screen — *behind the drawer* at
-/// its mid detent, where you cannot see it. Framing the user higher fixes that,
-/// and it is also what gives the launch mark somewhere to travel to.
+/// The splash mark and the mask that reveals the app share this point — the
+/// app comes through the opening the mark leaves, so if the two disagreed the
+/// app would appear to open out of thin air next to the logo.
 ///
-/// The splash's mark and the map camera BOTH read this, which is the point: the
-/// mark has to land exactly where the dot will appear, and two constants would
-/// drift apart the first time either was touched.
-enum LaunchLayout {
-    /// The user's position as a fraction of screen height, measured from the
-    /// top. 0.5 would be dead centre (and behind the drawer).
-    static let userScreenFraction: CGFloat = 0.30
+/// ⚠️ There is deliberately NO framing constant here any more. An earlier
+/// revision shifted the launch camera so the user sat in the upper third, to
+/// give a travelling mark somewhere to fly to. That was the tail wagging the
+/// dog — owner, 2026-08-22: *"it means moving the location up so that it's not
+/// centred... I don't think it works."* The mark no longer travels, so the
+/// camera centres on the user like everything else in the app.
+enum LaunchZoom {
+    /// Vertical position of the opening, as a fraction of screen height.
+    /// Matches where the splash draws its mark.
+    static let originFraction: CGFloat = 0.46
 
-    /// How far the camera's centre sits *south* of the user, as a fraction of
-    /// the visible latitude span. Moving the camera south pushes the user north
-    /// — i.e. up the screen.
-    static var cameraOffsetFraction: CGFloat { 0.5 - userScreenFraction }
-
-    /// The mark's landing point in a full-screen view's coordinate space.
-    static func landingPoint(in size: CGSize) -> CGPoint {
-        CGPoint(x: size.width / 2, y: size.height * userScreenFraction)
+    static func origin(in size: CGSize) -> CGPoint {
+        CGPoint(x: size.width / 2, y: size.height * originFraction)
     }
+
+    /// Radius the mask starts at — the mark's own radius, so the opening
+    /// begins exactly at the edge of the circle you were just looking at.
+    static let startRadius: CGFloat = 22
 }
 
 /// Whether the launch splash is still covering the app.
@@ -176,58 +176,55 @@ enum LaunchBloom {
 
     // MARK: - Phase fractions
     //
-    // Named rather than inlined so the sequence can be read in one place and
-    // retimed without hunting through five views.
+    // The whole hand-off is 0.42s. Two gestures, in this order:
+    //
+    //   1. THE ZOOM. The mark expands and the app comes through the opening it
+    //      leaves — Apple's zoom transition / Material's container transform,
+    //      which is the effect in the reference the owner sent.
+    //   2. THE SLIDE. The bottom module, the search bar and the drawer arrive
+    //      from three edges and settle together.
+    //
+    // 🔴 What made the previous version lethargic was not its duration — it was
+    // that the destination did not exist yet when the transition ended, so you
+    // sat watching furniture arrive. The zoom reveals a screen that is already
+    // built; only the chrome moves after it.
 
-    /// The wordmark lifts away first.
-    static let wordmarkLift = (delay: 0.02, window: 0.22)
+    /// The wordmark goes first and fast — it is not part of the gesture.
+    static let wordmarkLift = (delay: 0.0, window: 0.24)
 
-    /// The brass mark rises from the wordmark's position onto the user's dot.
+    /// The opening. Runs from the very first frame: this IS the transition.
+    static let zoom = (delay: 0.0, window: 0.71)
+
+    /// The black cuts out from under the expanding opening.
+    static let splashCut = (delay: 0.29, window: 0.38)
+
+    /// 🔴 THE THREE-EDGE SETTLE — the thing this shape was chosen for.
     ///
-    /// ⚠️ `delay + window` must equal `arrival.delay`: the ripple, the blue dot
-    /// and the haptic all key off the instant the mark touches down.
-    /// `landingFraction` below is the single expression of that, and a test
-    /// pins it.
-    static let markLanding = (delay: 0.045, window: 0.47)
-
-    /// The splash CUTS rather than dissolving — short and linear, so the black
-    /// is gone before you register it and the assembly is what you watch.
-    static let splashCut = (delay: 0.22, window: 0.18)
-
-    /// Ripple + blue dot + haptic, from the moment the mark lands.
-    static let arrival = (delay: 0.515, window: 0.34)
-
-    /// 🔴 THE THREE-EDGE SETTLE — the thing this design was chosen for.
-    ///
-    /// The bottom module (from below), the search bar and filter chips (from
-    /// the right) and the drawer (from below) all share **this one delay and
-    /// this one window**. They start together and land together on a single
-    /// frame; the drawer travels furthest so it simply moves fastest.
+    /// The bottom module (from below), the search bar and chips (from the
+    /// right) and the drawer (from below) share **one delay and one window**.
+    /// They start together and land together on a single frame; the drawer
+    /// travels furthest so it simply moves fastest.
     ///
     /// ⚠️ Do not give any of the three its own timing. Owner decision
     /// 2026-08-22: *"I like that the things settle at exactly the same time."*
     /// A test asserts all three resolve to the same value at every step.
-    static let assembly = (delay: 0.31, window: 0.38)
+    static let assembly = (delay: 0.38, window: 0.62)
 
-    /// Rail cards ease in behind the settled drawer.
-    static let rails = (delay: 0.66, window: 0.30)
-
-    /// The instant the mark touches down, as a fraction of the hand-off.
-    /// The haptic fires here, and `arrival` starts here.
-    static var landingFraction: Double { markLanding.delay + markLanding.window }
-
-    /// Progress of one staggered item in a sequence (rail cards).
-    static func staggerProgress(handOff: Double, index: Int, count: Int) -> Double {
-        guard count > 1 else { return ramp(handOff, delay: rails.delay, window: rails.window) }
-        let d = Double(min(max(index, 0), count - 1)) / Double(count - 1)
-        let share = 0.6
-        let lead = rails.window * (1 - share) * d
-        return ramp(handOff, delay: rails.delay + lead, window: rails.window * share)
-    }
+    /// The instant everything comes to rest — where the haptic fires.
+    ///
+    /// ⚠️ Owner note 2026-08-22: *"the haptic is at the wrong beat, it's not
+    /// synced with the things settling into place."* It used to fire when the
+    /// mark landed, mid-sequence. It fires HERE now.
+    static var settleFraction: Double { assembly.delay + assembly.window }
 
     /// Progress of the three-edge assembly. One function, so the module, the
     /// chrome and the drawer physically cannot drift apart.
     static func assemblyProgress(handOff: Double) -> Double {
         ramp(handOff, delay: assembly.delay, window: assembly.window)
+    }
+
+    /// Progress of the opening.
+    static func zoomProgress(handOff: Double) -> Double {
+        ramp(handOff, delay: zoom.delay, window: zoom.window)
     }
 }
