@@ -174,6 +174,21 @@ enum LaunchBloom {
         return t
     }
 
+    /// How long the whole hand-off takes.
+    ///
+    /// ⚠️ Lives HERE, beside the fractions it scales, and not in the App —
+    /// otherwise every timing assertion has to be written as a fraction, and a
+    /// fraction silently changes meaning the moment the duration moves. That
+    /// exact trap fired once: a test pinned the splash cut at "≤ 0.2 of the
+    /// hand-off", the hand-off went 0.9s → 0.42s, and the assertion started
+    /// failing while the cut was in real terms *shorter* than before.
+    ///
+    /// Was 1.05s (staged assembly), then 0.9s, now 0.42s.
+    static let duration: TimeInterval = 0.42
+
+    /// Reduce Motion gets a plain cross-dissolve, and a shorter one.
+    static let reducedMotionDuration: TimeInterval = 0.28
+
     // MARK: - Phase fractions
     //
     // The whole hand-off is 0.42s. Two gestures, in this order:

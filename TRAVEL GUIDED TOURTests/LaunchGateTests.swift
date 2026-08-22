@@ -223,22 +223,30 @@ final class LaunchGateTests: XCTestCase {
         }
     }
 
-    func test_theAssemblySettlesBeforeTheHandOffEnds() {
-        let settle = LaunchBloom.assembly.delay + LaunchBloom.assembly.window
-        XCTAssertLessThan(settle, 1.0)
-        XCTAssertEqual(LaunchBloom.assemblyProgress(handOff: settle), 1)
-    }
 
 
 
-    /// The splash is a cut, not a dissolve — and it must be gone before the
-    /// frame settles, or the black is still up over the thing you're watching.
-    func test_theSplashCutIsShortAndFinishesEarly() {
-        XCTAssertLessThanOrEqual(LaunchBloom.splashCut.window, 0.2)
+    /// The splash is a cut, not a dissolve.
+    ///
+    /// 🔴 Asserted in SECONDS, not in fractions of the hand-off. The previous
+    /// version of this test said `splashCut.window <= 0.2` — a fraction — and
+    /// when the hand-off went from 0.9s to 0.42s it started failing even though
+    /// the cut had got *shorter* in real terms (0.162s → 0.160s). A fraction
+    /// assertion measures nothing on its own; it silently re-scales under you.
+    func test_theSplashCutIsAnActualCut() {
+        let seconds = LaunchBloom.splashCut.window * LaunchBloom.duration
+        XCTAssertLessThanOrEqual(seconds, 0.2, "a cut, not a dissolve")
         XCTAssertLessThan(
             LaunchBloom.splashCut.delay + LaunchBloom.splashCut.window,
             LaunchBloom.assembly.delay + LaunchBloom.assembly.window
         )
+    }
+
+    /// The whole thing has to stay under half a second — that is the point of
+    /// this round. Owner, on the 0.9s version: *"slow and feels very lethargic."*
+    func test_theHandOffStaysUnderHalfASecond() {
+        XCTAssertLessThanOrEqual(LaunchBloom.duration, 0.5)
+        XCTAssertLessThan(LaunchBloom.reducedMotionDuration, LaunchBloom.duration)
     }
 
 

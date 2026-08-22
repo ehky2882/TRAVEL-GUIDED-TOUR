@@ -381,7 +381,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
 
         // Reduce Motion gets the plain cross-dissolve this replaced. That is
         // already a complete hand-off, so there is nothing to reintroduce.
-        let duration = reduceMotion ? 0.28 : Self.handOffDuration
+        let duration = reduceMotion ? LaunchBloom.reducedMotionDuration : LaunchBloom.duration
 
         withAnimation(.linear(duration: duration)) {
             launchState.setHandOffProgress(1)
@@ -400,13 +400,6 @@ struct TRAVEL_GUIDED_TOURApp: App {
         launchState.settle()
     }
 
-    /// How long the whole hand-off takes: the zoom, then the slide.
-    ///
-    /// Was 1.05s, then 0.9s, now 0.42s. The earlier versions were not slow
-    /// because of their duration — they were slow because the destination did
-    /// not exist yet when they ended, so the user sat watching furniture
-    /// arrive. The zoom reveals a screen that is already built.
-    private static let handOffDuration: Double = 0.42
 
     // MARK: - Bottom-module window
 
