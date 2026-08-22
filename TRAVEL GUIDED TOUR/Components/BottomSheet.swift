@@ -33,6 +33,11 @@ struct BottomSheet<Content: View>: View {
     /// Peek detent's pixel height. Tunable per consumer; default ~100
     /// gives room for a drag handle + a single header line.
     var peekHeight: CGFloat = 100
+
+    /// The launch entrance's opening phase: 0 draws the sheet CLOSED (peek
+    /// height) whatever detent it is in, 1 draws it at that detent. Defaults to
+    /// 1 so every other caller is unaffected.
+    var launchOpenProgress: Double = 1
     /// Inset from the screen edges on the left, right, AND bottom of
     /// the drawer.
     var horizontalInset: CGFloat = 8
@@ -80,6 +85,7 @@ struct BottomSheet<Content: View>: View {
         bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius,
         bottomReservedHeight: CGFloat = 0,
         topReservedHeight: CGFloat = 0,
+        launchOpenProgress: Double = 1,
         @ViewBuilder content: () -> Content
     ) {
         self._detent = detent
@@ -90,12 +96,20 @@ struct BottomSheet<Content: View>: View {
         self.bottomCornerRadius = bottomCornerRadius
         self.bottomReservedHeight = bottomReservedHeight
         self.topReservedHeight = topReservedHeight
+        self.launchOpenProgress = launchOpenProgress
         self.content = content()
     }
 
     var body: some View {
         GeometryReader { geo in
             let topInset = geo.safeAreaInsets.top
+            // 🔴 THE LAUNCH OPENING. 0 = closed (peek height), 1 = the
+            // detent's real height. It rides the same arithmetic as a drag, so
+            // the sheet opens exactly the way a user opening it does, and it is
+            // a plain input rather than a write into `dragOffset` — writing
+            // that would collide with a gesture already in flight.
+            let launchCollapse = (1 - launchOpenProgress)
+                * max(0, heightForDetent(detent, in: geo, topInset: topInset) - peekHeight)
             let baseHeight = heightForDetent(detent, in: geo, topInset: topInset)
             // Clamp the drag-time visual height to the `.large` detent's
             // resolved height — NOT the full container height. Otherwise
@@ -109,7 +123,7 @@ struct BottomSheet<Content: View>: View {
             // Negative dragOffset = drag up = drawer grows.
             // Positive dragOffset = drag down = drawer shrinks.
             let dragHeight = min(
-                max(peekHeight, baseHeight - dragOffset),
+                max(peekHeight, baseHeight - dragOffset - launchCollapse),
                 largeHeight
             )
 

@@ -23,9 +23,12 @@ struct LaunchZoomReveal: ViewModifier {
     func body(content: Content) -> some View {
         content
             .scaleEffect(1 + (1 - progress) * Self.scaleOvershoot)
-            .blur(radius: (1 - progress) * Self.maxBlur)
     }
 
+    /// ⚠️ THERE IS NO BLUR ANY MORE, and it should not come back without a
+    /// measurement. A blur over the whole app is a full-screen offscreen pass
+    /// every frame; together with the splash's old mask it was enough to make
+    /// the hand-off visibly lag its own timing in the Simulator. The scale
+    /// carries the depth on its own and costs nothing.
     private static let scaleOvershoot: CGFloat = 0.07
-    private static let maxBlur: CGFloat = 6
 }

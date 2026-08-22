@@ -176,21 +176,57 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertEqual(LaunchBloom.zoomProgress(handOff: LaunchBloom.zoom.window), 1)
     }
 
-    /// The black must clear while the opening is still growing, not after — the
-    /// whole complaint about the old fade was that it lingered over the thing
-    /// it was supposed to reveal.
-    func test_theBlackClearsBeforeTheOpeningFinishes() {
-        XCTAssertLessThan(
+    /// 🔴 The black is cut UNDERNEATH the disc, never in view.
+    ///
+    /// It used to fade on its own ramp while the disc was still growing, and
+    /// the two visibly came apart: the map appeared early and the "solid
+    /// expanding mark" turned into a translucent blob over it. The cut may
+    /// only happen once the disc covers the screen, and must be finished
+    /// before the disc starts dissolving.
+    func test_theBlackIsCutUnderneathTheDisc() {
+        let covered = LaunchBloom.zoom.delay + LaunchBloom.zoom.window
+        XCTAssertGreaterThanOrEqual(LaunchBloom.splashCut.delay, covered)
+        XCTAssertLessThanOrEqual(
             LaunchBloom.splashCut.delay + LaunchBloom.splashCut.window,
-            LaunchBloom.zoom.delay + LaunchBloom.zoom.window
+            LaunchBloom.markDissolve.delay + LaunchBloom.markDissolve.window
         )
     }
 
-    /// The slide starts only once the opening is well under way, so the two
-    /// read as one gesture continuing rather than two events.
-    func test_theSlideStartsInsideTheZoom() {
-        XCTAssertGreaterThan(LaunchBloom.assembly.delay, LaunchBloom.zoom.delay)
-        XCTAssertLessThan(LaunchBloom.assembly.delay, LaunchBloom.zoom.delay + LaunchBloom.zoom.window)
+    /// 🔴 THE ZOOM ENDS ON A BARE MAP. Nothing may arrive while the brass is
+    /// still on screen — owner, 2026-08-22: *"after the brass circle goes away
+    /// it should be a blank map screen. then the components start sliding
+    /// in."*
+    func test_nothingArrivesUntilTheBrassIsGone() {
+        let zoomEnds = LaunchBloom.markDissolve.delay + LaunchBloom.markDissolve.window
+        XCTAssertGreaterThanOrEqual(LaunchBloom.assembly.delay, zoomEnds)
+        XCTAssertGreaterThanOrEqual(LaunchBloom.chrome.delay, zoomEnds)
+        XCTAssertEqual(LaunchBloom.assemblyProgress(handOff: zoomEnds), 0)
+        XCTAssertEqual(LaunchBloom.chromeProgress(handOff: zoomEnds), 0)
+        XCTAssertEqual(LaunchBloom.drawerExpandProgress(handOff: zoomEnds), 0)
+    }
+
+    /// 🔴 The disc stays SOLID for the whole of its growth: it starts
+    /// dissolving only once it covers the screen. Owner, 2026-08-22: *"it
+    /// should stay as a solid as it expands."*
+    func test_theDiscOnlyDissolvesOnceItCoversTheScreen() {
+        XCTAssertGreaterThanOrEqual(
+            LaunchBloom.markDissolve.delay,
+            LaunchBloom.zoom.delay + LaunchBloom.zoom.window
+        )
+        // And the black is cut underneath it, never in view.
+        XCTAssertGreaterThanOrEqual(LaunchBloom.splashCut.delay, LaunchBloom.zoom.delay + LaunchBloom.zoom.window)
+        XCTAssertLessThanOrEqual(
+            LaunchBloom.splashCut.delay + LaunchBloom.splashCut.window,
+            LaunchBloom.markDissolve.delay + LaunchBloom.markDissolve.window
+        )
+    }
+
+    /// The drawer opens only after the block it rode in on has landed.
+    func test_theDrawerOpensAfterTheBlockLands() {
+        XCTAssertGreaterThanOrEqual(
+            LaunchBloom.drawerExpand.delay,
+            LaunchBloom.assembly.delay + LaunchBloom.assembly.window
+        )
     }
 
     /// 🔴 The haptic fires on the settle, and the settle is the end.
@@ -202,16 +238,32 @@ final class LaunchGateTests: XCTestCase {
         XCTAssertEqual(LaunchBloom.assemblyProgress(handOff: LaunchBloom.settleFraction), 1)
     }
 
-    // MARK: - The three-edge settle
+    // MARK: - The snap
 
     /// 🔴 THE INVARIANT THIS DESIGN WAS CHOSEN FOR.
     ///
-    /// The bottom module, the search bar and the drawer come from three
-    /// different edges and must land on ONE frame — owner, 2026-08-22: *"I like
-    /// that the things settle at exactly the same time."* They all read
-    /// `assemblyProgress`, so this asserts the thing that would break it: that
-    /// there is exactly one curve, sampled everywhere.
-    func test_theThreeEdgesShareOneProgressAtEveryInstant() {
+    /// The drawer finishes opening and the top chrome lands on ONE frame —
+    /// owner, 2026-08-22: *"at the end the drawer and the top components should
+    /// 'snap' into place at exactly the same time. and when it 'snaps' into
+    /// place, that's when the haptic happens."* So the two ramps must end
+    /// together, and the haptic's instant must be that end.
+    func test_theDrawerAndTheChromeLandOnTheSameFrame() {
+        let chromeEnds = LaunchBloom.chrome.delay + LaunchBloom.chrome.window
+        let drawerEnds = LaunchBloom.drawerExpand.delay + LaunchBloom.drawerExpand.window
+        XCTAssertEqual(chromeEnds, drawerEnds, accuracy: 1e-9)
+        XCTAssertEqual(LaunchBloom.settleFraction, drawerEnds, accuracy: 1e-9)
+
+        for step in stride(from: 0.0, through: 1.0, by: 0.01) where step < drawerEnds {
+            XCTAssertLessThan(LaunchBloom.chromeProgress(handOff: step), 1, "at \(step)")
+            XCTAssertLessThan(LaunchBloom.drawerExpandProgress(handOff: step), 1, "at \(step)")
+        }
+        XCTAssertEqual(LaunchBloom.chromeProgress(handOff: drawerEnds), 1)
+        XCTAssertEqual(LaunchBloom.drawerExpandProgress(handOff: drawerEnds), 1)
+    }
+
+    /// The module and the drawer ride in as one block, so they share one curve
+    /// at every instant — that is what stops them arriving separately.
+    func test_theBlockSharesOneProgressAtEveryInstant() {
         for step in stride(from: 0.0, through: 1.0, by: 0.01) {
             let value = LaunchBloom.assemblyProgress(handOff: step)
             let direct = LaunchBloom.ramp(
@@ -223,9 +275,6 @@ final class LaunchGateTests: XCTestCase {
         }
     }
 
-
-
-
     /// The splash is a cut, not a dissolve.
     ///
     /// 🔴 Asserted in SECONDS, not in fractions of the hand-off. The previous
@@ -236,16 +285,21 @@ final class LaunchGateTests: XCTestCase {
     func test_theSplashCutIsAnActualCut() {
         let seconds = LaunchBloom.splashCut.window * LaunchBloom.duration
         XCTAssertLessThanOrEqual(seconds, 0.2, "a cut, not a dissolve")
-        XCTAssertLessThan(
+        XCTAssertLessThanOrEqual(
             LaunchBloom.splashCut.delay + LaunchBloom.splashCut.window,
-            LaunchBloom.assembly.delay + LaunchBloom.assembly.window
+            LaunchBloom.assembly.delay
         )
     }
 
-    /// The whole thing has to stay under half a second — that is the point of
-    /// this round. Owner, on the 0.9s version: *"slow and feels very lethargic."*
-    func test_theHandOffStaysUnderHalfASecond() {
-        XCTAssertLessThanOrEqual(LaunchBloom.duration, 0.5)
+    /// The whole thing has to stay snappy — that is the point of this round.
+    /// Owner, on the 1.05s staged assembly: *"slow and feels very lethargic."*
+    ///
+    /// ⚠️ 0.62s, not the 0.42s this once pinned: the sequence gained a third
+    /// beat (zoom → slide → the drawer opening) and three beats inside 0.42s
+    /// left none of them long enough to read. The ceiling is on the WHOLE
+    /// hand-off, so a fourth beat has to buy its time from the other three.
+    func test_theHandOffStaysSnappy() {
+        XCTAssertLessThanOrEqual(LaunchBloom.duration, 0.7)
         XCTAssertLessThan(LaunchBloom.reducedMotionDuration, LaunchBloom.duration)
     }
 

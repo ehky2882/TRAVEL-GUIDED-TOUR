@@ -81,8 +81,13 @@ enum LaunchGate {
 /// camera centres on the user like everything else in the app.
 enum LaunchZoom {
     /// Vertical position of the opening, as a fraction of screen height.
-    /// Matches where the splash draws its mark.
-    static let originFraction: CGFloat = 0.46
+    ///
+    /// 🔴 EXACTLY THE CENTRE, because that is where the map puts the user's
+    /// blue dot: the map view fills the screen and the launch camera resolves
+    /// centred on the user, so the dot lands at the middle of it. The mark has
+    /// to open from that same point or it does not read as *becoming* the dot.
+    /// Owner decision 2026-08-22. Was 0.46, which sat visibly above it.
+    static let originFraction: CGFloat = 0.5
 
     static func origin(in size: CGSize) -> CGPoint {
         CGPoint(x: size.width / 2, y: size.height * originFraction)
@@ -201,59 +206,90 @@ enum LaunchBloom {
     /// hand-off", the hand-off went 0.9s → 0.42s, and the assertion started
     /// failing while the cut was in real terms *shorter* than before.
     ///
-    /// Was 1.05s (staged assembly), then 0.9s, now 0.42s.
-    static let duration: TimeInterval = 0.42
+    /// Was 1.05s (staged assembly), then 0.9s, then 0.42s — now 0.62s,
+    /// because the sequence gained a third beat (the drawer opening) and 0.42s
+    /// could not hold three of them without any one reading as a jump.
+    static let duration: TimeInterval = 0.62
 
     /// Reduce Motion gets a plain cross-dissolve, and a shorter one.
     static let reducedMotionDuration: TimeInterval = 0.28
 
     // MARK: - Phase fractions
     //
-    // The whole hand-off is 0.42s. Two gestures, in this order:
+    // Three beats, in this order. Owner direction 2026-08-22:
     //
-    //   1. THE ZOOM. The mark expands and the app comes through the opening it
-    //      leaves — Apple's zoom transition / Material's container transform,
-    //      which is the effect in the reference the owner sent.
-    //   2. THE SLIDE. The bottom module, the search bar and the drawer arrive
-    //      from three edges and settle together.
+    //   1. THE ZOOM. The brass mark expands as a SOLID disc and dissolves into
+    //      the map — Apple's zoom transition / Material's container transform.
+    //      ⚠️ It stays solid the whole way: *"i dont like that the brass circle
+    //      becomes a ring and that there's blue behind it. it should stay as a
+    //      solid as it expands."* What it leaves behind is a BARE MAP — no
+    //      chrome of any kind is on screen yet.
+    //   2. THE SLIDE. The bottom module rises as ONE BLOCK — tab bar,
+    //      mini-player and the drawer *in its closed position* — while the
+    //      search bar and chips come in from the right.
+    //   3. THE OPENING. The drawer expands from closed to its mid detent, and
+    //      finishes on the SAME FRAME the top chrome lands. That shared frame
+    //      is the snap, and where the haptic fires.
     //
-    // 🔴 What made the previous version lethargic was not its duration — it was
+    // 🔴 What made an earlier version lethargic was not its duration — it was
     // that the destination did not exist yet when the transition ended, so you
-    // sat watching furniture arrive. The zoom reveals a screen that is already
-    // built; only the chrome moves after it.
+    // sat watching furniture arrive. The zoom reveals a map that is already
+    // built and already still; only the chrome moves after it.
 
     /// The wordmark goes first and fast — it is not part of the gesture.
-    static let wordmarkLift = (delay: 0.0, window: 0.24)
+    static let wordmarkLift = (delay: 0.0, window: 0.14)
 
-    /// The opening. Runs from the very first frame: this IS the transition.
-    static let zoom = (delay: 0.0, window: 0.71)
+    /// The disc's growth, from the mark's 44pt to covering the screen. Runs
+    /// from the very first frame: this IS the transition.
+    static let zoom = (delay: 0.0, window: 0.34)
 
-    /// The black cuts out from under the expanding opening.
-    static let splashCut = (delay: 0.29, window: 0.38)
+    /// The disc dissolving into the map behind it — and it starts only once
+    /// the disc COVERS the screen, so the brass is solid for the whole of its
+    /// growth and what is left when it goes is a bare map.
+    static let markDissolve = (delay: 0.34, window: 0.14)
 
-    /// 🔴 THE THREE-EDGE SETTLE — the thing this shape was chosen for.
+    /// The black is cut while the disc is covering the screen, so the cut
+    /// itself is never visible.
+    static let splashCut = (delay: 0.34, window: 0.02)
+
+    /// 🔴 THE SLIDE — the module and the closed drawer as ONE BLOCK.
     ///
-    /// The bottom module (from below), the search bar and chips (from the
-    /// right) and the drawer (from below) share **one delay and one window**.
-    /// They start together and land together on a single frame; the drawer
-    /// travels furthest so it simply moves fastest.
-    ///
-    /// ⚠️ Do not give any of the three its own timing. Owner decision
-    /// 2026-08-22: *"I like that the things settle at exactly the same time."*
-    /// A test asserts all three resolve to the same value at every step.
-    static let assembly = (delay: 0.38, window: 0.62)
+    /// Tab bar, mini-player and drawer share one delay and one window so they
+    /// travel as a single object. Owner: *"the entire bottom module should
+    /// slide up together… right now the miniplayer and bottom tabs are already
+    /// in place and then the drawer slides up from behind it."*
+    static let assembly = (delay: 0.52, window: 0.20)
+
+    /// 🔴 THE OPENING — the drawer alone, closed → mid detent, after the block
+    /// has landed.
+    static let drawerExpand = (delay: 0.72, window: 0.28)
+
+    /// The search bar and chips travel the whole of the second half, so they
+    /// land on the frame the drawer finishes opening. ⚠️ Its end must equal
+    /// `drawerExpand`'s end — that shared frame is the snap. A test pins it.
+    static let chrome = (delay: 0.52, window: 0.48)
 
     /// The instant everything comes to rest — where the haptic fires.
     ///
     /// ⚠️ Owner note 2026-08-22: *"the haptic is at the wrong beat, it's not
-    /// synced with the things settling into place."* It used to fire when the
-    /// mark landed, mid-sequence. It fires HERE now.
-    static var settleFraction: Double { assembly.delay + assembly.window }
+    /// synced with the things settling into place."* It fires on the frame the
+    /// drawer finishes opening and the top chrome lands, which is the end.
+    static var settleFraction: Double { drawerExpand.delay + drawerExpand.window }
 
-    /// Progress of the three-edge assembly. One function, so the module, the
-    /// chrome and the drawer physically cannot drift apart.
+    /// Progress of the slide: the module and the closed drawer, one value, so
+    /// they physically cannot drift apart.
     static func assemblyProgress(handOff: Double) -> Double {
         ramp(handOff, delay: assembly.delay, window: assembly.window)
+    }
+
+    /// Progress of the drawer's opening, closed → mid detent.
+    static func drawerExpandProgress(handOff: Double) -> Double {
+        ramp(handOff, delay: drawerExpand.delay, window: drawerExpand.window)
+    }
+
+    /// Progress of the top chrome's arrival from the right.
+    static func chromeProgress(handOff: Double) -> Double {
+        ramp(handOff, delay: chrome.delay, window: chrome.window)
     }
 
     /// Progress of the opening.

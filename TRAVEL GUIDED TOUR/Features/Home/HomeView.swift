@@ -569,9 +569,12 @@ struct HomeView: View {
     /// roughly 11 km N-S / ~8.5 km E-W at NYC latitude — about the
     /// full length of Manhattan island.
     /// The three-edge assembly's progress, or 1 when not launching.
+    /// The top chrome's arrival from the right. It travels the whole second
+    /// half of the hand-off so it lands on the SAME FRAME the drawer finishes
+    /// opening — that shared frame is the snap, and where the haptic fires.
     private var assemblyProgress: Double {
         guard let launchState, launchState.isCovering else { return 1 }
-        return LaunchBloom.assemblyProgress(handOff: launchState.handOffProgress)
+        return LaunchBloom.chromeProgress(handOff: launchState.handOffProgress)
     }
 
     private static let initialUserSpan = MKCoordinateSpan(

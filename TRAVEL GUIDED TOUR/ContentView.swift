@@ -125,11 +125,18 @@ struct ContentView: View {
         return LaunchBloom.zoomProgress(handOff: launchState.handOffProgress)
     }
 
-    /// The drawer's share of the three-edge launch assembly, or 1 when not
-    /// launching (so a tab return is instant — the entrance is launch-only).
+    /// The drawer's share of the SLIDE — it rises as part of one block with
+    /// the mini-player and tab bar. 1 when not launching, so a tab return is
+    /// instant: the entrance is launch-only.
     private var drawerAssemblyProgress: Double {
         guard let launchState, launchState.isCovering else { return 1 }
         return LaunchBloom.assemblyProgress(handOff: launchState.handOffProgress)
+    }
+
+    /// The drawer's OPENING, closed → mid detent, after the block has landed.
+    private var drawerOpenProgress: Double {
+        guard let launchState, launchState.isCovering else { return 1 }
+        return LaunchBloom.drawerExpandProgress(handOff: launchState.handOffProgress)
     }
 
 
@@ -162,36 +169,8 @@ struct ContentView: View {
             // and keeping it in place means the dismiss slide reveals
             // the drawer at its old detent instead of flashing it
             // back in after the animation.
-            if appShared.selectedTab == .home
-                && (tourLayerCoversDrawer || !navState.isShowingDetail) {
-                BottomSheet(
-                    detent: $homeSheetDetent,
-                    dragOffset: dragOffsetBinding,
-                    peekHeight: 80,
-                    bottomCornerRadius: 0,
-                    bottomReservedHeight: AtlasBottomModule.height(),
-                    // .large stops below the search bar + chip row
-                    // so they stay anchored at the top of the screen
-                    // when the drawer is fully expanded. AtlasSpacing.sm
-                    // is a small visual buffer between the chip row's
-                    // bottom edge and the drawer's top edge.
-                    topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
-                ) {
-                    HomeDrawerContent(
-                        sheetDetent: $homeSheetDetent
-                    )
-                }
-                // Off-screen until the entrance plays. The sheet lays out
-                // bottom-anchored inside a full-screen frame, so translating
-                // the whole thing down by more than any phone's height parks
-                // it completely out of view without touching its internals.
-                // 🔴 Same ramp as the bottom module and the search bar. The
-                // drawer travels furthest of the three, so it moves fastest —
-                // that is what makes them land on one frame. Owner decision
-                // 2026-08-22: *"I want the mid-detent to settle at the same
-                // time as the stuff at top."*
-                .offset(y: (1 - drawerAssemblyProgress) * Self.drawerEntryOffset)
-            }
+            homeDrawer(dragOffset: dragOffsetBinding)
+
             // Fallback mini-player + tab bar, rendered in THIS (main) window
             // whenever the secondary higher-level window isn't installed.
             //
@@ -530,6 +509,54 @@ struct ContentView: View {
                 audioPlayer.setArtwork(image, for: sourceId)
             }
             #endif
+        }
+    }
+
+
+    /// The home drawer, extracted from `body`.
+    ///
+    /// ⚠️ Not stylistic: with this inline, the type-checker gave up on `body`
+    /// outright ("unable to type-check this expression in reasonable time")
+    /// the moment the sheet gained one more argument — and blamed an unrelated
+    /// line thirty lines away. If `body` starts failing to compile for no
+    /// visible reason, pull the next-largest subview out the same way.
+    @ViewBuilder
+    private func homeDrawer(dragOffset: Binding<CGFloat>) -> some View {
+        if appShared.selectedTab == .home
+            && (tourLayerCoversDrawer || !navState.isShowingDetail) {
+            BottomSheet(
+                detent: $homeSheetDetent,
+                dragOffset: dragOffset,
+                peekHeight: 80,
+                bottomCornerRadius: 0,
+                bottomReservedHeight: AtlasBottomModule.height(),
+                // .large stops below the search bar + chip row
+                // so they stay anchored at the top of the screen
+                // when the drawer is fully expanded. AtlasSpacing.sm
+                // is a small visual buffer between the chip row's
+                // bottom edge and the drawer's top edge.
+                topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm,
+                // Closed while the block slides up, then opens to the mid
+                // detent on the frame the top chrome lands.
+                launchOpenProgress: drawerOpenProgress
+            ) {
+                HomeDrawerContent(
+                    sheetDetent: $homeSheetDetent
+                )
+            }
+            // Off-screen until the entrance plays. The sheet lays out
+            // bottom-anchored inside a full-screen frame, so translating
+            // the whole thing down by more than any phone's height parks
+            // it completely out of view without touching its internals.
+            // 🔴 EXACTLY THE MODULE'S RAMP, because the drawer, the
+            // mini-player and the tab bar rise as ONE BLOCK — the drawer
+            // closed, sitting on top of the bars, the whole thing arriving
+            // as a single object. Owner: *"the entire bottom module should
+            // slide up together… right now the miniplayer and bottom tabs
+            // are already in place and then the drawer slides up from
+            // behind it."* It then opens on its own ramp (above), which is
+            // the beat that ends on the snap.
+            .offset(y: (1 - drawerAssemblyProgress) * Self.drawerEntryOffset)
         }
     }
 
