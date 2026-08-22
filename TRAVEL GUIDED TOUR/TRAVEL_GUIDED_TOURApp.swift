@@ -101,7 +101,14 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// + tab bar above any UIKit modal presented in the main
     /// window. Installed once on first appearance.
     @State private var bottomModuleWindow = BottomModuleWindowController()
-    @State private var isLoading = true
+    /// Whether the launch splash is still covering the app. Replaces the old
+    /// `isLoading` Bool, which a fixed 2-second timer flipped; readiness now
+    /// decides — see `LaunchGate` for why, and for the floor and ceiling that
+    /// bound it.
+    @State private var launchState = LaunchState()
+    /// Warms the first screenful of card photos during the splash so the drawer
+    /// arrives complete. Owner decision 2026-08-22: "ready including photos".
+    @State private var imageWarmup = LaunchImageWarmup()
     /// A tour deep link that arrived during the launch splash (cold launch),
     /// held until `ContentView` — which hosts the detail presenter — is mounted.
     @State private var pendingDeepLink: DeepLink?
@@ -112,6 +119,10 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// the network refresh (debounced inside `DataService`) so reopening the app
     /// picks up new content with no force-quit. See `DataService.refreshOnForeground`.
     @Environment(\.scenePhase) private var scenePhase
+    /// Honoured by the hand-off: with Reduce Motion on the mark doesn't travel
+    /// and the pins don't bloom — the splash simply cross-dissolves, which is
+    /// what shipped in 1.1 (99) and is already a complete hand-off.
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     /// Refresh the signed-in user's own lists (Library's Lists tab).
     private func refreshLists() async {
@@ -132,174 +143,298 @@ struct TRAVEL_GUIDED_TOURApp: App {
 
     var body: some Scene {
         WindowGroup {
-            if isLoading {
-                SplashView()
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                            withAnimation {
-                                isLoading = false
-                            }
-                        }
+            // ContentView is mounted from the FIRST frame and the splash sits
+            // over it, rather than the two being the arms of an `if`. That one
+            // change is where the snappiness comes from: MKMapView's creation,
+            // the first clustering pass over the whole catalog, the drawer, and
+            // the mini-player window's install all happen while the brass dot
+            // is still pulsing, instead of in front of the user afterwards.
+            ContentView()
+                .environment(dataService)
+                .environment(authService)
+                .environment(makerProfileService)
+                .environment(followService)
+                .environment(purchaseService)
+                .environment(makerTourService)
+                .environment(listService)
+                .environment(libraryStore)
+                .environment(savedPlacesStore)
+                .environment(locationManager)
+                .environment(audioPlayer)
+                .environment(recentlyViewed)
+                .environment(recentSearches)
+                .environment(proximityMonitor)
+                .environment(tourDownloader)
+                .environment(appShared)
+                .environment(tourPresenter)
+                .environment(makerPresenter)
+                .environment(placePresenter)
+                .environment(listPresenter)
+                .environment(navState)
+                .environment(toastCenter)
+                .environment(groupListen)
+                // So ContentView can render the mini-player + tab bar inline
+                // while the secondary window isn't installed. Without that
+                // fallback, a failed install means no bars for the session.
+                .environment(bottomModuleWindow)
+                .preferredColorScheme(colorSchemePreference.colorScheme)
+                .task {
+                    // App Store screenshot run only — no-op in a shipping
+                    // build (gated on a launch argument, see UITestSupport).
+                    // Runs before the sync wiring below so it can never
+                    // write seeded rows through to Supabase.
+                    UITestSupport.seedLibraryIfRequested(
+                        tours: dataService.tours,
+                        into: libraryStore
+                    )
+                    // Pre-warm the Me tab at launch so its data is already
+                    // loaded before the user first opens it — the services
+                    // also hydrate from a cached snapshot at init (instant
+                    // first paint), and this refreshes them now rather than
+                    // waiting for the first Me-tab tap. Non-blocking so it
+                    // doesn't delay sync setup / deep-link handling below.
+                    Task {
+                        guard authService.isSignedIn else { return }
+                        // The user's lists back the Library tab, and they
+                        // don't need the maker row — so they refresh
+                        // alongside it rather than behind it. Both services
+                        // hydrate from disk at init, so this only replaces
+                        // a cached shape with a current one; without it the
+                        // first Library tap of a launch is what starts the
+                        // clock, and the tab settles in front of the user.
+                        async let lists: Void = refreshLists()
+                        async let profile: Void = refreshOwnMakerAndTours()
+                        _ = await (lists, profile)
                     }
-                    // A link that opens the app cold arrives during the splash;
-                    // capture it here so it isn't dropped before ContentView mounts.
-                    .onOpenURL(perform: handleDeepLink)
-                    .onContinueUserActivity(NSUserActivityTypeBrowsingWeb, perform: handleUserActivity)
-            } else {
-                ContentView()
-                    .environment(dataService)
-                    .environment(authService)
-                    .environment(makerProfileService)
-                    .environment(followService)
-                    .environment(purchaseService)
-                    .environment(makerTourService)
-                    .environment(listService)
-                    .environment(libraryStore)
-                    .environment(savedPlacesStore)
-                    .environment(locationManager)
-                    .environment(audioPlayer)
-                    .environment(recentlyViewed)
-                    .environment(recentSearches)
-                    .environment(proximityMonitor)
-                    .environment(tourDownloader)
-                    .environment(appShared)
-                    .environment(tourPresenter)
-                    .environment(makerPresenter)
-                    .environment(placePresenter)
-                    .environment(listPresenter)
-                    .environment(navState)
-                    .environment(toastCenter)
-                    .environment(groupListen)
-                    // So ContentView can render the mini-player + tab bar inline
-                    // while the secondary window isn't installed. Without that
-                    // fallback, a failed install means no bars for the session.
-                    .environment(bottomModuleWindow)
-                    .preferredColorScheme(colorSchemePreference.colorScheme)
-                    .task {
-                        // App Store screenshot run only — no-op in a shipping
-                        // build (gated on a launch argument, see UITestSupport).
-                        // Runs before the sync wiring below so it can never
-                        // write seeded rows through to Supabase.
-                        UITestSupport.seedLibraryIfRequested(
-                            tours: dataService.tours,
-                            into: libraryStore
+                    // Wire the Group Listen coordinator's dependencies once
+                    // (it's constructed dependency-free so it can be injected
+                    // into the environment before this runs).
+                    groupListen.attach(
+                        audioPlayer: audioPlayer,
+                        appShared: appShared,
+                        dataService: dataService,
+                        tourDownloader: tourDownloader,
+                        proximityMonitor: proximityMonitor,
+                        auth: authService
+                    )
+                    // Wire up library/saved-makers sync once. Created here
+                    // (not as an inline @State default) so it captures the
+                    // live auth + store instances; it sets the stores'
+                    // write-through hooks and runs the sign-in merge.
+                    if syncService == nil {
+                        syncService = SyncService(
+                            auth: authService,
+                            library: libraryStore,
+                            recentlyViewed: recentlyViewed,
+                            savedPlaces: savedPlacesStore
                         )
-                        // Pre-warm the Me tab at launch so its data is already
-                        // loaded before the user first opens it — the services
-                        // also hydrate from a cached snapshot at init (instant
-                        // first paint), and this refreshes them now rather than
-                        // waiting for the first Me-tab tap. Non-blocking so it
-                        // doesn't delay sync setup / deep-link handling below.
-                        Task {
-                            guard authService.isSignedIn else { return }
-                            // The user's lists back the Library tab, and they
-                            // don't need the maker row — so they refresh
-                            // alongside it rather than behind it. Both services
-                            // hydrate from disk at init, so this only replaces
-                            // a cached shape with a current one; without it the
-                            // first Library tap of a launch is what starts the
-                            // clock, and the tab settles in front of the user.
-                            async let lists: Void = refreshLists()
-                            async let profile: Void = refreshOwnMakerAndTours()
-                            _ = await (lists, profile)
-                        }
-                        // Wire the Group Listen coordinator's dependencies once
-                        // (it's constructed dependency-free so it can be injected
-                        // into the environment before this runs).
-                        groupListen.attach(
-                            audioPlayer: audioPlayer,
-                            appShared: appShared,
-                            dataService: dataService,
-                            tourDownloader: tourDownloader,
-                            proximityMonitor: proximityMonitor,
-                            auth: authService
+                    }
+                    // Record listening progress on every pause/end/stop,
+                    // regardless of which player UI is showing, so the
+                    // Library "Recents" list always updates (it used to be
+                    // recorded only inside the full-screen player).
+                    audioPlayer.onProgressCheckpoint = { sourceId, seconds, completed in
+                        guard let tourId = UUID(uuidString: sourceId) else { return }
+                        libraryStore.updateProgress(
+                            tourId,
+                            listenedSeconds: seconds,
+                            completed: completed
                         )
-                        // Wire up library/saved-makers sync once. Created here
-                        // (not as an inline @State default) so it captures the
-                        // live auth + store instances; it sets the stores'
-                        // write-through hooks and runs the sign-in merge.
-                        if syncService == nil {
-                            syncService = SyncService(
-                                auth: authService,
-                                library: libraryStore,
-                                recentlyViewed: recentlyViewed,
-                                savedPlaces: savedPlacesStore
-                            )
-                        }
-                        // Record listening progress on every pause/end/stop,
-                        // regardless of which player UI is showing, so the
-                        // Library "Recents" list always updates (it used to be
-                        // recorded only inside the full-screen player).
-                        audioPlayer.onProgressCheckpoint = { sourceId, seconds, completed in
-                            guard let tourId = UUID(uuidString: sourceId) else { return }
-                            libraryStore.updateProgress(
-                                tourId,
-                                listenedSeconds: seconds,
-                                completed: completed
-                            )
-                        }
-                        // Present a deep link captured during the launch splash,
-                        // now that ContentView (and its UIKit bottom-layer
-                        // presenter) is on screen. The brief pause lets the
-                        // presenter settle before we drive it.
-                        if let link = pendingDeepLink {
-                            pendingDeepLink = nil
-                            try? await Task.sleep(for: .milliseconds(350))
-                            present(link)
-                        }
                     }
-                    .onChange(of: scenePhase) { _, phase in
-                        // Returning to the foreground re-pulls the catalog so a
-                        // plain relaunch picks up new content. DataService
-                        // debounces this against the cold-launch / last refresh.
-                        if phase == .active {
-                            Task { await dataService.refreshOnForeground() }
-                            // Recover the bottom-module window if the
-                            // cold-launch `.onAppear` fired before any
-                            // scene reached `.foregroundActive` (a timing
-                            // race that left the mini-player + tab bar
-                            // missing for the whole session). `install()`
-                            // is idempotent, so once the window exists
-                            // this is a permanent no-op.
-                            installBottomModule()
-                        }
-                    }
-                    .onAppear {
-                        // Install the secondary higher-level window for
-                        // the mini-player + tab bar. See
-                        // `installBottomModule()` — factored so this
-                        // call site and the `scenePhase == .active`
-                        // recovery build the window identically.
+                    // NOTE: a deep link captured during the splash is
+                    // presented by `runLaunchGate`, after hand-off — this
+                    // task now runs while the splash is still up, so
+                    // presenting here would put a layer behind it.
+                }
+                .onChange(of: scenePhase) { _, phase in
+                    // Returning to the foreground re-pulls the catalog so a
+                    // plain relaunch picks up new content. DataService
+                    // debounces this against the cold-launch / last refresh.
+                    if phase == .active {
+                        Task { await dataService.refreshOnForeground() }
+                        // Recover the bottom-module window if the
+                        // cold-launch `.onAppear` fired before any
+                        // scene reached `.foregroundActive` (a timing
+                        // race that left the mini-player + tab bar
+                        // missing for the whole session). `install()`
+                        // is idempotent, so once the window exists
+                        // this is a permanent no-op.
                         installBottomModule()
                     }
-                    // Level-triggered backstop. Every other install trigger is
-                    // edge-driven (a single `.onAppear`, a `scenePhase`
-                    // *change*, a one-shot activation notification), so a
-                    // launch that misses all of them left the mini-player + tab
-                    // bar missing for the whole session. This re-checks the
-                    // actual state a beat after mount; `install()` is
-                    // idempotent, so it's a no-op in the normal case.
-                    .task {
-                        guard !bottomModuleWindow.isInstalled else { return }
-                        try? await Task.sleep(for: .milliseconds(500))
-                        guard !bottomModuleWindow.isInstalled else { return }
-                        installBottomModule()
+                }
+                .onAppear {
+                    // Install the secondary higher-level window for
+                    // the mini-player + tab bar. See
+                    // `installBottomModule()` — factored so this
+                    // call site and the `scenePhase == .active`
+                    // recovery build the window identically.
+                    installBottomModule()
+                }
+                // Level-triggered backstop. Every other install trigger is
+                // edge-driven (a single `.onAppear`, a `scenePhase`
+                // *change*, a one-shot activation notification), so a
+                // launch that misses all of them left the mini-player + tab
+                // bar missing for the whole session. This re-checks the
+                // actual state a beat after mount; `install()` is
+                // idempotent, so it's a no-op in the normal case.
+                .task {
+                    guard !bottomModuleWindow.isInstalled else { return }
+                    try? await Task.sleep(for: .milliseconds(500))
+                    guard !bottomModuleWindow.isInstalled else { return }
+                    installBottomModule()
+                }
+                .onChange(of: colorSchemePreference) { _, newValue in
+                    bottomModuleWindow.apply(preference: newValue)
+                }
+                // Deep links while the app is already running route straight
+                // through (catalog is in memory; ContentView is mounted).
+                .onOpenURL(perform: handleDeepLink)
+                .onContinueUserActivity(NSUserActivityTypeBrowsingWeb, perform: handleUserActivity)
+                // NOTE: the full player is presented from within the
+                // bottom-module window itself (see `BottomModuleRoot`),
+                // so there's no longer any need to hide/show that
+                // window while the player is up — the cover slides
+                // over the module in the same window.
+                .environment(launchState)
+                // The splash covers the whole app, including the inline
+                // fallback bars. It cannot cover the mini-player's separate
+                // window, though — that sits a level above every window in
+                // this scene — so `runLaunchGate` keeps that one hidden
+                // until hand-off rather than relying on z-order.
+                .overlay {
+                    if launchState.isCovering {
+                        // No `.transition` — the fade is inside the view, driven
+                        // by `handOffProgress`, so the mark and the ground move
+                        // on different clocks. A transition here would
+                        // cross-fade the whole composition at once and flatten
+                        // the choreography back out.
+                        SplashView(
+                            handOff: launchState.handOffProgress,
+                            reduceMotion: reduceMotion
+                        )
                     }
-                    .onChange(of: colorSchemePreference) { _, newValue in
-                        bottomModuleWindow.apply(preference: newValue)
-                    }
-                    // Deep links while the app is already running route straight
-                    // through (catalog is in memory; ContentView is mounted).
-                    .onOpenURL(perform: handleDeepLink)
-                    .onContinueUserActivity(NSUserActivityTypeBrowsingWeb, perform: handleUserActivity)
-                    // NOTE: the full player is presented from within the
-                    // bottom-module window itself (see `BottomModuleRoot`),
-                    // so there's no longer any need to hide/show that
-                    // window while the player is up — the cover slides
-                    // over the module in the same window.
-            }
+                }
+                .task { await runLaunchGate() }
         }
     }
+
+    // MARK: - Launch
+
+    /// Holds the splash until the app behind it is actually ready, then hands
+    /// off. Polls rather than observing because the three inputs come from
+    /// three different places (the catalog, CoreLocation, the clock) and a
+    /// tenth of a second of latency on a decision this coarse costs nothing.
+    ///
+    /// Everything after the hand-off is the choreography: the splash
+    /// cross-dissolves, the bars' window comes back, and any link that arrived
+    /// cold is presented now that there is something to present it over.
+    @MainActor
+    private func runLaunchGate() async {
+        let startedAt = Date()
+        while launchState.isSplashVisible {
+            // Start warming photos the moment there is a catalog to pick them
+            // from. Idempotent, so polling can't restart it.
+            if !dataService.tours.isEmpty {
+                imageWarmup.start(
+                    tours: dataService.tours,
+                    libraryEntries: libraryStore.entries,
+                    recentlyViewedIds: recentlyViewed.tourIds,
+                    userLocation: locationManager.userLocation
+                )
+            }
+            let ready = LaunchGate.isReady(
+                elapsed: Date().timeIntervalSince(startedAt),
+                catalogLoaded: !dataService.tours.isEmpty,
+                locationSettled: LaunchGate.locationSettled(
+                    status: locationManager.authorizationStatus,
+                    hasFix: locationManager.userLocation != nil
+                ),
+                imagesReady: imageWarmup.isReady
+            )
+            if ready { break }
+            try? await Task.sleep(for: .seconds(LaunchGate.pollInterval))
+            // A cancelled task must not strand the user on the splash.
+            if Task.isCancelled { break }
+        }
+        // Unhide FIRST: the window is already built, so this is just a
+        // visibility flip, and doing it before the hand-off means the bars are
+        // simply present when the splash clears rather than arriving after it.
+        bottomModuleWindow.setHidden(false)
+        // 🔴 GIVE THE UNHIDDEN WINDOW ONE FRAME BEFORE THE HAND-OFF STARTS.
+        // Its first render has to happen while the assembly is still at 0 —
+        // bars off the bottom edge, opacity 0 — or there is no change for them
+        // to animate FROM and they simply appear, already parked. Caught in the
+        // Simulator: a frame with the opening barely started and the module
+        // fully settled.
+        try? await Task.sleep(for: .milliseconds(32))
+        await playHandOff()
+        if let link = pendingDeepLink {
+            pendingDeepLink = nil
+            try? await Task.sleep(for: .milliseconds(350))
+            present(link)
+        }
+    }
+
+    /// The hand-off: the wordmark lifts, the mark contracts onto the user's
+    /// position and ripples, and the pins bloom outward from it.
+    ///
+    /// One animated value drives all of it (`LaunchState.handOffProgress`) —
+    /// see that property for why it is a value rather than a set of
+    /// transitions. `linear` is deliberate: the shaping lives in the ramps in
+    /// `LaunchBloom`, so an eased driver would ease every sub-animation twice.
+    @MainActor
+    private func playHandOff() async {
+        launchState.beginHandOff()
+
+        // Reduce Motion gets the plain cross-dissolve this replaced. That is
+        // already a complete hand-off, so there is nothing to reintroduce.
+        let duration = reduceMotion ? LaunchBloom.reducedMotionDuration : LaunchBloom.duration
+
+        // 🔴 THE PROGRESS IS TICKED, NOT ANIMATED — and this is the difference
+        // between the choreography running and it only appearing to.
+        //
+        // It used to be `withAnimation { setHandOffProgress(1) }`. SwiftUI does
+        // NOT interpolate a plain `Double` on the way through: it re-renders
+        // each dependent view ONCE with progress already at 1, and then
+        // animates each rendered property — an opacity here, a scale there —
+        // from its old value to its new one over the whole duration. Every
+        // delay and window in `LaunchBloom` is evaluated at 1 and thrown away.
+        //
+        // What that looks like: the black clearing while the disc is still
+        // half-grown, the drawer rising before the brass has gone, the whole
+        // thing reading as several things sliding at once instead of three
+        // beats. Hours went into "fixing" those symptoms one at a time.
+        //
+        // Ticking the value at display rate means every view sees the real
+        // intermediate numbers, so the ramps mean what they say — and since no
+        // SwiftUI animation is involved, the separate window's views cannot
+        // fall out of step with the main one either.
+        //
+        // ⚠️ Do NOT add `.animation(...)` to anything reading `handOffProgress`
+        // now. It would animate toward each ticked value and lag the lot.
+        let startedAt = Date()
+        while true {
+            let elapsed = Date().timeIntervalSince(startedAt)
+            launchState.setHandOffProgress(min(elapsed / duration, 1))
+            if elapsed >= duration { break }
+            try? await Task.sleep(for: .milliseconds(8))
+        }
+
+        // 🔴 The bump lands ON THE SETTLE — the instant the module, the search
+        // bar and the drawer come to rest together. It used to fire mid-sequence
+        // when the mark landed, which the owner heard immediately: *"the haptic
+        // is at the wrong beat, it's not synced with the things settling into
+        // place."* Deliberately the same soft impact the geofence fires on
+        // arriving at a stop. Silent in the Simulator — device-only to judge.
+        // The loop above already ran to the settle (it IS the end of the
+        // choreography), so only the latency bias is left to wait out.
+        try? await Task.sleep(for: .seconds(LaunchBloom.settleLatency))
+        if !reduceMotion { AtlasHaptics.impact(.medium) }
+
+        // Tear the overlay down only once nothing of it is still animating.
+        launchState.settle()
+    }
+
 
     // MARK: - Bottom-module window
 
@@ -316,6 +451,17 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// no-ops. Factoring it here keeps the two call sites' environment
     /// injection from drifting apart.
     private func installBottomModule() {
+        // The module's window sits one level ABOVE every window in this scene,
+        // so it would paint over the splash. Install it anyway — building it
+        // during the splash is the whole point, and it arriving after the map
+        // is the most visible "still loading" tell there was — but keep it
+        // hidden until `runLaunchGate` hands off.
+        //
+        // ⚠️ Whoever hides this owns unhiding it (see `setHidden`). The gate's
+        // ceiling guarantees hand-off runs, and it unhides unconditionally.
+        if launchState.isSplashVisible {
+            bottomModuleWindow.setHidden(true)
+        }
         bottomModuleWindow.install(
             interactiveBottomInset: AtlasBottomModule.height()
         ) {
@@ -326,6 +472,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
             BottomModuleRoot(onInteractiveHeightChange: { [bottomModuleWindow] height in
                 bottomModuleWindow.setInteractiveBottomInset(height)
             })
+                .environment(launchState)
                 .environment(dataService)
                 .environment(authService)
                 .environment(followService)
@@ -377,7 +524,7 @@ struct TRAVEL_GUIDED_TOURApp: App {
     /// after the launch splash on a cold start. Unrecognized URLs are ignored.
     private func handleDeepLink(_ url: URL) {
         guard let link = DeepLinkParser.parse(url) else { return }
-        if isLoading {
+        if launchState.isSplashVisible {
             pendingDeepLink = link
         } else {
             present(link)

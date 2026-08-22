@@ -116,6 +116,9 @@ struct ContentView: View {
     /// screens; cleared by the dismiss animation's completion.
     @State private var tourLayerCoversDrawer = false
 
+    /// Whether the launch splash is still up. Optional for the same reason
+    /// `HomeView` reads it optionally — nil means "not launching".
+    @Environment(LaunchState.self) private var launchState: LaunchState?
     var body: some View {
         @Bindable var appShared = appShared
         // NOTE on bindings: deliberately NOT using `@Bindable` for
@@ -145,26 +148,8 @@ struct ContentView: View {
             // and keeping it in place means the dismiss slide reveals
             // the drawer at its old detent instead of flashing it
             // back in after the animation.
-            if appShared.selectedTab == .home
-                && (tourLayerCoversDrawer || !navState.isShowingDetail) {
-                BottomSheet(
-                    detent: $homeSheetDetent,
-                    dragOffset: dragOffsetBinding,
-                    peekHeight: 80,
-                    bottomCornerRadius: 0,
-                    bottomReservedHeight: AtlasBottomModule.height(),
-                    // .large stops below the search bar + chip row
-                    // so they stay anchored at the top of the screen
-                    // when the drawer is fully expanded. AtlasSpacing.sm
-                    // is a small visual buffer between the chip row's
-                    // bottom edge and the drawer's top edge.
-                    topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
-                ) {
-                    HomeDrawerContent(
-                        sheetDetent: $homeSheetDetent
-                    )
-                }
-            }
+            homeDrawer(dragOffset: dragOffsetBinding)
+
             // Fallback mini-player + tab bar, rendered in THIS (main) window
             // whenever the secondary higher-level window isn't installed.
             //
@@ -198,10 +183,21 @@ struct ContentView: View {
         // slides up over the mini-player + tab bar in the same window,
         // with no separate hide/show of the module (which used to leave
         // a visible gap during the transition).
+        // Permission is requested after hand-off, not on appear. ContentView
+        // now mounts underneath the splash, and a system alert over a black
+        // screen with a wordmark on it reads as a broken launch. `LaunchGate`
+        // treats `notDetermined` as settled precisely so this delay can't
+        // stall the gate.
+        .onChange(of: launchState?.isSplashVisible ?? false) { _, splashVisible in
+            guard !splashVisible else { return }
+            requestLocationPermissionIfNeeded()
+        }
+
         .onAppear {
-            guard !didRequestLocationPermission else { return }
-            didRequestLocationPermission = true
-            locationManager.requestPermission()
+            // Backstop for any host that never injects `LaunchState` (previews,
+            // tests): with no splash to wait for, behave exactly as before.
+            guard launchState == nil else { return }
+            requestLocationPermissionIfNeeded()
         }
         // 🔴 Give each presenter a DIRECT route to take its layer down.
         //
@@ -483,6 +479,47 @@ struct ContentView: View {
             }
             #endif
         }
+    }
+
+
+    /// The home drawer, extracted from `body`.
+    ///
+    /// ⚠️ Not stylistic: with this inline, the type-checker gave up on `body`
+    /// outright ("unable to type-check this expression in reasonable time")
+    /// the moment the sheet gained one more argument — and blamed an unrelated
+    /// line thirty lines away. If `body` starts failing to compile for no
+    /// visible reason, pull the next-largest subview out the same way.
+    @ViewBuilder
+    private func homeDrawer(dragOffset: Binding<CGFloat>) -> some View {
+        if appShared.selectedTab == .home
+            && (tourLayerCoversDrawer || !navState.isShowingDetail) {
+            BottomSheet(
+                detent: $homeSheetDetent,
+                dragOffset: dragOffset,
+                peekHeight: 80,
+                bottomCornerRadius: 0,
+                bottomReservedHeight: AtlasBottomModule.height(),
+                // .large stops below the search bar + chip row
+                // so they stay anchored at the top of the screen
+                // when the drawer is fully expanded. AtlasSpacing.sm
+                // is a small visual buffer between the chip row's
+                // bottom edge and the drawer's top edge.
+                topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
+            ) {
+                HomeDrawerContent(
+                    sheetDetent: $homeSheetDetent
+                )
+            }
+        }
+    }
+
+    // MARK: - Launch
+
+    /// Ask for location permission exactly once per session.
+    private func requestLocationPermissionIfNeeded() {
+        guard !didRequestLocationPermission else { return }
+        didRequestLocationPermission = true
+        locationManager.requestPermission()
     }
 
     /// Tab content. **Home is kept permanently mounted** (visibility-

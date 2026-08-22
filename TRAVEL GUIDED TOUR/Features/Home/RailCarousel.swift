@@ -49,6 +49,7 @@ struct RailCarousel: View {
             .padding(.horizontal, AtlasSpacing.lg)
         }
     }
+
 }
 
 /// One card on a rail. Fixed width so multiple peek in from the right.
