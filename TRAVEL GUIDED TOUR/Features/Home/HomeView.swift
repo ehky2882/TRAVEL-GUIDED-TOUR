@@ -219,14 +219,21 @@ struct HomeView: View {
                     )
                     .ignoresSafeArea()
 
-                    // The search bar and chips arrive from the RIGHT, landing
-                    // on the frame the drawer finishes opening. ⚠️ The launch
-                    // progress is read INSIDE `LaunchEntrance`, never here —
-                    // reading it in this body would re-evaluate the map, the
-                    // clustering and the rails 60 times a second for the whole
-                    // entrance. See the note on `LaunchEntrance`.
-                    LaunchEntrance(part: .chrome, travel: geo.size.width) {
-                        VStack(spacing: AtlasSpacing.sm) {
+                    // 🔴 THE SEARCH BAR DROPS FROM THE TOP, THE CHIPS COME IN
+                    // FROM THE RIGHT — owner decision 2026-08-22 — and both land
+                    // on the frame the drawer finishes opening.
+                    //
+                    // ⚠️ The launch progress is read INSIDE `LaunchEntrance`,
+                    // never here: reading it in this body would re-evaluate the
+                    // map, its clustering and the rails 60 times a second for
+                    // the whole entrance. See the note on `LaunchEntrance`.
+                    VStack(spacing: AtlasSpacing.sm) {
+                        LaunchEntrance(
+                            part: .searchBar,
+                            // Its own height plus the safe area above it, so it
+                            // starts fully clear of the top edge.
+                            travel: AtlasSpacing.searchBarHeight + geo.safeAreaInsets.top + AtlasSpacing.lg
+                        ) {
                             SearchBar()
                                 .padding(.horizontal, AtlasSpacing.md)
                                 // Retract the drawer to `.peek` when the
@@ -247,14 +254,16 @@ struct HomeView: View {
                                         }
                                     }
                                 )
+                        }
 
+                        LaunchEntrance(part: .chips, travel: geo.size.width) {
                             TagFilterChipRow(
                                 selectedTags: $sharedState.selectedTags,
                                 walksOnly: $sharedState.walksOnly
                             )
                         }
-                        .padding(.top, AtlasSpacing.sm)
                     }
+                    .padding(.top, AtlasSpacing.sm)
 
                     // Map-control button stack anchored to bottom-leading,
                     // padded up by the drawer's *current* visible height

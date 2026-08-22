@@ -44,11 +44,20 @@ struct BottomSheet<Content: View>: View {
     /// caller (which inject nothing) simply see a finished entrance.
     @Environment(LaunchState.self) private var launchState: LaunchState?
 
-    /// How far below the screen the sheet is parked before it rides in. Larger
-    /// than any iPhone is tall, so it is fully out of view whatever the device.
+    /// 🔴 HOW FAR THE CLOSED SHEET IS PARKED BELOW THE SCREEN — its closed
+    /// strip, the bars it sits on, and a small margin. NOT some huge number.
+    ///
+    /// It was 1200 ("safely off-screen whatever the device"), and that broke
+    /// the one thing the block is for. The bars travel ~166pt and the drawer
+    /// travelled 1200: on the SAME ramp, the bars are visually home while the
+    /// drawer is still a screen away, so they read as two separate arrivals.
+    /// Owner: *"the entire module … comes in together into place."* Parking it
+    /// just out of sight makes the two distances comparable, so they move as
+    /// one object.
+    ///
     /// ⚠️ Not a `static let` — `BottomSheet` is generic, and Swift does not
     /// allow static stored properties on generic types.
-    private var launchEntryOffset: CGFloat { 1200 }
+    private var launchEntryOffset: CGFloat { peekHeight + bottomReservedHeight + 24 }
 
     /// 0 while the block is still off-screen, 1 once it has landed.
     private var launchSlideProgress: Double {
@@ -163,10 +172,6 @@ struct BottomSheet<Content: View>: View {
             }
             .frame(maxWidth: .infinity)
             .frame(height: dragHeight, alignment: .top)
-            // The entrance: the block rides in from below the screen with the
-            // mini-player and tab bar, THEN the sheet opens to its detent —
-            // both as translations, so nothing re-lays out per frame.
-            .offset(y: launchOpening + (1 - launchSlideProgress) * launchEntryOffset)
             // Hard clip BEFORE the rounded clipShape so inner ScrollView
             // content can't bleed past the drawer's rectangular bounds
             // (`clipShape` alone left small overflow visible behind the
@@ -182,6 +187,25 @@ struct BottomSheet<Content: View>: View {
                     style: .continuous
                 )
             )
+            // 🔴 THE ENTRANCE TRANSLATES THE FINISHED PANEL, then clips it to
+            // where the panel WOULD rest. Both halves matter.
+            //
+            // Translating: `.offset` is a rendering transform and does not
+            // move the layout frame, so applied before `.background` the panel
+            // and its rounded corners stayed put while only the content slid —
+            // the drawer looked open at its detent with its rails moving
+            // inside it. Owner: *"the drawer portion is already showing at
+            // mid-detent, with the content itself sliding up."*
+            //
+            // Clipping: without it the part pushed below the resting bottom
+            // shows through the gaps around the floating mini-player and tab
+            // bar — a strip of rail cards under the tab bar. The clip box is
+            // the resting box, so the visible height is exactly
+            // `detent − offset`: a closed drawer that grows as the offset
+            // unwinds, with no per-frame relayout of the rails.
+            .offset(y: launchOpening + (1 - launchSlideProgress) * launchEntryOffset)
+            .frame(height: dragHeight, alignment: .top)
+            .clipped()
             // 8pt insets on left + right. The bottom padding is
             // exactly the parent's reserved height — when 0, the
             // drawer sits flush against the screen edge (default

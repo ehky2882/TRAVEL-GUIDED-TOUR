@@ -209,7 +209,7 @@ enum LaunchBloom {
     /// Was 1.05s (staged assembly), then 0.9s, then 0.42s — now 0.62s,
     /// because the sequence gained a third beat (the drawer opening) and 0.42s
     /// could not hold three of them without any one reading as a jump.
-    static let duration: TimeInterval = 0.62
+    static let duration: TimeInterval = 0.55
 
     /// Reduce Motion gets a plain cross-dissolve, and a shorter one.
     static let reducedMotionDuration: TimeInterval = 0.28
@@ -241,16 +241,16 @@ enum LaunchBloom {
 
     /// The disc's growth, from the mark's 44pt to covering the screen. Runs
     /// from the very first frame: this IS the transition.
-    static let zoom = (delay: 0.0, window: 0.34)
+    static let zoom = (delay: 0.0, window: 0.36)
 
     /// The disc dissolving into the map behind it — and it starts only once
     /// the disc COVERS the screen, so the brass is solid for the whole of its
     /// growth and what is left when it goes is a bare map.
-    static let markDissolve = (delay: 0.34, window: 0.14)
+    static let markDissolve = (delay: 0.36, window: 0.12)
 
     /// The black is cut while the disc is covering the screen, so the cut
     /// itself is never visible.
-    static let splashCut = (delay: 0.34, window: 0.02)
+    static let splashCut = (delay: 0.36, window: 0.12)
 
     /// 🔴 THE SLIDE — the module and the closed drawer as ONE BLOCK.
     ///
@@ -258,16 +258,26 @@ enum LaunchBloom {
     /// travel as a single object. Owner: *"the entire bottom module should
     /// slide up together… right now the miniplayer and bottom tabs are already
     /// in place and then the drawer slides up from behind it."*
-    static let assembly = (delay: 0.52, window: 0.20)
+    static let assembly = (delay: 0.50, window: 0.14)
 
     /// 🔴 THE OPENING — the drawer alone, closed → mid detent, after the block
     /// has landed.
-    static let drawerExpand = (delay: 0.72, window: 0.28)
+    ///
+    /// ⚠️ There is a deliberate BEAT between the block landing (0.64) and this
+    /// starting (0.74). Butted together, the drawer never appears closed at
+    /// all: it simply keeps rising, and the two beats read as one long slide.
+    /// The pause is what makes "the module arrives, *then* the drawer opens"
+    /// legible.
+    static let drawerExpand = (delay: 0.74, window: 0.26)
 
-    /// The search bar and chips travel the whole of the second half, so they
-    /// land on the frame the drawer finishes opening. ⚠️ Its end must equal
-    /// `drawerExpand`'s end — that shared frame is the snap. A test pins it.
-    static let chrome = (delay: 0.52, window: 0.48)
+    /// The search bar (from the top) and the chips (from the right) travel
+    /// alongside the drawer's opening, so all three land on one frame.
+    ///
+    /// ⚠️ Its end must equal `drawerExpand`'s end — that shared frame is the
+    /// snap. A test pins it. It used to start with the block and drift in over
+    /// twice as long; owner, 2026-08-22: *"the animation of the module and top
+    /// is still coming in a little slower than i would prefer."*
+    static let chrome = (delay: 0.74, window: 0.26)
 
     /// The instant everything comes to rest — where the haptic fires.
     ///
@@ -286,7 +296,9 @@ enum LaunchBloom {
     ///
     /// ⚠️ If the settle ever gains frames back, this can shrink — but do not
     /// take it to zero: a wall clock and a render clock never agree exactly.
-    static let settleLatency: TimeInterval = 0.07
+    /// 0.07 was still early on a device (owner, 2026-08-22); 0.15 is the second
+    /// try. This is the one number to turn if the buzz still misses the beat.
+    static let settleLatency: TimeInterval = 0.15
 
     /// Progress of the slide: the module and the closed drawer, one value, so
     /// they physically cannot drift apart.

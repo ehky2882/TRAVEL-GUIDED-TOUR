@@ -21,15 +21,20 @@ import SwiftUI
 /// a Double in. That puts the read back in the parent's body and undoes the
 /// whole thing.
 struct LaunchEntrance<Content: View>: View {
-    /// Which part of the entrance this is.
+    /// Which part of the entrance this is, and therefore which edge it comes
+    /// from. Both land on the frame the drawer finishes opening — owner
+    /// decision 2026-08-22: *"search bar should come in from the top. filter
+    /// capsules should still come in from right."*
     enum Part {
-        /// The search bar and chips, arriving from the right, landing on the
-        /// same frame the drawer finishes opening.
-        case chrome
+        /// Drops in from above the screen.
+        case searchBar
+        /// Slides in from the right.
+        case chips
     }
 
     let part: Part
-    /// How far off-screen the content starts. The chrome travels a screen width.
+    /// How far off-screen the content starts — a screen width for the chips,
+    /// enough to clear the top edge for the search bar.
     let travel: CGFloat
     @ViewBuilder var content: Content
 
@@ -38,14 +43,14 @@ struct LaunchEntrance<Content: View>: View {
     var body: some View {
         content
             .opacity(progress)
-            .offset(x: (1 - progress) * travel)
+            .offset(
+                x: part == .chips ? (1 - progress) * travel : 0,
+                y: part == .searchBar ? -(1 - progress) * travel : 0
+            )
     }
 
     private var progress: Double {
         guard let launchState, launchState.isCovering else { return 1 }
-        switch part {
-        case .chrome:
-            return LaunchBloom.chromeProgress(handOff: launchState.handOffProgress)
-        }
+        return LaunchBloom.chromeProgress(handOff: launchState.handOffProgress)
     }
 }
