@@ -80,7 +80,35 @@ enum AtlasColors {
     // equivalent. The design pass can replace these with
     // asset-catalog colorsets if the brand wants warmer surfaces.
     #if canImport(UIKit)
-    static let background = Color(uiColor: .systemBackground)
+    /// The DEEPER of the two surfaces — form fields, the player ground, and
+    /// the colour text takes when it is drawn ON the brass.
+    ///
+    /// 🔴 LIGHT IS THE GROUPED GREY, NOT WHITE, and that inversion is the
+    /// whole point: `background` is the ground and `secondaryBackground`
+    /// below is the surface RAISED on top of it, in both schemes. Dark had
+    /// that relationship already (#000 under #1C1C1E); light did not — it
+    /// was #FFFFFF under #F2F2F7, i.e. the raised surface was the darker
+    /// one — so every chrome surface sat in a haze a few percent off the
+    /// page and nothing read as raised (owner, 2026-08-22: *"the bg color
+    /// doesn't offer enough contrast"*). Swapping the light pair puts both
+    /// schemes on the same rule and costs no call site its meaning: a field
+    /// is still recessed against its page, and text on brass is still the
+    /// page colour.
+    ///
+    /// ⚠️ A literal pair rather than `.systemBackground` for the same reason
+    /// `secondaryBackgroundUIColor` is one — a semantic colour resolves
+    /// differently by elevation, and these two must hold their exact
+    /// relationship across the app's two windows.
+    /// Light: #F2F2F7. Dark: #000000.
+    static let backgroundUIColor: UIColor = UIColor { traits in
+        traits.userInterfaceStyle == .dark
+            ? UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+            : UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1)
+    }
+    static let background = Color(uiColor: backgroundUIColor)
+    /// The RAISED surface: every piece of chrome and every detail page —
+    /// bars, drawer, search field, chips, sheets, tour/place/list bodies.
+    ///
     /// Hardcoded RGB pair instead of `.secondarySystemBackground` so
     /// every painted surface — tour-detail body in window 1, bars in
     /// window 2, drawer, search bar — resolves to the EXACT same
@@ -89,11 +117,17 @@ enum AtlasColors {
     /// `.base` vs `.elevated` user-interface-level traits, which is
     /// why the bottom-module CHROME used to show a visible seam
     /// against the detail body in dark mode.
-    /// Light: #F2F2F7 (system default). Dark: #1C1C1E (base level).
+    ///
+    /// ⚠️ That seam is also why light mode CANNOT separate the bars from a
+    /// page they sit on by colour — one token paints both, deliberately.
+    /// What light mode gains from white is contrast against everything
+    /// carried ON it (photographs, black text, the brass) and against the
+    /// map behind the Home chrome.
+    /// Light: #FFFFFF. Dark: #1C1C1E (base level).
     static let secondaryBackgroundUIColor: UIColor = UIColor { traits in
         traits.userInterfaceStyle == .dark
             ? UIColor(red: 28/255, green: 28/255, blue: 30/255, alpha: 1)
-            : UIColor(red: 242/255, green: 242/255, blue: 247/255, alpha: 1)
+            : UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
     }
     static let secondaryBackground = Color(uiColor: secondaryBackgroundUIColor)
     /// The bottom-module surfaces (mini-player painted bar, tab bar
