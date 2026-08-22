@@ -88,9 +88,27 @@ enum LaunchZoom {
         CGPoint(x: size.width / 2, y: size.height * originFraction)
     }
 
-    /// Radius the mask starts at — the mark's own radius, so the opening
-    /// begins exactly at the edge of the circle you were just looking at.
+    /// Radius the opening starts at — the mark's own radius, so it begins
+    /// exactly at the edge of the circle you were just looking at.
     static let startRadius: CGFloat = 22
+
+    /// The opening's radius at a given progress: from the mark's own radius
+    /// out to a circle that clears the furthest corner, so it finishes by
+    /// leaving the screen rather than by reaching an arbitrary size.
+    ///
+    /// 🔴 Lives here because TWO views have to agree on it exactly — the hole
+    /// punched in the splash's black, and (were it ever reinstated) any mask on
+    /// the app. Two copies of this arithmetic is precisely the drift that makes
+    /// a container transform read as a seam.
+    static func radius(progress: Double, in size: CGSize) -> CGFloat {
+        let origin = origin(in: size)
+        let corner = CGPoint(
+            x: origin.x > size.width / 2 ? 0 : size.width,
+            y: origin.y > size.height / 2 ? 0 : size.height
+        )
+        let full = (pow(corner.x - origin.x, 2) + pow(corner.y - origin.y, 2)).squareRoot()
+        return startRadius + (full - startRadius) * progress
+    }
 }
 
 /// Whether the launch splash is still covering the app.

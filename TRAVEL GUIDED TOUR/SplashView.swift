@@ -32,7 +32,8 @@ struct SplashView: View {
                 // Black, not `AtlasColors.background` — the splash is the same
                 // black in both appearances, the way the brand screen has
                 // always been.
-                Color.black
+                Rectangle()
+                    .fill(.black)
                     .opacity(groundOpacity)
                     .ignoresSafeArea()
 
@@ -48,14 +49,18 @@ struct SplashView: View {
                         y: origin.y + Self.markDiameter / 2 + AtlasSpacing.md
                     )
 
-                // The mark. It blooms outward AS the app's mask opens from the
-                // same point and the same starting radius, so the two read as
-                // one movement: the circle you were looking at becomes the hole
-                // you are looking through.
+                // 🔴 THE MARK IS SIZED OFF THE HOLE, so it survives the
+                // mask as a RIM travelling just ahead of the opening — which
+                // is what makes the mark read as *opening* rather than just
+                // fading. Owner, at ⅙× speed: *"def prefer mark opens (A)."*
+                //
+                // A fixed diameter with a `scaleEffect` cannot do this: the
+                // opening starts at exactly the mark's own radius and grows
+                // toward a screen corner, so it outruns any scale within a
+                // frame or two and the brass is simply gone.
                 Circle()
                     .fill(AtlasColors.mapPin)
-                    .frame(width: Self.markDiameter, height: Self.markDiameter)
-                    .scaleEffect(markScale)
+                    .frame(width: markDiameter(in: geo.size), height: markDiameter(in: geo.size))
                     .opacity(markOpacity)
                     .position(origin)
                     // The resting pulse, and only at rest: a mark that is
@@ -67,6 +72,39 @@ struct SplashView: View {
                         value: pulse
                     )
             }
+            // 🔴 THE OPENING IS A HOLE IN THE WHOLE SPLASH — black, wordmark
+            // and mark together — not a mask on the app.
+            //
+            // Build 102 had it the other way round: the app carried the
+            // expanding mask and this layer faded uniformly over the top, so
+            // the opening expanded *underneath an opaque sheet* and all anyone
+            // could see was a cross-fade. Owner: *"the build basically did none
+            // of what i asked for."*
+            //
+            // Masking the whole stack is also what makes the mark read as
+            // OPENING rather than merely fading: the hole starts at the mark's
+            // own radius and eats it from the inside, so what is left of the
+            // brass is a rim travelling ahead of the opening.
+            .mask {
+                if reduceMotion {
+                    // No opening under Reduce Motion — the black simply
+                    // clears, which is what `groundOpacity` does.
+                    Rectangle()
+                } else {
+                    Rectangle()
+                        .overlay {
+                            Circle()
+                                .frame(
+                                    width: holeRadius(in: geo.size) * 2,
+                                    height: holeRadius(in: geo.size) * 2
+                                )
+                                .position(LaunchZoom.origin(in: geo.size))
+                                .blendMode(.destinationOut)
+                        }
+                        .compositingGroup()
+                }
+            }
+            .ignoresSafeArea()
         }
         .onAppear { pulse = 0.2 }
         .allowsHitTesting(false)
@@ -92,19 +130,35 @@ struct SplashView: View {
     /// supposed to be revealing. Owner, 2026-08-21: *"the fade of the splash
     /// page doesn't feel like a good transition, too slow and gentle."*
     private var groundOpacity: Double {
-        1 - LaunchBloom.ramp(handOff, delay: LaunchBloom.splashCut.delay, window: LaunchBloom.splashCut.window)
+        // Under Reduce Motion this IS the transition. Otherwise the hole has
+        // already cleared the screen by the time it matters, and this only
+        // guarantees nothing is left over at the end.
+        guard reduceMotion else {
+            return 1 - LaunchBloom.ramp(handOff, delay: 0.86, window: 0.14)
+        }
+        return 1 - LaunchBloom.ramp(handOff, delay: LaunchBloom.splashCut.delay, window: LaunchBloom.splashCut.window)
     }
 
-    /// Blooms open with the mask. Reduce Motion holds it still and lets the
-    /// black clear on its own.
-    private var markScale: Double {
-        guard !reduceMotion else { return 1 }
-        return 1 + 8 * zoomEase
+    /// The hole, on exactly the geometry the opening was always specified with.
+    private func holeRadius(in size: CGSize) -> CGFloat {
+        // ⚠️ No hole at rest. The opening starts at the mark's own radius, so
+        // a resting splash would otherwise be punched through — a 44pt window
+        // onto the map, on the brand screen.
+        guard handOff > 0 else { return 0 }
+        return LaunchZoom.radius(progress: LaunchBloom.zoomProgress(handOff: handOff), in: size)
+    }
+
+    /// The rim: the hole's radius plus a brass band that thins as it goes.
+    /// At rest (`handOff == 0`) there is no hole, so this is simply the mark.
+    private func markDiameter(in size: CGSize) -> CGFloat {
+        guard !reduceMotion, handOff > 0 else { return Self.markDiameter }
+        let band = LaunchZoom.startRadius * (1 - zoomEase)
+        return (holeRadius(in: size) + band) * 2
     }
 
     private var markOpacity: Double {
         guard !reduceMotion else { return 1 - groundFadeMirror }
-        return 1 - min(zoomEase * 1.6, 1)
+        return 1 - min(zoomEase * 1.15, 1)
     }
 
     /// The mark leads the mask slightly so it is gone before the opening is

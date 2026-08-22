@@ -218,20 +218,15 @@ struct ContentView: View {
             }
         }
         .ignoresSafeArea(.container, edges: .bottom)
-        // 🔴 THE ZOOM. The whole app is revealed through a circular opening that
-        // expands from the splash mark — Apple's zoom transition, Material's
-        // container transform. The scale and the blur are what give it depth:
-        // two layers moving reads as fast at a third of a second, where a
-        // cross-dissolve at the same duration reads as sluggish.
+        // 🔴 THE ZOOM, app side. The opening itself is a HOLE IN THE SPLASH'S
+        // BLACK (`SplashView`) — the app is never masked. What happens here is
+        // only the depth: the app sits fractionally large and soft behind the
+        // splash and settles as the hole clears it. Two layers moving reads as
+        // fast at a third of a second, where a cross-dissolve at the same
+        // duration reads as sluggish.
         //
-        // ⚠️ The mask is applied to the MAIN window only. The mini-player and
-        // tab bar live in a separate, higher window that this cannot reach —
-        // which is fine, because they are part of the *slide*, not the zoom,
-        // and arrive from the bottom edge afterwards.
-        //
-        // ⚠️ If this ever janks on an older device, the blur is the first thing
-        // to drop: it is the expensive half, and the scale carries most of the
-        // depth on its own.
+        // ⚠️ If this ever janks on an older device the blur goes first: it is
+        // the expensive half, and the scale carries most of the depth alone.
         .modifier(LaunchZoomReveal(progress: launchZoomProgress))
         .environment(navState)
         .environment(homeSharedState)

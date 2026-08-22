@@ -360,6 +360,13 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // visibility flip, and doing it before the hand-off means the bars are
         // simply present when the splash clears rather than arriving after it.
         bottomModuleWindow.setHidden(false)
+        // 🔴 GIVE THE UNHIDDEN WINDOW ONE FRAME BEFORE THE HAND-OFF STARTS.
+        // Its first render has to happen while the assembly is still at 0 —
+        // bars off the bottom edge, opacity 0 — or there is no change for them
+        // to animate FROM and they simply appear, already parked. Caught in the
+        // Simulator: a frame with the opening barely started and the module
+        // fully settled.
+        try? await Task.sleep(for: .milliseconds(32))
         await playHandOff()
         if let link = pendingDeepLink {
             pendingDeepLink = nil

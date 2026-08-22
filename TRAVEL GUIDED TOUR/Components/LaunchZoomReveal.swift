@@ -1,59 +1,29 @@
 import SwiftUI
 
-/// The launch opening: a circular mask expanding from the splash mark, with a
-/// scale and a blur behind it.
+/// The depth behind the launch opening: a scale and a blur on the app while the
+/// splash's hole grows over it.
 ///
-/// A `ViewModifier` rather than inline modifiers so the whole effect can be
-/// applied — and skipped — in one place, and so `progress == 1` costs literally
-/// nothing: no mask, no blur, no scale, for the entire life of the app after
-/// the first half second.
+/// 🔴 **THIS DOES NOT MASK.** The opening is a hole punched in the splash's
+/// black (`SplashView`), never a mask on the app. Build 102 masked the app and
+/// faded the black over the top of it, so the opening expanded under an opaque
+/// sheet and the whole thing read as a cross-fade — the exact effect three
+/// rounds of work were meant to replace. If you find yourself adding a `.mask`
+/// here, you are rebuilding that bug.
+///
+/// ⚠️ The effect is applied **unconditionally and neutralised by value** — at
+/// `progress == 1` the scale is 1 and the blur radius 0. It used to branch
+/// (`if progress >= 1 { content } else { … }`), and the two `@ViewBuilder` arms
+/// are different view types, so reaching 1 could hand SwiftUI a structural
+/// change and tear down the whole `ContentView` subtree — `MKMapView` included,
+/// at the 0.42s mark, undoing the entire point of building it early.
 struct LaunchZoomReveal: ViewModifier {
-    /// 0 = closed (a circle the size of the mark), 1 = fully open.
+    /// 0 = the app is small and soft behind the splash, 1 = arrived.
     let progress: Double
 
-    // `@ViewBuilder` because the body branches: the finished state returns the
-    // content untouched rather than a masked copy of it, and without this the
-    // two arms would have to be one type.
-    @ViewBuilder
     func body(content: Content) -> some View {
-        if progress >= 1 {
-            // The overwhelmingly common case. Returning the content untouched
-            // means no offscreen render pass once the launch is done.
-            content
-        } else {
-            content
-                .scaleEffect(1 + (1 - progress) * Self.scaleOvershoot)
-                .blur(radius: (1 - progress) * Self.maxBlur)
-                // ⚠️ The GeometryReader lives INSIDE the mask, never around the
-                // content. Wrapping the app in one would change its layout —
-                // a GeometryReader fills the proposal and aligns its child
-                // top-leading — for the sake of reading a size. A mask's
-                // content is already laid out against the masked view's bounds,
-                // so measuring in here is free and touches nothing.
-                .mask {
-                    GeometryReader { geo in
-                        Circle()
-                            .frame(
-                                width: radius(in: geo.size) * 2,
-                                height: radius(in: geo.size) * 2
-                            )
-                            .position(LaunchZoom.origin(in: geo.size))
-                    }
-                }
-        }
-    }
-
-    /// From the mark's own radius out to a circle that covers the furthest
-    /// corner — so the opening finishes by clearing the screen, not by
-    /// reaching an arbitrary size that happens to look big enough.
-    private func radius(in size: CGSize) -> CGFloat {
-        let origin = LaunchZoom.origin(in: size)
-        let corner = CGPoint(
-            x: origin.x > size.width / 2 ? 0 : size.width,
-            y: origin.y > size.height / 2 ? 0 : size.height
-        )
-        let full = (pow(corner.x - origin.x, 2) + pow(corner.y - origin.y, 2)).squareRoot()
-        return LaunchZoom.startRadius + (full - LaunchZoom.startRadius) * progress
+        content
+            .scaleEffect(1 + (1 - progress) * Self.scaleOvershoot)
+            .blur(radius: (1 - progress) * Self.maxBlur)
     }
 
     private static let scaleOvershoot: CGFloat = 0.07
