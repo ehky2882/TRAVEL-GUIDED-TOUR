@@ -48,15 +48,23 @@ of files. Downloads are cached under .cache/image-dupes/ so re-runs are cheap.
 import argparse
 import collections
 import hashlib
+import io
+import subprocess
 import json
 import os
 import re
 import sys
 import urllib.request
+
+try:
+    from PIL import Image
+except ImportError:          # perceptual checking is skipped, and SAID so
+    Image = None
 from concurrent.futures import ThreadPoolExecutor
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOURS_JSON = os.path.join(REPO, "TRAVEL GUIDED TOUR", "Resources", "Tours.json")
+PHASH_TOLERANCE = 6   # bits of a 256-bit average hash
 CACHE_DIR = os.path.join(REPO, ".cache", "image-dupes")
 UA = "AtlasTourBot/1.0 (edward.yung@gmail.com) duplicate-image check"
 
@@ -123,20 +131,53 @@ def build_index(catalog, maker_code=None):
     return sorted(urls), slug_kind, walk_stop_urls
 
 
+def perceptual_hash(data):
+    """A 256-bit average hash of the picture's CONTENT.
+
+    The sha256 below compares BYTES, which is blind to the same photograph
+    saved twice in two formats: a JPEG and a WebP of one picture share no
+    bytes at all. Milan shipped exactly that - three tours whose carousels
+    showed every photo twice, because the drop carried a .jpg and a .webp
+    copy of each and both were wired in. The byte check passed them happily.
+    """
+    if Image is None:
+        return None
+    try:
+        px = list(Image.open(io.BytesIO(data)).convert("L").resize((16, 16)).getdata())
+    except Exception:
+        return None
+    avg = sum(px) / len(px)
+    return "".join("1" if v > avg else "0" for v in px)
+
+
+def hamming(a, b):
+    return sum(1 for x, y in zip(a, b) if x != y)
+
+
 def fetch_hash(url):
     os.makedirs(CACHE_DIR, exist_ok=True)
     cached = os.path.join(CACHE_DIR, hashlib.sha256(url.encode()).hexdigest())
     if os.path.exists(cached):
         with open(cached) as fh:
-            return url, fh.read().strip(), None
+            parts = fh.read().strip().split()
+        if len(parts) == 2 or Image is None:
+            return url, parts[0], (parts[1] if len(parts) > 1 else None), None
+        # cached before perceptual hashing existed - refetch to fill it in
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": UA})
-        digest = hashlib.sha256(urllib.request.urlopen(req, timeout=90).read()).hexdigest()
-    except Exception as exc:  # network/404 — reported, not fatal per-URL
-        return url, None, str(exc)
+        # curl, not urllib: urllib fails SSL verification on the owner's Mac,
+        # which is how this script once reported "OK" having fetched nothing.
+        proc = subprocess.run(["curl", "-sL", "--max-time", "90", "-A", UA, url],
+                              capture_output=True, timeout=120)
+        data = proc.stdout
+        if proc.returncode != 0 or not data:
+            return url, None, None, f"curl exit {proc.returncode}, {len(data)} bytes"
+    except Exception as exc:
+        return url, None, None, str(exc)
+    digest = hashlib.sha256(data).hexdigest()
+    ph = perceptual_hash(data)
     with open(cached, "w") as fh:
-        fh.write(digest)
-    return url, digest, None
+        fh.write(digest + (" " + ph if ph else ""))
+    return url, digest, ph, None
 
 
 def classify(group, slug_kind, walk_stop_urls=frozenset()):
@@ -178,6 +219,58 @@ def report(groups, slug_kind, walk_stop_urls=frozenset()):
         print(f"         sha256 {digest[:16]}…")
         print()
     return errors
+
+
+def report_perceptual(phashes, byte_groups):
+    """Same picture, different file. Byte-identical sets are already reported."""
+    if not phashes:
+        return 0
+    seen_together = set()
+    for g in byte_groups.values():
+        for a in g:
+            for b in g:
+                seen_together.add((a, b))
+    items = sorted(phashes.items())
+    clusters, used = [], set()
+    for i, (ua, ha) in enumerate(items):
+        if ua in used:
+            continue
+        grp = [ua]
+        for ub, hb in items[i + 1:]:
+            if ub not in used and hamming(ha, hb) <= PHASH_TOLERANCE:
+                grp.append(ub)
+                used.add(ub)
+        if len(grp) > 1:
+            used.add(ua)
+            clusters.append(grp)
+
+    errors = 0
+    for grp in clusters:
+        if all((a, b) in seen_together for a in grp for b in grp):
+            continue                      # already reported as byte-identical
+        by_tour = collections.defaultdict(list)
+        for u in grp:
+            by_tour[tour_slug_of(u)].append(u)
+        same_tour = [v for v in by_tour.values() if len(v) > 1]
+        if same_tour:
+            errors += 1
+            print("ERROR  same picture appears more than once in ONE tour's gallery —")
+            print("       the carousel shows a dead swipe (often a .jpg and .webp twin)")
+            for u in grp:
+                print(f"         {u}")
+            print()
+        else:
+            print("INFO   visually identical across tours (different files):")
+            for u in grp:
+                print(f"         {u}")
+            print()
+    return errors
+
+
+def tour_slug_of(url):
+    base = os.path.basename(url)
+    base = re.sub(r"\.(webp|jpg|jpeg|png)$", "", base, flags=re.I)
+    return re.sub(r"_(hero|\d+)$", "", base)
 
 
 def selftest():
@@ -256,21 +349,39 @@ def main():
     scope = args.maker or "whole catalog"
     print(f"Atlas duplicate-image check — {scope}: {len(urls)} images\n")
 
-    groups, failed = collections.defaultdict(list), []
+    groups, failed, phashes = collections.defaultdict(list), [], {}
     with ThreadPoolExecutor(max_workers=args.jobs) as pool:
-        for url, digest, err in pool.map(fetch_hash, urls):
+        for url, digest, ph, err in pool.map(fetch_hash, urls):
             if digest is None:
                 failed.append((url, err))
             else:
                 groups[digest].append(url)
+                if ph:
+                    phashes[url] = ph
 
     for url, err in failed:
         print(f"WARN   could not fetch {os.path.basename(url)}: {err}")
     if failed:
         print()
 
+    # A checker that cannot reach the network must not be able to return a
+    # pass. On 2026-08-22 every fetch here failed on SSL and this script still
+    # printed "OK - no suspicious duplicates", having compared nothing at all.
+    if urls and len(failed) / len(urls) > 0.20:
+        print("=" * 70)
+        print(f"COULD NOT VERIFY - {len(failed)}/{len(urls)} images could not be fetched.")
+        print("NOTHING HAS BEEN CHECKED. This is not a pass. Fix the network and re-run.")
+        print("=" * 70)
+        sys.exit(2)
+
+    if Image is None:
+        print("NOTE   Pillow is not installed, so images are compared by BYTES ONLY.")
+        print("       The same photo saved as .jpg and .webp will NOT be detected.")
+        print("       pip3 install Pillow to enable it.\n")
+
     errors = report(groups, slug_kind, walk_stop_urls)
     dupes = sum(1 for g in groups.values() if len(g) > 1)
+    errors += report_perceptual(phashes, groups)
 
     if errors:
         print(f"{errors} duplicate group(s) need review — a dead swipe, or an image staged under the wrong name")

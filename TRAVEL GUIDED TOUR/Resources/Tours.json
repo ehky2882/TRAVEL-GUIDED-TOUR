@@ -2563,10 +2563,8 @@
       "makerId": "00000000-0000-0000-0000-000000000001",
       "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_hero.webp",
       "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_2.webp",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_3.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_4.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_5.webp"
+        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/The_Charging_Bull_4.webp"
       ],
       "kind": "single",
       "stops": [
@@ -70950,12 +70948,9 @@
       "shortDescription": "Five independent kitchens around one courtyard, and you eat whatever you like at the same table.",
       "longDescription": "On Via Bonvesin de la Riva, a little south of Porta Venezia, an open courtyard is lined with separate kitchen counters and filled down the middle with shared tables — closer to a food market than a restaurant. The format is deliberately loose: order from whichever of the independent kitchens appeals, usually alongside a café and a natural-wine counter, and eat it all together rather than committing to one menu for the evening. The line-up rotates, with pop-ups moving through beside the regulars, so what is actually cooking depends on the week you turn up. It is a way of eating that suits a group who can never agree.",
       "makerId": "a875e649-d154-5f8c-b9fc-540691f0960a",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sidewalk-kitchens_hero.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sidewalk-kitchens_hero.webp",
       "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sidewalk-kitchens_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sidewalk-kitchens_3.jpg",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sidewalk-kitchens_4.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sidewalk-kitchens_5.jpg",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sidewalk-kitchens_6.webp"
       ],
       "kind": "single",
@@ -70971,7 +70966,7 @@
           "audioDurationSeconds": 129,
           "triggerMode": "geofenced",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sidewalk-kitchens_hero.jpg",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/sidewalk-kitchens_hero.webp",
           "transcriptText": "Nobody here has just one kitchen. This address has five, all under the same roof, all doing something different.\n\nVia Bonvesin de la Riva, a little south of Porta Venezia — an open courtyard lined with separate kitchen counters, more food market than restaurant, with shared tables filling the middle.\n\nNotice how deliberately loose the format is. The idea is straightforward: order from whichever of the independent kitchens takes your fancy — there's usually a café and a natural-wine counter running alongside them — and eat it all together at the same table, rather than picking one restaurant and committing to it for the evening. The line-up of vendors rotates fairly regularly, with pop-ups moving through alongside the regulars — a gastro-trattoria called CreDa took over one of the counters for a run earlier this year — so what's actually cooking on any given visit isn't fixed the way a normal restaurant's menu would be. It runs breakfast through to dinner and aperitivo, too, which is unusual for a format like this — most street-food collectives pick a lane, lunch or evening, rather than trying to cover the whole day — and the natural-wine counter running alongside the kitchens means you can build a proper meal here without ever sitting down at what most people would call a restaurant table. The whole format borrows its logic from a market rather than a restaurant — you're free to mix a plate from one counter with a glass from another and call that dinner, which most conventional kitchens would find a bit chaotic to allow.\n\nWhich is really street food with an address attached: all the informality of eating off a cart, staged instead as something closer to a proper institution, wine list and all.\n\nFive kitchens, one roof, and a menu that's different every time you ask what's good today.\n\nCheck what's actually cooking before you commit to a table — the rotating line-up means the best reason to come back next month might be a kitchen that isn't even here yet."
         }
       ],
@@ -70998,14 +70993,10 @@
       "shortDescription": "For its first decade this exhibition was not even held in Milan — it ran in Monza.",
       "longDescription": "Giovanni Muzio built the Palazzo dell'Arte on Viale Alemagna between 1931 and 1933, purpose-made for an exhibition that had outgrown its old home: the Monza Biennale of Decorative Arts moved to Milan, switched from a two-year cycle to a three-year one, and gained international standing all in the year the doors opened. The first show alone carried murals by Giorgio de Chirico and Mario Sironi, and handed a gold medal to a young Finnish architect named Alvar Aalto. The building is faced in clinker and sits deliberately at the end of a monumental sightline that runs from the Arco della Pace through Castello Sforzesco to here — a piece of civic staging as considered as anything shown inside it.",
       "makerId": "a875e649-d154-5f8c-b9fc-540691f0960a",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/triennale-di-milano_hero.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/triennale-di-milano_hero.webp",
       "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/triennale-di-milano_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/triennale-di-milano_3.jpg",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/triennale-di-milano_4.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/triennale-di-milano_5.jpg",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/triennale-di-milano_6.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/triennale-di-milano_7.jpg",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/triennale-di-milano_8.webp"
       ],
       "kind": "single",
@@ -71021,7 +71012,7 @@
           "audioDurationSeconds": 149,
           "triggerMode": "geofenced",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/triennale-di-milano_hero.jpg",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/triennale-di-milano_hero.webp",
           "transcriptText": "For its first ten years, this exhibition wasn't even held in Milan — it ran in Monza, twice a decade, until it outgrew the format entirely.\n\nViale Alemagna, on the edge of Parco Sempione — a broad, deliberately classical-looking building in warm ochre brick, closing off the same monumental sightline that runs from the Arco della Pace, through Castello Sforzesco, to here.\n\nStart with how it landed on this exact spot. The architect Giovanni Muzio built it between 1931 and 1933, purpose-made for what had been the Monza Biennale of Decorative Arts — moving to Milan, switching from a two-year cycle to a three-year one, and gaining international recognition, all in the same year the doors opened. The opening exhibition alone included murals by Giorgio de Chirico and Mario Sironi, and a gold medal went to a young Finnish architect named Alvar Aalto. The building itself is faced in clinker, a fired material chosen deliberately to echo Lombardy's traditional brickwork without copying it outright — old materials, reworked in a distinctly 1930s idiom. Today the ground floor holds the Museo del Design Italiano, permanent since 2019 and substantially reworked for the institution's centenary in 2023: three hundred objects out of a collection of sixteen hundred, a Vespa and a Lambretta among them, tracing a hundred years of Italian design in one long curved gallery.\n\nThe interesting bit is this: the building and the Compasso d'Oro design prize were both born out of the very same 1950s moment — sibling institutions from the same design boom that have since gone their separate ways: the prize's own collection now lives in its own museum across town, while this building kept the exhibition itself.\n\nA hundred years of Italian design, and it all still runs through a building that started out as a temporary loan from Monza.\n\nStep into the garden behind the building if the weather allows — de Chirico's Mysterious Baths sculpture and a small puppet theatre by the Mendini family sit permanently among the trees, a five-minute detour most visitors on their way to the castle never make."
         }
       ],
@@ -71050,10 +71041,8 @@
       "shortDescription": "The top third is wider than the bottom, propped out on concrete struts, and it has been that way on purpose since 1958.",
       "longDescription": "BBPR built the Torre Velasca between 1957 and 1958 with the engineer Arturo Danusso, and the mushroom-shaped top was never decoration: it bought extra residential floor space above street level, in direct homage to the way medieval Lombard towers were propped out on wooden and stone beams. At a hundred and six metres it broke sharply with the clean rationalist architecture Milan had been building for decades, and one of its architects, Ernesto Nathan Rogers, defended it at the time as an attempt to sum up the whole character of the city in a single building. The same practice later designed the Nazi-deportation memorial at the Monumental Cemetery, with one of their founding partners among those who never came back.",
       "makerId": "a875e649-d154-5f8c-b9fc-540691f0960a",
-      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/velasca-tower_hero.jpg",
+      "heroImageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/velasca-tower_hero.webp",
       "additionalImageURLs": [
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/velasca-tower_2.webp",
-        "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/velasca-tower_3.jpg",
         "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/velasca-tower_4.webp"
       ],
       "kind": "single",
@@ -71069,7 +71058,7 @@
           "audioDurationSeconds": 141,
           "triggerMode": "geofenced",
           "triggerRadiusMeters": 30,
-          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/velasca-tower_hero.jpg",
+          "imageURL": "https://ehky2882.github.io/TRAVEL-GUIDED-TOUR/images/velasca-tower_hero.webp",
           "transcriptText": "Look up. The top third of this building is wider than the bottom, and it's been that way on purpose since 1958.\n\nYou're on Piazza Velasca, just southeast of the Duomo, above Missori metro station — the tower's upper floors overhang the street below, visibly propped out on diagonal concrete struts.\n\nStart with the firm behind it. BBPR — the same practice that later designed the understated Nazi-deportation memorial at the Monumental Cemetery, with one of their own founding partners among those who never came back from the camps — built the tower between nineteen fifty-seven and 1958, working with the engineer Arturo Danusso. The mushroom-shaped top wasn't decoration: it let them add extra residential floor space above street level, in direct homage to the way medieval Lombard towers were traditionally propped out on wooden or stone beams. At a hundred and six metres and twenty-six storeys, it was accused, when it opened, of vandalising Milan's skyline — a rupture with the clean rationalist architecture the city had been building for decades. One of the architects, Ernesto Nathan Rogers, defended it at the time as an attempt to sum up the whole character of the city in a single silhouette, which did little to calm the critics down. Opinion has shifted since: the tower gained protected landmark status in 2011, and a restoration completed in 2025 added a restaurant on the eighteenth floor with a panoramic view over the exact skyline it was once accused of ruining.\n\nWhich is rather a satisfying turn: a building once condemned for breaking with the city around it is now protected because of it, and sells that same disputed view for the price of dinner.\n\nOnce vandalism, now a landmark, now also a dinner reservation — the tower hasn't changed. Milan's opinion of it has, twice over.\n\nThe piazza at its base was repaved as part of the same restoration, olive trees and all — worth standing directly underneath the cantilever and looking straight up, which is the one angle photographs of this building never quite capture."
         }
       ],
