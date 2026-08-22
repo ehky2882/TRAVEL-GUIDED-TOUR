@@ -229,7 +229,7 @@ enum LaunchBloom {
     /// Was 1.05s (staged assembly), then 0.9s, then 0.42s — now 0.62s,
     /// because the sequence gained a third beat (the drawer opening) and 0.42s
     /// could not hold three of them without any one reading as a jump.
-    static let duration: TimeInterval = 0.51
+    static let duration: TimeInterval = 0.46
 
     /// Reduce Motion gets a plain cross-dissolve, and a shorter one.
     static let reducedMotionDuration: TimeInterval = 0.28
@@ -256,21 +256,28 @@ enum LaunchBloom {
     // sat watching furniture arrive. The zoom reveals a map that is already
     // built and already still; only the chrome moves after it.
 
+    // Real times at 0.46s, owner-tuned across builds 105–107:
+    //   growth 0.198s · dissolve 0.069s · a beat of bare map ·
+    //   block 0.046s · a beat · drawer opening + chrome 0.101s.
+    // ⚠️ The DISC's growth has been held at ~0.2s throughout; every "faster"
+    // request so far has been about the ARRIVALS. Do not shorten the growth
+    // without asking — its feel is separately approved.
+
     /// The wordmark goes first and fast — it is not part of the gesture.
     static let wordmarkLift = (delay: 0.0, window: 0.14)
 
     /// The disc's growth, from the mark's 44pt to covering the screen. Runs
     /// from the very first frame: this IS the transition.
-    static let zoom = (delay: 0.0, window: 0.39)
+    static let zoom = (delay: 0.0, window: 0.43)
 
     /// The disc dissolving into the map behind it — and it starts only once
     /// the disc COVERS the screen, so the brass is solid for the whole of its
     /// growth and what is left when it goes is a bare map.
-    static let markDissolve = (delay: 0.39, window: 0.14)
+    static let markDissolve = (delay: 0.43, window: 0.15)
 
     /// The black is cut while the disc is covering the screen, so the cut
     /// itself is never visible.
-    static let splashCut = (delay: 0.39, window: 0.14)
+    static let splashCut = (delay: 0.43, window: 0.15)
 
     /// 🔴 THE SLIDE — the module and the closed drawer as ONE BLOCK.
     ///
@@ -278,7 +285,7 @@ enum LaunchBloom {
     /// travel as a single object. Owner: *"the entire bottom module should
     /// slide up together… right now the miniplayer and bottom tabs are already
     /// in place and then the drawer slides up from behind it."*
-    static let assembly = (delay: 0.57, window: 0.12)
+    static let assembly = (delay: 0.63, window: 0.10)
 
     /// 🔴 THE OPENING — the drawer alone, closed → mid detent, after the block
     /// has landed.
@@ -288,7 +295,7 @@ enum LaunchBloom {
     /// all: it simply keeps rising, and the two beats read as one long slide.
     /// The pause is what makes "the module arrives, *then* the drawer opens"
     /// legible.
-    static let drawerExpand = (delay: 0.75, window: 0.25)
+    static let drawerExpand = (delay: 0.78, window: 0.22)
 
     /// The search bar (from the top) and the chips (from the right) travel
     /// alongside the drawer's opening, so all three land on one frame.
@@ -297,7 +304,7 @@ enum LaunchBloom {
     /// snap. A test pins it. It used to start with the block and drift in over
     /// twice as long; owner, 2026-08-22: *"the animation of the module and top
     /// is still coming in a little slower than i would prefer."*
-    static let chrome = (delay: 0.75, window: 0.25)
+    static let chrome = (delay: 0.78, window: 0.22)
 
     /// The instant everything comes to rest — where the haptic fires.
     ///
@@ -316,9 +323,10 @@ enum LaunchBloom {
     ///
     /// ⚠️ If the settle ever gains frames back, this can shrink — but do not
     /// take it to zero: a wall clock and a render clock never agree exactly.
-    /// 0.07 was still early on a device (owner, 2026-08-22); 0.15 is the second
-    /// try. This is the one number to turn if the buzz still misses the beat.
-    static let settleLatency: TimeInterval = 0.15
+    /// Owner-tuned on a device, 2026-08-22: 0.07 read early, 0.15 read late,
+    /// 0.10 is the settled value. This is the one number to turn if the buzz
+    /// ever misses the beat again.
+    static let settleLatency: TimeInterval = 0.10
 
     /// Progress of the slide: the module and the closed drawer, one value, so
     /// they physically cannot drift apart.
