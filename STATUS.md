@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-22 17:30 UTC
+**Last verified:** 2026-08-22 19:05 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -28,6 +28,16 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 🟢 **NOTHING IS WAITING ON A REVIEW. Zero open PRs.** Merged since the wizard work: **#560 Milan**
 (48 tours, 32nd maker), **#559 the launch sequence** (a readiness-gated splash and a three-beat
 hand-off), **#562 the coordinate guard**, plus their docs (#561).
+
+🔨 **BUILD 110 IS RUNNING, CUT FROM `main` AT THE OWNER'S REQUEST** (`b421bde9`, dispatched 19:02).
+**The first build from `main` since 91, two days ago**, so it is the first to carry the whole of the
+last two days in one binary: the seven-step wizard and its round two, saved lists, the list page as
+a layer, Liked on the shared screen, the launch sequence, the Library fix, and **#563's light-mode
+work** — which the owner specifically asked to be included and which merged at 18:58.
+
+⚠️ **Read the run's own step, not its colour.** Build 97 archived, uploaded and processed, then went
+red because Apple refused a `✕` in the notes. `scripts/ascii-build-notes.py` now transliterates them
+first, so this class should be closed — but a red run still does not by itself mean no build.
 
 ✅ **MILAN IS ALREADY LIVE AND NEEDS NO BUILD.** Verified against the live RPC: **1,466 tours / 40
 maker rows**, up from 1,418. Content reaches phones over the air through Supabase — a build only
@@ -133,7 +143,8 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| 109 | `launch-performance-animations-df4d7p` | #559 launch sequence (`52a86cfa`) — merged 16:43, after this build | ✅ **install this** |
+| **110** | **`main`** | **Everything from the last two days, plus #563 light mode** (`b421bde9`) | 🔨 building |
+| 109 | `launch-performance-animations-df4d7p` | #559 launch sequence (`52a86cfa`) | ✅ superseded by 110 |
 | 108 | `launch-performance-animations-df4d7p` | Same work, one commit earlier | ⚠️ superseded |
 | 98 | `wizard-comments-round2` | #558 wizard round two (`e0132c90`) | ✅ merged |
 | 97 | `wizard-comments-round2` | Same work, one commit earlier | 🔴 **Live and installable, run shows RED, no notes** |
