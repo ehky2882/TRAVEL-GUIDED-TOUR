@@ -166,3 +166,39 @@ temporarily raised to ~3s to inspect the sequence, then put back.
 - Nothing here is merged to `main`; `main` is untouched by this work.
 - The mockups used to settle the design:
   https://claude.ai/code/artifact/72d5bf1d-6339-4b1c-8cd8-cfbf05211306
+
+---
+
+## Session 103 (local Mac) — the layering bug is FIXED and WATCHED
+
+Commit `4a19ff5` on the same branch. `test_sim` **414/414**. Every claim below
+was verified frame by frame in the Simulator with `LaunchBloom.duration`
+temporarily at 3.0s — the process failure §"Do this differently" names.
+
+- **The hole is punched in the whole splash now** (black + wordmark + mark),
+  not in the app. `LaunchZoomReveal` keeps only the scale and blur and applies
+  them **unconditionally**, neutralised by value — so the `progress >= 1` branch
+  that could have torn down `ContentView` (and `MKMapView`) is gone. That second
+  suspected bug is closed by removal rather than by testing it.
+- **🔴 The mark has to be sized OFF the hole, and a scaleEffect cannot do it.**
+  First attempt kept the 44pt mark with `scaleEffect(1 + 8 * zoomEase)`: the
+  opening starts at exactly the mark's radius and grows toward a screen corner,
+  so it outran the mark within a frame or two and the brass simply vanished —
+  no "mark opens" at all. The mark is now a disc of `holeRadius + a band that
+  thins`, so after masking what is left is a **brass rim leading the opening**.
+  ⚠️ `holeRadius` must return **0 at rest**, or the resting brand screen is a
+  44pt window onto the map.
+- **🔴 The bottom module was landing in ONE JUMP, and there were two causes.**
+  It lives in a separate `UIWindow`, which a `withAnimation` transaction does
+  **not** reach — and it was being unhidden with the assembly already at 1, so
+  there was nothing to animate from either. Fixed by rendering one frame at 0
+  before `playHandOff()` (a 32ms sleep after `setHidden(false)`) *and* giving
+  the module its own curve restating `LaunchBloom.assembly` in seconds.
+  ⚠️ **Anything animated outside the main window needs both halves.**
+- **The visible dimming outside the opening late in the sequence is deliberate**
+  — `groundOpacity` now only clears in the last 14% — not a leak. Measured: the
+  black is pure (corner luminance 0.0) for the whole first half.
+
+**Still owed:** the haptic on the settle is device-only, and the owner has not
+seen this on a phone. Cut ONE build from this branch and stop cutting builds to
+look at the animation.
