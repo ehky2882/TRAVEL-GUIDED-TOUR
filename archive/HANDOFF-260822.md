@@ -303,13 +303,41 @@ Two causes, both worth knowing:
 | **Search bar from the top**, capsules from the right | 2026-08-22 |
 | Haptic must land **on** the settle | *"haptic feels early"* → bias 0.07s, then 0.15s |
 
-### State
+### Builds 106–109 — the tuning, and where it stopped
 
-- Hand-off **0.55s**. Beats: zoom 0–0.36 · dissolve 0.36–0.48 · block 0.50–0.64
-  · *pause* · drawer opens + chrome arrive 0.74–1.0 · haptic at 1.0 + 0.15s.
-- `test_sim` **417/417**. PR #559 still **open** — code, needs the owner's merge.
-- ⚠️ **`LaunchBloom.settleLatency` is the one number to turn** if the buzz still
-  misses the beat.
-- ⚠️ Verifying this in the Simulator means setting `LaunchBloom.duration` to ~4s
-  temporarily. **Grep for `TEMP-SLOWMO` before committing** — it was used four
-  times this session.
+Owner on 109: **"ok. leave it here then. i like it."**
+
+- 🔴 **"Snappier" was not a duration problem.** The whole sequence is driven by a
+  linear tick, and linear motion reads as mechanical however brief — a thing
+  still travelling at full speed when it reaches its mark cannot look like it
+  *landed*. The three arrivals carry a **cubic ease-out**; the disc's growth is
+  deliberately left linear (it is a reveal, not an object coming to rest).
+- **Final times, 0.37s total:** growth 0.200s · dissolve 0.056s · a beat of bare
+  map · block 0.030s · a beat · drawer opening + chrome 0.056s.
+- ⚠️ **The arrivals are at their floor.** An ease-out needs some distance in time
+  to read as a deceleration; much shorter and the block stops looking like it
+  lands and starts looking like it was cut in. Say that plainly before turning
+  them down again.
+- 🔴 **The disc's growth is FIXED at ~0.2s** — owner, build 108: *"i have no
+  issues with the disc."* It is now well over half the hand-off, so it is the
+  obvious place to find time and the one place not to take it from without
+  asking.
+- ✅ **`settleLatency` is SETTLED at 0.06s.** Four rounds: 0.07 early, 0.15 late,
+  0.10 still late once the sequence shortened, 0.06 right. It is relative to the
+  settle, so it survives a retime in principle — but a big move of the beats
+  deserves one device check rather than an assumption.
+
+### State at session end
+
+- **PR #559 is OPEN and NOT merged** — code, awaiting the owner's call. Its
+  description was rewritten to describe what actually landed; the squash commit
+  inherits it (the #540 lesson).
+- `test_sim` **418/418**. Owner-approved on **TestFlight 1.1 (109)**.
+- Eleven builds went to TestFlight from this branch (99–109). Builds 100–102 were
+  rejected and their approaches are listed above as things not to rebuild.
+- ⚠️ Verifying any of this in the Simulator means setting `LaunchBloom.duration`
+  to ~4s temporarily. **Grep for `TEMP-SLOWMO` before committing** — it was used
+  five times this session.
+- ⚠️ **The launch has never been watched on a cold device** (delete-and-reinstall,
+  nothing cached). Every owner review was a warm launch, and the gate's slowest
+  path is exactly the one that is hardest to see.
