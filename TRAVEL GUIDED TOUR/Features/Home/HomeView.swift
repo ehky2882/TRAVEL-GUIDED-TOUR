@@ -219,40 +219,42 @@ struct HomeView: View {
                     )
                     .ignoresSafeArea()
 
-                    VStack(spacing: AtlasSpacing.sm) {
-                        SearchBar()
-                            .padding(.horizontal, AtlasSpacing.md)
-                            // Retract the drawer to `.peek` when the
-                            // user opens search from `.medium` or
-                            // `.large` — without this the SearchView
-                            // pushes on top of a fully-expanded drawer
-                            // and the user has to swipe down again
-                            // to get the map back when they pop
-                            // (owner request, 2026-06-04).
-                            // `.simultaneousGesture` runs alongside
-                            // the NavigationLink's tap so the push
-                            // still fires.
-                            .simultaneousGesture(
-                                TapGesture().onEnded {
-                                    guard sheetDetent != .peek else { return }
-                                    withAnimation(.easeInOut(duration: 0.25)) {
-                                        sheetDetent = .peek
+                    // The search bar and chips arrive from the RIGHT, landing
+                    // on the frame the drawer finishes opening. ⚠️ The launch
+                    // progress is read INSIDE `LaunchEntrance`, never here —
+                    // reading it in this body would re-evaluate the map, the
+                    // clustering and the rails 60 times a second for the whole
+                    // entrance. See the note on `LaunchEntrance`.
+                    LaunchEntrance(part: .chrome, travel: geo.size.width) {
+                        VStack(spacing: AtlasSpacing.sm) {
+                            SearchBar()
+                                .padding(.horizontal, AtlasSpacing.md)
+                                // Retract the drawer to `.peek` when the
+                                // user opens search from `.medium` or
+                                // `.large` — without this the SearchView
+                                // pushes on top of a fully-expanded drawer
+                                // and the user has to swipe down again
+                                // to get the map back when they pop
+                                // (owner request, 2026-06-04).
+                                // `.simultaneousGesture` runs alongside
+                                // the NavigationLink's tap so the push
+                                // still fires.
+                                .simultaneousGesture(
+                                    TapGesture().onEnded {
+                                        guard sheetDetent != .peek else { return }
+                                        withAnimation(.easeInOut(duration: 0.25)) {
+                                            sheetDetent = .peek
+                                        }
                                     }
-                                }
-                            )
+                                )
 
-                        TagFilterChipRow(
-                            selectedTags: $sharedState.selectedTags,
-                            walksOnly: $sharedState.walksOnly
-                        )
+                            TagFilterChipRow(
+                                selectedTags: $sharedState.selectedTags,
+                                walksOnly: $sharedState.walksOnly
+                            )
+                        }
+                        .padding(.top, AtlasSpacing.sm)
                     }
-                    .padding(.top, AtlasSpacing.sm)
-                    // Arrives from the RIGHT on the launch, sharing its timing
-                    // with the bottom module and the drawer — see
-                    // `LaunchBloom.assembly`. Owner decision 2026-08-22: three
-                    // edges, one settle.
-                    .opacity(assemblyProgress)
-                    .offset(x: (1 - assemblyProgress) * geo.size.width)
 
                     // Map-control button stack anchored to bottom-leading,
                     // padded up by the drawer's *current* visible height
@@ -569,13 +571,6 @@ struct HomeView: View {
     /// roughly 11 km N-S / ~8.5 km E-W at NYC latitude — about the
     /// full length of Manhattan island.
     /// The three-edge assembly's progress, or 1 when not launching.
-    /// The top chrome's arrival from the right. It travels the whole second
-    /// half of the hand-off so it lands on the SAME FRAME the drawer finishes
-    /// opening — that shared frame is the snap, and where the haptic fires.
-    private var assemblyProgress: Double {
-        guard let launchState, launchState.isCovering else { return 1 }
-        return LaunchBloom.chromeProgress(handOff: launchState.handOffProgress)
-    }
 
     private static let initialUserSpan = MKCoordinateSpan(
         latitudeDelta: 0.1,

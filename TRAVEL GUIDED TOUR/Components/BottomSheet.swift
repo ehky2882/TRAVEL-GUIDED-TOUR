@@ -34,10 +34,34 @@ struct BottomSheet<Content: View>: View {
     /// gives room for a drag handle + a single header line.
     var peekHeight: CGFloat = 100
 
-    /// The launch entrance's opening phase: 0 draws the sheet CLOSED (peek
-    /// height) whatever detent it is in, 1 draws it at that detent. Defaults to
-    /// 1 so every other caller is unaffected.
-    var launchOpenProgress: Double = 1
+    /// 🔴 THE LAUNCH ENTRANCE IS READ HERE, NOT PASSED IN.
+    ///
+    /// `handOffProgress` ticks ~60 times a second while the entrance plays, and
+    /// whichever body reads it is re-evaluated that often. Read in
+    /// `ContentView` — where this sheet is built — that meant re-running the
+    /// body of the whole app, every frame, for the length of the launch. See
+    /// the note on `LaunchEntrance`. Optional, so previews and every other
+    /// caller (which inject nothing) simply see a finished entrance.
+    @Environment(LaunchState.self) private var launchState: LaunchState?
+
+    /// How far below the screen the sheet is parked before it rides in. Larger
+    /// than any iPhone is tall, so it is fully out of view whatever the device.
+    /// ⚠️ Not a `static let` — `BottomSheet` is generic, and Swift does not
+    /// allow static stored properties on generic types.
+    private var launchEntryOffset: CGFloat { 1200 }
+
+    /// 0 while the block is still off-screen, 1 once it has landed.
+    private var launchSlideProgress: Double {
+        guard let launchState, launchState.isCovering else { return 1 }
+        return LaunchBloom.assemblyProgress(handOff: launchState.handOffProgress)
+    }
+
+    /// 0 draws the sheet CLOSED (peek height) whatever detent it is in, 1 draws
+    /// it at that detent.
+    private var launchOpenProgress: Double {
+        guard let launchState, launchState.isCovering else { return 1 }
+        return LaunchBloom.drawerExpandProgress(handOff: launchState.handOffProgress)
+    }
     /// Inset from the screen edges on the left, right, AND bottom of
     /// the drawer.
     var horizontalInset: CGFloat = 8
@@ -85,7 +109,6 @@ struct BottomSheet<Content: View>: View {
         bottomCornerRadius: CGFloat = AtlasSpacing.phoneScreenRadius,
         bottomReservedHeight: CGFloat = 0,
         topReservedHeight: CGFloat = 0,
-        launchOpenProgress: Double = 1,
         @ViewBuilder content: () -> Content
     ) {
         self._detent = detent
@@ -96,20 +119,27 @@ struct BottomSheet<Content: View>: View {
         self.bottomCornerRadius = bottomCornerRadius
         self.bottomReservedHeight = bottomReservedHeight
         self.topReservedHeight = topReservedHeight
-        self.launchOpenProgress = launchOpenProgress
         self.content = content()
     }
 
     var body: some View {
         GeometryReader { geo in
             let topInset = geo.safeAreaInsets.top
-            // 🔴 THE LAUNCH OPENING. 0 = closed (peek height), 1 = the
-            // detent's real height. It rides the same arithmetic as a drag, so
-            // the sheet opens exactly the way a user opening it does, and it is
-            // a plain input rather than a write into `dragOffset` — writing
-            // that would collide with a gesture already in flight.
-            let launchCollapse = (1 - launchOpenProgress)
+            // 🔴 THE LAUNCH OPENING IS A TRANSLATION, NOT A HEIGHT CHANGE.
+            //
+            // 0 draws the sheet closed (only `peekHeight` of it above the
+            // bars), 1 draws it at its detent. It is applied as an offset
+            // further down rather than by shrinking `dragHeight`, because
+            // shrinking re-lays out the drawer's whole content — rails, cards,
+            // images — on EVERY FRAME of the opening. Reported from a device:
+            // *"the performance/animation feels very lagg-y."* Translating a
+            // laid-out drawer costs nothing.
+            //
+            // ⚠️ The part that travels below the screen is hidden by the
+            // mini-player + tab bar, which live in a window ABOVE this one.
+            let launchOpening = (1 - launchOpenProgress)
                 * max(0, heightForDetent(detent, in: geo, topInset: topInset) - peekHeight)
+
             let baseHeight = heightForDetent(detent, in: geo, topInset: topInset)
             // Clamp the drag-time visual height to the `.large` detent's
             // resolved height — NOT the full container height. Otherwise
@@ -123,7 +153,7 @@ struct BottomSheet<Content: View>: View {
             // Negative dragOffset = drag up = drawer grows.
             // Positive dragOffset = drag down = drawer shrinks.
             let dragHeight = min(
-                max(peekHeight, baseHeight - dragOffset - launchCollapse),
+                max(peekHeight, baseHeight - dragOffset),
                 largeHeight
             )
 
@@ -133,6 +163,10 @@ struct BottomSheet<Content: View>: View {
             }
             .frame(maxWidth: .infinity)
             .frame(height: dragHeight, alignment: .top)
+            // The entrance: the block rides in from below the screen with the
+            // mini-player and tab bar, THEN the sheet opens to its detent —
+            // both as translations, so nothing re-lays out per frame.
+            .offset(y: launchOpening + (1 - launchSlideProgress) * launchEntryOffset)
             // Hard clip BEFORE the rounded clipShape so inner ScrollView
             // content can't bleed past the drawer's rectangular bounds
             // (`clipShape` alone left small overflow visible behind the

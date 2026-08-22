@@ -276,6 +276,18 @@ enum LaunchBloom {
     /// drawer finishes opening and the top chrome lands, which is the end.
     static var settleFraction: Double { drawerExpand.delay + drawerExpand.window }
 
+    /// 🔴 HOW LATE THE HAPTIC FIRES, past the settle's nominal instant.
+    ///
+    /// The bump is scheduled off a WALL CLOCK while the settle is drawn by the
+    /// render server, so any frame the device drops puts the buzz ahead of the
+    /// thing it is meant to punctuate. Reported from a device: *"haptic feels
+    /// early."* A touch late reads as the tail of the movement; early reads as
+    /// a mistake, so the bias goes one way deliberately.
+    ///
+    /// ⚠️ If the settle ever gains frames back, this can shrink — but do not
+    /// take it to zero: a wall clock and a render clock never agree exactly.
+    static let settleLatency: TimeInterval = 0.07
+
     /// Progress of the slide: the module and the closed drawer, one value, so
     /// they physically cannot drift apart.
     static func assemblyProgress(handOff: Double) -> Double {

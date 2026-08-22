@@ -29,36 +29,25 @@ struct SplashView: View {
         GeometryReader { geo in
             let origin = LaunchZoom.origin(in: geo.size)
             ZStack {
-                // 🔴 THE BLACK IS EVERYTHING OUTSIDE THE DISC, and it is
-                // drawn as a circle stroked wider than the screen whose INNER
-                // EDGE IS THE DISC'S OWN RADIUS.
+                // 🔴 A PLAIN BLACK GROUND, AND NOTHING CLEVER — the disc is
+                // simply drawn on top of it and cut out from under once it
+                // covers the screen.
                 //
-                // That is not a flourish — it removes a whole class of bug.
-                // When the ground was a plain rectangle fading on its own
-                // ramp, the two ran visibly out of step: the black cleared
-                // while the disc was barely half-grown, so the map appeared
-                // early and the "solid expanding mark" became a translucent
-                // blob floating over it. One shared radius cannot drift, even
-                // if the renderer falls behind — both lag together.
+                // ⚠️ TWO REJECTED GROUNDS, do not rebuild either. A masked
+                // rectangle (an offscreen pass every frame) and a circle
+                // stroked wider than the screen whose inner edge tracked the
+                // disc. The stroked ring was reported from a device
+                // immediately: *"the circle has a border around it when it
+                // expands."* Two antialiased edges at the same radius — the
+                // disc's and the hole's — cannot line up sub-pixel, and the
+                // disc's own edge softens as it is scaled up, so the seam
+                // between them reads as a rim around the mark.
                 //
-                // ⚠️ `strokeBorder` draws INSIDE the frame, so the frame is the
-                // disc plus the stroke width on each side.
-                if reduceMotion {
-                    Rectangle()
-                        .fill(.black)
-                        .opacity(groundOpacity)
-                        .ignoresSafeArea()
-                } else {
-                    Circle()
-                        .strokeBorder(Color.black, lineWidth: Self.ringWidth)
-                        .frame(
-                            width: (LaunchZoom.startRadius + Self.ringWidth) * 2,
-                            height: (LaunchZoom.startRadius + Self.ringWidth) * 2
-                        )
-                        .scaleEffect(discScale(in: geo.size))
-                        .position(origin)
-                        .ignoresSafeArea()
-                }
+                // One shape over another has no seam to show.
+                Rectangle()
+                    .fill(.black)
+                    .opacity(groundOpacity)
+                    .ignoresSafeArea()
 
                 // The wordmark is not part of the gesture; it goes first and
                 // fast, so the mark is alone by the time it starts to grow.
@@ -122,9 +111,8 @@ struct SplashView: View {
     /// The resting mark.
     private static let markDiameter: CGFloat = 44
 
-    /// Wider than any supported screen's diagonal, so the ring reads as a full
-    /// black ground until the disc has cleared the screen and taken it with it.
-    private static let ringWidth: CGFloat = 2600
+    /// How far past "just covering the screen" the disc grows.
+    private static let coverageOvershoot: CGFloat = 1.06
 
     // MARK: - Ramps
 
@@ -132,16 +120,19 @@ struct SplashView: View {
         LaunchBloom.ramp(handOff, delay: LaunchBloom.wordmarkLift.delay, window: LaunchBloom.wordmarkLift.window)
     }
 
-    /// A CUT, not a dissolve — and it happens *under* the expanding opening, so
-    /// by the time the black goes there is very little of it left to see.
+    /// 🔴 THE BLACK FADES ON EXACTLY THE DISC'S OWN VALUE — not on a clock of
+    /// its own.
     ///
-    /// The 0.42s eased dissolve this replaced was the single biggest reason the
-    /// launch stopped feeling snappy: the black lingered over the thing it was
-    /// supposed to be revealing. Owner, 2026-08-21: *"the fade of the splash
-    /// page doesn't feel like a good transition, too slow and gentle."*
-    private var groundOpacity: Double {
-        1 - LaunchBloom.ramp(handOff, delay: LaunchBloom.splashCut.delay, window: LaunchBloom.splashCut.window)
-    }
+    /// Cutting it on a separate ramp kept producing the same bug in different
+    /// clothes: the black went while the disc was still visibly growing, so the
+    /// map appeared behind a mark that was meant to be covering it. Two ramps
+    /// that are supposed to coincide will not, because the renderer does not
+    /// advance every layer at the same rate under load — which is exactly what
+    /// a slow device does. One number cannot disagree with itself.
+    ///
+    /// The disc covers the screen before it starts to fade, so the black behind
+    /// it is invisible by then anyway; they simply go together.
+    private var groundOpacity: Double { markOpacity }
 
     /// 🔴 THE GROWTH IS A SCALE, NOT A FRAME — and that is what keeps the disc
     /// solid while it grows.
@@ -159,18 +150,23 @@ struct SplashView: View {
     /// reaching an arbitrary size. Reduce Motion holds it still.
     private func discScale(in size: CGSize) -> CGFloat {
         guard !reduceMotion else { return 1 }
+        // ⚠️ The overshoot is load-bearing: the black is cut the instant the
+        // disc is meant to cover the screen, so the disc has to be *past*
+        // covering by then. Without it, a frame of lag shows a rim of map.
         return LaunchZoom.radius(progress: LaunchBloom.zoomProgress(handOff: handOff), in: size)
-            / LaunchZoom.startRadius
+            * Self.coverageOvershoot / LaunchZoom.startRadius
     }
 
     private var markOpacity: Double {
-        guard !reduceMotion else { return 1 - groundFadeMirror }
+        // Reduce Motion: no growth and no dissolve — the black simply clears
+        // over the splash-cut window, and the mark clears with it.
+        guard !reduceMotion else {
+            return 1 - LaunchBloom.ramp(handOff, delay: LaunchBloom.splashCut.delay, window: LaunchBloom.splashCut.window)
+        }
         // Dissolves into the map it has been covering, finishing exactly when
         // the opening does — so the zoom ends on a bare map with no brass and
         // no chrome on it.
         return 1 - LaunchBloom.ramp(handOff, delay: LaunchBloom.markDissolve.delay, window: LaunchBloom.markDissolve.window)
     }
 
-    /// Under Reduce Motion the mark simply fades with the ground.
-    private var groundFadeMirror: Double { 1 - groundOpacity }
 }

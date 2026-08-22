@@ -390,8 +390,34 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // already a complete hand-off, so there is nothing to reintroduce.
         let duration = reduceMotion ? LaunchBloom.reducedMotionDuration : LaunchBloom.duration
 
-        withAnimation(.linear(duration: duration)) {
-            launchState.setHandOffProgress(1)
+        // 🔴 THE PROGRESS IS TICKED, NOT ANIMATED — and this is the difference
+        // between the choreography running and it only appearing to.
+        //
+        // It used to be `withAnimation { setHandOffProgress(1) }`. SwiftUI does
+        // NOT interpolate a plain `Double` on the way through: it re-renders
+        // each dependent view ONCE with progress already at 1, and then
+        // animates each rendered property — an opacity here, a scale there —
+        // from its old value to its new one over the whole duration. Every
+        // delay and window in `LaunchBloom` is evaluated at 1 and thrown away.
+        //
+        // What that looks like: the black clearing while the disc is still
+        // half-grown, the drawer rising before the brass has gone, the whole
+        // thing reading as several things sliding at once instead of three
+        // beats. Hours went into "fixing" those symptoms one at a time.
+        //
+        // Ticking the value at display rate means every view sees the real
+        // intermediate numbers, so the ramps mean what they say — and since no
+        // SwiftUI animation is involved, the separate window's views cannot
+        // fall out of step with the main one either.
+        //
+        // ⚠️ Do NOT add `.animation(...)` to anything reading `handOffProgress`
+        // now. It would animate toward each ticked value and lag the lot.
+        let startedAt = Date()
+        while true {
+            let elapsed = Date().timeIntervalSince(startedAt)
+            launchState.setHandOffProgress(min(elapsed / duration, 1))
+            if elapsed >= duration { break }
+            try? await Task.sleep(for: .milliseconds(8))
         }
 
         // 🔴 The bump lands ON THE SETTLE — the instant the module, the search
@@ -400,7 +426,9 @@ struct TRAVEL_GUIDED_TOURApp: App {
         // is at the wrong beat, it's not synced with the things settling into
         // place."* Deliberately the same soft impact the geofence fires on
         // arriving at a stop. Silent in the Simulator — device-only to judge.
-        try? await Task.sleep(for: .seconds(duration * LaunchBloom.settleFraction))
+        // The loop above already ran to the settle (it IS the end of the
+        // choreography), so only the latency bias is left to wait out.
+        try? await Task.sleep(for: .seconds(LaunchBloom.settleLatency))
         if !reduceMotion { AtlasHaptics.impact(.medium) }
 
         // Tear the overlay down only once nothing of it is still animating.

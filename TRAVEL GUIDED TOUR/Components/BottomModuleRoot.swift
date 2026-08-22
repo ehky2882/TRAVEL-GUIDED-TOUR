@@ -116,26 +116,6 @@ struct BottomModuleRoot: View {
             // strip while the bars are on their way in.
             .offset(y: (1 - assemblyProgress) * Self.launchTravel)
             .opacity(assemblyProgress)
-            // 🔴 THIS ANIMATION IS NOT REDUNDANT, and removing it puts the
-            // module back on screen in one jump.
-            //
-            // The hand-off is driven by `withAnimation` in the App's task —
-            // and a `withAnimation` transaction does NOT reach this view: the
-            // bars live in a **separate UIWindow** with its own hosting
-            // controller, which commits its own update. It therefore sees
-            // `handOffProgress` arrive already at 1 and lands instantly, while
-            // the splash's opening is still a few pixels wide. Caught in the
-            // Simulator: a frame with a small opening and a fully settled
-            // module.
-            //
-            // The curve restates `LaunchBloom.assembly` in real seconds so the
-            // three edges still settle on one frame. ⚠️ If those fractions
-            // change, change this with them.
-            .animation(
-                .linear(duration: LaunchBloom.duration * LaunchBloom.assembly.window)
-                    .delay(LaunchBloom.duration * LaunchBloom.assembly.delay),
-                value: assemblyProgress
-            )
         }
         // Keep the Me-tab notification badge in sync with the pending
         // follow-request count on the signed-in user's own maker. Re-runs on

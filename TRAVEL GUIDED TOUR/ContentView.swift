@@ -119,27 +119,6 @@ struct ContentView: View {
     /// Whether the launch splash is still up. Optional for the same reason
     /// `HomeView` reads it optionally — nil means "not launching".
     @Environment(LaunchState.self) private var launchState: LaunchState?
-    /// The opening's progress, or 1 (fully open) when not launching.
-    private var launchZoomProgress: Double {
-        guard let launchState, launchState.isCovering else { return 1 }
-        return LaunchBloom.zoomProgress(handOff: launchState.handOffProgress)
-    }
-
-    /// The drawer's share of the SLIDE — it rises as part of one block with
-    /// the mini-player and tab bar. 1 when not launching, so a tab return is
-    /// instant: the entrance is launch-only.
-    private var drawerAssemblyProgress: Double {
-        guard let launchState, launchState.isCovering else { return 1 }
-        return LaunchBloom.assemblyProgress(handOff: launchState.handOffProgress)
-    }
-
-    /// The drawer's OPENING, closed → mid detent, after the block has landed.
-    private var drawerOpenProgress: Double {
-        guard let launchState, launchState.isCovering else { return 1 }
-        return LaunchBloom.drawerExpandProgress(handOff: launchState.handOffProgress)
-    }
-
-
     var body: some View {
         @Bindable var appShared = appShared
         // NOTE on bindings: deliberately NOT using `@Bindable` for
@@ -197,16 +176,6 @@ struct ContentView: View {
             }
         }
         .ignoresSafeArea(.container, edges: .bottom)
-        // 🔴 THE ZOOM, app side. The opening itself is a HOLE IN THE SPLASH'S
-        // BLACK (`SplashView`) — the app is never masked. What happens here is
-        // only the depth: the app sits fractionally large and soft behind the
-        // splash and settles as the hole clears it. Two layers moving reads as
-        // fast at a third of a second, where a cross-dissolve at the same
-        // duration reads as sluggish.
-        //
-        // ⚠️ If this ever janks on an older device the blur goes first: it is
-        // the expensive half, and the scale carries most of the depth alone.
-        .modifier(LaunchZoomReveal(progress: launchZoomProgress))
         .environment(navState)
         .environment(homeSharedState)
         // NOTE: the full PlayerView is presented from `BottomModuleRoot`
@@ -535,37 +504,16 @@ struct ContentView: View {
                 // when the drawer is fully expanded. AtlasSpacing.sm
                 // is a small visual buffer between the chip row's
                 // bottom edge and the drawer's top edge.
-                topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm,
-                // Closed while the block slides up, then opens to the mid
-                // detent on the frame the top chrome lands.
-                launchOpenProgress: drawerOpenProgress
+                topReservedHeight: AtlasSpacing.searchAndChipsBlockHeight + AtlasSpacing.sm
             ) {
                 HomeDrawerContent(
                     sheetDetent: $homeSheetDetent
                 )
             }
-            // Off-screen until the entrance plays. The sheet lays out
-            // bottom-anchored inside a full-screen frame, so translating
-            // the whole thing down by more than any phone's height parks
-            // it completely out of view without touching its internals.
-            // 🔴 EXACTLY THE MODULE'S RAMP, because the drawer, the
-            // mini-player and the tab bar rise as ONE BLOCK — the drawer
-            // closed, sitting on top of the bars, the whole thing arriving
-            // as a single object. Owner: *"the entire bottom module should
-            // slide up together… right now the miniplayer and bottom tabs
-            // are already in place and then the drawer slides up from
-            // behind it."* It then opens on its own ramp (above), which is
-            // the beat that ends on the snap.
-            .offset(y: (1 - drawerAssemblyProgress) * Self.drawerEntryOffset)
         }
     }
 
     // MARK: - Launch
-
-    /// How far down the drawer is parked before its entrance. Larger than any
-    /// iPhone is tall, so the sheet is fully off-screen whatever the device.
-    private static let drawerEntryOffset: CGFloat = 1200
-
 
     /// Ask for location permission exactly once per session.
     private func requestLocationPermissionIfNeeded() {
