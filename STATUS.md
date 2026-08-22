@@ -14,7 +14,7 @@ TestFlight build, or discovers/clears an owner-blocked item updates the relevant
 the same commit. Re-derive rather than trust: `gh pr list --state open`, and read the build
 numbers back from the Actions run list — never from what a PR body predicted.
 
-**Last verified:** 2026-08-21 00:30 UTC
+**Last verified:** 2026-08-22 17:30 UTC
 
 **⚠️ This board is no longer polled on a timer.** The coordinator session ran a 25-minute check
 from 04:50 to 12:25 and found something worth reporting on two of fifteen ticks, at roughly 20k
@@ -25,18 +25,25 @@ a parallel session merges something. **Re-derive before trusting it**, per the u
 
 ## 1. Awaiting owner — device review
 
-🟢 **NOTHING IS WAITING ON A REVIEW. Zero open PRs — the first time today.** Everything opened
-today is merged: #549 (Library jitter), #553 (list page as a layer), #555 (Liked on the shared list
-screen), #552 (the seven-step wizard), #558 (wizard round two).
+🟢 **NOTHING IS WAITING ON A REVIEW. Zero open PRs.** Merged since the wizard work: **#560 Milan**
+(48 tours, 32nd maker), **#559 the launch sequence** (a readiness-gated splash and a three-beat
+hand-off), **#562 the coordinate guard**, plus their docs (#561).
 
-🔴 **BUILD 97 IS INSTALLABLE, ITS CI RUN IS RED, AND IT HAS NO "What to Test" NOTES.** It archived,
-signed, uploaded and finished processing — then the run failed because **Apple rejected a `✕` in the
-build notes**. `upload_to_testflight` writes the changelog *after* the upload, so the rejection lands
-seven minutes and one real build past the mistake, at a step whose failure looks like a build
-failure. **Nothing about that red run says the build is already on your phone.** 97 cannot be given
-notes retroactively (the workflow has no distribute-only path, and a re-run replays the same input).
-Fixed forward by `scripts/ascii-build-notes.py`, which transliterates rather than trusting — known
-typography is *mapped*, not deleted, so a dash stays a dash.
+✅ **MILAN IS ALREADY LIVE AND NEEDS NO BUILD.** Verified against the live RPC: **1,466 tours / 40
+maker rows**, up from 1,418. Content reaches phones over the air through Supabase — a build only
+matters for app code. **Build 109 is the newest**, carrying #559's launch work.
+
+⚠️ **THE NORTHWARD COORDINATE FAULT RECURRED IN MILAN.** Barcelona's ten wrong coordinates were all
+displaced due north, and CLAUDE.md predicted it would repeat because it is upstream of the drop.
+It did. #562 adds a check that measures it rather than relying on someone noticing. **At a 30 m
+geofence a displaced stop simply never fires** — no error, no dead link, just a tour that does
+nothing while you stand in front of the building.
+
+📌 **Kept because the lesson recurs: a TestFlight build can succeed and report failure.** Build 97
+archived, signed, uploaded and processed, then went red because Apple refused a `✕` in the build
+notes — the changelog is written *after* the upload, so the rejection lands past the point of no
+return at a step whose failure looks like a build failure. Fixed forward by
+`scripts/ascii-build-notes.py`.
 
 **Install 98.** It carries the round-two wizard work and, unlike 97, it has its notes.
 
@@ -126,7 +133,9 @@ not `main` — GitHub reports a PR's base as main's current tip, which is mislea
 
 | Build | Branch | Carries | Result |
 |---|---|---|---|
-| 98 | `wizard-comments-round2` | #558 wizard round two (`e0132c90`) — branch since merged and deleted | ✅ **install this** |
+| 109 | `launch-performance-animations-df4d7p` | #559 launch sequence (`52a86cfa`) — merged 16:43, after this build | ✅ **install this** |
+| 108 | `launch-performance-animations-df4d7p` | Same work, one commit earlier | ⚠️ superseded |
+| 98 | `wizard-comments-round2` | #558 wizard round two (`e0132c90`) | ✅ merged |
 | 97 | `wizard-comments-round2` | Same work, one commit earlier | 🔴 **Live and installable, run shows RED, no notes** |
 | 96 | `upload-wizard-improvements-ejopz3` | #552 the seven-step wizard | ✅ owner-verified — *"so much better"* |
 | 95 | `ellipsis-button-consistency-vdorpi` | Became #555 — Liked on the shared list screen | ✅ merged |
@@ -145,7 +154,10 @@ the stale-base warning this board carried against build 96 was dealt with by the
 |---|---|
 | `claude/library-launch-jitter` | Merged (#549 at 03:52) — auto-delete should remove it |
 | `claude/upload-wizard-improvements-ejopz3` | Merged (#552 at 19:05) |
-| `claude/wizard-comments-round2` | Merged (#558 at 00:14) and already deleted |
+| `claude/wizard-comments-round2` | Merged (#558) and deleted |
+| `claude/launch-performance-animations-df4d7p` | Merged (#559 at 16:43) — built as 108/109 |
+| `claude/milan-tours-upload` · `claude/milan-docs-260822` | Merged (#560, #561) |
+| `claude/coordinate-guard` | Merged (#562 at 17:20) |
 | `claude/ellipsis-button-consistency-vdorpi` | Merged twice from one branch (#553, #555). ⚠️ The second stacked on already-merged history, which CLAUDE.md says to avoid — it worked, but no PR existed while build 95 was installable |
 | `claude/tour-upload-polish-qiliop` | Merged (#540) — auto-delete should remove it |
 | `claude/stripe-questions-fjhdo3` | ⚠️ No PR — verify contents before deleting |
@@ -155,8 +167,9 @@ the stale-base warning this board carried against build 96 was dealt with by the
 
 ## 5. Content
 
-**Catalog 1418 tours / 31 makers / 1774 stops.** The audio-pending queue is **EMPTY** — ten
-consecutive complete drops. `drafts/AUDIO-PENDING-SURVEY.md` on `origin/main` stays the
+**Catalog 1,466 tours / 32 makers** — Milan (Atlas Studio MIL, 48 tours) landed 2026-08-22 and is
+live in the RPC. ⚠️ The RPC reports **40** maker rows against a true 32: upsert-only accumulation,
+long-standing. The audio-pending queue is **EMPTY**. `drafts/AUDIO-PENDING-SURVEY.md` on `origin/main` stays the
 authority; read it from `origin/main`, never from a branch.
 
 ## 6. Known debt — real, not urgent
