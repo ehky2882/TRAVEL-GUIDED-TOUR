@@ -229,7 +229,7 @@ enum LaunchBloom {
     /// Was 1.05s (staged assembly), then 0.9s, then 0.42s — now 0.62s,
     /// because the sequence gained a third beat (the drawer opening) and 0.42s
     /// could not hold three of them without any one reading as a jump.
-    static let duration: TimeInterval = 0.40
+    static let duration: TimeInterval = 0.37
 
     /// Reduce Motion gets a plain cross-dissolve, and a shorter one.
     static let reducedMotionDuration: TimeInterval = 0.28
@@ -256,32 +256,36 @@ enum LaunchBloom {
     // sat watching furniture arrive. The zoom reveals a map that is already
     // built and already still; only the chrome moves after it.
 
-    // Real times at 0.40s, owner-tuned across builds 105–108:
-    //   growth 0.200s · dissolve 0.060s · a beat of bare map ·
-    //   block 0.036s · a beat · drawer opening + chrome 0.068s.
+    // Real times at 0.37s, owner-tuned on a device across builds 105–109:
+    //   growth 0.200s · dissolve 0.056s · a beat of bare map ·
+    //   block 0.030s · a beat · drawer opening + chrome 0.056s.
     //
-    // ⚠️ THE DISC'S GROWTH IS HALF THE HAND-OFF NOW, and it has been held at
-    // ~0.2s since the owner approved it — every "faster" request so far has
-    // been about the ARRIVALS, which are down to 0.10s between them and have
-    // little left to give. If "faster" is asked for again, the growth is where
-    // the time is; ask before taking it, because its feel was signed off
-    // separately from the arrivals'.
+    // 🔴 THE DISC'S GROWTH IS FIXED AT ~0.2s — owner, build 108: *"i have no
+    // issues with the disc."* It is now well over half the hand-off, so it is
+    // the obvious place to look for time, and it is the one place NOT to take
+    // it from without asking again.
+    //
+    // ⚠️ THE ARRIVALS ARE AT THEIR FLOOR: 0.030s and 0.056s. They are eased,
+    // and an ease-out needs some distance in time to read as a deceleration —
+    // shave much more and the block stops looking like it lands and starts
+    // looking like it was simply cut in. If "faster" is asked for again, say
+    // that plainly before turning these down further.
 
     /// The wordmark goes first and fast — it is not part of the gesture.
     static let wordmarkLift = (delay: 0.0, window: 0.14)
 
     /// The disc's growth, from the mark's 44pt to covering the screen. Runs
     /// from the very first frame: this IS the transition.
-    static let zoom = (delay: 0.0, window: 0.50)
+    static let zoom = (delay: 0.0, window: 0.54)
 
     /// The disc dissolving into the map behind it — and it starts only once
     /// the disc COVERS the screen, so the brass is solid for the whole of its
     /// growth and what is left when it goes is a bare map.
-    static let markDissolve = (delay: 0.50, window: 0.15)
+    static let markDissolve = (delay: 0.54, window: 0.15)
 
     /// The black is cut while the disc is covering the screen, so the cut
     /// itself is never visible.
-    static let splashCut = (delay: 0.50, window: 0.15)
+    static let splashCut = (delay: 0.54, window: 0.15)
 
     /// 🔴 THE SLIDE — the module and the closed drawer as ONE BLOCK.
     ///
@@ -289,7 +293,7 @@ enum LaunchBloom {
     /// travel as a single object. Owner: *"the entire bottom module should
     /// slide up together… right now the miniplayer and bottom tabs are already
     /// in place and then the drawer slides up from behind it."*
-    static let assembly = (delay: 0.69, window: 0.09)
+    static let assembly = (delay: 0.72, window: 0.08)
 
     /// 🔴 THE OPENING — the drawer alone, closed → mid detent, after the block
     /// has landed.
@@ -299,7 +303,7 @@ enum LaunchBloom {
     /// all: it simply keeps rising, and the two beats read as one long slide.
     /// The pause is what makes "the module arrives, *then* the drawer opens"
     /// legible.
-    static let drawerExpand = (delay: 0.83, window: 0.17)
+    static let drawerExpand = (delay: 0.85, window: 0.15)
 
     /// The search bar (from the top) and the chips (from the right) travel
     /// alongside the drawer's opening, so all three land on one frame.
@@ -308,7 +312,7 @@ enum LaunchBloom {
     /// snap. A test pins it. It used to start with the block and drift in over
     /// twice as long; owner, 2026-08-22: *"the animation of the module and top
     /// is still coming in a little slower than i would prefer."*
-    static let chrome = (delay: 0.83, window: 0.17)
+    static let chrome = (delay: 0.85, window: 0.15)
 
     /// The instant everything comes to rest — where the haptic fires.
     ///
@@ -327,10 +331,13 @@ enum LaunchBloom {
     ///
     /// ⚠️ If the settle ever gains frames back, this can shrink — but do not
     /// take it to zero: a wall clock and a render clock never agree exactly.
-    /// Owner-tuned on a device across builds 104–108: 0.07 read early, 0.15
-    /// read late, 0.10 still read late once the sequence got shorter, so 0.06.
-    /// ⚠️ It is RELATIVE to a settle that keeps moving earlier — every retime
-    /// shortens the run-up, so this wants re-checking whenever the beats move.
+    /// ✅ SETTLED AT 0.06 — owner on build 108: *"haptic feels right now."*
+    /// Tuned on a device across builds 104–108 (0.07 early, 0.15 late, 0.10
+    /// still late once the sequence shortened). **Do not re-tune it speculatively.**
+    ///
+    /// ⚠️ It is RELATIVE to the settle, so it survives a retime in principle —
+    /// but if the beats move a long way, it is worth one device check rather
+    /// than an assumption.
     static let settleLatency: TimeInterval = 0.06
 
     /// Progress of the slide: the module and the closed drawer, one value, so
