@@ -64,7 +64,9 @@ from concurrent.futures import ThreadPoolExecutor
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOURS_JSON = os.path.join(REPO, "TRAVEL GUIDED TOUR", "Resources", "Tours.json")
-PHASH_TOLERANCE = 6   # bits of a 256-bit average hash
+PHASH_TOLERANCE = 12  # bits of a 256-bit average hash - deliberately loose:
+                      # it only proposes candidates, THUMB_TOLERANCE decides
+THUMB_TOLERANCE = 8.0 # mean 0-255 difference; same picture scores under 1
 CACHE_DIR = os.path.join(REPO, ".cache", "image-dupes")
 UA = "AtlasTourBot/1.0 (edward.yung@gmail.com) duplicate-image check"
 
@@ -131,6 +133,28 @@ def build_index(catalog, maker_code=None):
     return sorted(urls), slug_kind, walk_stop_urls
 
 
+def thumbnail(data):
+    """A 32x32 greyscale thumbnail, kept so a candidate pair can be CONFIRMED.
+
+    The average hash below is a cheap way to find candidates, but on its own it
+    is far too eager: it clustered the Empire State Building with the Pincio
+    and a Naoshima sculpture purely because their tones are similar. Comparing
+    the actual thumbnails separates them cleanly - identical pictures score
+    under 1, genuinely different ones score 50 and up.
+    """
+    if Image is None:
+        return None
+    try:
+        return Image.open(io.BytesIO(data)).convert("L").resize((32, 32)).tobytes().hex()
+    except Exception:
+        return None
+
+
+def thumb_distance(hex_a, hex_b):
+    a, b = bytes.fromhex(hex_a), bytes.fromhex(hex_b)
+    return sum(abs(x - y) for x, y in zip(a, b)) / len(a)
+
+
 def perceptual_hash(data):
     """A 256-bit average hash of the picture's CONTENT.
 
@@ -160,8 +184,10 @@ def fetch_hash(url):
     if os.path.exists(cached):
         with open(cached) as fh:
             parts = fh.read().strip().split()
-        if len(parts) == 2 or Image is None:
-            return url, parts[0], (parts[1] if len(parts) > 1 else None), None
+        if len(parts) == 3 or Image is None:
+            return (url, parts[0],
+                    (parts[1] if len(parts) > 1 else None),
+                    (parts[2] if len(parts) > 2 else None), None)
         # cached before perceptual hashing existed - refetch to fill it in
     try:
         # curl, not urllib: urllib fails SSL verification on the owner's Mac,
@@ -170,14 +196,15 @@ def fetch_hash(url):
                               capture_output=True, timeout=120)
         data = proc.stdout
         if proc.returncode != 0 or not data:
-            return url, None, None, f"curl exit {proc.returncode}, {len(data)} bytes"
+            return url, None, None, None, f"curl exit {proc.returncode}, {len(data)} bytes"
     except Exception as exc:
-        return url, None, None, str(exc)
+        return url, None, None, None, str(exc)
     digest = hashlib.sha256(data).hexdigest()
     ph = perceptual_hash(data)
+    th = thumbnail(data)
     with open(cached, "w") as fh:
-        fh.write(digest + (" " + ph if ph else ""))
-    return url, digest, ph, None
+        fh.write(" ".join(x for x in (digest, ph, th) if x))
+    return url, digest, ph, th, None
 
 
 def classify(group, slug_kind, walk_stop_urls=frozenset()):
@@ -221,7 +248,7 @@ def report(groups, slug_kind, walk_stop_urls=frozenset()):
     return errors
 
 
-def report_perceptual(phashes, byte_groups):
+def report_perceptual(phashes, byte_groups, thumbs):
     """Same picture, different file. Byte-identical sets are already reported."""
     if not phashes:
         return 0
@@ -237,9 +264,14 @@ def report_perceptual(phashes, byte_groups):
             continue
         grp = [ua]
         for ub, hb in items[i + 1:]:
-            if ub not in used and hamming(ha, hb) <= PHASH_TOLERANCE:
-                grp.append(ub)
-                used.add(ub)
+            if ub in used or hamming(ha, hb) > PHASH_TOLERANCE:
+                continue
+            # CONFIRM against the real thumbnails - the hash only nominates
+            if ua in thumbs and ub in thumbs:
+                if thumb_distance(thumbs[ua], thumbs[ub]) > THUMB_TOLERANCE:
+                    continue
+            grp.append(ub)
+            used.add(ub)
         if len(grp) > 1:
             used.add(ua)
             clusters.append(grp)
@@ -271,6 +303,21 @@ def tour_slug_of(url):
     base = os.path.basename(url)
     base = re.sub(r"\.(webp|jpg|jpeg|png)$", "", base, flags=re.I)
     return re.sub(r"_(hero|\d+)$", "", base)
+
+
+def _selftest_perceptual():
+    """The confirmation step is what stops the checker crying wolf."""
+    same = ("00" * 1024, "01" * 1024)          # near-identical thumbnails
+    diff = ("00" * 1024, "ff" * 1024)          # nothing alike
+    ok = True
+    if not thumb_distance(*same) <= THUMB_TOLERANCE:
+        print("  FAIL identical thumbnails should confirm"); ok = False
+    if not thumb_distance(*diff) > THUMB_TOLERANCE:
+        print("  FAIL opposite thumbnails should be rejected"); ok = False
+    if hamming("0000", "0011") != 2:
+        print("  FAIL hamming"); ok = False
+    print("  PASS  perceptual confirmation" if ok else "  FAIL  perceptual confirmation")
+    return ok
 
 
 def selftest():
@@ -315,6 +362,8 @@ def selftest():
         if not ok:
             print(f"        reason: {reason}")
     print()
+    if not _selftest_perceptual():
+        failures += 1
     print("selftest OK" if not failures else f"selftest FAILED ({failures})")
     return 0 if not failures else 1
 
@@ -349,15 +398,17 @@ def main():
     scope = args.maker or "whole catalog"
     print(f"Atlas duplicate-image check — {scope}: {len(urls)} images\n")
 
-    groups, failed, phashes = collections.defaultdict(list), [], {}
+    groups, failed, phashes, thumbs = collections.defaultdict(list), [], {}, {}
     with ThreadPoolExecutor(max_workers=args.jobs) as pool:
-        for url, digest, ph, err in pool.map(fetch_hash, urls):
+        for url, digest, ph, th, err in pool.map(fetch_hash, urls):
             if digest is None:
                 failed.append((url, err))
             else:
                 groups[digest].append(url)
                 if ph:
                     phashes[url] = ph
+                if th:
+                    thumbs[url] = th
 
     for url, err in failed:
         print(f"WARN   could not fetch {os.path.basename(url)}: {err}")
@@ -381,7 +432,7 @@ def main():
 
     errors = report(groups, slug_kind, walk_stop_urls)
     dupes = sum(1 for g in groups.values() if len(g) > 1)
-    errors += report_perceptual(phashes, groups)
+    errors += report_perceptual(phashes, groups, thumbs)
 
     if errors:
         print(f"{errors} duplicate group(s) need review — a dead swipe, or an image staged under the wrong name")
