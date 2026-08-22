@@ -199,6 +199,117 @@ temporarily at 3.0s — the process failure §"Do this differently" names.
   — `groundOpacity` now only clears in the last 14% — not a leak. Measured: the
   black is pure (corner luminance 0.0) for the whole first half.
 
-**Still owed:** the haptic on the settle is device-only, and the owner has not
-seen this on a phone. Cut ONE build from this branch and stop cutting builds to
-look at the animation.
+**Superseded below** — builds 103, 104 and 105 followed, and the owner has now
+reviewed all three on a device.
+
+
+---
+
+## Session 103, rounds 2–4 — TestFlight 1.1 (103) → (104) → (105)
+
+**Owner on 105: "Much better."** Three device reviews, and the third round found
+the thing that had been generating every timing bug since the work began.
+
+### 🔴 THE ROOT CAUSE OF THE WHOLE TIMING MESS: `withAnimation` on a plain Double
+
+The hand-off was `withAnimation(.linear(duration:)) { setHandOffProgress(1) }`.
+**SwiftUI does not step a plain `Double` through the intermediate values.** It
+re-renders each dependent view **once**, with progress already at 1, and then
+animates each *rendered property* — an opacity here, a scale there — from its
+old value to its new one across the whole duration.
+
+So every `delay` and `window` in `LaunchBloom` was evaluated at `progress == 1`
+and thrown away. The ramps existed, the tests passed, and none of it reached the
+screen. What that looked like: the black clearing while the disc was half-grown,
+the drawer rising before the brass had gone, everything sliding at once. **Three
+separate "fixes" were built for those symptoms** (a stroked ring tied to the
+disc's radius, a scale instead of a frame, a per-window animation curve) — each
+moved the problem without solving it.
+
+**`playHandOff` now TICKS the value** at ~display rate in a loop. Every view
+sees the real intermediate numbers, so the ramps mean what they say — and since
+no SwiftUI animation is involved, the bars in their separate window cannot fall
+out of step with the main one either.
+
+⚠️ **Do not add `.animation(...)` to anything reading `handOffProgress`.** It
+would animate *toward* each ticked value and lag the whole sequence. The
+explicit curve that previously papered over the cross-window problem is gone.
+
+### 🔴 THE OTHER BIG ONE: whichever body reads the progress redraws 60×/s
+
+`handOffProgress` ticks ~60 times a second. Any view whose **body** reads it is
+re-evaluated that often — and `ContentView`'s body is the whole app while
+`HomeView`'s is the map, its clustering and the rails. That is a large part of
+what the owner reported as *"the performance/animation feels very lagg-y."*
+
+Both now read **nothing**. The reads live in leaves that wrap content their
+parent already built: **`Components/LaunchEntrance.swift`** (search bar, chips)
+and `BottomSheet` itself (the drawer's two offsets). ⚠️ Do not "simplify" this
+by reading `LaunchState` in the parent and passing a `Double` down — that puts
+the read straight back into the expensive body.
+
+Also removed for cost: the app-wide scale-and-blur (`LaunchZoomReveal`, deleted
+— a full-screen offscreen pass, and invisible behind the disc anyway).
+
+### The mark: three shapes tried, one kept
+
+1. **Masked app + black faded over it** (build 102) — the opening expanded under
+   an opaque sheet; read as a cross-fade.
+2. **Hole punched in the black, mark sized off the hole** — leaves a brass RING
+   with map inside it. Owner: *"i dont like that the brass circle becomes a ring
+   and that there's blue behind it."*
+3. **✅ A solid disc over a plain black rectangle.** It expands to cover the
+   screen, then dissolves into the map. No mask, no hole, no seam — two shape
+   fills a frame.
+
+⚠️ **The black's opacity IS the disc's own value** (`groundOpacity { markOpacity }`).
+Two ramps that are meant to coincide will not under load; one number cannot
+disagree with itself.
+
+⚠️ **`LaunchZoom.originFraction` is 0.5 and the splash's `GeometryReader` spans
+the whole screen**, because the opening has to sit exactly where the map draws
+the user's blue dot — the map fills the screen and the launch camera centres the
+user. Reading inside the safe area put it ~30pt high.
+
+### The drawer, and why it looked open before it was
+
+Two causes, both worth knowing:
+
+- 🔴 **`.offset` does not move a `.background`.** It is a rendering transform and
+  leaves the layout frame where it was; `.background` sizes itself to that
+  frame. Applied mid-chain, the panel and its rounded corners sat still at the
+  detent while only the rails slid inside. Owner: *"the drawer portion is
+  already showing at mid-detent, with the content itself sliding up."* The
+  offset now sits **past** the background and clip shape.
+- 🔴 **The panel is clipped to its RESTING box**, so the visible height is
+  exactly `detent − offset` — a closed drawer that grows, with **no per-frame
+  relayout of the rails**. The clip also stops rail cards showing through the
+  gaps beside the floating bars.
+- 🔴 **Travel distance is part of "arriving together".** The bars travel ~166pt;
+  the drawer was parked 1200pt down. On one shared ramp the bars are visually
+  home while the drawer is still a screen away, so they read as two arrivals.
+  It is now parked just out of sight (closed strip + bars + margin).
+- ⚠️ **There is a deliberate BEAT between the block landing and the opening
+  starting** (0.64 → 0.74). Butted together, the drawer never appears closed at
+  all; it simply keeps rising.
+
+### Owner decisions this round
+
+| Decision | Quote |
+|---|---|
+| The mark stays a **solid disc** the whole way | *"it should stay as a solid as it expands"* |
+| It sits **exactly on the blue location dot** | *"as if the brass circle becomes the location marker"* |
+| Module = tab bar + mini-player + **closed drawer**, one object, then it opens | *"comes in together into place… and then the drawer opens into mid-detent"* |
+| **Search bar from the top**, capsules from the right | 2026-08-22 |
+| Haptic must land **on** the settle | *"haptic feels early"* → bias 0.07s, then 0.15s |
+
+### State
+
+- Hand-off **0.55s**. Beats: zoom 0–0.36 · dissolve 0.36–0.48 · block 0.50–0.64
+  · *pause* · drawer opens + chrome arrive 0.74–1.0 · haptic at 1.0 + 0.15s.
+- `test_sim` **417/417**. PR #559 still **open** — code, needs the owner's merge.
+- ⚠️ **`LaunchBloom.settleLatency` is the one number to turn** if the buzz still
+  misses the beat.
+- ⚠️ Verifying this in the Simulator means setting `LaunchBloom.duration` to ~4s
+  temporarily. **Grep for `TEMP-SLOWMO` before committing** — it was used four
+  times this session.
